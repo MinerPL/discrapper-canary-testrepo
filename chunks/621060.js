@@ -36,15 +36,8 @@ function m(e) {
 			let l = [],
 				c = o.current.getBoundingClientRect().width;
 			if (c !== m.current) {
-				for (let o of ((m.current = c),
-				(c -=
-					null !== (a = null === (e = g.current.get(t)) || void 0 === e ? void 0 : e.width) && void 0 !== a ? a : 0),
-				r)) {
-					if (o.id !== t)
-						(c -=
-							null !== (i = null === (n = g.current.get(o.id)) || void 0 === n ? void 0 : n.width) && void 0 !== i
-								? i
-								: 0) < 0 && l.push(o.id);
+				for (let o of ((m.current = c), (c -= null !== (a = null === (e = g.current.get(t)) || void 0 === e ? void 0 : e.width) && void 0 !== a ? a : 0), r)) {
+					if (o.id !== t) (c -= null !== (i = null === (n = g.current.get(o.id)) || void 0 === n ? void 0 : n.width) && void 0 !== i ? i : 0) < 0 && l.push(o.id);
 				}
 				b(l);
 			}
@@ -105,10 +98,7 @@ function m(e) {
 								selected: t === r,
 								ref: (e) => {
 									var t, a, n;
-									let i =
-										null !== (a = null === (t = g.current.get(r)) || void 0 === t ? void 0 : t.width) && void 0 !== a
-											? a
-											: 0;
+									let i = null !== (a = null === (t = g.current.get(r)) || void 0 === t ? void 0 : t.width) && void 0 !== a ? a : 0;
 									g.current.set(r, {
 										node: e,
 										width: null !== (n = null == e ? void 0 : e.getBoundingClientRect().width) && void 0 !== n ? n : i
@@ -163,10 +153,7 @@ function g(e, r) {
 		);
 	return {
 		TabBar: h,
-		renderSelectedTab:
-			null !== (o = null === (i = l.find((e) => e.id === d)) || void 0 === i ? void 0 : i.render) && void 0 !== o
-				? o
-				: () => null,
+		renderSelectedTab: null !== (o = null === (i = l.find((e) => e.id === d)) || void 0 === i ? void 0 : i.render) && void 0 !== o ? o : () => null,
 		selectedTabId: d
 	};
 }

@@ -1,9 +1,9 @@
 n.d(t, {
 	c4: function () {
-		return I;
+		return m;
 	},
 	st: function () {
-		return m;
+		return I;
 	}
 });
 var r = n(735250),
@@ -29,7 +29,7 @@ function p(e) {
 		})
 	};
 }
-function I(e) {
+function m(e) {
 	return {
 		text: null != e ? e : f.Z.Messages.APPLICATION_COMMAND_FAILED,
 		color: 'text-danger',
@@ -40,7 +40,7 @@ function I(e) {
 		})
 	};
 }
-function m(e) {
+function I(e) {
 	let { className: t, icon: n, text: i, color: a } = e;
 	return (0, r.jsxs)('div', {
 		className: s()(h.wrapper, t),
@@ -78,18 +78,18 @@ t.ZP = i.memo(function (e) {
 				case _.rQ.CREATED:
 					return p(f.Z.Messages.APPLICATION_COMMAND_WAITING.format({ applicationName: t.author.username }));
 				case _.rQ.TIMED_OUT:
-					return I(f.Z.Messages.APPLICATION_COMMAND_TIMED_OUT);
+					return m(f.Z.Messages.APPLICATION_COMMAND_TIMED_OUT);
 				case _.rQ.FAILED:
-					return I(t.interactionError);
+					return m(t.interactionError);
 			}
 		})(u, t);
 	else {
 		let e = (0, c.SD)(u, t, a);
-		null != e && (h = I(e));
+		null != e && (h = m(e));
 	}
 	if (null == h) return null;
 	let { text: T, icon: g, color: S } = h;
-	return (0, r.jsx)(m, {
+	return (0, r.jsx)(I, {
 		icon: g,
 		text: T,
 		className: n,

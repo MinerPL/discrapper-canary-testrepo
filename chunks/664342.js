@@ -19,8 +19,8 @@ var i = n(735250),
 	_ = n(137591),
 	f = n(299206),
 	E = n(727429),
-	g = n(665149),
-	C = n(359110),
+	C = n(665149),
+	g = n(359110),
 	I = n(585483),
 	x = n(739830),
 	T = n(488131),
@@ -48,7 +48,7 @@ function S(e) {
 		},
 		children: (e, t) => {
 			let { isShown: n } = t;
-			return (0, i.jsx)(g.ZP.Icon, {
+			return (0, i.jsx)(C.ZP.Icon, {
 				...e,
 				onClick: r,
 				tooltip: n ? null : o,
@@ -62,7 +62,7 @@ function S(e) {
 function Z(e) {
 	let { channel: t, closePopout: n, onSelect: a } = e,
 		E = (0, o.Z)(t, 'Sidebar Overflow'),
-		g = (0, u.Z)(t),
+		C = (0, u.Z)(t),
 		x = (0, m.Z)(t),
 		T = (0, p.Z)(t),
 		S = (0, l.Z)(t),
@@ -76,7 +76,7 @@ function Z(e) {
 		}),
 		j = (0, _.Z)(t);
 	function L() {
-		(0, C.Kh)(t.id);
+		(0, g.Kh)(t.id);
 	}
 	return (0, i.jsxs)(s.Menu, {
 		navId: 'thread-context',
@@ -98,7 +98,7 @@ function Z(e) {
 				children: [x, T]
 			}),
 			(0, i.jsxs)(s.MenuGroup, {
-				children: [M, g, A]
+				children: [M, C, A]
 			}),
 			(0, i.jsxs)(s.MenuGroup, {
 				children: [
@@ -136,7 +136,7 @@ function A(e) {
 		children: [
 			t.isForumPost() ? null : (0, i.jsx)(x.Z, { channel: t }),
 			(0, i.jsx)(S, { channel: t }),
-			(0, i.jsx)(g.ZP.Icon, {
+			(0, i.jsx)(C.ZP.Icon, {
 				icon: s.XSmallIcon,
 				tooltip: v.Z.Messages.CLOSE,
 				onClick: () => (0, T.vN)((0, E.e)(t), null != n ? n : t.parent_id)

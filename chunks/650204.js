@@ -14,8 +14,8 @@ var d = n(202226),
 	f = n(832037),
 	h = n(752137),
 	p = n(464253),
-	I = n(485359),
-	m = n(395727),
+	m = n(485359),
+	I = n(395727),
 	T = n(471638),
 	g = n(585275),
 	S = n(960048),
@@ -91,14 +91,5 @@ else {
 				(0, D.al)(window);
 			});
 	}
-	m.Z.initialize(),
-		h.Z.initialize(),
-		p.Z.init(),
-		g.Z.init(),
-		G.Z.init(),
-		I.Z.initialize(),
-		N.Z.initialize(),
-		O.Z.initialize(),
-		T.j(),
-		Y(f.Z.App);
+	I.Z.initialize(), h.Z.initialize(), p.Z.init(), g.Z.init(), G.Z.init(), m.Z.initialize(), N.Z.initialize(), O.Z.initialize(), T.j(), Y(f.Z.App);
 }

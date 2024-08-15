@@ -21,14 +21,7 @@ var s = n(735250),
 	f = n(379946);
 function _(e) {
 	var t;
-	let {
-			guild: n,
-			prompts: _,
-			completeOnboarding: N,
-			setCurrentStep: I,
-			disableTracking: b,
-			previousPromptIndex: C
-		} = e,
+	let { guild: n, prompts: _, completeOnboarding: N, setCurrentStep: I, disableTracking: b, previousPromptIndex: C } = e,
 		E = r.useRef(null),
 		v = (0, o.e7)([u.Z], () => u.Z.getRulesPrompt(n.id)),
 		[j, O] = r.useState(null !== (t = null == v ? void 0 : v.response) && void 0 !== t && t),
@@ -36,9 +29,7 @@ function _(e) {
 		B = (0, a.ZP)(),
 		R = r.useRef(null),
 		T = r.useRef(null),
-		D = (0, l.wj)(B)
-			? 'linear-gradient(to top, rgba(54, 57, 63, 1), rgba(54, 57, 63, 0))'
-			: 'linear-gradient(to top, rgba(242, 243, 245, 1), rgba(242, 243, 245, 0))',
+		D = (0, l.wj)(B) ? 'linear-gradient(to top, rgba(54, 57, 63, 1), rgba(54, 57, 63, 0))' : 'linear-gradient(to top, rgba(242, 243, 245, 1), rgba(242, 243, 245, 0))',
 		M = r.useCallback(async () => {
 			if (null != Z && null != v) {
 				try {
@@ -173,9 +164,7 @@ function _(e) {
 											className: f.helpText,
 											variant: 'text-xs/normal',
 											color: 'text-muted',
-											children: j
-												? x.Z.Messages.MEMBER_VERIFICATION_READ_AGREE_RULES
-												: x.Z.Messages.MEMBER_VERIFICATION_MUST_READ_RULES
+											children: j ? x.Z.Messages.MEMBER_VERIFICATION_READ_AGREE_RULES : x.Z.Messages.MEMBER_VERIFICATION_MUST_READ_RULES
 										}),
 										(0, s.jsxs)(i.Button, {
 											innerClassName: f.buttonInner,

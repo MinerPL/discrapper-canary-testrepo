@@ -35,16 +35,7 @@ let _ = (e) => {
 	});
 };
 function I(e) {
-	let {
-			header: t,
-			text: a,
-			analyticsLocation: c,
-			guild: d,
-			className: I,
-			textColor: E,
-			headerColor: T,
-			buttonProps: m
-		} = e,
+	let { header: t, text: a, analyticsLocation: c, guild: d, className: I, textColor: E, headerColor: T, buttonProps: m } = e,
 		{ analyticsLocations: N } = (0, o.ZP)(l.Z.GUILD_BOOSTING_UPSELL_BANNER);
 	return (0, s.jsx)(o.Gt, {
 		value: N,

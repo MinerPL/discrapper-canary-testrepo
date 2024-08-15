@@ -39,10 +39,7 @@ function p(t) {
 		);
 	}, [r]);
 	let x = () => {
-		b
-			? ((0, l.JO)(), _.default.track(d.rMx.VIBING_WUMPUS_ACTION, { action: I.G.PLAY }))
-			: ((0, l.hW)(), _.default.track(d.rMx.VIBING_WUMPUS_ACTION, { action: I.G.PAUSE })),
-			f(!b);
+		b ? ((0, l.JO)(), _.default.track(d.rMx.VIBING_WUMPUS_ACTION, { action: I.G.PLAY })) : ((0, l.hW)(), _.default.track(d.rMx.VIBING_WUMPUS_ACTION, { action: I.G.PAUSE })), f(!b);
 	};
 	async function S() {
 		let { default: t } = await e.e('29641').then(e.t.bind(e, 937359, 19));

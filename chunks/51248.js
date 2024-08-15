@@ -15,14 +15,7 @@ var a = n(215569),
 	u = n(617509);
 function _(e) {
 	let { guildId: t, existingRules: n } = e,
-		{
-			cancelEditingRule: _,
-			isLoading: I,
-			hasChanges: E,
-			editingRule: T,
-			errorMessage: m,
-			saveEditingRule: N
-		} = (0, c.w)(),
+		{ cancelEditingRule: _, isLoading: I, hasChanges: E, editingRule: T, errorMessage: m, saveEditingRule: N } = (0, c.w)(),
 		{ updateRule: S } = (0, o.pH)(t),
 		h = null != T,
 		g = h && !(0, l.Vb)(T),

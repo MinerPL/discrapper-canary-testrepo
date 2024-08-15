@@ -18,7 +18,7 @@ function E(e) {
 	let { user: t, guildId: n, channelId: i, friendToken: E, className: f } = e,
 		h = u.ZP.getName(n, i, t),
 		{ trackUserProfileAction: p } = (0, c.KZ)(),
-		{ newestAnalyticsLocation: I } = (0, l.ZP)();
+		{ newestAnalyticsLocation: m } = (0, l.ZP)();
 	return (0, r.jsxs)('div', {
 		className: a()(_.container, f),
 		children: [
@@ -39,7 +39,7 @@ function E(e) {
 								o.Z.addRelationship({
 									userId: t.id,
 									friendToken: E,
-									context: { location: I }
+									context: { location: m }
 								});
 						},
 						children: d.Z.Messages.FRIEND_REQUEST_ACCEPT
@@ -50,7 +50,7 @@ function E(e) {
 						size: s.Button.Sizes.SMALL,
 						className: _.button,
 						onClick: () => {
-							p({ action: 'IGNORE_FRIEND_REQUEST' }), o.Z.cancelFriendRequest(t.id, { location: I });
+							p({ action: 'IGNORE_FRIEND_REQUEST' }), o.Z.cancelFriendRequest(t.id, { location: m });
 						},
 						children: d.Z.Messages.FRIEND_REQUEST_IGNORE
 					})

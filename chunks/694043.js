@@ -35,10 +35,7 @@ function E() {
 	if (t && 'function' == typeof t.createElement)
 		try {
 			let r = t.createElement('iframe');
-			(r.hidden = !0),
-				t.head.appendChild(r),
-				r.contentWindow && r.contentWindow.fetch && (e = _(r.contentWindow.fetch)),
-				t.head.removeChild(r);
+			(r.hidden = !0), t.head.appendChild(r), r.contentWindow && r.contentWindow.fetch && (e = _(r.contentWindow.fetch)), t.head.removeChild(r);
 		} catch (e) {
 			n.X && a.kg.warn('Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ', e);
 		}

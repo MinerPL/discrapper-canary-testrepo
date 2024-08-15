@@ -10,7 +10,6 @@ t.exports = function (t, e) {
 		if ((r = document.defaultView.getComputedStyle(t, null))) return o(r.getPropertyValue(i(e)));
 		if ('display' === e) return 'none';
 	}
-	if (t.currentStyle)
-		return 'float' === e ? o(t.currentStyle.cssFloat || t.currentStyle.styleFloat) : o(t.currentStyle[n(e)]);
+	if (t.currentStyle) return 'float' === e ? o(t.currentStyle.cssFloat || t.currentStyle.styleFloat) : o(t.currentStyle[n(e)]);
 	return o(t.style && t.style[n(e)]);
 };

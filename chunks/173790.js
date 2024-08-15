@@ -85,8 +85,7 @@ function g(e) {
 			names: ['embedded_cover']
 		}),
 		o = (0, _.yJ)(t),
-		r =
-			null != o && null != o.activity_preview_video_asset_id ? (0, s.Z)(t.id, o.activity_preview_video_asset_id) : null;
+		r = null != o && null != o.activity_preview_video_asset_id ? (0, s.Z)(t.id, o.activity_preview_video_asset_id) : null;
 	return (0, i.jsx)(A.Z, {
 		channel: n,
 		application: t,

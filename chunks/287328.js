@@ -125,9 +125,7 @@ class u extends r.yh {
 			l(this, 'userSettingsTransaction', (e) => this.userSettings(e.database).upgradeTransaction(e)),
 			l(this, 'readStatesTransaction', (e) => this.readStates(e.database).upgradeTransaction(e)),
 			l(this, 'userGuildSettingsTransaction', (e) => this.userGuildSettings(e.database).upgradeTransaction(e)),
-			l(this, 'guildsRequiringDeletedIdsSyncTransaction', (e) =>
-				this.guildsRequiringDeletedIdsSync(e.database).upgradeTransaction(e)
-			),
+			l(this, 'guildsRequiringDeletedIdsSyncTransaction', (e) => this.guildsRequiringDeletedIdsSync(e.database).upgradeTransaction(e)),
 			l(this, 'userSearchItemsTransaction', (e) => this.userSearchItems(e.database).upgradeTransaction(e));
 	}
 }

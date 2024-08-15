@@ -13,21 +13,13 @@ var i,
 	I = t(944486),
 	A = t(55589),
 	S = t(981631);
-let T = (null !==
-	(a =
-		null === (E = window) || void 0 === E ? void 0 : null === (r = E.location) || void 0 === r ? void 0 : r.pathname) &&
-void 0 !== a
-	? a
-	: ''
-).startsWith(S.Z5c.ACTIVITIES)
-	? S.Z5c.ACTIVITIES
-	: null;
-function N(e) {
+let T = (null !== (a = null === (E = window) || void 0 === E ? void 0 : null === (r = E.location) || void 0 === r ? void 0 : r.pathname) && void 0 !== a ? a : '').startsWith(S.Z5c.ACTIVITIES) ? S.Z5c.ACTIVITIES : null;
+function L(e) {
 	let { link: n } = e;
 	if (T === n) return !1;
 	T = n;
 }
-class L extends (u = s.ZP.Store) {
+class N extends (u = s.ZP.Store) {
 	initialize() {
 		this.waitFor(c.Z, A.Z, I.Z, C.Z, _.Z);
 	}
@@ -36,7 +28,7 @@ class L extends (u = s.ZP.Store) {
 	}
 }
 (o = 'AppViewStore'),
-	(l = 'displayName') in (i = L)
+	(l = 'displayName') in (i = N)
 		? Object.defineProperty(i, l, {
 				value: o,
 				enumerable: !0,
@@ -44,16 +36,16 @@ class L extends (u = s.ZP.Store) {
 				writable: !0
 			})
 		: (i[l] = o),
-	(n.Z = new L(d.Z, {
+	(n.Z = new N(d.Z, {
 		OVERLAY_INITIALIZE: function () {
 			let e = A.Z.getPrivateChannelIds(),
 				n = I.Z.getChannelId(S.ME);
 			(null != n || null != e[0]) && (T = S.Z5c.CHANNEL(S.ME, null != n ? n : e[0]));
 		},
-		APP_VIEW_SET_HOME_LINK: N,
+		APP_VIEW_SET_HOME_LINK: L,
 		APPLICATION_STORE_LOCATION_CHANGE: function (e) {
 			let { location: n } = e;
-			N({
+			L({
 				link: n.pathname,
 				type: 'APP_VIEW_SET_HOME_LINK'
 			});

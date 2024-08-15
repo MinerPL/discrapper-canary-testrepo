@@ -17,11 +17,11 @@ t.Z = i.memo((e) => {
 			activeCommandOption: l.Z.getActiveOption(t.id),
 			activeCommandOptionStates: l.Z.getOptionStates(t.id)
 		})),
-		I = (0, _.e)(t),
-		m = (0, u.__)(i, t, { location: 'ChannelTextAreaBars' }),
+		m = (0, _.e)(t),
+		I = (0, u.__)(i, t, { location: 'ChannelTextAreaBars' }),
 		T = [];
 	return (null != i &&
-		(m && T.push((0, r.jsx)(d.Z, { activeCommand: i })),
+		(I && T.push((0, r.jsx)(d.Z, { activeCommand: i })),
 		T.push(
 			(0, r.jsx)(c.Z, {
 				activeCommand: i,
@@ -36,7 +36,7 @@ t.Z = i.memo((e) => {
 				chatInputType: n
 			})
 		),
-	I && T.push((0, r.jsx)(_.V, {})),
+	m && T.push((0, r.jsx)(_.V, {})),
 	0 ===
 		(T = T.map((e, t) => {
 			let n = t === T.length - 1;

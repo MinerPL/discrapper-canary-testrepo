@@ -108,9 +108,7 @@ var l,
 					return (
 						n &&
 							(e = setInterval(() => {
-								N.currentTime < (0, f.my)(A)
-									? N.currentTime >= (0, f.my)(y) && E(N.currentTime * c.Z.Millis.SECOND)
-									: (t((0, f.my)(S)), E(S));
+								N.currentTime < (0, f.my)(A) ? N.currentTime >= (0, f.my)(y) && E(N.currentTime * c.Z.Millis.SECOND) : (t((0, f.my)(S)), E(S));
 							}, 16)),
 						() => {
 							clearInterval(e);

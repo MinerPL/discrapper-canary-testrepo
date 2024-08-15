@@ -87,9 +87,7 @@ function x(e) {
 					(0, o.jsx)(n.Text, {
 						variant: 'text-xs/medium',
 						color: 'text-muted',
-						children: S.Z.Messages.QUESTS_DISCLOSURE_LEARN_MORE.format({
-							privacySettingsUrl: i.Z.getArticleURL(_.BhN.QUESTS_PRIVACY_CONTROLS)
-						})
+						children: S.Z.Messages.QUESTS_DISCLOSURE_LEARN_MORE.format({ privacySettingsUrl: i.Z.getArticleURL(_.BhN.QUESTS_PRIVACY_CONTROLS) })
 					})
 				]
 			}),

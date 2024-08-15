@@ -68,11 +68,7 @@ function p() {
 					? (0, i.jsxs)(s.x, {
 							variant: 'text-sm/normal',
 							className: C.text,
-							children: [
-								f.Z.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_NAG_BAR_TITLE_V2,
-								' ',
-								f.Z.Messages.LEARN_MORE_CLICK.format({ onClick: A })
-							]
+							children: [f.Z.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_NAG_BAR_TITLE_V2, ' ', f.Z.Messages.LEARN_MORE_CLICK.format({ onClick: A })]
 						})
 					: f.Z.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_NAG_BAR_TITLE
 				: f.Z.Messages.OUTBOUND_PROMOTION_NOTICE,

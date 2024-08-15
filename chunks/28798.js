@@ -28,9 +28,7 @@ n.Z = function (e) {
 						(0, l.jsx)(r.Heading, {
 							color: 'always-white',
 							variant: 'text-sm/medium',
-							children: u.Z.Messages.QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING.format({
-								gameTitle: n.config.messages.gameTitle
-							})
+							children: u.Z.Messages.QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING.format({ gameTitle: n.config.messages.gameTitle })
 						}),
 						(0, l.jsx)(r.Text, {
 							className: d.subheading,

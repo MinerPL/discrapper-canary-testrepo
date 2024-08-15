@@ -2,9 +2,7 @@ var t = (e.exports = {});
 (t.isIE = function (e) {
 	var t;
 	return (
-		(-1 !== (t = navigator.userAgent.toLowerCase()).indexOf('msie') ||
-			-1 !== t.indexOf('trident') ||
-			-1 !== t.indexOf(' edge/')) &&
+		(-1 !== (t = navigator.userAgent.toLowerCase()).indexOf('msie') || -1 !== t.indexOf('trident') || -1 !== t.indexOf(' edge/')) &&
 		(!e ||
 			e ===
 				(function () {

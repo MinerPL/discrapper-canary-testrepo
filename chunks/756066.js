@@ -10,22 +10,11 @@ var a = n(587431),
 	r = n(689938);
 function l(e) {
 	let t,
-		{
-			resubmittingEnableRequest: n,
-			resubmissionError: l,
-			createEnableRequest: o,
-			requestRejectedNoticeText: c,
-			reapplyNoticeText: d,
-			isApplicationPending: u
-		} = e;
+		{ resubmittingEnableRequest: n, resubmissionError: l, createEnableRequest: o, requestRejectedNoticeText: c, reapplyNoticeText: d, isApplicationPending: u } = e;
 	if (null != l) return (0, s.jsx)(a.Z, { children: l.getAnyErrorMessage() });
 	let _ = null;
 	return (
-		u
-			? (_ = r.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_RECEIVED_AND_PENDING)
-			: null != c
-				? (_ = c)
-				: null != d && ((_ = d), (t = r.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SUBMIT_APPEAL_CTA)),
+		u ? (_ = r.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_RECEIVED_AND_PENDING) : null != c ? (_ = c) : null != d && ((_ = d), (t = r.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SUBMIT_APPEAL_CTA)),
 		null != _
 			? (0, s.jsx)(i.Z, {
 					notice: _,

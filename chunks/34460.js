@@ -74,12 +74,7 @@ function f(e) {
 							(0, n.jsx)(
 								O,
 								{
-									imageUrl:
-										t === l
-											? e.category_image
-											: (0, o.ap)(r)
-												? e.unselected_light_theme_category_image
-												: e.unselected_dark_theme_category_image,
+									imageUrl: t === l ? e.category_image : (0, o.ap)(r) ? e.unselected_light_theme_category_image : e.unselected_dark_theme_category_image,
 									name: e.category,
 									selected: t === l,
 									onTap: () => i(t)
@@ -91,26 +86,8 @@ function f(e) {
 }
 function B(e) {
 	var t, a;
-	let {
-			guildId: l,
-			templates: i,
-			selectedTemplateIndex: r,
-			priceTiers: c,
-			showPriceReselection: o,
-			setShowPriceReselection: d,
-			handleCreateTierFromTemplate: _
-		} = e,
-		m = (0, C.g4)(
-			l,
-			c,
-			null != i
-				? null === (a = i[r]) || void 0 === a
-					? void 0
-					: null === (t = a.listings[0]) || void 0 === t
-						? void 0
-						: t.price_tier
-				: void 0
-		),
+	let { guildId: l, templates: i, selectedTemplateIndex: r, priceTiers: c, showPriceReselection: o, setShowPriceReselection: d, handleCreateTierFromTemplate: _ } = e,
+		m = (0, C.g4)(l, c, null != i ? (null === (a = i[r]) || void 0 === a ? void 0 : null === (t = a.listings[0]) || void 0 === t ? void 0 : t.price_tier) : void 0),
 		T = null != m && m.length > 0,
 		x = s.useCallback(
 			(e) => {
@@ -132,14 +109,7 @@ function B(e) {
 				});
 }
 function v(e) {
-	let {
-			transitionState: t,
-			onClose: a,
-			guildId: l,
-			addNewEditStateFromTemplate: i,
-			addNewEditStateFromScratch: o,
-			priceTiers: x
-		} = e,
+	let { transitionState: t, onClose: a, guildId: l, addNewEditStateFromTemplate: i, addNewEditStateFromScratch: o, priceTiers: x } = e,
 		I = (0, c.e7)([R.Z], () => R.Z.getTemplates(l)),
 		[C, { loading: p, error: L }] = (0, _.Z)(h.u),
 		N = s.useRef('voluntarily_exit');
@@ -214,10 +184,7 @@ function v(e) {
 											(0, n.jsx)(d.Text, {
 												variant: 'text-sm/normal',
 												className: j.creatorPortalText,
-												children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_CREATOR_PORTAL_LINK.format({
-													creatorPortalUrl:
-														'https://discord.com/creator-portal/learn-from-creators?tab=lightning-lessons'
-												})
+												children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_CREATOR_PORTAL_LINK.format({ creatorPortalUrl: 'https://discord.com/creator-portal/learn-from-creators?tab=lightning-lessons' })
 											}),
 										(0, n.jsx)('div', {
 											className: j.templatesContentContainer,

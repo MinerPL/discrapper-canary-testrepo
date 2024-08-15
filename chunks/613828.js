@@ -56,13 +56,7 @@ var h = f(function (e, t) {
 					} catch (t) {
 						throw (e.preventDefault(), t);
 					}
-					if (
-						!e.defaultPrevented &&
-						0 === e.button &&
-						(!u || '_self' === u) &&
-						!((t = e).metaKey || t.altKey || t.ctrlKey || t.shiftKey)
-					)
-						e.preventDefault(), r();
+					if (!e.defaultPrevented && 0 === e.button && (!u || '_self' === u) && !((t = e).metaKey || t.altKey || t.ctrlKey || t.shiftKey)) e.preventDefault(), r();
 				}
 			});
 		return E !== f ? (c.ref = t || n) : (c.ref = n), a.createElement('a', c);
@@ -73,13 +67,13 @@ var h = f(function (e, t) {
 			s = e.replace,
 			c = e.to,
 			p = e.innerRef,
-			I = (0, l.Z)(e, ['component', 'replace', 'to', 'innerRef']);
+			m = (0, l.Z)(e, ['component', 'replace', 'to', 'innerRef']);
 		return a.createElement(r.s6.Consumer, null, function (e) {
 			e || (0, u.Z)(!1);
 			var n = e.history,
 				r = _(d(c, e.location), e.location),
 				l = r ? n.createHref(r) : '',
-				h = (0, o.Z)({}, I, {
+				h = (0, o.Z)({}, m, {
 					href: l,
 					navigate: function () {
 						var t = d(c, e.location);
@@ -89,12 +83,12 @@ var h = f(function (e, t) {
 			return E !== f ? (h.ref = t || p) : (h.innerRef = p), a.createElement(i, h);
 		});
 	}),
-	I = function (e) {
+	m = function (e) {
 		return e;
 	},
-	m = a.forwardRef;
-void 0 === m && (m = I);
-m(function (e, t) {
+	I = a.forwardRef;
+void 0 === I && (I = m);
+I(function (e, t) {
 	var n = e['aria-current'],
 		i = void 0 === n ? 'page' : n,
 		s = e.activeClassName,
@@ -109,20 +103,7 @@ m(function (e, t) {
 		N = e.style,
 		v = e.to,
 		O = e.innerRef,
-		R = (0, l.Z)(e, [
-			'aria-current',
-			'activeClassName',
-			'activeStyle',
-			'className',
-			'exact',
-			'isActive',
-			'location',
-			'sensitive',
-			'strict',
-			'style',
-			'to',
-			'innerRef'
-		]);
+		R = (0, l.Z)(e, ['aria-current', 'activeClassName', 'activeStyle', 'className', 'exact', 'isActive', 'location', 'sensitive', 'strict', 'style', 'to', 'innerRef']);
 	return a.createElement(r.s6.Consumer, null, function (e) {
 		e || (0, u.Z)(!1);
 		var n = g || e.location,
@@ -158,6 +139,6 @@ m(function (e, t) {
 				},
 				R
 			);
-		return I !== m ? (M.ref = t || O) : (M.innerRef = O), a.createElement(p, M);
+		return m !== I ? (M.ref = t || O) : (M.innerRef = O), a.createElement(p, M);
 	});
 });

@@ -26,39 +26,13 @@ var t = e(799761),
 			values: {
 				narrow: ['1.', '2.', '3.', '4.', '5.', '6.', '7.', '8.', '9.', '10.', '11.', '12.'],
 				abbreviated: ['sij', 'velj', 'ožu', 'tra', 'svi', 'lip', 'srp', 'kol', 'ruj', 'lis', 'stu', 'pro'],
-				wide: [
-					'siječanj',
-					'veljača',
-					'ožujak',
-					'travanj',
-					'svibanj',
-					'lipanj',
-					'srpanj',
-					'kolovoz',
-					'rujan',
-					'listopad',
-					'studeni',
-					'prosinac'
-				]
+				wide: ['siječanj', 'veljača', 'ožujak', 'travanj', 'svibanj', 'lipanj', 'srpanj', 'kolovoz', 'rujan', 'listopad', 'studeni', 'prosinac']
 			},
 			defaultWidth: 'wide',
 			formattingValues: {
 				narrow: ['1.', '2.', '3.', '4.', '5.', '6.', '7.', '8.', '9.', '10.', '11.', '12.'],
 				abbreviated: ['sij', 'velj', 'ožu', 'tra', 'svi', 'lip', 'srp', 'kol', 'ruj', 'lis', 'stu', 'pro'],
-				wide: [
-					'siječnja',
-					'veljače',
-					'ožujka',
-					'travnja',
-					'svibnja',
-					'lipnja',
-					'srpnja',
-					'kolovoza',
-					'rujna',
-					'listopada',
-					'studenog',
-					'prosinca'
-				]
+				wide: ['siječnja', 'veljače', 'ožujka', 'travnja', 'svibnja', 'lipnja', 'srpnja', 'kolovoza', 'rujna', 'listopada', 'studenog', 'prosinca']
 			},
 			defaultFormattingWidth: 'wide'
 		}),

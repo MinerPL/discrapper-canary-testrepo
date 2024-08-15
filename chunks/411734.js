@@ -18,11 +18,7 @@ function s(e, t) {
 			let t = e.current;
 			if (null != t) {
 				var n;
-				let e =
-						((n = t),
-						document.createTreeWalker(n, NodeFilter.SHOW_ELEMENT, {
-							acceptNode: (e) => (e.tabIndex >= 0 && !e.disabled ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP)
-						})),
+				let e = ((n = t), document.createTreeWalker(n, NodeFilter.SHOW_ELEMENT, { acceptNode: (e) => (e.tabIndex >= 0 && !e.disabled ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP) })),
 					i = e.currentNode;
 				for (; null !== i; ) {
 					let t = i,

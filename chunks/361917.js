@@ -79,10 +79,10 @@ function Y(e) {
 		y = A && u;
 	a.useEffect(() => {
 		(0, p.w1)({
-			guildId: n.getGuildId(),
+			guildId: n.guild_id,
 			force: !0
 		});
-	}, [n]),
+	}, [n.guild_id]),
 		a.useEffect(() => {
 			t === b._b.VOICE && p.ux();
 		}, [t]);
@@ -94,9 +94,7 @@ function Y(e) {
 			(0, i.jsx)(z, {
 				searchQuery: l,
 				setSearchQuery: o,
-				placeholder: E
-					? D.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER
-					: D.Z.Messages.APP_LAUNCHER_SEARCH_ACTIVITIES_PLACEHOLDER
+				placeholder: E ? D.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER : D.Z.Messages.APP_LAUNCHER_SEARCH_ACTIVITIES_PLACEHOLDER
 			}),
 			(0, i.jsx)(d.Scroller, {
 				ref: r,
@@ -137,10 +135,7 @@ function Y(e) {
 								T &&
 									(0, i.jsx)(O.A, {
 										type: b.LG.HOME_EMPTY,
-										textContent:
-											t === b._b.TEXT
-												? D.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_SEARCH_SUGGEST_BODY
-												: D.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_ACTIVITIES_BODY
+										textContent: t === b._b.TEXT ? D.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_SEARCH_SUGGEST_BODY : D.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_ACTIVITIES_BODY
 									}),
 								M && (0, i.jsx)(H.Z, {})
 							]
@@ -326,10 +321,7 @@ function q(e) {
 			numItems: l.length,
 			numVisibleItems: l.length
 		}),
-		{ clickOnHomeActivityOpensAppDetail: s } = P.m1.getCurrentConfig(
-			{ location: 'ActivitiesShelfSection' },
-			{ autoTrackExposure: !1 }
-		),
+		{ clickOnHomeActivityOpensAppDetail: s } = P.m1.getCurrentConfig({ location: 'ActivitiesShelfSection' }, { autoTrackExposure: !1 }),
 		c = 0 === l.length;
 	return (a.useEffect(() => {
 		t(c);
@@ -387,9 +379,7 @@ function Q(e) {
 		),
 		m = a.useMemo(() => {
 			var e, n;
-			return Object.values(
-				null !== (n = null === (e = r.result) || void 0 === e ? void 0 : e.sections) && void 0 !== n ? n : {}
-			)
+			return Object.values(null !== (n = null === (e = r.result) || void 0 === e ? void 0 : e.sections) && void 0 !== n ? n : {})
 				.map((e) => {
 					let { descriptor: n } = e;
 					return n;

@@ -28,16 +28,5 @@ t.Z = function (e) {
 				}
 			}
 		});
-	return r.createElement(
-		'div',
-		null,
-		r.createElement('div', { style: a.label }, 'new'),
-		r.createElement(
-			'div',
-			{ style: a.swatches },
-			r.createElement('div', { style: a.new }),
-			r.createElement('div', { style: a.current })
-		),
-		r.createElement('div', { style: a.label }, 'current')
-	);
+	return r.createElement('div', null, r.createElement('div', { style: a.label }, 'new'), r.createElement('div', { style: a.swatches }, r.createElement('div', { style: a.new }), r.createElement('div', { style: a.current })), r.createElement('div', { style: a.label }, 'current'));
 };

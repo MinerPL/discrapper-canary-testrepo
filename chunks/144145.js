@@ -98,28 +98,14 @@ function Z(e) {
 					}
 					return (0, i.jsx)(r.MenuItem, {
 						id: 'join-'.concat(a.session_id),
-						label: t
-							? A.Z.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN_USER.format({ name: s.toString() })
-							: A.Z.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN,
+						label: t ? A.Z.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN_USER.format({ name: s.toString() }) : A.Z.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN,
 						action: c
 					});
 				})(e, n),
 				(function (e, t) {
-					let {
-						activity: n,
-						game: a,
-						libraryApplication: s,
-						location: l,
-						canPlay: o,
-						isRunning: c,
-						isLaunching: d
-					} = e;
+					let { activity: n, game: a, libraryApplication: s, location: l, canPlay: o, isRunning: c, isLaunching: d } = e;
 					if (!o || null == n) return null;
-					let u = c
-						? A.Z.Messages.ACTIVITY_FEED_POPOUT_APPLICATION_RUNNING.format({ name: a.name })
-						: d
-							? A.Z.Messages.ACTIVITY_FEED_POPOUT_APPLICATION_LAUNCHING.format({ name: a.name })
-							: void 0;
+					let u = c ? A.Z.Messages.ACTIVITY_FEED_POPOUT_APPLICATION_RUNNING.format({ name: a.name }) : d ? A.Z.Messages.ACTIVITY_FEED_POPOUT_APPLICATION_LAUNCHING.format({ name: a.name }) : void 0;
 					return (0, i.jsx)(r.MenuItem, {
 						id: 'play-'.concat(n.session_id),
 						action: function () {
@@ -132,9 +118,7 @@ function Z(e) {
 								}
 							});
 						},
-						label: t
-							? A.Z.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_APPLICATION_NAME.format({ name: a.name })
-							: A.Z.Messages.APPLICATION_CONTEXT_MENU_LAUNCH,
+						label: t ? A.Z.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_APPLICATION_NAME.format({ name: a.name }) : A.Z.Messages.APPLICATION_CONTEXT_MENU_LAUNCH,
 						subtext: u
 					});
 				})(e, n)

@@ -15,8 +15,7 @@ r = {
 	month: `\u{6708}`,
 	second: `\u{79D2}`,
 	selectedDateDescription: (e) => `\u{9009}\u{5B9A}\u{7684}\u{65E5}\u{671F}\u{FF1A}${e.date}`,
-	selectedRangeDescription: (e) =>
-		`\u{9009}\u{5B9A}\u{7684}\u{8303}\u{56F4}\u{FF1A}${e.startDate} \u{81F3} ${e.endDate}`,
+	selectedRangeDescription: (e) => `\u{9009}\u{5B9A}\u{7684}\u{8303}\u{56F4}\u{FF1A}${e.startDate} \u{81F3} ${e.endDate}`,
 	selectedTimeDescription: (e) => `\u{9009}\u{5B9A}\u{7684}\u{65F6}\u{95F4}\u{FF1A}${e.time}`,
 	startDate: `\u{5F00}\u{59CB}\u{65E5}\u{671F}`,
 	timeZoneName: `\u{65F6}\u{533A}`,

@@ -22,15 +22,7 @@ class a {
 	attach(e) {
 		let { stores: t } = this;
 		t.forEach((t, n) => {
-			if (null == t)
-				throw Error(
-					''
-						.concat(
-							e,
-							" tried to load a non-existent store. Either it isn't defined or there is a circular dependency. Loaded "
-						)
-						.concat(n, ' stores before error.')
-				);
+			if (null == t) throw Error(''.concat(e, " tried to load a non-existent store. Either it isn't defined or there is a circular dependency. Loaded ").concat(n, ' stores before error.'));
 			t.addReactChangeListener(this.handleStoreChange);
 		});
 	}

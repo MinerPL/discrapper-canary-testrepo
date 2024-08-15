@@ -43,35 +43,7 @@ var r;
 			dayOfMonthOrdinalParse: /\d{1,2}(fed|ain|af|il|ydd|ed|eg)/,
 			ordinal: function (e) {
 				var t = '';
-				return (
-					e > 20
-						? (t = 40 === e || 50 === e || 60 === e || 80 === e || 100 === e ? 'fed' : 'ain')
-						: e > 0 &&
-							(t = [
-								'',
-								'af',
-								'il',
-								'ydd',
-								'ydd',
-								'ed',
-								'ed',
-								'ed',
-								'fed',
-								'fed',
-								'fed',
-								'eg',
-								'fed',
-								'eg',
-								'eg',
-								'fed',
-								'eg',
-								'eg',
-								'fed',
-								'eg',
-								'fed'
-							][e]),
-					e + t
-				);
+				return e > 20 ? (t = 40 === e || 50 === e || 60 === e || 80 === e || 100 === e ? 'fed' : 'ain') : e > 0 && (t = ['', 'af', 'il', 'ydd', 'ydd', 'ed', 'ed', 'ed', 'fed', 'fed', 'fed', 'eg', 'fed', 'eg', 'eg', 'fed', 'eg', 'eg', 'fed', 'eg', 'fed'][e]), e + t;
 			},
 			week: {
 				dow: 1,

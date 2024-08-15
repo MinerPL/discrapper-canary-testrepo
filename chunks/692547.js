@@ -12,8 +12,8 @@ var r = n(688619),
 	E = n(897710);
 let { Themes: f } = n(15202).V,
 	{ SemanticColors: h, RawColors: p } = u.V,
-	{ Shadows: I } = _.V,
-	{ Spacing: m } = E.V,
+	{ Shadows: m } = _.V,
+	{ Spacing: I } = E.V,
 	{ Modules: T } = c.V,
 	g = l()(p, (e) => i()(e)),
 	S = {
@@ -39,7 +39,7 @@ let { Themes: f } = n(15202).V,
 				resolve: (e) => A(n, e.saturation)
 			};
 		}),
-		shadows: l()(I, (e, t) => ({
+		shadows: l()(m, (e, t) => ({
 			css: O(t),
 			resolve: (t) => ({
 				boxShadow: e[t.theme].boxShadow,
@@ -48,7 +48,7 @@ let { Themes: f } = n(15202).V,
 			})
 		})),
 		radii: d.w,
-		spacing: l()(m, (e) => ''.concat(e, 'px'))
+		spacing: l()(I, (e) => ''.concat(e, 'px'))
 	};
 function A(e, t) {
 	return {

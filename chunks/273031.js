@@ -26,9 +26,7 @@ function c(e) {
 				dangerous: c,
 				'aria-label': null != _ ? _ : a,
 				className: d,
-				children: i.Children.map(n, (e) =>
-					i.isValidElement(e) ? i.cloneElement(e, { className: s()(e.props.className, u.actionBarIcon) }) : e
-				)
+				children: i.Children.map(n, (e) => (i.isValidElement(e) ? i.cloneElement(e, { className: s()(e.props.className, u.actionBarIcon) }) : e))
 			});
 		}
 	});

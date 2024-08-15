@@ -19,10 +19,7 @@ e.exports = function (e) {
 	var t = arguments.length > 1 ? arguments[1] : i,
 		n = [];
 	if (t !== i) {
-		if (!d)
-			throw new s(
-				'ArrayCreate: a `proto` argument that is not `Array.prototype` is not supported in an environment that does not support setting the [[Prototype]]'
-			);
+		if (!d) throw new s('ArrayCreate: a `proto` argument that is not `Array.prototype` is not supported in an environment that does not support setting the [[Prototype]]');
 		d(n, t);
 	}
 	return 0 !== e && (n.length = e), n;

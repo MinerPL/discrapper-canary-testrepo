@@ -34,8 +34,8 @@ var a,
 	f = n(26151),
 	h = n(224706),
 	p = n(765250),
-	I = n(13245),
-	m = n(287734),
+	m = n(13245),
+	I = n(287734),
 	T = n(579806),
 	g = n(887278),
 	S = n(490029),
@@ -55,13 +55,7 @@ var a,
 	w = n(145597),
 	x = n(981631),
 	G = n(987650);
-((o = a || (a = {})).ATTACHING = 'ATTACHING'),
-	(o.CONNECTING = 'CONNECTING'),
-	(o.CONNECTED = 'CONNECTED'),
-	(o.READY = 'READY'),
-	(o.CRASHED = 'CRASHED'),
-	(o.CONNECT_FAILED = 'CONNECT_FAILED'),
-	(o.HOOK_FAILED = 'HOOK_FAILED');
+((o = a || (a = {})).ATTACHING = 'ATTACHING'), (o.CONNECTING = 'CONNECTING'), (o.CONNECTED = 'CONNECTED'), (o.READY = 'READY'), (o.CRASHED = 'CRASHED'), (o.CONNECT_FAILED = 'CONNECT_FAILED'), (o.HOOK_FAILED = 'HOOK_FAILED');
 let k = {},
 	B = new Map(),
 	F = !1,
@@ -74,142 +68,7 @@ let k = {},
 	K = '',
 	z = new Set(),
 	q = !1,
-	Q = new Set([
-		'CONNECTION_OPEN',
-		'CONNECTION_RESUMED',
-		'CONNECTION_CLOSED',
-		'WINDOW_INIT',
-		'WINDOW_FULLSCREEN_CHANGE',
-		'WINDOW_FOCUS',
-		'WINDOW_RESIZED',
-		'WINDOW_HIDDEN',
-		'CHANNEL_SELECT',
-		'DELAYED_CHANNEL_SELECT',
-		'DELAYED_SELECT_FLUSH',
-		'LOAD_MESSAGES_SUCCESS',
-		'LOAD_MESSAGES_FAILURE',
-		'LOAD_MESSAGES',
-		'MESSAGE_START_EDIT',
-		'MESSAGE_UPDATE_EDIT',
-		'MESSAGE_END_EDIT',
-		'APP_VIEW_SET_HOME_LINK',
-		'APPLICATION_STORE_LOCATION_CHANGE',
-		'LOGIN',
-		'LOGIN_SUCCESS',
-		'LOGIN_FAILURE',
-		'LOGIN_MFA_STEP',
-		'LOGIN_MFA',
-		'LOGIN_MFA_FAILURE',
-		'LOGIN_MFA_SMS',
-		'LOGIN_MFA_SMS_REQUEST_SUCCESS',
-		'LOGIN_MFA_SMS_FAILURE',
-		'LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION',
-		'LOGIN_ACCOUNT_DISABLED',
-		'LOGIN_RESET',
-		'FINGERPRINT',
-		'REGISTER',
-		'REGISTER_SUCCESS',
-		'REGISTER_FAILURE',
-		'VERIFY_FAILURE',
-		'VERIFY_SUCCESS',
-		'START_SESSION',
-		'FORGOT_PASSWORD_SENT',
-		'UPDATE_TOKEN',
-		'SET_CONSENT_REQUIRED',
-		'PASSWORDLESS_START',
-		'PASSWORDLESS_FAILURE',
-		'CONTEXT_MENU_OPEN',
-		'CONTEXT_MENU_CLOSE',
-		'MODAL_PUSH',
-		'MODAL_POP',
-		'MODAL_UPDATE',
-		'MODAL_POP_ALL',
-		'GUILD_SETTINGS_OPEN',
-		'USER_SETTINGS_MODAL_OPEN',
-		'CHANNEL_SETTINGS_OPEN',
-		'NOTIFICATION_SETTINGS_MODAL_OPEN',
-		'EMAIL_VERIFICATION_MODAL_OPEN',
-		'MENTION_MODAL_OPEN',
-		'QUICKSWITCHER_SHOW',
-		'SEARCH_MODAL_OPEN',
-		'IFE_EXPERIMENT_SEARCH_MODAL_OPEN',
-		'SHOW_KEYBOARD_SHORTCUTS',
-		'DM_SETTINGS_UPSELL_SHOW',
-		'INTERACTION_MODAL_CREATE',
-		'INTERACTION_IFRAME_MODAL_CREATE',
-		'GUILD_SETTINGS_CLOSE',
-		'USER_SETTINGS_MODAL_CLOSE',
-		'CHANNEL_SETTINGS_CLOSE',
-		'NOTIFICATION_SETTINGS_MODAL_CLOSE',
-		'EMAIL_VERIFICATION_MODAL_CLOSE',
-		'MENTION_MODAL_CLOSE',
-		'QUICKSWITCHER_HIDE',
-		'SEARCH_MODAL_CLOSE',
-		'IFE_EXPERIMENT_SEARCH_MODAL_CLOSE',
-		'HIDE_KEYBOARD_SHORTCUTS',
-		'QUICKSWITCHER_SHOW',
-		'QUICKSWITCHER_HIDE',
-		'QUICKSWITCHER_SWITCH_TO',
-		'QUICKSWITCHER_SEARCH',
-		'QUICKSWITCHER_SELECT',
-		'UPDATE_CHANNEL_DIMENSIONS',
-		'UPDATE_CHANNEL_LIST_DIMENSIONS',
-		'UPDATE_GUILD_LIST_DIMENSIONS',
-		'TRACK',
-		'CHANNEL_SETTINGS_OPEN',
-		'CHANNEL_SETTINGS_INIT',
-		'CHANNEL_SETTINGS_CLOSE',
-		'GUILD_SETTINGS_INIT',
-		'GUILD_SETTINGS_OPEN',
-		'GUILD_SETTINGS_CLOSE',
-		'TUTORIAL_INDICATOR_SHOW',
-		'TUTORIAL_INDICATOR_HIDE',
-		'TUTORIAL_INDICATOR_SUPPRESS_ALL',
-		'USER_SETTINGS_ACCOUNT_INIT',
-		'USER_SETTINGS_ACCOUNT_CLOSE',
-		'NOTICE_SHOW',
-		'NOTICE_DISMISS',
-		'NOTICE_DISABLE',
-		'SEARCH_EDITOR_STATE_CHANGE',
-		'SEARCH_EDITOR_STATE_CLEAR',
-		'SEARCH_START',
-		'SEARCH_FINISH',
-		'MOD_VIEW_SEARCH_FINISH',
-		'SEARCH_INDEXING',
-		'SEARCH_CLEAR',
-		'SEARCH_ENSURE_SEARCH_STATE',
-		'SEARCH_AUTOCOMPLETE_QUERY_UPDATE',
-		'SEARCH_CLEAR_HISTORY',
-		'SEARCH_SET_SHOW_BLOCKED_RESULTS',
-		'LAYOUT_CREATE',
-		'POPOUT_WINDOW_OPEN',
-		'POPOUT_WINDOW_CLOSE',
-		'POPOUT_WINDOW_SET_ALWAYS_ON_TOP',
-		'TYPING_START_LOCAL',
-		'TYPING_STOP_LOCAL',
-		'SPOTIFY_SET_ACTIVE_DEVICE',
-		'LOAD_INVITE_SUGGESTIONS',
-		'INVITE_SUGGESTIONS_SEARCH',
-		'IMPERSONATE_UPDATE',
-		'IMPERSONATE_STOP',
-		'CREATE_PENDING_REPLY',
-		'CREATE_SHALLOW_PENDING_REPLY',
-		'DELETE_PENDING_REPLY',
-		'USER_SETTINGS_PROTO_UPDATE_EDIT_INFO',
-		'APPLICATION_COMMAND_INDEX_FETCH_REQUEST',
-		'APPLICATION_COMMAND_INDEX_FETCH_SUCCESS',
-		'APPLICATION_COMMAND_INDEX_FETCH_FAILURE',
-		'APPLICATION_COMMAND_EXECUTE_BAD_VERSION',
-		'APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST',
-		'APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE',
-		'APPLICATION_COMMAND_SET_ACTIVE_COMMAND',
-		'APPLICATION_COMMAND_SET_PREFERRED_COMMAND',
-		'APPLICATION_COMMAND_UPDATE_OPTIONS',
-		'APPLICATION_COMMAND_UPDATE_CHANNEL_STATE',
-		'APPLICATION_COMMAND_USED',
-		'DCF_HANDLE_DC_SHOWN',
-		'DCF_HANDLE_DC_DISMISSED'
-	]),
+	Q = new Set(['CONNECTION_OPEN', 'CONNECTION_RESUMED', 'CONNECTION_CLOSED', 'WINDOW_INIT', 'WINDOW_FULLSCREEN_CHANGE', 'WINDOW_FOCUS', 'WINDOW_RESIZED', 'WINDOW_HIDDEN', 'CHANNEL_SELECT', 'DELAYED_CHANNEL_SELECT', 'DELAYED_SELECT_FLUSH', 'LOAD_MESSAGES_SUCCESS', 'LOAD_MESSAGES_FAILURE', 'LOAD_MESSAGES', 'MESSAGE_START_EDIT', 'MESSAGE_UPDATE_EDIT', 'MESSAGE_END_EDIT', 'APP_VIEW_SET_HOME_LINK', 'APPLICATION_STORE_LOCATION_CHANGE', 'LOGIN', 'LOGIN_SUCCESS', 'LOGIN_FAILURE', 'LOGIN_MFA_STEP', 'LOGIN_MFA', 'LOGIN_MFA_FAILURE', 'LOGIN_MFA_SMS', 'LOGIN_MFA_SMS_REQUEST_SUCCESS', 'LOGIN_MFA_SMS_FAILURE', 'LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION', 'LOGIN_ACCOUNT_DISABLED', 'LOGIN_RESET', 'FINGERPRINT', 'REGISTER', 'REGISTER_SUCCESS', 'REGISTER_FAILURE', 'VERIFY_FAILURE', 'VERIFY_SUCCESS', 'START_SESSION', 'FORGOT_PASSWORD_SENT', 'UPDATE_TOKEN', 'SET_CONSENT_REQUIRED', 'PASSWORDLESS_START', 'PASSWORDLESS_FAILURE', 'CONTEXT_MENU_OPEN', 'CONTEXT_MENU_CLOSE', 'MODAL_PUSH', 'MODAL_POP', 'MODAL_UPDATE', 'MODAL_POP_ALL', 'GUILD_SETTINGS_OPEN', 'USER_SETTINGS_MODAL_OPEN', 'CHANNEL_SETTINGS_OPEN', 'NOTIFICATION_SETTINGS_MODAL_OPEN', 'EMAIL_VERIFICATION_MODAL_OPEN', 'MENTION_MODAL_OPEN', 'QUICKSWITCHER_SHOW', 'SEARCH_MODAL_OPEN', 'IFE_EXPERIMENT_SEARCH_MODAL_OPEN', 'SHOW_KEYBOARD_SHORTCUTS', 'DM_SETTINGS_UPSELL_SHOW', 'INTERACTION_MODAL_CREATE', 'INTERACTION_IFRAME_MODAL_CREATE', 'GUILD_SETTINGS_CLOSE', 'USER_SETTINGS_MODAL_CLOSE', 'CHANNEL_SETTINGS_CLOSE', 'NOTIFICATION_SETTINGS_MODAL_CLOSE', 'EMAIL_VERIFICATION_MODAL_CLOSE', 'MENTION_MODAL_CLOSE', 'QUICKSWITCHER_HIDE', 'SEARCH_MODAL_CLOSE', 'IFE_EXPERIMENT_SEARCH_MODAL_CLOSE', 'HIDE_KEYBOARD_SHORTCUTS', 'QUICKSWITCHER_SHOW', 'QUICKSWITCHER_HIDE', 'QUICKSWITCHER_SWITCH_TO', 'QUICKSWITCHER_SEARCH', 'QUICKSWITCHER_SELECT', 'UPDATE_CHANNEL_DIMENSIONS', 'UPDATE_CHANNEL_LIST_DIMENSIONS', 'UPDATE_GUILD_LIST_DIMENSIONS', 'TRACK', 'CHANNEL_SETTINGS_OPEN', 'CHANNEL_SETTINGS_INIT', 'CHANNEL_SETTINGS_CLOSE', 'GUILD_SETTINGS_INIT', 'GUILD_SETTINGS_OPEN', 'GUILD_SETTINGS_CLOSE', 'TUTORIAL_INDICATOR_SHOW', 'TUTORIAL_INDICATOR_HIDE', 'TUTORIAL_INDICATOR_SUPPRESS_ALL', 'USER_SETTINGS_ACCOUNT_INIT', 'USER_SETTINGS_ACCOUNT_CLOSE', 'NOTICE_SHOW', 'NOTICE_DISMISS', 'NOTICE_DISABLE', 'SEARCH_EDITOR_STATE_CHANGE', 'SEARCH_EDITOR_STATE_CLEAR', 'SEARCH_START', 'SEARCH_FINISH', 'MOD_VIEW_SEARCH_FINISH', 'SEARCH_INDEXING', 'SEARCH_CLEAR', 'SEARCH_ENSURE_SEARCH_STATE', 'SEARCH_AUTOCOMPLETE_QUERY_UPDATE', 'SEARCH_CLEAR_HISTORY', 'SEARCH_SET_SHOW_BLOCKED_RESULTS', 'LAYOUT_CREATE', 'POPOUT_WINDOW_OPEN', 'POPOUT_WINDOW_CLOSE', 'POPOUT_WINDOW_SET_ALWAYS_ON_TOP', 'TYPING_START_LOCAL', 'TYPING_STOP_LOCAL', 'SPOTIFY_SET_ACTIVE_DEVICE', 'LOAD_INVITE_SUGGESTIONS', 'INVITE_SUGGESTIONS_SEARCH', 'IMPERSONATE_UPDATE', 'IMPERSONATE_STOP', 'CREATE_PENDING_REPLY', 'CREATE_SHALLOW_PENDING_REPLY', 'DELETE_PENDING_REPLY', 'USER_SETTINGS_PROTO_UPDATE_EDIT_INFO', 'APPLICATION_COMMAND_INDEX_FETCH_REQUEST', 'APPLICATION_COMMAND_INDEX_FETCH_SUCCESS', 'APPLICATION_COMMAND_INDEX_FETCH_FAILURE', 'APPLICATION_COMMAND_EXECUTE_BAD_VERSION', 'APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST', 'APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE', 'APPLICATION_COMMAND_SET_ACTIVE_COMMAND', 'APPLICATION_COMMAND_SET_PREFERRED_COMMAND', 'APPLICATION_COMMAND_UPDATE_OPTIONS', 'APPLICATION_COMMAND_UPDATE_CHANNEL_STATE', 'APPLICATION_COMMAND_USED', 'DCF_HANDLE_DC_SHOWN', 'DCF_HANDLE_DC_DISMISSED']),
 	X = new Set(),
 	$ = new A.Z('OverlayBridgeStore'),
 	J = 'none',
@@ -239,12 +98,7 @@ function en(e, t) {
 		if ((null == t ? B.delete(e) : B.set(e, t), null == t || 'CRASHED' === t)) {
 			var i;
 			j = null;
-			let e =
-				null === T.Z || void 0 === T.Z
-					? void 0
-					: null === (i = T.Z.fileManager) || void 0 === i
-						? void 0
-						: i.uploadDiscordHookCrashes;
+			let e = null === T.Z || void 0 === T.Z ? void 0 : null === (i = T.Z.fileManager) || void 0 === i ? void 0 : i.uploadDiscordHookCrashes;
 			null != e &&
 				e().then((e) => {
 					if (!!Array.isArray(e) && 0 !== e.length)
@@ -299,15 +153,7 @@ async function ei(e) {
 	let n = await eu();
 	(J = 'attach.transitionOverlayPIDStatus'), en(e, 'ATTACHING'), (J = 'attach.attachToProcess');
 	let r = await g.YT(e);
-	null == r
-		? ((J = 'attach.transitionOverlayPIDStatus (CONNECTING)'),
-			en(e, 'CONNECTING', 'ATTACHING'),
-			(J = 'attach.reconcileHostProcess'),
-			await er(n),
-			n.connectProcess(e))
-		: ((J = 'attach.transitionOverlayPIDStatus (HOOK_FAILED)'),
-			en(e, 'HOOK_FAILED', 'ATTACHING'),
-			$.warn('Could not hook to pid='.concat(e, ', error=').concat(r)));
+	null == r ? ((J = 'attach.transitionOverlayPIDStatus (CONNECTING)'), en(e, 'CONNECTING', 'ATTACHING'), (J = 'attach.reconcileHostProcess'), await er(n), n.connectProcess(e)) : ((J = 'attach.transitionOverlayPIDStatus (HOOK_FAILED)'), en(e, 'HOOK_FAILED', 'ATTACHING'), $.warn('Could not hook to pid='.concat(e, ', error=').concat(r)));
 }
 async function ea(e) {
 	if ((!ee.isMutexHeld() && $.error('_detachPIDMustBeLocked: overlayMutex is not held.', e), !B.has(e))) {
@@ -316,12 +162,7 @@ async function ea(e) {
 	}
 	J = 'detach.getOverlayModule';
 	let t = await eu();
-	(J = 'detach.transitionOverlayPIDStatus'),
-		en(e, null),
-		e !== w.Js &&
-			((J = 'detach.cancelAttachToProcess'), g.pn(e), (J = 'detach.disconnectProcess'), t.disconnectProcess(e)),
-		(J = 'detach.reconcileHostProcess'),
-		await er(t);
+	(J = 'detach.transitionOverlayPIDStatus'), en(e, null), e !== w.Js && ((J = 'detach.cancelAttachToProcess'), g.pn(e), (J = 'detach.disconnectProcess'), t.disconnectProcess(e)), (J = 'detach.reconcileHostProcess'), await er(t);
 }
 async function es(e) {
 	var t;
@@ -397,19 +238,12 @@ function el() {
 let eu = (() => {
 	let e = null;
 	async function t() {
-		if (!G.iP)
-			throw (
-				($.error('Attempted to load overlay on an unsupported platform.'),
-				Error('Overlay is not supported on this platform.'))
-			);
+		if (!G.iP) throw ($.error('Attempted to load overlay on an unsupported platform.'), Error('Overlay is not supported on this platform.'));
 		try {
 			return (
 				await U.ZP.ensureModule('discord_overlay2'),
 				(function (e) {
-					for (let t of ['createHostProcess', 'connectProcess', 'disconnectProcess', 'destroyHostProcess'])
-						null == e[t] &&
-							($.info('polyfilling OverlayModule.'.concat(t, '(); Overlay module is probably out of date.')),
-							(e[t] = () => void 0));
+					for (let t of ['createHostProcess', 'connectProcess', 'disconnectProcess', 'destroyHostProcess']) null == e[t] && ($.info('polyfilling OverlayModule.'.concat(t, '(); Overlay module is probably out of date.')), (e[t] = () => void 0));
 					return e;
 				})(U.ZP.requireModule('discord_overlay2'))
 			);
@@ -423,80 +257,28 @@ async function ec(e) {
 	var t, n, r, i, a, s, o;
 	try {
 		let t = (await el()) + '&oop=true&pid='.concat(e);
-		await (null === T.Z || void 0 === T.Z
-			? void 0
-			: null === (i = T.Z.globalOverlay) || void 0 === i
-				? void 0
-				: null === (r = i.openWindow) || void 0 === r
-					? void 0
-					: r.call(i, t));
+		await (null === T.Z || void 0 === T.Z ? void 0 : null === (i = T.Z.globalOverlay) || void 0 === i ? void 0 : null === (r = i.openWindow) || void 0 === r ? void 0 : r.call(i, t));
 	} catch (e) {
-		$.log('globalOverlay: Failed to open overlay: '.concat(e), e),
-			null === T.Z ||
-				void 0 === T.Z ||
-				null === (s = T.Z.window) ||
-				void 0 === s ||
-				s.close(
-					null === T.Z || void 0 === T.Z
-						? void 0
-						: null === (a = T.Z.globalOverlay) || void 0 === a
-							? void 0
-							: a.WINDOW_KEY
-				);
+		$.log('globalOverlay: Failed to open overlay: '.concat(e), e), null === T.Z || void 0 === T.Z || null === (s = T.Z.window) || void 0 === s || s.close(null === T.Z || void 0 === T.Z ? void 0 : null === (a = T.Z.globalOverlay) || void 0 === a ? void 0 : a.WINDOW_KEY);
 	}
-	return (
-		(W = e),
-		null !==
-			(o = await (null === T.Z || void 0 === T.Z
-				? void 0
-				: null === (n = T.Z.window) || void 0 === n
-					? void 0
-					: n.getNativeHandle(
-							null === T.Z || void 0 === T.Z
-								? void 0
-								: null === (t = T.Z.globalOverlay) || void 0 === t
-									? void 0
-									: t.WINDOW_KEY
-						))) && void 0 !== o
-			? o
-			: ''
-	);
+	return (W = e), null !== (o = await (null === T.Z || void 0 === T.Z ? void 0 : null === (n = T.Z.window) || void 0 === n ? void 0 : n.getNativeHandle(null === T.Z || void 0 === T.Z ? void 0 : null === (t = T.Z.globalOverlay) || void 0 === t ? void 0 : t.WINDOW_KEY))) && void 0 !== o ? o : '';
 }
 function ed() {
 	var e, t;
-	null === T.Z ||
-		void 0 === T.Z ||
-		null === (t = T.Z.window) ||
-		void 0 === t ||
-		t.close(
-			null === T.Z || void 0 === T.Z ? void 0 : null === (e = T.Z.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY
-		),
-		(W = null);
+	null === T.Z || void 0 === T.Z || null === (t = T.Z.window) || void 0 === t || t.close(null === T.Z || void 0 === T.Z ? void 0 : null === (e = T.Z.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY), (W = null);
 }
 function e_(e) {
 	let t = L.Z.getGameForPID(e);
-	I.Z.setAssociatedGame(null != W ? W : -1, e, t);
+	m.Z.setAssociatedGame(null != W ? W : -1, e, t);
 }
 let eE = (() => {
 	let e = null;
 	async function t() {
-		if (!G.iP || !(0, w.VS)())
-			throw (
-				($.error('Attempted to load out of process overlay on an unsupported platform.'),
-				Error('Out of Process Overlay is not supported on this platform.'))
-			);
+		if (!G.iP || !(0, w.VS)()) throw ($.error('Attempted to load out of process overlay on an unsupported platform.'), Error('Out of Process Overlay is not supported on this platform.'));
 		try {
 			var e, t, n;
 			let { OutOfProcess: r } = await eu();
-			return (
-				null == r || null === (e = r.init) || void 0 === e || e.call(r),
-				r.setClickZoneCallback(ev),
-				r.setHostWindowCallbacks(ec, ed, e_),
-				r.setFocusCallback(ep),
-				null === (t = r.setFocusLostCallback) || void 0 === t || t.call(r, eI),
-				null === (n = r.setSuccessfullyShownCallback) || void 0 === n || n.call(r, em),
-				r
-			);
+			return null == r || null === (e = r.init) || void 0 === e || e.call(r), r.setClickZoneCallback(ev), r.setHostWindowCallbacks(ec, ed, e_), r.setFocusCallback(ep), null === (t = r.setFocusLostCallback) || void 0 === t || t.call(r, em), null === (n = r.setSuccessfullyShownCallback) || void 0 === n || n.call(r, eI), r;
 		} catch (e) {
 			throw ($.error('failed loading out of process overlay', e), e);
 		}
@@ -525,20 +307,15 @@ let eh = et('setOverlayEnabled', async (e, t) => {
 function ep(e) {
 	if (0 === e) {
 		var t, n;
-		if (
-			(null !== (n = null === (t = k[null != j ? j : 0]) || void 0 === t ? void 0 : t.method) && void 0 !== n
-				? n
-				: G.gl.Disabled) === G.gl.OutOfProcess
-		)
-			return;
+		if ((null !== (n = null === (t = k[null != j ? j : 0]) || void 0 === t ? void 0 : t.method) && void 0 !== n ? n : G.gl.Disabled) === G.gl.OutOfProcess) return;
 	}
-	I.Z.setFocusedPID(0 === e ? null : e);
-}
-function eI(e) {
-	j = null;
+	m.Z.setFocusedPID(0 === e ? null : e);
 }
 function em(e) {
-	I.Z.successfullyShown(e);
+	j = null;
+}
+function eI(e) {
+	m.Z.successfullyShown(e);
 }
 function eT(e, t, n) {
 	var r;
@@ -594,7 +371,7 @@ function eA(e) {
 }
 let eN = null;
 function ev(e, t, n) {
-	I.Z.relayClickZoneClicked(e, t, n);
+	m.Z.relayClickZoneClicked(e, t, n);
 }
 async function eO(e) {
 	if (!!(0, w.VS)())
@@ -663,7 +440,7 @@ function eD(e) {
 							payloads: [n]
 						}),
 						en(i, 'READY'),
-						I.Z.overlayReady(i);
+						m.Z.overlayReady(i);
 				});
 			break;
 		case x.BmY.DISPATCH:
@@ -678,12 +455,7 @@ function eD(e) {
 }
 class eL extends (s = _.ZP.Store) {
 	initialize() {
-		if (!(!G.iP || __OVERLAY__))
-			this.waitFor(N.ZP, C.default),
-				S.sr(eD, ey),
-				C.default.addChangeListener(eg),
-				eh(v.v.enabled, v.v.legacyEnabled),
-				E.Z.addInterceptor(eR);
+		if (!(!G.iP || __OVERLAY__)) this.waitFor(N.ZP, C.default), S.sr(eD, ey), C.default.addChangeListener(eg), eh(v.v.enabled, v.v.legacyEnabled), E.Z.addInterceptor(eR);
 	}
 	isInputLocked(e) {
 		return !z.has(e);
@@ -744,7 +516,7 @@ let eb = new eL(
 							}),
 						n = 0,
 						r = () => {
-							15 === n ? I.Z.notifyReadyToShow(e.associatedGamePID) : ((n += 1), t().then(r));
+							15 === n ? m.Z.notifyReadyToShow(e.associatedGamePID) : ((n += 1), t().then(r));
 						};
 					r();
 				}
@@ -789,15 +561,12 @@ let eb = new eL(
 					let { port: t } = e;
 					K = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
 					let n = new URLSearchParams();
-					n.append('build_id', 'd1dcdc31379c3e2f78d0f9e04ec348a61ab80603'),
-						n.append('rpc', String(t)),
-						n.append('rpc_auth_token', K),
-						(r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
+					n.append('build_id', '3e7a1435dd444a83b7febd5d2bc4015d99cd3342'), n.append('rpc', String(t)), n.append('rpc_auth_token', K), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
 				},
 				OVERLAY_CALL_PRIVATE_CHANNEL: function (e) {
 					let { channelId: t, ring: n } = e;
 					setImmediate(() => {
-						m.default.selectPrivateChannel(t), f.Z.call(t, !1, !!n);
+						I.default.selectPrivateChannel(t), f.Z.call(t, !1, !!n);
 					});
 				},
 				OVERLAY_JOIN_GAME: function (e) {
@@ -810,7 +579,7 @@ let eb = new eL(
 							channelId: i,
 							messageId: a
 						}),
-							null != j && I.Z.setLocked(!0, j);
+							null != j && m.Z.setLocked(!0, j);
 					});
 				},
 				OVERLAY_CRASHED: function (e) {
@@ -834,17 +603,9 @@ let eb = new eL(
 				},
 				OVERLAY_SET_ASSOCIATED_GAME: function (e) {
 					var t, n;
-					if (
-						(null !== (n = null === (t = k[e.previousAssociatedGamePID]) || void 0 === t ? void 0 : t.method) &&
-						void 0 !== n
-							? n
-							: G.gl.Disabled) !== G.gl.OutOfProcess
-					)
-						return;
+					if ((null !== (n = null === (t = k[e.previousAssociatedGamePID]) || void 0 === t ? void 0 : t.method) && void 0 !== n ? n : G.gl.Disabled) !== G.gl.OutOfProcess) return;
 					let r = B.get(e.previousAssociatedGamePID);
-					null != r && (B.delete(e.previousAssociatedGamePID), B.set(e.associatedGamePID, r)),
-						z.delete(e.previousAssociatedGamePID),
-						(W = e.associatedGamePID);
+					null != r && (B.delete(e.previousAssociatedGamePID), B.set(e.associatedGamePID, r)), z.delete(e.previousAssociatedGamePID), (W = e.associatedGamePID);
 				},
 				OVERLAY_NOTIFY_READY_TO_SHOW: function (e) {
 					eE().then((t) => {

@@ -42,13 +42,7 @@ t.Z = {
 					})
 			),
 	authorize(e) {
-		let {
-			location: t,
-			twoWayLinkType: n,
-			userCode: r,
-			twoWayLink: a,
-			successRedirect: s
-		} = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+		let { location: t, twoWayLinkType: n, userCode: r, twoWayLink: a, successRedirect: s } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
 		l.default.track(c.rMx.CONNECTED_ACCOUNT_INITIATED, {
 			platform_type: e,
 			location: t
@@ -58,9 +52,7 @@ t.Z = {
 		return (
 			null != r && u.append('two_way_user_code', r),
 			null != s && u.append('success_redirect', s),
-			null != n
-				? (u.append('two_way_link_type', n), u.append('two_way_link', 'true'))
-				: null != a && u.append('two_way_link', String(a)),
+			null != n ? (u.append('two_way_link_type', n), u.append('two_way_link', 'true')) : null != a && u.append('two_way_link', String(a)),
 			(o = o + '?' + u.toString()),
 			i.tn.get({
 				url: o,

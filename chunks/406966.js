@@ -31,8 +31,7 @@ t.Z = new (class e {
 		this.deleteWith(e), this.commit(t);
 	}
 	handleBackgroundSync(e, t) {
-		for (let n of e.guilds)
-			'unavailable' !== n.data_mode && this.updateWith(n.id, [n]), null == i.Z.getGuild(n.id) && this.remove(n.id, t);
+		for (let n of e.guilds) 'unavailable' !== n.data_mode && this.updateWith(n.id, [n]), null == i.Z.getGuild(n.id) && this.remove(n.id, t);
 		this.commit(t);
 	}
 	handleConnectionOpen(e, t) {
@@ -43,22 +42,12 @@ t.Z = new (class e {
 		var n;
 		let r = e.guild,
 			i = e.guild.id;
-		this.updateWith(i, [r]),
-			this.updateWith(i, r.emojis),
-			this.updateWith(i, r.stickers),
-			this.updateWith(i, r.channels),
-			this.updateWith(i, null === (n = r.channelUpdates) || void 0 === n ? void 0 : n.writes),
-			this.updateWith(i, Array.isArray(r.roles) ? r.roles : Object.values(r.roles)),
-			this.commit(t);
+		this.updateWith(i, [r]), this.updateWith(i, r.emojis), this.updateWith(i, r.stickers), this.updateWith(i, r.channels), this.updateWith(i, null === (n = r.channelUpdates) || void 0 === n ? void 0 : n.writes), this.updateWith(i, Array.isArray(r.roles) ? r.roles : Object.values(r.roles)), this.commit(t);
 	}
 	handleGuildUpdate(e, t) {
 		let n = e.guild,
 			r = e.guild.id;
-		this.updateWith(r, [n]),
-			this.updateWith(r, n.emojis),
-			this.updateWith(r, n.stickers),
-			this.updateWith(r, Array.isArray(n.roles) ? n.roles : Object.values(n.roles)),
-			this.commit(t);
+		this.updateWith(r, [n]), this.updateWith(r, n.emojis), this.updateWith(r, n.stickers), this.updateWith(r, Array.isArray(n.roles) ? n.roles : Object.values(n.roles)), this.commit(t);
 	}
 	handleGuildDelete(e, t) {
 		this.deleteWith(e.guild.id), this.commit(t);
@@ -97,10 +86,7 @@ t.Z = new (class e {
 	updateWith(e, t) {
 		if (null != t) {
 			var n, r;
-			let i = Math.max(
-					null !== (n = this.committed.get(e)) && void 0 !== n ? n : 0,
-					null !== (r = this.pending.get(e)) && void 0 !== r ? r : 0
-				),
+			let i = Math.max(null !== (n = this.committed.get(e)) && void 0 !== n ? n : 0, null !== (r = this.pending.get(e)) && void 0 !== r ? r : 0),
 				a = this.computeLatestVersion(i, t);
 			a > i && this.pending.set(e, a);
 		}

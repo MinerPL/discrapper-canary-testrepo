@@ -11,28 +11,7 @@ var i = n(735250),
 	h = n(689938),
 	p = n(121865);
 t.Z = l.forwardRef(function (e, t) {
-	let {
-			body: n,
-			header: r,
-			artClassName: _,
-			headerClassName: f,
-			contentClassName: g,
-			tryItText: m,
-			dismissText: C,
-			onTryFeature: I,
-			onClose: E,
-			className: N,
-			inlineArt: x = !1,
-			isPremiumFeature: S = !1,
-			shouldUseHorizontalButtons: v = !1,
-			showGIFTag: Z = !1,
-			dismissibleContent: T,
-			position: L = 'top',
-			align: A = 'center',
-			art: b,
-			isPremiumEarlyAccess: M = !1,
-			maxWidth: R = 280
-		} = e,
+	let { body: n, header: r, artClassName: _, headerClassName: f, contentClassName: g, tryItText: m, dismissText: C, onTryFeature: I, onClose: E, className: N, inlineArt: x = !1, isPremiumFeature: S = !1, shouldUseHorizontalButtons: v = !1, showGIFTag: Z = !1, dismissibleContent: T, position: L = 'top', align: A = 'center', art: b, isPremiumEarlyAccess: M = !1, maxWidth: R = 280 } = e,
 		O = v ? s.Button.Sizes.LARGE : s.Button.Sizes.MAX,
 		[P, y] = l.useState(!1),
 		{ ref: j, width: D } = (0, o.Z)();
@@ -42,8 +21,7 @@ t.Z = l.forwardRef(function (e, t) {
 	return (
 		l.useEffect(() => {
 			var e, t;
-			let n =
-				(null !== (t = null === (e = j.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
+			let n = (null !== (t = null === (e = j.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
 			!P && n > R && y(!0);
 		}, [P, D, j, R]),
 		l.useEffect(() => {

@@ -101,15 +101,7 @@ function f(n) {
 			});
 }
 function x(n) {
-	let {
-		transitionState: e,
-		onComplete: a,
-		onClose: i,
-		excludedPlatformTypes: c,
-		includedPlatformTypes: o,
-		integrations: s,
-		onCompleteApplication: p
-	} = n;
+	let { transitionState: e, onComplete: a, onClose: i, excludedPlatformTypes: c, includedPlatformTypes: o, integrations: s, onCompleteApplication: p } = n;
 	return (0, t.jsx)(r.ModalRoot, {
 		'aria-label': u.Z.Messages.CONNECTIONS_ADD_CONNECTIONS,
 		size: r.ModalSize.SMALL,

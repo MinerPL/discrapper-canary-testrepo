@@ -43,7 +43,7 @@ var r = n(478497),
 		strictNullHandling: !1
 	},
 	f = {},
-	h = function e(t, n, a, s, o, u, d, _, h, p, I, m, T, g, S, A, N, v) {
+	h = function e(t, n, a, s, o, u, d, _, h, p, m, I, T, g, S, A, N, v) {
 		for (var O, R, C = t, y = v, D = 0, L = !1; void 0 !== (y = y.get(f)) && !L; ) {
 			var b = y.get(t);
 			if (((D += 1), void 0 !== b)) {
@@ -67,25 +67,14 @@ var r = n(478497),
 			if (u) return h && !A ? h(n, E.encoder, N, 'key', g) : n;
 			C = '';
 		}
-		if (
-			'string' == typeof (O = C) ||
-			'number' == typeof O ||
-			'boolean' == typeof O ||
-			'symbol' == typeof O ||
-			'bigint' == typeof O ||
-			i.isBuffer(C)
-		)
-			return h
-				? [S(A ? n : h(n, E.encoder, N, 'key', g)) + '=' + S(h(C, E.encoder, N, 'value', g))]
-				: [S(n) + '=' + S(String(C))];
+		if ('string' == typeof (O = C) || 'number' == typeof O || 'boolean' == typeof O || 'symbol' == typeof O || 'bigint' == typeof O || i.isBuffer(C)) return h ? [S(A ? n : h(n, E.encoder, N, 'key', g)) + '=' + S(h(C, E.encoder, N, 'value', g))] : [S(n) + '=' + S(String(C))];
 		var M = [];
 		if (void 0 === C) return M;
-		if ('comma' === a && l(C))
-			A && h && (C = i.maybeMap(C, h)), (R = [{ value: C.length > 0 ? C.join(',') || null : void 0 }]);
+		if ('comma' === a && l(C)) A && h && (C = i.maybeMap(C, h)), (R = [{ value: C.length > 0 ? C.join(',') || null : void 0 }]);
 		else if (l(p)) R = p;
 		else {
 			var P = Object.keys(C);
-			R = I ? P.sort(I) : P;
+			R = m ? P.sort(m) : P;
 		}
 		var U = _ ? n.replace(/\./g, '%2E') : n,
 			w = s && l(C) && 1 === C.length ? U + '[]' : U;
@@ -94,27 +83,23 @@ var r = n(478497),
 			var G = R[x],
 				k = 'object' == typeof G && void 0 !== G.value ? G.value : C[G];
 			if (!d || null !== k) {
-				var B = m && _ ? G.replace(/\./g, '%2E') : G,
-					F = l(C) ? ('function' == typeof a ? a(w, B) : w) : w + (m ? '.' + B : '[' + B + ']');
+				var B = I && _ ? G.replace(/\./g, '%2E') : G,
+					F = l(C) ? ('function' == typeof a ? a(w, B) : w) : w + (I ? '.' + B : '[' + B + ']');
 				v.set(t, D);
 				var V = r();
-				V.set(f, v), c(M, e(k, F, a, s, o, u, d, _, 'comma' === a && A && l(C) ? null : h, p, I, m, T, g, S, A, N, V));
+				V.set(f, v), c(M, e(k, F, a, s, o, u, d, _, 'comma' === a && A && l(C) ? null : h, p, m, I, T, g, S, A, N, V));
 			}
 		}
 		return M;
 	},
 	p = function (e) {
 		if (!e) return E;
-		if (void 0 !== e.allowEmptyArrays && 'boolean' != typeof e.allowEmptyArrays)
-			throw TypeError('`allowEmptyArrays` option can only be `true` or `false`, when provided');
-		if (void 0 !== e.encodeDotInKeys && 'boolean' != typeof e.encodeDotInKeys)
-			throw TypeError('`encodeDotInKeys` option can only be `true` or `false`, when provided');
-		if (null !== e.encoder && void 0 !== e.encoder && 'function' != typeof e.encoder)
-			throw TypeError('Encoder has to be a function.');
+		if (void 0 !== e.allowEmptyArrays && 'boolean' != typeof e.allowEmptyArrays) throw TypeError('`allowEmptyArrays` option can only be `true` or `false`, when provided');
+		if (void 0 !== e.encodeDotInKeys && 'boolean' != typeof e.encodeDotInKeys) throw TypeError('`encodeDotInKeys` option can only be `true` or `false`, when provided');
+		if (null !== e.encoder && void 0 !== e.encoder && 'function' != typeof e.encoder) throw TypeError('Encoder has to be a function.');
 		var t,
 			n = e.charset || E.charset;
-		if (void 0 !== e.charset && 'utf-8' !== e.charset && 'iso-8859-1' !== e.charset)
-			throw TypeError('The charset option must be either utf-8, iso-8859-1, or undefined');
+		if (void 0 !== e.charset && 'utf-8' !== e.charset && 'iso-8859-1' !== e.charset) throw TypeError('The charset option must be either utf-8, iso-8859-1, or undefined');
 		var r = a.default;
 		if (void 0 !== e.format) {
 			if (!s.call(a.formatters, e.format)) throw TypeError('Unknown format option provided.');
@@ -122,12 +107,7 @@ var r = n(478497),
 		}
 		var i = a.formatters[r],
 			u = E.filter;
-		if (
-			(('function' == typeof e.filter || l(e.filter)) && (u = e.filter),
-			(t = e.arrayFormat in o ? e.arrayFormat : 'indices' in e ? (e.indices ? 'indices' : 'repeat') : E.arrayFormat),
-			'commaRoundTrip' in e && 'boolean' != typeof e.commaRoundTrip)
-		)
-			throw TypeError('`commaRoundTrip` must be a boolean, or absent');
+		if ((('function' == typeof e.filter || l(e.filter)) && (u = e.filter), (t = e.arrayFormat in o ? e.arrayFormat : 'indices' in e ? (e.indices ? 'indices' : 'repeat') : E.arrayFormat), 'commaRoundTrip' in e && 'boolean' != typeof e.commaRoundTrip)) throw TypeError('`commaRoundTrip` must be a boolean, or absent');
 		var c = void 0 === e.allowDots ? !0 === e.encodeDotInKeys || E.allowDots : !!e.allowDots;
 		return {
 			addQueryPrefix: 'boolean' == typeof e.addQueryPrefix ? e.addQueryPrefix : E.addQueryPrefix,
@@ -163,36 +143,10 @@ e.exports = function (e, t) {
 		_ = 'comma' === d && s.commaRoundTrip;
 	!n && (n = Object.keys(a)), s.sort && n.sort(s.sort);
 	for (var E = r(), f = 0; f < n.length; ++f) {
-		var I = n[f];
-		if (!s.skipNulls || null !== a[I])
-			c(
-				u,
-				h(
-					a[I],
-					I,
-					d,
-					_,
-					s.allowEmptyArrays,
-					s.strictNullHandling,
-					s.skipNulls,
-					s.encodeDotInKeys,
-					s.encode ? s.encoder : null,
-					s.filter,
-					s.sort,
-					s.allowDots,
-					s.serializeDate,
-					s.format,
-					s.formatter,
-					s.encodeValuesOnly,
-					s.charset,
-					E
-				)
-			);
+		var m = n[f];
+		if (!s.skipNulls || null !== a[m]) c(u, h(a[m], m, d, _, s.allowEmptyArrays, s.strictNullHandling, s.skipNulls, s.encodeDotInKeys, s.encode ? s.encoder : null, s.filter, s.sort, s.allowDots, s.serializeDate, s.format, s.formatter, s.encodeValuesOnly, s.charset, E));
 	}
-	var m = u.join(s.delimiter),
+	var I = u.join(s.delimiter),
 		T = !0 === s.addQueryPrefix ? '?' : '';
-	return (
-		s.charsetSentinel && ('iso-8859-1' === s.charset ? (T += 'utf8=%26%2310003%3B&') : (T += 'utf8=%E2%9C%93&')),
-		m.length > 0 ? T + m : ''
-	);
+	return s.charsetSentinel && ('iso-8859-1' === s.charset ? (T += 'utf8=%26%2310003%3B&') : (T += 'utf8=%E2%9C%93&')), I.length > 0 ? T + I : '';
 };

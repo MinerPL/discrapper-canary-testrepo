@@ -13,8 +13,8 @@ var r = n(735250),
 	f = n(806966),
 	h = n(28546),
 	p = n(98528),
-	I = n(98278),
-	m = n(639119),
+	m = n(98278),
+	I = n(639119),
 	T = n(695346),
 	g = n(594174),
 	S = n(626135),
@@ -52,7 +52,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
 		let { containerWidth: s, channel: u, onSelectSticker: A, closePopout: Y } = e,
 			{ location: j } = (0, d.O)(),
 			{ analyticsLocations: W } = (0, E.ZP)(_.Z.STICKER_PICKER),
-			X = (null === (a = (0, m.N)()) || void 0 === a ? void 0 : a.subscription_trial) != null,
+			X = (null === (a = (0, I.N)()) || void 0 === a ? void 0 : a.subscription_trial) != null,
 			$ = i.useRef(null),
 			J = i.useRef(null),
 			ee = i.useRef(null),
@@ -77,12 +77,12 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
 			eE = (0, R.LZ)(),
 			ef = (0, l.cj)([C.Z], () => C.Z.getAllGuildStickers()),
 			{ sendable: eh = [], sendableWithPremium: ep = [] } = null != ed ? ed : {},
-			eI = eh.length + ep.length,
-			em = i.useCallback(
+			em = eh.length + ep.length,
+			eI = i.useCallback(
 				(e) => {
-					'' === en ? (0, O.On)(e) : (0, O.Yk)(e, en, eI), A(e.sticker, y.V0.STICKER_PICKER);
+					'' === en ? (0, O.On)(e) : (0, O.Yk)(e, en, em), A(e.sticker, y.V0.STICKER_PICKER);
 				},
-				[A, en, eI]
+				[A, en, em]
 			),
 			eT = null != eo && eo > B,
 			{
@@ -119,10 +119,10 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
 								});
 							break;
 						case y.al.STICKER:
-							null != e.sticker && (0, v.kl)(e.sticker, ec, u) && em(e);
+							null != e.sticker && (0, v.kl)(e.sticker, ec, u) && eI(e);
 					}
 				},
-				[j, ec, u, em]
+				[j, ec, u, eI]
 			),
 			{
 				getItemProps: eR,
@@ -164,16 +164,14 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
 			'' === ei.current && '' !== en && (0, O.n8)(), (ei.current = en);
 		}, [en]),
 			i.useEffect(() => {
-				0 === eI ? q(en) : Q(en, eI, er);
-			}, [en, eI, er]),
+				0 === em ? q(en) : Q(en, em, er);
+			}, [en, em, er]),
 			i.useLayoutEffect(() => {
 				var e;
 				null === (e = ee.current) || void 0 === e || e.focus();
 			}, []);
 		let eM = i.useCallback(() => {
-			Y(),
-				S.default.track(G.rMx.PREMIUM_PROMOTION_OPENED, { location_section: G.jXE.STICKER_PICKER_UPSELL }),
-				(0, I.z)();
+			Y(), S.default.track(G.rMx.PREMIUM_PROMOTION_OPENED, { location_section: G.jXE.STICKER_PICKER_UPSELL }), (0, m.z)();
 		}, [Y]);
 		return (0, r.jsxs)(E.Gt, {
 			value: W,
@@ -211,7 +209,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
 													gridWidth: eo,
 													gutterWidth: eN,
 													isUsingKeyboardNavigation: eL,
-													onSelectSticker: em,
+													onSelectSticker: eI,
 													rowCount: eg,
 													rowCountBySection: eS,
 													stickersCategories: ea,

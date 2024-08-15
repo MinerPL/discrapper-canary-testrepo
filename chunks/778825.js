@@ -2,8 +2,8 @@ let r, i, a, s, o, l, u, c, d, _, E;
 var f,
 	h,
 	p,
-	I,
-	m = n(442837),
+	m,
+	I = n(442837),
 	T = n(570140),
 	g = n(981631);
 let S = g.QZA.CLOSED,
@@ -17,7 +17,7 @@ function v() {
 function O() {
 	(s = void 0), (o = void 0), (l = void 0), (c = void 0), (a = void 0);
 }
-class R extends (I = m.ZP.Store) {
+class R extends (m = I.ZP.Store) {
 	getFormState() {
 		return S;
 	}
@@ -25,16 +25,7 @@ class R extends (I = m.ZP.Store) {
 		return A;
 	}
 	showNotice() {
-		return (
-			void 0 !== r ||
-			void 0 !== i ||
-			void 0 !== a ||
-			void 0 !== s ||
-			void 0 !== o ||
-			void 0 !== l ||
-			void 0 !== u ||
-			void 0 !== c
-		);
+		return void 0 !== r || void 0 !== i || void 0 !== a || void 0 !== s || void 0 !== o || void 0 !== l || void 0 !== u || void 0 !== c;
 	}
 	getIsSubmitDisabled() {
 		return void 0 !== o && o.length > g.tPV;

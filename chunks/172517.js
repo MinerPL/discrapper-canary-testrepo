@@ -49,15 +49,10 @@ function a() {
 	);
 }
 async function l(e) {
-	return (
-		r()(null != e.publicKey, 'public key cannot be null'),
-		btoa(String.fromCharCode(...new Uint8Array(await window.crypto.subtle.exportKey('spki', e.publicKey))))
-	);
+	return r()(null != e.publicKey, 'public key cannot be null'), btoa(String.fromCharCode(...new Uint8Array(await window.crypto.subtle.exportKey('spki', e.publicKey))));
 }
 async function o(e) {
-	return (
-		r()(null != e.publicKey, 'public key cannot be null'), d(await window.crypto.subtle.exportKey('spki', e.publicKey))
-	);
+	return r()(null != e.publicKey, 'public key cannot be null'), d(await window.crypto.subtle.exportKey('spki', e.publicKey));
 }
 function c(e) {
 	return btoa(String.fromCharCode(...new Uint8Array(e)))

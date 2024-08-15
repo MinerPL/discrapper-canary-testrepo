@@ -18,15 +18,7 @@ var s = o(481060),
 	C = o(564510);
 function x(e) {
 	let { transitionState: n, onClose: o, analyticsLocation: x } = e,
-		{
-			slide: p,
-			gotoNext: O,
-			gotoError: f,
-			handleWaitingForConnection: g,
-			handleAuthToken: N,
-			expectedCallbackState: h,
-			callbackData: b
-		} = (0, r.k)(x, _.ABu.XBOX);
+		{ slide: p, gotoNext: O, gotoError: f, handleWaitingForConnection: g, handleAuthToken: N, expectedCallbackState: h, callbackData: b } = (0, r.k)(x, _.ABu.XBOX);
 	return (0, t.jsx)(s.ModalRoot, {
 		className: C.modal,
 		transitionState: n,

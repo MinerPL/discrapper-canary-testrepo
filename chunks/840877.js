@@ -34,11 +34,7 @@ class u {
 				if (200 === i.status) e(i);
 				else if (202 === i.status) {
 					var r;
-					if (
-						((this.query.attempts = (null !== (r = this.query.attempts) && void 0 !== r ? r : 0) + 1),
-						this.query.attempts > 5)
-					)
-						return;
+					if (((this.query.attempts = (null !== (r = this.query.attempts) && void 0 !== r ? r : 0) + 1), this.query.attempts > 5)) return;
 					let a = i.body.retry_after * s.Z.Millis.SECOND;
 					(this.retryDelay = isNaN(a) || 0 === a ? 5000 : a), this.retryLater(e, t, n), t(i);
 				}
@@ -50,19 +46,10 @@ class u {
 		(this.isCanceled = !0), null != this.indexingPollId && clearTimeout(this.indexingPollId);
 	}
 	retryLater(e, t, n) {
-		null != this.indexingPollId && clearTimeout(this.indexingPollId),
-			(this.indexingPollId = setTimeout(this.fetch.bind(this, e, t, n), this.retryDelay));
+		null != this.indexingPollId && clearTimeout(this.indexingPollId), (this.indexingPollId = setTimeout(this.fetch.bind(this, e, t, n), this.retryDelay));
 	}
 	constructor(e, t, n) {
-		l(this, 'indexingPollId', void 0),
-			l(this, 'searchId', void 0),
-			l(this, 'searchType', void 0),
-			l(this, 'query', void 0),
-			l(this, 'retryDelay', void 0),
-			l(this, 'isCanceled', !1),
-			(this.searchId = e),
-			(this.searchType = t),
-			(this.query = n);
+		l(this, 'indexingPollId', void 0), l(this, 'searchId', void 0), l(this, 'searchType', void 0), l(this, 'query', void 0), l(this, 'retryDelay', void 0), l(this, 'isCanceled', !1), (this.searchId = e), (this.searchType = t), (this.query = n);
 	}
 }
 class c extends u {

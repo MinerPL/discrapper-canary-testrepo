@@ -16,12 +16,7 @@ var r,
 	i,
 	a = n(689938);
 let s = 'emails';
-((r = i || (i = {})).COMMUNICATION = 'communication'),
-	(r.SOCIAL = 'social'),
-	(r.TIPS = 'tips'),
-	(r.RECOMMENDATIONS_AND_EVENTS = 'recommendations_and_events'),
-	(r.UPDATES_AND_ANNOUNCEMENTS = 'updates_and_announcements'),
-	(r.FAMILY_CENTER_DIGEST = 'family_center_digest');
+((r = i || (i = {})).COMMUNICATION = 'communication'), (r.SOCIAL = 'social'), (r.TIPS = 'tips'), (r.RECOMMENDATIONS_AND_EVENTS = 'recommendations_and_events'), (r.UPDATES_AND_ANNOUNCEMENTS = 'updates_and_announcements'), (r.FAMILY_CENTER_DIGEST = 'family_center_digest');
 let o = ['tips', 'recommendations_and_events', 'updates_and_announcements'],
 	l = [
 		{

@@ -92,15 +92,7 @@ function L(e) {
 }
 function O(e) {
 	var t;
-	let {
-			activityItem: n,
-			channel: l,
-			guildId: m,
-			locationObject: I,
-			onActivityItemVisible: x,
-			onActivityItemSelected: _,
-			large: j = !1
-		} = e,
+	let { activityItem: n, channel: l, guildId: m, locationObject: I, onActivityItemVisible: x, onActivityItemSelected: _, large: j = !1 } = e,
 		{
 			imageBackground: O,
 			videoUrl: B,
@@ -118,11 +110,7 @@ function O(e) {
 			onActivityItemSelected: _,
 			embeddedActivitiesManager: N.Z
 		}),
-		F = (0, r.e7)(
-			[h.Z, p.Z],
-			() => h.Z.inDevModeForApplication(n.application.id) || p.Z.inTestModeForApplication(n.application.id),
-			[n.application.id]
-		),
+		F = (0, r.e7)([h.Z, p.Z], () => h.Z.inDevModeForApplication(n.application.id) || p.Z.inTestModeForApplication(n.application.id), [n.application.id]),
 		{ application: U } = n,
 		w = i.useCallback((e) => e && (null == x ? void 0 : x({ applicationId: n.application.id })), [n.application.id, x]),
 		Y = (0, d.O)(w, 0.8, !0),
@@ -253,9 +241,7 @@ function O(e) {
 					}),
 					(0, a.jsx)('div', {
 						className: Z.activityTagsContainer,
-						children: U.tags
-							.slice(0, 3)
-							.map((e) => (0, a.jsx)(D, { value: e }, 'activity-tag-'.concat(U.id, '-').concat(e)))
+						children: U.tags.slice(0, 3).map((e) => (0, a.jsx)(D, { value: e }, 'activity-tag-'.concat(U.id, '-').concat(e)))
 					})
 				]
 			})

@@ -33,14 +33,10 @@ function f(e, t, n) {
 }
 class C extends _.Z {
 	_initialize() {
-		super._initialize(),
-			!__OVERLAY__ &&
-				s.Z.subscribe('OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', this._handleOverlaySoundboardSoundsFetchRequest);
+		super._initialize(), !__OVERLAY__ && s.Z.subscribe('OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', this._handleOverlaySoundboardSoundsFetchRequest);
 	}
 	_terminate() {
-		super._terminate(),
-			!__OVERLAY__ &&
-				s.Z.unsubscribe('OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', this._handleOverlaySoundboardSoundsFetchRequest);
+		super._terminate(), !__OVERLAY__ && s.Z.unsubscribe('OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', this._handleOverlaySoundboardSoundsFetchRequest);
 	}
 	constructor(...e) {
 		var t;

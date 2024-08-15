@@ -19,19 +19,9 @@ var a = n(120356),
 	f = n(689938),
 	C = n(410301);
 let p = (e) => (0 === e.length ? C.warning : C.danger),
-	g = (e, t) =>
-		0 === e.length
-			? f.Z.Messages.QUESTS_LAUNCHED_GAME.format({ gameTitle: t })
-			: f.Z.Messages.QUESTS_GAME_NOT_DETECTED.format({ gameTitle: t }),
+	g = (e, t) => (0 === e.length ? f.Z.Messages.QUESTS_LAUNCHED_GAME.format({ gameTitle: t }) : f.Z.Messages.QUESTS_GAME_NOT_DETECTED.format({ gameTitle: t })),
 	S = (e) => {
-		let {
-			quest: t,
-			location: n,
-			errors: a,
-			gameTitle: s,
-			consoleHelpArticle: l,
-			expiredCredentialsInteractable: c
-		} = e;
+		let { quest: t, location: n, errors: a, gameTitle: s, consoleHelpArticle: l, expiredCredentialsInteractable: c } = e;
 		if (0 === a.length)
 			return (0, i.jsx)(o.Text, {
 				variant: 'text-sm/medium',
@@ -39,8 +29,7 @@ let p = (e) => (0 === e.length ? C.warning : C.danger),
 				children: f.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY.format({ gameTitle: s })
 			});
 		let E = [];
-		(0, m.Nj)({ quest: t }) &&
-			E.push((0, d.isWeb)() ? f.Z.Messages.QUEST_PROGRESS_NO_GAME_WEB : f.Z.Messages.QUEST_PROGRESS_NO_GAME);
+		(0, m.Nj)({ quest: t }) && E.push((0, d.isWeb)() ? f.Z.Messages.QUEST_PROGRESS_NO_GAME_WEB : f.Z.Messages.QUEST_PROGRESS_NO_GAME);
 		let I = [
 			...E,
 			...a.map((e) => {

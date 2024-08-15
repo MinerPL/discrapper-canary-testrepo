@@ -142,8 +142,7 @@ function w(e) {
 	let x = (0, g.Dt)(),
 		{ analyticsLocations: S } = (0, d.ZP)(u.Z.INVITE_MODAL);
 	if (null == f) return null;
-	if (f.state === b.r2o.EXPIRED || f.state === b.r2o.BANNED || f.state === b.r2o.ERROR)
-		return (0, i.jsx)(D, { transitionState: r });
+	if (f.state === b.r2o.EXPIRED || f.state === b.r2o.BANNED || f.state === b.r2o.ERROR) return (0, i.jsx)(D, { transitionState: r });
 	if (null == f.channel) return null;
 	function M() {
 		null != f && L.Z.acceptInvite(f);
@@ -159,8 +158,7 @@ function w(e) {
 				id: j.id,
 				splash: j.splash
 			}));
-	else if (((null == (t = w.name) || '' === t) && null != U && (t = U.username), null == t))
-		throw Error('no name for group DM invite');
+	else if (((null == (t = w.name) || '' === t) && null != U && (t = U.username), null == t)) throw Error('no name for group DM invite');
 	let V = (0, m.yU)(),
 		F = B ? R.Z.Messages.INSTANT_INVITE_ACCEPT_STAGE : R.Z.Messages.INVITE_MODAL_BUTTON.format({ guildName: t });
 	return (

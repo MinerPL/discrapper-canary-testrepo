@@ -11,12 +11,7 @@ var i = n(314897),
 	r = n(924301),
 	o = n(85243);
 function c(e) {
-	if (
-		!e.isGuildVoice() ||
-		r.ZP.getGuildScheduledEventsByIndex(r.bN.CHANNEL_EVENT_ACTIVE(e.id)).length < 1 ||
-		!a.Z.can(o.AN, e)
-	)
-		return !1;
+	if (!e.isGuildVoice() || r.ZP.getGuildScheduledEventsByIndex(r.bN.CHANNEL_EVENT_ACTIVE(e.id)).length < 1 || !a.Z.can(o.AN, e)) return !1;
 	let t = new Set(s.ZP.getVoiceStatesForChannel(e).map((e) => e.user.id)),
 		n = i.default.getId();
 	for (let i of t)

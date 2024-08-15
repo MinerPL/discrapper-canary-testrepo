@@ -122,30 +122,7 @@ function ez(e, t) {
 }
 function eK(e) {
 	var t;
-	let {
-			guild: a,
-			canManageGuild: r,
-			canViewAuditLog: d,
-			canViewAuditLogV2: _,
-			canManageRoles: I,
-			canManageGuildExpressions: E,
-			canManageWebhooks: x,
-			canManageBans: f,
-			canAccessMembersPage: M,
-			canViewGuildAnalytics: D,
-			isOwner: j,
-			isOwnerWithRequiredMfaLevel: Z,
-			showDirtyGuildTemplateIndicator: k,
-			memberCount: w,
-			isGuildAuditLogV2Enabled: V,
-			showAccessRate: W,
-			onboardingStep: z,
-			onboardingEnabled: q,
-			welcomeScreenEmpty: Q,
-			guildMetadata: J,
-			section: $,
-			canAccessClanSettings: en
-		} = e,
+	let { guild: a, canManageGuild: r, canViewAuditLog: d, canViewAuditLogV2: _, canManageRoles: I, canManageGuildExpressions: E, canManageWebhooks: x, canManageBans: f, canAccessMembersPage: M, canViewGuildAnalytics: D, isOwner: j, isOwnerWithRequiredMfaLevel: Z, showDirtyGuildTemplateIndicator: k, memberCount: w, isGuildAuditLogV2Enabled: V, showAccessRate: W, onboardingStep: z, onboardingEnabled: q, welcomeScreenEmpty: Q, guildMetadata: J, section: $, canAccessClanSettings: en } = e,
 		ei = el.$.getCurrentConfig({
 			guildId: a.id,
 			location: 'generateSections'
@@ -179,10 +156,7 @@ function eK(e) {
 						}),
 						ariaLabel: eV.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
 					},
-		eq =
-			(null === (t = a.clan) || void 0 === t ? void 0 : t.badge) != null
-				? (0, N.ky)(a.id, a.clan.badge, ek.NC.SIZE_16)
-				: null,
+		eq = (null === (t = a.clan) || void 0 === t ? void 0 : t.badge) != null ? (0, N.ky)(a.id, a.clan.badge, ek.NC.SIZE_16) : null,
 		eX = {
 			section: eF.pNK.DELETE,
 			onClick() {
@@ -465,9 +439,7 @@ function eK(e) {
 									element: ep.s
 								},
 								predicate: () => r,
-								ariaLabel: a.hasFeature(eF.oNc.DISCOVERABLE)
-									? eV.Z.Messages.DISCOVERY
-									: eV.Z.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
+								ariaLabel: a.hasFeature(eF.oNc.DISCOVERABLE) ? eV.Z.Messages.DISCOVERY : eV.Z.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
 							},
 							{
 								section: eF.pNK.DISCOVERY_LANDING_PAGE,
@@ -511,9 +483,7 @@ function eK(e) {
 							section: eF.pNK.ROLE_SUBSCRIPTIONS,
 							element: y.Z,
 							type: u.bT.CUSTOM,
-							newIndicatorDismissibleContentTypes: (0, B.sO)(a)
-								? [l.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE]
-								: null
+							newIndicatorDismissibleContentTypes: (0, B.sO)(a) ? [l.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE] : null
 						},
 						{
 							section: eF.pNK.GUILD_PRODUCTS,
@@ -851,21 +821,11 @@ function eK(e) {
 		},
 		{
 			section: eF.pNK.COMMUNITY,
-			impressionName: a.hasFeature(eF.oNc.COMMUNITY)
-				? i.ImpressionNames.GUILD_SETTINGS_COMMUNITY_OVERVIEW
-				: i.ImpressionNames.GUILD_SETTINGS_ENABLE_COMMUNITY,
-			label: a.hasFeature(eF.oNc.COMMUNITY)
-				? eV.Z.Messages.OVERVIEW
-				: eV.Z.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
+			impressionName: a.hasFeature(eF.oNc.COMMUNITY) ? i.ImpressionNames.GUILD_SETTINGS_COMMUNITY_OVERVIEW : i.ImpressionNames.GUILD_SETTINGS_ENABLE_COMMUNITY,
+			label: a.hasFeature(eF.oNc.COMMUNITY) ? eV.Z.Messages.OVERVIEW : eV.Z.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
 			element: eC.Z,
-			ariaLabel: a.hasFeature(eF.oNc.COMMUNITY)
-				? eV.Z.Messages.OVERVIEW
-				: eV.Z.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
-			newIndicator:
-				!a.hasFeature(eF.oNc.COMMUNITY) &&
-				null != w &&
-				w >= eH.U3 &&
-				H.Z.hasHotspot(ew.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
+			ariaLabel: a.hasFeature(eF.oNc.COMMUNITY) ? eV.Z.Messages.OVERVIEW : eV.Z.Messages.GUILD_SETTINGS_COMMUNITY_ENABLE_COMMUNITY,
+			newIndicator: !a.hasFeature(eF.oNc.COMMUNITY) && null != w && w >= eH.U3 && H.Z.hasHotspot(ew.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
 			notice: {
 				stores: [ed.Z],
 				element: eC.X
@@ -905,9 +865,7 @@ function eK(e) {
 				element: ep.s
 			},
 			predicate: () => r && a.hasFeature(eF.oNc.COMMUNITY),
-			ariaLabel: a.hasFeature(eF.oNc.DISCOVERABLE)
-				? eV.Z.Messages.DISCOVERY
-				: eV.Z.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
+			ariaLabel: a.hasFeature(eF.oNc.DISCOVERABLE) ? eV.Z.Messages.DISCOVERY : eV.Z.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
 		},
 		{
 			section: eF.pNK.DISCOVERY_LANDING_PAGE,
@@ -952,9 +910,7 @@ function eK(e) {
 			element: y.Z,
 			type: u.bT.CUSTOM,
 			predicate: er,
-			newIndicatorDismissibleContentTypes: (0, B.sO)(a)
-				? [l.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE]
-				: null
+			newIndicatorDismissibleContentTypes: (0, B.sO)(a) ? [l.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE] : null
 		},
 		{
 			section: eF.pNK.GUILD_PRODUCTS,
@@ -1063,61 +1019,12 @@ class eJ extends a.PureComponent {
 	}
 	componentDidUpdate(e) {
 		let { section: t } = e,
-			{
-				section: n,
-				canManageGuild: s,
-				canManageRoles: a,
-				canManageBans: i,
-				canManageNicknames: r,
-				canManageGuildExpressions: l,
-				canViewAuditLog: o,
-				canViewAuditLogV2: d,
-				canManageWebhooks: u,
-				canAccessMembersPage: _,
-				canViewGuildAnalytics: I
-			} = this.props;
-		n !== t && eX(n, t),
-			((!s && !a && !i && !r && !l && !o && !d && !_ && !u) ||
-				(!o && n === eF.pNK.AUDIT_LOG) ||
-				(!d && n === eF.pNK.AUDIT_LOG_V2) ||
-				(!a && n === eF.pNK.ROLES) ||
-				(!l && n === eF.pNK.EMOJI) ||
-				(!l && n === eF.pNK.STICKERS) ||
-				(!l && n === eF.pNK.SOUNDBOARD) ||
-				(!i && n === eF.pNK.BANS) ||
-				(!I && n === eF.pNK.ANALYTICS) ||
-				(!_ && n === eF.pNK.MEMBERS)) &&
-				(0, c.xf)();
+			{ section: n, canManageGuild: s, canManageRoles: a, canManageBans: i, canManageNicknames: r, canManageGuildExpressions: l, canViewAuditLog: o, canViewAuditLogV2: d, canManageWebhooks: u, canAccessMembersPage: _, canViewGuildAnalytics: I } = this.props;
+		n !== t && eX(n, t), ((!s && !a && !i && !r && !l && !o && !d && !_ && !u) || (!o && n === eF.pNK.AUDIT_LOG) || (!d && n === eF.pNK.AUDIT_LOG_V2) || (!a && n === eF.pNK.ROLES) || (!l && n === eF.pNK.EMOJI) || (!l && n === eF.pNK.STICKERS) || (!l && n === eF.pNK.SOUNDBOARD) || (!i && n === eF.pNK.BANS) || (!I && n === eF.pNK.ANALYTICS) || (!_ && n === eF.pNK.MEMBERS)) && (0, c.xf)();
 	}
 	render() {
 		var e, t;
-		let {
-			theme: n,
-			sidebarTheme: a,
-			section: i,
-			guild: r,
-			channels: l,
-			canManageGuild: o,
-			canViewAuditLog: u,
-			canViewAuditLogV2: _,
-			canManageRoles: I,
-			canManageGuildExpressions: E,
-			canManageWebhooks: T,
-			canManageBans: m,
-			canAccessMembersPage: N,
-			canViewGuildAnalytics: S,
-			isOwner: h,
-			isOwnerWithRequiredMfaLevel: g,
-			showDirtyGuildTemplateIndicator: C,
-			memberCount: x,
-			isGuildAuditLogV2Enabled: p,
-			showAccessRate: R,
-			onboardingStep: f,
-			onboardingEnabled: L,
-			welcomeScreenEmpty: O,
-			guildMetadata: A,
-			canAccessClanSettings: M
-		} = this.props;
+		let { theme: n, sidebarTheme: a, section: i, guild: r, channels: l, canManageGuild: o, canViewAuditLog: u, canViewAuditLogV2: _, canManageRoles: I, canManageGuildExpressions: E, canManageWebhooks: T, canManageBans: m, canAccessMembersPage: N, canViewGuildAnalytics: S, isOwner: h, isOwnerWithRequiredMfaLevel: g, showDirtyGuildTemplateIndicator: C, memberCount: x, isGuildAuditLogV2Enabled: p, showAccessRate: R, onboardingStep: f, onboardingEnabled: L, welcomeScreenEmpty: O, guildMetadata: A, canAccessClanSettings: M } = this.props;
 		if (null == r) return null;
 		let D = eK({
 				guild: r,
@@ -1144,12 +1051,7 @@ class eJ extends a.PureComponent {
 				section: i,
 				canAccessClanSettings: M
 			}),
-			v =
-				(null === (t = D.find((e) => e.section === i)) || void 0 === t
-					? void 0
-					: null === (e = t.predicate) || void 0 === e
-						? void 0
-						: e.call(t)) !== !1;
+			v = (null === (t = D.find((e) => e.section === i)) || void 0 === t ? void 0 : null === (e = t.predicate) || void 0 === e ? void 0 : e.call(t)) !== !1;
 		return (0, s.jsxs)('div', {
 			children: [
 				(0, s.jsx)(d.ZP, {
@@ -1168,13 +1070,7 @@ class eJ extends a.PureComponent {
 }
 function e$() {
 	var e, t;
-	let {
-			guild: n,
-			section: i,
-			analyticsLocation: l,
-			guildMetadata: o,
-			isGuildMetadataLoaded: c
-		} = (0, r.cj)([ed.Z], () => ed.Z.getProps()),
+	let { guild: n, section: i, analyticsLocation: l, guildMetadata: o, isGuildMetadataLoaded: c } = (0, r.cj)([ed.Z], () => ed.Z.getProps()),
 		{ analyticsLocations: d } = (0, E.ZP)(_.Z.GUILD_SETTINGS),
 		u = (0, r.e7)([W.Z], () => W.Z.theme),
 		I = (0, r.e7)([W.Z], () => (W.Z.darkSidebar ? eF.BRd.DARK : void 0)),
@@ -1209,10 +1105,7 @@ function e$() {
 			[w.Z],
 			() => {
 				var e;
-				return (
-					(null == n ? void 0 : n.id) != null &&
-					(null === (e = w.Z.getForGuild(n.id)) || void 0 === e ? void 0 : e.isDirty) === !0
-				);
+				return (null == n ? void 0 : n.id) != null && (null === (e = w.Z.getForGuild(n.id)) || void 0 === e ? void 0 : e.isDirty) === !0;
 			},
 			[n]
 		),

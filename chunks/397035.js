@@ -19,10 +19,7 @@ function m(e) {
 		p = null == f ? void 0 : f.getIconURL(128),
 		E = (0, i.getAssetImage)(l.extra.application_id, l.extra.media_assets_large_image, [c.Si.LARGE, c.Si.LARGE]),
 		v = l.extra.media_subtitle,
-		C =
-			(0, s.kr)(l) && !(0, s.n2)(l)
-				? d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING
-				: d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED,
+		C = (0, s.kr)(l) && !(0, s.n2)(l) ? d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING : d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED,
 		h = {
 			type: o.kG.CRUNCHYROLL,
 			'aria-label': d.Z.Messages.CRUNCHYROLL

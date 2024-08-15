@@ -15,10 +15,7 @@ var i = n(735250),
 function _(e) {
 	var t, n;
 	let { channel: _, message: E } = e,
-		I =
-			null !== (n = null === (t = E.roleSubscriptionData) || void 0 === t ? void 0 : t.is_renewal) && void 0 !== n && n
-				? (0, u.Md)()
-				: (0, u.Q8)(),
+		I = null !== (n = null === (t = E.roleSubscriptionData) || void 0 === t ? void 0 : t.is_renewal) && void 0 !== n && n ? (0, u.Md)() : (0, u.Q8)(),
 		m = _.guild_id,
 		T = (0, s.e7)(
 			[l.Z],

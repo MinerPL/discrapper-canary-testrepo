@@ -14,10 +14,7 @@ let u = (e, t) => {
 	var n, u, c;
 	let d = (0, r.e7)([i.ZP], () => {
 			var n, r;
-			return (0, o.yE)(
-				null !== (r = null === (n = i.ZP.getMember(e, t)) || void 0 === n ? void 0 : n.flags) && void 0 !== r ? r : 0,
-				l.q.DID_REJOIN
-			);
+			return (0, o.yE)(null !== (r = null === (n = i.ZP.getMember(e, t)) || void 0 === n ? void 0 : n.flags) && void 0 !== r ? r : 0, l.q.DID_REJOIN);
 		}),
 		_ = (0, r.e7)([a.Z], () => {
 			var t;

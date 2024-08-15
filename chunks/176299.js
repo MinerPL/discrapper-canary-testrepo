@@ -99,15 +99,13 @@ let eh = () =>
 		renderLoader: eh
 	}),
 	eT = (0, c.Un)({
-		createPromise: () =>
-			Promise.all([n.e('96427'), n.e('44156'), n.e('58227'), n.e('38359'), n.e('89818')]).then(n.bind(n, 603072)),
+		createPromise: () => Promise.all([n.e('96427'), n.e('44156'), n.e('58227'), n.e('38359'), n.e('89818')]).then(n.bind(n, 603072)),
 		webpackId: 603072,
 		name: 'ChannelsAndRolesPage',
 		renderLoader: eh
 	}),
 	eS = (0, c.Un)({
-		createPromise: () =>
-			Promise.all([n.e('96427'), n.e('44156'), n.e('19878'), n.e('38359'), n.e('10682')]).then(n.bind(n, 599263)),
+		createPromise: () => Promise.all([n.e('96427'), n.e('44156'), n.e('19878'), n.e('38359'), n.e('10682')]).then(n.bind(n, 599263)),
 		webpackId: 599263,
 		name: 'GuildOnboardingPage',
 		renderLoader: eh
@@ -330,25 +328,16 @@ function eU() {
 		c = (function () {
 			var e;
 			let t = (0, l.TH)();
-			return (
-				(null === (e = (0, l.LX)(t.pathname, ed.Z5c.GUILD_BOOSTING_MARKETING(':guildId'))) || void 0 === e
-					? void 0
-					: e.isExact) === !0
-			);
+			return (null === (e = (0, l.LX)(t.pathname, ed.Z5c.GUILD_BOOSTING_MARKETING(':guildId'))) || void 0 === e ? void 0 : e.isExact) === !0;
 		})(),
 		_ = (function () {
 			var e;
 			let t = (0, l.TH)();
-			return (
-				(null === (e = (0, l.LX)(t.pathname, ed.Z5c.COLLECTIBLES_SHOP_FULLSCREEN)) || void 0 === e
-					? void 0
-					: e.isExact) === !0
-			);
+			return (null === (e = (0, l.LX)(t.pathname, ed.Z5c.COLLECTIBLES_SHOP_FULLSCREEN)) || void 0 === e ? void 0 : e.isExact) === !0;
 		})(),
 		E = (0, u.e7)([H.Z], () => H.Z.getIsOpen()),
 		h = (0, l.$B)([ed.Z5c.CHANNEL(ed.ME, ':channelId'), ed.Z5c.CHANNEL(':guildId', ':channelId?', ':messageId?')]),
-		I =
-			(null == h ? void 0 : null === (e = h.params) || void 0 === e ? void 0 : e.channelId) === eu.oC.GUILD_ONBOARDING,
+		I = (null == h ? void 0 : null === (e = h.params) || void 0 === e ? void 0 : e.channelId) === eu.oC.GUILD_ONBOARDING,
 		g = a.useCallback(() => B.Z.openSidebar(), []);
 	return (0, i.jsx)(i.Fragment, {
 		children: (0, i.jsxs)('div', {
@@ -448,11 +437,7 @@ function eU() {
 													disableTrack: !0
 												}),
 												(0, i.jsx)(p.Z, {
-													path: [
-														ed.Z5c.CHANNEL_THREAD_VIEW(':guildId', ':channelId', ':threadId', ':messageId?'),
-														ed.Z5c.CHANNEL(ed.ME, ':channelId'),
-														ed.Z5c.CHANNEL(':guildId', ':channelId?', ':messageId?')
-													],
+													path: [ed.Z5c.CHANNEL_THREAD_VIEW(':guildId', ':channelId', ':threadId', ':messageId?'), ed.Z5c.CHANNEL(ed.ME, ':channelId'), ed.Z5c.CHANNEL(':guildId', ':channelId?', ':messageId?')],
 													render: eN,
 													impressionName: o.ImpressionNames.GUILD_CHANNEL,
 													disableTrack: !0

@@ -4,8 +4,7 @@ e.exports = function (e) {
 		r = '[A-Za-z_]\\w*(::\\w+)*(\\?|!)?',
 		i = {
 			$pattern: '[a-zA-Z_]\\w*[!?=]?',
-			keyword:
-				'abstract alias annotation as as? asm begin break case class def do else elsif end ensure enum extend for fun if include instance_sizeof is_a? lib macro module next nil? of out pointerof private protected rescue responds_to? return require select self sizeof struct super then type typeof union uninitialized unless until verbatim when while with yield __DIR__ __END_LINE__ __FILE__ __LINE__',
+			keyword: 'abstract alias annotation as as? asm begin break case class def do else elsif end ensure enum extend for fun if include instance_sizeof is_a? lib macro module next nil? of out pointerof private protected rescue responds_to? return require select self sizeof struct super then type typeof union uninitialized unless until verbatim when while with yield __DIR__ __END_LINE__ __FILE__ __LINE__',
 			literal: 'false nil true'
 		},
 		a = {
@@ -244,13 +243,7 @@ e.exports = function (e) {
 			},
 			{
 				className: 'number',
-				variants: [
-					{ begin: '\\b0b([01_]+)' + t },
-					{ begin: '\\b0o([0-7_]+)' + t },
-					{ begin: '\\b0x([A-Fa-f0-9_]+)' + t },
-					{ begin: '\\b([1-9][0-9_]*[0-9]|[0-9])(\\.[0-9][0-9_]*)?([eE]_?[-+]?[0-9_]*)?(_?f(32|64))?(?!_)' },
-					{ begin: '\\b([1-9][0-9_]*|0)' + t }
-				],
+				variants: [{ begin: '\\b0b([01_]+)' + t }, { begin: '\\b0o([0-7_]+)' + t }, { begin: '\\b0x([A-Fa-f0-9_]+)' + t }, { begin: '\\b([1-9][0-9_]*[0-9]|[0-9])(\\.[0-9][0-9_]*)?([eE]_?[-+]?[0-9_]*)?(_?f(32|64))?(?!_)' }, { begin: '\\b([1-9][0-9_]*|0)' + t }],
 				relevance: 0
 			}
 		];

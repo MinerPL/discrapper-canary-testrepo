@@ -82,9 +82,7 @@ t.Z = s.ZP.connectStores([u.Z, c.Z], (e) => {
 	let { applicationId: n } = e,
 		i = (0, d.uF)(n, c.Z, u.Z);
 	return {
-		skus: (null !== (t = u.Z.getForApplication(n)) && void 0 !== t ? t : []).sort((e, t) =>
-			null != i && e.id === i.id ? -1 : null != i && t.id === i.id ? 1 : e.name >= t.name ? -1 : 1
-		),
+		skus: (null !== (t = u.Z.getForApplication(n)) && void 0 !== t ? t : []).sort((e, t) => (null != i && e.id === i.id ? -1 : null != i && t.id === i.id ? 1 : e.name >= t.name ? -1 : 1)),
 		primarySKU: i
 	};
 })(m);

@@ -51,35 +51,11 @@ var i = n(735250),
 class W extends a.PureComponent {
 	componentDidMount() {
 		let { selectedChannelId: e, connected: t, isNSFWChannel: n, isTextInVoice: i } = this.props;
-		t &&
-			null != e &&
-			((0, c.yw)(F.rMx.CHANNEL_OPENED, { ...(0, c.$H)(e) }),
-			(0, u.a)(F.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: e }),
-			i && (0, c.yw)(F.rMx.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: n }));
+		t && null != e && ((0, c.yw)(F.rMx.CHANNEL_OPENED, { ...(0, c.$H)(e) }), (0, u.a)(F.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: e }), i && (0, c.yw)(F.rMx.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: n }));
 	}
 	componentDidUpdate(e) {
 		var t, n, i;
-		let {
-			voiceChannelId: a,
-			voiceChannelGuildId: s,
-			voiceChannelType: o,
-			voiceChannelBitrate: p,
-			videoEnabled: T,
-			isScreenSharing: C,
-			runningGame: L,
-			runningGamePid: R,
-			selectedChannelId: P,
-			selectedGuildId: j,
-			connected: U,
-			homeLink: G,
-			friendsTabSection: W,
-			isNSFWChannel: z,
-			isMemberPending: K,
-			hasPreviewEnabled: q,
-			postableChannelCount: Q,
-			isTextInVoice: X,
-			numMessageRequests: J
-		} = this.props;
+		let { voiceChannelId: a, voiceChannelGuildId: s, voiceChannelType: o, voiceChannelBitrate: p, videoEnabled: T, isScreenSharing: C, runningGame: L, runningGamePid: R, selectedChannelId: P, selectedGuildId: j, connected: U, homeLink: G, friendsTabSection: W, isNSFWChannel: z, isMemberPending: K, hasPreviewEnabled: q, postableChannelCount: Q, isTextInVoice: X, numMessageRequests: J } = this.props;
 		if (e.voiceChannelId !== a && null != e.voiceChannelId) {
 			let t = g.ZP.getCurrentGameForAnalytics(),
 				n = null != t ? t.name : '',
@@ -196,26 +172,12 @@ class W extends a.PureComponent {
 						}
 					: {}),
 				postable_channels: Q,
-				premium_progress_bar_enabled:
-					null !==
-						(n =
-							null === (t = O.Z.getGuild(M.Z.getGuildId())) || void 0 === t ? void 0 : t.premiumProgressBarEnabled) &&
-					void 0 !== n &&
-					n,
+				premium_progress_bar_enabled: null !== (n = null === (t = O.Z.getGuild(M.Z.getGuildId())) || void 0 === t ? void 0 : t.premiumProgressBarEnabled) && void 0 !== n && n,
 				viewing_all_channels: !y.ZP.isOptInEnabled(j),
 				num_recent_channels: f.Z.recentsChannelCount(j)
 			};
 			(0, c.yw)(F.rMx.GUILD_VIEWED, e), (0, u.a)(F.rMx.GUILD_VIEWED_CLICKSTREAM, { guildId: j });
-		} else
-			U && null == j && G === F.Z5c.FRIENDS && (!e.connected || W !== e.friendsTabSection || G !== e.homeLink)
-				? (0, _.Z)({ tab_opened: W })
-				: U &&
-					null == j &&
-					G === F.Z5c.MESSAGE_REQUESTS &&
-					(!e.connected || G !== e.homeLink) &&
-					!this.isMessageRequestsInitialized &&
-					((this.isMessageRequestsInitialized = !0),
-					w.default.track(F.rMx.MESSAGE_REQUESTS_INITIALIZED, { num_message_requests: J }));
+		} else U && null == j && G === F.Z5c.FRIENDS && (!e.connected || W !== e.friendsTabSection || G !== e.homeLink) ? (0, _.Z)({ tab_opened: W }) : U && null == j && G === F.Z5c.MESSAGE_REQUESTS && (!e.connected || G !== e.homeLink) && !this.isMessageRequestsInitialized && ((this.isMessageRequestsInitialized = !0), w.default.track(F.rMx.MESSAGE_REQUESTS_INITIALIZED, { num_message_requests: J }));
 		if (U && null != P && (!e.connected || P !== e.selectedChannelId || j !== e.selectedGuildId)) {
 			let t = e.selectedChannelId,
 				n = v.Z.getChannel(t),
@@ -227,15 +189,11 @@ class W extends a.PureComponent {
 						.reverse()
 						.find((e) => {
 							var t;
-							return (
-								(0, B.yE)(e.flags, F.iLy.IS_CROSSPOST) &&
-								(null === (t = e.messageReference) || void 0 === t ? void 0 : t.guild_id) === '667560445975986187'
-							);
+							return (0, B.yE)(e.flags, F.iLy.IS_CROSSPOST) && (null === (t = e.messageReference) || void 0 === t ? void 0 : t.guild_id) === '667560445975986187';
 						});
 				w.default.track(F.rMx.ACK_COMMUNITY_MESSAGES, {
 					last_message_id: null == s ? void 0 : s.id,
-					last_message_reference_message_id:
-						null == s ? void 0 : null === (i = s.messageReference) || void 0 === i ? void 0 : i.message_id,
+					last_message_reference_message_id: null == s ? void 0 : null === (i = s.messageReference) || void 0 === i ? void 0 : i.message_id,
 					messages_loaded: e.hasFetched,
 					...(0, c.v_)(n),
 					...(0, c.hH)(a.id)
@@ -289,13 +247,7 @@ function z() {
 			[L.ZP],
 			() => {
 				var e, t;
-				return (
-					null != u &&
-					null != c &&
-					null !== (t = null === (e = L.ZP.getMember(c, u.id)) || void 0 === e ? void 0 : e.isPending) &&
-					void 0 !== t &&
-					t
-				);
+				return null != u && null != c && null !== (t = null === (e = L.ZP.getMember(c, u.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t;
 			},
 			[u, c]
 		),

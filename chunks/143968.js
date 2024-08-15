@@ -3,8 +3,7 @@ e.exports = {
 	backgroundOptionsSmall: 'backgroundOptionsSmall_ad7d79 backgroundOptions_ad7d79',
 	backgroundOptionsLarge: 'backgroundOptionsLarge_ad7d79 backgroundOptions_ad7d79',
 	backgroundImageOption: 'backgroundImageOption_ad7d79',
-	backgroundOptionBlurBackground:
-		'backgroundOptionBlurBackground_ad7d79 backgroundOptionBackgroundBlurred_ad7d79 backgroundImageOption_ad7d79',
+	backgroundOptionBlurBackground: 'backgroundOptionBlurBackground_ad7d79 backgroundOptionBackgroundBlurred_ad7d79 backgroundImageOption_ad7d79',
 	backgroundOption: 'backgroundOption_ad7d79',
 	backgroundOptionDisabled: 'backgroundOptionDisabled_ad7d79',
 	backgroundOptionSelected: 'backgroundOptionSelected_ad7d79',

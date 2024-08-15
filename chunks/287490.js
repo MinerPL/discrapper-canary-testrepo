@@ -142,16 +142,12 @@ function C(e) {
 								children: [
 									(0, n.jsxs)(l.FormText, {
 										type: l.FormTextTypes.DESCRIPTION,
-										children: [
-											'Current assigned to bucket ',
-											null !== (s = null == A ? void 0 : A.bucket) && void 0 !== s ? s : I.NZ.NOT_ELIGIBLE
-										]
+										children: ['Current assigned to bucket ', null !== (s = null == A ? void 0 : A.bucket) && void 0 !== s ? s : I.NZ.NOT_ELIGIBLE]
 									}),
 									null == O
 										? (0, n.jsx)(l.FormText, {
 												type: l.FormTextTypes.DESCRIPTION,
-												children:
-													'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
+												children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
 											})
 										: null
 								]
@@ -311,8 +307,7 @@ function m(e) {
 									null == A
 										? (0, n.jsx)(l.FormText, {
 												type: l.FormTextTypes.DESCRIPTION,
-												children:
-													'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
+												children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
 											})
 										: null
 								]

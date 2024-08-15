@@ -15,26 +15,7 @@ var n = s(735250),
 	d = s(354324),
 	h = s(787223);
 function p(e) {
-	let {
-			alpha2: t,
-			countryCode: s,
-			forceMode: i,
-			label: p,
-			error: m,
-			className: f,
-			required: C,
-			value: g,
-			setRef: x,
-			placeholder: N,
-			autoFocus: v,
-			maxLength: E,
-			spellCheck: S,
-			autoComplete: A,
-			autoCapitalize: j,
-			autoCorrect: y,
-			onChange: T,
-			inputClassName: I
-		} = e,
+	let { alpha2: t, countryCode: s, forceMode: i, label: p, error: m, className: f, required: C, value: g, setRef: x, placeholder: N, autoFocus: v, maxLength: E, spellCheck: S, autoComplete: A, autoCapitalize: j, autoCorrect: y, onChange: T, inputClassName: I } = e,
 		_ = (0, l.Dt)(),
 		[Z, O] = r.useState(!1),
 		k = (0, c.o9)(i, g);

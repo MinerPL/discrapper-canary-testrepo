@@ -16,10 +16,7 @@ var i = t(481060),
 function _(e) {
 	let { channelId: n } = e,
 		t = (0, a.m7)(n);
-	if (null == t)
-		return (0, r.jsx)(r.Fragment, {
-			children: '['.concat(c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETED_CHANNEL_LABEL, ']')
-		});
+	if (null == t) return (0, r.jsx)(r.Fragment, { children: '['.concat(c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETED_CHANNEL_LABEL, ']') });
 	let u = t.isMediaChannel() ? i.ImageIcon : (0, l.Th)(t.type);
 	return (0, r.jsxs)(r.Fragment, {
 		children: [

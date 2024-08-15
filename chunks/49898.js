@@ -26,14 +26,7 @@ t.d(r, {
 	((o = a || (a = {})).SERVERS = 'servers'),
 	(o.QUESTS = 'quests');
 let s = 12633 == t.j ? ['servers', 'quests'] : null;
-((l = n || (n = {})).GUILDS = 'guilds'),
-	(l.FEATURED = 'featured'),
-	(l.GAMING = 'gaming'),
-	(l.MUSIC = 'music'),
-	(l.ENTERTAINMENT = 'entertainment'),
-	(l.TECH = 'tech'),
-	(l.EDUCATION = 'education'),
-	(l.HUBS = 'hubs');
+((l = n || (n = {})).GUILDS = 'guilds'), (l.FEATURED = 'featured'), (l.GAMING = 'gaming'), (l.MUSIC = 'music'), (l.ENTERTAINMENT = 'entertainment'), (l.TECH = 'tech'), (l.EDUCATION = 'education'), (l.HUBS = 'hubs');
 let d = new Set(['guilds', 'hubs']),
 	u = 24,
 	h = 240;

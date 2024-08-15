@@ -142,11 +142,7 @@ function R(e) {
 	var n;
 	let { application: t } = e;
 	if (!(0, A.ye)({ application: t })) return null;
-	let a =
-		null !== (n = 'maxParticipants' in t ? t.maxParticipants : 'max_participants' in t ? t.max_participants : 0) &&
-		void 0 !== n
-			? n
-			: 0;
+	let a = null !== (n = 'maxParticipants' in t ? t.maxParticipants : 'max_participants' in t ? t.max_participants : 0) && void 0 !== n ? n : 0;
 	return (0, i.jsxs)('div', {
 		className: I.tagContainer,
 		children: [

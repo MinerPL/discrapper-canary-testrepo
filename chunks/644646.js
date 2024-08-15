@@ -12,8 +12,8 @@ var r = n(735250),
 	f = n(302245),
 	h = n(566078),
 	p = n(78826),
-	I = n(341907),
-	m = n(46140),
+	m = n(341907),
+	I = n(46140),
 	T = n(689938),
 	g = n(984201);
 t.Z = function (e) {
@@ -31,12 +31,12 @@ t.Z = function (e) {
 						questContentPosition: e.questContentPosition,
 						questContentCTA: _.jZ.REWARD_LEARN_MORE
 					}),
-					(0, I.navigateToQuestHome)(e.location, n.id),
+					(0, m.navigateToQuestHome)(e.location, n.id),
 					null === (r = e.onClick) || void 0 === r || r.call(e, t);
 			},
 			[n.id, e]
 		),
-		R = (0, f.vI)(n, m.dr.QUESTS_BAR),
+		R = (0, f.vI)(n, I.dr.QUESTS_BAR),
 		C = i.useRef(null),
 		y = i.useRef(a);
 	i.useEffect(() => {
@@ -45,8 +45,7 @@ t.Z = function (e) {
 				(C.current.currentTime = 0), C.current.pause();
 				return;
 			}
-			a && !y.current ? C.current.play() : !a && y.current && ((C.current.currentTime = 0), C.current.pause()),
-				(y.current = a);
+			a && !y.current ? C.current.play() : !a && y.current && ((C.current.currentTime = 0), C.current.pause()), (y.current = a);
 		}
 	}, [a, v, A]);
 	let D = v

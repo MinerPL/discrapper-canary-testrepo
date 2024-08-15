@@ -17,8 +17,7 @@ function c() {
 		[i, c] = l.useState(null);
 	return [
 		async function e(e, i) {
-			let { onSuccess: l = r.onSuccess, permissionOverwrites: o = r.permissionOverwrites } =
-				arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r;
+			let { onSuccess: l = r.onSuccess, permissionOverwrites: o = r.permissionOverwrites } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r;
 			n(!0);
 			try {
 				await s.GV(e, o), await s.iQ(e, i), await (0, t.o)(e, l), await (0, t.T)(e, l), n(!1);

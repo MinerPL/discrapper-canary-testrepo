@@ -24,12 +24,7 @@ class u extends (i = l.ZP.Store) {
 	(t.Z = new u(o.Z, {
 		CONNECTION_OPEN: function () {
 			let e = c.default.getCurrentUser();
-			null != e &&
-				(e.hasFlag(d.xW$.HYPESQUAD_ONLINE_HOUSE_1)
-					? (_ = d.gkr.HOUSE_1)
-					: e.hasFlag(d.xW$.HYPESQUAD_ONLINE_HOUSE_2)
-						? (_ = d.gkr.HOUSE_2)
-						: e.hasFlag(d.xW$.HYPESQUAD_ONLINE_HOUSE_3) && (_ = d.gkr.HOUSE_3));
+			null != e && (e.hasFlag(d.xW$.HYPESQUAD_ONLINE_HOUSE_1) ? (_ = d.gkr.HOUSE_1) : e.hasFlag(d.xW$.HYPESQUAD_ONLINE_HOUSE_2) ? (_ = d.gkr.HOUSE_2) : e.hasFlag(d.xW$.HYPESQUAD_ONLINE_HOUSE_3) && (_ = d.gkr.HOUSE_3));
 		},
 		HYPESQUAD_ONLINE_MEMBERSHIP_LEAVE_SUCCESS: function () {
 			_ = null;

@@ -30,77 +30,7 @@ function S(e, a, t) {
 		e
 	);
 }
-let I = [
-		'AE',
-		'AG',
-		'AN',
-		'AO',
-		'AW',
-		'BF',
-		'BI',
-		'BJ',
-		'BM',
-		'BO',
-		'BQ',
-		'BS',
-		'BW',
-		'BZ',
-		'CD',
-		'CF',
-		'CG',
-		'CI',
-		'CK',
-		'CM',
-		'CW',
-		'DJ',
-		'DM',
-		'ER',
-		'FJ',
-		'GA',
-		'GD',
-		'GH',
-		'GM',
-		'GQ',
-		'GY',
-		'HK',
-		'HM',
-		'IE',
-		'JM',
-		'KE',
-		'KI',
-		'KM',
-		'KN',
-		'KP',
-		'LY',
-		'ML',
-		'MO',
-		'MR',
-		'MW',
-		'NA',
-		'NR',
-		'NU',
-		'QA',
-		'RW',
-		'SB',
-		'SC',
-		'SL',
-		'SR',
-		'ST',
-		'SX',
-		'SY',
-		'TD',
-		'TF',
-		'TG',
-		'TK',
-		'TL',
-		'TO',
-		'TV',
-		'UG',
-		'VU',
-		'YE',
-		'ZA',
-		'ZW'
-	],
+let I = ['AE', 'AG', 'AN', 'AO', 'AW', 'BF', 'BI', 'BJ', 'BM', 'BO', 'BQ', 'BS', 'BW', 'BZ', 'CD', 'CF', 'CG', 'CI', 'CK', 'CM', 'CW', 'DJ', 'DM', 'ER', 'FJ', 'GA', 'GD', 'GH', 'GM', 'GQ', 'GY', 'HK', 'HM', 'IE', 'JM', 'KE', 'KI', 'KM', 'KN', 'KP', 'LY', 'ML', 'MO', 'MR', 'MW', 'NA', 'NR', 'NU', 'QA', 'RW', 'SB', 'SC', 'SL', 'SR', 'ST', 'SX', 'SY', 'TD', 'TF', 'TG', 'TK', 'TL', 'TO', 'TV', 'UG', 'VU', 'YE', 'ZA', 'ZW'],
 	P = A.Z.map((e) => ({
 		value: e.alpha2,
 		label: e.name
@@ -112,25 +42,7 @@ let I = [
 	O = (0, _.hQ)(),
 	g = (0, _.hQ)(),
 	y = (0, _.hQ)();
-((o = s || (s = {})).NAME = 'name'),
-	(o.COUNTRY = 'country'),
-	(o.LINE1 = 'line1'),
-	(o.LINE2 = 'line2'),
-	(o.CITY = 'city'),
-	(o.POSTAL_CODE = 'postalCode'),
-	(o.STATE = 'state'),
-	((i = n || (n = {})).MODAL_US = 'modalUS'),
-	(i.MODAL_INTL = 'modalInternational'),
-	(i.MODAL_US_WITH_NAME = 'modalUSWithName'),
-	(i.MODAL_INTL_WITH_NAME = 'modalInternationalWithName'),
-	(i.SETTINGS_US = 'settingsUS'),
-	(i.SETTINGS_INTL = 'settingsInternational'),
-	(i.SETTINGS_INTL_NO_NAME = 'settingsInternationalWithoutName'),
-	(i.SETTINGS_US_MOBILE = 'settingsUSMobile'),
-	(i.SETTINGS_INTL_MOBILE = 'settingsInternationalMobile'),
-	(i.SETTINGS_INTL_NO_NAME_MOBILE = 'settingsInternationalWithoutNameMobile'),
-	((c = l || (l = {})).EDIT = 'edit'),
-	(c.CREATE = 'create');
+((o = s || (s = {})).NAME = 'name'), (o.COUNTRY = 'country'), (o.LINE1 = 'line1'), (o.LINE2 = 'line2'), (o.CITY = 'city'), (o.POSTAL_CODE = 'postalCode'), (o.STATE = 'state'), ((i = n || (n = {})).MODAL_US = 'modalUS'), (i.MODAL_INTL = 'modalInternational'), (i.MODAL_US_WITH_NAME = 'modalUSWithName'), (i.MODAL_INTL_WITH_NAME = 'modalInternationalWithName'), (i.SETTINGS_US = 'settingsUS'), (i.SETTINGS_INTL = 'settingsInternational'), (i.SETTINGS_INTL_NO_NAME = 'settingsInternationalWithoutName'), (i.SETTINGS_US_MOBILE = 'settingsUSMobile'), (i.SETTINGS_INTL_MOBILE = 'settingsInternationalMobile'), (i.SETTINGS_INTL_NO_NAME_MOBILE = 'settingsInternationalWithoutNameMobile'), ((c = l || (l = {})).EDIT = 'edit'), (c.CREATE = 'create');
 let L = {
 		US: N.G,
 		CA: E.X
@@ -140,18 +52,7 @@ let L = {
 		id: R,
 		title: () => T.Z.Messages.BILLING_ADDRESS_NAME,
 		autoComplete: 'name',
-		getClassNameForLayout: (e) =>
-			[
-				'modalUS',
-				'modalInternational',
-				'modalUSWithName',
-				'modalInternationalWithName',
-				'settingsUSMobile',
-				'settingsInternationalMobile',
-				'settingsInternationalWithoutNameMobile'
-			].includes(e)
-				? C.width100
-				: C.width60,
+		getClassNameForLayout: (e) => (['modalUS', 'modalInternational', 'modalUSWithName', 'modalInternationalWithName', 'settingsUSMobile', 'settingsInternationalMobile', 'settingsInternationalWithoutNameMobile'].includes(e) ? C.width100 : C.width60),
 		renderInput: (e) => (0, u.jsx)(m.TextInput, { ...e })
 	}),
 	D = (e) => ({
@@ -190,18 +91,7 @@ let L = {
 		title: () => T.Z.Messages.BILLING_ADDRESS_ADDRESS,
 		autoComplete: 'address-line1',
 		placeholder: () => T.Z.Messages.BILLING_ADDRESS_ADDRESS_PLACEHOLDER,
-		getClassNameForLayout: (e) =>
-			[
-				'modalUS',
-				'modalInternational',
-				'modalUSWithName',
-				'modalInternationalWithName',
-				'settingsUSMobile',
-				'settingsInternationalMobile',
-				'settingsInternationalWithoutNameMobile'
-			].includes(e)
-				? C.width100
-				: C.width60,
+		getClassNameForLayout: (e) => (['modalUS', 'modalInternational', 'modalUSWithName', 'modalInternationalWithName', 'settingsUSMobile', 'settingsInternationalMobile', 'settingsInternationalWithoutNameMobile'].includes(e) ? C.width100 : C.width60),
 		renderInput: (e) => (0, u.jsx)(m.TextInput, { ...e })
 	}),
 	Z = (e) => ({
@@ -210,18 +100,7 @@ let L = {
 		title: () => T.Z.Messages.BILLING_ADDRESS_ADDRESS2,
 		placeholder: () => T.Z.Messages.BILLING_ADDRESS_ADDRESS2_PLACEHOLDER,
 		autoComplete: 'address-line2',
-		getClassNameForLayout: (e) =>
-			[
-				'modalUS',
-				'modalInternational',
-				'modalUSWithName',
-				'modalInternationalWithName',
-				'settingsUSMobile',
-				'settingsInternationalMobile',
-				'settingsInternationalWithoutNameMobile'
-			].includes(e)
-				? C.width100
-				: C.width40,
+		getClassNameForLayout: (e) => (['modalUS', 'modalInternational', 'modalUSWithName', 'modalInternationalWithName', 'settingsUSMobile', 'settingsInternationalMobile', 'settingsInternationalWithoutNameMobile'].includes(e) ? C.width100 : C.width40),
 		renderInput: (e) => (0, u.jsx)(m.TextInput, { ...e })
 	}),
 	Y = (e) => ({
@@ -255,8 +134,7 @@ let L = {
 				(a = T.Z.Messages.BILLING_ADDRESS_ZIP_CODE), (t = T.Z.Messages.BILLING_ADDRESS_ZIP_CODE_PLACEHOLDER);
 				break;
 			case 'CA':
-				(a = T.Z.Messages.BILLING_ADDRESS_POSTAL_CODE),
-					(t = T.Z.Messages.BILLING_ADDRESS_POSTAL_CODE_CANADA_PLACEHOLDER);
+				(a = T.Z.Messages.BILLING_ADDRESS_POSTAL_CODE), (t = T.Z.Messages.BILLING_ADDRESS_POSTAL_CODE_CANADA_PLACEHOLDER);
 				break;
 			default:
 				a = T.Z.Messages.BILLING_ADDRESS_POSTAL_CODE;
@@ -371,41 +249,21 @@ class B extends (r = d.PureComponent) {
 	validateForm(e) {
 		let { values: a, dirtyFields: t } = this.state,
 			s = {};
-		(!e || t.name) &&
-			!this.hasValue(a.name) &&
-			'edit' === this.props.mode &&
-			(s.name = T.Z.Messages.BILLING_ADDRESS_NAME_ERROR_REQUIRED),
-			(!e || t.country) &&
-				!this.hasValue(a.country) &&
-				(s.country = T.Z.Messages.BILLING_ADDRESS_COUNTRY_ERROR_REQUIRED),
-			(!e || t.line1) && !this.hasValue(a.line1) && (s.line1 = T.Z.Messages.BILLING_ADDRESS_ADDRESS_ERROR_REQUIRED),
-			(!e || t.city) && !this.hasValue(a.city) && (s.city = T.Z.Messages.BILLING_ADDRESS_CITY_ERROR_REQUIRED);
+		(!e || t.name) && !this.hasValue(a.name) && 'edit' === this.props.mode && (s.name = T.Z.Messages.BILLING_ADDRESS_NAME_ERROR_REQUIRED), (!e || t.country) && !this.hasValue(a.country) && (s.country = T.Z.Messages.BILLING_ADDRESS_COUNTRY_ERROR_REQUIRED), (!e || t.line1) && !this.hasValue(a.line1) && (s.line1 = T.Z.Messages.BILLING_ADDRESS_ADDRESS_ERROR_REQUIRED), (!e || t.city) && !this.hasValue(a.city) && (s.city = T.Z.Messages.BILLING_ADDRESS_CITY_ERROR_REQUIRED);
 		let n = a.country;
 		switch (n) {
 			case 'US':
 				if (!e || t.postalCode) {
 					let e = a.postalCode;
-					this.hasValue(e)
-						? 5 !== e.length
-							? (s.postalCode = T.Z.Messages.BILLING_ADDRESS_ZIP_CODE_ERROR_LENGTH)
-							: !/^\d{5}$/.test(e) && (s.postalCode = T.Z.Messages.BILLING_ADDRESS_ZIP_CODE_INVALID)
-						: (s.postalCode = T.Z.Messages.BILLING_ADDRESS_ZIP_CODE_ERROR_REQUIRED);
+					this.hasValue(e) ? (5 !== e.length ? (s.postalCode = T.Z.Messages.BILLING_ADDRESS_ZIP_CODE_ERROR_LENGTH) : !/^\d{5}$/.test(e) && (s.postalCode = T.Z.Messages.BILLING_ADDRESS_ZIP_CODE_INVALID)) : (s.postalCode = T.Z.Messages.BILLING_ADDRESS_ZIP_CODE_ERROR_REQUIRED);
 				}
 				(!e || t.state) && !this.hasValue(a.state) && (s.state = T.Z.Messages.BILLING_ADDRESS_STATE_ERROR_REQUIRED);
 				break;
 			case 'CA':
-				(!e || t.postalCode) &&
-					!this.hasValue(a.postalCode) &&
-					(s.postalCode = T.Z.Messages.BILLING_ADDRESS_POSTAL_CODE_ERROR_REQUIRED),
-					(!e || t.state) &&
-						!this.hasValue(a.state) &&
-						(s.state = T.Z.Messages.BILLING_ADDRESS_PROVINCE_ERROR_REQUIRED);
+				(!e || t.postalCode) && !this.hasValue(a.postalCode) && (s.postalCode = T.Z.Messages.BILLING_ADDRESS_POSTAL_CODE_ERROR_REQUIRED), (!e || t.state) && !this.hasValue(a.state) && (s.state = T.Z.Messages.BILLING_ADDRESS_PROVINCE_ERROR_REQUIRED);
 				break;
 			default:
-				(!e || t.postalCode) &&
-					!this.hasValue(a.postalCode) &&
-					!I.includes(null != n ? n : '') &&
-					(s.postalCode = T.Z.Messages.BILLING_ADDRESS_POSTAL_CODE_ERROR_REQUIRED);
+				(!e || t.postalCode) && !this.hasValue(a.postalCode) && !I.includes(null != n ? n : '') && (s.postalCode = T.Z.Messages.BILLING_ADDRESS_POSTAL_CODE_ERROR_REQUIRED);
 		}
 		return s;
 	}

@@ -53,12 +53,7 @@ class h extends s.Component {
 			default:
 				(i = 0.6), (s = 0), (a = 0.93);
 		}
-		null != t ? (0 === e ? (a = 1.1) : (i = 1.3), (s = 0), (n = t)) : (n = this.handleAnimationEnd),
-			l.setValue(1),
-			c.setValue(i),
-			r.setValue(a),
-			o.setValue(s),
-			n();
+		null != t ? (0 === e ? (a = 1.1) : (i = 1.3), (s = 0), (n = t)) : (n = this.handleAnimationEnd), l.setValue(1), c.setValue(i), r.setValue(a), o.setValue(s), n();
 	}
 	getStyle() {
 		let e, t, n, i, s;
@@ -115,14 +110,7 @@ class h extends s.Component {
 					locked: e,
 					index: t,
 					notification: {
-						props: {
-							onNotificationShow: n,
-							onDismissClick: s,
-							onNotificationClick: o,
-							onConfirmClick: c,
-							onCancelClick: u,
-							...h
-						}
+						props: { onNotificationShow: n, onDismissClick: s, onNotificationClick: o, onConfirmClick: c, onCancelClick: u, ...h }
 					}
 				},
 				state: { animatedIn: p }

@@ -17,16 +17,7 @@ var a,
 	i = t(84139);
 ((n = a || (a = {})).DANGER = 'danger'), (n.WARNING = 'warning');
 function d(e) {
-	let {
-			transitionState: A,
-			onClose: t,
-			title: a,
-			body: n,
-			cta: d,
-			closeLabel: c,
-			onConfirm: u,
-			iconVariant: C = 'warning'
-		} = e,
+	let { transitionState: A, onClose: t, title: a, body: n, cta: d, closeLabel: c, onConfirm: u, iconVariant: C = 'warning' } = e,
 		[g, T] = s.useState(!1),
 		p = async () => {
 			T(!0);

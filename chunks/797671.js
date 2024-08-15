@@ -135,11 +135,7 @@ function f(e) {
 				}),
 			[q]
 		),
-		J =
-			null !== (t = null === (a = X.find((e) => e.value === k)) || void 0 === a ? void 0 : a.channelIcon) &&
-			void 0 !== t
-				? t
-				: M.Vq,
+		J = null !== (t = null === (a = X.find((e) => e.value === k)) || void 0 === a ? void 0 : a.channelIcon) && void 0 !== t ? t : M.Vq,
 		$ = '' !== P;
 	return (0, n.jsx)('form', {
 		onSubmit: function (e) {

@@ -123,9 +123,7 @@ s.Z = () => {
 									(0, n.jsx)(i.Text, {
 										variant: 'text-xs/normal',
 										className: N.questsHeadingLearnMore,
-										children: S.Z.Messages.QUESTS_LEARN_MORE_LINK.format({
-											questsLearnMoreLink: r.Z.getArticleURL(T.BhN.QUESTS_LEARN_MORE)
-										})
+										children: S.Z.Messages.QUESTS_LEARN_MORE_LINK.format({ questsLearnMoreLink: r.Z.getArticleURL(T.BhN.QUESTS_LEARN_MORE) })
 									})
 								]
 							}),

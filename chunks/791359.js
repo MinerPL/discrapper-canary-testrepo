@@ -51,10 +51,7 @@ let x = 15 * T.Z.Millis.MINUTE,
 			S = a.useCallback(() => {
 				let e = E.filter((e) => {
 					var t, n;
-					return (
-						(null === (t = e.game) || void 0 === t ? void 0 : t.name) != null &&
-						(null === (n = e.game) || void 0 === n ? void 0 : n.type) === L.wW.GAME
-					);
+					return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === L.wW.GAME;
 				}).map((e) => e.game.name);
 				p.default.track(Z.rMx.NOW_PLAYING_CARD_HOVERED, {
 					num_users: m,

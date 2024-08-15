@@ -26,11 +26,7 @@ class g extends a.PureComponent {
 		this.getIsRecentlySynced() && this.setRecentlySyncedTimeout();
 	}
 	componentDidUpdate(e) {
-		null != this.props.cloudSyncState &&
-			this.props.cloudSyncState.type === u.TzF.DONE &&
-			null != this.props.cloudSyncState.timestamp &&
-			(null == e.cloudSyncState || null == e.cloudSyncState.timestamp) &&
-			this.setRecentlySyncedTimeout();
+		null != this.props.cloudSyncState && this.props.cloudSyncState.type === u.TzF.DONE && null != this.props.cloudSyncState.timestamp && (null == e.cloudSyncState || null == e.cloudSyncState.timestamp) && this.setRecentlySyncedTimeout();
 	}
 	componentWillUnmount() {
 		this._doneTimer.stop();

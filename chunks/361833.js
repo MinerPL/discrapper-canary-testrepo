@@ -30,14 +30,10 @@ function A(e) {
 			emailToken: A,
 			password: T
 		});
-		if ((h(!1), null == s ? void 0 : s.ok))
-			E.default.track(N.rMx.USER_ACCOUNT_EMAIL_CHANGE_SAVE_NEW_EMAIL, { change_email_reason_enum: m }), S(I);
+		if ((h(!1), null == s ? void 0 : s.ok)) E.default.track(N.rMx.USER_ACCOUNT_EMAIL_CHANGE_SAVE_NEW_EMAIL, { change_email_reason_enum: m }), S(I);
 		else {
 			var n, t;
-			(null == s ? void 0 : null === (n = s.body) || void 0 === n ? void 0 : n.username) != null
-				? (0, _.P)()
-				: (null == s ? void 0 : null === (t = s.body) || void 0 === t ? void 0 : t.email_token) != null &&
-					(null == M || M());
+			(null == s ? void 0 : null === (n = s.body) || void 0 === n ? void 0 : n.username) != null ? (0, _.P)() : (null == s ? void 0 : null === (t = s.body) || void 0 === t ? void 0 : t.email_token) != null && (null == M || M());
 		}
 	}
 	return (

@@ -25,9 +25,7 @@ async function h(e) {
 			l = t.length + n.length + i.length;
 		if (l > 9437184) {
 			let e = 1 - 9437184 / l;
-			(t = t.slice(t.length - Math.floor(t.length * e))),
-				(n = n.slice(n.length - Math.floor(n.length * e))),
-				(i = i.slice(i.length - Math.floor(i.length * e)));
+			(t = t.slice(t.length - Math.floor(t.length * e))), (n = n.slice(n.length - Math.floor(n.length * e))), (i = i.slice(i.length - Math.floor(i.length * e)));
 		}
 		let E = null,
 			f = '\n    '

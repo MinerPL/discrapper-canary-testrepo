@@ -32,16 +32,7 @@ function u(e) {
 	});
 }
 t.Z = l.forwardRef(function (e, t) {
-	let {
-			src: a,
-			audioSrc: d,
-			applicationAudioEnabled: c,
-			voiceAudioEnabled: m,
-			isLoading: p,
-			onDoneLoading: v,
-			startTime: f = 0,
-			endTime: b
-		} = e,
+	let { src: a, audioSrc: d, applicationAudioEnabled: c, voiceAudioEnabled: m, isLoading: p, onDoneLoading: v, startTime: f = 0, endTime: b } = e,
 		h = l.useRef({}),
 		[x, g] = l.useState([]),
 		C = l.useRef(!1),
@@ -66,9 +57,7 @@ t.Z = l.forwardRef(function (e, t) {
 		}, []),
 		I = l.useCallback((e) => {
 			var t;
-			for (let a of ((null === (t = h.current.main) || void 0 === t ? void 0 : t.paused) && (C.current = !1),
-			Object.values(h.current)))
-				null != a && (a.currentTime = e);
+			for (let a of ((null === (t = h.current.main) || void 0 === t ? void 0 : t.paused) && (C.current = !1), Object.values(h.current))) null != a && (a.currentTime = e);
 		}, []),
 		E = l.useCallback(() => {
 			var e;
@@ -79,12 +68,7 @@ t.Z = l.forwardRef(function (e, t) {
 		}, []),
 		y = l.useCallback((e) => {
 			let t = [];
-			for (let a of Object.values(e.currentTarget.audioTracks))
-				a.label.includes(':application')
-					? (a.enabled = !0)
-					: a.label.includes(':voice')
-						? ((a.enabled = !1), !t.includes(a.label) && t.push(a.label))
-						: (a.enabled = !1);
+			for (let a of Object.values(e.currentTarget.audioTracks)) a.label.includes(':application') ? (a.enabled = !0) : a.label.includes(':voice') ? ((a.enabled = !1), !t.includes(a.label) && t.push(a.label)) : (a.enabled = !1);
 			g(t);
 		}, []),
 		w = l.useCallback((e, t) => {

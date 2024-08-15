@@ -15,14 +15,8 @@ function c(e) {
 	var n, t;
 	let { user: c, currentUser: d } = e,
 		{ live: u, recent: I, stream: _ } = (0, l.Z)(c.id),
-		f =
-			null === (n = (0, i.Z)(c.id, c.id !== (null == d ? void 0 : d.id)).mutualFriends) || void 0 === n
-				? void 0
-				: n.length,
-		E =
-			null === (t = (0, o.Z)(c.id, c.id !== (null == d ? void 0 : d.id)).mutualGuilds) || void 0 === t
-				? void 0
-				: t.length,
+		f = null === (n = (0, i.Z)(c.id, c.id !== (null == d ? void 0 : d.id)).mutualFriends) || void 0 === n ? void 0 : n.length,
+		E = null === (t = (0, o.Z)(c.id, c.id !== (null == d ? void 0 : d.id)).mutualGuilds) || void 0 === t ? void 0 : t.length,
 		m = [
 			{
 				section: r.oh.USER_INFO,

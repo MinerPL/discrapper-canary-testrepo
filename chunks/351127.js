@@ -28,27 +28,7 @@ var i = n(149765),
 	u = n(135899);
 let d = [c.Plq.USE_CLYDE_AI],
 	h = Object.keys(c.Plq).filter((e) => !d.includes(c.Plq[e])),
-	m = Array.from(
-		new Set([
-			...u.$X,
-			...c.yYS,
-			c.Plq.ADMINISTRATOR,
-			c.Plq.KICK_MEMBERS,
-			c.Plq.BAN_MEMBERS,
-			c.Plq.MANAGE_GUILD,
-			c.Plq.MANAGE_CHANNELS,
-			c.Plq.MANAGE_ROLES,
-			c.Plq.MANAGE_MESSAGES,
-			c.Plq.MANAGE_THREADS,
-			c.Plq.MANAGE_GUILD_EXPRESSIONS,
-			c.Plq.CREATE_GUILD_EXPRESSIONS,
-			c.Plq.MANAGE_EVENTS,
-			c.Plq.CREATE_EVENTS,
-			c.Plq.MODERATE_MEMBERS,
-			c.Plq.MENTION_EVERYONE,
-			c.Plq.MANAGE_WEBHOOKS
-		])
-	).map((e) => {
+	m = Array.from(new Set([...u.$X, ...c.yYS, c.Plq.ADMINISTRATOR, c.Plq.KICK_MEMBERS, c.Plq.BAN_MEMBERS, c.Plq.MANAGE_GUILD, c.Plq.MANAGE_CHANNELS, c.Plq.MANAGE_ROLES, c.Plq.MANAGE_MESSAGES, c.Plq.MANAGE_THREADS, c.Plq.MANAGE_GUILD_EXPRESSIONS, c.Plq.CREATE_GUILD_EXPRESSIONS, c.Plq.MANAGE_EVENTS, c.Plq.CREATE_EVENTS, c.Plq.MODERATE_MEMBERS, c.Plq.MENTION_EVERYONE, c.Plq.MANAGE_WEBHOOKS])).map((e) => {
 		let t = h.find((t) => c.Plq[t] === e);
 		if (null == t) throw Error('Permission '.concat(e, ' not found in Permissions'));
 		return t;
@@ -78,8 +58,7 @@ function f(e, t, n) {
 						let s = l.Z.getRole(u.id, n);
 						if (null != s) (i.e$(s.permissions, c.Plq.ADMINISTRATOR) || i.Db(s.permissions, t)) && a[e].push(s.id);
 					}
-					null != m && (i.e$(m.permissions, c.Plq.ADMINISTRATOR) || i.Db(m.permissions, t)) && a[e].push(m.id),
-						u.isOwner(h) && a[e].push(h.id);
+					null != m && (i.e$(m.permissions, c.Plq.ADMINISTRATOR) || i.Db(m.permissions, t)) && a[e].push(m.id), u.isOwner(h) && a[e].push(h.id);
 				}
 			}
 			return a;

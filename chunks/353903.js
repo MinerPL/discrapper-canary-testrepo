@@ -74,10 +74,7 @@ class f extends (r = a.Component) {
 		return (0, i.jsxs)(l.Z.div, {
 			className: c.column,
 			style: this.getAnimatedStyle(),
-			children: [
-				e.map((e, t) => (0, i.jsx)(E, { height: e }, t)),
-				e.map((e, t) => (0, i.jsx)(E, { height: e }, 'alt'.concat(t)))
-			]
+			children: [e.map((e, t) => (0, i.jsx)(E, { height: e }, t)), e.map((e, t) => (0, i.jsx)(E, { height: e }, 'alt'.concat(t)))]
 		});
 	}
 	constructor(e) {

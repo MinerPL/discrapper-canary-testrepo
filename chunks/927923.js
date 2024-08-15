@@ -6,7 +6,7 @@ n.d(t, {
 		return h;
 	},
 	Lw: function () {
-		return m;
+		return I;
 	},
 	Ry: function () {
 		return i;
@@ -24,7 +24,7 @@ n.d(t, {
 		return u;
 	},
 	e8: function () {
-		return I;
+		return m;
 	},
 	tA: function () {
 		return _;
@@ -50,15 +50,7 @@ var r,
 let u = 'xbox://communitylinking/donut/audio',
 	c = 'https://www.xbox.com/en-US/apps/xbox-app-for-mobile',
 	d = 'https://login.live.com',
-	_ = [
-		o.x.VOICE,
-		o.x.DM_CHANNELS_READ,
-		o.x.GUILDS,
-		o.x.GUILDS_MEMBERS_READ,
-		o.x.IDENTIFY,
-		o.x.CONNECTIONS,
-		o.x.ACTIVITIES_READ
-	],
+	_ = [o.x.VOICE, o.x.DM_CHANNELS_READ, o.x.GUILDS, o.x.GUILDS_MEMBERS_READ, o.x.IDENTIFY, o.x.CONNECTIONS, o.x.ACTIVITIES_READ],
 	E = [o.x.VOICE, o.x.DM_CHANNELS_READ, o.x.GUILDS, o.x.GUILDS_MEMBERS_READ, o.x.IDENTIFY, o.x.CONNECTIONS],
 	f = 'https://my.account.sony.com',
 	h = (e) => {
@@ -75,16 +67,6 @@ let u = 'xbox://communitylinking/donut/audio',
 	};
 ((a = r || (r = {})).PLAYSTATION = 'playstation'), (a.XBOX = 'xbox');
 let p = new Set(['xbox', 'playstation']);
-l.M7m.XBOX,
-	l.M7m.PS5,
-	((s = i || (i = {}))[(s.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED = 270000)] =
-		'CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED'),
-	(s[(s.CONSOLE_DEVICE_UNAVAILABLE = 270001)] = 'CONSOLE_DEVICE_UNAVAILABLE'),
-	(s[(s.CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS = 270002)] = 'CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS'),
-	(s[(s.CONSOLE_DEVICE_COMMUNICATION_RESTRICTED = 270003)] = 'CONSOLE_DEVICE_COMMUNICATION_RESTRICTED'),
-	(s[(s.CONSOLE_DEVICE_INVALID_POWER_MODE = 270004)] = 'CONSOLE_DEVICE_INVALID_POWER_MODE'),
-	(s[(s.CONSOLE_DEVICE_ACCOUNT_LINK_ERROR = 270005)] = 'CONSOLE_DEVICE_ACCOUNT_LINK_ERROR'),
-	(s[(s.CONSOLE_DEVICE_MAX_MEMBERS_REACHED = 270006)] = 'CONSOLE_DEVICE_MAX_MEMBERS_REACHED'),
-	(s[(s.CONSOLE_DEVICE_BAD_COMMAND = 270007)] = 'CONSOLE_DEVICE_BAD_COMMAND');
-let I = new Set([270000]),
-	m = 'console error alert';
+l.M7m.XBOX, l.M7m.PS5, ((s = i || (i = {}))[(s.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED = 270000)] = 'CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED'), (s[(s.CONSOLE_DEVICE_UNAVAILABLE = 270001)] = 'CONSOLE_DEVICE_UNAVAILABLE'), (s[(s.CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS = 270002)] = 'CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS'), (s[(s.CONSOLE_DEVICE_COMMUNICATION_RESTRICTED = 270003)] = 'CONSOLE_DEVICE_COMMUNICATION_RESTRICTED'), (s[(s.CONSOLE_DEVICE_INVALID_POWER_MODE = 270004)] = 'CONSOLE_DEVICE_INVALID_POWER_MODE'), (s[(s.CONSOLE_DEVICE_ACCOUNT_LINK_ERROR = 270005)] = 'CONSOLE_DEVICE_ACCOUNT_LINK_ERROR'), (s[(s.CONSOLE_DEVICE_MAX_MEMBERS_REACHED = 270006)] = 'CONSOLE_DEVICE_MAX_MEMBERS_REACHED'), (s[(s.CONSOLE_DEVICE_BAD_COMMAND = 270007)] = 'CONSOLE_DEVICE_BAD_COMMAND');
+let m = new Set([270000]),
+	I = 'console error alert';

@@ -13,17 +13,7 @@ var s = n(481060),
 	c = n(689938),
 	d = n(360247);
 function u(e) {
-	let {
-			user: t,
-			displayProfile: n,
-			guildId: u,
-			canUsePremiumCustomization: f,
-			pendingBanner: m,
-			hasProfileEffect: E,
-			isTryItOutFlow: p,
-			disabledInputs: _,
-			onUpsellClick: h
-		} = e,
+	let { user: t, displayProfile: n, guildId: u, canUsePremiumCustomization: f, pendingBanner: m, hasProfileEffect: E, isTryItOutFlow: p, disabledInputs: _, onUpsellClick: h } = e,
 		g = f || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1,
 		I = g ? s.PencilIcon : s.NitroWheelIcon;
 	return (0, r.jsx)(i.Z, {

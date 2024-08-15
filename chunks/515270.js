@@ -3,7 +3,7 @@ n.d(t, {
 		return N;
 	},
 	ZP: function () {
-		return m;
+		return I;
 	},
 	iF: function () {
 		return A;
@@ -34,9 +34,9 @@ for (let e of f) {
 	if (((h[e] = e), null != n)) for (let t of n) h[t.toLowerCase()] = e;
 }
 let p = /^[a-z0-9_+\-.#]+$/,
-	I = /^[a-z0-9_+\-.#]+$/i;
+	m = /^[a-z0-9_+\-.#]+$/i;
 for (let e in h) if (null == e.match(p)) throw Error('Language name does not match regex: '.concat(e));
-function m(e) {
+function I(e) {
 	let { onChange: t } = e,
 		n = null;
 	return (
@@ -86,8 +86,8 @@ function m(e) {
 											_ = n && 0 === s.length,
 											f = r && 0 === s.length,
 											p = (c ? s.slice(1) : s).length % 2 == 1,
-											m = p && (null == u || '' === u || null != u.match(I)),
-											T = m && null != u && null !== (a = h[u.toLowerCase()]) && void 0 !== a ? a : null;
+											I = p && (null == u || '' === u || null != u.match(m)),
+											T = I && null != u && null !== (a = h[u.toLowerCase()]) && void 0 !== a ? a : null;
 										return {
 											blockEntry: t,
 											wasInCodeBlock: n,
@@ -97,7 +97,7 @@ function m(e) {
 											hljsTypes: null,
 											closesCodeBlock: c,
 											opensCodeBlock: p,
-											opensCodeBlockOnOwnLine: m
+											opensCodeBlockOnOwnLine: I
 										};
 									})(e, r, i, a, null != n && (n.opensCodeBlock || !n.closesCodeBlock) ? n.lang : null)),
 										t.push(n);
@@ -108,10 +108,7 @@ function m(e) {
 											n = !1;
 										for (let i of e) {
 											let a = i === e[e.length - 1];
-											if (
-												(i.closesCodeBlock || a) &&
-												(n && a && !i.closesCodeBlock && t.push(i), (n = !1), t.length > 0)
-											) {
+											if ((i.closesCodeBlock || a) && (n && a && !i.closesCodeBlock && t.push(i), (n = !1), t.length > 0)) {
 												let e = t.map((e) => (0, u.sg)(e.blockEntry[0])).join('\n'),
 													n = t[0].lang;
 												if (null != n && null != r.Z.getLanguage(n)) {

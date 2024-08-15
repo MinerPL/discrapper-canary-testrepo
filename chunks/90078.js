@@ -22,8 +22,8 @@ function c(e) {
 		f = e.referenceElement,
 		h = e.onFirstUpdate,
 		p = e.innerRef,
-		I = e.children,
-		m = r.useContext(i.C8),
+		m = e.children,
+		I = r.useContext(i.C8),
 		T = r.useState(null),
 		g = T[0],
 		S = T[1],
@@ -53,7 +53,7 @@ function c(e) {
 			},
 			[n, d, h, E, N]
 		),
-		R = (0, s.D)(f || m, g, O),
+		R = (0, s.D)(f || I, g, O),
 		C = R.state,
 		y = R.styles,
 		D = R.forceUpdate,
@@ -76,5 +76,5 @@ function c(e) {
 			},
 			[S, v, n, C, y, L, D]
 		);
-	return (0, a.$p)(I)(b);
+	return (0, a.$p)(m)(b);
 }

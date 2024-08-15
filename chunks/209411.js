@@ -25,10 +25,7 @@ function p(e) {
 					(function (e) {
 						var t;
 						let n = (0, a.LX)(e, { path: E.Z5c.CHANNEL(':guildId', ':channelId') });
-						return (
-							(null == n ? void 0 : null === (t = n.params) || void 0 === t ? void 0 : t.channelId) ===
-								g.oC.ROLE_SUBSCRIPTIONS || !1
-						);
+						return (null == n ? void 0 : null === (t = n.params) || void 0 === t ? void 0 : t.channelId) === g.oC.ROLE_SUBSCRIPTIONS || !1;
 					})(t)
 				)
 					d.dL(t);

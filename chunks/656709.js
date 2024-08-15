@@ -10,8 +10,5 @@ function l(e) {
 	let t,
 		{ channel: n, content: l, entry: r } = e,
 		o = s.ZP.parse(n, l);
-	return (
-		(t = (0, a.bx)('sendMessageWithEmbed') ? { unverified_content: r } : { content: r }),
-		i.Z.sendMessage(n.id, o, void 0, { contentInventoryEntry: t })
-	);
+	return (t = (0, a.bx)('sendMessageWithEmbed') ? { unverified_content: r } : { content: r }), i.Z.sendMessage(n.id, o, void 0, { contentInventoryEntry: t });
 }

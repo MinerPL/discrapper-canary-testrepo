@@ -1,6 +1,6 @@
 n.d(t, {
 	h: function () {
-		return m;
+		return I;
 	}
 }),
 	n(47120);
@@ -30,7 +30,7 @@ function h(e, t, n) {
 	);
 }
 let p = (0, c.Mg)(l.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE);
-function I(e, t) {
+function m(e, t) {
 	let { innerWidth: n, innerHeight: r } = window;
 	if (0 === e || 0 === t) return null;
 	let i = t / e,
@@ -46,7 +46,7 @@ function I(e, t) {
 		}
 	);
 }
-function m(e) {
+function I(e) {
 	let { splash: t, children: n } = e,
 		[{ width: r, height: s }, l] = a.useState({
 			width: 0,
@@ -59,7 +59,7 @@ function m(e) {
 			function e() {
 				l((e) => {
 					let { naturalWidth: t, naturalHeight: n } = e,
-						r = I(t, n);
+						r = m(t, n);
 					return null != r ? r : e;
 				});
 			}
@@ -72,7 +72,7 @@ function m(e) {
 					onLoad: function (e) {
 						let { currentTarget: t } = e,
 							{ naturalWidth: n, naturalHeight: r } = t,
-							i = I(n, r);
+							i = m(n, r);
 						null != i && l(i);
 					},
 					src: t,
@@ -159,7 +159,7 @@ class T extends (r = a.PureComponent) {
 			}),
 			h(this, 'handleResize', () => {
 				let { naturalWidth: e, naturalHeight: t } = this.state,
-					n = I(e, t),
+					n = m(e, t),
 					r = this.calculateShowWaveAnimation();
 				null != n
 					? this.setState({
@@ -171,11 +171,8 @@ class T extends (r = a.PureComponent) {
 			h(this, 'handleLoad', (e) => {
 				let { currentTarget: t } = e,
 					{ naturalWidth: n, naturalHeight: r } = t,
-					i = I(n, r);
-				null != i && this.setState(i),
-					this.setState({ splashLoaded: !0 }),
-					window.removeEventListener('resize', this.handleResize),
-					window.addEventListener('resize', this.handleResize);
+					i = m(n, r);
+				null != i && this.setState(i), this.setState({ splashLoaded: !0 }), window.removeEventListener('resize', this.handleResize), window.addEventListener('resize', this.handleResize);
 			});
 	}
 }

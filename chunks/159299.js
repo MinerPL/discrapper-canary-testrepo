@@ -14,8 +14,8 @@ var i,
 	_ = n(700785),
 	f = n(709054),
 	E = n(51144),
-	g = n(981631);
-function C(e, t, n) {
+	C = n(981631);
+function g(e, t, n) {
 	return (
 		t in e
 			? Object.defineProperty(e, t, {
@@ -50,11 +50,7 @@ class x {
 			});
 	}
 	updateMultipleUserIds(e, t) {
-		return (
-			(null == t || this.guildId === t) &&
-			0 !== (e = e.filter((e) => this.allUserIds.has(e))).length &&
-			(e.length > 50 ? this.rebuild() : e.forEach((e) => this.updateUserId(e)), !0)
-		);
+		return (null == t || this.guildId === t) && 0 !== (e = e.filter((e) => this.allUserIds.has(e))).length && (e.length > 50 ? this.rebuild() : e.forEach((e) => this.updateUserId(e)), !0);
 	}
 	updateUserId(e) {
 		if (!this.allUserIds.has(e)) return !1;
@@ -112,11 +108,7 @@ class x {
 	}
 	removeUserIdFromSection(e, t) {
 		let n = this.sections[t];
-		return (
-			null != t &&
-			e in n.usersById &&
-			(delete n.usersById[e], (n.userIds = n.userIds.filter((t) => t !== e)), this.version++, !0)
-		);
+		return null != t && e in n.usersById && (delete n.usersById[e], (n.userIds = n.userIds.filter((t) => t !== e)), this.version++, !0);
 	}
 	findOldState(e) {
 		for (let t in this.sections) {
@@ -133,38 +125,21 @@ class x {
 		let a = c.ZP.getMember(this.guildId, e),
 			s = m.default.getUser(e),
 			l = m.default.getCurrentUser(),
-			r =
-				(null == s ? void 0 : s.id) === (null == l ? void 0 : l.id) ? h.Z.getStatus() : d.Z.getStatus(e, this.guildId),
+			r = (null == s ? void 0 : s.id) === (null == l ? void 0 : l.id) ? h.Z.getStatus() : d.Z.getStatus(e, this.guildId),
 			o =
 				null != s &&
 				null != t &&
 				_.BT({
-					permission: g.Plq.VIEW_CHANNEL,
+					permission: C.Plq.VIEW_CHANNEL,
 					user: s,
 					context: t
 				}),
-			u =
-				r !== g.Skl.OFFLINE && r !== g.Skl.INVISIBLE && r !== g.Skl.UNKNOWN
-					? null !== (n = null == a ? void 0 : a.hoistRoleId) && void 0 !== n
-						? n
-						: 'online'
-					: 'offline',
+			u = r !== C.Skl.OFFLINE && r !== C.Skl.INVISIBLE && r !== C.Skl.UNKNOWN ? (null !== (n = null == a ? void 0 : a.hoistRoleId) && void 0 !== n ? n : 'online') : 'offline',
 			p = null !== (i = null == a ? void 0 : a.nick) && void 0 !== i ? i : E.ZP.getName(s);
 		return [u, null == p ? void 0 : p.toLowerCase(), o];
 	}
 	constructor(e, t, n) {
-		C(this, 'guildId', void 0),
-			C(this, 'parentId', void 0),
-			C(this, 'threadId', void 0),
-			C(this, 'version', void 0),
-			C(this, 'sections', void 0),
-			C(this, 'allUserIds', void 0),
-			(this.guildId = e),
-			(this.parentId = t),
-			(this.threadId = n),
-			(this.version = 0),
-			(this.sections = {}),
-			(this.allUserIds = new Set());
+		g(this, 'guildId', void 0), g(this, 'parentId', void 0), g(this, 'threadId', void 0), g(this, 'version', void 0), g(this, 'sections', void 0), g(this, 'allUserIds', void 0), (this.guildId = e), (this.parentId = t), (this.threadId = n), (this.version = 0), (this.sections = {}), (this.allUserIds = new Set());
 	}
 }
 function T(e) {
@@ -212,7 +187,7 @@ class S extends (i = l.ZP.Store) {
 		return null !== (a = null == l ? void 0 : l.canViewChannel) && void 0 !== a && a;
 	}
 }
-C(S, 'displayName', 'ThreadMemberListStore'),
+g(S, 'displayName', 'ThreadMemberListStore'),
 	(t.Z = new S(r.Z, {
 		CONNECTION_OPEN: function () {
 			I = {};

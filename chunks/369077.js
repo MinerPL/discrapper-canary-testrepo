@@ -18,17 +18,7 @@ var l = t(114487),
 t(981631), t(689938);
 var E = t(989659);
 function u(e) {
-	let {
-			className: s,
-			clanTag: t,
-			clanBadge: i,
-			onTagClick: u,
-			guildId: I,
-			guildName: T,
-			guildIcon: S,
-			guildIconSize: N,
-			memberCount: C
-		} = e,
+	let { className: s, clanTag: t, clanBadge: i, onTagClick: u, guildId: I, guildName: T, guildIcon: S, guildIconSize: N, memberCount: C } = e,
 		m = a.useRef(null),
 		[A, O] = a.useState(!1);
 	return (

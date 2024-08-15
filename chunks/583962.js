@@ -108,15 +108,11 @@ t.ZP = (e) => {
 			numBoosts: u,
 			numTotal: (0, I.vn)(t.id)[R]
 		});
-	M &&
-		((B = (0, I.e9)(R)),
-		(H = T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({ numBoosts: u })));
+	M && ((B = (0, I.e9)(R)), (H = T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({ numBoosts: u })));
 	let V = (0, o.JA)('boosts-'.concat(t.id));
 	return (0, i.jsx)('li', {
 		children: (0, i.jsx)(d.Tooltip, {
-			text: M
-				? T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP_COMPLETE
-				: T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP.format({ levelName: (0, I.nW)(R) }),
+			text: M ? T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP_COMPLETE : T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP.format({ levelName: (0, I.nW)(R) }),
 			color: d.Tooltip.Colors.BLACK,
 			position: 'top',
 			delay: 200,

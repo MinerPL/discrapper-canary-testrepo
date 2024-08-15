@@ -3,27 +3,7 @@ var i =
 	function (t) {
 		return t && t.__esModule ? t : { default: t };
 	};
-Object.defineProperty(e, '__esModule', { value: !0 }),
-	(e.foldLines =
-		e.escape =
-		e.formatDateTZ =
-		e.formatDate =
-		e.ICalWeekday =
-		e.ICalEventRepeatingFreq =
-		e.ICalEventTransparency =
-		e.ICalEventBusyStatus =
-		e.ICalEventStatus =
-		e.ICalEvent =
-		e.ICalCategory =
-		e.ICalCalendarMethod =
-		e.ICalCalendar =
-		e.ICalAttendeeStatus =
-		e.ICalAttendeeRole =
-		e.ICalAttendeeType =
-		e.ICalAttendee =
-		e.ICalAlarmType =
-		e.ICalAlarm =
-			void 0);
+Object.defineProperty(e, '__esModule', { value: !0 }), (e.foldLines = e.escape = e.formatDateTZ = e.formatDate = e.ICalWeekday = e.ICalEventRepeatingFreq = e.ICalEventTransparency = e.ICalEventBusyStatus = e.ICalEventStatus = e.ICalEvent = e.ICalCategory = e.ICalCalendarMethod = e.ICalCalendar = e.ICalAttendeeStatus = e.ICalAttendeeRole = e.ICalAttendeeType = e.ICalAttendee = e.ICalAlarmType = e.ICalAlarm = void 0);
 let r = i(a(407027));
 function n(t) {
 	return new r.default(t);

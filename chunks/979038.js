@@ -1,6 +1,6 @@
 n.d(t, {
 	Z: function () {
-		return m;
+		return I;
 	}
 });
 var r = n(735250);
@@ -18,51 +18,51 @@ var i = n(620662),
 	f = n(414402),
 	h = n(934393),
 	p = n(715547),
-	I = n(981631);
-function m(e) {
-	let { user: t, currentUser: n, activity: m, onAction: T, onClose: g } = e;
-	return (0, o.Z)(m)
+	m = n(981631);
+function I(e) {
+	let { user: t, currentUser: n, activity: I, onAction: T, onClose: g } = e;
+	return (0, o.Z)(I)
 		? (0, r.jsx)(h.Z, {
-				platformType: I.ABu.XBOX,
+				platformType: m.ABu.XBOX,
 				icon: () => (0, r.jsx)(c.Z, {}),
 				onAction: T
 			})
-		: (0, s.Z)(m)
+		: (0, s.Z)(I)
 			? (0, r.jsx)(h.Z, {
-					platformType: I.ABu.PLAYSTATION,
+					platformType: m.ABu.PLAYSTATION,
 					icon: () => (0, r.jsx)(u.Z, {}),
 					onAction: T
 				})
-			: (0, l.Z)(m)
+			: (0, l.Z)(I)
 				? (0, r.jsx)(p.Z, {
-						activity: m,
+						activity: I,
 						onAction: T
 					})
-				: (0, i.Z)(m, I.xjy.JOIN) || (0, a.Z)(m)
+				: (0, i.Z)(I, m.xjy.JOIN) || (0, a.Z)(I)
 					? (0, r.jsx)(E.Z, {
 							user: t,
 							currentUser: n,
-							activity: m,
+							activity: I,
 							onAction: T,
 							onClose: g
 						})
-					: (null == m ? void 0 : m.type) === I.IIU.HANG_STATUS
+					: (null == I ? void 0 : I.type) === m.IIU.HANG_STATUS
 						? (0, r.jsx)(_.Z, {
 								user: t,
-								activity: m,
+								activity: I,
 								onAction: T,
 								onClose: g
 							})
-						: (null == m ? void 0 : m.buttons) != null && (null == m ? void 0 : m.buttons.length) >= 1
+						: (null == I ? void 0 : I.buttons) != null && (null == I ? void 0 : I.buttons.length) >= 1
 							? (0, r.jsx)(d.Z, {
 									user: t,
-									activity: m,
+									activity: I,
 									onAction: T
 								})
-							: (0, i.Z)(m, I.xjy.INSTANCE)
+							: (0, i.Z)(I, m.xjy.INSTANCE)
 								? (0, r.jsx)(f.Z, {
 										user: t,
-										activity: m,
+										activity: I,
 										onAction: T
 									})
 								: null;

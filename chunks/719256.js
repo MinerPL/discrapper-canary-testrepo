@@ -21,15 +21,10 @@ function d(e, t, n) {
 }
 class u extends s.Z {
 	_initialize() {
-		!__OVERLAY__ &&
-			(a.Z.subscribe('SHARED_CANVAS_DRAW_LINE_POINT', this._handleDrawLinePoint),
-			a.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', this._handleVoiceChannelEffectReceived));
+		!__OVERLAY__ && (a.Z.subscribe('SHARED_CANVAS_DRAW_LINE_POINT', this._handleDrawLinePoint), a.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', this._handleVoiceChannelEffectReceived));
 	}
 	_terminate() {
-		!__OVERLAY__ &&
-			(a.Z.unsubscribe('SHARED_CANVAS_DRAW_LINE_POINT', this._handleDrawLinePoint),
-			a.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', this._handleVoiceChannelEffectReceived),
-			this.lineBatchTimer.stop());
+		!__OVERLAY__ && (a.Z.unsubscribe('SHARED_CANVAS_DRAW_LINE_POINT', this._handleDrawLinePoint), a.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', this._handleVoiceChannelEffectReceived), this.lineBatchTimer.stop());
 	}
 	_handleVoiceChannelEffectReceived(e) {
 		var t;

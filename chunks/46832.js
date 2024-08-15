@@ -64,8 +64,7 @@ class I extends i.EventEmitter {
 			u(this, 'disconnectSocket', function (e, t) {
 				var n, i;
 				let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-				c.emit('disconnect', e, a ? void 0 : t),
-					e.close(t.code, null !== (n = t.message) && void 0 !== n ? n : 'Unknown');
+				c.emit('disconnect', e, a ? void 0 : t), e.close(t.code, null !== (n = t.message) && void 0 !== n ? n : 'Unknown');
 				let [s] =
 					null !==
 						(i = Array.from(E.entries()).find((t) => {
@@ -149,8 +148,7 @@ class I extends i.EventEmitter {
 				} catch (e) {
 					throw new o.Z({ closeCode: d.$VG.CLOSE_UNSUPPORTED }, 'Payload not recognized encoding');
 				}
-				null === (i = this.onFrameHandled) || void 0 === i || i.call(this, a, this.logger, t),
-					this.emit('request', t, a);
+				null === (i = this.onFrameHandled) || void 0 === i || i.call(this, a, this.logger, t), this.emit('request', t, a);
 			}),
 			u(this, 'handleHandshake', async (e, t, i) => {
 				let a;
@@ -173,11 +171,7 @@ class I extends i.EventEmitter {
 					throw new o.Z({ closeCode: d.$VG.CLOSE_UNSUPPORTED }, e.message);
 				}
 				let r = t.frame_id;
-				if (!h.has(r))
-					throw (
-						(this.logger.error('Unrecognized frame ID '.concat(r)),
-						new o.Z({ closeCode: d.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(r)))
-					);
+				if (!h.has(r)) throw (this.logger.error('Unrecognized frame ID '.concat(r)), new o.Z({ closeCode: d.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(r)));
 				try {
 					var l;
 					a = this.createPostMessageProxySocket({
@@ -194,11 +188,7 @@ class I extends i.EventEmitter {
 				}
 				this.logger.info('Socket Opened: '.concat(a.id));
 				try {
-					if ((await this.validateSocketClient(a, e, t.client_id), !h.has(r)))
-						throw (
-							(this.logger.error('Frame ID '.concat(r, ' no longer exists')),
-							new o.Z({ closeCode: d.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(r)))
-						);
+					if ((await this.validateSocketClient(a, e, t.client_id), !h.has(r))) throw (this.logger.error('Frame ID '.concat(r, ' no longer exists')), new o.Z({ closeCode: d.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(r)));
 					E.set(e, a), h.delete(r), this.emit('connect', a), this.logger.info('Socket Validated: '.concat(a.id));
 				} catch (e) {
 					throw (this.logger.info('Socket Closed: '.concat(a.id, ', ').concat(e.message)), e);

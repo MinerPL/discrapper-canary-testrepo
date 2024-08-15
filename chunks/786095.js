@@ -64,26 +64,12 @@ function S(e, n) {
 				...n,
 				triggerMetadata: {
 					...n.triggerMetadata,
-					keywordFilter: [
-						...(null !== (i = null === (t = n.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter) &&
-						void 0 !== i
-							? i
-							: []),
-						e
-					]
+					keywordFilter: [...(null !== (i = null === (t = n.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter) && void 0 !== i ? i : []), e]
 				}
 			};
-			await T(a, j),
-				x(a),
-				null != v
-					? (0, l.showToast)(
-							(0, l.createToast)(g.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION_TOAST_ERROR, l.ToastType.FAILURE)
-						)
-					: (0, l.showToast)(
-							(0, l.createToast)(g.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION_TOAST_SUCCESS, l.ToastType.SUCCESS)
-						);
+			await T(a, j), x(a), null != v ? (0, l.showToast)((0, l.createToast)(g.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION_TOAST_ERROR, l.ToastType.FAILURE)) : (0, l.showToast)((0, l.createToast)(g.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION_TOAST_SUCCESS, l.ToastType.SUCCESS));
 		},
-		U = (0, i.jsx)(i.Fragment, {
+		y = (0, i.jsx)(i.Fragment, {
 			children: (0, i.jsx)(l.MenuItem, {
 				id: 'automod-rules-loading',
 				label: g.Z.Messages.LOADING
@@ -91,7 +77,7 @@ function S(e, n) {
 		});
 	return (
 		!h &&
-			(U = (0, i.jsxs)(i.Fragment, {
+			(y = (0, i.jsxs)(i.Fragment, {
 				children: [
 					C &&
 						(0, i.jsx)(l.MenuItem, {
@@ -149,7 +135,7 @@ function S(e, n) {
 			onFocus: () => {
 				if (!R) O(!0), N();
 			},
-			children: U
+			children: y
 		})
 	);
 }

@@ -5,6 +5,5 @@ e.exports = Object.freeze({
 	NO_TEXT_SPANISH: 'No',
 	GOT_IT_TEXT_SPANISH: 'Entendido',
 	LANGUAGE_CHANGED_CONFIRMATION_TITLE_SPANISH: '\xA1El cambio fue hecho!',
-	LANGUAGE_CHANGED_CONFIRMATION_SUBTITLE_SPANISH:
-		'Discord está configurado en Español. Puedes elegir otro idioma en "Ajustes de aplicación" > "Idioma".'
+	LANGUAGE_CHANGED_CONFIRMATION_SUBTITLE_SPANISH: 'Discord está configurado en Español. Puedes elegir otro idioma en "Ajustes de aplicación" > "Idioma".'
 });

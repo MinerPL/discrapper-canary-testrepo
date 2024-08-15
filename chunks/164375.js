@@ -42,13 +42,7 @@ function M(e) {
 				children: (0, a.jsxs)(_.Heading, {
 					variant: 'heading-lg/bold',
 					className: u.title,
-					children: [
-						D
-							? E.Z.Messages.GDM_MULTIPLE_BLOCKED_USERS_WARNING_HEADER_MODAL
-							: E.Z.Messages.GDM_SINGLE_BLOCKED_USER_WARNING_HEADER_MODAL,
-						(0, a.jsx)('br', {}),
-						E.Z.Messages.GDM_BLOCKED_USER_WARNING_LEAVE_GROUP_MODAL
-					]
+					children: [D ? E.Z.Messages.GDM_MULTIPLE_BLOCKED_USERS_WARNING_HEADER_MODAL : E.Z.Messages.GDM_SINGLE_BLOCKED_USER_WARNING_HEADER_MODAL, (0, a.jsx)('br', {}), E.Z.Messages.GDM_BLOCKED_USER_WARNING_LEAVE_GROUP_MODAL]
 				})
 			}),
 			(0, a.jsxs)(_.ModalContent, {
@@ -65,9 +59,7 @@ function M(e) {
 												(0, a.jsx)(_.GroupIcon, {}),
 												(0, a.jsx)(_.Text, {
 													variant: 'text-md/medium',
-													children: E.Z.Messages.GDM_MULTIPLE_BLOCKED_USERS_WARNING_PRESENCE.format({
-														blockedUserCount: G.length
-													})
+													children: E.Z.Messages.GDM_MULTIPLE_BLOCKED_USERS_WARNING_PRESENCE.format({ blockedUserCount: G.length })
 												})
 											]
 										})
@@ -76,9 +68,7 @@ function M(e) {
 												(0, a.jsx)(_.UserIcon, {}),
 												(0, a.jsx)(_.Text, {
 													variant: 'text-md/medium',
-													children: E.Z.Messages.GDM_SINGLE_BLOCKED_USER_WARNING_PRESENCE.format({
-														userName: null === (s = G[0]) || void 0 === s ? void 0 : s.username
-													})
+													children: E.Z.Messages.GDM_SINGLE_BLOCKED_USER_WARNING_PRESENCE.format({ userName: null === (s = G[0]) || void 0 === s ? void 0 : s.username })
 												})
 											]
 										})

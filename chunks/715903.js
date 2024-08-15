@@ -20,11 +20,7 @@ var r = n(442837),
 	i = n(271383),
 	a = n(630388),
 	s = n(372897);
-let o = [
-	s.q.AUTOMOD_QUARANTINED_BIO,
-	s.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME,
-	s.q.AUTOMOD_QUARANTINED_CLAN_TAG
-];
+let o = [s.q.AUTOMOD_QUARANTINED_BIO, s.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME, s.q.AUTOMOD_QUARANTINED_CLAN_TAG];
 function l(e) {
 	return null == e ? new Set() : new Set(o.reduce((t, n) => ((0, a.yE)(null != e ? e : 0, n) && t.push(n), t), []));
 }

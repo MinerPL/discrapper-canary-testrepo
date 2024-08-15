@@ -30,19 +30,7 @@ function c(e) {
 	};
 }
 function d(e) {
-	let {
-			channelId: t,
-			content: n,
-			tts: r = !1,
-			type: d = u.uaV.DEFAULT,
-			messageReference: _,
-			allowedMentions: E,
-			author: f,
-			flags: h,
-			nonce: p,
-			poll: I,
-			changelogId: m
-		} = e,
+	let { channelId: t, content: n, tts: r = !1, type: d = u.uaV.DEFAULT, messageReference: _, allowedMentions: E, author: f, flags: h, nonce: p, poll: m, changelogId: I } = e,
 		T = [];
 	if (d === u.uaV.REPLY && (i()(null != _, 'Replies must have a message reference'), null == E || E.replied_user)) {
 		let e = a.Z.getMessageByReference(_);
@@ -72,8 +60,8 @@ function d(e) {
 			message_snapshots: [],
 			flags: h,
 			nonce: p,
-			poll: I,
-			changelog_id: m
+			poll: m,
+			changelog_id: I
 		}
 	);
 }

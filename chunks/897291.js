@@ -15,14 +15,14 @@ var r = n(735250),
 t.Z = i.memo(function (e) {
 	let { disabled: t, channel: n } = e,
 		{ analyticsLocations: i } = (0, l.ZP)(o.Z.GIFT_BUTTON),
-		I = (0, d.Ft)(n),
-		{ Component: m, events: T, play: g } = (0, a.$)();
+		m = (0, d.Ft)(n),
+		{ Component: I, events: T, play: g } = (0, a.$)();
 	if (t) return null;
 	let S = () => {
 		let { enabled: e } = c.Z.getCurrentConfig({ location: 'ChannelPremiumGiftButton' }, { autoTrackExposure: !0 });
 		(0, u.Z)({
 			isGift: !0,
-			giftRecipient: null === I ? void 0 : I,
+			giftRecipient: null === m ? void 0 : m,
 			initialPlanId: null,
 			subscriptionTier: e ? void 0 : f.Si.TIER_2,
 			analyticsLocations: i,
@@ -47,7 +47,7 @@ t.Z = i.memo(function (e) {
 					S(), g();
 				},
 				...T,
-				children: (0, r.jsx)(m, { color: 'currentColor' })
+				children: (0, r.jsx)(I, { color: 'currentColor' })
 			})
 	});
 });

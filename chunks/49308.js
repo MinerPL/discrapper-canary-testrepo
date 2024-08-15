@@ -41,15 +41,7 @@ function x(e) {
 			});
 }
 function I(e) {
-	let {
-			isGift: n,
-			giftCode: t,
-			selectedGiftStyle: i,
-			hasSentMessage: l,
-			giftRecipient: E,
-			giftMessageError: C,
-			isSendingMessage: p
-		} = (0, h.wD)(),
+	let { isGift: n, giftCode: t, selectedGiftStyle: i, hasSentMessage: l, giftRecipient: E, giftMessageError: C, isSendingMessage: p } = (0, h.wD)(),
 		I = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
 		T = s.useRef(null),
 		{ selectedSkuId: g } = (0, m.usePaymentContext)(),

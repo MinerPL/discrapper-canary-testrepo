@@ -13,20 +13,7 @@ var a = n(442837),
 	c = n(701560),
 	u = n(785547);
 function d(e) {
-	let {
-			application: t,
-			fullWidth: n = !1,
-			size: d = s.Button.Sizes.LARGE,
-			color: _,
-			customDisabledColor: E,
-			hideNotLaunchable: I,
-			tooltipPosition: m,
-			onClick: T,
-			className: h,
-			source: N,
-			hover: f,
-			innerClassName: C
-		} = e,
+	let { application: t, fullWidth: n = !1, size: d = s.Button.Sizes.LARGE, color: _, customDisabledColor: E, hideNotLaunchable: I, tooltipPosition: m, onClick: T, className: h, source: N, hover: f, innerClassName: C } = e,
 		p = {
 			fullWidth: n,
 			size: d,

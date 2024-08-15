@@ -66,10 +66,7 @@ function d(e) {
 							onAndMore: f,
 							newBadgeHook: u
 						}),
-			context:
-				n < M.DZw
-					? i.Z.Messages.GUILD_CAP_UPSELL_MODAL_NEAR_LIMIT_CONTEXT.format({ guildCount: n })
-					: i.Z.Messages.GUILD_CAP_UPSELL_MODAL_AT_LIMIT_CONTEXT,
+			context: n < M.DZw ? i.Z.Messages.GUILD_CAP_UPSELL_MODAL_NEAR_LIMIT_CONTEXT.format({ guildCount: n }) : i.Z.Messages.GUILD_CAP_UPSELL_MODAL_AT_LIMIT_CONTEXT,
 			glowUp: i.Z.Messages.GUILD_CAP_UPSELL_MODAL_GLOW_UP.format({ onAndMore: f }),
 			...d
 		})

@@ -21,6 +21,6 @@ function h(e) {
 		_ = (0, i.e7)([s.Z], () => s.Z.getGuild(e.guild_id), [e.guild_id]),
 		f = (0, i.e7)([l.Z], () => l.Z.can(c.yP, e), [e]),
 		E = null !== (t = null == _ ? void 0 : _.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
-		g = !(null == _ ? void 0 : _.isCommunity()) && E > d.RcX;
-	return p && !n && f && !g && h + m >= E;
+		C = !(null == _ ? void 0 : _.isCommunity()) && E > d.RcX;
+	return p && !n && f && !C && h + m >= E;
 }

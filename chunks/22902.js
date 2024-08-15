@@ -13,23 +13,10 @@ function a(e) {
 		var n;
 		let t = o.DN.map((e) => ({
 				value: e,
-				label:
-					e.interval === l.rV.DAY && 7 === e.interval_count
-						? u.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_TRIAL_TIME_LIMIT_DEFAULT_OPTION.format({
-								defaultLimit: (0, i.iG)(e)
-							})
-						: (0, i.iG)(e),
+				label: e.interval === l.rV.DAY && 7 === e.interval_count ? u.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_TRIAL_TIME_LIMIT_DEFAULT_OPTION.format({ defaultLimit: (0, i.iG)(e) }) : (0, i.iG)(e),
 				isDefault: e.interval === l.rV.DAY && 7 === e.interval_count
 			})),
-			r =
-				null != e
-					? null ===
-							(n = t.find(
-								(n) => null != n.value && n.value.interval === e.interval && n.value.interval_count === e.interval_count
-							)) || void 0 === n
-						? void 0
-						: n.value
-					: e;
+			r = null != e ? (null === (n = t.find((n) => null != n.value && n.value.interval === e.interval && n.value.interval_count === e.interval_count)) || void 0 === n ? void 0 : n.value) : e;
 		return {
 			options: t,
 			selectedOption: r

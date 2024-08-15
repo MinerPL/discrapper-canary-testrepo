@@ -23,9 +23,6 @@ function u(n) {
 		onClose: o.Zy,
 		onSelect: d,
 		'aria-label': r.Z.Messages.CHANNEL_MENTION_ACTIONS_MENU_LABEL,
-		children: [
-			(0, i.jsx)(a.MenuGroup, { children: p }, 'channel-mention-actions'),
-			(0, i.jsx)(a.MenuGroup, { children: h }, 'developer-actions')
-		]
+		children: [(0, i.jsx)(a.MenuGroup, { children: p }, 'channel-mention-actions'), (0, i.jsx)(a.MenuGroup, { children: h }, 'developer-actions')]
 	});
 }

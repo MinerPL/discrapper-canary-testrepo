@@ -3,7 +3,7 @@ n.d(t, {
 		return T;
 	},
 	Fc: function () {
-		return m;
+		return I;
 	},
 	Ft: function () {
 		return A;
@@ -49,26 +49,14 @@ function E(e) {
 	if (null == e) return;
 	let n = i.Z.hidePersonalInformation,
 		r = _(e);
-	return (
-		n &&
-			r.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) &&
-			'0' === e.discriminator &&
-			(r = l(r)),
-		r
-	);
+	return n && r.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && '0' === e.discriminator && (r = l(r)), r;
 }
 function f(e) {
 	var t;
 	let n = (0, r.e7)([i.Z], () => i.Z.hidePersonalInformation);
 	if (null == e) return;
 	let a = _(e);
-	return (
-		n &&
-			a.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) &&
-			'0' === e.discriminator &&
-			(a = l(a)),
-		a
-	);
+	return n && a.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && '0' === e.discriminator && (a = l(a)), a;
 }
 function h(e) {
 	if (null != e) {
@@ -97,20 +85,20 @@ function p(e) {
 			return null;
 	}
 }
-function I(e, t) {
+function m(e, t) {
 	let { maxDaysOld: n, minDaysOld: r = 0 } = t;
 	if (null == e) return !1;
 	let i = Date.now() - e.createdAt.getTime();
 	return ((null == n || !!(i <= 86400000 * n)) && !!(i >= 86400000 * r)) || !1;
 }
-function m(e) {
-	return !I(e, {
+function I(e) {
+	return !m(e, {
 		minDaysOld: 0,
 		maxDaysOld: 30
 	});
 }
 function T(e) {
-	return I(e, {
+	return m(e, {
 		minDaysOld: 0,
 		maxDaysOld: 7
 	});
@@ -119,11 +107,7 @@ function g(e, t, n) {
 	if (null == e) return o.Z.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER;
 	if (!d(e.username)) return '???';
 	let r = n;
-	if (
-		('always' === t.identifiable ? (r = !1) : 'never' === t.identifiable && (r = !0),
-		'0' !== e.discriminator && e.discriminator !== s.fo$ && !t.forcePomelo)
-	)
-		return 'username' === t.mode ? e.username : r ? e.username : ''.concat(e.username, '#').concat(e.discriminator);
+	if (('always' === t.identifiable ? (r = !1) : 'never' === t.identifiable && (r = !0), '0' !== e.discriminator && e.discriminator !== s.fo$ && !t.forcePomelo)) return 'username' === t.mode ? e.username : r ? e.username : ''.concat(e.username, '#').concat(e.discriminator);
 	let i = r ? l(e.username) : e.username;
 	return 'never' !== t.decoration ? u(i) : i;
 }

@@ -22,10 +22,7 @@ function c(e) {
 }
 function d(e, t) {
 	var n;
-	return (
-		null != e &&
-		new Set(null === (n = e.discount) || void 0 === n ? void 0 : n.plan_ids.map((e) => u.GP[e].skuId)).has(t)
-	);
+	return null != e && new Set(null === (n = e.discount) || void 0 === n ? void 0 : n.plan_ids.map((e) => u.GP[e].skuId)).has(t);
 }
 function _(e, t) {
 	let n = (0, i.e7)([o.Z], () => o.Z.getUserDiscountOffer(e)),

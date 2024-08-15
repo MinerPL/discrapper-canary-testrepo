@@ -23,16 +23,5 @@ function s(e, t, n) {
 	let i = null != t ? (0, r.Af)(t) : null,
 		l = a.mn[e],
 		s = null != n ? n : l;
-	return (
-		null != i
-			? s === i.planId && s === a.IW[e]
-				? (s = a.mn[e])
-				: s === i.planId && s === a.mn[e]
-					? (s = a.IW[e])
-					: (i.planId === a.Xh.PREMIUM_YEAR_TIER_0 || i.planId === a.Xh.PREMIUM_YEAR_TIER_1) &&
-						s === a.Xh.PREMIUM_MONTH_TIER_2 &&
-						(s = a.Xh.PREMIUM_YEAR_TIER_2)
-			: s === a.Xh.PREMIUM_YEAR_TIER_1 && (s = a.Xh.PREMIUM_MONTH_TIER_1),
-		s
-	);
+	return null != i ? (s === i.planId && s === a.IW[e] ? (s = a.mn[e]) : s === i.planId && s === a.mn[e] ? (s = a.IW[e]) : (i.planId === a.Xh.PREMIUM_YEAR_TIER_0 || i.planId === a.Xh.PREMIUM_YEAR_TIER_1) && s === a.Xh.PREMIUM_MONTH_TIER_2 && (s = a.Xh.PREMIUM_YEAR_TIER_2)) : s === a.Xh.PREMIUM_YEAR_TIER_1 && (s = a.Xh.PREMIUM_MONTH_TIER_1), s;
 }

@@ -21,8 +21,8 @@ var i = n(735250),
 	_ = n(736052),
 	f = n(359110),
 	E = n(359119),
-	g = n(13279),
-	C = n(248789),
+	C = n(13279),
+	g = n(248789),
 	I = n(88101),
 	x = n(576954),
 	T = n(280006),
@@ -88,20 +88,7 @@ function et(e) {
 	var t;
 	let n,
 		a,
-		{
-			channel: r,
-			messages: d,
-			unreadCount: B,
-			showNewMessagesBar: et,
-			messageDisplayCompact: en,
-			channelStream: ei,
-			uploads: ea,
-			scrollManager: es,
-			specs: el,
-			filterAfterTimestamp: er,
-			showingQuarantineBanner: eo,
-			hideSummaries: ec
-		} = e,
+		{ channel: r, messages: d, unreadCount: B, showNewMessagesBar: et, messageDisplayCompact: en, channelStream: ei, uploads: ea, scrollManager: es, specs: el, filterAfterTimestamp: er, showingQuarantineBanner: eo, hideSummaries: ec } = e,
 		eu = j.default.getCurrentUser(),
 		ed = () => es.isInitialized() || d.ready,
 		eh = (0, w.$)(r),
@@ -109,9 +96,9 @@ function et(e) {
 		ep = (0, o.ts)(r),
 		e_ = (0, s.e7)([v.Z], () => v.Z.shouldShowTopicsBar() && !ec),
 		ef = (0, I.P)(r.id, Q.zr),
-		eE = (0, g.z)(r.id, Q.zr),
-		eg = (0, U.Z)(),
-		eC = (function (e, t) {
+		eE = (0, C.z)(r.id, Q.zr),
+		eC = (0, U.Z)(),
+		eg = (function (e, t) {
 			return e.isDM() && null != t
 				? t.type === E.pj.STRANGER_DANGER
 					? (0, i.jsx)(x.M, {
@@ -119,7 +106,7 @@ function et(e) {
 							warningId: t.id,
 							senderId: e.getRecipientId()
 						})
-					: (0, i.jsx)(C.Y, {
+					: (0, i.jsx)(g.Y, {
 							channelId: e.id,
 							warningId: t.id,
 							senderId: e.getRecipientId()
@@ -154,9 +141,7 @@ function et(e) {
 									id: s ? q.j1 : void 0,
 									children: e.content
 								},
-								'divider-'.concat(
-									null !== (a = null !== (n = e.contentKey) && void 0 !== n ? n : e.unreadId) && void 0 !== a ? a : t
-								)
+								'divider-'.concat(null !== (a = null !== (n = e.contentKey) && void 0 !== n ? n : e.unreadId) && void 0 !== a ? a : t)
 							);
 			}
 			if (e.type === X.ys_.FORUM_POST_ACTION_BAR)
@@ -173,10 +158,7 @@ function et(e) {
 			if (e.type === X.ys_.MESSAGE_GROUP_BLOCKED || e.type === X.ys_.MESSAGE_GROUP_SPAMMER) {
 				let t;
 				return (
-					(t =
-						e.type === X.ys_.MESSAGE_GROUP_BLOCKED
-							? J.Z.Messages.BLOCKED_MESSAGE_COUNT
-							: J.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT),
+					(t = e.type === X.ys_.MESSAGE_GROUP_BLOCKED ? J.Z.Messages.BLOCKED_MESSAGE_COUNT : J.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT),
 					(0, i.jsx)(
 						G.Z,
 						{
@@ -297,14 +279,7 @@ function et(e) {
 		let a = b.ZP.getOldestUnreadTimestamp(r.id),
 			s = 0 !== a ? a : O.default.extractTimestamp(r.id),
 			l = (0, L.KC)(new Date(), new Date(s));
-		if (
-			(b.ZP.isEstimated(r.id)
-				? ((e = l ? J.Z.Messages.NEW_MESSAGES_ESTIMATED : J.Z.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE),
-					(t = J.Z.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES))
-				: ((e = l ? J.Z.Messages.NEW_MESSAGES : J.Z.Messages.NEW_MESSAGES_WITH_DATE),
-					(t = J.Z.Messages.NEW_MESSAGES_SUMMARIES)),
-			ep && (0, o.tW)(r) && eg.includes(K.E.SUMMARIES))
-		) {
+		if ((b.ZP.isEstimated(r.id) ? ((e = l ? J.Z.Messages.NEW_MESSAGES_ESTIMATED : J.Z.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE), (t = J.Z.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES)) : ((e = l ? J.Z.Messages.NEW_MESSAGES : J.Z.Messages.NEW_MESSAGES_WITH_DATE), (t = J.Z.Messages.NEW_MESSAGES_SUMMARIES)), ep && (0, o.tW)(r) && eC.includes(K.E.SUMMARIES))) {
 			let a = b.ZP.ackMessageId(r.id),
 				l = (0, S.q)(r.id, b.ZP.getOldestUnreadMessageId(r.id));
 			if (
@@ -394,7 +369,7 @@ function et(e) {
 				}
 			}
 		} else
-			eg.includes(K.E.NEW_MESSAGES) &&
+			eC.includes(K.E.NEW_MESSAGES) &&
 				(n = (0, i.jsx)(F.LE, {
 					content: e.format({
 						count: B,
@@ -407,7 +382,7 @@ function et(e) {
 		(null == n &&
 			(0, o.Lp)(r) &&
 			e_ &&
-			eg.includes(K.E.SUMMARIES) &&
+			eC.includes(K.E.SUMMARIES) &&
 			(n = (0, i.jsx)(F.BO, {
 				channel: r,
 				scrollManager: es
@@ -463,6 +438,6 @@ function et(e) {
 		newMessagesBar: n,
 		jumpToPresentBar: a,
 		forumPostActionBar: eI,
-		safetyWarningBanner: eC
+		safetyWarningBanner: eg
 	};
 }

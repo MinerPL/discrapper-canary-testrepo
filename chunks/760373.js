@@ -49,12 +49,7 @@ let l = '',
 	E = 5,
 	I = 60,
 	m = 4;
-((s = i || (i = {})).MATCH = 'match'),
-	(s.OTHER_USER_ALREADY_VERIFIED = 'other_user_already_verified'),
-	(s.MISMATCH = 'mismatch'),
-	(s.UNABLE_TO_VERIFY = 'unable_to_verify'),
-	(s.OTHER_USER_DISCONNECTED = 'other_user_disconnected'),
-	(s.CURRENT_USER_DISCONNECTED = 'current_user_disconnected');
+((s = i || (i = {})).MATCH = 'match'), (s.OTHER_USER_ALREADY_VERIFIED = 'other_user_already_verified'), (s.MISMATCH = 'mismatch'), (s.UNABLE_TO_VERIFY = 'unable_to_verify'), (s.OTHER_USER_DISCONNECTED = 'other_user_disconnected'), (s.CURRENT_USER_DISCONNECTED = 'current_user_disconnected');
 let T = 100;
 ((r = a || (a = {})).RTC_DEBUG_PANEL = 'rtc_debug_panel'), (r.RTC_SECURE_FRAMES = 'rtc_secure_frames');
 let h = 1,

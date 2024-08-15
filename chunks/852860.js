@@ -10,18 +10,7 @@ var n = s(735250),
 	u = s(591318);
 t.Z = function (e) {
 	var t;
-	let {
-			message: s,
-			errorMessage: h,
-			submitting: m,
-			onReset: g,
-			onSave: E,
-			onSaveText: T,
-			onResetText: p,
-			onSaveButtonColor: N,
-			disabled: _,
-			saveButtonTooltip: S
-		} = e,
+	let { message: s, errorMessage: h, submitting: m, onReset: g, onSave: E, onSaveText: T, onResetText: p, onSaveButtonColor: N, disabled: _, saveButtonTooltip: S } = e,
 		x = l.useRef(null),
 		[{ spring: f }, C] = (0, r.useSpring)(() => ({ spring: 0 }));
 	l.useEffect(() => {

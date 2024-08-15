@@ -109,10 +109,7 @@ function h(e) {
 												d.ComboboxItem,
 												{
 													value: t.id,
-													children: [
-														(0, r.jsx)(d.ComboboxItem.Label, { children: N(t) }),
-														(0, r.jsx)(d.ComboboxItem.Checkbox, {})
-													]
+													children: [(0, r.jsx)(d.ComboboxItem.Label, { children: N(t) }), (0, r.jsx)(d.ComboboxItem.Checkbox, {})]
 												},
 												t.id
 											)
@@ -130,10 +127,7 @@ function h(e) {
 										{
 											value: t.id,
 											disabled: !0,
-											children: [
-												(0, r.jsx)(d.ComboboxItem.Label, { children: N(t) }),
-												(0, r.jsx)(d.ComboboxItem.Checkbox, { checked: !0 })
-											]
+											children: [(0, r.jsx)(d.ComboboxItem.Label, { children: N(t) }), (0, r.jsx)(d.ComboboxItem.Checkbox, { checked: !0 })]
 										},
 										t.id
 									)

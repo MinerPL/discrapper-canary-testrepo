@@ -11,9 +11,7 @@ function d(e, t) {
 	let n = Math.round(100 * e),
 		r = Math.round(100 * u),
 		a = Math.round(100 * l);
-	(n > 0 && a >= r) || (n < 0 && a <= r)
-		? (clearInterval(c), 0 === r && null != t && t())
-		: ((a += n), (l = a / 100), (o.volume = i()(l, 0, 0.5)));
+	(n > 0 && a >= r) || (n < 0 && a <= r) ? (clearInterval(c), 0 === r && null != t && t()) : ((a += n), (l = a / 100), (o.volume = i()(l, 0, 0.5)));
 }
 function _(e) {
 	null != c && clearInterval(c), (u = 0);
@@ -36,7 +34,7 @@ function h() {
 function p() {
 	return 0.2 * (u - l);
 }
-class I extends a.Z {
+class m extends a.Z {
 	constructor(...e) {
 		var t, n, r;
 		super(...e),
@@ -57,4 +55,4 @@ class I extends a.Z {
 				: (t[n] = r);
 	}
 }
-t.Z = new I();
+t.Z = new m();

@@ -39,10 +39,7 @@ class d {
 	subscribe(e, t) {
 		var n, r;
 		let i = null !== (n = this._subscriptions[e]) && void 0 !== n ? n : {};
-		(i[t] = (null !== (r = i[t]) && void 0 !== r ? r : 0) + 1),
-			(this._subscriptions[e] = i),
-			1 === i[t] && this._onChange(e, this.get(e)),
-			this.checkForLeaks(e, t);
+		(i[t] = (null !== (r = i[t]) && void 0 !== r ? r : 0) + 1), (this._subscriptions[e] = i), 1 === i[t] && this._onChange(e, this.get(e)), this.checkForLeaks(e, t);
 	}
 	isSubscribed(e, t) {
 		return null != this._subscriptions[e] && null != this._subscriptions[e][t];
@@ -54,23 +51,13 @@ class d {
 		var n, r;
 		if (!this.isSubscribed(e, t)) return;
 		let i = null !== (n = this._unsubscriptions[e]) && void 0 !== n ? n : {};
-		(i[t] = (null !== (r = i[t]) && void 0 !== r ? r : 0) + 1),
-			(this._unsubscriptions[e] = i),
-			1 === i[t] && this._unsubscribe.delay(!1);
+		(i[t] = (null !== (r = i[t]) && void 0 !== r ? r : 0) + 1), (this._unsubscriptions[e] = i), 1 === i[t] && this._unsubscribe.delay(!1);
 	}
 	checkForLeaks(e, t) {
 		var n, r, i, a;
-		let o =
-				null !== (i = null === (n = this._subscriptions[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== i ? i : 0,
-			l =
-				o -
-				(null !== (a = null === (r = this._unsubscriptions[e]) || void 0 === r ? void 0 : r[t]) && void 0 !== a
-					? a
-					: 0);
-		l > 5 &&
-			new s.Z('GuildMemberSubscriptions').warn(
-				'GuildMemberSubscriptions.subscribe(...): Potential reference leak! ('.concat(l, ' subscriptions)')
-			);
+		let o = null !== (i = null === (n = this._subscriptions[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== i ? i : 0,
+			l = o - (null !== (a = null === (r = this._unsubscriptions[e]) || void 0 === r ? void 0 : r[t]) && void 0 !== a ? a : 0);
+		l > 5 && new s.Z('GuildMemberSubscriptions').warn('GuildMemberSubscriptions.subscribe(...): Potential reference leak! ('.concat(l, ' subscriptions)'));
 	}
 	flushUnsubscriptions() {
 		if (!i().isEmpty(this._unsubscriptions))
@@ -86,10 +73,6 @@ class d {
 				(this._unsubscriptions = {});
 	}
 	constructor(e) {
-		u(this, '_subscriptions', {}),
-			u(this, '_unsubscriptions', {}),
-			u(this, '_onChange', void 0),
-			u(this, '_unsubscribe', new a.sW(c, () => this.flushUnsubscriptions())),
-			(this._onChange = e);
+		u(this, '_subscriptions', {}), u(this, '_unsubscriptions', {}), u(this, '_onChange', void 0), u(this, '_unsubscribe', new a.sW(c, () => this.flushUnsubscriptions())), (this._onChange = e);
 	}
 }

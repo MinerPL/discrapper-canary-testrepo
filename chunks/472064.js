@@ -169,8 +169,7 @@ class S extends l.Component {
 			}),
 			g(this, 'handleInstall', () => {
 				let { application: e, buildId: t, manifestIds: s, hasPreviouslyAcceptedStoreTerms: a } = this.props;
-				if (null != t && null != s)
-					!a && (0, h.B)(), null != e && null != e.eulaId && (0, h.D)(e.eulaId), this.install(t, s);
+				if (null != t && null != s) !a && (0, h.B)(), null != e && null != e.eulaId && (0, h.D)(e.eulaId), this.install(t, s);
 				else throw Error('Unexpected missing build info for non-premium product');
 			}),
 			g(this, 'handlePurchaseTermsChange', (e) => {

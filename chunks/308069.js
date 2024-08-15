@@ -17,16 +17,7 @@ var s = n(735250),
 	h = n(689938),
 	E = n(91242);
 t.Z = (e) => {
-	let {
-			quest: t,
-			expansionSpring: a,
-			onCtxMenuSelect: T,
-			onCtxMenuOpen: S,
-			onCtxMenuClose: v,
-			useReducedMotion: A,
-			isExpanded: N,
-			isExpansionAnimationComplete: j
-		} = e,
+	let { quest: t, expansionSpring: a, onCtxMenuSelect: T, onCtxMenuOpen: S, onCtxMenuClose: v, useReducedMotion: A, isExpanded: N, isExpansionAnimationComplete: j } = e,
 		B = o.useCallback(() => {
 			(0, g.openDisclosureModal)(t, {
 				content: d.jn.QUEST_BAR_V2,
@@ -73,9 +64,7 @@ t.Z = (e) => {
 						range: [0, 1],
 						output: [0, 1]
 					}),
-					backdropFilter: a
-						.to([0, 1], [0, 1])
-						.to((e) => 'blur('.concat(10 * e, 'px) brightness(').concat(1 - e / 5, ')'))
+					backdropFilter: a.to([0, 1], [0, 1]).to((e) => 'blur('.concat(10 * e, 'px) brightness(').concat(1 - e / 5, ')'))
 				}
 			}),
 			(0, s.jsx)(l.animated.div, {

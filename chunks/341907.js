@@ -65,7 +65,5 @@ function f(e, t) {
 		});
 }
 function h(e, t) {
-	u.B.getCurrentConfig({ location: e }).enabled
-		? ((0, a.uY)(d.Gj.Quests), (0, o.uL)(c.Z5c.QUEST_HOME + (null != t ? '#'.concat(t) : '')))
-		: s.Z.open(c.oAB.INVENTORY);
+	u.B.getCurrentConfig({ location: e }).enabled ? ((0, a.uY)(d.Gj.Quests), (0, o.uL)(c.Z5c.QUEST_HOME + (null != t ? '#'.concat(t) : ''))) : s.Z.open(c.oAB.INVENTORY);
 }

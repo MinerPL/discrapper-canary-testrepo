@@ -67,9 +67,7 @@ function C(e) {
 							(0, n.jsx)(c.Z, {
 								size: i.Button.Sizes.LARGE,
 								color: i.Button.Colors.GREEN,
-								buttonText: _.ZP.isPremium(s)
-									? I.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE
-									: I.Z.Messages.CHANGE_IDENTITY_UPSELL,
+								buttonText: _.ZP.isPremium(s) ? I.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : I.Z.Messages.CHANGE_IDENTITY_UPSELL,
 								subscriptionTier: u.Si.TIER_2
 							})
 						]

@@ -36,11 +36,7 @@ class h extends r.Z {
 					n = c.default.getId();
 				t.forEach((e) => {
 					var t;
-					if (
-						e.userId === n &&
-						!!(null === (t = d.Z.getChannel(e.channelId)) || void 0 === t ? void 0 : t.isGuildStageVoice())
-					)
-						(0, _.gf)(e) !== _.xO.ON_STAGE && (this.handleStopStream(e), this.handleStopUserVideo());
+					if (e.userId === n && !!(null === (t = d.Z.getChannel(e.channelId)) || void 0 === t ? void 0 : t.isGuildStageVoice())) (0, _.gf)(e) !== _.xO.ON_STAGE && (this.handleStopStream(e), this.handleStopUserVideo());
 				});
 			}),
 			E(this, 'handleStopStream', (e) => {

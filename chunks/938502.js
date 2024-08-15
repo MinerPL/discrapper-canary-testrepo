@@ -40,19 +40,10 @@ function u(e, t) {
 			guild_id: e.id,
 			automatic: !1
 		};
-	(null == t || e.discoverySplash !== t.discoverySplash) &&
-		((s.discovery_splash_edit_type = null == e.discoverySplash ? 'removed' : 'uploaded'), (n = !0)),
-		(null == t || e.features.has(c.oNc.DISCOVERABLE) !== t.features.has(c.oNc.DISCOVERABLE)) &&
-			((s.is_discoverable = e.features.has(c.oNc.DISCOVERABLE)), (n = !0)),
-		(null == t || e.rulesChannelId !== t.rulesChannelId) && ((s.rules_channel_id = e.rulesChannelId), (n = !0)),
-		n && l.default.track(c.rMx.GUILD_SETTINGS_DISCOVERY_UPDATED, s);
+	(null == t || e.discoverySplash !== t.discoverySplash) && ((s.discovery_splash_edit_type = null == e.discoverySplash ? 'removed' : 'uploaded'), (n = !0)), (null == t || e.features.has(c.oNc.DISCOVERABLE) !== t.features.has(c.oNc.DISCOVERABLE)) && ((s.is_discoverable = e.features.has(c.oNc.DISCOVERABLE)), (n = !0)), (null == t || e.rulesChannelId !== t.rulesChannelId) && ((s.rules_channel_id = e.rulesChannelId), (n = !0)), n && l.default.track(c.rMx.GUILD_SETTINGS_DISCOVERY_UPDATED, s);
 }
 function _(e) {
 	var t, n;
 	return null !== (n = null === (t = o.U2[e]) || void 0 === t ? void 0 : t.map((e) => e())) && void 0 !== n ? n : [];
 }
-((i = s || (s = {})).UPLOADED = 'uploaded'),
-	(i.REMOVED = 'removed'),
-	((r = a || (a = {})).INTRO = 'intro'),
-	(r.DISQUALIFIED = 'disqualified'),
-	(r.SETTINGS = 'settings');
+((i = s || (s = {})).UPLOADED = 'uploaded'), (i.REMOVED = 'removed'), ((r = a || (a = {})).INTRO = 'intro'), (r.DISQUALIFIED = 'disqualified'), (r.SETTINGS = 'settings');

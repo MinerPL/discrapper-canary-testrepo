@@ -67,11 +67,7 @@ function A(e) {
 		o = (0, C.e7)([h.Z], () => h.Z.getSearchStateByGuildId(t), [t], r()),
 		i = (0, C.e7)([m.Z, u.Z], () => m.Z.can(I.Plq.MANAGE_GUILD, u.Z.getGuild(t)), [t]),
 		{ selectedUserIds: A, addUsers: S, clearSelection: Z } = (0, M.Z)(t),
-		j =
-			o.requireUnusualDmActivity ||
-			o.requireCommunicationDisabled ||
-			o.requireUnusualAccountActivity ||
-			o.requireUsernameQuarantined,
+		j = o.requireUnusualDmActivity || o.requireCommunicationDisabled || o.requireUnusualAccountActivity || o.requireUsernameQuarantined,
 		v = o.selectedRoleIds.size > 0,
 		D = null != o.selectedJoinDateOption.afterDate,
 		O = o.selectedSort === _.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
@@ -252,17 +248,13 @@ function A(e) {
 									'aria-label': p.Z.Messages.MEMBER_SAFETY_SIGNALS_DESCRIPTION,
 									onFilter: (l) => {
 										var n, a;
-										P(),
-											null === (n = t.onClick) || void 0 === n || n.call(t, l),
-											null === (a = e.onClick) || void 0 === a || a.call(e);
+										P(), null === (n = t.onClick) || void 0 === n || n.call(t, l), null === (a = e.onClick) || void 0 === a || a.call(e);
 									},
 									isFiltered: j,
 									className: s()(f.smallCol),
 									onMouseEnter: () => {
 										var l, n;
-										P(),
-											null === (l = e.onMouseEnter) || void 0 === l || l.call(e),
-											null === (n = t.onMouseEnter) || void 0 === n || n.call(t);
+										P(), null === (l = e.onMouseEnter) || void 0 === l || l.call(e), null === (n = t.onMouseEnter) || void 0 === n || n.call(t);
 									},
 									onMouseDown: t.onMouseDown,
 									onMouseLeave: e.onMouseLeave,

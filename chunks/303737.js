@@ -6,10 +6,10 @@ n.d(t, {
 		return g;
 	},
 	g4: function () {
-		return m;
+		return I;
 	},
 	m7: function () {
-		return I;
+		return m;
 	},
 	r4: function () {
 		return A;
@@ -39,12 +39,12 @@ var r = n(991637),
 	h = n(176505);
 i().shim();
 let p = {};
-function I(e) {
+function m(e) {
 	let t = (0, a.e7)([l.Z], () => l.Z.getChannel(e)),
 		n = (0, a.e7)([E.Z], () => E.Z.getChannel(e));
 	return null != t ? t : n;
 }
-function m(e, t, n) {
+function I(e, t, n) {
 	let r = (0, a.e7)([c.Z], () => c.Z.getSubscriptionListingsForGuild(e)),
 		i = (0, d.n)((t) => t.editStateIdsForGroup[e]),
 		s = (0, d.n)((e) => e.listings);
@@ -155,16 +155,7 @@ function N(e, t) {
 			hasChangeFromTemplate: null
 		};
 	let o = s.listings[0];
-	if (
-		(null == i ? void 0 : i.name) !== o.name ||
-		(null == i ? void 0 : i.description) !== o.description ||
-		(null == i ? void 0 : i.priceTier) !== o.price_tier ||
-		(null == i ? void 0 : i.image) !== o.image ||
-		(null == i ? void 0 : i.roleColor) !== o.role_color ||
-		(null == i ? void 0 : null === (n = i.channelBenefits) || void 0 === n ? void 0 : n.length) !== o.channels.length ||
-		(null == i ? void 0 : null === (r = i.intangibleBenefits) || void 0 === r ? void 0 : r.length) !==
-			o.additional_perks.length
-	)
+	if ((null == i ? void 0 : i.name) !== o.name || (null == i ? void 0 : i.description) !== o.description || (null == i ? void 0 : i.priceTier) !== o.price_tier || (null == i ? void 0 : i.image) !== o.image || (null == i ? void 0 : i.roleColor) !== o.role_color || (null == i ? void 0 : null === (n = i.channelBenefits) || void 0 === n ? void 0 : n.length) !== o.channels.length || (null == i ? void 0 : null === (r = i.intangibleBenefits) || void 0 === r ? void 0 : r.length) !== o.additional_perks.length)
 		return {
 			templateCategory: s.category,
 			hasChangeFromTemplate: !0

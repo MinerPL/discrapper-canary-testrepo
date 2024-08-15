@@ -14,19 +14,7 @@ var r = n(735250),
 	c = n(545659),
 	d = n(970952);
 function _(e) {
-	let {
-			section: t,
-			isSelected: n,
-			width: a,
-			height: _,
-			className: E,
-			selectable: f = !1,
-			onFocus: h,
-			onBlur: p,
-			onMouseOver: I,
-			onMouseLeave: m,
-			...T
-		} = e,
+	let { section: t, isSelected: n, width: a, height: _, className: E, selectable: f = !1, onFocus: h, onBlur: p, onMouseOver: m, onMouseLeave: I, ...T } = e,
 		[g, S] = i.useState(!1),
 		A = i.useCallback(() => {
 			S(!0), null == h || h();
@@ -35,11 +23,11 @@ function _(e) {
 			S(!1), null == p || p();
 		}, [p]),
 		v = i.useCallback(() => {
-			S(!0), null == I || I();
-		}, [I]),
-		O = i.useCallback(() => {
-			S(!1), null == m || m();
+			S(!0), null == m || m();
 		}, [m]),
+		O = i.useCallback(() => {
+			S(!1), null == I || I();
+		}, [I]),
 		R = i.useMemo(() => {
 			if (t.type === u.Qi.APPLICATION) {
 				var e;

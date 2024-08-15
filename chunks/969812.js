@@ -12,18 +12,10 @@ t.Z = {
 			})
 			.then(
 				(e) => {
-					(o = e.body.nick),
-						i.Z.sendBotMessage(
-							t,
-							null != o && '' !== o
-								? s.Z.Messages.COMMAND_NICK_SUCCESS.plainFormat({ nick: o })
-								: s.Z.Messages.COMMAND_NICK_RESET
-						);
+					(o = e.body.nick), i.Z.sendBotMessage(t, null != o && '' !== o ? s.Z.Messages.COMMAND_NICK_SUCCESS.plainFormat({ nick: o }) : s.Z.Messages.COMMAND_NICK_RESET);
 				},
 				(e) => {
-					403 === e.status
-						? i.Z.sendBotMessage(t, s.Z.Messages.COMMAND_NICK_FAILURE_PERMISSION.plainFormat())
-						: i.Z.sendBotMessage(t, s.Z.Messages.COMMAND_NICK_FAILURE);
+					403 === e.status ? i.Z.sendBotMessage(t, s.Z.Messages.COMMAND_NICK_FAILURE_PERMISSION.plainFormat()) : i.Z.sendBotMessage(t, s.Z.Messages.COMMAND_NICK_FAILURE);
 				}
 			)
 };

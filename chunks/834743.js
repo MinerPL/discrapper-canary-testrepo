@@ -16,10 +16,7 @@ class E extends a.PureComponent {
 			guild: e,
 			onDismissed: () => n(d.L.UNKNOWN),
 			onClick: this.handleButtonClick,
-			message:
-				null == t || t < 30
-					? u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_NOTICE_SMALL_GUILD
-					: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_NOTICE,
+			message: null == t || t < 30 ? u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_NOTICE_SMALL_GUILD : u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_NOTICE,
 			cta: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_NOTICE_BUTTON,
 			trackingSource: c.PsQ.GUILD_SUBSCRIPTION_NOTICE,
 			type: c.vID.GUILD_BOOSTING,

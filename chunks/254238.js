@@ -40,17 +40,12 @@ var r = n(434179),
 	f = n(258609),
 	h = n(893387),
 	p = n(981631),
-	I = n(689938);
-function m(e, t) {
+	m = n(689938);
+function I(e, t) {
 	var n, r;
 	d.default.track(p.rMx.REMOTE_COMMAND_SENT, {
 		command_type: e,
-		remote_platform:
-			null === (r = c.Z.getSessionById(t)) || void 0 === r
-				? void 0
-				: null === (n = r.clientInfo) || void 0 === n
-					? void 0
-					: n.os
+		remote_platform: null === (r = c.Z.getSessionById(t)) || void 0 === r ? void 0 : null === (n = r.clientInfo) || void 0 === n ? void 0 : n.os
 	});
 }
 async function T() {
@@ -58,11 +53,7 @@ async function T() {
 		t = null == e ? void 0 : e.nonce;
 	s.Z.dispatch({ type: 'REMOTE_SESSION_DISCONNECT' });
 	let n = [];
-	((null == e ? void 0 : e.type) === p.ABu.PLAYSTATION ||
-		(null == e ? void 0 : e.type) === p.ABu.PLAYSTATION_STAGING) &&
-		(null == e ? void 0 : e.commandId) != null &&
-		(null == e ? void 0 : e.deviceId) != null &&
-		n.push(y(e.type, e.deviceId, e.commandId)),
+	((null == e ? void 0 : e.type) === p.ABu.PLAYSTATION || (null == e ? void 0 : e.type) === p.ABu.PLAYSTATION_STAGING) && (null == e ? void 0 : e.commandId) != null && (null == e ? void 0 : e.deviceId) != null && n.push(y(e.type, e.deviceId, e.commandId)),
 		null != t &&
 			n.push(
 				(function (e) {
@@ -73,8 +64,8 @@ async function T() {
 		await Promise.all(n);
 	} catch (e) {
 		o.Z.show({
-			title: I.Z.Messages.CANCEL_TRANSFER_VOICE_FAILED_TITLE,
-			body: I.Z.Messages.CANCEL_TRANSFER_VOICE_FAILED_BODY
+			title: m.Z.Messages.CANCEL_TRANSFER_VOICE_FAILED_TITLE,
+			body: m.Z.Messages.CANCEL_TRANSFER_VOICE_FAILED_BODY
 		});
 	}
 }
@@ -95,7 +86,7 @@ function S(e, t) {
 			self_deaf: r
 		}
 	}),
-		m('VOICE_STATE_UPDATE', e);
+		I('VOICE_STATE_UPDATE', e);
 }
 function A(e) {
 	s.Z.dispatch({
@@ -103,7 +94,7 @@ function A(e) {
 		sessionId: e,
 		payload: { type: 'DISCONNECT' }
 	}),
-		m('DISCONNECT', e),
+		I('DISCONNECT', e),
 		T();
 }
 function N(e, t, n, r) {
@@ -119,7 +110,7 @@ function N(e, t, n, r) {
 				...r
 			}
 		}),
-		m('AUDIO_SETTINGS_UPDATE', e));
+		I('AUDIO_SETTINGS_UPDATE', e));
 }
 async function v() {
 	let e;

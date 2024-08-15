@@ -22,10 +22,7 @@ function M(n, e) {
 		A = (0, o.NK)(null != f ? f : null);
 	if (null == M || null == f) return null;
 	let O = null != A && A.actions.hasOwnProperty(a.d.SET_COMPLETED) ? a.d.UNSET_COMPLETED : a.d.SET_COMPLETED,
-		I =
-			O === a.d.SET_COMPLETED
-				? E.Z.Messages.GUILD_AUTOMOD_ALERT_SET_COMPLETED
-				: E.Z.Messages.GUILD_AUTOMOD_ALERT_UNSET_COMPLETED;
+		I = O === a.d.SET_COMPLETED ? E.Z.Messages.GUILD_AUTOMOD_ALERT_SET_COMPLETED : E.Z.Messages.GUILD_AUTOMOD_ALERT_UNSET_COMPLETED;
 	return t && null != e
 		? (0, r.jsx)(
 				i.MenuItem,

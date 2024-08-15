@@ -56,13 +56,7 @@ function D(e, t, s) {
 		e
 	);
 }
-((a = n || (n = {})).PAYMENT_TYPE = 'payment_type'),
-	(a.CARD_INFO = 'card_info'),
-	(a.SOFORT_INFO = 'sofort_info'),
-	(a.ADDRESS = 'billing_address'),
-	(a.PAYMENT_REQUEST_INFO = 'payment_request_info'),
-	(a.PAYPAL = 'paypal'),
-	(a.PRZELEWY24_INFO = 'przelewy24_info');
+((a = n || (n = {})).PAYMENT_TYPE = 'payment_type'), (a.CARD_INFO = 'card_info'), (a.SOFORT_INFO = 'sofort_info'), (a.ADDRESS = 'billing_address'), (a.PAYMENT_REQUEST_INFO = 'payment_request_info'), (a.PAYPAL = 'paypal'), (a.PRZELEWY24_INFO = 'przelewy24_info');
 let Y = ['payment_type', 'card_info', 'billing_address'],
 	w = ['payment_type', 'sofort_info', 'billing_address'],
 	L = ['payment_type', 'paypal', 'billing_address'],
@@ -502,12 +496,7 @@ class z extends i.PureComponent {
 				}
 			}),
 			D(this, 'handlePrzelewy24Save', async () => {
-				let {
-						billingAddressInfo: e,
-						isBillingAddressInfoValid: t,
-						onAddPaymentSource: s,
-						analyticsLocation: n
-					} = this.props,
+				let { billingAddressInfo: e, isBillingAddressInfoValid: t, onAddPaymentSource: s, analyticsLocation: n } = this.props,
 					{ stripe: a, paymentDetails: r } = this.state;
 				if (!!t)
 					try {
@@ -516,12 +505,7 @@ class z extends i.PureComponent {
 					} catch (e) {}
 			}),
 			D(this, 'handleSofortSave', async () => {
-				let {
-						billingAddressInfo: e,
-						isBillingAddressInfoValid: t,
-						onAddPaymentSource: s,
-						analyticsLocation: n
-					} = this.props,
+				let { billingAddressInfo: e, isBillingAddressInfoValid: t, onAddPaymentSource: s, analyticsLocation: n } = this.props,
 					{ stripe: a } = this.state;
 				if (!!t)
 					try {
@@ -530,13 +514,7 @@ class z extends i.PureComponent {
 					} catch (e) {}
 			}),
 			D(this, 'handleCardSave', async () => {
-				let {
-						billingAddressInfo: e,
-						isCreditCardInfoValid: t,
-						isBillingAddressInfoValid: s,
-						onAddPaymentSource: n,
-						analyticsLocation: a
-					} = this.props,
+				let { billingAddressInfo: e, isCreditCardInfoValid: t, isBillingAddressInfoValid: s, onAddPaymentSource: n, analyticsLocation: a } = this.props,
 					{ stripe: r, stripeToken: i } = this.state;
 				if (!!t && !!s)
 					try {
@@ -545,13 +523,7 @@ class z extends i.PureComponent {
 					} catch (e) {}
 			}),
 			D(this, 'handlePaypalSave', async () => {
-				let {
-					braintreeEmail: e,
-					braintreeNonce: t,
-					billingAddressInfo: s,
-					onAddPaymentSource: n,
-					analyticsLocation: a
-				} = this.props;
+				let { braintreeEmail: e, braintreeNonce: t, billingAddressInfo: s, onAddPaymentSource: n, analyticsLocation: a } = this.props;
 				if (null != e && null != t)
 					try {
 						let e = await m.lP(t, s, a);
@@ -559,12 +531,7 @@ class z extends i.PureComponent {
 					} catch (e) {}
 			}),
 			D(this, 'handleAdyenPrepaidPaymentMethodSave', async (e) => {
-				let {
-					billingAddressInfo: t,
-					isBillingAddressInfoValid: s,
-					onAddPaymentSource: n,
-					analyticsLocation: a
-				} = this.props;
+				let { billingAddressInfo: t, isBillingAddressInfoValid: s, onAddPaymentSource: n, analyticsLocation: a } = this.props;
 				if (!!s)
 					try {
 						let s = await m.sF(t, e, a);
@@ -572,12 +539,7 @@ class z extends i.PureComponent {
 					} catch (e) {}
 			}),
 			D(this, 'handleGiropaySave', async () => {
-				let {
-						billingAddressInfo: e,
-						isBillingAddressInfoValid: t,
-						onAddPaymentSource: s,
-						analyticsLocation: n
-					} = this.props,
+				let { billingAddressInfo: e, isBillingAddressInfoValid: t, onAddPaymentSource: s, analyticsLocation: n } = this.props,
 					{ stripe: a } = this.state;
 				if (!!t)
 					try {
@@ -601,13 +563,7 @@ let q = u.ZP.connectStores([E.Z, P.Z, N.Z], () => ({
 	isAuthenticating: N.Z.isAwaitingAuthentication
 }))(z);
 function W(e) {
-	let {
-			transitionState: t,
-			analyticsLocation: s,
-			onClose: n,
-			onAddPaymentSource: a,
-			initialStep: i = A.h8.PAYMENT_TYPE
-		} = e,
+	let { transitionState: t, analyticsLocation: s, onClose: n, onAddPaymentSource: a, initialStep: i = A.h8.PAYMENT_TYPE } = e,
 		l = (0, f.fL)(),
 		o = (0, f.vP)({
 			paymentModalArgs: l,

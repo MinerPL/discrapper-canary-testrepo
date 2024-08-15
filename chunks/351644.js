@@ -60,20 +60,7 @@ function P(e) {
 	});
 }
 function B(e) {
-	let {
-			guild: n,
-			channel: t,
-			applicationIntegrations: s,
-			builtInIntegrations: r,
-			customWebhooks: B,
-			followedChannelWebhooks: y,
-			isLoading: G,
-			canCreateWebhook: k,
-			onManageBuiltIn: U,
-			onManageCustomWebhooks: H,
-			onManageFollowedChannels: w,
-			onManageApplication: W
-		} = e,
+	let { guild: n, channel: t, applicationIntegrations: s, builtInIntegrations: r, customWebhooks: B, followedChannelWebhooks: y, isLoading: G, canCreateWebhook: k, onManageBuiltIn: U, onManageCustomWebhooks: H, onManageFollowedChannels: w, onManageApplication: W } = e,
 		F = (0, m.ZP)(),
 		[V, K] = a.useState(''),
 		{ isFetchingConnections: Y, accounts: z } = (0, d.cj)(
@@ -87,8 +74,7 @@ function B(e) {
 		{ canManageWebhooks: q, canManageGuild: X } = (0, d.cj)(
 			[p.Z],
 			() => ({
-				canManageWebhooks:
-					(null != n && p.Z.can(b.Plq.MANAGE_WEBHOOKS, n)) || (null != t && p.Z.can(b.Plq.MANAGE_WEBHOOKS, t)),
+				canManageWebhooks: (null != n && p.Z.can(b.Plq.MANAGE_WEBHOOKS, n)) || (null != t && p.Z.can(b.Plq.MANAGE_WEBHOOKS, t)),
 				canManageGuild: null != n && null == t && p.Z.can(b.Plq.MANAGE_GUILD, n)
 			}),
 			[n, t]
@@ -101,20 +87,10 @@ function B(e) {
 		} = a.useMemo(() => {
 			var e, n, t, i, a, s, l, o;
 			return {
-				availableTwitchIntegrations:
-					null !== (a = null === (e = r.twitch) || void 0 === e ? void 0 : e.length) && void 0 !== a ? a : 0,
-				availableYoutubeIntegrations:
-					null !== (s = null === (n = r.youtube) || void 0 === n ? void 0 : n.length) && void 0 !== s ? s : 0,
-				guildTwitchIntegrations:
-					null !== (l = null === (t = r.twitch) || void 0 === t ? void 0 : t.filter((e) => e.enabled).length) &&
-					void 0 !== l
-						? l
-						: 0,
-				guildYoutubeIntegrations:
-					null !== (o = null === (i = r.youtube) || void 0 === i ? void 0 : i.filter((e) => e.enabled).length) &&
-					void 0 !== o
-						? o
-						: 0
+				availableTwitchIntegrations: null !== (a = null === (e = r.twitch) || void 0 === e ? void 0 : e.length) && void 0 !== a ? a : 0,
+				availableYoutubeIntegrations: null !== (s = null === (n = r.youtube) || void 0 === n ? void 0 : n.length) && void 0 !== s ? s : 0,
+				guildTwitchIntegrations: null !== (l = null === (t = r.twitch) || void 0 === t ? void 0 : t.filter((e) => e.enabled).length) && void 0 !== l ? l : 0,
+				guildYoutubeIntegrations: null !== (o = null === (i = r.youtube) || void 0 === i ? void 0 : i.filter((e) => e.enabled).length) && void 0 !== o ? o : 0
 			};
 		}, [r.twitch, r.youtube]),
 		{ showTwitchCard: en, showYoutubeCard: et } = a.useMemo(() => {
@@ -137,17 +113,7 @@ function B(e) {
 			return Object.values(s).filter((n) => {
 				var t, i, a;
 				let { application: s } = n;
-				return (
-					(t = s),
-					(i = V),
-					(a = e),
-					!!(
-						'' === (i = i.trim().toLowerCase()) ||
-						t.id === i ||
-						a(i, t.name.toLowerCase()) ||
-						(null != t.bot && a(i, t.bot.username.toLowerCase()))
-					) || !1
-				);
+				return (t = s), (i = V), (a = e), !!('' === (i = i.trim().toLowerCase()) || t.id === i || a(i, t.name.toLowerCase()) || (null != t.bot && a(i, t.bot.username.toLowerCase()))) || !1;
 			});
 		}, [s, ei, V]),
 		es = (0, d.e7)(
@@ -157,10 +123,7 @@ function B(e) {
 			},
 			[ea, n]
 		),
-		el = a.useMemo(
-			() => (void 0 !== es ? [es, ...ea.filter((e) => e.integration.id !== es.integration.id)] : ea),
-			[ea, es]
-		),
+		el = a.useMemo(() => (void 0 !== es ? [es, ...ea.filter((e) => e.integration.id !== es.integration.id)] : ea), [ea, es]),
 		er = (0, u.useModalsStore)(u.hasAnyModalOpenSelector),
 		[eo, ed] = a.useState(!1),
 		ec = a.useRef(0),
@@ -279,10 +242,7 @@ function B(e) {
 		})(F, ei, null == n ? void 0 : n.id)),
 		(em = null));
 	let e_ = O.Z.getArticleURL(b.BhN.INTEGRATIONS),
-		eN =
-			null != t
-				? Z.Z.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_CHANNEL
-				: Z.Z.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_GUILD,
+		eN = null != t ? Z.Z.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_CHANNEL : Z.Z.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_GUILD,
 		eE = [];
 	if (q) {
 		var eT, eh, eg, ep, ef;
@@ -307,17 +267,13 @@ function B(e) {
 					'webhooks'
 				))
 			),
-			(null == t ? void 0 : t.type) !== b.d4z.GUILD_VOICE &&
-				((null == t ? void 0 : t.type) == null || !b.TPd.GUILD_THREADS_ONLY.has(t.type)))
+			(null == t ? void 0 : t.type) !== b.d4z.GUILD_VOICE && ((null == t ? void 0 : t.type) == null || !b.TPd.GUILD_THREADS_ONLY.has(t.type)))
 		) {
 			let e, n;
 			eE.push(
 				((ep = y.length),
 				(ef = w),
-				ep > 0
-					? ((e = Z.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_BUTTON), (n = ef))
-					: ((e = Z.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_EMPTY_BUTTON),
-						(n = () => open(O.Z.getArticleURL(b.BhN.CHANNEL_FOLLOWING)))),
+				ep > 0 ? ((e = Z.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_BUTTON), (n = ef)) : ((e = Z.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_EMPTY_BUTTON), (n = () => open(O.Z.getArticleURL(b.BhN.CHANNEL_FOLLOWING)))),
 				(0, i.jsx)(
 					A.Z,
 					{
@@ -341,9 +297,7 @@ function B(e) {
 					let r = _.Z.get(b.ABu.TWITCH);
 					return (
 						e > 0
-							? ((a = Z.Z.Messages.INTEGRATIONS_TWITCH_BUTTON),
-								(s = Z.Z.Messages.INTEGRATIONS_TWITCH_SUMMARY.format({ count: n })),
-								(l = () => t(b.ABu.TWITCH)))
+							? ((a = Z.Z.Messages.INTEGRATIONS_TWITCH_BUTTON), (s = Z.Z.Messages.INTEGRATIONS_TWITCH_SUMMARY.format({ count: n })), (l = () => t(b.ABu.TWITCH)))
 							: ((a = Z.Z.Messages.INTEGRATIONS_TWITCH_EMPTY_BUTTON),
 								(s = Z.Z.Messages.INTEGRATIONS_TWITCH_EMPTY_SUMMARY),
 								(l = () =>
@@ -375,9 +329,7 @@ function B(e) {
 					let r = _.Z.get(b.ABu.YOUTUBE);
 					return (
 						e > 0
-							? ((a = Z.Z.Messages.INTEGRATIONS_YOUTUBE_BUTTON),
-								(s = Z.Z.Messages.INTEGRATIONS_YOUTUBE_SUMMARY.format({ count: n })),
-								(l = () => t(b.ABu.YOUTUBE)))
+							? ((a = Z.Z.Messages.INTEGRATIONS_YOUTUBE_BUTTON), (s = Z.Z.Messages.INTEGRATIONS_YOUTUBE_SUMMARY.format({ count: n })), (l = () => t(b.ABu.YOUTUBE)))
 							: ((a = Z.Z.Messages.INTEGRATIONS_YOUTUBE_EMPTY_BUTTON),
 								(s = Z.Z.Messages.INTEGRATIONS_YOUTUBE_EMPTY_SUMMARY),
 								(l = () =>

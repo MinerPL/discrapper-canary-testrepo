@@ -120,11 +120,7 @@ let v = (e) => {
 				});
 			{
 				let e = t.type.displayName;
-				throw Error(
-					'Widget.Background cannot be wrapped around '
-						.concat(e, '. Pass a DOM node or one of ')
-						.concat(i.map((e) => 'Widget.' + e.name).join(','))
-				);
+				throw Error('Widget.Background cannot be wrapped around '.concat(e, '. Pass a DOM node or one of ').concat(i.map((e) => 'Widget.' + e.name).join(',')));
 			}
 		}
 	});
@@ -132,15 +128,7 @@ let v = (e) => {
 	(v.Body = C),
 	(v.Content = x),
 	(v.Icon = (e) => {
-		let {
-			icon: t,
-			label: n,
-			onClick: i,
-			isActive: s,
-			tooltipPosition: a = 'top',
-			size: o = 20,
-			isTutorial: l = !1
-		} = e;
+		let { icon: t, label: n, onClick: i, isActive: s, tooltipPosition: a = 'top', size: o = 20, isTutorial: l = !1 } = e;
 		return (0, r.jsx)(p.Tooltip, {
 			text: l
 				? (0, r.jsx)('div', {

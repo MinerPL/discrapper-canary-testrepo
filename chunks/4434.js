@@ -62,17 +62,7 @@ var i = s(735250),
 	J = s(230721);
 function z(e) {
 	var n, s;
-	let {
-			guildId: l,
-			premiumSubscriptionPlan: t,
-			numGuildBoosts: r,
-			setNumGuildBoosts: o,
-			setForceDisableSubmitButton: S,
-			premiumSubscription: E,
-			onClickPremiumSubscriptionLink: T,
-			existingAvailableSlots: R = [],
-			priceOptions: O
-		} = e,
+	let { guildId: l, premiumSubscriptionPlan: t, numGuildBoosts: r, setNumGuildBoosts: o, setForceDisableSubmitButton: S, premiumSubscription: E, onClickPremiumSubscriptionLink: T, existingAvailableSlots: R = [], priceOptions: O } = e,
 		A = (0, L.Z)(),
 		g = t.interval,
 		v = t.intervalCount,
@@ -86,15 +76,9 @@ function z(e) {
 				quantity: 1
 			}
 		],
-		z =
-			null == E
-				? void 0
-				: E.items.find((e) => e.planId === K.Xh.PREMIUM_MONTH_TIER_2 || e.planId === K.Xh.PREMIUM_YEAR_TIER_2);
+		z = null == E ? void 0 : E.items.find((e) => e.planId === K.Xh.PREMIUM_MONTH_TIER_2 || e.planId === K.Xh.PREMIUM_YEAR_TIER_2);
 	null != z && G.push(z);
-	let Q =
-			null == E
-				? void 0
-				: E.items.find((e) => e.planId === K.Xh.PREMIUM_MONTH_GUILD || e.planId === K.Xh.PREMIUM_YEAR_GUILD),
+	let Q = null == E ? void 0 : E.items.find((e) => e.planId === K.Xh.PREMIUM_MONTH_GUILD || e.planId === K.Xh.PREMIUM_YEAR_GUILD),
 		{ enabled: $ } = Y.Z.useExperiment({ location: '32b64a_1' }),
 		ee = !$ || null == A || !K.Tp.has(A) || null == Q,
 		{ analyticsLocations: en } = (0, p.ZP)(),
@@ -109,12 +93,7 @@ function z(e) {
 			analyticsLocation: P.Z.GUILD_BOOSTING_PLAN_SELECT
 		}),
 		el = !ee && null == es && null == ei,
-		et =
-			(null === (s = (0, C.N)()) || void 0 === s
-				? void 0
-				: null === (n = s.subscription_trial) || void 0 === n
-					? void 0
-					: n.sku_id) === K.Si.TIER_2,
+		et = (null === (s = (0, C.N)()) || void 0 === s ? void 0 : null === (n = s.subscription_trial) || void 0 === n ? void 0 : n.sku_id) === K.Si.TIER_2,
 		ea = W.ZP.hasBoostDiscount(y) && null != D.premiumUserPrice,
 		er = null == es ? void 0 : es.invoiceItems.find((e) => e.subscriptionPlanId === D.id),
 		ec =
@@ -129,13 +108,8 @@ function z(e) {
 		eo = r * ec.amount,
 		eu =
 			W.ZP.hasBoostDiscount(y) && null != E
-				? X.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_FOOTER_DISCOUNT.format({
-						planName: W.ZP.getDisplayPremiumType(E.planId)
-					})
-				: (et
-						? X.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_FOOTER_UPSELL_TRIAL_VARIANT
-						: X.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_FOOTER_UPSELL
-					).format({
+				? X.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_FOOTER_DISCOUNT.format({ planName: W.ZP.getDisplayPremiumType(E.planId) })
+				: (et ? X.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_FOOTER_UPSELL_TRIAL_VARIANT : X.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_FOOTER_UPSELL).format({
 						onPremiumSubscriptionClick: T,
 						discountPercentage: (0, V.T3)(Z.default.locale, K.Rr / 100),
 						freeSubscriptionCount: K.cb
@@ -204,11 +178,7 @@ function z(e) {
 									children: e_
 										? (function (e) {
 												let { intervalType: n, intervalCount: s = 1 } = e;
-												return n === K.rV.YEAR
-													? X.Z.Messages.PREMIUM_GUILD_PLAN_SINGLE_YEAR
-													: n === K.rV.MONTH && 1 === s
-														? X.Z.Messages.PREMIUM_GUILD_PLAN_SINGLE_MONTH
-														: null;
+												return n === K.rV.YEAR ? X.Z.Messages.PREMIUM_GUILD_PLAN_SINGLE_YEAR : n === K.rV.MONTH && 1 === s ? X.Z.Messages.PREMIUM_GUILD_PLAN_SINGLE_MONTH : null;
 											})({
 												intervalType: g,
 												intervalCount: v
@@ -227,10 +197,8 @@ function z(e) {
 											let { amount: n, currency: s, intervalType: i, intervalCount: l = 1 } = e,
 												t = (0, F.T4)(n, s);
 											if (i === K.rV.YEAR) return X.Z.Messages.BILLING_PRICE_PER_YEAR_EACH.format({ price: t });
-											if (i === K.rV.MONTH && 1 === l)
-												return X.Z.Messages.BILLING_PRICE_PER_MONTH_EACH.format({ price: t });
-											if (i === K.rV.MONTH && l > 1)
-												return X.Z.Messages.BILLING_PRICE_PER_MULTI_MONTH_EACH.format({ price: t });
+											if (i === K.rV.MONTH && 1 === l) return X.Z.Messages.BILLING_PRICE_PER_MONTH_EACH.format({ price: t });
+											if (i === K.rV.MONTH && l > 1) return X.Z.Messages.BILLING_PRICE_PER_MULTI_MONTH_EACH.format({ price: t });
 											return null;
 										})({
 											intervalType: g,
@@ -263,17 +231,8 @@ function z(e) {
 						})
 					]
 				}),
-				ed &&
-					(0, i.jsx)(d.Z, {
-						message: X.Z.Messages.LOCALIZED_PRICING_HRK_EURO_WARNING.format({
-							kunaPriceWithCurrency: (0, F.T4)(7.5345 * eo, q.pK.HRK)
-						})
-					}),
-				(0, i.jsx)(d.Z, {
-					message: X.Z.Messages.BILLING_FINAL_PRICE_MAY_CHANGE.format({
-						documentationLink: w.Z.getArticleURL(k.BhN.LOCALIZED_PRICING)
-					})
-				}),
+				ed && (0, i.jsx)(d.Z, { message: X.Z.Messages.LOCALIZED_PRICING_HRK_EURO_WARNING.format({ kunaPriceWithCurrency: (0, F.T4)(7.5345 * eo, q.pK.HRK) }) }),
+				(0, i.jsx)(d.Z, { message: X.Z.Messages.BILLING_FINAL_PRICE_MAY_CHANGE.format({ documentationLink: w.Z.getArticleURL(k.BhN.LOCALIZED_PRICING) }) }),
 				(0, i.jsx)(x.Z, {
 					text: eu,
 					color: N.JX.PREMIUM_TIER_2
@@ -283,13 +242,7 @@ function z(e) {
 	);
 }
 function Q(e) {
-	let {
-			premiumSubscription: n,
-			premiumSubscriptionPlan: s,
-			proratedInvoicePreview: l,
-			renewalInvoicePreview: t,
-			priceOptions: a
-		} = e,
+	let { premiumSubscription: n, premiumSubscriptionPlan: s, proratedInvoicePreview: l, renewalInvoicePreview: t, priceOptions: a } = e,
 		r = s.interval,
 		o = s.intervalCount,
 		I = (0, u.e7)([b.Z], () => b.Z.getForSkuAndInterval((0, W.Wz)(K.Si.GUILD), r, o));
@@ -340,9 +293,7 @@ function Q(e) {
 					0 !== P
 						? (0, i.jsx)(O.R$, {
 								label: (0, i.jsx)(D.As, {
-									label: X.Z.Messages.PREMIUM_SUBSCRIPTION_PLAN_ADJUSTMENT.format({
-										planName: (0, W.aq)(T[0].subscriptionPlanId)
-									}),
+									label: X.Z.Messages.PREMIUM_SUBSCRIPTION_PLAN_ADJUSTMENT.format({ planName: (0, W.aq)(T[0].subscriptionPlanId) }),
 									tooltipText: X.Z.Messages.PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP
 								}),
 								value: (0, F.T4)(P, l.currency)
@@ -359,12 +310,7 @@ function Q(e) {
 						: null,
 					(0, i.jsx)(O.KU, {}),
 					(0, i.jsx)(O.Ji, {
-						label: (l.taxInclusive
-							? M
-								? X.Z.Messages.BILLING_INVOICE_TOTAL_TAX_INCLUSIVE
-								: X.Z.Messages.BILLING_INVOICE_TODAY_TOTAL_TAX_INCLUSIVE
-							: X.Z.Messages.BILLING_INVOICE_TODAY_TOTAL
-						).format(),
+						label: (l.taxInclusive ? (M ? X.Z.Messages.BILLING_INVOICE_TOTAL_TAX_INCLUSIVE : X.Z.Messages.BILLING_INVOICE_TODAY_TOTAL_TAX_INCLUSIVE) : X.Z.Messages.BILLING_INVOICE_TODAY_TOTAL).format(),
 						value: C
 					}),
 					null != n
@@ -389,19 +335,7 @@ function $(e) {
 	var n, s;
 	let l,
 		t,
-		{
-			paymentSources: a,
-			priceOptions: r,
-			currentPremiumSubscription: c,
-			premiumSubscriptionPaymentSourceId: I,
-			premiumSubscriptionPlan: d,
-			newAdditionalPlans: N,
-			onPaymentSourceChange: R,
-			onPaymentSourceAdd: U,
-			onPurchaseTermsChange: C,
-			legalTermsNodeRef: L,
-			hasLegalTermsFlash: O
-		} = e,
+		{ paymentSources: a, priceOptions: r, currentPremiumSubscription: c, premiumSubscriptionPaymentSourceId: I, premiumSubscriptionPlan: d, newAdditionalPlans: N, onPaymentSourceChange: R, onPaymentSourceAdd: U, onPurchaseTermsChange: C, legalTermsNodeRef: L, hasLegalTermsFlash: O } = e,
 		A = r.paymentSourceId,
 		M = (0, u.e7)([G.Z], () => (null != I ? G.Z.getPaymentSource(I) : null)),
 		g = (0, u.e7)([y.Z], () => y.Z.hidePersonalInformation);
@@ -487,8 +421,7 @@ function $(e) {
 							paymentSourceType: null === (n = a[null != A ? A : '']) || void 0 === n ? void 0 : n.type,
 							basePrice: t
 						}),
-						showPricingLink:
-							(null !== (s = null == x ? void 0 : x.currency) && void 0 !== s ? s : q.pK.USD) !== q.pK.USD,
+						showPricingLink: (null !== (s = null == x ? void 0 : x.currency) && void 0 !== s ? s : q.pK.USD) !== q.pK.USD,
 						showWithdrawalWaiver: f,
 						subscriptionPlan: d
 					})
@@ -498,14 +431,7 @@ function $(e) {
 }
 function ee(e) {
 	let n,
-		{
-			onClose: s,
-			guild: t,
-			guildBoostQuantity: a,
-			isTransfer: r = !1,
-			withAnimation: c = !0,
-			paymentSourceType: o
-		} = e,
+		{ onClose: s, guild: t, guildBoostQuantity: a, isTransfer: r = !1, withAnimation: c = !0, paymentSourceType: o } = e,
 		{ theme: u } = (0, _.useThemeContext)(),
 		[I, S] = l.useState(A.fe.Scenes.ENTRY),
 		[d, E] = l.useState(!1);
@@ -515,9 +441,7 @@ function ee(e) {
 				? X.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_TRANSFERRED_DESCRIPTION_GENERIC_GUILD.format()
 				: X.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_TRANSFERRED_DESCRIPTION.format({ guildName: t.name })
 			: null == t
-				? X.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_ACTIVATED_DESCRIPTION_GENERIC_GUILD.format({
-						guildSubscriptionQuantity: a
-					})
+				? X.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_ACTIVATED_DESCRIPTION_GENERIC_GUILD.format({ guildSubscriptionQuantity: a })
 				: X.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_ACTIVATED_DESCRIPTION.format({
 						guildName: t.name,
 						guildSubscriptionQuantity: a
@@ -547,9 +471,7 @@ function ee(e) {
 					className: J.confirmationUpgradedBanner,
 					theme: u,
 					premiumType: K.p9.TIER_2,
-					type: q.X7.has(null != o ? o : q.He.UNKNOWN)
-						? g.C.Types.PREMIUM_PAYMENT_STARTED
-						: g.C.Types.GUILD_BOOST_APPLIED
+					type: q.X7.has(null != o ? o : q.He.UNKNOWN) ? g.C.Types.PREMIUM_PAYMENT_STARTED : g.C.Types.GUILD_BOOST_APPLIED
 				}),
 				(0, i.jsx)('div', {
 					className: J.confirmationText,

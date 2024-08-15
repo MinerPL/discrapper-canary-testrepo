@@ -18,8 +18,8 @@ var i,
 	f = n(144140),
 	h = n(314897),
 	p = n(592125),
-	I = n(306680),
-	m = n(944486),
+	m = n(306680),
+	I = n(944486),
 	T = n(823379),
 	g = n(709054),
 	S = n(882252);
@@ -38,7 +38,7 @@ let A = [],
 	U = new Set();
 function w(e) {
 	var t;
-	return null !== (t = I.ZP.lastMessageId(e)) && void 0 !== t ? t : e;
+	return null !== (t = m.ZP.lastMessageId(e)) && void 0 !== t ? t : e;
 }
 function x(e) {
 	return function (t, n) {
@@ -49,23 +49,12 @@ function x(e) {
 	};
 }
 function G() {
-	(y = []),
-		(r = null),
-		(v = null),
-		(O = new Set()),
-		(R = c.z.LATEST_ACTIVITY),
-		(C = 0),
-		(L = []),
-		(b = u().chain(A)),
-		(M = u().chain(A)),
-		U.clear(),
-		P.clear();
+	(y = []), (r = null), (v = null), (O = new Set()), (R = c.z.LATEST_ACTIVITY), (C = 0), (L = []), (b = u().chain(A)), (M = u().chain(A)), U.clear(), P.clear();
 }
 function k() {
 	var e;
-	let t = m.Z.getChannelId();
-	if (null == t || !(null === (e = p.Z.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel()))
-		return G(), !1;
+	let t = I.Z.getChannelId();
+	if (null == t || !(null === (e = p.Z.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return G(), !1;
 	F({ refreshThreadIds: !0 });
 }
 function B(e) {
@@ -92,8 +81,7 @@ function F(e) {
 		(D = !0)),
 		0 !== P.size && ((L = L.filter((e) => !P.has(e))), P.clear()),
 		0 !== U.size && ((L = Array.from(new Set([...L, ...U]))), U.clear()),
-		((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) &&
-			((M = u().chain(L).sort(x(c.z.LATEST_ACTIVITY))), (b = u().chain(L).sort(x(c.z.CREATION_DATE))));
+		((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && ((M = u().chain(L).sort(x(c.z.LATEST_ACTIVITY))), (b = u().chain(L).sort(x(c.z.CREATION_DATE))));
 	let i = (R === c.z.LATEST_ACTIVITY ? M : b).value();
 	let a = (y =
 		0 === O.size
@@ -115,7 +103,7 @@ function F(e) {
 }
 class V extends (i = d.ZP.Store) {
 	initialize() {
-		this.waitFor(p.Z, E.Z, m.Z, I.ZP);
+		this.waitFor(p.Z, E.Z, I.Z, m.ZP);
 	}
 	getNewThreadCount() {
 		return C;

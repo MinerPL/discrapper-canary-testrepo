@@ -22,8 +22,8 @@ function _(e) {
 		f,
 		h = e.popper,
 		p = e.popperRect,
-		I = e.placement,
-		m = e.variation,
+		m = e.placement,
+		I = e.variation,
 		T = e.offsets,
 		g = e.position,
 		S = e.gpuAcceleration,
@@ -54,17 +54,8 @@ function _(e) {
 		var w = (0, i.Z)(h),
 			x = 'clientHeight',
 			G = 'clientWidth';
-		w === (0, a.Z)(h) &&
-			((w = (0, s.Z)(h)),
-			'static' !== (0, o.Z)(w).position && 'absolute' === g && ((x = 'scrollHeight'), (G = 'scrollWidth')));
-		(I === r.we || ((I === r.t$ || I === r.F2) && m === r.ut)) &&
-			((P = r.I),
-			(y -= (v && w === U && U.visualViewport ? U.visualViewport.height : w[x]) - p.height),
-			(y *= S ? 1 : -1)),
-			(I === r.t$ || ((I === r.we || I === r.I) && m === r.ut)) &&
-				((M = r.F2),
-				(R -= (v && w === U && U.visualViewport ? U.visualViewport.width : w[G]) - p.width),
-				(R *= S ? 1 : -1));
+		w === (0, a.Z)(h) && ((w = (0, s.Z)(h)), 'static' !== (0, o.Z)(w).position && 'absolute' === g && ((x = 'scrollHeight'), (G = 'scrollWidth')));
+		(m === r.we || ((m === r.t$ || m === r.F2) && I === r.ut)) && ((P = r.I), (y -= (v && w === U && U.visualViewport ? U.visualViewport.height : w[x]) - p.height), (y *= S ? 1 : -1)), (m === r.t$ || ((m === r.we || m === r.I) && I === r.ut)) && ((M = r.F2), (R -= (v && w === U && U.visualViewport ? U.visualViewport.width : w[G]) - p.width), (R *= S ? 1 : -1));
 	}
 	var k = Object.assign({ position: g }, A && d);
 	var B =
@@ -85,19 +76,7 @@ function _(e) {
 					x: R,
 					y: y
 				};
-	return ((R = B.x), (y = B.y), S)
-		? Object.assign(
-				{},
-				k,
-				(((f = {})[P] = b ? '0' : ''),
-				(f[M] = L ? '0' : ''),
-				(f.transform =
-					1 >= (U.devicePixelRatio || 1)
-						? 'translate(' + R + 'px, ' + y + 'px)'
-						: 'translate3d(' + R + 'px, ' + y + 'px, 0)'),
-				f)
-			)
-		: Object.assign({}, k, (((E = {})[P] = b ? y + 'px' : ''), (E[M] = L ? R + 'px' : ''), (E.transform = ''), E));
+	return ((R = B.x), (y = B.y), S) ? Object.assign({}, k, (((f = {})[P] = b ? '0' : ''), (f[M] = L ? '0' : ''), (f.transform = 1 >= (U.devicePixelRatio || 1) ? 'translate(' + R + 'px, ' + y + 'px)' : 'translate3d(' + R + 'px, ' + y + 'px, 0)'), f)) : Object.assign({}, k, (((E = {})[P] = b ? y + 'px' : ''), (E[M] = L ? R + 'px' : ''), (E.transform = ''), E));
 }
 t.Z = {
 	name: 'computeStyles',

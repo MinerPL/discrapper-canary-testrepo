@@ -22,13 +22,7 @@ function m(e, r, n) {
 		e
 	);
 }
-((l = s || (s = {})).PRIMARY = 'primary'),
-	(l.SECONDARY = 'secondary'),
-	(l.WARNING = 'warning'),
-	(l.ERROR = 'error'),
-	((o = t || (t = {})).SMALL = 'small'),
-	(o.LARGE = 'large'),
-	(o.NONE = 'none');
+((l = s || (s = {})).PRIMARY = 'primary'), (l.SECONDARY = 'secondary'), (l.WARNING = 'warning'), (l.ERROR = 'error'), ((o = t || (t = {})).SMALL = 'small'), (o.LARGE = 'large'), (o.NONE = 'none');
 let f = {
 		primary: _.colorPrimary,
 		secondary: _.colorSecondary,

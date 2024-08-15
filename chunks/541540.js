@@ -109,8 +109,7 @@ class N extends a.Component {
 				this.setState({ submitting: !0 });
 				try {
 					let e = await o.Z.resolveGiftCode(t);
-					if (null != e && null != e.giftCode.promotion)
-						throw (this.setState({ isPromoCode: !0 }), Error('Cannnot redeem promotion code as gift'));
+					if (null != e && null != e.giftCode.promotion) throw (this.setState({ isPromoCode: !0 }), Error('Cannnot redeem promotion code as gift'));
 					_.default.track(u.rMx.OPEN_MODAL, {
 						type: 'gift_accept',
 						location: {

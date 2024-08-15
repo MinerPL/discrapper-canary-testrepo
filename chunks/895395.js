@@ -159,9 +159,7 @@ function y(e) {
 								? (0, a.jsx)(d.Text, {
 										variant: 'text-md/normal',
 										className: N.filterError,
-										children: b.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FILTER_ERROR.format({
-											filter: F
-										})
+										children: b.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FILTER_ERROR.format({ filter: F })
 									})
 								: (0, a.jsx)('div', {
 										className: N.spinnerContainer,

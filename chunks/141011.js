@@ -27,9 +27,7 @@ t.Z = (e) => {
 			if (1 === m)
 				return {
 					...p,
-					backgroundImage: (null == v ? void 0 : v.addGradient)
-						? 'url('.concat(e, '), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)')
-						: 'url('.concat(e, ')'),
+					backgroundImage: (null == v ? void 0 : v.addGradient) ? 'url('.concat(e, '), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)') : 'url('.concat(e, ')'),
 					backgroundBlendMode: 'multiply',
 					backgroundSize: 'cover',
 					backgroundPosition: 'center',

@@ -42,14 +42,5 @@ t.exports = function (t, r) {
 		A = w ? e : O ? e[S] : (e[S] || {}).prototype,
 		E = w ? f : f[S] || p(f, S, {})[S],
 		P = E.prototype;
-	for (h in r)
-		(o = !(n = c(w ? h : S + (O ? '.' : '#') + h, t.forced)) && A && v(A, h)),
-			(d = E[h]),
-			o && (g = t.dontCallGetSet ? (m = s(A, h)) && m.value : A[h]),
-			(x = o && g ? g : r[h]),
-			(!o || typeof d != typeof x) &&
-				((b = t.bind && o ? a(x, e) : t.wrap && o ? l(x) : j && u(x) ? i(x) : x),
-				(t.sham || (x && x.sham) || (d && d.sham)) && p(b, 'sham', !0),
-				p(E, h, b),
-				j && (!v(f, (y = S + 'Prototype')) && p(f, y, {}), p(f[y], h, x), t.real && P && (n || !P[h]) && p(P, h, x)));
+	for (h in r) (o = !(n = c(w ? h : S + (O ? '.' : '#') + h, t.forced)) && A && v(A, h)), (d = E[h]), o && (g = t.dontCallGetSet ? (m = s(A, h)) && m.value : A[h]), (x = o && g ? g : r[h]), (!o || typeof d != typeof x) && ((b = t.bind && o ? a(x, e) : t.wrap && o ? l(x) : j && u(x) ? i(x) : x), (t.sham || (x && x.sham) || (d && d.sham)) && p(b, 'sham', !0), p(E, h, b), j && (!v(f, (y = S + 'Prototype')) && p(f, y, {}), p(f[y], h, x), t.real && P && (n || !P[h]) && p(P, h, x)));
 };

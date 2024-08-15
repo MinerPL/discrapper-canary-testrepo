@@ -14,18 +14,18 @@ function u(e) {
 		f = i.useRef(null),
 		h = i.useRef(null),
 		p = i.useRef(null),
-		I = i.useRef(null),
-		{ isUsingKeyboardNavigation: m, focusIndex: T, ...g } = u;
+		m = i.useRef(null),
+		{ isUsingKeyboardNavigation: I, focusIndex: T, ...g } = u;
 	i.useLayoutEffect(() => {
 		var e;
 		n && ((0, s.F)(f), null === (e = p.current) || void 0 === e || e.focus());
 	}, [n]),
 		i.useEffect(() => {
-			if (n && T >= 0 && m) {
+			if (n && T >= 0 && I) {
 				var e;
-				null === (e = I.current) || void 0 === e || e.scrollRowIntoView(T);
+				null === (e = m.current) || void 0 === e || e.scrollRowIntoView(T);
 			}
-		}, [n, m, T]);
+		}, [n, I, T]);
 	let S = i.useCallback((e) => c[e], [c]);
 	return (0, r.jsxs)('div', {
 		ref: f,
@@ -51,7 +51,7 @@ function u(e) {
 									...g,
 									ref: p,
 									children: (0, r.jsx)(o.Z, {
-										ref: I,
+										ref: m,
 										className: E,
 										listPadding: [6, 0, 6, 8],
 										onScroll: _,

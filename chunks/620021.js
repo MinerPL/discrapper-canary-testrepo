@@ -78,12 +78,7 @@ l.default = function (e) {
 		x = (0, i.e7)([C.Z, v.default, E.Z], () => {
 			var e;
 			let l = E.Z.getGuild(r);
-			return (
-				null != l &&
-				((null === (e = v.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id
-					? C.Z.can(A.Plq.CHANGE_NICKNAME, l) || C.Z.can(A.Plq.MANAGE_NICKNAMES, l)
-					: C.Z.canManageUser(A.Plq.MANAGE_NICKNAMES, t.id, l))
-			);
+			return null != l && ((null === (e = v.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id ? C.Z.can(A.Plq.CHANGE_NICKNAME, l) || C.Z.can(A.Plq.MANAGE_NICKNAMES, l) : C.Z.canManageUser(A.Plq.MANAGE_NICKNAMES, t.id, l));
 		}),
 		[f, p] = s.useState(!1),
 		[Z, G] = s.useState(null !== (l = null == k ? void 0 : k.nick) && void 0 !== l ? l : ''),
@@ -104,11 +99,7 @@ l.default = function (e) {
 				var l, n, a, s, i, d, N, E, C;
 				e.preventDefault();
 				let v = null;
-				if (
-					(Z !== (null !== (l = null == k ? void 0 : k.nick) && void 0 !== l ? l : '') &&
-						((v = null != v ? v : {}).nick = Z),
-					null == v)
-				) {
+				if ((Z !== (null !== (l = null == k ? void 0 : k.nick) && void 0 !== l ? l : '') && ((v = null != v ? v : {}).nick = Z), null == v)) {
 					c();
 					return;
 				}
@@ -124,25 +115,7 @@ l.default = function (e) {
 					let e;
 					p(!1);
 					let l = null !== (a = null === (n = t.body) || void 0 === n ? void 0 : n.errors) && void 0 !== a ? a : null;
-					(null == l ? void 0 : l.nick) != null
-						? (e =
-								(null === (d = l.nick) || void 0 === d
-									? void 0
-									: null === (i = d._errors) || void 0 === i
-										? void 0
-										: null === (s = i[0]) || void 0 === s
-											? void 0
-											: s.message) || g.Z.Messages.CHANGE_IDENTITY_MODAL_UNKNOWN_ERROR)
-						: (null == l ? void 0 : l.username) != null &&
-							(e =
-								(null === (C = l.username) || void 0 === C
-									? void 0
-									: null === (E = C._errors) || void 0 === E
-										? void 0
-										: null === (N = E[0]) || void 0 === N
-											? void 0
-											: N.message) || g.Z.Messages.CHANGE_IDENTITY_MODAL_UNKNOWN_ERROR),
-						b({ nick: e });
+					(null == l ? void 0 : l.nick) != null ? (e = (null === (d = l.nick) || void 0 === d ? void 0 : null === (i = d._errors) || void 0 === i ? void 0 : null === (s = i[0]) || void 0 === s ? void 0 : s.message) || g.Z.Messages.CHANGE_IDENTITY_MODAL_UNKNOWN_ERROR) : (null == l ? void 0 : l.username) != null && (e = (null === (C = l.username) || void 0 === C ? void 0 : null === (E = C._errors) || void 0 === E ? void 0 : null === (N = E[0]) || void 0 === N ? void 0 : N.message) || g.Z.Messages.CHANGE_IDENTITY_MODAL_UNKNOWN_ERROR), b({ nick: e });
 				}
 			},
 			[r, Z, c, t, k, L]

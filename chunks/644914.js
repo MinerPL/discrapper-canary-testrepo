@@ -1,6 +1,6 @@
 n.d(t, {
 	TE: function () {
-		return C;
+		return g;
 	},
 	h_: function () {
 		return I;
@@ -22,15 +22,15 @@ var i = n(470079),
 	_ = n(375954),
 	f = n(496675),
 	E = n(709054),
-	g = n(981631);
-function C(e, t) {
+	C = n(981631);
+function g(e, t) {
 	return (0, l.cj)(
 		[f.Z],
 		() => ({
 			canInvite: (0, r.b)(f.Z, t, e),
-			canManageGuild: null != t && f.Z.can(g.Plq.MANAGE_GUILD, t),
-			canMessage: null != e && f.Z.can(g.Plq.SEND_MESSAGES, e),
-			canCreateChannel: null != t && f.Z.can(g.Plq.MANAGE_CHANNELS, t)
+			canManageGuild: null != t && f.Z.can(C.Plq.MANAGE_GUILD, t),
+			canMessage: null != e && f.Z.can(C.Plq.SEND_MESSAGES, e),
+			canCreateChannel: null != t && f.Z.can(C.Plq.MANAGE_CHANNELS, t)
 		}),
 		[t, e]
 	);
@@ -46,7 +46,7 @@ function I(e) {
 				() => {
 					var t;
 					let i = null !== (t = h.Z.getMemberCount(null == e ? void 0 : e.id)) && void 0 !== t ? t : 0,
-						a = n.some((e) => e.type === g.uaV.USER_JOIN);
+						a = n.some((e) => e.type === C.uaV.USER_JOIN);
 					return i > 1 || a;
 				},
 				[e, n]

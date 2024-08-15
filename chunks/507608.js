@@ -41,13 +41,7 @@ var l = i(735250),
 	Z = i(689938),
 	L = i(637714);
 function y(e) {
-	let {
-			app: n,
-			subscriptionGroupListing: i,
-			onlySubscribeServerSubForGuildId: s,
-			subscriptionListings: a,
-			otpListings: m
-		} = e,
+	let { app: n, subscriptionGroupListing: i, onlySubscribeServerSubForGuildId: s, subscriptionListings: a, otpListings: m } = e,
 		g = t.useMemo(() => (0, N.y)(n, 100), [n]),
 		{ bot: x } = n,
 		h = t.useMemo(() => {
@@ -162,14 +156,7 @@ function y(e) {
 	);
 }
 function E(e) {
-	let {
-			appId: n,
-			groupListingId: i,
-			onlySubscribeServerSubForGuildId: r,
-			listing: s,
-			groupListingType: o,
-			onDetails: u
-		} = e,
+	let { appId: n, groupListingId: i, onlySubscribeServerSubForGuildId: r, listing: s, groupListingType: o, onDetails: u } = e,
 		{ data: c } = (0, g.H)(s.id),
 		{ openModal: p } = (0, h.Z)({
 			guildId: r,
@@ -191,9 +178,7 @@ function E(e) {
 		}, [n, s.store_listing_benefits]),
 		v = t.useMemo(() => {
 			var e;
-			return null != s.image_asset && null !== (e = R.Z.toURLSafe((0, _._W)(n, s.image_asset, 256))) && void 0 !== e
-				? e
-				: void 0;
+			return null != s.image_asset && null !== (e = R.Z.toURLSafe((0, _._W)(n, s.image_asset, 256))) && void 0 !== e ? e : void 0;
 		}, [n, s.image_asset]);
 	return null == c
 		? null
@@ -255,24 +240,10 @@ function A(e) {
 		j = (0, T.M)(a);
 	if (null == h) return null;
 	let I = null !== (i = h.name) && void 0 !== i ? i : '',
-		N =
-			null !== (t = null == x ? void 0 : null === (n = x.description) || void 0 === n ? void 0 : n.trim()) &&
-			void 0 !== t
-				? t
-				: void 0,
-		O =
-			(null == x ? void 0 : x.headerBackground) != null &&
-			null !== (r = R.Z.toURLSafe((0, _._W)(u, x.headerBackground, 256))) &&
-			void 0 !== r
-				? r
-				: void 0,
+		N = null !== (t = null == x ? void 0 : null === (n = x.description) || void 0 === n ? void 0 : n.trim()) && void 0 !== t ? t : void 0,
+		O = (null == x ? void 0 : x.headerBackground) != null && null !== (r = R.Z.toURLSafe((0, _._W)(u, x.headerBackground, 256))) && void 0 !== r ? r : void 0,
 		L = h.type === M.epS.DURABLE && j,
-		y =
-			h.type === M.epS.DURABLE
-				? L
-					? Z.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE
-					: Z.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY
-				: void 0,
+		y = h.type === M.epS.DURABLE ? (L ? Z.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : Z.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY) : void 0,
 		{ price: E } = h;
 	return null == E
 		? null

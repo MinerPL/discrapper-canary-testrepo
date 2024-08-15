@@ -14,8 +14,7 @@ t.Z = new (class e {
 	}
 	resetInMemoryState() {}
 	handleConnectionOpen(e, t) {
-		!e.userGuildSettings.partial && l.Z.userGuildSettingsTransaction(t).delete(),
-			this.write(e.userGuildSettings.entries, e.userGuildSettings.version, t);
+		!e.userGuildSettings.partial && l.Z.userGuildSettingsTransaction(t).delete(), this.write(e.userGuildSettings.entries, e.userGuildSettings.version, t);
 	}
 	handleUserGuildSettingsUpdate(e, t) {
 		let n = a().max(

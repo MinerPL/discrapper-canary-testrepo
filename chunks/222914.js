@@ -40,11 +40,7 @@ function m(e) {
 			(e, n) => {
 				(null == T ? void 0 : T.feedback_type) !== e &&
 					((0, _.Ms)(s, t, e),
-					(0, c.showToast)(
-						(0, c.createToast)(R.Z.Messages.STRANGER_DANGER_FEEDBACK_CONFIRM, c.ToastType.CUSTOM, {
-							component: (0, a.jsx)(A, {})
-						})
-					),
+					(0, c.showToast)((0, c.createToast)(R.Z.Messages.STRANGER_DANGER_FEEDBACK_CONFIRM, c.ToastType.CUSTOM, { component: (0, a.jsx)(A, {}) })),
 					(0, E.qc)({
 						channelId: s,
 						warningId: t,
@@ -67,11 +63,7 @@ function m(e) {
 				className: u.buttonsContainer,
 				children: [
 					(0, a.jsx)(c.Clickable, {
-						className: i()([
-							u.buttonsBackground,
-							m ? u.buttonsBackgroundActive : u.buttonsBackgroundInactive,
-							{ [u.disabled]: m }
-						]),
+						className: i()([u.buttonsBackground, m ? u.buttonsBackgroundActive : u.buttonsBackgroundInactive, { [u.disabled]: m }]),
 						onClick: () => M(N.ny.UPVOTE, E.NM.FEEDBACK_UPVOTE),
 						'aria-label': R.Z.Messages.STRANGER_DANGER_THUMBS_UP_A11Y,
 						children: (0, a.jsx)(l.Z, {
@@ -80,11 +72,7 @@ function m(e) {
 						})
 					}),
 					(0, a.jsx)(c.Clickable, {
-						className: i()([
-							u.buttonsBackground,
-							x ? u.buttonsBackgroundActive : u.buttonsBackgroundInactive,
-							{ [u.disabled]: x }
-						]),
+						className: i()([u.buttonsBackground, x ? u.buttonsBackgroundActive : u.buttonsBackgroundInactive, { [u.disabled]: x }]),
 						onClick: () => M(N.ny.DOWNVOTE, E.NM.FEEDBACK_DOWNVOTE),
 						'aria-label': R.Z.Messages.STRANGER_DANGER_THUMBS_DOWN_A11Y,
 						children: (0, a.jsx)(r.Z, {

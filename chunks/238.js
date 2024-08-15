@@ -16,10 +16,7 @@ var i,
 	_ = n(551428);
 let E = new Map(),
 	I = new Map();
-((s = i || (i = {}))[(s.NONE = 0)] = 'NONE'),
-	(s[(s.FETCHING = 1)] = 'FETCHING'),
-	(s[(s.FETCHED = 2)] = 'FETCHED'),
-	(s[(s.FAILED = 3)] = 'FAILED');
+((s = i || (i = {}))[(s.NONE = 0)] = 'NONE'), (s[(s.FETCHING = 1)] = 'FETCHING'), (s[(s.FETCHED = 2)] = 'FETCHED'), (s[(s.FAILED = 3)] = 'FAILED');
 let m = {
 	subscriptions: [],
 	otps: []

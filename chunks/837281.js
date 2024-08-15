@@ -54,8 +54,7 @@ var t, n;
 				})(e, t);
 			if (Object.getOwnPropertySymbols) {
 				var a = Object.getOwnPropertySymbols(e);
-				for (r = 0; r < a.length; r++)
-					(n = a[r]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+				for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
 			}
 			return i;
 		}
@@ -71,11 +70,7 @@ var t, n;
 							i = !1,
 							a = void 0;
 						try {
-							for (
-								var s, o = e[Symbol.iterator]();
-								!(r = (s = o.next()).done) && (n.push(s.value), !t || n.length !== t);
-								r = !0
-							);
+							for (var s, o = e[Symbol.iterator](); !(r = (s = o.next()).done) && (n.push(s.value), !t || n.length !== t); r = !0);
 						} catch (e) {
 							(i = !0), (a = e);
 						} finally {
@@ -102,8 +97,7 @@ var t, n;
 					}
 				})(e) ||
 				(function (e) {
-					if (Symbol.iterator in Object(e) || '[object Arguments]' === Object.prototype.toString.call(e))
-						return Array.from(e);
+					if (Symbol.iterator in Object(e) || '[object Arguments]' === Object.prototype.toString.call(e)) return Array.from(e);
 				})(e) ||
 				(function () {
 					throw TypeError('Invalid attempt to spread non-iterable instance');
@@ -267,8 +261,8 @@ var t, n;
 					};
 		}
 		var p = 'DELETE',
-			I = 'POST';
-		function m(e, n, r, a) {
+			m = 'POST';
+		function I(e, n, r, a) {
 			var s,
 				o,
 				l,
@@ -277,8 +271,7 @@ var t, n;
 				d,
 				_ = [],
 				E = (function (e, n) {
-					if ('GET' !== e.method && (void 0 !== e.data || void 0 !== n.data))
-						return JSON.stringify(Array.isArray(e.data) ? e.data : t(t({}, e.data), n.data));
+					if ('GET' !== e.method && (void 0 !== e.data || void 0 !== n.data)) return JSON.stringify(Array.isArray(e.data) ? e.data : t(t({}, e.data), n.data));
 				})(r, a),
 				p =
 					((s = e),
@@ -290,23 +283,22 @@ var t, n;
 						u[e.toLowerCase()] = t;
 					}),
 					u),
-				I = r.method,
-				m = 'GET' !== r.method ? {} : t(t({}, r.data), a.data),
-				T = t(t(t({ 'x-algolia-agent': e.userAgent.value }, e.queryParameters), m), a.queryParameters),
+				m = r.method,
+				I = 'GET' !== r.method ? {} : t(t({}, r.data), a.data),
+				T = t(t(t({ 'x-algolia-agent': e.userAgent.value }, e.queryParameters), I), a.queryParameters),
 				N = 0,
 				v = function t(n, i) {
 					var s = n.pop();
 					if (void 0 === s)
 						throw {
 							name: 'RetryError',
-							message:
-								'Unreachable hosts - your application id may be incorrect. If the error persists, contact support@algolia.com.',
+							message: 'Unreachable hosts - your application id may be incorrect. If the error persists, contact support@algolia.com.',
 							transporterStackTrace: S(_)
 						};
 					var o = {
 							data: E,
 							headers: p,
-							method: I,
+							method: m,
 							url: (function (e, t, n) {
 								var r = g(n),
 									i = ''
@@ -349,10 +341,7 @@ var t, n;
 								var a = l(r);
 								return (
 									r.isTimedOut && N++,
-									Promise.all([
-										e.logger.info('Retryable failure', A(a)),
-										e.hostsCache.set(s, f(s, r.isTimedOut ? 3 : 2))
-									]).then(function () {
+									Promise.all([e.logger.info('Retryable failure', A(a)), e.hostsCache.set(s, f(s, r.isTimedOut ? 3 : 2))]).then(function () {
 										return t(n, i);
 									})
 								);
@@ -379,18 +368,7 @@ var t, n;
 						};
 					return e.requester.send(o).then(function (e) {
 						var t, n, r, i, a, s, o;
-						return (
-							(t = e),
-							(n = u),
-							((i = (r = t).status),
-							r.isTimedOut ||
-								((s = (a = r).isTimedOut), (o = a.status), !s && 0 == ~~o) ||
-								(2 != ~~(i / 100) && 4 != ~~(i / 100)))
-								? n.onRetry(t)
-								: 2 == ~~(t.status / 100)
-									? n.onSuccess(t)
-									: n.onFail(t)
-						);
+						return (t = e), (n = u), ((i = (r = t).status), r.isTimedOut || ((s = (a = r).isTimedOut), (o = a.status), !s && 0 == ~~o) || (2 != ~~(i / 100) && 4 != ~~(i / 100))) ? n.onRetry(t) : 2 == ~~(t.status / 100) ? n.onSuccess(t) : n.onFail(t);
 					});
 				};
 			return ((c = e.hostsCache),
@@ -451,7 +429,7 @@ var t, n;
 					read: function (e, t) {
 						var n = _(t, d.timeouts.read),
 							i = function () {
-								return m(
+								return I(
 									d,
 									d.hosts.filter(function (e) {
 										return 0 != (e.accept & E.Read);
@@ -497,7 +475,7 @@ var t, n;
 						);
 					},
 					write: function (e, t) {
-						return m(
+						return I(
 							d,
 							d.hosts.filter(function (e) {
 								return 0 != (e.accept & E.Write);
@@ -513,15 +491,7 @@ var t, n;
 			return Object.keys(e)
 				.map(function (t) {
 					var n;
-					return c(
-						'%s=%s',
-						t,
-						((n = e[t]),
-						'[object Object]' === Object.prototype.toString.call(n) ||
-						'[object Array]' === Object.prototype.toString.call(n)
-							? JSON.stringify(e[t])
-							: e[t])
-					);
+					return c('%s=%s', t, ((n = e[t]), '[object Object]' === Object.prototype.toString.call(n) || '[object Array]' === Object.prototype.toString.call(n) ? JSON.stringify(e[t]) : e[t]));
 				})
 				.join('&');
 		}
@@ -538,7 +508,7 @@ var t, n;
 				return function (t, n) {
 					return e.transporter.write(
 						{
-							method: I,
+							method: m,
 							path: '2/abtests',
 							data: t
 						},
@@ -583,7 +553,7 @@ var t, n;
 				return function (t, n) {
 					return e.transporter.write(
 						{
-							method: I,
+							method: m,
 							path: c('2/abtests/%s/stop', t)
 						},
 						n
@@ -605,7 +575,7 @@ var t, n;
 				return function (t, n) {
 					return e.transporter.write(
 						{
-							method: I,
+							method: m,
 							path: '1/strategies/personalization',
 							data: t
 						},
@@ -616,8 +586,7 @@ var t, n;
 		function L(e) {
 			return (function t(n) {
 				return e.request(n).then(function (r) {
-					if ((void 0 !== e.batch && e.batch(r.hits), !e.shouldStop(r)))
-						return r.cursor ? t({ cursor: r.cursor }) : t({ page: (n.page || 0) + 1 });
+					if ((void 0 !== e.batch && e.batch(r.hits), !e.shouldStop(r))) return r.cursor ? t({ cursor: r.cursor }) : t({ page: (n.page || 0) + 1 });
 				});
 			})({});
 		}
@@ -630,7 +599,7 @@ var t, n;
 					return l(
 						e.transporter.write(
 							{
-								method: I,
+								method: m,
 								path: '1/keys',
 								data: c
 							},
@@ -654,7 +623,7 @@ var t, n;
 						(i.queryParameters['X-Algolia-User-ID'] = t),
 						e.transporter.write(
 							{
-								method: I,
+								method: m,
 								path: '1/clusters/mapping',
 								data: { cluster: n }
 							},
@@ -667,7 +636,7 @@ var t, n;
 				return function (t, n, r) {
 					return e.transporter.write(
 						{
-							method: I,
+							method: m,
 							path: '1/clusters/mapping/batch',
 							data: {
 								users: t,
@@ -683,7 +652,7 @@ var t, n;
 					return l(
 						e.transporter.write(
 							{
-								method: I,
+								method: m,
 								path: c('/1/dictionaries/%s/batch', t),
 								data: {
 									clearExistingDictionaryEntries: !0,
@@ -706,7 +675,7 @@ var t, n;
 					return l(
 						e.transporter.write(
 							{
-								method: I,
+								method: m,
 								path: c('1/indexes/%s/operation', t),
 								data: {
 									operation: 'copy',
@@ -774,7 +743,7 @@ var t, n;
 					return l(
 						e.transporter.write(
 							{
-								method: I,
+								method: m,
 								path: c('/1/dictionaries/%s/batch', t),
 								data: {
 									clearExistingDictionaryEntries: !1,
@@ -934,7 +903,7 @@ var t, n;
 					return l(
 						e.transporter.write(
 							{
-								method: I,
+								method: m,
 								path: c('1/indexes/%s/operation', t),
 								data: {
 									operation: 'move',
@@ -954,7 +923,7 @@ var t, n;
 					return l(
 						e.transporter.write(
 							{
-								method: I,
+								method: m,
 								path: '1/indexes/*/batch',
 								data: { requests: t }
 							},
@@ -974,7 +943,7 @@ var t, n;
 				return function (t, n) {
 					return e.transporter.read(
 						{
-							method: I,
+							method: m,
 							path: '1/indexes/*/objects',
 							data: { requests: t }
 						},
@@ -989,7 +958,7 @@ var t, n;
 					});
 					return e.transporter.read(
 						{
-							method: I,
+							method: m,
 							path: '1/indexes/*/queries',
 							data: { requests: i },
 							cacheable: !0
@@ -1006,11 +975,7 @@ var t, n;
 								s = a.facetName,
 								o = a.facetQuery,
 								l = n(a, ['facetName', 'facetQuery']);
-							return q(e)(r.indexName, { methods: { searchForFacetValues: eq } }).searchForFacetValues(
-								s,
-								o,
-								t(t({}, i), l)
-							);
+							return q(e)(r.indexName, { methods: { searchForFacetValues: eq } }).searchForFacetValues(s, o, t(t({}, i), l));
 						})
 					);
 				};
@@ -1041,7 +1006,7 @@ var t, n;
 					return l(
 						e.transporter.write(
 							{
-								method: I,
+								method: m,
 								path: c('/1/dictionaries/%s/batch', t),
 								data: {
 									clearExistingDictionaryEntries: !0,
@@ -1061,7 +1026,7 @@ var t, n;
 					return l(
 						e.transporter.write(
 							{
-								method: I,
+								method: m,
 								path: c('1/keys/%s/restore', t)
 							},
 							n
@@ -1088,7 +1053,7 @@ var t, n;
 					return l(
 						e.transporter.write(
 							{
-								method: I,
+								method: m,
 								path: c('/1/dictionaries/%s/batch', t),
 								data: {
 									clearExistingDictionaryEntries: !1,
@@ -1107,7 +1072,7 @@ var t, n;
 				return function (t, n, r) {
 					return e.transporter.read(
 						{
-							method: I,
+							method: m,
 							path: c('/1/dictionaries/%s/search', t),
 							data: { query: n },
 							cacheable: !0
@@ -1120,7 +1085,7 @@ var t, n;
 				return function (t, n) {
 					return e.transporter.read(
 						{
-							method: I,
+							method: m,
 							path: '1/clusters/mapping/search',
 							data: { query: t }
 						},
@@ -1151,16 +1116,7 @@ var t, n;
 						a = r || {},
 						s = a.queryParameters,
 						u = n(a, ['queryParameters']),
-						d = [
-							'acl',
-							'indexes',
-							'referers',
-							'restrictSources',
-							'queryParameters',
-							'description',
-							'maxQueriesPerIPPerHour',
-							'maxHitsPerQuery'
-						];
+						d = ['acl', 'indexes', 'referers', 'restrictSources', 'queryParameters', 'description', 'maxQueriesPerIPPerHour', 'maxHitsPerQuery'];
 					return l(
 						e.transporter.write(
 							{
@@ -1213,7 +1169,7 @@ var t, n;
 					return l(
 						e.transporter.write(
 							{
-								method: I,
+								method: m,
 								path: c('1/indexes/%s/batch', e.indexName),
 								data: { requests: t }
 							},
@@ -1242,7 +1198,7 @@ var t, n;
 								request: function (t) {
 									return e.transporter.read(
 										{
-											method: I,
+											method: m,
 											path: c('1/indexes/%s/browse', e.indexName),
 											data: t
 										},
@@ -1287,7 +1243,7 @@ var t, n;
 					);
 				};
 			},
-			eI = function (e) {
+			em = function (e) {
 				return function (n) {
 					var r = t({ hitsPerPage: 1000 }, n);
 					return L(
@@ -1320,7 +1276,7 @@ var t, n;
 					);
 				};
 			},
-			em = function (e) {
+			eI = function (e) {
 				return function (t, r, i) {
 					var a = i || {},
 						s = a.batchSize,
@@ -1364,7 +1320,7 @@ var t, n;
 					return l(
 						e.transporter.write(
 							{
-								method: I,
+								method: m,
 								path: c('1/indexes/%s/clear', e.indexName)
 							},
 							t
@@ -1385,7 +1341,7 @@ var t, n;
 						l(
 							e.transporter.write(
 								{
-									method: I,
+									method: m,
 									path: c('1/indexes/%s/rules/clear', e.indexName)
 								},
 								a
@@ -1407,7 +1363,7 @@ var t, n;
 						l(
 							e.transporter.write(
 								{
-									method: I,
+									method: m,
 									path: c('1/indexes/%s/synonyms/clear', e.indexName)
 								},
 								a
@@ -1424,7 +1380,7 @@ var t, n;
 					return l(
 						e.transporter.write(
 							{
-								method: I,
+								method: m,
 								path: c('1/indexes/%s/deleteByQuery', e.indexName),
 								data: t
 							},
@@ -1469,7 +1425,7 @@ var t, n;
 					var r = t.map(function (e) {
 						return { objectID: e };
 					});
-					return em(e)(r, e0.DeleteObject, n);
+					return eI(e)(r, e0.DeleteObject, n);
 				};
 			},
 			eR = function (e) {
@@ -1532,7 +1488,7 @@ var t, n;
 				return function (t, n, r) {
 					return e.transporter.read(
 						{
-							method: I,
+							method: m,
 							path: c('1/answers/%s/prediction', e.indexName),
 							data: {
 								query: t,
@@ -1611,7 +1567,7 @@ var t, n;
 						});
 					return e.transporter.read(
 						{
-							method: I,
+							method: m,
 							path: '1/indexes/*/objects',
 							data: { requests: l }
 						},
@@ -1674,7 +1630,7 @@ var t, n;
 						a = i.createIfNotExists,
 						s = n(i, ['createIfNotExists']),
 						o = a ? e0.PartialUpdateObject : e0.PartialUpdateObjectNoCreate;
-					return em(e)(t, o, s);
+					return eI(e)(t, o, s);
 				};
 			},
 			eB = function (e) {
@@ -1688,7 +1644,7 @@ var t, n;
 							return l(
 								e.transporter.write(
 									{
-										method: I,
+										method: m,
 										path: c('1/indexes/%s/operation', t),
 										data: {
 											operation: r,
@@ -1704,7 +1660,7 @@ var t, n;
 						},
 						h = Math.random().toString(36).substring(7),
 						p = ''.concat(e.indexName, '_tmp_').concat(h),
-						m = eZ({
+						I = eZ({
 							appId: e.appId,
 							transporter: e.transporter,
 							indexName: p
@@ -1727,7 +1683,7 @@ var t, n;
 						l(
 							(u ? g.wait(E) : g)
 								.then(function () {
-									var e = m(
+									var e = I(
 										a,
 										t(
 											t({}, E),
@@ -1809,8 +1765,7 @@ var t, n;
 									return l(
 										Promise.reject({
 											name: 'MissingObjectIDError',
-											message:
-												"All objects must have an unique objectID (like a primary key) to be valid. Algolia is also able to generate objectIDs automatically but *it's not recommended*. To do it, use the `{'autoGenerateObjectIDIfNotExist': true}` option."
+											message: "All objects must have an unique objectID (like a primary key) to be valid. Algolia is also able to generate objectIDs automatically but *it's not recommended*. To do it, use the `{'autoGenerateObjectIDIfNotExist': true}` option."
 										})
 									);
 						} catch (e) {
@@ -1823,7 +1778,7 @@ var t, n;
 							}
 						}
 					}
-					return em(e)(t, o, s);
+					return eI(e)(t, o, s);
 				};
 			},
 			eY = function (e) {
@@ -1843,7 +1798,7 @@ var t, n;
 						l(
 							e.transporter.write(
 								{
-									method: I,
+									method: m,
 									path: c('1/indexes/%s/rules/batch', e.indexName),
 									data: t
 								},
@@ -1874,7 +1829,7 @@ var t, n;
 						l(
 							e.transporter.write(
 								{
-									method: I,
+									method: m,
 									path: c('1/indexes/%s/synonyms/batch', e.indexName),
 									data: t
 								},
@@ -1891,7 +1846,7 @@ var t, n;
 				return function (t, n) {
 					return e.transporter.read(
 						{
-							method: I,
+							method: m,
 							path: c('1/indexes/%s/query', e.indexName),
 							data: { query: t },
 							cacheable: !0
@@ -1904,7 +1859,7 @@ var t, n;
 				return function (t, n, r) {
 					return e.transporter.read(
 						{
-							method: I,
+							method: m,
 							path: c('1/indexes/%s/facets/%s/query', e.indexName, t),
 							data: { facetQuery: n },
 							cacheable: !0
@@ -1917,7 +1872,7 @@ var t, n;
 				return function (t, n) {
 					return e.transporter.read(
 						{
-							method: I,
+							method: m,
 							path: c('1/indexes/%s/rules/search', e.indexName),
 							data: { query: t }
 						},
@@ -1929,7 +1884,7 @@ var t, n;
 				return function (t, n) {
 					return e.transporter.read(
 						{
-							method: I,
+							method: m,
 							path: c('1/indexes/%s/synonyms/search', e.indexName),
 							data: { query: t }
 						},
@@ -1998,7 +1953,7 @@ var t, n;
 					});
 					return e.transporter.read(
 						{
-							method: I,
+							method: m,
 							path: '1/indexes/*/recommendations',
 							data: { requests: i },
 							cacheable: !0
@@ -2048,7 +2003,7 @@ var t, n;
 					});
 					return e.transporter.read(
 						{
-							method: I,
+							method: m,
 							path: '1/indexes/*/recommendations',
 							data: { requests: i },
 							cacheable: !0
@@ -2071,7 +2026,7 @@ var t, n;
 					});
 					return e.transporter.read(
 						{
-							method: I,
+							method: m,
 							path: '1/indexes/*/recommendations',
 							data: { requests: i },
 							cacheable: !0
@@ -2104,7 +2059,7 @@ var t, n;
 					});
 					return e.transporter.read(
 						{
-							method: I,
+							method: m,
 							path: '1/indexes/*/recommendations',
 							data: { requests: i },
 							cacheable: !0
@@ -2120,13 +2075,13 @@ var t, n;
 				f,
 				h,
 				p,
-				I,
 				m,
+				I,
 				g,
 				S,
 				A,
 				L,
-				em = {
+				eI = {
 					appId: e,
 					apiKey: n,
 					timeouts: {
@@ -2155,9 +2110,7 @@ var t, n;
 									},
 									a = i(e.connectTimeout, 'Connection timeout');
 								(n.onreadystatechange = function () {
-									n.readyState > n.OPENED &&
-										void 0 === r &&
-										(clearTimeout(a), (r = i(e.responseTimeout, 'Socket timeout')));
+									n.readyState > n.OPENED && void 0 === r && (clearTimeout(a), (r = i(e.responseTimeout, 'Socket timeout')));
 								}),
 									(n.onerror = function () {
 										0 === n.status &&
@@ -2270,7 +2223,7 @@ var t, n;
 							(p = function (e) {
 								f().setItem(_, JSON.stringify(e));
 							}),
-							(I = function () {
+							(m = function () {
 								var e = l.timeToLive ? 1000 * l.timeToLive : null,
 									t = Object.fromEntries(
 										Object.entries(h()).filter(function (e) {
@@ -2301,7 +2254,7 @@ var t, n;
 												};
 									return Promise.resolve()
 										.then(function () {
-											I();
+											m();
 											var t = JSON.stringify(e);
 											return h()[t];
 										})
@@ -2345,22 +2298,22 @@ var t, n;
 							a()
 						]
 					}),
-					userAgent: (m = {
+					userAgent: (I = {
 						value: 'Algolia for JavaScript ('.concat('4.23.3', ')'),
 						add: function (e) {
 							var t = '; '.concat(e.segment).concat(void 0 !== e.version ? ' ('.concat(e.version, ')') : '');
-							return -1 === m.value.indexOf(t) && (m.value = ''.concat(m.value).concat(t)), m;
+							return -1 === I.value.indexOf(t) && (I.value = ''.concat(I.value).concat(t)), I;
 						}
 					}).add({ segment: 'Browser' })
 				},
-				e0 = t(t({}, em), o),
+				e0 = t(t({}, eI), o),
 				e1 = function () {
 					return function (e) {
 						var n, r, i, a;
 						return (
 							(r =
 								(n = t(
-									t(t({}, em), e),
+									t(t({}, eI), e),
 									{},
 									{
 										methods: {
@@ -2464,7 +2417,7 @@ var t, n;
 											saveSynonyms: eK,
 											getSynonym: ex,
 											searchSynonyms: eX,
-											browseSynonyms: eI,
+											browseSynonyms: em,
 											deleteSynonym: eC,
 											clearSynonyms: eS,
 											replaceAllObjects: eB,
@@ -2487,7 +2440,7 @@ var t, n;
 									return (
 										(r =
 											(n = t(
-												t(t({}, em), e),
+												t(t({}, eI), e),
 												{},
 												{
 													methods: {
@@ -2523,10 +2476,7 @@ var t, n;
 							initPersonalization: e1,
 							initRecommendation: function () {
 								return function (e) {
-									return (
-										e0.logger.info('The `initRecommendation` method is deprecated. Use `initPersonalization` instead.'),
-										e1()(e)
-									);
+									return e0.logger.info('The `initRecommendation` method is deprecated. Use `initPersonalization` instead.'), e1()(e);
 								};
 							},
 							getRecommendations: e2,
@@ -2563,11 +2513,7 @@ var t, n;
 													(e[t] = e[n]), (e[n] = r);
 												}
 												return e;
-											})([
-												{ url: ''.concat(S, '-1.algolianet.com') },
-												{ url: ''.concat(S, '-2.algolianet.com') },
-												{ url: ''.concat(S, '-3.algolianet.com') }
-											])
+											})([{ url: ''.concat(S, '-1.algolianet.com') }, { url: ''.concat(S, '-2.algolianet.com') }, { url: ''.concat(S, '-3.algolianet.com') }])
 										)
 									},
 									g

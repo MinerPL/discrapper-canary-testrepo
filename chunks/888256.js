@@ -22,9 +22,7 @@ function c(e) {
 				(0, n.jsx)(a.FormText, {
 					className: l.description,
 					type: a.FormText.Types.DESCRIPTION,
-					children: _
-						? o.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVAL_DESCRIPTION
-						: o.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVAL_DESCRIPTION_UNCLAIMED
+					children: _ ? o.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVAL_DESCRIPTION : o.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVAL_DESCRIPTION_UNCLAIMED
 				}),
 				(0, n.jsxs)('div', {
 					className: l.buttonContainer,

@@ -36,21 +36,7 @@ var s = n(735250),
 	q = n(159296);
 let w = o.forwardRef(function (e, t) {
 	var n, a;
-	let {
-			children: w,
-			className: Z,
-			collapsedHeight: P,
-			isExpanded: Q,
-			isExpansionAnimationComplete: W,
-			expansionSpring: D,
-			onCtxMenuOpen: H,
-			onCtxMenuClose: V,
-			onCtxMenuSelect: z,
-			overlayRef: G,
-			quest: F,
-			useReducedMotion: Y,
-			taskDetails: K
-		} = e,
+	let { children: w, className: Z, collapsedHeight: P, isExpanded: Q, isExpansionAnimationComplete: W, expansionSpring: D, onCtxMenuOpen: H, onCtxMenuClose: V, onCtxMenuSelect: z, overlayRef: G, quest: F, useReducedMotion: Y, taskDetails: K } = e,
 		X = o.useRef(null),
 		J = (0, c.e7)([_.Z], () => _.Z.isEnrolling(F.id), [F]),
 		$ = (0, g.B6)(F.config.expiresAt),

@@ -23,9 +23,7 @@ var o = r(470079),
 	l = (function (t) {
 		function e(e) {
 			var r;
-			return (
-				i(n((r = t.call(this, e) || this)), '_forceFlag', void 0), i(n(r), '_node', void 0), (r._forceFlag = !1), r
-			);
+			return i(n((r = t.call(this, e) || this)), '_forceFlag', void 0), i(n(r), '_node', void 0), (r._forceFlag = !1), r;
 		}
 		(r = e), (a = t), (r.prototype = Object.create(a.prototype)), (r.prototype.constructor = r), (r.__proto__ = a);
 		var r,

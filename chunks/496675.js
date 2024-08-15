@@ -13,8 +13,8 @@ var r,
 	f = n(427679),
 	h = n(569471),
 	p = n(195663),
-	I = n(131704),
-	m = n(601964),
+	m = n(131704),
+	I = n(601964),
 	T = n(598077),
 	g = n(386438),
 	S = n(700785),
@@ -52,9 +52,7 @@ function U(e) {
 	let i = A.Z.getChannel(e);
 	if (null == i) return S.Hn;
 	let a = i.getGuildId(),
-		s =
-			null != a &&
-			(E.Z.isLurking(a) || (null === (t = v.ZP.getMember(a, r.id)) || void 0 === t ? void 0 : t.isPending));
+		s = null != a && (E.Z.isLurking(a) || (null === (t = v.ZP.getMember(a, r.id)) || void 0 === t ? void 0 : t.isPending));
 	return !i.isScheduledForDeletion() && !s && l().isEmpty(i.permissionOverwrites) && null != a
 		? P(a)
 		: S.uB({
@@ -131,13 +129,13 @@ function j(e) {
 }
 function W(e, t, n, r) {
 	let i = S.Hn;
-	if (e instanceof I.Sf) {
-		if (I.Ec.has(e.type)) {
+	if (e instanceof m.Sf) {
+		if (m.Ec.has(e.type)) {
 			let i = A.Z.getChannel(e.parent_id);
 			return null == i ? S.Hn : S.Og(e, W(i, t, n, r), h.Z.hasJoined(e.id));
 		}
 		i = w(e.id);
-	} else e instanceof m.ZP && (i = P(e.id));
+	} else e instanceof I.ZP && (i = P(e.id));
 	return void 0 !== t || void 0 !== n || void 0 !== r
 		? S.uB({
 				user: R.default.getCurrentUser(),
@@ -154,7 +152,7 @@ class K extends (r = c.ZP.Store) {
 		this.waitFor(R.default, O.Z, A.Z, v.ZP, N.ZP, h.Z, f.Z, _.Z);
 	}
 	getChannelPermissions(e) {
-		return I.Ec.has(e.type) ? U(e.id) : w(e.id);
+		return m.Ec.has(e.type) ? U(e.id) : w(e.id);
 	}
 	getGuildPermissions(e) {
 		return P(e.id);
@@ -167,8 +165,7 @@ class K extends (r = c.ZP.Store) {
 			canManageRoles: this.can(C.Plq.MANAGE_ROLES, e),
 			canManageBans: this.can(C.Plq.BAN_MEMBERS, e),
 			canManageNicknames: this.can(C.Plq.MANAGE_NICKNAMES, e),
-			canManageGuildExpressions:
-				this.can(C.Plq.MANAGE_GUILD_EXPRESSIONS, e) || this.can(C.Plq.CREATE_GUILD_EXPRESSIONS, e),
+			canManageGuildExpressions: this.can(C.Plq.MANAGE_GUILD_EXPRESSIONS, e) || this.can(C.Plq.CREATE_GUILD_EXPRESSIONS, e),
 			canViewAuditLog: this.can(C.Plq.VIEW_AUDIT_LOG, e),
 			canViewAuditLogV2: this.can(C.Plq.VIEW_AUDIT_LOG, e),
 			canManageWebhooks: this.can(C.Plq.MANAGE_WEBHOOKS, e),
@@ -187,9 +184,7 @@ class K extends (r = c.ZP.Store) {
 		return u.Db(P(e.id), S.ym);
 	}
 	canWithPartialContext(e, t) {
-		return 'channelId' in t && 'string' == typeof t.channelId
-			? this.can(e, A.Z.getChannel(t.channelId))
-			: 'guildId' in t && 'string' == typeof t.guildId && this.can(e, O.Z.getGuild(t.guildId));
+		return 'channelId' in t && 'string' == typeof t.channelId ? this.can(e, A.Z.getChannel(t.channelId)) : 'guildId' in t && 'string' == typeof t.guildId && this.can(e, O.Z.getGuild(t.guildId));
 	}
 	can(e, t, n, r, i) {
 		let a = W(t, n, r, i);
@@ -305,9 +300,7 @@ function z() {
 		MOD_VIEW_SEARCH_FINISH: H,
 		THREAD_MEMBER_UPDATE: function (e) {
 			var t;
-			return (
-				(null === (t = R.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.userId && (x(e.guildId), !0)
-			);
+			return (null === (t = R.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.userId && (x(e.guildId), !0);
 		},
 		THREAD_MEMBERS_UPDATE: function (e) {
 			return !!(0, p.s)(e) && (x(e.guildId), !0);

@@ -50,17 +50,7 @@ var i,
 	w = n(689938),
 	B = n(697879);
 let H = r.memo(function (e) {
-	let {
-			heading: t,
-			location: n,
-			locationIcon: i,
-			details: a,
-			detailsIcon: r,
-			topic: l,
-			onClickCloseIcon: c,
-			onClickTopicText: u,
-			children: _
-		} = e,
+	let { heading: t, location: n, locationIcon: i, details: a, detailsIcon: r, topic: l, onClickCloseIcon: c, onClickTopicText: u, children: _ } = e,
 		E = (0, s.jsx)(d.Text, {
 			color: 'header-primary',
 			variant: 'text-md/semibold',
@@ -217,16 +207,8 @@ function Y(e) {
 		c = (0, y.nE)(n),
 		u = (0, _.KS)(c),
 		{ startTime: E, endTime: h } = (0, M.ZP)(n),
-		{
-			startDateTimeString: m,
-			upcomingEvent: I,
-			diffMinutes: g
-		} = (0, j.ub)(E.toISOString(), null == h ? void 0 : h.toISOString()),
-		p = I
-			? g > 0
-				? w.Z.Messages.STARTING_IN_MINUTES.format({ minutes: g })
-				: w.Z.Messages.STARTING_SOON
-			: w.Z.Messages.STARTING_ON_DATE.format({ date: m });
+		{ startDateTimeString: m, upcomingEvent: I, diffMinutes: g } = (0, j.ub)(E.toISOString(), null == h ? void 0 : h.toISOString()),
+		p = I ? (g > 0 ? w.Z.Messages.STARTING_IN_MINUTES.format({ minutes: g }) : w.Z.Messages.STARTING_SOON) : w.Z.Messages.STARTING_ON_DATE.format({ date: m });
 	return (
 		r.useEffect(() => {
 			A.default.track(k.rMx.CHANNEL_NOTICE_VIEWED, {
@@ -408,10 +390,7 @@ function Q(e) {
 			h = w.Z.Messages.JOIN;
 			break;
 		case 2:
-			(h = w.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON),
-				(null == E ? void 0 : E.speaker)
-					? (h = w.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON)
-					: null != E && (h = w.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON);
+			(h = w.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON), (null == E ? void 0 : E.speaker) ? (h = w.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON) : null != E && (h = w.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON);
 			break;
 		case 3:
 			h = w.Z.Messages.HUB_STUDY_ROOM_NOTICE_VOICE_CTA;

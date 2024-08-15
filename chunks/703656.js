@@ -13,7 +13,7 @@ n.d(t, {
 		return O;
 	},
 	XU: function () {
-		return m;
+		return I;
 	},
 	dL: function () {
 		return g;
@@ -31,7 +31,7 @@ n.d(t, {
 		return S;
 	},
 	uL: function () {
-		return I;
+		return m;
 	},
 	uv: function () {
 		return T;
@@ -55,15 +55,9 @@ function h() {
 	return !l.S.hasSubscribers(c.CkL.MODAL_CLOSE) && (n(574254).Z.close(), !0);
 }
 function p(e, t) {
-	return (
-		!!('string' == typeof e && _.some((t) => e.startsWith(t))) &&
-		(d.log(''.concat(t, ' - route to external path ').concat(e)),
-		window.dispatchEvent(new Event('beforeunload')),
-		window.location[t](e),
-		!0)
-	);
+	return !!('string' == typeof e && _.some((t) => e.startsWith(t))) && (d.log(''.concat(t, ' - route to external path ').concat(e)), window.dispatchEvent(new Event('beforeunload')), window.location[t](e), !0);
 }
-function I(e, t) {
+function m(e, t) {
 	if (p(e, 'assign')) return;
 	d.log('transitionTo - Transitioning to '.concat(e));
 	let n = null == t ? void 0 : t.source;
@@ -79,7 +73,7 @@ function I(e, t) {
 		(i = n),
 		(a = s);
 }
-function m(e, t, n, r) {
+function I(e, t, n, r) {
 	d.log(
 		'transitionToGuild - Transitioning to '.concat(
 			JSON.stringify({
@@ -89,14 +83,13 @@ function m(e, t, n, r) {
 			})
 		)
 	),
-		I(c.Z5c.CHANNEL(e, t, n), r);
+		m(c.Z5c.CHANNEL(e, t, n), r);
 }
 function T() {
 	return null != i && u.H.has(i);
 }
 function g(e, t, n) {
-	!p(e, 'replace') &&
-		(d.log('Replacing route with '.concat(e)), 'string' == typeof e ? r.replace(e, t) : r.replace(e), (i = n));
+	!p(e, 'replace') && (d.log('Replacing route with '.concat(e)), 'string' == typeof e ? r.replace(e, t) : r.replace(e), (i = n));
 }
 function S() {
 	return r;
@@ -124,8 +117,7 @@ function O(e) {
 	if (e.startsWith(c.Z5c.INVITE(''))) return c.Usc.INVITE;
 	else if (e.startsWith(c.Z5c.VERIFY)) return c.Usc.VERIFY;
 	else if (e.startsWith(c.Z5c.DISABLE_EMAIL_NOTIFICATIONS)) return c.Usc.DISABLE_EMAIL_NOTIFICATIONS;
-	else if (e.startsWith(c.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS))
-		return c.Usc.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS;
+	else if (e.startsWith(c.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS)) return c.Usc.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS;
 	else if (e.startsWith(c.Z5c.REJECT_IP)) return c.Usc.REJECT_IP;
 	else if (e.startsWith(c.Z5c.REJECT_MFA)) return c.Usc.REJECT_MFA;
 	else if (e.startsWith(c.Z5c.AUTHORIZE_IP)) return c.Usc.AUTHORIZE_IP;

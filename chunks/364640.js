@@ -6,11 +6,7 @@ var r,
 	o = n(777754),
 	l = n(754688),
 	u = n(981631);
-((i = r || (r = {})).MESSAGE = 'Discord Message Link'),
-	(i.CHANNEL = 'Discord Channel Link'),
-	(i.SERVER_INVITE = 'Discord Server Invite'),
-	(i.GIFT = 'Discord Gift Link'),
-	(i.UNKNOWN = 'Unknown');
+((i = r || (r = {})).MESSAGE = 'Discord Message Link'), (i.CHANNEL = 'Discord Channel Link'), (i.SERVER_INVITE = 'Discord Server Invite'), (i.GIFT = 'Discord Gift Link'), (i.UNKNOWN = 'Unknown');
 let c = [
 	(e) => (o.Z.isInvite(e) ? 'Discord Server Invite' : null),
 	(e) => {
@@ -27,11 +23,7 @@ let c = [
 	}
 ];
 function d(e) {
-	return null != e.guildId && null != e.channelId && null != e.messageId
-		? 'Discord Message Link'
-		: null != e.guildId && null != e.channelId
-			? 'Discord Channel Link'
-			: 'Unknown';
+	return null != e.guildId && null != e.channelId && null != e.messageId ? 'Discord Message Link' : null != e.guildId && null != e.channelId ? 'Discord Channel Link' : 'Unknown';
 }
 t.Z = {
 	trackDiscordLinkClicked: function (e) {

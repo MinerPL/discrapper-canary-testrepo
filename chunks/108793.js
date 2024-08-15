@@ -46,9 +46,7 @@ function f(e) {
 					return {
 						header: m.Z.Messages.POMELO_ACTION_LABEL_OCF,
 						subtitle: m.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_OCF.format(),
-						link: m.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_BODY_2.format({
-							helpdeskArticle: u.Z.getArticleURL(_.BhN.POMELO_FAQ)
-						})
+						link: m.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_BODY_2.format({ helpdeskArticle: u.Z.getArticleURL(_.BhN.POMELO_FAQ) })
 					};
 				default:
 					return {

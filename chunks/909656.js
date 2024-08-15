@@ -95,10 +95,7 @@ function b(e) {
 		l = (0, x.YB)(n.id),
 		c = a.useCallback(() => {
 			var e;
-			return (null == l ? void 0 : null === (e = l.cover_image_asset) || void 0 === e ? void 0 : e.application_id) ==
-				null
-				? null
-				: (0, g._W)(l.cover_image_asset.application_id, l.cover_image_asset, v);
+			return (null == l ? void 0 : null === (e = l.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, g._W)(l.cover_image_asset.application_id, l.cover_image_asset, v);
 		}, [l]),
 		[u, I] = a.useState(r),
 		[m, C] = a.useState(null !== (t = null == l ? void 0 : l.description) && void 0 !== t ? t : ''),
@@ -115,19 +112,12 @@ function b(e) {
 	}
 	let q = a.useMemo(() => {
 			var e;
-			return (
-				(null != m && m !== (null !== (e = null == l ? void 0 : l.description) && void 0 !== e ? e : '')) ||
-				(null == j ? void 0 : j.startsWith('data:')) === !0 ||
-				u !== r ||
-				(null == l ? void 0 : l.store_page_guild_products_default_sort) !== U ||
-				(null == l ? void 0 : l.server_shop_tab_order) !== P
-			);
+			return (null != m && m !== (null !== (e = null == l ? void 0 : l.description) && void 0 !== e ? e : '')) || (null == j ? void 0 : j.startsWith('data:')) === !0 || u !== r || (null == l ? void 0 : l.store_page_guild_products_default_sort) !== U || (null == l ? void 0 : l.server_shop_tab_order) !== P;
 		}, [j, r, m, l, u, U, P]),
 		X = null != m && '' !== m && null != j;
 	a.useEffect(() => {
 		var e;
-		(null == l ? void 0 : null === (e = l.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null &&
-			b((0, g._W)(l.cover_image_asset.application_id, l.cover_image_asset, v));
+		(null == l ? void 0 : null === (e = l.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null && b((0, g._W)(l.cover_image_asset.application_id, l.cover_image_asset, v));
 	}, [null == l ? void 0 : l.cover_image_asset]);
 	let Q = (0, p.mY)(),
 		J = a.useMemo(
@@ -205,9 +195,7 @@ function b(e) {
 				titleId: W,
 				disabled: Q,
 				children: (0, s.jsx)(E.TextArea, {
-					placeholder: i
-						? M.Z.Messages.GUILD_PRODUCT_SETUP_INFO_DESCRIPTION_PLACEHOLDER
-						: M.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_DESCRIPTION_PLACEHOLDER,
+					placeholder: i ? M.Z.Messages.GUILD_PRODUCT_SETUP_INFO_DESCRIPTION_PLACEHOLDER : M.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_DESCRIPTION_PLACEHOLDER,
 					maxLength: 1500,
 					value: m,
 					rows: 2,
@@ -315,21 +303,12 @@ function b(e) {
 							disabled: !X,
 							onReset: () => {
 								var e;
-								I(r),
-									C(null !== (e = null == l ? void 0 : l.description) && void 0 !== e ? e : ''),
-									b(c),
-									G(null == l ? void 0 : l.store_page_guild_products_default_sort),
-									B(null == l ? void 0 : l.server_shop_tab_order);
+								I(r), C(null !== (e = null == l ? void 0 : l.description) && void 0 !== e ? e : ''), b(c), G(null == l ? void 0 : l.store_page_guild_products_default_sort), B(null == l ? void 0 : l.server_shop_tab_order);
 							},
 							onSave: () => {
 								o()(null != l, 'Settings must be defined');
 								let e = {};
-								m !== l.description && (e.description = m),
-									null != j && j.startsWith('data:') && (e.cover_image = j),
-									u !== r && (e.full_server_gate = u === O.e3.ALL_CHANNELS),
-									U !== l.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = U),
-									P !== l.server_shop_tab_order && (e.server_shop_tab_order = P),
-									!d().isEmpty(e) && k(n.id, e);
+								m !== l.description && (e.description = m), null != j && j.startsWith('data:') && (e.cover_image = j), u !== r && (e.full_server_gate = u === O.e3.ALL_CHANNELS), U !== l.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = U), P !== l.server_shop_tab_order && (e.server_shop_tab_order = P), !d().isEmpty(e) && k(n.id, e);
 							},
 							saveButtonTooltip: X ? void 0 : M.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_FULL_OUT_ALL_INFO
 						})

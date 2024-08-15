@@ -22,21 +22,19 @@ function h(e) {
 function p(e) {
 	return 'subscription_listing:'.concat(e);
 }
-function I(e) {
+function m(e) {
 	return 'application:'.concat(e);
 }
-function m(e) {
+function I(e) {
 	return 'plan:'.concat(e);
 }
-((a = r || (r = {}))[(a.NOT_FETCHED = 0)] = 'NOT_FETCHED'),
-	(a[(a.FETCHING = 1)] = 'FETCHING'),
-	(a[(a.FETCHED = 2)] = 'FETCHED');
+((a = r || (r = {}))[(a.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (a[(a.FETCHING = 1)] = 'FETCHING'), (a[(a.FETCHED = 2)] = 'FETCHED');
 let T = new _.h(
 		(e) => [h(e.guild_id), ...e.subscription_listings_ids.map(p)],
 		(e) => e.id
 	),
 	g = new _.h(
-		(e) => [I(e.application_id), m(e.subscription_plans[0].id)],
+		(e) => [m(e.application_id), I(e.subscription_plans[0].id)],
 		(e) => e.id
 	),
 	S = {},
@@ -51,10 +49,7 @@ function y(e) {
 }
 function D(e) {
 	var t;
-	for (let n of (T.set(e.id, e),
-	C.set(e.guild_id, e.application_id),
-	null !== (t = e.subscription_listings) && void 0 !== t ? t : []))
-		L(n);
+	for (let n of (T.set(e.id, e), C.set(e.guild_id, e.application_id), null !== (t = e.subscription_listings) && void 0 !== t ? t : [])) L(n);
 }
 function L(e) {
 	g.set(e.id, e);
@@ -84,10 +79,10 @@ class M extends (i = d.ZP.Store) {
 	getSubscriptionListingsForGuild(e) {
 		var t;
 		let n = null === (t = this.getSubscriptionGroupListingsForGuild(e)[0]) || void 0 === t ? void 0 : t.application_id;
-		return null != n ? g.values(I(n)) : b;
+		return null != n ? g.values(m(n)) : b;
 	}
 	getSubscriptionListingForPlan(e) {
-		let t = g.values(m(e));
+		let t = g.values(I(e));
 		return c()(t.length <= 1, 'Found multiple listings for plan'), t[0];
 	}
 	getSubscriptionSettings(e) {

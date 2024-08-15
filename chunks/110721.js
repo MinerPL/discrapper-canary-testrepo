@@ -1,52 +1,13 @@
 var t = i(799761),
 	n = {
 		narrow: ['T', 'H', 'M', 'H', 'T', 'K', 'H', 'E', 'S', 'L', 'M', 'J'],
-		abbreviated: [
-			'tammi',
-			'helmi',
-			'maalis',
-			'huhti',
-			'touko',
-			'kesä',
-			'heinä',
-			'elo',
-			'syys',
-			'loka',
-			'marras',
-			'joulu'
-		],
-		wide: [
-			'tammikuu',
-			'helmikuu',
-			'maaliskuu',
-			'huhtikuu',
-			'toukokuu',
-			'kesäkuu',
-			'heinäkuu',
-			'elokuu',
-			'syyskuu',
-			'lokakuu',
-			'marraskuu',
-			'joulukuu'
-		]
+		abbreviated: ['tammi', 'helmi', 'maalis', 'huhti', 'touko', 'kesä', 'heinä', 'elo', 'syys', 'loka', 'marras', 'joulu'],
+		wide: ['tammikuu', 'helmikuu', 'maaliskuu', 'huhtikuu', 'toukokuu', 'kesäkuu', 'heinäkuu', 'elokuu', 'syyskuu', 'lokakuu', 'marraskuu', 'joulukuu']
 	},
 	u = {
 		narrow: n.narrow,
 		abbreviated: n.abbreviated,
-		wide: [
-			'tammikuuta',
-			'helmikuuta',
-			'maaliskuuta',
-			'huhtikuuta',
-			'toukokuuta',
-			'kesäkuuta',
-			'heinäkuuta',
-			'elokuuta',
-			'syyskuuta',
-			'lokakuuta',
-			'marraskuuta',
-			'joulukuuta'
-		]
+		wide: ['tammikuuta', 'helmikuuta', 'maaliskuuta', 'huhtikuuta', 'toukokuuta', 'kesäkuuta', 'heinäkuuta', 'elokuuta', 'syyskuuta', 'lokakuuta', 'marraskuuta', 'joulukuuta']
 	},
 	o = {
 		narrow: ['S', 'M', 'T', 'K', 'T', 'P', 'L'],

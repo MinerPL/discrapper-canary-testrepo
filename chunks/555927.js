@@ -15,14 +15,7 @@ var i = n(735250),
 	c = n(981631),
 	d = n(689938);
 function u(e) {
-	let {
-			priorityMembers: t,
-			otherMembers: n,
-			totalMembers: a,
-			activity: r,
-			guildId: u,
-			sourceAnalyticsLocations: _
-		} = e,
+	let { priorityMembers: t, otherMembers: n, totalMembers: a, activity: r, guildId: u, sourceAnalyticsLocations: _ } = e,
 		E = [];
 	for (let { user: e, status: n } of t)
 		E.push(
@@ -103,8 +96,7 @@ function _(e) {
 	if (l.length <= 1 && 0 === h.length) {
 		var m, I;
 		return (0, i.jsx)(s.MenuGroup, {
-			label:
-				n.length > 1 ? d.Z.Messages.ACTIVITY_FEED_SINGLE_MEMBER_LIST_HEADER.format({ memberCount: n.length }) : void 0,
+			label: n.length > 1 ? d.Z.Messages.ACTIVITY_FEED_SINGLE_MEMBER_LIST_HEADER.format({ memberCount: n.length }) : void 0,
 			children: u({
 				priorityMembers: t,
 				otherMembers: _,

@@ -9,7 +9,7 @@ n.d(t, {
 		return u;
 	},
 	FO: function () {
-		return I;
+		return m;
 	},
 	J_: function () {
 		return c;
@@ -42,7 +42,7 @@ n.d(t, {
 		return i;
 	},
 	wz: function () {
-		return m;
+		return I;
 	},
 	zU: function () {
 		return h;
@@ -50,12 +50,7 @@ n.d(t, {
 });
 var r = n(686942),
 	i = function (e, t, n, r, i, a) {
-		return (
-			void 0 === r && (r = 0),
-			void 0 === i && (i = 0),
-			void 0 === a && (a = 0),
-			new Date(Date.UTC(e, t - 1, n, r, i, a))
-		);
+		return void 0 === r && (r = 0), void 0 === i && (i = 0), void 0 === a && (a = 0), new Date(Date.UTC(e, t - 1, n, r, i, a));
 	},
 	a = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
 	s = 9999,
@@ -88,28 +83,15 @@ var r = n(686942),
 		var t = e.getUTCMonth();
 		return 1 === t && u(e.getUTCFullYear()) ? 29 : a[t];
 	},
-	I = function (e) {
+	m = function (e) {
 		return l[e.getUTCDay()];
 	},
-	m = function (e, t) {
+	I = function (e, t) {
 		var n = i(e, t + 1, 1);
-		return [I(n), p(n)];
+		return [m(n), p(n)];
 	},
 	T = function (e, t) {
-		return (
-			(t = t || e),
-			new Date(
-				Date.UTC(
-					e.getUTCFullYear(),
-					e.getUTCMonth(),
-					e.getUTCDate(),
-					t.getHours(),
-					t.getMinutes(),
-					t.getSeconds(),
-					t.getMilliseconds()
-				)
-			)
-		);
+		return (t = t || e), new Date(Date.UTC(e.getUTCFullYear(), e.getUTCMonth(), e.getUTCDate(), t.getHours(), t.getMinutes(), t.getSeconds(), t.getMilliseconds()));
 	},
 	g = function (e) {
 		return new Date(e.getTime());
@@ -126,30 +108,12 @@ var r = n(686942),
 	N = function (e, t) {
 		void 0 === t && (t = !0);
 		var n = new Date(e);
-		return [
-			(0, r.Sk)(n.getUTCFullYear().toString(), 4, '0'),
-			(0, r.Sk)(n.getUTCMonth() + 1, 2, '0'),
-			(0, r.Sk)(n.getUTCDate(), 2, '0'),
-			'T',
-			(0, r.Sk)(n.getUTCHours(), 2, '0'),
-			(0, r.Sk)(n.getUTCMinutes(), 2, '0'),
-			(0, r.Sk)(n.getUTCSeconds(), 2, '0'),
-			t ? 'Z' : ''
-		].join('');
+		return [(0, r.Sk)(n.getUTCFullYear().toString(), 4, '0'), (0, r.Sk)(n.getUTCMonth() + 1, 2, '0'), (0, r.Sk)(n.getUTCDate(), 2, '0'), 'T', (0, r.Sk)(n.getUTCHours(), 2, '0'), (0, r.Sk)(n.getUTCMinutes(), 2, '0'), (0, r.Sk)(n.getUTCSeconds(), 2, '0'), t ? 'Z' : ''].join('');
 	},
 	v = function (e) {
 		var t = /^(\d{4})(\d{2})(\d{2})(T(\d{2})(\d{2})(\d{2})Z?)?$/.exec(e);
 		if (!t) throw Error('Invalid UNTIL value: '.concat(e));
-		return new Date(
-			Date.UTC(
-				parseInt(t[1], 10),
-				parseInt(t[2], 10) - 1,
-				parseInt(t[3], 10),
-				parseInt(t[5], 10) || 0,
-				parseInt(t[6], 10) || 0,
-				parseInt(t[7], 10) || 0
-			)
-		);
+		return new Date(Date.UTC(parseInt(t[1], 10), parseInt(t[2], 10) - 1, parseInt(t[3], 10), parseInt(t[5], 10) || 0, parseInt(t[6], 10) || 0, parseInt(t[7], 10) || 0));
 	},
 	O = function (e, t) {
 		return e.toLocaleString('sv-SE', { timeZone: t }).replace(' ', 'T') + 'Z';

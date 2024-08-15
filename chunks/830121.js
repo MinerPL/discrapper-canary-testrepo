@@ -37,8 +37,8 @@ var _ = n(701190),
 	f = n(591759),
 	h = n(960904),
 	p = n(981631);
-let I = /^\/([a-zA-Z0-9-]+)$/,
-	m = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
+let m = /^\/([a-zA-Z0-9-]+)$/,
+	I = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
 	T = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?$/,
 	g = RegExp('^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?'),
 	S = /^\/application-directory\/([0-9-]+)\/?$/,
@@ -55,13 +55,7 @@ let I = /^\/([a-zA-Z0-9-]+)$/,
 	M = G('//ptb.'.concat(p.$R1)),
 	P = G('discordapp.com'),
 	U = G('discord.com'),
-	w = [
-		E.Z.escape(null !== (i = y.host) && void 0 !== i ? i : ''),
-		E.Z.escape(null !== (a = D.host) && void 0 !== a ? a : ''),
-		E.Z.escape(null !== (s = L.host) && void 0 !== s ? s : ''),
-		E.Z.escape(null !== (o = P.host) && void 0 !== o ? o : ''),
-		E.Z.escape(null !== (l = U.host) && void 0 !== l ? l : '')
-	].filter(Boolean),
+	w = [E.Z.escape(null !== (i = y.host) && void 0 !== i ? i : ''), E.Z.escape(null !== (a = D.host) && void 0 !== a ? a : ''), E.Z.escape(null !== (s = L.host) && void 0 !== s ? s : ''), E.Z.escape(null !== (o = P.host) && void 0 !== o ? o : ''), E.Z.escape(null !== (l = U.host) && void 0 !== l ? l : '')].filter(Boolean),
 	x = RegExp('((https?://[^ ]*)|^|[^/][^/.])('.concat(w.join('|'), ')'), 'g');
 function G(e) {
 	if (null == e)
@@ -92,15 +86,7 @@ function k(e, t) {
 }
 function B(e) {
 	var t, n, r, i;
-	return null !==
-		(i =
-			null !==
-				(r = null !== (n = null !== (t = k(L, e)) && void 0 !== t ? t : k(b, e)) && void 0 !== n ? n : k(M, e)) &&
-			void 0 !== r
-				? r
-				: k(P, e)) && void 0 !== i
-		? i
-		: k(U, e);
+	return null !== (i = null !== (r = null !== (n = null !== (t = k(L, e)) && void 0 !== t ? t : k(b, e)) && void 0 !== n ? n : k(M, e)) && void 0 !== r ? r : k(P, e)) && void 0 !== i ? i : k(U, e);
 }
 function F(e) {
 	var t, n, r, i;
@@ -114,16 +100,7 @@ function F(e) {
 		};
 	let s = k(y, a),
 		o = k(D, a),
-		l =
-			null !==
-				(i =
-					null !==
-						(r = null !== (n = null !== (t = k(L, a)) && void 0 !== t ? t : k(b, a)) && void 0 !== n ? n : k(M, a)) &&
-					void 0 !== r
-						? r
-						: k(P, a)) && void 0 !== i
-				? i
-				: k(U, a);
+		l = null !== (i = null !== (r = null !== (n = null !== (t = k(L, a)) && void 0 !== t ? t : k(b, a)) && void 0 !== n ? n : k(M, a)) && void 0 !== r ? r : k(P, a)) && void 0 !== i ? i : k(U, a);
 	return {
 		url: a,
 		inviteHostRemainingPath: s,
@@ -150,12 +127,12 @@ function V(e) {
 					code: r
 				}));
 		};
-		if ((null == i ? void 0 : i.match(I)) != null) {
+		if ((null == i ? void 0 : i.match(m)) != null) {
 			let e = (0, d.mb)(i.substring(1), r.search);
 			_.Z.getInvite(e);
 			o(h.g.INVITE, e);
 		}
-		(null == a ? void 0 : a.match(I)) != null && o(h.g.TEMPLATE, a.substring(1));
+		(null == a ? void 0 : a.match(m)) != null && o(h.g.TEMPLATE, a.substring(1));
 		let l = null == s ? void 0 : s.match(T);
 		if (null != l) {
 			let e = l[1].toUpperCase();
@@ -164,7 +141,7 @@ function V(e) {
 				o(h.g.INVITE, e);
 			} else o(e, l[2]);
 		}
-		(null == s ? void 0 : s.match(m)) != null && o(h.g.CHANNEL_LINK, s.replace('/channels/', ''));
+		(null == s ? void 0 : s.match(I)) != null && o(h.g.CHANNEL_LINK, s.replace('/channels/', ''));
 		let u = (function (e) {
 			if (null == e) return null;
 			let t = e.match(g);
@@ -176,11 +153,7 @@ function V(e) {
 					}
 				: null;
 		})(r.pathname);
-		null != u &&
-			o(
-				h.g.EVENT,
-				''.concat(u.guildId, '-').concat(u.guildEventId) + (null != u.recurrenceId ? '-'.concat(u.recurrenceId) : '')
-			);
+		null != u && o(h.g.EVENT, ''.concat(u.guildId, '-').concat(u.guildEventId) + (null != u.recurrenceId ? '-'.concat(u.recurrenceId) : ''));
 		let E = null == s ? void 0 : s.match(S);
 		if (null != E) {
 			let e = E[1];

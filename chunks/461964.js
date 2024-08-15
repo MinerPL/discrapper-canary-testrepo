@@ -75,9 +75,7 @@ function f(e) {
 						}),
 						(0, c.jsx)(i.Text, {
 							variant: 'text-md/normal',
-							children: d.Z.Messages.KEYBOARD_SHORTCUTS_EXPLAINER_HELP_CENTER_LINK.format({
-								link: s.Z.getArticleURL(u.BhN.KEYBOARD_NAVIGATION)
-							})
+							children: d.Z.Messages.KEYBOARD_SHORTCUTS_EXPLAINER_HELP_CENTER_LINK.format({ link: s.Z.getArticleURL(u.BhN.KEYBOARD_NAVIGATION) })
 						})
 					]
 				}),

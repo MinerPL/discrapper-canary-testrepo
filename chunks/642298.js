@@ -77,8 +77,7 @@ function O(e) {
 							setEmailToken: D,
 							isSlideReady: j === S.Ax.CONFIRM_CODE,
 							onNext: () => {
-								E.Z.trackExposure({ location: 'change_email_confirm_code_slide' }),
-									G(y ? S.Ax.CHANGE_EMAIL_REASONS : S.Ax.EMAIL_AND_PASSWORD);
+								E.Z.trackExposure({ location: 'change_email_confirm_code_slide' }), G(y ? S.Ax.CHANGE_EMAIL_REASONS : S.Ax.EMAIL_AND_PASSWORD);
 							},
 							onClose: O
 						})
@@ -88,10 +87,7 @@ function O(e) {
 						impressionName: a.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_COLLECT_REASONS,
 						impressionProperties: K,
 						children: (0, t.jsx)(d.Z, {
-							onNext: () => (
-								N.default.track(m.rMx.USER_ACCOUNT_EMAIL_CHANGE_REASON_CONTINUE, { change_email_reason_enum: P }),
-								null != P && I.Mr.has(P) ? G(S.Ax.CHANGE_EMAIL_WARNING) : G(S.Ax.EMAIL_AND_PASSWORD)
-							),
+							onNext: () => (N.default.track(m.rMx.USER_ACCOUNT_EMAIL_CHANGE_REASON_CONTINUE, { change_email_reason_enum: P }), null != P && I.Mr.has(P) ? G(S.Ax.CHANGE_EMAIL_WARNING) : G(S.Ax.EMAIL_AND_PASSWORD)),
 							onClose: O,
 							reason: P,
 							onReasonChange: b
@@ -103,8 +99,7 @@ function O(e) {
 						impressionProperties: K,
 						children: (0, t.jsx)(M.Z, {
 							onNext: () => {
-								N.default.track(m.rMx.USER_ACCOUNT_EMAIL_CHANGE_WARNING_CONTINUE, { change_email_reason_enum: P }),
-									G(S.Ax.EMAIL_AND_PASSWORD);
+								N.default.track(m.rMx.USER_ACCOUNT_EMAIL_CHANGE_WARNING_CONTINUE, { change_email_reason_enum: P }), G(S.Ax.EMAIL_AND_PASSWORD);
 							},
 							onClose: O
 						})
@@ -121,9 +116,7 @@ function O(e) {
 							isSlideReady: j === S.Ax.EMAIL_AND_PASSWORD,
 							onBack: f
 								? () => {
-										y
-											? G(null != P && I.Mr.has(P) ? S.Ax.CHANGE_EMAIL_WARNING : S.Ax.CHANGE_EMAIL_REASONS)
-											: G(S.Ax.CONFIRM_CODE);
+										y ? G(null != P && I.Mr.has(P) ? S.Ax.CHANGE_EMAIL_WARNING : S.Ax.CHANGE_EMAIL_REASONS) : G(S.Ax.CONFIRM_CODE);
 									}
 								: null,
 							onNext: (e) => {

@@ -53,17 +53,7 @@ class i {
 		(this._callback = null), null != this._timeoutId && (clearTimeout(this._timeoutId), (this._timeoutId = null));
 	}
 	constructor(e = 500, t = null, n = !0) {
-		if (
-			(r(this, 'min', void 0),
-			r(this, 'max', void 0),
-			r(this, 'jitter', void 0),
-			r(this, '_current', void 0),
-			r(this, '_timeoutId', void 0),
-			r(this, '_callback', void 0),
-			r(this, '_fails', 0),
-			e <= 0)
-		)
-			throw Error('Backoff min value must be greater than zero or backoff will never back-off.');
+		if ((r(this, 'min', void 0), r(this, 'max', void 0), r(this, 'jitter', void 0), r(this, '_current', void 0), r(this, '_timeoutId', void 0), r(this, '_callback', void 0), r(this, '_fails', 0), e <= 0)) throw Error('Backoff min value must be greater than zero or backoff will never back-off.');
 		(this.min = e), (this.max = null != t ? t : 10 * e), (this.jitter = n), (this._current = e);
 	}
 }

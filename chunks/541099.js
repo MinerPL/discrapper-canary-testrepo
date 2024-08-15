@@ -55,14 +55,7 @@ function f() {
 	(t.Z = new _(l.Z, {
 		APP_LAUNCHER_SHOW: function (e) {
 			let { entrypoint: t, activeViewType: n } = e;
-			return (
-				(c.show = !0),
-				(c.entrypoint = t),
-				(c.lastShownEntrypoint = t),
-				(c.closeReason = u.ti.DISMISSED),
-				(c.activeViewType = n),
-				!0
-			);
+			return (c.show = !0), (c.entrypoint = t), (c.lastShownEntrypoint = t), (c.closeReason = u.ti.DISMISSED), (c.activeViewType = n), !0;
 		},
 		APP_LAUNCHER_DISMISS: d,
 		CONNECTION_OPEN: E,

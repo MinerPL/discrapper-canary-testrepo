@@ -63,9 +63,7 @@ function S(e) {
 			for (let e of A)
 				!E.Z.isFetchingSKU(e) &&
 					(0, u.x2)(t, e, S, { isGift: s }).catch((t) => {
-						t instanceof l.HF &&
-							(t.code === o.SM.BILLING_BUNDLE_ALREADY_PURCHASED || t.code === o.SM.BILLING_BUNDLE_PARTIALLY_OWNED) &&
-							I(e, t);
+						t instanceof l.HF && (t.code === o.SM.BILLING_BUNDLE_ALREADY_PURCHASED || t.code === o.SM.BILLING_BUNDLE_PARTIALLY_OWNED) && I(e, t);
 					});
 		}, [t, A, S, s, I]),
 		{

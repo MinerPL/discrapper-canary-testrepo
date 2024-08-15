@@ -29,9 +29,9 @@ let h = (e) =>
 function p(e) {
 	let { isVisible: t, isExpandable: n, onClose: i } = e,
 		{ analyticsLocations: p } = (0, u.ZP)(),
-		{ trackUserProfileAction: I } = (0, _.KZ)(),
-		[m, T] = (0, s.Wu)([l.Z], () => [l.Z.useReducedMotion, l.Z.keyboardModeEnabled]),
-		g = !n || m || T ? 0 : 300;
+		{ trackUserProfileAction: m } = (0, _.KZ)(),
+		[I, T] = (0, s.Wu)([l.Z], () => [l.Z.useReducedMotion, l.Z.keyboardModeEnabled]),
+		g = !n || I || T ? 0 : 300;
 	return (0, r.jsxs)(c.ZP, {
 		className: a()(f.popover, {
 			[f.visible]: t,
@@ -47,7 +47,7 @@ function p(e) {
 					className: a()(f.button, f.left),
 					'aria-label': E.Z.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_A11Y_LABEL,
 					onClick: () => {
-						I({ action: 'PRESS_EDIT_CUSTOM_STATUS' }), h(p), null == i || i();
+						m({ action: 'PRESS_EDIT_CUSTOM_STATUS' }), h(p), null == i || i();
 					},
 					children: (0, r.jsx)(o.PencilIcon, {
 						size: 'xs',
@@ -64,7 +64,7 @@ function p(e) {
 					className: a()(f.button, f.right),
 					'aria-label': E.Z.Messages.CUSTOM_STATUS_CLEAR_CUSTOM_STATUS_A11Y_LABEL,
 					onClick: () => {
-						I({ action: 'PRESS_CLEAR_CUSTOM_STATUS' }), d.Ok.updateSetting(void 0);
+						m({ action: 'PRESS_CLEAR_CUSTOM_STATUS' }), d.Ok.updateSetting(void 0);
 					},
 					children: (0, r.jsx)(o.TrashIcon, {
 						size: 'xs',

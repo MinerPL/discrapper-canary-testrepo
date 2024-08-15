@@ -97,14 +97,7 @@ let A = (e) => {
 				})
 			: null;
 	},
-	Z = (e, t, n) =>
-		e
-			? x.Z.Messages.CHANGE_PFX_MODAL_PREVIEW_STARTER_CHURNED
-			: t && n
-				? x.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM
-				: t && !n
-					? x.Z.Messages.CHANGE_PFX_MODAL_PREVIEW_STARTER
-					: x.Z.Messages.CHANGE_PROFILE_EFFECT_MODAL_PREVIEW_PURCHASE_PREMIUM;
+	Z = (e, t, n) => (e ? x.Z.Messages.CHANGE_PFX_MODAL_PREVIEW_STARTER_CHURNED : t && n ? x.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM : t && !n ? x.Z.Messages.CHANGE_PFX_MODAL_PREVIEW_STARTER : x.Z.Messages.CHANGE_PROFILE_EFFECT_MODAL_PREVIEW_PURCHASE_PREMIUM);
 t.Z = (e) => {
 	var t;
 	let { user: n, pendingProfileEffectRecord: i, canApplySelectedChange: a, product: o, purchase: p, guild: I } = e,

@@ -12,8 +12,7 @@ let E = {},
 	f = !1;
 function h() {
 	var e, t, n;
-	(f = null !== (n = null === (e = c.Z.settings.favorites) || void 0 === e ? void 0 : e.muted) && void 0 !== n && n),
-		(E = {});
+	(f = null !== (n = null === (e = c.Z.settings.favorites) || void 0 === e ? void 0 : e.muted) && void 0 !== n && n), (E = {});
 	let r = null === (t = c.Z.settings.favorites) || void 0 === t ? void 0 : t.favoriteChannels;
 	if (null == r) return !1;
 	for (let e in r) {

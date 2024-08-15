@@ -19,8 +19,8 @@ var i = n(735250),
 	_ = n(695346),
 	f = n(768119),
 	E = n(944486),
-	g = n(585483),
-	C = n(251285),
+	C = n(585483),
+	g = n(251285),
 	I = n(406326),
 	x = n(994463),
 	T = n(619753),
@@ -45,8 +45,7 @@ class A extends a.Component {
 		this.autoAnalytics();
 	}
 	componentDidUpdate(e) {
-		(this.props.searchAnalyticsId !== e.searchAnalyticsId || this.props.searchOffset !== e.searchOffset) &&
-			this.autoAnalytics(e.searchAnalyticsId);
+		(this.props.searchAnalyticsId !== e.searchAnalyticsId || this.props.searchOffset !== e.searchOffset) && this.autoAnalytics(e.searchAnalyticsId);
 	}
 	render() {
 		return null;
@@ -67,9 +66,7 @@ class A extends a.Component {
 						.flatten()
 						.filter((e) => e.isSearchHit)
 						.forEach((e) => {
-							null != e.content && '' !== e.content && (n++, /https?:\/\/[^\s]+/.test(e.content) && s++),
-								null != e.embeds && e.embeds.length > 0 && a++,
-								null != e.attachments && e.attachments.length > 0 && i++;
+							null != e.content && '' !== e.content && (n++, /https?:\/\/[^\s]+/.test(e.content) && s++), null != e.embeds && e.embeds.length > 0 && a++, null != e.attachments && e.attachments.length > 0 && i++;
 						}),
 					m.ZP.trackWithMetadata(N.rMx.SEARCH_RESULT_VIEWED, {
 						search_type: t.props.searchType,
@@ -102,10 +99,10 @@ let M = (e) => {
 };
 class b extends a.PureComponent {
 	componentDidMount() {
-		g.S.subscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
+		C.S.subscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
 	}
 	componentWillUnmount() {
-		g.S.unsubscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
+		C.S.unsubscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
 	}
 	componentDidUpdate(e) {
 		let { search: t } = e;
@@ -226,10 +223,7 @@ class b extends a.PureComponent {
 				});
 			}),
 			Z(this, 'renderIndexing', () => {
-				let e =
-					f.Z.getSearchType(this.props.searchId) === N.aib.GUILD
-						? v.Z.Messages.SEARCH_GUILD_STILL_INDEXING
-						: v.Z.Messages.SEARCH_DM_STILL_INDEXING;
+				let e = f.Z.getSearchType(this.props.searchId) === N.aib.GUILD ? v.Z.Messages.SEARCH_GUILD_STILL_INDEXING : v.Z.Messages.SEARCH_DM_STILL_INDEXING;
 				return (0, i.jsxs)(M, {
 					children: [
 						(0, i.jsx)(x.Z, {}),
@@ -300,7 +294,7 @@ function R(e) {
 			}),
 			[t]
 		),
-		...(0, C.Z)(t),
+		...(0, g.Z)(t),
 		renderEmbeds: _.NA.useSetting(),
 		developerMode: _.Sb.useSetting(),
 		...(0, c.cj)([p.Z], () => {

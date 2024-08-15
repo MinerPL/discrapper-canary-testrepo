@@ -26,22 +26,7 @@ var i = t(735250),
 	f = t(503899);
 function C(e) {
 	var n, t, s, C, O, x, S;
-	let {
-			name: A,
-			icon: R,
-			imageSrc: b,
-			iconBackgroundColor: Z,
-			iconClassName: v,
-			details: M,
-			integration: L,
-			buttonText: j,
-			buttonDisabled: D,
-			hasNextSection: P,
-			onButtonClick: B,
-			guildId: y,
-			isScrolling: G,
-			canShowMigrationTooltip: k
-		} = e,
+	let { name: A, icon: R, imageSrc: b, iconBackgroundColor: Z, iconClassName: v, details: M, integration: L, buttonText: j, buttonDisabled: D, hasNextSection: P, onButtonClick: B, guildId: y, isScrolling: G, canShowMigrationTooltip: k } = e,
 		[U, H] = a.useState(!1),
 		[w, W] = a.useState(!1);
 	let F =
@@ -108,27 +93,10 @@ function C(e) {
 			: F,
 		Y = (0, o.Wu)([m.Z], () => {
 			var e;
-			return null != L &&
-				null != y &&
-				null !== (e = m.Z.getApplicationEntitlementsForGuild(L.application.id, y)) &&
-				void 0 !== e
-				? e
-				: [];
+			return null != L && null != y && null !== (e = m.Z.getApplicationEntitlementsForGuild(L.application.id, y)) && void 0 !== e ? e : [];
 		}),
 		z = (0, u.LD)(y, !0),
-		q =
-			(null == L ? void 0 : L.application) != null &&
-			Object.keys(
-				null !==
-					(s =
-						null === (t = z.result) || void 0 === t
-							? void 0
-							: null === (n = t.sections[L.application.id]) || void 0 === n
-								? void 0
-								: n.commands) && void 0 !== s
-					? s
-					: {}
-			).length > 0,
+		q = (null == L ? void 0 : L.application) != null && Object.keys(null !== (s = null === (t = z.result) || void 0 === t ? void 0 : null === (n = t.sections[L.application.id]) || void 0 === n ? void 0 : n.commands) && void 0 !== s ? s : {}).length > 0,
 		X = (0, i.jsxs)(I.Z, {
 			children: [
 				(0, i.jsx)(T.Z, {
@@ -159,9 +127,7 @@ function C(e) {
 												d.TooltipContainer,
 												{
 													forceOpen: n,
-													text: new N.Z(l.bot).isVerifiedBot()
-														? p.Z.Messages.INTEGRATIONS_APPLICATION_VERIFIED_BOT
-														: p.Z.Messages.INTEGRATIONS_APPLICATION_BOT,
+													text: new N.Z(l.bot).isVerifiedBot() ? p.Z.Messages.INTEGRATIONS_APPLICATION_VERIFIED_BOT : p.Z.Messages.INTEGRATIONS_APPLICATION_BOT,
 													className: f.feature,
 													children: (0, i.jsx)(d.RobotIcon, {
 														size: 'md',
@@ -189,11 +155,7 @@ function C(e) {
 												'webhooks'
 											)
 										),
-									(null == o
-										? void 0
-										: null === (a = o.scopes) || void 0 === a
-											? void 0
-											: a.includes(r.x.APPLICATIONS_COMMANDS)) === !0 &&
+									(null == o ? void 0 : null === (a = o.scopes) || void 0 === a ? void 0 : a.includes(r.x.APPLICATIONS_COMMANDS)) === !0 &&
 										t &&
 										s.push(
 											(0, i.jsx)(

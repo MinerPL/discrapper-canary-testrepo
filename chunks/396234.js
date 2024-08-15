@@ -60,9 +60,7 @@ function _(e, t) {
 				n && !e.transaction && 'transaction' === e.type && (e.transaction = n);
 			})(e, _),
 		(function (e, t) {
-			(e.fingerprint = e.fingerprint ? (0, a.lE)(e.fingerprint) : []),
-				t && (e.fingerprint = e.fingerprint.concat(t)),
-				e.fingerprint && !e.fingerprint.length && delete e.fingerprint;
+			(e.fingerprint = e.fingerprint ? (0, a.lE)(e.fingerprint) : []), t && (e.fingerprint = e.fingerprint.concat(t)), e.fingerprint && !e.fingerprint.length && delete e.fingerprint;
 		})(e, r),
 		(function (e, t) {
 			let r = [...(e.breadcrumbs || []), ...t];
@@ -76,21 +74,7 @@ function _(e, t) {
 		})(e, s);
 }
 function E(e, t) {
-	let {
-		extra: r,
-		tags: n,
-		user: a,
-		contexts: o,
-		level: i,
-		sdkProcessingMetadata: _,
-		breadcrumbs: E,
-		fingerprint: c,
-		eventProcessors: I,
-		attachments: u,
-		propagationContext: l,
-		transactionName: R,
-		span: A
-	} = t;
+	let { extra: r, tags: n, user: a, contexts: o, level: i, sdkProcessingMetadata: _, breadcrumbs: E, fingerprint: c, eventProcessors: I, attachments: u, propagationContext: l, transactionName: R, span: A } = t;
 	s(e, 'extra', r),
 		s(e, 'tags', n),
 		s(e, 'user', a),
@@ -109,6 +93,5 @@ function E(e, t) {
 		});
 }
 function s(e, t, r) {
-	if (r && Object.keys(r).length)
-		for (let n in ((e[t] = { ...e[t] }), r)) Object.prototype.hasOwnProperty.call(r, n) && (e[t][n] = r[n]);
+	if (r && Object.keys(r).length) for (let n in ((e[t] = { ...e[t] }), r)) Object.prototype.hasOwnProperty.call(r, n) && (e[t][n] = r[n]);
 }

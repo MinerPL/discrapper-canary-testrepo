@@ -49,7 +49,7 @@ function p() {
 	}
 	null != i ? a.K.set(s.B1, i) : a.K.remove(s.B1), a.K.set(s.XM, E);
 }
-function I(e) {
+function m(e) {
 	return null == e || 0 === e.length
 		? {
 				decryptedToken: null,
@@ -65,22 +65,20 @@ function I(e) {
 					wasEncrypted: !1
 				};
 }
-function m(e) {
-	return (null == u ? void 0 : u.isEncryptionAvailable()) && !e.startsWith(o)
-		? ''.concat(o).concat(u.encryptString(e))
-		: e;
+function I(e) {
+	return (null == u ? void 0 : u.isEncryptionAvailable()) && !e.startsWith(o) ? ''.concat(o).concat(u.encryptString(e)) : e;
 }
 function T() {
 	if (h) return;
 	(i = a.K.get(s.B1)), (E = a.K.get(s.XM) || {});
-	let { decryptedToken: e, wasEncrypted: t } = I(i);
+	let { decryptedToken: e, wasEncrypted: t } = m(i);
 	(d = t),
 		(r = e),
 		(_ = l(
 			Object.entries(E)
 				.map((e) => {
 					let [t, n] = e,
-						{ decryptedToken: r, wasEncrypted: i } = I(n);
+						{ decryptedToken: r, wasEncrypted: i } = m(n);
 					return (d = i || d), [t, r];
 				})
 				.filter((e) => {
@@ -112,11 +110,11 @@ function v(e) {
 }
 function O() {
 	(null == u ? void 0 : u.isEncryptionAvailable())
-		? (null != r && (i = m(r)),
+		? (null != r && (i = I(r)),
 			(E = l(
 				Object.entries(_).map((e) => {
 					let [t, n] = e;
-					return [t, m(n)];
+					return [t, I(n)];
 				})
 			)),
 			(d = !0))

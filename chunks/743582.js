@@ -52,9 +52,7 @@ function S(e) {
 					(0, n.jsx)(t.Heading, {
 						id: M,
 						variant: 'heading-md/semibold',
-						children: D
-							? I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_TITLE
-							: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE
+						children: D ? I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_TITLE : I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE
 					}),
 					(0, n.jsx)(t.ModalCloseButton, {
 						className: d.closeButton,
@@ -68,9 +66,7 @@ function S(e) {
 					D
 						? (0, n.jsxs)(n.Fragment, {
 								children: [
-									(0, n.jsx)(t.FormText, {
-										children: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION
-									}),
+									(0, n.jsx)(t.FormText, { children: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION }),
 									(0, n.jsx)(t.Spacer, { size: 8 }),
 									(0, n.jsxs)(t.Heading, {
 										className: d.warningHeading,
@@ -92,16 +88,11 @@ function S(e) {
 									})
 								]
 							})
-						: (0, n.jsx)(t.FormText, {
-								children:
-									I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_DESCRIPTION
-							}),
+						: (0, n.jsx)(t.FormText, { children: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_DESCRIPTION }),
 					null != R ? (0, n.jsx)(t.FormErrorBlock, { children: R.message }) : null,
 					(0, n.jsx)(t.Spacer, { size: 16 }),
 					(0, n.jsx)(t.FormItem, {
-						title: D
-							? I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TO_TRANSFER_LABEL
-							: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_LABEL,
+						title: D ? I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TO_TRANSFER_LABEL : I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_LABEL,
 						required: !0,
 						children: (0, n.jsx)(t.SingleSelect, {
 							className: d.__invalid_teamSelect,

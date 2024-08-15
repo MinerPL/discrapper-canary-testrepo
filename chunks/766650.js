@@ -21,13 +21,7 @@ function h(e) {
 	r.useEffect(() => {
 		function e() {
 			var e, s;
-			m(
-				t &&
-					null !== (s = null === (e = h.current) || void 0 === e ? void 0 : e.getBoundingClientRect().width) &&
-					void 0 !== s
-					? s
-					: 0
-			);
+			m(t && null !== (s = null === (e = h.current) || void 0 === e ? void 0 : e.getBoundingClientRect().width) && void 0 !== s ? s : 0);
 		}
 		return e(), window.addEventListener('resize', e), () => window.removeEventListener('resize', e);
 	}, [t, s, i]);

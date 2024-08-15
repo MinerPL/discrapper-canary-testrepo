@@ -32,13 +32,7 @@ function _(e) {
 			}, []);
 			let n = (0, l.Wu)([d.Z], () => {
 					var e, n;
-					return null !==
-						(n =
-							null === (e = d.Z.getApps()) || void 0 === e
-								? void 0
-								: e.filter((e) => e.scopes.includes(a.x.APPLICATIONS_COMMANDS))) && void 0 !== n
-						? n
-						: [];
+					return null !== (n = null === (e = d.Z.getApps()) || void 0 === e ? void 0 : e.filter((e) => e.scopes.includes(a.x.APPLICATIONS_COMMANDS))) && void 0 !== n ? n : [];
 				}),
 				t = e.filter((e) => e.id !== u.bi.FRECENCY && e.id !== u.bi.BUILT_IN);
 			return (0, c.h)(t, n);

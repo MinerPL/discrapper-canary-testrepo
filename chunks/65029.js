@@ -13,28 +13,17 @@ let _ = (e) => {
 	return (0, r.jsxs)('div', {
 		className: a()(d.badgeLabel, t === u.t0.TOP_GUILD_EMOJI ? d.topGuildEmojiBadge : d.newlyAddedBadge),
 		children: [
-			t === u.t0.TOP_GUILD_EMOJI
-				? (0, r.jsx)(o.Z, { foreground: d.newlyAddedBadgeIcon })
-				: (0, r.jsx)(l.Z, { foreground: d.newlyAddedBadgeIcon }),
+			t === u.t0.TOP_GUILD_EMOJI ? (0, r.jsx)(o.Z, { foreground: d.newlyAddedBadgeIcon }) : (0, r.jsx)(l.Z, { foreground: d.newlyAddedBadgeIcon }),
 			(0, r.jsx)(s.Text, {
 				variant: 'text-sm/semibold',
 				color: 'always-white',
-				children:
-					t === u.t0.TOP_GUILD_EMOJI ? c.Z.Messages.TOP_GUILD_EMOJI_BADGE : c.Z.Messages.NEWLY_ADDED_GUILD_EMOJI_BADGE
+				children: t === u.t0.TOP_GUILD_EMOJI ? c.Z.Messages.TOP_GUILD_EMOJI_BADGE : c.Z.Messages.NEWLY_ADDED_GUILD_EMOJI_BADGE
 			})
 		]
 	});
 };
 t.Z = (e) => {
-	let {
-		className: t,
-		graphicPrimary: n,
-		graphicSecondary: i,
-		titlePrimary: o,
-		titleSecondary: l,
-		isFavorite: E = !1,
-		emojiSubCategory: f = u.t0.NONE
-	} = e;
+	let { className: t, graphicPrimary: n, graphicSecondary: i, titlePrimary: o, titleSecondary: l, isFavorite: E = !1, emojiSubCategory: f = u.t0.NONE } = e;
 	return (0, r.jsxs)('div', {
 		className: a()(d.inspector, t),
 		children: [

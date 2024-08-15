@@ -34,10 +34,7 @@ function f(e) {
 		children:
 			o === g.ABu.PLAYSTATION
 				? (0, s.jsx)(r.T, {
-						colorClass: a()(
-							C.connectConsoleButton,
-							n ? C.playstationButtonConnected : C.connectConsoleButtonUnconnected
-						),
+						colorClass: a()(C.connectConsoleButton, n ? C.playstationButtonConnected : C.connectConsoleButtonUnconnected),
 						size: 'sm'
 					})
 				: (0, s.jsx)(l.M, {
@@ -114,8 +111,7 @@ function E(e) {
 										(0, s.jsx)(i.Text, {
 											color: 'header-secondary',
 											variant: 'text-xxs/normal',
-											children:
-												e.type === g.ABu.XBOX ? _.Z.Messages.QUESTS_XBOX_ID : _.Z.Messages.QUESTS_PSN_ONLINE_ID_V2
+											children: e.type === g.ABu.XBOX ? _.Z.Messages.QUESTS_XBOX_ID : _.Z.Messages.QUESTS_PSN_ONLINE_ID_V2
 										}),
 										(0, s.jsx)(i.Text, {
 											color: 'header-secondary',

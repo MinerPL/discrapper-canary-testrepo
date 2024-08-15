@@ -32,15 +32,13 @@ let _ = (e) => {
 			[l, u] = r.useState(!0);
 		return (
 			r.useEffect(() => {
-				l && (n === c.M.NOT_FETCHED || (n === c.M.FETCHED && c.Z.isGuildProductsCacheExpired(e))) && t && s.EB(e),
-					u(!t);
+				l && (n === c.M.NOT_FETCHED || (n === c.M.FETCHED && c.Z.isGuildProductsCacheExpired(e))) && t && s.EB(e), u(!t);
 			}, [e, t, n, l]),
 			{ listingsLoaded: n === c.M.FETCHED && !l }
 		);
 	},
 	f = function (e, n) {
-		let { requireCurrentGuild: t } =
-				arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { requireCurrentGuild: !0 },
+		let { requireCurrentGuild: t } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { requireCurrentGuild: !0 },
 			l = (0, i.e7)([o.Z], () => o.Z.isConnected()),
 			u = (0, i.e7)([a.Z], () => a.Z.getGuildId());
 		return (
@@ -56,9 +54,7 @@ let _ = (e) => {
 	},
 	E = function (e) {
 		let { publishedOnly: n } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-		return (0, i.e7)([c.Z, l.Z], () =>
-			c.Z.getGuildProductsForGuild(e, { publishedOnly: null != n ? n : !l.Z.isViewingServerShop(e) })
-		);
+		return (0, i.e7)([c.Z, l.Z], () => c.Z.getGuildProductsForGuild(e, { publishedOnly: null != n ? n : !l.Z.isViewingServerShop(e) }));
 	},
 	I = (e) => (0, i.e7)([c.Z], () => (null == e ? void 0 : c.Z.getGuildProduct(e))),
 	g = (e) => (0, i.e7)([u.Z], () => null != e && u.Z.can(d.Plq.ADMINISTRATOR, e));

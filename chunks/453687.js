@@ -53,9 +53,9 @@ function _(e, t, n) {
 		f = e.stickerItems.length > 0,
 		h = e.codedLinks.length > 0,
 		p = e.hasFlag(a.iLy.HAS_THREAD),
-		I = _ || E || f || h || p || e.type === a.uaV.THREAD_CREATED,
-		m = _ && e.content === e.embeds[0].url && e.embeds[0].type === a.hBH.GIFV,
-		T = e.type !== a.uaV.DEFAULT || (!m && '' !== e.content),
+		m = _ || E || f || h || p || e.type === a.uaV.THREAD_CREATED,
+		I = _ && e.content === e.embeds[0].url && e.embeds[0].type === a.hBH.GIFV,
+		T = e.type !== a.uaV.DEFAULT || (!I && '' !== e.content),
 		g = (0, i.Z)(e),
 		S = !g && (null == n ? void 0 : n.hasTimestamp) !== !1,
 		A = l(e, t),
@@ -65,7 +65,7 @@ function _(e, t, n) {
 		let t = s(e);
 		v += ' '.concat(t);
 	}
-	if (I) {
+	if (m) {
 		let t = d(e);
 		v += ' '.concat(t);
 	}

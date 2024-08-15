@@ -44,10 +44,7 @@ t.Z = function (e) {
 								(0, s.jsx)(l.Heading, {
 									variant: 'display-sm',
 									color: 'always-white',
-									children:
-										null == m || null == (0, u.he)(m)
-											? p.Z.Messages.BOGO_MARKETING_PAGE_BANNER_HEADER_2024
-											: p.Z.Messages.BOGO_MARKETING_PAGE_BANNER_NON_NITRO_HEADER_2024
+									children: null == m || null == (0, u.he)(m) ? p.Z.Messages.BOGO_MARKETING_PAGE_BANNER_HEADER_2024 : p.Z.Messages.BOGO_MARKETING_PAGE_BANNER_NON_NITRO_HEADER_2024
 								}),
 								(0, s.jsx)(l.Text, {
 									className: N.countdown,
@@ -57,9 +54,7 @@ t.Z = function (e) {
 								(0, s.jsx)(l.Text, {
 									variant: 'text-sm/medium',
 									color: 'always-white',
-									children: p.Z.Messages.BOGO_MARKETING_PAGE_BANNER_SUBHEADER_2024.format({
-										helpCenterLink: _.Z.getArticleURL(g.BhN.SUMMER_BOGO_2024)
-									})
+									children: p.Z.Messages.BOGO_MARKETING_PAGE_BANNER_SUBHEADER_2024.format({ helpCenterLink: _.Z.getArticleURL(g.BhN.SUMMER_BOGO_2024) })
 								})
 							]
 						}),

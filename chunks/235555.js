@@ -74,12 +74,7 @@ t.Z = l.ZP.connectStores([u.Z, h.default, E.Z, _.Z], () => {
 		i = u.Z.getActivity(),
 		a = h.default.getCurrentUser(),
 		s = [];
-	if (
-		(null != n
-			? ((e = h.default.getUser(n.userId)), (t = n.partyId))
-			: null != i && null != i.party && null != i.party.id && ((e = a), (t = i.party.id)),
-		null != t)
-	) {
+	if ((null != n ? ((e = h.default.getUser(n.userId)), (t = n.partyId)) : null != i && null != i.party && null != i.party.id && ((e = a), (t = i.party.id)), null != t)) {
 		var l;
 		s = r()(Array.from(null !== (l = _.Z.getParty(t)) && void 0 !== l ? l : []))
 			.map((e) => h.default.getUser(e))

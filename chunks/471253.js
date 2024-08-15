@@ -80,9 +80,7 @@ function I(e, n) {
 	s()(null != l, 'This channel cannot be guildless.');
 	let i = o.Z.getVoiceStateForChannel(e.id);
 	return (
-		(0, g.gf)(i) === g.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK &&
-			!n &&
-			(0, u.yw)(N.rMx.PROMOTED_TO_SPEAKER, { ...(0, m.s$)(e) }),
+		(0, g.gf)(i) === g.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && !n && (0, u.yw)(N.rMx.PROMOTED_TO_SPEAKER, { ...(0, m.s$)(e) }),
 		a.tn.patch({
 			url: N.ANM.UPDATE_VOICE_STATE(l),
 			body: {
@@ -150,10 +148,7 @@ function A(e, n, t) {
 			deny: h.Hn,
 			...a
 		};
-	t
-		? ((u.allow = i.IH(u.allow, n)), (u.deny = i.Od(u.deny, n)))
-		: ((u.allow = i.Od(u.allow, n)), (u.deny = i.IH(u.deny, n))),
-		r.Z.updatePermissionOverwrite(e.id, u);
+	t ? ((u.allow = i.IH(u.allow, n)), (u.deny = i.Od(u.deny, n))) : ((u.allow = i.Od(u.allow, n)), (u.deny = i.IH(u.deny, n))), r.Z.updatePermissionOverwrite(e.id, u);
 }
 async function p(e, n, t, l) {
 	if ('' === n) return;

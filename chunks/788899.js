@@ -31,8 +31,7 @@ if (o.Z) {
 			(a = p), (u = d[p]);
 			break;
 		}
-	'Webkit' === a && 'msHyphens' in h && ((a = 'ms'), (u = d.ms), (c = 'edge')),
-		'Webkit' === a && '-apple-trailing-word' in h && (l = 'apple');
+	'Webkit' === a && 'msHyphens' in h && ((a = 'ms'), (u = d.ms), (c = 'edge')), 'Webkit' === a && '-apple-trailing-word' in h && (l = 'apple');
 }
 var y = {
 	js: a,
@@ -133,12 +132,7 @@ var w = {
 		},
 		{
 			supportedProperty: function (e, t) {
-				return (
-					!!/^break-/.test(e) &&
-					('Webkit' === y.js
-						? 'WebkitColumn' + x(e) in t && y.css + 'column-' + e
-						: 'Moz' === y.js && 'page' + x(e) in t && 'page-' + e)
-				);
+				return !!/^break-/.test(e) && ('Webkit' === y.js ? 'WebkitColumn' + x(e) in t && y.css + 'column-' + e : 'Moz' === y.js && 'page' + x(e) in t && 'page-' + e);
 			}
 		},
 		{
@@ -157,11 +151,7 @@ var w = {
 		{
 			supportedProperty: function (e, t) {
 				var r = x(e);
-				return '-' === e[0] || ('-' === e[0] && '-' === e[1])
-					? e
-					: y.js + r in t
-						? y.css + e
-						: 'Webkit' !== y.js && 'Webkit' + r in t && '-webkit-' + e;
+				return '-' === e[0] || ('-' === e[0] && '-' === e[1]) ? e : y.js + r in t ? y.css + e : 'Webkit' !== y.js && 'Webkit' + r in t && '-webkit-' + e;
 			}
 		},
 		{
@@ -252,11 +242,7 @@ function N(e, t) {
 		return (T[n] = !1), !1;
 	}
 	if (I[e]) r = r.replace(E, z);
-	else if (
-		'' === i.style[e] &&
-		('-ms-flex' === (r = y.css + r) && (i.style[e] = '-ms-flexbox'), (i.style[e] = r), '' === i.style[e])
-	)
-		return (T[n] = !1), !1;
+	else if ('' === i.style[e] && ('-ms-flex' === (r = y.css + r) && (i.style[e] = '-ms-flexbox'), (i.style[e] = r), '' === i.style[e])) return (T[n] = !1), !1;
 	return (i.style[e] = ''), (T[n] = r), T[n];
 }
 o.Z && (i = document.createElement('p'));

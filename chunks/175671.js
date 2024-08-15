@@ -1,11 +1,7 @@
 var r = n(814033),
 	i = n(685053).assert;
 function a(e, t) {
-	(this.ec = e),
-		(this.priv = null),
-		(this.pub = null),
-		t.priv && this._importPrivate(t.priv, t.privEnc),
-		t.pub && this._importPublic(t.pub, t.pubEnc);
+	(this.ec = e), (this.priv = null), (this.pub = null), t.priv && this._importPrivate(t.priv, t.privEnc), t.pub && this._importPublic(t.pub, t.pubEnc);
 }
 (e.exports = a),
 	(a.fromPublic = function (e, t, n) {
@@ -47,9 +43,7 @@ function a(e, t) {
 					};
 	}),
 	(a.prototype.getPublic = function (e, t) {
-		return ('string' == typeof e && ((t = e), (e = null)), !this.pub && (this.pub = this.ec.g.mul(this.priv)), t)
-			? this.pub.encode(t, e)
-			: this.pub;
+		return ('string' == typeof e && ((t = e), (e = null)), !this.pub && (this.pub = this.ec.g.mul(this.priv)), t) ? this.pub.encode(t, e) : this.pub;
 	}),
 	(a.prototype.getPrivate = function (e) {
 		return 'hex' === e ? this.priv.toString(16, 2) : this.priv;
@@ -59,11 +53,7 @@ function a(e, t) {
 	}),
 	(a.prototype._importPublic = function (e, t) {
 		if (e.x || e.y) {
-			'mont' === this.ec.curve.type
-				? i(e.x, 'Need x coordinate')
-				: ('short' === this.ec.curve.type || 'edwards' === this.ec.curve.type) &&
-					i(e.x && e.y, 'Need both x and y coordinate'),
-				(this.pub = this.ec.curve.point(e.x, e.y));
+			'mont' === this.ec.curve.type ? i(e.x, 'Need x coordinate') : ('short' === this.ec.curve.type || 'edwards' === this.ec.curve.type) && i(e.x && e.y, 'Need both x and y coordinate'), (this.pub = this.ec.curve.point(e.x, e.y));
 			return;
 		}
 		this.pub = this.ec.curve.decodePoint(e, t);
@@ -78,7 +68,5 @@ function a(e, t) {
 		return this.ec.verify(e, t, this);
 	}),
 	(a.prototype.inspect = function () {
-		return (
-			'<Key priv: ' + (this.priv && this.priv.toString(16, 2)) + ' pub: ' + (this.pub && this.pub.inspect()) + ' >'
-		);
+		return '<Key priv: ' + (this.priv && this.priv.toString(16, 2)) + ' pub: ' + (this.pub && this.pub.inspect()) + ' >';
 	});

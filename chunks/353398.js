@@ -54,12 +54,7 @@ class L extends (s = d.ZP.Store) {
 	}
 	showNotice() {
 		let e = this.getTemplate();
-		return (
-			null != e &&
-			null != this.name &&
-			'' !== this.name &&
-			(this.name.trim() !== e.name || this.description.trim() !== e.description)
-		);
+		return null != e && null != this.name && '' !== this.name && (this.name.trim() !== e.name || this.description.trim() !== e.description);
 	}
 	constructor(...e) {
 		super(...e),
@@ -70,8 +65,7 @@ class L extends (s = d.ZP.Store) {
 				let e = this.getTemplate();
 				if (null != e) {
 					var t, n;
-					(this.name = null !== (t = e.name) && void 0 !== t ? t : this.name),
-						(this.description = null !== (n = e.description) && void 0 !== n ? n : this.description);
+					(this.name = null !== (t = e.name) && void 0 !== t ? t : this.name), (this.description = null !== (n = e.description) && void 0 !== n ? n : this.description);
 				} else (this.name = ''), (this.description = '');
 				this.emitChange();
 			}),
@@ -85,8 +79,7 @@ class L extends (s = d.ZP.Store) {
 				(this.error = e), this.emitChange();
 			}),
 			f(this, 'save', async () => {
-				await N.Z.updateGuildTemplate(g.Z.getProps().guild.id, this.getTemplate().code, this.name, this.description),
-					this.emitChange();
+				await N.Z.updateGuildTemplate(g.Z.getProps().guild.id, this.getTemplate().code, this.name, this.description), this.emitChange();
 			});
 	}
 }
@@ -153,8 +146,7 @@ function D() {
 			if (!!n && !r) {
 				if (null != l) {
 					var e, t;
-					O.setName(null !== (e = l.name) && void 0 !== e ? e : ''),
-						O.setDescription(null !== (t = l.description) && void 0 !== t ? t : '');
+					O.setName(null !== (e = l.name) && void 0 !== e ? e : ''), O.setDescription(null !== (t = l.description) && void 0 !== t ? t : '');
 				}
 				s(!1);
 			}
@@ -174,8 +166,7 @@ function D() {
 					children: t.message
 				})
 			: (0, a.jsx)(_.Spinner, { className: R.marginTop40 });
-	let o =
-		null != t && null == t.getFirstFieldErrorMessage('name') && null == t.getFirstFieldErrorMessage('description');
+	let o = null != t && null == t.getFirstFieldErrorMessage('name') && null == t.getFirstFieldErrorMessage('description');
 	return (0, a.jsxs)(a.Fragment, {
 		children: [
 			(0, a.jsx)(Z, {}),

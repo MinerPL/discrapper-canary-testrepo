@@ -11,21 +11,7 @@ var i = n(120356),
 	o = n(674563),
 	l = n(769029);
 t.Z = (e) => {
-	let {
-		name: t,
-		discriminator: n,
-		invertBotTagColor: i,
-		nameColor: o,
-		className: u,
-		botType: c,
-		usernameClass: d,
-		discriminatorClass: _,
-		botClass: E,
-		botVerified: f = !1,
-		style: h,
-		useRemSizes: p = !1,
-		usernameIcon: I
-	} = e;
+	let { name: t, discriminator: n, invertBotTagColor: i, nameColor: o, className: u, botType: c, usernameClass: d, discriminatorClass: _, botClass: E, botVerified: f = !1, style: h, useRemSizes: p = !1, usernameIcon: m } = e;
 	return (0, r.jsxs)('div', {
 		className: a()(u, l.nameTag),
 		style: h,
@@ -33,7 +19,7 @@ t.Z = (e) => {
 			(0, r.jsxs)('span', {
 				className: a()(l.username, d),
 				style: null != o ? { color: o } : void 0,
-				children: [I, t]
+				children: [m, t]
 			}),
 			null != n
 				? (0, r.jsxs)('span', {

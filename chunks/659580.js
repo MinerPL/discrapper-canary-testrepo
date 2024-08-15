@@ -18,15 +18,7 @@ var a = n(481060),
 	m = n(689938),
 	p = n(560353);
 function _(e) {
-	let {
-			onClose: t,
-			renderOutputDevices: n = !1,
-			renderInputDevices: _ = !1,
-			renderInputModes: f = !1,
-			renderInputVolume: E = !1,
-			renderOutputVolume: g = !1,
-			onSelect: C
-		} = e,
+	let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: _ = !1, renderInputModes: f = !1, renderInputVolume: E = !1, renderOutputVolume: C = !1, onSelect: g } = e,
 		I = (0, d.Z)(),
 		x = (0, c.Z)(),
 		T = (0, u.Z)(),
@@ -36,7 +28,7 @@ function _(e) {
 	return (0, i.jsx)(s.Z, {
 		object: h.qAy.CONTEXT_MENU,
 		children: (0, i.jsxs)(a.Menu, {
-			onSelect: C,
+			onSelect: g,
 			className: p.menu,
 			onClose: t,
 			navId: 'audio-device-context',
@@ -61,7 +53,7 @@ function _(e) {
 						})
 					: null,
 				(0, i.jsxs)(a.MenuGroup, {
-					children: [E ? v : null, g ? S : null, I]
+					children: [E ? v : null, C ? S : null, I]
 				})
 			]
 		})

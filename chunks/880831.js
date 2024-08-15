@@ -22,8 +22,8 @@ var i = n(735250),
 	_ = n(905405),
 	f = n(937889),
 	E = n(739566),
-	g = n(267128),
-	C = n(378233),
+	C = n(267128),
+	g = n(378233),
 	I = n(419922),
 	x = n(375954),
 	T = n(699516),
@@ -67,12 +67,12 @@ function j(e) {
 			renderedContent: R,
 			trailingIcon: j,
 			leadingIcon: L
-		} = (0, g.f)(n, Z, s, b.messageContent, {
+		} = (0, C.f)(n, Z, s, b.messageContent, {
 			trailingIconClass: b.messageContentTrailingIcon,
 			leadingIconClass: b.messageContentLeadingIcon,
 			iconSize: M.WW
 		}),
-		P = (0, C.cv)(n),
+		P = (0, g.cv)(n),
 		O =
 			P.length > 0
 				? P.map((e) =>
@@ -100,11 +100,7 @@ function j(e) {
 		children: [
 			(0, i.jsxs)('div', {
 				className: l()(b.messageContentWrapper, { [b.mentioned]: n.mentioned }),
-				children: [
-					null != O ? null : L,
-					null !== (t = null != R ? R : O) && void 0 !== t ? t : (0, i.jsx)('span', { children: A }),
-					null != O ? null : j
-				]
+				children: [null != O ? null : L, null !== (t = null != R ? R : O) && void 0 !== t ? t : (0, i.jsx)('span', { children: A }), null != O ? null : j]
 			}),
 			(0, i.jsx)('img', {
 				alt: '',
@@ -137,15 +133,7 @@ function L(e) {
 			a.useEffect(() => {
 				function e(e) {
 					let { channelId: t, message: i } = e;
-					if (
-						t === n &&
-						i.type !== A.uaV.STAGE_START &&
-						i.type !== A.uaV.STAGE_END &&
-						i.type !== A.uaV.STAGE_TOPIC &&
-						i.type !== A.uaV.STAGE_SPEAKER &&
-						i.type !== A.uaV.STAGE_RAISE_HAND
-					)
-						clearTimeout(p.current), (p.current = setTimeout(_, l)), o((e) => [...e, i.id]);
+					if (t === n && i.type !== A.uaV.STAGE_START && i.type !== A.uaV.STAGE_END && i.type !== A.uaV.STAGE_TOPIC && i.type !== A.uaV.STAGE_SPEAKER && i.type !== A.uaV.STAGE_RAISE_HAND) clearTimeout(p.current), (p.current = setTimeout(_, l)), o((e) => [...e, i.id]);
 				}
 				return (
 					d.Z.subscribe('MESSAGE_CREATE', e),
@@ -181,7 +169,7 @@ function L(e) {
 		}),
 		_ = a.useRef({}),
 		[f, E] = a.useState({}),
-		g = a.useCallback((e, t) => {
+		C = a.useCallback((e, t) => {
 			null == t ? delete _.current[e] : (_.current[e] = t);
 		}, []);
 	a.useLayoutEffect(() => {
@@ -194,12 +182,12 @@ function L(e) {
 		}
 		!(0, r.isEqual)(e, f) && E(e);
 	}, [p]);
-	let C = p.map((e) => ({
+	let g = p.map((e) => ({
 			message: e,
 			height: _.current[e.id],
 			y: f[e.id]
 		})),
-		I = (0, u.useTransition)(C, {
+		I = (0, u.useTransition)(g, {
 			keys: (e) => e.message.id,
 			from: () => ({ opacity: 0 }),
 			enter: (e) => {
@@ -232,7 +220,7 @@ function L(e) {
 		},
 		children: I((e, t) =>
 			(0, i.jsx)(o.animated.div, {
-				ref: (e) => g(t.message.id, null != e ? e.offsetHeight : null),
+				ref: (e) => C(t.message.id, null != e ? e.offsetHeight : null),
 				className: b.toastWrapper,
 				style: e,
 				children: (0, i.jsx)(j, { message: t.message })

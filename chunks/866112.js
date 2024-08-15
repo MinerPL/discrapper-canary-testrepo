@@ -21,16 +21,11 @@ class m extends (i = r.ZP.Store) {
 	}
 	getSearchResults(e, t) {
 		var n, i, a;
-		return null !==
-			(a = null === (i = h[e]) || void 0 === i ? void 0 : null === (n = i[t]) || void 0 === n ? void 0 : n.results) &&
-			void 0 !== a
-			? a
-			: u;
+		return null !== (a = null === (i = h[e]) || void 0 === i ? void 0 : null === (n = i[t]) || void 0 === n ? void 0 : n.results) && void 0 !== a ? a : u;
 	}
 	shouldFetch(e, t) {
 		var n, i;
-		let a =
-			null === (i = h[e]) || void 0 === i ? void 0 : null === (n = i[t]) || void 0 === n ? void 0 : n.lastSearchedAt;
+		let a = null === (i = h[e]) || void 0 === i ? void 0 : null === (n = i[t]) || void 0 === n ? void 0 : n.lastSearchedAt;
 		return null == a || Date.now() - a > 120000;
 	}
 }

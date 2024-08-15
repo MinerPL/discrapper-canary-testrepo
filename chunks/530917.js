@@ -24,7 +24,7 @@ function o(e, t) {
 		f = t.prime2,
 		h = c.redPow(t.exponent1).fromRed(),
 		p = d.redPow(t.exponent2).fromRed(),
-		I = h.isub(p).imul(_).umod(E).imul(f);
-	return p.iadd(I).imul(o.unblinder).umod(t.modulus).toArrayLike(r, 'be', l);
+		m = h.isub(p).imul(_).umod(E).imul(f);
+	return p.iadd(m).imul(o.unblinder).umod(t.modulus).toArrayLike(r, 'be', l);
 }
 (o.getr = s), (e.exports = o);

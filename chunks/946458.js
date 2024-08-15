@@ -12,9 +12,7 @@ var a = t(442837),
 	d = t(930528);
 function r(e) {
 	let { reactionEmoji: o } = e,
-		t = (0, a.e7)([s.ZP], () =>
-			(null == o ? void 0 : o.emojiId) != null ? s.ZP.getUsableCustomEmojiById(o.emojiId) : null
-		);
+		t = (0, a.e7)([s.ZP], () => ((null == o ? void 0 : o.emojiId) != null ? s.ZP.getUsableCustomEmojiById(o.emojiId) : null));
 	return (0, i.jsxs)('div', {
 		className: d.container,
 		children: [

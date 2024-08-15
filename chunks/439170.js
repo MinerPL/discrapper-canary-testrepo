@@ -26,8 +26,8 @@ var r,
 	f = n(700785),
 	h = n(199902),
 	p = n(314897),
-	I = n(592125),
-	m = n(650774),
+	m = n(592125),
+	I = n(650774),
 	T = n(271383),
 	g = n(430824),
 	S = n(158776),
@@ -106,7 +106,7 @@ function L(e, t, n) {
 			};
 }
 function b(e) {
-	let t = I.Z.getChannel(e);
+	let t = m.Z.getChannel(e);
 	return null == t
 		? C
 		: null == t.memberListId
@@ -118,12 +118,7 @@ function b(e) {
 									o()(e.permissionOverwrites)
 										.reduce((e, t) => {
 											let { id: n, allow: r, deny: i } = t;
-											return (
-												c.e$(r, v.Plq.VIEW_CHANNEL)
-													? e.push('allow:'.concat(n))
-													: c.e$(i, v.Plq.VIEW_CHANNEL) && e.push('deny:'.concat(n)),
-												e
-											);
+											return c.e$(r, v.Plq.VIEW_CHANNEL) ? e.push('allow:'.concat(n)) : c.e$(i, v.Plq.VIEW_CHANNEL) && e.push('deny:'.concat(n)), e;
 										}, [])
 										.sort()
 										.join(',')
@@ -132,11 +127,7 @@ function b(e) {
 				})(t)
 			: t.memberListId;
 }
-((a = r || (r = {})).GROUP = 'GROUP'),
-	(a.MEMBER = 'MEMBER'),
-	(a.CONTENT_INVENTORY = 'CONTENT_INVENTORY'),
-	(a.CONTENT_INVENTORY_GROUP = 'CONTENT_INVENTORY_GROUP'),
-	(a.HIDDEN_CONTENT_INVENTORY = 'HIDDEN_CONTENT_INVENTORY');
+((a = r || (r = {})).GROUP = 'GROUP'), (a.MEMBER = 'MEMBER'), (a.CONTENT_INVENTORY = 'CONTENT_INVENTORY'), (a.CONTENT_INVENTORY_GROUP = 'CONTENT_INVENTORY_GROUP'), (a.HIDDEN_CONTENT_INVENTORY = 'HIDDEN_CONTENT_INVENTORY');
 class M {
 	updateOwnerId() {
 		let e = g.Z.getGuild(this.guildId);
@@ -180,8 +171,7 @@ class M {
 	update(e, t) {
 		let { group: n, member: r } = t,
 			i = this.rows[e];
-		if ((null != i && 'MEMBER' === i.type && delete this.members[i.user.id], null != n))
-			this.rows[e] = D(this.guildId, n.id, n.count);
+		if ((null != i && 'MEMBER' === i.type && delete this.members[i.user.id], null != n)) this.rows[e] = D(this.guildId, n.id, n.count);
 		else if (null != r) {
 			let t = L(this.guildId, this.ownerId, r.user.id);
 			if (null == t) return;
@@ -205,16 +195,7 @@ class M {
 		}
 	}
 	constructor(e, t) {
-		R(this, 'guildId', void 0),
-			R(this, 'listId', void 0),
-			R(this, 'ownerId', void 0),
-			R(this, 'rows', []),
-			R(this, 'groups', []),
-			R(this, 'members', {}),
-			R(this, 'version', 0),
-			(this.guildId = e),
-			(this.listId = t),
-			this.updateOwnerId();
+		R(this, 'guildId', void 0), R(this, 'listId', void 0), R(this, 'ownerId', void 0), R(this, 'rows', []), R(this, 'groups', []), R(this, 'members', {}), R(this, 'version', 0), (this.guildId = e), (this.listId = t), this.updateOwnerId();
 	}
 }
 let P = new (class e {
@@ -272,9 +253,7 @@ function G() {
 }
 class k extends (i = d.ZP.Store) {
 	initialize() {
-		this.waitFor(N.default, g.Z, I.Z, T.ZP, S.Z, A.Z, p.default, m.Z, h.Z, E.Z),
-			this.syncWith([A.Z], G),
-			this.syncWith([h.Z], x);
+		this.waitFor(N.default, g.Z, m.Z, T.ZP, S.Z, A.Z, p.default, I.Z, h.Z, E.Z), this.syncWith([A.Z], G), this.syncWith([h.Z], x);
 	}
 	getProps(e, t) {
 		let n = P.get(e, b(t));

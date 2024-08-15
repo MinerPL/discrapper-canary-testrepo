@@ -42,16 +42,7 @@ function o(e) {
 	});
 }
 function c(e) {
-	let {
-		channelId: t,
-		messageId: n,
-		hasError: i,
-		hasContextMessage: a,
-		numDestinations: l,
-		numDestinationChanges: o,
-		numQueryChanges: c,
-		anyDestinationHasSlowmode: u
-	} = e;
+	let { channelId: t, messageId: n, hasError: i, hasContextMessage: a, numDestinations: l, numDestinationChanges: o, numQueryChanges: c, anyDestinationHasSlowmode: u } = e;
 	s.default.track(r.rMx.FORWARD_MESSAGE_SENT, {
 		channel_id: t,
 		message_id: n,

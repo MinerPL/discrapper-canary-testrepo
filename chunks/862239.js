@@ -171,11 +171,7 @@ function E(e) {
 		children: [
 			(0, n.jsxs)(l.ScrollerThin, {
 				className: _.content,
-				children: [
-					(0, n.jsx)(m, { listing: s }),
-					(0, n.jsx)('div', { className: _.divider }),
-					(0, n.jsx)(I, { listing: s })
-				]
+				children: [(0, n.jsx)(m, { listing: s }), (0, n.jsx)('div', { className: _.divider }), (0, n.jsx)(I, { listing: s })]
 			}),
 			(0, n.jsx)(l.Button, {
 				size: l.Button.Sizes.MEDIUM,

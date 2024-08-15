@@ -11,19 +11,7 @@ var a = i(120356),
 	l = i(689938),
 	s = i(276199);
 function c(e) {
-	let {
-			className: n,
-			onClick: i,
-			imageSrc: a,
-			iconSrc: c,
-			header: d,
-			headerClassName: u,
-			subheaderVariant: _ = 'text-sm/normal',
-			subheader: p,
-			children: m,
-			animatesOnHover: I,
-			...f
-		} = e,
+	let { className: n, onClick: i, imageSrc: a, iconSrc: c, header: d, headerClassName: u, subheaderVariant: _ = 'text-sm/normal', subheader: p, children: m, animatesOnHover: I, ...f } = e,
 		g = null != a,
 		h = (0, t.jsxs)(t.Fragment, {
 			children: [

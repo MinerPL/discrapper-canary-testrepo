@@ -23,12 +23,12 @@ t.Z = function (e) {
 			},
 			[t]
 		),
-		[E, g] = a.useState(!1),
-		C = (0, s.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]),
+		[E, C] = a.useState(!1),
+		g = (0, s.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]),
 		I = (0, o.Aq)(),
 		x = (0, c.Dd)(t.id),
 		T = a.useCallback(() => {
-			!n && g((e) => !e);
+			!n && C((e) => !e);
 		}, [n]);
 	function N(e) {
 		!(null == e ? void 0 : e.shiftKey) && I.dispatch(_.CkL.POPOUT_CLOSE);
@@ -51,7 +51,7 @@ t.Z = function (e) {
 				align: 'right',
 				autoInvert: !1,
 				ignoreModalClicks: !0,
-				onRequestClose: () => g(!1),
+				onRequestClose: () => C(!1),
 				renderPopout: function (e) {
 					return (0, i.jsx)(r.Z, {
 						...e,
@@ -68,7 +68,7 @@ t.Z = function (e) {
 						icon: l.PinIcon,
 						'aria-label': f.Z.Messages.PINNED_MESSAGES,
 						disabled: n,
-						showBadge: C,
+						showBadge: g,
 						selected: a
 					});
 				}

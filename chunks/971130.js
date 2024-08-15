@@ -31,22 +31,10 @@ var i,
 	N = n(981631),
 	O = n(245335),
 	f = n(689938);
-(r = n(603617)),
-	((s = i || (i = {})).GROUP_DM = 'GROUP_DM'),
-	(s.DM = 'DM'),
-	(s.FRIEND = 'FRIEND'),
-	(s.CHANNEL = 'CHANNEL');
+(r = n(603617)), ((s = i || (i = {})).GROUP_DM = 'GROUP_DM'), (s.DM = 'DM'), (s.FRIEND = 'FRIEND'), (s.CHANNEL = 'CHANNEL');
 let T = (e, t) => null != e && a.ZP.isMember(e, t),
 	c = (e) => {
-		let {
-			omitUserIds: t,
-			suggestedUserIds: n,
-			maxRowsWithoutQuery: r,
-			omitGuildId: i,
-			shownUserIds: s,
-			rows: I,
-			counts: u
-		} = e;
+		let { omitUserIds: t, suggestedUserIds: n, maxRowsWithoutQuery: r, omitGuildId: i, shownUserIds: s, rows: I, counts: u } = e;
 		if (null != n)
 			for (let e of n) {
 				if (null != r && r > 0 && I.length >= r) break;
@@ -78,16 +66,7 @@ let T = (e, t) => null != e && a.ZP.isMember(e, t),
 			}
 	},
 	m = (e) => {
-		let {
-				omitUserIds: t,
-				maxRowsWithoutQuery: n,
-				omitGuildId: r,
-				shownUserIds: i,
-				rows: s,
-				counts: I,
-				includeGroupDms: a,
-				limit: l
-			} = e,
+		let { omitUserIds: t, maxRowsWithoutQuery: n, omitGuildId: r, shownUserIds: i, rows: s, counts: I, includeGroupDms: a, limit: l } = e,
 			S = 0;
 		for (let e of E.Z.getPrivateChannelIds()) {
 			if ((null != n && n > 0 && s.length >= n) || (null != l && S >= l)) break;
@@ -205,15 +184,7 @@ let T = (e, t) => null != e && a.ZP.isMember(e, t),
 		});
 	};
 function M(e) {
-	let {
-			query: t,
-			inviteTargetType: n,
-			omitUserIds: r,
-			suggestedUserIds: i,
-			suggestedChannelIds: s,
-			maxRowsWithoutQuery: I,
-			omitGuildId: u
-		} = e,
+	let { query: t, inviteTargetType: n, omitUserIds: r, suggestedUserIds: i, suggestedChannelIds: s, maxRowsWithoutQuery: I, omitGuildId: u } = e,
 		a = new Set(),
 		_ = [],
 		l = {

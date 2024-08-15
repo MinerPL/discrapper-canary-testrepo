@@ -9,18 +9,7 @@ var s = n(735250),
 	u = n(657213);
 t.Z = function (e) {
 	var t;
-	let {
-			expandedContentRef: n,
-			expansionSpring: p,
-			isExpanded: x,
-			isExpansionAnimationComplete: m,
-			onCtxMenuOpened: g,
-			onCtxMenuClosed: _,
-			onCtxMenuSelection: C,
-			quest: f,
-			useReducedMotion: h,
-			collapsedHeight: E
-		} = e,
+	let { expandedContentRef: n, expansionSpring: p, isExpanded: x, isExpansionAnimationComplete: m, onCtxMenuOpened: g, onCtxMenuClosed: _, onCtxMenuSelection: C, quest: f, useReducedMotion: h, collapsedHeight: E } = e,
 		T = o.useRef(null),
 		S = o.useRef(null),
 		v = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,

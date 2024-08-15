@@ -46,11 +46,7 @@ async function v(e) {
 			value: !0
 		});
 		let t = e ? I : y;
-		window.matchMedia('(min-width: 1012px) and (max-width: 1980px)').matches ||
-		window.matchMedia('(min-height: 720px) and (max-height: 1408px)').matches
-			? (t = e ? S : b)
-			: (window.matchMedia('(min-width: 1980px)').matches || window.matchMedia('(min-height: 1408px)').matches) &&
-				(t = e ? g : x);
+		window.matchMedia('(min-width: 1012px) and (max-width: 1980px)').matches || window.matchMedia('(min-height: 720px) and (max-height: 1408px)').matches ? (t = e ? S : b) : (window.matchMedia('(min-width: 1980px)').matches || window.matchMedia('(min-height: 1408px)').matches) && (t = e ? g : x);
 		let i = await fetch(t).then(async (e) => {
 			let t = await e.blob();
 			return window.URL.createObjectURL(t);

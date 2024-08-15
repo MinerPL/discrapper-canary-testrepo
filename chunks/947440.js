@@ -50,9 +50,7 @@ function F(i, e) {
 	let { analyticsLocations: F } = (0, I.ZP)(),
 		W = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
 		w = (0, l.e7)([g.ZP], () => g.ZP.getSelfEmbeddedActivities()),
-		X = (0, l.Wu)([y.Z], () =>
-			y.Z.getActivities().filter((i) => null != i.application_id && !(null == w ? void 0 : w.has(i.application_id)))
-		),
+		X = (0, l.Wu)([y.Z], () => y.Z.getActivities().filter((i) => null != i.application_id && !(null == w ? void 0 : w.has(i.application_id)))),
 		q = (0, l.Wu)([m.Z], () => (null != e ? m.Z.getActivities(e.id, null == i ? void 0 : i.getGuildId()) : []), [e, i]),
 		z = (0, l.Wu)(
 			[g.ZP],
@@ -68,18 +66,8 @@ function F(i, e) {
 			[e, i]
 		),
 		B = (0, l.e7)([C.Z], () => null == i || i.isPrivate() || C.Z.can(R.Plq.SEND_MESSAGES, i), [i]),
-		H = (0, l.Wu)(
-			[O.Z],
-			() => [
-				...q.map((i) => null != i.application_id && O.Z.getState(i.application_id, R.mFx.JOIN) === R.OcF.LOADING),
-				...z.map((i) => O.Z.getState(i.applicationId, R.mFx.JOIN) === R.OcF.LOADING)
-			],
-			[q, z]
-		),
-		K = (0, u.Z)([
-			...q.filter((i) => (null == i ? void 0 : i.application_id) != null).map((i) => i.application_id),
-			...z.map((i) => i.applicationId)
-		]),
+		H = (0, l.Wu)([O.Z], () => [...q.map((i) => null != i.application_id && O.Z.getState(i.application_id, R.mFx.JOIN) === R.OcF.LOADING), ...z.map((i) => O.Z.getState(i.applicationId, R.mFx.JOIN) === R.OcF.LOADING)], [q, z]),
+		K = (0, u.Z)([...q.filter((i) => (null == i ? void 0 : i.application_id) != null).map((i) => i.application_id), ...z.map((i) => i.applicationId)]),
 		Q = null == i ? void 0 : i.id,
 		$ = (0, l.Wu)(
 			[S.Z, v.Z, E.Z, A.Z, h.Z, f.Z, C.Z],
@@ -121,11 +109,7 @@ function F(i, e) {
 			],
 			[q, K, Q, W, z, e]
 		),
-		ii = (0, l.Wu)(
-			[c.Z, T.default],
-			() => q.map((i) => (i.type === R.IIU.LISTENING && null != e ? (0, _.Z)(c.Z, T.default, e, i) : void 0)),
-			[e, q]
-		),
+		ii = (0, l.Wu)([c.Z, T.default], () => q.map((i) => (i.type === R.IIU.LISTENING && null != e ? (0, _.Z)(c.Z, T.default, e, i) : void 0)), [e, q]),
 		ie = (0, s.O)();
 	if (!B) return null;
 	let it = (n, t) => {
@@ -159,9 +143,7 @@ function F(i, e) {
 					: null != i && i.type === R.d4z.GUILD_VOICE
 						? (0, a.openModalLazy)(
 								async () => {
-									let { default: e } = await Promise.all([n.e('7654'), n.e('1187'), n.e('31400')]).then(
-										n.bind(n, 560114)
-									);
+									let { default: e } = await Promise.all([n.e('7654'), n.e('1187'), n.e('31400')]).then(n.bind(n, 560114));
 									return (n) =>
 										(0, t.jsx)(e, {
 											...n,
@@ -305,9 +287,7 @@ function F(i, e) {
 							id: 'spotify-play-'.concat(n.session_id),
 							action: () => (0, N.Z)(d, D.kG.USER_ACTIVITY_PLAY),
 							label: (0, p.Z)(d, D.kG.USER_ACTIVITY_PLAY),
-							subtext: o
-								? (0, r.Z)(d, D.kG.USER_ACTIVITY_PLAY, null != i ? x.ZP.getNickname(i.guild_id, i.id, e) : void 0)
-								: void 0,
+							subtext: o ? (0, r.Z)(d, D.kG.USER_ACTIVITY_PLAY, null != i ? x.ZP.getNickname(i.guild_id, i.id, e) : void 0) : void 0,
 							disabled: o
 						},
 						'spotify-play-'.concat(n.session_id)
@@ -318,9 +298,7 @@ function F(i, e) {
 							id: 'spotify-sync-'.concat(n.session_id),
 							action: () => (0, Z.Z)(d, D.kG.USER_ACTIVITY_SYNC),
 							label: k.Z.Messages.USER_ACTIVITY_LISTEN_ALONG,
-							subtext: s
-								? (0, r.Z)(d, D.kG.USER_ACTIVITY_SYNC, null != i ? x.ZP.getNickname(i.guild_id, i.id, e) : void 0)
-								: void 0,
+							subtext: s ? (0, r.Z)(d, D.kG.USER_ACTIVITY_SYNC, null != i ? x.ZP.getNickname(i.guild_id, i.id, e) : void 0) : void 0,
 							disabled: s
 						},
 						'spotify-sync-'.concat(n.session_id)

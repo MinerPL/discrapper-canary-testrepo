@@ -9,9 +9,7 @@ n.d(t, {
 var s,
 	a,
 	r = n(818083);
-((s = a || (a = {}))[(s.DEFAULT = 0)] = 'DEFAULT'),
-	(s[(s.VARIANT_1 = 1)] = 'VARIANT_1'),
-	(s[(s.VARIANT_2 = 2)] = 'VARIANT_2');
+((s = a || (a = {}))[(s.DEFAULT = 0)] = 'DEFAULT'), (s[(s.VARIANT_1 = 1)] = 'VARIANT_1'), (s[(s.VARIANT_2 = 2)] = 'VARIANT_2');
 let i = (0, r.B)({
 	kind: 'user',
 	id: '2024-04_marketing_page_non_sub_perk_tile_order',

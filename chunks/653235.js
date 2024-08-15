@@ -18,8 +18,8 @@ var r = n(735250),
 	f = n(251625),
 	h = n(985375),
 	p = n(132748),
-	I = n(353903),
-	m = n(215016),
+	m = n(353903),
+	I = n(215016),
 	T = n(981631),
 	g = n(689938),
 	S = n(886332);
@@ -36,7 +36,7 @@ function A(e, t, n) {
 		e
 	);
 }
-let N = (e, t) => (0, r.jsx)(I.G0, { columns: e }, t);
+let N = (e, t) => (0, r.jsx)(m.G0, { columns: e }, t);
 class v extends i.PureComponent {
 	componentDidMount() {
 		0 === this.props.trendingCategories.length && (0, d.Tg)();
@@ -137,7 +137,7 @@ class v extends i.PureComponent {
 				let { onSelectItem: s, imagePool: o, videoPool: l } = this.props,
 					{ focusedId: c } = this.state;
 				return (0, r.jsx)(
-					m.iR,
+					I.iR,
 					{
 						format: a.format,
 						color: u.Z.unsafe_rawColors.PRIMARY_800.css,
@@ -157,7 +157,7 @@ class v extends i.PureComponent {
 			A(this, 'renderContent', (e, t, n) => {
 				let { trendingCategories: i } = this.props;
 				return 0 === i.length
-					? (0, r.jsx)(I.u$, {
+					? (0, r.jsx)(m.u$, {
 							columns: e,
 							width: t,
 							renderColumn: N
@@ -188,7 +188,7 @@ class v extends i.PureComponent {
 function O(e) {
 	let t = (0, o.e7)([E.Z], () => E.Z.getTrendingCategories()),
 		n = (0, h.gG)(),
-		i = (0, m.PY)();
+		i = (0, I.PY)();
 	return (0, r.jsx)(v, {
 		...e,
 		...i,

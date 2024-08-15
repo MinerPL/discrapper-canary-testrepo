@@ -47,27 +47,11 @@ let r = (e) => i().decode(e),
 		return (
 			'json' === s &&
 				e.forEach((e, s) => {
-					t += '\n              {\n                  "src": "file-'
-						.concat(s, '.png",\n                  "start": ')
-						.concat(e.start, ',\n                  "duration": ')
-						.concat(e.duration, ',\n                  "height": ')
-						.concat(e.height, ',\n                  "width": ')
-						.concat(e.width, ',\n                  "zIndex": ')
-						.concat(e.zIndex, ',\n                  "loop": ')
-						.concat(e.loop, ',\n                  "loop_delay": ')
-						.concat(e.loopDelay, '\n              },\n          ');
+					t += '\n              {\n                  "src": "file-'.concat(s, '.png",\n                  "start": ').concat(e.start, ',\n                  "duration": ').concat(e.duration, ',\n                  "height": ').concat(e.height, ',\n                  "width": ').concat(e.width, ',\n                  "zIndex": ').concat(e.zIndex, ',\n                  "loop": ').concat(e.loop, ',\n                  "loop_delay": ').concat(e.loopDelay, '\n              },\n          ');
 				}),
 			'proto' === s &&
 				e.forEach((e, s) => {
-					t += "\n              ProfileEffectKeyFrame(\n                  src='file-"
-						.concat(s, ".png',\n                  loop=")
-						.concat(e.loop, ',\n                  width=')
-						.concat(e.width, ',\n                  height=')
-						.concat(e.height, ',\n                  duration=')
-						.concat(e.duration, ',\n                  start=')
-						.concat(e.start, ',\n                  loop_delay=')
-						.concat(e.loopDelay, ',\n                  position=Point(x=0, y=0),\n                  z_index=')
-						.concat(e.zIndex, ',\n              ),\n          ');
+					t += "\n              ProfileEffectKeyFrame(\n                  src='file-".concat(s, ".png',\n                  loop=").concat(e.loop, ',\n                  width=').concat(e.width, ',\n                  height=').concat(e.height, ',\n                  duration=').concat(e.duration, ',\n                  start=').concat(e.start, ',\n                  loop_delay=').concat(e.loopDelay, ',\n                  position=Point(x=0, y=0),\n                  z_index=').concat(e.zIndex, ',\n              ),\n          ');
 				}),
 			(t += '\n]')
 		);

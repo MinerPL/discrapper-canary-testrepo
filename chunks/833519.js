@@ -21,8 +21,8 @@ var i = n(735250),
 	_ = n(863908),
 	f = n(871118),
 	E = n(517525),
-	g = n(352978),
-	C = n(590076),
+	C = n(352978),
+	g = n(590076),
 	I = n(507675),
 	x = n(199902),
 	T = n(314897),
@@ -80,10 +80,7 @@ function G(e) {
 		ee = P < 195;
 	if (
 		(a.useEffect(() => {
-			!q &&
-				(null == Y ? void 0 : Y.isGuildStageVoice()) &&
-				!Q &&
-				((0, u.rn)(F), c.Z.updateStageStreamSize(F.channelId, !1));
+			!q && (null == Y ? void 0 : Y.isGuildStageVoice()) && !Q && ((0, u.rn)(F), c.Z.updateStageStreamSize(F.channelId, !1));
 		}, []),
 		a.useEffect(() => {
 			B.info(
@@ -124,7 +121,7 @@ function G(e) {
 		return (0, i.jsxs)(i.Fragment, {
 			children: [
 				null != Y
-					? (0, i.jsx)(C.Z, {
+					? (0, i.jsx)(g.Z, {
 							focused: O,
 							channelId: Y.id,
 							guildId: Y.guild_id,
@@ -134,7 +131,7 @@ function G(e) {
 						})
 					: null,
 				(0, i.jsx)(
-					g.Z,
+					C.Z,
 					{
 						onResize: s,
 						wrapperClassName: w.videoWrapper,

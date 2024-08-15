@@ -123,8 +123,7 @@ function T(e) {
 									? (0, t.jsxs)(i.Button, {
 											onClick: () => {
 												var e;
-												(null === (e = A.current) || void 0 === e ? void 0 : e.maybeChangeToAfterTab()) &&
-													g(o.O.Customize);
+												(null === (e = A.current) || void 0 === e ? void 0 : e.maybeChangeToAfterTab()) && g(o.O.Customize);
 											},
 											children: [
 												x.Z.Messages.TRY_IT_OUT,

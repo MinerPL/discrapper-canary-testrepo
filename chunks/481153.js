@@ -31,18 +31,11 @@ t.Z = l.ZP.connectStores([p.Z, c.Z, g.Z, E.default], (e) => {
 	};
 })((e) => {
 	let { error: t, giftCode: n, gifter: i, sku: l, application: c, subscriptionPlan: E } = e,
-		g =
-			null == i
-				? N.Z.Messages.GIFT_CODE_AUTH_GIFTED
-				: N.Z.Messages.GIFT_CODE_AUTH_GIFTED_BY.format({ username: i.username }),
+		g = null == i ? N.Z.Messages.GIFT_CODE_AUTH_GIFTED : N.Z.Messages.GIFT_CODE_AUTH_GIFTED_BY.format({ username: i.username }),
 		p = l.name;
 	return (
 		null != E &&
-			(p = (
-				E.interval === f.rV.MONTH
-					? N.Z.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_MONTHLY
-					: N.Z.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_YEARLY
-			).format({
+			(p = (E.interval === f.rV.MONTH ? N.Z.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_MONTHLY : N.Z.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_YEARLY).format({
 				skuName: l.name,
 				intervalCount: E.intervalCount
 			})),
@@ -61,10 +54,7 @@ t.Z = l.ZP.connectStores([p.Z, c.Z, g.Z, E.default], (e) => {
 						}),
 				null != t
 					? (0, s.jsxs)(r.Fragment, {
-							children: [
-								(0, s.jsx)(u.DK, { children: N.Z.Messages.INVITE_MODAL_ERROR_TITLE }),
-								(0, s.jsx)(u.Dx, { children: t })
-							]
+							children: [(0, s.jsx)(u.DK, { children: N.Z.Messages.INVITE_MODAL_ERROR_TITLE }), (0, s.jsx)(u.Dx, { children: t })]
 						})
 					: (0, s.jsxs)(r.Fragment, {
 							children: [

@@ -21,11 +21,7 @@ function s(e) {
 		let t = '';
 		for (let n of e) {
 			let e = typeof n;
-			'string' === e || 'number' === e || 'boolean' === e
-				? (t += n + ' ')
-				: n instanceof Error
-					? (t += n.message + '\n' + n.stack + ' ')
-					: (t += JSON.stringify(n) + ' ');
+			'string' === e || 'number' === e || 'boolean' === e ? (t += n + ' ') : n instanceof Error ? (t += n.message + '\n' + n.stack + ' ') : (t += JSON.stringify(n) + ' ');
 		}
 		return t;
 	})(n);
@@ -56,12 +52,7 @@ function l(e) {
 		.filter((t) => null == e || e.includes(t.category))
 		.map((e) => {
 			let t = [];
-			return (
-				t.push(new Date(e.time).toISOString()),
-				null != e.timing && t.push(e.timing),
-				t.push(e.category, e.message),
-				t.join(' -> ')
-			);
+			return t.push(new Date(e.time).toISOString()), null != e.timing && t.push(e.timing), t.push(e.category, e.message), t.join(' -> ');
 		})
 		.join('\n');
 }

@@ -8,7 +8,5 @@ var r = n(442837),
 	a = n(689938);
 function s(e) {
 	let t = (0, r.e7)([i.default], () => i.default.locale.startsWith('en-'));
-	return ':pizza:' === e && t
-		? a.Z.Messages.POLLS_MARKETING_EASTER_EGG_PIZZA_EMOJI_DESCRIPTION.format({ emojiName: e })
-		: e;
+	return ':pizza:' === e && t ? a.Z.Messages.POLLS_MARKETING_EASTER_EGG_PIZZA_EMOJI_DESCRIPTION.format({ emojiName: e }) : e;
 }

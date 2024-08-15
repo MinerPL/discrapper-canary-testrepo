@@ -19,8 +19,8 @@ var i = n(735250),
 	_ = n(78675),
 	f = n(113557),
 	E = n(169979),
-	g = n(119096),
-	C = n(215105),
+	C = n(119096),
+	g = n(215105),
 	I = n(502762),
 	x = n(256059),
 	T = n(437758),
@@ -93,7 +93,7 @@ function P(e) {
 									let { setPopoutRef: n } = e;
 									return null == q
 										? (0, i.jsx)(i.Fragment, {})
-										: (0, i.jsx)(C.Z, {
+										: (0, i.jsx)(g.Z, {
 												user: t,
 												channelId: P.id,
 												profileType: R.y0.PANEL,
@@ -120,7 +120,7 @@ function P(e) {
 												profileType: R.y0.PANEL,
 												animateOnHover: !B
 											}),
-											(0, i.jsx)(g.Z, {
+											(0, i.jsx)(C.Z, {
 												isReply: W,
 												sent: V,
 												shown: H,

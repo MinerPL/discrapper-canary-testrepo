@@ -173,8 +173,7 @@ function f() {
 		},
 		{
 			message: G.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_DUNGEON_SLIMES,
-			profilePic:
-				'https://cdn.discordapp.com/guilds/936317138904440892/users/125526751064489984/avatars/f35679626acac9943e102533fc170d41.webp?size=80',
+			profilePic: 'https://cdn.discordapp.com/guilds/936317138904440892/users/125526751064489984/avatars/f35679626acac9943e102533fc170d41.webp?size=80',
 			adminTitle: G.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_ADMIN_DUNGEON_SLIMES
 		}
 	];

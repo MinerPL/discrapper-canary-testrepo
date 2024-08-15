@@ -14,9 +14,7 @@ var i = t(442837),
 	o = t(689938);
 function c(e) {
 	return (0, i.e7)([l.Z, u.Z], () => {
-		let n = Object.values(u.Z.getMutableBasicGuildChannelsForGuild(e.guild_id)).filter(
-			(e) => e.type === d.d4z.GUILD_CATEGORY
-		);
+		let n = Object.values(u.Z.getMutableBasicGuildChannelsForGuild(e.guild_id)).filter((e) => e.type === d.d4z.GUILD_CATEGORY);
 		return 0 === n.length || n.every((e) => l.Z.isCollapsed(e.id));
 	})
 		? null

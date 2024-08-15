@@ -22,8 +22,8 @@ var r,
 	f = n(100527),
 	h = n(94795),
 	p = n(327943),
-	I = n(539873),
-	m = n(207164),
+	m = n(539873),
+	I = n(207164),
 	T = n(238302),
 	g = n(514361),
 	S = n(572397),
@@ -40,10 +40,7 @@ var r,
 function M() {
 	let e = (0, S.q)();
 	return (
-		s.useEffect(
-			() => ((0, T.Kq)(), e(C.rMx.CLIENT_THEME_PREVIEW_VIEWED), () => e(C.rMx.CLIENT_THEME_PREVIEW_CLOSED)),
-			[e]
-		),
+		s.useEffect(() => ((0, T.Kq)(), e(C.rMx.CLIENT_THEME_PREVIEW_VIEWED), () => e(C.rMx.CLIENT_THEME_PREVIEW_CLOSED)), [e]),
 		(0, a.jsx)(A.ZP, {
 			type: A.yH.EDITOR,
 			children: (0, a.jsx)(A.ZP.BasicAndGradient, { isEditor: !0 })
@@ -51,12 +48,12 @@ function M() {
 	);
 }
 function P() {
-	let e = (0, m.Z)();
+	let e = (0, I.Z)();
 	return (
 		s.useEffect(() => {
 			(0, h.nJ)(), e();
 		}, [e]),
-		(0, a.jsx)(I.Z, { isEditor: !0 })
+		(0, a.jsx)(m.Z, { isEditor: !0 })
 	);
 }
 function U(e) {
@@ -162,17 +159,17 @@ function w(e) {
 		u = (0, c.e7)([p.Z], () => p.Z.isUpsellPreview),
 		_ = l || u,
 		f = (0, S.J)(),
-		I = s.useCallback(() => {
+		m = s.useCallback(() => {
 			l && f(), u && (0, h.O7)();
 		}, [l, u, f]),
-		m = (0, E.Z)(null, _ ? I : C.dG4),
+		I = (0, E.Z)(null, _ ? m : C.dG4),
 		A = s.useCallback(() => {
-			(0, h.G8)(), (0, T.Mo)(), I(), null == n || n(y.L.DISMISS);
-		}, [I, n]);
+			(0, h.G8)(), (0, T.Mo)(), m(), null == n || n(y.L.DISMISS);
+		}, [m, n]);
 	return (0, a.jsx)(R.Z, {
 		className: b.draggableContainer,
 		children: (0, a.jsxs)('div', {
-			ref: m,
+			ref: I,
 			className: b.container,
 			children: [
 				(0, a.jsxs)('div', {

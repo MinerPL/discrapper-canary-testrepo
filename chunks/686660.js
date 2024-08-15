@@ -33,7 +33,4 @@ function c(e) {
 		.with('custom', () => l.Z.Messages.NOTIFICATION_PRESET_CUSTOM)
 		.exhaustive();
 }
-((i = r || (r = {})).ALL_MESSAGES = 'all_messages'),
-	(i.MENTIONS = 'mentions'),
-	(i.NOTHING = 'nothing'),
-	(i.CUSTOM = 'custom');
+((i = r || (r = {})).ALL_MESSAGES = 'all_messages'), (i.MENTIONS = 'mentions'), (i.NOTHING = 'nothing'), (i.CUSTOM = 'custom');

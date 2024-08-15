@@ -19,9 +19,7 @@ function d(e) {
 		d = (0, o.o)(e);
 	if (null == n || d || (0, s.tX)(i)) return;
 	let h = i.some((e) => e.type === a.pj.INAPPROPRIATE_CONVERSATION_TIER_1),
-		m = i
-			.filter((e) => null != e.dismiss_timestamp)
-			.sort((e, t) => (t.dismiss_timestamp < e.dismiss_timestamp ? -1 : 1));
+		m = i.filter((e) => null != e.dismiss_timestamp).sort((e, t) => (t.dismiss_timestamp < e.dismiss_timestamp ? -1 : 1));
 	if (
 		m.length < 1 ||
 		!(function (e) {
@@ -33,7 +31,5 @@ function d(e) {
 	)
 		return;
 	let p = i.filter((e) => null == e.dismiss_timestamp);
-	return null !== (t = p.findLast((e) => e.type === a.pj.INAPPROPRIATE_CONVERSATION_TIER_1)) && void 0 !== t
-		? t
-		: p.findLast((e) => e.type === a.pj.INAPPROPRIATE_CONVERSATION_TIER_2);
+	return null !== (t = p.findLast((e) => e.type === a.pj.INAPPROPRIATE_CONVERSATION_TIER_1)) && void 0 !== t ? t : p.findLast((e) => e.type === a.pj.INAPPROPRIATE_CONVERSATION_TIER_2);
 }

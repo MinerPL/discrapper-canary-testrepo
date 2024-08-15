@@ -22,21 +22,12 @@ t.Z = {
 							return a.w;
 						case 'id':
 							return (function (e, t) {
-								return null == document.getElementById(t)
-									? ''.concat(e, ' references #').concat(t, ' which does not exist')
-									: a.w;
+								return null == document.getElementById(t) ? ''.concat(e, ' references #').concat(t, ' which does not exist') : a.w;
 							})(t, n);
 						case 'idlist':
 							return (function (e, t, n) {
-								if (
-									('aria-controls' === e &&
-										('false' === n.getAttribute('aria-expanded') || 'false' === n.getAttribute('aria-selected'))) ||
-									('aria-owns' === e && 'false' === n.getAttribute('aria-expanded'))
-								)
-									return a.w;
-								for (let n of t.split(' '))
-									if (null == document.getElementById(n))
-										return ''.concat(e, ' references #').concat(t, ' which does not exist');
+								if (('aria-controls' === e && ('false' === n.getAttribute('aria-expanded') || 'false' === n.getAttribute('aria-selected'))) || ('aria-owns' === e && 'false' === n.getAttribute('aria-expanded'))) return a.w;
+								for (let n of t.split(' ')) if (null == document.getElementById(n)) return ''.concat(e, ' references #').concat(t, ' which does not exist');
 								return a.w;
 							})(t, n, e);
 						case 'integer':
@@ -49,9 +40,7 @@ t.Z = {
 							})(t, n);
 						case 'boolean':
 							return (function (e, t, n) {
-								return 'true' === t || 'false' === t || ('' === t && !0 === n.allowundefined)
-									? a.w
-									: ''.concat(e, ' must be either "true" or "false"');
+								return 'true' === t || 'false' === t || ('' === t && !0 === n.allowundefined) ? a.w : ''.concat(e, ' must be either "true" or "false"');
 							})(t, n, i);
 						case 'token':
 							return (function (e, t, n) {

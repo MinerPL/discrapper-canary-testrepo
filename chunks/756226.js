@@ -72,10 +72,7 @@ let x = {
 	};
 t.default = (e) => {
 	let { transitionState: t, onClose: o } = e,
-		l = (0, a.o)(
-			h.Z.Messages.FAMILY_CENTER_TOOLTIP_MODAL_HEADER_TEEN,
-			h.Z.Messages.FAMILY_CENTER_TOOLTIP_MODAL_HEADER_PARENT
-		),
+		l = (0, a.o)(h.Z.Messages.FAMILY_CENTER_TOOLTIP_MODAL_HEADER_TEEN, h.Z.Messages.FAMILY_CENTER_TOOLTIP_MODAL_HEADER_PARENT),
 		I = (0, c.Z)(),
 		m = Array.from(d.tx.entries()),
 		E = (0, s.Xi)({ location: 'family_center_tooltip_modal_web' });

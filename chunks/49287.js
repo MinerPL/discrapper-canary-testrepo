@@ -8,9 +8,7 @@ function s(t, e) {
 }
 var c = {
 	getLastCreatedEntityKey: function () {
-		return (
-			s('DraftEntity.getLastCreatedEntityKey', 'contentState.getLastCreatedEntityKey'), c.__getLastCreatedEntityKey()
-		);
+		return s('DraftEntity.getLastCreatedEntityKey', 'contentState.getLastCreatedEntityKey'), c.__getLastCreatedEntityKey();
 	},
 	create: function (t, e, r) {
 		return s('DraftEntity.create', 'contentState.createEntity'), c.__create(t, e, r);

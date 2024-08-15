@@ -22,13 +22,7 @@ let u = (t, e) =>
 		}),
 	i = (t) => {
 		let e = (0, r.kr)(t);
-		return (0, r.Ol)(t)
-			? e
-				? l.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME
-				: l.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME
-			: e
-				? l.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME
-				: l.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME;
+		return (0, r.Ol)(t) ? (e ? l.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME : l.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME) : e ? l.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME : l.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME;
 	},
 	o = (t, e, n) => {
 		let r = i(t),
@@ -43,11 +37,7 @@ let u = (t, e) =>
 	},
 	c = (t) => {
 		let { entry: e, channel: n, users: u, countOthers: i } = t;
-		return (
-			(0, r.kr)(e)
-				? l.Z.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYING
-				: l.Z.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYED
-		)
+		return ((0, r.kr)(e) ? l.Z.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYING : l.Z.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYED)
 			.plainFormat({
 				gameName: e.extra.game_name,
 				user1: a.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, u[0]),

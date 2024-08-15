@@ -23,10 +23,7 @@ class s {
 		let e = this.cpuHistogram.getReport(),
 			t = this.memoryHistogram.getReport(),
 			n = r.Z.getCumulativeCPUUsage(),
-			i =
-				null == this.startCPU || null == n
-					? void 0
-					: ((n.usage - this.startCPU.usage) * 100) / ((n.sampleTime - this.startCPU.sampleTime) / 1000);
+			i = null == this.startCPU || null == n ? void 0 : ((n.usage - this.startCPU.usage) * 100) / ((n.sampleTime - this.startCPU.sampleTime) / 1000);
 		return {
 			client_performance_cpu_percentile25: e.percentiles[25],
 			client_performance_cpu_percentile50: e.percentiles[50],
@@ -64,9 +61,6 @@ class s {
 		null != t && this.memoryHistogram.addSample(t);
 	}
 	constructor() {
-		a(this, 'cpuHistogram', new i.b()),
-			a(this, 'memoryHistogram', new i.b()),
-			a(this, 'startCPU', r.Z.getCumulativeCPUUsage()),
-			a(this, 'lastCPU', this.startCPU);
+		a(this, 'cpuHistogram', new i.b()), a(this, 'memoryHistogram', new i.b()), a(this, 'startCPU', r.Z.getCumulativeCPUUsage()), a(this, 'lastCPU', this.startCPU);
 	}
 }

@@ -12,10 +12,7 @@ var r =
 		function e(e, t) {
 			for (var n = 0; n < t.length; n++) {
 				var r = t[n];
-				(r.enumerable = r.enumerable || !1),
-					(r.configurable = !0),
-					'value' in r && (r.writable = !0),
-					Object.defineProperty(e, r.key, r);
+				(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 			}
 		}
 		return function (t, n, r) {
@@ -48,9 +45,7 @@ var c = (t.ColorWrap = function (e) {
 				(t.handleChange = function (e, n) {
 					if (l.simpleCheckForValidColor(e)) {
 						var r = l.toState(e, e.h || t.state.oldHue);
-						t.setState(r),
-							t.props.onChangeComplete && t.debounce(t.props.onChangeComplete, r, n),
-							t.props.onChange && t.props.onChange(r, n);
+						t.setState(r), t.props.onChangeComplete && t.debounce(t.props.onChangeComplete, r, n), t.props.onChange && t.props.onChange(r, n);
 					}
 				}),
 				(t.handleSwatchHover = function (e, n) {
@@ -68,8 +63,7 @@ var c = (t.ColorWrap = function (e) {
 		}
 		return (
 			!(function (e, t) {
-				if ('function' != typeof t && null !== t)
-					throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+				if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
 				(e.prototype = Object.create(t && t.prototype, {
 					constructor: {
 						value: e,
@@ -87,10 +81,7 @@ var c = (t.ColorWrap = function (e) {
 						key: 'render',
 						value: function () {
 							var t = {};
-							return (
-								this.props.onSwatchHover && (t.onSwatchHover = this.handleSwatchHover),
-								s.default.createElement(e, r({}, this.props, this.state, { onChange: this.handleChange }, t))
-							);
+							return this.props.onSwatchHover && (t.onSwatchHover = this.handleSwatchHover), s.default.createElement(e, r({}, this.props, this.state, { onChange: this.handleChange }, t));
 						}
 					}
 				],

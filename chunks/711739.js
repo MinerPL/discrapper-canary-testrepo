@@ -69,11 +69,7 @@ let d = function (e, t) {
 				t > s(2147483647 / _) && l('overflow'), (t *= _);
 			}
 			let d = t.length + 1;
-			(a = _(r - o, d, 0 == o)),
-				s(r / d) > 2147483647 - i && l('overflow'),
-				(i += s(r / d)),
-				(r %= d),
-				t.splice(r++, 0, i);
+			(a = _(r - o, d, 0 == o)), s(r / d) > 2147483647 - i && l('overflow'), (i += s(r / d)), (r %= d), t.splice(r++, 0, i);
 		}
 		return String.fromCodePoint(...t);
 	},

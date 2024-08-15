@@ -37,13 +37,7 @@ function f(e, t, n) {
 }
 class C extends a.PureComponent {
 	componentDidMount() {
-		c.Y(p.Z5c.APPLICATION_LIBRARY),
-			(0, E.T)(T.jE.LIBRARY),
-			o.Z.wait(() => (0, d.o)()),
-			(0, u.N)(),
-			null != this._scrollToOnMount &&
-				null != this._scrollerRef.current &&
-				this.scrollToRow(this._scrollToOnMount, this._scrollToPadding);
+		c.Y(p.Z5c.APPLICATION_LIBRARY), (0, E.T)(T.jE.LIBRARY), o.Z.wait(() => (0, d.o)()), (0, u.N)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding);
 	}
 	renderToolbar() {
 		return (0, i.jsx)(h.Z, {});
@@ -53,9 +47,7 @@ class C extends a.PureComponent {
 			t = (0, i.jsx)('div', {
 				children: (0, i.jsx)(_.Z, {
 					section: p.jXE.LIBRARY_INSTALL_MODULE,
-					children: (0, i.jsx)(g.Z, {
-						onHeightTallerThanHalfViewportChange: this.handleHeightTallerThanHalfViewportChange
-					})
+					children: (0, i.jsx)(g.Z, { onHeightTallerThanHalfViewportChange: this.handleHeightTallerThanHalfViewportChange })
 				})
 			});
 		return (0, i.jsxs)(a.Fragment, {

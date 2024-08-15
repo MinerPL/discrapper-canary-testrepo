@@ -18,11 +18,10 @@ function h(e) {
 function p(e) {
 	let { entitlements: t } = e,
 		n = !1;
-	for (let { sku: e } of t)
-		(null == e ? void 0 : e.application) != null && (h(u.Z.createFromServer(e.application)), (n = !0));
+	for (let { sku: e } of t) (null == e ? void 0 : e.application) != null && (h(u.Z.createFromServer(e.application)), (n = !0));
 	return n;
 }
-class I extends (r = o.ZP.Store) {
+class m extends (r = o.ZP.Store) {
 	_getAllApplications() {
 		return Object.values(d);
 	}
@@ -54,7 +53,7 @@ class I extends (r = o.ZP.Store) {
 	}
 }
 (s = 'ApplicationStore'),
-	(a = 'displayName') in (i = I)
+	(a = 'displayName') in (i = m)
 		? Object.defineProperty(i, a, {
 				value: s,
 				enumerable: !0,
@@ -62,7 +61,7 @@ class I extends (r = o.ZP.Store) {
 				writable: !0
 			})
 		: (i[a] = s),
-	(t.Z = new I(l.Z, {
+	(t.Z = new m(l.Z, {
 		LOGOUT: function () {
 			(d = {}), (_ = {}), (E = {}), (f = {});
 		},

@@ -78,9 +78,7 @@ function x(e) {
 								id: T,
 								className: A.header,
 								variant: 'heading-xl/semibold',
-								children: a
-									? f.Z.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_CHANGE_HEADER
-									: f.Z.Messages.CAMERA_PREVIEW_MODAL_HEADER
+								children: a ? f.Z.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_CHANGE_HEADER : f.Z.Messages.CAMERA_PREVIEW_MODAL_HEADER
 							}),
 							(0, n.jsx)(I.Z, {
 								hidePreviewToggle: !0,
@@ -126,8 +124,7 @@ function x(e) {
 								type: t.Checkbox.Types.INVERTED,
 								value: D,
 								onChange: () => {
-									p.qF.updateSetting(!D),
-										C.default.track(h.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !D });
+									p.qF.updateSetting(!D), C.default.track(h.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !D });
 								},
 								children: (0, n.jsx)(t.Text, {
 									variant: 'text-sm/normal',

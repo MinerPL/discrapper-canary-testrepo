@@ -12,17 +12,7 @@ var r = l(481060),
 	s = l(701488),
 	o = l(981631);
 function c(e) {
-	let {
-			channel: n,
-			guildId: c,
-			locationObject: d,
-			openInPopout: m,
-			initialSelectedApplicationId: f,
-			initialSlide: p = s.ag.DIRECTORY,
-			enableSelectedTextChannelInvite: E = !1,
-			analyticsLocations: v,
-			opensAppLauncherModal: C = !1
-		} = e,
+	let { channel: n, guildId: c, locationObject: d, openInPopout: m, initialSelectedApplicationId: f, initialSlide: p = s.ag.DIRECTORY, enableSelectedTextChannelInvite: E = !1, analyticsLocations: v, opensAppLauncherModal: C = !1 } = e,
 		h = v.length > 0 ? v[v.length - 1] : 'open-activity-shelf',
 		{ enabled: x } = i.m1.getCurrentConfig({ location: h }, { autoTrackExposure: !1 });
 	if (C && x) {

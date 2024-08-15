@@ -51,9 +51,7 @@ function R(e) {
 	let { keybind: i } = e,
 		l = a.useRef(i);
 	a.useEffect(() => void (l.current = i));
-	let [d, _] = a.useState(
-			null !== (t = null === (s = i.params) || void 0 === s ? void 0 : s.channelId) && void 0 !== t ? t : void 0
-		),
+	let [d, _] = a.useState(null !== (t = null === (s = i.params) || void 0 === s ? void 0 : s.channelId) && void 0 !== t ? t : void 0),
 		E = a.useCallback(() => {
 			(0, r.openModalLazy)(
 				async () => (e) =>

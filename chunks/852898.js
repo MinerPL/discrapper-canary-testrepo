@@ -64,11 +64,7 @@ function I(e) {
 							)
 					});
 				}
-				return m
-					? _.Z.Messages.MANAGED_ROLE_PREMIUM_SUBSCRIBER_EXPLANATION
-					: N
-						? _.Z.Messages.MANAGED_ROLE_GUILD_CONNECTIONS_EXPLANATION
-						: _.Z.Messages.MANAGED_ROLE_EXPLAINATION;
+				return m ? _.Z.Messages.MANAGED_ROLE_PREMIUM_SUBSCRIBER_EXPLANATION : N ? _.Z.Messages.MANAGED_ROLE_GUILD_CONNECTIONS_EXPLANATION : _.Z.Messages.MANAGED_ROLE_EXPLAINATION;
 			})(e, t),
 		[e, t]
 	);

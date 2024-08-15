@@ -26,10 +26,7 @@ function o(e, t) {
 				case s.oC.GUILD_ONBOARDING:
 					return;
 			}
-			let c =
-				null !== (l = null === (o = r.Z.getChannel(u)) || void 0 === o ? void 0 : o.type) && void 0 !== l
-					? l
-					: a.d4z.UNKNOWN;
+			let c = null !== (l = null === (o = r.Z.getChannel(u)) || void 0 === o ? void 0 : o.type) && void 0 !== l ? l : a.d4z.UNKNOWN;
 			return {
 				timestamp: new Date(),
 				rtc_state: i.Z.getState(),

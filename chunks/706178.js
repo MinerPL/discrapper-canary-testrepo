@@ -16,7 +16,5 @@ a && a.getRandomValues
 				: n;
 		})
 	: (e.exports = function () {
-			throw Error(
-				'Secure random number generation is not supported by this browser.\nUse Chrome, Firefox or Internet Explorer 11'
-			);
+			throw Error('Secure random number generation is not supported by this browser.\nUse Chrome, Firefox or Internet Explorer 11');
 		});

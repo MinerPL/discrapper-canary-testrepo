@@ -14,8 +14,8 @@ var a,
 	_ = n(814443),
 	f = n(428598),
 	E = n(131704),
-	g = n(624138),
-	C = n(51144),
+	C = n(624138),
+	g = n(51144),
 	I = n(592125),
 	x = n(580005),
 	T = n(699516),
@@ -96,54 +96,23 @@ function D(e, t) {
 		if (n.useV2Communication)
 			return (function (e, t) {
 				var n, i, a, s;
-				let l =
-					null !==
-						(a = null === (n = f.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.communicationProbability) &&
-					void 0 !== a
-						? a
-						: 0;
-				return (
-					(null !==
-						(s = null === (i = f.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.communicationProbability) &&
-					void 0 !== s
-						? s
-						: 0) - l
-				);
+				let l = null !== (a = null === (n = f.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.communicationProbability) && void 0 !== a ? a : 0;
+				return (null !== (s = null === (i = f.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.communicationProbability) && void 0 !== s ? s : 0) - l;
 			})(e, t);
 		if (n.useV2Dm)
 			return (function (e, t) {
 				var n, i, a, s;
-				let l =
-					null !== (a = null === (n = f.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.dmProbability) &&
-					void 0 !== a
-						? a
-						: 0;
-				return (
-					(null !== (s = null === (i = f.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.dmProbability) &&
-					void 0 !== s
-						? s
-						: 0) - l
-				);
+				let l = null !== (a = null === (n = f.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.dmProbability) && void 0 !== a ? a : 0;
+				return (null !== (s = null === (i = f.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.dmProbability) && void 0 !== s ? s : 0) - l;
 			})(e, t);
 		if (n.useV1)
 			return (function (e, t) {
 				var n, i, a, s;
-				let l =
-					null !== (a = null === (n = _.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.affinity) &&
-					void 0 !== a
-						? a
-						: 0;
-				return (
-					(null !== (s = null === (i = _.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.affinity) &&
-					void 0 !== s
-						? s
-						: 0) - l
-				);
+				let l = null !== (a = null === (n = _.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.affinity) && void 0 !== a ? a : 0;
+				return (null !== (s = null === (i = _.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.affinity) && void 0 !== s ? s : 0) - l;
 			})(e, t);
 	}
-	return (0, g._I)(C.ZP.getName(e.user).toLocaleLowerCase()).localeCompare(
-		(0, g._I)(C.ZP.getName(t.user).toLocaleLowerCase())
-	);
+	return (0, C._I)(g.ZP.getName(e.user).toLocaleLowerCase()).localeCompare((0, C._I)(g.ZP.getName(t.user).toLocaleLowerCase()));
 }
 function k(e) {
 	let { results: t } = e;

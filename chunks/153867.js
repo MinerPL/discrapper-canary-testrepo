@@ -22,12 +22,7 @@ function E(e) {
 		(t) => {
 			t.folders = e.map((e) => {
 				let t = r.yX.create({ guildIds: e.guildIds });
-				return (
-					null != e.folderId && (t.id = i.r1.create({ value: String(e.folderId) })),
-					null != e.folderColor && (t.color = i.wA.create({ value: String(e.folderColor) })),
-					null != e.folderName && '' !== e.folderName && (t.name = i.Gm.create({ value: String(e.folderName) })),
-					t
-				);
+				return null != e.folderId && (t.id = i.r1.create({ value: String(e.folderId) })), null != e.folderColor && (t.color = i.wA.create({ value: String(e.folderColor) })), null != e.folderName && '' !== e.folderName && (t.name = i.Gm.create({ value: String(e.folderName) })), t;
 			});
 		},
 		c.fy.FREQUENT_USER_ACTION
@@ -73,13 +68,7 @@ function h(e) {
 			'appearance',
 			(e) => {
 				var r;
-				(e.theme = f(n)),
-					(e.clientThemeSettings = {
-						backgroundGradientPresetId:
-							null != (r = { backgroundGradientPresetId: t }).backgroundGradientPresetId
-								? i.yC.create({ value: r.backgroundGradientPresetId })
-								: void 0
-					});
+				(e.theme = f(n)), (e.clientThemeSettings = { backgroundGradientPresetId: null != (r = { backgroundGradientPresetId: t }).backgroundGradientPresetId ? i.yC.create({ value: r.backgroundGradientPresetId }) : void 0 });
 			},
 			s
 		);
@@ -129,9 +118,7 @@ t.ZP = {
 						? {}
 						: {
 								theme: l.Z.theme,
-								clientThemeSettings: {
-									backgroundGradientPresetId: null === (t = s.Z.gradientPreset) || void 0 === t ? void 0 : t.id
-								},
+								clientThemeSettings: { backgroundGradientPresetId: null === (t = s.Z.gradientPreset) || void 0 === t ? void 0 : t.id },
 								developerMode: u.Sb.getSetting()
 							}
 				}

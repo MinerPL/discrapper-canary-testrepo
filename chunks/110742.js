@@ -15,8 +15,7 @@ function r(n) {
 			let t = 0;
 			for (let n of e) {
 				var i, r;
-				let e =
-					null !== (r = null === (i = n.endsAt) || void 0 === i ? void 0 : i.getTime()) && void 0 !== r ? r : 1 / 0;
+				let e = null !== (r = null === (i = n.endsAt) || void 0 === i ? void 0 : i.getTime()) && void 0 !== r ? r : 1 / 0;
 				e >= t && (t = e);
 			}
 			return t > new Date().getTime();

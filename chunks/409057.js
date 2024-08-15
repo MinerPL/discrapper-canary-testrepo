@@ -19,8 +19,8 @@ var i = n(120356),
 	f = n(420660),
 	h = n(100527),
 	p = n(906732),
-	I = n(314091),
-	m = n(180335),
+	m = n(314091),
+	I = n(180335),
 	T = n(810568),
 	g = n(168524),
 	S = n(833858),
@@ -49,7 +49,7 @@ function H(e) {
 		{ analyticsLocations: K } = (0, p.ZP)(h.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
 		{ profileType: z } = (0, O.z)(),
 		q = { [F.fullSize]: z === x.y0.FULL_SIZE },
-		Q = (0, m.Bq)({
+		Q = (0, I.Bq)({
 			activity: i,
 			user: t
 		}),
@@ -100,7 +100,7 @@ function H(e) {
 				f = null === (t = i.assets) || void 0 === t ? void 0 : t.small_image,
 				h = null === (n = i.assets) || void 0 === n ? void 0 : n.large_text,
 				p = null === (a = i.assets) || void 0 === a ? void 0 : a.small_text,
-				I =
+				m =
 					null == X
 						? void 0
 						: () => {
@@ -113,7 +113,7 @@ function H(e) {
 						src: e,
 						alt: B.Z.Messages.XBOX
 					},
-					onClick: I
+					onClick: m
 				});
 			}
 			if (null == o && null == f && (0, _.Z)(i)) {
@@ -123,7 +123,7 @@ function H(e) {
 						src: e,
 						alt: B.Z.Messages.PLAYSTATION
 					},
-					onClick: I
+					onClick: m
 				});
 			}
 			return null == o && null != H
@@ -132,7 +132,7 @@ function H(e) {
 							src: H.getIconURL(D.WQ),
 							alt: B.Z.Messages.APPLICATION_ICON_A11Y_LABEL.format({ applicationName: H.name })
 						},
-						onClick: I,
+						onClick: m,
 						aspectRatio: s
 					})
 				: null == o && null != f
@@ -141,7 +141,7 @@ function H(e) {
 								src: V(i.application_id, f, D.WQ),
 								text: p
 							},
-							onClick: I,
+							onClick: m,
 							aspectRatio: s
 						})
 					: null != f && (0, d.Z)(i)
@@ -154,14 +154,14 @@ function H(e) {
 									src: V(i.application_id, f, D.Bp),
 									text: p
 								},
-								onClick: I
+								onClick: m
 							})
 						: (0, r.jsx)(D.ZP, {
 								image: {
 									src: V(i.application_id, o, D.WQ),
 									text: h
 								},
-								onClick: I,
+								onClick: m,
 								aspectRatio: s
 							});
 		},
@@ -247,9 +247,7 @@ function H(e) {
 							})
 						]
 					})
-				: (0, c.Z)(i) &&
-					  (null === (t = i.party) || void 0 === t ? void 0 : t.size) != null &&
-					  (null === (n = i.party) || void 0 === n ? void 0 : n.size.length) >= 2
+				: (0, c.Z)(i) && (null === (t = i.party) || void 0 === t ? void 0 : t.size) != null && (null === (n = i.party) || void 0 === n ? void 0 : n.size.length) >= 2
 					? (0, r.jsxs)('div', {
 							className: F.gameState,
 							children: [
@@ -346,7 +344,7 @@ function H(e) {
 					children: [
 						(0, r.jsx)(y.Z, {
 							text: ee,
-							platform: (0, I.ZH)(i),
+							platform: (0, m.ZH)(i),
 							tags: (0, r.jsx)(P.Z, {
 								display: 'live',
 								user: t,

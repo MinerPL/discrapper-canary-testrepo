@@ -42,13 +42,7 @@ function c(e) {
 				return Object.entries(e).reduce((e, [t, r], a) => {
 					let i = `${encodeURIComponent(t)}=${encodeURIComponent(r)}`,
 						_ = 0 === a ? i : `${e},${i}`;
-					return _.length > 8192
-						? (n.X &&
-								o.kg.warn(
-									`Not adding key: ${t} with val: ${r} to baggage header due to exceeding baggage size limits.`
-								),
-							e)
-						: _;
+					return _.length > 8192 ? (n.X && o.kg.warn(`Not adding key: ${t} with val: ${r} to baggage header due to exceeding baggage size limits.`), e) : _;
 				}, '');
 		})(Object.entries(e).reduce((e, [t, r]) => (r && (e[`${_}${t}`] = r), e), {}));
 }

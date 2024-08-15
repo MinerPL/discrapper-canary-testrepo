@@ -28,11 +28,7 @@ function A(t) {
 		{ channel: G, message: h, target: l, mediaItem: y, onSelect: R, onHeightUpdate: Z } = t,
 		M = l;
 	if (null != y) A = T = y.url;
-	else
-		for (; (0, I.k)(M); )
-			(0, I.k)(M, HTMLImageElement) && null != M.src && (A = M.src),
-				(0, I.k)(M, HTMLAnchorElement) && null != M.href && ((T = M.href), (u = M.textContent)),
-				(M = M.parentNode);
+	else for (; (0, I.k)(M); ) (0, I.k)(M, HTMLImageElement) && null != M.src && (A = M.src), (0, I.k)(M, HTMLAnchorElement) && null != M.href && ((T = M.href), (u = M.textContent)), (M = M.parentNode);
 	let C = null === (e = document.getSelection()) || void 0 === e ? void 0 : e.toString(),
 		m = (0, s.Z)(C),
 		f = (0, S.Z)(C),

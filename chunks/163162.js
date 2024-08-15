@@ -49,8 +49,7 @@ r.d(t, {
 			} catch (e) {}
 			(0, i.$Q)(E, t), (0, i.xp)(t, '__sentry_wrapped__', E);
 			try {
-				Object.getOwnPropertyDescriptor(E, 'name').configurable &&
-					Object.defineProperty(E, 'name', { get: () => t.name });
+				Object.getOwnPropertyDescriptor(E, 'name').configurable && Object.defineProperty(E, 'name', { get: () => t.name });
 			} catch (e) {}
 			return E;
 		};

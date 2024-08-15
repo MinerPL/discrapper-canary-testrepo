@@ -15,8 +15,8 @@ t.Z = i.memo(
 	i.forwardRef(function (e, t) {
 		let { disabled: n, type: a } = e,
 			[h, p] = (0, c.Iu)((e) => [e.activeView, e.pickerId], o.Z),
-			I = i.useContext(u.ZP),
-			[m, T] = i.useState(!1),
+			m = i.useContext(u.ZP),
+			[I, T] = i.useState(!1),
 			g = h === _.X1.STICKER,
 			S = i.useCallback(() => {
 				(0, c.RO)(_.X1.STICKER, a);
@@ -33,13 +33,13 @@ t.Z = i.memo(
 					});
 				};
 			return (
-				I.addListener('sticker-suggestions-shown', e),
-				I.addListener('sticker-suggestions-hidden', t),
+				m.addListener('sticker-suggestions-shown', e),
+				m.addListener('sticker-suggestions-hidden', t),
 				() => {
-					I.removeListener('sticker-suggestions-shown', e), I.removeListener('sticker-suggestions-hidden', t);
+					m.removeListener('sticker-suggestions-shown', e), m.removeListener('sticker-suggestions-hidden', t);
 				}
 			);
-		}, [I]);
+		}, [m]);
 		let { Component: A, events: N, play: v } = (0, l.z)();
 		return n
 			? null
@@ -47,7 +47,7 @@ t.Z = i.memo(
 					className: s()(_.CT, f.buttonContainer),
 					ref: t,
 					children: (0, r.jsx)(d.Z, {
-						innerClassName: s()(f.button, f.stickerButton, { [f.stickerButtonTilted]: m && !g }),
+						innerClassName: s()(f.button, f.stickerButton, { [f.stickerButtonTilted]: I && !g }),
 						...N,
 						onClick: () => {
 							S(), v();

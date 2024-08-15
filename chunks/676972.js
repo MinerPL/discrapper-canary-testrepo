@@ -12,15 +12,12 @@ function i(e, t) {
 }),
 	(i.prototype.digest = function (e) {
 		var t = this._len % this._blockSize;
-		(this._block[t] = 128),
-			this._block.fill(0, t + 1),
-			t >= this._finalSize && (this._update(this._block), this._block.fill(0));
+		(this._block[t] = 128), this._block.fill(0, t + 1), t >= this._finalSize && (this._update(this._block), this._block.fill(0));
 		var n = 8 * this._len;
 		if (n <= 4294967295) this._block.writeUInt32BE(n, this._blockSize - 4);
 		else {
 			var r = (4294967295 & n) >>> 0;
-			this._block.writeUInt32BE((n - r) / 4294967296, this._blockSize - 8),
-				this._block.writeUInt32BE(r, this._blockSize - 4);
+			this._block.writeUInt32BE((n - r) / 4294967296, this._blockSize - 8), this._block.writeUInt32BE(r, this._blockSize - 4);
 		}
 		this._update(this._block);
 		var i = this._hash();

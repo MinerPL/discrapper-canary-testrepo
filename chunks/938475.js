@@ -22,8 +22,8 @@ var r,
 	f = n(979651),
 	h = n(709054),
 	p = n(51144),
-	I = n(981631);
-function m(e, t, n) {
+	m = n(981631);
+function I(e, t, n) {
 	return (
 		t in e
 			? Object.defineProperty(e, t, {
@@ -112,10 +112,7 @@ class R {
 		if (null != t && null != n) {
 			var r, i;
 			let a = A(this.guildId, n);
-			if (
-				(null == a ? void 0 : a.nick) !== (null === (r = t.member) || void 0 === r ? void 0 : r.nick) ||
-				(null == a ? void 0 : a.avatar) !== (null === (i = t.member) || void 0 === i ? void 0 : i.avatar)
-			) {
+			if ((null == a ? void 0 : a.nick) !== (null === (r = t.member) || void 0 === r ? void 0 : r.nick) || (null == a ? void 0 : a.avatar) !== (null === (i = t.member) || void 0 === i ? void 0 : i.avatar)) {
 				let { comparator: r } = N(t.voiceState, a, n);
 				return (
 					this._voiceStates.set(e, {
@@ -163,9 +160,9 @@ class R {
 		}
 	}
 	constructor(e) {
-		m(this, 'guildId', void 0),
-			m(this, '_pending', new Set()),
-			m(
+		I(this, 'guildId', void 0),
+			I(this, '_pending', new Set()),
+			I(
 				this,
 				'_voiceStates',
 				new o.h(
@@ -192,7 +189,7 @@ function y() {
 	let e = f.Z.getAllVoiceStates();
 	h.default.keys(e).forEach((t) => {
 		Object.keys(e[t]).forEach((e) => {
-			S(null != t ? t : I.ME).updateVoiceState(e);
+			S(null != t ? t : m.ME).updateVoiceState(e);
 		});
 	});
 }
@@ -201,7 +198,7 @@ class D extends (r = s.ZP.Store) {
 		y(), this.waitFor(c.default, E.default, _.ZP, f.Z), this.syncWith([E.default], C);
 	}
 	getVoiceStates(e) {
-		return S(null != e ? e : I.ME).getVoiceStates();
+		return S(null != e ? e : m.ME).getVoiceStates();
 	}
 	getAllVoiceStates() {
 		return g;
@@ -209,22 +206,22 @@ class D extends (r = s.ZP.Store) {
 	getVoiceStatesForChannel(e) {
 		let t = e.getGuildId(),
 			n = e.id;
-		return S(null != t ? t : I.ME).getVoiceStatesForChannel(n);
+		return S(null != t ? t : m.ME).getVoiceStatesForChannel(n);
 	}
 	getVoiceStatesForChannelAlt(e, t) {
-		return S(null != t ? t : I.ME).getVoiceStatesForChannel(e);
+		return S(null != t ? t : m.ME).getVoiceStatesForChannel(e);
 	}
 	countVoiceStatesForChannel(e) {
 		let t = d.Z.getChannel(e);
 		if (null == t) return 0;
 		let n = t.getGuildId();
-		return S(null != n ? n : I.ME).countVoiceStatesForChannel(e);
+		return S(null != n ? n : m.ME).countVoiceStatesForChannel(e);
 	}
 	getVoiceStateVersion(e) {
-		return S(null != e ? e : I.ME).getVersion();
+		return S(null != e ? e : m.ME).getVersion();
 	}
 }
-m(D, 'displayName', 'SortedVoiceStateStore'),
+I(D, 'displayName', 'SortedVoiceStateStore'),
 	(t.ZP = new D(l.Z, {
 		CONNECTION_OPEN: function () {
 			g = {};
@@ -235,13 +232,13 @@ m(D, 'displayName', 'SortedVoiceStateStore'),
 		VOICE_CHANNEL_SELECT: function (e) {
 			let { guildId: t } = e,
 				n = c.default.getId();
-			return null != n && S(null != t ? t : I.ME).updateVoiceState(n);
+			return null != n && S(null != t ? t : m.ME).updateVoiceState(n);
 		},
 		VOICE_STATE_UPDATES: function (e) {
 			let { voiceStates: t } = e;
 			return t.reduce((e, t) => {
 				let { guildId: n, userId: r } = t;
-				return S(null != n ? n : I.ME).updateVoiceState(r) || e;
+				return S(null != n ? n : m.ME).updateVoiceState(r) || e;
 			}, !1);
 		},
 		GUILD_MEMBER_UPDATE: function (e) {

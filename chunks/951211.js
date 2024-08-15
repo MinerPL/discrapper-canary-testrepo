@@ -18,19 +18,7 @@ var i,
 	d = n(981631),
 	h = n(689938);
 function m(e) {
-	let {
-			canAttachFiles: t,
-			canStartThreads: n,
-			useSlate: i,
-			canUseApplicationCommands: a,
-			hasClips: m,
-			channel: p,
-			activities: _,
-			newClipsCount: f,
-			canPostPolls: E,
-			canLaunchActivities: g,
-			appContext: C
-		} = e,
+	let { canAttachFiles: t, canStartThreads: n, useSlate: i, canUseApplicationCommands: a, hasClips: m, channel: p, activities: _, newClipsCount: f, canPostPolls: E, canLaunchActivities: C, appContext: g } = e,
 		I = [];
 	return (
 		t &&
@@ -46,7 +34,7 @@ function m(e) {
 			})),
 		m &&
 			t &&
-			C !== d.IlC.POPOUT &&
+			g !== d.IlC.POPOUT &&
 			I.push({
 				type: 'CLIPS',
 				icon: s.ClipsIcon,
@@ -73,7 +61,7 @@ function m(e) {
 				icon: s.AppsIcon,
 				display: h.Z.Messages.CHAT_ATTACH_USE_SLASH_COMMAND
 			}),
-		g &&
+		C &&
 			I.push({
 				type: 'ACTIVITY',
 				icon: s.ActivitiesIcon,
@@ -118,13 +106,4 @@ function m(e) {
 		I
 	);
 }
-((a = i || (i = {})).UPLOAD_A_FILE = 'UPLOAD_A_FILE'),
-	(a.UPLOAD_TEXT_AS_FILE = 'UPLOAD_TEXT_AS_FILE'),
-	(a.INVITE_TO_PLAY_GAME = 'INVITE_TO_GAME'),
-	(a.INVITE_TO_LISTEN = 'INVITE_TO_LISTEN'),
-	(a.INVITE_TO_WATCH = 'INVITE_TO_WATCH'),
-	(a.CREATE_THREAD = 'CREATE_THREAD'),
-	(a.SLASH_COMMAND = 'SLASH_COMMAND'),
-	(a.CLIPS = 'CLIPS'),
-	(a.POLL = 'POLL'),
-	(a.ACTIVITY = 'ACTIVITY');
+((a = i || (i = {})).UPLOAD_A_FILE = 'UPLOAD_A_FILE'), (a.UPLOAD_TEXT_AS_FILE = 'UPLOAD_TEXT_AS_FILE'), (a.INVITE_TO_PLAY_GAME = 'INVITE_TO_GAME'), (a.INVITE_TO_LISTEN = 'INVITE_TO_LISTEN'), (a.INVITE_TO_WATCH = 'INVITE_TO_WATCH'), (a.CREATE_THREAD = 'CREATE_THREAD'), (a.SLASH_COMMAND = 'SLASH_COMMAND'), (a.CLIPS = 'CLIPS'), (a.POLL = 'POLL'), (a.ACTIVITY = 'ACTIVITY');

@@ -28,24 +28,14 @@ var a = n(120356),
 	v = n(689938),
 	x = n(614364);
 function h(e) {
-	let {
-			className: t,
-			creator: n,
-			guildId: a,
-			isNew: T,
-			isHub: m = !1,
-			guildEvent: h,
-			eventPreview: g,
-			recurrenceId: f
-		} = e,
+	let { className: t, creator: n, guildId: a, isNew: T, isHub: m = !1, guildEvent: h, eventPreview: g, recurrenceId: f } = e,
 		L = (0, d.Z)(a, h.id, f),
 		S = null != h ? h : g,
 		A = (0, r.e7)([u.ZP], () => u.ZP.getNick(a, null == n ? void 0 : n.id), [a, n]);
 	f = null == S || null != f ? f : (0, _.DK)(S);
 	let { startTime: I } = (0, E.ZP)(null != h ? h : g, f),
 		Z = (0, o.Z)(f, h.id),
-		C =
-			(null == S ? void 0 : S.scheduled_start_time) != null ? (0, _.lh)(Z, I, new Date(S.scheduled_start_time)) : null;
+		C = (null == S ? void 0 : S.scheduled_start_time) != null ? (0, _.lh)(Z, I, new Date(S.scheduled_start_time)) : null;
 	if (null == S) return null;
 	let { entity_type: R, status: p, recurrence_rule: j } = S;
 	return (0, s.jsxs)('div', {
@@ -98,15 +88,7 @@ function h(e) {
 	});
 }
 function g(e) {
-	let {
-		headerVariant: t = 'heading-lg/medium',
-		descriptionClassName: n,
-		name: a,
-		description: r,
-		truncate: u,
-		guildId: c,
-		imageSource: o
-	} = e;
+	let { headerVariant: t = 'heading-lg/medium', descriptionClassName: n, name: a, description: r, truncate: u, guildId: c, imageSource: o } = e;
 	return (0, s.jsxs)('div', {
 		className: l()({ [x.withThumbnail]: null != o }),
 		children: [
@@ -140,21 +122,7 @@ function g(e) {
 	});
 }
 function f(e) {
-	let {
-		headerVariant: t,
-		descriptionClassName: n,
-		creator: a,
-		name: l,
-		description: r,
-		imageSource: i,
-		isHub: u = !1,
-		truncate: c,
-		guildId: o,
-		isNew: E,
-		guildEvent: d,
-		eventPreview: N,
-		recurrenceId: _
-	} = e;
+	let { headerVariant: t, descriptionClassName: n, creator: a, name: l, description: r, imageSource: i, isHub: u = !1, truncate: c, guildId: o, isNew: E, guildEvent: d, eventPreview: N, recurrenceId: _ } = e;
 	return (0, s.jsxs)('div', {
 		className: x.container,
 		children: [

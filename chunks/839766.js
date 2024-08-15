@@ -31,19 +31,12 @@ e.Z = new (class t {
 		let a = !(arguments.length > 5) || void 0 === arguments[5] || arguments[5];
 		return this.getCached(t).then((h) => {
 			var o;
-			if ((this.referenceCounts.set(t, (null !== (o = this.referenceCounts.get(t)) && void 0 !== o ? o : 0) + 1), h))
-				return h;
+			if ((this.referenceCounts.set(t, (null !== (o = this.referenceCounts.get(t)) && void 0 !== o ? o : 0) + 1), h)) return h;
 			let l = {
 				key: t,
 				promise: s(t, e, i, n, r)
 			};
-			return (
-				a &&
-					(this.entries.push(l),
-					l.promise.then((e) => (null == e && this.removeEntry(t), e)).catch((e) => this.removeEntry(t)),
-					this.entries.length > 50 && this.removeEntryAt(0)),
-				l.promise
-			);
+			return a && (this.entries.push(l), l.promise.then((e) => (null == e && this.removeEntry(t), e)).catch((e) => this.removeEntry(t)), this.entries.length > 50 && this.removeEntryAt(0)), l.promise;
 		});
 	}
 	drop(t) {
@@ -53,9 +46,7 @@ e.Z = new (class t {
 		let e = this.entries.findIndex((e) => e.key === t);
 		if (e >= 0) {
 			let t = this.entries[e];
-			return (
-				this.entries.splice(e, 1), this.entries.push(t), t.promise.then((t) => (null == t && this.removeEntryAt(e), t))
-			);
+			return this.entries.splice(e, 1), this.entries.push(t), t.promise.then((t) => (null == t && this.removeEntryAt(e), t));
 		}
 		return Promise.resolve(null);
 	}
@@ -67,17 +58,9 @@ e.Z = new (class t {
 	removeEntryAt(t) {
 		let e = this.entries[t],
 			i = this.referenceCounts.get(e.key);
-		return null != i && i > 1
-			? (this.referenceCounts.set(e.key, i - 1), null)
-			: (this.entries.splice(t, 1),
-				this.referenceCounts.delete(e.key),
-				e.promise.then((t) => (null == t ? void 0 : t.drop())),
-				e);
+		return null != i && i > 1 ? (this.referenceCounts.set(e.key, i - 1), null) : (this.entries.splice(t, 1), this.referenceCounts.delete(e.key), e.promise.then((t) => (null == t ? void 0 : t.drop())), e);
 	}
 	constructor() {
-		a(this, 'entries', void 0),
-			a(this, 'referenceCounts', void 0),
-			(this.entries = []),
-			(this.referenceCounts = new Map());
+		a(this, 'entries', void 0), a(this, 'referenceCounts', void 0), (this.entries = []), (this.referenceCounts = new Map());
 	}
 })();

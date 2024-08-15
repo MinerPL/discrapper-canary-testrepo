@@ -45,13 +45,7 @@ class s {
 	}
 	subscribe(e, t, n) {
 		let r = this._get(e);
-		return r.has(t)
-			? (r.set(t, Date.now()), !1)
-			: (null != n && r.has(n) && r.set(n, Date.now()),
-				r.set(t, Date.now()),
-				(this._subscriptions[e] = r),
-				this._onChange(e, r.keys()),
-				!0);
+		return r.has(t) ? (r.set(t, Date.now()), !1) : (null != n && r.has(n) && r.set(n, Date.now()), r.set(t, Date.now()), (this._subscriptions[e] = r), this._onChange(e, r.keys()), !0);
 	}
 	unsubscribe(e, t) {
 		if (!(e in this._subscriptions)) return !1;

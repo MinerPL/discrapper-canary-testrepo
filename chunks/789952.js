@@ -76,15 +76,7 @@ function s(e, t) {
 	let n,
 		[r, i] = e;
 	if (!l(r) || 0 === r.childNodes.length) return e;
-	for (
-		'forward' === t && i === r.childNodes.length && (t = 'backward'),
-			'backward' === t && i--,
-			[r, n] = o(r, i, t),
-			'forward' === t && n < i ? (t = 'backward') : 'backward' === t && n > i && (t = 'forward'),
-			i = n;
-		l(r) && r.childNodes.length > 0;
-
-	) {
+	for ('forward' === t && i === r.childNodes.length && (t = 'backward'), 'backward' === t && i--, [r, n] = o(r, i, t), 'forward' === t && n < i ? (t = 'backward') : 'backward' === t && n > i && (t = 'forward'), i = n; l(r) && r.childNodes.length > 0; ) {
 		let e = 'backward' === t ? r.childNodes.length - 1 : 0;
 		r = o(r, e, t)[0];
 	}

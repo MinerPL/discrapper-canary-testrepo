@@ -53,20 +53,13 @@ class o {
 		};
 		for (let t of e) n(t);
 		let r = 0;
-		for (let [e, n] of this.keyMap)
-			t ? ((t.nextKey = e), (n.prevKey = t.key)) : ((this.firstKey = e), (n.prevKey = void 0)),
-				'item' === n.type && (n.index = r++),
-				((t = n).nextKey = void 0);
+		for (let [e, n] of this.keyMap) t ? ((t.nextKey = e), (n.prevKey = t.key)) : ((this.firstKey = e), (n.prevKey = void 0)), 'item' === n.type && (n.index = r++), ((t = n).nextKey = void 0);
 		this.lastKey = null == t ? void 0 : t.key;
 	}
 }
 function l(e) {
 	var t;
-	let [n, l] = (0, s.zk)(
-			e.selectedKey,
-			null !== (t = e.defaultSelectedKey) && void 0 !== t ? t : null,
-			e.onSelectionChange
-		),
+	let [n, l] = (0, s.zk)(e.selectedKey, null !== (t = e.defaultSelectedKey) && void 0 !== t ? t : null, e.onSelectionChange),
 		u = (0, i.useMemo)(() => (null != n ? [n] : []), [n]),
 		{
 			collection: c,
@@ -77,10 +70,7 @@ function l(e) {
 				n = (0, r.q)(e),
 				s = (0, i.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
 				l = (0, i.useCallback)((e) => new o(t ? t(e) : e), [t]),
-				u = (0, i.useMemo)(
-					() => ({ suppressTextValueWarning: e.suppressTextValueWarning }),
-					[e.suppressTextValueWarning]
-				),
+				u = (0, i.useMemo)(() => ({ suppressTextValueWarning: e.suppressTextValueWarning }), [e.suppressTextValueWarning]),
 				c = (0, a.Kx)(e, l, u),
 				d = (0, i.useMemo)(() => new r.Z(c, n), [c, n]),
 				_ = (0, i.useRef)(null);

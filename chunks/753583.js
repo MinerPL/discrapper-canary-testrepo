@@ -100,10 +100,7 @@ s.Z = (e) => {
 						onAddTag: O,
 						maxTags: h.G7,
 						maxTaxLength: h._0,
-						placeholder:
-							(null == i ? void 0 : null === (s = i.keywords) || void 0 === s ? void 0 : s.length) === 0
-								? I.Z.Messages.SERVER_DISCOVERY_TAGS_INPUT_PLACEHOLDER
-								: ''
+						placeholder: (null == i ? void 0 : null === (s = i.keywords) || void 0 === s ? void 0 : s.length) === 0 ? I.Z.Messages.SERVER_DISCOVERY_TAGS_INPUT_PLACEHOLDER : ''
 					}),
 					(0, t.jsx)(d.Text, {
 						className: C.error,

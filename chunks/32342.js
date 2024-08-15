@@ -78,9 +78,7 @@ function A(e) {
 				className: T.header,
 				children: (0, s.jsx)(o.Heading, {
 					variant: 'heading-xl/semibold',
-					children: a
-						? i.Z.Messages.CREATOR_MONETIZATION_NEW_OWNER_ONBOARDING_MODAL_TITLE
-						: i.Z.Messages.CREATOR_MONETIZATION_NEW_OWNER_ONBOARDING_MODAL_TITLE_ACCEPT_TERM_ONLY
+					children: a ? i.Z.Messages.CREATOR_MONETIZATION_NEW_OWNER_ONBOARDING_MODAL_TITLE : i.Z.Messages.CREATOR_MONETIZATION_NEW_OWNER_ONBOARDING_MODAL_TITLE_ACCEPT_TERM_ONLY
 				})
 			}),
 			(0, s.jsxs)(o.ModalContent, {

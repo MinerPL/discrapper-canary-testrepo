@@ -23,16 +23,8 @@ function I(e) {
 			return r
 				.stop()
 				.then((t) => {
-					if (
-						(l && (s.m9.clearTimeout(l), (l = void 0)),
-						E.X && i.kg.log(`[Profiling] stopped profiling of span: ${(0, n.XU)(e).description}`),
-						!t)
-					) {
-						E.X &&
-							i.kg.log(
-								`[Profiling] profiler returned null profile for: ${(0, n.XU)(e).description}`,
-								'this may indicate an overlapping span or a call to stopProfiling with a profile title that was never started'
-							);
+					if ((l && (s.m9.clearTimeout(l), (l = void 0)), E.X && i.kg.log(`[Profiling] stopped profiling of span: ${(0, n.XU)(e).description}`), !t)) {
+						E.X && i.kg.log(`[Profiling] profiler returned null profile for: ${(0, n.XU)(e).description}`, 'this may indicate an overlapping span or a call to stopProfiling with a profile title that was never started');
 						return;
 					}
 					(0, c.dz)(I, t);
@@ -46,8 +38,7 @@ function I(e) {
 		start_timestamp: t
 	});
 	let l = s.m9.setTimeout(() => {
-			E.X && i.kg.log('[Profiling] max profile duration elapsed, stopping profiling for:', (0, n.XU)(e).description),
-				u();
+			E.X && i.kg.log('[Profiling] max profile duration elapsed, stopping profiling for:', (0, n.XU)(e).description), u();
 		}, c.WU),
 		R = e.end.bind(e);
 	e.end = function () {

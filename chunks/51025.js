@@ -6,7 +6,7 @@ n.d(t, {
 		return T;
 	},
 	S1: function () {
-		return I;
+		return m;
 	},
 	Wx: function () {
 		return y;
@@ -24,7 +24,7 @@ n.d(t, {
 		return S;
 	},
 	ob: function () {
-		return m;
+		return I;
 	},
 	pC: function () {
 		return A;
@@ -54,7 +54,7 @@ var r = n(544891),
 	f = n(57513),
 	h = n(981631),
 	p = n(689938);
-function I(e, t) {
+function m(e, t) {
 	E.Z.init({
 		userToken: e,
 		userId: t,
@@ -74,7 +74,7 @@ function I(e, t) {
 		}
 	});
 }
-function m() {
+function I() {
 	E.Z.destroy();
 }
 function T(e) {

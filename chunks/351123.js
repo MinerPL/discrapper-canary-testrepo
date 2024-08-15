@@ -51,8 +51,7 @@ function U(e) {
 				case y.m$.ROLES:
 					var C;
 					(N =
-						(p = s[x]).rowType === y.aC.ROLE &&
-						(null === (C = p.tags) || void 0 === C ? void 0 : C.guild_connections) === null
+						(p = s[x]).rowType === y.aC.ROLE && (null === (C = p.tags) || void 0 === C ? void 0 : C.guild_connections) === null
 							? (0, n.jsx)(E.Z, {
 									className: B.shield,
 									color: p.colorString,
@@ -295,12 +294,7 @@ function G(e) {
 		formLabel: F.Z.Messages.FORM_LABEL_CHANNEL_PERMISSIONS
 	};
 	return (
-		l.isCategory()
-			? ((E.title = F.Z.Messages.PRIVATE_CATEGORY),
-				(E.subtitle = F.Z.Messages.CHANNEL_PERMISSIONS_PRIVATE_CATEGORY_DESCRIPTION),
-				(E.formLabel = F.Z.Messages.FORM_LABEL_CATEGORY_PERMISSIONS))
-			: l.type === w.d4z.GUILD_VOICE &&
-				(E.subtitle = F.Z.Messages.CHANNEL_PERMISSIONS_PRIVATE_CHANNEL_DESCRIPTION_VOICE),
+		l.isCategory() ? ((E.title = F.Z.Messages.PRIVATE_CATEGORY), (E.subtitle = F.Z.Messages.CHANNEL_PERMISSIONS_PRIVATE_CATEGORY_DESCRIPTION), (E.formLabel = F.Z.Messages.FORM_LABEL_CATEGORY_PERMISSIONS)) : l.type === w.d4z.GUILD_VOICE && (E.subtitle = F.Z.Messages.CHANNEL_PERMISSIONS_PRIVATE_CHANNEL_DESCRIPTION_VOICE),
 		(0, n.jsxs)('div', {
 			className: i()(B.settingCard, { [B.active]: a }),
 			children: [
@@ -431,17 +425,7 @@ t.Z = r.ZP.connectStores([I.Z, Z.Z, M.ZP, R.Z], () => {
 		permissionUpdates: a
 	};
 })(function (e) {
-	let {
-			canSyncChannel: t,
-			category: a,
-			channel: i,
-			filteredMembers: r,
-			filteredRoles: d,
-			guild: c,
-			isPrivateGuildChannel: h,
-			locked: m,
-			permissionUpdates: g
-		} = e,
+	let { canSyncChannel: t, category: a, channel: i, filteredMembers: r, filteredRoles: d, guild: c, isPrivateGuildChannel: h, locked: m, permissionUpdates: g } = e,
 		[E, T] = l.useState(!A.Uu(P.Pl.SEND_MESSAGES, i));
 	if (null == i || null == c) return null;
 	function N() {
@@ -459,9 +443,7 @@ t.Z = r.ZP.connectStores([I.Z, Z.Z, M.ZP, R.Z], () => {
 						onConfirm: async () => {
 							let { guild_id: e } = a,
 								t = { ...a.permissionOverwrites };
-							null != e && null == t[e] && (t[e] = A.we(e)),
-								(await (0, p.u)(i, t[e].deny, t[e].allow)) &&
-									(0, u.wk)(i.id, { permissionOverwrites: Object.values(t) });
+							null != e && null == t[e] && (t[e] = A.we(e)), (await (0, p.u)(i, t[e].deny, t[e].allow)) && (0, u.wk)(i.id, { permissionOverwrites: Object.values(t) });
 						}
 					});
 			});
@@ -471,8 +453,7 @@ t.Z = r.ZP.connectStores([I.Z, Z.Z, M.ZP, R.Z], () => {
 		subtitle: F.Z.Messages.CHANNEL_PERMISSIONS_SUBTITLE
 	};
 	return (
-		i.isCategory() &&
-			((S.title = F.Z.Messages.CATEGORY_SETTINGS), (S.subtitle = F.Z.Messages.CATEGORY_PERMISSIONS_SUBTITLE)),
+		i.isCategory() && ((S.title = F.Z.Messages.CATEGORY_SETTINGS), (S.subtitle = F.Z.Messages.CATEGORY_PERMISSIONS_SUBTITLE)),
 		(0, n.jsxs)(n.Fragment, {
 			children: [
 				(0, n.jsx)(o.FormTitle, {

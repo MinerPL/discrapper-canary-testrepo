@@ -45,9 +45,7 @@ let g = (e) => {
 		...e,
 		children: (0, a.jsx)(o.Text, {
 			variant: 'text-md/normal',
-			children: n.hasFeature(E.oNc.HUB)
-				? I.Z.Messages.LEAVE_HUB_BODY.format({ name: n.name })
-				: I.Z.Messages.LEAVE_SERVER_BODY.format({ name: n.name })
+			children: n.hasFeature(E.oNc.HUB) ? I.Z.Messages.LEAVE_HUB_BODY.format({ name: n.name }) : I.Z.Messages.LEAVE_SERVER_BODY.format({ name: n.name })
 		})
 	});
 };

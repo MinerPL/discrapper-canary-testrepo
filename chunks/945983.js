@@ -55,11 +55,7 @@ function M(e, l) {
 			[e, l, i]
 		),
 		M = d.useCallback(() => {
-			r.Z.updateGuildNotificationSettingsBulk(
-				Object.fromEntries(e.filter((e) => i[e]).map((e) => [e, { muted: !1 }])),
-				E.ZB.Unmuted,
-				l
-			);
+			r.Z.updateGuildNotificationSettingsBulk(Object.fromEntries(e.filter((e) => i[e]).map((e) => [e, { muted: !1 }])), E.ZB.Unmuted, l);
 		}, [e, l, i]);
 	return t
 		? (0, n.jsxs)(n.Fragment, {

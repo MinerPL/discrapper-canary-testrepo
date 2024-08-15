@@ -42,17 +42,7 @@ let B = (0, T.Mg)(c.Z.ACTIVITY_SHELF_MODAL_MODAL_PADDING),
 	V = (0, T.Mg)(c.Z.ACTIVITY_SHELF_MODAL_MODAL_WIDTH),
 	R = (0, T.Mg)(c.Z.ACTIVITY_SHELF_MODAL_MODAL_MAX_HEIGHT) + B + (0, T.Mg)(c.Z.ACTIVITY_SHELF_MODAL_MODAL_ART_HEIGHT);
 function k(e) {
-	let {
-			channel: t,
-			guildId: n,
-			locationObject: l,
-			onClose: c,
-			initialSelectedApplicationId: g,
-			initialSlide: _ = A.ag.DIRECTORY,
-			enableSelectedTextChannelInvite: T,
-			analyticsLocations: B,
-			...R
-		} = e,
+	let { channel: t, guildId: n, locationObject: l, onClose: c, initialSelectedApplicationId: g, initialSlide: _ = A.ag.DIRECTORY, enableSelectedTextChannelInvite: T, analyticsLocations: B, ...R } = e,
 		k = (0, o.e7)([E.Z], () => E.Z.getIsEnabled(), []),
 		{ analyticsLocations: H } = (0, p.ZP)(B),
 		[F, U] = i.useState(_),
@@ -220,9 +210,7 @@ function k(e) {
 										if (F === A.ag.DIRECTORY)
 											return (0, a.jsx)(d.Text, {
 												variant: 'text-sm/normal',
-												children: k
-													? y.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_SHELF_SUBTITLE
-													: y.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_SUBTITLE
+												children: k ? y.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_SHELF_SUBTITLE : y.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_SUBTITLE
 											});
 										return null;
 									})()

@@ -35,34 +35,7 @@ let C = {
 		[_.HeQ.CASH_APP]: E.ZP.Types.CASH_APP
 	},
 	S = [_.HeQ.CARD, _.HeQ.PAYPAL],
-	I = new Set([
-		'DE',
-		'BG',
-		'CZ',
-		'DK',
-		'HU',
-		'RO',
-		'SE',
-		'CH',
-		'SI',
-		'IE',
-		'LV',
-		'MT',
-		'FR',
-		'SK',
-		'FI',
-		'GR',
-		'PT',
-		'LU',
-		'LT',
-		'CY',
-		'NO',
-		'NL',
-		'ES',
-		'BE',
-		'AT',
-		'IT'
-	]),
+	I = new Set(['DE', 'BG', 'CZ', 'DK', 'HU', 'RO', 'SE', 'CH', 'SI', 'IE', 'LV', 'MT', 'FR', 'SK', 'FI', 'GR', 'PT', 'LU', 'LT', 'CY', 'NO', 'NL', 'ES', 'BE', 'AT', 'IT']),
 	P = new Set(['BE', 'NL', 'DE', 'ES', 'AT', 'IT']),
 	R = new Map([
 		[_.HeQ.SOFORT, new Set(['ALL', ...P])],
@@ -82,11 +55,7 @@ let C = {
 	]),
 	f = new Map([[_.HeQ.PAYSAFE_CARD, new Set(['DE'])]]);
 function M(e) {
-	let {
-			enabledPaymentTypes: a,
-			forceCountryCode: t,
-			validCountryCodes: s
-		} = d.ZP.getCurrentConfig({ location: '40c266_1' }, { autoTrackExposure: !1 }),
+	let { enabledPaymentTypes: a, forceCountryCode: t, validCountryCodes: s } = d.ZP.getCurrentConfig({ location: '40c266_1' }, { autoTrackExposure: !1 }),
 		n = null != e ? e : 'ALL';
 	s.length > 0 && null != t && null != e && (n = s.includes(e) ? e : t);
 	let l = new Set(),
@@ -146,15 +115,7 @@ class b extends n.PureComponent {
 	}
 	render() {
 		let { showAllPaymentMethods: e } = this.state,
-			{
-				onChooseType: a,
-				className: t,
-				onStripePaymentMethodReceived: n,
-				allowStripeRequestPayments: l,
-				ipCountryCode: o,
-				ipCountryCodeHasError: c,
-				isEligibleForTrial: d = !1
-			} = this.props,
+			{ onChooseType: a, className: t, onStripePaymentMethodReceived: n, allowStripeRequestPayments: l, ipCountryCode: o, ipCountryCodeHasError: c, isEligibleForTrial: d = !1 } = this.props,
 			E = l
 				? (0, s.jsx)(m.Z, {
 						className: h.button,

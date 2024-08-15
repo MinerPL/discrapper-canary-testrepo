@@ -42,10 +42,7 @@ function d(e) {
 			if (!x) {
 				T(!0);
 				try {
-					await (0, i.i)(!0),
-						(0, l.showToast)(
-							(0, l.createToast)(_.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT, l.ToastType.SUCCESS)
-						);
+					await (0, i.i)(!0), (0, l.showToast)((0, l.createToast)(_.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT, l.ToastType.SUCCESS));
 				} catch (s) {
 					let e = new r.Z(s).getAnyErrorMessage();
 					null != e && (0, l.showToast)((0, l.createToast)(e, l.ToastType.FAILURE));

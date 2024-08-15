@@ -6,10 +6,7 @@ var r = n(660566);
 	}),
 	(e.exports.tokensToFunction = o),
 	(e.exports.tokensToRegExp = d);
-var i = RegExp(
-	'(\\\\.)|([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))',
-	'g'
-);
+var i = RegExp('(\\\\.)|([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))', 'g');
 function a(e, t) {
 	for (var n, r = [], a = 0, s = 0, o = '', u = (t && t.delimiter) || '/'; null != (n = i.exec(e)); ) {
 		var c = n[0],
@@ -23,15 +20,15 @@ function a(e, t) {
 			f = n[2],
 			h = n[3],
 			p = n[4],
-			I = n[5],
-			m = n[6],
+			m = n[5],
+			I = n[6],
 			T = n[7];
 		o && (r.push(o), (o = ''));
 		var g = null != f && null != E && E !== f,
-			S = '+' === m || '*' === m,
-			A = '?' === m || '*' === m,
+			S = '+' === I || '*' === I,
+			A = '?' === I || '*' === I,
 			N = n[2] || u,
-			v = p || I;
+			v = p || m;
 		r.push({
 			name: h || a++,
 			prefix: f || '',
@@ -57,8 +54,7 @@ function s(e) {
 	});
 }
 function o(e) {
-	for (var t = Array(e.length), n = 0; n < e.length; n++)
-		'object' == typeof e[n] && (t[n] = RegExp('^(?:' + e[n].pattern + ')$'));
+	for (var t = Array(e.length), n = 0; n < e.length; n++) 'object' == typeof e[n] && (t[n] = RegExp('^(?:' + e[n].pattern + ')$'));
 	return function (n, i) {
 		for (var a = '', o = n || {}, l = (i || {}).pretty ? s : encodeURIComponent, u = 0; u < e.length; u++) {
 			var c,
@@ -76,17 +72,13 @@ function o(e) {
 				throw TypeError('Expected "' + d.name + '" to be defined');
 			}
 			if (r(_)) {
-				if (!d.repeat)
-					throw TypeError('Expected "' + d.name + '" to not repeat, but received `' + JSON.stringify(_) + '`');
+				if (!d.repeat) throw TypeError('Expected "' + d.name + '" to not repeat, but received `' + JSON.stringify(_) + '`');
 				if (0 === _.length) {
 					if (d.optional) continue;
 					throw TypeError('Expected "' + d.name + '" to not be empty');
 				}
 				for (var E = 0; E < _.length; E++) {
-					if (((c = l(_[E])), !t[u].test(c)))
-						throw TypeError(
-							'Expected all "' + d.name + '" to match "' + d.pattern + '", but received `' + JSON.stringify(c) + '`'
-						);
+					if (((c = l(_[E])), !t[u].test(c))) throw TypeError('Expected all "' + d.name + '" to match "' + d.pattern + '", but received `' + JSON.stringify(c) + '`');
 					a += (0 === E ? d.prefix : d.delimiter) + c;
 				}
 				continue;
@@ -122,21 +114,12 @@ function d(e, t, n) {
 		else {
 			var E = l(_.prefix),
 				f = '(?:' + _.pattern + ')';
-			t.push(_),
-				_.repeat && (f += '(?:' + E + f + ')*'),
-				(u += f = _.optional ? (_.partial ? E + '(' + f + ')?' : '(?:' + E + '(' + f + '))?') : E + '(' + f + ')');
+			t.push(_), _.repeat && (f += '(?:' + E + f + ')*'), (u += f = _.optional ? (_.partial ? E + '(' + f + ')?' : '(?:' + E + '(' + f + '))?') : E + '(' + f + ')');
 		}
 	}
 	var h = l(n.delimiter || '/'),
 		p = u.slice(-h.length) === h;
-	return (
-		!s && (u = (p ? u.slice(0, -h.length) : u) + '(?:' + h + '(?=$))?'),
-		o ? (u += '$') : (u += s && p ? '' : '(?=' + h + '|$)'),
-		(i = RegExp('^' + u, c(n))),
-		(a = t),
-		(i.keys = a),
-		i
-	);
+	return !s && (u = (p ? u.slice(0, -h.length) : u) + '(?:' + h + '(?=$))?'), o ? (u += '$') : (u += s && p ? '' : '(?=' + h + '|$)'), (i = RegExp('^' + u, c(n))), (a = t), (i.keys = a), i;
 }
 function _(e, t, n) {
 	var i, s, o;

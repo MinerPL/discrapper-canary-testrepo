@@ -70,10 +70,7 @@ for (var i in o)
 		if (o[i].labels.length !== o[i].channels) throw Error('channel and label counts mismatch: ' + i);
 		var c = o[i].channels,
 			u = o[i].labels;
-		delete o[i].channels,
-			delete o[i].labels,
-			Object.defineProperty(o[i], 'channels', { value: c }),
-			Object.defineProperty(o[i], 'labels', { value: u });
+		delete o[i].channels, delete o[i].labels, Object.defineProperty(o[i], 'channels', { value: c }), Object.defineProperty(o[i], 'labels', { value: u });
 	}
 (o.rgb.hsl = function (e) {
 	var t,
@@ -85,18 +82,7 @@ for (var i in o)
 		i = Math.min(n, s, o),
 		c = Math.max(n, s, o),
 		u = c - i;
-	return (
-		c === i
-			? (t = 0)
-			: n === c
-				? (t = (s - o) / u)
-				: s === c
-					? (t = 2 + (o - n) / u)
-					: o === c && (t = 4 + (n - s) / u),
-		(t = Math.min(60 * t, 360)) < 0 && (t += 360),
-		(a = (i + c) / 2),
-		[t, 100 * (r = c === i ? 0 : a <= 0.5 ? u / (c + i) : u / (2 - c - i)), 100 * a]
-	);
+	return c === i ? (t = 0) : n === c ? (t = (s - o) / u) : s === c ? (t = 2 + (o - n) / u) : o === c && (t = 4 + (n - s) / u), (t = Math.min(60 * t, 360)) < 0 && (t += 360), (a = (i + c) / 2), [t, 100 * (r = c === i ? 0 : a <= 0.5 ? u / (c + i) : u / (2 - c - i)), 100 * a];
 }),
 	(o.rgb.hsv = function (e) {
 		var t,
@@ -112,17 +98,7 @@ for (var i in o)
 			b = function (e) {
 				return (u - e) / 6 / l + 0.5;
 			};
-		return (
-			0 === l
-				? (n = s = 0)
-				: ((s = l / u),
-					(t = b(o)),
-					(r = b(i)),
-					(a = b(c)),
-					o === u ? (n = a - r) : i === u ? (n = 1 / 3 + t - a) : c === u && (n = 2 / 3 + r - t),
-					n < 0 ? (n += 1) : n > 1 && (n -= 1)),
-			[360 * n, 100 * s, 100 * u]
-		);
+		return 0 === l ? (n = s = 0) : ((s = l / u), (t = b(o)), (r = b(i)), (a = b(c)), o === u ? (n = a - r) : i === u ? (n = 1 / 3 + t - a) : c === u && (n = 2 / 3 + r - t), n < 0 ? (n += 1) : n > 1 && (n -= 1)), [360 * n, 100 * s, 100 * u];
 	}),
 	(o.rgb.hwb = function (e) {
 		var t = e[0],
@@ -136,15 +112,7 @@ for (var i in o)
 			r = e[0] / 255,
 			a = e[1] / 255,
 			n = e[2] / 255;
-		return (
-			(t = Math.min(1 - r, 1 - a, 1 - n)),
-			[
-				100 * ((1 - r - t) / (1 - t) || 0),
-				100 * ((1 - a - t) / (1 - t) || 0),
-				100 * ((1 - n - t) / (1 - t) || 0),
-				100 * t
-			]
-		);
+		return (t = Math.min(1 - r, 1 - a, 1 - n)), [100 * ((1 - r - t) / (1 - t) || 0), 100 * ((1 - a - t) / (1 - t) || 0), 100 * ((1 - n - t) / (1 - t) || 0), 100 * t];
 	});
 (o.rgb.keyword = function (e) {
 	var t,
@@ -168,31 +136,14 @@ for (var i in o)
 		var t = e[0] / 255,
 			r = e[1] / 255,
 			a = e[2] / 255;
-		return [
-			100 *
-				(0.4124 * (t = t > 0.04045 ? Math.pow((t + 0.055) / 1.055, 2.4) : t / 12.92) +
-					0.3576 * (r = r > 0.04045 ? Math.pow((r + 0.055) / 1.055, 2.4) : r / 12.92) +
-					0.1805 * (a = a > 0.04045 ? Math.pow((a + 0.055) / 1.055, 2.4) : a / 12.92)),
-			100 * (0.2126 * t + 0.7152 * r + 0.0722 * a),
-			100 * (0.0193 * t + 0.1192 * r + 0.9505 * a)
-		];
+		return [100 * (0.4124 * (t = t > 0.04045 ? Math.pow((t + 0.055) / 1.055, 2.4) : t / 12.92) + 0.3576 * (r = r > 0.04045 ? Math.pow((r + 0.055) / 1.055, 2.4) : r / 12.92) + 0.1805 * (a = a > 0.04045 ? Math.pow((a + 0.055) / 1.055, 2.4) : a / 12.92)), 100 * (0.2126 * t + 0.7152 * r + 0.0722 * a), 100 * (0.0193 * t + 0.1192 * r + 0.9505 * a)];
 	}),
 	(o.rgb.lab = function (e) {
 		var t = o.rgb.xyz(e),
 			r = t[0],
 			a = t[1],
 			n = t[2];
-		return (
-			(r /= 95.047),
-			(a /= 100),
-			(n /= 108.883),
-			(r = r > 0.008856 ? Math.pow(r, 1 / 3) : 7.787 * r + 16 / 116),
-			[
-				116 * (a = a > 0.008856 ? Math.pow(a, 1 / 3) : 7.787 * a + 16 / 116) - 16,
-				500 * (r - a),
-				200 * (a - (n = n > 0.008856 ? Math.pow(n, 1 / 3) : 7.787 * n + 16 / 116))
-			]
-		);
+		return (r /= 95.047), (a /= 100), (n /= 108.883), (r = r > 0.008856 ? Math.pow(r, 1 / 3) : 7.787 * r + 16 / 116), [116 * (a = a > 0.008856 ? Math.pow(a, 1 / 3) : 7.787 * a + 16 / 116) - 16, 500 * (r - a), 200 * (a - (n = n > 0.008856 ? Math.pow(n, 1 / 3) : 7.787 * n + 16 / 116))];
 	}),
 	(o.hsl.rgb = function (e) {
 		var t,
@@ -205,11 +156,7 @@ for (var i in o)
 			c = e[2] / 100;
 		if (0 === i) return [(s = 255 * c), s, s];
 		(r = c < 0.5 ? c * (1 + i) : c + i - c * i), (t = 2 * c - r), (n = [0, 0, 0]);
-		for (var u = 0; u < 3; u++)
-			(a = o + -((1 / 3) * (u - 1))) < 0 && a++,
-				a > 1 && a--,
-				(s = 6 * a < 1 ? t + (r - t) * 6 * a : 2 * a < 1 ? r : 3 * a < 2 ? t + (r - t) * (2 / 3 - a) * 6 : t),
-				(n[u] = 255 * s);
+		for (var u = 0; u < 3; u++) (a = o + -((1 / 3) * (u - 1))) < 0 && a++, a > 1 && a--, (s = 6 * a < 1 ? t + (r - t) * 6 * a : 2 * a < 1 ? r : 3 * a < 2 ? t + (r - t) * (2 / 3 - a) * 6 : t), (n[u] = 255 * s);
 		return n;
 	}),
 	(o.hsl.hsv = function (e) {
@@ -219,13 +166,7 @@ for (var i in o)
 			n = e[2] / 100,
 			s = a,
 			o = Math.max(n, 0.01);
-		return (
-			(n *= 2),
-			(a *= n <= 1 ? n : 2 - n),
-			(s *= o <= 1 ? o : 2 - o),
-			(t = (n + a) / 2),
-			[r, 100 * (0 === n ? (2 * s) / (o + s) : (2 * a) / (n + a)), 100 * t]
-		);
+		return (n *= 2), (a *= n <= 1 ? n : 2 - n), (s *= o <= 1 ? o : 2 - o), (t = (n + a) / 2), [r, 100 * (0 === n ? (2 * s) / (o + s) : (2 * a) / (n + a)), 100 * t];
 	}),
 	(o.hsv.rgb = function (e) {
 		var t = e[0] / 60,
@@ -259,12 +200,7 @@ for (var i in o)
 			s = e[1] / 100,
 			o = e[2] / 100,
 			i = Math.max(o, 0.01);
-		return (
-			(a = (2 - s) * o),
-			(t = (2 - s) * i),
-			(r = (r = (s * i) / (t <= 1 ? t : 2 - t)) || 0),
-			[n, 100 * r, 100 * (a /= 2)]
-		);
+		return (a = (2 - s) * o), (t = (2 - s) * i), (r = (r = (s * i) / (t <= 1 ? t : 2 - t)) || 0), [n, 100 * r, 100 * (a /= 2)];
 	}),
 	(o.hwb.rgb = function (e) {
 		var t,
@@ -278,15 +214,7 @@ for (var i in o)
 			u = e[1] / 100,
 			l = e[2] / 100,
 			b = u + l;
-		switch (
-			(b > 1 && ((u /= b), (l /= b)),
-			(t = Math.floor(6 * c)),
-			(r = 1 - l),
-			(a = 6 * c - t),
-			(1 & t) != 0 && (a = 1 - a),
-			(n = u + a * (r - u)),
-			t)
-		) {
+		switch ((b > 1 && ((u /= b), (l /= b)), (t = Math.floor(6 * c)), (r = 1 - l), (a = 6 * c - t), (1 & t) != 0 && (a = 1 - a), (n = u + a * (r - u)), t)) {
 			default:
 			case 6:
 			case 0:
@@ -314,11 +242,7 @@ for (var i in o)
 			r = e[1] / 100,
 			a = e[2] / 100,
 			n = e[3] / 100;
-		return [
-			255 * (1 - Math.min(1, t * (1 - n) + n)),
-			255 * (1 - Math.min(1, r * (1 - n) + n)),
-			255 * (1 - Math.min(1, a * (1 - n) + n))
-		];
+		return [255 * (1 - Math.min(1, t * (1 - n) + n)), 255 * (1 - Math.min(1, r * (1 - n) + n)), 255 * (1 - Math.min(1, a * (1 - n) + n))];
 	}),
 	(o.xyz.rgb = function (e) {
 		var t,
@@ -327,35 +251,13 @@ for (var i in o)
 			n = e[0] / 100,
 			s = e[1] / 100,
 			o = e[2] / 100;
-		return (
-			(t = 3.2406 * n + -1.5372 * s + -0.4986 * o),
-			(r = -0.9689 * n + 1.8758 * s + 0.0415 * o),
-			(a = 0.0557 * n + -0.204 * s + 1.057 * o),
-			(t = t > 0.0031308 ? 1.055 * Math.pow(t, 1 / 2.4) - 0.055 : 12.92 * t),
-			(r = r > 0.0031308 ? 1.055 * Math.pow(r, 1 / 2.4) - 0.055 : 12.92 * r),
-			(a = a > 0.0031308 ? 1.055 * Math.pow(a, 1 / 2.4) - 0.055 : 12.92 * a),
-			[
-				255 * (t = Math.min(Math.max(0, t), 1)),
-				255 * (r = Math.min(Math.max(0, r), 1)),
-				255 * (a = Math.min(Math.max(0, a), 1))
-			]
-		);
+		return (t = 3.2406 * n + -1.5372 * s + -0.4986 * o), (r = -0.9689 * n + 1.8758 * s + 0.0415 * o), (a = 0.0557 * n + -0.204 * s + 1.057 * o), (t = t > 0.0031308 ? 1.055 * Math.pow(t, 1 / 2.4) - 0.055 : 12.92 * t), (r = r > 0.0031308 ? 1.055 * Math.pow(r, 1 / 2.4) - 0.055 : 12.92 * r), (a = a > 0.0031308 ? 1.055 * Math.pow(a, 1 / 2.4) - 0.055 : 12.92 * a), [255 * (t = Math.min(Math.max(0, t), 1)), 255 * (r = Math.min(Math.max(0, r), 1)), 255 * (a = Math.min(Math.max(0, a), 1))];
 	}),
 	(o.xyz.lab = function (e) {
 		var t = e[0],
 			r = e[1],
 			a = e[2];
-		return (
-			(t /= 95.047),
-			(r /= 100),
-			(a /= 108.883),
-			(t = t > 0.008856 ? Math.pow(t, 1 / 3) : 7.787 * t + 16 / 116),
-			[
-				116 * (r = r > 0.008856 ? Math.pow(r, 1 / 3) : 7.787 * r + 16 / 116) - 16,
-				500 * (t - r),
-				200 * (r - (a = a > 0.008856 ? Math.pow(a, 1 / 3) : 7.787 * a + 16 / 116))
-			]
-		);
+		return (t /= 95.047), (r /= 100), (a /= 108.883), (t = t > 0.008856 ? Math.pow(t, 1 / 3) : 7.787 * t + 16 / 116), [116 * (r = r > 0.008856 ? Math.pow(r, 1 / 3) : 7.787 * r + 16 / 116) - 16, 500 * (t - r), 200 * (r - (a = a > 0.008856 ? Math.pow(a, 1 / 3) : 7.787 * a + 16 / 116))];
 	}),
 	(o.lab.xyz = function (e) {
 		var t,
@@ -368,14 +270,7 @@ for (var i in o)
 		var i = Math.pow(r, 3),
 			c = Math.pow(t, 3),
 			u = Math.pow(a, 3);
-		return (
-			(r = (i > 0.008856 ? i : (r - 16 / 116) / 7.787) * 100),
-			[
-				(t = (c > 0.008856 ? c : (t - 16 / 116) / 7.787) * 95.047),
-				r,
-				(a = (u > 0.008856 ? u : (a - 16 / 116) / 7.787) * 108.883)
-			]
-		);
+		return (r = (i > 0.008856 ? i : (r - 16 / 116) / 7.787) * 100), [(t = (c > 0.008856 ? c : (t - 16 / 116) / 7.787) * 95.047), r, (a = (u > 0.008856 ? u : (a - 16 / 116) / 7.787) * 108.883)];
 	}),
 	(o.lab.lch = function (e) {
 		var t,
@@ -427,9 +322,7 @@ for (var i in o)
 		return [a, n, ((t % 6) / 5) * 255];
 	}),
 	(o.rgb.hex = function (e) {
-		var t = (((255 & Math.round(e[0])) << 16) + ((255 & Math.round(e[1])) << 8) + (255 & Math.round(e[2])))
-			.toString(16)
-			.toUpperCase();
+		var t = (((255 & Math.round(e[0])) << 16) + ((255 & Math.round(e[1])) << 8) + (255 & Math.round(e[2]))).toString(16).toUpperCase();
 		return '000000'.substring(t.length) + t;
 	}),
 	(o.hex.rgb = function (e) {
@@ -455,15 +348,7 @@ for (var i in o)
 			o = Math.max(Math.max(a, n), s),
 			i = Math.min(Math.min(a, n), s),
 			c = o - i;
-		return (
-			(t = c < 1 ? i / (1 - c) : 0),
-			[
-				360 *
-					(r = ((c <= 0 ? 0 : o === a ? ((n - s) / c) % 6 : o === n ? 2 + (s - a) / c : 4 + (a - n) / c + 4) / 6) % 1),
-				100 * c,
-				100 * t
-			]
-		);
+		return (t = c < 1 ? i / (1 - c) : 0), [360 * (r = ((c <= 0 ? 0 : o === a ? ((n - s) / c) % 6 : o === n ? 2 + (s - a) / c : 4 + (a - n) / c + 4) / 6) % 1), 100 * c, 100 * t];
 	}),
 	(o.hsl.hcg = function (e) {
 		var t = e[1] / 100,
@@ -520,9 +405,7 @@ for (var i in o)
 		var t = e[1] / 100,
 			r = (e[2] / 100) * (1 - t) + 0.5 * t,
 			a = 0;
-		return (
-			r > 0 && r < 0.5 ? (a = t / (2 * r)) : r >= 0.5 && r < 1 && (a = t / (2 * (1 - r))), [e[0], 100 * a, 100 * r]
-		);
+		return r > 0 && r < 0.5 ? (a = t / (2 * r)) : r >= 0.5 && r < 1 && (a = t / (2 * (1 - r))), [e[0], 100 * a, 100 * r];
 	}),
 	(o.hcg.hwb = function (e) {
 		var t = e[1] / 100,

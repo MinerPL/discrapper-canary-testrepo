@@ -1,26 +1,4 @@
-r.r(n),
-	r(312677),
-	r(518263),
-	r(970173),
-	r(520712),
-	r(268111),
-	r(941497),
-	r(32026),
-	r(480839),
-	r(744285),
-	r(492257),
-	r(873817),
-	r(419526),
-	r(62338),
-	r(747282),
-	r(565568),
-	r(242167),
-	r(951953),
-	r(57638),
-	r(653041),
-	r(733860),
-	r(411104),
-	r(757143);
+r.r(n), r(312677), r(518263), r(970173), r(520712), r(268111), r(941497), r(32026), r(480839), r(744285), r(492257), r(873817), r(419526), r(62338), r(747282), r(565568), r(242167), r(951953), r(57638), r(653041), r(733860), r(411104), r(757143);
 var e,
 	a =
 		((e = 'undefined' != typeof document && document.currentScript ? document.currentScript.src : void 0),
@@ -72,20 +50,13 @@ var e,
 				k = function (t) {
 					O = t;
 				};
-			A.wasmBinary && (f = A.wasmBinary),
-				A.noExitRuntime && A.noExitRuntime,
-				'object' != typeof WebAssembly && J('no native wasm support detected');
+			A.wasmBinary && (f = A.wasmBinary), A.noExitRuntime && A.noExitRuntime, 'object' != typeof WebAssembly && J('no native wasm support detected');
 			var C = !1;
 			function I(t) {
 				var n,
 					r,
 					e = A['_' + t];
-				return (
-					(n = e),
-					(r = 'Cannot call unknown function ' + t + ', make sure it is exported'),
-					n || J('Assertion failed: ' + r),
-					e
-				);
+				return (n = e), (r = 'Cannot call unknown function ' + t + ', make sure it is exported'), n || J('Assertion failed: ' + r), e;
 			}
 			var H = 'undefined' != typeof TextDecoder ? new TextDecoder('utf8') : void 0;
 			function x(t, n, r) {
@@ -103,13 +74,7 @@ var e,
 						continue;
 					}
 					var f = 63 & t[n++];
-					if (
-						(i =
-							(240 & i) == 224
-								? ((15 & i) << 12) | (o << 6) | f
-								: ((7 & i) << 18) | (o << 12) | (f << 6) | (63 & t[n++])) < 65536
-					)
-						u += String.fromCharCode(i);
+					if ((i = (240 & i) == 224 ? ((15 & i) << 12) | (o << 6) | f : ((7 & i) << 18) | (o << 12) | (f << 6) | (63 & t[n++])) < 65536) u += String.fromCharCode(i);
 					else {
 						var c = i - 65536;
 						u += String.fromCharCode(55296 | (c >> 10), 56320 | (1023 & c));
@@ -135,10 +100,7 @@ var e,
 						(n[r++] = 224 | (o >> 12)), (n[r++] = 128 | ((o >> 6) & 63)), (n[r++] = 128 | (63 & o));
 					} else {
 						if (r + 3 >= u) break;
-						(n[r++] = 240 | (o >> 18)),
-							(n[r++] = 128 | ((o >> 12) & 63)),
-							(n[r++] = 128 | ((o >> 6) & 63)),
-							(n[r++] = 128 | (63 & o));
+						(n[r++] = 240 | (o >> 18)), (n[r++] = 128 | ((o >> 12) & 63)), (n[r++] = 128 | ((o >> 6) & 63)), (n[r++] = 128 | (63 & o));
 					}
 				}
 				return (n[r] = 0), r - a;
@@ -147,15 +109,7 @@ var e,
 				m.set(t, n);
 			}
 			function U(t) {
-				(l = t),
-					(A.HEAP8 = m = new Int8Array(t)),
-					(A.HEAP16 = new Int16Array(t)),
-					(A.HEAP32 = p = new Int32Array(t)),
-					(A.HEAPU8 = h = new Uint8Array(t)),
-					(A.HEAPU16 = new Uint16Array(t)),
-					(A.HEAPU32 = new Uint32Array(t)),
-					(A.HEAPF32 = new Float32Array(t)),
-					(A.HEAPF64 = new Float64Array(t));
+				(l = t), (A.HEAP8 = m = new Int8Array(t)), (A.HEAP16 = new Int16Array(t)), (A.HEAP32 = p = new Int32Array(t)), (A.HEAPU8 = h = new Uint8Array(t)), (A.HEAPU16 = new Uint16Array(t)), (A.HEAPU32 = new Uint32Array(t)), (A.HEAPF32 = new Float32Array(t)), (A.HEAPF64 = new Float64Array(t));
 			}
 			A.INITIAL_MEMORY;
 			var j = [],
@@ -171,21 +125,14 @@ var e,
 				N = null,
 				q = null;
 			function J(t) {
-				A.onAbort && A.onAbort(t),
-					Y((t += '')),
-					(C = !0),
-					(t = 'abort(' + t + '). Build with -s ASSERTIONS=1 for more info.');
+				A.onAbort && A.onAbort(t), Y((t += '')), (C = !0), (t = 'abort(' + t + '). Build with -s ASSERTIONS=1 for more info.');
 				var n = new WebAssembly.RuntimeError(t);
 				throw (u(n), n);
 			}
 			(A.preloadedImages = {}), (A.preloadedAudios = {});
 			function V(t) {
 				var n, r;
-				return (
-					(n = t),
-					(r = 'data:application/octet-stream;base64,'),
-					String.prototype.startsWith ? n.startsWith(r) : 0 === n.indexOf(r)
-				);
+				return (n = t), (r = 'data:application/octet-stream;base64,'), String.prototype.startsWith ? n.startsWith(r) : 0 === n.indexOf(r);
 			}
 			var X = 'index.wasm';
 			if (!V(X)) {
@@ -287,11 +234,7 @@ var e,
 						PATH: '/',
 						PWD: '/',
 						HOME: '/home/web_user',
-						LANG:
-							(('object' == typeof navigator && navigator.languages && navigator.languages[0]) || 'C').replace(
-								'-',
-								'_'
-							) + '.UTF-8',
+						LANG: (('object' == typeof navigator && navigator.languages && navigator.languages[0]) || 'C').replace('-', '_') + '.UTF-8',
 						_: S || './this.program'
 					};
 					for (var n in to) t[n] = to[n];
@@ -315,10 +258,7 @@ var e,
 					var e = tc(r.getFullYear()),
 						a = r.getMonth(),
 						u = (e ? tl : tm)[a];
-					if (n > u - r.getDate())
-						(n -= u - r.getDate() + 1),
-							r.setDate(1),
-							a < 11 ? r.setMonth(a + 1) : (r.setMonth(0), r.setFullYear(r.getFullYear() + 1));
+					if (n > u - r.getDate()) (n -= u - r.getDate() + 1), r.setDate(1), a < 11 ? r.setMonth(a + 1) : (r.setMonth(0), r.setFullYear(r.getFullYear() + 1));
 					else {
 						r.setDate(r.getDate() + n);
 						break;
@@ -370,9 +310,7 @@ var e,
 								try {
 									return s.grow((t - l.byteLength + 65535) >>> 16), U(s.buffer), 1;
 								} catch (t) {}
-							})(
-								Math.min(67108864, ((a = 65536), (e = Math.max(16777216, t, u)) % 65536 > 0 && (e += a - (e % a)), e))
-							))
+							})(Math.min(67108864, ((a = 65536), (e = Math.max(16777216, t, u)) % 65536 > 0 && (e += a - (e % a)), e))))
 						)
 							return !0;
 					}
@@ -416,8 +354,7 @@ var e,
 				o: function (t, n, r, e, a) {},
 				l: function (t, n, r, e) {
 					for (var a = 0, u = 0; u < r; u++) {
-						for (var i = p[(n + 8 * u) >> 2], o = p[(n + (8 * u + 4)) >> 2], f = 0; f < o; f++)
-							ti.printChar(t, h[i + f]);
+						for (var i = p[(n + 8 * u) >> 2], o = p[(n + (8 * u + 4)) >> 2], f = 0; f < o; f++) ti.printChar(t, h[i + f]);
 						a += o;
 					}
 					return (p[e >> 2] = a), 0;
@@ -515,20 +452,7 @@ var e,
 							};
 						for (var s in c) f = f.replace(RegExp(s, 'g'), c[s]);
 						var l = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-							h = [
-								'January',
-								'February',
-								'March',
-								'April',
-								'May',
-								'June',
-								'July',
-								'August',
-								'September',
-								'October',
-								'November',
-								'December'
-							];
+							h = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 						function g(t, n, r) {
 							for (var e = 'number' == typeof t ? t.toString() : t || ''; e.length < n; ) e = r[0] + e;
 							return e;
@@ -541,12 +465,7 @@ var e,
 							function e(t) {
 								return t < 0 ? -1 : t > 0 ? 1 : 0;
 							}
-							return (
-								0 === (r = e(t.getFullYear() - n.getFullYear())) &&
-									0 === (r = e(t.getMonth() - n.getMonth())) &&
-									(r = e(t.getDate() - n.getDate())),
-								r
-							);
+							return 0 === (r = e(t.getFullYear() - n.getFullYear())) && 0 === (r = e(t.getMonth() - n.getMonth())) && (r = e(t.getDate() - n.getDate())), r;
 						}
 						function d(t) {
 							switch (t.getDay()) {
@@ -650,19 +569,7 @@ var e,
 									a = d(r),
 									u = d(e),
 									i = th(new Date(t.tm_year + 1900, 0, 1), t.tm_yday);
-								return 0 > _(i, a)
-									? '53'
-									: 0 >= _(u, i)
-										? '01'
-										: y(
-												Math.ceil(
-													(n =
-														a.getFullYear() < t.tm_year + 1900
-															? t.tm_yday + 32 - a.getDate()
-															: t.tm_yday + 1 - a.getDate()) / 7
-												),
-												2
-											);
+								return 0 > _(i, a) ? '53' : 0 >= _(u, i) ? '01' : y(Math.ceil((n = a.getFullYear() < t.tm_year + 1900 ? t.tm_yday + 32 - a.getDate() : t.tm_yday + 1 - a.getDate()) / 7), 2);
 							},
 							'%w': function (t) {
 								return t.tm_wday;
@@ -685,9 +592,7 @@ var e,
 							},
 							'%z': function (t) {
 								var n = t.tm_gmtoff;
-								return (
-									(n >= 0 ? '+' : '-') + String('0000' + (n = ((n = Math.abs(n) / 60) / 60) * 100 + (n % 60))).slice(-4)
-								);
+								return (n >= 0 ? '+' : '-') + String('0000' + (n = ((n = Math.abs(n) / 60) / 60) * 100 + (n % 60))).slice(-4);
 							},
 							'%Z': function (t) {
 								return t.tm_zone;
@@ -704,8 +609,7 @@ var e,
 										: (function (t) {
 												for (var n = 0, r = 0; r < t.length; ++r) {
 													var e = t.charCodeAt(r);
-													e >= 55296 && e <= 57343 && (e = (65536 + ((1023 & e) << 10)) | (1023 & t.charCodeAt(++r))),
-														e <= 127 ? ++n : e <= 2047 ? (n += 2) : e <= 65535 ? (n += 3) : (n += 4);
+													e >= 55296 && e <= 57343 && (e = (65536 + ((1023 & e) << 10)) | (1023 & t.charCodeAt(++r))), e <= 127 ? ++n : e <= 2047 ? (n += 2) : e <= 65535 ? (n += 3) : (n += 4);
 												}
 												return n;
 											})(t) + 1
@@ -727,11 +631,7 @@ var e,
 						U((s = A.asm.x).buffer),
 						(w = A.asm.z),
 						!(function (t) {
-							if (
-								(G--,
-								A.monitorRunDependencies && A.monitorRunDependencies(G),
-								0 == G && (null !== N && (clearInterval(N), (N = null)), q))
-							) {
+							if ((G--, A.monitorRunDependencies && A.monitorRunDependencies(G), 0 == G && (null !== N && (clearInterval(N), (N = null)), q))) {
 								var n = q;
 								(q = null), n();
 							}

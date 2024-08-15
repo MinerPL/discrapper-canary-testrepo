@@ -2,8 +2,7 @@ e.exports = {
 	settingsColumn: 'settingsColumn_b2b948 ' + n('326617').customColumn,
 	settingsContainer: 'settingsContainer_b2b948 ' + n('326617').customContainer,
 	settingsScroller: 'settingsScroller_b2b948 ' + n('326617').customScroller + ' ' + n('326617').contentRegionScroller,
-	settingsContent:
-		'settingsContent_b2b948 ' + n('326617').contentColumnDefault + ' settingsColumn_b2b948 ' + n('326617').customColumn,
+	settingsContent: 'settingsContent_b2b948 ' + n('326617').contentColumnDefault + ' settingsColumn_b2b948 ' + n('326617').customColumn,
 	container: 'container_b2b948',
 	mainContent: 'mainContent_b2b948',
 	betaTag: 'betaTag_b2b948',

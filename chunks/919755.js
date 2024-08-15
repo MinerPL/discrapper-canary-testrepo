@@ -19,16 +19,7 @@ function u(e) {
 			(e, t) => {
 				let n = l.Z.getChannel(t),
 					i = null == n ? void 0 : n.isGuildVocal();
-				return (
-					(e.badge = e.badge + a.ZP.getMentionCount(t)),
-					(e.unread =
-						e.unread ||
-						(!i &&
-							r.Z.can(c.Pl.VIEW_CHANNEL, n) &&
-							a.ZP.hasUnread(t) &&
-							!s.ZP.isChannelMuted(null == n ? void 0 : n.getGuildId(), t))),
-					e
-				);
+				return (e.badge = e.badge + a.ZP.getMentionCount(t)), (e.unread = e.unread || (!i && r.Z.can(c.Pl.VIEW_CHANNEL, n) && a.ZP.hasUnread(t) && !s.ZP.isChannelMuted(null == n ? void 0 : n.getGuildId(), t))), e;
 			},
 			{
 				badge: 0,

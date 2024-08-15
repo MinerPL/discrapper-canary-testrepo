@@ -29,8 +29,7 @@ let l = {
 };
 class u extends r.EventEmitter {
 	stop() {
-		for (let e of (this.pc1.close(), this.pc2.close(), this.input.destroy(), Object.keys(this.outputs)))
-			this.destroyOutput(e);
+		for (let e of (this.pc1.close(), this.pc2.close(), this.input.destroy(), Object.keys(this.outputs))) this.destroyOutput(e);
 	}
 	setAudioSource(e) {
 		this.input.setSource(e);
@@ -43,14 +42,7 @@ class u extends r.EventEmitter {
 	}
 	createOutput(e, t) {
 		let n = this.outputs[e];
-		null == n &&
-			(((n = new a.Z(this.userId, this.audioContext)).mute = !1),
-			(n.volume = 100),
-			n.setSpeakingFlags(s.Dg.VOICE),
-			n.setSinkId(this.sinkId),
-			(this.outputs[e] = n)),
-			n.addTrack(t),
-			n.play();
+		null == n && (((n = new a.Z(this.userId, this.audioContext)).mute = !1), (n.volume = 100), n.setSpeakingFlags(s.Dg.VOICE), n.setSinkId(this.sinkId), (this.outputs[e] = n)), n.addTrack(t), n.play();
 	}
 	destroyOutput(e, t) {
 		let n = this.outputs[e];
@@ -89,9 +81,7 @@ class u extends r.EventEmitter {
 			o(this, 'audioContext', void 0),
 			o(this, 'handleStream', () => {
 				let e = this.input.getDelayedStream();
-				this.senders.forEach((e) => this.pc1.removeTrack(e)),
-					(this.senders = [...e.getAudioTracks().map((t) => this.pc1.addTrack(t, e))]),
-					this.handshake();
+				this.senders.forEach((e) => this.pc1.removeTrack(e)), (this.senders = [...e.getAudioTracks().map((t) => this.pc1.addTrack(t, e))]), this.handshake();
 			}),
 			o(this, 'handleTrack', (e) => {
 				e.streams[0].getTracks().forEach((e) => {

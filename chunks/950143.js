@@ -10,14 +10,7 @@ function o(e) {
 		i.Z.onOpenHubInvite(e.invite);
 		return;
 	}
-	null != o &&
-		(null == o
-			? void 0
-			: null === (n = o.features) || void 0 === n
-				? void 0
-				: n.includes(s.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) &&
-		!(null == o ? void 0 : null === (r = o.features) || void 0 === r ? void 0 : r.includes(s.oNc.PREVIEW_ENABLED)) &&
-		(0, a.uL)(s.Z5c.GUILD_MEMBER_VERIFICATION(o.id, e.invite.code));
+	null != o && (null == o ? void 0 : null === (n = o.features) || void 0 === n ? void 0 : n.includes(s.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) && !(null == o ? void 0 : null === (r = o.features) || void 0 === r ? void 0 : r.includes(s.oNc.PREVIEW_ENABLED)) && (0, a.uL)(s.Z5c.GUILD_MEMBER_VERIFICATION(o.id, e.invite.code));
 }
 class l extends r.Z {
 	constructor(...e) {

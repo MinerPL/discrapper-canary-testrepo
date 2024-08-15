@@ -17,16 +17,7 @@ var a = n(512722),
 	m = n(689938);
 function p(e) {
 	var t, a;
-	let {
-			applicationId: p,
-			stream: _,
-			channel: f,
-			exitFullScreen: E,
-			appContext: g,
-			analyticsLocation: C,
-			guildScheduledEvent: I,
-			...x
-		} = e,
+	let { applicationId: p, stream: _, channel: f, exitFullScreen: E, appContext: C, analyticsLocation: g, guildScheduledEvent: I, ...x } = e,
 		T = (0, o.bp)(),
 		N = null == f ? void 0 : f.getGuildId(),
 		v = (0, l.e7)([c.Z], () => (null != N ? c.Z.getGuild(N) : null), [N]);
@@ -36,16 +27,7 @@ function p(e) {
 					s()(null != v, 'guild cannot be null'),
 						s()(null != f, 'channel cannot be null'),
 						!(function (e) {
-							let {
-								guild: t,
-								channel: a,
-								streamUserId: s,
-								applicationId: l,
-								appContext: o,
-								exitFullScreen: c,
-								analyticsLocation: u,
-								guildScheduledEvent: d
-							} = e;
+							let { guild: t, channel: a, streamUserId: s, applicationId: l, appContext: o, exitFullScreen: c, analyticsLocation: u, guildScheduledEvent: d } = e;
 							null == c || c(),
 								(0, r.openModalLazy)(
 									async () => {
@@ -72,15 +54,14 @@ function p(e) {
 							channel: f,
 							streamUserId: null == _ ? void 0 : _.ownerId,
 							applicationId: p,
-							appContext: null != g ? g : T,
+							appContext: null != C ? C : T,
 							exitFullScreen: E,
-							analyticsLocation: C,
+							analyticsLocation: g,
 							guildScheduledEvent: I
 						});
 				},
 				iconComponent: null != p ? r.ActivitiesPlusIcon : r.GroupPlusIcon,
-				label:
-					null != p ? m.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY : m.Z.Messages.ACTIVITY_INVITE_MODAL_INVITE,
+				label: null != p ? m.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY : m.Z.Messages.ACTIVITY_INVITE_MODAL_INVITE,
 				...x
 			})
 		: null;

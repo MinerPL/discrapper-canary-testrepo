@@ -37,14 +37,7 @@ let f = ''.concat('#').concat('itemSkuId', '='),
 		}, []);
 	},
 	_ = (e) => {
-		let {
-			categories: t,
-			productSkuId: n,
-			analyticsLocations: s,
-			analyticsSource: r,
-			initialItemCardRef: a,
-			reducedMotion: i = !1
-		} = e;
+		let { categories: t, productSkuId: n, analyticsLocations: s, analyticsSource: r, initialItemCardRef: a, reducedMotion: i = !1 } = e;
 		for (let e of t.values()) {
 			let t = e.products.find((e) => e.skuId === n);
 			if (null != t) {
@@ -77,12 +70,7 @@ let f = ''.concat('#').concat('itemSkuId', '='),
 			g = (0, a.e7)([i.Z], () => i.Z.useReducedMotion),
 			C = s.useRef(null),
 			m = (0, r.TH)(),
-			h =
-				m.pathname === u.Z5c.COLLECTIBLES_SHOP
-					? o.Z.HOME_PAGE_SHOP_TAB
-					: m.pathname === u.Z5c.COLLECTIBLES_SHOP_FULLSCREEN
-						? o.Z.COLLECTIBLES_SHOP_FULLSCREEN
-						: o.Z.COLLECTIBLES_SHOP,
+			h = m.pathname === u.Z5c.COLLECTIBLES_SHOP ? o.Z.HOME_PAGE_SHOP_TAB : m.pathname === u.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? o.Z.COLLECTIBLES_SHOP_FULLSCREEN : o.Z.COLLECTIBLES_SHOP,
 			{ analyticsLocations: b } = (0, c.ZP)(h);
 		s.useEffect(() => {
 			if (d) return;

@@ -93,9 +93,7 @@ class R extends l.Z {
 					};
 					i = await (0, s.openModalLazy)(
 						async () => {
-							let { default: e } = await Promise.all([n.e('96427'), n.e('42483'), n.e('58566')]).then(
-								n.bind(n, 599219)
-							);
+							let { default: e } = await Promise.all([n.e('96427'), n.e('42483'), n.e('58566')]).then(n.bind(n, 599219));
 							return (n) =>
 								(0, a.jsx)(e, {
 									...n,
@@ -121,13 +119,7 @@ class R extends l.Z {
 				open: (e) => c.j(S.isPlatformEmbedded, e),
 				predicate: () => {
 					var e;
-					return (
-						!l &&
-						null != p.default.getCurrentUser() &&
-						!(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) &&
-						!Z.a &&
-						!(0, u.g)('new_user_manager')
-					);
+					return !l && null != p.default.getCurrentUser() && !(null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !Z.a && !(0, u.g)('new_user_manager');
 				}
 			},
 			{

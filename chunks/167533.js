@@ -37,25 +37,14 @@ class m extends (a = i.PureComponent) {
 		};
 	}
 	renderHeader() {
-		let {
-				columns: e,
-				data: r,
-				sortDirection: t,
-				sortKey: a,
-				headerCellClassName: i,
-				headerClassName: o,
-				sortedHeaderCellClassName: u,
-				stickyHeader: m
-			} = this.props,
+		let { columns: e, data: r, sortDirection: t, sortKey: a, headerCellClassName: i, headerClassName: o, sortedHeaderCellClassName: u, stickyHeader: m } = this.props,
 			g = e.map((e) => {
 				let o = null != e.renderHeader ? e.renderHeader(e, r) : e.key,
 					h = t === s.sHY.ASCENDING ? c.ChevronSmallUpIcon : c.ChevronSmallDownIcon;
 				return (0, n.jsx)(
 					c.Clickable,
 					{
-						className: l()(d.headerCell, i, e.headerCellClassName, e.cellClassName, a === e.key && u, {
-							[d.clickable]: this.isSortable(e)
-						}),
+						className: l()(d.headerCell, i, e.headerCellClassName, e.cellClassName, a === e.key && u, { [d.clickable]: this.isSortable(e) }),
 						onClick: this.isSortable(e) ? () => this.handleSort(e.key) : void 0,
 						children: (0, n.jsxs)('div', {
 							className: d.headerCellContent,
@@ -71,19 +60,7 @@ class m extends (a = i.PureComponent) {
 		});
 	}
 	renderBody() {
-		let {
-				columns: e,
-				data: r,
-				sortData: t,
-				sortKey: a,
-				sortDirection: n,
-				bodyCellClassName: o,
-				rowClassName: c,
-				cellProps: u,
-				rowProps: h,
-				rowComponent: m,
-				cellComponent: g
-			} = this.props,
+		let { columns: e, data: r, sortData: t, sortKey: a, sortDirection: n, bodyCellClassName: o, rowClassName: c, cellProps: u, rowProps: h, rowComponent: m, cellComponent: g } = this.props,
 			p = r;
 		if (t) {
 			let t =
@@ -95,10 +72,7 @@ class m extends (a = i.PureComponent) {
 						: null,
 				i = [...r],
 				o = null != t && t.sort,
-				l =
-					null != t && null != a && this.isSortable(t)
-						? i.sort('function' == typeof o ? (e, r) => o(e, r, n) : this.getDefaultSort(a))
-						: i;
+				l = null != t && null != a && this.isSortable(t) ? i.sort('function' == typeof o ? (e, r) => o(e, r, n) : this.getDefaultSort(a)) : i;
 			p = null != t && n === s.sHY.DESCENDING ? l.reverse() : l;
 		}
 		return p.map((r, t) => {

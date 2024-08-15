@@ -17,14 +17,10 @@ var a = n(693789),
 	m = n(689938);
 function p(e) {
 	let { channel: t } = e;
-	if (!(0, c.f)({ location: 'blocked_user_banner' }) || null == t || !t.isGroupDM() || t.blockedUserWarningDismissed)
-		return null;
+	if (!(0, c.f)({ location: 'blocked_user_banner' }) || null == t || !t.isGroupDM() || t.blockedUserWarningDismissed) return null;
 	let n = t.recipients.filter((e) => r.Z.isBlocked(e));
 	if (0 === n.length) return null;
-	let p =
-			n.length > 1
-				? m.Z.Messages.GDM_MULTIPLE_BLOCKED_USERS_WARNING_HEADER_BANNER
-				: m.Z.Messages.GDM_SINGLE_BLOCKED_USER_WARNING_HEADER_BANNER,
+	let p = n.length > 1 ? m.Z.Messages.GDM_MULTIPLE_BLOCKED_USERS_WARNING_HEADER_BANNER : m.Z.Messages.GDM_SINGLE_BLOCKED_USER_WARNING_HEADER_BANNER,
 		_ = [
 			{
 				text: m.Z.Messages.GDM_BLOCKED_USER_WARNING_LEAVE,

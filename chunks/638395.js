@@ -23,10 +23,7 @@ class c extends (i = a.ZP.DeviceSettingsStore) {
 	initialize(e) {
 		for (var t in r.Z) {
 			var n, i;
-			o[t] =
-				null !== (i = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) &&
-				void 0 !== i &&
-				i;
+			o[t] = null !== (i = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== i && i;
 		}
 	}
 	get(e) {

@@ -47,8 +47,7 @@ var s = (t.active = function (e) {
 		}
 		return (
 			!(function (e, t) {
-				if ('function' != typeof t && null !== t)
-					throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+				if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
 				(e.prototype = Object.create(t && t.prototype, {
 					constructor: {
 						value: e,

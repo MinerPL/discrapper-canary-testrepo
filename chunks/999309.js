@@ -14,16 +14,5 @@ function o(e) {
 		o = (0, i.e7)([r.default], () => r.default.getCurrentUser()),
 		c = (null == n ? void 0 : n.ownerId) === (null == o ? void 0 : o.id),
 		d = (0, a.Sd)();
-	return (
-		c &&
-		null !== (t = null == n ? void 0 : n.hasFeature(l.oNc.COMMUNITY)) &&
-		void 0 !== t &&
-		t &&
-		d &&
-		!(
-			(null == n ? void 0 : n.hasFeature(l.oNc.CREATOR_MONETIZABLE)) ||
-			(null == n ? void 0 : n.hasFeature(l.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) ||
-			(null == n ? void 0 : n.hasFeature(l.oNc.CREATOR_MONETIZABLE_DISABLED))
-		)
-	);
+	return c && null !== (t = null == n ? void 0 : n.hasFeature(l.oNc.COMMUNITY)) && void 0 !== t && t && d && !((null == n ? void 0 : n.hasFeature(l.oNc.CREATOR_MONETIZABLE)) || (null == n ? void 0 : n.hasFeature(l.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) || (null == n ? void 0 : n.hasFeature(l.oNc.CREATOR_MONETIZABLE_DISABLED)));
 }

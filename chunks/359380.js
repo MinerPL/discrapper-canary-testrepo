@@ -150,16 +150,7 @@ function m(e) {
 	});
 }
 n.Z = (e) => {
-	let {
-		guildId: n,
-		title: t,
-		description: r,
-		onUpdateTraits: s,
-		progress: o,
-		traits: l,
-		optional: u = !1,
-		hidePreview: _ = !1
-	} = e;
+	let { guildId: n, title: t, description: r, onUpdateTraits: s, progress: o, traits: l, optional: u = !1, hidePreview: _ = !1 } = e;
 	return (0, a.jsxs)('div', {
 		className: d.slideContent,
 		children: [

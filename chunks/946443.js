@@ -93,10 +93,7 @@ function x(e) {
 				(0, i.jsx)(f.Z, {
 					Icon: _.InboxIcon,
 					header: A.Z.Messages.UNREADS_EMPTY_STATE_HEADER,
-					tip:
-						(null === (B = o().os) || void 0 === B ? void 0 : B.family) === 'OS X'
-							? A.Z.Messages.UNREADS_EMPTY_STATE_TIP_MAC
-							: A.Z.Messages.UNREADS_EMPTY_STATE_TIP
+					tip: (null === (B = o().os) || void 0 === B ? void 0 : B.family) === 'OS X' ? A.Z.Messages.UNREADS_EMPTY_STATE_TIP_MAC : A.Z.Messages.UNREADS_EMPTY_STATE_TIP
 				})
 			]
 		});
@@ -123,17 +120,12 @@ function x(e) {
 						return (0, i.jsxs)(_.AdvancedScrollerThin, {
 							ref: (e) => {
 								var n;
-								(v.current = e),
-									(t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
+								(v.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
 							},
 							...a,
 							onScroll: P === g.jd.Done ? void 0 : D,
 							className: R.scroller,
-							children: [
-								s ? (0, i.jsx)(O, { setSeenTutorial: l }) : null,
-								(0, p.Z)(b, Z, n),
-								P === g.jd.Done ? null : (0, i.jsx)(_.Spinner, { className: R.spinner })
-							]
+							children: [s ? (0, i.jsx)(O, { setSeenTutorial: l }) : null, (0, p.Z)(b, Z, n), P === g.jd.Done ? null : (0, i.jsx)(_.Spinner, { className: R.spinner })]
 						});
 					}
 				})

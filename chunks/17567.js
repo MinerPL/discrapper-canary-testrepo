@@ -22,15 +22,7 @@ t.Z = new (class e {
 			let e = r.Z.getGuild(n.id);
 			if (null != e) {
 				let s = r.Z.getRoles(n.id);
-				this.put(
-					i.cy(
-						i.sp(n, e),
-						'partial' === n.data_mode
-							? i.EO(n.id, s, n.partial_updates.roles, n.partial_updates.deleted_role_ids)
-							: (0, l.C5)(n.id, n.roles)
-					),
-					t
-				);
+				this.put(i.cy(i.sp(n, e), 'partial' === n.data_mode ? i.EO(n.id, s, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : (0, l.C5)(n.id, n.roles)), t);
 			}
 		}
 	}

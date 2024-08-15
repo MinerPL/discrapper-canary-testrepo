@@ -27,11 +27,11 @@ var r = n(735250),
 	f = n(993365),
 	h = n(481060),
 	p = n(689938),
-	I = n(310761);
-let m = 'data-listbox-item-id',
+	m = n(310761);
+let I = 'data-listbox-item-id',
 	T = Object.freeze({
-		STANDARD: I.selected,
-		BRAND: I.selectedBrand
+		STANDARD: m.selected,
+		BRAND: m.selectedBrand
 	});
 function g(e) {
 	let [t, n] = i.useState(() => new Set(e));
@@ -64,27 +64,14 @@ let N = i.createContext({
 	itemToString: A
 });
 function v(e) {
-	let {
-			placeholder: t,
-			children: n,
-			value: a,
-			onChange: u,
-			className: c,
-			listClassName: h,
-			'aria-label': T,
-			multiSelect: g = !1,
-			autoFocus: S = !1,
-			maxVisibleItems: v = 5,
-			itemToString: O = A,
-			showScrollbar: R = !1
-		} = e,
+	let { placeholder: t, children: n, value: a, onChange: u, className: c, listClassName: h, 'aria-label': T, multiSelect: g = !1, autoFocus: S = !1, maxVisibleItems: v = 5, itemToString: O = A, showScrollbar: R = !1 } = e,
 		[C, y] = i.useState(''),
 		[D] = i.useState(!0),
 		[L, b] = i.useState(null),
 		M = i.useId(),
 		P = i.useRef(null);
 	i.useLayoutEffect(() => {
-		let e = document.querySelector('['.concat(m, '="').concat(L, '"]')),
+		let e = document.querySelector('['.concat(I, '="').concat(L, '"]')),
 			t = P.current;
 		null != t &&
 			null != e &&
@@ -142,7 +129,7 @@ function v(e) {
 					'aria-controls': D ? M : void 0,
 					'aria-owns': M,
 					'aria-haspopup': 'listbox',
-					className: s()(I.combobox, c),
+					className: s()(m.combobox, c),
 					children: [
 						(0, r.jsx)(E.E, {
 							autoFocus: S,
@@ -153,7 +140,7 @@ function v(e) {
 							onKeyDown: i,
 							onBlur: () => b(null),
 							onClear: () => y(''),
-							className: s()({ [I.searchWithScrollbar]: R }),
+							className: s()({ [m.searchWithScrollbar]: R }),
 							inputProps: {
 								'aria-multiline': !1,
 								'aria-activedescendant': null != L ? L : void 0
@@ -164,7 +151,7 @@ function v(e) {
 								D &&
 								(w
 									? (0, r.jsxs)('div', {
-											className: I.empty,
+											className: m.empty,
 											children: [
 												(0, r.jsx)(d.X, {
 													variant: 'heading-md/semibold',
@@ -190,7 +177,7 @@ function v(e) {
 												'aria-multiselectable': g,
 												id: M,
 												ref: P,
-												className: s()(I.list, h, { [I.scroller]: R }),
+												className: s()(m.list, h, { [m.scroller]: R }),
 												sections: [U.length],
 												sectionHeight: 0,
 												rowHeight: 40,
@@ -221,11 +208,11 @@ function R(e) {
 		tag: 'li',
 		id: p,
 		onClick: () => (o ? null : f(n)),
-		[m]: n,
-		className: s()(I.item, {
-			[I.focused]: g,
+		[I]: n,
+		className: s()(m.item, {
+			[m.focused]: g,
 			[u]: S,
-			[I.disabled]: o
+			[m.disabled]: o
 		}),
 		...A,
 		role: 'option',
@@ -241,14 +228,14 @@ function R(e) {
 	(R.Label = function (e) {
 		let { children: t } = e;
 		return (0, r.jsx)('span', {
-			className: I.itemLabel,
+			className: m.itemLabel,
 			children: t
 		});
 	}),
 	(R.Icon = function (e) {
 		let { children: t } = e;
 		return (0, r.jsx)('span', {
-			className: I.itemCheckbox,
+			className: m.itemCheckbox,
 			children: t
 		});
 	}),
@@ -257,7 +244,7 @@ function R(e) {
 			{ selected: n } = i.useContext(N),
 			a = i.useContext(O);
 		return (0, r.jsx)('span', {
-			className: I.itemCheckbox,
+			className: m.itemCheckbox,
 			children: (0, r.jsx)(u.X, {
 				displayOnly: !0,
 				value: null != t ? t : null != a && n.has(a),
@@ -271,7 +258,7 @@ function R(e) {
 			t = i.useContext(O);
 		return e.has(t)
 			? (0, r.jsx)('span', {
-					className: I.itemCheckbox,
+					className: m.itemCheckbox,
 					children: (0, r.jsx)(h.CircleCheckIcon, {
 						size: 'custom',
 						color: 'currentColor',

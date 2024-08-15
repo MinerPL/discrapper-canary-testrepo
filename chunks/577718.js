@@ -154,14 +154,8 @@ t.Z = a.memo(function (e) {
 						renderGuildHeaderDropdownButton: l
 					});
 				case s.z.GUILD_HEADER_INVITE_SPLASH:
-					let e = (0, f.f2)(a, C.Eu4.TIER_1)
-							? Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format()
-							: Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({
-									boostCount: (0, f.KK)(a, C.Eu4.TIER_1)
-								}),
-						t = (0, f.f2)(a, C.Eu4.TIER_1)
-							? Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS
-							: Z.Z.Messages.LEARN_MORE;
+					let e = (0, f.f2)(a, C.Eu4.TIER_1) ? Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({ boostCount: (0, f.KK)(a, C.Eu4.TIER_1) }),
+						t = (0, f.f2)(a, C.Eu4.TIER_1) ? Z.Z.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : Z.Z.Messages.LEARN_MORE;
 					return (0, i.jsx)(j, {
 						renderPopout: (0, i.jsx)(T.ZP, {
 							onComponentMount: U,

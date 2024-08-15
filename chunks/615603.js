@@ -24,14 +24,7 @@ var n = t(735250),
 	R = t(689938),
 	x = t(623765);
 function M(e) {
-	let {
-			guildBoostSlot: s,
-			isCancellable: t,
-			onCancel: i,
-			onUncancel: r,
-			premiumSubscription: o,
-			useReducedMotion: c
-		} = e,
+	let { guildBoostSlot: s, isCancellable: t, onCancel: i, onUncancel: r, premiumSubscription: o, useReducedMotion: c } = e,
 		d = a.useMemo(() => (null != s.cooldownEndsAt ? new Date(s.cooldownEndsAt) : null), [s]),
 		_ = (0, C.tl)(s);
 	return (0, n.jsxs)(
@@ -52,9 +45,7 @@ function M(e) {
 							? (0, n.jsx)(l.Text, {
 									color: 'text-muted',
 									variant: 'text-sm/medium',
-									children: R.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_PENDING_CANCELATION.format({
-										date: o.currentPeriodEnd
-									})
+									children: R.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_PENDING_CANCELATION.format({ date: o.currentPeriodEnd })
 								})
 							: s.isOnCooldown() && null != d
 								? (0, n.jsx)(O.Z, { cooldown: d.getTime() })
@@ -135,9 +126,7 @@ s.Z = function (e) {
 				a = !0;
 			return (
 				i.forEach((i) => {
-					!(0, C.tl)(i) && t++,
-						i.isOnCooldown() ? (n = !0) : (a = !1),
-						null != i.premiumGuildSubscription ? e.push(i) : s.push(i);
+					!(0, C.tl)(i) && t++, i.isOnCooldown() ? (n = !0) : (a = !1), null != i.premiumGuildSubscription ? e.push(i) : s.push(i);
 				}),
 				{
 					appliedGuildBoostSlots: e,
@@ -172,25 +161,8 @@ s.Z = function (e) {
 		w = a.useMemo(() => b.find((e) => e.isAvailable()), [b]);
 	if (0 === b.length) return null;
 	let H = b.length;
-	if (
-		((s = F
-			? 1 === H && Y
-				? R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE
-				: (j
-						? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN
-						: R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION
-					).format({ numUnappliedGuildBoostSlots: H })
-			: (j
-					? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN
-					: R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_V2
-				).format({ numUnappliedGuildBoostSlots: H })),
-		m.ZP.isPremium(g))
-	) {
-		if (F && 1 === H && Y)
-			t =
-				P.skuId === p.Ft.FREE_GUILD_BOOST_1_MONTH
-					? R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT
-					: R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT;
+	if (((s = F ? (1 === H && Y ? R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE : (j ? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION).format({ numUnappliedGuildBoostSlots: H })) : (j ? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_V2).format({ numUnappliedGuildBoostSlots: H })), m.ZP.isPremium(g))) {
+		if (F && 1 === H && Y) t = P.skuId === p.Ft.FREE_GUILD_BOOST_1_MONTH ? R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : R.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT;
 		else {
 			let e = (e, s) =>
 				(0, n.jsx)(
@@ -206,22 +178,13 @@ s.Z = function (e) {
 					s
 				);
 			t = j
-				? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_ALL_COOLDOWN.format(
-						{ learnMoreHook: e }
-					)
-				: R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION.format(
-						{
-							numUnappliedGuildBoostSlots: H,
-							learnMoreHook: e
-						}
-					);
+				? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_ALL_COOLDOWN.format({ learnMoreHook: e })
+				: R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION.format({
+						numUnappliedGuildBoostSlots: H,
+						learnMoreHook: e
+					});
 		}
-	} else
-		t = j
-			? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_ALL_COOLDOWN
-			: R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING.format({
-					numUnappliedGuildBoostSlots: H
-				});
+	} else t = j ? R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_ALL_COOLDOWN : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING.format({ numUnappliedGuildBoostSlots: H });
 	return (0, n.jsxs)('div', {
 		className: x.wrapper,
 		children: [
@@ -279,9 +242,7 @@ s.Z = function (e) {
 								className: x.headerContentSecondary,
 								children: (0, n.jsx)(l.Tooltip, {
 									shouldShow: null == w || u,
-									text: u
-										? R.Z.Messages.GUILD_BOOSTING_DISABLED_FOR_PAUSED_SUBSCRIPTION
-										: R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_NO_AVAILABLE_GUILD_BOOST_SLOTS,
+									text: u ? R.Z.Messages.GUILD_BOOSTING_DISABLED_FOR_PAUSED_SUBSCRIPTION : R.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_NO_AVAILABLE_GUILD_BOOST_SLOTS,
 									children: (e) =>
 										(0, n.jsx)(l.Button, {
 											...e,

@@ -11,19 +11,7 @@ var r = n(735250),
 	s = n(689938),
 	l = n(802076);
 function c(e) {
-	let {
-			onConfirm: t,
-			onClose: n,
-			validationText: c,
-			errorText: i,
-			header: u,
-			className: d,
-			cancelText: x,
-			confirmText: h,
-			instructionText: p,
-			transitionState: m,
-			children: C
-		} = e,
+	let { onConfirm: t, onClose: n, validationText: c, errorText: i, header: u, className: d, cancelText: x, confirmText: h, instructionText: p, transitionState: m, children: C } = e,
 		[g, j] = o.useState(''),
 		[f, N] = o.useState(null),
 		M =

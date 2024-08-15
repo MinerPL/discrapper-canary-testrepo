@@ -4,15 +4,7 @@ function r(e) {
 		var i, a;
 		let o = (null == e ? void 0 : e.from) || n();
 		if (null == o) return null;
-		let l =
-			((i = o),
-			null !==
-				(a = t().find(
-					(e) =>
-						!!(i.compareDocumentPosition(e) & (Node.DOCUMENT_POSITION_FOLLOWING | Node.DOCUMENT_POSITION_CONTAINED_BY))
-				)) && void 0 !== a
-				? a
-				: null);
+		let l = ((i = o), null !== (a = t().find((e) => !!(i.compareDocumentPosition(e) & (Node.DOCUMENT_POSITION_FOLLOWING | Node.DOCUMENT_POSITION_CONTAINED_BY)))) && void 0 !== a ? a : null);
 		return null == l && (null == e ? void 0 : e.wrap) ? (await (null == r ? void 0 : r()), s()) : l;
 	}
 	function s() {
@@ -33,8 +25,7 @@ function r(e) {
 				let n = t();
 				for (let t = n.length - 1; t >= 0; t--) {
 					let r = n[t];
-					if (e.compareDocumentPosition(r) & (Node.DOCUMENT_POSITION_PRECEDING | Node.DOCUMENT_POSITION_CONTAINED_BY))
-						return r;
+					if (e.compareDocumentPosition(r) & (Node.DOCUMENT_POSITION_PRECEDING | Node.DOCUMENT_POSITION_CONTAINED_BY)) return r;
 				}
 				return null;
 			})(r);

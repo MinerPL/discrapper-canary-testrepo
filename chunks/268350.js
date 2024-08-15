@@ -48,8 +48,8 @@ var r = n(392711),
 	f = n(73346),
 	h = n(926491),
 	p = n(981631),
-	I = n(526761),
-	m = n(689938);
+	m = n(526761),
+	I = n(689938);
 let T = async (e, t) => {
 		let { body: n } = await (0, f.Kb)(p.ANM.STICKER_PACK(e));
 		return (
@@ -150,14 +150,14 @@ function D(e) {
 	c.DZ.updateAsync(
 		'favoriteStickers',
 		(t) =>
-			((t.stickerIds = y(t.stickerIds)), i().size(t.stickerIds) >= I.oX)
+			((t.stickerIds = y(t.stickerIds)), i().size(t.stickerIds) >= m.oX)
 				? (o.Z.show({
-						title: m.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
-						body: m.Z.Messages.FAVORITES_LIMIT_REACHED_BODY.format({ count: I.oX })
+						title: I.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
+						body: I.Z.Messages.FAVORITES_LIMIT_REACHED_BODY.format({ count: m.oX })
 					}),
 					!1)
 				: !t.stickerIds.includes(e) && void t.stickerIds.push(e),
-		I.fy.INFREQUENT_USER_ACTION
+		m.fy.INFREQUENT_USER_ACTION
 	);
 }
 function L(e) {
@@ -166,6 +166,6 @@ function L(e) {
 		(t) => {
 			(t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = y(t.stickerIds));
 		},
-		I.fy.INFREQUENT_USER_ACTION
+		m.fy.INFREQUENT_USER_ACTION
 	);
 }

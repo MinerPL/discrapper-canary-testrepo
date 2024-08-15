@@ -123,13 +123,7 @@ class et extends l.PureComponent {
 			});
 	}
 	componentDidUpdate(e, t) {
-		!t.isPrivate &&
-			this.state.isPrivate &&
-			this.state.channelType === V.d4z.GUILD_ANNOUNCEMENT &&
-			this.setState({ channelType: V.d4z.GUILD_TEXT }),
-			!t.isPrivate &&
-				this.state.isPrivate &&
-				T.ZP.trackWithMetadata(V.rMx.OPEN_MODAL, { type: 'Create Private Channel' });
+		!t.isPrivate && this.state.isPrivate && this.state.channelType === V.d4z.GUILD_ANNOUNCEMENT && this.setState({ channelType: V.d4z.GUILD_TEXT }), !t.isPrivate && this.state.isPrivate && T.ZP.trackWithMetadata(V.rMx.OPEN_MODAL, { type: 'Create Private Channel' });
 	}
 	getGuildId() {
 		let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.props;
@@ -166,23 +160,14 @@ class et extends l.PureComponent {
 		let n;
 		let { cloneChannel: a, categoryId: l, onClose: i } = this.props,
 			{ channelType: o } = this.state;
-		let d =
-			((e = a),
-			(t = o),
-			null != e
-				? q.Z.Messages.CLONE_CHANNEL
-				: t === V.d4z.GUILD_CATEGORY
-					? q.Z.Messages.CREATE_CATEGORY
-					: q.Z.Messages.CREATE_CHANNEL);
+		let d = ((e = a), (t = o), null != e ? q.Z.Messages.CLONE_CHANNEL : t === V.d4z.GUILD_CATEGORY ? q.Z.Messages.CREATE_CATEGORY : q.Z.Messages.CREATE_CHANNEL);
 		if (null != l) {
 			let e = H.Z.getChannel(l);
 			n = (0, r.jsx)(p.Text, {
 				variant: 'text-xs/normal',
 				color: 'header-secondary',
 				className: Q.subtitle,
-				children: q.Z.Messages.IN_CATEGORY.format({
-					categoryName: null !== (s = null == e ? void 0 : e.name) && void 0 !== s ? s : ''
-				})
+				children: q.Z.Messages.IN_CATEGORY.format({ categoryName: null !== (s = null == e ? void 0 : e.name) && void 0 !== s ? s : '' })
 			});
 		}
 		return (0, r.jsxs)(p.ModalHeader, {
@@ -296,15 +281,7 @@ class et extends l.PureComponent {
 		});
 	}
 	renderType() {
-		let {
-				cloneChannel: e,
-				applications: t,
-				canCreateStoreChannel: s,
-				canCreateAnnouncementChannel: n,
-				canCreateStageChannel: a,
-				canCreateForumChannel: l,
-				canCreateMediaChannel: i
-			} = this.props,
+		let { cloneChannel: e, applications: t, canCreateStoreChannel: s, canCreateAnnouncementChannel: n, canCreateStageChannel: a, canCreateForumChannel: l, canCreateMediaChannel: i } = this.props,
 			{ channelType: o, isPrivate: d } = this.state;
 		if (null != e || o === V.d4z.GUILD_CATEGORY) return;
 		let c = null != t && t.length > 0;
@@ -313,14 +290,7 @@ class et extends l.PureComponent {
 			title: q.Z.Messages.CHANNEL_TYPE,
 			children: (0, r.jsx)(p.RadioGroup, {
 				options: (function (e) {
-					let {
-							isPrivate: t,
-							showStoreChannelOption: s,
-							showAnnouncementChannelOption: n,
-							canCreateStageChannel: a,
-							canCreateForumChannel: l,
-							canCreateMediaChannel: i
-						} = e,
+					let { isPrivate: t, showStoreChannelOption: s, showAnnouncementChannelOption: n, canCreateStageChannel: a, canCreateForumChannel: l, canCreateMediaChannel: i } = e,
 						o = [
 							{
 								icon: t ? p.TextLockIcon : p.TextIcon,
@@ -467,9 +437,7 @@ class et extends l.PureComponent {
 	}
 	renderChannelTypeDescription(e) {
 		let t;
-		return (e === V.d4z.GUILD_ANNOUNCEMENT &&
-			(t = q.Z.Messages.FORM_HELP_NEWS.format({ documentationLink: Y.Z.getArticleURL(V.BhN.ANNOUNCEMENT_CHANNELS) })),
-		null == t)
+		return (e === V.d4z.GUILD_ANNOUNCEMENT && (t = q.Z.Messages.FORM_HELP_NEWS.format({ documentationLink: Y.Z.getArticleURL(V.BhN.ANNOUNCEMENT_CHANNELS) })), null == t)
 			? null
 			: (0, r.jsx)(p.FormText, {
 					className: Q.channelTypeDescription,
@@ -522,9 +490,7 @@ class et extends l.PureComponent {
 							hideBorder: !0,
 							onChange: this.handleShowBranchesToggle,
 							value: a,
-							note: q.Z.Messages.CREATE_STORE_CHANNEL_BETA_NOTE.format({
-								devPortalUrl: V.EYA.API_DOCS_GAME_AND_SERVER_MANAGEMENT
-							}),
+							note: q.Z.Messages.CREATE_STORE_CHANNEL_BETA_NOTE.format({ devPortalUrl: V.EYA.API_DOCS_GAME_AND_SERVER_MANAGEMENT }),
 							children: [
 								(0, r.jsx)(p.KeyIcon, {
 									size: 'md',
@@ -567,10 +533,7 @@ class et extends l.PureComponent {
 			{ channelType: t, isPrivate: s } = this.state;
 		if (null != e || t === V.d4z.GUILD_ANNOUNCEMENT) return null;
 		let n = t === V.d4z.GUILD_CATEGORY ? q.Z.Messages.PRIVATE_CATEGORY : q.Z.Messages.PRIVATE_CHANNEL,
-			a =
-				t === V.d4z.GUILD_CATEGORY
-					? q.Z.Messages.CHANNEL_PERMISSIONS_PRIVATE_CATEGORY_DESCRIPTION
-					: q.Z.Messages.CHANNEL_PERMISSIONS_PRIVATE_CHANNEL_DESCRIPTION_NEW;
+			a = t === V.d4z.GUILD_CATEGORY ? q.Z.Messages.CHANNEL_PERMISSIONS_PRIVATE_CATEGORY_DESCRIPTION : q.Z.Messages.CHANNEL_PERMISSIONS_PRIVATE_CHANNEL_DESCRIPTION_NEW;
 		return (0, r.jsx)(
 			p.FormItem,
 			{
@@ -653,12 +616,7 @@ class et extends l.PureComponent {
 		let { channelType: t } = this.props,
 			{ pendingPermissionOverwrites: s } = this.state;
 		return (
-			(e =
-				0 === Object.keys(s).length
-					? q.Z.Messages.SKIP
-					: t === V.d4z.GUILD_CATEGORY
-						? q.Z.Messages.CREATE_CATEGORY
-						: q.Z.Messages.CREATE_CHANNEL),
+			(e = 0 === Object.keys(s).length ? q.Z.Messages.SKIP : t === V.d4z.GUILD_CATEGORY ? q.Z.Messages.CREATE_CATEGORY : q.Z.Messages.CREATE_CHANNEL),
 			(0, r.jsxs)(p.ModalFooter, {
 				children: [
 					(0, r.jsx)(p.Button, {
@@ -688,13 +646,7 @@ class et extends l.PureComponent {
 				this.renderHeader(),
 				(0, r.jsxs)(p.ModalContent, {
 					className: Q.modalContent,
-					children: [
-						this.renderType(),
-						this.renderName(),
-						e === V.d4z.GUILD_STORE ? this.renderStoreOptions() : null,
-						this.renderChannelTypeDescription(e),
-						e === V.d4z.GUILD_STAGE_VOICE ? null : this.renderPrivacyOptions()
-					]
+					children: [this.renderType(), this.renderName(), e === V.d4z.GUILD_STORE ? this.renderStoreOptions() : null, this.renderChannelTypeDescription(e), e === V.d4z.GUILD_STAGE_VOICE ? null : this.renderPrivacyOptions()]
 				}),
 				this.renderError(),
 				this.renderFooter()
@@ -717,9 +669,7 @@ class et extends l.PureComponent {
 								(0, r.jsx)(p.Heading, {
 									variant: 'heading-lg/semibold',
 									className: Q.title,
-									children: l
-										? q.Z.Messages.CHANNEL_PERMISSIONS_ADD_MODERATOR_TITLE
-										: q.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE
+									children: l ? q.Z.Messages.CHANNEL_PERMISSIONS_ADD_MODERATOR_TITLE : q.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE
 								}),
 								(0, r.jsxs)(p.Text, {
 									variant: 'text-xs/normal',
@@ -834,15 +784,7 @@ class et extends l.PureComponent {
 			$(this, 'handleSubmit', async (e) => {
 				let t, s, n;
 				e.preventDefault();
-				let {
-						cloneChannel: a,
-						categoryId: r,
-						user: l,
-						memberRoleIds: i,
-						isAdmin: o,
-						onClose: d,
-						owner: c
-					} = this.props,
+				let { cloneChannel: a, categoryId: r, user: l, memberRoleIds: i, isAdmin: o, onClose: d, owner: c } = this.props,
 					{ name: h, pendingPermissionOverwrites: E, channelType: N, skuId: C, branchId: p, isPrivate: _ } = this.state,
 					g = this.getGuildId();
 				if (null != g) {
@@ -860,11 +802,7 @@ class et extends l.PureComponent {
 							((t = []),
 							Object.values(E).forEach((e) => {
 								let { row: s } = e;
-								null != s.id &&
-									'' !== s.id &&
-									(s.rowType === K.aC.ROLE
-										? t.push((0, P.createModeratorOverwrite)(s.id, I.BN.ROLE))
-										: s.rowType === K.aC.MEMBER && t.push((0, P.createModeratorOverwrite)(s.id, I.BN.MEMBER)));
+								null != s.id && '' !== s.id && (s.rowType === K.aC.ROLE ? t.push((0, P.createModeratorOverwrite)(s.id, I.BN.ROLE)) : s.rowType === K.aC.MEMBER && t.push((0, P.createModeratorOverwrite)(s.id, I.BN.MEMBER)));
 							}));
 					}
 					this.setState({ errors: {} });
@@ -884,9 +822,7 @@ class et extends l.PureComponent {
 						let a = e.body;
 						f.xL.has(N) && (0, j.XU)(a.guild_id, a.id), d();
 					} catch (e) {
-						null != e.body && 'object' == typeof e.body
-							? this.setState({ errors: e.body })
-							: this.setState({ errors: { message: q.Z.Messages.ERROR_OCCURRED_TRY_AGAIN } });
+						null != e.body && 'object' == typeof e.body ? this.setState({ errors: e.body }) : this.setState({ errors: { message: q.Z.Messages.ERROR_OCCURRED_TRY_AGAIN } });
 					}
 				}
 			});
@@ -916,11 +852,7 @@ t.default = l.forwardRef(function (e, t) {
 				i = F.default.getCurrentUser();
 			c()(null != i, 'CreateChannel: user cannot be undefined');
 			let o = null != l && null != l.ownerId ? F.default.getUser(l.ownerId) : null,
-				d = new Set(
-					null !== (t = null === (e = U.ZP.getMember(n, i.id)) || void 0 === e ? void 0 : e.roles) && void 0 !== t
-						? t
-						: []
-				),
+				d = new Set(null !== (t = null === (e = U.ZP.getMember(n, i.id)) || void 0 === e ? void 0 : e.roles) && void 0 !== t ? t : []),
 				h = B.Z.can(V.Plq.ADMINISTRATOR, l),
 				u = H.Z.getChannel(a);
 			return {

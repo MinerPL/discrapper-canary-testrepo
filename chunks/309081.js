@@ -82,17 +82,7 @@ function j(e) {
 	});
 }
 function D(e) {
-	let {
-			channelId: a,
-			localCreationAnswerId: n,
-			buttonImage: l,
-			layout: u,
-			onEmojiSelect: d,
-			onEmojiRemove: _,
-			answerIndex: m,
-			shouldShowEmojiPicker: A,
-			toggleEmojiPicker: C
-		} = e,
+	let { channelId: a, localCreationAnswerId: n, buttonImage: l, layout: u, onEmojiSelect: d, onEmojiRemove: _, answerIndex: m, shouldShowEmojiPicker: A, toggleEmojiPicker: C } = e,
 		L = (0, i.e7)([f.Z], () => f.Z.getChannel(a)),
 		{
 			emoji: h,
@@ -170,9 +160,7 @@ function D(e) {
 						className: M ? N.expressionPickerIconDefault : N.expressionPickerIconImageOnly
 					})
 				}),
-		B = s()(g.CT, u === o.C.IMAGE_ONLY_ANSWERS ? N.expressionPickerButtonImageOnly : N.expressionPickerButtonDefault, {
-			[N.canEditMedia]: w
-		});
+		B = s()(g.CT, u === o.C.IMAGE_ONLY_ANSWERS ? N.expressionPickerButtonImageOnly : N.expressionPickerButtonDefault, { [N.canEditMedia]: w });
 	return (0, t.jsx)(c.Popout, {
 		renderPopout: k,
 		shouldShow: A,
@@ -228,34 +216,13 @@ function M(e) {
 			}),
 			(0, t.jsxs)(c.HiddenVisually, {
 				id: r,
-				children: [
-					T.Z.Messages.CHARACTER_COUNT_A11Y_LABEL.format({ remainingCharacters: l }),
-					' ',
-					T.Z.Messages.MAXIMUM_LENGTH.format({ maxLength: p.WA })
-				]
+				children: [T.Z.Messages.CHARACTER_COUNT_A11Y_LABEL.format({ remainingCharacters: l }), ' ', T.Z.Messages.MAXIMUM_LENGTH.format({ maxLength: p.WA })]
 			})
 		]
 	});
 }
 a.Z = r.forwardRef(function (e, a) {
-	let {
-			channelId: l,
-			answer: d,
-			index: E,
-			layout: A,
-			isLastAnswer: f,
-			onAnswerTextChange: x,
-			onEmojiSelect: O,
-			onEmojiRemove: g,
-			canRemoveAnswer: v,
-			onRemoveAnswer: j,
-			addAnswer: w,
-			submitPoll: S,
-			answerTextInputRefs: b,
-			error: k,
-			inputRef: Z,
-			deleteButtonRef: y
-		} = e,
+	let { channelId: l, answer: d, index: E, layout: A, isLastAnswer: f, onAnswerTextChange: x, onEmojiSelect: O, onEmojiRemove: g, canRemoveAnswer: v, onRemoveAnswer: j, addAnswer: w, submitPoll: S, answerTextInputRefs: b, error: k, inputRef: Z, deleteButtonRef: y } = e,
 		B = (0, m.Dt)(),
 		U = (0, m.Dt)(),
 		W = null != k && k.length > 0,
@@ -286,10 +253,7 @@ a.Z = r.forwardRef(function (e, a) {
 				switch (e.key.toLowerCase()) {
 					case 'enter':
 						var t;
-						f &&
-							(e.preventDefault(),
-							((0, R.cS)(d, A) || 'macos' !== (0, h.getOS)() ? a : n) ? (e.stopPropagation(), S()) : w()),
-							null === (t = b.current[E + 1]) || void 0 === t || t.focus();
+						f && (e.preventDefault(), ((0, R.cS)(d, A) || 'macos' !== (0, h.getOS)() ? a : n) ? (e.stopPropagation(), S()) : w()), null === (t = b.current[E + 1]) || void 0 === t || t.focus();
 						break;
 					case 'e':
 						('macos' === (0, h.getOS)() ? n : a) && (e.preventDefault(), e.stopPropagation(), z());
@@ -388,9 +352,7 @@ a.Z = r.forwardRef(function (e, a) {
 												(0, t.jsxs)('div', {
 													onClick: G,
 													children: [
-														(0, t.jsx)(c.HiddenVisually, {
-															children: T.Z.Messages.CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT
-														}),
+														(0, t.jsx)(c.HiddenVisually, { children: T.Z.Messages.CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT }),
 														(0, t.jsx)(c.Text, {
 															variant: 'text-xxs/medium',
 															className: N.altTextPreview,
@@ -408,9 +370,7 @@ a.Z = r.forwardRef(function (e, a) {
 									null != H
 										? (0, t.jsx)(_.Z, {
 												tooltip: T.Z.Messages.CREATE_POLL_EDIT_IMAGE_DESCRIPTION,
-												'aria-label': J
-													? T.Z.Messages.CREATE_POLL_EDIT_ALT_ARIA_LABEL.format({ answerNumber: E + 1 })
-													: T.Z.Messages.CREATE_POLL_ADD_ALT_ARIA_LABEL.format({ answerNumber: E + 1 }),
+												'aria-label': J ? T.Z.Messages.CREATE_POLL_EDIT_ALT_ARIA_LABEL.format({ answerNumber: E + 1 }) : T.Z.Messages.CREATE_POLL_ADD_ALT_ARIA_LABEL.format({ answerNumber: E + 1 }),
 												onClick: G,
 												children: (0, t.jsx)(I.N, { 'aria-hidden': !0 })
 											})

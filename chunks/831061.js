@@ -1,62 +1,17 @@
 e.exports = function (e) {
 	let t = e.regex,
 		n = /[a-zA-Z]\w*/,
-		r = [
-			'as',
-			'break',
-			'class',
-			'construct',
-			'continue',
-			'else',
-			'for',
-			'foreign',
-			'if',
-			'import',
-			'in',
-			'is',
-			'return',
-			'static',
-			'var',
-			'while'
-		],
+		r = ['as', 'break', 'class', 'construct', 'continue', 'else', 'for', 'foreign', 'if', 'import', 'in', 'is', 'return', 'static', 'var', 'while'],
 		i = ['true', 'false', 'null'],
 		a = ['this', 'super'],
-		s = [
-			'-',
-			'~',
-			/\*/,
-			'%',
-			/\.\.\./,
-			/\.\./,
-			/\+/,
-			'<<',
-			'>>',
-			'>=',
-			'<=',
-			'<',
-			'>',
-			/\^/,
-			/!=/,
-			/!/,
-			/\bis\b/,
-			'==',
-			'&&',
-			'&',
-			/\|\|/,
-			/\|/,
-			/\?:/,
-			'='
-		],
+		s = ['-', '~', /\*/, '%', /\.\.\./, /\.\./, /\+/, '<<', '>>', '>=', '<=', '<', '>', /\^/, /!=/, /!/, /\bis\b/, '==', '&&', '&', /\|\|/, /\|/, /\?:/, '='],
 		o = {
 			relevance: 0,
 			match: t.concat(/\b(?!(if|while|for|else|super)\b)/, n, /(?=\s*[({])/),
 			className: 'title.function'
 		},
 		l = {
-			match: t.concat(
-				t.either(t.concat(/\b(?!(if|while|for|else|super)\b)/, n), t.either(...s)),
-				/(?=\s*\([^)]+\)\s*\{)/
-			),
+			match: t.concat(t.either(t.concat(/\b(?!(if|while|for|else|super)\b)/, n), t.either(...s)), /(?=\s*\([^)]+\)\s*\{)/),
 			className: 'title.function',
 			starts: {
 				contains: [
@@ -96,21 +51,7 @@ e.exports = function (e) {
 			match: /\b[A-Z]+[a-z]+([A-Z]+[a-z]+)*/,
 			scope: 'title.class',
 			keywords: {
-				_: [
-					'Bool',
-					'Class',
-					'Fiber',
-					'Fn',
-					'List',
-					'Map',
-					'Null',
-					'Num',
-					'Object',
-					'Range',
-					'Sequence',
-					'String',
-					'System'
-				]
+				_: ['Bool', 'Class', 'Fiber', 'Fn', 'List', 'Map', 'Null', 'Num', 'Object', 'Range', 'Sequence', 'String', 'System']
 			}
 		},
 		E = e.C_NUMBER_MODE,
@@ -137,20 +78,15 @@ e.exports = function (e) {
 				h,
 				{
 					scope: 'char.escape',
-					variants: [
-						{ match: /\\\\|\\["0%abefnrtv]/ },
-						{ match: /\\x[0-9A-F]{2}/ },
-						{ match: /\\u[0-9A-F]{4}/ },
-						{ match: /\\U[0-9A-F]{8}/ }
-					]
+					variants: [{ match: /\\\\|\\["0%abefnrtv]/ }, { match: /\\x[0-9A-F]{2}/ }, { match: /\\u[0-9A-F]{4}/ }, { match: /\\U[0-9A-F]{8}/ }]
 				}
 			]
 		};
 	h.contains.push(p);
-	let I = [...r, ...a, ...i],
-		m = {
+	let m = [...r, ...a, ...i],
+		I = {
 			relevance: 0,
-			match: t.concat('\\b(?!', I.join('|'), '\\b)', /[a-zA-Z_]\w*(?:[?!]|\b)/),
+			match: t.concat('\\b(?!', m.join('|'), '\\b)', /[a-zA-Z_]\w*(?:[?!]|\b)/),
 			className: 'variable'
 		};
 	return {
@@ -217,7 +153,7 @@ e.exports = function (e) {
 			u,
 			d,
 			c,
-			m
+			I
 		]
 	};
 };

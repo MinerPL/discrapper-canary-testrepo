@@ -13,16 +13,7 @@ var a = s(735250),
 	c = s(689938),
 	d = s(816497);
 function u(e) {
-	let {
-			directoryChannelId: t,
-			description: s,
-			onDescriptionChange: u,
-			categoryId: m,
-			onCategoryIdChange: C,
-			onSubmit: _,
-			onClose: x,
-			onBack: E
-		} = e,
+	let { directoryChannelId: t, description: s, onDescriptionChange: u, categoryId: m, onCategoryIdChange: C, onSubmit: _, onClose: x, onBack: E } = e,
 		[I, L] = n.useState(!1),
 		[f, T] = n.useState(null),
 		h = async () => {

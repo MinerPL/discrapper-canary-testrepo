@@ -38,20 +38,11 @@ class f {
 		}
 	}
 	constructor(e) {
-		if (
-			(_(this, 'connectionId', null),
-			_(this, 'users', []),
-			_(this, 'members', []),
-			_(this, 'messages', []),
-			e.length > 0)
-		) {
+		if ((_(this, 'connectionId', null), _(this, 'users', []), _(this, 'members', []), _(this, 'messages', []), e.length > 0)) {
 			var t;
 			let n = null === (t = e[0]) || void 0 === t ? void 0 : t.connectionId,
 				[r, i] = f.computeUsersAndMembers(e);
-			e.length > 0 && e.every((e) => e.connectionId === n) && (this.connectionId = n),
-				(this.users = r),
-				(this.members = i),
-				(this.messages = e.map((e) => e.message));
+			e.length > 0 && e.every((e) => e.connectionId === n) && (this.connectionId = n), (this.users = r), (this.members = i), (this.messages = e.map((e) => e.message));
 		}
 	}
 }
@@ -69,8 +60,7 @@ t.ZP = new (class e {
 		}
 	}
 	handleMessageCreate(e, t) {
-		if (!e.optimistic && !e.isPushNotification && null == e.sendMessageOptions)
-			(0, c.$)(e.channelId) && this.upsertOne(e.guildId, e.channelId, e.message, t);
+		if (!e.optimistic && !e.isPushNotification && null == e.sendMessageOptions) (0, c.$)(e.channelId) && this.upsertOne(e.guildId, e.channelId, e.message, t);
 	}
 	handleMessageUpdate(e, t) {
 		if (null != e.message.id && null != e.message.channel_id && !!(0, c.$)(e.message.channel_id))

@@ -11,9 +11,7 @@ function l(e) {
 		a = [
 			{
 				value: n.K8.FAILED_LOAD,
-				label: e
-					? s.Z.Messages.ACTIVITY_REPORT_ACTIVITY_END_FAILED_LOAD
-					: s.Z.Messages.ACTIVITY_REPORT_ACTIVITY_FAILED_LOAD
+				label: e ? s.Z.Messages.ACTIVITY_REPORT_ACTIVITY_END_FAILED_LOAD : s.Z.Messages.ACTIVITY_REPORT_ACTIVITY_FAILED_LOAD
 			},
 			{
 				value: n.K8.LAGGING,
@@ -36,9 +34,7 @@ function l(e) {
 		t &&
 			a.push({
 				value: n.K8.ADS,
-				label: e
-					? s.Z.Messages.ACTIVITY_REPORT_ACTIVITY_END_INCLUDED_ADS
-					: s.Z.Messages.ACTIVITY_REPORT_ACTIVITY_INCLUDES_ADS
+				label: e ? s.Z.Messages.ACTIVITY_REPORT_ACTIVITY_END_INCLUDED_ADS : s.Z.Messages.ACTIVITY_REPORT_ACTIVITY_INCLUDES_ADS
 			}),
 		a
 	);

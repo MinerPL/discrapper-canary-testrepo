@@ -12,8 +12,8 @@ var a,
 	f = n(46973),
 	h = n(570140),
 	p = n(594190),
-	I = n(444852),
-	m = n(569545),
+	m = n(444852),
+	I = n(569545),
 	T = n(687516),
 	g = n(139656),
 	S = n(358085),
@@ -84,10 +84,7 @@ class F extends (a = E.ZP.Store) {
 									packetsSentOrReceived: null !== (n = s.packetsSent) && void 0 !== n ? n : 0,
 									packetsLost: null !== (r = s.packetsLost) && void 0 !== r ? r : 0,
 									frameRate: null !== (i = s.frameRateEncode) && void 0 !== i ? i : 0,
-									resolution:
-										null !== (a = null === (t = s.resolution) || void 0 === t ? void 0 : t.height) && void 0 !== a
-											? a
-											: 0,
+									resolution: null !== (a = null === (t = s.resolution) || void 0 === t ? void 0 : t.height) && void 0 !== a ? a : 0,
 									bitrate: 0
 								}
 							: null;
@@ -103,10 +100,7 @@ class F extends (a = E.ZP.Store) {
 									packetsLost: null !== (r = o.packetsLost) && void 0 !== r ? r : 0,
 									frameRate: null !== (i = o.frameRateDecode) && void 0 !== i ? i : 0,
 									bitrate: null !== (a = o.bitrate) && void 0 !== a ? a : 0,
-									resolution:
-										null !== (s = null === (t = o.resolution) || void 0 === t ? void 0 : t.height) && void 0 !== s
-											? s
-											: 0
+									resolution: null !== (s = null === (t = o.resolution) || void 0 === t ? void 0 : t.height) && void 0 !== s ? s : 0
 								}
 							: null;
 					})(e.rtp.inbound[t])
@@ -180,7 +174,7 @@ class F extends (a = E.ZP.Store) {
 					},
 					STREAM_START: function (e) {
 						let { streamType: t, guildId: n, channelId: r, appContext: i, pid: a, sourceId: s } = e,
-							o = (0, m.V9)({
+							o = (0, I.V9)({
 								streamType: t,
 								guildId: n,
 								channelId: r,
@@ -223,25 +217,21 @@ class F extends (a = E.ZP.Store) {
 						if (null == o && null != n) {
 							var l, u, d;
 							null == M[t] && (b[t] = null);
-							let e = (0, m.my)(t);
+							let e = (0, I.my)(t);
 							null == b[t] && null == P[t] && (b[t] = (0, T.L2)(e, R.Z));
 							let i = v.Z.getChannel(e.channelId),
 								_ = null != i && i.isBroadcastChannel(),
-								E = new I.A({
+								E = new m.A({
 									streamRegion: a,
 									streamApplication: b[t],
 									streamSourceType: (function (e) {
 										var t, n, r;
 										if (null == e) return 'unknown';
-										if (
-											S.isPlatformEmbedded ||
-											(null === (t = platform) || void 0 === t ? void 0 : t.name) === 'Chrome'
-										) {
+										if (S.isPlatformEmbedded || (null === (t = platform) || void 0 === t ? void 0 : t.name) === 'Chrome') {
 											if (e.startsWith('web-contents-media-stream:')) return 'tab';
 											if (e.startsWith('window:')) return 'window';
 											else if (e.startsWith('screen:')) return 'screen';
-										} else if ((null === (n = platform) || void 0 === n ? void 0 : n.name) === 'Firefox')
-											return '' !== e ? 'window' : 'screen';
+										} else if ((null === (n = platform) || void 0 === n ? void 0 : n.name) === 'Firefox') return '' !== e ? 'window' : 'screen';
 										else if ((null === (r = platform) || void 0 === r ? void 0 : r.name) === 'Safari') return 'window';
 										return 'unknown';
 									})(P[t]),
@@ -253,7 +243,7 @@ class F extends (a = E.ZP.Store) {
 								(u = n),
 								(d = E),
 								c()(null != r, 'Creating RTCConnection without session.'),
-								(o = new I.Z({
+								(o = new m.Z({
 									sessionId: r,
 									streamKey: l,
 									serverId: u,
@@ -281,9 +271,7 @@ class F extends (a = E.ZP.Store) {
 						let { streamKey: t } = e,
 							n = w[t];
 						if (null == n) return !1;
-						t === i && ((i = null), O.Z.getMediaEngine().off(f.aB.ConnectionStats, k)),
-							n.destroy('stream-end'),
-							delete w[t];
+						t === i && ((i = null), O.Z.getMediaEngine().off(f.aB.ConnectionStats, k)), n.destroy('stream-end'), delete w[t];
 					},
 					STREAM_STATS_UPDATE: function (e) {
 						let { stats: t } = e;

@@ -23,14 +23,7 @@ var s = n(735250),
 	g = n(921671);
 function C(e) {
 	var t, n;
-	let {
-			allSubscriptionListings: i,
-			priceTiers: C,
-			loading: x,
-			error: p,
-			handlePublishTier: R,
-			onDeleteEditState: f
-		} = e,
+	let { allSubscriptionListings: i, priceTiers: C, loading: x, error: p, handlePublishTier: R, onDeleteEditState: f } = e,
 		{ editStateId: L } = (0, u.N)(),
 		O = (0, l.e7)([c.Z], () => c.Z.getSubscriptionListing(L)),
 		A = (0, d.mY)(),

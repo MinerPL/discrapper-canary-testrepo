@@ -164,9 +164,7 @@ function N(e) {
 										(0, i.jsx)(d.Text, {
 											variant: 'text-sm/medium',
 											color: 'text-muted',
-											children: f.Z.Messages.QUESTS_PROMOTED_BY_BRAND.format({
-												brandName: s.config.messages.gamePublisher
-											})
+											children: f.Z.Messages.QUESTS_PROMOTED_BY_BRAND.format({ brandName: s.config.messages.gamePublisher })
 										}),
 										y || j
 											? null

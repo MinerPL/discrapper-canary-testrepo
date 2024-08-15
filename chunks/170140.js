@@ -29,11 +29,7 @@ function N(e, t) {
 			},
 			[N]
 		),
-		C = (0, a.e7)(
-			[s.Z],
-			() => null != N && (null == N ? void 0 : N.channelId) != null && s.Z.isChannelGated(N.guildId, N.channelId),
-			[N]
-		),
+		C = (0, a.e7)([s.Z], () => null != N && (null == N ? void 0 : N.channelId) != null && s.Z.isChannelGated(N.guildId, N.channelId), [N]),
 		p = t.hasFlag(h.iLy.IS_CROSSPOST),
 		{
 			rawMediaPostEmbedData: g,
@@ -46,8 +42,7 @@ function N(e, t) {
 			[m.Z, u.Z, o.Z, _.default, d.Z],
 			() => {
 				var e;
-				let t =
-						null === (e = m.Z.getMediaPostEmbed(null == N ? void 0 : N.threadId)) || void 0 === e ? void 0 : e.media,
+				let t = null === (e = m.Z.getMediaPostEmbed(null == N ? void 0 : N.threadId)) || void 0 === e ? void 0 : e.media,
 					n = u.Z.getGuild(null == N ? void 0 : N.guildId),
 					i = o.Z.getChannel(null == N ? void 0 : N.channelId),
 					a = _.default.getUser(null == t ? void 0 : t.author_id),
@@ -84,11 +79,7 @@ function N(e, t) {
 		i.useEffect(() => {
 			if ((null == N ? void 0 : N.threadId) != null) {
 				let e = m.Z.getEmbedFetchState(N.threadId);
-				!0 === n &&
-					e === m.M.NOT_FETCHED &&
-					(!f || !1 !== C) &&
-					(f || !p) &&
-					(0, E.xP)(null == N ? void 0 : N.threadId);
+				!0 === n && e === m.M.NOT_FETCHED && (!f || !1 !== C) && (f || !p) && (0, E.xP)(null == N ? void 0 : N.threadId);
 			}
 		}, [N, n, f, C, p]),
 		M

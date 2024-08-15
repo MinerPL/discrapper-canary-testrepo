@@ -13,14 +13,14 @@ var r = n(735250),
 	f = n(80932),
 	h = n(351773),
 	p = n(209613),
-	I = n(313201),
-	m = n(633302),
+	m = n(313201),
+	I = n(633302),
 	T = n(176354),
 	g = n(624138),
 	S = n(981631),
 	A = n(689938),
 	N = n(847838);
-let v = (0, I.hQ)(),
+let v = (0, m.hQ)(),
 	O = d.Z.convert.fromCodePoint('1f44f'),
 	R = (0, g.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
 	C = (0, g.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
@@ -71,14 +71,14 @@ let v = (0, I.hQ)(),
 		let { id: t, selectedSurrogate: n, onClick: a, hasTabWrapper: o } = e,
 			d = (0, p.Z)('diversity'),
 			_ = (0, E.useSpring)({
-				height: (C + 2 * R) * (m.gw.length + 1),
+				height: (C + 2 * R) * (I.gw.length + 1),
 				from: { height: C },
 				config: { duration: 125 }
 			});
 		i.useEffect(() => {
 			d.focusFirstVisibleItem();
 		}, [d]);
-		let f = ['', ...m.gw];
+		let f = ['', ...I.gw];
 		return (
 			l().remove(f, (e) => e === n),
 			f.unshift(n),

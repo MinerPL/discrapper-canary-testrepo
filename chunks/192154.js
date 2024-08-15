@@ -26,20 +26,7 @@ var t = n(799761),
 			values: {
 				narrow: ['G', 'F', 'M', 'A', 'M', 'G', 'L', 'A', 'S', 'O', 'N', 'D'],
 				abbreviated: ['gen', 'feb', 'mar', 'apr', 'mag', 'giu', 'lug', 'ago', 'set', 'ott', 'nov', 'dic'],
-				wide: [
-					'gennaio',
-					'febbraio',
-					'marzo',
-					'aprile',
-					'maggio',
-					'giugno',
-					'luglio',
-					'agosto',
-					'settembre',
-					'ottobre',
-					'novembre',
-					'dicembre'
-				]
+				wide: ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre']
 			},
 			defaultWidth: 'wide'
 		}),

@@ -29,24 +29,13 @@ function U(e) {
 		}
 	};
 }
-let x = [
-	U(C.UK.DURATION_60_SEC),
-	U(C.UK.DURATION_5_MIN),
-	U(C.UK.DURATION_10_MIN),
-	U(C.UK.DURATION_1_HOUR),
-	U(C.UK.DURATION_1_DAY),
-	U(C.UK.DURATION_1_WEEK)
-];
+let x = [U(C.UK.DURATION_60_SEC), U(C.UK.DURATION_5_MIN), U(C.UK.DURATION_10_MIN), U(C.UK.DURATION_1_HOUR), U(C.UK.DURATION_1_DAY), U(C.UK.DURATION_1_WEEK)];
 function D(e) {
 	var t, a;
 	let { guildId: U, userId: D, anaylticsLocations: A, transitionState: O, onClose: S } = e,
 		M = (0, i.Dt)(),
 		{ analyticsLocations: E } = (0, c.ZP)(),
-		m =
-			null !== (a = null !== (t = null == A ? void 0 : A[0]) && void 0 !== t ? t : null == E ? void 0 : E[0]) &&
-			void 0 !== a
-				? a
-				: null,
+		m = null !== (a = null !== (t = null == A ? void 0 : A[0]) && void 0 !== t ? t : null == E ? void 0 : E[0]) && void 0 !== a ? a : null,
 		h = (0, o.e7)([d.default], () => d.default.getUser(D), [D]),
 		[L, R] = s.useState(C.UK.DURATION_60_SEC),
 		B = (0, u.sE)(U, {
@@ -59,19 +48,9 @@ function D(e) {
 			if (null != h) {
 				b(!0);
 				try {
-					await r.Z.setCommunicationDisabledDuration(U, D, L, g, m),
-						B(u.jQ.TIMEOUT),
-						(0, n.showToast)(
-							(0, n.createToast)(
-								f.Z.Messages.GUILD_COMMUNICATION_DISABLED_SUCCESS.format({ user: I.ZP.getName(U, null, h) }),
-								n.ToastType.SUCCESS
-							)
-						),
-						S();
+					await r.Z.setCommunicationDisabledDuration(U, D, L, g, m), B(u.jQ.TIMEOUT), (0, n.showToast)((0, n.createToast)(f.Z.Messages.GUILD_COMMUNICATION_DISABLED_SUCCESS.format({ user: I.ZP.getName(U, null, h) }), n.ToastType.SUCCESS)), S();
 				} catch (e) {
-					(0, n.showToast)(
-						(0, n.createToast)(f.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR, n.ToastType.FAILURE)
-					);
+					(0, n.showToast)((0, n.createToast)(f.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR, n.ToastType.FAILURE));
 				} finally {
 					b(!1);
 				}

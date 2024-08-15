@@ -33,16 +33,7 @@ var i = n(698091),
 	p = (function (e) {
 		function t(t) {
 			var n;
-			return (
-				((n = e.call(this) || this)._value = t),
-				(n.done = !0),
-				(n.elapsedTime = void 0),
-				(n.lastPosition = void 0),
-				(n.lastVelocity = void 0),
-				(n.v0 = void 0),
-				i.is.num(n._value) && (n.lastPosition = n._value),
-				n
-			);
+			return ((n = e.call(this) || this)._value = t), (n.done = !0), (n.elapsedTime = void 0), (n.lastPosition = void 0), (n.lastVelocity = void 0), (n.v0 = void 0), i.is.num(n._value) && (n.lastPosition = n._value), n;
 		}
 		a(t, e),
 			(t.create = function (e, n) {
@@ -57,25 +48,16 @@ var i = n(698091),
 				return this._value;
 			}),
 			(n.setValue = function (e, t) {
-				return (
-					i.is.num(e) &&
-						((this.lastPosition = e), t && ((e = Math.round(e / t) * t), this.done && (this.lastPosition = e))),
-					this._value !== e && ((this._value = e), !0)
-				);
+				return i.is.num(e) && ((this.lastPosition = e), t && ((e = Math.round(e / t) * t), this.done && (this.lastPosition = e))), this._value !== e && ((this._value = e), !0);
 			}),
 			(n.reset = function () {
 				var e = this.done;
-				(this.done = !1),
-					i.is.num(this._value) &&
-						((this.elapsedTime = 0),
-						(this.lastPosition = this._value),
-						e && (this.lastVelocity = null),
-						(this.v0 = null));
+				(this.done = !1), i.is.num(this._value) && ((this.elapsedTime = 0), (this.lastPosition = this._value), e && (this.lastVelocity = null), (this.v0 = null));
 			}),
 			t
 		);
 	})(h),
-	I = (function (e) {
+	m = (function (e) {
 		function t(t, n) {
 			var r;
 			return (
@@ -117,7 +99,7 @@ var i = n(698091),
 			t
 		);
 	})(p),
-	m = { current: null },
+	I = { current: null },
 	T = (function (e) {
 		function t(t) {
 			var n;
@@ -157,7 +139,7 @@ var i = n(698091),
 			}),
 			(n._addToPayload = function (e) {
 				var t = this;
-				i.getFluidConfig(e) && m.current && m.current.dependencies.add(e);
+				i.getFluidConfig(e) && I.current && I.current.dependencies.add(e);
 				var n = f(e);
 				n &&
 					i.each(n, function (e) {
@@ -170,9 +152,7 @@ var i = n(698091),
 	g = (function (e) {
 		function t(t, n) {
 			var r;
-			return (
-				((r = e.call(this, null) || this).source = void 0), e.prototype.setValue.call(s(r), r._makeAnimated(t, n)), r
-			);
+			return ((r = e.call(this, null) || this).source = void 0), e.prototype.setValue.call(s(r), r._makeAnimated(t, n)), r;
 		}
 		a(t, e),
 			(t.create = function (e, n) {
@@ -198,7 +178,7 @@ var i = n(698091),
 					void 0 === t && (t = e),
 					e
 						? e.map(function (e, n) {
-								return (i.isAnimatedString(e) ? I : p).create(e, t[n]);
+								return (i.isAnimatedString(e) ? m : p).create(e, t[n]);
 							})
 						: []
 				);
@@ -216,11 +196,11 @@ var i = n(698091),
 		return (
 			(n.setValue = function (t, n) {
 				if (t) {
-					if (n && ((m.current = n), t.style)) {
+					if (n && ((I.current = n), t.style)) {
 						var r = n.host.createAnimatedStyle;
 						t = o(o({}, t), {}, { style: r(t.style) });
 					}
-					e.prototype.setValue.call(this, t), (m.current = null);
+					e.prototype.setValue.call(this, t), (I.current = null);
 				}
 			}),
 			(n.onParentChange = function (e) {
@@ -286,7 +266,7 @@ var i = n(698091),
 	(t.AnimatedArray = g),
 	(t.AnimatedObject = T),
 	(t.AnimatedProps = S),
-	(t.AnimatedString = I),
+	(t.AnimatedString = m),
 	(t.AnimatedValue = p),
 	(t.createHost = function (e, t) {
 		var n = void 0 === t ? {} : t,

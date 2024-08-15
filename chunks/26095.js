@@ -56,11 +56,11 @@ e.exports = function e(t, n, r) {
 		var s = c(n);
 		d && (s = s.concat(d(n)));
 		for (var o = l(t), h = l(n), p = 0; p < s.length; ++p) {
-			var I = s[p];
-			if (!a[I] && !(r && r[I]) && !(h && h[I]) && !(o && o[I])) {
-				var m = _(n, I);
+			var m = s[p];
+			if (!a[m] && !(r && r[m]) && !(h && h[m]) && !(o && o[m])) {
+				var I = _(n, m);
 				try {
-					u(t, I, m);
+					u(t, m, I);
 				} catch (e) {}
 			}
 		}

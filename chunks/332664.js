@@ -70,21 +70,7 @@ function f() {
 	});
 }
 function L(e) {
-	let {
-			header: t,
-			body: o,
-			problemTitle: s,
-			problems: i,
-			transitionState: m,
-			ratingConfigs: p,
-			feedbackProblems: L = [],
-			otherKey: N,
-			ratingsSelectorClassName: D,
-			hideDontShowCheckbox: I,
-			startRating: v = null,
-			onSubmit: Z,
-			onClose: x
-		} = e,
+	let { header: t, body: o, problemTitle: s, problems: i, transitionState: m, ratingConfigs: p, feedbackProblems: L = [], otherKey: N, ratingsSelectorClassName: D, hideDontShowCheckbox: I, startRating: v = null, onSubmit: Z, onClose: x } = e,
 		B = (0, u.Z)(i),
 		[T, j] = a.useState(!1),
 		[S, M] = a.useState(v),

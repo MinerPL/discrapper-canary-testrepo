@@ -29,16 +29,7 @@ function N(e, t, n) {
 }
 class f extends (i = s.PureComponent) {
 	render() {
-		let {
-				sku: e,
-				storeListing: t,
-				isHorizontal: n,
-				className: i,
-				renderCustomTagline: s,
-				renderCustomTitle: r,
-				renderCustomMedia: l,
-				isEmbed: o
-			} = this.props,
+		let { sku: e, storeListing: t, isHorizontal: n, className: i, renderCustomTagline: s, renderCustomTitle: r, renderCustomMedia: l, isEmbed: o } = this.props,
 			c = o ? I.$G : m.Z;
 		return (0, a.jsx)(c, {
 			className: i,
@@ -74,15 +65,7 @@ class f extends (i = s.PureComponent) {
 						});
 			}),
 			N(this, 'renderMedia', () => {
-				let {
-					playing: e,
-					muted: t,
-					showMediaPlaceholder: n,
-					onToggleMute: i,
-					sku: r,
-					isHorizontal: o,
-					storeListing: c
-				} = this.props;
+				let { playing: e, muted: t, showMediaPlaceholder: n, onToggleMute: i, sku: r, isHorizontal: o, storeListing: c } = this.props;
 				return (0, a.jsxs)(s.Fragment, {
 					children: [
 						(0, a.jsx)(_.Z, {
@@ -97,11 +80,7 @@ class f extends (i = s.PureComponent) {
 							splashClassName: h.splashVideo,
 							splashPlaceholderClassName: h.splashPlaceholder
 						}),
-						r.exclusive
-							? (0, a.jsx)(d.Z, { className: l()(h.exclusiveRegular, { [h.exclusivePlaying]: e }) })
-							: r.isTheGameAwardsWinner
-								? (0, a.jsx)(u.Z, { className: l()(h.exclusiveRegular, { [h.exclusivePlaying]: e }) })
-								: null
+						r.exclusive ? (0, a.jsx)(d.Z, { className: l()(h.exclusiveRegular, { [h.exclusivePlaying]: e }) }) : r.isTheGameAwardsWinner ? (0, a.jsx)(u.Z, { className: l()(h.exclusiveRegular, { [h.exclusivePlaying]: e }) }) : null
 					]
 				});
 			});

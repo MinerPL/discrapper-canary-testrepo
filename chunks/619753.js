@@ -21,8 +21,8 @@ var i = n(735250),
 	_ = n(471445),
 	f = n(95398),
 	E = n(905405),
-	g = n(255269),
-	C = n(937889),
+	C = n(255269),
+	g = n(937889),
 	I = n(703656),
 	x = n(359110),
 	T = n(695346),
@@ -42,7 +42,7 @@ var i = n(735250),
 function D(e) {
 	var t;
 	let { search: n, searchId: s, renderEmbeds: l, scrollTo: p, searchResults: _, blockCount: f, onChangePage: E } = e,
-		{ offset: g, totalResults: C, isSearching: x, showBlockedResults: T } = n,
+		{ offset: C, totalResults: g, isSearching: x, showBlockedResults: T } = n,
 		N = a.useCallback(
 			(e) => {
 				if (x) return;
@@ -62,8 +62,7 @@ function D(e) {
 				else {
 					let t = v.Z.getChannel(e.channel_id),
 						n = null != t ? t.getGuildId() : null;
-					u.Z.trackJump(e.channel_id, e.id, 'Search Results', { search_id: M.Z.getAnalyticsId(s) }),
-						(0, I.uL)(P.Z5c.CHANNEL(n, e.channel_id, e.id));
+					u.Z.trackJump(e.channel_id, e.id, 'Search Results', { search_id: M.Z.getAnalyticsId(s) }), (0, I.uL)(P.Z5c.CHANNEL(n, e.channel_id, e.id));
 				}
 			},
 			[s]
@@ -130,11 +129,11 @@ function D(e) {
 					highlighter: H,
 					startIndex: a,
 					resultRefs: b,
-					totalResults: C,
+					totalResults: g,
 					scrollTo: p,
 					searchId: s,
 					renderEmbeds: l,
-					offset: g,
+					offset: C,
 					jumpToMessage: S,
 					listNavigator: k,
 					favoriteSearch: B
@@ -167,9 +166,7 @@ function D(e) {
 							(0, i.jsx)('div', { className: y.resultsBlockedImage }),
 							(0, i.jsx)('div', {
 								className: y.__invalid_resultsBlockedText,
-								children: T
-									? O.Z.Messages.SEARCH_HIDE_BLOCKED_MESSAGES.format({ count: f })
-									: O.Z.Messages.SEARCH_NUM_RESULTS_BLOCKED_NOT_SHOWN.format({ count: f })
+								children: T ? O.Z.Messages.SEARCH_HIDE_BLOCKED_MESSAGES.format({ count: f }) : O.Z.Messages.SEARCH_NUM_RESULTS_BLOCKED_NOT_SHOWN.format({ count: f })
 							})
 						]
 					})
@@ -178,8 +175,8 @@ function D(e) {
 				!B &&
 				(0, i.jsx)(j.Z, {
 					changePage: N,
-					offset: g,
-					totalResults: C,
+					offset: C,
+					totalResults: g,
 					pageLength: P.vpv
 				})
 		]
@@ -220,21 +217,7 @@ function k(e) {
 }
 function U(e) {
 	var t, n, s;
-	let {
-			channel: l,
-			results: r,
-			highlighter: c,
-			startIndex: u,
-			resultRefs: d,
-			totalResults: h,
-			scrollTo: m,
-			searchId: I,
-			renderEmbeds: N,
-			offset: M,
-			jumpToMessage: j,
-			listNavigator: O,
-			favoriteSearch: D
-		} = e,
+	let { channel: l, results: r, highlighter: c, startIndex: u, resultRefs: d, totalResults: h, scrollTo: m, searchId: I, renderEmbeds: N, offset: M, jumpToMessage: j, listNavigator: O, favoriteSearch: D } = e,
 		U = T.cC.useSetting(),
 		w = (0, E.p)(),
 		B = a.useCallback((e) => {
@@ -248,7 +231,7 @@ function U(e) {
 		F = null !== (n = null == V ? void 0 : V.name) && void 0 !== n ? n : null,
 		W = null !== (s = (0, _.KS)(l)) && void 0 !== s ? s : o.TextIcon,
 		z = Z.Z.can(P.Plq.MANAGE_MESSAGES, l),
-		{ content: Y } = (0, C.ZP)(
+		{ content: Y } = (0, g.ZP)(
 			{
 				content: H,
 				embeds: []
@@ -266,7 +249,7 @@ function U(e) {
 	}, []);
 	let Q = [H, F, G].filter((e) => null != e).join(', ');
 	return (0, i.jsx)(f.a.Provider, {
-		value: (0, g.Z)(U, z),
+		value: (0, C.Z)(U, z),
 		children: (0, i.jsxs)('ul', {
 			role: 'group',
 			className: y.searchResultGroup,

@@ -13,11 +13,7 @@ let s = () => {
 		var e, t, n;
 		let a = (0, r.cj)([i.Z], () => {
 			var e, t;
-			return null !==
-				(t = null === (e = i.Z.settings.textAndImages) || void 0 === e ? void 0 : e.keywordFilterSettings) &&
-				void 0 !== t
-				? t
-				: {};
+			return null !== (t = null === (e = i.Z.settings.textAndImages) || void 0 === e ? void 0 : e.keywordFilterSettings) && void 0 !== t ? t : {};
 		});
 		return {
 			profanity: null === (e = a.profanity) || void 0 === e ? void 0 : e.value,

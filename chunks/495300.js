@@ -143,9 +143,7 @@ function v(e) {
 					(0, s.jsx)(c.Text, {
 						color: t === h.PG.DEFAULT_CHANNELS ? 'text-brand' : 'text-muted',
 						variant: 'text-xs/medium',
-						children: d
-							? O.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_CHANNELS_ADVANCED.format({ stepNumber: 2 })
-							: O.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_CHANNELS.format({ stepNumber: 2 })
+						children: d ? O.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_CHANNELS_ADVANCED.format({ stepNumber: 2 }) : O.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_CHANNELS.format({ stepNumber: 2 })
 					})
 				]
 			}),
@@ -153,15 +151,11 @@ function v(e) {
 				className: r()(A.progressBarContainer, A.clickableProgressBar),
 				onClick: o(h.PG.CUSTOMIZATION_QUESTIONS),
 				children: [
-					(0, s.jsx)('div', {
-						className: r()(A.progressBar, { [A.progressBarCurrent]: t === h.PG.CUSTOMIZATION_QUESTIONS })
-					}),
+					(0, s.jsx)('div', { className: r()(A.progressBar, { [A.progressBarCurrent]: t === h.PG.CUSTOMIZATION_QUESTIONS }) }),
 					(0, s.jsx)(c.Text, {
 						color: t === h.PG.CUSTOMIZATION_QUESTIONS ? 'text-brand' : 'text-muted',
 						variant: 'text-xs/medium',
-						children: d
-							? O.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_PROMPTS_ADVANCED.format({ stepNumber: 3 })
-							: O.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_PROMPTS.format({ stepNumber: 3 })
+						children: d ? O.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_PROMPTS_ADVANCED.format({ stepNumber: 3 }) : O.Z.Messages.GUILD_ONBOARDING_SETUP_STEP_PROMPTS.format({ stepNumber: 3 })
 					})
 				]
 			}),

@@ -27,8 +27,7 @@ let s = (e) =>
 		}
 		return e;
 	},
-	l = (e, t) =>
-		'png' === t ? e : '.png' === e.slice(e.length - 4, e.length) ? e.slice(0, e.lastIndexOf('.png')) + '.' + t : e,
+	l = (e, t) => ('png' === t ? e : '.png' === e.slice(e.length - 4, e.length) ? e.slice(0, e.lastIndexOf('.png')) + '.' + t : e),
 	u = (e) => {
 		let t = (0, a.w7)('Profile Effect Component');
 		void 0 !== e && (e.effects = e.effects.map((e) => ((e.src = l(e.src, t)), e)));

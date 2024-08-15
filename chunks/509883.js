@@ -48,8 +48,7 @@ function l(e) {
 			n = e.getMonitor(),
 			s = e.getRegistry();
 		(function (e) {
-			(0, r.k)(e.isDragging(), 'Cannot call drop while not dragging.'),
-				(0, r.k)(!e.didDrop(), 'Cannot call drop twice during one drag operation.');
+			(0, r.k)(e.isDragging(), 'Cannot call drop while not dragging.'), (0, r.k)(!e.didDrop(), 'Cannot call drop twice during one drag operation.');
 		})(n),
 			(function (e) {
 				var t = e.getTargetIds().filter(e.canDropOnTarget, e);

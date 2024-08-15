@@ -21,8 +21,8 @@ var r = n(735250),
 	f = n(589530),
 	h = n(124347),
 	p = n(80966),
-	I = n(981631),
-	m = n(689938),
+	m = n(981631),
+	I = n(689938),
 	T = n(227611);
 function g(e) {
 	let { onClose: t } = e,
@@ -83,7 +83,7 @@ function A(e) {
 			target: '_blank',
 			rel: 'noreferrer noopener',
 			className: T.downloadLink,
-			children: m.Z.Messages.OPEN_IN_BROWSER
+			children: I.Z.Messages.OPEN_IN_BROWSER
 		}),
 		s = i({ className: T.forward });
 	return null == a && null == s
@@ -94,33 +94,15 @@ function A(e) {
 			});
 }
 function N(e) {
-	let {
-			src: t,
-			original: n,
-			placeholder: a,
-			width: s,
-			height: l,
-			animated: u,
-			children: c,
-			responsive: d,
-			renderLinkComponent: f,
-			renderForwardComponent: p,
-			maxWidth: m,
-			maxHeight: N,
-			shouldAnimate: v,
-			onClose: O,
-			shouldHideMediaOptions: R = !1,
-			obscure: C = !1,
-			...y
-		} = e,
+	let { src: t, original: n, placeholder: a, width: s, height: l, animated: u, children: c, responsive: d, renderLinkComponent: f, renderForwardComponent: p, maxWidth: I, maxHeight: N, shouldAnimate: v, onClose: O, shouldHideMediaOptions: R = !1, obscure: C = !1, ...y } = e,
 		{ width: D, height: L } = (0, E.zp)(s, l),
 		b = o.tq && null != O;
 	i.useEffect(() => {
 		if (null != O)
 			return (
-				_.S.subscribe(I.CkL.MEDIA_MODAL_CLOSE, O),
+				_.S.subscribe(m.CkL.MEDIA_MODAL_CLOSE, O),
 				() => {
-					_.S.unsubscribe(I.CkL.MEDIA_MODAL_CLOSE, O);
+					_.S.unsubscribe(m.CkL.MEDIA_MODAL_CLOSE, O);
 				}
 			);
 	}, [O]);
@@ -168,19 +150,9 @@ function N(e) {
 	});
 }
 function v(e) {
-	let {
-			src: t,
-			width: n,
-			height: i,
-			onClose: a,
-			renderLinkComponent: l,
-			renderForwardComponent: u,
-			shouldHideMediaOptions: c = !1,
-			obscure: d = !1,
-			..._
-		} = e,
-		{ width: h, height: I } = (0, E.zp)(n, i),
-		m = o.tq && null != a,
+	let { src: t, width: n, height: i, onClose: a, renderLinkComponent: l, renderForwardComponent: u, shouldHideMediaOptions: c = !1, obscure: d = !1, ..._ } = e,
+		{ width: h, height: m } = (0, E.zp)(n, i),
+		I = o.tq && null != a,
 		N = c
 			? (e) => {
 					e.stopPropagation(), e.preventDefault();
@@ -189,7 +161,7 @@ function v(e) {
 	return (0, r.jsxs)('div', {
 		className: s()(T.wrapper, T.videoWrapper),
 		children: [
-			m ? (0, r.jsx)(g, { onClose: a }) : null,
+			I ? (0, r.jsx)(g, { onClose: a }) : null,
 			(0, r.jsx)(S, {
 				hasMediaControls: !0,
 				isObscured: d,
@@ -202,7 +174,7 @@ function v(e) {
 							width: n,
 							height: i,
 							maxWidth: h,
-							maxHeight: I,
+							maxHeight: m,
 							renderLinkComponent: l,
 							volume: f.FC,
 							autoMute: f.rs,

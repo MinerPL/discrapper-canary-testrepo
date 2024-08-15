@@ -17,17 +17,12 @@ function l(e) {
 			if ((null === (n = c.current) || void 0 === n || n.scrollToTop(), e && null != d.query)) {
 				let e = d.query.typeInfo.focusMode,
 					n = !(e === o.QZ.MANUAL || (e === o.QZ.AUTO_WHEN_FILTERED && 0 === d.query.queryText.length));
-				d.isVisible && (!0 !== t || !1 !== n)
-					? (p.setFocus('0'), null == _ || _(0))
-					: (p.setFocus(null), null == _ || _(null));
+				d.isVisible && (!0 !== t || !1 !== n) ? (p.setFocus('0'), null == _ || _(0)) : (p.setFocus(null), null == _ || _(null));
 			}
 		},
 		h = (e) => {
 			var t;
-			if (
-				(null === (t = c.current) || void 0 === t || t.scrollToBottom(),
-				e && null != d.query && d.query.resultCount > 0)
-			) {
+			if ((null === (t = c.current) || void 0 === t || t.scrollToBottom(), e && null != d.query && d.query.resultCount > 0)) {
 				let e = d.query.resultCount - 1;
 				p.setFocus(e.toString()), null == _ || _(e);
 			}
@@ -53,12 +48,7 @@ function l(e) {
 	return (
 		r.useEffect(() => {
 			f(!0, !0);
-		}, [
-			null === (t = d.query) || void 0 === t ? void 0 : t.type,
-			null === (n = d.query) || void 0 === n ? void 0 : n.queryText,
-			null === (l = d.query) || void 0 === l ? void 0 : l.isLoading,
-			d.isVisible
-		]),
+		}, [null === (t = d.query) || void 0 === t ? void 0 : t.type, null === (n = d.query) || void 0 === n ? void 0 : n.queryText, null === (l = d.query) || void 0 === l ? void 0 : l.isLoading, d.isVisible]),
 		p
 	);
 }

@@ -99,20 +99,17 @@ var i = {
 	paymentConditions: 'condiții de plată',
 	openApp: 'Deschideți aplicația',
 	'voucher.readInstructions': 'Citiți instrucțiunile',
-	'voucher.introduction':
-		'Vă mulțumim pentru cumpărături, vă rugăm să utilizați următorul cupon pentru a vă finaliza plata.',
+	'voucher.introduction': 'Vă mulțumim pentru cumpărături, vă rugăm să utilizați următorul cupon pentru a vă finaliza plata.',
 	'voucher.expirationDate': 'Data de expirare',
 	'voucher.alternativeReference': 'Referință alternativă',
 	'dragonpay.voucher.non.bank.selectField.placeholder': 'Selectați furnizorul dvs.',
 	'dragonpay.voucher.bank.selectField.placeholder': 'Selectați banca dvs.',
 	'voucher.paymentReferenceLabel': 'Referința plății',
 	'voucher.surcharge': 'Include suprataxa de %@',
-	'voucher.introduction.doku':
-		'Vă mulțumim pentru cumpărături, vă rugăm să utilizați următoarele informații pentru a vă finaliza plata.',
+	'voucher.introduction.doku': 'Vă mulțumim pentru cumpărături, vă rugăm să utilizați următoarele informații pentru a vă finaliza plata.',
 	'voucher.shopperName': 'Nume cumpărător',
 	'voucher.merchantName': 'Comerciant',
-	'voucher.introduction.econtext':
-		'Vă mulțumim pentru cumpărături, vă rugăm să utilizați următoarele informații pentru a vă finaliza plata.',
+	'voucher.introduction.econtext': 'Vă mulțumim pentru cumpărături, vă rugăm să utilizați următoarele informații pentru a vă finaliza plata.',
 	'voucher.telephoneNumber': 'Număr de telefon',
 	'voucher.shopperReference': 'Referință cumpărător',
 	'voucher.collectionInstitutionNumber': 'Număr instituție de colectare',
@@ -138,11 +135,9 @@ var i = {
 	'creditCard.encryptedPassword.placeholder': '12',
 	'creditCard.encryptedPassword.invalid': 'Parolă incorectă',
 	'creditCard.taxNumber': 'Data de naștere a posesorului de card sau codul unic de înregistrare al societății',
-	'creditCard.taxNumber.label':
-		'Data de naștere a posesorului de card (AALLZZ) sau numărul de înregistrare al societății (10 cifre).',
+	'creditCard.taxNumber.label': 'Data de naștere a posesorului de card (AALLZZ) sau numărul de înregistrare al societății (10 cifre).',
 	'creditCard.taxNumber.labelAlt': 'Numărul de înregistrare al societății (10 cifre)',
-	'creditCard.taxNumber.invalid':
-		'Data de naștere a posesorului de card sau numărul de înregistrare al societății este incorect',
+	'creditCard.taxNumber.invalid': 'Data de naștere a posesorului de card sau numărul de înregistrare al societății este incorect',
 	'storedPaymentMethod.disable.button': 'Ștergere',
 	'storedPaymentMethod.disable.confirmation': 'Ștergeți metoda de plată memorată',
 	'storedPaymentMethod.disable.confirmButton': 'Da, șterge',
@@ -175,8 +170,7 @@ var i = {
 	'blik.invalid': 'Introduceți 6 cifre',
 	'blik.code': 'Cod din 6 cifre',
 	'blik.help': 'Obțineți codul din aplicația dvs. de banking.',
-	'swish.pendingMessage':
-		'După ce scanați, starea poate fi \u201Eîn așteptare\u201D timp de maximum 10 minute. Încercările de a plăti din nou în acest răstimp pot genera prelevări multiple de fonduri.',
+	'swish.pendingMessage': 'După ce scanați, starea poate fi \u201Eîn așteptare\u201D timp de maximum 10 minute. Încercările de a plăti din nou în acest răstimp pot genera prelevări multiple de fonduri.',
 	'field.valid': 'Câmp valid',
 	'field.invalid': 'Câmp incorect',
 	'error.va.gen.01': 'Câmp incomplet',
@@ -212,10 +206,8 @@ var i = {
 	'bankTransfer.iban': 'IBAN',
 	'bankTransfer.bic': 'BIC',
 	'bankTransfer.reference': 'Referinţă',
-	'bankTransfer.introduction':
-		'Continuați să creați o nouă plată prin transfer bancar. Puteți utiliza detaliile din ecranul următor pentru a finaliza această plată.',
-	'bankTransfer.instructions':
-		'Vă mulțumim pentru cumpărături, vă rugăm să utilizați următoarele informații pentru a vă finaliza plata.',
+	'bankTransfer.introduction': 'Continuați să creați o nouă plată prin transfer bancar. Puteți utiliza detaliile din ecranul următor pentru a finaliza această plată.',
+	'bankTransfer.instructions': 'Vă mulțumim pentru cumpărături, vă rugăm să utilizați următoarele informații pentru a vă finaliza plata.',
 	'bacs.accountHolderName': 'Numele titularului contului bancar',
 	'bacs.accountHolderName.invalid': 'Numele titularului contului bancar este incorect',
 	'bacs.accountNumber': 'Numărul contului bancar',
@@ -223,8 +215,7 @@ var i = {
 	'bacs.bankLocationId': 'Cod de identificare bancară',
 	'bacs.bankLocationId.invalid': 'Cod de identificare bancară incorect',
 	'bacs.consent.amount': 'Sunt de acord ca suma menționată mai sus să fie dedusă din contul meu bancar.',
-	'bacs.consent.account':
-		'Confirm că sunt titularul acestui cont și că sunt singurul semnatar necesar pentru autorizarea debitului direct pentru acest cont.',
+	'bacs.consent.account': 'Confirm că sunt titularul acestui cont și că sunt singurul semnatar necesar pentru autorizarea debitului direct pentru acest cont.',
 	edit: 'Editare',
 	'bacs.confirm': 'Confirmați și plătiți',
 	'bacs.result.introduction': 'Descărcați instrucțiunile de debitare directă (DDI/mandat)',
@@ -257,8 +248,7 @@ var i = {
 	'upi.vpaWaitingMessage': 'Deschideți aplicația UPI pentru a confirma plata',
 	'upi.modeSelection': 'Selectați modul în care doriți să utilizați UPI.',
 	'onlineBanking.termsAndConditions': 'Continuând, sunteți de acord cu %#terms and conditions%#',
-	'onlineBankingPL.termsAndConditions':
-		'Continuând, sunteți de acord cu %#reglementările%# și cu %#obligația de informare%# a Przelewy24',
+	'onlineBankingPL.termsAndConditions': 'Continuând, sunteți de acord cu %#reglementările%# și cu %#obligația de informare%# a Przelewy24',
 	'ctp.loading.poweredByCtp': 'Susținut de Click to Pay',
 	'ctp.loading.intro': 'Verificăm dacă aveți vreun card salvat cu Click to Pay...',
 	'ctp.login.title': 'Continuați către Click to Pay',
@@ -281,14 +271,12 @@ var i = {
 	'ctp.manualCardEntry': 'Introducere manuală a cardului',
 	'ctp.aria.infoModalButton': 'Ce este Click to Pay',
 	'ctp.infoPopup.title': 'Click to Pay vă oferă facilitățile contactless, online',
-	'ctp.infoPopup.subtitle':
-		'O metodă de plată rapidă și sigură, compatibilă cu Mastercard, Visa și alte carduri de plată.',
+	'ctp.infoPopup.subtitle': 'O metodă de plată rapidă și sigură, compatibilă cu Mastercard, Visa și alte carduri de plată.',
 	'ctp.infoPopup.benefit1': 'Click to Pay folosește criptarea pentru a vă păstra informațiile în siguranță',
 	'ctp.infoPopup.benefit2': 'Utilizați-l la comercianții din întreaga lume',
 	'ctp.infoPopup.benefit3': 'Configurați o dată pentru a plăti fără probleme în viitor',
 	'ctp.errors.AUTH_INVALID': 'Autentificare incorectă',
-	'ctp.errors.NOT_FOUND':
-		'Nu s-a găsit niciun cont; introduceți o adresă de e-mail valabilă sau continuați completând manual cardul',
+	'ctp.errors.NOT_FOUND': 'Nu s-a găsit niciun cont; introduceți o adresă de e-mail valabilă sau continuați completând manual cardul',
 	'ctp.errors.ID_FORMAT_UNSUPPORTED': 'Format neacceptat',
 	'ctp.errors.FRAUD': 'Contul de utilizator a fost blocat sau dezactivat',
 	'ctp.errors.CONSUMER_ID_MISSING': 'Identitatea consumatorului lipsește din solicitare',
@@ -309,7 +297,6 @@ var i = {
 	'consent.checkbox.invalid': 'Trebuie să fiți de acord cu termenii și condițiile',
 	'form.instruction': 'Toate câmpurile sunt obligatorii, numai dacă nu este marcat altfel.',
 	'trustly.descriptor': 'Plată bancară instantanee',
-	'trustly.description1':
-		'Plătiți direct din oricare dintre conturile dvs. bancare, cu sprijinul unei securități de nivel bancar',
+	'trustly.description1': 'Plătiți direct din oricare dintre conturile dvs. bancare, cu sprijinul unei securități de nivel bancar',
 	'trustly.description2': 'Fără carduri, fără descărcări de aplicații, fără înregistrare'
 };

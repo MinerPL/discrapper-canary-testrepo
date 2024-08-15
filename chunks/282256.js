@@ -33,11 +33,11 @@ t.Z = a.memo(function (e) {
 			_({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(l, 'px)') });
 		}, []),
 		E = (0, o.y)(f),
-		g = (0, c.p0)(h.userId, s);
+		C = (0, c.p0)(h.userId, s);
 	a.useEffect(() => {
 		if (null != E.current) f();
-	}, [g]);
-	let C = (0, r.O)(f);
+	}, [C]);
+	let g = (0, r.O)(f);
 	return (0, i.jsxs)('div', {
 		className: l()(d.container, n && d.isOverlayContainer),
 		ref: E,
@@ -48,9 +48,9 @@ t.Z = a.memo(function (e) {
 			}),
 			(0, i.jsx)('div', {
 				className: d.chipletParent,
-				ref: C,
+				ref: g,
 				children: (0, i.jsx)('span', {
-					className: l()(d.chipletContainer, !g && n && d.noPadding),
+					className: l()(d.chipletContainer, !C && n && d.noPadding),
 					ref: m,
 					style: p,
 					children: (0, i.jsx)(u.ZP, {

@@ -43,9 +43,7 @@ class m extends n.Component {
 				children: E.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_UNSUPPORTED
 			});
 		let a = (0, c.isAndroidChrome)(),
-			t = a
-				? E.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GPAY
-				: E.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GENERIC,
+			t = a ? E.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GPAY : E.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_BUTTON_GENERIC,
 			n = a ? i.ZP.Types.G_PAY : i.ZP.Types.PAYMENT_REQUEST,
 			{ className: o, iconClassName: u } = this.props;
 		return (0, s.jsx)(

@@ -22,11 +22,8 @@ function E(e, t, n) {
 			usage: 'search',
 			sensitivity: 'base'
 		}),
-		I = (0, i.useMemo)(
-			() => c || new a.dp(t.collection, t.disabledKeys, null, p),
-			[c, t.collection, t.disabledKeys, p]
-		),
-		{ menuTriggerProps: m, menuProps: T } = (0, u.u4)(
+		m = (0, i.useMemo)(() => c || new a.dp(t.collection, t.disabledKeys, null, p), [c, t.collection, t.disabledKeys, p]),
+		{ menuTriggerProps: I, menuProps: T } = (0, u.u4)(
 			{
 				isDisabled: d,
 				type: 'listbox'
@@ -35,7 +32,7 @@ function E(e, t, n) {
 			n
 		),
 		{ typeSelectProps: g } = (0, a.ip)({
-			keyboardDelegate: I,
+			keyboardDelegate: m,
 			selectionManager: t.selectionManager,
 			onTypeSelect(e) {
 				t.setSelectedKey(e);
@@ -55,7 +52,7 @@ function E(e, t, n) {
 		});
 	(g.onKeyDown = g.onKeyDownCapture), delete g.onKeyDownCapture;
 	let y = (0, r.zL)(e, { labelable: !0 }),
-		D = (0, r.dG)(g, m, O),
+		D = (0, r.dG)(g, I, O),
 		L = (0, r.Me)();
 	return (
 		_.set(t, {
@@ -80,13 +77,13 @@ function E(e, t, n) {
 						switch (e.key) {
 							case 'ArrowLeft': {
 								e.preventDefault();
-								let n = null != t.selectedKey ? I.getKeyAbove(t.selectedKey) : I.getFirstKey();
+								let n = null != t.selectedKey ? m.getKeyAbove(t.selectedKey) : m.getFirstKey();
 								n && t.setSelectedKey(n);
 								break;
 							}
 							case 'ArrowRight': {
 								e.preventDefault();
-								let n = null != t.selectedKey ? I.getKeyBelow(t.selectedKey) : I.getFirstKey();
+								let n = null != t.selectedKey ? m.getKeyBelow(t.selectedKey) : m.getFirstKey();
 								n && t.setSelectedKey(n);
 							}
 						}
@@ -94,9 +91,7 @@ function E(e, t, n) {
 					e.onKeyDown
 				),
 				onKeyUp: e.onKeyUp,
-				'aria-labelledby': [L, D['aria-labelledby'], D['aria-label'] && !D['aria-labelledby'] ? D.id : null]
-					.filter(Boolean)
-					.join(' '),
+				'aria-labelledby': [L, D['aria-labelledby'], D['aria-label'] && !D['aria-labelledby'] ? D.id : null].filter(Boolean).join(' '),
 				onFocus(n) {
 					!t.isFocused && (e.onFocus && e.onFocus(n), e.onFocusChange && e.onFocusChange(!0), t.setFocused(!0));
 				},
@@ -113,12 +108,9 @@ function E(e, t, n) {
 				disallowEmptySelection: !0,
 				linkBehavior: 'selection',
 				onBlur: (n) => {
-					!n.currentTarget.contains(n.relatedTarget) &&
-						(e.onBlur && e.onBlur(n), e.onFocusChange && e.onFocusChange(!1), t.setFocused(!1));
+					!n.currentTarget.contains(n.relatedTarget) && (e.onBlur && e.onBlur(n), e.onFocusChange && e.onFocusChange(!1), t.setFocused(!1));
 				},
-				'aria-labelledby': [O['aria-labelledby'], D['aria-label'] && !O['aria-labelledby'] ? D.id : null]
-					.filter(Boolean)
-					.join(' ')
+				'aria-labelledby': [O['aria-labelledby'], D['aria-label'] && !O['aria-labelledby'] ? D.id : null].filter(Boolean).join(' ')
 			},
 			descriptionProps: R,
 			errorMessageProps: C,

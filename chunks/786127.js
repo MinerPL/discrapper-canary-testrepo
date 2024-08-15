@@ -5,17 +5,7 @@ var r = t(707592),
 	s = t(689938),
 	o = t(944309);
 n.Z = function (e) {
-	let {
-			formField: n,
-			index: t,
-			isDragEnabled: l,
-			isDropHovered: c,
-			onDrop: d,
-			onEdit: u,
-			onRemove: m,
-			canRemove: _,
-			actionsLocation: f
-		} = e,
+	let { formField: n, index: t, isDragEnabled: l, isDropHovered: c, onDrop: d, onEdit: u, onRemove: m, canRemove: _, actionsLocation: f } = e,
 		{ label: C, placeholder: h } = n;
 	return (0, a.jsx)(i.Z, {
 		field: n,

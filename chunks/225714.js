@@ -16,15 +16,7 @@ var i = t(481060),
 	I = t(689938),
 	_ = t(353040);
 function f(e) {
-	let {
-			isCurrentUser: n,
-			user: t,
-			relationshipType: f,
-			friendToken: E,
-			persistentCallCtaEnabled: m = !1,
-			activeInviteToCallCtaEnabled: p = !1,
-			onClose: x
-		} = e,
+	let { isCurrentUser: n, user: t, relationshipType: f, friendToken: E, persistentCallCtaEnabled: m = !1, activeInviteToCallCtaEnabled: p = !1, onClose: x } = e,
 		{ newestAnalyticsLocation: Z } = (0, l.ZP)();
 	if (n || f === u.OGo.BLOCKED) return null;
 	let v = m

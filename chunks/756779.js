@@ -62,17 +62,13 @@ function C(e) {
 						variant: 'text-md/normal',
 						className: v.description,
 						color: 'header-secondary',
-						children:
-							'Introducing a single place to sell downloadable products, monthly Server Subscriptions, and Premium Roles right inside Discord. From PDF guides and digital stickers to gated channels and premium roles, Server Shop gives you two new ways to engage your community\u2014and earn from your expertise.'
+						children: 'Introducing a single place to sell downloadable products, monthly Server Subscriptions, and Premium Roles right inside Discord. From PDF guides and digital stickers to gated channels and premium roles, Server Shop gives you two new ways to engage your community\u2014and earn from your expertise.'
 					}),
 					(0, o.jsx)(d.Spacer, { size: 8 }),
 					(0, o.jsx)(_.Z, {
 						onClick: () => {
 							C(x.L.SECONDARY);
-							let e = ''.concat(
-								S.Z.getCreatorSupportArticleURL(N.BhN.SERVER_SUBSCRIPTION_AND_PRODUCTS),
-								'#docs-internal-guid-918e991a-7fff-03d5-8326-5d065e5edeb1'
-							);
+							let e = ''.concat(S.Z.getCreatorSupportArticleURL(N.BhN.SERVER_SUBSCRIPTION_AND_PRODUCTS), '#docs-internal-guid-918e991a-7fff-03d5-8326-5d065e5edeb1');
 							(0, l.Z)(e, !0);
 						},
 						children: 'Learn more'
@@ -108,11 +104,7 @@ function C(e) {
 				children: [
 					(0, o.jsx)(d.Button, {
 						onClick: () => {
-							j.some((e) => L.hasFeature(e))
-								? f.Z.open(a, N.pNK.GUILD_PRODUCTS)
-								: f.Z.open(a, N.pNK.ROLE_SUBSCRIPTIONS),
-								C(x.L.PRIMARY),
-								r();
+							j.some((e) => L.hasFeature(e)) ? f.Z.open(a, N.pNK.GUILD_PRODUCTS) : f.Z.open(a, N.pNK.ROLE_SUBSCRIPTIONS), C(x.L.PRIMARY), r();
 						},
 						children: 'Check it out'
 					}),

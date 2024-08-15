@@ -41,13 +41,7 @@ class o {
 			{ message: t, success: n, logId: r } = e;
 		this.logger.log('Draining message from queue LogId:'.concat(r, ' QueueLength: ').concat(this.queue.length)),
 			this.drain(t, (t, i) => {
-				if (
-					(this.logger.log(
-						'Finished draining message from queue LogId:'.concat(r, ' QueueLength: ').concat(this.queue.length)
-					),
-					(this.draining = !1),
-					null == t)
-				) {
+				if ((this.logger.log('Finished draining message from queue LogId:'.concat(r, ' QueueLength: ').concat(this.queue.length)), (this.draining = !1), null == t)) {
 					setImmediate(() => this._drainIfNecessary());
 					try {
 						n(i);
@@ -57,12 +51,7 @@ class o {
 				} else {
 					var a;
 					let n = null !== (a = t.retryAfter) && void 0 !== a ? a : this.defaultRetryAfter;
-					this.logger.info(
-						'Rate limited. Delaying draining of queue for '
-							.concat(n, ' ms. LogId:')
-							.concat(r, ' QueueLength: ')
-							.concat(this.queue.length)
-					),
+					this.logger.info('Rate limited. Delaying draining of queue for '.concat(n, ' ms. LogId:').concat(r, ' QueueLength: ').concat(this.queue.length)),
 						(this.timeout = setTimeout(() => {
 							this.queue.unshift(e), (this.timeout = null), this._drainIfNecessary();
 						}, n));
@@ -70,15 +59,6 @@ class o {
 			});
 	}
 	constructor(e = s, t = 100) {
-		a(this, 'logger', void 0),
-			a(this, 'defaultRetryAfter', void 0),
-			a(this, 'queue', void 0),
-			a(this, 'timeout', void 0),
-			a(this, 'draining', void 0),
-			(this.logger = e),
-			(this.defaultRetryAfter = t),
-			(this.queue = new (i())()),
-			(this.timeout = null),
-			(this.draining = !1);
+		a(this, 'logger', void 0), a(this, 'defaultRetryAfter', void 0), a(this, 'queue', void 0), a(this, 'timeout', void 0), a(this, 'draining', void 0), (this.logger = e), (this.defaultRetryAfter = t), (this.queue = new (i())()), (this.timeout = null), (this.draining = !1);
 	}
 }

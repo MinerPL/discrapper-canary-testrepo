@@ -68,32 +68,11 @@ function f() {
 								var c = (function e(n, r) {
 									var o = r.method,
 										a = n.iterator[o];
-									if (a === t)
-										return (
-											(r.delegate = null),
-											('throw' === o &&
-												n.iterator.return &&
-												((r.method = 'return'), (r.arg = t), e(n, r), 'throw' === r.method)) ||
-												('return' !== o &&
-													((r.method = 'throw'),
-													(r.arg = TypeError("The iterator does not provide a '" + o + "' method")))),
-											P
-										);
+									if (a === t) return (r.delegate = null), ('throw' === o && n.iterator.return && ((r.method = 'return'), (r.arg = t), e(n, r), 'throw' === r.method)) || ('return' !== o && ((r.method = 'throw'), (r.arg = TypeError("The iterator does not provide a '" + o + "' method")))), P;
 									var i = w(a, n.iterator, r.arg);
 									if ('throw' === i.type) return (r.method = 'throw'), (r.arg = i.arg), (r.delegate = null), P;
 									var s = i.arg;
-									return s
-										? s.done
-											? ((r[n.resultName] = s.value),
-												(r.next = n.nextLoc),
-												'return' !== r.method && ((r.method = 'next'), (r.arg = t)),
-												(r.delegate = null),
-												P)
-											: s
-										: ((r.method = 'throw'),
-											(r.arg = TypeError('iterator result is not an object')),
-											(r.delegate = null),
-											P);
+									return s ? (s.done ? ((r[n.resultName] = s.value), (r.next = n.nextLoc), 'return' !== r.method && ((r.method = 'next'), (r.arg = t)), (r.delegate = null), P) : s) : ((r.method = 'throw'), (r.arg = TypeError('iterator result is not an object')), (r.delegate = null), P);
 								})(s, r);
 								if (c) {
 									if (c === P) continue;
@@ -198,9 +177,7 @@ function f() {
 	function B(e) {
 		var t,
 			n = { tryLoc: e[0] };
-		1 in e && (n.catchLoc = e[1]),
-			2 in e && ((n.finallyLoc = e[2]), (n.afterLoc = e[3])),
-			l((t = this.tryEntries)).call(t, n);
+		1 in e && (n.catchLoc = e[1]), 2 in e && ((n.finallyLoc = e[2]), (n.afterLoc = e[3])), l((t = this.tryEntries)).call(t, n);
 	}
 	function D(e) {
 		var t = e.completion || {};
@@ -288,18 +265,7 @@ function f() {
 			constructor: L,
 			reset: function (e) {
 				var n;
-				if (
-					((this.prev = 0),
-					(this.next = 0),
-					(this.sent = this._sent = t),
-					(this.done = !1),
-					(this.delegate = null),
-					(this.method = 'next'),
-					(this.arg = t),
-					c((n = this.tryEntries)).call(n, D),
-					!e)
-				)
-					for (var r in this) 't' === r.charAt(0) && y.call(this, r) && !isNaN(+h(r).call(r, 1)) && (this[r] = t);
+				if (((this.prev = 0), (this.next = 0), (this.sent = this._sent = t), (this.done = !1), (this.delegate = null), (this.method = 'next'), (this.arg = t), c((n = this.tryEntries)).call(n, D), !e)) for (var r in this) 't' === r.charAt(0) && y.call(this, r) && !isNaN(+h(r).call(r, 1)) && (this[r] = t);
 			},
 			stop: function () {
 				this.done = !0;
@@ -342,20 +308,11 @@ function f() {
 				}
 				o && ('break' === e || 'continue' === e) && o.tryLoc <= t && t <= o.finallyLoc && (o = null);
 				var a = o ? o.completion : {};
-				return (
-					(a.type = e), (a.arg = t), o ? ((this.method = 'next'), (this.next = o.finallyLoc), P) : this.complete(a)
-				);
+				return (a.type = e), (a.arg = t), o ? ((this.method = 'next'), (this.next = o.finallyLoc), P) : this.complete(a);
 			},
 			complete: function (e, t) {
 				if ('throw' === e.type) throw e.arg;
-				return (
-					'break' === e.type || 'continue' === e.type
-						? (this.next = e.arg)
-						: 'return' === e.type
-							? ((this.rval = this.arg = e.arg), (this.method = 'return'), (this.next = 'end'))
-							: 'normal' === e.type && t && (this.next = t),
-					P
-				);
+				return 'break' === e.type || 'continue' === e.type ? (this.next = e.arg) : 'return' === e.type ? ((this.rval = this.arg = e.arg), (this.method = 'return'), (this.next = 'end')) : 'normal' === e.type && t && (this.next = t), P;
 			},
 			finish: function (e) {
 				for (var t = this.tryEntries.length - 1; t >= 0; --t) {

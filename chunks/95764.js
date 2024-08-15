@@ -21,20 +21,20 @@ var a = n(442837),
 function E(e) {
 	let { channelId: t, onClick: n } = e,
 		E = (0, l.bp)(),
-		g = (0, p.qY)(t),
-		C = (0, a.e7)([u.Z], () => u.Z.getChannel(t), [t]),
-		{ canManageGuildEvent: I } = (0, r.XJ)(C),
-		x = I(g);
-	if (null == g) return null;
+		C = (0, p.qY)(t),
+		g = (0, a.e7)([u.Z], () => u.Z.getChannel(t), [t]),
+		{ canManageGuildEvent: I } = (0, r.XJ)(g),
+		x = I(C);
+	if (null == C) return null;
 	let T = () => {
-			if (null != C && (0, m.Z)(C)) {
-				(0, d.lC)(C, E);
+			if (null != g && (0, m.Z)(g)) {
+				(0, d.lC)(g, E);
 				return;
 			}
 			n();
 		},
 		N = () => {
-			h.Z.endEvent(g.id, g.guild_id);
+			h.Z.endEvent(C.id, C.guild_id);
 		};
 	return x
 		? (0, i.jsx)(s.Popout, {

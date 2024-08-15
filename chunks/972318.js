@@ -132,8 +132,7 @@ var o = {
 	'creditCard.encryptedPassword.label': 'Primeros 2 dígitos de la contraseña de la tarjeta',
 	'creditCard.encryptedPassword.invalid': 'Contraseña incorrecta',
 	'creditCard.taxNumber': 'Fecha de nacimiento del titular o número de registro comercial',
-	'creditCard.taxNumber.label':
-		'Fecha de nacimiento del titular de la tarjeta (AAMMDD) o número de registro comercial (10 dígitos)',
+	'creditCard.taxNumber.label': 'Fecha de nacimiento del titular de la tarjeta (AAMMDD) o número de registro comercial (10 dígitos)',
 	'creditCard.taxNumber.labelAlt': 'Número de registro comercial (10 dígitos)',
 	'creditCard.taxNumber.invalid': 'Fecha de nacimiento del titular o número de registro comercial incorrectos',
 	'storedPaymentMethod.disable.button': 'Eliminar',
@@ -168,8 +167,7 @@ var o = {
 	'blik.invalid': 'Introduzca 6 dígitos',
 	'blik.code': 'Código de 6 dígitos',
 	'blik.help': 'Consiga el código en la aplicación de su banco.',
-	'swish.pendingMessage':
-		'Tras escanearlo, su estado puede seguir en pendiente hasta 10\xA0minutos. Podrían realizarse varios cargos si se intenta pagar de nuevo durante este periodo.',
+	'swish.pendingMessage': 'Tras escanearlo, su estado puede seguir en pendiente hasta 10\xA0minutos. Podrían realizarse varios cargos si se intenta pagar de nuevo durante este periodo.',
 	'field.valid': 'Campo válido',
 	'field.invalid': 'Campo no válido',
 	'error.va.gen.01': 'Campo incompleto',
@@ -203,8 +201,7 @@ var o = {
 	'partialPayment.remainingBalance': 'El saldo restante será %{amount}',
 	'bankTransfer.beneficiary': 'Beneficiario',
 	'bankTransfer.reference': 'referencia',
-	'bankTransfer.introduction':
-		'Continúe para crear un nuevo pago mediante transferencia bancaria. Puede utilizar los detalles en la siguiente pantalla para finalizar este pago.',
+	'bankTransfer.introduction': 'Continúe para crear un nuevo pago mediante transferencia bancaria. Puede utilizar los detalles en la siguiente pantalla para finalizar este pago.',
 	'bankTransfer.instructions': 'Gracias por su compra. Use la siguiente información para completar su pago.',
 	'bacs.accountHolderName': 'Nombre del titular de la cuenta bancaria',
 	'bacs.accountHolderName.invalid': 'El nombre del titular de la cuenta bancaria no es válido',
@@ -213,8 +210,7 @@ var o = {
 	'bacs.bankLocationId': 'Código de sucursal',
 	'bacs.bankLocationId.invalid': 'El código de sucursal no es válido',
 	'bacs.consent.amount': 'Estoy de acuerdo con que la cantidad anterior se deduzca de mi cuenta bancaria.',
-	'bacs.consent.account':
-		'Confirmo que la cuenta está a mi nombre y soy el único firmante necesario para autorizar débitos directos en esta cuenta.',
+	'bacs.consent.account': 'Confirmo que la cuenta está a mi nombre y soy el único firmante necesario para autorizar débitos directos en esta cuenta.',
 	edit: 'Editar',
 	'bacs.confirm': 'Confirmar y pagar',
 	'bacs.result.introduction': 'Descargue su instrucción de débito directo (IDD/mandato)',
@@ -247,13 +243,11 @@ var o = {
 	'upi.vpaWaitingMessage': 'Abra la aplicación UPI para confirmar el pago',
 	'upi.modeSelection': 'Seleccione cómo le gustaría usar UPI.',
 	'onlineBanking.termsAndConditions': 'Al continuar, usted acepta los %#Términos y condiciones%#',
-	'onlineBankingPL.termsAndConditions':
-		'Al continuar, acepta las %#regulaciones%# y la %#obligación de información%# de Przelewy24',
+	'onlineBankingPL.termsAndConditions': 'Al continuar, acepta las %#regulaciones%# y la %#obligación de información%# de Przelewy24',
 	'ctp.loading.poweredByCtp': 'Con tecnología de Click to Pay',
 	'ctp.loading.intro': 'Estamos comprobando si tiene alguna tarjeta guardada con Click to Pay...',
 	'ctp.login.title': 'Continúe con Click to Pay',
-	'ctp.login.subtitle':
-		'Introduzca la dirección de correo electrónico que tiene conectada a Click to Pay para continuar.',
+	'ctp.login.subtitle': 'Introduzca la dirección de correo electrónico que tiene conectada a Click to Pay para continuar.',
 	'ctp.login.inputLabel': 'Correo electrónico',
 	'ctp.logout.notYou': '\xBFNo es usted?',
 	'ctp.logout.notYourCards': '\xBFNo son sus tarjetas?',
@@ -272,32 +266,25 @@ var o = {
 	'ctp.manualCardEntry': 'Introducción manual de tarjeta',
 	'ctp.aria.infoModalButton': 'Qué es Click to Pay',
 	'ctp.infoPopup.title': 'Click to Pay ofrece la comodidad de la función sin contacto en internet',
-	'ctp.infoPopup.subtitle':
-		'Un método de pago rápido y seguro compatible con Mastercard, Visa y otras tarjetas de pago.',
+	'ctp.infoPopup.subtitle': 'Un método de pago rápido y seguro compatible con Mastercard, Visa y otras tarjetas de pago.',
 	'ctp.infoPopup.benefit1': 'Click to Pay utiliza cifrado para mantener su información segura y protegida',
 	'ctp.infoPopup.benefit2': 'Utilícelo con vendedores de todo el mundo',
 	'ctp.infoPopup.benefit3': 'Configúrela una vez para realizar pagos sin complicaciones en el futuro',
 	'ctp.errors.AUTH_INVALID': 'Autenticación no válida',
-	'ctp.errors.NOT_FOUND':
-		'No se ha encontrado ninguna cuenta, escriba un correo electrónico válido o continúe usando la escritura manual de la tarjeta',
+	'ctp.errors.NOT_FOUND': 'No se ha encontrado ninguna cuenta, escriba un correo electrónico válido o continúe usando la escritura manual de la tarjeta',
 	'ctp.errors.ID_FORMAT_UNSUPPORTED': 'Formato no compatible',
 	'ctp.errors.FRAUD': 'Se ha bloqueado o desactivado la cuenta de usuario',
 	'ctp.errors.CONSUMER_ID_MISSING': 'Falta la identidad del consumidor en la solicitud',
 	'ctp.errors.ACCT_INACCESSIBLE': 'Esta cuenta no está disponible en este momento, por ejemplo, está bloqueada',
 	'ctp.errors.CODE_INVALID': 'Código de verificación incorrecto',
 	'ctp.errors.CODE_EXPIRED': 'Este código ha caducado',
-	'ctp.errors.RETRIES_EXCEEDED':
-		'Se ha excedido el límite de reintentos para la generación de una contraseña de un solo uso',
+	'ctp.errors.RETRIES_EXCEEDED': 'Se ha excedido el límite de reintentos para la generación de una contraseña de un solo uso',
 	'ctp.errors.OTP_SEND_FAILED': 'No se ha podido enviar la contraseña de un solo uso al destinatario',
-	'ctp.errors.REQUEST_TIMEOUT':
-		'Se ha producido un error, inténtelo de nuevo o utilice la escritura manual de la tarjeta',
-	'ctp.errors.UNKNOWN_ERROR':
-		'Se ha producido un error, inténtelo de nuevo o utilice la escritura manual de la tarjeta',
-	'ctp.errors.SERVICE_ERROR':
-		'Se ha producido un error, inténtelo de nuevo o utilice la escritura manual de la tarjeta',
+	'ctp.errors.REQUEST_TIMEOUT': 'Se ha producido un error, inténtelo de nuevo o utilice la escritura manual de la tarjeta',
+	'ctp.errors.UNKNOWN_ERROR': 'Se ha producido un error, inténtelo de nuevo o utilice la escritura manual de la tarjeta',
+	'ctp.errors.SERVICE_ERROR': 'Se ha producido un error, inténtelo de nuevo o utilice la escritura manual de la tarjeta',
 	'ctp.errors.SERVER_ERROR': 'Se ha producido un error, inténtelo de nuevo o utilice la escritura manual de la tarjeta',
-	'ctp.errors.INVALID_PARAMETER':
-		'Se ha producido un error, inténtelo de nuevo o utilice la escritura manual de la tarjeta',
+	'ctp.errors.INVALID_PARAMETER': 'Se ha producido un error, inténtelo de nuevo o utilice la escritura manual de la tarjeta',
 	'ctp.errors.AUTH_ERROR': 'Se ha producido un error, inténtelo de nuevo o utilice la escritura manual de la tarjeta',
 	'paymentMethodsList.aria.label': 'Elija un método de pago',
 	'companyDetails.name.invalid': 'Introduzca el nombre de la empresa',
@@ -305,7 +292,6 @@ var o = {
 	'consent.checkbox.invalid': 'Debe aceptar los términos y condiciones',
 	'form.instruction': 'Todos los campos son obligatorios a menos que se indique lo contrario.',
 	'trustly.descriptor': 'Pago bancario instantáneo',
-	'trustly.description1':
-		'Pague directamente desde su cuenta bancaria preferida, respaldado por seguridad a nivel bancario',
+	'trustly.description1': 'Pague directamente desde su cuenta bancaria preferida, respaldado por seguridad a nivel bancario',
 	'trustly.description2': 'Sin tarjetas, sin descarga de aplicaciones, sin registro'
 };

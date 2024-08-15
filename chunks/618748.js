@@ -40,9 +40,7 @@ function U(e) {
 	let { application: t, guild: n } = e,
 		i = (0, S.YB)(n.id),
 		r = (0, S.qi)(n.id),
-		l = r.some(
-			(e) => null != e.name && null != e.subscription_plans[0] && null != e.description && null != e.image_asset
-		),
+		l = r.some((e) => null != e.name && null != e.subscription_plans[0] && null != e.description && null != e.image_asset),
 		o = (0, a.e7)([E.Z], () => E.Z.getRoles(n.id)),
 		c = r.map((e) => o[e.role_id]).some((e) => null != e && 0 !== e.color),
 		d = r.some((e) => e.role_benefits.benefits.length > 0),
@@ -102,18 +100,9 @@ function G(e) {
 			return e.id === (null == t ? void 0 : null === (n = t.team) || void 0 === n ? void 0 : n.id);
 		}),
 		r = [j.C.ACTION_REQUIRED, j.C.BLOCKED, j.C.SUSPENDED];
-	return (null == a ? void 0 : a.payout_account_status) != null &&
-		r.includes(null == a ? void 0 : a.payout_account_status)
+	return (null == a ? void 0 : a.payout_account_status) != null && r.includes(null == a ? void 0 : a.payout_account_status)
 		? (0, s.jsxs)(s.Fragment, {
-				children: [
-					(0, s.jsx)(i.Spacer, { size: 16 }),
-					(0, s.jsx)(p.Z, {
-						children: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYOUTS_PROBLEM_WARNING.format({
-							url: D.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(a.id)
-						})
-					}),
-					(0, s.jsx)(i.Spacer, { size: 16 })
-				]
+				children: [(0, s.jsx)(i.Spacer, { size: 16 }), (0, s.jsx)(p.Z, { children: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYOUTS_PROBLEM_WARNING.format({ url: D.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(a.id) }) }), (0, s.jsx)(i.Spacer, { size: 16 })]
 			})
 		: null;
 }

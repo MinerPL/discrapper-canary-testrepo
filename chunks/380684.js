@@ -25,17 +25,7 @@ function d() {
 function _(e) {
 	if (null == e) return s.mBz;
 	let t = r.Z.getPremiumTypeOverride();
-	return e.isStaff() && t === o.F_
-		? u
-			? o.wb
-			: s.PRK
-		: null != e.premiumType && (0, a.I5)(e)
-			? u
-				? o.m0[e.premiumType].fileSize
-				: o.a1[e.premiumType].fileSize
-			: l
-				? s.WKe
-				: s.mBz;
+	return e.isStaff() && t === o.F_ ? (u ? o.wb : s.PRK) : null != e.premiumType && (0, a.I5)(e) ? (u ? o.m0[e.premiumType].fileSize : o.a1[e.premiumType].fileSize) : l ? s.WKe : s.mBz;
 }
 i.Z.subscribe({ location: 'PremiumFeatureUtils' }, (e) => {
 	(l = e.enabled), (u = e.variant2);

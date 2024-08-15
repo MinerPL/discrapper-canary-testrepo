@@ -9,20 +9,7 @@ var n = r(65183).Record,
 			i = e.prototype;
 		return (
 			(i.serialize = function () {
-				return (
-					'Anchor: ' +
-					this.getAnchorKey() +
-					':' +
-					this.getAnchorOffset() +
-					', Focus: ' +
-					this.getFocusKey() +
-					':' +
-					this.getFocusOffset() +
-					', Is Backward: ' +
-					String(this.getIsBackward()) +
-					', Has Focus: ' +
-					String(this.getHasFocus())
-				);
+				return 'Anchor: ' + this.getAnchorKey() + ':' + this.getAnchorOffset() + ', Focus: ' + this.getFocusKey() + ':' + this.getFocusOffset() + ', Is Backward: ' + String(this.getIsBackward()) + ', Has Focus: ' + String(this.getHasFocus());
 			}),
 			(i.getAnchorKey = function () {
 				return this.get('anchorKey');

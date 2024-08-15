@@ -49,8 +49,7 @@ class u extends (r = a.Component) {
 		{
 			let u = '';
 			return (
-				this.props.filters &&
-					(u = this.props.filters.map((e) => e.extensions.map((e) => '.'.concat(e)).join(',')).join(',')),
+				this.props.filters && (u = this.props.filters.map((e) => e.extensions.map((e) => '.'.concat(e)).join(',')).join(',')),
 				(0, i.jsx)('input', {
 					style: l(e),
 					className: n || o,

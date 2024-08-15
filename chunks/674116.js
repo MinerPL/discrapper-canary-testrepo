@@ -35,10 +35,7 @@ var n = t(735250),
 	L = t(689938),
 	b = t(224499);
 let Z = (0, _.hQ)(),
-	v = ''.concat(
-		T.Z.getArticleURL(D.BhN.VOICE_VIDEO_TROUBLESHOOTING),
-		'?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm'
-	);
+	v = ''.concat(T.Z.getArticleURL(D.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
 function j(e, s, t) {
 	(0, l.openModal)((a) =>
 		(0, n.jsx)(l.ConfirmModal, {
@@ -117,10 +114,7 @@ function B() {
 				}),
 				(0, n.jsxs)(E.F, {
 					setting: f.s6.VOICE_AND_VIDEO_SENSITIVITY,
-					children: [
-						e === P.pM.VOICE_ACTIVITY && (0, n.jsx)(R.Z, {}),
-						(0, n.jsx)(l.FormDivider, { className: b.marginBottom40 })
-					]
+					children: [e === P.pM.VOICE_ACTIVITY && (0, n.jsx)(R.Z, {}), (0, n.jsx)(l.FormDivider, { className: b.marginBottom40 })]
 				}),
 				(0, n.jsx)(E.F, {
 					setting: f.s6.VOICE_AND_VIDEO_SOUNDBOARD,
@@ -232,9 +226,7 @@ function B() {
 												);
 											})(B, U),
 											onChange: (e) => {
-												j(L.Z.Messages.SWITCH_SUBSYSTEM, L.Z.Messages.SWITCH_SUBSYSTEM_BODY, () =>
-													c.Z.setAudioSubsystem(e)
-												);
+												j(L.Z.Messages.SWITCH_SUBSYSTEM, L.Z.Messages.SWITCH_SUBSYSTEM_BODY, () => c.Z.setAudioSubsystem(e));
 											}
 										}),
 										(0, n.jsx)(l.FormDivider, { className: b.marginBottom20 })

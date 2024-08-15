@@ -237,16 +237,12 @@ function O(e) {
 				children: [
 					(0, s.jsx)(i.Heading, {
 						variant: 'heading-md/semibold',
-						children: l
-							? x.Z.Messages.GUILD_ONBOARDING_OVERVIEW_TITLE_ENABLED
-							: x.Z.Messages.GUILD_ONBOARDING_OVERVIEW_TITLE_DISABLED
+						children: l ? x.Z.Messages.GUILD_ONBOARDING_OVERVIEW_TITLE_ENABLED : x.Z.Messages.GUILD_ONBOARDING_OVERVIEW_TITLE_DISABLED
 					}),
 					(0, s.jsx)(i.Text, {
 						variant: 'text-xs/normal',
 						color: 'text-muted',
-						children: l
-							? x.Z.Messages.GUILD_ONBOARDING_OVERVIEW_SUBTITLE_ENABLED
-							: x.Z.Messages.GUILD_ONBOARDING_OVERVIEW_SUBTITLE_DISABLED
+						children: l ? x.Z.Messages.GUILD_ONBOARDING_OVERVIEW_SUBTITLE_ENABLED : x.Z.Messages.GUILD_ONBOARDING_OVERVIEW_SUBTITLE_DISABLED
 					})
 				]
 			}),
@@ -271,15 +267,11 @@ function A(e) {
 				children: [
 					(0, s.jsx)(i.Heading, {
 						variant: 'heading-md/semibold',
-						children: l
-							? x.Z.Messages.GUILD_ONBOARDING_SETUP_REVIEW_TITLE
-							: x.Z.Messages.GUILD_ONBOARDING_SETUP_REVIEW_TITLE_INCOMPLETE
+						children: l ? x.Z.Messages.GUILD_ONBOARDING_SETUP_REVIEW_TITLE : x.Z.Messages.GUILD_ONBOARDING_SETUP_REVIEW_TITLE_INCOMPLETE
 					}),
 					(0, s.jsx)(i.Text, {
 						variant: 'text-xs/normal',
-						children: l
-							? x.Z.Messages.GUILD_ONBOARDING_SETUP_REVIEW_DESCRIPTION
-							: x.Z.Messages.GUILD_ONBOARDING_SETUP_REVIEW_DESCRIPTION_INCOMPLETE
+						children: l ? x.Z.Messages.GUILD_ONBOARDING_SETUP_REVIEW_DESCRIPTION : x.Z.Messages.GUILD_ONBOARDING_SETUP_REVIEW_DESCRIPTION_INCOMPLETE
 					})
 				]
 			}),

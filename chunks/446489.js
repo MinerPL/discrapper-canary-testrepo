@@ -61,17 +61,7 @@ class g extends (o = l.PureComponent) {
 	animateBetween(e, t) {
 		let n;
 		let { forcePosition: i, animationSpeed: s } = this.props;
-		this.prevAnimate.setValue(1),
-			null != i
-				? 0 === i
-					? (this.currAnimate.setValue(0), (n = 2))
-					: 2 === i && (this.currAnimate.setValue(2), (n = 0))
-				: e > t
-					? (this.currAnimate.setValue(0), (n = 2))
-					: (this.currAnimate.setValue(2), (n = 0)),
-			u.Z.parallel([u.Z.timing(this.prevAnimate, m(n, s)), u.Z.timing(this.currAnimate, m(1, s))]).start(
-				this.animateNext
-			);
+		this.prevAnimate.setValue(1), null != i ? (0 === i ? (this.currAnimate.setValue(0), (n = 2)) : 2 === i && (this.currAnimate.setValue(2), (n = 0))) : e > t ? (this.currAnimate.setValue(0), (n = 2)) : (this.currAnimate.setValue(2), (n = 0)), u.Z.parallel([u.Z.timing(this.prevAnimate, m(n, s)), u.Z.timing(this.currAnimate, m(1, s))]).start(this.animateNext);
 	}
 	getAnimatedStyle(e) {
 		let { animationColor: t } = this.props;

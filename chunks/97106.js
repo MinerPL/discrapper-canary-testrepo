@@ -15,10 +15,10 @@ t.Z = function (e, t, n, a, s, o) {
 	var h = !0;
 	o.set(e, t), o.set(t, e);
 	for (var p = l; ++d < c; ) {
-		var I = e[(_ = u[d])],
-			m = t[_];
-		if (a) var T = l ? a(m, I, _, t, e, o) : a(I, m, _, e, t, o);
-		if (!(void 0 === T ? I === m || s(I, m, n, a, o) : T)) {
+		var m = e[(_ = u[d])],
+			I = t[_];
+		if (a) var T = l ? a(I, m, _, t, e, o) : a(m, I, _, e, t, o);
+		if (!(void 0 === T ? m === I || s(m, I, n, a, o) : T)) {
 			h = !1;
 			break;
 		}
@@ -27,11 +27,7 @@ t.Z = function (e, t, n, a, s, o) {
 	if (h && !p) {
 		var g = e.constructor,
 			S = t.constructor;
-		g != S &&
-			'constructor' in e &&
-			'constructor' in t &&
-			!('function' == typeof g && g instanceof g && 'function' == typeof S && S instanceof S) &&
-			(h = !1);
+		g != S && 'constructor' in e && 'constructor' in t && !('function' == typeof g && g instanceof g && 'function' == typeof S && S instanceof S) && (h = !1);
 	}
 	return o.delete(e), o.delete(t), h;
 };

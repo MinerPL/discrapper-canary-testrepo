@@ -23,9 +23,7 @@ var a = t(481060),
 function C() {
 	let e = E.G6.useSetting(),
 		s = E.Wz.useSetting(),
-		t = d.isPlatformEmbedded
-			? T.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED
-			: T.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC,
+		t = d.isPlatformEmbedded ? T.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED : T.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC,
 		i = (e) => {
 			E.Wz.updateSetting(e),
 				!(function (e) {
@@ -66,9 +64,7 @@ function C() {
 				}),
 				(0, n.jsx)(a.FormSwitch, {
 					value: !s,
-					note: T.Z.Messages.ACTIVITY_RESTRICTION_DEFAULT_NOTE.format({
-						helpdeskArticle: c.Z.getArticleURL(I.BhN.ACTIVITY_STATUS_SETTINGS)
-					}),
+					note: T.Z.Messages.ACTIVITY_RESTRICTION_DEFAULT_NOTE.format({ helpdeskArticle: c.Z.getArticleURL(I.BhN.ACTIVITY_STATUS_SETTINGS) }),
 					onChange: (e) => i(!e),
 					children: T.Z.Messages.ACTIVITY_RESTRICTION_DEFAULT
 				})

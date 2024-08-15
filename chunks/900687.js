@@ -9,16 +9,7 @@ var i = t(705556),
 	o = t(225714),
 	l = t(612309);
 function r(e) {
-	let {
-		user: n,
-		isCurrentUser: t,
-		guildId: r,
-		friendToken: a,
-		relationshipType: c,
-		persistentCallCtaEnabled: d = !1,
-		activeInviteToCallCtaEnabled: u = !1,
-		onClose: I
-	} = e;
+	let { user: n, isCurrentUser: t, guildId: r, friendToken: a, relationshipType: c, persistentCallCtaEnabled: d = !1, activeInviteToCallCtaEnabled: u = !1, onClose: I } = e;
 	return (0, s.jsxs)('div', {
 		className: l.buttons,
 		children: [

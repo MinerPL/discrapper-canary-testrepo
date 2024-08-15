@@ -30,17 +30,7 @@ var t = s(735250),
 	D = s(689938),
 	j = s(143968);
 function T(e) {
-	let {
-		icon: n,
-		onClick: s,
-		text: a,
-		children: o,
-		className: i,
-		selected: r = !1,
-		disabled: d = !1,
-		onMouseLeave: u,
-		onBlur: _
-	} = e;
+	let { icon: n, onClick: s, text: a, children: o, className: i, selected: r = !1, disabled: d = !1, onMouseLeave: u, onBlur: _ } = e;
 	return (0, t.jsxs)(c.Clickable, {
 		className: l()(i, j.backgroundOption, {
 			[j.backgroundOptionSelected]: r,
@@ -107,16 +97,7 @@ function h(e) {
 	});
 }
 function f(e) {
-	let {
-			option: n,
-			source: a,
-			selected: o = !1,
-			onSelectOption: I,
-			isAnimatedImage: p,
-			isVideo: A,
-			hotspotLocation: C,
-			...M
-		} = e,
+	let { option: n, source: a, selected: o = !1, onSelectOption: I, isAnimatedImage: p, isVideo: A, hotspotLocation: C, ...M } = e,
 		R = (0, d.O)(),
 		{ analyticsLocations: T } = (0, _.ZP)(u.Z.VIDEO_BACKGROUND_IMAGE_OPTION),
 		f = (0, i.e7)([g.Z], () => null != C && g.Z.hasHotspot(C)),
@@ -230,10 +211,7 @@ function B(e) {
 						})
 					]
 				}),
-				children: [
-					(0, t.jsx)('div', { className: j.backgroundCustomInlineUpsellBackground }),
-					(0, t.jsx)('div', { className: j.backgroundCustomInlineUpsellBackgroundDarkener })
-				]
+				children: [(0, t.jsx)('div', { className: j.backgroundCustomInlineUpsellBackground }), (0, t.jsx)('div', { className: j.backgroundCustomInlineUpsellBackgroundDarkener })]
 			}),
 			o &&
 				(0, t.jsx)(c.TextBadge, {
@@ -264,9 +242,7 @@ function v(e) {
 function P(e) {
 	let { onAddBackgroundImage: n, disabled: a } = e,
 		o = (0, c.useModalContext)(),
-		l = a
-			? D.Z.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_UPLOAD_TOOLTIP_MAX_REACHED.format({ maxCustomBackgrounds: 25 })
-			: D.Z.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_UPLOAD_TOOLTIP_PREMIUM,
+		l = a ? D.Z.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_UPLOAD_TOOLTIP_MAX_REACHED.format({ maxCustomBackgrounds: 25 }) : D.Z.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_UPLOAD_TOOLTIP_PREMIUM,
 		i = [
 			{
 				name: D.Z.Messages.IMAGES,
@@ -299,24 +275,8 @@ function P(e) {
 	});
 }
 function Z(e) {
-	let {
-			canUseCustomBackgrounds: n,
-			customBackgroundOptions: s,
-			selectedOption: o,
-			onSelectOption: l,
-			onUpsellClick: i,
-			onAddBackgroundImage: r,
-			smallerOptions: d
-		} = e,
-		E = a.useMemo(
-			() =>
-				s.sort((e, n) =>
-					null == e.last_used || null == n.last_used
-						? p.default.compare(n.id, e.id)
-						: new Date(n.last_used).getTime() - new Date(e.last_used).getTime()
-				),
-			[s]
-		),
+	let { canUseCustomBackgrounds: n, customBackgroundOptions: s, selectedOption: o, onSelectOption: l, onUpsellClick: i, onAddBackgroundImage: r, smallerOptions: d } = e,
+		E = a.useMemo(() => s.sort((e, n) => (null == e.last_used || null == n.last_used ? p.default.compare(n.id, e.id) : new Date(n.last_used).getTime() - new Date(e.last_used).getTime())), [s]),
 		O = E.length >= 25,
 		{ analyticsLocations: g } = (0, _.ZP)(u.Z.VIDEO_BACKGROUND_OPTIONS),
 		m = Object.values((0, A.Z)()).sort((e, n) => C.E1[e.id] - C.E1[n.id]);

@@ -376,16 +376,7 @@ class z extends a.PureComponent {
 		E.default.setTTSType(s);
 	}
 	render() {
-		let {
-				desktopType: e,
-				afkTimeout: s,
-				disableUnreadBadge: t,
-				taskbarFlash: a,
-				disabledSounds: i,
-				disableAllSounds: o,
-				notifyMessagesInSelectedChannel: c,
-				focusMode: _
-			} = this.props,
+		let { desktopType: e, afkTimeout: s, disableUnreadBadge: t, taskbarFlash: a, disabledSounds: i, disableAllSounds: o, notifyMessagesInSelectedChannel: c, focusMode: _ } = this.props,
 			E = b.isPlatformEmbedded && (0, b.isWindows)(),
 			u = l()
 				.range(1, 11)
@@ -631,9 +622,7 @@ async function J(e) {
 		? await (0, h.oL)()
 		: _.Z.show({
 				title: V.Z.Messages.CONFIRM,
-				body: V.Z.Messages.NOTIF_MIGRATION_SETTINGS_CONFIRM_BODY.format({
-					date: new Date(s[s.length - 1].recorded_at)
-				}),
+				body: V.Z.Messages.NOTIF_MIGRATION_SETTINGS_CONFIRM_BODY.format({ date: new Date(s[s.length - 1].recorded_at) }),
 				cancelText: V.Z.Messages.CANCEL,
 				confirmText: V.Z.Messages.NOTIF_MIGRATION_SETTINGS_CONFIRM_ACTION,
 				onConfirm: h.oL

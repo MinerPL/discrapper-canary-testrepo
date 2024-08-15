@@ -24,15 +24,7 @@ var d = (function (e) {
 	function t(t) {
 		void 0 === t && (t = !1);
 		var n = e.call(this, {}, t) || this;
-		return (
-			(n.dtstart = c.apply(n, ['dtstart'])),
-			(n.tzid = c.apply(n, ['tzid'])),
-			(n._rrule = []),
-			(n._rdate = []),
-			(n._exrule = []),
-			(n._exdate = []),
-			n
-		);
+		return (n.dtstart = c.apply(n, ['dtstart'])), (n.tzid = c.apply(n, ['tzid'])), (n._rrule = []), (n._rdate = []), (n._exrule = []), (n._exdate = []), n;
 	}
 	return (
 		(0, r.ZT)(t, e),

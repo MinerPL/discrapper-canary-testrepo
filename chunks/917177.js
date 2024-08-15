@@ -17,8 +17,8 @@ var r = n(267948),
 	f = n(822776),
 	h = n(186824),
 	p = n(923106),
-	I = n(512996),
-	m = n(937296),
+	m = n(512996),
+	I = n(937296),
 	T = n(718870),
 	g = n(692746),
 	S = n(945640),
@@ -60,11 +60,7 @@ function V(e, t, n) {
 					? e.onKeyDown
 					: (0, G.tS)((e) => {
 							let n = e.key;
-							'Enter' === n && e.preventDefault(),
-								!a &&
-									!s &&
-									('Enter' === n && o(t.value),
-									'Escape' === n && ('' === t.value ? e.continuePropagation() : (t.setValue(''), l && l())));
+							'Enter' === n && e.preventDefault(), !a && !s && ('Enter' === n && o(t.value), 'Escape' === n && ('' === t.value ? e.continuePropagation() : (t.setValue(''), l && l())));
 						}, e.onKeyDown),
 				type: u
 			},
@@ -109,8 +105,8 @@ F = {
 	'he-IL': f.Z,
 	'hr-HR': h.Z,
 	'hu-HU': p.Z,
-	'it-IT': I.Z,
-	'ja-JP': m.Z,
+	'it-IT': m.Z,
+	'ja-JP': I.Z,
 	'ko-KR': T.Z,
 	'lt-LT': g.Z,
 	'lv-LV': S.Z,

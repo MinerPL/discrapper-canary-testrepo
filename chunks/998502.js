@@ -23,8 +23,8 @@ var r,
 	f = n(544891),
 	h = n(433517),
 	p = n(593472),
-	I = n(189451),
-	m = n(358085),
+	m = n(189451),
+	I = n(358085),
 	T = n(591759),
 	g = n(981631),
 	S = n(413135).Buffer;
@@ -41,14 +41,7 @@ null != A &&
 		.map((e) => parseInt(e))),
 	(R = null === (r = (i = A.remoteApp).getModuleVersions) || void 0 === r ? void 0 : r.call(i)),
 	(O = null === (a = (s = A.remoteApp).getBuildNumber) || void 0 === a ? void 0 : a.call(s)));
-let y = new Set([
-		'discord_erlpack',
-		'discord_game_utils',
-		'discord_rpc',
-		'discord_spellcheck',
-		'discord_utils',
-		'discord_voice'
-	]),
+let y = new Set(['discord_erlpack', 'discord_game_utils', 'discord_rpc', 'discord_spellcheck', 'discord_utils', 'discord_voice']),
 	D = !1;
 async function L(e) {
 	let t = await fetch(
@@ -97,12 +90,7 @@ function M(e) {
 	(c.DISCONNECT = 'DISCONNECT'),
 	(t.ZP = {
 		requireModule: (e) => A.nativeModules.requireModule(e),
-		ensureModule: (e) =>
-			m.isPlatformEmbedded
-				? __OVERLAY__ && y.has(e)
-					? Promise.resolve()
-					: A.nativeModules.ensureModule(e)
-				: Promise.reject(Error('not embedded')),
+		ensureModule: (e) => (I.isPlatformEmbedded ? (__OVERLAY__ && y.has(e) ? Promise.resolve() : A.nativeModules.ensureModule(e)) : Promise.reject(Error('not embedded'))),
 		get canBootstrapNewUpdater() {
 			return A.nativeModules.canBootstrapNewUpdater || !1;
 		},
@@ -114,17 +102,7 @@ function M(e) {
 			try {
 				n = this.requireModule('discord_overlay2');
 			} catch (e) {}
-			n && n.reset && n.reset(),
-				n && n.disconnectAllProcesses && n.destroyHostProcess && (n.disconnectAllProcesses(), n.destroyHostProcess()),
-				A.remotePowerMonitor.removeAllListeners(),
-				window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN &&
-					!0 !== h.K.get(E.SV) &&
-					this.supportsFeature(g.eRX.USER_DATA_CACHE) &&
-					A.userDataCache.cacheUserData(h.K.stringify()),
-				null == A ||
-					null === (t = A.window) ||
-					void 0 === t ||
-					t.close(null == A ? void 0 : null === (e = A.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY);
+			n && n.reset && n.reset(), n && n.disconnectAllProcesses && n.destroyHostProcess && (n.disconnectAllProcesses(), n.destroyHostProcess()), A.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== h.K.get(E.SV) && this.supportsFeature(g.eRX.USER_DATA_CACHE) && A.userDataCache.cacheUserData(h.K.stringify()), null == A || null === (t = A.window) || void 0 === t || t.close(null == A ? void 0 : null === (e = A.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY);
 		},
 		inputEventRegister(e, t, n, r) {
 			!Array.isArray(t) && (t = t.toJS()),
@@ -142,7 +120,7 @@ function M(e) {
 			this.getDiscordUtils().inputEventUnregister(parseInt(e));
 		},
 		setOnInputEventCallback(e) {
-			if (!!m.isPlatformEmbedded) this.getDiscordUtils().inputWatchAll(e);
+			if (!!I.isPlatformEmbedded) this.getDiscordUtils().inputWatchAll(e);
 		},
 		setFocused(e) {
 			this.getDiscordUtils().inputSetFocused(e);
@@ -186,7 +164,7 @@ function M(e) {
 			this.getDiscordUtils().setObserverDebugCallback((t) => e(t), t, n);
 		},
 		clearObserverDebugCallback() {
-			this.getDiscordUtils().setObserverDebugCallback(null, I.l.NONE, 0);
+			this.getDiscordUtils().setObserverDebugCallback(null, m.l.NONE, 0);
 		},
 		shouldDisplayNotifications() {
 			return this.getDiscordUtils().shouldDisplayNotifications();
@@ -204,13 +182,7 @@ function M(e) {
 		},
 		isSystemDarkMode() {
 			var e, t, n;
-			return (
-				!!(0, m.isWindows)() &&
-				(null ===
-					(n = null === (e = (t = this.getDiscordUtils()).isSystemDarkMode) || void 0 === e ? void 0 : e.call(t)) ||
-					void 0 === n ||
-					n)
-			);
+			return !!(0, I.isWindows)() && (null === (n = null === (e = (t = this.getDiscordUtils()).isSystemDarkMode) || void 0 === e ? void 0 : e.call(t)) || void 0 === n || n);
 		},
 		getGameUtils() {
 			return this.requireModule('discord_game_utils');
@@ -222,28 +194,20 @@ function M(e) {
 			return this.requireModule('discord_dispatch');
 		},
 		setBadge(e) {
-			if ('darwin' === (0, m.getPlatformName)()) {
+			if ('darwin' === (0, I.getPlatformName)()) {
 				let t = '';
 				-1 === e ? (t = '\u2022') : e > 0 && (t = ''.concat(e)), A.remoteApp.dock.setBadge(t);
-			} else
-				'win32' === (0, m.getPlatformName)()
-					? this.send('APP_BADGE_SET', e)
-					: 'linux' === (0, m.getPlatformName)() && A.remoteApp.setBadgeCount(e >= 0 ? e : 0);
+			} else 'win32' === (0, I.getPlatformName)() ? this.send('APP_BADGE_SET', e) : 'linux' === (0, I.getPlatformName)() && A.remoteApp.setBadgeCount(e >= 0 ? e : 0);
 		},
 		setSystemTrayIcon(e) {
-			if (!!m.isPlatformEmbedded) this.send('SYSTEM_TRAY_SET_ICON', e);
+			if (!!I.isPlatformEmbedded) this.send('SYSTEM_TRAY_SET_ICON', e);
 		},
 		setThumbarButtons(e) {
 			var t, n;
-			if (!!m.isPlatformEmbedded)
-				null === (n = A.thumbar) ||
-					void 0 === n ||
-					null === (t = n.setThumbarButtons) ||
-					void 0 === t ||
-					t.call(n, e, this.isSystemDarkMode());
+			if (!!I.isPlatformEmbedded) null === (n = A.thumbar) || void 0 === n || null === (t = n.setThumbarButtons) || void 0 === t || t.call(n, e, this.isSystemDarkMode());
 		},
 		bounceDock(e) {
-			if (m.isPlatformEmbedded) {
+			if (I.isPlatformEmbedded) {
 				let t = A.remoteApp;
 				if (null != t.dock) {
 					let n = t.dock.bounce(e);
@@ -255,13 +219,13 @@ function M(e) {
 			}
 		},
 		setSystemTrayApplications(e) {
-			if (!!m.isPlatformEmbedded) this.send('SYSTEM_TRAY_SET_APPLICATIONS', e);
+			if (!!I.isPlatformEmbedded) this.send('SYSTEM_TRAY_SET_APPLICATIONS', e);
 		},
 		get architecture() {
-			return m.isPlatformEmbedded ? A.process.arch : '';
+			return I.isPlatformEmbedded ? A.process.arch : '';
 		},
 		get releaseChannel() {
-			if (!m.isPlatformEmbedded) return '';
+			if (!I.isPlatformEmbedded) return '';
 			let e = A.remoteApp.getReleaseChannel();
 			if (null != e) return e;
 			return '';
@@ -276,17 +240,16 @@ function M(e) {
 			return R;
 		},
 		copy(e) {
-			m.isPlatformEmbedded && A.clipboard.copy(e);
+			I.isPlatformEmbedded && A.clipboard.copy(e);
 		},
 		async copyImage(e) {
-			_()(m.isPlatformEmbedded, 'Copy image method called outside native app'),
-				_()('function' == typeof A.clipboard.copyImage, 'Copy image not supported');
+			_()(I.isPlatformEmbedded, 'Copy image method called outside native app'), _()('function' == typeof A.clipboard.copyImage, 'Copy image not supported');
 			let t = await L(e);
 			A.clipboard.copyImage(S.from(t), e);
 		},
 		async saveImage(e) {
 			var t;
-			_()(m.isPlatformEmbedded, 'Save image method called outside native app');
+			_()(I.isPlatformEmbedded, 'Save image method called outside native app');
 			let n = T.Z.toURLSafe(e);
 			if (null == n) return;
 			let r = null !== (t = n.pathname.split('/').pop()) && void 0 !== t ? t : 'unknown',
@@ -296,7 +259,7 @@ function M(e) {
 		},
 		async saveFile(e, t) {
 			var n;
-			_()(m.isPlatformEmbedded, 'Save file method called outside native app');
+			_()(I.isPlatformEmbedded, 'Save file method called outside native app');
 			let r = T.Z.toURLSafe(e);
 			if (null == r) return;
 			let i = null !== (n = null != t ? t : r.pathname.split('/').pop()) && void 0 !== n ? n : 'unknown',
@@ -316,12 +279,12 @@ function M(e) {
 			return 'function' == typeof A.clipboard.copyImage;
 		},
 		cut() {
-			m.isPlatformEmbedded && A.clipboard.cut();
+			I.isPlatformEmbedded && A.clipboard.cut();
 		},
 		paste() {
-			m.isPlatformEmbedded && A.clipboard.paste();
+			I.isPlatformEmbedded && A.clipboard.paste();
 		},
-		readClipboard: () => (m.isPlatformEmbedded ? A.clipboard.read() : ''),
+		readClipboard: () => (I.isPlatformEmbedded ? A.clipboard.read() : ''),
 		on(e, t) {
 			A.ipc.on(e, t);
 		},
@@ -336,10 +299,8 @@ function M(e) {
 		flashFrame(e) {
 			A.window.flashFrame(e);
 		},
-		webAuthnRegister: (e) =>
-			A.nativeModules.ensureModule('discord_webauthn').then(() => A.webAuthn.webAuthnRegister(e)),
-		webAuthnAuthenticate: (e) =>
-			A.nativeModules.ensureModule('discord_webauthn').then(() => A.webAuthn.webAuthnAuthenticate(e)),
+		webAuthnRegister: (e) => A.nativeModules.ensureModule('discord_webauthn').then(() => A.webAuthn.webAuthnRegister(e)),
+		webAuthnAuthenticate: (e) => A.nativeModules.ensureModule('discord_webauthn').then(() => A.webAuthn.webAuthnAuthenticate(e)),
 		minimize(e) {
 			A.window.minimize(e);
 		},
@@ -351,10 +312,10 @@ function M(e) {
 		},
 		focus(e) {
 			let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-			t && (0, m.isWindows)() && this.minimize(null), A.window.focus(t, e);
+			t && (0, I.isWindows)() && this.minimize(null), A.window.focus(t, e);
 		},
 		blur() {
-			m.isPlatformEmbedded && null != A.window.blur ? A.window.blur() : window.blur();
+			I.isPlatformEmbedded && null != A.window.blur ? A.window.blur() : window.blur();
 		},
 		fullscreen(e) {
 			A.window.fullscreen(e);
@@ -370,7 +331,7 @@ function M(e) {
 			return 'function' == typeof A.window.isAlwaysOnTop && (t = await A.window.isAlwaysOnTop(e)), t;
 		},
 		purgeMemory() {
-			if (!!m.isPlatformEmbedded) A.processUtils.purgeMemory();
+			if (!!I.isPlatformEmbedded) A.processUtils.purgeMemory();
 		},
 		updateCrashReporter(e) {
 			A.crashReporter.updateCrashReporter(e);
@@ -379,11 +340,10 @@ function M(e) {
 			A.crashReporter.triggerJSException(e);
 		},
 		flushDNSCache() {
-			m.isPlatformEmbedded && A.processUtils.flushDNSCache();
+			I.isPlatformEmbedded && A.processUtils.flushDNSCache();
 		},
 		supportsFeature: (e) => A.features.supports(e),
-		getEnableHardwareAcceleration: () =>
-			!m.isPlatformEmbedded || (!__OVERLAY__ && A.gpuSettings.getEnableHardwareAcceleration()),
+		getEnableHardwareAcceleration: () => !I.isPlatformEmbedded || (!__OVERLAY__ && A.gpuSettings.getEnableHardwareAcceleration()),
 		setEnableHardwareAcceleration(e) {
 			A.gpuSettings.setEnableHardwareAcceleration(e);
 		},
@@ -391,15 +351,11 @@ function M(e) {
 			A.gpuSettings.setChromiumSwitches(e);
 		},
 		getGPUDriverVersions() {
-			return (0, m.isWindows)() && null != this.getDiscordUtils().getGPUDriverVersions
-				? this.getDiscordUtils().getGPUDriverVersions()
-				: Promise.resolve(Object.freeze({}));
+			return (0, I.isWindows)() && null != this.getDiscordUtils().getGPUDriverVersions ? this.getDiscordUtils().getGPUDriverVersions() : Promise.resolve(Object.freeze({}));
 		},
-		setZoomFactor: (e) => !!m.isPlatformEmbedded && (A.window.setZoomFactor(e), !0),
+		setZoomFactor: (e) => !!I.isPlatformEmbedded && (A.window.setZoomFactor(e), !0),
 		setBackgroundThrottling(e) {
-			null != A.window.setBackgroundThrottling
-				? A.window.setBackgroundThrottling(e)
-				: A.window.webContents.setBackgroundThrottling(e);
+			null != A.window.setBackgroundThrottling ? A.window.setBackgroundThrottling(e) : A.window.webContents.setBackgroundThrottling(e);
 		},
 		pauseFrameEvictor() {
 			var e, t;
@@ -410,7 +366,7 @@ function M(e) {
 			null === (e = (t = A.app).pauseFrameEvictor) || void 0 === e || e.call(t);
 		},
 		getPidFromDesktopSource(e) {
-			if (!((0, m.isWindows)() || (0, m.isMac)()) || null == this.getDiscordUtils().getPidFromWindowHandle) return null;
+			if (!((0, I.isWindows)() || (0, I.isMac)()) || null == this.getDiscordUtils().getPidFromWindowHandle) return null;
 			let t = null == e ? void 0 : e.split(':'),
 				n = null == t ? void 0 : t[0];
 			if ('window' === n) {
@@ -424,7 +380,7 @@ function M(e) {
 			else return null;
 		},
 		getDesktopSourceFromPid(e) {
-			if (!(0, m.isWindows)() || null == this.getDiscordUtils().getWindowHandleFromPid || null == e) return null;
+			if (!(0, I.isWindows)() || null == this.getDiscordUtils().getWindowHandleFromPid || null == e) return null;
 			let t = this.getDiscordUtils().getWindowHandleFromPid(e);
 			return null == t || 0 === t.length ? null : ['window', t, '0'].join(':');
 		},
@@ -448,43 +404,34 @@ function M(e) {
 		},
 		showOpenDialog: (e) => A.fileManager.showOpenDialog({ properties: e }),
 		flushStorageData: () =>
-			m.isPlatformEmbedded
+			I.isPlatformEmbedded
 				? new Promise((e, t) => {
-						null != A.processUtils.flushStorageData
-							? A.processUtils.flushStorageData((n) => (null != n ? t(Error(n)) : e()))
-							: e();
+						null != A.processUtils.flushStorageData ? A.processUtils.flushStorageData((n) => (null != n ? t(Error(n)) : e())) : e();
 					})
 				: Promise.resolve(),
 		flushCookies: () =>
-			m.isPlatformEmbedded
+			I.isPlatformEmbedded
 				? new Promise((e, t) => {
-						null != A.processUtils.flushCookies
-							? A.processUtils.flushCookies((n) => (null != n ? t(Error(n)) : e()))
-							: e();
+						null != A.processUtils.flushCookies ? A.processUtils.flushCookies((n) => (null != n ? t(Error(n)) : e())) : e();
 					})
 				: Promise.resolve(),
 		setCrashInformation(e, t) {
 			var n;
-			if (
-				!!m.isPlatformEmbedded &&
-				(null == A ? void 0 : null === (n = A.processUtils) || void 0 === n ? void 0 : n.setCrashInformation) != null
-			)
-				A.processUtils.setCrashInformation(e, t);
+			if (!!I.isPlatformEmbedded && (null == A ? void 0 : null === (n = A.processUtils) || void 0 === n ? void 0 : n.setCrashInformation) != null) A.processUtils.setCrashInformation(e, t);
 		},
-		blockDisplaySleep: () =>
-			m.isPlatformEmbedded && null != A.powerSaveBlocker ? A.powerSaveBlocker.blockDisplaySleep() : null,
+		blockDisplaySleep: () => (I.isPlatformEmbedded && null != A.powerSaveBlocker ? A.powerSaveBlocker.blockDisplaySleep() : null),
 		unblockDisplaySleep(e) {
-			if (!!m.isPlatformEmbedded && null != A.powerSaveBlocker) A.powerSaveBlocker.unblockDisplaySleep(e);
+			if (!!I.isPlatformEmbedded && null != A.powerSaveBlocker) A.powerSaveBlocker.unblockDisplaySleep(e);
 		},
 		cleanupDisplaySleep() {
-			if (!!m.isPlatformEmbedded && null != A.powerSaveBlocker) A.powerSaveBlocker.cleanupDisplaySleep();
+			if (!!I.isPlatformEmbedded && null != A.powerSaveBlocker) A.powerSaveBlocker.cleanupDisplaySleep();
 		},
 		relaunch() {
-			if (!!m.isPlatformEmbedded) null != A.remoteApp.relaunch && A.remoteApp.relaunch();
+			if (!!I.isPlatformEmbedded) null != A.remoteApp.relaunch && A.remoteApp.relaunch();
 		},
 		makeChunkedRequest(e, t, n) {
 			let r = ''.concat((0, f.K0)()).concat(e);
-			if (!m.isPlatformEmbedded) return Promise.reject(Error('Not embedded!'));
+			if (!I.isPlatformEmbedded) return Promise.reject(Error('Not embedded!'));
 			if (null == A.http) return Promise.reject(Error('HTTP module not available'));
 			let {
 					method: i,
@@ -523,7 +470,7 @@ function M(e) {
 			});
 		},
 		submitLiveCrashReport(e) {
-			if (!(0, m.isWindows)() || null == this.getDiscordUtils().submitLiveCrashReport) return Promise.resolve();
+			if (!(0, I.isWindows)() || null == this.getDiscordUtils().submitLiveCrashReport) return Promise.resolve();
 			let t = this.getCrashReporterMetadata(),
 				n = A.app.getReleaseChannel(),
 				r = null == t ? void 0 : t.sentry;

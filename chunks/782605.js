@@ -45,9 +45,7 @@ function c(e) {
 		case r.evJ.INVALID_CANNOT_FRIEND_SELF:
 			return l.Z.Messages.INVALID_CANNOT_FRIEND_SELF;
 		case r.evJ.INVITES_DISABLED:
-			return l.Z.Messages.INVITES_DISABLED_MODAL_DESCRIPTION.format({
-				articleLink: a.Z.getArticleURL(r.BhN.INVITE_DISABLED)
-			});
+			return l.Z.Messages.INVITES_DISABLED_MODAL_DESCRIPTION.format({ articleLink: a.Z.getArticleURL(r.BhN.INVITE_DISABLED) });
 		default:
 			return l.Z.Messages.INVITE_MODAL_ERROR_DEFAULT;
 	}

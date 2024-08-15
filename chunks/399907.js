@@ -7,9 +7,7 @@ var r = n(956067),
 let l = 4 * a.Z.Millis.HOUR;
 class u extends i.Z {
 	_initialize() {
-		setTimeout(() => r.Z.timeAsync('\uD83D\uDCBE', 'getBlockedDomainList', () => o.Z.getBlockedDomainList()), 1000),
-			setTimeout(() => (0, s.q)(), 10 * a.Z.Millis.SECOND),
-			(this.intervalID = setInterval(s.q, l));
+		setTimeout(() => r.Z.timeAsync('\uD83D\uDCBE', 'getBlockedDomainList', () => o.Z.getBlockedDomainList()), 1000), setTimeout(() => (0, s.q)(), 10 * a.Z.Millis.SECOND), (this.intervalID = setInterval(s.q, l));
 	}
 	_terminate() {
 		clearInterval(this.intervalID);

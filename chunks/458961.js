@@ -130,40 +130,22 @@ function J(e) {
 		ei = (0, R.n)(),
 		ed = s.useCallback(() => {
 			var e;
-			return (null == ea ? void 0 : null === (e = ea.image_asset) || void 0 === e ? void 0 : e.application_id) == null
-				? es.data
-				: (0, O._W)(ea.image_asset.application_id, ea.image_asset, 600, ei && el ? void 0 : 'webp');
+			return (null == ea ? void 0 : null === (e = ea.image_asset) || void 0 === e ? void 0 : e.application_id) == null ? es.data : (0, O._W)(ea.image_asset.application_id, ea.image_asset, 600, ei && el ? void 0 : 'webp');
 		}, [es, ea, ei, el]),
 		{ shouldRestrictUpdatingCreatorMonetizationSettings: ec } = (0, v.gX)(q);
 	s.useEffect(() => {
-		ec &&
-			(ee(),
-			(0, Z.B)(
-				X.Z.Messages.CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_EDIT_PRODUCT_TITLE,
-				X.Z.Messages.CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_EDIT_PRODUCT_BODY
-			));
+		ec && (ee(), (0, Z.B)(X.Z.Messages.CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_EDIT_PRODUCT_TITLE, X.Z.Messages.CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_EDIT_PRODUCT_BODY));
 	}, [ec, ee]);
 	let [eu, eC] = s.useState(null !== (n = null == ea ? void 0 : ea.name) && void 0 !== n ? n : ''),
 		[eg, eT] = s.useState(null !== (o = null == ea ? void 0 : ea.description) && void 0 !== o ? o : ''),
 		[ep, eh] = s.useState(null !== (l = null == ea ? void 0 : ea.price_tier) && void 0 !== l ? l : void 0),
 		[em, eI] = s.useState(ed),
-		[eU, ef] = s.useState(
-			null !== (i = null == ea ? void 0 : null === (A = ea.image_asset) || void 0 === A ? void 0 : A.filename) &&
-				void 0 !== i
-				? i
-				: es.name
-		),
+		[eU, ef] = s.useState(null !== (i = null == ea ? void 0 : null === (A = ea.image_asset) || void 0 === A ? void 0 : A.filename) && void 0 !== i ? i : es.name),
 		[ev, eq] = s.useState(!1),
 		[eE, eN] = s.useState(),
 		eD = s.useMemo(() => (null != ep ? (0, D.T4)(ep, K.pKx.USD) : void 0), [ep]),
 		[eO, eR] = s.useState(!0),
-		{
-			changesSaving: ex,
-			saveError: eL,
-			saveProductWithAttachments: eb,
-			hasUnsavedAttachmentChanges: eP,
-			cancelUnusedUploads: eV
-		} = (0, x.P)(),
+		{ changesSaving: ex, saveError: eL, saveProductWithAttachments: eb, hasUnsavedAttachmentChanges: eP, cancelUnusedUploads: eV } = (0, x.P)(),
 		e_ = (null == ea ? void 0 : ea.attachments) != null && (null == ea ? void 0 : ea.attachments.length) > 0,
 		eS = null != eL ? eL : eE,
 		eZ = null != ex && 'published' in ex,
@@ -171,17 +153,9 @@ function J(e) {
 		eF = null !== (I = null == ea ? void 0 : ea.role_id) && void 0 !== I ? I : null,
 		[eM, eG] = s.useState(),
 		eB = null != eM || null != eF,
-		eK = (0, u.e7)([N.Z], () => (null != eF && null !== eM ? N.Z.getRole(q, eF) : null != eM ? eM : void 0), [
-			eM,
-			eF,
-			q
-		]),
+		eK = (0, u.e7)([N.Z], () => (null != eF && null !== eM ? N.Z.getRole(q, eF) : null != eM ? eM : void 0), [eM, eF, q]),
 		eW = '';
-	eB && eO
-		? (eW = X.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE)
-		: eB
-			? (eW = X.Z.Messages.GUILD_PRODUCT_CARD_TYPE_ROLE)
-			: eO && (eW = X.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE);
+	eB && eO ? (eW = X.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE) : eB ? (eW = X.Z.Messages.GUILD_PRODUCT_CARD_TYPE_ROLE) : eO && (eW = X.Z.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE);
 	let eX = () => {
 			eR(!1), eV();
 		},
@@ -225,12 +199,7 @@ function J(e) {
 										}),
 										(0, r.jsx)(g.Text, {
 											variant: 'text-md/medium',
-											children:
-												'draft' === ez
-													? X.Z.Messages.GUILD_PRODUCT_EDIT_NOTICE_BAR_SAVE_DRAFT_SUCCESS
-													: 'update_publish' === ez
-														? X.Z.Messages.GUILD_PRODUCT_EDIT_NOTICE_BAR_MODAL_UPDATE_PUBLISH_SUCCESS
-														: X.Z.Messages.GUILD_PRODUCT_EDIT_NOTICE_BAR_MODAL_UNPUBLISH_SUCCESS
+											children: 'draft' === ez ? X.Z.Messages.GUILD_PRODUCT_EDIT_NOTICE_BAR_SAVE_DRAFT_SUCCESS : 'update_publish' === ez ? X.Z.Messages.GUILD_PRODUCT_EDIT_NOTICE_BAR_MODAL_UPDATE_PUBLISH_SUCCESS : X.Z.Messages.GUILD_PRODUCT_EDIT_NOTICE_BAR_MODAL_UNPUBLISH_SUCCESS
 										})
 									]
 								}),
@@ -391,22 +360,11 @@ function J(e) {
 											radioGroupAriaLabel: X.Z.Messages.GUILD_PRODUCT_EDIT_MODAL_THUMBNAIL_RADIO_GROUP_ARIA_LABEL,
 											image: em,
 											imageName: eU,
-											savedImageName:
-												null == ea ? void 0 : null === (a = ea.image_asset) || void 0 === a ? void 0 : a.filename,
+											savedImageName: null == ea ? void 0 : null === (a = ea.image_asset) || void 0 === a ? void 0 : a.filename,
 											onChange: (e, A) => {
 												if (null != e) {
 													var t;
-													eI(e),
-														ef(A),
-														eq(
-															e.startsWith('data:') ||
-																A !==
-																	(null == ea
-																		? void 0
-																		: null === (t = ea.image_asset) || void 0 === t
-																			? void 0
-																			: t.filename)
-														);
+													eI(e), ef(A), eq(e.startsWith('data:') || A !== (null == ea ? void 0 : null === (t = ea.image_asset) || void 0 === t ? void 0 : t.filename));
 												}
 											}
 										})
@@ -431,10 +389,7 @@ function J(e) {
 									: null,
 								eB
 									? (0, r.jsx)(G.ZP, {
-											error:
-												null !== (U = null == eS ? void 0 : eS.getFirstFieldErrorMessage(b.NB)) && void 0 !== U
-													? U
-													: void 0,
+											error: null !== (U = null == eS ? void 0 : eS.getFirstFieldErrorMessage(b.NB)) && void 0 !== U ? U : void 0,
 											newRoleParams: eM,
 											setNewRoleParams: eG,
 											guildId: q,
@@ -452,9 +407,7 @@ function J(e) {
 							children: [
 								(0, r.jsx)(M.Z, {
 									disabled: !ew,
-									disabledTooltip: en
-										? X.Z.Messages.GUILD_PRODUCT_UNPUBLISH_REQUIRES_SAVE
-										: X.Z.Messages.GUILD_PRODUCT_PUBLISH_REQUIRES_SAVE,
+									disabledTooltip: en ? X.Z.Messages.GUILD_PRODUCT_UNPUBLISH_REQUIRES_SAVE : X.Z.Messages.GUILD_PRODUCT_PUBLISH_REQUIRES_SAVE,
 									published: en,
 									onClick: () => {
 										d()(ew, 'Attempting to publish/unpublish when not allowed'),
@@ -553,9 +506,7 @@ function J(e) {
 										disabled: !eY,
 										submitting: ej,
 										onClick: () => {
-											d()(eY, 'cannot save changes for published product without adding all fields'),
-												eQ('update_publish'),
-												e0(ek);
+											d()(eY, 'cannot save changes for published product without adding all fields'), eQ('update_publish'), e0(ek);
 										},
 										children: X.Z.Messages.GUILD_PRODUCT_EDIT_MODAL_SAVE_CHANGES_BUTTON
 									})
@@ -591,7 +542,4 @@ function $(e) {
 		children: (0, r.jsx)(J, { ...e })
 	});
 }
-((n = a || (a = {})).DRAFT = 'draft'),
-	(n.PUBLISH = 'publish'),
-	(n.UPDATE_PUBLISH = 'update_publish'),
-	(n.UNPUBLISH = 'unpublish');
+((n = a || (a = {})).DRAFT = 'draft'), (n.PUBLISH = 'publish'), (n.UPDATE_PUBLISH = 'update_publish'), (n.UNPUBLISH = 'unpublish');

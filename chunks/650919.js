@@ -64,9 +64,7 @@ function T(e) {
 						return {
 							subscribedSinceDate: o,
 							currentPeriodEndDate: n,
-							currentPeriodEndLabel: i()().isAfter(t.currentPeriodEnd)
-								? I.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_SUBSCRIPTION_ENDED
-								: I.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_SUBSCRIPTION_ENDS,
+							currentPeriodEndLabel: i()().isAfter(t.currentPeriodEnd) ? I.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_SUBSCRIPTION_ENDED : I.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_SUBSCRIPTION_ENDS,
 							subscriptionPlanPrice: r,
 							isCancelled: l,
 							isDeleted: c,

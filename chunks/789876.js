@@ -16,7 +16,7 @@ var r;
 		f = 0,
 		h = 0,
 		p = 0,
-		I = {
+		m = {
 			get didTimeout() {
 				return !1;
 			},
@@ -25,7 +25,7 @@ var r;
 				return e < 0 ? 0 : e;
 			}
 		},
-		m = (function (e) {
+		I = (function (e) {
 			var t,
 				n,
 				r = function () {
@@ -39,7 +39,7 @@ var r;
 			(d = 22), (E = 66), (_ = 0);
 		});
 	function T() {
-		125 != E && ((d = 7), (E = 125), (_ = 35), c && (c && (i && o(i), r && clearTimeout(r), (c = !1)), A())), m();
+		125 != E && ((d = 7), (E = 125), (_ = 35), c && (c && (i && o(i), r && clearTimeout(r), (c = !1)), A())), I();
 	}
 	function g() {
 		(i = null), (r = setTimeout(N, 0));
@@ -48,20 +48,14 @@ var r;
 		(r = null), s(g);
 	}
 	function A() {
-		if (!c)
-			(t = E - (Date.now() - h)),
-				(e = Date.now()),
-				(c = !0),
-				_ && t < _ && (t = _),
-				t > 9 ? (r = setTimeout(S, t)) : ((t = 0), S());
+		if (!c) (t = E - (Date.now() - h)), (e = Date.now()), (c = !0), _ && t < _ && (t = _), t > 9 ? (r = setTimeout(S, t)) : ((t = 0), S());
 	}
 	function N() {
 		var n,
 			i,
 			a,
 			s = d > 9 ? 9 : 1;
-		if (((h = Date.now()), (c = !1), (r = null), u > 2 || h - t - 50 < e))
-			for (i = 0, a = l.length; i < a && I.timeRemaining() > s; i++) (n = l.shift()), p++, n && n(I);
+		if (((h = Date.now()), (c = !1), (r = null), u > 2 || h - t - 50 < e)) for (i = 0, a = l.length; i < a && m.timeRemaining() > s; i++) (n = l.shift()), p++, n && n(m);
 		l.length ? A() : (u = 0);
 	}
 	function v(e) {
@@ -120,8 +114,4 @@ var r;
 		cancel: O
 	};
 }),
-	'function' == typeof define && define.amd
-		? define([], r)
-		: e.exports
-			? (e.exports = r())
-			: (window.idleCallbackShim = r());
+	'function' == typeof define && define.amd ? define([], r) : e.exports ? (e.exports = r()) : (window.idleCallbackShim = r());

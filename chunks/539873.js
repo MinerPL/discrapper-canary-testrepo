@@ -18,8 +18,8 @@ var r = n(735250),
 	f = n(587446),
 	h = n(996073),
 	p = n(327943),
-	I = n(997945),
-	m = n(401460),
+	m = n(997945),
+	I = n(401460),
 	T = n(441319),
 	g = n(981631),
 	S = n(526761),
@@ -43,7 +43,7 @@ function v(e) {
 			labelledBy: L
 		}),
 		M = (e) => {
-			if (y && !v && e !== I.aH.DEFAULT) {
+			if (y && !v && e !== m.aH.DEFAULT) {
 				(0, l.openModalLazy)(async () => {
 					let { default: e } = await n.e('69052').then(n.bind(n, 184250));
 					return (t) =>
@@ -125,14 +125,14 @@ function v(e) {
 							return !t;
 						}).map((e, t) =>
 							(0, r.jsx)(
-								m.Z,
+								I.Z,
 								{
 									icon: e,
 									isSelected: R === e.id,
 									onSelect: (e) => M(e),
 									disabled: a,
 									tabIndex: 0 !== t || a ? void 0 : 0,
-									locked: y && !v && e.id !== I.aH.DEFAULT
+									locked: y && !v && e.id !== m.aH.DEFAULT
 								},
 								e.id
 							)

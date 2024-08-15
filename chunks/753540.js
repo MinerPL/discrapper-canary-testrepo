@@ -17,12 +17,7 @@ function s(e, n, t) {
 	return (0, l.e7)([a.ZP], () => {
 		var l, r, s;
 		if (n === t) return a.ZP.isChannelOptedIn(e, n, !0);
-		return (
-			(l = e),
-			(r = n),
-			(s = a.ZP),
-			!!(0, i.hi)(l) || s.isChannelOptedIn(l, r, !0) || (null != t && a.ZP.isChannelOptedIn(e, t, !0))
-		);
+		return (l = e), (r = n), (s = a.ZP), !!(0, i.hi)(l) || s.isChannelOptedIn(l, r, !0) || (null != t && a.ZP.isChannelOptedIn(e, t, !0));
 	});
 }
 function o(e, n, t) {

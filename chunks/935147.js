@@ -73,12 +73,7 @@ function j(e) {
 			location_stack: ee
 		});
 	}, [ee, U]);
-	let es =
-			(null === (j = (0, I.N)()) || void 0 === j
-				? void 0
-				: null === (s = j.subscription_trial) || void 0 === s
-					? void 0
-					: s.sku_id) === L.Si.TIER_2,
+	let es = (null === (j = (0, I.N)()) || void 0 === j ? void 0 : null === (s = j.subscription_trial) || void 0 === s ? void 0 : s.sku_id) === L.Si.TIER_2,
 		et = (0, u.Ng)(),
 		en = (0, u.Wp)(et, L.Si.TIER_2),
 		ea = 'TryOutPremiumSection';
@@ -202,13 +197,7 @@ function j(e) {
 												subscriptionTier: L.Si.TIER_2,
 												className: v.premiumSubscribeButton,
 												size: r.Button.Sizes.MEDIUM,
-												buttonText: F
-													? Z.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE
-													: en
-														? Z.Z.Messages.PREMIUM_DISCOUNT_CTA.format({
-																percent: null == et ? void 0 : et.discount.amount
-															})
-														: Z.Z.Messages.PREMIUM_UPSELL_GET_NITRO
+												buttonText: F ? Z.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : en ? Z.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: null == et ? void 0 : et.discount.amount }) : Z.Z.Messages.PREMIUM_UPSELL_GET_NITRO
 											})
 										]
 									})

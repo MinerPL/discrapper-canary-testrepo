@@ -41,10 +41,4 @@ function r() {
 		}
 	];
 }
-((s = o || (o = {})).TOO_HARD = 'Too hard'),
-	(s.TEST = 'Testing purposes'),
-	(s.ACCIDENT = 'Created on accident'),
-	(s.TEMPLATE = 'Curious about server/template'),
-	(s.LONELY = 'Empty server'),
-	(s.INACTIVE = 'Inactive server'),
-	(s.OTHER = 'Other');
+((s = o || (o = {})).TOO_HARD = 'Too hard'), (s.TEST = 'Testing purposes'), (s.ACCIDENT = 'Created on accident'), (s.TEMPLATE = 'Curious about server/template'), (s.LONELY = 'Empty server'), (s.INACTIVE = 'Inactive server'), (s.OTHER = 'Other');

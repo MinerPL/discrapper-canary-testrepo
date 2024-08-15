@@ -20,15 +20,13 @@ function f(e) {
 	let { channel: t, speaker: s, className: m } = e,
 		f = (0, u.bp)(),
 		{ reducedMotion: E } = a.useContext(r.AccessibilityPreferencesContext),
-		g = (0, c.Z)({ userId: s.id }),
-		C = null != s.member ? (0, p.CA)(s.member) : null,
+		C = (0, c.Z)({ userId: s.id }),
+		g = null != s.member ? (0, p.CA)(s.member) : null,
 		I = (e) => {
 			(0, o.jW)(
 				e,
 				async () => {
-					let { default: e } = await Promise.all([n.e('79695'), n.e('70474'), n.e('12435'), n.e('46563')]).then(
-						n.bind(n, 757387)
-					);
+					let { default: e } = await Promise.all([n.e('79695'), n.e('70474'), n.e('12435'), n.e('46563')]).then(n.bind(n, 757387));
 					return (n) =>
 						(0, i.jsx)(e, {
 							...n,
@@ -72,11 +70,11 @@ function f(e) {
 						},
 						onContextMenu: I,
 						children: (0, i.jsx)(r.Avatar, {
-							src: null != C ? C : s.user.getAvatarURL(t.guild_id, 24),
+							src: null != g ? g : s.user.getAvatarURL(t.guild_id, 24),
 							size: r.AvatarSizes.SIZE_24,
 							className: l()(_.avatar, m),
 							'aria-label': s.userNick,
-							isSpeaking: g && !E.enabled
+							isSpeaking: C && !E.enabled
 						})
 					})
 			})

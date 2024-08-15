@@ -19,17 +19,9 @@ var i,
 	s = n(657610),
 	o = n(544891),
 	l = n(981631);
-((a = i || (i = {})).REQUIRES_PAYMENT_METHOD = 'requires_payment_method'),
-	(a.REQUIRES_CONFIRMATION = 'requires_confirmation'),
-	(a.REQUIRES_ACTION = 'requires_action'),
-	(a.PROCESSING = 'processing'),
-	(a.CANCELED = 'canceled'),
-	(a.SUCCEEDED = 'succeeded');
+((a = i || (i = {})).REQUIRES_PAYMENT_METHOD = 'requires_payment_method'), (a.REQUIRES_CONFIRMATION = 'requires_confirmation'), (a.REQUIRES_ACTION = 'requires_action'), (a.PROCESSING = 'processing'), (a.CANCELED = 'canceled'), (a.SUCCEEDED = 'succeeded');
 let u = (e) => {
-		let t = (t) =>
-				'You passed an invalid expiration date '.concat(e) +
-				''.concat(null != t ? t : '') +
-				'Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`',
+		let t = (t) => 'You passed an invalid expiration date '.concat(e) + ''.concat(null != t ? t : '') + 'Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`',
 			n = e.split(/[.\-/\s]+/g);
 		2 !== n.length && t();
 		let r = n.map((e) => {
@@ -85,13 +77,7 @@ async function E(e) {
 		if (null != r) return { error: r.message };
 		if (null == i) return { error: 'payment intent does not exist' };
 		let a = {};
-		switch (
-			('requires_payment_method' === i.status &&
-				null != i.last_payment_error &&
-				null != i.last_payment_error.payment_method &&
-				(a.payment_method = i.last_payment_error.payment_method.id),
-			i.status)
-		) {
+		switch (('requires_payment_method' === i.status && null != i.last_payment_error && null != i.last_payment_error.payment_method && (a.payment_method = i.last_payment_error.payment_method.id), i.status)) {
 			case 'requires_payment_method':
 			case 'requires_confirmation':
 			case 'requires_action':

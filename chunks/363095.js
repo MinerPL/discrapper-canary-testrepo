@@ -2,12 +2,7 @@ var r = n(546299),
 	i = n(21841);
 function a(e, t, n) {
 	if (!(this instanceof a)) return new a(e, t, n);
-	(this.Hash = e),
-		(this.blockSize = e.blockSize / 8),
-		(this.outSize = e.outSize / 8),
-		(this.inner = null),
-		(this.outer = null),
-		this._init(r.toArray(t, n));
+	(this.Hash = e), (this.blockSize = e.blockSize / 8), (this.outSize = e.outSize / 8), (this.inner = null), (this.outer = null), this._init(r.toArray(t, n));
 }
 (e.exports = a),
 	(a.prototype._init = function (e) {

@@ -13,8 +13,8 @@ var r,
 	f = n(973542),
 	h = n(790285),
 	p = n(160404),
-	I = n(131704),
-	m = n(592125),
+	m = n(131704),
+	I = n(592125),
 	T = n(271383),
 	g = n(430824),
 	S = n(594174),
@@ -75,7 +75,7 @@ function R(e, t) {
 function C(e, t) {
 	let n = N[e];
 	if (null == n) return !1;
-	let r = m.Z.getChannel(t);
+	let r = I.Z.getChannel(t);
 	if (null == r) return !1;
 	let i = g.Z.getGuild(r.getGuildId());
 	if (null == i) return !1;
@@ -100,7 +100,7 @@ function b(e) {
 }
 class M extends (r = l.ZP.Store) {
 	initialize() {
-		this.waitFor(g.Z, m.Z, p.Z), _.Zo.subscribe({ location: '1' }, () => y());
+		this.waitFor(g.Z, I.Z, p.Z), _.Zo.subscribe({ location: '1' }, () => y());
 	}
 	isChannelGated(e, t) {
 		if (null == e) return !1;
@@ -112,7 +112,7 @@ class M extends (r = l.ZP.Store) {
 					if (null == t) return;
 					let n = (N[e] = new Set());
 					if (!t.hasFeature(A.oNc.ROLE_SUBSCRIPTIONS_ENABLED) || (!(0, E.kT)(e) && !(0, c.Rw)(t))) return;
-					let r = m.Z.getMutableGuildChannelsForGuild(e);
+					let r = I.Z.getMutableGuildChannelsForGuild(e);
 					for (let e in r) {
 						let i = r[e];
 						R(i, t) && n.add(i.id);
@@ -128,11 +128,8 @@ class M extends (r = l.ZP.Store) {
 	isChannelOrThreadParentGated(e, t) {
 		if (null == e) return !1;
 		if (this.isChannelGated(e, t)) return !0;
-		let n = m.Z.getChannel(t);
-		return (
-			!!(null != n && null != n.parent_id && I.Ec.has(null == n ? void 0 : n.type)) &&
-			this.isChannelOrThreadParentGated(e, n.parent_id)
-		);
+		let n = I.Z.getChannel(t);
+		return !!(null != n && null != n.parent_id && m.Ec.has(null == n ? void 0 : n.type)) && this.isChannelOrThreadParentGated(e, n.parent_id);
 	}
 }
 (s = 'GatedChannelStore'),

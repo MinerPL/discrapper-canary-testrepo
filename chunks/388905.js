@@ -133,26 +133,7 @@ let j = (e) => {
 };
 j.Sizes = r.AvatarSizes;
 let C = (e) => {
-		let {
-				label: n,
-				error: t,
-				placeholder: i,
-				value: s,
-				className: o,
-				inputClassName: u,
-				setRef: d,
-				type: p = 'text',
-				onChange: m,
-				autoComplete: h,
-				autoFocus: f,
-				maxLength: x,
-				spellCheck: N,
-				name: _,
-				description: Z,
-				required: v,
-				onFocus: E,
-				onBlur: I
-			} = e,
+		let { label: n, error: t, placeholder: i, value: s, className: o, inputClassName: u, setRef: d, type: p = 'text', onChange: m, autoComplete: h, autoFocus: f, maxLength: x, spellCheck: N, name: _, description: Z, required: v, onFocus: E, onBlur: I } = e,
 			T = (0, c.Dt)();
 		return (0, l.jsxs)(r.FormItem, {
 			title: n,
@@ -292,24 +273,13 @@ let C = (e) => {
 				}),
 				(0, l.jsx)(b, {
 					className: g.downloadButtonSubtext,
-					children: x.Z.Messages.INCOMPATIBLE_BROWSER.format({
-						supportedBrowserURL: m.Z.getArticleURL(f.BhN.SUPPORTED_BROWSERS)
-					})
+					children: x.Z.Messages.INCOMPATIBLE_BROWSER.format({ supportedBrowserURL: m.Z.getArticleURL(f.BhN.SUPPORTED_BROWSERS) })
 				})
 			]
 		});
 	};
 n.ZP = (e) => {
-	let {
-		className: n,
-		contentClassName: t,
-		tag: i = 'section',
-		onSubmit: r,
-		children: s,
-		expanded: o = !1,
-		theme: u = f.BRd.DARK,
-		style: c
-	} = e;
+	let { className: n, contentClassName: t, tag: i = 'section', onSubmit: r, children: s, expanded: o = !1, theme: u = f.BRd.DARK, style: c } = e;
 	return (0, l.jsxs)(i, {
 		'data-theme': u,
 		'data-disable-adaptive-theme': !0,

@@ -105,11 +105,7 @@ function y(e) {
 											n(0, s.id);
 											return;
 										}
-										g.default.track(S.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
-											location: { section: S.jXE.MANAGE_ACCOUNTS_MODAL }
-										}),
-											N.yD(s.id),
-											n(1, s.id);
+										g.default.track(S.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: S.jXE.MANAGE_ACCOUNTS_MODAL } }), N.yD(s.id), n(1, s.id);
 									},
 									color: u.Button.Colors.PRIMARY,
 									children: T ? A.Z.Messages.SWITCH_ACCOUNTS_ACTION_LOG_IN : t
@@ -133,9 +129,7 @@ function y(e) {
 															N.Zd(s.id);
 														});
 														let e = {};
-														null != r ? (e.section = S.jXE.MANAGE_ACCOUNTS_MODAL) : (e.page = S.Usc.LOGIN),
-															g.default.track(S.rMx.MULTI_ACCOUNT_ACCOUNT_REMOVE, { location: e }),
-															n(2, s.id);
+														null != r ? (e.section = S.jXE.MANAGE_ACCOUNTS_MODAL) : (e.page = S.Usc.LOGIN), g.default.track(S.rMx.MULTI_ACCOUNT_ACCOUNT_REMOVE, { location: e }), n(2, s.id);
 													})(),
 														null != t && t();
 												},
@@ -194,6 +188,4 @@ function T(e) {
 				)
 	});
 }
-((r = n || (n = {}))[(r.LOGIN_REQUIRED = 0)] = 'LOGIN_REQUIRED'),
-	(r[(r.SWITCHED = 1)] = 'SWITCHED'),
-	(r[(r.REMOVED = 2)] = 'REMOVED');
+((r = n || (n = {}))[(r.LOGIN_REQUIRED = 0)] = 'LOGIN_REQUIRED'), (r[(r.SWITCHED = 1)] = 'SWITCHED'), (r[(r.REMOVED = 2)] = 'REMOVED');

@@ -7,10 +7,7 @@ var r = n(708644);
 function i(e, t) {
 	for (var n = 0; n < t.length; n++) {
 		var r = t[n];
-		(r.enumerable = r.enumerable || !1),
-			(r.configurable = !0),
-			'value' in r && (r.writable = !0),
-			Object.defineProperty(e, r.key, r);
+		(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 	}
 }
 function a(e, t, n) {
@@ -59,10 +56,7 @@ var s = (function () {
 				key: 'leave',
 				value: function (e) {
 					var t = this.entered.length;
-					return (
-						(this.entered = (0, r.zu)(this.entered.filter(this.isNodeInDocument), e)),
-						t > 0 && 0 === this.entered.length
-					);
+					return (this.entered = (0, r.zu)(this.entered.filter(this.isNodeInDocument), e)), t > 0 && 0 === this.entered.length;
 				}
 			},
 			{

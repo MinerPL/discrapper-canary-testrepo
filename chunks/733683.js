@@ -77,9 +77,7 @@ class p extends (s = i.Component) {
 				color: _.Tooltip.Colors.BLACK,
 				tooltipClassName: m.foregroundTooltip,
 				children: [
-					(0, a.jsx)('div', {
-						children: T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_NUM_SUBSCRIPTIONS.format({ numSubscriptions: e })
-					}),
+					(0, a.jsx)('div', { children: T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_NUM_SUBSCRIPTIONS.format({ numSubscriptions: e }) }),
 					null != l && null != i
 						? (0, a.jsx)('div', {
 								className: m.tooltipMuted,

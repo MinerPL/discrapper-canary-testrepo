@@ -11,7 +11,7 @@ var i = n(481060),
 	o = n(316865);
 function l(e) {
 	let { activity: t, user: n, source: l, className: u, size: c, look: d, color: _, fullWidth: E, onAction: f } = e,
-		{ label: h, tooltip: p, loading: I, disabled: m, onClick: T } = (0, s.Ih)(t, n, l),
+		{ label: h, tooltip: p, loading: m, disabled: I, onClick: T } = (0, s.Ih)(t, n, l),
 		g = () => {
 			null == f || f(), T();
 		};
@@ -29,8 +29,8 @@ function l(e) {
 				onClick: g,
 				onMouseEnter: t,
 				onMouseLeave: n,
-				disabled: m,
-				submitting: I,
+				disabled: I,
+				submitting: m,
 				children: [
 					(0, r.jsx)(a.Z, {
 						width: 16,

@@ -14,16 +14,7 @@ var r = n(581883),
 	a = n(473092);
 function s() {
 	var e, t, n;
-	let i =
-		null ===
-			(n =
-				null === (t = r.Z.settings.privacy) || void 0 === t
-					? void 0
-					: null === (e = t.inappropriateConversationWarnings) || void 0 === e
-						? void 0
-						: e.value) ||
-		void 0 === n ||
-		n;
+	let i = null === (n = null === (t = r.Z.settings.privacy) || void 0 === t ? void 0 : null === (e = t.inappropriateConversationWarnings) || void 0 === e ? void 0 : e.value) || void 0 === n || n;
 	return (0, a.Lm)('safety_warnings_setting') && i;
 }
 function o(e) {

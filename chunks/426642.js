@@ -12,12 +12,7 @@ var r = n(692547),
 	o = n(752657),
 	c = n(689938),
 	d = n(18239);
-((s = a || (a = {}))[(s.TOO_BIG = 0)] = 'TOO_BIG'),
-	(s[(s.RATE_LIMIT = 1)] = 'RATE_LIMIT'),
-	(s[(s.TOO_MANY_EMOJI = 2)] = 'TOO_MANY_EMOJI'),
-	(s[(s.TOO_MANY_ANIMATED_EMOJI = 3)] = 'TOO_MANY_ANIMATED_EMOJI'),
-	(s[(s.WRONG_TYPE = 4)] = 'WRONG_TYPE'),
-	(s[(s.RESIZE_GIF = 5)] = 'RESIZE_GIF');
+((s = a || (a = {}))[(s.TOO_BIG = 0)] = 'TOO_BIG'), (s[(s.RATE_LIMIT = 1)] = 'RATE_LIMIT'), (s[(s.TOO_MANY_EMOJI = 2)] = 'TOO_MANY_EMOJI'), (s[(s.TOO_MANY_ANIMATED_EMOJI = 3)] = 'TOO_MANY_ANIMATED_EMOJI'), (s[(s.WRONG_TYPE = 4)] = 'WRONG_TYPE'), (s[(s.RESIZE_GIF = 5)] = 'RESIZE_GIF');
 t.Z = (e) => {
 	let { error: t } = e,
 		{ type: n, filename: s } = t,

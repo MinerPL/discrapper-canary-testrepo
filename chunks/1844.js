@@ -36,22 +36,13 @@ function p() {
 	for (let t of f) (null == e || new Date(t.startDate) > new Date(e)) && (e = t.startDate);
 	return e;
 }
-function I() {
+function m() {
 	var e, t, n;
-	h =
-		null !==
-			(n =
-				null === (t = s.Z.settings.userContent) || void 0 === t
-					? void 0
-					: null === (e = t.lastDismissedOutboundPromotionStartDate) || void 0 === e
-						? void 0
-						: e.value) && void 0 !== n
-			? n
-			: null;
+	h = null !== (n = null === (t = s.Z.settings.userContent) || void 0 === t ? void 0 : null === (e = t.lastDismissedOutboundPromotionStartDate) || void 0 === e ? void 0 : e.value) && void 0 !== n ? n : null;
 }
-class m extends (r = i.ZP.PersistedStore) {
+class I extends (r = i.ZP.PersistedStore) {
 	initialize(e) {
-		null != e && (u = e), this.waitFor(s.Z), this.syncWith([s.Z], I);
+		null != e && (u = e), this.waitFor(s.Z), this.syncWith([s.Z], m);
 	}
 	get outboundPromotions() {
 		return f;
@@ -87,16 +78,12 @@ class m extends (r = i.ZP.PersistedStore) {
 		return u;
 	}
 }
-o(m, 'displayName', 'PromotionsStore'),
-	o(m, 'persistKey', 'PromotionsPersistedStore'),
-	(t.Z = new m(a.Z, {
+o(I, 'displayName', 'PromotionsStore'),
+	o(I, 'persistKey', 'PromotionsPersistedStore'),
+	(t.Z = new I(a.Z, {
 		ACTIVE_OUTBOUND_PROMOTIONS_FETCH_SUCCESS: function (e) {
 			let { activeOutboundPromotions: t, consumedInboundPromotionId: n } = e;
-			(f = t),
-				(E = Date.now()),
-				(_ = !1),
-				!u.hasFetchedConsumedInboundPromotionId &&
-					((u.hasFetchedConsumedInboundPromotionId = !0), (u.consumedInboundPromotionId = n));
+			(f = t), (E = Date.now()), (_ = !1), !u.hasFetchedConsumedInboundPromotionId && ((u.hasFetchedConsumedInboundPromotionId = !0), (u.consumedInboundPromotionId = n));
 		},
 		ACTIVE_OUTBOUND_PROMOTIONS_FETCH: function () {
 			_ = !0;

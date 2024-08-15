@@ -27,11 +27,7 @@ async function m() {
 }
 function u(e) {
 	var t, n;
-	return null !==
-		(n = null !== (t = null == e ? void 0 : e.name) && void 0 !== t ? t : '' + (null == e ? void 0 : e.squad)) &&
-		void 0 !== n
-		? n
-		: '';
+	return null !== (n = null !== (t = null == e ? void 0 : e.name) && void 0 !== t ? t : '' + (null == e ? void 0 : e.squad)) && void 0 !== n ? n : '';
 }
 function d() {
 	return [

@@ -11,18 +11,9 @@ var s = n(120356),
 	o = n.n(s),
 	l = n(481060),
 	u = n(571068);
-((r = i || (i = {}))[(r.WARNING = 0)] = 'WARNING'),
-	(r[(r.INFO = 1)] = 'INFO'),
-	(r[(r.ERROR = 2)] = 'ERROR'),
-	(r[(r.POSITIVE = 3)] = 'POSITIVE');
+((r = i || (i = {}))[(r.WARNING = 0)] = 'WARNING'), (r[(r.INFO = 1)] = 'INFO'), (r[(r.ERROR = 2)] = 'ERROR'), (r[(r.POSITIVE = 3)] = 'POSITIVE');
 t.Z = function (e) {
-	let {
-			children: t,
-			messageType: n,
-			className: r,
-			textColor: i = 'text-normal',
-			textVariant: s = 'text-sm/medium'
-		} = e,
+	let { children: t, messageType: n, className: r, textColor: i = 'text-normal', textVariant: s = 'text-sm/medium' } = e,
 		c = (function (e) {
 			switch (e) {
 				case 0:

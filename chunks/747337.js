@@ -51,17 +51,16 @@ function o(e, t) {
 	var f = (n = (0, a.Vy)(7 - _ + t.wkst, 7));
 	f >= 4 ? ((f = 0), (o = E.yearlen + (0, a.Vy)(_ - t.wkst, 7))) : (o = u - f);
 	for (var h = Math.floor(Math.floor(o / 7) + (0, a.Vy)(o, 7) / 4), p = 0; p < t.byweekno.length; p++) {
-		var I = t.byweekno[p];
-		if ((I < 0 && (I += h + 1), !!(I > 0 && I <= h))) {
-			var m = void 0;
-			I > 1 ? ((m = f + (I - 1) * 7), f !== n && (m -= 7 - n)) : (m = f);
-			for (var T = 0; T < 7 && ((E.wnomask[m] = 1), m++, E.wdaymask[m] !== t.wkst); T++);
+		var m = t.byweekno[p];
+		if ((m < 0 && (m += h + 1), !!(m > 0 && m <= h))) {
+			var I = void 0;
+			m > 1 ? ((I = f + (m - 1) * 7), f !== n && (I -= 7 - n)) : (I = f);
+			for (var T = 0; T < 7 && ((E.wnomask[I] = 1), I++, E.wdaymask[I] !== t.wkst); T++);
 		}
 	}
 	if ((0, a.q9)(t.byweekno, 1)) {
-		var m = f + 7 * h;
-		if ((f !== n && (m -= 7 - n), m < u))
-			for (var p = 0; p < 7 && ((E.wnomask[m] = 1), (m += 1), E.wdaymask[m] !== t.wkst); p++);
+		var I = f + 7 * h;
+		if ((f !== n && (I -= 7 - n), I < u)) for (var p = 0; p < 7 && ((E.wnomask[I] = 1), (I += 1), E.wdaymask[I] !== t.wkst); p++);
 	}
 	if (f) {
 		var g = void 0;
@@ -73,7 +72,7 @@ function o(e, t) {
 				v = void 0;
 			A >= 4 ? ((A = 0), (v = N + (0, a.Vy)(S - t.wkst, 7))) : (v = u - f), (g = Math.floor(52 + (0, a.Vy)(v, 7) / 4));
 		}
-		if ((0, a.q9)(t.byweekno, g)) for (var m = 0; m < f; m++) E.wnomask[m] = 1;
+		if ((0, a.q9)(t.byweekno, g)) for (var I = 0; I < f; I++) E.wnomask[I] = 1;
 	}
 	return E;
 }

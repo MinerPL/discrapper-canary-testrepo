@@ -10,8 +10,7 @@ var r,
 	i,
 	a = n(652874),
 	s = n(731965);
-((r = i || (i = {}))[(r.ALL_CHANNELS_ACCESS = 0)] = 'ALL_CHANNELS_ACCESS'),
-	(r[(r.SOME_CHANNELS_ACCESS = 1)] = 'SOME_CHANNELS_ACCESS');
+((r = i || (i = {}))[(r.ALL_CHANNELS_ACCESS = 0)] = 'ALL_CHANNELS_ACCESS'), (r[(r.SOME_CHANNELS_ACCESS = 1)] = 'SOME_CHANNELS_ACCESS');
 let o = (0, a.Z)((e) => ({
 	listings: {},
 	setListing: (t, n) =>

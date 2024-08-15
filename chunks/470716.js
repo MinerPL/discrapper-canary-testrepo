@@ -58,28 +58,14 @@ var p = {
 		TITLE: 'title',
 		FRAGMENT: 'Symbol(react.fragment)'
 	},
-	I = {
+	m = {
 		rel: ['amphtml', 'canonical', 'alternate']
 	},
-	m = { type: ['application/ld+json'] },
+	I = { type: ['application/ld+json'] },
 	T = {
 		charset: '',
 		name: ['robots', 'description'],
-		property: [
-			'og:type',
-			'og:title',
-			'og:url',
-			'og:image',
-			'og:image:alt',
-			'og:description',
-			'twitter:url',
-			'twitter:title',
-			'twitter:description',
-			'twitter:image',
-			'twitter:image:alt',
-			'twitter:card',
-			'twitter:site'
-		]
+		property: ['og:type', 'og:title', 'og:url', 'og:image', 'og:image:alt', 'og:description', 'twitter:url', 'twitter:title', 'twitter:description', 'twitter:image', 'twitter:image:alt', 'twitter:card', 'twitter:site']
 	},
 	g = Object.keys(p).map(function (e) {
 		return p[e];
@@ -130,14 +116,7 @@ var p = {
 		var r = {};
 		return n
 			.filter(function (t) {
-				return (
-					!!Array.isArray(t[e]) ||
-					(void 0 !== t[e] &&
-						console &&
-						'function' == typeof console.warn &&
-						console.warn('Helmet: ' + e + ' should be of type "Array". Instead found type "' + typeof t[e] + '"'),
-					!1)
-				);
+				return !!Array.isArray(t[e]) || (void 0 !== t[e] && console && 'function' == typeof console.warn && console.warn('Helmet: ' + e + ' should be of type "Array". Instead found type "' + typeof t[e] + '"'), !1);
 			})
 			.map(function (t) {
 				return t[e];
@@ -149,11 +128,7 @@ var p = {
 					for (var n, a = Object.keys(e), s = 0; s < a.length; s += 1) {
 						var o = a[s],
 							l = o.toLowerCase();
-						-1 === t.indexOf(l) ||
-							('rel' === n && 'canonical' === e[n].toLowerCase()) ||
-							('rel' === l && 'stylesheet' === e[l].toLowerCase()) ||
-							(n = l),
-							-1 === t.indexOf(o) || ('innerHTML' !== o && 'cssText' !== o && 'itemprop' !== o) || (n = o);
+						-1 === t.indexOf(l) || ('rel' === n && 'canonical' === e[n].toLowerCase()) || ('rel' === l && 'stylesheet' === e[l].toLowerCase()) || (n = l), -1 === t.indexOf(o) || ('innerHTML' !== o && 'cssText' !== o && 'itemprop' !== o) || (n = o);
 					}
 					if (!n || !e[n]) return !1;
 					var u = e[n].toLowerCase();
@@ -187,8 +162,7 @@ var p = {
 					function (e, n) {
 						return (
 							!(function (e, t) {
-								for (var n = Object.keys(e), r = 0; r < n.length; r += 1)
-									if (t[n[r]] && t[n[r]].includes(e[n[r]])) return !0;
+								for (var n = Object.keys(e), r = 0; r < n.length; r += 1) if (t[n[r]] && t[n[r]].includes(e[n[r]])) return !0;
 								return !1;
 							})(n, t)
 								? e.default.push(n)
@@ -209,17 +183,7 @@ var p = {
 	},
 	b = [p.NOSCRIPT, p.SCRIPT, p.STYLE],
 	M = function (e, t) {
-		return (
-			void 0 === t && (t = !0),
-			!1 === t
-				? String(e)
-				: String(e)
-						.replace(/&/g, '&amp;')
-						.replace(/</g, '&lt;')
-						.replace(/>/g, '&gt;')
-						.replace(/"/g, '&quot;')
-						.replace(/'/g, '&#x27;')
-		);
+		return void 0 === t && (t = !0), !1 === t ? String(e) : String(e).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#x27;');
 	},
 	P = function (e) {
 		return Object.keys(e).reduce(function (t, n) {
@@ -242,9 +206,7 @@ var p = {
 			return (
 				Object.keys(t).forEach(function (e) {
 					var n = S[e] || e;
-					'innerHTML' === n || 'cssText' === n
-						? (a.dangerouslySetInnerHTML = { __html: t.innerHTML || t.cssText })
-						: (a[n] = t[e]);
+					'innerHTML' === n || 'cssText' === n ? (a.dangerouslySetInnerHTML = { __html: t.innerHTML || t.cssText }) : (a[n] = t[e]);
 				}),
 				r.createElement(e, a)
 			);
@@ -256,26 +218,11 @@ var p = {
 				return {
 					toComponent: function () {
 						var e, n, i, a;
-						return (
-							(n = t.titleAttributes),
-							((i = { key: (e = t.title) })['data-rh'] = !0),
-							(a = U(n, i)),
-							[r.createElement(p.TITLE, a, e)]
-						);
+						return (n = t.titleAttributes), ((i = { key: (e = t.title) })['data-rh'] = !0), (a = U(n, i)), [r.createElement(p.TITLE, a, e)];
 					},
 					toString: function () {
 						var r, i, a, s, o, l;
-						return (
-							(r = e),
-							(i = t.title),
-							(a = t.titleAttributes),
-							(s = n),
-							(o = P(a)),
-							(l = y(i)),
-							o
-								? '<' + r + ' data-rh="true" ' + o + '>' + M(l, s) + '</' + r + '>'
-								: '<' + r + ' data-rh="true">' + M(l, s) + '</' + r + '>'
-						);
+						return (r = e), (i = t.title), (a = t.titleAttributes), (s = n), (o = P(a)), (l = y(i)), o ? '<' + r + ' data-rh="true" ' + o + '>' + M(l, s) + '</' + r + '>' : '<' + r + ' data-rh="true">' + M(l, s) + '</' + r + '>';
 					}
 				};
 			case 'bodyAttributes':
@@ -348,8 +295,8 @@ var p = {
 					(h = E.scriptTags),
 					(g = E.encode),
 					(S = D(E.metaTags, T)),
-					(A = D(f, I)),
-					(N = D(h, m)),
+					(A = D(f, m)),
+					(N = D(h, I)),
 					{
 						priorityMethods: {
 							toComponent: function () {
@@ -465,15 +412,7 @@ var Y = function (e, t) {
 				t.length &&
 				t.forEach(function (t) {
 					var r = document.createElement(e);
-					for (var i in t)
-						Object.prototype.hasOwnProperty.call(t, i) &&
-							('innerHTML' === i
-								? (r.innerHTML = t.innerHTML)
-								: 'cssText' === i
-									? r.styleSheet
-										? (r.styleSheet.cssText = t.cssText)
-										: r.appendChild(document.createTextNode(t.cssText))
-									: r.setAttribute(i, void 0 === t[i] ? '' : t[i]));
+					for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && ('innerHTML' === i ? (r.innerHTML = t.innerHTML) : 'cssText' === i ? (r.styleSheet ? (r.styleSheet.cssText = t.cssText) : r.appendChild(document.createTextNode(t.cssText))) : r.setAttribute(i, void 0 === t[i] ? '' : t[i]));
 					r.setAttribute('data-rh', 'true'),
 						a.some(function (e, t) {
 							return (n = t), r.isEqualNode(e);
@@ -496,11 +435,7 @@ var Y = function (e, t) {
 	j = function (e, t) {
 		var n = document.getElementsByTagName(e)[0];
 		if (n) {
-			for (
-				var r = n.getAttribute('data-rh'), i = r ? r.split(',') : [], a = [].concat(i), s = Object.keys(t), o = 0;
-				o < s.length;
-				o += 1
-			) {
+			for (var r = n.getAttribute('data-rh'), i = r ? r.split(',') : [], a = [].concat(i), s = Object.keys(t), o = 0; o < s.length; o += 1) {
 				var l = s[o],
 					u = t[l] || '';
 				n.getAttribute(l) !== u && n.setAttribute(l, u), -1 === i.indexOf(l) && i.push(l);
@@ -508,9 +443,7 @@ var Y = function (e, t) {
 				-1 !== c && a.splice(c, 1);
 			}
 			for (var d = a.length - 1; d >= 0; d -= 1) n.removeAttribute(a[d]);
-			i.length === a.length
-				? n.removeAttribute('data-rh')
-				: n.getAttribute('data-rh') !== s.join(',') && n.setAttribute('data-rh', s.join(','));
+			i.length === a.length ? n.removeAttribute('data-rh') : n.getAttribute('data-rh') !== s.join(',') && n.setAttribute('data-rh', s.join(','));
 		}
 	},
 	W = function (e, t) {
@@ -526,12 +459,7 @@ var Y = function (e, t) {
 			d = e.styleTags,
 			_ = e.title,
 			E = e.titleAttributes;
-		j(p.BODY, e.bodyAttributes),
-			j(p.HTML, a),
-			(n = _),
-			(r = E),
-			void 0 !== n && document.title !== n && (document.title = y(n)),
-			j(p.TITLE, r);
+		j(p.BODY, e.bodyAttributes), j(p.HTML, a), (n = _), (r = E), void 0 !== n && document.title !== n && (document.title = y(n)), j(p.TITLE, r);
 		var f = {
 				baseTag: Y(p.BASE, i),
 				linkTags: Y(p.LINK, s),
@@ -541,15 +469,15 @@ var Y = function (e, t) {
 				styleTags: Y(p.STYLE, d)
 			},
 			h = {},
-			I = {};
+			m = {};
 		Object.keys(f).forEach(function (e) {
 			var t = f[e],
 				n = t.newTags,
 				r = t.oldTags;
-			n.length && (h[e] = n), r.length && (I[e] = f[e].oldTags);
+			n.length && (h[e] = n), r.length && (m[e] = f[e].oldTags);
 		}),
 			t && t(),
-			u(e, h, I);
+			u(e, h, m);
 	},
 	K = null,
 	z = (function (e) {
@@ -654,25 +582,14 @@ var q = ['children'],
 					case p.STYLE:
 						return { cssText: t };
 					default:
-						throw Error(
-							'<' +
-								e.type +
-								' /> elements are self-closing and can not contain children. Refer to our API for more information.'
-						);
+						throw Error('<' + e.type + ' /> elements are self-closing and can not contain children. Refer to our API for more information.');
 				}
 			}),
 			(n.flattenArrayTypeChildren = function (e) {
 				var t,
 					n = e.child,
 					r = e.arrayTypeChildren;
-				return _(
-					{},
-					r,
-					(((t = {})[n.type] = [].concat(r[n.type] || [], [
-						_({}, e.newChildProps, this.mapNestedChildrenToProps(n, e.nestedChildren))
-					])),
-					t)
-				);
+				return _({}, r, (((t = {})[n.type] = [].concat(r[n.type] || [], [_({}, e.newChildProps, this.mapNestedChildrenToProps(n, e.nestedChildren))])), t));
 			}),
 			(n.mapObjectTypeChildren = function (e) {
 				var t,
@@ -708,13 +625,7 @@ var q = ['children'],
 						g.some(function (t) {
 							return e.type === t;
 						}),
-						'function' == typeof e.type
-							? 'You may be attempting to nest <Helmet> components within each other, which is not allowed. Refer to our API for more information.'
-							: 'Only elements types ' +
-									g.join(', ') +
-									' are allowed. Helmet does not support rendering <' +
-									e.type +
-									'> elements. Refer to our API for more information.'
+						'function' == typeof e.type ? 'You may be attempting to nest <Helmet> components within each other, which is not allowed. Refer to our API for more information.' : 'Only elements types ' + g.join(', ') + ' are allowed. Helmet does not support rendering <' + e.type + '> elements. Refer to our API for more information.'
 					),
 					u()(
 						!t ||
@@ -723,13 +634,7 @@ var q = ['children'],
 								!t.some(function (e) {
 									return 'string' != typeof e;
 								})),
-						'Helmet expects a string as a child of <' +
-							e.type +
-							'>. Did you forget to wrap your children in braces? ( <' +
-							e.type +
-							'>{``}</' +
-							e.type +
-							'> ) Refer to our API for more information.'
+						'Helmet expects a string as a child of <' + e.type + '>. Did you forget to wrap your children in braces? ( <' + e.type + '>{``}</' + e.type + '> ) Refer to our API for more information.'
 					),
 					!0
 				);

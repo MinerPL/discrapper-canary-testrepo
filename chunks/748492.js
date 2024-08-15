@@ -27,8 +27,8 @@ var i = n(120356),
 	f = n(189771),
 	h = n(560688),
 	p = n(618158),
-	I = n(922745),
-	m = n(871499),
+	m = n(922745),
+	I = n(871499),
 	T = n(402113),
 	g = n(800965),
 	S = n(157813),
@@ -43,7 +43,7 @@ var i = n(120356),
 	L = n(582920);
 function b(e) {
 	let { onClick: t, isExpanded: n } = e;
-	return (0, r.jsx)(m.Z, {
+	return (0, r.jsx)(I.Z, {
 		iconClassName: a()(D.arrowIcon, { [D.arrowIconExpanded]: n }),
 		onClick: t,
 		iconComponent: o.ChevronSmallDownIcon,
@@ -52,16 +52,7 @@ function b(e) {
 }
 function M(e) {
 	var t, n;
-	let {
-			channel: i,
-			applicationId: a,
-			onMouseDown: o,
-			onMouseMove: m,
-			onMouseLeave: S,
-			onJumpToChannel: v,
-			idle: y,
-			selectedParticipant: b
-		} = e,
+	let { channel: i, applicationId: a, onMouseDown: o, onMouseMove: I, onMouseLeave: S, onJumpToChannel: v, idle: y, selectedParticipant: b } = e,
 		M = (0, u.bp)() === R.IlC.POPOUT,
 		P = (0, s.e7)([N.Z], () => N.Z.isVideoEnabled()),
 		U = (0, s.e7)([N.Z], () => Object.values(N.Z.getVideoDevices())[0]),
@@ -73,13 +64,13 @@ function M(e) {
 		};
 	return (0, r.jsxs)('div', {
 		className: L.videoControls,
-		onMouseMove: m,
+		onMouseMove: I,
 		onMouseDown: o,
 		onMouseLeave: S,
 		children: [
 			(0, r.jsx)('div', {
 				className: L.topControls,
-				children: (0, r.jsx)(I.r, {
+				children: (0, r.jsx)(m.r, {
 					idle: y,
 					title: null !== (n = null == x ? void 0 : x.name) && void 0 !== n ? n : i.name,
 					onJumpToChannel: v,
@@ -147,16 +138,7 @@ function M(e) {
 }
 function P(e) {
 	var t;
-	let {
-			channel: n,
-			applicationId: i,
-			onMouseDown: s,
-			onMouseMove: l,
-			onMouseLeave: u,
-			onJumpToChannel: d,
-			idle: _,
-			users: E
-		} = e,
+	let { channel: n, applicationId: i, onMouseDown: s, onMouseMove: l, onMouseLeave: u, onJumpToChannel: d, idle: _, users: E } = e,
 		f = (0, c.Z)([i])[0];
 	return (0, r.jsxs)(o.Clickable, {
 		className: a()(L.videoControls, L.videoControlsTextActivity),
@@ -167,7 +149,7 @@ function P(e) {
 		children: [
 			(0, r.jsx)('div', {
 				className: a()(L.topControls),
-				children: (0, r.jsx)(I.r, {
+				children: (0, r.jsx)(m.r, {
 					idle: _,
 					title: null !== (t = null == f ? void 0 : f.name) && void 0 !== t ? t : n.name,
 					onJumpToChannel: d,
@@ -207,19 +189,8 @@ function U(e) {
 }
 function w(e) {
 	var t;
-	let {
-			onMouseDown: n,
-			onMouseMove: i,
-			onMouseLeave: s,
-			showControls: l,
-			applicationId: u,
-			channel: d,
-			onJumpToChannel: _,
-			onToggleHeight: E,
-			isExpanded: f,
-			hideExpandedButton: h
-		} = e,
-		m = (0, c.Z)([u])[0];
+	let { onMouseDown: n, onMouseMove: i, onMouseLeave: s, showControls: l, applicationId: u, channel: d, onJumpToChannel: _, onToggleHeight: E, isExpanded: f, hideExpandedButton: h } = e,
+		I = (0, c.Z)([u])[0];
 	return (0, r.jsx)('div', {
 		className: D.pipHeader,
 		onMouseMove: i,
@@ -237,9 +208,9 @@ function w(e) {
 				l &&
 					(0, r.jsxs)(r.Fragment, {
 						children: [
-							(0, r.jsx)(I.r, {
+							(0, r.jsx)(m.r, {
 								idle: !l,
-								title: null !== (t = null == m ? void 0 : m.name) && void 0 !== t ? t : d.name,
+								title: null !== (t = null == I ? void 0 : I.name) && void 0 !== t ? t : d.name,
 								onJumpToChannel: _,
 								preventIdleComponent: p.Z
 							}),

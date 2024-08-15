@@ -53,12 +53,7 @@ class h extends a.PureComponent {
 			}),
 			E(this, 'handleClose', () => {
 				let e = l.Z.getChannelId();
-				this.props.markAsDismissed(d.L.UNKNOWN),
-					null != e &&
-						r.Z.sendBotMessage(
-							e,
-							u.Z.Messages.HOW_TO_INVITE_OTHERS.format({ invitePeople: u.Z.Messages.INVITE_PEOPLE })
-						);
+				this.props.markAsDismissed(d.L.UNKNOWN), null != e && r.Z.sendBotMessage(e, u.Z.Messages.HOW_TO_INVITE_OTHERS.format({ invitePeople: u.Z.Messages.INVITE_PEOPLE }));
 			});
 	}
 }

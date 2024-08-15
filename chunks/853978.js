@@ -109,8 +109,7 @@ var n = {
 	'voucher.introduction.doku': 'Bedankt voor uw aankoop. Gebruik de volgende informatie om uw betaling te voltooien.',
 	'voucher.shopperName': 'Klantnaam',
 	'voucher.merchantName': 'Verkoper',
-	'voucher.introduction.econtext':
-		'Bedankt voor uw aankoop. Gebruik de volgende informatie om uw betaling te voltooien.',
+	'voucher.introduction.econtext': 'Bedankt voor uw aankoop. Gebruik de volgende informatie om uw betaling te voltooien.',
 	'voucher.telephoneNumber': 'Telefoonnummer',
 	'voucher.shopperReference': 'Klant referentie',
 	'voucher.collectionInstitutionNumber': 'Nummer ophaallocatie',
@@ -171,8 +170,7 @@ var n = {
 	'blik.invalid': 'Voer 6 cijfers in',
 	'blik.code': '6-cijferige code',
 	'blik.help': 'Haal de code op in uw bankapp.',
-	'swish.pendingMessage':
-		'Nadat u hebt gescand, kan de status maximaal 10 minuten in behandeling zijn. Als u binnen deze periode opnieuw probeert te betalen, kunnen er meerdere keren kosten in rekening worden gebracht.',
+	'swish.pendingMessage': 'Nadat u hebt gescand, kan de status maximaal 10 minuten in behandeling zijn. Als u binnen deze periode opnieuw probeert te betalen, kunnen er meerdere keren kosten in rekening worden gebracht.',
 	'field.valid': 'Geldig veld',
 	'field.invalid': 'Veld niet geldig',
 	'error.va.gen.01': 'Onvolledig veld',
@@ -208,8 +206,7 @@ var n = {
 	'bankTransfer.iban': 'IBAN',
 	'bankTransfer.bic': 'BIC',
 	'bankTransfer.reference': 'Referentie',
-	'bankTransfer.introduction':
-		'Ga door om een nieuwe overschrijving aan te maken. U kunt de gegevens in het volgende scherm gebruiken om deze betaling af te ronden.',
+	'bankTransfer.introduction': 'Ga door om een nieuwe overschrijving aan te maken. U kunt de gegevens in het volgende scherm gebruiken om deze betaling af te ronden.',
 	'bankTransfer.instructions': 'Bedankt voor uw aankoop. Gebruik de volgende informatie om uw betaling te voltooien.',
 	'bacs.accountHolderName': 'Naam bankrekeninghouder',
 	'bacs.accountHolderName.invalid': 'Ongeldige naam bankrekeninghouder',
@@ -218,8 +215,7 @@ var n = {
 	'bacs.bankLocationId': 'Bankcode',
 	'bacs.bankLocationId.invalid': 'Ongeldige bankcode',
 	'bacs.consent.amount': 'Ik ga ermee akkoord dat het bovengenoemde bedrag van mijn bankrekening wordt afgeschreven.',
-	'bacs.consent.account':
-		"Ik bevestig dat de rekening op mijn naam staat en dat ik de enige ondertekenaar ben die toestemming kan geven voor automatische incasso's vanaf deze rekening.",
+	'bacs.consent.account': "Ik bevestig dat de rekening op mijn naam staat en dat ik de enige ondertekenaar ben die toestemming kan geven voor automatische incasso's vanaf deze rekening.",
 	edit: 'Bewerken',
 	'bacs.confirm': 'Bevestigen en betalen',
 	'bacs.result.introduction': 'Download uw machtiging automatische incasso',
@@ -252,8 +248,7 @@ var n = {
 	'upi.vpaWaitingMessage': 'Open je UPI-app om de betaling te bevestigen',
 	'upi.modeSelection': 'Maak een selectie over hoe u UPI wilt gebruiken.',
 	'onlineBanking.termsAndConditions': 'Door verder te gaan gaat u akkoord met de %#algemene voorwaarden%#',
-	'onlineBankingPL.termsAndConditions':
-		'Door verder te gaan stemt u in met de %#richtlijnen%# en %#informatieverplichting%# van Przelewy24',
+	'onlineBankingPL.termsAndConditions': 'Door verder te gaan stemt u in met de %#richtlijnen%# en %#informatieverplichting%# van Przelewy24',
 	'ctp.loading.poweredByCtp': 'Mogelijk gemaakt door Click to Pay',
 	'ctp.loading.intro': 'We controleren of u opgeslagen kaarten heeft bij Click to Pay...',
 	'ctp.login.title': 'Ga verder naar Click to Pay',
@@ -276,14 +271,12 @@ var n = {
 	'ctp.manualCardEntry': 'Handmatige kaartinvoer',
 	'ctp.aria.infoModalButton': 'Wat is Click to Pay?',
 	'ctp.infoPopup.title': 'Met Click to Pay betaalt u nu ook contactloos online',
-	'ctp.infoPopup.subtitle':
-		'Een snelle en veilige betaalmethode, ondersteund door Mastercard, Visa en andere betaalkaarten.',
+	'ctp.infoPopup.subtitle': 'Een snelle en veilige betaalmethode, ondersteund door Mastercard, Visa en andere betaalkaarten.',
 	'ctp.infoPopup.benefit1': 'Click to Pay maakt gebruik van versleuteling om uw informatie veilig te houden',
 	'ctp.infoPopup.benefit2': 'Gebruik het bij winkeliers over de hele wereld',
 	'ctp.infoPopup.benefit3': 'Eén keer instellen voor probleemloze betalingen',
 	'ctp.errors.AUTH_INVALID': 'Authenticatie ongeldig',
-	'ctp.errors.NOT_FOUND':
-		'Geen account gevonden, voer een geldig e-mailadres in of ga door met het handmatig invoeren van kaarten',
+	'ctp.errors.NOT_FOUND': 'Geen account gevonden, voer een geldig e-mailadres in of ga door met het handmatig invoeren van kaarten',
 	'ctp.errors.ID_FORMAT_UNSUPPORTED': 'Formaat wordt niet ondersteund',
 	'ctp.errors.FRAUD': 'Gebruikersaccount vergrendeld of uitgeschakeld',
 	'ctp.errors.CONSUMER_ID_MISSING': 'Identiteit van de consument ontbreekt in het verzoek',
@@ -304,7 +297,6 @@ var n = {
 	'consent.checkbox.invalid': 'Je moet akkoord gaan met de algemene voorwaarden',
 	'form.instruction': 'Alle velden zijn verplicht, tenzij anders aangegeven.',
 	'trustly.descriptor': 'Directe bankbetaling',
-	'trustly.description1':
-		'Betaal direct vanaf uw voorkeursbankrekening, ondersteund door beveiliging op het niveau van de bank ',
+	'trustly.description1': 'Betaal direct vanaf uw voorkeursbankrekening, ondersteund door beveiliging op het niveau van de bank ',
 	'trustly.description2': 'Geen kaarten, geen app-download, geen registratie'
 };

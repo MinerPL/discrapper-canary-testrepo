@@ -45,9 +45,7 @@ function Z(e) {
 				children: [
 					(0, i.jsx)(d.FormTitle, {
 						tag: d.FormTitleTags.H4,
-						children: t
-							? L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_TITLE_INVENTORY
-							: L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_TITLE_GUILD
+						children: t ? L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_TITLE_INVENTORY : L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_TITLE_GUILD
 					}),
 					(0, i.jsx)(d.ModalCloseButton, { onClick: a })
 				]
@@ -64,9 +62,7 @@ function Z(e) {
 										subscriptionManagementLink: (0, x.JE)(s.paymentGateway, 'SUBSCRIPTION_MANAGEMENT')
 									})
 								: t
-									? L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BODY_INVENTORY.format({
-											endDate: s.currentPeriodEnd
-										})
+									? L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BODY_INVENTORY.format({ endDate: s.currentPeriodEnd })
 									: L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BODY_GUILD.format({ endDate: s.currentPeriodEnd })
 					}),
 					(0, i.jsx)(C.Z, { fromBoostCancelModal: !0 })
@@ -125,8 +121,7 @@ function j(e) {
 			let e = h.Z.get(a.planId);
 			return {
 				premiumSubscriptionPlan: e,
-				premiumGuildPlan:
-					null != e ? h.Z.getForSkuAndInterval((0, x.Wz)(D.Si.GUILD), e.interval, e.intervalCount) : null
+				premiumGuildPlan: null != e ? h.Z.getForSkuAndInterval((0, x.Wz)(D.Si.GUILD), e.interval, e.intervalCount) : null
 			};
 		}),
 		{ analyticsLocations: j } = (0, I.ZP)(),
@@ -138,14 +133,7 @@ function j(e) {
 			analyticsLocations: j,
 			analyticsLocation: u.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_CURRENT_INVOICE_PREVIEW
 		}),
-		U =
-			null != Z
-				? (0, x.Zx)(
-						a,
-						null !== (n = null === (s = p[0]) || void 0 === s ? void 0 : s.quantity) && void 0 !== n ? n : 0,
-						Z.id
-					)
-				: null,
+		U = null != Z ? (0, x.Zx)(a, null !== (n = null === (s = p[0]) || void 0 === s ? void 0 : s.quantity) && void 0 !== n ? n : 0, Z.id) : null,
 		[G] = (0, S.ED)({
 			subscriptionId: a.id,
 			items: U,
@@ -178,19 +166,13 @@ function j(e) {
 			(0, i.jsxs)(d.ModalContent, {
 				className: b.body,
 				children: [
-					(0, i.jsx)('div', {
-						children: L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_PREVIEW.format({
-							endDate: G.subscriptionPeriodStart
-						})
-					}),
+					(0, i.jsx)('div', { children: L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_PREVIEW.format({ endDate: G.subscriptionPeriodStart }) }),
 					(0, i.jsxs)(m.PO, {
 						className: b.invoiceTable,
 						children: [
 							(0, i.jsx)(m.q9, { children: L.Z.Messages.PREMIUM_SUBSCRIPTION_UPDATES }),
 							(0, i.jsx)(m.R$, {
-								label: L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_INVOICE_SUBSCRIPTION_CANCELLED.format({
-									subscriptionCount: 1
-								}),
+								label: L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_INVOICE_SUBSCRIPTION_CANCELLED.format({ subscriptionCount: 1 }),
 								value: (0, M.og)((0, M.T4)(V, a.currency), Y, w),
 								className: b.invoiceCancelRow
 							}),
@@ -248,12 +230,7 @@ function B(e) {
 			}),
 			(0, i.jsxs)(d.ModalContent, {
 				className: b.body,
-				children: [
-					(0, i.jsx)('div', { className: b.cancelImage }),
-					(0, i.jsx)('div', {
-						children: L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CONFIRM_BODY.format({ endDate: s.currentPeriodEnd })
-					})
-				]
+				children: [(0, i.jsx)('div', { className: b.cancelImage }), (0, i.jsx)('div', { children: L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CONFIRM_BODY.format({ endDate: s.currentPeriodEnd }) })]
 			}),
 			(0, i.jsx)(d.ModalFooter, {
 				children: (0, i.jsx)(d.Button, {

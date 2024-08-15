@@ -27,19 +27,9 @@ class s extends r.Z {
 		});
 	}
 	getName(e) {
-		return null != this.name
-			? this.name
-			: this.id === e
-				? i.Z.Messages.APPLICATION_BRANCH_NAME_MASTER
-				: i.Z.Messages.APPLICATION_BRANCH_NAME_UNKNOWN;
+		return null != this.name ? this.name : this.id === e ? i.Z.Messages.APPLICATION_BRANCH_NAME_MASTER : i.Z.Messages.APPLICATION_BRANCH_NAME_UNKNOWN;
 	}
 	constructor(e) {
-		super(),
-			a(this, 'id', void 0),
-			a(this, 'liveBuildId', void 0),
-			a(this, 'name', void 0),
-			(this.id = e.id),
-			(this.liveBuildId = e.liveBuildId),
-			(this.name = e.name);
+		super(), a(this, 'id', void 0), a(this, 'liveBuildId', void 0), a(this, 'name', void 0), (this.id = e.id), (this.liveBuildId = e.liveBuildId), (this.name = e.name);
 	}
 }

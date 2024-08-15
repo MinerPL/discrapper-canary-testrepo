@@ -12,8 +12,8 @@ var r,
 	f = n(314897),
 	h = n(981631),
 	p = n(65154);
-let I = Date.now(),
-	m = !1,
+let m = Date.now(),
+	I = !1,
 	T = !1,
 	g = !1,
 	S = !1,
@@ -22,19 +22,19 @@ function N() {
 	return g || S || ((0, E.isAndroid)() && A);
 }
 function v() {
-	Date.now() - I > h.OSm || N()
-		? m ||
+	Date.now() - m > h.OSm || N()
+		? I ||
 			l.Z.dispatch({
 				type: 'IDLE',
 				idle: !0,
-				idleSince: I
+				idleSince: m
 			})
-		: m &&
+		: I &&
 			l.Z.dispatch({
 				type: 'IDLE',
 				idle: !1
 			}),
-		Date.now() - I > Math.min(d.CM.getSetting() * _.Z.Millis.SECOND, h.OSm) || N()
+		Date.now() - m > Math.min(d.CM.getSetting() * _.Z.Millis.SECOND, h.OSm) || N()
 			? T ||
 				l.Z.dispatch({
 					type: 'AFK',
@@ -51,15 +51,9 @@ function v() {
 		? (!(function e() {
 				var t;
 				let n = (t) => {
-					(I = Math.max(Date.now() - t, I)), v(), setTimeout(e, 10 * _.Z.Millis.SECOND);
+					(m = Math.max(Date.now() - t, m)), v(), setTimeout(e, 10 * _.Z.Millis.SECOND);
 				};
-				if (
-					(null === c.Z || void 0 === c.Z
-						? void 0
-						: null === (t = c.Z.remotePowerMonitor) || void 0 === t
-							? void 0
-							: t.getSystemIdleTimeMs) != null
-				) {
+				if ((null === c.Z || void 0 === c.Z ? void 0 : null === (t = c.Z.remotePowerMonitor) || void 0 === t ? void 0 : t.getSystemIdleTimeMs) != null) {
 					let e = c.Z.remotePowerMonitor.getSystemIdleTimeMs();
 					e instanceof Promise ? e.then(n) : n(e);
 				}
@@ -81,12 +75,12 @@ function O(e) {
 	let { timestamp: t, type: n } = e,
 		r = 'OVERLAY_SET_NOT_IDLE' === n && null != t;
 	return (
-		(!r || !(t <= I)) &&
-		((I = r ? t : Date.now()),
+		(!r || !(t <= m)) &&
+		((m = r ? t : Date.now()),
 		__OVERLAY__
 			? l.Z.dispatch({
 					type: 'OVERLAY_SET_NOT_IDLE',
-					timestamp: I
+					timestamp: m
 				})
 			: v(),
 		!1)
@@ -94,13 +88,13 @@ function O(e) {
 }
 class R extends (s = o.ZP.Store) {
 	isIdle() {
-		return m;
+		return I;
 	}
 	isAFK() {
 		return T;
 	}
 	getIdleSince() {
-		return m ? I : null;
+		return I ? m : null;
 	}
 }
 (a = 'IdleStore'),
@@ -114,7 +108,7 @@ class R extends (s = o.ZP.Store) {
 		: (r[i] = a),
 	(t.Z = new R(l.Z, {
 		IDLE: function (e) {
-			m = e.idle;
+			I = e.idle;
 		},
 		AFK: function (e) {
 			T = e.afk;
@@ -125,7 +119,7 @@ class R extends (s = o.ZP.Store) {
 		},
 		APP_STATE_UPDATE: function (e) {
 			let { state: t } = e;
-			return (A = t === h.$7l.BACKGROUND), (I = Date.now()), v(), !1;
+			return (A = t === h.$7l.BACKGROUND), (m = Date.now()), v(), !1;
 		},
 		OVERLAY_SET_NOT_IDLE: O,
 		CHANNEL_SELECT: O,

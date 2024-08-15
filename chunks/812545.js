@@ -14,9 +14,7 @@ function r(e) {
 		r = (0, t.e7)([i.Z], () => i.Z.getFollowerStatsForChannel(e), [e]);
 	return (
 		l.useEffect(() => {
-			(null == r || Date.now() - r.lastFetched > a) && !s
-				? (n(!0), o.Z.fetchChannelFollowerStats(e))
-				: null != r && s && n(!1);
+			(null == r || Date.now() - r.lastFetched > a) && !s ? (n(!0), o.Z.fetchChannelFollowerStats(e)) : null != r && s && n(!1);
 		}, [e, r, s]),
 		[r, s]
 	);

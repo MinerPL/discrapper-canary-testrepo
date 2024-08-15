@@ -2,20 +2,7 @@ var a = n(799761),
 	i = {
 		narrow: ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'],
 		abbreviated: ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'],
-		wide: [
-			'Januar',
-			'Februar',
-			'März',
-			'April',
-			'Mai',
-			'Juni',
-			'Juli',
-			'August',
-			'September',
-			'Oktober',
-			'November',
-			'Dezember'
-		]
+		wide: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember']
 	},
 	o = {
 		narrow: i.narrow,

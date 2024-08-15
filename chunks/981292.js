@@ -35,14 +35,7 @@ function u(e) {
 						i = () => {
 							var e, n;
 							let r = null === (e = _.current) || void 0 === e ? void 0 : e.get(t);
-							null == r ||
-								(2 === r.state
-									? (null === (n = _.current) || void 0 === n || n.delete(t),
-										null != u ? (clearTimeout(c.current), (c.current = setTimeout(() => d({}), u))) : d({}))
-									: __DEV__ &&
-										console.warn(
-											"SimpleTransitionGroup.cleanUp: Attempted to remove an item that isn't yeetable: ".concat(t)
-										));
+							null == r || (2 === r.state ? (null === (n = _.current) || void 0 === n || n.delete(t), null != u ? (clearTimeout(c.current), (c.current = setTimeout(() => d({}), u))) : d({})) : __DEV__ && console.warn("SimpleTransitionGroup.cleanUp: Attempted to remove an item that isn't yeetable: ".concat(t)));
 						},
 						a = n(t, e, r, i);
 					s = {

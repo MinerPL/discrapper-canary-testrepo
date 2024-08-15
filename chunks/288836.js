@@ -57,8 +57,7 @@ let a = ['XBOX', 'PLAYSTATION', 'SWITCH', 'PC'],
 			dropsNoticeBannerDurationDays: 3,
 			articleUrl: r,
 			messages: {
-				claimTip: () =>
-					i.Z.Messages.FORTNITE_REDEMPTION_TIP.format({ learnMoreUrl: 'https://discord.com/blog/fortnite-quest' }),
+				claimTip: () => i.Z.Messages.FORTNITE_REDEMPTION_TIP.format({ learnMoreUrl: 'https://discord.com/blog/fortnite-quest' }),
 				giftInfo: () =>
 					i.Z.Messages.FORTNITE_GIFT_INVENTORY_INFO.format({
 						guardOutfitName: i.Z.Messages.FORNITE_GUARD_OUTPUT,

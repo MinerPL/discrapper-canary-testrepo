@@ -15,15 +15,7 @@ var r = n(735250),
 n(877452);
 var d = n(541725);
 function _(e) {
-	let {
-			value: t = s()().local(),
-			minDate: n,
-			maxDate: a,
-			onSelect: o,
-			calendarClassName: _,
-			autoFocus: E,
-			onClickOutside: f
-		} = e,
+	let { value: t = s()().local(), minDate: n, maxDate: a, onSelect: o, calendarClassName: _, autoFocus: E, onClickOutside: f } = e,
 		h = i.useCallback(
 			(e, t) => {
 				null == o || o(s()(e), t);
@@ -31,8 +23,8 @@ function _(e) {
 			[o]
 		),
 		p = i.useMemo(() => t.toDate(), [t]),
-		I = i.useMemo(() => (null == a ? void 0 : a.toDate()), [a]),
-		m = i.useMemo(() => (null == n ? void 0 : n.toDate()), [n]),
+		m = i.useMemo(() => (null == a ? void 0 : a.toDate()), [a]),
+		I = i.useMemo(() => (null == n ? void 0 : n.toDate()), [n]),
 		T = (0, u.e7)([c.default], () => c.default.locale),
 		g = i.useRef(null),
 		S = i.useCallback((e) => {
@@ -41,8 +33,7 @@ function _(e) {
 				setTimeout(() => {
 					var e, n;
 					if (null === (e = g.current) || void 0 === e ? void 0 : e.contains(t)) return;
-					let r =
-						null === (n = g.current) || void 0 === n ? void 0 : n.querySelector('.react-datepicker__day[tabindex="0"]');
+					let r = null === (n = g.current) || void 0 === n ? void 0 : n.querySelector('.react-datepicker__day[tabindex="0"]');
 					if (null != r) r.focus();
 				}, 100);
 		}, []);
@@ -57,8 +48,8 @@ function _(e) {
 			fixedHeight: !0,
 			inline: !0,
 			locale: T,
-			maxDate: I,
-			minDate: m,
+			maxDate: m,
+			minDate: I,
 			onKeyDown: S,
 			onClickOutside: f
 		})

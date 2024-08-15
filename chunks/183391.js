@@ -19,11 +19,7 @@ let N = [i.p.OFFICIAL, i.p.TWITTER, i.p.YOUTUBE],
 			{ approximate_member_count: l, guild: r } = s;
 		if (null == r) return null;
 		let i = _.Z.isMember(r.id);
-		if (
-			!(null == r ? void 0 : r.features.includes('VERIFIED')) &&
-			!(null == r ? void 0 : r.features.includes('PARTNER'))
-		)
-			return null;
+		if (!(null == r ? void 0 : r.features.includes('VERIFIED')) && !(null == r ? void 0 : r.features.includes('PARTNER'))) return null;
 		let c = I.ZP.getGuildIconURL({
 			id: r.id,
 			icon: r.icon,
@@ -132,19 +128,13 @@ s.Z = (e) => {
 								E = null;
 							switch (r) {
 								case i.p.OFFICIAL:
-									(E = (0, n.jsx)(o.GlobeEarthIcon, { colorClass: R.linkIcon })),
-										(l = u.as.WebsiteLink),
-										(s = A.Z.Messages.GAME_PROFILE_LINK_OFFICIAL);
+									(E = (0, n.jsx)(o.GlobeEarthIcon, { colorClass: R.linkIcon })), (l = u.as.WebsiteLink), (s = A.Z.Messages.GAME_PROFILE_LINK_OFFICIAL);
 									break;
 								case i.p.TWITTER:
-									(E = (0, n.jsx)(o.XNeutralIcon, { colorClass: R.linkIcon })),
-										(l = u.as.XLink),
-										(s = A.Z.Messages.GAME_PROFILE_LINK_TWITTER);
+									(E = (0, n.jsx)(o.XNeutralIcon, { colorClass: R.linkIcon })), (l = u.as.XLink), (s = A.Z.Messages.GAME_PROFILE_LINK_TWITTER);
 									break;
 								case i.p.YOUTUBE:
-									(l = u.as.YouTubeLink),
-										(E = (0, n.jsx)(o.YoutubeNeutralIcon, { colorClass: R.linkIcon })),
-										(s = A.Z.Messages.GAME_PROFILE_LINK_YOUTUBE);
+									(l = u.as.YouTubeLink), (E = (0, n.jsx)(o.YoutubeNeutralIcon, { colorClass: R.linkIcon })), (s = A.Z.Messages.GAME_PROFILE_LINK_YOUTUBE);
 							}
 							return null != E
 								? (0, n.jsx)(

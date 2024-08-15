@@ -28,9 +28,7 @@ function o(e, { statusCode: t, headers: r }, a = Date.now()) {
 			let [t, r, , , n] = e.split(':', 5),
 				i = parseInt(t, 10),
 				_ = (isNaN(i) ? 60 : i) * 1000;
-			if (r)
-				for (let e of r.split(';'))
-					'metric_bucket' === e ? (!n || n.split(';').includes('custom')) && (o[e] = a + _) : (o[e] = a + _);
+			if (r) for (let e of r.split(';')) 'metric_bucket' === e ? (!n || n.split(';').includes('custom')) && (o[e] = a + _) : (o[e] = a + _);
 			else o.all = a + _;
 		}
 	else _ ? (o.all = a + n(_, a)) : 429 === t && (o.all = a + 60000);

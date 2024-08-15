@@ -76,14 +76,7 @@ var i = n(735250),
 let ee = 72,
 	et = 72;
 t.ZP = s.memo(function (e) {
-	let {
-			threadId: t,
-			goToThread: n,
-			observePostVisibilityAnalytics: o,
-			overrideMedia: l,
-			className: c,
-			containerWidth: u
-		} = e,
+	let { threadId: t, goToThread: n, observePostVisibilityAnalytics: o, overrideMedia: l, className: c, containerWidth: u } = e,
 		{
 			channel: m,
 			isOpen: g,

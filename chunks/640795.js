@@ -28,8 +28,7 @@ async function E() {
 					let e = null === n ? 'null' : 'greater than server revision number';
 					throw Error('Client revision number is ' + e);
 				}
-				if (t - n > 15)
-					throw Error('Client revision number is more than '.concat(15, ' behind the server revision number'));
+				if (t - n > 15) throw Error('Client revision number is more than '.concat(15, ' behind the server revision number'));
 				let a = (
 					await i.tn.get({
 						url: c,
@@ -40,9 +39,7 @@ async function E() {
 					d.verbose('No changes to blocked domains list.');
 					return;
 				}
-				d.verbose(
-					'Retrieved delta, domains added: '.concat(a.ADDED.length, ', domains removed: ').concat(a.REMOVED.length)
-				);
+				d.verbose('Retrieved delta, domains added: '.concat(a.ADDED.length, ', domains removed: ').concat(a.REMOVED.length));
 				let s = await r.Z.timeAsync('\uD83D\uDCBE', 'getBlockedDomainList', () => l.Z.getBlockedDomainList());
 				if (null === s) throw Error('Blocked domain list is null');
 				d.verbose('Blocked domains list length: '.concat(s.size, ' before update')),
@@ -61,8 +58,7 @@ async function E() {
 					d.verbose('Slow network detected, not downloading full list');
 					return;
 				}
-				d.verbose('Downloading the full bad domains file'),
-					(e = (await i.tn.get({ url: 'https://cdn.discordapp.com/bad-domains/updated_hashes.json' })).body);
+				d.verbose('Downloading the full bad domains file'), (e = (await i.tn.get({ url: 'https://cdn.discordapp.com/bad-domains/updated_hashes.json' })).body);
 			}
 			d.verbose('Blocked domains list length: '.concat(e.length, ' after update')),
 				r.Z.time('\uD83D\uDCBE', 'Save Blocked Domain List', () =>

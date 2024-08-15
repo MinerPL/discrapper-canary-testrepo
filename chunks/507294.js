@@ -83,9 +83,7 @@ l.default = function (e) {
 					(0, a.jsx)(d.Heading, {
 						variant: 'heading-md/semibold',
 						color: 'header-primary',
-						children: Z.Z.Messages.CONNECTIONS_ROLES_CHANNEL_CALL_TO_ACTION_LEARN_MORE.format({
-							helpdeskArticleUrl: b.Z.getArticleURL(k.BhN.CONNECTION_DETAILS)
-						})
+						children: Z.Z.Messages.CONNECTIONS_ROLES_CHANNEL_CALL_TO_ACTION_LEARN_MORE.format({ helpdeskArticleUrl: b.Z.getArticleURL(k.BhN.CONNECTION_DETAILS) })
 					}),
 					(0, a.jsx)('div', {
 						className: E.verifiedRoles,
@@ -135,9 +133,7 @@ l.default = function (e) {
 													(r = e),
 													(o = l),
 													void (0, d.openModalLazy)(async () => {
-														let { default: e } = await Promise.all([i.e('12661'), i.e('90537')]).then(
-															i.bind(i, 107807)
-														);
+														let { default: e } = await Promise.all([i.e('12661'), i.e('90537')]).then(i.bind(i, 107807));
 														return (l) =>
 															(0, a.jsx)(e, {
 																role: r,

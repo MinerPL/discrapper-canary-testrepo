@@ -41,10 +41,7 @@ function A(e) {
 			tabIndex: 0,
 			'data-recents-channel': t.id,
 			onKeyDown: function (e) {
-				null != c &&
-					null != l &&
-					(('ArrowRight' === e.key && l.collapsed) || ('ArrowLeft' === e.key && !l.collapsed)) &&
-					(null == c || c(l));
+				null != c && null != l && (('ArrowRight' === e.key && l.collapsed) || ('ArrowLeft' === e.key && !l.collapsed)) && (null == c || c(l));
 			},
 			children: [
 				(0, i.jsx)(R, {

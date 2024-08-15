@@ -63,8 +63,7 @@ function L(e) {
 										children: (0, i.jsx)(N.Z, {
 											message: f.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_DESIGN_BUDDIES,
 											adminTitle: f.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_ADMIN_DESIGN_BUDDIES,
-											profilePic:
-												'https://cdn.discordapp.com/icons/585994345086451723/7ccfde77eeb097ac645eac1af1fb19c4.jpg',
+											profilePic: 'https://cdn.discordapp.com/icons/585994345086451723/7ccfde77eeb097ac645eac1af1fb19c4.jpg',
 											emphasisColor: 'text-positive',
 											arrowPosition: 'right'
 										})
@@ -74,8 +73,7 @@ function L(e) {
 										children: (0, i.jsx)(N.Z, {
 											message: f.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_VALORANT,
 											adminTitle: f.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_ADMIN_VALORANT,
-											profilePic:
-												'https://cdn.discordapp.com/icons/585994345086451723/7ccfde77eeb097ac645eac1af1fb19c4.jpg',
+											profilePic: 'https://cdn.discordapp.com/icons/585994345086451723/7ccfde77eeb097ac645eac1af1fb19c4.jpg',
 											emphasisColor: 'text-warning',
 											arrowPosition: 'left'
 										})

@@ -138,15 +138,7 @@ function A(e) {
 		n = (0, o.Wg)(),
 		r = (0, s.e7)([o.ZP], () => {
 			var e, i, a;
-			return null !==
-				(a =
-					null === (i = o.ZP.getStateForGuild(t)) || void 0 === i
-						? void 0
-						: null === (e = i.progress) || void 0 === e
-							? void 0
-							: e.currentStep) && void 0 !== a
-				? a
-				: n.currentStep;
+			return null !== (a = null === (i = o.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : null === (e = i.progress) || void 0 === e ? void 0 : e.currentStep) && void 0 !== a ? a : n.currentStep;
 		}),
 		l = a.useMemo(
 			() => [

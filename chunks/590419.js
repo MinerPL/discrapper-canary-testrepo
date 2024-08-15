@@ -3,10 +3,7 @@ var r = (function () {
 		function e(e, t) {
 			for (var n = 0; n < t.length; n++) {
 				var r = t[n];
-				(r.enumerable = r.enumerable || !1),
-					(r.configurable = !0),
-					'value' in r && (r.writable = !0),
-					Object.defineProperty(e, r.key, r);
+				(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 			}
 		}
 		return function (t, n, r) {
@@ -37,8 +34,7 @@ var c = (t.Saturation = (function (e) {
 		})(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
 		return (
 			(n.handleChange = function (e) {
-				'function' == typeof n.props.onChange &&
-					n.throttle(n.props.onChange, l.calculateChange(e, n.props.hsl, n.container), e);
+				'function' == typeof n.props.onChange && n.throttle(n.props.onChange, l.calculateChange(e, n.props.hsl, n.container), e);
 			}),
 			(n.handleMouseDown = function (e) {
 				n.handleChange(e);
@@ -56,8 +52,7 @@ var c = (t.Saturation = (function (e) {
 	}
 	return (
 		!(function (e, t) {
-			if ('function' != typeof t && null !== t)
-				throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+			if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
 			(e.prototype = Object.create(t && t.prototype, {
 				constructor: {
 					value: e,
@@ -125,8 +120,7 @@ var c = (t.Saturation = (function (e) {
 									circle: {
 										width: '4px',
 										height: '4px',
-										boxShadow:
-											'0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3),\n            0 0 1px 2px rgba(0,0,0,.4)',
+										boxShadow: '0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3),\n            0 0 1px 2px rgba(0,0,0,.4)',
 										borderRadius: '50%',
 										cursor: 'hand',
 										transform: 'translate(-2px, -2px)'
@@ -153,11 +147,7 @@ var c = (t.Saturation = (function (e) {
 							onTouchMove: this.handleChange,
 							onTouchStart: this.handleChange
 						},
-						a.default.createElement(
-							'style',
-							null,
-							'\n          .saturation-white {\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n          }\n          .saturation-black {\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\n          }\n        '
-						),
+						a.default.createElement('style', null, '\n          .saturation-white {\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n          }\n          .saturation-black {\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\n          }\n        '),
 						a.default.createElement(
 							'div',
 							{
@@ -168,13 +158,7 @@ var c = (t.Saturation = (function (e) {
 								style: u.black,
 								className: 'saturation-black'
 							}),
-							a.default.createElement(
-								'div',
-								{ style: u.pointer },
-								this.props.pointer
-									? a.default.createElement(this.props.pointer, this.props)
-									: a.default.createElement('div', { style: u.circle })
-							)
+							a.default.createElement('div', { style: u.pointer }, this.props.pointer ? a.default.createElement(this.props.pointer, this.props) : a.default.createElement('div', { style: u.circle }))
 						)
 					);
 				}

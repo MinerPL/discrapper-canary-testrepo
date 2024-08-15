@@ -10,9 +10,7 @@ i || Object.prototype.__defineGetter__;
 var a = i
 		? Object.defineProperty
 		: function (e, t, n) {
-				'get' in n && e.__defineGetter__
-					? e.__defineGetter__(t, n.get)
-					: (!r.hop.call(e, t) || 'value' in n) && (e[t] = n.value);
+				'get' in n && e.__defineGetter__ ? e.__defineGetter__(t, n.get) : (!r.hop.call(e, t) || 'value' in n) && (e[t] = n.value);
 			},
 	s =
 		Object.create ||

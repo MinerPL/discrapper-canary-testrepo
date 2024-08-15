@@ -20,10 +20,7 @@ function d() {
 			() =>
 				e.filter((e) => {
 					var n;
-					return (
-						(null == e.integration_types || e.integration_types.includes(a.Y.GUILD_INSTALL)) &&
-						(null == e.contexts || (null === (n = e.contexts) || void 0 === n ? void 0 : n.includes(l.D.GUILD)))
-					);
+					return (null == e.integration_types || e.integration_types.includes(a.Y.GUILD_INSTALL)) && (null == e.contexts || (null === (n = e.contexts) || void 0 === n ? void 0 : n.includes(l.D.GUILD)));
 				}),
 			[e]
 		),

@@ -35,11 +35,7 @@ let O = (e) => {
 function u(e) {
 	let { action: n, triggerType: t, isEdit: u, onUpdateDuration: c, onClose: i, transitionState: S } = e,
 		N = (0, s.Dt)(),
-		[E, C] = r.useState(() =>
-			null != n.metadata.durationSeconds && n.metadata.durationSeconds > 0
-				? n.metadata.durationSeconds
-				: A.UK.DURATION_60_SEC
-		),
+		[E, C] = r.useState(() => (null != n.metadata.durationSeconds && n.metadata.durationSeconds > 0 ? n.metadata.durationSeconds : A.UK.DURATION_60_SEC)),
 		M = (0, l.c)(n.type, n, t);
 	if (null == M) return null;
 	let { headerText: d } = M;

@@ -21,8 +21,7 @@ function g(e) {
 	let { active: t, user: n, channel: g } = e,
 		p = (0, u.V)(),
 		T = a.useCallback(() => {
-			(0, r.showToast)((0, r.createToast)(m.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE)),
-				l.Z.increment({ name: s.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
+			(0, r.showToast)((0, r.createToast)(m.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE)), l.Z.increment({ name: s.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
 		}, []),
 		S = a.useCallback(() => {
 			c.Z.closeChannelSidebar(d.uZ);

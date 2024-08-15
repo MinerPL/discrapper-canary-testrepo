@@ -2,19 +2,7 @@ e.exports = function (e) {
 	let t = {
 			keyword: ['rec', 'with', 'let', 'in', 'inherit', 'assert', 'if', 'else', 'then'],
 			literal: ['true', 'false', 'or', 'and', 'null'],
-			built_in: [
-				'import',
-				'abort',
-				'baseNameOf',
-				'dirOf',
-				'isNull',
-				'builtins',
-				'map',
-				'removeAttrs',
-				'throw',
-				'toString',
-				'derivation'
-			]
+			built_in: ['import', 'abort', 'baseNameOf', 'dirOf', 'isNull', 'builtins', 'map', 'removeAttrs', 'throw', 'toString', 'derivation']
 		},
 		n = {
 			className: 'subst',

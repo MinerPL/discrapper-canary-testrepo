@@ -50,9 +50,7 @@ function N(e) {
 						(0, s.jsx)(o.Text, {
 							variant: 'text-sm/medium',
 							color: 'header-secondary',
-							children: E.Z.Messages.GUILD_SETTINGS_SAFETY_EVERYONE_RISKY_PERMISSIONS_DETAILS.format({
-								numPerms: u.length
-							})
+							children: E.Z.Messages.GUILD_SETTINGS_SAFETY_EVERYONE_RISKY_PERMISSIONS_DETAILS.format({ numPerms: u.length })
 						})
 					]
 				}),

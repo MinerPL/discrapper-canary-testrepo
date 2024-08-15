@@ -85,15 +85,7 @@ let j = (e) => {
 			: (0, n.jsx)(c.Spinner, {});
 	},
 	U = (e) => {
-		let {
-			isTrial: s,
-			isCancelled: t,
-			isResubscribing: a,
-			shouldHideRoleSubscriptionEntryPoints: i,
-			onCancelSubscriptionClick: r,
-			onResubscribeClick: o,
-			onChangePlanClick: l
-		} = e;
+		let { isTrial: s, isCancelled: t, isResubscribing: a, shouldHideRoleSubscriptionEntryPoints: i, onCancelSubscriptionClick: r, onResubscribeClick: o, onChangePlanClick: l } = e;
 		return t && (s || i)
 			? null
 			: (0, n.jsxs)('div', {
@@ -135,15 +127,7 @@ s.Z = (e) => {
 		V = (null == s ? void 0 : s.paymentGateway) === P.gg$.APPLE_PARTNER;
 	if (null == i || null == t || null == O) return null;
 	let Y = () => {
-			null != l &&
-				((0, h.uL)(P.Z5c.CHANNEL(l.id, L.oC.ROLE_SUBSCRIPTIONS)),
-				(0, _.xf)(),
-				E.Z.show(
-					P.kVF.BACK_TO_PREVIOUS_SCREEN,
-					void 0,
-					Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_BACK_TO_SUBSCRIPTION_USER_SETTING_CTA,
-					() => u.Z.open(P.oAB.SUBSCRIPTIONS, b.cP)
-				));
+			null != l && ((0, h.uL)(P.Z5c.CHANNEL(l.id, L.oC.ROLE_SUBSCRIPTIONS)), (0, _.xf)(), E.Z.show(P.kVF.BACK_TO_PREVIOUS_SCREEN, void 0, Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_BACK_TO_SUBSCRIPTION_USER_SETTING_CTA, () => u.Z.open(P.oAB.SUBSCRIPTIONS, b.cP)));
 		},
 		w = () => {
 			null != l &&
@@ -161,15 +145,7 @@ s.Z = (e) => {
 				p(!1);
 			}
 		},
-		{
-			isCancelled: k,
-			isPastDue: W,
-			subscriptionPrice: K,
-			memberSince: z,
-			nextRenewalDate: Q,
-			nextRenewalLabel: X,
-			isTrial: q
-		} = O,
+		{ isCancelled: k, isPastDue: W, subscriptionPrice: K, memberSince: z, nextRenewalDate: Q, nextRenewalLabel: X, isTrial: q } = O,
 		J = t.soft_deleted || null == l || V,
 		$ = () => {
 			if (k) return (0, n.jsx)(c.TextBadge, { text: Z.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_CANCELLED });
@@ -282,9 +258,7 @@ s.Z = (e) => {
 										label: Z.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_INFO_PRICE,
 										value: K,
 										showInfoIcon: q,
-										infoIconTooltipText: q
-											? Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_MANAGE_SUBSCRIPTION_PAGE_TRIAL_PRICE_INFO
-											: void 0
+										infoIconTooltipText: q ? Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_MANAGE_SUBSCRIPTION_PAGE_TRIAL_PRICE_INFO : void 0
 									}),
 									(0, n.jsx)(j, {
 										label: Z.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_INFO_MEMBER_SINCE,
@@ -296,12 +270,7 @@ s.Z = (e) => {
 							!k &&
 								!V &&
 								(0, n.jsxs)(n.Fragment, {
-									children: [
-										(0, n.jsx)(c.FormTitle, {
-											children: Z.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_PAYMENT_METHOD_LABEL
-										}),
-										(0, n.jsx)(B, { subscription: s })
-									]
+									children: [(0, n.jsx)(c.FormTitle, { children: Z.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_PAYMENT_METHOD_LABEL }), (0, n.jsx)(B, { subscription: s })]
 								}),
 							!J &&
 								(0, n.jsx)(U, {

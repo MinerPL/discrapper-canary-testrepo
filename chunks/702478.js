@@ -39,9 +39,7 @@ let y = function (e, t, n) {
 		let s = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
 			a = null;
 		return (
-			null == t || Number.isNaN(t)
-				? (null == t || Number.isNaN(t)) && null != e && (a = A.Z.Messages.GUILD_ANALYTICS_METRICS_LAST_WEEK)
-				: (a = A.Z.Messages.PERCENTAGE_SINCE_LAST_WEEK.format({ percentage: (0, r.o)(Math.abs(t), n) })),
+			null == t || Number.isNaN(t) ? (null == t || Number.isNaN(t)) && null != e && (a = A.Z.Messages.GUILD_ANALYTICS_METRICS_LAST_WEEK) : (a = A.Z.Messages.PERCENTAGE_SINCE_LAST_WEEK.format({ percentage: (0, r.o)(Math.abs(t), n) })),
 			{
 				localizedNumber: null != e ? ''.concat((0, r.o)(e, n)).concat(s ? '%' : '') : A.Z.Messages.NOT_AVAILABLE,
 				subtext: a,
@@ -111,9 +109,7 @@ function H(e) {
 		{ showAccessRate: o } = (0, g.eA)(t, !n);
 	if (
 		(a.useEffect(() => {
-			o &&
-				((0, I.kk)(c.z.GUILD_INSIGHTS_ACCESS_RATE_NEW),
-				(0, I.EW)(c.z.GUILD_INSIGHTS_ACCESS_RATE_NEW, { dismissAction: L.L.AUTO }));
+			o && ((0, I.kk)(c.z.GUILD_INSIGHTS_ACCESS_RATE_NEW), (0, I.EW)(c.z.GUILD_INSIGHTS_ACCESS_RATE_NEW, { dismissAction: L.L.AUTO }));
 		}, [o]),
 		!o || !n || null == i)
 	)
@@ -177,10 +173,7 @@ function H(e) {
 									t
 								)
 						})),
-						(S =
-							100 === _
-								? A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({ accessRate: _ })
-								: A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_MORE.format({ accessRate: _ }))),
+						(S = 100 === _ ? A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({ accessRate: _ }) : A.Z.Messages.MEMBER_INSIGHTS_ACCESS_RATING_MORE.format({ accessRate: _ }))),
 		(0, s.jsxs)(s.Fragment, {
 			children: [
 				(0, s.jsxs)(u.Heading, {
@@ -373,10 +366,7 @@ t.Z = () => {
 			analytics: null != e ? p.Z.getOverviewAnalytics(e) : null,
 			errorCode: p.Z.getError()
 		})),
-		c =
-			null == t ||
-			null == n ||
-			(null != t && t < 500 && null != n && !n.hasFeature(f.oNc.PARTNERED) && !n.hasFeature(f.oNc.VERIFIED));
+		c = null == t || null == n || (null != t && t < 500 && null != n && !n.hasFeature(f.oNc.PARTNERED) && !n.hasFeature(f.oNc.VERIFIED));
 	a.useEffect(() => {
 		null != e && !c && ((0, x.Vk)(e), (0, x.SR)(e), (0, x.xl)(e));
 	}, [e, c]),

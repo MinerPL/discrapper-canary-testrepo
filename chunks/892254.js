@@ -24,11 +24,7 @@ function d(e) {
 		h = 0;
 	return (
 		d && (h = (0, a.Od)(h, a.bg.MOBILE_REDESIGN_ENABLED)),
-		null != _ &&
-			(h =
-				_.theme === c.BR.LIGHT
-					? (0, a.Od)(h, a.bg.MOBILE_LIGHT_GRADIENT_THEME_ENABLED)
-					: (0, a.Od)(h, a.bg.MOBILE_DARK_GRADIENT_THEME_ENABLED)),
+		null != _ && (h = _.theme === c.BR.LIGHT ? (0, a.Od)(h, a.bg.MOBILE_LIGHT_GRADIENT_THEME_ENABLED) : (0, a.Od)(h, a.bg.MOBILE_DARK_GRADIENT_THEME_ENABLED)),
 		1 !== E && (h = (0, a.Od)(h, a.bg.REDUCE_SATURATION_ENABLED)),
 		(0, r.jsx)(a.wM, {
 			theme: n,

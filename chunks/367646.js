@@ -38,10 +38,7 @@ function u(e) {
 function c(e, t) {
 	for (var n = 0; n < t.length; n++) {
 		var r = t[n];
-		(r.enumerable = r.enumerable || !1),
-			(r.configurable = !0),
-			'value' in r && (r.writable = !0),
-			Object.defineProperty(e, r.key, r);
+		(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 	}
 }
 function d(e, t, n) {
@@ -88,19 +85,14 @@ var _ = (function () {
 				return (t && (0, i.g2)(t)) || null;
 			}),
 			d(this, 'endDragNativeItem', function () {
-				if (!!s.isDraggingNativeItem())
-					s.actions.endDrag(),
-						s.currentNativeHandle && s.registry.removeSource(s.currentNativeHandle),
-						(s.currentNativeHandle = null),
-						(s.currentNativeSource = null);
+				if (!!s.isDraggingNativeItem()) s.actions.endDrag(), s.currentNativeHandle && s.registry.removeSource(s.currentNativeHandle), (s.currentNativeHandle = null), (s.currentNativeSource = null);
 			}),
 			d(this, 'isNodeInDocument', function (e) {
 				return !!(e && s.document && s.document.body && s.document.body.contains(e));
 			}),
 			d(this, 'endDragIfSourceWasRemovedFromDOM', function () {
 				var e = s.currentDragSourceNode;
-				if (!(null == e || s.isNodeInDocument(e)))
-					s.clearCurrentDragSourceNode() && s.monitor.isDragging() && s.actions.endDrag();
+				if (!(null == e || s.isNodeInDocument(e))) s.clearCurrentDragSourceNode() && s.monitor.isDragging() && s.actions.endDrag();
 			}),
 			d(this, 'handleTopDragStartCapture', function () {
 				s.clearCurrentDragSourceNode(), (s.dragStartSourceIds = []);
@@ -209,28 +201,17 @@ var _ = (function () {
 			d(this, 'handleTopDropCapture', function (e) {
 				if (((s.dropTargetIds = []), s.isDraggingNativeItem())) {
 					var t;
-					e.preventDefault(),
-						null === (t = s.currentNativeSource) || void 0 === t || t.loadDataTransfer(e.dataTransfer);
+					e.preventDefault(), null === (t = s.currentNativeSource) || void 0 === t || t.loadDataTransfer(e.dataTransfer);
 				} else (0, a.w)(e.dataTransfer) && e.preventDefault();
 				s.enterLeaveCounter.reset();
 			}),
 			d(this, 'handleTopDrop', function (e) {
 				var t = s.dropTargetIds;
-				(s.dropTargetIds = []),
-					s.actions.hover(t, { clientOffset: (0, i.K5)(e) }),
-					s.actions.drop({ dropEffect: s.getCurrentDropEffect() }),
-					s.isDraggingNativeItem() ? s.endDragNativeItem() : s.monitor.isDragging() && s.actions.endDrag();
+				(s.dropTargetIds = []), s.actions.hover(t, { clientOffset: (0, i.K5)(e) }), s.actions.drop({ dropEffect: s.getCurrentDropEffect() }), s.isDraggingNativeItem() ? s.endDragNativeItem() : s.monitor.isDragging() && s.actions.endDrag();
 			}),
 			d(this, 'handleSelectStart', function (e) {
 				var t = e.target;
-				if (
-					'function' == typeof t.dragDrop &&
-					'INPUT' !== t.tagName &&
-					'SELECT' !== t.tagName &&
-					'TEXTAREA' !== t.tagName &&
-					!t.isContentEditable
-				)
-					e.preventDefault(), t.dragDrop();
+				if ('function' == typeof t.dragDrop && 'INPUT' !== t.tagName && 'SELECT' !== t.tagName && 'TEXTAREA' !== t.tagName && !t.isContentEditable) e.preventDefault(), t.dragDrop();
 			}),
 			(this.options = new o.r(t, n)),
 			(this.actions = e.getActions()),
@@ -290,12 +271,7 @@ var _ = (function () {
 				value: function () {
 					var e,
 						t = this.rootElement;
-					if (void 0 !== t)
-						(t.__isReactDndBackendSetUp = !1),
-							this.removeEventListeners(this.rootElement),
-							this.clearCurrentDragSourceNode(),
-							this.asyncEndDragFrameId &&
-								(null === (e = this.window) || void 0 === e || e.cancelAnimationFrame(this.asyncEndDragFrameId));
+					if (void 0 !== t) (t.__isReactDndBackendSetUp = !1), this.removeEventListeners(this.rootElement), this.clearCurrentDragSourceNode(), this.asyncEndDragFrameId && (null === (e = this.window) || void 0 === e || e.cancelAnimationFrame(this.asyncEndDragFrameId));
 				}
 			},
 			{
@@ -327,11 +303,7 @@ var _ = (function () {
 						t.addEventListener('dragstart', i),
 						t.addEventListener('selectstart', a),
 						function () {
-							r.sourceNodes.delete(e),
-								r.sourceNodeOptions.delete(e),
-								t.removeEventListener('dragstart', i),
-								t.removeEventListener('selectstart', a),
-								t.setAttribute('draggable', 'false');
+							r.sourceNodes.delete(e), r.sourceNodeOptions.delete(e), t.removeEventListener('dragstart', i), t.removeEventListener('selectstart', a), t.setAttribute('draggable', 'false');
 						}
 					);
 				}
@@ -354,9 +326,7 @@ var _ = (function () {
 						t.addEventListener('dragover', i),
 						t.addEventListener('drop', a),
 						function () {
-							t.removeEventListener('dragenter', r),
-								t.removeEventListener('dragover', i),
-								t.removeEventListener('drop', a);
+							t.removeEventListener('dragenter', r), t.removeEventListener('dragover', i), t.removeEventListener('drop', a);
 						}
 					);
 				}
@@ -364,33 +334,13 @@ var _ = (function () {
 			{
 				key: 'addEventListeners',
 				value: function (e) {
-					if (!!e.addEventListener)
-						e.addEventListener('dragstart', this.handleTopDragStart),
-							e.addEventListener('dragstart', this.handleTopDragStartCapture, !0),
-							e.addEventListener('dragend', this.handleTopDragEndCapture, !0),
-							e.addEventListener('dragenter', this.handleTopDragEnter),
-							e.addEventListener('dragenter', this.handleTopDragEnterCapture, !0),
-							e.addEventListener('dragleave', this.handleTopDragLeaveCapture, !0),
-							e.addEventListener('dragover', this.handleTopDragOver),
-							e.addEventListener('dragover', this.handleTopDragOverCapture, !0),
-							e.addEventListener('drop', this.handleTopDrop),
-							e.addEventListener('drop', this.handleTopDropCapture, !0);
+					if (!!e.addEventListener) e.addEventListener('dragstart', this.handleTopDragStart), e.addEventListener('dragstart', this.handleTopDragStartCapture, !0), e.addEventListener('dragend', this.handleTopDragEndCapture, !0), e.addEventListener('dragenter', this.handleTopDragEnter), e.addEventListener('dragenter', this.handleTopDragEnterCapture, !0), e.addEventListener('dragleave', this.handleTopDragLeaveCapture, !0), e.addEventListener('dragover', this.handleTopDragOver), e.addEventListener('dragover', this.handleTopDragOverCapture, !0), e.addEventListener('drop', this.handleTopDrop), e.addEventListener('drop', this.handleTopDropCapture, !0);
 				}
 			},
 			{
 				key: 'removeEventListeners',
 				value: function (e) {
-					if (!!e.removeEventListener)
-						e.removeEventListener('dragstart', this.handleTopDragStart),
-							e.removeEventListener('dragstart', this.handleTopDragStartCapture, !0),
-							e.removeEventListener('dragend', this.handleTopDragEndCapture, !0),
-							e.removeEventListener('dragenter', this.handleTopDragEnter),
-							e.removeEventListener('dragenter', this.handleTopDragEnterCapture, !0),
-							e.removeEventListener('dragleave', this.handleTopDragLeaveCapture, !0),
-							e.removeEventListener('dragover', this.handleTopDragOver),
-							e.removeEventListener('dragover', this.handleTopDragOverCapture, !0),
-							e.removeEventListener('drop', this.handleTopDrop),
-							e.removeEventListener('drop', this.handleTopDropCapture, !0);
+					if (!!e.removeEventListener) e.removeEventListener('dragstart', this.handleTopDragStart), e.removeEventListener('dragstart', this.handleTopDragStartCapture, !0), e.removeEventListener('dragend', this.handleTopDragEndCapture, !0), e.removeEventListener('dragenter', this.handleTopDragEnter), e.removeEventListener('dragenter', this.handleTopDragEnterCapture, !0), e.removeEventListener('dragleave', this.handleTopDragLeaveCapture, !0), e.removeEventListener('dragover', this.handleTopDragOver), e.removeEventListener('dragover', this.handleTopDragOverCapture, !0), e.removeEventListener('drop', this.handleTopDrop), e.removeEventListener('drop', this.handleTopDropCapture, !0);
 				}
 			},
 			{
@@ -433,10 +383,7 @@ var _ = (function () {
 			{
 				key: 'beginDragNativeItem',
 				value: function (e, t) {
-					this.clearCurrentDragSourceNode(),
-						(this.currentNativeSource = (0, a.f)(e, t)),
-						(this.currentNativeHandle = this.registry.addSource(e, this.currentNativeSource)),
-						this.actions.beginDrag([this.currentNativeHandle]);
+					this.clearCurrentDragSourceNode(), (this.currentNativeSource = (0, a.f)(e, t)), (this.currentNativeHandle = this.registry.addSource(e, this.currentNativeSource)), this.actions.beginDrag([this.currentNativeHandle]);
 				}
 			},
 			{
@@ -446,9 +393,7 @@ var _ = (function () {
 					this.clearCurrentDragSourceNode(), (this.currentDragSourceNode = e);
 					this.mouseMoveTimeoutTimer = setTimeout(function () {
 						var e;
-						return null === (e = t.rootElement) || void 0 === e
-							? void 0
-							: e.addEventListener('mousemove', t.endDragIfSourceWasRemovedFromDOM, !0);
+						return null === (e = t.rootElement) || void 0 === e ? void 0 : e.addEventListener('mousemove', t.endDragIfSourceWasRemovedFromDOM, !0);
 					}, 1000);
 				}
 			},
@@ -458,8 +403,7 @@ var _ = (function () {
 					if (this.currentDragSourceNode) {
 						if (((this.currentDragSourceNode = null), this.rootElement)) {
 							var e;
-							null === (e = this.window) || void 0 === e || e.clearTimeout(this.mouseMoveTimeoutTimer || void 0),
-								this.rootElement.removeEventListener('mousemove', this.endDragIfSourceWasRemovedFromDOM, !0);
+							null === (e = this.window) || void 0 === e || e.clearTimeout(this.mouseMoveTimeoutTimer || void 0), this.rootElement.removeEventListener('mousemove', this.endDragIfSourceWasRemovedFromDOM, !0);
 						}
 						return (this.mouseMoveTimeoutTimer = null), !0;
 					}
@@ -469,8 +413,7 @@ var _ = (function () {
 			{
 				key: 'handleDragStart',
 				value: function (e, t) {
-					if (!e.defaultPrevented)
-						!this.dragStartSourceIds && (this.dragStartSourceIds = []), this.dragStartSourceIds.unshift(t);
+					if (!e.defaultPrevented) !this.dragStartSourceIds && (this.dragStartSourceIds = []), this.dragStartSourceIds.unshift(t);
 				}
 			},
 			{

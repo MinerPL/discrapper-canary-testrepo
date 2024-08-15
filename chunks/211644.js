@@ -48,31 +48,14 @@ let s = new (n(499303).I)(),
 	}),
 	c = (e, t) => {
 		var n;
-		return null == t
-			? e
-			: (null != t.content && e.currentlyShown.delete(t.content),
-				null != t.groupName && e.currentlyShownGroup.delete(t.groupName),
-				(null === (n = e.shownFatigableCandidate) || void 0 === n ? void 0 : n.content) === t.content &&
-					(e.shownFatigableCandidate = null),
-				e);
+		return null == t ? e : (null != t.content && e.currentlyShown.delete(t.content), null != t.groupName && e.currentlyShownGroup.delete(t.groupName), (null === (n = e.shownFatigableCandidate) || void 0 === n ? void 0 : n.content) === t.content && (e.shownFatigableCandidate = null), e);
 	},
 	d = (e, t) => {
 		var n, r;
 		if (null == t) return e;
 		e.currentlyShown.add(t.content);
 		let i = e.recentlyShown.filter((e) => e !== t.content);
-		return (
-			i.unshift(t.content),
-			i.splice(5),
-			(e.recentlyShown = i),
-			null != t.groupName && e.currentlyShownGroup.add(t.groupName),
-			!a.O.has(t.content) &&
-				((e.shownFatigableCandidate = t),
-				(null === (r = e.prevFatigableCandidate) || void 0 === r ? void 0 : r.content) !== t.content &&
-					((e.prevFatigableCandidate = t), (e.lastWinnerTime = new Date().getTime()))),
-			null === (n = t.onAdded) || void 0 === n || n.call(t),
-			e
-		);
+		return i.unshift(t.content), i.splice(5), (e.recentlyShown = i), null != t.groupName && e.currentlyShownGroup.add(t.groupName), !a.O.has(t.content) && ((e.shownFatigableCandidate = t), (null === (r = e.prevFatigableCandidate) || void 0 === r ? void 0 : r.content) !== t.content && ((e.prevFatigableCandidate = t), (e.lastWinnerTime = new Date().getTime()))), null === (n = t.onAdded) || void 0 === n || n.call(t), e;
 	},
 	_ = (e, t) => (e.candidates.set(t.content, t), e),
 	E = (e, t) => (e.candidates.delete(t.content), e),
@@ -91,14 +74,11 @@ let s = new (n(499303).I)(),
 			e.candidates.get(t[Math.floor(Math.random() * t.length)])
 		);
 	},
-	I = (e) =>
-		null != e.prevFatigableCandidate &&
-		e.candidates.has(e.prevFatigableCandidate.content) &&
-		null == e.shownFatigableCandidate,
-	m = (e) => {
+	m = (e) => null != e.prevFatigableCandidate && e.candidates.has(e.prevFatigableCandidate.content) && null == e.shownFatigableCandidate,
+	I = (e) => {
 		if (0 === e.candidates.size) return e;
 		let t = new Date().getTime() - e.lastWinnerTime > 300000;
-		if (I(e) && !t) return s.unschedule(), f(e, h(e));
+		if (m(e) && !t) return s.unschedule(), f(e, h(e));
 		if ((null != e.shownFatigableCandidate && !t) || s.scheduled()) return e;
 		let n = new Date().getTime();
 		return null == e.shownFatigableCandidate && n - e.lastWinnerTime < 3600000
@@ -118,7 +98,7 @@ let s = new (n(499303).I)(),
 		(0, i.j)(() => {
 			l.setState((n) => {
 				let r = u(n);
-				return t ? d(r, e) : m(_(r, e));
+				return t ? d(r, e) : I(_(r, e));
 			});
 		});
 	},
@@ -126,7 +106,7 @@ let s = new (n(499303).I)(),
 		(0, i.j)(() => {
 			l.setState((n) => {
 				let r = u(n);
-				return t ? m(c(E(r, e), e)) : c(E(r, e), e);
+				return t ? I(c(E(r, e), e)) : c(E(r, e), e);
 			});
 		});
 	},

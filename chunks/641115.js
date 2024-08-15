@@ -62,16 +62,7 @@ function p() {
 function O(e) {
 	let n,
 		t,
-		{
-			type: s,
-			selected: a,
-			needsPremium: i,
-			needsDemo: o,
-			analyticsLocation: c,
-			onClick: u,
-			onClose: m,
-			setIsHovering: E
-		} = e,
+		{ type: s, selected: a, needsPremium: i, needsDemo: o, analyticsLocation: c, onClick: u, onClose: m, setIsHovering: E } = e,
 		{ value: _, label: S } = s;
 	return (
 		i
@@ -117,17 +108,7 @@ function O(e) {
 	);
 }
 function j(e) {
-	let {
-			onClose: n,
-			selectedPreset: t,
-			selectedResolution: a,
-			selectedFPS: r,
-			onResolutionChange: i,
-			onFPSChange: g,
-			onPresetChange: p,
-			targetGuildPremiumTier: j,
-			captureDeviceSelected: P
-		} = e,
+	let { onClose: n, selectedPreset: t, selectedResolution: a, selectedFPS: r, onResolutionChange: i, onFPSChange: g, onPresetChange: p, targetGuildPremiumTier: j, captureDeviceSelected: P } = e,
 		D = (0, u.e7)([C.default], () => {
 			let e = C.default.getCurrentUser();
 			return o()(null != e, 'StreamSettings: user cannot be undefined'), e;

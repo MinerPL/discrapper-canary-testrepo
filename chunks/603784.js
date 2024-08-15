@@ -47,14 +47,7 @@ class A extends a.PureComponent {
 	hasChangesToRender() {
 		let { log: e } = this.props,
 			{ changes: t } = e;
-		return (
-			(e.actionType !== R.vB8.DELETE ||
-				e.action === R.rsA.MEMBER_BAN_ADD ||
-				e.action === R.rsA.MEMBER_KICK ||
-				e.action === R.rsA.MEMBER_PRUNE) &&
-			null != t &&
-			t.some((t) => !(0, p.xO)(e, t))
-		);
+		return (e.actionType !== R.vB8.DELETE || e.action === R.rsA.MEMBER_BAN_ADD || e.action === R.rsA.MEMBER_KICK || e.action === R.rsA.MEMBER_PRUNE) && null != t && t.some((t) => !(0, p.xO)(e, t));
 	}
 	renderTitle() {
 		let { log: e, onUserContextMenu: t, onTargetContextMenu: n, onChannelContextMenu: a } = this.props,
@@ -79,9 +72,7 @@ class A extends a.PureComponent {
 							if (null != e.options.integration_type) {
 								var i;
 								let t = u.Z.get(e.options.integration_type);
-								return null !== (i = null == t ? void 0 : t.name) && void 0 !== i
-									? i
-									: f.Z.Messages.UNKNOWN_INTEGRATION;
+								return null !== (i = null == t ? void 0 : t.name) && void 0 !== i ? i : f.Z.Messages.UNKNOWN_INTEGRATION;
 							}
 							return f.Z.Messages.UNKNOWN_USER;
 						},
@@ -104,11 +95,7 @@ class A extends a.PureComponent {
 										a
 									),
 						count: l.count,
-						channel: l.channel
-							? 'string' == typeof l.channel
-								? l.channel
-								: (0, I.F6)(l.channel, S.default, N.Z, !0)
-							: null,
+						channel: l.channel ? ('string' == typeof l.channel ? l.channel : (0, I.F6)(l.channel, S.default, N.Z, !0)) : null,
 						channelHook: (e, t) =>
 							(0, s.jsx)(
 								'span',
@@ -161,17 +148,7 @@ class A extends a.PureComponent {
 							e.stopPropagation(), n.onClick(e);
 						},
 						className: L.avatar,
-						src:
-							((a = e),
-							(i = t),
-							a.action === R.rsA.AUTO_MODERATION_BLOCK_MESSAGE ||
-							a.action === R.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL ||
-							a.action === R.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED ||
-							a.action === R.rsA.AUTO_MODERATION_QUARANTINE_USER
-								? (0, x.j)()
-								: null === (r = a.user) || void 0 === r
-									? void 0
-									: r.getAvatarURL(i, 40)),
+						src: ((a = e), (i = t), a.action === R.rsA.AUTO_MODERATION_BLOCK_MESSAGE || a.action === R.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || a.action === R.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || a.action === R.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, x.j)() : null === (r = a.user) || void 0 === r ? void 0 : r.getAvatarURL(i, 40)),
 						'aria-hidden': !0,
 						size: d.AvatarSizes.SIZE_40
 					});

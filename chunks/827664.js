@@ -16,13 +16,7 @@ for (var o = i(s.prototype), l = 0; l < o.length; l++) {
 }
 function c(e) {
 	if (!(this instanceof c)) return new c(e);
-	a.call(this, e),
-		s.call(this, e),
-		(this.allowHalfOpen = !0),
-		e &&
-			(!1 === e.readable && (this.readable = !1),
-			!1 === e.writable && (this.writable = !1),
-			!1 === e.allowHalfOpen && ((this.allowHalfOpen = !1), this.once('end', d)));
+	a.call(this, e), s.call(this, e), (this.allowHalfOpen = !0), e && (!1 === e.readable && (this.readable = !1), !1 === e.writable && (this.writable = !1), !1 === e.allowHalfOpen && ((this.allowHalfOpen = !1), this.once('end', d)));
 }
 function d() {
 	!this._writableState.ended && r.nextTick(_, this);
@@ -51,15 +45,9 @@ Object.defineProperty(c.prototype, 'writableHighWaterMark', {
 	Object.defineProperty(c.prototype, 'destroyed', {
 		enumerable: !1,
 		get: function () {
-			return (
-				void 0 !== this._readableState &&
-				void 0 !== this._writableState &&
-				this._readableState.destroyed &&
-				this._writableState.destroyed
-			);
+			return void 0 !== this._readableState && void 0 !== this._writableState && this._readableState.destroyed && this._writableState.destroyed;
 		},
 		set: function (e) {
-			if (void 0 !== this._readableState && void 0 !== this._writableState)
-				(this._readableState.destroyed = e), (this._writableState.destroyed = e);
+			if (void 0 !== this._readableState && void 0 !== this._writableState) (this._readableState.destroyed = e), (this._writableState.destroyed = e);
 		}
 	});

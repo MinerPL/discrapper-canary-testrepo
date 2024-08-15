@@ -51,11 +51,7 @@ function Z(e) {
 	let N = (0, o.ZP)(h),
 		Z = Array.from((0, o.uF)(N).values()),
 		L = null !== (t = null == m ? void 0 : m.filter(g.lm)) && void 0 !== t ? t : [],
-		A = (e) => (t) =>
-			([x.IIU.PLAYING, x.IIU.WATCHING].includes(t.type) &&
-				(null != t.assets || null != t.state || null != t.details || null != t.party) &&
-				(null == t.session_id || t.session_id === e.voiceState.sessionId)) ||
-			t.type === x.IIU.LISTENING,
+		A = (e) => (t) => ([x.IIU.PLAYING, x.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === x.IIU.LISTENING,
 		b = (0, r.e7)(
 			[_.Z],
 			() => {
@@ -65,13 +61,7 @@ function Z(e) {
 						let n = _.Z.findActivity(t.user.id, A(t));
 						if (null != n && !(0, u.Z)(n)) {
 							var i, l, r, a;
-							let s = ''
-									.concat(null !== (l = n.application_id) && void 0 !== l ? l : '', ':')
-									.concat(
-										null !== (r = null === (i = n.party) || void 0 === i ? void 0 : i.id) && void 0 !== r
-											? r
-											: t.user.id
-									),
+							let s = ''.concat(null !== (l = n.application_id) && void 0 !== l ? l : '', ':').concat(null !== (r = null === (i = n.party) || void 0 === i ? void 0 : i.id) && void 0 !== r ? r : t.user.id),
 								o =
 									null !== (a = e[s]) && void 0 !== a
 										? a
@@ -137,34 +127,7 @@ function Z(e) {
 										children: S.Z.Messages.VOICE_CHANNEL_ACTIVITY_STATUS_REDIRECT.format({
 											onClick: () => {
 												(0, a.openModalLazy)(async () => {
-													let { default: e } = await Promise.all([
-														n.e('96427'),
-														n.e('44733'),
-														n.e('52249'),
-														n.e('54803'),
-														n.e('15685'),
-														n.e('47006'),
-														n.e('32776'),
-														n.e('18209'),
-														n.e('33053'),
-														n.e('8016'),
-														n.e('37581'),
-														n.e('76540'),
-														n.e('68136'),
-														n.e('87624'),
-														n.e('22646'),
-														n.e('5528'),
-														n.e('18146'),
-														n.e('43331'),
-														n.e('30419'),
-														n.e('18824'),
-														n.e('37229'),
-														n.e('52619'),
-														n.e('29291'),
-														n.e('54535'),
-														n.e('71661'),
-														n.e('2047')
-													]).then(n.bind(n, 241420));
+													let { default: e } = await Promise.all([n.e('96427'), n.e('35728'), n.e('52249'), n.e('54803'), n.e('15685'), n.e('47006'), n.e('32776'), n.e('18209'), n.e('33053'), n.e('8016'), n.e('37581'), n.e('76540'), n.e('68136'), n.e('87624'), n.e('22646'), n.e('5528'), n.e('18146'), n.e('43331'), n.e('30419'), n.e('18824'), n.e('37229'), n.e('52619'), n.e('29291'), n.e('54535'), n.e('71661'), n.e('2047')]).then(n.bind(n, 241420));
 													return (t) =>
 														(0, i.jsx)(e, {
 															...t,

@@ -17,15 +17,7 @@ var s = t(772848),
 let f = 'payment-modal';
 function h(e) {
 	let n;
-	let {
-			skuId: t,
-			isGift: h = !1,
-			giftMessage: m,
-			onClose: v,
-			onComplete: C,
-			analyticsLocations: p,
-			analyticsObject: x
-		} = e,
+	let { skuId: t, isGift: h = !1, giftMessage: m, onClose: v, onComplete: C, analyticsLocations: p, analyticsObject: x } = e,
 		I = !1,
 		T = (0, s.Z)(),
 		g = (e) => {

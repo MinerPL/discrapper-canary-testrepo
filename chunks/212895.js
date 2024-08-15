@@ -42,13 +42,7 @@ function f(e, t, n) {
 		i = [],
 		s = [],
 		o = { purchaseType: n ? d.tuJ.GIFT : d.tuJ.DEFAULT };
-	return (
-		(r = 'string' == typeof e ? u.Z.get(e) : e),
-		a()(r, 'subscription plan not loaded'),
-		null != t && u.Z.hasPaymentSourceForSKUId(t, r.skuId) && (o.paymentSourceId = t),
-		(i = (s = (0, c.T4)(r.id, o)).map((e) => e.currency)).length < 1 && (i = [d.pKx.USD]),
-		i
-	);
+	return (r = 'string' == typeof e ? u.Z.get(e) : e), a()(r, 'subscription plan not loaded'), null != t && u.Z.hasPaymentSourceForSKUId(t, r.skuId) && (o.paymentSourceId = t), (i = (s = (0, c.T4)(r.id, o)).map((e) => e.currency)).length < 1 && (i = [d.pKx.USD]), i;
 }
 function h(e, t, n) {
 	let r = u.Z.get(e);

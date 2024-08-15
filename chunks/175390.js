@@ -22,10 +22,7 @@ function p() {
 	let e = c.QK.useSetting(),
 		t = (0, C.n)(),
 		n = (0, s.e7)([o.Z], () => o.Z.useReducedMotion),
-		i =
-			t && e && !n
-				? (0, a.b)('server_products/storefront/question-mark.gif')
-				: (0, a.b)('server_products/storefront/question-mark.png');
+		i = t && e && !n ? (0, a.b)('server_products/storefront/question-mark.gif') : (0, a.b)('server_products/storefront/question-mark.png');
 	return (0, r.jsxs)('div', {
 		className: I.previewListingCard,
 		children: [

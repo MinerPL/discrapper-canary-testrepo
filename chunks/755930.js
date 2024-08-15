@@ -178,15 +178,7 @@ let C = (e) => {
 		});
 	};
 function f(e) {
-	let {
-			className: t,
-			headerClassName: n,
-			rowClassName: i,
-			enableRowSeparators: l = !1,
-			initialSortKey: c,
-			initialSortDirection: d = u.sHY.ASCENDING,
-			..._
-		} = e,
+	let { className: t, headerClassName: n, rowClassName: i, enableRowSeparators: l = !1, initialSortKey: c, initialSortDirection: d = u.sHY.ASCENDING, ..._ } = e,
 		[E, T] = a.useState(c),
 		[m, N] = a.useState(d);
 	return (0, s.jsx)('div', {

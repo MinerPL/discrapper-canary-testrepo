@@ -73,10 +73,7 @@ let U = (E) => {
 													tag: 'span',
 													variant: 'heading-md/normal',
 													color: 'text-normal',
-													children:
-														M.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTIONS_TAKEN_VIOLATION_ACCOUNT_STATUS.format(
-															{ expirationDate: I.toLocaleDateString(O, { dateStyle: 'medium' }) }
-														)
+													children: M.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTIONS_TAKEN_VIOLATION_ACCOUNT_STATUS.format({ expirationDate: I.toLocaleDateString(O, { dateStyle: 'medium' }) })
 												})
 											},
 											'expiration'
@@ -125,9 +122,7 @@ let U = (E) => {
 					className: r.classificationPolicyDescriptionContainer,
 					children: (0, A.jsx)(C.Text, {
 						variant: 'text-md/normal',
-						children: M.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_HEADER_V2.format({
-							classificationDescription: _
-						})
+						children: M.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_HEADER_V2.format({ classificationDescription: _ })
 					})
 				}),
 				(0, A.jsx)('div', {
@@ -175,13 +170,7 @@ let U = (E) => {
 					})
 		}),
 	m = (E) => {
-		let {
-			tosLink: _,
-			communityGuidelinesLink: I,
-			classificationTypeText: O,
-			policyExplainerLink: T,
-			appealComponent: S
-		} = E;
+		let { tosLink: _, communityGuidelinesLink: I, classificationTypeText: O, policyExplainerLink: T, appealComponent: S } = E;
 		return (0, A.jsxs)('div', {
 			className: r.classificationActionExplanationContainer,
 			children: [
@@ -209,13 +198,7 @@ let U = (E) => {
 _.Z = (E) => {
 	var _;
 	let { classificationId: I, source: S, onError: C } = E,
-		{
-			classification: N,
-			classificationRequestState: R,
-			isAppealEligible: V,
-			isDsaEligible: M,
-			violationType: c
-		} = (0, t.YG)(I),
+		{ classification: N, classificationRequestState: R, isAppealEligible: V, isDsaEligible: M, violationType: c } = (0, t.YG)(I),
 		G = (0, n.P)(),
 		d = null != N && null != N.flagged_content && N.flagged_content.length > 0,
 		F = (0, L.e)();

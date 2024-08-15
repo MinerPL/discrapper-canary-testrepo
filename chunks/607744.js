@@ -20,11 +20,11 @@ let p = {
 		newMember: !1,
 		canChat: !0
 	},
-	I = new Set(),
-	m = {};
+	m = new Set(),
+	I = {};
 function T(e) {
 	let t;
-	g(e), I.add(e);
+	g(e), m.add(e);
 	let n = _.Z.getGuild(e),
 		r = E.default.getCurrentUser();
 	if (null == n || n.verificationLevel === f.sFg.NONE || null == r || n.isOwner(r) || r.isPhoneVerified()) return;
@@ -48,12 +48,7 @@ function T(e) {
 		T = !1,
 		S = !1,
 		A = !1;
-	!r.isPhoneVerified() &&
-		!r.isStaff() &&
-		((p = n.verificationLevel >= f.sFg.LOW && !r.verified),
-		(T = n.verificationLevel >= f.sFg.VERY_HIGH),
-		(S = n.verificationLevel >= f.sFg.MEDIUM && s > 0),
-		(A = n.verificationLevel >= f.sFg.HIGH && o > 0));
+	!r.isPhoneVerified() && !r.isStaff() && ((p = n.verificationLevel >= f.sFg.LOW && !r.verified), (T = n.verificationLevel >= f.sFg.VERY_HIGH), (S = n.verificationLevel >= f.sFg.MEDIUM && s > 0), (A = n.verificationLevel >= f.sFg.HIGH && o > 0));
 	let N = [];
 	A && N.push(o),
 		S && N.push(s),
@@ -66,7 +61,7 @@ function T(e) {
 					}),
 				Math.max(...N)
 			)),
-		(m[e] = {
+		(I[e] = {
 			notClaimed: c,
 			notEmailVerified: p,
 			notPhoneVerified: T,
@@ -79,11 +74,11 @@ function T(e) {
 		});
 }
 function g(e) {
-	let t = m[e];
-	null != t && clearTimeout(t.timeoutRef), delete m[e];
+	let t = I[e];
+	null != t && clearTimeout(t.timeoutRef), delete I[e];
 }
 function S(e) {
-	I.delete(e.guild.id), T(e.guild.id);
+	m.delete(e.guild.id), T(e.guild.id);
 }
 class A extends (r = o.ZP.Store) {
 	initialize() {
@@ -91,7 +86,7 @@ class A extends (r = o.ZP.Store) {
 	}
 	getCheck(e) {
 		var t;
-		return !I.has(e) && T(e), null !== (t = m[e]) && void 0 !== t ? t : p;
+		return !m.has(e) && T(e), null !== (t = I[e]) && void 0 !== t ? t : p;
 	}
 	canChatInGuild(e) {
 		return this.getCheck(e).canChat;
@@ -108,13 +103,13 @@ class A extends (r = o.ZP.Store) {
 		: (i[a] = s),
 	(t.Z = new A(l.Z, {
 		CONNECTION_OPEN: function () {
-			for (let e in (I.clear(), m)) g(e);
+			for (let e in (m.clear(), I)) g(e);
 		},
 		CONNECTION_CLOSED: function () {
-			c.default.keys(m).forEach(g);
+			c.default.keys(I).forEach(g);
 		},
 		CURRENT_USER_UPDATE: function () {
-			I.clear();
+			m.clear();
 		},
 		GUILD_CREATE: S,
 		GUILD_UPDATE: S,
@@ -126,7 +121,7 @@ class A extends (r = o.ZP.Store) {
 			var t;
 			let { guildId: n, user: r } = e;
 			if (r.id !== (null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
-			I.delete(n);
+			m.delete(n);
 		},
 		GUILD_VERIFICATION_CHECK: function (e) {
 			let { guildId: t } = e;

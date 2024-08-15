@@ -31,12 +31,7 @@ var s = t(735250),
 	T = t(545533);
 let C = (e) => {
 		let { onPurchaseComplete: a, onHandoffFailure: t } = e,
-			{
-				selectedPlan: c,
-				browserCheckoutState: u,
-				browserCheckoutStateLoadId: C,
-				contextMetadata: S
-			} = (0, A.usePaymentContext)(),
+			{ selectedPlan: c, browserCheckoutState: u, browserCheckoutStateLoadId: C, contextMetadata: S } = (0, A.usePaymentContext)(),
 			{ isGift: I } = (0, E.wD)(),
 			[P, R] = n.useState(!1);
 		return (
@@ -67,12 +62,7 @@ let C = (e) => {
 													s();
 												}
 											);
-								})(
-									null !== (e = null == c ? void 0 : c.id) && void 0 !== e ? e : p.Xh.PREMIUM_MONTH_TIER_2,
-									I,
-									S.loadId,
-									t
-								);
+								})(null !== (e = null == c ? void 0 : c.id) && void 0 !== e ? e : p.Xh.PREMIUM_MONTH_TIER_2, I, S.loadId, t);
 					},
 					(0, N.q1)().delay ? 1000 : 0
 				);

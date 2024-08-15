@@ -18,8 +18,8 @@ var r = n(735250),
 	f = n(592125),
 	h = n(757266),
 	p = n(650774),
-	I = n(430824),
-	m = n(283595),
+	m = n(430824),
+	I = n(283595),
 	T = n(496675),
 	g = n(699516),
 	S = n(944486),
@@ -43,15 +43,7 @@ var r = n(735250),
 	B = n(689938);
 function F(e) {
 	var t, n;
-	let {
-			activity: F,
-			embeddedActivity: V,
-			user: H,
-			onAction: Z,
-			isEmbedded: Y = !1,
-			ButtonComponent: j = x.Z,
-			...W
-		} = e,
+	let { activity: F, embeddedActivity: V, user: H, onAction: Z, isEmbedded: Y = !1, ButtonComponent: j = x.Z, ...W } = e,
 		{ analyticsLocations: K } = (0, d.ZP)(),
 		[z, q] = i.useState(!1),
 		Q = (0, a.e7)([A.default], () => A.default.getCurrentUser()),
@@ -63,12 +55,12 @@ function F(e) {
 			activity: F
 		}),
 		ee = (0, a.e7)(
-			[m.Z, E.Z, O.Z, h.Z],
+			[I.Z, E.Z, O.Z, h.Z],
 			() =>
 				Y ||
 				(null != $ &&
 					(0, C.t)({
-						LibraryApplicationStore: m.Z,
+						LibraryApplicationStore: I.Z,
 						LaunchableGameStore: E.Z,
 						DispatchApplicationStore: O.Z,
 						ConnectedAppsStore: h.Z,
@@ -78,29 +70,18 @@ function F(e) {
 		et = (0, a.e7)([D.ZP], () =>
 			Array.from(D.ZP.getSelfEmbeddedActivities().values()).some((e) => {
 				let { applicationId: t, channelId: n } = e;
-				return (
-					(t === (null == F ? void 0 : F.application_id) || t === (null == V ? void 0 : V.applicationId)) && n === J
-				);
+				return (t === (null == F ? void 0 : F.application_id) || t === (null == V ? void 0 : V.applicationId)) && n === J;
 			})
 		),
-		en = (0, a.e7)(
-			[v.Z],
-			() => null != F && null != F.application_id && v.Z.getState(F.application_id, k.mFx.JOIN) === k.OcF.LOADING
-		),
-		[er] = (0, _.Z)(
-			(null == V ? void 0 : V.applicationId) != null
-				? [null == V ? void 0 : V.applicationId]
-				: (null == F ? void 0 : F.application_id) != null
-					? [null == F ? void 0 : F.application_id]
-					: []
-		),
+		en = (0, a.e7)([v.Z], () => null != F && null != F.application_id && v.Z.getState(F.application_id, k.mFx.JOIN) === k.OcF.LOADING),
+		[er] = (0, _.Z)((null == V ? void 0 : V.applicationId) != null ? [null == V ? void 0 : V.applicationId] : (null == F ? void 0 : F.application_id) != null ? [null == F ? void 0 : F.application_id] : []),
 		ei = (0, P.s5)({
 			userId: H.id,
 			activity: F,
 			channelId: J,
 			application: er
 		}),
-		ea = (0, a.e7)([f.Z, I.Z, p.Z, g.Z, S.Z, N.Z, T.Z], () =>
+		ea = (0, a.e7)([f.Z, m.Z, p.Z, g.Z, S.Z, N.Z, T.Z], () =>
 			null != V
 				? ei === P.Fw.CAN_JOIN
 				: null != F
@@ -112,7 +93,7 @@ function F(e) {
 							currentUser: Q,
 							isEmbedded: Y,
 							ChannelStore: f.Z,
-							GuildStore: I.Z,
+							GuildStore: m.Z,
 							GuildMemberCountStore: p.Z,
 							RelationshipStore: g.Z,
 							SelectedChannelStore: S.Z,
@@ -121,22 +102,14 @@ function F(e) {
 						})
 					: void 0
 		),
-		es = (0, a.e7)([D.ZP], () =>
-			Array.from(D.ZP.getSelfEmbeddedActivities().values()).some(
-				(e) =>
-					e.applicationId === (null == V ? void 0 : V.applicationId) &&
-					e.channelId === (null == V ? void 0 : V.channelId)
-			)
-		),
+		es = (0, a.e7)([D.ZP], () => Array.from(D.ZP.getSelfEmbeddedActivities().values()).some((e) => e.applicationId === (null == V ? void 0 : V.applicationId) && e.channelId === (null == V ? void 0 : V.channelId))),
 		eo = (0, c.O)(),
 		el = !R.isPlatformEmbedded;
 	if (!((0, U.Z)(F, k.xjy.JOIN) || Y) || null == $) return null;
 	let eu = !X || (Y && !es),
 		ec = eu && (el || ee) && !z && !et && (!Y || ea),
 		ed = null;
-	eu
-		? !el && !ee && null != F && (ed = B.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({ name: F.name }))
-		: (ed = B.Z.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF);
+	eu ? !el && !ee && null != F && (ed = B.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({ name: F.name })) : (ed = B.Z.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF);
 	let e_ = null !== (n = null == V ? void 0 : V.launchId) && void 0 !== n ? n : null == F ? void 0 : F.session_id,
 		eE = async (e, t) => {
 			var n;

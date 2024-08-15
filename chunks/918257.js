@@ -33,9 +33,7 @@ function S() {
 					(0, n.jsx)(r.Text, {
 						color: 'header-secondary',
 						variant: 'text-sm/normal',
-						children: u.Z.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME_DESCRIPTION_WITH_LINK.format({
-							helpCenterArticle: d.Z.getArticleURL(E.BhN.SOUNDBOARD)
-						})
+						children: u.Z.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME_DESCRIPTION_WITH_LINK.format({ helpCenterArticle: d.Z.getArticleURL(E.BhN.SOUNDBOARD) })
 					})
 				]
 			}),

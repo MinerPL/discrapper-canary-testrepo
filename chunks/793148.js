@@ -34,21 +34,8 @@ class E extends (r = a.PureComponent) {
 		null != r && (e ? r.setGrabber(0) : r.setGrabber(t / n));
 	}
 	render() {
-		let {
-				iconClassName: e,
-				iconColor: t,
-				className: n,
-				sliderWrapperClassName: r,
-				sliderClassName: a,
-				currentWindow: s,
-				muted: _,
-				minValue: E,
-				maxValue: f,
-				value: h,
-				onVolumeShow: p,
-				onVolumeHide: I
-			} = this.props,
-			{ hovered: m, focused: T, dragging: g } = this.state,
+		let { iconClassName: e, iconColor: t, className: n, sliderWrapperClassName: r, sliderClassName: a, currentWindow: s, muted: _, minValue: E, maxValue: f, value: h, onVolumeShow: p, onVolumeHide: m } = this.props,
+			{ hovered: I, focused: T, dragging: g } = this.state,
 			S = l.VoiceNormalIcon;
 		return (
 			_ || h === E ? (S = l.VoiceXIcon) : h < f / 2 && (S = l.VoiceLowIcon),
@@ -60,7 +47,7 @@ class E extends (r = a.PureComponent) {
 				onMouseLeave: () => {
 					clearTimeout(this._hoverTimeout),
 						(this._hoverTimeout = setTimeout(() => {
-							this.setState({ hovered: !1 }), null == I || I();
+							this.setState({ hovered: !1 }), null == m || m();
 						}, 150));
 				},
 				onFocus: () => this.setState({ focused: !0 }),
@@ -68,13 +55,12 @@ class E extends (r = a.PureComponent) {
 				onKeyDown: this.handleKeyDown,
 				children: [
 					(0, i.jsx)('div', {
-						className: o()(d.volumeButtonSlider, r, { [d.sliderVisible]: m || T || g }),
+						className: o()(d.volumeButtonSlider, r, { [d.sliderVisible]: I || T || g }),
 						onMouseEnter: () => {
 							clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 });
 						},
 						onMouseLeave: () => {
-							clearTimeout(this._hoverTimeout),
-								(this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), 150));
+							clearTimeout(this._hoverTimeout), (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), 150));
 						},
 						children: (0, i.jsx)(u.Z, {
 							sliderClassName: a,

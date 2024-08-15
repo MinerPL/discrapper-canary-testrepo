@@ -19,18 +19,6 @@ function i(e) {
 		u = a || d;
 	return (0, s.jsxs)('div', {
 		className: l.sidebar,
-		children: [
-			(0, s.jsx)('div', { className: o()(l.step1, { [l.show]: n }) }),
-			(0, s.jsx)('div', { className: o()(l.step24Clouds, { [l.show]: u }) }),
-			(0, s.jsx)('div', { className: o()(l.step34Flag, { [l.show]: d }) }),
-			(0, s.jsx)('div', { className: o()(l.step24Base, { [l.show]: u }) }),
-			(0, s.jsx)('div', { className: o()(l.step24Ground, { [l.show]: u }) }),
-			(0, s.jsx)('div', { className: o()(l.step2Base, { [l.show]: a }) }),
-			(0, s.jsx)('div', { className: o()(l.step2Character, { [l.show]: a }) }),
-			(0, s.jsx)('div', { className: o()(l.step34Base, { [l.show]: d }) }),
-			(0, s.jsx)('div', { className: o()(l.step3Character, { [l.show]: i }) }),
-			(0, s.jsx)('div', { className: o()(l.step4Character, { [l.show]: c }) }),
-			(0, s.jsx)('div', { className: o()(l.step24Foreground, { [l.show]: u }) })
-		]
+		children: [(0, s.jsx)('div', { className: o()(l.step1, { [l.show]: n }) }), (0, s.jsx)('div', { className: o()(l.step24Clouds, { [l.show]: u }) }), (0, s.jsx)('div', { className: o()(l.step34Flag, { [l.show]: d }) }), (0, s.jsx)('div', { className: o()(l.step24Base, { [l.show]: u }) }), (0, s.jsx)('div', { className: o()(l.step24Ground, { [l.show]: u }) }), (0, s.jsx)('div', { className: o()(l.step2Base, { [l.show]: a }) }), (0, s.jsx)('div', { className: o()(l.step2Character, { [l.show]: a }) }), (0, s.jsx)('div', { className: o()(l.step34Base, { [l.show]: d }) }), (0, s.jsx)('div', { className: o()(l.step3Character, { [l.show]: i }) }), (0, s.jsx)('div', { className: o()(l.step4Character, { [l.show]: c }) }), (0, s.jsx)('div', { className: o()(l.step24Foreground, { [l.show]: u }) })]
 	});
 }

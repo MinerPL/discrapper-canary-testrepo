@@ -160,13 +160,7 @@ class p {
 						channelId: r,
 						ownerId: u
 					});
-				(null == i) != (null == a)
-					? (null != i && this._onStreamApplication(_, i), null != a && this._onStreamDirectSource(_, a, o, l))
-					: new s.Z('ApplicationSwitchingManager').warn(
-							'invalid start_stream: both application + display modes were specified (pid: '
-								.concat(i, ', source-id: ')
-								.concat(a, ')')
-						);
+				(null == i) != (null == a) ? (null != i && this._onStreamApplication(_, i), null != a && this._onStreamDirectSource(_, a, o, l)) : new s.Z('ApplicationSwitchingManager').warn('invalid start_stream: both application + display modes were specified (pid: '.concat(i, ', source-id: ').concat(a, ')'));
 			}),
 			r.Z.subscribe('STREAM_DELETE', (e) => {
 				let { streamKey: t } = e;
@@ -186,10 +180,7 @@ class p {
 			}),
 			r.Z.subscribe('MEDIA_ENGINE_SET_GO_LIVE_SOURCE', (e) => {
 				let { settings: t } = e;
-				(null == t ? void 0 : t.context) === f.Yn.STREAM &&
-					(null == t ? void 0 : t.desktopSettings) == null &&
-					(null == t ? void 0 : t.cameraSettings) == null &&
-					this._onCaptureEnded();
+				(null == t ? void 0 : t.context) === f.Yn.STREAM && (null == t ? void 0 : t.desktopSettings) == null && (null == t ? void 0 : t.cameraSettings) == null && this._onCaptureEnded();
 			});
 	}
 }

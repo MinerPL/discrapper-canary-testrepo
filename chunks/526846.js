@@ -19,8 +19,8 @@ var i = n(735250),
 	_ = n(906732),
 	f = n(703656),
 	E = n(210887),
-	g = n(390322),
-	C = n(626135),
+	C = n(390322),
+	g = n(626135),
 	I = n(348600),
 	x = n(566620),
 	T = n(520599),
@@ -39,15 +39,12 @@ let O = 'vc-activities-'.concat((0, o.Z)()),
 	y = a.forwardRef(function (e, t) {
 		let { channel: n, isHovered: s, closePopout: o, onMouseEnter: y, onMouseLeave: D, onClick: k, className: U } = e,
 			{ enabled: w } = I.Z.useExperiment({ location: '8009ca_3' }),
-			{ enableAmazonMusicShelfPoster: B } = T.p.useExperiment(
-				{ location: 'ActivitiesMiniShelf' },
-				{ autoTrackExposure: !0 }
-			),
+			{ enableAmazonMusicShelfPoster: B } = T.p.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }),
 			H = (0, c.e7)([E.Z], () => E.Z.getState().theme),
 			G = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
 			{ id: V, guild_id: F } = n;
 		a.useEffect(() => {
-			C.default.track(M.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
+			g.default.track(M.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
 				channel_id: V,
 				guild_id: F
 			});
@@ -83,7 +80,7 @@ let O = 'vc-activities-'.concat((0, o.Z)()),
 			J = a.useCallback(
 				(e) => {
 					y(),
-						C.default.track(M.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
+						g.default.track(M.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
 							channel_id: n.id,
 							guild_id: n.getGuildId()
 						});
@@ -120,7 +117,7 @@ let O = 'vc-activities-'.concat((0, o.Z)()),
 					: null;
 		return (0, i.jsx)(_.Gt, {
 			value: z,
-			children: (0, i.jsx)(g.Z, {
+			children: (0, i.jsx)(C.Z, {
 				children: (0, i.jsxs)(u.Dialog, {
 					ref: t,
 					'aria-labelledby': O,

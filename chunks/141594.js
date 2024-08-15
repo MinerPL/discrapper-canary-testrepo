@@ -58,12 +58,7 @@ t.Z = () => {
 						srcLightHovered: null === (O = e.hovered) || void 0 === O ? void 0 : O.light
 					});
 			}
-		} else
-			f === h.k2.COACHTIP
-				? (C = h.fY[T])
-				: f === h.k2.COACHTIP_HEADLINE_ONLY
-					? (C = h.zM[T])
-					: f === h.k2.BADGE && (C = { type: h.k2.BADGE });
+		} else f === h.k2.COACHTIP ? (C = h.fY[T]) : f === h.k2.COACHTIP_HEADLINE_ONLY ? (C = h.zM[T]) : f === h.k2.BADGE && (C = { type: h.k2.BADGE });
 	}
 	return {
 		collectiblesShopTabNewBadgeDisplayOptions: C,

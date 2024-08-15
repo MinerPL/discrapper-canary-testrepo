@@ -50,7 +50,5 @@ function _(e, t) {
 		});
 }
 function E(e) {
-	__OVERLAY__
-		? r.default.request(o.Etm.OVERLAY, (0, s.G)(e))
-		: a.Z.dispatchToSubscriptions(o.zMe.OVERLAY, {}, (0, s.G)(e));
+	__OVERLAY__ ? r.default.request(o.Etm.OVERLAY, (0, s.G)(e)) : a.Z.dispatchToSubscriptions(o.zMe.OVERLAY, {}, (0, s.G)(e));
 }

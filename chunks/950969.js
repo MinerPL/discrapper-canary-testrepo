@@ -11,12 +11,7 @@ var i = n(735250),
 	p = n(451478);
 function _(e) {
 	let t = u.Z.getChannel(e);
-	return (
-		null != t &&
-		null != t.getGuildId() &&
-		!(t.isThread() ? c.Z.isMuted(t.id) : h.ZP.isChannelMuted(t.getGuildId(), t.id)) &&
-		(0, o.d)(t)
-	);
+	return null != t && null != t.getGuildId() && !(t.isThread() ? c.Z.isMuted(t.id) : h.ZP.isChannelMuted(t.getGuildId(), t.id)) && (0, o.d)(t);
 }
 function f(e) {
 	let t = u.Z.getChannel(e);

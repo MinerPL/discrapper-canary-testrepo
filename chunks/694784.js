@@ -17,10 +17,7 @@ async function c(e) {
 		u = !1;
 	if (null == c && null != t && null == r.Z.getGuild(t))
 		try {
-			await (0, l.Ub)(t, { object: o.qAy.FORWARD_BREADCRUMB }, { shouldNavigate: !1 }),
-				(u = !0),
-				await (0, i.V)(t),
-				(c = s.Z.getChannel(n));
+			await (0, l.Ub)(t, { object: o.qAy.FORWARD_BREADCRUMB }, { shouldNavigate: !1 }), (u = !0), await (0, i.V)(t), (c = s.Z.getChannel(n));
 		} catch {}
 	let d = u ? n : void 0;
 	(0, a.Z)(o.Z5c.CHANNEL(t, n, e.messageReference.message_id), { welcomeModalChannelId: d });

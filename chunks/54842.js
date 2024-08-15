@@ -220,9 +220,7 @@ t.Z = (e) => {
 				color: 'header-secondary',
 				variant: 'text-md/normal',
 				className: N.body,
-				children: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_BODY_WITH_HELP_ARTICLE.format({
-					helpdeskArticle: I.Z.getArticleURL(E.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES)
-				})
+				children: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_BODY_WITH_HELP_ARTICLE.format({ helpdeskArticle: I.Z.getArticleURL(E.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES) })
 			}),
 			(0, s.jsx)(c.Tooltip, {
 				text: x ? null : m.Z.Messages.GUILD_SETTINGS_COMMUNITY_ADMINISTRATOR_ONLY,
@@ -246,9 +244,7 @@ t.Z = (e) => {
 				color: 'header-secondary',
 				className: N.body,
 				variant: 'text-sm/normal',
-				children: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_LEARN_MORE.format({
-					helpdeskArticle: I.Z.getArticleURL(E.BhN.GUILD_COMMUNITY_FEATURE)
-				})
+				children: m.Z.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_LEARN_MORE.format({ helpdeskArticle: I.Z.getArticleURL(E.BhN.GUILD_COMMUNITY_FEATURE) })
 			}),
 			(0, s.jsx)('div', {
 				className: N.features,

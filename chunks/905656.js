@@ -16,16 +16,7 @@ var l = t(735250),
 	g = t(470794),
 	N = t(886777);
 function _(e) {
-	let {
-			movDark: n = u,
-			movLight: t = c,
-			mp4Dark: i = m,
-			mp4Light: a = x,
-			pngDark: r = h,
-			pngLight: s = g,
-			webmDark: d = f,
-			webmLight: _ = N
-		} = e,
+	let { movDark: n = u, movLight: t = c, mp4Dark: i = m, mp4Light: a = x, pngDark: r = h, pngLight: s = g, webmDark: d = f, webmLight: _ = N } = e,
 		Z = (0, o.vu)(),
 		v = [
 			(0, l.jsx)(

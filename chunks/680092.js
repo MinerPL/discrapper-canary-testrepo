@@ -132,8 +132,7 @@ var r = {
 	'creditCard.encryptedPassword.label': 'Primeiros dois dígitos da senha do cartão',
 	'creditCard.encryptedPassword.invalid': 'Senha inválida',
 	'creditCard.taxNumber': 'Data de nascimento do titular do cartão ou número de registro corporativo',
-	'creditCard.taxNumber.label':
-		'Data de nascimento do titular do cartão (AAMMDD) ou número de registro corporativo (10 dígitos)',
+	'creditCard.taxNumber.label': 'Data de nascimento do titular do cartão (AAMMDD) ou número de registro corporativo (10 dígitos)',
 	'creditCard.taxNumber.labelAlt': 'Número de registro corporativo (10 dígitos)',
 	'creditCard.taxNumber.invalid': 'Data de nascimento do titular do cartão ou número de registro corporativo inválidos',
 	'storedPaymentMethod.disable.button': 'Remover',
@@ -168,8 +167,7 @@ var r = {
 	'blik.invalid': 'Digite 6 números',
 	'blik.code': 'Código de 6 dígitos',
 	'blik.help': 'Obtenha o código no aplicativo do seu banco.',
-	'swish.pendingMessage':
-		'Depois de escanear o QR, o status pode ficar pendente por até 10 minutos. Não tente refazer o pagamento antes desse período para evitar cobrança duplicada.',
+	'swish.pendingMessage': 'Depois de escanear o QR, o status pode ficar pendente por até 10 minutos. Não tente refazer o pagamento antes desse período para evitar cobrança duplicada.',
 	'field.valid': 'Campo válido',
 	'field.invalid': 'Campo inválido',
 	'error.va.gen.01': 'Campo incompleto',
@@ -205,8 +203,7 @@ var r = {
 	'bankTransfer.iban': 'IBAN',
 	'bankTransfer.bic': 'BIC',
 	'bankTransfer.reference': 'Referência',
-	'bankTransfer.introduction':
-		'Continue criando o novo pagamento por transferência bancária. Use as informações na tela a seguir para concluí-lo.',
+	'bankTransfer.introduction': 'Continue criando o novo pagamento por transferência bancária. Use as informações na tela a seguir para concluí-lo.',
 	'bankTransfer.instructions': 'Obrigado pela sua compra, use a informação a seguir para concluir o seu pagamento.',
 	'bacs.accountHolderName': 'Nome do titular da conta bancária',
 	'bacs.accountHolderName.invalid': 'Nome do titular da conta bancária inválido',
@@ -215,8 +212,7 @@ var r = {
 	'bacs.bankLocationId': 'Código de classificação',
 	'bacs.bankLocationId.invalid': 'Código de classificação inválido',
 	'bacs.consent.amount': 'Concordo que o valor acima seja deduzido da minha conta bancária.',
-	'bacs.consent.account':
-		'Confirmo que a conta está em meu nome e que sou o único signatário que deve autorizar o débito direto nessa conta.',
+	'bacs.consent.account': 'Confirmo que a conta está em meu nome e que sou o único signatário que deve autorizar o débito direto nessa conta.',
 	edit: 'Editar',
 	'bacs.confirm': 'Confirmar e pagar',
 	'bacs.result.introduction': 'Baixar instrução de débito direto (DDI)',
@@ -242,8 +238,7 @@ var r = {
 	'ach.encryptedBankAccountNumber.aria.label': 'Número da conta',
 	'ach.encryptedBankLocationId.aria.iframeTitle': 'Iframe para número de identificação do banco',
 	'ach.encryptedBankLocationId.aria.label': 'Número de roteamento ABA',
-	'pix.instructions':
-		'Abra o app com sua chave PIX cadastrada, escolha Pagar com Pix e escaneie o QR Code ou copie e cole o código',
+	'pix.instructions': 'Abra o app com sua chave PIX cadastrada, escolha Pagar com Pix e escaneie o QR Code ou copie e cole o código',
 	'twint.saved': 'salvo',
 	orPayWith: 'ou pague com',
 	invalidFormatExpects: 'Formato inválido. Formato esperado: %{format}',
@@ -251,8 +246,7 @@ var r = {
 	'upi.vpaWaitingMessage': 'Abra o aplicativo UPI para confirmar o pagamento',
 	'upi.modeSelection': 'Selecione como você gostaria de usar o UPI.',
 	'onlineBanking.termsAndConditions': 'Ao continuar, você concorda com os %#termos e condições%#',
-	'onlineBankingPL.termsAndConditions':
-		'Ao continuar, você concorda com as %#condições%# e as %#informações obrigatórias%# da Przelewy24',
+	'onlineBankingPL.termsAndConditions': 'Ao continuar, você concorda com as %#condições%# e as %#informações obrigatórias%# da Przelewy24',
 	'ctp.loading.poweredByCtp': 'Desenvolvido por Click to Pay',
 	'ctp.loading.intro': 'Estamos verificando se você tem algum cartão salvo no Click to Pay...',
 	'ctp.login.title': 'Continuar para o Click to Pay',
@@ -280,8 +274,7 @@ var r = {
 	'ctp.infoPopup.benefit2': 'Use com comerciantes no mundo todo',
 	'ctp.infoPopup.benefit3': 'Configure apenas uma vez e simplifique seus pagamentos no futuro',
 	'ctp.errors.AUTH_INVALID': 'Autenticação inválida',
-	'ctp.errors.NOT_FOUND':
-		'Nenhuma conta foi encontrada. Informe um e-mail válido ou continue inserindo os dados do cartão manualmente',
+	'ctp.errors.NOT_FOUND': 'Nenhuma conta foi encontrada. Informe um e-mail válido ou continue inserindo os dados do cartão manualmente',
 	'ctp.errors.ID_FORMAT_UNSUPPORTED': 'Formato não compatível',
 	'ctp.errors.FRAUD': 'A conta do usuário foi bloqueada ou desativada',
 	'ctp.errors.CONSUMER_ID_MISSING': 'A identidade do consumidor está ausente na solicitação',

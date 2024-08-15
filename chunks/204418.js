@@ -6,16 +6,7 @@ var i = n(481060),
 	o = n(689938);
 let l = s.ZP.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
 t.Z = (e) => {
-	let {
-			user: t,
-			guildId: n,
-			avatarDecorationOverride: s,
-			status: u,
-			avatarSize: c = i.AvatarSizes.SIZE_120,
-			'aria-hidden': d = !1,
-			className: _,
-			animateOnHover: E = !1
-		} = e,
+	let { user: t, guildId: n, avatarDecorationOverride: s, status: u, avatarSize: c = i.AvatarSizes.SIZE_120, 'aria-hidden': d = !1, className: _, animateOnHover: E = !1 } = e,
 		{
 			avatarDecorationSrc: f,
 			avatarSrc: h,

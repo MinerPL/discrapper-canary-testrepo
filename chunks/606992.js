@@ -19,10 +19,7 @@ function s(e) {
 				u(void 0);
 				return;
 			}
-			if (
-				(null == c ? void 0 : c.type) === a.eq.GIFS ||
-				(null != n && !o && !(null === (e = n.autocomplete) || void 0 === e ? void 0 : e.alwaysUseLayer))
-			) {
+			if ((null == c ? void 0 : c.type) === a.eq.GIFS || (null != n && !o && !(null === (e = n.autocomplete) || void 0 === e ? void 0 : e.alwaysUseLayer))) {
 				u(null);
 				return;
 			}
@@ -37,16 +34,7 @@ function s(e) {
 					return;
 				}
 				if ((null === (t = f.nodeValue) || void 0 === t ? void 0 : t.length) === 0) {
-					h =
-						null !==
-							(i =
-								null == (f = f.previousSibling)
-									? void 0
-									: null === (r = f.nodeValue) || void 0 === r
-										? void 0
-										: r.length) && void 0 !== i
-							? i
-							: 0;
+					h = null !== (i = null == (f = f.previousSibling) ? void 0 : null === (r = f.nodeValue) || void 0 === r ? void 0 : r.length) && void 0 !== i ? i : 0;
 					continue;
 				}
 				null != c && (h >= c.queryText.length ? (h -= c.queryText.length) : (h = 0));
@@ -55,16 +43,11 @@ function s(e) {
 			if (null == f) return;
 			let p = _.document.createRange();
 			p.setStart(f, h), p.setEnd(f, h);
-			let I = p.getBoundingClientRect();
-			if ((null == I ? void 0 : I.height) !== 0) u(null != I ? I : null);
+			let m = p.getBoundingClientRect();
+			if ((null == m ? void 0 : m.height) !== 0) u(null != m ? m : null);
 		}, [o, _.document, s, d, c, n]);
 	return (
-		r.useEffect(
-			() => (
-				_.document.addEventListener('selectionchange', E), () => _.document.removeEventListener('selectionchange', E)
-			),
-			[_.document, E]
-		),
+		r.useEffect(() => (_.document.addEventListener('selectionchange', E), () => _.document.removeEventListener('selectionchange', E)), [_.document, E]),
 		r.useEffect(() => {
 			E();
 		}, [E, t]),

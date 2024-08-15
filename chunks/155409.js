@@ -27,14 +27,7 @@ class f extends (l = o.Component) {
 	}
 	componentDidUpdate(e) {
 		let { position: t, offsetX: n, offsetY: i, tutorialId: a, visible: s, windowSize: l } = e;
-		a !== this.props.tutorialId
-			? h.Z.hide(a)
-			: (s !== this.props.visible ||
-					t !== this.props.position ||
-					n !== this.props.offsetX ||
-					i !== this.props.offsetY ||
-					l !== this.props.windowSize) &&
-				this.show(this.props.visible);
+		a !== this.props.tutorialId ? h.Z.hide(a) : (s !== this.props.visible || t !== this.props.position || n !== this.props.offsetX || i !== this.props.offsetY || l !== this.props.windowSize) && this.show(this.props.visible);
 	}
 	show(e) {
 		let { tutorialId: t, position: n, offsetX: i, offsetY: a, visible: s, inlineSpecs: l, autoInvert: r } = this.props;
@@ -59,15 +52,7 @@ class f extends (l = o.Component) {
 		} else s && h.Z.hide(t);
 	}
 	render() {
-		let {
-				inlineSpecs: e,
-				tutorialId: t,
-				children: n,
-				visible: i,
-				windowFocused: a,
-				position: s,
-				autoInvert: l
-			} = this.props,
+		let { inlineSpecs: e, tutorialId: t, children: n, visible: i, windowFocused: a, position: s, autoInvert: l } = this.props,
 			c = _.Z.getData()[t];
 		return null != e && null != c
 			? (0, r.jsxs)(r.Fragment, {

@@ -15,18 +15,7 @@ var _ = a(392711),
 	E = a(262529);
 let C = [a(4921), a(663416), a(838295)],
 	f = [i, r, E],
-	M = [
-		() => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_01,
-		() => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_02,
-		() => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_03,
-		() => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_04,
-		() => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_05,
-		() => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_06,
-		() => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_07,
-		() => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_08,
-		() => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_09,
-		() => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_10
-	];
+	M = [() => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_01, () => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_02, () => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_03, () => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_04, () => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_05, () => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_06, () => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_07, () => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_08, () => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_09, () => L.Z.Messages.FOLLOW_SUCCESS_MODAL_HEADER_10];
 e.default = (s) => {
 	let { transitionState: e, onClose: a } = s,
 		_ = (0, O.ZP)(),

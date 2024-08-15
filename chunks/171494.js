@@ -25,11 +25,7 @@ function m(e) {
 	let { guildId: m, userId: E, anaylticsLocations: f, transitionState: p, onClose: T } = e,
 		O = (0, u.Dt)(),
 		{ analyticsLocations: U } = (0, r.ZP)(),
-		S =
-			null !== (a = null !== (t = null == f ? void 0 : f[0]) && void 0 !== t ? t : null == U ? void 0 : U[0]) &&
-			void 0 !== a
-				? a
-				: null,
+		S = null !== (a = null !== (t = null == f ? void 0 : f[0]) && void 0 !== t ? t : null == U ? void 0 : U[0]) && void 0 !== a ? a : null,
 		v = (0, l.e7)([d.default], () => d.default.getUser(E), [E]),
 		[D, x] = (0, h.ZP)(E, m),
 		[A, g] = n.useState(!1),
@@ -37,13 +33,9 @@ function m(e) {
 			if (null != v) {
 				g(!0);
 				try {
-					await i.Z.setCommunicationDisabledDuration(m, E, null, null, S),
-						(0, o.showToast)((0, o.createToast)(I.Z.Messages.GUILD_ENABLE_COMMUNICATION_SUCCESS, o.ToastType.SUCCESS)),
-						T();
+					await i.Z.setCommunicationDisabledDuration(m, E, null, null, S), (0, o.showToast)((0, o.createToast)(I.Z.Messages.GUILD_ENABLE_COMMUNICATION_SUCCESS, o.ToastType.SUCCESS)), T();
 				} catch (e) {
-					(0, o.showToast)(
-						(0, o.createToast)(I.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR, o.ToastType.FAILURE)
-					);
+					(0, o.showToast)((0, o.createToast)(I.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR, o.ToastType.FAILURE));
 				} finally {
 					g(!1);
 				}

@@ -28,9 +28,7 @@ var r = n(470079),
 					}
 				}
 			});
-		return (0, r.isValidElement)(d)
-			? r.cloneElement(d, s({}, d.props, { style: s({}, d.props.style, _.grid) }))
-			: r.createElement('div', { style: _.grid });
+		return (0, r.isValidElement)(d) ? r.cloneElement(d, s({}, d.props, { style: s({}, d.props.style, _.grid) })) : r.createElement('div', { style: _.grid });
 	};
 (o.defaultProps = {
 	size: 8,

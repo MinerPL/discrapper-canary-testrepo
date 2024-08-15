@@ -22,8 +22,8 @@ var r,
 	f = n(237375),
 	h = n(342687),
 	p = n(933557),
-	I = n(471445),
-	m = n(511618),
+	m = n(471445),
+	I = n(511618),
 	T = n(926491),
 	g = n(378233),
 	S = n(695346),
@@ -140,10 +140,7 @@ M(
 		renderContent() {
 			let { text: e, description: t } = this.props;
 			return (0, i.jsxs)(C.RX, {
-				children: [
-					(0, i.jsx)(C.z5, { children: (0, i.jsx)(C.BR, { children: e }) }),
-					null != t ? (0, i.jsx)(C.dY, { children: t }) : null
-				]
+				children: [(0, i.jsx)(C.z5, { children: (0, i.jsx)(C.BR, { children: e }) }), null != t ? (0, i.jsx)(C.dY, { children: t }) : null]
 			});
 		}
 	}
@@ -209,11 +206,7 @@ M(
 								status: r
 							})
 						}),
-						(0, i.jsx)(C.z5, {
-							children: (0, i.jsx)(C.BR, {
-								children: null !== (e = null != n ? n : o) && void 0 !== e ? e : R.ZP.getName(t)
-							})
-						}),
+						(0, i.jsx)(C.z5, { children: (0, i.jsx)(C.BR, { children: null !== (e = null != n ? n : o) && void 0 !== e ? e : R.ZP.getName(t) }) }),
 						(0, i.jsxs)(C.dY, {
 							children: [
 								R.ZP.getUserTag(t, {
@@ -272,13 +265,9 @@ M(
 		class e extends x {
 			renderContent() {
 				let { channel: e, category: t } = this.props,
-					n = e.type === y.d4z.GUILD_CATEGORY ? d.FolderIcon : (0, I.KS)(e);
+					n = e.type === y.d4z.GUILD_CATEGORY ? d.FolderIcon : (0, m.KS)(e);
 				return (0, i.jsxs)(C.RX, {
-					children: [
-						null != n && (0, i.jsx)(C.Tw, { children: (0, i.jsx)(n, { className: b.icon }) }),
-						(0, i.jsx)(C.z5, { children: (0, i.jsx)(C.BR, { children: (0, p.F6)(e, v.default, N.Z) }) }),
-						null != t ? (0, i.jsx)(C.dY, { children: t.name }) : null
-					]
+					children: [null != n && (0, i.jsx)(C.Tw, { children: (0, i.jsx)(n, { className: b.icon }) }), (0, i.jsx)(C.z5, { children: (0, i.jsx)(C.BR, { children: (0, p.F6)(e, v.default, N.Z) }) }), null != t ? (0, i.jsx)(C.dY, { children: t.name }) : null]
 				});
 			}
 		}
@@ -401,20 +390,12 @@ M(
 				let { queryMatch: r, renderSticker: a, selected: s, sticker: o } = this.props,
 					{ hovered: l } = this.state;
 				return (
-					(0, g.jl)(o)
-						? (n = null === (e = T.Z.getStickerPack(o.pack_id)) || void 0 === e ? void 0 : e.name)
-						: (0, g.J8)(o) && (n = null === (t = A.Z.getGuild(o.guild_id)) || void 0 === t ? void 0 : t.name),
+					(0, g.jl)(o) ? (n = null === (e = T.Z.getStickerPack(o.pack_id)) || void 0 === e ? void 0 : e.name) : (0, g.J8)(o) && (n = null === (t = A.Z.getGuild(o.guild_id)) || void 0 === t ? void 0 : t.name),
 					(0, i.jsxs)(C.RX, {
 						children: [
 							(0, i.jsx)(C.Tw, { children: a(o, l || !0 === s) }),
 							(0, i.jsxs)(C.z5, {
-								children: [
-									(0, i.jsx)(C.BR, { children: o.name }),
-									null != r &&
-										(0, i.jsx)(C.wL, {
-											children: L.Z.Messages.AUTOCOMPLETE_STICKERS_QUERY_MATCH.format({ queryMatch: r })
-										})
-								]
+								children: [(0, i.jsx)(C.BR, { children: o.name }), null != r && (0, i.jsx)(C.wL, { children: L.Z.Messages.AUTOCOMPLETE_STICKERS_QUERY_MATCH.format({ queryMatch: r }) })]
 							}),
 							null != n && (0, i.jsx)(C.dY, { children: n })
 						]
@@ -431,7 +412,7 @@ M(
 		'EmojiUpsell',
 		class e extends x {
 			renderContent() {
-				return (0, i.jsx)(m.Z, { emojis: this.props.emojis });
+				return (0, i.jsx)(I.Z, { emojis: this.props.emojis });
 			}
 		}
 	),

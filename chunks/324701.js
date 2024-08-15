@@ -17,19 +17,7 @@ async function l(e) {
 		l = await (0, a.XA)(n);
 	if (null == l || (null != l && t)) {
 		var o;
-		(0, i.showToast)(
-			(0, i.createToast)(
-				((o = null != n.dueAt),
-				null != l
-					? o
-						? s.Z.Messages.MESSAGE_REMINDERS_CREATE_SUCCESS
-						: s.Z.Messages.MESSAGE_BOOKMARKS_CREATE_SUCCESS
-					: o
-						? s.Z.Messages.MESSAGE_REMINDERS_CREATE_FAIL
-						: s.Z.Messages.MESSAGE_BOOKMARKS_CREATE_FAIL),
-				r(null != n.dueAt, null != l)
-			)
-		);
+		(0, i.showToast)((0, i.createToast)(((o = null != n.dueAt), null != l ? (o ? s.Z.Messages.MESSAGE_REMINDERS_CREATE_SUCCESS : s.Z.Messages.MESSAGE_BOOKMARKS_CREATE_SUCCESS) : o ? s.Z.Messages.MESSAGE_REMINDERS_CREATE_FAIL : s.Z.Messages.MESSAGE_BOOKMARKS_CREATE_FAIL), r(null != n.dueAt, null != l)));
 	}
 }
 async function o(e) {
@@ -37,18 +25,6 @@ async function o(e) {
 		l = await (0, a.ep)(n);
 	if (null == l || (null != l && t)) {
 		var o;
-		(0, i.showToast)(
-			(0, i.createToast)(
-				((o = null != n.dueAt),
-				null != l
-					? o
-						? s.Z.Messages.MESSAGE_REMINDERS_DELETE_SUCCESS
-						: s.Z.Messages.MESSAGE_BOOKMARKS_DELETE_SUCCESS
-					: o
-						? s.Z.Messages.MESSAGE_REMINDERS_DELETE_FAIL
-						: s.Z.Messages.MESSAGE_BOOKMARKS_DELETE_FAIL),
-				r(null != n.dueAt, null != l)
-			)
-		);
+		(0, i.showToast)((0, i.createToast)(((o = null != n.dueAt), null != l ? (o ? s.Z.Messages.MESSAGE_REMINDERS_DELETE_SUCCESS : s.Z.Messages.MESSAGE_BOOKMARKS_DELETE_SUCCESS) : o ? s.Z.Messages.MESSAGE_REMINDERS_DELETE_FAIL : s.Z.Messages.MESSAGE_BOOKMARKS_DELETE_FAIL), r(null != n.dueAt, null != l)));
 	}
 }

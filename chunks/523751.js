@@ -17,8 +17,8 @@ var r = n(735250),
 	f = n(623624),
 	h = n(297700),
 	p = n(210887),
-	I = n(271383),
-	m = n(594174),
+	m = n(271383),
+	I = n(594174),
 	T = n(665786),
 	g = n(697725),
 	S = n(267642),
@@ -117,10 +117,7 @@ function D(e) {
 			tooltipSubtitle: a,
 			tooltipDescription: s
 		} = (function (e, t) {
-			let n =
-				t === N.PZ.PUBLIC
-					? O.Z.Messages.SERVER_BADGE_DESCRIPTION_ANYONE_CAN_JOIN
-					: O.Z.Messages.SERVER_BADGE_DESCRIPTION_INVITE_ONLY;
+			let n = t === N.PZ.PUBLIC ? O.Z.Messages.SERVER_BADGE_DESCRIPTION_ANYONE_CAN_JOIN : O.Z.Messages.SERVER_BADGE_DESCRIPTION_INVITE_ONLY;
 			switch (e) {
 				case A.Q.STAFF:
 					return {
@@ -198,22 +195,10 @@ function D(e) {
 function L(e) {
 	let t,
 		n,
-		{
-			guild: a,
-			tooltipColor: l = c.Tooltip.Colors.BRAND,
-			tooltipPosition: E,
-			className: T,
-			flowerStarClassName: g,
-			iconClassName: S,
-			badgeStrokeColor: O,
-			badgeColor: y,
-			size: L = 16,
-			disableBoostClick: b,
-			'aria-label': M = !1
-		} = e,
-		P = (0, o.e7)([m.default, I.ZP], () => {
-			let e = m.default.getCurrentUser();
-			return I.ZP.isMember(null == a ? void 0 : a.id, null == e ? void 0 : e.id);
+		{ guild: a, tooltipColor: l = c.Tooltip.Colors.BRAND, tooltipPosition: E, className: T, flowerStarClassName: g, iconClassName: S, badgeStrokeColor: O, badgeColor: y, size: L = 16, disableBoostClick: b, 'aria-label': M = !1 } = e,
+		P = (0, o.e7)([I.default, m.ZP], () => {
+			let e = I.default.getCurrentUser();
+			return m.ZP.isMember(null == a ? void 0 : a.id, null == e ? void 0 : e.id);
 		}),
 		U = (0, o.e7)([p.Z], () => p.Z.theme),
 		w = (0, N.XX)(a),
@@ -260,16 +245,7 @@ function L(e) {
 				})
 		});
 	}
-	let {
-		IconComponent: B,
-		backgroundDarkColor: F,
-		backgroundLightColor: V,
-		foregroundDarkColor: H,
-		foregroundLightColor: Z,
-		premiumBackgroundColor: Y,
-		premiumForegroundColor: j,
-		sizeAdjustment: W
-	} = C[x];
+	let { IconComponent: B, backgroundDarkColor: F, backgroundLightColor: V, foregroundDarkColor: H, foregroundLightColor: Z, premiumBackgroundColor: Y, premiumForegroundColor: j, sizeAdjustment: W } = C[x];
 	if (null == B) return null;
 	w.premium && ((t = j), (n = Y));
 	let K = (0, u.wj)(U) ? H : Z,

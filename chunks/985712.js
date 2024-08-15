@@ -26,15 +26,7 @@ function s(e) {
 }
 function u(e) {
 	var r = (0, n.$Q)(e);
-	return (
-		'button' === r ||
-		('input' === r && 'hidden' !== e.getAttribute('type')) ||
-		'meter' === r ||
-		'output' === r ||
-		'progress' === r ||
-		'select' === r ||
-		'textarea' === r
-	);
+	return 'button' === r || ('input' === r && 'hidden' !== e.getAttribute('type')) || 'meter' === r || 'output' === r || 'progress' === r || 'select' === r || 'textarea' === r;
 }
 function d(e) {
 	var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -55,12 +47,7 @@ function d(e) {
 			l = ''.concat(i, ' ').concat(l);
 		}
 		if (
-			(((0, n.rO)(e)
-				? 0 === (o = (t = e).assignedNodes()).length
-					? (0, a.Z)(t.childNodes)
-					: o
-				: (0, a.Z)(e.childNodes).concat((0, n.SS)(e, 'aria-owns'))
-			).forEach(function (e) {
+			(((0, n.rO)(e) ? (0 === (o = (t = e).assignedNodes()).length ? (0, a.Z)(t.childNodes) : o) : (0, a.Z)(e.childNodes).concat((0, n.SS)(e, 'aria-owns'))).forEach(function (e) {
 				var t = C(e, {
 						isEmbeddedInLabel: r.isEmbeddedInLabel,
 						isReferenced: !1,
@@ -104,10 +91,7 @@ function d(e) {
 					});
 				})
 				.join(' ');
-		var f =
-			r.recursion &&
-			((b = e), (0, n.xO)(b, ['button', 'combobox', 'listbox', 'textbox']) || l(b, 'range')) &&
-			'name' === p;
+		var f = r.recursion && ((b = e), (0, n.xO)(b, ['button', 'combobox', 'listbox', 'textbox']) || l(b, 'range')) && 'name' === p;
 		if (!f) {
 			var b,
 				q,
@@ -239,44 +223,12 @@ function d(e) {
 							})
 							.join(' ');
 			}
-			if (l(e, 'range'))
-				return (t.add(e), e.hasAttribute('aria-valuetext'))
-					? e.getAttribute('aria-valuetext')
-					: e.hasAttribute('aria-valuenow')
-						? e.getAttribute('aria-valuenow')
-						: e.getAttribute('value') || '';
+			if (l(e, 'range')) return (t.add(e), e.hasAttribute('aria-valuetext')) ? e.getAttribute('aria-valuetext') : e.hasAttribute('aria-valuenow') ? e.getAttribute('aria-valuenow') : e.getAttribute('value') || '';
 			if ((0, n.xO)(e, ['textbox'])) {
 				return t.add(e), (y = e), (0, n.LL)(y) || (0, n.ZH)(y) ? y.value : y.textContent || '';
 			}
 		}
-		if (
-			((o = e),
-			(0, n.xO)(o, [
-				'button',
-				'cell',
-				'checkbox',
-				'columnheader',
-				'gridcell',
-				'heading',
-				'label',
-				'legend',
-				'link',
-				'menuitem',
-				'menuitemcheckbox',
-				'menuitemradio',
-				'option',
-				'radio',
-				'row',
-				'rowheader',
-				'switch',
-				'tab',
-				'tooltip',
-				'treeitem'
-			]) ||
-				((0, n.kK)(e) && r.isReferenced) ||
-				((s = e), (0, n.GD)(s)) ||
-				((d = 0), 0))
-		)
+		if (((o = e), (0, n.xO)(o, ['button', 'cell', 'checkbox', 'columnheader', 'gridcell', 'heading', 'label', 'legend', 'link', 'menuitem', 'menuitemcheckbox', 'menuitemradio', 'option', 'radio', 'row', 'rowheader', 'switch', 'tab', 'tooltip', 'treeitem']) || ((0, n.kK)(e) && r.isReferenced) || ((s = e), (0, n.GD)(s)) || ((d = 0), 0)))
 			return (
 				t.add(e),
 				h(e, {

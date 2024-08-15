@@ -32,28 +32,12 @@ function x(e) {
 		L = t.useCallback(() => {
 			var e, n;
 			let s = null;
-			(s = T
-				? null === (e = E.d9[I]) || void 0 === e
-					? void 0
-					: e.next
-				: null === (n = E.c6[I]) || void 0 === n
-					? void 0
-					: n.next)
-				? C(s)
-				: M();
+			(s = T ? (null === (e = E.d9[I]) || void 0 === e ? void 0 : e.next) : null === (n = E.c6[I]) || void 0 === n ? void 0 : n.next) ? C(s) : M();
 		}, [I, T, M]),
 		g = t.useCallback(() => {
 			var e, n;
 			let s;
-			(s = T
-				? null === (e = E.d9[I]) || void 0 === e
-					? void 0
-					: e.prev
-				: null === (n = E.c6[I]) || void 0 === n
-					? void 0
-					: n.prev)
-				? C(s)
-				: M();
+			(s = T ? (null === (e = E.d9[I]) || void 0 === e ? void 0 : e.prev) : null === (n = E.c6[I]) || void 0 === n ? void 0 : n.prev) ? C(s) : M();
 		}, [I, T, M]);
 	return (0, a.jsx)(l.ModalRoot, {
 		transitionState: s,

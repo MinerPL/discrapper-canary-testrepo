@@ -34,9 +34,7 @@ t.Z = new (class e {
 	}
 	resume() {
 		let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-		clearTimeout(this.pauseTimer),
-			(this.pauseTimer = null),
-			this.isPaused && ((this.isPaused = !1), e && this.changedStores.size > 0 && setImmediate(() => this.emit()));
+		clearTimeout(this.pauseTimer), (this.pauseTimer = null), this.isPaused && ((this.isPaused = !1), e && this.changedStores.size > 0 && setImmediate(() => this.emit()));
 	}
 	batched(e) {
 		if (this.isPaused) return e();
@@ -60,8 +58,7 @@ t.Z = new (class e {
 						this.emitNonReactOnce(t, n);
 					}
 					for (; this.reactChangedStores.size > 0; ) {
-						if (++e > 100)
-							throw (s.error('LastFewActions', i.qC()), Error('react change emit loop detected, aborting'));
+						if (++e > 100) throw (s.error('LastFewActions', i.qC()), Error('react change emit loop detected, aborting'));
 						this.emitReactOnce();
 					}
 				} finally {
@@ -76,9 +73,7 @@ t.Z = new (class e {
 		return this.isPaused;
 	}
 	markChanged(e) {
-		(e._changeCallbacks.hasAny() || e._syncWiths.length > 0) && this.changedStores.add(e),
-			e._reactChangeCallbacks.hasAny() && this.reactChangedStores.add(e),
-			!this.isBatchEmitting && !this.isDispatching && !this.isPaused && this.emit();
+		(e._changeCallbacks.hasAny() || e._syncWiths.length > 0) && this.changedStores.add(e), e._reactChangeCallbacks.hasAny() && this.reactChangedStores.add(e), !this.isBatchEmitting && !this.isDispatching && !this.isPaused && this.emit();
 	}
 	emitNonReactOnce(e, t) {
 		let n = Date.now(),
@@ -107,12 +102,6 @@ t.Z = new (class e {
 		n - e > 100 && s.verbose('Slow batch emitReactChanges took '.concat(n - e, 'ms recentActions:'), i.qC());
 	}
 	constructor() {
-		a(this, 'changedStores', new Set()),
-			a(this, 'reactChangedStores', new Set()),
-			a(this, 'changeSentinel', 0),
-			a(this, 'isBatchEmitting', !1),
-			a(this, 'isDispatching', !1),
-			a(this, 'isPaused', !1),
-			a(this, 'pauseTimer', null);
+		a(this, 'changedStores', new Set()), a(this, 'reactChangedStores', new Set()), a(this, 'changeSentinel', 0), a(this, 'isBatchEmitting', !1), a(this, 'isDispatching', !1), a(this, 'isPaused', !1), a(this, 'pauseTimer', null);
 	}
 })();

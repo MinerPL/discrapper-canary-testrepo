@@ -67,8 +67,7 @@ class m extends (s = o.PureComponent) {
 				if (13 === e.which) {
 					if (e.shiftKey) {
 						var n;
-						(null !== (n = e.currentTarget.value.match(/\n/g)) && void 0 !== n ? n : []).length >= 5 &&
-							e.preventDefault();
+						(null !== (n = e.currentTarget.value.match(/\n/g)) && void 0 !== n ? n : []).length >= 5 && e.preventDefault();
 					} else e.preventDefault(), e.currentTarget.blur();
 				} else e.which === I.yXg.SPACE && e.stopPropagation();
 			});

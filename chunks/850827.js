@@ -13,8 +13,8 @@ var i = n(120356),
 	f = n(592125),
 	h = n(594174),
 	p = n(979651),
-	I = n(374129),
-	m = n(639351),
+	m = n(374129),
+	I = n(639351),
 	T = n(503438),
 	g = n(802856),
 	S = n(387903),
@@ -31,21 +31,7 @@ var i = n(120356),
 	M = n(981631),
 	P = n(638937);
 t.Z = (0, c.Z)((e) => {
-	let {
-			activity: t,
-			embeddedActivity: n,
-			user: i,
-			applicationStream: s,
-			className: c,
-			guildId: U,
-			channelId: w,
-			source: x,
-			color: G = u.Button.Colors.WHITE,
-			look: k = u.Button.Looks.OUTLINED,
-			type: B,
-			onAction: F,
-			isEmbedded: V = !1
-		} = e,
+	let { activity: t, embeddedActivity: n, user: i, applicationStream: s, className: c, guildId: U, channelId: w, source: x, color: G = u.Button.Colors.WHITE, look: k = u.Button.Looks.OUTLINED, type: B, onAction: F, isEmbedded: V = !1 } = e,
 		H = (0, l.e7)([h.default], () => {
 			let e = h.default.getCurrentUser();
 			return o()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
@@ -59,9 +45,7 @@ t.Z = (0, c.Z)((e) => {
 		q = (null == t ? void 0 : t.type) === M.IIU.HANG_STATUS,
 		Q = (0, l.e7)([p.Z, f.Z], () => {
 			var e;
-			return q
-				? f.Z.getChannel(null === (e = p.Z.getVoiceStateForUser(i.id)) || void 0 === e ? void 0 : e.channelId)
-				: null;
+			return q ? f.Z.getChannel(null === (e = p.Z.getVoiceStateForUser(i.id)) || void 0 === e ? void 0 : e.channelId) : null;
 		}),
 		X = z === _.Z.Direction.VERTICAL;
 	return (0, r.jsx)(_.Z, {
@@ -79,7 +63,7 @@ t.Z = (0, c.Z)((e) => {
 						look: k,
 						color: G,
 						onAction: F,
-						Icon: m.Z
+						Icon: I.Z
 					},
 					'ConnectPlatformActivityButton'
 				);
@@ -91,7 +75,7 @@ t.Z = (0, c.Z)((e) => {
 						color: G,
 						platform: d.Z.get(M.ABu.PLAYSTATION),
 						onAction: F,
-						Icon: I.Z
+						Icon: m.Z
 					},
 					'ConnectPlatformActivityButton'
 				);

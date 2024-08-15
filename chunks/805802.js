@@ -30,7 +30,7 @@ function c(e, t) {
 				f,
 				h,
 				p,
-				I =
+				m =
 					((n = e),
 					(r = t),
 					(s = []),
@@ -107,22 +107,19 @@ function c(e, t) {
 						exrulevals: c,
 						exdatevals: E
 					}),
-				m = I.rrulevals,
-				T = I.rdatevals,
-				g = I.exrulevals,
-				S = I.exdatevals,
-				A = I.dtstart,
-				N = I.tzid,
+				I = m.rrulevals,
+				T = m.rdatevals,
+				g = m.exrulevals,
+				S = m.exdatevals,
+				A = m.dtstart,
+				N = m.tzid,
 				v = !1 === t.cache;
-			if (
-				(t.compatible && ((t.forceset = !0), (t.unfold = !0)),
-				t.forceset || m.length > 1 || T.length || g.length || S.length)
-			) {
+			if ((t.compatible && ((t.forceset = !0), (t.unfold = !0)), t.forceset || I.length > 1 || T.length || g.length || S.length)) {
 				var O = new a.p(v);
 				return (
 					O.dtstart(A),
 					O.tzid(N || void 0),
-					m.forEach(function (e) {
+					I.forEach(function (e) {
 						O.rrule(new i.Ci(d(e, A, N), v));
 					}),
 					T.forEach(function (e) {
@@ -138,7 +135,7 @@ function c(e, t) {
 					O
 				);
 			}
-			var R = m[0] || {};
+			var R = I[0] || {};
 			return new i.Ci(d(R, R.dtstart || t.dtstart || A, R.tzid || t.tzid || N), v);
 		})(
 			e,

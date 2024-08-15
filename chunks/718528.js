@@ -18,8 +18,7 @@ var i = t(470079),
 	d = t(981631),
 	_ = t(647086);
 function c(e) {
-	let { withVoiceChannels: n = !1, withCurrentVoiceChannel: t = !1 } =
-			arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+	let { withVoiceChannels: n = !1, withCurrentVoiceChannel: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
 		i = arguments.length > 2 ? arguments[2] : void 0;
 	return I(
 		e === _._ || e === d.I_8 ? (0, r.t)() : o.Z.getGuildWithoutChangingGuildActionRows(e).guildChannels,
@@ -35,8 +34,7 @@ function c(e) {
 	);
 }
 function C(e, n, t) {
-	let { withVoiceChannels: o = !1, withCurrentVoiceChannel: r = !1 } =
-			arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+	let { withVoiceChannels: o = !1, withCurrentVoiceChannel: r = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
 		E = arguments.length > 4 ? arguments[4] : void 0,
 		d = (0, l.e7)([u.default], () => u.default.getGuildChangeSentinel(e)),
 		_ = (0, l.e7)([a.Z], () => a.Z.version),
@@ -63,8 +61,7 @@ function C(e, n, t) {
 }
 function I(e, n) {
 	let { currentVoiceChannelId: t, selectedChannelId: i } = n,
-		{ withVoiceChannels: l, withCurrentVoiceChannel: o } =
-			arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+		{ withVoiceChannels: l, withCurrentVoiceChannel: o } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
 		r = arguments.length > 3 ? arguments[3] : void 0,
 		a = [];
 	return (

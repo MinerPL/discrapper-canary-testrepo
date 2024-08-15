@@ -52,12 +52,7 @@ function I(e) {
 }
 function f(e) {
 	let { application: n } = e,
-		{
-			hasMessageContent: i,
-			hasGuildPresences: r,
-			hasGuildMembers: c,
-			hasIntents: u
-		} = (0, s.w)({ flags: null == n ? void 0 : n.flags }),
+		{ hasMessageContent: i, hasGuildPresences: r, hasGuildMembers: c, hasIntents: u } = (0, s.w)({ flags: null == n ? void 0 : n.flags }),
 		f = a.useCallback(() => {
 			(null == n ? void 0 : n.privacy_policy_url) != null && (0, d.q)({ href: n.privacy_policy_url });
 		}, [null == n ? void 0 : n.privacy_policy_url]);

@@ -170,8 +170,7 @@ var t = {
 	'blik.invalid': 'أدخل 6 أرقام',
 	'blik.code': 'رمز مكون من 6 أرقام',
 	'blik.help': 'احصل على الرمز من تطبيقك البنكي.',
-	'swish.pendingMessage':
-		'بعد قيامك بمسح رمز الاستجابة السريعة ضوئيًا\u060C يمكن أن تظل الحالة معلقة لمدة تصل إلى 10 دقائق. قد تؤدي محاولة الدفع مرة أخرى خلال هذا الوقت إلى فرض رسوم متعددة.',
+	'swish.pendingMessage': 'بعد قيامك بمسح رمز الاستجابة السريعة ضوئيًا\u060C يمكن أن تظل الحالة معلقة لمدة تصل إلى 10 دقائق. قد تؤدي محاولة الدفع مرة أخرى خلال هذا الوقت إلى فرض رسوم متعددة.',
 	'field.valid': 'حقل صحيح',
 	'field.invalid': 'حقل غير صحيح',
 	'error.va.gen.01': 'حقل غير مكتمل',
@@ -207,8 +206,7 @@ var t = {
 	'bankTransfer.iban': 'IBAN',
 	'bankTransfer.bic': 'كود التعريف البنكي',
 	'bankTransfer.reference': 'المرجع',
-	'bankTransfer.introduction':
-		'قم بالمتابعة لإنشاء مدفوعات تحويل بنكية جديدة. يمكنك استخدام البيانات الواردة في الشاشة التالية لإتمام عملية الدفع.',
+	'bankTransfer.introduction': 'قم بالمتابعة لإنشاء مدفوعات تحويل بنكية جديدة. يمكنك استخدام البيانات الواردة في الشاشة التالية لإتمام عملية الدفع.',
 	'bankTransfer.instructions': 'شكرًا لك على شرائك\u060C يرجى استخدام المعلومات التالية لإتمام عملية الدفع.',
 	'bacs.accountHolderName': 'اسم صاحب الحساب البنكي',
 	'bacs.accountHolderName.invalid': 'اسم صاحب حساب بنكي غير صحيح',
@@ -243,8 +241,7 @@ var t = {
 	'ach.encryptedBankAccountNumber.aria.label': 'رقم الحساب',
 	'ach.encryptedBankLocationId.aria.iframeTitle': 'الإطار المضمن لرقم التوجيه البنكي',
 	'ach.encryptedBankLocationId.aria.label': 'رقم توجيه ABA',
-	'pix.instructions':
-		'افتح التطبيق باستخدام مفتاح PIX المسجل\u060C واختر الدفع باستخدام PIX وامسح رمز الاستجابة السريعة ضوئيًا أو انسخ الرمز والصقه',
+	'pix.instructions': 'افتح التطبيق باستخدام مفتاح PIX المسجل\u060C واختر الدفع باستخدام PIX وامسح رمز الاستجابة السريعة ضوئيًا أو انسخ الرمز والصقه',
 	'twint.saved': 'المحفوظة',
 	orPayWith: 'أو الدفع باستخدام',
 	invalidFormatExpects: 'تنسيق غير صالح. التنسيق المتوقع: %{format}',
@@ -252,8 +249,7 @@ var t = {
 	'upi.vpaWaitingMessage': 'افتح تطبيق UPI لتأكيد الدفع',
 	'upi.modeSelection': 'حدد كيف ترغب في استخدام تطبيق UPI.',
 	'onlineBanking.termsAndConditions': 'بالمتابعة\u060C فإنك توافق على %#الشروط و الأحكام%#',
-	'onlineBankingPL.termsAndConditions':
-		'بالاستمرار\u060C فإنك توافق على %#القواعد%# و%#الالتزامات المعلوماتية%# لمؤسسة Przelewy24',
+	'onlineBankingPL.termsAndConditions': 'بالاستمرار\u060C فإنك توافق على %#القواعد%# و%#الالتزامات المعلوماتية%# لمؤسسة Przelewy24',
 	'ctp.loading.poweredByCtp': 'بدعم من Click to Pay',
 	'ctp.loading.intro': 'نتحقق لمعرفة ما إذا كان لديك أي بطاقات محفوظة باستخدام Click to Pay...',
 	'ctp.login.title': 'تابع إلى Click to Pay',
@@ -281,8 +277,7 @@ var t = {
 	'ctp.infoPopup.benefit2': 'استخدمها للدفع للتجار في جميع أنحاء العالم',
 	'ctp.infoPopup.benefit3': 'قم بالإعداد مرة واحدة لإجراء مدفوعات دون تعقيدات في المستقبل',
 	'ctp.errors.AUTH_INVALID': 'المصادقة غير صحيحة',
-	'ctp.errors.NOT_FOUND':
-		'لم يتم العثور على حساب\u060C أدخل بريدًا إلكترونيًا صحيحًا أو استمر في استخدام الإدخال اليدوي للبطاقة',
+	'ctp.errors.NOT_FOUND': 'لم يتم العثور على حساب\u060C أدخل بريدًا إلكترونيًا صحيحًا أو استمر في استخدام الإدخال اليدوي للبطاقة',
 	'ctp.errors.ID_FORMAT_UNSUPPORTED': 'التنسيق غير مدعوم',
 	'ctp.errors.FRAUD': 'تم إغلاق حساب المستخدم أو تعطيله',
 	'ctp.errors.CONSUMER_ID_MISSING': 'هوية المستهلك غير موجودة في الطلب',

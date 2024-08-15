@@ -57,10 +57,7 @@ n.ZP = function (e) {
 				}
 			})
 		}),
-		g =
-			f === c.sFg.VERY_HIGH
-				? d.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL
-				: d.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
+		g = f === c.sFg.VERY_HIGH ? d.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL : d.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
 	return (0, a.jsx)(l.Z, {
 		title: p,
 		children: (0, a.jsxs)('div', {

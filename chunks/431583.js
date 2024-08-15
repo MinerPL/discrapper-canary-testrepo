@@ -27,11 +27,7 @@ var i,
 	g = n(981631),
 	S = n(689938),
 	A = n(348488);
-((a = i || (i = {}))[(a.OSX = 0)] = 'OSX'),
-	(a[(a.WINDOWS = 1)] = 'WINDOWS'),
-	(a[(a.LINUX = 2)] = 'LINUX'),
-	(a[(a.IOS = 3)] = 'IOS'),
-	(a[(a.ANDROID = 4)] = 'ANDROID');
+((a = i || (i = {}))[(a.OSX = 0)] = 'OSX'), (a[(a.WINDOWS = 1)] = 'WINDOWS'), (a[(a.LINUX = 2)] = 'LINUX'), (a[(a.IOS = 3)] = 'IOS'), (a[(a.ANDROID = 4)] = 'ANDROID');
 let R = [
 		{
 			getOs: () => S.Z.Messages.PLATFORM_MACOS,

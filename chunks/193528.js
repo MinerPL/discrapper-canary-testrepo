@@ -19,17 +19,7 @@ var n = t(735250),
 	T = t(689938),
 	S = t(562476);
 function N(e) {
-	let {
-			onChange: s,
-			onClose: t,
-			color: i,
-			suggestedColors: N,
-			disabled: C,
-			label: m,
-			colorPickerMiddle: A,
-			colorPickerFooter: O,
-			showEyeDropper: g
-		} = e,
+	let { onChange: s, onClose: t, color: i, suggestedColors: N, disabled: C, label: m, colorPickerMiddle: A, colorPickerFooter: O, showEyeDropper: g } = e,
 		h = a.useRef(null),
 		p = (0, d.useToken)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
 		R = c.Z.colors.BACKGROUND_ACCENT.css,

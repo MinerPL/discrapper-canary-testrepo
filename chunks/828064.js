@@ -1,15 +1,15 @@
 t.d(n, {
 	Z: function () {
-		return i;
+		return c;
 	}
 });
 var o = t(735250);
 t(470079);
 var r = t(481060),
 	a = t(547972),
-	c = t(326528);
-function i() {
-	let e = (0, c.b)().map((e) =>
+	i = t(326528);
+function c() {
+	let e = (0, i.b)().map((e) =>
 		(0, o.jsx)(
 			r.MenuItem,
 			{

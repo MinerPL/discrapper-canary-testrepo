@@ -2,12 +2,7 @@ var r = n(957578).Buffer,
 	i = n(63523).Transform,
 	a = n(2682).StringDecoder;
 function s(e) {
-	i.call(this),
-		(this.hashMode = 'string' == typeof e),
-		this.hashMode ? (this[e] = this._finalOrDigest) : (this.final = this._finalOrDigest),
-		this._final && ((this.__final = this._final), (this._final = null)),
-		(this._decoder = null),
-		(this._encoding = null);
+	i.call(this), (this.hashMode = 'string' == typeof e), this.hashMode ? (this[e] = this._finalOrDigest) : (this.final = this._finalOrDigest), this._final && ((this.__final = this._final), (this._final = null)), (this._decoder = null), (this._encoding = null);
 }
 n(689118)(s, i),
 	(s.prototype.update = function (e, t, n) {
@@ -49,8 +44,7 @@ n(689118)(s, i),
 		return e && (t = this._toString(t, e, !0)), t;
 	}),
 	(s.prototype._toString = function (e, t, n) {
-		if ((!this._decoder && ((this._decoder = new a(t)), (this._encoding = t)), this._encoding !== t))
-			throw Error("can't switch encodings");
+		if ((!this._decoder && ((this._decoder = new a(t)), (this._encoding = t)), this._encoding !== t)) throw Error("can't switch encodings");
 		var r = this._decoder.write(e);
 		return n && (r += this._decoder.end()), r;
 	}),

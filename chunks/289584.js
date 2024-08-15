@@ -28,10 +28,7 @@ function _(e, n) {
 				m(!0), E(null), null != t && (l.Z.selectGuild(t), s.default.selectVoiceChannel(e.id));
 				try {
 					let t;
-					null != x
-						? (t = await c.Ef(e, r, d))
-						: ((t = await c.HO(e, r, d, null != _ && _)), I && o.Kw(u.v.LIVE_STAGE_NOTIFICATION_BADGE)),
-						n(t);
+					null != x ? (t = await c.Ef(e, r, d)) : ((t = await c.HO(e, r, d, null != _ && _)), I && o.Kw(u.v.LIVE_STAGE_NOTIFICATION_BADGE)), n(t);
 				} catch (e) {
 					E(new i.Hx(e)), m(!1);
 				}

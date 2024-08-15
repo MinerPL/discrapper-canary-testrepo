@@ -13,8 +13,8 @@ var r = n(392711),
 	f = n(271383),
 	h = n(594174),
 	p = n(626135),
-	I = n(630388),
-	m = n(823379),
+	m = n(630388),
+	I = n(823379),
 	T = n(960048),
 	g = n(709054),
 	S = n(45966),
@@ -93,8 +93,7 @@ t.Z = {
 	updateOnboardingResponses: i().debounce(C, 1000),
 	updateRolesLocal: function (e, t, n) {
 		var r, a;
-		let o =
-			null !== (a = null === (r = f.ZP.getSelfMember(e)) || void 0 === r ? void 0 : r.roles) && void 0 !== a ? a : [];
+		let o = null !== (a = null === (r = f.ZP.getSelfMember(e)) || void 0 === r ? void 0 : r.roles) && void 0 !== a ? a : [];
 		if (d.Z.isViewingRoles(e)) {
 			(0, c.og)(e, i().difference(i().union(o, t), n));
 			return;
@@ -116,7 +115,7 @@ t.Z = {
 			s = S.Z.getEnabled(e) ? S.Z.getDefaultChannelIds(e) : [],
 			[u, _] = (0, A.Ee)(e, t, s),
 			T = [...a, ...s],
-			y = T.map((e) => E.Z.getChannel(e)).filter(m.lm),
+			y = T.map((e) => E.Z.getChannel(e)).filter(I.lm),
 			D = (0, N.v)(e, new Set(T), y, !0).length,
 			L = null == n ? [] : n.options.map((e) => e.id);
 		if (
@@ -141,18 +140,14 @@ t.Z = {
 			let t = h.default.getCurrentUser();
 			if (null != t) {
 				var b, M;
-				let n =
-					null !== (M = null === (b = f.ZP.getMember(e, t.id)) || void 0 === b ? void 0 : b.flags) && void 0 !== M
-						? M
-						: 0;
-				(0, c.aq)(e, { memberOptions: { flags: (0, I.mB)(n, O.q.COMPLETED_ONBOARDING, !0) } });
+				let n = null !== (M = null === (b = f.ZP.getMember(e, t.id)) || void 0 === b ? void 0 : b.flags) && void 0 !== M ? M : 0;
+				(0, c.aq)(e, { memberOptions: { flags: (0, m.mB)(n, O.q.COMPLETED_ONBOARDING, !0) } });
 			}
 		}
 	},
 	onboardExistingMember(e, t) {
 		let n = new Set(t);
-		(S.Z.getEnabled(e) ? S.Z.getDefaultChannelIds(e) : []).forEach((e) => n.add(e)),
-			n.size > 0 && (0, _.Mo)(e, Array.from(n), !0, { page: v.ZY5.GUILD_ONBOARDING });
+		(S.Z.getEnabled(e) ? S.Z.getDefaultChannelIds(e) : []).forEach((e) => n.add(e)), n.size > 0 && (0, _.Mo)(e, Array.from(n), !0, { page: v.ZY5.GUILD_ONBOARDING });
 	},
 	finishOnboarding(e) {
 		s.Z.dispatch({
@@ -171,11 +166,8 @@ t.Z = {
 		let t = h.default.getCurrentUser();
 		if (null != t) {
 			var n, r;
-			let i =
-				null !== (r = null === (n = f.ZP.getMember(e, t.id)) || void 0 === n ? void 0 : n.flags) && void 0 !== r
-					? r
-					: 0;
-			await (0, u.e)(e, { flags: (0, I.mB)(i, O.q.COMPLETED_ONBOARDING, !1) });
+			let i = null !== (r = null === (n = f.ZP.getMember(e, t.id)) || void 0 === n ? void 0 : n.flags) && void 0 !== r ? r : 0;
+			await (0, u.e)(e, { flags: (0, m.mB)(i, O.q.COMPLETED_ONBOARDING, !1) });
 		}
 	}
 };

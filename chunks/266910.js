@@ -11,7 +11,7 @@ var r = n(735250),
 	E = n(981631),
 	f = n(826881);
 t.Z = function (e) {
-	let { style: t, src: n, backgroundSrc: h, userId: p, pulseSpeakingIndicator: I = !1, speaking: m = !1, ...T } = e,
+	let { style: t, src: n, backgroundSrc: h, userId: p, pulseSpeakingIndicator: m = !1, speaking: I = !1, ...T } = e,
 		g = null != h ? h : n,
 		S = (0, o.ZP)(g, a.Z.unsafe_rawColors.PRIMARY_800.css),
 		A = (0, l.c)(!0, 'VideoBackground-web').enabled,
@@ -40,13 +40,13 @@ t.Z = function (e) {
 			backgroundColor: S
 		};
 	return (
-		null != v && m && A && ((R.backgroundImage = 'url('.concat(v, ')')), (R.backgroundSize = 'cover')),
+		null != v && I && A && ((R.backgroundImage = 'url('.concat(v, ')')), (R.backgroundSize = 'cover')),
 		(0, r.jsx)('div', {
 			style: R,
 			className: f.background,
-			children: I
+			children: m
 				? (0, r.jsx)(u.Z, {
-						shouldAnimate: m,
+						shouldAnimate: I,
 						children: O
 					})
 				: O

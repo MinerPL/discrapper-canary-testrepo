@@ -19,16 +19,7 @@ var r,
 	},
 	_ = [];
 function E() {
-	return i
-		? i
-		: (i =
-				n.g.process && n.g.process.nextTick
-					? n.g.process.nextTick
-					: n.g.queueMicrotask
-						? n.g.queueMicrotask
-						: n.g.setImmediate
-							? n.g.setImmediate
-							: n.g.setTimeout);
+	return i ? i : (i = n.g.process && n.g.process.nextTick ? n.g.process.nextTick : n.g.queueMicrotask ? n.g.queueMicrotask : n.g.setImmediate ? n.g.setImmediate : n.g.setTimeout);
 }
 function f(e, t, n, r, i) {
 	return c
@@ -49,23 +40,22 @@ function f(e, t, n, r, i) {
 			return a.from(e);
 		});
 }
-e.exports = function (e, t, i, h, p, I) {
-	'function' == typeof p && ((I = p), (p = void 0));
-	var m = d[(p = p || 'sha1').toLowerCase()];
-	if (!m || 'function' != typeof n.g.Promise) {
+e.exports = function (e, t, i, h, p, m) {
+	'function' == typeof p && ((m = p), (p = void 0));
+	var I = d[(p = p || 'sha1').toLowerCase()];
+	if (!I || 'function' != typeof n.g.Promise) {
 		E()(function () {
 			var n;
 			try {
 				n = l(e, t, i, h, p);
 			} catch (e) {
-				return I(e);
+				return m(e);
 			}
-			I(null, n);
+			m(null, n);
 		});
 		return;
 	}
-	if ((s(i, h), (e = u(e, o, 'Password')), (t = u(t, o, 'Salt')), 'function' != typeof I))
-		throw Error('No callback provided to pbkdf2');
+	if ((s(i, h), (e = u(e, o, 'Password')), (t = u(t, o, 'Salt')), 'function' != typeof m)) throw Error('No callback provided to pbkdf2');
 	!(function (e, t) {
 		e.then(
 			function (e) {
@@ -91,9 +81,9 @@ e.exports = function (e, t, i, h, p, I) {
 					return !1;
 				});
 			return (_[e] = t), t;
-		})(m).then(function (n) {
-			return n ? f(e, t, i, h, m) : l(e, t, i, h, p);
+		})(I).then(function (n) {
+			return n ? f(e, t, i, h, I) : l(e, t, i, h, p);
 		}),
-		I
+		m
 	);
 };

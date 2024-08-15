@@ -7,11 +7,7 @@ n.d(t, {
 			if (0 === s) return 0;
 			if (null == o) o = l;
 			else if (o === l) return l;
-			return (l += t === r.a8.UP ? -1 : 1) < 0 || l >= s
-				? e(t, l < 0 ? s : -1, i, o)
-				: i[l].type === r.h8.HEADER
-					? e(t, l, i, o)
-					: l;
+			return (l += t === r.a8.UP ? -1 : 1) < 0 || l >= s ? e(t, l < 0 ? s : -1, i, o) : i[l].type === r.h8.HEADER ? e(t, l, i, o) : l;
 		};
 	}
 });

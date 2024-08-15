@@ -49,15 +49,7 @@ let O = (e) => {
 	M = function (e, t) {
 		let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
 			l = N.gH.NORMAL;
-		return (
-			null != e &&
-				e.state !== E.F.FAILED &&
-				(e.data.interactionType === d.B8.MESSAGE_COMPONENT && e.data.componentId === t.id
-					? (l = N.gH.LOADING)
-					: O(t) && (l = N.gH.DISABLED)),
-			n && (l = N.gH.DISABLED),
-			l
-		);
+		return null != e && e.state !== E.F.FAILED && (e.data.interactionType === d.B8.MESSAGE_COMPONENT && e.data.componentId === t.id ? (l = N.gH.LOADING) : O(t) && (l = N.gH.DISABLED)), n && (l = N.gH.DISABLED), l;
 	},
 	A = (e) => {
 		let t = S.Z.getChannel(e),
@@ -66,31 +58,11 @@ let O = (e) => {
 			u = (0, a.e7)([C.ZP, p.default], () => {
 				var e, n;
 				let l = p.default.getCurrentUser();
-				return (
-					null !==
-						(n =
-							(null == t ? void 0 : t.guild_id) != null && null != l
-								? null === (e = C.ZP.getMember(null == t ? void 0 : t.guild_id, l.id)) || void 0 === e
-									? void 0
-									: e.isPending
-								: null) &&
-					void 0 !== n &&
-					n
-				);
+				return null !== (n = (null == t ? void 0 : t.guild_id) != null && null != l ? (null === (e = C.ZP.getMember(null == t ? void 0 : t.guild_id, l.id)) || void 0 === e ? void 0 : e.isPending) : null) && void 0 !== n && n;
 			}),
 			[, i] = (0, s.AB)(null == t ? void 0 : t.guild_id),
 			r = (0, I.tc)(t);
-		return (
-			!!(
-				!n ||
-				l ||
-				u ||
-				(null == t ? void 0 : t.isLockedThread()) ||
-				((null == t ? void 0 : t.isArchivedThread()) && !r)
-			) ||
-			!!i ||
-			!1
-		);
+		return !!(!n || l || u || (null == t ? void 0 : t.isLockedThread()) || ((null == t ? void 0 : t.isArchivedThread()) && !r)) || !!i || !1;
 	};
 function R(e, t) {
 	let n = u.useContext(L),

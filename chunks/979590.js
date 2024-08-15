@@ -148,13 +148,7 @@
 								(n = (function (e, t, n) {
 									var r, i, a;
 									function s(e, t, n) {
-										return (n < 0 && (n += 1), n > 1 && (n -= 1), n < 1 / 6)
-											? e + (t - e) * 6 * n
-											: n < 0.5
-												? t
-												: n < 2 / 3
-													? e + (t - e) * (2 / 3 - n) * 6
-													: e;
+										return (n < 0 && (n += 1), n > 1 && (n -= 1), n < 1 / 6) ? e + (t - e) * 6 * n : n < 0.5 ? t : n < 2 / 3 ? e + (t - e) * (2 / 3 - n) * 6 : e;
 									}
 									if (((e = P(e, 360)), (t = P(t, 100)), (n = P(n, 100)), 0 === t)) r = i = a = n;
 									else {
@@ -182,19 +176,7 @@
 				}
 			);
 		})(e);
-		(this._originalInput = e),
-			(this._r = r.r),
-			(this._g = r.g),
-			(this._b = r.b),
-			(this._a = r.a),
-			(this._roundA = l(100 * this._a) / 100),
-			(this._format = n.format || r.format),
-			(this._gradientType = n.gradientType),
-			this._r < 1 && (this._r = l(this._r)),
-			this._g < 1 && (this._g = l(this._g)),
-			this._b < 1 && (this._b = l(this._b)),
-			(this._ok = r.ok),
-			(this._tc_id = o++);
+		(this._originalInput = e), (this._r = r.r), (this._g = r.g), (this._b = r.b), (this._a = r.a), (this._roundA = l(100 * this._a) / 100), (this._format = n.format || r.format), (this._gradientType = n.gradientType), this._r < 1 && (this._r = l(this._r)), this._g < 1 && (this._g = l(this._g)), this._b < 1 && (this._b = l(this._b)), (this._ok = r.ok), (this._tc_id = o++);
 	}
 	(_.prototype = {
 		isDark: function () {
@@ -227,14 +209,7 @@
 				a,
 				s,
 				o = this.toRgb();
-			return (
-				(e = o.r / 255),
-				(n = o.g / 255),
-				(r = o.b / 255),
-				(i = e <= 0.03928 ? e / 12.92 : t.pow((e + 0.055) / 1.055, 2.4)),
-				(a = n <= 0.03928 ? n / 12.92 : t.pow((n + 0.055) / 1.055, 2.4)),
-				0.2126 * i + 0.7152 * a + 0.0722 * (s = r <= 0.03928 ? r / 12.92 : t.pow((r + 0.055) / 1.055, 2.4))
-			);
+			return (e = o.r / 255), (n = o.g / 255), (r = o.b / 255), (i = e <= 0.03928 ? e / 12.92 : t.pow((e + 0.055) / 1.055, 2.4)), (a = n <= 0.03928 ? n / 12.92 : t.pow((n + 0.055) / 1.055, 2.4)), 0.2126 * i + 0.7152 * a + 0.0722 * (s = r <= 0.03928 ? r / 12.92 : t.pow((r + 0.055) / 1.055, 2.4));
 		},
 		setAlpha: function (e) {
 			return (this._a = M(e)), (this._roundA = l(100 * this._a) / 100), this;
@@ -253,9 +228,7 @@
 				t = l(360 * e.h),
 				n = l(100 * e.s),
 				r = l(100 * e.v);
-			return 1 == this._a
-				? 'hsv(' + t + ', ' + n + '%, ' + r + '%)'
-				: 'hsva(' + t + ', ' + n + '%, ' + r + '%, ' + this._roundA + ')';
+			return 1 == this._a ? 'hsv(' + t + ', ' + n + '%, ' + r + '%)' : 'hsva(' + t + ', ' + n + '%, ' + r + '%, ' + this._roundA + ')';
 		},
 		toHsl: function () {
 			var e = E(this._r, this._g, this._b);
@@ -271,9 +244,7 @@
 				t = l(360 * e.h),
 				n = l(100 * e.s),
 				r = l(100 * e.l);
-			return 1 == this._a
-				? 'hsl(' + t + ', ' + n + '%, ' + r + '%)'
-				: 'hsla(' + t + ', ' + n + '%, ' + r + '%, ' + this._roundA + ')';
+			return 1 == this._a ? 'hsl(' + t + ', ' + n + '%, ' + r + '%)' : 'hsla(' + t + ', ' + n + '%, ' + r + '%, ' + this._roundA + ')';
 		},
 		toHex: function (e) {
 			return h(this._r, this._g, this._b, e);
@@ -284,13 +255,7 @@
 		toHex8: function (e) {
 			return (function (e, t, n, r, i) {
 				var a = [x(l(e).toString(16)), x(l(t).toString(16)), x(l(n).toString(16)), x(k(r))];
-				return i &&
-					a[0].charAt(0) == a[0].charAt(1) &&
-					a[1].charAt(0) == a[1].charAt(1) &&
-					a[2].charAt(0) == a[2].charAt(1) &&
-					a[3].charAt(0) == a[3].charAt(1)
-					? a[0].charAt(0) + a[1].charAt(0) + a[2].charAt(0) + a[3].charAt(0)
-					: a.join('');
+				return i && a[0].charAt(0) == a[0].charAt(1) && a[1].charAt(0) == a[1].charAt(1) && a[2].charAt(0) == a[2].charAt(1) && a[3].charAt(0) == a[3].charAt(1) ? a[0].charAt(0) + a[1].charAt(0) + a[2].charAt(0) + a[3].charAt(0) : a.join('');
 			})(this._r, this._g, this._b, this._a, e);
 		},
 		toHex8String: function (e) {
@@ -305,9 +270,7 @@
 			};
 		},
 		toRgbString: function () {
-			return 1 == this._a
-				? 'rgb(' + l(this._r) + ', ' + l(this._g) + ', ' + l(this._b) + ')'
-				: 'rgba(' + l(this._r) + ', ' + l(this._g) + ', ' + l(this._b) + ', ' + this._roundA + ')';
+			return 1 == this._a ? 'rgb(' + l(this._r) + ', ' + l(this._g) + ', ' + l(this._b) + ')' : 'rgba(' + l(this._r) + ', ' + l(this._g) + ', ' + l(this._b) + ', ' + this._roundA + ')';
 		},
 		toPercentageRgb: function () {
 			return {
@@ -318,17 +281,7 @@
 			};
 		},
 		toPercentageRgbString: function () {
-			return 1 == this._a
-				? 'rgb(' + l(100 * P(this._r, 255)) + '%, ' + l(100 * P(this._g, 255)) + '%, ' + l(100 * P(this._b, 255)) + '%)'
-				: 'rgba(' +
-						l(100 * P(this._r, 255)) +
-						'%, ' +
-						l(100 * P(this._g, 255)) +
-						'%, ' +
-						l(100 * P(this._b, 255)) +
-						'%, ' +
-						this._roundA +
-						')';
+			return 1 == this._a ? 'rgb(' + l(100 * P(this._r, 255)) + '%, ' + l(100 * P(this._g, 255)) + '%, ' + l(100 * P(this._b, 255)) + '%)' : 'rgba(' + l(100 * P(this._r, 255)) + '%, ' + l(100 * P(this._g, 255)) + '%, ' + l(100 * P(this._b, 255)) + '%, ' + this._roundA + ')';
 		},
 		toName: function () {
 			return 0 === this._a ? 'transparent' : !(this._a < 1) && (b[h(this._r, this._g, this._b, !0)] || !1);
@@ -348,20 +301,8 @@
 			e = e || this._format;
 			var n = !1,
 				r = this._a < 1 && this._a >= 0;
-			if (!t && r && ('hex' === e || 'hex6' === e || 'hex3' === e || 'hex4' === e || 'hex8' === e || 'name' === e))
-				return 'name' === e && 0 === this._a ? this.toName() : this.toRgbString();
-			return (
-				'rgb' === e && (n = this.toRgbString()),
-				'prgb' === e && (n = this.toPercentageRgbString()),
-				('hex' === e || 'hex6' === e) && (n = this.toHexString()),
-				'hex3' === e && (n = this.toHexString(!0)),
-				'hex4' === e && (n = this.toHex8String(!0)),
-				'hex8' === e && (n = this.toHex8String()),
-				'name' === e && (n = this.toName()),
-				'hsl' === e && (n = this.toHslString()),
-				'hsv' === e && (n = this.toHsvString()),
-				n || this.toHexString()
-			);
+			if (!t && r && ('hex' === e || 'hex6' === e || 'hex3' === e || 'hex4' === e || 'hex8' === e || 'name' === e)) return 'name' === e && 0 === this._a ? this.toName() : this.toRgbString();
+			return 'rgb' === e && (n = this.toRgbString()), 'prgb' === e && (n = this.toPercentageRgbString()), ('hex' === e || 'hex6' === e) && (n = this.toHexString()), 'hex3' === e && (n = this.toHexString(!0)), 'hex4' === e && (n = this.toHex8String(!0)), 'hex8' === e && (n = this.toHex8String()), 'name' === e && (n = this.toName()), 'hsl' === e && (n = this.toHslString()), 'hsv' === e && (n = this.toHsvString()), n || this.toHexString();
 		},
 		clone: function () {
 			return _(this.toString());
@@ -380,10 +321,10 @@
 			return this._applyModification(A, arguments);
 		},
 		desaturate: function () {
-			return this._applyModification(I, arguments);
+			return this._applyModification(m, arguments);
 		},
 		saturate: function () {
-			return this._applyModification(m, arguments);
+			return this._applyModification(I, arguments);
 		},
 		greyscale: function () {
 			return this._applyModification(T, arguments);
@@ -478,19 +419,17 @@
 	}
 	function h(e, t, n, r) {
 		var i = [x(l(e).toString(16)), x(l(t).toString(16)), x(l(n).toString(16))];
-		return r && i[0].charAt(0) == i[0].charAt(1) && i[1].charAt(0) == i[1].charAt(1) && i[2].charAt(0) == i[2].charAt(1)
-			? i[0].charAt(0) + i[1].charAt(0) + i[2].charAt(0)
-			: i.join('');
+		return r && i[0].charAt(0) == i[0].charAt(1) && i[1].charAt(0) == i[1].charAt(1) && i[2].charAt(0) == i[2].charAt(1) ? i[0].charAt(0) + i[1].charAt(0) + i[2].charAt(0) : i.join('');
 	}
 	function p(e, t, n, r) {
 		return [x(k(r)), x(l(e).toString(16)), x(l(t).toString(16)), x(l(n).toString(16))].join('');
 	}
-	function I(e, t) {
+	function m(e, t) {
 		t = 0 === t ? 0 : t || 10;
 		var n = _(e).toHsl();
 		return (n.s -= t / 100), (n.s = U(n.s)), _(n);
 	}
-	function m(e, t) {
+	function I(e, t) {
 		t = 0 === t ? 0 : t || 10;
 		var n = _(e).toHsl();
 		return (n.s += t / 100), (n.s = U(n.s)), _(n);
@@ -506,12 +445,7 @@
 	function S(e, t) {
 		t = 0 === t ? 0 : t || 10;
 		var n = _(e).toRgb();
-		return (
-			(n.r = c(0, u(255, n.r - l(-((t / 100) * 255))))),
-			(n.g = c(0, u(255, n.g - l(-((t / 100) * 255))))),
-			(n.b = c(0, u(255, n.b - l(-((t / 100) * 255))))),
-			_(n)
-		);
+		return (n.r = c(0, u(255, n.r - l(-((t / 100) * 255))))), (n.g = c(0, u(255, n.g - l(-((t / 100) * 255))))), (n.b = c(0, u(255, n.b - l(-((t / 100) * 255))))), _(n);
 	}
 	function A(e, t) {
 		t = 0 === t ? 0 : t || 10;
@@ -850,9 +784,7 @@
 		var r = (function (e) {
 			return 'string' == typeof e && -1 != e.indexOf('%');
 		})(e);
-		return ((e = u(n, c(0, parseFloat(e)))), r && (e = parseInt(e * n, 10) / 100), 0.000001 > t.abs(e - n))
-			? 1
-			: (e % n) / parseFloat(n);
+		return ((e = u(n, c(0, parseFloat(e)))), r && (e = parseInt(e * n, 10) / 100), 0.000001 > t.abs(e - n)) ? 1 : (e % n) / parseFloat(n);
 	}
 	function U(e) {
 		return u(1, c(0, e));
@@ -873,14 +805,7 @@
 		return w(e) / 255;
 	}
 	var F =
-		((r =
-			'[\\s|\\(]+(' +
-			(n = '(?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?)') +
-			')[,|\\s]+(' +
-			n +
-			')[,|\\s]+(' +
-			n +
-			')\\s*\\)?'),
+		((r = '[\\s|\\(]+(' + (n = '(?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?)') + ')[,|\\s]+(' + n + ')[,|\\s]+(' + n + ')\\s*\\)?'),
 		(i = '[\\s|\\(]+(' + n + ')[,|\\s]+(' + n + ')[,|\\s]+(' + n + ')[,|\\s]+(' + n + ')\\s*\\)?'),
 		{
 			CSS_UNIT: new RegExp(n),

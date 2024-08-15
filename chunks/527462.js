@@ -22,20 +22,12 @@ function o(e) {
 								? (!(function (e) {
 										if ('string' != typeof e.type) {
 											var t = e.type.displayName || e.type.name || 'the component';
-											throw Error(
-												'Only native element nodes can now be passed to React DnD connectors.' +
-													'You can either wrap '.concat(t, ' into a <div>, or turn it into a ') +
-													'drag source or a drop target itself.'
-											);
+											throw Error('Only native element nodes can now be passed to React DnD connectors.' + 'You can either wrap '.concat(t, ' into a <div>, or turn it into a ') + 'drag source or a drop target itself.');
 										}
 									})(e),
 									(function (e, t) {
 										var n = e.ref;
-										return ((0, r.k)(
-											'string' != typeof n,
-											'Cannot connect React DnD to an element with an existing string ref. Please convert it to use a callback ref instead, or wrap it into a <span> or <div>. Read more: https://reactjs.org/docs/refs-and-the-dom.html#callback-refs'
-										),
-										n)
+										return ((0, r.k)('string' != typeof n, 'Cannot connect React DnD to an element with an existing string ref. Please convert it to use a callback ref instead, or wrap it into a <span> or <div>. Read more: https://reactjs.org/docs/refs-and-the-dom.html#callback-refs'), n)
 											? (0, i.cloneElement)(e, {
 													ref: function (e) {
 														u(n, e), u(t, e);

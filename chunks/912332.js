@@ -18,14 +18,7 @@ var a = n(481060),
 	s = n(822869);
 let r = 'forward-modal';
 function l(e) {
-	let {
-		messageId: t,
-		channelId: l,
-		source: o,
-		initialSelectedDestinations: c = [],
-		forwardOptions: u,
-		onRequestSent: d
-	} = e;
+	let { messageId: t, channelId: l, source: o, initialSelectedDestinations: c = [], forwardOptions: u, onRequestSent: d } = e;
 	(0, s.Lb)(l, t, o),
 		(0, a.openModalLazy)(
 			async () => {

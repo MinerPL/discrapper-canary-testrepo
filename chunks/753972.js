@@ -11,15 +11,7 @@ var i = t(735250),
 	s = t(689938),
 	c = t(799829);
 function d(e) {
-	let {
-			application: n,
-			src: t,
-			className: l,
-			size: d,
-			botIconFirst: u,
-			fallbackAvatar: m,
-			rendersPlaceholder: p = !1
-		} = e,
+	let { application: n, src: t, className: l, size: d, botIconFirst: u, fallbackAvatar: m, rendersPlaceholder: p = !1 } = e,
 		_ = a.useMemo(
 			() =>
 				null != n

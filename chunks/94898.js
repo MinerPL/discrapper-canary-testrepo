@@ -106,12 +106,10 @@ var a = {
 	'dragonpay.voucher.bank.selectField.placeholder': 'Sélectionnez votre banque',
 	'voucher.paymentReferenceLabel': 'Référence du paiement',
 	'voucher.surcharge': 'Comprend une surcharge de %@',
-	'voucher.introduction.doku':
-		"Nous vous remercions de votre achat. Veuillez finaliser votre paiement à l'aide des informations suivantes.",
+	'voucher.introduction.doku': "Nous vous remercions de votre achat. Veuillez finaliser votre paiement à l'aide des informations suivantes.",
 	'voucher.shopperName': "Nom de l'acheteur",
 	'voucher.merchantName': 'Marchand',
-	'voucher.introduction.econtext':
-		"Nous vous remercions de votre achat. Veuillez finaliser votre paiement à l'aide des informations suivantes.",
+	'voucher.introduction.econtext': "Nous vous remercions de votre achat. Veuillez finaliser votre paiement à l'aide des informations suivantes.",
 	'voucher.telephoneNumber': 'Numéro de téléphone',
 	'voucher.shopperReference': 'Référence client',
 	'voucher.collectionInstitutionNumber': 'Numéro du point de paiement',
@@ -137,11 +135,9 @@ var a = {
 	'creditCard.encryptedPassword.placeholder': '12',
 	'creditCard.encryptedPassword.invalid': 'Code incorrect',
 	'creditCard.taxNumber': "Date de naissance du porteur de carte ou numéro d'identification de l'entreprise",
-	'creditCard.taxNumber.label':
-		"Date de naissance du porteur de carte (au format AAMMJJ) ou numéro d'identification de l'entreprise (à 10\xA0chiffres)",
+	'creditCard.taxNumber.label': "Date de naissance du porteur de carte (au format AAMMJJ) ou numéro d'identification de l'entreprise (à 10\xA0chiffres)",
 	'creditCard.taxNumber.labelAlt': "Numéro d'identification de l'entreprise (à 10\xA0chiffres)",
-	'creditCard.taxNumber.invalid':
-		"Date de naissance du porteur de carte ou numéro d'identification de l'entreprise incorrect(e)",
+	'creditCard.taxNumber.invalid': "Date de naissance du porteur de carte ou numéro d'identification de l'entreprise incorrect(e)",
 	'storedPaymentMethod.disable.button': 'Supprimer',
 	'storedPaymentMethod.disable.confirmation': 'Supprimer le mode de paiement enregistré',
 	'storedPaymentMethod.disable.confirmButton': 'Oui, supprimer',
@@ -174,8 +170,7 @@ var a = {
 	'blik.invalid': 'Saisissez les 6\xA0chiffres',
 	'blik.code': 'Code à 6\xA0chiffres',
 	'blik.help': 'Ouvrez votre application bancaire pour obtenir le code.',
-	'swish.pendingMessage':
-		"Après avoir scanné le code QR, la mise à jour du statut de paiement peut prendre jusqu'à 10\xA0minutes. Si vous effectuez une nouvelle tentative de paiement dans ce délai, cela pourrait occasionner plusieurs débits.",
+	'swish.pendingMessage': "Après avoir scanné le code QR, la mise à jour du statut de paiement peut prendre jusqu'à 10\xA0minutes. Si vous effectuez une nouvelle tentative de paiement dans ce délai, cela pourrait occasionner plusieurs débits.",
 	'field.valid': 'Champ valide',
 	'field.invalid': 'Champ non valide',
 	'error.va.gen.01': 'Champ incomplet',
@@ -202,8 +197,7 @@ var a = {
 	'error.va.sf-kcp-pwd.02': 'Longueur du mot de passe incorrecte',
 	'error.giftcard.no-balance': "Aucun solde n'est disponible sur cette carte cadeau",
 	'error.giftcard.card-error': 'Aucune carte cadeau ne correspond à ce numéro',
-	'error.giftcard.currency-error':
-		'Les cartes cadeaux sont valables uniquement dans la devise dans laquelle elles ont été émises',
+	'error.giftcard.currency-error': 'Les cartes cadeaux sont valables uniquement dans la devise dans laquelle elles ont été émises',
 	'amazonpay.signout': "Se déconnecter d'Amazon",
 	'amazonpay.changePaymentDetails': 'Modifier les informations de paiement',
 	'partialPayment.warning': 'Sélectionnez un autre mode de paiement pour régler le solde',
@@ -212,10 +206,8 @@ var a = {
 	'bankTransfer.iban': 'IBAN',
 	'bankTransfer.bic': 'BIC',
 	'bankTransfer.reference': 'Référence',
-	'bankTransfer.introduction':
-		"Continuez à créer un nouveau paiement par virement bancaire. Utilisez les informations de l'écran suivant pour finaliser ce paiement.",
-	'bankTransfer.instructions':
-		'Merci pour votre achat\xA0! Veuillez utiliser les informations suivantes pour finaliser votre paiement.',
+	'bankTransfer.introduction': "Continuez à créer un nouveau paiement par virement bancaire. Utilisez les informations de l'écran suivant pour finaliser ce paiement.",
+	'bankTransfer.instructions': 'Merci pour votre achat\xA0! Veuillez utiliser les informations suivantes pour finaliser votre paiement.',
 	'bacs.accountHolderName': 'Nom du titulaire du compte bancaire',
 	'bacs.accountHolderName.invalid': 'Nom du titulaire du compte bancaire incorrect',
 	'bacs.accountNumber': 'Numéro du compte bancaire',
@@ -223,8 +215,7 @@ var a = {
 	'bacs.bankLocationId': 'Code de tri (sort code)',
 	'bacs.bankLocationId.invalid': 'Code de tri (sort code) non valide',
 	'bacs.consent.amount': "J'accepte que le montant ci-dessus soit déduit de mon compte bancaire.",
-	'bacs.consent.account':
-		"Je confirme être le titulaire du compte et qu'aucune autre signature que la mienne n'est requise pour autoriser un prélèvement sur ce compte.",
+	'bacs.consent.account': "Je confirme être le titulaire du compte et qu'aucune autre signature que la mienne n'est requise pour autoriser un prélèvement sur ce compte.",
 	edit: 'Modifier',
 	'bacs.confirm': 'Confirmer et payer',
 	'bacs.result.introduction': 'Téléchargez votre mandat de prélèvement (DDI)',
@@ -253,13 +244,11 @@ var a = {
 	'twint.saved': 'stocké',
 	orPayWith: 'ou payez avec',
 	invalidFormatExpects: 'Format non valide. Format requis\xA0: %{format}',
-	'upi.qrCodeWaitingMessage':
-		"Scannez le code QR à l'aide de votre application UPI préférée pour effectuer le paiement",
+	'upi.qrCodeWaitingMessage': "Scannez le code QR à l'aide de votre application UPI préférée pour effectuer le paiement",
 	'upi.vpaWaitingMessage': 'Ouvrez votre application UPI pour confirmer le paiement',
 	'upi.modeSelection': "Choisissez la façon dont vous souhaitez utiliser l'application UPI.",
 	'onlineBanking.termsAndConditions': 'En continuant, vous acceptez les %#conditions générales%#',
-	'onlineBankingPL.termsAndConditions':
-		"En continuant, vous acceptez les %#réglementations%# et l'%#obligation d'information%# de Przelewy24",
+	'onlineBankingPL.termsAndConditions': "En continuant, vous acceptez les %#réglementations%# et l'%#obligation d'information%# de Przelewy24",
 	'ctp.loading.poweredByCtp': 'Avec la technologie Click to Pay',
 	'ctp.loading.intro': 'Nous vérifions si vous avez des cartes enregistrées avec Click to Pay...',
 	'ctp.login.title': 'Accéder à Click to Pay',
@@ -282,14 +271,12 @@ var a = {
 	'ctp.manualCardEntry': 'Saisie manuelle de la carte',
 	'ctp.aria.infoModalButton': "Qu'est-ce que Click to Pay\xA0?",
 	'ctp.infoPopup.title': 'Click to Pay offre la simplicité du sans contact sur Internet',
-	'ctp.infoPopup.subtitle':
-		'Un mode de paiement rapide et sécurisé compatible avec les cartes Mastercard, Visa et autres fournisseurs.',
+	'ctp.infoPopup.subtitle': 'Un mode de paiement rapide et sécurisé compatible avec les cartes Mastercard, Visa et autres fournisseurs.',
 	'ctp.infoPopup.benefit1': 'Click to Pay utilise le chiffrement pour assurer la sécurité de vos informations',
 	'ctp.infoPopup.benefit2': 'Utilisez-le pour vos achats dans le monde entier',
 	'ctp.infoPopup.benefit3': 'Enregistrez votre carte une fois et simplifiez vos paiements pour toujours',
 	'ctp.errors.AUTH_INVALID': 'Authentification non valide',
-	'ctp.errors.NOT_FOUND':
-		"Aucun compte trouvé, vérifiez l'adresse e-mail ou saisissez manuellement les informations de votre carte",
+	'ctp.errors.NOT_FOUND': "Aucun compte trouvé, vérifiez l'adresse e-mail ou saisissez manuellement les informations de votre carte",
 	'ctp.errors.ID_FORMAT_UNSUPPORTED': 'Format non pris en charge',
 	'ctp.errors.FRAUD': 'Le compte utilisateur a été verrouillé ou désactivé',
 	'ctp.errors.CONSUMER_ID_MISSING': "L'identité du client n'est pas indiquée dans la demande",
@@ -298,25 +285,18 @@ var a = {
 	'ctp.errors.CODE_EXPIRED': 'Ce code a expiré',
 	'ctp.errors.RETRIES_EXCEEDED': "La limite du nombre de tentatives pour la génération de l'OTP a été dépassée",
 	'ctp.errors.OTP_SEND_FAILED': "Impossible d'envoyer l'OTP au destinataire",
-	'ctp.errors.REQUEST_TIMEOUT':
-		"Une erreur s'est produite, réessayez ou saisissez manuellement les informations de votre carte",
-	'ctp.errors.UNKNOWN_ERROR':
-		"Une erreur s'est produite, réessayez ou saisissez manuellement les informations de votre carte",
-	'ctp.errors.SERVICE_ERROR':
-		"Une erreur s'est produite, réessayez ou saisissez manuellement les informations de votre carte",
-	'ctp.errors.SERVER_ERROR':
-		"Une erreur s'est produite, réessayez ou saisissez manuellement les informations de votre carte",
-	'ctp.errors.INVALID_PARAMETER':
-		"Une erreur s'est produite, réessayez ou saisissez manuellement les informations de votre carte",
-	'ctp.errors.AUTH_ERROR':
-		"Une erreur s'est produite, réessayez ou saisissez manuellement les informations de votre carte",
+	'ctp.errors.REQUEST_TIMEOUT': "Une erreur s'est produite, réessayez ou saisissez manuellement les informations de votre carte",
+	'ctp.errors.UNKNOWN_ERROR': "Une erreur s'est produite, réessayez ou saisissez manuellement les informations de votre carte",
+	'ctp.errors.SERVICE_ERROR': "Une erreur s'est produite, réessayez ou saisissez manuellement les informations de votre carte",
+	'ctp.errors.SERVER_ERROR': "Une erreur s'est produite, réessayez ou saisissez manuellement les informations de votre carte",
+	'ctp.errors.INVALID_PARAMETER': "Une erreur s'est produite, réessayez ou saisissez manuellement les informations de votre carte",
+	'ctp.errors.AUTH_ERROR': "Une erreur s'est produite, réessayez ou saisissez manuellement les informations de votre carte",
 	'paymentMethodsList.aria.label': 'Choisissez un mode de paiement',
 	'companyDetails.name.invalid': "Entrez le nom de l'entreprise",
 	'companyDetails.registrationNumber.invalid': "Entrez le numéro d'identification",
 	'consent.checkbox.invalid': 'Vous devez accepter les conditions générales',
 	'form.instruction': 'Tous les champs sont obligatoires, sauf indication contraire.',
 	'trustly.descriptor': 'Paiement bancaire instantané',
-	'trustly.description1':
-		"Payez directement à partir de n'importe lequel de vos comptes bancaires, avec une sécurité de niveau bancaire",
+	'trustly.description1': "Payez directement à partir de n'importe lequel de vos comptes bancaires, avec une sécurité de niveau bancaire",
 	'trustly.description2': "Aucune carte, aucun téléchargement d'application, aucune inscription"
 };

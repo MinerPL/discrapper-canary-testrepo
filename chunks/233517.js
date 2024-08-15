@@ -96,9 +96,7 @@ async function O(e) {
 }
 async function f(e) {
 	let t = (0, i.s3)();
-	return t
-		? t.close(e)
-		: (_.X && n.kg.warn('Cannot flush events and disable SDK. No client defined.'), Promise.resolve(!1));
+	return t ? t.close(e) : (_.X && n.kg.warn('Cannot flush events and disable SDK. No client defined.'), Promise.resolve(!1));
 }
 function S() {
 	return !!(0, i.s3)();

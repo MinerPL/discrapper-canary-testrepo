@@ -9,12 +9,12 @@ var r = n(735250),
 t.Z = i.memo(function (e) {
 	let { onClick: t, trusted: n, title: a, href: d, children: _, messageId: E, channelId: f, ...h } = e,
 		{ analyticsLocations: p } = (0, u.ZP)(l.Z.MASKED_LINK),
-		I = i.useCallback((t) => (0, c.q)(e, t, p), [p, e]),
-		m = i.useCallback(
+		m = i.useCallback((t) => (0, c.q)(e, t, p), [p, e]),
+		I = i.useCallback(
 			(e) => {
-				1 === e.button && I(e);
+				1 === e.button && m(e);
 			},
-			[I]
+			[m]
 		),
 		T = s().sanitizeUrl(d);
 	return (0, r.jsx)(o.Anchor, {
@@ -23,8 +23,8 @@ t.Z = i.memo(function (e) {
 		target: '_blank',
 		rel: 'noreferrer noopener',
 		href: T,
-		onClick: I,
-		onAuxClick: m,
+		onClick: m,
+		onAuxClick: I,
 		children: null != _ ? _ : a
 	});
 });

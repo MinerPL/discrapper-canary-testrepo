@@ -7,9 +7,7 @@ function n(e, n, r) {
 			var a, s, o;
 			return e.call(this, ((a = t), (s = r), (o = i), 'string' == typeof n ? n : n(a, s, o))) || this;
 		}
-		return (
-			(t = i), (r = e), (t.prototype = Object.create(r.prototype)), (t.prototype.constructor = t), (t.__proto__ = r), i
-		);
+		return (t = i), (r = e), (t.prototype = Object.create(r.prototype)), (t.prototype.constructor = t), (t.__proto__ = r), i;
 	})(r);
 	(i.prototype.name = r.name), (i.prototype.code = e), (t[e] = i);
 }
@@ -35,16 +33,9 @@ n(
 	n(
 		'ERR_INVALID_ARG_TYPE',
 		function (e, t, n) {
-			if ('string' == typeof t && ((i = 'not '), t.substr(0, i.length) === i))
-				(_ = 'must not be'), (t = t.replace(/^not /, ''));
+			if ('string' == typeof t && ((i = 'not '), t.substr(0, i.length) === i)) (_ = 'must not be'), (t = t.replace(/^not /, ''));
 			else _ = 'must be';
-			if (
-				((s = e),
-				(o = ' argument'),
-				(void 0 === l || l > s.length) && (l = s.length),
-				s.substring(l - o.length, l) === o)
-			)
-				E = 'The '.concat(e, ' ').concat(_, ' ').concat(r(t, 'type'));
+			if (((s = e), (o = ' argument'), (void 0 === l || l > s.length) && (l = s.length), s.substring(l - o.length, l) === o)) E = 'The '.concat(e, ' ').concat(_, ' ').concat(r(t, 'type'));
 			else {
 				var i,
 					a,
@@ -56,9 +47,7 @@ n(
 					d,
 					_,
 					E,
-					f = ((u = e), (c = '.'), 'number' != typeof d && (d = 0), d + 1 > u.length || -1 === u.indexOf(c, d))
-						? 'argument'
-						: 'property';
+					f = ((u = e), (c = '.'), 'number' != typeof d && (d = 0), d + 1 > u.length || -1 === u.indexOf(c, d)) ? 'argument' : 'property';
 				E = 'The "'.concat(e, '" ').concat(f, ' ').concat(_, ' ').concat(r(t, 'type'));
 			}
 			return (E += '. Received type '.concat(typeof n));

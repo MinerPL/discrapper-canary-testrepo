@@ -26,18 +26,7 @@ function l(e, t) {
 }
 var u = (function () {
 		function e(e) {
-			(this.id = e.id),
-				(this.position = e.position),
-				(this.velocity = e.velocity),
-				(this.rotation = e.rotation),
-				(this.dragCoefficient = e.dragCoefficient),
-				(this.size = e.size),
-				(this.opacity = e.opacity),
-				(this.spriteX = e.spriteX),
-				(this.spriteY = e.spriteY),
-				(this.spriteWidth = e.spriteWidth),
-				(this.spriteHeight = e.spriteHeight),
-				(this._lastUpdatedAt = Date.now());
+			(this.id = e.id), (this.position = e.position), (this.velocity = e.velocity), (this.rotation = e.rotation), (this.dragCoefficient = e.dragCoefficient), (this.size = e.size), (this.opacity = e.opacity), (this.spriteX = e.spriteX), (this.spriteY = e.spriteY), (this.spriteWidth = e.spriteWidth), (this.spriteHeight = e.spriteHeight), (this._lastUpdatedAt = Date.now());
 		}
 		return (
 			(e.prototype.getNewForces = function (e, t) {
@@ -59,15 +48,7 @@ var u = (function () {
 				var r = this.getNewForces(e, n),
 					i = r.x,
 					a = r.y;
-				this.velocity.update(n),
-					(this.velocity.x += i),
-					(this.velocity.y += a),
-					this.position.update(n),
-					(this.position.x += this.velocity.x * n),
-					(this.position.y += this.velocity.y * n),
-					this.size.update(n),
-					this.opacity.update(n),
-					(this._lastUpdatedAt = t);
+				this.velocity.update(n), (this.velocity.x += i), (this.velocity.y += a), this.position.update(n), (this.position.x += this.velocity.x * n), (this.position.y += this.velocity.y * n), this.size.update(n), this.opacity.update(n), (this._lastUpdatedAt = t);
 			}),
 			(e.prototype.previewPositionUpdate = function (e, t) {
 				var n = t / 100,
@@ -80,34 +61,10 @@ var u = (function () {
 				return (o.x += r.x * n), (o.y += r.y * n), o;
 			}),
 			(e.prototype.draw = function (e, t) {
-				t.save(),
-					(t.globalAlpha = this.opacity.value),
-					t.setTransform(
-						new DOMMatrix()
-							.translateSelf(this.position.x * n.g.devicePixelRatio, this.position.y * n.g.devicePixelRatio)
-							.rotateSelf(this.rotation.x, this.rotation.y, this.rotation.z)
-					),
-					t.drawImage(
-						e,
-						this.spriteX,
-						this.spriteY,
-						this.spriteWidth,
-						this.spriteHeight,
-						(-this.width / 2) * n.g.devicePixelRatio,
-						(-this.height / 2) * n.g.devicePixelRatio,
-						this.width * n.g.devicePixelRatio,
-						this.height * n.g.devicePixelRatio
-					),
-					t.restore();
+				t.save(), (t.globalAlpha = this.opacity.value), t.setTransform(new DOMMatrix().translateSelf(this.position.x * n.g.devicePixelRatio, this.position.y * n.g.devicePixelRatio).rotateSelf(this.rotation.x, this.rotation.y, this.rotation.z)), t.drawImage(e, this.spriteX, this.spriteY, this.spriteWidth, this.spriteHeight, (-this.width / 2) * n.g.devicePixelRatio, (-this.height / 2) * n.g.devicePixelRatio, this.width * n.g.devicePixelRatio, this.height * n.g.devicePixelRatio), t.restore();
 			}),
 			(e.prototype.shouldDestroy = function (e, t) {
-				return (
-					this.opacity.value < 0 ||
-					(t.gravity >= 0 && this.velocity.y < 0 && this.position.y + this.height < 0) ||
-					(t.gravity <= 0 && this.velocity.y > 0 && this.position.y - this.height > e.height) ||
-					(t.wind >= 0 && this.velocity.x > 0 && this.position.x - this.width > e.width) ||
-					(t.wind <= 0 && this.velocity.x < 0 && this.position.x + this.width < 0)
-				);
+				return this.opacity.value < 0 || (t.gravity >= 0 && this.velocity.y < 0 && this.position.y + this.height < 0) || (t.gravity <= 0 && this.velocity.y > 0 && this.position.y - this.height > e.height) || (t.wind >= 0 && this.velocity.x > 0 && this.position.x - this.width > e.width) || (t.wind <= 0 && this.velocity.x < 0 && this.position.x + this.width < 0);
 			}),
 			Object.defineProperty(e.prototype, 'width', {
 				get: function () {
@@ -151,10 +108,7 @@ var u = (function () {
 		var t = void 0 === e ? {} : e,
 			n = t.gravity,
 			r = t.wind;
-		(this.gravity = -9.8),
-			(this.wind = 0),
-			(this.gravity = null != n ? n : this.gravity),
-			(this.wind = null != r ? r : this.wind);
+		(this.gravity = -9.8), (this.wind = 0), (this.gravity = null != n ? n : this.gravity), (this.wind = null != r ? r : this.wind);
 	},
 	_ = function (e, t) {
 		return (_ =
@@ -168,8 +122,7 @@ var u = (function () {
 			})(e, t);
 	};
 function E(e, t) {
-	if ('function' != typeof t && null !== t)
-		throw TypeError('Class extends value ' + String(t) + ' is not a constructor or null');
+	if ('function' != typeof t && null !== t) throw TypeError('Class extends value ' + String(t) + ' is not a constructor or null');
 	function n() {
 		this.constructor = e;
 	}
@@ -179,8 +132,7 @@ var f = function () {
 		return (f =
 			Object.assign ||
 			function (e) {
-				for (var t, n = 1, r = arguments.length; n < r; n++)
-					for (var i in (t = arguments[n])) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i]);
+				for (var t, n = 1, r = arguments.length; n < r; n++) for (var i in (t = arguments[n])) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i]);
 				return e;
 			}).apply(this, arguments);
 	},
@@ -224,7 +176,7 @@ var f = function () {
 			e
 		);
 	})(),
-	I = (function (e) {
+	m = (function (e) {
 		function t(t, n, r) {
 			var i = e.call(this, t, n) || this;
 			return (i._z = r), i;
@@ -251,7 +203,7 @@ var f = function () {
 			t
 		);
 	})(p),
-	m = (function (e) {
+	I = (function (e) {
 		function t() {
 			return (null !== e && e.apply(this, arguments)) || this;
 		}
@@ -343,11 +295,11 @@ function R(e) {
 		switch (e.type) {
 			case 'static':
 				var t = v(e.value);
-				return new p(new m(t.x), new m(t.y));
+				return new p(new I(t.x), new I(t.y));
 			case 'static-random':
 				var n = v(e.minValue),
 					r = v(e.maxValue);
-				return new p(new m(S(n.x, r.x)), new m(S(n.y, r.y)));
+				return new p(new I(S(n.x, r.x)), new I(S(n.y, r.y)));
 			case 'linear':
 				t = v(e.value);
 				var i = v(e.addValue);
@@ -363,10 +315,7 @@ function R(e) {
 					l = v(e.final),
 					u = v(e.duration),
 					c = v(e.direction);
-				return new p(
-					new g(t.x, o.x, l.x, u.x, c.x, e.easingFunction),
-					new g(t.y, o.y, l.y, u.x, c.y, e.easingFunction)
-				);
+				return new p(new g(t.x, o.x, l.x, u.x, c.x, e.easingFunction), new g(t.y, o.y, l.y, u.x, c.y, e.easingFunction));
 			case 'oscillating-random':
 				(n = v(e.minValue)), (r = v(e.maxValue));
 				var d = v(e.minStart),
@@ -374,13 +323,10 @@ function R(e) {
 					E = v(e.minFinal),
 					f = v(e.maxFinal),
 					h = v(e.minDuration),
-					I = v(e.maxDuration),
+					m = v(e.maxDuration),
 					O = v(e.minDirection),
 					R = v(e.maxDirection);
-				return new p(
-					new g(S(n.x, r.x), S(d.x, _.x), S(E.x, f.x), S(h.x, I.x), N(O.x, R.x), A(e.easingFunctions)[0]),
-					new g(S(n.y, r.y), S(d.y, _.y), S(E.y, f.y), S(h.y, I.y), N(O.y, R.y), A(e.easingFunctions)[0])
-				);
+				return new p(new g(S(n.x, r.x), S(d.x, _.x), S(E.x, f.x), S(h.x, m.x), N(O.x, R.x), A(e.easingFunctions)[0]), new g(S(n.y, r.y), S(d.y, _.y), S(E.y, f.y), S(h.y, m.y), N(O.y, R.y), A(e.easingFunctions)[0]));
 		}
 	})(f(f({}, e), { valueType: 'Vector2' }));
 }
@@ -398,20 +344,10 @@ var C = r.forwardRef(function (e, t) {
 			for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && 0 > t.indexOf(r) && (n[r] = e[r]);
 			if (null != e && 'function' == typeof Object.getOwnPropertySymbols) {
 				var i = 0;
-				for (r = Object.getOwnPropertySymbols(e); i < r.length; i++)
-					0 > t.indexOf(r[i]) && Object.prototype.propertyIsEnumerable.call(e, r[i]) && (n[r[i]] = e[r[i]]);
+				for (r = Object.getOwnPropertySymbols(e); i < r.length; i++) 0 > t.indexOf(r[i]) && Object.prototype.propertyIsEnumerable.call(e, r[i]) && (n[r[i]] = e[r[i]]);
 			}
 			return n;
-		})(e, [
-			'className',
-			'environment',
-			'onClick',
-			'onMouseDown',
-			'onMouseMove',
-			'onMouseUp',
-			'onBeforeRender',
-			'onAfterRender'
-		]),
+		})(e, ['className', 'environment', 'onClick', 'onMouseDown', 'onMouseMove', 'onMouseUp', 'onBeforeRender', 'onAfterRender']),
 		C = r.useRef(null),
 		y = r.useRef(new Map()),
 		D = r.useRef(null),
@@ -431,9 +367,7 @@ var C = r.forwardRef(function (e, t) {
 								i.update(s), i.draw(a, t), i.shouldDestroy(e, s) && y.current.delete(r);
 							}),
 							null == p || p(t),
-							y.current.size > 0
-								? (D.current = window.requestAnimationFrame(M))
-								: (t.clearRect(0, 0, e.width, e.height), (D.current = null));
+							y.current.size > 0 ? (D.current = window.requestAnimationFrame(M)) : (t.clearRect(0, 0, e.width, e.height), (D.current = null));
 						var n = Date.now();
 						0 !== L.current && (b.current = 1000 / (n - L.current)), (L.current = n);
 					}
@@ -484,9 +418,7 @@ var C = r.forwardRef(function (e, t) {
 						(C = (v = (function (e, t) {
 							if (null != e) {
 								var n = t.sprites.findIndex(function (t) {
-									return 'string' == typeof e
-										? t.src === e && t.colorize
-										: t.src === e.src && t.colorize === e.colorize;
+									return 'string' == typeof e ? t.src === e && t.colorize : t.src === e.src && t.colorize === e.colorize;
 								});
 								if (-1 !== n) return [e, n];
 							}
@@ -514,35 +446,27 @@ var C = r.forwardRef(function (e, t) {
 									switch (e.type) {
 										case 'static':
 											var t = O(e.value);
-											return new I(new m(t.x), new m(t.y), new m(t.z));
+											return new m(new I(t.x), new I(t.y), new I(t.z));
 										case 'static-random':
 											var n = O(e.minValue),
 												r = O(e.maxValue);
-											return new I(new m(S(n.x, r.x)), new m(S(n.y, r.y)), new m(S(n.z, r.z)));
+											return new m(new I(S(n.x, r.x)), new I(S(n.y, r.y)), new I(S(n.z, r.z)));
 										case 'linear':
 											t = O(e.value);
 											var i = O(e.addValue);
-											return new I(new T(t.x, i.x), new T(t.y, i.y), new T(t.z, i.z));
+											return new m(new T(t.x, i.x), new T(t.y, i.y), new T(t.z, i.z));
 										case 'linear-random':
 											(n = O(e.minValue)), (r = O(e.maxValue));
 											var a = O(e.minAddValue),
 												s = O(e.maxAddValue);
-											return new I(
-												new T(S(n.x, r.x), S(a.x, s.x)),
-												new T(S(n.y, r.y), S(a.y, s.y)),
-												new T(S(n.z, r.z), S(a.z, s.z))
-											);
+											return new m(new T(S(n.x, r.x), S(a.x, s.x)), new T(S(n.y, r.y), S(a.y, s.y)), new T(S(n.z, r.z), S(a.z, s.z)));
 										case 'oscillating':
 											t = O(e.value);
 											var o = O(e.start),
 												l = O(e.final),
 												u = O(e.duration),
 												c = O(e.direction);
-											return new I(
-												new g(t.x, o.x, l.x, u.x, c.x, e.easingFunction),
-												new g(t.y, o.y, l.y, u.z, c.y, e.easingFunction),
-												new g(t.z, o.z, l.z, u.z, c.z, e.easingFunction)
-											);
+											return new m(new g(t.x, o.x, l.x, u.x, c.x, e.easingFunction), new g(t.y, o.y, l.y, u.z, c.y, e.easingFunction), new g(t.z, o.z, l.z, u.z, c.z, e.easingFunction));
 										case 'oscillating-random':
 											(n = O(e.minValue)), (r = O(e.maxValue));
 											var d = O(e.minStart),
@@ -553,11 +477,7 @@ var C = r.forwardRef(function (e, t) {
 												p = O(e.maxDuration),
 												v = O(e.minDirection),
 												R = O(e.maxDirection);
-											return new I(
-												new g(S(n.x, r.x), S(d.x, _.x), S(E.x, f.x), S(h.x, p.x), N(v.x, R.x), A(e.easingFunctions)[0]),
-												new g(S(n.y, r.y), S(d.y, _.y), S(E.y, f.y), S(h.y, p.y), N(v.y, R.y), A(e.easingFunctions)[0]),
-												new g(S(n.z, r.z), S(d.z, _.z), S(E.z, f.z), S(h.z, p.z), N(v.z, R.z), A(e.easingFunctions)[0])
-											);
+											return new m(new g(S(n.x, r.x), S(d.x, _.x), S(E.x, f.x), S(h.x, p.x), N(v.x, R.x), A(e.easingFunctions)[0]), new g(S(n.y, r.y), S(d.y, _.y), S(E.y, f.y), S(h.y, p.y), N(v.y, R.y), A(e.easingFunctions)[0]), new g(S(n.z, r.z), S(d.z, _.z), S(E.z, f.z), S(h.z, p.z), N(v.z, R.z), A(e.easingFunctions)[0]));
 									}
 								})(f(f({}, L), { valueType: 'Vector3' }))),
 							dragCoefficient: R(h.dragCoefficient),
@@ -567,9 +487,9 @@ var C = r.forwardRef(function (e, t) {
 								(function (e) {
 									switch (e.type) {
 										case 'static':
-											return new m(e.value);
+											return new I(e.value);
 										case 'static-random':
-											return new m(S(e.minValue, e.maxValue));
+											return new I(S(e.minValue, e.maxValue));
 										case 'linear':
 											return new T(e.value, e.addValue);
 										case 'linear-random':
@@ -577,14 +497,7 @@ var C = r.forwardRef(function (e, t) {
 										case 'oscillating':
 											return new g(e.value, e.start, e.final, e.duration, e.direction, e.easingFunction);
 										case 'oscillating-random':
-											return new g(
-												S(e.minValue, e.maxValue),
-												S(e.minStart, e.maxStart),
-												S(e.minFinal, e.maxFinal),
-												S(e.minDuration, e.maxDuration),
-												N(e.minDirection, e.maxDirection),
-												A(e.easingFunctions)[0]
-											);
+											return new g(S(e.minValue, e.maxValue), S(e.minStart, e.maxStart), S(e.minFinal, e.maxFinal), S(e.minDuration, e.maxDuration), N(e.minDirection, e.maxDirection), A(e.easingFunctions)[0]);
 									}
 								})(f(f({}, b), { valueType: 'number' }))),
 							spriteX: D * l.spriteWidth + 2 * D,
@@ -706,10 +619,7 @@ var C = r.forwardRef(function (e, t) {
 					e('mousemove', V, _),
 					e('mouseup', H, E),
 					function () {
-						window.removeEventListener('click', B),
-							window.removeEventListener('mousedown', F),
-							window.removeEventListener('mousemove', V),
-							window.removeEventListener('mouseup', V);
+						window.removeEventListener('click', B), window.removeEventListener('mousedown', F), window.removeEventListener('mousemove', V), window.removeEventListener('mouseup', V);
 					}
 				);
 			},
@@ -749,13 +659,9 @@ var C = r.forwardRef(function (e, t) {
 	if (e && 'undefined' != typeof document) {
 		var r = document.head || document.getElementsByTagName('head')[0],
 			i = document.createElement('style');
-		(i.type = 'text/css'),
-			'top' === n && r.firstChild ? r.insertBefore(i, r.firstChild) : r.appendChild(i),
-			i.styleSheet ? (i.styleSheet.cssText = e) : i.appendChild(document.createTextNode(e));
+		(i.type = 'text/css'), 'top' === n && r.firstChild ? r.insertBefore(i, r.firstChild) : r.appendChild(i), i.styleSheet ? (i.styleSheet.cssText = e) : i.appendChild(document.createTextNode(e));
 	}
-})(
-	'.SpriteCanvas-module_spriteCanvasHidden__ndzQV {\n  display: none;\n  position: absolute;\n  width: 0;\n  height: 0;\n  left: -100%;\n}\n'
-);
+})('.SpriteCanvas-module_spriteCanvasHidden__ndzQV {\n  display: none;\n  position: absolute;\n  width: 0;\n  height: 0;\n  left: -100%;\n}\n');
 var y = r.forwardRef(function (e, t) {
 	var n,
 		a = e.className,
@@ -835,7 +741,7 @@ var y = r.forwardRef(function (e, t) {
 			},
 			[u, d, c]
 		),
-		I = r.useCallback(
+		m = r.useCallback(
 			function () {
 				var e = l.map(function (e) {
 					var t = new Image(),
@@ -868,7 +774,7 @@ var y = r.forwardRef(function (e, t) {
 			},
 			[l]
 		),
-		m = r.useCallback(function (e) {
+		I = r.useCallback(function (e) {
 			for (var t in h.current) h.current[t](e);
 		}, []),
 		T = r.useCallback(
@@ -911,13 +817,7 @@ var y = r.forwardRef(function (e, t) {
 										if (n) throw TypeError('Generator is already executing.');
 										for (; a && ((a = 0), o[0] && (s = 0)), s; )
 											try {
-												if (
-													((n = 1),
-													r &&
-														(i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) &&
-														!(i = i.call(r, o[1])).done)
-												)
-													return i;
+												if (((n = 1), r && (i = 2 & o[0] ? r.return : o[0] ? r.throw || ((i = r.return) && i.call(r), 0) : r.next) && !(i = i.call(r, o[1])).done)) return i;
 												switch (((r = 0), i && (o = [2 & o[0], i.value]), o[0])) {
 													case 0:
 													case 1:
@@ -974,9 +874,9 @@ var y = r.forwardRef(function (e, t) {
 						})(this, function (e) {
 							switch (e.label) {
 								case 0:
-									return [4, I()];
+									return [4, m()];
 								case 1:
-									return e.sent(), p(), (f.current = !0), m(!0), [2];
+									return e.sent(), p(), (f.current = !0), I(!0), [2];
 							}
 						});
 					}),
@@ -1010,7 +910,7 @@ var y = r.forwardRef(function (e, t) {
 					})
 				);
 			},
-			[m, I, p]
+			[I, m, p]
 		);
 	return (
 		r.useEffect(
@@ -1022,15 +922,14 @@ var y = r.forwardRef(function (e, t) {
 		r.useEffect(
 			function () {
 				return function () {
-					return m(!1);
+					return I(!1);
 				};
 			},
-			[m]
+			[I]
 		),
 		r.useEffect(
 			function () {
-				null != _.current &&
-					((_.current.width = (c + 2) * Math.max(u.length, 1)), (_.current.height = (d + 2) * l.length));
+				null != _.current && ((_.current.width = (c + 2) * Math.max(u.length, 1)), (_.current.height = (d + 2) * l.length));
 			},
 			[u.length, d, c, l.length]
 		),
@@ -1061,8 +960,7 @@ function D(e, t) {
 					s = i.color,
 					o = null == t ? void 0 : t.getCreateData(),
 					l = null == t ? void 0 : t.getCanvas();
-				if (null != l && null != o && 0 !== o.sprites.length)
-					return null == e ? void 0 : e.createConfetti(n, l, o, a, s);
+				if (null != l && null != o && 0 !== o.sprites.length) return null == e ? void 0 : e.createConfetti(n, l, o, a, s);
 			},
 			[e, t]
 		),

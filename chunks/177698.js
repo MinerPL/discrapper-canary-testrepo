@@ -12,23 +12,7 @@ var a = n(481060),
 t.Z = (0, u.Z)(
 	(e) => {
 		var t;
-		let {
-				clientId: n,
-				authorizations: o,
-				scopes: c,
-				parsedPermissions: u,
-				responseType: E,
-				redirectUri: h,
-				codeChallenge: m,
-				codeChallengeMethod: I,
-				state: g,
-				guildId: p,
-				channelId: T,
-				prompt: S,
-				disableGuildSelect: f,
-				disclosures: C,
-				integrationType: N
-			} = e,
+		let { clientId: n, authorizations: o, scopes: c, parsedPermissions: u, responseType: E, redirectUri: h, codeChallenge: m, codeChallengeMethod: I, state: g, guildId: p, channelId: T, prompt: S, disableGuildSelect: f, disclosures: C, integrationType: N } = e,
 			A = 'OAuth2Authorize_'.concat(n, '_').concat(p, '_').concat(T),
 			v = null != N ? (null == o ? void 0 : o.get(N)) : void 0,
 			Z = null !== (t = null == v ? void 0 : v.application) && void 0 !== t ? t : r.Z.getApplication(n);

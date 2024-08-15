@@ -23,15 +23,15 @@ e.exports = function () {
 			f,
 			h,
 			p,
-			I,
-			m = i < c.length - 1;
+			m,
+			I = i < c.length - 1;
 		return (
 			(a = e),
-			(o = m),
+			(o = I),
 			(u = i > 0),
 			(f = d =
 				function (e) {
-					!t && (t = e), e && E.forEach(l), !m && (E.forEach(l), _(t));
+					!t && (t = e), e && E.forEach(l), !I && (E.forEach(l), _(t));
 				}),
 			(h = !1),
 			(d = function () {
@@ -53,12 +53,12 @@ e.exports = function () {
 					(p = !0), d();
 				}
 			),
-			(I = !1),
+			(m = !1),
 			function (e) {
 				if (!p) {
-					if (!I) {
+					if (!m) {
 						var t;
-						if (((I = !0), (t = a).setHeader && 'function' == typeof t.abort)) return a.abort();
+						if (((m = !0), (t = a).setHeader && 'function' == typeof t.abort)) return a.abort();
 						if ('function' == typeof a.destroy) return a.destroy();
 						d(e || new s('pipe'));
 					}

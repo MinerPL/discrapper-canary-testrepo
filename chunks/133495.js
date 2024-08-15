@@ -31,36 +31,22 @@ e.exports = function e(t, n, a) {
 		p = function (e) {
 			a.call(t, e);
 		},
-		I = function () {
-			var e;
-			return u && !f
-				? ((!t._readableState || !t._readableState.ended) && (e = new r()), a.call(t, e))
-				: c && !_
-					? ((!t._writableState || !t._writableState.ended) && (e = new r()), a.call(t, e))
-					: void 0;
-		},
 		m = function () {
+			var e;
+			return u && !f ? ((!t._readableState || !t._readableState.ended) && (e = new r()), a.call(t, e)) : c && !_ ? ((!t._writableState || !t._writableState.ended) && (e = new r()), a.call(t, e)) : void 0;
+		},
+		I = function () {
 			t.req.on('finish', E);
 		};
-	if ((l = t).setHeader && 'function' == typeof l.abort)
-		t.on('complete', E), t.on('abort', I), t.req ? m() : t.on('request', m);
+	if ((l = t).setHeader && 'function' == typeof l.abort) t.on('complete', E), t.on('abort', m), t.req ? I() : t.on('request', I);
 	else c && !t._writableState && (t.on('end', d), t.on('close', d));
 	return (
 		t.on('end', h),
 		t.on('finish', E),
 		!1 !== n.error && t.on('error', p),
-		t.on('close', I),
+		t.on('close', m),
 		function () {
-			t.removeListener('complete', E),
-				t.removeListener('abort', I),
-				t.removeListener('request', m),
-				t.req && t.req.removeListener('finish', E),
-				t.removeListener('end', d),
-				t.removeListener('close', d),
-				t.removeListener('finish', E),
-				t.removeListener('end', h),
-				t.removeListener('error', p),
-				t.removeListener('close', I);
+			t.removeListener('complete', E), t.removeListener('abort', m), t.removeListener('request', I), t.req && t.req.removeListener('finish', E), t.removeListener('end', d), t.removeListener('close', d), t.removeListener('finish', E), t.removeListener('end', h), t.removeListener('error', p), t.removeListener('close', m);
 		}
 	);
 };

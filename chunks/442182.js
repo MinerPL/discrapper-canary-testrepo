@@ -193,16 +193,7 @@ function Z(e) {
 	});
 }
 function b(e) {
-	let {
-			guildId: t,
-			roleId: n,
-			query: i,
-			headerHeight: r,
-			locked: l,
-			onScroll: c,
-			roleMembers: d,
-			handleAddClick: u
-		} = e,
+	let { guildId: t, roleId: n, query: i, headerHeight: r, locked: l, onScroll: c, roleMembers: d, handleAddClick: u } = e,
 		{ analyticsLocations: E } = (0, I.ZP)(_.Z.MEMBER_LIST),
 		T = a.useMemo(() => i.trim().toLowerCase(), [i]);
 	(0, x.rY)(t, T);
@@ -277,10 +268,7 @@ function G(e) {
 		f =
 			(0, l.e7)([h.Z], () => {
 				var e, n;
-				return null !== (n = null === (e = h.Z.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[i.id]) &&
-					void 0 !== n
-					? n
-					: 0;
+				return null !== (n = null === (e = h.Z.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[i.id]) && void 0 !== n ? n : 0;
 			}) > C.length,
 		v = () => {
 			S.default.track(O.rMx.OPEN_MODAL, {

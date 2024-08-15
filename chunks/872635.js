@@ -1,6 +1,6 @@
 n.d(t, {
 	I: function () {
-		return m;
+		return I;
 	}
 }),
 	n(47120);
@@ -18,15 +18,15 @@ var r = n(735250),
 	f = n(436660),
 	h = n(887490),
 	p = n(447525),
-	I = n(30005);
-function m(e) {
+	m = n(30005);
+function I(e) {
 	var t;
 	let { editorRef: n, options: i, iconClassName: a, dividerClassName: o } = e,
 		u = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor();
 	return null == u
 		? null
 		: (0, r.jsxs)('div', {
-				className: I.buttons,
+				className: m.buttons,
 				children: [
 					(0, r.jsx)(T, {
 						slateEditor: u,
@@ -34,7 +34,7 @@ function m(e) {
 						children: (0, r.jsx)(l.BoldIcon, {
 							size: 'md',
 							color: 'currentColor',
-							className: s()(I.icon, a)
+							className: s()(m.icon, a)
 						})
 					}),
 					(0, r.jsx)(T, {
@@ -43,7 +43,7 @@ function m(e) {
 						children: (0, r.jsx)(l.ItalicIcon, {
 							size: 'md',
 							color: 'currentColor',
-							className: s()(I.icon, a)
+							className: s()(m.icon, a)
 						})
 					}),
 					(0, r.jsx)(T, {
@@ -52,10 +52,10 @@ function m(e) {
 						children: (0, r.jsx)(l.StrikethroughIcon, {
 							size: 'md',
 							color: 'currentColor',
-							className: s()(I.icon, a)
+							className: s()(m.icon, a)
 						})
 					}),
-					(0, r.jsx)('div', { className: s()(I.divider, o) }),
+					(0, r.jsx)('div', { className: s()(m.divider, o) }),
 					!(null == i ? void 0 : i.disableBlockQuotes) &&
 						(0, r.jsx)(g, {
 							slateEditor: u,
@@ -63,7 +63,7 @@ function m(e) {
 							children: (0, r.jsx)(l.QuoteIcon, {
 								size: 'md',
 								color: 'currentColor',
-								className: s()(I.icon, a)
+								className: s()(m.icon, a)
 							})
 						}),
 					(0, r.jsx)(T, {
@@ -74,7 +74,7 @@ function m(e) {
 							width: 20,
 							height: 20,
 							color: 'currentColor',
-							className: s()(I.icon, a)
+							className: s()(m.icon, a)
 						})
 					}),
 					(0, r.jsx)(T, {
@@ -83,7 +83,7 @@ function m(e) {
 						children: (0, r.jsx)(l.EyeIcon, {
 							size: 'md',
 							color: 'currentColor',
-							className: s()(I.icon, a)
+							className: s()(m.icon, a)
 						})
 					})
 				]
@@ -98,7 +98,7 @@ function T(e) {
 	}
 	return (0, r.jsx)('button', {
 		'aria-pressed': a,
-		className: I.button,
+		className: m.button,
 		onClick: () => {
 			null != t && _.T.withSingleEntry(t, () => (0, E.py)(t, n));
 		},
@@ -111,7 +111,7 @@ function g(e) {
 		s = null != a && h.aj.isType(a[0], t);
 	return (0, r.jsx)('button', {
 		'aria-pressed': s,
-		className: I.button,
+		className: m.button,
 		onClick: () => {
 			null != n && _.T.withSingleEntry(n, () => (0, E.hm)(n, t));
 		},
@@ -148,8 +148,7 @@ t.Z = i.forwardRef(function (e, t) {
 			(e) => {
 				var t;
 				let n = T.renderWindow;
-				!(e.target instanceof n.Node && (null === (t = _.current) || void 0 === t ? void 0 : t.contains(e.target))) &&
-					g();
+				!(e.target instanceof n.Node && (null === (t = _.current) || void 0 === t ? void 0 : t.contains(e.target))) && g();
 			},
 			[T, g]
 		),
@@ -160,8 +159,7 @@ t.Z = i.forwardRef(function (e, t) {
 					if (0 !== e.button) g();
 					else {
 						var n;
-						let r =
-							e.target instanceof t.Node && (null === (n = _.current) || void 0 === n ? void 0 : n.contains(e.target));
+						let r = e.target instanceof t.Node && (null === (n = _.current) || void 0 === n ? void 0 : n.contains(e.target));
 						clearTimeout(p.current),
 							(p.current = setTimeout(() => {
 								var t;
@@ -184,12 +182,7 @@ t.Z = i.forwardRef(function (e, t) {
 				e.addEventListener('focus', g),
 				e.addEventListener('blur', g),
 				() => {
-					e.document.removeEventListener('keydown', g),
-						e.document.removeEventListener('mousedown', A),
-						e.document.removeEventListener('mouseup', N),
-						e.removeEventListener('focus', g),
-						e.removeEventListener('blur', g),
-						clearTimeout(p.current);
+					e.document.removeEventListener('keydown', g), e.document.removeEventListener('mousedown', A), e.document.removeEventListener('mouseup', N), e.removeEventListener('focus', g), e.removeEventListener('blur', g), clearTimeout(p.current);
 				}
 			);
 		}, [T, g, A, N]);
@@ -216,20 +209,11 @@ t.Z = i.forwardRef(function (e, t) {
 			let f = _.getBoundingClientRect(),
 				p = l.createRange();
 			p.setStart(u.anchorNode, u.anchorOffset), p.setEnd(u.focusNode, u.focusOffset);
-			let I = p.getBoundingClientRect(),
-				m = d.x === f.x,
-				T = m ? I.x : Math.min(d.x, f.x),
-				g = m ? I.x + I.width : Math.max(d.x, f.x),
-				S =
-					null !==
-						(r =
-							null === (n = s.current) || void 0 === n
-								? void 0
-								: null === (t = n.getBoundingClientRect()) || void 0 === t
-									? void 0
-									: t.y) && void 0 !== r
-						? r
-						: 0;
+			let m = p.getBoundingClientRect(),
+				I = d.x === f.x,
+				T = I ? m.x : Math.min(d.x, f.x),
+				g = I ? m.x + m.width : Math.max(d.x, f.x),
+				S = null !== (r = null === (n = s.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.y) && void 0 !== r ? r : 0;
 			return {
 				x: T + (g - T) / 2,
 				y: Math.max(S, Math.min(f.y, d.y))
@@ -253,7 +237,7 @@ t.Z = i.forwardRef(function (e, t) {
 				children: (0, r.jsxs)('div', {
 					id: 'slate-toolbar',
 					ref: _,
-					className: I.toolbar,
+					className: m.toolbar,
 					style: {
 						top: O - R,
 						left: v - y
@@ -266,7 +250,7 @@ t.Z = i.forwardRef(function (e, t) {
 					},
 					children: [
 						(0, r.jsx)(S, { slateEditor: L }),
-						(0, r.jsx)(m, {
+						(0, r.jsx)(I, {
 							editorRef: a,
 							options: l
 						})

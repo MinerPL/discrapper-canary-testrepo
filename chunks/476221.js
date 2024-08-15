@@ -16,8 +16,7 @@ t.Z = {
 				(t = i.QKv.CONNECTING), (n = l.Z.Messages.CONNECTION_STATUS_AWAITING_ENDPOINT);
 				break;
 			case i.hes.RTC_CONNECTED:
-				(t = i.QKv.CONNECTED),
-					(n = r ? l.Z.Messages.CONNECTION_STATUS_VIDEO_CONNECTED : l.Z.Messages.CONNECTION_STATUS_VOICE_CONNECTED);
+				(t = i.QKv.CONNECTED), (n = r ? l.Z.Messages.CONNECTION_STATUS_VIDEO_CONNECTED : l.Z.Messages.CONNECTION_STATUS_VOICE_CONNECTED);
 				break;
 			case i.hes.RTC_CONNECTING:
 				(t = i.QKv.CONNECTING), (n = l.Z.Messages.CONNECTION_STATUS_RTC_CONNECTING);

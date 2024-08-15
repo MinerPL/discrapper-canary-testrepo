@@ -13,8 +13,8 @@ var i = n(735250),
 	_ = n(594174),
 	f = n(626135),
 	E = n(906605),
-	g = n(574176),
-	C = n(833858),
+	C = n(574176),
+	g = n(833858),
 	I = n(866071),
 	x = n(223135),
 	T = n(625938),
@@ -23,7 +23,7 @@ var i = n(735250),
 	S = n(803565);
 t.Z = (e) => {
 	let { hangStatusActivity: t, userId: s, channel: Z, previewIsOpen: A } = e,
-		{ enableHangStatus: M } = g.n.useExperiment({
+		{ enableHangStatus: M } = C.n.useExperiment({
 			guildId: Z.guild_id,
 			location: 'HangStatusPopout'
 		}),
@@ -80,7 +80,7 @@ t.Z = (e) => {
 													variant: 'text-sm/semibold',
 													color: 'text-normal',
 													className: S.statusText,
-													children: (0, C.O8)(t)
+													children: (0, g.O8)(t)
 												})
 											]
 										}),

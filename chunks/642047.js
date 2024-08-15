@@ -42,11 +42,6 @@ class a {
 		0 !== this.data.size && (this.data.clear(), this.version++);
 	}
 	constructor() {
-		i(this, 'version', 0),
-			i(this, 'data', new Map()),
-			i(this, 'cachedValues', void 0),
-			i(this, 'cachedKeys', void 0),
-			(this.cachedValues = (0, r.oH)((e) => Array.from(this.data.values()))),
-			(this.cachedKeys = (0, r.oH)((e) => Array.from(this.data.keys())));
+		i(this, 'version', 0), i(this, 'data', new Map()), i(this, 'cachedValues', void 0), i(this, 'cachedKeys', void 0), (this.cachedValues = (0, r.oH)((e) => Array.from(this.data.values()))), (this.cachedKeys = (0, r.oH)((e) => Array.from(this.data.keys())));
 	}
 }

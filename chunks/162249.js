@@ -15,10 +15,7 @@ var r = n(470079),
 		function e(e, t) {
 			for (var n = 0; n < t.length; n++) {
 				var r = t[n];
-				(r.enumerable = r.enumerable || !1),
-					(r.configurable = !0),
-					'value' in r && (r.writable = !0),
-					Object.defineProperty(e, r.key, r);
+				(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 			}
 		}
 		return function (t, n, r) {
@@ -42,9 +39,7 @@ var c = (function (e) {
 				t && 'function' == typeof r.props.onChange && r.props.onChange(t, e);
 			}),
 			(r.handleMouseDown = function (e) {
-				r.handleChange(e),
-					window.addEventListener('mousemove', r.handleChange),
-					window.addEventListener('mouseup', r.handleMouseUp);
+				r.handleChange(e), window.addEventListener('mousemove', r.handleChange), window.addEventListener('mouseup', r.handleMouseUp);
 			}),
 			(r.handleMouseUp = function () {
 				r.unbindEventListeners();
@@ -57,8 +52,7 @@ var c = (function (e) {
 	}
 	return (
 		!(function (e, t) {
-			if ('function' != typeof t && null !== t)
-				throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+			if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
 			(e.prototype = Object.create(t && t.prototype, {
 				constructor: {
 					value: e,
@@ -95,20 +89,7 @@ var c = (function (e) {
 									},
 									gradient: {
 										absolute: '0px 0px 0px 0px',
-										background:
-											'linear-gradient(to right, rgba(' +
-											t.r +
-											',' +
-											t.g +
-											',' +
-											t.b +
-											', 0) 0%,\n           rgba(' +
-											t.r +
-											',' +
-											t.g +
-											',' +
-											t.b +
-											', 1) 100%)',
+										background: 'linear-gradient(to right, rgba(' + t.r + ',' + t.g + ',' + t.b + ', 0) 0%,\n           rgba(' + t.r + ',' + t.g + ',' + t.b + ', 1) 100%)',
 										boxShadow: this.props.shadow,
 										borderRadius: this.props.radius
 									},
@@ -132,22 +113,7 @@ var c = (function (e) {
 									}
 								},
 								vertical: {
-									gradient: {
-										background:
-											'linear-gradient(to bottom, rgba(' +
-											t.r +
-											',' +
-											t.g +
-											',' +
-											t.b +
-											', 0) 0%,\n           rgba(' +
-											t.r +
-											',' +
-											t.g +
-											',' +
-											t.b +
-											', 1) 100%)'
-									},
+									gradient: { background: 'linear-gradient(to bottom, rgba(' + t.r + ',' + t.g + ',' + t.b + ', 0) 0%,\n           rgba(' + t.r + ',' + t.g + ',' + t.b + ', 1) 100%)' },
 									pointer: {
 										left: 0,
 										top: 100 * t.a + '%'
@@ -176,13 +142,7 @@ var c = (function (e) {
 								onTouchMove: this.handleChange,
 								onTouchStart: this.handleChange
 							},
-							r.createElement(
-								'div',
-								{ style: n.pointer },
-								this.props.pointer
-									? r.createElement(this.props.pointer, this.props)
-									: r.createElement('div', { style: n.slider })
-							)
+							r.createElement('div', { style: n.pointer }, this.props.pointer ? r.createElement(this.props.pointer, this.props) : r.createElement('div', { style: n.slider }))
 						)
 					);
 				}

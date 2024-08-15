@@ -121,9 +121,7 @@ class m {
 			}),
 			(this.toggleAppliedTag = (e) => {
 				let { appliedTags: t } = this.get();
-				(t = new Set(t)).has(e) ? t.delete(e) : t.add(e),
-					this.set({ appliedTags: t }),
-					a.Z.changeThreadSettings(this.channelId, { appliedTags: t });
+				(t = new Set(t)).has(e) ? t.delete(e) : t.add(e), this.set({ appliedTags: t }), a.Z.changeThreadSettings(this.channelId, { appliedTags: t });
 			}),
 			(this.setPopoutOpen = (e) => {
 				this.set({ popoutOpen: e });
@@ -189,11 +187,7 @@ class m {
 			f = null == p.template ? '' : p.template.trim(),
 			T = c.Z.getDraft(p.id, c.d.FirstThreadMessage),
 			_ = (0, l.eK)(null != T && '' !== T.trim() ? T : f);
-		(this.name = null !== (s = g.name) && void 0 !== s ? s : ''),
-			(m = new Set(g.appliedTags)),
-			(this.appliedTags = void 0 !== m ? m : new Set()),
-			(this.formOpen = this.name.length > 0),
-			(this.textAreaState = _);
+		(this.name = null !== (s = g.name) && void 0 !== s ? s : ''), (m = new Set(g.appliedTags)), (this.appliedTags = void 0 !== m ? m : new Set()), (this.formOpen = this.name.length > 0), (this.textAreaState = _);
 	}
 }
 let { Provider: p, useStore: g, useStoreApi: f } = (0, s.Z)();

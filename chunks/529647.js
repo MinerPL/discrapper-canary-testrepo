@@ -1,21 +1,7 @@
 var i, r, n, s, o, d;
-Object.defineProperty(e, '__esModule', { value: !0 }),
-	(e.ICalAttendeeType = e.ICalAttendeeStatus = e.ICalAttendeeRole = void 0);
+Object.defineProperty(e, '__esModule', { value: !0 }), (e.ICalAttendeeType = e.ICalAttendeeStatus = e.ICalAttendeeRole = void 0);
 let l = a(411496);
-((s = i = e.ICalAttendeeRole || (e.ICalAttendeeRole = {})).CHAIR = 'CHAIR'),
-	(s.REQ = 'REQ-PARTICIPANT'),
-	(s.OPT = 'OPT-PARTICIPANT'),
-	(s.NON = 'NON-PARTICIPANT'),
-	((o = r = e.ICalAttendeeStatus || (e.ICalAttendeeStatus = {})).ACCEPTED = 'ACCEPTED'),
-	(o.TENTATIVE = 'TENTATIVE'),
-	(o.DECLINED = 'DECLINED'),
-	(o.DELEGATED = 'DELEGATED'),
-	(o.NEEDSACTION = 'NEEDS-ACTION'),
-	((d = n = e.ICalAttendeeType || (e.ICalAttendeeType = {})).INDIVIDUAL = 'INDIVIDUAL'),
-	(d.GROUP = 'GROUP'),
-	(d.RESOURCE = 'RESOURCE'),
-	(d.ROOM = 'ROOM'),
-	(d.UNKNOWN = 'UNKNOWN');
+((s = i = e.ICalAttendeeRole || (e.ICalAttendeeRole = {})).CHAIR = 'CHAIR'), (s.REQ = 'REQ-PARTICIPANT'), (s.OPT = 'OPT-PARTICIPANT'), (s.NON = 'NON-PARTICIPANT'), ((o = r = e.ICalAttendeeStatus || (e.ICalAttendeeStatus = {})).ACCEPTED = 'ACCEPTED'), (o.TENTATIVE = 'TENTATIVE'), (o.DECLINED = 'DECLINED'), (o.DELEGATED = 'DELEGATED'), (o.NEEDSACTION = 'NEEDS-ACTION'), ((d = n = e.ICalAttendeeType || (e.ICalAttendeeType = {})).INDIVIDUAL = 'INDIVIDUAL'), (d.GROUP = 'GROUP'), (d.RESOURCE = 'RESOURCE'), (d.ROOM = 'ROOM'), (d.UNKNOWN = 'UNKNOWN');
 class h {
 	constructor(t, e) {
 		if (
@@ -35,18 +21,7 @@ class h {
 			!this.event)
 		)
 			throw Error('`event` option required!');
-		void 0 !== t.name && this.name(t.name),
-			void 0 !== t.email && this.email(t.email),
-			void 0 !== t.mailto && this.mailto(t.mailto),
-			void 0 !== t.status && this.status(t.status),
-			void 0 !== t.role && this.role(t.role),
-			void 0 !== t.rsvp && this.rsvp(t.rsvp),
-			void 0 !== t.type && this.type(t.type),
-			void 0 !== t.delegatedTo && this.delegatedTo(t.delegatedTo),
-			void 0 !== t.delegatedFrom && this.delegatedFrom(t.delegatedFrom),
-			t.delegatesTo && this.delegatesTo(t.delegatesTo),
-			t.delegatesFrom && this.delegatesFrom(t.delegatesFrom),
-			void 0 !== t.x && this.x(t.x);
+		void 0 !== t.name && this.name(t.name), void 0 !== t.email && this.email(t.email), void 0 !== t.mailto && this.mailto(t.mailto), void 0 !== t.status && this.status(t.status), void 0 !== t.role && this.role(t.role), void 0 !== t.rsvp && this.rsvp(t.rsvp), void 0 !== t.type && this.type(t.type), void 0 !== t.delegatedTo && this.delegatedTo(t.delegatedTo), void 0 !== t.delegatedFrom && this.delegatedFrom(t.delegatedFrom), t.delegatesTo && this.delegatesTo(t.delegatesTo), t.delegatesFrom && this.delegatesFrom(t.delegatesFrom), void 0 !== t.x && this.x(t.x);
 	}
 	name(t) {
 		return void 0 === t ? this.data.name : ((this.data.name = t || null), this);
@@ -61,50 +36,19 @@ class h {
 		return void 0 === t ? this.data.role : ((this.data.role = (0, l.checkEnum)(i, t)), this);
 	}
 	rsvp(t) {
-		return void 0 === t
-			? this.data.rsvp
-			: null === t
-				? ((this.data.rsvp = null), this)
-				: ((this.data.rsvp = !!t), this);
+		return void 0 === t ? this.data.rsvp : null === t ? ((this.data.rsvp = null), this) : ((this.data.rsvp = !!t), this);
 	}
 	status(t) {
-		return void 0 === t
-			? this.data.status
-			: t
-				? ((this.data.status = (0, l.checkEnum)(r, t)), this)
-				: ((this.data.status = null), this);
+		return void 0 === t ? this.data.status : t ? ((this.data.status = (0, l.checkEnum)(r, t)), this) : ((this.data.status = null), this);
 	}
 	type(t) {
-		return void 0 === t
-			? this.data.type
-			: t
-				? ((this.data.type = (0, l.checkEnum)(n, t)), this)
-				: ((this.data.type = null), this);
+		return void 0 === t ? this.data.type : t ? ((this.data.type = (0, l.checkEnum)(n, t)), this) : ((this.data.type = null), this);
 	}
 	delegatedTo(t) {
-		return void 0 === t
-			? this.data.delegatedTo
-			: t
-				? ('string' == typeof t
-						? (this.data.delegatedTo = new h((0, l.checkNameAndMail)('delegatedTo', t), this.event))
-						: t instanceof h
-							? (this.data.delegatedTo = t)
-							: (this.data.delegatedTo = new h(t, this.event)),
-					(this.data.status = r.DELEGATED),
-					this)
-				: ((this.data.delegatedTo = null), this.data.status === r.DELEGATED && (this.data.status = null), this);
+		return void 0 === t ? this.data.delegatedTo : t ? ('string' == typeof t ? (this.data.delegatedTo = new h((0, l.checkNameAndMail)('delegatedTo', t), this.event)) : t instanceof h ? (this.data.delegatedTo = t) : (this.data.delegatedTo = new h(t, this.event)), (this.data.status = r.DELEGATED), this) : ((this.data.delegatedTo = null), this.data.status === r.DELEGATED && (this.data.status = null), this);
 	}
 	delegatedFrom(t) {
-		return void 0 === t
-			? this.data.delegatedFrom
-			: (t
-					? 'string' == typeof t
-						? (this.data.delegatedFrom = new h((0, l.checkNameAndMail)('delegatedFrom', t), this.event))
-						: t instanceof h
-							? (this.data.delegatedFrom = t)
-							: (this.data.delegatedFrom = new h(t, this.event))
-					: (this.data.delegatedFrom = null),
-				this);
+		return void 0 === t ? this.data.delegatedFrom : (t ? ('string' == typeof t ? (this.data.delegatedFrom = new h((0, l.checkNameAndMail)('delegatedFrom', t), this.event)) : t instanceof h ? (this.data.delegatedFrom = t) : (this.data.delegatedFrom = new h(t, this.event))) : (this.data.delegatedFrom = null), this);
 	}
 	delegatesTo(t) {
 		let e = t instanceof h ? t : this.event.createAttendee(t);
@@ -132,19 +76,7 @@ class h {
 	toString() {
 		let t = 'ATTENDEE';
 		if (!this.data.email) throw Error('No value for `email` in ICalAttendee given!');
-		return (
-			(t += ';ROLE=' + this.data.role),
-			this.data.type && (t += ';CUTYPE=' + this.data.type),
-			this.data.status && (t += ';PARTSTAT=' + this.data.status),
-			this.data.rsvp && (t += ';RSVP=' + this.data.rsvp.toString().toUpperCase()),
-			this.data.delegatedTo && (t += ';DELEGATED-TO="' + this.data.delegatedTo.email() + '"'),
-			this.data.delegatedFrom && (t += ';DELEGATED-FROM="' + this.data.delegatedFrom.email() + '"'),
-			this.data.name && (t += ';CN="' + (0, l.escape)(this.data.name) + '"'),
-			this.data.email && this.data.mailto && (t += ';EMAIL=' + (0, l.escape)(this.data.email)),
-			this.data.x.length &&
-				(t += ';' + this.data.x.map(([t, e]) => t.toUpperCase() + '=' + (0, l.escape)(e)).join(';')),
-			(t += ':MAILTO:' + (0, l.escape)(this.data.mailto || this.data.email) + '\r\n')
-		);
+		return (t += ';ROLE=' + this.data.role), this.data.type && (t += ';CUTYPE=' + this.data.type), this.data.status && (t += ';PARTSTAT=' + this.data.status), this.data.rsvp && (t += ';RSVP=' + this.data.rsvp.toString().toUpperCase()), this.data.delegatedTo && (t += ';DELEGATED-TO="' + this.data.delegatedTo.email() + '"'), this.data.delegatedFrom && (t += ';DELEGATED-FROM="' + this.data.delegatedFrom.email() + '"'), this.data.name && (t += ';CN="' + (0, l.escape)(this.data.name) + '"'), this.data.email && this.data.mailto && (t += ';EMAIL=' + (0, l.escape)(this.data.email)), this.data.x.length && (t += ';' + this.data.x.map(([t, e]) => t.toUpperCase() + '=' + (0, l.escape)(e)).join(';')), (t += ':MAILTO:' + (0, l.escape)(this.data.mailto || this.data.email) + '\r\n');
 	}
 }
 e.default = h;

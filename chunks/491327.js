@@ -32,8 +32,7 @@ t.Z = {
 			if (null == i) throw new I.Z({ errorCode: f.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
 			if (i.isPrivate()) {
 				let e = n.authorization.scopes;
-				if (!e.includes(s.x.RPC) && !e.includes(s.x.DM_CHANNELS_READ))
-					throw new I.Z({ errorCode: f.lTL.INVALID_PERMISSIONS }, 'Invalid scope');
+				if (!e.includes(s.x.RPC) && !e.includes(s.x.DM_CHANNELS_READ)) throw new I.Z({ errorCode: f.lTL.INVALID_PERMISSIONS }, 'Invalid scope');
 			}
 			return (0, g.T5)(i, (0, g.zM)(i, n.application.id, n.authorization.scopes));
 		}
@@ -94,8 +93,7 @@ t.Z = {
 			} = e;
 			if (!i) return l.default.selectVoiceChannel(null), null;
 			let p = E.Z.getVoiceChannelId();
-			if (null != p && p !== i && !1 === s)
-				throw new I.Z({ errorCode: f.lTL.SELECT_VOICE_FORCE_REQUIRED }, 'User is already joined to a voice channel.');
+			if (null != p && p !== i && !1 === s) throw new I.Z({ errorCode: f.lTL.SELECT_VOICE_FORCE_REQUIRED }, 'User is already joined to a voice channel.');
 			return t
 				.storeWait(n, () => d.Z.getChannel(i), a)
 				.catch(() => {
@@ -104,17 +102,13 @@ t.Z = {
 				.then((e) => {
 					if (null == e) throw new I.Z({ errorCode: f.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(i));
 					if (!(0, c.vd)(e.type)) throw new I.Z({ errorCode: f.lTL.INVALID_CHANNEL }, 'Channel is not a voice channel');
-					return Promise.all([
-						Promise.resolve(e),
-						(0, g.T5)(e, (0, g.zM)(e, n.application.id, n.authorization.scopes))
-					]);
+					return Promise.all([Promise.resolve(e), (0, g.T5)(e, (0, g.zM)(e, n.application.id, n.authorization.scopes))]);
 				})
 				.then((e) => {
 					let [t, n] = e;
 					if (n.guild_id) {
 						if ((0, m.rY)(t, h.Z, u.Z)) throw new I.Z({ errorCode: f.lTL.INVALID_CHANNEL }, 'Channel is full');
-						if (!_.Z.can(f.Plq.CONNECT, t))
-							throw new I.Z({ errorCode: f.lTL.INVALID_PERMISSIONS }, 'Connect permission required to join channel');
+						if (!_.Z.can(f.Plq.CONNECT, t)) throw new I.Z({ errorCode: f.lTL.INVALID_PERMISSIONS }, 'Connect permission required to join channel');
 					}
 					return l.default.selectVoiceChannel(t.id), r && (0, o.dL)(f.Z5c.CHANNEL(t.guild_id, t.id)), n;
 				});
@@ -154,17 +148,12 @@ t.Z = {
 						})
 						.then((e) => {
 							if (null == e) throw new I.Z({ errorCode: f.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(i));
-							if (!(0, c.Qm)(e.type))
-								throw new I.Z({ errorCode: f.lTL.INVALID_CHANNEL }, 'Channel is not a text channel');
-							return Promise.all([
-								Promise.resolve(e),
-								(0, g.T5)(e, (0, g.zM)(e, n.application.id, n.authorization.scopes))
-							]);
+							if (!(0, c.Qm)(e.type)) throw new I.Z({ errorCode: f.lTL.INVALID_CHANNEL }, 'Channel is not a text channel');
+							return Promise.all([Promise.resolve(e), (0, g.T5)(e, (0, g.zM)(e, n.application.id, n.authorization.scopes))]);
 						})
 						.then((e) => {
 							let [t, n] = e;
-							if (n.guild_id && !_.Z.can(f.Plq.VIEW_CHANNEL, t))
-								throw new I.Z({ errorCode: f.lTL.INVALID_CHANNEL }, 'No permission to see channel');
+							if (n.guild_id && !_.Z.can(f.Plq.VIEW_CHANNEL, t)) throw new I.Z({ errorCode: f.lTL.INVALID_CHANNEL }, 'No permission to see channel');
 							return n.guild_id ? (0, o.dL)(f.Z5c.CHANNEL(n.guild_id, t.id)) : l.default.selectPrivateChannel(t.id), n;
 						})
 				: ((0, o.uL)(f.Z5c.ME), null);
@@ -177,10 +166,7 @@ t.Z = {
 				args: { channel_id: t, ...n }
 			} = e;
 			return r.Z.createInvite(t, n, 'RPC').catch(() => {
-				throw new I.Z(
-					{ errorCode: f.lTL.INVALID_PERMISSIONS },
-					'Unable to generate an invite for '.concat(t, '. Does this user have permissions?')
-				);
+				throw new I.Z({ errorCode: f.lTL.INVALID_PERMISSIONS }, 'Unable to generate an invite for '.concat(t, '. Does this user have permissions?'));
 			});
 		}
 	}

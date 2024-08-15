@@ -35,9 +35,7 @@ let d = (e) => {
 					className: u.confirmationSubtitle,
 					variant: 'text-sm/normal',
 					color: 'header-secondary',
-					children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_SUBTITLE.format({
-						benefits: E.asString()
-					})
+					children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_SUBTITLE.format({ benefits: E.asString() })
 				}),
 			(0, i.jsx)(s.Button, {
 				className: u.openDiscordButton,

@@ -19,8 +19,8 @@ var a = n(120356),
 	_ = n(271383),
 	f = n(430824),
 	E = n(496675),
-	g = n(158776),
-	C = n(885110),
+	C = n(158776),
+	g = n(885110),
 	I = n(594174),
 	x = n(572004),
 	T = n(5192),
@@ -31,10 +31,7 @@ var a = n(120356),
 function A(e) {
 	let { user: t, guildId: n, onClose: a } = e,
 		s = t.id,
-		o = (0, l.e7)([C.Z, g.Z, p.default], () => (s === p.default.getId() ? C.Z.getStatus() : g.Z.getStatus(s, n)), [
-			s,
-			n
-		]);
+		o = (0, l.e7)([g.Z, C.Z, p.default], () => (s === p.default.getId() ? g.Z.getStatus() : C.Z.getStatus(s, n)), [s, n]);
 	return (0, i.jsxs)('div', {
 		className: Z.topRow,
 		children: [
@@ -99,8 +96,8 @@ function b(e) {
 	let { user: t, member: a, guildId: s } = e,
 		_ = (0, l.e7)([f.Z], () => f.Z.getGuild(s)),
 		{
-			canKickUser: g,
-			canBanUser: C,
+			canKickUser: C,
+			canBanUser: g,
 			canModerateMembers: T
 		} = (0, l.cj)(
 			[E.Z, I.default, f.Z],
@@ -143,7 +140,7 @@ function b(e) {
 				]
 			}),
 			(0, i.jsxs)(M, {
-				disabled: !g,
+				disabled: !C,
 				'aria-label': S.Z.Messages.KICK,
 				onClick: () => {
 					(0, r.openModalLazy)(async () => {
@@ -172,7 +169,7 @@ function b(e) {
 				]
 			}),
 			(0, i.jsxs)(M, {
-				disabled: !C,
+				disabled: !g,
 				'aria-label': S.Z.Messages.BAN,
 				onClick: () => {
 					(0, r.openModalLazy)(async () => {

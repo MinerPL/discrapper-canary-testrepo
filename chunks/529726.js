@@ -25,10 +25,7 @@ class c extends a.Z {
 		let n = this.recentViewTimes.get(t);
 		if (null != n && Date.now() - n < 60000) return;
 		let r = setTimeout(() => {
-			delete this.currentlyVisibleMessageTimers[t],
-				this.viewsInCurrentChannel.add(t),
-				this.recentViewTimes.set(t, Date.now()),
-				this.bufferViewTrack(e);
+			delete this.currentlyVisibleMessageTimers[t], this.viewsInCurrentChannel.add(t), this.recentViewTimes.set(t, Date.now()), this.bufferViewTrack(e);
 		}, 1000);
 		this.currentlyVisibleMessageTimers[t] = r;
 	}
@@ -57,9 +54,7 @@ class c extends a.Z {
 		(this.batchBuffer = []), null != this.batchTimerId && (clearTimeout(this.batchTimerId), (this.batchTimerId = null));
 	}
 	bufferViewTrack(e) {
-		this.batchBuffer.length >= 10 && this.drainBuffer(),
-			this.batchBuffer.push(e),
-			null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), 2000));
+		this.batchBuffer.length >= 10 && this.drainBuffer(), this.batchBuffer.push(e), null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), 2000));
 	}
 	constructor(...e) {
 		super(...e),

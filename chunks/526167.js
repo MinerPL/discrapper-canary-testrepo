@@ -3,10 +3,10 @@ n.d(t, {
 		return h;
 	},
 	og: function () {
-		return I;
+		return m;
 	},
 	rO: function () {
-		return m;
+		return I;
 	},
 	vu: function () {
 		return _;
@@ -30,10 +30,10 @@ function h() {
 	return f;
 }
 let p = 'edge' === c.toLowerCase() ? parseInt(null !== (o = u().version) && void 0 !== o ? o : '', 10) : -1;
-function I() {
+function m() {
 	return -1 !== d || -1 !== E || -1 !== f || -1 !== p;
 }
-function m() {
+function I() {
 	var e;
 	let t = window.navigator,
 		n = t.userAgent.toLowerCase(),

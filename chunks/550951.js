@@ -17,8 +17,6 @@ function c(e, t) {
 		_ = (0, r.e7)([o.Z], () => null != e && o.Z.can(u.Plq.ADMINISTRATOR, e)),
 		E = null !== (n = null == e ? void 0 : e.hasFeature(u.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) && void 0 !== n && n,
 		f = (0, s.y)(null == e ? void 0 : e.id, 'useGuildShopPreviewVisible'),
-		h = [u.oNc.CREATOR_MONETIZABLE, u.oNc.CREATOR_MONETIZABLE_PROVISIONAL, u.oNc.ROLE_SUBSCRIPTIONS_ENABLED].some(
-			(t) => (null == e ? void 0 : e.hasFeature(t)) === !0
-		);
+		h = [u.oNc.CREATOR_MONETIZABLE, u.oNc.CREATOR_MONETIZABLE_PROVISIONAL, u.oNc.ROLE_SUBSCRIPTIONS_ENABLED].some((t) => (null == e ? void 0 : e.hasFeature(t)) === !0);
 	return null != e && _ && !E && h && c && f && !d;
 }

@@ -54,11 +54,7 @@ var r = n(845389),
 	u = function (e) {
 		if (!e) return '#fff';
 		var t = o(e);
-		return 'transparent' === t.hex
-			? 'rgba(0,0,0,0.4)'
-			: (299 * t.rgb.r + 587 * t.rgb.g + 114 * t.rgb.b) / 1000 >= 128
-				? '#000'
-				: '#fff';
+		return 'transparent' === t.hex ? 'rgba(0,0,0,0.4)' : (299 * t.rgb.r + 587 * t.rgb.g + 114 * t.rgb.b) / 1000 >= 128 ? '#000' : '#fff';
 	},
 	c = function (e, t) {
 		var n = e.replace('\xB0', '');

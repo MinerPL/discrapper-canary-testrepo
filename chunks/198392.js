@@ -26,13 +26,7 @@ var c = (function () {
 		}),
 		(e.getText = function () {
 			var t;
-			return (
-				this.data.getData &&
-					(this.types.length
-						? -1 != this.types.indexOf('text/plain') && (t = this.data.getData('text/plain'))
-						: (t = this.data.getData('Text'))),
-				t ? t.replace(a, '\n') : null
-			);
+			return this.data.getData && (this.types.length ? -1 != this.types.indexOf('text/plain') && (t = this.data.getData('text/plain')) : (t = this.data.getData('Text'))), t ? t.replace(a, '\n') : null;
 		}),
 		(e.getHTML = function () {
 			if (this.data.getData) {
@@ -46,12 +40,7 @@ var c = (function () {
 			});
 		}),
 		(e.getLink = function () {
-			if (this.data.getData)
-				return -1 != this.types.indexOf('text/x-moz-url')
-					? this.data.getData('text/x-moz-url').split('\n')[0]
-					: -1 != this.types.indexOf('text/uri-list')
-						? this.data.getData('text/uri-list')
-						: this.data.getData('url');
+			if (this.data.getData) return -1 != this.types.indexOf('text/x-moz-url') ? this.data.getData('text/x-moz-url').split('\n')[0] : -1 != this.types.indexOf('text/uri-list') ? this.data.getData('text/uri-list') : this.data.getData('url');
 			return null;
 		}),
 		(e.isImage = function () {
@@ -74,11 +63,7 @@ var c = (function () {
 			return null;
 		}),
 		(e.getFiles = function () {
-			return this.data.items
-				? Array.prototype.slice.call(this.data.items).map(s).filter(o.thatReturnsArgument)
-				: this.data.files
-					? Array.prototype.slice.call(this.data.files)
-					: [];
+			return this.data.items ? Array.prototype.slice.call(this.data.items).map(s).filter(o.thatReturnsArgument) : this.data.files ? Array.prototype.slice.call(this.data.files) : [];
 		}),
 		(e.hasFiles = function () {
 			return this.getFiles().length > 0;

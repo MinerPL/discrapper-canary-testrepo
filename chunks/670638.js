@@ -27,12 +27,7 @@ function h(e) {
 		h = (0, m.zK)(e.quest, T.S7.IN_HOUSE_CONSOLE_QUEST),
 		M = (0, m.KM)(e.quest),
 		N = (0, p.Z)(T.dr.QUEST_CONTEXT_MENU),
-		{
-			handleComplete: S,
-			handleResetDismissibilityClick: j,
-			handleResetStatusClick: I,
-			handleOverrideDeliveryClick: b
-		} = (0, E.kJ)(e.quest.id),
+		{ handleComplete: S, handleResetDismissibilityClick: j, handleResetStatusClick: I, handleOverrideDeliveryClick: b } = (0, E.kJ)(e.quest.id),
 		f = o.useCallback(() => {
 			(0, m.FE)(e.quest, {
 				content: e.questContent,
@@ -185,16 +180,7 @@ function h(e) {
 	});
 }
 function M(e) {
-	let {
-			children: t,
-			onOpen: n,
-			onClose: i,
-			preventIdle: r,
-			quest: l,
-			questContent: d,
-			questContentPosition: E,
-			...C
-		} = e,
+	let { children: t, onOpen: n, onClose: i, preventIdle: r, quest: l, questContent: d, questContentPosition: E, ...C } = e,
 		m = o.useCallback(() => {
 			(0, c._3)({
 				questId: l.id,

@@ -33,10 +33,10 @@ n.d(t, {
 		return A;
 	},
 	qc: function () {
-		return I;
+		return m;
 	},
 	zV: function () {
-		return m;
+		return I;
 	}
 }),
 	n(47120),
@@ -132,9 +132,7 @@ function h(e) {
 }
 function p(e, t, n) {
 	let r, i;
-	let a = e.find((a, s) =>
-		t >= a.start && t <= a.end && n >= a.start && n <= a.end ? (null != e[s + 1] && (i = e[s + 1]), !0) : ((r = a), !1)
-	);
+	let a = e.find((a, s) => (t >= a.start && t <= a.end && n >= a.start && n <= a.end ? (null != e[s + 1] && (i = e[s + 1]), !0) : ((r = a), !1)));
 	return null == a
 		? null
 		: {
@@ -145,7 +143,7 @@ function p(e, t, n) {
 				anchorOffset: n
 			};
 }
-function I(e, t) {
+function m(e, t) {
 	let n;
 	let { currentToken: r, nextToken: i, previousToken: s } = (e = null != e ? e : {});
 	if (0 === t.length)
@@ -187,7 +185,7 @@ function I(e, t) {
 				token: n
 			});
 }
-function m(e, t) {
+function I(e, t) {
 	let n = [];
 	return (
 		i()(e).forEach((e) => {
@@ -200,9 +198,7 @@ function m(e, t) {
 						var i;
 						r = null !== (i = e.group) && void 0 !== i ? i : r;
 						let t = s.ZP[r];
-						(null == t ? void 0 : t.key) != null &&
-							(null == t ? void 0 : t.key) !== '' &&
-							(n = ''.concat(t.key, ' ').concat(n));
+						(null == t ? void 0 : t.key) != null && (null == t ? void 0 : t.key) !== '' && (n = ''.concat(t.key, ' ').concat(n));
 					}
 					return n;
 				})

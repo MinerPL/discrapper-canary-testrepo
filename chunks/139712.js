@@ -17,19 +17,14 @@ function d(e) {
 		[v, C] = t.useState(o.KX.SERIES),
 		p = (0, o.X2)(n.id, null),
 		h = (null == p ? void 0 : p.response) === r.gv.INTERESTED ? r.gv.UNINTERESTED : r.gv.INTERESTED,
-		E =
-			h === r.gv.INTERESTED
-				? u.Z.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_HEADER_INTERESTED
-				: u.Z.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_HEADER_UNINTERESTED;
+		E = h === r.gv.INTERESTED ? u.Z.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_HEADER_INTERESTED : u.Z.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_HEADER_UNINTERESTED;
 	return (0, s.jsx)(a.ConfirmModal, {
 		...N,
 		header: E,
 		confirmText: u.Z.Messages.OK,
 		cancelText: u.Z.Messages.CANCEL,
 		onConfirm: () => {
-			v === o.KX.SERIES ? i.Z.updateRsvp(n.id, null, d, h) : i.Z.updateRsvp(n.id, l, d, h),
-				null == m || m(),
-				N.onClose();
+			v === o.KX.SERIES ? i.Z.updateRsvp(n.id, null, d, h) : i.Z.updateRsvp(n.id, l, d, h), null == m || m(), N.onClose();
 		},
 		confirmButtonColor: a.Button.Colors.BRAND,
 		children: (0, s.jsx)(a.RadioGroup, {

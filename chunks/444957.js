@@ -12,6 +12,5 @@ function l(e) {
 		l = (0, a.h)(e);
 	if (!t || !n) return;
 	let r = l.filter((e) => null != e.dismiss_timestamp);
-	if (0 !== r.length)
-		return r.sort((e, t) => (e.type > t.type ? 1 : e.dismiss_timestamp < t.dismiss_timestamp ? 1 : -1))[0];
+	if (0 !== r.length) return r.sort((e, t) => (e.type > t.type ? 1 : e.dismiss_timestamp < t.dismiss_timestamp ? 1 : -1))[0];
 }

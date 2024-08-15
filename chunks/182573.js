@@ -6,9 +6,7 @@ let s = new i.Z('LeagueOfLegendsLifecycleManager');
 class o extends r.Z {
 	handleRunningGameChange(e) {
 		let { added: t, removed: n } = e;
-		if (!!(0, a.J)('LeagueOfLegendsLifecycleManager'))
-			r(t) && s.info('League of Legends Match Started', { added: t }),
-				r(n) && s.info('League of Legends Match Ended', { removed: n });
+		if (!!(0, a.J)('LeagueOfLegendsLifecycleManager')) r(t) && s.info('League of Legends Match Started', { added: t }), r(n) && s.info('League of Legends Match Ended', { removed: n });
 		function r(e) {
 			return e.some((e) => 'League of Legends' === e.name);
 		}

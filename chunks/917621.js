@@ -78,9 +78,7 @@ class x extends a.PureComponent {
 		return null == e || null == e.party || null == e.party.size || e.party.size.length < 2 ? [-1, -1] : e.party.size;
 	}
 	getActionableMode() {
-		return [C.mFx.LISTEN, C.mFx].includes(this.props.activityActionType) || this.props.isPreview || this.canJoin()
-			? 'Actionable'
-			: 'NotActionable';
+		return [C.mFx.LISTEN, C.mFx].includes(this.props.activityActionType) || this.props.isPreview || this.canJoin() ? 'Actionable' : 'NotActionable';
 	}
 	isInParty() {
 		let { activity: e, myPartyId: t, isPreview: n } = this.props;
@@ -99,49 +97,15 @@ class x extends a.PureComponent {
 	}
 	canJoin() {
 		let { activity: e, isPreview: t, isGameLaunchable: n, isInBrowser: i } = this.props;
-		return (
-			!!t ||
-			(!(
-				this.isDeadInvite() ||
-				!this.isActionType(C.mFx.JOIN) ||
-				!(0, h.Z)(e, C.xjy.JOIN) ||
-				!this.hasPartySize() ||
-				this.isPartyFull() ||
-				i ||
-				!n ||
-				this.isInParty()
-			) &&
-				!0)
-		);
+		return !!t || (!(this.isDeadInvite() || !this.isActionType(C.mFx.JOIN) || !(0, h.Z)(e, C.xjy.JOIN) || !this.hasPartySize() || this.isPartyFull() || i || !n || this.isInParty()) && !0);
 	}
 	canSendInvite() {
 		let { activity: e, isPreview: t } = this.props;
-		return (
-			!!t ||
-			(!(
-				this.isDeadInvite() ||
-				!this.isActionType(C.mFx.JOIN_REQUEST) ||
-				!(0, h.Z)(e, C.xjy.JOIN) ||
-				!this.hasPartySize() ||
-				this.isPartyFull()
-			) &&
-				!0)
-		);
+		return !!t || (!(this.isDeadInvite() || !this.isActionType(C.mFx.JOIN_REQUEST) || !(0, h.Z)(e, C.xjy.JOIN) || !this.hasPartySize() || this.isPartyFull()) && !0);
 	}
 	canSync() {
 		let { activity: e, isPreview: t, isSyncable: n, isInBrowser: i } = this.props;
-		return (
-			!!t ||
-			(!(
-				(!this.isActionType(C.mFx.LISTEN) && !this.isActionType(C.mFx.WATCH)) ||
-				this.isDeadInvite() ||
-				!(0, h.Z)(e, C.xjy.SYNC) ||
-				i ||
-				!n ||
-				this.isInParty()
-			) &&
-				!0)
-		);
+		return !!t || (!((!this.isActionType(C.mFx.LISTEN) && !this.isActionType(C.mFx.WATCH)) || this.isDeadInvite() || !(0, h.Z)(e, C.xjy.SYNC) || i || !n || this.isInParty()) && !0);
 	}
 	getHelpdeskArticleURL() {
 		let { partyId: e } = this.props;
@@ -162,15 +126,7 @@ class x extends a.PureComponent {
 		}
 	}
 	renderPartyStatus() {
-		let {
-				activityActionType: e,
-				isGameLaunchable: t,
-				isSyncable: n,
-				isPreview: a,
-				isInBrowser: s,
-				name: r,
-				activity: l
-			} = this.props,
+		let { activityActionType: e, isGameLaunchable: t, isSyncable: n, isPreview: a, isInBrowser: s, name: r, activity: l } = this.props,
 			[c, d] = this.getPartySize();
 		if (this.isDeadInvite())
 			switch (e) {
@@ -226,32 +182,10 @@ class x extends a.PureComponent {
 				: this.isActionType(C.mFx.LISTEN)
 					? g.Z.Messages.USER_ACTIVITY_LISTEN_ALONG
 					: g.Z.Messages.USER_ACTIVITY_WATCH_ALONG;
-		return this.isActionType(C.mFx.JOIN_REQUEST)
-			? this.isPartyFull()
-				? g.Z.Messages.INVITE_EMBED_FULL_GROUP
-				: g.Z.Messages.INVITE_EMBED_NUM_OPEN_SLOTS.format({ number: d - c })
-			: this.isInParty()
-				? g.Z.Messages.INVITE_EMBED_IN_GROUP
-				: t || n || a
-					? this.isPartyFull()
-						? g.Z.Messages.INVITE_EMBED_FULL_GROUP
-						: this.hasPartySize()
-							? g.Z.Messages.INVITE_EMBED_NUM_OPEN_SLOTS.format({ number: d - c })
-							: g.Z.Messages.JOIN
-					: g.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({ name: r });
+		return this.isActionType(C.mFx.JOIN_REQUEST) ? (this.isPartyFull() ? g.Z.Messages.INVITE_EMBED_FULL_GROUP : g.Z.Messages.INVITE_EMBED_NUM_OPEN_SLOTS.format({ number: d - c })) : this.isInParty() ? g.Z.Messages.INVITE_EMBED_IN_GROUP : t || n || a ? (this.isPartyFull() ? g.Z.Messages.INVITE_EMBED_FULL_GROUP : this.hasPartySize() ? g.Z.Messages.INVITE_EMBED_NUM_OPEN_SLOTS.format({ number: d - c }) : g.Z.Messages.JOIN) : g.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({ name: r });
 	}
 	renderActionButton() {
-		let {
-				isInBrowser: e,
-				isPreview: t,
-				isGameLaunchable: n,
-				isSender: a,
-				partyId: s,
-				activity: r,
-				message: l,
-				renderSpotifyJoinButton: c,
-				renderCustomButton: u
-			} = this.props,
+		let { isInBrowser: e, isPreview: t, isGameLaunchable: n, isSender: a, partyId: s, activity: r, message: l, renderSpotifyJoinButton: c, renderCustomButton: u } = this.props,
 			d = {
 				className: S.actionButton,
 				size: o.Button.Sizes.SMALL
@@ -290,9 +224,7 @@ class x extends a.PureComponent {
 									disabled: a
 								};
 							return {
-								children: this.isActionType(C.mFx.JOIN_REQUEST)
-									? g.Z.Messages.INVITE_EMBED_INVITE_TO_JOIN
-									: g.Z.Messages.JOIN,
+								children: this.isActionType(C.mFx.JOIN_REQUEST) ? g.Z.Messages.INVITE_EMBED_INVITE_TO_JOIN : g.Z.Messages.JOIN,
 								disabled: !0
 							};
 						})(),
@@ -345,16 +277,7 @@ class x extends a.PureComponent {
 					src: t,
 					className: (0, m.l)(S, 'artwork', this.getActionableMode())
 				}));
-		let _ =
-				null != a &&
-				null != d &&
-				null != a.assets &&
-				null != a.assets.large_text &&
-				'' !== a.assets.large_text &&
-				!u &&
-				(0, f.Z)(a)
-					? a.assets.large_text
-					: null,
+		let _ = null != a && null != d && null != a.assets && null != a.assets.large_text && '' !== a.assets.large_text && !u && (0, f.Z)(a) ? a.assets.large_text : null,
 			E =
 				null != _
 					? (0, i.jsx)(o.Tooltip, {

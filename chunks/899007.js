@@ -18,8 +18,8 @@ var r = n(735250),
 	f = n(74538),
 	h = n(998502),
 	p = n(785717),
-	I = n(204197),
-	m = n(929498),
+	m = n(204197),
+	I = n(929498),
 	T = n(652853),
 	g = n(228168),
 	S = n(981631),
@@ -33,7 +33,7 @@ function O(e) {
 		{ trackUserProfileAction: L } = (0, p.KZ)(),
 		b = f.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, A.p9.TIER_2),
 		M = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, h), [t, h]),
-		{ live: P } = (0, m.Z)(t.id),
+		{ live: P } = (0, I.Z)(t.id),
 		[U] = P,
 		{ status: w, isMobileOnline: x } = (0, o.cj)([E.Z], () => ({
 			status: (0, u.Z)(U) ? S.Skl.STREAMING : E.Z.getStatus(t.id),
@@ -49,7 +49,7 @@ function O(e) {
 			avatarDecorationSrc: B,
 			avatarSrc: F,
 			eventHandlers: V
-		} = (0, I.Z)({
+		} = (0, m.Z)({
 			user: t,
 			guildId: null != n ? n.guildId : a,
 			size: G,

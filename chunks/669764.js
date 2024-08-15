@@ -57,21 +57,7 @@ class _ extends (r = o.ZP.Store) {
 				c.delete(e), d.delete(e);
 			}),
 				n.forEach((e) => {
-					let {
-						application_id: t,
-						name: n,
-						summary: r,
-						websites: i,
-						themes: a,
-						genres: s,
-						platforms: o,
-						artwork_urls: l,
-						screenshot_urls: c,
-						cover_image_url: d,
-						first_release_date: _,
-						publisher_names: E,
-						developer_names: f
-					} = e;
+					let { application_id: t, name: n, summary: r, websites: i, themes: a, genres: s, platforms: o, artwork_urls: l, screenshot_urls: c, cover_image_url: d, first_release_date: _, publisher_names: E, developer_names: f } = e;
 					u.set(t, {
 						applicationId: t,
 						name: n,

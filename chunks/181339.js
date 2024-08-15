@@ -54,8 +54,7 @@ function L(e) {
 					(0, d.yw)(p.rMx.GUILD_RAID_ALERTS_SETUP, e);
 				}
 			} catch (e) {
-				(0, c.showToast)((0, c.createToast)(R.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, c.ToastType.FAILURE)),
-					h(!N);
+				(0, c.showToast)((0, c.createToast)(R.Z.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, c.ToastType.FAILURE)), h(!N);
 			}
 		};
 	return (0, s.jsxs)('div', {
@@ -125,12 +124,7 @@ function O(e) {
 		m = async (e) => {
 			i(e);
 			try {
-				if (
-					(e !== I &&
-						(await C.Z.saveGuild(n.id, { safetyAlertsChannelId: e }, { throwErr: !0 }),
-						C.Z.updateGuild({ safetyAlertsChannelId: e })),
-					null != e)
-				) {
+				if ((e !== I && (await C.Z.saveGuild(n.id, { safetyAlertsChannelId: e }, { throwErr: !0 }), C.Z.updateGuild({ safetyAlertsChannelId: e })), null != e)) {
 					let t = {
 						raid_alert_type: E.wR.JOIN_RAID,
 						enabled: n.canHaveRaidActivityAlerts(),
@@ -171,9 +165,7 @@ function A(e) {
 	let { guild: i } = e,
 		[r, l] = a.useState(!1),
 		o = null !== (t = i.safetyAlertsChannelId) && void 0 !== t ? t : null,
-		[c, d] = a.useState(
-			null != o ? o : null !== (n = null == i ? void 0 : i.publicUpdatesChannelId) && void 0 !== n ? n : null
-		);
+		[c, d] = a.useState(null != o ? o : null !== (n = null == i ? void 0 : i.publicUpdatesChannelId) && void 0 !== n ? n : null);
 	return (0, s.jsx)(T.Z, {
 		renderHeader: (0, s.jsx)(L, {
 			isExpanded: r,
@@ -193,9 +185,7 @@ function M(e) {
 	var t, n;
 	let { guild: i } = e,
 		r = null !== (t = i.safetyAlertsChannelId) && void 0 !== t ? t : null,
-		[l, o] = a.useState(
-			null != r ? r : null !== (n = null == i ? void 0 : i.publicUpdatesChannelId) && void 0 !== n ? n : null
-		);
+		[l, o] = a.useState(null != r ? r : null !== (n = null == i ? void 0 : i.publicUpdatesChannelId) && void 0 !== n ? n : null);
 	return (0, s.jsxs)(s.Fragment, {
 		children: [
 			(0, s.jsx)(L, {

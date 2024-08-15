@@ -175,16 +175,7 @@ async function A(e, n) {
 function h(e, n, t) {
 	let s = { optionErrors: [] },
 		l = !1;
-	return (
-		t.title.length <= 0 && ((s.title = E.Z.Messages.ONBOARDING_PROMPT_TITLE_REQUIRED), (l = !0)),
-		t.options.length <= 0 && ((s.options = E.Z.Messages.ONBOARDING_PROMPT_ANSWER_REQUIRED), (l = !0)),
-		t.inOnboarding &&
-			n.filter((e) => e.inOnboarding).length > u.b3 &&
-			((s.config = E.Z.Messages.ONBOARDING_PROMPT_SAVE_TOO_MANY_PROMPTS_IN_ONBOARDING.format({ numQuestions: u.b3 })),
-			(l = !0)),
-		(s.optionErrors = t.options.map((s) => L(e, n, t, s))),
-		(l = l || s.optionErrors.some((e) => null != e)) ? s : null
-	);
+	return t.title.length <= 0 && ((s.title = E.Z.Messages.ONBOARDING_PROMPT_TITLE_REQUIRED), (l = !0)), t.options.length <= 0 && ((s.options = E.Z.Messages.ONBOARDING_PROMPT_ANSWER_REQUIRED), (l = !0)), t.inOnboarding && n.filter((e) => e.inOnboarding).length > u.b3 && ((s.config = E.Z.Messages.ONBOARDING_PROMPT_SAVE_TOO_MANY_PROMPTS_IN_ONBOARDING.format({ numQuestions: u.b3 })), (l = !0)), (s.optionErrors = t.options.map((s) => L(e, n, t, s))), (l = l || s.optionErrors.some((e) => null != e)) ? s : null;
 }
 function L(e, n, t, s) {
 	var l, a, i;
@@ -192,9 +183,7 @@ function L(e, n, t, s) {
 		let e = new Set(null !== (l = s.roleIds) && void 0 !== l ? l : []);
 		for (let s of n)
 			if (s.id !== t.id) {
-				for (let n of s.options)
-					if (null != n.roleIds && n.roleIds.some((n) => e.has(n)))
-						return E.Z.Messages.ONBOARDING_PROMPT_SINGLE_SELECT_UNIQUE_ROLES;
+				for (let n of s.options) if (null != n.roleIds && n.roleIds.some((n) => e.has(n))) return E.Z.Messages.ONBOARDING_PROMPT_SINGLE_SELECT_UNIQUE_ROLES;
 			}
 	}
 	let r = (null !== (a = s.roleIds) && void 0 !== a ? a : []).filter((n) => null != d.Z.getRole(e.id, n)),

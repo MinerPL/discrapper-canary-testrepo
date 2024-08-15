@@ -35,7 +35,5 @@ async function d(e, t) {
 		(0, a.X)(d.guildId);
 		return;
 	}
-	null != d.threadId
-		? (0, i.uL)(c.Z5c.CHANNEL_THREAD_VIEW(d.guildId, d.channelId, d.threadId, d.messageId), t)
-		: (0, i.uL)(c.Z5c.CHANNEL(d.guildId, d.channelId, d.messageId), t);
+	null != d.threadId ? (0, i.uL)(c.Z5c.CHANNEL_THREAD_VIEW(d.guildId, d.channelId, d.threadId, d.messageId), t) : (0, i.uL)(c.Z5c.CHANNEL(d.guildId, d.channelId, d.messageId), t);
 }

@@ -48,11 +48,7 @@ class g extends a.Component {
 		super(...e),
 			I(this, 'fetchStoreListing', (e) => {
 				let { channel: t, inputSkuId: n } = this.props;
-				return null != e
-					? l.Z.fetchChannelStoreListing(t.id, e)
-					: null != n
-						? l.Z.fetchChannelStoreListing(t.id, n)
-						: l.Z.fetchChannelStoreListing(t.id);
+				return null != e ? l.Z.fetchChannelStoreListing(t.id, e) : null != n ? l.Z.fetchChannelStoreListing(t.id, n) : l.Z.fetchChannelStoreListing(t.id);
 			}),
 			I(this, 'renderApplicationListing', (e) => {
 				let { location: t } = e,

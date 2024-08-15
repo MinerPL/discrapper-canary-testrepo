@@ -13,21 +13,15 @@ var r,
 	f = n(55563);
 let h = {},
 	p = {},
-	I = {},
 	m = {},
+	I = {},
 	T = !1,
 	g = !1,
 	S = new Set(),
 	A = new Set(),
 	N = {};
 function v(e) {
-	(h[e.id] = d.Z.createFromServer(e)),
-		null == I[e.sku_id] && (I[e.sku_id] = new Set()),
-		null == m[e.application_id] && (m[e.application_id] = new Set()),
-		null != e.subscription_id &&
-			(null == N[e.subscription_id] && (N[e.subscription_id] = new Set()), N[e.subscription_id].add(e.id)),
-		m[e.application_id].add(e.id),
-		I[e.sku_id].add(e.id);
+	(h[e.id] = d.Z.createFromServer(e)), null == m[e.sku_id] && (m[e.sku_id] = new Set()), null == I[e.application_id] && (I[e.application_id] = new Set()), null != e.subscription_id && (null == N[e.subscription_id] && (N[e.subscription_id] = new Set()), N[e.subscription_id].add(e.id)), I[e.application_id].add(e.id), m[e.sku_id].add(e.id);
 }
 function O(e) {
 	p[e.id] = d.Z.createFromServer(e);
@@ -46,14 +40,14 @@ class C extends (r = u.yh) {
 		return l().values(p);
 	}
 	getForApplication(e) {
-		let t = m[e];
+		let t = I[e];
 		if (null == t) return null;
 		let n = new Set();
 		for (let e of t) n.add(h[e]);
 		return n;
 	}
 	getForSku(e) {
-		let t = I[e];
+		let t = m[e];
 		if (null == t) return null;
 		let n = new Set();
 		for (let e of t) n.add(h[e]);
@@ -86,7 +80,7 @@ class C extends (r = u.yh) {
 	}
 	isEntitledToSku(e, t, n) {
 		let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-			i = I[t];
+			i = m[t];
 		if (null != i)
 			for (let t of i) {
 				let n = h[t];
@@ -136,9 +130,9 @@ class C extends (r = u.yh) {
 		ENTITLEMENT_DELETE: function (e) {
 			return (function (e) {
 				delete h[e.id];
-				let t = m[e.application_id];
+				let t = I[e.application_id];
 				null != t && t.delete(e.id);
-				let n = I[e.sku_id];
+				let n = m[e.sku_id];
 				if ((null != n && n.delete(e.id), null != e.subscription_id)) {
 					let t = N[e.subscription_id];
 					null != t && t.delete(e.id);
@@ -146,7 +140,7 @@ class C extends (r = u.yh) {
 			})(e.entitlement);
 		},
 		LOGOUT: function () {
-			(h = {}), (I = {}), (m = {}), (T = !1), (g = !1), (S = new Set()), (A = new Set());
+			(h = {}), (m = {}), (I = {}), (T = !1), (g = !1), (S = new Set()), (A = new Set());
 		},
 		ENTITLEMENTS_FETCH_FOR_USER_START: function () {
 			T = !0;

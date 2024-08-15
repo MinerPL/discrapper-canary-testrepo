@@ -34,9 +34,7 @@ function f(e) {
 				let r = o.Z.getAnyStreamForUser(e.author_id);
 				return null == r
 					? {}
-					: (u.Z.canBasicChannel(E.S7.CONNECT, t) &&
-							(null == r ? void 0 : r.channelId) === t.id &&
-							(n = s.Z.getPreviewURL(r.guildId, r.channelId, r.ownerId)),
+					: (u.Z.canBasicChannel(E.S7.CONNECT, t) && (null == r ? void 0 : r.channelId) === t.id && (n = s.Z.getPreviewURL(r.guildId, r.channelId, r.ownerId)),
 						{
 							stream: r,
 							streamPreviewUrl: n

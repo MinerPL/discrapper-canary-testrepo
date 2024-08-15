@@ -38,8 +38,8 @@ var r,
 	f,
 	h,
 	p,
-	I,
 	m,
+	I,
 	T,
 	g,
 	S,
@@ -50,9 +50,7 @@ var r,
 let R = 300;
 function C(e) {
 	let { API_ENDPOINT: t, CDN_HOST: n } = window.GLOBAL_ENV;
-	return null != n
-		? ''.concat(location.protocol, '//').concat(n, '/badge-icons/').concat(e, '.png')
-		: ''.concat(location.protocol).concat(t).concat(O.ANM.BADGE_ICON(e));
+	return null != n ? ''.concat(location.protocol, '//').concat(n, '/badge-icons/').concat(e, '.png') : ''.concat(location.protocol).concat(t).concat(O.ANM.BADGE_ICON(e));
 }
 ((r = f || (f = {})).USER_INFO = 'USER_INFO'),
 	(r.BOT_INFO = 'BOT_INFO'),
@@ -72,9 +70,9 @@ function C(e) {
 	(a.CANCEL_MODAL = 'CANCEL_MODAL'),
 	(a.BITE_SIZE = 'BITE_SIZE'),
 	(a.FULL_SIZE = 'FULL_SIZE'),
-	((s = I || (I = {})).LIVE = 'live'),
+	((s = m || (m = {})).LIVE = 'live'),
 	(s.RECENT = 'recent'),
-	((o = m || (m = {})).POPOUT = 'POPOUT'),
+	((o = I || (I = {})).POPOUT = 'POPOUT'),
 	(o.BITE_SIZE_POPOUT = 'BITE_SIZE_POPOUT'),
 	(o.MODAL = 'MODAL'),
 	(o.SIMPLIFIED_MODAL = 'SIMPLIFIED_MODAL'),

@@ -32,7 +32,7 @@ function f(e) {
 			)
 		),
 		p = (e) => (null != e.globalName ? e.globalName : e.username),
-		I = i.useMemo(
+		m = i.useMemo(
 			() =>
 				3 === u.length
 					? _.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_3.format({ username: p(u[2]) })
@@ -62,12 +62,12 @@ function f(e) {
 								? (0, r.jsx)(l.Text, {
 										variant: 'text-lg/medium',
 										color: a,
-										children: I
+										children: m
 									})
 								: (0, r.jsx)(l.Heading, {
 										variant: 'heading-xl/medium',
 										color: a,
-										children: I
+										children: m
 									});
 						}, {})
 					})

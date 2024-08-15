@@ -30,25 +30,8 @@ function f(e, t, n) {
 	);
 }
 let _ = (e, t, n, i) => Math.pow(e - n, 2) + Math.pow(t - i, 2);
-((a = i || (i = {})).MOVE = 'MOVE'),
-	(a.RESIZE_NORTH = 'RESIZE_NORTH'),
-	(a.RESIZE_WEST = 'RESIZE_WEST'),
-	(a.RESIZE_EAST = 'RESIZE_EAST'),
-	(a.RESIZE_SOUTH = 'RESIZE_SOUTH'),
-	(a.RESIZE_NORTH_WEST = 'RESIZE_NORTH_WEST'),
-	(a.RESIZE_NORTH_EAST = 'RESIZE_NORTH_EAST'),
-	(a.RESIZE_SOUTH_WEST = 'RESIZE_SOUTH_WEST'),
-	(a.RESIZE_SOUTH_EAST = 'RESIZE_SOUTH_EAST');
-let g = new Set([
-	'RESIZE_NORTH',
-	'RESIZE_WEST',
-	'RESIZE_EAST',
-	'RESIZE_SOUTH',
-	'RESIZE_NORTH_WEST',
-	'RESIZE_NORTH_EAST',
-	'RESIZE_SOUTH_WEST',
-	'RESIZE_SOUTH_EAST'
-]);
+((a = i || (i = {})).MOVE = 'MOVE'), (a.RESIZE_NORTH = 'RESIZE_NORTH'), (a.RESIZE_WEST = 'RESIZE_WEST'), (a.RESIZE_EAST = 'RESIZE_EAST'), (a.RESIZE_SOUTH = 'RESIZE_SOUTH'), (a.RESIZE_NORTH_WEST = 'RESIZE_NORTH_WEST'), (a.RESIZE_NORTH_EAST = 'RESIZE_NORTH_EAST'), (a.RESIZE_SOUTH_WEST = 'RESIZE_SOUTH_WEST'), (a.RESIZE_SOUTH_EAST = 'RESIZE_SOUTH_EAST');
+let g = new Set(['RESIZE_NORTH', 'RESIZE_WEST', 'RESIZE_EAST', 'RESIZE_SOUTH', 'RESIZE_NORTH_WEST', 'RESIZE_NORTH_EAST', 'RESIZE_SOUTH_WEST', 'RESIZE_SOUTH_EAST']);
 function m(e, t, n) {
 	let { width: i, height: s } = e;
 	return {
@@ -126,20 +109,10 @@ function S(e, t) {
 }
 class C extends (s = r.Component) {
 	shouldComponentUpdate(e, t) {
-		return (
-			!(0, d.Z)(t, this.state) ||
-			!(0, d.Z)(e, this.props, ['anchor', 'size', 'minSize', 'container']) ||
-			!(0, d.Z)(e.anchor, this.props.anchor) ||
-			!(0, d.Z)(e.size, this.props.size) ||
-			!(0, d.Z)(e.minSize, this.props.minSize) ||
-			!(0, d.Z)(e.container, this.props.container)
-		);
+		return !(0, d.Z)(t, this.state) || !(0, d.Z)(e, this.props, ['anchor', 'size', 'minSize', 'container']) || !(0, d.Z)(e.anchor, this.props.anchor) || !(0, d.Z)(e.size, this.props.size) || !(0, d.Z)(e.minSize, this.props.minSize) || !(0, d.Z)(e.container, this.props.container);
 	}
 	componentDidUpdate(e, t) {
-		null == t.operation &&
-			(!(0, d.Z)(this.props.anchor, e.anchor) && this.setDOMPositions(E(this.props.anchor)),
-			!(0, d.Z)(this.props.size, e.size) &&
-				this.setDOMSize(m(this.props.size, this.props.minSize.width, this.props.minSize.height)));
+		null == t.operation && (!(0, d.Z)(this.props.anchor, e.anchor) && this.setDOMPositions(E(this.props.anchor)), !(0, d.Z)(this.props.size, e.size) && this.setDOMSize(m(this.props.size, this.props.minSize.width, this.props.minSize.height)));
 	}
 	componentWillUnmount() {
 		this.handleOperationEnd();
@@ -181,9 +154,7 @@ class C extends (s = r.Component) {
 				)
 			),
 			C = d ? (0, u.R)(Z) : S('RESIZE_SOUTH_EAST', Z);
-		this.setDOMPositions(C),
-			!f && (null != l && l(), this.setState({ operationStarted: !0 })),
-			null != c && c(i, 'MOVE', this.anchor, this.size);
+		this.setDOMPositions(C), !f && (null != l && l(), this.setState({ operationStarted: !0 })), null != c && c(i, 'MOVE', this.anchor, this.size);
 	}
 	handleResizeMove(e, t) {
 		let {
@@ -372,8 +343,7 @@ class C extends (s = r.Component) {
 						dragState: { startX: i, startY: s },
 						state: { operation: a, operationStarted: o }
 					} = this;
-				if (!(null == a || (!o && 3 > _(i, s, t, n))))
-					'MOVE' === a ? this.handleDragMove(t, n) : g.has(a) && this.handleResizeMove(t, n);
+				if (!(null == a || (!o && 3 > _(i, s, t, n)))) 'MOVE' === a ? this.handleDragMove(t, n) : g.has(a) && this.handleResizeMove(t, n);
 			}),
 			f(this, 'handleOperationStart', (e, t, n) => {
 				let {
@@ -418,16 +388,14 @@ class C extends (s = r.Component) {
 						operationStarted: !1
 					},
 					() => {
-						window.addEventListener('mousemove', this.handleMouseMove),
-							window.addEventListener('mouseup', this.handleOperationEnd);
+						window.addEventListener('mousemove', this.handleMouseMove), window.addEventListener('mouseup', this.handleOperationEnd);
 					}
 				);
 			}),
 			f(this, 'handleOperationEnd', () => {
 				let { operation: e, operationStarted: t } = this.state,
 					{ onDragEnd: n } = this.props;
-				window.removeEventListener('mousemove', this.handleMouseMove),
-					window.removeEventListener('mouseup', this.handleOperationEnd);
+				window.removeEventListener('mousemove', this.handleMouseMove), window.removeEventListener('mouseup', this.handleOperationEnd);
 				let i = t
 					? () => {
 							let { onUpdate: t, id: n } = this.props;

@@ -28,13 +28,7 @@ var n = a(735250),
 	C = a(689938),
 	R = a(268405);
 function p(e) {
-	let {
-			headerText: t = C.Z.Messages.BROADCASTING_SETTINGS,
-			buttonCTA: a = C.Z.Messages.BROADCAST_SETTINGS_SAVE,
-			transitionState: p,
-			onClose: I,
-			onSave: M
-		} = e,
+	let { headerText: t = C.Z.Messages.BROADCASTING_SETTINGS, buttonCTA: a = C.Z.Messages.BROADCAST_SETTINGS_SAVE, transitionState: p, onClose: I, onSave: M } = e,
 		A = (0, f.jp)(),
 		[w, N] = l.useState(A),
 		[Z, j] = l.useState(''),
@@ -223,12 +217,7 @@ function p(e) {
 									m.hW.updateAsync(
 										'broadcast',
 										(a) => {
-											(a.allowedGuildIds = e),
-												(a.allowedUserIds = t),
-												(a.allowFriends = i.D5.create({ value: U })),
-												(a.autoBroadcast = i.D5.create({ value: O })),
-												ea(),
-												I();
+											(a.allowedGuildIds = e), (a.allowedUserIds = t), (a.allowFriends = i.D5.create({ value: U })), (a.autoBroadcast = i.D5.create({ value: O })), ea(), I();
 										},
 										m.fy.INFREQUENT_USER_ACTION
 									);

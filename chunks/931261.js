@@ -1,9 +1,9 @@
 n.d(t, {
 	g: function () {
-		return I;
+		return m;
 	},
 	s: function () {
-		return m;
+		return I;
 	}
 }),
 	n(47120);
@@ -34,7 +34,7 @@ function p(e) {
 		a = c.Z.getEnabled(n);
 	return r && i && e.hasFeature(f.oNc.COMMUNITY) && !(e.hasFeature(f.oNc.GUILD_ONBOARDING) && !a);
 }
-function I(e) {
+function m(e) {
 	let { homeSettingsEnabled: t } = d.ZP.useExperiment(
 			{
 				guildId: e,
@@ -53,16 +53,12 @@ function I(e) {
 			let l = (0, _.Z)(a),
 				c = t && (0, s.wC)(e) && a.hasFeature(f.oNc.GUILD_ONBOARDING) && a.hasFeature(f.oNc.GUILD_SERVER_GUIDE),
 				d = i().some(i().values(r), (e) => e.hasFlag(h.zZ.IS_GUILD_RESOURCE_CHANNEL));
-			return (
-				!(!n && !d) &&
-				((l && a.hasFeature(f.oNc.GUILD_ONBOARDING) && a.hasFeature(f.oNc.GUILD_SERVER_GUIDE)) || c) &&
-				a.hasFeature(f.oNc.COMMUNITY)
-			);
+			return !(!n && !d) && ((l && a.hasFeature(f.oNc.GUILD_ONBOARDING) && a.hasFeature(f.oNc.GUILD_SERVER_GUIDE)) || c) && a.hasFeature(f.oNc.COMMUNITY);
 		},
 		[e, t, n, r]
 	);
 }
-function m(e) {
+function I(e) {
 	let t = u.Z.getGuild(e),
 		{ homeSettingsEnabled: n } = d.ZP.getCurrentConfig({
 			guildId: e,
@@ -72,8 +68,5 @@ function m(e) {
 	if (null == t || __OVERLAY__ || e === f.ME || e === f.I_8) return !1;
 	if (r) return p(t);
 	let i = n && (0, s.wC)(e) && t.hasFeature(f.oNc.GUILD_ONBOARDING) && t.hasFeature(f.oNc.GUILD_SERVER_GUIDE);
-	return (
-		((t.hasFeature(f.oNc.GUILD_ONBOARDING) && t.hasFeature(f.oNc.GUILD_SERVER_GUIDE)) || i) &&
-		t.hasFeature(f.oNc.COMMUNITY)
-	);
+	return ((t.hasFeature(f.oNc.GUILD_ONBOARDING) && t.hasFeature(f.oNc.GUILD_SERVER_GUIDE)) || i) && t.hasFeature(f.oNc.COMMUNITY);
 }

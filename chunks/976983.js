@@ -25,17 +25,7 @@ var a = n(120356),
 	N = n(681937);
 function S(e) {
 	var t, a, r, c;
-	let {
-			guild: u,
-			prompt: S,
-			singleColumn: h,
-			promptIndex: g,
-			option: C,
-			hasError: x,
-			onDragStart: p,
-			onDragComplete: R,
-			onDragReset: f
-		} = e,
+	let { guild: u, prompt: S, singleColumn: h, promptIndex: g, option: C, hasError: x, onDragStart: p, onDragComplete: R, onDragReset: f } = e,
 		L = null,
 		O = l().findIndex(S.options, (e) => e.id === C.id),
 		{
@@ -51,13 +41,9 @@ function S(e) {
 			onDragComplete: R,
 			onDragReset: f
 		}),
-		{ customEmoji: j, unicodeEmoji: Z } = (0, _.Z)(
-			null === (t = C.emoji) || void 0 === t ? void 0 : t.id,
-			null === (a = C.emoji) || void 0 === a ? void 0 : a.name
-		);
+		{ customEmoji: j, unicodeEmoji: Z } = (0, _.Z)(null === (t = C.emoji) || void 0 === t ? void 0 : t.id, null === (a = C.emoji) || void 0 === a ? void 0 : a.name);
 	return (
-		!((0, T.Oq)(C.emoji) || null != j || null != Z) &&
-			(L = m.Z.Messages.GUILD_SETTINGS_ONBOARDING_PROMPT_INVALID_EMOJI),
+		!((0, T.Oq)(C.emoji) || null != j || null != Z) && (L = m.Z.Messages.GUILD_SETTINGS_ONBOARDING_PROMPT_INVALID_EMOJI),
 		(0, s.jsxs)(o.Clickable, {
 			className: i()(N.optionCard, {
 				[N.hasError]: x || null != L,

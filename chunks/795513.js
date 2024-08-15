@@ -37,10 +37,7 @@ t.Z = new (class e {
 		this.hasSuccessfullyConnected = !0;
 	}
 	handleWrite(e) {
-		(this.hasSuccessfullyConnected = !0),
-			i.Z.cacheTransaction(e).put(a.DQ, '\uD83D\uDC4B'),
-			i.Z.cacheTransaction(e).put(a.aQ, a.Wj),
-			i.Z.forceResyncVersionTransaction(e).put(a.LH, { version: a.pL });
+		(this.hasSuccessfullyConnected = !0), i.Z.cacheTransaction(e).put(a.DQ, '\uD83D\uDC4B'), i.Z.cacheTransaction(e).put(a.aQ, a.Wj), i.Z.forceResyncVersionTransaction(e).put(a.LH, { version: a.pL });
 	}
 	resetInMemoryState() {
 		this.hasSuccessfullyConnected = !1;

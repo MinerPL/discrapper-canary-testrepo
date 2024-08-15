@@ -53,30 +53,10 @@ function B(e, t, n) {
 }
 class H extends c.Z {
 	_initialize() {
-		__OVERLAY__
-			? s.Z.subscribe('PREMIUM_PAYMENT_MODAL_OPEN', this._handlePremiumPaymentModalOpen)
-			: (s.Z.subscribe('PREMIUM_PAYMENT_MODAL_CLOSE', this._handlePremiumPaymentModalClose),
-				s.Z.subscribe('MESSAGE_LENGTH_UPSELL', this.handleMessageLengthUpsell),
-				s.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchPremiumOffer),
-				s.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchCheckoutRecovery),
-				s.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchCampaignContext),
-				s.Z.subscribe('POST_CONNECTION_OPEN', this._trackCustomNotificationSoundsExposure),
-				s.Z.subscribe('POST_CONNECTION_OPEN', this._trackSkyLoadExposure),
-				s.Z.subscribe('RTC_CONNECTION_STATE', this.maybeShowHDStreamingPerksDemoPostUpsellModal),
-				s.Z.subscribe('MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED', this.maybeShowHDStreamingViewerUpsellMessage));
+		__OVERLAY__ ? s.Z.subscribe('PREMIUM_PAYMENT_MODAL_OPEN', this._handlePremiumPaymentModalOpen) : (s.Z.subscribe('PREMIUM_PAYMENT_MODAL_CLOSE', this._handlePremiumPaymentModalClose), s.Z.subscribe('MESSAGE_LENGTH_UPSELL', this.handleMessageLengthUpsell), s.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchPremiumOffer), s.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchCheckoutRecovery), s.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchCampaignContext), s.Z.subscribe('POST_CONNECTION_OPEN', this._trackCustomNotificationSoundsExposure), s.Z.subscribe('POST_CONNECTION_OPEN', this._trackSkyLoadExposure), s.Z.subscribe('RTC_CONNECTION_STATE', this.maybeShowHDStreamingPerksDemoPostUpsellModal), s.Z.subscribe('MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED', this.maybeShowHDStreamingViewerUpsellMessage));
 	}
 	_terminate() {
-		__OVERLAY__
-			? s.Z.unsubscribe('PREMIUM_PAYMENT_MODAL_OPEN', this._handlePremiumPaymentModalOpen)
-			: (s.Z.unsubscribe('PREMIUM_PAYMENT_MODAL_CLOSE', this._handlePremiumPaymentModalClose),
-				s.Z.unsubscribe('MESSAGE_LENGTH_UPSELL', this.handleMessageLengthUpsell),
-				s.Z.unsubscribe('POST_CONNECTION_OPEN', this._maybeFetchPremiumOffer),
-				s.Z.unsubscribe('POST_CONNECTION_OPEN', this._maybeFetchCheckoutRecovery),
-				s.Z.unsubscribe('POST_CONNECTION_OPEN', this._maybeFetchCampaignContext),
-				s.Z.unsubscribe('POST_CONNECTION_OPEN', this._trackCustomNotificationSoundsExposure),
-				s.Z.unsubscribe('POST_CONNECTION_OPEN', this._trackSkyLoadExposure),
-				s.Z.unsubscribe('RTC_CONNECTION_STATE', this.maybeShowHDStreamingPerksDemoPostUpsellModal),
-				s.Z.unsubscribe('MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED', this.maybeShowHDStreamingViewerUpsellMessage));
+		__OVERLAY__ ? s.Z.unsubscribe('PREMIUM_PAYMENT_MODAL_OPEN', this._handlePremiumPaymentModalOpen) : (s.Z.unsubscribe('PREMIUM_PAYMENT_MODAL_CLOSE', this._handlePremiumPaymentModalClose), s.Z.unsubscribe('MESSAGE_LENGTH_UPSELL', this.handleMessageLengthUpsell), s.Z.unsubscribe('POST_CONNECTION_OPEN', this._maybeFetchPremiumOffer), s.Z.unsubscribe('POST_CONNECTION_OPEN', this._maybeFetchCheckoutRecovery), s.Z.unsubscribe('POST_CONNECTION_OPEN', this._maybeFetchCampaignContext), s.Z.unsubscribe('POST_CONNECTION_OPEN', this._trackCustomNotificationSoundsExposure), s.Z.unsubscribe('POST_CONNECTION_OPEN', this._trackSkyLoadExposure), s.Z.unsubscribe('RTC_CONNECTION_STATE', this.maybeShowHDStreamingPerksDemoPostUpsellModal), s.Z.unsubscribe('MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED', this.maybeShowHDStreamingViewerUpsellMessage));
 	}
 	handleMessageLengthUpsell(e) {
 		let { channel: t, content: l } = e;
@@ -174,11 +154,7 @@ class H extends c.Z {
 			}),
 			B(this, '_handlePremiumPaymentModalClose', (e) => {
 				let { didSucceed: t } = e;
-				t && null != this._premiumPaymentModalCloseResolve
-					? this._premiumPaymentModalCloseResolve()
-					: null != this._premiumPaymentModalCloseReject && this._premiumPaymentModalCloseReject(),
-					(this._premiumPaymentModalCloseResolve = null),
-					(this._premiumPaymentModalCloseReject = null);
+				t && null != this._premiumPaymentModalCloseResolve ? this._premiumPaymentModalCloseResolve() : null != this._premiumPaymentModalCloseReject && this._premiumPaymentModalCloseReject(), (this._premiumPaymentModalCloseResolve = null), (this._premiumPaymentModalCloseReject = null);
 			}),
 			B(this, 'maybeShowHDStreamingViewerUpsellMessage', (e) => {
 				let t = g.default.getCurrentUser();
@@ -192,20 +168,8 @@ class H extends c.Z {
 					let r = d.Z.getSelectedParticipant(e),
 						a = (0, A.o)(r, n),
 						{ sendNitroMessage: s } = (0, T.TD)(a),
-						c =
-							null !== (l = null === (i = f.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l
-								? l
-								: w.Eu4.NONE;
-					if (
-						L.Z.cooldownIsActive() ||
-						!s ||
-						c >= w.Eu4.TIER_2 ||
-						(null == r ? void 0 : r.type) !== U.fO.STREAM ||
-						(null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) ||
-						null == r.maxResolution ||
-						null == r.maxFrameRate
-					)
-						return;
+						c = null !== (l = null === (i = f.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : w.Eu4.NONE;
+					if (L.Z.cooldownIsActive() || !s || c >= w.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== U.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
 					Z.I();
 					let u = k.Z.Messages.STREAM_PREMIUM_VIEWER_UPSELL_MESSAGE.format({
 						nickname: r.userNick,

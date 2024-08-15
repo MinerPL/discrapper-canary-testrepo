@@ -17,16 +17,7 @@ function o(e) {
 		.map((r) => {
 			var a, o;
 			let { index: u, timestamp: c, logs: d, nativeLogs: _, serverTrace: E } = r,
-				f =
-					0 === u
-						? null !==
-								(o =
-									null === (a = i().find(d, (e) => e.log.indexOf('Logger loaded') >= 0)) || void 0 === a
-										? void 0
-										: a.timestamp) && void 0 !== o
-							? o
-							: e
-						: c,
+				f = 0 === u ? (null !== (o = null === (a = i().find(d, (e) => e.log.indexOf('Logger loaded') >= 0)) || void 0 === a ? void 0 : a.timestamp) && void 0 !== o ? o : e) : c,
 				h = (function (e, t) {
 					var n, r;
 					let a = (function (e) {
@@ -34,9 +25,7 @@ function o(e) {
 							for (let n = 0; n < e.length; n++) {
 								let r = e[n],
 									i = e[n + 1];
-								null != i && i.log === r.log.replace('Start ', 'Finish ')
-									? ((i.log = i.log.replace('Finish ', '')), t.push(i), n++)
-									: t.push(r);
+								null != i && i.log === r.log.replace('Start ', 'Finish ') ? ((i.log = i.log.replace('Finish ', '')), t.push(i), n++) : t.push(r);
 							}
 							return t;
 						})(e).map((e) => {
@@ -101,10 +90,7 @@ function o(e) {
 								c && ((a += '| '), s.push(d));
 						});
 						let o = !1;
-						return e.filter(
-							(e) =>
-								!(o && e.log.includes('\u21AA')) && !(o = (!r && '\uD83C\uDFA8' === e.emoji) || !1 === e.shouldKeep)
-						);
+						return e.filter((e) => !(o && e.log.includes('\u21AA')) && !(o = (!r && '\uD83C\uDFA8' === e.emoji) || !1 === e.shouldKeep));
 					})(d, _, t, n),
 					f
 				),
@@ -118,9 +104,5 @@ function o(e) {
 }
 function l(e) {
 	let t = null == e.tag ? e.label : ''.concat(e.label, ' ').concat(e.tag);
-	return (
-		t.includes('_START') && (t = 'Start ' + t.replace('_START', '')),
-		t.includes('_END') && (t = 'Finish ' + t.replace('_END', '')),
-		t
-	);
+	return t.includes('_START') && (t = 'Start ' + t.replace('_START', '')), t.includes('_END') && (t = 'Finish ' + t.replace('_END', '')), t;
 }

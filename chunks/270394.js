@@ -132,21 +132,11 @@ function B(e) {
 	);
 }
 function y(e) {
-	let {
-		invites: n,
-		guild: s,
-		hide: l,
-		channel: r = null,
-		showChannel: d = !1,
-		loading: _ = !1,
-		canCreateInvites: N = !1
-	} = e;
+	let { invites: n, guild: s, hide: l, channel: r = null, showChannel: d = !1, loading: _ = !1, canCreateInvites: N = !1 } = e;
 	o()(null != s, 'guild is required');
 	let E = (0, Z.M)(s),
 		h = (0, u.e7)([x.Z], () => x.Z.getGuildIncident(s.id)),
-		p =
-			s.hasFeature(v.oNc.INVITES_DISABLED) ||
-			((null == h ? void 0 : h.invitesDisabledUntil) != null && new Date(h.invitesDisabledUntil) > new Date()),
+		p = s.hasFeature(v.oNc.INVITES_DISABLED) || ((null == h ? void 0 : h.invitesDisabledUntil) != null && new Date(h.invitesDisabledUntil) > new Date()),
 		f = (0, g.ZP)(),
 		R = a.useMemo(
 			() =>
@@ -155,9 +145,7 @@ function y(e) {
 					: c()(n)
 							.sortBy((e) => {
 								var n, t;
-								return (
-									null !== (t = null === (n = e.inviter) || void 0 === n ? void 0 : n.username) && void 0 !== t ? t : ''
-								).toLowerCase();
+								return (null !== (t = null === (n = e.inviter) || void 0 === n ? void 0 : n.username) && void 0 !== t ? t : '').toLowerCase();
 							})
 							.value(),
 			[n, _]
@@ -247,9 +235,7 @@ function y(e) {
 								(0, i.jsx)(m.FormText, {
 									className: D.marginBottom20,
 									type: m.FormTextTypes.DESCRIPTION,
-									children: N
-										? M.Z.Messages.SETTINGS_INVITE_TIP.format({ onCreateInvite: b })
-										: M.Z.Messages.SETTINGS_INVITE_TIP_WITHOUT_CREATE
+									children: N ? M.Z.Messages.SETTINGS_INVITE_TIP.format({ onCreateInvite: b }) : M.Z.Messages.SETTINGS_INVITE_TIP_WITHOUT_CREATE
 								}),
 								(0, i.jsxs)('div', {
 									className: L.inviteDisabledContainer,

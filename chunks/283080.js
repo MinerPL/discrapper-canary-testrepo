@@ -13,27 +13,13 @@ function i(e, t) {
 }
 function a() {
 	if (0 === Object.keys(r).length) return '';
-	let e = '|'
-		.concat(i('id', 20), '|')
-		.concat(i('Mounts', 8), '|')
-		.concat(i('Mount Mean', 20), '|')
-		.concat(i('Updates', 8), '|')
-		.concat(i('Update Mean', 20), '|')
-		.concat(i('Nested', 8), '|')
-		.concat(i('Nested Mean', 20), '|\n');
+	let e = '|'.concat(i('id', 20), '|').concat(i('Mounts', 8), '|').concat(i('Mount Mean', 20), '|').concat(i('Updates', 8), '|').concat(i('Update Mean', 20), '|').concat(i('Nested', 8), '|').concat(i('Nested Mean', 20), '|\n');
 	return (
 		'Component Render Stats (microseconds):\n' +
 		e +
 		Object.entries(r).map((e) => {
 			let [t, n] = e;
-			return '|'
-				.concat(i(t, 20), '|')
-				.concat(i(n.mount.count.toString(), 8), '|')
-				.concat(i(n.mount.mean.toString(), 20), '|')
-				.concat(i(n.update.count.toString(), 8), '|')
-				.concat(i(n.update.mean.toString(), 20), '|')
-				.concat(i(n.nestedUpdate.count.toString(), 8), '|')
-				.concat(i(n.nestedUpdate.mean.toString(), 20), '|\n');
+			return '|'.concat(i(t, 20), '|').concat(i(n.mount.count.toString(), 8), '|').concat(i(n.mount.mean.toString(), 20), '|').concat(i(n.update.count.toString(), 8), '|').concat(i(n.update.mean.toString(), 20), '|').concat(i(n.nestedUpdate.count.toString(), 8), '|').concat(i(n.nestedUpdate.mean.toString(), 20), '|\n');
 		})
 	);
 }

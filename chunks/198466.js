@@ -19,8 +19,8 @@ function E(e) {
 		[E, f] = s.useState(0),
 		h = s.useRef(-1),
 		p = s.useRef(!0),
-		I = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-		{ scaleFactor: m } = (0, u.useSpring)({
+		m = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
+		{ scaleFactor: I } = (0, u.useSpring)({
 			from: { scaleFactor: 1 },
 			to: { scaleFactor: 1 === E ? 0.9 : 2 === E ? 1.2 : 1 },
 			config: {
@@ -34,11 +34,11 @@ function E(e) {
 		},
 		[]
 	),
-	I)
+	m)
 		? (0, a.jsx)(a.Fragment, { children: t })
 		: (0, a.jsx)(o.animated.div, {
 				className: _.confettiTriggerWrapper,
-				style: { transform: m.to((e) => 'scale('.concat(e, ')')) },
+				style: { transform: I.to((e) => 'scale('.concat(e, ')')) },
 				children: (0, a.jsx)(u.Clickable, {
 					className: _.confettiTrigger,
 					onMouseDown: () => {
@@ -66,9 +66,7 @@ function E(e) {
 				})
 			});
 }
-((i = r || (r = {}))[(i.INACTIVE = 0)] = 'INACTIVE'),
-	(i[(i.PRESSED = 1)] = 'PRESSED'),
-	(i[(i.HOVERED = 2)] = 'HOVERED');
+((i = r || (r = {}))[(i.INACTIVE = 0)] = 'INACTIVE'), (i[(i.PRESSED = 1)] = 'PRESSED'), (i[(i.HOVERED = 2)] = 'HOVERED');
 t.Z = function (e) {
 	let { confettiCount: t, confettiTriggerRef: n, isFiring: r } = e,
 		{ cannon: i, createMultipleConfettiAt: a } = s.useContext(d.h),

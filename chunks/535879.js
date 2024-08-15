@@ -16,11 +16,7 @@ function c(e) {
 		h = l.ZP.canUseFancyVoiceChannelReactions(d),
 		m = '';
 	return (
-		(m = h
-			? t
-				? o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_TOOLTIP_ENABLED
-				: o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_TOOLTIP_DISABLED
-			: o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_UPSELL),
+		(m = h ? (t ? o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_TOOLTIP_ENABLED : o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_TOOLTIP_DISABLED) : o.Z.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE_UPSELL),
 		(0, i.jsx)(r.Z, {
 			checked: t,
 			onChange: c,

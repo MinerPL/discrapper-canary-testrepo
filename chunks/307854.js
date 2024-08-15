@@ -12,40 +12,11 @@ var r = n(731889),
 	a = n(99342);
 class l {
 	constructor() {
-		(this._notifyingListeners = !1),
-			(this._scopeListeners = []),
-			(this._eventProcessors = []),
-			(this._breadcrumbs = []),
-			(this._attachments = []),
-			(this._user = {}),
-			(this._tags = {}),
-			(this._extra = {}),
-			(this._contexts = {}),
-			(this._sdkProcessingMetadata = {}),
-			(this._propagationContext = (0, r.Q)());
+		(this._notifyingListeners = !1), (this._scopeListeners = []), (this._eventProcessors = []), (this._breadcrumbs = []), (this._attachments = []), (this._user = {}), (this._tags = {}), (this._extra = {}), (this._contexts = {}), (this._sdkProcessingMetadata = {}), (this._propagationContext = (0, r.Q)());
 	}
 	clone() {
 		let t = new l();
-		return (
-			(t._breadcrumbs = [...this._breadcrumbs]),
-			(t._tags = { ...this._tags }),
-			(t._extra = { ...this._extra }),
-			(t._contexts = { ...this._contexts }),
-			(t._user = this._user),
-			(t._level = this._level),
-			(t._session = this._session),
-			(t._transactionName = this._transactionName),
-			(t._fingerprint = this._fingerprint),
-			(t._eventProcessors = [...this._eventProcessors]),
-			(t._requestSession = this._requestSession),
-			(t._attachments = [...this._attachments]),
-			(t._sdkProcessingMetadata = { ...this._sdkProcessingMetadata }),
-			(t._propagationContext = { ...this._propagationContext }),
-			(t._client = this._client),
-			(t._lastEventId = this._lastEventId),
-			(0, a.D)(t, (0, a.Y)(this)),
-			t
-		);
+		return (t._breadcrumbs = [...this._breadcrumbs]), (t._tags = { ...this._tags }), (t._extra = { ...this._extra }), (t._contexts = { ...this._contexts }), (t._user = this._user), (t._level = this._level), (t._session = this._session), (t._transactionName = this._transactionName), (t._fingerprint = this._fingerprint), (t._eventProcessors = [...this._eventProcessors]), (t._requestSession = this._requestSession), (t._attachments = [...this._attachments]), (t._sdkProcessingMetadata = { ...this._sdkProcessingMetadata }), (t._propagationContext = { ...this._propagationContext }), (t._client = this._client), (t._lastEventId = this._lastEventId), (0, a.D)(t, (0, a.Y)(this)), t;
 	}
 	setClient(t) {
 		this._client = t;
@@ -172,23 +143,7 @@ class l {
 		);
 	}
 	clear() {
-		return (
-			(this._breadcrumbs = []),
-			(this._tags = {}),
-			(this._extra = {}),
-			(this._user = {}),
-			(this._contexts = {}),
-			(this._level = void 0),
-			(this._transactionName = void 0),
-			(this._fingerprint = void 0),
-			(this._requestSession = void 0),
-			(this._session = void 0),
-			(0, a.D)(this, void 0),
-			(this._attachments = []),
-			(this._propagationContext = (0, r.Q)()),
-			this._notifyScopeListeners(),
-			this
-		);
+		return (this._breadcrumbs = []), (this._tags = {}), (this._extra = {}), (this._user = {}), (this._contexts = {}), (this._level = void 0), (this._transactionName = void 0), (this._fingerprint = void 0), (this._requestSession = void 0), (this._session = void 0), (0, a.D)(this, void 0), (this._attachments = []), (this._propagationContext = (0, r.Q)()), this._notifyScopeListeners(), this;
 	}
 	addBreadcrumb(t, e) {
 		let n = 'number' == typeof e ? e : 100;

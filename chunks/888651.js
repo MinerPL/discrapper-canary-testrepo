@@ -26,11 +26,7 @@ function h(e) {
 				var t, n;
 				let { channel: i } = e,
 					a = i.getGuildId(),
-					s =
-						null !== (n = null === (t = l.Z.getGuild(a)) || void 0 === t ? void 0 : t.maxVideoChannelUsers) &&
-						void 0 !== n
-							? n
-							: -1,
+					s = null !== (n = null === (t = l.Z.getGuild(a)) || void 0 === t ? void 0 : t.maxVideoChannelUsers) && void 0 !== n ? n : -1,
 					d = c.ZP.countVoiceStatesForChannel(i.id),
 					h = null != a && o.Z.hasVideo(i.id) && s > 0 && d >= s + 1;
 				return r.Z.can(u.Plq.MOVE_MEMBERS, i) && r.Z.can(u.Plq.CONNECT, i) && !h;

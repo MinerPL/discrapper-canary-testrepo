@@ -13,8 +13,8 @@ var r = n(697988),
 	f = n(823379),
 	h = n(920303),
 	p = n(569471),
-	I = n(91159),
-	m = n(952537),
+	m = n(91159),
+	I = n(952537),
 	T = n(981631),
 	g = n(176505),
 	S = n(689938);
@@ -110,10 +110,7 @@ t.Z = {
 		var t;
 		let n = _.Z.getChannel(e),
 			r = E.Z.can(T.Plq.MANAGE_THREADS, n);
-		null != n &&
-			n.isArchivedThread() &&
-			(r || (null === (t = n.threadMetadata) || void 0 === t ? void 0 : t.locked) !== !0) &&
-			(await this.unarchiveThread(n, !1));
+		null != n && n.isArchivedThread() && (r || (null === (t = n.threadMetadata) || void 0 === t ? void 0 : t.locked) !== !0) && (await this.unarchiveThread(n, !1));
 	},
 	setInvitable: (e, t) => A(e, { invitable: t }),
 	async joinThread(e, t) {
@@ -266,7 +263,7 @@ t.Z = {
 	},
 	async setNotificationSettings(e, t) {
 		return (
-			(0, I.ZJ)(e, t),
+			(0, m.ZJ)(e, t),
 			!p.Z.hasJoined(e.id) && (await this.joinThread(e, 'Change Notification Settings')),
 			i.tn.patch({
 				url: T.ANM.THREAD_MEMBER_SETTINGS(e.id),
@@ -318,7 +315,7 @@ t.Z = {
 									threads: i,
 									firstMessages: c,
 									mostRecentMessages: d,
-									members: (null != l ? l : []).map((e) => (0, m.Z)(e)),
+									members: (null != l ? l : []).map((e) => (0, I.Z)(e)),
 									owners: i.map((e) => e.owner).filter(f.lm),
 									hasMore: u
 								});

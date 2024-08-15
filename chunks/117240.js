@@ -10,14 +10,14 @@ var s,
 	f = n(570140),
 	h = n(899742),
 	p = n(598077),
-	I = n(12647),
-	m = n(358085),
+	m = n(12647),
+	I = n(358085),
 	T = n(374023);
 let g = 'BrowserHandoffStore',
 	S = !1,
 	A = new E.V7();
 function N() {
-	null != r && null != i && (window.open(''.concat(r, '&key=').concat(i)), I.Z.focus(null, !0));
+	null != r && null != i && (window.open(''.concat(r, '&key=').concat(i)), m.Z.focus(null, !0));
 }
 function v() {
 	(i = null), A.stop(), (S = !1), _.K.set(g, S);
@@ -27,7 +27,7 @@ function O() {
 }
 class R extends (u = d.ZP.Store) {
 	initialize() {
-		!1 !== _.K.get(g) && (S = m.isPlatformEmbedded && 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL);
+		!1 !== _.K.get(g) && (S = I.isPlatformEmbedded && 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL);
 	}
 	isHandoffAvailable() {
 		return !T.s.isDisallowPopupsSet() && S;

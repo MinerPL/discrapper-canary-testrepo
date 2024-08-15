@@ -79,9 +79,7 @@ function g() {
 						)
 					),
 					I(s.CompassIcon, h.Z.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
-						(0, r.AQ)(),
-							d.default.track(E.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED),
-							(0, l.uL)(E.Z5c.GUILD_DISCOVERY);
+						(0, r.AQ)(), d.default.track(E.rMx.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, l.uL)(E.Z5c.GUILD_DISCOVERY);
 					})
 				]
 			})

@@ -42,14 +42,7 @@ class A extends a.PureComponent {
 	}
 	renderTitle() {
 		return (0, i.jsxs)('div', {
-			children: [
-				(0, i.jsx)(p.Z, {
-					children: this.isHost()
-						? S.Z.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({ count: this.props.party.length })
-						: S.Z.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER
-				}),
-				(0, i.jsx)(g.Z, { children: S.Z.Messages.SPOTIFY_LISTEN_ALONG_SUBTITLE_LISTENER })
-			]
+			children: [(0, i.jsx)(p.Z, { children: this.isHost() ? S.Z.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({ count: this.props.party.length }) : S.Z.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER }), (0, i.jsx)(g.Z, { children: S.Z.Messages.SPOTIFY_LISTEN_ALONG_SUBTITLE_LISTENER })]
 		});
 	}
 	renderStopListeningButton() {
@@ -102,10 +95,7 @@ class A extends a.PureComponent {
 				if (null == e) return null;
 				let { host: s, onUserContextMenu: l } = this.props;
 				return (
-					(n =
-						(null == s ? void 0 : s.id) === e.id
-							? S.Z.Messages.SPOTIFY_LISTEN_ALONG_HOST
-							: S.Z.Messages.SPOTIFY_LISTEN_ALONG_LISTENER),
+					(n = (null == s ? void 0 : s.id) === e.id ? S.Z.Messages.SPOTIFY_LISTEN_ALONG_HOST : S.Z.Messages.SPOTIFY_LISTEN_ALONG_LISTENER),
 					(0, i.jsx)(
 						c.Popout,
 						{

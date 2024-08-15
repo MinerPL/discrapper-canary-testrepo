@@ -87,8 +87,7 @@ function m(e) {
 					(0, i.jsx)(s.Button, {
 						color: s.Button.Colors.BRAND,
 						onClick: () => {
-							c.default.track(u.rMx.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: n }),
-								d.ZP.setEnableHardwareAcceleration(!0);
+							c.default.track(u.rMx.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: n }), d.ZP.setEnableHardwareAcceleration(!0);
 						},
 						children: _.Z.Messages.ACTIVITY_HARDWARE_ACCELERATION_TURN_IT_ON
 					})

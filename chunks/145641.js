@@ -63,8 +63,7 @@ t.Z = function (e) {
 				return (0, i.jsx)(o.ListAuto, {
 					ref: (e) => {
 						var t;
-						(I.current = e),
-							(n.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
+						(I.current = e), (n.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
 					},
 					sectionHeight: E,
 					renderRow: h,

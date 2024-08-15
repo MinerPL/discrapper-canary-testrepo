@@ -36,15 +36,7 @@ let c = 'url(#gradient)',
 		}
 	};
 t.Z = (e) => {
-	let {
-			percentage: t = 0,
-			children: n,
-			animationClassName: c,
-			initialPercentage: E = 0,
-			progressCircleStrokeSize: T = 2,
-			progressCircleVariation: I,
-			progressCircleStroke: R
-		} = e,
+	let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: E = 0, progressCircleStrokeSize: T = 2, progressCircleVariation: I, progressCircleStroke: R } = e,
 		C = 43 + T / 2,
 		g = 2 * Math.PI * C,
 		[p, N] = a.useState(E);

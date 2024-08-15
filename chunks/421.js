@@ -38,15 +38,9 @@ function S(e) {
 		}),
 		x = (0, v.T)(null != l ? l : null, n);
 	if (null == x) return null;
-	let _ =
-			null != x.activity.activity_preview_video_asset_id
-				? (0, f.Z)(n, x.activity.activity_preview_video_asset_id)
-				: null,
+	let _ = null != x.activity.activity_preview_video_asset_id ? (0, f.Z)(n, x.activity.activity_preview_video_asset_id) : null,
 		h = C.o[n],
-		S =
-			(null == h ? void 0 : h.playersSuggestionMin) != null && (null == h ? void 0 : h.playersSuggestionMax) != null
-				? ''.concat(h.playersSuggestionMin, ' - ').concat(h.playersSuggestionMax)
-				: void 0;
+		S = (null == h ? void 0 : h.playersSuggestionMin) != null && (null == h ? void 0 : h.playersSuggestionMax) != null ? ''.concat(h.playersSuggestionMin, ' - ').concat(h.playersSuggestionMax) : void 0;
 	return (0, a.jsx)(o.Gt, {
 		value: m,
 		children: (0, a.jsx)('div', {
@@ -117,9 +111,7 @@ function S(e) {
 															(0, a.jsx)(s.Text, {
 																variant: 'text-xs/semibold',
 																className: E.detailItemText,
-																children: T.Z.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_MINUTES.format({
-																	nMinutes: h.timeSuggestionMinutes
-																})
+																children: T.Z.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_MINUTES.format({ nMinutes: h.timeSuggestionMinutes })
 															})
 														]
 													})
@@ -177,9 +169,7 @@ function b(e) {
 			size: 2048
 		}),
 		{ analyticsLocations: C } = (0, o.ZP)(),
-		[S, b] = i.useState(
-			null !== (t = (0, m.$)({ allowGdmActivityChannelSuggestion: !0 })) && void 0 !== t ? t : void 0
-		),
+		[S, b] = i.useState(null !== (t = (0, m.$)({ allowGdmActivityChannelSuggestion: !0 })) && void 0 !== t ? t : void 0),
 		[N, j] = i.useState(
 			null !==
 				(r = (0, p.d)({
@@ -212,11 +202,7 @@ function b(e) {
 					});
 			});
 		}, [c, C]),
-		L =
-			null == M ||
-			(null != M.guild_id &&
-				!(null != S && null != N && A.some((e) => e.value === S) && Z.some((e) => e.value.channel.id === N)) &&
-				!0);
+		L = null == M || (null != M.guild_id && !(null != S && null != N && A.some((e) => e.value === S) && Z.some((e) => e.value.channel.id === N)) && !0);
 	return (0, a.jsxs)('div', {
 		className: E.launcherInnerContainer,
 		children: [

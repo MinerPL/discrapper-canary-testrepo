@@ -60,8 +60,7 @@ t.Z = new (class e {
 	}
 	addImportLogDetail() {
 		let e = i();
-		e - this.lastImportDuration > 25 &&
-			(this.addDetail('JS Imports', Math.ceil(e) + 'ms'), (this.lastImportDuration = e));
+		e - this.lastImportDuration > 25 && (this.addDetail('JS Imports', Math.ceil(e) + 'ms'), (this.lastImportDuration = e));
 	}
 	markWithDelta(e, t) {
 		let n = this.logs[this.logs.length - 1];

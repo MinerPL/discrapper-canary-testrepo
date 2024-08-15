@@ -26,20 +26,7 @@ function d(e) {
 		E = a.vB(null != _.permissions && '' !== _.permissions ? _.permissions : '0');
 	} catch (e) {}
 	let f = _.channel_id,
-		h =
-			null !==
-				(u =
-					null !==
-						(i =
-							null !== (n = _.guild_id) && void 0 !== n
-								? n
-								: null === (t = s.Z.getChannel(f)) || void 0 === t
-									? void 0
-									: t.guild_id) && void 0 !== i
-						? i
-						: o.Z.getGuildId()) && void 0 !== u
-				? u
-				: void 0;
+		h = null !== (u = null !== (i = null !== (n = _.guild_id) && void 0 !== n ? n : null === (t = s.Z.getChannel(f)) || void 0 === t ? void 0 : t.guild_id) && void 0 !== i ? i : o.Z.getGuildId()) && void 0 !== u ? u : void 0;
 	return {
 		clientId: null !== (c = _.client_id) && void 0 !== c ? c : '',
 		scopes: (null !== (d = _.scope) && void 0 !== d ? d : '').split(' ').filter((e) => e.length > 0),

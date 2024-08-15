@@ -13,8 +13,8 @@ var r = n(735250),
 	f = n(209613),
 	h = n(998698),
 	p = n(661824),
-	I = n(703558),
-	m = n(117530),
+	m = n(703558),
+	I = n(117530),
 	T = n(459273),
 	g = n(444282),
 	S = n(898463),
@@ -26,7 +26,7 @@ function R(e) {
 	let { channelId: t, type: n } = e,
 		a = (0, u.e7)([E.Z], () => E.Z.keyboardModeEnabled),
 		R = (0, f.Z)('attachments', l.hy.HORIZONTAL),
-		C = (0, u.e7)([m.Z], () => m.Z.getUploads(t, n.drafts.type)),
+		C = (0, u.e7)([I.Z], () => I.Z.getUploads(t, n.drafts.type)),
 		{
 			isApplicationCommand: y,
 			commandOptions: D,
@@ -54,10 +54,7 @@ function R(e) {
 						? void 0
 						: D.filter((e) => {
 								var t;
-								return (
-									e.type === _.jw.ATTACHMENT &&
-									(null == L ? void 0 : null === (t = L[e.name]) || void 0 === t ? void 0 : t.hasValue)
-								);
+								return e.type === _.jw.ATTACHMENT && (null == L ? void 0 : null === (t = L[e.name]) || void 0 === t ? void 0 : t.hasValue);
 							})) && void 0 !== e
 				? e
 				: [];
@@ -67,10 +64,7 @@ function R(e) {
 		let e = () => {
 			d.Z.clearAll(t, n.drafts.type);
 		};
-		return (
-			c.Z.subscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e),
-			() => c.Z.unsubscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e)
-		);
+		return c.Z.subscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e), () => c.Z.unsubscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e);
 	}, [t, n]);
 	let U = i.useCallback(() => {
 		R.focusFirstVisibleItem();
@@ -133,7 +127,7 @@ function R(e) {
 							}
 						})
 					}),
-					n.drafts.type === I.d.FirstThreadMessage ? null : (0, r.jsx)(p.Z, {})
+					n.drafts.type === m.d.FirstThreadMessage ? null : (0, r.jsx)(p.Z, {})
 				]
 			});
 }

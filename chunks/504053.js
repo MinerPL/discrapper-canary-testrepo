@@ -36,9 +36,7 @@ function o(r) {
 			w = 0,
 			x = (t, e, n) => {
 				let o = [];
-				for (let f = 0; f < e; f++)
-					for (let i = f ? 0 : 1; i * e < t * (e - f); i++)
-						o.push((((r[m + (w >> 1)] >> ((1 & w++) << 2)) & 15) / 7.5 - 1) * n);
+				for (let f = 0; f < e; f++) for (let i = f ? 0 : 1; i * e < t * (e - f); i++) o.push((((r[m + (w >> 1)] >> ((1 & w++) << 2)) & 15) / 7.5 - 1) * n);
 				return o;
 			},
 			j = x(b, g, ((c >> 18) & 31) / 31 / 2),
@@ -68,16 +66,11 @@ function o(r) {
 						let r = U[e] * n;
 						(c += k[t] * r), (l += P[t] * r);
 					}
-				if (v)
-					for (let r = 0, t = 0; r < 5; r++)
-						for (let e = r ? 0 : 1, n = 2 * T[r]; e < 5 - r; e++, t++) h += _[t] * U[e] * n;
+				if (v) for (let r = 0, t = 0; r < 5; r++) for (let e = r ? 0 : 1, n = 2 * T[r]; e < 5 - r; e++, t++) h += _[t] * U[e] * n;
 				let O = a - (2 / 3) * c,
 					m = (3 * a - O + l) / 2,
 					w = m - l;
-				(M[e] = i(0, 255 * f(1, m))),
-					(M[e + 1] = i(0, 255 * f(1, w))),
-					(M[e + 2] = i(0, 255 * f(1, O))),
-					(M[e + 3] = i(0, 255 * f(1, h)));
+				(M[e] = i(0, 255 * f(1, m))), (M[e + 1] = i(0, 255 * f(1, w))), (M[e + 2] = i(0, 255 * f(1, O))), (M[e + 3] = i(0, 255 * f(1, h)));
 			}
 		return {
 			w: C,

@@ -31,18 +31,12 @@ class p extends (r = o.ZP.Store) {
 	}
 	getNewMemberActions(e) {
 		var t;
-		return null == e || (null === (t = this.getSettings(e)) || void 0 === t ? void 0 : t.newMemberActions) == null
-			? null
-			: null == E[e]
-				? f(e)
-				: E[e];
+		return null == e || (null === (t = this.getSettings(e)) || void 0 === t ? void 0 : t.newMemberActions) == null ? null : null == E[e] ? f(e) : E[e];
 	}
 	getActionForChannel(e, t) {
 		var n;
 		let r = this.getSettings(e);
-		return null == r
-			? null
-			: (null !== (n = r.newMemberActions) && void 0 !== n ? n : []).find((e) => e.channelId === t);
+		return null == r ? null : (null !== (n = r.newMemberActions) && void 0 !== n ? n : []).find((e) => e.channelId === t);
 	}
 	hasMemberAction(e, t) {
 		return null != this.getActionForChannel(e, t);
@@ -72,17 +66,7 @@ class p extends (r = o.ZP.Store) {
 	}
 	getNewMemberAction(e, t) {
 		var n, r, i;
-		return null == e || null == t
-			? null
-			: null !==
-						(i =
-							null === (r = d[e]) || void 0 === r
-								? void 0
-								: null === (n = r.newMemberActions) || void 0 === n
-									? void 0
-									: n.find((e) => e.channelId === t)) && void 0 !== i
-				? i
-				: null;
+		return null == e || null == t ? null : null !== (i = null === (r = d[e]) || void 0 === r ? void 0 : null === (n = r.newMemberActions) || void 0 === n ? void 0 : n.find((e) => e.channelId === t)) && void 0 !== i ? i : null;
 	}
 }
 (s = 'GuildOnboardingHomeSettingsStore'),

@@ -19,16 +19,7 @@ var u = l(481060),
 	h = l(689938);
 function p(n, e, l, p) {
 	let E = (0, r.Z)(null == l ? void 0 : l.getChannelId());
-	if (
-		!s.isPlatformEmbedded ||
-		null == n ||
-		'' === n ||
-		E ||
-		(null == p ? void 0 : p.shouldHideMediaOptions) === !0 ||
-		(null != n && null != (0, a.B0)(n)) ||
-		(null != n && (0, i.zt)(n))
-	)
-		return null;
+	if (!s.isPlatformEmbedded || null == n || '' === n || E || (null == p ? void 0 : p.shouldHideMediaOptions) === !0 || (null != n && null != (0, a.B0)(n)) || (null != n && (0, i.zt)(n))) return null;
 	let I = (0, o.F)(n),
 		M = (l) => {
 			d.default.track(f.rMx.CONTEXT_MENU_LINK_OPENED, {

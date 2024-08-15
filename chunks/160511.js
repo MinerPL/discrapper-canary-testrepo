@@ -47,10 +47,7 @@ function h(e) {
 				null === (e = M.current) || void 0 === e || e.focus();
 			}
 		}, [m]);
-	let A =
-		null == g
-			? u.Z.Messages.TWO_FA_ENTER_SMS_TOKEN_SENDING
-			: u.Z.Messages.TWO_FA_ENTER_SMS_TOKEN_SENT.format({ phoneNumber: g });
+	let A = null == g ? u.Z.Messages.TWO_FA_ENTER_SMS_TOKEN_SENDING : u.Z.Messages.TWO_FA_ENTER_SMS_TOKEN_SENT.format({ phoneNumber: g });
 	return (0, n.jsxs)('form', {
 		onSubmit: (e) => {
 			e.preventDefault(),
@@ -61,9 +58,7 @@ function h(e) {
 				})
 					.catch((e) => {
 						var t, s;
-						v(
-							null !== (s = e.message) && void 0 !== s ? s : null === (t = e.body) || void 0 === t ? void 0 : t.message
-						);
+						v(null !== (s = e.message) && void 0 !== s ? s : null === (t = e.body) || void 0 === t ? void 0 : t.message);
 					})
 					.finally(() => {
 						C(!1);

@@ -17,8 +17,8 @@ var r = n(735250),
 	f = n(639119),
 	h = n(197115),
 	p = n(587446),
-	I = n(594174),
-	m = n(626135),
+	m = n(594174),
+	I = n(626135),
 	T = n(74538),
 	g = n(94795),
 	S = n(327943),
@@ -30,20 +30,17 @@ var r = n(735250),
 	C = n(765630);
 let y = () => {
 		var e, t, n;
-		let i = (0, o.e7)([I.default], () => T.ZP.isPremium(I.default.getCurrentUser())),
+		let i = (0, o.e7)([m.default], () => T.ZP.isPremium(m.default.getCurrentUser())),
 			a = (0, f.N)(),
-			s =
-				(null == a ? void 0 : null === (e = a.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === O.Si.TIER_2;
+			s = (null == a ? void 0 : null === (e = a.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === O.Si.TIER_2;
 		return (0, r.jsx)(h.Z, {
 			size: l.Button.Sizes.MEDIUM,
 			buttonText: i
 				? R.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE
 				: s
 					? (0, T.Rt)({
-							intervalType:
-								null == a ? void 0 : null === (t = a.subscription_trial) || void 0 === t ? void 0 : t.interval,
-							intervalCount:
-								null == a ? void 0 : null === (n = a.subscription_trial) || void 0 === n ? void 0 : n.interval_count
+							intervalType: null == a ? void 0 : null === (t = a.subscription_trial) || void 0 === t ? void 0 : t.interval,
+							intervalCount: null == a ? void 0 : null === (n = a.subscription_trial) || void 0 === n ? void 0 : n.interval_count
 						})
 					: R.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
 			subscriptionTier: O.Si.TIER_2
@@ -93,10 +90,7 @@ let y = () => {
 					},
 					color: l.Button.Colors.PRIMARY,
 					size: l.Button.Sizes.MEDIUM,
-					children:
-						i || t
-							? R.Z.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW
-							: R.Z.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS
+					children: i || t ? R.Z.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW : R.Z.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS
 				})
 			]
 		});
@@ -104,7 +98,7 @@ let y = () => {
 function b(e) {
 	let { isCoachmark: t, markAsDismissed: n } = e,
 		{ analyticsLocations: a } = (0, E.ZP)(_.Z.APP_ICON_EDITOR),
-		u = (0, o.e7)([I.default], () => I.default.getCurrentUser()),
+		u = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
 		{
 			isUpsellPreview: f,
 			isEditorOpen: h,
@@ -116,7 +110,7 @@ function b(e) {
 		}));
 	i.useEffect(() => {
 		if (!!f)
-			m.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
+			I.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
 				type: O.cd.APP_ICON_UPSELL,
 				location_stack: a
 			});

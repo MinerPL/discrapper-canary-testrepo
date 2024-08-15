@@ -72,8 +72,7 @@ function k(e) {
 				n.forEach(function (e) {
 					console.error('Styling method "'.concat(e, '" is deprecated, use "theme" property instead')),
 						(t[a[e]] = function (t) {
-							for (var a = t.style, n = arguments.length, s = Array(n > 1 ? n - 1 : 0), o = 1; o < n; o++)
-								s[o - 1] = arguments[o];
+							for (var a = t.style, n = arguments.length, s = Array(n > 1 ? n - 1 : 0), o = 1; o < n; o++) s[o - 1] = arguments[o];
 							return { style: O(O({}, a), r[e].apply(r, s)) };
 						});
 				})),
@@ -98,10 +97,7 @@ var E = (function (e) {
 			function () {
 				var e,
 					a = (0, u.Z)(t);
-				return (
-					(e = r ? Reflect.construct(a, arguments, (0, u.Z)(this).constructor) : a.apply(this, arguments)),
-					(0, c.Z)(this, e)
-				);
+				return (e = r ? Reflect.construct(a, arguments, (0, u.Z)(this).constructor) : a.apply(this, arguments)), (0, c.Z)(this, e);
 			});
 	function b(e) {
 		var t;

@@ -15,6 +15,5 @@ function o(e) {
 function l(e) {
 	var n;
 	let t = null == e ? void 0 : null === (n = e.renewalMutations) || void 0 === n ? void 0 : n.items;
-	if (null != t)
-		return i()(t.length <= 1, 'more than 1 renewal mutation for role subscription'), null == t ? void 0 : t[0].planId;
+	if (null != t) return i()(t.length <= 1, 'more than 1 renewal mutation for role subscription'), null == t ? void 0 : t[0].planId;
 }

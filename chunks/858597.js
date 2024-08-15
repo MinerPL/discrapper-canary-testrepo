@@ -135,9 +135,7 @@ t.Z = function (e) {
 				{
 					title: x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_TITLE,
 					subTitle: x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_SUBTITLE,
-					buttonText: m
-						? x.Z.Messages.INAPPROPRIATE_CONVERSATION_UNBLOCK
-						: x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_TITLE,
+					buttonText: m ? x.Z.Messages.INAPPROPRIATE_CONVERSATION_UNBLOCK : x.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_TITLE,
 					buttonColor: i.ButtonColors.BRAND,
 					onPress: () => {
 						m

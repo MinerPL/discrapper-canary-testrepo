@@ -26,8 +26,8 @@ var r = n(735250),
 	f = n(71619),
 	h = n(340797),
 	p = n(98278),
-	I = n(869765),
-	m = n(243317),
+	m = n(869765),
+	I = n(243317),
 	T = n(621853),
 	g = n(484459),
 	S = n(184301),
@@ -51,19 +51,7 @@ var r = n(735250),
 	B = n(438379),
 	F = n(121282);
 function V(e) {
-	let {
-		avatarSrc: t,
-		avatarDecorationSrc: n,
-		compact: i,
-		onClick: a,
-		onContextMenu: o,
-		onMouseDown: l,
-		onMouseEnter: u,
-		onMouseLeave: c,
-		onKeyDown: d,
-		showCommunicationDisabledStyles: _ = !1,
-		className: E
-	} = e;
+	let { avatarSrc: t, avatarDecorationSrc: n, compact: i, onClick: a, onContextMenu: o, onMouseDown: l, onMouseEnter: u, onMouseLeave: c, onKeyDown: d, showCommunicationDisabledStyles: _ = !1, className: E } = e;
 	return (0, r.jsxs)(r.Fragment, {
 		children: [
 			(0, r.jsx)('img', {
@@ -94,17 +82,7 @@ function V(e) {
 	});
 }
 function H(e, t, n) {
-	let {
-		message: i,
-		channel: a,
-		author: s,
-		compact: o = !1,
-		onContextMenu: l,
-		showUsernamePopout: u,
-		roleIcon: c,
-		onClickUsername: d,
-		onPopoutRequestClose: _
-	} = e;
+	let { message: i, channel: a, author: s, compact: o = !1, onContextMenu: l, showUsernamePopout: u, roleIcon: c, onClickUsername: d, onPopoutRequestClose: _ } = e;
 	return (0, r.jsxs)(r.Fragment, {
 		children: [
 			(0, r.jsx)(M.Z, {
@@ -135,21 +113,7 @@ function H(e, t, n) {
 	});
 }
 function Z(e) {
-	let {
-		message: t,
-		avatar: n,
-		username: i,
-		usernameSpanId: a,
-		usernameClassName: o,
-		compact: l,
-		showTimestamp: c,
-		showTimestampOnHover: d,
-		ariaLabelledBy: _,
-		ariaDescribedBy: E,
-		className: f,
-		messageClassname: h,
-		badges: p
-	} = e;
+	let { message: t, avatar: n, username: i, usernameSpanId: a, usernameClassName: o, compact: l, showTimestamp: c, showTimestampOnHover: d, ariaLabelledBy: _, ariaDescribedBy: E, className: f, messageClassname: h, badges: p } = e;
 	return (0, r.jsxs)(r.Fragment, {
 		children: [
 			!l && n,
@@ -221,18 +185,7 @@ function j(e) {
 	});
 }
 function W(e) {
-	let {
-			message: t,
-			repliedMessage: n,
-			compact: a = !1,
-			renderPopout: p,
-			showTimestampOnHover: T,
-			roleIcon: g,
-			subscribeToGroupId: U,
-			hideTimestamp: F,
-			className: Y,
-			channel: W
-		} = e,
+	let { message: t, repliedMessage: n, compact: a = !1, renderPopout: p, showTimestampOnHover: T, roleIcon: g, subscribeToGroupId: U, hideTimestamp: F, className: Y, channel: W } = e,
 		K = i.useMemo(() => (null != p ? (e) => p(e, t) : void 0), [p, t]),
 		[, z] = (0, f.ZP)(t.author.id, e.guildId),
 		q = (0, l.e7)([v.Z], () => v.Z.getGuild(e.guildId), [e.guildId]),
@@ -241,17 +194,7 @@ function W(e) {
 		$ = (function (e) {
 			var t, n;
 			let { props: a, guildId: s, handleRenderPopout: _, showCommunicationDisabledStyles: E = !1, className: f } = e,
-				{
-					message: h,
-					author: p,
-					compact: I = !1,
-					subscribeToGroupId: m,
-					animate: T = !0,
-					onContextMenu: g,
-					onClickAvatar: v,
-					onPopoutRequestClose: O,
-					showAvatarPopout: R
-				} = a,
+				{ message: h, author: p, compact: m = !1, subscribeToGroupId: I, animate: T = !0, onContextMenu: g, onClickAvatar: v, onPopoutRequestClose: O, showAvatarPopout: R } = a,
 				[D, L] = i.useState(!1),
 				{ analyticsLocations: b } = (0, d.ZP)(c.Z.AVATAR),
 				M = (0, l.e7)([N.ZP], () => {
@@ -261,7 +204,7 @@ function W(e) {
 				P = null != h.messageReference && null != h.webhookId && h.hasFlag(G.iLy.IS_CROSSPOST),
 				U = h.author,
 				{ id: w } = U,
-				x = I ? 32 : 80,
+				x = m ? 32 : 80,
 				{
 					avatarSrc: k,
 					avatarDecorationSrc: B,
@@ -270,7 +213,7 @@ function W(e) {
 					user: U,
 					guildId: s,
 					size: x,
-					animateOnHover: null != m ? !D : !T,
+					animateOnHover: null != I ? !D : !T,
 					showPending: !0
 				}),
 				H = h.isInteractionPlaceholder(),
@@ -287,22 +230,11 @@ function W(e) {
 							? t
 							: k
 						: k;
-				}, [
-					H,
-					null === (t = h.application) || void 0 === t ? void 0 : t.icon,
-					null === (n = h.application) || void 0 === n ? void 0 : n.id,
-					U.avatar,
-					x,
-					k
-				]);
+				}, [H, null === (t = h.application) || void 0 === t ? void 0 : t.icon, null === (n = h.application) || void 0 === n ? void 0 : n.id, U.avatar, x, k]);
 			return (i.useEffect(() => {
-				if (null != m)
-					return (
-						y.S.subscribeKeyed(G.LPv.ANIMATE_CHAT_AVATAR, ''.concat(m, ':').concat(w), L),
-						() => void y.S.unsubscribeKeyed(G.LPv.ANIMATE_CHAT_AVATAR, ''.concat(m, ':').concat(w), L)
-					);
-			}, [w, m]),
-			I && !M)
+				if (null != I) return y.S.subscribeKeyed(G.LPv.ANIMATE_CHAT_AVATAR, ''.concat(I, ':').concat(w), L), () => void y.S.unsubscribeKeyed(G.LPv.ANIMATE_CHAT_AVATAR, ''.concat(I, ':').concat(w), L);
+			}, [w, I]),
+			m && !M)
 				? void 0
 				: null != _ && null != R
 					? (0, r.jsx)(d.Gt, {
@@ -336,7 +268,7 @@ function W(e) {
 										...F,
 										avatarSrc: Z,
 										avatarDecorationSrc: B,
-										compact: I,
+										compact: m,
 										onClick: v,
 										onContextMenu: g,
 										onMouseDown: e.onMouseDown,
@@ -352,7 +284,7 @@ function W(e) {
 								...F,
 								avatarSrc: Z,
 								avatarDecorationSrc: B,
-								compact: I,
+								compact: m,
 								onClick: v,
 								onContextMenu: g,
 								onMouseDown: void 0,
@@ -460,14 +392,14 @@ function W(e) {
 				)
 			);
 	let eo = [];
-	(0, D.yE)(t.flags, G.iLy.SUPPRESS_NOTIFICATIONS) && eo.push((0, r.jsx)(m.Z, {}, 'suppress-notifications'));
+	(0, D.yE)(t.flags, G.iLy.SUPPRESS_NOTIFICATIONS) && eo.push((0, r.jsx)(I.Z, {}, 'suppress-notifications'));
 	let el = {};
 	(el[M.a.SYSTEM_TAG] = et), (el[M.a.BADGES] = en);
 	let eu = H(e, K, el),
 		ec = (0, P.XX)(t, U),
 		ed = (0, P.Dv)(t),
 		e_ = F ? ''.concat(ec) : ''.concat(ec, ' ').concat(ed),
-		eE = (null == n ? void 0 : n.state) === I.Y.LOADED ? (0, P.Gq)(t) : void 0;
+		eE = (null == n ? void 0 : n.state) === m.Y.LOADED ? (0, P.Gq)(t) : void 0;
 	return (0, r.jsx)(Z, {
 		message: t,
 		avatar: $,
@@ -485,9 +417,7 @@ function W(e) {
 										...e,
 										className: a ? B.compactCommunicationDisabled : B.communicationDisabled
 									}),
-									(0, r.jsx)(u.HiddenVisually, {
-										children: k.Z.Messages.GUILD_COMMUNICATION_DISABLED_BOTTOM_SHEET_TITLE
-									})
+									(0, r.jsx)(u.HiddenVisually, { children: k.Z.Messages.GUILD_COMMUNICATION_DISABLED_BOTTOM_SHEET_TITLE })
 								]
 							})
 					}),

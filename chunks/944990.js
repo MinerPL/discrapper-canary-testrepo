@@ -28,10 +28,7 @@ function i(t, e) {
 								throw Error('Invalid hourCycle');
 						}
 					var i = t.language;
-					return (
-						'root' !== i && (e = t.maximize().region),
-						(n._[e || ''] || n._[i || ''] || n._[''.concat(i, '-001')] || n._['001'])[0]
-					);
+					return 'root' !== i && (e = t.maximize().region), (n._[e || ''] || n._[i || ''] || n._[''.concat(i, '-001')] || n._['001'])[0];
 				})(e);
 			for (('H' == c || 'k' == c) && (u = 0); u-- > 0; ) r += 'a';
 			for (; s-- > 0; ) r = c + r;

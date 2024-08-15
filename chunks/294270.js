@@ -13,11 +13,11 @@ let E = 15 * l.Z.Millis.SECOND,
 	f = 15 * l.Z.Millis.SECOND,
 	h = ['\uD83C\uDDE9', '\uD83C\uDDF4', '\uD83C\uDDF9', '\uD83C\uDDE6'],
 	p = h.length,
-	I = function (e, t) {
+	m = function (e, t) {
 		let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
 		return ''.concat(e, ':').concat(t, ':').concat(n);
 	},
-	m = new a.V7(),
+	I = new a.V7(),
 	T = [],
 	g = {},
 	S = (0, u.tu)('highfive_whistle', 'highfive_whistle', 0.6),
@@ -30,7 +30,7 @@ function N(e) {
 		if (l && (0, _.Z)(t.name))
 			return (function (e, t, n) {
 				var r;
-				let i = I(t, n);
+				let i = m(t, n);
 				if (null != d.Z.getWaitingHighFive(n, t)) return;
 				let [s, o] =
 					null !==
@@ -49,14 +49,12 @@ function N(e) {
 					(g[t] = r), r.delay();
 				}
 			})(t.name, r, n);
-		r === s &&
-			((T = [...T, t.name].slice(-1 * p)),
-			i().isEqual(T, h) ? (S.play(), m.stop(), (T = []), (0, c.ME)(!l)) : m.start(E, () => (T = [])));
+		r === s && ((T = [...T, t.name].slice(-1 * p)), i().isEqual(T, h) ? (S.play(), I.stop(), (T = []), (0, c.ME)(!l)) : I.start(E, () => (T = [])));
 	}
 }
 function v(e) {
 	let { completingUserId: t, waitingUserId: n, channelId: r } = e,
-		i = I(''.concat(t).concat(n), r, !0);
+		i = m(''.concat(t).concat(n), r, !0);
 	(g[i] = new a.sW(550, () => {
 		delete g[i], (0, c.hu)(t, n, r);
 	})),

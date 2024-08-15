@@ -19,23 +19,15 @@ function u(e) {
 	return (0, r.e7)([s.ZP, i.Z, o.default], () => {
 		var t, n, r, a;
 		let u = s.ZP.isOptInEnabled(e),
-			c =
-				null !== (r = null === (t = i.Z.getGuild(e)) || void 0 === t ? void 0 : t.hasFeature(l.oNc.COMMUNITY)) &&
-				void 0 !== r &&
-				r,
-			d =
-				null !== (a = null === (n = o.default.getCurrentUser()) || void 0 === n ? void 0 : n.isStaff()) &&
-				void 0 !== a &&
-				a;
+			c = null !== (r = null === (t = i.Z.getGuild(e)) || void 0 === t ? void 0 : t.hasFeature(l.oNc.COMMUNITY)) && void 0 !== r && r,
+			d = null !== (a = null === (n = o.default.getCurrentUser()) || void 0 === n ? void 0 : n.isStaff()) && void 0 !== a && a;
 		return u && (c || d);
 	});
 }
 function c(e) {
 	let t = i.Z.getGuild(e),
 		n = o.default.getCurrentUser();
-	return (
-		null != e && null != t && null != n && (t.hasFeature(l.oNc.COMMUNITY) || n.isStaff()) && s.ZP.isOptInEnabled(e)
-	);
+	return null != e && null != t && null != n && (t.hasFeature(l.oNc.COMMUNITY) || n.isStaff()) && s.ZP.isOptInEnabled(e);
 }
 function d(e) {
 	return (0, r.e7)([i.Z, a.Z], () => {

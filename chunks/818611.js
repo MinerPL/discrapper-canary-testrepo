@@ -13,8 +13,8 @@ var r = n(735250),
 	f = n(74538),
 	h = n(864106),
 	p = n(439959),
-	I = n(125988),
-	m = n(689938),
+	m = n(125988),
+	I = n(689938),
 	T = n(357038);
 let g = () => 80,
 	S = (e) => {
@@ -37,7 +37,7 @@ let g = () => 80,
 			v = s === p.$0.PREMIUM_PURCHASE && !N,
 			O = i.useRef(null),
 			R = (0, d.Z)(null != a ? a : O),
-			{ avatarDecorationSrc: C } = (0, I.Z)({
+			{ avatarDecorationSrc: C } = (0, m.Z)({
 				user: t,
 				avatarDecorationOverride: n,
 				size: 80,
@@ -66,7 +66,7 @@ let g = () => 80,
 											size: 'xxs',
 											color: 'currentColor'
 										}),
-										m.Z.Messages.NEW
+										I.Z.Messages.NEW
 									]
 								})
 							})
@@ -110,8 +110,8 @@ t.Z = (e) => {
 		paddingVertical: 0,
 		removeEdgeItemGutters: !0,
 		renderItem: (e, i, u, E) => {
-			let { section: f, items: I } = d[e];
-			return (0, o.EQ)(I[i])
+			let { section: f, items: m } = d[e];
+			return (0, o.EQ)(m[i])
 				.with(p.Tm, () =>
 					(0, r.jsxs)(
 						S,
@@ -128,9 +128,7 @@ t.Z = (e) => {
 								(0, r.jsx)(c.Text, {
 									variant: 'text-xs/normal',
 									color: 'header-primary',
-									children: (0, h.ad)(t, n)
-										? m.Z.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION
-										: m.Z.Messages.NONE
+									children: (0, h.ad)(t, n) ? I.Z.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : I.Z.Messages.NONE
 								})
 							]
 						},
@@ -154,7 +152,7 @@ t.Z = (e) => {
 								(0, r.jsx)(c.Text, {
 									variant: 'text-xs/normal',
 									color: 'header-primary',
-									children: m.Z.Messages.COLLECTIBLES_SHOP
+									children: I.Z.Messages.COLLECTIBLES_SHOP
 								})
 							]
 						},

@@ -28,17 +28,7 @@ function f(e) {
 		{ reducedMotion: k } = o.useContext(d.AccessibilityPreferencesContext),
 		Z = (0, s.e7)([v.ZP], () => {
 			var e, n, r, o;
-			return (
-				(null === (e = t.emoji) || void 0 === e ? void 0 : e.id) != null &&
-				null !==
-					(o =
-						null === (n = v.ZP.getCustomEmojiById(null === (r = t.emoji) || void 0 === r ? void 0 : r.id)) ||
-						void 0 === n
-							? void 0
-							: n.animated) &&
-				void 0 !== o &&
-				o
-			);
+			return (null === (e = t.emoji) || void 0 === e ? void 0 : e.id) != null && null !== (o = null === (n = v.ZP.getCustomEmojiById(null === (r = t.emoji) || void 0 === r ? void 0 : r.id)) || void 0 === n ? void 0 : n.animated) && void 0 !== o && o;
 		}),
 		y = (0, p.Z)(n, 1000),
 		T = null == y || null == t.roleIds ? 0 : Math.max(...t.roleIds.map((e) => y[e])),

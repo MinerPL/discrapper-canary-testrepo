@@ -93,18 +93,10 @@ function er(e) {
 					(setTimeout(() => {
 						if (t.current instanceof _.TextAreaAutosize) {
 							var e, n, a, s;
-							null === (n = t.current) ||
-								void 0 === n ||
-								null === (e = n._textArea) ||
-								void 0 === e ||
-								e.setSelectionRange(l.length, l.length),
-								null === (s = t.current) || void 0 === s || null === (a = s._textArea) || void 0 === a || a.focus();
+							null === (n = t.current) || void 0 === n || null === (e = n._textArea) || void 0 === e || e.setSelectionRange(l.length, l.length), null === (s = t.current) || void 0 === s || null === (a = s._textArea) || void 0 === a || a.focus();
 						}
 					}, 0),
-					((o && l.length > 0) ||
-						(i.textValue.trim().length > 0 && i.textValue.trim() !== a) ||
-						y.Z.getUploads(e.id, L.d.FirstThreadMessage).length > 0) &&
-						r());
+					((o && l.length > 0) || (i.textValue.trim().length > 0 && i.textValue.trim() !== a) || y.Z.getUploads(e.id, L.d.FirstThreadMessage).length > 0) && r());
 			}, [n, e.id, a, t]);
 		})(t, o),
 		j = (function (e) {
@@ -125,13 +117,9 @@ function er(e) {
 					let { content: i } = b.ZP.parse(e, t);
 					if (((t = i), null == a || 0 === a.length)) {
 						var o;
-						a =
-							null === (o = M.Z.getStickerPreview(e.id, es.drafts.type)) || void 0 === o ? void 0 : o.map((e) => e.id);
+						a = null === (o = M.Z.getStickerPreview(e.id, es.drafts.type)) || void 0 === o ? void 0 : o.map((e) => e.id);
 					}
-					if (
-						((null == s || 0 === s.length) && (s = y.Z.getUploads(e.id, L.d.FirstThreadMessage)),
-						null != s && s.length > 0 && e.isMediaChannel())
-					) {
+					if (((null == s || 0 === s.length) && (s = y.Z.getUploads(e.id, L.d.FirstThreadMessage)), null != s && s.length > 0 && e.isMediaChannel())) {
 						let e = s.findIndex((e) => !0 === e.isThumbnail);
 						if (e > -1) {
 							let t = s[e];
@@ -152,17 +140,7 @@ function er(e) {
 			);
 			return s.useCallback(
 				async (t, s, l) => {
-					let {
-							setNameError: i,
-							setMessageError: o,
-							setSubmitting: c,
-							resetFormState: d,
-							formOpen: u,
-							setFormOpen: m,
-							setPreviewing: h,
-							setFormOpenFromUserAction: _,
-							setGuidelinesOpen: g
-						} = n.getState(),
+					let { setNameError: i, setMessageError: o, setSubmitting: c, resetFormState: d, formOpen: u, setFormOpen: m, setPreviewing: h, setFormOpenFromUserAction: _, setGuidelinesOpen: g } = n.getState(),
 						x = G.Z.hasSeen(e.id);
 					if (!u)
 						return (
@@ -215,10 +193,7 @@ function er(e) {
 					} catch (t) {
 						var E, N;
 						return (
-							(null === (E = t.body) || void 0 === E ? void 0 : E.code) === ee.evJ.AUTOMOD_TITLE_BLOCKED
-								? i((0, H.Gx)(t.body, e))
-								: (null === (N = t.body) || void 0 === N ? void 0 : N.code) === ee.evJ.AUTOMOD_MESSAGE_BLOCKED &&
-									o((0, H.Gx)(t.body, e)),
+							(null === (E = t.body) || void 0 === E ? void 0 : E.code) === ee.evJ.AUTOMOD_TITLE_BLOCKED ? i((0, H.Gx)(t.body, e)) : (null === (N = t.body) || void 0 === N ? void 0 : N.code) === ee.evJ.AUTOMOD_MESSAGE_BLOCKED && o((0, H.Gx)(t.body, e)),
 							{
 								shouldClear: !1,
 								shouldRefocus: !0
@@ -304,15 +279,7 @@ let el = s.memo(function (e) {
 				hasClickedForm: d,
 				submitting: u
 			} = (0, Y.xH)((e) => {
-				let {
-					formOpen: t,
-					nameError: n,
-					name: a,
-					previewing: s,
-					textAreaState: r,
-					hasClickedForm: l,
-					submitting: i
-				} = e;
+				let { formOpen: t, nameError: n, name: a, previewing: s, textAreaState: r, hasClickedForm: l, submitting: i } = e;
 				return {
 					formOpen: t,
 					nameError: n,
@@ -350,13 +317,7 @@ let el = s.memo(function (e) {
 						color: 'currentColor',
 						className: ea.searchIcon
 					});
-				if (
-					!l &&
-					(i.trim().length > 0 ||
-						(o.textValue.trim().length > 0 && o.textValue.trim() !== h) ||
-						y.Z.getUploads(t.id, L.d.FirstThreadMessage).length > 0) &&
-					d
-				)
+				if (!l && (i.trim().length > 0 || (o.textValue.trim().length > 0 && o.textValue.trim() !== h) || y.Z.getUploads(t.id, L.d.FirstThreadMessage).length > 0) && d)
 					return (0, a.jsx)(_.PencilIcon, {
 						size: 'md',
 						color: 'currentColor',
@@ -397,15 +358,7 @@ let el = s.memo(function (e) {
 				textAreaState: m,
 				previewing: g
 			} = (0, Y.xH)((e) => {
-				let {
-					formOpen: t,
-					nameError: n,
-					name: a,
-					previewing: s,
-					textAreaState: r,
-					hasClickedForm: l,
-					submitting: i
-				} = e;
+				let { formOpen: t, nameError: n, name: a, previewing: s, textAreaState: r, hasClickedForm: l, submitting: i } = e;
 				return {
 					formOpen: t,
 					nameError: n,
@@ -426,24 +379,14 @@ let el = s.memo(function (e) {
 			event: ee.CkL.FOCUS_COMPOSER_TITLE,
 			handler: () => {
 				var e;
-				let t =
-					n.current instanceof _.TextAreaAutosize
-						? null === (e = n.current) || void 0 === e
-							? void 0
-							: e._textArea
-						: n.current;
-				null == t || t.focus(),
-					x.getState().setTitleFocused(!0),
-					x.getState().setFormOpen(!0),
-					x.getState().setHasClickedForm(!0);
+				let t = n.current instanceof _.TextAreaAutosize ? (null === (e = n.current) || void 0 === e ? void 0 : e._textArea) : n.current;
+				null == t || t.focus(), x.getState().setTitleFocused(!0), x.getState().setFormOpen(!0), x.getState().setHasClickedForm(!0);
 			}
 		});
 		let I = s.useCallback(
 				(e) => {
 					let n = e.clipboardData.files[0];
-					null != n &&
-						n.type.startsWith('image/') &&
-						(e.preventDefault(), (0, k.d)([n], t, L.d.FirstThreadMessage), x.getState().setFormOpenFromUserAction());
+					null != n && n.type.startsWith('image/') && (e.preventDefault(), (0, k.d)([n], t, L.d.FirstThreadMessage), x.getState().setFormOpenFromUserAction());
 				},
 				[t, x]
 			),
@@ -460,11 +403,7 @@ let el = s.memo(function (e) {
 						})
 					: (0, a.jsx)(_.TextArea, {
 							value: u,
-							placeholder: r
-								? i || (m.textValue.length > 0 && m.textValue.trim() !== p)
-									? en.Z.Messages.FORUM_POST_TITLE_PLACEHOLDER_FOCUSED
-									: en.Z.Messages.FORUM_POST_TITLE_PLACEHOLDER_SEARCH
-								: en.Z.Messages.SEARCH,
+							placeholder: r ? (i || (m.textValue.length > 0 && m.textValue.trim() !== p) ? en.Z.Messages.FORUM_POST_TITLE_PLACEHOLDER_FOCUSED : en.Z.Messages.FORUM_POST_TITLE_PLACEHOLDER_SEARCH) : en.Z.Messages.SEARCH,
 							flex: !0,
 							autosize: i,
 							rows: 1,
@@ -503,12 +442,7 @@ let el = s.memo(function (e) {
 											f && !C && x.getState().setGuidelinesOpen(!0),
 											x.getState().setFormOpenFromUserAction(),
 											u.trim().length > 0 && (x.getState().setBodyFocused(!0), null == l || l.focus())));
-								let o =
-									n.current instanceof _.TextAreaAutosize
-										? null === (a = n.current) || void 0 === a
-											? void 0
-											: a._textArea
-										: n.current;
+								let o = n.current instanceof _.TextAreaAutosize ? (null === (a = n.current) || void 0 === a ? void 0 : a._textArea) : n.current;
 								if ('Home' === e.key || 'End' === e.key) {
 									if (null == o) return;
 									if ((e.preventDefault(), e.stopPropagation(), 'Home' === e.key)) o.setSelectionRange(0, 0);
@@ -517,13 +451,7 @@ let el = s.memo(function (e) {
 										o.setSelectionRange(e, e);
 									}
 								}
-								'Escape' === e.key &&
-									!x.getState().submitting &&
-									(null === (s = n.current) || void 0 === s || s.blur(),
-									x.getState().setFormOpen(!1),
-									x.getState().setTitleFocused(!1),
-									x.getState().setBodyFocused(!1),
-									x.getState().setPreviewing(!1));
+								'Escape' === e.key && !x.getState().submitting && (null === (s = n.current) || void 0 === s || s.blur(), x.getState().setFormOpen(!1), x.getState().setTitleFocused(!1), x.getState().setBodyFocused(!1), x.getState().setPreviewing(!1));
 							},
 							error: E,
 							className: ea.title,
@@ -686,24 +614,14 @@ let ec = s.memo(function (e) {
 									promptToUpload: k.d,
 									disabled: r,
 									onKeyDown: (e) => {
-										if (
-											(('ArrowUp' === e.key || 'ArrowDown' === e.key) && e.stopPropagation(),
-											'Home' === e.key || 'End' === e.key)
-										) {
+										if ((('ArrowUp' === e.key || 'ArrowDown' === e.key) && e.stopPropagation(), 'Home' === e.key || 'End' === e.key)) {
 											if (null == i) return;
 											e.preventDefault(), e.stopPropagation();
 											let t = i.getSlateEditor();
 											if (null == t) return;
 											'Home' === e.key ? I.Q.resetSelectionToStart(t) : I.Q.resetSelectionToEnd(t);
 										}
-										C &&
-											'Escape' === e.key &&
-											!T.getState().submitting &&
-											(null == i || i.blur(),
-											T.getState().setFormOpen(!1),
-											T.getState().setTitleFocused(!1),
-											T.getState().setBodyFocused(!1),
-											T.getState().setPreviewing(!1));
+										C && 'Escape' === e.key && !T.getState().submitting && (null == i || i.blur(), T.getState().setFormOpen(!1), T.getState().setTitleFocused(!1), T.getState().setBodyFocused(!1), T.getState().setPreviewing(!1));
 									},
 									autoCompletePosition: 'bottom'
 								})

@@ -70,7 +70,4 @@ function c(e) {
 function d(e) {
 	return 'loaded' === e.status;
 }
-((a = r || (r = {})).TOP_PICKS = 'TOP_PICKS'),
-	(a.GLOBAL_DISCOVERY_TOP_PICKS = 'GLOBAL_DISCOVERY_TOP_PICKS'),
-	((s = i || (i = {})).SHOWN = 'SHOWN'),
-	(s.HIT = 'HIT');
+((a = r || (r = {})).TOP_PICKS = 'TOP_PICKS'), (a.GLOBAL_DISCOVERY_TOP_PICKS = 'GLOBAL_DISCOVERY_TOP_PICKS'), ((s = i || (i = {})).SHOWN = 'SHOWN'), (s.HIT = 'HIT');

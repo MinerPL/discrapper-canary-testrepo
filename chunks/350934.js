@@ -11,10 +11,7 @@ t.Z = {
 		help: ''
 	},
 	check: function (e) {
-		if ('' === (0, r.AB)(e))
-			return ('IMG' === e.tagName && e.hasAttribute('alt')) || (0, o.Uu)(e) || !(0, i.p)(e)
-				? a.w
-				: 'Image has no alternative text';
+		if ('' === (0, r.AB)(e)) return ('IMG' === e.tagName && e.hasAttribute('alt')) || (0, o.Uu)(e) || !(0, i.p)(e) ? a.w : 'Image has no alternative text';
 		return a.w;
 	}
 };

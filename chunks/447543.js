@@ -18,8 +18,8 @@ var r = n(525654),
 	f = n(839426),
 	h = n(625128),
 	p = n(972830),
-	I = n(305325),
-	m = n(281956),
+	m = n(305325),
+	I = n(281956),
 	T = n(931261),
 	g = n(15274),
 	S = n(924301),
@@ -61,20 +61,12 @@ function $(e) {
 			(i.targetType = e.target_type), (i.targetUserId = null === (n = e.target_user) || void 0 === n ? void 0 : n.id);
 			break;
 		case z.Iq.EMBEDDED_APPLICATION:
-			(i.targetType = e.target_type),
-				(i.targetApplicationId = null === (r = e.target_application) || void 0 === r ? void 0 : r.id);
+			(i.targetType = e.target_type), (i.targetApplicationId = null === (r = e.target_application) || void 0 === r ? void 0 : r.id);
 			break;
 		case z.Iq.ROLE_SUBSCRIPTIONS_PURCHASE:
 			i.targetType = e.target_type;
 	}
-	return (
-		(!(null != U.Z.getGuild(null === (t = e.guild) || void 0 === t ? void 0 : t.id)) || e.new_member) &&
-			null != e.channel &&
-			(0, D.zi)(e.channel.type) &&
-			(i.welcomeModalChannelId = e.channel.id),
-		null != e.guild_scheduled_event && (i.guildScheduledEvent = e.guild_scheduled_event),
-		i
-	);
+	return (!(null != U.Z.getGuild(null === (t = e.guild) || void 0 === t ? void 0 : t.id)) || e.new_member) && null != e.channel && (0, D.zi)(e.channel.type) && (i.welcomeModalChannelId = e.channel.id), null != e.guild_scheduled_event && (i.guildScheduledEvent = e.guild_scheduled_event), i;
 }
 function J(e) {
 	let { guildId: t, channel: r, options: i, analyticsLocations: a = [] } = e,
@@ -85,15 +77,7 @@ function J(e) {
 			if ((null == n ? void 0 : n.targetType) === z.Iq.ROLE_SUBSCRIPTIONS_PURCHASE) return W.oC.ROLE_SUBSCRIPTIONS;
 			if ((null == n ? void 0 : n.targetType) == null && !D.tx.has(t.type) && (0, T.s)(e)) return W.oC.GUILD_HOME;
 			let a = b.Z.getChannel(t.id);
-			return G.Z.can(j.Plq.VIEW_CHANNEL, a)
-				? t.id
-				: null !==
-							(i =
-								null === (r = M.ZP.getDefaultChannel(e, !0, j.Plq.CREATE_INSTANT_INVITE)) || void 0 === r
-									? void 0
-									: r.id) && void 0 !== i
-					? i
-					: t.id;
+			return G.Z.can(j.Plq.VIEW_CHANNEL, a) ? t.id : null !== (i = null === (r = M.ZP.getDefaultChannel(e, !0, j.Plq.CREATE_INSTANT_INVITE)) || void 0 === r ? void 0 : r.id) && void 0 !== i ? i : t.id;
 		})(t, r, i),
 		{ targetUserId: u, targetType: c, targetApplicationId: d } = null != i ? i : {},
 		_ = s === j.d4z.GUILD_STAGE_VOICE,
@@ -118,18 +102,12 @@ function J(e) {
 											guildId: t,
 											channelId: l
 										}),
-									c === z.Iq.EMBEDDED_APPLICATION &&
-										null != d &&
-										((0, C.uL)(j.Z5c.CHANNEL(null != t ? t : j.ME, l)),
-										(0, f.Z)(l, d, a, null == i ? void 0 : i.intent));
+									c === z.Iq.EMBEDDED_APPLICATION && null != d && ((0, C.uL)(j.Z5c.CHANNEL(null != t ? t : j.ME, l)), (0, f.Z)(l, d, a, null == i ? void 0 : i.intent));
 							};
-						(0, m.n)(t, [U.Z, w.Z, k.default, P.ZP]) ? (0, I.hk)(t, s) : s();
+						(0, I.n)(t, [U.Z, w.Z, k.default, P.ZP]) ? (0, m.hk)(t, s) : s();
 					});
 			})
-		: (0, E.l5)(o) &&
-			c === z.Iq.EMBEDDED_APPLICATION &&
-			null != d &&
-			((0, C.uL)(j.Z5c.CHANNEL(null != t ? t : j.ME, l)), (0, f.Z)(l, d, a, null == i ? void 0 : i.intent)),
+		: (0, E.l5)(o) && c === z.Iq.EMBEDDED_APPLICATION && null != d && ((0, C.uL)(j.Z5c.CHANNEL(null != t ? t : j.ME, l)), (0, f.Z)(l, d, a, null == i ? void 0 : i.intent)),
 		(function (e, t) {
 			let { type: n } = e,
 				{ transitionTo: r, welcomeModalChannelId: i, guildScheduledEvent: a } = null != t ? t : {},
@@ -138,12 +116,7 @@ function J(e) {
 					source: R.Z.INVITE_ACCEPT,
 					navigationReplace: !0
 				};
-			return (
-				null != i && (o.welcomeModalChannelId = i),
-				s && (o.state = q.Df),
-				null != a && (o.guildScheduledEventId = a.id),
-				(e) => (null != r ? r(e, o) : (0, C.uL)(e, o))
-			);
+			return null != i && (o.welcomeModalChannelId = i), s && (o.state = q.Df), null != a && (o.guildScheduledEventId = a.id), (e) => (null != r ? r(e, o) : (0, C.uL)(e, o));
 		})(
 			r,
 			i
@@ -249,14 +222,11 @@ t.Z = {
 		let n = x.Z.getInvite(e.id);
 		if (null != n && !n.isExpired()) return n.code;
 		let r = { max_age: F.Z.Seconds.DAY },
-			i = await this.createInvite(e.id, r, t).catch(() =>
-				c.Z.dispatch({ type: 'NATIVE_APP_INSTANT_INVITE_GDM_SHARE_FAILED' })
-			);
+			i = await this.createInvite(e.id, r, t).catch(() => c.Z.dispatch({ type: 'NATIVE_APP_INSTANT_INVITE_GDM_SHARE_FAILED' }));
 		return null == i ? void 0 : i.code;
 	},
 	async getAllFriendInvites(e) {
-		if ((await new Promise((e) => c.Z.wait(() => e(null))), x.Z.getFriendInvitesFetching()))
-			return null != X ? X.then((e) => e.body) : Promise.reject(Error('Invalid friend invite fetch request'));
+		if ((await new Promise((e) => c.Z.wait(() => e(null))), x.Z.getFriendInvitesFetching())) return null != X ? X.then((e) => e.body) : Promise.reject(Error('Invalid friend invite fetch request'));
 		(X = u.tn.get({
 			url: j.ANM.FRIEND_INVITES,
 			context: { location: e }
@@ -390,14 +360,7 @@ t.Z = {
 									...e.body,
 									guild_scheduled_event: i
 								},
-								s =
-									null !== (r = null == a ? void 0 : a.guild_id) && void 0 !== r
-										? r
-										: null == a
-											? void 0
-											: null === (t = a.guild) || void 0 === t
-												? void 0
-												: t.id;
+								s = null !== (r = null == a ? void 0 : a.guild_id) && void 0 !== r ? r : null == a ? void 0 : null === (t = a.guild) || void 0 === t ? void 0 : t.id;
 							if (!l && null != s && a.new_member) {
 								let { default: e } = await Promise.resolve().then(n.bind(n, 17181));
 								await e({ guildId: s });
@@ -442,12 +405,7 @@ t.Z = {
 			A.Z.onOpenHubInvite(e);
 			return;
 		}
-		if (
-			null != s &&
-			(null === (r = s.features) || void 0 === r ? void 0 : r.includes(j.oNc.COMMUNITY)) &&
-			(null === (i = s.features) || void 0 === i ? void 0 : i.includes(j.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) &&
-			!s.features.includes(j.oNc.PREVIEW_ENABLED)
-		) {
+		if (null != s && (null === (r = s.features) || void 0 === r ? void 0 : r.includes(j.oNc.COMMUNITY)) && (null === (i = s.features) || void 0 === i ? void 0 : i.includes(j.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) && !s.features.includes(j.oNc.PREVIEW_ENABLED)) {
 			(0, C.uL)(j.Z5c.GUILD_MEMBER_VERIFICATION(s.id, e.code));
 			return;
 		}
@@ -491,10 +449,7 @@ t.Z = {
 			});
 			return;
 		}
-		if (
-			(null === (u = i().os) || void 0 === u ? void 0 : u.family) === 'Android' ||
-			(null === (d = i().os) || void 0 === d ? void 0 : d.family) === 'iOS'
-		) {
+		if ((null === (u = i().os) || void 0 === u ? void 0 : u.family) === 'Android' || (null === (d = i().os) || void 0 === d ? void 0 : d.family) === 'iOS') {
 			let e = null != f ? (0, s.z0)(f) : (0, s.Gk)(),
 				t = (0, o.WS)();
 			(_ = (0, o.ZP)(e, {

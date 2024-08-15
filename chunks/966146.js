@@ -107,8 +107,6 @@ class a {
 		i(this, 'pixelBudget', void 0), i(this, 'ladder', void 0), i(this, 'orderedLadder', void 0);
 		let { width: t, height: n } = e.videoBudget;
 		if (t <= 0 || n <= 0) throw Error('Invalid argument');
-		(this.pixelBudget = t * n),
-			(this.ladder = a.calculateLadder(this.pixelBudget)),
-			(this.orderedLadder = a.calculateOrderedLadder(this.ladder));
+		(this.pixelBudget = t * n), (this.ladder = a.calculateLadder(this.pixelBudget)), (this.orderedLadder = a.calculateOrderedLadder(this.ladder));
 	}
 }

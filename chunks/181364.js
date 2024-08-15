@@ -62,9 +62,7 @@ function h(e) {
 			g();
 		},
 		onNotificationClick: (e, n) => {
-			m('unlock'),
-				t === l.nc.NEWS && s.Z.updateNotificationStatus(n),
-				o.Z.isInstanceUILocked() && s.Z.setInstanceLocked(!1);
+			m('unlock'), t === l.nc.NEWS && s.Z.updateNotificationStatus(n), o.Z.isInstanceUILocked() && s.Z.setInstanceLocked(!1);
 		},
 		onDismissClick: () => {
 			m('dismiss');

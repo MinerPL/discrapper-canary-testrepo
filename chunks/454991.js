@@ -30,9 +30,7 @@ class l {
 	}
 	static update(e) {
 		let t = l.load();
-		'boolean' == typeof e.enabled && (t.enabled = e.enabled),
-			'boolean' == typeof e.legacyEnabled && (t.legacyEnabled = e.legacyEnabled),
-			t.save();
+		'boolean' == typeof e.enabled && (t.enabled = e.enabled), 'boolean' == typeof e.legacyEnabled && (t.legacyEnabled = e.legacyEnabled), t.save();
 	}
 	save() {
 		let e = {
@@ -58,10 +56,7 @@ class l {
 		let n = a.K.get('OverlayStore3');
 		if (null != n) {
 			var r, i;
-			return new l(
-				null !== (r = n.enabled) && void 0 !== r ? r : s.iP,
-				null !== (i = n.legacyEnabled) && void 0 !== i && i
-			);
+			return new l(null !== (r = n.enabled) && void 0 !== r ? r : s.iP, null !== (i = n.legacyEnabled) && void 0 !== i && i);
 		}
 		let o = new l(s.iP, !1);
 		return o.save(), o;

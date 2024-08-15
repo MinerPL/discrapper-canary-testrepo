@@ -25,12 +25,7 @@ e.default = (0, r.Z)(
 			onClose: u.Zy,
 			'aria-label': d.Z.Messages.CHANNEL_ACTIONS_MENU_LABEL,
 			onSelect: r,
-			children: [
-				(0, t.jsx)(l.MenuGroup, { children: c }),
-				(0, t.jsx)(l.MenuGroup, { children: _ }),
-				(0, t.jsx)(l.MenuGroup, { children: Z }),
-				(0, t.jsx)(l.MenuGroup, { children: N })
-			]
+			children: [(0, t.jsx)(l.MenuGroup, { children: c }), (0, t.jsx)(l.MenuGroup, { children: _ }), (0, t.jsx)(l.MenuGroup, { children: Z }), (0, t.jsx)(l.MenuGroup, { children: N })]
 		});
 	},
 	[c.Z.CONTEXT_MENU, c.Z.CHANNEL_LIST_STORE_CHANNEL_MENU]

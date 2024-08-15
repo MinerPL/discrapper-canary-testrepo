@@ -2,104 +2,108 @@ t.r(n), t(47120), t(757143);
 var o = t(735250),
 	r = t(470079),
 	a = t(481060),
-	c = t(239091),
-	i = t(230711),
+	i = t(239091),
+	c = t(230711),
 	l = t(493544),
-	s = t(108843),
-	u = t(100527),
+	u = t(108843),
+	s = t(100527),
 	d = t(906732),
 	_ = t(386506),
 	S = t(366953),
-	E = t(394644),
-	m = t(606669),
-	T = t(53432),
+	g = t(394644),
+	E = t(606669),
+	m = t(53432),
 	I = t(74869),
-	g = t(828064),
-	b = t(308512),
-	M = t(594791),
-	f = t(393431),
-	C = t(981631),
-	p = t(689938);
-n.default = (0, s.Z)(
+	b = t(828064),
+	T = t(308512),
+	f = t(594791),
+	M = t(393431),
+	C = t(69021),
+	p = t(981631),
+	h = t(689938);
+n.default = (0, u.Z)(
 	function (e) {
 		let { webBuildOverride: n, onSelect: t } = e,
-			[s, u] = r.useState(!1),
-			R = (0, g.Z)(),
+			[u, s] = r.useState(!1),
 			Z = (0, b.Z)(),
-			N = (0, T.Z)(),
-			h = (0, m.Z)(),
-			A = (0, f.Z)(),
-			B = (0, M.Z)(),
-			x = (0, I.Z)(),
-			{ analyticsLocations: G } = (0, d.ZP)(),
-			O = r.useMemo(() => (0, S.j)(), []);
-		async function k() {
+			R = (0, T.Z)(),
+			N = (0, m.Z)(),
+			x = (0, E.Z)(),
+			A = (0, M.Z)(),
+			B = (0, f.Z)(),
+			G = (0, I.Z)(),
+			v = (0, C.Z)(),
+			{ analyticsLocations: O } = (0, d.ZP)(),
+			k = r.useMemo(() => (0, S.j)(), []);
+		async function D() {
 			try {
-				u(!0), await (0, _.bF)(), window.location.reload(!0);
+				s(!0), await (0, _.bF)(), window.location.reload(!0);
 			} catch (e) {
-				u(!1);
+				s(!1);
 			}
 		}
-		let v = (e) => {
+		let j = (e) => {
 				switch (e) {
-					case C.oAB.GAMES:
-						return R;
-					case C.oAB.STREAMER_MODE:
+					case p.oAB.GAMES:
 						return Z;
-					case C.oAB.APPEARANCE:
+					case p.oAB.STREAMER_MODE:
+						return R;
+					case p.oAB.APPEARANCE:
 						return N;
-					case C.oAB.ACCESSIBILITY:
-						return h;
-					case C.oAB.VOICE:
-						return A;
-					case C.oAB.TEXT:
-						return B;
-					case C.oAB.EXPERIMENTS:
+					case p.oAB.ACCESSIBILITY:
 						return x;
+					case p.oAB.VOICE:
+						return A;
+					case p.oAB.TEXT:
+						return B;
+					case p.oAB.EXPERIMENTS:
+						return G;
+					case p.oAB.DEVELOPER_OPTIONS:
+						return v;
 					default:
 						return null;
 				}
 			},
-			D = (0, E.VO)()
+			L = (0, g.VO)()
 				.filter((e) => {
 					let { section: n } = e;
 					return n !== l.ID.HEADER && n !== l.ID.CUSTOM && n !== l.ID.DIVIDER && 'logout' !== n;
 				})
 				.filter((e) => null == e.predicate || e.predicate());
 		return (0, o.jsx)(d.Gt, {
-			value: G,
+			value: O,
 			children: (0, o.jsxs)(a.Menu, {
 				navId: 'user-settings-cog',
-				onClose: c.Zy,
-				'aria-label': p.Z.Messages.USER_SETTINGS_ACTIONS_MENU_LABEL,
+				onClose: i.Zy,
+				'aria-label': h.Z.Messages.USER_SETTINGS_ACTIONS_MENU_LABEL,
 				onSelect: t,
 				children: [
-					D.map((e) => {
+					L.map((e) => {
 						let { section: n, label: t, onClick: r } = e,
-							c = n.replace(/\W/gi, '_');
+							i = n.replace(/\W/gi, '_');
 						return (0, o.jsx)(
 							a.MenuItem,
 							{
-								id: c,
+								id: i,
 								label: t,
 								action: () =>
 									null != r
 										? r()
 										: (function (e, n) {
-												let t = Object.values(C.oAB).filter((n) => n === e)[0];
-												null != t && i.Z.open(t, void 0, { analyticsLocations: n });
-											})(n, G),
-								children: v(n)
+												let t = Object.values(p.oAB).filter((n) => n === e)[0];
+												null != t && c.Z.open(t, void 0, { analyticsLocations: n });
+											})(n, O),
+								children: j(n)
 							},
-							c
+							i
 						);
 					}),
-					e.user.isStaff() && O.length > 0
+					e.user.isStaff() && k.length > 0
 						? (0, o.jsx)(a.MenuItem, {
 								label: 'Build overrides',
 								id: 'build_overrides',
 								children: (0, o.jsx)(a.MenuGroup, {
-									children: O.map((e) =>
+									children: k.map((e) =>
 										(0, o.jsx)(
 											a.MenuRadioItem,
 											{
@@ -108,8 +112,7 @@ n.default = (0, s.Z)(
 												label: e.id,
 												checked: (null == n ? void 0 : n.id) === e.id,
 												action: async () => {
-													if ((null == n ? void 0 : n.id) !== e.id)
-														200 === (await (0, _.f0)(e.payload)).status && window.location.reload(!0);
+													if ((null == n ? void 0 : n.id) !== e.id) 200 === (await (0, _.f0)(e.payload)).status && window.location.reload(!0);
 												}
 											},
 											'input-'.concat(e.payload)
@@ -122,9 +125,9 @@ n.default = (0, s.Z)(
 						? (0, o.jsx)(a.MenuGroup, {
 								children: (0, o.jsx)(a.MenuItem, {
 									id: 'clear-build-override',
-									disabled: s,
-									label: p.Z.Messages.CLEAR_BUILD_OVERRIDE,
-									action: k,
+									disabled: u,
+									label: h.Z.Messages.CLEAR_BUILD_OVERRIDE,
+									action: D,
 									color: 'danger'
 								})
 							})
@@ -133,5 +136,5 @@ n.default = (0, s.Z)(
 			})
 		});
 	},
-	[u.Z.CONTEXT_MENU, u.Z.USER_SETTINGS_MENU]
+	[s.Z.CONTEXT_MENU, s.Z.USER_SETTINGS_MENU]
 );

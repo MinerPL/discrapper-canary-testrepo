@@ -12,8 +12,8 @@ var r = n(735250),
 	f = n(592125),
 	h = n(430824),
 	p = n(944486),
-	I = n(709586),
-	m = n(626135),
+	m = n(709586),
+	I = n(626135),
 	T = n(524444),
 	g = n(981631),
 	S = n(176505),
@@ -23,7 +23,7 @@ t.Z = (e) => {
 	let { roleIcon: t, guild: n } = e,
 		{ name: v } = t;
 	i.useEffect(() => {
-		m.default.track(g.rMx.OPEN_POPOUT, {
+		I.default.track(g.rMx.OPEN_POPOUT, {
 			type: 'Role Icon Popout',
 			guild_id: n.id,
 			...(0, o.v_)(f.Z.getChannel(p.Z.getChannelId(n.id)))
@@ -31,9 +31,7 @@ t.Z = (e) => {
 	}, []);
 	let O = (0, a.e7)([h.Z], () => (null != t.roleId ? h.Z.getRole(n.id, t.roleId) : void 0)),
 		R = (0, _.Z)(O),
-		C = R
-			? A.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION_ROLE_SUBSCRIPTIONS.format({ name: v })
-			: A.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION.format({ name: v }),
+		C = R ? A.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION_ROLE_SUBSCRIPTIONS.format({ name: v }) : A.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION.format({ name: v }),
 		y = {
 			...t,
 			src: null == t.src ? t.src : (0, c.o)(t.src, 40),
@@ -91,7 +89,7 @@ t.Z = (e) => {
 						onClick: D,
 						autoFocus: !0,
 						children: [
-							(0, r.jsx)(I.Z, {
+							(0, r.jsx)(m.Z, {
 								width: 14,
 								height: 14,
 								className: N.boosterBadge

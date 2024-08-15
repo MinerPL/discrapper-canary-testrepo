@@ -12,8 +12,8 @@ let E = _.QZA.CLOSED,
 	f = null,
 	h = null,
 	p = {},
-	I = {},
 	m = {},
+	I = {},
 	T = null,
 	g = null,
 	S = !1,
@@ -31,10 +31,10 @@ function D(e) {
 	(h = null !== (t = e.section) && void 0 !== t ? t : h),
 		(C = null !== (n = e.section) && void 0 !== n ? n : h),
 		null != e.subsection && null != h && (p[h] = e.subsection),
-		null != e.scrollPosition && null != h && (I[h] = e.scrollPosition),
+		null != e.scrollPosition && null != h && (m[h] = e.scrollPosition),
 		(A = !!e.openWithoutBackstack),
 		(E = _.QZA.OPEN),
-		(m = {}),
+		(I = {}),
 		(g = {
 			...(T = {
 				[_.oAB.ACCOUNT]: {
@@ -55,22 +55,10 @@ function D(e) {
 		(y = null !== (s = e.impressionSource) && void 0 !== s ? s : null);
 }
 function L() {
-	(E = _.QZA.CLOSED),
-		(S = !1),
-		(T = null),
-		(C = null),
-		(g = null),
-		(f = null),
-		(h = null),
-		(p = {}),
-		(I = {}),
-		(v = null),
-		(O = null),
-		(R = []),
-		(y = null);
+	(E = _.QZA.CLOSED), (S = !1), (T = null), (C = null), (g = null), (f = null), (h = null), (p = {}), (m = {}), (v = null), (O = null), (R = []), (y = null);
 }
 function b() {
-	(E = _.QZA.OPEN), (m = {});
+	(E = _.QZA.OPEN), (I = {});
 }
 class M extends (s = u.ZP.Store) {
 	initialize() {
@@ -92,7 +80,7 @@ class M extends (s = u.ZP.Store) {
 		return null != h ? p[h] : null;
 	}
 	getScrollPosition() {
-		return null != h ? I[h] : null;
+		return null != h ? m[h] : null;
 	}
 	shouldOpenWithoutBackstack() {
 		return A;
@@ -102,9 +90,9 @@ class M extends (s = u.ZP.Store) {
 			submitting: E === _.QZA.SUBMITTING,
 			section: h,
 			subsection: null != h ? p[h] : null,
-			scrollPosition: null != h ? I[h] : null,
+			scrollPosition: null != h ? m[h] : null,
 			settings: g,
-			errors: m,
+			errors: I,
 			hasChanges: this.hasChanges(),
 			openWithoutBackstack: A,
 			analyticsLocation: O,
@@ -139,15 +127,11 @@ class M extends (s = u.ZP.Store) {
 		USER_SETTINGS_MODAL_SUBMIT_FAILURE: function (e) {
 			var t;
 			if (E !== _.QZA.SUBMITTING) return !1;
-			(E = _.QZA.OPEN), (h = _.oAB.ACCOUNT), (m = null !== (t = e.errors) && void 0 !== t ? t : {});
+			(E = _.QZA.OPEN), (h = _.oAB.ACCOUNT), (I = null !== (t = e.errors) && void 0 !== t ? t : {});
 		},
 		USER_SETTINGS_MODAL_SET_SECTION: function (e) {
 			var t;
-			(f = h),
-				(h = e.section),
-				(O = null),
-				(R = null !== (t = e.analyticsLocations) && void 0 !== t ? t : []),
-				null != e.subsection && (p[h] = e.subsection);
+			(f = h), (h = e.section), (O = null), (R = null !== (t = e.analyticsLocations) && void 0 !== t ? t : []), null != e.subsection && (p[h] = e.subsection);
 		},
 		USER_SETTINGS_MODAL_CLEAR_SUBSECTION: function (e) {
 			let { forSection: t } = e;
@@ -155,7 +139,7 @@ class M extends (s = u.ZP.Store) {
 		},
 		USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: function (e) {
 			let { forSection: t } = e;
-			null != t ? delete I[t] : null != h && delete I[h];
+			null != t ? delete m[t] : null != h && delete m[h];
 		},
 		USER_SETTINGS_MODAL_UPDATE_ACCOUNT: function (e) {
 			let { settings: t } = e;

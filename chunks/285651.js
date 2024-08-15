@@ -15,10 +15,7 @@ var r,
 	s = n(74538),
 	o = n(378233),
 	l = n(981631);
-((r = i || (i = {}))[(r.SENDABLE = 0)] = 'SENDABLE'),
-	(r[(r.SENDABLE_WITH_PREMIUM = 1)] = 'SENDABLE_WITH_PREMIUM'),
-	(r[(r.NONSENDABLE = 2)] = 'NONSENDABLE'),
-	(r[(r.SENDABLE_WITH_BOOSTED_GUILD = 3)] = 'SENDABLE_WITH_BOOSTED_GUILD');
+((r = i || (i = {}))[(r.SENDABLE = 0)] = 'SENDABLE'), (r[(r.SENDABLE_WITH_PREMIUM = 1)] = 'SENDABLE_WITH_PREMIUM'), (r[(r.NONSENDABLE = 2)] = 'NONSENDABLE'), (r[(r.SENDABLE_WITH_BOOSTED_GUILD = 3)] = 'SENDABLE_WITH_BOOSTED_GUILD');
 let u = (e, t, n) => {
 		if (null == t) return 2;
 		let r = s.ZP.canUseCustomStickersEverywhere(t);

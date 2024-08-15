@@ -9,10 +9,7 @@ var r = n(527462),
 function u(e, t) {
 	for (var n = 0; n < t.length; n++) {
 		var r = t[n];
-		(r.enumerable = r.enumerable || !1),
-			(r.configurable = !0),
-			'value' in r && (r.writable = !0),
-			Object.defineProperty(e, r.key, r);
+		(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 	}
 }
 function a(e, t, n) {
@@ -40,16 +37,10 @@ var c = (function () {
 				'hooks',
 				(0, r.p)({
 					dragSource: function (e, n) {
-						t.clearDragSource(),
-							(t.dragSourceOptions = n || null),
-							(0, i.d)(e) ? (t.dragSourceRef = e) : (t.dragSourceNode = e),
-							t.reconnectDragSource();
+						t.clearDragSource(), (t.dragSourceOptions = n || null), (0, i.d)(e) ? (t.dragSourceRef = e) : (t.dragSourceNode = e), t.reconnectDragSource();
 					},
 					dragPreview: function (e, n) {
-						t.clearDragPreview(),
-							(t.dragPreviewOptions = n || null),
-							(0, i.d)(e) ? (t.dragPreviewRef = e) : (t.dragPreviewNode = e),
-							t.reconnectDragPreview();
+						t.clearDragPreview(), (t.dragPreviewOptions = n || null), (0, i.d)(e) ? (t.dragPreviewRef = e) : (t.dragPreviewNode = e), t.reconnectDragPreview();
 					}
 				})
 			),
@@ -119,11 +110,7 @@ var c = (function () {
 							this.lastConnectedDragSource = e;
 							return;
 						}
-						t &&
-							((this.lastConnectedHandlerId = this.handlerId),
-							(this.lastConnectedDragSource = e),
-							(this.lastConnectedDragSourceOptions = this.dragSourceOptions),
-							(this.dragSourceUnsubscribe = this.backend.connectDragSource(this.handlerId, e, this.dragSourceOptions)));
+						t && ((this.lastConnectedHandlerId = this.handlerId), (this.lastConnectedDragSource = e), (this.lastConnectedDragSourceOptions = this.dragSourceOptions), (this.dragSourceUnsubscribe = this.backend.connectDragSource(this.handlerId, e, this.dragSourceOptions)));
 					}
 				}
 			},
@@ -137,15 +124,7 @@ var c = (function () {
 							this.lastConnectedDragPreview = e;
 							return;
 						}
-						t &&
-							((this.lastConnectedHandlerId = this.handlerId),
-							(this.lastConnectedDragPreview = e),
-							(this.lastConnectedDragPreviewOptions = this.dragPreviewOptions),
-							(this.dragPreviewUnsubscribe = this.backend.connectDragPreview(
-								this.handlerId,
-								e,
-								this.dragPreviewOptions
-							)));
+						t && ((this.lastConnectedHandlerId = this.handlerId), (this.lastConnectedDragPreview = e), (this.lastConnectedDragPreviewOptions = this.dragPreviewOptions), (this.dragPreviewUnsubscribe = this.backend.connectDragPreview(this.handlerId, e, this.dragPreviewOptions)));
 					}
 				}
 			},
@@ -188,11 +167,7 @@ var c = (function () {
 			{
 				key: 'disconnectDragPreview',
 				value: function () {
-					this.dragPreviewUnsubscribe &&
-						(this.dragPreviewUnsubscribe(),
-						(this.dragPreviewUnsubscribe = void 0),
-						(this.dragPreviewNode = null),
-						(this.dragPreviewRef = null));
+					this.dragPreviewUnsubscribe && (this.dragPreviewUnsubscribe(), (this.dragPreviewUnsubscribe = void 0), (this.dragPreviewNode = null), (this.dragPreviewRef = null));
 				}
 			},
 			{

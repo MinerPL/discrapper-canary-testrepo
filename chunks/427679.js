@@ -35,9 +35,7 @@ class h extends (s = o.ZP.Store) {
 	}
 	isPublic(e) {
 		var t;
-		return (
-			(null === (t = this.getStageInstanceByChannel(e)) || void 0 === t ? void 0 : t.privacy_level) === u.j8.PUBLIC
-		);
+		return (null === (t = this.getStageInstanceByChannel(e)) || void 0 === t ? void 0 : t.privacy_level) === u.j8.PUBLIC;
 	}
 	getStageInstancesByGuild(e) {
 		var t;

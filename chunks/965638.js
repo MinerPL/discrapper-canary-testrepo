@@ -17,8 +17,6 @@ function l(e) {
 	var t;
 	let n = o(e),
 		a = (0, r.e7)([i.Z], () => (null != e ? i.Z.getGuildIncident(e.id) : null)),
-		l =
-			(null == e ? void 0 : null === (t = e.hasFeature) || void 0 === t ? void 0 : t.call(e, s.oNc.INVITES_DISABLED)) ||
-			((null == a ? void 0 : a.invitesDisabledUntil) != null && new Date(a.invitesDisabledUntil) > new Date());
+		l = (null == e ? void 0 : null === (t = e.hasFeature) || void 0 === t ? void 0 : t.call(e, s.oNc.INVITES_DISABLED)) || ((null == a ? void 0 : a.invitesDisabledUntil) != null && new Date(a.invitesDisabledUntil) > new Date());
 	return n && l;
 }

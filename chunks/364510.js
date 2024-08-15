@@ -48,18 +48,10 @@ function l(e) {
 		} else if ((t = e.match(/^#([a-f0-9]{3,4})$/i))) {
 			for (r = 0, n = (t = t[1])[3]; r < 3; r++) o[r] = parseInt(t[r] + t[r], 16);
 			n && (o[3] = parseInt(n + n, 16) / 255);
-		} else if (
-			(t = e.match(
-				/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/
-			))
-		) {
+		} else if ((t = e.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) {
 			for (r = 0; r < 3; r++) o[r] = parseInt(t[r + 1], 0);
 			t[4] && (t[5] ? (o[3] = 0.01 * parseFloat(t[4])) : (o[3] = parseFloat(t[4])));
-		} else if (
-			(t = e.match(
-				/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/
-			))
-		) {
+		} else if ((t = e.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) {
 			for (r = 0; r < 3; r++) o[r] = Math.round(2.55 * parseFloat(t[r + 1]));
 			t[4] && (t[5] ? (o[3] = 0.01 * parseFloat(t[4])) : (o[3] = parseFloat(t[4])));
 		} else if (!(t = e.match(/^(\w+)$/))) return null;
@@ -69,33 +61,19 @@ function l(e) {
 	}),
 	(c.get.hsl = function (e) {
 		if (!e) return null;
-		var t = e.match(
-			/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/
-		);
+		var t = e.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
 		if (t) {
 			var r = parseFloat(t[4]);
-			return [
-				((parseFloat(t[1]) % 360) + 360) % 360,
-				u(parseFloat(t[2]), 0, 100),
-				u(parseFloat(t[3]), 0, 100),
-				u(isNaN(r) ? 1 : r, 0, 1)
-			];
+			return [((parseFloat(t[1]) % 360) + 360) % 360, u(parseFloat(t[2]), 0, 100), u(parseFloat(t[3]), 0, 100), u(isNaN(r) ? 1 : r, 0, 1)];
 		}
 		return null;
 	}),
 	(c.get.hwb = function (e) {
 		if (!e) return null;
-		var t = e.match(
-			/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/
-		);
+		var t = e.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
 		if (t) {
 			var r = parseFloat(t[4]);
-			return [
-				((parseFloat(t[1]) % 360) + 360) % 360,
-				u(parseFloat(t[2]), 0, 100),
-				u(parseFloat(t[3]), 0, 100),
-				u(isNaN(r) ? 1 : r, 0, 1)
-			];
+			return [((parseFloat(t[1]) % 360) + 360) % 360, u(parseFloat(t[2]), 0, 100), u(parseFloat(t[3]), 0, 100), u(isNaN(r) ? 1 : r, 0, 1)];
 		}
 		return null;
 	}),
@@ -105,24 +83,18 @@ function l(e) {
 	}),
 	(c.to.rgb = function () {
 		var e = n(arguments);
-		return e.length < 4 || 1 === e[3]
-			? 'rgb(' + Math.round(e[0]) + ', ' + Math.round(e[1]) + ', ' + Math.round(e[2]) + ')'
-			: 'rgba(' + Math.round(e[0]) + ', ' + Math.round(e[1]) + ', ' + Math.round(e[2]) + ', ' + e[3] + ')';
+		return e.length < 4 || 1 === e[3] ? 'rgb(' + Math.round(e[0]) + ', ' + Math.round(e[1]) + ', ' + Math.round(e[2]) + ')' : 'rgba(' + Math.round(e[0]) + ', ' + Math.round(e[1]) + ', ' + Math.round(e[2]) + ', ' + e[3] + ')';
 	}),
 	(c.to.rgb.percent = function () {
 		var e = n(arguments),
 			t = Math.round((e[0] / 255) * 100),
 			r = Math.round((e[1] / 255) * 100),
 			a = Math.round((e[2] / 255) * 100);
-		return e.length < 4 || 1 === e[3]
-			? 'rgb(' + t + '%, ' + r + '%, ' + a + '%)'
-			: 'rgba(' + t + '%, ' + r + '%, ' + a + '%, ' + e[3] + ')';
+		return e.length < 4 || 1 === e[3] ? 'rgb(' + t + '%, ' + r + '%, ' + a + '%)' : 'rgba(' + t + '%, ' + r + '%, ' + a + '%, ' + e[3] + ')';
 	}),
 	(c.to.hsl = function () {
 		var e = n(arguments);
-		return e.length < 4 || 1 === e[3]
-			? 'hsl(' + e[0] + ', ' + e[1] + '%, ' + e[2] + '%)'
-			: 'hsla(' + e[0] + ', ' + e[1] + '%, ' + e[2] + '%, ' + e[3] + ')';
+		return e.length < 4 || 1 === e[3] ? 'hsl(' + e[0] + ', ' + e[1] + '%, ' + e[2] + '%)' : 'hsla(' + e[0] + ', ' + e[1] + '%, ' + e[2] + '%, ' + e[3] + ')';
 	}),
 	(c.to.hwb = function () {
 		var e = n(arguments),

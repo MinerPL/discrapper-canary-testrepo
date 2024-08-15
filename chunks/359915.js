@@ -24,16 +24,8 @@ class u extends a.Z {
 		var t, n, r;
 		let { channelId: i, message: a } = e,
 			u = l.Z.getChannel(i);
-		if (
-			(null === (t = a.author) || void 0 === t ? void 0 : t.id) !== o.default.getId() ||
-			!(null == u ? void 0 : u.isActiveThread())
-		)
-			return;
-		let c = new Date(
-			null !== (r = null === (n = u.threadMetadata) || void 0 === n ? void 0 : n.archiveTimestamp) && void 0 !== r
-				? r
-				: 0
-		).getTime();
+		if ((null === (t = a.author) || void 0 === t ? void 0 : t.id) !== o.default.getId() || !(null == u ? void 0 : u.isActiveThread())) return;
+		let c = new Date(null !== (r = null === (n = u.threadMetadata) || void 0 === n ? void 0 : n.archiveTimestamp) && void 0 !== r ? r : 0).getTime();
 		Date.now() - c < 5000 && s.Z.resort(u.parent_id);
 	}
 	constructor(...e) {

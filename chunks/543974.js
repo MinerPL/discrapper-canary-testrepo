@@ -144,9 +144,7 @@ function g(e) {
 		[j, E] = i.useState(!1),
 		[S, R] = i.useState(() => {
 			var e, n;
-			return null !== (n = null === (e = x[null != p ? p : '']) || void 0 === e ? void 0 : e.id) && void 0 !== n
-				? n
-				: null;
+			return null !== (n = null === (e = x[null != p ? p : '']) || void 0 === e ? void 0 : e.id) && void 0 !== n ? n : null;
 		});
 	i.useEffect(() => {
 		C.LO(s);

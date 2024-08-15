@@ -72,14 +72,7 @@ let g = {
 	]
 };
 t.Z = (e) => {
-	let {
-			product: t,
-			returnRef: n,
-			onSuccess: C,
-			tooltipDelay: _,
-			isGiftEasterEggEnabled: m,
-			disableCustomColor: h = !1
-		} = e,
+	let { product: t, returnRef: n, onSuccess: C, tooltipDelay: _, isGiftEasterEggEnabled: m, disableCustomColor: h = !1 } = e,
 		{ analyticsLocations: b } = (0, o.ZP)(),
 		x = r.useRef(null),
 		E = (0, i.Z)(x),

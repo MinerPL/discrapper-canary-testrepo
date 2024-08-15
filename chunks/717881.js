@@ -17,8 +17,8 @@ var r = n(735250),
 	f = n(202458),
 	h = n(220779),
 	p = n(142550),
-	I = n(954017),
-	m = n(314091),
+	m = n(954017),
+	I = n(314091),
 	T = n(159244),
 	g = n(574176),
 	S = n(952164),
@@ -33,18 +33,7 @@ var r = n(735250),
 	L = n(689938),
 	b = n(71851);
 function M(e) {
-	let {
-		type: t,
-		source: n,
-		activity: i,
-		applicationStream: a,
-		user: s,
-		guildId: o,
-		channelId: u,
-		onAction: d,
-		isEmbedded: E = (0, c.Z)(i),
-		actionColor: f
-	} = e;
+	let { type: t, source: n, activity: i, applicationStream: a, user: s, guildId: o, channelId: u, onAction: d, isEmbedded: E = (0, c.Z)(i), actionColor: f } = e;
 	return (0, r.jsx)(_.Z, {
 		className: (0, y.l)(b, 'actions', t),
 		type: t,
@@ -62,16 +51,7 @@ function M(e) {
 }
 let P = d.Z.Types;
 t.Z = function (e) {
-	let {
-			activity: t,
-			user: n,
-			useStoreStream: a = !0,
-			showActions: l = !0,
-			hideHeader: c = !1,
-			showChannelDetails: _ = !1,
-			analyticsParams: y,
-			...P
-		} = e,
+	let { activity: t, user: n, useStoreStream: a = !0, showActions: l = !0, hideHeader: c = !1, showChannelDetails: _ = !1, analyticsParams: y, ...P } = e,
 		U = (0, o.e7)([R.Z, N.Z], () => {
 			var e;
 			return N.Z.getChannel(null === (e = R.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
@@ -88,25 +68,11 @@ t.Z = function (e) {
 		k = (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && G ? U : null,
 		B = (0, o.e7)([v.Z, R.Z, N.Z], () => {
 			var e, r;
-			return (0, u.Z)(t, D.xjy.EMBEDDED)
-				? v.Z.getGuild(
-						null ===
-							(e = N.Z.getChannel(
-								null === (r = R.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === r
-									? void 0
-									: r.channelId
-							)) || void 0 === e
-							? void 0
-							: e.getGuildId()
-					)
-				: null != k
-					? v.Z.getGuild(k.getGuildId())
-					: null;
+			return (0, u.Z)(t, D.xjy.EMBEDDED) ? v.Z.getGuild(null === (e = N.Z.getChannel(null === (r = R.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === r ? void 0 : r.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != k ? v.Z.getGuild(k.getGuildId()) : null;
 		}),
 		F = (0, o.e7)([v.Z], () => (null != x ? v.Z.getGuild(x.guildId) : null)),
 		V = (0, o.e7)([E.Z], () => {
-			if (null != t)
-				return null != t.application_id ? E.Z.getApplication(t.application_id) : E.Z.getApplicationByName(t.name);
+			if (null != t) return null != t.application_id ? E.Z.getApplication(t.application_id) : E.Z.getApplicationByName(t.name);
 			return null;
 		}),
 		H = (0, f.Z)(),
@@ -149,9 +115,7 @@ t.Z = function (e) {
 											showReply: !0,
 											popoutProps: {
 												replyHeaderText: L.Z.Messages.ACTIVITY_REACTION_REPLY_TITLE.format({ activity: t.name }),
-												replyPlaceholder: L.Z.Messages.TEXTAREA_PLACEHOLDER.format({
-													channel: '@'.concat(n.globalName)
-												})
+												replyPlaceholder: L.Z.Messages.TEXTAREA_PLACEHOLDER.format({ channel: '@'.concat(n.globalName) })
 											},
 											onInteraction: (e) => {
 												let { interactionType: r, emoji: i, reply: a } = e;
@@ -162,22 +126,22 @@ t.Z = function (e) {
 												}),
 													r === p.L.ReactSubmit &&
 														null != i &&
-														(0, I.sendReactionToActivity)({
+														(0, m.sendReactionToActivity)({
 															reaction: i,
 															user: n,
 															activity: t,
 															application: V,
-															altText: (0, m.xC)(n, t),
+															altText: (0, I.xC)(n, t),
 															stream: x
 														}),
 													r === p.L.ReplySubmit &&
 														null != a &&
-														(0, I.sendReplyToActivity)({
+														(0, m.sendReplyToActivity)({
 															reply: a,
 															user: n,
 															activity: t,
 															application: V,
-															altText: (0, m.xC)(n, t),
+															altText: (0, I.xC)(n, t),
 															stream: x
 														});
 											}

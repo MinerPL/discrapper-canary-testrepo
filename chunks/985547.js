@@ -134,7 +134,5 @@ function o(e, t, n) {
 				r.pop();
 			}
 		var s = e.pop();
-		throw Error(
-			'No locale data has been added to IntlMessageFormat for: ' + e.join(', ') + ', or the default locale: ' + s
-		);
+		throw Error('No locale data has been added to IntlMessageFormat for: ' + e.join(', ') + ', or the default locale: ' + s);
 	});

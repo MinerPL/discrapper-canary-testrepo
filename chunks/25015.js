@@ -12,19 +12,7 @@ var r = n(470079),
 	u = n(689938),
 	c = n(907021);
 function d(e, t) {
-	let {
-			hideSimpleEmbedContent: n,
-			formatInline: d = !1,
-			noStyleAndInteraction: _ = !1,
-			isInteracting: E = !1,
-			allowHeading: f = !1,
-			allowList: h = !1,
-			allowLinks: p = !1,
-			allowDevLinks: I = !1,
-			allowSubtext: m = !1,
-			previewLinkTarget: T = !1,
-			viewingChannelId: g
-		} = t,
+	let { hideSimpleEmbedContent: n, formatInline: d = !1, noStyleAndInteraction: _ = !1, isInteracting: E = !1, allowHeading: f = !1, allowList: h = !1, allowLinks: p = !1, allowDevLinks: m = !1, allowSubtext: I = !1, previewLinkTarget: T = !1, viewingChannelId: g } = t,
 		S = (0, i.p)();
 	return r.useMemo(
 		() =>
@@ -51,12 +39,12 @@ function d(e, t) {
 									allowHeading: f,
 									allowList: h,
 									allowLinks: p,
-									allowSubtext: m,
-									allowDevLinks: I,
+									allowSubtext: I,
+									allowDevLinks: m,
 									previewLinkTarget: T,
 									shouldFilterKeywords: S,
 									viewingChannelId: g
 								}),
-		[e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, n, d, _, E, f, h, p, T, m, S]
+		[e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, n, d, _, E, f, h, p, T, I, S]
 	);
 }

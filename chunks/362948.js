@@ -14,8 +14,7 @@ var r = n(735250),
 	h = n(865416);
 let p = [
 	{
-		getPerkHeading: () =>
-			f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_EMOJI_SLOTS,
+		getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_EMOJI_SLOTS,
 		getPerkPreviewLightTheme: () => n(414102),
 		getPerkPreviewDarkTheme: () => n(614600),
 		getTier0Value: () => E.HO[_.Eu4.NONE].limits.emoji,
@@ -24,8 +23,7 @@ let p = [
 		getTier3Value: () => E.HO[_.Eu4.TIER_3].limits.emoji
 	},
 	{
-		getPerkHeading: () =>
-			f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_STICKER_SLOTS,
+		getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_STICKER_SLOTS,
 		getPerkPreviewLightTheme: () => n(73541),
 		getPerkPreviewDarkTheme: () => n(43735),
 		getTier0Value: () => E.HO[_.Eu4.NONE].limits.stickers,
@@ -34,8 +32,7 @@ let p = [
 		getTier3Value: () => E.HO[_.Eu4.TIER_3].limits.stickers
 	},
 	{
-		getPerkHeading: () =>
-			f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_SOUNDBOARD_SLOTS,
+		getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_SOUNDBOARD_SLOTS,
 		getPerkPreviewLightTheme: () => n(69098),
 		getPerkPreviewDarkTheme: () => n(881755),
 		getTier0Value: () => E.HO[_.Eu4.NONE].limits.soundboardSounds,
@@ -44,8 +41,7 @@ let p = [
 		getTier3Value: () => E.HO[_.Eu4.TIER_3].limits.soundboardSounds
 	},
 	{
-		getPerkHeading: () =>
-			f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_STREAM_QUALITY,
+		getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_STREAM_QUALITY,
 		getPerkPreviewLightTheme: () => n(989015),
 		getPerkPreviewDarkTheme: () => n(815152),
 		getTier0Value: () =>
@@ -70,39 +66,25 @@ let p = [
 			})
 	},
 	{
-		getPerkHeading: () =>
-			f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_VOICE_QUALITY,
+		getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_VOICE_QUALITY,
 		getPerkPreviewLightTheme: () => n(222185),
 		getPerkPreviewDarkTheme: () => n(415480),
 		getTier0Value: () => f.Z.Messages.BITRATE_KBPS_NO_SPACE.format({ bitrate: E.HO[_.Eu4.NONE].limits.bitrate / 1000 }),
-		getTier1Value: () =>
-			f.Z.Messages.BITRATE_KBPS_NO_SPACE.format({ bitrate: E.HO[_.Eu4.TIER_1].limits.bitrate / 1000 }),
-		getTier2Value: () =>
-			f.Z.Messages.BITRATE_KBPS_NO_SPACE.format({ bitrate: E.HO[_.Eu4.TIER_2].limits.bitrate / 1000 }),
-		getTier3Value: () =>
-			f.Z.Messages.BITRATE_KBPS_NO_SPACE.format({ bitrate: E.HO[_.Eu4.TIER_3].limits.bitrate / 1000 })
+		getTier1Value: () => f.Z.Messages.BITRATE_KBPS_NO_SPACE.format({ bitrate: E.HO[_.Eu4.TIER_1].limits.bitrate / 1000 }),
+		getTier2Value: () => f.Z.Messages.BITRATE_KBPS_NO_SPACE.format({ bitrate: E.HO[_.Eu4.TIER_2].limits.bitrate / 1000 }),
+		getTier3Value: () => f.Z.Messages.BITRATE_KBPS_NO_SPACE.format({ bitrate: E.HO[_.Eu4.TIER_3].limits.bitrate / 1000 })
 	},
 	{
-		getPerkHeading: () =>
-			f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_UPLOAD_SIZE_LIMIT,
+		getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_UPLOAD_SIZE_LIMIT,
 		getPerkPreviewLightTheme: () => n(825588),
 		getPerkPreviewDarkTheme: () => n(954499),
-		getTier0Value: () =>
-			(0, d.XS)()
-				? (0, c.BU)(_.WKe / 1024, { useKibibytes: !0 })
-				: f.Z.Messages.FILE_SIZE_MB_NO_SPACE.format({ size: E.HO[_.Eu4.NONE].limits.fileSize / 1024 / 1024 }),
-		getTier1Value: () =>
-			(0, d.XS)()
-				? (0, c.BU)(_.WKe / 1024, { useKibibytes: !0 })
-				: f.Z.Messages.FILE_SIZE_MB_NO_SPACE.format({ size: E.HO[_.Eu4.TIER_1].limits.fileSize / 1024 / 1024 }),
-		getTier2Value: () =>
-			f.Z.Messages.FILE_SIZE_MB_NO_SPACE.format({ size: E.HO[_.Eu4.TIER_2].limits.fileSize / 1024 / 1024 }),
-		getTier3Value: () =>
-			f.Z.Messages.FILE_SIZE_MB_NO_SPACE.format({ size: E.HO[_.Eu4.TIER_3].limits.fileSize / 1024 / 1024 })
+		getTier0Value: () => ((0, d.XS)() ? (0, c.BU)(_.WKe / 1024, { useKibibytes: !0 }) : f.Z.Messages.FILE_SIZE_MB_NO_SPACE.format({ size: E.HO[_.Eu4.NONE].limits.fileSize / 1024 / 1024 })),
+		getTier1Value: () => ((0, d.XS)() ? (0, c.BU)(_.WKe / 1024, { useKibibytes: !0 }) : f.Z.Messages.FILE_SIZE_MB_NO_SPACE.format({ size: E.HO[_.Eu4.TIER_1].limits.fileSize / 1024 / 1024 })),
+		getTier2Value: () => f.Z.Messages.FILE_SIZE_MB_NO_SPACE.format({ size: E.HO[_.Eu4.TIER_2].limits.fileSize / 1024 / 1024 }),
+		getTier3Value: () => f.Z.Messages.FILE_SIZE_MB_NO_SPACE.format({ size: E.HO[_.Eu4.TIER_3].limits.fileSize / 1024 / 1024 })
 	},
 	{
-		getPerkHeading: () =>
-			f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_VIDEO_STAGE_SEATS,
+		getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_VIDEO_STAGE_SEATS,
 		getPerkPreviewLightTheme: () => n(241190),
 		getPerkPreviewDarkTheme: () => n(879846),
 		getTier0Value: () => E.HO[_.Eu4.NONE].limits.stageVideoUsers,
@@ -111,8 +93,7 @@ let p = [
 		getTier3Value: () => E.HO[_.Eu4.TIER_3].limits.stageVideoUsers
 	},
 	{
-		getPerkHeading: () =>
-			f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_ANIMATED_GUILD_ICON,
+		getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_ANIMATED_GUILD_ICON,
 		getPerkPreviewLightTheme: () => n(499059),
 		getPerkPreviewDarkTheme: () => n(488349),
 		getTier0Value: () => !1,
@@ -121,8 +102,7 @@ let p = [
 		getTier3Value: () => !0
 	},
 	{
-		getPerkHeading: () =>
-			f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_GUILD_INVITE_BACKGROUND,
+		getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_GUILD_INVITE_BACKGROUND,
 		getPerkPreviewLightTheme: () => n(136631),
 		getPerkPreviewDarkTheme: () => n(692079),
 		getTier0Value: () => !1,
@@ -131,20 +111,16 @@ let p = [
 		getTier3Value: () => !0
 	},
 	{
-		getPerkHeading: () =>
-			f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_GUILD_BANNER,
+		getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_GUILD_BANNER,
 		getPerkPreviewLightTheme: () => n(277822),
 		getPerkPreviewDarkTheme: () => n(866919),
 		getTier0Value: () => !1,
 		getTier1Value: () => !1,
-		getTier2Value: () =>
-			f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_GUILD_BANNER_STATIC,
-		getTier3Value: () =>
-			f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_GUILD_BANNER_ANIMATED
+		getTier2Value: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_GUILD_BANNER_STATIC,
+		getTier3Value: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_GUILD_BANNER_ANIMATED
 	},
 	{
-		getPerkHeading: () =>
-			f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_CUSTOM_ROLE_ICONS,
+		getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_CUSTOM_ROLE_ICONS,
 		getPerkPreviewLightTheme: () => n(872259),
 		getPerkPreviewDarkTheme: () => n(876049),
 		getTier0Value: () => !1,
@@ -153,8 +129,7 @@ let p = [
 		getTier3Value: () => !0
 	},
 	{
-		getPerkHeading: () =>
-			f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_VANITY_URL,
+		getPerkHeading: () => f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_VANITY_URL,
 		getPerkPreviewLightTheme: () => n(710717),
 		getPerkPreviewDarkTheme: () => n(945198),
 		getTier0Value: () => !1,
@@ -163,7 +138,7 @@ let p = [
 		getTier3Value: () => !0
 	}
 ];
-function I(e) {
+function m(e) {
 	let { children: t, className: n, tier: i } = e,
 		a = i === _.Eu4.NONE ? 'text-muted' : 'header-primary',
 		o = i === _.Eu4.NONE || null == i ? 'heading-xl/normal' : 'heading-xl/bold';
@@ -185,7 +160,7 @@ function I(e) {
 		]
 	});
 }
-function m(e) {
+function I(e) {
 	let t;
 	let { className: n, textVariant: i = 'text-md/bold', value: a } = e;
 	if ('boolean' == typeof a) {
@@ -237,10 +212,7 @@ function T(e) {
 					className: h.recommendedTierHighlightTag,
 					color: 'always-white',
 					variant: 'text-xs/bold',
-					children:
-						t === _.Eu4.TIER_3
-							? f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CURRENT_TAG
-							: f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_RECOMMENDED_TAG
+					children: t === _.Eu4.TIER_3 ? f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CURRENT_TAG : f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_RECOMMENDED_TAG
 				})
 			});
 }
@@ -273,25 +245,24 @@ t.Z = function (e) {
 								children: (0, r.jsxs)('tr', {
 									className: h.__invalid_tableRow,
 									children: [
-										(0, r.jsx)(I, {
+										(0, r.jsx)(m, {
 											className: h.tableRowHeading,
-											children:
-												f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_COLUMN_HEADING_PERKS
+											children: f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_COLUMN_HEADING_PERKS
 										}),
 										!g &&
-											(0, r.jsx)(I, {
+											(0, r.jsx)(m, {
 												tier: _.Eu4.NONE,
 												children: f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_NONE_NAME
 											}),
-										(0, r.jsx)(I, {
+										(0, r.jsx)(m, {
 											tier: _.Eu4.TIER_1,
 											children: f.Z.Messages.PREMIUM_GUILD_TIER_1
 										}),
-										(0, r.jsx)(I, {
+										(0, r.jsx)(m, {
 											tier: _.Eu4.TIER_2,
 											children: f.Z.Messages.PREMIUM_GUILD_TIER_2
 										}),
-										(0, r.jsx)(I, {
+										(0, r.jsx)(m, {
 											tier: _.Eu4.TIER_3,
 											children: f.Z.Messages.PREMIUM_GUILD_TIER_3
 										})
@@ -342,13 +313,13 @@ t.Z = function (e) {
 															})
 														}),
 														!g &&
-															(0, r.jsx)(m, {
+															(0, r.jsx)(I, {
 																textVariant: 'text-md/normal',
 																value: e.getTier0Value()
 															}),
-														(0, r.jsx)(m, { value: e.getTier1Value() }),
-														(0, r.jsx)(m, { value: e.getTier2Value() }),
-														(0, r.jsx)(m, { value: e.getTier3Value() })
+														(0, r.jsx)(I, { value: e.getTier1Value() }),
+														(0, r.jsx)(I, { value: e.getTier2Value() }),
+														(0, r.jsx)(I, { value: e.getTier3Value() })
 													]
 												},
 												i

@@ -36,12 +36,8 @@ class M extends a.Component {
 			s = null != a ? a.username : '???',
 			r = T.default.getUser(i.referrer_id),
 			l = null != r ? r.username : '???';
-		if (e && void 0 === i.redeemed_at)
-			return x.Z.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_DISABLED_HEADER.format({ username: s });
-		if (t)
-			return n
-				? x.Z.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_EXPIRED_HEADER
-				: x.Z.Messages.REFERRAL_PROGRAM_EMBED_TIRAL_EXPIRED.format({ userName: l });
+		if (e && void 0 === i.redeemed_at) return x.Z.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_DISABLED_HEADER.format({ username: s });
+		if (t) return n ? x.Z.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_EXPIRED_HEADER : x.Z.Messages.REFERRAL_PROGRAM_EMBED_TIRAL_EXPIRED.format({ userName: l });
 		return x.Z.Messages.REFERRAL_PROGRAM_EMBED_HEADER.format({
 			senderUserName: l,
 			recipientUserName: s
@@ -49,13 +45,7 @@ class M extends a.Component {
 	}
 	renderBody(e, t, n) {
 		let { trialOffer: i } = this.props;
-		return e && !n && void 0 === i.redeemed_at
-			? x.Z.Messages.REFERRAL_PROGRAM_LEARN_MORE_ABOUT_SHARING.format({
-					helpdeskArticle: f.Z.getArticleURL(R.BhN.REFERRAL_PROGRAM)
-				})
-			: t
-				? null
-				: x.Z.Messages.REFERRAL_PROGRAM_EMBED_BODY;
+		return e && !n && void 0 === i.redeemed_at ? x.Z.Messages.REFERRAL_PROGRAM_LEARN_MORE_ABOUT_SHARING.format({ helpdeskArticle: f.Z.getArticleURL(R.BhN.REFERRAL_PROGRAM) }) : t ? null : x.Z.Messages.REFERRAL_PROGRAM_EMBED_BODY;
 	}
 	renderActions(e, t, n) {
 		let { trialOffer: a, currentUser: s, analyticsLocations: r } = this.props,
@@ -98,8 +88,7 @@ class M extends a.Component {
 	}
 	renderExpirationDate(e, t, n) {
 		let { trialOffer: i, trialEndsAt: a } = this.props;
-		if (void 0 !== i.redeemed_at && !n && null !== a)
-			return x.Z.Messages.TRIAL_EXPIRES.format({ date: (0, N.vc)(o()(a), 'LL') });
+		if (void 0 !== i.redeemed_at && !n && null !== a) return x.Z.Messages.TRIAL_EXPIRES.format({ date: (0, N.vc)(o()(a), 'LL') });
 		if (e || void 0 === i.expires_at) return null;
 		let s = o()(i.expires_at);
 		if (t) return x.Z.Messages.EXPIRED_DATE.format({ date: (0, N.vc)(o()(s), 'LL') });
@@ -185,10 +174,7 @@ function v(e) {
 			[n, t]
 		),
 		r = T.default.getCurrentUser(),
-		l = (0, u.e7)(
-			[T.default],
-			() => null != a && (0, C.I5)(void 0 !== r && a.user_id === r.id ? r : T.default.getUser(a.user_id))
-		),
+		l = (0, u.e7)([T.default], () => null != a && (0, C.I5)(void 0 !== r && a.user_id === r.id ? r : T.default.getUser(a.user_id))),
 		o = (0, u.e7)([h.ZP], () => {
 			var e;
 			return l ? (null === (e = h.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt) : null;

@@ -13,8 +13,8 @@ var r = n(735250),
 	f = n(607070),
 	h = n(258609),
 	p = n(382182),
-	I = n(210887),
-	m = n(592125),
+	m = n(210887),
+	I = n(592125),
 	T = n(430824),
 	g = n(496675),
 	S = n(979651),
@@ -38,9 +38,9 @@ function x(e, t) {
 t.Z = function (e) {
 	var t, h, p;
 	let { quest: T, memberListItemRef: g, applicationStream: S, position: G, closePopout: k, updatePosition: B } = e,
-		F = (0, o.e7)([m.Z], () => {
+		F = (0, o.e7)([I.Z], () => {
 			var e;
-			return null !== (e = m.Z.getChannel(null == S ? void 0 : S.channelId)) && void 0 !== e ? e : null;
+			return null !== (e = I.Z.getChannel(null == S ? void 0 : S.channelId)) && void 0 !== e ? e : null;
 		}),
 		V = (0, y.hf)({
 			quest: T,
@@ -50,7 +50,7 @@ t.Z = function (e) {
 		Z = (null == T ? void 0 : null === (t = T.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
 		Y = (null == T ? void 0 : null === (h = T.userStatus) || void 0 === h ? void 0 : h.enrolledAt) != null,
 		j = (null == T ? void 0 : null === (p = T.userStatus) || void 0 === p ? void 0 : p.completedAt) != null,
-		W = (0, o.e7)([I.Z], () => I.Z.getState().theme),
+		W = (0, o.e7)([m.Z], () => m.Z.getState().theme),
 		K = (0, l.wj)(W) ? M.BR.DARK : M.BR.LIGHT,
 		z = (0, o.e7)([f.Z], () => f.Z.useReducedMotion),
 		{ ref: q, height: Q } = (0, _.Z)(),
@@ -189,8 +189,7 @@ t.Z = function (e) {
 				'aria-expanded': X,
 				className: U.wrapper,
 				style: {
-					width:
-						null !== (n = null === (t = g.current) || void 0 === t ? void 0 : t.clientWidth) && void 0 !== n ? n : 222,
+					width: null !== (n = null === (t = g.current) || void 0 === t ? void 0 : t.clientWidth) && void 0 !== n ? n : 222,
 					height: et.height,
 					overflow: X ? 'visible' : 'hidden',
 					borderRadius: ei
@@ -222,9 +221,7 @@ t.Z = function (e) {
 													variant: 'text-xs/medium',
 													color: 'text-muted',
 													className: U.helpText,
-													children: P.Z.Messages.QUESTS_MEMBERS_LIST_PROMOTED_BY.format({
-														gamePublisher: T.config.messages.gamePublisher
-													})
+													children: P.Z.Messages.QUESTS_MEMBERS_LIST_PROMOTED_BY.format({ gamePublisher: T.config.messages.gamePublisher })
 												}),
 												(0, r.jsx)(u.CircleQuestionIcon, {
 													size: 'custom',

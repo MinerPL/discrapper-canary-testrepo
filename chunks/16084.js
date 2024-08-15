@@ -90,8 +90,7 @@ async function f(e, t) {
 }
 async function y(e) {
 	let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-	if (!(_.Z.inTestModeForApplication(e) || c.Z.inDevModeForApplication(e)) && t)
-		throw Error('this should only be used in test mode');
+	if (!(_.Z.inTestModeForApplication(e) || c.Z.inDevModeForApplication(e)) && t) throw Error('this should only be used in test mode');
 	let o = (await (0, b.Kb)(E.ANM.APPLICATION_SKUS(e))).body;
 	return (
 		r.Z.dispatch({
@@ -167,19 +166,11 @@ async function I(e, t, o) {
 		};
 		if (A) e.test_mode = !0;
 		else {
-			if (
-				null != d &&
-				((e.payment_source_id = d.id), (e.payment_source_token = await (0, S.Zv)(d)), E.QL.has(d.type))
-			) {
+			if (null != d && ((e.payment_source_id = d.id), (e.payment_source_token = await (0, S.Zv)(d)), E.QL.has(d.type))) {
 				let t = await (0, S.EH)(d.type);
-				e.return_url =
-					(0, n.K0)() + E.ANM.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(d.type, null != t ? t : '', 'success');
+				e.return_url = (0, n.K0)() + E.ANM.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(d.type, null != t ? t : '', 'success');
 			}
-			null != l && (e.expected_amount = l),
-				null != b && (e.expected_currency = b),
-				(e.gift_info_options = y),
-				null != R && (e.country_code = R),
-				(e.purchase_token = (0, p.d)());
+			null != l && (e.expected_amount = l), null != b && (e.expected_currency = b), (e.gift_info_options = y), null != R && (e.country_code = R), (e.purchase_token = (0, p.d)());
 		}
 		let o = await n.tn.post({
 			url: E.ANM.STORE_SKU_PURCHASE(t),

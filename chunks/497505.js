@@ -23,8 +23,4 @@ var r,
 	o = n(687522),
 	l = n(636977);
 let u = new Set(Object.values(o.y).filter((e) => 'number' == typeof e));
-((a = r || (r = {})).GENERIC = 'generic'),
-	(a.RATE_LIMITED = 'rate_limited'),
-	((s = i || (i = {})).DESKTOP = 'desktop'),
-	(s.CONSOLE = 'console'),
-	(s.SELECT = 'select');
+((a = r || (r = {})).GENERIC = 'generic'), (a.RATE_LIMITED = 'rate_limited'), ((s = i || (i = {})).DESKTOP = 'desktop'), (s.CONSOLE = 'console'), (s.SELECT = 'select');

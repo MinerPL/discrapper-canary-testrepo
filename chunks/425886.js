@@ -9,22 +9,7 @@ var r = n(735250),
 	s = n(640108);
 class o extends i.PureComponent {
 	render() {
-		let {
-			src: e,
-			fileSize: t,
-			fileName: n,
-			className: i,
-			playable: o,
-			volume: l,
-			renderLinkComponent: u,
-			onVolumeChange: c,
-			onVolumeShow: d,
-			onVolumeHide: _,
-			autoMute: E,
-			onMute: f,
-			mimeType: h,
-			onPlay: p
-		} = this.props;
+		let { src: e, fileSize: t, fileName: n, className: i, playable: o, volume: l, renderLinkComponent: u, onVolumeChange: c, onVolumeShow: d, onVolumeHide: _, autoMute: E, onMute: f, mimeType: h, onPlay: p } = this.props;
 		return (0, r.jsx)(s.ZP, {
 			src: e,
 			fileName: n,

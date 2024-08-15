@@ -19,35 +19,18 @@ var i = n(735250),
 	_ = n(807705),
 	f = n(27457),
 	E = n(111248),
-	g = n(312703),
-	C = n(796638),
+	C = n(312703),
+	g = n(796638),
 	I = n(981631),
 	x = n(354459),
 	T = n(201614),
 	N = n(97478);
 let v = 16 / 9,
-	S = 8 + C.cF;
+	S = 8 + g.cF;
 function Z(e) {
 	var t;
 	let n,
-		{
-			onSelectParticipant: s,
-			onContextMenuParticipant: Z,
-			onFullscreenParticipant: A,
-			participants: M,
-			filteredParticipants: b,
-			popoutWindow: R,
-			inCall: j,
-			channel: L,
-			selectedParticipant: P,
-			showParticipants: O = !0,
-			className: y,
-			paused: D,
-			width: k,
-			height: U,
-			layout: w,
-			idle: B
-		} = e,
+		{ onSelectParticipant: s, onContextMenuParticipant: Z, onFullscreenParticipant: A, participants: M, filteredParticipants: b, popoutWindow: R, inCall: j, channel: L, selectedParticipant: P, showParticipants: O = !0, className: y, paused: D, width: k, height: U, layout: w, idle: B } = e,
 		H = null != R,
 		G = m.Z.getVideoComponent(),
 		V = h.default.getId(),
@@ -66,10 +49,7 @@ function Z(e) {
 		es = (null !== (t = (0, c.Z)(P.id)) && void 0 !== t ? t : P.id) !== P.id,
 		el = 0;
 	(X || ee) && (el += 72), X && !ee && (ei ? (el += 48) : (el += 8)), ee && (el += 0.5 * S + 8);
-	let er = a.useMemo(
-			() => (X && Q ? k / (U - 2 * el) : J && null != F && F.width > 0 && F.height > 0 ? F.width / F.height : v),
-			[J, F, X, k, U, el, Q]
-		),
+	let er = a.useMemo(() => (X && Q ? k / (U - 2 * el) : J && null != F && F.width > 0 && F.height > 0 ? F.width / F.height : v), [J, F, X, k, U, el, Q]),
 		eo = U - 2 * el,
 		ec = X && Q ? k : eo * er,
 		eu = Math.floor(Math.min(k, ec) / er),
@@ -147,8 +127,8 @@ function Z(e) {
 		eE = a.useCallback((e) => {
 			W(e), Y(!1);
 		}, []),
-		eg = ee || D ? [] : (0, g.n3)(M, P, V),
-		{ visibleParticipants: eC, participantTileWidth: eI } = (0, C.ZB)(k, b);
+		eC = ee || D ? [] : (0, C.n3)(M, P, V),
+		{ visibleParticipants: eg, participantTileWidth: eI } = (0, g.ZB)(k, b);
 	return (0, i.jsxs)('div', {
 		className: l()(N.root, T.flexCenter, y),
 		children: [
@@ -217,12 +197,12 @@ function Z(e) {
 							opacity: eh.value,
 							visibility: eh.value.to((e) => (0 === e ? 'hidden' : 'visible'))
 						},
-						children: (0, i.jsx)(C.ZP, {
+						children: (0, i.jsx)(g.ZP, {
 							channel: L,
 							onClick: s,
 							onContextMenu: Z,
 							onDoubleClick: A,
-							participants: eC,
+							participants: eg,
 							participantTileWidth: eI,
 							selectedParticipantId: P.id,
 							inCall: j,
@@ -232,13 +212,13 @@ function Z(e) {
 					})
 				]
 			}),
-			eg.length > 0
+			eC.length > 0
 				? (0, i.jsx)(E.Z, {
 						onContextMenuParticipant: Z,
 						width: k,
 						height: U,
 						channel: L,
-						participants: eg
+						participants: eC
 					})
 				: null
 		]

@@ -18,8 +18,8 @@ var i = n(735250),
 	_ = n(592125),
 	f = n(703558),
 	E = n(430824),
-	g = n(228392),
-	C = n(689938),
+	C = n(228392),
+	g = n(689938),
 	I = n(146238);
 function x(e) {
 	let { channelId: t } = e,
@@ -30,7 +30,7 @@ function x(e) {
 		S = a.useRef(!1);
 	if (
 		(a.useEffect(() => {
-			null != x && !S.current && ((S.current = !0), (0, g.lN)(x));
+			null != x && !S.current && ((S.current = !0), (0, C.lN)(x));
 		}, [x]),
 		null == x || null == N)
 	)
@@ -44,7 +44,7 @@ function x(e) {
 			}),
 			(0, i.jsx)(d.ZP, {
 				toolbar: Z,
-				'aria-label': C.Z.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
+				'aria-label': g.Z.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
 				children: (0, h.ud)({
 					channel: x,
 					parentChannel: T,

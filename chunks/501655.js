@@ -25,8 +25,8 @@ var r,
 	f = n(699516),
 	h = n(594174),
 	p = n(979651),
-	I = n(5192),
-	m = n(88751),
+	m = n(5192),
+	I = n(88751),
 	T = n(427679),
 	g = n(590415),
 	S = n(974609),
@@ -70,26 +70,9 @@ function R(e) {
 function C(e) {
 	let { speaker: t, role: n, rtsState: r, blocked: i, isFriend: a } = e,
 		s = [];
-	return (
-		R(r) && s.push('ALL_REQUESTED_TO_SPEAK'),
-		r === g.xO.REQUESTED_TO_SPEAK && s.push('REQUESTED_TO_SPEAK_ONLY'),
-		t ? s.push('SPEAKER') : (null != n ? s.push(n.id) : s.push('NO_ROLE'), s.push('AUDIENCE')),
-		i && s.push('BLOCKED'),
-		a && s.push('FRIEND'),
-		s
-	);
+	return R(r) && s.push('ALL_REQUESTED_TO_SPEAK'), r === g.xO.REQUESTED_TO_SPEAK && s.push('REQUESTED_TO_SPEAK_ONLY'), t ? s.push('SPEAKER') : (null != n ? s.push(n.id) : s.push('NO_ROLE'), s.push('AUDIENCE')), i && s.push('BLOCKED'), a && s.push('FRIEND'), s;
 }
-((a = r || (r = {})).SPEAKER = 'SPEAKER'),
-	(a.AUDIENCE = 'AUDIENCE'),
-	(a.NO_ROLE = 'NO_ROLE'),
-	(a.ALL_REQUESTED_TO_SPEAK = 'ALL_REQUESTED_TO_SPEAK'),
-	(a.REQUESTED_TO_SPEAK_ONLY = 'REQUESTED_TO_SPEAK_ONLY'),
-	(a.BLOCKED = 'BLOCKED'),
-	(a.FRIEND = 'FRIEND'),
-	(a.SELECTED = 'SELECTED'),
-	(a.MEDIA = 'MEDIA'),
-	((s = i || (i = {})).VOICE = 'VOICE'),
-	(s.STREAM = 'STREAM');
+((a = r || (r = {})).SPEAKER = 'SPEAKER'), (a.AUDIENCE = 'AUDIENCE'), (a.NO_ROLE = 'NO_ROLE'), (a.ALL_REQUESTED_TO_SPEAK = 'ALL_REQUESTED_TO_SPEAK'), (a.REQUESTED_TO_SPEAK_ONLY = 'REQUESTED_TO_SPEAK_ONLY'), (a.BLOCKED = 'BLOCKED'), (a.FRIEND = 'FRIEND'), (a.SELECTED = 'SELECTED'), (a.MEDIA = 'MEDIA'), ((s = i || (i = {})).VOICE = 'VOICE'), (s.STREAM = 'STREAM');
 class y {
 	_getParticipantsForUser(e, t) {
 		var n, r;
@@ -102,10 +85,10 @@ class y {
 		let l = null != t ? t[0] : null,
 			d = {
 				user: o,
-				userNick: I.ZP.getName(this.guildId, this.channelId, o),
+				userNick: m.ZP.getName(this.guildId, this.channelId, o),
 				voiceState: s,
 				role: (0, S.H)(this.guildId, e),
-				speaker: m.ZP.isSpeaker(e, this.channelId),
+				speaker: I.ZP.isSpeaker(e, this.channelId),
 				member: null != this.guildId ? E.ZP.getMember(this.guildId, e) : null,
 				blocked: f.Z.getRelationships()[o.id] === A.OGo.BLOCKED,
 				isFriend: f.Z.isFriend(o.id),
@@ -118,10 +101,7 @@ class y {
 				rtsState: (0, g.gf)(s)
 			};
 		a.push(N);
-		let v =
-			null !== (r = c.Z.getStreamForUser(e, this.guildId)) && void 0 !== r
-				? r
-				: c.Z.getActiveStreamForUser(e, this.guildId);
+		let v = null !== (r = c.Z.getStreamForUser(e, this.guildId)) && void 0 !== r ? r : c.Z.getActiveStreamForUser(e, this.guildId);
 		if (null != v && v.channelId === this.channelId) {
 			let e = (0, u.V9)(v);
 			(i = {
@@ -144,8 +124,7 @@ class y {
 					this._participantsIndex.delete(e.id), this._requestToSpeakIndex.delete(e.id);
 				}),
 			n.forEach((t) => {
-				this._participantsIndex.set(t.id, t),
-					t.id === e && R(t.rtsState) ? this._requestToSpeakIndex.set(e, t) : this._requestToSpeakIndex.delete(e);
+				this._participantsIndex.set(t.id, t), t.id === e && R(t.rtsState) ? this._requestToSpeakIndex.set(e, t) : this._requestToSpeakIndex.delete(e);
 			}),
 			(this.participants[e] = n),
 			!0)
@@ -155,13 +134,7 @@ class y {
 		let e = d.Z.getChannel(this.channelId);
 		if (null == e || !e.isGuildStageVoice()) return !1;
 		let t = new Set(Object.keys(p.Z.getVoiceStatesForChannel(e.id)));
-		return (
-			this._participantsIndex.clear(),
-			this._requestToSpeakIndex.clear(),
-			(this.participants = {}),
-			t.forEach((e) => this.updateParticipant(e)),
-			!0
-		);
+		return this._participantsIndex.clear(), this._requestToSpeakIndex.clear(), (this.participants = {}), t.forEach((e) => this.updateParticipant(e)), !0;
 	}
 	get version() {
 		return this._participantsIndex.version;
@@ -184,12 +157,6 @@ class y {
 	}
 	constructor(e) {
 		var t;
-		N(this, 'channelId', void 0),
-			N(this, 'guildId', void 0),
-			N(this, 'participants', {}),
-			N(this, '_participantsIndex', new o.h(C, v)),
-			N(this, '_requestToSpeakIndex', new o.h(() => [], O)),
-			(this.channelId = e),
-			(this.guildId = null === (t = d.Z.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId());
+		N(this, 'channelId', void 0), N(this, 'guildId', void 0), N(this, 'participants', {}), N(this, '_participantsIndex', new o.h(C, v)), N(this, '_requestToSpeakIndex', new o.h(() => [], O)), (this.channelId = e), (this.guildId = null === (t = d.Z.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId());
 	}
 }

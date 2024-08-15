@@ -10,10 +10,7 @@ var n = r(470079),
 			a = e.prototype;
 		return (
 			(a.shouldComponentUpdate = function (t) {
-				return (
-					this.props.text !== t.text ||
-					this.props.editorState.getSelection().getHasFocus() !== t.editorState.getSelection().getHasFocus()
-				);
+				return this.props.text !== t.text || this.props.editorState.getSelection().getHasFocus() !== t.editorState.getSelection().getHasFocus();
 			}),
 			(a.render = function () {
 				var t = i({

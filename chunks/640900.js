@@ -14,21 +14,14 @@ var r = n(470079),
 	l = n(705782),
 	u = n(201284);
 function c(e, t) {
-	let {
-			inputElementType: n = 'input',
-			isDisabled: c = !1,
-			isRequired: d = !1,
-			isReadOnly: _ = !1,
-			type: E = 'text',
-			validationBehavior: f = 'aria'
-		} = e,
+	let { inputElementType: n = 'input', isDisabled: c = !1, isRequired: d = !1, isReadOnly: _ = !1, type: E = 'text', validationBehavior: f = 'aria' } = e,
 		[h, p] = (0, a.zk)(e.value, e.defaultValue || '', e.onChange),
-		{ focusableProps: I } = (0, o.kc)(e, t),
-		m = (0, u.Q3)({
+		{ focusableProps: m } = (0, o.kc)(e, t),
+		I = (0, u.Q3)({
 			...e,
 			value: h
 		}),
-		{ isInvalid: T, validationErrors: g, validationDetails: S } = m.displayValidation,
+		{ isInvalid: T, validationErrors: g, validationDetails: S } = I.displayValidation,
 		{
 			labelProps: A,
 			fieldProps: N,
@@ -46,7 +39,7 @@ function c(e, t) {
 		};
 	return (
 		(0, i.y$)(t, h, p),
-		(0, l.Q)(e, m, t),
+		(0, l.Q)(e, I, t),
 		(0, r.useEffect)(() => {
 			if (t.current instanceof (0, i.kR)(t.current).HTMLTextAreaElement) {
 				let e = t.current;
@@ -87,7 +80,7 @@ function c(e, t) {
 				onSelect: e.onSelect,
 				onBeforeInput: e.onBeforeInput,
 				onInput: e.onInput,
-				...I,
+				...m,
 				...N
 			}),
 			descriptionProps: v,
@@ -115,16 +108,10 @@ function _(e, t, n) {
 				r = i.value.slice(0, i.selectionStart) + i.value.slice(i.selectionEnd);
 				break;
 			case 'deleteContentForward':
-				r =
-					i.selectionEnd === i.selectionStart
-						? i.value.slice(0, i.selectionStart) + i.value.slice(i.selectionEnd + 1)
-						: i.value.slice(0, i.selectionStart) + i.value.slice(i.selectionEnd);
+				r = i.selectionEnd === i.selectionStart ? i.value.slice(0, i.selectionStart) + i.value.slice(i.selectionEnd + 1) : i.value.slice(0, i.selectionStart) + i.value.slice(i.selectionEnd);
 				break;
 			case 'deleteContentBackward':
-				r =
-					i.selectionEnd === i.selectionStart
-						? i.value.slice(0, i.selectionStart - 1) + i.value.slice(i.selectionStart)
-						: i.value.slice(0, i.selectionStart) + i.value.slice(i.selectionEnd);
+				r = i.selectionEnd === i.selectionStart ? i.value.slice(0, i.selectionStart - 1) + i.value.slice(i.selectionStart) : i.value.slice(0, i.selectionStart) + i.value.slice(i.selectionEnd);
 				break;
 			case 'deleteSoftLineBackward':
 			case 'deleteHardLineBackward':
@@ -148,8 +135,7 @@ function _(e, t, n) {
 	let s = d()
 			? null
 			: (e) => {
-					let n =
-						e.target.value.slice(0, e.target.selectionStart) + e.data + e.target.value.slice(e.target.selectionEnd);
+					let n = e.target.value.slice(0, e.target.selectionStart) + e.data + e.target.value.slice(e.target.selectionEnd);
 					!t.validate(n) && e.preventDefault();
 				},
 		{ labelProps: o, inputProps: l, descriptionProps: u, errorMessageProps: _, ...E } = c(e, n),

@@ -74,14 +74,8 @@ function s(t, e) {
 		!(null == e ? void 0 : e.captureLocation) &&
 			!(function t(e) {
 				e.forEach(function (e) {
-					if ((delete e.location, (0, a.Wi)(e) || (0, a.Jo)(e)))
-						for (var r in e.options) delete e.options[r].location, t(e.options[r].value);
-					else
-						(0, a.uf)(e) && (0, a.Wh)(e.style)
-							? delete e.style.location
-							: ((0, a.rp)(e) || (0, a.pe)(e)) && (0, a.Ii)(e.style)
-								? delete e.style.location
-								: (0, a.HI)(e) && t(e.children);
+					if ((delete e.location, (0, a.Wi)(e) || (0, a.Jo)(e))) for (var r in e.options) delete e.options[r].location, t(e.options[r].value);
+					else (0, a.uf)(e) && (0, a.Wh)(e.style) ? delete e.style.location : ((0, a.rp)(e) || (0, a.pe)(e)) && (0, a.Ii)(e.style) ? delete e.style.location : (0, a.HI)(e) && t(e.children);
 				});
 			})(r.val),
 		r.val

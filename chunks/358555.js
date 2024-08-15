@@ -48,9 +48,7 @@ function h(e) {
 					className: I.tierTooltipTitle,
 					children: h
 				}),
-				(0, o.jsx)('div', {
-					children: N.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SUBSCRIBER_COUNT_TOOLTIP.format({ subscriberCount: c })
-				})
+				(0, o.jsx)('div', { children: N.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SUBSCRIBER_COUNT_TOOLTIP.format({ subscriberCount: c }) })
 			]
 		});
 	return (0, o.jsx)('div', {

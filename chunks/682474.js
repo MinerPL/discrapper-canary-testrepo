@@ -15,12 +15,7 @@ function h(e) {
 	let n = c.Z.getChannel(null == e ? void 0 : e.channel_id);
 	if (null == n || !n.isForumPost()) return !1;
 	let r = f[n.id];
-	return (
-		E.default.compare(
-			null == e ? void 0 : e.id,
-			null == r ? void 0 : null === (t = r.message) || void 0 === t ? void 0 : t.id
-		) > -1
-	);
+	return E.default.compare(null == e ? void 0 : e.id, null == r ? void 0 : null === (t = r.message) || void 0 === t ? void 0 : t.id) > -1;
 }
 function p(e, t) {
 	let n = null == t ? null : (0, u.e5)(t);
@@ -32,10 +27,10 @@ function p(e, t) {
 		!0
 	);
 }
-function I(e) {
+function m(e) {
 	return f[e];
 }
-function m(e) {
+function I(e) {
 	var t;
 	return null === (t = f[e]) || void 0 === t ? void 0 : t.message;
 }
@@ -77,9 +72,7 @@ class g extends (s = o.ZP.Store) {
 		},
 		MESSAGE_CREATE: function (e) {
 			if (e.isPushNotification || !h(e.message)) return !1;
-			e.message.channel_id === E.default.castMessageIdAsChannelId(e.message.id)
-				? p(e.message.channel_id, null)
-				: p(e.message.channel_id, e.message);
+			e.message.channel_id === E.default.castMessageIdAsChannelId(e.message.id) ? p(e.message.channel_id, null) : p(e.message.channel_id, e.message);
 		},
 		MESSAGE_UPDATE: function (e) {
 			if (!h(e.message) || e.message.channel_id === e.message.id) return !1;
@@ -87,7 +80,7 @@ class g extends (s = o.ZP.Store) {
 				let n = (function (e) {
 						return f[e];
 					})(e),
-					r = m(e);
+					r = I(e);
 				null != n &&
 					null != r &&
 					(f[e] = {
@@ -98,7 +91,7 @@ class g extends (s = o.ZP.Store) {
 		},
 		MESSAGE_DELETE: function (e) {
 			return (function (e, t) {
-				let n = m(e);
+				let n = I(e);
 				return (null == n ? void 0 : n.id) === t && (delete f[e], !0);
 			})(e.channelId, e.id);
 		},

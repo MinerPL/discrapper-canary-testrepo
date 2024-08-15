@@ -18,8 +18,7 @@ function i(e, t, n) {
 				if (!(i.repeat ? o(d, u, c) : s(d, u, c))) return !1;
 				break;
 			case 'map':
-				if (!('message' == i.V.kind ? l(i.V.T(), a(u), a(c)) : o('enum' == i.V.kind ? r.wx.INT32 : i.V.T, a(u), a(c))))
-					return !1;
+				if (!('message' == i.V.kind ? l(i.V.T(), a(u), a(c)) : o('enum' == i.V.kind ? r.wx.INT32 : i.V.T, a(u), a(c)))) return !1;
 				break;
 			case 'message':
 				let _ = i.T();

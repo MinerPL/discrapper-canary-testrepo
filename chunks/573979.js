@@ -27,15 +27,4 @@ function o(e) {
 			return -1;
 	}
 }
-((i = s || (s = {}))[(i.UNHANDLED = -1)] = 'UNHANDLED'),
-	(i[(i.NOMINAL = 0)] = 'NOMINAL'),
-	(i[(i.FAIR = 1)] = 'FAIR'),
-	(i[(i.SERIOUS = 2)] = 'SERIOUS'),
-	(i[(i.CRITICAL = 3)] = 'CRITICAL'),
-	((a = r || (r = {}))[(a.NONE = 0)] = 'NONE'),
-	(a[(a.LIGHT = 1)] = 'LIGHT'),
-	(a[(a.MODERATE = 2)] = 'MODERATE'),
-	(a[(a.SEVERE = 3)] = 'SEVERE'),
-	(a[(a.CRITICAL = 4)] = 'CRITICAL'),
-	(a[(a.EMERGENCY = 5)] = 'EMERGENCY'),
-	(a[(a.SHUTDOWN = 6)] = 'SHUTDOWN');
+((i = s || (s = {}))[(i.UNHANDLED = -1)] = 'UNHANDLED'), (i[(i.NOMINAL = 0)] = 'NOMINAL'), (i[(i.FAIR = 1)] = 'FAIR'), (i[(i.SERIOUS = 2)] = 'SERIOUS'), (i[(i.CRITICAL = 3)] = 'CRITICAL'), ((a = r || (r = {}))[(a.NONE = 0)] = 'NONE'), (a[(a.LIGHT = 1)] = 'LIGHT'), (a[(a.MODERATE = 2)] = 'MODERATE'), (a[(a.SEVERE = 3)] = 'SEVERE'), (a[(a.CRITICAL = 4)] = 'CRITICAL'), (a[(a.EMERGENCY = 5)] = 'EMERGENCY'), (a[(a.SHUTDOWN = 6)] = 'SHUTDOWN');

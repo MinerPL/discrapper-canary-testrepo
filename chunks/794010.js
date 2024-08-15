@@ -35,16 +35,7 @@ class o extends (n = r.PureComponent) {
 		super(...e),
 			l(this, 'handleClick', (e) => {
 				let { eventName: t, data: a, href: n, onClick: i, trackOutboundLink: r, track: l } = this.props;
-				if (
-					(a.googleAnalytics &&
-						r &&
-						(null != n
-							? r(n)
-							: console.warn('TrackClick.handleClick: No href provided when using data.googleAnalytics')),
-					i && i(e),
-					!t)
-				)
-					return !1;
+				if ((a.googleAnalytics && r && (null != n ? r(n) : console.warn('TrackClick.handleClick: No href provided when using data.googleAnalytics')), i && i(e), !t)) return !1;
 				l(t, a);
 			});
 	}

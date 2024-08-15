@@ -101,8 +101,7 @@ n.Z = (e) => {
 		),
 		Z = r.useMemo(() => {
 			if (S === M && A === j) return 1;
-			for (let e = 0; e < T.ym.length; e++)
-				if (T.ym[e].primary === i.brandPrimaryColor && T.ym[e].secondary === i.brandSecondaryColor) return 2 + e;
+			for (let e = 0; e < T.ym.length; e++) if (T.ym[e].primary === i.brandPrimaryColor && T.ym[e].secondary === i.brandSecondaryColor) return 2 + e;
 			return 0;
 		}, [S, A, M, j, i.brandPrimaryColor, i.brandSecondaryColor]),
 		[k, D] = r.useState(!1),
@@ -286,9 +285,7 @@ n.Z = (e) => {
 														onClick: () => {
 															t({ banner: e.bannerKind });
 														},
-														className: l()(I.bannerItemContainer, {
-															[I.bannerItemContainerSelected]: e.bannerKind === y
-														}),
+														className: l()(I.bannerItemContainer, { [I.bannerItemContainerSelected]: e.bannerKind === y }),
 														children: [
 															(0, a.jsx)(e.icon, { size: 'md' }),
 															(0, a.jsx)(m.Text, {

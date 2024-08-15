@@ -69,10 +69,10 @@ async function p(e) {
 			).body)
 		: [];
 }
-function I() {
+function m() {
 	c = { ...a.Z.getCollapsedCategories() };
 }
-class m extends i.Z {
+class I extends i.Z {
 	constructor(...e) {
 		super(...e),
 			u(this, 'actions', {
@@ -81,10 +81,10 @@ class m extends i.Z {
 				CATEGORY_COLLAPSE_ALL: f,
 				CATEGORY_EXPAND_ALL: f,
 				POST_CONNECTION_OPEN: E,
-				USER_GUILD_SETTINGS_FULL_UPDATE: I
+				USER_GUILD_SETTINGS_FULL_UPDATE: m
 			}),
 			u(this, 'saveUserGuildSettings', h),
 			u(this, 'saveUserGuildSettingsBulk', p);
 	}
 }
-t.Z = new m();
+t.Z = new I();

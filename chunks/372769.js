@@ -12,26 +12,10 @@ var r,
 	E = n(981631),
 	f = n(689938),
 	h = n(697408);
-((i = r || (r = {}))[(i.PARTNERED = 0)] = 'PARTNERED'),
-	(i[(i.STAFF = 1)] = 'STAFF'),
-	(i[(i.VERIFIED = 2)] = 'VERIFIED'),
-	(i[(i.VERIFIED_AND_PARTNERED = 3)] = 'VERIFIED_AND_PARTNERED'),
-	(i[(i.VERIFIED_AND_HUB = 4)] = 'VERIFIED_AND_HUB'),
-	(i[(i.HUB = 5)] = 'HUB'),
-	(i[(i.NONE = 6)] = 'NONE');
+((i = r || (r = {}))[(i.PARTNERED = 0)] = 'PARTNERED'), (i[(i.STAFF = 1)] = 'STAFF'), (i[(i.VERIFIED = 2)] = 'VERIFIED'), (i[(i.VERIFIED_AND_PARTNERED = 3)] = 'VERIFIED_AND_PARTNERED'), (i[(i.VERIFIED_AND_HUB = 4)] = 'VERIFIED_AND_HUB'), (i[(i.HUB = 5)] = 'HUB'), (i[(i.NONE = 6)] = 'NONE');
 class p extends s.PureComponent {
 	renderBadge(e, t, n) {
-		let {
-				className: r,
-				badgeStrokeColor: i,
-				tooltipColor: s = u.Tooltip.Colors.BRAND,
-				tooltipPosition: o,
-				tooltipDelay: d,
-				size: E = 16,
-				badgeColor: p,
-				iconClassName: I,
-				flowerStarClassName: m
-			} = this.props,
+		let { className: r, badgeStrokeColor: i, tooltipColor: s = u.Tooltip.Colors.BRAND, tooltipPosition: o, tooltipDelay: d, size: E = 16, badgeColor: p, iconClassName: m, flowerStarClassName: I } = this.props,
 			T = (function (e) {
 				switch (e) {
 					case 2:
@@ -67,20 +51,20 @@ class p extends s.PureComponent {
 								height: E
 							},
 							children: (0, a.jsx)(t, {
-								className: l()(h.icon, I),
+								className: l()(h.icon, m),
 								color: 'currentColor'
 							})
 						})
 					: (0, a.jsx)(c.Z, {
 							...s,
 							className: l()(n, r),
-							flowerStarClassName: m,
+							flowerStarClassName: I,
 							color: p,
 							stroke: i,
 							size: E,
 							children: (0, a.jsx)(t, {
 								size: 'xxs',
-								className: l()(h.icon, I),
+								className: l()(h.icon, m),
 								color: 'currentColor'
 							})
 						})
@@ -89,19 +73,7 @@ class p extends s.PureComponent {
 	render() {
 		let { guild: e } = this.props,
 			t = new Set(e.features);
-		return t.has(E.oNc.INTERNAL_EMPLOYEE_ONLY)
-			? this.renderBadge(1, u.StaffBadgeIcon, h.staff)
-			: t.has(E.oNc.VERIFIED) && t.has(E.oNc.HUB)
-				? this.renderBadge(4, u.HubIcon, h.verifiedHub)
-				: t.has(E.oNc.HUB)
-					? this.renderBadge(5, u.HubIcon, h.hub)
-					: t.has(E.oNc.VERIFIED) && t.has(E.oNc.PARTNERED)
-						? this.renderBadge(3, u.CheckmarkSmallIcon, h.verified)
-						: t.has(E.oNc.VERIFIED)
-							? this.renderBadge(2, u.CheckmarkSmallIcon, h.verified)
-							: t.has(E.oNc.PARTNERED)
-								? this.renderBadge(0, (0, u.makeIconCompat)(d.Z), h.partnered)
-								: null;
+		return t.has(E.oNc.INTERNAL_EMPLOYEE_ONLY) ? this.renderBadge(1, u.StaffBadgeIcon, h.staff) : t.has(E.oNc.VERIFIED) && t.has(E.oNc.HUB) ? this.renderBadge(4, u.HubIcon, h.verifiedHub) : t.has(E.oNc.HUB) ? this.renderBadge(5, u.HubIcon, h.hub) : t.has(E.oNc.VERIFIED) && t.has(E.oNc.PARTNERED) ? this.renderBadge(3, u.CheckmarkSmallIcon, h.verified) : t.has(E.oNc.VERIFIED) ? this.renderBadge(2, u.CheckmarkSmallIcon, h.verified) : t.has(E.oNc.PARTNERED) ? this.renderBadge(0, (0, u.makeIconCompat)(d.Z), h.partnered) : null;
 	}
 }
 t.Z = p;

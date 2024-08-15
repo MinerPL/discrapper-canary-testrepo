@@ -6,7 +6,7 @@ n.d(t, {
 		return T;
 	},
 	oK: function () {
-		return I;
+		return m;
 	}
 }),
 	n(627341);
@@ -25,7 +25,7 @@ var i = n(120356),
 	f = n(981631),
 	h = n(689938),
 	p = n(901487);
-function I() {
+function m() {
 	return (0, r.jsx)('div', {
 		className: p.selectionCircle,
 		children: (0, r.jsx)(c.CircleCheckIcon, {
@@ -37,18 +37,8 @@ function I() {
 		})
 	});
 }
-function m(e) {
-	let {
-			name: t,
-			className: n,
-			style: i,
-			onSelect: s,
-			isSelected: o = !1,
-			tabIndex: l,
-			children: u,
-			showBadge: d,
-			showLockedBadge: _
-		} = e,
+function I(e) {
+	let { name: t, className: n, style: i, onSelect: s, isSelected: o = !1, tabIndex: l, children: u, showBadge: d, showLockedBadge: _ } = e,
 		E = (0, c.useRadioItem)({
 			label: t,
 			isSelected: o
@@ -68,7 +58,7 @@ function m(e) {
 						onClick: o ? f.dG4 : s,
 						children: u
 					}),
-					o && (0, r.jsx)(I, {}),
+					o && (0, r.jsx)(m, {}),
 					!o && d && (0, r.jsx)('div', { className: p.redCircle }),
 					_ &&
 						(0, r.jsx)('div', {
@@ -85,7 +75,7 @@ function m(e) {
 function T(e) {
 	let { theme: t, isSelected: n, onSelect: i } = e,
 		_ = (0, o.e7)([d.Z], () => d.Z.systemPrefersColorScheme),
-		I = (e) => ((0, u.ap)(e) ? l.Z.unsafe_rawColors.PRIMARY_600.css : l.Z.unsafe_rawColors.WHITE_500.css),
+		m = (e) => ((0, u.ap)(e) ? l.Z.unsafe_rawColors.PRIMARY_600.css : l.Z.unsafe_rawColors.WHITE_500.css),
 		T = (0, s.EQ)({
 			theme: t,
 			systemPrefersColorScheme: _
@@ -110,7 +100,7 @@ function T(e) {
 			.with('system', () => h.Z.Messages.THEME_SYSTEM)
 			.exhaustive(),
 		S = (0, c.useRedesignIconContext)().enabled;
-	return (0, r.jsx)(m, {
+	return (0, r.jsx)(I, {
 		onSelect: i,
 		isSelected: n,
 		name: g,
@@ -119,7 +109,7 @@ function T(e) {
 			'system' === t &&
 			(0, r.jsx)('div', {
 				className: p.iconWrapper,
-				children: S ? (0, r.jsx)(c.RefreshIcon, { color: I(_) }) : (0, r.jsx)(E.Z, { fill: I(_) })
+				children: S ? (0, r.jsx)(c.RefreshIcon, { color: m(_) }) : (0, r.jsx)(E.Z, { fill: m(_) })
 			})
 	});
 }
@@ -130,7 +120,7 @@ function g(e) {
 			colors: d,
 			angle: E
 		});
-	return (0, r.jsx)(m, {
+	return (0, r.jsx)(I, {
 		onSelect: i ? void 0 : o,
 		isSelected: n,
 		name: t.getName(),

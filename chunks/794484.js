@@ -46,15 +46,7 @@ let g = (e) => {
 };
 t.Z = (e) => {
 	var t;
-	let {
-			className: n,
-			variant: r = T.R0.PERKS_DISCOVERABILITY,
-			noBackground: p = !1,
-			leftAlignHeaders: N = !1,
-			showAllPerksButton: A,
-			headerClassname: m,
-			isFullScreen: f = !0
-		} = e,
+	let { className: n, variant: r = T.R0.PERKS_DISCOVERABILITY, noBackground: p = !1, leftAlignHeaders: N = !1, showAllPerksButton: A, headerClassname: m, isFullScreen: f = !0 } = e,
 		S = a.useRef(null),
 		h = (0, _.yQ)(),
 		M = (0, u.Ag)(h),

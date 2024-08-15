@@ -21,20 +21,7 @@ var i = n(481060),
 	f = n(981631);
 let h = 'apply-guild-boost-modal';
 async function p(e) {
-	let {
-			analyticsLocations: t,
-			analyticsLocation: p,
-			analyticsSourceLocation: I,
-			numberOfBoostsToAdd: m,
-			onClose: T,
-			closeLayer: g,
-			onSubscriptionConfirmation: S,
-			guild: A,
-			handleSubscribeModalClose: N,
-			disablePremiumUpsell: v,
-			inPopout: O,
-			applicationId: R
-		} = e,
+	let { analyticsLocations: t, analyticsLocation: p, analyticsSourceLocation: m, numberOfBoostsToAdd: I, onClose: T, closeLayer: g, onSubscriptionConfirmation: S, guild: A, handleSubscribeModalClose: N, disablePremiumUpsell: v, inPopout: O, applicationId: R } = e,
 		C = O ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT,
 		y = l.default.getCurrentUser();
 	if (null == y) return;
@@ -55,28 +42,18 @@ async function p(e) {
 		return;
 	}
 	let D = [];
-	!c.Z.isLoadedForPremiumSKUs() && D.push((0, o.Y2)()),
-		!u.Z.hasFetched && (D.push(a.jg()), D.push((0, s.X8)())),
-		D.length > 0 && (await Promise.allSettled(D));
+	!c.Z.isLoadedForPremiumSKUs() && D.push((0, o.Y2)()), !u.Z.hasFetched && (D.push(a.jg()), D.push((0, s.X8)())), D.length > 0 && (await Promise.allSettled(D));
 	let L = (0, _.vx)(u.Z.boostSlots),
 		b = L.length,
 		M = (e) => {
 			null == T || T(), null == N || N(e);
 		};
-	if (b > 0 && (null == m || b >= m)) {
+	if (b > 0 && (null == I || b >= I)) {
 		let e;
-		1 === b ? (e = L.slice(0, 1)) : null != m && (e = L.slice(0, m)),
+		1 === b ? (e = L.slice(0, 1)) : null != I && (e = L.slice(0, I)),
 			await (0, i.openModalLazy)(
 				async () => {
-					let { default: t } = await Promise.all([
-						n.e('52249'),
-						n.e('29549'),
-						n.e('15685'),
-						n.e('8016'),
-						n.e('22646'),
-						n.e('30419'),
-						n.e('72407')
-					]).then(n.bind(n, 760558));
+					let { default: t } = await Promise.all([n.e('52249'), n.e('29549'), n.e('15685'), n.e('8016'), n.e('22646'), n.e('30419'), n.e('72407')]).then(n.bind(n, 760558));
 					return (n) => {
 						let { onClose: i, ...a } = n;
 						return (0, r.jsx)(t, {
@@ -102,7 +79,7 @@ async function p(e) {
 		(0, E.Z)({
 			analyticsLocations: t,
 			analyticsLocation: p,
-			analyticsSourceLocation: I,
+			analyticsSourceLocation: m,
 			guildId: A.id,
 			closeLayer: () => {
 				null == T || T(),
@@ -112,7 +89,7 @@ async function p(e) {
 						location_section: p.section
 					});
 			},
-			totalNumberOfSlotsToAssign: null != m ? m : 1,
+			totalNumberOfSlotsToAssign: null != I ? I : 1,
 			onCloseModal: M,
 			disablePremiumUpsell: v,
 			onSubscriptionConfirmation: S,

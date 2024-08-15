@@ -59,11 +59,7 @@ class u {
 	static onResponse(e, t) {
 		let n = performance.now(),
 			r = this.pending.get(e.id);
-		null != r &&
-			(this.pending.delete(e.id),
-			(e.timings.materializationTimeNanoseconds = null != t ? t : 0),
-			this.completeOperation(r, e, n),
-			this.resolveOperation(r, e));
+		null != r && (this.pending.delete(e.id), (e.timings.materializationTimeNanoseconds = null != t ? t : 0), this.completeOperation(r, e, n), this.resolveOperation(r, e));
 	}
 	static onStatus(e) {
 		for (let t of this.dbStateCallbacks) t(e.handle, e.state);
@@ -98,27 +94,11 @@ class u {
 				o &&
 					(this.addCompletionCallback((e) => {
 						let t = e.ok ? 'completed' : 'failed',
-							n = [
-								''.concat(e.timings.execution.toFixed(3), 'ms execution'),
-								''.concat(e.timings.materialization.toFixed(3), 'ms js materialization'),
-								''.concat(e.timings.ccTotal.toFixed(3), 'ms cc completion'),
-								''.concat(e.timings.jsTotal.toFixed(3), 'ms js reception')
-							].join(', ');
-						l.info(
-							''
-								.concat(e.tag, ' (#')
-								.concat(e.id, ') ')
-								.concat(t, ' in ')
-								.concat(e.timings.ccTotal.toFixed(3), 'ms (')
-								.concat(n, ').')
-						);
+							n = [''.concat(e.timings.execution.toFixed(3), 'ms execution'), ''.concat(e.timings.materialization.toFixed(3), 'ms js materialization'), ''.concat(e.timings.ccTotal.toFixed(3), 'ms cc completion'), ''.concat(e.timings.jsTotal.toFixed(3), 'ms js reception')].join(', ');
+						l.info(''.concat(e.tag, ' (#').concat(e.id, ') ').concat(t, ' in ').concat(e.timings.ccTotal.toFixed(3), 'ms (').concat(n, ').'));
 					}),
 					this.addDatabaseStateCallback((e, t) => l.info(''.concat(e, ' (state: ').concat(t, ')')))),
 				(this.initialized = !0);
 	}
 }
-s(u, 'counter', 0),
-	s(u, 'pending', new Map()),
-	s(u, 'initialized', !1),
-	s(u, 'dbStateCallbacks', []),
-	s(u, 'completionCallbacks', []);
+s(u, 'counter', 0), s(u, 'pending', new Map()), s(u, 'initialized', !1), s(u, 'dbStateCallbacks', []), s(u, 'completionCallbacks', []);

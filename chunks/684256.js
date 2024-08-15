@@ -17,10 +17,7 @@ var i = t(735250),
 	_ = t(622443);
 function C(e) {
 	let { channel: n, entrypoint: t, title: l, look: C, items: f, sectionName: h } = e,
-		{ clickOnHomeActivityOpensAppDetail: A } = c.m1.getCurrentConfig(
-			{ location: 'AppLauncherApplicationListViewScreen' },
-			{ autoTrackExposure: !1 }
-		),
+		{ clickOnHomeActivityOpensAppDetail: A } = c.m1.getCurrentConfig({ location: 'AppLauncherApplicationListViewScreen' }, { autoTrackExposure: !1 }),
 		E = a.useMemo(() => (t === d._b.TEXT ? u.kA : u.qR), [t]);
 	return (0, i.jsxs)('section', {
 		className: _.container,

@@ -45,9 +45,7 @@ function E() {
 }
 class f extends (r = i.ZP.PersistedStore) {
 	initialize(e) {
-		this.waitFor(s.Z),
-			null != e && ((d.userAffinities = e.userAffinities), (d.lastFetched = e.lastFetched), E()),
-			this.syncWith([s.Z], E);
+		this.waitFor(s.Z), null != e && ((d.userAffinities = e.userAffinities), (d.lastFetched = e.lastFetched), E()), this.syncWith([s.Z], E);
 	}
 	needsRefresh() {
 		return !l && Date.now() - d.lastFetched > 86400000;
@@ -78,10 +76,7 @@ o(f, 'displayName', 'UserAffinitiesStore'),
 		LOAD_USER_AFFINITIES_SUCCESS: function (e) {
 			var t;
 			let { affinities: n } = e;
-			(d.userAffinities = null !== (t = n.user_affinities) && void 0 !== t ? t : []),
-				(d.lastFetched = Date.now()),
-				E(),
-				(l = !1);
+			(d.userAffinities = null !== (t = n.user_affinities) && void 0 !== t ? t : []), (d.lastFetched = Date.now()), E(), (l = !1);
 		},
 		LOAD_USER_AFFINITIES: function () {
 			l = !0;

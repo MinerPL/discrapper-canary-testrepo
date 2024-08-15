@@ -4,39 +4,10 @@ var r = n(685053),
 	s = n(806981),
 	o = r.assert;
 function l(e) {
-	(this.twisted = (0 | e.a) != 1),
-		(this.mOneA = this.twisted && (0 | e.a) == -1),
-		(this.extended = this.mOneA),
-		s.call(this, 'edwards', e),
-		(this.a = new i(e.a, 16).umod(this.red.m)),
-		(this.a = this.a.toRed(this.red)),
-		(this.c = new i(e.c, 16).toRed(this.red)),
-		(this.c2 = this.c.redSqr()),
-		(this.d = new i(e.d, 16).toRed(this.red)),
-		(this.dd = this.d.redAdd(this.d)),
-		o(!this.twisted || 0 === this.c.fromRed().cmpn(1)),
-		(this.oneC = (0 | e.c) == 1);
+	(this.twisted = (0 | e.a) != 1), (this.mOneA = this.twisted && (0 | e.a) == -1), (this.extended = this.mOneA), s.call(this, 'edwards', e), (this.a = new i(e.a, 16).umod(this.red.m)), (this.a = this.a.toRed(this.red)), (this.c = new i(e.c, 16).toRed(this.red)), (this.c2 = this.c.redSqr()), (this.d = new i(e.d, 16).toRed(this.red)), (this.dd = this.d.redAdd(this.d)), o(!this.twisted || 0 === this.c.fromRed().cmpn(1)), (this.oneC = (0 | e.c) == 1);
 }
 function u(e, t, n, r, a) {
-	s.BasePoint.call(this, e, 'projective'),
-		null === t && null === n && null === r
-			? ((this.x = this.curve.zero),
-				(this.y = this.curve.one),
-				(this.z = this.curve.one),
-				(this.t = this.curve.zero),
-				(this.zOne = !0))
-			: ((this.x = new i(t, 16)),
-				(this.y = new i(n, 16)),
-				(this.z = r ? new i(r, 16) : this.curve.one),
-				(this.t = a && new i(a, 16)),
-				!this.x.red && (this.x = this.x.toRed(this.curve.red)),
-				!this.y.red && (this.y = this.y.toRed(this.curve.red)),
-				!this.z.red && (this.z = this.z.toRed(this.curve.red)),
-				this.t && !this.t.red && (this.t = this.t.toRed(this.curve.red)),
-				(this.zOne = this.z === this.curve.one),
-				this.curve.extended &&
-					!this.t &&
-					((this.t = this.x.redMul(this.y)), !this.zOne && (this.t = this.t.redMul(this.z.redInvm()))));
+	s.BasePoint.call(this, e, 'projective'), null === t && null === n && null === r ? ((this.x = this.curve.zero), (this.y = this.curve.one), (this.z = this.curve.one), (this.t = this.curve.zero), (this.zOne = !0)) : ((this.x = new i(t, 16)), (this.y = new i(n, 16)), (this.z = r ? new i(r, 16) : this.curve.one), (this.t = a && new i(a, 16)), !this.x.red && (this.x = this.x.toRed(this.curve.red)), !this.y.red && (this.y = this.y.toRed(this.curve.red)), !this.z.red && (this.z = this.z.toRed(this.curve.red)), this.t && !this.t.red && (this.t = this.t.toRed(this.curve.red)), (this.zOne = this.z === this.curve.one), this.curve.extended && !this.t && ((this.t = this.x.redMul(this.y)), !this.zOne && (this.t = this.t.redMul(this.z.redInvm()))));
 }
 a(l, s),
 	(e.exports = l),
@@ -94,15 +65,7 @@ a(l, s),
 		return new u(e, t[0], t[1], t[2]);
 	}),
 	(u.prototype.inspect = function () {
-		return this.isInfinity()
-			? '<EC Point Infinity>'
-			: '<EC Point x: ' +
-					this.x.fromRed().toString(16, 2) +
-					' y: ' +
-					this.y.fromRed().toString(16, 2) +
-					' z: ' +
-					this.z.fromRed().toString(16, 2) +
-					'>';
+		return this.isInfinity() ? '<EC Point Infinity>' : '<EC Point x: ' + this.x.fromRed().toString(16, 2) + ' y: ' + this.y.fromRed().toString(16, 2) + ' z: ' + this.z.fromRed().toString(16, 2) + '>';
 	}),
 	(u.prototype.isInfinity = function () {
 		return 0 === this.x.cmpn(0) && (0 === this.y.cmp(this.z) || (this.zOne && 0 === this.y.cmp(this.curve.c)));
@@ -135,22 +98,8 @@ a(l, s),
 			l = this.y.redSqr();
 		if (this.curve.twisted) {
 			var u = (r = this.curve._mulA(o)).redAdd(l);
-			this.zOne
-				? ((e = s.redSub(o).redSub(l).redMul(u.redSub(this.curve.two))),
-					(t = u.redMul(r.redSub(l))),
-					(n = u.redSqr().redSub(u).redSub(u)))
-				: ((i = this.z.redSqr()),
-					(a = u.redSub(i).redISub(i)),
-					(e = s.redSub(o).redISub(l).redMul(a)),
-					(t = u.redMul(r.redSub(l))),
-					(n = u.redMul(a)));
-		} else
-			(r = o.redAdd(l)),
-				(i = this.curve._mulC(this.z).redSqr()),
-				(a = r.redSub(i).redSub(i)),
-				(e = this.curve._mulC(s.redISub(r)).redMul(a)),
-				(t = this.curve._mulC(r).redMul(o.redISub(l))),
-				(n = r.redMul(a));
+			this.zOne ? ((e = s.redSub(o).redSub(l).redMul(u.redSub(this.curve.two))), (t = u.redMul(r.redSub(l))), (n = u.redSqr().redSub(u).redSub(u))) : ((i = this.z.redSqr()), (a = u.redSub(i).redISub(i)), (e = s.redSub(o).redISub(l).redMul(a)), (t = u.redMul(r.redSub(l))), (n = u.redMul(a)));
+		} else (r = o.redAdd(l)), (i = this.curve._mulC(this.z).redSqr()), (a = r.redSub(i).redSub(i)), (e = this.curve._mulC(s.redISub(r)).redMul(a)), (t = this.curve._mulC(r).redMul(o.redISub(l))), (n = r.redMul(a));
 		return this.curve.point(e, t, n);
 	}),
 	(u.prototype.dbl = function () {
@@ -183,12 +132,7 @@ a(l, s),
 			u = i.redAdd(o),
 			c = this.x.redAdd(this.y).redMul(e.x.redAdd(e.y)).redISub(a).redISub(s),
 			d = r.redMul(l).redMul(c);
-		return (
-			this.curve.twisted
-				? ((t = r.redMul(u).redMul(s.redSub(this.curve._mulA(a)))), (n = l.redMul(u)))
-				: ((t = r.redMul(u).redMul(s.redSub(a))), (n = this.curve._mulC(l).redMul(u))),
-			this.curve.point(d, t, n)
-		);
+		return this.curve.twisted ? ((t = r.redMul(u).redMul(s.redSub(this.curve._mulA(a)))), (n = l.redMul(u))) : ((t = r.redMul(u).redMul(s.redSub(a))), (n = this.curve._mulC(l).redMul(u))), this.curve.point(d, t, n);
 	}),
 	(u.prototype.add = function (e) {
 		return this.isInfinity() ? e : e.isInfinity() ? this : this.curve.extended ? this._extAdd(e) : this._projAdd(e);
@@ -205,14 +149,7 @@ a(l, s),
 	(u.prototype.normalize = function () {
 		if (this.zOne) return this;
 		var e = this.z.redInvm();
-		return (
-			(this.x = this.x.redMul(e)),
-			(this.y = this.y.redMul(e)),
-			this.t && (this.t = this.t.redMul(e)),
-			(this.z = this.curve.one),
-			(this.zOne = !0),
-			this
-		);
+		return (this.x = this.x.redMul(e)), (this.y = this.y.redMul(e)), this.t && (this.t = this.t.redMul(e)), (this.z = this.curve.one), (this.zOne = !0), this;
 	}),
 	(u.prototype.neg = function () {
 		return this.curve.point(this.x.redNeg(), this.y, this.z, this.t && this.t.redNeg());

@@ -39,8 +39,8 @@ var r = n(735250),
 	f = n(393238),
 	h = n(434650),
 	p = n(98650),
-	I = n(748585),
-	m = n(689938),
+	m = n(748585),
+	I = n(689938),
 	T = n(110838);
 function g(e) {
 	let { value: t, onChange: n, serialize: r = (e) => String(e) } = e;
@@ -120,33 +120,7 @@ function C(e) {
 	return e.map((e) => R(e)).join(', ');
 }
 function y(e) {
-	let {
-			options: t,
-			placeholder: n = m.Z.Messages.SELECT,
-			className: a,
-			isDisabled: o = !1,
-			maxVisibleItems: l = 7,
-			autoFocus: c = !1,
-			popoutWidth: _,
-			clearable: p = !1,
-			look: g = I.q.FILLED,
-			onClose: S,
-			onOpen: A,
-			renderOptionLabel: N = R,
-			renderOptionValue: v = C,
-			popoutClassName: O,
-			popoutPosition: y = 'bottom',
-			popoutLayerContext: L,
-			optionClassName: b,
-			closeOnSelect: M,
-			select: P,
-			isSelected: U,
-			serialize: w,
-			clear: x,
-			hideIcon: G = !1,
-			'aria-label': k,
-			'aria-labelledby': B
-		} = e,
+	let { options: t, placeholder: n = I.Z.Messages.SELECT, className: a, isDisabled: o = !1, maxVisibleItems: l = 7, autoFocus: c = !1, popoutWidth: _, clearable: p = !1, look: g = m.q.FILLED, onClose: S, onOpen: A, renderOptionLabel: N = R, renderOptionValue: v = C, popoutClassName: O, popoutPosition: y = 'bottom', popoutLayerContext: L, optionClassName: b, closeOnSelect: M, select: P, isSelected: U, serialize: w, clear: x, hideIcon: G = !1, 'aria-label': k, 'aria-labelledby': B } = e,
 		[F, V] = i.useState(!1),
 		{ ref: H, width: Z, height: Y } = (0, f.Z)(),
 		j = i.useCallback(
@@ -240,7 +214,7 @@ function y(e) {
 					[T.open]: d,
 					[T.disabled]: o,
 					[T.selectPositionTop]: 'top' === _,
-					[T.lookFilled]: g === I.q.FILLED
+					[T.lookFilled]: g === m.q.FILLED
 				}),
 				'aria-haspopup': 'listbox',
 				'aria-expanded': d,
@@ -264,7 +238,7 @@ function y(e) {
 										role: 'button',
 										'aria-disabled': o,
 										onClick: q,
-										'aria-label': m.Z.Messages.CLEAR,
+										'aria-label': I.Z.Messages.CLEAR,
 										children: (0, r.jsx)(E.XSmallIcon, {
 											size: 'xs',
 											color: 'currentColor',
@@ -288,22 +262,7 @@ function y(e) {
 	});
 }
 function D(e) {
-	let {
-			className: t,
-			onSelect: n,
-			closePopout: a,
-			closeOnSelect: u = !0,
-			isSelected: d,
-			options: E,
-			width: f,
-			maxVisibleItems: h,
-			renderOptionLabel: I,
-			serialize: m,
-			optionClassName: g,
-			buttonHeight: S,
-			updatePosition: A,
-			popoutPosition: N
-		} = e,
+	let { className: t, onSelect: n, closePopout: a, closeOnSelect: u = !0, isSelected: d, options: E, width: f, maxVisibleItems: h, renderOptionLabel: m, serialize: I, optionClassName: g, buttonHeight: S, updatePosition: A, popoutPosition: N } = e,
 		[v, O] = i.useState(0),
 		R = i.useRef(null),
 		C = i.useId(),
@@ -326,12 +285,7 @@ function D(e) {
 		(0, p.Z)(A),
 		i.useLayoutEffect(() => {
 			var e, t;
-			let n =
-				null === (t = R.current) || void 0 === t
-					? void 0
-					: null === (e = t.getBoundingClientRect()) || void 0 === e
-						? void 0
-						: e.height;
+			let n = null === (t = R.current) || void 0 === t ? void 0 : null === (e = t.getBoundingClientRect()) || void 0 === e ? void 0 : e.height;
 			null != n && O(n);
 		}, [h]),
 		i.useEffect(() => {
@@ -350,11 +304,11 @@ function D(e) {
 				{
 					isSelected: d(e.value),
 					value: e.value,
-					label: I(e),
+					label: m(e),
 					onSelect: b,
 					className: g,
 					isDisabled: e.disabled,
-					serialize: m
+					serialize: I
 				},
 				null !== (n = e.key) && void 0 !== n ? n : t
 			);

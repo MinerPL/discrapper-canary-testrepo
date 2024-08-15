@@ -40,18 +40,7 @@ class C extends (i = l.ZP.Store) {
 			if (a || N.has(n)) return !1;
 			let s = d.Z.getChannel(n),
 				r = E.default.getCurrentUser();
-			if (
-				!(
-					null != s &&
-					s.type === T.d4z.GUILD_ANNOUNCEMENT &&
-					(0, m.Z)(i) &&
-					(null != r && (null === (t = i.author) || void 0 === t ? void 0 : t.id) === r.id
-						? _.Z.can(T.Plq.SEND_MESSAGES, s)
-						: _.Z.can(T.Plq.MANAGE_MESSAGES, s)) &&
-					!I.yE(Number(i.flags), T.iLy.CROSSPOSTED)
-				)
-			)
-				return !1;
+			if (!(null != s && s.type === T.d4z.GUILD_ANNOUNCEMENT && (0, m.Z)(i) && (null != r && (null === (t = i.author) || void 0 === t ? void 0 : t.id) === r.id ? _.Z.can(T.Plq.SEND_MESSAGES, s) : _.Z.can(T.Plq.MANAGE_MESSAGES, s)) && !I.yE(Number(i.flags), T.iLy.CROSSPOSTED))) return !1;
 			f.add(i.id);
 		},
 		MESSAGE_UPDATE: function (e) {

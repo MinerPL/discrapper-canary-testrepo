@@ -122,23 +122,7 @@ class ea extends (i = o.PureComponent) {
 	}
 	render() {
 		let e, t;
-		let {
-				count: n,
-				burst_count: i,
-				colors: o,
-				isBurstReaction: a,
-				hideCount: r,
-				emoji: d,
-				readOnly: h,
-				isLurking: g,
-				isGuest: f,
-				isPendingMember: _,
-				className: v,
-				useChatFontScaling: E,
-				message: I,
-				hideEmoji: x,
-				animationStartPosition: C
-			} = this.props,
+		let { count: n, burst_count: i, colors: o, isBurstReaction: a, hideCount: r, emoji: d, readOnly: h, isLurking: g, isGuest: f, isPendingMember: _, className: v, useChatFontScaling: E, message: I, hideEmoji: x, animationStartPosition: C } = this.props,
 			{ shouldShowTooltip: S, tooltipTextAria: R, reactionRef: N, tooltipPositionKey: Z } = this.state,
 			j = E ? ee : Q,
 			M = {
@@ -272,16 +256,7 @@ class ea extends (i = o.PureComponent) {
 			en(this, 'userCanBurstReact', () => this.props.userHasPremium),
 			en(this, 'handleClick', (e) => {
 				e.stopPropagation();
-				let {
-						message: t,
-						emoji: n,
-						readOnly: i,
-						isBurstReaction: s,
-						isPendingMember: o,
-						isLurking: a,
-						isGuest: l,
-						isForumToolbar: r
-					} = this.props,
+				let { message: t, emoji: n, readOnly: i, isBurstReaction: s, isPendingMember: o, isLurking: a, isGuest: l, isForumToolbar: r } = this.props,
 					c = P.Z.getChannel(t.getChannelId());
 				if (a || l) {
 					var u, d;
@@ -315,14 +290,7 @@ class ea extends (i = o.PureComponent) {
 							: (0, M.rU)(h, t.id, n, m, { burst: s }));
 			}),
 			en(this, 'handleEnter', (e) => {
-				let {
-						emoji: t,
-						message: n,
-						type: i,
-						reduceMotion: s,
-						animateEmoji: o,
-						autoUnfurlReactionTooltip: a
-					} = this.props,
+				let { emoji: t, message: n, type: i, reduceMotion: s, animateEmoji: o, autoUnfurlReactionTooltip: a } = this.props,
 					l = i === H.O.BURST;
 				l &&
 					!this.isReactionEventActive &&
@@ -342,24 +310,16 @@ class ea extends (i = o.PureComponent) {
 				(this.isReactionEventActive = !0), this.handleShowTooltip();
 			}),
 			en(this, 'handleShowTooltip', () => {
-				this.hideTimeout.stop(),
-					this.isReactionEventActive && (this.updateTooltipText(), w.Z.addChangeListener(this.updateTooltipText));
+				this.hideTimeout.stop(), this.isReactionEventActive && (this.updateTooltipText(), w.Z.addChangeListener(this.updateTooltipText));
 			}),
 			en(this, 'showTooltip', () => {
-				this.handleShowTooltip(),
-					this.isReactionEventActive && this.trackReactionTooltipViewed(),
-					(this.hasShownTooltip = !0);
+				this.handleShowTooltip(), this.isReactionEventActive && this.trackReactionTooltipViewed(), (this.hasShownTooltip = !0);
 			}),
 			en(this, 'handleLeave', () => {
-				(this.isReactionEventActive = !1),
-					(this.isKeyboardNavigation = !1),
-					this.timeout.stop(),
-					w.Z.removeChangeListener(this.updateTooltipText),
-					this.hideTimeout.start(200, this.hideTooltip, !1);
+				(this.isReactionEventActive = !1), (this.isKeyboardNavigation = !1), this.timeout.stop(), w.Z.removeChangeListener(this.updateTooltipText), this.hideTimeout.start(200, this.hideTooltip, !1);
 			}),
 			en(this, 'hideTooltip', () => {
-				this.setState({ shouldShowTooltip: !1 }),
-					this.hasShownTooltip && D.default.track(J.rMx.CLOSE_POPOUT, { nonce: this.nonce });
+				this.setState({ shouldShowTooltip: !1 }), this.hasShownTooltip && D.default.track(J.rMx.CLOSE_POPOUT, { nonce: this.nonce });
 			}),
 			en(this, 'isMe', () => {
 				let { me: e, me_burst: t, type: n } = this.props;
@@ -468,11 +428,7 @@ class ea extends (i = o.PureComponent) {
 										});
 									if (this.userCanBurstReact())
 										return (0, s.jsxs)('div', {
-											className: l()(
-												et.burstReactionTooltipPrompt,
-												et.burstReactionTooltipSpacer,
-												et.burstReactionTooltipPromptClickable
-											),
+											className: l()(et.burstReactionTooltipPrompt, et.burstReactionTooltipSpacer, et.burstReactionTooltipPromptClickable),
 											children: [
 												(0, s.jsx)(m.NitroWheelIcon, {
 													size: 'md',
@@ -608,15 +564,7 @@ let el = o.memo((e) => {
 	}),
 	er = (e) => {
 		var t;
-		let {
-			emojiId: n,
-			expressionSourceGuild: i,
-			hasJoinedExpressionSourceGuild: o,
-			onClose: a,
-			popoutData: l,
-			currentGuildId: r,
-			nonce: c
-		} = e;
+		let { emojiId: n, expressionSourceGuild: i, hasJoinedExpressionSourceGuild: o, onClose: a, popoutData: l, currentGuildId: r, nonce: c } = e;
 		(0, S.u)({
 			emojiId: n,
 			currentGuildId: r,
@@ -662,10 +610,7 @@ let el = o.memo((e) => {
 		let { emojiId: n, refreshPositionKey: i, onClose: a, nonce: r } = e,
 			{ joinedEmojiSourceGuild: c } = (0, d.cj)([E.ZP, L.Z], () => {
 				let e = E.ZP.getCustomEmojiById(n);
-				return {
-					joinedEmojiSourceGuild:
-						(null == e ? void 0 : e.type) === I.B.GUILD ? L.Z.getGuild(null == e ? void 0 : e.guildId) : void 0
-				};
+				return { joinedEmojiSourceGuild: (null == e ? void 0 : e.type) === I.B.GUILD ? L.Z.getGuild(null == e ? void 0 : e.guildId) : void 0 };
 			}),
 			[u, h] = o.useState(void 0),
 			[p, g] = o.useState(void 0),

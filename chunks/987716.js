@@ -20,15 +20,7 @@ var i = t(735250),
 	f = t(62612);
 let E = (e) => {
 	let { isShopGift: n } = e,
-		{
-			giftRecipient: t,
-			selectedGiftStyle: E,
-			setSelectedGiftStyle: x,
-			emojiConfetti: N,
-			soundEffect: S,
-			setEmojiConfetti: T,
-			setSoundEffect: h
-		} = (0, s.wD)(),
+		{ giftRecipient: t, selectedGiftStyle: E, setSelectedGiftStyle: x, emojiConfetti: N, soundEffect: S, setEmojiConfetti: T, setSoundEffect: h } = (0, s.wD)(),
 		[b, g] = a.useState(!1),
 		P = a.useRef(null),
 		v = (0, r.useRadioGroup)({ orientation: 'horizontal' }),
@@ -36,10 +28,7 @@ let E = (e) => {
 		y = A === o.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
 		M = A !== o.xr.DEFAULT,
 		C = (0, u.rK)(),
-		{ enabled: O } = u.ZP.useExperiment(
-			{ location: 'premiumGiftSelect_GiftAnimationOptions' },
-			{ autoTrackExposure: C }
-		),
+		{ enabled: O } = u.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: C }),
 		R = null;
 	return (
 		M && (R = C && O ? m.V4 : m.QI),

@@ -142,13 +142,7 @@ function g(e, t) {
 	return r.withActiveSpan ? r.withActiveSpan(e, t) : (0, _.$e)((r) => ((0, l.D)(r, e || void 0), t(r)));
 }
 function M(e) {
-	return (0, _.$e)(
-		(t) => (
-			t.setPropagationContext((0, a.Q)()),
-			s.X && o.kg.info(`Starting a new trace with id ${t.getPropagationContext().traceId}`),
-			g(null, e)
-		)
-	);
+	return (0, _.$e)((t) => (t.setPropagationContext((0, a.Q)()), s.X && o.kg.info(`Starting a new trace with id ${t.getPropagationContext().traceId}`), g(null, e)));
 }
 function P({ parentSpan: e, spanArguments: t, forceTransaction: r, scope: n }) {
 	let a;

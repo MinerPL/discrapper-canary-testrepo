@@ -18,12 +18,7 @@ var r = n(653603),
 	d = n(981631);
 function _(e, t) {
 	let { cmd: n = !1, ctrl: r = !1, alt: i = !1, shift: a = !1 } = t;
-	return (
-		(null == n || e.metaKey === n) &&
-		(null == r || e.ctrlKey === r) &&
-		(null == i || e.altKey === i) &&
-		(null == a || e.shiftKey === a)
-	);
+	return (null == n || e.metaKey === n) && (null == r || e.ctrlKey === r) && (null == i || e.altKey === i) && (null == a || e.shiftKey === a);
 }
 function E(e) {
 	return (
@@ -88,14 +83,8 @@ function E(e) {
 							return (
 								o.T.withSingleEntry(e, () => {
 									var t, r, i, s;
-									let o =
-											null !== (i = null === (t = e.selection) || void 0 === t ? void 0 : t.anchor) && void 0 !== i
-												? i
-												: c.bN.start(e, []),
-										l =
-											null !== (s = null === (r = e.selection) || void 0 === r ? void 0 : r.focus) && void 0 !== s
-												? s
-												: c.bN.end(e, []);
+									let o = null !== (i = null === (t = e.selection) || void 0 === t ? void 0 : t.anchor) && void 0 !== i ? i : c.bN.start(e, []),
+										l = null !== (s = null === (r = e.selection) || void 0 === r ? void 0 : r.focus) && void 0 !== s ? s : c.bN.end(e, []);
 									for (let [t, r] of a) {
 										let i = t.children[0];
 										if (!c.LC.isText(t.children[0])) continue;
@@ -173,18 +162,7 @@ function E(e) {
 						return !1;
 					else return !1;
 					t.shiftKey && (s = 'focus');
-					let o =
-							e.children[
-								null !==
-									(E =
-										null === (a = e.selection) || void 0 === a
-											? void 0
-											: null === (r = a.focus) || void 0 === r
-												? void 0
-												: r.path[0]) && void 0 !== E
-									? E
-									: 0
-							],
+					let o = e.children[null !== (E = null === (a = e.selection) || void 0 === a ? void 0 : null === (r = a.focus) || void 0 === r ? void 0 : r.path[0]) && void 0 !== E ? E : 0],
 						l = 'rtl' === i()(c.aj.string(o)),
 						h = (t.which === d.yXg.ARROW_LEFT) == !l;
 					return (
@@ -253,11 +231,7 @@ function E(e) {
 					) {
 						let [t, n] = c.M8.edges(e.selection),
 							[r, i] = c.bN.node(e, [h ? t.path[0] : n.path[0]]);
-						if (
-							(s()(c.q.isElement(r) && c.bN.isBlock(e, r), 'Top-most node of selection is not a block'),
-							(h && !c.Jz.isAtStart(t, [r, i])) || (!h && !c.Jz.isAtEnd(n, [r, i])))
-						)
-							return h ? e.deleteBackward('line') : e.deleteForward('line'), !0;
+						if ((s()(c.q.isElement(r) && c.bN.isBlock(e, r), 'Top-most node of selection is not a block'), (h && !c.Jz.isAtStart(t, [r, i])) || (!h && !c.Jz.isAtEnd(n, [r, i])))) return h ? e.deleteBackward('line') : e.deleteForward('line'), !0;
 					}
 			}
 			return !1;

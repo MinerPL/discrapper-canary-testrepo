@@ -76,9 +76,7 @@ function D(e) {
 		featureCards: [
 			{
 				header: p.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_REMIXING_CARD_HEADER,
-				subHeader: p.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_REMIXING_CARD_BODY_FORMATTED.format({
-					helpCenterLink: h.Z.getArticleURL(E.BhN.REMIXING)
-				}),
+				subHeader: p.Z.Messages.BOGO_ANNOUNCEMENT_MODAL_REMIXING_CARD_BODY_FORMATTED.format({ helpCenterLink: h.Z.getArticleURL(E.BhN.REMIXING) }),
 				imageSrc: O,
 				tagText: p.Z.Messages.EARLY_ACCESS
 			},

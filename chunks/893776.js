@@ -20,8 +20,8 @@ var i,
 	f = n(57132),
 	h = n(703656),
 	p = n(365007),
-	I = n(314897),
-	m = n(480294),
+	m = n(314897),
+	I = n(480294),
 	T = n(573261),
 	g = n(572691),
 	S = n(981631),
@@ -35,11 +35,7 @@ function O(e) {
 	};
 	c.Z.dispatch(t).catch((e) => {
 		var t;
-		throw (
-			(N.error('Error while dispatching LOGOUT', e),
-			null === (t = window.DiscordErrors) || void 0 === t || t.softCrash(e),
-			e)
-		);
+		throw (N.error('Error while dispatching LOGOUT', e), null === (t = window.DiscordErrors) || void 0 === t || t.softCrash(e), e);
 	});
 }
 function R() {
@@ -76,16 +72,7 @@ function R() {
 		},
 		login(e) {
 			var t;
-			let {
-				login: n,
-				password: r,
-				loginCode: i,
-				undelete: a,
-				source: o,
-				giftCodeSKUId: l,
-				invite: u,
-				isMultiAccount: _
-			} = e;
+			let { login: n, password: r, loginCode: i, undelete: a, source: o, giftCodeSKUId: l, invite: u, isMultiAccount: _ } = e;
 			c.Z.dispatch({
 				type: 'LOGIN',
 				login: n,
@@ -115,17 +102,7 @@ function R() {
 				}).then(
 					(e) => {
 						let {
-							body: {
-								mfa: t,
-								sms: n,
-								webauthn: r,
-								ticket: i,
-								token: a,
-								backup: s,
-								user_id: o,
-								required_actions: l,
-								totp: u
-							}
+							body: { mfa: t, sms: n, webauthn: r, ticket: i, token: a, backup: s, user_id: o, required_actions: l, totp: u }
 						} = e;
 						c.Z.dispatch({
 							type: 'LOGIN_ATTEMPTED',
@@ -214,8 +191,7 @@ function R() {
 						});
 						return;
 					}
-					if ((null === (t = e.body) || void 0 === t ? void 0 : t.code) === S.evJ.MFA_INVALID_CODE)
-						throw Error(e.body.message);
+					if ((null === (t = e.body) || void 0 === t ? void 0 : t.code) === S.evJ.MFA_INVALID_CODE) throw Error(e.body.message);
 					throw e;
 				});
 		},
@@ -335,19 +311,19 @@ function R() {
 				trackedActionData: { event: s.NetworkActionNames.USER_LOGOUT },
 				...(null != n && { headers: { authorization: null !== (e = o.getToken(n)) && void 0 !== e ? e : '' } })
 			}).finally(() => {
-				(null == n || n === I.default.getId()) && R(t);
+				(null == n || n === m.default.getId()) && R(t);
 			});
 		},
 		switchAccountToken(e) {
 			let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-				n = I.default.getToken();
+				n = m.default.getToken();
 			N.log('Switching accounts', {
 				wasLoggedIn: null != n,
 				tokenHasChanged: e !== n
 			}),
 				O({ isSwitchingAccount: !0 });
 			let r = this.loginToken(e, !0).then(() => {
-				let t = I.default.getToken();
+				let t = m.default.getToken();
 				N.log('Switched accounts finished', { isCorrectToken: e === t });
 			});
 			return t && (0, h.uL)(S.Z5c.ME), r;
@@ -553,12 +529,8 @@ function R() {
 						.then(
 							(e) => {
 								var t, n, i, a, s;
-								if ((clearTimeout(r), null == m.Z.getAuthenticationConsentRequired())) {
-									let t =
-										null ===
-											(a = null == e ? void 0 : null === (i = e.body) || void 0 === i ? void 0 : i.consent_required) ||
-										void 0 === a ||
-										a;
+								if ((clearTimeout(r), null == I.Z.getAuthenticationConsentRequired())) {
+									let t = null === (a = null == e ? void 0 : null === (i = e.body) || void 0 === i ? void 0 : i.consent_required) || void 0 === a || a;
 									c.Z.dispatch({
 										type: 'SET_CONSENT_REQUIRED',
 										consentRequired: t
@@ -567,16 +539,10 @@ function R() {
 								if (
 									(c.Z.dispatch({
 										type: 'SET_LOCATION_METADATA',
-										countryCode:
-											null !==
-												(s = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.country_code) &&
-											void 0 !== s
-												? s
-												: void 0
+										countryCode: null !== (s = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.country_code) && void 0 !== s ? s : void 0
 									}),
 									(v = null),
-									(null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.promotional_email_opt_in) !=
-										null)
+									(null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.promotional_email_opt_in) != null)
 								) {
 									let t = e.body.promotional_email_opt_in;
 									(0, _.K4)({

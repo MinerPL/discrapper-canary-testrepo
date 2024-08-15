@@ -15,8 +15,7 @@ var i = n(735250),
 	T = n(952527),
 	h = n(219021);
 let N = (e, t) => (null == e && null == t) || e === t,
-	f = (e, t) =>
-		e.findIndex((e) => N(e.emoji.id, null == t ? void 0 : t.id) && N(e.emoji.name, null == t ? void 0 : t.name)),
+	f = (e, t) => e.findIndex((e) => N(e.emoji.id, null == t ? void 0 : t.id) && N(e.emoji.name, null == t ? void 0 : t.name)),
 	C = (e, t) => {
 		if (null == t) return e;
 		let n = f(e, t);
@@ -35,24 +34,7 @@ class p extends a.PureComponent {
 				: null;
 	}
 	render() {
-		let {
-				message: e,
-				disableReactionCreates: t,
-				disableReactionUpdates: n,
-				isLurking: a,
-				isGuest: s,
-				isPendingMember: N,
-				isForumToolbar: f,
-				channel: C,
-				className: p,
-				forceAddReactions: g,
-				reactionClassName: S,
-				useChatFontScaling: A,
-				forceHideReactionCreates: R,
-				remainingReactions: x,
-				combinedReactions: O,
-				visibleReactionsCount: M
-			} = this.props,
+		let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: a, isGuest: s, isPendingMember: N, isForumToolbar: f, channel: C, className: p, forceAddReactions: g, reactionClassName: S, useChatFontScaling: A, forceHideReactionCreates: R, remainingReactions: x, combinedReactions: O, visibleReactionsCount: M } = this.props,
 			{ disableTransitionAppear: v } = this.state,
 			L = A ? h : T,
 			Z = M > 0;

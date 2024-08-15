@@ -70,13 +70,7 @@ class _ extends (r = a.Component) {
 			d(this, 'ref', void 0),
 			d(this, 'handleKeyPress', (e) => {
 				let { onClick: t, href: n, onKeyPress: r, ignoreKeyPress: i } = this.props;
-				!e.repeat &&
-					(!i &&
-						null != t &&
-						null != this.ref &&
-						(e.charCode === c.yXg.SPACE || e.charCode === c.yXg.ENTER) &&
-						(null == n && e.preventDefault(), null == this.ref.click ? t(e) : this.ref.click()),
-					null != r && r(e));
+				!e.repeat && (!i && null != t && null != this.ref && (e.charCode === c.yXg.SPACE || e.charCode === c.yXg.ENTER) && (null == n && e.preventDefault(), null == this.ref.click ? t(e) : this.ref.click()), null != r && r(e));
 			}),
 			d(this, 'setRef', (e) => {
 				this.ref = e;

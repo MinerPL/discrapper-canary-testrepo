@@ -30,20 +30,7 @@ function m(e, s, t) {
 }
 class A extends (n = i.PureComponent) {
 	render() {
-		let {
-			paymentSource: e,
-			isDefault: s,
-			isEditing: t,
-			index: n,
-			hideDivider: i,
-			isForSubscription: r,
-			locale: o,
-			removing: c,
-			submitting: d,
-			onSubmit: E,
-			onCancel: u,
-			onDelete: S
-		} = this.props;
+		let { paymentSource: e, isDefault: s, isEditing: t, index: n, hideDivider: i, isForSubscription: r, locale: o, removing: c, submitting: d, onSubmit: E, onCancel: u, onDelete: S } = this.props;
 		return t
 			? (0, a.jsx)(I.Z, {
 					paymentSource: e,
@@ -128,14 +115,7 @@ class O extends i.PureComponent {
 		});
 	}
 	render() {
-		let {
-				defaultPaymentSourceId: e,
-				paymentSources: s,
-				locale: t,
-				removing: n,
-				submitting: i,
-				premiumSubscriptionPaymentSourceId: r
-			} = this.props,
+		let { defaultPaymentSourceId: e, paymentSources: s, locale: t, removing: n, submitting: i, premiumSubscriptionPaymentSourceId: r } = this.props,
 			c = o()
 				.values(s)
 				.sort((s, t) => (s.id === e ? -1 : t.id === e ? 1 : u.default.compare(s.id, t.id))),

@@ -3,7 +3,7 @@ n.d(t, {
 		return g;
 	},
 	cl: function () {
-		return m;
+		return I;
 	}
 }),
 	n(47120);
@@ -79,10 +79,10 @@ let h = new (class e {
 		}
 	})(),
 	p = null;
-function I(e, t) {
+function m(e, t) {
 	return !e && null == t;
 }
-function m(e) {
+function I(e) {
 	var t, n;
 	let { loaded: r, firstMessage: i } = (0, a.cj)([d.Z], () => d.Z.getMessage(e.id)),
 		s = (0, a.e7)([l.Z], () => l.Z.getChannel(e.parent_id));

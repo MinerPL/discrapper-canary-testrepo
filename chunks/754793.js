@@ -40,8 +40,6 @@ var r = {
 		}
 	};
 (t.setTyped = function (e) {
-	e
-		? ((t.Buf8 = Uint8Array), (t.Buf16 = Uint16Array), (t.Buf32 = Int32Array), t.assign(t, r))
-		: ((t.Buf8 = Array), (t.Buf16 = Array), (t.Buf32 = Array), t.assign(t, i));
+	e ? ((t.Buf8 = Uint8Array), (t.Buf16 = Uint16Array), (t.Buf32 = Int32Array), t.assign(t, r)) : ((t.Buf8 = Array), (t.Buf16 = Array), (t.Buf32 = Array), t.assign(t, i));
 }),
 	t.setTyped(n);

@@ -38,10 +38,7 @@ function i(e) {
 function r(e, t) {
 	let n, s, a, i;
 	return (
-		null != e &&
-			((n = e.amount),
-			(a = e.paymentsCount),
-			null != t && ((s = e.amount / t.amount - 1), (i = e.paymentsCount - t.paymentsCount))),
+		null != e && ((n = e.amount), (a = e.paymentsCount), null != t && ((s = e.amount / t.amount - 1), (i = e.paymentsCount - t.paymentsCount))),
 		{
 			revenue: n,
 			revenuePctChange: s,

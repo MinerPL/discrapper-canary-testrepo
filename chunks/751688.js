@@ -25,7 +25,7 @@ function p(e, t, n) {
 		e
 	);
 }
-class I extends (r = a.Component) {
+class m extends (r = a.Component) {
 	render() {
 		let { popoutOpen: e } = this.state,
 			{ user: t, analyticsContext: n, disablePopout: r, ignoreModalClicks: a, guildId: s, channelId: o } = this.props,
@@ -69,16 +69,7 @@ class I extends (r = a.Component) {
 				this.setState({ popoutOpen: !1 }), null == e || e();
 			}),
 			p(this, 'renderUserPopout', (e) => {
-				let {
-					className: t,
-					disablePopout: n,
-					onContextMenu: r,
-					user: a,
-					status: s,
-					textClassName: c,
-					nick: _,
-					guildId: E
-				} = this.props;
+				let { className: t, disablePopout: n, onContextMenu: r, user: a, status: s, textClassName: c, nick: _, guildId: E } = this.props;
 				return (0, i.jsxs)(d.Z, {
 					align: d.Z.Align.CENTER,
 					className: o()(h.memberListItem, t, { [h.popoutDisabled]: n }),
@@ -109,4 +100,4 @@ class I extends (r = a.Component) {
 			});
 	}
 }
-p(I, 'defaultProps', { disablePopout: !1 }), (t.Z = (0, c.Z)(I));
+p(m, 'defaultProps', { disablePopout: !1 }), (t.Z = (0, c.Z)(m));

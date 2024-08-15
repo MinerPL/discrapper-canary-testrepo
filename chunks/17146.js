@@ -25,6 +25,5 @@ function a(e) {
 }
 function s(e) {
 	if ('number' != typeof e) throw Error('invalid float 32: ' + typeof e);
-	if (Number.isFinite(e) && (e > 3.4028234663852886e38 || e < -3.4028234663852886e38))
-		throw Error('invalid float 32: ' + e);
+	if (Number.isFinite(e) && (e > 3.4028234663852886e38 || e < -3.4028234663852886e38)) throw Error('invalid float 32: ' + e);
 }

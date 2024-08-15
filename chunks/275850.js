@@ -28,19 +28,7 @@ let M = '***@***.***',
 function L(e) {
 	var n, t;
 	let l,
-		{
-			selectedPaymentSourceId: L,
-			paymentSources: P,
-			prependOption: R,
-			hidePersonalInformation: S,
-			onChange: m,
-			onPaymentSourceAdd: U,
-			isTrial: p = !1,
-			disabled: v = !1,
-			className: C,
-			optionClassName: O,
-			dropdownLoading: h
-		} = e,
+		{ selectedPaymentSourceId: L, paymentSources: P, prependOption: R, hidePersonalInformation: S, onChange: m, onPaymentSourceAdd: U, isTrial: p = !1, disabled: v = !1, className: C, optionClassName: O, dropdownLoading: h } = e,
 		f = 0 === P.length,
 		g = [...(null != R ? [R] : []), ...P, A].map((e, n) => {
 			if (e instanceof I.ZP) {
@@ -156,19 +144,7 @@ function L(e) {
 			};
 		}),
 		x = r.useMemo(() => P.find((e) => e.id === L), [P, L]);
-	let Z =
-		((n = p),
-		(t = x),
-		(l = null),
-		n && null != t && !t.canRedeemTrial()
-			? (l = d.Z.Messages.PAYMENT_SOURCE_REDEMPTION_INVALID)
-			: n &&
-				null != t &&
-				t.hasFlag(T.Cw.NEW) &&
-				(l = d.Z.Messages.BILLING_PAYMENT_AUTHORIZATION_CHARGE.format({
-					helpDeskArticle: _.Z.getArticleURL(E.BhN.PAYMENT_AUTHORIZATION_CHARGE)
-				})),
-		l);
+	let Z = ((n = p), (t = x), (l = null), n && null != t && !t.canRedeemTrial() ? (l = d.Z.Messages.PAYMENT_SOURCE_REDEMPTION_INVALID) : n && null != t && t.hasFlag(T.Cw.NEW) && (l = d.Z.Messages.BILLING_PAYMENT_AUTHORIZATION_CHARGE.format({ helpDeskArticle: _.Z.getArticleURL(E.BhN.PAYMENT_AUTHORIZATION_CHARGE) })), l);
 	return (0, s.jsxs)(s.Fragment, {
 		children: [
 			f

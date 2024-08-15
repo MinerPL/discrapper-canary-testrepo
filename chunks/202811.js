@@ -47,8 +47,7 @@ function _(e, t = 100, r = Infinity) {
 			})(t, r);
 			if (!u.startsWith('[object ')) return u;
 			if (r.__sentry_skip_normalization__) return r;
-			let l =
-				'number' == typeof r.__sentry_override_normalization_depth__ ? r.__sentry_override_normalization_depth__ : _;
+			let l = 'number' == typeof r.__sentry_override_normalization_depth__ ? r.__sentry_override_normalization_depth__ : _;
 			if (0 === l) return u.replace('object ', '');
 			if (c(r)) return '[Circular ~]';
 			if (r && 'function' == typeof r.toJSON)

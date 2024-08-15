@@ -110,15 +110,7 @@ let b = (e) => {
 	};
 s.Z = (e) => {
 	let { subscription: s } = e,
-		{
-			listing: i,
-			groupListing: o,
-			guild: d,
-			expanded: u,
-			handleToggleExpanded: T,
-			subscriptionInfo: O,
-			application: g
-		} = (0, f.Z)(s),
+		{ listing: i, groupListing: o, guild: d, expanded: u, handleToggleExpanded: T, subscriptionInfo: O, application: g } = (0, f.Z)(s),
 		R = (0, S.Dt)(),
 		[j, B] = a.useState(!1),
 		{ analyticsLocations: U } = (0, I.ZP)();
@@ -155,15 +147,7 @@ s.Z = (e) => {
 				B(!1);
 			}
 		},
-		{
-			isCancelled: y,
-			isDeleted: V,
-			isPastDue: Y,
-			subscriptionPlanPrice: w,
-			subscribedSinceDate: H,
-			currentPeriodEndDate: k,
-			currentPeriodEndLabel: W
-		} = O,
+		{ isCancelled: y, isDeleted: V, isPastDue: Y, subscriptionPlanPrice: w, subscribedSinceDate: H, currentPeriodEndDate: k, currentPeriodEndLabel: W } = O,
 		K = (0, x.KW)(i.sku_flags),
 		z = (0, x.KK)(i.sku_flags),
 		Q = i.soft_deleted || null == g || ((!z || null == d) && !K),
@@ -191,12 +175,7 @@ s.Z = (e) => {
 			variant: 'text-sm/normal',
 			className: L.tierName,
 			children: [
-				P.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CARD_IN_GUILD.format({
-					guildName:
-						null !== (J = null == d ? void 0 : d.name) && void 0 !== J
-							? J
-							: P.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CARD_GUILD_NAME_UNAVAILABLE
-				}),
+				P.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CARD_IN_GUILD.format({ guildName: null !== (J = null == d ? void 0 : d.name) && void 0 !== J ? J : P.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CARD_GUILD_NAME_UNAVAILABLE }),
 				null != d &&
 					(0, n.jsx)(C.Z, {
 						guild: d,
@@ -235,10 +214,7 @@ s.Z = (e) => {
 									(0, n.jsx)(_.Text, {
 										variant: 'text-md/medium',
 										className: L.applicationName,
-										children:
-											null != g
-												? g.name
-												: P.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CARD_APPLICATION_NAME_UNAVAILABLE
+										children: null != g ? g.name : P.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CARD_APPLICATION_NAME_UNAVAILABLE
 									}),
 									(0, n.jsxs)('div', {
 										className: L.headerSubtitleContainer,
@@ -284,9 +260,7 @@ s.Z = (e) => {
 								children: [
 									(0, n.jsx)(b, {
 										label: W,
-										value: P.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_CURRENT_PERIOD_END_DATE.format({
-											timestamp: k.getTime()
-										})
+										value: P.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_CURRENT_PERIOD_END_DATE.format({ timestamp: k.getTime() })
 									}),
 									(0, n.jsx)(b, {
 										label: P.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_PRICE,
@@ -294,9 +268,7 @@ s.Z = (e) => {
 									}),
 									(0, n.jsx)(b, {
 										label: P.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_SUBSCRIBED_SINCE,
-										value: P.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_SUBSCRIBED_SINCE_DATE.format({
-											timestamp: H.getTime()
-										})
+										value: P.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_SUBSCRIBED_SINCE_DATE.format({ timestamp: H.getTime() })
 									})
 								]
 							}),

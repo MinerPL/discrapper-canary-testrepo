@@ -24,8 +24,7 @@ function c(e, n) {
 							var t;
 							return {
 								...e,
-								isUserApp:
-									null !== (t = null == n ? void 0 : n.some((n) => n.application.id === e.id)) && void 0 !== t && t
+								isUserApp: null !== (t = null == n ? void 0 : n.some((n) => n.application.id === e.id)) && void 0 !== t && t
 							};
 						}),
 			[e, n]
@@ -45,9 +44,7 @@ function c(e, n) {
 				i.push(...n),
 				i.sort((e, n) => {
 					var i, a;
-					let l =
-						(null !== (i = t.getScore(n.id)) && void 0 !== i ? i : 0) -
-						(null !== (a = t.getScore(e.id)) && void 0 !== a ? a : 0);
+					let l = (null !== (i = t.getScore(n.id)) && void 0 !== i ? i : 0) - (null !== (a = t.getScore(e.id)) && void 0 !== a ? a : 0);
 					return 0 !== l ? l : e.name.localeCompare(n.name);
 				}),
 				i
@@ -63,17 +60,10 @@ function c(e, n) {
 			}),
 			c.forEach((e) => {
 				var n, i;
-				let o = Math.max(
-					...(null !== (i = null === (n = t.getEntry(e.id)) || void 0 === n ? void 0 : n.recentUses) && void 0 !== i
-						? i
-						: [])
-				);
+				let o = Math.max(...(null !== (i = null === (n = t.getEntry(e.id)) || void 0 === n ? void 0 : n.recentUses) && void 0 !== i ? i : []));
 				(null == l || o > l) && ((a = e), (l = o));
 			});
-		let o =
-				null !== (i = null == a ? void 0 : null === (e = a.application) || void 0 === e ? void 0 : e.id) && void 0 !== i
-					? i
-					: '',
+		let o = null !== (i = null == a ? void 0 : null === (e = a.application) || void 0 === e ? void 0 : e.id) && void 0 !== i ? i : '',
 			s = u.filter((e) => e.id === o);
 		return [...s, ...u.filter((e) => e.id !== o)];
 	}, [u, c, t, n]);

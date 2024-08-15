@@ -81,22 +81,7 @@ let V = U.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
 		});
 class Y extends l.Component {
 	render() {
-		let {
-			route: e,
-			selected: t,
-			icon: n,
-			iconClassName: l,
-			interactiveClassName: r,
-			text: s,
-			children: o,
-			locationState: u,
-			onClick: h,
-			className: _,
-			role: f,
-			'aria-posinset': g,
-			'aria-setsize': m,
-			...I
-		} = this.props;
+		let { route: e, selected: t, icon: n, iconClassName: l, interactiveClassName: r, text: s, children: o, locationState: u, onClick: h, className: _, role: f, 'aria-posinset': g, 'aria-setsize': m, ...I } = this.props;
 		return (0, i.jsx)(v.Z, {
 			className: a()(H.channel, { [H.fullWidth]: d.tq }, _),
 			onClick: h,
@@ -137,19 +122,7 @@ class Y extends l.Component {
 	}
 }
 function K(e) {
-	let {
-			channel: t,
-			isGDMFacepileEnabled: r,
-			selected: s = !1,
-			user: d,
-			activities: L,
-			applicationStream: R,
-			isTyping: O,
-			status: y,
-			isMobile: D,
-			'aria-posinset': w,
-			'aria-setsize': U
-		} = e,
+	let { channel: t, isGDMFacepileEnabled: r, selected: s = !1, user: d, activities: L, applicationStream: R, isTyping: O, status: y, isMobile: D, 'aria-posinset': w, 'aria-setsize': U } = e,
 		[Y, K] = l.useState(!1),
 		q = l.useRef(null),
 		Q = l.useRef(null),
@@ -204,9 +177,7 @@ function K(e) {
 						{ noBlurEvent: !0 }
 					)
 				: (0, f.jW)(e, async () => {
-						let { default: e } = await Promise.all([n.e('79695'), n.e('70474'), n.e('56826'), n.e('38834')]).then(
-							n.bind(n, 131404)
-						);
+						let { default: e } = await Promise.all([n.e('79695'), n.e('70474'), n.e('56826'), n.e('38834')]).then(n.bind(n, 131404));
 						return (n) =>
 							(0, i.jsx)(e, {
 								...n,
@@ -220,9 +191,7 @@ function K(e) {
 			e.preventDefault(), e.stopPropagation();
 			let l = B.Z.Messages.LEAVE_GROUP_DM_TITLE.format({ name: en }),
 				r = B.Z.Messages.LEAVE_GROUP_DM_BODY.format({ name: en });
-			t.isManaged() &&
-				((l = B.Z.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({ name: en })),
-				(r = B.Z.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({ name: en }))),
+			t.isManaged() && ((l = B.Z.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({ name: en })), (r = B.Z.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({ name: en }))),
 				(0, p.openModalLazy)(async () => {
 					let { default: e } = await n.e('14604').then(n.bind(n, 960670));
 					return (t) =>
@@ -387,11 +356,7 @@ function K(e) {
 t.ZP = (e) => {
 	let { channel: t, selected: n, ...l } = e,
 		r = (0, h.e7)([D.default], () => D.default.getUser(t.getRecipientId())),
-		{
-			isStatusIndicatorEnabled: a,
-			isTypingIndicatorEnabled: s,
-			isFacepileEnabled: o
-		} = L.Z.useExperiment({ location: 'private_channel' }, { autoTrackExposure: !0 }),
+		{ isStatusIndicatorEnabled: a, isTypingIndicatorEnabled: s, isFacepileEnabled: o } = L.Z.useExperiment({ location: 'private_channel' }, { autoTrackExposure: !0 }),
 		c = null == r ? void 0 : r.id,
 		u = (0, h.cj)(
 			[O.Z, R.Z],

@@ -30,9 +30,7 @@ function _() {
 				s.Z.showNotification(
 					null,
 					'Overdue reminder in '.concat(e.saveData.channelSummary),
-					null !== (n = null !== (t = e.saveData.notes) && void 0 !== t ? t : e.saveData.messageSummary) && void 0 !== n
-						? n
-						: '',
+					null !== (n = null !== (t = e.saveData.notes) && void 0 !== t ? t : e.saveData.messageSummary) && void 0 !== n ? n : '',
 					{
 						notif_type: 'OVERDUE_MESSAGE_REMINDER',
 						notif_user_id: e.saveData.authorId,

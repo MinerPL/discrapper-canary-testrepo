@@ -41,7 +41,7 @@ let h = {
 function p(e) {
 	return null != e.id && null != e.type;
 }
-function I() {
+function m() {
 	h = {
 		loading: !1,
 		initialized: !1,
@@ -57,7 +57,7 @@ function I() {
 		notifCenterTabFocused: !1
 	};
 }
-function m(e) {
+function I(e) {
 	return {
 		...e,
 		kind: 'notification-center-item',
@@ -65,11 +65,9 @@ function m(e) {
 	};
 }
 function T(e) {
-	let t = 'NOTIFICATION_CENTER_ITEM_CREATE' === e.type ? m(e.item) : e.item;
+	let t = 'NOTIFICATION_CENTER_ITEM_CREATE' === e.type ? I(e.item) : e.item;
 	if (!h.initialized || !p(t) || h.notifCenterIds.has(t.id)) return !1;
-	h.notifCenterIds.add(t.id),
-		(h.notifCenterItems = [t, ...h.notifCenterItems]),
-		h.notifCenterItems.sort((e, t) => c.default.compare(t.id, e.id));
+	h.notifCenterIds.add(t.id), (h.notifCenterItems = [t, ...h.notifCenterItems]), h.notifCenterItems.sort((e, t) => c.default.compare(t.id, e.id));
 }
 function g(e, t) {
 	h.notifCenterItems = h.notifCenterItems
@@ -157,7 +155,7 @@ class N extends (r = i.ZP.PersistedStore) {
 f(N, 'displayName', 'NotificationCenterItemsStore'), f(N, 'persistKey', 'NotificationCenterItemsStore_v2');
 let v = new N(a.Z, {
 	CONNECTION_OPEN: function (e) {
-		I();
+		m();
 		let t = [];
 		e.relationships.forEach((e) => {
 			let { type: n, user: r, since: i } = e;
@@ -173,7 +171,7 @@ let v = new N(a.Z, {
 			}),
 			(h.notifCenterLocalItems = t);
 	},
-	LOGOUT: I,
+	LOGOUT: m,
 	NOTIFICATION_CENTER_ITEMS_ACK: function (e) {
 		let { ids: t } = e;
 		g(t, !0);
@@ -201,18 +199,9 @@ let v = new N(a.Z, {
 	},
 	LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: function (e) {
 		let { items: t, hasMore: n, cursor: r } = e;
-		if (!!h.loading)
-			(h.loading = !1),
-				(h.initialized = !0),
-				(h.errored = !1),
-				(h.isDataStale = !1),
-				(null == r || !h.notifCenterIds.has(r)) &&
-					((h.paginationHasMore = t.length > 0 && n), (h.paginationCursor = t.length > 0 ? r : void 0)),
-				(h.notifCenterItems = [...h.notifCenterItems, ...t.map(m).filter((e) => !h.notifCenterIds.has(e.id))]),
-				h.notifCenterItems.sort((e, t) => c.default.compare(t.id, e.id)),
-				t.forEach((e) => h.notifCenterIds.add(e.id));
+		if (!!h.loading) (h.loading = !1), (h.initialized = !0), (h.errored = !1), (h.isDataStale = !1), (null == r || !h.notifCenterIds.has(r)) && ((h.paginationHasMore = t.length > 0 && n), (h.paginationCursor = t.length > 0 ? r : void 0)), (h.notifCenterItems = [...h.notifCenterItems, ...t.map(I).filter((e) => !h.notifCenterIds.has(e.id))]), h.notifCenterItems.sort((e, t) => c.default.compare(t.id, e.id)), t.forEach((e) => h.notifCenterIds.add(e.id));
 	},
-	RESET_NOTIFICATION_CENTER: I,
+	RESET_NOTIFICATION_CENTER: m,
 	NOTIFICATION_CENTER_SET_ACTIVE: function (e) {
 		let { active: t } = e;
 		h.notifCenterActive = t;
@@ -241,19 +230,10 @@ let v = new N(a.Z, {
 						}
 					: t
 			)),
-			e.relationship.type === E.OGo.BLOCKED &&
-				(h.notifCenterLocalItems = h.notifCenterLocalItems.filter(
-					(t) =>
-						!S(t, d.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) &&
-						!S(t, d.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id)
-				));
+			e.relationship.type === E.OGo.BLOCKED && (h.notifCenterLocalItems = h.notifCenterLocalItems.filter((t) => !S(t, d.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) && !S(t, d.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id)));
 	},
 	RELATIONSHIP_REMOVE: function (e) {
-		h.notifCenterLocalItems = h.notifCenterLocalItems.filter(
-			(t) =>
-				!S(t, d.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) &&
-				!S(t, d.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id)
-		);
+		h.notifCenterLocalItems = h.notifCenterLocalItems.filter((t) => !S(t, d.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) && !S(t, d.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id));
 	},
 	NOTIFICATION_CENTER_ITEM_COMPLETED: function (e) {
 		let { item_enum: t } = e;
@@ -269,13 +249,12 @@ let v = new N(a.Z, {
 			)
 			.filter(p);
 	},
-	SET_RECENT_MENTIONS_FILTER: I,
+	SET_RECENT_MENTIONS_FILTER: m,
 	MOBILE_NATIVE_UPDATE_CHECK_FINISHED: function (e) {
 		let { newBuild: t } = e;
 		if (null !== t) {
 			let e = (0, _.hn)(t);
-			void 0 === h.notifCenterLocalItems.find((t) => t.local_id === e.local_id) &&
-				(h.notifCenterLocalItems = [...h.notifCenterLocalItems.filter((t) => t.kind !== e.kind), e]);
+			void 0 === h.notifCenterLocalItems.find((t) => t.local_id === e.local_id) && (h.notifCenterLocalItems = [...h.notifCenterLocalItems.filter((t) => t.kind !== e.kind), e]);
 		}
 	}
 });

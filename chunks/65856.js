@@ -1,6 +1,6 @@
 n.d(t, {
 	Z: function () {
-		return m;
+		return I;
 	}
 }),
 	n(733860),
@@ -33,12 +33,10 @@ function h(e, t, n) {
 	);
 }
 let p = 'RPC_STORE_WAIT',
-	I = [];
-class m {
+	m = [];
+class I {
 	registerTransport(e) {
-		e.on('connect', (e) => this.handleConnect(e)),
-			e.on('request', (e, t) => this.handleRequest(e, t)),
-			e.on('disconnect', (e, t) => this.handleDisconnect(e, t));
+		e.on('connect', (e) => this.handleConnect(e)), e.on('request', (e, t) => this.handleRequest(e, t)), e.on('disconnect', (e, t) => this.handleDisconnect(e, t));
 	}
 	handleConnect(e) {
 		this.sockets.add(e), this.onConnect(e);
@@ -65,13 +63,11 @@ class m {
 	}
 	handleRequest(e, t) {
 		new Promise((n) => {
-			if (null == t.nonce || '' === t.nonce)
-				throw new c.Z({ errorCode: f.lTL.INVALID_PAYLOAD }, 'Payload requires a nonce');
+			if (null == t.nonce || '' === t.nonce) throw new c.Z({ errorCode: f.lTL.INVALID_PAYLOAD }, 'Payload requires a nonce');
 			let r = t.cmd,
 				i = this.commands[r];
 			if (null == i) throw new c.Z({ errorCode: f.lTL.INVALID_COMMAND }, 'Invalid command: '.concat(t.cmd));
-			if (!(0, _.Z)(e.authorization.scopes, i.scope))
-				throw new c.Z({ errorCode: f.lTL.INVALID_PERMISSIONS }, 'Not authenticated or invalid scope');
+			if (!(0, _.Z)(e.authorization.scopes, i.scope)) throw new c.Z({ errorCode: f.lTL.INVALID_PERMISSIONS }, 'Not authenticated or invalid scope');
 			u.N.getCurrentConfig({ location: 'RPCServer' }).enabled &&
 				o.default.track(f.rMx.RPC_COMMAND_SENT, {
 					command: r,
@@ -180,18 +176,11 @@ class m {
 	}
 	dispatchToSubscriptions(e, t, n, r) {
 		var i;
-		if (!(null != r && '' !== r && ((i = r), I.includes(i) || (I.unshift(i), I.splice(50), 0))))
+		if (!(null != r && '' !== r && ((i = r), m.includes(i) || (m.unshift(i), m.splice(50), 0))))
 			this.subscriptions.forEach((r) => {
 				var i, a, o;
 				if (r.evt !== e) return;
-				if (
-					('function' != typeof t || !!t(r)) &&
-					('object' != typeof t ||
-						((a = t),
-						(o = null !== (i = r.args) && void 0 !== i ? i : {}),
-						!!s().isEqual(a, s().pick(o, Object.keys(a)))))
-				)
-					this.dispatch(r.socket, null, f.Etm.DISPATCH, r.evt, n);
+				if (('function' != typeof t || !!t(r)) && ('object' != typeof t || ((a = t), (o = null !== (i = r.args) && void 0 !== i ? i : {}), !!s().isEqual(a, s().pick(o, Object.keys(a)))))) this.dispatch(r.socket, null, f.Etm.DISPATCH, r.evt, n);
 			});
 	}
 	updateSubscriptions() {
@@ -215,14 +204,6 @@ class m {
 		}).then((e) => (a(), e));
 	}
 	constructor(e) {
-		h(this, 'getCurrentUser', () => null),
-			h(this, 'onConnect', () => {}),
-			h(this, 'onDisconnect', () => {}),
-			h(this, 'getJoi', void 0),
-			h(this, 'events', {}),
-			h(this, 'commands', {}),
-			h(this, 'sockets', new Set()),
-			h(this, 'subscriptions', []),
-			(this.getJoi = e);
+		h(this, 'getCurrentUser', () => null), h(this, 'onConnect', () => {}), h(this, 'onDisconnect', () => {}), h(this, 'getJoi', void 0), h(this, 'events', {}), h(this, 'commands', {}), h(this, 'sockets', new Set()), h(this, 'subscriptions', []), (this.getJoi = e);
 	}
 }

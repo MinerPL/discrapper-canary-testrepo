@@ -56,13 +56,9 @@ let g = (e) => {
 	p = (e, t) => {
 		switch (e) {
 			case R.EB.PENDING:
-				return t === R.Ft.FREE_GUILD_BOOST_1_MONTH
-					? C.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT
-					: C.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT;
+				return t === R.Ft.FREE_GUILD_BOOST_1_MONTH ? C.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT : C.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT;
 			case R.EB.REDEEMABLE:
-				return t === R.Ft.FREE_GUILD_BOOST_1_MONTH
-					? C.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT
-					: C.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT;
+				return t === R.Ft.FREE_GUILD_BOOST_1_MONTH ? C.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT : C.Z.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT;
 			case R.EB.REDEEMED:
 				return C.Z.Messages.NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE;
 			default:
@@ -110,32 +106,10 @@ let m = (e, t, n) => ((0, r.wj)(e) ? t : n),
 			{ enabled: I } = d.C.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }),
 			R = u && !T && !I,
 			C = b();
-		return (
-			null != n.freeBoost && !0 === a && o({ card: n.freeBoost }),
-			null != n.shyProject && o({ card: n.shyProject }),
-			s && C
-				? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles }))
-				: s &&
-					!C &&
-					(R || null != n.shyProject ? R && o({ card: n.referralProgram }) : c(),
-					o({ card: n.newAppStylesUpdateJune2024 }),
-					o({ card: n.serverProfiles })),
-			o({ card: n.earlyAccess }),
-			c(),
-			o({ card: n.unlimitedSuperReactions }),
-			t
-		);
+		return null != n.freeBoost && !0 === a && o({ card: n.freeBoost }), null != n.shyProject && o({ card: n.shyProject }), s && C ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : s && !C && (R || null != n.shyProject ? R && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
 	},
 	h = (e) => {
-		let {
-				perksCards: t,
-				variant: n,
-				shopMarketingVariation: a,
-				isFullScreen: r,
-				showTenureCard: i,
-				tileOrderVariant: l,
-				isPremiumSubscriber: o
-			} = e,
+		let { perksCards: t, variant: n, shopMarketingVariation: a, isFullScreen: r, showTenureCard: i, tileOrderVariant: l, isPremiumSubscriber: o } = e,
 			c = [];
 		switch (n) {
 			case T.R0.PERKS_DISCOVERABILITY:
@@ -208,13 +182,7 @@ let m = (e, t, n) => ((0, r.wj)(e) ? t : n),
 						},
 						() => [t.customSoundsEverywhere, t.specialStickerAccess]
 					)
-					.otherwise(() => [
-						t.earlyAccessSeeAllVariant,
-						t.specialMemberPricingSeeAllVariant,
-						t.largeUploads,
-						t.hdVideo,
-						t.superReactions
-					]);
+					.otherwise(() => [t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions]);
 				break;
 			case T.R0.CARD_CAROUSEL_THIRD_ROW:
 				c = [t.entranceSoundsSeeAllVariation, t.badge];

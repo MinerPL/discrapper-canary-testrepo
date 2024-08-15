@@ -26,9 +26,7 @@ function c(e) {
 			applicationsShelfFetchState: o.Z.getApplicationsShelfFetchState()
 		}));
 	i.useEffect(() => {
-		n &&
-			((d === o.M.NOT_FETCHED || d === o.M.FETCH_FAILED) && (0, r.Yz)(t),
-			(h === o.M.NOT_FETCHED || h === o.M.FETCH_FAILED) && (0, r.Rh)());
+		n && ((d === o.M.NOT_FETCHED || d === o.M.FETCH_FAILED) && (0, r.Yz)(t), (h === o.M.NOT_FETCHED || h === o.M.FETCH_FAILED) && (0, r.Rh)());
 	}, [n, t, d, h]);
 	let m = new Set(c.map((e) => e.application.id));
 	return {

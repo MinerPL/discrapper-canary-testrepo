@@ -23,9 +23,9 @@ function u(e) {
 		}),
 		h = _ && ((null == f ? void 0 : f.mute) || (null == f ? void 0 : f.selfMute)),
 		p = (0, r.e7)([s.Z], () => s.Z.isSpeaking(u, E) && !h),
-		I = (0, r.e7)([s.Z], () => s.Z.isSoundSharing(u) && c),
-		m = (0, r.e7)([i.Z], () => i.Z.isUserPlayingSounds(u) && d);
-	return (t = p), (n = m), (l = I), t || n || l;
+		m = (0, r.e7)([s.Z], () => s.Z.isSoundSharing(u) && c),
+		I = (0, r.e7)([i.Z], () => i.Z.isUserPlayingSounds(u) && d);
+	return (t = p), (n = I), (l = m), t || n || l;
 }
 function c(e) {
 	var t, n, r;
@@ -34,7 +34,7 @@ function c(e) {
 		f = null != E ? o.Z.getVoiceStateForChannel(E, l) : null,
 		h = d && ((null == f ? void 0 : f.mute) || (null == f ? void 0 : f.selfMute)),
 		p = s.Z.isSpeaking(l, _) && !h,
-		I = s.Z.isSoundSharing(l) && u,
-		m = i.Z.isUserPlayingSounds(l) && c;
-	return (t = p), (n = m), (r = I), t || n || r;
+		m = s.Z.isSoundSharing(l) && u,
+		I = i.Z.isUserPlayingSounds(l) && c;
+	return (t = p), (n = I), (r = m), t || n || r;
 }

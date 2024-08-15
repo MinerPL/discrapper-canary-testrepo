@@ -12,21 +12,21 @@ var r = n(735250),
 	E = n(511107);
 t.Z = i.memo(function (e) {
 	let { width: t, height: n, src: a, url: f, format: h, className: p } = e,
-		[I, m] = i.useState(!1),
+		[m, I] = i.useState(!1),
 		T = (0, u.hb)((0, l.iy)(f)),
 		g = T ? _.Z.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES : _.Z.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES,
 		S = T ? o.StarIcon : o.StarOutlineIcon;
 	i.useEffect(() => {
-		if (!I) return;
+		if (!m) return;
 		let e = setTimeout(() => {
-			m(!1);
+			I(!1);
 		}, 500);
 		return () => clearTimeout(e);
-	}, [I]);
+	}, [m]);
 	let A = (e) => {
 		e.preventDefault(),
 			e.stopPropagation(),
-			m(!0),
+			I(!0),
 			T
 				? (0, l.PF)(f)
 				: ((0, l.uL)({
@@ -45,7 +45,7 @@ t.Z = i.memo(function (e) {
 				...e,
 				className: s()(p, E.size, E.gifFavoriteButton, {
 					[E.selected]: T,
-					[E.showPulse]: I
+					[E.showPulse]: m
 				}),
 				onMouseDown: (e) => e.preventDefault(),
 				onClick: A,

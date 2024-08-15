@@ -15,13 +15,10 @@ r = {
 		`${t.select(
 			{
 				true: () =>
-					`\u{412}\u{44A}\u{432}\u{435}\u{434}\u{435}\u{43D}\u{430} \u{433}\u{440}\u{443}\u{43F}\u{430} ${e.groupTitle}, \u{441} ${t.plural(
-						e.groupCount,
-						{
-							one: () => `${t.number(e.groupCount)} \u{43E}\u{43F}\u{446}\u{438}\u{44F}`,
-							other: () => `${t.number(e.groupCount)} \u{43E}\u{43F}\u{446}\u{438}\u{438}`
-						}
-					)}. `,
+					`\u{412}\u{44A}\u{432}\u{435}\u{434}\u{435}\u{43D}\u{430} \u{433}\u{440}\u{443}\u{43F}\u{430} ${e.groupTitle}, \u{441} ${t.plural(e.groupCount, {
+						one: () => `${t.number(e.groupCount)} \u{43E}\u{43F}\u{446}\u{438}\u{44F}`,
+						other: () => `${t.number(e.groupCount)} \u{43E}\u{43F}\u{446}\u{438}\u{438}`
+					})}. `,
 				other: ''
 			},
 			e.isGroupChange

@@ -38,8 +38,8 @@ var r = n(793901),
 	f = n(705267),
 	h = n(533849),
 	p = n(640368),
-	I = n(603440),
-	m = n(293352),
+	m = n(603440),
+	I = n(293352),
 	T = n(21454),
 	g = n(775098),
 	S = n(679837),
@@ -98,8 +98,8 @@ X = {
 	'he-IL': f.Z,
 	'hr-HR': h.Z,
 	'hu-HU': p.Z,
-	'it-IT': I.Z,
-	'ja-JP': m.Z,
+	'it-IT': m.Z,
+	'ja-JP': I.Z,
 	'ko-KR': T.Z,
 	'lt-LT': g.Z,
 	'lv-LV': S.Z,
@@ -145,11 +145,7 @@ class $ extends G.ip {
 			return e && 'column' === e.type ? e.key : void 0;
 		}
 		let n = super.getKeyAbove(e);
-		return null != n && 'headerrow' !== this.collection.getItem(n).type
-			? n
-			: this.isCell(t)
-				? this.collection.columns[t.index].key
-				: this.collection.columns[0].key;
+		return null != n && 'headerrow' !== this.collection.getItem(n).type ? n : this.isCell(t) ? this.collection.columns[t.index].key : this.collection.columns[0].key;
 	}
 	findNextColumnKey(e) {
 		let t = this.findNextKey(e.key, (e) => 'column' === e.type);
@@ -169,21 +165,11 @@ class $ extends G.ip {
 	}
 	getKeyRightOf(e) {
 		let t = this.collection.getItem(e);
-		if (t)
-			return 'column' === t.type
-				? 'rtl' === this.direction
-					? this.findPreviousColumnKey(t)
-					: this.findNextColumnKey(t)
-				: super.getKeyRightOf(e);
+		if (t) return 'column' === t.type ? ('rtl' === this.direction ? this.findPreviousColumnKey(t) : this.findNextColumnKey(t)) : super.getKeyRightOf(e);
 	}
 	getKeyLeftOf(e) {
 		let t = this.collection.getItem(e);
-		if (t)
-			return 'column' === t.type
-				? 'rtl' === this.direction
-					? this.findNextColumnKey(t)
-					: this.findPreviousColumnKey(t)
-				: super.getKeyLeftOf(e);
+		if (t) return 'column' === t.type ? ('rtl' === this.direction ? this.findNextColumnKey(t) : this.findPreviousColumnKey(t)) : super.getKeyLeftOf(e);
 	}
 	getKeyForSearch(e, t) {
 		if (!this.collator) return null;
@@ -239,8 +225,7 @@ function J(e, t, n) {
 		t,
 		n
 	);
-	i && (d['aria-rowcount'] = t.collection.size + t.collection.headerRows.length),
-		(0, V.O)() && 'expandedKeys' in t && (d.role = 'treegrid');
+	i && (d['aria-rowcount'] = t.collection.size + t.collection.headerRows.length), (0, V.O)() && 'expandedKeys' in t && (d.role = 'treegrid');
 	let { column: _, direction: E } = t.sortDescriptor || {},
 		f = (0, H.qb)(W(X), '@react-aria/table'),
 		h = (0, F.useMemo)(() => {
@@ -289,14 +274,14 @@ function ee(e, t, n) {
 	let h = (0, H.qb)(W(X), '@react-aria/table');
 	o && ((a = `${h.format('sortable')}`), E && f && (0, B.Dt)() && (a = `${a}, ${h.format(f)}`));
 	let p = (0, B.PK)(a),
-		I = 0 === t.collection.size;
+		m = 0 === t.collection.size;
 	return (
 		(0, F.useEffect)(() => {
-			I && t.selectionManager.focusedKey === s.key && t.selectionManager.setFocusedKey(null);
-		}, [I, t.selectionManager, s.key]),
+			m && t.selectionManager.focusedKey === s.key && t.selectionManager.setFocusedKey(null);
+		}, [m, t.selectionManager, s.key]),
 		{
 			columnHeaderProps: {
-				...(0, B.dG)(l, c, d, p, I && { tabIndex: -1 }),
+				...(0, B.dG)(l, c, d, p, m && { tabIndex: -1 }),
 				role: 'columnheader',
 				id: (function (e, t) {
 					let n = K.get(e);
@@ -323,42 +308,21 @@ function en(e, t, n) {
 	let { node: r, isVirtualized: i } = e,
 		{ rowProps: a, ...s } = (0, G.Ks)(e, t, n),
 		{ direction: o } = (0, H.bU)();
-	i && !((0, V.O)() && 'expandedKeys' in t)
-		? (a['aria-rowindex'] = r.index + 1 + t.collection.headerRows.length)
-		: delete a['aria-rowindex'];
+	i && !((0, V.O)() && 'expandedKeys' in t) ? (a['aria-rowindex'] = r.index + 1 + t.collection.headerRows.length) : delete a['aria-rowindex'];
 	let l = {};
 	if ((0, V.O)() && 'expandedKeys' in t) {
 		let e = t.keyMap.get(r.key);
 		if (null != e) {
 			var u, c, d;
-			let n =
-				(null === (u = e.props) || void 0 === u ? void 0 : u.UNSTABLE_childItems) ||
-				(null === (d = e.props) || void 0 === d
-					? void 0
-					: null === (c = d.children) || void 0 === c
-						? void 0
-						: c.length) > t.userColumnCount;
+			let n = (null === (u = e.props) || void 0 === u ? void 0 : u.UNSTABLE_childItems) || (null === (d = e.props) || void 0 === d ? void 0 : null === (c = d.children) || void 0 === c ? void 0 : c.length) > t.userColumnCount;
 			l = {
 				onKeyDown: (r) => {
-					r.key === et.expand[o] &&
-					t.selectionManager.focusedKey === e.key &&
-					n &&
-					'all' !== t.expandedKeys &&
-					!t.expandedKeys.has(e.key)
-						? (t.toggleKey(e.key), r.stopPropagation())
-						: r.key === et.collapse[o] &&
-							t.selectionManager.focusedKey === e.key &&
-							n &&
-							('all' === t.expandedKeys || t.expandedKeys.has(e.key)) &&
-							(t.toggleKey(e.key), r.stopPropagation());
+					r.key === et.expand[o] && t.selectionManager.focusedKey === e.key && n && 'all' !== t.expandedKeys && !t.expandedKeys.has(e.key) ? (t.toggleKey(e.key), r.stopPropagation()) : r.key === et.collapse[o] && t.selectionManager.focusedKey === e.key && n && ('all' === t.expandedKeys || t.expandedKeys.has(e.key)) && (t.toggleKey(e.key), r.stopPropagation());
 				},
 				'aria-expanded': n ? 'all' === t.expandedKeys || t.expandedKeys.has(r.key) : void 0,
 				'aria-level': e.level,
 				'aria-posinset': e.indexOfType + 1,
-				'aria-setsize':
-					e.level > 1
-						? (0, Z.s)(t.keyMap.get(null == e ? void 0 : e.parentKey).childNodes).indexOfType + 1
-						: (0, Z.s)(t.keyMap.get(t.collection.body.key).childNodes).indexOfType + 1
+				'aria-setsize': e.level > 1 ? (0, Z.s)(t.keyMap.get(null == e ? void 0 : e.parentKey).childNodes).indexOfType + 1 : (0, Z.s)(t.keyMap.get(t.collection.body.key).childNodes).indexOfType + 1
 			};
 		}
 	}

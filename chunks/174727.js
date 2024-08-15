@@ -45,8 +45,7 @@ let r = (e, n, t) => (-1 === e ? t : e + (n * (t - e)) / t),
 	};
 async function c(e) {
 	var n;
-	if (!(e.type.startsWith('audio') || e.type.startsWith('video')) || !l.bp.has(e.type))
-		throw Error(a.Z.Messages.SOUNDBOARD_ERROR_INVALID_FILE_TYPE.format({ fileType: e.type }));
+	if (!(e.type.startsWith('audio') || e.type.startsWith('video')) || !l.bp.has(e.type)) throw Error(a.Z.Messages.SOUNDBOARD_ERROR_INVALID_FILE_TYPE.format({ fileType: e.type }));
 	let t = new Audio(URL.createObjectURL(e));
 	return (
 		await ((n = t),

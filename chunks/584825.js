@@ -49,12 +49,7 @@ var u = t(730647),
 	c = t(697227);
 let d = [],
 	_ = function (e) {
-		let {
-				refetchOnMount: n = !1,
-				includeSoftDeleted: t = !0,
-				countryCode: o,
-				dontFetchWhileTrue: u
-			} = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+		let { refetchOnMount: n = !1, includeSoftDeleted: t = !0, countryCode: o, dontFetchWhileTrue: u } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
 			c = (0, i.e7)([l.Z], () => l.Z.isConnected()),
 			d = (0, i.e7)([s.Z], () => (null != e ? s.Z.getSubscriptionGroupListingsForGuildFetchState(e) : s.M.FETCHED)),
 			_ = r.useRef(n);
@@ -73,8 +68,7 @@ let d = [],
 		);
 	},
 	f = function (e) {
-		let { includeSoftDeleted: n = !1, includeUnpublished: t = !0 } =
-			arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+		let { includeSoftDeleted: n = !1, includeUnpublished: t = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
 		return (0, i.Wu)(
 			[s.Z],
 			() => {
@@ -114,9 +108,7 @@ let d = [],
 						let e = s.Z.getSubscriptionListing(t);
 						null != e && (n.includeSoftDeleted || !e.soft_deleted) && r.push(e);
 					}
-				return n.includeSoftDeleted && n.sortDeletedListingsLast
-					? [...r.filter((e) => !e.soft_deleted), ...r.filter((e) => e.soft_deleted)]
-					: r;
+				return n.includeSoftDeleted && n.sortDeletedListingsLast ? [...r.filter((e) => !e.soft_deleted), ...r.filter((e) => e.soft_deleted)] : r;
 			})
 		);
 	},

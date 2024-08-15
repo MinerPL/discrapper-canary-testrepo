@@ -37,14 +37,7 @@ function x(e, t) {
 }
 class S extends g.ZP {
 	render() {
-		let {
-				channel: e,
-				selected: t,
-				connectChannelDropTarget: n,
-				connectChannelDragSource: l,
-				connectDragPreview: r,
-				canReorderChannel: s
-			} = this.props,
+		let { channel: e, selected: t, connectChannelDropTarget: n, connectChannelDragSource: l, connectDragPreview: r, canReorderChannel: s } = this.props,
 			o = (0, i.jsx)('li', {
 				className: a()(this.getClassName(), { [E.disabled]: this.isDisabled() }),
 				'data-dnd-name': e.name,

@@ -18,8 +18,8 @@ var r = n(735250),
 	f = n(785717),
 	h = n(27144),
 	p = n(652853),
-	I = n(171368),
-	m = n(228168),
+	m = n(171368),
+	I = n(228168),
 	T = n(921944),
 	g = n(689938),
 	S = n(915108),
@@ -35,15 +35,15 @@ function v(e) {
 			var e;
 			return (null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
 		}),
-		b = D && L && C === m.y0.BITE_SIZE,
+		b = D && L && C === I.y0.BITE_SIZE,
 		[M, P] = i.useState(!1);
 	(0, l.Z)(() => P(!0), b ? 200 : null);
 	let U = M ? [s.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP] : [],
 		[w, x] = (0, d.US)(U),
 		G = () => {
-			(0, I.openUserProfileModal)({
+			(0, m.openUserProfileModal)({
 				userId: t.id,
-				section: m.oh.ACTIVITY,
+				section: I.oh.ACTIVITY,
 				sourceAnalyticsLocations: O,
 				...R
 			}),

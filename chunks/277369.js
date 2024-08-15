@@ -23,12 +23,7 @@ function d(e) {
 			(0, s.jsx)(i.FormText, {
 				type: i.FormText.Types.DESCRIPTION,
 				disabled: I,
-				children:
-					null != E
-						? c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_DESCRIPTION.format({
-								teamName: E.name
-							})
-						: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_NO_TEAM_DESCRIPTION
+				children: null != E ? c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_DESCRIPTION.format({ teamName: E.name }) : c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_NO_TEAM_DESCRIPTION
 			}),
 			(0, s.jsx)(i.Spacer, { size: 16 }),
 			(0, s.jsx)(i.Button, {
@@ -49,10 +44,7 @@ function d(e) {
 					);
 				},
 				disabled: I,
-				children:
-					null != E
-						? c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_CHANGE_TEAM_CTA
-						: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_SELECT_TEAM_CTA
+				children: null != E ? c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_CHANGE_TEAM_CTA : c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_SELECT_TEAM_CTA
 			})
 		]
 	});

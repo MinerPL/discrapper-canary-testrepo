@@ -25,34 +25,18 @@ var r = n(735250),
 	f = n(607070),
 	h = n(828214),
 	p = n(898560),
-	I = n(788314),
-	m = n(837244);
+	m = n(788314),
+	I = n(837244);
 function T(e) {
 	var t;
-	let {
-			navId: n,
-			variant: a = 'flexible',
-			hideScroller: o = !1,
-			className: _,
-			children: T,
-			onClose: g,
-			onSelect: A
-		} = e,
+	let { navId: n, variant: a = 'flexible', hideScroller: o = !1, className: _, children: T, onClose: g, onSelect: A } = e,
 		N = (function e(t) {
 			return (function e(t) {
 				return null == t
 					? []
 					: i.Children.toArray(t).flatMap((t) => {
 							var n;
-							return null == t
-								? []
-								: Array.isArray(t)
-									? e(t)
-									: t.type === i.Fragment
-										? null !== (n = e(t.props.children)) && void 0 !== n
-											? n
-											: []
-										: [t];
+							return null == t ? [] : Array.isArray(t) ? e(t) : t.type === i.Fragment ? (null !== (n = e(t.props.children)) && void 0 !== n ? n : []) : [t];
 						});
 			})(t).reduce((t, n) => {
 				var r, i;
@@ -150,16 +134,7 @@ function T(e) {
 						),
 						t
 					);
-				throw Error(
-					'Menu API only allows Items and groups of Items as children. Received '
-						.concat(
-							null !== (i = null !== (r = null == n ? void 0 : n.type) && void 0 !== r ? r : n) && void 0 !== i
-								? i
-								: typeof n,
-							' ('
-						)
-						.concat(typeof n, ') instead')
-				);
+				throw Error('Menu API only allows Items and groups of Items as children. Received '.concat(null !== (i = null !== (r = null == n ? void 0 : n.type) && void 0 !== r ? r : n) && void 0 !== i ? i : typeof n, ' (').concat(typeof n, ') instead'));
 			}, []);
 		})(T),
 		v = (function e(t) {
@@ -193,15 +168,15 @@ function T(e) {
 	return (0, r.jsx)(p.r.Provider, {
 		value: A,
 		children: (0, r.jsx)('div', {
-			className: s()(m.menu, m[a], _),
+			className: s()(I.menu, I[a], _),
 			...C.getContainerProps(),
 			ref: y,
 			'aria-label': e['aria-label'],
 			children: (0, r.jsxs)(D, {
-				className: m.scroller,
+				className: I.scroller,
 				children: [
 					0 === N.length &&
-						(0, r.jsx)(I.ck, {
+						(0, r.jsx)(m.ck, {
 							disabled: !0,
 							label: () => (0, r.jsx)(S, {}),
 							menuItemProps: C.getItemProps({ path: ['empty'] }),
@@ -217,17 +192,16 @@ function T(e) {
 								let c = o.length > 0 ? o[o.length - 1] : t;
 								switch (l.type) {
 									case 'separator':
-										c.push((0, r.jsx)(I.Z0, {}, 'separator-'.concat(u))), (s = 0);
+										c.push((0, r.jsx)(m.Z0, {}, 'separator-'.concat(u))), (s = 0);
 										break;
 									case 'groupstart':
-										s > 0 && l.length > 0 && (c.push((0, r.jsx)(I.Z0, {}, 'separator-'.concat(u))), (s = 0)),
-											o.push([]);
+										s > 0 && l.length > 0 && (c.push((0, r.jsx)(m.Z0, {}, 'separator-'.concat(u))), (s = 0)), o.push([]);
 										break;
 									case 'groupend':
 										o.length > 0 &&
 											t.push(
 												(0, r.jsx)(
-													I.ZA,
+													m.ZA,
 													{
 														contents: o.pop(),
 														...l.props
@@ -237,18 +211,12 @@ function T(e) {
 											);
 										break;
 									case 'item': {
-										let {
-												children: t,
-												childRowHeight: o,
-												onChildrenScroll: u,
-												listClassName: d,
-												subMenuClassName: _
-											} = l,
+										let { children: t, childRowHeight: o, onChildrenScroll: u, listClassName: d, subMenuClassName: _ } = l,
 											E = null != t,
 											f = [...i, l.key],
 											h = n.isFocused(f),
 											p = (0, r.jsx)(
-												I.ck,
+												m.ck,
 												{
 													...l.props,
 													label: l.label,
@@ -269,7 +237,7 @@ function T(e) {
 											? null != o
 												? c.push(
 														(0, r.jsx)(
-															I.P2,
+															m.P2,
 															{
 																...l.props,
 																parentItem: p,
@@ -285,7 +253,7 @@ function T(e) {
 													)
 												: c.push(
 														(0, r.jsx)(
-															I.LY,
+															m.LY,
 															{
 																...l.props,
 																subMenuClassName: _,
@@ -305,7 +273,7 @@ function T(e) {
 										let e = [...i, l.key];
 										c.push(
 											(0, r.jsx)(
-												I.kq,
+												m.kq,
 												{
 													...l.props,
 													isFocused: n.isFocused(e),
@@ -326,7 +294,7 @@ function T(e) {
 										let e = [...i, l.key];
 										c.push(
 											(0, r.jsx)(
-												I.oC,
+												m.oC,
 												{
 													...l.props,
 													isFocused: n.isFocused(e),
@@ -345,7 +313,7 @@ function T(e) {
 										let e = [...i, l.key];
 										c.push(
 											(0, r.jsx)(
-												I.Rk,
+												m.Rk,
 												{
 													...l.props,
 													isFocused: n.isFocused(e),
@@ -364,7 +332,7 @@ function T(e) {
 										let e = [...i, l.key];
 										c.push(
 											(0, r.jsx)(
-												I.lc,
+												m.lc,
 												{
 													...l.props,
 													isFocused: n.isFocused(e),
@@ -381,7 +349,7 @@ function T(e) {
 										let e = [...i, l.key];
 										c.push(
 											(0, r.jsx)(
-												I.$I,
+												m.$I,
 												{
 													...l.props,
 													isFocused: n.isFocused(e),
@@ -405,7 +373,7 @@ function T(e) {
 }
 function g() {
 	return (0, r.jsx)('div', {
-		className: s()(m.menu, m.loader, m.flexible),
+		className: s()(I.menu, I.loader, I.flexible),
 		children: (0, r.jsx)(_.$, {})
 	});
 }

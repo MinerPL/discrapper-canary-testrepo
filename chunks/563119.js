@@ -13,7 +13,7 @@ var i = n(704215),
 	f = n(689938),
 	h = n(623475);
 let p = 'game_console_alert_modal',
-	I = 'game_console_ptt_alert_modal';
+	m = 'game_console_ptt_alert_modal';
 t.Z = {
 	maybeShowPTTAlert(e) {
 		if (u.Z.getMode() !== E.pM4.PUSH_TO_TALK || (0, l.un)(i.z.CONSOLE_PTT_DISABLE_ALERT)) return Promise.resolve();
@@ -36,7 +36,7 @@ t.Z = {
 								onConfirm: n,
 								titleClassName: h.title
 							});
-					(0, a.nf)(I) ? (0, a.o)(I, o) : (0, a.h7)(o, { modalKey: I });
+					(0, a.nf)(m) ? (0, a.o)(m, o) : (0, a.h7)(o, { modalKey: m });
 				});
 	},
 	showSelfDismissableAlert(e) {

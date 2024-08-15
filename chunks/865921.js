@@ -16,15 +16,7 @@ var r = n(735250),
 	I = n(981631);
 function _(e) {
 	let { handleStepChange: t, handleClose: n } = e,
-		{
-			blockedPayments: i,
-			hasFetchedSkus: _,
-			paymentSources: f,
-			hasFetchedPaymentSources: h,
-			application: E,
-			skusById: S,
-			selectedSkuId: m
-		} = (0, u.usePaymentContext)(),
+		{ blockedPayments: i, hasFetchedSkus: _, paymentSources: f, hasFetchedPaymentSources: h, application: E, skusById: S, selectedSkuId: m } = (0, u.usePaymentContext)(),
 		{ isGift: p } = (0, o.wD)(),
 		[T, C] = a.useState(!0);
 	return (a.useEffect(() => {

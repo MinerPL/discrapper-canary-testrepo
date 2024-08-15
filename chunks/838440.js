@@ -18,38 +18,13 @@ var i = n(481060),
 	E = n(981631),
 	f = n(689938);
 function h(e) {
-	let {
-			openWarningPopout: t,
-			type: n,
-			content: h,
-			stickers: p,
-			uploads: I,
-			channel: m,
-			restrictMentions: T = !0,
-			respectCooldown: g = !0
-		} = e,
+	let { openWarningPopout: t, type: n, content: h, stickers: p, uploads: m, channel: I, restrictMentions: T = !0, respectCooldown: g = !0 } = e,
 		S = _.ZP.canUseIncreasedMessageLength(u.default.getCurrentUser());
 	return new Promise((e) =>
 		(function (e) {
 			var t, n, u;
-			let {
-				openWarningPopout: _,
-				type: h,
-				content: p,
-				stickers: I,
-				uploads: m,
-				channel: T,
-				restrictMentions: g,
-				respectCooldown: S,
-				userCanUsePremiumMessageLength: A,
-				resolve: N
-			} = e;
-			if (
-				0 === p.length &&
-				!(null === (t = h.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) &&
-				(null == I || 0 === I.length) &&
-				(null == m || 0 === m.length)
-			) {
+			let { openWarningPopout: _, type: h, content: p, stickers: m, uploads: I, channel: T, restrictMentions: g, respectCooldown: S, userCanUsePremiumMessageLength: A, resolve: N } = e;
+			if (0 === p.length && !(null === (t = h.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == m || 0 === m.length) && (null == I || 0 === I.length)) {
 				N({
 					valid: !1,
 					failureReason: E.zYc.EMPTY_MESSAGE
@@ -139,8 +114,8 @@ function h(e) {
 			type: n,
 			content: h,
 			stickers: p,
-			uploads: I,
-			channel: m,
+			uploads: m,
+			channel: I,
 			restrictMentions: T,
 			respectCooldown: g,
 			userCanUsePremiumMessageLength: S,

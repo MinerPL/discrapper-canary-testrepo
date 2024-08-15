@@ -8,12 +8,7 @@ var r;
 					r = Math.floor((e % 100) / 10),
 					i = e % 10,
 					a = '';
-				return (
-					n > 0 && (a += t[n] + 'vatlh'),
-					r > 0 && (a += ('' !== a ? ' ' : '') + t[r] + 'maH'),
-					i > 0 && (a += ('' !== a ? ' ' : '') + t[i]),
-					'' === a ? 'pagh' : a
-				);
+				return n > 0 && (a += t[n] + 'vatlh'), r > 0 && (a += ('' !== a ? ' ' : '') + t[r] + 'maH'), i > 0 && (a += ('' !== a ? ' ' : '') + t[i]), '' === a ? 'pagh' : a;
 			})(e);
 			switch (r) {
 				case 'ss':
@@ -31,14 +26,8 @@ var r;
 			}
 		}
 		e.defineLocale('tlh', {
-			months:
-				'tera\u2019 jar wa\u2019_tera\u2019 jar cha\u2019_tera\u2019 jar wej_tera\u2019 jar loS_tera\u2019 jar vagh_tera\u2019 jar jav_tera\u2019 jar Soch_tera\u2019 jar chorgh_tera\u2019 jar Hut_tera\u2019 jar wa\u2019maH_tera\u2019 jar wa\u2019maH wa\u2019_tera\u2019 jar wa\u2019maH cha\u2019'.split(
-					'_'
-				),
-			monthsShort:
-				'jar wa\u2019_jar cha\u2019_jar wej_jar loS_jar vagh_jar jav_jar Soch_jar chorgh_jar Hut_jar wa\u2019maH_jar wa\u2019maH wa\u2019_jar wa\u2019maH cha\u2019'.split(
-					'_'
-				),
+			months: 'tera\u2019 jar wa\u2019_tera\u2019 jar cha\u2019_tera\u2019 jar wej_tera\u2019 jar loS_tera\u2019 jar vagh_tera\u2019 jar jav_tera\u2019 jar Soch_tera\u2019 jar chorgh_tera\u2019 jar Hut_tera\u2019 jar wa\u2019maH_tera\u2019 jar wa\u2019maH wa\u2019_tera\u2019 jar wa\u2019maH cha\u2019'.split('_'),
+			monthsShort: 'jar wa\u2019_jar cha\u2019_jar wej_jar loS_jar vagh_jar jav_jar Soch_jar chorgh_jar Hut_jar wa\u2019maH_jar wa\u2019maH wa\u2019_jar wa\u2019maH cha\u2019'.split('_'),
 			monthsParseExact: !0,
 			weekdays: 'lojmItjaj_DaSjaj_povjaj_ghItlhjaj_loghjaj_buqjaj_ghInjaj'.split('_'),
 			weekdaysShort: 'lojmItjaj_DaSjaj_povjaj_ghItlhjaj_loghjaj_buqjaj_ghInjaj'.split('_'),
@@ -62,25 +51,11 @@ var r;
 			relativeTime: {
 				future: function (e) {
 					var t = e;
-					return (t =
-						-1 !== e.indexOf('jaj')
-							? t.slice(0, -3) + 'leS'
-							: -1 !== e.indexOf('jar')
-								? t.slice(0, -3) + 'waQ'
-								: -1 !== e.indexOf('DIS')
-									? t.slice(0, -3) + 'nem'
-									: t + ' pIq');
+					return (t = -1 !== e.indexOf('jaj') ? t.slice(0, -3) + 'leS' : -1 !== e.indexOf('jar') ? t.slice(0, -3) + 'waQ' : -1 !== e.indexOf('DIS') ? t.slice(0, -3) + 'nem' : t + ' pIq');
 				},
 				past: function (e) {
 					var t = e;
-					return (t =
-						-1 !== e.indexOf('jaj')
-							? t.slice(0, -3) + 'Hu\u2019'
-							: -1 !== e.indexOf('jar')
-								? t.slice(0, -3) + 'wen'
-								: -1 !== e.indexOf('DIS')
-									? t.slice(0, -3) + 'ben'
-									: t + ' ret');
+					return (t = -1 !== e.indexOf('jaj') ? t.slice(0, -3) + 'Hu\u2019' : -1 !== e.indexOf('jar') ? t.slice(0, -3) + 'wen' : -1 !== e.indexOf('DIS') ? t.slice(0, -3) + 'ben' : t + ' ret');
 				},
 				s: 'puS lup',
 				ss: n,

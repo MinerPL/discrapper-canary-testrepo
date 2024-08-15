@@ -42,11 +42,7 @@ function m() {
 				type: i.FormText.Types.DESCRIPTION,
 				className: T.formDescription,
 				disabled: f,
-				children: [
-					E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_DESCRIPTION.format({ premiumEmojiMaximum: x }),
-					(0, s.jsx)('br', {}),
-					E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_MANAGE_LINK.format({ handleTransitionToManageEmoji: g })
-				]
+				children: [E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_DESCRIPTION.format({ premiumEmojiMaximum: x }), (0, s.jsx)('br', {}), E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_EMOJI_MANAGE_LINK.format({ handleTransitionToManageEmoji: g })]
 			}),
 			(0, s.jsx)(_.E, {
 				tierEmojiIds: m,

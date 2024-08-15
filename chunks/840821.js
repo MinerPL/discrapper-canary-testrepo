@@ -44,34 +44,8 @@ var t = e(475637),
 			defaultMatchWidth: 'wide',
 			parsePatterns: {
 				narrow: [/1/i, /2/i, /3/i, /4/i, /5/i, /6/i, /7/i, /8/i, /9/i, /10/i, /11/i, /12/i],
-				abbreviated: [
-					/^sij/i,
-					/^velj/i,
-					/^(ožu|ozu)/i,
-					/^tra/i,
-					/^svi/i,
-					/^lip/i,
-					/^srp/i,
-					/^kol/i,
-					/^ruj/i,
-					/^lis/i,
-					/^stu/i,
-					/^pro/i
-				],
-				wide: [
-					/^sij/i,
-					/^velj/i,
-					/^(ožu|ozu)/i,
-					/^tra/i,
-					/^svi/i,
-					/^lip/i,
-					/^srp/i,
-					/^kol/i,
-					/^ruj/i,
-					/^lis/i,
-					/^stu/i,
-					/^pro/i
-				]
+				abbreviated: [/^sij/i, /^velj/i, /^(ožu|ozu)/i, /^tra/i, /^svi/i, /^lip/i, /^srp/i, /^kol/i, /^ruj/i, /^lis/i, /^stu/i, /^pro/i],
+				wide: [/^sij/i, /^velj/i, /^(ožu|ozu)/i, /^tra/i, /^svi/i, /^lip/i, /^srp/i, /^kol/i, /^ruj/i, /^lis/i, /^stu/i, /^pro/i]
 			},
 			defaultParseWidth: 'wide'
 		}),

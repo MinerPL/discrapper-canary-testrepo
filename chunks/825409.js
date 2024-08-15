@@ -25,48 +25,11 @@ function o(e, t, n) {
 		e
 	);
 }
-(n.g.IntlMessageFormat = a()),
-	n(770801),
-	n(177486),
-	n(144062),
-	n(750854),
-	n(198823),
-	n(551576),
-	n(682422),
-	n(760388),
-	n(725589),
-	n(338770),
-	n(99783),
-	n(740635),
-	n(523332),
-	n(307163),
-	n(636681),
-	n(209012),
-	n(651811),
-	n(740191),
-	n(407837),
-	n(372097),
-	n(894996),
-	n(829028),
-	n(750879),
-	n(952874),
-	n(185851),
-	n(962066),
-	n(519708),
-	n(180583),
-	delete n.g.IntlMessageFormat,
-	'undefined' == typeof Intl && n(211604);
+(n.g.IntlMessageFormat = a()), n(770801), n(177486), n(144062), n(750854), n(198823), n(551576), n(682422), n(760388), n(725589), n(338770), n(99783), n(740635), n(523332), n(307163), n(636681), n(209012), n(651811), n(740191), n(407837), n(372097), n(894996), n(829028), n(750879), n(952874), n(185851), n(962066), n(519708), n(180583), delete n.g.IntlMessageFormat, 'undefined' == typeof Intl && n(211604);
 let l = 'en-US';
 function u() {
 	let e;
-	return null !=
-		(e =
-			(Array.isArray(navigator.languages) ? navigator.languages[0] : null) ||
-			navigator.language ||
-			navigator.browserLanguage ||
-			navigator.userLanguage)
-		? e
-		: '';
+	return null != (e = (Array.isArray(navigator.languages) ? navigator.languages[0] : null) || navigator.language || navigator.browserLanguage || navigator.userLanguage) ? e : '';
 }
 class c {
 	getMessages() {
@@ -138,9 +101,7 @@ class E extends r.EventEmitter {
 		if (this._chosenLocale === e) return;
 		this._requestedLocale = e;
 		let t = this._chosenLocale;
-		(this._chosenLocale = e),
-			(this.loadPromise = this._loadMessagesForLocale(e)),
-			this.emit('locale', this._chosenLocale, t);
+		(this._chosenLocale = e), (this.loadPromise = this._loadMessagesForLocale(e)), this.emit('locale', this._chosenLocale, t);
 	}
 	setUpdateRules(e) {
 		(0, s.yR)(e);
@@ -189,21 +150,11 @@ class E extends r.EventEmitter {
 				});
 		if (i.includes(r)) return r;
 		let a = r.split('-');
-		return i.includes(a[0])
-			? a[0]
-			: 'zh' === a[0] && a.length > 1 && 'Hant' === a[1]
-				? null !== (t = i.find((e) => 'zh-TW' === e)) && void 0 !== t
-					? t
-					: l
-				: null !== (n = i.find((e) => e.split('-')[0] === a[0])) && void 0 !== n
-					? n
-					: l;
+		return i.includes(a[0]) ? a[0] : 'zh' === a[0] && a.length > 1 && 'Hant' === a[1] ? (null !== (t = i.find((e) => 'zh-TW' === e)) && void 0 !== t ? t : l) : null !== (n = i.find((e) => e.split('-')[0] === a[0])) && void 0 !== n ? n : l;
 	}
 	_loadMessagesForLocale(e) {
 		let t = this._fetchMessages(e);
-		return t instanceof Promise
-			? t.then((t) => this._applyMessagesForLocale(t, e))
-			: (this._applyMessagesForLocale(t, e), Promise.resolve());
+		return t instanceof Promise ? t.then((t) => this._applyMessagesForLocale(t, e)) : (this._applyMessagesForLocale(t, e), Promise.resolve());
 	}
 	_applyMessagesForLocale(e, t) {
 		let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this._findMessages(l);
@@ -226,10 +177,7 @@ class E extends r.EventEmitter {
 				? () => {
 						throw Error('Error Loading '.concat(l));
 					}
-				: () =>
-						(console.warn('Unsupported Locale', e), -1 === e.indexOf('-'))
-							? this._fetchMessages(l)
-							: this._fetchMessages(e.split('-')[0]);
+				: () => ((console.warn('Unsupported Locale', e), -1 === e.indexOf('-')) ? this._fetchMessages(l) : this._fetchMessages(e.split('-')[0]));
 		try {
 			let n = this._getMessages(e);
 			return n instanceof Promise ? n.catch(t) : n;
@@ -260,14 +208,7 @@ class E extends r.EventEmitter {
 				try {
 					return (0, s.FC)(o, a);
 				} catch (e) {
-					if (
-						(console.warn(
-							"Failed parsing intl key '".concat(String(t), "' in locale '").concat(a, "' defaulting to English"),
-							e
-						),
-						'string' == typeof (o = i[t]))
-					)
-						return (0, s.FC)(o, a);
+					if ((console.warn("Failed parsing intl key '".concat(String(t), "' in locale '").concat(a, "' defaulting to English"), e), 'string' == typeof (o = i[t]))) return (0, s.FC)(o, a);
 				}
 				return '';
 			}),

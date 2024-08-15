@@ -30,16 +30,7 @@ var i = t(735250),
 	A = t(689938),
 	R = t(869880);
 function b(e) {
-	let {
-			applicationId: n,
-			commandId: s,
-			guildId: g,
-			inModal: p,
-			editedTargetPermissions: b,
-			originalApplicationPermissions: M,
-			originalCommandPermissions: L,
-			selectedPermissionCount: j
-		} = e,
+	let { applicationId: n, commandId: s, guildId: g, inModal: p, editedTargetPermissions: b, originalApplicationPermissions: M, originalCommandPermissions: L, selectedPermissionCount: j } = e,
 		D = (0, o.e7)([h.Z], () => (null == s ? null : h.Z.getCommand(s)), [s]),
 		P = (null == D ? void 0 : D.defaultMemberPermissions) != null,
 		B = (0, o.e7)(
@@ -199,20 +190,14 @@ function b(e) {
 				buttonText: A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_ROLE_MEMBER_ADD_BUTTON,
 				noneSelectedText: A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_ROLE_MEMBER_NO_ENTRIES,
 				overwrites: k,
-				title:
-					null == s
-						? A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_ROLE_MEMBER_ADD
-						: A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_ROLE_MEMBER_HEADER
+				title: null == s ? A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_ROLE_MEMBER_ADD : A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_ROLE_MEMBER_HEADER
 			},
 			{
 				buttonClick: W,
 				buttonText: A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_CHANNEL_ADD_BUTTON,
 				noneSelectedText: A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_CHANNEL_NO_ENTRIES,
 				overwrites: G,
-				title:
-					null == s
-						? A.Z.Messages.CHANNELS
-						: A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_CHANNEL_HEADER
+				title: null == s ? A.Z.Messages.CHANNELS : A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_CHANNEL_HEADER
 			}
 		];
 	return (0, i.jsxs)(a.Fragment, {
@@ -234,8 +219,7 @@ function b(e) {
 							}),
 							(0, i.jsx)('span', {
 								className: R.message,
-								children:
-									A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_DEFAULT_MEMBER_PERMISSIONS_SECTION_DESCRIPTION.format()
+								children: A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_DEFAULT_MEMBER_PERMISSIONS_SECTION_DESCRIPTION.format()
 							}),
 							(0, i.jsx)(d.Button, {
 								color: d.Button.Colors.PRIMARY,
@@ -260,12 +244,7 @@ function b(e) {
 						}),
 					a = null;
 				return (
-					B
-						? Y && (a = A.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_MAX)
-						: (a =
-								null != s
-									? A.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_COMMAND
-									: A.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_APPLICATION),
+					B ? Y && (a = A.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_MAX) : (a = null != s ? A.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_COMMAND : A.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_APPLICATION),
 					(0, i.jsx)(
 						O.Z,
 						{

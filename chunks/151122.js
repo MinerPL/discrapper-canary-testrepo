@@ -65,12 +65,7 @@ function I(e, t, r) {
 		i.X && a.kg.log(`Integration skipped because it was already installed: ${t.name}`);
 		return;
 	}
-	if (
-		((r[t.name] = t),
-		-1 === _.indexOf(t.name) && 'function' == typeof t.setupOnce && (t.setupOnce(), _.push(t.name)),
-		t.setup && 'function' == typeof t.setup && t.setup(e),
-		'function' == typeof t.preprocessEvent)
-	) {
+	if (((r[t.name] = t), -1 === _.indexOf(t.name) && 'function' == typeof t.setupOnce && (t.setupOnce(), _.push(t.name)), t.setup && 'function' == typeof t.setup && t.setup(e), 'function' == typeof t.preprocessEvent)) {
 		let r = t.preprocessEvent.bind(t);
 		e.on('preprocessEvent', (t, n) => r(t, n, e));
 	}

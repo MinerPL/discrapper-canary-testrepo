@@ -29,14 +29,7 @@ function o(e, n, o) {
 			})
 		: o.isDM()
 			? (0, i.jW)(e, async () => {
-					let { default: e } = await Promise.all([
-						t.e('79695'),
-						t.e('59743'),
-						t.e('70474'),
-						t.e('22036'),
-						t.e('56826'),
-						t.e('46679')
-					]).then(t.bind(t, 131404));
+					let { default: e } = await Promise.all([t.e('79695'), t.e('59743'), t.e('70474'), t.e('22036'), t.e('56826'), t.e('46679')]).then(t.bind(t, 131404));
 					return (t) =>
 						(0, r.jsx)(e, {
 							...t,
@@ -48,9 +41,7 @@ function o(e, n, o) {
 				})
 			: null != o.guild_id
 				? (0, i.jW)(e, async () => {
-						let { default: e } = await Promise.all([t.e('79695'), t.e('70474'), t.e('12435'), t.e('62348')]).then(
-							t.bind(t, 757387)
-						);
+						let { default: e } = await Promise.all([t.e('79695'), t.e('70474'), t.e('12435'), t.e('62348')]).then(t.bind(t, 757387));
 						return (t) =>
 							(0, r.jsx)(e, {
 								...t,
@@ -70,8 +61,7 @@ function o(e, n, o) {
 }
 function l(e, n) {
 	let { user: o, channel: l, moderationAlertId: u, guildId: a, ...s } = n;
-	if ((null == l ? void 0 : l.isGroupDM()) || (null == l ? void 0 : l.isDM()))
-		throw Error('Cannot moderate user in DM or group DM');
+	if ((null == l ? void 0 : l.isGroupDM()) || (null == l ? void 0 : l.isDM())) throw Error('Cannot moderate user in DM or group DM');
 	let c = null != a ? a : null == l ? void 0 : l.getGuildId();
 	null != c &&
 		(0, i.jW)(e, async () => {

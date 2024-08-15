@@ -144,9 +144,7 @@ class p extends (n = a.Component) {
 						if (t) break;
 					case m.yXg.ARROW_DOWN:
 						e.preventDefault(),
-							this.props.sections.length > l &&
-								++s >= n[l].length &&
-								(++l >= this.props.sections.length && (l = 0), (s = 0)),
+							this.props.sections.length > l && ++s >= n[l].length && (++l >= this.props.sections.length && (l = 0), (s = 0)),
 							this.setState({
 								selectedSection: l,
 								selectedRow: s
@@ -161,10 +159,7 @@ class p extends (n = a.Component) {
 							});
 						break;
 					case m.yXg.ENTER:
-						e.preventDefault(),
-							this.props.sections.length > l &&
-								n[l].length > s &&
-								(this.props.onSelect(n[l][s], l), this.props.onClose());
+						e.preventDefault(), this.props.sections.length > l && n[l].length > s && (this.props.onSelect(n[l][s], l), this.props.onClose());
 						break;
 					case m.yXg.ESCAPE:
 						e.preventDefault(), this.props.onSelect(null, null), this.props.onClose();
@@ -227,5 +222,4 @@ class p extends (n = a.Component) {
 			});
 	}
 }
-T(p, 'defaultProps', { sections: [null] }),
-	(t.Z = o.ZP.connectStores([c.Z], () => ({ keyboardModeEnabled: c.Z.keyboardModeEnabled }))(p));
+T(p, 'defaultProps', { sections: [null] }), (t.Z = o.ZP.connectStores([c.Z], () => ({ keyboardModeEnabled: c.Z.keyboardModeEnabled }))(p));

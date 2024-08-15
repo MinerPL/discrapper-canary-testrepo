@@ -88,19 +88,7 @@ function D(e) {
 }
 function w(e) {
 	let { hasLegalTermsFlash: n, legalTermsNodeRef: t, onPaymentSourceChange: r, handlePaymentSourceAdd: f } = e,
-		{
-			application: A,
-			purchaseState: w,
-			paymentSources: G,
-			paymentSourceId: B,
-			setHasAcceptedTerms: U,
-			skusById: k,
-			skuPricePreviewsById: F,
-			selectedSkuId: H,
-			isEmbeddedIAP: W,
-			purchaseType: Y,
-			purchasePreviewError: K
-		} = (0, M.usePaymentContext)(),
+		{ application: A, purchaseState: w, paymentSources: G, paymentSourceId: B, setHasAcceptedTerms: U, skusById: k, skuPricePreviewsById: F, selectedSkuId: H, isEmbeddedIAP: W, purchaseType: Y, purchasePreviewError: K } = (0, M.usePaymentContext)(),
 		{ isGift: V, giftRecipient: z } = (0, y.wD)(),
 		X = V && (0, v.pO)(z),
 		{ defaultPaymentSourceId: q, hasFetchedPaymentSources: J } = (0, o.cj)([h.Z], () => ({
@@ -146,9 +134,7 @@ function w(e) {
 				null != z ? (0, i.jsx)(N.s, { giftRecipient: z }) : null,
 				(0, i.jsx)(c.FormTitle, {
 					tag: c.FormTitleTags.H5,
-					children: V
-						? L.Z.Messages.PREMIUM_GIFTING_BUTTON
-						: L.Z.Messages.ONE_TIME_PURCHASE_REVIEW_STEP_PURCHASE_DETAILS_LABEL
+					children: V ? L.Z.Messages.PREMIUM_GIFTING_BUTTON : L.Z.Messages.ONE_TIME_PURCHASE_REVIEW_STEP_PURCHASE_DETAILS_LABEL
 				}),
 				null != en
 					? (0, i.jsx)(Z, {
@@ -196,10 +182,7 @@ function w(e) {
 						finePrintClassname: j.fineprint,
 						purchaseType: Y,
 						isGift: V,
-						checkboxLabel:
-							Q.productLine === R.POd.COLLECTIBLES
-								? L.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_SIMPLE.format({ paidURL: R.EYA.PAID_TERMS })
-								: void 0,
+						checkboxLabel: Q.productLine === R.POd.COLLECTIBLES ? L.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_SIMPLE.format({ paidURL: R.EYA.PAID_TERMS }) : void 0,
 						finePrint: (0, i.jsx)(d.Z, {
 							paymentSourceType: es,
 							isEmbeddedIAP: W,

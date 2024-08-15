@@ -8,10 +8,7 @@
 			return (n.humanize = r), this;
 		}),
 		(i.pad = function (e, t, n, r) {
-			if (
-				((e += ''), n ? n.length > 1 && (n = n.charAt(0)) : (n = ' '), 'right' == (r = void 0 === r ? 'left' : 'right'))
-			)
-				for (; e.length < t; ) e += n;
+			if (((e += ''), n ? n.length > 1 && (n = n.charAt(0)) : (n = ' '), 'right' == (r = void 0 === r ? 'left' : 'right'))) for (; e.length < t; ) e += n;
 			else for (; e.length < t; ) e = n + e;
 			return e;
 		}),
@@ -27,20 +24,7 @@
 				return c[e] ? c[e]() : t;
 			},
 			l = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-			u = [
-				'January',
-				'February',
-				'March',
-				'April',
-				'May',
-				'June',
-				'July',
-				'August',
-				'September',
-				'October',
-				'November',
-				'December'
-			],
+			u = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
 			c = {
 				d: function () {
 					return i.pad(c.j(), 2, '0');
@@ -197,27 +181,18 @@
 			if (n < 2 && n > -2) return (n >= 0 ? 'just ' : '') + 'now';
 			if (n < 60 && n > -60) return n >= 0 ? Math.floor(n) + ' seconds ago' : 'in ' + Math.floor(-n) + ' seconds';
 			if (n < 120 && n > -120) return n >= 0 ? 'about a minute ago' : 'in about a minute';
-			if (n < 3600 && n > -3600)
-				return n >= 0 ? Math.floor(n / 60) + ' minutes ago' : 'in ' + Math.floor(-n / 60) + ' minutes';
+			if (n < 3600 && n > -3600) return n >= 0 ? Math.floor(n / 60) + ' minutes ago' : 'in ' + Math.floor(-n / 60) + ' minutes';
 			if (n < 7200 && n > -7200) return n >= 0 ? 'about an hour ago' : 'in about an hour';
-			if (n < 86400 && n > -86400)
-				return n >= 0 ? Math.floor(n / 3600) + ' hours ago' : 'in ' + Math.floor(-n / 3600) + ' hours';
+			if (n < 86400 && n > -86400) return n >= 0 ? Math.floor(n / 3600) + ' hours ago' : 'in ' + Math.floor(-n / 3600) + ' hours';
 			if (n < 172800 && n > -172800) return n >= 0 ? '1 day ago' : 'in 1 day';
-			if (n < 2505600 && n > -2505600)
-				return n >= 0 ? Math.floor(n / 86400) + ' days ago' : 'in ' + Math.floor(-n / 86400) + ' days';
+			if (n < 2505600 && n > -2505600) return n >= 0 ? Math.floor(n / 86400) + ' days ago' : 'in ' + Math.floor(-n / 86400) + ' days';
 			if (n < 5184000 && n > -5184000) return n >= 0 ? 'about a month ago' : 'in about a month';
 			var r = parseInt(i.date('Y', t), 10),
 				a = parseInt(i.date('Y', e), 10),
 				s = 12 * r + parseInt(i.date('n', t), 10) - (12 * a + parseInt(i.date('n', e), 10));
 			if (s < 12 && s > -12) return s >= 0 ? s + ' months ago' : 'in ' + -s + ' months';
 			var o = r - a;
-			return o < 2 && o > -2
-				? o >= 0
-					? 'a year ago'
-					: 'in a year'
-				: o >= 0
-					? o + ' years ago'
-					: 'in ' + -o + ' years';
+			return o < 2 && o > -2 ? (o >= 0 ? 'a year ago' : 'in a year') : o >= 0 ? o + ' years ago' : 'in ' + -o + ' years';
 		}),
 		(i.ordinal = function (e) {
 			var t = (e = isNaN((e = parseInt(e, 10))) ? 0 : e) < 0 ? '-' : '',
@@ -235,19 +210,10 @@
 			);
 		}),
 		(i.filesize = function (e, t, n, r, a, s) {
-			return ((t = void 0 === t ? 1024 : t), e <= 0)
-				? '0 bytes'
-				: (e < t && void 0 === n && (n = 0),
-					void 0 === s && (s = ' '),
-					i.intword(e, ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB'], t, n, r, a, s));
+			return ((t = void 0 === t ? 1024 : t), e <= 0) ? '0 bytes' : (e < t && void 0 === n && (n = 0), void 0 === s && (s = ' '), i.intword(e, ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB'], t, n, r, a, s));
 		}),
 		(i.intword = function (e, t, n, r, a, s, o) {
-			(u = (t = t || ['', 'K', 'M', 'B', 'T']).length - 1),
-				(n = n || 1000),
-				(r = isNaN(r) ? 2 : Math.abs(r)),
-				(a = a || '.'),
-				(s = s || ','),
-				(o = o || '');
+			(u = (t = t || ['', 'K', 'M', 'B', 'T']).length - 1), (n = n || 1000), (r = isNaN(r) ? 2 : Math.abs(r)), (a = a || '.'), (s = s || ','), (o = o || '');
 			for (var l, u, c = 0; c < t.length; c++)
 				if (e < Math.pow(n, c + 1)) {
 					u = c;
@@ -258,14 +224,7 @@
 			return i.numberFormat(l, r, a, s) + d;
 		}),
 		(i.linebreaks = function (e) {
-			return (
-				'<p>' +
-				(e = (e = (e = (e = (e = e.replace(/^([\n|\r]*)/, '')).replace(/([\n|\r]*)$/, '')).replace(
-					/(\r\n|\n|\r)/g,
-					'\n'
-				)).replace(/(\n{2,})/g, '</p><p>')).replace(/\n/g, '<br />')) +
-				'</p>'
-			);
+			return '<p>' + (e = (e = (e = (e = (e = e.replace(/^([\n|\r]*)/, '')).replace(/([\n|\r]*)$/, '')).replace(/(\r\n|\n|\r)/g, '\n')).replace(/(\n{2,})/g, '</p><p>')).replace(/\n/g, '<br />')) + '</p>';
 		}),
 		(i.nl2br = function (e) {
 			return e.replace(/(\r\n|\n|\r)/g, '<br />');

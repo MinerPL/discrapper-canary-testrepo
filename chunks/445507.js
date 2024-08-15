@@ -42,8 +42,7 @@ let s = {
 		key: 'valorant-user',
 		type: 'user',
 		title: 'Preview new features for Valorant players on Discord',
-		subtitle:
-			"Get notified about new features we're building to help Valorant players connect and play together on Discord.",
+		subtitle: "Get notified about new features we're building to help Valorant players connect and play together on Discord.",
 		tooltipHeader: 'Want a preview of new features for Valorant players?',
 		question: 'Which feature are you interested in the most?',
 		questionMargin: 150,
@@ -54,24 +53,21 @@ let s = {
 				key: 'clan',
 				icon: 'compass',
 				title: 'Gaming Guilds',
-				description:
-					'Small, organized servers with similar vibes, play styles, or skill levels who hang out and play regularly.',
+				description: 'Small, organized servers with similar vibes, play styles, or skill levels who hang out and play regularly.',
 				type: 'email'
 			},
 			{
 				key: 'missions',
 				icon: 'gamepad',
 				title: 'Missions',
-				description:
-					'Join one-time groups of players trying to achieve the same goal as you, like ranking up or beating a raid boss.',
+				description: 'Join one-time groups of players trying to achieve the same goal as you, like ranking up or beating a raid boss.',
 				type: 'email'
 			},
 			{
 				key: 'gamenight',
 				icon: 'controller',
 				title: 'Game Nights',
-				description:
-					'Get matched with other players on specific criteria like play style or skill and get invited to a scheduled gaming session.',
+				description: 'Get matched with other players on specific criteria like play style or skill and get invited to a scheduled gaming session.',
 				type: 'email'
 			}
 		]
@@ -91,24 +87,21 @@ let s = {
 				key: 'clan',
 				icon: 'compass',
 				title: 'Gaming Guilds',
-				description:
-					"Become a Gaming Guild, where players with similar vibes or skill hang out and play regularly. You'll be discoverable among other guilds and approve member applications to join.",
+				description: "Become a Gaming Guild, where players with similar vibes or skill hang out and play regularly. You'll be discoverable among other guilds and approve member applications to join.",
 				type: 'clan'
 			},
 			{
 				key: 'voice-hub',
 				icon: 'microphone',
 				title: 'Gaming Voice Hub',
-				description:
-					"A hub that houses a large selection of voice channels dedicated to gaming, each holding up to 10 people. Join an existing channel or create your own and set the game you're playing, goals, or vibes.",
+				description: "A hub that houses a large selection of voice channels dedicated to gaming, each holding up to 10 people. Join an existing channel or create your own and set the game you're playing, goals, or vibes.",
 				type: 'email'
 			},
 			{
 				key: 'hub',
 				icon: 'controller',
 				title: 'Game Hub',
-				description:
-					'Dedicated discovery pages for popular games. Admins can choose to have their server\u2019s text channel activity displayed in the hubs so users can see the conversations happening across Discord for a specific game.',
+				description: 'Dedicated discovery pages for popular games. Admins can choose to have their server\u2019s text channel activity displayed in the hubs so users can see the conversations happening across Discord for a specific game.',
 				type: 'email'
 			}
 		]
@@ -128,24 +121,21 @@ let s = {
 				key: 'clan',
 				icon: 'compass',
 				title: 'Gaming Guilds',
-				description:
-					'Small, organized servers with similar vibes, play styles, or skill levels who chat, hang out, or play together regularly.',
+				description: 'Small, organized servers with similar vibes, play styles, or skill levels who chat, hang out, or play together regularly.',
 				type: 'email'
 			},
 			{
 				key: 'missions',
 				icon: 'gamepad',
 				title: 'Missions',
-				description:
-					'Join one-time groups of players trying to achieve the same goal as you, like farming or beating a raid boss.',
+				description: 'Join one-time groups of players trying to achieve the same goal as you, like farming or beating a raid boss.',
 				type: 'email'
 			},
 			{
 				key: 'gamenight',
 				icon: 'controller',
 				title: 'Game Nights',
-				description:
-					'Get matched with other players on specific criteria like play style or skill and get invited to a scheduled gaming session.',
+				description: 'Get matched with other players on specific criteria like play style or skill and get invited to a scheduled gaming session.',
 				type: 'email'
 			}
 		]
@@ -165,24 +155,21 @@ let s = {
 				key: 'clan',
 				icon: 'compass',
 				title: 'Gaming Guilds',
-				description:
-					'Become a Gaming Guild, where players with similar vibes or skill chat, hang out, and play regularly. You\u2019ll be discoverable among other guilds and approve new member applications.',
+				description: 'Become a Gaming Guild, where players with similar vibes or skill chat, hang out, and play regularly. You\u2019ll be discoverable among other guilds and approve new member applications.',
 				type: 'clan'
 			},
 			{
 				key: 'voice-hub',
 				icon: 'microphone',
 				title: 'Gaming Voice Hub',
-				description:
-					"A hub that houses a large selection of voice channels dedicated to gaming, each holding up to 10 people. Join an existing channel or create your own and set the game you're playing, goals, or vibes.",
+				description: "A hub that houses a large selection of voice channels dedicated to gaming, each holding up to 10 people. Join an existing channel or create your own and set the game you're playing, goals, or vibes.",
 				type: 'email'
 			},
 			{
 				key: 'hub',
 				icon: 'controller',
 				title: 'Game Hub',
-				description:
-					'Dedicated discovery pages for popular games. Admins can choose to have their server\u2019s text channel activity displayed in the hubs so users can see the conversations happening across Discord for a specific game.',
+				description: 'Dedicated discovery pages for popular games. Admins can choose to have their server\u2019s text channel activity displayed in the hubs so users can see the conversations happening across Discord for a specific game.',
 				type: 'email'
 			}
 		]

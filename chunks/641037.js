@@ -41,19 +41,12 @@ function o(e) {
 		{
 			index: r.Wy.CUSTOMIZE_TAG_BADGE,
 			name: l.Z.Messages.CLAN_SETUP_TAG_STEP,
-			hasError:
-				(null == e ? void 0 : e.tag) != null ||
-				(null == e ? void 0 : e.badgeKind) != null ||
-				(null == e ? void 0 : e.badgePrimaryColor) != null ||
-				(null == e ? void 0 : e.badgeSecondaryColor) != null
+			hasError: (null == e ? void 0 : e.tag) != null || (null == e ? void 0 : e.badgeKind) != null || (null == e ? void 0 : e.badgePrimaryColor) != null || (null == e ? void 0 : e.badgeSecondaryColor) != null
 		},
 		{
 			index: r.Wy.CUSTOMIZE_BANNER,
 			name: l.Z.Messages.CLAN_SETUP_BANNER_STEP,
-			hasError:
-				(null == e ? void 0 : e.banner) != null ||
-				(null == e ? void 0 : e.brandPrimaryColor) != null ||
-				(null == e ? void 0 : e.brandSecondaryColor) != null
+			hasError: (null == e ? void 0 : e.banner) != null || (null == e ? void 0 : e.brandPrimaryColor) != null || (null == e ? void 0 : e.brandSecondaryColor) != null
 		},
 		{
 			index: r.Wy.MEMBER_APPLICATION,

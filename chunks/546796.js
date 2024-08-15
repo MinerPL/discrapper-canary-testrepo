@@ -71,13 +71,7 @@ function u(e) {
 }
 function c(e, t) {
 	var n, r;
-	let {
-		checkEnabled: i = null !==
-			(r = null === (n = a.default.getCurrentUser()) || void 0 === n ? void 0 : n.mfaEnabled) &&
-			void 0 !== r &&
-			r,
-		...o
-	} = null != t ? t : {};
+	let { checkEnabled: i = null !== (r = null === (n = a.default.getCurrentUser()) || void 0 === n ? void 0 : n.mfaEnabled) && void 0 !== r && r, ...o } = null != t ? t : {};
 	return new Promise((t, n) => {
 		((0, s.d)(i) ? l : u)({
 			promiseFn: e,

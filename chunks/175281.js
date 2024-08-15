@@ -148,17 +148,10 @@ function O() {
 }
 class P extends a.PureComponent {
 	componentDidMount() {
-		(this.lastInputedKeys = []),
-			N.S.subscribe(v.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
-			N.S.subscribe(v.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown),
-			window.addEventListener('keydown', this.handleKeyDown, { capture: !0 }),
-			window.addEventListener('keyup', this.handleKeyUp, { capture: !0 });
+		(this.lastInputedKeys = []), N.S.subscribe(v.CkL.SCROLL_PAGE_UP, this.scrollPageUp), N.S.subscribe(v.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.addEventListener('keyup', this.handleKeyUp, { capture: !0 });
 	}
 	componentWillUnmount() {
-		N.S.unsubscribe(v.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
-			N.S.unsubscribe(v.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown),
-			window.removeEventListener('keydown', this.handleKeyDown, { capture: !0 }),
-			window.removeEventListener('keyup', this.handleKeyUp, { capture: !0 });
+		N.S.unsubscribe(v.CkL.SCROLL_PAGE_UP, this.scrollPageUp), N.S.unsubscribe(v.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.removeEventListener('keyup', this.handleKeyUp, { capture: !0 });
 	}
 	render() {
 		let { UP: e, DOWN: t, LEFT: n, RIGHT: i } = this.state;
@@ -284,18 +277,7 @@ class P extends a.PureComponent {
 				]
 			})),
 			L(this, 'handleKeyDown', (e) => {
-				if (
-					(this.lastInputedKeys.push(e.keyCode),
-					(this.lastInputedKeys = this.lastInputedKeys.slice(-5)),
-					this.lastInputedKeys[0] === v.yXg.H &&
-						this.lastInputedKeys[1] === v.yXg.H &&
-						this.lastInputedKeys[2] === v.yXg.ARROW_RIGHT &&
-						this.lastInputedKeys[3] === v.yXg.N &&
-						this.lastInputedKeys[4] === v.yXg.K &&
-						this.props.activateRagingDemon(),
-					this.props.keyboardModeEnabled)
-				)
-					return;
+				if ((this.lastInputedKeys.push(e.keyCode), (this.lastInputedKeys = this.lastInputedKeys.slice(-5)), this.lastInputedKeys[0] === v.yXg.H && this.lastInputedKeys[1] === v.yXg.H && this.lastInputedKeys[2] === v.yXg.ARROW_RIGHT && this.lastInputedKeys[3] === v.yXg.N && this.lastInputedKeys[4] === v.yXg.K && this.props.activateRagingDemon(), this.props.keyboardModeEnabled)) return;
 				let t = b(e);
 				null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowDown({ direction: t }));
 			}),

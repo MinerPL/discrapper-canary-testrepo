@@ -58,15 +58,7 @@ let j = [
 			name: 'Details',
 			render: (e) => {
 				let {
-						loggedTrigger: {
-							experimentId: r,
-							descriptor: t,
-							exposureType: n,
-							excluded: i,
-							timestamp: l,
-							location: c,
-							previouslyTracked: s
-						}
+						loggedTrigger: { experimentId: r, descriptor: t, exposureType: n, excluded: i, timestamp: l, location: c, previouslyTracked: s }
 					} = e,
 					u = d()(l);
 				return (0, a.jsxs)(a.Fragment, {
@@ -136,13 +128,7 @@ function S() {
 	let [e, r] = n.useState(''),
 		t = n.useRef(null),
 		i = (0, u.Wu)([b.Z], () => b.Z.loggedTriggers),
-		l = n.useMemo(
-			() =>
-				i
-					.filter((r) => 0 === e.length || c()(e, r.experimentId))
-					.sort((e, r) => r.timestamp.getTime() - e.timestamp.getTime()),
-			[i, e]
-		),
+		l = n.useMemo(() => i.filter((r) => 0 === e.length || c()(e, r.experimentId)).sort((e, r) => r.timestamp.getTime() - e.timestamp.getTime()), [i, e]),
 		[s, d] = n.useState(void 0),
 		g = l.find((e) => e.key === s),
 		{ TabBar: p, renderSelectedTab: y } = (0, v.Z)({ tabs: N }, []),

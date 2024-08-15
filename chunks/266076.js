@@ -5,17 +5,7 @@ var a = t(735250),
 	r = t(93687),
 	c = t(785232);
 i.Z = n.memo(function (e) {
-	let {
-			channel: i,
-			size: t,
-			facepileSizeOverride: n,
-			experimentLocation: d,
-			isTyping: o,
-			status: u,
-			className: A,
-			animated: I = !1,
-			..._
-		} = e,
+	let { channel: i, size: t, facepileSizeOverride: n, experimentLocation: d, isTyping: o, status: u, className: A, animated: I = !1, ..._ } = e,
 		{ isFacepileEnabled: S } = r.Z.useExperiment({ location: d }, { autoTrackExposure: !0 });
 	return i.recipients.length >= 2 && S && null == i.icon
 		? (0, a.jsx)(c.Z, {

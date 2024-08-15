@@ -29,25 +29,13 @@ class c extends (i = o.Component) {
 		(null == this.props.versionKey || !(this.props.versionKey < 0)) && this.loadAnimation();
 	}
 	componentDidUpdate(e) {
-		(null == this.props.versionKey || !(this.props.versionKey < 0)) &&
-			(null != this.props.versionKey && null != e.versionKey && this.props.versionKey > e.versionKey
-				? this.loadAnimation()
-				: this.playOrPauseAnimation(e));
+		(null == this.props.versionKey || !(this.props.versionKey < 0)) && (null != this.props.versionKey && null != e.versionKey && this.props.versionKey > e.versionKey ? this.loadAnimation() : this.playOrPauseAnimation(e));
 	}
 	componentWillUnmount() {
-		null != this.animation && (this.animation.stop(), this.animation.destroy(), (this.animation = null)),
-			this.delayTimeout.stop();
+		null != this.animation && (this.animation.stop(), this.animation.destroy(), (this.animation = null)), this.delayTimeout.stop();
 	}
 	playOrPauseAnimation(e) {
-		if (null != this.animation)
-			this.props.shouldAnimate && (null == e || !e.shouldAnimate)
-				? this.props.resetOnPlay
-					? this.animation.goToAndPlay(0)
-					: this.animation.play()
-				: !this.props.shouldAnimate &&
-					(null == e || e.shouldAnimate) &&
-					(this.animation.pause(),
-					null != this.props.pauseAtFrame && this.animation.goToAndStop(this.props.pauseAtFrame, !0));
+		if (null != this.animation) this.props.shouldAnimate && (null == e || !e.shouldAnimate) ? (this.props.resetOnPlay ? this.animation.goToAndPlay(0) : this.animation.play()) : !this.props.shouldAnimate && (null == e || e.shouldAnimate) && (this.animation.pause(), null != this.props.pauseAtFrame && this.animation.goToAndStop(this.props.pauseAtFrame, !0));
 	}
 	render() {
 		return (0, s.jsx)('div', {
@@ -61,15 +49,7 @@ class c extends (i = o.Component) {
 			u(this, 'animation', void 0),
 			u(this, 'delayTimeout', new l.V7()),
 			u(this, 'loadAnimation', async () => {
-				let {
-					importData: e,
-					loop: t,
-					autoplay: r,
-					delay: i,
-					renderer: a,
-					rendererSettings: s,
-					shouldAnimate: o
-				} = this.props;
+				let { importData: e, loop: t, autoplay: r, delay: i, renderer: a, rendererSettings: s, shouldAnimate: o } = this.props;
 				null != this.animation && this.animation.destroy();
 				let [l, { default: u }] = await Promise.all([e(), n.e('23755').then(n.t.bind(n, 500923, 23))]);
 				if (null != this.animationRef.current)

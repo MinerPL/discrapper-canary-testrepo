@@ -18,15 +18,7 @@ var i = o(481060),
 	_ = o(564510);
 function N(e) {
 	let { transitionState: n, onClose: o, analyticsLocation: N } = e,
-		{
-			slide: L,
-			gotoNext: R,
-			gotoError: h,
-			handleWaitingForConnection: O,
-			handleAuthToken: x,
-			expectedCallbackState: p,
-			callbackData: T
-		} = (0, r.k)(N, d.ABu.CRUNCHYROLL);
+		{ slide: L, gotoNext: R, gotoError: h, handleWaitingForConnection: O, handleAuthToken: x, expectedCallbackState: p, callbackData: T } = (0, r.k)(N, d.ABu.CRUNCHYROLL);
 	return (0, t.jsx)(i.ModalRoot, {
 		className: _.modal,
 		transitionState: n,

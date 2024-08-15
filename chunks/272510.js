@@ -18,8 +18,8 @@ var i = n(481060),
 function f(e) {
 	let { user: t, guildId: n, viewProfileItem: f } = e,
 		{ trackUserProfileAction: h } = (0, d.KZ)(),
-		{ analyticsLocations: p, newestAnalyticsLocation: I } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU),
-		m = (0, u.Z)({
+		{ analyticsLocations: p, newestAnalyticsLocation: m } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU),
+		I = (0, u.Z)({
 			user: t,
 			guildId: n,
 			onAction: () =>
@@ -30,7 +30,7 @@ function f(e) {
 		}),
 		T = (0, l.Z)({
 			user: t,
-			location: I,
+			location: m,
 			color: 'danger',
 			onBlock: () =>
 				h({
@@ -46,7 +46,7 @@ function f(e) {
 		g = (0, c.Z)({
 			user: t,
 			guildId: n,
-			location: I,
+			location: m,
 			color: 'danger',
 			onAction: () =>
 				h({
@@ -57,7 +57,7 @@ function f(e) {
 		S = (0, c.T)({
 			user: t,
 			guildId: n,
-			location: I,
+			location: m,
 			color: 'danger',
 			onAction: () =>
 				h({
@@ -66,7 +66,7 @@ function f(e) {
 				})
 		}),
 		A = [
-			[f, m],
+			[f, I],
 			[T, g, S],
 			[
 				(0, o.Z)({

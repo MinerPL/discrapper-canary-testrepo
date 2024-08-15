@@ -20,19 +20,7 @@ let E = [
 	}
 ];
 function u(e) {
-	let {
-			showRemoveAvatarButton: s,
-			errors: t,
-			onAvatarChange: a,
-			sectionTitle: u,
-			changeAvatarButtonText: I,
-			guildId: T,
-			className: S,
-			disabled: N = !1,
-			isTryItOutFlow: C = !1,
-			forcedDivider: m,
-			withHighlight: A = !1
-		} = e,
+	let { showRemoveAvatarButton: s, errors: t, onAvatarChange: a, sectionTitle: u, changeAvatarButtonText: I, guildId: T, className: S, disabled: N = !1, isTryItOutFlow: C = !1, forcedDivider: m, withHighlight: A = !1 } = e,
 		O = A ? r.ShinyButton : r.Button;
 	return (0, n.jsx)(l.Z, {
 		className: S,

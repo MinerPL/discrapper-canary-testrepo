@@ -64,9 +64,7 @@ let v = (e) => {
 				...P
 			}),
 				(s = {
-					url: ''
-						.concat((0, C.ivE)(a.youtubeVideoId), '?')
-						.concat('rel=0&iv_load_policy=3&showinfo=0&modestbranding=1'),
+					url: ''.concat((0, C.ivE)(a.youtubeVideoId), '?').concat('rel=0&iv_load_policy=3&showinfo=0&modestbranding=1'),
 					...S
 				}),
 				(n = u.pn.YOUTUBE);
@@ -112,9 +110,7 @@ let v = (e) => {
 class L extends (n = a.PureComponent) {
 	componentDidMount() {
 		let { items: e } = this.props;
-		e.length > 0 &&
-			e[0].type === C.s9s.IMG &&
-			this.setState({ imageLoadingStartTime: new Map(this.state.imageLoadingStartTime).set(e[0].src, Date.now()) });
+		e.length > 0 && e[0].type === C.s9s.IMG && this.setState({ imageLoadingStartTime: new Map(this.state.imageLoadingStartTime).set(e[0].src, Date.now()) });
 	}
 	handleCurrentItemClick(e, t) {
 		let { onCurrentItemClick: s } = this.props;
@@ -163,9 +159,7 @@ class L extends (n = a.PureComponent) {
 				});
 			}),
 			N(this, 'handleChangeItem', (e) => {
-				this.setState({ isVideoPlaying: !1 }),
-					e.type === C.s9s.IMG &&
-						this.setState({ imageLoadingStartTime: new Map(this.state.imageLoadingStartTime).set(e.src, Date.now()) });
+				this.setState({ isVideoPlaying: !1 }), e.type === C.s9s.IMG && this.setState({ imageLoadingStartTime: new Map(this.state.imageLoadingStartTime).set(e.src, Date.now()) });
 			}),
 			N(this, 'handleIntentionalChange', (e, t, s, n) => {
 				this.setState({ hasInteracted: !0 });

@@ -76,17 +76,7 @@ class M extends a.PureComponent {
 		let { libraryApplication: t, sku: n } = this.props,
 			{ error: s } = this.state,
 			r = null != s ? s.code : null;
-		return r === O.evJ.INVALID_GIFT_SELF_REDEMPTION
-			? b.Z.Messages.GIFT_CONFIRMATION_BODY_SELF_GIFT_NO_PAYMENT
-			: r === O.evJ.INVALID_GIFT_REDEMPTION_OWNED && (null == n ? void 0 : n.productLine) === O.POd.COLLECTIBLES
-				? b.Z.Messages.GIFT_ERROR_OWNED
-				: null != t || r === O.evJ.INVALID_GIFT_REDEMPTION_OWNED
-					? b.Z.Messages.GIFT_CODE_AUTH_HELP_TEXT_OWNED.format({ libraryLink: O.Z5c.APPLICATION_LIBRARY })
-					: e.isClaimed || r === O.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED
-						? b.Z.Messages.GIFT_CODE_AUTH_HELP_TEXT_CLAIMED
-						: r === O.evJ.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED
-							? b.Z.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT
-							: void 0;
+		return r === O.evJ.INVALID_GIFT_SELF_REDEMPTION ? b.Z.Messages.GIFT_CONFIRMATION_BODY_SELF_GIFT_NO_PAYMENT : r === O.evJ.INVALID_GIFT_REDEMPTION_OWNED && (null == n ? void 0 : n.productLine) === O.POd.COLLECTIBLES ? b.Z.Messages.GIFT_ERROR_OWNED : null != t || r === O.evJ.INVALID_GIFT_REDEMPTION_OWNED ? b.Z.Messages.GIFT_CODE_AUTH_HELP_TEXT_OWNED.format({ libraryLink: O.Z5c.APPLICATION_LIBRARY }) : e.isClaimed || r === O.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED ? b.Z.Messages.GIFT_CODE_AUTH_HELP_TEXT_CLAIMED : r === O.evJ.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED ? b.Z.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT : void 0;
 	}
 	renderSpinner(e) {
 		return (0, i.jsxs)(g.ZP, {
@@ -192,16 +182,7 @@ class M extends a.PureComponent {
 		});
 	}
 	render() {
-		let {
-				nativeAppState: e,
-				sku: t,
-				authenticated: n,
-				giftCode: s,
-				isResolved: r,
-				isAccepting: a,
-				transitionTo: l,
-				location: o
-			} = this.props,
+		let { nativeAppState: e, sku: t, authenticated: n, giftCode: s, isResolved: r, isAccepting: a, transitionTo: l, location: o } = this.props,
 			{ fetchingUser: c, continueOnWeb: u } = this.state;
 		if (e === O.kEZ.OPEN && !u) return this.renderAppOpened();
 		if (e === O.kEZ.OPENING) return this.renderSpinner(b.Z.Messages.APP_OPENING);
@@ -210,11 +191,7 @@ class M extends a.PureComponent {
 		if (r) {
 			if (n) {
 				let e = this.state.currentUser;
-				return c || null == e
-					? this.renderSpinner(b.Z.Messages.GIFT_CODE_AUTH_FETCHING_USER)
-					: this.requiresVerification && null != e
-						? this.renderVerification(e)
-						: this.renderAuthenticated(s, e);
+				return c || null == e ? this.renderSpinner(b.Z.Messages.GIFT_CODE_AUTH_FETCHING_USER) : this.requiresVerification && null != e ? this.renderVerification(e) : this.renderAuthenticated(s, e);
 			}
 			return 'login' === this.getMode()
 				? (0, i.jsx)(S.Z, {
@@ -285,8 +262,7 @@ t.Z = c.ZP.connectStores([N.Z, T.Z, m.default, x.Z, f.Z, p.Z], (e) => {
 	return {
 		giftCode: n,
 		sku: s,
-		libraryApplication:
-			null != s && (null == n ? void 0 : n.entitlementBranches) != null ? A.z2(n.entitlementBranches, s, T.Z) : null,
+		libraryApplication: null != s && (null == n ? void 0 : n.entitlementBranches) != null ? A.z2(n.entitlementBranches, s, T.Z) : null,
 		authenticated: m.default.isAuthenticated(),
 		defaultRoute: f.Z.defaultRoute,
 		isResolved: N.Z.getIsResolved(t),

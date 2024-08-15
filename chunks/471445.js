@@ -32,8 +32,7 @@ function E(e, t, n, r) {
 		case d.d4z.GUILD_FORUM:
 			let i = e.isMediaChannel();
 			if (e.isNSFW()) return i ? _.Z.Messages.CHANNEL_TOOLTIP_MEDIA_NSFW : _.Z.Messages.CHANNEL_TOOLTIP_FORUM_NSFW;
-			if ((0, u.Z)(e))
-				return i ? _.Z.Messages.CHANNEL_TOOLTIP_MEDIA_LIMITED : _.Z.Messages.CHANNEL_TOOLTIP_FORUM_LIMITED;
+			if ((0, u.Z)(e)) return i ? _.Z.Messages.CHANNEL_TOOLTIP_MEDIA_LIMITED : _.Z.Messages.CHANNEL_TOOLTIP_FORUM_LIMITED;
 			return i ? _.Z.Messages.MEDIA_CHANNEL : _.Z.Messages.FORUM;
 		case d.d4z.GUILD_MEDIA:
 			if (e.isNSFW()) return _.Z.Messages.CHANNEL_TOOLTIP_MEDIA_NSFW;
@@ -72,7 +71,7 @@ function f(e, t) {
 		{ locked: _ = !1, video: E = !1, stream: f = !1, hasActiveThreads: h = !1, textFocused: p = !1 } = n;
 	if (null == e) return null;
 	null == t && (t = s.Z.getGuild(e.getGuildId()));
-	let I = (0, i.n)(null == t ? void 0 : t.id, [s.Z, o.Z, l.default, a.ZP]);
+	let m = (0, i.n)(null == t ? void 0 : t.id, [s.Z, o.Z, l.default, a.ZP]);
 	if ((null == e ? void 0 : e.id) === (null == t ? void 0 : t.rulesChannelId)) return r.BookCheckIcon;
 	switch (e.type) {
 		case d.d4z.GUILD_ANNOUNCEMENT:
@@ -107,16 +106,16 @@ function f(e, t) {
 			if (null != e.linkedLobby) return r.RefreshIcon;
 			return r.TextIcon;
 		case d.d4z.GUILD_FORUM:
-			let m = e.isMediaChannel();
-			if (e.isNSFW()) return m ? r.ImageWarningIcon : r.ForumWarningIcon;
-			if ((0, u.Z)(e)) return m ? r.ImageLockIcon : r.ForumLockIcon;
-			else return m ? r.ImageIcon : r.ForumIcon;
+			let I = e.isMediaChannel();
+			if (e.isNSFW()) return I ? r.ImageWarningIcon : r.ForumWarningIcon;
+			if ((0, u.Z)(e)) return I ? r.ImageLockIcon : r.ForumLockIcon;
+			else return I ? r.ImageIcon : r.ForumIcon;
 		case d.d4z.GUILD_MEDIA:
 			if (e.isNSFW()) return r.ImageWarningIcon;
 			if ((0, u.Z)(e)) return r.ImageLockIcon;
 			else return r.ImageIcon;
 		case d.d4z.GUILD_STAGE_VOICE:
-			if (I) return (0, u.Z)(e) ? r.LockIcon : r.StageLockIcon;
+			if (m) return (0, u.Z)(e) ? r.LockIcon : r.StageLockIcon;
 			if (_) return r.LockIcon;
 			if ((0, u.Z)(e)) return r.StageLockIcon;
 			else return r.StageIcon;
@@ -124,7 +123,7 @@ function f(e, t) {
 			if (p) return r.ChatIcon;
 			if (e.isNSFW()) return r.VoiceWarningIcon;
 			if (f) return r.ScreenArrowIcon;
-			if (I) {
+			if (m) {
 				if ((0, u.Z)(e)) return r.LockIcon;
 				return E ? r.VideoLockIcon : r.VoiceLockIcon;
 			}

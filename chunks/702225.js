@@ -7,11 +7,7 @@ function i(e) {
 }
 t.Z = new (class e {
 	getForumChannelSessionId(e) {
-		return (
-			null == this.session && (this.session = i(e)),
-			this.session.channelId !== e && (this.session = i(e)),
-			this.session.sessionId
-		);
+		return null == this.session && (this.session = i(e)), this.session.channelId !== e && (this.session = i(e)), this.session.sessionId;
 	}
 	constructor() {
 		var e, t, n;

@@ -53,8 +53,7 @@ function E(e) {
 						(0, a.jsx)(r.Text, {
 							className: I.joinText,
 							variant: 'text-sm/normal',
-							children:
-								_ === m.pC.AVATAR ? p.Z.Messages.PREMIUM_PREVIEW_JOIN_AVATAR : p.Z.Messages.PREMIUM_PREVIEW_JOIN_BANNER
+							children: _ === m.pC.AVATAR ? p.Z.Messages.PREMIUM_PREVIEW_JOIN_AVATAR : p.Z.Messages.PREMIUM_PREVIEW_JOIN_BANNER
 						}),
 						(0, a.jsx)(t.Z, {
 							buttonText: p.Z.Messages.PREMIUM_PREVIEW_JOIN_NITRO,

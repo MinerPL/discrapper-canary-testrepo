@@ -16,21 +16,12 @@ var a = n(481060),
 let g = 'AGREEMENTS_MODAL_KEY';
 t.Z = {
 	init() {
-		s.Z.subscribe('CONNECTION_OPEN', this.handleRequiredAction),
-			s.Z.subscribe('USER_REQUIRED_ACTION_UPDATE', this.handleRequiredAction),
-			s.Z.subscribe('CURRENT_USER_UPDATE', this.handleCurrentUserUpdate),
-			d.default.addChangeListener(this.handleAuthenticationStoreChanged);
+		s.Z.subscribe('CONNECTION_OPEN', this.handleRequiredAction), s.Z.subscribe('USER_REQUIRED_ACTION_UPDATE', this.handleRequiredAction), s.Z.subscribe('CURRENT_USER_UPDATE', this.handleCurrentUserUpdate), d.default.addChangeListener(this.handleAuthenticationStoreChanged);
 	},
 	handleRequiredAction(e) {
 		let t = e.requiredAction;
 		if (!_.s.isDisallowPopupsSet() && null != u.default.getCurrentUser())
-			t === h.c2C.REQUIRE_CAPTCHA ||
-			t === h.c2C.REQUIRE_VERIFIED_EMAIL ||
-			t === h.c2C.REQUIRE_VERIFIED_PHONE ||
-			t === h.c2C.REQUIRE_REVERIFIED_PHONE ||
-			t === h.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
-			t === h.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
-			o.Z.isEmailReverification(t)
+			t === h.c2C.REQUIRE_CAPTCHA || t === h.c2C.REQUIRE_VERIFIED_EMAIL || t === h.c2C.REQUIRE_VERIFIED_PHONE || t === h.c2C.REQUIRE_REVERIFIED_PHONE || t === h.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || t === h.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE || o.Z.isEmailReverification(t)
 				? (0, r.q4)(() => (0, i.jsx)(c.ZP, {}), {
 						layerKey: 'verification',
 						Layer: l.ZP
@@ -43,12 +34,7 @@ t.Z = {
 					: null == t && ((0, r.ob)('verification'), (0, a.hasModalOpen)(g) && (0, a.closeModal)(g));
 	},
 	handleAuthenticationStoreChanged() {
-		null == d.default.getId() &&
-			((0, r.ob)('verification'),
-			(0, a.closeModal)(g),
-			(0, a.closeModal)(c.HR),
-			(0, a.closeModal)(c.F0),
-			(0, a.closeModal)(m.M));
+		null == d.default.getId() && ((0, r.ob)('verification'), (0, a.closeModal)(g), (0, a.closeModal)(c.HR), (0, a.closeModal)(c.F0), (0, a.closeModal)(m.M));
 	},
 	handleCurrentUserUpdate(e) {
 		let { user: t } = e;

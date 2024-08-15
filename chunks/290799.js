@@ -15,10 +15,7 @@ let _ = [
 	},
 	{
 		getQuestion: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_2,
-		getAnswer: () =>
-			c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_2.format({
-				helpCenterUrl: l.Z.getArticleURL(u.BhN.GUILD_BOOSTING_FAQ)
-			})
+		getAnswer: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_2.format({ helpCenterUrl: l.Z.getArticleURL(u.BhN.GUILD_BOOSTING_FAQ) })
 	},
 	{
 		getQuestion: () => c.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_3,

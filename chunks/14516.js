@@ -9,11 +9,7 @@ class s extends r.Z {
 			var t, n;
 			let r = a.Z.getSelectedParticipantId(e),
 				s = a.Z.getVideoParticipants(e);
-			null === (n = i.Z.getRTCConnection()) ||
-				void 0 === n ||
-				n.setSelectedParticipant(
-					null === (t = s.find((e) => e.id === r && !e.localVideoDisabled)) || void 0 === t ? void 0 : t.id
-				);
+			null === (n = i.Z.getRTCConnection()) || void 0 === n || n.setSelectedParticipant(null === (t = s.find((e) => e.id === r && !e.localVideoDisabled)) || void 0 === t ? void 0 : t.id);
 		}
 	}
 	constructor(...e) {

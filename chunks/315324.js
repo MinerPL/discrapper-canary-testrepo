@@ -21,7 +21,7 @@ var i = n(442837),
 	f = n(139665);
 let h = 3;
 function p(e) {
-	let { user: t, guild: n, channel: p, onAction: I, onClose: m } = e,
+	let { user: t, guild: n, channel: p, onAction: m, onClose: I } = e,
 		{ profileType: T } = (0, _.z)(),
 		g = (0, i.Wu)([d.ZP], () =>
 			d.ZP.getVoiceStatesForChannel(p).map((e) => {
@@ -52,10 +52,7 @@ function p(e) {
 					}),
 					(0, r.jsx)(a.Clickable, {
 						onClick: () => {
-							s.default.selectVoiceChannel(p.id),
-								(0, c.X)(n.id),
-								null == I || I({ action: 'OPEN_VOICE_CHANNEL' }),
-								null == m || m();
+							s.default.selectVoiceChannel(p.id), (0, c.X)(n.id), null == m || m({ action: 'OPEN_VOICE_CHANNEL' }), null == I || I();
 						},
 						className: f.clickable,
 						children: (0, r.jsx)(a.Text, {

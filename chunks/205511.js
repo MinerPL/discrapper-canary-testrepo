@@ -126,9 +126,7 @@ function j(e) {
 				};
 			let o = C.r.build(t.config).application.name;
 			return {
-				header: e
-					? S.Z.Messages.QUESTS_GAME_NOT_DETECTED.format({ gameTitle: o })
-					: S.Z.Messages.QUESTS_LAUNCHED_GAME.format({ gameTitle: o }),
+				header: e ? S.Z.Messages.QUESTS_GAME_NOT_DETECTED.format({ gameTitle: o }) : S.Z.Messages.QUESTS_LAUNCHED_GAME.format({ gameTitle: o }),
 				renderBody: e
 					? n
 					: () =>
@@ -206,21 +204,11 @@ t.Z = function (e) {
 						isComplete: o || a || c
 					},
 					{
-						renderContent: () =>
-							(0, s.jsx)(B, {
-								text: l
-									? S.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_ANY_GAME
-									: S.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_GAME.format({ gameTitle: i })
-							}),
+						renderContent: () => (0, s.jsx)(B, { text: l ? S.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_ANY_GAME : S.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_LAUNCH_GAME.format({ gameTitle: i }) }),
 						isComplete: a || c
 					},
 					{
-						renderContent: () =>
-							(0, s.jsx)(B, {
-								text: S.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_PLAYTIME.format({
-									numMinutes: n.targetMinutes
-								})
-							}),
+						renderContent: () => (0, s.jsx)(B, { text: S.Z.Messages.QUESTS_CONSOLE_CONNECTION_HELPER_STEPS_PLAYTIME.format({ numMinutes: n.targetMinutes }) }),
 						isComplete: c
 					}
 				],

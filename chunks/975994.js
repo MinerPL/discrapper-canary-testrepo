@@ -17,8 +17,8 @@ var r = n(235003),
 	f = n(726249),
 	h = n(395861),
 	p = n(953523),
-	I = n(706440),
-	m = n(788675),
+	m = n(706440),
+	I = n(788675),
 	T = n(591995),
 	g = n(885723),
 	S = n(580917),
@@ -51,16 +51,7 @@ var r = n(235003),
 	z = {};
 function q(e, t) {
 	var n, r, i;
-	let {
-		buttonRef: a,
-		popoverRef: s,
-		inputRef: o,
-		listBoxRef: l,
-		keyboardDelegate: u,
-		shouldFocusWrap: c,
-		isReadOnly: d,
-		isDisabled: _
-	} = e;
+	let { buttonRef: a, popoverRef: s, inputRef: o, listBoxRef: l, keyboardDelegate: u, shouldFocusWrap: c, isReadOnly: d, isDisabled: _ } = e;
 	let E = (0, j.qb)((i = z) && i.__esModule ? i.default : i, '@react-aria/combobox'),
 		{ menuTriggerProps: f, menuProps: h } = (0, W.u4)(
 			{
@@ -72,7 +63,7 @@ function q(e, t) {
 		);
 	(0, B.Oj).set(t, { id: h.id });
 	let p = (0, V.useMemo)(() => u || new Z.dp(t.collection, t.disabledKeys, l), [u, t.collection, t.disabledKeys, l]),
-		{ collectionProps: I } = (0, Z.gq)({
+		{ collectionProps: m } = (0, Z.gq)({
 			selectionManager: t.selectionManager,
 			keyboardDelegate: p,
 			disallowTypeAhead: !0,
@@ -81,7 +72,7 @@ function q(e, t) {
 			ref: o,
 			isVirtualized: !0
 		}),
-		m = (0, F.tv)(),
+		I = (0, F.tv)(),
 		{ isInvalid: T, validationErrors: g, validationDetails: S } = t.displayValidation,
 		{
 			labelProps: A,
@@ -95,29 +86,21 @@ function q(e, t) {
 				onKeyDown: d
 					? e.onKeyDown
 					: (0, F.tS)(
-							t.isOpen && I.onKeyDown,
+							t.isOpen && m.onKeyDown,
 							(n) => {
 								switch (n.key) {
 									case 'Enter':
 									case 'Tab':
-										if (
-											(t.isOpen && 'Enter' === n.key && n.preventDefault(),
-											t.isOpen &&
-												null != t.selectionManager.focusedKey &&
-												t.selectionManager.isLink(t.selectionManager.focusedKey))
-										) {
+										if ((t.isOpen && 'Enter' === n.key && n.preventDefault(), t.isOpen && null != t.selectionManager.focusedKey && t.selectionManager.isLink(t.selectionManager.focusedKey))) {
 											if ('Enter' === n.key) {
-												let e = l.current.querySelector(
-													`[data-key="${CSS.escape(t.selectionManager.focusedKey.toString())}"]`
-												);
-												e instanceof HTMLAnchorElement && m.open(e, n);
+												let e = l.current.querySelector(`[data-key="${CSS.escape(t.selectionManager.focusedKey.toString())}"]`);
+												e instanceof HTMLAnchorElement && I.open(e, n);
 											}
 											t.close();
 										} else t.commit();
 										break;
 									case 'Escape':
-										(null !== t.selectedKey || '' === t.inputValue || e.allowsCustomValue) && n.continuePropagation(),
-											t.revert();
+										(null !== t.selectedKey || '' === t.inputValue || e.allowsCustomValue) && n.continuePropagation(), t.revert();
 										break;
 									case 'ArrowDown':
 										t.open('first', 'manual');
@@ -134,10 +117,7 @@ function q(e, t) {
 						),
 				onBlur: (n) => {
 					var r;
-					!(
-						n.relatedTarget === (null == a ? void 0 : a.current) ||
-						(null === (r = s.current) || void 0 === r ? void 0 : r.contains(n.relatedTarget))
-					) && (e.onBlur && e.onBlur(n), t.setFocused(!1));
+					!(n.relatedTarget === (null == a ? void 0 : a.current) || (null === (r = s.current) || void 0 === r ? void 0 : r.contains(n.relatedTarget))) && (e.onBlur && e.onBlur(n), t.setFocused(!1));
 				},
 				value: t.inputValue,
 				onFocus: (n) => {
@@ -160,8 +140,7 @@ function q(e, t) {
 			'aria-labelledby': e['aria-labelledby'] || A.id
 		}),
 		y = (0, V.useRef)(0),
-		D =
-			null != t.selectionManager.focusedKey && t.isOpen ? t.collection.getItem(t.selectionManager.focusedKey) : void 0,
+		D = null != t.selectionManager.focusedKey && t.isOpen ? t.collection.getItem(t.selectionManager.focusedKey) : void 0,
 		L = null !== (n = null == D ? void 0 : D.parentKey) && void 0 !== n ? n : null,
 		b = null !== (r = t.selectionManager.focusedKey) && void 0 !== r ? r : null,
 		M = (0, V.useRef)(L),
@@ -170,10 +149,7 @@ function q(e, t) {
 		if ((0, F.ad)() && null != D && b !== P.current) {
 			let e = t.selectionManager.isSelected(b),
 				n = null != L ? t.collection.getItem(L) : null,
-				r =
-					(null == n ? void 0 : n['aria-label']) ||
-					('string' == typeof (null == n ? void 0 : n.rendered) ? n.rendered : '') ||
-					'',
+				r = (null == n ? void 0 : n['aria-label']) || ('string' == typeof (null == n ? void 0 : n.rendered) ? n.rendered : '') || '',
 				i = E.format('focusAnnouncement', {
 					isGroupChange: n && L !== M.current,
 					groupTitle: r,
@@ -219,9 +195,7 @@ function q(e, t) {
 					'touch' === e.pointerType && (o.current.focus(), t.toggle(null, 'manual'));
 				},
 				onPressStart: (e) => {
-					'touch' !== e.pointerType &&
-						(o.current.focus(),
-						t.toggle('keyboard' === e.pointerType || 'virtual' === e.pointerType ? 'first' : null, 'manual'));
+					'touch' !== e.pointerType && (o.current.focus(), t.toggle('keyboard' === e.pointerType || 'virtual' === e.pointerType ? 'first' : null, 'manual'));
 				},
 				isDisabled: _ || d
 			},
@@ -241,9 +215,7 @@ function q(e, t) {
 						r = e.changedTouches[0],
 						i = Math.ceil(n.left + 0.5 * n.width),
 						a = Math.ceil(n.top + 0.5 * n.height);
-					r.clientX === i &&
-						r.clientY === a &&
-						(e.preventDefault(), o.current.focus(), t.toggle(null, 'manual'), (y.current = e.timeStamp));
+					r.clientX === i && r.clientY === a && (e.preventDefault(), o.current.focus(), t.toggle(null, 'manual'), (y.current = e.timeStamp));
 				},
 				autoCorrect: 'off',
 				spellCheck: 'false'
@@ -278,8 +250,8 @@ z = {
 	'he-IL': f.Z,
 	'hr-HR': h.Z,
 	'hu-HU': p.Z,
-	'it-IT': I.Z,
-	'ja-JP': m.Z,
+	'it-IT': m.Z,
+	'ja-JP': I.Z,
 	'ko-KR': T.Z,
 	'lt-LT': g.Z,
 	'lv-LV': S.Z,

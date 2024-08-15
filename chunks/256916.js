@@ -139,26 +139,12 @@ class m extends (i = r.PureComponent) {
 				this,
 				'calculateState',
 				c()(() => {
-					let {
-							items: e,
-							expandedFolders: t,
-							isVisible: n,
-							isUnread: i,
-							isMentioned: l,
-							reverse: r,
-							onCalculate: a
-						} = this.props,
+					let { items: e, expandedFolders: t, isVisible: n, isUnread: i, isMentioned: l, reverse: r, onCalculate: a } = this.props,
 						s = null,
 						o = null,
 						c = [];
 					e.forEach((e) => {
-						'string' == typeof e
-							? c.push(e)
-							: 'object' == typeof e && null != e.folderId
-								? null != t && t.has(e.folderId)
-									? (c.push('folder:'.concat(e.folderId)), e.guildIds.forEach((e) => c.push(e)))
-									: c.push(e.guildIds)
-								: c.push(e.guildIds[0]);
+						'string' == typeof e ? c.push(e) : 'object' == typeof e && null != e.folderId ? (null != t && t.has(e.folderId) ? (c.push('folder:'.concat(e.folderId)), e.guildIds.forEach((e) => c.push(e))) : c.push(e.guildIds)) : c.push(e.guildIds[0]);
 					});
 					let u = (e) => {
 							null == s && l(e, r, c) && (s = e), null == o && i(e, r, c) && (o = e);

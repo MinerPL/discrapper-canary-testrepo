@@ -15,7 +15,5 @@ function s(e, t) {
 	if (!s) return n;
 	var o = n.getDate(),
 		l = new Date(n.getTime());
-	return (l.setMonth(n.getMonth() + s + 1, 0), o >= l.getDate())
-		? l
-		: (n.setFullYear(l.getFullYear(), l.getMonth(), o), n);
+	return (l.setMonth(n.getMonth() + s + 1, 0), o >= l.getDate()) ? l : (n.setFullYear(l.getFullYear(), l.getMonth(), o), n);
 }

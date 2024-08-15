@@ -24,7 +24,7 @@ let d = [],
 	f = null,
 	h = { status: 'unloaded' },
 	p = {};
-class I extends (r = s.ZP.Store) {
+class m extends (r = s.ZP.Store) {
 	getSearchResult(e) {
 		let t = p[a().v3(JSON.stringify(e))];
 		return null == t || t.loadedAt < Date.now() - l.Z.Millis.HOUR ? h : t;
@@ -45,9 +45,9 @@ class I extends (r = s.ZP.Store) {
 		return f;
 	}
 }
-c(I, 'displayName', 'ClanDiscoveryStore'),
-	c(I, 'persistKey', 'ClanDiscoveryStore'),
-	(t.Z = new I(o.Z, {
+c(m, 'displayName', 'ClanDiscoveryStore'),
+	c(m, 'persistKey', 'ClanDiscoveryStore'),
+	(t.Z = new m(o.Z, {
 		FETCH_STATIC_CLAN_LIST_START: function () {
 			E = !0;
 		},

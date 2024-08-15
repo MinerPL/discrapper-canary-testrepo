@@ -20,13 +20,7 @@ var r = l(442837),
 function v(e) {
 	let { message: n } = (0, p.CJ)(),
 		l = (0, r.e7)([d.Z], () => d.Z.getChannel(null == n ? void 0 : n.channel_id)),
-		{
-			shouldHideMediaOptions: v,
-			shouldRedactExplicitContent: C,
-			gifAutoPlay: h,
-			getGifFavButton: x,
-			getOnMediaItemContextMenu: _
-		} = (0, u.c)();
+		{ shouldHideMediaOptions: v, shouldRedactExplicitContent: C, gifAutoPlay: h, getGifFavButton: x, getOnMediaItemContextMenu: _ } = (0, u.c)();
 	if (null == n || null == l) return null;
 	let N = e.items.map((e) => (0, c.j0)(e.media, E.VqG, v, C)).filter(f.lm),
 		T = {

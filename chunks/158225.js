@@ -7,24 +7,12 @@ var n = r(100066),
 function c(t, e, r) {
 	var o = e,
 		c = n(o);
-	if (
-		(null != c || (t && (t === o || t.firstChild === o)) || a(!1),
-		t === o &&
-			(u((o = o.firstChild)) || a(!1),
-			'true' !== o.getAttribute('data-contents') && a(!1),
-			r > 0 && (r = o.childNodes.length)),
-		0 === r)
-	) {
+	if ((null != c || (t && (t === o || t.firstChild === o)) || a(!1), t === o && (u((o = o.firstChild)) || a(!1), 'true' !== o.getAttribute('data-contents') && a(!1), r > 0 && (r = o.childNodes.length)), 0 === r)) {
 		var f = null;
 		if (null != c) f = c;
 		else {
 			var p = (function (t) {
-				for (
-					;
-					t.firstChild && ((u(t.firstChild) && 'true' === t.firstChild.getAttribute('data-blocks')) || i(t.firstChild));
-
-				)
-					t = t.firstChild;
+				for (; t.firstChild && ((u(t.firstChild) && 'true' === t.firstChild.getAttribute('data-blocks')) || i(t.firstChild)); ) t = t.firstChild;
 				return t;
 			})(o);
 			f = s(i(p));
@@ -39,12 +27,7 @@ function c(t, e, r) {
 		g = null;
 	if (i(h)) {
 		var y = (function (t) {
-			for (
-				;
-				t.lastChild && ((u(t.lastChild) && 'true' === t.lastChild.getAttribute('data-blocks')) || i(t.lastChild));
-
-			)
-				t = t.lastChild;
+			for (; t.lastChild && ((u(t.lastChild) && 'true' === t.lastChild.getAttribute('data-blocks')) || i(t.lastChild)); ) t = t.lastChild;
 			return t;
 		})(h);
 		(d = s(i(y))), (g = l(y));
@@ -82,9 +65,7 @@ t.exports = function (t, e, r, i, a, u) {
 						offset: u
 					}),
 					(p = c(e, r, i)))
-				: ((p = c(e, r, i)),
-					(h = c(e, a, u)),
-					r === a && i === u && (d = !!r.firstChild && 'BR' !== r.firstChild.nodeName)),
+				: ((p = c(e, r, i)), (h = c(e, a, u)), r === a && i === u && (d = !!r.firstChild && 'BR' !== r.firstChild.nodeName)),
 		{
 			selectionState: o(t, p.key, p.offset, h.key, h.offset),
 			needsRecovery: d

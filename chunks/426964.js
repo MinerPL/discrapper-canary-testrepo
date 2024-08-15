@@ -12,8 +12,8 @@ var r = n(735250),
 	f = n(703656),
 	h = n(314897),
 	p = n(271383),
-	I = n(594174),
-	m = n(63063),
+	m = n(594174),
+	I = n(63063),
 	T = n(970606),
 	g = n(645896),
 	S = n(905362),
@@ -40,14 +40,11 @@ t.Z = i.memo(function (e) {
 		F = (0, o.e7)([p.ZP], () => (null != U ? p.ZP.getMember(U, B) : null), [U, B]),
 		V = (0, o.e7)([_.Z], () => {
 			var e;
-			return (
-				(null == w ? void 0 : w.id) != null &&
-				(null === (e = _.Z.getRequest(w.id)) || void 0 === e ? void 0 : e.applicationStatus) === d.wB.SUBMITTED
-			);
+			return (null == w ? void 0 : w.id) != null && (null === (e = _.Z.getRequest(w.id)) || void 0 === e ? void 0 : e.applicationStatus) === d.wB.SUBMITTED;
 		}),
 		H = null != w && w.memberCount >= R.Du,
 		Z = (0, c.wE)(a.z.CLAN_TAG_WAITLIST),
-		Y = (0, o.e7)([I.default], () => I.default.getUser(B), [B]),
+		Y = (0, o.e7)([m.default], () => m.default.getUser(B), [B]),
 		j = (null == F ? void 0 : F.joinedAt) != null,
 		W = (0, A.Z4)(U, null == Y ? void 0 : Y.clan),
 		K = null != (0, E.Z)(U);
@@ -91,7 +88,7 @@ t.Z = i.memo(function (e) {
 			[w, U, K, M, P]
 		),
 		X = i.useCallback(() => {
-			open(m.Z.getArticleURL(C.BhN.CLANS_FAQ));
+			open(I.Z.getArticleURL(C.BhN.CLANS_FAQ));
 		}, []),
 		$ = i.useCallback(() => {
 			if (null != U) (0, f.uL)(C.Z5c.GUILD_MEMBER_VERIFICATION(U));
@@ -106,11 +103,7 @@ t.Z = i.memo(function (e) {
 				size: s.Button.Sizes.SMALL,
 				fullWidth: !0,
 				className: D.button,
-				themeColor:
-					null !== (t = null == w ? void 0 : null === (e = w.branding) || void 0 === e ? void 0 : e.primaryColor) &&
-					void 0 !== t
-						? t
-						: null
+				themeColor: null !== (t = null == w ? void 0 : null === (e = w.branding) || void 0 === e ? void 0 : e.primaryColor) && void 0 !== t ? t : null
 			};
 		}, [null == w ? void 0 : null === (t = w.branding) || void 0 === t ? void 0 : t.primaryColor]),
 		et = i.useMemo(() => {

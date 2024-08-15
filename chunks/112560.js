@@ -17,17 +17,7 @@ function u(e) {
 	return e < 400 ? 'small' : e < 1000 ? 'medium' : 'large';
 }
 function c(e) {
-	let {
-		onCTAClick: t,
-		callToAction: n,
-		header: i,
-		description: u,
-		size: c,
-		className: d,
-		artURL: _,
-		noArt: E = !1,
-		selected: f = !1
-	} = e;
+	let { onCTAClick: t, callToAction: n, header: i, description: u, size: c, className: d, artURL: _, noArt: E = !1, selected: f = !1 } = e;
 	return (0, r.jsxs)(o.Z, {
 		className: d,
 		justify: o.Z.Justify.CENTER,

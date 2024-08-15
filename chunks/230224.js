@@ -106,37 +106,12 @@ function O(e) {
 }
 function b(e) {
 	let { invite: t, showBigUserIcon: n } = e,
-		i = r.useMemo(
-			() =>
-				n
-					? null
-					: T(t) && null != t.target_user
-						? _.ZP.getUserAvatarURL(t.target_user)
-						: S(t) && null != t.inviter
-							? _.ZP.getUserAvatarURL(t.inviter)
-							: null,
-			[t, n]
-		),
+		i = r.useMemo(() => (n ? null : T(t) && null != t.target_user ? _.ZP.getUserAvatarURL(t.target_user) : S(t) && null != t.inviter ? _.ZP.getUserAvatarURL(t.inviter) : null), [t, n]),
 		a = I.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN;
 	if (x(t)) {
 		var c, u;
-		a =
-			(null === (c = t.channel) || void 0 === c ? void 0 : c.name) != null &&
-			(null === (u = t.inviter) || void 0 === u ? void 0 : u.username) != null
-				? I.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM_BY_USER.format({
-						username: t.inviter.username
-					})
-				: I.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM;
-	} else
-		T(t) && null != t.target_user
-			? (a = I.Z.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({ username: t.target_user.username }))
-			: v(t)
-				? (a = I.Z.Messages.INSTANT_INVITE_YOU_ARE_ALREADY_A_MEMBER_OF)
-				: S(t) &&
-					null != t.inviter &&
-					(a = I.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_BY_USER.format({
-						username: h.ZP.getFormattedName(t.inviter)
-					}));
+		a = (null === (c = t.channel) || void 0 === c ? void 0 : c.name) != null && (null === (u = t.inviter) || void 0 === u ? void 0 : u.username) != null ? I.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM_BY_USER.format({ username: t.inviter.username }) : I.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM;
+	} else T(t) && null != t.target_user ? (a = I.Z.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({ username: t.target_user.username })) : v(t) ? (a = I.Z.Messages.INSTANT_INVITE_YOU_ARE_ALREADY_A_MEMBER_OF) : S(t) && null != t.inviter && (a = I.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_BY_USER.format({ username: h.ZP.getFormattedName(t.inviter) }));
 	return (0, s.jsxs)('div', {
 		className: m.inviteJoinContainer,
 		children: [

@@ -25,13 +25,7 @@ function c(e) {
 		c = (0, u.e)('useMaybeFetchCollectiblesCategories'),
 		[d, _, E, f, h] = (0, i.Wu)([l.Z], () => {
 			var e;
-			return [
-				l.Z.isFetchingCategories,
-				l.Z.lastFetchOptions,
-				l.Z.error,
-				null !== (e = l.Z.lastSuccessfulFetch) && void 0 !== e ? e : 0,
-				l.Z.categories
-			];
+			return [l.Z.isFetchingCategories, l.Z.lastFetchOptions, l.Z.error, null !== (e = l.Z.lastSuccessfulFetch) && void 0 !== e ? e : 0, l.Z.categories];
 		});
 	return (
 		(0, r.useEffect)(() => {

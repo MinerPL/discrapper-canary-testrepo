@@ -16,16 +16,7 @@ function _(e) {
 	let t = null;
 	if (null != e && null != e.channel) {
 		let n = e.channel;
-		t =
-			e.target_type === c.Iq.STREAM
-				? d.dAT.STREAM
-				: e.target_type === c.Iq.EMBEDDED_APPLICATION
-					? d.dAT.APPLICATION
-					: (0, a.bc)(n.type)
-						? d.dAT.GDM_INVITE
-						: null == n || (0, a.hv)(n.type)
-							? d.dAT.FRIEND_INVITE
-							: d.dAT.SERVER_INVITE;
+		t = e.target_type === c.Iq.STREAM ? d.dAT.STREAM : e.target_type === c.Iq.EMBEDDED_APPLICATION ? d.dAT.APPLICATION : (0, a.bc)(n.type) ? d.dAT.GDM_INVITE : null == n || (0, a.hv)(n.type) ? d.dAT.FRIEND_INVITE : d.dAT.SERVER_INVITE;
 	}
 	return t;
 }

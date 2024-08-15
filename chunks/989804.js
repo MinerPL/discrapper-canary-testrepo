@@ -23,9 +23,7 @@ var o = n(735250),
 	k = n(981631),
 	p = n(689938);
 let Z = a.forwardRef(function () {
-	g.Z.trackExposure({ location: 'cd25e4_1' }),
-		S.Z.useExperiment({ location: 'user_setting_auto' }, { autoTrackExposure: !1 }),
-		S.Z.trackExposure({ location: 'user_setting_manual' });
+	g.Z.trackExposure({ location: 'cd25e4_1' }), S.Z.useExperiment({ location: 'user_setting_auto' }, { autoTrackExposure: !1 }), S.Z.trackExposure({ location: 'user_setting_manual' });
 	let e = (0, c.e7)([E.Z], () => E.Z.theme),
 		t = (0, c.e7)([E.Z], () => (E.Z.darkSidebar ? k.BRd.DARK : void 0)),
 		{
@@ -51,14 +49,7 @@ let Z = a.forwardRef(function () {
 	a.useEffect(() => {
 		if (!!(null != n && (n !== h || Z !== A)))
 			!(function (e) {
-				let {
-					destinationPane: t,
-					originPane: n = null,
-					source: o = null,
-					subsection: a = null,
-					locationStack: c = null,
-					searchQuery: i = null
-				} = e;
+				let { destinationPane: t, originPane: n = null, source: o = null, subsection: a = null, locationStack: c = null, searchQuery: i = null } = e;
 				_.ZP.trackWithMetadata(k.rMx.SETTINGS_PANE_VIEWED, {
 					settings_type: 'user',
 					origin_pane: n,

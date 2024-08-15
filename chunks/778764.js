@@ -35,10 +35,7 @@ function g(e) {
 		L = async () => {
 			let e;
 			x(C.x.REGISTER);
-			let s =
-				u.isPlatformEmbedded && T.ZP.supportsFeature(m.eRX.WEBAUTHN)
-					? T.ZP.webAuthnRegister(c)
-					: i.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
+			let s = u.isPlatformEmbedded && T.ZP.supportsFeature(m.eRX.WEBAUTHN) ? T.ZP.webAuthnRegister(c) : i.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
 			try {
 				e = await s;
 			} catch (e) {
@@ -58,11 +55,7 @@ function g(e) {
 					(0, n.jsxs)(o.Heading, {
 						id: E,
 						variant: 'heading-lg/semibold',
-						children: [
-							R === C.x.INIT && A.Z.Messages.TWO_FA_WEBAUTHN_REGISTER,
-							R === C.x.REGISTER && A.Z.Messages.TWO_FA_WEBAUTHN_INTERACT,
-							R === C.x.NAME && A.Z.Messages.TWO_FA_WEBAUTHN_NAME
-						]
+						children: [R === C.x.INIT && A.Z.Messages.TWO_FA_WEBAUTHN_REGISTER, R === C.x.REGISTER && A.Z.Messages.TWO_FA_WEBAUTHN_INTERACT, R === C.x.NAME && A.Z.Messages.TWO_FA_WEBAUTHN_NAME]
 					}),
 					(0, n.jsx)(o.ModalCloseButton, {
 						onClick: r,

@@ -37,20 +37,12 @@ let A = (e) => {
 						variant: 'heading-lg/extrabold',
 						color: 'currentColor',
 						className: N.title,
-						children:
-							null !== (i = null == c ? void 0 : null === (s = c.title) || void 0 === s ? void 0 : s.call(c)) &&
-							void 0 !== i
-								? i
-								: S.Z.Messages.COLLECTIBLES_BANNER_TITLE_2024
+						children: null !== (i = null == c ? void 0 : null === (s = c.title) || void 0 === s ? void 0 : s.call(c)) && void 0 !== i ? i : S.Z.Messages.COLLECTIBLES_BANNER_TITLE_2024
 					}),
 					(0, n.jsx)(o.Text, {
 						variant: 'text-sm/normal',
 						color: 'currentColor',
-						children:
-							null !== (l = null == c ? void 0 : null === (t = c.description) || void 0 === t ? void 0 : t.call(c)) &&
-							void 0 !== l
-								? l
-								: S.Z.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
+						children: null !== (l = null == c ? void 0 : null === (t = c.description) || void 0 === t ? void 0 : t.call(c)) && void 0 !== l ? l : S.Z.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
 					})
 				]
 			})
@@ -76,9 +68,7 @@ s.Z = () => {
 				[N.robertContainer]: i === E.C5.ROBERT,
 				[N.stormContainer]: i === E.C5.STORM
 			}),
-			style: {
-				backgroundImage: 'url('.concat(null !== (e = null == C ? void 0 : C.backgroundSrc) && void 0 !== e ? e : m, ')')
-			},
+			style: { backgroundImage: 'url('.concat(null !== (e = null == C ? void 0 : C.backgroundSrc) && void 0 !== e ? e : m, ')') },
 			children: [
 				(0, n.jsx)(A, {
 					displayOptions: C,

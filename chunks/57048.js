@@ -26,11 +26,7 @@ let o = (e, n) => {
 			u = null == o ? void 0 : o.assets,
 			c = a.Z.isFriend(t);
 		return {
-			has_images: !!(null !== (n = null == u ? void 0 : u.large_image) && void 0 !== n
-				? n
-				: null == u
-					? void 0
-					: u.small_image),
+			has_images: !!(null !== (n = null == u ? void 0 : u.large_image) && void 0 !== n ? n : null == u ? void 0 : u.small_image),
 			is_friend: c,
 			viewed_profile_user_id: t,
 			profile_has_nitro_customization: e.hasPremiumCustomization(),

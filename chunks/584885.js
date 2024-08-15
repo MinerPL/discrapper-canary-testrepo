@@ -24,20 +24,7 @@ let h = [
 	];
 t.Z = (e) => {
 	let t,
-		{
-			title: n,
-			subtitle: I,
-			guildsData: g,
-			analyticsContext: p,
-			theme: T,
-			onViewGuild: S,
-			fetchGuilds: f,
-			onGuildCardSeen: C,
-			currentCategoryId: N,
-			loadId: A,
-			onTagClick: v,
-			showMoreCards: Z = !1
-		} = e;
+		{ title: n, subtitle: I, guildsData: g, analyticsContext: p, theme: T, onViewGuild: S, fetchGuilds: f, onGuildCardSeen: C, currentCategoryId: N, loadId: A, onTagClick: v, showMoreCards: Z = !1 } = e;
 	a.useEffect(() => {
 		r.Z.wait(() => f());
 	}, [N]);

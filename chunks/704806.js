@@ -34,8 +34,7 @@ async function _() {
 async function E() {
 	try {
 		let e = (await _()).filter((e) => d.hashes[e.name] !== e.hash);
-		for (let { name: t, hash: n, data: r } of e)
-			o.default.track(t, r), ((d = { hashes: { ...d.hashes } }).hashes[t] = n);
+		for (let { name: t, hash: n, data: r } of e) o.default.track(t, r), ((d = { hashes: { ...d.hashes } }).hashes[t] = n);
 		e.length > 0 && h.emitChange();
 	} catch (e) {}
 }

@@ -1,9 +1,9 @@
 n.d(t, {
 	C3: function () {
-		return m;
+		return I;
 	},
 	Fg: function () {
-		return I;
+		return m;
 	},
 	Oh: function () {
 		return g;
@@ -56,7 +56,7 @@ let p = async (e) => {
 			});
 		}
 	},
-	I = async (e) => {
+	m = async (e) => {
 		if (!o.Z.isFullServerPreview(e)) {
 			i.Z.dispatch({
 				type: 'GUILD_NEW_MEMBER_ACTIONS_FETCH_START',
@@ -84,7 +84,7 @@ let p = async (e) => {
 			}
 		}
 	},
-	m = function (e, t) {
+	I = function (e, t) {
 		let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
 		if (
 			(i.Z.dispatch({

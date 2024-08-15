@@ -23,9 +23,7 @@ t.Z = () => {
 		h = i.useCallback(() => {
 			let t = '',
 				n = '';
-			f
-				? ((t = d.Z.Messages.SUPPRESSED_AFK_TITLE), (n = d.Z.Messages.SUPPRESSED_AFK_BODY))
-				: ((t = d.Z.Messages.SUPPRESSED), (n = d.Z.Messages.SUPPRESSED_PERMISSION_BODY)),
+			f ? ((t = d.Z.Messages.SUPPRESSED_AFK_TITLE), (n = d.Z.Messages.SUPPRESSED_AFK_BODY)) : ((t = d.Z.Messages.SUPPRESSED), (n = d.Z.Messages.SUPPRESSED_PERMISSION_BODY)),
 				(e.current = (0, s.openModal)((e) =>
 					(0, r.jsx)(l.default, {
 						title: t,

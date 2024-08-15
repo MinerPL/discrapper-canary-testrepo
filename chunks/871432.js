@@ -99,20 +99,17 @@ var t = {
 	paymentConditions: '支払条件',
 	openApp: 'アプリを開く',
 	'voucher.readInstructions': '手順を参照してください',
-	'voucher.introduction':
-		'お買い上げありがとうございます\u3002以下のクーポンを使用して\u3001お支払いを完了してください\u3002',
+	'voucher.introduction': 'お買い上げありがとうございます\u3002以下のクーポンを使用して\u3001お支払いを完了してください\u3002',
 	'voucher.expirationDate': '有効期限',
 	'voucher.alternativeReference': '別の参照',
 	'dragonpay.voucher.non.bank.selectField.placeholder': 'プロバイダーを選択してください',
 	'dragonpay.voucher.bank.selectField.placeholder': '銀行を選択してください',
 	'voucher.paymentReferenceLabel': '支払いの参照',
 	'voucher.surcharge': '%@ の追加料金を含む',
-	'voucher.introduction.doku':
-		'お買い上げありがとうございます\u3002以下の情報を使用して\u3001お支払いを完了してください\u3002',
+	'voucher.introduction.doku': 'お買い上げありがとうございます\u3002以下の情報を使用して\u3001お支払いを完了してください\u3002',
 	'voucher.shopperName': '購入者氏名',
 	'voucher.merchantName': '業者',
-	'voucher.introduction.econtext':
-		'お買い上げありがとうございます\u3002以下の情報を使用して\u3001お支払いを完了してください\u3002',
+	'voucher.introduction.econtext': 'お買い上げありがとうございます\u3002以下の情報を使用して\u3001お支払いを完了してください\u3002',
 	'voucher.telephoneNumber': '電話番号',
 	'voucher.shopperReference': '購入者向け参考情報',
 	'voucher.collectionInstitutionNumber': '収納機関番号',
@@ -173,8 +170,7 @@ var t = {
 	'blik.invalid': '6つの数字を入力してください',
 	'blik.code': '6桁のコード',
 	'blik.help': 'バンキングアプリからコードを取得してください\u3002',
-	'swish.pendingMessage':
-		'スキャン後\u3001ステータスは最大10分間保留状態になります\u3002この間に再度お支払いいただこうとすると\u3001複数の請求が発生する場合があります\u3002',
+	'swish.pendingMessage': 'スキャン後\u3001ステータスは最大10分間保留状態になります\u3002この間に再度お支払いいただこうとすると\u3001複数の請求が発生する場合があります\u3002',
 	'field.valid': 'フィールドが有効です',
 	'field.invalid': 'フィールドが無効です',
 	'error.va.gen.01': '不完全なフィールド',
@@ -210,10 +206,8 @@ var t = {
 	'bankTransfer.iban': 'IBAN',
 	'bankTransfer.bic': 'BIC',
 	'bankTransfer.reference': '参照',
-	'bankTransfer.introduction':
-		'新しい銀行振込によるお支払の作成を続行します\u3002次の画面の詳細を使用して\u3001このお支払いを確定できます\u3002',
-	'bankTransfer.instructions':
-		'お買い上げありがとうございます\u3002以下の情報を使用して\u3001お支払いを完了してください\u3002',
+	'bankTransfer.introduction': '新しい銀行振込によるお支払の作成を続行します\u3002次の画面の詳細を使用して\u3001このお支払いを確定できます\u3002',
+	'bankTransfer.instructions': 'お買い上げありがとうございます\u3002以下の情報を使用して\u3001お支払いを完了してください\u3002',
 	'bacs.accountHolderName': '銀行口座名義',
 	'bacs.accountHolderName.invalid': '銀行口座名義が無効です',
 	'bacs.accountNumber': '銀行口座番号',
@@ -221,8 +215,7 @@ var t = {
 	'bacs.bankLocationId': 'ソートコード',
 	'bacs.bankLocationId.invalid': 'ソートコードが無効です',
 	'bacs.consent.amount': '上記の金額が私の銀行口座から引き落とされることに同意します\u3002',
-	'bacs.consent.account':
-		'口座が私の名義であることを確認し\u3001この口座からの自動引き落としを承認するために必要な唯一の署名者であることを確認します\u3002',
+	'bacs.consent.account': '口座が私の名義であることを確認し\u3001この口座からの自動引き落としを承認するために必要な唯一の署名者であることを確認します\u3002',
 	edit: '編集',
 	'bacs.confirm': '確認して支払う',
 	'bacs.result.introduction': '自動引き落としの説明 (DDI/委任状) をダウンロードする',
@@ -255,8 +248,7 @@ var t = {
 	'upi.vpaWaitingMessage': 'UPIアプリを開いて\u3001支払を確認してください',
 	'upi.modeSelection': 'UPIの使用方法を選択します\u3002',
 	'onlineBanking.termsAndConditions': '続行すると\u3001%#利用規約%#に同意したことになります',
-	'onlineBankingPL.termsAndConditions':
-		'続行すると\u3001Przelewy24の%#規制%#と%#情報提供義務%#に同意したことになります',
+	'onlineBankingPL.termsAndConditions': '続行すると\u3001Przelewy24の%#規制%#と%#情報提供義務%#に同意したことになります',
 	'ctp.loading.poweredByCtp': 'Click to Pay提供',
 	'ctp.loading.intro': 'Click to Payにカードが保存されているかどうかを確認しています...',
 	'ctp.login.title': 'Click to Payに進む',
@@ -279,14 +271,12 @@ var t = {
 	'ctp.manualCardEntry': '手動カード入力',
 	'ctp.aria.infoModalButton': 'Click to Payとは',
 	'ctp.infoPopup.title': 'Click to Payはオンラインで非接触型カードの使いやすさを実現します',
-	'ctp.infoPopup.subtitle':
-		'Mastercard\u3001Visa\u3001その他の支払カードでサポートされている高速で安全な支払方法\u3002',
+	'ctp.infoPopup.subtitle': 'Mastercard\u3001Visa\u3001その他の支払カードでサポートされている高速で安全な支払方法\u3002',
 	'ctp.infoPopup.benefit1': 'Click to Payは暗号化を使用して情報を安全に保護します',
 	'ctp.infoPopup.benefit2': '世界中の業者で使用できます',
 	'ctp.infoPopup.benefit3': '一度設定するだけで\u3001今後の支払いが簡単になります',
 	'ctp.errors.AUTH_INVALID': '認証が無効です',
-	'ctp.errors.NOT_FOUND':
-		'アカウントが見つかりません\u3002有効なメールアドレスを入力するか\u3001カード情報を手動で入力してください',
+	'ctp.errors.NOT_FOUND': 'アカウントが見つかりません\u3002有効なメールアドレスを入力するか\u3001カード情報を手動で入力してください',
 	'ctp.errors.ID_FORMAT_UNSUPPORTED': 'サポートされてない形式です',
 	'ctp.errors.FRAUD': 'ユーザーアカウントがロックされているか無効になっています',
 	'ctp.errors.CONSUMER_ID_MISSING': 'リクエストにコンシューマーIDがありません',
@@ -295,16 +285,11 @@ var t = {
 	'ctp.errors.CODE_EXPIRED': 'このコードの有効期限が切れています',
 	'ctp.errors.RETRIES_EXCEEDED': 'ワンタイムパスワード生成のリトライ回数が上限を超えました',
 	'ctp.errors.OTP_SEND_FAILED': 'ワンタイムパスワードを受信者に送信できませんでした',
-	'ctp.errors.REQUEST_TIMEOUT':
-		'問題が発生しました\u3002再度お試しいただくか\u3001カード情報を手動で入力してください\u3002',
-	'ctp.errors.UNKNOWN_ERROR':
-		'問題が発生しました\u3002再度お試しいただくか\u3001カード情報を手動で入力してください\u3002',
-	'ctp.errors.SERVICE_ERROR':
-		'問題が発生しました\u3002再度お試しいただくか\u3001カード情報を手動で入力してください\u3002',
-	'ctp.errors.SERVER_ERROR':
-		'問題が発生しました\u3002再度お試しいただくか\u3001カード情報を手動で入力してください\u3002',
-	'ctp.errors.INVALID_PARAMETER':
-		'問題が発生しました\u3002再度お試しいただくか\u3001カード情報を手動で入力してください\u3002',
+	'ctp.errors.REQUEST_TIMEOUT': '問題が発生しました\u3002再度お試しいただくか\u3001カード情報を手動で入力してください\u3002',
+	'ctp.errors.UNKNOWN_ERROR': '問題が発生しました\u3002再度お試しいただくか\u3001カード情報を手動で入力してください\u3002',
+	'ctp.errors.SERVICE_ERROR': '問題が発生しました\u3002再度お試しいただくか\u3001カード情報を手動で入力してください\u3002',
+	'ctp.errors.SERVER_ERROR': '問題が発生しました\u3002再度お試しいただくか\u3001カード情報を手動で入力してください\u3002',
+	'ctp.errors.INVALID_PARAMETER': '問題が発生しました\u3002再度お試しいただくか\u3001カード情報を手動で入力してください\u3002',
 	'ctp.errors.AUTH_ERROR': '問題が発生しました\u3002再度お試しいただくか\u3001カード情報を手動で入力してください\u3002',
 	'paymentMethodsList.aria.label': 'お支払い方法を選択してください',
 	'companyDetails.name.invalid': '会社名を入力してください',

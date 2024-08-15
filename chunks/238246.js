@@ -14,8 +14,8 @@ var i,
 	_ = n(40851),
 	f = n(607070),
 	E = n(899663),
-	g = n(317381),
-	C = n(496616),
+	C = n(317381),
+	g = n(496616),
 	I = n(100527),
 	x = n(906732),
 	T = n(168551),
@@ -56,27 +56,11 @@ class F extends (i = s.Component) {
 	componentDidMount() {
 		let { guestWindow: e } = this.props,
 			t = e.document;
-		null == t.querySelector('title') && null != t.head && t.head.appendChild(t.createElement('title')),
-			this.updateTitle(),
-			this.updateFontScale(),
-			this.updateLocale(),
-			this.updateClientTheme(),
-			this.updateSaturationFactor(),
-			this.updateForcedColors(),
-			(0, U.O)(e),
-			e.addEventListener('blur', this.handleBlur),
-			t.addEventListener('contextmenu', this.handleContextMenu, !0),
-			e.addEventListener('beforeunload', this.warnPopoutClose);
+		null == t.querySelector('title') && null != t.head && t.head.appendChild(t.createElement('title')), this.updateTitle(), this.updateFontScale(), this.updateLocale(), this.updateClientTheme(), this.updateSaturationFactor(), this.updateForcedColors(), (0, U.O)(e), e.addEventListener('blur', this.handleBlur), t.addEventListener('contextmenu', this.handleContextMenu, !0), e.addEventListener('beforeunload', this.warnPopoutClose);
 	}
 	componentDidUpdate(e) {
 		let { title: t, fontScale: n, locale: i, clientThemesCSS: a } = this.props;
-		e.title !== t && this.updateTitle(),
-			e.fontScale !== n && this.updateFontScale(),
-			e.locale !== i && this.updateLocale(),
-			e.clientThemesCSS !== a && this.updateClientTheme(),
-			e.saturation !== this.props.saturation && this.updateSaturationFactor(),
-			(e.forcedColors !== this.props.forcedColors || e.systemForcedColors !== this.props.systemForcedColors) &&
-				this.updateForcedColors();
+		e.title !== t && this.updateTitle(), e.fontScale !== n && this.updateFontScale(), e.locale !== i && this.updateLocale(), e.clientThemesCSS !== a && this.updateClientTheme(), e.saturation !== this.props.saturation && this.updateSaturationFactor(), (e.forcedColors !== this.props.forcedColors || e.systemForcedColors !== this.props.systemForcedColors) && this.updateForcedColors();
 	}
 	componentWillUnmount() {
 		let { guestWindow: e } = this.props,
@@ -129,23 +113,7 @@ class F extends (i = s.Component) {
 		n.document.documentElement.classList.toggle('disable-forced-colors', !e && 'active' === t);
 	}
 	render() {
-		let {
-				theme: e,
-				forcedColors: t,
-				focused: n,
-				appFocused: i,
-				children: s,
-				windowKey: l,
-				mouseModeEnabled: o,
-				keyboardModeEnabled: c,
-				reducedMotionEnabled: d,
-				fontScaleClass: h,
-				saturation: f,
-				withTitleBar: g,
-				guestWindow: C,
-				clientThemesClassName: I,
-				contentClassName: x
-			} = this.props,
+		let { theme: e, forcedColors: t, focused: n, appFocused: i, children: s, windowKey: l, mouseModeEnabled: o, keyboardModeEnabled: c, reducedMotionEnabled: d, fontScaleClass: h, saturation: f, withTitleBar: C, guestWindow: g, clientThemesClassName: I, contentClassName: x } = this.props,
 			T = (0, y.getPlatform)(),
 			A = r()(h, {
 				'mouse-mode': o,
@@ -174,13 +142,13 @@ class F extends (i = s.Component) {
 												(0, a.jsx)(S.Co, {}),
 												(0, a.jsx)(_.Wu, {
 													appContext: B.IlC.POPOUT,
-													renderWindow: C,
+													renderWindow: g,
 													children: (0, a.jsxs)(b.yP, {
 														children: [
 															(0, a.jsxs)('div', {
 																className: G.popout,
 																children: [
-																	g && null != T
+																	C && null != T
 																		? (0, a.jsx)(Z.Z, {
 																				focused: n,
 																				type: T,
@@ -219,7 +187,7 @@ class F extends (i = s.Component) {
 			V(this, 'warnPopoutClose', (e) => {
 				if (this.props.connectedToEmbeddedActivity && !P.ZP.disableEmbeddedActivityPopOutAlert) {
 					if (((e.returnValue = H.Z.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE), !!y.isPlatformEmbedded))
-						(0, C.Z)(() => {
+						(0, g.Z)(() => {
 							w.Z.unmountWindow(this.props.windowKey), y.isPlatformEmbedded && k.ZP.close(this.props.windowKey);
 						});
 				}
@@ -252,7 +220,7 @@ let W = s.forwardRef(function (e, t) {
 			reducedMotionEnabled: p,
 			fontScaleClass: _,
 			saturation: E,
-			systemForcedColors: C,
+			systemForcedColors: g,
 			useForcedColors: N
 		} = (0, h.cj)([f.Z], () => ({
 			fontScale: f.Z.fontScale,
@@ -263,7 +231,7 @@ let W = s.forwardRef(function (e, t) {
 			systemForcedColors: f.Z.systemForcedColors,
 			useForcedColors: f.Z.useForcedColors
 		})),
-		v = (0, h.e7)([g.ZP], () => null != e.channelId && null !== g.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
+		v = (0, h.e7)([C.ZP], () => null != e.channelId && null !== C.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
 	(0, A.Z)(n, !1);
 	let S = (0, M.Z)(n, i),
 		{ analyticsLocations: Z } = (0, x.ZP)(I.Z.POPOUT_WINDOW),
@@ -283,7 +251,7 @@ let W = s.forwardRef(function (e, t) {
 						theme: r,
 						forcedColors: o,
 						useForcedColors: N,
-						systemForcedColors: C,
+						systemForcedColors: g,
 						fontScale: u,
 						keyboardModeEnabled: d,
 						mouseModeEnabled: S,

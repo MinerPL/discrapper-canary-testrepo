@@ -57,10 +57,7 @@ let _ = d.exports;
 var E = function (e, t, n, r, i, a, s, o) {
 	if (!e) {
 		var l;
-		if (void 0 === t)
-			l = Error(
-				'Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.'
-			);
+		if (void 0 === t) l = Error('Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.');
 		else {
 			var u = [n, r, i, a, s, o],
 				c = 0;
@@ -98,13 +95,7 @@ class p {
 				(e = t + t + n + n + r + r), i && (e += i + i);
 			}
 			var t = e.match(/.{1,2}/g);
-			if (null != t)
-				return new p(
-					parseInt(t[0], 16),
-					parseInt(t[1], 16),
-					parseInt(t[2], 16),
-					null != t[3] ? parseInt(t[3], 16) / 255 : 1
-				);
+			if (null != t) return new p(parseInt(t[0], 16), parseInt(t[1], 16), parseInt(t[2], 16), null != t[3] ? parseInt(t[3], 16) / 255 : 1);
 		}
 	}
 	static parseColorFnString(e) {
@@ -132,18 +123,7 @@ class p {
 				let a = (1 - Math.abs(2 * (n /= 255) - 1)) * t,
 					s = a * (1 - Math.abs(((e / 60) % 2) - 1)),
 					o = n - a / 2,
-					l = (i =
-						e < 60
-							? [a, s, 0]
-							: e < 120
-								? [s, a, 0]
-								: e < 180
-									? [0, a, s]
-									: e < 240
-										? [0, s, a]
-										: e < 300
-											? [s, 0, a]
-											: [a, 0, s]).map((e) => Math.round((e + o) * 255));
+					l = (i = e < 60 ? [a, s, 0] : e < 120 ? [s, a, 0] : e < 180 ? [0, a, s] : e < 240 ? [0, s, a] : e < 300 ? [s, 0, a] : [a, 0, s]).map((e) => Math.round((e + o) * 255));
 				return {
 					red: l[0],
 					green: l[1],
@@ -205,34 +185,22 @@ class p {
 		var e = this.red / 255,
 			t = this.green / 255,
 			n = this.blue / 255;
-		return (
-			0.2126 * (e <= 0.03928 ? e / 12.92 : Math.pow((e + 0.055) / 1.055, 2.4)) +
-			0.7152 * (t <= 0.03928 ? t / 12.92 : Math.pow((t + 0.055) / 1.055, 2.4)) +
-			0.0722 * (n <= 0.03928 ? n / 12.92 : Math.pow((n + 0.055) / 1.055, 2.4))
-		);
+		return 0.2126 * (e <= 0.03928 ? e / 12.92 : Math.pow((e + 0.055) / 1.055, 2.4)) + 0.7152 * (t <= 0.03928 ? t / 12.92 : Math.pow((t + 0.055) / 1.055, 2.4)) + 0.0722 * (n <= 0.03928 ? n / 12.92 : Math.pow((n + 0.055) / 1.055, 2.4));
 	}
 }
-function I(e, t) {
+function m(e, t) {
 	let n = e.alpha,
 		r = (1 - n) * t.red + n * e.red,
 		i = (1 - n) * t.green + n * e.green,
 		a = (1 - n) * t.blue + n * e.blue;
 	return new p(r, i, a, e.alpha + t.alpha * (1 - e.alpha));
 }
-function m(e) {
+function I(e) {
 	if (e) return parseInt(e) > 0 ? e : void 0;
 }
 class T {
 	constructor() {
-		c(this, 'targetElement'),
-			c(this, 'targetAncestry'),
-			c(this, 'boundingBox'),
-			c(this, 'className'),
-			c(this, 'offset', 0),
-			c(this, 'zIndex'),
-			c(this, 'container', null),
-			c(this, 'themeOptions'),
-			c(this, 'invalidate', () => null);
+		c(this, 'targetElement'), c(this, 'targetAncestry'), c(this, 'boundingBox'), c(this, 'className'), c(this, 'offset', 0), c(this, 'zIndex'), c(this, 'container', null), c(this, 'themeOptions'), c(this, 'invalidate', () => null);
 	}
 	setContainer(e) {
 		this.container = e;
@@ -242,24 +210,10 @@ class T {
 	}
 	showElement(e, t = {}) {
 		var n, i;
-		(this.targetElement = e),
-			(this.targetAncestry = this.getElementAncestors(this.targetElement)),
-			(this.boundingBox = void 0),
-			(this.className = t.className),
-			(this.offset = null != (n = t.offset) ? n : 0),
-			(this.zIndex = t.zIndex),
-			(i = this),
-			i !== r && (null == r || r.hide(), (r = i)),
-			this.invalidate();
+		(this.targetElement = e), (this.targetAncestry = this.getElementAncestors(this.targetElement)), (this.boundingBox = void 0), (this.className = t.className), (this.offset = null != (n = t.offset) ? n : 0), (this.zIndex = t.zIndex), (i = this), i !== r && (null == r || r.hide(), (r = i)), this.invalidate();
 	}
 	hide() {
-		(this.targetElement = void 0),
-			(this.targetAncestry = void 0),
-			(this.boundingBox = void 0),
-			(this.className = void 0),
-			(this.offset = 0),
-			(this.zIndex = void 0),
-			this.invalidate();
+		(this.targetElement = void 0), (this.targetAncestry = void 0), (this.boundingBox = void 0), (this.className = void 0), (this.offset = 0), (this.zIndex = void 0), this.invalidate();
 	}
 	get visible() {
 		return null != this.targetElement || null != this.boundingBox;
@@ -289,10 +243,10 @@ class T {
 	}
 	getBorderRadius(e) {
 		var t, n, r, i, a, s, o, l;
-		let u = null != (n = m(null == (t = e.styles[0]) ? void 0 : t.borderTopLeftRadius)) ? n : '0',
-			c = null != (i = m(null == (r = e.styles[0]) ? void 0 : r.borderTopRightRadius)) ? i : '0',
-			d = null != (s = m(null == (a = e.styles[0]) ? void 0 : a.borderBottomRightRadius)) ? s : '0',
-			_ = null != (l = m(null == (o = e.styles[0]) ? void 0 : o.borderBottomLeftRadius)) ? l : '0';
+		let u = null != (n = I(null == (t = e.styles[0]) ? void 0 : t.borderTopLeftRadius)) ? n : '0',
+			c = null != (i = I(null == (r = e.styles[0]) ? void 0 : r.borderTopRightRadius)) ? i : '0',
+			d = null != (s = I(null == (a = e.styles[0]) ? void 0 : a.borderBottomRightRadius)) ? s : '0',
+			_ = null != (l = I(null == (o = e.styles[0]) ? void 0 : o.borderBottomLeftRadius)) ? l : '0';
 		if (!('0' === u && '0' === c && '0' === d && '0' === _)) return `${u} ${c} ${d} ${_}`;
 	}
 	makePositionFromDOMRect(e) {
@@ -305,12 +259,7 @@ class T {
 			c = 0,
 			d = 0;
 		return (
-			'number' == typeof this.offset
-				? ((l = this.offset), (u = this.offset), (c = this.offset), (d = this.offset))
-				: ((l = null != (t = this.offset.top) ? t : 0),
-					(u = null != (n = this.offset.right) ? n : 0),
-					(c = null != (r = this.offset.bottom) ? r : 0),
-					(d = null != (i = this.offset.left) ? i : 0)),
+			'number' == typeof this.offset ? ((l = this.offset), (u = this.offset), (c = this.offset), (d = this.offset)) : ((l = null != (t = this.offset.top) ? t : 0), (u = null != (n = this.offset.right) ? n : 0), (c = null != (r = this.offset.bottom) ? r : 0), (d = null != (i = this.offset.left) ? i : 0)),
 			{
 				top: s + e.top - a.top + l,
 				width: e.width - (u + d),
@@ -339,7 +288,7 @@ class T {
 						t.push(e);
 					}
 				}
-				return t.push(new p(255, 255, 255, 1)), t.reduce(I);
+				return t.push(new p(255, 255, 255, 1)), t.reduce(m);
 			})(this.targetAncestry);
 			t = {
 				...this.makePositionFromDOMRect(this.targetElement.getBoundingClientRect()),
@@ -348,13 +297,7 @@ class T {
 					if (null == e) return 'var(--focus-primary)';
 					let { saturation: n } = e.toHSL(),
 						r = e.getRelativeLuminance();
-					return n <= 0.4
-						? 'var(--focus-primary)'
-						: 'u' > typeof t
-							? r < (t.brightnessTreshold || 0.2)
-								? 'var(--focus-light, rgba(255,255,255,0.7))'
-								: 'var(--focus-dark, rgba(0, 0, 0, 0.85))'
-							: 'rgba(255,255,255,0.7)';
+					return n <= 0.4 ? 'var(--focus-primary)' : 'u' > typeof t ? (r < (t.brightnessTreshold || 0.2) ? 'var(--focus-light, rgba(255,255,255,0.7))' : 'var(--focus-dark, rgba(0, 0, 0, 0.85))') : 'rgba(255,255,255,0.7)';
 				})(n, this.themeOptions),
 				'--__adaptive-focus-ring-radius': this.getBorderRadius(this.targetAncestry)
 			};
@@ -388,8 +331,7 @@ let N = !1,
 function R() {
 	if (!N) return;
 	let e = null == r ? void 0 : r.getStyle();
-	null == e || A(e, O) ? null != v && cancelAnimationFrame(v) : ((O = e), null == r || r.invalidate()),
-		(v = requestAnimationFrame(R));
+	null == e || A(e, O) ? null != v && cancelAnimationFrame(v) : ((O = e), null == r || r.invalidate()), (v = requestAnimationFrame(R));
 }
 let C = !1,
 	y = {
@@ -426,8 +368,7 @@ D.exports = (function () {
 			l = {},
 			u = null,
 			c = null;
-		for (o in (void 0 !== s && (u = '' + s), void 0 !== a.key && (u = '' + a.key), void 0 !== a.ref && (c = a.ref), a))
-			n.call(a, o) && !i.hasOwnProperty(o) && (l[o] = a[o]);
+		for (o in (void 0 !== s && (u = '' + s), void 0 !== a.key && (u = '' + a.key), void 0 !== a.ref && (c = a.ref), a)) n.call(a, o) && !i.hasOwnProperty(o) && (l[o] = a[o]);
 		if (t && t.defaultProps) for (o in (a = t.defaultProps)) void 0 === l[o] && (l[o] = a[o]);
 		return {
 			$$typeof: e,
@@ -476,38 +417,15 @@ function U() {
 			: null
 	);
 }
-let w =
-	'u' > typeof window && (null == (s = window.document) ? void 0 : s.createElement) != null
-		? o.useLayoutEffect
-		: o.useEffect;
+let w = 'u' > typeof window && (null == (s = window.document) ? void 0 : s.createElement) != null ? o.useLayoutEffect : o.useEffect;
 function x(e) {
-	let {
-		within: t = !1,
-		enabled: n = !0,
-		focused: r,
-		offset: i = 0,
-		focusTarget: a,
-		ringTarget: s,
-		ringClassName: l,
-		focusClassName: u,
-		focusWithinClassName: c,
-		children: d
-	} = e;
-	null != a &&
-		E(
-			null != s,
-			'FocusRing was given a focusTarget but the required ringTarget was not provided. A ringTarget is required to avoid ambiguity of where the ring will be applied.'
-		),
-		null != r &&
-			E(
-				null != s,
-				'FocusRing was given a controlled focused prop but no ringTarget to apply the ring to. A ringTarget is required since it cannot be inferred through regular focus events.'
-			);
+	let { within: t = !1, enabled: n = !0, focused: r, offset: i = 0, focusTarget: a, ringTarget: s, ringClassName: l, focusClassName: u, focusWithinClassName: c, children: d } = e;
+	null != a && E(null != s, 'FocusRing was given a focusTarget but the required ringTarget was not provided. A ringTarget is required to avoid ambiguity of where the ring will be applied.'), null != r && E(null != s, 'FocusRing was given a controlled focused prop but no ringTarget to apply the ring to. A ringTarget is required since it cannot be inferred through regular focus events.');
 	let f = o.useRef(!1),
 		[h, p] = o.useState(!1),
-		I = o.useContext(S),
-		m = o.Children.only(d),
-		{ onBlur: T, onFocus: g, ...A } = m.props,
+		m = o.useContext(S),
+		I = o.Children.only(d),
+		{ onBlur: T, onFocus: g, ...A } = I.props,
 		N = o.useMemo(
 			() => ({
 				className: l,
@@ -516,21 +434,21 @@ function x(e) {
 			[l, i]
 		);
 	w(() => {
-		n && I.invalidate();
+		n && m.invalidate();
 	}),
 		o.useEffect(() => {
-			n || I.hide();
-		}, [n, I]),
+			n || m.hide();
+		}, [n, m]),
 		o.useEffect(
 			() => () => {
-				f.current && I.hide();
+				f.current && m.hide();
 			},
-			[I]
+			[m]
 		),
 		o.useEffect(() => {
 			let e = null == s ? void 0 : s.current;
-			null == r || null == e || ((f.current = r), r ? I.showElement(e, N) : !1 === r && I.hide());
-		}, [r, N, I, s]),
+			null == r || null == e || ((f.current = r), r ? m.showElement(e, N) : !1 === r && m.hide());
+		}, [r, N, m, s]),
 		w(() => {
 			if (null != r) return;
 			let e = null == a ? void 0 : a.current,
@@ -546,38 +464,35 @@ function x(e) {
 			function i(e) {
 				if (null != n) {
 					if (e.currentTarget === e.target) {
-						(f.current = !0), I.showElement(n, N);
+						(f.current = !0), m.showElement(n, N);
 						return;
 					}
-					p(!0), t && I.showElement(n, N);
+					p(!0), t && m.showElement(n, N);
 				}
 			}
 			function o() {
-				I.hide(), (f.current = !1), p(!1);
+				m.hide(), (f.current = !1), p(!1);
 			}
-		}, [t, N, r, I, a, s]);
+		}, [t, N, r, m, a, s]);
 	let v = o.useCallback(
 			(e) => {
-				I.hide(), (f.current = !1), p(!1), null == T || T(e);
+				m.hide(), (f.current = !1), p(!1), null == T || T(e);
 			},
-			[T, I]
+			[T, m]
 		),
 		O = o.useCallback(
 			(e) => {
 				let n = null == s ? void 0 : s.current;
-				e.currentTarget === e.target
-					? ((f.current = !0), I.showElement(null != n ? n : e.currentTarget, N))
-					: (p(!0), t && I.showElement(null != n ? n : e.currentTarget, N)),
-					null == g || g(e);
+				e.currentTarget === e.target ? ((f.current = !0), m.showElement(null != n ? n : e.currentTarget, N)) : (p(!0), t && m.showElement(null != n ? n : e.currentTarget, N)), null == g || g(e);
 			},
-			[s, t, g, I, N]
+			[s, t, g, m, N]
 		);
 	return n && null == a && null == r
-		? o.cloneElement(m, {
+		? o.cloneElement(I, {
 				...A,
 				className: _(A.className, f.current ? u : void 0, h ? c : void 0),
 				onBlur: v,
 				onFocus: O
 			})
-		: m;
+		: I;
 }

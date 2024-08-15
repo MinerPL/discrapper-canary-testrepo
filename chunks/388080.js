@@ -211,9 +211,7 @@ class O extends r.PureComponent {
 						(0, l.jsx)(c.Text, {
 							variant: 'text-xs/normal',
 							className: C.date,
-							children: E.Z.Messages.WHATS_NEW_DATE.format({
-								date: null != e.date && '' !== e.date ? i()(e.date).toDate() : new Date()
-							})
+							children: E.Z.Messages.WHATS_NEW_DATE.format({ date: null != e.date && '' !== e.date ? i()(e.date).toDate() : new Date() })
 						})
 					]
 				});

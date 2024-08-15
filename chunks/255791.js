@@ -14,25 +14,14 @@ let h = { MAX_MEMBER_COUNT: new Set() };
 class m extends (i = l.ZP.Store) {
 	initialize() {
 		var e;
-		this.waitFor(_.Z, u.Z, d.Z),
-			this.syncWith([_.Z, u.Z, d.Z], E.dG4),
-			o.K.remove(E.vID.MAX_MEMBER_COUNT_100),
-			o.K.remove(E.vID.MAX_MEMBER_COUNT_250),
-			(e = new Set(o.K.get(E.vID.MAX_MEMBER_COUNT))),
-			(h[E.vID.MAX_MEMBER_COUNT] = void 0 !== e ? e : new Set());
+		this.waitFor(_.Z, u.Z, d.Z), this.syncWith([_.Z, u.Z, d.Z], E.dG4), o.K.remove(E.vID.MAX_MEMBER_COUNT_100), o.K.remove(E.vID.MAX_MEMBER_COUNT_250), (e = new Set(o.K.get(E.vID.MAX_MEMBER_COUNT))), (h[E.vID.MAX_MEMBER_COUNT] = void 0 !== e ? e : new Set());
 	}
 	isVisible(e) {
 		var t;
 		if (null == e) return !1;
 		let n = null !== (t = d.Z.getMemberCount(e.id)) && void 0 !== t ? t : 0,
 			i = _.Z.can(E.Plq.ADMINISTRATOR, e);
-		return (
-			!e.hasFeature(E.oNc.CLAN) &&
-			!h[E.vID.MAX_MEMBER_COUNT].has(e.id) &&
-			i &&
-			e.maxMembers > 0 &&
-			e.maxMembers - n <= 10000
-		);
+		return !e.hasFeature(E.oNc.CLAN) && !h[E.vID.MAX_MEMBER_COUNT].has(e.id) && i && e.maxMembers > 0 && e.maxMembers - n <= 10000;
 	}
 }
 (r = 'MaxMemberCountChannelNoticeStore'),
@@ -47,7 +36,6 @@ class m extends (i = l.ZP.Store) {
 	(t.Z = new m(c.Z, {
 		MAX_MEMBER_COUNT_NOTICE_DISMISS: function (e) {
 			let t = e.guildId;
-			if (!h[E.vID.MAX_MEMBER_COUNT].has(t))
-				return h[E.vID.MAX_MEMBER_COUNT].add(t), o.K.set(E.vID.MAX_MEMBER_COUNT, h[E.vID.MAX_MEMBER_COUNT]), !0;
+			if (!h[E.vID.MAX_MEMBER_COUNT].has(t)) return h[E.vID.MAX_MEMBER_COUNT].add(t), o.K.set(E.vID.MAX_MEMBER_COUNT, h[E.vID.MAX_MEMBER_COUNT]), !0;
 		}
 	}));

@@ -19,8 +19,8 @@ var i = n(120356),
 	f = n(318374),
 	h = n(382182),
 	p = n(769654),
-	I = n(543882),
-	m = n(592125),
+	m = n(543882),
+	I = n(592125),
 	T = n(430824),
 	g = n(496675),
 	S = n(938475),
@@ -55,7 +55,7 @@ function k(e) {
 			analyticsLocations: Z
 		}),
 		W = (0, s.e7)([T.Z], () => T.Z.getGuild(null == i ? void 0 : i.guildId)),
-		K = (0, s.e7)([m.Z], () => m.Z.getChannel(null == i ? void 0 : i.channelId)),
+		K = (0, s.e7)([I.Z], () => I.Z.getChannel(null == i ? void 0 : i.channelId)),
 		z = (0, s.Wu)([S.ZP], () =>
 			null != K
 				? S.ZP.getVoiceStatesForChannel(K).map((e) => {
@@ -69,12 +69,12 @@ function k(e) {
 			url: X,
 			isLoading: $,
 			canSeePreview: J
-		} = (0, s.cj)([g.Z, I.Z], () => {
+		} = (0, s.cj)([g.Z, m.Z], () => {
 			let e = null != K && g.Z.canBasicChannel(M.S7T.CONNECT, K);
 			return e
 				? {
-						url: I.Z.getPreviewURL(i.guildId, i.channelId, i.ownerId),
-						isLoading: I.Z.getIsPreviewLoading(i.guildId, i.channelId, i.ownerId),
+						url: m.Z.getPreviewURL(i.guildId, i.channelId, i.ownerId),
+						isLoading: m.Z.getIsPreviewLoading(i.guildId, i.channelId, i.ownerId),
 						canSeePreview: e
 					}
 				: {
@@ -89,10 +89,7 @@ function k(e) {
 	let en = () => {
 			let e = a()(w.preview, H),
 				t = () => {
-					Y({ action: 'PRESS_STREAM_IMAGE' }),
-						l.default.selectVoiceChannel(i.channelId),
-						(0, u.iV)(i),
-						null == B || B();
+					Y({ action: 'PRESS_STREAM_IMAGE' }), l.default.selectVoiceChannel(i.channelId), (0, u.iV)(i), null == B || B();
 				};
 			return null == et && $
 				? (0, r.jsx)('div', {
@@ -154,10 +151,7 @@ function k(e) {
 											(0, r.jsx)(o.Clickable, {
 												className: a()(U.clickable, U.inline),
 												onClick: () => {
-													l.default.selectVoiceChannel(K.id),
-														(0, p.X)(W.id),
-														null == Y || Y({ action: 'OPEN_VOICE_CHANNEL' }),
-														null == B || B();
+													l.default.selectVoiceChannel(K.id), (0, p.X)(W.id), null == Y || Y({ action: 'OPEN_VOICE_CHANNEL' }), null == B || B();
 												},
 												children: K.name
 											})

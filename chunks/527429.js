@@ -21,10 +21,7 @@ function o(e, t, n) {
 		e
 	);
 }
-((i = r || (r = {})).ARROW_UP = 'ARROW_UP'),
-	(i.ARROW_DOWN = 'ARROW_DOWN'),
-	(i.ARROW_LEFT = 'ARROW_LEFT'),
-	(i.ARROW_RIGHT = 'ARROW_RIGHT');
+((i = r || (r = {})).ARROW_UP = 'ARROW_UP'), (i.ARROW_DOWN = 'ARROW_DOWN'), (i.ARROW_LEFT = 'ARROW_LEFT'), (i.ARROW_RIGHT = 'ARROW_RIGHT');
 class l extends a.Component {
 	componentDidMount() {
 		document.addEventListener('keydown', this.handleKeyDown, !0);

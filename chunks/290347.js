@@ -72,22 +72,7 @@ let N = [],
 		});
 	};
 function Z(e) {
-	let {
-			className: t,
-			renderModalProps: n,
-			heroArt: s,
-			heroArtClassName: A,
-			modalDismissibleContent: Z,
-			modalTopExtra: L,
-			header: O,
-			headerClassName: R,
-			subHeader: x,
-			subHeaderExtra: b,
-			featureCards: P,
-			changeLogId: M,
-			button: D,
-			body: y
-		} = e,
+	let { className: t, renderModalProps: n, heroArt: s, heroArtClassName: A, modalDismissibleContent: Z, modalTopExtra: L, header: O, headerClassName: R, subHeader: x, subHeaderExtra: b, featureCards: P, changeLogId: M, button: D, body: y } = e,
 		{ onClose: j, transitionState: U } = n,
 		G = (0, E.Dt)(),
 		k = P.length % 2 == 0,
@@ -210,10 +195,7 @@ function Z(e) {
 									src: s.src,
 									poster: s.poster,
 									onPlay: (e) => {
-										g.default.track(S.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: M }),
-											H(Date.now()),
-											K(!0),
-											Q(e.currentTarget.muted);
+										g.default.track(S.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: M }), H(Date.now()), K(!0), Q(e.currentTarget.muted);
 									},
 									onEnded: (e) => {
 										es(), Q(e.currentTarget.muted), K(!1);

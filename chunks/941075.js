@@ -8,8 +8,7 @@ e.exports = {
 	profileEffectPreviewsContainerInner: 'profileEffectPreviewsContainerInner_c5828f previewsContainerInner_c5828f',
 	categoryBanner: 'categoryBanner_c5828f',
 	collectiblePreviewsContainerNoChat: 'collectiblePreviewsContainerNoChat_c5828f collectiblePreviewsContainer_c5828f',
-	collectiblePreviewsContainerWithChat:
-		'collectiblePreviewsContainerWithChat_c5828f collectiblePreviewsContainer_c5828f',
+	collectiblePreviewsContainerWithChat: 'collectiblePreviewsContainerWithChat_c5828f collectiblePreviewsContainer_c5828f',
 	avatarPreviewContainer: 'avatarPreviewContainer_c5828f',
 	pfxPreviewContainer: 'pfxPreviewContainer_c5828f',
 	bundlePreviewContainer: 'bundlePreviewContainer_c5828f',

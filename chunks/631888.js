@@ -6,10 +6,7 @@ var r = n(470079),
 		function e(e, t) {
 			for (var n = 0; n < t.length; n++) {
 				var r = t[n];
-				(r.enumerable = r.enumerable || !1),
-					(r.configurable = !0),
-					'value' in r && (r.writable = !0),
-					Object.defineProperty(e, r.key, r);
+				(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 			}
 		}
 		return function (t, n, r) {
@@ -45,8 +42,7 @@ var r = n(470079),
 		}
 		return (
 			!(function (e, t) {
-				if ('function' != typeof t && null !== t)
-					throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+				if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
 				(e.prototype = Object.create(t && t.prototype, {
 					constructor: {
 						value: e,
@@ -114,8 +110,7 @@ var r = n(470079),
 										circle: {
 											width: '4px',
 											height: '4px',
-											boxShadow:
-												'0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3),\n            0 0 1px 2px rgba(0,0,0,.4)',
+											boxShadow: '0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3),\n            0 0 1px 2px rgba(0,0,0,.4)',
 											borderRadius: '50%',
 											cursor: 'hand',
 											transform: 'translate(-2px, -2px)'
@@ -142,11 +137,7 @@ var r = n(470079),
 								onTouchMove: this.handleChange,
 								onTouchStart: this.handleChange
 							},
-							r.createElement(
-								'style',
-								null,
-								'\n          .saturation-white {\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n          }\n          .saturation-black {\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\n          }\n        '
-							),
+							r.createElement('style', null, '\n          .saturation-white {\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n          }\n          .saturation-black {\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\n          }\n        '),
 							r.createElement(
 								'div',
 								{
@@ -157,13 +148,7 @@ var r = n(470079),
 									style: u.black,
 									className: 'saturation-black'
 								}),
-								r.createElement(
-									'div',
-									{ style: u.pointer },
-									this.props.pointer
-										? r.createElement(this.props.pointer, this.props)
-										: r.createElement('div', { style: u.circle })
-								)
+								r.createElement('div', { style: u.pointer }, this.props.pointer ? r.createElement(this.props.pointer, this.props) : r.createElement('div', { style: u.circle }))
 							)
 						);
 					}

@@ -12,6 +12,5 @@ var i = n(848246),
 	c = n(37113);
 function u() {
 	let { resolution: e, fps: t } = (0, a.cj)([s.Z], () => s.Z.getState());
-	if (!(!(0, l.So)(i.q.STREAM_HIGH_QUALITY) || (0, o.mc)(e, t)))
-		return ''.concat((0, c.o6)(e), ' ').concat((0, r.bp)(t));
+	if (!(!(0, l.So)(i.q.STREAM_HIGH_QUALITY) || (0, o.mc)(e, t))) return ''.concat((0, c.o6)(e), ' ').concat((0, r.bp)(t));
 }

@@ -48,9 +48,7 @@ class E {
 			this.getName(),
 			e,
 			(e) => {
-				(this._changeCallbacks.hasAny() || this._reactChangeCallbacks.hasAny() || this._syncWiths.length > 0) &&
-					(l.Z.markChanged(this),
-					l.Z.getIsPaused() && null != this._mustEmitChanges && this._mustEmitChanges(e) && l.Z.resume(!1));
+				(this._changeCallbacks.hasAny() || this._reactChangeCallbacks.hasAny() || this._syncWiths.length > 0) && (l.Z.markChanged(this), l.Z.getIsPaused() && null != this._mustEmitChanges && this._mustEmitChanges(e) && l.Z.resume(!1));
 			},
 			t,
 			this._dispatchToken
@@ -106,15 +104,7 @@ class E {
 	}
 	waitFor() {
 		for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-		let r = t.map((e, t) =>
-			(a()(
-				null != e,
-				'Store.waitFor(...) called with null Store at index '.concat(t, ' for store ').concat(this.getName())
-			),
-			null != e._dispatcher)
-				? (a()(e._dispatcher === this._dispatcher, 'Stores belong to two separate dispatchers.'), e.getDispatchToken())
-				: null
-		);
+		let r = t.map((e, t) => ((a()(null != e, 'Store.waitFor(...) called with null Store at index '.concat(t, ' for store ').concat(this.getName())), null != e._dispatcher) ? (a()(e._dispatcher === this._dispatcher, 'Stores belong to two separate dispatchers.'), e.getDispatchToken()) : null));
 		this._dispatcher.addDependencies(
 			this.getDispatchToken(),
 			r.filter((e) => null != e)
@@ -131,23 +121,7 @@ class E {
 		this._mustEmitChanges = e;
 	}
 	constructor(e, t, n) {
-		u(this, '_changeCallbacks', new o.Z()),
-			u(this, '_reactChangeCallbacks', new o.Z()),
-			u(this, '_syncWiths', []),
-			u(this, '_dispatchToken', void 0),
-			u(this, '_dispatcher', void 0),
-			u(this, '_mustEmitChanges', void 0),
-			u(this, '_isInitialized', !1),
-			u(this, '__getLocalVars', void 0),
-			u(this, 'addChangeListener', this._changeCallbacks.add),
-			u(this, 'addConditionalChangeListener', this._changeCallbacks.addConditional),
-			u(this, 'removeChangeListener', this._changeCallbacks.remove),
-			u(this, 'addReactChangeListener', this._reactChangeCallbacks.add),
-			u(this, 'removeReactChangeListener', this._reactChangeCallbacks.remove),
-			(this._dispatcher = e),
-			(this._dispatchToken = this._dispatcher.createToken()),
-			this.registerActionHandlers(null != t ? t : {}, n),
-			c.push(this);
+		u(this, '_changeCallbacks', new o.Z()), u(this, '_reactChangeCallbacks', new o.Z()), u(this, '_syncWiths', []), u(this, '_dispatchToken', void 0), u(this, '_dispatcher', void 0), u(this, '_mustEmitChanges', void 0), u(this, '_isInitialized', !1), u(this, '__getLocalVars', void 0), u(this, 'addChangeListener', this._changeCallbacks.add), u(this, 'addConditionalChangeListener', this._changeCallbacks.addConditional), u(this, 'removeChangeListener', this._changeCallbacks.remove), u(this, 'addReactChangeListener', this._reactChangeCallbacks.add), u(this, 'removeReactChangeListener', this._reactChangeCallbacks.remove), (this._dispatcher = e), (this._dispatchToken = this._dispatcher.createToken()), this.registerActionHandlers(null != t ? t : {}, n), c.push(this);
 		d && this.initializeIfNeeded();
 	}
 }

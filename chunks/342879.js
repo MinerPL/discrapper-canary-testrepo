@@ -13,8 +13,8 @@ var r = n(392711),
 	f = n(206583),
 	h = n(981631);
 let p = f.YN.GLOBAL_FEED,
-	I = new Map(),
-	m = new Set(),
+	m = new Map(),
+	I = new Set(),
 	T = new Map(),
 	g = null,
 	S = (0, r.debounce)(_.yK, 3000, { trailing: !0 });
@@ -29,11 +29,7 @@ function N() {
 	O(p);
 }
 function v(e) {
-	if (
-		m.has(e) ||
-		(e === f.YN.GAME_PROFILE_FEED && (!(0, s._J)('ContentInventoryManager') || void 0 !== E.Z.getFeed(e)))
-	)
-		return !1;
+	if (I.has(e) || (e === f.YN.GAME_PROFILE_FEED && (!(0, s._J)('ContentInventoryManager') || void 0 !== E.Z.getFeed(e)))) return !1;
 	if (e === p) {
 		if (!(0, d.sA)('ContentInventoryManager') || E.Z.hidden || !c.Z.isFocused() || !o.Z.isConnected()) return !1;
 		let e = u.Z.getIdleSince();
@@ -43,8 +39,8 @@ function v(e) {
 }
 function O(e) {
 	A(e, { loading: !1 });
-	let t = I.get(e);
-	void 0 !== t && (clearTimeout(t), I.delete(e));
+	let t = m.get(e);
+	void 0 !== t && (clearTimeout(t), m.delete(e));
 }
 function R() {
 	if ((O(p), !v(p))) return;
@@ -56,7 +52,7 @@ function R() {
 		loading: !1,
 		nextFetchDate: new Date(Date.now() + n)
 	}),
-		I.set(
+		m.set(
 			p,
 			setTimeout(() => C(p), n)
 		);
@@ -66,7 +62,7 @@ async function C(e) {
 	if (!!(v(e) || t))
 		try {
 			let t = E.Z.getFeed(e);
-			m.add(e), A(e, { loading: !0 });
+			I.add(e), A(e, { loading: !0 });
 			let n = await (0, _.mt)({
 				token: null == t ? void 0 : t.refresh_token,
 				feedId: e
@@ -77,7 +73,7 @@ async function C(e) {
 				feed: n
 			}),
 				T.set(e, 0),
-				m.delete(e),
+				I.delete(e),
 				A(e, { loading: !1 }),
 				e === p && ((g = null), R());
 		} catch (a) {
@@ -85,7 +81,7 @@ async function C(e) {
 			let r = null !== (n = T.get(e)) && void 0 !== n ? n : 0;
 			if (r < 3) {
 				let n = 1000 * Math.pow(5, r);
-				I.set(
+				m.set(
 					e,
 					setTimeout(() => C(e, { force: t }), n)
 				),
@@ -95,7 +91,7 @@ async function C(e) {
 					type: 'CONTENT_INVENTORY_CLEAR_FEED',
 					feedId: e
 				});
-			m.delete(e);
+			I.delete(e);
 		}
 }
 function y() {
@@ -108,14 +104,12 @@ function D(e) {
 function L(e) {
 	let { refreshAfterMs: t } = e,
 		n = E.Z.getFeed(p);
-	if ((null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null)
-		(g = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString()), R();
+	if ((null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null) (g = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString()), R();
 }
 function b(e) {
 	var t;
 	let { connectionId: n, track: r } = e;
-	if (null != n && !!(0, d.Dy)('ContentInventoryManager.handleSpotifyNewTrack'))
-		(null === (t = l.Z.getAccount(n, h.ABu.SPOTIFY)) || void 0 === t ? void 0 : t.showActivity) && S(n, r);
+	if (null != n && !!(0, d.Dy)('ContentInventoryManager.handleSpotifyNewTrack')) (null === (t = l.Z.getAccount(n, h.ABu.SPOTIFY)) || void 0 === t ? void 0 : t.showActivity) && S(n, r);
 }
 function M() {
 	C(f.YN.GAME_PROFILE_FEED);

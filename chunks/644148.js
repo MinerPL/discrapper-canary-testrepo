@@ -140,9 +140,7 @@ function I(e) {
 					.sort((e, t) => {
 						let a = u.Z.getChannel(u.Z.getDMFromUserId(null == e ? void 0 : e.id)),
 							n = u.Z.getChannel(u.Z.getDMFromUserId(null == t ? void 0 : t.id));
-						return f.default.compare(null == a ? void 0 : a.lastMessageId, null == n ? void 0 : n.lastMessageId) > 0
-							? -1
-							: 1;
+						return f.default.compare(null == a ? void 0 : a.lastMessageId, null == n ? void 0 : n.lastMessageId) > 0 ? -1 : 1;
 					}),
 				e,
 				a

@@ -44,34 +44,8 @@ var e = i(475637),
 			defaultMatchWidth: 'wide',
 			parsePatterns: {
 				narrow: [/0?1$/i, /0?2/i, /3/, /4/, /5/, /6/, /7/, /8/, /9/, /10/, /11/, /12/],
-				abbreviated: [
-					/^thg[ _]?0?1(?!\d)/i,
-					/^thg[ _]?0?2/i,
-					/^thg[ _]?0?3/i,
-					/^thg[ _]?0?4/i,
-					/^thg[ _]?0?5/i,
-					/^thg[ _]?0?6/i,
-					/^thg[ _]?0?7/i,
-					/^thg[ _]?0?8/i,
-					/^thg[ _]?0?9/i,
-					/^thg[ _]?10/i,
-					/^thg[ _]?11/i,
-					/^thg[ _]?12/i
-				],
-				wide: [
-					/^tháng ?(Một|0?1(?!\d))/i,
-					/^tháng ?(Hai|0?2)/i,
-					/^tháng ?(Ba|0?3)/i,
-					/^tháng ?(Tư|0?4)/i,
-					/^tháng ?(Năm|0?5)/i,
-					/^tháng ?(Sáu|0?6)/i,
-					/^tháng ?(Bảy|0?7)/i,
-					/^tháng ?(Tám|0?8)/i,
-					/^tháng ?(Chín|0?9)/i,
-					/^tháng ?(Mười|10)/i,
-					/^tháng ?(Mười ?Một|11)/i,
-					/^tháng ?(Mười ?Hai|12)/i
-				]
+				abbreviated: [/^thg[ _]?0?1(?!\d)/i, /^thg[ _]?0?2/i, /^thg[ _]?0?3/i, /^thg[ _]?0?4/i, /^thg[ _]?0?5/i, /^thg[ _]?0?6/i, /^thg[ _]?0?7/i, /^thg[ _]?0?8/i, /^thg[ _]?0?9/i, /^thg[ _]?10/i, /^thg[ _]?11/i, /^thg[ _]?12/i],
+				wide: [/^tháng ?(Một|0?1(?!\d))/i, /^tháng ?(Hai|0?2)/i, /^tháng ?(Ba|0?3)/i, /^tháng ?(Tư|0?4)/i, /^tháng ?(Năm|0?5)/i, /^tháng ?(Sáu|0?6)/i, /^tháng ?(Bảy|0?7)/i, /^tháng ?(Tám|0?8)/i, /^tháng ?(Chín|0?9)/i, /^tháng ?(Mười|10)/i, /^tháng ?(Mười ?Một|11)/i, /^tháng ?(Mười ?Hai|12)/i]
 			},
 			defaultParseWidth: 'wide'
 		}),

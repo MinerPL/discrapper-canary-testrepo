@@ -65,10 +65,6 @@ var i = n(99887),
 t.Z = function (e, t, n) {
 	var r,
 		o = a[e];
-	if (
-		((r = 'string' == typeof o ? o : 1 === t ? o.one : o.other.replace('{{count}}', (0, i.N4)(t))),
-		null != n && n.addSuffix)
-	)
-		return n.comparison && n.comparison > 0 ? r + 'मे ' : r + ' पहले';
+	if (((r = 'string' == typeof o ? o : 1 === t ? o.one : o.other.replace('{{count}}', (0, i.N4)(t))), null != n && n.addSuffix)) return n.comparison && n.comparison > 0 ? r + 'मे ' : r + ' पहले';
 	return r;
 };

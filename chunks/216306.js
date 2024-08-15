@@ -48,13 +48,7 @@ function d(e, _) {
 function g(e, _, E, T) {
 	T = T.toLowerCase();
 	let n = (0, L.g)(e),
-		t = s.useCallback(
-			(e, _) =>
-				!(n && e.channel.hasFlag(u.zZ.IS_GUILD_RESOURCE_CHANNEL)) &&
-				e.channel.type !== M.d4z.GUILD_DIRECTORY &&
-				(0 === _.length || I()(_, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(_)),
-			[n]
-		);
+		t = s.useCallback((e, _) => !(n && e.channel.hasFlag(u.zZ.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== M.d4z.GUILD_DIRECTORY && (0 === _.length || I()(_, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(_)), [n]);
 	return s.useMemo(() => {
 		let e = {
 			null: [],
@@ -65,9 +59,7 @@ function g(e, _, E, T) {
 				let { channel: s } = E;
 				'null' === s.id && (e.null = _.null.filter((e) => t(e, T))), (e[s.id] = _[s.id].filter((e) => t(e, T)));
 			}),
-			(e._categories = _._categories.filter(
-				(_) => 'null' === _.channel.id || 0 === T.length || e[_.channel.id].length > 0
-			)),
+			(e._categories = _._categories.filter((_) => 'null' === _.channel.id || 0 === T.length || e[_.channel.id].length > 0)),
 			(0, N.Z)(e._categories, e).forEach(d),
 			e
 		);
@@ -150,7 +142,5 @@ function H(e) {
 }
 function p(e) {
 	var _;
-	return C.Z.Messages.CHANNEL_BROWSER_ACTIVE_TEXT.format({
-		timeAgo: t()(i.default.extractTimestamp(null !== (_ = o.ZP.lastMessageId(e)) && void 0 !== _ ? _ : e)).fromNow()
-	});
+	return C.Z.Messages.CHANNEL_BROWSER_ACTIVE_TEXT.format({ timeAgo: t()(i.default.extractTimestamp(null !== (_ = o.ZP.lastMessageId(e)) && void 0 !== _ ? _ : e)).fromNow() });
 }

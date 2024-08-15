@@ -26,9 +26,7 @@ function d(e, t) {
 }
 function _(e, t, n) {
 	let { isVirtualized: o, keyboardDelegate: l, onAction: u, linkBehavior: d = 'action' } = e;
-	!e['aria-label'] &&
-		!e['aria-labelledby'] &&
-		console.warn('An aria-label or aria-labelledby prop is required for accessibility.');
+	!e['aria-label'] && !e['aria-labelledby'] && console.warn('An aria-label or aria-labelledby prop is required for accessibility.');
 	let { listProps: _ } = (0, s._t)({
 			selectionManager: t.selectionManager,
 			collection: t.collection,
@@ -52,7 +50,7 @@ function _(e, t, n) {
 		}),
 		h = (0, a.pu)(n, { isDisabled: 0 !== t.collection.size }),
 		p = (0, r.zL)(e, { labelable: !0 }),
-		I = (0, r.dG)(
+		m = (0, r.dG)(
 			p,
 			{
 				role: 'grid',
@@ -62,13 +60,13 @@ function _(e, t, n) {
 			0 === t.collection.size ? { tabIndex: h ? -1 : 0 } : _,
 			f
 		);
-	return o && ((I['aria-rowcount'] = t.collection.size), (I['aria-colcount'] = 1)), (0, i.B6)({}, t), { gridProps: I };
+	return o && ((m['aria-rowcount'] = t.collection.size), (m['aria-colcount'] = 1)), (0, i.B6)({}, t), { gridProps: m };
 }
 function E(e, t, n) {
 	let { node: i, isVirtualized: _, shouldSelectOnPressUp: E } = e,
 		{ direction: h } = (0, u.bU)(),
-		{ onAction: p, linkBehavior: I } = c.get(t),
-		m = (0, r.mp)(),
+		{ onAction: p, linkBehavior: m } = c.get(t),
+		I = (0, r.mp)(),
 		T = (0, l.useRef)(null),
 		{ itemProps: g, ...S } = (0, s.Cs)({
 			selectionManager: t.selectionManager,
@@ -78,10 +76,9 @@ function E(e, t, n) {
 			shouldSelectOnPressUp: E,
 			onAction: p ? () => p(i.key) : void 0,
 			focus: () => {
-				((null != T.current && i.key !== T.current) || !n.current.contains(document.activeElement)) &&
-					(0, a.ex)(n.current);
+				((null != T.current && i.key !== T.current) || !n.current.contains(document.activeElement)) && (0, a.ex)(n.current);
 			},
-			linkBehavior: I
+			linkBehavior: m
 		}),
 		A = S.hasAction ? (0, r.ib)(i.props) : {},
 		N = (0, r.dG)(g, A, {
@@ -92,13 +89,8 @@ function E(e, t, n) {
 				switch (((t.currentNode = document.activeElement), e.key)) {
 					case 'ArrowLeft': {
 						let i = 'rtl' === h ? t.nextNode() : t.previousNode();
-						if (i)
-							e.preventDefault(),
-								e.stopPropagation(),
-								(0, a.ex)(i),
-								(0, r.Gt)(i, { containingElement: (0, r.rP)(n.current) });
-						else if ((e.preventDefault(), e.stopPropagation(), 'rtl' === h))
-							(0, a.ex)(n.current), (0, r.Gt)(n.current, { containingElement: (0, r.rP)(n.current) });
+						if (i) e.preventDefault(), e.stopPropagation(), (0, a.ex)(i), (0, r.Gt)(i, { containingElement: (0, r.rP)(n.current) });
+						else if ((e.preventDefault(), e.stopPropagation(), 'rtl' === h)) (0, a.ex)(n.current), (0, r.Gt)(n.current, { containingElement: (0, r.rP)(n.current) });
 						else {
 							t.currentNode = n.current;
 							let e = f(t);
@@ -108,13 +100,8 @@ function E(e, t, n) {
 					}
 					case 'ArrowRight': {
 						let i = 'rtl' === h ? t.previousNode() : t.nextNode();
-						if (i)
-							e.preventDefault(),
-								e.stopPropagation(),
-								(0, a.ex)(i),
-								(0, r.Gt)(i, { containingElement: (0, r.rP)(n.current) });
-						else if ((e.preventDefault(), e.stopPropagation(), 'ltr' === h))
-							(0, a.ex)(n.current), (0, r.Gt)(n.current, { containingElement: (0, r.rP)(n.current) });
+						if (i) e.preventDefault(), e.stopPropagation(), (0, a.ex)(i), (0, r.Gt)(i, { containingElement: (0, r.rP)(n.current) });
+						else if ((e.preventDefault(), e.stopPropagation(), 'ltr' === h)) (0, a.ex)(n.current), (0, r.Gt)(n.current, { containingElement: (0, r.rP)(n.current) });
 						else {
 							t.currentNode = n.current;
 							let e = f(t);
@@ -124,11 +111,7 @@ function E(e, t, n) {
 					}
 					case 'ArrowUp':
 					case 'ArrowDown':
-						!e.altKey &&
-							n.current.contains(e.target) &&
-							(e.stopPropagation(),
-							e.preventDefault(),
-							n.current.parentElement.dispatchEvent(new KeyboardEvent(e.nativeEvent.type, e.nativeEvent)));
+						!e.altKey && n.current.contains(e.target) && (e.stopPropagation(), e.preventDefault(), n.current.parentElement.dispatchEvent(new KeyboardEvent(e.nativeEvent.type, e.nativeEvent)));
 				}
 			},
 			onFocus: (e) => {
@@ -140,7 +123,7 @@ function E(e, t, n) {
 			'aria-label': i.textValue || void 0,
 			'aria-selected': t.selectionManager.canSelectItem(i.key) ? t.selectionManager.isSelected(i.key) : void 0,
 			'aria-disabled': t.selectionManager.isDisabled(i.key) || void 0,
-			'aria-labelledby': m && i.textValue ? `${d(t, i.key)} ${m}` : void 0,
+			'aria-labelledby': I && i.textValue ? `${d(t, i.key)} ${I}` : void 0,
 			id: d(t, i.key)
 		});
 	return (
@@ -151,7 +134,7 @@ function E(e, t, n) {
 				role: 'gridcell',
 				'aria-colindex': 1
 			},
-			descriptionProps: { id: m },
+			descriptionProps: { id: I },
 			...S
 		}
 	);

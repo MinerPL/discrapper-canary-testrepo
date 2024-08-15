@@ -27,9 +27,7 @@ function c(e) {
 		}),
 		(this._readableState.needReadable = !0),
 		(this._readableState.sync = !1),
-		e &&
-			('function' == typeof e.transform && (this._transform = e.transform),
-			'function' == typeof e.flush && (this._flush = e.flush)),
+		e && ('function' == typeof e.transform && (this._transform = e.transform), 'function' == typeof e.flush && (this._flush = e.flush)),
 		this.on('prefinish', d);
 }
 function d() {
@@ -62,9 +60,7 @@ n(689118)(c, l),
 	}),
 	(c.prototype._read = function (e) {
 		var t = this._transformState;
-		null === t.writechunk || t.transforming
-			? (t.needTransform = !0)
-			: ((t.transforming = !0), this._transform(t.writechunk, t.writeencoding, t.afterTransform));
+		null === t.writechunk || t.transforming ? (t.needTransform = !0) : ((t.transforming = !0), this._transform(t.writechunk, t.writeencoding, t.afterTransform));
 	}),
 	(c.prototype._destroy = function (e, t) {
 		l.prototype._destroy.call(this, e, function (e) {

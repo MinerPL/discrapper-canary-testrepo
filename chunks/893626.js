@@ -61,25 +61,14 @@ function M(e) {
 									)))
 							)
 								return !1;
-							let u = ''
-								.concat(null !== (s = n.nick) && void 0 !== s ? s : '', ' ')
-								.concat(null == o ? void 0 : o.username);
+							let u = ''.concat(null !== (s = n.nick) && void 0 !== s ? s : '', ' ').concat(null == o ? void 0 : o.username);
 							return r()(e.toLowerCase(), u.toLowerCase());
 						})
 						.map((e) => {
 							var n, s, a;
 							return {
 								value: e.userId,
-								label:
-									null !==
-										(a =
-											null !== (s = e.nick) && void 0 !== s
-												? s
-												: null === (n = l[e.userId]) || void 0 === n
-													? void 0
-													: n.username) && void 0 !== a
-										? a
-										: ''
+								label: null !== (a = null !== (s = e.nick) && void 0 !== s ? s : null === (n = l[e.userId]) || void 0 === n ? void 0 : n.username) && void 0 !== a ? a : ''
 							};
 						})
 				);
@@ -127,20 +116,11 @@ function M(e) {
 		B = null !== (l = N.authorIds[0]) && void 0 !== l ? l : '',
 		j = (0, o.e7)([c.ZP], () => (null != S ? c.ZP.getMember(S, B) : null)),
 		Z = (0, o.e7)([m.default], () => (null != j ? m.default.getUser(j.userId) : null)),
-		k =
-			null !== (t = null !== (n = null == j ? void 0 : j.nick) && void 0 !== n ? n : null == Z ? void 0 : Z.username) &&
-			void 0 !== t
-				? t
-				: '',
+		k = null !== (t = null !== (n = null == j ? void 0 : j.nick) && void 0 !== n ? n : null == Z ? void 0 : Z.username) && void 0 !== t ? t : '',
 		D = (function (e) {
 			if (null == e.message || 0 === e.message.length) return null;
-			if (null == e.authorIds || 0 === e.authorIds.length)
-				return e.message.length < d.ZR
-					? h.Z.Messages.WELCOME_MESSAGE_VALIDATION_ERROR_AUTHOR_AND_MESSAGE.format({ minLength: d.ZR })
-					: h.Z.Messages.WELCOME_MESSAGE_VALIDATION_ERROR_AUTHOR;
-			return e.message.length < d.ZR
-				? h.Z.Messages.WELCOME_MESSAGE_VALIDATION_ERROR_MESSAGE.format({ minLength: d.ZR })
-				: null;
+			if (null == e.authorIds || 0 === e.authorIds.length) return e.message.length < d.ZR ? h.Z.Messages.WELCOME_MESSAGE_VALIDATION_ERROR_AUTHOR_AND_MESSAGE.format({ minLength: d.ZR }) : h.Z.Messages.WELCOME_MESSAGE_VALIDATION_ERROR_AUTHOR;
+			return e.message.length < d.ZR ? h.Z.Messages.WELCOME_MESSAGE_VALIDATION_ERROR_MESSAGE.format({ minLength: d.ZR }) : null;
 		})(N);
 	return (0, s.jsxs)(u.ModalRoot, {
 		transitionState: M,
@@ -159,10 +139,7 @@ function M(e) {
 							(0, s.jsxs)(u.Heading, {
 								variant: 'heading-md/semibold',
 								color: 'header-primary',
-								children: [
-									h.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_WELCOME_AUTHOR_TITLE,
-									(0, s.jsx)(I.Z, {})
-								]
+								children: [h.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_WELCOME_AUTHOR_TITLE, (0, s.jsx)(I.Z, {})]
 							}),
 							(0, s.jsx)(u.Text, {
 								variant: 'text-sm/normal',

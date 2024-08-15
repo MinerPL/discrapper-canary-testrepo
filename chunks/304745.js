@@ -19,8 +19,8 @@ var i = n(735250),
 	_ = n(526846),
 	f = n(938655),
 	E = n(403404),
-	g = n(906732),
-	C = n(424602),
+	C = n(906732),
+	g = n(424602),
 	I = n(243778),
 	x = n(579185),
 	T = n(301076),
@@ -45,9 +45,9 @@ function Z(e) {
 		),
 		k = (0, o.O)(),
 		U = (0, c.bp)() === N.IlC.POPOUT,
-		{ analyticsLocations: w } = (0, g.ZP)(),
+		{ analyticsLocations: w } = (0, C.ZP)(),
 		B = w.length > 0 ? w[w.length - 1] : 'open-activity-shelf';
-	C.m1.useExperiment({ location: B }, { autoTrackExposure: !0 });
+	g.m1.useExperiment({ location: B }, { autoTrackExposure: !0 });
 	let H = a.useCallback(() => {
 			(0, E.Z)({
 				channel: t,
@@ -100,12 +100,7 @@ function Z(e) {
 									isActivityActive: O || b,
 									className: S.controlButton,
 									onClick: () => {
-										H(),
-											(n === l.z.ACTIVITIES_MINI_SHELF_SPARKLES ||
-												n === l.z.ACTIVITY_GDM_ROCKET_SPARKLE ||
-												n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES ||
-												n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) &&
-												a(v.L.UNKNOWN);
+										H(), (n === l.z.ACTIVITIES_MINI_SHELF_SPARKLES || n === l.z.ACTIVITY_GDM_ROCKET_SPARKLE || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && a(v.L.UNKNOWN);
 									},
 									onMouseEnter: D,
 									onMouseLeave: L

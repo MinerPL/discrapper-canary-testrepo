@@ -12,16 +12,7 @@ var i = n(120356),
 	l = n(480855);
 function u(e) {
 	let t,
-		{
-			className: n,
-			src: i,
-			unicodeEmoji: u,
-			name: c,
-			size: d = 20,
-			enableTooltip: _ = !0,
-			enableHeight: E = !0,
-			onClick: f
-		} = e;
+		{ className: n, src: i, unicodeEmoji: u, name: c, size: d = 20, enableTooltip: _ = !0, enableHeight: E = !0, onClick: f } = e;
 	if (null == i && null == u) return null;
 	return (0, r.jsx)(s.TooltipContainer, {
 		text: c,

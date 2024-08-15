@@ -59,15 +59,7 @@ var s = n(735250),
 	ei = n(689938),
 	eo = n(53824);
 function ec(e) {
-	let {
-			products: t,
-			handleShopCardMount: n,
-			header: r,
-			category: a,
-			isPremiumUser: i,
-			isGiftEasterEggEnabled: o,
-			showMysteryCard: c = !1
-		} = e,
+	let { products: t, handleShopCardMount: n, header: r, category: a, isPremiumUser: i, isGiftEasterEggEnabled: o, showMysteryCard: c = !1 } = e,
 		l = (0, d.e7)([O.default], () => O.default.getCurrentUser());
 	return null == l || 0 === t.length
 		? null
@@ -152,17 +144,7 @@ function el(e) {
 	}
 }
 function ed(e) {
-	let {
-			category: t,
-			isPremiumUser: n,
-			initialItemCardRef: a,
-			isGiftEasterEggEnabled: o,
-			setIsGiftEasterEggEnabled: c,
-			showEasterEggToggle: l,
-			isFullScreen: d,
-			index: u,
-			includeBundles: f = !1
-		} = e,
+	let { category: t, isPremiumUser: n, initialItemCardRef: a, isGiftEasterEggEnabled: o, setIsGiftEasterEggEnabled: c, showEasterEggToggle: l, isFullScreen: d, index: u, includeBundles: f = !1 } = e,
 		p = r.useRef(10 + 70 * Math.random()),
 		[C, m] = r.useState(!1),
 		h = (0, et.M7)(t.skuId),
@@ -322,10 +304,7 @@ t.default = function (e) {
 										}),
 									eI &&
 										(0, s.jsxs)('div', {
-											className: i()(
-												eo.popularPicksContainer,
-												eS ? eo.defaultLightModeCustomGradient : eo.popularPicksGradient
-											),
+											className: i()(eo.popularPicksContainer, eS ? eo.defaultLightModeCustomGradient : eo.popularPicksGradient),
 											children: [
 												(0, s.jsx)(g.Text, {
 													className: eo.popularPicksHeader,

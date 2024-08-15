@@ -31,14 +31,7 @@ function o() {
 								...a.settings
 							}
 						: t;
-				e(
-					r,
-					i,
-					n(l),
-					(null !== (s = null == a ? void 0 : a.count) && void 0 !== s ? s : l.confettiCount) *
-						(null !== (o = null == a ? void 0 : a.countMultiplier) && void 0 !== o ? o : 1),
-					{ sprite: null == a ? void 0 : a.sprite }
-				);
+				e(r, i, n(l), (null !== (s = null == a ? void 0 : a.count) && void 0 !== s ? s : l.confettiCount) * (null !== (o = null == a ? void 0 : a.countMultiplier) && void 0 !== o ? o : 1), { sprite: null == a ? void 0 : a.sprite });
 			}
 		}),
 		[e, n, t]

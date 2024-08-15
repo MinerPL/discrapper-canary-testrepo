@@ -156,12 +156,7 @@ function O(e) {
 			(e, t, n) => {
 				var i, a;
 				r(e, t, n);
-				let s =
-					null === (a = J.current) || void 0 === a
-						? void 0
-						: null === (i = a.getScrollerState()) || void 0 === i
-							? void 0
-							: i.scrollTop;
+				let s = null === (a = J.current) || void 0 === a ? void 0 : null === (i = a.getScrollerState()) || void 0 === i ? void 0 : i.scrollTop;
 				null != s && m.B.setState({ searchScrollPosition: s });
 			},
 			[r]

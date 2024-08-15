@@ -21,8 +21,8 @@ var r,
 	f = n(237997),
 	h = n(768581),
 	p = n(176354),
-	I = n(506071),
-	m = n(149203);
+	m = n(506071),
+	I = n(149203);
 function T(e, t, n) {
 	return (
 		t in e
@@ -43,20 +43,11 @@ class g extends (r = a.PureComponent) {
 	}
 	getSrc() {
 		let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.props,
-			{
-				src: t,
-				emojiId: n,
-				emojiName: r,
-				animated: i,
-				shouldAnimate: a,
-				isFocused: s,
-				isInteracting: o,
-				size: l = 'default'
-			} = e,
+			{ src: t, emojiId: n, emojiName: r, animated: i, shouldAnimate: a, isFocused: s, isInteracting: o, size: l = 'default' } = e,
 			{ hover: u } = this.state;
 		if (null != t) return t;
 		if (null != n) {
-			let e = m.kV[l];
+			let e = I.kV[l];
 			return h.ZP.getEmojiURL({
 				id: n,
 				animated: s && !0 === i && (!0 === a || u || !0 === o),
@@ -68,19 +59,7 @@ class g extends (r = a.PureComponent) {
 	render() {
 		var e;
 		let t;
-		let {
-				emojiName: n,
-				animated: r,
-				className: s,
-				size: l = 'default',
-				alt: u,
-				shouldAnimate: c,
-				isFocused: d,
-				emojiId: _,
-				autoplay: E,
-				isInteracting: f,
-				...h
-			} = this.props,
+		let { emojiName: n, animated: r, className: s, size: l = 'default', alt: u, shouldAnimate: c, isFocused: d, emojiId: _, autoplay: E, isInteracting: f, ...h } = this.props,
 			p = this.getSrc();
 		return null == p || '' === p
 			? (0, i.jsx)('span', {
@@ -152,11 +131,7 @@ let S = (function (e) {
 					if (e.intersectionRatio >= 0.7) {
 						var a, s;
 						if (-1 !== t.indexOf(i)) return;
-						let n =
-							Math.abs(
-								e.intersectionRect.bottom - Number(null === (a = e.rootBounds) || void 0 === a ? void 0 : a.bottom)
-							) <
-							Math.abs(e.intersectionRect.top - Number(null === (s = e.rootBounds) || void 0 === s ? void 0 : s.top));
+						let n = Math.abs(e.intersectionRect.bottom - Number(null === (a = e.rootBounds) || void 0 === a ? void 0 : a.bottom)) < Math.abs(e.intersectionRect.top - Number(null === (s = e.rootBounds) || void 0 === s ? void 0 : s.top));
 						n ? t.unshift(i) : t.push(i), i.forceUpdate(), n && t.length > 100 && t[100].forceUpdate();
 					} else {
 						let e = t.indexOf(i);
@@ -177,8 +152,7 @@ let S = (function (e) {
 			let [n, r] = t;
 			return r === e;
 		});
-		if (-1 !== a)
-			n.splice(a, 1), -1 !== (a = t.indexOf(e)) && (t.splice(a, 1), a < 100 && t.length >= 100 && t[99].forceUpdate());
+		if (-1 !== a) n.splice(a, 1), -1 !== (a = t.indexOf(e)) && (t.splice(a, 1), a < 100 && t.length >= 100 && t[99].forceUpdate());
 	}
 	return class extends a.Component {
 		shouldAutoplay(e) {
@@ -215,7 +189,7 @@ function A(e) {
 			autoplay: null == e.autoplay ? t : e.autoplay,
 			allowAnimatedEmoji: t
 		},
-		r = __OVERLAY__ ? (0, c.e7)([f.Z], () => f.Z.isInstanceFocused()) : (0, I.n)();
+		r = __OVERLAY__ ? (0, c.e7)([f.Z], () => f.Z.isInstanceFocused()) : (0, m.n)();
 	return (0, i.jsx)(S, {
 		...e,
 		...n,

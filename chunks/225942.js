@@ -26,11 +26,7 @@ var o = r(534282),
 			(c.shouldComponentUpdate = function (t) {
 				var e = this.props.editorState,
 					r = t.editorState;
-				if (
-					e.getDirectionMap() !== r.getDirectionMap() ||
-					e.getSelection().getHasFocus() !== r.getSelection().getHasFocus()
-				)
-					return !0;
+				if (e.getDirectionMap() !== r.getDirectionMap() || e.getSelection().getHasFocus() !== r.getSelection().getHasFocus()) return !0;
 				var n = r.getNativelyRenderedContent(),
 					i = e.isInCompositionMode(),
 					o = r.isInCompositionMode();
@@ -42,27 +38,7 @@ var o = r(534282),
 				return i !== o || a !== u || s !== c || r.mustForceSelection();
 			}),
 			(c.render = function () {
-				for (
-					var t = this.props,
-						e = t.blockRenderMap,
-						r = t.blockRendererFn,
-						n = t.blockStyleFn,
-						c = t.customStyleMap,
-						l = t.customStyleFn,
-						f = t.editorState,
-						p = t.editorKey,
-						h = t.textDirectionality,
-						d = f.getCurrentContent(),
-						g = f.getSelection(),
-						y = f.mustForceSelection(),
-						v = f.getDecorator(),
-						m = s(f.getDirectionMap()),
-						_ = d.getBlocksAsArray()[0],
-						b = [],
-						S = _;
-					S;
-
-				) {
+				for (var t = this.props, e = t.blockRenderMap, r = t.blockRendererFn, n = t.blockStyleFn, c = t.customStyleMap, l = t.customStyleFn, f = t.editorState, p = t.editorKey, h = t.textDirectionality, d = f.getCurrentContent(), g = f.getSelection(), y = f.mustForceSelection(), v = f.getDecorator(), m = s(f.getDirectionMap()), _ = d.getBlocksAsArray()[0], b = [], S = _; S; ) {
 					var w = S.getKey(),
 						k = {
 							blockRenderMap: e,

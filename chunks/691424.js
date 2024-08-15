@@ -18,8 +18,8 @@ var r = n(735250),
 	f = n(359875),
 	h = n(124072),
 	p = n(695503),
-	I = n(628692),
-	m = n(590956),
+	m = n(628692),
+	I = n(590956),
 	T = n(703656),
 	g = n(430824),
 	S = n(572004),
@@ -66,10 +66,7 @@ let x = {
 				'div',
 				{
 					className: P.blockquoteContainer,
-					children: [
-						(0, r.jsx)('div', { className: P.blockquoteDivider }),
-						(0, r.jsx)('blockquote', { children: t(e.content, n) })
-					]
+					children: [(0, r.jsx)('div', { className: P.blockquoteDivider }), (0, r.jsx)('blockquote', { children: t(e.content, n) })]
 				},
 				n.key
 			)
@@ -141,12 +138,7 @@ let x = {
 			);
 		}
 	},
-	text: {
-		react: (e, t, n) =>
-			'string' == typeof e.content
-				? (0, r.jsx)('span', { children: e.content }, n.key)
-				: (0, r.jsx)('span', { children: t(e.content, n) }, n.key)
-	},
+	text: { react: (e, t, n) => ('string' == typeof e.content ? (0, r.jsx)('span', { children: e.content }, n.key) : (0, r.jsx)('span', { children: t(e.content, n) }, n.key)) },
 	spoiler: {
 		react: (e, t, n) =>
 			(0, r.jsx)(
@@ -162,7 +154,7 @@ let x = {
 	},
 	soundboard: {
 		react: (e) =>
-			(0, r.jsx)(I.Z, {
+			(0, r.jsx)(m.Z, {
 				channelId: e.channelId,
 				soundId: e.soundId,
 				jumbo: e.jumboable
@@ -299,7 +291,7 @@ function G(e) {
 					let { key: s } = a;
 					return e.src
 						? (0, r.jsx)(
-								m.c,
+								I.c,
 								{
 									node: e,
 									tooltipPosition: t,
@@ -325,7 +317,7 @@ function G(e) {
 						};
 					}
 					return (0, r.jsx)(
-						m.Y,
+						I.Y,
 						{
 							isInteracting: l,
 							node: e,

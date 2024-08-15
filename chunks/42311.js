@@ -11,15 +11,7 @@ var a = n(120356),
 	r = n(626786),
 	o = n(55043);
 function c(e) {
-	let {
-		className: t,
-		roleColor: n,
-		roleName: a,
-		hasRemoveIcon: c = !1,
-		onClick: u,
-		disabled: d = !1,
-		verified: h = !1
-	} = e;
+	let { className: t, roleColor: n, roleName: a, hasRemoveIcon: c = !1, onClick: u, disabled: d = !1, verified: h = !1 } = e;
 	return (0, i.jsx)(l.Button, {
 		className: s()(t, o.button),
 		look: l.Button.Looks.BLANK,

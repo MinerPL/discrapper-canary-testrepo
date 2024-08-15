@@ -102,15 +102,7 @@ function _(e) {
 	});
 }
 function S(e) {
-	let {
-			tag: t,
-			availableTags: s,
-			canManageChannels: l,
-			onTagClick: a,
-			onDragComplete: r,
-			onDragStart: o,
-			onDragReset: d
-		} = e,
+	let { tag: t, availableTags: s, canManageChannels: l, onTagClick: a, onDragComplete: r, onDragStart: o, onDragReset: d } = e,
 		c = s.findIndex((e) => e.id === t.id),
 		{
 			drag: h,

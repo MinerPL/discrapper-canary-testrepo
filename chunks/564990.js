@@ -79,10 +79,7 @@ let u = async (e) => {
 				null == n || n();
 		} catch (t) {
 			var a, s;
-			let e =
-				null !== (s = null == t ? void 0 : null === (a = t.body) || void 0 === a ? void 0 : a.message) && void 0 !== s
-					? s
-					: l.Z.Messages.USER_ACTIVITY_DELETE_HISTORY_ERROR;
+			let e = null !== (s = null == t ? void 0 : null === (a = t.body) || void 0 === a ? void 0 : a.message) && void 0 !== s ? s : l.Z.Messages.USER_ACTIVITY_DELETE_HISTORY_ERROR;
 			i.Z.dispatch({
 				type: 'CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE',
 				error: e

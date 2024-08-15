@@ -18,8 +18,8 @@ var r = n(735250),
 	f = n(677281),
 	h = n(709054),
 	p = n(765104),
-	I = n(477291),
-	m = n(478758),
+	m = n(477291),
+	I = n(478758),
 	T = n(789707),
 	g = n(981631),
 	S = n(531578),
@@ -31,7 +31,7 @@ function N(e) {
 		D = (0, a.e7)([p.Z], () => p.Z.summaryFeedback(t)),
 		L = (e, n) => {
 			e.stopPropagation(),
-				(0, I.Z)({
+				(0, m.Z)({
 					summary: t,
 					channel: _,
 					rating: n
@@ -97,7 +97,7 @@ function N(e) {
 										'aria-hidden': 'true',
 										className: A.dot
 									}),
-									(0, r.jsx)(m.Z, {
+									(0, r.jsx)(I.Z, {
 										partySize: {
 											knownSize: T.length,
 											totalSize: T.length

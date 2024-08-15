@@ -19,13 +19,7 @@ var i = n(470079),
 class S extends i.Component {
 	componentDidUpdate(e) {
 		if (this.props.locked) return null;
-		let {
-			selectedGuild: t,
-			selectedChannel: n,
-			isMemberPending: i,
-			hasPreviewEnabled: s,
-			postableChannelCount: a
-		} = this.props;
+		let { selectedGuild: t, selectedChannel: n, isMemberPending: i, hasPreviewEnabled: s, postableChannelCount: a } = this.props;
 		if (
 			(null != t &&
 				(t !== e.selectedGuild || (i && !e.isMemberPending)) &&
@@ -67,12 +61,7 @@ t.Z = a.ZP.connectStores([g.Z, _.Z, p.Z, m.default, E.Z, u.ZP, f.Z, h.ZP], () =>
 						return f.Z.can(s.$e(I.Plq.SEND_MESSAGES, I.Plq.VIEW_CHANNEL), t);
 					}).length
 				: 0,
-		d =
-			null != r &&
-			null != i &&
-			null !== (n = null === (e = h.ZP.getMember(i, r.id)) || void 0 === e ? void 0 : e.isPending) &&
-			void 0 !== n &&
-			n;
+		d = null != r && null != i && null !== (n = null === (e = h.ZP.getMember(i, r.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== n && n;
 	return {
 		selectedGuild: i,
 		selectedChannel: a,

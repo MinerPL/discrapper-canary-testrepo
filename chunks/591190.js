@@ -22,22 +22,6 @@ t.Z = (e) => {
 	let { withBannerPadding: t } = e;
 	return (0, i.jsxs)('div', {
 		className: s()(r.container, { [r.bannerPadding]: t }),
-		children: [
-			(0, i.jsx)(o, {}),
-			(0, i.jsx)(c, { width: 100 }),
-			(0, i.jsx)(c, { width: 74 }),
-			(0, i.jsx)(c, { width: 100 }),
-			(0, i.jsx)(c, { width: 70 }),
-			(0, i.jsx)(c, { width: 112 }),
-			(0, i.jsx)(c, { width: 175 }),
-			(0, i.jsx)(l, {}),
-			(0, i.jsx)(o, {}),
-			(0, i.jsx)(c, { width: 100 }),
-			(0, i.jsx)(c, { width: 74 }),
-			(0, i.jsx)(c, { width: 100 }),
-			(0, i.jsx)(c, { width: 70 }),
-			(0, i.jsx)(c, { width: 112 }),
-			(0, i.jsx)(c, { width: 56 })
-		]
+		children: [(0, i.jsx)(o, {}), (0, i.jsx)(c, { width: 100 }), (0, i.jsx)(c, { width: 74 }), (0, i.jsx)(c, { width: 100 }), (0, i.jsx)(c, { width: 70 }), (0, i.jsx)(c, { width: 112 }), (0, i.jsx)(c, { width: 175 }), (0, i.jsx)(l, {}), (0, i.jsx)(o, {}), (0, i.jsx)(c, { width: 100 }), (0, i.jsx)(c, { width: 74 }), (0, i.jsx)(c, { width: 100 }), (0, i.jsx)(c, { width: 70 }), (0, i.jsx)(c, { width: 112 }), (0, i.jsx)(c, { width: 56 })]
 	});
 };

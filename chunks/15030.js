@@ -28,9 +28,7 @@ function h() {
 	a.useEffect(() => {
 		null != t && (0, _.sO)(t) && (0, c.EW)(r.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE);
 	}, [t]);
-	let x =
-		(null == t ? void 0 : t.hasFeature(m.oNc.CREATOR_MONETIZABLE)) === !1 &&
-		(null == t ? void 0 : t.hasFeature(m.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
+	let x = (null == t ? void 0 : t.hasFeature(m.oNc.CREATOR_MONETIZABLE)) === !1 && (null == t ? void 0 : t.hasFeature(m.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
 	return (
 		(e =
 			null == t || h

@@ -16,8 +16,7 @@ var r = n(606956),
 		}
 	},
 	l = function (e, t) {
-		for (var n = t && t.plainObjects ? Object.create(null) : {}, r = 0; r < e.length; ++r)
-			void 0 !== e[r] && (n[r] = e[r]);
+		for (var n = t && t.plainObjects ? Object.create(null) : {}, r = 0; r < e.length; ++r) void 0 !== e[r] && (n[r] = e[r]);
 		return n;
 	};
 e.exports = {
@@ -70,25 +69,13 @@ e.exports = {
 	encode: function (e, t, n, i, a) {
 		if (0 === e.length) return e;
 		var o = e;
-		if (
-			('symbol' == typeof e ? (o = Symbol.prototype.toString.call(e)) : 'string' != typeof e && (o = String(e)),
-			'iso-8859-1' === n)
-		)
+		if (('symbol' == typeof e ? (o = Symbol.prototype.toString.call(e)) : 'string' != typeof e && (o = String(e)), 'iso-8859-1' === n))
 			return escape(o).replace(/%u[0-9a-f]{4}/gi, function (e) {
 				return '%26%23' + parseInt(e.slice(2), 16) + '%3B';
 			});
 		for (var l = '', u = 0; u < o.length; ++u) {
 			var c = o.charCodeAt(u);
-			if (
-				45 === c ||
-				46 === c ||
-				95 === c ||
-				126 === c ||
-				(c >= 48 && c <= 57) ||
-				(c >= 65 && c <= 90) ||
-				(c >= 97 && c <= 122) ||
-				(a === r.RFC1738 && (40 === c || 41 === c))
-			) {
+			if (45 === c || 46 === c || 95 === c || 126 === c || (c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122) || (a === r.RFC1738 && (40 === c || 41 === c))) {
 				l += o.charAt(u);
 				continue;
 			}
@@ -104,12 +91,7 @@ e.exports = {
 				l += s[224 | (c >> 12)] + s[128 | ((c >> 6) & 63)] + s[128 | (63 & c)];
 				continue;
 			}
-			(u += 1),
-				(l +=
-					s[240 | ((c = 65536 + (((1023 & c) << 10) | (1023 & o.charCodeAt(u)))) >> 18)] +
-					s[128 | ((c >> 12) & 63)] +
-					s[128 | ((c >> 6) & 63)] +
-					s[128 | (63 & c)]);
+			(u += 1), (l += s[240 | ((c = 65536 + (((1023 & c) << 10) | (1023 & o.charCodeAt(u)))) >> 18)] + s[128 | ((c >> 12) & 63)] + s[128 | ((c >> 6) & 63)] + s[128 | (63 & c)]);
 		}
 		return l;
 	},

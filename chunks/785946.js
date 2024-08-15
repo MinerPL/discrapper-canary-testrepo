@@ -25,9 +25,7 @@ function h(e) {
 }
 function d(e, t) {
 	var n, r;
-	return ((n = e), (r = t), 0 === n.toLowerCase().indexOf(r.toLowerCase()) && -1 !== '/?#'.indexOf(n.charAt(r.length)))
-		? e.substr(t.length)
-		: e;
+	return ((n = e), (r = t), 0 === n.toLowerCase().indexOf(r.toLowerCase()) && -1 !== '/?#'.indexOf(n.charAt(r.length))) ? e.substr(t.length) : e;
 }
 function f(e) {
 	return '/' === e.charAt(e.length - 1) ? e.slice(0, -1) : e;
@@ -53,38 +51,17 @@ function p(e) {
 		n = e.search,
 		r = e.hash,
 		o = t || '/';
-	return (
-		n && '?' !== n && (o += '?' === n.charAt(0) ? n : '?' + n),
-		r && '#' !== r && (o += '#' === r.charAt(0) ? r : '#' + r),
-		o
-	);
+	return n && '?' !== n && (o += '?' === n.charAt(0) ? n : '?' + n), r && '#' !== r && (o += '#' === r.charAt(0) ? r : '#' + r), o;
 }
 function y(e, t, n, r) {
 	var o;
-	'string' == typeof e
-		? ((o = l(e)).state = t)
-		: (void 0 === (o = s({}, e)).pathname && (o.pathname = ''),
-			o.search ? '?' !== o.search.charAt(0) && (o.search = '?' + o.search) : (o.search = ''),
-			o.hash ? '#' !== o.hash.charAt(0) && (o.hash = '#' + o.hash) : (o.hash = ''),
-			void 0 !== t && void 0 === o.state && (o.state = t));
+	'string' == typeof e ? ((o = l(e)).state = t) : (void 0 === (o = s({}, e)).pathname && (o.pathname = ''), o.search ? '?' !== o.search.charAt(0) && (o.search = '?' + o.search) : (o.search = ''), o.hash ? '#' !== o.hash.charAt(0) && (o.hash = '#' + o.hash) : (o.hash = ''), void 0 !== t && void 0 === o.state && (o.state = t));
 	try {
 		o.pathname = decodeURI(o.pathname);
 	} catch (e) {
-		throw e instanceof URIError
-			? URIError(
-					'Pathname "' + o.pathname + '" could not be decoded. This is likely caused by an invalid percent-encoding.'
-				)
-			: e;
+		throw e instanceof URIError ? URIError('Pathname "' + o.pathname + '" could not be decoded. This is likely caused by an invalid percent-encoding.') : e;
 	}
-	return (
-		n && (o.key = n),
-		r
-			? o.pathname
-				? '/' !== o.pathname.charAt(0) && (o.pathname = i(o.pathname, r.pathname))
-				: (o.pathname = r.pathname)
-			: o.pathname || (o.pathname = '/'),
-		o
-	);
+	return n && (o.key = n), r ? (o.pathname ? '/' !== o.pathname.charAt(0) && (o.pathname = i(o.pathname, r.pathname)) : (o.pathname = r.pathname)) : o.pathname || (o.pathname = '/'), o;
 }
 function w() {
 	var e = null,
@@ -178,13 +155,7 @@ t.createBrowserHistory = function (e) {
 	void 0 === e && (e = {}), m || c(!1);
 	var t,
 		n = window.history,
-		r =
-			((-1 === (t = window.navigator.userAgent).indexOf('Android 2.') && -1 === t.indexOf('Android 4.0')) ||
-				-1 === t.indexOf('Mobile Safari') ||
-				-1 !== t.indexOf('Chrome') ||
-				-1 !== t.indexOf('Windows Phone')) &&
-			window.history &&
-			'pushState' in window.history,
+		r = ((-1 === (t = window.navigator.userAgent).indexOf('Android 2.') && -1 === t.indexOf('Android 4.0')) || -1 === t.indexOf('Mobile Safari') || -1 !== t.indexOf('Chrome') || -1 !== t.indexOf('Windows Phone')) && window.history && 'pushState' in window.history,
 		o = -1 !== window.navigator.userAgent.indexOf('Trident'),
 		i = e,
 		a = i.forceRefresh,
@@ -226,11 +197,7 @@ t.createBrowserHistory = function (e) {
 								action: 'POP',
 								location: e
 							})
-						: ((n = e),
-							(r = N.location),
-							-1 === (o = S.indexOf(r.key)) && (o = 0),
-							-1 === (i = S.indexOf(n.key)) && (i = 0),
-							(a = o - i) && ((_ = !0), B(a)));
+						: ((n = e), (r = N.location), -1 === (o = S.indexOf(r.key)) && (o = 0), -1 === (i = S.indexOf(n.key)) && (i = 0), (a = o - i) && ((_ = !0), B(a)));
 				});
 	}
 	var L = O(b()),
@@ -243,9 +210,7 @@ t.createBrowserHistory = function (e) {
 	}
 	var H = 0;
 	function z(e) {
-		1 === (H += e) && 1 === e
-			? (window.addEventListener(v, I), o && window.addEventListener(x, M))
-			: 0 === H && (window.removeEventListener(v, I), o && window.removeEventListener(x, M));
+		1 === (H += e) && 1 === e ? (window.addEventListener(v, I), o && window.addEventListener(x, M)) : 0 === H && (window.removeEventListener(v, I), o && window.removeEventListener(x, M));
 	}
 	var F = !1,
 		N = {

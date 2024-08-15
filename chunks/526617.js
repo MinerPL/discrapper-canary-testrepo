@@ -21,8 +21,8 @@ var r = n(735250),
 	f = n(313201),
 	h = n(880949),
 	p = n(806966),
-	I = n(28546),
-	m = n(468954),
+	m = n(28546),
+	I = n(468954),
 	T = n(53691),
 	g = n(75145),
 	S = n(631771),
@@ -150,22 +150,8 @@ function X() {
 	return (0, r.jsx)(c.Z, { message: j.Z.Messages.SOUNDBOARD_SEARCH_EMPTY_STATE_BODY });
 }
 function $(e) {
-	let {
-			descriptors: t,
-			soundButtonProps: n,
-			rowIndex: a,
-			isLastRow: o,
-			isUsingKeyboardNavigation: l,
-			suppressPlaySound: u,
-			gridRowProps: c,
-			getItemProps: d,
-			onSelectItem: _,
-			onItemMouseEnter: E,
-			buttonOverlay: f,
-			isNitroLocked: h,
-			shouldShowUpsell: I
-		} = e,
-		m = p.Wq.useStore((e) => e.inspectedExpressionPosition);
+	let { descriptors: t, soundButtonProps: n, rowIndex: a, isLastRow: o, isUsingKeyboardNavigation: l, suppressPlaySound: u, gridRowProps: c, getItemProps: d, onSelectItem: _, onItemMouseEnter: E, buttonOverlay: f, isNitroLocked: h, shouldShowUpsell: m } = e,
+		I = p.Wq.useStore((e) => e.inspectedExpressionPosition);
 	return (0, r.jsx)('ul', {
 		...c,
 		className: s()(W.soundRow, {
@@ -174,7 +160,7 @@ function $(e) {
 		}),
 		children: t.map((e, t) => {
 			let r = 'item-'.concat(t),
-				s = l && m.rowIndex === a && m.columnIndex === t;
+				s = l && I.rowIndex === a && I.columnIndex === t;
 			switch (e.item.type) {
 				case b.vB.SOUND:
 					return (0, i.createElement)(G.ZP, {
@@ -189,7 +175,7 @@ function $(e) {
 						enableSecondaryActions: !0,
 						buttonOverlay: f,
 						inNitroLockedSection: h,
-						showLockForDisabledSound: I
+						showLockForDisabledSound: m
 					});
 				case b.vB.ADD_SOUND:
 					return (0, i.createElement)(k.Z, {
@@ -203,20 +189,7 @@ function $(e) {
 	});
 }
 function J(e) {
-	let {
-			guildId: t,
-			channel: a,
-			containerWidth: s,
-			onClose: c,
-			onSelect: h,
-			suppressPlaySound: g = !1,
-			shouldShowUpsell: R = !0,
-			gridNotice: G,
-			soundButtonOverlay: k,
-			listPadding: J,
-			renderHeader: ee,
-			defaultSoundsOnly: et = !1
-		} = e,
+	let { guildId: t, channel: a, containerWidth: s, onClose: c, onSelect: h, suppressPlaySound: g = !1, shouldShowUpsell: R = !0, gridNotice: G, soundButtonOverlay: k, listPadding: J, renderHeader: ee, defaultSoundsOnly: et = !1 } = e,
 		{ currentPreviewRef: en } = i.useContext(D.Z),
 		{ analyticsLocations: er } = (0, E.ZP)(),
 		{ analyticsLocations: ei } = (0, E.ZP)(_.Z.PREMIUM_UPSELL),
@@ -236,20 +209,16 @@ function J(e) {
 			return O.Z.getVoiceState(t, null !== (e = null == eu ? void 0 : eu.id) && void 0 !== e ? e : Z.lds);
 		}),
 		e_ = (null == ed ? void 0 : ed.selfDeaf) || (null == ed ? void 0 : ed.mute) || (null == ed ? void 0 : ed.suppress),
-		eE = (0, I.Iu)((e) => e.searchQuery),
+		eE = (0, m.Iu)((e) => e.searchQuery),
 		ef = null != eE && '' !== eE,
 		eh = (0, f.Dt)(),
 		{ categories: ep } = (0, x.ZP)(a, void 0, et),
-		[eI, em] = i.useState([]),
+		[em, eI] = i.useState([]),
 		[eT, eg] = i.useState(!1),
-		eS = (0, x.FS)(ep, eI, eE).filter((e) => e.items.length > 0),
+		eS = (0, x.FS)(ep, em, eE).filter((e) => e.items.length > 0),
 		eA = eS.some((e) => !!(0, y._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
 		eN = !ec && R && eA,
-		{
-			enableInlineUpsell: ev,
-			enableRoadblock: eO,
-			enableRoadblockWithSocialProof: eR
-		} = S.Qs.useExperiment({ location: 'Soundboard Picker' }, { autoTrackExposure: eN }),
+		{ enableInlineUpsell: ev, enableRoadblock: eO, enableRoadblockWithSocialProof: eR } = S.Qs.useExperiment({ location: 'Soundboard Picker' }, { autoTrackExposure: eN }),
 		eC = eN && ev,
 		ey = N.T4.useSetting(),
 		eD = i.useMemo(() => new Set(ey), [ey]),
@@ -369,7 +338,7 @@ function J(e) {
 			},
 			[eS, eC]
 		),
-		eV = i.useCallback((e) => em((0, w.ZP)(e, ep, eu, a, er)), [a, eu, ep, er]),
+		eV = i.useCallback((e) => eI((0, w.ZP)(e, ep, eu, a, er)), [a, eu, ep, er]),
 		eH = i.useCallback((e) => {
 			(0, u.jW)(e, async () => {
 				let { default: e } = await n.e('56049').then(n.bind(n, 338991));
@@ -442,11 +411,7 @@ function J(e) {
 			var e;
 			let t = L.Z.getSoundById('3'),
 				n = new Audio((0, P.Z)('3'));
-			null != en.current && en.current.pause(),
-				(en.current = n),
-				(n.currentTime = 0),
-				(n.volume = (0, U.Z)(null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 1)),
-				n.play();
+			null != en.current && en.current.pause(), (en.current = n), (n.currentTime = 0), (n.volume = (0, U.Z)(null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 1)), n.play();
 		}, [en]);
 	return (0, r.jsxs)(r.Fragment, {
 		children: [
@@ -483,14 +448,14 @@ function J(e) {
 							channel: a
 						})
 				: void 0,
-			(0, r.jsx)(m.Z, {
+			(0, r.jsx)(I.Z, {
 				categories: eS,
 				collapsedCategories: eD,
 				containerWidth: s,
 				store: p.Wq,
 				onSelectItem: eU,
 				onSearchExpressions: eV,
-				hasSearchResults: eI.length > 0,
+				hasSearchResults: em.length > 0,
 				defaultSearchPlaceholder: j.Z.Messages.SOUNDBOARD_SEARCH_PLACEHOLDER,
 				renderRow: ew,
 				renderSectionHeader: eB,

@@ -244,12 +244,7 @@ class v extends n.PureComponent {
 						]
 					}),
 					(0, s.jsxs)(i.ModalContent, {
-						children: [
-							this.renderCustomStatusInput(),
-							this.renderClearAfter(),
-							(0, s.jsx)(i.FormDivider, { className: M.formDivider }),
-							this.renderStatusInput()
-						]
+						children: [this.renderCustomStatusInput(), this.renderClearAfter(), (0, s.jsx)(i.FormDivider, { className: M.formDivider }), this.renderStatusInput()]
 					}),
 					(0, s.jsxs)(i.ModalFooter, {
 						children: [
@@ -273,8 +268,7 @@ class v extends n.PureComponent {
 		super(...e),
 			b(this, 'state', {
 				emojiInfo: null != this.props.customStatus ? this.props.customStatus.emoji : null,
-				text:
-					null != this.props.customStatus && null != this.props.customStatus.state ? this.props.customStatus.state : '',
+				text: null != this.props.customStatus && null != this.props.customStatus.state ? this.props.customStatus.state : '',
 				clearAfter: (function () {
 					var e, t, a;
 					let s = h.Ok.getSetting();
@@ -283,12 +277,7 @@ class v extends n.PureComponent {
 					if (isNaN(n)) return f.F.TODAY;
 					let l = new Date(),
 						o = new Date(n);
-					if (
-						((t = l),
-						(a = o),
-						t.getFullYear() !== a.getFullYear() || t.getMonth() !== a.getMonth() || t.getDate() !== a.getDate())
-					)
-						return f.F.TODAY;
+					if (((t = l), (a = o), t.getFullYear() !== a.getFullYear() || t.getMonth() !== a.getMonth() || t.getDate() !== a.getDate())) return f.F.TODAY;
 					let r = Number(n) - Date.now();
 					return null !== (e = N.find((e) => r <= e)) && void 0 !== e ? e : f.F.TODAY;
 				})(),

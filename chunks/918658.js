@@ -79,19 +79,11 @@ function D() {
 					return R.Z.Messages.VIEWING_AS_ROLES_BACK;
 			}
 		})(i),
-		U =
-			i === N.pNK.ROLE_SUBSCRIPTIONS
-				? R.Z.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT
-				: R.Z.Messages.VIEWING_AS_ROLES_SELECT,
+		U = i === N.pNK.ROLE_SUBSCRIPTIONS ? R.Z.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : R.Z.Messages.VIEWING_AS_ROLES_SELECT,
 		Z = n === h.oC.GUILD_ONBOARDING,
 		P = (n) => {
 			let { backToSettings: t } = n;
-			null != e &&
-				(m.Z.isFullServerPreview(e) && (0, E.uL)(N.Z5c.CHANNEL(e)),
-				c.ZP.shouldShowOnboarding(e) && (s.Z.finishOnboarding(e), (0, d.discardOnboardingPromise)(e)),
-				(0, T.mL)(e),
-				t && f.Z.open(e, i),
-				i === N.pNK.ROLE_SUBSCRIPTIONS && (0, _.GN)(e));
+			null != e && (m.Z.isFullServerPreview(e) && (0, E.uL)(N.Z5c.CHANNEL(e)), c.ZP.shouldShowOnboarding(e) && (s.Z.finishOnboarding(e), (0, d.discardOnboardingPromise)(e)), (0, T.mL)(e), t && f.Z.open(e, i), i === N.pNK.ROLE_SUBSCRIPTIONS && (0, _.GN)(e));
 		};
 	return (0, r.jsxs)(a.Notice, {
 		color: a.NoticeColors.BRAND,
@@ -123,9 +115,7 @@ function D() {
 						children: [
 							(0, r.jsx)('div', {
 								className: M.noticeText,
-								children: o
-									? R.Z.Messages.VIEW_AS_MEMBER_DESCRIPTION_WITH_ROLES.format({ numRoles: Object.keys(t).length })
-									: R.Z.Messages.VIEWING_AS_ROLES.format({ numRoles: Object.keys(t).length })
+								children: o ? R.Z.Messages.VIEW_AS_MEMBER_DESCRIPTION_WITH_ROLES.format({ numRoles: Object.keys(t).length }) : R.Z.Messages.VIEWING_AS_ROLES.format({ numRoles: Object.keys(t).length })
 							}),
 							(0, r.jsx)(a.Popout, {
 								position: 'bottom',

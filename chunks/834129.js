@@ -6,17 +6,7 @@ var a = n(120356),
 	l = n(318713),
 	o = n(236323);
 function c(e) {
-	let {
-		icon: t,
-		iconNode: n,
-		timestamp: a,
-		className: r,
-		children: c,
-		contentClassName: u,
-		iconClassName: d,
-		iconContainerClassName: _,
-		compact: E = !1
-	} = e;
+	let { icon: t, iconNode: n, timestamp: a, className: r, children: c, contentClassName: u, iconClassName: d, iconContainerClassName: _, compact: E = !1 } = e;
 	return (0, i.jsxs)('div', {
 		className: s()(r, {
 			[o.container]: !0,

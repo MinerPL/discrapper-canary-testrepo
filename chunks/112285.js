@@ -12,8 +12,8 @@ var r,
 	f = n(50754),
 	h = n(722063),
 	p = n(202934),
-	I = n(531460),
-	m = n(391673),
+	m = n(531460),
+	I = n(391673),
 	T = o.setImmediate,
 	g = o.clearImmediate,
 	S = o.process,
@@ -60,7 +60,7 @@ var D = function (e) {
 	(g = function (e) {
 		delete C[e];
 	}),
-	m
+	I
 		? (i = function (e) {
 				S.nextTick(L(e));
 			})
@@ -68,7 +68,7 @@ var D = function (e) {
 			? (i = function (e) {
 					A.now(L(e));
 				})
-			: v && !I
+			: v && !m
 				? ((s = (a = new v()).port2), (a.port1.onmessage = b), (i = u(s.postMessage, s)))
 				: o.addEventListener && c(o.postMessage) && !o.importScripts && r && 'file:' !== r.protocol && !_(M)
 					? ((i = M), o.addEventListener('message', b, !1))

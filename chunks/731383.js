@@ -40,7 +40,7 @@ var r = n(728804),
 		strictNullHandling: !1
 	},
 	f = {},
-	h = function e(t, n, a, s, o, u, d, _, h, p, I, m, T, g, S, A) {
+	h = function e(t, n, a, s, o, u, d, _, h, p, m, I, T, g, S, A) {
 		for (var N, v, O = t, R = A, C = 0, y = !1; void 0 !== (R = R.get(f)) && !y; ) {
 			var D = R.get(t);
 			if (((C += 1), void 0 !== D)) {
@@ -53,32 +53,21 @@ var r = n(728804),
 			('function' == typeof _
 				? (O = _(n, O))
 				: O instanceof Date
-					? (O = I(O))
+					? (O = m(O))
 					: 'comma' === a &&
 						l(O) &&
 						(O = i.maybeMap(O, function (e) {
-							return e instanceof Date ? I(e) : e;
+							return e instanceof Date ? m(e) : e;
 						})),
 			null === O)
 		) {
-			if (o) return d && !g ? d(n, E.encoder, S, 'key', m) : n;
+			if (o) return d && !g ? d(n, E.encoder, S, 'key', I) : n;
 			O = '';
 		}
-		if (
-			'string' == typeof (N = O) ||
-			'number' == typeof N ||
-			'boolean' == typeof N ||
-			'symbol' == typeof N ||
-			'bigint' == typeof N ||
-			i.isBuffer(O)
-		)
-			return d
-				? [T(g ? n : d(n, E.encoder, S, 'key', m)) + '=' + T(d(O, E.encoder, S, 'value', m))]
-				: [T(n) + '=' + T(String(O))];
+		if ('string' == typeof (N = O) || 'number' == typeof N || 'boolean' == typeof N || 'symbol' == typeof N || 'bigint' == typeof N || i.isBuffer(O)) return d ? [T(g ? n : d(n, E.encoder, S, 'key', I)) + '=' + T(d(O, E.encoder, S, 'value', I))] : [T(n) + '=' + T(String(O))];
 		var L = [];
 		if (void 0 === O) return L;
-		if ('comma' === a && l(O))
-			g && d && (O = i.maybeMap(O, d)), (v = [{ value: O.length > 0 ? O.join(',') || null : void 0 }]);
+		if ('comma' === a && l(O)) g && d && (O = i.maybeMap(O, d)), (v = [{ value: O.length > 0 ? O.join(',') || null : void 0 }]);
 		else if (l(_)) v = _;
 		else {
 			var b = Object.keys(O);
@@ -91,18 +80,16 @@ var r = n(728804),
 				var x = l(O) ? ('function' == typeof a ? a(M, U) : M) : M + (p ? '.' + U : '[' + U + ']');
 				A.set(t, C);
 				var G = r();
-				G.set(f, A), c(L, e(w, x, a, s, o, u, 'comma' === a && g && l(O) ? null : d, _, h, p, I, m, T, g, S, G));
+				G.set(f, A), c(L, e(w, x, a, s, o, u, 'comma' === a && g && l(O) ? null : d, _, h, p, m, I, T, g, S, G));
 			}
 		}
 		return L;
 	},
 	p = function (e) {
 		if (!e) return E;
-		if (null !== e.encoder && void 0 !== e.encoder && 'function' != typeof e.encoder)
-			throw TypeError('Encoder has to be a function.');
+		if (null !== e.encoder && void 0 !== e.encoder && 'function' != typeof e.encoder) throw TypeError('Encoder has to be a function.');
 		var t = e.charset || E.charset;
-		if (void 0 !== e.charset && 'utf-8' !== e.charset && 'iso-8859-1' !== e.charset)
-			throw TypeError('The charset option must be either utf-8, iso-8859-1, or undefined');
+		if (void 0 !== e.charset && 'utf-8' !== e.charset && 'iso-8859-1' !== e.charset) throw TypeError('The charset option must be either utf-8, iso-8859-1, or undefined');
 		var n = a.default;
 		if (void 0 !== e.format) {
 			if (!s.call(a.formatters, e.format)) throw TypeError('Unknown format option provided.');
@@ -142,39 +129,14 @@ e.exports = function (e, t) {
 	if ('object' != typeof s || null === s) return '';
 	a = t && t.arrayFormat in o ? t.arrayFormat : t && 'indices' in t ? (t.indices ? 'indices' : 'repeat') : 'indices';
 	var _ = o[a];
-	if (t && 'commaRoundTrip' in t && 'boolean' != typeof t.commaRoundTrip)
-		throw TypeError('`commaRoundTrip` must be a boolean, or absent');
+	if (t && 'commaRoundTrip' in t && 'boolean' != typeof t.commaRoundTrip) throw TypeError('`commaRoundTrip` must be a boolean, or absent');
 	var E = 'comma' === _ && t && t.commaRoundTrip;
 	!n && (n = Object.keys(s)), u.sort && n.sort(u.sort);
-	for (var f = r(), I = 0; I < n.length; ++I) {
-		var m = n[I];
-		if (!u.skipNulls || null !== s[m])
-			c(
-				d,
-				h(
-					s[m],
-					m,
-					_,
-					E,
-					u.strictNullHandling,
-					u.skipNulls,
-					u.encode ? u.encoder : null,
-					u.filter,
-					u.sort,
-					u.allowDots,
-					u.serializeDate,
-					u.format,
-					u.formatter,
-					u.encodeValuesOnly,
-					u.charset,
-					f
-				)
-			);
+	for (var f = r(), m = 0; m < n.length; ++m) {
+		var I = n[m];
+		if (!u.skipNulls || null !== s[I]) c(d, h(s[I], I, _, E, u.strictNullHandling, u.skipNulls, u.encode ? u.encoder : null, u.filter, u.sort, u.allowDots, u.serializeDate, u.format, u.formatter, u.encodeValuesOnly, u.charset, f));
 	}
 	var T = d.join(u.delimiter),
 		g = !0 === u.addQueryPrefix ? '?' : '';
-	return (
-		u.charsetSentinel && ('iso-8859-1' === u.charset ? (g += 'utf8=%26%2310003%3B&') : (g += 'utf8=%E2%9C%93&')),
-		T.length > 0 ? g + T : ''
-	);
+	return u.charsetSentinel && ('iso-8859-1' === u.charset ? (g += 'utf8=%26%2310003%3B&') : (g += 'utf8=%E2%9C%93&')), T.length > 0 ? g + T : '';
 };

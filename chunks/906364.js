@@ -9,15 +9,7 @@ var a = t(481060),
 	i = t(993413),
 	r = t(689938);
 function o(e) {
-	let {
-		sectionTitle: s,
-		errors: t,
-		onPronounsChange: o,
-		pendingPronouns: l,
-		placeholder: c,
-		currentPronouns: d,
-		disabled: _ = !1
-	} = e;
+	let { sectionTitle: s, errors: t, onPronounsChange: o, pendingPronouns: l, placeholder: c, currentPronouns: d, disabled: _ = !1 } = e;
 	return (0, n.jsx)(i.Z, {
 		title: s,
 		errors: t,

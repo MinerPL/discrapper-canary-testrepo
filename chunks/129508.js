@@ -25,19 +25,13 @@ t.Z = class e {
 	}
 	setFont(e) {
 		var t, n, r, i, a;
-		(this.font.style = null !== (t = e.style) && void 0 !== t ? t : this.font.style),
-			(this.font.size = null !== (n = e.size) && void 0 !== n ? n : this.font.size),
-			(this.font.weight = null !== (r = e.weight) && void 0 !== r ? r : this.font.weight),
-			(this.font.family = null !== (i = e.family) && void 0 !== i ? i : this.font.family),
-			(this.font.truncate = null !== (a = e.truncate) && void 0 !== a ? a : this.font.truncate);
+		(this.font.style = null !== (t = e.style) && void 0 !== t ? t : this.font.style), (this.font.size = null !== (n = e.size) && void 0 !== n ? n : this.font.size), (this.font.weight = null !== (r = e.weight) && void 0 !== r ? r : this.font.weight), (this.font.family = null !== (i = e.family) && void 0 !== i ? i : this.font.family), (this.font.truncate = null !== (a = e.truncate) && void 0 !== a ? a : this.font.truncate);
 	}
 	getLoadedImage(e) {
 		i()(null != this.assetMap, 'DiscordCanvas: An AssetStore has not been initialized.');
 		let t = this.assetMap.get(e);
 		if (void 0 === t) {
-			console.error(
-				"DiscordCanvas: AssetMap hasn't loaded ".concat(e, '.  Make sure to load it before trying to render.')
-			);
+			console.error("DiscordCanvas: AssetMap hasn't loaded ".concat(e, '.  Make sure to load it before trying to render.'));
 			return;
 		}
 		return t;

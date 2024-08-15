@@ -91,12 +91,7 @@ function C(e) {
 		m = _.Z.getCustomHangStatus(),
 		c = null != d ? d : null !== (t = null == m ? void 0 : m.status) && void 0 !== t ? t : '',
 		p = null !== (n = null == m ? void 0 : m.emoji) && void 0 !== n ? n : null;
-	(null == u ? void 0 : u.id) != null
-		? (p =
-				x.ZP.canUseEmojisEverywhere(j.default.getCurrentUser()) && null != r.ZP.getUsableCustomEmojiById(u.id)
-					? u
-					: null)
-		: (null == u ? void 0 : u.name) != null && (p = u);
+	(null == u ? void 0 : u.id) != null ? (p = x.ZP.canUseEmojisEverywhere(j.default.getCurrentUser()) && null != r.ZP.getUsableCustomEmojiById(u.id) ? u : null) : (null == u ? void 0 : u.name) != null && (p = u);
 	let [C, g] = l.useState(c),
 		[N, A] = l.useState(p);
 	return (0, o.jsxs)(a.ModalRoot, {

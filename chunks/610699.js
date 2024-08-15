@@ -164,20 +164,11 @@ function k(e) {
 		K = (0, f.Z)([G.id])[0],
 		z = (0, c.e7)([E.ZP], () => {
 			var e;
-			return (
-				(null == u ? void 0 : u.channel) != null &&
-				(null === (e = E.ZP.getSelfEmbeddedActivityForChannel(u.channel.id)) || void 0 === e
-					? void 0
-					: e.applicationId) === G.id
-			);
+			return (null == u ? void 0 : u.channel) != null && (null === (e = E.ZP.getSelfEmbeddedActivityForChannel(u.channel.id)) || void 0 === e ? void 0 : e.applicationId) === G.id;
 		}),
 		Q = (0, c.e7)([E.ZP], () => {
 			var e;
-			return (
-				(null === (e = u.channel) || void 0 === e ? void 0 : e.id) != null
-					? E.ZP.getEmbeddedActivitiesForChannel(u.channel.id)
-					: []
-			).some((e) => {
+			return ((null === (e = u.channel) || void 0 === e ? void 0 : e.id) != null ? E.ZP.getEmbeddedActivitiesForChannel(u.channel.id) : []).some((e) => {
 				let { applicationId: t } = e;
 				return G.id === t;
 			});
@@ -215,10 +206,7 @@ function k(e) {
 				analyticsLocations: J
 			});
 		};
-	return (ei && z && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY),
-	!X && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS),
-	(l = z ? P.Z.Messages.INVITE_EMBED_JOINED : Q || !ei ? P.Z.Messages.JOIN : P.Z.Messages.START),
-	null == u.code || '' === u.code)
+	return (ei && z && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (s = P.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), (l = z ? P.Z.Messages.INVITE_EMBED_JOINED : Q || !ei ? P.Z.Messages.JOIN : P.Z.Messages.START), null == u.code || '' === u.code)
 		? null
 		: (0, i.jsxs)('div', {
 				className: b.container,
@@ -251,11 +239,7 @@ function k(e) {
 							(0, i.jsxs)('div', {
 								className: b.info,
 								children: [
-									(0, i.jsx)(d.FormTitle, {
-										children: ei
-											? P.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_TITLE_INVITED_TO_JOIN
-											: P.Z.Messages.INVITE_BUTTON_TITLE_INVITED
-									}),
+									(0, i.jsx)(d.FormTitle, { children: ei ? P.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_TITLE_INVITED_TO_JOIN : P.Z.Messages.INVITE_BUTTON_TITLE_INVITED }),
 									(0, i.jsx)(d.Heading, {
 										className: b.heading,
 										variant: 'heading-xl/semibold',

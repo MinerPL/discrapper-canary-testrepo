@@ -13,8 +13,8 @@ var i = n(735250),
 	_ = n(530472),
 	f = n(453687),
 	E = n(930282),
-	g = n(318713),
-	C = n(981631),
+	C = n(318713),
+	g = n(981631),
 	I = n(689938),
 	x = n(307529),
 	T = n(438379),
@@ -54,9 +54,7 @@ let v = a.memo(function (e) {
 						color: 'interactive-normal',
 						tag: 'span',
 						className: x.learnMore,
-						children: I.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_LEARN_MORE.format({
-							helpUrl: p.Z.getArticleURL(C.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE)
-						})
+						children: I.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_LEARN_MORE.format({ helpUrl: p.Z.getArticleURL(g.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
 					})
 				})
 			})
@@ -65,7 +63,7 @@ let v = a.memo(function (e) {
 });
 t.Z = a.memo(function (e) {
 	var t, n;
-	let { className: s, compact: r, message: u, children: p, content: _, onUpdate: C } = e,
+	let { className: s, compact: r, message: u, children: p, content: _, onUpdate: g } = e,
 		S = null === (t = u.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
 		Z = a.useRef(!1),
 		A = (0, c.e7)([m.Z], () => m.Z.getMessage(u.id), [u.id]),
@@ -74,8 +72,8 @@ t.Z = a.memo(function (e) {
 		}, [u, A]);
 	return (
 		a.useLayoutEffect(() => {
-			Z.current ? null != C && C() : (Z.current = !0);
-		}, [C, u.content, _, S, p]),
+			Z.current ? null != g && g() : (Z.current = !0);
+		}, [g, u.content, _, S, p]),
 		(0, i.jsxs)('div', {
 			id: (0, f.ut)(u),
 			className: l()(s, N.markup, {
@@ -91,7 +89,7 @@ t.Z = a.memo(function (e) {
 					(0, i.jsxs)(i.Fragment, {
 						children: [
 							' ',
-							(0, i.jsx)(g.Z, {
+							(0, i.jsx)(C.Z, {
 								timestamp: u.timestamp,
 								isEdited: !0,
 								isInline: !1,
@@ -103,10 +101,7 @@ t.Z = a.memo(function (e) {
 						]
 					}),
 				(0, i.jsx)(v, {
-					notice:
-						null !== (n = null == A ? void 0 : A.errorMessage) && void 0 !== n
-							? n
-							: I.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE,
+					notice: null !== (n = null == A ? void 0 : A.errorMessage) && void 0 !== n ? n : I.Z.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE,
 					message: u,
 					compact: r,
 					onDismiss: M

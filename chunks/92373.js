@@ -9,14 +9,7 @@ var a = t(735250),
 	u = t(689938),
 	m = t(840078);
 n.Z = function (e) {
-	let {
-			applicationId: n,
-			imageContainerClassName: t,
-			onClick: i,
-			selected: _,
-			locked: f = !1,
-			otherGamesCount: C = 0
-		} = e,
+	let { applicationId: n, imageContainerClassName: t, onClick: i, selected: _, locked: f = !1, otherGamesCount: C = 0 } = e,
 		h = (0, o.useToken)(o.tokens.colors.WHITE),
 		{ isFetching: x, coverImageUrl: p } = (0, c.$)(n, {
 			coverImageHeight: 336,
@@ -24,9 +17,7 @@ n.Z = function (e) {
 		}),
 		g = (0, l.e7)([d.Z], () => {
 			var e, t;
-			return null !== (t = null === (e = d.Z.getDetectableGame(n)) || void 0 === e ? void 0 : e.name) && void 0 !== t
-				? t
-				: '';
+			return null !== (t = null === (e = d.Z.getDetectableGame(n)) || void 0 === e ? void 0 : e.name) && void 0 !== t ? t : '';
 		}),
 		T = r.useCallback(() => {
 			null == i || i(n);

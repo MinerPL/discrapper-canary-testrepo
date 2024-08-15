@@ -1,6 +1,6 @@
 n.d(t, {
 	Z: function () {
-		return I;
+		return m;
 	}
 });
 var r = n(735250);
@@ -18,8 +18,8 @@ var i = n(120356),
 	f = n(910128),
 	h = n(981631),
 	p = n(646909);
-function I(e) {
-	let { user: t, guild: n, channelId: i, className: I, onClose: m } = e,
+function m(e) {
+	let { user: t, guild: n, channelId: i, className: m, onClose: I } = e,
 		{ analyticsLocations: T, newestAnalyticsLocation: g } = (0, l.ZP)(),
 		{ context: S, trackUserProfileAction: A } = (0, _.KZ)(),
 		N = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
@@ -42,12 +42,12 @@ function I(e) {
 	return (0, r.jsx)(o.Z, {
 		type: o.P.BITE_SIZE_POPOUT,
 		activity: R,
-		className: a()(p.activity, I),
+		className: a()(p.activity, m),
 		source: g,
 		user: t,
 		guildId: null == n ? void 0 : n.id,
 		channelId: i,
-		onClose: m,
+		onClose: I,
 		onAction: () => {
 			A({ action: 'JOIN_ACTIVITY' }),
 				(0, E.Ac)({
@@ -59,7 +59,7 @@ function I(e) {
 					analyticsLocations: T,
 					...S
 				}),
-				null == m || m();
+				null == I || I();
 		},
 		showActions: t.id !== (null == N ? void 0 : N.id),
 		actionColor: a()(p.buttonColor, v ? p.engagementExpButtonColor : void 0),

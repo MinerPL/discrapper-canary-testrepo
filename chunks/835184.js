@@ -30,8 +30,7 @@ class N extends (l = i.ZP.PersistedStore) {
 	initialize(e) {
 		if (null != e) {
 			var n, t;
-			(c = null !== (n = e.upcomingEventDismissals) && void 0 !== n ? n : {}),
-				(E = null !== (t = e.upcomingEventSeenTimestamps) && void 0 !== t ? t : {});
+			(c = null !== (n = e.upcomingEventDismissals) && void 0 !== n ? n : {}), (E = null !== (t = e.upcomingEventSeenTimestamps) && void 0 !== t ? t : {});
 		}
 	}
 	getGuildEventNoticeDismissalTime(e) {

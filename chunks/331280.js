@@ -137,8 +137,7 @@ var o = {
 	'creditCard.taxNumber': 'Data urodzenia posiadacza karty lub firmowy numer rejestracyjny',
 	'creditCard.taxNumber.label': 'Data urodzenia posiadacza karty (RRMMDD) lub firmowy numer rejestracyjny (10 cyfr)',
 	'creditCard.taxNumber.labelAlt': 'Firmowy numer rejestracyjny (10 cyfr)',
-	'creditCard.taxNumber.invalid':
-		'Nieprawidłowa data urodzenia posiadacza karty lub nieprawidłowy firmowy numer rejestracyjny',
+	'creditCard.taxNumber.invalid': 'Nieprawidłowa data urodzenia posiadacza karty lub nieprawidłowy firmowy numer rejestracyjny',
 	'storedPaymentMethod.disable.button': 'Usuń',
 	'storedPaymentMethod.disable.confirmation': 'Usuń zapisaną metodę płatności',
 	'storedPaymentMethod.disable.confirmButton': 'Tak, usuń',
@@ -171,8 +170,7 @@ var o = {
 	'blik.invalid': 'Wpisz 6 cyfr',
 	'blik.code': '6-cyfrowy kod',
 	'blik.help': 'Uzyskaj kod ze swojej aplikacji bankowej.',
-	'swish.pendingMessage':
-		'Po zeskanowaniu transakcja może mieć status \u201EOczekująca\u201D do 10 minut. Próba ponownego dokonania płatności w tym czasie może spowodować wielokrotne naliczenie opłaty.',
+	'swish.pendingMessage': 'Po zeskanowaniu transakcja może mieć status \u201EOczekująca\u201D do 10 minut. Próba ponownego dokonania płatności w tym czasie może spowodować wielokrotne naliczenie opłaty.',
 	'field.valid': 'Pole prawidłowe',
 	'field.invalid': 'Dane w polu są nieprawidłowe',
 	'error.va.gen.01': 'Niekompletne dane w polu',
@@ -208,8 +206,7 @@ var o = {
 	'bankTransfer.iban': 'IBAN',
 	'bankTransfer.bic': 'BIC',
 	'bankTransfer.reference': 'Ref. sprze.',
-	'bankTransfer.introduction':
-		'Kontynuuj tworzenie nowej płatności przelewem bankowym. Możesz użyć szczegółów na następnym ekranie, aby sfinalizować tę płatność.',
+	'bankTransfer.introduction': 'Kontynuuj tworzenie nowej płatności przelewem bankowym. Możesz użyć szczegółów na następnym ekranie, aby sfinalizować tę płatność.',
 	'bankTransfer.instructions': 'Dziękujemy za zakup. Dokończ płatność przy użyciu poniższych informacji.',
 	'bacs.accountHolderName': 'Imię i nazwisko posiadacza rachunku',
 	'bacs.accountHolderName.invalid': 'Nieprawidłowe imię i nazwisko posiadacza rachunku',
@@ -218,8 +215,7 @@ var o = {
 	'bacs.bankLocationId': 'Numer rozliczeniowy SORT',
 	'bacs.bankLocationId.invalid': 'Nieprawidłowy numer rozliczeniowy SORT',
 	'bacs.consent.amount': 'Wyrażam zgodę na pobranie powyższej kwoty z mojego rachunku bankowego.',
-	'bacs.consent.account':
-		'Potwierdzam, że konto jest zarejestrowane na moje nazwisko i jestem jedynym sygnatariuszem wymaganym do autoryzacji polecenia zapłaty na tym koncie.',
+	'bacs.consent.account': 'Potwierdzam, że konto jest zarejestrowane na moje nazwisko i jestem jedynym sygnatariuszem wymaganym do autoryzacji polecenia zapłaty na tym koncie.',
 	edit: 'Edytuj',
 	'bacs.confirm': 'Potwierdź i zapłać',
 	'bacs.result.introduction': 'Pobierz dyspozycję polecenia zapłaty (DDI/upoważnienie)',
@@ -252,8 +248,7 @@ var o = {
 	'upi.vpaWaitingMessage': 'Otwórz aplikację UPI, aby potwierdzić płatność',
 	'upi.modeSelection': 'Dokonaj wyboru sposobu korzystania z UPI.',
 	'onlineBanking.termsAndConditions': 'Kontynuując, zgadzasz się z %#Warunkami świadczenia usług%#.',
-	'onlineBankingPL.termsAndConditions':
-		'Kontynuując, akceptujesz %#regulations%# oraz %#information obligation%# firmy Przelewy24',
+	'onlineBankingPL.termsAndConditions': 'Kontynuując, akceptujesz %#regulations%# oraz %#information obligation%# firmy Przelewy24',
 	'ctp.loading.poweredByCtp': 'Działa w oparciu o usługę Click to Pay',
 	'ctp.loading.intro': 'Sprawdzamy, czy masz zapisane karty Click to Pay...',
 	'ctp.login.title': 'Przejdź do Click to Pay',
@@ -276,14 +271,12 @@ var o = {
 	'ctp.manualCardEntry': 'Ręczne wprowadzanie kart',
 	'ctp.aria.infoModalButton': 'Co to jest Click to Pay',
 	'ctp.infoPopup.title': 'Click to Pay zapewnia wygodę płatności zbliżeniowych w Internecie',
-	'ctp.infoPopup.subtitle':
-		'Szybka i bezpieczna metoda płatności obsługiwana przez karty płatnicze Mastercard, Visa i inne.',
+	'ctp.infoPopup.subtitle': 'Szybka i bezpieczna metoda płatności obsługiwana przez karty płatnicze Mastercard, Visa i inne.',
 	'ctp.infoPopup.benefit1': 'Click to Pay zabezpiecza Twoje informacje za pomocą szyfrowania',
 	'ctp.infoPopup.benefit2': 'Używaj tej funkcji u sprzedawców na całym świecie',
 	'ctp.infoPopup.benefit3': 'Skonfiguruj raz i płać bezproblemowo w przyszłości',
 	'ctp.errors.AUTH_INVALID': 'Nieprawidłowe dane uwierzytelniające',
-	'ctp.errors.NOT_FOUND':
-		'Nie znaleziono konta, wprowadź prawidłowy adres e-mail lub kontynuuj, ręcznie wprowadzając kartę',
+	'ctp.errors.NOT_FOUND': 'Nie znaleziono konta, wprowadź prawidłowy adres e-mail lub kontynuuj, ręcznie wprowadzając kartę',
 	'ctp.errors.ID_FORMAT_UNSUPPORTED': 'Format nie jest obsługiwany',
 	'ctp.errors.FRAUD': 'Konto użytkownika zostało zablokowane lub wyłączone',
 	'ctp.errors.CONSUMER_ID_MISSING': 'We wniosku brakuje danych dotyczących tożsamości konsumenta',
@@ -304,7 +297,6 @@ var o = {
 	'consent.checkbox.invalid': 'Musisz zaakceptować Warunki i postanowienia',
 	'form.instruction': 'Wszystkie pola są wymagane, chyba że zaznaczono inaczej.',
 	'trustly.descriptor': 'Błyskawiczna płatność bankowa',
-	'trustly.description1':
-		'Płać bezpośrednio z dowolnego rachunku bankowego, korzystając z zabezpieczeń na poziomie bankowym',
+	'trustly.description1': 'Płać bezpośrednio z dowolnego rachunku bankowego, korzystając z zabezpieczeń na poziomie bankowym',
 	'trustly.description2': 'Bez kart, bez pobierania aplikacji, bez rejestracji'
 };

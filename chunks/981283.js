@@ -13,8 +13,8 @@ var i = n(392711),
 	f = n(594174),
 	h = n(449753),
 	p = n(569545),
-	I = n(803647),
-	m = n(70722),
+	m = n(803647),
+	I = n(70722),
 	T = n(981631);
 let g = (0, i.debounce)(l.xc, 1000);
 t.Z = {
@@ -41,8 +41,7 @@ t.Z = {
 				if (n) return;
 				let r = (0, p.my)(t);
 				c.Z.getAllActiveStreams().forEach((e) => {
-					if (e.ownerId !== r.ownerId && e.ownerId !== d.default.getId())
-						e.ownerId === d.default.getId() && o.Z.setGoLiveSource(null), (0, l.aP)((0, p.V9)(e), !1);
+					if (e.ownerId !== r.ownerId && e.ownerId !== d.default.getId()) e.ownerId === d.default.getId() && o.Z.setGoLiveSource(null), (0, l.aP)((0, p.V9)(e), !1);
 				});
 			}),
 			s.Z.subscribe('VOICE_STATE_UPDATES', (e) => {
@@ -53,7 +52,7 @@ t.Z = {
 					let n = c.Z.getAllActiveStreams(),
 						r = E.Z.getChannelId();
 					n.forEach((e) => {
-						e.channelId !== r && (0, I.Z)(e, !1);
+						e.channelId !== r && (0, m.Z)(e, !1);
 					});
 				});
 			}),
@@ -61,10 +60,9 @@ t.Z = {
 				var t;
 				let { streamKey: n } = e,
 					{ ownerId: r, guildId: i } = (0, p.my)(n);
-				if (null == i || null == r || r !== (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id))
-					return;
+				if (null == i || null == r || r !== (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return;
 				let a = _.Z.getMemberCount(i);
-				if (null != a && !(a < 2) && !(a > m.tB)) u.eo.getSetting() && g(n);
+				if (null != a && !(a < 2) && !(a > I.tB)) u.eo.getSetting() && g(n);
 			});
 	}
 };

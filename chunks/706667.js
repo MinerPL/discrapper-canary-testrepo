@@ -21,11 +21,7 @@ function c(e, t) {
 		),
 		_ = r.useCallback(() => {
 			let t = new Audio((0, l.Z)(e.soundId));
-			null != n.current && n.current.pause(),
-				(n.current = t),
-				(t.currentTime = 0),
-				(t.volume = (0, u.Z)(e.volume)),
-				t.play();
+			null != n.current && n.current.pause(), (n.current = t), (t.currentTime = 0), (t.volume = (0, u.Z)(e.volume)), t.play();
 		}, [e, n]);
 	return (
 		r.useCallback(

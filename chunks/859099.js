@@ -5,11 +5,7 @@ var r = n(780384),
 	s = n(981631),
 	o = n(689938);
 function l(e) {
-	e.relationship.type === s.OGo.PENDING_INCOMING &&
-		(r.uv.announce(
-			o.Z.Messages.FRIEND_REQUEST_PENDING_A11Y_ANNOUNCEMENT.format({ username: e.relationship.user.username })
-		),
-		a.T(e.relationship.user));
+	e.relationship.type === s.OGo.PENDING_INCOMING && (r.uv.announce(o.Z.Messages.FRIEND_REQUEST_PENDING_A11Y_ANNOUNCEMENT.format({ username: e.relationship.user.username })), a.T(e.relationship.user));
 }
 function u(e) {
 	let { user: t } = e;

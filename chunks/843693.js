@@ -18,8 +18,8 @@ var r,
 	f = n(351780),
 	h = n(641033),
 	p = n(524484),
-	I = n(981631);
-let m = new Set(),
+	m = n(981631);
+let I = new Set(),
 	T = new l.h(
 		function (e) {
 			let { userId: t, channelId: n } = e;
@@ -79,12 +79,7 @@ class N extends (r = o.ZP.Store) {
 	isComboing(e, t) {
 		var n;
 		let r = this.getUserCombo(e, t);
-		return (
-			null != r &&
-			r.value >= f.Z.combosRequiredCount &&
-			null != (n = r) &&
-			(n.value > 0 || (null == n ? void 0 : n.multiplier) > 1)
-		);
+		return null != r && r.value >= f.Z.combosRequiredCount && null != (n = r) && (n.value > 0 || (null == n ? void 0 : n.multiplier) > 1);
 	}
 	getMessageCombo(e) {
 		var t;
@@ -120,17 +115,8 @@ let v = new N(c.Z, {
 				d = {
 					...c,
 					...t,
-					value:
-						null !== (r = null !== (n = t.value) && void 0 !== n ? n : null == c ? void 0 : c.value) && void 0 !== r
-							? r
-							: 0,
-					multiplier: Math.min(
-						null !== (a = null !== (i = t.multiplier) && void 0 !== i ? i : null == c ? void 0 : c.multiplier) &&
-							void 0 !== a
-							? a
-							: 1,
-						7
-					),
+					value: null !== (r = null !== (n = t.value) && void 0 !== n ? n : null == c ? void 0 : c.value) && void 0 !== r ? r : 0,
+					multiplier: Math.min(null !== (a = null !== (i = t.multiplier) && void 0 !== i ? i : null == c ? void 0 : c.multiplier) && void 0 !== a ? a : 1, 7),
 					decayInterval: null !== (s = null == c ? void 0 : c.decayInterval) && void 0 !== s ? s : new u.Xp()
 				};
 			T.set(S(t), d),
@@ -175,22 +161,17 @@ let v = new N(c.Z, {
 		} = e;
 		if (!f.Z.isEnabled()) return !1;
 		let o = d.default.getId();
-		if (!A(null == a ? void 0 : a.id, o, s, m)) return !1;
+		if (!A(null == a ? void 0 : a.id, o, s, I)) return !1;
 		let l = T.get(
 			S({
 				userId: null !== (t = null == a ? void 0 : a.id) && void 0 !== t ? t : '???',
 				channelId: r
 			})
 		);
-		if (
-			f.Z.screenshakeEnabled &&
-			f.Z.screenshakeEnabledLocations[p.oZ.MENTION] &&
-			null != i &&
-			null != i.find((e) => e.id === o)
-		) {
+		if (f.Z.screenshakeEnabled && f.Z.screenshakeEnabledLocations[p.oZ.MENTION] && null != i && null != i.find((e) => e.id === o)) {
 			let e = null != l ? (null !== (n = (0, h.KH)(l, p.qi.LEVEL_4)) && void 0 !== n ? n : 0.001) : 4 * Math.random();
 			return (
-				E.S.dispatch(I.CkL.SHAKE_APP, {
+				E.S.dispatch(m.CkL.SHAKE_APP, {
 					duration: 1000,
 					intensity: e
 				}),

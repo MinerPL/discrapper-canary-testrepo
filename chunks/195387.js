@@ -18,8 +18,8 @@ var i = n(442837),
 	f = n(50493),
 	h = n(689938);
 function p(e) {
-	let { user: t, guildId: n, channelId: p, onClose: I } = e,
-		{ newestAnalyticsLocation: m } = (0, s.ZP)(),
+	let { user: t, guildId: n, channelId: p, onClose: m } = e,
+		{ newestAnalyticsLocation: I } = (0, s.ZP)(),
 		T = (0, i.e7)([c.default], () => c.default.getId() === (null == t ? void 0 : t.id)),
 		g = (0, l.ms)(null != n ? n : null, !0),
 		S = (0, i.e7)([d.Z], () => (null != p ? p : d.Z.getChannelId(n, !0)), [p, n]);
@@ -33,9 +33,9 @@ function p(e) {
 					u.Z.close(),
 						(0, o.r)(n, t.id, null != S ? S : E.oC.MEMBER_SAFETY, {
 							modViewPanel: f.k.INFO,
-							sourceLocation: m
+							sourceLocation: I
 						}),
-						null == I || I();
+						null == m || m();
 				}
 			});
 }

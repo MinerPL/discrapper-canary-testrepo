@@ -199,10 +199,7 @@ let S = {
 		bytesSent: m,
 		codec: function (e) {
 			let { id: t, name: n } = e;
-			return (
-				(n = null != (n = '' === n ? 'unknown' : n) ? n : 'unknown'),
-				''.concat(n[0].toUpperCase()).concat(n.slice(1), ' (').concat(t, ')')
-			);
+			return (n = null != (n = '' === n ? 'unknown' : n) ? n : 'unknown'), ''.concat(n[0].toUpperCase()).concat(n.slice(1), ' (').concat(t, ')');
 		},
 		cpuLimitedResolution: f,
 		currentDelay: h,

@@ -24,15 +24,7 @@ function l(e, t, n) {
 		e
 	);
 }
-((r = i || (i = {})).Stream = 'stream'),
-	(r.Video = 'video'),
-	(r.Mute = 'mute'),
-	(r.VoiceActivity = 'voiceactivity'),
-	(r.DesktopSourceEnd = 'desktopsourceend'),
-	(r.Speaking = 'speaking'),
-	(r.AudioPermission = 'audio-permission'),
-	(r.VideoPermission = 'video-permission'),
-	(r.AddVideoTrack = 'add-video-track');
+((r = i || (i = {})).Stream = 'stream'), (r.Video = 'video'), (r.Mute = 'mute'), (r.VoiceActivity = 'voiceactivity'), (r.DesktopSourceEnd = 'desktopsourceend'), (r.Speaking = 'speaking'), (r.AudioPermission = 'audio-permission'), (r.VideoPermission = 'video-permission'), (r.AddVideoTrack = 'add-video-track');
 class u extends a.Z {
 	destroy() {
 		this.removeAllListeners(), this.destroyStreams();
@@ -42,11 +34,7 @@ class u extends a.Z {
 		this.audio.destroy(), this.video.destroy(), null === (e = this.desktop) || void 0 === e || e.destroy();
 	}
 	setDesktop(e) {
-		this.destroyStreams(),
-			null == e || e.addListener('desktopsourceend', this.handleDesktopSourceEnd),
-			null == e || e.addListener('speaking', this.handleSpeaking),
-			(this.desktop = e),
-			this.mergeStreams();
+		this.destroyStreams(), null == e || e.addListener('desktopsourceend', this.handleDesktopSourceEnd), null == e || e.addListener('speaking', this.handleSpeaking), (this.desktop = e), this.mergeStreams();
 	}
 	reset() {
 		var e;
@@ -109,17 +97,7 @@ class u extends a.Z {
 			l(this, 'mergeStreams', () => {
 				var e, t, n;
 				let r = new MediaStream();
-				return (
-					null != this.desktop
-						? (null === (e = this.desktop.stream) || void 0 === e || e.getTracks().forEach((e) => r.addTrack(e)),
-							this.desktop.refreshSpeaking())
-						: (null === (t = this.audio.stream) || void 0 === t || t.getAudioTracks().forEach((e) => r.addTrack(e)),
-							null === (n = this.video.stream) || void 0 === n || n.getVideoTracks().forEach((e) => r.addTrack(e))),
-					(this.stream = r),
-					this.emit('stream', r),
-					this.emit('video', this.getVideoStreamId()),
-					r
-				);
+				return null != this.desktop ? (null === (e = this.desktop.stream) || void 0 === e || e.getTracks().forEach((e) => r.addTrack(e)), this.desktop.refreshSpeaking()) : (null === (t = this.audio.stream) || void 0 === t || t.getAudioTracks().forEach((e) => r.addTrack(e)), null === (n = this.video.stream) || void 0 === n || n.getVideoTracks().forEach((e) => r.addTrack(e))), (this.stream = r), this.emit('stream', r), this.emit('video', this.getVideoStreamId()), r;
 			}),
 			l(this, 'handleVoiceActivity', (e) => {
 				this.emit('voiceactivity', e);

@@ -15,15 +15,8 @@ function s(e, t, n, s) {
 		onConfirm: n,
 		onCancel: s,
 		body: a.Z.Messages.EMBEDDED_ACTIVITY_CHANGE_ACTIVITY_CONFIRM_BODY.format({
-			currentApplicationName:
-				null !== (o = null == e ? void 0 : e.name) && void 0 !== o
-					? o
-					: a.Z.Messages.EMBEDDED_ACTIVITY_CURRENT_APPLICATION_DEFAULT,
-			currentApplicationChannelName: (0, i.Ew)(null == t ? void 0 : t.name)
-				? a.Z.Messages.EMBEDDED_ACTIVITY_CURRENT_APPLICATION_CHANNEL_DEFAULT
-				: null == t
-					? void 0
-					: t.name
+			currentApplicationName: null !== (o = null == e ? void 0 : e.name) && void 0 !== o ? o : a.Z.Messages.EMBEDDED_ACTIVITY_CURRENT_APPLICATION_DEFAULT,
+			currentApplicationChannelName: (0, i.Ew)(null == t ? void 0 : t.name) ? a.Z.Messages.EMBEDDED_ACTIVITY_CURRENT_APPLICATION_CHANNEL_DEFAULT : null == t ? void 0 : t.name
 		})
 	});
 }

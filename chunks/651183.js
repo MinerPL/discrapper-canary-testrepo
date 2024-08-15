@@ -11,12 +11,7 @@ var a = n(475674),
 function r(e) {
 	var t;
 	let { participant: n, className: r } = e;
-	let o =
-		null == (t = (0, a.Z)(n))
-			? null
-			: l.Z.isDeveloper
-				? ''.concat(t.message, ' (').concat(t.errorType, ')')
-				: t.message;
+	let o = null == (t = (0, a.Z)(n)) ? null : l.Z.isDeveloper ? ''.concat(t.message, ' (').concat(t.errorType, ')') : t.message;
 	return null != o
 		? (0, i.jsx)(s.Z, {
 				className: r,

@@ -51,9 +51,7 @@ function C(e) {
 			(0, a.jsxs)('div', {
 				className: c.roleColorContainer,
 				children: [
-					(0, a.jsx)(o.HiddenVisually, {
-						children: d.Z.Messages.GUILD_PRODUCT_SETTINGS_SELECT_ROLE_COLOR_ARIA.format({ color: (0, s.Rf)(l) })
-					}),
+					(0, a.jsx)(o.HiddenVisually, { children: d.Z.Messages.GUILD_PRODUCT_SETTINGS_SELECT_ROLE_COLOR_ARIA.format({ color: (0, s.Rf)(l) }) }),
 					(0, a.jsx)('div', {
 						className: c.roleColorPreview,
 						style: { backgroundColor: (0, s.Rf)(l) }

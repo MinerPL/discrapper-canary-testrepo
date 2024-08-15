@@ -30,12 +30,7 @@ var n,
 	a,
 	i,
 	r = t(943418);
-let o =
-		null !== (i = null === (n = window) || void 0 === n ? void 0 : n.crypto) && void 0 !== i
-			? i
-			: null === (a = window) || void 0 === a
-				? void 0
-				: a.msCrypto,
+let o = null !== (i = null === (n = window) || void 0 === n ? void 0 : n.crypto) && void 0 !== i ? i : null === (a = window) || void 0 === a ? void 0 : a.msCrypto,
 	l = 'Uint8Array' in window,
 	c = null != o && 'getRandomValues' in o && l,
 	d = 'PublicKeyCredential' in window && l;
@@ -57,9 +52,5 @@ function E(e) {
 }
 function u(e, s) {
 	let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'Discord';
-	return 'otpauth://totp/'
-		.concat(encodeURI(t), ':')
-		.concat(encodeURI(e), '?secret=')
-		.concat(E(s), '&issuer=')
-		.concat(encodeURIComponent(t));
+	return 'otpauth://totp/'.concat(encodeURI(t), ':').concat(encodeURI(e), '?secret=').concat(E(s), '&issuer=').concat(encodeURIComponent(t));
 }

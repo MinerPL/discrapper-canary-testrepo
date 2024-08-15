@@ -59,9 +59,7 @@ function C(e) {
 		S = !i && g;
 	o.useEffect(() => {
 		var e, t, n, s;
-		g
-			? S && (null === (s = C.current) || void 0 === s || null === (n = s.animation) || void 0 === n || n.play())
-			: null === (t = C.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
+		g ? S && (null === (s = C.current) || void 0 === s || null === (n = s.animation) || void 0 === n || n.play()) : null === (t = C.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
 	}, [S, g]);
 	let v = o.useCallback(() => {
 		h(!0);
@@ -69,11 +67,7 @@ function C(e) {
 	return null == E || T
 		? (0, s.jsx)('div', {
 				className: x.backgroundFallback,
-				style: {
-					backgroundImage: 'linear-gradient(90deg, '
-						.concat(l.config.colors.primary, ', ')
-						.concat(l.config.colors.secondary, ')')
-				}
+				style: { backgroundImage: 'linear-gradient(90deg, '.concat(l.config.colors.primary, ', ').concat(l.config.colors.secondary, ')') }
 			})
 		: (0, s.jsx)('div', {
 				className: r()(x.lottieAnimationBackgroundWrapper, a),

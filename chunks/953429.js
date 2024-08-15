@@ -18,26 +18,7 @@ r.d(e, {
 var n = r(146150),
 	i = r(789903),
 	o = r(973682),
-	a = [
-		'formatMatcher',
-		'timeZone',
-		'hour12',
-		'weekday',
-		'era',
-		'year',
-		'month',
-		'day',
-		'hour',
-		'minute',
-		'second',
-		'timeZoneName',
-		'hourCycle',
-		'dateStyle',
-		'timeStyle',
-		'calendar',
-		'numberingSystem',
-		'fractionalSecondDigits'
-	];
+	a = ['formatMatcher', 'timeZone', 'hour12', 'weekday', 'era', 'year', 'month', 'day', 'hour', 'minute', 'second', 'timeZoneName', 'hourCycle', 'dateStyle', 'timeStyle', 'calendar', 'numberingSystem', 'fractionalSecondDigits'];
 function s(t, e, r, o) {
 	var s = t.locale,
 		u = t.formats,

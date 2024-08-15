@@ -11,17 +11,7 @@ var r = n(735250),
 	l = n(838331),
 	u = n(563972);
 function c(e) {
-	let {
-			children: t,
-			placeholder: n,
-			value: a,
-			onChange: c,
-			onClose: d,
-			showScrollbar: _,
-			className: E,
-			multiSelect: f,
-			...h
-		} = e,
+	let { children: t, placeholder: n, value: a, onChange: c, onClose: d, showScrollbar: _, className: E, multiSelect: f, ...h } = e,
 		p = i.useCallback(
 			(e) => {
 				c(e), !f && (null == d || d());

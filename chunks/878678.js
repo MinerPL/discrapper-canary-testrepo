@@ -18,22 +18,7 @@ var r = n(735250),
 function d(e) {
 	let t,
 		n,
-		{
-			header: a,
-			children: d,
-			confirmText: _,
-			cancelText: E,
-			className: f,
-			onConfirm: h,
-			onCancel: p,
-			onClose: I,
-			onCloseCallback: m,
-			bodyClassName: T,
-			transitionState: g,
-			loading: S = !1,
-			confirmButtonColor: A = o.zx.Colors.RED,
-			focusCancel: N = !1
-		} = e,
+		{ header: a, children: d, confirmText: _, cancelText: E, className: f, onConfirm: h, onCancel: p, onClose: m, onCloseCallback: I, bodyClassName: T, transitionState: g, loading: S = !1, confirmButtonColor: A = o.zx.Colors.RED, focusCancel: N = !1 } = e,
 		v = i.useRef(null);
 	return (
 		i.useEffect(() => {
@@ -43,7 +28,7 @@ function d(e) {
 					return null === (e = v.current) || void 0 === e ? void 0 : e.focus();
 				}, 0);
 		}, [N]),
-		i.useLayoutEffect(() => () => (null == m ? void 0 : m())),
+		i.useLayoutEffect(() => () => (null == I ? void 0 : I())),
 		null != E &&
 			(t = (0, r.jsx)(o.zx, {
 				type: 'button',
@@ -51,7 +36,7 @@ function d(e) {
 				color: o.zx.Colors.PRIMARY,
 				disabled: S,
 				onClick: () => {
-					null == p || p(), I();
+					null == p || p(), m();
 				},
 				autoFocus: N,
 				children: E
@@ -64,7 +49,7 @@ function d(e) {
 				submitting: S,
 				onClick: async () => {
 					try {
-						await (null == h ? void 0 : h()), I();
+						await (null == h ? void 0 : h()), m();
 					} catch (e) {
 						throw e;
 					}

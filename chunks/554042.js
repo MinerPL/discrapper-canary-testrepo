@@ -88,13 +88,7 @@ function h() {
 	let x = S.isPlatformEmbedded ? t : e,
 		M = (0, o.e7)([I.C], () => {
 			var e, s;
-			return (0, T.fD)()
-				? null === (s = I.C.getCurrentBuildOverride()) || void 0 === s
-					? void 0
-					: null === (e = s.overrides) || void 0 === e
-						? void 0
-						: e.discord_web
-				: null;
+			return (0, T.fD)() ? (null === (s = I.C.getCurrentBuildOverride()) || void 0 === s ? void 0 : null === (e = s.overrides) || void 0 === e ? void 0 : e.discord_web) : null;
 		}),
 		[f, D] = g('playground-overrideText', null),
 		[P, L] = g('playground-defaultText', O[0].value),

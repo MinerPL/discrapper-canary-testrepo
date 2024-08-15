@@ -44,9 +44,7 @@ function d(e) {
 		(t = d
 			? (0, i.jsx)('div', {
 					className: u.inviteContent,
-					children: _
-						? c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_OWNER_COMPACT.format({ inviteHook: m })
-						: c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_COMPACT.format({ inviteHook: m })
+					children: _ ? c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_OWNER_COMPACT.format({ inviteHook: m }) : c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_COMPACT.format({ inviteHook: m })
 				})
 			: (0, i.jsxs)('div', {
 					className: u.content,
@@ -57,9 +55,7 @@ function d(e) {
 						}),
 						(0, i.jsx)('div', {
 							className: u.inviteContent,
-							children: _
-								? c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION_OWNER
-								: c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION
+							children: _ ? c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION_OWNER : c.Z.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION
 						}),
 						(0, i.jsx)(a.Button, {
 							onClick: I,

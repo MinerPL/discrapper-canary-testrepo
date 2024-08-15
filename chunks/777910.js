@@ -643,8 +643,7 @@ let { Themes: n } = r(15202).V,
 					}
 				},
 				[n.LIGHT]: {
-					boxShadow:
-						'0 -2px 0 0 hsl(0 0% 0% / 0.025), 0 -1.5px 0 0 hsl(0 0% 0% / 0.025), 0 -1px 0 0 hsl(0 0% 0% / 0.08)',
+					boxShadow: '0 -2px 0 0 hsl(0 0% 0% / 0.025), 0 -1.5px 0 0 hsl(0 0% 0% / 0.025), 0 -1px 0 0 hsl(0 0% 0% / 0.08)',
 					filter: 'drop-shadow(0 -1.5px 0 hsl(0 0% 0% / 0.12))',
 					nativeStyles: {
 						shadowOffset: {

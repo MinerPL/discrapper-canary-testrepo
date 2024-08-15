@@ -3,8 +3,7 @@ var t = Array.prototype.slice,
 e.exports = function (e) {
 	var r,
 		i = this;
-	if ('function' != typeof i || '[object Function]' !== n.call(i))
-		throw TypeError('Function.prototype.bind called on incompatible ' + i);
+	if ('function' != typeof i || '[object Function]' !== n.call(i)) throw TypeError('Function.prototype.bind called on incompatible ' + i);
 	for (var a = t.call(arguments, 1), s = Math.max(0, i.length - a.length), o = [], l = 0; l < s; l++) o.push('$' + l);
 	if (
 		((r = Function(

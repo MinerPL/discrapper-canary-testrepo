@@ -1,6 +1,6 @@
 n.d(t, {
 	A2: function () {
-		return m;
+		return I;
 	},
 	BU: function () {
 		return T;
@@ -24,7 +24,7 @@ n.d(t, {
 		return h;
 	},
 	t8: function () {
-		return I;
+		return m;
 	},
 	tq: function () {
 		return g;
@@ -46,14 +46,7 @@ function E(e, t) {
 	let n = (0, i.wj)(t) ? 'logo-dark' : 'logo-light',
 		r = window.GLOBAL_ENV.CDN_HOST,
 		a = '?size=256';
-	return null != r
-		? ''.concat(location.protocol, '//').concat(r, '/promotions/').concat(e, '/').concat(n).concat(a)
-		: ''
-				.concat(location.protocol)
-				.concat(window.GLOBAL_ENV.API_ENDPOINT, '/promotions/')
-				.concat(e, '/')
-				.concat(n)
-				.concat(a);
+	return null != r ? ''.concat(location.protocol, '//').concat(r, '/promotions/').concat(e, '/').concat(n).concat(a) : ''.concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, '/promotions/').concat(e, '/').concat(n).concat(a);
 }
 function f(e) {
 	return {
@@ -84,7 +77,7 @@ function p(e) {
 		promotion: f(e.promotion)
 	};
 }
-async function I() {
+async function m() {
 	return (
 		await r.tn.get({
 			url: _.ANM.CLAIMED_OUTBOUND_PROMOTION_CODES,
@@ -93,13 +86,11 @@ async function I() {
 		})
 	).body.map(p);
 }
-async function m(e) {
+async function I(e) {
 	return p((await r.tn.post({ url: _.ANM.CLAIM_OUTBOUND_PROMOTION_CODE(e) })).body);
 }
 function T(e, t) {
-	return null != t.outboundRedemptionUrlFormat
-		? t.outboundRedemptionUrlFormat.replace('{code}', encodeURIComponent(e))
-		: t.outboundRedemptionPageLink;
+	return null != t.outboundRedemptionUrlFormat ? t.outboundRedemptionUrlFormat.replace('{code}', encodeURIComponent(e)) : t.outboundRedemptionPageLink;
 }
 function g() {
 	let e = c.Z.lastSeenOutboundPromotionStartDate,

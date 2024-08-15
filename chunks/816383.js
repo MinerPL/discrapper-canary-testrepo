@@ -6,10 +6,7 @@ n.d(t, {
 function r(e, t) {
 	for (var n = 0; n < t.length; n++) {
 		var r = t[n];
-		(r.enumerable = r.enumerable || !1),
-			(r.configurable = !0),
-			'value' in r && (r.writable = !0),
-			Object.defineProperty(e, r.key, r);
+		(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 	}
 }
 function i(e, t, n) {
@@ -40,17 +37,16 @@ var a = (function () {
 		l.sort(function (t, n) {
 			return e[t] < e[n] ? -1 : 1;
 		});
-		for (var c = [], d = [], _ = [], E = 0; E < o - 1; E++)
-			(n = e[E + 1] - e[E]), (r = t[E + 1] - t[E]), d.push(n), c.push(r), _.push(r / n);
+		for (var c = [], d = [], _ = [], E = 0; E < o - 1; E++) (n = e[E + 1] - e[E]), (r = t[E + 1] - t[E]), d.push(n), c.push(r), _.push(r / n);
 		for (var f = [_[0]], h = 0; h < d.length - 1; h++) {
 			var p = _[h],
-				I = _[h + 1];
-			if (p * I <= 0) f.push(0);
+				m = _[h + 1];
+			if (p * m <= 0) f.push(0);
 			else {
 				n = d[h];
-				var m = d[h + 1],
-					T = n + m;
-				f.push((3 * T) / ((T + m) / p + (T + n) / I));
+				var I = d[h + 1],
+					T = n + I;
+				f.push((3 * T) / ((T + I) / p + (T + n) / m));
 			}
 		}
 		f.push(_[_.length - 1]);

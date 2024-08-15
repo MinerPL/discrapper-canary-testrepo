@@ -19,8 +19,8 @@ var i = n(735250),
 	_ = n(433355),
 	f = n(271383),
 	E = n(594174),
-	g = n(189432),
-	C = n(356778),
+	C = n(189432),
+	g = n(356778),
 	I = n(370595),
 	x = n(50493),
 	T = n(446926),
@@ -32,7 +32,7 @@ function v(e) {
 		b = (0, o.e7)([_.ZP], () => _.ZP.getGuildSidebarState(v), [v]),
 		R = a.useRef(0),
 		[j, L] = a.useState(null !== (t = null == b ? void 0 : b.details.additionalSearchQuery) && void 0 !== t ? t : {}),
-		P = (0, C.z0)(s, v, {
+		P = (0, g.z0)(s, v, {
 			addtionalQuery: j,
 			shouldDispatch: !0
 		}),
@@ -55,7 +55,7 @@ function v(e) {
 				if (null == b) return;
 				let t = e.target.scrollTop;
 				(R.current = t),
-					(0, g.r)(v, s, b.baseChannelId, {
+					(0, C.r)(v, s, b.baseChannelId, {
 						modViewPanel: x.k.MESSAGE_HISTORY,
 						additionalSearchQuery: j,
 						scrollOffset: R.current
@@ -72,7 +72,7 @@ function v(e) {
 					offset: 25 * e
 				};
 				L(t),
-					(0, g.r)(v, s, b.baseChannelId, {
+					(0, C.r)(v, s, b.baseChannelId, {
 						modViewPanel: x.k.MESSAGE_HISTORY,
 						additionalSearchQuery: t,
 						scrollOffset: R.current

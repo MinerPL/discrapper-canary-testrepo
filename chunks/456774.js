@@ -19,8 +19,8 @@ var r = n(735250),
 	f = n(17181),
 	h = n(303737),
 	p = n(965638),
-	I = n(434404),
-	m = n(962086),
+	m = n(434404),
+	I = n(962086),
 	T = n(160404),
 	g = n(703656),
 	S = n(814443),
@@ -43,11 +43,7 @@ function b(e) {
 					{
 						let i = null;
 						return (
-							e.category === C.L.EMBEDDED_ACTIVITY
-								? (i = e.embeddedActivities[0].channelId)
-								: e.category === C.L.HANGOUT || e.category === C.L.GAMING
-									? (i = e.channelId)
-									: e.category === C.L.EVENT && (i = e.event.channel_id),
+							e.category === C.L.EMBEDDED_ACTIVITY ? (i = e.embeddedActivities[0].channelId) : e.category === C.L.HANGOUT || e.category === C.L.GAMING ? (i = e.channelId) : e.category === C.L.EVENT && (i = e.event.channel_id),
 							n++,
 							(0, r.jsx)(
 								O.Z,
@@ -80,26 +76,13 @@ function b(e) {
 			e.push(o.category),
 				r.push(h.length),
 				i.push(h.length > 0 ? h[0].id : '0'),
-				s.push(
-					h.length > 0 &&
-						null !== (E = null === (c = S.Z.getUserAffinity(h[0].id)) || void 0 === c ? void 0 : c.affinity) &&
-						void 0 !== E
-						? E
-						: 0
-				),
+				s.push(h.length > 0 && null !== (E = null === (c = S.Z.getUserAffinity(h[0].id)) || void 0 === c ? void 0 : c.affinity) && void 0 !== E ? E : 0),
 				n.push(Math.min(h.length, 6)),
-				l.push(
-					null !== (f = null === (d = A.Z.getChannel(a)) || void 0 === d ? void 0 : d.type) && void 0 !== f
-						? f
-						: y.d4z.UNKNOWN
-				),
+				l.push(null !== (f = null === (d = A.Z.getChannel(a)) || void 0 === d ? void 0 : d.type) && void 0 !== f ? f : y.d4z.UNKNOWN),
 				(u['position_'.concat(p + 1, '_affinity_user_ids')] = h.slice(0, 6).map((e) => e.id)),
 				(u['position_'.concat(p + 1, '_user_affinity_scores')] = h.slice(0, 6).map((e) => {
 					var t, n;
-					return null !== (n = null === (t = S.Z.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) &&
-						void 0 !== n
-						? n
-						: 0;
+					return null !== (n = null === (t = S.Z.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0;
 				}));
 		}
 		0 !== e.length &&
@@ -133,11 +116,7 @@ function M(e) {
 			backNavigationSection: T.Z.getBackNavigationSection(n.id)
 		})),
 		C = () => {
-			T.Z.isFullServerPreview(n.id) && (0, g.uL)(y.Z5c.CHANNEL(n.id)),
-				E.ZP.shouldShowOnboarding(n.id) && (_.Z.finishOnboarding(n.id), (0, f.discardOnboardingPromise)(n.id)),
-				(0, m.mL)(n.id),
-				I.Z.open(n.id, R),
-				R === y.pNK.ROLE_SUBSCRIPTIONS && (0, h.GN)(n.id);
+			T.Z.isFullServerPreview(n.id) && (0, g.uL)(y.Z5c.CHANNEL(n.id)), E.ZP.shouldShowOnboarding(n.id) && (_.Z.finishOnboarding(n.id), (0, f.discardOnboardingPromise)(n.id)), (0, I.mL)(n.id), m.Z.open(n.id, R), R === y.pNK.ROLE_SUBSCRIPTIONS && (0, h.GN)(n.id);
 		},
 		M = null === (t = A.current) || void 0 === t ? void 0 : t.clientHeight,
 		P = S + 14;
@@ -189,7 +168,7 @@ function M(e) {
 									variant: 'text-xs/medium',
 									children: D.Z.Messages.GUILD_POPOUT_INVITES_PAUSED.format({
 										onClick: () => {
-											o(), I.Z.open(n.id, y.pNK.INSTANT_INVITES);
+											o(), m.Z.open(n.id, y.pNK.INSTANT_INVITES);
 										}
 									})
 								})

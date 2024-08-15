@@ -147,35 +147,13 @@ class ef extends a.Component {
 					let e = Date.now() - ec;
 					E.Z.track(ea.rMx.OVERLAY_LOCKED, { unlocked_duration: e }), (ec = null);
 				}
-				S.Z.disable(),
-					(this.activeKeyEventShapes = []),
-					G.Z.isPinned(ea.Odu.TEXT) && (S.Z.setLayout(I.Xq), S.Z.enable());
-			} else
-				e.locked &&
-					!this.props.locked &&
-					(window.removeEventListener('contextmenu', ed, !1),
-					null == ec && ((ec = Date.now()), E.Z.track(ea.rMx.OVERLAY_UNLOCKED)),
-					S.Z.disable(),
-					(this.activeKeyEventShapes = []),
-					S.Z.setLayout(I.Sr),
-					S.Z.enable());
+				S.Z.disable(), (this.activeKeyEventShapes = []), G.Z.isPinned(ea.Odu.TEXT) && (S.Z.setLayout(I.Xq), S.Z.enable());
+			} else e.locked && !this.props.locked && (window.removeEventListener('contextmenu', ed, !1), null == ec && ((ec = Date.now()), E.Z.track(ea.rMx.OVERLAY_UNLOCKED)), S.Z.disable(), (this.activeKeyEventShapes = []), S.Z.setLayout(I.Sr), S.Z.enable());
 			e.keybindKeyCodes !== this.props.keybindKeyCodes && (this.lockEventShape = (0, K.d2)(this.props.keybindKeyCodes));
 		}
 	}
 	initialSetup() {
-		let {
-			connectedToVoice: e,
-			locked: t,
-			canGoLive: n,
-			isStreaming: i,
-			voiceGuild: s,
-			voiceChannelId: a,
-			game: o,
-			canStartBroadcast: r,
-			canBroadcast: l,
-			showKeybindNotification: c,
-			dismissKeybindNotification: d
-		} = this.props;
+		let { connectedToVoice: e, locked: t, canGoLive: n, isStreaming: i, voiceGuild: s, voiceChannelId: a, game: o, canStartBroadcast: r, canBroadcast: l, showKeybindNotification: c, dismissKeybindNotification: d } = this.props;
 		E.Z.track(ea.rMx.OVERLAY_INITIALIZED, {
 			voice_widget_connected: e,
 			text_widget_connected: G.Z.isPinned(ea.Odu.TEXT)
@@ -239,17 +217,10 @@ class ef extends a.Component {
 							});
 				});
 		}
-		window.addEventListener('keydown', this.onKeyDownGlobal, !0),
-			window.addEventListener('keyup', this.onKeyUpGlobal, !0);
+		window.addEventListener('keydown', this.onKeyDownGlobal, !0), window.addEventListener('keyup', this.onKeyUpGlobal, !0);
 	}
 	componentWillUnmount() {
-		window.removeEventListener('resize', this.handleWindowResize),
-			window.removeEventListener('keydown', this.onKeyDownGlobal, !0),
-			window.removeEventListener('keyup', this.onKeyUpGlobal, !0),
-			this.props.locked && window.removeEventListener('contextmenu', ed, !1),
-			M.Z.terminate(),
-			C.Z.terminate(),
-			b.Z.terminate();
+		window.removeEventListener('resize', this.handleWindowResize), window.removeEventListener('keydown', this.onKeyDownGlobal, !0), window.removeEventListener('keyup', this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener('contextmenu', ed, !1), M.Z.terminate(), C.Z.terminate(), b.Z.terminate();
 	}
 	renderInvalidSizeMessage() {
 		return (0, s.jsx)(O.Z, {
@@ -263,17 +234,7 @@ class ef extends a.Component {
 		});
 	}
 	render() {
-		let {
-				locked: e,
-				keybind: t,
-				incompatibleApp: n,
-				initialized: a,
-				isPreviewingInGame: o,
-				activeRegions: l,
-				windowSize: c,
-				voiceGuild: d,
-				voiceChannelId: u
-			} = this.props,
+		let { locked: e, keybind: t, incompatibleApp: n, initialized: a, isPreviewingInGame: o, activeRegions: l, windowSize: c, voiceGuild: d, voiceChannelId: u } = this.props,
 			{ width: h, height: p } = c;
 		if (0 === h || 0 === p || n || !a) return null;
 		let f = e || o,
@@ -337,10 +298,7 @@ class ef extends a.Component {
 				let t = ep(e),
 					n = this.getActiveKeyEventIndex(t) > -1,
 					i = [16, 17, 18, 91].includes(e.keyCode);
-				!n && !i && this.activeKeyEventShapes.push(t),
-					this.activeKeyEventShapes.length === this.lockEventShape.length &&
-						this.lockEventShape.every((e) => this.activeKeyEventShapes.some((t) => p()(e, t))) &&
-						(e.preventDefault(), e.stopPropagation());
+				!n && !i && this.activeKeyEventShapes.push(t), this.activeKeyEventShapes.length === this.lockEventShape.length && this.lockEventShape.every((e) => this.activeKeyEventShapes.some((t) => p()(e, t))) && (e.preventDefault(), e.stopPropagation());
 				let { locked: s, activeRegions: a } = this.props;
 				t.keyCode === c().codes.esc && s && a.has(ea.O0n.TEXT_WIDGET) && E.Z.deactivateAllRegions();
 			}),

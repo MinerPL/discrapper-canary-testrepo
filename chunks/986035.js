@@ -8,15 +8,7 @@ var i = s(735250),
 	d = s(224499);
 class u extends n.PureComponent {
 	render() {
-		let {
-			title: e,
-			description: t,
-			agreement: s,
-			disagreement: n,
-			onAgree: a,
-			onDisagree: u,
-			imageClassName: g
-		} = this.props;
+		let { title: e, description: t, agreement: s, disagreement: n, onAgree: a, onDisagree: u, imageClassName: g } = this.props;
 		return (0, i.jsxs)(r.Z, {
 			className: l.gatedContent,
 			justify: r.Z.Justify.CENTER,

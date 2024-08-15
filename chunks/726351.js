@@ -25,7 +25,7 @@ function h(e) {
 function p(e) {
 	return e && 1 === e.nodeType;
 }
-function I(e, t, n) {
+function m(e, t, n) {
 	var r = e[t];
 	return null == r && void 0 !== n ? n : r;
 }
@@ -44,31 +44,23 @@ e.exports = function (e) {
 			stateHandler: d
 		});
 	}
-	var m = e.reporter;
-	!m && (m = l(!1 === m));
-	var T = I(e, 'batchProcessor', c({ reporter: m })),
+	var I = e.reporter;
+	!I && (I = l(!1 === I));
+	var T = m(e, 'batchProcessor', c({ reporter: I })),
 		g = {};
-	(g.callOnAdd = !!I(e, 'callOnAdd', !0)), (g.debug = !!I(e, 'debug', !1));
+	(g.callOnAdd = !!m(e, 'callOnAdd', !0)), (g.debug = !!m(e, 'debug', !1));
 	var S = a(t),
 		A = i({ stateHandler: d }),
-		N = I(e, 'strategy', 'object'),
-		v = I(e, 'important', !1),
+		N = m(e, 'strategy', 'object'),
+		v = m(e, 'important', !1),
 		O = {
-			reporter: m,
+			reporter: I,
 			batchProcessor: T,
 			stateHandler: d,
 			idHandler: t,
 			important: v
 		};
-	if (
-		('scroll' === N &&
-			(u.isLegacyOpera()
-				? (m.warn('Scroll strategy is not supported on legacy Opera. Changing to object strategy.'), (N = 'object'))
-				: u.isIE(9) &&
-					(m.warn('Scroll strategy is not supported on IE9. Changing to object strategy.'), (N = 'object'))),
-		'scroll' === N)
-	)
-		n = E(O);
+	if (('scroll' === N && (u.isLegacyOpera() ? (I.warn('Scroll strategy is not supported on legacy Opera. Changing to object strategy.'), (N = 'object')) : u.isIE(9) && (I.warn('Scroll strategy is not supported on IE9. Changing to object strategy.'), (N = 'object'))), 'scroll' === N)) n = E(O);
 	else if ('object' === N) n = _(O);
 	else throw Error('Invalid strategy name: ' + N);
 	var R = {};
@@ -86,19 +78,19 @@ e.exports = function (e) {
 			if (!a) throw Error('Listener required.');
 			if (p(i)) i = [i];
 			else {
-				if (!f(i)) return m.error('Invalid arguments. Must be a DOM element or a collection of DOM elements.');
+				if (!f(i)) return I.error('Invalid arguments. Must be a DOM element or a collection of DOM elements.');
 				i = h(i);
 			}
 			var l = 0,
-				u = I(e, 'callOnAdd', g.callOnAdd),
-				c = I(e, 'onReady', function () {}),
-				_ = I(e, 'debug', g.debug);
+				u = m(e, 'callOnAdd', g.callOnAdd),
+				c = m(e, 'onReady', function () {}),
+				_ = m(e, 'debug', g.debug);
 			r(i, function (e) {
 				!d.getState(e) && (d.initState(e), t.set(e));
 				var E = t.get(e);
-				if ((_ && m.log('Attaching listener to element', E, e), !A.isDetectable(e))) {
-					if ((_ && m.log(E, 'Not detectable.'), A.isBusy(e))) {
-						_ && m.log(E, 'System busy making it detectable'),
+				if ((_ && I.log('Attaching listener to element', E, e), !A.isDetectable(e))) {
+					if ((_ && I.log(E, 'Not detectable.'), A.isBusy(e))) {
+						_ && I.log(E, 'System busy making it detectable'),
 							o(u, e, a),
 							(R[E] = R[E] || []),
 							R[E].push(function () {
@@ -107,7 +99,7 @@ e.exports = function (e) {
 						return;
 					}
 					return (
-						_ && m.log(E, 'Making detectable...'),
+						_ && I.log(E, 'Making detectable...'),
 						A.markBusy(e, !0),
 						n.makeDetectable(
 							{
@@ -116,7 +108,7 @@ e.exports = function (e) {
 							},
 							e,
 							function (e) {
-								if ((_ && m.log(E, 'onElementDetectable'), d.getState(e))) {
+								if ((_ && I.log(E, 'onElementDetectable'), d.getState(e))) {
 									A.markAsDetectable(e), A.markBusy(e, !1), n.addListener(e, s), o(u, e, a);
 									var t = d.getState(e);
 									if (t && t.startSize) {
@@ -128,23 +120,23 @@ e.exports = function (e) {
 										r(R[E], function (e) {
 											e();
 										});
-								} else _ && m.log(E, 'Element uninstalled before being detectable.');
+								} else _ && I.log(E, 'Element uninstalled before being detectable.');
 								delete R[E], ++l === i.length && c();
 							}
 						)
 					);
 				}
-				_ && m.log(E, 'Already detecable, adding listener.'), o(u, e, a), l++;
+				_ && I.log(E, 'Already detecable, adding listener.'), o(u, e, a), l++;
 			}),
 				l === i.length && c();
 		},
 		removeListener: S.removeListener,
 		removeAllListeners: S.removeAllListeners,
 		uninstall: function (e) {
-			if (!e) return m.error('At least one element is required.');
+			if (!e) return I.error('At least one element is required.');
 			if (p(e)) e = [e];
 			else {
-				if (!f(e)) return m.error('Invalid arguments. Must be a DOM element or a collection of DOM elements.');
+				if (!f(e)) return I.error('Invalid arguments. Must be a DOM element or a collection of DOM elements.');
 				e = h(e);
 			}
 			r(e, function (e) {

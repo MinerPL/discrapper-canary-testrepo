@@ -119,19 +119,7 @@ function P(e) {
 			});
 }
 t.ZP = function (e) {
-	let {
-			sidebar: t,
-			content: n,
-			notice: i,
-			section: s,
-			closeAction: l,
-			sidebarTheme: r,
-			contentType: o,
-			scrollerRef: a,
-			mobileSidebarOpen: d,
-			toggleSidebar: x,
-			hideSidebar: N = !1
-		} = e,
+	let { sidebar: t, content: n, notice: i, section: s, closeAction: l, sidebarTheme: r, contentType: o, scrollerRef: a, mobileSidebarOpen: d, toggleSidebar: x, hideSidebar: N = !1 } = e,
 		C = u.useRef(null),
 		E = u.useRef(null),
 		R = (0, v.Z)(s),
@@ -228,10 +216,7 @@ t.ZP = function (e) {
 									children: [
 										t,
 										(0, c.jsxs)(S.AdvancedScrollerAuto, {
-											className: h()(
-												j.contentRegionScroller,
-												N ? j.contentRegionHiddenSidebar : j.contentRegionShownSidebar
-											),
+											className: h()(j.contentRegionScroller, N ? j.contentRegionHiddenSidebar : j.contentRegionShownSidebar),
 											ref: A,
 											children: [
 												(0, c.jsx)(T.Provider, {

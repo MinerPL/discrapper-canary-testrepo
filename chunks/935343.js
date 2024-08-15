@@ -13,8 +13,7 @@ var n,
 				})(t, e);
 		}),
 		function (t, e) {
-			if ('function' != typeof e && null !== e)
-				throw TypeError('Class extends value ' + String(e) + ' is not a constructor or null');
+			if ('function' != typeof e && null !== e) throw TypeError('Class extends value ' + String(e) + ' is not a constructor or null');
 			function r() {
 				this.constructor = t;
 			}
@@ -45,9 +44,7 @@ var n,
 	a =
 		(this && this.__spreadArray) ||
 		function (t, e, r) {
-			if (r || 2 == arguments.length)
-				for (var n, i = 0, o = e.length; i < o; i++)
-					(n || !(i in e)) && (!n && (n = Array.prototype.slice.call(e, 0, i)), (n[i] = e[i]));
+			if (r || 2 == arguments.length) for (var n, i = 0, o = e.length; i < o; i++) (n || !(i in e)) && (!n && (n = Array.prototype.slice.call(e, 0, i)), (n[i] = e[i]));
 			return t.concat(n || Array.prototype.slice.call(e));
 		};
 Object.defineProperty(e, '__esModule', { value: !0 }), (e.IntlManagerReact = void 0);
@@ -82,5 +79,5 @@ var s = r(470079),
 			}),
 			e
 		);
-	})(r(461277).IntlManager);
+	})(r(563803).IntlManager);
 e.IntlManagerReact = u;

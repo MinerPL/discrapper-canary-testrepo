@@ -91,8 +91,7 @@ class i {
 					)
 				];
 				for (let t of d) {
-					if (((t.value = r.value || e.value), t.value && this.cache.set(t.value, t), e.type && t.type !== e.type))
-						throw Error(`Unsupported type <${s(t.type)}> in <${s(i.type)}>. Only <${s(e.type)}> is supported.`);
+					if (((t.value = r.value || e.value), t.value && this.cache.set(t.value, t), e.type && t.type !== e.type)) throw Error(`Unsupported type <${s(t.type)}> in <${s(i.type)}>. Only <${s(e.type)}> is supported.`);
 					l++, yield t;
 				}
 				u = a.next(d);
@@ -118,11 +117,7 @@ class i {
 				childNodes: a(function* () {
 					if (!e.hasChildNodes) return;
 					let n = 0;
-					for (let r of e.childNodes())
-						for (let e of (null != r.key && (r.key = `${u.key}${r.key}`),
-						(r.index = n),
-						l.getFullNode(r, l.getChildState(t, r), u.key, u)))
-							n++, yield e;
+					for (let r of e.childNodes()) for (let e of (null != r.key && (r.key = `${u.key}${r.key}`), (r.index = n), l.getFullNode(r, l.getChildState(t, r), u.key, u))) n++, yield e;
 				})
 			};
 		yield u;

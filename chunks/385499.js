@@ -9,23 +9,13 @@ var i = n(120356),
 	c = n(982803);
 let d = (e) => {
 	let t,
-		{
-			invertColor: n = !1,
-			type: i = l.Hb.BOT,
-			className: d,
-			verified: _,
-			hideIcon: E = !1,
-			useRemSizes: f = !1,
-			children: h = []
-		} = e,
+		{ invertColor: n = !1, type: i = l.Hb.BOT, className: d, verified: _, hideIcon: E = !1, useRemSizes: f = !1, children: h = [] } = e,
 		p = null,
-		I = u.Z.Messages.VERIFIED_BOT_TOOLTIP;
+		m = u.Z.Messages.VERIFIED_BOT_TOOLTIP;
 	switch (i) {
 		case l.Hb.SYSTEM_DM:
 		case l.Hb.OFFICIAL:
-			(_ = !0),
-				(I = u.Z.Messages.DISCORD_SYSTEM_MESSAGE_BOT_TAG_TOOLTIP_OFFICIAL),
-				(p = u.Z.Messages.SYSTEM_DM_TAG_OFFICIAL);
+			(_ = !0), (m = u.Z.Messages.DISCORD_SYSTEM_MESSAGE_BOT_TAG_TOOLTIP_OFFICIAL), (p = u.Z.Messages.SYSTEM_DM_TAG_OFFICIAL);
 			break;
 		case l.Hb.SERVER:
 			p = u.Z.Messages.BOT_TAG_SERVER;
@@ -37,7 +27,7 @@ let d = (e) => {
 			p = u.Z.Messages.STAFF_BADGE_TOOLTIP;
 			break;
 		case l.Hb.AI:
-			(_ = !0), (I = u.Z.Messages.AI_GENERATED_TOOLTIP), (p = u.Z.Messages.AI_TAG);
+			(_ = !0), (m = u.Z.Messages.AI_GENERATED_TOOLTIP), (p = u.Z.Messages.AI_TAG);
 			break;
 		case l.Hb.REMIX:
 			(_ = !1), (p = u.Z.Messages.REMIXING_TAG);
@@ -46,12 +36,12 @@ let d = (e) => {
 		default:
 			p = u.Z.Messages.APP_TAG;
 	}
-	let m = i === l.Hb.ORIGINAL_POSTER,
+	let I = i === l.Hb.ORIGINAL_POSTER,
 		T = i === l.Hb.REMIX,
 		g = null;
 	_ &&
 		(g = (0, r.jsx)(s.u, {
-			text: I,
+			text: m,
 			align: 'center',
 			position: 'top',
 			children: (e) =>
@@ -66,7 +56,7 @@ let d = (e) => {
 		(0, r.jsxs)('span', {
 			...e,
 			className: a()(d, t, f ? c.rem : c.px, {
-				[c.botTagOP]: m,
+				[c.botTagOP]: I,
 				[c.botTagRemix]: T
 			}),
 			children: [

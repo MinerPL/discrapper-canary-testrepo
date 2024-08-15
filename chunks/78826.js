@@ -28,26 +28,18 @@ function c(e) {
 }
 function d(e) {
 	var t, n;
-	return (0, a.k)(e, HTMLImageElement)
-		? e.getAttribute('src')
-		: (0, a.k)(e, HTMLVideoElement)
-			? null !==
-					(n = null === (t = e.querySelectorAll('source')[0]) || void 0 === t ? void 0 : t.getAttribute('src')) &&
-				void 0 !== n
-				? n
-				: 'video'
-			: e.tagName;
+	return (0, a.k)(e, HTMLImageElement) ? e.getAttribute('src') : (0, a.k)(e, HTMLVideoElement) ? (null !== (n = null === (t = e.querySelectorAll('source')[0]) || void 0 === t ? void 0 : t.getAttribute('src')) && void 0 !== n ? n : 'video') : e.tagName;
 }
 function _(e) {
 	let { children: t, isPreview: n = !1, source: _, questId: E } = e,
 		[f, h] = i.useState(!1),
-		[p, I] = i.useState(new Set()),
-		[m, T] = i.useState(!1),
+		[p, m] = i.useState(new Set()),
+		[I, T] = i.useState(!1),
 		g = i.useRef(!1);
 	i.useEffect(() => {
 		let e = new Set();
 		for (let t of p) !c(t) && e.add(t);
-		e.size !== p.size && I(e);
+		e.size !== p.size && m(e);
 	}, [p]);
 	let S = i.useCallback(
 			(e) => {
@@ -74,7 +66,7 @@ function _(e) {
 			[n, _, E]
 		),
 		A = i.useCallback((e) => {
-			I((t) => {
+			m((t) => {
 				let n = new Set(t);
 				return n.delete(e), n;
 			});
@@ -83,12 +75,11 @@ function _(e) {
 			(e, t) => {
 				var n;
 				if ((T(!0), c(e))) return;
-				I((t) => {
+				m((t) => {
 					let n = new Set(t);
 					return n.add(e), n;
 				});
-				let r =
-					((n = e), (0, a.k)(n, HTMLImageElement) ? 'load' : (0, a.k)(n, HTMLVideoElement) ? 'canplaythrough' : 'load');
+				let r = ((n = e), (0, a.k)(n, HTMLImageElement) ? 'load' : (0, a.k)(n, HTMLVideoElement) ? 'canplaythrough' : 'load');
 				e.addEventListener(r, function t() {
 					A(e), e.removeEventListener(r, t);
 				});
@@ -105,7 +96,7 @@ function _(e) {
 			},
 			[S, A]
 		),
-		v = i.useMemo(() => p.size > 0 || !m, [m, p]);
+		v = i.useMemo(() => p.size > 0 || !I, [I, p]);
 	i.useEffect(() => {
 		!v && (g.current = !0);
 	}, [v]);

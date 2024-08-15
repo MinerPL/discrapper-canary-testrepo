@@ -21,24 +21,7 @@ class i {
 	traceEvent(e, t) {
 		let n;
 		let r = this._report;
-		void 0 !==
-		r[
-			(n =
-				'soundshare_state_transition' === t.type
-					? 'soundshare_state_transition_'.concat(
-							['detached', 'waiting', 'attached', 'started', 'playing', 'silence'][t.newState],
-							'_count'
-						)
-					: ''.concat(t.type, '_count'))
-		]
-			? r[n] < 32767 && r[n]++
-			: r.soundshare_unknown_event_count++,
-			'pid' in t &&
-				(0 === r.soundshare_first_pid && (r.soundshare_first_pid = t.pid),
-				(r.soundshare_last_pid = t.pid),
-				this._pids.add(t.pid)),
-			null != e &&
-				(null == r.soundshare_first_session && (r.soundshare_first_session = e), (r.soundshare_last_session = e));
+		void 0 !== r[(n = 'soundshare_state_transition' === t.type ? 'soundshare_state_transition_'.concat(['detached', 'waiting', 'attached', 'started', 'playing', 'silence'][t.newState], '_count') : ''.concat(t.type, '_count'))] ? r[n] < 32767 && r[n]++ : r.soundshare_unknown_event_count++, 'pid' in t && (0 === r.soundshare_first_pid && (r.soundshare_first_pid = t.pid), (r.soundshare_last_pid = t.pid), this._pids.add(t.pid)), null != e && (null == r.soundshare_first_session && (r.soundshare_first_session = e), (r.soundshare_last_session = e));
 	}
 	getStats() {
 		return {

@@ -124,13 +124,7 @@ function h(e) {
 							onClick: k,
 							submitting: Z,
 							color: l.Z.Button.Colors.GREEN,
-							children: j
-								? U
-									? m.Z.Messages.STAGE_CHANNEL_JOIN
-									: m.Z.Messages.INVITE_VOICE_CHANNEL_JOIN
-								: b
-									? m.Z.Messages.JOINED_GUILD
-									: m.Z.Messages.JOIN_GUILD
+							children: j ? (U ? m.Z.Messages.STAGE_CHANNEL_JOIN : m.Z.Messages.INVITE_VOICE_CHANNEL_JOIN) : b ? m.Z.Messages.JOINED_GUILD : m.Z.Messages.JOIN_GUILD
 						})
 					]
 				}),

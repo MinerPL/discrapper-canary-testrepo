@@ -31,17 +31,7 @@ var s = n(735250),
 let O = n(74773),
 	A = n(210657);
 function M(e) {
-	let {
-			logs: t,
-			guildId: n,
-			expandedId: i,
-			lastExpandedId: r,
-			scroller: l,
-			setExpandedRef: c,
-			setLastExpandedRef: d,
-			onHeaderClick: u,
-			onContentClick: _
-		} = e,
+	let { logs: t, guildId: n, expandedId: i, lastExpandedId: r, scroller: l, setExpandedRef: c, setLastExpandedRef: d, onHeaderClick: u, onContentClick: _ } = e,
 		I = a.useRef(l);
 	a.useEffect(() => {
 		I.current = l;
@@ -165,8 +155,7 @@ function D() {
 			if (null == e) return;
 			let t = Y(),
 				n = W;
-			if (null == t.expanded || null == t.lastExpanded || null == n.expanded || t.expanded.top < t.lastExpanded.top)
-				return;
+			if (null == t.expanded || null == t.lastExpanded || null == n.expanded || t.expanded.top < t.lastExpanded.top) return;
 			let s = n.expanded.height - t.lastExpanded.height,
 				a = e.getScrollerState().scrollTop - s;
 			e.scrollTo({ to: a });
@@ -237,12 +226,8 @@ function D() {
 							if (U) return (0, s.jsx)(_.Z, {});
 							if (T || o) return ee();
 							if ((null == B ? void 0 : B.length) === 0) {
-								let e = v
-										? R.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_BODY
-										: R.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_BODY,
-									t = v
-										? R.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_TITLE
-										: R.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_TITLE;
+								let e = v ? R.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_BODY : R.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_BODY,
+									t = v ? R.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_TITLE : R.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_TITLE;
 								return (0, s.jsxs)(u.EmptyState, {
 									theme: b,
 									className: f.__invalid_empty,

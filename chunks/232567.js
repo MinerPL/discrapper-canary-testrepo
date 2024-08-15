@@ -1,12 +1,12 @@
 n.d(t, {
 	In: function () {
-		return m;
+		return I;
 	},
 	Lr: function () {
 		return h;
 	},
 	PR: function () {
-		return I;
+		return m;
 	},
 	k: function () {
 		return f;
@@ -73,7 +73,7 @@ function p(e, t) {
 		body: { flags: r }
 	});
 }
-function I(e) {
+function m(e) {
 	let t = c.default.getUser(e);
 	return null != t
 		? Promise.resolve(t)
@@ -92,16 +92,8 @@ function I(e) {
 					)
 				);
 }
-async function m(e) {
-	let {
-			friendToken: t,
-			withMutualGuilds: n,
-			withMutualFriendsCount: r,
-			withMutualFriends: i,
-			guildId: a,
-			connectionsRoleId: s,
-			abortSignal: u
-		} = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+async function I(e) {
+	let { friendToken: t, withMutualGuilds: n, withMutualFriendsCount: r, withMutualFriends: i, guildId: a, connectionsRoleId: s, abortSignal: u } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
 		c = arguments.length > 2 ? arguments[2] : void 0;
 	l.Z.dispatch({
 		type: 'USER_PROFILE_FETCH_START',
@@ -142,9 +134,7 @@ async function m(e) {
 		);
 	} catch (t) {
 		throw (
-			(null != t &&
-				(null == t ? void 0 : t.body) != null &&
-				E.warn('fetchProfile error: '.concat(t.body.code, ' - ').concat(t.body.message)),
+			(null != t && (null == t ? void 0 : t.body) != null && E.warn('fetchProfile error: '.concat(t.body.code, ' - ').concat(t.body.message)),
 			l.Z.dispatch({
 				type: 'USER_PROFILE_FETCH_FAILURE',
 				userId: e

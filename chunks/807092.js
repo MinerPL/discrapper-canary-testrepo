@@ -87,10 +87,7 @@ class h extends (s = o.ZP.Store) {
 		MESSAGE_DELETE: function (e) {
 			var t, n, r;
 			let { id: i, channelId: a } = e;
-			if (
-				(null === (n = c[a]) || void 0 === n ? void 0 : null === (t = n.message) || void 0 === t ? void 0 : t.id) === i
-			)
-				delete c[a], delete _[a];
+			if ((null === (n = c[a]) || void 0 === n ? void 0 : null === (t = n.message) || void 0 === t ? void 0 : t.id) === i) delete c[a], delete _[a];
 			else {
 				if ((null === (r = d[a]) || void 0 === r ? void 0 : r.messageId) !== i) return !1;
 				delete d[a], delete _[a];

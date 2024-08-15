@@ -10,13 +10,7 @@ var s = n(735250),
 	u = n(689938),
 	_ = n(594964);
 t.Z = function (e) {
-	let {
-			items: t,
-			carouselClassName: n,
-			paginationCaretClassName: i,
-			intervalBetweenAutomaticItemRotations: I,
-			renderItem: E
-		} = e,
+	let { items: t, carouselClassName: n, paginationCaretClassName: i, intervalBetweenAutomaticItemRotations: I, renderItem: E } = e,
 		T = a.useMemo(() => new l.Xp(), []),
 		[m, N] = a.useState(d.n.LEFT),
 		[S, h] = a.useState(0),

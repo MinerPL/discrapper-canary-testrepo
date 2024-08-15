@@ -28,20 +28,9 @@ async function S() {
 	if (!T) return;
 	let t = Date.now(),
 		n = 15 * d.Z.Millis.MINUTE + e - t;
-	n > d.Z.Millis.HOUR &&
-		_.Z.addBreadcrumb({
-			message: 'Received invalid Date.now() when generating a heartbeat. Date.now() = '
-				.concat(t, ', timeUntilNextHeartbeat = ')
-				.concat(n, ', latestHeartbeatEventTimestamp = ')
-				.concat(e)
-		}),
+	n > d.Z.Millis.HOUR && _.Z.addBreadcrumb({ message: 'Received invalid Date.now() when generating a heartbeat. Date.now() = '.concat(t, ', timeUntilNextHeartbeat = ').concat(n, ', latestHeartbeatEventTimestamp = ').concat(e) }),
 		e > t && (n = 0),
-		_.Z.addBreadcrumb({
-			message: 'Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: '.concat(
-				n / 1000,
-				' seconds. Scheduling Heartbeat'
-			)
-		}),
+		_.Z.addBreadcrumb({ message: 'Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: '.concat(n / 1000, ' seconds. Scheduling Heartbeat') }),
 		f(!1),
 		(g = setTimeout(
 			() => {
@@ -55,13 +44,7 @@ async function S() {
 }
 function f() {
 	let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-	null != g && (clearTimeout(g), (g = null)),
-		null != I && (clearInterval(I), (I = null)),
-		null != p &&
-			e &&
-			(_.Z.addBreadcrumb({ message: 'Heartbeat correctly scheduled. Clearing 10s check timeout' }),
-			clearTimeout(p),
-			(p = null));
+	null != g && (clearTimeout(g), (g = null)), null != I && (clearInterval(I), (I = null)), null != p && e && (_.Z.addBreadcrumb({ message: 'Heartbeat correctly scheduled. Clearing 10s check timeout' }), clearTimeout(p), (p = null));
 }
 async function C() {
 	let e = Date.now(),
@@ -89,11 +72,7 @@ async function C() {
 	null != d && (a.client_heartbeat_renderer_memory_used_heap = d);
 	{
 		let e = l.ZP.getCurrentGameForAnalytics();
-		null != e &&
-			((a.client_heartbeat_current_game_id = e.id),
-			(a.client_heartbeat_current_game_name = e.name),
-			(a.client_heartbeat_current_game_executable = (0, r.N6)(e.exePath)),
-			(a.client_heartbeat_current_game_distributor = e.distributor));
+		null != e && ((a.client_heartbeat_current_game_id = e.id), (a.client_heartbeat_current_game_name = e.name), (a.client_heartbeat_current_game_executable = (0, r.N6)(e.exePath)), (a.client_heartbeat_current_game_distributor = e.distributor));
 	}
 	c.default.track(h.rMx.CLIENT_HEARTBEAT, a), i.K.set(m, Date.now().toString()), (0, s.Z)();
 }
@@ -112,12 +91,7 @@ function v() {
 		})();
 }
 function Z() {
-	_.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }),
-		o.Z.addChangeListener(O),
-		a.Z.subscribe('WINDOW_FOCUS', R),
-		a.Z.subscribe('APP_STATE_UPDATE', x),
-		a.Z.subscribe('LOGIN_SUCCESS', L),
-		v();
+	_.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), o.Z.addChangeListener(O), a.Z.subscribe('WINDOW_FOCUS', R), a.Z.subscribe('APP_STATE_UPDATE', x), a.Z.subscribe('LOGIN_SUCCESS', L), v();
 }
 function L() {
 	C();

@@ -30,12 +30,8 @@ let f = 12,
 	N = (e) => {
 		let { categoryId: t, categoryName: n, onClick: a } = e,
 			s = t === p.Hk,
-			r = s
-				? T.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER
-				: T.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({ categoryName: n }),
-			l = s
-				? T.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY
-				: T.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({ onClick: a });
+			r = s ? T.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : T.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({ categoryName: n }),
+			l = s ? T.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY : T.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({ onClick: a });
 		return (0, i.jsxs)('div', {
 			className: S.emptyContainer,
 			children: [
@@ -67,23 +63,7 @@ let f = 12,
 			]
 		});
 t.Z = (e) => {
-	let {
-			loadId: t,
-			searchResults: n,
-			mostRecentQuery: s,
-			defaultLanguage: l,
-			availableLanguages: u,
-			isFetchingSearch: v,
-			scroller: Z,
-			loadingGuildId: L,
-			theme: O,
-			currentCategoryId: R,
-			currentCategoryName: x,
-			onViewGuild: b,
-			onGuildCardSeen: P,
-			placeholder: M,
-			onTagClick: D
-		} = e,
+	let { loadId: t, searchResults: n, mostRecentQuery: s, defaultLanguage: l, availableLanguages: u, isFetchingSearch: v, scroller: Z, loadingGuildId: L, theme: O, currentCategoryId: R, currentCategoryName: x, onViewGuild: b, onGuildCardSeen: P, placeholder: M, onTagClick: D } = e,
 		y = r().uniqueId('GuildDiscovery'),
 		{ guilds: j, loading: U, total: G } = n,
 		[k, w] = a.useState(!1),

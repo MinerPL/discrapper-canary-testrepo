@@ -73,20 +73,12 @@ let E = 365,
 	f = 366,
 	h = 4,
 	p = [s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday],
-	I = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday],
-	m = [s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
+	m = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday],
+	I = [s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
 	T = [s.Ci.SA.weekday, s.Ci.SU.weekday],
 	g = [s.Ci.FR.weekday, s.Ci.SA.weekday],
 	S = [s.Ci.SU.weekday, s.Ci.MO.weekday],
-	A = [
-		s.Ci.SU.weekday,
-		s.Ci.MO.weekday,
-		s.Ci.TU.weekday,
-		s.Ci.WE.weekday,
-		s.Ci.TH.weekday,
-		s.Ci.FR.weekday,
-		s.Ci.SA.weekday
-	],
+	A = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
 	N = new Set([0, 6]);
 function v(e) {
 	var t;
@@ -246,12 +238,7 @@ function B(e, t) {
 	if (null == t || null == e) return !1;
 	let n = new Date(e.start),
 		r = new Date(u.default.extractTimestamp(t));
-	if (
-		n.getUTCHours() !== r.getUTCHours() ||
-		n.getUTCMinutes() !== r.getUTCMinutes() ||
-		n.getUTCSeconds() !== r.getUTCSeconds()
-	)
-		return !1;
+	if (n.getUTCHours() !== r.getUTCHours() || n.getUTCMinutes() !== r.getUTCMinutes() || n.getUTCSeconds() !== r.getUTCSeconds()) return !1;
 	switch (e.frequency) {
 		case s.Ci.WEEKLY:
 			return n.getUTCDay() === r.getUTCDay();
@@ -264,7 +251,7 @@ function B(e, t) {
 function F(e) {
 	let t = D(e.toDate().getDay()),
 		n = D(e.toDate().getUTCDay());
-	return n.weekday - t.weekday > 0 ? m : n.weekday - t.weekday < 0 ? I : p;
+	return n.weekday - t.weekday > 0 ? I : n.weekday - t.weekday < 0 ? m : p;
 }
 function V(e) {
 	let t = D(e.toDate().getDay()),
@@ -318,18 +305,7 @@ function H(e, t) {
 		}
 	})(e, t);
 	if (null == n) return null;
-	let {
-			dtstart: r,
-			until: i,
-			freq: a,
-			interval: o,
-			byweekday: l,
-			bynweekday: u,
-			bymonth: d,
-			bymonthday: _,
-			byyearday: E,
-			count: f
-		} = n.options,
+	let { dtstart: r, until: i, freq: a, interval: o, byweekday: l, bynweekday: u, bymonth: d, bymonthday: _, byyearday: E, count: f } = n.options,
 		h =
 			null == u
 				? void 0
@@ -370,18 +346,8 @@ function Z(e, t) {
 	}
 }
 function Y(e, t) {
-	return (
-		(null == e ? void 0 : e.scheduled_start_time) !== t.scheduledStartTime ||
-		e.scheduled_end_time !== t.scheduledEndTime ||
-		!(0, r.isEqual)(e.recurrence_rule, t.recurrenceRule)
-	);
+	return (null == e ? void 0 : e.scheduled_start_time) !== t.scheduledStartTime || e.scheduled_end_time !== t.scheduledEndTime || !(0, r.isEqual)(e.recurrence_rule, t.recurrenceRule);
 }
 function j(e, t, n) {
-	return (null == e ? void 0 : e.is_canceled)
-		? d.p1.CANCELED
-		: t < n
-			? d.p1.COMPLETED
-			: null != e
-				? d.p1.SCHEDULED
-				: null;
+	return (null == e ? void 0 : e.is_canceled) ? d.p1.CANCELED : t < n ? d.p1.COMPLETED : null != e ? d.p1.SCHEDULED : null;
 }

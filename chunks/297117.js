@@ -31,8 +31,7 @@ function a(e, t, r, a) {
 	return void 0 !== r && (o.lineno = r), void 0 !== a && (o.colno = a), o;
 }
 let o = /^\s*at (\S+?)(?::(\d+))(?::(\d+))\s*$/i,
-	i =
-		/^\s*at (?:(.+?\)(?: \[.+\])?|.*?) ?\((?:address at )?)?(?:async )?((?:<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
+	i = /^\s*at (?:(.+?\)(?: \[.+\])?|.*?) ?\((?:address at )?)?(?:async )?((?:<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
 	_ = /\((\S*)(?::(\d+))(?::(\d+))\)/,
 	E = [
 		30,
@@ -53,8 +52,7 @@ let o = /^\s*at (\S+?)(?::(\d+))(?::(\d+))\s*$/i,
 			}
 		}
 	],
-	s =
-		/^\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:[-a-z]+)?:\/.*?|\[native code\]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
+	s = /^\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:[-a-z]+)?:\/.*?|\[native code\]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
 	c = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
 	I = [
 		50,
@@ -100,7 +98,5 @@ let o = /^\s*at (\S+?)(?::(\d+))(?::(\d+))\s*$/i,
 	O = (e, t) => {
 		let r = -1 !== e.indexOf('safari-extension'),
 			a = -1 !== e.indexOf('safari-web-extension');
-		return r || a
-			? [-1 !== e.indexOf('@') ? e.split('@')[0] : n.Fi, r ? `safari-extension:${t}` : `safari-web-extension:${t}`]
-			: [e, t];
+		return r || a ? [-1 !== e.indexOf('@') ? e.split('@')[0] : n.Fi, r ? `safari-extension:${t}` : `safari-web-extension:${t}`] : [e, t];
 	};

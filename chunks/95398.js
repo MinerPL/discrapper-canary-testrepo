@@ -31,14 +31,14 @@ function p(e, t, n) {
 	);
 }
 ((a = r || (r = {})).TEXT = 'text'), (a.ATTACHMENT = 'attachment'), (a.EMBED = 'embed');
-let I = (e) => {
+let m = (e) => {
 		let { className: t } = e;
 		return (0, s.jsx)('div', {
 			className: u()(h.spoilerWarning, t),
 			children: f.Z.Messages.SPOILER
 		});
 	},
-	m = (e) => {
+	I = (e) => {
 		let { className: t, isSingleMosaicItem: n, obscureOnly: r } = e;
 		return (0, s.jsx)('div', {
 			className: u()(h.explicitContentWarning, t),
@@ -65,14 +65,14 @@ let I = (e) => {
 		let { reason: t = _.wk.SPOILER, className: n, isSingleMosaicItem: r = !1 } = e;
 		switch (t) {
 			case _.wk.SPOILER:
-				return (0, s.jsx)(I, { className: n });
+				return (0, s.jsx)(m, { className: n });
 			case _.wk.EXPLICIT_CONTENT:
-				return (0, s.jsx)(m, {
+				return (0, s.jsx)(I, {
 					isSingleMosaicItem: r,
 					className: n
 				});
 			case _.wk.POTENTIAL_EXPLICIT_CONTENT:
-				return (0, s.jsx)(m, {
+				return (0, s.jsx)(I, {
 					isSingleMosaicItem: r,
 					className: n,
 					obscureOnly: !0
@@ -119,16 +119,7 @@ class A extends (i = o.PureComponent) {
 		});
 	}
 	renderObscuredAttachment() {
-		let {
-				children: e,
-				inline: t,
-				className: n,
-				containerStyles: r,
-				obscured: i = !0,
-				reason: a = _.wk.SPOILER,
-				isSingleMosaicItem: o = !1,
-				obscurityControlClassName: l
-			} = this.props,
+		let { children: e, inline: t, className: n, containerStyles: r, obscured: i = !0, reason: a = _.wk.SPOILER, isSingleMosaicItem: o = !1, obscurityControlClassName: l } = this.props,
 			{ visible: c } = this.state,
 			E = (0, s.jsx)(S.Consumer, {
 				children: (E) => {
@@ -194,14 +185,7 @@ class A extends (i = o.PureComponent) {
 		return t ? this.renderWithTooltip(E) : E;
 	}
 	renderObscuredEmbed() {
-		let {
-				children: e,
-				className: t,
-				containerStyles: n,
-				isSingleMosaicItem: r,
-				obscurityControlClassName: i,
-				reason: a = _.wk.SPOILER
-			} = this.props,
+		let { children: e, className: t, containerStyles: n, isSingleMosaicItem: r, obscurityControlClassName: i, reason: a = _.wk.SPOILER } = this.props,
 			{ visible: o } = this.state;
 		return (0, s.jsx)(S.Consumer, {
 			children: (l) => {

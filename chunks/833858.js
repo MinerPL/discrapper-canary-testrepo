@@ -62,11 +62,5 @@ let _ = () => ({
 	},
 	f = (e) => {
 		var t;
-		return ((null == e ? void 0 : e.state) != null ? e.state : null) === r.tNA.CUSTOM
-			? null == e
-				? void 0
-				: e.details
-			: null === (t = E(e)) || void 0 === t
-				? void 0
-				: t.title;
+		return ((null == e ? void 0 : e.state) != null ? e.state : null) === r.tNA.CUSTOM ? (null == e ? void 0 : e.details) : null === (t = E(e)) || void 0 === t ? void 0 : t.title;
 	};

@@ -2,10 +2,7 @@ var r = (function () {
 	function e(e, t) {
 		for (var n = 0; n < t.length; n++) {
 			var r = t[n];
-			(r.enumerable = r.enumerable || !1),
-				(r.configurable = !0),
-				'value' in r && (r.writable = !0),
-				Object.defineProperty(e, r.key, r);
+			(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 		}
 	}
 	return function (t, n, r) {
@@ -30,8 +27,7 @@ var i = n(261469),
 		}
 		return (
 			!(function (e, t) {
-				if ('function' != typeof t && null !== t)
-					throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+				if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
 				(e.prototype = Object.create(t && t.prototype, {
 					constructor: {
 						value: e,
@@ -47,9 +43,7 @@ var i = n(261469),
 					key: '__getValue',
 					value: function () {
 						var e = this._parent.__getValue();
-						return (
-							a('number' == typeof e, 'Cannot interpolate an input which is not a number.'), this._interpolation(e)
-						);
+						return a('number' == typeof e, 'Cannot interpolate an input which is not a number.'), this._interpolation(e);
 					}
 				},
 				{
@@ -85,8 +79,7 @@ var i = n(261469),
 				{
 					key: '__detach',
 					value: function () {
-						this._parent.__removeChild(this),
-							(this._parentListener = this._parent.removeListener(this._parentListener));
+						this._parent.__removeChild(this), (this._parentListener = this._parent.removeListener(this._parentListener));
 					}
 				}
 			]),

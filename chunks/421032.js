@@ -27,15 +27,11 @@ function I(e) {
 		S = (0, i.e7)([a.Z], () => a.Z.getChannel(null == x ? void 0 : x.channel_id));
 	if (null == x) return null;
 	let { is_canceled: v = !1 } = null != M ? M : {},
-		Z =
-			(null == M ? void 0 : M.scheduled_start_time) != null ? new Date(null == M ? void 0 : M.scheduled_start_time) : s,
+		Z = (null == M ? void 0 : M.scheduled_start_time) != null ? new Date(null == M ? void 0 : M.scheduled_start_time) : s,
 		p = (0, _.DK)(x),
 		f = v ? N.p1.CANCELED : N.p1.SCHEDULED;
 	p === n && (f = x.status);
-	let k =
-			(null == x ? void 0 : x.scheduled_start_time) != null
-				? (0, _.lh)(M, Z, new Date(null == x ? void 0 : x.scheduled_start_time))
-				: null,
+	let k = (null == x ? void 0 : x.scheduled_start_time) != null ? (0, _.lh)(M, Z, new Date(null == x ? void 0 : x.scheduled_start_time)) : null,
 		B = (e) => {
 			e.stopPropagation(),
 				null != T &&

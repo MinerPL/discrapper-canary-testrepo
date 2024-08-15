@@ -23,8 +23,8 @@ var r = n(735250),
 	f = n(585483),
 	h = n(952265),
 	p = n(602091),
-	I = n(981631),
-	m = n(785895);
+	m = n(981631),
+	I = n(785895);
 function T(e, t, n) {
 	return (
 		t in e
@@ -48,7 +48,7 @@ class S extends i.PureComponent {
 			i && (a = p.Dv.ENTERED),
 			(0, r.jsx)(t, {
 				children: (0, r.jsx)('div', {
-					className: s()(m.layer, !n && m.hidden),
+					className: s()(I.layer, !n && I.hidden),
 					children: e({
 						transitionState: a,
 						onClose: this.close
@@ -112,9 +112,9 @@ function v() {
 			null != e && null != e.onCloseRequest && e.onCloseRequest();
 		};
 		return (
-			f.S.subscribe(I.CkL.MODAL_CLOSE, e),
+			f.S.subscribe(m.CkL.MODAL_CLOSE, e),
 			() => {
-				f.S.unsubscribe(I.CkL.MODAL_CLOSE, e);
+				f.S.unsubscribe(m.CkL.MODAL_CLOSE, e);
 			}
 		);
 	}, [a]);
@@ -139,8 +139,7 @@ function v() {
 					c.Backdrop,
 					{
 						isVisible: d[n],
-						backdropStyle:
-							null !== (i = null == a ? void 0 : a.backdropStyle) && void 0 !== i ? i : c.BackdropStyles.DARK,
+						backdropStyle: null !== (i = null == a ? void 0 : a.backdropStyle) && void 0 !== i ? i : c.BackdropStyles.DARK,
 						onClose: s,
 						LayerComponent: e,
 						backdropInstant: null == a ? void 0 : a.instant

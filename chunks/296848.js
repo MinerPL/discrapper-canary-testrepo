@@ -39,12 +39,7 @@ function f(e) {
 }
 function _(e, n, a) {
 	let t = e.getCurrentSubscriptionPlanIdForGroup(a);
-	return (
-		(e.type === u.NYc.PREMIUM && null == t) ||
-		(o()(null != t, 'Current subscription has no plan in group'),
-		o()(!(t === p.Xh.PREMIUM_YEAR_TIER_1 && n === p.Xh.PREMIUM_MONTH_TIER_2), 'Unexpected plan switch'),
-		a.indexOf(t) < a.indexOf(n))
-	);
+	return (e.type === u.NYc.PREMIUM && null == t) || (o()(null != t, 'Current subscription has no plan in group'), o()(!(t === p.Xh.PREMIUM_YEAR_TIER_1 && n === p.Xh.PREMIUM_MONTH_TIER_2), 'Unexpected plan switch'), a.indexOf(t) < a.indexOf(n));
 }
 function b(e, n, a) {
 	return !_(e, n, a);

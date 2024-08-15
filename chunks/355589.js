@@ -258,12 +258,7 @@ let B = (e) => {
 							s.addStep(
 								(function (e, t, s, r) {
 									let l = (0, x.Z)(s) ? u.$e(P.Plq.VIEW_CHANNEL, P.Plq.SEND_MESSAGES) : P.Plq.SEND_MESSAGES,
-										i =
-											null != e
-												? (0, S.E$)(e, t, s, l).filter(
-														(t) => s.permissionOverwrites.hasOwnProperty(t.id) || (0, f.pM)(e.id, t.id)
-													)
-												: [],
+										i = null != e ? (0, S.E$)(e, t, s, l).filter((t) => s.permissionOverwrites.hasOwnProperty(t.id) || (0, f.pM)(e.id, t.id)) : [],
 										o = i.length > 0,
 										c = i.some((t) => (0, f.pM)(e.id, t.id));
 									return {

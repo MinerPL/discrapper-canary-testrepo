@@ -32,14 +32,10 @@ class d extends r.EventEmitter {
 		return a().set(r, t, i);
 	}
 	clearProcessingMessageInterval() {
-		null != this.processingMessageChangeInterval &&
-			(clearInterval(this.processingMessageChangeInterval), (this.processingMessageChangeInterval = void 0));
+		null != this.processingMessageChangeInterval && (clearInterval(this.processingMessageChangeInterval), (this.processingMessageChangeInterval = void 0));
 	}
 	cancel() {
-		c.log('cancel() for '.concat(this.id)),
-			(this._aborted = !0),
-			null != this._cancel && this._cancel(),
-			this._handleComplete();
+		c.log('cancel() for '.concat(this.id)), (this._aborted = !0), null != this._cancel && this._cancel(), this._handleComplete();
 	}
 	cancelItem(e) {
 		throw Error('cancelItem() is not implemented on UploaderBase; must implement cancelItem() on subclass');
@@ -118,17 +114,10 @@ class d extends r.EventEmitter {
 			}),
 			u(this, '_handleError', (e) => {
 				let { code: t, reason: n, body: r } = e;
-				if ((this.clearProcessingMessageInterval(), !this._aborted))
-					(this._errored = !0),
-						c.log('_handleError: '.concat(t, ' (').concat(JSON.stringify(n), ') for ').concat(this.id)),
-						this.emit('error', this._file, t, r, n),
-						this.removeAllListeners();
+				if ((this.clearProcessingMessageInterval(), !this._aborted)) (this._errored = !0), c.log('_handleError: '.concat(t, ' (').concat(JSON.stringify(n), ') for ').concat(this.id)), this.emit('error', this._file, t, r, n), this.removeAllListeners();
 			}),
 			u(this, '_handleComplete', (e) => {
-				this.clearProcessingMessageInterval(),
-					c.log('_handleComplete for '.concat(this.id)),
-					this.emit('complete', this._file, e),
-					this.removeAllListeners();
+				this.clearProcessingMessageInterval(), c.log('_handleComplete for '.concat(this.id)), this.emit('complete', this._file, e), this.removeAllListeners();
 			}),
 			(this.id = a().uniqueId('Uploader')),
 			(this._url = e),

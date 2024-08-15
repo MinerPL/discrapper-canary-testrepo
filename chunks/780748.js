@@ -10,43 +10,31 @@ var r = n(470079),
 	o = n(417662),
 	l = n(981631);
 function u(e) {
-	let {
-			editor: t,
-			channel: n,
-			disableEnterToSubmit: u,
-			onKeyDown: c,
-			onKeyUp: d,
-			onTab: _,
-			onEnter: E,
-			allowNewLines: f,
-			submit: h,
-			hideAutocomplete: p,
-			moveSelection: I
-		} = e,
-		m = r.useCallback(
+	let { editor: t, channel: n, disableEnterToSubmit: u, onKeyDown: c, onKeyUp: d, onTab: _, onEnter: E, allowNewLines: f, submit: h, hideAutocomplete: p, moveSelection: m } = e,
+		I = r.useCallback(
 			(e) => {
 				var r;
 				switch (e.which) {
 					case l.yXg.ARROW_UP:
-						if (I(-1)) {
+						if (m(-1)) {
 							e.preventDefault();
 							return;
 						}
 						break;
 					case l.yXg.ARROW_DOWN:
-						if (I(1)) {
+						if (m(1)) {
 							e.preventDefault();
 							return;
 						}
 						break;
 					case l.yXg.P:
-						if ((0, o.E)(e, { ctrl: !0 }) && I(-1)) {
+						if ((0, o.E)(e, { ctrl: !0 }) && m(-1)) {
 							e.preventDefault();
 							return;
 						}
 						break;
 					case l.yXg.N:
-						if ((0, o.E)(e, { ctrl: !0 }) && I(1)) {
+						if ((0, o.E)(e, { ctrl: !0 }) && m(1)) {
 							e.preventDefault();
 							return;
 						}
@@ -60,9 +48,7 @@ function u(e) {
 							return;
 						}
 						if (null != i.Z.getActiveCommand(n.id)) {
-							e.preventDefault(),
-								e.stopPropagation(),
-								e.shiftKey ? a.Q.selectPreviousCommandOption(t) : a.Q.selectNextCommandOption(t);
+							e.preventDefault(), e.stopPropagation(), e.shiftKey ? a.Q.selectPreviousCommandOption(t) : a.Q.selectNextCommandOption(t);
 							return;
 						}
 						break;
@@ -76,15 +62,12 @@ function u(e) {
 					e.preventDefault(), e.stopPropagation();
 					return;
 				}
-				e.which === l.yXg.ENTER &&
-					((!e.altKey && !e.shiftKey && (!u || e.ctrlKey) && !(0, s.L6)(t)) || !f) &&
-					(e.preventDefault(), e.stopPropagation(), h()),
-					null == c || c(e);
+				e.which === l.yXg.ENTER && ((!e.altKey && !e.shiftKey && (!u || e.ctrlKey) && !(0, s.L6)(t)) || !f) && (e.preventDefault(), e.stopPropagation(), h()), null == c || c(e);
 			},
-			[f, n.id, u, t, p, I, E, c, _, h]
+			[f, n.id, u, t, p, m, E, c, _, h]
 		);
 	return {
-		handleKeyDown: m,
+		handleKeyDown: I,
 		handleKeyUp: r.useCallback(
 			(e) => {
 				null == d || d(e);

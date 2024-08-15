@@ -8,30 +8,7 @@ r.d(e, {
 });
 var n = r(973682),
 	i = r(789903),
-	o = [
-		'style',
-		'currency',
-		'unit',
-		'unitDisplay',
-		'useGrouping',
-		'minimumIntegerDigits',
-		'minimumFractionDigits',
-		'maximumFractionDigits',
-		'minimumSignificantDigits',
-		'maximumSignificantDigits',
-		'compactDisplay',
-		'currencyDisplay',
-		'currencySign',
-		'notation',
-		'signDisplay',
-		'unit',
-		'unitDisplay',
-		'numberingSystem',
-		'trailingZeroDisplay',
-		'roundingPriority',
-		'roundingIncrement',
-		'roundingMode'
-	];
+	o = ['style', 'currency', 'unit', 'unitDisplay', 'useGrouping', 'minimumIntegerDigits', 'minimumFractionDigits', 'maximumFractionDigits', 'minimumSignificantDigits', 'maximumSignificantDigits', 'compactDisplay', 'currencyDisplay', 'currencySign', 'notation', 'signDisplay', 'unit', 'unitDisplay', 'numberingSystem', 'trailingZeroDisplay', 'roundingPriority', 'roundingIncrement', 'roundingMode'];
 function a(t, e, r) {
 	var n = t.locale,
 		a = t.formats,

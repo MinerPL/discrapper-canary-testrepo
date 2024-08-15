@@ -18,23 +18,23 @@ var i = n(442837),
 function f(e) {
 	let { user: t, activity: n, onAction: f, onClose: h } = e,
 		{ newestAnalyticsLocation: p } = (0, s.ZP)(),
-		I = (0, i.e7)([u.Z, o.Z], () => {
+		m = (0, i.e7)([u.Z, o.Z], () => {
 			var e;
 			return o.Z.getChannel(null === (e = u.Z.getVoiceStateForUser(t.id)) || void 0 === e ? void 0 : e.channelId);
 		}),
-		m = (0, i.e7)([l.Z], () => l.Z.getChannelId() === (null == I ? void 0 : I.id));
-	return (null == n ? void 0 : n.type) !== _.IIU.HANG_STATUS || null == I
+		I = (0, i.e7)([l.Z], () => l.Z.getChannelId() === (null == m ? void 0 : m.id));
+	return (null == n ? void 0 : n.type) !== _.IIU.HANG_STATUS || null == m
 		? null
 		: (0, r.jsx)(d.tG, {
 				text: E.Z.Messages.PROFILE_JOIN_VOICE_CHANNEL,
-				disabled: m,
+				disabled: I,
 				fullWidth: !0,
 				onClick: () => {
 					null == f || f({ action: 'PRESS_HANG_STATUS_BUTTON' }),
-						a.default.selectVoiceChannel(I.id),
+						a.default.selectVoiceChannel(m.id),
 						c.default.track(_.rMx.HANG_STATUS_CTA_CLICKED, {
-							channel_id: I.id,
-							guild_id: I.guild_id,
+							channel_id: m.id,
+							guild_id: m.guild_id,
 							source: p
 						}),
 						null == h || h();

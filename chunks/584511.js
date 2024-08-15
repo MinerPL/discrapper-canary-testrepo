@@ -43,17 +43,7 @@ class f extends (a = o.PureComponent) {
 				: (0, s.jsx)(s.Fragment, { children: this.renderBorder() });
 	}
 	renderVoiceCallAvatar() {
-		let {
-				src: e,
-				disabled: t,
-				ringing: n,
-				ringingType: r,
-				avatarClassName: i,
-				muted: a,
-				deafen: o,
-				size: l,
-				renderIcon: E
-			} = this.props,
+		let { src: e, disabled: t, ringing: n, ringingType: r, avatarClassName: i, muted: a, deafen: o, size: l, renderIcon: E } = this.props,
 			f = (0, c.getAvatarSize)(l),
 			h = (0, s.jsx)('img', {
 				src: e,
@@ -63,9 +53,7 @@ class f extends (a = o.PureComponent) {
 		if (t) return h;
 		let p = d.QS.AVATAR_DEFAULT;
 		return (
-			null != E
-				? (p = l === c.AvatarSizes.SIZE_32 ? d.QS.AVATAR_CALL_ICON_32 : d.QS.AVATAR_CALL_ICON)
-				: (a || o) && (p = d.QS.AVATAR_VOICE_CALL_80),
+			null != E ? (p = l === c.AvatarSizes.SIZE_32 ? d.QS.AVATAR_CALL_ICON_32 : d.QS.AVATAR_CALL_ICON) : (a || o) && (p = d.QS.AVATAR_VOICE_CALL_80),
 			(0, s.jsxs)('div', {
 				className: _.callAvatarMaskContainer,
 				children: [

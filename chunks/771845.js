@@ -13,8 +13,8 @@ var i = n(348327),
 	f = n(486472),
 	h = n(271383),
 	p = n(430824),
-	I = n(412788),
-	m = n(9156),
+	m = n(412788),
+	I = n(9156),
 	T = n(594174);
 function g(e, t, n) {
 	return (
@@ -61,12 +61,7 @@ function N(e, t) {
 					for (let n of (S.addNode(e), t.guildIds)) S.addNode((0, l.Mg)(n), e);
 				}
 			}
-	for (let e of S.allNodes())
-		e.type === l.eD.GUILD &&
-			(u.Z.isLurking(e.id) ||
-				h.ZP.isCurrentUserGuest(e.id) ||
-				(null == p.Z.getGuild(e.id) && !f.Z.isUnavailable(e.id))) &&
-			S.removeNode(e);
+	for (let e of S.allNodes()) e.type === l.eD.GUILD && (u.Z.isLurking(e.id) || h.ZP.isCurrentUserGuest(e.id) || (null == p.Z.getGuild(e.id) && !f.Z.isUnavailable(e.id))) && S.removeNode(e);
 	for (let e of Object.values(S.nodes)) e.type === l.eD.FOLDER && 0 === e.children.length && S.removeNode(e);
 	return (
 		!(function (e, t) {
@@ -80,47 +75,19 @@ function N(e, t) {
 }
 function v() {
 	var e, t, n;
-	return N(
-		null !== (t = c.Z.getGuildFolders()) && void 0 !== t ? t : [],
-		null !== (n = null === (e = c.Z.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== n
-			? n
-			: []
-	);
+	return N(null !== (t = c.Z.getGuildFolders()) && void 0 !== t ? t : [], null !== (n = null === (e = c.Z.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== n ? n : []);
 }
 function O() {
 	var e, t;
 	let n = c.Z.getGuildFolders();
-	return (
-		!(null != r && a()(r, n)) &&
-		N(
-			null != (r = n) ? r : [],
-			null !== (t = null === (e = c.Z.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) &&
-				void 0 !== t
-				? t
-				: []
-		)
-	);
+	return !(null != r && a()(r, n)) && N(null != (r = n) ? r : [], null !== (t = null === (e = c.Z.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== t ? t : []);
 }
 function R(e) {
 	let { sourceId: t, targetId: n, moveToBelow: r, combine: i } = e,
 		a = S.getNode(t),
 		s = S.getNode(n);
 	if (null == a || null == s) return !1;
-	if (
-		(o()(
-			!(i && a.type === l.eD.FOLDER),
-			"[SORTED GUILDS] Can't combine a folder ".concat(a.id, ' with another guilds list item')
-		),
-		o()(
-			!(i && null != s.parentId),
-			"[SORTED GUILDS] Can't combine with a guild ".concat(s.id, " that's already inside of a folder")
-		),
-		o()(
-			!(a.type === l.eD.FOLDER && null != s.parentId),
-			"[SORTED GUILDS] Can't move a folder ".concat(a.id, ' to inside of another folder ').concat(s.parentId)
-		),
-		i)
-	) {
+	if ((o()(!(i && a.type === l.eD.FOLDER), "[SORTED GUILDS] Can't combine a folder ".concat(a.id, ' with another guilds list item')), o()(!(i && null != s.parentId), "[SORTED GUILDS] Can't combine with a guild ".concat(s.id, " that's already inside of a folder")), o()(!(a.type === l.eD.FOLDER && null != s.parentId), "[SORTED GUILDS] Can't move a folder ".concat(a.id, ' to inside of another folder ').concat(s.parentId)), i)) {
 		let e = s.type !== l.eD.FOLDER ? S.convertToFolder(s) : s;
 		S.moveInto(a, e, r);
 	} else S.moveNextTo(a, s, r);
@@ -202,9 +169,7 @@ function P() {
 }
 function U(e, t) {
 	let n = S.cloneNode(e);
-	o()(n.id === e.id, '[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.'),
-		(n.expanded = t),
-		S.replaceNode(e, n);
+	o()(n.id === e.id, '[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.'), (n.expanded = t), S.replaceNode(e, n);
 }
 let w = (0, d.oH)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
 	x = (0, d.oH)((e, t) => e.getRoots().map(A)),
@@ -223,9 +188,9 @@ let w = (0, d.oH)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
 		);
 	}),
 	k = (0, d.oH)((e, t) => e.root.children.map(A));
-class B extends I.Z {
+class B extends m.Z {
 	initialize() {
-		this.waitFor(p.Z, m.ZP, c.Z, f.Z, u.Z, E.Z);
+		this.waitFor(p.Z, I.ZP, c.Z, f.Z, u.Z, E.Z);
 	}
 	getGuildsTree() {
 		return S;
@@ -274,9 +239,7 @@ class B extends I.Z {
 			g(this, 'loadCache', () => {
 				let e = this.readSnapshot(B.LATEST_SNAPSHOT_VERSION),
 					t = null == e ? void 0 : e.tree;
-				if (null != t)
-					for (let e of ((S = new l.g8()).loadSnapshot(t), S.allNodes()))
-						e.type === l.eD.FOLDER && (e.expanded = E.Z.isFolderExpanded(e.id));
+				if (null != t) for (let e of ((S = new l.g8()).loadSnapshot(t), S.allNodes())) e.type === l.eD.FOLDER && (e.expanded = E.Z.isFolderExpanded(e.id));
 			});
 	}
 }

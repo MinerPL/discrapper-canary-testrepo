@@ -17,12 +17,7 @@ function c(e) {
 	var t = l(this, 'max', e.max);
 	(!t || 'number' != typeof t || t <= 0) && l(this, 'max', 1 / 0);
 	var n = e.length || u;
-	'function' != typeof n && (n = u),
-		l(this, 'lengthCalculator', n),
-		l(this, 'allowStale', e.stale || !1),
-		l(this, 'maxAge', e.maxAge || 0),
-		l(this, 'dispose', e.dispose),
-		this.reset();
+	'function' != typeof n && (n = u), l(this, 'lengthCalculator', n), l(this, 'allowStale', e.stale || !1), l(this, 'maxAge', e.maxAge || 0), l(this, 'dispose', e.dispose), this.reset();
 }
 function d(e, t, n, r) {
 	var i = n.value;
@@ -52,10 +47,7 @@ function f(e) {
 function h(e, t) {
 	if (t) {
 		var n = t.value;
-		l(e, 'dispose') && l(e, 'dispose').call(this, n.key, n.value),
-			l(e, 'length', l(e, 'length') - n.length),
-			l(e, 'cache').delete(n.key),
-			l(e, 'lruList').removeNode(t);
+		l(e, 'dispose') && l(e, 'dispose').call(this, n.key, n.value), l(e, 'length', l(e, 'length') - n.length), l(e, 'cache').delete(n.key), l(e, 'lruList').removeNode(t);
 	}
 }
 function p(e, t, n, r, i) {
@@ -103,8 +95,7 @@ function p(e, t, n, r, i) {
 					(l(this, 'lengthCalculator', e),
 					l(this, 'length', 0),
 					l(this, 'lruList').forEach(function (e) {
-						(e.length = l(this, 'lengthCalculator').call(this, e.value, e.key)),
-							l(this, 'length', l(this, 'length') + e.length);
+						(e.length = l(this, 'lengthCalculator').call(this, e.value, e.key)), l(this, 'length', l(this, 'length') + e.length);
 					}, this)),
 				f(this);
 		},
@@ -198,11 +189,7 @@ function p(e, t, n, r, i) {
 				c ? (n += ',\n  ') : (r && (n += ',\n'), (c = !0), (n += '\n  '));
 				var i = a.inspect(e.key).split('\n').join('\n  '),
 					l = { value: e.value };
-				e.maxAge !== s && (l.maxAge = e.maxAge),
-					o !== u && (l.length = e.length),
-					E(this, e) && (l.stale = !0),
-					(l = a.inspect(l, t).split('\n').join('\n  ')),
-					(n += i + ' => ' + l);
+				e.maxAge !== s && (l.maxAge = e.maxAge), o !== u && (l.length = e.length), E(this, e) && (l.stale = !0), (l = a.inspect(l, t).split('\n').join('\n  ')), (n += i + ' => ' + l);
 			}),
 			(c || r) && (n += '\n'),
 			(n += '}')
@@ -214,26 +201,10 @@ function p(e, t, n, r, i) {
 		if (l(this, 'cache').has(e)) {
 			if (i > l(this, 'max')) return h(this, l(this, 'cache').get(e)), !1;
 			var a = l(this, 'cache').get(e).value;
-			return (
-				l(this, 'dispose') && l(this, 'dispose').call(this, e, a.value),
-				(a.now = r),
-				(a.maxAge = n),
-				(a.value = t),
-				l(this, 'length', l(this, 'length') + (i - a.length)),
-				(a.length = i),
-				this.get(e),
-				f(this),
-				!0
-			);
+			return l(this, 'dispose') && l(this, 'dispose').call(this, e, a.value), (a.now = r), (a.maxAge = n), (a.value = t), l(this, 'length', l(this, 'length') + (i - a.length)), (a.length = i), this.get(e), f(this), !0;
 		}
 		var s = new p(e, t, i, r, n);
-		return s.length > l(this, 'max')
-			? (l(this, 'dispose') && l(this, 'dispose').call(this, e, t), !1)
-			: (l(this, 'length', l(this, 'length') + s.length),
-				l(this, 'lruList').unshift(s),
-				l(this, 'cache').set(e, l(this, 'lruList').head),
-				f(this),
-				!0);
+		return s.length > l(this, 'max') ? (l(this, 'dispose') && l(this, 'dispose').call(this, e, t), !1) : (l(this, 'length', l(this, 'length') + s.length), l(this, 'lruList').unshift(s), l(this, 'cache').set(e, l(this, 'lruList').head), f(this), !0);
 	}),
 	(c.prototype.has = function (e) {
 		return !(!l(this, 'cache').has(e) || E(this, l(this, 'cache').get(e).value)) && !0;

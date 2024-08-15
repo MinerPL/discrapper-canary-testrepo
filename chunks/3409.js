@@ -85,13 +85,7 @@ let ee = [f.h8.PAYMENT_TYPE, f.h8.PRZELEWY24_INFORMATION, f.h8.ADDRESS],
 		state: ''
 	};
 function eo(e) {
-	let {
-		onChooseType: a,
-		onPaymentRequestSourceReceived: t,
-		onPaymentRequestSourceFailed: n,
-		analyticsLocation: l,
-		isEligibleForTrial: r
-	} = e;
+	let { onChooseType: a, onPaymentRequestSourceReceived: t, onPaymentRequestSourceFailed: n, analyticsLocation: l, isEligibleForTrial: r } = e;
 	return (0, s.jsx)('div', {
 		className: V.body,
 		children: (0, s.jsx)(N.Z, {
@@ -185,17 +179,7 @@ function e_(e) {
 }
 function ep(e) {
 	let { breadcrumbSteps: a } = e,
-		{
-			step: t,
-			setStep: s,
-			paymentSources: n,
-			paymentSourceId: l,
-			setPaymentSourceId: r,
-			purchaseError: i,
-			setPurchaseError: c,
-			purchaseErrorBlockRef: u,
-			paymentAuthenticationState: d
-		} = (0, R.usePaymentContext)(),
+		{ step: t, setStep: s, paymentSources: n, paymentSourceId: l, setPaymentSourceId: r, purchaseError: i, setPurchaseError: c, purchaseErrorBlockRef: u, paymentAuthenticationState: d } = (0, R.usePaymentContext)(),
 		E = {
 			...eT(),
 			paymentSources: n,
@@ -226,23 +210,7 @@ function eh(e) {
 		t,
 		r,
 		u,
-		{
-			paymentModalArgs: N,
-			initialStep: m,
-			prependSteps: p,
-			appendSteps: h,
-			onReturn: T,
-			onComplete: C,
-			onStepChange: S,
-			breadcrumpSteps: P,
-			currentBreadcrumpStep: v,
-			header: x,
-			analyticsLocation: Y,
-			hideBreadcrumbs: U = !1,
-			usePaymentModalStep: H = !1,
-			isEligibleForTrial: j = !1,
-			allowDesktopRedirectPurchase: k = !1
-		} = e,
+		{ paymentModalArgs: N, initialStep: m, prependSteps: p, appendSteps: h, onReturn: T, onComplete: C, onStepChange: S, breadcrumpSteps: P, currentBreadcrumpStep: v, header: x, analyticsLocation: Y, hideBreadcrumbs: U = !1, usePaymentModalStep: H = !1, isEligibleForTrial: j = !1, allowDesktopRedirectPurchase: k = !1 } = e,
 		w = {
 			steps: [...p, ...X, ...h],
 			methodType: G.He.CARD
@@ -313,41 +281,10 @@ function eh(e) {
 			if (null != e) eJ(e), eH(!1);
 		})();
 	}, [eO]);
-	let {
-		setPaymentSourceId: ey,
-		creditCardState: eL,
-		setCreditCardState: ev,
-		tokenState: eD,
-		setTokenState: ex,
-		isSubmittingCurrentStep: eZ,
-		billingAddressState: eY,
-		setBillingAddressState: eU,
-		setIsSubmittingCurrentStep: eH,
-		hasRedirectURL: ej,
-		setHasRedirectURL: eB,
-		braintreeEmail: eF,
-		braintreeNonce: ek,
-		venmoUsername: ew,
-		adyenPaymentData: eG,
-		isAuthenticating: eW,
-		epsBankState: eV,
-		setEpsBankState: eQ,
-		idealBankState: eK,
-		setIdealBankState: ez,
-		p24BankState: eX,
-		setP24BankState: eq
-	} = N;
+	let { setPaymentSourceId: ey, creditCardState: eL, setCreditCardState: ev, tokenState: eD, setTokenState: ex, isSubmittingCurrentStep: eZ, billingAddressState: eY, setBillingAddressState: eU, setIsSubmittingCurrentStep: eH, hasRedirectURL: ej, setHasRedirectURL: eB, braintreeEmail: eF, braintreeNonce: ek, venmoUsername: ew, adyenPaymentData: eG, isAuthenticating: eW, epsBankState: eV, setEpsBankState: eQ, idealBankState: eK, setIdealBankState: ez, p24BankState: eX, setP24BankState: eq } = N;
 	function eJ(e) {
 		var a;
-		ey(e.id),
-			(a = e),
-			(0, c.showToast)(
-				(0, c.createToast)(W.Z.Messages.PAYMENT_SOURCE_ADD_SUCCESS_TOAST, c.ToastType.SUCCESS, {
-					position: c.ToastPosition.BOTTOM
-				})
-			),
-			C(eP, a),
-			eg(m, !1);
+		ey(e.id), (a = e), (0, c.showToast)((0, c.createToast)(W.Z.Messages.PAYMENT_SOURCE_ADD_SUCCESS_TOAST, c.ToastType.SUCCESS, { position: c.ToastPosition.BOTTOM })), C(eP, a), eg(m, !1);
 	}
 	let e$ = (0, g.q1)().enabled && k;
 	switch (eP) {
@@ -577,13 +514,7 @@ function eh(e) {
 					onBack: () => eg(f.h8.PAYMENT_TYPE),
 					primaryCTA: b.Z.CTAType.CONTINUE,
 					primaryText: W.Z.Messages.NEXT,
-					primaryDisabled:
-						void 0 === eY.info.name ||
-						'' === eY.info.name ||
-						void 0 === eY.info.email ||
-						'' === eY.info.email ||
-						void 0 === eX ||
-						'' === eX,
+					primaryDisabled: void 0 === eY.info.name || '' === eY.info.name || void 0 === eY.info.email || '' === eY.info.email || void 0 === eX || '' === eX,
 					onPrimary: () => eg(f.h8.ADDRESS)
 				}));
 			break;
@@ -832,13 +763,7 @@ function eT(e) {
 		[h, T] = n.useState(''),
 		[C, S] = n.useState(''),
 		[I, P] = n.useState(() => ({ token: null })),
-		[R, f, M, b, O] = (0, i.Wu)([D.Z], () => [
-			D.Z.braintreeEmail,
-			D.Z.braintreeNonce,
-			D.Z.error,
-			D.Z.venmoUsername,
-			D.Z.adyenPaymentData
-		]),
+		[R, f, M, b, O] = (0, i.Wu)([D.Z], () => [D.Z.braintreeEmail, D.Z.braintreeNonce, D.Z.error, D.Z.venmoUsername, D.Z.adyenPaymentData]),
 		[g, y] = (0, i.Wu)([x.Z], () => [x.Z.error, x.Z.isAwaitingAuthentication]);
 	n.useEffect(() => {
 		let e = (e) => {

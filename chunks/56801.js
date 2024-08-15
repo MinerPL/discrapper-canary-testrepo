@@ -15,16 +15,8 @@ var r = n(735250),
 	_ = n(395812);
 let E = [16, 12, 8, 12];
 function f(e) {
-	let {
-			className: t,
-			channel: n,
-			sections: a,
-			activeCategoryIndex: f,
-			filteredSectionId: h,
-			onSectionClick: p,
-			applicationCommandListRef: I
-		} = e,
-		m = i.useRef(null),
+	let { className: t, channel: n, sections: a, activeCategoryIndex: f, filteredSectionId: h, onSectionClick: p, applicationCommandListRef: m } = e,
+		I = i.useRef(null),
 		T = i.useCallback(
 			(e, t) => {
 				var n;
@@ -57,7 +49,7 @@ function f(e) {
 						height: u,
 						selectable: !0
 					}),
-					I = i.type !== c.Qi.BUILT_IN && t < a.length - 1 && a[t + 1].type === c.Qi.BUILT_IN;
+					m = i.type !== c.Qi.BUILT_IN && t < a.length - 1 && a[t + 1].type === c.Qi.BUILT_IN;
 				return (0, r.jsxs)(
 					'div',
 					{
@@ -78,7 +70,7 @@ function f(e) {
 									});
 								}
 							}),
-							I ? (0, r.jsx)('hr', { className: _.builtInSeparator }) : null
+							m ? (0, r.jsx)('hr', { className: _.builtInSeparator }) : null
 						]
 					},
 					i.id
@@ -91,8 +83,8 @@ function f(e) {
 		: (0, r.jsx)('div', {
 				className: s()(t, _.wrapper),
 				children: (0, r.jsx)(u.Z, {
-					categoryListRef: m,
-					expressionsListRef: I,
+					categoryListRef: I,
+					expressionsListRef: m,
 					store: l.Xn,
 					categories: a,
 					className: _.list,

@@ -1,12 +1,12 @@
 n.d(t, {
 	ZH: function () {
-		return I;
+		return m;
 	},
 	b6: function () {
 		return p;
 	},
 	j3: function () {
-		return m;
+		return I;
 	},
 	xC: function () {
 		return T;
@@ -48,25 +48,10 @@ let E = (e) => (''.concat(e).length < 13 ? 1000 * e : e),
 	},
 	p = (e) => {
 		let t = f(e);
-		return t.hours > 0
-			? ''.concat(t.hours, ' hours')
-			: t.minutes > 0
-				? ''.concat(t.minutes, ' minutes')
-				: ''.concat(t.seconds, ' seconds');
+		return t.hours > 0 ? ''.concat(t.hours, ' hours') : t.minutes > 0 ? ''.concat(t.minutes, ' minutes') : ''.concat(t.seconds, ' seconds');
 	},
-	I = (e) =>
-		(0, s.Z)(e)
-			? i.Z.get(d.ABu.SPOTIFY)
-			: (0, a.Z)(e)
-				? i.Z.get(d.ABu.CRUNCHYROLL)
-				: (0, o.Z)(e)
-					? i.Z.get(d.ABu.XBOX)
-					: null != e.platform && [d.M7m.PS4, d.M7m.PS5].includes(e.platform)
-						? i.Z.get(d.ABu.PLAYSTATION)
-						: e.name === i.Z.get(d.ABu.LEAGUE_OF_LEGENDS).name
-							? i.Z.get(d.ABu.LEAGUE_OF_LEGENDS)
-							: void (e.type === d.IIU.PLAYING),
-	m = (e, t) => {
+	m = (e) => ((0, s.Z)(e) ? i.Z.get(d.ABu.SPOTIFY) : (0, a.Z)(e) ? i.Z.get(d.ABu.CRUNCHYROLL) : (0, o.Z)(e) ? i.Z.get(d.ABu.XBOX) : null != e.platform && [d.M7m.PS4, d.M7m.PS5].includes(e.platform) ? i.Z.get(d.ABu.PLAYSTATION) : e.name === i.Z.get(d.ABu.LEAGUE_OF_LEGENDS).name ? i.Z.get(d.ABu.LEAGUE_OF_LEGENDS) : void (e.type === d.IIU.PLAYING)),
+	I = (e, t) => {
 		var n;
 		let i = c.Z.getUserProfile(e.id),
 			[a, s] = null !== (n = null == i ? void 0 : i.themeColors) && void 0 !== n ? n : [],

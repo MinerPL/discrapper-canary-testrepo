@@ -58,11 +58,7 @@ t.Z = function () {
 						icon: Z(e.categoryId)
 					})),
 		b = (e) => {
-			(0, o.uY)(e, !0),
-				_.Z.closeSidebar(),
-				t && (0, o.AQ)(),
-				(0, E.OG)() && e !== f.Gj.Quests && (0, s.uL)(C.Z5c.GUILD_DISCOVERY),
-				!(0, E.OG)() && e === f.Gj.Quests && (0, s.uL)(C.Z5c.QUEST_HOME);
+			(0, o.uY)(e, !0), _.Z.closeSidebar(), t && (0, o.AQ)(), (0, E.OG)() && e !== f.Gj.Quests && (0, s.uL)(C.Z5c.GUILD_DISCOVERY), !(0, E.OG)() && e === f.Gj.Quests && (0, s.uL)(C.Z5c.QUEST_HOME);
 		};
 	return (
 		a.useEffect(() => {

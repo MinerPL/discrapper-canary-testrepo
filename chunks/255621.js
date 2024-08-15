@@ -9,21 +9,7 @@ var r = n(358085),
 	s = n(620662),
 	o = n(981631);
 function l(e) {
-	let {
-			user: t,
-			activity: n,
-			application: l,
-			channelId: u,
-			currentUser: c,
-			isEmbedded: d,
-			ChannelStore: _,
-			GuildStore: E,
-			GuildMemberCountStore: f,
-			RelationshipStore: h,
-			SelectedChannelStore: p,
-			VoiceStateStore: I,
-			PermissionStore: m
-		} = e,
+	let { user: t, activity: n, application: l, channelId: u, currentUser: c, isEmbedded: d, ChannelStore: _, GuildStore: E, GuildMemberCountStore: f, RelationshipStore: h, SelectedChannelStore: p, VoiceStateStore: m, PermissionStore: I } = e,
 		T = _.getChannel(u),
 		g = (0, i.a)(T);
 	if (null == t) return !1;
@@ -37,8 +23,8 @@ function l(e) {
 				application: l,
 				isActivitiesEnabledForCurrentPlatform: g,
 				ChannelStore: _,
-				VoiceStateStore: I,
-				PermissionStore: m,
+				VoiceStateStore: m,
+				PermissionStore: I,
 				GuildStore: E
 			}) === a.Fw.CAN_JOIN
 		);
@@ -46,7 +32,7 @@ function l(e) {
 	if ((0, s.Z)(n, o.xjy.PARTY_PRIVACY_FRIENDS) && h.isFriend(t.id)) return !0;
 	if ((0, s.Z)(n, o.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) {
 		let e = _.getChannel(p.getVoiceChannelId());
-		if (null == e || !I.isInChannel(e.id, t.id)) return !1;
+		if (null == e || !m.isInChannel(e.id, t.id)) return !1;
 		switch (e.type) {
 			case o.d4z.DM:
 			case o.d4z.GROUP_DM:

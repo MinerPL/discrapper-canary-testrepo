@@ -25,9 +25,7 @@ var s = n(898061),
 					exit: {}
 				}),
 				(t.onEnter = function (e, n) {
-					t.removeClasses(e, 'exit'),
-						t.addClass(e, n ? 'appear' : 'enter', 'base'),
-						t.props.onEnter && t.props.onEnter(e, n);
+					t.removeClasses(e, 'exit'), t.addClass(e, n ? 'appear' : 'enter', 'base'), t.props.onEnter && t.props.onEnter(e, n);
 				}),
 				(t.onEntering = function (e, n) {
 					t.addClass(e, n ? 'appear' : 'enter', 'active'), t.props.onEntering && t.props.onEntering(e, n);
@@ -37,10 +35,7 @@ var s = n(898061),
 					t.removeClasses(e, r), t.addClass(e, r, 'done'), t.props.onEntered && t.props.onEntered(e, n);
 				}),
 				(t.onExit = function (e) {
-					t.removeClasses(e, 'appear'),
-						t.removeClasses(e, 'enter'),
-						t.addClass(e, 'exit', 'base'),
-						t.props.onExit && t.props.onExit(e);
+					t.removeClasses(e, 'appear'), t.removeClasses(e, 'enter'), t.addClass(e, 'exit', 'base'), t.props.onExit && t.props.onExit(e);
 				}),
 				(t.onExiting = function (e) {
 					t.addClass(e, 'exit', 'active'), t.props.onExiting && t.props.onExiting(e);

@@ -19,8 +19,8 @@ var i = n(470079),
 	_ = n(813900);
 let f = 1000 / 60;
 function E(e, t, n, E) {
-	let g = (0, l.useToken)(s.Z.unsafe_rawColors.BRAND_500).hex(),
-		C = (0, l.useToken)(s.Z.unsafe_rawColors.BLACK_500).hex(),
+	let C = (0, l.useToken)(s.Z.unsafe_rawColors.BRAND_500).hex(),
+		g = (0, l.useToken)(s.Z.unsafe_rawColors.BLACK_500).hex(),
 		I = (0, l.useToken)(s.Z.unsafe_rawColors.WHITE_500).hex(),
 		x = i.useRef({}),
 		T = i.useRef(new a.Xp()),
@@ -29,41 +29,21 @@ function E(e, t, n, E) {
 				let n = u.Z.getDrawables(t);
 				(0, h.UN)(e),
 					!(function (e) {
-						let {
-							canvasRef: t,
-							drawables: n,
-							fallbackColor: i,
-							linesDrawnAt: a,
-							streamerId: s,
-							channelId: l,
-							outlineColorDark: r,
-							outlineColorLight: u
-						} = e;
+						let { canvasRef: t, drawables: n, fallbackColor: i, linesDrawnAt: a, streamerId: s, channelId: l, outlineColorDark: r, outlineColorLight: u } = e;
 						if (0 === n.length) return;
 						let h = t.current;
 						if (null == h) return;
 						let _ = h.getContext('2d');
 						if (null == _) return;
 						let { width: f, height: E } = h.getBoundingClientRect(),
-							g = [];
+							C = [];
 						n.forEach((e) => {
 							if (!(null != o.Z.getVoiceStateForChannel(l, e.userId))) {
-								g.push(e);
+								C.push(e);
 								return;
 							}
 							!(function (e) {
-								let {
-									drawable: t,
-									context: n,
-									canvasWidth: i,
-									canvasHeight: a,
-									fallbackColor: s,
-									outlineColorDark: l,
-									outlineColorLight: r,
-									linesDrawnAt: o,
-									streamerId: c,
-									deadDrawables: u
-								} = e;
+								let { drawable: t, context: n, canvasWidth: i, canvasHeight: a, fallbackColor: s, outlineColorDark: l, outlineColorLight: r, linesDrawnAt: o, streamerId: c, deadDrawables: u } = e;
 								switch (t.type) {
 									case d.W.LINE:
 										return (0, p.Z)({
@@ -99,23 +79,23 @@ function E(e, t, n, E) {
 								outlineColorDark: r,
 								outlineColorLight: u,
 								linesDrawnAt: a,
-								deadDrawables: g,
+								deadDrawables: C,
 								streamerId: s
 							});
 						}),
-							g.length > 0 && (0, c.fW)(g, s);
+							C.length > 0 && (0, c.fW)(C, s);
 					})({
 						canvasRef: e,
 						drawables: n,
-						fallbackColor: g,
+						fallbackColor: C,
 						linesDrawnAt: x,
 						streamerId: t,
-						outlineColorDark: C,
+						outlineColorDark: g,
 						outlineColorLight: I,
 						channelId: E
 					});
 			},
-			[e, E, g, C, I]
+			[e, E, C, g, I]
 		);
 	i.useEffect(() => {
 		let t = new ResizeObserver(() => {
@@ -130,11 +110,7 @@ function E(e, t, n, E) {
 		let t = u.Z.getDrawables(n),
 			i = m.U.getState().particles,
 			a = t.length > 0 || Object.keys(i).length > 0;
-		a &&
-			null == T.current._ref &&
-			(null == T.current._ref
-				? (N(n), T.current.start(f, () => N(n)))
-				: !a && null != T.current._ref && (T.current.stop(), (0, h.UN)(e)));
+		a && null == T.current._ref && (null == T.current._ref ? (N(n), T.current.start(f, () => N(n))) : !a && null != T.current._ref && (T.current.stop(), (0, h.UN)(e)));
 	}, [e, N, n]);
 	i.useEffect(() => {
 		let e = T.current;

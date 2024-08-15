@@ -7,9 +7,7 @@ var r,
 	u = n(50754),
 	c = n(202934),
 	d = i.Function;
-var _ =
-	/MSIE .\./.test(l) ||
-	(o && ((r = i.Bun.version.split('.')).length < 3 || ('0' === r[0] && (r[1] < 3 || ('3' === r[1] && '0' === r[2])))));
+var _ = /MSIE .\./.test(l) || (o && ((r = i.Bun.version.split('.')).length < 3 || ('0' === r[0] && (r[1] < 3 || ('3' === r[1] && '0' === r[2])))));
 e.exports = function (e, t) {
 	var n = t ? 2 : 1;
 	return _

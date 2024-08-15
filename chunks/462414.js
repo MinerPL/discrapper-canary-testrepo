@@ -33,9 +33,7 @@ t.Z = {
 					args: { input_mode: n, self_mute: i, self_deaf: l }
 				} = e,
 				o = _(t);
-			null != n && a.Z.setMode(n.type, { shortcut: (0, r.Kd)(n.shortcut) }, o),
-				null != i && i !== s.Z.isSelfMute(o) && a.Z.toggleSelfMute({ context: o }),
-				null != l && l !== s.Z.isSelfDeaf(o) && a.Z.toggleSelfDeaf({ context: o });
+			null != n && a.Z.setMode(n.type, { shortcut: (0, r.Kd)(n.shortcut) }, o), null != i && i !== s.Z.isSelfMute(o) && a.Z.toggleSelfMute({ context: o }), null != l && l !== s.Z.isSelfDeaf(o) && a.Z.toggleSelfDeaf({ context: o });
 		}
 	},
 	[d.Etm.SET_USER_VOICE_SETTINGS_2]: {
@@ -66,8 +64,7 @@ t.Z = {
 			let {
 				args: { active: t }
 			} = e;
-			if (s.Z.getMode(u.Yn.DEFAULT) === d.pM4.PUSH_TO_TALK)
-				s.Z.getMediaEngine().eachConnection((e) => e.setForceAudioInput(t), u.Yn.DEFAULT);
+			if (s.Z.getMode(u.Yn.DEFAULT) === d.pM4.PUSH_TO_TALK) s.Z.getMediaEngine().eachConnection((e) => e.setForceAudioInput(t), u.Yn.DEFAULT);
 		}
 	}
 };

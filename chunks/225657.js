@@ -13,20 +13,10 @@ n.Z = (e) => {
 	let { selectedSkuId: n, className: t } = e,
 		f = (0, s.Wu)([o.Z], () => o.Z.getFriendIDs()),
 		h = (0, s.Wu)([d.default], () => d.default.filter((e) => f.includes(e.id) && !e.bot), [f]),
-		{
-			giftRecipient: m,
-			setGiftRecipient: v,
-			giftRecipientError: C,
-			setGiftRecipientError: p,
-			setValidatingGiftRecipient: x
-		} = (0, r.wD)();
+		{ giftRecipient: m, setGiftRecipient: v, giftRecipientError: C, setGiftRecipientError: p, setValidatingGiftRecipient: x } = (0, r.wD)();
 	if (null == n) return null;
 	let I = async (e) => {
-		x(!0),
-			null != C && p(),
-			v(e),
-			!(await (0, c.B1)(e.id, n)) && p(E.Z.Messages.COLLECTIBLES_GIFT_SEND_ERROR_OWNED),
-			x(!1);
+		x(!0), null != C && p(), v(e), !(await (0, c.B1)(e.id, n)) && p(E.Z.Messages.COLLECTIBLES_GIFT_SEND_ERROR_OWNED), x(!1);
 	};
 	return (0, a.jsxs)('div', {
 		className: t,

@@ -10,7 +10,6 @@ let s = r.Z.Millis.MINUTE;
 function o(e) {
 	var t, n;
 	if (a.Z.isFetchingUserOutbox(e)) return;
-	let r =
-		null !== (n = null === (t = a.Z.getUserOutbox(e)) || void 0 === t ? void 0 : t.lastFetched) && void 0 !== n ? n : 0;
+	let r = null !== (n = null === (t = a.Z.getUserOutbox(e)) || void 0 === t ? void 0 : t.lastFetched) && void 0 !== n ? n : 0;
 	if (!(Date.now() - r < s)) return (0, i.JX)(e);
 }

@@ -14,9 +14,7 @@ var i = u(481060),
 function o(t, e) {
 	var o;
 	let a = d.Z.getGuild(t);
-	r.Z.getGuildProductFetchState(e) === r.M.FETCHED &&
-	(null === (o = r.Z.getGuildProduct(e)) || void 0 === o ? void 0 : o.published) !== !0 &&
-	null != a
+	r.Z.getGuildProductFetchState(e) === r.M.FETCHED && (null === (o = r.Z.getGuildProduct(e)) || void 0 === o ? void 0 : o.published) !== !0 && null != a
 		? (0, i.openModalLazy)(async () => {
 				let { default: t } = await u.e('29396').then(u.bind(u, 513239));
 				return (e) => (0, n.jsx)(t, { ...e });

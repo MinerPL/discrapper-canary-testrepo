@@ -88,12 +88,7 @@ class f extends (s = c.ZP.Store) {
 				u = (null !== (n = m[s]) && void 0 !== n ? n : {})[r],
 				d = c[r];
 			if ('HOVER' !== l || null == d) {
-				'HOVER' === d &&
-					'EXTERNAL' === l &&
-					null != u &&
-					('function' == typeof u.destroy && u.destroy(),
-					null === (i = m[s]) || void 0 === i || delete i[r],
-					(d = void 0));
+				'HOVER' === d && 'EXTERNAL' === l && null != u && ('function' == typeof u.destroy && u.destroy(), null === (i = m[s]) || void 0 === i || delete i[r], (d = void 0));
 				null == d && (null != h[s] ? (h[s][r] = l) : (h[s] = { [r]: l }));
 			}
 		},

@@ -84,9 +84,7 @@ let A = (t, e) => ({
 		if ((0, g.Jd)(t)) {
 			let e = (0, g.yA)(t);
 			if (null != e) {
-				let t = I.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK.format({
-					hours: Math.round(e / M.Z.Seconds.HOUR)
-				});
+				let t = I.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK.format({ hours: Math.round(e / M.Z.Seconds.HOUR) });
 				return [
 					{
 						iconPath: m.eF,

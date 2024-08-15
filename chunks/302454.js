@@ -26,12 +26,7 @@ var t, n;
 						var n = e[t];
 						if (null == n || null == n.match) return !1;
 						var r = n.order;
-						return (
-							('number' != typeof r || !isFinite(r)) &&
-								'undefined' != typeof console &&
-								console.warn('simple-markdown: Invalid order for rule `' + t + '`: ' + String(r)),
-							!0
-						);
+						return ('number' != typeof r || !isFinite(r)) && 'undefined' != typeof console && console.warn('simple-markdown: Invalid order for rule `' + t + '`: ' + String(r)), !0;
 					});
 				r.sort(function (t, n) {
 					var r = e[t],
@@ -59,48 +54,31 @@ var t, n;
 				var u = function (t, s) {
 						var o = [];
 						for (n = s = s || n; t; ) {
-							for (
-								var l = null, c = null, d = null, _ = -100000, E = 100000, f = [i.get(t.charCodeAt(0)), a], h = 0;
-								h < f.length;
-								h++
-							) {
+							for (var l = null, c = null, d = null, _ = -100000, E = 100000, f = [i.get(t.charCodeAt(0)), a], h = 0; h < f.length; h++) {
 								var p = f[h];
 								if (null != p)
-									for (var I = 0; I < p.length; I++) {
-										var m = p[I],
-											T = e[m],
+									for (var m = 0; m < p.length; m++) {
+										var I = p[m],
+											T = e[I],
 											g = T.order;
 										if (g > E) break;
 										var S = null == s.prevCapture ? '' : s.prevCapture[0],
 											A = T.match(t, s, S);
 										if (A) {
 											var N = T.quality ? T.quality(A, s, S) : 0;
-											(g < E || N > _) && ((l = m), (c = T), (d = A), (_ = N), (E = g));
+											(g < E || N > _) && ((l = I), (c = T), (d = A), (_ = N), (E = g));
 										}
 									}
 							}
-							if (null == c || null == d)
-								throw Error(
-									"Could not find a matching rule for the below content. The rule with highest `order` should always match content provided to it. Check the definition of `match` for '" +
-										r[r.length - 1] +
-										"'. It seems to not match the following source:\n" +
-										t
-								);
-							if (d.index)
-								throw Error(
-									'`match` must return a capture starting at index 0 (the current parse index). Did you forget a ^ at the start of the RegExp?'
-								);
+							if (null == c || null == d) throw Error("Could not find a matching rule for the below content. The rule with highest `order` should always match content provided to it. Check the definition of `match` for '" + r[r.length - 1] + "'. It seems to not match the following source:\n" + t);
+							if (d.index) throw Error('`match` must return a capture starting at index 0 (the current parse index). Did you forget a ^ at the start of the RegExp?');
 							var v = c.parse(d, u, s);
-							Array.isArray(v) ? Array.prototype.push.apply(o, v) : (null == v.type && (v.type = l), o.push(v)),
-								(s.prevCapture = d),
-								(t = t.substring(s.prevCapture[0].length));
+							Array.isArray(v) ? Array.prototype.push.apply(o, v) : (null == v.type && (v.type = l), o.push(v)), (s.prevCapture = d), (t = t.substring(s.prevCapture[0].length));
 						}
 						return o;
 					},
 					c = function (e, r) {
-						return (
-							!(n = _(r, t)).inline && !n.disableAutoBlockNewlines && (e += '\n\n'), (n.prevCapture = null), u(d(e), n)
-						);
+						return !(n = _(r, t)).inline && !n.disableAutoBlockNewlines && (e += '\n\n'), (n.prevCapture = null), u(d(e), n);
 					};
 				return (u.rules = e), (c.rules = e), c;
 			},
@@ -122,10 +100,10 @@ var t, n;
 				};
 				return (t.regex = e), t;
 			},
-			I = ('function' == typeof Symbol && Symbol.for && Symbol.for('react.element')) || 60103,
-			m = function (e, t, n) {
+			m = ('function' == typeof Symbol && Symbol.for && Symbol.for('react.element')) || 60103,
+			I = function (e, t, n) {
 				return {
-					$$typeof: I,
+					$$typeof: m,
 					type: e,
 					key: null == t ? void 0 : t,
 					ref: null,
@@ -214,12 +192,7 @@ var t, n;
 					var o = [[]];
 					return (
 						s.forEach(function (e, n) {
-							'tableSeparator' === e.type
-								? (!i || (0 !== n && n !== s.length - 1)) && o.push([])
-								: ('text' === e.type &&
-										(null == s[n + 1] || 'tableSeparator' === s[n + 1].type) &&
-										(e.content = e.content.replace(t, '')),
-									o[o.length - 1].push(e));
+							'tableSeparator' === e.type ? (!i || (0 !== n && n !== s.length - 1)) && o.push([]) : ('text' === e.type && (null == s[n + 1] || 'tableSeparator' === s[n + 1].type) && (e.content = e.content.replace(t, '')), o[o.length - 1].push(e));
 						}),
 						o
 					);
@@ -327,7 +300,7 @@ var t, n;
 						};
 					},
 					react: function (e, t, n) {
-						return m('h' + e.level, n.key, { children: t(e.content, n) });
+						return I('h' + e.level, n.key, { children: t(e.content, n) });
 					},
 					html: function (e, t, n) {
 						return T('h' + e.level, t(e.content, n));
@@ -358,7 +331,7 @@ var t, n;
 					match: h(/^( *[-*_]){3,} *(?:\n *)+\n/),
 					parse: D,
 					react: function (e, t, n) {
-						return m('hr', n.key, g);
+						return I('hr', n.key, g);
 					},
 					html: function (e, t, n) {
 						return '<hr>';
@@ -375,8 +348,8 @@ var t, n;
 					},
 					react: function (e, t, n) {
 						var r = e.lang ? 'markdown-code-' + e.lang : void 0;
-						return m('pre', n.key, {
-							children: m('code', null, {
+						return I('pre', n.key, {
+							children: I('code', null, {
 								className: r,
 								children: e.content
 							})
@@ -408,7 +381,7 @@ var t, n;
 						return { content: t(e[0].replace(/^ *> ?/gm, ''), n) };
 					},
 					react: function (e, t, n) {
-						return m('blockquote', n.key, { children: t(e.content, n) });
+						return I('blockquote', n.key, { children: t(e.content, n) });
 					},
 					html: function (e, t, n) {
 						return T('blockquote', t(e.content, n));
@@ -441,18 +414,17 @@ var t, n;
 								o = d;
 								var _ = n.inline,
 									E = n._list;
-								(n._list = !0),
-									d ? ((n.inline = !1), (i = u.replace(x, '\n\n'))) : ((n.inline = !0), (i = u.replace(x, '')));
+								(n._list = !0), d ? ((n.inline = !1), (i = u.replace(x, '\n\n'))) : ((n.inline = !0), (i = u.replace(x, '')));
 								var f = t(i, n);
 								return (n.inline = _), (n._list = E), f;
 							})
 						};
 					},
 					react: function (e, t, n) {
-						return m(e.ordered ? 'ol' : 'ul', n.key, {
+						return I(e.ordered ? 'ol' : 'ul', n.key, {
 							start: e.start,
 							children: e.items.map(function (e, r) {
-								return m('li', '' + r, { children: t(e, n) });
+								return I('li', '' + r, { children: t(e, n) });
 							})
 						});
 					},
@@ -506,27 +478,24 @@ var t, n;
 								return null == e.align[t] ? {} : { textAlign: e.align[t] };
 							},
 							i = e.header.map(function (e, i) {
-								return m('th', '' + i, {
+								return I('th', '' + i, {
 									style: r(i),
 									scope: 'col',
 									children: t(e, n)
 								});
 							}),
 							a = e.cells.map(function (e, i) {
-								return m('tr', '' + i, {
+								return I('tr', '' + i, {
 									children: e.map(function (e, i) {
-										return m('td', '' + i, {
+										return I('td', '' + i, {
 											style: r(i),
 											children: t(e, n)
 										});
 									})
 								});
 							});
-						return m('table', n.key, {
-							children: [
-								m('thead', 'thead', { children: m('tr', null, { children: i }) }),
-								m('tbody', 'tbody', { children: a })
-							]
+						return I('table', n.key, {
+							children: [I('thead', 'thead', { children: I('tr', null, { children: i }) }), I('tbody', 'tbody', { children: a })]
 						});
 					},
 					html: function (e, t, n) {
@@ -573,7 +542,7 @@ var t, n;
 					match: h(/^((?:[^\n]|\n(?! *\n))+)(?:\n *)+\n/),
 					parse: y,
 					react: function (e, t, n) {
-						return m('div', n.key, {
+						return I('div', n.key, {
 							className: 'paragraph',
 							children: t(e.content, n)
 						});
@@ -684,7 +653,7 @@ var t, n;
 						};
 					},
 					react: function (e, t, n) {
-						return m('a', n.key, {
+						return I('a', n.key, {
 							href: S(e.target),
 							title: e.title,
 							children: t(e.content, n)
@@ -709,7 +678,7 @@ var t, n;
 						};
 					},
 					react: function (e, t, n) {
-						return m('img', n.key, {
+						return I('img', n.key, {
 							src: S(e.target),
 							alt: e.alt,
 							title: e.title
@@ -754,14 +723,7 @@ var t, n;
 				},
 				em: {
 					order: j,
-					match: f(
-						RegExp(
-							(Y
-								? '^\\b_((?:_[_(]|\\\\[\\s\\S]|(?<!_)\\B_\\B|[^\\\\_])+?)_(?![(])\\b'
-								: '^\\b_((?:__|\\\\[\\s\\S]|[^\\\\_])+?)_\\b') +
-								'|^\\*(?=\\S)((?:\\*\\*|\\\\[\\s\\S]|\\s+(?:\\\\[\\s\\S]|[^\\s\\*\\\\]|\\*\\*)|[^\\s\\*\\\\])+?)\\*(?!\\*)'
-						)
-					),
+					match: f(RegExp((Y ? '^\\b_((?:_[_(]|\\\\[\\s\\S]|(?<!_)\\B_\\B|[^\\\\_])+?)_(?![(])\\b' : '^\\b_((?:__|\\\\[\\s\\S]|[^\\\\_])+?)_\\b') + '|^\\*(?=\\S)((?:\\*\\*|\\\\[\\s\\S]|\\s+(?:\\\\[\\s\\S]|[^\\s\\*\\\\]|\\*\\*)|[^\\s\\*\\\\])+?)\\*(?!\\*)')),
 					quality: function (e) {
 						return e[0].length + 0.2;
 					},
@@ -769,7 +731,7 @@ var t, n;
 						return { content: t(e[2] || e[1], n) };
 					},
 					react: function (e, t, n) {
-						return m('em', n.key, { children: t(e.content, n) });
+						return I('em', n.key, { children: t(e.content, n) });
 					},
 					html: function (e, t, n) {
 						return T('em', t(e.content, n));
@@ -784,7 +746,7 @@ var t, n;
 					},
 					parse: y,
 					react: function (e, t, n) {
-						return m('strong', n.key, { children: t(e.content, n) });
+						return I('strong', n.key, { children: t(e.content, n) });
 					},
 					html: function (e, t, n) {
 						return T('strong', t(e.content, n));
@@ -799,7 +761,7 @@ var t, n;
 					},
 					parse: y,
 					react: function (e, t, n) {
-						return m('u', n.key, { children: t(e.content, n) });
+						return I('u', n.key, { children: t(e.content, n) });
 					},
 					html: function (e, t, n) {
 						return T('u', t(e.content, n));
@@ -811,7 +773,7 @@ var t, n;
 					match: f(/^~~(?=\S)((?:\\[\s\S]|~(?!~)|[^\s~]|\s(?!~~))+?)~~/),
 					parse: y,
 					react: function (e, t, n) {
-						return m('del', n.key, { children: t(e.content, n) });
+						return I('del', n.key, { children: t(e.content, n) });
 					},
 					html: function (e, t, n) {
 						return T('del', t(e.content, n));
@@ -825,7 +787,7 @@ var t, n;
 						return { content: e[2].replace(w, '$1') };
 					},
 					react: function (e, t, n) {
-						return m('code', n.key, { children: e.content });
+						return I('code', n.key, { children: e.content });
 					},
 					html: function (e, t, n) {
 						return T('code', v(e.content));
@@ -837,7 +799,7 @@ var t, n;
 					match: p(/^ {2,}\n/),
 					parse: D,
 					react: function (e, t, n) {
-						return m('br', n.key, g);
+						return I('br', n.key, g);
 					},
 					html: function (e, t, n) {
 						return '<br>';
@@ -858,18 +820,10 @@ var t, n;
 				}
 			},
 			K = function (e, t, n) {
-				if (!t)
-					throw Error(
-						'simple-markdown: outputFor: `property` must be defined. if you just upgraded, you probably need to replace `outputFor` with `reactFor`'
-					);
+				if (!t) throw Error('simple-markdown: outputFor: `property` must be defined. if you just upgraded, you probably need to replace `outputFor` with `reactFor`');
 				var r,
 					i = (e.Array || W.Array)[t];
-				if (!i)
-					throw Error(
-						'simple-markdown: outputFor: to join nodes of type `' +
-							t +
-							'` you must provide an `Array:` joiner rule with that type, Please see the docs for details on specifying an Array rule.'
-					);
+				if (!i) throw Error('simple-markdown: outputFor: to join nodes of type `' + t + '` you must provide an `Array:` joiner rule with that type, Please see the docs for details on specifying an Array rule.');
 				var a = function (n, s) {
 					return ((r = s = s || r), Array.isArray(n)) ? i(n, a, s) : e[n.type][t](n, a, s);
 				};
@@ -911,7 +865,7 @@ var t, n;
 			ReactMarkdown: function (e) {
 				var t = {};
 				for (var n in e) 'source' !== n && Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
-				return (t.children = J(e.source)), m('div', null, t);
+				return (t.children = J(e.source)), I('div', null, t);
 			},
 			defaultBlockParse: q,
 			defaultInlineParse: function (e, t) {
@@ -925,13 +879,11 @@ var t, n;
 			sanitizeUrl: S,
 			unescapeUrl: R,
 			htmlTag: T,
-			reactElement: m,
+			reactElement: I,
 			defaultRawParse: z,
 			ruleOutput: function (e, t) {
 				return (
-					!t &&
-						'undefined' != typeof console &&
-						console.warn("simple-markdown ruleOutput should take 'react' or 'html' as the second argument."),
+					!t && 'undefined' != typeof console && console.warn("simple-markdown ruleOutput should take 'react' or 'html' as the second argument."),
 					function (n, r, i) {
 						return e[n.type][t](n, r, i);
 					}
@@ -962,17 +914,10 @@ var t, n;
 				return t;
 			},
 			defaultParse: function () {
-				return (
-					'undefined' != typeof console &&
-						console.warn('defaultParse is deprecated, please use `defaultImplicitParse`'),
-					Q.apply(null, arguments)
-				);
+				return 'undefined' != typeof console && console.warn('defaultParse is deprecated, please use `defaultImplicitParse`'), Q.apply(null, arguments);
 			},
 			defaultOutput: function () {
-				return (
-					'undefined' != typeof console && console.warn('defaultOutput is deprecated, please use `defaultReactOutput`'),
-					X.apply(null, arguments)
-				);
+				return 'undefined' != typeof console && console.warn('defaultOutput is deprecated, please use `defaultReactOutput`'), X.apply(null, arguments);
 			}
 		};
 	}),

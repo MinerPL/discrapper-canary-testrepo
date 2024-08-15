@@ -36,24 +36,10 @@ let f = null,
 					});
 	},
 	O = (e) => {
-		(R.retries = 0),
-			(R.completed = e.completed),
-			(R.initialProgressFetched = !0),
-			(R.progress = e.progress),
-			(R.lastCheckedAt = o().now()),
-			(S = R.completed ? N._e.QUEST_COMPLETION : N._e.TRACK_PROGRESS);
+		(R.retries = 0), (R.completed = e.completed), (R.initialProgressFetched = !0), (R.progress = e.progress), (R.lastCheckedAt = o().now()), (S = R.completed ? N._e.QUEST_COMPLETION : N._e.TRACK_PROGRESS);
 	},
 	M = (e, t, n) => {
-		if (!R.completed || e.dropsQuestId !== R.dropsQuestId)
-			(R.game = t),
-				(R.dropsQuestId = e.dropsQuestId),
-				(R.gameTitle = e.title),
-				(R.completed = !1),
-				(R.interrupted = !1),
-				(R.streamKey = n),
-				(R.retries = 0),
-				(R.lastCheckedAt = o().now()),
-				A.start(5000, () => x(!0));
+		if (!R.completed || e.dropsQuestId !== R.dropsQuestId) (R.game = t), (R.dropsQuestId = e.dropsQuestId), (R.gameTitle = e.title), (R.completed = !1), (R.interrupted = !1), (R.streamKey = n), (R.retries = 0), (R.lastCheckedAt = o().now()), A.start(5000, () => x(!0));
 	};
 class v extends (r = c.ZP.Store) {
 	initialize() {
@@ -141,12 +127,7 @@ class v extends (r = c.ZP.Store) {
 		},
 		DROPS_HEARTBEAT_FAILURE: (e) => {
 			let { dropsQuestId: t, statusCode: n } = e;
-			if (
-				((R.completed = !1),
-				(R.initialProgressFetched = !0),
-				(R.lastCheckedAt = o().now()),
-				429 === n && 0 === R.retries)
-			) {
+			if (((R.completed = !1), (R.initialProgressFetched = !0), (R.lastCheckedAt = o().now()), 429 === n && 0 === R.retries)) {
 				(R.retries = R.retries + 1), x();
 				return;
 			}
@@ -188,18 +169,14 @@ class v extends (r = c.ZP.Store) {
 				})
 			);
 			if (null == o || (0, h.hM)(o)) return;
-			let c =
-				null === (t = (0, h.j7)(o)) || void 0 === t
-					? void 0
-					: t.getCurrentConfig({ location: '1' }, { autoTrackExposure: !1 });
+			let c = null === (t = (0, h.j7)(o)) || void 0 === t ? void 0 : t.getCurrentConfig({ location: '1' }, { autoTrackExposure: !1 });
 			if (null == c || !c.dropsEnabled) return;
 			let u = c.autoEnrollment;
 			(null != g[o.dropsQuestId] && g[o.dropsQuestId].isEnrolled) || u
 				? M(o, l, r)
 				: d.Z.wait(async () => {
 						var e;
-						await (0, T.BE)(o.dropsQuestId),
-							(null === (e = g[o.dropsQuestId]) || void 0 === e ? void 0 : e.isEnrolled) && M(o, l, r);
+						await (0, T.BE)(o.dropsQuestId), (null === (e = g[o.dropsQuestId]) || void 0 === e ? void 0 : e.isEnrolled) && M(o, l, r);
 					});
 		},
 		LOGOUT: function () {

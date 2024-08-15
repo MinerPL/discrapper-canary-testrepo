@@ -30,16 +30,8 @@ let i = new (n(259443).Y)('RenderingContextWebGL');
 class a {
 	static create(e) {
 		if (null == e) return null;
-		let t = this.createShader(
-				e,
-				e.VERTEX_SHADER,
-				'\nattribute vec4 position;\nattribute vec2 texcoord;\nuniform mat4 transform;\nvarying vec2 out_texcoord;\n\nvoid main() {\n   gl_Position = transform * position;\n   out_texcoord = texcoord;\n}\n'
-			),
-			n = this.createShader(
-				e,
-				e.FRAGMENT_SHADER,
-				'\nprecision mediump float;\n\nvarying vec2 out_texcoord;\nuniform sampler2D texture;\n\nvoid main() {\n   gl_FragColor = texture2D(texture, out_texcoord);\n}\n'
-			);
+		let t = this.createShader(e, e.VERTEX_SHADER, '\nattribute vec4 position;\nattribute vec2 texcoord;\nuniform mat4 transform;\nvarying vec2 out_texcoord;\n\nvoid main() {\n   gl_Position = transform * position;\n   out_texcoord = texcoord;\n}\n'),
+			n = this.createShader(e, e.FRAGMENT_SHADER, '\nprecision mediump float;\n\nvarying vec2 out_texcoord;\nuniform sampler2D texture;\n\nvoid main() {\n   gl_FragColor = texture2D(texture, out_texcoord);\n}\n');
 		if (null == t || null == n) return null;
 		let r = this.createProgram(e, t, n);
 		if (null == r) return null;
@@ -51,8 +43,7 @@ class a {
 		if (null == o || null == l) return null;
 		let u = e.createBuffer();
 		if (null == u) return null;
-		e.bindBuffer(e.ARRAY_BUFFER, u),
-			e.bufferData(e.ARRAY_BUFFER, new Float32Array([0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1]), e.STATIC_DRAW);
+		e.bindBuffer(e.ARRAY_BUFFER, u), e.bufferData(e.ARRAY_BUFFER, new Float32Array([0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1]), e.STATIC_DRAW);
 		let c = e.createTexture();
 		return null == c
 			? null
@@ -93,51 +84,10 @@ class a {
 		let t = e.width,
 			n = e.height,
 			r = this.gl;
-		r.bindTexture(r.TEXTURE_2D, this.texture),
-			r.texImage2D(r.TEXTURE_2D, 0, r.RGBA, t, n, 0, r.RGBA, r.UNSIGNED_BYTE, e.data),
-			r.texParameteri(r.TEXTURE_2D, r.TEXTURE_WRAP_S, r.CLAMP_TO_EDGE),
-			r.texParameteri(r.TEXTURE_2D, r.TEXTURE_WRAP_T, r.CLAMP_TO_EDGE),
-			r.texParameteri(r.TEXTURE_2D, r.TEXTURE_MIN_FILTER, r.LINEAR),
-			r.viewport(0, 0, t, n),
-			r.clearColor(0, 0, 0, 1),
-			r.clear(r.COLOR_BUFFER_BIT),
-			r.useProgram(this.program),
-			r.bindBuffer(r.ARRAY_BUFFER, this.vertexBuffer),
-			r.enableVertexAttribArray(this.positionLoc),
-			r.vertexAttribPointer(this.positionLoc, 2, r.FLOAT, !1, 0, 0),
-			r.enableVertexAttribArray(this.texcoordLoc),
-			r.vertexAttribPointer(this.texcoordLoc, 2, r.FLOAT, !1, 0, 0),
-			r.uniformMatrix4fv(this.transformLoc, !1, this.transform),
-			r.uniform1i(this.textureLoc, 0),
-			r.drawArrays(r.TRIANGLES, 0, 6);
+		r.bindTexture(r.TEXTURE_2D, this.texture), r.texImage2D(r.TEXTURE_2D, 0, r.RGBA, t, n, 0, r.RGBA, r.UNSIGNED_BYTE, e.data), r.texParameteri(r.TEXTURE_2D, r.TEXTURE_WRAP_S, r.CLAMP_TO_EDGE), r.texParameteri(r.TEXTURE_2D, r.TEXTURE_WRAP_T, r.CLAMP_TO_EDGE), r.texParameteri(r.TEXTURE_2D, r.TEXTURE_MIN_FILTER, r.LINEAR), r.viewport(0, 0, t, n), r.clearColor(0, 0, 0, 1), r.clear(r.COLOR_BUFFER_BIT), r.useProgram(this.program), r.bindBuffer(r.ARRAY_BUFFER, this.vertexBuffer), r.enableVertexAttribArray(this.positionLoc), r.vertexAttribPointer(this.positionLoc, 2, r.FLOAT, !1, 0, 0), r.enableVertexAttribArray(this.texcoordLoc), r.vertexAttribPointer(this.texcoordLoc, 2, r.FLOAT, !1, 0, 0), r.uniformMatrix4fv(this.transformLoc, !1, this.transform), r.uniform1i(this.textureLoc, 0), r.drawArrays(r.TRIANGLES, 0, 6);
 	}
-	constructor({
-		gl: e,
-		program: t,
-		positionLoc: n,
-		texcoordLoc: i,
-		transformLoc: a,
-		textureLoc: s,
-		vertexBuffer: o,
-		texture: l
-	}) {
-		r(this, 'transform', new Float32Array([2, 0, 0, 0, 0, -2, 0, 0, 0, 0, 1, 0, -1, 1, 0, 1])),
-			r(this, 'gl', void 0),
-			r(this, 'program', void 0),
-			r(this, 'positionLoc', void 0),
-			r(this, 'texcoordLoc', void 0),
-			r(this, 'transformLoc', void 0),
-			r(this, 'textureLoc', void 0),
-			r(this, 'vertexBuffer', void 0),
-			r(this, 'texture', void 0),
-			(this.gl = e),
-			(this.program = t),
-			(this.positionLoc = n),
-			(this.texcoordLoc = i),
-			(this.transformLoc = a),
-			(this.textureLoc = s),
-			(this.vertexBuffer = o),
-			(this.texture = l);
+	constructor({ gl: e, program: t, positionLoc: n, texcoordLoc: i, transformLoc: a, textureLoc: s, vertexBuffer: o, texture: l }) {
+		r(this, 'transform', new Float32Array([2, 0, 0, 0, 0, -2, 0, 0, 0, 0, 1, 0, -1, 1, 0, 1])), r(this, 'gl', void 0), r(this, 'program', void 0), r(this, 'positionLoc', void 0), r(this, 'texcoordLoc', void 0), r(this, 'transformLoc', void 0), r(this, 'textureLoc', void 0), r(this, 'vertexBuffer', void 0), r(this, 'texture', void 0), (this.gl = e), (this.program = t), (this.positionLoc = n), (this.texcoordLoc = i), (this.transformLoc = a), (this.textureLoc = s), (this.vertexBuffer = o), (this.texture = l);
 	}
 }
 function s(e) {

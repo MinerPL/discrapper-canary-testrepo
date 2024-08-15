@@ -67,12 +67,7 @@ class N extends i.PureComponent {
 				}));
 			}),
 			s = d()(t)
-				.filter(
-					(t) =>
-						0 === e.length ||
-						r()(e.toLowerCase(), t.name.toLowerCase()) ||
-						r()(e.toLowerCase(), t.translatedName.toLowerCase())
-				)
+				.filter((t) => 0 === e.length || r()(e.toLowerCase(), t.name.toLowerCase()) || r()(e.toLowerCase(), t.translatedName.toLowerCase()))
 				.map((e) =>
 					(0, i.createElement)(c.PopoutList.Item, {
 						...e,

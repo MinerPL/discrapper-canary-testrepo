@@ -12,10 +12,10 @@ var a,
 let f = 'hideSuppressWarning',
 	h = !1,
 	p = !0,
-	I = !1;
-class m extends (a = u.ZP.Store) {
+	m = !1;
+class I extends (a = u.ZP.Store) {
 	initialize() {
-		I = c.K.get(f) || I;
+		m = c.K.get(f) || m;
 	}
 	isAFKChannel() {
 		let e = _.Z.getChannel(i);
@@ -29,7 +29,7 @@ class m extends (a = u.ZP.Store) {
 	}
 }
 (l = 'PermissionSpeakStore'),
-	(o = 'displayName') in (s = m)
+	(o = 'displayName') in (s = I)
 		? Object.defineProperty(s, o, {
 				value: l,
 				enumerable: !0,
@@ -37,7 +37,7 @@ class m extends (a = u.ZP.Store) {
 				writable: !0
 			})
 		: (s[o] = l),
-	(t.Z = new m(d.Z, {
+	(t.Z = new I(d.Z, {
 		CONNECTION_OPEN: function (e) {
 			(r = e.sessionId), (h = !1);
 		},
@@ -46,19 +46,10 @@ class m extends (a = u.ZP.Store) {
 		},
 		VOICE_STATE_UPDATES: function (e) {
 			let { voiceStates: t } = e;
-			return t.reduce(
-				(e, t) =>
-					r !== t.sessionId
-						? e
-						: (h !== t.suppress && (p = !(h = t.suppress)),
-							i !== t.channelId && ((i = t.channelId), (p = !h)),
-							(I || null == t.channelId) && (p = !0),
-							!0),
-				!1
-			);
+			return t.reduce((e, t) => (r !== t.sessionId ? e : (h !== t.suppress && (p = !(h = t.suppress)), i !== t.channelId && ((i = t.channelId), (p = !h)), (m || null == t.channelId) && (p = !0), !0)), !1);
 		},
 		PERMISSION_CLEAR_SUPPRESS_WARNING: function (e) {
 			let { forever: t } = e;
-			(p = !0), t && ((I = !0), c.K.set(f, I));
+			(p = !0), t && ((m = !0), c.K.set(f, m));
 		}
 	}));

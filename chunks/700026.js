@@ -24,18 +24,8 @@ function o(e, t, n) {
 				}
 				return 0 === e.getSections(!1)[t];
 			})(i, (s = n)) &&
-				(s === r.wZ ||
-					(!!l &&
-						(s === r.p2 || (s !== r.wd && (s === i.recentsSectionNumber || (i.voiceChannelsSectionNumber, !1))))))),
-		canHaveVoiceSummary:
-			((o = e),
-			!(
-				(c = n) === r.wZ ||
-				c === r.p2 ||
-				c === r.wd ||
-				c === o.recentsSectionNumber ||
-				c === o.voiceChannelsSectionNumber
-			))
+				(s === r.wZ || (!!l && (s === r.p2 || (s !== r.wd && (s === i.recentsSectionNumber || (i.voiceChannelsSectionNumber, !1))))))),
+		canHaveVoiceSummary: ((o = e), !((c = n) === r.wZ || c === r.p2 || c === r.wd || c === o.recentsSectionNumber || c === o.voiceChannelsSectionNumber))
 	};
 }
 function c(e) {

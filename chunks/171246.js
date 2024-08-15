@@ -25,9 +25,7 @@ function o(e) {
 }
 function l(e) {
 	var t;
-	return null === (t = e.subscription_listings) || void 0 === t
-		? void 0
-		: t.find((e) => e.published && (u(e.sku_flags) || c(e.sku_flags)) && e.subscription_plans[0].price > 0);
+	return null === (t = e.subscription_listings) || void 0 === t ? void 0 : t.find((e) => e.published && (u(e.sku_flags) || c(e.sku_flags)) && e.subscription_plans[0].price > 0);
 }
 function u(e) {
 	return (0, a.yE)(e, s.l4R.APPLICATION_GUILD_SUBSCRIPTION);
@@ -36,8 +34,5 @@ function c(e) {
 	return (0, a.yE)(e, s.l4R.APPLICATION_USER_SUBSCRIPTION);
 }
 function d(e, t, n) {
-	return (
-		e.subscription_plans[0].sku_id === t.skuId &&
-		(u(e.sku_flags) ? null != n && t.guildId === n && n !== s.ME : !!c(e.sku_flags) && null == t.guildId)
-	);
+	return e.subscription_plans[0].sku_id === t.skuId && (u(e.sku_flags) ? null != n && t.guildId === n && n !== s.ME : !!c(e.sku_flags) && null == t.guildId);
 }

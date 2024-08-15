@@ -19,25 +19,7 @@ var i = n(735250),
 	u = n(689938),
 	d = n(589960);
 function _(e) {
-	let {
-			label: t,
-			ariaLabel: n,
-			tooltipText: a,
-			tooltipColor: _,
-			icon: E,
-			iconProps: I,
-			onClick: m,
-			onTooltipShow: T,
-			onTooltipHide: h,
-			disabled: N,
-			dangerous: f,
-			separator: C,
-			sparkle: p,
-			showNewBadge: g,
-			buttonClassName: S,
-			children: A,
-			...R
-		} = e,
+	let { label: t, ariaLabel: n, tooltipText: a, tooltipColor: _, icon: E, iconProps: I, onClick: m, onTooltipShow: T, onTooltipHide: h, disabled: N, dangerous: f, separator: C, sparkle: p, showNewBadge: g, buttonClassName: S, children: A, ...R } = e,
 		{ canShowReactionsOnMessageHover: x } = c.Z.useExperiment({ location: 'HoverBar' }, { autoTrackExposure: !0 });
 	return (0, i.jsx)(r.Tooltip, {
 		text: null != a ? a : t,

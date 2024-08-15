@@ -12,8 +12,8 @@ var r,
 	f = n(451478),
 	h = n(956664),
 	p = n(153066),
-	I = n(815112);
-function m(e, t, n) {
+	m = n(815112);
+function I(e, t, n) {
 	return (
 		t in e
 			? Object.defineProperty(e, t, {
@@ -62,7 +62,7 @@ class A extends a.PureComponent {
 		return null != e.icon || null != t
 			? null
 			: (0, i.jsx)('div', {
-					className: I.acronym,
+					className: m.acronym,
 					children: e.acronym
 				});
 	}
@@ -70,7 +70,7 @@ class A extends a.PureComponent {
 		let { showBadge: e, guild: t, badgeStrokeColor: n, badgeTooltipColor: r, badgeTooltipDelay: a } = this.props;
 		return e && null != t.hasFeature
 			? (0, i.jsx)(E.Z, {
-					className: I.guildIconBadge,
+					className: m.guildIconBadge,
 					guild: t,
 					badgeStrokeColor: n,
 					tooltipColor: r,
@@ -80,32 +80,14 @@ class A extends a.PureComponent {
 	}
 	renderIcon() {
 		var e, t;
-		let {
-				guild: n,
-				className: r,
-				showBadge: a,
-				active: s,
-				size: l,
-				style: u = {},
-				textScale: c,
-				showTooltip: _,
-				tooltipPosition: E,
-				onClick: f,
-				to: h,
-				badgeStrokeColor: m,
-				animate: T,
-				tabIndex: g,
-				iconSrc: A,
-				'aria-hidden': N,
-				...v
-			} = this.props,
+		let { guild: n, className: r, showBadge: a, active: s, size: l, style: u = {}, textScale: c, showTooltip: _, tooltipPosition: E, onClick: f, to: h, badgeStrokeColor: I, animate: T, tabIndex: g, iconSrc: A, 'aria-hidden': N, ...v } = this.props,
 			O = S[l],
 			R = null != f ? d.Clickable : 'div';
 		return (0, i.jsxs)(R, {
-			className: o()(I.icon, r, (0, p.l)(I, 'iconSize', l), {
-				[null !== (e = (0, p.l)(I, 'iconActive', l)) && void 0 !== e ? e : '']: s,
-				[I.iconInactive]: !s,
-				[I.noIcon]: null == n.icon
+			className: o()(m.icon, r, (0, p.l)(m, 'iconSize', l), {
+				[null !== (e = (0, p.l)(m, 'iconActive', l)) && void 0 !== e ? e : '']: s,
+				[m.iconInactive]: !s,
+				[m.noIcon]: null == n.icon
 			}),
 			'aria-hidden': N,
 			style:
@@ -162,8 +144,8 @@ class v extends (r = a.PureComponent) {
 		return (0, i.jsx)(N, { ...this.props });
 	}
 }
-m(v, 'Sizes', T),
-	m(v, 'defaultProps', {
+I(v, 'Sizes', T),
+	I(v, 'defaultProps', {
 		size: T.LARGE,
 		textScale: 1,
 		showBadge: !1,

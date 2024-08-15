@@ -39,29 +39,13 @@ function S(e) {
 		});
 	}
 	return (0, s.jsxs)('div', {
-		className: r()(
-			N.verifiedRow,
-			(null == l ? void 0 : l.hasMetadata) === !0 ||
-				((null == _ ? void 0 : _.role_connections_metadata) != null &&
-					(null == _ ? void 0 : _.role_connections_metadata.length) > 0)
-				? N.verifiedRowWithMetadata
-				: null
-		),
+		className: r()(N.verifiedRow, (null == l ? void 0 : l.hasMetadata) === !0 || ((null == _ ? void 0 : _.role_connections_metadata) != null && (null == _ ? void 0 : _.role_connections_metadata.length) > 0) ? N.verifiedRowWithMetadata : null),
 		children: [
 			a,
 			(0, s.jsx)(d.Text, {
 				variant: 'text-md/medium',
 				className: N.verifiedText,
-				children: m.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_ACCOUNT.format({
-					platformName:
-						null !== (n = null == l ? void 0 : l.name) && void 0 !== n
-							? n
-							: null == _
-								? void 0
-								: null === (t = _.application) || void 0 === t
-									? void 0
-									: t.name
-				})
+				children: m.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_ACCOUNT.format({ platformName: null !== (n = null == l ? void 0 : l.name) && void 0 !== n ? n : null == _ ? void 0 : null === (t = _.application) || void 0 === t ? void 0 : t.name })
 			}),
 			(0, s.jsx)(d.Button, {
 				'aria-label': m.Z.Messages.REMOVE,
@@ -86,26 +70,10 @@ function S(e) {
 }
 function h(e) {
 	var t, n, i;
-	let {
-			inputRef: r,
-			existingPendingConfiguration: l,
-			locked: o,
-			onConfigurationChange: c,
-			platform: u,
-			applicationId: _,
-			metadataField: I,
-			operator: E
-		} = e,
+	let { inputRef: r, existingPendingConfiguration: l, locked: o, onConfigurationChange: c, platform: u, applicationId: _, metadataField: I, operator: E } = e,
 		m = null !== (n = null == l ? void 0 : l.index) && void 0 !== n ? n : -1,
 		S = null != E ? E : T.iO.GREATER_THAN,
-		h = Math.round(
-			Number(
-				null !== (i = null == l ? void 0 : null === (t = l.configuration) || void 0 === t ? void 0 : t.value) &&
-					void 0 !== i
-					? i
-					: 0
-			)
-		);
+		h = Math.round(Number(null !== (i = null == l ? void 0 : null === (t = l.configuration) || void 0 === t ? void 0 : t.value) && void 0 !== i ? i : 0));
 	S === T.iO.GREATER_THAN ? (h = Math.max(1, h + 1)) : S === T.iO.LESS_THAN && (h = Math.max(0, h - 1));
 	let [g, C] = a.useState(h.toString());
 	return (
@@ -147,16 +115,7 @@ function h(e) {
 	);
 }
 function g(e) {
-	let {
-		titleText: t,
-		fieldText: n,
-		metadataField: a,
-		existingPendingConfiguration: i,
-		platform: r,
-		applicationId: l,
-		onConfigurationChange: o,
-		locked: c
-	} = e;
+	let { titleText: t, fieldText: n, metadataField: a, existingPendingConfiguration: i, platform: r, applicationId: l, onConfigurationChange: o, locked: c } = e;
 	return (0, s.jsxs)(
 		'div',
 		{
@@ -203,18 +162,7 @@ function g(e) {
 	);
 }
 function C(e) {
-	let {
-			titleText: t,
-			fieldText: n,
-			fieldTextHook: i,
-			metadataField: r,
-			existingPendingConfiguration: l,
-			platform: o,
-			applicationId: c,
-			onConfigurationChange: u,
-			locked: _,
-			operator: I
-		} = e,
+	let { titleText: t, fieldText: n, fieldTextHook: i, metadataField: r, existingPendingConfiguration: l, platform: o, applicationId: c, onConfigurationChange: u, locked: _, operator: I } = e,
 		E = a.createRef(),
 		m = (null == l ? void 0 : l.configuration) != null,
 		S = (0, s.jsx)(
@@ -317,9 +265,7 @@ function x(e) {
 				locked: a
 			}),
 			(0, s.jsx)(C, {
-				titleText: m.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER_ITEMS.format({
-					gameName: m.Z.Messages.CONNECTIONS_STEAM_DOTA2
-				}),
+				titleText: m.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER_ITEMS.format({ gameName: m.Z.Messages.CONNECTIONS_STEAM_DOTA2 }),
 				fieldTextHook: m.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_DOTA2,
 				metadataField: T.PC.STEAM_ITEM_COUNT_DOTA2,
 				existingPendingConfiguration: t.get(T.PC.STEAM_ITEM_COUNT_DOTA2),
@@ -328,9 +274,7 @@ function x(e) {
 				locked: a
 			}),
 			(0, s.jsx)(C, {
-				titleText: m.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER_ITEMS.format({
-					gameName: m.Z.Messages.CONNECTIONS_STEAM_TF2
-				}),
+				titleText: m.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_HEADER_ITEMS.format({ gameName: m.Z.Messages.CONNECTIONS_STEAM_TF2 }),
 				fieldTextHook: m.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_AT_LEAST_TF2,
 				metadataField: T.PC.STEAM_ITEM_COUNT_TF2,
 				existingPendingConfiguration: t.get(T.PC.STEAM_ITEM_COUNT_TF2),
@@ -644,12 +588,7 @@ function M(e) {
 	} catch (e) {}
 	let u = new Map();
 	n.forEach((e) => {
-		null != e.configuration.connectionMetadataField
-			? u.set(e.configuration.connectionMetadataField, e)
-			: null == e.configuration.value &&
-				null == e.configuration.operator &&
-				null == e.configuration.connectionMetadataField &&
-				(t = e);
+		null != e.configuration.connectionMetadataField ? u.set(e.configuration.connectionMetadataField, e) : null == e.configuration.value && null == e.configuration.operator && null == e.configuration.connectionMetadataField && (t = e);
 	});
 	let T = {
 			configMetadataMap: u,

@@ -34,12 +34,7 @@ function l(e, t) {
 				d = null,
 				_ = this._root;
 			for (c.right = this._root; ; ) {
-				if (
-					(null === _
-						? ((_ = new i(e)), d.set_child(r, _), (t = !0), this.size++)
-						: s(_.left) && s(_.right) && ((_.red = !0), (_.left.red = !1), (_.right.red = !1)),
-					s(_) && s(d))
-				) {
+				if ((null === _ ? ((_ = new i(e)), d.set_child(r, _), (t = !0), this.size++) : s(_.left) && s(_.right) && ((_.red = !0), (_.left.red = !1), (_.right.red = !1)), s(_) && s(d))) {
 					var E = c.right === u;
 					_ === d.get_child(a) ? c.set_child(E, o(u, !a)) : c.set_child(E, l(u, !a));
 				}
@@ -77,11 +72,6 @@ function l(e, t) {
 				}
 			}
 		}
-		return (
-			null !== u && ((u.data = n.data), r.set_child(r.right === n, n.get_child(null === n.left)), this.size--),
-			(this._root = t.right),
-			null !== this._root && (this._root.red = !1),
-			null !== u
-		);
+		return null !== u && ((u.data = n.data), r.set_child(r.right === n, n.get_child(null === n.left)), this.size--), (this._root = t.right), null !== this._root && (this._root.red = !1), null !== u;
 	}),
 	(e.exports = a);

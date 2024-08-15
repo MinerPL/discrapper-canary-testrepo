@@ -106,12 +106,7 @@ function v(e, t) {
 	let E = e.state === S.yb.SENT,
 		I = E ? (null != r ? r : (0, g.H)(l.expiry)) : '',
 		m = null == I && E,
-		{
-			selectedAnswerIds: T,
-			submitting: N,
-			editing: f,
-			showResults: C
-		} = null !== (a = null != t ? t : (0, h.fU)(e.getChannelId(), e.id)) && void 0 !== a ? a : R,
+		{ selectedAnswerIds: T, submitting: N, editing: f, showResults: C } = null !== (a = null != t ? t : (0, h.fU)(e.getChannelId(), e.id)) && void 0 !== a ? a : R,
 		p = e.reactions,
 		A = !0;
 	if (!M(e)) {
@@ -123,12 +118,7 @@ function v(e, t) {
 		v = !f && O,
 		L = v || m || C,
 		Z = E && A && (!O || f || L),
-		P =
-			null === (i = u.Z.getChannel(e.getChannelId())) || void 0 === i
-				? void 0
-				: null === (n = i.getGuildId) || void 0 === n
-					? void 0
-					: n.call(i),
+		P = null === (i = u.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i),
 		b = null != P ? d.ZP.getSelfMember(P) : null,
 		D = (0, o.EY)(b),
 		j = (0, c.b)(b);
@@ -155,65 +145,33 @@ function v(e, t) {
 }
 function L(e, t) {
 	var n, o;
-	let {
-			animateEmoji: c = !1,
-			theme: d = 'dark',
-			formattedExpirationLabel: _
-		} = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+	let { animateEmoji: c = !1, theme: d = 'dark', formattedExpirationLabel: _ } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
 		{ poll: h } = e;
 	if (null == h) return;
 	let g = E.default.getCurrentUser();
 	if (null == g) return;
 	let S = s.Z.useReducedMotion,
-		R =
-			null === (o = u.Z.getChannel(e.getChannelId())) || void 0 === o
-				? void 0
-				: null === (n = o.getGuildId) || void 0 === n
-					? void 0
-					: n.call(o),
+		R = null === (o = u.Z.getChannel(e.getChannelId())) || void 0 === o ? void 0 : null === (n = o.getGuildId) || void 0 === n ? void 0 : n.call(o),
 		M = (0, C.E)(g, R),
 		L = h.answers,
 		Z = h.layout_type,
 		P = v(e, t, { formattedExpirationLabel: _ });
 	if (null == P) return;
-	let {
-			canTapAnswers: b,
-			canRemoveVote: D,
-			canShowVoteCounts: j,
-			canSubmitVote: U,
-			expirationLabel: y = A.Z.Messages.POLL_EXPIRED,
-			hasSelectedAnswer: B,
-			hasVoted: k,
-			isEditingVote: G,
-			isExpired: F,
-			isInteractive: w,
-			reactions: V,
-			selectedAnswerIds: H,
-			submitting: Y,
-			tapShouldOpenVotersModal: W,
-			showResults: K
-		} = P,
+	let { canTapAnswers: b, canRemoveVote: D, canShowVoteCounts: j, canSubmitVote: U, expirationLabel: y = A.Z.Messages.POLL_EXPIRED, hasSelectedAnswer: B, hasVoted: k, isEditingVote: G, isExpired: F, isInteractive: w, reactions: V, selectedAnswerIds: H, submitting: Y, tapShouldOpenVotersModal: W, showResults: K } = P,
 		z = (0, N.cZ)(V),
 		Q = A.Z.Messages.POLL_VOTES_COUNT.format({ count: z.toLocaleString() }),
 		q = Math.max(
 			...L.map((e) => {
 				var t, n;
 				let i = x(V, ''.concat(e.answer_id));
-				return null !== (n = null == i ? void 0 : null === (t = i.count_details) || void 0 === t ? void 0 : t.vote) &&
-					void 0 !== n
-					? n
-					: 0;
+				return null !== (n = null == i ? void 0 : null === (t = i.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0;
 			})
 		),
 		X = L.map((e) => {
 			var t, n, s;
 			let o = ''.concat(e.answer_id),
 				u = x(V, o),
-				d =
-					null !== (n = null == u ? void 0 : null === (t = u.count_details) || void 0 === t ? void 0 : t.vote) &&
-					void 0 !== n
-						? n
-						: 0,
+				d = null !== (n = null == u ? void 0 : null === (t = u.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
 				_ = 0 === z ? 0 : d / z,
 				E = H.has(o),
 				T = d >= q && 0 !== d,
@@ -231,16 +189,12 @@ function L(e, t) {
 				pollMedia: {
 					text: e.poll_media.text,
 					emoji: (function (e) {
-						let { animateEmoji: t = !1, size: n = 48 } =
-							arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+						let { animateEmoji: t = !1, size: n = 48 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
 						if (null == e) return;
 						let i = e.animated;
 						if (null == i && null != e.id) {
 							var a, s;
-							i =
-								null !== (s = null === (a = r.ZP.getCustomEmojiById(e.id)) || void 0 === a ? void 0 : a.animated) &&
-								void 0 !== s &&
-								s;
+							i = null !== (s = null === (a = r.ZP.getCustomEmojiById(e.id)) || void 0 === a ? void 0 : a.animated) && void 0 !== s && s;
 						}
 						let o = t && null != i && i;
 						return {

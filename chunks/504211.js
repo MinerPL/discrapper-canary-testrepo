@@ -17,7 +17,4 @@ function s(n, e, t) {
 		sku_id: t
 	});
 }
-((i = l || (l = {})).STORE_MODAL = 'store_modal'),
-	(i.DETAILS_MODAL = 'details_modal'),
-	(i.STORE_EMBED = 'store_embed'),
-	(i.SKU_EMBED = 'sku_embed');
+((i = l || (l = {})).STORE_MODAL = 'store_modal'), (i.DETAILS_MODAL = 'details_modal'), (i.STORE_EMBED = 'store_embed'), (i.SKU_EMBED = 'sku_embed');

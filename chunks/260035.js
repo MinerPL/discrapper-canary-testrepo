@@ -20,7 +20,7 @@ function u(e) {
 			_.current.delete(e), f(_.current.size > 0);
 		}, []),
 		p = i.useCallback((e) => (_.current.add(e), f(!0), () => h(e)), [h]),
-		I = i.useCallback((e, t) => {
+		m = i.useCallback((e, t) => {
 			for (let n of _.current) n(e, t);
 		}, []);
 	return (0, r.jsxs)(r.Fragment, {
@@ -37,7 +37,7 @@ function u(e) {
 				ref: d,
 				className: l.canvas,
 				environment: o.rq,
-				onClick: E ? I : void 0
+				onClick: E ? m : void 0
 			}),
 			(0, r.jsx)(a.Ji, {
 				ref: u,

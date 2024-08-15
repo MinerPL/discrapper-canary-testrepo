@@ -73,9 +73,7 @@ s.default = (e) => {
 									className: h.disclaimer,
 									variant: 'text-xs/normal',
 									color: 'text-normal',
-									children: m.Z.Messages.FAMILY_CENTER_ACCEPT_LINK_ACTIVITY_DISCLAIMER.format({
-										username: c.ZP.getName(o)
-									})
+									children: m.Z.Messages.FAMILY_CENTER_ACCEPT_LINK_ACTIVITY_DISCLAIMER.format({ username: c.ZP.getName(o) })
 								})
 							]
 						})

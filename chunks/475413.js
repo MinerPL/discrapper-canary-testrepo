@@ -29,15 +29,7 @@ let c = {
 	none: ''
 };
 function d(e) {
-	let {
-			action: t,
-			color: n = s.zx.Colors.PRIMARY,
-			themeColor: i = 'primary',
-			className: o,
-			innerClassName: d,
-			onClick: _,
-			...E
-		} = e,
+	let { action: t, color: n = s.zx.Colors.PRIMARY, themeColor: i = 'primary', className: o, innerClassName: d, onClick: _, ...E } = e,
 		{ trackUserProfileAction: f } = (0, l.KZ)();
 	return (0, r.jsx)(s.zx, {
 		className: a()(u.button, o),
@@ -67,16 +59,7 @@ function _(e) {
 	});
 }
 function E(e) {
-	let {
-		icon: t,
-		tooltipText: n,
-		tooltipDelay: i,
-		tooltipClassName: l,
-		tooltipContainerClassName: c,
-		className: _,
-		innerClassName: E,
-		...f
-	} = e;
+	let { icon: t, tooltipText: n, tooltipDelay: i, tooltipClassName: l, tooltipContainerClassName: c, className: _, innerClassName: E, ...f } = e;
 	return (0, r.jsx)(o.TooltipContainer, {
 		text: n,
 		'aria-label': !1,

@@ -12,32 +12,12 @@ var l = t(772848),
 	a = t(626135),
 	c = t(981631);
 function d(n) {
-	let {
-			applicationId: e,
-			skuId: d,
-			onClose: u,
-			onComplete: S,
-			analyticsLocations: m,
-			analyticsLocationObject: I,
-			contextKey: x
-		} = n,
+	let { applicationId: e, skuId: d, onClose: u, onComplete: S, analyticsLocations: m, analyticsLocationObject: I, contextKey: x } = n,
 		f = !1,
 		_ = (0, l.Z)();
 	(0, r.openModalLazy)(
 		async () => {
-			let { default: n } = await Promise.all([
-				t.e('96427'),
-				t.e('77298'),
-				t.e('23357'),
-				t.e('52249'),
-				t.e('54803'),
-				t.e('15685'),
-				t.e('47006'),
-				t.e('32776'),
-				t.e('18209'),
-				t.e('30671'),
-				t.e('78189')
-			]).then(t.bind(t, 409600));
+			let { default: n } = await Promise.all([t.e('96427'), t.e('77298'), t.e('23357'), t.e('52249'), t.e('54803'), t.e('15685'), t.e('47006'), t.e('32776'), t.e('18209'), t.e('30671'), t.e('78189')]).then(t.bind(t, 409600));
 			return (t) => {
 				let { onClose: l, ...r } = t;
 				return (0, i.jsx)(n, {

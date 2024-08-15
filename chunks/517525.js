@@ -14,8 +14,8 @@ var i = n(735250),
 	_ = n(194082),
 	f = n(484459),
 	E = n(594174),
-	g = n(626135),
-	C = n(74538),
+	C = n(626135),
+	g = n(74538),
 	I = n(557457),
 	x = n(475674),
 	T = n(981631),
@@ -44,16 +44,7 @@ let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
 	O = (e) => {
 		let t,
 			s,
-			{
-				participant: r,
-				isUpsellEnabled: o,
-				shape: d,
-				size: f,
-				didTrackUpsellViewed: Z,
-				setDidTrackUpsellViewed: A,
-				className: M,
-				premiumIndicator: b
-			} = e,
+			{ participant: r, isUpsellEnabled: o, shape: d, size: f, didTrackUpsellViewed: Z, setDidTrackUpsellViewed: A, className: M, premiumIndicator: b } = e,
 			R = (0, I.Wc)(r),
 			{ analyticsLocations: j } = (0, p.ZP)(),
 			L = null != (0, x.Z)(r);
@@ -70,7 +61,7 @@ let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
 		let P = t || s,
 			{ location: O } = (0, m.O)(),
 			y = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
-			D = o && !C.ZP.isPremium(y, N.p9.TIER_1) && !C.ZP.canStreamQuality(C.ZP.StreamQuality.MID, y),
+			D = o && !g.ZP.isPremium(y, N.p9.TIER_1) && !g.ZP.canStreamQuality(g.ZP.StreamQuality.MID, y),
 			k = a.useCallback(() => {
 				D &&
 					P &&
@@ -87,7 +78,7 @@ let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
 			(a.useEffect(() => {
 				!Z &&
 					P &&
-					(g.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
+					(C.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
 						type: N.cd.STREAM_QUALITY_INDICATOR,
 						has_premium_stream_fps: t,
 						has_premium_stream_resolution: s,
@@ -99,24 +90,14 @@ let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
 		)
 			return null;
 		let U = (0, i.jsx)(h.Tooltip, {
-			text: L
-				? v.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED
-				: P
-					? v.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM
-					: v.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
+			text: L ? v.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : P ? v.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : v.Z.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
 			position: 'bottom',
 			color: h.Tooltip.Colors.GREY,
 			children: (e) =>
 				(0, i.jsxs)(h.Clickable, {
 					...e,
 					onClick: k,
-					className: l()(
-						S.qualityIndicator,
-						f,
-						_.eE[d],
-						L ? S.qualityIndicatorLowQuality : S.qualityIndicatorFullQuality,
-						{ [S.clickable]: D && P }
-					),
+					className: l()(S.qualityIndicator, f, _.eE[d], L ? S.qualityIndicatorLowQuality : S.qualityIndicatorFullQuality, { [S.clickable]: D && P }),
 					children: [
 						P
 							? (0, i.jsx)(h.NitroWheelIcon, {
@@ -145,12 +126,12 @@ t.Z = (e) => {
 		[d, m] = a.useState(!1),
 		p = (0, I.Wc)(t),
 		{ reducedMotion: E } = a.useContext(h.AccessibilityPreferencesContext),
-		g = n && null != p;
+		C = n && null != p;
 	a.useEffect(() => {
 		(0, f.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), { dispatchWait: !0 });
 	}, [t]);
-	let C = (0, h.useTransition)(
-			g,
+	let g = (0, h.useTransition)(
+			C,
 			{
 				enter: {
 					from: E.enabled ? b : A,
@@ -163,7 +144,7 @@ t.Z = (e) => {
 		),
 		x = (0, h.useSpring)(
 			{
-				to: g ? L : j,
+				to: C ? L : j,
 				config: P
 			},
 			'animate-always'
@@ -174,7 +155,7 @@ t.Z = (e) => {
 			className: l()(S.streamQualityIndicator, n),
 			...a,
 			children: [
-				C((e, n) =>
+				g((e, n) =>
 					n
 						? (0, i.jsx)(r.animated.div, {
 								style: e,
@@ -197,7 +178,7 @@ t.Z = (e) => {
 					children: (0, i.jsx)(_.ZP, {
 						look: _.jZ.RED,
 						size: o,
-						shape: g ? h.BadgeShapes.ROUND_RIGHT : h.BadgeShapes.ROUND
+						shape: C ? h.BadgeShapes.ROUND_RIGHT : h.BadgeShapes.ROUND
 					})
 				})
 			]

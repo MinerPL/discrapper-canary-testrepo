@@ -9,12 +9,7 @@ var a,
 	i,
 	_ = r(507690),
 	E = r(151122);
-((a = i || (i = {}))[(a.Document = 0)] = 'Document'),
-	(a[(a.DocumentType = 1)] = 'DocumentType'),
-	(a[(a.Element = 2)] = 'Element'),
-	(a[(a.Text = 3)] = 'Text'),
-	(a[(a.CDATA = 4)] = 'CDATA'),
-	(a[(a.Comment = 5)] = 'Comment');
+((a = i || (i = {}))[(a.Document = 0)] = 'Document'), (a[(a.DocumentType = 1)] = 'DocumentType'), (a[(a.Element = 2)] = 'Element'), (a[(a.Text = 3)] = 'Text'), (a[(a.CDATA = 4)] = 'CDATA'), (a[(a.Comment = 5)] = 'Comment');
 function s(e, t, r = 1 / 0, n = 0) {
 	return !e || e.nodeType !== e.ELEMENT_NODE || n > r ? -1 : t(e) ? n : s(e.parentNode, t, r, n + 1);
 }
@@ -43,8 +38,7 @@ function c(e, t) {
 		}
 	};
 }
-let I =
-		'Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.',
+let I = 'Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.',
 	u = {
 		map: {},
 		getId: () => (console.error(I), -1),
@@ -100,11 +94,7 @@ function R(e, t, r) {
 		return () => {};
 	}
 }
-'undefined' != typeof window &&
-	window.Proxy &&
-	window.Reflect &&
-	(u = new Proxy(u, { get: (e, t, r) => ('map' === t && console.error(I), Reflect.get(e, t, r)) })),
-	/[1-9][0-9]{12}/.test(Date.now().toString());
+'undefined' != typeof window && window.Proxy && window.Reflect && (u = new Proxy(u, { get: (e, t, r) => ('map' === t && console.error(I), Reflect.get(e, t, r)) })), /[1-9][0-9]{12}/.test(Date.now().toString());
 function A(e, t, r, n, a) {
 	var o;
 	if (!e) return !1;
@@ -152,28 +142,14 @@ let f = (e) =>
 				}
 			}
 		: e;
-for (
-	var S = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/',
-		D = 'undefined' == typeof Uint8Array ? [] : new Uint8Array(256),
-		L = 0;
-	L < S.length;
-	L++
-)
-	D[S.charCodeAt(L)] = L;
+for (var S = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/', D = 'undefined' == typeof Uint8Array ? [] : new Uint8Array(256), L = 0; L < S.length; L++) D[S.charCodeAt(L)] = L;
 var h = function (e) {
 	var t,
 		r = new Uint8Array(e),
 		n = r.length,
 		a = '';
-	for (t = 0; t < n; t += 3)
-		a +=
-			S[r[t] >> 2] +
-			S[((3 & r[t]) << 4) | (r[t + 1] >> 4)] +
-			S[((15 & r[t + 1]) << 2) | (r[t + 2] >> 6)] +
-			S[63 & r[t + 2]];
-	return (
-		n % 3 == 2 ? (a = a.substring(0, a.length - 1) + '=') : n % 3 == 1 && (a = a.substring(0, a.length - 2) + '=='), a
-	);
+	for (t = 0; t < n; t += 3) a += S[r[t] >> 2] + S[((3 & r[t]) << 4) | (r[t + 1] >> 4)] + S[((15 & r[t + 1]) << 2) | (r[t + 2] >> 6)] + S[63 & r[t + 2]];
+	return n % 3 == 2 ? (a = a.substring(0, a.length - 1) + '=') : n % 3 == 1 && (a = a.substring(0, a.length - 2) + '=='), a;
 };
 let C = new Map(),
 	g = (e, t, r) => {
@@ -190,17 +166,7 @@ let C = new Map(),
 			(function e(t, r, n) {
 				if (t instanceof Array) return t.map((t) => e(t, r, n));
 				if (null === t);
-				else if (
-					t instanceof Float32Array ||
-					t instanceof Float64Array ||
-					t instanceof Int32Array ||
-					t instanceof Uint32Array ||
-					t instanceof Uint8Array ||
-					t instanceof Uint16Array ||
-					t instanceof Int16Array ||
-					t instanceof Int8Array ||
-					t instanceof Uint8ClampedArray
-				)
+				else if (t instanceof Float32Array || t instanceof Float64Array || t instanceof Int32Array || t instanceof Uint32Array || t instanceof Uint8Array || t instanceof Uint16Array || t instanceof Int16Array || t instanceof Int8Array || t instanceof Uint8ClampedArray)
 					return {
 						rr_type: t.constructor.name,
 						args: [Object.values(t)]
@@ -243,22 +209,7 @@ let C = new Map(),
 				return t;
 			})(e, t, r)
 		),
-	P = (e, t) =>
-		!![
-			'WebGLActiveInfo',
-			'WebGLBuffer',
-			'WebGLFramebuffer',
-			'WebGLProgram',
-			'WebGLRenderbuffer',
-			'WebGLShader',
-			'WebGLShaderPrecisionFormat',
-			'WebGLTexture',
-			'WebGLUniformLocation',
-			'WebGLVertexArrayObject',
-			'WebGLVertexArrayObjectOES'
-		]
-			.filter((e) => 'function' == typeof t[e])
-			.find((r) => e instanceof t[r]);
+	P = (e, t) => !!['WebGLActiveInfo', 'WebGLBuffer', 'WebGLFramebuffer', 'WebGLProgram', 'WebGLRenderbuffer', 'WebGLShader', 'WebGLShaderPrecisionFormat', 'WebGLTexture', 'WebGLUniformLocation', 'WebGLVertexArrayObject', 'WebGLVertexArrayObjectOES'].filter((e) => 'function' == typeof t[e]).find((r) => e instanceof t[r]);
 function m(e, t, r, n, a) {
 	let o = [];
 	try {
@@ -338,8 +289,7 @@ class G {
 			(0, _.x)([this, 'access', (e) => e.worker, 'optionalAccess', (e) => e.terminate, 'call', (e) => e()]),
 			(this.worker = null),
 			(this.snapshotInProgressMap = new Map()),
-			((this.options.recordCanvas && 'number' == typeof this.options.sampling) || this.options.enableManualSnapshot) &&
-				(this.worker = this.initFPSWorker());
+			((this.options.recordCanvas && 'number' == typeof this.options.sampling) || this.options.enableManualSnapshot) && (this.worker = this.initFPSWorker());
 	}
 	freeze() {
 		this.frozen = !0;
@@ -368,44 +318,17 @@ class G {
 			(this.snapshotInProgressMap = new Map()),
 			(this.worker = null),
 			(this.processMutation = (e, t) => {
-				((this.rafStamps.invokeId && this.rafStamps.latestId !== this.rafStamps.invokeId) ||
-					!this.rafStamps.invokeId) &&
-					(this.rafStamps.invokeId = this.rafStamps.latestId),
-					!this.pendingCanvasMutations.has(e) && this.pendingCanvasMutations.set(e, []),
-					this.pendingCanvasMutations.get(e).push(t);
+				((this.rafStamps.invokeId && this.rafStamps.latestId !== this.rafStamps.invokeId) || !this.rafStamps.invokeId) && (this.rafStamps.invokeId = this.rafStamps.latestId), !this.pendingCanvasMutations.has(e) && this.pendingCanvasMutations.set(e, []), this.pendingCanvasMutations.get(e).push(t);
 			});
-		let {
-			sampling: t = 'all',
-			win: r,
-			blockClass: a,
-			blockSelector: o,
-			unblockSelector: i,
-			maxCanvasSize: _,
-			recordCanvas: E,
-			dataURLOptions: s,
-			errorHandler: c
-		} = e;
+		let { sampling: t = 'all', win: r, blockClass: a, blockSelector: o, unblockSelector: i, maxCanvasSize: _, recordCanvas: E, dataURLOptions: s, errorHandler: c } = e;
 		if (((this.mutationCb = e.mutationCb), (this.mirror = e.mirror), (this.options = e), c)) n = c;
-		if (
-			(((E && 'number' == typeof t) || e.enableManualSnapshot) && (this.worker = this.initFPSWorker()),
-			this.addWindow(r),
-			e.enableManualSnapshot)
-		)
-			return;
+		if ((((E && 'number' == typeof t) || e.enableManualSnapshot) && (this.worker = this.initFPSWorker()), this.addWindow(r), e.enableManualSnapshot)) return;
 		f(() => {
-			E && 'all' === t && (this.startRAFTimestamping(), this.startPendingCanvasMutationFlusher()),
-				E && 'number' == typeof t && this.initCanvasFPSObserver(t, a, o, i, _, { dataURLOptions: s });
+			E && 'all' === t && (this.startRAFTimestamping(), this.startPendingCanvasMutationFlusher()), E && 'number' == typeof t && this.initCanvasFPSObserver(t, a, o, i, _, { dataURLOptions: s });
 		})();
 	}
 	addWindow(e) {
-		let {
-			sampling: t = 'all',
-			blockClass: r,
-			blockSelector: n,
-			unblockSelector: a,
-			recordCanvas: o,
-			enableManualSnapshot: i
-		} = this.options;
+		let { sampling: t = 'all', blockClass: r, blockSelector: n, unblockSelector: a, recordCanvas: o, enableManualSnapshot: i } = this.options;
 		if (!this.windowsSet.has(e)) {
 			if (i) {
 				this.windowsSet.add(e), this.windows.push(new WeakRef(e));
@@ -432,9 +355,7 @@ class G {
 	initFPSWorker() {
 		let e = new Worker(
 			(function () {
-				let e = new Blob([
-					'for(var e="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",t="undefined"==typeof Uint8Array?[]:new Uint8Array(256),a=0;a<64;a++)t[e.charCodeAt(a)]=a;var n=function(t){var a,n=new Uint8Array(t),r=n.length,s="";for(a=0;a<r;a+=3)s+=e[n[a]>>2],s+=e[(3&n[a])<<4|n[a+1]>>4],s+=e[(15&n[a+1])<<2|n[a+2]>>6],s+=e[63&n[a+2]];return r%3==2?s=s.substring(0,s.length-1)+"=":r%3==1&&(s=s.substring(0,s.length-2)+"=="),s};const r=new Map,s=new Map;const i=self;i.onmessage=async function(e){if(!("OffscreenCanvas"in globalThis))return i.postMessage({id:e.data.id});{const{id:t,bitmap:a,width:o,height:f,maxCanvasSize:c,dataURLOptions:g}=e.data,u=async function(e,t,a){const r=e+"-"+t;if("OffscreenCanvas"in globalThis){if(s.has(r))return s.get(r);const i=new OffscreenCanvas(e,t);i.getContext("2d");const o=await i.convertToBlob(a),f=await o.arrayBuffer(),c=n(f);return s.set(r,c),c}return""}(o,f,g),[h,d]=function(e,t,a){if(!a)return[e,t];const[n,r]=a;if(e<=n&&t<=r)return[e,t];let s=e,i=t;return s>n&&(i=Math.floor(n*t/e),s=n),i>r&&(s=Math.floor(r*e/t),i=r),[s,i]}(o,f,c),l=new OffscreenCanvas(h,d),w=l.getContext("bitmaprenderer"),p=h===o&&d===f?a:await createImageBitmap(a,{resizeWidth:h,resizeHeight:d,resizeQuality:"low"});w.transferFromImageBitmap(p),a.close();const y=await l.convertToBlob(g),v=y.type,b=await y.arrayBuffer(),m=n(b);if(p.close(),!r.has(t)&&await u===m)return r.set(t,m),i.postMessage({id:t});if(r.get(t)===m)return i.postMessage({id:t});i.postMessage({id:t,type:v,base64:m,width:o,height:f}),r.set(t,m)}};'
-				]);
+				let e = new Blob(['for(var e="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",t="undefined"==typeof Uint8Array?[]:new Uint8Array(256),a=0;a<64;a++)t[e.charCodeAt(a)]=a;var n=function(t){var a,n=new Uint8Array(t),r=n.length,s="";for(a=0;a<r;a+=3)s+=e[n[a]>>2],s+=e[(3&n[a])<<4|n[a+1]>>4],s+=e[(15&n[a+1])<<2|n[a+2]>>6],s+=e[63&n[a+2]];return r%3==2?s=s.substring(0,s.length-1)+"=":r%3==1&&(s=s.substring(0,s.length-2)+"=="),s};const r=new Map,s=new Map;const i=self;i.onmessage=async function(e){if(!("OffscreenCanvas"in globalThis))return i.postMessage({id:e.data.id});{const{id:t,bitmap:a,width:o,height:f,maxCanvasSize:c,dataURLOptions:g}=e.data,u=async function(e,t,a){const r=e+"-"+t;if("OffscreenCanvas"in globalThis){if(s.has(r))return s.get(r);const i=new OffscreenCanvas(e,t);i.getContext("2d");const o=await i.convertToBlob(a),f=await o.arrayBuffer(),c=n(f);return s.set(r,c),c}return""}(o,f,g),[h,d]=function(e,t,a){if(!a)return[e,t];const[n,r]=a;if(e<=n&&t<=r)return[e,t];let s=e,i=t;return s>n&&(i=Math.floor(n*t/e),s=n),i>r&&(s=Math.floor(r*e/t),i=r),[s,i]}(o,f,c),l=new OffscreenCanvas(h,d),w=l.getContext("bitmaprenderer"),p=h===o&&d===f?a:await createImageBitmap(a,{resizeWidth:h,resizeHeight:d,resizeQuality:"low"});w.transferFromImageBitmap(p),a.close();const y=await l.convertToBlob(g),v=y.type,b=await y.arrayBuffer(),m=n(b);if(p.close(),!r.has(t)&&await u===m)return r.set(t,m),i.postMessage({id:t});if(r.get(t)===m)return i.postMessage({id:t});i.postMessage({id:t,type:v,base64:m,width:o,height:f}),r.set(t,m)}};']);
 				return URL.createObjectURL(e);
 			})()
 		);
@@ -533,8 +454,7 @@ class G {
 				let i = [];
 				return (
 					i.push(...U(t.WebGLRenderingContext.prototype, O.WebGL, e, r, n, a, o, t)),
-					void 0 !== t.WebGL2RenderingContext &&
-						i.push(...U(t.WebGL2RenderingContext.prototype, O.WebGL2, e, r, n, a, o, t)),
+					void 0 !== t.WebGL2RenderingContext && i.push(...U(t.WebGL2RenderingContext.prototype, O.WebGL2, e, r, n, a, o, t)),
 					() => {
 						i.forEach((e) => e());
 					}
@@ -546,16 +466,7 @@ class G {
 	}
 	snapshot(e) {
 		let { options: t } = this,
-			r = this.takeSnapshot(
-				!0,
-				'all' === t.sampling ? 2 : t.sampling || 2,
-				t.blockClass,
-				t.blockSelector,
-				t.unblockSelector,
-				t.maxCanvasSize,
-				t.dataURLOptions,
-				e
-			);
+			r = this.takeSnapshot(!0, 'all' === t.sampling ? 2 : t.sampling || 2, t.blockClass, t.blockSelector, t.unblockSelector, t.maxCanvasSize, t.dataURLOptions, e);
 		this.restoreHandlers.push(() => {
 			cancelAnimationFrame(r);
 		});
@@ -596,16 +507,7 @@ class G {
 								if (t.width && t.height) {
 									if ((this.snapshotInProgressMap.set(r, !0), !e && ['webgl', 'webgl2'].includes(t.__context))) {
 										let e = t.getContext(t.__context);
-										!1 ===
-											(0, _.x)([
-												e,
-												'optionalAccess',
-												(e) => e.getContextAttributes,
-												'call',
-												(e) => e(),
-												'optionalAccess',
-												(e) => e.preserveDrawingBuffer
-											]) && e.clear(e.COLOR_BUFFER_BIT);
+										!1 === (0, _.x)([e, 'optionalAccess', (e) => e.getContextAttributes, 'call', (e) => e(), 'optionalAccess', (e) => e.preserveDrawingBuffer]) && e.clear(e.COLOR_BUFFER_BIT);
 									}
 									createImageBitmap(t)
 										.then((e) => {

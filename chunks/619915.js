@@ -23,9 +23,7 @@ var i = n(470079),
 	c = n(317381);
 function d(e, t) {
 	return p(
-		(0, l.Wu)([c.ZP], () =>
-			null != e && null != e.id && '' !== e.id ? c.ZP.getEmbeddedActivitiesForChannel(e.id) : c.i6
-		),
+		(0, l.Wu)([c.ZP], () => (null != e && null != e.id && '' !== e.id ? c.ZP.getEmbeddedActivitiesForChannel(e.id) : c.i6)),
 		t
 	);
 }
@@ -98,9 +96,7 @@ function f(e) {
 					var n;
 					let i = a.Z.findActivity(null == e ? void 0 : e.embeddedActivity.userIds.values().next().value, (t) => {
 						var n;
-						return (
-							t.application_id === (null == e ? void 0 : null === (n = e.application) || void 0 === n ? void 0 : n.id)
-						);
+						return t.application_id === (null == e ? void 0 : null === (n = e.application) || void 0 === n ? void 0 : n.id);
 					});
 					t.set(null == e ? void 0 : null === (n = e.application) || void 0 === n ? void 0 : n.id, {
 						...e,

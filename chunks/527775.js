@@ -2,9 +2,7 @@ var n = r(533019);
 function i(e) {
 	var t = {};
 	for (var r in e) t[0 === r.indexOf('--') ? r : (0, n.Z)(r)] = e[r];
-	return (
-		e.fallbacks && (Array.isArray(e.fallbacks) ? (t.fallbacks = e.fallbacks.map(i)) : (t.fallbacks = i(e.fallbacks))), t
-	);
+	return e.fallbacks && (Array.isArray(e.fallbacks) ? (t.fallbacks = e.fallbacks.map(i)) : (t.fallbacks = i(e.fallbacks))), t;
 }
 t.Z = function () {
 	return {

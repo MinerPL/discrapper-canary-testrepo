@@ -72,5 +72,4 @@ class S extends (i = a.PureComponent) {
 			});
 	}
 }
-Z(S, 'defaultProps', { contained: !1 }),
-	(t.Z = l.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(S));
+Z(S, 'defaultProps', { contained: !1 }), (t.Z = l.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(S));

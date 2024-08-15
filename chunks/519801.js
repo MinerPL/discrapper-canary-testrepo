@@ -25,13 +25,7 @@ function p(e) {
 	let p,
 		T,
 		{ showBenefits: C, handleClose: N, onSubscriptionConfirmation: A } = e,
-		{
-			updatedSubscription: O,
-			readySlideId: P,
-			selectedSku: b,
-			selectedStoreListing: g,
-			application: v
-		} = (0, d.usePaymentContext)(),
+		{ updatedSubscription: O, readySlideId: P, selectedSku: b, selectedStoreListing: g, application: v } = (0, d.usePaymentContext)(),
 		L = (0, i.Z)(S.i),
 		{ createMultipleConfettiAt: x } = a.useContext(s.h),
 		R = null !== (t = null == b ? void 0 : b.name) && void 0 !== t ? t : '',
@@ -40,25 +34,13 @@ function p(e) {
 		},
 		k = P === I.h8.CONFIRM,
 		B = (0, o.KW)(null !== (n = null == b ? void 0 : b.flags) && void 0 !== n ? n : 0),
-		j =
-			null != g && g.benefits.length > 0
-				? m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_BENEFITS_SUBTITLE.format({
-						benefitCount: g.benefits.length
-					})
-				: null;
+		j = null != g && g.benefits.length > 0 ? m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_BENEFITS_SUBTITLE.format({ benefitCount: g.benefits.length }) : null;
 	return (
 		C
 			? L
 				? (p = (0, r.jsx)(c.h, {
-						title: m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_TITLE_V2.format({
-							tierName: R
-						}),
-						subtitle:
-							null != g && g.benefits.length > 0
-								? m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_SUBTITLE.format({
-										benefits: j
-									})
-								: null,
+						title: m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_TITLE_V2.format({ tierName: R }),
+						subtitle: null != g && g.benefits.length > 0 ? m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_SUBTITLE.format({ benefits: j }) : null,
 						onConfirm: M,
 						confirmCta: m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_DONE_BUTTON
 					}))
@@ -70,13 +52,7 @@ function p(e) {
 									application: v,
 									title: m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_TITLE_V2.format({ tier: R }),
 									subtitle: m.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_BENEFITS_PREVIEW,
-									description: B
-										? m.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({
-												applicationName: null == v ? void 0 : v.name
-											})
-										: m.Z.Messages.APPLICATION_GUILD_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({
-												tier: R
-											})
+									description: B ? m.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({ applicationName: null == v ? void 0 : v.name }) : m.Z.Messages.APPLICATION_GUILD_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({ tier: R })
 								})
 							: (0, r.jsx)(f.Z, {})),
 					(T = (0, r.jsx)(_.Z, {

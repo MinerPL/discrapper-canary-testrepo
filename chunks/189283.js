@@ -48,15 +48,7 @@ function c(e) {
 	});
 }
 function d(e) {
-	let {
-			options: t,
-			value: n,
-			onChange: a,
-			look: o = 'tab',
-			className: l,
-			optionClassName: d,
-			selectedOptionClassName: _
-		} = e,
+	let { options: t, value: n, onChange: a, look: o = 'tab', className: l, optionClassName: d, selectedOptionClassName: _ } = e,
 		E = i.useCallback(
 			(e) => {
 				var t;

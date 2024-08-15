@@ -42,14 +42,7 @@ let b = new E.Z('SubscriptionHeader.tsx'),
 	},
 	v = [D.O0b.PAUSED, D.O0b.PAUSE_PENDING, D.O0b.BILLING_RETRY];
 function j(e) {
-	let {
-		wordMark: s,
-		subscriptionInfo: t,
-		buttons: a,
-		statusClasses: r,
-		shouldUseDiscountMarketing: o,
-		discountAmount: l
-	} = e;
+	let { wordMark: s, subscriptionInfo: t, buttons: a, statusClasses: r, shouldUseDiscountMarketing: o, discountAmount: l } = e;
 	return (0, n.jsxs)('div', {
 		className: i()(L.banner, r),
 		children: [
@@ -88,14 +81,7 @@ function j(e) {
 	});
 }
 function B(e) {
-	let {
-		wordMark: s,
-		subscriptionInfo: t,
-		buttons: a,
-		statusClasses: r,
-		shouldUseDiscountMarketing: o,
-		discountAmount: l
-	} = e;
+	let { wordMark: s, subscriptionInfo: t, buttons: a, statusClasses: r, shouldUseDiscountMarketing: o, discountAmount: l } = e;
 	return (0, n.jsxs)('div', {
 		className: i()(L.banner, r, L.repositioned),
 		children: [
@@ -178,8 +164,7 @@ s.Z = function (e) {
 		H = (0, g.t7)(),
 		k = (0, g.lr)(),
 		W = () => {
-			if (r.status === D.O0b.ACTIVE || r.status === D.O0b.PAST_DUE || r.status === D.O0b.PAUSED)
-				Q(x.Steps.PAUSE_SELECT);
+			if (r.status === D.O0b.ACTIVE || r.status === D.O0b.PAST_DUE || r.status === D.O0b.PAUSED) Q(x.Steps.PAUSE_SELECT);
 		},
 		K = () => {
 			if (r.status === D.O0b.ACTIVE || r.status === D.O0b.PAST_DUE || r.status === D.O0b.PAUSE_PENDING) Q();
@@ -210,10 +195,7 @@ s.Z = function (e) {
 				let s = (0, A.DE)(e, null == M ? void 0 : M.id, !1),
 					t = s.length > 0 ? s[0] : r.currency,
 					n = !1;
-				1 === s.length &&
-					(null == M ? void 0 : M.id) === r.paymentSourceId &&
-					(0, A.tD)(e.id, t, null == M ? void 0 : M.id) &&
-					(n = !0),
+				1 === s.length && (null == M ? void 0 : M.id) === r.paymentSourceId && (0, A.tD)(e.id, t, null == M ? void 0 : M.id) && (n = !0),
 					n
 						? c.O5(r, y)
 						: (0, u.Z)({
@@ -403,12 +385,7 @@ s.Z = function (e) {
 					let t = !1,
 						a = null;
 					return (
-						null != r.renewalMutations &&
-							((t = !0),
-							(a =
-								r.renewalMutations.planId !== r.planId
-									? P.Z.Messages.PREMIUM_SWITCH_PLAN_DISABLED_PENDING_MUTATION_PLAN
-									: P.Z.Messages.PREMIUM_SWITCH_PLAN_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION)),
+						null != r.renewalMutations && ((t = !0), (a = r.renewalMutations.planId !== r.planId ? P.Z.Messages.PREMIUM_SWITCH_PLAN_DISABLED_PENDING_MUTATION_PLAN : P.Z.Messages.PREMIUM_SWITCH_PLAN_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION)),
 						null != r.trialEndsAt && ((t = !0), (a = P.Z.Messages.PREMIUM_SWITCH_PLAN_DISABLED_IN_TRIAL)),
 						e === D.O0b.PAST_DUE && (t = !0),
 						(0, n.jsxs)('div', {

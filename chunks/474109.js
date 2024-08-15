@@ -20,16 +20,11 @@ function C() {
 function I(e) {
 	var t;
 	let n = o.default.getMutableGuildStates();
-	return (
-		(e === _.x8Z.SERVER_DISCOVERY_BADGE && !d.Z.hasViewed(_.x8Z.SERVER_DISCOVERY_BADGE)) ||
-		(e !== g && e !== m && (null === (t = n[null != e ? e : 'null']) || void 0 === t ? void 0 : t.mentionCount) > 0)
-	);
+	return (e === _.x8Z.SERVER_DISCOVERY_BADGE && !d.Z.hasViewed(_.x8Z.SERVER_DISCOVERY_BADGE)) || (e !== g && e !== m && (null === (t = n[null != e ? e : 'null']) || void 0 === t ? void 0 : t.mentionCount) > 0);
 }
 let E = (0, p.oH)((e, t, n) => ['null', ...t, ...e, m, _.x8Z.E3_SERVER_DISCOVERY_BADGE, g]);
 t.Z = l.forwardRef(function (e, t) {
-	let n = (0, r.Wu)([u.ZP, c.Z, o.default], () =>
-			E(u.ZP.getGuildFolders(), c.Z.getUnreadPrivateChannelIds(), o.default.getStoreChangeSentinel())
-		),
+	let n = (0, r.Wu)([u.ZP, c.Z, o.default], () => E(u.ZP.getGuildFolders(), c.Z.getUnreadPrivateChannelIds(), o.default.getStoreChangeSentinel())),
 		l = (0, r.e7)([h.Z], () => h.Z.isFocused()),
 		d = (0, r.e7)([s.Z], () => s.Z.getExpandedFolders());
 	return (0, i.jsx)(a.Z, {

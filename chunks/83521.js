@@ -37,28 +37,18 @@ function h(e) {
 			T(g.L.DISMISS);
 		}, [T]);
 	s.useEffect(() => ((null == f || null == M) && T(g.L.AUTO_DISMISS), () => {}), [M, f, h, T]);
-	let Z = (0, _.nP)(null == L ? void 0 : null === (a = L.branding) || void 0 === a ? void 0 : a.primaryColor, [
-			i.tokens.colors.BG_BRAND,
-			0.7
-		]),
+	let Z = (0, _.nP)(null == L ? void 0 : null === (a = L.branding) || void 0 === a ? void 0 : a.primaryColor, [i.tokens.colors.BG_BRAND, 0.7]),
 		k = i.tokens.colors.BG_SURFACE_OVERLAY.resolve({
 			theme: D,
 			saturation: 1
 		}).hex(),
 		P = (0, _.nj)(Z, k, 'top center'),
-		b = (0, _.nP)(null == L ? void 0 : null === (l = L.branding) || void 0 === l ? void 0 : l.primaryColor, [
-			i.tokens.colors.BG_BRAND,
-			1
-		]),
+		b = (0, _.nP)(null == L ? void 0 : null === (l = L.branding) || void 0 === l ? void 0 : l.primaryColor, [i.tokens.colors.BG_BRAND, 1]),
 		O = (0, _.$0)(Z).hex(),
 		R = (0, m.Zp)(f, null == M ? void 0 : M.clan);
 	if (null == f || null == M) return null;
-	let U = R
-			? A.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_NEW_IDENTITY_HEADING.format({ guildName: f.name })
-			: A.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_HEADING.format({ guildName: f.name }),
-		G = R
-			? A.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_NEW_IDENTITY_DESCRIPTION.format({ guildName: f.name })
-			: A.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_DESCRIPTION.format({ guildName: f.name }),
+	let U = R ? A.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_NEW_IDENTITY_HEADING.format({ guildName: f.name }) : A.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_HEADING.format({ guildName: f.name }),
+		G = R ? A.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_NEW_IDENTITY_DESCRIPTION.format({ guildName: f.name }) : A.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_DESCRIPTION.format({ guildName: f.name }),
 		w = A.Z.Messages.CLAN_USER_ADOPT_TAG_MODAL_CTA;
 	return (0, n.jsxs)(i.ModalRoot, {
 		transitionState: S,

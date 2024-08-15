@@ -28,16 +28,7 @@ function m(e, t, n) {
 }
 class T extends (i = o.PureComponent) {
 	renderQuery(e) {
-		let {
-			query: t,
-			navId: n,
-			focusedIndex: i,
-			onSelectQuery: a,
-			onSelectSearchEverywhere: s,
-			onHighlightQuery: r,
-			hideQuery: o,
-			searchFavorites: c
-		} = this.props;
+		let { query: t, navId: n, focusedIndex: i, onSelectQuery: a, onSelectSearchEverywhere: s, onHighlightQuery: r, hideQuery: o, searchFavorites: c } = this.props;
 		if (e || o) return null;
 		let I = -1 === i;
 		return (0, l.jsxs)(l.Fragment, {
@@ -89,13 +80,7 @@ class T extends (i = o.PureComponent) {
 		});
 	}
 	renderResults(e) {
-		let {
-			numResults: t,
-			renderNoResults: n,
-			renderInitialState: i,
-			renderResult: a,
-			renderCustomResults: s
-		} = this.props;
+		let { numResults: t, renderNoResults: n, renderInitialState: i, renderResult: a, renderCustomResults: s } = this.props;
 		if (e) return i();
 		if (0 === t) return n();
 		if (null != a) return Array.from({ length: t }).map((e, t) => a(t));

@@ -19,8 +19,8 @@ var i = n(735250),
 	_ = n(134432),
 	f = n(769654),
 	E = n(601964),
-	g = n(430824),
-	C = n(768581),
+	C = n(430824),
+	g = n(768581),
 	I = n(683818),
 	x = n(16853),
 	T = n(981631),
@@ -120,7 +120,7 @@ t.Z = (e) => {
 	var t;
 	let { entry: s } = e,
 		[l, h] = a.useState(!1),
-		I = null != (0, r.e7)([g.Z], () => g.Z.getGuild(s.guildId)),
+		I = null != (0, r.e7)([C.Z], () => C.Z.getGuild(s.guildId)),
 		x = async () => {
 			h(!0);
 			try {
@@ -129,14 +129,14 @@ t.Z = (e) => {
 				h(!1);
 			}
 		},
-		S = C.ZP.getGuildSplashURL({
+		S = g.ZP.getGuildSplashURL({
 			id: s.guildId,
 			splash: s.splash,
 			size: 300 * (0, _.x_)()
 		}),
 		Z =
 			null !==
-				(t = C.ZP.getGuildIconURL({
+				(t = g.ZP.getGuildIconURL({
 					id: s.guildId,
 					icon: s.icon,
 					size: 40
@@ -228,9 +228,7 @@ t.Z = (e) => {
 											(0, i.jsx)(o.Text, {
 												variant: 'text-xs/normal',
 												color: 'header-secondary',
-												children: N.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
-													membersOnline: s.approximatePresenceCount
-												})
+												children: N.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: s.approximatePresenceCount })
 											})
 										]
 									}),
@@ -242,9 +240,7 @@ t.Z = (e) => {
 											(0, i.jsx)(o.Text, {
 												variant: 'text-xs/normal',
 												color: 'header-secondary',
-												children: N.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
-													count: s.approximateMemberCount
-												})
+												children: N.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: s.approximateMemberCount })
 											})
 										]
 									})

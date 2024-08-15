@@ -71,8 +71,8 @@ var r,
 	f = n(442837),
 	h = n(481060),
 	p = n(70956),
-	I = n(823379),
-	m = n(709054),
+	m = n(823379),
+	I = n(709054),
 	T = n(719247),
 	g = n(26033),
 	S = n(22211),
@@ -89,11 +89,7 @@ let y = {
 	[d.s.WATCHED_MEDIA]: [j, W],
 	[d.s.LAUNCHED_ACTIVITY]: [U, P, k]
 };
-((r = i || (i = {}))[(r.CARD = 0)] = 'CARD'),
-	(r[(r.POPOUT = 1)] = 'POPOUT'),
-	(r[(r.GAME_PROFILE = 2)] = 'GAME_PROFILE'),
-	(r[(r.USER_PROFILE = 3)] = 'USER_PROFILE'),
-	(r[(r.EMBED = 4)] = 'EMBED');
+((r = i || (i = {}))[(r.CARD = 0)] = 'CARD'), (r[(r.POPOUT = 1)] = 'POPOUT'), (r[(r.GAME_PROFILE = 2)] = 'GAME_PROFILE'), (r[(r.USER_PROFILE = 3)] = 'USER_PROFILE'), (r[(r.EMBED = 4)] = 'EMBED');
 let D = s.createContext({});
 function L() {
 	return s.useContext(D);
@@ -135,7 +131,7 @@ function P(e) {
 	let { entry: t } = e,
 		{ channel: n } = (0, S.Z)(t),
 		{ location: r } = L();
-	return null == n || (0, I.Hi)(r, [1, 2, 3])
+	return null == n || (0, m.Hi)(r, [1, 2, 3])
 		? null
 		: (0, a.jsx)(M, {
 				Icon: h.VoiceNormalIcon,
@@ -145,7 +141,7 @@ function P(e) {
 function U(e) {
 	let { entry: t, hovered: n } = e,
 		{ defaultTextColor: r, defaultIconColor: i, location: s } = L(),
-		o = (0, A.kr)(t) && (0, I.Hi)(s, [0, 3]),
+		o = (0, A.kr)(t) && (0, m.Hi)(s, [0, 3]),
 		l = o ? h.tokens.colors.TEXT_POSITIVE : i,
 		{ streamPreviewUrl: u } = (0, S.Z)(t),
 		c = null != u ? h.ScreenArrowIcon : (0, g.Mq)(t) ? h.ActivitiesIcon : h.GameControllerIcon;
@@ -196,7 +192,7 @@ function x(e) {
 		{ defaultTextColor: i, defaultIconColor: s, location: o } = L(),
 		l = (0, f.e7)([T.Z], () => T.Z.getMatchingActivity(n));
 	if ((null == l ? void 0 : l.timestamps) == null) return null;
-	let u = (0, I.Hi)(o, [0, 3]),
+	let u = (0, m.Hi)(o, [0, 3]),
 		c = u ? h.tokens.colors.TEXT_POSITIVE : s,
 		d = null === (t = l.timestamps) || void 0 === t ? void 0 : t.start;
 	return (0, a.jsxs)('div', {
@@ -218,7 +214,7 @@ function x(e) {
 function G(e) {
 	let { entry: t } = e,
 		{ location: n } = L(),
-		r = (0, I.Hi)(n, [0, 2]) ? h.tokens.colors.STATUS_POSITIVE : void 0;
+		r = (0, m.Hi)(n, [0, 2]) ? h.tokens.colors.STATUS_POSITIVE : void 0;
 	return (0, A.Ol)(t)
 		? (0, a.jsx)(M, {
 				Icon: h.NewUserSimpleIcon,
@@ -273,17 +269,11 @@ function V(e) {
 		r = 0 !== n,
 		i = (0, A.yA)(t);
 	if (null == i) return null;
-	let s = r
-		? R.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK
-		: R.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS;
+	let s = r ? R.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK : R.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS;
 	return (0, a.jsx)(M, {
 		Icon: h.TrophyIcon,
 		text: (0, a.jsxs)(a.Fragment, {
-			children: [
-				R.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME,
-				r ? ' \u2014 ' : ': ',
-				s.format({ hours: Math.round(i / p.Z.Seconds.HOUR) })
-			]
+			children: [R.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, r ? ' \u2014 ' : ': ', s.format({ hours: Math.round(i / p.Z.Seconds.HOUR) })]
 		})
 	});
 }
@@ -293,9 +283,7 @@ function H(e) {
 		{ location: r } = L(),
 		i = null === (t = (0, A.PJ)(n, _.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
 	if (null == i) return null;
-	let s = (0, I.Hi)(r, [1, 4])
-		? R.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({ count: i })
-		: R.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRACKS_THIS_WEEK.format({ count: i });
+	let s = (0, m.Hi)(r, [1, 4]) ? R.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({ count: i }) : R.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRACKS_THIS_WEEK.format({ count: i });
 	return (0, a.jsx)(M, {
 		Icon: h.TrophyIcon,
 		text: s
@@ -317,7 +305,7 @@ function Y(e) {
 	let { entry: t } = e,
 		{ location: n } = L();
 	if (2 === n) return null;
-	let r = m.default.extractTimestamp(t.extra.application_id);
+	let r = I.default.extractTimestamp(t.extra.application_id);
 	return c()().diff(c()(r), 'days') > O.G
 		? null
 		: (0, a.jsx)(M, {
@@ -360,7 +348,7 @@ function K(e) {
 	let t,
 		{ location: n, children: r, className: i } = e;
 	return (
-		(t = (0, I.Hi)(n, [1, 4])
+		(t = (0, m.Hi)(n, [1, 4])
 			? {
 					defaultTextColor: 'content-inventory-overlay-text-secondary',
 					defaultIconColor: h.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY

@@ -244,24 +244,4 @@ let _ = (e) => {
 			})
 		});
 	};
-(_.Header = I),
-	(_.Body = x),
-	(_.Icon = j),
-	(_.Info = L),
-	(_.Data = f),
-	(_.Channel = S),
-	(_.Button = T),
-	(_.GuildSplash = B),
-	(_.GuildName = Z),
-	(_.GuildTemplateName = k),
-	(I.displayName = 'InviteButton.Header'),
-	(x.displayName = 'InviteButton.Body'),
-	(j.displayName = 'InviteButton.Icon'),
-	(L.displayName = 'InviteButton.Info'),
-	(f.displayName = 'InviteButton.Data'),
-	(S.displayName = 'InviteButton.Channel'),
-	(T.displayName = 'InviteButton.Button'),
-	(B.displayName = 'InviteButton.GuildSplash'),
-	(Z.displayName = 'InviteButton.GuildName'),
-	(k.displayName = 'InviteButton.GuildTemplateName'),
-	(n.Z = _);
+(_.Header = I), (_.Body = x), (_.Icon = j), (_.Info = L), (_.Data = f), (_.Channel = S), (_.Button = T), (_.GuildSplash = B), (_.GuildName = Z), (_.GuildTemplateName = k), (I.displayName = 'InviteButton.Header'), (x.displayName = 'InviteButton.Body'), (j.displayName = 'InviteButton.Icon'), (L.displayName = 'InviteButton.Info'), (f.displayName = 'InviteButton.Data'), (S.displayName = 'InviteButton.Channel'), (T.displayName = 'InviteButton.Button'), (B.displayName = 'InviteButton.GuildSplash'), (Z.displayName = 'InviteButton.GuildName'), (k.displayName = 'InviteButton.GuildTemplateName'), (n.Z = _);

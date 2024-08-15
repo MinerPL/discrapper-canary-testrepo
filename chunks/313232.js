@@ -52,16 +52,10 @@ class s {
 		return s.getCalculatorOrCreate(this.outboundEncodeFps, e, 'framesEncoded', 'timestamp', 5);
 	}
 	constructor() {
-		a(this, 'inboundVideoBitrate', {}),
-			a(this, 'inboundDecodeFps', {}),
-			a(this, 'outboundVideoBitrate', {}),
-			a(this, 'outboundEncodeFps', {});
+		a(this, 'inboundVideoBitrate', {}), a(this, 'inboundDecodeFps', {}), a(this, 'outboundVideoBitrate', {}), a(this, 'outboundEncodeFps', {});
 	}
 }
-((i = r || (r = {}))[(i.NONE = 0)] = 'NONE'),
-	(i[(i.MILLISECONDS_FROM_SECONDS = 1)] = 'MILLISECONDS_FROM_SECONDS'),
-	(i[(i.BYTES_TO_BITS = 2)] = 'BYTES_TO_BITS'),
-	(i[(i.ROUND = 4)] = 'ROUND');
+((i = r || (r = {}))[(i.NONE = 0)] = 'NONE'), (i[(i.MILLISECONDS_FROM_SECONDS = 1)] = 'MILLISECONDS_FROM_SECONDS'), (i[(i.BYTES_TO_BITS = 2)] = 'BYTES_TO_BITS'), (i[(i.ROUND = 4)] = 'ROUND');
 let o = {
 	0: { multiplier: 1 },
 	1: {
@@ -90,21 +84,10 @@ class l {
 		return this.round ? Math.round(o) : o;
 	}
 	constructor(e, t, n = 0) {
-		for (let l in (a(this, 'accumulativeMetricKey', void 0),
-		a(this, 'samplesMetricKey', void 0),
-		a(this, 'previous', void 0),
-		a(this, 'multiplier', void 0),
-		a(this, 'round', void 0),
-		(this.accumulativeMetricKey = e),
-		(this.samplesMetricKey = t),
-		(this.multiplier = 1),
-		(this.round = !1),
-		r)) {
+		for (let l in (a(this, 'accumulativeMetricKey', void 0), a(this, 'samplesMetricKey', void 0), a(this, 'previous', void 0), a(this, 'multiplier', void 0), a(this, 'round', void 0), (this.accumulativeMetricKey = e), (this.samplesMetricKey = t), (this.multiplier = 1), (this.round = !1), r)) {
 			var i, s;
 			let e = Number(l);
-			if (!isNaN(e) && (n & e) != 0 && l in o)
-				this.multiplier *=
-					null !== (s = null === (i = o[l]) || void 0 === i ? void 0 : i.multiplier) && void 0 !== s ? s : 1;
+			if (!isNaN(e) && (n & e) != 0 && l in o) this.multiplier *= null !== (s = null === (i = o[l]) || void 0 === i ? void 0 : i.multiplier) && void 0 !== s ? s : 1;
 		}
 		this.round = (4 & n) != 0;
 	}

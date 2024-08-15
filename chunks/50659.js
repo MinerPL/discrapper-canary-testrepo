@@ -177,14 +177,9 @@ function p(e, t) {
 	let n = e.selection;
 	if (null == n) return;
 	let r = !0;
-	for (let [i, a] of o.bN.blocks(e))
-		('line' === i.type || i.type === t) && o.M8.includes(n, a) && (r = r && i.type === t);
+	for (let [i, a] of o.bN.blocks(e)) ('line' === i.type || i.type === t) && o.M8.includes(n, a) && (r = r && i.type === t);
 	o.bN.withoutNormalizing(e, () => {
-		for (let [i, a] of o.bN.blocks(e))
-			o.M8.includes(n, a) &&
-				(r || 'line' !== i.type
-					? r && i.type === t && s.Q.setNodes(e, { type: 'line' }, { at: a })
-					: s.Q.setNodes(e, { type: t }, { at: a }));
+		for (let [i, a] of o.bN.blocks(e)) o.M8.includes(n, a) && (r || 'line' !== i.type ? r && i.type === t && s.Q.setNodes(e, { type: 'line' }, { at: a }) : s.Q.setNodes(e, { type: t }, { at: a }));
 	}),
 		o.bN.focus(e);
 }

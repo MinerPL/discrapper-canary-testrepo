@@ -106,12 +106,9 @@ function R(e) {
 		]
 	});
 }
-((s = a || (a = {}))[(s.DEFAULT = 0)] = 'DEFAULT'),
-	(s[(s.SUBMITTING = 1)] = 'SUBMITTING'),
-	(s[(s.SUBMITTED = 2)] = 'SUBMITTED');
+((s = a || (a = {}))[(s.DEFAULT = 0)] = 'DEFAULT'), (s[(s.SUBMITTING = 1)] = 'SUBMITTING'), (s[(s.SUBMITTED = 2)] = 'SUBMITTED');
 let U = (e) => {
-	if (e.toString() === p.Plq.MENTION_EVERYONE.toString())
-		return M.Z.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_MENTION_EVERYONE;
+	if (e.toString() === p.Plq.MENTION_EVERYONE.toString()) return M.Z.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_MENTION_EVERYONE;
 	return (0, S.wt)(e);
 };
 function D(e) {
@@ -125,10 +122,7 @@ function D(e) {
 						className: C.tableHeader,
 						variant: 'text-xs/semibold',
 						color: 'text-muted',
-						children:
-							0 === t
-								? M.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_ENABLED_PERMISSIONS
-								: M.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_DISABLING_PERMISSIONS
+						children: 0 === t ? M.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_ENABLED_PERMISSIONS : M.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_DISABLING_PERMISSIONS
 					}),
 					(0, o.jsx)('div', {
 						className: C.permissionsTable,
@@ -165,10 +159,7 @@ function x(e) {
 						className: C.tableHeader,
 						variant: 'text-xs/semibold',
 						color: 'text-muted',
-						children:
-							2 === t
-								? M.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_DISABLED
-								: M.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_DISABLED_PERMISSIONS
+						children: 2 === t ? M.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_DISABLED : M.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_DISABLED_PERMISSIONS
 					}),
 					(0, o.jsx)('div', {
 						className: C.permissionsTable,
@@ -284,12 +275,7 @@ function v(e) {
 			(0, o.jsx)(I.Button, {
 				onClick: n,
 				submitting: 1 === s,
-				children:
-					0 === s
-						? a
-							? M.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_NOTICE_CONFIRMATION
-							: M.Z.Messages.UPDATE_COMMUNICATION_NOTIFICATIONS_CONFIRMATION
-						: M.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_NOTICE_CONFIRMATION_DONE
+				children: 0 === s ? (a ? M.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_NOTICE_CONFIRMATION : M.Z.Messages.UPDATE_COMMUNICATION_NOTIFICATIONS_CONFIRMATION) : M.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_NOTICE_CONFIRMATION_DONE
 			}),
 			0 === s
 				? (0, o.jsx)(I.Button, {
@@ -335,8 +321,7 @@ function b(e) {
 			]);
 		},
 		R = () => {
-			E.Z.updateGuild({ defaultMessageNotifications: p.bL.ONLY_MENTIONS }),
-				E.Z.saveGuild(n.id, { defaultMessageNotifications: p.bL.ONLY_MENTIONS });
+			E.Z.updateGuild({ defaultMessageNotifications: p.bL.ONLY_MENTIONS }), E.Z.saveGuild(n.id, { defaultMessageNotifications: p.bL.ONLY_MENTIONS });
 		},
 		U = () => {
 			t && T(), a && R();
@@ -348,12 +333,8 @@ function b(e) {
 		children: [
 			(0, o.jsx)(h, {
 				guild: n,
-				headerText: t
-					? M.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_NOTICE_HEADER
-					: M.Z.Messages.UPDATE_COMMUNICATION_NOTIFICATIONS_HEADER,
-				headerSubtext: t
-					? M.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_NOTICE_SUBHEADER
-					: M.Z.Messages.UPDATE_COMMUNICATION_NOTIFICATIONS_SUBHEADER,
+				headerText: t ? M.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_NOTICE_HEADER : M.Z.Messages.UPDATE_COMMUNICATION_NOTIFICATIONS_HEADER,
+				headerSubtext: t ? M.Z.Messages.DISABLE_UNSAFE_DEFAULT_PERMISSIONS_NOTICE_SUBHEADER : M.Z.Messages.UPDATE_COMMUNICATION_NOTIFICATIONS_SUBHEADER,
 				step: _
 			}),
 			(0, o.jsx)(g, {
@@ -366,26 +347,7 @@ function b(e) {
 			(0, o.jsx)(v, {
 				onConfirm: () => {
 					var e, a;
-					!t &&
-						(U(),
-						r(),
-						(0, m.Qd)(
-							c.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE,
-							null !== (e = null == n ? void 0 : n.id) && void 0 !== e ? e : '',
-							!0,
-							A.L.PRIMARY
-						)),
-						0 === _
-							? (d(1), setTimeout(() => d(2), 3000))
-							: 2 === _ &&
-								(U(),
-								r(),
-								(0, m.Qd)(
-									c.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE,
-									null !== (a = null == n ? void 0 : n.id) && void 0 !== a ? a : '',
-									!0,
-									A.L.PRIMARY
-								));
+					!t && (U(), r(), (0, m.Qd)(c.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (e = null == n ? void 0 : n.id) && void 0 !== e ? e : '', !0, A.L.PRIMARY)), 0 === _ ? (d(1), setTimeout(() => d(2), 3000)) : 2 === _ && (U(), r(), (0, m.Qd)(c.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (a = null == n ? void 0 : n.id) && void 0 !== a ? a : '', !0, A.L.PRIMARY));
 				},
 				onDismiss: () => {
 					r(), (0, m.Qd)(c.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, n.id, !0, A.L.DISMISS);

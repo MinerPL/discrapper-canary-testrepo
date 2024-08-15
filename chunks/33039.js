@@ -24,22 +24,12 @@ class h extends (r = o.ZP.Store) {
 	getStreamId(e, t) {
 		var n, r, i;
 		let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.Yn.DEFAULT;
-		return null === (i = E[e]) || void 0 === i
-			? void 0
-			: null === (r = i[null != t ? t : u.kod]) || void 0 === r
-				? void 0
-				: null === (n = r[a]) || void 0 === n
-					? void 0
-					: n.streamId;
+		return null === (i = E[e]) || void 0 === i ? void 0 : null === (r = i[null != t ? t : u.kod]) || void 0 === r ? void 0 : null === (n = r[a]) || void 0 === n ? void 0 : n.streamId;
 	}
 	getUserStreamData(e, t) {
 		var n, r;
 		let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.Yn.DEFAULT;
-		return null === (r = E[e]) || void 0 === r
-			? void 0
-			: null === (n = r[null != t ? t : u.kod]) || void 0 === n
-				? void 0
-				: n[i];
+		return null === (r = E[e]) || void 0 === r ? void 0 : null === (n = r[null != t ? t : u.kod]) || void 0 === n ? void 0 : n[i];
 	}
 }
 (s = 'VideoStreamStore'),

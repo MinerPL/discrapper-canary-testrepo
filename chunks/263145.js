@@ -21,16 +21,7 @@ function d(e, t, n) {
 class u extends a.PureComponent {
 	render() {
 		let { focused: e } = this.state,
-			{
-				value: t,
-				placeholder: n,
-				error: a,
-				className: i,
-				maxLength: d,
-				autoFocus: u,
-				prefix: _,
-				disabled: I
-			} = this.props;
+			{ value: t, placeholder: n, error: a, className: i, maxLength: d, autoFocus: u, prefix: _, disabled: I } = this.props;
 		return (0, s.jsxs)(l.Z, {
 			align: l.Z.Align.CENTER,
 			justify: l.Z.Justify.START,

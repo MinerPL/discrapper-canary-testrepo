@@ -11,12 +11,10 @@ let c = 'ActivityInviteManager',
 	};
 class d extends s.Z {
 	_initialize() {
-		r.Z.subscribe('ACTIVITY_INVITE_MODAL_OPEN', this.handleModalOpen),
-			r.Z.subscribe('ACTIVITY_INVITE_MODAL_CLOSE', this.handleModalClose);
+		r.Z.subscribe('ACTIVITY_INVITE_MODAL_OPEN', this.handleModalOpen), r.Z.subscribe('ACTIVITY_INVITE_MODAL_CLOSE', this.handleModalClose);
 	}
 	_terminate() {
-		r.Z.unsubscribe('ACTIVITY_INVITE_MODAL_OPEN', this.handleModalOpen),
-			r.Z.unsubscribe('ACTIVITY_INVITE_MODAL_CLOSE', this.handleModalClose);
+		r.Z.unsubscribe('ACTIVITY_INVITE_MODAL_OPEN', this.handleModalOpen), r.Z.unsubscribe('ACTIVITY_INVITE_MODAL_CLOSE', this.handleModalClose);
 	}
 	handleModalOpen(e) {
 		let { activity: t, isPrivate: r } = e;

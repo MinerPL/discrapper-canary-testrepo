@@ -52,10 +52,7 @@ function x(e) {
 							(0, i.jsx)(s.Text, {
 								variant: 'text-xs/medium',
 								color: 'header-secondary',
-								children:
-									(null == c ? void 0 : c.name) != null
-										? E.Z.Messages.STREAMING.format({ name: c.name })
-										: E.Z.Messages.STREAMING_A_GAME
+								children: (null == c ? void 0 : c.name) != null ? E.Z.Messages.STREAMING.format({ name: c.name }) : E.Z.Messages.STREAMING_A_GAME
 							})
 						]
 					}),
@@ -103,10 +100,7 @@ function S(e) {
 				}),
 				r.map((e, t) =>
 					(0, i.jsxs)(i.Fragment, {
-						children: [
-							(0, i.jsx)(x, { ...e }, e.userId),
-							t !== r.length - 1 && (0, i.jsx)('hr', { className: N.separator })
-						]
+						children: [(0, i.jsx)(x, { ...e }, e.userId), t !== r.length - 1 && (0, i.jsx)('hr', { className: N.separator })]
 					})
 				),
 				d > 0 &&

@@ -10,18 +10,7 @@ var l = n(735250),
 	o = n(981631),
 	s = n(689938);
 function d(e) {
-	let {
-			poster: t,
-			src: n,
-			width: a,
-			height: s,
-			naturalWidth: d,
-			naturalHeight: u,
-			play: m = !0,
-			className: h,
-			alt: c,
-			responsive: p
-		} = e,
+	let { poster: t, src: n, width: a, height: s, naturalWidth: d, naturalHeight: u, play: m = !0, className: h, alt: c, responsive: p } = e,
 		b = r.useRef(null);
 	return (r.useEffect(() => {
 		let { current: e } = b;
@@ -50,20 +39,7 @@ function d(e) {
 			});
 }
 function u(e) {
-	let {
-		src: t,
-		poster: n,
-		naturalWidth: r,
-		naturalHeight: i,
-		responsive: o,
-		autoPlay: u,
-		className: m,
-		playable: h = !0,
-		renderImageComponent: c,
-		renderForwardComponent: p,
-		alt: b = s.Z.Messages.GIF,
-		...g
-	} = e;
+	let { src: t, poster: n, naturalWidth: r, naturalHeight: i, responsive: o, autoPlay: u, className: m, playable: h = !0, renderImageComponent: c, renderForwardComponent: p, alt: b = s.Z.Messages.GIF, ...g } = e;
 	return (0, l.jsx)(a.h.Consumer, {
 		children: (e) =>
 			c({

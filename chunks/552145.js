@@ -42,24 +42,16 @@ class o {
 		let n;
 		(this.keyMap = new Map()), (this.iterable = e), (t = t || new Set());
 		let r = (e) => {
-			if ((this.keyMap.set(e.key, e), e.childNodes && ('section' === e.type || t.has(e.key))))
-				for (let t of e.childNodes) r(t);
+			if ((this.keyMap.set(e.key, e), e.childNodes && ('section' === e.type || t.has(e.key)))) for (let t of e.childNodes) r(t);
 		};
 		for (let t of e) r(t);
 		let i = 0;
-		for (let [e, t] of this.keyMap)
-			n ? ((n.nextKey = e), (t.prevKey = n.key)) : ((this.firstKey = e), (t.prevKey = void 0)),
-				'item' === t.type && (t.index = i++),
-				((n = t).nextKey = void 0);
+		for (let [e, t] of this.keyMap) n ? ((n.nextKey = e), (t.prevKey = n.key)) : ((this.firstKey = e), (t.prevKey = void 0)), 'item' === t.type && (t.index = i++), ((n = t).nextKey = void 0);
 		this.lastKey = null == n ? void 0 : n.key;
 	}
 }
 function l(e) {
-	let [t, n] = (0, s.zk)(
-			e.expandedKeys ? new Set(e.expandedKeys) : void 0,
-			e.defaultExpandedKeys ? new Set(e.defaultExpandedKeys) : new Set(),
-			e.onExpandedChange
-		),
+	let [t, n] = (0, s.zk)(e.expandedKeys ? new Set(e.expandedKeys) : void 0, e.defaultExpandedKeys ? new Set(e.defaultExpandedKeys) : new Set(), e.onExpandedChange),
 		l = (0, i.q)(e),
 		u = (0, r.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
 		c = (0, a.Kx)(

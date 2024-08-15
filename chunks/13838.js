@@ -30,18 +30,15 @@ function L(e) {
 			socket: i
 		} = e,
 		a = d.Z.getChannel(n);
-	if (null == a || !(0, p.zM)(a, i.application.id, i.authorization.scopes))
-		throw new g.Z({ errorCode: v.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(n));
-	if (a.isNSFW() && (null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0)
-		throw new g.Z({ errorCode: v.lTL.INVALID_CHANNEL }, 'Invalid nsfw channel id: '.concat(a.id));
+	if (null == a || !(0, p.zM)(a, i.application.id, i.authorization.scopes)) throw new g.Z({ errorCode: v.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(n));
+	if (a.isNSFW() && (null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0) throw new g.Z({ errorCode: v.lTL.INVALID_CHANNEL }, 'Invalid nsfw channel id: '.concat(a.id));
 }
 let O = (e) => (0, S.Z)(e).keys({ channel_id: e.string().allow(null) });
 function R(e) {
 	let {
 		args: { channel_id: t }
 	} = e;
-	if (null != t && null == d.Z.getChannel(t))
-		throw new g.Z({ errorCode: v.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
+	if (null != t && null == d.Z.getChannel(t)) throw new g.Z({ errorCode: v.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
 }
 let x = {
 	[v.zMe.GUILD_STATUS]: {
@@ -78,8 +75,7 @@ let x = {
 			let {
 				args: { channel_id: t }
 			} = e;
-			if (null == d.Z.getChannel(t))
-				throw new g.Z({ errorCode: v.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
+			if (null == d.Z.getChannel(t)) throw new g.Z({ errorCode: v.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
 			return (e) => {
 				let { prevState: n, dispatch: i } = e,
 					s = d.Z.getChannel(t);
@@ -108,8 +104,7 @@ let x = {
 			let {
 				args: { channel_id: t }
 			} = e;
-			if (null == d.Z.getChannel(t))
-				throw new g.Z({ errorCode: v.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
+			if (null == d.Z.getChannel(t)) throw new g.Z({ errorCode: v.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
 			return (e) => {
 				let { prevState: n, dispatch: i } = e,
 					s = d.Z.getChannel(t);
@@ -137,8 +132,7 @@ let x = {
 			let {
 				args: { channel_id: t }
 			} = e;
-			if (null == d.Z.getChannel(t))
-				throw new g.Z({ errorCode: v.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
+			if (null == d.Z.getChannel(t)) throw new g.Z({ errorCode: v.lTL.INVALID_CHANNEL }, 'Invalid channel id: '.concat(t));
 			return (e) => {
 				let { prevState: n, dispatch: i } = e,
 					s = d.Z.getChannel(t);

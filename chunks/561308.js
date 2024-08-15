@@ -3,7 +3,7 @@ n.d(t, {
 		return C;
 	},
 	GL: function () {
-		return I;
+		return m;
 	},
 	JY: function () {
 		return h;
@@ -57,7 +57,7 @@ n.d(t, {
 		return N;
 	},
 	yh: function () {
-		return m;
+		return I;
 	},
 	zo: function () {
 		return P;
@@ -106,7 +106,7 @@ let f = (e) => {
 			seconds: a(n)
 		});
 	},
-	I = (e, t, n) => {
+	m = (e, t, n) => {
 		let r = a()(n),
 			i = a()(d.default.extractTimestamp(e.id)),
 			s = r.diff(i, 's');
@@ -128,9 +128,9 @@ let f = (e) => {
 		let o = Math.round(s / c.Z.Seconds.DAYS_30);
 		return E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MONTHS_AGO.format({ count: o });
 	},
-	m = function (e, t) {
+	I = function (e, t) {
 		let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now();
-		return g(e) ? p(e, n) : I(e, t, n);
+		return g(e) ? p(e, n) : m(e, t, n);
 	};
 function T(e, t) {
 	return e.traits.find((e) => e.type === t);
@@ -141,9 +141,7 @@ function g(e) {
 }
 function S(e) {
 	var t, n;
-	return (
-		null !== (n = null === (t = T(e, s.N.FIRST_TIME)) || void 0 === t ? void 0 : t.first_time) && void 0 !== n && n
-	);
+	return null !== (n = null === (t = T(e, s.N.FIRST_TIME)) || void 0 === t ? void 0 : t.first_time) && void 0 !== n && n;
 }
 function A(e) {
 	return null != e.expires_at && new Date(e.expires_at) < new Date();
@@ -191,14 +189,8 @@ function y(e) {
 }
 function D(e, t) {
 	var n, r, i, a;
-	let s =
-			null !== (i = null == t ? void 0 : null === (n = t.size) || void 0 === n ? void 0 : n[0]) && void 0 !== i
-				? i
-				: void 0,
-		o =
-			null !== (a = null == t ? void 0 : null === (r = t.size) || void 0 === r ? void 0 : r[1]) && void 0 !== a
-				? a
-				: void 0,
+	let s = null !== (i = null == t ? void 0 : null === (n = t.size) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : void 0,
+		o = null !== (a = null == t ? void 0 : null === (r = t.size) || void 0 === r ? void 0 : r[1]) && void 0 !== a ? a : void 0,
 		l =
 			null != s && null != o
 				? E.Z.Messages.CONTENT_INVENTORY_GAME_STATE_SIZE.format({
@@ -240,10 +232,7 @@ function U(e) {
 }
 function w(e) {
 	let t = (0, o.e7)([_.Z], () => _.Z.getMatchingActivity(e)),
-		[n, r] = (0, u.Z)([
-			null == t ? void 0 : t.application_id,
-			'application_id' in e.extra ? e.extra.application_id : void 0
-		]);
+		[n, r] = (0, u.Z)([null == t ? void 0 : t.application_id, 'application_id' in e.extra ? e.extra.application_id : void 0]);
 	return {
 		activity: t,
 		anyMatchingApplication: null != n ? n : r,

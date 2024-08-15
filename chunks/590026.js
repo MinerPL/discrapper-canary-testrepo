@@ -13,14 +13,7 @@ var i = n(470079),
 	c = n(266432),
 	u = n(897674),
 	d = n(206583);
-let h = new Set([
-	a.s.PLAYED_GAME,
-	a.s.WATCHED_MEDIA,
-	a.s.TOP_GAME,
-	a.s.TOP_ARTIST,
-	a.s.LISTENED_SESSION,
-	a.s.LAUNCHED_ACTIVITY
-]);
+let h = new Set([a.s.PLAYED_GAME, a.s.WATCHED_MEDIA, a.s.TOP_GAME, a.s.TOP_ARTIST, a.s.LISTENED_SESSION, a.s.LAUNCHED_ACTIVITY]);
 function m(e) {
 	let t = (0, u.Z)(d.YN.GLOBAL_FEED);
 	(t = (0, r.Z)({

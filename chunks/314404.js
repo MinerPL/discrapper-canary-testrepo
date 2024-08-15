@@ -46,34 +46,9 @@ var i = t(735250),
 	B = t(835657);
 function U(e) {
 	var n, t, r, I;
-	let {
-			premiumSubscription: E,
-			skuId: O,
-			selectedPlanId: R,
-			setSelectedPlanId: U,
-			priceOptions: k,
-			planOptions: F,
-			eligibleForMultiMonthPlans: H,
-			referralTrialOfferId: W,
-			subscriptionPeriodEnd: Y,
-			showTotal: K = !0,
-			discountInvoiceItems: V,
-			handleClose: z
-		} = e,
-		{
-			activeSubscription: X,
-			setSelectedPlanId: q,
-			selectedSkuId: J,
-			selectedPlan: Q,
-			priceOptions: $
-		} = (0, m.usePaymentContext)(),
-		{
-			isGift: ee,
-			giftRecipient: en,
-			selectedGiftStyle: et,
-			customGiftMessage: ei,
-			setCustomGiftMessage: ea
-		} = (0, p.wD)(),
+	let { premiumSubscription: E, skuId: O, selectedPlanId: R, setSelectedPlanId: U, priceOptions: k, planOptions: F, eligibleForMultiMonthPlans: H, referralTrialOfferId: W, subscriptionPeriodEnd: Y, showTotal: K = !0, discountInvoiceItems: V, handleClose: z } = e,
+		{ activeSubscription: X, setSelectedPlanId: q, selectedSkuId: J, selectedPlan: Q, priceOptions: $ } = (0, m.usePaymentContext)(),
+		{ isGift: ee, giftRecipient: en, selectedGiftStyle: et, customGiftMessage: ei, setCustomGiftMessage: ea } = (0, p.wD)(),
 		er = (0, x.MY)(en),
 		es = ee && (0, x.pO)(en),
 		{ confirmUpsellEnabled: el } = (0, d.Z)({ location: 'PremiumSwitchPlanSelectBody' });
@@ -114,21 +89,9 @@ function U(e) {
 		{ ipCountryCode: eg } = (0, b.Z)(),
 		eP = 'HR' === eg && null != eb && eb.currency === w.pK.EUR,
 		ev = (0, S.Ap)(ef.paymentSourceId),
-		eA =
-			(null == ed ? void 0 : ed.interval) === Z.rV.DAY
-				? G.Z.Messages.BILLING_TRIAL_2_WEEK_PERIOD
-				: G.Z.Messages.BILLING_TRIAL_30_DAY_PERIOD,
+		eA = (null == ed ? void 0 : ed.interval) === Z.rV.DAY ? G.Z.Messages.BILLING_TRIAL_2_WEEK_PERIOD : G.Z.Messages.BILLING_TRIAL_30_DAY_PERIOD,
 		ey = !ee && (ex || (null != ed && eE && null != Y)),
-		eM =
-			null == V
-				? void 0
-				: null === (I = V.find((e) => e.subscriptionPlanId === Z.Xh.PREMIUM_MONTH_TIER_2)) || void 0 === I
-					? void 0
-					: null === (r = I.discounts) || void 0 === r
-						? void 0
-						: null === (t = r.find((e) => e.type === u.eW.SUBSCRIPTION_PLAN)) || void 0 === t
-							? void 0
-							: t.amount;
+		eM = null == V ? void 0 : null === (I = V.find((e) => e.subscriptionPlanId === Z.Xh.PREMIUM_MONTH_TIER_2)) || void 0 === I ? void 0 : null === (r = I.discounts) || void 0 === r ? void 0 : null === (t = r.find((e) => e.type === u.eW.SUBSCRIPTION_PLAN)) || void 0 === t ? void 0 : t.amount;
 	return (0, i.jsx)(i.Fragment, {
 		children: (0, i.jsxs)('div', {
 			className: es ? B.stepBodyCustomGift : B.stepBody,
@@ -198,11 +161,7 @@ function U(e) {
 												case Z.Si.TIER_1:
 													return G.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE_BODY_TIER_2;
 												case Z.Si.TIER_2:
-													return e.interval === Z.rV.MONTH
-														? G.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE_BODY_TIER_2_YEAR.format({
-																numFreeGuildSubscriptions: Z.cb
-															})
-														: a;
+													return e.interval === Z.rV.MONTH ? G.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE_BODY_TIER_2_YEAR.format({ numFreeGuildSubscriptions: Z.cb }) : a;
 												default:
 													return a;
 											}
@@ -293,20 +252,8 @@ function U(e) {
 										})
 									: null
 						}),
-						eP &&
-							(0, i.jsx)(c.Z, {
-								message: G.Z.Messages.LOCALIZED_PRICING_HRK_EURO_WARNING.format({
-									kunaPriceWithCurrency: (0, T.T4)(7.5345 * eb.amount, w.pK.HRK)
-								})
-							}),
-						!ee &&
-							!ey &&
-							K &&
-							(0, i.jsx)(c.Z, {
-								message: G.Z.Messages.BILLING_FINAL_PRICE_MAY_CHANGE.format({
-									documentationLink: N.Z.getArticleURL(D.BhN.LOCALIZED_PRICING)
-								})
-							}),
+						eP && (0, i.jsx)(c.Z, { message: G.Z.Messages.LOCALIZED_PRICING_HRK_EURO_WARNING.format({ kunaPriceWithCurrency: (0, T.T4)(7.5345 * eb.amount, w.pK.HRK) }) }),
+						!ee && !ey && K && (0, i.jsx)(c.Z, { message: G.Z.Messages.BILLING_FINAL_PRICE_MAY_CHANGE.format({ documentationLink: N.Z.getArticleURL(D.BhN.LOCALIZED_PRICING) }) }),
 						el && ee && (0, i.jsx)(_.Z, { onClose: z })
 					]
 				})
@@ -315,16 +262,7 @@ function U(e) {
 	});
 }
 function k(e) {
-	let {
-			onStepChange: n,
-			selectedPlanId: t,
-			paymentSources: a,
-			onBackClick: r,
-			showBackButton: s,
-			planOptions: l,
-			shouldRenderUpdatedPaymentModal: c = !1,
-			isTrial: u
-		} = e,
+	let { onStepChange: n, selectedPlanId: t, paymentSources: a, onBackClick: r, showBackButton: s, planOptions: l, shouldRenderUpdatedPaymentModal: c = !1, isTrial: u } = e,
 		{ paymentSources: d, selectedPlan: _ } = (0, m.usePaymentContext)(),
 		{ isGift: I } = (0, p.wD)();
 	return (
@@ -351,14 +289,7 @@ function k(e) {
 	);
 }
 function F(e) {
-	let {
-			onStepChange: n,
-			selectedPlanId: t,
-			isGift: a,
-			paymentSources: r,
-			shouldRenderUpdatedPaymentModal: s,
-			isTrial: c
-		} = e,
+	let { onStepChange: n, selectedPlanId: t, isGift: a, paymentSources: r, shouldRenderUpdatedPaymentModal: s, isTrial: c } = e,
 		u = (0, l.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()),
 		{ hasEntitlements: d } = (0, R.H)(t, a),
 		_ = (null != u && null != u.paymentSourceId) || Object.keys(r).length > 0 || (d && !c);

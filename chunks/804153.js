@@ -88,10 +88,7 @@ class L extends a.PureComponent {
 		);
 	}
 	renderAPIInfo(e) {
-		let t = ''
-			.concat(location.protocol)
-			.concat(window.GLOBAL_ENV.API_ENDPOINT, '/guilds/')
-			.concat(e.id, '/widget.json');
+		let t = ''.concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT, '/guilds/').concat(e.id, '/widget.json');
 		return (0, s.jsxs)('div', {
 			className: x.infoWrapper,
 			children: [
@@ -118,12 +115,7 @@ class L extends a.PureComponent {
 						className: x.infoItem,
 						title: C.Z.Messages.FORM_LABEL_PREMADE_WIDGET,
 						children: [
-							(0, s.jsx)(u.Z, {
-								value: '<iframe src="'.concat(
-									t,
-									'" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>'
-								)
-							}),
+							(0, s.jsx)(u.Z, { value: '<iframe src="'.concat(t, '" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>') }),
 							(0, s.jsx)(c.FormText, {
 								type: c.FormTextTypes.DESCRIPTION,
 								children: C.Z.Messages.GUILD_SETTINGS_WIDGET_EMBED_HELP.format()
@@ -149,14 +141,7 @@ class L extends a.PureComponent {
 				: (0, s.jsxs)(c.FormSection, {
 						tag: c.FormTitleTags.H1,
 						title: C.Z.Messages.GUILD_SETTINGS_TITLE_SERVER_WIDGET,
-						children: [
-							this.renderToggle(),
-							this.renderChannelSelect(e),
-							(0, s.jsx)(c.FormDivider, { className: x.divider }),
-							this.renderAPIInfo(e),
-							(0, s.jsx)(c.FormDivider, { className: x.divider }),
-							this.renderWidget(e)
-						]
+						children: [this.renderToggle(), this.renderChannelSelect(e), (0, s.jsx)(c.FormDivider, { className: x.divider }), this.renderAPIInfo(e), (0, s.jsx)(c.FormDivider, { className: x.divider }), this.renderWidget(e)]
 					});
 	}
 	constructor(...e) {

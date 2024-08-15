@@ -23,9 +23,7 @@ class u extends r.Z {
 			l(this, 'actions', { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() }),
 			l(this, 'handlePostConnectionOpen', () => {
 				!(function e() {
-					(s.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).enabled ||
-						o.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).showReminders) &&
-						(0, a.sE)().then(() => setTimeout(e, 15 * i.Z.Millis.MINUTE));
+					(s.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).enabled || o.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).showReminders) && (0, a.sE)().then(() => setTimeout(e, 15 * i.Z.Millis.MINUTE));
 				})();
 			});
 	}

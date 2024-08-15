@@ -29,8 +29,4 @@ function u(e) {
 			})
 	});
 }
-((i = a || (a = {}))[(i.ACCEPT = 0)] = 'ACCEPT'),
-	(i[(i.DENY = 1)] = 'DENY'),
-	(i[(i.DEFAULT = 2)] = 'DEFAULT'),
-	(u.ActionTypes = a),
-	(t.Z = u);
+((i = a || (a = {}))[(i.ACCEPT = 0)] = 'ACCEPT'), (i[(i.DENY = 1)] = 'DENY'), (i[(i.DEFAULT = 2)] = 'DEFAULT'), (u.ActionTypes = a), (t.Z = u);

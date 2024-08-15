@@ -9,22 +9,11 @@ var r = n(735250),
 	s = n(512983);
 let o = i.forwardRef(function (e, t) {
 	var n, o;
-	let {
-			children: l,
-			disabled: u = !1,
-			className: c,
-			titleClassName: d,
-			tag: _ = 'h5',
-			required: E = !1,
-			style: f,
-			title: h,
-			error: p,
-			...I
-		} = e,
-		m = i.useId(),
+	let { children: l, disabled: u = !1, className: c, titleClassName: d, tag: _ = 'h5', required: E = !1, style: f, title: h, error: p, ...m } = e,
+		I = i.useId(),
 		T = i.useId(),
-		g = null !== (n = I.titleId) && void 0 !== n ? n : m,
-		S = null != p ? (null !== (o = I.errorId) && void 0 !== o ? o : T) : void 0;
+		g = null !== (n = m.titleId) && void 0 !== n ? n : I,
+		S = null != p ? (null !== (o = m.errorId) && void 0 !== o ? o : T) : void 0;
 	return (0, r.jsxs)('div', {
 		ref: t,
 		className: null != c ? c : void 0,
@@ -39,7 +28,7 @@ let o = i.forwardRef(function (e, t) {
 						className: d,
 						id: g,
 						errorId: S,
-						...I,
+						...m,
 						children: h
 					})
 				: null,

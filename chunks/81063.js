@@ -31,8 +31,7 @@ var r = n(512722),
 	u = n(134432),
 	c = n(981631);
 let d = 'https://i.scdn.co/image/',
-	_ = (e, t, n) =>
-		'https://static-cdn.jtvnw.net/previews-ttv/live_user_'.concat(e, '-').concat(t, 'x').concat(n, '.jpg'),
+	_ = (e, t, n) => 'https://static-cdn.jtvnw.net/previews-ttv/live_user_'.concat(e, '-').concat(t, 'x').concat(n, '.jpg'),
 	E = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/,
 	f = (e) => 'https://i.ytimg.com/vi/'.concat(e, '/hqdefault_live.jpg'),
 	h = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/,
@@ -56,15 +55,12 @@ let d = 'https://i.scdn.co/image/',
 			}
 		},
 		mp: {
-			deserialize: (e) => (
-				i()(null != window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT, 'MEDIA_PROXY_ENDPOINT not configured'),
-				new URL(e, location.protocol + window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT).toString()
-			),
+			deserialize: (e) => (i()(null != window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT, 'MEDIA_PROXY_ENDPOINT not configured'), new URL(e, location.protocol + window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT).toString()),
 			serialize: (e) => e
 		}
 	},
-	I = {};
-async function m(e) {
+	m = {};
+async function I(e) {
 	let { body: t } = await a.tn.get({
 		url: c.ANM.APPLICATION_ASSETS(e),
 		oldFormErrors: !0
@@ -98,12 +94,7 @@ function g(e, t, n) {
 	let r = Array.isArray(n) ? Math.max(...n) : n,
 		i = 'number' == typeof r ? '?size='.concat((0, u.oO)(r)) : '';
 	return null != window.GLOBAL_ENV.CDN_HOST
-		? ''
-				.concat(location.protocol, '//')
-				.concat(window.GLOBAL_ENV.CDN_HOST, '/app-assets/')
-				.concat(e, '/')
-				.concat(t, '.png')
-				.concat(i)
+		? ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.CDN_HOST, '/app-assets/').concat(e, '/').concat(t, '.png').concat(i)
 		: ''
 				.concat((0, a.K0)(), '/applications/')
 				.concat(e, '/app-assets/')
@@ -114,30 +105,27 @@ async function S(e) {
 	let t = await (function (e) {
 		var t;
 		let n = o.Z.getApplicationAssets(e);
-		return null == n || ((t = n.lastUpdated), Date.now() - t > 3600000) ? m(e) : Promise.resolve(n);
+		return null == n || ((t = n.lastUpdated), Date.now() - t > 3600000) ? I(e) : Promise.resolve(n);
 	})(e);
 	return null == t ? void 0 : t.assets;
 }
 async function A(e, t) {
-	let n = t.filter((e) => null != e && !Object.prototype.hasOwnProperty.call(I, e) && null == I[e]);
+	let n = t.filter((e) => null != e && !Object.prototype.hasOwnProperty.call(m, e) && null == m[e]);
 	if (0 === n.length) return;
 	let { body: r } = await a.tn.post({
 		url: c.ANM.APPLICATION_EXTERNAL_ASSETS(e),
 		body: { urls: n },
 		oldFormErrors: !0
 	});
-	for (let { url: e, external_asset_path: t } of r) I[e] = t;
+	for (let { url: e, external_asset_path: t } of r) m[e] = t;
 }
 function N(e, t) {
 	let n = 0;
-	if (
-		e.filter((e) => (null == e ? void 0 : e.startsWith('http:')) || (null == e ? void 0 : e.startsWith('https:')))
-			.length > 0
-	)
+	if (e.filter((e) => (null == e ? void 0 : e.startsWith('http:')) || (null == e ? void 0 : e.startsWith('https:'))).length > 0)
 		for (let r = 0; r < e.length; r++) {
 			let i = e[r];
 			if (null == i) continue;
-			let a = Object.prototype.hasOwnProperty.call(I, i) ? I[i] : void 0;
+			let a = Object.prototype.hasOwnProperty.call(m, i) ? m[i] : void 0;
 			null != a && ((t[r] = T('mp', a)), n++);
 		}
 	return n === e.length;
@@ -174,7 +162,7 @@ async function O(e, t) {
 			}),
 			r)
 		: v(t, r, await S(e), n)
-			? m(e).then(() => O(e, t, n - 1))
+			? I(e).then(() => O(e, t, n - 1))
 			: (s.Z.dispatch({
 					type: 'APPLICATION_ASSETS_FETCH_SUCCESS',
 					applicationId: e

@@ -33,11 +33,4 @@ let u = {
 		HOME: 'home',
 		APP_DETAIL: 'app_detail'
 	};
-((o = i || (i = {})).HOME_EMPTY = 'home_empty'),
-	(o.SEARCH_EMPTY = 'search_empty'),
-	(o.HOME_NO_PERMISSIONS = 'home_no_permissions'),
-	(o.COMMAND_NO_PERMISSIONS = 'command_no_permissions'),
-	(o.COMMAND_NOT_FOUND = 'command_not_found'),
-	((l = a || (a = {}))[(l.DISMISSED = 0)] = 'DISMISSED'),
-	(l[(l.COMMAND = 1)] = 'COMMAND'),
-	(l[(l.ACTIVITY = 2)] = 'ACTIVITY');
+((o = i || (i = {})).HOME_EMPTY = 'home_empty'), (o.SEARCH_EMPTY = 'search_empty'), (o.HOME_NO_PERMISSIONS = 'home_no_permissions'), (o.COMMAND_NO_PERMISSIONS = 'command_no_permissions'), (o.COMMAND_NOT_FOUND = 'command_not_found'), ((l = a || (a = {}))[(l.DISMISSED = 0)] = 'DISMISSED'), (l[(l.COMMAND = 1)] = 'COMMAND'), (l[(l.ACTIVITY = 2)] = 'ACTIVITY');

@@ -122,11 +122,7 @@ class j extends (n = i.PureComponent) {
 		});
 	}
 	render() {
-		return this.state.success
-			? this.renderSucceeded()
-			: null != this.props.mfaTicket && '' !== this.props.mfaTicket
-				? this.renderMFA()
-				: this.renderPasswordReset();
+		return this.state.success ? this.renderSucceeded() : null != this.props.mfaTicket && '' !== this.props.mfaTicket ? this.renderMFA() : this.renderPasswordReset();
 	}
 	constructor(e) {
 		var t;
@@ -143,15 +139,7 @@ class j extends (n = i.PureComponent) {
 				if ((null != t && (o = (0, p.Z)(t)), null != o)) {
 					this.setState({ working: !0 });
 					try {
-						let {
-							result: e,
-							sms: t,
-							webauthn: r,
-							ticket: a,
-							token: l,
-							totp: c,
-							backup: u
-						} = await h.Z.resetPassword(o, i, n);
+						let { result: e, sms: t, webauthn: r, ticket: a, token: l, totp: c, backup: u } = await h.Z.resetPassword(o, i, n);
 						e === h.c.MFA
 							? d.Z.dispatch({
 									type: 'LOGIN_MFA_STEP',
@@ -225,11 +213,7 @@ class j extends (n = i.PureComponent) {
 				}
 				return null;
 			});
-		let s =
-			(null === (t = this.props.location) || void 0 === t ? void 0 : t.search) != null &&
-			'' !== this.props.location.search
-				? (0, l.parse)(this.props.location.search)
-				: null;
+		let s = (null === (t = this.props.location) || void 0 === t ? void 0 : t.search) != null && '' !== this.props.location.search ? (0, l.parse)(this.props.location.search) : null;
 		this.state = {
 			method: '',
 			password: '',

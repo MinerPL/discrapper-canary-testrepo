@@ -18,8 +18,7 @@ function a() {
 	if (null != window.getSelection) {
 		var t;
 		e = null === (t = window.getSelection()) || void 0 === t ? void 0 : t.toString();
-	} else
-		null != document.selection && 'Control' !== document.selection.type && (e = document.selection.createRange().text);
+	} else null != document.selection && 'Control' !== document.selection.type && (e = document.selection.createRange().text);
 	return null != e ? e : '';
 }
 function s(e) {
@@ -47,10 +46,7 @@ function s(e) {
 			s,
 			o,
 			l = e.target;
-		for (; null != l; )
-			'src' in l && null != l.src && (s = l.src),
-				'href' in l && null != l.href && ((a = l.href), (o = l.textContent)),
-				(l = null == l ? void 0 : l.parentNode);
+		for (; null != l; ) 'src' in l && null != l.src && (s = l.src), 'href' in l && null != l.href && ((a = l.href), (o = l.textContent)), (l = null == l ? void 0 : l.parentNode);
 		if (null != s)
 			return (0, i.jW)(e, async () => {
 				let { default: e } = await n.e('12241').then(n.bind(n, 115512));
@@ -86,20 +82,13 @@ function o(e) {
 	let t = !1,
 		n = e.target;
 	if ((null == n ? void 0 : n.tagName) === 'INPUT' || (null == n ? void 0 : n.tagName) === 'TEXTAREA') t = !0;
-	else if (
-		(null == n ? void 0 : n.closest) != null &&
-		(null == n ? void 0 : n.closest('[contenteditable=true]')) != null
-	)
-		t = !0;
+	else if ((null == n ? void 0 : n.closest) != null && (null == n ? void 0 : n.closest('[contenteditable=true]')) != null) t = !0;
 	else if (null != a() && '' !== a()) t = !0;
 	else {
 		let n,
 			r,
 			i = e.target;
-		for (; null != i; )
-			'src' in i && null != i.src && (r = i.src),
-				'href' in i && null != i.href && (n = i.href),
-				(i = null == i ? void 0 : i.parentNode);
+		for (; null != i; ) 'src' in i && null != i.src && (r = i.src), 'href' in i && null != i.href && (n = i.href), (i = null == i ? void 0 : i.parentNode);
 		(null != n || null != r) && (t = !0);
 	}
 	!t && e.preventDefault();

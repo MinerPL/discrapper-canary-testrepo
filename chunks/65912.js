@@ -70,19 +70,7 @@ let S = Object.freeze({
 			if (null == t) return (0, E.j)(() => e({ ...S })), null;
 			try {
 				var r, a, i;
-				(0, s.DO)(t) &&
-					((t.triggerMetadata.keywordFilter = (0, T.cb)(
-						(0, T.Ze)(null !== (r = t.triggerMetadata.keywordFilter) && void 0 !== r ? r : [])
-					)),
-					(t.triggerMetadata.allowList = (0, T.cb)(
-						(0, T.Ze)(null !== (a = t.triggerMetadata.allowList) && void 0 !== a ? a : [])
-					))),
-					(0, s.Fn)(t) &&
-						(t.triggerMetadata.allowList = (0, T.cb)(
-							(0, T.Ze)(null !== (i = t.triggerMetadata.allowList) && void 0 !== i ? i : [])
-						)),
-					(0, o.yU)(t, n),
-					(0, s.QO)(t);
+				(0, s.DO)(t) && ((t.triggerMetadata.keywordFilter = (0, T.cb)((0, T.Ze)(null !== (r = t.triggerMetadata.keywordFilter) && void 0 !== r ? r : []))), (t.triggerMetadata.allowList = (0, T.cb)((0, T.Ze)(null !== (a = t.triggerMetadata.allowList) && void 0 !== a ? a : [])))), (0, s.Fn)(t) && (t.triggerMetadata.allowList = (0, T.cb)((0, T.Ze)(null !== (i = t.triggerMetadata.allowList) && void 0 !== i ? i : []))), (0, o.yU)(t, n), (0, s.QO)(t);
 			} catch (t) {
 				return (
 					t instanceof l.V6
@@ -113,11 +101,7 @@ let S = Object.freeze({
 					e({ isLoading: !0 });
 				});
 				let n = null;
-				return (
-					(n = (0, s.Vb)(t) && !(0, O.U)(t.id) ? await (0, I.Je)(t) : await (0, I.JK)(t)),
-					(0, E.j)(() => e({ ...S })),
-					n
-				);
+				return (n = (0, s.Vb)(t) && !(0, O.U)(t.id) ? await (0, I.Je)(t) : await (0, I.JK)(t)), (0, E.j)(() => e({ ...S })), n;
 			} catch (n) {
 				let t = new _.Hx(n);
 				(0, E.j)(() => {
@@ -126,14 +110,7 @@ let S = Object.freeze({
 						errorMessage: (function (e) {
 							if (e.code === A.evJ.INVALID_FORM_BODY) {
 								var t, n;
-								if (
-									(null === (n = e.errors) || void 0 === n
-										? void 0
-										: null === (t = n.trigger_metadata) || void 0 === t
-											? void 0
-											: t.regex_patterns) != null
-								)
-									return N.Z.Messages.GUILD_AUTOMOD_REGEX_GENERIC_SAVE_ERROR;
+								if ((null === (n = e.errors) || void 0 === n ? void 0 : null === (t = n.trigger_metadata) || void 0 === t ? void 0 : t.regex_patterns) != null) return N.Z.Messages.GUILD_AUTOMOD_REGEX_GENERIC_SAVE_ERROR;
 							}
 							return e.getAnyErrorMessage();
 						})(t)

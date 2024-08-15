@@ -12,16 +12,15 @@ var r = n(735250),
 	f = n(378233),
 	h = n(419922),
 	p = n(689938),
-	I = n(471902);
-let m = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
+	m = n(471902);
+let I = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
 	T = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
 	g = (e) => {
 		let t = null,
 			n = null;
 		if ((!(0, f.jl)(e) && !(0, f.J8)(e)) || (0, f.J8)(e)) {
 			let i = c.Z.getGuild(e.guild_id);
-			null != i &&
-				((t = p.Z.Messages.STICKER_FROM_SOURCE.format({ source: i.name })), (n = (0, r.jsx)(o.Z, { guild: i })));
+			null != i && ((t = p.Z.Messages.STICKER_FROM_SOURCE.format({ source: i.name })), (n = (0, r.jsx)(o.Z, { guild: i })));
 		} else if ((0, f.jl)(e)) {
 			let i = _.Z.getStickerPack(e.pack_id);
 			null != i &&
@@ -59,16 +58,16 @@ let m = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BA
 				(0, f.jl)(a) || (0, f.J8)(a)
 					? (0, r.jsx)(h.ZP, {
 							isInteracting: !0,
-							size: m,
+							size: I,
 							sticker: a,
 							disableAnimation: !0
 						})
 					: (0, r.jsx)('div', {
-							className: I.iconWrapper,
+							className: m.iconWrapper,
 							children: (0, r.jsx)(s.PlusSmallIcon, {
 								size: 'md',
 								color: 'currentColor',
-								className: I.icon
+								className: m.icon
 							})
 						});
 		return (0, r.jsx)(u.Z, {

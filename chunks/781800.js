@@ -23,10 +23,7 @@ t.Z = (e) => {
 		},
 		children: (0, s.jsxs)('div', {
 			className: c.seeAllPerksButtonContent,
-			children: [
-				o.Z.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL,
-				(0, s.jsx)(a.ChevronSmallRightIcon, { color: 'currentColor' })
-			]
+			children: [o.Z.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, (0, s.jsx)(a.ChevronSmallRightIcon, { color: 'currentColor' })]
 		})
 	});
 };

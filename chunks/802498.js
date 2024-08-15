@@ -25,10 +25,7 @@ function a(e, t, n) {
 			})),
 		a = t.compareDocumentPosition(e),
 		s = null;
-	a & Node.DOCUMENT_POSITION_PRECEDING || n
-		? (s = i.firstChild())
-		: a & Node.DOCUMENT_POSITION_FOLLOWING && (s = i.lastChild()),
-		(null != s ? s : e).focus();
+	a & Node.DOCUMENT_POSITION_PRECEDING || n ? (s = i.firstChild()) : a & Node.DOCUMENT_POSITION_FOLLOWING && (s = i.lastChild()), (null != s ? s : e).focus();
 }
 (i.prototype.add = function (e, t) {
 	var n = {
@@ -163,11 +160,7 @@ function u(e, t) {
 					}
 				}
 				return (
-					null == t ||
-						null == document.activeElement ||
-						t.contains(document.activeElement) ||
-						null != t.querySelector('[autofocus]') ||
-						a(t, document.activeElement, !0),
+					null == t || null == document.activeElement || t.contains(document.activeElement) || null != t.querySelector('[autofocus]') || a(t, document.activeElement, !0),
 					_.addEventListener('focusin', n, { capture: !0 }),
 					_.addEventListener('focusout', r, { capture: !0 }),
 					function () {

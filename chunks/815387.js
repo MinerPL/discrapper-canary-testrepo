@@ -441,11 +441,7 @@ let ex = Object.freeze({
 			r = (0, s.e7)([k.default], () => k.default.getCurrentUser()),
 			l = (0, s.e7)([j.Z], () => {
 				var e, t;
-				return (
-					null !== (t = null === (e = j.Z.getGuild(n.getGuildId())) || void 0 === e ? void 0 : e.isOwner(r)) &&
-					void 0 !== t &&
-					t
-				);
+				return null !== (t = null === (e = j.Z.getGuild(n.getGuildId())) || void 0 === e ? void 0 : e.isOwner(r)) && void 0 !== t && t;
 			});
 		return (0, i.jsx)(er.Z, {
 			message: t,
@@ -568,16 +564,7 @@ let ex = Object.freeze({
 			}),
 			d = (0, s.e7)([U.Z], () => U.Z.can(eC.Plq.MUTE_MEMBERS, l)),
 			_ = (0, s.e7)([O.Z], () => O.Z.getParticipant(l.id, a.author.id)),
-			E =
-				new Date(H.default.extractTimestamp(a.id)).toISOString() ===
-				new Date(
-					null !==
-						(n =
-							null == _ ? void 0 : null === (t = _.voiceState) || void 0 === t ? void 0 : t.requestToSpeakTimestamp) &&
-					void 0 !== n
-						? n
-						: 0
-				).toISOString(),
+			E = new Date(H.default.extractTimestamp(a.id)).toISOString() === new Date(null !== (n = null == _ ? void 0 : null === (t = _.voiceState) || void 0 === t ? void 0 : t.requestToSpeakTimestamp) && void 0 !== n ? n : 0).toISOString(),
 			I = d && (null == _ ? void 0 : _.rtsState) === M.xO.REQUESTED_TO_SPEAK && E;
 		return (0, i.jsxs)(i.Fragment, {
 			children: [
@@ -661,12 +648,7 @@ t.Z = a.memo(function (e) {
 		l = ex[r];
 	if (null == l) {
 		var o;
-		return (
-			(o = Error('unknown message type '.concat(t.type))),
-			V.Z.captureException(o),
-			new I.Z('SystemMessage').error('', o),
-			null
-		);
+		return (o = Error('unknown message type '.concat(t.type))), V.Z.captureException(o), new I.Z('SystemMessage').error('', o), null;
 	}
 	return (0, i.jsx)(W.ZP, {
 		message: t,

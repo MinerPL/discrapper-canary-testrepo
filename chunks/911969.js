@@ -1,4 +1,4 @@
-var r, i, a, s, o, l, u, c, d, _, E, f, h, p, I, m, T, g, S, A, N, v, O, R, C, y, D, L, b, M, P, U;
+var r, i, a, s, o, l, u, c, d, _, E, f, h, p, m, I, T, g, S, A, N, v, O, R, C, y, D, L, b, M, P, U;
 n.d(t, {
 	B8: function () {
 		return d;
@@ -13,13 +13,13 @@ n.d(t, {
 		return o;
 	},
 	Eh: function () {
-		return I;
+		return m;
 	},
 	FO: function () {
 		return f;
 	},
 	Pi: function () {
-		return m;
+		return I;
 	},
 	US: function () {
 		return h;
@@ -109,7 +109,7 @@ n.d(t, {
 	(M[(M.ENTITLEMENT = 2)] = 'ENTITLEMENT'),
 	(M[(M.PREMIUM_LEGACY_UPGRADE_PROMOTION = 3)] = 'PREMIUM_LEGACY_UPGRADE_PROMOTION'),
 	(M[(M.PREMIUM_TRIAL = 4)] = 'PREMIUM_TRIAL'),
-	((P = I || (I = {}))[(P.GUILD_PRODUCT = 0)] = 'GUILD_PRODUCT'),
-	((U = m || (m = {}))[(U.WEBAUTHN = 1)] = 'WEBAUTHN'),
+	((P = m || (m = {}))[(P.GUILD_PRODUCT = 0)] = 'GUILD_PRODUCT'),
+	((U = I || (I = {}))[(U.WEBAUTHN = 1)] = 'WEBAUTHN'),
 	(U[(U.TOTP = 2)] = 'TOTP'),
 	(U[(U.SMS = 3)] = 'SMS');

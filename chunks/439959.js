@@ -22,10 +22,7 @@ var r,
 	c = n(594174),
 	d = n(74538),
 	_ = n(689938);
-((i = r || (r = {})).PURCHASE = 'purchase'),
-	(i.PREMIUM_PURCHASE = 'premium_purchase'),
-	(i.PREVIEW = 'preview'),
-	(i.PREMIUM_PREVIEW = 'premium_preview');
+((i = r || (r = {})).PURCHASE = 'purchase'), (i.PREMIUM_PURCHASE = 'premium_purchase'), (i.PREVIEW = 'preview'), (i.PREMIUM_PREVIEW = 'premium_preview');
 let E = { id: 'None' },
 	f = { id: 'Shop' };
 t.ZP = () => {
@@ -38,16 +35,7 @@ t.ZP = () => {
 			(e, r) => {
 				let a = n.get(r.skuId),
 					s = (0, u.qS)(a);
-				return (s &&
-					0 === e.premium_purchase.length &&
-					((e.premium_purchase = e.premium_preview), (e.premium_preview = [])),
-				s)
-					? (e.premium_purchase.push(r), e)
-					: null != a
-						? (e.purchase.push(r), e)
-						: !t && (0, u.G1)(i.get(r.skuId))
-							? ((e.premium_purchase.length > 0 ? e.premium_purchase : e.premium_preview).push(r), e)
-							: (e.preview.push(r), e);
+				return (s && 0 === e.premium_purchase.length && ((e.premium_purchase = e.premium_preview), (e.premium_preview = [])), s) ? (e.premium_purchase.push(r), e) : null != a ? (e.purchase.push(r), e) : !t && (0, u.G1)(i.get(r.skuId)) ? ((e.premium_purchase.length > 0 ? e.premium_purchase : e.premium_preview).push(r), e) : (e.preview.push(r), e);
 			},
 			{
 				purchase: [],

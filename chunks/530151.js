@@ -281,9 +281,7 @@ class K extends a.PureComponent {
 	renderFinished() {
 		let { item: e } = this.props;
 		return this.renderBody({
-			message: y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_FINISHED.format({
-				remove: () => m.wi(e.applicationId, e.branchId)
-			}),
+			message: y.Z.Messages.GAME_LIBRARY_UPDATES_PROGRESS_FINISHED.format({ remove: () => m.wi(e.applicationId, e.branchId) }),
 			foregroundColor: (0, u.ap)(e.theme) ? D.Ilk.PRIMARY_300 : D.Ilk.PRIMARY_500,
 			percent: 100
 		});
@@ -385,11 +383,7 @@ class K extends a.PureComponent {
 		let { item: e, cellProps: t } = this.props;
 		if (e.finished) return this.renderFinished();
 		if (e.index > 0) return this.renderQueued();
-		if (
-			null != e.state &&
-			(e.state.type === D.vxO.UPDATING || e.state.type === D.vxO.REPAIRING || e.state.type === D.vxO.INSTALLING)
-		)
-			return null != t && t.paused ? this.renderPaused() : this.renderProgress();
+		if (null != e.state && (e.state.type === D.vxO.UPDATING || e.state.type === D.vxO.REPAIRING || e.state.type === D.vxO.INSTALLING)) return null != t && t.paused ? this.renderPaused() : this.renderProgress();
 		return null;
 	}
 	constructor(...e) {
@@ -496,14 +490,7 @@ let q = () =>
 										})
 									: null)
 						: null != e.state
-							? e.state.type !== D.vxO.UP_TO_DATE &&
-								((n =
-									e.index > 0
-										? (0, i.jsx)(X, { item: e })
-										: null != t && t.paused
-											? (0, i.jsx)(q, {})
-											: (0, i.jsx)(Q, { item: e })),
-								(a = (0, i.jsx)(J, { item: e })))
+							? e.state.type !== D.vxO.UP_TO_DATE && ((n = e.index > 0 ? (0, i.jsx)(X, { item: e }) : null != t && t.paused ? (0, i.jsx)(q, {}) : (0, i.jsx)(Q, { item: e })), (a = (0, i.jsx)(J, { item: e })))
 							: (a = (0, i.jsx)(J, { item: e })),
 					(0, i.jsxs)(f.Z, {
 						justify: f.Z.Justify.END,

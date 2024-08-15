@@ -13,9 +13,5 @@ t.Z = a.ZP.connectStores([s.Z, o.default], () => {
 	};
 })((e) => {
 	let { hasLoadedExperiments: t, token: n } = e;
-	return null != n
-		? (0, r.jsx)(i.l_, { to: l.Z5c.APP })
-		: t
-			? (0, r.jsx)(i.l_, { to: l.Z5c.DEFAULT_LOGGED_OUT })
-			: null;
+	return null != n ? (0, r.jsx)(i.l_, { to: l.Z5c.APP }) : t ? (0, r.jsx)(i.l_, { to: l.Z5c.DEFAULT_LOGGED_OUT }) : null;
 });

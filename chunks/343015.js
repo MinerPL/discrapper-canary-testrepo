@@ -10,19 +10,14 @@ function a(e) {
 	let n = (0, i.BA)({
 			...e,
 			suppressTextValueWarning: !0,
-			defaultSelectedKey:
-				null !== (t = e.defaultSelectedKey) && void 0 !== t
-					? t
-					: s(e.collection, e.disabledKeys ? new Set(e.disabledKeys) : new Set())
+			defaultSelectedKey: null !== (t = e.defaultSelectedKey) && void 0 !== t ? t : s(e.collection, e.disabledKeys ? new Set(e.disabledKeys) : new Set())
 		}),
 		{ selectionManager: a, collection: o, selectedKey: l } = n,
 		u = (0, r.useRef)(l);
 	return (
 		(0, r.useEffect)(() => {
 			let e = l;
-			(a.isEmpty || !o.getItem(e)) && null != (e = s(o, n.disabledKeys)) && a.setSelectedKeys([e]),
-				((null != e && null == a.focusedKey) || (!a.isFocused && e !== u.current)) && a.setFocusedKey(e),
-				(u.current = e);
+			(a.isEmpty || !o.getItem(e)) && null != (e = s(o, n.disabledKeys)) && a.setSelectedKeys([e]), ((null != e && null == a.focusedKey) || (!a.isFocused && e !== u.current)) && a.setFocusedKey(e), (u.current = e);
 		}),
 		{
 			...n,

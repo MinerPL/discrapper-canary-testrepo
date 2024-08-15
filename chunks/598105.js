@@ -50,11 +50,7 @@ class a {
 									encodingHint: 'UTF8'
 								},
 								(e, n) => {
-									null != e
-										? r(Error(e.message))
-										: !n.reliable || n.languages[0].percent < 90 || n.languages[0].score < 500
-											? r(Error('Not enough reliable text.'))
-											: t(n.languages[0].code);
+									null != e ? r(Error(e.message)) : !n.reliable || n.languages[0].percent < 90 || n.languages[0].score < 500 ? r(Error('Not enough reliable text.')) : t(n.languages[0].code);
 								}
 							);
 						});
@@ -73,15 +69,6 @@ class a {
 		(this._processing = !1), e && this._minimumTimeRemaining++;
 	}
 	constructor(e, t) {
-		i(this, '_language', void 0),
-			i(this, '_onChange', void 0),
-			i(this, '_languageHint', void 0),
-			i(this, '_shouldProcess', !1),
-			i(this, '_processing', !1),
-			i(this, '_minimumTimeRemaining', 5),
-			(this._language = e),
-			(this._languageHint = e),
-			(this._onChange = t),
-			t(e);
+		i(this, '_language', void 0), i(this, '_onChange', void 0), i(this, '_languageHint', void 0), i(this, '_shouldProcess', !1), i(this, '_processing', !1), i(this, '_minimumTimeRemaining', 5), (this._language = e), (this._languageHint = e), (this._onChange = t), t(e);
 	}
 }

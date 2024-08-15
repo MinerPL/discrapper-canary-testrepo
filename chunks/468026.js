@@ -15,21 +15,7 @@ t.default = (e) => {
 	let t,
 		n,
 		i,
-		{
-			body: f,
-			cancelText: h,
-			className: p,
-			confirmColor: I,
-			confirmText: m = _.Z.Messages.OKAY,
-			secondaryConfirmText: T,
-			onCancel: g,
-			onClose: S,
-			onConfirm: A,
-			onConfirmSecondary: N,
-			title: v,
-			transitionState: O,
-			titleClassName: R
-		} = e;
+		{ body: f, cancelText: h, className: p, confirmColor: m, confirmText: I = _.Z.Messages.OKAY, secondaryConfirmText: T, onCancel: g, onClose: S, onConfirm: A, onConfirmSecondary: N, title: v, transitionState: O, titleClassName: R } = e;
 	return (
 		null != h &&
 			'' !== h &&
@@ -43,15 +29,15 @@ t.default = (e) => {
 				className: E.secondaryButton,
 				children: h
 			})),
-		null != m &&
-			'' !== m &&
+		null != I &&
+			'' !== I &&
 			(n = (0, r.jsx)(s.zx, {
 				type: 'submit',
-				color: I,
+				color: m,
 				size: s.zx.Sizes.LARGE,
 				className: a()(E.primaryButton, null != t ? E.gutter : null),
 				autoFocus: !0,
-				children: m
+				children: I
 			})),
 		null != T &&
 			'' !== T &&

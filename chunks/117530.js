@@ -13,19 +13,19 @@ var r,
 	f = n(703558),
 	h = n(981631),
 	p = n(689938);
-let I = new Map(),
-	m = [];
+let m = new Map(),
+	I = [];
 function T(e, t) {
 	var n, r;
-	return null !== (r = null === (n = g(e)) || void 0 === n ? void 0 : n.get(t)) && void 0 !== r ? r : m;
+	return null !== (r = null === (n = g(e)) || void 0 === n ? void 0 : n.get(t)) && void 0 !== r ? r : I;
 }
 function g(e) {
 	var t;
-	return null !== (t = I.get(e)) && void 0 !== t ? t : new Map();
+	return null !== (t = m.get(e)) && void 0 !== t ? t : new Map();
 }
 function S(e, t, n) {
 	let r = g(e);
-	r.set(t, n), I.set(e, r);
+	r.set(t, n), m.set(e, r);
 }
 class A extends (r = u.ZP.Store) {
 	getFirstUpload(e, t) {
@@ -83,16 +83,7 @@ class A extends (r = u.ZP.Store) {
 		},
 		UPLOAD_ATTACHMENT_UPDATE_FILE: function (e) {
 			let { channelId: t, id: n, filename: r, description: i, spoiler: a, thumbnail: s, draftType: o } = e,
-				l = [...T(t, o)].map(
-					(e) => (
-						e.id === n &&
-							(void 0 !== r && (e.filename = r),
-							void 0 !== a && (e.spoiler = a),
-							void 0 !== i && (e.description = i),
-							void 0 !== s && (e.isThumbnail = s)),
-						e
-					)
-				);
+				l = [...T(t, o)].map((e) => (e.id === n && (void 0 !== r && (e.filename = r), void 0 !== a && (e.spoiler = a), void 0 !== i && (e.description = i), void 0 !== s && (e.isThumbnail = s)), e));
 			S(t, o, l);
 		},
 		UPLOAD_ATTACHMENT_REMOVE_FILE: function (e) {

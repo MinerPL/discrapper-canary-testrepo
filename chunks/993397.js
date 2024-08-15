@@ -35,9 +35,7 @@ function f(e) {
 						tag: 'span',
 						onClick: n,
 						className: p.blockedAction,
-						children: t
-							? m.Z.Messages.BLOCKED_MESSAGES_HIDE.format({ count: a })
-							: m.Z.Messages.BLOCKED_MESSAGES_SHOW.format({ count: a })
+						children: t ? m.Z.Messages.BLOCKED_MESSAGES_HIDE.format({ count: a }) : m.Z.Messages.BLOCKED_MESSAGES_SHOW.format({ count: a })
 					})
 				]
 			})
@@ -48,8 +46,8 @@ t.Z = a.memo(function (e) {
 	var t;
 	let { messages: n, channel: s, compact: r = !1, unreadId: o, collapsedReason: d } = e,
 		{ hasJumpTarget: m = !1 } = n,
-		[E, g] = a.useState(m),
-		C = a.useCallback(() => g((e) => !e), []),
+		[E, C] = a.useState(m),
+		g = a.useCallback(() => C((e) => !e), []),
 		I = n.hasUnread ? n.content.length - 1 : n.content.length;
 	return (0, i.jsxs)('div', {
 		className: l()({
@@ -73,7 +71,7 @@ t.Z = a.memo(function (e) {
 					count: I,
 					compact: r,
 					expanded: E,
-					onClick: C,
+					onClick: g,
 					collapsedReason: d
 				},
 				'collapsed-message-item'
@@ -82,10 +80,7 @@ t.Z = a.memo(function (e) {
 				? n.content.map((e, t) => {
 						if (e.type === h.ys_.DIVIDER && t > 0) {
 							var a, l;
-							let e =
-								null !== (l = null === (a = n.content[t + 1]) || void 0 === a ? void 0 : a.isGroupStart) &&
-								void 0 !== l &&
-								l;
+							let e = null !== (l = null === (a = n.content[t + 1]) || void 0 === a ? void 0 : a.isGroupStart) && void 0 !== l && l;
 							return (0, i.jsx)(
 								u.Z,
 								{

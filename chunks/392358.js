@@ -30,14 +30,7 @@ function o(e, t) {
 						c(!1);
 						return;
 					}
-					if (
-						!(
-							(!u && n > 0) ||
-							(e instanceof KeyboardEvent &&
-								(e.ctrlKey || e.altKey || e.shiftKey || e.metaKey || s.indexOf(e.key) >= 0))
-						)
-					)
-						c((e) => !e);
+					if (!((!u && n > 0) || (e instanceof KeyboardEvent && (e.ctrlKey || e.altKey || e.shiftKey || e.metaKey || s.indexOf(e.key) >= 0)))) c((e) => !e);
 				},
 				i = u ? 'keyup' : 'mousemove';
 			return t && e.addEventListener(i, r), () => (null == e ? void 0 : e.removeEventListener(i, r));

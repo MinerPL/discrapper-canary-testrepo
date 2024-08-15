@@ -29,33 +29,12 @@ var a = n(120356),
 async function R() {
 	if ((0, T.isMac)() && T.isPlatformEmbedded) {
 		var e, t, n;
-		let i =
-			null !==
-				(n = await (null === (e = (t = window.DiscordNative.remoteApp).getDefaultDoubleClickAction) || void 0 === e
-					? void 0
-					: e.call(t))) && void 0 !== n
-				? n
-				: 'Maximize';
+		let i = null !== (n = await (null === (e = (t = window.DiscordNative.remoteApp).getDefaultDoubleClickAction) || void 0 === e ? void 0 : e.call(t))) && void 0 !== n ? n : 'Maximize';
 		'Minimize' === i ? h.ZP.minimize() : 'Maximize' === i && h.ZP.maximize();
 	}
 }
 function x(e) {
-	let {
-			children: t,
-			className: n,
-			channelId: a,
-			guildId: s,
-			innerClassname: o,
-			transparent: c = !1,
-			toolbar: T,
-			mobileToolbar: h,
-			'aria-label': g,
-			'aria-labelledby': S,
-			scrollable: x,
-			role: O,
-			hideSearch: M,
-			showDivider: v
-		} = e,
+	let { children: t, className: n, channelId: a, guildId: s, innerClassname: o, transparent: c = !1, toolbar: T, mobileToolbar: h, 'aria-label': g, 'aria-labelledby': S, scrollable: x, role: O, hideSearch: M, showDivider: v } = e,
 		L = (0, l.e7)([m.default], () => m.default.getCurrentUser()),
 		Z = (null == L ? void 0 : L.isStaff()) || (null == L ? void 0 : L.isStaffPersonal()) || !1,
 		{ enabled: P } = _.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
@@ -68,16 +47,7 @@ function x(e) {
 			return r.tq
 				? h
 				: (0, i.jsxs)(i.Fragment, {
-						children: [
-							T,
-							e ? (0, i.jsx)(I.Z, { className: A.search }, null != s ? s : a) : null,
-							v && (0, i.jsx)(N.ZP.Divider, {}),
-							(0, i.jsx)(p.Z, {}),
-							(0, i.jsx)(u.Z, { canShowReminder: !0 }),
-							(0, i.jsx)(d.Z, {}),
-							P ? (0, i.jsx)(E.Z, {}) : null,
-							Z ? (0, i.jsx)(C.Z, {}) : (0, i.jsx)(f.Z, {})
-						]
+						children: [T, e ? (0, i.jsx)(I.Z, { className: A.search }, null != s ? s : a) : null, v && (0, i.jsx)(N.ZP.Divider, {}), (0, i.jsx)(p.Z, {}), (0, i.jsx)(u.Z, { canShowReminder: !0 }), (0, i.jsx)(d.Z, {}), P ? (0, i.jsx)(E.Z, {}) : null, Z ? (0, i.jsx)(C.Z, {}) : (0, i.jsx)(f.Z, {})]
 					});
 		})(),
 		transparent: c,
@@ -103,10 +73,7 @@ function O(e) {
 function M(e) {
 	let { isAuthenticated: t = !0, ...n } = e,
 		{ analyticsLocations: a } = (0, c.ZP)(o.Z.HEADER_BAR),
-		r = s()(n.className, {
-			[A.forumOrHome]:
-				(null != n.channelType && g.TPd.GUILD_THREADS_ONLY.has(n.channelType)) || n.channelId === S.oC.GUILD_HOME
-		});
+		r = s()(n.className, { [A.forumOrHome]: (null != n.channelType && g.TPd.GUILD_THREADS_ONLY.has(n.channelType)) || n.channelId === S.oC.GUILD_HOME });
 	return (0, i.jsx)(c.Gt, {
 		value: a,
 		children: t

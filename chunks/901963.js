@@ -13,8 +13,8 @@ var r = n(735250),
 	f = n(74538),
 	h = n(543241),
 	p = n(981631),
-	I = n(474936),
-	m = n(689938),
+	m = n(474936),
+	I = n(689938),
 	T = n(192287);
 let g = 'premiumRetentionEmojiPickerNotice',
 	S = l.K.get(g);
@@ -32,15 +32,10 @@ t.Z = (e) => {
 		null == N || !(0, f.zV)(N.status) || a)
 	)
 		return null;
-	let O = N.status === p.O0b.PAST_DUE ? (0, f.lY)(N).expiresDate : s()(N.currentPeriodStart).add(I.gh),
+	let O = N.status === p.O0b.PAST_DUE ? (0, f.lY)(N).expiresDate : s()(N.currentPeriodStart).add(m.gh),
 		R = ''.concat(N.id, ':').concat(O.toISOString());
 	if (S === R) return null;
-	let C =
-		f.ZP.getPremiumType(N.planId) === I.p9.TIER_0
-			? _.JX.PREMIUM_TIER_0
-			: f.ZP.getPremiumType(N.planId) === I.p9.TIER_1
-				? _.JX.PREMIUM_TIER_1
-				: _.JX.PREMIUM_TIER_2;
+	let C = f.ZP.getPremiumType(N.planId) === m.p9.TIER_0 ? _.JX.PREMIUM_TIER_0 : f.ZP.getPremiumType(N.planId) === m.p9.TIER_1 ? _.JX.PREMIUM_TIER_1 : _.JX.PREMIUM_TIER_2;
 	return (0, r.jsxs)('div', {
 		className: T.premiumRetentionNotice,
 		children: [
@@ -54,7 +49,7 @@ t.Z = (e) => {
 				children: [
 					(0, r.jsx)(u.Text, {
 						variant: 'text-xs/normal',
-						children: m.Z.Messages.PREMIUM_RETENTION_EMOJI_PICKER_DESCRIPTION.format({
+						children: I.Z.Messages.PREMIUM_RETENTION_EMOJI_PICKER_DESCRIPTION.format({
 							planName: f.ZP.getDisplayPremiumType(N.planId),
 							endsAt: O
 						})
@@ -64,7 +59,7 @@ t.Z = (e) => {
 							onClick: () => {
 								(0, h.A3)(n), t(), d.Z.open(p.oAB.PREMIUM);
 							},
-							children: m.Z.Messages.PREMIUM_RETENTION_EMOJI_PICKER_UPDATE_PAYMENT_INFORMATION
+							children: I.Z.Messages.PREMIUM_RETENTION_EMOJI_PICKER_UPDATE_PAYMENT_INFORMATION
 						})
 					})
 				]

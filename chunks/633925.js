@@ -13,9 +13,7 @@ function a(e) {
 					return typeof e;
 				}
 			: function (e) {
-					return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype
-						? 'symbol'
-						: typeof e;
+					return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
 				})(e);
 }
 function s(e) {

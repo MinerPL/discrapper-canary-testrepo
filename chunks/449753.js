@@ -13,14 +13,13 @@ var r = n(846519),
 	f = n(981631);
 let h = new r.V7(),
 	p = new r.V7(),
-	I = 5 * _.Z.Millis.SECOND,
-	m = 12 * _.Z.Millis.SECOND,
+	m = 5 * _.Z.Millis.SECOND,
+	I = 12 * _.Z.Millis.SECOND,
 	T = null;
 function g(e, t) {
 	if (c.Z.getVoiceChannelId() !== e) return !1;
 	let n = l.Z.getChannel(e);
-	if (null == n || (!n.isDM() && !n.isGuildStageVoice()) || null != s.Z.getActiveStreamForUser(t, n.getGuildId()))
-		return !1;
+	if (null == n || (!n.isDM() && !n.isGuildStageVoice()) || null != s.Z.getActiveStreamForUser(t, n.getGuildId())) return !1;
 	let r = s.Z.getStreamForUser(t, n.getGuildId());
 	if (null == r) return !1;
 	let i = (0, E.V9)(r);
@@ -34,7 +33,7 @@ t.Z = {
 	init() {
 		let e = (e, t) => {
 			!d.Z.getAllActiveStreamKeys().includes(e) &&
-				p.start(t ? m : I, () => {
+				p.start(t ? I : m, () => {
 					i.Z.dispatch({
 						type: 'STREAM_TIMED_OUT',
 						streamKey: e
@@ -89,12 +88,7 @@ t.Z = {
 					if (t !== o.default.getId() && null != n) {
 						if (i && g(n, t)) return;
 						let e = s.Z.getActiveStreamForUser(t, r);
-						if (
-							null != e &&
-							e.channelId === n &&
-							(!i && e.state !== f.jm8.ENDED && h.start(180000, () => (0, a.aP)((0, E.V9)(e), !1)),
-							i && e.state === f.jm8.ENDED)
-						) {
+						if (null != e && e.channelId === n && (!i && e.state !== f.jm8.ENDED && h.start(180000, () => (0, a.aP)((0, E.V9)(e), !1)), i && e.state === f.jm8.ENDED)) {
 							h.stop();
 							let e = s.Z.getStreamForUser(t, r);
 							if (null == e) return;

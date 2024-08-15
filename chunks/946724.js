@@ -301,16 +301,7 @@ let k = new F(
 					(M = !0), D.add(s.id), j.set(s.id, n), G();
 				},
 				GUILD_SETTINGS_CLOSE: function () {
-					(s = null),
-						(A = O = []),
-						v.clear(),
-						p.clear(),
-						j.clear(),
-						(D = new Set()),
-						(f = !1),
-						(L = !1),
-						(M = !1),
-						(R = x.QZA.CLOSED);
+					(s = null), (A = O = []), v.clear(), p.clear(), j.clear(), (D = new Set()), (f = !1), (L = !1), (M = !1), (R = x.QZA.CLOSED);
 				},
 				GUILD_ROLE_CREATE: y,
 				GUILD_ROLE_UPDATE: y,

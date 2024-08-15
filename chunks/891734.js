@@ -29,7 +29,7 @@ function o(e, t) {
 			return E.indexOf(e) >= 0;
 		});
 	0 === p.length && (p = h);
-	var I = p.reduce(function (t, n) {
+	var m = p.reduce(function (t, n) {
 		return (
 			(t[n] = (0, a.Z)(e, {
 				placement: n,
@@ -40,7 +40,7 @@ function o(e, t) {
 			t
 		);
 	}, {});
-	return Object.keys(I).sort(function (e, t) {
-		return I[e] - I[t];
+	return Object.keys(m).sort(function (e, t) {
+		return m[e] - m[t];
 	});
 }

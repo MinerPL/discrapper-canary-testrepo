@@ -11,11 +11,7 @@ var n = r(395848),
 	E = r(662355);
 let s = [800, 1800],
 	c = (e) => {
-		n.m.document && n.m.document.prerendering
-			? (0, E.A)(() => c(e))
-			: n.m.document && 'complete' !== n.m.document.readyState
-				? addEventListener('load', () => c(e), !0)
-				: setTimeout(e, 0);
+		n.m.document && n.m.document.prerendering ? (0, E.A)(() => c(e)) : n.m.document && 'complete' !== n.m.document.readyState ? addEventListener('load', () => c(e), !0) : setTimeout(e, 0);
 	},
 	I = (e, t = {}) => {
 		let r = (0, _.I)('TTFB'),

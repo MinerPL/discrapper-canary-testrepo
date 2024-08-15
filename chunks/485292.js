@@ -49,10 +49,7 @@ function C(n) {
 function P(n) {
 	let { applicationId: e, branchId: t } = n,
 		l = (0, a.e7)([d.Z], () => d.Z.getApplication(e), [e]),
-		r = (0, a.e7)([u.Z], () => (null != t ? u.Z.getLibraryApplication(e, t) : u.Z.getActiveLibraryApplication(e)), [
-			e,
-			t
-		]);
+		r = (0, a.e7)([u.Z], () => (null != t ? u.Z.getLibraryApplication(e, t) : u.Z.getActiveLibraryApplication(e)), [e, t]);
 	return null == l || null == r
 		? (0, i.jsx)(s.default, {
 				...n,

@@ -1,6 +1,6 @@
 n.d(t, {
 	Z: function () {
-		return I;
+		return m;
 	}
 });
 var r = n(735250),
@@ -35,15 +35,8 @@ function p(e) {
 			unsetOptionalOptions: c
 		} = i.useMemo(() => {
 			var e, r, i, a;
-			let s =
-					null !== (i = null === (e = t.options) || void 0 === e ? void 0 : e.filter((e) => e.required)) && void 0 !== i
-						? i
-						: [],
-				o =
-					null !== (a = null === (r = t.options) || void 0 === r ? void 0 : r.filter((e) => !e.required)) &&
-					void 0 !== a
-						? a
-						: [],
+			let s = null !== (i = null === (e = t.options) || void 0 === e ? void 0 : e.filter((e) => e.required)) && void 0 !== i ? i : [],
+				o = null !== (a = null === (r = t.options) || void 0 === r ? void 0 : r.filter((e) => !e.required)) && void 0 !== a ? a : [],
 				l = o.filter((e) => {
 					var t;
 					return null == n ? void 0 : null === (t = n[e.name]) || void 0 === t ? void 0 : t.hasValue;
@@ -84,7 +77,7 @@ function p(e) {
 						]
 					})
 				: null,
-		I =
+		m =
 			c.length > 0
 				? (0, r.jsx)(o.Tooltip, {
 						text: d,
@@ -95,51 +88,33 @@ function p(e) {
 								className: f.optionalCount,
 								color: u.Z.Colors.MUTED,
 								...e,
-								children:
-									0 === l.length
-										? E.Z.Messages.COMMANDS_OPTIONAL_COUNT.format({ count: c.length })
-										: E.Z.Messages.COMMANDS_OPTIONAL_COUNT_REMAINING.format({ count: c.length })
+								children: 0 === l.length ? E.Z.Messages.COMMANDS_OPTIONAL_COUNT.format({ count: c.length }) : E.Z.Messages.COMMANDS_OPTIONAL_COUNT_REMAINING.format({ count: c.length })
 							})
 					})
 				: null;
 	return (0, r.jsxs)(r.Fragment, {
 		children: [
 			_,
-			null != p || null != I
+			null != p || null != m
 				? (0, r.jsxs)('div', {
 						className: f.optionals,
-						children: [p, I]
+						children: [p, m]
 					})
 				: null
 		]
 	});
 }
-function I(e) {
+function m(e) {
 	var t, n, a;
 	let o,
-		{
-			command: u,
-			activeOptionName: c,
-			channel: E,
-			showOptions: h,
-			showImage: I,
-			optionStates: m,
-			onOptionClick: T,
-			section: g,
-			isSelectable: S = !0
-		} = e,
+		{ command: u, activeOptionName: c, channel: E, showOptions: h, showImage: m, optionStates: I, onOptionClick: T, section: g, isSelectable: S = !0 } = e,
 		A = i.useMemo(() => {
 			var e;
 			return null == u ? void 0 : null === (e = u.options) || void 0 === e ? void 0 : e.find((e) => e.name === c);
 		}, [c, u]),
-		N = null != c ? (null == m ? void 0 : m[c]) : null;
-	o =
-		null != N && (null === (t = N.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1
-			? null !== (n = N.lastValidationResult.error) && void 0 !== n
-				? n
-				: ''
-			: null;
-	let v = I && null != g ? (0, d.ky)(g) : null;
+		N = null != c ? (null == I ? void 0 : I[c]) : null;
+	o = null != N && (null === (t = N.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? (null !== (n = N.lastValidationResult.error) && void 0 !== n ? n : '') : null;
+	let v = m && null != g ? (0, d.ky)(g) : null;
 	return (0, r.jsxs)('div', {
 		className: s()(f.wrapper, S ? null : f.disabled),
 		children: [
@@ -165,7 +140,7 @@ function I(e) {
 							h
 								? (0, r.jsx)(p, {
 										command: u,
-										optionStates: m,
+										optionStates: I,
 										onOptionClick: T
 									})
 								: null
@@ -173,10 +148,7 @@ function I(e) {
 					}),
 					(0, r.jsx)(l.wL, {
 						className: s()(f.description, null != o ? f.error : null),
-						children:
-							null !== (a = null != o ? o : null == A ? void 0 : A.displayDescription) && void 0 !== a
-								? a
-								: u.displayDescription
+						children: null !== (a = null != o ? o : null == A ? void 0 : A.displayDescription) && void 0 !== a ? a : u.displayDescription
 					})
 				]
 			}),

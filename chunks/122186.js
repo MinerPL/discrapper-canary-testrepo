@@ -48,8 +48,7 @@ function C() {
 							}),
 							(0, l.jsx)(i.Text, {
 								variant: 'text-xs/bold',
-								children:
-									S.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_UPSELL_TITLE.toUpperCase()
+								children: S.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_UPSELL_TITLE.toUpperCase()
 							})
 						]
 					}),

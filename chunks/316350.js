@@ -77,18 +77,7 @@ function p(e) {
 	});
 }
 function R(e) {
-	let {
-			withCardBody: t,
-			isAnimatedTo: n,
-			hasAnimatedUnlocked: s,
-			onSetRef: a,
-			tier: i,
-			showHeaderLockStatus: r,
-			headerButton: c = null,
-			subscriptionsRequired: u,
-			subscriptionCount: I,
-			className: E
-		} = e,
+	let { withCardBody: t, isAnimatedTo: n, hasAnimatedUnlocked: s, onSetRef: a, tier: i, showHeaderLockStatus: r, headerButton: c = null, subscriptionsRequired: u, subscriptionCount: I, className: E } = e,
 		T = (e) => {
 			null == a || a(e);
 		},
@@ -125,8 +114,7 @@ function R(e) {
 							}),
 							r
 								? (0, l.jsx)(L, {
-										transform:
-											null == e ? void 0 : e.unlockedTranslateY.to((e) => 'translate3d(0, '.concat(e, 'px, 0)')),
+										transform: null == e ? void 0 : e.unlockedTranslateY.to((e) => 'translate3d(0, '.concat(e, 'px, 0)')),
 										headerButton: c,
 										subscriptionsRequired: u,
 										hasAnimatedUnlocked: s
@@ -143,18 +131,7 @@ function R(e) {
 	);
 }
 function f(e) {
-	let {
-			children: t,
-			subscriptionCount: n,
-			onSetRef: s,
-			tier: a,
-			isAnimatedTo: i,
-			hasBottomMargin: r,
-			headerButton: o = null,
-			withCardBody: c = !0,
-			guildId: u,
-			showHeaderLockStatus: I = !0
-		} = e,
+	let { children: t, subscriptionCount: n, onSetRef: s, tier: a, isAnimatedTo: i, hasBottomMargin: r, headerButton: o = null, withCardBody: c = !0, guildId: u, showHeaderLockStatus: I = !0 } = e,
 		m = (0, N.vn)(u)[a.tier],
 		C = i && n >= m,
 		x = a.tier !== S.Eu4.NONE && a.tier !== S.Eu4.TIER_1,
@@ -243,11 +220,7 @@ function f(e) {
 		a.tier
 	);
 }
-((i = s || (s = {}))[(i.OPEN = 0)] = 'OPEN'),
-	(i[(i.CLOSING = 1)] = 'CLOSING'),
-	(i[(i.CLOSED = 2)] = 'CLOSED'),
-	((r = a || (a = {}))[(r.NONE = 0)] = 'NONE'),
-	(r[(r.UNLOCKED_SLIDE = 1)] = 'UNLOCKED_SLIDE');
+((i = s || (s = {}))[(i.OPEN = 0)] = 'OPEN'), (i[(i.CLOSING = 1)] = 'CLOSING'), (i[(i.CLOSED = 2)] = 'CLOSED'), ((r = a || (a = {}))[(r.NONE = 0)] = 'NONE'), (r[(r.UNLOCKED_SLIDE = 1)] = 'UNLOCKED_SLIDE');
 let L = (e) => {
 		let { transform: t, hasAnimatedUnlocked: n, headerButton: s, subscriptionsRequired: a } = e;
 		return null !== s ? s : n ? (0, l.jsx)(O, { transform: t }) : (0, l.jsx)(A, { subscriptionsRequired: a });

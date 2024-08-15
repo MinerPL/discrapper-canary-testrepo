@@ -150,10 +150,7 @@ class el extends (s = i.PureComponent) {
 									}))),
 			s && !e.authenticated && ((0, D.c)($.M5.ORGANIC_REGISTERED), this.redirectIfAuthenticated());
 		let o = X.E.FULL;
-		r || this.hasError('date_of_birth')
-			? (o = X.E.AGE_GATE)
-			: null != i && (null != i.guild || null != i.channel) && (o = X.E.INVITE),
-			a(o);
+		r || this.hasError('date_of_birth') ? (o = X.E.AGE_GATE) : null != i && (null != i.guild || null != i.channel) && (o = X.E.INVITE), a(o);
 	}
 	redirectIfAuthenticated() {
 		let { authenticated: e, transitionTo: t, redirectTo: n } = this.props;
@@ -161,14 +158,7 @@ class el extends (s = i.PureComponent) {
 	}
 	async handleRegister() {
 		let { email: e, username: t, globalName: n, password: s, consent: r, parsedDateOfBirth: i } = this.state,
-			{
-				invite: a,
-				guildTemplate: l,
-				giftCode: o,
-				onRegister: c,
-				usernameSuggestion: u,
-				isMobileWebInviteRegistration: d
-			} = this.props,
+			{ invite: a, guildTemplate: l, giftCode: o, onRegister: c, usernameSuggestion: u, isMobileWebInviteRegistration: d } = this.props,
 			_ = null != a ? a.code : null,
 			h = null != o ? o.skuId : null,
 			E = f.MD.getState(),
@@ -321,8 +311,7 @@ class el extends (s = i.PureComponent) {
 			i = x.zx.Colors.BRAND,
 			a = et.Z.Messages.CONTINUE;
 		return (
-			(null == e ? void 0 : e.stage_instance) != null &&
-				((i = x.zx.Colors.GREEN), (a = et.Z.Messages.INSTANT_INVITE_ACCEPT_STAGE)),
+			(null == e ? void 0 : e.stage_instance) != null && ((i = x.zx.Colors.GREEN), (a = et.Z.Messages.INSTANT_INVITE_ACCEPT_STAGE)),
 			(0, r.jsx)(h.Tooltip, {
 				text: !s && n ? et.Z.Messages.TERMS_PRIVACY_OPT_IN_TOOLTIP : null,
 				children: (e) =>
@@ -432,19 +421,7 @@ class el extends (s = i.PureComponent) {
 				});
 	}
 	renderFull(e, t) {
-		let {
-				email: n,
-				username: s,
-				globalName: a,
-				password: o,
-				consent: c,
-				parsedDateOfBirth: u,
-				globalNameFocused: d,
-				emailClientError: _,
-				usernameClientError: E,
-				passwordClientError: g,
-				dateOfBirthClientError: p
-			} = this.state,
+		let { email: n, username: s, globalName: a, password: o, consent: c, parsedDateOfBirth: u, globalNameFocused: d, emailClientError: _, usernameClientError: E, passwordClientError: g, dateOfBirthClientError: p } = this.state,
 			{
 				registering: m,
 				consentRequired: f,
@@ -472,13 +449,9 @@ class el extends (s = i.PureComponent) {
 					})
 			}),
 			U = async () => {
-				this.setState({ usernameFocused: !0 }),
-					T && a.length > 0 && !P.Z.wasRegistrationSuggestionFetched(a) && (await M.Z.fetchSuggestionsRegistration(a));
+				this.setState({ usernameFocused: !0 }), T && a.length > 0 && !P.Z.wasRegistrationSuggestionFetched(a) && (await M.Z.fetchSuggestionsRegistration(a));
 			},
-			F =
-				null != e
-					? (0, r.jsx)(i.Fragment, { children: e() }, 'custom-header')
-					: (0, r.jsx)(x.Dx, { children: et.Z.Messages.REGISTER_TITLE }, 'title'),
+			F = null != e ? (0, r.jsx)(i.Fragment, { children: e() }, 'custom-header') : (0, r.jsx)(x.Dx, { children: et.Z.Messages.REGISTER_TITLE }, 'title'),
 			k = (0, r.jsxs)(x.gO, {
 				className: es.marginTop20,
 				children: [
@@ -681,34 +654,13 @@ class el extends (s = i.PureComponent) {
 			er(this, 'handleGotoLogin', (e) => {
 				let t;
 				let { email: n } = this.state,
-					{
-						giftCode: s,
-						guildTemplate: r,
-						invite: i,
-						location: a,
-						onLoginStart: l,
-						redirectTo: c,
-						transitionTo: u,
-						isMobileWebInviteRegistration: d
-					} = this.props;
+					{ giftCode: s, guildTemplate: r, invite: i, location: a, onLoginStart: l, redirectTo: c, transitionTo: u, isMobileWebInviteRegistration: d } = this.props;
 				if (d) {
 					null == l || l(e);
 					return;
 				}
 				let _ = null != a ? (0, o.parse)(a.search) : {};
-				null != i
-					? (t = J.Z5c.INVITE_LOGIN(i.code))
-					: null != s
-						? (t = J.Z5c.GIFT_CODE_LOGIN(s.code))
-						: null != r
-							? (t = J.Z5c.GUILD_TEMPLATE_LOGIN(r.code))
-							: null != c
-								? ((t = J.Z5c.LOGIN), (_.redirect_to = c))
-								: ((t = J.Z5c.LOGIN), '' !== n && (_ = { email: n })),
-					E.Z.loginReset(),
-					u(t, { search: (0, o.stringify)(_) }),
-					null == l || l(e),
-					V.S.dispatch(J.CkL.WAVE_EMPHASIZE);
+				null != i ? (t = J.Z5c.INVITE_LOGIN(i.code)) : null != s ? (t = J.Z5c.GIFT_CODE_LOGIN(s.code)) : null != r ? (t = J.Z5c.GUILD_TEMPLATE_LOGIN(r.code)) : null != c ? ((t = J.Z5c.LOGIN), (_.redirect_to = c)) : ((t = J.Z5c.LOGIN), '' !== n && (_ = { email: n })), E.Z.loginReset(), u(t, { search: (0, o.stringify)(_) }), null == l || l(e), V.S.dispatch(J.CkL.WAVE_EMPHASIZE);
 			}),
 			er(this, 'handleSubmit', (e) => {
 				null == e || e.preventDefault();
@@ -717,14 +669,7 @@ class el extends (s = i.PureComponent) {
 				if (null !== a) {
 					if (null == i) {
 						let e = !1;
-						if (
-							(0 === t.length && (this.setState({ emailClientError: et.Z.Messages.REQUIRED }), (e = !0)),
-							0 === n.length && (this.setState({ usernameClientError: et.Z.Messages.REQUIRED }), (e = !0)),
-							0 === s.length && (this.setState({ passwordClientError: et.Z.Messages.REQUIRED }), (e = !0)),
-							null == r && (this.setState({ dateOfBirthClientError: et.Z.Messages.REQUIRED }), (e = !0)),
-							e)
-						)
-							return;
+						if ((0 === t.length && (this.setState({ emailClientError: et.Z.Messages.REQUIRED }), (e = !0)), 0 === n.length && (this.setState({ usernameClientError: et.Z.Messages.REQUIRED }), (e = !0)), 0 === s.length && (this.setState({ passwordClientError: et.Z.Messages.REQUIRED }), (e = !0)), null == r && (this.setState({ dateOfBirthClientError: et.Z.Messages.REQUIRED }), (e = !0)), e)) return;
 					}
 					this.handleRegister();
 				}
@@ -745,8 +690,7 @@ class el extends (s = i.PureComponent) {
 					globalName: t,
 					isUsernameFocused: n,
 					onClickSuggestion: () => {
-						null != this.usernameRef && this.usernameRef.focus(),
-							null != s && s.length > 0 && this.setState({ username: s });
+						null != this.usernameRef && this.usernameRef.focus(), null != s && s.length > 0 && this.setState({ username: s });
 					}
 				});
 			});

@@ -66,10 +66,7 @@ function M(e) {
 					className: E.fileInput,
 					ref: u,
 					onChange: (e) => {
-						null == r || r(),
-							(0, p.d)(e.currentTarget.files, m, x.d.FirstThreadMessage, { requireConfirm: !0 }),
-							C.S.dispatch(I.CkL.TEXTAREA_FOCUS),
-							(e.currentTarget.value = null);
+						null == r || r(), (0, p.d)(e.currentTarget.files, m, x.d.FirstThreadMessage, { requireConfirm: !0 }), C.S.dispatch(I.CkL.TEXTAREA_FOCUS), (e.currentTarget.value = null);
 					},
 					multiple: m.rateLimitPerUser <= 0,
 					tabIndex: -1,

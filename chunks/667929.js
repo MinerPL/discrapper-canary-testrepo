@@ -140,14 +140,7 @@ var h = o.default,
 			.filter(Boolean)
 			.reduce(
 				function (e, t) {
-					return (
-						'string' == typeof t
-							? (e.className = [e.className, t].filter(Boolean).join(' '))
-							: 'object' === (0, a.Z)(t)
-								? (e.style = d(d({}, e.style), t))
-								: 'function' == typeof t && (e = d(d({}, e), t.apply(void 0, [e].concat(n)))),
-						e
-					);
+					return 'string' == typeof t ? (e.className = [e.className, t].filter(Boolean).join(' ')) : 'object' === (0, a.Z)(t) ? (e.style = d(d({}, e.style), t)) : 'function' == typeof t && (e = d(d({}, e), t.apply(void 0, [e].concat(n)))), e;
 				},
 				{
 					className: '',
@@ -203,9 +196,6 @@ var h = o.default,
 	},
 	j = function (e) {
 		if ('string' == typeof e) return ''.concat(e, ':inverted');
-		if (e && E(e) && e.extend)
-			return 'string' == typeof e.extend
-				? d(d({}, e), {}, { extend: ''.concat(e.extend, ':inverted') })
-				: d(d({}, e), {}, { extend: w(e.extend) });
+		if (e && E(e) && e.extend) return 'string' == typeof e.extend ? d(d({}, e), {}, { extend: ''.concat(e.extend, ':inverted') }) : d(d({}, e), {}, { extend: w(e.extend) });
 		return e ? w(e) : e;
 	};

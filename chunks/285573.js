@@ -14,27 +14,14 @@ var i = n(735250),
 	g = n(490897),
 	m = n(391463);
 let C = (0, c.B)(function (e) {
-	let {
-			guild: t,
-			selectedChannelId: r,
-			position: c,
-			disableManageChannels: C,
-			sorting: I,
-			sortingType: E,
-			sortingPosition: N,
-			connectChannelDragSource: x,
-			connectChannelDropTarget: S,
-			tabIndex: v
-		} = e,
+	let { guild: t, selectedChannelId: r, position: c, disableManageChannels: C, sorting: I, sortingType: E, sortingPosition: N, connectChannelDragSource: x, connectChannelDropTarget: S, tabIndex: v } = e,
 		Z = (0, s.e7)([u.Z, d.ZP], () => {
 			let e = d.ZP.getDirectoryChannelIds(t.id);
 			return 0 === e.length ? null : u.Z.getChannel(e[0]);
 		}),
 		T = (0, s.e7)([u.Z], () => u.Z.getChannel(null == Z ? void 0 : Z.parent_id)),
 		L = r === (null == Z ? void 0 : Z.id),
-		A = (0, s.e7)([h.Z], () =>
-			null != T ? h.Z.can(f.Plq.MANAGE_CHANNELS, T) : null != t && h.Z.can(f.Plq.MANAGE_CHANNELS, t)
-		),
+		A = (0, s.e7)([h.Z], () => (null != T ? h.Z.can(f.Plq.MANAGE_CHANNELS, T) : null != t && h.Z.can(f.Plq.MANAGE_CHANNELS, t))),
 		b = l.useCallback(
 			(e) => {
 				null != Z &&

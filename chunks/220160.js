@@ -63,11 +63,7 @@ var l = (0, r.createContext)(null),
 								i = !1,
 								a = void 0;
 							try {
-								for (
-									var s, o = e[Symbol.iterator]();
-									!(r = (s = o.next()).done) && (n.push(s.value), !t || n.length !== t);
-									r = !0
-								);
+								for (var s, o = e[Symbol.iterator](); !(r = (s = o.next()).done) && (n.push(s.value), !t || n.length !== t); r = !0);
 							} catch (e) {
 								(i = !0), (a = e);
 							} finally {
@@ -84,22 +80,14 @@ var l = (0, r.createContext)(null),
 						if (e) {
 							if ('string' == typeof e) return o(e, t);
 							var n = Object.prototype.toString.call(e).slice(8, -1);
-							if (('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n))
-								return Array.from(e);
+							if (('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n)) return Array.from(e);
 							if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return o(e, t);
 						}
 					})(t, n) ||
 					(function () {
-						throw TypeError(
-							'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
-						);
+						throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
 					})()),
 			_ = d[0],
 			E = d[1];
-		return r.createElement(
-			l.Provider,
-			{ value: null != u ? u : _ },
-			r.createElement(i.W, s({ backend: a.Q }, c)),
-			u ? null : r.createElement('div', { ref: E })
-		);
+		return r.createElement(l.Provider, { value: null != u ? u : _ }, r.createElement(i.W, s({ backend: a.Q }, c)), u ? null : r.createElement('div', { ref: E }));
 	};

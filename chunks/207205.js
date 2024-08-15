@@ -71,11 +71,7 @@ async function m(e, t, n) {
 			}));
 	await d.Z.fetchHydrated(r, l, o, t, n);
 }
-((a = i || (i = {}))[(a.UNKNOWN = 0)] = 'UNKNOWN'),
-	(a[(a.DEFAULT = 1)] = 'DEFAULT'),
-	(a[(a.MORE = 2)] = 'MORE'),
-	(a[(a.LESS = 3)] = 'LESS'),
-	(a[(a.MUTED = 4)] = 'MUTED');
+((a = i || (i = {}))[(a.UNKNOWN = 0)] = 'UNKNOWN'), (a[(a.DEFAULT = 1)] = 'DEFAULT'), (a[(a.MORE = 2)] = 'MORE'), (a[(a.LESS = 3)] = 'LESS'), (a[(a.MUTED = 4)] = 'MUTED');
 function I(e, t) {
 	let n = [],
 		i = [],
@@ -85,20 +81,14 @@ function I(e, t) {
 			if (n.length < 5)
 				for (let e of t.reactions) {
 					var s, r;
-					(null == e.count_details ||
-						(null !== (s = e.count_details.burst) && void 0 !== s ? s : 0) > 0 ||
-						(null !== (r = e.count_details.normal) && void 0 !== r ? r : 0) > 0) &&
-						n.push(e);
+					(null == e.count_details || (null !== (s = e.count_details.burst) && void 0 !== s ? s : 0) > 0 || (null !== (r = e.count_details.normal) && void 0 !== r ? r : 0) > 0) && n.push(e);
 				}
 			a += (function (e) {
 				let t = 0;
 				if (null != e.reactions) {
 					let n = (null != e.reactions ? e.reactions : []).map((e) => {
 						var t, n;
-						return null == e.count_details
-							? 0
-							: (null !== (t = e.count_details.burst) && void 0 !== t ? t : 0) +
-									(null !== (n = e.count_details.normal) && void 0 !== n ? n : 0);
+						return null == e.count_details ? 0 : (null !== (t = e.count_details.burst) && void 0 !== t ? t : 0) + (null !== (n = e.count_details.normal) && void 0 !== n ? n : 0);
 					});
 					n.length > 0 && (t = n.reduce((e, t) => e + t));
 				}
@@ -106,8 +96,7 @@ function I(e, t) {
 			})(t);
 		}
 	let o = null;
-	for (let t of e.messages)
-		if (null != t.author && o !== t.author.id && (i.push((0, l.e5)(t)), (o = t.author.id), i.length >= 3)) break;
+	for (let t of e.messages) if (null != t.author && o !== t.author.id && (i.push((0, l.e5)(t)), (o = t.author.id), i.length >= 3)) break;
 	return {
 		id: e.id,
 		topic: e.topic,
@@ -162,11 +151,5 @@ function S(e, t, n) {
 	let i = E.Z.getReadTimestamp(e);
 	null == i && (i = null == n ? void 0 : n[e]);
 	let a = E.Z.getReadTimestamp(t);
-	return (null == a && (a = null == n ? void 0 : n[t]), null == i && null == a)
-		? 0
-		: null == i
-			? -1
-			: null == a
-				? 1
-				: a - i;
+	return (null == a && (a = null == n ? void 0 : n[t]), null == i && null == a) ? 0 : null == i ? -1 : null == a ? 1 : a - i;
 }

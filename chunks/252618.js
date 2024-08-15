@@ -76,10 +76,7 @@ function h() {
 		function e() {
 			u.setState({ flashQueue: [] });
 		}
-		return (
-			document.addEventListener('focusin', e, { capture: !0 }),
-			() => document.removeEventListener('focusin', e, { capture: !0 })
-		);
+		return document.addEventListener('focusin', e, { capture: !0 }), () => document.removeEventListener('focusin', e, { capture: !0 });
 	}, []);
 	let t = (function () {
 		let [e, t] = u((e) => {

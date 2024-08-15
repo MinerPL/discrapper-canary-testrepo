@@ -20,15 +20,15 @@ var i = n(735250),
 	_ = n(937393),
 	f = n(43982),
 	E = n(721351),
-	g = n(420529),
-	C = n(927923),
+	C = n(420529),
+	g = n(927923),
 	I = n(981631),
 	x = n(921944),
 	T = n(689938),
 	N = n(286419);
 function v(e) {
 	let { onClose: t, channel: n } = e,
-		a = (0, g.Z)(n);
+		a = (0, C.Z)(n);
 	return (0, i.jsx)(r.Menu, {
 		onClose: t,
 		onSelect: () => null,
@@ -38,15 +38,11 @@ function v(e) {
 	});
 }
 function S(e) {
-	let { channel: t, showLeftDivider: n = !1, ...g } = e,
+	let { channel: t, showLeftDivider: n = !1, ...C } = e,
 		S = (0, p.Z)(),
 		Z = (0, s.e7)([m.Z], () => {
 			var e, t;
-			return null ===
-				(e = m.Z.getSessionById(null !== (t = null == S ? void 0 : S.sessionId) && void 0 !== t ? t : '')) ||
-				void 0 === e
-				? void 0
-				: e.clientInfo.os;
+			return null === (e = m.Z.getSessionById(null !== (t = null == S ? void 0 : S.sessionId) && void 0 !== t ? t : '')) || void 0 === e ? void 0 : e.clientInfo.os;
 		}),
 		A = (0, s.e7)([h.Z], () => h.Z.hasLayers()),
 		[M, b] = (0, s.Wu)([o.Z], () => [o.Z.getMode(t.id), o.Z.getLayout(t.id)]),
@@ -97,14 +93,9 @@ function S(e) {
 								var t;
 								return (0, i.jsx)(d.Z, {
 									...e,
-									...g,
+									...C,
 									onClick: () => O(!0),
-									label:
-										null != (t = Z)
-											? t === C.YE.XBOX
-												? T.Z.Messages.XBOX_REMOTE_CONNECTED_RAW
-												: T.Z.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW
-											: T.Z.Messages.CONSOLE_TRANSFER,
+									label: null != (t = Z) ? (t === g.YE.XBOX ? T.Z.Messages.XBOX_REMOTE_CONNECTED_RAW : T.Z.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW) : T.Z.Messages.CONSOLE_TRANSFER,
 									iconComponent: (0, E.Z)(Z)
 								});
 							}

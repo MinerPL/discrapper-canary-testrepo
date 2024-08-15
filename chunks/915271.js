@@ -44,10 +44,7 @@ class A extends n.PureComponent {
 					: (0, s.jsx)(r.Text, {
 							variant: 'text-md/medium',
 							className: E.connectionInstructions,
-							children:
-								null == t
-									? d.Z.Messages.PAYMENT_SOURCE_VENMO_LOADING
-									: d.Z.Messages.PAYMENT_SOURCE_VENMO_CONNECTION_INSTRUCTIONS
+							children: null == t ? d.Z.Messages.PAYMENT_SOURCE_VENMO_LOADING : d.Z.Messages.PAYMENT_SOURCE_VENMO_CONNECTION_INSTRUCTIONS
 						})
 			]
 		});

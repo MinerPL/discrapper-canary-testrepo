@@ -59,14 +59,8 @@ let k = _()('2015-05-15').local(),
 		let c = v.default.getUser(l.id),
 			u = g.Z.getChannel(e),
 			d = (null == u ? void 0 : u.isPrivate()) ? A.Z.getNickname(l.id) : null,
-			_ =
-				null !== (s = null !== (a = S.ZP.getNick(e, l.id)) && void 0 !== a ? a : d) && void 0 !== s
-					? s
-					: b.ZP.getName(l),
-			E =
-				null !== (r = null == c ? void 0 : c.getAvatarURL(e, 20)) && void 0 !== r
-					? r
-					: l.getAvatarURL(null == u ? void 0 : u.guild_id, 20);
+			_ = null !== (s = null !== (a = S.ZP.getNick(e, l.id)) && void 0 !== a ? a : d) && void 0 !== s ? s : b.ZP.getName(l),
+			E = null !== (r = null == c ? void 0 : c.getAvatarURL(e, 20)) && void 0 !== r ? r : l.getAvatarURL(null == u ? void 0 : u.guild_id, 20);
 		return [
 			(0, i.jsx)(
 				'img',
@@ -89,9 +83,7 @@ let k = _()('2015-05-15').local(),
 				'span',
 				{
 					className: y.displayUsername,
-					children: b.ZP.getUserTag(l, {
-						identifiable: M.Z.enabled && M.Z.hidePersonalInformation ? 'never' : 'always'
-					})
+					children: b.ZP.getUserTag(l, { identifiable: M.Z.enabled && M.Z.hidePersonalInformation ? 'never' : 'always' })
 				},
 				'display-username-'.concat(t, '-').concat(l.id)
 			)
@@ -119,20 +111,7 @@ let k = _()('2015-05-15').local(),
 	V = (e) => {
 		let t,
 			n,
-			{
-				id: a,
-				searchId: s,
-				result: l,
-				group: o,
-				className: c,
-				role: u,
-				tabIndex: d,
-				'aria-selected': _,
-				onSelect: E,
-				onFocus: I,
-				showFilter: T,
-				renderResult: h
-			} = e;
+			{ id: a, searchId: s, result: l, group: o, className: c, role: u, tabIndex: d, 'aria-selected': _, onSelect: E, onFocus: I, showFilter: T, renderResult: h } = e;
 		if (T) {
 			var N, C;
 			t = (0, i.jsx)('span', {
@@ -312,11 +291,7 @@ class W extends a.PureComponent {
 		let { resultsState: n, totalResults: i } = this.props,
 			{ mode: a } = n,
 			{ resultsState: s } = e;
-		null != a.filter && null == s.mode.filter && i > 0
-			? this.setSelectedIndex(0)
-			: a.type === j.Sap.FILTER_ALL && s.mode.type !== a.type
-				? this.setSelectedIndex(-1)
-				: this.keepCurrentOptionSelected(e, t);
+		null != a.filter && null == s.mode.filter && i > 0 ? this.setSelectedIndex(0) : a.type === j.Sap.FILTER_ALL && s.mode.type !== a.type ? this.setSelectedIndex(-1) : this.keepCurrentOptionSelected(e, t);
 	}
 	setSelectedIndex(e) {
 		this.setState({ selectedIndex: e }, () => this.props.onSelectedIndexChanged(e));
@@ -377,8 +352,7 @@ class W extends a.PureComponent {
 				let t = e,
 					{ autocompletes: n } = this.props.resultsState,
 					i = this.shouldShowSearchQuery();
-				t < -1 || (!i && t < 0) ? (t = P.BU(n) - 1) : i && t >= P.BU(n) ? (t = -1) : !i && t >= P.BU(n) && (t = 0),
-					this.setSelectedIndex(t);
+				t < -1 || (!i && t < 0) ? (t = P.BU(n) - 1) : i && t >= P.BU(n) ? (t = -1) : !i && t >= P.BU(n) && (t = 0), this.setSelectedIndex(t);
 			}),
 			B(this, 'selectOption', (e) => {
 				let t = e;
@@ -404,9 +378,7 @@ class W extends a.PureComponent {
 				let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
 					{ mode: i, cursorScope: a } = t.props.resultsState,
 					s = 0;
-				null != i.token
-					? (s = i.token.start)
-					: (null == a ? void 0 : a.currentToken) != null && (s = a.currentToken.end);
+				null != i.token ? (s = i.token.start) : (null == a ? void 0 : a.currentToken) != null && (s = a.currentToken.end);
 				let r = null != i.token ? i.token.end : s;
 				L.S.dispatch(j.CkL.SET_SEARCH_QUERY, {
 					query: e,

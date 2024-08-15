@@ -148,18 +148,7 @@ function y(e) {
 	});
 }
 function M(e) {
-	let {
-			guildEvent: n,
-			guild: t,
-			channel: l,
-			headerId: r,
-			onClose: d,
-			onClickInterestedCount: u,
-			isHub: _ = !1,
-			containerRef: g,
-			recurrenceId: v,
-			setRecurrenceId: f
-		} = e,
+	let { guildEvent: n, guild: t, channel: l, headerId: r, onClose: d, onClickInterestedCount: u, isHub: _ = !1, containerRef: g, recurrenceId: v, setRecurrenceId: f } = e,
 		S = (0, o.e7)([h.Z], () => null != h.Z.getGuild(t.id), [t.id]),
 		{ startTime: L, endTime: M } = (0, E.ZP)(n, v),
 		B = (0, x.Z)(n.guild_id, n.id, v),
@@ -175,10 +164,7 @@ function M(e) {
 		I.Z.getGuildEventUserCounts(t.id, n.id, null != v ? [v] : []), I.Z.getGuildEventsForCurrentUser(t.id);
 	}, [t.id, n.id, v]);
 	let G = (0, b.KV)(n.recurrence_rule),
-		O =
-			(null == n ? void 0 : n.scheduled_start_time) != null
-				? (0, C.lh)(w, L, new Date(null == n ? void 0 : n.scheduled_start_time))
-				: null;
+		O = (null == n ? void 0 : n.scheduled_start_time) != null ? (0, C.lh)(w, L, new Date(null == n ? void 0 : n.scheduled_start_time)) : null;
 	return (0, i.jsxs)('div', {
 		ref: g,
 		children: [

@@ -35,9 +35,7 @@ function d() {
 }
 function u(e) {
 	let { isUserVerified: s } = e,
-		d = s
-			? o.Z.Messages.MEMBER_VERIFICATION_PHONE_VERIFIED
-			: o.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_LABEL;
+		d = s ? o.Z.Messages.MEMBER_VERIFICATION_PHONE_VERIFIED : o.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_LABEL;
 	return (0, t.jsx)(t.Fragment, {
 		children: (0, t.jsx)(a.PU, {
 			icon: l.MobilePhoneIcon,

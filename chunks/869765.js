@@ -30,20 +30,15 @@ function h(e, t, n) {
 		e
 	);
 }
-((a = r || (r = {}))[(a.LOADED = 0)] = 'LOADED'),
-	(a[(a.NOT_LOADED = 1)] = 'NOT_LOADED'),
-	(a[(a.DELETED = 2)] = 'DELETED');
+((a = r || (r = {}))[(a.LOADED = 0)] = 'LOADED'), (a[(a.NOT_LOADED = 1)] = 'NOT_LOADED'), (a[(a.DELETED = 2)] = 'DELETED');
 let p = Object.freeze({ state: 1 }),
-	I = new Set();
-class m {
+	m = new Set();
+class I {
 	handleCacheDisposed(e, t) {
-		this._cachedMessageIds.has(e) &&
-			((this._cachedMessageIds = new Set(this._cachedMessageIds)), this._cachedMessageIds.delete(e));
+		this._cachedMessageIds.has(e) && ((this._cachedMessageIds = new Set(this._cachedMessageIds)), this._cachedMessageIds.delete(e));
 	}
 	set(e, t) {
-		this._cachedMessages.set(e, t),
-			!this._cachedMessageIds.has(e) &&
-				((this._cachedMessageIds = new Set(this._cachedMessageIds)), this._cachedMessageIds.add(e));
+		this._cachedMessages.set(e, t), !this._cachedMessageIds.has(e) && ((this._cachedMessageIds = new Set(this._cachedMessageIds)), this._cachedMessageIds.add(e));
 	}
 	has(e) {
 		return this._cachedMessageIds.has(e);
@@ -69,9 +64,7 @@ class m {
 let T = new (class e {
 	has(e, t) {
 		var n, r;
-		return (
-			null !== (r = null === (n = this._channelCaches.get(e)) || void 0 === n ? void 0 : n.has(t)) && void 0 !== r && r
-		);
+		return null !== (r = null === (n = this._channelCaches.get(e)) || void 0 === n ? void 0 : n.has(t)) && void 0 !== r && r;
 	}
 	get(e, t) {
 		var n;
@@ -79,7 +72,7 @@ let T = new (class e {
 	}
 	set(e, t, n) {
 		let r = this._channelCaches.get(e);
-		null == r && ((r = new m()), this._channelCaches.set(e, r)), r.set(t, n);
+		null == r && ((r = new I()), this._channelCaches.set(e, r)), r.set(t, n);
 	}
 	updateExistingMessageIfCached(e) {
 		let t = this._channelCaches.get(e.channel_id);
@@ -182,7 +175,7 @@ class y extends (i = l.ZP.Store) {
 	}
 	getReplyIdsForChannel(e) {
 		let t;
-		return null != e && (t = T.getCachedMessageIdsForChannel(e)), null != t ? t : I;
+		return null != e && (t = T.getCachedMessageIdsForChannel(e)), null != t ? t : m;
 	}
 }
 h(y, 'displayName', 'ReferencedMessageStore'),

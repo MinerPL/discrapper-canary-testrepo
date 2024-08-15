@@ -12,17 +12,7 @@ var r = n(735250),
 function u(e, t, n) {
 	let a = (0, l.G6)(e);
 	return i.forwardRef(function (u, c) {
-		let {
-				children: d,
-				className: _,
-				dir: E = 'ltr',
-				orientation: f = 'vertical',
-				fade: h = !1,
-				customTheme: p = !1,
-				paddingFix: I = !0,
-				style: m,
-				...T
-			} = u,
+		let { children: d, className: _, dir: E = 'ltr', orientation: f = 'vertical', fade: h = !1, customTheme: p = !1, paddingFix: m = !0, style: I, ...T } = u,
 			{ scrollerRef: g, getScrollerState: S } = (0, l.Ke)(),
 			A = (0, l.t2)(g, f);
 		i.useImperativeHandle(
@@ -35,7 +25,7 @@ function u(e, t, n) {
 			[g, S, f, A]
 		);
 		let N = (0, l.tT)({
-			paddingFix: I,
+			paddingFix: m,
 			orientation: f,
 			dir: E,
 			className: _,
@@ -49,7 +39,7 @@ function u(e, t, n) {
 				[t]: h,
 				[n]: p
 			}),
-			style: (0, l.uT)(m, f),
+			style: (0, l.uT)(I, f),
 			dir: E,
 			...T,
 			children: (0, r.jsxs)(o.Jc, {

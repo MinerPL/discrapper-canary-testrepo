@@ -29,12 +29,7 @@ function A(e, t = {}) {
 		d = 'externalFinish',
 		N = !t.disableAutoFinish,
 		p = [],
-		{
-			idleTimeout: O = R.idleTimeout,
-			finalTimeout: f = R.finalTimeout,
-			childSpanTimeout: S = R.childSpanTimeout,
-			beforeSpanEnd: D
-		} = t,
+		{ idleTimeout: O = R.idleTimeout, finalTimeout: f = R.finalTimeout, childSpanTimeout: S = R.childSpanTimeout, beforeSpanEnd: D } = t,
 		L = (0, o.s3)();
 	if (!L || !(0, E.z)()) return new I.b();
 	let h = (0, o.nZ)(),
@@ -93,9 +88,7 @@ function A(e, t = {}) {
 				E = r - n <= (f + O) / 1000;
 			if (i.X) {
 				let e = JSON.stringify(t, void 0, 2);
-				_
-					? !E && a.kg.log('[Tracing] Discarding span since it finished after idle span final timeout', e)
-					: a.kg.log('[Tracing] Discarding span since it happened after idle span was finished', e);
+				_ ? !E && a.kg.log('[Tracing] Discarding span since it finished after idle span final timeout', e) : a.kg.log('[Tracing] Discarding span since it happened after idle span was finished', e);
 			}
 			(!E || !_) && ((0, c.ed)(g, t), o++);
 		}),

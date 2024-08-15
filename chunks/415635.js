@@ -19,20 +19,16 @@ var i = n(735250),
 	_ = n(396793);
 function f(e) {
 	let { channelId: t, guildId: n, userId: f, containerDimensions: E } = e,
-		g = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
-		[C, I] = a.useState([]),
-		x = C.length < 50;
+		C = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
+		[g, I] = a.useState([]),
+		x = g.length < 50;
 	a.useEffect(() => {
 		function e(e) {
 			var i;
 			let { channelId: a, userId: l, emoji: r, animationType: o, animationId: m } = e;
-			if (
-				(null != f && f !== l) ||
-				(u.Z.getEnabled() && (0, d.Z)(null !== (i = null == r ? void 0 : r.name) && void 0 !== i ? i : ''))
-			)
-				return;
+			if ((null != f && f !== l) || (u.Z.getEnabled() && (0, d.Z)(null !== (i = null == r ? void 0 : r.name) && void 0 !== i ? i : ''))) return;
 			let _ = null != r && null != o && null != m;
-			if (a === t && !g && x && _) {
+			if (a === t && !C && x && _) {
 				let e = (0, h._r)(r),
 					i = null != r.id && !r.animated,
 					a = {
@@ -56,7 +52,7 @@ function f(e) {
 				r.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
 			}
 		);
-	}, [t, n, f, g, x]);
+	}, [t, n, f, C, x]);
 	let T = a.useCallback((e) => {
 		I((t) => {
 			let n = [...t],
@@ -64,14 +60,14 @@ function f(e) {
 			return n.splice(i, 1), n;
 		});
 	}, []);
-	return g
+	return C
 		? null
 		: (0, i.jsx)('div', {
 				className: _.effectsWrapper,
 				style: { width: E.width },
 				children: (0, i.jsx)('div', {
 					className: _.effects,
-					children: C.map((e) =>
+					children: g.map((e) =>
 						(0, i.jsx)(
 							m.Z,
 							{

@@ -39,5 +39,4 @@ function _(e) {
 	if (1 === e) return new a.Z();
 	return new d();
 }
-((r = i || (i = {}))[(r.MESSAGE_ATTACHMENT = 0)] = 'MESSAGE_ATTACHMENT'),
-	(r[(r.GUILD_PRODUCT_ATTACHMENT = 1)] = 'GUILD_PRODUCT_ATTACHMENT');
+((r = i || (i = {}))[(r.MESSAGE_ATTACHMENT = 0)] = 'MESSAGE_ATTACHMENT'), (r[(r.GUILD_PRODUCT_ATTACHMENT = 1)] = 'GUILD_PRODUCT_ATTACHMENT');

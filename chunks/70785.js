@@ -18,20 +18,11 @@ var r = n(735250),
 	f = n(502762),
 	h = n(475413),
 	p = n(228168),
-	I = n(689938),
-	m = n(161296),
+	m = n(689938),
+	I = n(161296),
 	T = n(609440);
 function g(e) {
-	let {
-			user: t,
-			guildId: n,
-			setPopoutRef: g,
-			channelId: S,
-			messageId: A,
-			roleId: N,
-			onViewBlockedProfileClick: v,
-			newAnalyticsLocations: O = []
-		} = e,
+	let { user: t, guildId: n, setPopoutRef: g, channelId: S, messageId: A, roleId: N, onViewBlockedProfileClick: v, newAnalyticsLocations: O = [] } = e,
 		{ analyticsLocations: R } = (0, l.ZP)([...O, o.Z.BLOCKED_PROFILE_POPOUT]),
 		C = (0, c.ZB)({
 			layout: 'BLOCKED_PROFILE_POPOUT',
@@ -61,16 +52,16 @@ function g(e) {
 						displayProfile: D,
 						profileType: p.y0.BITE_SIZE,
 						children: (0, r.jsxs)('div', {
-							className: m.container,
+							className: I.container,
 							children: [
 								(0, r.jsx)('img', {
 									alt: '',
 									src: T,
-									className: m.previewForCollected,
+									className: I.previewForCollected,
 									'aria-hidden': !0
 								}),
 								(0, r.jsxs)('div', {
-									className: m.body,
+									className: I.body,
 									children: [
 										(0, r.jsx)(E.Z, {
 											user: t,
@@ -78,21 +69,21 @@ function g(e) {
 										}),
 										(0, r.jsx)(s.Heading, {
 											variant: 'heading-lg/bold',
-											className: m.header,
-											children: I.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_TITLE
+											className: I.header,
+											children: m.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_TITLE
 										}),
 										(0, r.jsx)(s.Text, {
 											variant: 'text-sm/medium',
-											children: I.Z.Messages.USER_PROFILE_BLOCKED_PANEL_BODY_USERNAME.format({ username: t.username })
+											children: m.Z.Messages.USER_PROFILE_BLOCKED_PANEL_BODY_USERNAME.format({ username: t.username })
 										}),
 										(0, r.jsx)(s.Text, {
 											variant: 'text-sm/medium',
-											children: I.Z.Messages.USER_PROFILE_BLOCKED_PANEL_BODY_CONFIRMATION
+											children: m.Z.Messages.USER_PROFILE_BLOCKED_PANEL_BODY_CONFIRMATION
 										}),
 										(0, r.jsx)(h.tG, {
-											className: m.centeredButton,
+											className: I.centeredButton,
 											action: 'VIEW_BLOCKED_PROFILE',
-											text: I.Z.Messages.VIEW_PROFILE,
+											text: m.Z.Messages.VIEW_PROFILE,
 											autoFocus: !0,
 											fullWidth: !1,
 											onClick: () => {

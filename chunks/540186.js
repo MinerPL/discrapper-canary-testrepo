@@ -144,9 +144,7 @@ function g(e) {
 											width: 40,
 											height: 40
 										}),
-										text: E.Z.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_FOUR.format({
-											articleURL: r.Z.getArticleURL(m.BhN.STAGE_CHANNEL_GUIDELINES)
-										})
+										text: E.Z.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_FOUR.format({ articleURL: r.Z.getArticleURL(m.BhN.STAGE_CHANNEL_GUIDELINES) })
 									})
 								]
 							})

@@ -42,12 +42,7 @@ function P(e, t) {
 		a = 0;
 	for (let t of n) {
 		var s;
-		let n =
-			null == e
-				? void 0
-				: null === (s = e.find((e) => e.answer_id === parseInt(t))) || void 0 === s
-					? void 0
-					: s.poll_media;
+		let n = null == e ? void 0 : null === (s = e.find((e) => e.answer_id === parseInt(t))) || void 0 === s ? void 0 : s.poll_media;
 		(null == n ? void 0 : n.text) != null && (i += 1), (null == n ? void 0 : n.emoji) != null && (a += 1);
 	}
 	return {
@@ -198,14 +193,7 @@ async function B(e) {
 		var l, o, c;
 		u.Z.show({
 			title: Z.Z.Messages.GENERIC_ERROR_TITLE,
-			body:
-				null !==
-					(c =
-						null !== (o = null === (l = e.getAnyErrorMessage) || void 0 === l ? void 0 : l.call(e)) && void 0 !== o
-							? o
-							: e.message) && void 0 !== c
-					? c
-					: Z.Z.Messages.GENERIC_ERROR_BODY
+			body: null !== (c = null !== (o = null === (l = e.getAnyErrorMessage) || void 0 === l ? void 0 : l.call(e)) && void 0 !== o ? o : e.message) && void 0 !== c ? c : Z.Z.Messages.GENERIC_ERROR_BODY
 		}),
 			await y({
 				channelId: t,
@@ -285,12 +273,7 @@ async function G(e) {
 							null != r
 								? r.reactions.reduce((e, t) => {
 										var n, i;
-										return (
-											e +
-											(null !== (i = null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== i
-												? i
-												: 0)
-										);
+										return e + (null !== (i = null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== i ? i : 0);
 									}, 0)
 								: 0;
 					return (
@@ -425,11 +408,7 @@ t.Z = {
 			var t, n;
 			if (null == e) {
 				let e = new Set([i]),
-					{
-						analyticsSelectedAnswerIds: t,
-						selectedTextAnswersCount: a,
-						selectedEmojiAnswersCount: s
-					} = P(null === (n = o.poll) || void 0 === n ? void 0 : n.answers, e);
+					{ analyticsSelectedAnswerIds: t, selectedTextAnswersCount: a, selectedEmojiAnswersCount: s } = P(null === (n = o.poll) || void 0 === n ? void 0 : n.answers, e);
 				return (
 					I.ZP.trackWithMetadata(L.rMx.POLL_VOTE_SELECTED, {
 						channel_id: r,
@@ -454,11 +433,7 @@ t.Z = {
 				if (!u) for (let e of s) s.delete(e);
 				s.add(i);
 			}
-			let {
-				analyticsSelectedAnswerIds: c,
-				selectedTextAnswersCount: d,
-				selectedEmojiAnswersCount: _
-			} = P(null === (t = o.poll) || void 0 === t ? void 0 : t.answers, s);
+			let { analyticsSelectedAnswerIds: c, selectedTextAnswersCount: d, selectedEmojiAnswersCount: _ } = P(null === (t = o.poll) || void 0 === t ? void 0 : t.answers, s);
 			return (
 				I.ZP.trackWithMetadata(L.rMx.POLL_VOTE_SELECTED, {
 					channel_id: r,

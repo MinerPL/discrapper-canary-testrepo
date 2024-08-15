@@ -14,8 +14,8 @@ var i = n(735250),
 	_ = n(206295),
 	f = n(278399),
 	E = n(297781),
-	g = n(591853),
-	C = n(410441),
+	C = n(591853),
+	g = n(410441),
 	I = n(616922),
 	x = n(689938);
 let T = (e, t, n, i) => {
@@ -59,20 +59,16 @@ t.Z = (e) => {
 	if (null == M || !(0, d.Hi)(j, f.y9)) return null;
 	let P = () => {
 		let e = I.Hw.ALBUM,
-			t = o.Z.isProtocolRegistered()
-				? I.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id)
-				: I.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
+			t = o.Z.isProtocolRegistered() ? I.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : I.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
 		window.open(t);
 	};
-	return (0, i.jsxs)(g.yR, {
+	return (0, i.jsxs)(C.yR, {
 		children: [
-			(0, i.jsx)(g.wG, {
+			(0, i.jsx)(C.wG, {
 				onClickTitle: P,
 				onClickSubtitle: () => {
 					let e = I.Hw.ARTIST,
-						t = o.Z.isProtocolRegistered()
-							? I.C7.PLAYER_OPEN(e, n.extra.artist.external_id)
-							: I.C7.WEB_OPEN(e, n.extra.artist.external_id);
+						t = o.Z.isProtocolRegistered() ? I.C7.PLAYER_OPEN(e, n.extra.artist.external_id) : I.C7.WEB_OPEN(e, n.extra.artist.external_id);
 					window.open(t);
 				},
 				onClickThumbnail: P,
@@ -81,7 +77,7 @@ t.Z = (e) => {
 				entry: n,
 				headerIcons:
 					S === l.p.SPOTIFY
-						? (0, i.jsx)(C.Z, {
+						? (0, i.jsx)(g.Z, {
 								Icon: u.Z,
 								'aria-label': x.Z.Messages.SPOTIFY
 							})
@@ -94,8 +90,8 @@ t.Z = (e) => {
 					children: f.Ho.map((e, t) => (0, i.jsx)(e, { entry: n }, t))
 				})
 			}),
-			(0, i.jsx)(g.St, {
-				children: (0, i.jsx)(g.WT, {
+			(0, i.jsx)(C.St, {
+				children: (0, i.jsx)(C.WT, {
 					closePopout: h,
 					user: M,
 					channel: t,

@@ -60,32 +60,12 @@ function L(e) {
 }
 function Z(e) {
 	var n, t, s, E, x, Z, R, M;
-	let {
-			channel: B,
-			guild: D,
-			header: b,
-			error: k,
-			loading: G,
-			onSave: P,
-			onEventSave: O,
-			onClose: U,
-			onSelectChannel: F,
-			isEvent: V = !1,
-			defaultOptions: y,
-			isSlideReady: w = !0
-		} = e,
+	let { channel: B, guild: D, header: b, error: k, loading: G, onSave: P, onEventSave: O, onClose: U, onSelectChannel: F, isEvent: V = !1, defaultOptions: y, isSlideReady: w = !0 } = e,
 		z = l.useMemo(() => N.Z.getStageInstanceByChannel(B.id), [B.id]),
-		[H, W] = l.useState(
-			null !== (t = null !== (n = null == y ? void 0 : y.topic) && void 0 !== n ? n : null == z ? void 0 : z.topic) &&
-				void 0 !== t
-				? t
-				: ''
-		),
+		[H, W] = l.useState(null !== (t = null !== (n = null == y ? void 0 : y.topic) && void 0 !== n ? n : null == z ? void 0 : z.topic) && void 0 !== t ? t : ''),
 		[q, K] = l.useState(null !== (s = null == y ? void 0 : y.description) && void 0 !== s ? s : ''),
 		[Y] = l.useState(V),
-		[J, X] = l.useState(
-			null !== (E = null == y ? void 0 : y.schedule) && void 0 !== E ? E : { startDate: (0, u.ib)() }
-		),
+		[J, X] = l.useState(null !== (E = null == y ? void 0 : y.schedule) && void 0 !== E ? E : { startDate: (0, u.ib)() }),
 		[Q, $] = l.useState(Y && (null == y ? void 0 : y.schedule) != null),
 		ee = (0, T.J)(B),
 		en = (0, T.U)(B),
@@ -93,17 +73,7 @@ function Z(e) {
 		[ea, el] = l.useState(et && en),
 		es = (0, o.e7)([h.Z], () => h.Z.hasHotspot(j.v.LIVE_STAGE_NOTIFICATION_BADGE)),
 		ei = S.j8.GUILD_ONLY,
-		[eo] = l.useState(
-			null !==
-				(Z =
-					null !== (x = null == y ? void 0 : y.privacyLevel) && void 0 !== x
-						? x
-						: null == z
-							? void 0
-							: z.privacy_level) && void 0 !== Z
-				? Z
-				: ei
-		),
+		[eo] = l.useState(null !== (Z = null !== (x = null == y ? void 0 : y.privacyLevel) && void 0 !== x ? x : null == z ? void 0 : z.privacy_level) && void 0 !== Z ? Z : ei),
 		[er, ec] = l.useState(null == y ? void 0 : y.recurrenceRule),
 		ed = (0, g._d)(B.id),
 		[eu, e_] = l.useState(!1),
@@ -184,9 +154,7 @@ function Z(e) {
 						className: p.form,
 						children: [
 							(0, a.jsxs)(r.FormItem, {
-								title: V
-									? A.Z.Messages.GUILD_EVENT_CREATE_TOPIC_LABEL
-									: A.Z.Messages.START_STAGE_CHANNEL_EVENT_MODAL_TOPIC_LABEL,
+								title: V ? A.Z.Messages.GUILD_EVENT_CREATE_TOPIC_LABEL : A.Z.Messages.START_STAGE_CHANNEL_EVENT_MODAL_TOPIC_LABEL,
 								className: p.topicFormItem,
 								required: !0,
 								children: [

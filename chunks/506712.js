@@ -21,11 +21,11 @@ function d(e, t, n, r, i) {
 		f = r.filter((e) => e.channel_id in E),
 		h = null !== (a = n.filter((t) => t.guild_id === e.id)[0]) && void 0 !== a ? a : {},
 		p = l.Z.getMemberCount(e.id),
-		I = _('year', r, f, (e) => {
+		m = _('year', r, f, (e) => {
 			var t;
 			return Number(null !== (t = e.num_year_opens) && void 0 !== t ? t : 0);
 		}),
-		m = _('one month', r, f, (e) => {
+		I = _('one month', r, f, (e) => {
 			var t;
 			return Number(null !== (t = e.num_month_opens) && void 0 !== t ? t : 0);
 		}),
@@ -34,13 +34,13 @@ function d(e, t, n, r, i) {
 			return Number(null !== (t = e.num_three_month_opens) && void 0 !== t ? t : 0);
 		}),
 		g = [
-			m,
+			I,
 			T,
 			_('six month', r, f, (e) => {
 				var t;
 				return Number(null !== (t = e.num_six_month_opens) && void 0 !== t ? t : 0);
 			}),
-			I
+			m
 		],
 		S = 0,
 		A = 0;
@@ -59,7 +59,7 @@ function d(e, t, n, r, i) {
 			.concat(g.map((e) => e.biggestChannelFormatted).join(' / '), '\n- Sent Msgs: ')
 			.concat(A, '\n'),
 		v = T.guildOpens >= 0.02 * T.totalOpensAcrossAllServers,
-		O = (null !== (d = I.guildOpens) && void 0 !== d ? d : 0) > 0;
+		O = (null !== (d = m.guildOpens) && void 0 !== d ? d : 0) > 0;
 	if (h.messages === c.XR.High) {
 		if (!i) return [c.AR.UseGreyDot, v, 'UseGreyDot' + N];
 		if (!v && O) return [c.AR.UseGreyDot, v, 'UseGreyDot' + N];
@@ -88,35 +88,14 @@ function E(e, t) {
 		_ = o.Z.getFrequentlyWithoutFetchingLatest().filter((t) => t instanceof a.Sf && t.guild_id === e.id),
 		E = _.filter((e) => {
 			var t, n;
-			let r =
-				null !==
-					(n =
-						null === (t = o.Z.frecencyWithoutFetchingLatest.usageHistory[e.id]) || void 0 === t
-							? void 0
-							: t.recentUses) && void 0 !== n
-					? n
-					: [];
+			let r = null !== (n = null === (t = o.Z.frecencyWithoutFetchingLatest.usageHistory[e.id]) || void 0 === t ? void 0 : t.recentUses) && void 0 !== n ? n : [];
 			return 0 !== r.length && r[r.length - 1] >= d;
 		}),
 		f = E.length >= 5,
 		h = _.reduce((e, t) => {
 			var n, r;
-			return (
-				e +
-				(null !==
-					(r =
-						null === (n = o.Z.frecencyWithoutFetchingLatest.usageHistory[t.id]) || void 0 === n
-							? void 0
-							: n.totalUses) && void 0 !== r
-					? r
-					: 0)
-			);
+			return e + (null !== (r = null === (n = o.Z.frecencyWithoutFetchingLatest.usageHistory[t.id]) || void 0 === n ? void 0 : n.totalUses) && void 0 !== r ? r : 0);
 		}, 0),
-		p = '\n- **Local**:\n    - Guild Visits: '
-			.concat(h, '\n    - Channels: ')
-			.concat(_.length, '\n    - Recent Channels: ')
-			.concat(E.length, '\n');
-	return i.messages === c.XR.High || s > 1000
-		? [c.AR.UseGreyDot, f, 'SuggestGreyDot' + p]
-		: [c.AR.KeepAsIs, f, 'KeepAsIs' + p];
+		p = '\n- **Local**:\n    - Guild Visits: '.concat(h, '\n    - Channels: ').concat(_.length, '\n    - Recent Channels: ').concat(E.length, '\n');
+	return i.messages === c.XR.High || s > 1000 ? [c.AR.UseGreyDot, f, 'SuggestGreyDot' + p] : [c.AR.KeepAsIs, f, 'KeepAsIs' + p];
 }

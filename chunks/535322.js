@@ -30,12 +30,7 @@ function d(e) {
 	});
 }
 function _(e) {
-	let {
-		className: t,
-		forceUseColorForSparkles: n = !1,
-		shouldInheritTextColor: i = !1,
-		shouldInheritBackgroundColor: o = !1
-	} = e;
+	let { className: t, forceUseColorForSparkles: n = !1, shouldInheritTextColor: i = !1, shouldInheritBackgroundColor: o = !1 } = e;
 	return (0, r.jsx)(l.Z, {
 		className: t,
 		forceUseColor: n,

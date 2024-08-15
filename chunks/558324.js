@@ -7,18 +7,7 @@ var s = n(735250),
 	o = n(981631),
 	c = n(541992);
 t.Z = (e) => {
-	let {
-			className: t,
-			tags: n,
-			value: i,
-			onRemoveTag: d,
-			onAddTag: u,
-			maxTaxLength: _,
-			maxTags: I,
-			disabled: E,
-			placeholder: T,
-			...m
-		} = e,
+	let { className: t, tags: n, value: i, onRemoveTag: d, onAddTag: u, maxTaxLength: _, maxTags: I, disabled: E, placeholder: T, ...m } = e,
 		[N, S] = a.useState(null != i ? i : ''),
 		h = n.map((e, t) =>
 			(0, s.jsxs)(

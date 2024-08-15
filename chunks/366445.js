@@ -21,21 +21,13 @@ function s(e, t) {
 		);
 	}),
 	(s.prototype._getDecoder = function (e) {
-		return (
-			(e = e || 'der'),
-			!this.decoders.hasOwnProperty(e) && (this.decoders[e] = this._createNamed(i[e])),
-			this.decoders[e]
-		);
+		return (e = e || 'der'), !this.decoders.hasOwnProperty(e) && (this.decoders[e] = this._createNamed(i[e])), this.decoders[e];
 	}),
 	(s.prototype.decode = function (e, t, n) {
 		return this._getDecoder(t).decode(e, n);
 	}),
 	(s.prototype._getEncoder = function (e) {
-		return (
-			(e = e || 'der'),
-			!this.encoders.hasOwnProperty(e) && (this.encoders[e] = this._createNamed(r[e])),
-			this.encoders[e]
-		);
+		return (e = e || 'der'), !this.encoders.hasOwnProperty(e) && (this.encoders[e] = this._createNamed(r[e])), this.encoders[e];
 	}),
 	(s.prototype.encode = function (e, t, n) {
 		return this._getEncoder(t).encode(e, n);

@@ -89,10 +89,7 @@ function p(e) {
 					slideId: L.A.EDIT_SCREEN,
 					next: L.A.FINISH_LATER,
 					back: L.A.INFO,
-					footerButtons: [
-						D === P.Wq.PREVIEW ? 'GOT_IT' : 'BACK',
-						D === P.Wq.PREVIEW ? 'GOT_IT' : D === P.Wq.EDIT_USERNAME ? 'SUBMIT' : 'NEXT'
-					]
+					footerButtons: [D === P.Wq.PREVIEW ? 'GOT_IT' : 'BACK', D === P.Wq.PREVIEW ? 'GOT_IT' : D === P.Wq.EDIT_USERNAME ? 'SUBMIT' : 'NEXT']
 				},
 				{
 					slideId: L.A.FINISH_LATER,
@@ -141,17 +138,10 @@ function p(e) {
 		}, [V, Q]),
 		en = s.useCallback(async () => {
 			try {
-				W(null),
-					G(!0),
-					await S.Z.createPomelo({ username: (0, T.R_)(Q.username) }, y),
-					await (0, d.In)(V.id),
-					j(P.Wq.PREVIEW);
+				W(null), G(!0), await S.Z.createPomelo({ username: (0, T.R_)(Q.username) }, y), await (0, d.In)(V.id), j(P.Wq.PREVIEW);
 			} catch (a) {
 				let e = new E.Z(a),
-					t =
-						(null == e ? void 0 : e.status) != null && e.status >= 400 && e.status < 500
-							? e.getAnyErrorMessage()
-							: x.Z.Messages.ERROR_GENERIC_TITLE;
+					t = (null == e ? void 0 : e.status) != null && e.status >= 400 && e.status < 500 ? e.getAnyErrorMessage() : x.Z.Messages.ERROR_GENERIC_TITLE;
 				W(t),
 					g.default.track(C.rMx.POMELO_ERRORS, {
 						reason: t,
@@ -168,16 +158,7 @@ function p(e) {
 			j(es ? P.Wq.EDIT_USERNAME : P.Wq.EDIT_DISPLAY_NAME), U(ee[Math.min(et - 1, Z + 1)].slideId);
 		}, [Z, ee, et, es]),
 		er = s.useCallback(() => {
-			W(null),
-				Z === L.A.EDIT_SCREEN
-					? D === P.Wq.EDIT_USERNAME
-						? es
-							? (j(P.Wq.NONE), U(ee[Math.max(0, Z - 1)].slideId))
-							: j(P.Wq.EDIT_DISPLAY_NAME)
-						: D === P.Wq.EDIT_DISPLAY_NAME
-							? (j(P.Wq.NONE), U(ee[Math.max(0, Z - 1)].slideId))
-							: D === P.Wq.PREVIEW && j(P.Wq.EDIT_USERNAME)
-					: U(ee[Math.max(0, Z - 1)].slideId);
+			W(null), Z === L.A.EDIT_SCREEN ? (D === P.Wq.EDIT_USERNAME ? (es ? (j(P.Wq.NONE), U(ee[Math.max(0, Z - 1)].slideId)) : j(P.Wq.EDIT_DISPLAY_NAME)) : D === P.Wq.EDIT_DISPLAY_NAME ? (j(P.Wq.NONE), U(ee[Math.max(0, Z - 1)].slideId)) : D === P.Wq.PREVIEW && j(P.Wq.EDIT_USERNAME)) : U(ee[Math.max(0, Z - 1)].slideId);
 		}, [ee, Z, D, es]),
 		eo = s.useCallback(() => {
 			U(L.A.FINISH_LATER);
@@ -194,10 +175,7 @@ function p(e) {
 		ed = s.useMemo(() => {
 			var e, t;
 			return R(
-				null !== (t = null === (e = ee.find((e) => e.slideId === Z)) || void 0 === e ? void 0 : e.footerButtons) &&
-					void 0 !== t
-					? t
-					: [],
+				null !== (t = null === (e = ee.find((e) => e.slideId === Z)) || void 0 === e ? void 0 : e.footerButtons) && void 0 !== t ? t : [],
 				{
 					handleNext: eu,
 					handleBack: er,
@@ -225,11 +203,7 @@ function p(e) {
 			}
 		}, [D]);
 	return (
-		!B &&
-			null == k &&
-			(D === P.Wq.EDIT_USERNAME
-				? (t = x.Z.Messages.POMELO_SUGGESTION_ORIGIN_NOTICE.format({ source: V.username }))
-				: D === P.Wq.SUGGESTION && (K || null != Y) && (t = x.Z.Messages.POMELO_SUGGESTIONS_OCF)),
+		!B && null == k && (D === P.Wq.EDIT_USERNAME ? (t = x.Z.Messages.POMELO_SUGGESTION_ORIGIN_NOTICE.format({ source: V.username })) : D === P.Wq.SUGGESTION && (K || null != Y) && (t = x.Z.Messages.POMELO_SUGGESTIONS_OCF)),
 		(0, n.jsxs)(u.ModalRoot, {
 			className: A.modalRoot,
 			impression: {

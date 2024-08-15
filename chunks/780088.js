@@ -1,6 +1,6 @@
 n.d(t, {
 	Cx: function () {
-		return y;
+		return I;
 	},
 	j0: function () {
 		return v;
@@ -128,7 +128,7 @@ function x(e, t) {
 		l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
 	return v((0, s.VY)(e), t, n, l);
 }
-function y(e, t) {
+function I(e, t) {
 	let a = {};
 	for (let [o, s] of e.entries())
 		a[s.src] = (a) =>

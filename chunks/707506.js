@@ -38,16 +38,7 @@ var r = n(239189),
 					if ('identity' === o) return u;
 					'clamp' === o && (u = n);
 				}
-				return r === i
-					? r
-					: t === n
-						? e <= t
-							? r
-							: i
-						: (t === -1 / 0 ? (u = -u) : n === 1 / 0 ? (u -= t) : (u = (u - t) / (n - t)),
-							(u = a(u)),
-							r === -1 / 0 ? (u = -u) : i === 1 / 0 ? (u += r) : (u = u * (i - r) + r),
-							u);
+				return r === i ? r : t === n ? (e <= t ? r : i) : (t === -1 / 0 ? (u = -u) : n === 1 / 0 ? (u -= t) : (u = (u - t) / (n - t)), (u = a(u)), r === -1 / 0 ? (u = -u) : i === 1 / 0 ? (u += r) : (u = u * (i - r) + r), u);
 			})(t, o[n], o[n + 1], s[n], s[n + 1], c, l, u, e.map);
 		};
 	};

@@ -101,7 +101,7 @@ let _ = async (e) => {
 			request: o.body
 		});
 	},
-	I = async (e, t) => {
+	m = async (e, t) => {
 		let n = await r.tn.patch({
 			url: d.ANM.GUILD_JOIN_REQUESTS(e),
 			body: { action: t }
@@ -115,7 +115,7 @@ let _ = async (e) => {
 			n.body
 		);
 	},
-	m = async (e) => {
+	I = async (e) => {
 		try {
 			let { body: t } = await r.tn.post({ url: d.ANM.GUILD_MEMBER_REQUEST_TO_JOIN(e) });
 			return (
@@ -156,8 +156,8 @@ t.Z = {
 	ackUserGuildJoinRequest: h,
 	removeGuildJoinRequest: f,
 	updateGuildJoinRequest: p,
-	actionAllPendingJoinRequests: I,
-	resetGuildJoinRequest: m,
+	actionAllPendingJoinRequests: m,
+	resetGuildJoinRequest: I,
 	fetchRequestToJoinGuilds: T,
 	setSelectedApplicationTab: (e, t) => {
 		i.Z.dispatch({

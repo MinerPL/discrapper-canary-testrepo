@@ -16,11 +16,7 @@ function i(e, t, n) {
 		o = void 0 !== e;
 	(0, r.useEffect)(() => {
 		let e = s.current;
-		e !== o &&
-			console.warn(
-				`WARN: A component changed from ${e ? 'controlled' : 'uncontrolled'} to ${o ? 'controlled' : 'uncontrolled'}.`
-			),
-			(s.current = o);
+		e !== o && console.warn(`WARN: A component changed from ${e ? 'controlled' : 'uncontrolled'} to ${o ? 'controlled' : 'uncontrolled'}.`), (s.current = o);
 	}, [o]);
 	let l = o ? e : i,
 		u = (0, r.useCallback)(
@@ -29,9 +25,7 @@ function i(e, t, n) {
 					n && !Object.is(l, e) && n(e, ...t), !o && (l = e);
 				};
 				if ('function' == typeof e) {
-					console.warn(
-						'We can not support a function callback. See Github Issues for details https://github.com/adobe/react-spectrum/issues/2320'
-					);
+					console.warn('We can not support a function callback. See Github Issues for details https://github.com/adobe/react-spectrum/issues/2320');
 					a((n, ...i) => {
 						let a = e(o ? l : n, ...i);
 						return (r(a, ...t), o) ? n : a;
@@ -48,11 +42,7 @@ function a(e, t = -1 / 0, n = 1 / 0) {
 function s(e, t, n, r) {
 	let i = (e - (isNaN(t) ? 0 : t)) % r,
 		a = 2 * Math.abs(i) >= r ? e + Math.sign(i) * (r - Math.abs(i)) : e - i;
-	isNaN(t)
-		? !isNaN(n) && a > n && (a = Math.floor(n / r) * r)
-		: a < t
-			? (a = t)
-			: !isNaN(n) && a > n && (a = t + Math.floor((n - t) / r) * r);
+	isNaN(t) ? !isNaN(n) && a > n && (a = Math.floor(n / r) * r) : a < t ? (a = t) : !isNaN(n) && a > n && (a = t + Math.floor((n - t) / r) * r);
 	let s = r.toString(),
 		o = s.indexOf('.'),
 		l = o >= 0 ? s.length - o : 0;

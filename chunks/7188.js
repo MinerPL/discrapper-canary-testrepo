@@ -17,8 +17,8 @@ var r = n(735250),
 	f = n(834348),
 	h = n(74538),
 	p = n(618158),
-	I = n(871499),
-	m = n(981631),
+	m = n(871499),
+	I = n(981631),
 	T = n(474936),
 	g = n(689938),
 	S = n(512667);
@@ -50,7 +50,7 @@ function v(e) {
 		v = i.useMemo(() => (null != n ? [n] : []), [n]),
 		O = (0, o.zW)(null == S ? void 0 : S.id),
 		R = i.useCallback(() => {
-			null != S && (0, d.Z)(S.getGuildId(), S.id, m.jXE.STREAM_SETTINGS);
+			null != S && (0, d.Z)(S.getGuildId(), S.id, I.jXE.STREAM_SETTINGS);
 		}, [S]);
 	if (null == n || null == S) return null;
 	let C = A;
@@ -75,7 +75,7 @@ function v(e) {
 			},
 			animation: s.Popout.Animation.FADE,
 			children: (e) =>
-				(0, r.jsx)(I.Z, {
+				(0, r.jsx)(m.Z, {
 					...e,
 					label: g.Z.Messages.STREAMER_SETTINGS_TITLE,
 					iconComponent: C,

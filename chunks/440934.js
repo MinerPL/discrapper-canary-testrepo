@@ -20,15 +20,7 @@ var i = o(481060),
 	f = o(167990);
 function _(e) {
 	let { title: n, onClose: o, transitionState: _ } = e,
-		{
-			components: m,
-			applicationIconURL: p,
-			applicationName: I,
-			submissionState: h,
-			error: b,
-			validators: C,
-			onSubmit: g
-		} = (0, l.X9)(e, o);
+		{ components: m, applicationIconURL: p, applicationName: I, submissionState: h, error: b, validators: C, onSubmit: g } = (0, l.X9)(e, o);
 	return (0, t.jsx)('form', {
 		onSubmit: (e) => {
 			e.preventDefault(), g();

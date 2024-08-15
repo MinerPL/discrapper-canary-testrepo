@@ -15,7 +15,7 @@ let d = new Map(),
 function p(e) {
 	e(d), (d = new Map(d));
 }
-class I extends (i = l.ZP.Store) {
+class m extends (i = l.ZP.Store) {
 	getFeeds() {
 		return d;
 	}
@@ -50,7 +50,7 @@ class I extends (i = l.ZP.Store) {
 	}
 }
 (o = 'ContentInventoryStore'),
-	(s = 'displayName') in (a = I)
+	(s = 'displayName') in (a = m)
 		? Object.defineProperty(a, s, {
 				value: o,
 				enumerable: !0,
@@ -58,7 +58,7 @@ class I extends (i = l.ZP.Store) {
 				writable: !0
 			})
 		: (a[s] = o),
-	(t.Z = new I(u.Z, {
+	(t.Z = new m(u.Z, {
 		CONNECTION_OPEN: function () {
 			(d = new Map()), (f = !1);
 		},

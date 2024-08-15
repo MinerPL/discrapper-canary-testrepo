@@ -15,11 +15,7 @@ let d = (e) => {
 	let { product: t, onSuccess: d, onError: u } = e,
 		[f, g] = a.useState(!1),
 		{ firstAvatarDecoration: p, firstProfileEffect: C } = (0, i.R)(t),
-		v = (0, l.x6)(t)
-			? c.Z.Messages.COLLECTIBLES_PROFILE_UPDATE_NOTIFICATION
-			: t.type === r.Z.AVATAR_DECORATION
-				? c.Z.Messages.COLLECTIBLES_AVATAR_DECO_UPDATED_NOTIFICATION
-				: c.Z.Messages.COLLECTIBLES_PFX_UPDATED_NOTIFICATION;
+		v = (0, l.x6)(t) ? c.Z.Messages.COLLECTIBLES_PROFILE_UPDATE_NOTIFICATION : t.type === r.Z.AVATAR_DECORATION ? c.Z.Messages.COLLECTIBLES_AVATAR_DECO_UPDATED_NOTIFICATION : c.Z.Messages.COLLECTIBLES_PFX_UPDATED_NOTIFICATION;
 	return {
 		handleUseNow: a.useCallback(async () => {
 			g(!0);
@@ -29,13 +25,7 @@ let d = (e) => {
 					await (0, o.Z)(e);
 				}
 				{
-					let {
-						ToastPosition: e,
-						ToastType: t,
-						createToast: a,
-						popToast: r,
-						showToast: s
-					} = await Promise.resolve().then(n.bind(n, 481060));
+					let { ToastPosition: e, ToastType: t, createToast: a, popToast: r, showToast: s } = await Promise.resolve().then(n.bind(n, 481060));
 					r(),
 						s(
 							a(v, t.MESSAGE, {

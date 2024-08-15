@@ -48,10 +48,7 @@ function c(e, t) {
 		var n;
 		let { album_id: r } = t;
 		return {
-			resourceType:
-				(0, s.c8)(null === (n = e.metadata) || void 0 === n ? void 0 : n.type) === s.Hw.EPISODE
-					? s.Hw.SHOW
-					: s.Hw.ALBUM,
+			resourceType: (0, s.c8)(null === (n = e.metadata) || void 0 === n ? void 0 : n.type) === s.Hw.EPISODE ? s.Hw.SHOW : s.Hw.ALBUM,
 			resourceId: r
 		};
 	});

@@ -42,10 +42,7 @@ class o extends s.C {
 					break;
 				default:
 					let s = n.readUnknownField;
-					if ('throw' === s)
-						throw new globalThis.Error(
-							'Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName)
-						);
+					if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
 					let o = e.skip(i);
 					!1 !== s && (!0 === s ? r.z.onRead : s)(this.typeName, a, t, i, o);
 			}
@@ -53,9 +50,7 @@ class o extends s.C {
 		return a;
 	}
 	internalBinaryWrite(e, t, n) {
-		0 !== e.clientVersion && t.tag(1, r.TD.Varint).uint32(e.clientVersion),
-			0 !== e.serverVersion && t.tag(2, r.TD.Varint).uint32(e.serverVersion),
-			0 !== e.dataVersion && t.tag(3, r.TD.Varint).uint32(e.dataVersion);
+		0 !== e.clientVersion && t.tag(1, r.TD.Varint).uint32(e.clientVersion), 0 !== e.serverVersion && t.tag(2, r.TD.Varint).uint32(e.serverVersion), 0 !== e.dataVersion && t.tag(3, r.TD.Varint).uint32(e.dataVersion);
 		let i = n.writeUnknownFields;
 		return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
 	}

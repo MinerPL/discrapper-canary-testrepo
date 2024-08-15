@@ -22,16 +22,12 @@ function p(e) {
 				children: [
 					(0, t.jsx)(r.Heading, {
 						variant: 'heading-lg/bold',
-						children: i
-							? u.Z.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_HEADER
-							: u.Z.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_HEADER
+						children: i ? u.Z.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_HEADER : u.Z.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_HEADER
 					}),
 					(0, t.jsx)(r.Heading, {
 						color: 'interactive-normal',
 						variant: 'heading-md/normal',
-						children: i
-							? u.Z.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_DETAILS
-							: u.Z.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_DETAILS.format({ applicationName: n.name })
+						children: i ? u.Z.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_DETAILS : u.Z.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_DETAILS.format({ applicationName: n.name })
 					})
 				]
 			})
@@ -39,14 +35,7 @@ function p(e) {
 }
 function m(e) {
 	var n;
-	let {
-			guildId: i,
-			applicationId: c,
-			applicationPrimarySkuId: u,
-			analyticsLocation: m,
-			onComplete: I,
-			forcesTransitionToGuild: f
-		} = e,
+	let { guildId: i, applicationId: c, applicationPrimarySkuId: u, analyticsLocation: m, onComplete: I, forcesTransitionToGuild: f } = e,
 		{ listingsLoaded: g } = (0, s.FE)(c, u),
 		{ entitlementsLoaded: h } = (0, s.LM)({ guildId: i }),
 		{ subscriptionGroupListing: C } = (0, s.F5)(c, i),
@@ -55,12 +44,7 @@ function m(e) {
 		v && o.jg();
 	}, [v]);
 	let E = null == C ? void 0 : C.id,
-		x =
-			null == C
-				? void 0
-				: null === (n = C.subscription_listings) || void 0 === n
-					? void 0
-					: n.filter((e) => e.published);
+		x = null == C ? void 0 : null === (n = C.subscription_listings) || void 0 === n ? void 0 : n.filter((e) => e.published);
 	return g && (null == i || h)
 		? null == E || null == x || 0 === x.length
 			? null

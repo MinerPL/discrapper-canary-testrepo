@@ -15,9 +15,7 @@ function l(e) {
 					return typeof e;
 				}
 			: function (e) {
-					return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype
-						? 'symbol'
-						: typeof e;
+					return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
 				})(e);
 }
 function u(e, t) {
@@ -31,6 +29,6 @@ function u(e, t) {
 		f = t.seconds ? (0, o.Z)(t.seconds) : 0,
 		h = (0, a.default)(e),
 		p = u || n ? (0, i.default)(h, u + 12 * n) : h,
-		I = d || c ? (0, r.default)(p, d + 7 * c) : p;
-	return new Date(I.getTime() + 1000 * (f + 60 * (E + 60 * _)));
+		m = d || c ? (0, r.default)(p, d + 7 * c) : p;
+	return new Date(m.getTime() + 1000 * (f + 60 * (E + 60 * _)));
 }

@@ -46,10 +46,7 @@ n.Z = a.memo(function (e) {
 					j();
 					return;
 				}
-				x >= y ? (_.currentTime = (0, f.my)(E)) : (_.currentTime = (0, f.my)(x)),
-					(_.volume = (0, o.Z)(i)),
-					_.play(),
-					D(!0);
+				x >= y ? (_.currentTime = (0, f.my)(E)) : (_.currentTime = (0, f.my)(x)), (_.volume = (0, o.Z)(i)), _.play(), D(!0);
 			}
 		}, [_, y, j, x, v, E, i]),
 		I = a.useCallback(

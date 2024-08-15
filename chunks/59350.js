@@ -297,11 +297,7 @@ function et(e) {
 				o({ type: $ });
 				return;
 			}
-			b(t, e, null != n && n),
-				t.singleSelect && n && t.options.forEach((e) => d.delete(e.id)),
-				n ? d.add(e.id) : d.delete(e.id),
-				m(new Set(d)),
-				o(null);
+			b(t, e, null != n && n), t.singleSelect && n && t.options.forEach((e) => d.delete(e.id)), n ? d.add(e.id) : d.delete(e.id), m(new Set(d)), o(null);
 		},
 		Z = (0, _.useToken)(h.Z.unsafe_rawColors.BRAND_500),
 		v = (0, _.useSpring)(
@@ -375,23 +371,15 @@ function el(e) {
 			(0, E.uL)(z.Z5c.CHANNEL(n, V.oC.CHANNEL_BROWSER)), null == t || t();
 		}, [n, t]),
 		h = (0, u.e7)([R.ZP], () => R.ZP.hasUnread(n, q.W.GUILD_ONBOARDING_QUESTION)),
-		{
-			onboardingPromptsRaw: x,
-			newOnboardingPrompts: g,
-			onboardingPromptsWithNewAnswers: b,
-			newAnswersCount: Z,
-			onboardingPrompts: v
-		} = (0, D.Z)(n);
+		{ onboardingPromptsRaw: x, newOnboardingPrompts: g, onboardingPromptsWithNewAnswers: b, newAnswersCount: Z, onboardingPrompts: v } = (0, D.Z)(n);
 	a.useEffect(() => {
-		if ((null == s ? void 0 : s.id) != null)
-			!I.Z.isFullServerPreview(s.id) && (P.Z.shouldFetchPrompts(s.id) || h) && (0, w.eM)(s.id);
+		if ((null == s ? void 0 : s.id) != null) !I.Z.isFullServerPreview(s.id) && (P.Z.shouldFetchPrompts(s.id) || h) && (0, w.eM)(s.id);
 	}, [null == s ? void 0 : s.id, h]),
 		a.useEffect(() => {
 			if ((null == s ? void 0 : s.id) != null) {
 				if (!I.Z.isFullServerPreview(s.id))
 					return () => {
-						(0, f.Ju)(s.id, q.W.GUILD_ONBOARDING_QUESTION, P.Z.ackIdForGuild(s.id)),
-							M.Z.updateOnboardingResponses(s.id);
+						(0, f.Ju)(s.id, q.W.GUILD_ONBOARDING_QUESTION, P.Z.ackIdForGuild(s.id)), M.Z.updateOnboardingResponses(s.id);
 					};
 			}
 		}, [null == s ? void 0 : s.id]);

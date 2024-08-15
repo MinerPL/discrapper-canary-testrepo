@@ -50,7 +50,7 @@ n.d(t, {
 				nick: '',
 				guildId: n.id,
 				guildMemberAvatar: null,
-				roles: m.default.keys(r),
+				roles: I.default.keys(r),
 				colorString: null,
 				hoistRoleId: null,
 				premiumSince: null,
@@ -119,72 +119,22 @@ var r = n(392711),
 	f = n(592125),
 	h = n(271383),
 	p = n(430824),
-	I = n(594174),
-	m = n(709054),
+	m = n(594174),
+	I = n(709054),
 	T = n(981631);
 let g = a.vB(0),
 	S = a.$e(...i().values(T.Plq)),
-	A = a.$e(
-		T.Plq.CREATE_INSTANT_INVITE,
-		T.Plq.CHANGE_NICKNAME,
-		T.Plq.VIEW_CHANNEL,
-		T.Plq.SEND_MESSAGES,
-		T.Plq.EMBED_LINKS,
-		T.Plq.ATTACH_FILES,
-		T.Plq.READ_MESSAGE_HISTORY,
-		T.Plq.MENTION_EVERYONE,
-		T.Plq.USE_EXTERNAL_EMOJIS,
-		T.Plq.USE_EXTERNAL_STICKERS,
-		T.Plq.ADD_REACTIONS,
-		T.Plq.CREATE_PUBLIC_THREADS,
-		T.Plq.CREATE_PRIVATE_THREADS,
-		T.Plq.SEND_MESSAGES_IN_THREADS,
-		T.Plq.SEND_POLLS,
-		T.Plq.CONNECT,
-		T.Plq.SPEAK,
-		T.Plq.USE_VAD,
-		T.Plq.STREAM,
-		T.Plq.USE_EMBEDDED_ACTIVITIES,
-		T.Plq.USE_SOUNDBOARD,
-		T.Plq.REQUEST_TO_SPEAK,
-		T.Plq.USE_APPLICATION_COMMANDS,
-		T.Plq.CREATE_GUILD_EXPRESSIONS,
-		T.Plq.CREATE_EVENTS,
-		T.Plq.USE_EXTERNAL_APPS
-	),
+	A = a.$e(T.Plq.CREATE_INSTANT_INVITE, T.Plq.CHANGE_NICKNAME, T.Plq.VIEW_CHANNEL, T.Plq.SEND_MESSAGES, T.Plq.EMBED_LINKS, T.Plq.ATTACH_FILES, T.Plq.READ_MESSAGE_HISTORY, T.Plq.MENTION_EVERYONE, T.Plq.USE_EXTERNAL_EMOJIS, T.Plq.USE_EXTERNAL_STICKERS, T.Plq.ADD_REACTIONS, T.Plq.CREATE_PUBLIC_THREADS, T.Plq.CREATE_PRIVATE_THREADS, T.Plq.SEND_MESSAGES_IN_THREADS, T.Plq.SEND_POLLS, T.Plq.CONNECT, T.Plq.SPEAK, T.Plq.USE_VAD, T.Plq.STREAM, T.Plq.USE_EMBEDDED_ACTIVITIES, T.Plq.USE_SOUNDBOARD, T.Plq.REQUEST_TO_SPEAK, T.Plq.USE_APPLICATION_COMMANDS, T.Plq.CREATE_GUILD_EXPRESSIONS, T.Plq.CREATE_EVENTS, T.Plq.USE_EXTERNAL_APPS),
 	N = a.$e(T.Plq.VIEW_CHANNEL, T.Plq.READ_MESSAGE_HISTORY),
-	v = a.$e(
-		T.Plq.VIEW_CHANNEL,
-		T.Plq.SEND_MESSAGES,
-		T.Plq.CONNECT,
-		T.Plq.SPEAK,
-		T.Plq.STREAM,
-		T.Plq.USE_EMBEDDED_ACTIVITIES,
-		T.Plq.USE_EXTERNAL_APPS,
-		T.Plq.USE_EXTERNAL_EMOJIS,
-		T.Plq.USE_EXTERNAL_SOUNDS,
-		T.Plq.USE_EXTERNAL_STICKERS,
-		T.Plq.USE_SOUNDBOARD,
-		T.Plq.USE_VAD
-	),
+	v = a.$e(T.Plq.VIEW_CHANNEL, T.Plq.SEND_MESSAGES, T.Plq.CONNECT, T.Plq.SPEAK, T.Plq.STREAM, T.Plq.USE_EMBEDDED_ACTIVITIES, T.Plq.USE_EXTERNAL_APPS, T.Plq.USE_EXTERNAL_EMOJIS, T.Plq.USE_EXTERNAL_SOUNDS, T.Plq.USE_EXTERNAL_STICKERS, T.Plq.USE_SOUNDBOARD, T.Plq.USE_VAD),
 	O = a.$e(T.Plq.VIEW_CHANNEL, T.Plq.READ_MESSAGE_HISTORY),
 	R = a.$e(T.Plq.VIEW_CHANNEL, T.Plq.READ_MESSAGE_HISTORY, T.Plq.CHANGE_NICKNAME),
-	C = a.$e(
-		T.Plq.MANAGE_GUILD,
-		T.Plq.MANAGE_ROLES,
-		T.Plq.ADMINISTRATOR,
-		T.Plq.BAN_MEMBERS,
-		T.Plq.MANAGE_NICKNAMES,
-		T.Plq.CREATE_GUILD_EXPRESSIONS,
-		T.Plq.MANAGE_GUILD_EXPRESSIONS,
-		T.Plq.MANAGE_WEBHOOKS,
-		T.Plq.VIEW_AUDIT_LOG
-	);
+	C = a.$e(T.Plq.MANAGE_GUILD, T.Plq.MANAGE_ROLES, T.Plq.ADMINISTRATOR, T.Plq.BAN_MEMBERS, T.Plq.MANAGE_NICKNAMES, T.Plq.CREATE_GUILD_EXPRESSIONS, T.Plq.MANAGE_GUILD_EXPRESSIONS, T.Plq.MANAGE_WEBHOOKS, T.Plq.VIEW_AUDIT_LOG);
 function y(e, t, n) {
 	let r = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
 	if (r && t.mfaLevel === T.BpS.ELEVATED && n === E.default.getId()) {
 		var i;
-		!(null === (i = I.default.getCurrentUser()) || void 0 === i ? void 0 : i.mfaEnabled) && (e = a.Od(e, T.TC2));
+		!(null === (i = m.default.getCurrentUser()) || void 0 === i ? void 0 : i.mfaEnabled) && (e = a.Od(e, T.TC2));
 	}
 	return e;
 }
@@ -206,16 +156,7 @@ function D(e, t, n, r) {
 	return n;
 }
 function L(e) {
-	let {
-		userId: t,
-		member: n,
-		guild: r,
-		overwrites: i,
-		roles: s,
-		checkElevated: o = !0,
-		excludeGuildPermissions: l = !1,
-		lurkerPermissionsMask: u = N
-	} = e;
+	let { userId: t, member: n, guild: r, overwrites: i, roles: s, checkElevated: o = !0, excludeGuildPermissions: l = !1, lurkerPermissionsMask: u = N } = e;
 	if (l) return D(r.id, n, g, i);
 	let d = (s =
 			null != s
@@ -230,26 +171,21 @@ function L(e) {
 			let t = s[n.roles[e]];
 			void 0 !== t && (_ = a.IH(_, t.permissions));
 		}
-	return (
-		(_ = a.e$(_, T.Plq.ADMINISTRATOR) ? S : D(r.id, n, _, i)),
-		(c.Z.isLurking(r.id) || (null == n ? void 0 : n.isPending)) && (_ = a.hX(_, u)),
-		h.ZP.isCurrentUserGuest(r.id) && (_ = a.hX(_, v)),
-		y(_, r, t, o)
-	);
+	return (_ = a.e$(_, T.Plq.ADMINISTRATOR) ? S : D(r.id, n, _, i)), (c.Z.isLurking(r.id) || (null == n ? void 0 : n.isPending)) && (_ = a.hX(_, u)), h.ZP.isCurrentUserGuest(r.id) && (_ = a.hX(_, v)), y(_, r, t, o);
 }
 function b(e) {
 	var t, n, r;
 	let i,
 		{ user: a, context: s, overwrites: o, roles: l, checkElevated: c = !0, excludeGuildPermissions: E = !1 } = e;
 	if (null == a) return g;
-	let m = 'string' == typeof a ? a : a.id,
+	let I = 'string' == typeof a ? a : a.id,
 		T = N;
 	if (s instanceof _.Sf) {
 		if (s.isScheduledForDeletion()) return g;
 		if (_.Ec.has(s.type)) {
 			let e = f.Z.getChannel(s.parent_id);
 			if (null == e || e.isScheduledForDeletion()) return g;
-			let t = m === (null === (n = I.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && d.Z.hasJoined(s.id);
+			let t = I === (null === (n = m.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && d.Z.hasJoined(s.id);
 			return M(
 				s,
 				b({
@@ -275,14 +211,10 @@ function b(e) {
 		i = null != e ? p.Z.getGuild(e) : null;
 	} else (o = null != o ? o : {}), (i = s);
 	if (null == i) return g;
-	if (
-		!(m === (null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && u.Z.isViewingRoles(i.id)) &&
-		i.isOwner(m)
-	)
-		return y(S, i, m, c);
-	let A = h.ZP.getMember(i.id, m);
+	if (!(I === (null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && u.Z.isViewingRoles(i.id)) && i.isOwner(I)) return y(S, i, I, c);
+	let A = h.ZP.getMember(i.id, I);
 	return L({
-		userId: m,
+		userId: I,
 		member: A,
 		guild: i,
 		overwrites: o,
@@ -293,13 +225,7 @@ function b(e) {
 	});
 }
 function M(e, t, n) {
-	return e.type !== T.d4z.PRIVATE_THREAD || n || a.e$(t, T.Plq.MANAGE_THREADS)
-		? a.e$(t, T.Plq.SEND_MESSAGES_IN_THREADS)
-			? e.isLockedThread() && !a.e$(t, T.Plq.MANAGE_THREADS)
-				? a.Od(t, T.Plq.SEND_MESSAGES)
-				: a.$e(t, T.Plq.SEND_MESSAGES)
-			: a.Od(t, T.Plq.SEND_MESSAGES)
-		: g;
+	return e.type !== T.d4z.PRIVATE_THREAD || n || a.e$(t, T.Plq.MANAGE_THREADS) ? (a.e$(t, T.Plq.SEND_MESSAGES_IN_THREADS) ? (e.isLockedThread() && !a.e$(t, T.Plq.MANAGE_THREADS) ? a.Od(t, T.Plq.SEND_MESSAGES) : a.$e(t, T.Plq.SEND_MESSAGES)) : a.Od(t, T.Plq.SEND_MESSAGES)) : g;
 }
 function P(e, t) {
 	if (_.Ec.has(e.type)) return !0;
@@ -320,11 +246,7 @@ function P(e, t) {
 }
 function U(e) {
 	var t;
-	return i().some(p.Z.getRoles(e.id), (e) => e.hoist && a.e$(e.permissions, T.Plq.ADMINISTRATOR))
-		? void 0
-		: null !== (t = e.ownerId) && void 0 !== t
-			? t
-			: void 0;
+	return i().some(p.Z.getRoles(e.id), (e) => e.hoist && a.e$(e.permissions, T.Plq.ADMINISTRATOR)) ? void 0 : null !== (t = e.ownerId) && void 0 !== t ? t : void 0;
 }
 function w(e, t, n, r) {
 	if (null != t && e.isOwner(t)) return !0;

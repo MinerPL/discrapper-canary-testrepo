@@ -49,8 +49,7 @@ function E(e, t) {
 	for (let e = 0; e < n.length; e++) {
 		let t = n[e],
 			a = r[e];
-		if (t.filename !== a.filename || t.lineno !== a.lineno || t.colno !== a.colno || t.function !== a.function)
-			return !1;
+		if (t.filename !== a.filename || t.lineno !== a.lineno || t.colno !== a.colno || t.function !== a.function) return !1;
 	}
 	return !0;
 }

@@ -11,9 +11,4 @@ function l(e) {
 		this.set(r[0], r[1]);
 	}
 }
-(l.prototype.clear = r.Z),
-	(l.prototype.delete = i.Z),
-	(l.prototype.get = a.Z),
-	(l.prototype.has = s.Z),
-	(l.prototype.set = o.Z),
-	(t.Z = l);
+(l.prototype.clear = r.Z), (l.prototype.delete = i.Z), (l.prototype.get = a.Z), (l.prototype.has = s.Z), (l.prototype.set = o.Z), (t.Z = l);

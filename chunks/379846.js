@@ -255,14 +255,10 @@ var i = r(736302),
 					l = r;
 				u !== s.getSelectionAfter() ||
 				(function (t, e) {
-					return (
-						e !== t.getLastChangeType() ||
-						('insert-characters' !== e && 'backspace-character' !== e && 'delete-character' !== e)
-					);
+					return e !== t.getLastChangeType() || ('insert-characters' !== e && 'backspace-character' !== e && 'delete-character' !== e);
 				})(t, n)
 					? ((c = c.push(s)), (l = l.set('selectionBefore', u)))
-					: ('insert-characters' === n || 'backspace-character' === n || 'delete-character' === n) &&
-						(l = l.set('selectionBefore', s.getSelectionBefore()));
+					: ('insert-characters' === n || 'backspace-character' === n || 'delete-character' === n) && (l = l.set('selectionBefore', s.getSelectionBefore()));
 				var p = t.getInlineStyleOverride();
 				-1 === ['adjust-depth', 'change-block-type', 'split-block'].indexOf(n) && (p = null);
 				var h = {

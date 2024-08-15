@@ -15,11 +15,7 @@ var r,
 	l = n(570140),
 	u = n(592125);
 let c = 5 * n(70956).Z.Millis.SECOND;
-((a = r || (r = {}))[(a.STRANGER_DANGER = 1)] = 'STRANGER_DANGER'),
-	(a[(a.INAPPROPRIATE_CONVERSATION_TIER_1 = 2)] = 'INAPPROPRIATE_CONVERSATION_TIER_1'),
-	(a[(a.INAPPROPRIATE_CONVERSATION_TIER_2 = 3)] = 'INAPPROPRIATE_CONVERSATION_TIER_2'),
-	((s = i || (i = {}))[(s.UPVOTE = 0)] = 'UPVOTE'),
-	(s[(s.DOWNVOTE = 1)] = 'DOWNVOTE');
+((a = r || (r = {}))[(a.STRANGER_DANGER = 1)] = 'STRANGER_DANGER'), (a[(a.INAPPROPRIATE_CONVERSATION_TIER_1 = 2)] = 'INAPPROPRIATE_CONVERSATION_TIER_1'), (a[(a.INAPPROPRIATE_CONVERSATION_TIER_2 = 3)] = 'INAPPROPRIATE_CONVERSATION_TIER_2'), ((s = i || (i = {}))[(s.UPVOTE = 0)] = 'UPVOTE'), (s[(s.DOWNVOTE = 1)] = 'DOWNVOTE');
 let d = [],
 	_ = {},
 	E = new Set();

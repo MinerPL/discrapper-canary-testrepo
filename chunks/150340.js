@@ -3,7 +3,7 @@ n.d(t, {
 		return T;
 	},
 	S: function () {
-		return m;
+		return I;
 	}
 }),
 	n(47120);
@@ -20,13 +20,9 @@ var r = n(913527),
 	E = n(637853),
 	f = n(981631),
 	h = n(921944);
-let p = [
-		a.z.GUILD_ONBOARDING_UPSELL_MODAL_V2,
-		a.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE,
-		a.z.GUILD_ONBOARDING_UPSELL_NAGBAR
-	],
-	I = [0, 1, 7];
-function m(e, t) {
+let p = [a.z.GUILD_ONBOARDING_UPSELL_MODAL_V2, a.z.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE, a.z.GUILD_ONBOARDING_UPSELL_NAGBAR],
+	m = [0, 1, 7];
+function I(e, t) {
 	var n;
 	let r = c.Z.getGuilds(),
 		a = d.default.entries(r).some((e) => {
@@ -38,9 +34,9 @@ function m(e, t) {
 	if (a || !(0, E.wC)(e)) return !1;
 	let l = null === (n = u.Z.settings.userContent) || void 0 === n ? void 0 : n.guildOnboardingUpsellDismissedAt,
 		h = null != l ? s.E.toDate(l) : void 0,
-		m = null != h ? i()().diff(h, 'days') : null,
+		I = null != h ? i()().diff(h, 'days') : null,
 		T = p.indexOf(t);
-	if (-1 === T || !(null == m || m > I[T]) || p.find((e) => !(0, o.un)(e)) !== t) return !1;
+	if (-1 === T || !(null == I || I > m[T]) || p.find((e) => !(0, o.un)(e)) !== t) return !1;
 	let { showLifecycleUpsells: g } = _.Z.getCurrentConfig(
 		{
 			guildId: e,

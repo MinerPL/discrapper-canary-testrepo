@@ -30,14 +30,7 @@ var u = [1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1];
 		var i = this._desState,
 			s = a.readUInt32BE(e, t),
 			o = a.readUInt32BE(e, t + 4);
-		a.ip(s, o, i.tmp, 0),
-			(s = i.tmp[0]),
-			(o = i.tmp[1]),
-			'encrypt' === this.type ? this._encrypt(i, s, o, i.tmp, 0) : this._decrypt(i, s, o, i.tmp, 0),
-			(s = i.tmp[0]),
-			(o = i.tmp[1]),
-			a.writeUInt32BE(n, s, r),
-			a.writeUInt32BE(n, o, r + 4);
+		a.ip(s, o, i.tmp, 0), (s = i.tmp[0]), (o = i.tmp[1]), 'encrypt' === this.type ? this._encrypt(i, s, o, i.tmp, 0) : this._decrypt(i, s, o, i.tmp, 0), (s = i.tmp[0]), (o = i.tmp[1]), a.writeUInt32BE(n, s, r), a.writeUInt32BE(n, o, r + 4);
 	}),
 	(l.prototype._pad = function (e, t) {
 		if (!1 === this.padding) return !1;

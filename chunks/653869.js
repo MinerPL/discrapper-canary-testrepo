@@ -11,10 +11,8 @@ e.exports = {
 	guildBoostingSubscriptionRowBackground: 'guildBoostingSubscriptionRowBackground_a206c7',
 	guildBoostingImage: 'guildBoostingImage_a206c7',
 	guildBoostingSubscriptionRowPaused: 'guildBoostingSubscriptionRowPaused_a206c7 guildBoostingSubscriptionRow_a206c7',
-	guildBoostingSubscriptionRowCanceled:
-		'guildBoostingSubscriptionRowCanceled_a206c7 guildBoostingSubscriptionRow_a206c7',
-	guildBoostingSubscriptionRowFailedPayment:
-		'guildBoostingSubscriptionRowFailedPayment_a206c7 guildBoostingSubscriptionRow_a206c7',
+	guildBoostingSubscriptionRowCanceled: 'guildBoostingSubscriptionRowCanceled_a206c7 guildBoostingSubscriptionRow_a206c7',
+	guildBoostingSubscriptionRowFailedPayment: 'guildBoostingSubscriptionRowFailedPayment_a206c7 guildBoostingSubscriptionRow_a206c7',
 	sectionTitle: 'sectionTitle_a206c7',
 	sectionDescription: 'sectionDescription_a206c7',
 	guildBoostingSubscriptionRowBody: 'guildBoostingSubscriptionRowBody_a206c7',

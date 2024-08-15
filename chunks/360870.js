@@ -112,10 +112,7 @@ var n = r(73009),
 						o = h(g, s),
 						a = o[o.length - 1];
 					if (
-						(t.get(r)
-							? (t.setIn([e, 'nextSibling'], r), t.setIn([r, 'prevSibling'], e))
-							: (t.setIn([e, 'nextSibling'], g.getNextSiblingKey()),
-								t.setIn([g.getNextSiblingKey(), 'prevSibling'], e)),
+						(t.get(r) ? (t.setIn([e, 'nextSibling'], r), t.setIn([r, 'prevSibling'], e)) : (t.setIn([e, 'nextSibling'], g.getNextSiblingKey()), t.setIn([g.getNextSiblingKey(), 'prevSibling'], e)),
 						t.setIn([a, 'nextSibling'], n),
 						n && t.setIn([n, 'prevSibling'], a),
 						o.forEach(function (e) {
@@ -150,7 +147,5 @@ t.exports = function (t, e, r) {
 		c = e.getStartKey(),
 		f = e.getStartOffset(),
 		p = o.get(c);
-	return (p instanceof i && (p.getChildKeys().isEmpty() || u(!1)), 1 === a.size)
-		? l(t, e, o, a.first(), c, f, n)
-		: d(t, e, o, a, c, f);
+	return (p instanceof i && (p.getChildKeys().isEmpty() || u(!1)), 1 === a.size) ? l(t, e, o, a.first(), c, f, n) : d(t, e, o, a, c, f);
 };

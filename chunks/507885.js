@@ -20,9 +20,7 @@ let o = new Set(),
 	c = new Set([r.ES.DISCORD_TURNS_8]);
 class d extends (i = a.ZP.PersistedStore) {
 	initialize(e) {
-		null != e &&
-			(Array.isArray(e.acknowledged) && (o = new Set(e.acknowledged)),
-			Array.isArray(e.opened) && (c = new Set(e.opened)));
+		null != e && (Array.isArray(e.acknowledged) && (o = new Set(e.acknowledged)), Array.isArray(e.opened) && (c = new Set(e.opened)));
 	}
 	getState() {
 		return {

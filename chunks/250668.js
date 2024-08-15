@@ -71,16 +71,7 @@ var e = n(147018),
 		return tr(t, (r = A(r))) ? y(2, t[r]) : W(t, r);
 	},
 	te = function (t, r, n) {
-		return tr(t, (r = A(r))) &&
-			b(n) &&
-			w(n, 'value') &&
-			!w(n, 'get') &&
-			!w(n, 'set') &&
-			!n.configurable &&
-			(!w(n, 'writable') || n.writable) &&
-			(!w(n, 'enumerable') || n.enumerable)
-			? ((t[r] = n.value), t)
-			: N(t, r, n);
+		return tr(t, (r = A(r))) && b(n) && w(n, 'value') && !w(n, 'get') && !w(n, 'set') && !n.configurable && (!w(n, 'writable') || n.writable) && (!w(n, 'enumerable') || n.enumerable) ? ((t[r] = n.value), t) : N(t, r, n);
 	};
 u
 	? (!G && ((L.f = tn), (_.f = te), $(q, 'buffer'), $(q, 'byteOffset'), $(q, 'byteLength'), $(q, 'length')),
@@ -126,24 +117,7 @@ u
 			G
 				? f &&
 					((A = r(function (t, r, n, e) {
-						return (
-							s(t, w),
-							C(
-								b(r)
-									? tt(r)
-										? void 0 !== e
-											? new h(r, g(n, u), e)
-											: void 0 !== n
-												? new h(r, g(n, u))
-												: new h(r)
-										: J(r)
-											? Z(A, r)
-											: i(O, A, r)
-									: new h(d(r)),
-								t,
-								A
-							)
-						);
+						return s(t, w), C(b(r) ? (tt(r) ? (void 0 !== e ? new h(r, g(n, u), e) : void 0 !== n ? new h(r, g(n, u)) : new h(r)) : J(r) ? Z(A, r) : i(O, A, r)) : new h(d(r)), t, A);
 					})),
 					R && R(A, K),
 					M(m(h), function (t) {

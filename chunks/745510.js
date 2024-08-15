@@ -24,14 +24,7 @@ let u = {
 	},
 	c = i.createContext(u);
 function d(e) {
-	let {
-			children: t,
-			confettiCanvas: n,
-			spriteCanvas: l,
-			baseConfig: d,
-			addClickListener: _,
-			removeClickListener: E
-		} = e,
+	let { children: t, confettiCanvas: n, spriteCanvas: l, baseConfig: d, addClickListener: _, removeClickListener: E } = e,
 		f = (0, a.uR)(n, l),
 		h = (0, s.e7)([o.Z], () => o.Z.useReducedMotion),
 		p = i.useMemo(

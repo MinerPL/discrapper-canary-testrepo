@@ -13,12 +13,5 @@ let i = (e) => {
 	let { id: t, name: n, locale: i } = e,
 		a = 'https://'.concat(r.xr4, '/hc/').concat(i.toLowerCase(), '/requests/new'),
 		s = new URLSearchParams();
-	return (
-		s.append('tf_12275088515223', 'field_value_dc_category_report_an_app_bot'),
-		s.append('tf_12276208289431', 'field_value_dc_reported_action_app_directory'),
-		s.append('tf_12094971213335', t),
-		s.append('ticket_form_id', '12275528604823'),
-		s.append('tf_subject', 'App Directory Report '.concat(n, ' ').concat(t)),
-		''.concat(a, '?').concat(s.toString())
-	);
+	return s.append('tf_12275088515223', 'field_value_dc_category_report_an_app_bot'), s.append('tf_12276208289431', 'field_value_dc_reported_action_app_directory'), s.append('tf_12094971213335', t), s.append('ticket_form_id', '12275528604823'), s.append('tf_subject', 'App Directory Report '.concat(n, ' ').concat(t)), ''.concat(a, '?').concat(s.toString());
 };

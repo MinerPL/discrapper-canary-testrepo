@@ -9,7 +9,5 @@ var i = n(442837),
 	r = n(689938);
 function l(e) {
 	let { categoryId: t } = e;
-	return (0, i.e7)([a.Z], () =>
-		t === s.Hk ? r.Z.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : a.Z.getCategoryName(t)
-	);
+	return (0, i.e7)([a.Z], () => (t === s.Hk ? r.Z.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : a.Z.getCategoryName(t)));
 }

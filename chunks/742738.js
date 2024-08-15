@@ -12,8 +12,8 @@ var r,
 	f = n(944486),
 	h = n(700785),
 	p = n(565799),
-	I = n(501655),
-	m = n(750154),
+	m = n(501655),
+	I = n(750154),
 	T = n(427679),
 	g = n(71275),
 	S = n(157925),
@@ -30,10 +30,10 @@ function v() {
 		if (null == u || !h.oz(A.Plq.VIEW_CHANNEL, u)) return null;
 		let c = _.Z.getGuild(u.getGuildId());
 		if (null == c || !c.hasFeature(A.oNc.DISCOVERABLE)) return null;
-		let E = (0, m.Lw)(u, l),
+		let E = (0, I.Lw)(u, l),
 			v = (null == N ? void 0 : null === (e = N.party) || void 0 === e ? void 0 : e.id) === E ? N : null,
-			O = p.Z.getMutableParticipants(u.id, I.pV.SPEAKER),
-			R = O.filter((e) => e.type === I.Ui.STREAM).length,
+			O = p.Z.getMutableParticipants(u.id, m.pV.SPEAKER),
+			R = O.filter((e) => e.type === m.Ui.STREAM).length,
 			C = O.length - R,
 			y = p.Z.getParticipantCount(o) - R,
 			D = (null == v ? void 0 : null === (t = v.party) || void 0 === t ? void 0 : t.size) != null ? v.party.size[1] : 0;
@@ -41,13 +41,7 @@ function v() {
 			application_id: S.gD,
 			name: null !== (i = null !== (r = l.topic) && void 0 !== r ? r : u.topic) && void 0 !== i ? i : u.name,
 			type: (0, g.xJ)(u.id) ? A.IIU.WATCHING : A.IIU.LISTENING,
-			timestamps: {
-				start:
-					null !== (a = null == v ? void 0 : null === (n = v.timestamps) || void 0 === n ? void 0 : n.start) &&
-					void 0 !== a
-						? a
-						: new Date().getTime()
-			},
+			timestamps: { start: null !== (a = null == v ? void 0 : null === (n = v.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== a ? a : new Date().getTime() },
 			assets: {
 				small_image: null !== (s = c.icon) && void 0 !== s ? s : void 0,
 				small_text: c.name
@@ -86,24 +80,13 @@ class O extends (s = u.ZP.Store) {
 		RTC_CONNECTION_STATE: function (e) {
 			var t, n, r;
 			let { state: i } = e,
-				a =
-					null !==
-						(r =
-							null == N
-								? void 0
-								: null === (n = N.party) || void 0 === n
-									? void 0
-									: null === (t = n.size) || void 0 === t
-										? void 0
-										: t[1]) && void 0 !== r
-						? r
-						: 0;
+				a = null !== (r = null == N ? void 0 : null === (n = N.party) || void 0 === n ? void 0 : null === (t = n.size) || void 0 === t ? void 0 : t[1]) && void 0 !== r ? r : 0;
 			return i === A.hes.RTC_CONNECTED && !(a > 0) && v();
 		},
 		VOICE_STATE_UPDATES: function (e) {
 			let { voiceStates: t } = e;
 			if (null == N) return;
-			let n = (0, m.rq)(N);
+			let n = (0, I.rq)(N);
 			null != n && null != t.find((e) => e.channelId === n.channelId) && v();
 		}
 	}));

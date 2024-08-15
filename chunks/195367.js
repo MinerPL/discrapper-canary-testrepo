@@ -24,12 +24,7 @@ var s = l(735250),
 	g = l(339727);
 function v(e) {
 	let { editBroadcastInfoData: n } = e,
-		{
-			broadcastInfo: l,
-			broadcastToDirectoryChannels: a,
-			setBroadcastToDirectoryChannels: t,
-			canEveryoneRoleViewEvent: i
-		} = n;
+		{ broadcastInfo: l, broadcastToDirectoryChannels: a, setBroadcastToDirectoryChannels: t, canEveryoneRoleViewEvent: i } = n;
 	return l.can_broadcast
 		? (0, s.jsxs)(r.FormItem, {
 				title: h.Z.Messages.CREATE_EVENT_PRIVACY_LABEL,
@@ -70,26 +65,8 @@ function v(e) {
 		: null;
 }
 function S(e) {
-	let {
-			guildEvent: n,
-			guildEventId: t,
-			guildId: S,
-			editBroadcastInfoData: C,
-			error: L,
-			validationErrorMessage: A,
-			onChange: Z,
-			canSetFocus: f = !1
-		} = e,
-		{
-			entityType: j,
-			channelId: M,
-			description: D,
-			name: R,
-			image: p,
-			scheduledEndTime: V,
-			scheduledStartTime: G,
-			recurrenceRule: O
-		} = n,
+	let { guildEvent: n, guildEventId: t, guildId: S, editBroadcastInfoData: C, error: L, validationErrorMessage: A, onChange: Z, canSetFocus: f = !1 } = e,
+		{ entityType: j, channelId: M, description: D, name: R, image: p, scheduledEndTime: V, scheduledStartTime: G, recurrenceRule: O } = n,
 		U = (0, c._d)(M),
 		y = null != n && (0, E.xt)(n),
 		b = a.useMemo(() => {
@@ -168,12 +145,7 @@ function S(e) {
 									scheduledStartTime: null == n ? void 0 : n.toISOString(),
 									scheduledEndTime: null == l ? void 0 : l.toISOString()
 								};
-							null != n &&
-								null != V &&
-								(null == l ? void 0 : l.isBefore(n)) &&
-								(s.scheduledEndTime = n.add(1, 'hour').toISOString()),
-								null != n && null != B && (s.recurrenceRule = (0, I.mF)(B, n)),
-								Z(s);
+							null != n && null != V && (null == l ? void 0 : l.isBefore(n)) && (s.scheduledEndTime = n.add(1, 'hour').toISOString()), null != n && null != B && (s.recurrenceRule = (0, I.mF)(B, n)), Z(s);
 						},
 						onRecurrenceChange: (e) => {
 							let n = b.startDate;

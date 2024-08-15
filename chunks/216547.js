@@ -158,9 +158,7 @@ class _ extends s.Component {
 			M(this, 'tileScrollerRef', s.createRef()),
 			M(this, 'setScrollerWidth', () => {
 				let e = (0, l.findDOMNode)(this.tileScrollerRef.current);
-				(0, o.k)(e, HTMLElement) &&
-					e.offsetWidth !== this.state.scrollerWidth &&
-					this.setState({ scrollerWidth: e.offsetWidth });
+				(0, o.k)(e, HTMLElement) && e.offsetWidth !== this.state.scrollerWidth && this.setState({ scrollerWidth: e.offsetWidth });
 			}),
 			M(this, 'prev', () => {
 				this.setState({

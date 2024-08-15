@@ -176,15 +176,7 @@ function C(e) {
 			children: (0, s.jsx)(r.Spinner, {})
 		});
 	if (!d) return null;
-	let {
-		guildIcon: u,
-		guildName: I,
-		guildAvatarUrl: E,
-		subscriberCount: T,
-		emojisToShow: N,
-		notShownEmojiCount: C,
-		storePageUrl: x
-	} = o.details;
+	let { guildIcon: u, guildName: I, guildAvatarUrl: E, subscriberCount: T, emojisToShow: N, notShownEmojiCount: C, storePageUrl: x } = o.details;
 	return (0, s.jsxs)('div', {
 		className: m.guildCard,
 		children: [

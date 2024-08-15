@@ -20,18 +20,14 @@ function o(e) {
 	let n = e.application_id;
 	if (null == n) return;
 	let i = s[n];
-	if (null != i && (null === (t = i.shouldShow) || void 0 === t ? void 0 : t.call(i, e)) !== !1)
-		return i.createHeader(e);
+	if (null != i && (null === (t = i.shouldShow) || void 0 === t ? void 0 : t.call(i, e)) !== !1) return i.createHeader(e);
 }
 function c(e) {
 	var t;
 	let n = e.application_id;
 	if (null == n) return;
 	let l = s[n];
-	if (
-		(null == l ? void 0 : l.body) != null &&
-		(null === (t = l.shouldShow) || void 0 === t ? void 0 : t.call(l, e)) !== !1
-	) {
+	if ((null == l ? void 0 : l.body) != null && (null === (t = l.shouldShow) || void 0 === t ? void 0 : t.call(l, e)) !== !1) {
 		let t = l.body;
 		return (0, i.jsx)(
 			'section',

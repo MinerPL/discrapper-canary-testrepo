@@ -33,10 +33,7 @@ function _(e, t) {
 				render(t, n, s) {
 					var a, i;
 					if (t.isExpandedItem) return 'renderExpandedContent' in e ? e.renderExpandedContent(t.item, n) : null;
-					return null !== (i = null === (a = e.render) || void 0 === a ? void 0 : a.call(e, t.item, n, s)) &&
-						void 0 !== i
-						? i
-						: null;
+					return null !== (i = null === (a = e.render) || void 0 === a ? void 0 : a.call(e, t.item, n, s)) && void 0 !== i ? i : null;
 				}
 			}))
 		);

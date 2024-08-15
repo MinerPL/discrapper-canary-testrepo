@@ -67,13 +67,4 @@ function l(e) {
 		t
 	);
 }
-((a = n || (n = {})).COULD_NOT_HEAR_AUDIO = "I couldn't hear audio at all"),
-	(a.NOBODY_COULD_HEAR_ME = 'Nobody could hear me'),
-	(a.AUDIO_ECHOS = 'Audio had echos or feedback'),
-	(a.AUDIO_ROBOTIC = 'Audio was robotic or distorted'),
-	(a.AUDIO_CUT = 'Audio cut in and out'),
-	(a.BAD_VOLUME = 'Volume was too low or high'),
-	(a.BACKGROUND_NOISE = 'Background noise was too loud'),
-	(a.SPEAKERPHONE = 'Issues with speakerphone'),
-	(a.HEADSET = 'Issues with headset/bluetooth'),
-	(a.OTHER = 'Other');
+((a = n || (n = {})).COULD_NOT_HEAR_AUDIO = "I couldn't hear audio at all"), (a.NOBODY_COULD_HEAR_ME = 'Nobody could hear me'), (a.AUDIO_ECHOS = 'Audio had echos or feedback'), (a.AUDIO_ROBOTIC = 'Audio was robotic or distorted'), (a.AUDIO_CUT = 'Audio cut in and out'), (a.BAD_VOLUME = 'Volume was too low or high'), (a.BACKGROUND_NOISE = 'Background noise was too loud'), (a.SPEAKERPHONE = 'Issues with speakerphone'), (a.HEADSET = 'Issues with headset/bluetooth'), (a.OTHER = 'Other');

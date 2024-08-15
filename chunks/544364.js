@@ -62,8 +62,7 @@ var d = function (e, t) {
 	h = function (e) {
 		if (!Array.isArray(e)) return e;
 		var t = '';
-		if (Array.isArray(e[0]))
-			for (var r = 0; r < e.length && '!important' !== e[r]; r++) t && (t += ', '), (t += d(e[r], ' '));
+		if (Array.isArray(e[0])) for (var r = 0; r < e.length && '!important' !== e[r]; r++) t && (t += ', '), (t += d(e[r], ' '));
 		else t = d(e, ', ');
 		return '!important' === e[e.length - 1] && (t += ' !important'), t;
 	};
@@ -124,10 +123,7 @@ var m = /([[\].#*$><+~=|^:(),"'`\s])/g,
 			(this.type = 'style'), (this.isProcessed = !1);
 			var n = r.sheet,
 				i = r.Renderer;
-			(this.key = e),
-				(this.options = r),
-				(this.style = t),
-				n ? (this.renderer = n.renderer) : i && (this.renderer = new i());
+			(this.key = e), (this.options = r), (this.style = t), n ? (this.renderer = n.renderer) : i && (this.renderer = new i());
 		}
 		return (
 			(e.prototype.prop = function (e, t, r) {
@@ -140,11 +136,7 @@ var m = /([[\].#*$><+~=|^:(),"'`\s])/g,
 					s = e in this.style;
 				if (o && !s && !n) return this;
 				var a = o && s;
-				if ((a ? delete this.style[e] : (this.style[e] = i), this.renderable && this.renderer))
-					return (
-						a ? this.renderer.removeProperty(this.renderable, e) : this.renderer.setProperty(this.renderable, e, i),
-						this
-					);
+				if ((a ? delete this.style[e] : (this.style[e] = i), this.renderable && this.renderer)) return a ? this.renderer.removeProperty(this.renderable, e) : this.renderer.setProperty(this.renderable, e, i), this;
 				var u = this.options.sheet;
 				return u && u.attached, this;
 			}),
@@ -159,10 +151,7 @@ var m = /([[\].#*$><+~=|^:(),"'`\s])/g,
 				s = n.scoped,
 				a = n.sheet,
 				l = n.generateId;
-			return (
-				o ? (i.selectorText = o) : !1 !== s && ((i.id = l((0, u.Z)((0, u.Z)(i)), a)), (i.selectorText = '.' + b(i.id))),
-				i
-			);
+			return o ? (i.selectorText = o) : !1 !== s && ((i.id = l((0, u.Z)((0, u.Z)(i)), a)), (i.selectorText = '.' + b(i.id))), i;
 		}
 		(0, a.Z)(t, e);
 		var r = t.prototype;
@@ -216,12 +205,7 @@ var m = /([[\].#*$><+~=|^:(),"'`\s])/g,
 		function e(e, t, r) {
 			(this.type = 'conditional'), (this.isProcessed = !1), (this.key = e);
 			var i = e.match(S);
-			for (var o in ((this.at = i ? i[1] : 'unknown'),
-			(this.query = r.name || '@' + this.at),
-			(this.options = r),
-			(this.rules = new F((0, n.Z)({}, r, { parent: this }))),
-			t))
-				this.rules.add(o, t[o]);
+			for (var o in ((this.at = i ? i[1] : 'unknown'), (this.query = r.name || '@' + this.at), (this.options = r), (this.rules = new F((0, n.Z)({}, r, { parent: this }))), t)) this.rules.add(o, t[o]);
 			this.rules.process();
 		}
 		var t = e.prototype;
@@ -243,12 +227,7 @@ var m = /([[\].#*$><+~=|^:(),"'`\s])/g,
 			(t.toString = function (e) {
 				void 0 === e && (e = k);
 				var t = p(e).linebreak;
-				if (
-					(null == e.indent && (e.indent = k.indent),
-					null == e.children && (e.children = k.children),
-					!1 === e.children)
-				)
-					return this.query + ' {}';
+				if ((null == e.indent && (e.indent = k.indent), null == e.children && (e.children = k.children), !1 === e.children)) return this.query + ' {}';
 				var r = this.rules.toString(e);
 				return r ? this.query + ' {' + t + r + t + '}' : '';
 			}),
@@ -265,28 +244,18 @@ var m = /([[\].#*$><+~=|^:(),"'`\s])/g,
 		function e(e, t, r) {
 			(this.type = 'keyframes'), (this.at = '@keyframes'), (this.isProcessed = !1);
 			var i = e.match(C);
-			i && i[1] ? (this.name = i[1]) : (this.name = 'noname'),
-				(this.key = this.type + '-' + this.name),
-				(this.options = r);
+			i && i[1] ? (this.name = i[1]) : (this.name = 'noname'), (this.key = this.type + '-' + this.name), (this.options = r);
 			var o = r.scoped,
 				s = r.sheet,
 				a = r.generateId;
-			for (var u in ((this.id = !1 === o ? this.name : b(a(this, s))),
-			(this.rules = new F((0, n.Z)({}, r, { parent: this }))),
-			t))
-				this.rules.add(u, t[u], (0, n.Z)({}, r, { parent: this }));
+			for (var u in ((this.id = !1 === o ? this.name : b(a(this, s))), (this.rules = new F((0, n.Z)({}, r, { parent: this }))), t)) this.rules.add(u, t[u], (0, n.Z)({}, r, { parent: this }));
 			this.rules.process();
 		}
 		return (
 			(e.prototype.toString = function (e) {
 				void 0 === e && (e = Z);
 				var t = p(e).linebreak;
-				if (
-					(null == e.indent && (e.indent = Z.indent),
-					null == e.children && (e.children = Z.children),
-					!1 === e.children)
-				)
-					return this.at + ' ' + this.id + ' {}';
+				if ((null == e.indent && (e.indent = Z.indent), null == e.children && (e.children = Z.children), !1 === e.children)) return this.at + ' ' + this.id + ' {}';
 				var r = this.rules.toString(e);
 				return r && (r = '' + t + r + t), this.at + ' ' + this.id + ' {' + r + '}';
 			}),
@@ -323,19 +292,13 @@ var m = /([[\].#*$><+~=|^:(),"'`\s])/g,
 	})(x),
 	E = (function () {
 		function e(e, t, r) {
-			(this.type = 'font-face'),
-				(this.at = '@font-face'),
-				(this.isProcessed = !1),
-				(this.key = e),
-				(this.style = t),
-				(this.options = r);
+			(this.type = 'font-face'), (this.at = '@font-face'), (this.isProcessed = !1), (this.key = e), (this.style = t), (this.options = r);
 		}
 		return (
 			(e.prototype.toString = function (e) {
 				var t = p(e).linebreak;
 				if (Array.isArray(this.style)) {
-					for (var r = '', n = 0; n < this.style.length; n++)
-						(r += g(this.at, this.style[n])), this.style[n + 1] && (r += t);
+					for (var r = '', n = 0; n < this.style.length; n++) (r += g(this.at, this.style[n])), this.style[n + 1] && (r += t);
 					return r;
 				}
 				return g(this.at, this.style, e);
@@ -346,12 +309,7 @@ var m = /([[\].#*$><+~=|^:(),"'`\s])/g,
 	z = /@font-face/,
 	N = (function () {
 		function e(e, t, r) {
-			(this.type = 'viewport'),
-				(this.at = '@viewport'),
-				(this.isProcessed = !1),
-				(this.key = e),
-				(this.style = t),
-				(this.options = r);
+			(this.type = 'viewport'), (this.at = '@viewport'), (this.isProcessed = !1), (this.key = e), (this.style = t), (this.options = r);
 		}
 		return (
 			(e.prototype.toString = function (e) {
@@ -367,8 +325,7 @@ var m = /([[\].#*$><+~=|^:(),"'`\s])/g,
 		return (
 			(e.prototype.toString = function (e) {
 				if (Array.isArray(this.value)) {
-					for (var t = '', r = 0; r < this.value.length; r++)
-						(t += this.key + ' ' + this.value[r] + ';'), this.value[r + 1] && (t += '\n');
+					for (var t = '', r = 0; r < this.value.length; r++) (t += this.key + ' ' + this.value[r] + ';'), this.value[r + 1] && (t += '\n');
 					return t;
 				}
 				return this.key + ' ' + this.value + ';';
@@ -397,11 +354,7 @@ var m = /([[\].#*$><+~=|^:(),"'`\s])/g,
 				return 'string' == typeof e && O.test(e) ? new j(e, t, r) : null;
 			},
 			onProcessStyle: function (e, t, r) {
-				return 'style' === t.type && r
-					? ('animation-name' in e && T(e, 'animation-name', r.keyframes),
-						'animation' in e && T(e, 'animation', r.keyframes),
-						e)
-					: e;
+				return 'style' === t.type && r ? ('animation-name' in e && T(e, 'animation-name', r.keyframes), 'animation' in e && T(e, 'animation', r.keyframes), e) : e;
 			},
 			onChangeValue: function (e, t, r) {
 				var n = r.options.sheet;
@@ -443,13 +396,7 @@ var m = /([[\].#*$><+~=|^:(),"'`\s])/g,
 	},
 	F = (function () {
 		function e(e) {
-			(this.map = {}),
-				(this.raw = {}),
-				(this.index = []),
-				(this.counter = 0),
-				(this.options = e),
-				(this.classes = e.classes),
-				(this.keyframes = e.keyframes);
+			(this.map = {}), (this.raw = {}), (this.index = []), (this.counter = 0), (this.options = e), (this.classes = e.classes), (this.keyframes = e.keyframes);
 		}
 		var t = e.prototype;
 		return (
@@ -477,9 +424,7 @@ var m = /([[\].#*$><+~=|^:(),"'`\s])/g,
 						r
 					),
 					h = e;
-				e in this.raw && (h = e + '-d' + this.counter++),
-					(this.raw[h] = t),
-					h in this.classes && (d.selector = '.' + b(this.classes[h]));
+				e in this.raw && (h = e + '-d' + this.counter++), (this.raw[h] = t), h in this.classes && (d.selector = '.' + b(this.classes[h]));
 				var p = f(h, t, d);
 				if (!p) return null;
 				this.register(p);
@@ -507,29 +452,13 @@ var m = /([[\].#*$><+~=|^:(),"'`\s])/g,
 				this.index.slice(0).forEach(e.onProcessRule, e);
 			}),
 			(t.register = function (e) {
-				(this.map[e.key] = e),
-					e instanceof w
-						? ((this.map[e.selector] = e), e.id && (this.classes[e.key] = e.id))
-						: e instanceof j && this.keyframes && (this.keyframes[e.name] = e.id);
+				(this.map[e.key] = e), e instanceof w ? ((this.map[e.selector] = e), e.id && (this.classes[e.key] = e.id)) : e instanceof j && this.keyframes && (this.keyframes[e.name] = e.id);
 			}),
 			(t.unregister = function (e) {
-				delete this.map[e.key],
-					e instanceof w
-						? (delete this.map[e.selector], delete this.classes[e.key])
-						: e instanceof j && delete this.keyframes[e.name];
+				delete this.map[e.key], e instanceof w ? (delete this.map[e.selector], delete this.classes[e.key]) : e instanceof j && delete this.keyframes[e.name];
 			}),
 			(t.update = function () {
-				if (
-					('string' == typeof (arguments.length <= 0 ? void 0 : arguments[0])
-						? ((e = arguments.length <= 0 ? void 0 : arguments[0]),
-							(t = arguments.length <= 1 ? void 0 : arguments[1]),
-							(r = arguments.length <= 2 ? void 0 : arguments[2]))
-						: ((t = arguments.length <= 0 ? void 0 : arguments[0]),
-							(r = arguments.length <= 1 ? void 0 : arguments[1]),
-							(e = null)),
-					e)
-				)
-					this.updateOne(this.get(e), t, r);
+				if (('string' == typeof (arguments.length <= 0 ? void 0 : arguments[0]) ? ((e = arguments.length <= 0 ? void 0 : arguments[0]), (t = arguments.length <= 1 ? void 0 : arguments[1]), (r = arguments.length <= 2 ? void 0 : arguments[2])) : ((t = arguments.length <= 0 ? void 0 : arguments[0]), (r = arguments.length <= 1 ? void 0 : arguments[1]), (e = null)), e)) this.updateOne(this.get(e), t, r);
 				else for (var e, t, r, n = 0; n < this.index.length; n++) this.updateOne(this.index[n], t, r);
 			}),
 			(t.updateOne = function (t, r, n) {
@@ -555,11 +484,7 @@ var m = /([[\].#*$><+~=|^:(),"'`\s])/g,
 				}
 			}),
 			(t.toString = function (e) {
-				for (
-					var t = '', r = this.options.sheet, n = !!r && r.options.link, i = p(e).linebreak, o = 0;
-					o < this.index.length;
-					o++
-				) {
+				for (var t = '', r = this.options.sheet, n = !!r && r.options.link, i = p(e).linebreak, o = 0; o < this.index.length; o++) {
 					var s = this.index[o].toString(e);
 					(s || n) && (t && (t += i), (t += s));
 				}
@@ -589,9 +514,7 @@ var m = /([[\].#*$><+~=|^:(),"'`\s])/g,
 		var t = e.prototype;
 		return (
 			(t.attach = function () {
-				return this.attached
-					? this
-					: (this.renderer && this.renderer.attach(), (this.attached = !0), !this.deployed && this.deploy(), this);
+				return this.attached ? this : (this.renderer && this.renderer.attach(), (this.attached = !0), !this.deployed && this.deploy(), this);
 			}),
 			(t.detach = function () {
 				return this.attached ? (this.renderer && this.renderer.detach(), (this.attached = !1), this) : this;
@@ -601,26 +524,14 @@ var m = /([[\].#*$><+~=|^:(),"'`\s])/g,
 				this.attached && !n && (this.queue = []);
 				var i = this.rules.add(e, t, r);
 				if (!i) return null;
-				if ((this.options.jss.plugins.onProcessRule(i), this.attached))
-					return this.deployed
-						? (n
-								? n.push(i)
-								: (this.insertRule(i),
-									this.queue && (this.queue.forEach(this.insertRule, this), (this.queue = void 0))),
-							i)
-						: i;
+				if ((this.options.jss.plugins.onProcessRule(i), this.attached)) return this.deployed ? (n ? n.push(i) : (this.insertRule(i), this.queue && (this.queue.forEach(this.insertRule, this), (this.queue = void 0))), i) : i;
 				return (this.deployed = !1), i;
 			}),
 			(t.replaceRule = function (e, t, r) {
 				var n = this.rules.get(e);
 				if (!n) return this.addRule(e, t, r);
 				var i = this.rules.replace(e, t, r);
-				if ((i && this.options.jss.plugins.onProcessRule(i), this.attached))
-					return this.deployed
-						? (this.renderer &&
-								(i ? n.renderable && this.renderer.replaceRule(n.renderable, i) : this.renderer.deleteRule(n)),
-							i)
-						: i;
+				if ((i && this.options.jss.plugins.onProcessRule(i), this.attached)) return this.deployed ? (this.renderer && (i ? n.renderable && this.renderer.replaceRule(n.renderable, i) : this.renderer.deleteRule(n)), i) : i;
 				return (this.deployed = !1), i;
 			}),
 			(t.insertRule = function (e) {
@@ -639,12 +550,7 @@ var m = /([[\].#*$><+~=|^:(),"'`\s])/g,
 			}),
 			(t.deleteRule = function (e) {
 				var t = 'object' == typeof e ? e : this.rules.get(e);
-				return (
-					!!t &&
-					(!this.attached || !!t.renderable) &&
-					(this.rules.remove(t),
-					!this.attached || !t.renderable || !this.renderer || this.renderer.deleteRule(t.renderable))
-				);
+				return !!t && (!this.attached || !!t.renderable) && (this.rules.remove(t), !this.attached || !t.renderable || !this.renderer || this.renderer.deleteRule(t.renderable));
 			}),
 			(t.indexOf = function (e) {
 				return this.rules.indexOf(e);
@@ -684,14 +590,12 @@ var m = /([[\].#*$><+~=|^:(),"'`\s])/g,
 			}),
 			(t.onProcessRule = function (e) {
 				if (!e.isProcessed) {
-					for (var t = e.options.sheet, r = 0; r < this.registry.onProcessRule.length; r++)
-						this.registry.onProcessRule[r](e, t);
+					for (var t = e.options.sheet, r = 0; r < this.registry.onProcessRule.length; r++) this.registry.onProcessRule[r](e, t);
 					e.style && this.onProcessStyle(e.style, e, t), (e.isProcessed = !0);
 				}
 			}),
 			(t.onProcessStyle = function (e, t, r) {
-				for (var n = 0; n < this.registry.onProcessStyle.length; n++)
-					t.style = this.registry.onProcessStyle[n](t.style, t, r);
+				for (var n = 0; n < this.registry.onProcessStyle.length; n++) t.style = this.registry.onProcessStyle[n](t.style, t, r);
 			}),
 			(t.onProcessSheet = function (e) {
 				for (var t = 0; t < this.registry.onProcessSheet.length; t++) this.registry.onProcessSheet[t](e);
@@ -755,16 +659,7 @@ var m = /([[\].#*$><+~=|^:(),"'`\s])/g,
 				this.registry.splice(t, 1);
 			}),
 			(t.toString = function (e) {
-				for (
-					var t = void 0 === e ? {} : e,
-						r = t.attached,
-						n = (0, l.Z)(t, ['attached']),
-						i = p(n).linebreak,
-						o = '',
-						s = 0;
-					s < this.registry.length;
-					s++
-				) {
+				for (var t = void 0 === e ? {} : e, r = t.attached, n = (0, l.Z)(t, ['attached']), i = p(n).linebreak, o = '', s = 0; s < this.registry.length; s++) {
 					var a = this.registry[s];
 					if (null == r || a.attached === r) o && (o += i), (o += a.toString(n));
 				}
@@ -781,14 +676,7 @@ var m = /([[\].#*$><+~=|^:(),"'`\s])/g,
 			e
 		);
 	})())(),
-	G =
-		'undefined' != typeof globalThis
-			? globalThis
-			: 'undefined' != typeof window && window.Math === Math
-				? window
-				: 'undefined' != typeof self && self.Math === Math
-					? self
-					: Function('return this')(),
+	G = 'undefined' != typeof globalThis ? globalThis : 'undefined' != typeof window && window.Math === Math ? window : 'undefined' != typeof self && self.Math === Math ? self : Function('return this')(),
 	$ = '2f1acc6c3a606b082e5eef5e54414ffb';
 null == G[$] && (G[$] = 0);
 var _ = G[$]++,
@@ -799,12 +687,7 @@ var _ = G[$]++,
 			t += 1;
 			var i = '',
 				o = '';
-			return (n &&
-				(n.options.classNamePrefix && (o = n.options.classNamePrefix),
-				null != n.options.jss.id && (i = String(n.options.jss.id))),
-			e.minify)
-				? '' + (o || 'c') + _ + i + t
-				: o + r.key + '-' + _ + (i ? '-' + i : '') + '-' + t;
+			return (n && (n.options.classNamePrefix && (o = n.options.classNamePrefix), null != n.options.jss.id && (i = String(n.options.jss.id))), e.minify) ? '' + (o || 'c') + _ + i + t : o + r.key + '-' + _ + (i ? '-' + i : '') + '-' + t;
 		};
 	},
 	J = function (e) {
@@ -868,22 +751,12 @@ var _ = G[$]++,
 	},
 	es = (function () {
 		function e(e) {
-			(this.getPropertyValue = Y),
-				(this.setProperty = K),
-				(this.removeProperty = Q),
-				(this.setSelector = ee),
-				(this.hasInsertedRules = !1),
-				(this.cssRules = []),
-				e && D.add(e),
-				(this.sheet = e);
+			(this.getPropertyValue = Y), (this.setProperty = K), (this.removeProperty = Q), (this.setSelector = ee), (this.hasInsertedRules = !1), (this.cssRules = []), e && D.add(e), (this.sheet = e);
 			var t = this.sheet ? this.sheet.options : {},
 				r = t.media,
 				n = t.meta,
 				i = t.element;
-			(this.element = i || eo()),
-				this.element.setAttribute('data-jss', ''),
-				r && this.element.setAttribute('media', r),
-				n && this.element.setAttribute('data-meta', n);
+			(this.element = i || eo()), this.element.setAttribute('data-jss', ''), r && this.element.setAttribute('media', r), n && this.element.setAttribute('data-meta', n);
 			var o = er();
 			o && this.element.setAttribute('nonce', o);
 		}
@@ -899,8 +772,7 @@ var _ = G[$]++,
 									var r = (function (e, t) {
 										for (var r = 0; r < e.length; r++) {
 											var n = e[r];
-											if (n.attached && n.options.index > t.index && n.options.insertionPoint === t.insertionPoint)
-												return n;
+											if (n.attached && n.options.index > t.index && n.options.insertionPoint === t.insertionPoint) return n;
 										}
 										return null;
 									})(t, e);
@@ -959,8 +831,7 @@ var _ = G[$]++,
 			(t.detach = function () {
 				if (this.sheet) {
 					var e = this.element.parentNode;
-					e && e.removeChild(this.element),
-						this.sheet.options.link && ((this.cssRules = []), (this.element.textContent = '\n'));
+					e && e.removeChild(this.element), this.sheet.options.link && ((this.cssRules = []), (this.element.textContent = '\n'));
 				}
 			}),
 			(t.deploy = function () {
@@ -1032,16 +903,7 @@ var _ = G[$]++,
 		var t = e.prototype;
 		return (
 			(t.setup = function (e) {
-				return (
-					void 0 === e && (e = {}),
-					e.createGenerateId && (this.options.createGenerateId = e.createGenerateId),
-					e.id && (this.options.id = (0, n.Z)({}, this.options.id, e.id)),
-					(e.createGenerateId || e.id) && (this.generateId = this.options.createGenerateId(this.options.id)),
-					null != e.insertionPoint && (this.options.insertionPoint = e.insertionPoint),
-					'Renderer' in e && (this.options.Renderer = e.Renderer),
-					e.plugins && this.use.apply(this, e.plugins),
-					this
-				);
+				return void 0 === e && (e = {}), e.createGenerateId && (this.options.createGenerateId = e.createGenerateId), e.id && (this.options.id = (0, n.Z)({}, this.options.id, e.id)), (e.createGenerateId || e.id) && (this.generateId = this.options.createGenerateId(this.options.id)), null != e.insertionPoint && (this.options.insertionPoint = e.insertionPoint), 'Renderer' in e && (this.options.Renderer = e.Renderer), e.plugins && this.use.apply(this, e.plugins), this;
 			}),
 			(t.createStyleSheet = function (e, t) {
 				void 0 === t && (t = {});
@@ -1063,16 +925,13 @@ var _ = G[$]++,
 				return e.detach(), D.remove(e), this;
 			}),
 			(t.createRule = function (e, t, r) {
-				if ((void 0 === t && (t = {}), void 0 === r && (r = {}), 'object' == typeof e))
-					return this.createRule(void 0, e, t);
+				if ((void 0 === t && (t = {}), void 0 === r && (r = {}), 'object' == typeof e)) return this.createRule(void 0, e, t);
 				var i = (0, n.Z)({}, r, {
 					name: e,
 					jss: this,
 					Renderer: this.options.Renderer
 				});
-				!i.generateId && (i.generateId = this.generateId),
-					!i.classes && (i.classes = {}),
-					!i.keyframes && (i.keyframes = {});
+				!i.generateId && (i.generateId = this.generateId), !i.classes && (i.classes = {}), !i.keyframes && (i.keyframes = {});
 				var o = f(e, t, i);
 				return o && this.plugins.onProcessRule(o), o;
 			}),
@@ -1116,9 +975,7 @@ var _ = G[$]++,
 			}),
 			(t.unmanage = function (e) {
 				var t = this.sheets.get(e);
-				t
-					? t.refs > 0 && (t.refs--, 0 === t.refs && t.sheet.detach())
-					: (0, o.default)(!1, "SheetsManager: can't find sheet to unmanage");
+				t ? t.refs > 0 && (t.refs--, 0 === t.refs && t.sheet.detach()) : (0, o.default)(!1, "SheetsManager: can't find sheet to unmanage");
 			}),
 			(0, s.Z)(e, [
 				{

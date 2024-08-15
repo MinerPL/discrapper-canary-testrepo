@@ -21,14 +21,14 @@ function E(e) {
 	let { channel: t } = e,
 		n = (0, s.e7)([m.Z], () => m.Z.getSelectedParticipant(t.id)),
 		E = (null == n ? void 0 : n.type) === p.fO.STREAM,
-		g = (0, s.e7)([d.Z], () => (E ? d.Z.getActiveStreamForStreamKey(n.id) : null)),
-		{ ignoreSenderPreference: C } = c.Z.useExperiment({ location: 'ActionBarClipsButton' }, { autoTrackExposure: !1 }),
+		C = (0, s.e7)([d.Z], () => (E ? d.Z.getActiveStreamForStreamKey(n.id) : null)),
+		{ ignoreSenderPreference: g } = c.Z.useExperiment({ location: 'ActionBarClipsButton' }, { autoTrackExposure: !1 }),
 		{ viewerClippingAllowed: I, isAtMaxSavingClipOperations: x } = (0, s.cj)([r.Z], () => ({
-			viewerClippingAllowed: null != g && (r.Z.isViewerClippingAllowedForUser(g.ownerId) || C),
+			viewerClippingAllowed: null != C && (r.Z.isViewerClippingAllowedForUser(C.ownerId) || g),
 			isAtMaxSavingClipOperations: r.Z.getIsAtMaxSaveClipOperations()
 		})),
 		T = r.Z.getSettings().clipsEnabled,
-		N = (null == g ? void 0 : g.ownerId) === h.default.getId(),
+		N = (null == C ? void 0 : C.ownerId) === h.default.getId(),
 		v = !T || !(N || I) || x || null == n,
 		S = a.useCallback(
 			(e) =>
@@ -45,16 +45,7 @@ function E(e) {
 		},
 		disabled: v,
 		iconComponent: S,
-		label:
-			null == g
-				? _.Z.Messages.CLIPS_VIEWERSIDE_BUTTON_FOCUS_TOOLTIP
-				: N || I
-					? T
-						? x
-							? void 0
-							: _.Z.Messages.CLIPS_SAVE
-						: _.Z.Messages.CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP
-					: _.Z.Messages.CLIPS_VIEWERSIDE_BUTTON_DISABLED_TOOLTIP,
+		label: null == C ? _.Z.Messages.CLIPS_VIEWERSIDE_BUTTON_FOCUS_TOOLTIP : N || I ? (T ? (x ? void 0 : _.Z.Messages.CLIPS_SAVE) : _.Z.Messages.CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP) : _.Z.Messages.CLIPS_VIEWERSIDE_BUTTON_DISABLED_TOOLTIP,
 		grow: !1
 	});
 }

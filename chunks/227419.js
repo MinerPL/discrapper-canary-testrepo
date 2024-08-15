@@ -14,7 +14,7 @@ var i = n(392711),
 	f = n(689079),
 	h = n(981631),
 	p = n(689938);
-function I(e) {
+function m(e) {
 	switch (e) {
 		case h.nkL.GIF.title:
 		case h.nkL.TENOR.title:
@@ -23,7 +23,7 @@ function I(e) {
 			return '';
 	}
 }
-let m = [
+let I = [
 	...a()(h.nkL)
 		.values()
 		.map((e) => ({
@@ -34,10 +34,10 @@ let m = [
 			inputType: E.iw.BUILT_IN_INTEGRATION,
 			applicationId: f.bi.BUILT_IN,
 			get description() {
-				return I(e.title);
+				return m(e.title);
 			},
 			get displayDescription() {
-				return I(e.title);
+				return m(e.title);
 			},
 			options:
 				e.type === h.q9n.GIF
@@ -97,26 +97,21 @@ let m = [
 				u = (0, c.F6)(a, _.default, d.Z),
 				E = p.Z.Messages.LEAVE_GROUP_DM_TITLE.format({ name: u }),
 				f = p.Z.Messages.LEAVE_GROUP_DM_BODY.format({ name: u }),
-				h =
-					null !== (i = null === (n = e.find((e) => 'silent' === e.name)) || void 0 === n ? void 0 : n.value) &&
-					void 0 !== i &&
-					i;
-			async function I() {
+				h = null !== (i = null === (n = e.find((e) => 'silent' === e.name)) || void 0 === n ? void 0 : n.value) && void 0 !== i && i;
+			async function m() {
 				try {
 					await o.Z.closePrivateChannel(a.id, void 0, h);
 				} catch (e) {
 					l.Z.sendBotMessage(a.id, p.Z.Messages.LEAVE_GROUP_DM_ERROR);
 				}
 			}
-			a.isManaged() &&
-				((E = p.Z.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({ name: u })),
-				(f = p.Z.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({ name: u }))),
+			a.isManaged() && ((E = p.Z.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({ name: u })), (f = p.Z.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({ name: u }))),
 				(0, s.openModal)((e) =>
 					(0, r.jsx)(s.ConfirmModal, {
 						header: E,
 						confirmText: p.Z.Messages.LEAVE_GROUP_DM,
 						cancelText: p.Z.Messages.CANCEL,
-						onConfirm: I,
+						onConfirm: m,
 						...e,
 						children: (0, r.jsx)(s.Text, {
 							variant: 'text-md/normal',
@@ -157,4 +152,4 @@ let m = [
 		integrationTitle: 'sticker'
 	}
 ];
-t.Z = m;
+t.Z = I;

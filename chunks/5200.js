@@ -19,8 +19,8 @@ var i,
 	_ = n(513202),
 	f = n(981631),
 	E = n(689938),
-	g = n(774867);
-let C = ['embedded_cover'],
+	C = n(774867);
+let g = ['embedded_cover'],
 	I = {
 		tension: 800,
 		friction: 24
@@ -40,7 +40,7 @@ function x(e) {
 			locationObject: {},
 			onActivityItemSelected: a,
 			embeddedActivitiesManager: _.Z,
-			assetNames: C
+			assetNames: g
 		}),
 		[Z, A] = l.useState(!1),
 		M = l.useCallback(() => {
@@ -52,9 +52,9 @@ function x(e) {
 		R = l.useMemo(
 			() =>
 				(0, s.jsx)('div', {
-					className: g.overlayBadge,
+					className: C.overlayBadge,
 					children: (0, s.jsx)('div', {
-						className: g.badgeContainer,
+						className: C.badgeContainer,
 						children: (0, s.jsx)(p.Z, {
 							name: i.application.name,
 							labelType: S
@@ -67,9 +67,9 @@ function x(e) {
 			switch (v) {
 				case h.JS.JOIN:
 					return (0, s.jsx)('div', {
-						className: g.activityAction,
+						className: C.activityAction,
 						children: (0, s.jsx)('div', {
-							className: g.activityActionButton,
+							className: C.activityActionButton,
 							children: (0, s.jsx)(u.Text, {
 								variant: 'text-sm/medium',
 								color: 'always-white',
@@ -79,9 +79,9 @@ function x(e) {
 					});
 				case h.JS.LEAVE:
 					return (0, s.jsx)('div', {
-						className: g.activityAction,
+						className: C.activityAction,
 						children: (0, s.jsx)('div', {
-							className: o()(g.activityActionButton, g.activityActionButtonDanger),
+							className: o()(C.activityActionButton, C.activityActionButtonDanger),
 							children: (0, s.jsx)(u.Text, {
 								variant: 'text-sm/medium',
 								color: 'always-white',
@@ -103,7 +103,7 @@ function x(e) {
 		onBlur: b,
 		onMouseEnter: M,
 		onMouseLeave: b,
-		innerClassName: g.activityItemButtonInnerClass,
+		innerClassName: C.activityItemButtonInnerClass,
 		children: (0, s.jsx)(u.Spring, {
 			config: I,
 			from: { value: 0 },
@@ -111,9 +111,9 @@ function x(e) {
 			children: (e) => {
 				let { value: t } = e;
 				return (0, s.jsx)(c.animated.div, {
-					className: o()((0, d.Q)(f.BRd.DARK), g.activityItem, x, {
-						[g.activityItem_13_11]: 0 === r,
-						[g.activityItem_16_9]: 1 === r
+					className: o()((0, d.Q)(f.BRd.DARK), C.activityItem, x, {
+						[C.activityItem_13_11]: 0 === r,
+						[C.activityItem_16_9]: 1 === r
 					}),
 					style: {
 						transform: t.to([0, 1], [1, 1.05]).to((e) => 'scale('.concat(e, ')'))
@@ -123,8 +123,8 @@ function x(e) {
 							(0, s.jsx)(m.Z, {
 								imageBackground: N,
 								applicationName: i.application.name,
-								imageClassName: g.activitySuggestionImage,
-								imageNotFoundClassName: g.brokenImageIconWrapper
+								imageClassName: C.activitySuggestionImage,
+								imageNotFoundClassName: C.brokenImageIconWrapper
 							}),
 							R,
 							j
@@ -135,6 +135,4 @@ function x(e) {
 		})
 	});
 }
-((a = i || (i = {}))[(a.THIRTEEN_BY_ELEVEN = 0)] = 'THIRTEEN_BY_ELEVEN'),
-	(a[(a.SIXTEEN_BY_NINE = 1)] = 'SIXTEEN_BY_NINE'),
-	(x.AspectRatio = i);
+((a = i || (i = {}))[(a.THIRTEEN_BY_ELEVEN = 0)] = 'THIRTEEN_BY_ELEVEN'), (a[(a.SIXTEEN_BY_NINE = 1)] = 'SIXTEEN_BY_NINE'), (x.AspectRatio = i);

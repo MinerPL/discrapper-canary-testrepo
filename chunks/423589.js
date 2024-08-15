@@ -59,9 +59,7 @@ function f(e) {
 	return a.default.keys(e).filter((t) => {
 		var l, u;
 		let a = e[t].message_notifications !== s.bL.NULL,
-			o =
-				r.yE(null !== (l = e[t].flags) && void 0 !== l ? l : 0, c.ic.UNREADS_ALL_MESSAGES) ||
-				r.yE(null !== (u = e[t].flags) && void 0 !== u ? u : 0, c.ic.UNREADS_ONLY_MENTIONS);
+			o = r.yE(null !== (l = e[t].flags) && void 0 !== l ? l : 0, c.ic.UNREADS_ALL_MESSAGES) || r.yE(null !== (u = e[t].flags) && void 0 !== u ? u : 0, c.ic.UNREADS_ONLY_MENTIONS);
 		return (!n.ignoreUnreadSetting && o) || (!n.ignoreNotificationSetting && a) || (!n.ignoreMute && (0, i.m$)(e[t]));
 	});
 }

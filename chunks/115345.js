@@ -36,8 +36,8 @@ var r = n(470079),
 	f = n(480294),
 	h = n(650774),
 	p = n(888369),
-	I = n(430824),
-	m = n(771845),
+	m = n(430824),
+	I = n(771845),
 	T = n(9156),
 	g = n(626135),
 	S = n(630388),
@@ -57,7 +57,7 @@ function U(e, t) {
 	let [n, i] = r.useState(D.nf),
 		[o, l] = r.useState({});
 	(0, E.D)();
-	let u = (0, s.Wu)([I.Z], () => Object.values(I.Z.getGuilds())),
+	let u = (0, s.Wu)([m.Z], () => Object.values(m.Z.getGuilds())),
 		c = r.useCallback(() => {
 			let r = {};
 			for (let i of u)
@@ -101,7 +101,7 @@ function U(e, t) {
 							var n;
 							return e + Number(null !== (n = t.num_month_opens) && void 0 !== n ? n : 0);
 						}, 0),
-						i = m.ZP.getFlattenedGuildIds(),
+						i = I.ZP.getFlattenedGuildIds(),
 						s = a().sortBy(Object.values(e), (e) => {
 							let t = i.indexOf(e.guildId);
 							return -1 === t ? i.length : t;
@@ -117,47 +117,35 @@ function U(e, t) {
 										return n.has(null !== (t = e.overrideMode) && void 0 !== t ? t : e.mode);
 									})
 									.map((e) => {
-										let t = I.Z.getGuild(e.guildId),
+										let t = m.Z.getGuild(e.guildId),
 											n = e.actions
 												.map((e) => {
 													var t;
 													return '- '.concat(e.label).concat(null !== (t = e.debug) && void 0 !== t ? t : '');
 												})
 												.join('\n');
-										return '### '
-											.concat(t.name, '\n**Reasoning**: ')
-											.concat(e.debugReason, '**ActionPlan**:\n')
-											.concat(n);
+										return '### '.concat(t.name, '\n**Reasoning**: ').concat(e.debugReason, '**ActionPlan**:\n').concat(n);
 									});
 							return '# '.concat(t, '\n\n').concat(r.join('\n\n'));
 						});
-					return '\n# Basic Stats\n- Total channel visits (yr): '
-						.concat(n, '\n- Total channel visits (month): ')
-						.concat(r, '\n\n')
-						.concat(o.join('\n\n'));
+					return '\n# Basic Stats\n- Total channel visits (yr): '.concat(n, '\n- Total channel visits (month): ').concat(r, '\n\n').concat(o.join('\n\n'));
 				})(Object.values(d), t)
 		}
 	);
 }
 function w(e, t) {
-	return Object.values(I.Z.getGuilds()).some((n) => {
+	return Object.values(m.Z.getGuilds()).some((n) => {
 		let [r] = f.Z.hasConsented(L.pjP.PERSONALIZATION) ? (0, C.q)(n, D.nf, e, t, !1) : (0, C.A)(n, e);
 		return r === D.AR.UseGreyDot;
 	});
 }
 function x() {
-	let e = Object.values(I.Z.getGuilds()),
+	let e = Object.values(m.Z.getGuilds()),
 		t = {};
 	for (let i of e) {
 		var n, r;
-		let e =
-			null !== (r = (null !== (n = T.ZP.getAllSettings().userGuildSettings[i.id]) && void 0 !== n ? n : {}).flags) &&
-			void 0 !== r
-				? r
-				: 0;
-		(e = (0, S.mB)(e, M.vc.UNREADS_ALL_MESSAGES, !0)),
-			(e = (0, S.mB)(e, M.vc.UNREADS_ONLY_MENTIONS, !1)),
-			(t[i.id] = { flags: e });
+		let e = null !== (r = (null !== (n = T.ZP.getAllSettings().userGuildSettings[i.id]) && void 0 !== n ? n : {}).flags) && void 0 !== r ? r : 0;
+		(e = (0, S.mB)(e, M.vc.UNREADS_ALL_MESSAGES, !0)), (e = (0, S.mB)(e, M.vc.UNREADS_ONLY_MENTIONS, !1)), (t[i.id] = { flags: e });
 	}
 	B(t),
 		g.default.track(L.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
@@ -295,12 +283,7 @@ async function V() {
 		: (0, O.$U)('Backup from '.concat(new Date().toLocaleDateString()));
 }
 async function H() {
-	o.K.set('turnedOffNewNotifications', !0),
-		g.default.track(L.rMx.NOTIFICATION_MIGRATION_OPTOUT, {
-			num_guilds_with_new_setting: Object.values(I.Z.getGuilds()).filter(
-				(e) => T.ZP.resolveGuildUnreadSetting(e) === b.i.ONLY_MENTIONS
-			).length
-		});
+	o.K.set('turnedOffNewNotifications', !0), g.default.track(L.rMx.NOTIFICATION_MIGRATION_OPTOUT, { num_guilds_with_new_setting: Object.values(m.Z.getGuilds()).filter((e) => T.ZP.resolveGuildUnreadSetting(e) === b.i.ONLY_MENTIONS).length });
 	let e = await (0, O.Tn)(),
 		t = a().sortBy(e, (e) => new Date(e.recorded_at).getTime());
 	if (t.length > 0) {
@@ -308,9 +291,7 @@ async function H() {
 		await new Promise((t) =>
 			u.Z.show({
 				title: 'Please Confirm',
-				body:
-					'This will turn off the new notification system and restore your ' +
-					'notification settings to a backup created on '.concat(new Date(e.recorded_at).toLocaleDateString()),
+				body: 'This will turn off the new notification system and restore your ' + 'notification settings to a backup created on '.concat(new Date(e.recorded_at).toLocaleDateString()),
 				onConfirm: t,
 				cancelText: 'Cancel',
 				onCancel: () => {}
@@ -339,9 +320,7 @@ function Z(e) {
 				num_messages: Number(null !== (u = null == h ? void 0 : h.num_messages) && void 0 !== u ? u : 0),
 				num_year_voice_joins: Number(null !== (c = null == f ? void 0 : f.year_opens) && void 0 !== c ? c : 0),
 				num_month_voice_joins: Number(null !== (d = null == f ? void 0 : f.one_month_opens) && void 0 !== d ? d : 0),
-				num_three_month_voice_joins: Number(
-					null !== (_ = null == f ? void 0 : f.three_month_opens) && void 0 !== _ ? _ : 0
-				),
+				num_three_month_voice_joins: Number(null !== (_ = null == f ? void 0 : f.three_month_opens) && void 0 !== _ ? _ : 0),
 				num_six_month_voice_joins: Number(null !== (E = null == f ? void 0 : f.six_month_opens) && void 0 !== E ? E : 0)
 			};
 		})

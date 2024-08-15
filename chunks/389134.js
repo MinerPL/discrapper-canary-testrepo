@@ -108,10 +108,7 @@ class I extends (a = u.ZP.Store) {
 				t)
 			) {
 				var a;
-				g = !l().isEqual(
-					p.verificationForm.formFields,
-					null === (a = x.verificationForm) || void 0 === a ? void 0 : a.formFields
-				);
+				g = !l().isEqual(p.verificationForm.formFields, null === (a = x.verificationForm) || void 0 === a ? void 0 : a.formFields);
 			} else g = !1;
 		}
 	}));

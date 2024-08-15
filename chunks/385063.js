@@ -18,10 +18,7 @@ function o(e) {
 		className: l.channelNameChange,
 		icon: n(819373),
 		timestamp: t.timestamp,
-		children: (u
-			? r.Z.Messages.SYSTEM_MESSAGE_FORUM_POST_TITLE_CHANGE2
-			: r.Z.Messages.SYSTEM_MESSAGE_CHANNEL_NAME_CHANGE2
-		).format({
+		children: (u ? r.Z.Messages.SYSTEM_MESSAGE_FORUM_POST_TITLE_CHANGE2 : r.Z.Messages.SYSTEM_MESSAGE_CHANNEL_NAME_CHANGE2).format({
 			username: d.nick,
 			usernameHook: _,
 			channelName: t.content

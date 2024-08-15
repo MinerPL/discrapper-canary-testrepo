@@ -75,16 +75,7 @@ function T(e) {
 }
 function h(e) {
 	let t,
-		{
-			directoryChannelId: s,
-			onClose: a,
-			onGuildChosen: n,
-			handleChooseCreate: i,
-			directoryGuildName: c,
-			availableGuilds: m,
-			addedGuilds: C,
-			loading: _
-		} = e,
+		{ directoryChannelId: s, onClose: a, onGuildChosen: n, handleChooseCreate: i, directoryGuildName: c, availableGuilds: m, addedGuilds: C, loading: _ } = e,
 		[L, h] = o.useState(0);
 	return (
 		(t = _

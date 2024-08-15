@@ -7,14 +7,7 @@ var s = n(735250),
 	c = n(596282);
 let d = o.forwardRef(function (e, t) {
 	var n;
-	let {
-			className: a,
-			expansionSpring: d,
-			isExpanded: u,
-			isExpansionAnimationComplete: p,
-			quest: x,
-			taskDetails: m
-		} = e,
+	let { className: a, expansionSpring: d, isExpanded: u, isExpansionAnimationComplete: p, quest: x, taskDetails: m } = e,
 		g = o.useRef(null),
 		_ = (null === (n = x.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null;
 	return (0, s.jsx)(l.animated.div, {

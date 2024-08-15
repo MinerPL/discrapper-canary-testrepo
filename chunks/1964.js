@@ -16,16 +16,8 @@ let { CAPTCHA: t, EMAIL: i, PHONE: r, REVERIFY_EMAIL: c, REVERIFY_PHONE: a } = R
 		[R.c2C.AGREEMENTS]: []
 	};
 e.Z = {
-	isPhoneReverification: (E, e) =>
-		void 0 !== E &&
-		E.isPhoneVerified() &&
-		(e === R.c2C.REQUIRE_REVERIFIED_PHONE ||
-			e === R.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
-			e === R.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE),
-	isEmailReverification: (E) =>
-		E === R.c2C.REQUIRE_REVERIFIED_EMAIL ||
-		E === R.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
-		E === R.c2C.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE,
+	isPhoneReverification: (E, e) => void 0 !== E && E.isPhoneVerified() && (e === R.c2C.REQUIRE_REVERIFIED_PHONE || e === R.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || e === R.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE),
+	isEmailReverification: (E) => E === R.c2C.REQUIRE_REVERIFIED_EMAIL || E === R.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || E === R.c2C.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE,
 	getVerificationTypes: (E) => (null == E || 'symbol' == typeof E ? [] : s[E]),
 	getButtonTitle(E) {
 		switch (E) {

@@ -30,16 +30,11 @@ class h extends i.y {
 	}
 	isLocalFetchNeeded(e) {
 		var t, n;
-		return (
-			null === (n = null === (t = this.guilds.get(e)) || void 0 === t ? void 0 : t.localNeeded) || void 0 === n || n
-		);
+		return null === (n = null === (t = this.guilds.get(e)) || void 0 === t ? void 0 : t.localNeeded) || void 0 === n || n;
 	}
 	message(e, t) {
 		var n, i;
-		return null !== (i = null === (n = this.guilds.get(e)) || void 0 === n ? void 0 : n.messageRecord(t)) &&
-			void 0 !== i
-			? i
-			: null;
+		return null !== (i = null === (n = this.guilds.get(e)) || void 0 === n ? void 0 : n.messageRecord(t)) && void 0 !== i ? i : null;
 	}
 	data(e) {
 		return !this.guilds.has(e) && this.guilds.set(e, new d.B()), this.guilds.get(e);
@@ -47,9 +42,7 @@ class h extends i.y {
 	handleOneGuildCreate(e) {
 		var t, n;
 		let i = this.data(e.id);
-		i.putMany(null !== (t = e.lastMessages) && void 0 !== t ? t : [], this.generation),
-			i.putMany(null !== (n = e.threadMessages) && void 0 !== n ? n : [], this.generation),
-			null != e.lastMessages && (i.localNeeded = !1);
+		i.putMany(null !== (t = e.lastMessages) && void 0 !== t ? t : [], this.generation), i.putMany(null !== (n = e.threadMessages) && void 0 !== n ? n : [], this.generation), null != e.lastMessages && (i.localNeeded = !1);
 	}
 	handleConnectionOpen(e) {
 		if (!(0, l.cn)()) return !1;
@@ -66,11 +59,7 @@ class h extends i.y {
 	handleMessageCreate(e) {
 		var t;
 		if (!(0, l.cn)() || e.optimistic || e.isPushNotification) return !1;
-		this.data(null !== (t = e.guildId) && void 0 !== t ? t : null).put(
-			e.message.channel_id,
-			e.message,
-			this.generation
-		);
+		this.data(null !== (t = e.guildId) && void 0 !== t ? t : null).put(e.message.channel_id, e.message, this.generation);
 	}
 	handleMessageDelete(e) {
 		var t, n;
@@ -103,12 +92,7 @@ class h extends i.y {
 		let t = o.Z.getBasicChannel(e.channelId);
 		if (null != t) {
 			var n;
-			(0, s.Z)(e.messages),
-				this.data(t.guild_id).putNew(
-					e.channelId,
-					null !== (n = e.messages[0]) && void 0 !== n ? n : null,
-					this.generation
-				);
+			(0, s.Z)(e.messages), this.data(t.guild_id).putNew(e.channelId, null !== (n = e.messages[0]) && void 0 !== n ? n : null, this.generation);
 		}
 	}
 	handleLocalMessagesLoaded(e) {
@@ -116,8 +100,7 @@ class h extends i.y {
 		let t = o.Z.getBasicChannel(e.channelId);
 		if (null != t) {
 			var n;
-			(0, s.Z)(e.messages),
-				this.data(t.guild_id).putNew(e.channelId, null !== (n = e.messages[0]) && void 0 !== n ? n : null, _);
+			(0, s.Z)(e.messages), this.data(t.guild_id).putNew(e.channelId, null !== (n = e.messages[0]) && void 0 !== n ? n : null, _);
 		}
 	}
 	handleMessagePreviewsLoaded(e) {

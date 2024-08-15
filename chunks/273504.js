@@ -59,15 +59,7 @@ var r,
 	o = t(401653),
 	l = t(95930),
 	u = t(41381);
-((r = i || (i = {}))[(r.PROFANITY = 1)] = 'PROFANITY'),
-	(r[(r.SEXUAL_CONTENT = 2)] = 'SEXUAL_CONTENT'),
-	(r[(r.SLURS = 3)] = 'SLURS'),
-	u.f.USER_PROFILE,
-	u.f.SERVER_POLICY,
-	u.f.MENTION_SPAM,
-	u.f.ML_SPAM,
-	u.f.DEFAULT_KEYWORD_LIST,
-	u.f.KEYWORD;
+((r = i || (i = {}))[(r.PROFANITY = 1)] = 'PROFANITY'), (r[(r.SEXUAL_CONTENT = 2)] = 'SEXUAL_CONTENT'), (r[(r.SLURS = 3)] = 'SLURS'), u.f.USER_PROFILE, u.f.SERVER_POLICY, u.f.MENTION_SPAM, u.f.ML_SPAM, u.f.DEFAULT_KEYWORD_LIST, u.f.KEYWORD;
 let a = 1000,
 	s = 100,
 	c = 1000,

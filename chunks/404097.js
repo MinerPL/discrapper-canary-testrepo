@@ -16,16 +16,5 @@ n.d(t, {
 	(i.DEVELOPMENT = 'development'),
 	(i.N_A = 'N/A');
 let a = {
-	ALL: new Set([
-		'N/A',
-		'adhoc',
-		'betaRelease',
-		'canary',
-		'canaryRelease',
-		'development',
-		'googleRelease',
-		'ptb',
-		'stable',
-		'staging'
-	])
+	ALL: new Set(['N/A', 'adhoc', 'betaRelease', 'canary', 'canaryRelease', 'development', 'googleRelease', 'ptb', 'stable', 'staging'])
 };

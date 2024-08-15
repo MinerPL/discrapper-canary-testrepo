@@ -44,20 +44,7 @@ var o = t(475637),
 			defaultMatchWidth: 'wide',
 			parsePatterns: {
 				narrow: [/^l/i, /^[úu]/i, /^b/i, /^d/i, /^k/i, /^[čc]/i, /^[čc]/i, /^s/i, /^z/i, /^[řr]/i, /^l/i, /^p/i],
-				any: [
-					/^led/i,
-					/^[úu]n/i,
-					/^b[řr]e/i,
-					/^dub/i,
-					/^kv[ěe]/i,
-					/^[čc]vn|[čc]erven(?!\w)|[čc]ervna/i,
-					/^[čc]vc|[čc]erven(ec|ce)/i,
-					/^srp/i,
-					/^z[áa][řr]/i,
-					/^[řr][íi]j/i,
-					/^lis/i,
-					/^pro/i
-				]
+				any: [/^led/i, /^[úu]n/i, /^b[řr]e/i, /^dub/i, /^kv[ěe]/i, /^[čc]vn|[čc]erven(?!\w)|[čc]ervna/i, /^[čc]vc|[čc]erven(ec|ce)/i, /^srp/i, /^z[áa][řr]/i, /^[řr][íi]j/i, /^lis/i, /^pro/i]
 			},
 			defaultParseWidth: 'any'
 		}),
@@ -76,9 +63,7 @@ var o = t(475637),
 			defaultParseWidth: 'any'
 		}),
 		dayPeriod: (0, o.Z)({
-			matchPatterns: {
-				any: /^dopoledne|dop\.?|odpoledne|odp\.?|p[ůu]lnoc|poledne|r[áa]no|odpoledne|ve[čc]er|(v )?noci?/i
-			},
+			matchPatterns: { any: /^dopoledne|dop\.?|odpoledne|odp\.?|p[ůu]lnoc|poledne|r[áa]no|odpoledne|ve[čc]er|(v )?noci?/i },
 			defaultMatchWidth: 'any',
 			parsePatterns: {
 				any: {

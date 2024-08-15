@@ -34,9 +34,7 @@ function N(e) {
 			if (null != e.body && null != e.body.date_of_birth) d.wE(m.L0.NEW_USER_FLOW), d.hp(m.L0.NEW_USER_FLOW), n();
 			else {
 				var s;
-				(null == e ? void 0 : null === (s = e.body) || void 0 === s ? void 0 : s.username) != null
-					? x(h.Z.Messages.USER_SETTINGS_UPDATE_FAILURE)
-					: x(null == e ? void 0 : e.body.message);
+				(null == e ? void 0 : null === (s = e.body) || void 0 === s ? void 0 : s.username) != null ? x(h.Z.Messages.USER_SETTINGS_UPDATE_FAILURE) : x(null == e ? void 0 : e.body.message);
 			}
 		}
 		v(!1);

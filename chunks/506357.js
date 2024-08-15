@@ -87,11 +87,7 @@ function p(e) {
 				})
 			]
 		});
-	let j = (0, T.CG)(M)
-			? f.Z.Messages.GUILD_ANTIRAID_NAGBAR_RAID_MESSAGE_2_NEW.format({ guildName: x.name })
-			: (0, T.kk)(M)
-				? f.Z.Messages.GUILD_ANTIRAID_NAGBAR_DM_RAID_MESSAGE_2_NEW.format({ guildName: x.name })
-				: f.Z.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({ guildName: x.name }),
+	let j = (0, T.CG)(M) ? f.Z.Messages.GUILD_ANTIRAID_NAGBAR_RAID_MESSAGE_2_NEW.format({ guildName: x.name }) : (0, T.kk)(M) ? f.Z.Messages.GUILD_ANTIRAID_NAGBAR_DM_RAID_MESSAGE_2_NEW.format({ guildName: x.name }) : f.Z.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({ guildName: x.name }),
 		U = L && A === N.oC.MEMBER_SAFETY;
 	return (0, i.jsxs)(r.Notice, {
 		className: C.notice,

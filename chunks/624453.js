@@ -99,8 +99,7 @@ class S extends (i = u.ZP.Store) {
 				}
 				i.messages = i.messages.slice();
 				let s = o().findIndex(i.messages, (e) => e.id === n);
-				-1 === s ? i.messages.unshift((0, E.e5)(e.message)) : (i.messages[s] = (0, E.wi)(i.messages[s], e.message)),
-					(I[t] = i);
+				-1 === s ? i.messages.unshift((0, E.e5)(e.message)) : (i.messages[s] = (0, E.wi)(i.messages[s], e.message)), (I[t] = i);
 			} else {
 				if (null == i) return;
 				let e = o().findIndex(i.messages, (e) => e.id === n);

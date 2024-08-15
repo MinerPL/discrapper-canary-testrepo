@@ -26,15 +26,7 @@ let _ = 'https://media.discordapp.net',
 	T = new Set(['jpg', 'jpeg', 'png']),
 	v = (e) => {
 		var n, t, i, a;
-		return null === (a = c.Z.toURLSafe(e)) || void 0 === a
-			? void 0
-			: null === (i = a.pathname) || void 0 === i
-				? void 0
-				: null === (t = i.split('.')) || void 0 === t
-					? void 0
-					: null === (n = t.pop()) || void 0 === n
-						? void 0
-						: n.toLowerCase();
+		return null === (a = c.Z.toURLSafe(e)) || void 0 === a ? void 0 : null === (i = a.pathname) || void 0 === i ? void 0 : null === (t = i.split('.')) || void 0 === t ? void 0 : null === (n = t.pop()) || void 0 === n ? void 0 : n.toLowerCase();
 	};
 function A(e, n) {
 	l.Z.show({
@@ -59,20 +51,7 @@ function R(e, n, t) {
 		return null;
 	let l = (function (e) {
 			let n = c.Z.toURLSafe(e);
-			return null == n || n.host === f
-				? e
-				: n.origin === _
-					? ((n.host = f),
-						n.searchParams.delete('size'),
-						n.searchParams.delete('width'),
-						n.searchParams.delete('height'),
-						n.searchParams.delete('quality'),
-						n.searchParams.delete('format'),
-						n.toString())
-					: (n.searchParams.delete('width'),
-						n.searchParams.delete('height'),
-						n.searchParams.set('quality', 'lossless'),
-						n.toString());
+			return null == n || n.host === f ? e : n.origin === _ ? ((n.host = f), n.searchParams.delete('size'), n.searchParams.delete('width'), n.searchParams.delete('height'), n.searchParams.delete('quality'), n.searchParams.delete('format'), n.toString()) : (n.searchParams.delete('width'), n.searchParams.delete('height'), n.searchParams.set('quality', 'lossless'), n.toString());
 		})(e),
 		d = async () => {
 			try {
@@ -85,8 +64,7 @@ function R(e, n, t) {
 			try {
 				await E.ZP.copyImage(l), o.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPIED, { ...(0, M.v)() });
 			} catch (e) {
-				A(m.Z.Messages.ERROR_COPYING_IMAGE, e),
-					o.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, { ...(0, M.v)() });
+				A(m.Z.Messages.ERROR_COPYING_IMAGE, e), o.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, { ...(0, M.v)() });
 			}
 		};
 	return [

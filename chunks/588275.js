@@ -41,10 +41,7 @@ function _(e) {
 				selected: n === g,
 				preloadOnClick: !1,
 				contextMenu: p,
-				lowerBadge:
-					(null == r ? void 0 : r.applicationStatus) === a.wB.REJECTED
-						? (0, d.jt)({ guildJoinRequestStatus: r.applicationStatus })
-						: void 0,
+				lowerBadge: (null == r ? void 0 : r.applicationStatus) === a.wB.REJECTED ? (0, d.jt)({ guildJoinRequestStatus: r.applicationStatus }) : void 0,
 				route: h.Z5c.GUILD_MEMBER_VERIFICATION(n)
 			});
 }

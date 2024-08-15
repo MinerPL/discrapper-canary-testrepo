@@ -103,26 +103,7 @@ let el = (0, I.hQ)(),
 			},
 			onSave() {
 				if (null == e) return;
-				let {
-					name: t,
-					type: s,
-					topic: n,
-					bitrate: l,
-					userLimit: a,
-					nsfw: i,
-					flags: r,
-					rateLimitPerUser: o,
-					defaultThreadRateLimitPerUser: d,
-					threadMetadata: c,
-					defaultAutoArchiveDuration: u,
-					template: h,
-					rtcRegion: g,
-					videoQualityMode: E,
-					defaultReactionEmoji: T,
-					availableTags: p,
-					defaultSortOrder: N,
-					defaultForumLayout: _
-				} = e;
+				let { name: t, type: s, topic: n, bitrate: l, userLimit: a, nsfw: i, flags: r, rateLimitPerUser: o, defaultThreadRateLimitPerUser: d, threadMetadata: c, defaultAutoArchiveDuration: u, template: h, rtcRegion: g, videoQualityMode: E, defaultReactionEmoji: T, availableTags: p, defaultSortOrder: N, defaultForumLayout: _ } = e;
 				e.isThread() && (t = (0, j.Z)(t, !0)),
 					(0, m.wk)(e.id, {
 						name: t,
@@ -206,8 +187,7 @@ class e_ extends l.PureComponent {
 	}
 	componentDidUpdate(e) {
 		var t, s, n, l;
-		let a =
-			null !== (n = null === (t = this.props.channel) || void 0 === t ? void 0 : t.topic) && void 0 !== n ? n : '';
+		let a = null !== (n = null === (t = this.props.channel) || void 0 === t ? void 0 : t.topic) && void 0 !== n ? n : '';
 		(null !== (l = null === (s = e.channel) || void 0 === s ? void 0 : s.topic) && void 0 !== l ? l : '') !== a &&
 			a !== this.state.textTopicValue &&
 			this.setState({
@@ -228,16 +208,7 @@ class e_ extends l.PureComponent {
 	renderChannelInfo(e, t) {
 		var s, l, a, d, u, m;
 		let g, T;
-		let {
-				canManageChannels: p,
-				canSendMessages: N,
-				isThreadModerator: _,
-				canManageThread: x,
-				guild: C,
-				isForumPost: I,
-				isOwner: M,
-				showAdvancedSlowModeSetting: Z
-			} = this.props,
+		let { canManageChannels: p, canSendMessages: N, isThreadModerator: _, canManageThread: x, guild: C, isForumPost: I, isOwner: M, showAdvancedSlowModeSetting: Z } = this.props,
 			L = y.Ec.has(e.type),
 			j = e.isForumLikeChannel(),
 			D = j && (null === (s = e.availableTags) || void 0 === s ? void 0 : s.every((e) => e.moderated)),
@@ -431,9 +402,7 @@ class e_ extends l.PureComponent {
 											})
 										]
 									}),
-									e.defaultForumLayout === r.X.GRID
-										? (0, n.jsx)(Y.Z, { className: et.defaultImageView })
-										: (0, n.jsx)(Q.Z, { className: et.defaultImageView })
+									e.defaultForumLayout === r.X.GRID ? (0, n.jsx)(Y.Z, { className: et.defaultImageView }) : (0, n.jsx)(Q.Z, { className: et.defaultImageView })
 								]
 							}),
 							(0, n.jsx)(h.FormDivider, { className: i()(es.marginTop40, es.marginBottom40) })
@@ -508,11 +477,7 @@ class e_ extends l.PureComponent {
 									(0, n.jsx)(h.FormText, {
 										id: eo,
 										type: h.FormText.Types.DESCRIPTION,
-										children: j
-											? ee.Z.Messages.FORM_HELP_SLOWMODE_FORUM
-											: L
-												? ee.Z.Messages.FORM_HELP_SLOWMODE_THREAD
-												: ee.Z.Messages.FORM_HELP_SLOWMODE
+										children: j ? ee.Z.Messages.FORM_HELP_SLOWMODE_FORUM : L ? ee.Z.Messages.FORM_HELP_SLOWMODE_THREAD : ee.Z.Messages.FORM_HELP_SLOWMODE
 									}),
 									j
 										? (0, n.jsxs)(n.Fragment, {
@@ -554,8 +519,7 @@ class e_ extends l.PureComponent {
 									children: (0, n.jsx)(E.Z, {
 										page: q.ZY5.CHANNEL_SETTINGS,
 										children: (0, n.jsx)(b.Z, {
-											autoArchiveDuration:
-												null !== (m = e.threadMetadata.autoArchiveDuration) && void 0 !== m ? m : J.AX,
+											autoArchiveDuration: null !== (m = e.threadMetadata.autoArchiveDuration) && void 0 !== m ? m : J.AX,
 											guild: C,
 											channel: e,
 											onChange: this.handleAutoArchiveDurationChanged,
@@ -566,9 +530,7 @@ class e_ extends l.PureComponent {
 								(0, n.jsx)(h.FormText, {
 									className: es.marginTop8,
 									type: h.FormText.Types.DESCRIPTION,
-									children: I
-										? ee.Z.Messages.FORM_HELP_AUTO_ARCHIVE_DURATION_FORUM_POST
-										: ee.Z.Messages.FORM_HELP_AUTO_ARCHIVE_DURATION
+									children: I ? ee.Z.Messages.FORM_HELP_AUTO_ARCHIVE_DURATION_FORUM_POST : ee.Z.Messages.FORM_HELP_AUTO_ARCHIVE_DURATION
 								})
 							]
 						})
@@ -599,16 +561,10 @@ class e_ extends l.PureComponent {
 					})
 				: null,
 			ec =
-				y.Y0.has(e.type) &&
-				null != C &&
-				C.hasFeature(q.oNc.NEWS) &&
-				e.id !== (null == C ? void 0 : C.rulesChannelId) &&
-				e.id !== (null == C ? void 0 : C.publicUpdatesChannelId)
+				y.Y0.has(e.type) && null != C && C.hasFeature(q.oNc.NEWS) && e.id !== (null == C ? void 0 : C.rulesChannelId) && e.id !== (null == C ? void 0 : C.publicUpdatesChannelId)
 					? (0, n.jsx)('div', {
 							children: (0, n.jsx)(h.FormSwitch, {
-								note: ee.Z.Messages.FORM_HELP_NEWS.format({
-									documentationLink: W.Z.getArticleURL(q.BhN.ANNOUNCEMENT_CHANNELS)
-								}),
+								note: ee.Z.Messages.FORM_HELP_NEWS.format({ documentationLink: W.Z.getArticleURL(q.BhN.ANNOUNCEMENT_CHANNELS) }),
 								onChange: this.handleNewsChange,
 								value: e.type === q.d4z.GUILD_ANNOUNCEMENT,
 								hideBorder: !0,
@@ -634,22 +590,16 @@ class e_ extends l.PureComponent {
 							(0, n.jsx)(h.FormText, {
 								className: es.marginTop8,
 								type: h.FormText.Types.DESCRIPTION,
-								children: e.isForumLikeChannel()
-									? ee.Z.Messages.FORM_HELP_DEFAULT_AUTO_ARCHIVE_DURATION_FORUM_POST
-									: ee.Z.Messages.FORM_HELP_DEFAULT_AUTO_ARCHIVE_DURATION
+								children: e.isForumLikeChannel() ? ee.Z.Messages.FORM_HELP_DEFAULT_AUTO_ARCHIVE_DURATION_FORUM_POST : ee.Z.Messages.FORM_HELP_DEFAULT_AUTO_ARCHIVE_DURATION
 							})
 						]
 					})
 				: null,
 			eh = this.props.showChannelSummariesSettings
 				? (0, n.jsx)(h.FormSwitch, {
-						note: ee.Z.Messages.CHANNEL_SETTINGS_SUMMARIES_TOGGLE_DESCRIPTION.format({
-							helpdeskArticle: W.Z.getArticleURL(q.BhN.CONVERSATION_SUMMARIES)
-						}),
+						note: ee.Z.Messages.CHANNEL_SETTINGS_SUMMARIES_TOGGLE_DESCRIPTION.format({ helpdeskArticle: W.Z.getArticleURL(q.BhN.CONVERSATION_SUMMARIES) }),
 						onChange: this.handleChannelSummariesToggled,
-						value:
-							!e.hasFlag(X.zZ.SUMMARIES_DISABLED) &&
-							(null == C ? void 0 : C.hasFeature(q.oNc.SUMMARIES_ENABLED_BY_USER)),
+						value: !e.hasFlag(X.zZ.SUMMARIES_DISABLED) && (null == C ? void 0 : C.hasFeature(q.oNc.SUMMARIES_ENABLED_BY_USER)),
 						hideBorder: !0,
 						disabled: !p || !(null == C ? void 0 : C.hasFeature(q.oNc.SUMMARIES_ENABLED_BY_USER)),
 						children: (0, n.jsxs)('div', {
@@ -680,13 +630,7 @@ class e_ extends l.PureComponent {
 					})
 				: null;
 		return (
-			e.type === q.d4z.GUILD_CATEGORY
-				? ((T = ee.Z.Messages.CATEGORY_NAME), (g = 'category-name'))
-				: e.isForumPost()
-					? ((T = ee.Z.Messages.FORUM_POST_TITLE), (g = 'post-title'))
-					: L
-						? ((T = ee.Z.Messages.THREAD_NAME), (g = 'thread-name'))
-						: ((T = ee.Z.Messages.FORM_LABEL_CHANNEL_NAME), (g = 'channel-name')),
+			e.type === q.d4z.GUILD_CATEGORY ? ((T = ee.Z.Messages.CATEGORY_NAME), (g = 'category-name')) : e.isForumPost() ? ((T = ee.Z.Messages.FORUM_POST_TITLE), (g = 'post-title')) : L ? ((T = ee.Z.Messages.THREAD_NAME), (g = 'thread-name')) : ((T = ee.Z.Messages.FORM_LABEL_CHANNEL_NAME), (g = 'channel-name')),
 			(0, n.jsxs)('div', {
 				children: [
 					(0, n.jsx)(h.FormItem, {
@@ -857,10 +801,7 @@ class e_ extends l.PureComponent {
 				(0, n.jsx)(h.FormText, {
 					id: eg,
 					type: h.FormTextTypes.DESCRIPTION,
-					children: (e.isGuildStageVoice()
-						? ee.Z.Messages.FORM_HELP_USER_LIMIT_STAGE
-						: ee.Z.Messages.FORM_HELP_USER_LIMIT
-					).format()
+					children: (e.isGuildStageVoice() ? ee.Z.Messages.FORM_HELP_USER_LIMIT_STAGE : ee.Z.Messages.FORM_HELP_USER_LIMIT).format()
 				})
 			]
 		});
@@ -902,14 +843,7 @@ class e_ extends l.PureComponent {
 		let t;
 		let { theme: l } = this.props;
 		return (
-			(t =
-				e.type === q.d4z.GUILD_CATEGORY
-					? (0, u.wj)(l)
-						? s(309095)
-						: s(925442)
-					: (0, u.wj)(l)
-						? s(316491)
-						: s(301358)),
+			(t = e.type === q.d4z.GUILD_CATEGORY ? ((0, u.wj)(l) ? s(309095) : s(925442)) : (0, u.wj)(l) ? s(316491) : s(301358)),
 			(0, n.jsx)(C.Z, {
 				justify: C.Z.Justify.CENTER,
 				className: es.marginTop60,
@@ -930,17 +864,7 @@ class e_ extends l.PureComponent {
 					className: 'channel-settings-overview',
 					tag: h.FormTitleTags.H1,
 					title: ee.Z.Messages.OVERVIEW,
-					children: [
-						this.renderChannelInfo(e, t),
-						this.showVoiceSettings()
-							? (0, n.jsx)(h.FormDivider, { className: i()(es.marginTop40, es.marginBottom40) })
-							: null,
-						this.renderVoiceBitrate(e, s),
-						this.renderVideoQualityMode(e),
-						this.renderUserLimit(e),
-						this.renderRegionOverride(e),
-						this.renderJuiceImage(e)
-					]
+					children: [this.renderChannelInfo(e, t), this.showVoiceSettings() ? (0, n.jsx)(h.FormDivider, { className: i()(es.marginTop40, es.marginBottom40) }) : null, this.renderVoiceBitrate(e, s), this.renderVideoQualityMode(e), this.renderUserLimit(e), this.renderRegionOverride(e), this.renderJuiceImage(e)]
 				});
 	}
 	handleSubmit() {
@@ -975,9 +899,7 @@ class e_ extends l.PureComponent {
 			}),
 			en(this, 'handleChangeName', (e) => {
 				let { channel: t } = this.props;
-				if (null != t)
-					t.isThread() ? (e = (0, j.Z)(e, !1)) : q.TPd.LIMITED_CHANNEL_NAME.has(t.type) && (e = (0, G.Nj)(e)),
-						(0, m.pW)({ name: e });
+				if (null != t) t.isThread() ? (e = (0, j.Z)(e, !1)) : q.TPd.LIMITED_CHANNEL_NAME.has(t.type) && (e = (0, G.Nj)(e)), (0, m.pW)({ name: e });
 			}),
 			en(this, 'handleBlurName', () => {
 				let { channel: e, channelName: t } = this.props;
@@ -1075,8 +997,7 @@ class e_ extends l.PureComponent {
 				let s = (0, V.mB)(t.flags, X.zZ.HIDE_MEDIA_DOWNLOAD_OPTIONS, !e);
 				(0, m.pW)({ flags: s });
 			});
-		let l =
-			null !== (s = null === (t = this.props.channel) || void 0 === t ? void 0 : t.topic) && void 0 !== s ? s : '';
+		let l = null !== (s = null === (t = this.props.channel) || void 0 === t ? void 0 : t.topic) && void 0 !== s ? s : '';
 		this.state = {
 			textTopicValue: l,
 			richTopicValue: (0, x.JM)(l),

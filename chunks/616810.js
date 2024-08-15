@@ -41,12 +41,6 @@ class o extends r.Z {
 		(this.switchingAccounts = !0), this.reset(), this.emitPresenceUpdate(this.getState());
 	}
 	constructor(e) {
-		super(!1),
-			s(this, 'socket', void 0),
-			s(this, 'switchingAccounts', void 0),
-			s(this, 'didCommit', void 0),
-			(this.socket = e),
-			(this.switchingAccounts = !1),
-			(this.didCommit = (0, i.Z)(5, 20000, this.emitPresenceUpdate.bind(this)));
+		super(!1), s(this, 'socket', void 0), s(this, 'switchingAccounts', void 0), s(this, 'didCommit', void 0), (this.socket = e), (this.switchingAccounts = !1), (this.didCommit = (0, i.Z)(5, 20000, this.emitPresenceUpdate.bind(this)));
 	}
 }

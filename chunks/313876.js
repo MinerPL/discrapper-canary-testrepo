@@ -13,10 +13,7 @@ var a = n(442837),
 function c(e) {
 	var t, n;
 	let { author: c, inviteError: u } = e,
-		d =
-			(0, a.e7)([r.default], () => r.default.getId()) === c.id
-				? o.Z.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID
-				: o.Z.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID,
+		d = (0, a.e7)([r.default], () => r.default.getId()) === c.id ? o.Z.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID : o.Z.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID,
 		_ = (0, l.l)(null == u ? void 0 : u.code);
 	return (0, i.jsxs)(s.Z, {
 		children: [
@@ -27,8 +24,7 @@ function c(e) {
 					(0, i.jsx)(s.Z.Info, {
 						expired: !0,
 						title: null !== (t = null == _ ? void 0 : _.title) && void 0 !== t ? t : o.Z.Messages.INVITE_BUTTON_INVALID,
-						children:
-							null !== (n = null == _ ? void 0 : _.description) && void 0 !== n ? n : null == u ? void 0 : u.message
+						children: null !== (n = null == _ ? void 0 : _.description) && void 0 !== n ? n : null == u ? void 0 : u.message
 					})
 				]
 			})

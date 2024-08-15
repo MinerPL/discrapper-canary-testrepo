@@ -73,9 +73,7 @@ s.default = (e) => {
 								(0, o.jsx)(r.Text, {
 									variant: 'text-sm/normal',
 									color: 'header-secondary',
-									children: I
-										? _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_NOTICE_DESCRIPTION_PARENT
-										: _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_NOTICE_DESCRIPTION_TEEN
+									children: I ? _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_NOTICE_DESCRIPTION_PARENT : _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_NOTICE_DESCRIPTION_TEEN
 								})
 							]
 						}),
@@ -90,9 +88,7 @@ s.default = (e) => {
 								className: N.checkboxLabel,
 								children: (0, o.jsx)(r.Text, {
 									variant: 'text-xs/semibold',
-									children: I
-										? _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_DISCLAIMER_PARENT
-										: _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_DISCLAIMER_TEEN
+									children: I ? _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_DISCLAIMER_PARENT : _.Z.Messages.FAMILY_CENTER_DISCONNECT_LINK_MODAL_DISCLAIMER_TEEN
 								})
 							})
 						})

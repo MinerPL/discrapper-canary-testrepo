@@ -16,8 +16,7 @@ var t = Object.prototype.toString,
 e.exports = function (e) {
 	var s,
 		o = this;
-	if ('function' != typeof o || '[object Function]' !== t.apply(o))
-		throw TypeError('Function.prototype.bind called on incompatible ' + o);
+	if ('function' != typeof o || '[object Function]' !== t.apply(o)) throw TypeError('Function.prototype.bind called on incompatible ' + o);
 	for (var l = i(arguments, 1), u = n(0, o.length - l.length), c = [], d = 0; d < u; d++) c[d] = '$' + d;
 	if (
 		((s = Function(

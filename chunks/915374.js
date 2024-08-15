@@ -44,9 +44,7 @@ var n =
 	o =
 		(this && this.__spreadArray) ||
 		function (t, e, r) {
-			if (r || 2 == arguments.length)
-				for (var n, i = 0, o = e.length; i < o; i++)
-					(n || !(i in e)) && (!n && (n = Array.prototype.slice.call(e, 0, i)), (n[i] = e[i]));
+			if (r || 2 == arguments.length) for (var n, i = 0, o = e.length; i < o; i++) (n || !(i in e)) && (!n && (n = Array.prototype.slice.call(e, 0, i)), (n[i] = e[i]));
 			return t.concat(n || Array.prototype.slice.call(e));
 		};
 Object.defineProperty(e, '__esModule', { value: !0 }), (e.InternalIntlMessage = void 0);
@@ -54,9 +52,7 @@ var a = r(859159),
 	s = r(766989),
 	u = (function () {
 		function t(t, e) {
-			(this.locale = e),
-				'string' == typeof t ? ((this.message = t), (this.ast = (0, a.parse)(t))) : (this.ast = t),
-				(this.plainAst = void 0);
+			(this.locale = e), 'string' == typeof t ? ((this.message = t), (this.ast = (0, a.parse)(t))) : (this.ast = t), (this.plainAst = void 0);
 		}
 		return (
 			(t.prototype.formatToParts = function (t, e, r) {
@@ -67,8 +63,8 @@ var a = r(859159),
 					this.plainAst = [];
 					try {
 						for (var a, u, c, l, h, f = n(this.ast), p = f.next(); !p.done; p = f.next()) {
-							var m = p.value;
-							(c = this.plainAst).push.apply(c, o([], i(this._removeRichTags(m)), !1));
+							var d = p.value;
+							(c = this.plainAst).push.apply(c, o([], i(this._removeRichTags(d)), !1));
 						}
 					} catch (t) {
 						a = { error: t };
@@ -80,12 +76,12 @@ var a = r(859159),
 						}
 					}
 				}
-				var d = (0, s.formatToParts)(this.plainAst, this.locale, t, e, r),
+				var m = (0, s.formatToParts)(this.plainAst, this.locale, t, e, r),
 					v = '';
 				try {
-					for (var g = n(d), y = g.next(); !y.done; y = g.next()) {
-						var m = y.value;
-						v += String(m.value);
+					for (var g = n(m), y = g.next(); !y.done; y = g.next()) {
+						var d = y.value;
+						v += String(d.value);
 					}
 				} catch (t) {
 					l = { error: t };

@@ -47,9 +47,7 @@ let Z = (e) => e === S.WX.EXTERNAL,
 			u = (0, h.Q)(a, r),
 			E = (0, N.sR)(n, l);
 		return (0, s.jsxs)(o.FormItem, {
-			title: c
-				? L.Z.Messages.START_STAGE_MODAL_SET_TOPIC_SELECT_LABEL
-				: L.Z.Messages.GUILD_EVENT_LOCATION_VOICE_FIELD_LABEL,
+			title: c ? L.Z.Messages.START_STAGE_MODAL_SET_TOPIC_SELECT_LABEL : L.Z.Messages.GUILD_EVENT_LOCATION_VOICE_FIELD_LABEL,
 			className: A.options,
 			disabled: i,
 			required: !0,
@@ -251,9 +249,7 @@ function O(e) {
 								name: L.Z.Messages.STAGE_CHANNEL
 							}),
 								(0, o.openModalLazy)(async () => {
-									let { default: e } = await Promise.all([l.e('90508'), l.e('7590'), l.e('45094'), l.e('96990')]).then(
-										l.bind(l, 218613)
-									);
+									let { default: e } = await Promise.all([l.e('90508'), l.e('7590'), l.e('45094'), l.e('96990')]).then(l.bind(l, 218613));
 									return (l) =>
 										(0, s.jsx)(e, {
 											...l,

@@ -134,12 +134,7 @@ class p extends (r = o.ZP.Store) {
 			let s = h[n];
 			if (null == s || s.type !== _.z.NEW_MEMBER) return !1;
 			let o = null !== (t = s.onboardingResponses) && void 0 !== t ? t : new Set();
-			return (
-				null != a && a.length > 0 && a.forEach((e) => o.delete(e)),
-				i ? o.add(r) : o.delete(r),
-				(s.onboardingResponses = o),
-				!0
-			);
+			return null != a && a.length > 0 && a.forEach((e) => o.delete(e)), i ? o.add(r) : o.delete(r), (s.onboardingResponses = o), !0;
 		},
 		GUILD_MEMBER_UPDATE_LOCAL: function (e) {
 			let { guildId: t, roles: n, flags: r } = e;

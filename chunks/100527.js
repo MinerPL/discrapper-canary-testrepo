@@ -168,8 +168,7 @@ var n, r;
 	(r.PREMIUM_MARKETING_REVERSE_TRIAL_BANNER = 'premium marketing reverse trial banner'),
 	(r.CHANNEL_CALL_ACTION_BAR = 'channel call action bar'),
 	(r.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI = 'aggregate premium upsell modal emoji'),
-	(r.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_PROFILE_CUSTOMIZATION =
-		'aggregate premium upsell modal profile customization'),
+	(r.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_PROFILE_CUSTOMIZATION = 'aggregate premium upsell modal profile customization'),
 	(r.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_HD_STREAMING = 'aggregate premium upsell modal hd streaming'),
 	(r.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_LARGER_FILE_UPLOADS = 'aggregate premium upsell modal larger file uploads'),
 	(r.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_BOGO = 'aggregate premium upsell modal bogo'),
@@ -283,10 +282,8 @@ var n, r;
 	(r.PREMIUM_BILLING_INFO = 'premium billing info'),
 	(r.PREMIUM_SUBSCRIPTION_DETAILS = 'premium subscription details'),
 	(r.APP_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE = 'application subscription payment source with invoice'),
-	(r.GUILD_BOOST_SLOT_CANCELLATION_MODAL_CURRENT_INVOICE_PREVIEW =
-		'guild boost slot cancellation modal current invoice preview'),
-	(r.GUILD_BOOST_SLOT_CANCELLATION_MODAL_RENEWAL_INVOICE_PREVIEW =
-		'guild boost slot cancellation modal renewal invoice preview'),
+	(r.GUILD_BOOST_SLOT_CANCELLATION_MODAL_CURRENT_INVOICE_PREVIEW = 'guild boost slot cancellation modal current invoice preview'),
+	(r.GUILD_BOOST_SLOT_CANCELLATION_MODAL_RENEWAL_INVOICE_PREVIEW = 'guild boost slot cancellation modal renewal invoice preview'),
 	(r.GUILD_BOOSTING_REVIEW_PRORATED = 'guild boosting review prorated'),
 	(r.GUILD_BOOSTING_REVIEW_RENEWAL = 'guild boosting review renewal'),
 	(r.GUILD_ROLE_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE = 'guild role subscription payment source with invoice'),
@@ -328,10 +325,8 @@ var n, r;
 	(r.SEARCH_MEMBERS = 'search members'),
 	(r.POLL_VOTES = 'poll votes'),
 	(r.YOU_SCREEN = 'you screen'),
-	(r.BILLING_PAUSED_SUBSCRIPTION_INVOICE_RESUME_PREVIEW =
-		'billing payment modal paused subscription resume invoice preview'),
-	(r.BILLING_PAUSED_SUBSCRIPTION_INVOICE_RENEWAL_PREVIEW =
-		'billing payment modal paused subscription renewal invoice preview'),
+	(r.BILLING_PAUSED_SUBSCRIPTION_INVOICE_RESUME_PREVIEW = 'billing payment modal paused subscription resume invoice preview'),
+	(r.BILLING_PAUSED_SUBSCRIPTION_INVOICE_RENEWAL_PREVIEW = 'billing payment modal paused subscription renewal invoice preview'),
 	(r.CLAN_GUILD_PROFILE = 'clan guild profile'),
 	(r.CLAN_TAG = 'clan tag'),
 	(r.CLAN_DISCOVERY = 'clan discovery'),

@@ -37,22 +37,7 @@ let L = l.AvatarSizes.SIZE_80,
 	C = (0, d.y9)(L),
 	x = g.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 function A(e) {
-	let {
-			user: t,
-			displayProfile: a,
-			avatarSrc: i,
-			hasBanner: d,
-			status: g,
-			isMobile: A,
-			guildId: p,
-			channelId: R,
-			onClose: y,
-			disableUserProfileLink: Z,
-			profileType: U,
-			animateOnHover: b,
-			hasProfileEffect: G,
-			statusTooltipDelay: k
-		} = e,
+	let { user: t, displayProfile: a, avatarSrc: i, hasBanner: d, status: g, isMobile: A, guildId: p, channelId: R, onClose: y, disableUserProfileLink: Z, profileType: U, animateOnHover: b, hasProfileEffect: G, statusTooltipDelay: k } = e,
 		{ theme: W } = (0, T.z)(),
 		D = s.useContext(_.AnalyticsContext),
 		j = t.isNonUserBot() && !t.isClyde(),

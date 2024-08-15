@@ -49,13 +49,7 @@ class T extends s.Component {
 		let r = l.PhoneCallIcon,
 			c = !1;
 		return (
-			s
-				? a
-					? ((e = C.Z.Messages.LEAVE_CALL), (r = l.PhoneHangUpIcon))
-					: (e = C.Z.Messages.JOIN_CALL)
-				: o
-					? ((e = C.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (t = l.Tooltip.Colors.RED), (c = !0))
-					: (e = C.Z.Messages.START_VOICE_CALL),
+			s ? (a ? ((e = C.Z.Messages.LEAVE_CALL), (r = l.PhoneHangUpIcon)) : (e = C.Z.Messages.JOIN_CALL)) : o ? ((e = C.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (t = l.Tooltip.Colors.RED), (c = !0)) : (e = C.Z.Messages.START_VOICE_CALL),
 			(0, i.jsx)(h.Z.Icon, {
 				icon: r,
 				tooltip: e,
@@ -66,18 +60,7 @@ class T extends s.Component {
 		);
 	}
 	render() {
-		let {
-				className: e,
-				draggableClassName: t,
-				locked: n,
-				channel: s,
-				channelName: a,
-				guild: r,
-				onMouseDown: c,
-				onContextMenu: d,
-				isPreviewingInGame: u,
-				disableDragIndicator: f
-			} = this.props,
+		let { className: e, draggableClassName: t, locked: n, channel: s, channelName: a, guild: r, onMouseDown: c, onContextMenu: d, isPreviewingInGame: u, disableDragIndicator: f } = this.props,
 			{ showOpacitySlider: _ } = this.state;
 		return _ && !n
 			? (0, i.jsxs)(S.ZP.Bar, {

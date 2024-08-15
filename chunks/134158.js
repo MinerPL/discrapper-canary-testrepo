@@ -22,25 +22,8 @@ n.d(t, {
 	n(653041);
 t.Z = class e {
 	mergeProps(e) {
-		let {
-			sectionHeight: t,
-			rowHeight: n,
-			footerHeight: r,
-			listHeaderHeight: i,
-			paddingTop: a,
-			paddingBottom: s,
-			sections: o,
-			getAnchorId: l
-		} = e;
-		(this.sections = o),
-			(this.sectionHeight = t),
-			(this.rowHeight = n),
-			(this.footerHeight = r),
-			(this.listHeaderHeight = i),
-			(this.uniform = 'number' == typeof n),
-			(this.paddingTop = a),
-			(this.paddingBottom = s),
-			(this.getAnchorId = null != l ? l : this.getAnchorId);
+		let { sectionHeight: t, rowHeight: n, footerHeight: r, listHeaderHeight: i, paddingTop: a, paddingBottom: s, sections: o, getAnchorId: l } = e;
+		(this.sections = o), (this.sectionHeight = t), (this.rowHeight = n), (this.footerHeight = r), (this.listHeaderHeight = i), (this.uniform = 'number' == typeof n), (this.paddingTop = a), (this.paddingBottom = s), (this.getAnchorId = null != l ? l : this.getAnchorId);
 	}
 	getHeight() {
 		let e = this.paddingTop + this.getListHeaderHeight(),
@@ -169,14 +152,6 @@ t.Z = class e {
 		return [r, null != t ? this.getHeightForRow(e, t) : this.getHeightForSection(i)];
 	}
 	constructor() {
-		r(this, 'sectionHeight', 0),
-			r(this, 'rowHeight', 0),
-			r(this, 'footerHeight', 0),
-			r(this, 'listHeaderHeight', 0),
-			r(this, 'uniform', !1),
-			r(this, 'paddingBottom', 0),
-			r(this, 'paddingTop', 0),
-			r(this, 'sections', []),
-			r(this, 'getAnchorId', () => void 0);
+		r(this, 'sectionHeight', 0), r(this, 'rowHeight', 0), r(this, 'footerHeight', 0), r(this, 'listHeaderHeight', 0), r(this, 'uniform', !1), r(this, 'paddingBottom', 0), r(this, 'paddingTop', 0), r(this, 'sections', []), r(this, 'getAnchorId', () => void 0);
 	}
 };

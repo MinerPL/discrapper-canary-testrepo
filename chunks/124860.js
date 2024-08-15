@@ -21,9 +21,7 @@ var n = s(735250),
 function f(e) {
 	var t, s;
 	let { mfaChallenge: h, mfaFinish: f, onEarlyClose: m, onClose: S, width: _ = 440 } = e,
-		[g, x] = l.useState(
-			null !== (s = null === (t = h.methods[0]) || void 0 === t ? void 0 : t.type) && void 0 !== s ? s : 'select'
-		),
+		[g, x] = l.useState(null !== (s = null === (t = h.methods[0]) || void 0 === t ? void 0 : t.type) && void 0 !== s ? s : 'select'),
 		[E, C] = l.useState(g),
 		p = async (e) => {
 			let { mfaType: t, data: s } = e;

@@ -12,8 +12,7 @@ function o() {
 	switch ((0, a.getPlatform)()) {
 		case a.PlatformTypes.WINDOWS:
 			let e = 'x86';
-			if ((null != window.DiscordNative && (e = window.DiscordNative.os.arch), 'x86' === e || 'ia32' === e))
-				return s.QR$.WIN32;
+			if ((null != window.DiscordNative && (e = window.DiscordNative.os.arch), 'x86' === e || 'ia32' === e)) return s.QR$.WIN32;
 			return s.QR$.WIN64;
 		case a.PlatformTypes.OSX:
 			return s.QR$.MACOS;

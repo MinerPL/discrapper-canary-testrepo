@@ -76,35 +76,15 @@ class ec extends a.PureComponent {
 		return null != this.props.channel;
 	}
 	componentDidMount() {
-		let {
-			sku: e,
-			storeListing: t,
-			isFetchingEntitlements: n,
-			shouldFetchStatistics: i,
-			didFetchEntitlements: a,
-			location: s,
-			fetchStoreListing: r
-		} = this.props;
+		let { sku: e, storeListing: t, isFetchingEntitlements: n, shouldFetchStatistics: i, didFetchEntitlements: a, location: s, fetchStoreListing: r } = this.props;
 		if (null != s.state) {
 			let { analyticsSource: e, analyticsProperties: t } = s.state;
 			(this._analyticsSource = e), (this._extraAnalyticsProperties = t);
 		} else this._analyticsSource = ea.SaU;
-		(null == t || t.isSlimDirectoryVersion()) && r(),
-			null != e && (!n && !a && (0, E.yD)(e.applicationId), i && u.Z.wait(() => (0, _.$)(e.applicationId))),
-			this.trackViewed(),
-			this.replaceUrlWithSlug();
+		(null == t || t.isSlimDirectoryVersion()) && r(), null != e && (!n && !a && (0, E.yD)(e.applicationId), i && u.Z.wait(() => (0, _.$)(e.applicationId))), this.trackViewed(), this.replaceUrlWithSlug();
 	}
 	componentDidUpdate(e) {
-		let {
-			locale: t,
-			sku: n,
-			shouldFetchStatistics: i,
-			skuId: a,
-			storeListingId: s,
-			slug: r,
-			storeListing: l,
-			fetchStoreListing: o
-		} = this.props;
+		let { locale: t, sku: n, shouldFetchStatistics: i, skuId: a, storeListingId: s, slug: r, storeListing: l, fetchStoreListing: o } = this.props;
 		if (
 			(l !== e.storeListing &&
 				null != l &&
@@ -118,9 +98,7 @@ class ec extends a.PureComponent {
 			if (null == n) throw Error('Unexpected missing sku');
 			u.Z.wait(() => (0, _.$)(n.applicationId));
 		}
-		(a !== e.skuId || s !== e.storeListingId) && (this._trackedViewed = !1),
-			this.trackViewed(),
-			this.replaceUrlWithSlug();
+		(a !== e.skuId || s !== e.storeListingId) && (this._trackedViewed = !1), this.trackViewed(), this.replaceUrlWithSlug();
 	}
 	componentWillUnmount() {
 		this.showCopyLinkTextTimeout.stop();
@@ -199,10 +177,7 @@ class ec extends a.PureComponent {
 			let t = n.find((e) => e.id === i);
 			if (null != t) {
 				let { width: n, height: i } = t;
-				if (null == n || null == i)
-					throw Error(
-						'ApplicationStoreListing.parseMediaItems: Video and Image assets must have a width and height defined'
-					);
+				if (null == n || null == i) throw Error('ApplicationStoreListing.parseMediaItems: Video and Image assets must have a width and height defined');
 				return t.mimeType.startsWith('video/')
 					? {
 							type: ea.s9s.VIDEO,
@@ -314,8 +289,7 @@ class ec extends a.PureComponent {
 		if (null == e || null == t || null == n) return null;
 		let a = [],
 			s = n.getSplashURL(1024);
-		null != s && a.push(s),
-			null != t.headerLogoLightTheme && a.unshift((0, V._W)(n.id, t.headerLogoLightTheme, 1024, 'jpg'));
+		null != s && a.push(s), null != t.headerLogoLightTheme && a.unshift((0, V._W)(n.id, t.headerLogoLightTheme, 1024, 'jpg'));
 		let r = N.Z.Product({
 				name: e.name,
 				description: null != e.summary && '' !== e.summary ? e.summary : t.tagline,
@@ -336,17 +310,7 @@ class ec extends a.PureComponent {
 	renderSmall(e, t, n) {
 		return (0, i.jsxs)('div', {
 			className: r()(el.listing, el.listingSmall),
-			children: [
-				this.renderHeaderAssets(e, t, n),
-				this.renderCarousel(e, t),
-				this.renderWhyYouMightLikeThis(n, t),
-				this.renderDescription(e, t, n),
-				this.renderVerifiedGuildInvite(t, n),
-				this.renderFeatures(n),
-				this.renderSystemRequirements(n),
-				this.renderApplicationContentRating(n),
-				this.renderApplicationLegalInfo(n)
-			]
+			children: [this.renderHeaderAssets(e, t, n), this.renderCarousel(e, t), this.renderWhyYouMightLikeThis(n, t), this.renderDescription(e, t, n), this.renderVerifiedGuildInvite(t, n), this.renderFeatures(n), this.renderSystemRequirements(n), this.renderApplicationContentRating(n), this.renderApplicationLegalInfo(n)]
 		});
 	}
 	renderLarge(e, t, n) {
@@ -362,13 +326,7 @@ class ec extends a.PureComponent {
 						children: [
 							(0, i.jsxs)('div', {
 								className: el.leftColumn,
-								children: [
-									this.renderWhyYouMightLikeThis(n, t),
-									this.renderDescription(e, t, n),
-									this.renderSystemRequirements(n),
-									this.renderApplicationContentRating(n),
-									this.renderApplicationLegalInfo(n)
-								]
+								children: [this.renderWhyYouMightLikeThis(n, t), this.renderDescription(e, t, n), this.renderSystemRequirements(n), this.renderApplicationContentRating(n), this.renderApplicationLegalInfo(n)]
 							}),
 							(0, i.jsxs)('div', {
 								className: el.rightColumn,
@@ -401,13 +359,7 @@ class ec extends a.PureComponent {
 						children: this.renderListing()
 					});
 			return (0, i.jsxs)(a.Fragment, {
-				children: [
-					(0, i.jsx)(A.yY, { location: e.name }),
-					this.renderJsonLD(),
-					this.renderHeader(e, t),
-					(0, i.jsx)(Q.Z, { game: e }),
-					n
-				]
+				children: [(0, i.jsx)(A.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), (0, i.jsx)(Q.Z, { game: e }), n]
 			});
 		}
 		return r
@@ -427,12 +379,7 @@ class ec extends a.PureComponent {
 					]
 				})
 			: (0, i.jsxs)('div', {
-					children: [
-						(0, i.jsx)(A.yY, { location: e.name }),
-						this.renderJsonLD(),
-						this.renderHeader(e, t),
-						this.renderListing()
-					]
+					children: [(0, i.jsx)(A.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), this.renderListing()]
 				});
 	}
 	constructor(...e) {

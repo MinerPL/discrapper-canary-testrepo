@@ -99,20 +99,17 @@ var t = {
 	paymentConditions: 'Zahlungsbedingungen',
 	openApp: 'App öffnen',
 	'voucher.readInstructions': 'Anweisungen lesen',
-	'voucher.introduction':
-		'Vielen Dank für Ihren Kauf. Bitte schließen Sie Ihre Zahlung unter Verwendung des folgenden Gutscheins ab.',
+	'voucher.introduction': 'Vielen Dank für Ihren Kauf. Bitte schließen Sie Ihre Zahlung unter Verwendung des folgenden Gutscheins ab.',
 	'voucher.expirationDate': 'Gültig bis',
 	'voucher.alternativeReference': 'Alternative Referenz',
 	'dragonpay.voucher.non.bank.selectField.placeholder': 'Anbieter auswählen',
 	'dragonpay.voucher.bank.selectField.placeholder': 'Bank auswählen',
 	'voucher.paymentReferenceLabel': 'Zahlungsreferenz',
 	'voucher.surcharge': 'Inkl. % @Zuschlag',
-	'voucher.introduction.doku':
-		'Vielen Dank für Ihren Kauf. Bitte schließen Sie Ihre Zahlung unter Verwendung der folgenden Informationen ab.',
+	'voucher.introduction.doku': 'Vielen Dank für Ihren Kauf. Bitte schließen Sie Ihre Zahlung unter Verwendung der folgenden Informationen ab.',
 	'voucher.shopperName': 'Name des Käufers',
 	'voucher.merchantName': 'Händler',
-	'voucher.introduction.econtext':
-		'Vielen Dank für Ihren Kauf. Bitte schließen Sie Ihre Zahlung unter Verwendung der folgenden Informationen ab.',
+	'voucher.introduction.econtext': 'Vielen Dank für Ihren Kauf. Bitte schließen Sie Ihre Zahlung unter Verwendung der folgenden Informationen ab.',
 	'voucher.telephoneNumber': 'Telefonnummer',
 	'voucher.shopperReference': 'Kundenreferenz',
 	'voucher.collectionInstitutionNumber': 'Nummer der Zahlungsannahmestelle',
@@ -138,11 +135,9 @@ var t = {
 	'creditCard.encryptedPassword.placeholder': '12',
 	'creditCard.encryptedPassword.invalid': 'Ungültiges Passwort',
 	'creditCard.taxNumber': 'Geburtsdatum des Karteninhabers oder der Unternehmensregistrierungsnummer',
-	'creditCard.taxNumber.label':
-		'Geburtsdatum des Karteninhabers (JJMMTT) oder Unternehmensregistrierungsnummer (10-stellig)',
+	'creditCard.taxNumber.label': 'Geburtsdatum des Karteninhabers (JJMMTT) oder Unternehmensregistrierungsnummer (10-stellig)',
 	'creditCard.taxNumber.labelAlt': 'Unternehmensregistrierungsnummer (10-stellig)',
-	'creditCard.taxNumber.invalid':
-		'Ungültiges Geburtsdatum des Karteninhabers oder ungültige Unternehmensregistrierungsnummer',
+	'creditCard.taxNumber.invalid': 'Ungültiges Geburtsdatum des Karteninhabers oder ungültige Unternehmensregistrierungsnummer',
 	'storedPaymentMethod.disable.button': 'Entfernen',
 	'storedPaymentMethod.disable.confirmation': 'Gespeicherte Zahlungsmethode entfernen',
 	'storedPaymentMethod.disable.confirmButton': 'Ja, entfernen',
@@ -175,8 +170,7 @@ var t = {
 	'blik.invalid': '6 Zahlen eingeben',
 	'blik.code': '6-stelliger Code',
 	'blik.help': 'Rufen Sie den Code über Ihre Banking-App ab.',
-	'swish.pendingMessage':
-		'Es kann sein, dass der Status bis zu 10 Minuten nach dem Scan \u201Eausstehend\u201C lautet. Wenn Sie währenddessen einen neuen Zahlungsversuch unternehmen, kann es sein, dass Ihnen mehrere Beträge in Rechnung gestellt werden.',
+	'swish.pendingMessage': 'Es kann sein, dass der Status bis zu 10 Minuten nach dem Scan \u201Eausstehend\u201C lautet. Wenn Sie währenddessen einen neuen Zahlungsversuch unternehmen, kann es sein, dass Ihnen mehrere Beträge in Rechnung gestellt werden.',
 	'field.valid': 'Feld gültig',
 	'field.invalid': 'Feld ungültig',
 	'error.va.gen.01': 'Feld nicht ausgefüllt',
@@ -212,20 +206,16 @@ var t = {
 	'bankTransfer.iban': 'IBAN',
 	'bankTransfer.bic': 'BIC',
 	'bankTransfer.reference': 'Referenz',
-	'bankTransfer.introduction':
-		'Fortfahren, um eine neue Banküberweisungszahlung zu erstellen. Sie können die Informationen auf dem nächsten Bildschirm verwenden, um diese Zahlung abzuschließen.',
-	'bankTransfer.instructions':
-		'Vielen Dank für Ihren Kauf. Bitte schließen Sie Ihre Zahlung unter Verwendung der folgenden Informationen ab.',
+	'bankTransfer.introduction': 'Fortfahren, um eine neue Banküberweisungszahlung zu erstellen. Sie können die Informationen auf dem nächsten Bildschirm verwenden, um diese Zahlung abzuschließen.',
+	'bankTransfer.instructions': 'Vielen Dank für Ihren Kauf. Bitte schließen Sie Ihre Zahlung unter Verwendung der folgenden Informationen ab.',
 	'bacs.accountHolderName': 'Name des Bankkontoinhabers',
 	'bacs.accountHolderName.invalid': 'Ungültiger Bankkontoinhabername',
 	'bacs.accountNumber': 'Bankkontonummer',
 	'bacs.accountNumber.invalid': 'Ungültige Bankkontonummer',
 	'bacs.bankLocationId': 'Bankleitzahl',
 	'bacs.bankLocationId.invalid': 'Ungültige Bankleitzahl',
-	'bacs.consent.amount':
-		'Ich bin damit einverstanden, dass der oben genannte Betrag von meinem Bankkonto abgebucht wird.',
-	'bacs.consent.account':
-		'Ich bestätige, dass das Konto unter meinem Namen läuft und ich der einzige erforderliche Unterzeichner bin, um die Lastschrift für dieses Konto zu autorisieren.',
+	'bacs.consent.amount': 'Ich bin damit einverstanden, dass der oben genannte Betrag von meinem Bankkonto abgebucht wird.',
+	'bacs.consent.account': 'Ich bestätige, dass das Konto unter meinem Namen läuft und ich der einzige erforderliche Unterzeichner bin, um die Lastschrift für dieses Konto zu autorisieren.',
 	edit: 'Bearbeiten',
 	'bacs.confirm': 'Bestätigen und bezahlen',
 	'bacs.result.introduction': 'Laden Sie Ihre Lastschriftanweisung (DDI/Einzugsermächtigung) herunter',
@@ -258,8 +248,7 @@ var t = {
 	'upi.vpaWaitingMessage': 'Öffnen Sie Ihre UPI-App, um die Zahlung zu bestätigen.',
 	'upi.modeSelection': 'Legen Sie fest, wie Sie UPI nutzen möchten.',
 	'onlineBanking.termsAndConditions': 'Wenn Sie fortfahren, stimmen Sie den %#Allgemeinen Geschäftsbedingungen%# zu',
-	'onlineBankingPL.termsAndConditions':
-		'Indem Sie fortfahren, stimmen Sie den %#Vorschriften%# und der %#Auskunftspflicht%# von Przelewy24 zu',
+	'onlineBankingPL.termsAndConditions': 'Indem Sie fortfahren, stimmen Sie den %#Vorschriften%# und der %#Auskunftspflicht%# von Przelewy24 zu',
 	'ctp.loading.poweredByCtp': 'Unterstützt von Click to Pay',
 	'ctp.loading.intro': 'Wir überprüfen gerade, ob Sie bereits gespeicherte Click-to-Pay-Karten haben\u2026',
 	'ctp.login.title': 'Weiter zu Click to Pay',
@@ -287,29 +276,21 @@ var t = {
 	'ctp.infoPopup.benefit2': 'Verfügbar bei Händlern auf der ganzen Welt',
 	'ctp.infoPopup.benefit3': 'Nach einmaliger Einrichtung bezahlen Sie in Zukunft mit nur einem Klick.',
 	'ctp.errors.AUTH_INVALID': 'Authentifizierung ungültig',
-	'ctp.errors.NOT_FOUND':
-		'Kein Konto gefunden, geben Sie eine gültige E-Mail-Adresse ein oder fahren Sie mit der manuellen Karteneingabe fort.',
+	'ctp.errors.NOT_FOUND': 'Kein Konto gefunden, geben Sie eine gültige E-Mail-Adresse ein oder fahren Sie mit der manuellen Karteneingabe fort.',
 	'ctp.errors.ID_FORMAT_UNSUPPORTED': 'Format wird nicht unterstützt',
 	'ctp.errors.FRAUD': 'Das Benutzerkonto wurde gesperrt oder deaktiviert',
 	'ctp.errors.CONSUMER_ID_MISSING': 'Die Identität des Verbrauchers fehlt in der Anfrage',
 	'ctp.errors.ACCT_INACCESSIBLE': 'Dieses Konto ist derzeit nicht verfügbar; es kann z.\xA0B. gesperrt sein.',
 	'ctp.errors.CODE_INVALID': 'Falscher Verifizierungscode',
 	'ctp.errors.CODE_EXPIRED': 'Dieser Code ist abgelaufen',
-	'ctp.errors.RETRIES_EXCEEDED':
-		'Das Limit für die Anzahl der Wiederholungen für das Generieren von Einmalpasswörtern (OTPs) wurde überschritten',
+	'ctp.errors.RETRIES_EXCEEDED': 'Das Limit für die Anzahl der Wiederholungen für das Generieren von Einmalpasswörtern (OTPs) wurde überschritten',
 	'ctp.errors.OTP_SEND_FAILED': 'Das Einmalpasswort (OTP) konnte nicht an den Empfänger gesendet werden',
-	'ctp.errors.REQUEST_TIMEOUT':
-		'Ein Fehler ist aufgetreten, versuchen Sie es erneut oder nutzen Sie die manuelle Karteneingabe.',
-	'ctp.errors.UNKNOWN_ERROR':
-		'Ein Fehler ist aufgetreten, versuchen Sie es erneut oder nutzen Sie die manuelle Karteneingabe.',
-	'ctp.errors.SERVICE_ERROR':
-		'Ein Fehler ist aufgetreten, versuchen Sie es erneut oder nutzen Sie die manuelle Karteneingabe.',
-	'ctp.errors.SERVER_ERROR':
-		'Ein Fehler ist aufgetreten, versuchen Sie es erneut oder nutzen Sie die manuelle Karteneingabe.',
-	'ctp.errors.INVALID_PARAMETER':
-		'Ein Fehler ist aufgetreten, versuchen Sie es erneut oder nutzen Sie die manuelle Karteneingabe.',
-	'ctp.errors.AUTH_ERROR':
-		'Ein Fehler ist aufgetreten, versuchen Sie es erneut oder nutzen Sie die manuelle Karteneingabe.',
+	'ctp.errors.REQUEST_TIMEOUT': 'Ein Fehler ist aufgetreten, versuchen Sie es erneut oder nutzen Sie die manuelle Karteneingabe.',
+	'ctp.errors.UNKNOWN_ERROR': 'Ein Fehler ist aufgetreten, versuchen Sie es erneut oder nutzen Sie die manuelle Karteneingabe.',
+	'ctp.errors.SERVICE_ERROR': 'Ein Fehler ist aufgetreten, versuchen Sie es erneut oder nutzen Sie die manuelle Karteneingabe.',
+	'ctp.errors.SERVER_ERROR': 'Ein Fehler ist aufgetreten, versuchen Sie es erneut oder nutzen Sie die manuelle Karteneingabe.',
+	'ctp.errors.INVALID_PARAMETER': 'Ein Fehler ist aufgetreten, versuchen Sie es erneut oder nutzen Sie die manuelle Karteneingabe.',
+	'ctp.errors.AUTH_ERROR': 'Ein Fehler ist aufgetreten, versuchen Sie es erneut oder nutzen Sie die manuelle Karteneingabe.',
 	'paymentMethodsList.aria.label': 'Wählen Sie eine Zahlungsmethode aus',
 	'companyDetails.name.invalid': 'Geben Sie den Firmennamen ein',
 	'companyDetails.registrationNumber.invalid': 'Geben Sie die Registrierungsnummer ein',

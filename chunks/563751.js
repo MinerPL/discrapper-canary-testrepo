@@ -7,10 +7,7 @@ t.exports = function (t, e) {
 		var r,
 			n = e.getAnchorKey(),
 			o = e.getAnchorOffset();
-		if (o > 0)
-			return (r = t.getBlockForKey(n).getEntityAt(o - 1)) !== t.getBlockForKey(n).getEntityAt(o)
-				? null
-				: i(t.getEntityMap(), r);
+		if (o > 0) return (r = t.getBlockForKey(n).getEntityAt(o - 1)) !== t.getBlockForKey(n).getEntityAt(o) ? null : i(t.getEntityMap(), r);
 		return null;
 	}
 	var a = e.getStartKey(),

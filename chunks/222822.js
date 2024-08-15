@@ -2,13 +2,7 @@ var r = n(458340),
 	i = n(957578).Buffer,
 	a = n(764900);
 function s(e, t, n, s) {
-	a.call(this),
-		(this._cipher = new r.AES(t)),
-		(this._prev = i.from(n)),
-		(this._cache = i.allocUnsafe(0)),
-		(this._secCache = i.allocUnsafe(0)),
-		(this._decrypt = s),
-		(this._mode = e);
+	a.call(this), (this._cipher = new r.AES(t)), (this._prev = i.from(n)), (this._cache = i.allocUnsafe(0)), (this._secCache = i.allocUnsafe(0)), (this._decrypt = s), (this._mode = e);
 }
 n(689118)(s, a),
 	(s.prototype._update = function (e) {

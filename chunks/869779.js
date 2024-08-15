@@ -56,25 +56,10 @@ class w extends l.PureComponent {
 	componentDidUpdate(e) {
 		let { formState: t, section: s } = e,
 			{ formState: n, section: l, canManageRoles: a, canManageChannels: i, canManageWebhooks: r } = this.props;
-		(i || a || r) &&
-		(n !== j.QZA.CLOSED || n === t) &&
-		(a || l !== j.CoT.PERMISSIONS) &&
-		(r || l !== j.CoT.INTEGRATIONS)
-			? l !== s && y(l, s)
-			: (0, d.xf)();
+		(i || a || r) && (n !== j.QZA.CLOSED || n === t) && (a || l !== j.CoT.PERMISSIONS) && (r || l !== j.CoT.INTEGRATIONS) ? l !== s && y(l, s) : (0, d.xf)();
 	}
 	render() {
-		let {
-			theme: e,
-			sidebarTheme: t,
-			section: s,
-			channel: l,
-			category: a,
-			canManageRoles: r,
-			canManageChannels: h,
-			canDeleteChannels: T,
-			canManageWebhooks: p
-		} = this.props;
+		let { theme: e, sidebarTheme: t, section: s, channel: l, category: a, canManageRoles: r, canManageChannels: h, canDeleteChannels: T, canManageWebhooks: p } = this.props;
 		return null == l
 			? null
 			: (0, n.jsx)(c.ZP, {
@@ -84,25 +69,11 @@ class w extends l.PureComponent {
 					onSetSection: o.zc,
 					onClose: d.xf,
 					sections: (function (e) {
-						let {
-								channel: t,
-								category: s,
-								canManageRoles: l,
-								canManageChannels: a,
-								canDeleteChannels: r,
-								canManageWebhooks: c
-							} = e,
+						let { channel: t, category: s, canManageRoles: l, canManageChannels: a, canDeleteChannels: r, canManageWebhooks: c } = e,
 							h = (0, g.KS)(t),
 							{ GUILD_CATEGORY: T } = j.d4z,
 							p = N.Ec.has(t.type),
-							f =
-								t.type === T
-									? b.Z.Messages.DELETE_CATEGORY
-									: p
-										? t.isForumPost()
-											? b.Z.Messages.DELETE_FORUM_POST
-											: b.Z.Messages.DELETE_THREAD
-										: b.Z.Messages.DELETE_CHANNEL;
+							f = t.type === T ? b.Z.Messages.DELETE_CATEGORY : p ? (t.isForumPost() ? b.Z.Messages.DELETE_FORUM_POST : b.Z.Messages.DELETE_THREAD) : b.Z.Messages.DELETE_CHANNEL;
 						return [
 							{
 								section: u.ID.HEADER,

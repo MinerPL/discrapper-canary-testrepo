@@ -9,7 +9,7 @@ n.d(t, {
 		return h;
 	},
 	WC: function () {
-		return I;
+		return m;
 	},
 	aW: function () {
 		return _;
@@ -36,7 +36,7 @@ n.d(t, {
 		return i;
 	},
 	z8: function () {
-		return m;
+		return I;
 	}
 }),
 	n(411104);
@@ -79,18 +79,7 @@ function E(e) {
 			throw Error('Unknown frame rate: '.concat(e));
 	}
 }
-((s = r || (r = {}))[(s.RESOLUTION_480 = 480)] = 'RESOLUTION_480'),
-	(s[(s.RESOLUTION_720 = 720)] = 'RESOLUTION_720'),
-	(s[(s.RESOLUTION_1080 = 1080)] = 'RESOLUTION_1080'),
-	(s[(s.RESOLUTION_1440 = 1440)] = 'RESOLUTION_1440'),
-	(s[(s.RESOLUTION_SOURCE = 0)] = 'RESOLUTION_SOURCE'),
-	((o = i || (i = {}))[(o.FPS_5 = 5)] = 'FPS_5'),
-	(o[(o.FPS_15 = 15)] = 'FPS_15'),
-	(o[(o.FPS_30 = 30)] = 'FPS_30'),
-	(o[(o.FPS_60 = 60)] = 'FPS_60'),
-	((l = a || (a = {}))[(l.PRESET_VIDEO = 1)] = 'PRESET_VIDEO'),
-	(l[(l.PRESET_DOCUMENTS = 2)] = 'PRESET_DOCUMENTS'),
-	(l[(l.PRESET_CUSTOM = 3)] = 'PRESET_CUSTOM');
+((s = r || (r = {}))[(s.RESOLUTION_480 = 480)] = 'RESOLUTION_480'), (s[(s.RESOLUTION_720 = 720)] = 'RESOLUTION_720'), (s[(s.RESOLUTION_1080 = 1080)] = 'RESOLUTION_1080'), (s[(s.RESOLUTION_1440 = 1440)] = 'RESOLUTION_1440'), (s[(s.RESOLUTION_SOURCE = 0)] = 'RESOLUTION_SOURCE'), ((o = i || (i = {}))[(o.FPS_5 = 5)] = 'FPS_5'), (o[(o.FPS_15 = 15)] = 'FPS_15'), (o[(o.FPS_30 = 30)] = 'FPS_30'), (o[(o.FPS_60 = 60)] = 'FPS_60'), ((l = a || (a = {}))[(l.PRESET_VIDEO = 1)] = 'PRESET_VIDEO'), (l[(l.PRESET_DOCUMENTS = 2)] = 'PRESET_DOCUMENTS'), (l[(l.PRESET_CUSTOM = 3)] = 'PRESET_CUSTOM');
 let f = {
 		2: [
 			{
@@ -224,16 +213,9 @@ function p(e, t) {
 		}
 	};
 }
-let I = [p(720), p(1080), p(1440), p(0, () => d.Z.Messages.SCREENSHARE_SOURCE)],
-	m = [p(720), p(1080), p(1440)],
-	T = (e) =>
-		0 === e
-			? d.Z.Messages.SCREENSHARE_SOURCE
-			: d.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({ resolution: e }),
+let m = [p(720), p(1080), p(1440), p(0, () => d.Z.Messages.SCREENSHARE_SOURCE)],
+	I = [p(720), p(1080), p(1440)],
+	T = (e) => (0 === e ? d.Z.Messages.SCREENSHARE_SOURCE : d.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({ resolution: e })),
 	g = [p(480, () => T(480)), p(720, () => T(720)), p(1080, () => T(1080)), p(1440, () => T(1440)), p(0, () => T(0))],
 	S = [p(15), p(30), p(60)],
-	A = [
-		p(15, () => d.Z.Messages.STREAM_FPS_OPTION.format({ value: 15 })),
-		p(30, () => d.Z.Messages.STREAM_FPS_OPTION.format({ value: 30 })),
-		p(60, () => d.Z.Messages.STREAM_FPS_OPTION.format({ value: 60 }))
-	];
+	A = [p(15, () => d.Z.Messages.STREAM_FPS_OPTION.format({ value: 15 })), p(30, () => d.Z.Messages.STREAM_FPS_OPTION.format({ value: 30 })), p(60, () => d.Z.Messages.STREAM_FPS_OPTION.format({ value: 60 }))];

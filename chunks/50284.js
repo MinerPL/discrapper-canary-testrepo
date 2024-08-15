@@ -26,10 +26,7 @@ async function _(e, t) {
 		u.default.compare(e.id, I) > 0 && (0, o.Ex)(e, n) && m++;
 	});
 	let T = r.Z.getChannel(e);
-	null != T &&
-		T.isThread() &&
-		(T.isArchivedThread() && (await s.Z.unarchiveThread(T, !1)),
-		!a.Z.hasJoined(e) && (await s.Z.joinThread(T, 'Mark Unread'))),
+	null != T && T.isThread() && (T.isArchivedThread() && (await s.Z.unarchiveThread(T, !1)), !a.Z.hasJoined(e) && (await s.Z.joinThread(T, 'Mark Unread'))),
 		i.tn.post({
 			url: d.ANM.MESSAGE_ACK(e, I),
 			body: {

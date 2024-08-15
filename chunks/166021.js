@@ -92,12 +92,7 @@ t.Z = (e) => {
 						(0, s.jsx)('div', {
 							className: d.cardProgressBar,
 							children: t.map((e, t) => {
-								if (!(t > g - T))
-									return (0, s.jsx)(
-										'div',
-										{ className: t === u ? d.selectedDot : d.dot },
-										'progress_bar_dot_'.concat(t)
-									);
+								if (!(t > g - T)) return (0, s.jsx)('div', { className: t === u ? d.selectedDot : d.dot }, 'progress_bar_dot_'.concat(t));
 							})
 						})
 				]

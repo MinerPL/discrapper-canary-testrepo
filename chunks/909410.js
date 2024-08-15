@@ -72,14 +72,7 @@ class O extends a.PureComponent {
 	hasChangesToRender() {
 		let { log: e } = this.props,
 			{ changes: t } = e;
-		return (
-			(e.actionType !== p.vB8.DELETE ||
-				e.action === p.rsA.MEMBER_BAN_ADD ||
-				e.action === p.rsA.MEMBER_KICK ||
-				e.action === p.rsA.MEMBER_PRUNE) &&
-			null != t &&
-			t.some((t) => !f(e, t))
-		);
+		return (e.actionType !== p.vB8.DELETE || e.action === p.rsA.MEMBER_BAN_ADD || e.action === p.rsA.MEMBER_KICK || e.action === p.rsA.MEMBER_PRUNE) && null != t && t.some((t) => !f(e, t));
 	}
 	getActionTypeColor(e) {
 		switch (e) {
@@ -140,11 +133,7 @@ class O extends a.PureComponent {
 										i
 									),
 						count: o.count,
-						channel: o.channel
-							? 'string' == typeof o.channel
-								? o.channel
-								: (0, _.F6)(o.channel, S.default, N.Z, !0)
-							: null,
+						channel: o.channel ? ('string' == typeof o.channel ? o.channel : (0, _.F6)(o.channel, S.default, N.Z, !0)) : null,
 						channelHook: (e, t) =>
 							(0, s.jsx)(
 								'span',
@@ -220,18 +209,7 @@ class O extends a.PureComponent {
 			i = t.changes.map((n, i) => {
 				let { oldValue: r, newValue: l } = n,
 					c = null;
-				if (
-					(t.action === p.rsA.MEMBER_ROLE_UPDATE
-						? (c = this.renderRoleUpdate(n))
-						: (t.targetType === p.KFR.ROLE ||
-								t.action === p.rsA.CHANNEL_OVERWRITE_CREATE ||
-								t.action === p.rsA.CHANNEL_OVERWRITE_UPDATE) &&
-							(c = this.renderPermissionUpdate(n)),
-					(t.action === p.rsA.CHANNEL_UPDATE || t.action === p.rsA.CHANNEL_CREATE) &&
-						n.key === p.zUn.TYPE &&
-						(null != r && (r = (0, g.a5)({ type: r })), null != l && (l = (0, g.a5)({ type: l }))),
-					t.action === p.rsA.MEMBER_UPDATE && n.key === p.zUn.COMMUNICATION_DISABLED_UNTIL)
-				) {
+				if ((t.action === p.rsA.MEMBER_ROLE_UPDATE ? (c = this.renderRoleUpdate(n)) : (t.targetType === p.KFR.ROLE || t.action === p.rsA.CHANNEL_OVERWRITE_CREATE || t.action === p.rsA.CHANNEL_OVERWRITE_UPDATE) && (c = this.renderPermissionUpdate(n)), (t.action === p.rsA.CHANNEL_UPDATE || t.action === p.rsA.CHANNEL_CREATE) && n.key === p.zUn.TYPE && (null != r && (r = (0, g.a5)({ type: r })), null != l && (l = (0, g.a5)({ type: l }))), t.action === p.rsA.MEMBER_UPDATE && n.key === p.zUn.COMMUNICATION_DISABLED_UNTIL)) {
 					if (null == (l = o()(l)) || !l.isValid()) return null;
 					l = l.calendar();
 				}
@@ -250,10 +228,7 @@ class O extends a.PureComponent {
 							oldValue: r,
 							newValue: l,
 							count: Array.isArray(l) ? l.length : null,
-							subtarget:
-								null !== (I = null !== (_ = t.options.subtarget) && void 0 !== _ ? _ : n.subtarget) && void 0 !== I
-									? I
-									: null,
+							subtarget: null !== (I = null !== (_ = t.options.subtarget) && void 0 !== _ ? _ : n.subtarget) && void 0 !== I ? I : null,
 							newColorHook: (e, t) =>
 								(0, s.jsx)(
 									'div',

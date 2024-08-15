@@ -299,11 +299,7 @@ let el = (e) => {
 																	analyticsLocations: T,
 																	onClose: (e) => (e ? f() : (0, en.dG)())
 																}),
-															children: (0, R.x6)(a)
-																? es.Z.Messages.COLLECTIBLES_BUNDLE_BUY_BUNDLE
-																: a.type === c.Z.PROFILE_EFFECT
-																	? es.Z.Messages.COLLECTIBLES_BUY_PROFILE_EFFECT
-																	: es.Z.Messages.COLLECTIBLES_BUY_DECORATION
+															children: (0, R.x6)(a) ? es.Z.Messages.COLLECTIBLES_BUNDLE_BUY_BUNDLE : a.type === c.Z.PROFILE_EFFECT ? es.Z.Messages.COLLECTIBLES_BUY_PROFILE_EFFECT : es.Z.Messages.COLLECTIBLES_BUY_DECORATION
 														})
 										: eC(es.Z.Messages.UNLOCK_WITH_NITRO),
 									!W &&
@@ -320,15 +316,7 @@ let el = (e) => {
 						(0, n.jsx)(C.Text, {
 							className: l()(ea.disclaimer, !Z && ea.disclaimerLight),
 							variant: 'text-xxs/normal',
-							children: p
-								? null
-								: W
-									? es.Z.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER
-									: (0, R.x6)(a)
-										? es.Z.Messages.COLLECTIBLES_DETAILS_MODAL_BUNDLE_PURCHASE_DISCLAIMER
-										: a.type === c.Z.PROFILE_EFFECT
-											? es.Z.Messages.COLLECTIBLES_DETAILS_MODAL_PROFILE_EFFECT_PREMIUM_PURCHASE_DISCLAIMER
-											: es.Z.Messages.COLLECTIBLES_DETAILS_MODAL_PREMIUM_PURCHASE_DISCLAIMER
+							children: p ? null : W ? es.Z.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER : (0, R.x6)(a) ? es.Z.Messages.COLLECTIBLES_DETAILS_MODAL_BUNDLE_PURCHASE_DISCLAIMER : a.type === c.Z.PROFILE_EFFECT ? es.Z.Messages.COLLECTIBLES_DETAILS_MODAL_PROFILE_EFFECT_PREMIUM_PURCHASE_DISCLAIMER : es.Z.Messages.COLLECTIBLES_DETAILS_MODAL_PREMIUM_PURCHASE_DISCLAIMER
 						})
 					]
 				})
@@ -344,10 +332,7 @@ let el = (e) => {
 			{ firstAvatarDecoration: o, firstProfileEffect: u } = (0, F.R)(t),
 			C = null != u;
 		return (0, n.jsxs)('div', {
-			className:
-				(null == r ? void 0 : r.type) === c.Z.AVATAR_DECORATION
-					? ea.previewsContainerInner
-					: ea.profileEffectPreviewsContainerInner,
+			className: (null == r ? void 0 : r.type) === c.Z.AVATAR_DECORATION ? ea.previewsContainerInner : ea.profileEffectPreviewsContainerInner,
 			children: [
 				(0, n.jsx)(N.Z, {
 					...a,
@@ -416,15 +401,7 @@ let el = (e) => {
 	};
 t.default = (e) => {
 	var t;
-	let {
-			transitionState: i,
-			onClose: a,
-			product: l,
-			category: r,
-			returnRef: o,
-			analyticsSource: u,
-			analyticsLocations: m
-		} = e,
+	let { transitionState: i, onClose: a, product: l, category: r, returnRef: o, analyticsSource: u, analyticsLocations: m } = e,
 		E = (0, d.e7)([j.default], () => j.default.getCurrentUser()),
 		{ analyticsLocations: _ } = (0, L.ZP)([...m, f.Z.COLLECTIBLES_SHOP_DETAILS_MODAL]);
 	(0, V.u9)(l);
@@ -463,10 +440,7 @@ t.default = (e) => {
 						onClose: a
 					}),
 					(0, n.jsxs)('div', {
-						className:
-							l.type === c.Z.AVATAR_DECORATION
-								? ea.collectiblePreviewsContainerWithChat
-								: ea.collectiblePreviewsContainerNoChat,
+						className: l.type === c.Z.AVATAR_DECORATION ? ea.collectiblePreviewsContainerWithChat : ea.collectiblePreviewsContainerNoChat,
 						children: [
 							(0, n.jsx)(W.Z, {
 								asset: null !== (t = r.pdpBg) && void 0 !== t ? t : l.banner,

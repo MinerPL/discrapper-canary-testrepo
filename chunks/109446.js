@@ -53,9 +53,7 @@ function S(e) {
 					className: x.title,
 					variant: 'text-xs/bold',
 					color: 'header-secondary',
-					children: t.isForumLikeChannel()
-						? N.Z.Messages.ACTIVE_THREADS_POPOUT_HEADER_FORUM
-						: N.Z.Messages.ACTIVE_THREADS_POPOUT_HEADER
+					children: t.isForumLikeChannel() ? N.Z.Messages.ACTIVE_THREADS_POPOUT_HEADER_FORUM : N.Z.Messages.ACTIVE_THREADS_POPOUT_HEADER
 				}),
 				r
 					.slice(0, t.isForumLikeChannel() ? r.length : c)

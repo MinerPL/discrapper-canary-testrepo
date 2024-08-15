@@ -13,11 +13,7 @@ var o,
 	c,
 	r = n(689938);
 let t = 'https://discord.com/community/securing-your-server';
-((o = c || (c = {})).DM_SPAM = 'DM_SPAM'),
-	(o.MESSAGE_SPAM = 'MESSAGE_SPAM'),
-	(o.MENTION_SPAM = 'MENTION_SPAM'),
-	(o.SUSPICIOUS_USERS = 'SUSPICIOUS_USERS'),
-	(o.SETTINGS_SPAM = 'SETTINGS_SPAM');
+((o = c || (c = {})).DM_SPAM = 'DM_SPAM'), (o.MESSAGE_SPAM = 'MESSAGE_SPAM'), (o.MENTION_SPAM = 'MENTION_SPAM'), (o.SUSPICIOUS_USERS = 'SUSPICIOUS_USERS'), (o.SETTINGS_SPAM = 'SETTINGS_SPAM');
 let a = ['MESSAGE_SPAM', 'DM_SPAM', 'MENTION_SPAM', 'SUSPICIOUS_USERS', 'SETTINGS_SPAM'],
 	S = (e) => {
 		switch (e) {

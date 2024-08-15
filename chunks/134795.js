@@ -14,18 +14,7 @@ var a = t(120356),
 	d = t(689938),
 	_ = t(949985);
 function E(e) {
-	let {
-			showRemoveBannerButton: s,
-			errors: t,
-			onBannerChange: a,
-			guildId: E,
-			className: u,
-			disabled: I = !1,
-			showPremiumIcon: T = !0,
-			isTryItOutFlow: S = !1,
-			forcedDivider: N,
-			withHighlight: C = !1
-		} = e,
+	let { showRemoveBannerButton: s, errors: t, onBannerChange: a, guildId: E, className: u, disabled: I = !1, showPremiumIcon: T = !0, isTryItOutFlow: S = !1, forcedDivider: N, withHighlight: C = !1 } = e,
 		m = C ? r.ShinyButton : r.Button;
 	return (0, n.jsx)(l.Z, {
 		className: u,

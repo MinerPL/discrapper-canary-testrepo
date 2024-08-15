@@ -32,10 +32,7 @@ class d {
 		return this.refcount--, 0 === this.refcount;
 	}
 	constructor(e) {
-		u(this, 'refcount', void 0),
-			u(this, 'stream', void 0),
-			(this.refcount = 1),
-			(this.stream = window.createDiscordStream(e));
+		u(this, 'refcount', void 0), u(this, 'stream', void 0), (this.refcount = 1), (this.stream = window.createDiscordStream(e));
 	}
 }
 let _ = new Map();
@@ -47,11 +44,11 @@ function f(e) {
 	let { streamId: t, paused: n, onReady: a, onResize: o, className: u, ...f } = e,
 		h = i.useRef(null),
 		p = i.useRef(null),
-		I = i.useRef({
+		m = i.useRef({
 			width: 0,
 			height: 0
 		}),
-		m = i.useRef({
+		I = i.useRef({
 			streamId: t,
 			paused: n,
 			onReady: a,
@@ -68,45 +65,36 @@ function f(e) {
 					(t.autoplay = !0),
 					(t.muted = !0),
 					t.addEventListener('pause', function () {
-						if (!m.current.paused) {
+						if (!I.current.paused) {
 							var e;
 							null === (e = p.current) || void 0 === e || e.play();
 						}
 					}),
 					t.addEventListener('resize', function () {
 						var e, t, n, r, i, a;
-						let { width: s, height: o } = I.current,
-							l =
-								null !== (n = null === (e = p.current) || void 0 === e ? void 0 : e.videoWidth) && void 0 !== n ? n : 0,
-							u =
-								null !== (r = null === (t = p.current) || void 0 === t ? void 0 : t.videoHeight) && void 0 !== r
-									? r
-									: 0;
+						let { width: s, height: o } = m.current,
+							l = null !== (n = null === (e = p.current) || void 0 === e ? void 0 : e.videoWidth) && void 0 !== n ? n : 0,
+							u = null !== (r = null === (t = p.current) || void 0 === t ? void 0 : t.videoHeight) && void 0 !== r ? r : 0;
 						if (s !== l || o !== u) {
 							let e = {
 								width: l,
 								height: u
 							};
-							null === (i = (a = m.current).onResize) || void 0 === i || i.call(a, e), (I.current = e);
+							null === (i = (a = I.current).onResize) || void 0 === i || i.call(a, e), (m.current = e);
 						}
 					}),
 					t.addEventListener('canplaythrough', function () {
 						var e, t;
-						c.info(
-							'handleReady for '
-								.concat(m.current.streamId, ', have onReady callback = ')
-								.concat(null != m.current.onReady)
-						),
-							null === (e = (t = m.current).onReady) || void 0 === e || e.call(t);
+						c.info('handleReady for '.concat(I.current.streamId, ', have onReady callback = ').concat(null != I.current.onReady)), null === (e = (t = I.current).onReady) || void 0 === e || e.call(t);
 					}),
-					c.info('create video element for '.concat(m.current.streamId, ', readyState=').concat(t.readyState)),
-					t.readyState > 3 && c.error('video element for '.concat(m.current.streamId, ' was ready before attached')),
+					c.info('create video element for '.concat(I.current.streamId, ', readyState=').concat(t.readyState)),
+					t.readyState > 3 && c.error('video element for '.concat(I.current.streamId, ' was ready before attached')),
 					e.appendChild(t),
 					(p.current = t);
 			}
 		}, []),
 		i.useEffect(() => {
-			(m.current.streamId = t), (m.current.paused = n), (m.current.onReady = a), (m.current.onResize = o);
+			(I.current.streamId = t), (I.current.paused = n), (I.current.onReady = a), (I.current.onResize = o);
 		}),
 		i.useEffect(() => {
 			let e = p.current;
@@ -117,12 +105,7 @@ function f(e) {
 					let n;
 					c.info('attaching srcObject for '.concat(t));
 					return (
-						(e.srcObject =
-							((r = t),
-							null == (n = _.get(r))
-								? ((n = new d(r)), (0, l.zS)().addDirectVideoOutputSink(r), _.set(r, n))
-								: n.addref(),
-							n.stream)),
+						(e.srcObject = ((r = t), null == (n = _.get(r)) ? ((n = new d(r)), (0, l.zS)().addDirectVideoOutputSink(r), _.set(r, n)) : n.addref(), n.stream)),
 						() => {
 							E(t), (e.srcObject = null);
 						}

@@ -139,21 +139,6 @@ var e = {
 n.Z = function (o, n, t) {
 	var i,
 		a = e[o];
-	if (
-		((i =
-			'string' == typeof a
-				? a
-				: 1 === n
-					? null != t && t.addSuffix
-						? t.comparison && t.comparison > 0
-							? a.one.withPrepositionIn
-							: a.one.withPrepositionAgo
-						: a.one.standalone
-					: n % 10 > 1 && n % 10 < 5 && '1' !== String(n).substr(-2, 1)
-						? a.dual.replace('{{count}}', String(n))
-						: a.other.replace('{{count}}', String(n))),
-		null != t && t.addSuffix)
-	)
-		return t.comparison && t.comparison > 0 ? 'za ' + i : 'prije ' + i;
+	if (((i = 'string' == typeof a ? a : 1 === n ? (null != t && t.addSuffix ? (t.comparison && t.comparison > 0 ? a.one.withPrepositionIn : a.one.withPrepositionAgo) : a.one.standalone) : n % 10 > 1 && n % 10 < 5 && '1' !== String(n).substr(-2, 1) ? a.dual.replace('{{count}}', String(n)) : a.other.replace('{{count}}', String(n))), null != t && t.addSuffix)) return t.comparison && t.comparison > 0 ? 'za ' + i : 'prije ' + i;
 	return i;
 };

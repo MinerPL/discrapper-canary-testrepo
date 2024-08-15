@@ -52,37 +52,25 @@ function d(e) {
 ((i = r || (r = {}))[(i.FORWARD = 1)] = 'FORWARD'), (i[(i.BACKWARD = -1)] = 'BACKWARD');
 class _ {
 	reset() {
-		(this._paginationState = c()),
-			(this._sortedMemberIds = []),
-			(this._cachedPaginationChunks = {}),
-			(this._version += 1);
+		(this._paginationState = c()), (this._sortedMemberIds = []), (this._cachedPaginationChunks = {}), (this._version += 1);
 	}
 	isMemberOnCurrentPage(e) {
 		var t;
-		return (
-			null !== (t = this._cachedPaginationChunks[this._paginationState.currentPage]) && void 0 !== t ? t : []
-		).includes(e);
+		return (null !== (t = this._cachedPaginationChunks[this._paginationState.currentPage]) && void 0 !== t ? t : []).includes(e);
 	}
 	isMemberInAnyChunk(e) {
 		return this._sortedMemberIds.includes(e);
 	}
 	_initPaginationFromRawMembers(e) {
 		let t = [],
-			n = e.reduce(
-				(e, n, r) => ((e = this._reduceMemberIdsToPaginationChunks(e, n.userId, r)), t.push(n.userId), e),
-				{}
-			);
+			n = e.reduce((e, n, r) => ((e = this._reduceMemberIdsToPaginationChunks(e, n.userId, r)), t.push(n.userId), e), {});
 		return [t, n];
 	}
 	_buildPaginationFromMemberIds(e) {
 		return e.reduce(this._reduceMemberIdsToPaginationChunks, {});
 	}
 	_rebuildPaginationChunksFromStoredMembers() {
-		return (
-			(this._cachedPaginationChunks = this._buildPaginationFromMemberIds(this._sortedMemberIds)),
-			(this._version += 1),
-			!0
-		);
+		return (this._cachedPaginationChunks = this._buildPaginationFromMemberIds(this._sortedMemberIds)), (this._version += 1), !0;
 	}
 	getPaginationState() {
 		return this._paginationState;
@@ -105,11 +93,7 @@ class _ {
 		let t = !1;
 		if (null != e.pageSize && e.pageSize !== this._paginationState.pageSize) {
 			var n;
-			(t = !0),
-				(e.currentPage = this._calculateNewPageFromPageSizeChange(
-					null !== (n = e.pageSize) && void 0 !== n ? n : this._paginationState.pageSize,
-					e.currentPage
-				));
+			(t = !0), (e.currentPage = this._calculateNewPageFromPageSizeChange(null !== (n = e.pageSize) && void 0 !== n ? n : this._paginationState.pageSize, e.currentPage));
 		}
 		return (
 			(this._paginationState = {
@@ -134,8 +118,7 @@ class _ {
 		let r = this._sortedMemberIds[e],
 			i = a.ZP.getMember(this.guildId, r);
 		for (; null == i && !((e += t) < 0) && !(e >= this._sortedMemberIds.length); ) {
-			(r = this._sortedMemberIds[e]),
-				(null == (i = a.ZP.getMember(this.guildId, r)) ? void 0 : i.joinedAt) == null && (i = null);
+			(r = this._sortedMemberIds[e]), (null == (i = a.ZP.getMember(this.guildId, r)) ? void 0 : i.joinedAt) == null && (i = null);
 		}
 		return i;
 	}

@@ -27,9 +27,7 @@ function _(e) {
 				(0, s.jsx)(i.FormText, {
 					type: i.FormText.Types.DESCRIPTION,
 					disabled: T,
-					children: u.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_EMOJI_UPLOAD_DESCRIPTION.format({
-						maxSlots: t.getMaxRoleSubscriptionEmojiSlots()
-					})
+					children: u.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_EMOJI_UPLOAD_DESCRIPTION.format({ maxSlots: t.getMaxRoleSubscriptionEmojiSlots() })
 				}),
 				(0, s.jsx)(i.Spacer, { size: 16 }),
 				(0, s.jsx)(o.Z, {

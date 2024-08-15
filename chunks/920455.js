@@ -48,12 +48,7 @@ function h(e) {
 					(0, r.jsxs)(o.Text, {
 						variant: 'text-sm/normal',
 						color: 'text-muted',
-						children: [
-							E.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EDUCATION.format({ betaUserLimit: d.um }),
-							E.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE.format({
-								learnMoreUrl: c.Z.getArticleURL(_.BhN.USING_APPS_FAQ)
-							})
-						]
+						children: [E.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_EDUCATION.format({ betaUserLimit: d.um }), E.Z.Messages.APPLICATION_COMMAND_USER_INSTALL_LEARN_MORE.format({ learnMoreUrl: c.Z.getArticleURL(_.BhN.USING_APPS_FAQ) })]
 					})
 				]
 			});

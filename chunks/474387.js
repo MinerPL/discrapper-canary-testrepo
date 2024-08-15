@@ -40,9 +40,7 @@ class c extends r.Z {
 				let { channelId: t } = e;
 				if (null == t) return;
 				let n = s.Z.getChannel(t);
-				null != n &&
-					n.isForumLikeChannel() &&
-					((this.readStateSnapshots = {}), this.processForumChannel(n.guild_id, t));
+				null != n && n.isForumLikeChannel() && ((this.readStateSnapshots = {}), this.processForumChannel(n.guild_id, t));
 			}),
 			u(this, 'processForumChannel', (e, t) => {
 				let n = i.Z.getThreadsForParent(e, t);

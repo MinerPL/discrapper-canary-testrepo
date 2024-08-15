@@ -24,20 +24,9 @@ t.exports = function (t, r, n, g) {
 			I = r(function (t, r) {
 				var n = l(g ? r : t, void 0),
 					e = g ? new m(t) : new m();
-				return (
-					void 0 !== n && o(e, 'message', n),
-					v(e, I, e.stack, 2),
-					this && u(T, this) && f(e, this, I),
-					arguments.length > y && p(e, arguments[y]),
-					e
-				);
+				return void 0 !== n && o(e, 'message', n), v(e, I, e.stack, 2), this && u(T, this) && f(e, this, I), arguments.length > y && p(e, arguments[y]), e;
 			});
-		if (
-			((I.prototype = T),
-			'Error' !== E ? (c ? c(I, S) : a(I, S, { name: !0 })) : h && x in m && (s(I, m, x), s(I, m, 'prepareStackTrace')),
-			a(I, m),
-			!d)
-		)
+		if (((I.prototype = T), 'Error' !== E ? (c ? c(I, S) : a(I, S, { name: !0 })) : h && x in m && (s(I, m, x), s(I, m, 'prepareStackTrace')), a(I, m), !d))
 			try {
 				T.name !== E && o(T, 'name', E), (T.constructor = I);
 			} catch (t) {}

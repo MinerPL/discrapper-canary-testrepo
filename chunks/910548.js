@@ -29,11 +29,7 @@ var i,
 	R = n(981631),
 	x = n(689938),
 	O = n(407339);
-((s = i || (i = {})).ENTER = 'enter'),
-	(s.CONFETTI = 'confetti'),
-	(s.LEAF_PEEL = 'leaf_peel'),
-	(s.LEAF_FALL = 'leaf_fall'),
-	(s.EXIT = 'exit');
+((s = i || (i = {})).ENTER = 'enter'), (s.CONFETTI = 'confetti'), (s.LEAF_PEEL = 'leaf_peel'), (s.LEAF_FALL = 'leaf_fall'), (s.EXIT = 'exit');
 let M = {
 	enter: {
 		BEG: 0,
@@ -56,10 +52,7 @@ let M = {
 		END: 200
 	}
 };
-((r = a || (a = {})).TOP_LEFT = 'TOP_LEFT'),
-	(r.TOP_RIGHT = 'TOP_RIGHT'),
-	(r.BOTTOM_LEFT = 'BOTTOM_LEFT'),
-	(r.BOTTOM_RIGHT = 'BOTTOM_RIGHT');
+((r = a || (a = {})).TOP_LEFT = 'TOP_LEFT'), (r.TOP_RIGHT = 'TOP_RIGHT'), (r.BOTTOM_LEFT = 'BOTTOM_LEFT'), (r.BOTTOM_RIGHT = 'BOTTOM_RIGHT');
 let v = ['TOP_LEFT', 'TOP_RIGHT'],
 	L = (0, E.Mg)(I.Z.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
 	Z = {

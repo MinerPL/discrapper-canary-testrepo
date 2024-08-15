@@ -43,9 +43,7 @@ function _(e, t) {
 			}
 			return (
 				null === (r = e.current) || void 0 === r || r.addEventListener('focusout', l),
-				(null === (a = n.document.activeElement) || void 0 === a ? void 0 : a.tagName) !== 'IFRAME' &&
-					!o &&
-					(null === (s = e.current) || void 0 === s || s.focus()),
+				(null === (a = n.document.activeElement) || void 0 === a ? void 0 : a.tagName) !== 'IFRAME' && !o && (null === (s = e.current) || void 0 === s || s.focus()),
 				() => {
 					var t;
 					null === (t = e.current) || void 0 === t || t.removeEventListener('focusout', l), (o = !0);

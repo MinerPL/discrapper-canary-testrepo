@@ -79,15 +79,8 @@ function L(e) {
 									color: s.ButtonColors.TRANSPARENT,
 									'aria-label': m.Z.Messages.COPY_LINK,
 									onClick: () => {
-										let e = ''
-											.concat(location.protocol, '//')
-											.concat(location.host)
-											.concat(
-												I.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(a, h.ApplicationDirectoryProfileSections.STORE)
-											);
-										(0, p.JG)(e),
-											(0, s.showToast)((0, s.createToast)(m.Z.Messages.COPIED_LINK, s.ToastType.SUCCESS)),
-											(0, C.X)(a, C.B.STORE_MODAL);
+										let e = ''.concat(location.protocol, '//').concat(location.host).concat(I.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(a, h.ApplicationDirectoryProfileSections.STORE));
+										(0, p.JG)(e), (0, s.showToast)((0, s.createToast)(m.Z.Messages.COPIED_LINK, s.ToastType.SUCCESS)), (0, C.X)(a, C.B.STORE_MODAL);
 									},
 									children: (0, o.jsx)(s.LinkIcon, {
 										size: 'custom',
@@ -124,7 +117,4 @@ function L(e) {
 		]
 	});
 }
-((i = a || (a = {}))[(i.NONE = 0)] = 'NONE'),
-	(i[(i.FETCHING = 1)] = 'FETCHING'),
-	(i[(i.FETCHED = 2)] = 'FETCHED'),
-	(i[(i.ERROR = 3)] = 'ERROR');
+((i = a || (a = {}))[(i.NONE = 0)] = 'NONE'), (i[(i.FETCHING = 1)] = 'FETCHING'), (i[(i.FETCHED = 2)] = 'FETCHED'), (i[(i.ERROR = 3)] = 'ERROR');

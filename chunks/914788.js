@@ -28,19 +28,7 @@ let C = null,
 	M = null,
 	R = (function () {
 		var e, E, _, t;
-		return (null === (E = window) || void 0 === E
-			? void 0
-			: null === (e = E.location) || void 0 === e
-				? void 0
-				: e.pathname) === a.ix.FAMILY_CENTER_MY_FAMILY
-			? a.dG.REQUESTS
-			: (null === (t = window) || void 0 === t
-						? void 0
-						: null === (_ = t.location) || void 0 === _
-							? void 0
-							: _.pathname) === a.ix.FAMILY_CENTER_SETTINGS
-				? a.dG.SETTINGS
-				: a.dG.ACTIVITY;
+		return (null === (E = window) || void 0 === E ? void 0 : null === (e = E.location) || void 0 === e ? void 0 : e.pathname) === a.ix.FAMILY_CENTER_MY_FAMILY ? a.dG.REQUESTS : (null === (t = window) || void 0 === t ? void 0 : null === (_ = t.location) || void 0 === _ ? void 0 : _.pathname) === a.ix.FAMILY_CENTER_SETTINGS ? a.dG.SETTINGS : a.dG.ACTIVITY;
 	})(),
 	l = !1,
 	d = !1,

@@ -19,17 +19,7 @@ function I() {
 	let e = (0, i.e7)([d.Z], () => d.Z.getIsSubmitDisabled()),
 		s = (0, i.e7)([d.Z], () => d.Z.getErrors()),
 		[t, I] = a.useState(!1),
-		T = a.useMemo(
-			() =>
-				(null == s ? void 0 : s.message) != null
-					? null == s
-						? void 0
-						: s.message
-					: Object.keys(null != s ? s : {}).length > 0
-						? u.Z.Messages.USER_SETTINGS_EDIT_PROFILE_GENERIC_ERROR
-						: null,
-			[s]
-		),
+		T = a.useMemo(() => ((null == s ? void 0 : s.message) != null ? (null == s ? void 0 : s.message) : Object.keys(null != s ? s : {}).length > 0 ? u.Z.Messages.USER_SETTINGS_EDIT_PROFILE_GENERIC_ERROR : null), [s]),
 		S = a.useCallback(async () => {
 			var e, s, t;
 			I(!0);
@@ -39,15 +29,11 @@ function I() {
 				o = !0;
 			if (Object.keys(a).length > 0) {
 				let t = await (0, r.Mn)(a);
-				(o = o && null !== (s = null == t ? void 0 : t.ok) && void 0 !== s && s),
-					(null == t ? void 0 : t.ok)
-						? (0, r.si)()
-						: (null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.username) != null && (0, E.P)();
+				(o = o && null !== (s = null == t ? void 0 : t.ok) && void 0 !== s && s), (null == t ? void 0 : t.ok) ? (0, r.si)() : (null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.username) != null && (0, E.P)();
 			}
 			if (Object.keys(i).length > 0) {
 				let e = await (0, c.Z)(i);
-				(o = o && null !== (t = null == e ? void 0 : e.ok) && void 0 !== t && t),
-					(null == e ? void 0 : e.ok) ? (0, c.pG)() : (0, _.r)();
+				(o = o && null !== (t = null == e ? void 0 : e.ok) && void 0 !== t && t), (null == e ? void 0 : e.ok) ? (0, c.pG)() : (0, _.r)();
 			}
 			o && (0, r.b9)(), I(!1);
 		}, []),

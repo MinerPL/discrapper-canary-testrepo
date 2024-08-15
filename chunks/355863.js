@@ -12,8 +12,8 @@ var a,
 	f = n(131792),
 	h = n(252982),
 	p = n(434529),
-	I = n(981631);
-function m(e, t, n) {
+	m = n(981631);
+function I(e, t, n) {
 	return (
 		t in e
 			? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function m(e, t, n) {
 ((o = a || (a = {})).REQUIRED = 'REQUIRED'), (o.OPTIONAL = 'OPTIONAL'), (o.OPTIONAL_DEFAULT = 'OPTIONAL_DEFAULT');
 let T = 'migrated',
 	g = {
-		[I.Odu.GUILDS]: {
+		[m.Odu.GUILDS]: {
 			minSize: {
 				width: 312,
 				height: 300
@@ -52,7 +52,7 @@ let T = 'migrated',
 				pinned: !1
 			}
 		},
-		[I.Odu.TEXT]: {
+		[m.Odu.TEXT]: {
 			minSize: {
 				width: 430,
 				height: 300
@@ -75,7 +75,7 @@ let T = 'migrated',
 				pinned: !0
 			}
 		},
-		[I.Odu.VOICE]: {
+		[m.Odu.VOICE]: {
 			minSize: {
 				width: 272,
 				height: 100
@@ -98,7 +98,7 @@ let T = 'migrated',
 				pinned: !0
 			}
 		},
-		[I.Odu.GUILDS_TEXT]: {
+		[m.Odu.GUILDS_TEXT]: {
 			minSize: {
 				height: 300,
 				width: 610
@@ -258,9 +258,9 @@ class N extends (s = d.ZP.PersistedStore) {
 		);
 	}
 }
-m(N, 'displayName', 'LayoutStore'),
-	m(N, 'persistKey', 'LayoutStore'),
-	m(N, 'migrations', [
+I(N, 'displayName', 'LayoutStore'),
+	I(N, 'persistKey', 'LayoutStore'),
+	I(N, 'migrations', [
 		() => {
 			let { pinnedWidgets: e, positions: t, sizes: n, v: r } = { ..._.K.get('OverlayStore') };
 			if (5 === r && e) {
@@ -307,7 +307,7 @@ m(N, 'displayName', 'LayoutStore'),
 		},
 		(e) => {
 			let { layouts: t, widgets: n } = e,
-				r = new Set(Object.keys(I.Odu)),
+				r = new Set(Object.keys(m.Odu)),
 				i = Array.from(n).filter((e) => {
 					let [t] = e;
 					return !r.has(t);
@@ -327,12 +327,7 @@ m(N, 'displayName', 'LayoutStore'),
 								let [r, i] = n;
 								return r === e && i.layoutId === t;
 							});
-							return (
-								null != n &&
-								(null == a && n[1].type === I.Odu.VOICE && (a = n[0]),
-								null == r && n[1].type === I.Odu.TEXT && (r = n[1].pinned),
-								(null != r && null != a) || void 0)
-							);
+							return null != n && (null == a && n[1].type === m.Odu.VOICE && (a = n[0]), null == r && n[1].type === m.Odu.TEXT && (r = n[1].pinned), (null != r && null != a) || void 0);
 						}),
 						r || null == a)
 					)
@@ -342,8 +337,8 @@ m(N, 'displayName', 'LayoutStore'),
 						i.push([
 							s,
 							{
-								...A(I.Odu.GUILDS_TEXT),
-								type: I.Odu.GUILDS_TEXT,
+								...A(m.Odu.GUILDS_TEXT),
+								type: m.Odu.GUILDS_TEXT,
 								id: s,
 								layoutId: t,
 								zIndex: 2
@@ -391,10 +386,7 @@ m(N, 'displayName', 'LayoutStore'),
 						zIndex: t
 					};
 				'' === o.id && (o.id = (0, c.Z)()),
-					null != n &&
-						((o.pinned = n.pinned),
-						-1 !== n.anchor.left && (o.anchor = (0, p.jL)(n.anchor, a)),
-						-1 !== n.size.width && (o.size = (0, p.Ox)(n.size, a))),
+					null != n && ((o.pinned = n.pinned), -1 !== n.anchor.left && (o.anchor = (0, p.jL)(n.anchor, a)), -1 !== n.size.width && (o.size = (0, p.Ox)(n.size, a))),
 					(i = {
 						...i,
 						[o.id]: new h.Z(o)

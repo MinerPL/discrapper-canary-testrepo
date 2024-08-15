@@ -60,8 +60,7 @@ s.Z = (e) => {
 						options: m,
 						onChange: (e) => {
 							var a;
-							(null == s ? void 0 : s.id) != null &&
-								c.TA(null == s ? void 0 : s.id, null !== (a = null == e ? void 0 : e.value) && void 0 !== a ? a : E.o3);
+							(null == s ? void 0 : s.id) != null && c.TA(null == s ? void 0 : s.id, null !== (a = null == e ? void 0 : e.value) && void 0 !== a ? a : E.o3);
 						},
 						maxMenuHeight: 250
 					})

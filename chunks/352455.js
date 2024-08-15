@@ -27,9 +27,7 @@ function h(e) {
 			}),
 			(0, i.jsx)(r.Text, {
 				variant: 'text-sm/normal',
-				children: _.Z.Messages.NOW_PLAYING_GDPR_BODY.format({
-					onPrivacyClick: () => o.Z.open(d.oAB.PRIVACY_AND_SAFETY)
-				})
+				children: _.Z.Messages.NOW_PLAYING_GDPR_BODY.format({ onPrivacyClick: () => o.Z.open(d.oAB.PRIVACY_AND_SAFETY) })
 			}),
 			(0, i.jsxs)('div', {
 				className: E.buttonContainer,

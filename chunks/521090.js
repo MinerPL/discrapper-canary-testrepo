@@ -56,11 +56,7 @@ let h = {
 			} = e,
 			h = l.charAt(0) === i.xQ.VOICE_CHANNEL;
 		return (
-			h
-				? ((t = f.Z.Messages.VOICE_CHANNELS_MATCHING), (n = f.Z.Messages.VOICE_CHANNELS), (l = l.substring(1)))
-				: u.forNonStringCommandOption
-					? ((t = f.Z.Messages.CHANNELS_MATCHING), (n = f.Z.Messages.CHANNELS))
-					: ((t = f.Z.Messages.TEXT_CHANNELS_MATCHING), (n = f.Z.Messages.TEXT_CHANNELS)),
+			h ? ((t = f.Z.Messages.VOICE_CHANNELS_MATCHING), (n = f.Z.Messages.VOICE_CHANNELS), (l = l.substring(1))) : u.forNonStringCommandOption ? ((t = f.Z.Messages.CHANNELS_MATCHING), (n = f.Z.Messages.CHANNELS)) : ((t = f.Z.Messages.TEXT_CHANNELS_MATCHING), (n = f.Z.Messages.TEXT_CHANNELS)),
 			(0, c.HI)({
 				query: l,
 				selectedIndex: s,

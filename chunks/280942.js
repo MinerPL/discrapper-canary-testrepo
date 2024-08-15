@@ -15,10 +15,7 @@ function d(e) {
 	let { guildBoostSlot: s, onClose: d, hasCancelableGuildBoostSlot: _, premiumSubscription: E, onSelect: u } = e,
 		I = {
 			transfer: {
-				label:
-					null != s.premiumGuildSubscription
-						? l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_BUTTON
-						: l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SELECT_SERVER_BUTTON,
+				label: null != s.premiumGuildSubscription ? l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_BUTTON : l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SELECT_SERVER_BUTTON,
 				subtext: s.isOnCooldown() ? l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_BUTTON_DISABLED_TOOLTIP : null,
 				disabled: s.isOnCooldown()
 			},
@@ -35,17 +32,11 @@ function d(e) {
 		};
 	switch (E.status) {
 		case o.O0b.PAST_DUE:
-			(I.cancel.disabled = !0),
-				(I.cancel.subtext = l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BUTTON_DISABLED_PAST_DUE_TOOLTIP),
-				(I.uncancel.disabled = !0);
+			(I.cancel.disabled = !0), (I.cancel.subtext = l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BUTTON_DISABLED_PAST_DUE_TOOLTIP), (I.uncancel.disabled = !0);
 			break;
 		case o.O0b.PAUSE_PENDING:
 		case o.O0b.PAUSED:
-			(I.transfer.disabled = !0),
-				(I.transfer.subtext = l.Z.Messages.GUILD_BOOSTING_TRANSFER_DISABLED_FOR_PAUSED_SUBSCRIPTION),
-				(I.cancel.disabled = !0),
-				(I.cancel.subtext = l.Z.Messages.GUILD_BOOSTING_CANCEL_DISABLED_FOR_PAUSED_SUBSCRIPTION),
-				(I.uncancel.disabled = !0);
+			(I.transfer.disabled = !0), (I.transfer.subtext = l.Z.Messages.GUILD_BOOSTING_TRANSFER_DISABLED_FOR_PAUSED_SUBSCRIPTION), (I.cancel.disabled = !0), (I.cancel.subtext = l.Z.Messages.GUILD_BOOSTING_CANCEL_DISABLED_FOR_PAUSED_SUBSCRIPTION), (I.uncancel.disabled = !0);
 	}
 	return (0, n.jsxs)(a.Menu, {
 		onSelect: u,

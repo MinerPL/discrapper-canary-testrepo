@@ -4,18 +4,7 @@ var o = n(453217),
 	a = n(100805),
 	r = n(988953);
 t.Z = function (e) {
-	let {
-		collapsedHeight: t,
-		expandedContentRef: n,
-		expansionSpring: l,
-		isExpanded: i,
-		isExpansionAnimationComplete: c,
-		onCtxMenuOpened: d,
-		onCtxMenuClosed: u,
-		onCtxMenuSelection: p,
-		quest: x,
-		useReducedMotion: m
-	} = e;
+	let { collapsedHeight: t, expandedContentRef: n, expansionSpring: l, isExpanded: i, isExpansionAnimationComplete: c, onCtxMenuOpened: d, onCtxMenuClosed: u, onCtxMenuSelection: p, quest: x, useReducedMotion: m } = e;
 	return (0, s.jsx)(a.Z, {
 		expansionSpring: l,
 		className: r.content,

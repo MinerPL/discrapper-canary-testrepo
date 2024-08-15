@@ -65,17 +65,6 @@ var n = {
 t.Z = function (e, t, r) {
 	var i,
 		o = n[e];
-	if (
-		((i =
-			'string' == typeof o
-				? o
-				: 1 === t
-					? o.one
-					: r && r.onlyNumeric
-						? o.other.replace('{{count}}', String(t))
-						: o.other.replace('{{count}}', t < 13 ? a[t] : String(t))),
-		null != r && r.addSuffix)
-	)
-		return r.comparison && r.comparison > 0 ? 'om ' + i : i + ' sedan';
+	if (((i = 'string' == typeof o ? o : 1 === t ? o.one : r && r.onlyNumeric ? o.other.replace('{{count}}', String(t)) : o.other.replace('{{count}}', t < 13 ? a[t] : String(t))), null != r && r.addSuffix)) return r.comparison && r.comparison > 0 ? 'om ' + i : i + ' sedan';
 	return i;
 };

@@ -82,9 +82,7 @@ function E(e) {
 						(0, t.jsx)(r.Text, {
 							variant: 'text-sm/normal',
 							color: 'text-muted',
-							children: l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_BODY.format({
-								termsURL: 'https://support.discord.com/hc/en-us/articles/5330075836311-Creator-Pilot-Terms'
-							})
+							children: l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_BODY.format({ termsURL: 'https://support.discord.com/hc/en-us/articles/5330075836311-Creator-Pilot-Terms' })
 						}),
 						(0, t.jsx)(r.Spacer, { size: 24 }),
 						(0, t.jsx)(T, {
@@ -134,9 +132,7 @@ function E(e) {
 						(0, t.jsx)(r.Text, {
 							variant: 'text-xs/normal',
 							color: 'text-muted',
-							children: l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_ACCEPT_DISCLAIMER.format({
-								termsURL: 'https://support.discord.com/hc/en-us/articles/5330075836311-Creator-Pilot-Terms'
-							})
+							children: l.Z.Messages.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_ACCEPT_DISCLAIMER.format({ termsURL: 'https://support.discord.com/hc/en-us/articles/5330075836311-Creator-Pilot-Terms' })
 						})
 					]
 				})

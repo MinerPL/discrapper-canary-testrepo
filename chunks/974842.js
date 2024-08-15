@@ -15,40 +15,9 @@ var a = t(735250),
 	h = t(689938),
 	x = t(981808),
 	p = t(318577);
-let g = [
-	f.ZD.SWORD,
-	f.ZD.WATER_DROP,
-	f.ZD.SKULL,
-	f.ZD.TOADSTOOL,
-	f.ZD.MOON,
-	f.ZD.LIGHTNING,
-	f.ZD.LEAF,
-	f.ZD.HEART,
-	f.ZD.FIRE,
-	f.ZD.COMPASS,
-	f.ZD.CROSSHAIRS,
-	f.ZD.FLOWER,
-	f.ZD.FORCE,
-	f.ZD.GEM,
-	f.ZD.LAVA,
-	f.ZD.PSYCHIC,
-	f.ZD.SMOKE,
-	f.ZD.SNOW,
-	f.ZD.SOUND,
-	f.ZD.SUN,
-	f.ZD.WIND
-];
+let g = [f.ZD.SWORD, f.ZD.WATER_DROP, f.ZD.SKULL, f.ZD.TOADSTOOL, f.ZD.MOON, f.ZD.LIGHTNING, f.ZD.LEAF, f.ZD.HEART, f.ZD.FIRE, f.ZD.COMPASS, f.ZD.CROSSHAIRS, f.ZD.FLOWER, f.ZD.FORCE, f.ZD.GEM, f.ZD.LAVA, f.ZD.PSYCHIC, f.ZD.SMOKE, f.ZD.SNOW, f.ZD.SOUND, f.ZD.SUN, f.ZD.WIND];
 n.Z = (e) => {
-	let {
-			handleUpdate: n,
-			badge: t,
-			primaryColor: i,
-			secondaryColor: o,
-			tag: T,
-			error: E,
-			furthestStep: I,
-			inSettings: b
-		} = e,
+	let { handleUpdate: n, badge: t, primaryColor: i, secondaryColor: o, tag: T, error: E, furthestStep: I, inSettings: b } = e,
 		N = r.useMemo(() => {
 			let e = (0, f.yf)();
 			return {
@@ -64,8 +33,7 @@ n.Z = (e) => {
 			});
 	}, [N.primary, N.secondary, n, i, o]);
 	let v = r.useMemo(() => {
-			for (let e = 0; e < f.sg.length; e++)
-				if (f.sg[e].primary === N.primary && f.sg[e].secondary === N.secondary) return 1 + e;
+			for (let e = 0; e < f.sg.length; e++) if (f.sg[e].primary === N.primary && f.sg[e].secondary === N.secondary) return 1 + e;
 			return 0;
 		}, [N.primary, N.secondary]),
 		[y, S] = r.useState(!1),

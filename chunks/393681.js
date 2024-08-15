@@ -111,9 +111,7 @@ class H extends a.PureComponent {
 					className: Y.accountWarningBodyText,
 					messageType: p.Q.WARNING,
 					children: [
-						this.props.forceMigrationExperiment
-							? V.Z.Messages.POMELO_ACTION_NEEDED_FORCE.format({ date: (0, m.IE)(this.props.locale) })
-							: V.Z.Messages.POMELO_ACTION_NEEDED.format(),
+						this.props.forceMigrationExperiment ? V.Z.Messages.POMELO_ACTION_NEEDED_FORCE.format({ date: (0, m.IE)(this.props.locale) }) : V.Z.Messages.POMELO_ACTION_NEEDED.format(),
 						' ',
 						'',
 						(0, n.jsx)(C.Z, {
@@ -201,12 +199,7 @@ class H extends a.PureComponent {
 		});
 	}
 	renderConfirmModals() {
-		let {
-			shouldRenderOwnedGuildsModal: e,
-			shouldRenderDeleteAccountConfirmModal: s,
-			shouldRenderDisableAccountErrorModal: t,
-			disableAccountErrorMessage: a
-		} = this.state;
+		let { shouldRenderOwnedGuildsModal: e, shouldRenderDeleteAccountConfirmModal: s, shouldRenderDisableAccountErrorModal: t, disableAccountErrorMessage: a } = this.state;
 		if (e) {
 			let e = () => this.setState({ shouldRenderOwnedGuildsModal: !1 });
 			return (0, n.jsx)(_.DeclarativeConfirmModal, {

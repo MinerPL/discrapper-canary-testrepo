@@ -15,17 +15,7 @@ var l = n(120356),
 	d = n(140757);
 function h(e) {
 	var t;
-	let {
-			id: n,
-			className: l,
-			innerClassName: h,
-			renderIcon: p,
-			text: _,
-			selected: f,
-			trailing: g,
-			showUnread: m = !1,
-			...C
-		} = e,
+	let { id: n, className: l, innerClassName: h, renderIcon: p, text: _, selected: f, trailing: g, showUnread: m = !1, ...C } = e,
 		I = (0, a.JA)(n),
 		E = null !== (t = (0, s.q)(_)) && void 0 !== t ? t : '';
 	return (0, i.jsx)('li', {

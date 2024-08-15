@@ -10,10 +10,7 @@ var r = n(573654),
 function o(e, t) {
 	for (var n = 0; n < t.length; n++) {
 		var r = t[n];
-		(r.enumerable = r.enumerable || !1),
-			(r.configurable = !0),
-			'value' in r && (r.writable = !0),
-			Object.defineProperty(e, r.key, r);
+		(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 	}
 }
 var l = (function () {
@@ -34,8 +31,7 @@ var l = (function () {
 					var t = this,
 						n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { handlerIds: void 0 },
 						i = n.handlerIds;
-					(0, r.k)('function' == typeof e, 'listener must be a function.'),
-						(0, r.k)(void 0 === i || Array.isArray(i), 'handlerIds, when specified, must be an array of strings.');
+					(0, r.k)('function' == typeof e, 'listener must be a function.'), (0, r.k)(void 0 === i || Array.isArray(i), 'handlerIds, when specified, must be an array of strings.');
 					var a = this.store.getState().stateId;
 					return this.store.subscribe(function () {
 						var n = t.store.getState(),
@@ -65,10 +61,7 @@ var l = (function () {
 				value: function (e) {
 					if (!e) return !1;
 					var t = this.registry.getSource(e);
-					return (
-						(0, r.k)(t, 'Expected to find a valid source. sourceId='.concat(e)),
-						!this.isDragging() && t.canDrag(this, e)
-					);
+					return (0, r.k)(t, 'Expected to find a valid source. sourceId='.concat(e)), !this.isDragging() && t.canDrag(this, e);
 				}
 			},
 			{
@@ -76,10 +69,7 @@ var l = (function () {
 				value: function (e) {
 					if (!e) return !1;
 					var t = this.registry.getTarget(e);
-					if (
-						((0, r.k)(t, 'Expected to find a valid target. targetId='.concat(e)), !this.isDragging() || this.didDrop())
-					)
-						return !1;
+					if (((0, r.k)(t, 'Expected to find a valid target. targetId='.concat(e)), !this.isDragging() || this.didDrop())) return !1;
 					var n = this.registry.getTargetType(e),
 						a = this.getItemType();
 					return (0, i.s)(n, a) && t.canDrop(this, e);
@@ -96,12 +86,7 @@ var l = (function () {
 				value: function (e) {
 					if (!e) return !1;
 					var t = this.registry.getSource(e, !0);
-					return (
-						(0, r.k)(t, 'Expected to find a valid source. sourceId='.concat(e)),
-						!!(this.isDragging() && this.isSourcePublic()) &&
-							this.registry.getSourceType(e) === this.getItemType() &&
-							t.isDragging(this, e)
-					);
+					return (0, r.k)(t, 'Expected to find a valid source. sourceId='.concat(e)), !!(this.isDragging() && this.isSourcePublic()) && this.registry.getSourceType(e) === this.getItemType() && t.isDragging(this, e);
 				}
 			},
 			{

@@ -64,7 +64,4 @@ function _(e, t, n) {
 		E = [h[i ? 3 : 0], h[1], _[2]];
 	return [E, [p[i ? 3 : 0], p[1], f[2]]];
 }
-((a = i || (i = {}))[(a.SELECTED = 0)] = 'SELECTED'),
-	(a[(a.SPEAKER = 1)] = 'SPEAKER'),
-	(a[(a.AUDIENCE = 2)] = 'AUDIENCE'),
-	(a[(a.MEDIA = 3)] = 'MEDIA');
+((a = i || (i = {}))[(a.SELECTED = 0)] = 'SELECTED'), (a[(a.SPEAKER = 1)] = 'SPEAKER'), (a[(a.AUDIENCE = 2)] = 'AUDIENCE'), (a[(a.MEDIA = 3)] = 'MEDIA');

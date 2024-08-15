@@ -28,16 +28,9 @@ let d = (e, t) => ({
 					})
 				: void 0
 	}),
-	_ = (e) =>
-		(null == e ? void 0 : e.errorCode) === 429
-			? c.Z.Messages.INTERACTION_RATE_LIMITED
-			: c.Z.Messages.APPLICATION_COMMAND_FAILED,
+	_ = (e) => ((null == e ? void 0 : e.errorCode) === 429 ? c.Z.Messages.INTERACTION_RATE_LIMITED : c.Z.Messages.APPLICATION_COMMAND_FAILED),
 	E = (e, t, n) => {
-		let a =
-			(null == e ? void 0 : e.data.interactionType) === r.B8.MESSAGE_COMPONENT &&
-			(null == e ? void 0 : e.state) === i.F.FAILED
-				? e.data.componentId
-				: null;
+		let a = (null == e ? void 0 : e.data.interactionType) === r.B8.MESSAGE_COMPONENT && (null == e ? void 0 : e.state) === i.F.FAILED ? e.data.componentId : null;
 		if (
 			null !=
 			(null != a
@@ -76,7 +69,7 @@ function h(e) {
 	return e
 		.map((e, n) =>
 			(function e(t, n, i) {
-				var s, u, _, E, h, I, m, T;
+				var s, u, _, E, h, m, I, T;
 				if (!f(t.type)) return null;
 				let { includeEmojiSrc: g } = n;
 				switch (t.type) {
@@ -123,10 +116,7 @@ function h(e) {
 								description: e.description,
 								emoji: null != e.emoji ? d(e.emoji, g) : void 0
 							})),
-							placeholder:
-								null !== (s = t.placeholder) && void 0 !== s
-									? s
-									: c.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
+							placeholder: null !== (s = t.placeholder) && void 0 !== s ? s : c.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
 							minValues: t.min_values,
 							maxValues: t.max_values
 						};
@@ -150,10 +140,7 @@ function h(e) {
 							id: p(i),
 							customId: t.custom_id,
 							disabled: t.disabled,
-							placeholder:
-								null !== (_ = t.placeholder) && void 0 !== _
-									? _
-									: c.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
+							placeholder: null !== (_ = t.placeholder) && void 0 !== _ ? _ : c.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
 							minValues: t.min_values,
 							maxValues: t.max_values,
 							defaultValues: t.default_values
@@ -164,10 +151,7 @@ function h(e) {
 							id: p(i),
 							customId: t.custom_id,
 							disabled: t.disabled,
-							placeholder:
-								null !== (E = t.placeholder) && void 0 !== E
-									? E
-									: c.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
+							placeholder: null !== (E = t.placeholder) && void 0 !== E ? E : c.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
 							minValues: t.min_values,
 							maxValues: t.max_values,
 							defaultValues: t.default_values
@@ -178,10 +162,7 @@ function h(e) {
 							id: p(i),
 							customId: t.custom_id,
 							disabled: t.disabled,
-							placeholder:
-								null !== (h = t.placeholder) && void 0 !== h
-									? h
-									: c.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
+							placeholder: null !== (h = t.placeholder) && void 0 !== h ? h : c.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
 							minValues: t.min_values,
 							maxValues: t.max_values,
 							defaultValues: t.default_values
@@ -192,10 +173,7 @@ function h(e) {
 							id: p(i),
 							customId: t.custom_id,
 							disabled: t.disabled,
-							placeholder:
-								null !== (I = t.placeholder) && void 0 !== I
-									? I
-									: c.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
+							placeholder: null !== (m = t.placeholder) && void 0 !== m ? m : c.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER,
 							minValues: t.min_values,
 							maxValues: t.max_values,
 							channelTypes: t.channel_types,
@@ -221,7 +199,7 @@ function h(e) {
 						return {
 							type: r.re.SEPARATOR,
 							id: p(i),
-							divider: null === (m = t.divider) || void 0 === m || m,
+							divider: null === (I = t.divider) || void 0 === I || I,
 							spacing: null !== (T = t.spacing) && void 0 !== T ? T : r.US.SMALL
 						};
 					case r.re.CONTENT_INVENTORY_ENTRY:

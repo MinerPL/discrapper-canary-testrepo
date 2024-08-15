@@ -15,14 +15,7 @@ var r = n(735250),
 	_ = n(457390);
 let E = i.forwardRef(function (e, t) {
 	var n, a, E;
-	let {
-			query: f,
-			onChange: h,
-			loading: p = !1,
-			disabled: I = !1,
-			placeholder: m = d.Z.Messages.SEARCH,
-			'aria-label': T
-		} = e,
+	let { query: f, onChange: h, loading: p = !1, disabled: m = !1, placeholder: I = d.Z.Messages.SEARCH, 'aria-label': T } = e,
 		g = i.useRef(null),
 		S = i.useRef(null);
 	i.useImperativeHandle(
@@ -111,8 +104,8 @@ let E = i.forwardRef(function (e, t) {
 					value: f,
 					onChange: (e) => h(e.currentTarget.value),
 					'aria-label': T,
-					placeholder: m,
-					disabled: I
+					placeholder: I,
+					disabled: m
 				}),
 				A
 			]

@@ -25,25 +25,16 @@ let p = {
 	[E.Eu4.TIER_3]: 1
 };
 t.Z = function (e) {
-	let {
-			children: t,
-			confettiTriggerRef: n,
-			guild: i,
-			isProgressBarAnimationComplete: I,
-			setConfettiCount: m,
-			setShouldFireConfetti: T,
-			tier: g,
-			tierMarkerAnimationPosition: S
-		} = e,
+	let { children: t, confettiTriggerRef: n, guild: i, isProgressBarAnimationComplete: m, setConfettiCount: I, setShouldFireConfetti: T, tier: g, tierMarkerAnimationPosition: S } = e,
 		{ analyticsLocations: A } = (0, l.ZP)(),
 		N = E.oCV[g] - i.premiumSubscriberCount,
-		v = g <= S || I,
+		v = g <= S || m,
 		O = v && g <= i.premiumTier,
 		R = v && g < i.premiumTier,
 		C = v && g === i.premiumTier,
 		{ scaleFactor: y } = (0, o.useSpring)({
 			from: { scaleFactor: 0 },
-			to: { scaleFactor: S >= g || (I && S + 1 === g) || (I && -1 === S && g === E.Eu4.NONE) ? 1 : 0 },
+			to: { scaleFactor: S >= g || (m && S + 1 === g) || (m && -1 === S && g === E.Eu4.NONE) ? 1 : 0 },
 			config: {
 				tension: 360,
 				friction: 12
@@ -94,9 +85,7 @@ t.Z = function (e) {
 				};
 	return (0, r.jsx)(o.Tooltip, {
 		text: O
-			? f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_TIER_UNLOCKED.format({
-					tierName: (0, c.nW)(g, { useLevels: !1 })
-				})
+			? f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_TIER_UNLOCKED.format({ tierName: (0, c.nW)(g, { useLevels: !1 }) })
 			: f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_REMAINING_FOR_TIER.format({
 					numBoostsRequired: N,
 					tierName: (0, c.nW)(g, { useLevels: !1 })
@@ -118,7 +107,7 @@ t.Z = function (e) {
 					O && g === E.Eu4.TIER_3
 						? (0, r.jsx)(_.m, {
 								confettiTriggerRef: n,
-								setConfettiCount: m,
+								setConfettiCount: I,
 								setShouldFireConfetti: T,
 								children: D
 							})

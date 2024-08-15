@@ -21,8 +21,7 @@ let o = [],
 class c extends (r = i.ZP.PersistedStore) {
 	initialize(e) {
 		var t, n;
-		(l = null !== (t = null == e ? void 0 : e.persistentCodesEnabled) && void 0 !== t && t),
-			(u = null !== (n = null == e ? void 0 : e.uploadedKeyVersions) && void 0 !== n ? n : o);
+		(l = null !== (t = null == e ? void 0 : e.persistentCodesEnabled) && void 0 !== t && t), (u = null !== (n = null == e ? void 0 : e.uploadedKeyVersions) && void 0 !== n ? n : o);
 	}
 	getState() {
 		return {

@@ -4,12 +4,7 @@ var o = r(58615),
 	a = r(746272),
 	u = r(669013);
 function s(t, e) {
-	(this.typeNumber = t),
-		(this.errorCorrectLevel = e),
-		(this.modules = null),
-		(this.moduleCount = 0),
-		(this.dataCache = null),
-		(this.dataList = []);
+	(this.typeNumber = t), (this.errorCorrectLevel = e), (this.modules = null), (this.moduleCount = 0), (this.dataCache = null), (this.dataList = []);
 }
 var l = s.prototype;
 (l.addData = function (t) {
@@ -27,8 +22,7 @@ var l = s.prototype;
 		if (this.typeNumber < 1) {
 			var t = 1;
 			for (t = 1; t < 40; t++) {
-				for (var e = n.getRSBlocks(t, this.errorCorrectLevel), r = new i(), o = 0, u = 0; u < e.length; u++)
-					o += e[u].dataCount;
+				for (var e = n.getRSBlocks(t, this.errorCorrectLevel), r = new i(), o = 0, u = 0; u < e.length; u++) o += e[u].dataCount;
 				for (var u = 0; u < this.dataList.length; u++) {
 					var s = this.dataList[u];
 					r.put(s.mode, 4), r.put(s.getLength(), a.getLengthInBits(s.mode, t)), s.write(r);
@@ -45,27 +39,10 @@ var l = s.prototype;
 			this.modules[r] = Array(this.moduleCount);
 			for (var o = 0; o < this.moduleCount; o++) this.modules[r][o] = null;
 		}
-		this.setupPositionProbePattern(0, 0),
-			this.setupPositionProbePattern(this.moduleCount - 7, 0),
-			this.setupPositionProbePattern(0, this.moduleCount - 7),
-			this.setupPositionAdjustPattern(),
-			this.setupTimingPattern(),
-			this.setupTypeInfo(t, e),
-			this.typeNumber >= 7 && this.setupTypeNumber(t),
-			null == this.dataCache && (this.dataCache = s.createData(this.typeNumber, this.errorCorrectLevel, this.dataList)),
-			this.mapData(this.dataCache, e);
+		this.setupPositionProbePattern(0, 0), this.setupPositionProbePattern(this.moduleCount - 7, 0), this.setupPositionProbePattern(0, this.moduleCount - 7), this.setupPositionAdjustPattern(), this.setupTimingPattern(), this.setupTypeInfo(t, e), this.typeNumber >= 7 && this.setupTypeNumber(t), null == this.dataCache && (this.dataCache = s.createData(this.typeNumber, this.errorCorrectLevel, this.dataList)), this.mapData(this.dataCache, e);
 	}),
 	(l.setupPositionProbePattern = function (t, e) {
-		for (var r = -1; r <= 7; r++)
-			if (!(t + r <= -1) && !(this.moduleCount <= t + r))
-				for (var o = -1; o <= 7; o++)
-					!(e + o <= -1) &&
-						!(this.moduleCount <= e + o) &&
-						((0 <= r && r <= 6 && (0 == o || 6 == o)) ||
-						(0 <= o && o <= 6 && (0 == r || 6 == r)) ||
-						(2 <= r && r <= 4 && 2 <= o && o <= 4)
-							? (this.modules[t + r][e + o] = !0)
-							: (this.modules[t + r][e + o] = !1));
+		for (var r = -1; r <= 7; r++) if (!(t + r <= -1) && !(this.moduleCount <= t + r)) for (var o = -1; o <= 7; o++) !(e + o <= -1) && !(this.moduleCount <= e + o) && ((0 <= r && r <= 6 && (0 == o || 6 == o)) || (0 <= o && o <= 6 && (0 == r || 6 == r)) || (2 <= r && r <= 4 && 2 <= o && o <= 4) ? (this.modules[t + r][e + o] = !0) : (this.modules[t + r][e + o] = !1));
 	}),
 	(l.getBestMaskPattern = function () {
 		for (var t = 0, e = 0, r = 0; r < 8; r++) {
@@ -81,13 +58,7 @@ var l = s.prototype;
 		for (var n = 0; n < this.modules.length; n++) {
 			for (var i = 1 * n, a = 0; a < this.modules[n].length; a++) {
 				var u = 1 * a;
-				this.modules[n][a] &&
-					(o.beginFill(0, 100),
-					o.moveTo(u, i),
-					o.lineTo(u + 1, i),
-					o.lineTo(u + 1, i + 1),
-					o.lineTo(u, i + 1),
-					o.endFill());
+				this.modules[n][a] && (o.beginFill(0, 100), o.moveTo(u, i), o.lineTo(u + 1, i), o.lineTo(u + 1, i + 1), o.lineTo(u, i + 1), o.endFill());
 			}
 		}
 		return o;
@@ -105,12 +76,7 @@ var l = s.prototype;
 			for (var r = 0; r < t.length; r++) {
 				var o = t[e],
 					n = t[r];
-				if (null == this.modules[o][n])
-					for (var i = -2; i <= 2; i++)
-						for (var u = -2; u <= 2; u++)
-							-2 == i || 2 == i || -2 == u || 2 == u || (0 == i && 0 == u)
-								? (this.modules[o + i][n + u] = !0)
-								: (this.modules[o + i][n + u] = !1);
+				if (null == this.modules[o][n]) for (var i = -2; i <= 2; i++) for (var u = -2; u <= 2; u++) -2 == i || 2 == i || -2 == u || 2 == u || (0 == i && 0 == u) ? (this.modules[o + i][n + u] = !0) : (this.modules[o + i][n + u] = !1);
 			}
 	}),
 	(l.setupTypeNumber = function (t) {
@@ -126,19 +92,11 @@ var l = s.prototype;
 	(l.setupTypeInfo = function (t, e) {
 		for (var r = (this.errorCorrectLevel << 3) | e, o = a.getBCHTypeInfo(r), n = 0; n < 15; n++) {
 			var i = !t && ((o >> n) & 1) == 1;
-			n < 6
-				? (this.modules[n][8] = i)
-				: n < 8
-					? (this.modules[n + 1][8] = i)
-					: (this.modules[this.moduleCount - 15 + n][8] = i);
+			n < 6 ? (this.modules[n][8] = i) : n < 8 ? (this.modules[n + 1][8] = i) : (this.modules[this.moduleCount - 15 + n][8] = i);
 		}
 		for (var n = 0; n < 15; n++) {
 			var i = !t && ((o >> n) & 1) == 1;
-			n < 8
-				? (this.modules[8][this.moduleCount - n - 1] = i)
-				: n < 9
-					? (this.modules[8][15 - n - 1 + 1] = i)
-					: (this.modules[8][15 - n - 1] = i);
+			n < 8 ? (this.modules[8][this.moduleCount - n - 1] = i) : n < 9 ? (this.modules[8][15 - n - 1 + 1] = i) : (this.modules[8][15 - n - 1] = i);
 		}
 		this.modules[this.moduleCount - 8][8] = !t;
 	}),
@@ -148,10 +106,7 @@ var l = s.prototype;
 				for (var s = 0; s < 2; s++)
 					if (null == this.modules[o][u - s]) {
 						var l = !1;
-						i < t.length && (l = ((t[i] >>> n) & 1) == 1),
-							a.getMask(e, o, u - s) && (l = !l),
-							(this.modules[o][u - s] = l),
-							-1 == --n && (i++, (n = 7));
+						i < t.length && (l = ((t[i] >>> n) & 1) == 1), a.getMask(e, o, u - s) && (l = !l), (this.modules[o][u - s] = l), -1 == --n && (i++, (n = 7));
 					}
 				if ((o += r) < 0 || this.moduleCount <= o) {
 					(o -= r), (r = -r);
@@ -191,8 +146,7 @@ var l = s.prototype;
 			}
 		}
 		for (var v = 0, g = 0; g < e.length; g++) v += e[g].totalCount;
-		for (var m = Array(v), T = 0, g = 0; g < o; g++)
-			for (var l = 0; l < e.length; l++) g < i[l].length && (m[T++] = i[l][g]);
+		for (var m = Array(v), T = 0, g = 0; g < o; g++) for (var l = 0; l < e.length; l++) g < i[l].length && (m[T++] = i[l][g]);
 		for (var g = 0; g < n; g++) for (var l = 0; l < e.length; l++) g < s[l].length && (m[T++] = s[l][g]);
 		return m;
 	}),

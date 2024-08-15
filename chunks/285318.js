@@ -17,20 +17,13 @@ function c(e) {
 				n = null;
 			switch (e) {
 				case r.Ux.PROFANITY:
-					(t = l.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_PROFANITY_HEADER),
-						(n = (0, s.jsx)(s.Fragment, {
-							children: l.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_PROFANITY_SUBTITLE
-						}));
+					(t = l.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_PROFANITY_HEADER), (n = (0, s.jsx)(s.Fragment, { children: l.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_PROFANITY_SUBTITLE }));
 					break;
 				case r.Ux.SEXUAL_CONTENT:
-					(t = l.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SEXUAL_CONTENT_HEADER),
-						(n = (0, s.jsx)(s.Fragment, {
-							children: l.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SEXUAL_CONTENT_SUBTITLE
-						}));
+					(t = l.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SEXUAL_CONTENT_HEADER), (n = (0, s.jsx)(s.Fragment, { children: l.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SEXUAL_CONTENT_SUBTITLE }));
 					break;
 				case r.Ux.SLURS:
-					(t = l.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SLURS_HEADER),
-						(n = (0, s.jsx)(s.Fragment, { children: l.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SLURS_SUBTITLE }));
+					(t = l.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SLURS_HEADER), (n = (0, s.jsx)(s.Fragment, { children: l.Z.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_SLURS_SUBTITLE }));
 					break;
 				default:
 					(t = 'Error'), (n = 'Unrecognized list');
@@ -69,9 +62,7 @@ function c(e) {
 function d(e) {
 	var t;
 	let { rule: n, onChangeRule: i } = e,
-		[l, o] = a.useState(
-			new Set(null == n ? void 0 : null === (t = n.triggerMetadata) || void 0 === t ? void 0 : t.presets)
-		),
+		[l, o] = a.useState(new Set(null == n ? void 0 : null === (t = n.triggerMetadata) || void 0 === t ? void 0 : t.presets)),
 		d = a.useMemo(
 			() => (e) => {
 				i({

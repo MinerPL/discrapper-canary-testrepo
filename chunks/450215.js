@@ -27,16 +27,7 @@ var s = n(735250),
 	p = n(325850);
 function R(e) {
 	var t, n;
-	let {
-			guildId: i,
-			initialEditStateId: l,
-			allSubscriptionListings: R,
-			priceTiers: f,
-			onDeleteEditState: L,
-			groupListingId: O,
-			onBeforeDispatchNewListing: A,
-			onAfterDispatchNewListing: M
-		} = e,
+	let { guildId: i, initialEditStateId: l, allSubscriptionListings: R, priceTiers: f, onDeleteEditState: L, groupListingId: O, onBeforeDispatchNewListing: A, onAfterDispatchNewListing: M } = e,
 		[D, v] = a.useState(l),
 		j = (0, c.e7)([T.Z], () => T.Z.getSubscriptionListing(D)),
 		Z = null == j,

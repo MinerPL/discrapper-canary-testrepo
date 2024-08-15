@@ -20,9 +20,7 @@ function s(e, t, n, s) {
 				}
 			: {
 					mainText: a.Z.Messages.STREAM_CAPTURE_PAUSED,
-					supportingText: a.Z.Messages.STREAM_CAPTURE_PAUSED_DETAILS_VIEWER.format({
-						username: r.ZP.getName(e.guildId, e.channelId, t)
-					})
+					supportingText: a.Z.Messages.STREAM_CAPTURE_PAUSED_DETAILS_VIEWER.format({ username: r.ZP.getName(e.guildId, e.channelId, t) })
 				};
 	return s
 		? {

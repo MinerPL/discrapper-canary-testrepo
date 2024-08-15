@@ -44,12 +44,7 @@ class c extends a.PureComponent {
 				if (e === t || null == a || null == t) return;
 				let i = (0, r.M)(e),
 					o = a.selectionStart;
-				i === t && i.length <= 3 && t.includes('/') && !e.includes('/')
-					? (i = i.replace(l, ''))
-					: i === t && e.includes('/') && !t.includes('/') && (i += '/'),
-					i.length > e.length && (o += i.length - e.length),
-					(this.selectionStart = o),
-					null != n && n(i, s);
+				i === t && i.length <= 3 && t.includes('/') && !e.includes('/') ? (i = i.replace(l, '')) : i === t && e.includes('/') && !t.includes('/') && (i += '/'), i.length > e.length && (o += i.length - e.length), (this.selectionStart = o), null != n && n(i, s);
 			});
 	}
 }

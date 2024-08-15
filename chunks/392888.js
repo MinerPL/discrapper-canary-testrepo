@@ -19,20 +19,13 @@ class E extends o.Z {
 	handlePostConnectionOpen() {
 		if (!a.K.get('turnedOffNewNotifications')) {
 			if (l.Z.hasConsented(_.pjP.PERSONALIZATION)) {
-				if (
-					!c.xT.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 }).enabled ||
-					u.ZP.useNewNotifications
-				)
-					return;
+				if (!c.xT.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 }).enabled || u.ZP.useNewNotifications) return;
 				this.checkOldUserExperiment(), this.checkNewUserExperiment();
 			}
 		}
 	}
 	async checkOldUserExperiment() {
-		let { logExposure: e, autoOpen: t } = c.fs.getCurrentConfig(
-			{ location: 'NotificationMigrationManager' },
-			{ autoTrackExposure: !1 }
-		);
+		let { logExposure: e, autoOpen: t } = c.fs.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 });
 		if (!e) return;
 		let {
 				body: { guild_noise: a, usage: o }
@@ -57,10 +50,7 @@ class E extends o.Z {
 				: (0, d.ly)();
 	}
 	checkNewUserExperiment() {
-		let { logExposure: e, enabled: t } = c.ad.getCurrentConfig(
-			{ location: 'NotificationMigrationManager' },
-			{ autoTrackExposure: !1 }
-		);
+		let { logExposure: e, enabled: t } = c.ad.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 });
 		if (!!e) c.ad.trackExposure({ location: 'NotificationMigrationManager' }), t && (0, d.ly)();
 	}
 	constructor(...e) {

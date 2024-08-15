@@ -77,11 +77,7 @@ class D extends a.PureComponent {
 					children: [
 						null != s.expiresAt
 							? (0, n.jsxs)(a.Fragment, {
-									children: [
-										x.Z.Messages.GIFT_INVENTORY_EXPIRES_IN.format({ hours: s.expiresAt.diff(r()(), 'h') }),
-										' ',
-										'\u2014\xA0'
-									]
+									children: [x.Z.Messages.GIFT_INVENTORY_EXPIRES_IN.format({ hours: s.expiresAt.diff(r()(), 'h') }), ' ', '\u2014\xA0']
 								})
 							: null,
 						(0, n.jsx)(c.Clickable, {
@@ -124,19 +120,13 @@ class P extends a.PureComponent {
 				a === R.m8
 					? x.Z.Messages.BLACK_FRIDAY_PROMOTION_GIFT_INVENTORY_TITLE
 					: a === R.rX && null != t
-						? (t.interval === R.rV.MONTH
-								? x.Z.Messages.STICKERS_GIFT_INVENTORY_TITLE_MONTH
-								: x.Z.Messages.STICKERS_GIFT_INVENTORY_TITLE_YEAR
-							).format({
+						? (t.interval === R.rV.MONTH ? x.Z.Messages.STICKERS_GIFT_INVENTORY_TITLE_MONTH : x.Z.Messages.STICKERS_GIFT_INVENTORY_TITLE_YEAR).format({
 								skuName: s.name,
 								intervalCount: t.intervalCount
 							})
 						: null == t
 							? s.name
-							: (t.interval === R.rV.MONTH
-									? x.Z.Messages.GIFT_INVENTORY_SUBSCRIPTION_MONTHS
-									: x.Z.Messages.GIFT_INVENTORY_SUBSCRIPTION_YEARS
-								).format({
+							: (t.interval === R.rV.MONTH ? x.Z.Messages.GIFT_INVENTORY_SUBSCRIPTION_MONTHS : x.Z.Messages.GIFT_INVENTORY_SUBSCRIPTION_YEARS).format({
 									skuName: s.name,
 									intervalCount: t.intervalCount
 								})),
@@ -170,16 +160,7 @@ class P extends a.PureComponent {
 		this.setState({ isHovered: e });
 	}
 	render() {
-		let {
-				entitlements: e,
-				application: s,
-				giftCodes: t,
-				className: i,
-				sku: r,
-				isFetching: o,
-				hideCodes: l,
-				giftStyle: d
-			} = this.props,
+		let { entitlements: e, application: s, giftCodes: t, className: i, sku: r, isFetching: o, hideCodes: l, giftStyle: d } = this.props,
 			{ isOpen: E } = this.state;
 		return (0, n.jsxs)(_.Z, {
 			className: i,
@@ -274,8 +255,7 @@ class P extends a.PureComponent {
 			f(this, 'handleToggleOpen', () => {
 				let { skuId: e, subscriptionPlanId: s, loadedAt: t } = this.props,
 					n = !this.state.isOpen;
-				(null == t || null == this._loadedAt || t < this._loadedAt) && n && d.Z.fetchUserGiftCodesForSKU(e, s),
-					this.setState({ isOpen: !this.state.isOpen });
+				(null == t || null == this._loadedAt || t < this._loadedAt) && n && d.Z.fetchUserGiftCodesForSKU(e, s), this.setState({ isOpen: !this.state.isOpen });
 			});
 	}
 }

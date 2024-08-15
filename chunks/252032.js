@@ -20,8 +20,8 @@ var i = n(735250),
 	_ = n(630388),
 	f = n(838440),
 	E = n(930282),
-	g = n(955384),
-	C = n(981631),
+	C = n(955384),
+	g = n(981631),
 	I = n(58755);
 function x(e) {
 	let { value: t, channel: n } = e;
@@ -39,8 +39,8 @@ function T(e) {
 		{ id: c } = n,
 		p = t.getGuildId(),
 		f = (0, s.e7)([h.Z], () => h.Z.getGuild(p), [p]),
-		E = t.type === C.d4z.GUILD_ANNOUNCEMENT,
-		T = null != f && f.hasFeature(C.oNc.NEWS),
+		E = t.type === g.d4z.GUILD_ANNOUNCEMENT,
+		T = null != f && f.hasFeature(g.oNc.NEWS),
 		v = E && T,
 		{
 			editingMessage: S,
@@ -59,14 +59,9 @@ function T(e) {
 		b = a.useCallback(
 			(e, n, i) => {
 				let { content: a } = i,
-					s = m.Z.can(C.Plq.MANAGE_MESSAGES, t),
+					s = m.Z.can(g.Plq.MANAGE_MESSAGES, t),
 					o = null != S && null != S.author ? S.author.id : null;
-				return (
-					v && (o === M || s) && null != S && (0, _.yE)(S.flags, C.iLy.CROSSPOSTED)
-						? r.Z.confirmEdit(e, n, a)
-						: l.Z.editMessage(e, n, { content: a }),
-					Promise.resolve()
-				);
+				return v && (o === M || s) && null != S && (0, _.yE)(S.flags, g.iLy.CROSSPOSTED) ? r.Z.confirmEdit(e, n, a) : l.Z.editMessage(e, n, { content: a }), Promise.resolve();
 			},
 			[S, v, M, t]
 		),
@@ -80,7 +75,7 @@ function T(e) {
 			[c]
 		);
 	return null != Z && null != A
-		? (0, i.jsx)(g.Z, {
+		? (0, i.jsx)(C.Z, {
 				ref: void 0,
 				channel: t,
 				message: n,
@@ -103,10 +98,10 @@ function N(e) {
 	return (
 		a.useEffect(
 			() => (
-				p.S.subscribe(C.CkL.TEXTAREA_FOCUS, _),
-				p.S.subscribe(C.CkL.TEXTAREA_BLUR, f),
+				p.S.subscribe(g.CkL.TEXTAREA_FOCUS, _),
+				p.S.subscribe(g.CkL.TEXTAREA_BLUR, f),
 				() => {
-					p.S.unsubscribe(C.CkL.TEXTAREA_FOCUS, _), p.S.unsubscribe(C.CkL.TEXTAREA_BLUR, f);
+					p.S.unsubscribe(g.CkL.TEXTAREA_FOCUS, _), p.S.unsubscribe(g.CkL.TEXTAREA_BLUR, f);
 				}
 			),
 			[_, f]

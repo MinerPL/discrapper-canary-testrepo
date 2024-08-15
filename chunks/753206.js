@@ -10,15 +10,7 @@ var r = t(735250),
 	_ = t(58755);
 n.Z = i.memo(function (e) {
 	var n;
-	let {
-			message: t,
-			channel: i,
-			compact: o,
-			className: f,
-			isGroupStart: E,
-			hideSimpleEmbedContent: I = !0,
-			disableInteraction: g
-		} = e,
+	let { message: t, channel: i, compact: o, className: f, isGroupStart: E, hideSimpleEmbedContent: I = !0, disableInteraction: g } = e,
 		p = (0, u.A)((null !== (n = t.editedTimestamp) && void 0 !== n ? n : t.timestamp).valueOf()),
 		{ content: S } = (0, s.Z)(t, {
 			hideSimpleEmbedContent: I,

@@ -11,10 +11,7 @@ var i = n(481060),
 	r = n(637389);
 function o(e) {
 	let { action: t, onClick: n } = e,
-		o =
-			t === l.JS.JOIN
-				? s.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
-				: s.Z.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY,
+		o = t === l.JS.JOIN ? s.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY : s.Z.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY,
 		c = t === l.JS.JOIN ? i.Button.Colors.PRIMARY : i.Button.Colors.RED;
 	return (0, a.jsx)('div', {
 		className: r.activityOverlay,

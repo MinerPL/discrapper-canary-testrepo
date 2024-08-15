@@ -90,11 +90,7 @@ class F extends r.PureComponent {
 							disabled: n || r,
 							color: l.Button.Colors.GREEN,
 							size: l.Button.Sizes.SMALL,
-							children: r
-								? A.Z.Messages.MFA_SMS_DISABLED_PARTNER
-								: n
-									? A.Z.Messages.MFA_SMS_ALREADY_ENABLED
-									: A.Z.Messages.MFA_SMS_ENABLE
+							children: r ? A.Z.Messages.MFA_SMS_DISABLED_PARTNER : n ? A.Z.Messages.MFA_SMS_ALREADY_ENABLED : A.Z.Messages.MFA_SMS_ENABLE
 						})
 					]
 				})
@@ -186,11 +182,7 @@ class F extends r.PureComponent {
 				this.renderHeader(A.Z.Messages.MFA_SMS_ENABLE_SHOULD_DO.format()),
 				(0, o.jsxs)(l.ModalContent, {
 					className: S.modalInner,
-					children: [
-						this.renderSMSSection(),
-						(0, o.jsx)(l.FormDivider, { className: S.divider }),
-						this.renderBackupCodesSection()
-					]
+					children: [this.renderSMSSection(), (0, o.jsx)(l.FormDivider, { className: S.divider }), this.renderBackupCodesSection()]
 				}),
 				t && this.renderConfirmModal(A.Z.Messages.TWO_FA_CONFIRM_BODY)
 			]

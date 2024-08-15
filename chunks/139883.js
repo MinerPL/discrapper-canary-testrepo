@@ -5,9 +5,7 @@ function n(e) {
 					return typeof e;
 				}
 			: function (e) {
-					return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype
-						? 'symbol'
-						: typeof e;
+					return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
 				})(e);
 }
 function o(e) {
@@ -49,11 +47,7 @@ r.d(t, {
 });
 function i(e) {
 	var t, r, n;
-	return (
-		((t = e) && t.prototype && 'function' == typeof t.prototype.render) ||
-		(null == (r = e) ? void 0 : null === (n = r.$$typeof) || void 0 === n ? void 0 : n.toString()) ===
-			'Symbol(react.forward_ref)'
-	);
+	return ((t = e) && t.prototype && 'function' == typeof t.prototype.render) || (null == (r = e) ? void 0 : null === (n = r.$$typeof) || void 0 === n ? void 0 : n.toString()) === 'Symbol(react.forward_ref)';
 }
 function s(e, t) {}
 function a(e) {

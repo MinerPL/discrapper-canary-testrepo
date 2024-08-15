@@ -22,8 +22,7 @@ var r = n(391997),
 			(e.observe = function (e, t, n) {
 				var a = o.get(e),
 					u = 0 === a.observationTargets.length;
-				0 > l(a.observationTargets, t) &&
-					(u && s.C.push(a), a.observationTargets.push(new i.Q(t, n && n.box)), (0, r.t)(1), r.p.schedule());
+				0 > l(a.observationTargets, t) && (u && s.C.push(a), a.observationTargets.push(new i.Q(t, n && n.box)), (0, r.t)(1), r.p.schedule());
 			}),
 			(e.unobserve = function (e, t) {
 				var n = o.get(e),

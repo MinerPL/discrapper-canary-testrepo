@@ -21,8 +21,8 @@ var i,
 	f = n(570140),
 	h = n(714338),
 	p = n(710845),
-	I = n(658785),
-	m = n(131951),
+	m = n(658785),
+	I = n(131951),
 	T = n(626135),
 	g = n(358085),
 	S = n(998502),
@@ -62,13 +62,8 @@ let D = new p.Z('KeybindsStore'),
 	x = !1,
 	G = [v.kg4.PUSH_TO_TALK, v.kg4.TOGGLE_OVERLAY_INPUT_LOCK, v.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET];
 function k() {
-	let { showKeybindIndicators: e } = I.Z.getCurrentConfig({ location: 'KeybindsStore' });
-	null == _().find(M, (e) => L.action === e.action && e.enabled && e.shortcut.length > 0) &&
-		!__OVERLAY__ &&
-		!x &&
-		U &&
-		e &&
-		(H(L), (x = !0));
+	let { showKeybindIndicators: e } = m.Z.getCurrentConfig({ location: 'KeybindsStore' });
+	null == _().find(M, (e) => L.action === e.action && e.enabled && e.shortcut.length > 0) && !__OVERLAY__ && !x && U && e && (H(L), (x = !0));
 }
 function B() {
 	let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -91,12 +86,7 @@ function H(e) {
 	let { shortcut: t, action: n, enabled: r } = e;
 	if ('' === t || null == t || n === v.kg4.UNASSIGNED || !r) return;
 	if (null == w[n]) {
-		D.error(
-			'[kb store] KeybindStore: Looking for callback action '.concat(
-				n,
-				" but it doesn't exist in this version. Skipping"
-			)
-		);
+		D.error('[kb store] KeybindStore: Looking for callback action '.concat(n, " but it doesn't exist in this version. Skipping"));
 		return;
 	}
 	let i = e.id,
@@ -107,9 +97,7 @@ function H(e) {
 			else {
 				V(e);
 				let i = l()(new (s())(document));
-				r.keyup && i.bindGlobal((0, A.BB)(t), () => n(!1), 'keyup'),
-					r.keydown && i.bindGlobal((0, A.BB)(t), () => n(!0), 'keydown'),
-					(b[e] = i);
+				r.keyup && i.bindGlobal((0, A.BB)(t), () => n(!1), 'keyup'), r.keydown && i.bindGlobal((0, A.BB)(t), () => n(!0), 'keydown'), (b[e] = i);
 			}
 		})(
 			i,
@@ -163,15 +151,7 @@ function j(e) {
 				keybind_is_bound: !0,
 				keybind_has_shortcut: t.shortcut.length > 0
 			}),
-			t.action === v.kg4.TOGGLE_OVERLAY_INPUT_LOCK
-				? T.default.track(v.rMx.OVERLAY_SETTINGS_UPDATED, {
-						hotkey: t.action === v.kg4.TOGGLE_OVERLAY_INPUT_LOCK ? (0, A.BB)(t.shortcut) : null
-					})
-				: t.action === v.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET &&
-					T.default.track(v.rMx.OVERLAY_SETTINGS_UPDATED, {
-						text_activation_hotkey:
-							t.action === v.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET ? (0, A.BB)(t.shortcut) : null
-					})),
+			t.action === v.kg4.TOGGLE_OVERLAY_INPUT_LOCK ? T.default.track(v.rMx.OVERLAY_SETTINGS_UPDATED, { hotkey: t.action === v.kg4.TOGGLE_OVERLAY_INPUT_LOCK ? (0, A.BB)(t.shortcut) : null }) : t.action === v.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET && T.default.track(v.rMx.OVERLAY_SETTINGS_UPDATED, { text_activation_hotkey: t.action === v.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET ? (0, A.BB)(t.shortcut) : null })),
 		H(t);
 }
 function W(e, t) {
@@ -192,13 +172,13 @@ function W(e, t) {
 }
 let K = [
 	function () {
-		let e = m.Z.getShortcuts();
+		let e = I.Z.getShortcuts();
 		return (
 			_().each(M, (t) => {
 				t.action === v.kg4.PUSH_TO_TALK && !0 === t.managed && (null == t.context || null == e[t.context]) && Y(t);
 			}),
 			_().reduce(
-				m.Z.getShortcuts(),
+				I.Z.getShortcuts(),
 				(e, t, n) => {
 					let r = _().find(M, (e) => e.action === v.kg4.PUSH_TO_TALK && !0 === e.managed && e.context === n);
 					if (null == r)
@@ -249,19 +229,18 @@ h.Z.setGetKeybindList(() => {
 	for (let t in M) {
 		if (!!M.hasOwnProperty(t)) e.push((0, A.BB)(M[t].shortcut));
 	}
-	let { showKeybindIndicators: t } = I.Z.getCurrentConfig({ location: 'KeybindsStore' });
+	let { showKeybindIndicators: t } = m.Z.getCurrentConfig({ location: 'KeybindsStore' });
 	return t && e.push((0, A.BB)(L.shortcut)), e;
 });
 class q extends (i = E.ZP.DeviceSettingsStore) {
 	initialize(e) {
-		!__OVERLAY__ && this.waitFor(m.Z, N.Z), (M = null != e ? e : {});
+		!__OVERLAY__ && this.waitFor(I.Z, N.Z), (M = null != e ? e : {});
 	}
 	getUserAgnosticState() {
 		return M;
 	}
 	hasKeybind(e, t, n) {
-		for (let r in M)
-			for (let i of M[r].shortcut) if (i[0] === e && i[1] === t && (void 0 === n || n === i[2])) return !0;
+		for (let r in M) for (let i of M[r].shortcut) if (i[0] === e && i[1] === t && (void 0 === n || n === i[2])) return !0;
 		return !1;
 	}
 	hasExactKeybind(e) {
@@ -274,7 +253,7 @@ class q extends (i = E.ZP.DeviceSettingsStore) {
 	getKeybindForAction(e) {
 		let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
 			n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-			{ showKeybindIndicators: r } = I.Z.getCurrentConfig({ location: 'KeybindsStore' }),
+			{ showKeybindIndicators: r } = m.Z.getCurrentConfig({ location: 'KeybindsStore' }),
 			i = _().find(M, (r) => r.action === e && (!t || r.managed) && (!n || (r.shortcut.length > 0 && r.enabled)));
 		return null != i ? i : r && e === v.kg4.TOGGLE_MUTE ? L : null;
 	}
@@ -291,25 +270,7 @@ y(q, 'displayName', 'KeybindsStore'),
 		function () {
 			let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
 				{ v: t, keybinds: n = e } = e;
-			return _().reduce(
-				n,
-				(e, n, r) =>
-					isNaN(parseInt(n.id, 10)) || n.id !== r
-						? e
-						: ((null == t || t < 2) &&
-								('string' == typeof n.shortcut
-									? ((n.shortcut = n.shortcut
-											.replace('escape', 'esc')
-											.replace('capslock', 'caps lock')
-											.replace('numlock', 'num lock')
-											.replace('pageup', 'page up')
-											.replace('pagedown', 'page down')),
-										(n.shortcut = (0, A.Kd)(n.shortcut)))
-									: (n.shortcut = n.shortcut.map((e) => (e.length < 3 ? [...e, (0, A.dU)()] : e)))),
-							(e[r] = n),
-							e),
-				{}
-			);
+			return _().reduce(n, (e, n, r) => (isNaN(parseInt(n.id, 10)) || n.id !== r ? e : ((null == t || t < 2) && ('string' == typeof n.shortcut ? ((n.shortcut = n.shortcut.replace('escape', 'esc').replace('capslock', 'caps lock').replace('numlock', 'num lock').replace('pageup', 'page up').replace('pagedown', 'page down')), (n.shortcut = (0, A.Kd)(n.shortcut))) : (n.shortcut = n.shortcut.map((e) => (e.length < 3 ? [...e, (0, A.dU)()] : e)))), (e[r] = n), e)), {});
 		},
 		(e) => e,
 		(e) => {
@@ -402,6 +363,6 @@ y(q, 'displayName', 'KeybindsStore'),
 					}
 				}),
 				(U = !0),
-				null == r && (r = I.Z.subscribe({ location: 'KeybindsStore' }, F));
+				null == r && (r = m.Z.subscribe({ location: 'KeybindsStore' }, F));
 		}
 	}));

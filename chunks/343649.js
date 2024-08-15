@@ -71,20 +71,7 @@ async function en(e) {
 }
 function et(e) {
 	let n,
-		{
-			transitionState: t,
-			onClose: o,
-			closeGuildPerksModal: i,
-			analyticsLocations: m,
-			analyticsLocation: et,
-			analyticsSourceLocation: eo,
-			guildId: er,
-			onSubscribeComplete: ea,
-			totalNumberOfSlotsToAssign: ei = 1,
-			disablePremiumUpsell: ec = !1,
-			onSubscriptionConfirmation: el,
-			applicationId: es
-		} = e,
+		{ transitionState: t, onClose: o, closeGuildPerksModal: i, analyticsLocations: m, analyticsLocation: et, analyticsSourceLocation: eo, guildId: er, onSubscribeComplete: ea, totalNumberOfSlotsToAssign: ei = 1, disablePremiumUpsell: ec = !1, onSubscriptionConfirmation: el, applicationId: es } = e,
 		{ activeSubscription: eu, blockedPayments: ed } = (0, x.usePaymentContext)(),
 		ep = (0, d.e7)([D.ZP], () => D.ZP.hasFetchedSubscriptions()),
 		e_ = null != eu ? eu.paymentSourceId : null,
@@ -95,18 +82,7 @@ function et(e) {
 		eg = a.useRef((0, Z.vx)(O.Z.boostSlots)).current,
 		eb = (0, d.e7)([w.Z], () => w.Z.defaultPaymentSourceId),
 		eE = (0, A.fL)(null != e_ ? e_ : ep ? eb : null),
-		{
-			paymentSources: eI,
-			setPurchaseError: eP,
-			paymentSourceId: ey,
-			setIsSubmittingCurrentStep: ex,
-			paymentAuthenticationState: eT,
-			setPaymentSourceId: eM,
-			isSubmittingCurrentStep: eC,
-			paymentError: ev,
-			purchaseError: eN,
-			purchaseErrorBlockRef: eA
-		} = eE,
+		{ paymentSources: eI, setPurchaseError: eP, paymentSourceId: ey, setIsSubmittingCurrentStep: ex, paymentAuthenticationState: eT, setPaymentSourceId: eM, isSubmittingCurrentStep: eC, paymentError: ev, purchaseError: eN, purchaseErrorBlockRef: eA } = eE,
 		eR = Object.keys(eI).length > 0,
 		[eL, ek] = a.useState(ei - eg.length),
 		[eO, eB] = a.useState(!1),
@@ -159,11 +135,7 @@ function et(e) {
 				if (!0 === ew)
 					try {
 						if (null == B.Z.redirectedPaymentId) return;
-						await (0, f.OP)(B.Z.redirectedPaymentId),
-							eJ(T.h8.CONFIRM),
-							ez(M.A.COMPLETED),
-							null != er && (await en(er)),
-							null != ea && ea();
+						await (0, f.OP)(B.Z.redirectedPaymentId), eJ(T.h8.CONFIRM), ez(M.A.COMPLETED), null != er && (await en(er)), null != ea && ea();
 					} catch (e) {
 						ez(M.A.FAIL),
 							eP(e),
@@ -219,12 +191,7 @@ function et(e) {
 		},
 		e0 = null != eu && eu.isPurchasedExternally;
 	a.useEffect(() => {
-		eT !== N.wr.PENDING &&
-			eH !== T.h8.CONFIRM &&
-			null != e_ &&
-			(eG !== Q && eY(Q), !Q.includes(eH) && eH !== T.h8.PREMIUM_UPSELL && eJ(T.h8.REVIEW)),
-			eH === T.h8.ADD_PAYMENT_STEPS && eG !== ee && eY(ee),
-			e0 && eH !== T.h8.PLAN_SELECT && eV(T.h8.PLAN_SELECT);
+		eT !== N.wr.PENDING && eH !== T.h8.CONFIRM && null != e_ && (eG !== Q && eY(Q), !Q.includes(eH) && eH !== T.h8.PREMIUM_UPSELL && eJ(T.h8.REVIEW)), eH === T.h8.ADD_PAYMENT_STEPS && eG !== ee && eY(ee), e0 && eH !== T.h8.PLAN_SELECT && eV(T.h8.PLAN_SELECT);
 	}, [eH, eJ, e0, eT, eu, e_, eG]),
 		(0, N.bp)(eH, eT, eJ, ez),
 		(0, T.dZ)(eH, eK, ez);
@@ -235,9 +202,7 @@ function et(e) {
 		[e3, e9] = a.useState(!1);
 	a.useEffect(() => {
 		let e;
-		if (!!eU)
-			null != U.Z.get(z.Xh.PREMIUM_MONTH_GUILD) && e5((e = (0, W.DE)(z.Xh.PREMIUM_MONTH_GUILD, ey, !1))),
-				null == ey && null != eu && null != eu.paymentSourceId ? e4(eu.currency) : null != e && e4(e[0]);
+		if (!!eU) null != U.Z.get(z.Xh.PREMIUM_MONTH_GUILD) && e5((e = (0, W.DE)(z.Xh.PREMIUM_MONTH_GUILD, ey, !1))), null == ey && null != eu && null != eu.paymentSourceId ? e4(eu.currency) : null != e && e4(e[0]);
 	}, [ey, eu, eU, JSON.stringify(e6)]);
 	let ne = (0, A.vP)({
 		paymentModalArgs: eE,
@@ -338,9 +303,7 @@ function et(e) {
 								children: [
 									(0, r.jsx)(_.FormErrorBlock, {
 										className: $.externalErrorBlock,
-										children: q.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_EXTERNAL.format({
-											paymentGatewayName: X.Vz[eu.paymentGateway]
-										})
+										children: q.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_EXTERNAL.format({ paymentGatewayName: X.Vz[eu.paymentGateway] })
 									}),
 									e
 								]
@@ -423,11 +386,7 @@ function et(e) {
 												}
 											} else {
 												let n = { items: (0, F.MY)(eu, eD) };
-												(n.currency = eu.currency),
-													null == n.currency && (n.currency = l.currency),
-													(n.paymentSource = null != e_ ? eI[e_] : void 0),
-													null == n.paymentSource &&
-														(c()(null != e, 'Missing paymentSource'), (n.paymentSource = e), (n.currency = l.currency));
+												(n.currency = eu.currency), null == n.currency && (n.currency = l.currency), (n.paymentSource = null != e_ ? eI[e_] : void 0), null == n.paymentSource && (c()(null != e, 'Missing paymentSource'), (n.paymentSource = e), (n.currency = l.currency));
 												let t = await (0, f.Mg)(eu, n, eF);
 												if (t.redirectConfirmation) {
 													e9(null != t.redirectURL);

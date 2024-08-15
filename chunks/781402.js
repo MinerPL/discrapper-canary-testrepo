@@ -9,14 +9,7 @@ function o() {
 	return {
 		Provider: ({ initialStore: t, createStore: n, children: o }) => {
 			let r = (0, i.useRef)();
-			return (
-				!r.current &&
-					(t &&
-						(console.warn('Provider initialStore is deprecated and will be removed in the next version.'),
-						!n && (n = () => t)),
-					(r.current = n())),
-				(0, i.createElement)(e.Provider, { value: r.current }, o)
-			);
+			return !r.current && (t && (console.warn('Provider initialStore is deprecated and will be removed in the next version.'), !n && (n = () => t)), (r.current = n())), (0, i.createElement)(e.Provider, { value: r.current }, o);
 		},
 		useStore: (t, n = Object.is) => {
 			let o = (0, i.useContext)(e);

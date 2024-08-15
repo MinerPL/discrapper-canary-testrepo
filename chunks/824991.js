@@ -88,12 +88,7 @@ function I(e) {
 			location: a.Z.GUILD_CHANNEL_LIST
 		});
 	}, [t.id]);
-	let f =
-			r === u.xn
-				? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE
-				: r === u.nJ
-					? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE
-					: p.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
+	let f = r === u.xn ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : r === u.nJ ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : p.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
 		I = l.useCallback(() => (0, i.jsx)(m, { message: p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE }), []),
 		E = l.useCallback(() => (0, i.jsx)(g, { title: f }), [f]),
 		N = l.useCallback(() => {

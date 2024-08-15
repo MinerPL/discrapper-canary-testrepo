@@ -45,9 +45,7 @@ class p extends i.PureComponent {
 		let { codes: n, mode: i } = this.state,
 			{ disabled: r } = this.props;
 		return (
-			m
-				? ((t = u.ZP.getDiscordUtils().inputCaptureRegisterElement), (e = this.handleNativeChange))
-				: !d.isPlatformEmbedded && (e = this.handleComboKeys),
+			m ? ((t = u.ZP.getDiscordUtils().inputCaptureRegisterElement), (e = this.handleNativeChange)) : !d.isPlatformEmbedded && (e = this.handleComboKeys),
 			(0, s.jsx)(a.Z, {
 				disabled: r,
 				value: n,
@@ -65,8 +63,7 @@ class p extends i.PureComponent {
 			h(this, 'gs', void 0),
 			h(this, '_mounted', !1),
 			h(this, 'recordStart', () => {
-				d.isPlatformEmbedded && !m && ((this.gs = new l.Z()), this.gs.on('change', this.handleGSChange)),
-					this.setState({ mode: a.c.RECORDING });
+				d.isPlatformEmbedded && !m && ((this.gs = new l.Z()), this.gs.on('change', this.handleGSChange)), this.setState({ mode: a.c.RECORDING });
 			}),
 			h(this, 'recordEnd', () => {
 				this.cleanUp(), this.setState({ mode: a.c.DEFAULT });

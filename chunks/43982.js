@@ -18,8 +18,7 @@ var a = n(512722),
 let p = null;
 function _(e) {
 	let { onDismiss: t, onAccept: n, popoutPosition: a, gameConsoleAccounts: l } = e;
-	s()(l.length > 0, 'Rendering ConsoleNUXTooltip without a game console account'),
-		(null == p || null == l.find((e) => e.type === p)) && (p = r().shuffle(l)[0].type);
+	s()(l.length > 0, 'Rendering ConsoleNUXTooltip without a game console account'), (null == p || null == l.find((e) => e.type === p)) && (p = r().shuffle(l)[0].type);
 	let _ = null,
 		f = null;
 	switch (p) {

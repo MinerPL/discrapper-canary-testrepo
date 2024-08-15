@@ -48,19 +48,7 @@ function b(e, t) {
 }
 function M(e) {
 	let { channel: t, disableManageChannels: n, tabIndex: i, forceShowButtons: l, hasChannelInfo: r = !1 } = e;
-	if (
-		(0, d.e7)(
-			[x.Z, S.Z],
-			() =>
-				n ||
-				S.Z.getGuildId() === Z.I_8 ||
-				(!x.Z.can(Z.Plq.MANAGE_CHANNELS, t) && !x.Z.can(Z.Plq.MANAGE_ROLES, t) && !x.Z.can(Z.Plq.MANAGE_WEBHOOKS, t)) ||
-				((0, I.r8)(t.type) && !x.Z.can(Z.Plq.VIEW_CHANNEL, t)) ||
-				(t.isGuildVocal() && !x.Z.can(Z.Plq.CONNECT, t)) ||
-				!I.dF.has(t.type)
-		)
-	)
-		return null;
+	if ((0, d.e7)([x.Z, S.Z], () => n || S.Z.getGuildId() === Z.I_8 || (!x.Z.can(Z.Plq.MANAGE_CHANNELS, t) && !x.Z.can(Z.Plq.MANAGE_ROLES, t) && !x.Z.can(Z.Plq.MANAGE_WEBHOOKS, t)) || ((0, I.r8)(t.type) && !x.Z.can(Z.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !x.Z.can(Z.Plq.CONNECT, t)) || !I.dF.has(t.type))) return null;
 	function a() {
 		p.ZP.open(t.id);
 	}
@@ -92,9 +80,7 @@ function R(e) {
 		p = (0, d.e7)([m.Z], () => m.Z.getStageInstanceByChannel(t.id), [t.id]),
 		g = (0, d.e7)([_.ZP], () => _.ZP.getActiveEventByChannel(t.id), [t.id]),
 		I = (0, d.e7)([x.Z], () => (0, f.b)(x.Z, c, t, p)),
-		S = (0, d.e7)([x.Z], () =>
-			x.Z.can(Z.Plq.CREATE_INSTANT_INVITE, t) ? T.Z.Messages.CREATE_INSTANT_INVITE : T.Z.Messages.INVITE_TO_SERVER
-		);
+		S = (0, d.e7)([x.Z], () => (x.Z.can(Z.Plq.CREATE_INSTANT_INVITE, t) ? T.Z.Messages.CREATE_INSTANT_INVITE : T.Z.Messages.INVITE_TO_SERVER));
 	if (l || !I) return null;
 	function v() {
 		if (null != c) {

@@ -31,7 +31,7 @@ let f = [l.yU.CHAT, l.yU.PRIMARY_ENTRY_POINT],
 		afterCompute: () => {},
 		numFrequentlyItems: d.yP
 	});
-function I(e) {
+function m(e) {
 	h.pendingUsages.push({
 		key: e,
 		timestamp: Date.now()
@@ -39,16 +39,9 @@ function I(e) {
 		p.track(e),
 		p.compute();
 }
-function m() {
+function I() {
 	var e, t;
-	let n =
-		null !==
-			(t =
-				null === (e = c.Z.frecencyWithoutFetchingLatest.applicationFrecency) || void 0 === e
-					? void 0
-					: e.applications) && void 0 !== t
-			? t
-			: {};
+	let n = null !== (t = null === (e = c.Z.frecencyWithoutFetchingLatest.applicationFrecency) || void 0 === e ? void 0 : e.applications) && void 0 !== t ? t : {};
 	p.overwriteHistory(
 		a().mapValues(n, (e) => ({
 			...e,
@@ -59,7 +52,7 @@ function m() {
 }
 class T extends (r = s.ZP.PersistedStore) {
 	initialize(e) {
-		null != e && (h = e), this.syncWith([c.Z], m);
+		null != e && (h = e), this.syncWith([c.Z], I);
 	}
 	getState() {
 		return h;
@@ -84,11 +77,11 @@ E(T, 'displayName', 'ApplicationFrecencyStore'),
 		APPLICATION_COMMAND_USED: function (e) {
 			let { command: t } = e;
 			if (!f.includes(t.type)) return !1;
-			I(t.applicationId);
+			m(t.applicationId);
 		},
 		EMBEDDED_ACTIVITY_OPEN: function (e) {
 			let { applicationId: t } = e;
-			I(t);
+			m(t);
 		},
 		USER_SETTINGS_PROTO_UPDATE: function (e) {
 			let {

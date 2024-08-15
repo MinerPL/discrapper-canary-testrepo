@@ -7,23 +7,8 @@ var r = n(628735),
 	l = n(981631);
 let u = /(?:^|\.)(?:discordapp|discord)\.com$/i,
 	c = i().v4().source,
-	d = RegExp(
-		'(?:'
-			.concat('(?:(?:[a-z]+:)?//)', '|www\\.)')
-			.concat('(?:\\S+(?::\\S*)?@)?', '(?:localhost|')
-			.concat(c, '|')
-			.concat('(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+')
-			.concat('(?:(?:[a-z\\u00a1-\\uffff]{2,}))', ')')
-			.concat('(?::\\d{2,5})?')
-			.concat('(?:[/?#][^\\s"]*)?'),
-		'ig'
-	),
-	_ = new Set([
-		window.GLOBAL_ENV.CDN_HOST,
-		window.GLOBAL_ENV.INVITE_HOST,
-		window.GLOBAL_ENV.GIFT_CODE_HOST,
-		window.GLOBAL_ENV.GUILD_TEMPLATE_HOST
-	]);
+	d = RegExp('(?:'.concat('(?:(?:[a-z]+:)?//)', '|www\\.)').concat('(?:\\S+(?::\\S*)?@)?', '(?:localhost|').concat(c, '|').concat('(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+').concat('(?:(?:[a-z\\u00a1-\\uffff]{2,}))', ')').concat('(?::\\d{2,5})?').concat('(?:[/?#][^\\s"]*)?'), 'ig'),
+	_ = new Set([window.GLOBAL_ENV.CDN_HOST, window.GLOBAL_ENV.INVITE_HOST, window.GLOBAL_ENV.GIFT_CODE_HOST, window.GLOBAL_ENV.GUILD_TEMPLATE_HOST]);
 function E(e) {
 	var t;
 	let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -55,16 +40,7 @@ t.Z = {
 	isDiscordUrlOrUri: (e) => h(e) || p(e),
 	isAppRoute: (e) => {
 		let t = e.toLowerCase();
-		return (
-			t.startsWith('/channels/') ||
-			t.startsWith(l.Z5c.APPLICATION_STORE) ||
-			t.startsWith(l.Z5c.APPLICATION_LIBRARY) ||
-			t.startsWith(l.Z5c.MESSAGE_REQUESTS) ||
-			t.startsWith(l.Z5c.FAMILY_CENTER) ||
-			t.startsWith(l.Z5c.ACTIVITIES) ||
-			t.startsWith(l.Z5c.COLLECTIBLES_SHOP) ||
-			t.startsWith(l.Z5c.ACTIVITY)
-		);
+		return t.startsWith('/channels/') || t.startsWith(l.Z5c.APPLICATION_STORE) || t.startsWith(l.Z5c.APPLICATION_LIBRARY) || t.startsWith(l.Z5c.MESSAGE_REQUESTS) || t.startsWith(l.Z5c.FAMILY_CENTER) || t.startsWith(l.Z5c.ACTIVITIES) || t.startsWith(l.Z5c.COLLECTIBLES_SHOP) || t.startsWith(l.Z5c.ACTIVITY);
 	},
 	format: (e) => o.format(e),
 	formatPathWithQuery: (e, t) =>

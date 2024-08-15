@@ -51,32 +51,15 @@ let s = 3600,
 		let t = T()().diff(T()(e), 's'),
 			I = E(),
 			n = T()(e).format('LL');
-		return (n =
-			t < A
-				? I.today
-				: t < r
-					? I.yesterday
-					: I.days.format({ days: Math.min(Math.floor(t / A), null != _ ? _ : 999) }));
+		return (n = t < A ? I.today : t < r ? I.yesterday : I.days.format({ days: Math.min(Math.floor(t / A), null != _ ? _ : 999) }));
 	},
 	o = (e, E) => {
 		let _ = T()().diff(T()(e), 's'),
 			t = E(),
 			I = T()(e).format('LL');
-		return (I =
-			_ < 60
-				? t.seconds
-				: _ < s
-					? t.minutes.format({ count: Math.floor(_ / 60) })
-					: _ < A
-						? t.hours.format({ count: Math.floor(_ / s) })
-						: _ < r
-							? t.yesterday
-							: _ < a
-								? t.days.format({ count: Math.floor(_ / A) })
-								: t.date.format({ date: I }));
+		return (I = _ < 60 ? t.seconds : _ < s ? t.minutes.format({ count: Math.floor(_ / 60) }) : _ < A ? t.hours.format({ count: Math.floor(_ / s) }) : _ < r ? t.yesterday : _ < a ? t.days.format({ count: Math.floor(_ / A) }) : t.date.format({ date: I }));
 	},
-	u = (e) =>
-		e.display_type === I.MY.USER_ADD || e.display_type === I.MY.USER_INTERACTION || e.display_type === I.MY.USER_CALLED,
+	u = (e) => e.display_type === I.MY.USER_ADD || e.display_type === I.MY.USER_INTERACTION || e.display_type === I.MY.USER_CALLED,
 	S = (e) => e.display_type === I.MY.GUILD_ADD || e.display_type === I.MY.GUILD_INTERACTION,
 	M = (e) => {
 		for (let E of Object.values(I.MY)) if (E.toString() === e) return E;

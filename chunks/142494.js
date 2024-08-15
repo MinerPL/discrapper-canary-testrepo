@@ -54,12 +54,7 @@ class _ {
 		return [e, n];
 	}
 	constructor(e, t, n) {
-		d(this, 'message', void 0),
-			d(this, 'hasMarkdown', void 0),
-			d(this, 'intlMessage', void 0),
-			(this.message = n ? e : e.replace(c.hN, '')),
-			(this.hasMarkdown = n),
-			(this.intlMessage = new (s())(this.message, t));
+		d(this, 'message', void 0), d(this, 'hasMarkdown', void 0), d(this, 'intlMessage', void 0), (this.message = n ? e : e.replace(c.hN, '')), (this.hasMarkdown = n), (this.intlMessage = new (s())(this.message, t));
 	}
 }
 function E(e) {

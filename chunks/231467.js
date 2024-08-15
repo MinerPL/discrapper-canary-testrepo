@@ -21,8 +21,8 @@ var r = n(735250),
 	f = n(905362),
 	h = n(603368),
 	p = n(353093),
-	I = n(169559),
-	m = n(114487),
+	m = n(169559),
+	I = n(114487),
 	T = n(214715),
 	g = n(550271),
 	S = n(686546),
@@ -171,21 +171,7 @@ function G(e) {
 }
 function k(e) {
 	var t;
-	let {
-			clan: n,
-			bannerComponent: a,
-			expanded: u,
-			isMember: c = !1,
-			traitsToHighlight: _,
-			prioritizedGameIds: f,
-			className: h,
-			showBrandingFooter: T = !1,
-			showFavoriteButton: A = !1,
-			bannerUrl: N,
-			onlyAnimateIconOnHover: v = !1,
-			hasPendingJoinRequest: O = !1,
-			atMaxMemberCapacity: R = !1
-		} = e,
+	let { clan: n, bannerComponent: a, expanded: u, isMember: c = !1, traitsToHighlight: _, prioritizedGameIds: f, className: h, showBrandingFooter: T = !1, showFavoriteButton: A = !1, bannerUrl: N, onlyAnimateIconOnHover: v = !1, hasPendingJoinRequest: O = !1, atMaxMemberCapacity: R = !1 } = e,
 		{
 			tag: D,
 			badge: L,
@@ -194,7 +180,7 @@ function k(e) {
 			gameActivity: V
 		} = n,
 		H = (0, d.Z)(n.games),
-		Z = (0, I.Z)('clan_discovery_card'),
+		Z = (0, m.Z)('clan_discovery_card'),
 		[Y, j] = i.useState(!1),
 		W = i.useRef(null),
 		[K, z] = i.useState(!1),
@@ -283,7 +269,7 @@ function k(e) {
 										className: P.clanIconMask,
 										children: (0, r.jsx)('div', {
 											className: P.clanIconInner,
-											children: (0, r.jsx)(m.b, {
+											children: (0, r.jsx)(I.b, {
 												guildId: n.id,
 												guildName: n.name,
 												guildIcon: n.icon,
@@ -354,10 +340,7 @@ function k(e) {
 										variant: 'text-xs/normal',
 										color: 'text-secondary',
 										className: P.clanInfoItem,
-										children:
-											null !== (t = (0, b.mv)(n.playstyle)) && void 0 !== t
-												? t
-												: M.Z.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
+										children: null !== (t = (0, b.mv)(n.playstyle)) && void 0 !== t ? t : M.Z.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
 									}),
 									(0, r.jsx)(U, {
 										wildcardDescriptors: n.wildcardDescriptors,
@@ -413,8 +396,8 @@ t.ZP = function (e) {
 	let { style: t, prioritizedGameIds: a, ...s } = e,
 		{ clan: o, affinity: d, index: E, source: h } = s,
 		p = (0, u.e7)([R.default], () => R.default.getCurrentUser()),
-		I = (0, u.e7)([O.ZP], () => O.ZP.isMember(o.id, null == p ? void 0 : p.id), [o, p]),
-		m = (0, u.e7)([N.Z], () => {
+		m = (0, u.e7)([O.ZP], () => O.ZP.isMember(o.id, null == p ? void 0 : p.id), [o, p]),
+		I = (0, u.e7)([N.Z], () => {
 			var e;
 			return (null === (e = N.Z.getRequest(o.id)) || void 0 === e ? void 0 : e.applicationStatus) === A.wB.SUBMITTED;
 		}),
@@ -424,12 +407,12 @@ t.ZP = function (e) {
 			if (
 				((0, _.EK)({
 					guildId: o.id,
-					isMember: I,
+					isMember: m,
 					hasJoinRequest: e,
 					affinity: d,
 					index: E
 				}),
-				I)
+				m)
 			) {
 				(0, v.XU)(o.id);
 				return;
@@ -448,7 +431,7 @@ t.ZP = function (e) {
 				a,
 				E
 			);
-		}, [o, I, d, E, h, a]),
+		}, [o, m, d, E, h, a]),
 		S = i.useCallback(
 			(e) => {
 				(0, c.jW)(e, async () => {
@@ -469,10 +452,10 @@ t.ZP = function (e) {
 		onContextMenu: S,
 		children: (0, r.jsx)(k, {
 			...s,
-			isMember: I,
+			isMember: m,
 			prioritizedGameIds: a,
 			showBrandingFooter: !0,
-			hasPendingJoinRequest: m,
+			hasPendingJoinRequest: I,
 			atMaxMemberCapacity: T
 		})
 	});

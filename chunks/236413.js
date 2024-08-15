@@ -94,8 +94,7 @@ function M(e) {
 		if (0 === r.length && 0 === a.length) throw Error(s.Z.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_NO_KEYWORDS_OR_REGEX);
 		c(r, l.RH),
 			!(function (e) {
-				if (e.length > l.VW)
-					throw Error(s.Z.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_TOO_MANY_REGEX.format({ limit: l.VW }));
+				if (e.length > l.VW) throw Error(s.Z.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_TOO_MANY_REGEX.format({ limit: l.VW }));
 				e.forEach((e) => {
 					if (e.length > l.aj || e.length < l.uE)
 						throw new E.uS(

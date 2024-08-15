@@ -42,9 +42,7 @@ var s = n(735250),
 	F = n(786362);
 let V = (e) => {
 		let { isFullscreen: t, selectedPremiumType: n } = e;
-		return (t && null == n) || (n === G.p9.TIER_2 && t)
-			? null
-			: (0, s.jsx)(O.Z, { className: t ? k.perkCardsContainerSpacingFullscreen : k.perkCardsContainerSpacingSettings });
+		return (t && null == n) || (n === G.p9.TIER_2 && t) ? null : (0, s.jsx)(O.Z, { className: t ? k.perkCardsContainerSpacingFullscreen : k.perkCardsContainerSpacingSettings });
 	},
 	W = (e) => {
 		let { isFullscreen: t, inOfferExperience: n } = e;

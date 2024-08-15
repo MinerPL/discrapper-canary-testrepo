@@ -87,10 +87,7 @@ function j(e) {
 		[d, m] = r.useState(0),
 		[f, p] = r.useState(0),
 		h = r.useCallback(() => {
-			null != l.current &&
-				(u(l.current.getDistanceFromTop()),
-				m(l.current.getDistanceFromBottom()),
-				p(l.current.getScrollerState().offsetHeight));
+			null != l.current && (u(l.current.getDistanceFromTop()), m(l.current.getDistanceFromBottom()), p(l.current.getScrollerState().offsetHeight));
 		}, []);
 	r.useEffect(() => {
 		if ((h(), null == t.current)) return;
@@ -209,17 +206,8 @@ n.default = function (e) {
 				z(null == e ? void 0 : e.message);
 			}
 		}, [Q, M, P, k]),
-		J =
-			!((null == P ? void 0 : null === (n = P.guild) || void 0 === n ? void 0 : n.verification_level) ===
-			N.sFg.VERY_HIGH
-				? Y
-				: V || Y) || k.some((e) => !(0, h.OA)(e)),
-		X =
-			(null !==
-				(T = null == P ? void 0 : null === (t = P.guild) || void 0 === t ? void 0 : t.approximate_member_count) &&
-			void 0 !== T
-				? T
-				: 0) >= E.Du,
+		J = !((null == P ? void 0 : null === (n = P.guild) || void 0 === n ? void 0 : n.verification_level) === N.sFg.VERY_HIGH ? Y : V || Y) || k.some((e) => !(0, h.OA)(e)),
+		X = (null !== (T = null == P ? void 0 : null === (t = P.guild) || void 0 === t ? void 0 : t.approximate_member_count) && void 0 !== T ? T : 0) >= E.Du,
 		$ = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
 		ee = (0, i.useSpring)(
 			{

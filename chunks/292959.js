@@ -74,14 +74,7 @@ u(f, 'displayName', 'NotificationSettingsStore'),
 	u(f, 'migrations', [
 		(e) => {
 			let t = { ...e };
-			return (
-				(t.disabledSounds = t.disabledSounds || []),
-				(t.disableUnreadBadge = t.disableUnreadBadge || !1),
-				(t.taskbarFlash = null == t.taskbarFlash || t.taskbarFlash),
-				(t.ttsType = t.ttsType || l.PrB.NEVER),
-				null == t.desktopType && (t.desktopType = o.isPlatformEmbedded ? l.qrD.ALL : l.qrD.NEVER),
-				t
-			);
+			return (t.disabledSounds = t.disabledSounds || []), (t.disableUnreadBadge = t.disableUnreadBadge || !1), (t.taskbarFlash = null == t.taskbarFlash || t.taskbarFlash), (t.ttsType = t.ttsType || l.PrB.NEVER), null == t.desktopType && (t.desktopType = o.isPlatformEmbedded ? l.qrD.ALL : l.qrD.NEVER), t;
 		}
 	]),
 	(t.Z = new f(a.Z, {

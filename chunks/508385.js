@@ -1,12 +1,6 @@
 var r = n(575270).RBTree;
 function i(e, t, n) {
-	(this.discrete = !1 === e),
-		(this.delta = e || 0.01),
-		(this.K = void 0 === t ? 25 : t),
-		(this.CX = void 0 === n ? 1.1 : n),
-		(this.centroids = new r(a)),
-		(this.nreset = 0),
-		this.reset();
+	(this.discrete = !1 === e), (this.delta = e || 0.01), (this.K = void 0 === t ? 25 : t), (this.CX = void 0 === n ? 1.1 : n), (this.centroids = new r(a)), (this.nreset = 0), this.reset();
 }
 function a(e, t) {
 	return e.mean > t.mean ? 1 : e.mean < t.mean ? -1 : 0;
@@ -38,14 +32,7 @@ function s(e, t) {
 		);
 	}),
 	(i.prototype.summary = function () {
-		return [
-			(this.discrete ? 'exact ' : 'approximating ') + this.n + ' samples using ' + this.size() + ' centroids',
-			'min = ' + this.percentile(0),
-			'Q1  = ' + this.percentile(0.25),
-			'Q2  = ' + this.percentile(0.5),
-			'Q3  = ' + this.percentile(0.75),
-			'max = ' + this.percentile(1)
-		].join('\n');
+		return [(this.discrete ? 'exact ' : 'approximating ') + this.n + ' samples using ' + this.size() + ' centroids', 'min = ' + this.percentile(0), 'Q1  = ' + this.percentile(0.25), 'Q2  = ' + this.percentile(0.5), 'Q3  = ' + this.percentile(0.75), 'max = ' + this.percentile(1)].join('\n');
 	}),
 	(i.prototype.push = function (e, t) {
 		(t = t || 1), (e = Array.isArray(e) ? e : [e]);
@@ -81,11 +68,7 @@ function s(e, t) {
 		return this.centroids.insert(r), (this.n += t), r;
 	}),
 	(i.prototype._addweight = function (e, t, n) {
-		t !== e.mean && (e.mean += (n * (t - e.mean)) / (e.n + n)),
-			(e.cumn += n),
-			(e.mean_cumn += n / 2),
-			(e.n += n),
-			(this.n += n);
+		t !== e.mean && (e.mean += (n * (t - e.mean)) / (e.n + n)), (e.cumn += n), (e.mean_cumn += n / 2), (e.n += n), (this.n += n);
 	}),
 	(i.prototype._digest = function (e, t) {
 		var n = this.centroids.min(),
@@ -97,9 +80,7 @@ function s(e, t) {
 		else if (this.discrete) this._new_centroid(e, t, i.cumn);
 		else {
 			var a = i.mean_cumn / this.n;
-			Math.floor(4 * this.n * this.delta * a * (1 - a)) - i.n >= t
-				? this._addweight(i, e, t)
-				: this._new_centroid(e, t, i.cumn);
+			Math.floor(4 * this.n * this.delta * a * (1 - a)) - i.n >= t ? this._addweight(i, e, t) : this._new_centroid(e, t, i.cumn);
 		}
 		this._cumulate(!1), !this.discrete && this.K && this.size() > this.K / this.delta && this.compress();
 	}),
@@ -152,12 +133,7 @@ function s(e, t) {
 		}
 	});
 function o(e) {
-	(this.config = e || {}),
-		(this.mode = this.config.mode || 'auto'),
-		i.call(this, 'cont' === this.mode && e.delta),
-		(this.digest_ratio = this.config.ratio || 0.9),
-		(this.digest_thresh = this.config.thresh || 1000),
-		(this.n_unique = 0);
+	(this.config = e || {}), (this.mode = this.config.mode || 'auto'), i.call(this, 'cont' === this.mode && e.delta), (this.digest_ratio = this.config.ratio || 0.9), (this.digest_thresh = this.config.thresh || 1000), (this.n_unique = 0);
 }
 (i.prototype.compress = function () {
 	if (!this.compressing) {
@@ -184,11 +160,7 @@ function o(e) {
 		1 === e.n && (this.n_unique -= 1), i.prototype._addweight.call(this, e, t, n);
 	}),
 	(o.prototype.check_continuous = function () {
-		return (
-			!('auto' !== this.mode || this.size() < this.digest_thresh) &&
-			!!(this.n_unique / this.size() > this.digest_ratio) &&
-			((this.mode = 'cont'), (this.discrete = !1), (this.delta = this.config.delta || 0.01), this.compress(), !0)
-		);
+		return !('auto' !== this.mode || this.size() < this.digest_thresh) && !!(this.n_unique / this.size() > this.digest_ratio) && ((this.mode = 'cont'), (this.discrete = !1), (this.delta = this.config.delta || 0.01), this.compress(), !0);
 	}),
 	(e.exports = {
 		TDigest: i,

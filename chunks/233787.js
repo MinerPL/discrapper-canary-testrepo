@@ -5,11 +5,7 @@ a(470079);
 var i = a(481060),
 	l = a(600164),
 	o = a(690490);
-((n = t || (t = {})).UPGRADE = 'UPGRADE'),
-	(n.CANCEL = 'CANCEL'),
-	(n.UNVERIFIED = 'UNVERIFIED'),
-	(n.UNCLAIMED = 'UNCLAIMED'),
-	(n.GRANDFATHERED = 'GRANDFATHERED');
+((n = t || (t = {})).UPGRADE = 'UPGRADE'), (n.CANCEL = 'CANCEL'), (n.UNVERIFIED = 'UNVERIFIED'), (n.UNCLAIMED = 'UNCLAIMED'), (n.GRANDFATHERED = 'GRANDFATHERED');
 let r = {
 		UPGRADE: 'imageUpgrade',
 		CANCEL: 'imageCancel',

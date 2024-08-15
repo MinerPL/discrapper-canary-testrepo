@@ -3,7 +3,7 @@ n.d(t, {
 		return p;
 	},
 	tR: function () {
-		return m;
+		return I;
 	},
 	tj: function () {
 		return f;
@@ -45,8 +45,8 @@ let o = /^[0]+/,
 	},
 	h = i()('2021-04-12T00:00:00'),
 	p = (e, t) => e.clone().hours(t.hour()).minutes(t.minutes()).seconds(0),
-	I = (e, t) => e.value.unix() - t.value.unix();
-class m {
+	m = (e, t) => e.value.unix() - t.value.unix();
+class I {
 	lookupByValue(e) {
 		if (null == e) return;
 		let t = p(h, e);
@@ -81,7 +81,7 @@ class m {
 				label: n,
 				value: t
 			}),
-			this.options.sort(I),
+			this.options.sort(m),
 			e
 		);
 	}
@@ -106,7 +106,7 @@ class m {
 				t.forEach((t) => {
 					null == this.lookupByValue(t) && e.push(this._createNewOption(t));
 				}),
-				e.sort(I),
+				e.sort(m),
 				e
 			);
 		}
@@ -116,14 +116,7 @@ class m {
 		return null == t ? this._addNewOption(e) : t;
 	}
 	constructor({ intervalInMinutes: e = 15, labelFormat: t = 'LT' } = {}) {
-		if (
-			(s(this, 'intervalInMinutes', void 0),
-			s(this, 'labelFormat', void 0),
-			s(this, 'options', []),
-			s(this, '_index', {}),
-			e <= 0)
-		)
-			throw Error('intervalInMinutes should be positive number, got '.concat(e));
+		if ((s(this, 'intervalInMinutes', void 0), s(this, 'labelFormat', void 0), s(this, 'options', []), s(this, '_index', {}), e <= 0)) throw Error('intervalInMinutes should be positive number, got '.concat(e));
 		(this.intervalInMinutes = e), (this.labelFormat = t), this._generateTimeOptions();
 	}
 }

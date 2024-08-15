@@ -18,11 +18,7 @@ n.d(t, {
 var r,
 	i,
 	a = n(470079);
-((r = i || (i = {}))[(r.ENTERING = 0)] = 'ENTERING'),
-	(r[(r.ENTERED = 1)] = 'ENTERED'),
-	(r[(r.EXITING = 2)] = 'EXITING'),
-	(r[(r.EXITED = 3)] = 'EXITED'),
-	(r[(r.HIDDEN = 4)] = 'HIDDEN');
+((r = i || (i = {}))[(r.ENTERING = 0)] = 'ENTERING'), (r[(r.ENTERED = 1)] = 'ENTERED'), (r[(r.EXITING = 2)] = 'EXITING'), (r[(r.EXITED = 3)] = 'EXITED'), (r[(r.HIDDEN = 4)] = 'HIDDEN');
 let s = 300,
 	o = 'default',
 	l = 'popout',

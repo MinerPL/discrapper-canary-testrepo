@@ -66,10 +66,7 @@ class I extends (n = a.Component) {
 	animateToIndex(e, t) {
 		let { animatedIndex: s } = this,
 			{ items: n, edgeItems: i } = this.props;
-		i > 0 &&
-			(0 === e && t === n.length - 1
-				? s.setValue(-1)
-				: 0 === t && e === n.length - 1 && n.length > 2 && s.setValue(n.length)),
+		i > 0 && (0 === e && t === n.length - 1 ? s.setValue(-1) : 0 === t && e === n.length - 1 && n.length > 2 && s.setValue(n.length)),
 			o.Z.spring(s, {
 				...c,
 				toValue: e

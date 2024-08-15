@@ -57,23 +57,7 @@ function C(e) {
 					})
 					.catch((e) => {
 						var s, o, t, n, l, a, i;
-						(null === (s = e.body) || void 0 === s ? void 0 : s.proof) && 'DOMAIN' === A
-							? (C(e.body.proof), T('PROOF_DNS'))
-							: M(
-									(null === (a = e.body) || void 0 === a
-										? void 0
-										: null === (l = a.errors) || void 0 === l
-											? void 0
-											: null === (n = l.domain) || void 0 === n
-												? void 0
-												: null === (t = n._errors) || void 0 === t
-													? void 0
-													: null === (o = t[0]) || void 0 === o
-														? void 0
-														: o.message) ||
-										(null === (i = e.body) || void 0 === i ? void 0 : i.message) ||
-										e.message
-								);
+						(null === (s = e.body) || void 0 === s ? void 0 : s.proof) && 'DOMAIN' === A ? (C(e.body.proof), T('PROOF_DNS')) : M((null === (a = e.body) || void 0 === a ? void 0 : null === (l = a.errors) || void 0 === l ? void 0 : null === (n = l.domain) || void 0 === n ? void 0 : null === (t = n._errors) || void 0 === t ? void 0 : null === (o = t[0]) || void 0 === o ? void 0 : o.message) || (null === (i = e.body) || void 0 === i ? void 0 : i.message) || e.message);
 					})
 					.finally(() => {
 						m(!1);

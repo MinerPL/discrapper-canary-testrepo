@@ -24,9 +24,7 @@ function o(e, t) {
 		a = t.map((t, n) => {
 			let { guid: i, guid: a, name: o, name: l, index: u } = t;
 			return (
-				/^default/.test(o)
-					? ((r = !0), (i = s.w5), (o = o.replace('default', 'Default')))
-					: (i = null != i && '' !== i ? i : o),
+				/^default/.test(o) ? ((r = !0), (i = s.w5), (o = o.replace('default', 'Default'))) : (i = null != i && '' !== i ? i : o),
 				null != u && (n = u),
 				{
 					id: i,

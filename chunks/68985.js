@@ -30,9 +30,7 @@ class d extends (r = i.ZP.PersistedStore) {
 	initialize(e) {
 		if (null != e) {
 			var t;
-			(c.numberOfDCsShownToday = null !== (t = e.numberOfDCsShownToday) && void 0 !== t ? t : 0),
-				(c.dailyCapPeriodStart = e.dailyCapPeriodStart),
-				(c.dailyCapOverridden = e.dailyCapOverridden);
+			(c.numberOfDCsShownToday = null !== (t = e.numberOfDCsShownToday) && void 0 !== t ? t : 0), (c.dailyCapPeriodStart = e.dailyCapPeriodStart), (c.dailyCapOverridden = e.dailyCapOverridden);
 		}
 		(c.dismissibleContentSeenDuringSession = new Set()), (c.lastDCDismissed = null);
 	}
@@ -49,19 +47,9 @@ class d extends (r = i.ZP.PersistedStore) {
 		return c.renderedAtTimestamps.get(e);
 	}
 	hasUserHitDCCap(e) {
-		if (
-			(null != e && (o.O.has(e) || c.dailyCapOverridden)) ||
-			(null != e && c.dismissibleContentSeenDuringSession.has(e))
-		)
-			return !1;
+		if ((null != e && (o.O.has(e) || c.dailyCapOverridden)) || (null != e && c.dismissibleContentSeenDuringSession.has(e))) return !1;
 		let t = new Date();
-		return (
-			t.setHours(0, 0, 0, 0),
-			null != c.dailyCapPeriodStart &&
-				c.dailyCapPeriodStart < t.getTime() &&
-				((c.numberOfDCsShownToday = 0), (c.dailyCapPeriodStart = null)),
-			c.numberOfDCsShownToday >= 3
-		);
+		return t.setHours(0, 0, 0, 0), null != c.dailyCapPeriodStart && c.dailyCapPeriodStart < t.getTime() && ((c.numberOfDCsShownToday = 0), (c.dailyCapPeriodStart = null)), c.numberOfDCsShownToday >= 3;
 	}
 }
 u(d, 'displayName', 'DismissibleContentFrameworkStore'),
@@ -82,10 +70,7 @@ u(d, 'displayName', 'DismissibleContentFrameworkStore'),
 		DCF_HANDLE_DC_SHOWN: function (e) {
 			let { dismissibleContent: t } = e,
 				n = new Date();
-			if (
-				(c.renderedAtTimestamps.set(t, n.getTime()),
-				!(o.O.has(t) || c.dailyCapOverridden || c.dismissibleContentSeenDuringSession.has(t)))
-			) {
+			if ((c.renderedAtTimestamps.set(t, n.getTime()), !(o.O.has(t) || c.dailyCapOverridden || c.dismissibleContentSeenDuringSession.has(t)))) {
 				if ((c.dismissibleContentSeenDuringSession.add(t), null == c.dailyCapPeriodStart)) {
 					let e = new Date();
 					e.setHours(0, 0, 0, 0), (c.dailyCapPeriodStart = e.getTime());
@@ -104,9 +89,6 @@ u(d, 'displayName', 'DismissibleContentFrameworkStore'),
 			(c.lastDCDismissed = t), c.renderedAtTimestamps.delete(t);
 		},
 		DCF_RESET: function () {
-			(c.dailyCapPeriodStart = null),
-				(c.numberOfDCsShownToday = 0),
-				(c.dismissibleContentSeenDuringSession = new Set()),
-				(c.lastDCDismissed = null);
+			(c.dailyCapPeriodStart = null), (c.numberOfDCsShownToday = 0), (c.dismissibleContentSeenDuringSession = new Set()), (c.lastDCDismissed = null);
 		}
 	}));

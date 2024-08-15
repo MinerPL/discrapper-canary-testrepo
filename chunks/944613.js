@@ -14,9 +14,9 @@ var i = n(658722),
 	f = n(51359);
 t.Z = function (e) {
 	let { className: t, guild: n, roleStyle: i, roleFilter: s, onSelect: h, onClose: p } = e,
-		I = (0, u.e7)([d.Z], () => d.Z.getRoles(n.id)),
-		m = (e) =>
-			o()(I)
+		m = (0, u.e7)([d.Z], () => d.Z.getRoles(n.id)),
+		I = (e) =>
+			o()(m)
 				.filter(s)
 				.filter((t) => a()(e.toLowerCase(), t.name.toLowerCase()))
 				.value();
@@ -28,7 +28,7 @@ t.Z = function (e) {
 		'aria-label': E.Z.Messages.ADD_ROLE_A11Y_LABEL,
 		onClose: p,
 		children: (e) =>
-			m(e).map((e) => {
+			I(e).map((e) => {
 				var t, n;
 				return (0, r.jsxs)(
 					c.ComboboxItem,

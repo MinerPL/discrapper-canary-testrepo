@@ -8,16 +8,10 @@ var r = n(442837),
 	u = n(981631),
 	c = n(689938);
 function d() {
-	return (
-		f() &&
-		l.Z.experiment.getCurrentConfig({ location: 'holiday_events_is_eligible' }, { autoTrackExposure: !1 }).enabled
-	);
+	return f() && l.Z.experiment.getCurrentConfig({ location: 'holiday_events_is_eligible' }, { autoTrackExposure: !1 }).enabled;
 }
 function _() {
-	let { enabled: e } = l.Z.experiment.useExperiment(
-		{ location: 'holiday_events_use_eligible' },
-		{ autoTrackExposure: !1 }
-	);
+	let { enabled: e } = l.Z.experiment.useExperiment({ location: 'holiday_events_use_eligible' }, { autoTrackExposure: !1 });
 	return f() && e;
 }
 function E() {

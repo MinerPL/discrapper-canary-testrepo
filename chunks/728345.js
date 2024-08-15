@@ -113,16 +113,8 @@ t.Z = {
 				(n = e.filter((e) => {
 					var t, n;
 					let r = o.Z.getApplication(e),
-						i =
-							(0, s.yE)(null !== (n = null == r ? void 0 : r.flags) && void 0 !== n ? n : 0, l.udG.EMBEDDED) &&
-							(null == r
-								? void 0
-								: null === (t = r.embeddedActivityConfig) || void 0 === t
-									? void 0
-									: t.supported_platforms) == null;
-					return (
-						!(null != r && !i) && !o.Z.isFetchingApplication(e) && !o.Z.didFetchingApplicationFail(e) && e.length > 0
-					);
+						i = (0, s.yE)(null !== (n = null == r ? void 0 : r.flags) && void 0 !== n ? n : 0, l.udG.EMBEDDED) && (null == r ? void 0 : null === (t = r.embeddedActivityConfig) || void 0 === t ? void 0 : t.supported_platforms) == null;
+					return !(null != r && !i) && !o.Z.isFetchingApplication(e) && !o.Z.didFetchingApplicationFail(e) && e.length > 0;
 				})),
 			n.length > 0)
 		) {

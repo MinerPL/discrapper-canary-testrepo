@@ -12,10 +12,7 @@ var r = n(573654),
 function u(e, t) {
 	for (var n = 0; n < t.length; n++) {
 		var r = t[n];
-		(r.enumerable = r.enumerable || !1),
-			(r.configurable = !0),
-			'value' in r && (r.writable = !0),
-			Object.defineProperty(e, r.key, r);
+		(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 	}
 }
 function c(e, t) {
@@ -54,11 +51,7 @@ function _(e, t) {
 							i = !1,
 							a = void 0;
 						try {
-							for (
-								var s, o = e[Symbol.iterator]();
-								!(r = (s = o.next()).done) && (n.push(s.value), !t || n.length !== t);
-								r = !0
-							);
+							for (var s, o = e[Symbol.iterator](); !(r = (s = o.next()).done) && (n.push(s.value), !t || n.length !== t); r = !0);
 						} catch (e) {
 							(i = !0), (a = e);
 						} finally {
@@ -75,15 +68,12 @@ function _(e, t) {
 					if (e) {
 						if ('string' == typeof e) return c(e, t);
 						var n = Object.prototype.toString.call(e).slice(8, -1);
-						if (('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n))
-							return Array.from(e);
+						if (('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n)) return Array.from(e);
 						if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return c(e, t);
 					}
 				})(i, a) ||
 				(function () {
-					throw TypeError(
-						'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
-					);
+					throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
 				})())[1] === t
 		)
 			return !0;
@@ -133,10 +123,7 @@ var E = (function () {
 				key: 'getSource',
 				value: function (e) {
 					var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-					return (
-						(0, r.k)(this.isSourceId(e), 'Expected a valid source ID.'),
-						t && e === this.pinnedSourceId ? this.pinnedSource : this.dragSources.get(e)
-					);
+					return (0, r.k)(this.isSourceId(e), 'Expected a valid source ID.'), t && e === this.pinnedSourceId ? this.pinnedSource : this.dragSources.get(e);
 				}
 			},
 			{
@@ -183,10 +170,7 @@ var E = (function () {
 			{
 				key: 'removeTarget',
 				value: function (e) {
-					(0, r.k)(this.getTarget(e), 'Expected an existing target.'),
-						this.store.dispatch((0, i.BT)(e)),
-						this.dropTargets.delete(e),
-						this.types.delete(e);
+					(0, r.k)(this.getTarget(e), 'Expected an existing target.'), this.store.dispatch((0, i.BT)(e)), this.dropTargets.delete(e), this.types.delete(e);
 				}
 			},
 			{
@@ -199,9 +183,7 @@ var E = (function () {
 			{
 				key: 'unpinSource',
 				value: function () {
-					(0, r.k)(this.pinnedSource, 'No source is pinned at the time.'),
-						(this.pinnedSourceId = null),
-						(this.pinnedSource = null);
+					(0, r.k)(this.pinnedSource, 'No source is pinned at the time.'), (this.pinnedSourceId = null), (this.pinnedSource = null);
 				}
 			},
 			{
@@ -218,11 +200,7 @@ var E = (function () {
 								throw Error('Unknown Handler Role: '.concat(e));
 						}
 					})(e);
-					return (
-						this.types.set(r, t),
-						e === s.t.SOURCE ? this.dragSources.set(r, n) : e === s.t.TARGET && this.dropTargets.set(r, n),
-						r
-					);
+					return this.types.set(r, t), e === s.t.SOURCE ? this.dragSources.set(r, n) : e === s.t.TARGET && this.dropTargets.set(r, n), r;
 				}
 			}
 		]),

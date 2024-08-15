@@ -36,13 +36,7 @@ function S(e) {
 		{ archiveSubscriptionListing: D, submitting: v } = (0, d._1)(),
 		j = () => {
 			let e = async () => {
-				if (
-					!!L ||
-					(r()(null != g, 'group listing doesnt exist'),
-					r()(null != x, 'subscription listing doesnt exist'),
-					!!(await A(h, g, x)))
-				)
-					null == i || i();
+				if (!!L || (r()(null != g, 'group listing doesnt exist'), r()(null != x, 'subscription listing doesnt exist'), !!(await A(h, g, x)))) null == i || i();
 			};
 			(0, o.openModalLazy)(async () => {
 				let { ConfirmModal: t } = await Promise.resolve().then(n.bind(n, 481060));
@@ -81,9 +75,7 @@ function S(e) {
 								}),
 								(0, s.jsx)(o.Tooltip, {
 									shouldShow: !f,
-									text: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_TOOLTIP.format({
-										listingMemberCount: R
-									}),
+									text: T.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETE_TOOLTIP.format({ listingMemberCount: R }),
 									children: (e) =>
 										(0, s.jsx)(o.Button, {
 											...e,

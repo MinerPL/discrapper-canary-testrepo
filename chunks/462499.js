@@ -56,11 +56,7 @@ function C(e) {
 		}),
 		k = (0, t.Wu)([p.Z], () => {
 			var e, n;
-			return (
-				null !== (n = null === (e = p.Z.getSettings()) || void 0 === e ? void 0 : e.resourceChannels) && void 0 !== n
-					? n
-					: []
-			).map((e) => e.channelId);
+			return (null !== (n = null === (e = p.Z.getSettings()) || void 0 === e ? void 0 : e.resourceChannels) && void 0 !== n ? n : []).map((e) => e.channelId);
 		}),
 		A = O.length < c.n || null == D,
 		M = s.useCallback(() => {

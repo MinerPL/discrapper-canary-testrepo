@@ -21,10 +21,8 @@ function E(e, t, n) {
 		f = (0, i.e7)([s.Z], () => s.Z.getGuildId()),
 		h = (0, d.i)(e),
 		p = null;
-	a.Z.hasLoaded(_.yP.PRELOADED_USER_SETTINGS)
-		? (p = h.find((e) => null == E || !(0, o.jl)(E, e)))
-		: null != E && (p = h.find((e) => !(0, o.jl)(E, e)));
-	let I = (function (e, t, n, a, s) {
+	a.Z.hasLoaded(_.yP.PRELOADED_USER_SETTINGS) ? (p = h.find((e) => null == E || !(0, o.jl)(E, e))) : null != E && (p = h.find((e) => !(0, o.jl)(E, e)));
+	let m = (function (e, t, n, a, s) {
 		let o = (0, u.ZP)((t) => null != e && t.currentlyShown.has(e)),
 			d = (0, i.e7)([l.Z], () => null != e && l.Z.hasUserHitDCCap(e));
 		return (
@@ -57,7 +55,7 @@ function E(e, t, n) {
 		);
 	})(p, f, t, n);
 	return [
-		I,
+		m,
 		r.useCallback(
 			(e, n) => {
 				null != p &&

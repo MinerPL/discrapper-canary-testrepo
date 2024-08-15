@@ -16,17 +16,11 @@ let a = function (e) {
 		null != c && (_ = 'string' != typeof c && 'css' in c ? c.css : c);
 		let E = null !== (a = d.size) && void 0 !== a ? a : 'md',
 			f = (0, i.m)(E),
-			h =
-				null !== (o = null !== (s = null == f ? void 0 : f.width) && void 0 !== s ? s : d.width) && void 0 !== o
-					? o
-					: 24,
+			h = null !== (o = null !== (s = null == f ? void 0 : f.width) && void 0 !== s ? s : d.width) && void 0 !== o ? o : 24,
 			p = {
 				color: _,
 				width: h,
-				height:
-					null !== (u = null !== (l = null == f ? void 0 : f.height) && void 0 !== l ? l : d.height) && void 0 !== u
-						? u
-						: 24,
+				height: null !== (u = null !== (l = null == f ? void 0 : f.height) && void 0 !== l ? l : d.height) && void 0 !== u ? u : 24,
 				foreground: d.colorClass
 			};
 		for (let [e, n] of Object.entries(t)) null != d[e] && (p[n] = d[e]);

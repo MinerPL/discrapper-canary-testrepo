@@ -12,8 +12,8 @@ var r = n(525425),
 	f = n(667066),
 	h = n(556868),
 	p = n(292065),
-	I = n(662506);
-e.exports = function (e, t, n, m, T, g, S) {
+	m = n(662506);
+e.exports = function (e, t, n, I, T, g, S) {
 	var A = p(e, n),
 		N = p(t, n),
 		v = S.get(N);
@@ -27,20 +27,7 @@ e.exports = function (e, t, n, m, T, g, S) {
 		var C = u(N),
 			y = !C && d(N),
 			D = !C && !y && h(N);
-		(O = N),
-			C || y || D
-				? u(A)
-					? (O = A)
-					: c(A)
-						? (O = s(A))
-						: y
-							? ((R = !1), (O = i(N, !0)))
-							: D
-								? ((R = !1), (O = a(N, !0)))
-								: (O = [])
-				: f(N) || l(N)
-					? ((O = A), l(A) ? (O = I(A)) : (!E(A) || _(A)) && (O = o(N)))
-					: (R = !1);
+		(O = N), C || y || D ? (u(A) ? (O = A) : c(A) ? (O = s(A)) : y ? ((R = !1), (O = i(N, !0))) : D ? ((R = !1), (O = a(N, !0))) : (O = [])) : f(N) || l(N) ? ((O = A), l(A) ? (O = m(A)) : (!E(A) || _(A)) && (O = o(N))) : (R = !1);
 	}
-	R && (S.set(N, O), T(O, N, m, g, S), S.delete(N)), r(e, n, O);
+	R && (S.set(N, O), T(O, N, I, g, S), S.delete(N)), r(e, n, O);
 };

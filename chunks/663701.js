@@ -102,9 +102,7 @@ let q = (e) => {
 			text: z.Z.Messages.LIBRARY,
 			...a,
 			...s,
-			children: (0, i.jsx)(Y.Z, {
-				className: r()(K.downloadProgressCircle, { [K.hideGameUpdateProgressIndicator]: n })
-			})
+			children: (0, i.jsx)(Y.Z, { className: r()(K.downloadProgressCircle, { [K.hideGameUpdateProgressIndicator]: n }) })
 		});
 	},
 	X = (e) => {
@@ -216,12 +214,7 @@ function ei(e) {
 		case W.Z5c.COLLECTIBLES_SHOP:
 			return W.ZY5.COLLECTIBLES_SHOP;
 	}
-	if (e.startsWith(W.Z5c.APPLICATION_STORE))
-		return e === W.Z5c.APPLICATION_STORE
-			? W.ZY5.STORE_DIRECTORY_HOME
-			: e.startsWith(W.Z5c.APPLICATION_STORE)
-				? W.ZY5.STORE_DIRECTORY_BROWSE
-				: W.ZY5.STORE_LISTING;
+	if (e.startsWith(W.Z5c.APPLICATION_STORE)) return e === W.Z5c.APPLICATION_STORE ? W.ZY5.STORE_DIRECTORY_HOME : e.startsWith(W.Z5c.APPLICATION_STORE) ? W.ZY5.STORE_DIRECTORY_BROWSE : W.ZY5.STORE_LISTING;
 	return W.ZY5.DM_CHANNEL;
 }
 let ea = (e) => {
@@ -260,10 +253,7 @@ let ea = (e) => {
 						? (0, i.jsx)(
 								Q,
 								{
-									selected:
-										null == u
-											? null != a && a.startsWith(W.Z5c.APPLICATION_LIBRARY)
-											: u.startsWith(W.Z5c.APPLICATION_LIBRARY),
+									selected: null == u ? null != a && a.startsWith(W.Z5c.APPLICATION_LIBRARY) : u.startsWith(W.Z5c.APPLICATION_LIBRARY),
 									hideGameUpdateProgressIndicator: a === W.Z5c.APPLICATION_LIBRARY
 								},
 								'library'
@@ -273,12 +263,7 @@ let ea = (e) => {
 						R.g,
 						{
 							selected: null == u ? o : u.startsWith(W.Z5c.APPLICATION_STORE),
-							route:
-								null == s ||
-								location.pathname.startsWith(W.Z5c.ACTIVITIES) ||
-								location.pathname.startsWith(W.Z5c.APPLICATION_STORE)
-									? W.Z5c.APPLICATION_STORE
-									: s,
+							route: null == s || location.pathname.startsWith(W.Z5c.ACTIVITIES) || location.pathname.startsWith(W.Z5c.APPLICATION_STORE) ? W.Z5c.APPLICATION_STORE : s,
 							locationState: {
 								analyticsSource: {
 									page: ei(a),
@@ -293,8 +278,7 @@ let ea = (e) => {
 						? (0, i.jsx)(
 								X,
 								{
-									selected:
-										(null != u && u.startsWith(W.Z5c.ACTIVITIES)) || (null != a && a.startsWith(W.Z5c.ACTIVITIES)),
+									selected: (null != u && u.startsWith(W.Z5c.ACTIVITIES)) || (null != a && a.startsWith(W.Z5c.ACTIVITIES)),
 									route: W.Z5c.ACTIVITIES,
 									locationState: {
 										analyticsSource: {
@@ -307,11 +291,7 @@ let ea = (e) => {
 								'activities'
 							)
 						: null,
-					(0, i.jsx)(
-						$,
-						{ selected: null == u ? null != a && a.startsWith(W.Z5c.MESSAGE_REQUESTS) : u === W.Z5c.MESSAGE_REQUESTS },
-						'message-requests'
-					),
+					(0, i.jsx)($, { selected: null == u ? null != a && a.startsWith(W.Z5c.MESSAGE_REQUESTS) : u === W.Z5c.MESSAGE_REQUESTS }, 'message-requests'),
 					(0, i.jsx)(
 						f.i,
 						{
@@ -326,14 +306,7 @@ let ea = (e) => {
 						},
 						'discord-shop'
 					),
-					(0, i.jsx)(
-						ee,
-						{
-							selected:
-								(null != a && a.startsWith(W.Z5c.FAMILY_CENTER)) || (null != u && u.startsWith(W.Z5c.FAMILY_CENTER))
-						},
-						'family-center'
-					)
+					(0, i.jsx)(ee, { selected: (null != a && a.startsWith(W.Z5c.FAMILY_CENTER)) || (null != u && u.startsWith(W.Z5c.FAMILY_CENTER)) }, 'family-center')
 				]
 			})
 		]

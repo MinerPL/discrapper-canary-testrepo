@@ -13,17 +13,7 @@ var a = t(481060),
 	d = t(689938),
 	c = t(224499);
 function u(e) {
-	let {
-			value: n,
-			onChange: t,
-			children: u,
-			note: I,
-			helpdeskArticleId: m,
-			style: _,
-			disabled: N = !1,
-			hideBorder: E = !1,
-			className: T = c.marginBottom20
-		} = e,
+	let { value: n, onChange: t, children: u, note: I, helpdeskArticleId: m, style: _, disabled: N = !1, hideBorder: E = !1, className: T = c.marginBottom20 } = e,
 		h = (0, l.Dt)();
 	return (0, i.jsxs)(s.Z, {
 		style: _,

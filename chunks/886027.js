@@ -30,13 +30,7 @@ function l(e) {
 					c = [o.path[0]],
 					d = a.C0.equals(l, c) ? null : a.bN.node(e, c);
 				r.T.withSingleEntry(e, () => {
-					(null == u ? void 0 : u[0].type) === 'blockQuote' &&
-						a.Jz.isAtStart(s, u) &&
-						i.Q.setNodes(e, { type: 'line' }, { at: l }),
-						(null == d ? void 0 : d[0].type) === 'blockQuote' &&
-							a.Jz.isAtEnd(o, d) &&
-							i.Q.setNodes(e, { type: 'line' }, { at: c }),
-						n(t);
+					(null == u ? void 0 : u[0].type) === 'blockQuote' && a.Jz.isAtStart(s, u) && i.Q.setNodes(e, { type: 'line' }, { at: l }), (null == d ? void 0 : d[0].type) === 'blockQuote' && a.Jz.isAtEnd(o, d) && i.Q.setNodes(e, { type: 'line' }, { at: c }), n(t);
 				});
 				return;
 			}
@@ -50,10 +44,7 @@ function l(e) {
 				!(function (e, t, n) {
 					if (!a.bN.isEmpty(e, t[0])) return !1;
 					let r = a.bN.previous(e, { at: t[1] });
-					return (
-						!!(null != r && a.aj.isType(r[0], 'blockQuote') && a.bN.isEmpty(e, r[0]) && a.Jz.isAtStart(n, t)) &&
-						(i.Q.setNodes(e, { type: 'line' }, { at: t[1] }), i.Q.removeNodes(e, { at: r[1] }), !0)
-					);
+					return !!(null != r && a.aj.isType(r[0], 'blockQuote') && a.bN.isEmpty(e, r[0]) && a.Jz.isAtStart(n, t)) && (i.Q.setNodes(e, { type: 'line' }, { at: t[1] }), i.Q.removeNodes(e, { at: r[1] }), !0);
 				})(e, t, n) &&
 					i.Q.splitNodes(e, {
 						at: n,
@@ -81,8 +72,7 @@ function l(e) {
 									offset: 0
 								};
 								if ((0, s.iF)(e, d)) {
-									'blockQuote' === u.type &&
-										(i.Q.setNodes(e, { type: 'line' }, { at: c }), i.Q.insertText(e, '> ', { at: d }));
+									'blockQuote' === u.type && (i.Q.setNodes(e, { type: 'line' }, { at: c }), i.Q.insertText(e, '> ', { at: d }));
 									continue;
 								}
 								if ('blockQuote' === u.type || a.bN.areStylesDisabled(e)) continue;
@@ -92,16 +82,7 @@ function l(e) {
 									f = _.text.match(/^\s*> /);
 								if ((null != f || null != E || t) && (i.Q.setNodes(e, { type: 'blockQuote' }, { at: c }), !t)) {
 									var n, r;
-									let s =
-											null !==
-												(r =
-													null !== (n = null == f ? void 0 : f[0].length) && void 0 !== n
-														? n
-														: null == E
-															? void 0
-															: E[0].length) && void 0 !== r
-												? r
-												: 0,
+									let s = null !== (r = null !== (n = null == f ? void 0 : f[0].length) && void 0 !== n ? n : null == E ? void 0 : E[0].length) && void 0 !== r ? r : 0,
 										o = a.C0.child(c, 0);
 									i.Q.delete(e, {
 										at: {

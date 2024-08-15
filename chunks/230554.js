@@ -1,6 +1,6 @@
 n.d(t, {
 	Z: function () {
-		return I;
+		return m;
 	}
 }),
 	n(47120),
@@ -67,9 +67,7 @@ let f = (e, t, n) => ({
 	},
 	getFirstText() {
 		var t, n;
-		return null !== (n = null === (t = c.bN.getFirstText(e)) || void 0 === t ? void 0 : t.text) && void 0 !== n
-			? n
-			: '';
+		return null !== (n = null === (t = c.bN.getFirstText(e)) || void 0 === t ? void 0 : t.text) && void 0 !== n ? n : '';
 	},
 	getCurrentCommandOption() {
 		let t = o.HZ(e);
@@ -80,12 +78,7 @@ let f = (e, t, n) => ({
 		let r = o.HZ(e);
 		if (null == r) return [];
 		let i = s.Z.getActiveCommand(t.id),
-			a =
-				null == i
-					? void 0
-					: null === (n = i.options) || void 0 === n
-						? void 0
-						: n.find((e) => e.name === r[0].optionName);
+			a = null == i ? void 0 : null === (n = i.options) || void 0 === n ? void 0 : n.find((e) => e.name === r[0].optionName);
 		return null == a ? [] : o.IB(e, a, r[0], t.id);
 	},
 	getCommandOptionValues() {
@@ -143,10 +136,7 @@ function h(e, t) {
 	var n;
 	let r = s.Z.getActiveCommand(e.id),
 		i = null == r ? void 0 : null === (n = r.options) || void 0 === n ? void 0 : n.find((e) => e.name === t.optionName);
-	return (
-		null != i &&
-		(i.type !== a.jw.STRING || (null == i ? void 0 : i.choices) != null || (null == i ? void 0 : i.autocomplete))
-	);
+	return null != i && (i.type !== a.jw.STRING || (null == i ? void 0 : i.choices) != null || (null == i ? void 0 : i.autocomplete));
 }
 function p(e, t, n, r) {
 	let i = c.bN.areStylesDisabled(e) || null == n ? t : n;
@@ -154,6 +144,6 @@ function p(e, t, n, r) {
 		u.Q.insertText(e, r ? i + ' ' : i);
 	});
 }
-function I(e, t, n, i) {
+function m(e, t, n, i) {
 	r.useImperativeHandle(e, () => f(t, n, i), [t, n, i]);
 }

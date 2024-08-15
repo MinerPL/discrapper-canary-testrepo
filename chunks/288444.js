@@ -27,21 +27,14 @@ function h() {
 	let e = c.Z.getCurrentClientVoiceChannelId(null);
 	if (null == e) return !1;
 	let t = l.Z.getChannel(e);
-	return (
-		!(null == t || !t.isPrivate() || t.recipients.length > 1 || d.ZP.countVoiceStatesForChannel(e) > 1) &&
-		null == o.ZP.getSelfEmbeddedActivityForChannel(e) &&
-		null == u.Z.getBroadcast() &&
-		!0
-	);
+	return !(null == t || !t.isPrivate() || t.recipients.length > 1 || d.ZP.countVoiceStatesForChannel(e) > 1) && null == o.ZP.getSelfEmbeddedActivityForChannel(e) && null == u.Z.getBroadcast() && !0;
 }
 function p() {
 	if (!h()) return;
 	let e = c.Z.getCurrentClientVoiceChannelId(null);
-	if (null != e)
-		i.Z.sendBotMessage(e, _.Z.Messages.BOT_CALL_IDLE_DISCONNECT_2.format({ number: 3 })),
-			a.default.selectVoiceChannel(null);
+	if (null != e) i.Z.sendBotMessage(e, _.Z.Messages.BOT_CALL_IDLE_DISCONNECT_2.format({ number: 3 })), a.default.selectVoiceChannel(null);
 }
-class I extends s.Z {
+class m extends s.Z {
 	constructor(...e) {
 		super(...e),
 			E(this, 'idleTimeout', new r.V7()),
@@ -65,4 +58,4 @@ class I extends s.Z {
 			});
 	}
 }
-t.Z = new I();
+t.Z = new m();

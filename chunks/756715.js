@@ -15,19 +15,7 @@ var r = n(735250),
 	d = n(645499),
 	_ = n(685580);
 function E(e) {
-	let {
-		href: t,
-		onClick: n,
-		className: a,
-		children: E,
-		rel: f,
-		target: h,
-		useDefaultUnderlineStyles: p = !0,
-		title: I,
-		style: m,
-		focusProps: T,
-		...g
-	} = e;
+	let { href: t, onClick: n, className: a, children: E, rel: f, target: h, useDefaultUnderlineStyles: p = !0, title: m, style: I, focusProps: T, ...g } = e;
 	null != t && null == n && (n = c.X.getDefaultLinkInterceptor(t));
 	let S = i.useContext(o.g),
 		A = {
@@ -36,12 +24,10 @@ function E(e) {
 			onClick: n,
 			rel: null != f ? f : void 0,
 			target: null != h ? h : void 0,
-			title: null != I ? I : void 0,
-			style: null != m ? m : void 0
+			title: null != m ? m : void 0,
+			style: null != I ? I : void 0
 		};
-	return (null != t && !(0, d.B)(t) && ((A.rel = 'noreferrer noopener'), (A.target = '_blank')),
-	S && delete A.href,
-	null != n)
+	return (null != t && !(0, d.B)(t) && ((A.rel = 'noreferrer noopener'), (A.target = '_blank')), S && delete A.href, null != n)
 		? (0, r.jsx)(l.P, {
 				tag: 'a',
 				...g,

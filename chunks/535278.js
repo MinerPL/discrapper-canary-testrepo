@@ -36,9 +36,7 @@ function d(t) {
 						className: o.subtitle,
 						variant: 'text-md/medium',
 						color: 'header-secondary',
-						children: r.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_SUBTITLE.format({
-							timestamp: null == c ? void 0 : c.currentPeriodEnd
-						})
+						children: r.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_SUBTITLE.format({ timestamp: null == c ? void 0 : c.currentPeriodEnd })
 					})
 				]
 			}),

@@ -9,18 +9,7 @@ var l = n(120356),
 	r = n.n(l),
 	a = n(296684);
 function s(e) {
-	let {
-		selected: t,
-		muted: n = !1,
-		highlighted: l = !1,
-		wrapContent: s = !1,
-		avatar: o,
-		decorators: c,
-		name: u,
-		subText: d,
-		avatarClassName: h,
-		innerClassName: p
-	} = e;
+	let { selected: t, muted: n = !1, highlighted: l = !1, wrapContent: s = !1, avatar: o, decorators: c, name: u, subText: d, avatarClassName: h, innerClassName: p } = e;
 	return (0, i.jsxs)('div', {
 		className: r()(p, a.layout, {
 			[a.muted]: !t && n,

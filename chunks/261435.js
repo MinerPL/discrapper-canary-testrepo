@@ -42,12 +42,7 @@ var i,
 	G = n(981631),
 	W = n(987650),
 	Y = n(689938);
-((o = i || (i = {}))[(o.GENERIC = 0)] = 'GENERIC'),
-	(o[(o.TEXT = 1)] = 'TEXT'),
-	(o[(o.INCOMING_CALL = 2)] = 'INCOMING_CALL'),
-	((r = s || (s = {}))[(r.NORMAL = 0)] = 'NORMAL'),
-	(r[(r.HIGH = 1)] = 'HIGH'),
-	(r[(r.URGENT = 2)] = 'URGENT');
+((o = i || (i = {}))[(o.GENERIC = 0)] = 'GENERIC'), (o[(o.TEXT = 1)] = 'TEXT'), (o[(o.INCOMING_CALL = 2)] = 'INCOMING_CALL'), ((r = s || (s = {}))[(r.NORMAL = 0)] = 'NORMAL'), (r[(r.HIGH = 1)] = 'HIGH'), (r[(r.URGENT = 2)] = 'URGENT');
 let F = 5 * V.Z.Millis.SECOND,
 	H = 8 * V.Z.Millis.SECOND,
 	K = 30 * V.Z.Millis.SECOND,
@@ -184,10 +179,7 @@ class ei extends (a = f.ZP.Store) {
 							o = R.Z.getChannel(s),
 							r = w.default.getUser(null === (t = a.author) || void 0 === t ? void 0 : t.id);
 						if (null == o || null == r) return !1;
-						if (
-							(null === (n = a.activity) || void 0 === n ? void 0 : n.type) === G.mFx.JOIN ||
-							(null === (i = a.activity) || void 0 === i ? void 0 : i.type) === G.mFx.JOIN_REQUEST
-						) {
+						if ((null === (n = a.activity) || void 0 === n ? void 0 : n.type) === G.mFx.JOIN || (null === (i = a.activity) || void 0 === i ? void 0 : i.type) === G.mFx.JOIN_REQUEST) {
 							if (!(0, B.eF)(a, s, !0, !0)) return !1;
 							let e = (function (e, t, n) {
 								let i, s;
@@ -196,21 +188,11 @@ class ei extends (a = f.ZP.Store) {
 								if (null == a) return !1;
 								switch (t.activity.type) {
 									case G.mFx.JOIN:
-										if (
-											null == (i = b.Z.getApplicationActivity(n.id, a.id)) ||
-											null == i.party ||
-											i.party.id !== t.activity.party_id
-										)
-											return !1;
+										if (null == (i = b.Z.getApplicationActivity(n.id, a.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
 										s = (0, m.Z)(e, t, n, a, i);
 										break;
 									case G.mFx.JOIN_REQUEST:
-										if (
-											null == (i = P.Z.getApplicationActivity(a.id)) ||
-											null == i.party ||
-											i.party.id !== t.activity.party_id
-										)
-											return !1;
+										if (null == (i = P.Z.getApplicationActivity(a.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
 										s = (0, S.Z)(e, n, a, i);
 								}
 								if (null == s) return !1;
@@ -223,13 +205,7 @@ class ei extends (a = f.ZP.Store) {
 							})(o, a, r);
 							if (!1 !== e) return e;
 						}
-						if (
-							((!k.Z.isInstanceUILocked() || k.Z.isPinned(G.Odu.TEXT)) && s === L.Z.getChannelId()) ||
-							k.Z.getTextChatNotificationMode() === G.Ypu.DISABLED ||
-							D.Z.disableNotifications ||
-							!(0, B.eF)(a, s)
-						)
-							return !1;
+						if (((!k.Z.isInstanceUILocked() || k.Z.isPinned(G.Odu.TEXT)) && s === L.Z.getChannelId()) || k.Z.getTextChatNotificationMode() === G.Ypu.DISABLED || D.Z.disableNotifications || !(0, B.eF)(a, s)) return !1;
 						let l = !M.Z.isSoundDisabled(j.Ay);
 						et((0, C.Z)(o, a, r, l), {
 							type: 1,
@@ -267,13 +243,7 @@ class ei extends (a = f.ZP.Store) {
 						et((0, N.f)(Y.Z.Messages.CLIPS_SAVE_START_NOTIFICATION_TITLE));
 					},
 					CLIPS_SAVE_CLIP: function () {
-						et(
-							(0, N.f)(
-								Y.Z.Messages.CLIPS_NOTIFICATION_TITLE.format({
-									duration: (0, U.A)(T.Z.getSettings().clipsLength / 1000, !0)
-								})
-							)
-						);
+						et((0, N.f)(Y.Z.Messages.CLIPS_NOTIFICATION_TITLE.format({ duration: (0, U.A)(T.Z.getSettings().clipsLength / 1000, !0) })));
 					},
 					CLIPS_SAVE_CLIP_ERROR: function () {
 						et((0, N.f)(Y.Z.Messages.CLIPS_SAVE_ERROR_NOTIFICATION_TITLE));

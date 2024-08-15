@@ -135,8 +135,7 @@ let ef =
 							null != t && (0, Z.W9)(e.id, t),
 								(async () => {
 									var e, t;
-									(null === (e = ec.metadata) || void 0 === e ? void 0 : e.id) != null &&
-										(await (0, C.g8)(null === (t = ec.metadata) || void 0 === t ? void 0 : t.id));
+									(null === (e = ec.metadata) || void 0 === e ? void 0 : e.id) != null && (await (0, C.g8)(null === (t = ec.metadata) || void 0 === t ? void 0 : t.id));
 								})();
 						}
 					}, [ec]);
@@ -170,9 +169,7 @@ let ef =
 									onClick: () => eN(ex),
 									noticeType: eu.kVF.WIN32_DEPRECATED_MESSAGE
 								}),
-								eI.Z.Messages.WINDOWS_32_BIT_DEPRECATED_WARNING.format({
-									helpCenterLink: er.Z.getArticleURL(eu.BhN.WIN32_DEPRECATE)
-								})
+								eI.Z.Messages.WINDOWS_32_BIT_DEPRECATED_WARNING.format({ helpCenterLink: er.Z.getArticleURL(eu.BhN.WIN32_DEPRECATE) })
 							]
 						});
 					case eu.kVF.WIN7_8_DEPRECATED_MESSAGE:
@@ -184,9 +181,7 @@ let ef =
 									onClick: () => eN(eO),
 									noticeType: eu.kVF.WIN7_8_DEPRECATED_MESSAGE
 								}),
-								eI.Z.Messages.WINDOWS_7_8_DEPRECATED_WARNING.format({
-									helpCenterLink: er.Z.getArticleURL(eu.BhN.WIN7_8_DEPRECATE)
-								})
+								eI.Z.Messages.WINDOWS_7_8_DEPRECATED_WARNING.format({ helpCenterLink: er.Z.getArticleURL(eu.BhN.WIN7_8_DEPRECATE) })
 							]
 						});
 					case eu.kVF.MACOS_17_18_DEPRECATED_MESSAGE:
@@ -198,9 +193,7 @@ let ef =
 									onClick: () => eN(eM),
 									noticeType: eu.kVF.MACOS_17_18_DEPRECATED_MESSAGE
 								}),
-								eI.Z.Messages.MACOS_DEPRECATED_WARNING.format({
-									helpCenterLink: er.Z.getArticleURL(eu.BhN.MACOS_17_18_DEPRECATE)
-								})
+								eI.Z.Messages.MACOS_DEPRECATED_WARNING.format({ helpCenterLink: er.Z.getArticleURL(eu.BhN.MACOS_17_18_DEPRECATE) })
 							]
 						});
 					case eu.kVF.GENERIC:
@@ -526,19 +519,11 @@ let ef =
 										eN();
 									}
 								}),
-								eI.Z.Messages.SERVER_USAGE_SURVEY_BODY.format({
-									guildName: null !== (t = null == ef ? void 0 : ef.name) && void 0 !== t ? t : 'this server'
-								}),
+								eI.Z.Messages.SERVER_USAGE_SURVEY_BODY.format({ guildName: null !== (t = null == ef ? void 0 : ef.name) && void 0 !== t ? t : 'this server' }),
 								(0, i.jsx)(c.PrimaryCTANoticeButton, {
 									noticeType: eu.kVF.SERVER_USAGE_SURVEY,
 									onClick: () => {
-										window.open(
-											'https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id='
-												.concat(null == I ? void 0 : I.id, '&guild_id=')
-												.concat(null == ef ? void 0 : ef.id),
-											'_blank'
-										),
-											eN();
+										window.open('https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id='.concat(null == I ? void 0 : I.id, '&guild_id=').concat(null == ef ? void 0 : ef.id), '_blank'), eN();
 									},
 									additionalTrackingProps: { guild_id: null == ef ? void 0 : ef.id },
 									children: eI.Z.Messages.SERVER_USAGE_SURVEY_CTA
@@ -644,11 +629,7 @@ let ef =
 									justify: M.Z.Justify.CENTER,
 									align: M.Z.Align.CENTER,
 									children: [
-										(0, i.jsx)('div', {
-											children: eI.Z.Messages.NOTICE_EMBEDDED_APPLICATION_TEST_MODE.format({
-												applicationName: ec.metadata.applicationName
-											})
-										}),
+										(0, i.jsx)('div', { children: eI.Z.Messages.NOTICE_EMBEDDED_APPLICATION_TEST_MODE.format({ applicationName: ec.metadata.applicationName }) }),
 										(0, i.jsx)(c.NoticeCloseButton, {
 											onClick: p.mc,
 											noticeType: eu.kVF.APPLICATION_TEST_MODE
@@ -662,11 +643,7 @@ let ef =
 								justify: M.Z.Justify.CENTER,
 								align: M.Z.Align.CENTER,
 								children: [
-									(0, i.jsx)('div', {
-										children: eI.Z.Messages.NOTICE_APPLICATION_TEST_MODE.format({
-											applicationName: ec.metadata.applicationName
-										})
-									}),
+									(0, i.jsx)('div', { children: eI.Z.Messages.NOTICE_APPLICATION_TEST_MODE.format({ applicationName: ec.metadata.applicationName }) }),
 									(0, i.jsx)(eo.Z, {
 										dropdownSize: eo.E.DropdownSizes.SMALL,
 										className: em.testModeSKUSelector,
@@ -697,24 +674,13 @@ let ef =
 						return (0, i.jsx)(F.Z, {});
 					case eu.kVF.PREMIUM_UNCANCEL:
 						return (0, i.jsxs)(c.Notice, {
-							color:
-								eA === ed.p9.TIER_1
-									? c.NoticeColors.PREMIUM_TIER_1
-									: eA === ed.p9.TIER_0
-										? c.NoticeColors.PREMIUM_TIER_0
-										: c.NoticeColors.PREMIUM_TIER_2,
+							color: eA === ed.p9.TIER_1 ? c.NoticeColors.PREMIUM_TIER_1 : eA === ed.p9.TIER_0 ? c.NoticeColors.PREMIUM_TIER_0 : c.NoticeColors.PREMIUM_TIER_2,
 							children: [
 								(0, i.jsx)(c.NoticeCloseButton, {
 									noticeType: eu.kVF.PREMIUM_UNCANCEL,
 									onClick: () => {
 										var e, t;
-										eN(
-											null === (t = ec.metadata) || void 0 === t
-												? void 0
-												: null === (e = t.premiumSubscription) || void 0 === e
-													? void 0
-													: e.currentPeriodEnd
-										);
+										eN(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
 									}
 								}),
 								(0, i.jsx)(c.NitroWheelIcon, {
@@ -722,34 +688,14 @@ let ef =
 									color: 'currentColor',
 									className: em.premiumIcon
 								}),
-								eA === ed.p9.TIER_1
-									? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_TEXT.format({
-											daysLeft: ec.metadata.daysLeft
-										})
-									: eA === ed.p9.TIER_0
-										? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_TEXT.format({
-												daysLeft: ec.metadata.daysLeft
-											})
-										: eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_TEXT.format({ daysLeft: ec.metadata.daysLeft }),
+								eA === ed.p9.TIER_1 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_TEXT.format({ daysLeft: ec.metadata.daysLeft }) : eA === ed.p9.TIER_0 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_TEXT.format({ daysLeft: ec.metadata.daysLeft }) : eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_TEXT.format({ daysLeft: ec.metadata.daysLeft }),
 								(0, i.jsx)(c.PrimaryCTANoticeButton, {
 									noticeType: eu.kVF.PREMIUM_UNCANCEL,
 									onClick: () => {
 										var e, t;
-										eN(
-											null === (t = ec.metadata) || void 0 === t
-												? void 0
-												: null === (e = t.premiumSubscription) || void 0 === e
-													? void 0
-													: e.currentPeriodEnd
-										),
+										eN(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd),
 											(0, c.openModalLazy)(async () => {
-												let { default: e } = await Promise.all([
-													n.e('52249'),
-													n.e('47006'),
-													n.e('8016'),
-													n.e('68136'),
-													n.e('52362')
-												]).then(n.bind(n, 561623));
+												let { default: e } = await Promise.all([n.e('52249'), n.e('47006'), n.e('8016'), n.e('68136'), n.e('52362')]).then(n.bind(n, 561623));
 												return (t) =>
 													(0, i.jsx)(e, {
 														...t,
@@ -760,12 +706,7 @@ let ef =
 													});
 											});
 									},
-									children:
-										eA === ed.p9.TIER_1
-											? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_BUTTON_TEXT
-											: eA === ed.p9.TIER_0
-												? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_BUTTON_TEXT
-												: eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_BUTTON_TEXT
+									children: eA === ed.p9.TIER_1 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_BUTTON_TEXT : eA === ed.p9.TIER_0 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_BUTTON_TEXT : eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_BUTTON_TEXT
 								})
 							]
 						});
@@ -780,9 +721,7 @@ let ef =
 										eN(ew);
 									}
 								}),
-								eI.Z.Messages.PREMIUM_SUBSCRIPTION_ONE_TIME_PAYMENT_PAST_DUE_SUBSCRIPTION_TEXT_NO_ACTION.format({
-									daysPastDue: eF
-								}),
+								eI.Z.Messages.PREMIUM_SUBSCRIPTION_ONE_TIME_PAYMENT_PAST_DUE_SUBSCRIPTION_TEXT_NO_ACTION.format({ daysPastDue: eF }),
 								(0, i.jsx)(c.PrimaryCTANoticeButton, {
 									noticeType: eu.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,
 									onClick: () => {
@@ -800,13 +739,7 @@ let ef =
 									noticeType: eu.kVF.PREMIUM_PAST_DUE_INVALID_PAYMENT,
 									onClick: () => {
 										var e, t;
-										eN(
-											null === (t = ec.metadata) || void 0 === t
-												? void 0
-												: null === (e = t.premiumSubscription) || void 0 === e
-													? void 0
-													: e.currentPeriodEnd
-										);
+										eN(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
 									}
 								}),
 								eI.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_TEXT,
@@ -814,14 +747,7 @@ let ef =
 									noticeType: eu.kVF.PREMIUM_PAST_DUE_INVALID_PAYMENT,
 									onClick: () => {
 										var e, t;
-										eN(
-											null === (t = ec.metadata) || void 0 === t
-												? void 0
-												: null === (e = t.premiumSubscription) || void 0 === e
-													? void 0
-													: e.currentPeriodEnd
-										),
-											g.Z.open(eu.oAB.SUBSCRIPTIONS);
+										eN(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), g.Z.open(eu.oAB.SUBSCRIPTIONS);
 									},
 									children: eI.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_BUTTON_TEXT
 								})
@@ -835,13 +761,7 @@ let ef =
 									noticeType: eu.kVF.PREMIUM_PAST_DUE_MISSING_PAYMENT,
 									onClick: () => {
 										var e, t;
-										eN(
-											null === (t = ec.metadata) || void 0 === t
-												? void 0
-												: null === (e = t.premiumSubscription) || void 0 === e
-													? void 0
-													: e.currentPeriodEnd
-										);
+										eN(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
 									}
 								}),
 								eI.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_MISSING_PAYMENT_NOTICE_TEXT,
@@ -849,14 +769,7 @@ let ef =
 									noticeType: eu.kVF.PREMIUM_PAST_DUE_MISSING_PAYMENT,
 									onClick: () => {
 										var e, t;
-										eN(
-											null === (t = ec.metadata) || void 0 === t
-												? void 0
-												: null === (e = t.premiumSubscription) || void 0 === e
-													? void 0
-													: e.currentPeriodEnd
-										),
-											g.Z.open(eu.oAB.SUBSCRIPTIONS);
+										eN(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), g.Z.open(eu.oAB.SUBSCRIPTIONS);
 									},
 									children: eI.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
 								})
@@ -870,45 +783,17 @@ let ef =
 									noticeType: eu.kVF.PREMIUM_MISSING_PAYMENT,
 									onClick: () => {
 										var e, t;
-										eN(
-											null === (t = ec.metadata) || void 0 === t
-												? void 0
-												: null === (e = t.premiumSubscription) || void 0 === e
-													? void 0
-													: e.currentPeriodEnd
-										);
+										eN(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
 									}
 								}),
-								eA === ed.p9.TIER_1
-									? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_TEXT.format({
-											daysLeft: ec.metadata.daysLeft
-										})
-									: eA === ed.p9.TIER_0
-										? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_TEXT.format({
-												daysLeft: ec.metadata.daysLeft
-											})
-										: eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_TEXT.format({
-												daysLeft: ec.metadata.daysLeft
-											}),
+								eA === ed.p9.TIER_1 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_TEXT.format({ daysLeft: ec.metadata.daysLeft }) : eA === ed.p9.TIER_0 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_TEXT.format({ daysLeft: ec.metadata.daysLeft }) : eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_TEXT.format({ daysLeft: ec.metadata.daysLeft }),
 								(0, i.jsx)(c.PrimaryCTANoticeButton, {
 									noticeType: eu.kVF.PREMIUM_MISSING_PAYMENT,
 									onClick: () => {
 										var e, t;
-										eN(
-											null === (t = ec.metadata) || void 0 === t
-												? void 0
-												: null === (e = t.premiumSubscription) || void 0 === e
-													? void 0
-													: e.currentPeriodEnd
-										),
-											g.Z.open(eu.oAB.SUBSCRIPTIONS);
+										eN(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), g.Z.open(eu.oAB.SUBSCRIPTIONS);
 									},
-									children:
-										eA === ed.p9.TIER_1
-											? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_BUTTON_TEXT
-											: eA === ed.p9.TIER_0
-												? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_BUTTON_TEXT
-												: eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
+									children: eA === ed.p9.TIER_1 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_BUTTON_TEXT : eA === ed.p9.TIER_0 ? eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_BUTTON_TEXT : eI.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
 								})
 							]
 						});
@@ -1042,8 +927,7 @@ let ef =
 									noticeType: eu.kVF.QUESTS_PROGRESS_INTERRUPTION,
 									onClick: () => {
 										var e;
-										(null === (e = ec.metadata) || void 0 === e ? void 0 : e.streamKey) != null &&
-											(0, K.nE)(ec.metadata.streamKey);
+										(null === (e = ec.metadata) || void 0 === e ? void 0 : e.streamKey) != null && (0, K.nE)(ec.metadata.streamKey);
 									}
 								}),
 								eI.Z.Messages.QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE

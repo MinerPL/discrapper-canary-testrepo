@@ -31,34 +31,8 @@ var i = a(799761),
 		month: (0, i.Z)({
 			values: {
 				narrow: ['J', 'F', 'M', 'Á', 'M', 'J', 'J', 'A', 'Sz', 'O', 'N', 'D'],
-				abbreviated: [
-					'jan.',
-					'febr.',
-					'márc.',
-					'ápr.',
-					'máj.',
-					'jún.',
-					'júl.',
-					'aug.',
-					'szept.',
-					'okt.',
-					'nov.',
-					'dec.'
-				],
-				wide: [
-					'január',
-					'február',
-					'március',
-					'április',
-					'május',
-					'június',
-					'július',
-					'augusztus',
-					'szeptember',
-					'október',
-					'november',
-					'december'
-				]
+				abbreviated: ['jan.', 'febr.', 'márc.', 'ápr.', 'máj.', 'jún.', 'júl.', 'aug.', 'szept.', 'okt.', 'nov.', 'dec.'],
+				wide: ['január', 'február', 'március', 'április', 'május', 'június', 'július', 'augusztus', 'szeptember', 'október', 'november', 'december']
 			},
 			defaultWidth: 'wide'
 		}),

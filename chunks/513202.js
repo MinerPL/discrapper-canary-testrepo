@@ -19,9 +19,7 @@ class p extends d.Z {
 			l.isPlatformEmbedded &&
 				u.ZP.on('APP_PUSH_ANALYTICS', (e, t) => {
 					t.forEach((e) => {
-						'activities' === e.type &&
-							e.name === f.rMx.ACTIVITIES_RESTRICTRED_CSP_VIOLATION &&
-							o.default.track(e.name, e.data);
+						'activities' === e.type && e.name === f.rMx.ACTIVITIES_RESTRICTRED_CSP_VIOLATION && o.default.track(e.name, e.data);
 					});
 				});
 	}

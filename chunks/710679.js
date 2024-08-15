@@ -29,17 +29,7 @@ var t = i(442837),
 function T(e) {
 	var n;
 	let { guildEvent: i, guildId: T, truncate: j, onActionTaken: L, className: M, isNew: k } = e,
-		{
-			id: P,
-			guild_id: G,
-			channel_id: D,
-			creator_id: S,
-			name: y,
-			description: A,
-			entity_type: R,
-			image: U,
-			recurrence_rule: b
-		} = i,
+		{ id: P, guild_id: G, channel_id: D, creator_id: S, name: y, description: A, entity_type: R, image: U, recurrence_rule: b } = i,
 		V = (0, x.DK)(i),
 		O = (0, t.e7)([h.ZP], () => h.ZP.isInterestedInEventRecurrence(P, V), [P, V]),
 		H = (0, t.e7)([r.Z], () => r.Z.isLurking(G), [G]),

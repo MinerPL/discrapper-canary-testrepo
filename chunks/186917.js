@@ -8,9 +8,7 @@ t.Z = (e, t) => {
 		r.useEffect(() => {
 			if (!n) return;
 			let e = (e) => {
-				'ArrowUp' === e.key && (l(), e.preventDefault()),
-					'ArrowDown' === e.key && (u(), e.preventDefault()),
-					'r' === e.key && (null == t || t(), e.preventDefault());
+				'ArrowUp' === e.key && (l(), e.preventDefault()), 'ArrowDown' === e.key && (u(), e.preventDefault()), 'r' === e.key && (null == t || t(), e.preventDefault());
 			};
 			return (
 				window.addEventListener('keydown', e),

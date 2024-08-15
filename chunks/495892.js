@@ -133,11 +133,7 @@ function R(e) {
 	});
 }
 function f(e) {
-	return (0, _.r5)(e, _.vT.ALPHA)
-		? (0, s.jsx)(o.Z, { className: h.alphaBetaTag })
-		: (0, _.r5)(e, _.vT.BETA)
-			? (0, s.jsx)(c.Z, { className: h.alphaBetaTag })
-			: null;
+	return (0, _.r5)(e, _.vT.ALPHA) ? (0, s.jsx)(o.Z, { className: h.alphaBetaTag }) : (0, _.r5)(e, _.vT.BETA) ? (0, s.jsx)(c.Z, { className: h.alphaBetaTag }) : null;
 }
 function L(e) {
 	let { rule: t, isDefaultRule: n, onContextMenu: l } = e,

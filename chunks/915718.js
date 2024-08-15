@@ -20,8 +20,8 @@ var i = n(735250),
 	_ = n(605236),
 	f = n(243778),
 	E = n(590293),
-	g = n(970731),
-	C = n(560688),
+	C = n(970731),
+	g = n(560688),
 	I = n(173507),
 	x = n(523746),
 	T = n(819640),
@@ -65,13 +65,7 @@ class D extends a.PureComponent {
 			d = null,
 			h = !1;
 		return (
-			N.Z.supports(L.AN.VIDEO)
-				? l
-					? ((d = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (e = r.Tooltip.Colors.RED), (h = !0))
-					: a && c === R.WtW.VIDEO
-						? ((t = this.handleJoinVideoCall), (d = u ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VIDEO_CALL))
-						: ((t = this.handleStartVideoCall), (d = u ? P.Z.Messages.CONNECT : P.Z.Messages.START_VIDEO_CALL))
-				: ((h = !0), (t = this.handleBrowserNotSupported), (d = P.Z.Messages.BROWSER_NOT_SUPPORTED)),
+			N.Z.supports(L.AN.VIDEO) ? (l ? ((d = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (e = r.Tooltip.Colors.RED), (h = !0)) : a && c === R.WtW.VIDEO ? ((t = this.handleJoinVideoCall), (d = u ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VIDEO_CALL)) : ((t = this.handleStartVideoCall), (d = u ? P.Z.Messages.CONNECT : P.Z.Messages.START_VIDEO_CALL))) : ((h = !0), (t = this.handleBrowserNotSupported), (d = P.Z.Messages.BROWSER_NOT_SUPPORTED)),
 			(0, i.jsx)(b.ZP.Icon, {
 				icon: r.VideoIcon,
 				onClick: t,
@@ -83,33 +77,13 @@ class D extends a.PureComponent {
 	}
 	renderVoiceCallButton() {
 		let e;
-		let {
-			inCall: t,
-			canShowTooltip: n,
-			callActive: a,
-			callUnavailable: s,
-			isBlocked: o,
-			channel: c,
-			canShowActivityGdmTooltip: u,
-			dismissibleContentTypes: d,
-			useReducedMotion: h
-		} = this.props;
+		let { inCall: t, canShowTooltip: n, callActive: a, callUnavailable: s, isBlocked: o, channel: c, canShowActivityGdmTooltip: u, dismissibleContentTypes: d, useReducedMotion: h } = this.props;
 		if (t) return null;
 		let m = c.isManaged(),
 			_ = '',
 			E = !1;
-		s
-			? ((_ = m ? P.Z.Messages.VOICE_UNAVAILABLE : P.Z.Messages.CALL_UNAVAILABLE), (e = r.Tooltip.Colors.RED), (E = !0))
-			: o
-				? ((_ = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (e = r.Tooltip.Colors.RED), (E = !0))
-				: (_ = a
-						? m
-							? P.Z.Messages.CONNECT
-							: P.Z.Messages.JOIN_VOICE_CALL
-						: m
-							? P.Z.Messages.CONNECT
-							: P.Z.Messages.START_VOICE_CALL);
-		let C = (0, i.jsx)(b.ZP.Icon, {
+		s ? ((_ = m ? P.Z.Messages.VOICE_UNAVAILABLE : P.Z.Messages.CALL_UNAVAILABLE), (e = r.Tooltip.Colors.RED), (E = !0)) : o ? ((_ = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (e = r.Tooltip.Colors.RED), (E = !0)) : (_ = a ? (m ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VOICE_CALL) : m ? P.Z.Messages.CONNECT : P.Z.Messages.START_VOICE_CALL);
+		let g = (0, i.jsx)(b.ZP.Icon, {
 			icon: r.PhoneCallIcon,
 			onClick: this.handleVoiceClick,
 			disabled: E,
@@ -128,7 +102,7 @@ class D extends a.PureComponent {
 						shouldShow: n && u && !t,
 						renderPopout: (e) => {
 							let { closePopout: t } = e;
-							return (0, i.jsx)(g.ZP, {
+							return (0, i.jsx)(C.ZP, {
 								header: (0, i.jsxs)('div', {
 									children: [
 										(0, i.jsx)(p.Z, {
@@ -167,9 +141,9 @@ class D extends a.PureComponent {
 								className: O.tooltip
 							});
 						},
-						children: () => C
+						children: () => g
 					});
-				return C;
+				return g;
 			}
 		});
 	}
@@ -203,7 +177,7 @@ class D extends a.PureComponent {
 				(0, I.Z)(() => this.handleJoinCall(!0), e);
 			}),
 			y(this, 'handleBrowserNotSupported', () => {
-				(0, C.Z)();
+				(0, g.Z)();
 			});
 	}
 }
@@ -218,7 +192,7 @@ function k(e) {
 			callUnavailable: x.Z.isCallUnavailable(t.id)
 		})),
 		f = t.getRecipientId(),
-		{ notFriend: g, isBlocked: C } = (0, s.cj)([v.Z], () => ({
+		{ notFriend: C, isBlocked: g } = (0, s.cj)([v.Z], () => ({
 			notFriend: t.type === R.d4z.DM && null != f && !v.Z.isFriend(f),
 			isBlocked: t.type === R.d4z.DM && null != f && v.Z.isBlocked(f)
 		})),
@@ -243,8 +217,8 @@ function k(e) {
 				inCall: o,
 				callActive: p,
 				callUnavailable: _,
-				notFriend: g,
-				isBlocked: C,
+				notFriend: C,
+				isBlocked: g,
 				appContext: N,
 				canShowTooltip: j,
 				canShowActivityGdmTooltip: M,

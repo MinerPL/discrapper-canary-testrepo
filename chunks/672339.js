@@ -37,7 +37,7 @@ async function p(e) {
 		n = await t.blob();
 	return new Uint8ClampedArray(await n.arrayBuffer());
 }
-function I(e, t, n, r, i) {
+function m(e, t, n, r, i) {
 	(0, u.RI)({
 		[e]: {
 			graph: n,
@@ -47,12 +47,12 @@ function I(e, t, n, r, i) {
 		}
 	});
 }
-async function m(e, t, n) {
+async function I(e, t, n) {
 	var r, s;
 	let l,
 		c = !1;
-	if (null == n) return I(e, t, a.zZ.NONE);
-	if (n === f.f7) return I(e, t, a.zZ.BACKGROUND_BLUR);
+	if (null == n) return m(e, t, a.zZ.NONE);
+	if (n === f.f7) return m(e, t, a.zZ.BACKGROUND_BLUR);
 	if ('string' == typeof n || 'number' == typeof n) {
 		let e = (0, _.Z)()[n];
 		(c = null !== (r = e.isVideo) && void 0 !== r && r), (l = e.source);
@@ -97,19 +97,19 @@ async function m(e, t, n) {
 								(n.src = s);
 						})),
 				r = c ? await p(l) : void 0;
-			I(e, t, a.zZ.BACKGROUND_REPLACEMENT, n, r);
+			m(e, t, a.zZ.BACKGROUND_REPLACEMENT, n, r);
 		} catch (e) {
 			(0, u.Nm)();
 		}
 }
 async function T(e, t) {
 	let { track: n = !0, location: r } = t;
-	await m(a.TO.CAMERA_BACKGROUND_LIVE, { type: a.W$.INPUT_DEVICE }, e), n && (0, d.Bh)(e, r, 'Enabled');
+	await I(a.TO.CAMERA_BACKGROUND_LIVE, { type: a.W$.INPUT_DEVICE }, e), n && (0, d.Bh)(e, r, 'Enabled');
 }
 async function g(e, t, n) {
 	let { track: r = !0, location: i } = n;
 	(0, u.GS)(),
-		await m(
+		await I(
 			a.TO.CAMERA_BACKGROUND_PREVIEW,
 			{
 				type: a.W$.STREAM,

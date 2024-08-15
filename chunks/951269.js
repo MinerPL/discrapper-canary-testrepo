@@ -43,10 +43,7 @@ function u(e) {
 						className: c.subtitle,
 						variant: 'text-md/normal',
 						color: 'header-secondary',
-						children:
-							'user' === u
-								? i.Z.Messages.INACCESSIBLE_USER_LINK_SUBTITLE
-								: i.Z.Messages.INACCESSIBLE_CHANNEL_LINK_SUBTITLE
+						children: 'user' === u ? i.Z.Messages.INACCESSIBLE_USER_LINK_SUBTITLE : i.Z.Messages.INACCESSIBLE_CHANNEL_LINK_SUBTITLE
 					})
 				]
 			}),

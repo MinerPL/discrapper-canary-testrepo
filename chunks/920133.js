@@ -16,8 +16,4 @@ function o(e, t) {
 		guild_id: t
 	});
 }
-((r = i || (i = {})).MODAL_VIEWED = 'modal_viewed'),
-	(r.MODAL_DISMISSED = 'modal_dismissed'),
-	(r.MODAL_GUILD_SETTINGS_CLICKED = 'modal_guild_settings_clicked'),
-	(r.SUPPRESSED_BY_COOLDOWN = 'suppressed_by_cooldown'),
-	(r.MODAL_DISABLED_DMS = 'modal_disabled_dms');
+((r = i || (i = {})).MODAL_VIEWED = 'modal_viewed'), (r.MODAL_DISMISSED = 'modal_dismissed'), (r.MODAL_GUILD_SETTINGS_CLICKED = 'modal_guild_settings_clicked'), (r.SUPPRESSED_BY_COOLDOWN = 'suppressed_by_cooldown'), (r.MODAL_DISABLED_DMS = 'modal_disabled_dms');

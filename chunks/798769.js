@@ -18,19 +18,7 @@ var r = t(120356),
 	S = t(689938),
 	f = t(614956);
 function h(e) {
-	let {
-			currentStep: n,
-			className: t,
-			purchaseState: r,
-			premiumType: h,
-			useWinterTheme: p = !1,
-			onClose: T,
-			hideCloseButton: N,
-			showTrialBadge: R,
-			showDiscountBadge: I,
-			isGift: E,
-			giftRecipient: m
-		} = e,
+	let { currentStep: n, className: t, purchaseState: r, premiumType: h, useWinterTheme: p = !1, onClose: T, hideCloseButton: N, showTrialBadge: R, showDiscountBadge: I, isGift: E, giftRecipient: m } = e,
 		M = (0, i.e7)([l.Z], () => l.Z.useReducedMotion),
 		_ = p ? d.nL.WINTER : d.nL.DEFAULT;
 	return E && (0, C.pO)(m) && n !== L.h8.CONFIRM

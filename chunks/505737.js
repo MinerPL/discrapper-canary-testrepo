@@ -13,8 +13,5 @@ function u(e, t) {
 	let n = (0, r.e7)([s.default], () => s.default.getId() === e),
 		u = (0, r.e7)([i.Z], () => null != t && i.Z.isLurking(t)),
 		c = a.h2.useSetting();
-	return (0, r.e7)(
-		[l.Z, o.ZP],
-		() => !n && !u && (l.Z.isFriend(e) || null != o.ZP.memberOf(e).find((e) => !c.includes(e)))
-	);
+	return (0, r.e7)([l.Z, o.ZP], () => !n && !u && (l.Z.isFriend(e) || null != o.ZP.memberOf(e).find((e) => !c.includes(e))));
 }

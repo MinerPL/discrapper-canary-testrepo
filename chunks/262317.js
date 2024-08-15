@@ -22,8 +22,8 @@ var i,
 	_ = n(888651),
 	f = n(100527),
 	E = n(258609),
-	g = n(257115),
-	C = n(569545),
+	C = n(257115),
+	g = n(569545),
 	I = n(382182),
 	x = n(525925),
 	T = n(701362),
@@ -144,9 +144,7 @@ class w extends (i = s.PureComponent) {
 			}),
 			D(this, 'handleHoverHangStatus', (e) => {
 				let { previewIsOpen: t } = this.props;
-				e && t
-					? this.setIsHoveringHangStatusDelayed.delay()
-					: !e && this.setIsHoveringHangStatusDelayed.isDelayed() && this.setIsHoveringHangStatusDelayed.cancel();
+				e && t ? this.setIsHoveringHangStatusDelayed.delay() : !e && this.setIsHoveringHangStatusDelayed.isDelayed() && this.setIsHoveringHangStatusDelayed.cancel();
 			}),
 			D(this, 'handleHoverIcons', (e) => {
 				e && (this.setIsHoveringHangStatusDelayed.cancel(), this.setState({ isHoveringHangStatus: !1 }));
@@ -160,21 +158,16 @@ class w extends (i = s.PureComponent) {
 					channelId: t.id,
 					guildId: t.guild_id
 				};
-				A.default.getId() !== e.id && m.default.selectVoiceChannel(t.id),
-					n ? ((0, x.Z)(a), d.Z.selectParticipant(a.channelId, (0, C.V9)(a))) : (0, p.iV)(a),
-					null == i || i(e.id);
+				A.default.getId() !== e.id && m.default.selectVoiceChannel(t.id), n ? ((0, x.Z)(a), d.Z.selectParticipant(a.channelId, (0, g.V9)(a))) : (0, p.iV)(a), null == i || i(e.id);
 			}),
 			D(this, 'handleJoinVoice', () => {
 				let { user: e, channel: t, hidePreview: n } = this.props;
-				b.Z.can(o.$e(j.Plq.CONNECT, j.Plq.VIEW_CHANNEL), t) &&
-					(m.default.selectVoiceChannel(t.id), null == n || n(e.id));
+				b.Z.can(o.$e(j.Plq.CONNECT, j.Plq.VIEW_CHANNEL), t) && (m.default.selectVoiceChannel(t.id), null == n || n(e.id));
 			}),
 			D(this, 'handleUserContextMenu', (e) => {
 				let { channel: t, user: i } = this.props;
 				(0, h.jW)(e, async () => {
-					let { default: e } = await Promise.all([n.e('79695'), n.e('70474'), n.e('12435'), n.e('46563')]).then(
-						n.bind(n, 757387)
-					);
+					let { default: e } = await Promise.all([n.e('79695'), n.e('70474'), n.e('12435'), n.e('46563')]).then(n.bind(n, 757387));
 					return (n) =>
 						(0, a.jsx)(e, {
 							...n,
@@ -218,34 +211,7 @@ class w extends (i = s.PureComponent) {
 				});
 			}),
 			D(this, 'renderUser', (e) => {
-				let {
-						isSelfOnOtherClient: t,
-						otherClientSessionType: n,
-						voicePlatform: i,
-						shouldShowPreview: s,
-						mute: l,
-						localMute: o,
-						localVideoDisabled: c,
-						speaking: d,
-						disconnected: h,
-						user: m,
-						deaf: p,
-						priority: _,
-						collapsed: f,
-						isStreaming: E,
-						isGuest: C,
-						nick: I,
-						video: x,
-						serverMute: T,
-						serverDeaf: N,
-						tabIndex: v,
-						embeddedApplication: S,
-						channel: A,
-						hangStatusActivity: M,
-						showHangStatus: b,
-						isSelf: R,
-						application: j
-					} = this.props,
+				let { isSelfOnOtherClient: t, otherClientSessionType: n, voicePlatform: i, shouldShowPreview: s, mute: l, localMute: o, localVideoDisabled: c, speaking: d, disconnected: h, user: m, deaf: p, priority: _, collapsed: f, isStreaming: E, isGuest: g, nick: I, video: x, serverMute: T, serverDeaf: N, tabIndex: v, embeddedApplication: S, channel: A, hangStatusActivity: M, showHangStatus: b, isSelf: R, application: j } = this.props,
 					{ userPopoutOpen: P, isHoveringHangStatus: D } = this.state,
 					k = L.al.has(null != n ? n : ''),
 					U = {
@@ -256,7 +222,7 @@ class w extends (i = s.PureComponent) {
 						localMute: o,
 						localVideoDisabled: c,
 						isStreaming: E,
-						isGuest: C,
+						isGuest: g,
 						video: x,
 						priority: _,
 						deaf: p,
@@ -285,7 +251,7 @@ class w extends (i = s.PureComponent) {
 				if (t) {
 					var w;
 					return (0, a.jsx)(u.Tooltip, {
-						text: null !== (w = (0, g.Z)(n)) && void 0 !== w ? w : O.Z.Messages.CONNECTED_ON_ANOTHER_CLIENT,
+						text: null !== (w = (0, C.Z)(n)) && void 0 !== w ? w : O.Z.Messages.CONNECTED_ON_ANOTHER_CLIENT,
 						children: (e) => {
 							let { onClick: t, onContextMenu: n, ...i } = e;
 							return (0, a.jsx)(Z.Z, {

@@ -221,10 +221,7 @@ class w extends (l = s.Component) {
 	}
 	componentDidUpdate(e) {
 		let { selectedChannelId: t, homeLink: n } = this.props;
-		null != t && t !== e.selectedChannelId
-			? this.scrollToChannel(t)
-			: null == t && n !== e.homeLink && this.scrollToChannel(null),
-			this.reportAnalytics();
+		null != t && t !== e.selectedChannelId ? this.scrollToChannel(t) : null == t && n !== e.homeLink && this.scrollToChannel(null), this.reportAnalytics();
 	}
 	scrollToChannel(e) {
 		if (null == this._list) return;
@@ -255,9 +252,7 @@ class w extends (l = s.Component) {
 							innerTag: 'ul',
 							ref: (e) => {
 								var t;
-								(this._list = e),
-									(this.props.listRef.current = e),
-									(l.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
+								(this._list = e), (this.props.listRef.current = e), (l.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
 							},
 							onScroll: this.handleScroll,
 							className: y.scroller,
@@ -353,11 +348,7 @@ class w extends (l = s.Component) {
 			j(this, 'renderRow', (e) => {
 				let { section: t, row: n } = e,
 					{ privateChannelIds: i } = this.props;
-				return 0 === t
-					? this.renderChild(n)
-					: 0 === n && 0 === i.length
-						? (0, a.jsx)(D, {}, 'no-private-channels')
-						: this.renderDM(t, n);
+				return 0 === t ? this.renderChild(n) : 0 === n && 0 === i.length ? (0, a.jsx)(D, {}, 'no-private-channels') : this.renderDM(t, n);
 			}),
 			j(this, 'renderSection', (e) => {
 				let { section: t } = e,

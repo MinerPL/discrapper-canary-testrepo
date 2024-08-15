@@ -14,13 +14,6 @@ let o = (e) => {
 		type: 'button',
 		className: a()(s.btnHamburger, { [s.btnHamburgerOpen]: t }, n),
 		...i,
-		children: [
-			(0, r.jsx)('span', {}),
-			(0, r.jsx)('span', {}),
-			(0, r.jsx)('span', {}),
-			(0, r.jsx)('span', {}),
-			(0, r.jsx)('span', {}),
-			(0, r.jsx)('span', {})
-		]
+		children: [(0, r.jsx)('span', {}), (0, r.jsx)('span', {}), (0, r.jsx)('span', {}), (0, r.jsx)('span', {}), (0, r.jsx)('span', {}), (0, r.jsx)('span', {})]
 	});
 };

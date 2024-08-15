@@ -41,11 +41,7 @@ function A(e) {
 				setTab: t,
 				closePopout: n
 			}),
-			0 === a.length
-				? (0, i.jsx)(x, {})
-				: (0, i.jsx)(o.AdvancedScrollerThin, {
-						children: a.map((e) => (0, i.jsx)(R, { savedMessage: e }, e.saveData.messageId))
-					})
+			0 === a.length ? (0, i.jsx)(x, {}) : (0, i.jsx)(o.AdvancedScrollerThin, { children: a.map((e) => (0, i.jsx)(R, { savedMessage: e }, e.saveData.messageId)) })
 		]
 	});
 }

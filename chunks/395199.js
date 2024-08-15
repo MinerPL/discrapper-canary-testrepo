@@ -91,16 +91,7 @@ let U = (e) => {
 			});
 };
 function R(e) {
-	let {
-		imageClass: s,
-		blurb: l,
-		guild: n,
-		warning: r,
-		error: a,
-		onDismissError: i,
-		slotCount: o = 1,
-		canceledCount: d = 0
-	} = e;
+	let { imageClass: s, blurb: l, guild: n, warning: r, error: a, onDismissError: i, slotCount: o = 1, canceledCount: d = 0 } = e;
 	return (0, t.jsxs)(E, {
 		imageClass: s,
 		error: a,
@@ -147,21 +138,7 @@ class h extends r.PureComponent {
 }
 class N extends (n = r.PureComponent) {
 	render() {
-		let {
-			guild: e,
-			header: s,
-			blurb: l,
-			warning: n,
-			confirmation: a,
-			confirmationLabel: i,
-			imageClass: o,
-			error: d,
-			isModifyingSubscription: c,
-			onConfirm: C,
-			onCancel: m,
-			onDismissError: S,
-			canceledCount: I
-		} = this.props;
+		let { guild: e, header: s, blurb: l, warning: n, confirmation: a, confirmationLabel: i, imageClass: o, error: d, isModifyingSubscription: c, onConfirm: C, onCancel: m, onDismissError: S, canceledCount: I } = this.props;
 		return (0, t.jsxs)(r.Fragment, {
 			children: [
 				(0, t.jsx)(x, { text: s }),
@@ -191,22 +168,10 @@ _(N, 'Header', x),
 	_(N, 'ApplyBody', R),
 	_(N, 'TransferBody', function (e) {
 		var s, l;
-		let {
-				imageClass: n,
-				blurb: a,
-				fromGuilds: i,
-				toGuild: o,
-				error: d,
-				onDismissError: c,
-				slotCount: m = 1,
-				canceledCount: _ = 0
-			} = e,
+		let { imageClass: n, blurb: a, fromGuilds: i, toGuild: o, error: d, onDismissError: c, slotCount: m = 1, canceledCount: _ = 0 } = e,
 			x = r.useRef(i),
 			R = null === (s = x.current) || void 0 === s ? void 0 : s.length,
-			h =
-				null === (l = x.current) || void 0 === l
-					? void 0
-					: l.reduce((e, s) => (!e.hasOwnProperty(s.id) && (e[s.id] = []), e[s.id].push(s), e), {});
+			h = null === (l = x.current) || void 0 === l ? void 0 : l.reduce((e, s) => (!e.hasOwnProperty(s.id) && (e[s.id] = []), e[s.id].push(s), e), {});
 		return (0, t.jsxs)(E, {
 			imageClass: n,
 			error: d,

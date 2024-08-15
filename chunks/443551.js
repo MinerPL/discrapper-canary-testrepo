@@ -37,10 +37,7 @@ function i(e) {
 function a(e, t) {
 	for (var n = 0; n < t.length; n++) {
 		var r = t[n];
-		(r.enumerable = r.enumerable || !1),
-			(r.configurable = !0),
-			'value' in r && (r.writable = !0),
-			Object.defineProperty(e, s(r.key), r);
+		(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, s(r.key), r);
 	}
 }
 function s(e) {
@@ -129,12 +126,7 @@ e.exports = (function () {
 				key: 'consume',
 				value: function (e, t) {
 					var n;
-					return (
-						e < this.head.data.length
-							? ((n = this.head.data.slice(0, e)), (this.head.data = this.head.data.slice(e)))
-							: (n = e === this.head.data.length ? this.shift() : t ? this._getString(e) : this._getBuffer(e)),
-						n
-					);
+					return e < this.head.data.length ? ((n = this.head.data.slice(0, e)), (this.head.data = this.head.data.slice(e))) : (n = e === this.head.data.length ? this.shift() : t ? this._getString(e) : this._getBuffer(e)), n;
 				}
 			},
 			{
@@ -153,9 +145,7 @@ e.exports = (function () {
 						var i = t.data,
 							a = e > i.length ? i.length : e;
 						if ((a === i.length ? (r += i) : (r += i.slice(0, e)), 0 == (e -= a))) {
-							a === i.length
-								? (++n, t.next ? (this.head = t.next) : (this.head = this.tail = null))
-								: ((this.head = t), (t.data = i.slice(a)));
+							a === i.length ? (++n, t.next ? (this.head = t.next) : (this.head = this.tail = null)) : ((this.head = t), (t.data = i.slice(a)));
 							break;
 						}
 						++n;
@@ -173,9 +163,7 @@ e.exports = (function () {
 						var i = n.data,
 							a = e > i.length ? i.length : e;
 						if ((i.copy(t, t.length - e, 0, a), 0 == (e -= a))) {
-							a === i.length
-								? (++r, n.next ? (this.head = n.next) : (this.head = this.tail = null))
-								: ((this.head = n), (n.data = i.slice(a)));
+							a === i.length ? (++r, n.next ? (this.head = n.next) : (this.head = this.tail = null)) : ((this.head = n), (n.data = i.slice(a)));
 							break;
 						}
 						++r;

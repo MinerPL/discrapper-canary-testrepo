@@ -18,10 +18,7 @@ function a(e, t, n) {
 		s = r.useCallback(
 			(t) => {
 				let { event: n } = t;
-				!a(n) &&
-					(n.preventDefault(),
-					n.stopPropagation(),
-					null != n.clipboardData && (e.insertData(n.clipboardData), i.bN.focus(e)));
+				!a(n) && (n.preventDefault(), n.stopPropagation(), null != n.clipboardData && (e.insertData(n.clipboardData), i.bN.focus(e)));
 			},
 			[e, a]
 		);

@@ -15,10 +15,7 @@ function d(e) {
 	let { application: _, onClick: p, imageSrc: m, className: g, animatesOnHover: f } = e,
 		C = (0, l.Z)({ application: _ }),
 		x = null === (t = _.categories) || void 0 === t ? void 0 : t[0],
-		I =
-			(null !== (u = null === (i = _.directory_entry) || void 0 === i ? void 0 : i.guild_count) && void 0 !== u
-				? u
-				: 0) > 0 || C.length > 0,
+		I = (null !== (u = null === (i = _.directory_entry) || void 0 === i ? void 0 : i.guild_count) && void 0 !== u ? u : 0) > 0 || C.length > 0,
 		b = a.useCallback(() => {
 			p({ mutualGuilds: C });
 		}, [p, C]),
@@ -67,11 +64,7 @@ function d(e) {
 					className: c.listingDescription,
 					variant: 'text-sm/normal',
 					lineClamp: 2,
-					children:
-						null !== (h = null === (d = _.directory_entry) || void 0 === d ? void 0 : d.short_description) &&
-						void 0 !== h
-							? h
-							: _.description
+					children: null !== (h = null === (d = _.directory_entry) || void 0 === d ? void 0 : d.short_description) && void 0 !== h ? h : _.description
 				})
 			})
 	});

@@ -26,11 +26,7 @@ function _(e) {
 		{ channel: E, message: S, target: g, attachment: k, onSelect: x } = e,
 		C = g;
 	if (null != k) _ = l = k.url;
-	else
-		for (; (0, s.k)(C); )
-			(0, s.k)(C, HTMLImageElement) && null != C.src && (_ = C.src),
-				(0, s.k)(C, HTMLAnchorElement) && null != C.href && ((l = C.href), (f = C.textContent)),
-				(C = C.parentNode);
+	else for (; (0, s.k)(C); ) (0, s.k)(C, HTMLImageElement) && null != C.src && (_ = C.src), (0, s.k)(C, HTMLAnchorElement) && null != C.href && ((l = C.href), (f = C.textContent)), (C = C.parentNode);
 	let G = null === (n = document.getSelection()) || void 0 === n ? void 0 : n.toString(),
 		j = (0, c.Z)(G),
 		v = (0, a.Z)(G),

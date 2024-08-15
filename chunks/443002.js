@@ -13,8 +13,8 @@ var r = n(735250),
 	f = n(394769),
 	h = n(555932),
 	p = n(808189),
-	I = n(362948),
-	m = n(245004),
+	m = n(362948),
+	I = n(245004),
 	T = n(383881),
 	g = n(981631),
 	S = n(689938),
@@ -112,7 +112,7 @@ t.Z = function (e) {
 						}),
 						(0, r.jsx)('div', {
 							className: A.middleBodyContentWrapper,
-							children: (0, r.jsx)(m.Z, {})
+							children: (0, r.jsx)(I.Z, {})
 						}),
 						(0, r.jsxs)('div', {
 							className: A.lowerBody,
@@ -120,7 +120,7 @@ t.Z = function (e) {
 								(0, r.jsxs)('div', {
 									className: A.lowerBodyContentWrapper,
 									children: [
-										(0, r.jsx)(I.Z, {
+										(0, r.jsx)(m.Z, {
 											className: A.tierComparisonTable,
 											guild: n
 										}),

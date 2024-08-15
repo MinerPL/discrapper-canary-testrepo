@@ -51,12 +51,7 @@ function R(e) {
 function V(e) {
 	let { channel: n } = e,
 		t = (0, I.e7)([M.default], () => M.default.getUser(null == n ? void 0 : n.recipients[0])),
-		s = (0, I.e7)(
-			[f.Z],
-			() =>
-				!(null == t || null == n || n.isMultiUserDM()) &&
-				null != f.Z.getTypingUsers(null == n ? void 0 : n.id)[null == t ? void 0 : t.id]
-		),
+		s = (0, I.e7)([f.Z], () => !(null == t || null == n || n.isMultiUserDM()) && null != f.Z.getTypingUsers(null == n ? void 0 : n.id)[null == t ? void 0 : t.id]),
 		{ status: u, isMobile: i } = (0, I.cj)([O.Z], () =>
 			null == t || null == n || n.isMultiUserDM()
 				? {
@@ -270,10 +265,7 @@ function v(e) {
 			onContextMenu: (e) => (null == A ? void 0 : A(e, t)),
 			onMouseEnter: y,
 			onMouseLeave: x,
-			children: [
-				I || !T ? null : (0, l.jsx)('div', { className: i()(g.unread, w ? g.unreadImportant : void 0) }),
-				null !== (n = null == R ? void 0 : R(en)) && void 0 !== n ? n : en
-			]
+			children: [I || !T ? null : (0, l.jsx)('div', { className: i()(g.unread, w ? g.unreadImportant : void 0) }), null !== (n = null == R ? void 0 : R(en)) && void 0 !== n ? n : en]
 		})
 	});
 }

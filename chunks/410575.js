@@ -28,11 +28,7 @@ class d extends (r = a.Component) {
 		var t, n;
 		let { section: r, page: a, object: s, objectType: l, children: u } = this.props,
 			c = this.mergeLocation(e.location, this.getLocation(a, r, s, l)),
-			d = this.getContext(
-				c,
-				null !== (t = this._loadDate) && void 0 !== t ? t : e.loadDate,
-				null !== (n = this._loadId) && void 0 !== n ? n : e.loadId
-			);
+			d = this.getContext(c, null !== (t = this._loadDate) && void 0 !== t ? t : e.loadDate, null !== (n = this._loadId) && void 0 !== n ? n : e.loadId);
 		return (0, i.jsx)(o.AnalyticsContext.Provider, {
 			value: d,
 			children: u
@@ -40,9 +36,7 @@ class d extends (r = a.Component) {
 	}
 	render() {
 		let { context: e } = this.props;
-		return null != e
-			? this.renderProvider(e)
-			: (0, i.jsx)(o.AnalyticsContext.Consumer, { children: (e) => this.renderProvider(e) });
+		return null != e ? this.renderProvider(e) : (0, i.jsx)(o.AnalyticsContext.Consumer, { children: (e) => this.renderProvider(e) });
 	}
 	constructor(e) {
 		super(e),
@@ -53,13 +47,7 @@ class d extends (r = a.Component) {
 				'getLocation',
 				(0, l.oH)((e, t, n, r) => {
 					let i = {};
-					return (
-						null != e && (i.page = e),
-						null != t && (i.section = t),
-						null != n && (i.object = n),
-						null != r && (i.objectType = r),
-						i
-					);
+					return null != e && (i.page = e), null != t && (i.section = t), null != n && (i.object = n), null != r && (i.objectType = r), i;
 				})
 			),
 			c(
@@ -82,8 +70,4 @@ class d extends (r = a.Component) {
 			null != e.loadId ? (this._loadId = e.loadId) : e.root && (this._loadId = (0, s.Z)());
 	}
 }
-c(d, 'Pages', u.ZY5),
-	c(d, 'Sections', u.jXE),
-	c(d, 'Objects', u.qAy),
-	c(d, 'ObjectTypes', u.Qqv),
-	c(d, 'defaultProps', { root: !1 });
+c(d, 'Pages', u.ZY5), c(d, 'Sections', u.jXE), c(d, 'Objects', u.qAy), c(d, 'ObjectTypes', u.Qqv), c(d, 'defaultProps', { root: !1 });

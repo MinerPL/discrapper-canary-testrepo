@@ -15,13 +15,10 @@ r = {
 		`${t.select(
 			{
 				true: () =>
-					`\u{5165}\u{529B}\u{3055}\u{308C}\u{305F}\u{30B0}\u{30EB}\u{30FC}\u{30D7} ${e.groupTitle}\u{3001}${t.plural(
-						e.groupCount,
-						{
-							one: () => `${t.number(e.groupCount)} \u{500B}\u{306E}\u{30AA}\u{30D7}\u{30B7}\u{30E7}\u{30F3}`,
-							other: () => `${t.number(e.groupCount)} \u{500B}\u{306E}\u{30AA}\u{30D7}\u{30B7}\u{30E7}\u{30F3}`
-						}
-					)}\u{3092}\u{542B}\u{3080}\u{3002}`,
+					`\u{5165}\u{529B}\u{3055}\u{308C}\u{305F}\u{30B0}\u{30EB}\u{30FC}\u{30D7} ${e.groupTitle}\u{3001}${t.plural(e.groupCount, {
+						one: () => `${t.number(e.groupCount)} \u{500B}\u{306E}\u{30AA}\u{30D7}\u{30B7}\u{30E7}\u{30F3}`,
+						other: () => `${t.number(e.groupCount)} \u{500B}\u{306E}\u{30AA}\u{30D7}\u{30B7}\u{30E7}\u{30F3}`
+					})}\u{3092}\u{542B}\u{3080}\u{3002}`,
 				other: ''
 			},
 			e.isGroupChange

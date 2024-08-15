@@ -19,8 +19,8 @@ var r = n(735250),
 	f = n(311395),
 	h = n(197115),
 	p = n(166625),
-	I = n(594174),
-	m = n(626135),
+	m = n(594174),
+	I = n(626135),
 	T = n(74538),
 	g = n(864106),
 	S = n(240781),
@@ -30,41 +30,21 @@ var r = n(735250),
 	O = n(689938),
 	R = n(801802);
 function C(e) {
-	let {
-			user: t,
-			categories: n,
-			purchases: a,
-			analyticsLocations: s,
-			onClose: u,
-			initialSelectedDecoration: E,
-			initialSelectedDecorationId: I,
-			isTryItOutFlow: m,
-			guild: N
-		} = e,
+	let { user: t, categories: n, purchases: a, analyticsLocations: s, onClose: u, initialSelectedDecoration: E, initialSelectedDecorationId: m, isTryItOutFlow: I, guild: N } = e,
 		{
 			pendingAvatarDecoration: C,
 			setPendingAvatarDecoration: y,
 			savedAvatarDecoration: D
 		} = (0, p.Z)({
 			analyticsLocations: s,
-			isTryItOut: m,
+			isTryItOut: I,
 			guildId: null == N ? void 0 : N.id
 		}),
 		[L, b] = i.useState(() => {
 			var e, t;
 			if (null != E) return E;
 			let r = (0, d.iC)(a, n);
-			return null != I
-				? null !== (e = r.find((e) => e.id === I)) && void 0 !== e
-					? e
-					: null
-				: void 0 !== C
-					? C
-					: null == D
-						? null
-						: null !== (t = r.find((e) => (0, g.sr)(e, D))) && void 0 !== t
-							? t
-							: null;
+			return null != m ? (null !== (e = r.find((e) => e.id === m)) && void 0 !== e ? e : null) : void 0 !== C ? C : null == D ? null : null !== (t = r.find((e) => (0, g.sr)(e, D))) && void 0 !== t ? t : null;
 		}),
 		{ product: M, purchase: P } = (0, _.Z)(null == L ? void 0 : L.skuId),
 		U = T.ZP.canUseCollectibles(t),
@@ -140,9 +120,7 @@ function C(e) {
 								})
 							: (0, r.jsx)(h.Z, {
 									subscriptionTier: v.Si.TIER_2,
-									buttonText: T.ZP.isPremium(t)
-										? O.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL
-										: O.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
+									buttonText: T.ZP.isPremium(t) ? O.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : O.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
 								}),
 					(0, r.jsx)(o.Button, {
 						look: o.Button.Looks.LINK,
@@ -156,23 +134,14 @@ function C(e) {
 	});
 }
 function y(e) {
-	let {
-			transitionState: t,
-			analyticsLocations: n,
-			onClose: d,
-			onCloseModal: _,
-			initialSelectedDecoration: f,
-			initialSelectedDecorationId: h,
-			isTryItOutFlow: p,
-			guild: T
-		} = e,
-		g = (0, s.e7)([I.default], () => I.default.getCurrentUser()),
+	let { transitionState: t, analyticsLocations: n, onClose: d, onCloseModal: _, initialSelectedDecoration: f, initialSelectedDecorationId: h, isTryItOutFlow: p, guild: T } = e,
+		g = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
 		{ analyticsLocations: S } = (0, u.ZP)(n, l.Z.EDIT_AVATAR_DECORATION_MODAL),
 		{ categories: A, purchases: v, isFetchingCategories: O, isFetchingPurchases: y } = (0, E.Z)(),
 		D = O || (y && 0 === v.size);
 	return (
 		i.useEffect(() => {
-			m.default.track(N.rMx.OPEN_MODAL, {
+			I.default.track(N.rMx.OPEN_MODAL, {
 				type: 'Edit Avatar Decoration Modal',
 				location_stack: S
 			});

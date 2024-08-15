@@ -24,36 +24,17 @@ function L(e, _, E) {
 }
 function S() {
 	return (0, s.jsxs)('div', {
-		children: [
-			(0, s.jsx)('div', { className: n()(l.sparkleWhite, N.sparkleOne) }),
-			(0, s.jsx)('div', { className: n()(l.sparkleWhite, N.sparkleTwo) }),
-			(0, s.jsx)('div', { className: n()(l.lightWhite, N.lightOne) }),
-			(0, s.jsx)('div', { className: n()(l.lightWhite, N.lightTwo) }),
-			(0, s.jsx)('div', { className: n()(l.crossWhite, N.crossOne) }),
-			(0, s.jsx)('div', { className: n()(l.crossWhite, N.crossTwo) }),
-			(0, s.jsx)('div', { className: n()(l.popWhite, N.popOne) })
-		]
+		children: [(0, s.jsx)('div', { className: n()(l.sparkleWhite, N.sparkleOne) }), (0, s.jsx)('div', { className: n()(l.sparkleWhite, N.sparkleTwo) }), (0, s.jsx)('div', { className: n()(l.lightWhite, N.lightOne) }), (0, s.jsx)('div', { className: n()(l.lightWhite, N.lightTwo) }), (0, s.jsx)('div', { className: n()(l.crossWhite, N.crossOne) }), (0, s.jsx)('div', { className: n()(l.crossWhite, N.crossTwo) }), (0, s.jsx)('div', { className: n()(l.popWhite, N.popOne) })]
 	});
 }
 class D extends T.Component {
 	componentDidMount() {
 		let e = this.elementDOMRef.current;
-		null != e &&
-			(e.ownerDocument.body.addEventListener('dragover', this.handleDragOver, !1),
-			e.ownerDocument.body.addEventListener('drop', this.handleDragLeave, !1),
-			e.addEventListener('dragover', this.handleDragOverZone, !1),
-			e.addEventListener('dragleave', this.handleDragLeaveZone, !1),
-			e.addEventListener('drop', this.handleDrop, !1));
+		null != e && (e.ownerDocument.body.addEventListener('dragover', this.handleDragOver, !1), e.ownerDocument.body.addEventListener('drop', this.handleDragLeave, !1), e.addEventListener('dragover', this.handleDragOverZone, !1), e.addEventListener('dragleave', this.handleDragLeaveZone, !1), e.addEventListener('drop', this.handleDrop, !1));
 	}
 	componentWillUnmount() {
 		let e = this.elementDOMRef.current;
-		null != e &&
-			(e.ownerDocument.body.removeEventListener('dragover', this.handleDragOver, !1),
-			e.ownerDocument.body.removeEventListener('drop', this.handleDragLeave, !1),
-			e.removeEventListener('dragover', this.handleDragOverZone, !1),
-			e.removeEventListener('dragleave', this.handleDragLeaveZone, !1),
-			e.removeEventListener('drop', this.handleDrop, !1)),
-			clearTimeout(this.dragOverTimeout);
+		null != e && (e.ownerDocument.body.removeEventListener('dragover', this.handleDragOver, !1), e.ownerDocument.body.removeEventListener('drop', this.handleDragLeave, !1), e.removeEventListener('dragover', this.handleDragOverZone, !1), e.removeEventListener('dragleave', this.handleDragLeaveZone, !1), e.removeEventListener('drop', this.handleDrop, !1)), clearTimeout(this.dragOverTimeout);
 	}
 	render() {
 		let { title: e, description: _, icons: E, style: T, className: I } = this.props;
@@ -112,10 +93,7 @@ class D extends T.Component {
 				let E = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
 					s = e.dataTransfer;
 				if (null == s) return !0;
-				let T =
-						Array.isArray(s.types) &&
-						-1 !== s.types.indexOf('text/uri-list') &&
-						-1 === s.types.indexOf('application/json'),
+				let T = Array.isArray(s.types) && -1 !== s.types.indexOf('text/uri-list') && -1 === s.types.indexOf('application/json'),
 					I = null != s.items && !_.isAllDropFiles(s.items);
 				return (
 					(!T && !I) ||
@@ -138,24 +116,14 @@ class D extends T.Component {
 				if (!this.preventUnwantedDrop(e)) return !1;
 				let T = e.dataTransfer;
 				if (null != T) {
-					if (
-						((T.dropEffect = 'copy'),
-						(0, t.hasModalOpen)(r.UPLOAD_ERROR_MODAL_KEY) && (0, t.closeModal)(r.UPLOAD_ERROR_MODAL_KEY),
-						e.stopPropagation(),
-						e.preventDefault(),
-						null === (_ = (E = this.props).onDragOver) || void 0 === _ || _.call(E, e),
-						!this.state.isDragging)
-					) {
+					if (((T.dropEffect = 'copy'), (0, t.hasModalOpen)(r.UPLOAD_ERROR_MODAL_KEY) && (0, t.closeModal)(r.UPLOAD_ERROR_MODAL_KEY), e.stopPropagation(), e.preventDefault(), null === (_ = (E = this.props).onDragOver) || void 0 === _ || _.call(E, e), !this.state.isDragging)) {
 						let e = null === (s = this.elementDOMRef.current) || void 0 === s ? void 0 : s.ownerDocument.defaultView;
-						((null != e && T.types instanceof e.DOMStringList && T.types.contains('application/x-moz-file')) ||
-							-1 !== T.types.indexOf('Files')) &&
-							this.setState((e) => (e.isDragging ? {} : { isDragging: !0 }));
+						((null != e && T.types instanceof e.DOMStringList && T.types.contains('application/x-moz-file')) || -1 !== T.types.indexOf('Files')) && this.setState((e) => (e.isDragging ? {} : { isDragging: !0 }));
 					}
 					clearTimeout(this.dragOverTimeout),
 						(this.dragOverTimeout = setTimeout(() => {
 							var e, _;
-							this.setState({ isDragging: !1 }),
-								null === (e = (_ = this.props).onDragClear) || void 0 === e || e.call(_);
+							this.setState({ isDragging: !1 }), null === (e = (_ = this.props).onDragClear) || void 0 === e || e.call(_);
 						}, 1000));
 				}
 			}),
@@ -180,8 +148,7 @@ class D extends T.Component {
 				if (!this.preventUnwantedDrop(e, !0)) return !1;
 				let _ = e.dataTransfer;
 				if (null == _) return !0;
-				this.state.isDragging &&
-					(e.preventDefault(), e.stopPropagation(), this.props.onDrop(_.files), this.clearDragging());
+				this.state.isDragging && (e.preventDefault(), e.stopPropagation(), this.props.onDrop(_.files), this.clearDragging());
 			});
 	}
 }

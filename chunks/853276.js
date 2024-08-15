@@ -33,9 +33,7 @@ let I = a.forwardRef(function (e, t) {
 				ref: t,
 				children: l
 			})
-		: (null !== (n = null == E ? void 0 : E.length) && void 0 !== n ? n : 0) +
-					(null !== (i = null == T ? void 0 : T.length) && void 0 !== i ? i : 0) >
-			  70
+		: (null !== (n = null == E ? void 0 : E.length) && void 0 !== n ? n : 0) + (null !== (i = null == T ? void 0 : T.length) && void 0 !== i ? i : 0) > 70
 			? (0, s.jsx)(o.Tooltip, {
 					'aria-label': I.message,
 					text: () =>
@@ -98,17 +96,7 @@ let I = a.forwardRef(function (e, t) {
 				});
 });
 function E(e) {
-	let {
-			value: t,
-			onChange: n,
-			onBlur: i,
-			onFocus: E,
-			onRemove: T,
-			isSelected: m,
-			isSelecting: N,
-			error: S,
-			forceShowErrorTooltip: h
-		} = e,
+	let { value: t, onChange: n, onBlur: i, onFocus: E, onRemove: T, isSelected: m, isSelecting: N, error: S, forceShowErrorTooltip: h } = e,
 		g = a.useRef(null),
 		C = a.useRef(null),
 		[x, p] = a.useState(!1),
@@ -143,11 +131,7 @@ function E(e) {
 				let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
 				if ((t.trim().length <= 0 && T(), null != g.current && null != R.current && null != C.current)) {
 					var n;
-					g.current.scrollTo(0, 0),
-						g.current.setSelectionRange(0, 0),
-						(g.current.scrollLeft = 0),
-						(R.current.scrollLeft = 0),
-						(null === (n = C.current) || void 0 === n ? void 0 : n.ref) != null && (C.current.ref.scrollLeft = 0);
+					g.current.scrollTo(0, 0), g.current.setSelectionRange(0, 0), (g.current.scrollLeft = 0), (R.current.scrollLeft = 0), (null === (n = C.current) || void 0 === n ? void 0 : n.ref) != null && (C.current.ref.scrollLeft = 0);
 				}
 				p(!1), i(e);
 			},
@@ -156,9 +140,7 @@ function E(e) {
 		U = a.useCallback(
 			(e) => {
 				let n = t.trim().length <= 0;
-				u.ye.has(e.key)
-					? (e.preventDefault(), e.stopPropagation(), b(!0))
-					: 'Backspace' === e.key && n && (e.preventDefault(), e.stopPropagation(), b(!0));
+				u.ye.has(e.key) ? (e.preventDefault(), e.stopPropagation(), b(!0)) : 'Backspace' === e.key && n && (e.preventDefault(), e.stopPropagation(), b(!0));
 			},
 			[b, t]
 		),

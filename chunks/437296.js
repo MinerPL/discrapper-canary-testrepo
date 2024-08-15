@@ -49,10 +49,7 @@ class s {
 		};
 		for (let t of e) n(t);
 		let r = 0;
-		for (let [e, n] of this.keyMap)
-			t ? ((t.nextKey = e), (n.prevKey = t.key)) : ((this.firstKey = e), (n.prevKey = void 0)),
-				'item' === n.type && (n.index = r++),
-				((t = n).nextKey = void 0);
+		for (let [e, n] of this.keyMap) t ? ((t.nextKey = e), (n.prevKey = t.key)) : ((this.firstKey = e), (n.prevKey = void 0)), 'item' === n.type && (n.index = r++), ((t = n).nextKey = void 0);
 		this.lastKey = null == t ? void 0 : t.key;
 	}
 }

@@ -19,10 +19,7 @@ function m(e) {
 		f = (0, t.e7)([s.Z], () => s.Z.getGuildId()),
 		p = (0, r.O)(),
 		{ analyticsLocations: E } = (0, a.ZP)(),
-		v =
-			(0, o.kr)(n) && !(0, o.n2)(n)
-				? d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING
-				: d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
+		v = (0, o.kr)(n) && !(0, o.n2)(n) ? d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
 		C = () => {
 			null != f &&
 				(0, i.q)({

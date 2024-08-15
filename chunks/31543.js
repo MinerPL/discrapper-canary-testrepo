@@ -12,8 +12,8 @@ var r = n(735250),
 let f = i.forwardRef(function (e, t) {
 	let { onKeyDown: n, stickersListRef: f, channel: h } = e,
 		p = (0, c.fQ)(h),
-		I = i.useRef(null),
-		{ searchQuery: m, isSearchSuggestion: T } = (0, u.Iu)(
+		m = i.useRef(null),
+		{ searchQuery: I, isSearchSuggestion: T } = (0, u.Iu)(
 			(e) => ({
 				searchQuery: e.searchQuery,
 				isSearchSuggestion: e.isSearchSuggestion
@@ -25,11 +25,7 @@ let f = i.forwardRef(function (e, t) {
 		A = i.useCallback(
 			(e) => {
 				var t;
-				l.ZN.setActiveCategoryIndex('' === e ? 0 : d.c),
-					l.ZN.setInspectedExpressionPosition(0, 0),
-					l.ZN.setSearchPlaceholder(null),
-					(0, u.ql)(e),
-					null === (t = f.current) || void 0 === t || t.scrollTo(0);
+				l.ZN.setActiveCategoryIndex('' === e ? 0 : d.c), l.ZN.setInspectedExpressionPosition(0, 0), l.ZN.setSearchPlaceholder(null), (0, u.ql)(e), null === (t = f.current) || void 0 === t || t.scrollTo(0);
 			},
 			[f]
 		),
@@ -40,13 +36,13 @@ let f = i.forwardRef(function (e, t) {
 		i.useImperativeHandle(t, () => ({
 			focus: () => {
 				var e;
-				return null === (e = I.current) || void 0 === e ? void 0 : e.focus();
+				return null === (e = m.current) || void 0 === e ? void 0 : e.focus();
 			}
 		})),
 		i.useLayoutEffect(() => {
 			if (T) {
 				var e;
-				null === (e = I.current) || void 0 === e || e.focus();
+				null === (e = m.current) || void 0 === e || e.focus();
 			}
 		}, [T]),
 		(0, r.jsx)('div', {
@@ -54,8 +50,8 @@ let f = i.forwardRef(function (e, t) {
 			children: (0, r.jsx)(o.ZP, {
 				autoFocus: p,
 				disabled: !p,
-				query: m,
-				ref: I,
+				query: I,
+				ref: m,
 				size: o.ZP.Sizes.MEDIUM,
 				placeholder: null != g ? g : p ? _.Z.Messages.SEARCH_FOR_STICKERS : _.Z.Messages.NO_STICKERS_TO_SEARCH_THROUGH,
 				onClear: N,

@@ -29,10 +29,7 @@ function u(e, t) {
 			...n
 		};
 	i.forEach((e, t, i) => {
-		(n.packetsSentOrReceived += t > 0 ? i[t].packetsSentOrReceived - i[t - 1].packetsSentOrReceived : 0),
-			(n.packetsLost += t > 0 ? i[t].packetsLost - i[t - 1].packetsLost : 0),
-			(n.frameRate += e.frameRate),
-			(n.resolution += e.resolution);
+		(n.packetsSentOrReceived += t > 0 ? i[t].packetsSentOrReceived - i[t - 1].packetsSentOrReceived : 0), (n.packetsLost += t > 0 ? i[t].packetsLost - i[t - 1].packetsLost : 0), (n.frameRate += e.frameRate), (n.resolution += e.resolution);
 	});
 	let a = i[0].type,
 		s = i.length;
@@ -46,11 +43,7 @@ function u(e, t) {
 		numDatapoints: s
 	};
 }
-((i = a || (a = {})).PACKET_LOSS = 'Packet Loss'),
-	(i.FRAME_RATE_INPUT = 'Frame Rate Encode'),
-	(i.FRAME_RATE_NETWORK = 'Frame Rate Decode'),
-	(i.SOUNDSHARE_FAILED = 'Soundshare Failed'),
-	(i.BAD_CONNECTION = 'Bad Connection');
+((i = a || (a = {})).PACKET_LOSS = 'Packet Loss'), (i.FRAME_RATE_INPUT = 'Frame Rate Encode'), (i.FRAME_RATE_NETWORK = 'Frame Rate Decode'), (i.SOUNDSHARE_FAILED = 'Soundshare Failed'), (i.BAD_CONNECTION = 'Bad Connection');
 let d = (0, s.oH)((e, t) => ({
 	message: e,
 	errorType: t
@@ -72,9 +65,7 @@ function m(e, t, n, i) {
 			n = u(t, 30);
 		if (n.numDatapoints >= 5) {
 			var a;
-			return null !== (a = h(e, null == i ? void 0 : i.maxFrameRate)) && void 0 !== a
-				? a
-				: h(n, null == i ? void 0 : i.maxFrameRate);
+			return null !== (a = h(e, null == i ? void 0 : i.maxFrameRate)) && void 0 !== a ? a : h(n, null == i ? void 0 : i.maxFrameRate);
 		}
 	}
 	return e === r.IE4.BAD ? d(o.Z.Messages.STREAM_NETWORK_QUALITY_ERROR, 'Bad Connection') : null;

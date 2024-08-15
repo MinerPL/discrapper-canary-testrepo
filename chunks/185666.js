@@ -8,13 +8,10 @@ var l = n(481060),
 let c = 'INVITE_MODAL_KEY';
 class u extends a.Z {
 	_initialize() {
-		r.Z.subscribe('INVITE_MODAL_OPEN', this.handleOpenModal),
-			r.Z.subscribe('INVITE_MODAL_CLOSE', this.handleCloseModal);
+		r.Z.subscribe('INVITE_MODAL_OPEN', this.handleOpenModal), r.Z.subscribe('INVITE_MODAL_CLOSE', this.handleCloseModal);
 	}
 	_terminate() {
-		(0, l.closeModal)(c),
-			r.Z.unsubscribe('INVITE_MODAL_OPEN', this.handleOpenModal),
-			r.Z.unsubscribe('INVITE_MODAL_CLOSE', this.handleCloseModal);
+		(0, l.closeModal)(c), r.Z.unsubscribe('INVITE_MODAL_OPEN', this.handleOpenModal), r.Z.unsubscribe('INVITE_MODAL_CLOSE', this.handleCloseModal);
 	}
 	handleOpenModal() {
 		o.Z.isOpen() &&

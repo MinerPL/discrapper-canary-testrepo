@@ -32,17 +32,7 @@ function E(e) {
 	let { onClick: r, url: o, children: c } = e,
 		_ = (0, d.ZP)(),
 		p = u.Z.getByUrl(o),
-		m = (0, l.wj)(_)
-			? null == p
-				? void 0
-				: null === (n = p.icon) || void 0 === n
-					? void 0
-					: n.darkSVG
-			: null == p
-				? void 0
-				: null === (i = p.icon) || void 0 === i
-					? void 0
-					: i.lightSVG;
+		m = (0, l.wj)(_) ? (null == p ? void 0 : null === (n = p.icon) || void 0 === n ? void 0 : n.darkSVG) : null == p ? void 0 : null === (i = p.icon) || void 0 === i ? void 0 : i.lightSVG;
 	return (0, t.jsx)(x, {
 		icon: void 0 === m ? s.LinkIcon : void 0,
 		imageSrc: m,
@@ -95,11 +85,7 @@ function b(e) {
 	let { application: l, guildId: c, className: d, onViewCategory: u, onClickGuildWidget: m } = e,
 		[b, A] = a.useState(null),
 		P = [],
-		T =
-			null !== (i = null == l ? void 0 : null === (n = l.directory_entry) || void 0 === n ? void 0 : n.external_urls) &&
-			void 0 !== i
-				? i
-				: [];
+		T = null !== (i = null == l ? void 0 : null === (n = l.directory_entry) || void 0 === n ? void 0 : n.external_urls) && void 0 !== i ? i : [];
 	a.useEffect(() => {
 		var e;
 		if ((null === (e = l.directory_entry) || void 0 === e ? void 0 : e.supported_locales) !== void 0) {

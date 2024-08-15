@@ -139,9 +139,7 @@ function M(e) {
 													onClick: G
 														? () => {
 																c.Z.updateChannelOverrideSettings(null, S, { muted: !1 }, N.ZB.Unmuted),
-																	(0, d.showToast)(
-																		(0, d.createToast)(m.Z.Messages.STRANGER_DANGER_UNMUTE_CONFIRM, d.ToastType.SUCCESS)
-																	),
+																	(0, d.showToast)((0, d.createToast)(m.Z.Messages.STRANGER_DANGER_UNMUTE_CONFIRM, d.ToastType.SUCCESS)),
 																	(0, R.qc)({
 																		channelId: S,
 																		warningId: h,
@@ -152,9 +150,7 @@ function M(e) {
 															}
 														: () => {
 																c.Z.updateChannelOverrideSettings(null, S, { muted: !0 }, N.ZB.Muted),
-																	(0, d.showToast)(
-																		(0, d.createToast)(m.Z.Messages.STRANGER_DANGER_MUTE_CONFIRM, d.ToastType.SUCCESS)
-																	),
+																	(0, d.showToast)((0, d.createToast)(m.Z.Messages.STRANGER_DANGER_MUTE_CONFIRM, d.ToastType.SUCCESS)),
 																	(0, R.qc)({
 																		channelId: S,
 																		warningId: h,
@@ -163,9 +159,7 @@ function M(e) {
 																		cta: R.NM.USER_MODAL_MUTE
 																	});
 															},
-													children: G
-														? m.Z.Messages.STRANGER_DANGER_MORE_UNMUTE
-														: m.Z.Messages.STRANGER_DANGER_MORE_MUTE
+													children: G ? m.Z.Messages.STRANGER_DANGER_MORE_UNMUTE : m.Z.Messages.STRANGER_DANGER_MORE_MUTE
 												})
 											]
 										}),

@@ -22,11 +22,7 @@ function i(e, t, n) {
 class a {
 	addSample(e) {
 		let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-		(this.total += e * t),
-			(this.totalWeight += t),
-			this.samples++,
-			r.TDigest.prototype.push.call(this.digest, e, t),
-			this.digest.check_continuous();
+		(this.total += e * t), (this.totalWeight += t), this.samples++, r.TDigest.prototype.push.call(this.digest, e, t), this.digest.check_continuous();
 	}
 	getReport() {
 		var e, t, n, r;

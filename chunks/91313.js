@@ -3,7 +3,7 @@ n.d(t, {
 		return h;
 	},
 	IB: function () {
-		return m;
+		return I;
 	},
 	cr: function () {
 		return f;
@@ -15,7 +15,7 @@ n.d(t, {
 		return T;
 	},
 	tM: function () {
-		return I;
+		return m;
 	},
 	xi: function () {
 		return g;
@@ -69,7 +69,7 @@ function p(e) {
 	if (null != r) for (let e of r) d.aj.isType(e, 'applicationCommandOption') && n.push(e.optionName);
 	return n;
 }
-function I(e, t, n) {
+function m(e, t, n) {
 	let r = {};
 	if (null == t.options) return {};
 	let i = f(e),
@@ -79,12 +79,12 @@ function I(e, t, n) {
 		for (let t of s)
 			if (d.aj.isType(t, 'applicationCommandOption')) {
 				let i = a[t.optionName];
-				null != i && (r[t.optionName] = m(e, i, t, n));
+				null != i && (r[t.optionName] = I(e, i, t, n));
 			}
 	}
 	return r;
 }
-function m(e, t, n, i) {
+function I(e, t, n, i) {
 	let a = n.children.map((n) => {
 		if (t.type === r.jw.ATTACHMENT) {
 			let e = l.Z.getUpload(i, t.name, o.d.SlashCommand);
@@ -141,7 +141,7 @@ function g(e, t, n, r, o) {
 		c = a.Z.getActiveCommand(n),
 		d = null == c ? void 0 : null === (l = c.options) || void 0 === l ? void 0 : l.find((e) => e.name === u.optionName);
 	if (null == d) return;
-	let _ = m(e, d, u, n),
+	let _ = I(e, d, u, n),
 		E = s.f({
 			option: d,
 			content: _,

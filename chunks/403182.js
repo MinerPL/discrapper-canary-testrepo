@@ -12,7 +12,7 @@ n.d(t, {
 		return p;
 	},
 	f3: function () {
-		return m;
+		return I;
 	},
 	nA: function () {
 		return A;
@@ -51,7 +51,7 @@ function p(e, t, r) {
 	}
 	return null == r && ('type' in e && (r = e.type), (r = null != r ? r : i.lookup(t))), new File([e], t, { type: r });
 }
-let I = [
+let m = [
 	{
 		reType: /^image\/vnd.adobe.photoshop/,
 		klass: 'photoshop'
@@ -89,8 +89,7 @@ let I = [
 		klass: 'archive'
 	},
 	{
-		reName:
-			/\.(?:c\+\+|cpp|cc|c|h|hpp|mm|m|json|js|rb|rake|py|asm|fs|pyc|dtd|cgi|bat|rss|java|graphml|idb|lua|o|gml|prl|sls|conf|cmake|make|sln|vbe|cxx|wbf|vbs|r|wml|php|bash|applescript|fcgi|yaml|ex|exs|sh|ml|actionscript)$/,
+		reName: /\.(?:c\+\+|cpp|cc|c|h|hpp|mm|m|json|js|rb|rake|py|asm|fs|pyc|dtd|cgi|bat|rss|java|graphml|idb|lua|o|gml|prl|sls|conf|cmake|make|sln|vbe|cxx|wbf|vbs|r|wml|php|bash|applescript|fcgi|yaml|ex|exs|sh|ml|actionscript)$/,
 		klass: 'code'
 	},
 	{
@@ -110,15 +109,13 @@ let I = [
 		klass: 'audio'
 	}
 ];
-function m(e) {
+function I(e) {
 	return T(e.name, e.type);
 }
 function T(e, t) {
 	var n;
 	e = null !== (n = null == e ? void 0 : e.toLowerCase()) && void 0 !== n ? n : '';
-	let r = s().find(I, (n) =>
-		null != n.reType && null != t ? n.reType.test(t) : null != n.reName && '' !== e && n.reName.test(e)
-	);
+	let r = s().find(m, (n) => (null != n.reType && null != t ? n.reType.test(t) : null != n.reName && '' !== e && n.reName.test(e)));
 	return null != r ? r.klass : 'unknown';
 }
 function g(e) {

@@ -26,21 +26,10 @@ let c = 7.5,
 					(s.onload = () => {
 						let t = 32 * (0, o.x_)(),
 							a = JSON.stringify(n);
-						if (
-							(null != i && (a = (0, r.s4)(a, (0, l.oo)(i))),
-							(s.width === t && s.height === t) || (0 === s.width && 0 === s.height))
-						)
-							e(JSON.parse(a));
+						if ((null != i && (a = (0, r.s4)(a, (0, l.oo)(i))), (s.width === t && s.height === t) || (0 === s.width && 0 === s.height))) e(JSON.parse(a));
 						else {
 							let t = (128 / s.width) * s.height;
-							e(
-								JSON.parse(
-									(a = (a = a.replace(/"w":128,"h":128/, '"w":128,"h":'.concat(t))).replace(
-										/"a":{"a":0,"k":\[64,64/,
-										'"a":{"a":0,"k":[64,'.concat(t / 2)
-									))
-								)
-							);
+							e(JSON.parse((a = (a = a.replace(/"w":128,"h":128/, '"w":128,"h":'.concat(t))).replace(/"a":{"a":0,"k":\[64,64/, '"a":{"a":0,"k":[64,'.concat(t / 2)))));
 						}
 					});
 			})

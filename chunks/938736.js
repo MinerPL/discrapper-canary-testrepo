@@ -28,11 +28,7 @@ var s,
 	d = n(520540),
 	_ = n(898997),
 	u = n(689938);
-((s = a || (a = {}))[(s.NOT_ELIGIBLE = 0)] = 'NOT_ELIGIBLE'),
-	(s[(s.ELIGIBLE = 1)] = 'ELIGIBLE'),
-	(s[(s.QUALIFIED = 2)] = 'QUALIFIED'),
-	(s[(s.COOLDOWN = 3)] = 'COOLDOWN'),
-	(s[(s.UNAPPLIED = 4)] = 'UNAPPLIED');
+((s = a || (a = {}))[(s.NOT_ELIGIBLE = 0)] = 'NOT_ELIGIBLE'), (s[(s.ELIGIBLE = 1)] = 'ELIGIBLE'), (s[(s.QUALIFIED = 2)] = 'QUALIFIED'), (s[(s.COOLDOWN = 3)] = 'COOLDOWN'), (s[(s.UNAPPLIED = 4)] = 'UNAPPLIED');
 let E = 3,
 	T = (e) => {
 		let t = g(e),
@@ -43,15 +39,11 @@ let E = 3,
 		let { referralIncentiveLifecycleState: t, hasSentAll: n, referralsStatuses: s } = e;
 		switch (t) {
 			case 0:
-				return n
-					? u.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED
-					: u.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS;
+				return n ? u.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : u.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS;
 			case 1:
 				return u.Z.Messages.REFERRAL_INCENTIVE_FRIEND_PASSES_KEEP_GOING.format({ discountRate: '40%' });
 			case 2:
-				return s.redeemed === E
-					? u.Z.Messages.REFERRAL_INCENTIVE_NITRO_FRIEND_PASSES_INCOMING
-					: u.Z.Messages.REFERRAL_INCENTIVE_DISCOUNT_UNLOCKED;
+				return s.redeemed === E ? u.Z.Messages.REFERRAL_INCENTIVE_NITRO_FRIEND_PASSES_INCOMING : u.Z.Messages.REFERRAL_INCENTIVE_DISCOUNT_UNLOCKED;
 		}
 	},
 	R = (e) => {
@@ -79,9 +71,7 @@ let E = 3,
 							numberOfTimerPeriods: '',
 							timePeriodInterval: u.Z.Messages.GIFT_CONFIRMATION_NITRO_TIME_FRAME_MONTHS.format({ time: 6 })
 						})
-					: u.Z.Messages.REFERRAL_INCENTIVE_KEEP_SHARING_TO_EARN_ANOTHER_DISCOUNT.format({
-							learnMoreLink: 'PLACEHOLDER'
-						});
+					: u.Z.Messages.REFERRAL_INCENTIVE_KEEP_SHARING_TO_EARN_ANOTHER_DISCOUNT.format({ learnMoreLink: 'PLACEHOLDER' });
 		}
 	},
 	C = (e) => {

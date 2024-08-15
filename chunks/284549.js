@@ -24,9 +24,7 @@ t.default = (e) => {
 		y = _ === g.QZA.SUBMITTING;
 	function A(e) {
 		var t, s;
-		return null !== (s = null == E ? void 0 : null === (t = E[e]) || void 0 === t ? void 0 : t[0]) && void 0 !== s
-			? s
-			: '';
+		return null !== (s = null == E ? void 0 : null === (t = E[e]) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : '';
 	}
 	let T = A('email'),
 		Z = A('password');
@@ -48,11 +46,7 @@ t.default = (e) => {
 			}).then((e) => {
 				if (!(null == e ? void 0 : e.ok)) {
 					var t;
-					(null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.username) != null
-						? (0, d.P)()
-						: 0 === Z.length &&
-							0 === T.length &&
-							(0, o.showToast)((0, o.createToast)(p.Z.Messages.ERROR_GENERIC_TITLE, o.ToastType.FAILURE));
+					(null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.username) != null ? (0, d.P)() : 0 === Z.length && 0 === T.length && (0, o.showToast)((0, o.createToast)(p.Z.Messages.ERROR_GENERIC_TITLE, o.ToastType.FAILURE));
 				}
 			}),
 				M(!0);

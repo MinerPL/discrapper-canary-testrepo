@@ -163,9 +163,7 @@ function L(e) {
 	return (0, i.e7)(
 		[r.Z, E.ZP],
 		() => {
-			let n = E.ZP.getGuildScheduledEventsByIndex(E.bN.GUILD_EVENT_ACTIVE(e)).find(
-				(e) => null != r.Z.getChannel(e.channel_id)
-			);
+			let n = E.ZP.getGuildScheduledEventsByIndex(E.bN.GUILD_EVENT_ACTIVE(e)).find((e) => null != r.Z.getChannel(e.channel_id));
 			return r.Z.getChannel(null == n ? void 0 : n.channel_id);
 		},
 		[e]
@@ -179,11 +177,7 @@ function m(e) {
 		}, g);
 		return () => clearInterval(e);
 	}, []);
-	let u = (0, i.e7)(
-		[E.ZP],
-		() => (null == e ? [] : E.ZP.getGuildScheduledEventsByIndex(E.bN.CHANNEL_EVENT_UPCOMING(e))),
-		[e, n]
-	);
+	let u = (0, i.e7)([E.ZP], () => (null == e ? [] : E.ZP.getGuildScheduledEventsByIndex(E.bN.CHANNEL_EVENT_UPCOMING(e))), [e, n]);
 	return l.useMemo(
 		() =>
 			u.filter((e) => {

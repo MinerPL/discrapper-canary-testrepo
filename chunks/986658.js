@@ -17,8 +17,8 @@ var r = n(470079),
 			f = e.hex,
 			h = e.renderers,
 			p = e.styles,
-			I = e.className,
-			m = e.defaultView,
+			m = e.className,
+			I = e.defaultView,
 			T = (0, s.default)(
 				(0, o.Z)(
 					{
@@ -89,7 +89,7 @@ var r = n(470079),
 			'div',
 			{
 				style: T.picker,
-				className: 'chrome-picker ' + (void 0 === I ? '' : I)
+				className: 'chrome-picker ' + (void 0 === m ? '' : m)
 			},
 			r.createElement(
 				'div',
@@ -111,16 +111,7 @@ var r = n(470079),
 						style: T.controls,
 						className: 'flexbox-fix'
 					},
-					r.createElement(
-						'div',
-						{ style: T.color },
-						r.createElement(
-							'div',
-							{ style: T.swatch },
-							r.createElement('div', { style: T.active }),
-							r.createElement(l.QN, { renderers: h })
-						)
-					),
+					r.createElement('div', { style: T.color }, r.createElement('div', { style: T.swatch }, r.createElement('div', { style: T.active }), r.createElement(l.QN, { renderers: h }))),
 					r.createElement(
 						'div',
 						{ style: T.toggles },
@@ -152,7 +143,7 @@ var r = n(470079),
 					rgb: a,
 					hsl: _,
 					hex: f,
-					view: m,
+					view: I,
 					onChange: n,
 					disableAlpha: i
 				})

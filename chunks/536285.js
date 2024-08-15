@@ -127,16 +127,8 @@ class p extends r.EventEmitter {
 					nonce: (0, o.Z)()
 				})
 			),
-			i = encodeURIComponent(
-				''.concat(location.protocol, '//').concat(location.host).concat(location.pathname, '?done=true')
-			);
-		return (
-			window.open(
-				'http://127.0.0.1:'.concat(this.port, '/rpc?v=').concat(c.X6Q, '&payload=').concat(r, '&callback=').concat(i),
-				'_self'
-			),
-			new Promise(() => null)
-		);
+			i = encodeURIComponent(''.concat(location.protocol, '//').concat(location.host).concat(location.pathname, '?done=true'));
+		return window.open('http://127.0.0.1:'.concat(this.port, '/rpc?v=').concat(c.X6Q, '&payload=').concat(r, '&callback=').concat(i), '_self'), new Promise(() => null);
 	}
 }
 t.default = new p();

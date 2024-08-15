@@ -41,22 +41,14 @@ function l(e) {
 					y2: '0.127441',
 					gradientUnits: 'userSpaceOnUse',
 					children: [
-						(0, r.jsx)('stop', {
-							stopColor: n
-								? i.Z.unsafe_rawColors.WHITE_500.css
-								: i.Z.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS.css
-						}),
+						(0, r.jsx)('stop', { stopColor: n ? i.Z.unsafe_rawColors.WHITE_500.css : i.Z.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS.css }),
 						(0, r.jsx)('stop', {
 							offset: '0.502368',
-							stopColor: n
-								? i.Z.unsafe_rawColors.WHITE_500.css
-								: i.Z.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2.css
+							stopColor: n ? i.Z.unsafe_rawColors.WHITE_500.css : i.Z.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2.css
 						}),
 						(0, r.jsx)('stop', {
 							offset: '1',
-							stopColor: n
-								? i.Z.unsafe_rawColors.WHITE_500.css
-								: i.Z.unsafe_rawColors.PREMIUM_TIER_2_PINK_FOR_GRADIENTS.css
+							stopColor: n ? i.Z.unsafe_rawColors.WHITE_500.css : i.Z.unsafe_rawColors.PREMIUM_TIER_2_PINK_FOR_GRADIENTS.css
 						})
 					]
 				})

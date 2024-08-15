@@ -21,15 +21,7 @@ var e,
 	O = function () {
 		var r,
 			t = f('iframe');
-		return (
-			(t.style.display = 'none'),
-			a.appendChild(t),
-			(t.src = String('java' + p + ':')),
-			(r = t.contentWindow.document).open(),
-			r.write(_('document.F=Object')),
-			r.close(),
-			r.F
-		);
+		return (t.style.display = 'none'), a.appendChild(t), (t.src = String('java' + p + ':')), (r = t.contentWindow.document).open(), r.write(_('document.F=Object')), r.close(), r.F;
 	},
 	m = function () {
 		try {
@@ -44,7 +36,5 @@ var e,
 		Object.create ||
 		function (r, t) {
 			var o;
-			return (
-				null !== r ? ((l[s] = n(r)), (o = new l()), (l[s] = null), (o[R] = r)) : (o = m()), void 0 === t ? o : c.f(o, t)
-			);
+			return null !== r ? ((l[s] = n(r)), (o = new l()), (l[s] = null), (o[R] = r)) : (o = m()), void 0 === t ? o : c.f(o, t);
 		});

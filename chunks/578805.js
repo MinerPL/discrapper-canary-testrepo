@@ -23,7 +23,7 @@ if (n(322499)() || n(882171)()) {
 			var r = f(e, t + 1);
 			return r < 56320 || r > 57343 ? t + 1 : t + 2;
 		},
-		I = function (e) {
+		m = function (e) {
 			var t = 0;
 			return {
 				next: function () {
@@ -39,8 +39,8 @@ if (n(322499)() || n(882171)()) {
 				}
 			};
 		},
-		m = function (e, t) {
-			if (o(e) || i(e)) return I(e);
+		I = function (e, t) {
+			if (o(e) || i(e)) return m(e);
 			if (l(e)) {
 				var n = 0;
 				return {
@@ -80,7 +80,7 @@ if (n(322499)() || n(882171)()) {
 							S(e, function (e, n) {
 								E(t, [n, e]);
 							}),
-							I(t)
+							m(t)
 						);
 					}
 				}
@@ -93,16 +93,16 @@ if (n(322499)() || n(882171)()) {
 							A(e, function (e) {
 								E(n, e);
 							}),
-							I(n)
+							m(n)
 						);
 					}
 				}
 			};
 		e.exports = function (e) {
-			return C(e) || m(e);
+			return C(e) || I(e);
 		};
 	} else
 		e.exports = function (e) {
-			if (null != e) return m(e, !0);
+			if (null != e) return I(e, !0);
 		};
 }

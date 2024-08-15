@@ -23,19 +23,8 @@ function d(e, t, n) {
 class _ extends (r = a.PureComponent) {
 	render() {
 		var e;
-		let {
-				title: t,
-				actionText: n,
-				children: r,
-				error: s,
-				isLoading: d,
-				maxLength: _,
-				transitionState: E,
-				helpMessage: f,
-				retryPrompt: h,
-				retrySuccessMessage: p
-			} = this.props,
-			{ code: I, errorMessage: m, retrySuccess: T } = this.state,
+		let { title: t, actionText: n, children: r, error: s, isLoading: d, maxLength: _, transitionState: E, helpMessage: f, retryPrompt: h, retrySuccessMessage: p } = this.props,
+			{ code: m, errorMessage: I, retrySuccess: T } = this.state,
 			g =
 				a.Children.count(r) > 0
 					? (0, i.jsx)(l.Card, {
@@ -105,7 +94,7 @@ class _ extends (r = a.PureComponent) {
 										onChange: this.handleCodeChange,
 										placeholder: null !== (e = this.getPlaceholder()) && void 0 !== e ? e : void 0,
 										maxLength: null != _ ? _ : 10,
-										value: I,
+										value: m,
 										autoComplete: 'one-time-code',
 										autoFocus: !0
 									}),
@@ -114,7 +103,7 @@ class _ extends (r = a.PureComponent) {
 												color: 'text-danger',
 												variant: 'text-xs/normal',
 												className: c.error,
-												children: null != s ? s : m
+												children: null != s ? s : I
 											})
 										: null,
 									S
@@ -126,7 +115,7 @@ class _ extends (r = a.PureComponent) {
 						children: [
 							(0, i.jsx)(l.Button, {
 								type: 'submit',
-								disabled: d || 0 === I.length,
+								disabled: d || 0 === m.length,
 								children: null != n ? n : u.Z.Messages.CONFIRM
 							}),
 							(0, i.jsx)(l.Button, {
@@ -155,30 +144,14 @@ class _ extends (r = a.PureComponent) {
 			}),
 			d(this, 'getLabelText', () => {
 				var e;
-				return null !== (e = this.props.label) && void 0 !== e
-					? e
-					: this.props.disallowBackupCodes
-						? u.Z.Messages.TWO_FA_ENTER_TOKEN_NO_BACKUP_LABEL
-						: u.Z.Messages.TWO_FA_ENTER_TOKEN_LABEL;
+				return null !== (e = this.props.label) && void 0 !== e ? e : this.props.disallowBackupCodes ? u.Z.Messages.TWO_FA_ENTER_TOKEN_NO_BACKUP_LABEL : u.Z.Messages.TWO_FA_ENTER_TOKEN_LABEL;
 			}),
-			d(this, 'getSupportedCodeTypes', () =>
-				this.props.disallowBackupCodes ? u.Z.Messages.TWO_FA_AUTH_CODE_NO_BACKUP : u.Z.Messages.TWO_FA_AUTH_CODE
-			),
+			d(this, 'getSupportedCodeTypes', () => (this.props.disallowBackupCodes ? u.Z.Messages.TWO_FA_AUTH_CODE_NO_BACKUP : u.Z.Messages.TWO_FA_AUTH_CODE)),
 			d(this, 'getPlaceholder', () => {
 				var e;
-				return this.props.forceNoPlaceholder
-					? null
-					: null !== (e = this.props.placeholder) && void 0 !== e
-						? e
-						: this.getSupportedCodeTypes();
+				return this.props.forceNoPlaceholder ? null : null !== (e = this.props.placeholder) && void 0 !== e ? e : this.getSupportedCodeTypes();
 			}),
-			d(
-				this,
-				'errorPresent',
-				() =>
-					(null != this.props.error && '' !== this.props.error) ||
-					(null != this.state.errorMessage && '' !== this.state.errorMessage)
-			),
+			d(this, 'errorPresent', () => (null != this.props.error && '' !== this.props.error) || (null != this.state.errorMessage && '' !== this.state.errorMessage)),
 			d(this, 'handleRetry', () => {
 				let { onRetry: e } = this.props;
 				null == e || e().then(() => this.setState({ retrySuccess: !0 }));

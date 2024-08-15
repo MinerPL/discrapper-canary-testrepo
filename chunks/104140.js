@@ -18,8 +18,8 @@ var r,
 	f = n(722770),
 	h = n(846519),
 	p = n(215569),
-	I = n(314274);
-function m(e, t, n) {
+	m = n(314274);
+function I(e, t, n) {
 	return (
 		t in e
 			? Object.defineProperty(e, t, {
@@ -52,14 +52,7 @@ let T = {
 		tension: 100,
 		mass: 1
 	},
-	N =
-		(null === (r = window.SVGPathElement) || void 0 === r ? void 0 : r.prototype.getTotalLength) != null
-			? (0, u.interpolate)(
-					'M48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24Z',
-					'M0 24C0 16.5449 0 12.8174 1.21793 9.87706C2.84183 5.95662 5.95662 2.84183 9.87706 1.21793C12.8174 0 16.5449 0 24 0C31.4551 0 35.1826 0 38.1229 1.21793C42.0434 2.84183 45.1582 5.95662 46.7821 9.87706C48 12.8174 48 16.5449 48 24C48 31.4551 48 35.1826 46.7821 38.1229C45.1582 42.0434 42.0434 45.1582 38.1229 46.7821C35.1826 48 31.4551 48 24 48C16.5449 48 12.8174 48 9.87706 46.7821C5.95662 45.1582 2.84183 42.0434 1.21793 38.1229C0 35.1826 0 31.4551 0 24Z',
-					{ maxSegmentLength: 1.5 }
-				)
-			: (e) => ''.concat(e);
+	N = (null === (r = window.SVGPathElement) || void 0 === r ? void 0 : r.prototype.getTotalLength) != null ? (0, u.interpolate)('M48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24Z', 'M0 24C0 16.5449 0 12.8174 1.21793 9.87706C2.84183 5.95662 5.95662 2.84183 9.87706 1.21793C12.8174 0 16.5449 0 24 0C31.4551 0 35.1826 0 38.1229 1.21793C42.0434 2.84183 45.1582 5.95662 46.7821 9.87706C48 12.8174 48 16.5449 48 24C48 31.4551 48 35.1826 46.7821 38.1229C45.1582 42.0434 42.0434 45.1582 38.1229 46.7821C35.1826 48 31.4551 48 24 48C16.5449 48 12.8174 48 9.87706 46.7821C5.95662 45.1582 2.84183 42.0434 1.21793 38.1229C0 35.1826 0 31.4551 0 24Z', { maxSegmentLength: 1.5 }) : (e) => ''.concat(e);
 class v extends s.Component {
 	componentDidMount() {
 		this.forceUpdate();
@@ -85,7 +78,7 @@ class v extends s.Component {
 		});
 	}
 	constructor(...e) {
-		super(...e), m(this, 'timeoutId', void 0);
+		super(...e), I(this, 'timeoutId', void 0);
 	}
 }
 function O(e) {
@@ -98,8 +91,7 @@ class R extends (i = s.Component) {
 			{ upperBadge: o, lowerBadge: l } = e,
 			u = !1;
 		return (
-			((null != o && null == r) || (null != l && null == i)) &&
-				((u = !0), (n = !0), (r = new _.Controller({ spring: 0 })), (i = new _.Controller({ spring: 0 }))),
+			((null != o && null == r) || (null != l && null == i)) && ((u = !0), (n = !0), (r = new _.Controller({ spring: 0 })), (i = new _.Controller({ spring: 0 }))),
 			O(e) && null == a && ((u = !0), (a = new _.Controller({ spring: 0 }))),
 			!s && O(e) && ((u = !0), (s = !0)),
 			u
@@ -202,9 +194,7 @@ class R extends (i = s.Component) {
 								config: A
 							})
 							.start()),
-			!o || O(this.props) || this.timeout.isStarted()
-				? O(this.props) && this.timeout.isStarted() && this.timeout.stop()
-				: this.timeout.start(d()(10800000, 18000000), this.handleTimeout);
+			!o || O(this.props) || this.timeout.isStarted() ? O(this.props) && this.timeout.isStarted() && this.timeout.stop() : this.timeout.start(d()(10800000, 18000000), this.handleTimeout);
 	}
 	getBadgePositionInterpolation(e) {
 		let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
@@ -239,31 +229,15 @@ class R extends (i = s.Component) {
 		return null === (e = this.state.borderRadiusMask) || void 0 === e ? void 0 : e.springs.spring.to(N);
 	}
 	render() {
-		let {
-				children: e,
-				className: t,
-				innerClassName: n,
-				lowerBadge: r,
-				lowerBadgeSize: i,
-				style: o,
-				upperBadge: u,
-				highlight: c
-			} = this.props,
-			{
-				maskId: d,
-				lowerBadgeMask: E,
-				upperBadgeMask: h,
-				focused: m,
-				hasRenderedBadge: T,
-				renderComplex: g
-			} = this.state;
+		let { children: e, className: t, innerClassName: n, lowerBadge: r, lowerBadgeSize: i, style: o, upperBadge: u, highlight: c } = this.props,
+			{ maskId: d, lowerBadgeMask: E, upperBadgeMask: h, focused: I, hasRenderedBadge: T, renderComplex: g } = this.state;
 		if (!g)
 			return (0, a.jsx)(
 				'div',
 				{
 					className: l()(t, {
-						[I.wrapperSimple]: !0,
-						[I.simpleFocused]: m
+						[m.wrapperSimple]: !0,
+						[m.simpleFocused]: I
 					}),
 					style: o,
 					onFocus: this.handleFocus,
@@ -274,7 +248,7 @@ class R extends (i = s.Component) {
 							width: 48,
 							height: 48,
 							viewBox: '0 0 '.concat(48, ' ').concat(48),
-							className: I.svg,
+							className: m.svg,
 							overflow: 'visible',
 							children: (0, a.jsx)(
 								'foreignObject',
@@ -304,7 +278,7 @@ class R extends (i = s.Component) {
 		return (0, a.jsxs)(
 			'div',
 			{
-				className: l()(t, I.wrapper),
+				className: l()(t, m.wrapper),
 				style: o,
 				onFocus: this.handleFocus,
 				onBlur: this.handleBlur,
@@ -315,7 +289,7 @@ class R extends (i = s.Component) {
 							width: 48,
 							height: 48,
 							viewBox: '0 0 '.concat(48, ' ').concat(48),
-							className: l()(I.svg, { [I.noContain]: c }),
+							className: l()(m.svg, { [m.noContain]: c }),
 							overflow: 'visible',
 							children: [
 								(0, a.jsxs)('defs', {
@@ -371,7 +345,7 @@ class R extends (i = s.Component) {
 										(0, a.jsx)('use', {
 											href: '#'.concat(N),
 											fill: 'white',
-											className: l()({ [I.isHighlighted]: c })
+											className: l()({ [m.isHighlighted]: c })
 										}),
 										T
 											? (0, a.jsxs)(a.Fragment, {
@@ -411,20 +385,17 @@ class R extends (i = s.Component) {
 											]
 										})
 									: null,
-								m
+								I
 									? (0, a.jsxs)(s.Fragment, {
 											children: [
 												(0, a.jsx)('g', {
-													className: I.focusStroke,
+													className: m.focusStroke,
 													mask: 'url(#'.concat(O, ')'),
 													children: (0, a.jsx)('use', { href: '#'.concat(N) })
 												}),
 												(0, a.jsxs)('g', {
-													className: I.focusFill,
-													children: [
-														null != u ? (0, a.jsx)('use', { href: '#'.concat(S) }) : null,
-														null != r ? (0, a.jsx)('use', { href: '#'.concat(A) }) : null
-													]
+													className: m.focusFill,
+													children: [null != u ? (0, a.jsx)('use', { href: '#'.concat(S) }) : null, null != r ? (0, a.jsx)('use', { href: '#'.concat(A) }) : null]
 												})
 											]
 										})
@@ -434,7 +405,7 @@ class R extends (i = s.Component) {
 										d: this.getPathInterpolation(),
 										stroke: f.Z.BRAND_500,
 										'stroke-width': 2,
-										className: I.highlight,
+										className: m.highlight,
 										mask: 'url(#'.concat(O, ')')
 									}),
 								(0, a.jsx)(
@@ -461,7 +432,7 @@ class R extends (i = s.Component) {
 								? (0, a.jsx)(
 										v,
 										{
-											className: I.lowerBadge,
+											className: m.lowerBadge,
 											animatedStyle: this.getLowerBadgeStyles(),
 											children: r
 										},
@@ -472,7 +443,7 @@ class R extends (i = s.Component) {
 								? (0, a.jsx)(
 										v,
 										{
-											className: I.upperBadge,
+											className: m.upperBadge,
 											animatedStyle: this.getUpperBadgeStyles(),
 											children: u
 										},
@@ -488,25 +459,25 @@ class R extends (i = s.Component) {
 	}
 	constructor(...e) {
 		super(...e),
-			m(this, 'timeout', new h.V7()),
-			m(this, 'state', {
+			I(this, 'timeout', new h.V7()),
+			I(this, 'state', {
 				renderComplex: !1,
 				hasRenderedBadge: !1,
 				maskId: (0, E.Z)(),
 				focused: !1
 			}),
-			m(this, 'handleTimeout', () => {
+			I(this, 'handleTimeout', () => {
 				this.timeout.stop(), this.setState({ renderComplex: !1 });
 			}),
-			m(this, 'handleFocus', () => {
+			I(this, 'handleFocus', () => {
 				this.setState({ focused: !0 });
 			}),
-			m(this, 'handleBlur', () => {
+			I(this, 'handleBlur', () => {
 				this.setState({ focused: !1 });
 			});
 	}
 }
-m(R, 'defaultProps', {
+I(R, 'defaultProps', {
 	selected: !1,
 	lowerBadgeSize: {
 		width: 16,

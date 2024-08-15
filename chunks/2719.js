@@ -50,10 +50,7 @@ function Y(e) {
 		E = (0, m.o9)(),
 		u = (0, A.b)(),
 		I = (0, N.gS)(),
-		T =
-			null !== (i = null == I ? void 0 : null === (s = I.nick) || void 0 === s ? void 0 : s[0]) && void 0 !== i
-				? i
-				: null,
+		T = null !== (i = null == I ? void 0 : null === (s = I.nick) || void 0 === s ? void 0 : s[0]) && void 0 !== i ? i : null,
 		[S, C] = a.useState(!1);
 	a.useEffect(() => {
 		C(null != c.current && c.current.scrollWidth > c.current.clientWidth);
@@ -147,9 +144,7 @@ function Y(e) {
 										});
 								}
 								{
-									let { default: e } = await Promise.all([t.e('75492'), t.e('84956'), t.e('42758')]).then(
-										t.bind(t, 2702)
-									);
+									let { default: e } = await Promise.all([t.e('75492'), t.e('84956'), t.e('42758')]).then(t.bind(t, 2702));
 									return (s) => (0, n.jsx)(e, { ...s });
 								}
 							}),
@@ -163,10 +158,7 @@ function w(e) {
 	var s, t;
 	let { user: i, className: o } = e,
 		l = (0, N.gS)(),
-		c =
-			null !== (t = null == l ? void 0 : null === (s = l.nick) || void 0 === s ? void 0 : s[0]) && void 0 !== t
-				? t
-				: null,
+		c = null !== (t = null == l ? void 0 : null === (s = l.nick) || void 0 === s ? void 0 : s[0]) && void 0 !== t ? t : null,
 		E = P.ZP.getGlobalName(i),
 		u = a.useRef(null),
 		[I, T] = a.useState(!1);
@@ -373,9 +365,7 @@ function W(e) {
 											(0, n.jsx)(I.default, {
 												...e,
 												title: F.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_NUMBER_TITLE,
-												children: i.hasFlag(j.xW$.MFA_SMS)
-													? F.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_SMS_BACKUP_WARNING
-													: void 0,
+												children: i.hasFlag(j.xW$.MFA_SMS) ? F.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_SMS_BACKUP_WARNING : void 0,
 												actionText: F.Z.Messages.REMOVE,
 												handleSubmit: (e) => C.Z.removePhone(e, C.L.USER_SETTINGS_UPDATE)
 											})
@@ -388,9 +378,7 @@ function W(e) {
 							className: y.fieldButton,
 							size: _.Button.Sizes.SMALL,
 							color: _.Button.Colors.PRIMARY,
-							'aria-label': c
-								? F.Z.Messages.USER_SETTINGS_ACCOUNT_EDIT_PHONE_A11Y_LABEL
-								: F.Z.Messages.USER_SETTINGS_ACCOUNT_ADD_PHONE_A11Y_LABEL,
+							'aria-label': c ? F.Z.Messages.USER_SETTINGS_ACCOUNT_EDIT_PHONE_A11Y_LABEL : F.Z.Messages.USER_SETTINGS_ACCOUNT_ADD_PHONE_A11Y_LABEL,
 							onClick: function () {
 								(0, _.openModalLazy)(
 									async () => {

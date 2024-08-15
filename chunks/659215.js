@@ -46,11 +46,7 @@ function p(e) {
 		},
 		onClose: s,
 		subscribeButtonText: v ? void 0 : d.Z.Messages.PREMIUM_SETTINGS_GET,
-		subscriptionTier:
-			null !== (n = null == T ? void 0 : null === (t = T.subscription_trial) || void 0 === t ? void 0 : t.sku_id) &&
-			void 0 !== n
-				? n
-				: c.Si.TIER_2,
+		subscriptionTier: null !== (n = null == T ? void 0 : null === (t = T.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : c.Si.TIER_2,
 		backButtonText: d.Z.Messages.NO_THANKS,
 		...g
 	});

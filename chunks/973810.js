@@ -21,10 +21,7 @@ function f(e) {
 		{ challenge: E } = t.methods.find((e) => 'webauthn' === e.type),
 		C = async () => {
 			_(!0), x(null);
-			let e =
-					o.isPlatformEmbedded && d.ZP.supportsFeature(c.eRX.WEBAUTHN)
-						? d.ZP.webAuthnAuthenticate(E)
-						: i.U2(JSON.parse(E)).then((e) => JSON.stringify(e)),
+			let e = o.isPlatformEmbedded && d.ZP.supportsFeature(c.eRX.WEBAUTHN) ? d.ZP.webAuthnAuthenticate(E) : i.U2(JSON.parse(E)).then((e) => JSON.stringify(e)),
 				t = async (e) => {
 					try {
 						await s({

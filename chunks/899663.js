@@ -46,10 +46,7 @@ function f(e) {
 			[n, a, l]
 		);
 	return (
-		i.useEffect(
-			() => ((0, d.d1)(), window.addEventListener('keydown', E), () => window.removeEventListener('keydown', E)),
-			[]
-		),
+		i.useEffect(() => ((0, d.d1)(), window.addEventListener('keydown', E), () => window.removeEventListener('keydown', E)), []),
 		(0, r.jsx)(o.AccessibilityPreferencesContext.Provider, {
 			value: u,
 			children: t

@@ -32,13 +32,7 @@ function g(e) {
 		I = null != t.channel ? (0, a.jD)(t.channel) : null,
 		m = null != t.target_application ? new i.Z(t.target_application) : null,
 		f = g || null == t.inviter ? null : new o.Z(t.inviter),
-		N =
-			!(
-				(null != t.approximate_member_count && t.approximate_member_count > c.mx) ||
-				(null != p && p.hasFeature(d.oNc.COMMUNITY))
-			) &&
-			null != f &&
-			(0, c.WT)(t),
+		N = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != p && p.hasFeature(d.oNc.COMMUNITY))) && null != f && (0, c.WT)(t),
 		T = E(t),
 		x = {
 			invite: t,

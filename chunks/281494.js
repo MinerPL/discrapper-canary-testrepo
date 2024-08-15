@@ -1,6 +1,6 @@
 n.d(t, {
 	C$: function () {
-		return I;
+		return m;
 	},
 	Eo: function () {
 		return g;
@@ -15,7 +15,7 @@ n.d(t, {
 		return S;
 	},
 	Ve: function () {
-		return m;
+		return I;
 	},
 	iF: function () {
 		return p;
@@ -50,11 +50,7 @@ function f(e, t, n) {
 		e
 	);
 }
-((a = r || (r = {}))[(a.REDEEMED = 1)] = 'REDEEMED'),
-	(a[(a.PENDING = 2)] = 'PENDING'),
-	(a[(a.CONVERTED = 3)] = 'CONVERTED'),
-	((s = i || (i = {}))[(s.SUCCESS = 1)] = 'SUCCESS'),
-	(s[(s.FAIL = 2)] = 'FAIL');
+((a = r || (r = {}))[(a.REDEEMED = 1)] = 'REDEEMED'), (a[(a.PENDING = 2)] = 'PENDING'), (a[(a.CONVERTED = 3)] = 'CONVERTED'), ((s = i || (i = {}))[(s.SUCCESS = 1)] = 'SUCCESS'), (s[(s.FAIL = 2)] = 'FAIL');
 let h = new (class e {
 	set(e, t) {
 		this.cache.set(e, t);
@@ -69,10 +65,7 @@ let h = new (class e {
 		this.expiration < Date.now() && this.cache.clear();
 	}
 	constructor() {
-		f(this, 'cache', void 0),
-			f(this, 'expiration', void 0),
-			(this.cache = new Map()),
-			(this.expiration = Date.now() + 600000);
+		f(this, 'cache', void 0), f(this, 'expiration', void 0), (this.cache = new Map()), (this.expiration = Date.now() + 600000);
 	}
 })();
 async function p(e, t) {
@@ -98,7 +91,7 @@ async function p(e, t) {
 		};
 	return h.set(n, a), a;
 }
-let I = () => (
+let m = () => (
 		l.Z.dispatch({ type: 'BILLING_REFERRALS_REMAINING_FETCH_START' }),
 		o.tn
 			.get({
@@ -118,8 +111,7 @@ let I = () => (
 						type: 'BILLING_REFERRALS_REMAINING_FETCH_SUCCESS',
 						referrals_remaining: null != e.body && null != e.body.referrals_remaining ? e.body.referrals_remaining : 0,
 						sent_user_ids: null != e.body && null != e.body.sent_user_ids ? e.body.sent_user_ids : [],
-						refresh_at:
-							null !== (n = null === (t = e.body) || void 0 === t ? void 0 : t.refresh_at) && void 0 !== n ? n : null,
+						refresh_at: null !== (n = null === (t = e.body) || void 0 === t ? void 0 : t.refresh_at) && void 0 !== n ? n : null,
 						recipient_status: r,
 						has_eligible_friends: e.body.has_eligible_friends,
 						isUserEligibleForIncentive: e.body.is_eligible_for_incentive,
@@ -131,7 +123,7 @@ let I = () => (
 				}
 			)
 	),
-	m = (e) => (
+	I = (e) => (
 		l.Z.dispatch({
 			type: 'BILLING_CREATE_REFERRAL_PREVIEW_START',
 			recipientId: e

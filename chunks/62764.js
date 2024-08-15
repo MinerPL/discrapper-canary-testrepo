@@ -19,8 +19,8 @@ var i = n(735250),
 	_ = n(443877),
 	f = n(60174),
 	E = n(216337),
-	g = n(920888),
-	C = n(287151),
+	C = n(920888),
+	g = n(287151),
 	I = n(569471),
 	x = n(346479),
 	T = n(592125),
@@ -41,13 +41,7 @@ function j(e) {
 		B = (0, o.e7)([T.Z], () => T.Z.getChannel(t), [t]),
 		{ firstMessage: H } = (0, S.cl)(B),
 		G = (0, o.e7)([I.Z], () => I.Z.hasJoined(t)),
-		{
-			disableReactionUpdates: V,
-			disableReactionCreates: F,
-			isLurking: W,
-			isGuest: z,
-			isPendingMember: Y
-		} = (0, _.Z)(B),
+		{ disableReactionUpdates: V, disableReactionCreates: F, isLurking: W, isGuest: z, isPendingMember: Y } = (0, _.Z)(B),
 		K = (0, o.e7)([T.Z], () => T.Z.getChannel(j)),
 		q = (0, v.Bs)(K),
 		X = (0, o.e7)([h.Z], () => h.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
@@ -108,7 +102,7 @@ function j(e) {
 								null != q &&
 								(0, i.jsx)('div', {
 									className: R.reactions,
-									children: (0, i.jsx)(C.le, {
+									children: (0, i.jsx)(g.le, {
 										message: H,
 										readOnly: !1,
 										useChatFontScaling: !1,
@@ -124,7 +118,7 @@ function j(e) {
 										me_burst: !1
 									})
 								}),
-							(0, i.jsx)(g.Z, {
+							(0, i.jsx)(C.Z, {
 								message: H,
 								channel: B,
 								disableReactionCreates: !0,

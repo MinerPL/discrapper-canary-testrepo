@@ -494,17 +494,7 @@ function d() {
 					name: 'officers (example)',
 					mentionable: !0,
 					hoist: !0,
-					permissions: t.$e(
-						_.TP,
-						l.Plq.MANAGE_ROLES,
-						l.Plq.MANAGE_CHANNELS,
-						l.Plq.KICK_MEMBERS,
-						l.Plq.BAN_MEMBERS,
-						l.Plq.MANAGE_NICKNAMES,
-						l.Plq.MANAGE_GUILD_EXPRESSIONS,
-						l.Plq.MANAGE_MESSAGES,
-						l.Plq.SEND_TTS_MESSAGES
-					),
+					permissions: t.$e(_.TP, l.Plq.MANAGE_ROLES, l.Plq.MANAGE_CHANNELS, l.Plq.KICK_MEMBERS, l.Plq.BAN_MEMBERS, l.Plq.MANAGE_NICKNAMES, l.Plq.MANAGE_GUILD_EXPRESSIONS, l.Plq.MANAGE_MESSAGES, l.Plq.SEND_TTS_MESSAGES),
 					color: 3066993
 				}
 			],
@@ -512,11 +502,4 @@ function d() {
 		}
 	};
 }
-((n = E || (E = {})).CREATE = 'CREATE'),
-	(n.GAMING = 'GAMING'),
-	(n.FRIENDS = 'FRIENDS'),
-	(n.STUDY = 'STUDY'),
-	(n.CLUBS = 'CLUBS'),
-	(n.CREATORS = 'CREATORS'),
-	(n.LOCAL_COMMUNITY = 'LOCAL_COMMUNITY'),
-	(n.SCHOOL_CLUB = 'SCHOOL_CLUB');
+((n = E || (E = {})).CREATE = 'CREATE'), (n.GAMING = 'GAMING'), (n.FRIENDS = 'FRIENDS'), (n.STUDY = 'STUDY'), (n.CLUBS = 'CLUBS'), (n.CREATORS = 'CREATORS'), (n.LOCAL_COMMUNITY = 'LOCAL_COMMUNITY'), (n.SCHOOL_CLUB = 'SCHOOL_CLUB');

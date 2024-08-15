@@ -39,9 +39,7 @@ function h(e) {
 						(0, i.jsx)(a.Button, {
 							size: a.Button.Sizes.MEDIUM,
 							onClick: () => {
-								(0, l.mL)(t),
-									s.Z.open(t, o.pNK.ROLE_SUBSCRIPTIONS, void 0, o.KsC.ROLE_SUBSCRIPTION_TIERS),
-									(0, r.GN)(t);
+								(0, l.mL)(t), s.Z.open(t, o.pNK.ROLE_SUBSCRIPTIONS, void 0, o.KsC.ROLE_SUBSCRIPTION_TIERS), (0, r.GN)(t);
 							},
 							className: u.__invalid_button,
 							children: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL_UPSELL_BUTTON

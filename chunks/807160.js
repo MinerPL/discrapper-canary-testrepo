@@ -73,15 +73,7 @@ function es(e, s, t) {
 }
 let et = (e) => 'https://'.concat(X.xr4, '/hc/').concat(e.toLowerCase(), '/requests/new?ticket_form_id=360000118612'),
 	en = [X.epS.DURABLE_PRIMARY, X.epS.DURABLE, X.epS.CONSUMABLE];
-((i = n || (n = {})).PURCHASE_DATE = 'PURCHASE_DATE'),
-	(i.SKU_TYPE = 'SKU_TYPE'),
-	(i.ALREADY_REFUNDED = 'ALREADY_REFUNDED'),
-	(i.PAYMENT_STATUS = 'PAYMENT_STATUS'),
-	(i.PAYMENT_GATEWAY = 'PAYMENT_GATEWAY'),
-	(i.SKU_STICKER_PACK = 'SKU_STICKER_PACK'),
-	(i.SUBSCRIPTION_TYPE = 'SUBSCRIPTION_TYPE'),
-	(i.GUILD_PRODUCT = 'GUILD_PRODUCT'),
-	(i.COLLECTIBLE = 'COLLECTIBLE');
+((i = n || (n = {})).PURCHASE_DATE = 'PURCHASE_DATE'), (i.SKU_TYPE = 'SKU_TYPE'), (i.ALREADY_REFUNDED = 'ALREADY_REFUNDED'), (i.PAYMENT_STATUS = 'PAYMENT_STATUS'), (i.PAYMENT_GATEWAY = 'PAYMENT_GATEWAY'), (i.SKU_STICKER_PACK = 'SKU_STICKER_PACK'), (i.SUBSCRIPTION_TYPE = 'SUBSCRIPTION_TYPE'), (i.GUILD_PRODUCT = 'GUILD_PRODUCT'), (i.COLLECTIBLE = 'COLLECTIBLE');
 let ea = [X.PyE.FAILED, X.PyE.REVERSED, X.PyE.CANCELED],
 	ei = [J.gg.APPLE],
 	er = (e) => {
@@ -138,15 +130,9 @@ function ec(e) {
 		n = (0, p.hO)(s, t, { requireCurrentGuild: !1 }),
 		a = (0, x.C)(n),
 		i = (0, S.e7)([U.Z], () => U.Z.getGuild(s)),
-		l =
-			(null == n ? void 0 : n.role_id) != null && (null == n ? void 0 : n.attachments_count) === 0
-				? $.Z.Messages.GUILD_PRODUCT_BILLING_TYPE_PREMIUM_ROLE
-				: a,
+		l = (null == n ? void 0 : n.role_id) != null && (null == n ? void 0 : n.attachments_count) === 0 ? $.Z.Messages.GUILD_PRODUCT_BILLING_TYPE_PREMIUM_ROLE : a,
 		c = o.useCallback(async () => {
-			(null == i ? void 0 : i.hasFeature(X.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0
-				? await (0, P.Z)(X.Z5c.GUILD_PRODUCT(s, t))
-				: await (0, P.Z)(X.Z5c.CHANNEL(s)),
-				(0, C.xf)();
+			(null == i ? void 0 : i.hasFeature(X.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, P.Z)(X.Z5c.GUILD_PRODUCT(s, t)) : await (0, P.Z)(X.Z5c.CHANNEL(s)), (0, C.xf)();
 		}, [i, s, t]);
 	return (0, r.jsxs)(r.Fragment, {
 		children: [
@@ -173,11 +159,7 @@ function ed(e) {
 		o = (0, S.e7)([R.Z], () => R.Z.getGuildProductFetchState(a) === R.M.FETCHING),
 		l = null == i ? void 0 : i.role_id,
 		c = (0, S.e7)([U.Z], () => (null != l ? U.Z.getRole(n, l) : void 0), [n, l]),
-		d =
-			(null !== (t = null == i ? void 0 : null === (s = i.attachments) || void 0 === s ? void 0 : s.length) &&
-			void 0 !== t
-				? t
-				: 0) > 0,
+		d = (null !== (t = null == i ? void 0 : null === (s = i.attachments) || void 0 === s ? void 0 : s.length) && void 0 !== t ? t : 0) > 0,
 		_ = null != c;
 	return o
 		? (0, r.jsx)('div', {
@@ -388,15 +370,7 @@ class e_ extends (a = o.PureComponent) {
 		let e;
 		let { locale: s, payment: t } = this.props,
 			n = this.validateRefundRules();
-		if (
-			n.includes('PAYMENT_GATEWAY') ||
-			n.includes('PAYMENT_STATUS') ||
-			n.includes('ALREADY_REFUNDED') ||
-			n.includes('SKU_STICKER_PACK') ||
-			n.includes('SUBSCRIPTION_TYPE') ||
-			n.includes('GUILD_PRODUCT')
-		)
-			return null;
+		if (n.includes('PAYMENT_GATEWAY') || n.includes('PAYMENT_STATUS') || n.includes('ALREADY_REFUNDED') || n.includes('SKU_STICKER_PACK') || n.includes('SUBSCRIPTION_TYPE') || n.includes('GUILD_PRODUCT')) return null;
 		let a = 0 === n.length,
 			i = et(s),
 			l = this.isPremium ? 5 : 14;
@@ -480,13 +454,7 @@ class e_ extends (a = o.PureComponent) {
 				children: [
 					(0, r.jsx)('div', {
 						className: ee.refundRules,
-						children:
-							!a.isCollectible &&
-							this.renderRefundCriteria(
-								$.Z.Messages.BILLING_REFUND_PURCHASE_DATE_SUBHEADER,
-								i,
-								$.Z.Messages.BILLING_REFUND_PURCHASE_DATE.format({ daysSincePurchase: this.daysSincePurchase })
-							)
+						children: !a.isCollectible && this.renderRefundCriteria($.Z.Messages.BILLING_REFUND_PURCHASE_DATE_SUBHEADER, i, $.Z.Messages.BILLING_REFUND_PURCHASE_DATE.format({ daysSincePurchase: this.daysSincePurchase }))
 					}),
 					(0, r.jsx)(N.Anchor, {
 						href: et(n),
@@ -551,24 +519,16 @@ class e_ extends (a = o.PureComponent) {
 			if (E.type === X.NYc.PREMIUM)
 				E.items.forEach((e) => {
 					let { planId: s, quantity: a } = e;
-					(0, k.uZ)(s)
-						? (t.push(k.ZP.getDisplayName(s, !1, I)), (n = (0, k.Wz)(q.GP[s].skuId)))
-						: (t.push(''.concat(a > 1 ? ''.concat(a, 'x ') : '').concat(k.ZP.getDisplayName(s, !1, I))),
-							null == n && (n = (0, k.Wz)(q.GP[s].skuId)));
+					(0, k.uZ)(s) ? (t.push(k.ZP.getDisplayName(s, !1, I)), (n = (0, k.Wz)(q.GP[s].skuId))) : (t.push(''.concat(a > 1 ? ''.concat(a, 'x ') : '').concat(k.ZP.getDisplayName(s, !1, I))), null == n && (n = (0, k.Wz)(q.GP[s].skuId)));
 				});
 			else if (E.type === X.NYc.GUILD) {
 				let e = F.Z.get(E.items[0].planId);
 				_()(null != e, 'Guild subscription plan should already have been loaded');
-				let s =
-					e.interval === q.rV.YEAR ? $.Z.Messages.YEARLY_GUILD_SUBSCRIPTION : $.Z.Messages.MONTHLY_GUILD_SUBSCRIPTION;
+				let s = e.interval === q.rV.YEAR ? $.Z.Messages.YEARLY_GUILD_SUBSCRIPTION : $.Z.Messages.MONTHLY_GUILD_SUBSCRIPTION;
 				t.push(s.format({ planName: e.name })), (n = e.skuId);
 			} else if (E.type === X.NYc.APPLICATION) {
 				let e = F.Z.get(E.items[0].planId);
-				_()(null != e, 'Application subscription plan should already have been loaded'),
-					null != a
-						? t.push($.Z.Messages.MONTHLY_APPLICATION_SUBSCRIPTION_V2.format({ tier: null == d ? void 0 : d.name }))
-						: t.push($.Z.Messages.APPLICATION_SUBSCRIPTION_FROM_DELETED_APPLICATION),
-					(n = e.skuId);
+				_()(null != e, 'Application subscription plan should already have been loaded'), null != a ? t.push($.Z.Messages.MONTHLY_APPLICATION_SUBSCRIPTION_V2.format({ tier: null == d ? void 0 : d.name })) : t.push($.Z.Messages.APPLICATION_SUBSCRIPTION_FROM_DELETED_APPLICATION), (n = e.skuId);
 			}
 			(s = t.join(', ')),
 				(e = (0, r.jsx)(h.Z, {
@@ -581,13 +541,7 @@ class e_ extends (a = o.PureComponent) {
 				}));
 		} else if (null != d) {
 			var T;
-			if (
-				((s =
-					n.isGuildProductPurchase && n.isSoftDeletedProduct
-						? $.Z.Messages.GUILD_PRODUCT_BILLING_DELISTED_PRODUCT
-						: d.name),
-				null != l)
-			) {
+			if (((s = n.isGuildProductPurchase && n.isSoftDeletedProduct ? $.Z.Messages.GUILD_PRODUCT_BILLING_DELISTED_PRODUCT : d.name), null != l)) {
 				let s = (0, v.Zt)(l);
 				e = (0, r.jsx)(j.ZP, {
 					disableAnimation: !c,
@@ -785,10 +739,7 @@ class e_ extends (a = o.PureComponent) {
 					canRefund: () => {
 						var e, s;
 						let { payment: t } = this.props;
-						return (
-							(null === (e = t.subscription) || void 0 === e ? void 0 : e.type) !== X.NYc.GUILD &&
-							(null === (s = t.subscription) || void 0 === s ? void 0 : s.type) !== X.NYc.APPLICATION
-						);
+						return (null === (e = t.subscription) || void 0 === e ? void 0 : e.type) !== X.NYc.GUILD && (null === (s = t.subscription) || void 0 === s ? void 0 : s.type) !== X.NYc.APPLICATION;
 					}
 				},
 				{
@@ -826,12 +777,7 @@ function eE(e) {
 			var e, s;
 			return {
 				applicationStatistics: null != d ? y.Z.getCurrentUserStatisticsForApplication(d) : null,
-				gameApplication:
-					null !== (s = A.Z.getApplication(null != d ? d : '')) && void 0 !== s
-						? s
-						: null === (e = n.sku) || void 0 === e
-							? void 0
-							: e.application,
+				gameApplication: null !== (s = A.Z.getApplication(null != d ? d : '')) && void 0 !== s ? s : null === (e = n.sku) || void 0 === e ? void 0 : e.application,
 				paymentSources: G.Z.paymentSources
 			};
 		}),

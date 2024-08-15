@@ -30,10 +30,7 @@ function v(e, r) {
 	return !r && (r = e.slice(0)), Object.freeze(Object.defineProperties(e, { raw: { value: Object.freeze(r) } }));
 }
 function _() {
-	let e = v([
-		"\n    import {defineColorTokens, themedToken} from '../tools/define';\n\n    const semanticTokenValues = {\n      ",
-		'\n    };\n\n    export const semanticTokens = defineColorTokens(() => semanticTokenValues);\n    export type SemanticTokenValue = typeof semanticTokenValues;\n  '
-	]);
+	let e = v(["\n    import {defineColorTokens, themedToken} from '../tools/define';\n\n    const semanticTokenValues = {\n      ", '\n    };\n\n    export const semanticTokens = defineColorTokens(() => semanticTokenValues);\n    export type SemanticTokenValue = typeof semanticTokenValues;\n  ']);
 	return (
 		(_ = function () {
 			return e;
@@ -59,35 +56,7 @@ let C = {
 		...I(b.K),
 		...I(m.J)
 	},
-	N = [
-		'100',
-		'130',
-		'160',
-		'200',
-		'230',
-		'260',
-		'300',
-		'330',
-		'345',
-		'360',
-		'400',
-		'430',
-		'460',
-		'500',
-		'530',
-		'560',
-		'600',
-		'630',
-		'645',
-		'660',
-		'700',
-		'730',
-		'760',
-		'800',
-		'830',
-		'860',
-		'900'
-	];
+	N = ['100', '130', '160', '200', '230', '260', '300', '330', '345', '360', '400', '430', '460', '500', '530', '560', '600', '630', '645', '660', '700', '730', '760', '800', '830', '860', '900'];
 function S(e) {
 	var r;
 	let t = 'string' == typeof e ? 1 : null !== (r = e.opacity) && void 0 !== r ? r : 1;
@@ -208,14 +177,7 @@ function Z() {
 							};
 						})(t),
 						l = d().kebabCase(e);
-					return [
-						'--'
-							.concat(l, '-hsl: ')
-							.concat(a, ' calc(var(--saturation-factor, 1) * ')
-							.concat(n, '%) ')
-							.concat(i, '% !important;'),
-						'--'.concat(l, ': hsl(var(--').concat(l, '-hsl)) !important;')
-					];
+					return ['--'.concat(l, '-hsl: ').concat(a, ' calc(var(--saturation-factor, 1) * ').concat(n, '%) ').concat(i, '% !important;'), '--'.concat(l, ': hsl(var(--').concat(l, '-hsl)) !important;')];
 				});
 			return '\n      .theme-'
 				.concat(e, ' {\n        ')
@@ -257,9 +219,7 @@ function Z() {
 						let d = s
 								.map((e) => {
 									let [r, { color: t, opacity: a }] = e;
-									return 1 === a
-										? ''.concat(r, ': "').concat(t, '"')
-										: ''.concat(r, ': { color: "').concat(t, '", opacity: ').concat(a, ' }');
+									return 1 === a ? ''.concat(r, ': "').concat(t, '"') : ''.concat(r, ': { color: "').concat(t, '", opacity: ').concat(a, ' }');
 								})
 								.join(',\n'),
 							u = '"'.concat(n, '": themedToken({ ').concat(d, ' })');
@@ -282,8 +242,7 @@ function Z() {
 				Object.keys(e).forEach((t) => {
 					Object.keys(e[t]).map((a) => {
 						let n = [...N];
-						'primary' !== t && (n = n.filter((e) => '645' !== e)),
-							(r[''.concat(t, '.').concat(n[+a])] = { hex: e[t][a] });
+						'primary' !== t && (n = n.filter((e) => '645' !== e)), (r[''.concat(t, '.').concat(n[+a])] = { hex: e[t][a] });
 					});
 				}),
 					i({

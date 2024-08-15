@@ -22,13 +22,7 @@ function l(e, t) {
 						...e
 					},
 					i = r(n);
-				return (
-					i !== u.current &&
-						((u.current = i),
-						null != d.current && (cancelAnimationFrame(d.current), (d.current = null)),
-						i ? c(!0) : (d.current = requestAnimationFrame(() => c(!1)))),
-					n
-				);
+				return i !== u.current && ((u.current = i), null != d.current && (cancelAnimationFrame(d.current), (d.current = null)), i ? c(!0) : (d.current = requestAnimationFrame(() => c(!1)))), n;
 			});
 		}, []);
 	return (
@@ -40,10 +34,7 @@ function l(e, t) {
 					emojiBurstPicker: n
 				});
 			};
-			return (
-				a.S.subscribeKeyed(s.LPv.TOGGLE_REACTION_POPOUT, e, t),
-				() => void a.S.unsubscribeKeyed(s.LPv.TOGGLE_REACTION_POPOUT, e, t)
-			);
+			return a.S.subscribeKeyed(s.LPv.TOGGLE_REACTION_POPOUT, e, t), () => void a.S.unsubscribeKeyed(s.LPv.TOGGLE_REACTION_POPOUT, e, t);
 		}, [e, _]),
 		{
 			popouts: n,

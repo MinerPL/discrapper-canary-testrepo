@@ -25,7 +25,6 @@ t.exports = function (t) {
 		I = void 0 !== E,
 		R = c(b);
 	if (R && !s(R)) for (w = (A = a(b, R)).next, b = []; !(l = o(w, A)).done; ) b.push(l.value);
-	for (I && T > 2 && (E = e(E, arguments[2])), n = f(b), d = y((v = new (p(x))(n))), r = 0; n > r; r++)
-		(g = I ? E(b[r], r) : b[r]), (v[r] = d ? h(g) : +g);
+	for (I && T > 2 && (E = e(E, arguments[2])), n = f(b), d = y((v = new (p(x))(n))), r = 0; n > r; r++) (g = I ? E(b[r], r) : b[r]), (v[r] = d ? h(g) : +g);
 	return v;
 };

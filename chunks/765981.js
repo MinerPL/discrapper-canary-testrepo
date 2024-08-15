@@ -7,10 +7,7 @@ var r = n(263016);
 function i(e, t) {
 	for (var n = 0; n < t.length; n++) {
 		var r = t[n];
-		(r.enumerable = r.enumerable || !1),
-			(r.configurable = !0),
-			'value' in r && (r.writable = !0),
-			Object.defineProperty(e, r.key, r);
+		(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 	}
 }
 var a = (function () {
@@ -23,10 +20,7 @@ var a = (function () {
 			(this.isSetUp = !1),
 			(this.handleRefCountChange = function () {
 				var e = n.store.getState().refCount > 0;
-				n.backend &&
-					(e && !n.isSetUp
-						? (n.backend.setup(), (n.isSetUp = !0))
-						: !e && n.isSetUp && (n.backend.teardown(), (n.isSetUp = !1)));
+				n.backend && (e && !n.isSetUp ? (n.backend.setup(), (n.isSetUp = !0)) : !e && n.isSetUp && (n.backend.teardown(), (n.isSetUp = !1)));
 			}),
 			(this.store = e),
 			(this.monitor = t),

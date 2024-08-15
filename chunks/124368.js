@@ -15,7 +15,7 @@ n.d(t, {
 		return E;
 	},
 	fZ: function () {
-		return I;
+		return m;
 	},
 	iN: function () {
 		return f;
@@ -67,15 +67,6 @@ function h() {
 		}
 	];
 }
-((a = r || (r = {})).EMBED = 'Embed'),
-	(a.BROWSER = 'Thread Browser'),
-	(a.POPOUT = 'Active Threads Popout'),
-	(a.CHANNEL_LIST = 'Channel List'),
-	(a.GUILD_ACTIVE_THREADS_MODAL = 'Guild Active Threads Modal'),
-	(a.INBOX = 'Inbox'),
-	(a.FORUM = 'Forum'),
-	(a.VOICE_AUTO_OPEN = 'Voice Auto Open'),
-	((s = i || (i = {})).LATEST_ACTIVITY = 'Last Message'),
-	(s.CREATION_DATE = 'Creation');
+((a = r || (r = {})).EMBED = 'Embed'), (a.BROWSER = 'Thread Browser'), (a.POPOUT = 'Active Threads Popout'), (a.CHANNEL_LIST = 'Channel List'), (a.GUILD_ACTIVE_THREADS_MODAL = 'Guild Active Threads Modal'), (a.INBOX = 'Inbox'), (a.FORUM = 'Forum'), (a.VOICE_AUTO_OPEN = 'Voice Auto Open'), ((s = i || (i = {})).LATEST_ACTIVITY = 'Last Message'), (s.CREATION_DATE = 'Creation');
 let p = new Set([o.evJ.TOO_MANY_ATTACHMENTS, o.evJ.EXPLICIT_CONTENT, o.evJ.ENTITY_TOO_LARGE, o.evJ.EXPLICIT_CONTENT]),
-	I = new Set([o.evJ.AUTOMOD_MESSAGE_BLOCKED, o.evJ.AUTOMOD_TITLE_BLOCKED]);
+	m = new Set([o.evJ.AUTOMOD_MESSAGE_BLOCKED, o.evJ.AUTOMOD_TITLE_BLOCKED]);

@@ -21,7 +21,7 @@ n.d(t, {
 		return E;
 	},
 	hs: function () {
-		return I;
+		return m;
 	},
 	k8: function () {
 		return S;
@@ -56,7 +56,7 @@ async function u(e, t) {
 }
 async function c(e, t) {
 	var n;
-	let i = m(e),
+	let i = I(e),
 		a = await r.tn.get({
 			url: l.ANM.GET_UNAUTHENTICATED_REPORT_MENU(i),
 			query: (null == t ? void 0 : t.variant) != null ? { variant: t.variant } : void 0
@@ -86,7 +86,7 @@ function _(e, t, n) {
 }
 function E(e, t, n, i) {
 	if (s.ZP.get('iar_skip_api_report_submit')) return Promise.resolve();
-	let a = m(t);
+	let a = I(t);
 	return r.tn.post({
 		url: l.ANM.SUBMIT_UNAUTHENTICATED_REPORT_MENU(a),
 		body: g(e, t, n, i)
@@ -116,7 +116,7 @@ async function h(e, t, n) {
 async function p() {
 	return await r.tn.get({ url: l.ANM.DSA_EXPERIMENT_UNAUTHENTICATED });
 }
-async function I(e) {
+async function m(e) {
 	return (
 		await r.tn.post({
 			url: l.ANM.SUBMIT_REPORT_SECOND_LOOK,
@@ -124,7 +124,7 @@ async function I(e) {
 		})
 	).body;
 }
-function m(e) {
+function I(e) {
 	let t = e.name;
 	if (!Object.values(o.BM).includes(t)) throw Error('Invalid report type '.concat(e.name));
 	return t;
@@ -246,20 +246,8 @@ function S(e, t, n) {
 		message_id: e.name === o.b.MESSAGE || e.name === o.b.FIRST_DM ? e.record.id : void 0,
 		stage_instance_id: e.name === o.b.STAGE_CHANNEL ? e.record.id : void 0,
 		guild_scheduled_event_id: e.name === o.b.GUILD_SCHEDULED_EVENT ? e.record.id : void 0,
-		guild_id:
-			e.name === o.b.GUILD || e.name === o.b.GUILD_DISCOVERY
-				? e.record.id
-				: e.name === o.b.GUILD_DIRECTORY_ENTRY
-					? e.record.guildId
-					: e.name === o.b.GUILD_SCHEDULED_EVENT
-						? e.record.guild_id
-						: void 0,
-		channel_id:
-			e.name === o.b.GUILD_SCHEDULED_EVENT
-				? e.record.channel_id
-				: e.name === o.b.GUILD_DIRECTORY_ENTRY
-					? e.record.channelId
-					: void 0
+		guild_id: e.name === o.b.GUILD || e.name === o.b.GUILD_DISCOVERY ? e.record.id : e.name === o.b.GUILD_DIRECTORY_ENTRY ? e.record.guildId : e.name === o.b.GUILD_SCHEDULED_EVENT ? e.record.guild_id : void 0,
+		channel_id: e.name === o.b.GUILD_SCHEDULED_EVENT ? e.record.channel_id : e.name === o.b.GUILD_DIRECTORY_ENTRY ? e.record.channelId : void 0
 	});
 }
 function A(e, t) {
@@ -273,18 +261,9 @@ function N(e, t, n, r, i) {
 	return (
 		e.some((e) => {
 			var t;
-			return (
-				!0 === e.should_submit_data &&
-				((null == r ? void 0 : r[e.name]) == null ||
-					(null == r ? void 0 : r[e.name].value) === '' ||
-					!(null == r ? void 0 : null === (t = r[e.name]) || void 0 === t ? void 0 : t.isValid))
-			);
+			return !0 === e.should_submit_data && ((null == r ? void 0 : r[e.name]) == null || (null == r ? void 0 : r[e.name].value) === '' || !(null == r ? void 0 : null === (t = r[e.name]) || void 0 === t ? void 0 : t.isValid));
 		}) ||
-		t.some(
-			(e) =>
-				!0 === e.should_submit_data &&
-				((null == r ? void 0 : r[e.name]) == null || (null == r ? void 0 : r[e.name].value) === '')
-		) ||
+		t.some((e) => !0 === e.should_submit_data && ((null == r ? void 0 : r[e.name]) == null || (null == r ? void 0 : r[e.name].value) === '')) ||
 		((null == n ? void 0 : n.should_submit_data) === !0 && (null == i || 0 === Object.keys(i).length))
 	);
 }

@@ -35,13 +35,7 @@ var f = (function (e) {
 			r,
 			i = n.transitionGroup,
 			a = i && !i.isMounting ? t.enter : t.appear;
-		return (
-			(o.appearStatus = null),
-			t.in ? (a ? ((r = l), (o.appearStatus = c)) : (r = p)) : (r = t.unmountOnExit || t.mountOnEnter ? s : l),
-			(o.state = { status: r }),
-			(o.nextCallback = null),
-			o
-		);
+		return (o.appearStatus = null), t.in ? (a ? ((r = l), (o.appearStatus = c)) : (r = p)) : (r = t.unmountOnExit || t.mountOnEnter ? s : l), (o.state = { status: r }), (o.nextCallback = null), o;
 	}
 	(n = t), (o = e), (n.prototype = Object.create(o.prototype)), (n.prototype.constructor = n), (n.__proto__ = o);
 	var n,
@@ -158,8 +152,7 @@ var f = (function (e) {
 				setTimeout(this.nextCallback, 0);
 				return;
 			}
-			this.props.addEndListener && this.props.addEndListener(e, this.nextCallback),
-				null != t && setTimeout(this.nextCallback, t);
+			this.props.addEndListener && this.props.addEndListener(e, this.nextCallback), null != t && setTimeout(this.nextCallback, t);
 		}),
 		(a.render = function () {
 			var e = this.state.status;
@@ -175,24 +168,7 @@ var f = (function (e) {
 					for (o = 0; o < i.length; o++) (n = i[o]), !(t.indexOf(n) >= 0) && (r[n] = e[n]);
 					return r;
 				})(t, ['children']);
-			if (
-				(delete o.in,
-				delete o.mountOnEnter,
-				delete o.unmountOnExit,
-				delete o.appear,
-				delete o.enter,
-				delete o.exit,
-				delete o.timeout,
-				delete o.addEndListener,
-				delete o.onEnter,
-				delete o.onEntering,
-				delete o.onEntered,
-				delete o.onExit,
-				delete o.onExiting,
-				delete o.onExited,
-				'function' == typeof n)
-			)
-				return n(e, o);
+			if ((delete o.in, delete o.mountOnEnter, delete o.unmountOnExit, delete o.appear, delete o.enter, delete o.exit, delete o.timeout, delete o.addEndListener, delete o.onEnter, delete o.onEntering, delete o.onEntered, delete o.onExit, delete o.onExiting, delete o.onExited, 'function' == typeof n)) return n(e, o);
 			var i = r.default.Children.only(n);
 			return r.default.cloneElement(i, o);
 		}),

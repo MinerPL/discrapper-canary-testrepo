@@ -24,7 +24,7 @@ var i = n(120356),
 function E(e) {
 	let { title: t, help: n, showPremiumUpsell: i, transitionState: s, icons: E, fileSize: f, onClose: h } = e,
 		p = (0, l.Dt)(),
-		I = null != E ? E : d.J6;
+		m = null != E ? E : d.J6;
 	return i
 		? (0, r.jsx)(u.Z, {
 				transitionState: s,
@@ -40,7 +40,7 @@ function E(e) {
 					children: (0, r.jsxs)('div', {
 						className: _.inner,
 						children: [
-							(0, r.jsx)(c.Z, { icons: I }),
+							(0, r.jsx)(c.Z, { icons: m }),
 							(0, r.jsx)('div', {
 								id: p,
 								className: _.title,

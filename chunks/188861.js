@@ -7,8 +7,7 @@ var i = n(710845),
 	c = n(981631);
 let d = new i.Z('RPCServer:PostMessage'),
 	u = (e, t, n) => {
-		(a.default.isLoggingOverlayEvents || e.cmd !== c.Etm.OVERLAY) &&
-			t.info('Socket Message: '.concat(n.id), (0, s.Z)(e));
+		(a.default.isLoggingOverlayEvents || e.cmd !== c.Etm.OVERLAY) && t.info('Socket Message: '.concat(n.id), (0, s.Z)(e));
 	};
 t.Z = (function () {
 	let e = new r.Z(l.em, d, o.Z, u);

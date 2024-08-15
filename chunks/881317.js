@@ -110,9 +110,7 @@ t.Z = () => {
 						}),
 						(0, s.jsx)(u.DK, {
 							className: N.marginBottom8,
-							children: m.Z.Messages.URF_LANDING_PAGE_SUBTITLE.format({
-								supportURL: p.Z.getArticleURL(I.BhN.COPYRIGHT_AND_IP_POLICY)
-							})
+							children: m.Z.Messages.URF_LANDING_PAGE_SUBTITLE.format({ supportURL: p.Z.getArticleURL(I.BhN.COPYRIGHT_AND_IP_POLICY) })
 						}),
 						(0, s.jsxs)('div', {
 							className: f.container,

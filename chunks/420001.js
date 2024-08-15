@@ -13,7 +13,7 @@ var r = n(911969),
 	f = n(590921),
 	h = n(126226),
 	p = n(689938);
-function I(e) {
+function m(e) {
 	let t = _.X.exec(e);
 	if (null != t) {
 		let n = t[1],
@@ -28,19 +28,18 @@ function I(e) {
 	}
 	return null;
 }
-let m = {
+let I = {
 	...h.Z,
 	sentinel: void 0,
 	focusMode: f.QZ.MANUAL,
 	matches(e, t, n, r, i) {
-		if (i.commands === f.L8.DISABLED || i.commands === f.L8.OLD_BUILT_INS || n.length < 2 || !u.Xk.getSetting())
-			return !1;
-		let a = I(n);
+		if (i.commands === f.L8.DISABLED || i.commands === f.L8.OLD_BUILT_INS || n.length < 2 || !u.Xk.getSetting()) return !1;
+		let a = m(n);
 		return null != a && a.cleanedQuery.length > 0;
 	},
 	queryResults(e, t, n, s, l) {
 		if (!u.Xk.getSetting()) return h.K;
-		let c = I(n);
+		let c = m(n);
 		if (null == c) return h.K;
 		let d = (0, o.hV)(e, c.cleanedQuery),
 			{ commands: _, sections: E } = i.JT(
@@ -106,7 +105,7 @@ let m = {
 				};
 			},
 			getQuery: (e) => {
-				let t = I(e);
+				let t = m(e);
 				if ('mention' !== t.type) return e;
 				let n = d.ZP.getName(null == r ? void 0 : r.id, i.id, t.user);
 				return e.replace(_.X, '@'.concat(n));
@@ -132,4 +131,4 @@ let m = {
 				};
 	}
 };
-t.Z = m;
+t.Z = I;

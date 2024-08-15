@@ -19,14 +19,7 @@ function s(e) {
 			(function (e) {
 				var t;
 				let n = null !== (t = e.actions) && void 0 !== t ? t : [];
-				for (let t of ((e.hasStoreChangeListeners || e.loadAfterConnectionOpen) &&
-					(!n.includes('POST_CONNECTION_OPEN') && (n = [...n, 'POST_CONNECTION_OPEN']),
-					!n.includes('OVERLAY_INITIALIZE') && (n = [...n, 'OVERLAY_INITIALIZE'])),
-				e.loadRightBeforeConnectionOpen &&
-					(!n.includes('CONNECTION_OPEN') && (n = [...n, 'CONNECTION_OPEN']),
-					!n.includes('OVERLAY_INITIALIZE') && (n = [...n, 'OVERLAY_INITIALIZE'])),
-				n))
-					!(t in i) && (i[t] = []), i[t].push(e);
+				for (let t of ((e.hasStoreChangeListeners || e.loadAfterConnectionOpen) && (!n.includes('POST_CONNECTION_OPEN') && (n = [...n, 'POST_CONNECTION_OPEN']), !n.includes('OVERLAY_INITIALIZE') && (n = [...n, 'OVERLAY_INITIALIZE'])), e.loadRightBeforeConnectionOpen && (!n.includes('CONNECTION_OPEN') && (n = [...n, 'CONNECTION_OPEN']), !n.includes('OVERLAY_INITIALIZE') && (n = [...n, 'OVERLAY_INITIALIZE'])), n)) !(t in i) && (i[t] = []), i[t].push(e);
 			})(n);
 	}
 	r.Z.addInterceptor(o);

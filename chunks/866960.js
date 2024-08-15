@@ -11,10 +11,7 @@ let d = c.IWh.UNKNOWN,
 	E = null;
 function f(e) {
 	var t;
-	(d = null != e.type ? e.type : c.IWh.UNKNOWN),
-		(_ = null !== (t = e.effectiveSpeed) && void 0 !== t ? t : c.IyS.UNKNOWN),
-		(E = e.serviceProvider),
-		p.emitChange();
+	(d = null != e.type ? e.type : c.IWh.UNKNOWN), (_ = null !== (t = e.effectiveSpeed) && void 0 !== t ? t : c.IyS.UNKNOWN), (E = e.serviceProvider), p.emitChange();
 }
 class h extends (s = o.ZP.Store) {
 	initialize() {

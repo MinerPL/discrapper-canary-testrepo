@@ -30,14 +30,7 @@ function _(e) {
 				u.delete(n),
 				0 === u.size &&
 					!(function () {
-						for (let e of [
-							r.X4.HasRTCConnection,
-							r.X4.IsSendingVideo,
-							r.X4.IsSendingStream,
-							r.X4.IsReceivingVideo,
-							r.X4.IsReceivingStream
-						])
-							o.ZP.setCrashInformation(e, 0);
+						for (let e of [r.X4.HasRTCConnection, r.X4.IsSendingVideo, r.X4.IsSendingStream, r.X4.IsReceivingVideo, r.X4.IsReceivingStream]) o.ZP.setCrashInformation(e, 0);
 					})();
 	}
 }

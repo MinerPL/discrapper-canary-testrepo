@@ -23,19 +23,7 @@ function _(e, t) {
 let E = (e) => {
 	let t,
 		n,
-		{
-			backgroundStyle: a = 'always',
-			children: E,
-			icon: f,
-			name: h,
-			ariaLabel: p,
-			className: I,
-			style: m,
-			to: T,
-			onClick: g,
-			selected: S = !1,
-			...A
-		} = e,
+		{ backgroundStyle: a = 'always', children: E, icon: f, name: h, ariaLabel: p, className: m, style: I, to: T, onClick: g, selected: S = !1, ...A } = e,
 		N = (0, o.k6)();
 	if (null == f && null != h) {
 		var v;
@@ -56,10 +44,10 @@ let E = (e) => {
 	return (0, r.jsxs)(l.Clickable, {
 		...A,
 		onClick: O,
-		className: s()(I, c.wrapper, { [c.selected]: S }),
+		className: s()(m, c.wrapper, { [c.selected]: S }),
 		'aria-label': null != p && '' !== p ? p : null != h ? h : '',
 		style: {
-			...m,
+			...I,
 			fontSize: n
 		},
 		focusProps: { enabled: !1 },

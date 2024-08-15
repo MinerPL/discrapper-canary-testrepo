@@ -51,9 +51,7 @@ function d(e) {
 				children: (0, t.jsx)(l.Text, {
 					className: N.description,
 					variant: 'text-md/normal',
-					children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_DESCRIPTION_NO_LINK.format({
-						oldEmail: null == A ? void 0 : A.email
-					})
+					children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_DESCRIPTION_NO_LINK.format({ oldEmail: null == A ? void 0 : A.email })
 				})
 			}),
 			(0, t.jsxs)(l.ModalFooter, {

@@ -39,8 +39,6 @@ t.Z = {
 			u = l[t.placement],
 			c = u.x,
 			d = u.y;
-		null != t.modifiersData.popperOffsets &&
-			((t.modifiersData.popperOffsets.x += c), (t.modifiersData.popperOffsets.y += d)),
-			(t.modifiersData[a] = l);
+		null != t.modifiersData.popperOffsets && ((t.modifiersData.popperOffsets.x += c), (t.modifiersData.popperOffsets.y += d)), (t.modifiersData[a] = l);
 	}
 };

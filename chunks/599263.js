@@ -180,9 +180,7 @@ function D(e) {
 			null != D &&
 				(0, s.jsx)('div', {
 					className: R.gradient,
-					style: {
-						background: 'linear-gradient(180deg, '.concat((0, N.aD)(D, 0.16), ' 0%, ').concat((0, N.aD)(D, 1), ' 100%)')
-					}
+					style: { background: 'linear-gradient(180deg, '.concat((0, N.aD)(D, 0.16), ' 0%, ').concat((0, N.aD)(D, 1), ' 100%)') }
 				}),
 			(0, s.jsx)('div', { className: R.gradient }),
 			Y((e, t, n) => {

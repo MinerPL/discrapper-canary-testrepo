@@ -12,8 +12,8 @@ var r = 'function' == typeof Map && Map.prototype,
 	f = Boolean.prototype.valueOf,
 	h = Object.prototype.toString,
 	p = Function.prototype.toString,
-	I = String.prototype.match,
-	m = String.prototype.slice,
+	m = String.prototype.match,
+	I = String.prototype.slice,
 	T = String.prototype.replace,
 	g = String.prototype.toUpperCase,
 	S = String.prototype.toLowerCase,
@@ -26,10 +26,7 @@ var r = 'function' == typeof Map && Map.prototype,
 	y = Object.getOwnPropertySymbols,
 	D = 'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator ? Symbol.prototype.toString : null,
 	L = 'function' == typeof Symbol && 'object' == typeof Symbol.iterator,
-	b =
-		'function' == typeof Symbol && Symbol.toStringTag && (typeof Symbol.toStringTag === L ? 'object' : 'symbol')
-			? Symbol.toStringTag
-			: null,
+	b = 'function' == typeof Symbol && Symbol.toStringTag && (typeof Symbol.toStringTag === L ? 'object' : 'symbol') ? Symbol.toStringTag : null,
 	M = Object.prototype.propertyIsEnumerable,
 	P =
 		('function' == typeof Reflect ? Reflect.getPrototypeOf : Object.getPrototypeOf) ||
@@ -45,7 +42,7 @@ function U(e, t) {
 		var r = e < 0 ? -R(-e) : R(e);
 		if (r !== e) {
 			var i = String(r),
-				a = m.call(t, i.length + 1);
+				a = I.call(t, i.length + 1);
 			return T.call(i, n, '$&_') + '.' + T.call(T.call(a, /([0-9]{3})/g, '$&_'), /_$/, '');
 		}
 	}
@@ -60,27 +57,12 @@ function k(e, t, n) {
 }
 e.exports = function e(t, r, i, o) {
 	var l = r || {};
-	if (Z(l, 'quoteStyle') && 'single' !== l.quoteStyle && 'double' !== l.quoteStyle)
-		throw TypeError('option "quoteStyle" must be "single" or "double"');
-	if (
-		Z(l, 'maxStringLength') &&
-		('number' == typeof l.maxStringLength
-			? l.maxStringLength < 0 && l.maxStringLength !== 1 / 0
-			: null !== l.maxStringLength)
-	)
-		throw TypeError('option "maxStringLength", if provided, must be a positive integer, Infinity, or `null`');
+	if (Z(l, 'quoteStyle') && 'single' !== l.quoteStyle && 'double' !== l.quoteStyle) throw TypeError('option "quoteStyle" must be "single" or "double"');
+	if (Z(l, 'maxStringLength') && ('number' == typeof l.maxStringLength ? l.maxStringLength < 0 && l.maxStringLength !== 1 / 0 : null !== l.maxStringLength)) throw TypeError('option "maxStringLength", if provided, must be a positive integer, Infinity, or `null`');
 	var h = !Z(l, 'customInspect') || l.customInspect;
-	if ('boolean' != typeof h && 'symbol' !== h)
-		throw TypeError('option "customInspect", if provided, must be `true`, `false`, or `\'symbol\'`');
-	if (
-		Z(l, 'indent') &&
-		null !== l.indent &&
-		'\t' !== l.indent &&
-		!(parseInt(l.indent, 10) === l.indent && l.indent > 0)
-	)
-		throw TypeError('option "indent" must be "\\t", an integer > 0, or `null`');
-	if (Z(l, 'numericSeparator') && 'boolean' != typeof l.numericSeparator)
-		throw TypeError('option "numericSeparator", if provided, must be `true` or `false`');
+	if ('boolean' != typeof h && 'symbol' !== h) throw TypeError('option "customInspect", if provided, must be `true`, `false`, or `\'symbol\'`');
+	if (Z(l, 'indent') && null !== l.indent && '\t' !== l.indent && !(parseInt(l.indent, 10) === l.indent && l.indent > 0)) throw TypeError('option "indent" must be "\\t", an integer > 0, or `null`');
+	if (Z(l, 'numericSeparator') && 'boolean' != typeof l.numericSeparator) throw TypeError('option "numericSeparator", if provided, must be `true` or `false`');
 	var g = l.numericSeparator;
 	if (void 0 === t) return 'undefined';
 	if (null === t) return 'null';
@@ -89,7 +71,7 @@ e.exports = function e(t, r, i, o) {
 		return (function e(t, n) {
 			if (t.length > n.maxStringLength) {
 				var r = t.length - n.maxStringLength;
-				return e(m.call(t, 0, n.maxStringLength), n) + ('... ' + r + ' more character') + (r > 1 ? 's' : '');
+				return e(I.call(t, 0, n.maxStringLength), n) + ('... ' + r + ' more character') + (r > 1 ? 's' : '');
 			}
 			return k(T.call(T.call(t, /(['\\])/g, '\\$1'), /[\x00-\x1f]/g, W), 'single', n);
 		})(t, l);
@@ -128,7 +110,7 @@ e.exports = function e(t, r, i, o) {
 	if ('function' == typeof t && !F(t)) {
 		var $ = (function (e) {
 				if (e.name) return e.name;
-				var t = I.call(p.call(e), /^function\s*([\w$]+)/);
+				var t = m.call(p.call(e), /^function\s*([\w$]+)/);
 				return t ? t[1] : null;
 			})(t),
 			J = X(t, H);
@@ -140,12 +122,7 @@ e.exports = function e(t, r, i, o) {
 	}
 	if (
 		(function (e) {
-			return (
-				!!e &&
-				'object' == typeof e &&
-				(!!('undefined' != typeof HTMLElement && e instanceof HTMLElement) ||
-					('string' == typeof e.nodeName && 'function' == typeof e.getAttribute))
-			);
+			return !!e && 'object' == typeof e && (!!('undefined' != typeof HTMLElement && e instanceof HTMLElement) || ('string' == typeof e.nodeName && 'function' == typeof e.getAttribute));
 		})(t)
 	) {
 		for (var et = '<' + S.call(String(t.nodeName)), en = t.attributes || [], er = 0; er < en.length; er++)
@@ -160,9 +137,7 @@ e.exports = function e(t, r, i, o) {
 					'double',
 					l
 				);
-		return (
-			(et += '>'), t.childNodes && t.childNodes.length && (et += '...'), (et += '</' + S.call(String(t.nodeName)) + '>')
-		);
+		return (et += '>'), t.childNodes && t.childNodes.length && (et += '...'), (et += '</' + S.call(String(t.nodeName)) + '>');
 	}
 	if (B(t)) {
 		if (0 === t.length) return '[]';
@@ -181,11 +156,7 @@ e.exports = function e(t, r, i, o) {
 		})(t)
 	) {
 		var ea = X(t, H);
-		return 'cause' in Error.prototype || !('cause' in t) || M.call(t, 'cause')
-			? 0 === ea.length
-				? '[' + String(t) + ']'
-				: '{ [' + String(t) + '] ' + v.call(ea, ', ') + ' }'
-			: '{ [' + String(t) + '] ' + v.call(N.call('[cause]: ' + H(t.cause), ea), ', ') + ' }';
+		return 'cause' in Error.prototype || !('cause' in t) || M.call(t, 'cause') ? (0 === ea.length ? '[' + String(t) + ']' : '{ [' + String(t) + '] ' + v.call(ea, ', ') + ' }') : '{ [' + String(t) + '] ' + v.call(N.call('[cause]: ' + H(t.cause), ea), ', ') + ' }';
 	}
 	if ('object' == typeof t && h) {
 		if (G && 'function' == typeof t[G] && w) return w(t, { depth: y - i });
@@ -320,10 +291,8 @@ e.exports = function e(t, r, i, o) {
 		var el = X(t, H),
 			eu = P ? P(t) === Object.prototype : t instanceof Object || t.constructor === Object,
 			ec = t instanceof Object ? '' : 'null prototype',
-			ed = !eu && b && Object(t) === t && b in t ? m.call(Y(t), 8, -1) : ec ? 'Object' : '',
-			e_ =
-				(eu || 'function' != typeof t.constructor ? '' : t.constructor.name ? t.constructor.name + ' ' : '') +
-				(ed || ec ? '[' + v.call(N.call([], ed || [], ec || []), ': ') + '] ' : '');
+			ed = !eu && b && Object(t) === t && b in t ? I.call(Y(t), 8, -1) : ec ? 'Object' : '',
+			e_ = (eu || 'function' != typeof t.constructor ? '' : t.constructor.name ? t.constructor.name + ' ' : '') + (ed || ec ? '[' + v.call(N.call([], ed || [], ec || []), ': ') + '] ' : '');
 		return 0 === el.length ? e_ + '{}' : x ? e_ + '{' + Q(el, x) + '}' : e_ + '{ ' + v.call(el, ', ') + ' }';
 	}
 	return String(t);
@@ -399,10 +368,8 @@ function X(e, t) {
 	}
 	for (var l in e) {
 		if (!Z(e, l) || (r && String(Number(l)) === l && l < e.length)) continue;
-		if (!(L && n['$' + l] instanceof Symbol))
-			A.call(/[^\w$]/, l) ? i.push(t(l, e) + ': ' + t(e[l], e)) : i.push(l + ': ' + t(e[l], e));
+		if (!(L && n['$' + l] instanceof Symbol)) A.call(/[^\w$]/, l) ? i.push(t(l, e) + ': ' + t(e[l], e)) : i.push(l + ': ' + t(e[l], e));
 	}
-	if ('function' == typeof y)
-		for (var u = 0; u < s.length; u++) M.call(e, s[u]) && i.push('[' + t(s[u]) + ']: ' + t(e[s[u]], e));
+	if ('function' == typeof y) for (var u = 0; u < s.length; u++) M.call(e, s[u]) && i.push('[' + t(s[u]) + ']: ' + t(e[s[u]], e));
 	return i;
 }

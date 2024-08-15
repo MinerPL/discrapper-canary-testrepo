@@ -8,16 +8,7 @@ var n = r(622916),
 	o = r(886115),
 	i = r(255768),
 	_ = r(151122);
-let E = [
-		/^Script error\.?$/,
-		/^Javascript error: Script error\.? on line 0$/,
-		/^ResizeObserver loop completed with undelivered notifications.$/,
-		/^Cannot redefine property: googletag$/,
-		"undefined is not an object (evaluating 'a.L')",
-		'can\'t redefine non-configurable property "solana"',
-		"vv().getRestrictions is not a function. (In 'vv().getRestrictions(1,a)', 'vv().getRestrictions' is undefined)",
-		"Can't find variable: _AutofillCallbackHandler"
-	],
+let E = [/^Script error\.?$/, /^Javascript error: Script error\.? on line 0$/, /^ResizeObserver loop completed with undelivered notifications.$/, /^Cannot redefine property: googletag$/, "undefined is not an object (evaluating 'a.L')", 'can\'t redefine non-configurable property "solana"', "vv().getRestrictions is not a function. (In 'vv().getRestrictions(1,a)', 'vv().getRestrictions' is undefined)", "Can't find variable: _AutofillCallbackHandler"],
 	s = (0, _._I)((e = {}) => ({
 		name: 'InboundFilters',
 		processEvent: (t, r, _) =>
@@ -54,14 +45,7 @@ Event: ${(0, a.jH)(e)}`),
 Event: ${(0, a.jH)(e)}`),
 							!0)
 						: (function (e) {
-									return (
-										!e.type &&
-										!!e.exception &&
-										!!e.exception.values &&
-										0 !== e.exception.values.length &&
-										!e.message &&
-										!e.exception.values.some((e) => e.stacktrace || (e.type && 'Error' !== e.type) || e.value)
-									);
+									return !e.type && !!e.exception && !!e.exception.values && 0 !== e.exception.values.length && !e.message && !e.exception.values.some((e) => e.stacktrace || (e.type && 'Error' !== e.type) || e.value);
 							  })(e)
 							? (i.X &&
 									n.kg.warn(`Event dropped due to not having an error message, error type or stacktrace.

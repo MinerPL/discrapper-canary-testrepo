@@ -22,10 +22,10 @@ n.d(t, {
 		return s;
 	},
 	VS: function () {
-		return I;
+		return m;
 	},
 	W2: function () {
-		return m;
+		return I;
 	},
 	qU: function () {
 		return u;
@@ -64,7 +64,7 @@ function _() {
 	return isNaN(t) && (t = -1), (r = t);
 }
 function E(e) {
-	m() && (r = e);
+	I() && (r = e);
 }
 function f() {
 	return new URLSearchParams(window.location.search).get('rpc_auth_token');
@@ -75,12 +75,10 @@ function h(e) {
 function p(e) {
 	d = e;
 }
-function I() {
+function m() {
 	return d;
 }
-function m() {
+function I() {
 	var e;
-	return void 0 !== i
-		? i
-		: (i = (null !== (e = new URLSearchParams(window.location.search).get('oop')) && void 0 !== e ? e : '') === 'true');
+	return void 0 !== i ? i : (i = (null !== (e = new URLSearchParams(window.location.search).get('oop')) && void 0 !== e ? e : '') === 'true');
 }

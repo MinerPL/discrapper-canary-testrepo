@@ -153,16 +153,7 @@ function Z(e) {
 	});
 }
 function T(e) {
-	let {
-			activity: t,
-			embeddedApp: n,
-			user: r,
-			channel: a,
-			sortedVoiceStates: u,
-			onOpenSpotifyTrack: h,
-			onOpenSpotifyArtist: p,
-			onOpenSpotifyAlbum: f
-		} = e,
+	let { activity: t, embeddedApp: n, user: r, channel: a, sortedVoiceStates: u, onOpenSpotifyTrack: h, onOpenSpotifyArtist: p, onOpenSpotifyAlbum: f } = e,
 		g = [];
 	null != n ? (g = Array.from(n.embeddedActivity.userIds)) : (0, c.Z)(t) && null != u && (g = u.map((e) => e.user.id));
 	let T = (0, s.Wu)([_.default], () => g.map((e) => _.default.getUser(e)).filter(m.lm)),

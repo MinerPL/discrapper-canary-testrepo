@@ -56,11 +56,7 @@ function h(e, t) {
 			}
 		},
 		b = T ? v.burst : v.standard,
-		E = Math.max(
-			0,
-			(null !== (n = T ? (null == f ? void 0 : f.burst_count) : null == f ? void 0 : f.count) && void 0 !== n ? n : 0) -
-				_.length
-		),
+		E = Math.max(0, (null !== (n = T ? (null == f ? void 0 : f.burst_count) : null == f ? void 0 : f.count) && void 0 !== n ? n : 0) - _.length),
 		I = (0, o.Lh)(t);
 	if (1 === _.length)
 		return E > 0

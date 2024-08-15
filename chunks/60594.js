@@ -47,20 +47,10 @@ var l,
 	y = t(761274),
 	H = t(689938),
 	W = t(458623);
-((s = l || (l = {}))[(s.GUILD = 0)] = 'GUILD'),
-	(s[(s.NATIVE_PICKER_SOURCE = 1)] = 'NATIVE_PICKER_SOURCE'),
-	(s[(s.SOURCE = 2)] = 'SOURCE'),
-	(s[(s.CONFIRM = 3)] = 'CONFIRM');
+((s = l || (l = {}))[(s.GUILD = 0)] = 'GUILD'), (s[(s.NATIVE_PICKER_SOURCE = 1)] = 'NATIVE_PICKER_SOURCE'), (s[(s.SOURCE = 2)] = 'SOURCE'), (s[(s.CONFIRM = 3)] = 'CONFIRM');
 function F(e) {
 	var n, l, s, i, F, z;
-	let {
-			selectGuild: K = !1,
-			selectSource: Y = !0,
-			guildId: Q,
-			analyticsLocation: X,
-			onClose: q,
-			transitionState: J
-		} = e,
+	let { selectGuild: K = !1, selectSource: Y = !0, guildId: Q, analyticsLocation: X, onClose: q, transitionState: J } = e,
 		{ preset: $, resolution: ee, fps: en, soundshareEnabled: et } = (0, u.cj)([Z.Z], () => Z.Z.getState()),
 		el = (0, u.e7)([T.Z, f.Z], () => f.Z.getChannel(T.Z.getVoiceChannelId())),
 		es = (0, u.e7)([I.ZP, L.Z], () => ((0, p.isWindows)() ? (0, G.Z)(I.ZP, L.Z) : null)),
@@ -83,9 +73,7 @@ function F(e) {
 				autoTrackExposure: !0
 			}
 		).enableSystemPicker;
-	(0, D.UB)(),
-		$ !== B.tI.PRESET_CUSTOM && ((ee = eo), (en = ec)),
-		!(0, j.Z)($, ee, en, ea, ei) && ((ee = eo), (en = ec));
+	(0, D.UB)(), $ !== B.tI.PRESET_CUSTOM && ((ee = eo), (en = ec)), !(0, j.Z)($, ee, en, ea, ei) && ((ee = eo), (en = ec));
 	let e_ = (0, C.Dt)();
 	let [eS, eg] = r.useState(((F = K), (z = Y), F ? 0 : z ? 2 : 3)),
 		[eh, eC] = r.useState(null),
@@ -130,10 +118,7 @@ function F(e) {
 					soundshareEnabled: eP
 				});
 			let c = (0, k.Z)(es, ef, I.ZP.getRunningGames()),
-				u =
-					!(0, p.isWindows)() || null == c || (null == ef ? void 0 : ef.id.startsWith('camera:')) || null == c
-						? null
-						: c.pid;
+				u = !(0, p.isWindows)() || null == c || (null == ef ? void 0 : ef.id.startsWith('camera:')) || null == c ? null : c.pid;
 			(0, _.WH)(s, t, {
 				pid: u,
 				sourceId: null == u && null != ef ? ef.id : null,

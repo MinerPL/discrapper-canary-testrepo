@@ -12,16 +12,7 @@ function a(e, t, n) {
 	return e.map((e, t) => r.luminance((e * n[t].base + a * n[t].tint) / (n[t].base + n[t].tint)).hex());
 }
 function s(e) {
-	let {
-			primaryBaseColors: t,
-			primaryTintColor: n,
-			primaryTintLuminances: r,
-			primaryLuminanceWeights: i,
-			secondaryBaseColors: s,
-			secondaryTintColor: o,
-			secondaryTintLuminances: l,
-			secondaryLuminanceWeights: u
-		} = e,
+	let { primaryBaseColors: t, primaryTintColor: n, primaryTintLuminances: r, primaryLuminanceWeights: i, secondaryBaseColors: s, secondaryTintColor: o, secondaryTintLuminances: l, secondaryLuminanceWeights: u } = e,
 		c = null != n ? a(r, n, i) : t,
 		d = [];
 	return (

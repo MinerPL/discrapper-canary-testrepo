@@ -8,9 +8,4 @@ function u(e) {
 	var t = (this.__data__ = new r(e));
 	this.size = t.size;
 }
-(u.prototype.clear = i),
-	(u.prototype.delete = a),
-	(u.prototype.get = s),
-	(u.prototype.has = o),
-	(u.prototype.set = l),
-	(e.exports = u);
+(u.prototype.clear = i), (u.prototype.delete = a), (u.prototype.get = s), (u.prototype.has = o), (u.prototype.set = l), (e.exports = u);

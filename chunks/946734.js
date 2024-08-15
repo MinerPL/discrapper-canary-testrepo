@@ -19,8 +19,8 @@ var i = n(735250),
 	_ = n(271383),
 	f = n(430824),
 	E = n(594174),
-	g = n(251625),
-	C = n(823379),
+	C = n(251625),
+	g = n(823379),
 	I = n(665149),
 	x = n(981631),
 	T = n(228168),
@@ -81,11 +81,9 @@ class Z {
 			S(
 				this,
 				'generateNicknameGuildPairs',
-				(0, g.oH)((e) => {
+				(0, C.oH)((e) => {
 					var t;
-					return l()(
-						_.ZP.getNicknameGuildsMapping(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : this.userId)
-					)
+					return l()(_.ZP.getNicknameGuildsMapping(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : this.userId))
 						.toPairs()
 						.map((e) => {
 							let [t, n] = e;
@@ -96,7 +94,7 @@ class Z {
 										var t;
 										return null === (t = f.Z.getGuild(e)) || void 0 === t ? void 0 : t.name;
 									})
-									.filter(C.lm)
+									.filter(g.lm)
 							];
 						})
 						.value();

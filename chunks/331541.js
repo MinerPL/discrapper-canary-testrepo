@@ -252,11 +252,7 @@ function er(e) {
 													children: [
 														ee.Z.Messages.FOCUS_MODE_TITLE,
 														(0, i.jsx)(d.TextBadge, {
-															text: s
-																? ee.Z.Messages.FOCUS_MODE_BADGE_ON
-																: c
-																	? ee.Z.Messages.FOCUS_MODE_BADGE_ON_VIA_DND
-																	: ee.Z.Messages.FOCUS_MODE_BADGE_OFF,
+															text: s ? ee.Z.Messages.FOCUS_MODE_BADGE_ON : c ? ee.Z.Messages.FOCUS_MODE_BADGE_ON_VIA_DND : ee.Z.Messages.FOCUS_MODE_BADGE_OFF,
 															color: s ? l.Z.BRAND_500 : c ? l.Z.RED_400 : l.Z.PRIMARY_500
 														})
 													]
@@ -457,10 +453,7 @@ function er(e) {
 																		alignItems: 'center',
 																		justifyContent: 'space-between'
 																	},
-																	children: [
-																		(0, K.u5)(ed),
-																		ep || eT ? (0, i.jsx)(d.BellSlashIcon, { size: 'xxs' }) : null
-																	]
+																	children: [(0, K.u5)(ed), ep || eT ? (0, i.jsx)(d.BellSlashIcon, { size: 'xxs' }) : null]
 																}),
 																focusedClassName: et.menuItemFocused,
 																subMenuIconClassName: et.subMenuIcon,

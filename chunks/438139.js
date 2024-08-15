@@ -19,8 +19,7 @@ function l(e) {
 			this._interval.stop();
 		}
 		componentDidUpdate(e) {
-			(e.timestamps.end !== this.props.timestamps.end || e.timestamps.start !== this.props.timestamps.start) &&
-				this.setState(this.getUpdatedTime());
+			(e.timestamps.end !== this.props.timestamps.end || e.timestamps.start !== this.props.timestamps.start) && this.setState(this.getUpdatedTime());
 		}
 		getUpdatedTime() {
 			let { timestamps: e } = this.props,

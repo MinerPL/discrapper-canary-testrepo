@@ -16,26 +16,17 @@ var r = n(735250),
 	c = n(689938),
 	d = n(4450);
 function _(e) {
-	return e || !(a.tq || a.Em)
-		? c.Z.Messages.SEASONAL_GIFTING_DM_POPUP_BODY
-		: c.Z.Messages.SEASONAL_GIFTING_MAKE_SOMEONES_DAY_TOOLTIP;
+	return e || !(a.tq || a.Em) ? c.Z.Messages.SEASONAL_GIFTING_DM_POPUP_BODY : c.Z.Messages.SEASONAL_GIFTING_MAKE_SOMEONES_DAY_TOOLTIP;
 }
 function E(e) {
 	let { onComplete: t, onDMCheckItOutClick: u, isDM: E } = e;
 	i.useEffect(() => {
 		o.default.track(l.rMx.PREMIUM_GIFT_UPSELL_VIEWED, { type: 'holiday_gifting_tip' });
 	}, []);
-	let f = i.useMemo(
-			() => [
-				() => n.e('36278').then(n.t.bind(n, 268147, 19)),
-				() => n.e('66902').then(n.t.bind(n, 7171, 19)),
-				() => n.e('99694').then(n.t.bind(n, 55562, 19))
-			],
-			[]
-		),
+	let f = i.useMemo(() => [() => n.e('36278').then(n.t.bind(n, 268147, 19)), () => n.e('66902').then(n.t.bind(n, 7171, 19)), () => n.e('99694').then(n.t.bind(n, 55562, 19))], []),
 		h = E || !(a.tq || a.Em),
 		p = h ? c.Z.Messages.SEASONAL_GIFTING_DM_POPUP_HEADER : c.Z.Messages.SEASONAL_GIFTING_POPUP_HEADER,
-		I = h ? c.Z.Messages.SEASONAL_GIFTING_DM_POPUP_CTA : c.Z.Messages.SEASONAL_GIFTING_SEND_GIFT_CTA;
+		m = h ? c.Z.Messages.SEASONAL_GIFTING_DM_POPUP_CTA : c.Z.Messages.SEASONAL_GIFTING_SEND_GIFT_CTA;
 	return (0, r.jsxs)('div', {
 		className: d.container,
 		children: [
@@ -72,7 +63,7 @@ function E(e) {
 						className: d.dmButton,
 						color: s.Button.Colors.BRAND_INVERTED,
 						onClick: () => u(),
-						children: I
+						children: m
 					})
 				]
 			}),

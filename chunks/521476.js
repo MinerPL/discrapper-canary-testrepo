@@ -23,9 +23,7 @@ function h(e) {
 			analyticsLocations: m,
 			openWithoutBackstack: !0
 		}),
-		f = _
-			? u.Z.Messages.GUILD_AUTOMOD_PROFILE_INVALID_DESCRIPTION
-			: u.Z.Messages.GUILD_AUTOMOD_PROFILE_INVALID_NO_PERMS_DESCRIPTION,
+		f = _ ? u.Z.Messages.GUILD_AUTOMOD_PROFILE_INVALID_DESCRIPTION : u.Z.Messages.GUILD_AUTOMOD_PROFILE_INVALID_NO_PERMS_DESCRIPTION,
 		E = _ ? u.Z.Messages.GUILD_AUTOMOD_UPDATE_PROFILE_CTA : u.Z.Messages.GUILD_AUTOMOD_UPDATE_ACCOUNT_USERNAME_CTA;
 	return (0, i.jsx)('div', {
 		children: (0, i.jsx)(r.i, {
@@ -34,9 +32,7 @@ function h(e) {
 				color: 'currentColor',
 				className: d.bannerIcon
 			}),
-			bannerHeader: u.Z.Messages.GUILD_AUTOMOD_PROFILE_INVALID_MODAL_TITLE_MOBILE.format({
-				guildName: null !== (n = null == h ? void 0 : h.name) && void 0 !== n ? n : ''
-			}),
+			bannerHeader: u.Z.Messages.GUILD_AUTOMOD_PROFILE_INVALID_MODAL_TITLE_MOBILE.format({ guildName: null !== (n = null == h ? void 0 : h.name) && void 0 !== n ? n : '' }),
 			bannerSubtext: f,
 			containerStyles: d.bannerContainer,
 			headerStyles: d.bannerHeader,

@@ -18,8 +18,8 @@ function u(e) {
 		u,
 		{ channel: d, messages: h, oldestUnreadMessageId: m, treatSpam: p, summaries: _, selectedSummary: f } = e,
 		E = [],
-		g = !1,
-		C = null != m ? l.default.extractTimestamp(m) : null,
+		C = !1,
+		g = null != m ? l.default.extractTimestamp(m) : null,
 		I = null;
 	return (
 		h.forEach((e) => {
@@ -54,7 +54,7 @@ function u(e) {
 			let b = E[E.length - 1],
 				R = null,
 				j = (0, o.DQ)(e);
-			g = g || j;
+			C = C || j;
 			let L = (function (e, t, n) {
 				if (i.V.NON_COLLAPSIBLE.has(t.type));
 				else if (t.blocked) return c.ys_.MESSAGE_GROUP_BLOCKED;
@@ -78,8 +78,8 @@ function u(e) {
 						: (n = (t = v).content[t.content.length - 1]),
 					[t, n]);
 			}
-			if (m === e.id && null != C) {
-				if (null != b && b.type === c.ys_.DIVIDER) (b.unreadId = e.id), (C = null);
+			if (m === e.id && null != g) {
+				if (null != b && b.type === c.ys_.DIVIDER) (b.unreadId = e.id), (g = null);
 				else if (null !== R) {
 					(S = R),
 						(Z = d),
@@ -89,23 +89,23 @@ function u(e) {
 								unreadId: A.id
 							}),
 						(S.hasUnread = !0),
-						(C = null);
+						(g = null);
 				} else
 					!e.isFirstMessageInForumPost(d) &&
 						E.push({
 							type: c.ys_.DIVIDER,
 							unreadId: e.id
 						}),
-						(C = null);
+						(g = null);
 			} else
-				null != C &&
-					l.default.extractTimestamp(e.id) > C &&
+				null != g &&
+					l.default.extractTimestamp(e.id) > g &&
 					(!e.isFirstMessageInForumPost(d) &&
 						E.push({
 							type: c.ys_.DIVIDER,
 							unreadId: e.id
 						}),
-					(C = null));
+					(g = null));
 			let P = (null == b ? void 0 : b.type) === c.ys_.MESSAGE ? u : b;
 			(0, r.J)(d, P, e) && (n = e.id);
 			let O = {
@@ -137,7 +137,7 @@ function u(e) {
 						isSummaryDivider: !0
 					});
 		}),
-		g && (0, o.P1)(d) && a.Z.trackExposure({ location: '416cc9_1' }),
+		C && (0, o.P1)(d) && a.Z.trackExposure({ location: '416cc9_1' }),
 		E
 	);
 }

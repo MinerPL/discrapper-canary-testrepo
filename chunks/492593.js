@@ -18,8 +18,8 @@ t.Z = function (e) {
 			childrenButtons: f,
 			childrenMessageContent: h,
 			childrenAccessories: p,
-			messageRef: I,
-			focusProps: m = {
+			messageRef: m,
+			focusProps: I = {
 				offset: {
 					left: 4,
 					right: 4
@@ -31,7 +31,7 @@ t.Z = function (e) {
 			...A
 		} = e,
 		N = (0, r.jsx)(s.FocusRing, {
-			...m,
+			...I,
 			children: (0, r.jsxs)('div', {
 				className: a()(t, {
 					[o.wrapper]: !0,
@@ -43,7 +43,7 @@ t.Z = function (e) {
 					[o.isSystemMessage]: g,
 					[o.hasReply]: S
 				}),
-				ref: I,
+				ref: m,
 				...A,
 				role: 'article',
 				children: [

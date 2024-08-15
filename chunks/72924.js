@@ -23,12 +23,9 @@ async function h(e) {
 		f = m.Z.get(n);
 	if (null == f) {
 		let e = (await (0, l.oJ)(t)).find((e) => e.sku.id === n);
-		s()(null != e, 'Could not find store listing for sku'),
-			e.sku.type === T.epS.SUBSCRIPTION_GROUP && (await (0, E.rx)(t, e.id));
+		s()(null != e, 'Could not find store listing for sku'), e.sku.type === T.epS.SUBSCRIPTION_GROUP && (await (0, E.rx)(t, e.id));
 	}
-	(f = null != f ? f : m.Z.get(n)),
-		s()(null != f && f.applicationId === t, 'SKU must belong to application'),
-		f.type === T.epS.SUBSCRIPTION && !(0, c.a)([f.id]) && (await (0, o.GZ)(f.id));
+	(f = null != f ? f : m.Z.get(n)), s()(null != f && f.applicationId === t, 'SKU must belong to application'), f.type === T.epS.SUBSCRIPTION && !(0, c.a)([f.id]) && (await (0, o.GZ)(f.id));
 	let C = (function () {
 		let e = _.Z.getWindow(T.KJ3.CHANNEL_CALL_POPOUT);
 		return null == e || e.closed ? r.DEFAULT_MODAL_CONTEXT : r.POPOUT_MODAL_CONTEXT;

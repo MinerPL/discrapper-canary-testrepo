@@ -17,9 +17,7 @@ function m() {
 	(function () {
 		(u = !1), (E = null);
 	})(),
-		null != (E = N.Z.getGuildId()) &&
-			N.Z.getSection() === _.pNK.ONBOARDING &&
-			(T = new Set(I.Z.getDefaultChannelIds(E)));
+		null != (E = N.Z.getGuildId()) && N.Z.getSection() === _.pNK.ONBOARDING && (T = new Set(I.Z.getDefaultChannelIds(E)));
 }
 class O extends (s = c.ZP.Store) {
 	initialize() {

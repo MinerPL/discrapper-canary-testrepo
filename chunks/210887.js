@@ -14,8 +14,8 @@ var f = n(541049);
 n(449934);
 var h = n(12647),
 	p = n(358085),
-	I = n(238514),
-	m = n(740492),
+	m = n(238514),
+	I = n(740492),
 	T = n(581883),
 	g = n(874893),
 	S = n(981631),
@@ -41,9 +41,9 @@ function C() {
 		var e, t;
 		if (__OVERLAY__) return S.BRd.DARK;
 		if (d.Z.syncForcedColors && 'active' === d.Z.systemForcedColors && null != r) return r;
-		let n = m.ZP.useSystemTheme;
+		let n = I.ZP.useSystemTheme;
 		if (n === g.K.ON && null != r) return r;
-		let i = null === (e = I.Z.getAppearanceSettings()) || void 0 === e ? void 0 : e.theme;
+		let i = null === (e = m.Z.getAppearanceSettings()) || void 0 === e ? void 0 : e.theme;
 		if (null != i) return i;
 		let a = null === (t = T.Z.settings.appearance) || void 0 === t ? void 0 : t.theme;
 		if (null == a) return v;
@@ -75,13 +75,13 @@ function L() {
 }
 class b extends (a = s.ZP.PersistedStore) {
 	initialize(e) {
-		(null == e ? void 0 : e.theme) != null && (v = e.theme), this.waitFor(m.ZP, I.Z, T.Z, d.Z);
+		(null == e ? void 0 : e.theme) != null && (v = e.theme), this.waitFor(I.ZP, m.Z, T.Z, d.Z);
 	}
 	getState() {
 		return { theme: this.theme };
 	}
 	get darkSidebar() {
-		return (0, u.ap)(this.theme) && m.ZP.darkSidebar && !R;
+		return (0, u.ap)(this.theme) && I.ZP.darkSidebar && !R;
 	}
 	get theme() {
 		return C();
@@ -119,13 +119,7 @@ N(b, 'displayName', 'ThemeStore'),
 				v !== S.BRd.DARK &&
 				((v = S.BRd.DARK),
 				(function () {
-					!__OVERLAY__ &&
-						p.isPlatformEmbedded &&
-						h.Z.setApplicationBackgroundColor(
-							(0, u.wj)(C())
-								? l.Z.unsafe_rawColors.PRIMARY_700.resolve({ saturation: d.Z.saturation }).hsl()
-								: l.Z.unsafe_rawColors.WHITE_500.resolve({ saturation: d.Z.saturation }).hsl()
-						);
+					!__OVERLAY__ && p.isPlatformEmbedded && h.Z.setApplicationBackgroundColor((0, u.wj)(C()) ? l.Z.unsafe_rawColors.PRIMARY_700.resolve({ saturation: d.Z.saturation }).hsl() : l.Z.unsafe_rawColors.WHITE_500.resolve({ saturation: d.Z.saturation }).hsl());
 				})(),
 				L())
 			);
@@ -137,8 +131,7 @@ N(b, 'displayName', 'ThemeStore'),
 		UPDATE_BACKGROUND_GRADIENT_PRESET: function (e) {
 			var t, n;
 			let { presetId: r } = e;
-			v =
-				null != r && null !== (n = null === (t = A.qt[r]) || void 0 === t ? void 0 : t.theme) && void 0 !== n ? n : C();
+			v = null != r && null !== (n = null === (t = A.qt[r]) || void 0 === t ? void 0 : t.theme) && void 0 !== n ? n : C();
 			let i = null != r;
 			return R !== i
 				? ((R = i), !0)

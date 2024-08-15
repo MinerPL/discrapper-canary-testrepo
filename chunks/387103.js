@@ -82,15 +82,7 @@ function i(e, t) {
 function a(e, t, n, r) {
 	let i = (t = o(e, t)) - 1,
 		a = -2;
-	return (
-		n <= 2 ? (a = 0) : s(t) && (a = -1),
-		1721425 +
-			365 * i +
-			Math.floor(i / 4) -
-			Math.floor(i / 100) +
-			Math.floor(i / 400) +
-			Math.floor((367 * n - 362) / 12 + a + r)
-	);
+	return n <= 2 ? (a = 0) : s(t) && (a = -1), 1721425 + 365 * i + Math.floor(i / 4) - Math.floor(i / 100) + Math.floor(i / 400) + Math.floor((367 * n - 362) / 12 + a + r);
 }
 function s(e) {
 	return e % 4 == 0 && (e % 100 != 0 || e % 400 == 0);
@@ -113,16 +105,13 @@ class u {
 			c = i(l, 36524),
 			d = Math.floor(c / 1461),
 			_ = Math.floor(i(c, 1461) / 365);
-		let [E, f] =
-				((n = 'AD'),
-				(t = 400 * o + 100 * u + 4 * d + _ + (4 !== u && 4 !== _ ? 1 : 0)) <= 0 && ((n = 'BC'), (t = 1 - t)),
-				[n, t]),
+		let [E, f] = ((n = 'AD'), (t = 400 * o + 100 * u + 4 * d + _ + (4 !== u && 4 !== _ ? 1 : 0)) <= 0 && ((n = 'BC'), (t = 1 - t)), [n, t]),
 			h = e - a(E, f, 1, 1),
 			p = 2;
 		e < a(E, f, 3, 1) ? (p = 0) : s(f) && (p = 1);
-		let I = Math.floor(((h + p) * 12 + 373) / 367),
-			m = e - a(E, f, I, 1) + 1;
-		return new eE(E, f, I, m);
+		let m = Math.floor(((h + p) * 12 + 373) / 367),
+			I = e - a(E, f, m, 1) + 1;
+		return new eE(E, f, m, I);
 	}
 	toJulianDay(e) {
 		return a(e.era, e.year, e.month, e.day);
@@ -253,13 +242,7 @@ function d(e, t) {
 	return (t = Z(t, e.calendar)), e.era === t.era && e.year === t.year && e.month === t.month && e.day === t.day;
 }
 function _(e, t) {
-	return (
-		e.calendar.identifier === t.calendar.identifier &&
-		e.era === t.era &&
-		e.year === t.year &&
-		e.month === t.month &&
-		e.day === t.day
-	);
+	return e.calendar.identifier === t.calendar.identifier && e.era === t.era && e.year === t.year && e.month === t.month && e.day === t.day;
 }
 function E(e, t) {
 	return d(e, p(t));
@@ -289,10 +272,10 @@ function h(e) {
 function p(e) {
 	return F(h(e));
 }
-function I(e, t) {
+function m(e, t) {
 	return e.calendar.toJulianDay(e) - t.calendar.toJulianDay(t);
 }
-function m(e, t) {
+function I(e, t) {
 	return T(e) - T(t);
 }
 function T(e) {
@@ -391,14 +374,7 @@ function G(e, t, n = 'compatible') {
 		((a = c - d) == (s = c - _) ? [a] : [a, s]).filter((e) =>
 			(function (e, t, n) {
 				let r = x(n, t);
-				return (
-					e.year === r.year &&
-					e.month === r.month &&
-					e.day === r.day &&
-					e.hour === r.hour &&
-					e.minute === r.minute &&
-					e.second === r.second
-				);
+				return e.year === r.year && e.month === r.month && e.day === r.day && e.hour === r.hour && e.minute === r.minute && e.second === r.second;
 			})(r, i, e)
 		));
 	if (1 === E.length) return E[0];
@@ -428,17 +404,7 @@ function k(e, t, n = 'compatible') {
 function B(e, t) {
 	let n = U(e, t),
 		r = new Date(e + n);
-	return new eT(
-		r.getUTCFullYear(),
-		r.getUTCMonth() + 1,
-		r.getUTCDate(),
-		t,
-		n,
-		r.getUTCHours(),
-		r.getUTCMinutes(),
-		r.getUTCSeconds(),
-		r.getUTCMilliseconds()
-	);
+	return new eT(r.getUTCFullYear(), r.getUTCMonth() + 1, r.getUTCDate(), t, n, r.getUTCHours(), r.getUTCMinutes(), r.getUTCSeconds(), r.getUTCMilliseconds());
 }
 function F(e) {
 	return new eE(e.calendar, e.era, e.year, e.month, e.day);
@@ -450,10 +416,7 @@ function V(e, t) {
 		a = 0;
 	if ('timeZone' in e) ({ hour: n, minute: r, second: i, millisecond: a } = e);
 	else if ('hour' in e && !t) return e;
-	return (
-		t && ({ hour: n, minute: r, second: i, millisecond: a } = t),
-		new eI(e.calendar, e.era, e.year, e.month, e.day, n, r, i, a)
-	);
+	return t && ({ hour: n, minute: r, second: i, millisecond: a } = t), new em(e.calendar, e.era, e.year, e.month, e.day, n, r, i, a);
 }
 function H(e) {
 	return new eh(e.hour, e.minute, e.second, e.millisecond);
@@ -498,11 +461,7 @@ function j(e, t) {
 	}
 	n.month < 1 && ((n.month = 1), (n.day = 1));
 	let o = n.calendar.getMonthsInYear(n);
-	return (
-		n.month > o && ((n.month = o), (n.day = n.calendar.getDaysInMonth(n))),
-		(n.day = Math.max(1, Math.min(n.calendar.getDaysInMonth(n), n.day))),
-		n
-	);
+	return n.month > o && ((n.month = o), (n.day = n.calendar.getDaysInMonth(n))), (n.day = Math.max(1, Math.min(n.calendar.getDaysInMonth(n), n.day))), n;
 }
 function W(e, t) {
 	var n, r;
@@ -514,13 +473,10 @@ function K(e) {
 	for (; e.month > (t = e.calendar.getMonthsInYear(e)); ) (e.month -= t), W(e, 1);
 }
 function z(e) {
-	(e.month = Math.max(1, Math.min(e.calendar.getMonthsInYear(e), e.month))),
-		(e.day = Math.max(1, Math.min(e.calendar.getDaysInMonth(e), e.day)));
+	(e.month = Math.max(1, Math.min(e.calendar.getMonthsInYear(e), e.month))), (e.day = Math.max(1, Math.min(e.calendar.getDaysInMonth(e), e.day)));
 }
 function q(e) {
-	e.calendar.constrainDate && e.calendar.constrainDate(e),
-		(e.year = Math.max(1, Math.min(e.calendar.getYearsInEra(e), e.year))),
-		z(e);
+	e.calendar.constrainDate && e.calendar.constrainDate(e), (e.year = Math.max(1, Math.min(e.calendar.getYearsInEra(e), e.year))), z(e);
 }
 function Q(e) {
 	let t = {};
@@ -532,31 +488,14 @@ function X(e, t) {
 }
 function $(e, t) {
 	let n = e.copy();
-	return (
-		null != t.era && (n.era = t.era),
-		null != t.year && (n.year = t.year),
-		null != t.month && (n.month = t.month),
-		null != t.day && (n.day = t.day),
-		q(n),
-		n
-	);
+	return null != t.era && (n.era = t.era), null != t.year && (n.year = t.year), null != t.month && (n.month = t.month), null != t.day && (n.day = t.day), q(n), n;
 }
 function J(e, t) {
 	let n = e.copy();
-	return (
-		null != t.hour && (n.hour = t.hour),
-		null != t.minute && (n.minute = t.minute),
-		null != t.second && (n.second = t.second),
-		null != t.millisecond && (n.millisecond = t.millisecond),
-		ee(n),
-		n
-	);
+	return null != t.hour && (n.hour = t.hour), null != t.minute && (n.minute = t.minute), null != t.second && (n.second = t.second), null != t.millisecond && (n.millisecond = t.millisecond), ee(n), n;
 }
 function ee(e) {
-	(e.millisecond = Math.max(0, Math.min(e.millisecond, 1000))),
-		(e.second = Math.max(0, Math.min(e.second, 59))),
-		(e.minute = Math.max(0, Math.min(e.minute, 59))),
-		(e.hour = Math.max(0, Math.min(e.hour, 23)));
+	(e.millisecond = Math.max(0, Math.min(e.millisecond, 1000))), (e.second = Math.max(0, Math.min(e.second, 59))), (e.minute = Math.max(0, Math.min(e.minute, 59))), (e.hour = Math.max(0, Math.min(e.hour, 23)));
 }
 function et(e, t) {
 	let n = e % t;
@@ -565,22 +504,8 @@ function et(e, t) {
 function en(e, t) {
 	var n;
 	let r;
-	(e.hour += t.hours || 0),
-		(e.minute += t.minutes || 0),
-		(e.second += t.seconds || 0),
-		(e.millisecond += t.milliseconds || 0);
-	return (
-		(n = e),
-		(n.second += Math.floor(n.millisecond / 1000)),
-		(n.millisecond = et(n.millisecond, 1000)),
-		(n.minute += Math.floor(n.second / 60)),
-		(n.second = et(n.second, 60)),
-		(n.hour += Math.floor(n.minute / 60)),
-		(n.minute = et(n.minute, 60)),
-		(r = Math.floor(n.hour / 24)),
-		(n.hour = et(n.hour, 24)),
-		r
-	);
+	(e.hour += t.hours || 0), (e.minute += t.minutes || 0), (e.second += t.seconds || 0), (e.millisecond += t.milliseconds || 0);
+	return (n = e), (n.second += Math.floor(n.millisecond / 1000)), (n.millisecond = et(n.millisecond, 1000)), (n.minute += Math.floor(n.second / 60)), (n.second = et(n.second, 60)), (n.hour += Math.floor(n.minute / 60)), (n.minute = et(n.minute, 60)), (r = Math.floor(n.hour / 24)), (n.hour = et(n.hour, 24)), r;
 }
 function er(e, t) {
 	let n = e.copy();
@@ -598,10 +523,7 @@ function ei(e, t, n, r) {
 		}
 		case 'year':
 			var a, s;
-			(null === (a = (s = i.calendar).isInverseEra) || void 0 === a ? void 0 : a.call(s, i)) && (n = -n),
-				(i.year = es(e.year, n, -1 / 0, 9999, null == r ? void 0 : r.round)),
-				i.year === -1 / 0 && (i.year = 1),
-				i.calendar.balanceYearMonth && i.calendar.balanceYearMonth(i, e);
+			(null === (a = (s = i.calendar).isInverseEra) || void 0 === a ? void 0 : a.call(s, i)) && (n = -n), (i.year = es(e.year, n, -1 / 0, 9999, null == r ? void 0 : r.round)), i.year === -1 / 0 && (i.year = 1), i.calendar.balanceYearMonth && i.calendar.balanceYearMonth(i, e);
 			break;
 		case 'month':
 			i.month = es(e.month, n, 1, e.calendar.getMonthsInYear(e), null == r ? void 0 : r.round);
@@ -652,12 +574,7 @@ function es(e, t, n, r, i = !1) {
 }
 function eo(e, t) {
 	let n;
-	if (
-		(null != t.years && 0 !== t.years) ||
-		(null != t.months && 0 !== t.months) ||
-		(null != t.weeks && 0 !== t.weeks) ||
-		(null != t.days && 0 !== t.days)
-	) {
+	if ((null != t.years && 0 !== t.years) || (null != t.months && 0 !== t.months) || (null != t.weeks && 0 !== t.weeks) || (null != t.days && 0 !== t.days)) {
 		let r;
 		n = G(
 			j(V(e), {
@@ -669,13 +586,7 @@ function eo(e, t) {
 			e.timeZone
 		);
 	} else n = M(e) - e.offset;
-	return Z(
-		B(
-			(n += (t.milliseconds || 0) + 1000 * (t.seconds || 0) + 60000 * (t.minutes || 0) + 3600000 * (t.hours || 0)),
-			e.timeZone
-		),
-		e.calendar
-	);
+	return Z(B((n += (t.milliseconds || 0) + 1000 * (t.seconds || 0) + 60000 * (t.minutes || 0) + 3600000 * (t.hours || 0)), e.timeZone), e.calendar);
 }
 function el(e) {
 	return `${String(e.hour).padStart(2, '0')}:${String(e.minute).padStart(2, '0')}:${String(e.second).padStart(2, '0')}${e.millisecond ? String(e.millisecond / 1000).slice(1) : ''}`;
@@ -700,9 +611,7 @@ function ed(e) {
 var e_ = new WeakMap();
 class eE {
 	copy() {
-		return this.era
-			? new eE(this.calendar, this.era, this.year, this.month, this.day)
-			: new eE(this.calendar, this.year, this.month, this.day);
+		return this.era ? new eE(this.calendar, this.era, this.year, this.month, this.day) : new eE(this.calendar, this.year, this.month, this.day);
 	}
 	add(e) {
 		return j(this, e);
@@ -724,7 +633,7 @@ class eE {
 		return eu(this);
 	}
 	compare(e) {
-		return I(this, e);
+		return m(this, e);
 	}
 	constructor(...e) {
 		(0, r._)(this, e_, {
@@ -773,21 +682,9 @@ class eh {
 	}
 }
 var ep = new WeakMap();
-class eI {
+class em {
 	copy() {
-		return this.era
-			? new eI(
-					this.calendar,
-					this.era,
-					this.year,
-					this.month,
-					this.day,
-					this.hour,
-					this.minute,
-					this.second,
-					this.millisecond
-				)
-			: new eI(this.calendar, this.year, this.month, this.day, this.hour, this.minute, this.second, this.millisecond);
+		return this.era ? new em(this.calendar, this.era, this.year, this.month, this.day, this.hour, this.minute, this.second, this.millisecond) : new em(this.calendar, this.year, this.month, this.day, this.hour, this.minute, this.second, this.millisecond);
 	}
 	add(e) {
 		return j(this, e);
@@ -817,7 +714,7 @@ class eI {
 		return ec(this);
 	}
 	compare(e) {
-		let t = I(this, e);
+		let t = m(this, e);
 		if (0 === t) {
 			var n, r;
 			return (n = this), (r = V(e)), T(n) - T(r);
@@ -830,47 +727,13 @@ class eI {
 			value: void 0
 		});
 		let [t, n, i, a, s] = ed(e);
-		(this.calendar = t),
-			(this.era = n),
-			(this.year = i),
-			(this.month = a),
-			(this.day = s),
-			(this.hour = e.shift() || 0),
-			(this.minute = e.shift() || 0),
-			(this.second = e.shift() || 0),
-			(this.millisecond = e.shift() || 0),
-			q(this);
+		(this.calendar = t), (this.era = n), (this.year = i), (this.month = a), (this.day = s), (this.hour = e.shift() || 0), (this.minute = e.shift() || 0), (this.second = e.shift() || 0), (this.millisecond = e.shift() || 0), q(this);
 	}
 }
-var em = new WeakMap();
+var eI = new WeakMap();
 class eT {
 	copy() {
-		return this.era
-			? new eT(
-					this.calendar,
-					this.era,
-					this.year,
-					this.month,
-					this.day,
-					this.timeZone,
-					this.offset,
-					this.hour,
-					this.minute,
-					this.second,
-					this.millisecond
-				)
-			: new eT(
-					this.calendar,
-					this.year,
-					this.month,
-					this.day,
-					this.timeZone,
-					this.offset,
-					this.hour,
-					this.minute,
-					this.second,
-					this.millisecond
-				);
+		return this.era ? new eT(this.calendar, this.era, this.year, this.month, this.day, this.timeZone, this.offset, this.hour, this.minute, this.second, this.millisecond) : new eT(this.calendar, this.year, this.month, this.day, this.timeZone, this.offset, this.hour, this.minute, this.second, this.millisecond);
 	}
 	add(e) {
 		return eo(this, e);
@@ -882,12 +745,7 @@ class eT {
 	set(e, t) {
 		var n, r, i;
 		let a, s;
-		return (
-			(n = this),
-			(r = e),
-			(i = t),
-			0 === (s = J($((a = V(n)), r), r)).compare(a) ? n : Z(B(G(s, n.timeZone, i), n.timeZone), n.calendar)
-		);
+		return (n = this), (r = e), (i = t), 0 === (s = J($((a = V(n)), r), r)).compare(a) ? n : Z(B(G(s, n.timeZone, i), n.timeZone), n.calendar);
 	}
 	cycle(e, t, n) {
 		return (function (e, t, n, r) {
@@ -901,24 +759,13 @@ class eT {
 					}
 					let a = V(e),
 						s = Z(J(a, { hour: t }), new u()),
-						o = [G(s, e.timeZone, 'earlier'), G(s, e.timeZone, 'later')].filter(
-							(t) => B(t, e.timeZone).day === s.day
-						)[0],
+						o = [G(s, e.timeZone, 'earlier'), G(s, e.timeZone, 'later')].filter((t) => B(t, e.timeZone).day === s.day)[0],
 						l = Z(J(a, { hour: i }), new u()),
-						c = [G(l, e.timeZone, 'earlier'), G(l, e.timeZone, 'later')]
-							.filter((t) => B(t, e.timeZone).day === l.day)
-							.pop(),
+						c = [G(l, e.timeZone, 'earlier'), G(l, e.timeZone, 'later')].filter((t) => B(t, e.timeZone).day === l.day).pop(),
 						d = M(e) - e.offset,
 						_ = Math.floor(d / 3600000),
 						E = d % 3600000;
-					return Z(
-						B(
-							(d =
-								3600000 * es(_, n, Math.floor(o / 3600000), Math.floor(c / 3600000), null == r ? void 0 : r.round) + E),
-							e.timeZone
-						),
-						e.calendar
-					);
+					return Z(B((d = 3600000 * es(_, n, Math.floor(o / 3600000), Math.floor(c / 3600000), null == r ? void 0 : r.round) + E), e.timeZone), e.calendar);
 				}
 				case 'minute':
 				case 'second':
@@ -941,10 +788,7 @@ class eT {
 	toString() {
 		var e, t;
 		let n, r, i;
-		return (
-			(e = this),
-			`${ec(e)}${((n = 0 > Math.sign((t = e.offset)) ? '-' : '+'), (r = Math.floor((t = Math.abs(t)) / 3600000)), (i = (t % 3600000) / 60000), `${n}${String(r).padStart(2, '0')}:${String(i).padStart(2, '0')}`)}[${e.timeZone}]`
-		);
+		return (e = this), `${ec(e)}${((n = 0 > Math.sign((t = e.offset)) ? '-' : '+'), (r = Math.floor((t = Math.abs(t)) / 3600000)), (i = (t % 3600000) / 60000), `${n}${String(r).padStart(2, '0')}:${String(i).padStart(2, '0')}`)}[${e.timeZone}]`;
 	}
 	toAbsoluteString() {
 		return this.toDate().toISOString();
@@ -953,25 +797,14 @@ class eT {
 		return this.toDate().getTime() - Y(e, this.timeZone).toDate().getTime();
 	}
 	constructor(...e) {
-		(0, r._)(this, em, {
+		(0, r._)(this, eI, {
 			writable: !0,
 			value: void 0
 		});
 		let [t, n, i, a, s] = ed(e),
 			o = e.shift(),
 			l = e.shift();
-		(this.calendar = t),
-			(this.era = n),
-			(this.year = i),
-			(this.month = a),
-			(this.day = s),
-			(this.timeZone = o),
-			(this.offset = l),
-			(this.hour = e.shift() || 0),
-			(this.minute = e.shift() || 0),
-			(this.second = e.shift() || 0),
-			(this.millisecond = e.shift() || 0),
-			q(this);
+		(this.calendar = t), (this.era = n), (this.year = i), (this.month = a), (this.day = s), (this.timeZone = o), (this.offset = l), (this.hour = e.shift() || 0), (this.minute = e.shift() || 0), (this.second = e.shift() || 0), (this.millisecond = e.shift() || 0), q(this);
 	}
 }
 let eg = new Map();

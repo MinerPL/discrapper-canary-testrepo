@@ -15,10 +15,7 @@ function s(e) {
 			if (null == e.threadMetadata) return 0;
 			let n = null !== (t = r.ZP.lastMessageId(e.id)) && void 0 !== t ? t : e.id,
 				i = a.default.extractTimestamp(n);
-			return Math.max(
-				i,
-				null != e.threadMetadata.archiveTimestamp ? new Date(e.threadMetadata.archiveTimestamp).getTime() : 0
-			);
+			return Math.max(i, null != e.threadMetadata.archiveTimestamp ? new Date(e.threadMetadata.archiveTimestamp).getTime() : 0);
 		})(e) + t
 	);
 }

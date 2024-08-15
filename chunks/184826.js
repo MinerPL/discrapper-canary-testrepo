@@ -62,9 +62,7 @@ t.Z = function (e) {
 				if (45 === a.charCodeAt(4))
 					switch (a.charCodeAt(5)) {
 						case 103:
-							return (
-								'-webkit-box-' + a.replace('-grow', '') + '-webkit-' + a + '-ms-' + a.replace('grow', 'positive') + a
-							);
+							return '-webkit-box-' + a.replace('-grow', '') + '-webkit-' + a + '-ms-' + a.replace('grow', 'positive') + a;
 						case 115:
 							return '-webkit-' + a + '-ms-' + a.replace('shrink', 'negative') + a;
 						case 98:
@@ -75,15 +73,7 @@ t.Z = function (e) {
 				return '-webkit-' + a + '-ms-flex-' + a + a;
 			case 1023:
 				if (99 !== a.charCodeAt(8)) break;
-				return (
-					'-webkit-box-pack' +
-					(s = a.substring(a.indexOf(':', 15)).replace('flex-', '').replace('space-between', 'justify')) +
-					'-webkit-' +
-					a +
-					'-ms-flex-pack' +
-					s +
-					a
-				);
+				return '-webkit-box-pack' + (s = a.substring(a.indexOf(':', 15)).replace('flex-', '').replace('space-between', 'justify')) + '-webkit-' + a + '-ms-flex-pack' + s + a;
 			case 1005:
 				return d.test(a) ? a.replace(p, ':-webkit-') + a.replace(p, ':-moz-') + a : a;
 			case 1000:
@@ -104,14 +94,7 @@ t.Z = function (e) {
 			case 1017:
 				if (-1 === a.indexOf('sticky', 9)) break;
 			case 975:
-				switch (
-					((t = (a = e).length - 10),
-					(u =
-						(s = (33 === a.charCodeAt(t) ? a.substring(0, t) : a).substring(e.indexOf(':', 7) + 1).trim()).charCodeAt(
-							0
-						) +
-						(0 | s.charCodeAt(7))))
-				) {
+				switch (((t = (a = e).length - 10), (u = (s = (33 === a.charCodeAt(t) ? a.substring(0, t) : a).substring(e.indexOf(':', 7) + 1).trim()).charCodeAt(0) + (0 | s.charCodeAt(7))))) {
 					case 203:
 						if (111 > s.charCodeAt(8)) break;
 					case 115:
@@ -119,14 +102,7 @@ t.Z = function (e) {
 						break;
 					case 207:
 					case 102:
-						a =
-							a.replace(s, '-webkit-' + (102 < u ? 'inline-' : '') + 'box') +
-							';' +
-							a.replace(s, '-webkit-' + s) +
-							';' +
-							a.replace(s, '-ms-' + s + 'box') +
-							';' +
-							a;
+						a = a.replace(s, '-webkit-' + (102 < u ? 'inline-' : '') + 'box') + ';' + a.replace(s, '-webkit-' + s) + ';' + a.replace(s, '-ms-' + s + 'box') + ';' + a;
 				}
 				return a + ';';
 			case 938:
@@ -145,17 +121,10 @@ t.Z = function (e) {
 				if (45 !== a.charCodeAt(3) || 122 === a.charCodeAt(4)) break;
 			case 931:
 			case 953:
-				if (!0 === A.test(e))
-					return 115 === (s = e.substring(e.indexOf(':') + 1)).charCodeAt(0)
-						? o(e.replace('stretch', 'fill-available'), t, n, i).replace(':fill-available', ':stretch')
-						: a.replace(s, '-webkit-' + s) + a.replace(s, '-moz-' + s.replace('fill-', '')) + a;
+				if (!0 === A.test(e)) return 115 === (s = e.substring(e.indexOf(':') + 1)).charCodeAt(0) ? o(e.replace('stretch', 'fill-available'), t, n, i).replace(':fill-available', ':stretch') : a.replace(s, '-webkit-' + s) + a.replace(s, '-moz-' + s.replace('fill-', '')) + a;
 				break;
 			case 962:
-				if (
-					((a = '-webkit-' + a + (102 === a.charCodeAt(5) ? '-ms-' + a : '') + a),
-					211 === n + i && 105 === a.charCodeAt(13) && 0 < a.indexOf('transform', 10))
-				)
-					return a.substring(0, a.indexOf(';', 27) + 1).replace(f, '$1-webkit-$2') + a;
+				if (((a = '-webkit-' + a + (102 === a.charCodeAt(5) ? '-ms-' + a : '') + a), 211 === n + i && 105 === a.charCodeAt(13) && 0 < a.indexOf('transform', 10))) return a.substring(0, a.indexOf(';', 27) + 1).replace(f, '$1-webkit-$2') + a;
 		}
 		return a;
 	}
@@ -182,10 +151,7 @@ t.Z = function (e) {
 		if (f !== t) return f;
 	}
 	function u(e) {
-		return (
-			void 0 !== (e = e.prefix) && ((L = null), e ? ('function' != typeof e ? (D = 1) : ((D = 2), (L = e))) : (D = 0)),
-			u
-		);
+		return void 0 !== (e = e.prefix) && ((L = null), e ? ('function' != typeof e ? (D = 1) : ((D = 2), (L = e))) : (D = 0)), u;
 	}
 	function s(e, n) {
 		var u = e;
@@ -194,37 +160,8 @@ t.Z = function (e) {
 			void 0 !== s && 'string' == typeof s && (n = s);
 		}
 		var p = (function e(n, u, s, p, d) {
-			for (
-				var f,
-					h,
-					m,
-					b,
-					C,
-					O = 0,
-					x = 0,
-					A = 0,
-					S = 0,
-					I = 0,
-					L = 0,
-					T = (m = f = 0),
-					N = 0,
-					R = 0,
-					B = 0,
-					_ = 0,
-					U = s.length,
-					j = U - 1,
-					H = '',
-					W = '',
-					z = '',
-					G = '';
-				N < U;
-
-			) {
-				if (
-					((h = s.charCodeAt(N)),
-					N === j && 0 !== x + S + A + O && (0 !== x && (h = 47 === x ? 10 : 47), (S = A = O = 0), U++, j++),
-					0 === x + S + A + O)
-				) {
+			for (var f, h, m, b, C, O = 0, x = 0, A = 0, S = 0, I = 0, L = 0, T = (m = f = 0), N = 0, R = 0, B = 0, _ = 0, U = s.length, j = U - 1, H = '', W = '', z = '', G = ''; N < U; ) {
+				if (((h = s.charCodeAt(N)), N === j && 0 !== x + S + A + O && (0 !== x && (h = 47 === x ? 10 : 47), (S = A = O = 0), U++, j++), 0 === x + S + A + O)) {
 					if (N === j && (0 < R && (H = H.replace(c, '')), 0 < H.trim().length)) {
 						switch (h) {
 							case 32:
@@ -293,14 +230,7 @@ t.Z = function (e) {
 									default:
 										R = M;
 								}
-								if (
-									((_ = (m = e(u, R, m, h, d + 1)).length),
-									0 < P &&
-										((C = a(3, m, (R = t(M, H, B)), u, k, w, _, h, d, p)),
-										(H = R.join('')),
-										void 0 !== C && 0 === (_ = (m = C.trim()).length) && ((h = 0), (m = ''))),
-									0 < _)
-								)
+								if (((_ = (m = e(u, R, m, h, d + 1)).length), 0 < P && ((C = a(3, m, (R = t(M, H, B)), u, k, w, _, h, d, p)), (H = R.join('')), void 0 !== C && 0 === (_ = (m = C.trim()).length) && ((h = 0), (m = ''))), 0 < _))
 									switch (h) {
 										case 115:
 											H = H.replace(y, i);
@@ -310,8 +240,7 @@ t.Z = function (e) {
 											m = H + '{' + m + '}';
 											break;
 										case 107:
-											(m = (H = H.replace(v, '$1 $2')) + '{' + m + '}'),
-												(m = 1 === D || (2 === D && r('@' + m, 3)) ? '@-webkit-' + m + '@' + m : '@' + m);
+											(m = (H = H.replace(v, '$1 $2')) + '{' + m + '}'), (m = 1 === D || (2 === D && r('@' + m, 3)) ? '@-webkit-' + m + '@' + m : '@' + m);
 											break;
 										default:
 											(m = H + m), 112 === p && ((W += m), (m = ''));
@@ -323,18 +252,7 @@ t.Z = function (e) {
 						case 125:
 						case 59:
 							if (1 < (_ = (H = (0 < R ? H.replace(c, '') : H).trim()).length))
-								switch (
-									(0 === T &&
-										(45 === (f = H.charCodeAt(0)) || (96 < f && 123 > f)) &&
-										(_ = (H = H.replace(' ', ':')).length),
-									0 < P &&
-										void 0 !== (C = a(1, H, u, n, k, w, W.length, p, d, p)) &&
-										0 === (_ = (H = C.trim()).length) &&
-										(H = '\0\0'),
-									(f = H.charCodeAt(0)),
-									(h = H.charCodeAt(1)),
-									f)
-								) {
+								switch ((0 === T && (45 === (f = H.charCodeAt(0)) || (96 < f && 123 > f)) && (_ = (H = H.replace(' ', ':')).length), 0 < P && void 0 !== (C = a(1, H, u, n, k, w, W.length, p, d, p)) && 0 === (_ = (H = C.trim()).length) && (H = '\0\0'), (f = H.charCodeAt(0)), (h = H.charCodeAt(1)), f)) {
 									case 0:
 										break;
 									case 64:
@@ -351,10 +269,7 @@ t.Z = function (e) {
 				switch (h) {
 					case 13:
 					case 10:
-						47 === x ? (x = 0) : 0 === 1 + f && 107 !== p && 0 < H.length && ((R = 1), (H += '\0')),
-							0 < P * V && a(0, H, u, n, k, w, W.length, p, d, p),
-							(w = 1),
-							k++;
+						47 === x ? (x = 0) : 0 === 1 + f && 107 !== p && 0 < H.length && ((R = 1), (H += '\0')), 0 < P * V && a(0, H, u, n, k, w, W.length, p, d, p), (w = 1), k++;
 						break;
 					case 59:
 					case 125:
@@ -444,10 +359,7 @@ t.Z = function (e) {
 											}
 											break;
 										case 42:
-											47 === h &&
-												42 === I &&
-												_ + 2 !== N &&
-												(33 === s.charCodeAt(_ + 2) && (W += s.substring(_, N + 1)), (b = ''), (x = 0));
+											47 === h && 42 === I && _ + 2 !== N && (33 === s.charCodeAt(_ + 2) && (W += s.substring(_, N + 1)), (b = ''), (x = 0));
 									}
 						}
 						0 === x && (H += b);
@@ -455,8 +367,7 @@ t.Z = function (e) {
 				(L = I), (I = h), N++;
 			}
 			if (0 < (_ = W.length)) {
-				if (((R = u), 0 < P && void 0 !== (C = a(2, W, R, n, k, w, _, p, d, p)) && 0 === (W = C).length))
-					return G + W + z;
+				if (((R = u), 0 < P && void 0 !== (C = a(2, W, R, n, k, w, _, p, d, p)) && 0 === (W = C).length)) return G + W + z;
 				if (((W = R.join(',') + '{' + W + '}'), 0 != D * F)) {
 					switch ((2 !== D || r(W, 2) || (F = 0), F)) {
 						case 111:
@@ -470,9 +381,7 @@ t.Z = function (e) {
 			}
 			return G + W + z;
 		})(M, u, n, 0, 0);
-		return (
-			0 < P && void 0 !== (s = a(-2, p, u, u, k, w, p.length, 0, 0, 0)) && (p = s), (T = ''), (F = 0), (w = k = 1), p
-		);
+		return 0 < P && void 0 !== (s = a(-2, p, u, u, k, w, p.length, 0, 0, 0)) && (p = s), (T = ''), (F = 0), (w = k = 1), p;
 	}
 	var l = /^\0+/g,
 		c = /[\0\r\f]/g,

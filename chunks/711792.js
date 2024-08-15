@@ -31,8 +31,8 @@ function u(e, t, n) {
 			linkBehavior: 'selection'
 		}),
 		p = l(t, s, 'tab'),
-		I = l(t, s, 'tabpanel'),
-		{ tabIndex: m } = f,
+		m = l(t, s, 'tabpanel'),
+		{ tabIndex: I } = f,
 		T = t.collection.getItem(s),
 		g = (0, r.zL)(null == T ? void 0 : T.props, {
 			isLink: !!(null == T ? void 0 : null === (a = T.props) || void 0 === a ? void 0 : a.href),
@@ -45,8 +45,8 @@ function u(e, t, n) {
 				id: p,
 				'aria-selected': _,
 				'aria-disabled': E || void 0,
-				'aria-controls': _ ? I : void 0,
-				tabIndex: E ? void 0 : m,
+				'aria-controls': _ ? m : void 0,
+				tabIndex: E ? void 0 : I,
 				role: 'tab'
 			}),
 			isSelected: _,
@@ -104,15 +104,15 @@ function d(e, t, n) {
 			scrollRef: n,
 			linkBehavior: 'selection'
 		}),
-		I = (0, r.Me)();
-	o.set(t, I);
-	let m = (0, r.bE)({
+		m = (0, r.Me)();
+	o.set(t, m);
+	let I = (0, r.bE)({
 		...e,
-		id: I
+		id: m
 	});
 	return {
 		tabListProps: {
-			...(0, r.dG)(p, m),
+			...(0, r.dG)(p, I),
 			role: 'tablist',
 			'aria-orientation': l,
 			tabIndex: void 0

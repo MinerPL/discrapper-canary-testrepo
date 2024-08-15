@@ -25,13 +25,7 @@ function I(_) {
 			let _ = o()(L.Z.activatedEndTime(M.q.STREAM_HIGH_QUALITY));
 			return o().duration(_.diff(o()())).days();
 		}),
-		R = I
-			? d < 1
-				? c.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_MODAL_BODY_1_DAY
-				: c.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_MODAL_BODY_MANY_DAYS.format({
-						days: Math.floor(d)
-					})
-			: c.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_ENDED_UPSELL_BODY;
+		R = I ? (d < 1 ? c.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_MODAL_BODY_1_DAY : c.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_MODAL_BODY_MANY_DAYS.format({ days: Math.floor(d) })) : c.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_ENDED_UPSELL_BODY;
 	return (0, s.jsx)(O.Z, {
 		type: r.cd.STREAM_QUALITY_UPSELL,
 		artURL: E(279360),

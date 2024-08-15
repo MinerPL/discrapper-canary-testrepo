@@ -36,16 +36,12 @@ function C(e) {
 			(0, o.jsx)(h.Z, {
 				icon: g.Z,
 				iconClassName: M.perkIconGuild,
-				description: T.Z.Messages.PREMIUM_UPSELL_FEATURE_FREE_GUILD_SUBSCRIPTION.format({
-					numFreeGuildSubscriptions: x.cb
-				})
+				description: T.Z.Messages.PREMIUM_UPSELL_FEATURE_FREE_GUILD_SUBSCRIPTION.format({ numFreeGuildSubscriptions: x.cb })
 			}),
 			(0, o.jsx)(h.Z, {
 				icon: g.Z,
 				iconClassName: M.perkIconGuild,
-				description: T.Z.Messages.PREMIUM_UPSELL_FEATURE_GUILD_SUBSCRIPTION_DISCOUNT.format({
-					percent: (0, E.T3)(t, x.Rr / 100)
-				})
+				description: T.Z.Messages.PREMIUM_UPSELL_FEATURE_GUILD_SUBSCRIPTION_DISCOUNT.format({ percent: (0, E.T3)(t, x.Rr / 100) })
 			}),
 			n
 				? (0, o.jsx)(h.Z, {
@@ -69,16 +65,7 @@ function C(e) {
 }
 function v(e) {
 	var n;
-	let {
-			premiumSubscriptionPlan: t,
-			onClose: a,
-			onBack: c,
-			onSkip: h,
-			onSubscriptionConfirmation: S,
-			analyticsLocation: g,
-			analyticsSourceLocation: E,
-			priceOptions: v
-		} = e,
+	let { premiumSubscriptionPlan: t, onClose: a, onBack: c, onSkip: h, onSubscriptionConfirmation: S, analyticsLocation: g, analyticsSourceLocation: E, priceOptions: v } = e,
 		{ analyticsLocations: N, sourceAnalyticsLocations: A } = (0, d.ZP)(u.Z.GUILD_BOOSTING_PREMIUM_UPSELL),
 		{ theme: R } = (0, s.useThemeContext)(),
 		L = (0, l.ap)(R) ? s.Button.Colors.PRIMARY : s.Button.Colors.WHITE,
@@ -108,10 +95,7 @@ function v(e) {
 						(0, o.jsx)('div', { className: i()(M.upsellImage, { [M.upsellImageWithTrialOffer]: D }) }),
 						(0, o.jsx)('div', {
 							className: M.bodyText,
-							children:
-								null != U
-									? T.Z.Messages.PREMIUM_UPSELL_FEATURE_PRETEXT_TRIAL_VARIANT
-									: T.Z.Messages.PREMIUM_UPSELL_FEATURE_PRETEXT.format({ monthlyPrice: B })
+							children: null != U ? T.Z.Messages.PREMIUM_UPSELL_FEATURE_PRETEXT_TRIAL_VARIANT : T.Z.Messages.PREMIUM_UPSELL_FEATURE_PRETEXT.format({ monthlyPrice: B })
 						}),
 						(0, o.jsx)(C, { shouldUpsellFromNoneTier: k })
 					]
@@ -147,8 +131,7 @@ function v(e) {
 												trialId: U
 											});
 									},
-									children:
-										null != U ? T.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : T.Z.Messages.PREMIUM_UPSELL_UPGRADE
+									children: null != U ? T.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : T.Z.Messages.PREMIUM_UPSELL_UPGRADE
 								})
 							]
 						}),

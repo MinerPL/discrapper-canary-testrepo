@@ -1,6 +1,6 @@
 n.d(t, {
 	Xj: function () {
-		return m;
+		return I;
 	},
 	fq: function () {
 		return T;
@@ -24,26 +24,20 @@ var r = n(470079),
 	f = n(420212);
 let h = { [E.ABu.INSTAGRAM]: ['1036753656588017764'] },
 	p = new Map([[E.ABu.INSTAGRAM, new Date(2023, 1, 18).getTime()]]),
-	I = 30 * d.Z.Millis.DAY;
-function m(e) {
+	m = 30 * d.Z.Millis.DAY;
+function I(e) {
 	let { forUserProfile: t } = e,
 		n = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
 		r = l.c.useExperiment({ location: 'f2f7ef_1' }, { autoTrackExposure: !1 }).allowPlayStationStaging,
 		{ enabled: i } = _.E.useExperiment({ location: 'ConnectionsHooks' });
 	return (e) => {
 		var a;
-		return e.type === E.ABu.PLAYSTATION_STAGING
-			? r
-			: e.type === E.ABu.AMAZON_MUSIC
-				? i
-				: !!(void 0 !== n && (null === (a = h[e.type]) || void 0 === a ? void 0 : a.includes(n.id))) ||
-					!!t ||
-					e.enabled;
+		return e.type === E.ABu.PLAYSTATION_STAGING ? r : e.type === E.ABu.AMAZON_MUSIC ? i : !!(void 0 !== n && (null === (a = h[e.type]) || void 0 === a ? void 0 : a.includes(n.id))) || !!t || e.enabled;
 	};
 }
 function T() {
 	let e = (0, s.e7)([u.Z], () => u.Z.getAccounts()),
-		t = m({ forUserProfile: !1 }),
+		t = I({ forUserProfile: !1 }),
 		n = r.useMemo(() => {
 			let t = new Set();
 			return e.forEach((e) => t.add(e.type)), t;
@@ -51,7 +45,7 @@ function T() {
 	return a().sortBy(o.Z.filter(t), [
 		(e) => {
 			var t;
-			return !(p.has(e.type) && Date.now() < (null !== (t = p.get(e.type)) && void 0 !== t ? t : 0) + I);
+			return !(p.has(e.type) && Date.now() < (null !== (t = p.get(e.type)) && void 0 !== t ? t : 0) + m);
 		},
 		(e) => n.has(e.type),
 		(e) => e.hasMetadata,

@@ -6,11 +6,7 @@ n.d(t, {
 var r,
 	i,
 	a = n(689938);
-((r = i || (i = {}))[(r.GENERAL = 0)] = 'GENERAL'),
-	(r[(r.NO_FILE = 1)] = 'NO_FILE'),
-	(r[(r.PROGRESS = 2)] = 'PROGRESS'),
-	(r[(r.UPLOAD = 3)] = 'UPLOAD'),
-	(r[(r.READ = 4)] = 'READ');
+((r = i || (i = {}))[(r.GENERAL = 0)] = 'GENERAL'), (r[(r.NO_FILE = 1)] = 'NO_FILE'), (r[(r.PROGRESS = 2)] = 'PROGRESS'), (r[(r.UPLOAD = 3)] = 'UPLOAD'), (r[(r.READ = 4)] = 'READ');
 t.Z = class e {
 	get displayMessage() {
 		switch (this.code) {

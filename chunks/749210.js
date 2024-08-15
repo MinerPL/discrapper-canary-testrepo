@@ -19,8 +19,8 @@ var r = n(990547),
 	f = n(895886),
 	h = n(35225),
 	p = n(703656),
-	I = n(314897),
-	m = n(592125),
+	m = n(314897),
+	I = n(592125),
 	T = n(664915),
 	g = n(984933),
 	S = n(430824),
@@ -58,8 +58,7 @@ async function w(e) {
 		{ source: c, loadId: d, lurkLocation: _ } = u,
 		E = null !== (t = u.lurker) && void 0 !== t && t,
 		h = v.default.getCurrentUser();
-	if (null !== (r = null == h ? void 0 : h.hasFlag(L.xW$.QUARANTINED)) && void 0 !== r && r)
-		return (0, f.default)(), new Promise((e, t) => t(Error()));
+	if (null !== (r = null == h ? void 0 : h.hasFlag(L.xW$.QUARANTINED)) && void 0 !== r && r) return (0, f.default)(), new Promise((e, t) => t(Error()));
 	s.Z.wait(() =>
 		s.Z.dispatch({
 			type: 'GUILD_JOIN',
@@ -76,7 +75,7 @@ async function w(e) {
 				url: L.ANM.GUILD_JOIN(e),
 				query: {
 					lurker: E,
-					session_id: E ? I.default.getSessionId() : null,
+					session_id: E ? m.default.getSessionId() : null,
 					recommendation_load_id: d,
 					location: E && null != _ ? _ : null
 				},
@@ -121,11 +120,7 @@ async function w(e) {
 			let e = v.default.getCurrentUser();
 			C.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? M(L.tHP) : M(L.DZw);
 		}
-		throw (
-			((null === (o = t.body) || void 0 === o ? void 0 : o.code) === L.evJ.GUILD_AT_CAPACITY && U(),
-			E && (null === (l = t.body) || void 0 === l ? void 0 : l.code) === L.evJ.UNKNOWN_GUILD && P(e),
-			t)
-		);
+		throw ((null === (o = t.body) || void 0 === o ? void 0 : o.code) === L.evJ.GUILD_AT_CAPACITY && U(), E && (null === (l = t.body) || void 0 === l ? void 0 : l.code) === L.evJ.UNKNOWN_GUILD && P(e), t);
 	}
 }
 function x(e) {
@@ -351,8 +346,7 @@ t.Z = {
 	moveById(e, t) {
 		let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
 			r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-		if (e === t)
-			throw Error('GuildActionCreators.moveById: `sourceId` and `targetId` cannot be the same value: '.concat(e));
+		if (e === t) throw Error('GuildActionCreators.moveById: `sourceId` and `targetId` cannot be the same value: '.concat(e));
 		s.Z.dispatch({
 			type: 'GUILD_MOVE_BY_ID',
 			sourceId: e,
@@ -417,7 +411,7 @@ t.Z = {
 			for (null != (0, _.bv)(e.getCurrentRoute()) && e.goBack(); ; ) {
 				let t = (0, _.kf)(e.getCurrentRoute());
 				if (null == t) break;
-				let n = m.Z.getChannel(t.params.channelId);
+				let n = I.Z.getChannel(t.params.channelId);
 				if (null == n || !n.isNSFW()) break;
 				e.goBack();
 			}

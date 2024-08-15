@@ -69,10 +69,7 @@ class u {
 	}
 	getAnyErrorMessage() {
 		var e, t;
-		return null !== (t = null === (e = this.getAnyErrorMessageAndField()) || void 0 === e ? void 0 : e.error) &&
-			void 0 !== t
-			? t
-			: this.message;
+		return null !== (t = null === (e = this.getAnyErrorMessageAndField()) || void 0 === e ? void 0 : e.error) && void 0 !== t ? t : this.message;
 	}
 	getAnyErrorMessageAndField() {
 		let e = this.errors,
@@ -88,12 +85,7 @@ class u {
 		return null;
 	}
 	constructor(e, t, n = 'An unexpected error occurred.') {
-		a(this, 'message', void 0),
-			a(this, 'code', void 0),
-			a(this, 'retryAfter', void 0),
-			a(this, 'errors', void 0),
-			a(this, 'status', void 0),
-			a(this, 'captchaFields', void 0);
+		a(this, 'message', void 0), a(this, 'code', void 0), a(this, 'retryAfter', void 0), a(this, 'errors', void 0), a(this, 'status', void 0), a(this, 'captchaFields', void 0);
 		let {
 			message: r,
 			code: i,
@@ -109,9 +101,7 @@ class u {
 				};
 			if (null == e.body) return { status: e.status };
 			let n = e.body;
-			return null == e.body.message ||
-				Array.isArray(e.body.message) ||
-				(null != e.body.code && Array.isArray(e.body.code))
+			return null == e.body.message || Array.isArray(e.body.message) || (null != e.body.code && Array.isArray(e.body.code))
 				? null != n && 'captcha_key' in n
 					? {
 							code: -1,
@@ -143,11 +133,6 @@ class u {
 						status: e.status
 					};
 		})(e, t);
-		(this.message = null != r ? r : n),
-			(this.code = null != i ? i : -1),
-			(this.retryAfter = o),
-			(this.errors = u),
-			(this.status = c),
-			(this.captchaFields = null != d ? d : {});
+		(this.message = null != r ? r : n), (this.code = null != i ? i : -1), (this.retryAfter = o), (this.errors = u), (this.status = c), (this.captchaFields = null != d ? d : {});
 	}
 }

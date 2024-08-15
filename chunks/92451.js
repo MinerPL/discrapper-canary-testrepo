@@ -27,19 +27,7 @@ var n = a(735250),
 	j = a(330771);
 let T = 'RULE';
 function A(e) {
-	let {
-			rule: l,
-			rulesChannel: a,
-			index: s,
-			onChange: o,
-			onKeyDown: i,
-			onClear: c,
-			onRuleReorder: E,
-			isDropHovered: _,
-			focused: m,
-			onFocus: R,
-			previewEnabled: h
-		} = e,
+	let { rule: l, rulesChannel: a, index: s, onChange: o, onKeyDown: i, onClear: c, onRuleReorder: E, isDropHovered: _, focused: m, onFocus: R, previewEnabled: h } = e,
 		M = t.useRef(null),
 		g = t.useRef(null),
 		[{ textValue: p, richValue: N }, v] = t.useState((0, C.eK)(l.value)),

@@ -6,15 +6,7 @@ let i = n(620633),
 function l() {}
 (e.exports = l),
 	(l.prototype.clearTimeout = function () {
-		return (
-			clearTimeout(this._timer),
-			clearTimeout(this._responseTimeoutTimer),
-			clearTimeout(this._uploadTimeoutTimer),
-			delete this._timer,
-			delete this._responseTimeoutTimer,
-			delete this._uploadTimeoutTimer,
-			this
-		);
+		return clearTimeout(this._timer), clearTimeout(this._responseTimeoutTimer), clearTimeout(this._uploadTimeoutTimer), delete this._timer, delete this._responseTimeoutTimer, delete this._uploadTimeoutTimer, this;
 	}),
 	(l.prototype.parse = function (e) {
 		return (this._parser = e), this;
@@ -26,8 +18,7 @@ function l() {}
 		return (this._serializer = e), this;
 	}),
 	(l.prototype.timeout = function (e) {
-		if (!e || 'object' != typeof e)
-			return (this._timeout = e), (this._responseTimeout = 0), (this._uploadTimeout = 0), this;
+		if (!e || 'object' != typeof e) return (this._timeout = e), (this._responseTimeout = 0), (this._uploadTimeout = 0), this;
 		for (let t in e)
 			if (o(e, t))
 				switch (t) {
@@ -46,25 +37,9 @@ function l() {}
 		return this;
 	}),
 	(l.prototype.retry = function (e, t) {
-		return (
-			(0 == arguments.length || !0 === e) && (e = 1),
-			e <= 0 && (e = 0),
-			(this._maxRetries = e),
-			(this._retries = 0),
-			(this._retryCallback = t),
-			this
-		);
+		return (0 == arguments.length || !0 === e) && (e = 1), e <= 0 && (e = 0), (this._maxRetries = e), (this._retries = 0), (this._retryCallback = t), this;
 	});
-let u = new Set([
-		'ETIMEDOUT',
-		'ECONNRESET',
-		'EADDRINUSE',
-		'ECONNREFUSED',
-		'EPIPE',
-		'ENOTFOUND',
-		'ENETUNREACH',
-		'EAI_AGAIN'
-	]),
+let u = new Set(['ETIMEDOUT', 'ECONNRESET', 'EADDRINUSE', 'ECONNREFUSED', 'EPIPE', 'ENOTFOUND', 'ENETUNREACH', 'EAI_AGAIN']),
 	c = new Set([408, 413, 429, 500, 502, 503, 504, 521, 522, 524]);
 (l.prototype._shouldRetry = function (e, t) {
 	if (!this._maxRetries || this._retries++ >= this._maxRetries) return !1;
@@ -76,30 +51,15 @@ let u = new Set([
 		} catch (e) {
 			console.error(e);
 		}
-	return (
-		!!(
-			(t && t.status && c.has(t.status)) ||
-			(e && ((e.code && u.has(e.code)) || (e.timeout && 'ECONNABORTED' === e.code) || e.crossDomain))
-		) || !1
-	);
+	return !!((t && t.status && c.has(t.status)) || (e && ((e.code && u.has(e.code)) || (e.timeout && 'ECONNABORTED' === e.code) || e.crossDomain))) || !1;
 }),
 	(l.prototype._retry = function () {
-		return (
-			this.clearTimeout(),
-			this.req && ((this.req = null), (this.req = this.request())),
-			(this._aborted = !1),
-			(this.timedout = !1),
-			(this.timedoutError = null),
-			this._end()
-		);
+		return this.clearTimeout(), this.req && ((this.req = null), (this.req = this.request())), (this._aborted = !1), (this.timedout = !1), (this.timedoutError = null), this._end();
 	}),
 	(l.prototype.then = function (e, t) {
 		if (!this._fullfilledPromise) {
 			let e = this;
-			this._endCalled &&
-				console.warn(
-					'Warning: superagent request was sent twice, because both .end() and .then() were called. Never call .end() if you use promises'
-				),
+			this._endCalled && console.warn('Warning: superagent request was sent twice, because both .end() and .then() were called. Never call .end() if you use promises'),
 				(this._fullfilledPromise = new Promise((t, n) => {
 					e.on('abort', () => {
 						if (this._maxRetries && this._maxRetries > this._retries) return;
@@ -146,8 +106,7 @@ let u = new Set([
 	}),
 	(l.prototype.field = function (e, t, n) {
 		if (null == e) throw Error('.field(name, val) name can not be empty');
-		if (this._data)
-			throw Error(".field() can't be used if .send() is used. Please use only .send() or only .field() & .attach()");
+		if (this._data) throw Error(".field() can't be used if .send() is used. Please use only .send() or only .field() & .attach()");
 		if (s(e)) {
 			for (let t in e) o(e, t) && this.field(t, e[t]);
 			return this;
@@ -157,17 +116,12 @@ let u = new Set([
 			return this;
 		}
 		if (null == t) throw Error('.field(name, val) val can not be empty');
-		return (
-			'boolean' == typeof t && (t = String(t)),
-			n ? this._getFormData().append(e, t, n) : this._getFormData().append(e, t),
-			this
-		);
+		return 'boolean' == typeof t && (t = String(t)), n ? this._getFormData().append(e, t, n) : this._getFormData().append(e, t), this;
 	}),
 	(l.prototype.abort = function () {
 		if (this._aborted) return this;
 		if (((this._aborted = !0), this.xhr && this.xhr.abort(), this.req)) {
-			if (i.gte(r.version, 'v13.0.0') && i.lt(r.version, 'v14.0.0'))
-				throw Error('Superagent does not work in v13 properly with abort() due to Node.js core changes');
+			if (i.gte(r.version, 'v13.0.0') && i.lt(r.version, 'v14.0.0')) throw Error('Superagent does not work in v13 properly with abort() due to Node.js core changes');
 			this.req.abort();
 		}
 		return this.clearTimeout(), this.emit('abort'), this;
@@ -206,10 +160,7 @@ let u = new Set([
 	(l.prototype.send = function (e) {
 		let t = s(e),
 			n = this._header['content-type'];
-		if (this._formData)
-			throw Error(
-				".send() can't be used if .attach() or .field() is used. Please use only .send() or only .field() & .attach()"
-			);
+		if (this._formData) throw Error(".send() can't be used if .attach() or .field() is used. Please use only .send() or only .field() & .attach()");
 		if (t && !this._data) Array.isArray(e) ? (this._data = []) : !this._isHost(e) && (this._data = {});
 		else if (e && this._data && this._isHost(this._data)) throw Error("Can't merge these send calls");
 		if (t && s(this._data))
@@ -218,14 +169,7 @@ let u = new Set([
 				o(e, t) && (this._data[t] = e[t]);
 			}
 		else if ('bigint' == typeof e) throw Error('Cannot send value of type BigInt');
-		else
-			'string' == typeof e
-				? (!n && this.type('form'),
-					(n = this._header['content-type']) && (n = n.toLowerCase().trim()),
-					'application/x-www-form-urlencoded' === n
-						? (this._data = this._data ? `${this._data}&${e}` : e)
-						: (this._data = (this._data || '') + e))
-				: (this._data = e);
+		else 'string' == typeof e ? (!n && this.type('form'), (n = this._header['content-type']) && (n = n.toLowerCase().trim()), 'application/x-www-form-urlencoded' === n ? (this._data = this._data ? `${this._data}&${e}` : e) : (this._data = (this._data || '') + e)) : (this._data = e);
 		return !t || this._isHost(e) ? this : (!n && this.type('json'), this);
 	}),
 	(l.prototype.sortQuery = function (e) {
@@ -237,8 +181,7 @@ let u = new Set([
 			let e = this.url.indexOf('?');
 			if (e >= 0) {
 				let t = this.url.slice(e + 1).split('&');
-				'function' == typeof this._sort ? t.sort(this._sort) : t.sort(),
-					(this.url = this.url.slice(0, e) + '?' + t.join('&'));
+				'function' == typeof this._sort ? t.sort(this._sort) : t.sort(), (this.url = this.url.slice(0, e) + '?' + t.join('&'));
 			}
 		}
 	}),
@@ -248,13 +191,7 @@ let u = new Set([
 	(l.prototype._timeoutError = function (e, t, n) {
 		if (this._aborted) return;
 		let r = Error(`${e + t}ms exceeded`);
-		(r.timeout = t),
-			(r.code = 'ECONNABORTED'),
-			(r.errno = n),
-			(this.timedout = !0),
-			(this.timedoutError = r),
-			this.abort(),
-			this.callback(r);
+		(r.timeout = t), (r.code = 'ECONNABORTED'), (r.errno = n), (this.timedout = !0), (this.timedoutError = r), this.abort(), this.callback(r);
 	}),
 	(l.prototype._setTimeouts = function () {
 		let e = this;

@@ -55,14 +55,7 @@ let b = (0, r.Mg)(l.Z.APPLICATION_SUBSCRIPTION_CARD_LISTING_IMAGE_SIZE),
 		});
 	};
 function R(e) {
-	let {
-			listing: n,
-			groupListingId: i,
-			guildId: r,
-			analyticsLocation: l,
-			onComplete: I,
-			forcesTransitionToGuild: b
-		} = e,
+	let { listing: n, groupListingId: i, guildId: r, analyticsLocation: l, onComplete: I, forcesTransitionToGuild: b } = e,
 		R = (0, o.e7)([p.Z], () => p.Z.isSyncing),
 		{ activeSubscription: N, activeSubscriptionListing: S } = (0, f.F5)(n.application_id, r),
 		{
@@ -122,19 +115,8 @@ function R(e) {
 								}),
 								(() => {
 									var e;
-									if (Z)
-										return (0, t.jsx)(T, {
-											children:
-												(null == N ? void 0 : N.status) === v.O0b.CANCELED
-													? E.Z.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL
-													: E.Z.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL
-										});
-									if (D)
-										return null == S
-											? (0, t.jsx)(T, {
-													children: E.Z.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL
-												})
-											: null;
+									if (Z) return (0, t.jsx)(T, { children: (null == N ? void 0 : N.status) === v.O0b.CANCELED ? E.Z.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : E.Z.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL });
+									if (D) return null == S ? (0, t.jsx)(T, { children: E.Z.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL }) : null;
 									return (0, t.jsx)(s.Tooltip, {
 										tooltipClassName: x.subscribeButtonTooltip,
 										text: O || !M ? null : j,

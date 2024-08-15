@@ -99,13 +99,7 @@ function T() {
 					t = [];
 				for (let r of l) {
 					var n, i;
-					t.push(
-						...(null !==
-							(i = null === (n = e.get(r)) || void 0 === n ? void 0 : n.flatMap((e) => Array.from(e.userIds))) &&
-						void 0 !== i
-							? i
-							: [])
-					);
+					t.push(...(null !== (i = null === (n = e.get(r)) || void 0 === n ? void 0 : n.flatMap((e) => Array.from(e.userIds))) && void 0 !== i ? i : []));
 				}
 				return t;
 			},

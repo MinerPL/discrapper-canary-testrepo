@@ -28,11 +28,6 @@ class i {
 		this._elements.length = 0;
 	}
 	constructor(e, t) {
-		r(this, '_elements', void 0),
-			r(this, '_createElement', void 0),
-			r(this, '_cleanElement', void 0),
-			(this._elements = []),
-			(this._createElement = e),
-			(this._cleanElement = t);
+		r(this, '_elements', void 0), r(this, '_createElement', void 0), r(this, '_cleanElement', void 0), (this._elements = []), (this._createElement = e), (this._cleanElement = t);
 	}
 }

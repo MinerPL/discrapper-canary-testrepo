@@ -218,7 +218,7 @@ let o = {
 		},
 		toolbarType: 2
 	},
-	I = {
+	m = {
 		analyticsName: 'user_profile_reply',
 		drafts: { type: s.d.ChannelMessage },
 		emojis: { button: !0 },
@@ -234,7 +234,7 @@ let o = {
 		},
 		toolbarType: 2
 	},
-	m = {
+	I = {
 		analyticsName: 'profile_bio_input',
 		drafts: { type: s.d.ChannelMessage },
 		emojis: { button: !0 },
@@ -304,8 +304,8 @@ let o = {
 		VOICE_CHANNEL_STATUS: _,
 		THREAD_CREATION: E,
 		USER_PROFILE: p,
-		USER_PROFILE_REPLY: I,
-		PROFILE_BIO_INPUT: m,
+		USER_PROFILE_REPLY: m,
+		PROFILE_BIO_INPUT: I,
 		CUSTOM_GIFT: T,
 		RULES_INPUT: g,
 		CREATE_FORUM_POST: f,

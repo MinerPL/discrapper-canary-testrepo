@@ -264,13 +264,7 @@ let B = d().throttle(T.OQ, 1000),
 			u = (0, M.FZ)(d, l.id);
 		return null == u || d === Z.Eu4.TIER_3 || c > 0
 			? null
-			: (c > o
-					? ((t = U.Z.Messages.GUILD_SETTINGS_EMOJIS_UPSELL_BANNER_TOO_MANY_EMOJIS_HEADER.format({ level: u })),
-						(n = U.Z.Messages.GUILD_SETTINGS_EMOJIS_UPSELL_BANNER_TOO_MANY_EMOJIS_TEXT.format({ level: u })),
-						(a = Z.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL))
-					: ((t = U.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_BANNER_HEADER),
-						(n = U.Z.Messages.GUILD_SETTINGS_EMOJIS_UPSELL_BANNER_TEXT.format({ level: u })),
-						(a = Z.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL)),
+			: (c > o ? ((t = U.Z.Messages.GUILD_SETTINGS_EMOJIS_UPSELL_BANNER_TOO_MANY_EMOJIS_HEADER.format({ level: u })), (n = U.Z.Messages.GUILD_SETTINGS_EMOJIS_UPSELL_BANNER_TOO_MANY_EMOJIS_TEXT.format({ level: u })), (a = Z.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL)) : ((t = U.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_BANNER_HEADER), (n = U.Z.Messages.GUILD_SETTINGS_EMOJIS_UPSELL_BANNER_TEXT.format({ level: u })), (a = Z.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL)),
 				(0, s.jsx)(C.Z, {
 					header: t,
 					text: n,
@@ -373,9 +367,7 @@ t.ZP = () => {
 							K &&
 								(0, s.jsx)(I.FormText, {
 									type: I.FormTextTypes.DESCRIPTION,
-									children: U.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_SETTINGS_MANAGE_PREMIUM_TEXT.format({
-										onClick: () => D.Z.open(e.id, Z.pNK.ROLE_SUBSCRIPTIONS, void 0, Z.KsC.ROLE_SUBSCRIPTION_EMOJI)
-									})
+									children: U.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_SETTINGS_MANAGE_PREMIUM_TEXT.format({ onClick: () => D.Z.open(e.id, Z.pNK.ROLE_SUBSCRIPTIONS, void 0, Z.KsC.ROLE_SUBSCRIPTION_EMOJI) })
 								}),
 							(0, s.jsxs)('div', {
 								children: [

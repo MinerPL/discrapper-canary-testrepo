@@ -10,18 +10,7 @@ var a = n(120356),
 	r = n(788307),
 	l = n(935467);
 function o(e) {
-	let {
-		activity: t,
-		className: n,
-		emojiClassName: a,
-		textClassName: o,
-		placeholderText: c,
-		soloEmojiClassName: d,
-		animate: u = !0,
-		hideTooltip: _ = !1,
-		hideEmoji: E = !1,
-		children: h
-	} = e;
+	let { activity: t, className: n, emojiClassName: a, textClassName: o, placeholderText: c, soloEmojiClassName: d, animate: u = !0, hideTooltip: _ = !1, hideEmoji: E = !1, children: h } = e;
 	if (null == t) return null;
 	let { emoji: m } = t,
 		I = null != t.state && '' !== t.state ? t.state : c;

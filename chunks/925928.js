@@ -36,18 +36,7 @@ function _(e) {
 		let { seconds: t, getFormatter: n } = e,
 			r = n(),
 			i = '';
-		return (i =
-			t < 60
-				? r.minutes.format({ minutes: 1 })
-				: t < s
-					? r.minutes.format({ minutes: Math.floor(t / 60) })
-					: t < o
-						? r.hours.format({ hours: Math.floor(t / s) })
-						: t < l
-							? r.days.format({ days: Math.floor(t / o) })
-							: t < u
-								? r.months.format({ months: Math.floor(t / l) })
-								: r.years.format({ years: Math.floor(t / u) }));
+		return (i = t < 60 ? r.minutes.format({ minutes: 1 }) : t < s ? r.minutes.format({ minutes: Math.floor(t / 60) }) : t < o ? r.hours.format({ hours: Math.floor(t / s) }) : t < l ? r.days.format({ days: Math.floor(t / o) }) : t < u ? r.months.format({ months: Math.floor(t / l) }) : r.years.format({ years: Math.floor(t / u) }));
 	})({
 		seconds: i()().diff(i()(t), 's'),
 		getFormatter: n

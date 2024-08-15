@@ -29,10 +29,7 @@ function I(e) {
 			let e = t.currentActivities
 				.filter((e) => {
 					var t, n;
-					return (
-						(null === (t = e.game) || void 0 === t ? void 0 : t.name) != null &&
-						(null === (n = e.game) || void 0 === n ? void 0 : n.type) === h.wW.GAME
-					);
+					return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === h.wW.GAME;
 				})
 				.map((e) => e.game.name);
 			r.default.track(E.rMx.OPEN_POPOUT, {

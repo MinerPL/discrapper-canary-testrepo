@@ -9,11 +9,7 @@ n.d(t, {
 var r = n(825842);
 let i = (function () {
 	let e = new DataView(new ArrayBuffer(8));
-	return void 0 !== globalThis.BigInt &&
-		'function' == typeof e.getBigInt64 &&
-		'function' == typeof e.getBigUint64 &&
-		'function' == typeof e.setBigInt64 &&
-		'function' == typeof e.setBigUint64
+	return void 0 !== globalThis.BigInt && 'function' == typeof e.getBigInt64 && 'function' == typeof e.getBigUint64 && 'function' == typeof e.setBigInt64 && 'function' == typeof e.setBigUint64
 		? {
 				MIN: BigInt('-9223372036854775808'),
 				MAX: BigInt('9223372036854775807'),
@@ -25,10 +21,7 @@ let i = (function () {
 		: void 0;
 })();
 function a(e) {
-	if (!e)
-		throw Error(
-			'BigInt unavailable, see https://github.com/timostamm/protobuf-ts/blob/v1.0.8/MANUAL.md#bigint-support'
-		);
+	if (!e) throw Error('BigInt unavailable, see https://github.com/timostamm/protobuf-ts/blob/v1.0.8/MANUAL.md#bigint-support');
 }
 let s = /^-?[0-9]+$/;
 class o {

@@ -70,13 +70,7 @@ t.Z = (e) => {
 			if (h) return f.default.getUser(g[0]);
 			if (null != l) {
 				var e, t;
-				return l.length <= 0
-					? null
-					: null !==
-								(t = null === (e = l.find((e) => e.user.id !== _.default.getId())) || void 0 === e ? void 0 : e.user) &&
-						  void 0 !== t
-						? t
-						: l[0].user;
+				return l.length <= 0 ? null : null !== (t = null === (e = l.find((e) => e.user.id !== _.default.getId())) || void 0 === e ? void 0 : e.user) && void 0 !== t ? t : l[0].user;
 			}
 		});
 	if (null == m) return null;

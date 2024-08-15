@@ -21,13 +21,11 @@ let I = (e) => ({
 			enabled: !e.hasFeature(u.oNc.RAID_ALERTS_DISABLED)
 		},
 		{
-			renderComponent: () =>
-				(0, s.jsx)(o.Z, { title: _.Z.Messages.GUILD_SETTINGS_SAFETY_RAID_CAPTCHA }, 'captcha-suspicious-joins'),
+			renderComponent: () => (0, s.jsx)(o.Z, { title: _.Z.Messages.GUILD_SETTINGS_SAFETY_RAID_CAPTCHA }, 'captcha-suspicious-joins'),
 			enabled: !0
 		},
 		{
-			renderComponent: () =>
-				(0, s.jsx)(o.Z, { title: _.Z.Messages.GUILD_SETTINGS_SAFETY_RAID_CAPTCH_RAID }, 'captcha-raid-joins'),
+			renderComponent: () => (0, s.jsx)(o.Z, { title: _.Z.Messages.GUILD_SETTINGS_SAFETY_RAID_CAPTCH_RAID }, 'captcha-raid-joins'),
 			enabled: !0
 		}
 	],
@@ -65,13 +63,11 @@ let I = (e) => ({
 			enabled: !0
 		},
 		{
-			renderComponent: () =>
-				(0, s.jsx)(o.Z, { title: _.Z.Messages.GUILD_SETTINGS_SAFETY_SPAM_SUSPICIOUS_LINKS }, 'outbound-links-warn'),
+			renderComponent: () => (0, s.jsx)(o.Z, { title: _.Z.Messages.GUILD_SETTINGS_SAFETY_SPAM_SUSPICIOUS_LINKS }, 'outbound-links-warn'),
 			enabled: !0
 		},
 		{
-			renderComponent: () =>
-				(0, s.jsx)(o.Z, { title: _.Z.Messages.GUILD_SETTINGS_SAFETY_SPAM_DM_SUSPCIOUS_MESSAGES }, 'delete-spam'),
+			renderComponent: () => (0, s.jsx)(o.Z, { title: _.Z.Messages.GUILD_SETTINGS_SAFETY_SPAM_DM_SUSPCIOUS_MESSAGES }, 'delete-spam'),
 			enabled: !0
 		}
 	],

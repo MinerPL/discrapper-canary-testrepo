@@ -64,18 +64,10 @@ function g(e) {
 }
 function m(e) {
 	let { itemId: t, hash: n } = e,
-		i = new URLSearchParams({
-			size: (0, a.oO)(parseFloat(l.Z.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH) * (0, a.x_)()).toString()
-		}).toString(),
+		i = new URLSearchParams({ size: (0, a.oO)(parseFloat(l.Z.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH) * (0, a.x_)()).toString() }).toString(),
 		r = o.$k ? 'webp' : 'png';
 	return null != p
-		? ''
-				.concat(location.protocol, '//')
-				.concat(p, '/app-assets/application-directory/collection-items/')
-				.concat(t, '/')
-				.concat(n, '.')
-				.concat(r, '?')
-				.concat(i)
+		? ''.concat(location.protocol, '//').concat(p, '/app-assets/application-directory/collection-items/').concat(t, '/').concat(n, '.').concat(r, '?').concat(i)
 		: ''
 				.concat(location.protocol)
 				.concat(h)

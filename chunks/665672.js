@@ -23,10 +23,7 @@ class s {
 		this.exporter = e;
 	}
 	export(e) {
-		i()(
-			null != this.exporter,
-			'DiscordCanvas: Exporting the canvas requires a valid DiscordCanvasExporter to be initialized.'
-		);
+		i()(null != this.exporter, 'DiscordCanvas: Exporting the canvas requires a valid DiscordCanvasExporter to be initialized.');
 		let t = this.canvas.getCanvasForExport();
 		return i()(null != t, "DiscordCanvas: Couldn't get a canvas for export."), this.exporter.exportCanvas(t, e);
 	}

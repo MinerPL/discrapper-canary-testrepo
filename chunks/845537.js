@@ -45,8 +45,8 @@ var i = n(442837),
 	f = n(592125),
 	h = n(430824),
 	p = n(246946),
-	I = n(594174),
-	m = n(934415),
+	m = n(594174),
+	I = n(934415),
 	T = n(5192),
 	g = n(51144),
 	S = n(377668),
@@ -95,7 +95,7 @@ function C(e) {
 }
 function y(e) {
 	let { id: t, guildId: n, channelId: s } = e,
-		l = (0, i.e7)([I.default], () => I.default.getUser(t)),
+		l = (0, i.e7)([m.default], () => m.default.getUser(t)),
 		u = (0, i.e7)([p.Z], () => p.Z.hidePersonalInformation),
 		c = T.ZP.useName(n, s, l),
 		d = (0, r.jsx)(_.Z, { children: null == c ? '<@'.concat(t, '>') : '@'.concat(c) });
@@ -165,9 +165,7 @@ function L(e) {
 		o = !0;
 	if (null != n) {
 		var l;
-		(a = (0, c.YO)(n) ? n.name : A.Z.Messages.NO_ACCESS),
-			(s = (0, c.YO)(n) ? (null !== (l = (0, m.wl)(n)) && void 0 !== l ? l : 'text') : 'locked'),
-			(o = (0, d.B)(n.type));
+		(a = (0, c.YO)(n) ? n.name : A.Z.Messages.NO_ACCESS), (s = (0, c.YO)(n) ? (null !== (l = (0, I.wl)(n)) && void 0 !== l ? l : 'text') : 'locked'), (o = (0, d.B)(n.type));
 	}
 	return o
 		? (0, r.jsx)(_.Z, {

@@ -32,62 +32,12 @@ var i = t(735250),
 	y = t(981631),
 	M = t(181729);
 function C(e) {
-	let {
-			premiumSubscription: n,
-			setPurchaseState: t,
-			onBack: r,
-			onNext: C,
-			legalTermsNodeRef: O,
-			flashLegalTerms: R,
-			invoiceError: L,
-			planError: j,
-			onPurchaseError: Z,
-			baseAnalyticsData: D,
-			flowStartTime: w,
-			trialId: G,
-			planGroup: B,
-			analyticsLocation: U,
-			purchaseTokenAuthState: k,
-			openInvoiceId: F,
-			metadata: H,
-			backButtonEligible: W,
-			disablePurchase: Y,
-			isTrial: K = !1
-		} = e,
-		{
-			selectedPlan: V,
-			priceOptions: z,
-			setHasAcceptedTerms: X,
-			setPurchaseError: q,
-			purchaseType: J,
-			paymentSourceId: Q,
-			paymentSources: $,
-			selectedSkuId: ee,
-			skusById: en,
-			skuPricePreviewsById: et,
-			referralCode: ei,
-			contextMetadata: ea,
-			invoicePreview: er,
-			inReverseTrial: es
-		} = (0, b.usePaymentContext)(),
-		{
-			isGift: el,
-			selectedGiftStyle: eo,
-			customGiftMessage: ec,
-			emojiConfetti: eu,
-			soundEffect: ed,
-			giftRecipient: e_
-		} = (0, h.wD)(),
+	let { premiumSubscription: n, setPurchaseState: t, onBack: r, onNext: C, legalTermsNodeRef: O, flashLegalTerms: R, invoiceError: L, planError: j, onPurchaseError: Z, baseAnalyticsData: D, flowStartTime: w, trialId: G, planGroup: B, analyticsLocation: U, purchaseTokenAuthState: k, openInvoiceId: F, metadata: H, backButtonEligible: W, disablePurchase: Y, isTrial: K = !1 } = e,
+		{ selectedPlan: V, priceOptions: z, setHasAcceptedTerms: X, setPurchaseError: q, purchaseType: J, paymentSourceId: Q, paymentSources: $, selectedSkuId: ee, skusById: en, skuPricePreviewsById: et, referralCode: ei, contextMetadata: ea, invoicePreview: er, inReverseTrial: es } = (0, b.usePaymentContext)(),
+		{ isGift: el, selectedGiftStyle: eo, customGiftMessage: ec, emojiConfetti: eu, soundEffect: ed, giftRecipient: e_ } = (0, h.wD)(),
 		ep = (0, S.MY)(e_),
 		em = {};
-	(em.gift_style = eo),
-		ep === S.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD &&
-			(s()(null != e_, 'Gift recipient must be set at purchase review step for these gift options.'),
-			(em.recipient_id = e_.id),
-			(em.custom_message = ec),
-			(em.emoji_id = null == eu ? void 0 : eu.id),
-			(em.emoji_name = (null == eu ? void 0 : eu.id) == null ? (null == eu ? void 0 : eu.surrogates) : void 0),
-			(em.sound_id = null == ed ? void 0 : ed.soundId));
+	(em.gift_style = eo), ep === S.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (s()(null != e_, 'Gift recipient must be set at purchase review step for these gift options.'), (em.recipient_id = e_.id), (em.custom_message = ec), (em.emoji_id = null == eu ? void 0 : eu.id), (em.emoji_name = (null == eu ? void 0 : eu.id) == null ? (null == eu ? void 0 : eu.surrogates) : void 0), (em.sound_id = null == ed ? void 0 : ed.soundId));
 	let eI = null == V ? void 0 : V.id,
 		ef = (0, v.sE)(G, z.paymentSourceId, eI),
 		eE = (0, l.e7)([f.Z], () => f.Z.popupCallbackCalled),
@@ -103,9 +53,7 @@ function C(e) {
 		eM = null;
 	if (J === y.GZQ.ONE_TIME) {
 		var eC;
-		s()(null != ee, 'SKU must be selected for one-time purchases'),
-			(ey = null !== (eC = en[ee]) && void 0 !== eC ? eC : null),
-			s()(null != ey, 'SKU must exist and be fetched.');
+		s()(null != ee, 'SKU must be selected for one-time purchases'), (ey = null !== (eC = en[ee]) && void 0 !== eC ? eC : null), s()(null != ey, 'SKU must exist and be fetched.');
 		let e = et[ee],
 			n = null != Q ? Q : x.c;
 		eM = null != e ? e[n] : null;

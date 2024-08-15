@@ -1,6 +1,6 @@
 n.d(t, {
 	Z: function () {
-		return m;
+		return I;
 	}
 }),
 	n(47120);
@@ -18,10 +18,10 @@ var r = n(735250),
 	f = n(898463),
 	h = n(981631),
 	p = n(277263),
-	I = n(451328);
-function m(e) {
+	m = n(451328);
+function I(e) {
 	let { channelId: t, option: n, keyboardModeEnabled: a } = e,
-		m = i.useRef(null),
+		I = i.useRef(null),
 		[T, g] = i.useState(!1),
 		S = _.Z.getUpload(t, n.name, d.d.SlashCommand),
 		A = i.useRef(null),
@@ -52,14 +52,9 @@ function m(e) {
 	return (i.useEffect(() => {
 		let e = A.current;
 		return (
-			null == S &&
-				(null == e || e.addEventListener('dragover', N, !1),
-				null == e || e.addEventListener('dragleave', v, !1),
-				null == e || e.addEventListener('drop', O, !1)),
+			null == S && (null == e || e.addEventListener('dragover', N, !1), null == e || e.addEventListener('dragleave', v, !1), null == e || e.addEventListener('drop', O, !1)),
 			() => {
-				null == e || e.removeEventListener('dragover', N, !1),
-					null == e || e.removeEventListener('dragleave', v, !1),
-					null == e || e.removeEventListener('drop', O, !1);
+				null == e || e.removeEventListener('dragover', N, !1), null == e || e.removeEventListener('dragleave', v, !1), null == e || e.removeEventListener('drop', O, !1);
 			}
 		);
 	}, [S, N, v, O]),
@@ -93,7 +88,7 @@ function m(e) {
 				onKeyDown: (e) => {
 					if (e.which === h.yXg.ENTER) {
 						var t;
-						e.preventDefault(), null === (t = m.current) || void 0 === t || t.activateUploadDialogue();
+						e.preventDefault(), null === (t = I.current) || void 0 === t || t.activateUploadDialogue();
 					}
 				},
 				className: s()(p.emptyOption, { [p.emptyOptionActive]: T }),
@@ -108,13 +103,13 @@ function m(e) {
 						className: p.clickContainer,
 						onClick: () => {
 							var e;
-							return null === (e = m.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
+							return null === (e = I.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
 						},
 						children: (0, r.jsxs)('div', {
 							className: p.commandOptionContainer,
 							children: [
 								(0, r.jsx)('img', {
-									src: I,
+									src: m,
 									className: p.optionIcon,
 									alt: ''
 								}),
@@ -124,17 +119,10 @@ function m(e) {
 									children: 'Drag and drop or click to upload file'
 								}),
 								(0, r.jsx)(u.Z, {
-									ref: m,
+									ref: I,
 									onChange: (e) => {
 										var r, i;
-										if (
-											null != t &&
-											(null === (i = e.currentTarget) || void 0 === i
-												? void 0
-												: null === (r = i.files) || void 0 === r
-													? void 0
-													: r[0]) != null
-										) {
+										if (null != t && (null === (i = e.currentTarget) || void 0 === i ? void 0 : null === (r = i.files) || void 0 === r ? void 0 : r[0]) != null) {
 											let r = {
 												id: n.name,
 												file: e.currentTarget.files[0],

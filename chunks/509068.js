@@ -47,12 +47,7 @@ function C(e = {}) {
 	let t = (function (e = {}) {
 		return {
 			defaultIntegrations: h(),
-			release:
-				'string' == typeof __SENTRY_RELEASE__
-					? __SENTRY_RELEASE__
-					: d.m9.SENTRY_RELEASE && d.m9.SENTRY_RELEASE.id
-						? d.m9.SENTRY_RELEASE.id
-						: void 0,
+			release: 'string' == typeof __SENTRY_RELEASE__ ? __SENTRY_RELEASE__ : d.m9.SENTRY_RELEASE && d.m9.SENTRY_RELEASE.id ? d.m9.SENTRY_RELEASE.id : void 0,
 			autoSessionTracking: !0,
 			sendClientReports: !0,
 			...e
@@ -65,26 +60,17 @@ function C(e = {}) {
 				r = e[t],
 				n = r && r.runtime && r.runtime.id,
 				a = (d.m9.location && d.m9.location.href) || '',
-				o =
-					!!n &&
-					d.m9 === d.m9.top &&
-					['chrome-extension:', 'moz-extension:', 'ms-browser-extension:'].some((e) => a.startsWith(`${e}//`)),
+				o = !!n && d.m9 === d.m9.top && ['chrome-extension:', 'moz-extension:', 'ms-browser-extension:'].some((e) => a.startsWith(`${e}//`)),
 				i = void 0 !== e.nw;
 			return !!n && !o && !i;
 		})()
 	) {
 		(0, I.Cf)(() => {
-			console.error(
-				'[Sentry] You cannot run Sentry this way in a browser extension, check: https://docs.sentry.io/platforms/javascript/best-practices/browser-extensions/'
-			);
+			console.error('[Sentry] You cannot run Sentry this way in a browser extension, check: https://docs.sentry.io/platforms/javascript/best-practices/browser-extensions/');
 		});
 		return;
 	}
-	T.X &&
-		!(0, u.Ak)() &&
-		I.kg.warn(
-			'No Fetch API detected. The Sentry SDK requires a Fetch API compatible environment to send events. Please add a Fetch API polyfill.'
-		);
+	T.X && !(0, u.Ak)() && I.kg.warn('No Fetch API detected. The Sentry SDK requires a Fetch API compatible environment to send events. Please add a Fetch API polyfill.');
 	let r = {
 			...t,
 			stackParser: (0, l.Sq)(t.stackParser || D.Dt),

@@ -72,8 +72,7 @@ function H(e) {
 		};
 	if (null == n) return null;
 	let Y = G.Z.Messages.DIRECT_MESSAGES;
-	S && (Y = s.K.get(D.wli) ? G.Z.Messages.DISCODO_ENABLED : G.Z.Messages.DISCODO_DISABLED),
-		V.length > 0 && p.Z.trackExposure({ location: 'home_button' });
+	S && (Y = s.K.get(D.wli) ? G.Z.Messages.DISCODO_ENABLED : G.Z.Messages.DISCODO_DISABLED), V.length > 0 && p.Z.trackExposure({ location: 'home_button' });
 	let K = null;
 	!t && f
 		? (K = (0, i.jsx)(c.Z, {

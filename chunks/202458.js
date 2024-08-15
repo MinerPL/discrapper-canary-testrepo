@@ -13,6 +13,5 @@ let r = (0, n(818083).B)({
 });
 t.Z = function () {
 	let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-	return r.useExperiment({ location: 'useIsEligibleForActivityReactReply' }, { autoTrackExposure: e })
-		.enableActivityReactReply;
+	return r.useExperiment({ location: 'useIsEligibleForActivityReactReply' }, { autoTrackExposure: e }).enableActivityReactReply;
 };

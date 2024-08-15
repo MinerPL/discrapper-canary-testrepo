@@ -173,18 +173,7 @@ function p(e, n) {
 	});
 }
 async function g(e) {
-	let {
-		guildId: n,
-		primaryCategoryId: t,
-		keywords: i,
-		emojiDiscoverabilityEnabled: s,
-		partnerActionedTimestamp: o,
-		partnerApplicationTimestamp: c,
-		isPublished: d,
-		reasonsToJoin: u,
-		socialLinks: m,
-		about: _
-	} = e;
+	let { guildId: n, primaryCategoryId: t, keywords: i, emojiDiscoverabilityEnabled: s, partnerActionedTimestamp: o, partnerApplicationTimestamp: c, isPublished: d, reasonsToJoin: u, socialLinks: m, about: _ } = e;
 	try {
 		let {
 			primary_category_id: e,

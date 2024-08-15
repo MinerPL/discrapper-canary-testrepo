@@ -27,7 +27,7 @@ n.d(t, {
 		return N;
 	},
 	is: function () {
-		return I;
+		return m;
 	},
 	m0: function () {
 		return T;
@@ -39,7 +39,7 @@ n.d(t, {
 		return A;
 	},
 	xw: function () {
-		return m;
+		return I;
 	}
 }),
 	n(411104);
@@ -71,8 +71,7 @@ async function p(e) {
 				type: 'QUESTS_USER_STATUS_UPDATE',
 				user_status: n.quest_user_status
 			});
-		else if (null != n.error_hints_v2 && n.error_hints_v2.length > 0)
-			return { errorHints: n.error_hints_v2.slice(0, 5) };
+		else if (null != n.error_hints_v2 && n.error_hints_v2.length > 0) return { errorHints: n.error_hints_v2.slice(0, 5) };
 	} catch (r) {
 		var n;
 		let e = new s.Z(r);
@@ -101,23 +100,19 @@ async function p(e) {
 	}
 	return { errorHints: [] };
 }
-async function I(e) {
+async function m(e) {
 	await i.tn.post({ url: f.ANM.QUEST_ON_CONSOLE_STOP(e) });
 }
-async function m() {
+async function I() {
 	if (!c.Z.isFetchingCurrentQuests) {
-		a.Z.dispatch({ type: 'QUESTS_FETCH_CURRENT_QUESTS_BEGIN' }),
-			u.Z.recordQuestRequestAttempt(f.ANM.QUESTS_CURRENT_QUESTS);
+		a.Z.dispatch({ type: 'QUESTS_FETCH_CURRENT_QUESTS_BEGIN' }), u.Z.recordQuestRequestAttempt(f.ANM.QUESTS_CURRENT_QUESTS);
 		try {
 			let e = (await i.tn.get({ url: f.ANM.QUESTS_CURRENT_QUESTS })).body.quests
 				.filter((e) => (0, _.Qe)(e))
 				.map((e) => (0, _.WP)(e))
 				.filter((e) => {
 					var t;
-					return (
-						(null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null ||
-						E.r.build(e.config).rewardPlatforms.length > 0
-					);
+					return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null || E.r.build(e.config).rewardPlatforms.length > 0;
 				});
 			a.Z.dispatch({
 				type: 'QUESTS_FETCH_CURRENT_QUESTS_SUCCESS',

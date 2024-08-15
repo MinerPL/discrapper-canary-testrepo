@@ -6,22 +6,22 @@ var i,
 	r = t(392711),
 	o = t.n(r),
 	d = t(442837),
-	u = t(570140),
-	_ = t(317381),
+	_ = t(570140),
+	u = t(317381),
 	s = t(430198),
 	c = t(924301),
 	C = t(601070),
-	A = t(569471),
-	S = t(581883),
+	S = t(569471),
+	A = t(581883),
 	T = t(314897),
 	I = t(680089),
 	L = t(592125),
 	D = t(58468),
 	N = t(77498),
-	U = t(496675),
-	h = t(306680),
-	P = t(944486),
-	R = t(9156),
+	h = t(496675),
+	U = t(306680),
+	R = t(944486),
+	P = t(9156),
 	f = t(823379),
 	g = t(709054),
 	O = t(540126),
@@ -30,8 +30,8 @@ let m = null,
 	H = null,
 	Z = new O.ZP();
 function v() {
-	let e = P.Z.getChannelId(),
-		n = P.Z.getVoiceChannelId();
+	let e = R.Z.getChannelId(),
+		n = R.Z.getVoiceChannelId();
 	return (m = e), (H = n), Z.clear();
 }
 function p(e) {
@@ -66,8 +66,8 @@ function j(e) {
 	return Z.nonPositionalChannelIdUpdate(n);
 }
 function F() {
-	let e = P.Z.getChannelId(),
-		n = P.Z.getVoiceChannelId(),
+	let e = R.Z.getChannelId(),
+		n = R.Z.getVoiceChannelId(),
 		t = m !== e || H !== n;
 	return (
 		!!t &&
@@ -99,15 +99,11 @@ function k(e) {
 }
 class K extends (i = d.ZP.Store) {
 	initialize() {
-		this.waitFor(C.Z, T.default, I.Z, L.Z, D.Z, _.ZP, N.Z, s.Z, c.ZP, A.Z, U.Z, h.ZP, P.Z, R.ZP, S.Z);
+		this.waitFor(C.Z, T.default, I.Z, L.Z, D.Z, u.ZP, N.Z, s.Z, c.ZP, S.Z, h.Z, U.ZP, R.Z, P.ZP, A.Z);
 	}
 	getGuild(e, n) {
 		var t, i;
-		let l = Z.getGuild(
-			e,
-			null !== (t = null == n ? void 0 : n.guildActionRows) && void 0 !== t ? t : [],
-			null !== (i = null == n ? void 0 : n.channelNoticeRows) && void 0 !== i ? i : []
-		);
+		let l = Z.getGuild(e, null !== (t = null == n ? void 0 : n.guildActionRows) && void 0 !== t ? t : [], null !== (i = null == n ? void 0 : n.channelNoticeRows) && void 0 !== i ? i : []);
 		return {
 			guildChannelsVersion: l.version,
 			guildChannels: l
@@ -135,7 +131,7 @@ class K extends (i = d.ZP.Store) {
 				writable: !0
 			})
 		: (l[a] = E),
-	(n.Z = new K(u.Z, {
+	(n.Z = new K(_.Z, {
 		APPLICATION_FETCH_FAIL: Y,
 		APPLICATION_FETCH_SUCCESS: Y,
 		APPLICATION_FETCH: Y,
@@ -206,10 +202,6 @@ class K extends (i = d.ZP.Store) {
 		},
 		DRAWER_CLOSE: B,
 		DRAWER_OPEN: B,
-		EMBEDDED_ACTIVITY_UPDATE: function (e) {
-			let { guildId: n, channelId: t } = e;
-			return Z.updateSubtitles(n, t);
-		},
 		EMBEDDED_ACTIVITY_UPDATE_V2: function (e) {
 			let { location: n } = e;
 			return Z.updateSubtitles(n.guild_id, n.channel_id);
@@ -318,9 +310,7 @@ class K extends (i = d.ZP.Store) {
 			let { voiceStates: n } = e,
 				t = F(),
 				i = new Set();
-			for (let { channelId: e, oldChannelId: l } of n)
-				null != l && !i.has(l) && (Z.nonPositionalChannelIdUpdate(l) && (t = !0), i.add(l)),
-					null != e && !i.has(e) && (Z.nonPositionalChannelIdUpdate(e) && (t = !0), i.add(e));
+			for (let { channelId: e, oldChannelId: l } of n) null != l && !i.has(l) && (Z.nonPositionalChannelIdUpdate(l) && (t = !0), i.add(l)), null != e && !i.has(e) && (Z.nonPositionalChannelIdUpdate(e) && (t = !0), i.add(e));
 			return t;
 		},
 		WINDOW_FOCUS: B

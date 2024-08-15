@@ -62,12 +62,7 @@ function B(e) {
 		D = (0, s.e7)([I.Z], () => I.Z.getSettings(i.id)),
 		O = null == D ? void 0 : D.welcomeMessage,
 		U = (0, _.Z)(i.id),
-		G =
-			!U &&
-			(null !== (l = null == D ? void 0 : null === (n = D.resourceChannels) || void 0 === n ? void 0 : n.length) &&
-			void 0 !== l
-				? l
-				: 0) === 0,
+		G = !U && (null !== (l = null == D ? void 0 : null === (n = D.resourceChannels) || void 0 === n ? void 0 : n.length) && void 0 !== l ? l : 0) === 0,
 		W = (0, c.Z)('(max-width: 1300px)'),
 		z = m - E.PrS - H,
 		F = (L && z < R) || W || G;
@@ -77,12 +72,9 @@ function B(e) {
 			var e, n, l, a, r;
 			x.default.track(E.rMx.SERVER_GUIDE_VIEWED, {
 				...(0, u.hH)(i.id),
-				num_member_actions:
-					null !== (l = null === (e = D.newMemberActions) || void 0 === e ? void 0 : e.length) && void 0 !== l ? l : 0,
-				num_member_actions_completed: Object.keys(null !== (a = Z.Z.getCompletedActions(i.id)) && void 0 !== a ? a : {})
-					.length,
-				num_resource_channels:
-					null !== (r = null === (n = D.resourceChannels) || void 0 === n ? void 0 : n.length) && void 0 !== r ? r : 0
+				num_member_actions: null !== (l = null === (e = D.newMemberActions) || void 0 === e ? void 0 : e.length) && void 0 !== l ? l : 0,
+				num_member_actions_completed: Object.keys(null !== (a = Z.Z.getCompletedActions(i.id)) && void 0 !== a ? a : {}).length,
+				num_resource_channels: null !== (r = null === (n = D.resourceChannels) || void 0 === n ? void 0 : n.length) && void 0 !== r ? r : 0
 			});
 		}
 	}, [i.id, D]),

@@ -20,8 +20,8 @@ let h = [_.Eu4.NONE, _.Eu4.TIER_1, _.Eu4.TIER_2, _.Eu4.TIER_3];
 function p(e) {
 	let { guild: t } = e,
 		n = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
-		[p, I] = i.useState(!1),
-		[m, T] = i.useState(0),
+		[p, m] = i.useState(!1),
+		[I, T] = i.useState(0),
 		g = i.useRef(null),
 		S = Math.min(_.Eu4.TIER_3, t.premiumTier + 1),
 		A = _.oCV[t.premiumTier],
@@ -42,7 +42,7 @@ function p(e) {
 				[c, E] = i.useState(0 === n),
 				[f, h] = i.useState(!1),
 				p = i.useRef(!0),
-				{ widthFactor: I } = (0, o.useSpring)({
+				{ widthFactor: m } = (0, o.useSpring)({
 					from: { widthFactor: 0 },
 					to: { widthFactor: a ? t : 0 },
 					config: {
@@ -79,7 +79,7 @@ function p(e) {
 				),
 				{
 					isProgressBarAnimationComplete: c,
-					progressBarFillWidthFactor: I,
+					progressBarFillWidthFactor: m,
 					setShouldFireConfetti: h,
 					shouldFireConfetti: f,
 					tierMarkerAnimationPosition: l
@@ -95,7 +95,7 @@ function p(e) {
 	return (
 		i.useEffect(() => {
 			let e = window.setTimeout(() => {
-				I(!0);
+				m(!0);
 			}, 250);
 			return () => {
 				window.clearTimeout(e);
@@ -107,9 +107,7 @@ function p(e) {
 			'aria-valuenow': t.premiumSubscriberCount,
 			'aria-valuetext':
 				t.premiumTier === _.Eu4.NONE
-					? E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_SCREEN_READER_VALUE.format({
-							numSubscriptionsApplied: t.premiumSubscriberCount
-						})
+					? E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_SCREEN_READER_VALUE.format({ numSubscriptionsApplied: t.premiumSubscriberCount })
 					: E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_SCREEN_READER_VALUE_TIER_UNLOCKED.format({
 							numSubscriptionsApplied: t.premiumSubscriberCount,
 							tierName: (0, u.nW)(t.premiumTier, { useLevels: !1 })
@@ -149,7 +147,7 @@ function p(e) {
 					)
 				),
 				(0, r.jsx)(c.Z, {
-					confettiCount: m,
+					confettiCount: I,
 					confettiTriggerRef: g,
 					isFiring: b
 				})

@@ -18,8 +18,8 @@ var r = n(735250),
 	f = n(823379),
 	h = n(5192),
 	p = n(51144),
-	I = n(785717),
-	m = n(790286),
+	m = n(785717),
+	I = n(790286),
 	T = n(485216),
 	g = n(825801),
 	S = n(228168),
@@ -40,9 +40,7 @@ let v = (0, _.kt)({
 				return '> -# *'.concat(s, '*\n').concat(t);
 			case S.n_.STATUS:
 				let o = A.Z.Messages.USER_PROFILE_REPLIED_TO_STATUS.format({ username: n });
-				return null != i
-					? '> -# *'.concat(o, '*').concat('\n > '.concat(i), '\n').concat(t)
-					: '> -# *'.concat(o, '*\n').concat(t);
+				return null != i ? '> -# *'.concat(o, '*').concat('\n > '.concat(i), '\n').concat(t) : '> -# *'.concat(o, '*\n').concat(t);
 			default:
 				(0, f.vE)(r);
 		}
@@ -60,22 +58,9 @@ let v = (0, _.kt)({
 		}
 	};
 function C(e) {
-	let {
-			user: t,
-			guildId: n,
-			channelId: a,
-			profileType: o,
-			sourceType: _,
-			sourceDetails: f,
-			onInteraction: A,
-			setPopoutRef: C,
-			modalKey: y,
-			setInteractionToastShown: D,
-			setInteractionSent: L,
-			setIsReplyInteraction: b
-		} = e,
-		{ trackUserProfileAction: M } = (0, I.KZ)(),
-		{ sendReply: P } = (0, m.Q)(_),
+	let { user: t, guildId: n, channelId: a, profileType: o, sourceType: _, sourceDetails: f, onInteraction: A, setPopoutRef: C, modalKey: y, setInteractionToastShown: D, setInteractionSent: L, setIsReplyInteraction: b } = e,
+		{ trackUserProfileAction: M } = (0, m.KZ)(),
+		{ sendReply: P } = (0, I.Q)(_),
 		[U, w] = i.useState(''),
 		[x, G] = i.useState((0, c.JM)(U)),
 		k = i.useRef(!1),

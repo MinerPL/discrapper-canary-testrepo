@@ -34,9 +34,7 @@ function _(e) {
 	return A
 		? (0, t.jsx)(i.MenuItem, {
 				id: 'invite-speaker',
-				label: m
-					? M.Z.Messages.STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER
-					: M.Z.Messages.STAGE_CHANNEL_USER_INVITE_TO_SPEAK,
+				label: m ? M.Z.Messages.STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER : M.Z.Messages.STAGE_CHANNEL_USER_INVITE_TO_SPEAK,
 				action: C
 			})
 		: R && m

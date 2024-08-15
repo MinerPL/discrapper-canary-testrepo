@@ -17,8 +17,8 @@ var r = n(735250),
 	f = n(74538),
 	h = n(357355),
 	p = n(104494),
-	I = n(639119),
-	m = n(165583),
+	m = n(639119),
+	I = n(165583),
 	T = n(197115),
 	g = n(302945),
 	S = n(631771),
@@ -29,43 +29,11 @@ var r = n(735250),
 	R = n(769860);
 function C(e) {
 	var t, n, a;
-	let {
-			title: C,
-			type: y,
-			guildBoostProps: D,
-			analyticsSource: L,
-			analyticsLocation: b,
-			body: M,
-			context: P,
-			glowUp: U,
-			modalClassName: w,
-			artContainerClassName: x,
-			headerClassName: G,
-			bodyClassName: k,
-			transitionState: B,
-			onClose: F,
-			onSubscribeClick: V,
-			onSecondaryClick: H,
-			secondaryCTA: Z,
-			subscribeButtonText: Y,
-			showNewBadge: j = !1,
-			showBetaBadge: W = !1,
-			enableArtBoxShadow: K = !0,
-			subscriptionTier: z = A.Si.TIER_2,
-			isLoading: q = !1,
-			hideBackButton: Q,
-			backButtonText: X,
-			showEnhancedUpsell: $,
-			children: J,
-			...ee
-		} = e,
+	let { title: C, type: y, guildBoostProps: D, analyticsSource: L, analyticsLocation: b, body: M, context: P, glowUp: U, modalClassName: w, artContainerClassName: x, headerClassName: G, bodyClassName: k, transitionState: B, onClose: F, onSubscribeClick: V, onSecondaryClick: H, secondaryCTA: Z, subscribeButtonText: Y, showNewBadge: j = !1, showBetaBadge: W = !1, enableArtBoxShadow: K = !0, subscriptionTier: z = A.Si.TIER_2, isLoading: q = !1, hideBackButton: Q, backButtonText: X, showEnhancedUpsell: $, children: J, ...ee } = e,
 		et = null != D,
-		en = (0, I.N)(),
+		en = (0, m.N)(),
 		er = (0, p.Ng)(),
-		ei =
-			((null == en ? void 0 : null === (t = en.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === z ||
-				(0, p.Wp)(er, z)) &&
-			!et,
+		ei = ((null == en ? void 0 : null === (t = en.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === z || (0, p.Wp)(er, z)) && !et,
 		{ analyticsLocations: ea } = (0, d.ZP)(c.Z.PREMIUM_UPSELL_MODAL);
 	i.useEffect(() => {
 		!q &&
@@ -141,19 +109,10 @@ function C(e) {
 						: (0, r.jsx)(r.Fragment, {
 								children: ei
 									? (0, r.jsx)(r.Fragment, {
-											children: (0, r.jsx)(m.ZP, {
+											children: (0, r.jsx)(I.ZP, {
 												onClose: F,
 												type: y,
-												subscriptionTier:
-													null !==
-														(a =
-															null == en
-																? void 0
-																: null === (n = en.subscription_trial) || void 0 === n
-																	? void 0
-																	: n.sku_id) && void 0 !== a
-														? a
-														: A.Si.TIER_2,
+												subscriptionTier: null !== (a = null == en ? void 0 : null === (n = en.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : A.Si.TIER_2,
 												headingText: C,
 												context: P,
 												analyticsLocationObject: b,
@@ -208,21 +167,10 @@ function C(e) {
 										if (null != en) {
 											var t, n;
 											e = (0, f.Rt)({
-												intervalType:
-													null == en
-														? void 0
-														: null === (t = en.subscription_trial) || void 0 === t
-															? void 0
-															: t.interval,
-												intervalCount:
-													null == en
-														? void 0
-														: null === (n = en.subscription_trial) || void 0 === n
-															? void 0
-															: n.interval_count
+												intervalType: null == en ? void 0 : null === (t = en.subscription_trial) || void 0 === t ? void 0 : t.interval,
+												intervalCount: null == en ? void 0 : null === (n = en.subscription_trial) || void 0 === n ? void 0 : n.interval_count
 											});
-										} else
-											null != er && (e = v.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: er.discount.amount }));
+										} else null != er && (e = v.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: er.discount.amount }));
 									}
 									return (0, r.jsx)(T.Z, {
 										showGradient: $,

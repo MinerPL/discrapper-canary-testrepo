@@ -12,10 +12,7 @@ var r,
 	u = n(442837),
 	c = n(570140),
 	d = n(865427);
-((r = o || (o = {}))[(r.NotResolved = 0)] = 'NotResolved'),
-	(r[(r.Resolving = 1)] = 'Resolving'),
-	(r[(r.Resolved = 2)] = 'Resolved'),
-	(r[(r.Invalid = 3)] = 'Invalid');
+((r = o || (o = {}))[(r.NotResolved = 0)] = 'NotResolved'), (r[(r.Resolving = 1)] = 'Resolving'), (r[(r.Resolved = 2)] = 'Resolved'), (r[(r.Invalid = 3)] = 'Invalid');
 let _ = 0,
 	E = null,
 	f = {};

@@ -28,18 +28,7 @@ e.default = (0, c.Z)(
 	(0, l.Z)(
 		function (n) {
 			var e;
-			let {
-					user: t,
-					guildId: l,
-					channelId: c,
-					context: C,
-					onSelect: y,
-					moderationAlertId: R,
-					analyticsLocation: m,
-					analyticsLocations: b,
-					onCloseContextMenu: x,
-					showTransferOwnershipItem: j
-				} = n,
+			let { user: t, guildId: l, channelId: c, context: C, onSelect: y, moderationAlertId: R, analyticsLocation: m, analyticsLocations: b, onCloseContextMenu: x, showTransferOwnershipItem: j } = n,
 				{ analyticsLocations: v } = (0, s.ZP)(_.Z.CONTEXT_MENU),
 				Z = (0, d.O)(),
 				h = null !== (e = null == b ? void 0 : b[0]) && void 0 !== e ? e : v[0],

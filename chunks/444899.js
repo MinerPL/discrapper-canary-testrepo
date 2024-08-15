@@ -60,13 +60,7 @@ class x extends i.PureComponent {
 		this.setMessageNotification(e, void 0, E.UE.notifications(e));
 	}
 	renderMessageNotificationsRadioOption(e) {
-		let {
-				messageNotifications: s,
-				guildMuted: t,
-				muted: i,
-				guildMessageNotifications: a,
-				checkboxColor: r
-			} = this.props,
+		let { messageNotifications: s, guildMuted: t, muted: i, guildMessageNotifications: a, checkboxColor: r } = this.props,
 			o = s === e;
 		(null == s || s === g.bL.NULL) && e === a && (o = !0);
 		let d = l.Checkbox.Types.INVERTED;
@@ -90,11 +84,7 @@ class x extends i.PureComponent {
 		if (t.type === g.d4z.GUILD_CATEGORY && null != t.guild_id && '' !== t.guild_id) {
 			let e = h.Z.getCategories(t.guild_id);
 			s = m.Z.Messages.NUM_CHANNELS.format({ num: null != e[t.id] ? e[t.id].length : 0 });
-		} else
-			s =
-				null != e
-					? m.Z.Messages.IN_CATEGORY.format({ categoryName: (0, o.F6)(e, S.default, N.Z) })
-					: m.Z.Messages.NO_CATEGORY;
+		} else s = null != e ? m.Z.Messages.IN_CATEGORY.format({ categoryName: (0, o.F6)(e, S.default, N.Z) }) : m.Z.Messages.NO_CATEGORY;
 		return (0, n.jsxs)(c.Z, {
 			grow: 1,
 			className: _.nameContainer,

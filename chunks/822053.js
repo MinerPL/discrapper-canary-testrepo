@@ -171,8 +171,7 @@ var n = {
 	'blik.invalid': 'Indtast 6 tal',
 	'blik.code': '6-cifret kode',
 	'blik.help': 'Få koden fra din bankapp.',
-	'swish.pendingMessage':
-		'Visning af status kan tage op til 10 minutter efter scanning. Et nyt forsøg på betaling inden for dette tidsrum kan muligvis medføre flere gebyrer.',
+	'swish.pendingMessage': 'Visning af status kan tage op til 10 minutter efter scanning. Et nyt forsøg på betaling inden for dette tidsrum kan muligvis medføre flere gebyrer.',
 	'field.valid': 'Gyldigt felt',
 	'field.invalid': 'Ugyldigt felt',
 	'error.va.gen.01': 'Felt ikke udfyldt',
@@ -208,8 +207,7 @@ var n = {
 	'bankTransfer.iban': 'IBAN',
 	'bankTransfer.bic': 'BIC',
 	'bankTransfer.reference': 'Reference',
-	'bankTransfer.introduction':
-		'Fortsæt med at oprette ny betalingsoverførsel via bank. Du kan bruge oplysningerne på den følgende skærm til at afslutte betalingen.',
+	'bankTransfer.introduction': 'Fortsæt med at oprette ny betalingsoverførsel via bank. Du kan bruge oplysningerne på den følgende skærm til at afslutte betalingen.',
 	'bankTransfer.instructions': 'Tak for dit køb. Brug følgende oplysninger til at gennemføre din betaling.',
 	'bacs.accountHolderName': 'Bankkontohavers navn',
 	'bacs.accountHolderName.invalid': 'Ugyldigt navn på bankkontohaver',
@@ -218,8 +216,7 @@ var n = {
 	'bacs.bankLocationId': 'Registreringsnummer',
 	'bacs.bankLocationId.invalid': 'Ugyldigt registreringsnummer',
 	'bacs.consent.amount': 'Jeg accepterer, at beløbet ovenfor trækkes på min bankkonto.',
-	'bacs.consent.account':
-		'Jeg bekræfter, at kontoen er i mit navn, og at jeg er den eneste underskriver, der kræves for at godkende direkte debitering af kontoen.',
+	'bacs.consent.account': 'Jeg bekræfter, at kontoen er i mit navn, og at jeg er den eneste underskriver, der kræves for at godkende direkte debitering af kontoen.',
 	edit: 'Rediger',
 	'bacs.confirm': 'Bekræft, og betal',
 	'bacs.result.introduction': 'Download vejledningen til direkte debitering (fuldmagt til direkte debitering)',
@@ -252,8 +249,7 @@ var n = {
 	'upi.vpaWaitingMessage': 'Åbn din UPI-app for at bekræfte betalingen',
 	'upi.modeSelection': 'Foretag et valg om, hvordan du vil bruge UPI.',
 	'onlineBanking.termsAndConditions': 'Ved at fortsætte accepterer du %#vilkår og betingelser%#',
-	'onlineBankingPL.termsAndConditions':
-		'Hvis du fortsætter, accepterer du %#regulativer%# og %#informationspligten%# for Przelewy24',
+	'onlineBankingPL.termsAndConditions': 'Hvis du fortsætter, accepterer du %#regulativer%# og %#informationspligten%# for Przelewy24',
 	'ctp.loading.poweredByCtp': 'Drevet af Click to Pay',
 	'ctp.loading.intro': 'Vi tjekker, om du har gemte kort med Click to Pay...',
 	'ctp.login.title': 'Fortsæt med Click to Pay',
@@ -276,8 +272,7 @@ var n = {
 	'ctp.manualCardEntry': 'Manuel kortindtastning',
 	'ctp.aria.infoModalButton': 'Hvad er Click to Pay?',
 	'ctp.infoPopup.title': 'Med Click to Pay får du letheden fra kontaktløs betaling, online',
-	'ctp.infoPopup.subtitle':
-		'En hurtig og sikker betalingsmetode, der understøttes af Mastercard, Visa og andre betalingskort.',
+	'ctp.infoPopup.subtitle': 'En hurtig og sikker betalingsmetode, der understøttes af Mastercard, Visa og andre betalingskort.',
 	'ctp.infoPopup.benefit1': 'Click to Pay bruger kryptering for at holde dine oplysninger sikre og beskyttede',
 	'ctp.infoPopup.benefit2': 'Brug det med forhandlere i hele verden',
 	'ctp.infoPopup.benefit3': 'Konfigurer én gang for betalinger uden problemer i fremtiden',
@@ -303,7 +298,6 @@ var n = {
 	'consent.checkbox.invalid': 'Du skal acceptere vilkår og betingelser',
 	'form.instruction': 'Alle felter er obligatoriske, medmindre andet er markeret.',
 	'trustly.descriptor': 'Direkte netbanksbetalinger',
-	'trustly.description1':
-		'Betal nemt fra din ønskede bankkonto, med sikker verifikation via dit NemID eller biometrics',
+	'trustly.description1': 'Betal nemt fra din ønskede bankkonto, med sikker verifikation via dit NemID eller biometrics',
 	'trustly.description2': 'Ingen kort, ingen download af apps, og ingen registrering'
 };

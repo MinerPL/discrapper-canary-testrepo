@@ -26,9 +26,7 @@ function u(e, t) {
 }
 class d extends (i = l.ZP.PersistedStore) {
 	initialize(e) {
-		if (null != e)
-			Array.isArray(e.bannerRenders) && (c.bannerRenders = e.bannerRenders),
-				null != e.channelVisitsDump && c.channelVisits.load(e.channelVisitsDump);
+		if (null != e) Array.isArray(e.bannerRenders) && (c.bannerRenders = e.bannerRenders), null != e.channelVisitsDump && c.channelVisits.load(e.channelVisitsDump);
 	}
 	getState() {
 		return {
@@ -46,9 +44,7 @@ class d extends (i = l.ZP.PersistedStore) {
 	}
 	getNumberOfChannelVisitsSince(e, t, n) {
 		var i;
-		return (null !== (i = c.channelVisits.get(e + t)) && void 0 !== i ? i : []).filter(
-			(e) => e >= Date.now() - 1000 * n
-		).length;
+		return (null !== (i = c.channelVisits.get(e + t)) && void 0 !== i ? i : []).filter((e) => e >= Date.now() - 1000 * n).length;
 	}
 }
 o(d, 'displayName', 'UnreadSettingNoticeStore'),

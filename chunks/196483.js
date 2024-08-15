@@ -6,15 +6,7 @@ n.d(t, {
 var r = n(53529),
 	i = n(887490);
 function a(e, t) {
-	let {
-		apply: n,
-		deleteBackward: a,
-		deleteForward: o,
-		deleteFragment: l,
-		insertData: u,
-		insertText: c,
-		onChange: d
-	} = e;
+	let { apply: n, deleteBackward: a, deleteForward: o, deleteFragment: l, insertData: u, insertText: c, onChange: d } = e;
 	function _(n) {
 		let i = r.T.currentEntry(e);
 		if ((null != i && (i.mergeable = !1), n >= e.history.stack.length)) return;
@@ -31,10 +23,7 @@ function a(e, t) {
 	}),
 		(e.onChange = () => {
 			let { history: t } = e;
-			0 === t.stack.length && ((t.stack = [s(e)]), (t.index = 0)),
-				null != e.selection && (r.T.currentEntry(e).selection = e.selection),
-				(f = null),
-				d();
+			0 === t.stack.length && ((t.stack = [s(e)]), (t.index = 0)), null != e.selection && (r.T.currentEntry(e).selection = e.selection), (f = null), d();
 		}),
 		(e.undo = () => {
 			e.history.index > 0 && _(e.history.index - 1);
@@ -59,21 +48,7 @@ function a(e, t) {
 								s = r.T.currentEntry(e),
 								o = !0,
 								l = !0;
-							if (
-								('insert_text' === t.type && 1 === t.text.length
-									? ((i = 'insert'),
-										(l = !(
-											('' === t.text || t.text.endsWith(' ')) &&
-											(null == n ? void 0 : n.type) === 'insert_text' &&
-											!('' === n.text && n.text.endsWith(' '))
-										)))
-									: 'split_node' === t.type
-										? (i = 'insert')
-										: 'remove_text' === t.type && 1 === t.text.length
-											? (i = 'delete')
-											: ((i = 'other'), (o = !1), (l = !1)),
-								'set_selection' === t.type && null != s)
-							) {
+							if (('insert_text' === t.type && 1 === t.text.length ? ((i = 'insert'), (l = !(('' === t.text || t.text.endsWith(' ')) && (null == n ? void 0 : n.type) === 'insert_text' && !('' === n.text && n.text.endsWith(' '))))) : 'split_node' === t.type ? (i = 'insert') : 'remove_text' === t.type && 1 === t.text.length ? (i = 'delete') : ((i = 'other'), (o = !1), (l = !1)), 'set_selection' === t.type && null != s)) {
 								s.selection = a;
 								return;
 							}
@@ -98,16 +73,10 @@ function a(e, t) {
 			r.T.withSingleEntry(e, () => l(t));
 		}),
 		(e.insertText = (t) => {
-			1 === t.length && (null == f ? void 0 : f.type) === 'remove_text'
-				? r.T.withMergedEntry(e, () => c(t))
-				: null != e.selection && i.M8.isExpanded(e.selection)
-					? r.T.withSingleEntry(e, () => c(t))
-					: c(t);
+			1 === t.length && (null == f ? void 0 : f.type) === 'remove_text' ? r.T.withMergedEntry(e, () => c(t)) : null != e.selection && i.M8.isExpanded(e.selection) ? r.T.withSingleEntry(e, () => c(t)) : c(t);
 		}),
 		(e.insertData = (t) => {
-			(null == f ? void 0 : f.type) === 'remove_text'
-				? r.T.withMergedEntry(e, () => u(t))
-				: r.T.withSingleEntry(e, () => u(t));
+			(null == f ? void 0 : f.type) === 'remove_text' ? r.T.withMergedEntry(e, () => u(t)) : r.T.withSingleEntry(e, () => u(t));
 		}),
 		e
 	);

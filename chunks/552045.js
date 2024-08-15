@@ -31,18 +31,8 @@ let I = () => {
 };
 t.Z = () => {
 	let e = (0, l.Z)(),
-		t = (0, r.o)(
-			_.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_HEADER_TEEN,
-			_.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_HEADER_PARENT
-		),
-		n = (0, r.o)(
-			_.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_DESCRIPTION_TEEN.format({
-				articleLink: 'https://support.discord.com/hc/articles/14155060633623'
-			}),
-			_.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_DESCRIPTION_PARENT.format({
-				articleLink: 'https://support.discord.com/hc/articles/14155043715735'
-			})
-		);
+		t = (0, r.o)(_.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_HEADER_TEEN, _.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_HEADER_PARENT),
+		n = (0, r.o)(_.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_DESCRIPTION_TEEN.format({ articleLink: 'https://support.discord.com/hc/articles/14155060633623' }), _.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_DESCRIPTION_PARENT.format({ articleLink: 'https://support.discord.com/hc/articles/14155043715735' }));
 	return (0, s.jsxs)('div', {
 		className: u.container,
 		children: [

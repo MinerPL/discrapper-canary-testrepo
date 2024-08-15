@@ -15,11 +15,7 @@
 		function p(e, t) {
 			var n = Array((e.match(/M/g) || []).length + 1),
 				r = Array((e.match(/E/g) || []).length + 1);
-			return (
-				n.length > 2 && (t = t.replace(/(M|L)+/, n.join('$1'))),
-				r.length > 2 && (t = t.replace(/([Eec])+/, r.join('$1'))),
-				t
-			);
+			return n.length > 2 && (t = t.replace(/(M|L)+/, n.join('$1'))), r.length > 2 && (t = t.replace(/([Eec])+/, r.join('$1'))), t;
 		}
 		for (t in u)
 			u.hasOwnProperty(t) &&
@@ -45,8 +41,7 @@
 		for (t in d) d.hasOwnProperty(t) && (r = o((n = p(t, d[t])))) && E.push(r);
 		return E;
 	});
-var n =
-		/(?:[Eec]{1,6}|G{1,5}|(?:[yYu]+|U{1,5})|[ML]{1,5}|d{1,2}|a|[hkHK]{1,2}|m{1,2}|s{1,2}|z{1,4})(?=([^']*'[^']*')*[^']*$)/g,
+var n = /(?:[Eec]{1,6}|G{1,5}|(?:[yYu]+|U{1,5})|[ML]{1,5}|d{1,2}|a|[hkHK]{1,2}|m{1,2}|s{1,2}|z{1,4})(?=([^']*'[^']*')*[^']*$)/g,
 	r = /[QxXVOvZASjgFDwWIQqH]/,
 	i = {
 		month: ['numeric', '2-digit', 'short', 'long', 'narrow'],
@@ -95,10 +90,7 @@ function o(e) {
 			(t.pattern = t.pattern.replace(/'([^']*)'/g, function (e, t) {
 				return t || "'";
 			})),
-			t.pattern.indexOf('{ampm}') > -1 &&
-				((t.hour12 = !0),
-				(t.pattern12 = t.pattern),
-				(t.pattern = t.pattern.replace('{ampm}', '').replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, ''))),
+			t.pattern.indexOf('{ampm}') > -1 && ((t.hour12 = !0), (t.pattern12 = t.pattern), (t.pattern = t.pattern.replace('{ampm}', '').replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, ''))),
 			t
 		);
 	}

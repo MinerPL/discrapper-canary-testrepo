@@ -7,17 +7,13 @@ n.Z = i.forwardRef(function (e, n) {
 	let { href: t, children: a, onClick: s, onKeyPress: c, focusProps: d, ..._ } = e,
 		f = i.useCallback(
 			(e) => {
-				if (!e.repeat)
-					(e.charCode === u.yXg.SPACE || e.charCode === u.yXg.ENTER) &&
-						(e.preventDefault(), null != t && (0, l.uL)(t), null == s || s()),
-						null == c || c(e);
+				if (!e.repeat) (e.charCode === u.yXg.SPACE || e.charCode === u.yXg.ENTER) && (e.preventDefault(), null != t && (0, l.uL)(t), null == s || s()), null == c || c(e);
 			},
 			[t, c, s]
 		),
 		E = i.useCallback(
 			(e) => {
-				if (!e.metaKey && !e.shiftKey && 0 === e.button)
-					e.preventDefault(), e.stopPropagation(), null != t && (0, l.uL)(t), null == s || s();
+				if (!e.metaKey && !e.shiftKey && 0 === e.button) e.preventDefault(), e.stopPropagation(), null != t && (0, l.uL)(t), null == s || s();
 			},
 			[t, s]
 		),

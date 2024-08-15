@@ -12,24 +12,13 @@ var i = n(120356),
 	l = n(829820),
 	u = n(316865);
 function c(e) {
-	let {
-			activity: t,
-			user: n,
-			channelId: i,
-			guildId: c,
-			source: d,
-			size: _,
-			look: E,
-			color: f,
-			className: h,
-			onAction: p
-		} = e,
-		{ tooltip: I, loading: m, disabled: T, onClick: g } = (0, l.Fe)(t, n, d, o.ZP.getNickname(c, i, n)),
+	let { activity: t, user: n, channelId: i, guildId: c, source: d, size: _, look: E, color: f, className: h, onAction: p } = e,
+		{ tooltip: m, loading: I, disabled: T, onClick: g } = (0, l.Fe)(t, n, d, o.ZP.getNickname(c, i, n)),
 		S = () => {
 			null == p || p(), g();
 		};
 	return (0, r.jsx)(s.Tooltip, {
-		text: I,
+		text: m,
 		children: (e) => {
 			let { onMouseEnter: n, onMouseLeave: i } = e;
 			return (0, r.jsx)(s.Button, {
@@ -42,8 +31,8 @@ function c(e) {
 				onMouseEnter: n,
 				onMouseLeave: i,
 				disabled: T,
-				submitting: m,
-				'aria-label': null != I ? I : t.name,
+				submitting: I,
+				'aria-label': null != m ? m : t.name,
 				children: (0, r.jsx)(s.UserPlayIcon, {
 					size: 'xs',
 					color: 'currentColor'

@@ -38,9 +38,7 @@ var u = (t.Checkboard = function (e) {
 				}
 			}
 		});
-	return (0, i.isValidElement)(_)
-		? a.default.cloneElement(_, r({}, _.props, { style: r({}, _.props.style, E.grid) }))
-		: a.default.createElement('div', { style: E.grid });
+	return (0, i.isValidElement)(_) ? a.default.cloneElement(_, r({}, _.props, { style: r({}, _.props.style, E.grid) })) : a.default.createElement('div', { style: E.grid });
 });
 (u.defaultProps = {
 	size: 8,

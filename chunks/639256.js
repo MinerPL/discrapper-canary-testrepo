@@ -144,9 +144,7 @@ var n = r(310176),
 				a = t.getCurrentInlineStyle();
 			if (o.isCollapsed()) return i.setInlineStyleOverride(t, a.has(e) ? a.remove(e) : a.add(e));
 			var u = t.getCurrentContent();
-			return (
-				(r = a.has(e) ? n.removeInlineStyle(u, o, e) : n.applyInlineStyle(u, o, e)), i.push(t, r, 'change-inline-style')
-			);
+			return (r = a.has(e) ? n.removeInlineStyle(u, o, e) : n.applyInlineStyle(u, o, e)), i.push(t, r, 'change-inline-style');
 		},
 		toggleLink: function (t, e, r) {
 			var o = n.applyEntity(t.getCurrentContent(), e, r);

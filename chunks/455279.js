@@ -54,12 +54,7 @@ class R extends o.PureComponent {
 		let e;
 		let { mode: t, value: n, disabled: s } = this.props,
 			i = (0, g.BB)(n, !0);
-		e =
-			'RECORDING' === t
-				? _.Z.Messages.SHORTCUT_RECORDER_BUTTON_RECORDING
-				: 0 === n.length
-					? _.Z.Messages.SHORTCUT_RECORDER_BUTTON
-					: _.Z.Messages.SHORTCUT_RECORDER_BUTTON_EDIT;
+		e = 'RECORDING' === t ? _.Z.Messages.SHORTCUT_RECORDER_BUTTON_RECORDING : 0 === n.length ? _.Z.Messages.SHORTCUT_RECORDER_BUTTON : _.Z.Messages.SHORTCUT_RECORDER_BUTTON_EDIT;
 		let o = 'DEFAULT' === t && n.length > 0;
 		return (0, r.jsx)(m.FocusRing, {
 			focusTarget: this._inputRef,
@@ -123,12 +118,7 @@ class R extends o.PureComponent {
 			E(this, 'setInputRef', (e) => {
 				var t;
 				let { registerNativeRecorder: n, onChange: s } = this.props;
-				(this._inputRef.current = e),
-					null === (t = this._unregisterNativeRecorder) || void 0 === t || t.call(this),
-					null != e &&
-						(null != n && null != s
-							? (this._unregisterNativeRecorder = n(e.id, s))
-							: null != s && (new (u())(e).handleKey = s));
+				(this._inputRef.current = e), null === (t = this._unregisterNativeRecorder) || void 0 === t || t.call(this), null != e && (null != n && null != s ? (this._unregisterNativeRecorder = n(e.id, s)) : null != s && (new (u())(e).handleKey = s));
 			}),
 			E(this, 'handleClick', (e) => {
 				e.stopPropagation(), e.preventDefault();

@@ -61,13 +61,7 @@ class S extends a.Component {
 			: null;
 	}
 	render() {
-		let {
-			socialReasons: e,
-			nonSocialReasons: t,
-			storeListing: n,
-			hidePersonalInformation: a,
-			className: s
-		} = this.props;
+		let { socialReasons: e, nonSocialReasons: t, storeListing: n, hidePersonalInformation: a, className: s } = this.props;
 		if (0 === e.length && 0 === t.length && null == n.staffNotes) return null;
 		let l = this.getReviewToRender();
 		return (0, i.jsxs)('div', {

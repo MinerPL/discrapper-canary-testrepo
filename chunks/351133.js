@@ -26,21 +26,13 @@ let _ = {
 					: i.trim();
 			if (t.autocomplete) {
 				let e = o.Z.getAutocompleteLastChoices(n, t.name);
-				null != e &&
-					(l = String(
-						null !== (s = null === (a = e.find((e) => e.name === l)) || void 0 === a ? void 0 : a.value) && void 0 !== s
-							? s
-							: l
-					));
+				null != e && (l = String(null !== (s = null === (a = e.find((e) => e.name === l)) || void 0 === a ? void 0 : a.value) && void 0 !== s ? s : l));
 			}
 			return null == t.choices || (null != l && t.choices.map((e) => e.displayName).includes(l))
 				? t.type === r.jw.STRING && (void 0 !== t.minLength || void 0 !== t.maxLength)
 					? void 0 !== l
 						? (function (e, t, n) {
-								if (
-									(void 0 !== t.minLength && e.length < t.minLength) ||
-									(void 0 !== t.maxLength && e.length > t.maxLength)
-								) {
+								if ((void 0 !== t.minLength && e.length < t.minLength) || (void 0 !== t.maxLength && e.length > t.maxLength)) {
 									if (void 0 !== t.maxLength && void 0 !== t.minLength && t.minLength === t.maxLength)
 										return {
 											success: !1,
@@ -89,15 +81,7 @@ let _ = {
 			let s = o.Z.getAutocompleteLastChoices(n, t.name);
 			if (null != s && s.map((e) => e.displayName).includes(i)) return { success: !0 };
 			let u = Number(l.AS(a.default.locale, i));
-			return !isNaN(u) && Number.isInteger(u) && Number.isSafeInteger(u)
-				? f(
-						u,
-						t,
-						d.Z.Messages.COMMAND_VALIDATION_NUMBER_RANGE_ERROR,
-						d.Z.Messages.COMMAND_VALIDATION_NUMBER_MINIMUM_ERROR,
-						d.Z.Messages.COMMAND_VALIDATION_NUMBER_MAXIMUM_ERROR
-					)
-				: { success: !1 };
+			return !isNaN(u) && Number.isInteger(u) && Number.isSafeInteger(u) ? f(u, t, d.Z.Messages.COMMAND_VALIDATION_NUMBER_RANGE_ERROR, d.Z.Messages.COMMAND_VALIDATION_NUMBER_MINIMUM_ERROR, d.Z.Messages.COMMAND_VALIDATION_NUMBER_MAXIMUM_ERROR) : { success: !1 };
 		},
 		[r.jw.NUMBER]: (e, t, n) => {
 			if ('text' !== e.type || t.type !== r.jw.NUMBER) return { success: !1 };
@@ -107,15 +91,7 @@ let _ = {
 			let s = o.Z.getAutocompleteLastChoices(n, t.name);
 			if (null != s && s.map((e) => e.displayName).includes(i)) return { success: !0 };
 			let u = Number(l.AS(a.default.locale, i));
-			return isNaN(u) || u > Number.MAX_SAFE_INTEGER || u < Number.MIN_SAFE_INTEGER
-				? { success: !1 }
-				: f(
-						u,
-						t,
-						d.Z.Messages.COMMAND_VALIDATION_NUMBER_RANGE_ERROR,
-						d.Z.Messages.COMMAND_VALIDATION_NUMBER_MINIMUM_ERROR,
-						d.Z.Messages.COMMAND_VALIDATION_NUMBER_MAXIMUM_ERROR
-					);
+			return isNaN(u) || u > Number.MAX_SAFE_INTEGER || u < Number.MIN_SAFE_INTEGER ? { success: !1 } : f(u, t, d.Z.Messages.COMMAND_VALIDATION_NUMBER_RANGE_ERROR, d.Z.Messages.COMMAND_VALIDATION_NUMBER_MINIMUM_ERROR, d.Z.Messages.COMMAND_VALIDATION_NUMBER_MAXIMUM_ERROR);
 		},
 		[r.jw.USER]: (e, t, n, r) => {
 			if ('text' !== e.type) return { success: 'userMention' === e.type };

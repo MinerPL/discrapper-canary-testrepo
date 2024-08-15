@@ -18,17 +18,17 @@ var i = n(735250),
 	_ = n(689938);
 function f(e) {
 	let { channelId: t, warningId: f, senderId: E } = e,
-		g = a.useCallback(() => {
+		C = a.useCallback(() => {
 			(0, c.T)(t, [f]);
 		}, [t, f]),
-		C = a.useCallback(
+		g = a.useCallback(
 			(e) => () => {
 				r.Z.addRelationship({
 					userId: E,
 					context: { location: m.zr },
 					type: p.OGo.BLOCKED
 				}),
-					g(),
+					C(),
 					(0, l.showToast)((0, l.createToast)(_.Z.Messages.STRANGER_DANGER_BLOCK_CONFIRM, l.ToastType.SUCCESS)),
 					(0, d.qc)({
 						channelId: t,
@@ -38,7 +38,7 @@ function f(e) {
 						cta: e
 					});
 			},
-			[g, t, f, E]
+			[C, t, f, E]
 		);
 	a.useEffect(() => {
 		(0, d.MC)(p.rMx.SAFETY_WARNING_VIEWED, {
@@ -74,7 +74,7 @@ function f(e) {
 					(0, i.jsx)(l, {
 						...n,
 						userId: E,
-						confirmBlock: C(e),
+						confirmBlock: g(e),
 						onCancel: () => {
 							null == s || s(),
 								(0, d.qc)({
@@ -95,7 +95,7 @@ function f(e) {
 		warningType: u.pj.STRANGER_DANGER,
 		header: _.Z.Messages.STRANGER_DANGER_BANNER_HEADER,
 		description: _.Z.Messages.STRANGER_DANGER_BANNER_DESCRIPTION,
-		onDismiss: g,
+		onDismiss: C,
 		buttons: [
 			{
 				text: _.Z.Messages.STRANGER_DANGER_BANNER_MORE_TIPS,

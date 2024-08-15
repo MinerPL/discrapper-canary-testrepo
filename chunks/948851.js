@@ -34,16 +34,7 @@ function h(e) {
 let I = r.ZP.getMaxUsesOptions;
 function g(e) {
 	var n;
-	let {
-			shouldHideTemporaryInviteToggle: t,
-			maxAge: s,
-			maxUses: r,
-			temporary: g,
-			onGenerateNewLink: E,
-			onToggleTemporary: _,
-			onSelectMaxAge: m,
-			onSelectMaxUses: T
-		} = e,
+	let { shouldHideTemporaryInviteToggle: t, maxAge: s, maxUses: r, temporary: g, onGenerateNewLink: E, onToggleTemporary: _, onSelectMaxAge: m, onSelectMaxUses: T } = e,
 		N = c.find((e) => e.value === s),
 		v = I.find((e) => e.value === r);
 	return (0, l.jsx)('div', {

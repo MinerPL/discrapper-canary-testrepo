@@ -82,27 +82,13 @@ s.Z = (e) => {
 		L = null != o.channel ? (0, I.jD)(o.channel) : null,
 		Z = null != o.target_application ? new d.Z(o.target_application) : null,
 		C = S || null == o.inviter ? null : new _.Z(o.inviter),
-		b =
-			!(
-				(null != o.approximate_member_count && o.approximate_member_count > 100) ||
-				(null != D && D.hasFeature(x.oNc.COMMUNITY))
-			) && null != C,
+		b = !((null != o.approximate_member_count && o.approximate_member_count > 100) || (null != D && D.hasFeature(x.oNc.COMMUNITY))) && null != C,
 		V = null,
 		B = !1;
 	if (null != D)
-		(V =
-			null == C
-				? j.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN
-				: j.Z.Messages.AUTH_MESSAGE_INVITED_BY.format({ username: p.ZP.getFormattedName(C) })),
-			o.target_type === g.Iq.STREAM &&
-				null != o.target_user &&
-				(V = j.Z.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({ username: p.ZP.getFormattedName(o.target_user) })),
-			o.target_type === g.Iq.EMBEDDED_APPLICATION &&
-				null != o.target_application &&
-				(V =
-					null != C
-						? j.Z.Messages.AUTH_MESSAGE_INVITED_TO_PLAY_USERNAME.format({ username: p.ZP.getFormattedName(C) })
-						: j.Z.Messages.AUTH_MESSAGE_INVITED_TO_PLAY),
+		(V = null == C ? j.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN : j.Z.Messages.AUTH_MESSAGE_INVITED_BY.format({ username: p.ZP.getFormattedName(C) })),
+			o.target_type === g.Iq.STREAM && null != o.target_user && (V = j.Z.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({ username: p.ZP.getFormattedName(o.target_user) })),
+			o.target_type === g.Iq.EMBEDDED_APPLICATION && null != o.target_application && (V = null != C ? j.Z.Messages.AUTH_MESSAGE_INVITED_TO_PLAY_USERNAME.format({ username: p.ZP.getFormattedName(C) }) : j.Z.Messages.AUTH_MESSAGE_INVITED_TO_PLAY),
 			b &&
 				null == Z &&
 				(n = (0, t.jsx)(i.Vj, {
@@ -158,9 +144,7 @@ s.Z = (e) => {
 					? null
 					: (0, t.jsx)(i.DK, {
 							className: A.directInviteSubTitle,
-							children: M
-								? j.Z.Messages.INSTANT_INVITE_DIRECT_FRIEND_DESCRIPTION_REGISTER.format({ username: e })
-								: j.Z.Messages.INSTANT_INVITE_DIRECT_FRIEND_DESCRIPTION.format({ username: e })
+							children: M ? j.Z.Messages.INSTANT_INVITE_DIRECT_FRIEND_DESCRIPTION_REGISTER.format({ username: e }) : j.Z.Messages.INSTANT_INVITE_DIRECT_FRIEND_DESCRIPTION.format({ username: e })
 						}));
 	}
 	return (0, t.jsxs)('div', {
@@ -174,10 +158,7 @@ s.Z = (e) => {
 			}),
 			null != f
 				? (0, t.jsxs)(t.Fragment, {
-						children: [
-							(0, t.jsx)(i.DK, { children: j.Z.Messages.INVITE_MODAL_ERROR_TITLE }),
-							(0, t.jsx)(i.Dx, { children: f })
-						]
+						children: [(0, t.jsx)(i.DK, { children: j.Z.Messages.INVITE_MODAL_ERROR_TITLE }), (0, t.jsx)(i.Dx, { children: f })]
 					})
 				: (0, t.jsxs)(t.Fragment, {
 						children: [

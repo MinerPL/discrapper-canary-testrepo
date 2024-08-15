@@ -55,10 +55,7 @@ function E(e) {
 							children: [
 								(function (e, t) {
 									if (null === t) return null;
-									if (e === c.fX.MENTION_SPAM)
-										return _.Z.Messages.GUILD_AUTOMOD_ACTIONS_TIMEOUT_EDIT_HELPER_MENTION_SPAM.format({
-											friendlyDurationString: t
-										});
+									if (e === c.fX.MENTION_SPAM) return _.Z.Messages.GUILD_AUTOMOD_ACTIONS_TIMEOUT_EDIT_HELPER_MENTION_SPAM.format({ friendlyDurationString: t });
 									return _.Z.Messages.GUILD_AUTOMOD_ACTIONS_TIMEOUT_EDIT_HELPER.format({ friendlyDurationString: t });
 								})(E, C),
 								x &&

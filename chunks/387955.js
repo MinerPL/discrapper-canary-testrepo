@@ -41,9 +41,7 @@ function m(e) {
 				className: E.prompt,
 				color: 'header-secondary',
 				variant: 'text-sm/medium',
-				children: c.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_BODY_2.format({
-					helpdeskArticle: o.Z.getArticleURL(d.BhN.POMELO_FAQ)
-				})
+				children: c.Z.Messages.POMELO_EXISTING_FLOW_PROMPT_BODY_2.format({ helpdeskArticle: o.Z.getArticleURL(d.BhN.POMELO_FAQ) })
 			}),
 			(0, n.jsxs)('div', {
 				className: i()([E.infoItem, E.infoItemSpacing]),

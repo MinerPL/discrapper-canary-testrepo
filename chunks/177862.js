@@ -1,12 +1,6 @@
 var r, i, a, s, o, l, u, c;
 function d(e) {
-	return e.includes('LEGITIMATE_ACTIVITY')
-		? 'LEGITIMATE_ACTIVITY'
-		: e.includes('DM_SPAM')
-			? 'DM_SPAM'
-			: e.includes('JOIN_RAID')
-				? 'JOIN_RAID'
-				: 'OTHER';
+	return e.includes('LEGITIMATE_ACTIVITY') ? 'LEGITIMATE_ACTIVITY' : e.includes('DM_SPAM') ? 'DM_SPAM' : e.includes('JOIN_RAID') ? 'JOIN_RAID' : 'OTHER';
 }
 n.d(t, {
 	$l: function () {

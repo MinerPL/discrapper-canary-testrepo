@@ -47,13 +47,7 @@ function T(e) {
 }
 function g(e) {
 	let { handleStepChange: n, handleClose: t } = e,
-		{
-			customGiftMessage: c = '',
-			setCustomGiftMessage: m,
-			giftRecipientError: I,
-			validatingGiftRecipient: g,
-			giftRecipient: N
-		} = (0, f.wD)(),
+		{ customGiftMessage: c = '', setCustomGiftMessage: m, giftRecipientError: I, validatingGiftRecipient: g, giftRecipient: N } = (0, f.wD)(),
 		{ selectedSkuId: S, selectedSkuPricePreview: A } = (0, h.usePaymentContext)(),
 		_ = (0, s.e7)([E.default], () => E.default.getCurrentUser());
 	return (0, a.jsxs)(a.Fragment, {

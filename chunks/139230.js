@@ -49,15 +49,9 @@ function Z(e) {
 		Z = (0, v.T)(null, null != S && '' !== S ? S : null);
 	if (null == S || null == Z) return null;
 	if (!(0, m.yE)(Z.application.flags, C.udG.EMBEDDED)) return (0, t.jsx)(i.l_, { to: C.Z5c.ACTIVITIES });
-	let T =
-			null != Z.activity.activity_preview_video_asset_id
-				? (0, I.Z)(S, Z.activity.activity_preview_video_asset_id)
-				: null,
+	let T = null != Z.activity.activity_preview_video_asset_id ? (0, I.Z)(S, Z.activity.activity_preview_video_asset_id) : null,
 		A = y.o[S],
-		D =
-			(null == A ? void 0 : A.playersSuggestionMin) != null && (null == A ? void 0 : A.playersSuggestionMax) != null
-				? ''.concat(A.playersSuggestionMin, ' - ').concat(A.playersSuggestionMax)
-				: void 0;
+		D = (null == A ? void 0 : A.playersSuggestionMin) != null && (null == A ? void 0 : A.playersSuggestionMax) != null ? ''.concat(A.playersSuggestionMin, ' - ').concat(A.playersSuggestionMax) : void 0;
 	return (0, t.jsx)(c.Gt, {
 		value: h,
 		children: (0, t.jsxs)('div', {
@@ -149,9 +143,7 @@ function Z(e) {
 																					(0, t.jsx)(r.Text, {
 																						variant: 'text-xs/semibold',
 																						className: N.detailItemText,
-																						children: M.Z.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_PLAYERS.format({
-																							nPlayers: D
-																						})
+																						children: M.Z.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_PLAYERS.format({ nPlayers: D })
 																					})
 																				]
 																			})
@@ -167,9 +159,7 @@ function Z(e) {
 																					(0, t.jsx)(r.Text, {
 																						variant: 'text-xs/semibold',
 																						className: N.detailItemText,
-																						children: M.Z.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_MINUTES.format({
-																							nMinutes: A.timeSuggestionMinutes
-																						})
+																						children: M.Z.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_MINUTES.format({ nMinutes: A.timeSuggestionMinutes })
 																					})
 																				]
 																			})
@@ -201,19 +191,16 @@ function Z(e) {
 													(0, t.jsxs)('div', {
 														className: N.imagesContainer,
 														children: [
-															(null !== (a = null == A ? void 0 : A.gameplayImageUrls) && void 0 !== a ? a : []).map(
-																(e) =>
-																	(0, t.jsx)(
-																		'img',
-																		{
-																			src: e,
-																			alt: M.Z.Messages.EMBEDDED_ACTIVITIES_GAMEPLAY_ALT.format({
-																				activityName: Z.application.name
-																			}),
-																			className: N.activityImage
-																		},
-																		e
-																	)
+															(null !== (a = null == A ? void 0 : A.gameplayImageUrls) && void 0 !== a ? a : []).map((e) =>
+																(0, t.jsx)(
+																	'img',
+																	{
+																		src: e,
+																		alt: M.Z.Messages.EMBEDDED_ACTIVITIES_GAMEPLAY_ALT.format({ activityName: Z.application.name }),
+																		className: N.activityImage
+																	},
+																	e
+																)
 															),
 															(0, t.jsx)(u.Z, {
 																loop: !0,

@@ -23,8 +23,8 @@ var r,
 	f = n(853856),
 	h = n(846787),
 	p = n(131704),
-	I = n(700785),
-	m = n(314897),
+	m = n(700785),
+	I = n(314897),
 	T = n(592125),
 	g = n(271383),
 	S = n(430824),
@@ -106,11 +106,7 @@ function H(e) {
 			l().forEach(n, (n) => {
 				var r;
 				let i = n.channel;
-				if (
-					((e.count += 1),
-					p.zS.has(i.type) && !A.Z.can(O.Plq.VIEW_CHANNEL, i) && !_.Z.isChannelGated(i.guild_id, i.id) && i.id !== P)
-				)
-					return;
+				if (((e.count += 1), p.zS.has(i.type) && !A.Z.can(O.Plq.VIEW_CHANNEL, i) && !_.Z.isChannelGated(i.guild_id, i.id) && i.id !== P)) return;
 				let a = ((r = i.type), (0, p.r8)(r) ? C : (0, p.bw)(r) ? y : r);
 				i.type === O.d4z.GUILD_DIRECTORY && (null == U[t] && (U[t] = []), U[t].push(n)), null != e[a] && e[a].push(n);
 			});
@@ -169,7 +165,7 @@ function j(e) {
 }
 function W(e, t) {
 	return u.Db(
-		I.uB({
+		m.uB({
 			user: e,
 			context: t,
 			checkElevated: !1
@@ -189,7 +185,7 @@ function z() {
 }
 class q extends (r = c.ZP.Store) {
 	initialize() {
-		this.waitFor(S.Z, g.ZP, T.Z, A.Z, m.default, _.Z, f.Z), this.syncWith([f.Z], z);
+		this.waitFor(S.Z, g.ZP, T.Z, A.Z, I.default, _.Z, f.Z), this.syncWith([f.Z], z);
 	}
 	getAllGuilds() {
 		return L;
@@ -206,11 +202,7 @@ class q extends (r = c.ZP.Store) {
 	getFirstChannel(e, t) {
 		var n;
 		let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-		return null !== (n = this.getFirstChannelOfType(e, t, C)) && void 0 !== n
-			? n
-			: r
-				? this.getFirstChannelOfType(e, t, y)
-				: null;
+		return null !== (n = this.getFirstChannelOfType(e, t, C)) && void 0 !== n ? n : r ? this.getFirstChannelOfType(e, t, y) : null;
 	}
 	getDefaultChannel(e) {
 		let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -296,7 +288,7 @@ class q extends (r = c.ZP.Store) {
 		},
 		GUILD_MEMBER_UPDATE: function (e) {
 			let { guildId: t, user: n } = e;
-			if (m.default.getId() !== n.id) return !1;
+			if (I.default.getId() !== n.id) return !1;
 			(L[t] = void 0), t === D && H(t);
 		},
 		CHANNEL_CREATE: Y,
@@ -327,7 +319,7 @@ class q extends (r = c.ZP.Store) {
 			let { voiceStates: t } = e;
 			return t.reduce((e, t) => {
 				let { channelId: n, sessionId: r } = t;
-				return m.default.getSessionId() !== r ? e : K(T.Z.getChannel(n), n) || e;
+				return I.default.getSessionId() !== r ? e : K(T.Z.getChannel(n), n) || e;
 			}, !1);
 		}
 	}));

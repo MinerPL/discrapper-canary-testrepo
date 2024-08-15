@@ -96,10 +96,7 @@ class P extends r.PureComponent {
 	}
 	renderContinue() {
 		return (0, s.jsxs)(u.ZP, {
-			children: [
-				(0, s.jsx)(u.Dx, { children: D.Z.Messages.APP_NOT_OPENED }),
-				this.renderButton(D.Z.Messages.CONTINUE_TO_WEBAPP, this.handleContinue)
-			]
+			children: [(0, s.jsx)(u.Dx, { children: D.Z.Messages.APP_NOT_OPENED }), this.renderButton(D.Z.Messages.CONTINUE_TO_WEBAPP, this.handleContinue)]
 		});
 	}
 	render() {
@@ -124,8 +121,7 @@ class P extends r.PureComponent {
 						transitionTo: r,
 						location: i,
 						onRegister: () => {
-							(0, I.c)(R.M5.ORGANIC_REGISTERED_GUILD_TEMPLATE),
-								f.Z.flowStart(O.MK.ORGANIC_GUILD_TEMPLATES, O.EW.NUF_STARTED);
+							(0, I.c)(R.M5.ORGANIC_REGISTERED_GUILD_TEMPLATE), f.Z.flowStart(O.MK.ORGANIC_GUILD_TEMPLATES, O.EW.NUF_STARTED);
 						}
 					});
 			case S.Rj.EXPIRED:

@@ -1,43 +1,15 @@
 function t(e) {
 	var t;
 	if ('number' == typeof e) return e >>> 0 === e && e >= 0 && e <= 4294967295 ? e : null;
-	return (t = o.hex6.exec(e))
-		? parseInt(t[1] + 'ff', 16) >>> 0
-		: _.hasOwnProperty(e)
-			? _[e]
-			: (t = o.rgb.exec(e))
-				? ((l(t[1]) << 24) | (l(t[2]) << 16) | (l(t[3]) << 8) | 255) >>> 0
-				: (t = o.rgba.exec(e))
-					? ((l(t[1]) << 24) | (l(t[2]) << 16) | (l(t[3]) << 8) | c(t[4])) >>> 0
-					: (t = o.hex3.exec(e))
-						? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + 'ff', 16) >>> 0
-						: (t = o.hex8.exec(e))
-							? parseInt(t[1], 16) >>> 0
-							: (t = o.hex4.exec(e))
-								? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + t[4] + t[4], 16) >>> 0
-								: (t = o.hsl.exec(e))
-									? (255 | r(u(t[1]), d(t[2]), d(t[3]))) >>> 0
-									: (t = o.hsla.exec(e))
-										? (r(u(t[1]), d(t[2]), d(t[3])) | c(t[4])) >>> 0
-										: null;
+	return (t = o.hex6.exec(e)) ? parseInt(t[1] + 'ff', 16) >>> 0 : _.hasOwnProperty(e) ? _[e] : (t = o.rgb.exec(e)) ? ((l(t[1]) << 24) | (l(t[2]) << 16) | (l(t[3]) << 8) | 255) >>> 0 : (t = o.rgba.exec(e)) ? ((l(t[1]) << 24) | (l(t[2]) << 16) | (l(t[3]) << 8) | c(t[4])) >>> 0 : (t = o.hex3.exec(e)) ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + 'ff', 16) >>> 0 : (t = o.hex8.exec(e)) ? parseInt(t[1], 16) >>> 0 : (t = o.hex4.exec(e)) ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + t[4] + t[4], 16) >>> 0 : (t = o.hsl.exec(e)) ? (255 | r(u(t[1]), d(t[2]), d(t[3]))) >>> 0 : (t = o.hsla.exec(e)) ? (r(u(t[1]), d(t[2]), d(t[3])) | c(t[4])) >>> 0 : null;
 }
 function n(e, t, n) {
-	return (n < 0 && (n += 1), n > 1 && (n -= 1), n < 1 / 6)
-		? e + (t - e) * 6 * n
-		: n < 0.5
-			? t
-			: n < 2 / 3
-				? e + (t - e) * (2 / 3 - n) * 6
-				: e;
+	return (n < 0 && (n += 1), n > 1 && (n -= 1), n < 1 / 6) ? e + (t - e) * 6 * n : n < 0.5 ? t : n < 2 / 3 ? e + (t - e) * (2 / 3 - n) * 6 : e;
 }
 function r(e, t, r) {
 	var i = r < 0.5 ? r * (1 + t) : r + t - r * t,
 		a = 2 * r - i;
-	return (
-		(Math.round(255 * n(a, i, e + 1 / 3)) << 24) |
-		(Math.round(255 * n(a, i, e)) << 16) |
-		(Math.round(255 * n(a, i, e - 1 / 3)) << 8)
-	);
+	return (Math.round(255 * n(a, i, e + 1 / 3)) << 24) | (Math.round(255 * n(a, i, e)) << 16) | (Math.round(255 * n(a, i, e - 1 / 3)) << 8);
 }
 var i = '[-+]?\\d*\\.?\\d+',
 	a = i + '%';

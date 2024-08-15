@@ -35,9 +35,7 @@ function l(e) {
 			canDrop: () => !0,
 			collect: (e) => {
 				let n = e.getItem();
-				return null != n && e.isOver() && e.canDrop()
-					? { dragSourcePosition: n.position }
-					: { dragSourcePosition: null };
+				return null != n && e.isOver() && e.canDrop() ? { dragSourcePosition: n.position } : { dragSourcePosition: null };
 			},
 			drop: () => ({ optionId: l })
 		});

@@ -138,9 +138,7 @@ self.addEventListener('message', (l) => {
 						};
 					s.set(r, u),
 						O.size > 0 &&
-							((u.isFriend !== (null == i ? void 0 : i.isFriend) ||
-								u.friendNickname !== (null == i ? void 0 : i.friendNickname)) &&
-								(n = !0),
+							((u.isFriend !== (null == i ? void 0 : i.isFriend) || u.friendNickname !== (null == i ? void 0 : i.friendNickname)) && (n = !0),
 							Object.keys(u).forEach((l) => {
 								if ('isBot' !== l && 'isFriend' !== l && l !== d && l !== v && l !== E) e.add(l);
 							}));

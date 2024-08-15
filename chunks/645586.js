@@ -26,10 +26,7 @@ function M(t, e, s) {
 		t
 	);
 }
-((n = a || (a = {}))[(n.START = 0)] = 'START'),
-	(n[(n.FAIL = 1)] = 'FAIL'),
-	(n[(n.SUCCESS = 2)] = 'SUCCESS'),
-	(n[(n.CANCELED = 3)] = 'CANCELED');
+((n = a || (a = {}))[(n.START = 0)] = 'START'), (n[(n.FAIL = 1)] = 'FAIL'), (n[(n.SUCCESS = 2)] = 'SUCCESS'), (n[(n.CANCELED = 3)] = 'CANCELED');
 class I extends o.Component {
 	componentDidMount() {
 		d.default.track(h.rMx.OPEN_MODAL, { type: h.jXE.PAYMENT_AUTHENTICATION_MODAL });

@@ -41,13 +41,10 @@ function G(e) {
 				try {
 					await d.Av(G, f.jXE.CLAIM_ACCOUNT_MODAL);
 				} catch (e) {
-					if (null != e.body && null != e.body.date_of_birth)
-						i.Z.flowStep(p.MK.ANY, p.FF.AGE_GATE_UNDERAGE), d.wE(E.L0.CLAIM_ACCOUNT), d.hp(E.L0.CLAIM_ACCOUNT), n();
+					if (null != e.body && null != e.body.date_of_birth) i.Z.flowStep(p.MK.ANY, p.FF.AGE_GATE_UNDERAGE), d.wE(E.L0.CLAIM_ACCOUNT), d.hp(E.L0.CLAIM_ACCOUNT), n();
 					else {
 						var t;
-						(null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.username) != null
-							? M(m.Z.Messages.USER_SETTINGS_UPDATE_FAILURE)
-							: M(null == e ? void 0 : e.body.message);
+						(null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.username) != null ? M(m.Z.Messages.USER_SETTINGS_UPDATE_FAILURE) : M(null == e ? void 0 : e.body.message);
 					}
 				}
 				y(!1);

@@ -27,11 +27,7 @@ function s(e, t) {
 				return t ? (t.error && 'string' == typeof t.error.message ? t.error.message : t) : 'No error message';
 			})(t)
 		};
-	return (
-		r.length && (n.stacktrace = { frames: r }),
-		void 0 === n.type && '' === n.value && (n.value = 'Unrecoverable error caught'),
-		n
-	);
+	return r.length && (n.stacktrace = { frames: r }), void 0 === n.type && '' === n.value && (n.value = 'Unrecoverable error caught'), n;
 }
 function c(e, t) {
 	return { exception: { values: [s(e, t)] } };

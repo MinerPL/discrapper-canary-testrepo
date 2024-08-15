@@ -55,30 +55,11 @@ let O = (e, n) => {
 	},
 	h = (e, n) => {
 		var t, s, r;
-		return (
-			e.subscriptionPlanPrice -
-			(null !==
-				(r =
-					null === (s = e.discounts) || void 0 === s
-						? void 0
-						: null === (t = s.find((e) => e.type === n)) || void 0 === t
-							? void 0
-							: t.amount) && void 0 !== r
-				? r
-				: 0)
-		);
+		return e.subscriptionPlanPrice - (null !== (r = null === (s = e.discounts) || void 0 === s ? void 0 : null === (t = s.find((e) => e.type === n)) || void 0 === t ? void 0 : t.amount) && void 0 !== r ? r : 0);
 	};
 function f(e) {
 	var n;
-	let {
-			invoiceItem: t,
-			overrideAmount: r,
-			showGuildSubscriptionAdjustmentTooltip: l,
-			currency: i,
-			className: a,
-			isPrepaidPaymentSource: _,
-			referralTrialOfferId: E
-		} = e,
+	let { invoiceItem: t, overrideAmount: r, showGuildSubscriptionAdjustmentTooltip: l, currency: i, className: a, isPrepaidPaymentSource: _, referralTrialOfferId: E } = e,
 		d = (0, o.e7)([T.Z], () => T.Z.get(t.subscriptionPlanId)),
 		N = null === (n = (0, R.N)(E)) || void 0 === n ? void 0 : n.subscription_trial;
 	c()(null != d, 'Missing subscriptionPlan');
@@ -213,14 +194,8 @@ function x(e) {
 			(0, s.jsx)(m.Z, { invoice: n }),
 			(0, s.jsx)(S.KU, {}),
 			(0, s.jsx)(S.Ji, {
-				label: (n.taxInclusive
-					? t
-						? v.Z.Messages.BILLING_INVOICE_TOTAL_TAX_INCLUSIVE
-						: v.Z.Messages.BILLING_INVOICE_TODAY_TOTAL_TAX_INCLUSIVE
-					: v.Z.Messages.BILLING_INVOICE_TODAY_TOTAL
-				).format(),
-				value:
-					n.currency === p.pKx.USD ? (0, A.T4)(n.total, n.currency) : ''.concat((0, A.T4)(n.total, n.currency), '*')
+				label: (n.taxInclusive ? (t ? v.Z.Messages.BILLING_INVOICE_TOTAL_TAX_INCLUSIVE : v.Z.Messages.BILLING_INVOICE_TODAY_TOTAL_TAX_INCLUSIVE) : v.Z.Messages.BILLING_INVOICE_TODAY_TOTAL).format(),
+				value: n.currency === p.pKx.USD ? (0, A.T4)(n.total, n.currency) : ''.concat((0, A.T4)(n.total, n.currency), '*')
 			})
 		]
 	});
@@ -231,21 +206,12 @@ function Z(e) {
 		a = i.find((e) => e.subscriptionPlanId === t.id);
 	c()(null != a, 'Expected newPlanInvoiceItem');
 	let o = i.find((e) => !(0, M.Z8)(e.subscriptionPlanId) && e.amount < 0),
-		u = i.find(
-			(e) =>
-				null == e.subscriptionPlanId &&
-				null != e.discounts &&
-				e.discounts.find((e) => e.type === I.eW.PREMIUM_LEGACY_UPGRADE_PROMOTION)
-		),
+		u = i.find((e) => null == e.subscriptionPlanId && null != e.discounts && e.discounts.find((e) => e.type === I.eW.PREMIUM_LEGACY_UPGRADE_PROMOTION)),
 		_ = O(a, I.eW.PREMIUM_TRIAL),
 		E = h(a, I.eW.SUBSCRIPTION_PLAN),
 		T = a.quantity * E,
 		d = a.amount + (null != o ? o.amount : 0) - T + (null != u ? u.amount : 0),
-		N = i
-			.filter(
-				(e) => e.subscriptionPlanId === U.Xh.PREMIUM_MONTH_GUILD || e.subscriptionPlanId === U.Xh.PREMIUM_YEAR_GUILD
-			)
-			.reduce((e, n) => e + n.amount, 0);
+		N = i.filter((e) => e.subscriptionPlanId === U.Xh.PREMIUM_MONTH_GUILD || e.subscriptionPlanId === U.Xh.PREMIUM_YEAR_GUILD).reduce((e, n) => e + n.amount, 0);
 	return (0, s.jsxs)(s.Fragment, {
 		children: [
 			(0, s.jsx)(f, {
@@ -259,9 +225,7 @@ function Z(e) {
 				? null
 				: (0, s.jsx)(S.R$, {
 						label: (0, s.jsx)(g, {
-							label: v.Z.Messages.PREMIUM_SUBSCRIPTION_PLAN_ADJUSTMENT.format({
-								planName: (0, M.PV)(t.id) ? (0, M.aq)(t.id) : t.name
-							}),
+							label: v.Z.Messages.PREMIUM_SUBSCRIPTION_PLAN_ADJUSTMENT.format({ planName: (0, M.PV)(t.id) ? (0, M.aq)(t.id) : t.name }),
 							tooltipText: v.Z.Messages.PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP
 						}),
 						value: (0, A.T4)(d, n.currency)
@@ -279,14 +243,8 @@ function Z(e) {
 			(0, s.jsx)(m.Z, { invoice: n }),
 			(0, s.jsx)(S.KU, {}),
 			(0, s.jsx)(S.Ji, {
-				label: (n.taxInclusive
-					? r
-						? v.Z.Messages.BILLING_INVOICE_TOTAL_TAX_INCLUSIVE
-						: v.Z.Messages.BILLING_INVOICE_TODAY_TOTAL_TAX_INCLUSIVE
-					: v.Z.Messages.BILLING_INVOICE_TODAY_TOTAL
-				).format(),
-				value:
-					n.currency === p.pKx.USD ? (0, A.T4)(n.total, n.currency) : ''.concat((0, A.T4)(n.total, n.currency), '*')
+				label: (n.taxInclusive ? (r ? v.Z.Messages.BILLING_INVOICE_TOTAL_TAX_INCLUSIVE : v.Z.Messages.BILLING_INVOICE_TODAY_TOTAL_TAX_INCLUSIVE) : v.Z.Messages.BILLING_INVOICE_TODAY_TOTAL).format(),
+				value: n.currency === p.pKx.USD ? (0, A.T4)(n.total, n.currency) : ''.concat((0, A.T4)(n.total, n.currency), '*')
 			})
 		]
 	});
@@ -354,12 +312,7 @@ function G(e) {
 					{
 						invoiceItem: e,
 						currency: r.currency,
-						showGuildSubscriptionAdjustmentTooltip:
-							u &&
-							(e.subscriptionPlanId === U.Xh.PREMIUM_MONTH_GUILD ||
-								e.subscriptionPlanId === U.Xh.PREMIUM_YEAR_GUILD ||
-								e.subscriptionPlanId === U.Xh.PREMIUM_3_MONTH_GUILD ||
-								e.subscriptionPlanId === U.Xh.PREMIUM_6_MONTH_GUILD),
+						showGuildSubscriptionAdjustmentTooltip: u && (e.subscriptionPlanId === U.Xh.PREMIUM_MONTH_GUILD || e.subscriptionPlanId === U.Xh.PREMIUM_YEAR_GUILD || e.subscriptionPlanId === U.Xh.PREMIUM_3_MONTH_GUILD || e.subscriptionPlanId === U.Xh.PREMIUM_6_MONTH_GUILD),
 						className: i()({ [C.subscriptionAddedInvoiceItem]: !n || t })
 					},
 					e.id
@@ -377,14 +330,7 @@ function G(e) {
 }
 function j(e) {
 	var n;
-	let {
-			proratedInvoice: t,
-			renewalInvoice: r,
-			isTrial: l,
-			isUpdate: i,
-			overrideRenewalDate: a,
-			trialFooterMessageOverride: c
-		} = e,
+	let { proratedInvoice: t, renewalInvoice: r, isTrial: l, isUpdate: i, overrideRenewalDate: a, trialFooterMessageOverride: c } = e,
 		o = null === (n = (0, R.N)()) || void 0 === n ? void 0 : n.subscription_trial,
 		{ intervalType: u, intervalCount: I } = (0, M.dn)(r);
 	if (null == t) return null;
@@ -406,32 +352,18 @@ function j(e) {
 						})
 		});
 	}
-	let _ = r.taxInclusive
-		? v.Z.Messages.PREMIUM_SUBSCRIPTION_RENEWAL_FOOTER
-		: v.Z.Messages.PREMIUM_SUBSCRIPTION_RENEWAL_FOOTER_TAX_EXCLUSIVE;
+	let _ = r.taxInclusive ? v.Z.Messages.PREMIUM_SUBSCRIPTION_RENEWAL_FOOTER : v.Z.Messages.PREMIUM_SUBSCRIPTION_RENEWAL_FOOTER_TAX_EXCLUSIVE;
 	return (0, s.jsx)(s.Fragment, {
 		children: _.format({
 			rate: (0, A.og)((0, A.T4)(r.subtotal, r.currency), u, I),
-			renewalDate:
-				null != a ? a : i ? (null != t ? t.subscriptionPeriodEnd : r.subscriptionPeriodStart) : r.subscriptionPeriodEnd,
+			renewalDate: null != a ? a : i ? (null != t ? t.subscriptionPeriodEnd : r.subscriptionPeriodStart) : r.subscriptionPeriodEnd,
 			contactLink: p.EYA.CONTACT,
 			helpdeskArticle: N.Z.getArticleURL(p.BhN.BILLING)
 		})
 	});
 }
 function y(e) {
-	let {
-			premiumSubscription: n,
-			proratedInvoice: t,
-			renewalInvoice: l,
-			overrideRenewalDate: i,
-			isUpdate: a = !1,
-			isTrial: c = !1,
-			priceOptions: o,
-			isPrepaidPaymentSource: I = !1,
-			trialFooterMessageOverride: T,
-			hideSubscriptionDetails: N = !1
-		} = e,
+	let { premiumSubscription: n, proratedInvoice: t, renewalInvoice: l, overrideRenewalDate: i, isUpdate: a = !1, isTrial: c = !1, priceOptions: o, isPrepaidPaymentSource: I = !1, trialFooterMessageOverride: T, hideSubscriptionDetails: N = !1 } = e,
 		{ analyticsLocations: M } = (0, E.ZP)(),
 		A = {
 			subscriptionId: null == n ? void 0 : n.id,
@@ -492,9 +424,7 @@ function Y(e) {
 		T = (0, A.T4)(E, I),
 		d = (0, A.T4)(_, I);
 	return (
-		(n = i
-			? (0, M.L7)(t.interval, !0, void 0, void 0, !0, (0, M.Rd)(t.id))
-			: v.Z.Messages.BILLING_INVOICE_GIFT_PLAN.format({ planName: (0, M.Gf)(t.id, !1, l) })),
+		(n = i ? (0, M.L7)(t.interval, !0, void 0, void 0, !0, (0, M.Rd)(t.id)) : v.Z.Messages.BILLING_INVOICE_GIFT_PLAN.format({ planName: (0, M.Gf)(t.id, !1, l) })),
 		(0, s.jsxs)('div', {
 			className: r,
 			children: [
@@ -540,15 +470,7 @@ function H(e) {
 		l = (0, P.j)(t.invoiceItems).find((e) => e.subscriptionPlanId === r.id);
 	return (
 		c()(null != l, 'newPlanInvoiceItem can not be null'),
-		r.interval === U.rV.MONTH
-			? (n = t.taxInclusive
-					? v.Z.Messages.BILLING_TRIAL_MONTHLY_PRICE_AFTER_TRIAL
-					: v.Z.Messages.BILLING_TRIAL_MONTHLY_PRICE_AFTER_TRIAL_TAX_EXCLUSIVE)
-			: r.interval === U.rV.YEAR
-				? (n = t.taxInclusive
-						? v.Z.Messages.BILLING_TRIAL_YEARLY_PRICE_AFTER_TRIAL
-						: v.Z.Messages.BILLING_TRIAL_YEARLY_PRICE_AFTER_TRIAL_TAX_EXCLUSIVE)
-				: c()(!1, 'Invalid interval type'),
+		r.interval === U.rV.MONTH ? (n = t.taxInclusive ? v.Z.Messages.BILLING_TRIAL_MONTHLY_PRICE_AFTER_TRIAL : v.Z.Messages.BILLING_TRIAL_MONTHLY_PRICE_AFTER_TRIAL_TAX_EXCLUSIVE) : r.interval === U.rV.YEAR ? (n = t.taxInclusive ? v.Z.Messages.BILLING_TRIAL_YEARLY_PRICE_AFTER_TRIAL : v.Z.Messages.BILLING_TRIAL_YEARLY_PRICE_AFTER_TRIAL_TAX_EXCLUSIVE) : c()(!1, 'Invalid interval type'),
 		(0, s.jsx)(u.Text, {
 			variant: 'text-md/normal',
 			children: n.format({ price: (0, A.T4)(l.subscriptionPlanPrice, t.currency) })

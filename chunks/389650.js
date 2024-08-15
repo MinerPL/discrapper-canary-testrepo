@@ -76,9 +76,7 @@ class y extends a.PureComponent {
 						className: Z.keybindMessage,
 						type: _.FormTextTypes.DESCRIPTION,
 						style: { color: d.Z.unsafe_rawColors.RED_400.css },
-						children: b.Z.Messages.KEYBIND_NAVIGATION_CONFLICT.format({
-							keyboardNavArticle: R.Z.getArticleURL(P.BhN.KEYBOARD_NAVIGATION)
-						})
+						children: b.Z.Messages.KEYBIND_NAVIGATION_CONFLICT.format({ keyboardNavArticle: R.Z.getArticleURL(P.BhN.KEYBOARD_NAVIGATION) })
 					})
 				: (0, n.jsx)(_.FormText, {
 						className: Z.keybindMessage,
@@ -294,25 +292,7 @@ class V extends a.PureComponent {
 				[P.kg4.TOGGLE_VOICE_MODE]: b.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_VOICE_MODE,
 				[P.kg4.TOGGLE_STREAMER_MODE]: b.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_STREAMER_MODE
 			};
-		return (
-			e &&
-				((n[P.kg4.TOGGLE_OVERLAY] = b.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY),
-				(n[P.kg4.TOGGLE_OVERLAY_INPUT_LOCK] = b.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY_INPUT_LOCK)),
-			s &&
-				(0, x.isWindows)() &&
-				(n[P.kg4.TOGGLE_GO_LIVE_STREAMING] = b.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_GO_LIVE_STREAMING),
-			(0, x.isDesktop)() &&
-				((n[P.kg4.NAVIGATE_BACK] = b.Z.Messages.KEYBIND_DESCRIPTION_NAVIGATE_BACK),
-				(n[P.kg4.NAVIGATE_FORWARD] = b.Z.Messages.KEYBIND_DESCRIPTION_NAVIGATE_FORWARD),
-				(n[P.kg4.SOUNDBOARD] = (0, x.isWindows)()
-					? b.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_NO_POPOUT_WHEEL_SUPPORT
-					: b.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD),
-				(n[P.kg4.SOUNDBOARD_HOLD] = (0, x.isWindows)()
-					? b.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD_NO_POPOUT_WHEEL_SUPPORT
-					: b.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD),
-				t && (n[P.kg4.SAVE_CLIP] = b.Z.Messages.CLIPS_KEYBIND_DESCRIPTION)),
-			n
-		);
+		return e && ((n[P.kg4.TOGGLE_OVERLAY] = b.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY), (n[P.kg4.TOGGLE_OVERLAY_INPUT_LOCK] = b.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY_INPUT_LOCK)), s && (0, x.isWindows)() && (n[P.kg4.TOGGLE_GO_LIVE_STREAMING] = b.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_GO_LIVE_STREAMING), (0, x.isDesktop)() && ((n[P.kg4.NAVIGATE_BACK] = b.Z.Messages.KEYBIND_DESCRIPTION_NAVIGATE_BACK), (n[P.kg4.NAVIGATE_FORWARD] = b.Z.Messages.KEYBIND_DESCRIPTION_NAVIGATE_FORWARD), (n[P.kg4.SOUNDBOARD] = (0, x.isWindows)() ? b.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_NO_POPOUT_WHEEL_SUPPORT : b.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD), (n[P.kg4.SOUNDBOARD_HOLD] = (0, x.isWindows)() ? b.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD_NO_POPOUT_WHEEL_SUPPORT : b.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD), t && (n[P.kg4.SAVE_CLIP] = b.Z.Messages.CLIPS_KEYBIND_DESCRIPTION)), n;
 	}
 	renderKeybinds(e) {
 		return e.map((e) =>
@@ -351,9 +331,7 @@ class V extends a.PureComponent {
 			s = l()(this.props.keybinds)
 				.reject((e) => e.managed && ![P.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, P.kg4.SAVE_CLIP].includes(e.action))
 				.reject((s) => !e && s.action === P.kg4.SAVE_CLIP)
-				.reject(
-					(e) => !this.props.allowSoundboard && (e.action === P.kg4.SOUNDBOARD || e.action === P.kg4.SOUNDBOARD_HOLD)
-				)
+				.reject((e) => !this.props.allowSoundboard && (e.action === P.kg4.SOUNDBOARD || e.action === P.kg4.SOUNDBOARD_HOLD))
 				.sortBy((e) => e.id)
 				.sortBy((e) => (!0 === e.managed ? -1 : 0))
 				.value();
@@ -437,9 +415,7 @@ class V extends a.PureComponent {
 												children: [
 													(0, n.jsx)(_.Heading, {
 														variant: 'heading-deprecated-12/semibold',
-														className: r()(Z.defaultKeybindGroupHeader, {
-															[Z.defaultKeybindGroupWithDescription]: null != i
-														}),
+														className: r()(Z.defaultKeybindGroupHeader, { [Z.defaultKeybindGroupWithDescription]: null != i }),
 														children: t
 													}),
 													null != i &&

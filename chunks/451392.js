@@ -20,18 +20,7 @@ var a = t(120356),
 	S = t(689938),
 	N = t(798721);
 function C(e) {
-	let {
-			user: s,
-			pendingAvatar: t,
-			pendingColors: a,
-			onThemeColorsChange: r,
-			preventDisabled: C,
-			guildId: m,
-			className: A,
-			showPremiumIcon: O = !0,
-			showResetThemeButton: g = !1,
-			forcedDivider: h
-		} = e,
+	let { user: s, pendingAvatar: t, pendingColors: a, onThemeColorsChange: r, preventDisabled: C, guildId: m, className: A, showPremiumIcon: O = !0, showResetThemeButton: g = !1, forcedDivider: h } = e,
 		p = (0, _.ZP)(s.id, m),
 		{ primaryColor: R, secondaryColor: x } = (0, E.Z)({
 			user: s,

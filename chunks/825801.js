@@ -22,8 +22,8 @@ var i = n(120356),
 	f = n(51144),
 	h = n(785717),
 	p = n(505737),
-	I = n(790286),
-	m = n(485216),
+	m = n(790286),
+	I = n(485216),
 	T = n(228168),
 	g = n(185923),
 	S = n(689938),
@@ -41,28 +41,15 @@ let N = 600,
 				return '> -# *'.concat(o, '*\n').concat(a);
 			case T.n_.STATUS:
 				let l = S.Z.Messages.USER_PROFILE_REACTED_TO_STATUS.format({ username: n });
-				return null != i
-					? '> -# *'.concat(l, '*').concat('\n > '.concat(i), '\n').concat(a)
-					: '> -# *'.concat(l, '*\n').concat(a);
+				return null != i ? '> -# *'.concat(l, '*').concat('\n > '.concat(i), '\n').concat(a) : '> -# *'.concat(l, '*\n').concat(a);
 			default:
 				(0, E.vE)(r);
 		}
 	};
 function O(e) {
-	let {
-			user: t,
-			channel: n,
-			sourceType: i,
-			sourceDetails: E,
-			isVisible: O,
-			isExpandable: R,
-			onInteraction: C,
-			setInteractionToastShown: y,
-			setInteractionSent: D,
-			setIsReplyInteraction: L
-		} = e,
+	let { user: t, channel: n, sourceType: i, sourceDetails: E, isVisible: O, isExpandable: R, onInteraction: C, setInteractionToastShown: y, setInteractionSent: D, setIsReplyInteraction: L } = e,
 		{ trackUserProfileAction: b } = (0, h.KZ)(),
-		{ sendReact: M, pressReact: P, pressReply: U } = (0, I.Q)(i),
+		{ sendReact: M, pressReact: P, pressReply: U } = (0, m.Q)(i),
 		w = (0, s.e7)([d.default], () => d.default.getId() === t.id),
 		x = (0, p.Z)(t.id),
 		[G, k] = (0, s.Wu)([l.Z], () => [l.Z.useReducedMotion, l.Z.keyboardModeEnabled]);
@@ -81,7 +68,7 @@ function O(e) {
 			L(!1),
 				D(!1),
 				y(!0),
-				await (0, m.Z)({
+				await (0, I.Z)({
 					userId: t.id,
 					content: r,
 					location: 'UserProfileReactReplyBar',

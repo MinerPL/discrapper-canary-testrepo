@@ -41,14 +41,7 @@ function E(e, t) {
 		r = ''.concat(e, '-').concat(t);
 	if (!n || null == _.get(r)) {
 		var i, s;
-		return (
-			_.set(r, !0),
-			(i = e),
-			(s = t),
-			a.tn
-				.get({ url: u.ANM.GUILD_ROLE_MEMBER_IDS(i, s) })
-				.then((e) => (o.Z.requestMembersById(i, e.body, !1), e.body.length))
-		);
+		return _.set(r, !0), (i = e), (s = t), a.tn.get({ url: u.ANM.GUILD_ROLE_MEMBER_IDS(i, s) }).then((e) => (o.Z.requestMembersById(i, e.body, !1), e.body.length));
 	}
 	return Promise.resolve(null);
 }

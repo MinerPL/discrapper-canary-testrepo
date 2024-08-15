@@ -89,11 +89,7 @@ function f(e) {
 				}
 			});
 }
-let T = [
-		o.Z.unsafe_rawColors.DISCORD_8TH_BDAY_GREEN.css,
-		o.Z.unsafe_rawColors.DISCORD_8TH_BDAY_PINK.css,
-		o.Z.unsafe_rawColors.DISCORD_8TH_BDAY_GREEN.css
-	],
+let T = [o.Z.unsafe_rawColors.DISCORD_8TH_BDAY_GREEN.css, o.Z.unsafe_rawColors.DISCORD_8TH_BDAY_PINK.css, o.Z.unsafe_rawColors.DISCORD_8TH_BDAY_GREEN.css],
 	m = (0, d.hQ)();
 function g(e) {
 	let { className: L, flipX: a } = e;
@@ -134,11 +130,7 @@ function g(e) {
 		}
 	});
 }
-let x = [
-	o.Z.unsafe_rawColors.DISCORD_8TH_BDAY_PINK.css,
-	o.Z.unsafe_rawColors.DISCORD_8TH_BDAY_GREEN.css,
-	o.Z.unsafe_rawColors.DISCORD_8TH_BDAY_PINK.css
-];
+let x = [o.Z.unsafe_rawColors.DISCORD_8TH_BDAY_PINK.css, o.Z.unsafe_rawColors.DISCORD_8TH_BDAY_GREEN.css, o.Z.unsafe_rawColors.DISCORD_8TH_BDAY_PINK.css];
 function N(e) {
 	let { className: L, flipX: a } = e;
 	return (0, C.jsx)(f, {
@@ -185,11 +177,7 @@ function N(e) {
 		}
 	});
 }
-let D = [
-	o.Z.unsafe_rawColors.DISCORD_8TH_BDAY_BLUE.css,
-	o.Z.unsafe_rawColors.DISCORD_8TH_BDAY_PINK.css,
-	o.Z.unsafe_rawColors.DISCORD_8TH_BDAY_BLUE.css
-];
+let D = [o.Z.unsafe_rawColors.DISCORD_8TH_BDAY_BLUE.css, o.Z.unsafe_rawColors.DISCORD_8TH_BDAY_PINK.css, o.Z.unsafe_rawColors.DISCORD_8TH_BDAY_BLUE.css];
 function v(e) {
 	let { className: L, flipX: a } = e;
 	return (0, C.jsx)(f, {

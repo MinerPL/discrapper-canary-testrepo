@@ -3,22 +3,7 @@ var n = a(735250),
 	s = a(461745),
 	r = a(990801);
 let i = l.forwardRef(function (e, t) {
-	let {
-		query: a,
-		onQueryChange: l,
-		onRemoveTag: i,
-		onSelect: o,
-		onSelectionChange: c,
-		selectedSection: d,
-		selectedRow: u,
-		tags: m,
-		sections: h,
-		placeholder: S = '',
-		focusAfterReady: x,
-		isReady: T,
-		'aria-labelledby': g,
-		'aria-controls': f
-	} = e;
+	let { query: a, onQueryChange: l, onRemoveTag: i, onSelect: o, onSelectionChange: c, selectedSection: d, selectedRow: u, tags: m, sections: h, placeholder: S = '', focusAfterReady: x, isReady: T, 'aria-labelledby': g, 'aria-controls': f } = e;
 	return (0, n.jsx)(s.ZP, {
 		autoFocus: !0,
 		className: r.searchBar,

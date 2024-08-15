@@ -24,15 +24,7 @@ function c(t, e, n) {
 					});
 			} catch (t) {
 				var a;
-				i(
-					429 === (a = null == t ? void 0 : t.status)
-						? s.Z.Messages.ACTIVATE_DEVICE_ERROR_RATE_LIMIT
-						: 404 === a || 400 === a
-							? s.Z.Messages.ACTIVATE_DEVICE_ERROR_BAD_CODE
-							: s.Z.Messages.ACTIVATE_DEVICE_ERROR_UNKNOWN
-				),
-					u(!1),
-					(null == t ? void 0 : t.status) === 401 && n();
+				i(429 === (a = null == t ? void 0 : t.status) ? s.Z.Messages.ACTIVATE_DEVICE_ERROR_RATE_LIMIT : 404 === a || 400 === a ? s.Z.Messages.ACTIVATE_DEVICE_ERROR_BAD_CODE : s.Z.Messages.ACTIVATE_DEVICE_ERROR_UNKNOWN), u(!1), (null == t ? void 0 : t.status) === 401 && n();
 			}
 		}, [t, e, n]);
 	return (

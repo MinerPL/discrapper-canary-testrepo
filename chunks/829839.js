@@ -19,17 +19,7 @@ var r,
 let l = [
 	{
 		name: 'H265',
-		encode:
-			(null === (i = window) || void 0 === i
-				? void 0
-				: null === (r = i.DiscordNative) || void 0 === r
-					? void 0
-					: r.process.platform) !== 'darwin' ||
-			(null === (s = window) || void 0 === s
-				? void 0
-				: null === (a = s.DiscordNative) || void 0 === a
-					? void 0
-					: a.os.arch) === 'arm64',
+		encode: (null === (i = window) || void 0 === i ? void 0 : null === (r = i.DiscordNative) || void 0 === r ? void 0 : r.process.platform) !== 'darwin' || (null === (s = window) || void 0 === s ? void 0 : null === (a = s.DiscordNative) || void 0 === a ? void 0 : a.os.arch) === 'arm64',
 		decode: !0
 	},
 	{

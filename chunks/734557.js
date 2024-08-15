@@ -16,9 +16,7 @@ function i(e) {
 		c = n.useMemo(() => t.reduce((e, t) => ((e[t.code] = t), e), {}), [t]),
 		d = n.useCallback(async () => {
 			r(!0);
-			let t = (await a.tn.get(o.ANM.GUILD_INSTANT_INVITES(e))).body.sort(
-				(e, t) => new Date(t.created_at).getTime() - new Date(e.created_at).getTime()
-			);
+			let t = (await a.tn.get(o.ANM.GUILD_INSTANT_INVITES(e))).body.sort((e, t) => new Date(t.created_at).getTime() - new Date(e.created_at).getTime());
 			l(t), s.set(e, new Set(t)), r(!1);
 		}, [e]);
 	return (

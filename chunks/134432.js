@@ -6,10 +6,10 @@ n.d(t, {
 		return p;
 	},
 	oO: function () {
-		return m;
+		return I;
 	},
 	po: function () {
-		return I;
+		return m;
 	},
 	x_: function () {
 		return c.Z;
@@ -25,10 +25,7 @@ var r = n(392711),
 	u = n(931619),
 	c = n(921948),
 	d = n(981631);
-let _ = [
-		16, 20, 22, 24, 28, 32, 40, 44, 48, 56, 60, 64, 80, 96, 100, 128, 160, 240, 256, 300, 320, 480, 512, 600, 640, 1024,
-		1280, 1536, 2048, 3072, 4096
-	],
+let _ = [16, 20, 22, 24, 28, 32, 40, 44, 48, 56, 60, 64, 80, 96, 100, 128, 160, 240, 256, 300, 320, 480, 512, 600, 640, 1024, 1280, 1536, 2048, 3072, 4096],
 	E = new (s())({ max: 1000 });
 function f(e) {
 	let t = new Image();
@@ -69,7 +66,7 @@ function p(e) {
 	let t = E.get(e);
 	return null != t && t.loaded;
 }
-function I(e, t) {
+function m(e, t) {
 	let n = E.get(e);
 	if (null != n && n.loaded)
 		return (
@@ -100,14 +97,12 @@ function I(e, t) {
 				f(n)),
 			null != t && ((r = t.bind(null)), null == n.callbacks && (n.callbacks = new Set()), n.callbacks.add(r)),
 			() => {
-				null != r &&
-					null != n &&
-					(null != n.callbacks && n.callbacks.delete(r), null != n.backoff && n.backoff.cancel());
+				null != r && null != n && (null != n.callbacks && n.callbacks.delete(r), null != n.backoff && n.backoff.cancel());
 			}
 		);
 	}
 }
-function m(e) {
+function I(e) {
 	var t;
 	let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
 	if (n) {
@@ -120,33 +115,17 @@ function T(e) {
 	let { src: t, width: n, height: r, maxWidth: a, maxHeight: s, ratio: l = 1, format: u = null, quality: d = null } = e,
 		_ = n,
 		E = r;
-	l < 1 && ((_ = Math.round(n * l)), (E = Math.round(r * l))),
-		null != a && (_ = Math.min(_, a)),
-		null != s && (E = Math.min(E, s));
+	l < 1 && ((_ = Math.round(n * l)), (E = Math.round(r * l))), null != a && (_ = Math.min(_, a)), null != s && (E = Math.min(E, s));
 	let f = (0, c.Z)();
 	return (
 		(_ *= f),
 		(function (e) {
-			let {
-					src: t,
-					sourceWidth: n,
-					sourceHeight: r,
-					targetWidth: a,
-					targetHeight: s,
-					format: l = null,
-					quality: u = null
-				} = e,
+			let { src: t, sourceWidth: n, sourceHeight: r, targetWidth: a, targetHeight: s, format: l = null, quality: u = null } = e,
 				[c, d] = (function (e) {
 					let [t, n] = e.split('?');
 					return [t, o.parse(n)];
 				})(t);
-			return (
-				null != l && (d.format = l),
-				null != u && (d.quality = u),
-				(a !== n || s !== r) && ((d.width = 0 | a), (d.height = 0 | s)),
-				!i().isEmpty(d) && (c += '?' + o.stringify(d)),
-				c
-			);
+			return null != l && (d.format = l), null != u && (d.quality = u), (a !== n || s !== r) && ((d.width = 0 | a), (d.height = 0 | s)), !i().isEmpty(d) && (c += '?' + o.stringify(d)), c;
 		})({
 			src: t,
 			sourceWidth: n,

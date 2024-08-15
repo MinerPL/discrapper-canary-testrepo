@@ -44,18 +44,12 @@ let h = (e) => {
 						(0, i.jsx)(o.Heading, {
 							variant: 'heading-md/semibold',
 							color: 'text-normal',
-							children:
-								'active' === t
-									? U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE_V2.format({ count: s.toString() })
-									: U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_EXPIRED_V2.format({ count: s.toString() })
+							children: 'active' === t ? U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE_V2.format({ count: s.toString() }) : U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_EXPIRED_V2.format({ count: s.toString() })
 						}),
 						(0, i.jsx)(o.Heading, {
 							variant: 'text-sm/normal',
 							color: 'text-muted',
-							children:
-								'active' === t
-									? U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_ACTIVE_V2
-									: U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_EXPIRED_V2
+							children: 'active' === t ? U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_ACTIVE_V2 : U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_EXPIRED_V2
 						})
 					]
 				}),
@@ -141,8 +135,7 @@ let h = (e) => {
 						})
 				};
 				if (!(u && (0, A.FB)(t))) return U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION.format(s);
-				return (null == t ? void 0 : null === (e = t.guild_metadata) || void 0 === e ? void 0 : e.member_type) ===
-					T.wO.OWNER
+				return (null == t ? void 0 : null === (e = t.guild_metadata) || void 0 === e ? void 0 : e.member_type) === T.wO.OWNER
 					? U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION_GUILD.format({
 							...s,
 							guildName: null == t ? void 0 : null === (n = t.guild_metadata) || void 0 === n ? void 0 : n.name
@@ -158,9 +151,7 @@ let h = (e) => {
 			{
 				onClick: () => {
 					(0, o.openModalLazy)(async () => {
-						let { default: e } = await Promise.all([n.e('72181'), n.e('46097'), n.e('18831'), n.e('10621')]).then(
-							n.bind(n, 41164)
-						);
+						let { default: e } = await Promise.all([n.e('72181'), n.e('46097'), n.e('18831'), n.e('10621')]).then(n.bind(n, 41164));
 						return (t) =>
 							(0, i.jsx)(e, {
 								classificationId: s,
@@ -235,9 +226,7 @@ let h = (e) => {
 										(0, i.jsx)('button', {
 											className: m.paginationButton,
 											onClick: () => _((e) => e + A),
-											children: U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_PAGINATION_BUTTON.format({
-												nextPageSize: A
-											})
+											children: U.Z.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_PAGINATION_BUTTON.format({ nextPageSize: A })
 										})
 									]
 								}),

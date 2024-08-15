@@ -178,10 +178,7 @@ let b = (0, v.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
 						}),
 						(0, A.Je)(e.libraryApplication)
 							? (0, a.jsx)(I.Z, {
-									analyticsListSort:
-										((i = t.sortKey),
-										(r = t.sortDirection),
-										''.concat(M[i], ' ').concat(r === L.sHY.ASCENDING ? 'ASC' : 'DESC')),
+									analyticsListSort: ((i = t.sortKey), (r = t.sortDirection), ''.concat(M[i], ' ').concat(r === L.sHY.ASCENDING ? 'ASC' : 'DESC')),
 									analyticsListIndex: n,
 									source: L.Sbl.APPLICATION_LIBRARY,
 									libraryApplication: e.libraryApplication,
@@ -199,16 +196,7 @@ let b = (0, v.Mg)(u.Z.GAME_LIST_ROW_MIN_HEIGHT),
 		}
 	],
 	j = (e) => {
-		let {
-				item: t,
-				activeRowKey: n,
-				highlightedApplicationKey: i,
-				onMouseEnter: s,
-				onMouseLeave: r,
-				onContextMenu: o,
-				setRef: c,
-				...d
-			} = e,
+		let { item: t, activeRowKey: n, highlightedApplicationKey: i, onMouseEnter: s, onMouseLeave: r, onContextMenu: o, setRef: c, ...d } = e,
 			u = t.key === n,
 			_ = t.key === i;
 		return (0, a.jsx)('div', {
@@ -305,10 +293,7 @@ class U extends (i = s.PureComponent) {
 			i = t.length > 0;
 		return i
 			? null
-			: ((e =
-					'' !== n
-						? O.Z.Messages.APPLICATION_LIBRARY_EMPTY_SEARCH_DESCRIPTION.format({ query: n })
-						: O.Z.Messages.APPLICATION_LIBRARY_EMPTY_STATE_DESCRIPTION_NO_IMPORT),
+			: ((e = '' !== n ? O.Z.Messages.APPLICATION_LIBRARY_EMPTY_SEARCH_DESCRIPTION.format({ query: n }) : O.Z.Messages.APPLICATION_LIBRARY_EMPTY_STATE_DESCRIPTION_NO_IMPORT),
 				(0, a.jsxs)('div', {
 					className: i ? R.emptyStateSmall : R.emptyStateLarge,
 					children: [

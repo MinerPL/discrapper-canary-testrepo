@@ -187,8 +187,7 @@ function eB(e) {
 				if (ep.Z.isVideoEnabled() === e) return;
 				let n = () => {
 					var n;
-					g.Z.setVideoEnabled(e),
-						e && (0, W.uL)(eP.Z5c.CHANNEL(null !== (n = t.getGuildId()) && void 0 !== n ? n : eP.ME, t.id));
+					g.Z.setVideoEnabled(e), e && (0, W.uL)(eP.Z5c.CHANNEL(null !== (n = t.getGuildId()) && void 0 !== n ? n : eP.ME, t.id));
 				};
 				e ? (0, eu.Z)(n, p) : n();
 			},
@@ -239,9 +238,7 @@ function eB(e) {
 									},
 									onMouseEnter: () => {
 										var t, n;
-										null === (t = e.onMouseEnter) || void 0 === t || t.call(e),
-											null === (n = d.onMouseEnter) || void 0 === n || n.call(d),
-											v.onMouseEnter();
+										null === (t = e.onMouseEnter) || void 0 === t || t.call(e), null === (n = d.onMouseEnter) || void 0 === n || n.call(d), v.onMouseEnter();
 									},
 									onMouseLeave: () => {
 										var t;
@@ -284,9 +281,7 @@ function eH(e) {
 		E = (0, L.KF)(a.id),
 		h = (0, L.g5)(E),
 		[m] = (0, d.e7)([A.ZP], () => (null != a.id && '' !== a.id ? A.ZP.getEmbeddedActivitiesForChannel(a.id) : A.i6)),
-		{ userInActivity: g } = (0, d.cj)([A.ZP], () => ({
-			userInActivity: null != A.ZP.getSelfEmbeddedActivityForChannel(a.id)
-		})),
+		{ userInActivity: g } = (0, d.cj)([A.ZP], () => ({ userInActivity: null != A.ZP.getSelfEmbeddedActivityForChannel(a.id) })),
 		p = (0, C.O)(),
 		T = (0, Z.a)(),
 		S = E !== L.jy.CAN_LAUNCH,
@@ -434,21 +429,11 @@ function eV(e) {
 class eF extends a.PureComponent {
 	renderConnectionStatus() {
 		let e;
-		let {
-			channel: t,
-			guild: n,
-			rtcConnectionQuality: a,
-			rtcConnectionState: s,
-			rtcConnectionLastPing: r,
-			hasVideo: l,
-			isBroadcasting: o
-		} = this.props;
+		let { channel: t, guild: n, rtcConnectionQuality: a, rtcConnectionState: s, rtcConnectionLastPing: r, hasVideo: l, isBroadcasting: o } = this.props;
 		if (null == t) return null;
 		let d = (0, j.F6)(t, eC.default, ef.Z);
 		return (
-			null != n
-				? ((e = eP.Z5c.CHANNEL(n.id, t.id)), (d = ''.concat(d, ' / ').concat(n.name)))
-				: (e = eP.Z5c.CHANNEL(eP.ME, t.id)),
+			null != n ? ((e = eP.Z5c.CHANNEL(n.id, t.id)), (d = ''.concat(d, ' / ').concat(n.name))) : (e = eP.Z5c.CHANNEL(eP.ME, t.id)),
 			o && t.isBroadcastChannel() && (d = eD.Z.Messages.BROADCASTING),
 			(0, i.jsx)(z.Z, {
 				channelId: t.id,
@@ -471,19 +456,10 @@ class eF extends a.PureComponent {
 		);
 	}
 	renderNoiseCancellation() {
-		let {
-			noiseCancellationActive: e,
-			noiseCancellationError: t,
-			hasLayers: n,
-			remoteVoiceState: a,
-			channel: s,
-			voiceStates: r
-		} = this.props;
+		let { noiseCancellationActive: e, noiseCancellationError: t, hasLayers: n, remoteVoiceState: a, channel: s, voiceStates: r } = this.props;
 		return null != a
 			? null
-			: (null == s ? void 0 : s.isGuildStageVoice()) &&
-				  !(null != r.find((e) => e.user.id === eh.default.getId() && (0, en.gf)(e.voiceState) === en.xO.ON_STAGE)) &&
-				  (0, ee.U5)(s.id)
+			: (null == s ? void 0 : s.isGuildStageVoice()) && !(null != r.find((e) => e.user.id === eh.default.getId() && (0, en.gf)(e.voiceState) === en.xO.ON_STAGE)) && (0, ee.U5)(s.id)
 				? (0, i.jsx)(ew, {})
 				: !n && t
 					? (0, i.jsx)(I.Tooltip, {
@@ -529,15 +505,7 @@ class eF extends a.PureComponent {
 			: null;
 	}
 	renderChannelButtons() {
-		let {
-			channel: e,
-			canGoLive: t,
-			remoteVoiceState: n,
-			enableActivities: a,
-			voiceStates: s,
-			selfStream: l,
-			isPrivateChannelWithEnabledActivities: o
-		} = this.props;
+		let { channel: e, canGoLive: t, remoteVoiceState: n, enableActivities: a, voiceStates: s, selfStream: l, isPrivateChannelWithEnabledActivities: o } = this.props;
 		if (null == e || null != n) return null;
 		let c = eh.default.getId();
 		if (e.isGuildStageVoice()) {
@@ -636,9 +604,7 @@ class eF extends a.PureComponent {
 			eU(this, 'handleChannelLinkClick', (e) => {
 				var t;
 				let { guild: n, channel: i } = this.props;
-				o()(null != i, 'Channel is null during navigation click'),
-					e.stopPropagation(),
-					T.Z.channelListScrollTo(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : eP.ME, i.id);
+				o()(null != i, 'Channel is null during navigation click'), e.stopPropagation(), T.Z.channelListScrollTo(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : eP.ME, i.id);
 			}),
 			eU(this, 'handleChannelLinkContextMenu', (e) => {
 				let { channel: t } = this.props;
@@ -727,28 +693,14 @@ t.Z = (0, f.Z)(function (e) {
 			noiseCancellationError: ep.Z.isNoiseCancellationError(),
 			canGoLive: (0, B.Z)(ep.Z)
 		})),
-		E = (0, d.e7)(
-			[ep.Z, F.Z],
-			() =>
-				F.Z.hasHotspot(eM.v.VOICE_PANEL_INTRODUCTION) &&
-				(0, eL.EO)(s) &&
-				!ep.Z.isInteractionRequired() &&
-				!(null == o ? void 0 : o.isGuildStageVoice())
-		),
+		E = (0, d.e7)([ep.Z, F.Z], () => F.Z.hasHotspot(eM.v.VOICE_PANEL_INTRODUCTION) && (0, eL.EO)(s) && !ep.Z.isInteractionRequired() && !(null == o ? void 0 : o.isGuildStageVoice())),
 		h = (0, d.e7)([eN.Z], () => null != r && eN.Z.hasVideo(r), [r]),
 		m = (0, d.e7)([eE.Z], () => eE.Z.getCurrentUserActiveStream()),
 		g = (0, d.e7)([eg.Z], () => eg.Z.hasLayers()),
 		p = (0, d.e7)([Y.Z], () => Y.Z.isViewingRoles(c)),
 		T = (0, d.e7)([eT.Z], () => p && !eT.Z.can(eP.Plq.VIEW_CHANNEL, o), [p, o]),
 		S = ei.Fg.useSetting(),
-		[f, C, N] = (0, d.Wu)(
-			[eA.ZP, Q.Z],
-			() =>
-				(null == o ? void 0 : o.isGuildStageVoice())
-					? [Q.Z.getMutableParticipants(o.id, X.pV.SPEAKER), Q.Z.getParticipantsVersion(o.id), null]
-					: [null, null, null != o ? eA.ZP.getVoiceStatesForChannel(o) : null],
-			[o]
-		),
+		[f, C, N] = (0, d.Wu)([eA.ZP, Q.Z], () => ((null == o ? void 0 : o.isGuildStageVoice()) ? [Q.Z.getMutableParticipants(o.id, X.pV.SPEAKER), Q.Z.getParticipantsVersion(o.id), null] : [null, null, null != o ? eA.ZP.getVoiceStatesForChannel(o) : null]), [o]),
 		A = a.useMemo(() => {
 			var e, t;
 			return null !==
@@ -813,9 +765,7 @@ t.Z = (0, f.Z)(function (e) {
 								(0, i.jsx)(I.Text, {
 									variant: 'text-sm/normal',
 									className: ey.viewAsRolesWarningText,
-									children: T
-										? eD.Z.Messages.VIEW_AS_ROLES_HIDDEN_VC_WARNING
-										: eD.Z.Messages.VIEW_AS_ROLES_VOICE_WARNING
+									children: T ? eD.Z.Messages.VIEW_AS_ROLES_HIDDEN_VC_WARNING : eD.Z.Messages.VIEW_AS_ROLES_VOICE_WARNING
 								}),
 								(0, i.jsx)(I.Button, {
 									className: ey.viewAsRolesWarningButton,

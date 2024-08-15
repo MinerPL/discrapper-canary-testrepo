@@ -94,17 +94,7 @@ function s(e) {
 			var r = t.length - 1;
 			if (r < n) return 0;
 			var i = s(t[r]);
-			return i >= 0
-				? (i > 0 && (e.lastNeed = i - 1), i)
-				: --r < n || -2 === i
-					? 0
-					: (i = s(t[r])) >= 0
-						? (i > 0 && (e.lastNeed = i - 2), i)
-						: --r < n || -2 === i
-							? 0
-							: (i = s(t[r])) >= 0
-								? (i > 0 && (2 === i ? (i = 0) : (e.lastNeed = i - 3)), i)
-								: 0;
+			return i >= 0 ? (i > 0 && (e.lastNeed = i - 1), i) : --r < n || -2 === i ? 0 : (i = s(t[r])) >= 0 ? (i > 0 && (e.lastNeed = i - 2), i) : --r < n || -2 === i ? 0 : (i = s(t[r])) >= 0 ? (i > 0 && (2 === i ? (i = 0) : (e.lastNeed = i - 3)), i) : 0;
 		})(this, e, t);
 		if (!this.lastNeed) return e.toString('utf8', t);
 		this.lastTotal = n;
@@ -112,11 +102,7 @@ function s(e) {
 		return e.copy(this.lastChar, 0, r), e.toString('utf8', t, r);
 	}),
 	(a.prototype.fillLast = function (e) {
-		if (this.lastNeed <= e.length)
-			return (
-				e.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, this.lastNeed),
-				this.lastChar.toString(this.encoding, 0, this.lastTotal)
-			);
+		if (this.lastNeed <= e.length) return e.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, this.lastNeed), this.lastChar.toString(this.encoding, 0, this.lastTotal);
 		e.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, e.length), (this.lastNeed -= e.length);
 	});
 function o(e) {
@@ -128,34 +114,18 @@ function o(e) {
 				if (e.lastNeed > 2 && t.length > 2 && (192 & t[2]) != 128) return (e.lastNeed = 2), '\uFFFD';
 			}
 		})(this, e, 0);
-	return void 0 !== n
-		? n
-		: this.lastNeed <= e.length
-			? (e.copy(this.lastChar, t, 0, this.lastNeed), this.lastChar.toString(this.encoding, 0, this.lastTotal))
-			: void (e.copy(this.lastChar, t, 0, e.length), (this.lastNeed -= e.length));
+	return void 0 !== n ? n : this.lastNeed <= e.length ? (e.copy(this.lastChar, t, 0, this.lastNeed), this.lastChar.toString(this.encoding, 0, this.lastTotal)) : void (e.copy(this.lastChar, t, 0, e.length), (this.lastNeed -= e.length));
 }
 function l(e, t) {
 	if ((e.length - t) % 2 == 0) {
 		var n = e.toString('utf16le', t);
 		if (n) {
 			var r = n.charCodeAt(n.length - 1);
-			if (r >= 55296 && r <= 56319)
-				return (
-					(this.lastNeed = 2),
-					(this.lastTotal = 4),
-					(this.lastChar[0] = e[e.length - 2]),
-					(this.lastChar[1] = e[e.length - 1]),
-					n.slice(0, -1)
-				);
+			if (r >= 55296 && r <= 56319) return (this.lastNeed = 2), (this.lastTotal = 4), (this.lastChar[0] = e[e.length - 2]), (this.lastChar[1] = e[e.length - 1]), n.slice(0, -1);
 		}
 		return n;
 	}
-	return (
-		(this.lastNeed = 1),
-		(this.lastTotal = 2),
-		(this.lastChar[0] = e[e.length - 1]),
-		e.toString('utf16le', t, e.length - 1)
-	);
+	return (this.lastNeed = 1), (this.lastTotal = 2), (this.lastChar[0] = e[e.length - 1]), e.toString('utf16le', t, e.length - 1);
 }
 function u(e) {
 	var t = e && e.length ? this.write(e) : '';
@@ -167,14 +137,7 @@ function u(e) {
 }
 function c(e, t) {
 	var n = (e.length - t) % 3;
-	return 0 === n
-		? e.toString('base64', t)
-		: ((this.lastNeed = 3 - n),
-			(this.lastTotal = 3),
-			1 === n
-				? (this.lastChar[0] = e[e.length - 1])
-				: ((this.lastChar[0] = e[e.length - 2]), (this.lastChar[1] = e[e.length - 1])),
-			e.toString('base64', t, e.length - n));
+	return 0 === n ? e.toString('base64', t) : ((this.lastNeed = 3 - n), (this.lastTotal = 3), 1 === n ? (this.lastChar[0] = e[e.length - 1]) : ((this.lastChar[0] = e[e.length - 2]), (this.lastChar[1] = e[e.length - 1])), e.toString('base64', t, e.length - n));
 }
 function d(e) {
 	var t = e && e.length ? this.write(e) : '';

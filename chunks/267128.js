@@ -20,8 +20,8 @@ var r = n(735250),
 	f = n(245216),
 	h = n(79390),
 	p = n(869765),
-	I = n(403132),
-	m = n(378233),
+	m = n(403132),
+	I = n(378233),
 	T = n(768581),
 	g = n(55935),
 	S = n(823379),
@@ -64,9 +64,9 @@ function b(e) {
 function M(e, t, n, i, a) {
 	let s, o, l, c;
 	let d = (0, E.Z)(e),
-		{ trailingIconClass: p, leadingIconClass: I, iconSize: T } = a,
+		{ trailingIconClass: p, leadingIconClass: m, iconSize: T } = a,
 		g = null == t || '' === t || (Array.isArray(t) && 0 === t.length),
-		S = (0, m.cv)(d).length > 0,
+		S = (0, I.cv)(d).length > 0,
 		A = null != d.interaction,
 		v = d.hasFlag(C.iLy.IS_VOICE_MESSAGE),
 		O = d.isPoll(),
@@ -75,7 +75,7 @@ function M(e, t, n, i, a) {
 		((0, _.Z)(e) &&
 			(c = (0, r.jsx)(f.Z, {
 				size: 'custom',
-				className: I,
+				className: m,
 				width: T,
 				height: T
 			})),
@@ -86,14 +86,7 @@ function M(e, t, n, i, a) {
 	else if (g) {
 		if (O) {
 			var D, L;
-			o =
-				null == d
-					? void 0
-					: null === (L = d.poll) || void 0 === L
-						? void 0
-						: null === (D = L.question) || void 0 === D
-							? void 0
-							: D.text;
+			o = null == d ? void 0 : null === (L = d.poll) || void 0 === L ? void 0 : null === (D = L.question) || void 0 === D ? void 0 : D.text;
 		} else
 			R
 				? (s = (0, h.N4)(d))
@@ -164,30 +157,14 @@ function P(e) {
 	let { repliedAuthor: n, baseAuthor: a, baseMessage: o, referencedMessage: _, renderPopout: E } = e,
 		f = i.useMemo(() => (null != E && _.state === p.Y.LOADED ? (e) => E(e, _.message) : void 0), [_, E]),
 		h = (function (e, t) {
-			let {
-					referencedMessage: n,
-					channel: i,
-					compact: a,
-					isReplyAuthorBlocked: o,
-					repliedAuthor: l,
-					showAvatarPopout: _,
-					onClickAvatar: E,
-					onContextMenu: f,
-					onPopoutRequestClose: h
-				} = e,
-				{ analyticsLocations: I } = (0, d.ZP)(c.Z.AVATAR);
+			let { referencedMessage: n, channel: i, compact: a, isReplyAuthorBlocked: o, repliedAuthor: l, showAvatarPopout: _, onClickAvatar: E, onContextMenu: f, onPopoutRequestClose: h } = e,
+				{ analyticsLocations: m } = (0, d.ZP)(c.Z.AVATAR);
 			if (a || n.state !== p.Y.LOADED || o)
 				return (0, r.jsx)('div', {
 					className: D.replyBadge,
 					children: (0, r.jsx)(L, { className: D.replyIcon })
 				});
-			if (
-				n.message.type === C.uaV.USER_JOIN ||
-				n.message.type === C.uaV.ROLE_SUBSCRIPTION_PURCHASE ||
-				n.message.type === C.uaV.GUILD_DEADCHAT_REVIVE_PROMPT ||
-				n.message.type === C.uaV.GUILD_GAMING_STATS_PROMPT
-			)
-				return (0, r.jsx)(b, { className: D.userJoinSystemMessageIcon });
+			if (n.message.type === C.uaV.USER_JOIN || n.message.type === C.uaV.ROLE_SUBSCRIPTION_PURCHASE || n.message.type === C.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || n.message.type === C.uaV.GUILD_GAMING_STATS_PROMPT) return (0, r.jsx)(b, { className: D.userJoinSystemMessageIcon });
 			if (n.message.type === C.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
 				return (0, r.jsx)(u.TicketIcon, {
 					size: 'md',
@@ -201,7 +178,7 @@ function P(e) {
 					height: R.WW,
 					size: 'custom'
 				});
-			let m = () => {
+			let I = () => {
 				var e, t, a, o, u;
 				return (
 					(e = n.message.author),
@@ -230,44 +207,30 @@ function P(e) {
 			};
 			return null != t && null != _
 				? (0, r.jsx)(d.Gt, {
-						value: I,
+						value: m,
 						children: (0, r.jsx)(u.Popout, {
 							renderPopout: t,
 							shouldShow: _,
 							position: 'right',
 							onRequestClose: h,
-							children: m
+							children: I
 						})
 					})
 				: (0, r.jsx)(d.Gt, {
-						value: I,
-						children: m()
+						value: m,
+						children: I()
 					});
 		})(e, f),
-		m = (function (e, t) {
-			let {
-					baseMessage: n,
-					channel: i,
-					referencedMessage: a,
-					showUsernamePopout: s,
-					onClickUsername: o,
-					onContextMenu: l,
-					onPopoutRequestClose: u
-				} = e,
+		I = (function (e, t) {
+			let { baseMessage: n, channel: i, referencedMessage: a, showUsernamePopout: s, onClickUsername: o, onContextMenu: l, onPopoutRequestClose: u } = e,
 				c = (null == a ? void 0 : a.state) === p.Y.LOADED ? a.message : void 0;
-			return null == c ||
-				c.type === C.uaV.USER_JOIN ||
-				c.type === C.uaV.ROLE_SUBSCRIPTION_PURCHASE ||
-				c.type === C.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION ||
-				c.type === C.uaV.GUILD_DEADCHAT_REVIVE_PROMPT ||
-				c.type === C.uaV.GUILD_GAMING_STATS_PROMPT ||
-				c.type === C.uaV.POLL_RESULT
+			return null == c || c.type === C.uaV.USER_JOIN || c.type === C.uaV.ROLE_SUBSCRIPTION_PURCHASE || c.type === C.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION || c.type === C.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || c.type === C.uaV.GUILD_GAMING_STATS_PROMPT || c.type === C.uaV.POLL_RESULT
 				? null
 				: (0, r.jsx)(v.Z, {
 						message: c,
 						channel: i,
 						compact: !0,
-						withMentionPrefix: (0, I.Z)(n, c),
+						withMentionPrefix: (0, m.Z)(n, c),
 						showPopout: s,
 						renderPopout: t,
 						onClick: o,
@@ -344,7 +307,7 @@ function P(e) {
 			id: (0, A.Gq)(o),
 			className: s()(D.repliedMessage, P),
 			'aria-label': t,
-			children: [h, m, N]
+			children: [h, I, N]
 		})
 	);
 }

@@ -47,12 +47,7 @@ function l(e) {
 			return;
 	}
 }
-((r = i || (i = {}))[(r.DURATION_60_SEC = 60)] = 'DURATION_60_SEC'),
-	(r[(r.DURATION_5_MIN = 300)] = 'DURATION_5_MIN'),
-	(r[(r.DURATION_10_MIN = 600)] = 'DURATION_10_MIN'),
-	(r[(r.DURATION_1_HOUR = 3600)] = 'DURATION_1_HOUR'),
-	(r[(r.DURATION_1_DAY = 86400)] = 'DURATION_1_DAY'),
-	(r[(r.DURATION_1_WEEK = 604800)] = 'DURATION_1_WEEK');
+((r = i || (i = {}))[(r.DURATION_60_SEC = 60)] = 'DURATION_60_SEC'), (r[(r.DURATION_5_MIN = 300)] = 'DURATION_5_MIN'), (r[(r.DURATION_10_MIN = 600)] = 'DURATION_10_MIN'), (r[(r.DURATION_1_HOUR = 3600)] = 'DURATION_1_HOUR'), (r[(r.DURATION_1_DAY = 86400)] = 'DURATION_1_DAY'), (r[(r.DURATION_1_WEEK = 604800)] = 'DURATION_1_WEEK');
 let u = () =>
 		Object.keys(i)
 			.filter((e) => isNaN(Number(e)))

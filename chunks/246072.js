@@ -178,12 +178,6 @@ t.Z = function (e) {
 			value: l.replace('#', ''),
 			onChange: c
 		}),
-		r.createElement(
-			'div',
-			{ style: u.fieldSymbols },
-			r.createElement('div', { style: u.symbol }, '\xB0'),
-			r.createElement('div', { style: u.symbol }, '%'),
-			r.createElement('div', { style: u.symbol }, '%')
-		)
+		r.createElement('div', { style: u.fieldSymbols }, r.createElement('div', { style: u.symbol }, '\xB0'), r.createElement('div', { style: u.symbol }, '%'), r.createElement('div', { style: u.symbol }, '%'))
 	);
 };

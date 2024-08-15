@@ -10,7 +10,7 @@ n.d(t, {
 		return u;
 	},
 	aQ: function () {
-		return I;
+		return m;
 	},
 	al: function () {
 		return s;
@@ -25,7 +25,7 @@ n.d(t, {
 		return r;
 	},
 	z: function () {
-		return m;
+		return I;
 	}
 }),
 	((c = r || (r = {}))[(c.PNG = 1)] = 'PNG'),
@@ -39,24 +39,6 @@ n.d(t, {
 	(_.LOTTIE = 'json'),
 	(_.WEBP = 'webp'),
 	(_.GIF = 'gif');
-let I = (e) => 1 !== e,
-	m = (e) => 1 !== e;
-((E = s || (s = {}))[(E.STICKER = 0)] = 'STICKER'),
-	(E[(E.CREATE_STICKER = 1)] = 'CREATE_STICKER'),
-	((f = o || (o = {})).PACK = 'PACK'),
-	(f.FAVORITE = 'FAVORITE'),
-	(f.RECENT = 'RECENT'),
-	(f.SEARCH_RESULTS = 'SEARCH_RESULTS'),
-	(f.SEARCH_SUGGESTIONS = 'SEARCH_SUGGESTIONS'),
-	(f.GUILD = 'GUILD'),
-	(f.EMPTY_GUILD_UPSELL = 'EMPTY_GUILD_UPSELL'),
-	(f.CREATE_STICKER = 'CREATE_STICKER'),
-	((h = l || (l = {}))[(h.STICKER_NAME = 0)] = 'STICKER_NAME'),
-	(h[(h.TAG = 1)] = 'TAG'),
-	(h[(h.CORRELATED_EMOJI = 2)] = 'CORRELATED_EMOJI'),
-	(h[(h.GUILD_NAME = 3)] = 'GUILD_NAME'),
-	(h[(h.PACK_NAME = 4)] = 'PACK_NAME'),
-	((p = u || (u = {}))[(p.STICKER_PICKER = 0)] = 'STICKER_PICKER'),
-	(p[(p.EXPRESSION_SUGGESTIONS = 1)] = 'EXPRESSION_SUGGESTIONS'),
-	(p[(p.AUTOCOMPLETE = 2)] = 'AUTOCOMPLETE'),
-	(p[(p.BUILT_IN_INTEGRATION = 3)] = 'BUILT_IN_INTEGRATION');
+let m = (e) => 1 !== e,
+	I = (e) => 1 !== e;
+((E = s || (s = {}))[(E.STICKER = 0)] = 'STICKER'), (E[(E.CREATE_STICKER = 1)] = 'CREATE_STICKER'), ((f = o || (o = {})).PACK = 'PACK'), (f.FAVORITE = 'FAVORITE'), (f.RECENT = 'RECENT'), (f.SEARCH_RESULTS = 'SEARCH_RESULTS'), (f.SEARCH_SUGGESTIONS = 'SEARCH_SUGGESTIONS'), (f.GUILD = 'GUILD'), (f.EMPTY_GUILD_UPSELL = 'EMPTY_GUILD_UPSELL'), (f.CREATE_STICKER = 'CREATE_STICKER'), ((h = l || (l = {}))[(h.STICKER_NAME = 0)] = 'STICKER_NAME'), (h[(h.TAG = 1)] = 'TAG'), (h[(h.CORRELATED_EMOJI = 2)] = 'CORRELATED_EMOJI'), (h[(h.GUILD_NAME = 3)] = 'GUILD_NAME'), (h[(h.PACK_NAME = 4)] = 'PACK_NAME'), ((p = u || (u = {}))[(p.STICKER_PICKER = 0)] = 'STICKER_PICKER'), (p[(p.EXPRESSION_SUGGESTIONS = 1)] = 'EXPRESSION_SUGGESTIONS'), (p[(p.AUTOCOMPLETE = 2)] = 'AUTOCOMPLETE'), (p[(p.BUILT_IN_INTEGRATION = 3)] = 'BUILT_IN_INTEGRATION');

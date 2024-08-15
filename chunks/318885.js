@@ -19,8 +19,7 @@ function u() {
 		var l, u;
 		n = o.desktopSource.soundshareSession;
 		let e = null != o.desktopSource.sourcePid ? r.ZP.getGameForPID(o.desktopSource.sourcePid) : null;
-		(a = null !== (l = null == e ? void 0 : e.name) && void 0 !== l ? l : null),
-			(s = null !== (u = null == e ? void 0 : e.id) && void 0 !== u ? u : null);
+		(a = null !== (l = null == e ? void 0 : e.name) && void 0 !== l ? l : null), (s = null !== (u = null == e ? void 0 : e.id) && void 0 !== u ? u : null);
 	}
 	return {
 		video_input_resolution: e,

@@ -30,9 +30,7 @@ function u(e) {
 		i.useEffect(() => {
 			var e, r;
 			return (
-				n
-					? (null === (e = _.current) || void 0 === e || e.pause(), (0, o.Bw)(t))
-					: null === (r = _.current) || void 0 === r || r.play().catch(() => {}),
+				n ? (null === (e = _.current) || void 0 === e || e.pause(), (0, o.Bw)(t)) : null === (r = _.current) || void 0 === r || r.play().catch(() => {}),
 				() => {
 					n && (0, o.rY)(t);
 				}

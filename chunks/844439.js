@@ -1,17 +1,17 @@
 n.d(t, {
 	M: function () {
-		return c;
+		return d;
 	}
 });
 var i,
 	a,
 	o,
 	l,
-	c,
 	d,
-	m = n(442837),
-	r = n(570140);
-((i = c || (c = {}))[(i.FETCHING = 0)] = 'FETCHING'), (i[(i.FETCHED = 1)] = 'FETCHED'), (i[(i.ERROR = 2)] = 'ERROR');
+	c,
+	r = n(442837),
+	m = n(570140);
+((i = d || (d = {}))[(i.FETCHING = 0)] = 'FETCHING'), (i[(i.FETCHED = 1)] = 'FETCHED'), (i[(i.ERROR = 2)] = 'ERROR');
 let u = {},
 	s = {},
 	p = {};
@@ -20,7 +20,7 @@ function _(e) {
 	return 'location:'.concat(t, ' channelId:').concat('0', ' withCommands:').concat(i);
 }
 let E = Object.freeze([]);
-class g extends (d = m.ZP.Store) {
+class g extends (c = r.ZP.Store) {
 	getLastFetchTimeMs(e) {
 		let { location: t, channelId: n, withCommands: i } = e;
 		return p[
@@ -66,7 +66,7 @@ class g extends (d = m.ZP.Store) {
 				writable: !0
 			})
 		: (a[o] = l),
-	(t.ZP = new g(r.Z, {
+	(t.ZP = new g(m.Z, {
 		APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS: function (e) {
 			let { location: t, channelId: n, withCommands: i } = e;
 			s = {

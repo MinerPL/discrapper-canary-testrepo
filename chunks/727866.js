@@ -28,13 +28,9 @@ let s = (e, t) =>
 	);
 t.Z = {
 	getTextInVoiceSendMessageChannelPermissionText: function (e) {
-		return e
-			? a.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_TIV_DESCRIPTION_TEXT_DISABLED.format({ warningHook: s })
-			: a.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_DESCRIPTION_TEXT;
+		return e ? a.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_TIV_DESCRIPTION_TEXT_DISABLED.format({ warningHook: s }) : a.Z.Messages.ROLE_PERMISSIONS_SEND_MESSAGES_DESCRIPTION_TEXT;
 	},
 	getTextInVoiceReadMessageHistoryChannelPermissionText: function (e) {
-		return e
-			? a.Z.Messages.ROLE_PERMISSIONS_READ_MESSAGE_HISTORY_WITH_TIV_DESCRIPTION_TEXT_DISABLED.format({ warningHook: s })
-			: a.Z.Messages.ROLE_PERMISSIONS_READ_MESSAGE_HISTORY_DESCRIPTION_TEXT;
+		return e ? a.Z.Messages.ROLE_PERMISSIONS_READ_MESSAGE_HISTORY_WITH_TIV_DESCRIPTION_TEXT_DISABLED.format({ warningHook: s }) : a.Z.Messages.ROLE_PERMISSIONS_READ_MESSAGE_HISTORY_DESCRIPTION_TEXT;
 	}
 };

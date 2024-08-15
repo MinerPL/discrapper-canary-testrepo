@@ -22,13 +22,7 @@ var r,
 	v = n(807608);
 let b = [u.Z, c.Z, s.Z, f.Z, d.Z, v.Z, h.Z],
 	p = 'data-accessibility-violation',
-	m =
-		'function' ==
-		typeof (null === (i = navigator) || void 0 === i
-			? void 0
-			: null === (r = i.scheduling) || void 0 === r
-				? void 0
-				: r.isInputPending),
+	m = 'function' == typeof (null === (i = navigator) || void 0 === i ? void 0 : null === (r = i.scheduling) || void 0 === r ? void 0 : r.isInputPending),
 	g = null,
 	w = null,
 	A = 0,
@@ -57,10 +51,7 @@ function M() {
 }
 function Z() {
 	let e = b[A];
-	if (
-		(null == k && (k = null != e.selector ? Array.from(x.querySelectorAll(e.selector)) : e.select(x)), 0 === k.length)
-	)
-		return M();
+	if ((null == k && (k = null != e.selector ? Array.from(x.querySelectorAll(e.selector)) : e.select(x)), 0 === k.length)) return M();
 	let t = performance.now() + 16,
 		n = { includeContinuous: !0 };
 	for (; y < k.length && !(navigator.scheduling.isInputPending(n) || performance.now() >= t); ) {
@@ -109,11 +100,7 @@ function Z() {
 }
 let S = (e) => {
 	let t = e.filter((e) => ('attributes' !== e.type || e.attributeName !== p) && !0);
-	0 !== t.length &&
-		(N(),
-		null != g && (clearTimeout(g), (g = null)),
-		null != w && (clearTimeout(w), (w = null)),
-		(g = setTimeout(E, 250)));
+	0 !== t.length && (N(), null != g && (clearTimeout(g), (g = null)), null != w && (clearTimeout(w), (w = null)), (g = setTimeout(E, 250)));
 };
 function L(e, t) {
 	(0, a.useLayoutEffect)(() => {
@@ -140,11 +127,6 @@ function T(e) {
 	let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
 		n = 3735928559 ^ t,
 		r = 1103547991 ^ t;
-	for (let t = 0, i; t < e.length; t++)
-		(n = Math.imul(n ^ (i = e.charCodeAt(t)), 2654435761)), (r = Math.imul(r ^ i, 1597334677));
-	return (
-		(n = Math.imul(n ^ (n >>> 16), 2246822507) ^ Math.imul(r ^ (r >>> 13), 3266489909)),
-		4294967296 * (2097151 & (r = Math.imul(r ^ (r >>> 16), 2246822507) ^ Math.imul(n ^ (n >>> 13), 3266489909))) +
-			(n >>> 0)
-	);
+	for (let t = 0, i; t < e.length; t++) (n = Math.imul(n ^ (i = e.charCodeAt(t)), 2654435761)), (r = Math.imul(r ^ i, 1597334677));
+	return (n = Math.imul(n ^ (n >>> 16), 2246822507) ^ Math.imul(r ^ (r >>> 13), 3266489909)), 4294967296 * (2097151 & (r = Math.imul(r ^ (r >>> 16), 2246822507) ^ Math.imul(n ^ (n >>> 13), 3266489909))) + (n >>> 0);
 }

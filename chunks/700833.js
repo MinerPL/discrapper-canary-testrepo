@@ -18,19 +18,7 @@ var r = t(392711),
 	u = t(981631),
 	m = t(689938);
 function _(e) {
-	let {
-			dropHoveredIndex: n,
-			formField: u,
-			guild: _,
-			index: f,
-			isDragEnabled: h,
-			submittedGuildJoinRequestsCount: x,
-			removeFormField: p,
-			updateFormField: g,
-			updateFormFieldOrder: T,
-			canRemove: E,
-			actionsLocation: I
-		} = e,
+	let { dropHoveredIndex: n, formField: u, guild: _, index: f, isDragEnabled: h, submittedGuildJoinRequestsCount: x, removeFormField: p, updateFormField: g, updateFormFieldOrder: T, canRemove: E, actionsLocation: I } = e,
 		b = async () => {
 			await p(f);
 		},

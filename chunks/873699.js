@@ -24,10 +24,7 @@ function _(e, n) {
 		g = (0, l.e7)([c.Z], () => c.Z.can(I.Plq.MANAGE_MESSAGES, n) && _, [n, _]),
 		f = e.reactions.reduce((e, n) => {
 			var t;
-			return (null === (t = n.count_details) || void 0 === t ? void 0 : t.vote) != null ||
-				null != e.find((e) => (null != e.id && e.id === n.emoji.id) || e.name === n.emoji.name)
-				? e
-				: [...e, n.emoji];
+			return (null === (t = n.count_details) || void 0 === t ? void 0 : t.vote) != null || null != e.find((e) => (null != e.id && e.id === n.emoji.id) || e.name === n.emoji.name) ? e : [...e, n.emoji];
 		}, []),
 		Z = (t, i) => {
 			t.shiftKey

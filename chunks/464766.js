@@ -17,13 +17,7 @@ function u(e) {
 		v = a.useRef(null);
 	a.useEffect(() => {
 		var e, n, t;
-		return null === (t = v.current) || void 0 === t
-			? void 0
-			: null === (n = t.ref) || void 0 === n
-				? void 0
-				: null === (e = n.blur) || void 0 === e
-					? void 0
-					: e.call(n);
+		return null === (t = v.current) || void 0 === t ? void 0 : null === (n = t.ref) || void 0 === n ? void 0 : null === (e = n.blur) || void 0 === e ? void 0 : e.call(n);
 	}, []);
 	let h = s.Z.Messages.GUILD_EVENT_DETAILS_USER_LIST_TAB_TITLE.format({ userCount: u }),
 		f = [

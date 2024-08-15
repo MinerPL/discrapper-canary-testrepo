@@ -49,9 +49,6 @@ t.Z = (e) => {
 		s = (0, a.e7)([c.Z], () => c.Z.getProduct(t.skuId)),
 		l = null == s ? void 0 : s.items[0];
 	return (0, i.jsxs)(i.Fragment, {
-		children: [
-			(null == l ? void 0 : l.type) === n.Z.AVATAR_DECORATION && (0, i.jsx)(m, { item: l }),
-			(null == l ? void 0 : l.type) === n.Z.PROFILE_EFFECT && (0, i.jsx)(g, { item: l })
-		]
+		children: [(null == l ? void 0 : l.type) === n.Z.AVATAR_DECORATION && (0, i.jsx)(m, { item: l }), (null == l ? void 0 : l.type) === n.Z.PROFILE_EFFECT && (0, i.jsx)(g, { item: l })]
 	});
 };

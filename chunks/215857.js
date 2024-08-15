@@ -6,10 +6,7 @@ n.d(t, {
 function r(e, t) {
 	for (var n = 0; n < t.length; n++) {
 		var r = t[n];
-		(r.enumerable = r.enumerable || !1),
-			(r.configurable = !0),
-			'value' in r && (r.writable = !0),
-			Object.defineProperty(e, r.key, r);
+		(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 	}
 }
 function i(e, t, n) {
@@ -50,11 +47,7 @@ var a = (function () {
 				key: 'document',
 				get: function () {
 					var e;
-					return null !== (e = this.globalContext) && void 0 !== e && e.document
-						? this.globalContext.document
-						: this.window
-							? this.window.document
-							: void 0;
+					return null !== (e = this.globalContext) && void 0 !== e && e.document ? this.globalContext.document : this.window ? this.window.document : void 0;
 				}
 			},
 			{

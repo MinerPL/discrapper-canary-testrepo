@@ -51,11 +51,7 @@ t.Z = new (class e {
 								id: Number(e),
 								value: s[e]
 							});
-						let r =
-							null !== (n = null === (t = i.Z.settings.versions) || void 0 === t ? void 0 : t.dataVersion) &&
-							void 0 !== n
-								? n
-								: -1;
+						let r = null !== (n = null === (t = i.Z.settings.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== n ? n : -1;
 						o.Z.nonGuildVersionsTransaction(e).put({
 							id: 'user_settings_version',
 							version: r

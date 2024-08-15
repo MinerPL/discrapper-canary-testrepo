@@ -2,27 +2,7 @@ e.exports = function (e) {
 	return {
 		name: 'Flix',
 		keywords: {
-			keyword: [
-				'case',
-				'class',
-				'def',
-				'else',
-				'enum',
-				'if',
-				'impl',
-				'import',
-				'in',
-				'lat',
-				'rel',
-				'index',
-				'let',
-				'match',
-				'namespace',
-				'switch',
-				'type',
-				'yield',
-				'with'
-			],
+			keyword: ['case', 'class', 'def', 'else', 'enum', 'if', 'impl', 'import', 'in', 'lat', 'rel', 'index', 'let', 'match', 'namespace', 'switch', 'type', 'yield', 'with'],
 			literal: ['true', 'false']
 		},
 		contains: [

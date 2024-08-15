@@ -60,45 +60,10 @@ function f(e) {
 class C extends c.Z {
 	get comparator() {
 		var e, t, n, i, a;
-		return [
-			this.type,
-			null !==
-				(a =
-					null !== (i = null === (e = this.nickname) || void 0 === e ? void 0 : e.toLowerCase()) && void 0 !== i
-						? i
-						: null === (n = this.user) || void 0 === n
-							? void 0
-							: null === (t = n.globalName) || void 0 === t
-								? void 0
-								: t.toLowerCase()) && void 0 !== a
-				? a
-				: this.usernameLower
-		];
+		return [this.type, null !== (a = null !== (i = null === (e = this.nickname) || void 0 === e ? void 0 : e.toLowerCase()) && void 0 !== i ? i : null === (n = this.user) || void 0 === n ? void 0 : null === (t = n.globalName) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== a ? a : this.usernameLower];
 	}
 	constructor(e) {
-		super(),
-			p(this, 'key', void 0),
-			p(this, 'type', void 0),
-			p(this, 'status', void 0),
-			p(this, 'isMobile', void 0),
-			p(this, 'activities', void 0),
-			p(this, 'applicationStream', void 0),
-			p(this, 'user', void 0),
-			p(this, 'usernameLower', void 0),
-			p(this, 'mutualGuildsLength', void 0),
-			p(this, 'mutualGuilds', void 0),
-			p(this, 'nickname', void 0),
-			(this.key = e.key),
-			(this.type = e.type),
-			(this.status = e.status),
-			(this.activities = e.activities),
-			(this.applicationStream = e.applicationStream),
-			(this.user = e.user),
-			(this.isMobile = e.isMobile),
-			(this.usernameLower = e.usernameLower),
-			(this.mutualGuildsLength = e.mutualGuildsLength),
-			(this.mutualGuilds = e.mutualGuilds),
-			(this.nickname = e.nickname);
+		super(), p(this, 'key', void 0), p(this, 'type', void 0), p(this, 'status', void 0), p(this, 'isMobile', void 0), p(this, 'activities', void 0), p(this, 'applicationStream', void 0), p(this, 'user', void 0), p(this, 'usernameLower', void 0), p(this, 'mutualGuildsLength', void 0), p(this, 'mutualGuilds', void 0), p(this, 'nickname', void 0), (this.key = e.key), (this.type = e.type), (this.status = e.status), (this.activities = e.activities), (this.applicationStream = e.applicationStream), (this.user = e.user), (this.isMobile = e.isMobile), (this.usernameLower = e.usernameLower), (this.mutualGuildsLength = e.mutualGuildsLength), (this.mutualGuilds = e.mutualGuilds), (this.nickname = e.nickname);
 	}
 }
 class N {
@@ -147,9 +112,7 @@ class N {
 				if (null == e.user) return !1;
 				if (null != t && '' !== t) {
 					let n = t.toLowerCase();
-					return [e.usernameLower, e.nickname, e.user.globalName]
-						.map((e) => (null == e ? void 0 : e.toLowerCase()))
-						.some((e) => (null == e ? void 0 : e.includes(n)));
+					return [e.usernameLower, e.nickname, e.user.globalName].map((e) => (null == e ? void 0 : e.toLowerCase())).some((e) => (null == e ? void 0 : e.includes(n)));
 				}
 				return !0;
 			})
@@ -215,12 +178,7 @@ function M(e) {
 }
 class D extends (i = r.ZP.Store) {
 	initialize() {
-		this.waitFor(m.Z, h.Z, I.default, E.Z, _.ZP, u.Z, d.Z),
-			this.syncWith([m.Z], P),
-			this.syncWith([d.Z], P),
-			this.syncWith([I.default], M(T)),
-			this.syncWith([h.Z, u.Z], M(S)),
-			b();
+		this.waitFor(m.Z, h.Z, I.default, E.Z, _.ZP, u.Z, d.Z), this.syncWith([m.Z], P), this.syncWith([d.Z], P), this.syncWith([I.default], M(T)), this.syncWith([h.Z, u.Z], M(S)), b();
 	}
 	getState() {
 		return {

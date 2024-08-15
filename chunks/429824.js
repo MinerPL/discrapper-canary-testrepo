@@ -31,9 +31,7 @@ function d(e) {
 	return e.isCommunity() && d
 		? (0, a.jsx)(l.MenuItem, {
 				id: 'server-lockdown',
-				label: c
-					? r.Z.Messages.GUILD_SERVER_LOCKDOWN_CONTEXT_MENU_UNLOCK
-					: r.Z.Messages.GUILD_SERVER_LOCKDOWN_CONTEXT_MENU_LOCK,
+				label: c ? r.Z.Messages.GUILD_SERVER_LOCKDOWN_CONTEXT_MENU_UNLOCK : r.Z.Messages.GUILD_SERVER_LOCKDOWN_CONTEXT_MENU_LOCK,
 				icon: n ? (c ? l.LockUnlockedIcon : l.LockIcon) : void 0,
 				action: I,
 				color: 'danger'

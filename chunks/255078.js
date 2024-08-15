@@ -74,12 +74,7 @@ class E extends a.Z {
 	}
 	get planIdForCurrencies() {
 		let e;
-		return (
-			this.isPremium
-				? (i()(this.planIdFromItems, 'Premium subscription has no planId for currencies'), (e = this.planIdFromItems))
-				: (e = this.planId),
-			e
-		);
+		return this.isPremium ? (i()(this.planIdFromItems, 'Premium subscription has no planId for currencies'), (e = this.planIdFromItems)) : (e = this.planId), e;
 	}
 	get planIdFromItems() {
 		return this.getCurrentSubscriptionPlanIdForGroup(Object.values(c.Xh));
@@ -97,11 +92,7 @@ class E extends a.Z {
 		return (this.isPurchasedViaApple && (0, o.isIOS)()) || (this.isPurchasedViaGoogle && (0, o.isAndroid)());
 	}
 	get hasExternalPlanChange() {
-		return (
-			this.isPurchasedExternally &&
-			null != this.renewalMutations &&
-			this.paymentGatewayPlanId !== this.renewalMutations.paymentGatewayPlanId
-		);
+		return this.isPurchasedExternally && null != this.renewalMutations && this.paymentGatewayPlanId !== this.renewalMutations.paymentGatewayPlanId;
 	}
 	get hasPremiumNitroMonthly() {
 		return null != this.items.find((e) => e.planId === c.Xh.PREMIUM_MONTH_TIER_2);
@@ -116,54 +107,7 @@ class E extends a.Z {
 		return null != this.trialId && c.h8.includes(this.trialId) && null == this.paymentSourceId;
 	}
 	constructor(e) {
-		super(),
-			d(this, 'id', void 0),
-			d(this, 'type', void 0),
-			d(this, 'items', void 0),
-			d(this, 'createdAt', void 0),
-			d(this, 'canceledAt', void 0),
-			d(this, 'currentPeriodStart', void 0),
-			d(this, 'currentPeriodEnd', void 0),
-			d(this, 'status', void 0),
-			d(this, 'paymentSourceId', void 0),
-			d(this, 'paymentGateway', void 0),
-			d(this, 'paymentGatewayPlanId', void 0),
-			d(this, 'paymentGatewaySubscriptionId', void 0),
-			d(this, 'trialId', void 0),
-			d(this, 'trialEndsAt', void 0),
-			d(this, 'renewalMutations', void 0),
-			d(this, 'streakStartedAt', void 0),
-			d(this, 'currency', void 0),
-			d(this, 'pauseEndsAt', void 0),
-			d(this, 'planId', void 0),
-			d(this, 'additionalPlans', void 0),
-			d(this, 'metadata', void 0),
-			d(this, 'latestInvoice', void 0),
-			d(this, 'useStorekitResubscribe', void 0),
-			d(this, 'price', void 0),
-			d(this, 'userId', void 0),
-			(this.id = e.id),
-			(this.type = e.type),
-			(this.items = e.items),
-			(this.createdAt = e.createdAt),
-			(this.canceledAt = e.canceledAt),
-			(this.currentPeriodStart = e.currentPeriodStart),
-			(this.currentPeriodEnd = e.currentPeriodEnd),
-			(this.status = e.status),
-			(this.paymentSourceId = e.paymentSourceId),
-			(this.paymentGateway = e.paymentGateway),
-			(this.paymentGatewayPlanId = e.paymentGatewayPlanId),
-			(this.paymentGatewaySubscriptionId = e.paymentGatewaySubscriptionId),
-			(this.trialId = e.trialId),
-			(this.trialEndsAt = e.trialEndsAt),
-			(this.renewalMutations = e.renewalMutations),
-			(this.currency = e.currency),
-			(this.pauseEndsAt = e.pauseEndsAt),
-			(this.metadata = e.metadata),
-			(this.latestInvoice = e.latestInvoice),
-			(this.useStorekitResubscribe = e.useStorekitResubscribe),
-			(this.price = e.price),
-			(this.userId = e.userId);
+		super(), d(this, 'id', void 0), d(this, 'type', void 0), d(this, 'items', void 0), d(this, 'createdAt', void 0), d(this, 'canceledAt', void 0), d(this, 'currentPeriodStart', void 0), d(this, 'currentPeriodEnd', void 0), d(this, 'status', void 0), d(this, 'paymentSourceId', void 0), d(this, 'paymentGateway', void 0), d(this, 'paymentGatewayPlanId', void 0), d(this, 'paymentGatewaySubscriptionId', void 0), d(this, 'trialId', void 0), d(this, 'trialEndsAt', void 0), d(this, 'renewalMutations', void 0), d(this, 'streakStartedAt', void 0), d(this, 'currency', void 0), d(this, 'pauseEndsAt', void 0), d(this, 'planId', void 0), d(this, 'additionalPlans', void 0), d(this, 'metadata', void 0), d(this, 'latestInvoice', void 0), d(this, 'useStorekitResubscribe', void 0), d(this, 'price', void 0), d(this, 'userId', void 0), (this.id = e.id), (this.type = e.type), (this.items = e.items), (this.createdAt = e.createdAt), (this.canceledAt = e.canceledAt), (this.currentPeriodStart = e.currentPeriodStart), (this.currentPeriodEnd = e.currentPeriodEnd), (this.status = e.status), (this.paymentSourceId = e.paymentSourceId), (this.paymentGateway = e.paymentGateway), (this.paymentGatewayPlanId = e.paymentGatewayPlanId), (this.paymentGatewaySubscriptionId = e.paymentGatewaySubscriptionId), (this.trialId = e.trialId), (this.trialEndsAt = e.trialEndsAt), (this.renewalMutations = e.renewalMutations), (this.currency = e.currency), (this.pauseEndsAt = e.pauseEndsAt), (this.metadata = e.metadata), (this.latestInvoice = e.latestInvoice), (this.useStorekitResubscribe = e.useStorekitResubscribe), (this.price = e.price), (this.userId = e.userId);
 		let t = this.renewalMutations,
 			n = e.items[0].planId,
 			r = null;
@@ -173,9 +117,7 @@ class E extends a.Z {
 				o = i.intervalCount;
 			(n = (0, s.Xr)(e.items, a, o)), null != t && (r = (0, s.Xr)(t.items, a, o));
 		} else null != t && t.items.length > 0 && (r = t.items[0].planId);
-		(this.planId = n),
-			(this.additionalPlans = e.items.filter((e) => e.planId !== n)),
-			null != t && null != r && ((t.planId = r), (t.additionalPlans = t.items.filter((e) => e.planId !== r)));
+		(this.planId = n), (this.additionalPlans = e.items.filter((e) => e.planId !== n)), null != t && null != r && ((t.planId = r), (t.additionalPlans = t.items.filter((e) => e.planId !== r)));
 	}
 }
 t.Z = E;

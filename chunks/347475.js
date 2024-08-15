@@ -28,15 +28,11 @@ t.Z = (e) => {
 						(0, s.jsx)(i.Heading, {
 							variant: 'heading-lg/extrabold',
 							className: _.heading,
-							children: p
-								? d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING
-								: d.Z.Messages.GIFT_NITRO
+							children: p ? d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : d.Z.Messages.GIFT_NITRO
 						}),
 						(0, s.jsx)(i.Text, {
 							variant: 'text-sm/medium',
-							children: p
-								? d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY
-								: d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
+							children: p ? d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
 						}),
 						(0, s.jsx)(c.Z, {
 							isGift: !0,

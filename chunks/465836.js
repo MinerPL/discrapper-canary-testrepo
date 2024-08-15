@@ -30,14 +30,7 @@ function c(e) {
 		}),
 		context: i.Z.Messages.PREMIUM_MESSAGE_LENGTH_ROADBLOCK_MODAL_CONTEXT.format({ maxLength: r.J6R }),
 		glowUp: i.Z.Messages.PREMIUM_MESSAGE_LENGTH_ROADBLOCK_MODAL_GLOW_UP.format({ onLearnMore: O }),
-		analyticsSource: {
-			page:
-				(null == (n = c) ? void 0 : n.getGuildId()) != null
-					? r.ZY5.GUILD_CHANNEL
-					: (null == n ? void 0 : n.isGroupDM()) || (null == n ? void 0 : n.isPrivate())
-						? r.ZY5.DM_CHANNEL
-						: null
-		},
+		analyticsSource: { page: (null == (n = c) ? void 0 : n.getGuildId()) != null ? r.ZY5.GUILD_CHANNEL : (null == n ? void 0 : n.isGroupDM()) || (null == n ? void 0 : n.isPrivate()) ? r.ZY5.DM_CHANNEL : null },
 		analyticsLocation: {
 			section: r.jXE.MESSAGE_LENGTH_UPSELL_MODAL,
 			object: r.qAy.BUTTON_CTA

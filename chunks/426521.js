@@ -35,10 +35,7 @@ function L(e) {
 	let { item: l } = e,
 		o = null === (t = l.message) || void 0 === t ? void 0 : t.content;
 	if (null == o) return (0, i.jsx)('div', {});
-	let u =
-			null !== (a = E.default.getUser(null === (n = l.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== a
-				? a
-				: new _.Z(l.other_user),
+	let u = null !== (a = E.default.getUser(null === (n = l.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== a ? a : new _.Z(l.other_user),
 		d = c.Z.parse(o);
 	return (0, i.jsxs)('div', {
 		className: O.messagePreviewContainer,
@@ -139,9 +136,7 @@ let b = a.memo(function (e) {
 				}
 			}, [r, E, _]),
 			M = null;
-		r.type === N.O7.INCOMING_FRIEND_REQUESTS &&
-			null != r.other_user &&
-			(M = (0, i.jsx)(S.Z, { userId: r.other_user.id }));
+		r.type === N.O7.INCOMING_FRIEND_REQUESTS && null != r.other_user && (M = (0, i.jsx)(S.Z, { userId: r.other_user.id }));
 		let v = null != r.local_id,
 			b = (0, C.Z)(r);
 		return (0, i.jsxs)('div', {
@@ -164,9 +159,7 @@ let b = a.memo(function (e) {
 									color: E ? 'text-muted' : 'text-normal',
 									children: 'string' != typeof b ? b : c.Z.parse(b)
 								}),
-								(null === (t = r.message) || void 0 === t ? void 0 : t.content) != null
-									? (0, i.jsx)(L, { item: r })
-									: null,
+								(null === (t = r.message) || void 0 === t ? void 0 : t.content) != null ? (0, i.jsx)(L, { item: r }) : null,
 								null != r.callout ? (0, i.jsx)(Z, { item: r }) : null,
 								(0, i.jsx)(s.Text, {
 									variant: 'text-xs/medium',

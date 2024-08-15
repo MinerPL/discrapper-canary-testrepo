@@ -72,14 +72,8 @@ function S(e) {
 							id: 'transfer-'.concat(e.type, '-').concat(e.id),
 							label: (function (e, n) {
 								if (e === N.ABu.XBOX) return n ? f.Z.Messages.TRANSFER_VOICE_TO_XBOX : f.Z.Messages.JOIN_ON_XBOX;
-								if (e === N.ABu.PLAYSTATION)
-									return n
-										? f.Z.Messages.CONSOLE_PLAYSTATION_TRANSFER_VOICE
-										: f.Z.Messages.CONSOLE_PLAYSTATION_JOIN_VOICE;
-								if (e === N.ABu.PLAYSTATION_STAGING)
-									return n
-										? f.Z.Messages.CONSOLE_PLAYSTATION_STAGING_TRANSFER_VOICE
-										: f.Z.Messages.CONSOLE_PLAYSTATION_STAGING_JOIN_VOICE;
+								if (e === N.ABu.PLAYSTATION) return n ? f.Z.Messages.CONSOLE_PLAYSTATION_TRANSFER_VOICE : f.Z.Messages.CONSOLE_PLAYSTATION_JOIN_VOICE;
+								if (e === N.ABu.PLAYSTATION_STAGING) return n ? f.Z.Messages.CONSOLE_PLAYSTATION_STAGING_TRANSFER_VOICE : f.Z.Messages.CONSOLE_PLAYSTATION_STAGING_JOIN_VOICE;
 							})(e.type, n),
 							action: () => C(e),
 							icon: (0, _.Z)(e.type),

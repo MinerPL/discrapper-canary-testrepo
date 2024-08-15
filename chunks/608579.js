@@ -26,19 +26,7 @@ var a = t(735250),
 	g = t(231338),
 	N = t(128300);
 function S(e) {
-	let {
-			onClose: n,
-			onComplete: t,
-			onStepChange: i,
-			transitionState: S,
-			loadId: A,
-			skuId: _,
-			isGift: j = !1,
-			giftRecipient: Z,
-			giftMessage: P,
-			analyticsLocations: y,
-			returnRef: O
-		} = e,
+	let { onClose: n, onComplete: t, onStepChange: i, transitionState: S, loadId: A, skuId: _, isGift: j = !1, giftRecipient: Z, giftMessage: P, analyticsLocations: y, returnRef: O } = e,
 		{ analyticsLocations: M } = (0, d.ZP)([...y, o.Z.COLLECTIBLES_PAYMENT_MODAL]),
 		R = s.useRef(new r.qA()),
 		[L, k] = s.useState(null),

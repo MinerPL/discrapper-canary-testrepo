@@ -42,14 +42,7 @@ let h = {
 	f = {},
 	C = null,
 	p = 86400000;
-((s = i || (i = {})).IS_OWNER = 'is_owner'),
-	(s.IS_ADMIN = 'is_admin'),
-	(s.IS_COMMUNITY = 'is_community'),
-	(s.GUILD_SIZE = 'guild_size'),
-	(s.IS_HUB = 'is_hub'),
-	(s.IS_VIEWING = 'is_viewing'),
-	(s.GUILD_PERMISSIONS = 'guild_permissions'),
-	(s.GUILD_SIZE_ALL = 'guild_size_all');
+((s = i || (i = {})).IS_OWNER = 'is_owner'), (s.IS_ADMIN = 'is_admin'), (s.IS_COMMUNITY = 'is_community'), (s.GUILD_SIZE = 'guild_size'), (s.IS_HUB = 'is_hub'), (s.IS_VIEWING = 'is_viewing'), (s.GUILD_PERMISSIONS = 'guild_permissions'), (s.GUILD_SIZE_ALL = 'guild_size_all');
 let g = new Set(Object.values(i));
 function S(e) {
 	return (
@@ -70,11 +63,7 @@ function S(e) {
 						continue;
 					}
 				}
-				if (
-					(t.includes('is_community') && !l.hasFeature(m.oNc.COMMUNITY)) ||
-					(t.includes('is_hub') && !l.hasFeature(m.oNc.HUB))
-				)
-					continue;
+				if ((t.includes('is_community') && !l.hasFeature(m.oNc.COMMUNITY)) || (t.includes('is_hub') && !l.hasFeature(m.oNc.HUB))) continue;
 				if (t.includes('guild_permissions')) {
 					if (0 === i.length) continue;
 					let e = !1;
@@ -105,11 +94,7 @@ function S(e) {
 }
 function A(e) {
 	let { survey: t } = e;
-	if (
-		((N.lastFetched = Date.now()),
-		null == N.hiddenSurveys && (N.hiddenSurveys = {}),
-		null != t && null == N.hiddenSurveys[t.key])
-	) {
+	if (((N.lastFetched = Date.now()), null == N.hiddenSurveys && (N.hiddenSurveys = {}), null != t && null == N.hiddenSurveys[t.key])) {
 		if (!S(t)) return;
 		C = t;
 	}
@@ -151,14 +136,7 @@ T(x, 'displayName', 'SurveyStore'),
 	T(x, 'migrations', [
 		(e) => {
 			let t = { ...e };
-			return (
-				delete t.validSurveys,
-				delete t.currentSurvey,
-				delete t.iosIsPushNotificationClicked,
-				delete t.iosIsInviteShown,
-				delete t.iosFirstRunDate,
-				t
-			);
+			return delete t.validSurveys, delete t.currentSurvey, delete t.iosIsPushNotificationClicked, delete t.iosIsInviteShown, delete t.iosFirstRunDate, t;
 		},
 		(e) => {
 			var t;
@@ -178,11 +156,7 @@ T(x, 'displayName', 'SurveyStore'),
 	(t.Z = new x(o.Z, {
 		CONNECTION_OPEN: function () {
 			var e;
-			if (
-				!(null != N.lastFetched && Date.now() - (null !== (e = N.lastFetched) && void 0 !== e ? e : 0) < p) ||
-				null != N.surveyOverride
-			)
-				(0, c.wk)(N.surveyOverride, !0);
+			if (!(null != N.lastFetched && Date.now() - (null !== (e = N.lastFetched) && void 0 !== e ? e : 0) < p) || null != N.surveyOverride) (0, c.wk)(N.surveyOverride, !0);
 		},
 		SURVEY_FETCHED: A,
 		SURVEY_HIDE: function (e) {

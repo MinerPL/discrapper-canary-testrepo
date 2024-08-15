@@ -60,18 +60,12 @@ function M(e) {
 						children: (0, i.jsx)(d.Text, {
 							variant: 'text-sm/normal',
 							color: 'text-link',
-							children: r
-								? A.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_OVERDUE.format({ count: o.length })
-								: A.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_ALL.format({ count: s.length })
+							children: r ? A.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_OVERDUE.format({ count: o.length }) : A.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_ALL.format({ count: s.length })
 						})
 					})
 				]
 			}),
-			0 === _.length
-				? (0, i.jsx)(L, {})
-				: (0, i.jsx)(d.AdvancedScrollerThin, {
-						children: _.map((e) => (0, i.jsx)(v, { messageReminder: e }, e.saveData.messageId))
-					})
+			0 === _.length ? (0, i.jsx)(L, {}) : (0, i.jsx)(d.AdvancedScrollerThin, { children: _.map((e) => (0, i.jsx)(v, { messageReminder: e }, e.saveData.messageId)) })
 		]
 	});
 }

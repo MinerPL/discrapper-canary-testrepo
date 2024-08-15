@@ -33,9 +33,7 @@ class E extends a.PureComponent {
 	render() {
 		let { nsfwDisallowed: e } = this.props,
 			t = p.Z.Messages.NSFW_DESCRIPTION;
-		t = e
-			? p.Z.Messages.AGE_GATE_NSFW_UNDERAGE_BODY.format({ helpURL: h.Z.getArticleURL(m.BhN.NSFW_AGE_GATING) })
-			: p.Z.Messages.AGE_GATE_NSFW_DESCRIPTION;
+		t = e ? p.Z.Messages.AGE_GATE_NSFW_UNDERAGE_BODY.format({ helpURL: h.Z.getArticleURL(m.BhN.NSFW_AGE_GATING) }) : p.Z.Messages.AGE_GATE_NSFW_DESCRIPTION;
 		let n = e
 			? (0, i.jsx)(u.Z, {
 					onAgree: this.handleAgree,
@@ -78,7 +76,5 @@ class E extends a.PureComponent {
 }
 t.Z = r.ZP.connectStores([d.default], () => {
 	var e;
-	return {
-		nsfwDisallowed: (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) === !1
-	};
+	return { nsfwDisallowed: (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) === !1 };
 })(E);

@@ -41,32 +41,19 @@ function h(e) {
 					if (null == e || e === m.Eu4.NONE) return '';
 					let s = [
 						O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_EMOJI_SLOTS.format({ numEmojiSlots: A.HO[e].limits.emoji }),
-						O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_STICKER_SLOTS.format({
-							numStickerSlots: A.HO[e].limits.stickers
-						}),
-						O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_SOUNDBOARD_SLOTS.format({
-							numSoundboardSlots: A.HO[e].limits.soundboardSounds
-						}),
+						O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_STICKER_SLOTS.format({ numStickerSlots: A.HO[e].limits.stickers }),
+						O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_SOUNDBOARD_SLOTS.format({ numSoundboardSlots: A.HO[e].limits.soundboardSounds }),
 						O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_STREAM_QUALITY.format({
 							resolution: A.HO[e].limits.screenShareQualityResolution,
 							framerate: A.HO[e].limits.screenShareQualityFramerate
 						}),
-						O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_AUDIO_QUALITY.format({
-							bitrate: A.HO[e].limits.bitrate / 1000
-						}),
-						O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_UPLOAD_SIZE_LIMIT.format({
-							filesize: A.HO[e].limits.fileSize / 1024 / 1024
-						}),
-						O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_VIDEO_STAGE_SEATS.format({
-							numVideoStageSeats: A.HO[e].limits.stageVideoUsers
-						}),
+						O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_AUDIO_QUALITY.format({ bitrate: A.HO[e].limits.bitrate / 1000 }),
+						O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_UPLOAD_SIZE_LIMIT.format({ filesize: A.HO[e].limits.fileSize / 1024 / 1024 }),
+						O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_VIDEO_STAGE_SEATS.format({ numVideoStageSeats: A.HO[e].limits.stageVideoUsers }),
 						O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_ANIMATED_GUILD_ICON,
 						O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_GUILD_INVITE_BACKGROUND
 					];
-					e >= m.Eu4.TIER_2 &&
-						(s.push(O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_GUILD_BANNER),
-						s.push(O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_CUSTOM_ROLE_ICONS)),
-						e >= m.Eu4.TIER_3 && s.push(O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_VANITY_URL);
+					e >= m.Eu4.TIER_2 && (s.push(O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_GUILD_BANNER), s.push(O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_CUSTOM_ROLE_ICONS)), e >= m.Eu4.TIER_3 && s.push(O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_VANITY_URL);
 					let t = s[Math.floor(Math.random() * s.length)];
 					return O.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_TEMPLATE.format({ perk: t });
 				})(s),
@@ -103,14 +90,7 @@ function h(e) {
 			);
 }
 function p(e) {
-	let {
-			guildTier: s,
-			guildBoostSlot: t,
-			premiumSubscription: i,
-			hasCancelableGuildBoostSlot: c,
-			showAltText: _,
-			isLastGuildBoostSlot: E
-		} = e,
+	let { guildTier: s, guildBoostSlot: t, premiumSubscription: i, hasCancelableGuildBoostSlot: c, showAltText: _, isLastGuildBoostSlot: E } = e,
 		u = (0, r.e7)([l.Z], () => l.Z.useReducedMotion),
 		T = a.useMemo(() => (null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null), [t]),
 		C = a.useMemo(() => null != T && T > new Date(), [T]),
@@ -172,13 +152,7 @@ function p(e) {
 	});
 }
 function R(e) {
-	let {
-			guildId: s,
-			guildBoostSlotRecords: t,
-			premiumSubscription: a,
-			hasCancelableGuildBoostSlot: i,
-			showAltText: o
-		} = e,
+	let { guildId: s, guildBoostSlotRecords: t, premiumSubscription: a, hasCancelableGuildBoostSlot: i, showAltText: o } = e,
 		l = (0, r.e7)([u.Z], () => u.Z.getGuild(s), [s]);
 	return (0, n.jsxs)('div', {
 		className: g.appliedBoostContainer,

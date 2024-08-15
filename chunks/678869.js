@@ -21,8 +21,8 @@ var i = n(735250),
 	_ = n(908841),
 	f = n(5192),
 	E = n(561308),
-	g = n(256726),
-	C = n(206295),
+	C = n(256726),
+	g = n(206295),
 	I = n(551228),
 	x = n(591853),
 	T = n(371991),
@@ -90,19 +90,14 @@ function j(e) {
 		j,
 		{ channel: L, entry: P, requestId: O, closePopout: y } = e,
 		{ activity: D, currentEntry: k, artist: U, imageUrl: w, title: B, user: H } = (0, I.pi)(P),
-		{ primaryColor: G, secondaryColor: V } = (0, C.Z)(w),
-		F = (0, l.e7)(
-			[u.Z, p.default],
-			() => ((null == D ? void 0 : D.type) === v.IIU.LISTENING && null != H ? (0, h.Z)(u.Z, p.default, H, D) : void 0),
-			[D, H],
-			r.Z
-		),
+		{ primaryColor: G, secondaryColor: V } = (0, g.Z)(w),
+		F = (0, l.e7)([u.Z, p.default], () => ((null == D ? void 0 : D.type) === v.IIU.LISTENING && null != H ? (0, h.Z)(u.Z, p.default, H, D) : void 0), [D, H], r.Z),
 		W = a.useCallback(() => {
 			var e;
 			if (null == L || null == H) return;
 			let t = null === (e = D.timestamps) || void 0 === e ? void 0 : e.start,
 				n = (0, E.T_)(null != t ? { start: t } : P, Date.now());
-			return (0, g.CR)({
+			return (0, C.CR)({
 				user: H,
 				channel: L,
 				mediaImageSrc: w,
@@ -116,7 +111,7 @@ function j(e) {
 					H
 				),
 				colors: [G, V],
-				badges: (0, g.jE)({ timestamp: n })
+				badges: (0, C.jE)({ timestamp: n })
 			});
 		}, [D, U, L, P, w, G, V, B, H]);
 	if (null == D || null == k) return null;
@@ -168,9 +163,7 @@ function j(e) {
 						Icon: _.Z
 					})
 				: null,
-		userDescription: (0, E.kr)(P)
-			? Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENING
-			: Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
+		userDescription: (0, E.kr)(P) ? Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENING : Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
 		title: B,
 		onClickTitle: A,
 		subtitle: z,

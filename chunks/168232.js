@@ -26,19 +26,11 @@ function u(e) {
 }
 function c(e) {
 	let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0;
-	return (
-		u(t) === s.C.DEVELOPMENT ||
-		window.GLOBAL_ENV.RELEASE_CHANNEL === s.C.STAGING ||
-		(null != e && (e.isStaff() || e.isStaffPersonal()))
-	);
+	return u(t) === s.C.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === s.C.STAGING || (null != e && (e.isStaff() || e.isStaffPersonal()));
 }
 function d(e) {
 	let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0;
-	return (
-		u(t) === s.C.DEVELOPMENT ||
-		window.GLOBAL_ENV.RELEASE_CHANNEL === s.C.STAGING ||
-		(null != e && (!!(null != e.flags && (0, a.yE)(e.flags, o.xW$.STAFF)) || null != e.personal_connection_id))
-	);
+	return u(t) === s.C.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === s.C.STAGING || (null != e && (!!(null != e.flags && (0, a.yE)(e.flags, o.xW$.STAFF)) || null != e.personal_connection_id));
 }
 function _(e) {
 	return void 0 !== e ? (e === o.WND ? null : e) : e;

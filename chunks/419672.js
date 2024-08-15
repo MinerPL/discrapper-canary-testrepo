@@ -37,9 +37,7 @@ t.Z = function (e) {
 		children: [
 			(0, T.jsx)(n.Text, {
 				variant: 'text-md/medium',
-				children: c.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION.format({
-					learnMoreLink: l.Z.getArticleURL(S.BhN.SAFETY_ALERTS)
-				})
+				children: c.Z.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION.format({ learnMoreLink: l.Z.getArticleURL(S.BhN.SAFETY_ALERTS) })
 			}),
 			(0, T.jsx)(n.Button, {
 				className: O.settingsButton,

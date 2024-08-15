@@ -27,9 +27,7 @@ function r(e) {
 					(0, a.jsx)(n.Heading, {
 						variant: 'heading-xl/extrabold',
 						className: i.title,
-						children: o.Z.Messages.APPLICATION_USER_SUBSCRIPTION_NO_SHARED_SERVER_WARNING_TITLE.format({
-							applicationName: s
-						})
+						children: o.Z.Messages.APPLICATION_USER_SUBSCRIPTION_NO_SHARED_SERVER_WARNING_TITLE.format({ applicationName: s })
 					}),
 					(0, a.jsx)(n.Text, {
 						variant: 'text-md/medium',

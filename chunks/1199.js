@@ -61,14 +61,11 @@ function d(e, t, n) {
 		if (e.isError(r)) return r;
 		let i = d(e, r.primitive, 'Failed to get length of "' + t + '"');
 		if (e.isError(i)) return i;
-		if (!n && r.tag !== t && r.tagStr !== t && r.tagStr + 'of' !== t)
-			return e.error('Failed to match tag: "' + t + '"');
+		if (!n && r.tag !== t && r.tagStr !== t && r.tagStr + 'of' !== t) return e.error('Failed to match tag: "' + t + '"');
 		if (r.primitive || null !== i) return e.skip(i, 'Failed to match body of: "' + t + '"');
 		let a = e.save(),
 			s = this._skipUntilEnd(e, 'Failed to skip indefinite length body: "' + this.tag + '"');
-		return e.isError(s)
-			? s
-			: ((i = e.offset - a.offset), e.restore(a), e.skip(i, 'Failed to match body of: "' + t + '"'));
+		return e.isError(s) ? s : ((i = e.offset - a.offset), e.restore(a), e.skip(i, 'Failed to match body of: "' + t + '"'));
 	}),
 	(u.prototype._skipUntilEnd = function (e, t) {
 		for (;;) {
@@ -138,22 +135,10 @@ function d(e, t, n) {
 	(u.prototype._decodeTime = function (e, t) {
 		let n, r, i, a, s, o;
 		let l = e.raw().toString();
-		if ('gentime' === t)
-			(n = 0 | l.slice(0, 4)),
-				(r = 0 | l.slice(4, 6)),
-				(i = 0 | l.slice(6, 8)),
-				(a = 0 | l.slice(8, 10)),
-				(s = 0 | l.slice(10, 12)),
-				(o = 0 | l.slice(12, 14));
+		if ('gentime' === t) (n = 0 | l.slice(0, 4)), (r = 0 | l.slice(4, 6)), (i = 0 | l.slice(6, 8)), (a = 0 | l.slice(8, 10)), (s = 0 | l.slice(10, 12)), (o = 0 | l.slice(12, 14));
 		else {
 			if ('utctime' !== t) return e.error('Decoding ' + t + ' time is not supported yet');
-			(n = 0 | l.slice(0, 2)),
-				(r = 0 | l.slice(2, 4)),
-				(i = 0 | l.slice(4, 6)),
-				(a = 0 | l.slice(6, 8)),
-				(s = 0 | l.slice(8, 10)),
-				(o = 0 | l.slice(10, 12)),
-				(n = n < 70 ? 2000 + n : 1900 + n);
+			(n = 0 | l.slice(0, 2)), (r = 0 | l.slice(2, 4)), (i = 0 | l.slice(4, 6)), (a = 0 | l.slice(6, 8)), (s = 0 | l.slice(8, 10)), (o = 0 | l.slice(10, 12)), (n = n < 70 ? 2000 + n : 1900 + n);
 		}
 		return Date.UTC(n, r - 1, i, a, s, o, 0);
 	}),

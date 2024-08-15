@@ -1,6 +1,6 @@
 n.d(t, {
 	Ii: function () {
-		return m;
+		return I;
 	},
 	LX: function () {
 		return E;
@@ -15,7 +15,7 @@ n.d(t, {
 		return f;
 	},
 	aH: function () {
-		return I;
+		return m;
 	},
 	mf: function () {
 		return h;
@@ -53,12 +53,7 @@ async function c(e, t) {
 				play_style: t.playstyle,
 				search_terms: Array.from(null !== (s = t.interests) && void 0 !== s ? s : new Set()),
 				game_application_ids: Array.from(null !== (o = t.gameApplicationIds) && void 0 !== o ? o : new Set()),
-				verification_form: {
-					form_fields:
-						null !== (u = null === (n = t.verificationForm) || void 0 === n ? void 0 : n.formFields) && void 0 !== u
-							? u
-							: []
-				},
+				verification_form: { form_fields: null !== (u = null === (n = t.verificationForm) || void 0 === n ? void 0 : n.formFields) && void 0 !== u ? u : [] },
 				badge: t.badgeKind,
 				badge_color_primary: t.badgePrimaryColor,
 				badge_color_secondary: t.badgeSecondaryColor,
@@ -138,14 +133,8 @@ let p = (e) => {
 		description: e.description,
 		wildcardDescriptors: e.wildcard_descriptors,
 		verificationForm: {
-			description:
-				null !== (a = null === (t = e.verification_form) || void 0 === t ? void 0 : t.description) && void 0 !== a
-					? a
-					: '',
-			formFields:
-				null !== (s = null === (n = e.verification_form) || void 0 === n ? void 0 : n.form_fields) && void 0 !== s
-					? s
-					: [],
+			description: null !== (a = null === (t = e.verification_form) || void 0 === t ? void 0 : t.description) && void 0 !== a ? a : '',
+			formFields: null !== (s = null === (n = e.verification_form) || void 0 === n ? void 0 : n.form_fields) && void 0 !== s ? s : [],
 			version: ''
 		},
 		badgeKind: e.badge,
@@ -156,7 +145,7 @@ let p = (e) => {
 		brandSecondaryColor: e.brand_color_secondary
 	};
 };
-async function I(e) {
+async function m(e) {
 	i.Z.dispatch({ type: 'CLAN_SETTINGS_FETCH_START' });
 	let t = await r.tn.get({ url: l.ANM.CLAN_SETTINGS(e) });
 	i.Z.dispatch({
@@ -165,7 +154,7 @@ async function I(e) {
 		settings: p(t.body)
 	});
 }
-async function m(e, t) {
+async function I(e, t) {
 	i.Z.dispatch({
 		type: 'CLAN_SETTINGS_SUBMIT',
 		guildId: e
@@ -180,12 +169,7 @@ async function m(e, t) {
 				play_style: t.playstyle,
 				search_terms: Array.from(null !== (s = t.interests) && void 0 !== s ? s : new Set()),
 				game_application_ids: Array.from(null !== (o = t.gameApplicationIds) && void 0 !== o ? o : new Set()),
-				verification_form: {
-					form_fields:
-						null !== (u = null === (n = t.verificationForm) || void 0 === n ? void 0 : n.formFields) && void 0 !== u
-							? u
-							: []
-				},
+				verification_form: { form_fields: null !== (u = null === (n = t.verificationForm) || void 0 === n ? void 0 : n.formFields) && void 0 !== u ? u : [] },
 				badge: t.badgeKind,
 				badge_color_primary: t.badgePrimaryColor,
 				badge_color_secondary: t.badgeSecondaryColor,

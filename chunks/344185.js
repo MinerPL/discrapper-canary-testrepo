@@ -18,14 +18,11 @@ function p(e) {
 		parentId: e.parent_id
 	};
 }
-function I(e) {
+function m(e) {
 	e in f && delete f[e];
 }
-function m(e) {
-	null != e.threads &&
-		e.threads.length > 0 &&
-		((f[e.id] = {}), e.threads.filter((e) => d.AW.has(e.type)).forEach((t) => T(e.id, t))),
-		e.hasThreadsSubscription && h.add(e.id);
+function I(e) {
+	null != e.threads && e.threads.length > 0 && ((f[e.id] = {}), e.threads.filter((e) => d.AW.has(e.type)).forEach((t) => T(e.id, t))), e.hasThreadsSubscription && h.add(e.id);
 }
 function T(e, t) {
 	let n = f[e],
@@ -100,7 +97,7 @@ class N extends (r = u.ZP.Store) {
 			(f = {}),
 				h.clear(),
 				e.guilds.forEach((e) => {
-					m(e);
+					I(e);
 				});
 		},
 		OVERLAY_INITIALIZE: function (e) {
@@ -115,11 +112,11 @@ class N extends (r = u.ZP.Store) {
 		},
 		GUILD_CREATE: function (e) {
 			let { guild: t } = e;
-			I(t.id), m(t);
+			m(t.id), I(t);
 		},
 		GUILD_DELETE: function (e) {
 			let { guild: t } = e;
-			I(t.id);
+			m(t.id);
 		},
 		THREAD_CREATE: g,
 		THREAD_UPDATE: g,

@@ -44,9 +44,7 @@ function v(e) {
 function R(e) {
 	let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
 	if (t && !A.has(e.channel_id)) return !1;
-	let n = (0, h.Fp)(e)
-		? (0, h.Q_)((null == e ? void 0 : e.embeds) != null ? (null == e ? void 0 : e.embeds[0].url) : void 0)
-		: (0, h.Q_)(e.content);
+	let n = (0, h.Fp)(e) ? (0, h.Q_)((null == e ? void 0 : e.embeds) != null ? (null == e ? void 0 : e.embeds[0].url) : void 0) : (0, h.Q_)(e.content);
 	return (
 		0 !== n.length &&
 		(n.forEach((e) => {
@@ -81,9 +79,7 @@ class D extends (i = u.ZP.Store) {
 		return null != e ? O[e] : null;
 	}
 	getForGifterSKUAndPlan(e, t, n) {
-		return Array.from(S.values()).filter(
-			(i) => i.userId === e && i.skuId === t && (null == n || i.subscriptionPlanId === n) && !i.isExpired()
-		);
+		return Array.from(S.values()).filter((i) => i.userId === e && i.skuId === t && (null == n || i.subscriptionPlanId === n) && !i.isExpired());
 	}
 	getIsResolving(e) {
 		return m.includes(e);

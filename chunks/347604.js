@@ -41,11 +41,7 @@ t.Z = (e) => {
 		}, [n]),
 		Z = null;
 	return (
-		i
-			? M
-				? (Z = h.Z.Messages.GUILD_SETTINGS_DISCOVERY_PENDING_HEALTHY)
-				: !A && (Z = h.Z.Messages.GUILD_SETTINGS_DISCOVERY_REQUIREMENTS_NOT_MET)
-			: (Z = h.Z.Messages.GUILD_SETTINGS_DISCOVERY_ADMIN_ONLY),
+		i ? (M ? (Z = h.Z.Messages.GUILD_SETTINGS_DISCOVERY_PENDING_HEALTHY) : !A && (Z = h.Z.Messages.GUILD_SETTINGS_DISCOVERY_REQUIREMENTS_NOT_MET)) : (Z = h.Z.Messages.GUILD_SETTINGS_DISCOVERY_ADMIN_ONLY),
 		(0, s.jsxs)('div', {
 			className: g.container,
 			children: [

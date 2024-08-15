@@ -107,9 +107,7 @@ function N(e) {
 								className: d.incidentTiming,
 								children: (0, i.jsx)(l.Text, {
 									variant: 'text-xs/medium',
-									children: u.Z.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({
-										daysAgo: _(null !== (n = a.timestamp) && void 0 !== n ? n : 0)
-									})
+									children: u.Z.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({ daysAgo: _(null !== (n = a.timestamp) && void 0 !== n ? n : 0) })
 								})
 							}),
 							(0, i.jsx)('div', {

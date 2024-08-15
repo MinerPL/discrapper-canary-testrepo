@@ -11,12 +11,7 @@ let _ = (e, t) => {
 	let r = (0, i.W)(),
 		_ = 'navigate';
 	return (
-		r &&
-			((n.m.document && n.m.document.prerendering) || (0, o.A)() > 0
-				? (_ = 'prerender')
-				: n.m.document && n.m.document.wasDiscarded
-					? (_ = 'restore')
-					: r.type && (_ = r.type.replace(/_/g, '-'))),
+		r && ((n.m.document && n.m.document.prerendering) || (0, o.A)() > 0 ? (_ = 'prerender') : n.m.document && n.m.document.wasDiscarded ? (_ = 'restore') : r.type && (_ = r.type.replace(/_/g, '-'))),
 		{
 			name: e,
 			value: void 0 === t ? -1 : t,

@@ -51,10 +51,4 @@ function E() {
 function f(e) {
 	return new (_(e))();
 }
-((r = s || (s = {})).INPUT_DEVICE = 'input_device'),
-	(r.STREAM = 'stream'),
-	((i = o || (o = {})).NONE = ''),
-	(i.BACKGROUND_BLUR = 'background_blur'),
-	(i.BACKGROUND_REPLACEMENT = 'background_replacement'),
-	((a = l || (l = {})).CAMERA_BACKGROUND_PREVIEW = 'cameraBackgroundPreview'),
-	(a.CAMERA_BACKGROUND_LIVE = 'cameraBackgroundLive');
+((r = s || (s = {})).INPUT_DEVICE = 'input_device'), (r.STREAM = 'stream'), ((i = o || (o = {})).NONE = ''), (i.BACKGROUND_BLUR = 'background_blur'), (i.BACKGROUND_REPLACEMENT = 'background_replacement'), ((a = l || (l = {})).CAMERA_BACKGROUND_PREVIEW = 'cameraBackgroundPreview'), (a.CAMERA_BACKGROUND_LIVE = 'cameraBackgroundLive');

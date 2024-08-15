@@ -11,8 +11,5 @@ let s = (e) => {
 	let n = (0, i.u)();
 	if (!n.display) return null;
 	let { display: s, ...o } = n;
-	return (
-		(t = 'children' in e ? ('function' == typeof e.children ? e.children(o) : e.children) : e.generator(o)),
-		r.createElement(a._.Provider, { value: o }, t)
-	);
+	return (t = 'children' in e ? ('function' == typeof e.children ? e.children(o) : e.children) : e.generator(o)), r.createElement(a._.Provider, { value: o }, t);
 };

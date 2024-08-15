@@ -7,15 +7,7 @@ var r = n(735250);
 n(470079);
 var i = n(325767);
 function a(e) {
-	let {
-		width: t = 24,
-		height: n = 24,
-		color: a = 'currentColor',
-		className: s,
-		background: o,
-		foreground: l,
-		...u
-	} = e;
+	let { width: t = 24, height: n = 24, color: a = 'currentColor', className: s, background: o, foreground: l, ...u } = e;
 	return (0, r.jsxs)('svg', {
 		...(0, i.Z)(u),
 		className: s,

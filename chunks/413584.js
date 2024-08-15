@@ -191,17 +191,13 @@ t.Z = (e) => {
 		},
 		H = (e) => (t) => {
 			let n = [...(null != M ? M : [])];
-			null == t ? n.splice(e, 1) : (n[e] = t),
-				(0, p.VP)({ channels: n }),
-				F(n),
-				0 === n.length && G && ((0, p.VP)({ enabled: !1 }), k(!1));
+			null == t ? n.splice(e, 1) : (n[e] = t), (0, p.VP)({ channels: n }), F(n), 0 === n.length && G && ((0, p.VP)({ enabled: !1 }), k(!1));
 		},
 		V = (e, t, n) => {
 			if (null == M) return;
 			let s = M.indexOf(e),
 				a = [...M];
-			null != t && t !== s && (a.splice(s, 1), a.splice(t, 0, e), (0, p.VP)({ channels: a })),
-				n ? (F(a), E(null)) : E(t);
+			null != t && t !== s && (a.splice(s, 1), a.splice(t, 0, e), (0, p.VP)({ channels: a })), n ? (F(a), E(null)) : E(t);
 		},
 		Y = a.useRef(!1);
 	a.useEffect(
@@ -304,12 +300,8 @@ t.Z = (e) => {
 									}
 								: void 0,
 						animateStatus: S,
-						firstLine: G
-							? b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ENABLED
-							: b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PROGRESS_WILL_SAVE,
-						secondLine: G
-							? b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ENABLED_SECOND_LINE
-							: b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ENABLE_REMINDER
+						firstLine: G ? b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ENABLED : b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PROGRESS_WILL_SAVE,
+						secondLine: G ? b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ENABLED_SECOND_LINE : b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ENABLE_REMINDER
 					}),
 					(0, s.jsxs)('div', {
 						className: U.previewContainer,
@@ -371,9 +363,7 @@ t.Z = (e) => {
 							(0, s.jsxs)('div', {
 								className: U.welcomeChannels,
 								children: [
-									(0, s.jsx)(_.FormTitle, {
-										children: b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_RECOMMENDED_CHANNELS_TITLE
-									}),
+									(0, s.jsx)(_.FormTitle, { children: b.Z.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_RECOMMENDED_CHANNELS_TITLE }),
 									(0, s.jsx)(_.Text, {
 										variant: 'text-sm/normal',
 										className: U.addChannelSubtext,

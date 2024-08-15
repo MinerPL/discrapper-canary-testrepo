@@ -17,11 +17,7 @@ function l(e) {
 			return e.length > 0 ? i.Z.get(e[0]) : null;
 		}),
 		E = null == _ ? [] : (0, a.DE)(_.id, c, d),
-		f =
-			null !== (n = null !== (t = E.find((e) => e === (null == l ? void 0 : l.currency))) && void 0 !== t ? t : E[0]) &&
-			void 0 !== n
-				? n
-				: o.pK.USD;
+		f = null !== (n = null !== (t = E.find((e) => e === (null == l ? void 0 : l.currency))) && void 0 !== t ? t : E[0]) && void 0 !== n ? n : o.pK.USD;
 	return {
 		...(0, a.gr)(f, null == _ ? void 0 : _.id, c, d, u),
 		currencies: E

@@ -34,19 +34,8 @@ function m(e) {
 			},
 			[Z, E, f, m]
 		),
-		j = s.useCallback(
-			(e) =>
-				0 === e.section
-					? (0, a.jsx)(g, { text: d.Z.Messages.THREAD_BROWSER_JOINED_HEADER.format({ count: E.length }) }, e.section)
-					: 1 === e.section
-						? (0, a.jsx)(g, { text: d.Z.Messages.THREAD_BROWSER_OTHER_HEADER.format({ count: f.length }) }, e.section)
-						: (0, a.jsx)(g, { text: d.Z.Messages.THREAD_BROWSER_ARCHIVED_HEADER }, e.section),
-			[E.length, f.length]
-		),
-		N = s.useCallback(
-			(e) => (1 === e && E.length > 0 ? 64 : 2 === e && (E.length > 0 || f.length > 0) ? 64 : 32),
-			[E.length, f.length]
-		),
+		j = s.useCallback((e) => (0 === e.section ? (0, a.jsx)(g, { text: d.Z.Messages.THREAD_BROWSER_JOINED_HEADER.format({ count: E.length }) }, e.section) : 1 === e.section ? (0, a.jsx)(g, { text: d.Z.Messages.THREAD_BROWSER_OTHER_HEADER.format({ count: f.length }) }, e.section) : (0, a.jsx)(g, { text: d.Z.Messages.THREAD_BROWSER_ARCHIVED_HEADER }, e.section)), [E.length, f.length]),
+		N = s.useCallback((e) => (1 === e && E.length > 0 ? 64 : 2 === e && (E.length > 0 || f.length > 0) ? 64 : 32), [E.length, f.length]),
 		S = s.useCallback(() => {
 			var e;
 			let n = null === (e = _.current) || void 0 === e ? void 0 : e.getScrollerState();

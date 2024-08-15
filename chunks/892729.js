@@ -21,11 +21,7 @@ function d() {
 				var s;
 				let { ensureFresh: t, hasFetched: n, hasRoleSubscriptions: a } = e,
 					i = r.ZP.getActiveGuildSubscriptions();
-				return (
-					((null !== (s = null == i ? void 0 : i.length) && void 0 !== s ? s : 0) === 0 && !!a) ||
-					(!!t && !n) ||
-					(!n && !r.ZP.hasFetchedSubscriptions())
-				);
+				return ((null !== (s = null == i ? void 0 : i.length) && void 0 !== s ? s : 0) === 0 && !!a) || (!!t && !n) || (!n && !r.ZP.hasFetchedSubscriptions());
 			})({
 				ensureFresh: e,
 				hasRoleSubscriptions: s,

@@ -28,18 +28,7 @@ var r = n(735250),
 	P = n(689938),
 	A = n(118610);
 function Z(e) {
-	let {
-			user: t,
-			product: n,
-			purchase: i,
-			onApply: l,
-			onClose: c,
-			disableApplyButton: f,
-			canUseCollectibles: m,
-			selectedProfileEffectId: p,
-			selectedProfileEffectItem: _,
-			analyticsLocations: h
-		} = e,
+	let { user: t, product: n, purchase: i, onApply: l, onClose: c, disableApplyButton: f, canUseCollectibles: m, selectedProfileEffectId: p, selectedProfileEffectItem: _, analyticsLocations: h } = e,
 		I = s.useCallback(() => {
 			c(),
 				(0, d.mK)({
@@ -73,25 +62,14 @@ function Z(e) {
 							})
 						: (0, r.jsx)(E.Z, {
 								subscriptionTier: x.Si.TIER_2,
-								buttonText: g.ZP.isPremium(t)
-									? P.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL
-									: P.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
+								buttonText: g.ZP.isPremium(t) ? P.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : P.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
 							})
 			]
 		})
 	});
 }
 function T(e) {
-	let {
-			user: t,
-			guild: n,
-			categories: i,
-			purchases: l,
-			onClose: o,
-			initialSelectedProfileEffectId: c,
-			currentSavedEffectId: d,
-			analyticsLocations: m
-		} = e,
+	let { user: t, guild: n, categories: i, purchases: l, onClose: o, initialSelectedProfileEffectId: c, currentSavedEffectId: d, analyticsLocations: m } = e,
 		{ pendingProfileEffectId: E } = (0, p.bd)(n),
 		[_, h] = s.useMemo(() => {
 			let e = (0, u.bl)(i, l);
@@ -102,10 +80,7 @@ function T(e) {
 			var e;
 			let t = _.find((e) => (null == e ? void 0 : e.id) === C),
 				n = null != t || null === C;
-			return [
-				null !== (e = null != t ? t : h.find((e) => (null == e ? void 0 : e.id) === C)) && void 0 !== e ? e : null,
-				n
-			];
+			return [null !== (e = null != t ? t : h.find((e) => (null == e ? void 0 : e.id) === C)) && void 0 !== e ? e : null, n];
 		}, [C, _, h]),
 		{ product: S, purchase: j } = (0, f.Z)(null == T ? void 0 : T.skuId),
 		R = s.useRef(null),

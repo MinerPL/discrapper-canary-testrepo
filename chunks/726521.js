@@ -9,7 +9,7 @@ n.d(t, {
 		return S;
 	},
 	WL: function () {
-		return I;
+		return m;
 	},
 	ak: function () {
 		return f;
@@ -36,7 +36,7 @@ n.d(t, {
 		return v;
 	},
 	zd: function () {
-		return m;
+		return I;
 	}
 });
 var r = n(367907),
@@ -121,7 +121,7 @@ function p(e, t) {
 			t
 		);
 }
-function I(e, t) {
+function m(e, t) {
 	O(l.b.FIRST_DM, {
 		message_id: e.id,
 		channel_id: e.channel_id
@@ -137,7 +137,7 @@ function I(e, t) {
 			!1
 		);
 }
-async function m(e, t) {
+async function I(e, t) {
 	try {
 		await (0, u.ox)(
 			{

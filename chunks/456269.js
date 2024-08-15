@@ -147,11 +147,7 @@ function H(e) {
 					location: '553713_1'
 				},
 				{ autoTrackExposure: !1 }
-			).enabled ||
-			!!(
-				(null == n ? void 0 : n.hasFeature(D.oNc.COMMUNITY)) ||
-				(null == n ? void 0 : n.hasFeature(D.oNc.INTERNAL_EMPLOYEE_ONLY))
-			)
+			).enabled || !!((null == n ? void 0 : n.hasFeature(D.oNc.COMMUNITY)) || (null == n ? void 0 : n.hasFeature(D.oNc.INTERNAL_EMPLOYEE_ONLY)))
 		);
 	})(e);
 }
@@ -210,17 +206,7 @@ function z(e) {
 	})(e);
 	return u.useMemo(() => {
 		var t, u, l;
-		return null !==
-			(l =
-				null == e
-					? void 0
-					: null === (u = e.appliedTags) || void 0 === u
-						? void 0
-						: null === (t = u.map((e) => n[e])) || void 0 === t
-							? void 0
-							: t.filter(P.lm)) && void 0 !== l
-			? l
-			: Q;
+		return null !== (l = null == e ? void 0 : null === (u = e.appliedTags) || void 0 === u ? void 0 : null === (t = u.map((e) => n[e])) || void 0 === t ? void 0 : t.filter(P.lm)) && void 0 !== l ? l : Q;
 	}, [n, null == e ? void 0 : e.appliedTags]);
 }
 function B(e, n) {
@@ -244,16 +230,12 @@ function V(e, n) {
 function J(e) {
 	return u.useMemo(() => {
 		var n;
-		return r().maxBy(null !== (n = null == e ? void 0 : e.reactions) && void 0 !== n ? n : [], (e) =>
-			Math.max(e.burst_count, e.count)
-		);
+		return r().maxBy(null !== (n = null == e ? void 0 : e.reactions) && void 0 !== n ? n : [], (e) => Math.max(e.burst_count, e.count));
 	}, [null == e ? void 0 : e.reactions]);
 }
 function X(e) {
 	let n = null == e ? void 0 : e.defaultReactionEmoji,
-		t = (0, o.e7)([c.ZP], () =>
-			(null == n ? void 0 : n.emojiId) != null ? c.ZP.getUsableCustomEmojiById(n.emojiId) : null
-		);
+		t = (0, o.e7)([c.ZP], () => ((null == n ? void 0 : n.emojiId) != null ? c.ZP.getUsableCustomEmojiById(n.emojiId) : null));
 	return null == n
 		? null
 		: null != n.emojiId && null != t

@@ -15,14 +15,7 @@ var o = n(120356),
 	_ = n(168998);
 t.Z = function (e) {
 	var t;
-	let {
-			className: n,
-			expansionSpring: o,
-			isExpanded: C,
-			isExpansionAnimationComplete: f,
-			quest: h,
-			useReducedMotion: E
-		} = e,
+	let { className: n, expansionSpring: o, isExpanded: C, isExpansionAnimationComplete: f, quest: h, useReducedMotion: E } = e,
 		T = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
 		{ percentComplete: S } = (0, i.Rf)(h),
 		v = (0, i.Jf)(h),

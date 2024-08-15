@@ -121,10 +121,7 @@ t.Z = (e) => {
 		x = (0, m.uv)('ReferralProgramProgressBar'),
 		b = (0, l.Wu)([T.default], () => r.map((e) => T.default.getUser(e)).filter((e) => null != e)),
 		P = a.useMemo(() => b.map((e) => new E.Z(e)), [b]),
-		{ subscriberHomeVariant: v } = p.g.useExperiment(
-			{ location: 'ReferralProgramProgressBar' },
-			{ autoTrackExposure: !1 }
-		),
+		{ subscriberHomeVariant: v } = p.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
 		L = v === p.p.VARIANT_2;
 	a.useEffect(() => {
 		r.forEach((e) => {
@@ -180,9 +177,7 @@ t.Z = (e) => {
 							})
 						}),
 						(0, s.jsxs)('div', {
-							className: i()(h.expandedProgressBarButtonContainer, {
-								[h.expandedProgressBarButtonContainerLayout]: !t
-							}),
+							className: i()(h.expandedProgressBarButtonContainer, { [h.expandedProgressBarButtonContainerLayout]: !t }),
 							children: [
 								!t &&
 									!L &&

@@ -106,14 +106,7 @@ function M(e) {
 	var n, t, s;
 	let { channel: d } = e,
 		u = (0, l.e7)([E.ZP], () => E.ZP.lastMessageId(d.id)),
-		h =
-			null == u
-				? new Date(
-						null !== (t = null === (n = d.threadMetadata) || void 0 === n ? void 0 : n.archiveTimestamp) && void 0 !== t
-							? t
-							: Date.now()
-					).getTime()
-				: x.default.extractTimestamp(u);
+		h = null == u ? new Date(null !== (t = null === (n = d.threadMetadata) || void 0 === n ? void 0 : n.archiveTimestamp) && void 0 !== t ? t : Date.now()).getTime() : x.default.extractTimestamp(u);
 	(0, o.$)({ [d.guild_id]: [d.ownerId] });
 	let m = (0, l.e7)([Z.default], () => Z.default.getUser(d.ownerId)),
 		f = (0, l.e7)([g.ZP], () => g.ZP.getMember(d.guild_id, d.ownerId)),

@@ -59,15 +59,11 @@ let T = () => [
 		};
 	};
 function G(e, E) {
-	let [_, t] = (0, a.Wu)([u.ZP], () => [
-			u.ZP.isChannelMuted(e.guild_id, e.id),
-			u.ZP.getChannelMuteConfig(e.guild_id, e.id)
-		]),
+	let [_, t] = (0, a.Wu)([u.ZP], () => [u.ZP.isChannelMuted(e.guild_id, e.id), u.ZP.getChannelMuteConfig(e.guild_id, e.id)]),
 		n = (0, N.U)(t),
 		l = (0, O.ZP)(e, !0);
 	function G(E) {
-		E && e.type === i.d4z.GUILD_CATEGORY && (0, S.c4)(e.id),
-			r.Z.updateChannelOverrideSettings(e.guild_id, e.id, { muted: E }, A.UE.muted(E));
+		E && e.type === i.d4z.GUILD_CATEGORY && (0, S.c4)(e.id), r.Z.updateChannelOverrideSettings(e.guild_id, e.id, { muted: E }, A.UE.muted(E));
 	}
 	let R = I.Z.Messages.MUTE_CHANNEL_GENERIC,
 		C = I.Z.Messages.UNMUTE_CHANNEL_GENERIC;

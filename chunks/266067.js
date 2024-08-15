@@ -9,7 +9,7 @@ n.d(t, {
 		return L;
 	},
 	F0: function () {
-		return m;
+		return I;
 	},
 	LX: function () {
 		return R;
@@ -30,7 +30,7 @@ n.d(t, {
 		return D;
 	},
 	s6: function () {
-		return I;
+		return m;
 	}
 });
 var r,
@@ -49,8 +49,8 @@ var E = n(226512),
 	f = n(26095),
 	h = n.n(f);
 var p = (((r = (0, l.Z)()).displayName = 'Router-History'), r);
-var I = (((i = (0, l.Z)()).displayName = 'Router'), i),
-	m = (function (e) {
+var m = (((i = (0, l.Z)()).displayName = 'Router'), i),
+	I = (function (e) {
 		function t(t) {
 			var n;
 			return (
@@ -83,7 +83,7 @@ var I = (((i = (0, l.Z)()).displayName = 'Router'), i),
 			}),
 			(n.render = function () {
 				return s.createElement(
-					I.Provider,
+					m.Provider,
 					{
 						value: {
 							history: this.props.history,
@@ -144,14 +144,12 @@ function N(e) {
 		n = e.to,
 		r = e.push,
 		i = void 0 !== r && r;
-	return s.createElement(I.Consumer, null, function (e) {
+	return s.createElement(m.Consumer, null, function (e) {
 		e || (0, u.Z)(!1);
 		var r = e.history,
 			a = e.staticContext,
 			l = i ? r.push : r.replace,
-			d = (0, o.ob)(
-				t ? ('string' == typeof n ? A(n, t.params) : (0, c.Z)({}, n, { pathname: A(n.pathname, t.params) })) : n
-			);
+			d = (0, o.ob)(t ? ('string' == typeof n ? A(n, t.params) : (0, c.Z)({}, n, { pathname: A(n.pathname, t.params) })) : n);
 		return a
 			? (l(d), null)
 			: s.createElement(T, {
@@ -223,7 +221,7 @@ var C = (function (e) {
 		(0, a.Z)(t, e),
 		(t.prototype.render = function () {
 			var e = this;
-			return s.createElement(I.Consumer, null, function (t) {
+			return s.createElement(m.Consumer, null, function (t) {
 				t || (0, u.Z)(!1);
 				var n = e.props.location || t.location,
 					r = e.props.computedMatch ? e.props.computedMatch : e.props.path ? R(n.pathname, e.props) : t.match,
@@ -235,26 +233,7 @@ var C = (function (e) {
 					o = a.children,
 					l = a.component,
 					d = a.render;
-				return (
-					Array.isArray(o) && 0 === o.length && (o = null),
-					s.createElement(
-						I.Provider,
-						{ value: i },
-						i.match
-							? o
-								? 'function' == typeof o
-									? o(i)
-									: o
-								: l
-									? s.createElement(l, i)
-									: d
-										? d(i)
-										: null
-							: 'function' == typeof o
-								? o(i)
-								: null
-					)
-				);
+				return Array.isArray(o) && 0 === o.length && (o = null), s.createElement(m.Provider, { value: i }, i.match ? (o ? ('function' == typeof o ? o(i) : o) : l ? s.createElement(l, i) : d ? d(i) : null) : 'function' == typeof o ? o(i) : null);
 			});
 		}),
 		t
@@ -272,7 +251,7 @@ var D = (function (e) {
 		(0, a.Z)(t, e),
 		(t.prototype.render = function () {
 			var e = this;
-			return s.createElement(I.Consumer, null, function (t) {
+			return s.createElement(m.Consumer, null, function (t) {
 				t || (0, u.Z)(!1);
 				var n,
 					r,
@@ -302,7 +281,7 @@ function L(e) {
 		n = function (t) {
 			var n = t.wrappedComponentRef,
 				r = (0, E.Z)(t, ['wrappedComponentRef']);
-			return s.createElement(I.Consumer, null, function (t) {
+			return s.createElement(m.Consumer, null, function (t) {
 				return t || (0, u.Z)(!1), s.createElement(e, (0, c.Z)({}, r, t, { ref: n }));
 			});
 		};
@@ -313,14 +292,14 @@ function M() {
 	return b(p);
 }
 function P() {
-	return b(I).location;
+	return b(m).location;
 }
 function U() {
-	var e = b(I).match;
+	var e = b(m).match;
 	return e ? e.params : {};
 }
 function w(e) {
 	var t = P(),
-		n = b(I).match;
+		n = b(m).match;
 	return e ? R(t.pathname, e) : n;
 }

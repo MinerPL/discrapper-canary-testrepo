@@ -12,10 +12,7 @@ y(
 	'fill',
 	function (t) {
 		var r = arguments.length;
-		return (
-			s(this),
-			f(o, this, 'Big' === p(u(this), 0, 3) ? i(t) : +t, r > 1 ? arguments[1] : void 0, r > 2 ? arguments[2] : void 0)
-		);
+		return s(this), f(o, this, 'Big' === p(u(this), 0, 3) ? i(t) : +t, r > 1 ? arguments[1] : void 0, r > 2 ? arguments[2] : void 0);
 	},
 	c(function () {
 		var t = 0;

@@ -10,17 +10,7 @@ var i = n(735250),
 	u = n(687683),
 	_ = n(963383);
 t.Z = function (e) {
-	let {
-			index: t,
-			children: s,
-			user: E,
-			channel: h,
-			onClick: m,
-			isFocused: I,
-			isActive: g,
-			onOtherHover: p,
-			className: T
-		} = e,
+	let { index: t, children: s, user: E, channel: h, onClick: m, isFocused: I, isActive: g, onOtherHover: p, className: T } = e,
 		[S, f] = a.useState(!1),
 		[C, N] = a.useState(!1),
 		A = () => {

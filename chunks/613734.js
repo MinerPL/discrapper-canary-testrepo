@@ -22,9 +22,7 @@ var e = i(470079),
 	r = i(788080),
 	_ = i(800530);
 function d() {
-	return (0, a.Wu)([u.Z], () => u.Z.getClassifications()).sort(
-		(t, n) => o.default.extractTimestamp(n.id) - o.default.extractTimestamp(t.id)
-	);
+	return (0, a.Wu)([u.Z], () => u.Z.getClassifications()).sort((t, n) => o.default.extractTimestamp(n.id) - o.default.extractTimestamp(t.id));
 }
 function f(t) {
 	let n;
@@ -34,10 +32,7 @@ function f(t) {
 		f = (0, c.A)('classification_detail');
 	if ((0, r.FB)(i)) {
 		var E;
-		n =
-			(null === (E = i.guild_metadata) || void 0 === E ? void 0 : E.member_type) === s.wO.OWNER
-				? _.qS.GUILD_OWNER
-				: _.qS.GUILD_MEMBER;
+		n = (null === (E = i.guild_metadata) || void 0 === E ? void 0 : E.member_type) === s.wO.OWNER ? _.qS.GUILD_OWNER : _.qS.GUILD_MEMBER;
 	} else n = _.qS.USER;
 	return (
 		e.useEffect(() => {

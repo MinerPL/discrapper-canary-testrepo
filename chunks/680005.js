@@ -25,18 +25,7 @@ var l = t(860911),
 	p = t(689938),
 	h = t(986357);
 function T(n) {
-	let {
-			appId: e,
-			className: t,
-			groupListingId: l,
-			groupListingType: r,
-			guildId: o,
-			onClick: s,
-			onHasClicked: a,
-			skuId: c,
-			subPlan: u,
-			icon: S
-		} = n,
+	let { appId: e, className: t, groupListingId: l, groupListingType: r, guildId: o, onClick: s, onHasClicked: a, skuId: c, subPlan: u, icon: S } = n,
 		{ openModal: T } = (0, d.Z)({
 			guildId: o,
 			groupListingId: l,
@@ -60,12 +49,7 @@ function T(n) {
 				className: t,
 				children: (0, i.jsxs)('div', {
 					className: h.btnContent,
-					children: [
-						S,
-						p.Z.Messages.STOREFRONT_SUBSCRIBE_FOR.format({
-							rate: (0, I.og)((0, I.T4)(g.amount, g.currency), _.rV.MONTH, 1)
-						})
-					]
+					children: [S, p.Z.Messages.STOREFRONT_SUBSCRIBE_FOR.format({ rate: (0, I.og)((0, I.T4)(g.amount, g.currency), _.rV.MONTH, 1) })]
 				})
 			});
 }

@@ -2,8 +2,7 @@ var r = n(413135).Buffer;
 !(function (e) {
 	function t() {}
 	function n(e, t) {
-		if (((t = void 0 === t ? { fatal: !1 } : t), -1 === a.indexOf((e = void 0 === e ? 'utf-8' : e).toLowerCase())))
-			throw RangeError("Failed to construct 'TextDecoder': The encoding label provided ('" + e + "') is invalid.");
+		if (((t = void 0 === t ? { fatal: !1 } : t), -1 === a.indexOf((e = void 0 === e ? 'utf-8' : e).toLowerCase()))) throw RangeError("Failed to construct 'TextDecoder': The encoding label provided ('" + e + "') is invalid.");
 		if (t.fatal) throw Error("Failed to construct 'TextDecoder': the 'fatal' option is unsupported.");
 	}
 	function i(e) {
@@ -21,27 +20,16 @@ var r = n(413135).Buffer;
 				o = 63 & e[t++];
 				var l = 63 & e[t++];
 				r[a++] = ((31 & s) << 12) | (o << 6) | l;
-			} else
-				240 == (248 & s) &&
-					((o = 63 & e[t++]),
-					(l = 63 & e[t++]),
-					65535 < (s = ((7 & s) << 18) | (o << 12) | (l << 6) | (63 & e[t++])) &&
-						((s -= 65536), (r[a++] = ((s >>> 10) & 1023) | 55296), (s = 56320 | (1023 & s))),
-					(r[a++] = s));
+			} else 240 == (248 & s) && ((o = 63 & e[t++]), (l = 63 & e[t++]), 65535 < (s = ((7 & s) << 18) | (o << 12) | (l << 6) | (63 & e[t++])) && ((s -= 65536), (r[a++] = ((s >>> 10) & 1023) | 55296), (s = 56320 | (1023 & s))), (r[a++] = s));
 		}
 	}
 	if (!e.TextEncoder || !e.TextDecoder) {
 		var a = ['utf-8', 'utf8', 'unicode-1-1-utf-8'];
 		Object.defineProperty(t.prototype, 'encoding', { value: 'utf-8' }),
 			(t.prototype.encode = function (e, t) {
-				if ((t = void 0 === t ? { stream: !1 } : t).stream)
-					throw Error("Failed to encode: the 'stream' option is unsupported.");
+				if ((t = void 0 === t ? { stream: !1 } : t).stream) throw Error("Failed to encode: the 'stream' option is unsupported.");
 				t = 0;
-				for (
-					var n = e.length, r = 0, i = Math.max(32, n + (n >>> 1) + 7), a = new Uint8Array((i >>> 3) << 3);
-					t < n;
-
-				) {
+				for (var n = e.length, r = 0, i = Math.max(32, n + (n >>> 1) + 7), a = new Uint8Array((i >>> 3) << 3); t < n; ) {
 					var s = e.charCodeAt(t++);
 					if (55296 <= s && 56319 >= s) {
 						if (t < n) {
@@ -50,12 +38,7 @@ var r = n(413135).Buffer;
 						}
 						if (55296 <= s && 56319 >= s) continue;
 					}
-					if (
-						(r + 4 > a.length &&
-							((i += 8), (i *= 1 + (t / e.length) * 2), (o = new Uint8Array((i = (i >>> 3) << 3))).set(a), (a = o)),
-						0 == (4294967168 & s))
-					)
-						a[r++] = s;
+					if ((r + 4 > a.length && ((i += 8), (i *= 1 + (t / e.length) * 2), (o = new Uint8Array((i = (i >>> 3) << 3))).set(a), (a = o)), 0 == (4294967168 & s))) a[r++] = s;
 					else {
 						if (0 == (4294965248 & s)) a[r++] = ((s >>> 6) & 31) | 192;
 						else if (0 == (4294901760 & s)) (a[r++] = ((s >>> 12) & 15) | 224), (a[r++] = ((s >>> 6) & 63) | 128);
@@ -91,8 +74,7 @@ var r = n(413135).Buffer;
 					}
 				}),
 			(n.prototype.decode = function (e, t) {
-				if ((t = void 0 === t ? { stream: !1 } : t).stream)
-					throw Error("Failed to decode: the 'stream' option is unsupported.");
+				if ((t = void 0 === t ? { stream: !1 } : t).stream) throw Error("Failed to decode: the 'stream' option is unsupported.");
 				return (e = e instanceof Uint8Array ? e : new Uint8Array(e.buffer instanceof ArrayBuffer ? e.buffer : e)), s(e);
 			}),
 			(e.TextEncoder = t),

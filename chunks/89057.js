@@ -41,14 +41,7 @@ function p(e) {
 				className: g.description,
 				variant: 'text-md/normal',
 				color: 'header-secondary',
-				children: [
-					(0, r.jsx)('p', { children: m.Z.Messages.REGION_BLOCKED_PAYMENTS_BODY }),
-					(0, r.jsx)('p', {
-						children: m.Z.Messages.REGION_BLOCKED_PAYMENTS_CTA.format({
-							helpdeskArticle: l.Z.getArticleURL(u.BhN.BLOCKED_PAYMENTS)
-						})
-					})
-				]
+				children: [(0, r.jsx)('p', { children: m.Z.Messages.REGION_BLOCKED_PAYMENTS_BODY }), (0, r.jsx)('p', { children: m.Z.Messages.REGION_BLOCKED_PAYMENTS_CTA.format({ helpdeskArticle: l.Z.getArticleURL(u.BhN.BLOCKED_PAYMENTS) }) })]
 			}),
 			(0, r.jsx)('img', {
 				src: t,
@@ -93,9 +86,7 @@ function x(e) {
 					}),
 					(0, r.jsx)(c.Text, {
 						variant: 'text-sm/normal',
-						children: m.Z.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({
-							helpdeskArticle: l.Z.getArticleURL(u.BhN.BLOCKED_PAYMENTS)
-						})
+						children: m.Z.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({ helpdeskArticle: l.Z.getArticleURL(u.BhN.BLOCKED_PAYMENTS) })
 					})
 				]
 			})

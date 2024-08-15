@@ -16,10 +16,10 @@ n.r(t),
 			return T;
 		},
 		setEntrypoint: function () {
-			return I;
+			return m;
 		},
 		setGuildId: function () {
-			return m;
+			return I;
 		},
 		setTrackedOpenedFromExternalEntrypoint: function () {
 			return g;
@@ -38,18 +38,7 @@ var r,
 	c = n(703656),
 	d = n(264043),
 	_ = n(981631);
-((r = a || (a = {})).HOME = 'home'),
-	(r.SEARCH = 'search'),
-	(r.APPLICATION = 'application'),
-	((i = s || (s = {})).EXTERNAL = 'External'),
-	(i.KEYBOARD_SHORTCUT = 'Keyboard Shortcut'),
-	(i.APPLICATION_DIRECTORY_URL = 'Application Directory URL'),
-	(i.APPLICATION_DIRECTORY_PROFILE_EMBED = 'Application Directory Profile Embed'),
-	(i.APPLICATION_DIRECTORY_UPSELL_MODAL = 'Application Directory Upsell Modal'),
-	(i.GUILD_HEADER_POPOUT = 'Guild Header Popout'),
-	(i.GUILD_SETTINGS = 'Guild Settings'),
-	(i.GUILD_INTEGRATION_SETTINGS = 'Guild Integration Settings'),
-	(i.GUILD_CONTEXT_MENU = 'Guild Context Menu');
+((r = a || (a = {})).HOME = 'home'), (r.SEARCH = 'search'), (r.APPLICATION = 'application'), ((i = s || (s = {})).EXTERNAL = 'External'), (i.KEYBOARD_SHORTCUT = 'Keyboard Shortcut'), (i.APPLICATION_DIRECTORY_URL = 'Application Directory URL'), (i.APPLICATION_DIRECTORY_PROFILE_EMBED = 'Application Directory Profile Embed'), (i.APPLICATION_DIRECTORY_UPSELL_MODAL = 'Application Directory Upsell Modal'), (i.GUILD_HEADER_POPOUT = 'Guild Header Popout'), (i.GUILD_SETTINGS = 'Guild Settings'), (i.GUILD_INTEGRATION_SETTINGS = 'Guild Integration Settings'), (i.GUILD_CONTEXT_MENU = 'Guild Context Menu');
 let E = (0, l.Z)(() => ({
 		guildId: null,
 		entrypoint: null,
@@ -76,10 +65,7 @@ function p() {
 			exact: !0
 		}),
 		a = (0, o.LX)(n, {
-			path: [
-				_.Z5c.APPLICATION_DIRECTORY_PROFILE(':applicationId'),
-				_.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(':applicationId', ':section')
-			],
+			path: [_.Z5c.APPLICATION_DIRECTORY_PROFILE(':applicationId'), _.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(':applicationId', ':section')],
 			exact: !0
 		}),
 		{ applicationId: s, section: l } = null !== (e = null == a ? void 0 : a.params) && void 0 !== e ? e : {};
@@ -95,10 +81,10 @@ function p() {
 		};
 	}
 }
-function I(e) {
+function m(e) {
 	(0, u.j)(() => E.setState({ entrypoint: e }));
 }
-function m(e) {
+function I(e) {
 	(0, u.j)(() => E.setState({ guildId: e }));
 }
 function T() {

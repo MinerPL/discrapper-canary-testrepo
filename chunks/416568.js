@@ -109,11 +109,7 @@ class ec {
 			(this.scrollToGuild = (e, t) => {
 				let n = this.scrollerRef.current;
 				if (null == n) return;
-				if (
-					(null == e && window.location.pathname.startsWith(et.Z5c.GUILD_DISCOVERY)) ||
-					e === et.x8Z.SERVER_DISCOVERY_BADGE ||
-					e === et.x8Z.E3_SERVER_DISCOVERY_BADGE
-				) {
+				if ((null == e && window.location.pathname.startsWith(et.Z5c.GUILD_DISCOVERY)) || e === et.x8Z.SERVER_DISCOVERY_BADGE || e === et.x8Z.E3_SERVER_DISCOVERY_BADGE) {
 					if (this.scrollToDiscovery) {
 						let e = (0, c.findDOMNode)(this.guildDiscoveryRef.current);
 						(0, h.k)(e, HTMLElement)
@@ -171,10 +167,7 @@ class ec {
 				return (!t && !!(r >= a.scrollTop)) || (!!t && !!(r + er <= a.scrollTop + a.offsetHeight)) || !1;
 			}),
 			(this.handleScroll = () => {
-				!this.isScrolling && this.setScrolling(!0),
-					this.timeout.start(200, () => this.setScrolling(!1)),
-					this._handleScrollDebounced(),
-					this._handleScrollThrottled();
+				!this.isScrolling && this.setScrolling(!0), this.timeout.start(200, () => this.setScrolling(!1)), this._handleScrollDebounced(), this._handleScrollThrottled();
 			}),
 			(this._handleScrollDebounced = o().debounce(() => {
 				let e = this.scrollerRef.current;
@@ -236,8 +229,7 @@ function eu(e) {
 					eR,
 					() => {
 						var e, t;
-						null === (e = eh.current) || void 0 === e || e.calculateState(),
-							null === (t = ep.current) || void 0 === t || t.calculateState();
+						null === (e = eh.current) || void 0 === e || e.calculateState(), null === (t = ep.current) || void 0 === t || t.calculateState();
 					},
 					(e) => {
 						let { isNearBottom: t } = e;

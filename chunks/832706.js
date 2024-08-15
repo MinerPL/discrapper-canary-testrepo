@@ -60,9 +60,7 @@ var o = n(470079),
 					i = (0, r.Z)(e, ['component', 'childFactory']),
 					a = this.state.contextValue,
 					s = c(this.state.children).map(n);
-				return (delete i.appear, delete i.enter, delete i.exit, null === t)
-					? o.createElement(l.Z.Provider, { value: a }, s)
-					: o.createElement(l.Z.Provider, { value: a }, o.createElement(t, i, s));
+				return (delete i.appear, delete i.enter, delete i.exit, null === t) ? o.createElement(l.Z.Provider, { value: a }, s) : o.createElement(l.Z.Provider, { value: a }, o.createElement(t, i, s));
 			}),
 			t
 		);

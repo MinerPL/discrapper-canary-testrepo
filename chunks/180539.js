@@ -23,12 +23,7 @@ function p(e) {
 		E = p === h.ULH.PROFILE && !f;
 	return (0, i.jsx)(d.JO, {
 		disabled: f || n,
-		tooltip:
-			f || n
-				? m.Z.Messages.SHOW_USER_PROFILE_UNAVAILABLE
-				: E
-					? m.Z.Messages.HIDE_USER_PROFILE
-					: m.Z.Messages.SHOW_USER_PROFILE,
+		tooltip: f || n ? m.Z.Messages.SHOW_USER_PROFILE_UNAVAILABLE : E ? m.Z.Messages.HIDE_USER_PROFILE : m.Z.Messages.SHOW_USER_PROFILE,
 		icon: s.UserCircleStatusIcon,
 		onClick: () => {
 			(0, o.a)(_, !E), l.Z.toggleProfilePanelSection();

@@ -55,7 +55,7 @@ let f = {
 		20: 'font-size-20',
 		24: 'font-size-24'
 	};
-class I extends (r = i.ZP.DeviceSettingsStore) {
+class m extends (r = i.ZP.DeviceSettingsStore) {
 	initialize(e) {
 		this.waitFor(u.Z),
 			isNaN(
@@ -81,11 +81,7 @@ class I extends (r = i.ZP.DeviceSettingsStore) {
 	get fontScaleClass() {
 		var e;
 		let t = null !== (e = p[this.fontSize]) && void 0 !== e ? e : '';
-		return this.isFontScaledUp
-			? 'a11y-font-scaled-up '.concat(t)
-			: this.isFontScaledDown
-				? 'a11y-font-scaled-down '.concat(t)
-				: ''.concat(t);
+		return this.isFontScaledUp ? 'a11y-font-scaled-up '.concat(t) : this.isFontScaledDown ? 'a11y-font-scaled-down '.concat(t) : ''.concat(t);
 	}
 	get zoom() {
 		return h.zoom;
@@ -181,9 +177,9 @@ class I extends (r = i.ZP.DeviceSettingsStore) {
 		return h;
 	}
 }
-E(I, 'displayName', 'AccessibilityStore'),
-	E(I, 'persistKey', 'AccessibilityStore'),
-	E(I, 'migrations', [
+E(m, 'displayName', 'AccessibilityStore'),
+	E(m, 'persistKey', 'AccessibilityStore'),
+	E(m, 'migrations', [
 		() => {
 			let e = 'a11yFontScale',
 				t = 'a11yZoom',
@@ -258,7 +254,7 @@ E(I, 'displayName', 'AccessibilityStore'),
 			return e;
 		}
 	]);
-let m = new I(o.Z, {
+let I = new m(o.Z, {
 	ACCESSIBILITY_SET_FONT_SIZE: function (e) {
 		var t;
 		let n = ((t = e.fontSize), d.yqN.FONT_SIZES.indexOf(t) >= 0 ? t : d.yqN.FONT_SIZE_DEFAULT);
@@ -273,8 +269,7 @@ let m = new I(o.Z, {
 		let e = h.fontSize !== d.yqN.FONT_SIZE_DEFAULT,
 			t = h.zoom !== d.yqN.ZOOM_DEFAULT;
 		if (!e && !t) return !1;
-		(h = { ...h }).fontSize !== d.yqN.FONT_SIZE_DEFAULT && (h.fontSize = d.yqN.FONT_SIZE_DEFAULT),
-			h.zoom !== d.yqN.ZOOM_DEFAULT && ((h.zoom = d.yqN.ZOOM_DEFAULT), c.Z.setZoomFactor(h.zoom));
+		(h = { ...h }).fontSize !== d.yqN.FONT_SIZE_DEFAULT && (h.fontSize = d.yqN.FONT_SIZE_DEFAULT), h.zoom !== d.yqN.ZOOM_DEFAULT && ((h.zoom = d.yqN.ZOOM_DEFAULT), c.Z.setZoomFactor(h.zoom));
 	},
 	ACCESSIBILITY_KEYBOARD_MODE_ENABLE: function () {
 		if (h.keyboardModeEnabled) return !1;
@@ -383,4 +378,4 @@ let m = new I(o.Z, {
 		};
 	}
 });
-t.Z = m;
+t.Z = I;

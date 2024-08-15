@@ -35,10 +35,7 @@ function b() {
 	let e = (0, l.e7)([N.Z], () => N.Z.getVoiceChannelId()),
 		t = (0, l.e7)([E.default], () => E.default.getId()),
 		n = (0, l.e7)([g.ZP, S.Z], () => (0, C.Z)(g.ZP, S.Z)),
-		{ canBroadcast: b } = u.Z.useExperiment(
-			{ location: 'broadcast_button_rtc_panel_no_track' },
-			{ autoTrackExposure: !1 }
-		),
+		{ canBroadcast: b } = u.Z.useExperiment({ location: 'broadcast_button_rtc_panel_no_track' }, { autoTrackExposure: !1 }),
 		M = (0, d.Z)() && null != n,
 		R = (0, l.e7)([x.Z], () => null != x.Z.getBroadcast()),
 		O = (0, l.Wu)([I.Z], () => I.Z.getAllActiveStreams());

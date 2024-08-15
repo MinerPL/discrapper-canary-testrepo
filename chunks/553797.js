@@ -12,14 +12,7 @@ var r = t(120356),
 	c = t(689938),
 	o = t(25817);
 function u(e) {
-	let {
-			price: n,
-			currency: t,
-			intervalType: r,
-			className: u,
-			intervalCount: I = 1,
-			isPrepaidPaymentSource: _ = !1
-		} = e,
+	let { price: n, currency: t, intervalType: r, className: u, intervalCount: I = 1, isPrepaidPaymentSource: _ = !1 } = e,
 		E = (0, i.T4)(n, t),
 		T = null;
 	return (

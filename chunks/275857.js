@@ -103,8 +103,7 @@ class i {
 					)
 				];
 				for (let t of d) {
-					if (((t.value = r.value || e.value), t.value && this.cache.set(t.value, t), e.type && t.type !== e.type))
-						throw Error(`Unsupported type <${s(t.type)}> in <${s(i.type)}>. Only <${s(e.type)}> is supported.`);
+					if (((t.value = r.value || e.value), t.value && this.cache.set(t.value, t), e.type && t.type !== e.type)) throw Error(`Unsupported type <${s(t.type)}> in <${s(i.type)}>. Only <${s(e.type)}> is supported.`);
 					l++, yield t;
 				}
 				u = a.next(d);
@@ -130,11 +129,7 @@ class i {
 				childNodes: a(function* () {
 					if (!e.hasChildNodes) return;
 					let n = 0;
-					for (let r of e.childNodes())
-						for (let e of (null != r.key && (r.key = `${u.key}${r.key}`),
-						(r.index = n),
-						l.getFullNode(r, l.getChildState(t, r), u.key, u)))
-							n++, yield e;
+					for (let r of e.childNodes()) for (let e of (null != r.key && (r.key = `${u.key}${r.key}`), (r.index = n), l.getFullNode(r, l.getChildState(t, r), u.key, u))) n++, yield e;
 				})
 			};
 		yield u;
@@ -199,11 +194,7 @@ function _(e, t, n) {
 	let r = [...E(e, t), t],
 		i = [...E(e, n), n],
 		a = r.slice(0, i.length).findIndex((e, t) => e !== i[t]);
-	return -1 !== a
-		? ((t = r[a]), (n = i[a]), t.index - n.index)
-		: r.findIndex((e) => e === n) >= 0
-			? 1
-			: (i.findIndex((e) => e === t), -1);
+	return -1 !== a ? ((t = r[a]), (n = i[a]), t.index - n.index) : r.findIndex((e) => e === n) >= 0 ? 1 : (i.findIndex((e) => e === t), -1);
 }
 function E(e, t) {
 	let n = [];

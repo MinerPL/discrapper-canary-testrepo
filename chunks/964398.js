@@ -108,18 +108,7 @@ let f = (e, t) => {
 	};
 };
 t.Z = l.memo(function (e) {
-	let {
-			wheelWidth: t,
-			wheelHeight: n,
-			itemWidth: g,
-			itemHeight: m,
-			showDeadZoneIndicator: C,
-			activeItem: I,
-			onItemSelect: E,
-			onItemAction: N,
-			interactive: x = !0,
-			children: S
-		} = e,
+	let { wheelWidth: t, wheelHeight: n, itemWidth: g, itemHeight: m, showDeadZoneIndicator: C, activeItem: I, onItemSelect: E, onItemAction: N, interactive: x = !0, children: S } = e,
 		v = l.useRef(null),
 		Z = l.useRef([]),
 		T = l.useRef(!1),

@@ -21,8 +21,7 @@ e.exports = function (e) {
 		aliases: ['mk', 'mak', 'make'],
 		keywords: {
 			$pattern: /[\w-]+/,
-			keyword:
-				'define endef undefine ifdef ifndef ifeq ifneq else endif include -include sinclude override export unexport private vpath'
+			keyword: 'define endef undefine ifdef ifndef ifeq ifneq else endif include -include sinclude override export unexport private vpath'
 		},
 		contains: [
 			e.HASH_COMMENT_MODE,
@@ -32,10 +31,7 @@ e.exports = function (e) {
 				className: 'variable',
 				begin: /\$\([\w-]+\s/,
 				end: /\)/,
-				keywords: {
-					built_in:
-						'subst patsubst strip findstring filter filter-out sort word wordlist firstword lastword dir notdir suffix basename addsuffix addprefix join wildcard realpath abspath error warning shell origin flavor foreach if or and call eval file value'
-				},
+				keywords: { built_in: 'subst patsubst strip findstring filter filter-out sort word wordlist firstword lastword dir notdir suffix basename addsuffix addprefix join wildcard realpath abspath error warning shell origin flavor foreach if or and call eval file value' },
 				contains: [t]
 			},
 			r,

@@ -85,13 +85,7 @@ function d(e) {
 	return (0, a.$p)(t, r, n);
 }
 function N(e) {
-	return 'number' == typeof e
-		? p(e)
-		: Array.isArray(e)
-			? e[0] + e[1] / 1000000000
-			: e instanceof Date
-				? p(e.getTime())
-				: (0, o.ph)();
+	return 'number' == typeof e ? p(e) : Array.isArray(e) ? e[0] + e[1] / 1000000000 : e instanceof Date ? p(e.getTime()) : (0, o.ph)();
 }
 function p(e) {
 	return e > 9999999999 ? e / 1000 : e;

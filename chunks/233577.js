@@ -13,8 +13,8 @@ var i = n(367907),
 	f = n(877565),
 	h = n(590921),
 	p = n(981631),
-	I = n(689938);
-let m = {
+	m = n(689938);
+let I = {
 	results: {
 		command: null,
 		stickers: []
@@ -31,17 +31,12 @@ let g = {
 	stores: [c.Z],
 	matches(e, t, n, r, i) {
 		var s;
-		return (
-			i.commands !== h.L8.DISABLED &&
-			i.commands !== h.L8.OLD_BUILT_INS &&
-			(null === (s = a.Z.getActiveCommand(e.id)) || void 0 === s ? void 0 : s.integrationType) === p.q9n.STICKER &&
-			a.Z.getOptionStates(e.id).query.hasValue
-		);
+		return i.commands !== h.L8.DISABLED && i.commands !== h.L8.OLD_BUILT_INS && (null === (s = a.Z.getActiveCommand(e.id)) || void 0 === s ? void 0 : s.integrationType) === p.q9n.STICKER && a.Z.getOptionStates(e.id).query.hasValue;
 	},
 	queryResults(e, t, n, r) {
 		var i;
 		let s = null === (i = a.Z.getActiveCommand(e.id)) || void 0 === i ? void 0 : i.name;
-		if (null == s) return m;
+		if (null == s) return I;
 		let o = [];
 		(0, u.$p)();
 		let c = E.ZP.queryStickers([n], !0, [e, (e, t) => t === l.eb.SENDABLE]);
@@ -68,8 +63,8 @@ let g = {
 				autocompletes: t,
 				onHover: a,
 				onClick: s,
-				titleWithQuery: I.Z.Messages.STICKERS_MATCHING,
-				titleWithoutQuery: I.Z.Messages.STICKER,
+				titleWithQuery: m.Z.Messages.STICKERS_MATCHING,
+				titleWithoutQuery: m.Z.Messages.STICKER,
 				Component: o.ZP.Sticker,
 				getProps: (e) => {
 					let { comparator: t, sticker: n } = e;

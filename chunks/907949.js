@@ -49,12 +49,7 @@ function d(t, e, r, n) {
 				(i.logSelectionStateFailure({
 					anonymizedDom: p(e, function (e) {
 						var r = [];
-						return (
-							e === o && r.push('active element'),
-							e === t.anchorNode && r.push('selection anchor node'),
-							e === t.focusNode && r.push('selection focus node'),
-							r
-						);
+						return e === o && r.push('active element'), e === t.anchorNode && r.push('selection anchor node'), e === t.focusNode && r.push('selection focus node'), r;
 					}),
 					extraParams: JSON.stringify(
 						{

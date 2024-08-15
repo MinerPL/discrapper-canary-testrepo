@@ -22,9 +22,7 @@ let s = [0.1, 0.25],
 							if (!e.hadRecentInput) {
 								let t = c[0],
 									r = c[c.length - 1];
-								E && t && r && e.startTime - r.startTime < 1000 && e.startTime - t.startTime < 5000
-									? ((E += e.value), c.push(e))
-									: ((E = e.value), (c = [e]));
+								E && t && r && e.startTime - r.startTime < 1000 && e.startTime - t.startTime < 5000 ? ((E += e.value), c.push(e)) : ((E = e.value), (c = [e]));
 							}
 						}),
 							E > _.value && ((_.value = E), (_.entries = c), r());

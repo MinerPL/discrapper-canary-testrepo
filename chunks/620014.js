@@ -8,9 +8,4 @@ function s(e) {
 	var t = (this.__data__ = new n(e));
 	this.size = t.size;
 }
-(s.prototype.clear = a),
-	(s.prototype.delete = o),
-	(s.prototype.get = i),
-	(s.prototype.has = _),
-	(s.prototype.set = E),
-	(e.exports = s);
+(s.prototype.clear = a), (s.prototype.delete = o), (s.prototype.get = i), (s.prototype.has = _), (s.prototype.set = E), (e.exports = s);

@@ -51,26 +51,17 @@ function h(e) {
 					await (0, u.J7)(
 						x,
 						() => {
-							(0, i.showToast)(
-								(0, i.createToast)(C.Z.Messages.INAPPROPRIATE_CONVERSATION_REPORT_TOAST, i.ToastType.SUCCESS)
-							),
-								o();
+							(0, i.showToast)((0, i.createToast)(C.Z.Messages.INAPPROPRIATE_CONVERSATION_REPORT_TOAST, i.ToastType.SUCCESS)), o();
 						},
 						() => {
-							(0, i.showToast)(
-								(0, i.createToast)(C.Z.Messages.INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST, i.ToastType.FAILURE)
-							);
+							(0, i.showToast)((0, i.createToast)(C.Z.Messages.INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST, i.ToastType.FAILURE));
 						}
 					),
 					L(!1),
 					h(l.NM.USER_TAKEOVER_MODAL_REPORT);
 		},
 		j = (e) => {
-			0 === e
-				? ((0, N.Z)(R.EI), h(l.NM.USER_TAKEOVER_MODAL_CTL))
-				: 2 === e
-					? ((0, N.Z)(R.$l), h(l.NM.USER_TAKEOVER_MODAL_THROUGHLINE))
-					: ((0, N.Z)(R.n4), h(l.NM.USER_TAKEOVER_MODAL_NO_FILTR));
+			0 === e ? ((0, N.Z)(R.EI), h(l.NM.USER_TAKEOVER_MODAL_CTL)) : 2 === e ? ((0, N.Z)(R.$l), h(l.NM.USER_TAKEOVER_MODAL_THROUGHLINE)) : ((0, N.Z)(R.n4), h(l.NM.USER_TAKEOVER_MODAL_NO_FILTR));
 		},
 		V = a.useMemo(() => {
 			switch (Z) {
@@ -125,9 +116,7 @@ function h(e) {
 							color: i.tokens.colors.WHITE,
 							className: S.buttonIcon
 						}),
-						s
-							? C.Z.Messages.INAPPROPRIATE_CONVERSATION_ACTION_REPORTED
-							: C.Z.Messages.INAPPROPRIATE_CONVERSATION_ACTION_REPORT
+						s ? C.Z.Messages.INAPPROPRIATE_CONVERSATION_ACTION_REPORTED : C.Z.Messages.INAPPROPRIATE_CONVERSATION_ACTION_REPORT
 					]
 				}),
 				(0, r.jsxs)(i.Button, {
@@ -151,6 +140,4 @@ function h(e) {
 		})
 	});
 }
-((o = s || (s = {}))[(o.CTL = 0)] = 'CTL'),
-	(o[(o.NO_FILTR = 1)] = 'NO_FILTR'),
-	(o[(o.THROUGHLINE = 2)] = 'THROUGHLINE');
+((o = s || (s = {}))[(o.CTL = 0)] = 'CTL'), (o[(o.NO_FILTR = 1)] = 'NO_FILTR'), (o[(o.THROUGHLINE = 2)] = 'THROUGHLINE');

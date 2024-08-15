@@ -15,18 +15,6 @@ e.exports = !r(function () {
 		}),
 		n.delete('a', 2),
 		n.delete('b', void 0),
-		(s && (!e.toJSON || !n.has('a', 1) || n.has('a', 2) || !n.has('a', void 0) || n.has('b'))) ||
-			(!t.size && (s || !a)) ||
-			!t.sort ||
-			'http://a/c%20d?a=1&c=3' !== e.href ||
-			'3' !== t.get('c') ||
-			'a=1' !== String(new URLSearchParams('?a=1')) ||
-			!t[o] ||
-			'a' !== new URL('https://a@b').username ||
-			'b' !== new URLSearchParams(new URLSearchParams('a=b')).get('a') ||
-			'xn--e1aybc' !== new URL('http://тест').host ||
-			'#%D0%B1' !== new URL('http://a#б').hash ||
-			'a1c3' !== r ||
-			'x' !== new URL('http://x', void 0).host
+		(s && (!e.toJSON || !n.has('a', 1) || n.has('a', 2) || !n.has('a', void 0) || n.has('b'))) || (!t.size && (s || !a)) || !t.sort || 'http://a/c%20d?a=1&c=3' !== e.href || '3' !== t.get('c') || 'a=1' !== String(new URLSearchParams('?a=1')) || !t[o] || 'a' !== new URL('https://a@b').username || 'b' !== new URLSearchParams(new URLSearchParams('a=b')).get('a') || 'xn--e1aybc' !== new URL('http://тест').host || '#%D0%B1' !== new URL('http://a#б').hash || 'a1c3' !== r || 'x' !== new URL('http://x', void 0).host
 	);
 });

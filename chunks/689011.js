@@ -101,9 +101,7 @@ function v(e) {
 				className: m.confirmationSubtitle,
 				variant: 'text-md/medium',
 				color: 'header-secondary',
-				children: d.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_SUBTITLE.format({
-					timestamp: null == l ? void 0 : l.currentPeriodEnd
-				})
+				children: d.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_SUBTITLE.format({ timestamp: null == l ? void 0 : l.currentPeriodEnd })
 			}),
 			(0, r.jsx)(o.O3, {
 				children: (0, r.jsx)(s.Z, {

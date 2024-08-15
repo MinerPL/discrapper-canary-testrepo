@@ -67,10 +67,7 @@ function a(e, t, n) {
 				let i = 'horizontal' === t ? e.offsetWidth : e.offsetHeight,
 					a = 'horizontal' === t ? e.offsetLeft : e.offsetTop,
 					s = e.offsetParent;
-				for (; null != s && s !== n; )
-					(0, r.k)(s, HTMLElement)
-						? ((a += 'horizontal' === t ? s.offsetLeft : s.offsetTop), (s = s.offsetParent))
-						: (s = s.parentNode);
+				for (; null != s && s !== n; ) (0, r.k)(s, HTMLElement) ? ((a += 'horizontal' === t ? s.offsetLeft : s.offsetTop), (s = s.offsetParent)) : (s = s.parentNode);
 				return {
 					offset: a,
 					offsetSize: i

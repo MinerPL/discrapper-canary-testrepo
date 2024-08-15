@@ -76,9 +76,7 @@ function f() {
 					(0, n.jsx)(r.Text, {
 						variant: 'text-sm/medium',
 						color: 'header-secondary',
-						children: p.Z.Messages.CALL_SOUNDS_SETTINGS_DESCRIPTION_2.format({
-							helpdeskArticle: C.Z.getArticleURL(g.BhN.SOUNDBOARD)
-						})
+						children: p.Z.Messages.CALL_SOUNDS_SETTINGS_DESCRIPTION_2.format({ helpdeskArticle: C.Z.getArticleURL(g.BhN.SOUNDBOARD) })
 					}),
 					(0, n.jsx)(c.Z, {
 						guildId: s,
@@ -127,13 +125,7 @@ function D(e) {
 	let { guildId: s } = e,
 		t = (0, i.e7)([m.Z], () => {
 			var e, t, n;
-			return null === (n = m.Z.settings.guilds) || void 0 === n
-				? void 0
-				: null === (t = n.guilds) || void 0 === t
-					? void 0
-					: null === (e = t[s]) || void 0 === e
-						? void 0
-						: e.joinSound;
+			return null === (n = m.Z.settings.guilds) || void 0 === n ? void 0 : null === (t = n.guilds) || void 0 === t ? void 0 : null === (e = t[s]) || void 0 === e ? void 0 : e.joinSound;
 		}),
 		a = M(t);
 	if (null == t || null == a) return null;

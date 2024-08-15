@@ -1,12 +1,12 @@
 n.d(t, {
 	Qs: function () {
-		return I;
+		return m;
 	},
 	Uf: function () {
 		return p;
 	},
 	VO: function () {
-		return m;
+		return I;
 	},
 	Xs: function () {
 		return h;
@@ -35,13 +35,7 @@ var r = n(470079),
 	_ = n(981631);
 let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
 	f = (e) => {
-		let {
-				gridWrapperRef: t,
-				containerWidth: n,
-				showingEmptyState: i,
-				listPaddingLeft: s = E,
-				listScrollbarWidth: o = 8
-			} = e,
+		let { gridWrapperRef: t, containerWidth: n, showingEmptyState: i, listPaddingLeft: s = E, listScrollbarWidth: o = 8 } = e,
 			[l, u] = r.useState(void 0),
 			c = r.useCallback(() => {
 				if (null == t.current) return null;
@@ -119,8 +113,7 @@ let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
 					i.forEach((e, t) => {
 						if (!e.isNitroLocked) return;
 						let n = r[t];
-						n.offset.top <= l && n.offset.bottom >= l && (c = !0),
-							n.offset.top <= o && n.offset.bottom >= o && (u = !0);
+						n.offset.top <= l && n.offset.bottom >= l && (c = !0), n.offset.top <= o && n.offset.bottom >= o && (u = !0);
 					}),
 						null == a || a(c && u);
 				},
@@ -133,16 +126,8 @@ let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
 			[l, o]
 		);
 	},
-	I = (e) => {
-		let {
-				activeCategoryIndex: t,
-				listRef: n,
-				isScrolling: i,
-				searchQuery: s,
-				scrollOffset: o = 0,
-				onActiveCategoryIndexChange: l,
-				disableForSearch: u = !0
-			} = e,
+	m = (e) => {
+		let { activeCategoryIndex: t, listRef: n, isScrolling: i, searchQuery: s, scrollOffset: o = 0, onActiveCategoryIndexChange: l, disableForSearch: u = !0 } = e,
 			c = r.useRef(_.xAR),
 			d = r.useMemo(
 				() =>
@@ -179,15 +164,8 @@ let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
 			[i, d, E]
 		);
 	},
-	m = (e) => {
-		let {
-				columnCounts: t,
-				gridNavigatorId: n,
-				itemGrid: i,
-				itemList: a,
-				onGridNavigatorItemSelect: l,
-				onGridNavigatorPositionChange: u
-			} = e,
+	I = (e) => {
+		let { columnCounts: t, gridNavigatorId: n, itemGrid: i, itemList: a, onGridNavigatorItemSelect: l, onGridNavigatorPositionChange: u } = e,
 			c = r.useRef(!1),
 			d = r.useCallback(
 				(e, t) => {
@@ -235,8 +213,8 @@ let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
 			{
 				dispatch: h,
 				getItemProps: p,
-				getRowProps: I,
-				getContainerProps: m
+				getRowProps: m,
+				getContainerProps: I
 			} = (0, o.Z)({
 				navId: n,
 				columnCounts: t,
@@ -246,12 +224,12 @@ let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
 				useVirtualFocus: !0
 			}),
 			{ gridContainerProps: T, handleGridContainerKeyDown: g } = r.useMemo(() => {
-				let e = m();
+				let e = I();
 				return {
 					gridContainerProps: e,
 					handleGridContainerKeyDown: e.onKeyDown
 				};
-			}, [m]);
+			}, [I]);
 		return (
 			r.useEffect(() => {
 				let e = () => {
@@ -262,7 +240,7 @@ let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
 			{
 				gridDispatch: h,
 				getItemProps: p,
-				getRowProps: I,
+				getRowProps: m,
 				gridContainerProps: T,
 				handleGridContainerKeyDown: g,
 				isUsingKeyboardNavigation: c
@@ -270,14 +248,7 @@ let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
 		);
 	};
 function T(e) {
-	let {
-		categories: t,
-		collapsedCategories: n,
-		gridWidth: i = 0,
-		listPaddingRight: a = 0,
-		itemNodeWidth: s,
-		itemNodeMargin: o = 0
-	} = e;
+	let { categories: t, collapsedCategories: n, gridWidth: i = 0, listPaddingRight: a = 0, itemNodeWidth: s, itemNodeMargin: o = 0 } = e;
 	return r.useMemo(() => {
 		let e = Math.max(1, Math.floor((i - a + o) / (s + o))),
 			r = Math.floor(Math.max(o, (i - a - s * e) / (e - 1))),
@@ -310,11 +281,7 @@ function T(e) {
 			for (let e of t)
 				if (e.items.length > 0) {
 					var f;
-					r(
-						e.items,
-						e.categoryInfo.type,
-						null !== (f = null == n ? void 0 : n.has(''.concat(e.key))) && void 0 !== f && f
-					);
+					r(e.items, e.categoryInfo.type, null !== (f = null == n ? void 0 : n.has(''.concat(e.key))) && void 0 !== f && f);
 				}
 		}
 		return {
@@ -335,7 +302,7 @@ function g(e) {
 			gridContainerProps: E,
 			handleGridContainerKeyDown: f,
 			isUsingKeyboardNavigation: h
-		} = m({
+		} = I({
 			columnCounts: t,
 			gridNavigatorId: s,
 			itemGrid: n,

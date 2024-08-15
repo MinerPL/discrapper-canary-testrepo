@@ -14,8 +14,7 @@ e.exports =
 				var t = o(this),
 					n = i(t),
 					s = n - 1;
-				for (arguments.length > 1 && (s = c(s, a(arguments[1]))), s < 0 && (s = n + s); s >= 0; s--)
-					if (s in t && t[s] === e) return s || 0;
+				for (arguments.length > 1 && (s = c(s, a(arguments[1]))), s < 0 && (s = n + s); s >= 0; s--) if (s in t && t[s] === e) return s || 0;
 				return -1;
 			}
 		: l;

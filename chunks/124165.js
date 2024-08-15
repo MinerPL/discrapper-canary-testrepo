@@ -43,17 +43,10 @@ function f(e) {
 	if (null == E) return;
 	let f = (0, o.c)(n, t),
 		{ startTime: h } = (0, l.Kq)(E, n),
-		p =
-			(null == E ? void 0 : E.scheduled_start_time) != null
-				? (0, u.lh)(f, h, new Date(null == E ? void 0 : E.scheduled_start_time))
-				: null,
-		I = null != p && c.$I.has(p) ? null : null != n ? n : (0, u.DK)(E),
-		m = _(E.id),
-		T = _(E.id, I);
-	null == I
-		? (i(t, null, r, null != m ? c.gv.UNINTERESTED : c.gv.INTERESTED), null == d || d())
-		: null != T
-			? (i(t, I, r, null != m ? c.gv.INTERESTED : c.gv.UNINTERESTED), null == d || d())
-			: a(E, I);
+		p = (null == E ? void 0 : E.scheduled_start_time) != null ? (0, u.lh)(f, h, new Date(null == E ? void 0 : E.scheduled_start_time)) : null,
+		m = null != p && c.$I.has(p) ? null : null != n ? n : (0, u.DK)(E),
+		I = _(E.id),
+		T = _(E.id, m);
+	null == m ? (i(t, null, r, null != I ? c.gv.UNINTERESTED : c.gv.INTERESTED), null == d || d()) : null != T ? (i(t, m, r, null != I ? c.gv.INTERESTED : c.gv.UNINTERESTED), null == d || d()) : a(E, m);
 }
 ((r = i || (i = {}))[(r.SERIES = 0)] = 'SERIES'), (r[(r.RECURRENCE = 1)] = 'RECURRENCE');

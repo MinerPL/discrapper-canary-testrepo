@@ -21,16 +21,7 @@ var i = t(735250),
 	T = t(408942);
 function h(e) {
 	let n,
-		{
-			guild: t,
-			channel: h,
-			customWebhooks: g,
-			editedWebhook: p,
-			selectableWebhookChannels: f,
-			refToScroller: C,
-			errors: O,
-			canNavigate: x
-		} = e,
+		{ guild: t, channel: h, customWebhooks: g, editedWebhook: p, selectableWebhookChannels: f, refToScroller: C, errors: O, canNavigate: x } = e,
 		S = (0, d.ZP)(),
 		[A, R] = a.useState(null),
 		[b, Z] = a.useState(null);

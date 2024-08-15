@@ -45,10 +45,7 @@ class c {
 		this._onDataReady = e;
 	}
 	constructor(e) {
-		o(this, '_onDataReady', void 0),
-			o(this, '_gatewayEncoding', void 0),
-			(this._onDataReady = null),
-			(this._gatewayEncoding = e);
+		o(this, '_onDataReady', void 0), o(this, '_gatewayEncoding', void 0), (this._onDataReady = null), (this._gatewayEncoding = e);
 	}
 }
 u.push(
@@ -66,17 +63,11 @@ u.push(
 			let t;
 			if (null == this._stream) throw Error('Trying to decompress with zstd but did not initialize with it');
 			if (!(e instanceof ArrayBuffer)) throw Error('Expected array buffer, but got ' + typeof e);
-			(t = this._stream.decompress(e)),
-				null != this._decoder && (t = this._decoder.decode(t)),
-				null != this._onDataReady && this._onDataReady(t);
+			(t = this._stream.decompress(e)), null != this._decoder && (t = this._decoder.decode(t)), null != this._onDataReady && this._onDataReady(t);
 		}
 		close() {}
 		constructor(e) {
-			super(e),
-				o(this, '_decoder', null),
-				o(this, '_stream', void 0),
-				this._gatewayEncoding.wantsString() ? (this._decoder = new TextDecoder('utf-8')) : (this._decoder = null),
-				(this._stream = (0, s.Gz)());
+			super(e), o(this, '_decoder', null), o(this, '_stream', void 0), this._gatewayEncoding.wantsString() ? (this._decoder = new TextDecoder('utf-8')) : (this._decoder = null), (this._stream = (0, s.Gz)());
 		}
 	}
 ),
@@ -155,11 +146,7 @@ u.push(
 			}
 			feed(e) {
 				let t = this._pako;
-				if (
-					(e instanceof ArrayBuffer && this._gatewayEncoding.wantsString() && (e = t.inflate(e, { to: 'string' })),
-					null == this._onDataReady)
-				)
-					throw Error('Cannot feed unless a data ready callback is registered.');
+				if ((e instanceof ArrayBuffer && this._gatewayEncoding.wantsString() && (e = t.inflate(e, { to: 'string' })), null == this._onDataReady)) throw Error('Cannot feed unless a data ready callback is registered.');
 				this._onDataReady(e);
 			}
 			close() {}
@@ -174,11 +161,7 @@ u.push(
 				return !1;
 			}
 			bindWebSocket(e) {
-				this.close(),
-					(this._socketId = e._socketId),
-					this._usesZstd
-						? l.DCDCompressionManager.enableZstdStreamSupport(this._socketId, 0)
-						: l.DCDCompressionManager.enableZlibStreamSupport(this._socketId);
+				this.close(), (this._socketId = e._socketId), this._usesZstd ? l.DCDCompressionManager.enableZstdStreamSupport(this._socketId, 0) : l.DCDCompressionManager.enableZlibStreamSupport(this._socketId);
 			}
 			getAlgorithm() {
 				return this._usesZstd ? 'zstd-stream' : 'zlib-stream';
@@ -195,11 +178,7 @@ u.push(
 				(this._socketId = null), null !== e && l.DCDCompressionManager.disableZlibStreamSupport(e);
 			}
 			constructor(e) {
-				super(e),
-					o(this, '_socketId', void 0),
-					o(this, '_usesZstd', void 0),
-					(this._usesZstd = a.Z.shouldUseZstd()),
-					(this._socketId = null);
+				super(e), o(this, '_socketId', void 0), o(this, '_usesZstd', void 0), (this._usesZstd = a.Z.shouldUseZstd()), (this._socketId = null);
 			}
 		}
 	);

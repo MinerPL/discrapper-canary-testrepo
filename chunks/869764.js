@@ -133,10 +133,7 @@ function E(e) {
 		o = (0, i.e7)([u.Z], () => u.Z.getGuild(n));
 	r.useEffect(() => {
 		var e;
-		null == s &&
-			(null == d ? void 0 : d.flags) != null &&
-			(0, C.yE)(null !== (e = d.flags) && void 0 !== e ? e : 0, v.q.STARTED_HOME_ACTIONS) &&
-			(0, x.Fg)(n);
+		null == s && (null == d ? void 0 : d.flags) != null && (0, C.yE)(null !== (e = d.flags) && void 0 !== e ? e : 0, v.q.STARTED_HOME_ACTIONS) && (0, x.Fg)(n);
 	}, [s, n, null == d ? void 0 : d.flags]);
 	let h = r.useCallback(() => {
 		null != o && null != o.rulesChannelId && (0, x.gp)(o.id, o.rulesChannelId);

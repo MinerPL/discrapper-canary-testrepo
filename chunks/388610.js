@@ -23,29 +23,7 @@ let Z = v.QZA.CLOSED,
 	y = !1,
 	O = !1,
 	G = null,
-	H = [
-		'name',
-		'type',
-		'topic_',
-		'bitrate_',
-		'userLimit_',
-		'nsfw_',
-		'flags_',
-		'rateLimitPerUser_',
-		'defaultThreadRateLimitPerUser',
-		'defaultAutoArchiveDuration',
-		'template',
-		'defaultReactionEmoji',
-		'rtcRegion',
-		'videoQualityMode',
-		'threadMetadata',
-		'banner',
-		'availableTags',
-		'defaultSortOrder',
-		'defaultForumLayout',
-		'iconEmoji',
-		'themeColor'
-	];
+	H = ['name', 'type', 'topic_', 'bitrate_', 'userLimit_', 'nsfw_', 'flags_', 'rateLimitPerUser_', 'defaultThreadRateLimitPerUser', 'defaultAutoArchiveDuration', 'template', 'defaultReactionEmoji', 'rtcRegion', 'videoQualityMode', 'threadMetadata', 'banner', 'availableTags', 'defaultSortOrder', 'defaultForumLayout', 'iconEmoji', 'themeColor'];
 function U(e) {
 	let t = L.Z.getChannel(e.channelId);
 	if (null == t) return b();
@@ -188,30 +166,7 @@ let R = new w(f.Z, {
 		o = t;
 	},
 	CHANNEL_SETTINGS_UPDATE: function (e) {
-		let {
-			name: t,
-			channelType: n,
-			topic: l,
-			bitrate: i,
-			userLimit: r,
-			nsfw: u,
-			flags: o,
-			rateLimitPerUser: s,
-			defaultThreadRateLimitPerUser: d,
-			autoArchiveDuration: c,
-			locked: _,
-			invitable: N,
-			defaultAutoArchiveDuration: E,
-			template: T,
-			defaultReactionEmoji: S,
-			rtcRegion: C,
-			videoQualityMode: h,
-			availableTags: f,
-			defaultSortOrder: I,
-			defaultForumLayout: A,
-			iconEmoji: m,
-			themeColor: p
-		} = e;
+		let { name: t, channelType: n, topic: l, bitrate: i, userLimit: r, nsfw: u, flags: o, rateLimitPerUser: s, defaultThreadRateLimitPerUser: d, autoArchiveDuration: c, locked: _, invitable: N, defaultAutoArchiveDuration: E, template: T, defaultReactionEmoji: S, rtcRegion: C, videoQualityMode: h, availableTags: f, defaultSortOrder: I, defaultForumLayout: A, iconEmoji: m, themeColor: p } = e;
 		if (null == a) return !1;
 		null != t && (a = a.set('name', t)),
 			null != l && (a = a.set('topic', l)),
@@ -270,9 +225,7 @@ let R = new w(f.Z, {
 				} else {
 					let t = L.Z.getChannel(e);
 					if (null == t) return !1;
-					(r = t),
-						null != a &&
-							((a = a.set('permissionOverwrites', r.permissionOverwrites)), (u = L.Z.getChannel(a.parent_id)));
+					(r = t), null != a && ((a = a.set('permissionOverwrites', r.permissionOverwrites)), (u = L.Z.getChannel(a.parent_id)));
 				}
 				return !0;
 			})(e.id) &&

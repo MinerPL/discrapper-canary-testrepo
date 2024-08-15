@@ -23,15 +23,7 @@ function s(e, t) {
 function o(e, t, n, r) {
 	let i = (t = u(e, t)) - 1,
 		a = -2;
-	return (
-		n <= 2 ? (a = 0) : l(t) && (a = -1),
-		1721425 +
-			365 * i +
-			Math.floor(i / 4) -
-			Math.floor(i / 100) +
-			Math.floor(i / 400) +
-			Math.floor((367 * n - 362) / 12 + a + r)
-	);
+	return n <= 2 ? (a = 0) : l(t) && (a = -1), 1721425 + 365 * i + Math.floor(i / 4) - Math.floor(i / 100) + Math.floor(i / 400) + Math.floor((367 * n - 362) / 12 + a + r);
 }
 function l(e) {
 	return e % 4 == 0 && (e % 100 != 0 || e % 400 == 0);
@@ -61,8 +53,8 @@ class _ {
 			h = 2;
 		e < o(_, E, 3, 1) ? (h = 0) : l(E) && (h = 1);
 		let p = Math.floor(((f + h) * 12 + 373) / 367),
-			I = e - o(_, E, p, 1) + 1;
-		return new j(_, E, p, I);
+			m = e - o(_, E, p, 1) + 1;
+		return new j(_, E, p, m);
 	}
 	toJulianDay(e) {
 		return o(e.era, e.year, e.month, e.day);
@@ -198,12 +190,12 @@ function h(e, t) {
 function p(e, t) {
 	return e.calendar.toJulianDay(e) - t.calendar.toJulianDay(t);
 }
-function I(e) {
+function m(e) {
 	return 3600000 * e.hour + 60000 * e.minute + 1000 * e.second + e.millisecond;
 }
-let m = null;
+let I = null;
 function T() {
-	return null == m && (m = new Intl.DateTimeFormat().resolvedOptions().timeZone), m;
+	return null == I && (I = new Intl.DateTimeFormat().resolvedOptions().timeZone), I;
 }
 function g(e) {
 	return e.subtract({ days: e.day - 1 });
@@ -303,14 +295,7 @@ function D(e, t, n = 'compatible') {
 				((a = l - c) == (s = l - d) ? [a] : [a, s]).filter((e) =>
 					(function (e, t, n) {
 						let r = y(n, t);
-						return (
-							e.year === r.year &&
-							e.month === r.month &&
-							e.day === r.day &&
-							e.hour === r.hour &&
-							e.minute === r.minute &&
-							e.second === r.second
-						);
+						return e.year === r.year && e.month === r.month && e.day === r.day && e.hour === r.hour && e.minute === r.minute && e.second === r.second;
 					})(r, i, e)
 				));
 			if (1 === E.length) return E[0];
@@ -343,10 +328,7 @@ function L(e, t) {
 		a = 0;
 	if ('timeZone' in e) ({ hour: n, minute: r, second: i, millisecond: a } = e);
 	else if ('hour' in e && !t) return e;
-	return (
-		t && ({ hour: n, minute: r, second: i, millisecond: a } = t),
-		new K(e.calendar, e.era, e.year, e.month, e.day, n, r, i, a)
-	);
+	return t && ({ hour: n, minute: r, second: i, millisecond: a } = t), new K(e.calendar, e.era, e.year, e.month, e.day, n, r, i, a);
 }
 function b(e, t) {
 	if (e.calendar.identifier === t.identifier) return e;
@@ -361,22 +343,8 @@ function M(e, t) {
 				? (function (e, t) {
 						var n;
 						let r;
-						(e.hour += t.hours || 0),
-							(e.minute += t.minutes || 0),
-							(e.second += t.seconds || 0),
-							(e.millisecond += t.milliseconds || 0);
-						return (
-							(n = e),
-							(n.second += Math.floor(n.millisecond / 1000)),
-							(n.millisecond = B(n.millisecond, 1000)),
-							(n.minute += Math.floor(n.second / 60)),
-							(n.second = B(n.second, 60)),
-							(n.hour += Math.floor(n.minute / 60)),
-							(n.minute = B(n.minute, 60)),
-							(r = Math.floor(n.hour / 24)),
-							(n.hour = B(n.hour, 24)),
-							r
-						);
+						(e.hour += t.hours || 0), (e.minute += t.minutes || 0), (e.second += t.seconds || 0), (e.millisecond += t.milliseconds || 0);
+						return (n = e), (n.second += Math.floor(n.millisecond / 1000)), (n.millisecond = B(n.millisecond, 1000)), (n.minute += Math.floor(n.second / 60)), (n.second = B(n.second, 60)), (n.hour += Math.floor(n.minute / 60)), (n.minute = B(n.minute, 60)), (r = Math.floor(n.hour / 24)), (n.hour = B(n.hour, 24)), r;
 					})(n, t)
 				: 0;
 	P(n, t.years || 0),
@@ -401,11 +369,7 @@ function M(e, t) {
 	}
 	n.month < 1 && ((n.month = 1), (n.day = 1));
 	let o = n.calendar.getMonthsInYear(n);
-	return (
-		n.month > o && ((n.month = o), (n.day = n.calendar.getDaysInMonth(n))),
-		(n.day = Math.max(1, Math.min(n.calendar.getDaysInMonth(n), n.day))),
-		n
-	);
+	return n.month > o && ((n.month = o), (n.day = n.calendar.getDaysInMonth(n))), (n.day = Math.max(1, Math.min(n.calendar.getDaysInMonth(n), n.day))), n;
 }
 function P(e, t) {
 	var n, r;
@@ -417,13 +381,10 @@ function U(e) {
 	for (; e.month > (t = e.calendar.getMonthsInYear(e)); ) (e.month -= t), P(e, 1);
 }
 function w(e) {
-	(e.month = Math.max(1, Math.min(e.calendar.getMonthsInYear(e), e.month))),
-		(e.day = Math.max(1, Math.min(e.calendar.getDaysInMonth(e), e.day)));
+	(e.month = Math.max(1, Math.min(e.calendar.getMonthsInYear(e), e.month))), (e.day = Math.max(1, Math.min(e.calendar.getDaysInMonth(e), e.day)));
 }
 function x(e) {
-	e.calendar.constrainDate && e.calendar.constrainDate(e),
-		(e.year = Math.max(1, Math.min(e.calendar.getYearsInEra(e), e.year))),
-		w(e);
+	e.calendar.constrainDate && e.calendar.constrainDate(e), (e.year = Math.max(1, Math.min(e.calendar.getYearsInEra(e), e.year))), w(e);
 }
 function G(e, t) {
 	return M(
@@ -437,14 +398,7 @@ function G(e, t) {
 }
 function k(e, t) {
 	let n = e.copy();
-	return (
-		null != t.era && (n.era = t.era),
-		null != t.year && (n.year = t.year),
-		null != t.month && (n.month = t.month),
-		null != t.day && (n.day = t.day),
-		x(n),
-		n
-	);
+	return null != t.era && (n.era = t.era), null != t.year && (n.year = t.year), null != t.month && (n.month = t.month), null != t.day && (n.day = t.day), x(n), n;
 }
 function B(e, t) {
 	let n = e % t;
@@ -462,10 +416,7 @@ function F(e, t, n, r) {
 		}
 		case 'year':
 			var a, s;
-			(null === (s = (a = i.calendar).isInverseEra) || void 0 === s ? void 0 : s.call(a, i)) && (n = -n),
-				(i.year = V(e.year, n, -1 / 0, 9999, null == r ? void 0 : r.round)),
-				i.year === -1 / 0 && (i.year = 1),
-				i.calendar.balanceYearMonth && i.calendar.balanceYearMonth(i, e);
+			(null === (s = (a = i.calendar).isInverseEra) || void 0 === s ? void 0 : s.call(a, i)) && (n = -n), (i.year = V(e.year, n, -1 / 0, 9999, null == r ? void 0 : r.round)), i.year === -1 / 0 && (i.year = 1), i.calendar.balanceYearMonth && i.calendar.balanceYearMonth(i, e);
 			break;
 		case 'month':
 			i.month = V(e.month, n, 1, e.calendar.getMonthsInYear(e), null == r ? void 0 : r.round);
@@ -503,9 +454,7 @@ function Z(e) {
 var Y = new WeakMap();
 class j {
 	copy() {
-		return this.era
-			? new j(this.calendar, this.era, this.year, this.month, this.day)
-			: new j(this.calendar, this.year, this.month, this.day);
+		return this.era ? new j(this.calendar, this.era, this.year, this.month, this.day) : new j(this.calendar, this.year, this.month, this.day);
 	}
 	add(e) {
 		return M(this, e);
@@ -540,19 +489,7 @@ class j {
 var W = new WeakMap();
 class K {
 	copy() {
-		return this.era
-			? new K(
-					this.calendar,
-					this.era,
-					this.year,
-					this.month,
-					this.day,
-					this.hour,
-					this.minute,
-					this.second,
-					this.millisecond
-				)
-			: new K(this.calendar, this.year, this.month, this.day, this.hour, this.minute, this.second, this.millisecond);
+		return this.era ? new K(this.calendar, this.era, this.year, this.month, this.day, this.hour, this.minute, this.second, this.millisecond) : new K(this.calendar, this.year, this.month, this.day, this.hour, this.minute, this.second, this.millisecond);
 	}
 	add(e) {
 		return M(this, e);
@@ -572,10 +509,7 @@ class K {
 			null != n.second && (r.second = n.second),
 			null != n.millisecond && (r.millisecond = n.millisecond),
 			(function (e) {
-				(e.millisecond = Math.max(0, Math.min(e.millisecond, 1000))),
-					(e.second = Math.max(0, Math.min(e.second, 59))),
-					(e.minute = Math.max(0, Math.min(e.minute, 59))),
-					(e.hour = Math.max(0, Math.min(e.hour, 23)));
+				(e.millisecond = Math.max(0, Math.min(e.millisecond, 1000))), (e.second = Math.max(0, Math.min(e.second, 59))), (e.minute = Math.max(0, Math.min(e.minute, 59))), (e.hour = Math.max(0, Math.min(e.hour, 23)));
 			})(r),
 			r),
 			e
@@ -624,16 +558,13 @@ class K {
 	}
 	toString() {
 		var e, t;
-		return (
-			(e = this),
-			`${H(e)}T${((t = e), `${String(t.hour).padStart(2, '0')}:${String(t.minute).padStart(2, '0')}:${String(t.second).padStart(2, '0')}${t.millisecond ? String(t.millisecond / 1000).slice(1) : ''}`)}`
-		);
+		return (e = this), `${H(e)}T${((t = e), `${String(t.hour).padStart(2, '0')}:${String(t.minute).padStart(2, '0')}:${String(t.second).padStart(2, '0')}${t.millisecond ? String(t.millisecond / 1000).slice(1) : ''}`)}`;
 	}
 	compare(e) {
 		let t = p(this, e);
 		if (0 === t) {
 			var n, r;
-			return (n = this), (r = L(e)), I(n) - I(r);
+			return (n = this), (r = L(e)), m(n) - m(r);
 		}
 		return t;
 	}
@@ -643,16 +574,7 @@ class K {
 			value: void 0
 		});
 		let [t, n, r, i, s] = Z(e);
-		(this.calendar = t),
-			(this.era = n),
-			(this.year = r),
-			(this.month = i),
-			(this.day = s),
-			(this.hour = e.shift() || 0),
-			(this.minute = e.shift() || 0),
-			(this.second = e.shift() || 0),
-			(this.millisecond = e.shift() || 0),
-			x(this);
+		(this.calendar = t), (this.era = n), (this.year = r), (this.month = i), (this.day = s), (this.hour = e.shift() || 0), (this.minute = e.shift() || 0), (this.second = e.shift() || 0), (this.millisecond = e.shift() || 0), x(this);
 	}
 }
 let z = [
@@ -671,10 +593,7 @@ let z = [
 	Q = [1867, 1911, 1925, 1988, 2018],
 	X = ['meiji', 'taisho', 'showa', 'heisei', 'reiwa'];
 function $(e) {
-	let t = z.findIndex(
-		([t, n, r]) =>
-			!!(e.year < t) || (e.year === t && !!(e.month < n)) || (e.year === t && e.month === n && !!(e.day < r)) || !1
-	);
+	let t = z.findIndex(([t, n, r]) => !!(e.year < t) || (e.year === t && !!(e.month < n)) || (e.year === t && e.month === n && !!(e.day < r)) || !1);
 	return -1 === t ? z.length - 1 : 0 === t ? 0 : t - 1;
 }
 function J(e) {
@@ -702,8 +621,7 @@ class ee extends _ {
 		if (null != n) {
 			let [r, i, a] = n,
 				s = r - Q[t];
-			(e.year = Math.max(1, Math.min(s, e.year))),
-				e.year === s && ((e.month = Math.min(i, e.month)), e.month === i && (e.day = Math.min(a, e.day)));
+			(e.year = Math.max(1, Math.min(s, e.year))), e.year === s && ((e.month = Math.min(i, e.month)), e.month === i && (e.day = Math.min(a, e.day)));
 		}
 		if (1 === e.year && t >= 0) {
 			let [, n, r] = z[t];
@@ -805,14 +723,7 @@ function eo(e) {
 function el(e, t, n) {
 	let r = e > 0 ? e - 474 : e - 473,
 		i = s(r, 2820) + 474;
-	return (
-		1948320 +
-		1029983 * Math.floor(r / 2820) +
-		365 * (i - 1) +
-		Math.floor((31 * i - 5) / 128) +
-		(t <= 7 ? 31 * (t - 1) : 30 * (t - 1) + 6) +
-		n
-	);
+	return 1948320 + 1029983 * Math.floor(r / 2820) + 365 * (i - 1) + Math.floor((31 * i - 5) / 128) + (t <= 7 ? 31 * (t - 1) : 30 * (t - 1) + 6) + n;
 }
 class eu {
 	fromJulianDay(e) {
@@ -857,25 +768,17 @@ class ec extends _ {
 			i = super.fromJulianDay(e),
 			a = i.year - 78,
 			s = e - o(i.era, i.year, 1, 1);
-		if (
-			(s < 80 ? (a--, (s += (t = l(i.year - 1) ? 31 : 30) + 155 + 90 + 10)) : ((t = l(i.year) ? 31 : 30), (s -= 80)),
-			s < t)
-		)
-			(n = 1), (r = s + 1);
+		if ((s < 80 ? (a--, (s += (t = l(i.year - 1) ? 31 : 30) + 155 + 90 + 10)) : ((t = l(i.year) ? 31 : 30), (s -= 80)), s < t)) (n = 1), (r = s + 1);
 		else {
 			let e = s - t;
-			e < 155
-				? ((n = Math.floor(e / 31) + 2), (r = (e % 31) + 1))
-				: ((e -= 155), (n = Math.floor(e / 30) + 7), (r = (e % 30) + 1));
+			e < 155 ? ((n = Math.floor(e / 31) + 2), (r = (e % 31) + 1)) : ((e -= 155), (n = Math.floor(e / 30) + 7), (r = (e % 30) + 1));
 		}
 		return new j(this, a, n, r);
 	}
 	toJulianDay(e) {
 		let t, n;
 		let [r, i] = c(e.year + 78);
-		return (l(i) ? ((t = 31), (n = o(r, i, 3, 21))) : ((t = 30), (n = o(r, i, 3, 22))), 1 === e.month)
-			? n + e.day - 1
-			: ((n += t + 31 * Math.min(e.month - 2, 5)), e.month >= 8 && (n += (e.month - 7) * 30), (n += e.day - 1));
+		return (l(i) ? ((t = 31), (n = o(r, i, 3, 21))) : ((t = 30), (n = o(r, i, 3, 22))), 1 === e.month) ? n + e.day - 1 : ((n += t + 31 * Math.min(e.month - 2, 5)), e.month >= 8 && (n += (e.month - 7) * 30), (n += e.day - 1));
 	}
 	getDaysInMonth(e) {
 		return (1 === e.month && l(e.year + 78)) || (e.month >= 2 && e.month <= 6) ? 31 : 30;
@@ -944,12 +847,12 @@ class eh extends ef {
 function ep(e) {
 	return 460322 + i[e - 1300];
 }
-function eI(e, t) {
+function em(e, t) {
 	return (r[e - 1300] & (1 << (11 - (t - 1)))) == 0 ? 29 : 30;
 }
-function em(e, t) {
+function eI(e, t) {
 	let n = ep(e);
-	for (let r = 1; r < t; r++) n += eI(e, r);
+	for (let r = 1; r < t; r++) n += em(e, r);
 	return n;
 }
 function eT(e) {
@@ -973,43 +876,30 @@ class eg extends ef {
 					break;
 				}
 				if (r < i) {
-					let t = eI(e, n);
-					for (n = 1; r > t; ) (r -= t), (t = eI(e, ++n));
+					let t = em(e, n);
+					for (n = 1; r > t; ) (r -= t), (t = em(e, ++n));
 					break;
 				}
 			}
-			return new j(this, e, n, t - em(e, n) + 1);
+			return new j(this, e, n, t - eI(e, n) + 1);
 		}
 	}
 	toJulianDay(e) {
-		return e.year < 1300 || e.year > 1600 ? super.toJulianDay(e) : 1948440 + em(e.year, e.month) + (e.day - 1);
+		return e.year < 1300 || e.year > 1600 ? super.toJulianDay(e) : 1948440 + eI(e.year, e.month) + (e.day - 1);
 	}
 	getDaysInMonth(e) {
-		return e.year < 1300 || e.year > 1600 ? super.getDaysInMonth(e) : eI(e.year, e.month);
+		return e.year < 1300 || e.year > 1600 ? super.getDaysInMonth(e) : em(e.year, e.month);
 	}
 	getDaysInYear(e) {
 		return e.year < 1300 || e.year > 1600 ? super.getDaysInYear(e) : eT(e.year);
 	}
 	constructor() {
-		if (
-			(super(),
-			(this.identifier = 'islamic-umalqura'),
-			!r &&
-				(r = new Uint16Array(
-					Uint8Array.from(
-						atob(
-							'qgpUDckO1AbqBmwDrQpVBakGkgepC9QF2gpcBS0NlQZKB1QLagutBa4ETwoXBYsGpQbVCtYCWwmdBE0KJg2VDawFtgm6AlsKKwWVCsoG6Qr0AnYJtgJWCcoKpAvSC9kF3AJtCU0FpQpSC6ULtAW2CVcFlwJLBaMGUgdlC2oFqworBZUMSg2lDcoF1gpXCasESwmlClILagt1BXYCtwhbBFUFqQW0BdoJ3QRuAjYJqgpUDbIN1QXaAlsJqwRVCkkLZAtxC7QFtQpVCiUNkg7JDtQG6QprCasEkwpJDaQNsg25CroEWworBZUKKgtVC1wFvQQ9Ah0JlQpKC1oLbQW2AjsJmwRVBqkGVAdqC2wFrQpVBSkLkgupC9QF2gpaBasKlQVJB2QHqgu1BbYCVgpNDiULUgtqC60FrgIvCZcESwalBqwG1gpdBZ0ETQoWDZUNqgW1BdoCWwmtBJUFygbkBuoK9QS2AlYJqgpUC9IL2QXqAm0JrQSVCkoLpQuyBbUJ1gSXCkcFkwZJB1ULagVrCisFiwpGDaMNygXWCtsEawJLCaUKUgtpC3UFdgG3CFsCKwVlBbQF2gntBG0BtgimClINqQ3UBdoKWwmrBFMGKQdiB6kLsgW1ClUFJQuSDckO0gbpCmsFqwRVCikNVA2qDbUJugQ7CpsETQqqCtUK2gJdCV4ELgqaDFUNsga5BroEXQotBZUKUguoC7QLuQXaAloJSgukDdEO6AZqC20FNQWVBkoNqA3UDdoGWwWdAisGFQtKC5ULqgWuCi4JjwwnBZUGqgbWCl0FnQI='
-						),
-						(e) => e.charCodeAt(0)
-					).buffer
-				)),
-			!i)
-		) {
+		if ((super(), (this.identifier = 'islamic-umalqura'), !r && (r = new Uint16Array(Uint8Array.from(atob('qgpUDckO1AbqBmwDrQpVBakGkgepC9QF2gpcBS0NlQZKB1QLagutBa4ETwoXBYsGpQbVCtYCWwmdBE0KJg2VDawFtgm6AlsKKwWVCsoG6Qr0AnYJtgJWCcoKpAvSC9kF3AJtCU0FpQpSC6ULtAW2CVcFlwJLBaMGUgdlC2oFqworBZUMSg2lDcoF1gpXCasESwmlClILagt1BXYCtwhbBFUFqQW0BdoJ3QRuAjYJqgpUDbIN1QXaAlsJqwRVCkkLZAtxC7QFtQpVCiUNkg7JDtQG6QprCasEkwpJDaQNsg25CroEWworBZUKKgtVC1wFvQQ9Ah0JlQpKC1oLbQW2AjsJmwRVBqkGVAdqC2wFrQpVBSkLkgupC9QF2gpaBasKlQVJB2QHqgu1BbYCVgpNDiULUgtqC60FrgIvCZcESwalBqwG1gpdBZ0ETQoWDZUNqgW1BdoCWwmtBJUFygbkBuoK9QS2AlYJqgpUC9IL2QXqAm0JrQSVCkoLpQuyBbUJ1gSXCkcFkwZJB1ULagVrCisFiwpGDaMNygXWCtsEawJLCaUKUgtpC3UFdgG3CFsCKwVlBbQF2gntBG0BtgimClINqQ3UBdoKWwmrBFMGKQdiB6kLsgW1ClUFJQuSDckO0gbpCmsFqwRVCikNVA2qDbUJugQ7CpsETQqqCtUK2gJdCV4ELgqaDFUNsga5BroEXQotBZUKUguoC7QLuQXaAloJSgukDdEO6AZqC20FNQWVBkoNqA3UDdoGWwWdAisGFQtKC5ULqgWuCi4JjwwnBZUGqgbWCl0FnQI='), (e) => e.charCodeAt(0)).buffer)), !i)) {
 			i = new Uint32Array(301);
 			let e = 0;
 			for (let t = 1300; t <= 1600; t++) {
 				i[t - 1300] = e;
-				for (let n = 1; n <= 12; n++) e += eI(t, n);
+				for (let n = 1; n <= 12; n++) e += em(t, n);
 			}
 		}
 	}
@@ -1081,8 +971,7 @@ class ey {
 		return ['AM'];
 	}
 	balanceYearMonth(e, t) {
-		t.year !== e.year &&
-			(eN(t.year) && !eN(e.year) && t.month > 6 ? e.month-- : !eN(t.year) && eN(e.year) && t.month > 6 && e.month++);
+		t.year !== e.year && (eN(t.year) && !eN(e.year) && t.month > 6 ? e.month-- : !eN(t.year) && eN(e.year) && t.month > 6 && e.month++);
 	}
 	constructor() {
 		this.identifier = 'hebrew';

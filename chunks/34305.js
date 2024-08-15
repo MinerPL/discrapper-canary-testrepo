@@ -41,9 +41,7 @@ class T extends a.PureComponent {
 		let e, t;
 		let { path: n, label: a, editingPath: s, isDefault: l, metadata: d } = this.props;
 		return (
-			null != d &&
-				((e = null != d.availableKB ? (0, _.BU)(d.availableKB, { useKibibytes: !0 }) : null),
-				(t = null != d.totalKB ? (0, _.BU)(d.totalKB, { useKibibytes: !0 }) : null)),
+			null != d && ((e = null != d.availableKB ? (0, _.BU)(d.availableKB, { useKibibytes: !0 }) : null), (t = null != d.totalKB ? (0, _.BU)(d.totalKB, { useKibibytes: !0 }) : null)),
 			(0, i.jsxs)(c.Z, {
 				className: I.installationPath,
 				align: c.Z.Align.CENTER,

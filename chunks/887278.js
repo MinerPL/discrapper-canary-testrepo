@@ -1,6 +1,6 @@
 n.d(t, {
 	$1: function () {
-		return I;
+		return m;
 	},
 	YT: function () {
 		return T;
@@ -29,17 +29,13 @@ let p = {
 	ptb: [1, 0, 1005, 2],
 	stable: [1, 0, 9001, 2]
 };
-function I() {
+function m() {
 	var e;
-	return !(null === E.ZP || void 0 === E.ZP
-		? void 0
-		: null === (e = E.ZP.isModuleVersionAtLeast) || void 0 === e
-			? void 0
-			: e.call(E.ZP, 'discord_hook', p));
+	return !(null === E.ZP || void 0 === E.ZP ? void 0 : null === (e = E.ZP.isModuleVersionAtLeast) || void 0 === e ? void 0 : e.call(E.ZP, 'discord_hook', p));
 }
-async function m() {
+async function I() {
 	if (!(0, _.isWindows)()) return Promise.reject(Error('Hook is only available on Windows'));
-	if (I()) return Promise.reject(Error('Hook module is too old'));
+	if (m()) return Promise.reject(Error('Hook module is too old'));
 	await E.ZP.ensureModule('discord_hook');
 	let e = await E.ZP.requireModule('discord_hook');
 	return (
@@ -49,17 +45,14 @@ async function m() {
 				n = f.Z.getCurrentConfig({ location: 'edd7d3_1' }, { autoTrackExposure: !1 });
 			n.enableCrashReporting && (console.log('Hook: Enabling crash reporting.'), (t |= 1));
 			let r = c.default.getCurrentUser();
-			null != r && (r.isStaff() || n.enableCrashTrigger) && (console.log('Hook: Enabling crash trigger.'), (t |= 2)),
-				e.setFlags(t);
+			null != r && (r.isStaff() || n.enableCrashTrigger) && (console.log('Hook: Enabling crash trigger.'), (t |= 2)), e.setFlags(t);
 		})(e),
 		e
 	);
 }
-((i = r || (r = {}))[(i.None = 0)] = 'None'),
-	(i[(i.EnableCrashReporting = 1)] = 'EnableCrashReporting'),
-	(i[(i.EnableCrashTrigger = 2)] = 'EnableCrashTrigger');
+((i = r || (r = {}))[(i.None = 0)] = 'None'), (i[(i.EnableCrashReporting = 1)] = 'EnableCrashReporting'), (i[(i.EnableCrashTrigger = 2)] = 'EnableCrashTrigger');
 function T(e, t) {
-	return m().then((n) => {
+	return I().then((n) => {
 		var r;
 		let i = null === (r = l.ZP.getGameForPID(e)) || void 0 === r ? void 0 : r.name,
 			c = u.Z.getGameByName(i),
@@ -93,7 +86,7 @@ function T(e, t) {
 	});
 }
 function g(e) {
-	return m().then((t) => {
+	return I().then((t) => {
 		t.cancelAttachToProcess(e);
 	});
 }

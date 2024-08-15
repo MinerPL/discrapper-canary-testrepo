@@ -25,22 +25,13 @@ let i = {
 				}
 			: function (e) {
 					let t = (0, r.useContext)(a);
-					t === i &&
-						!o &&
-						console.warn(
-							'When server rendering, you must wrap your application in an <SSRProvider> to ensure consistent ids are generated between the client and server.'
-						);
+					t === i && !o && console.warn('When server rendering, you must wrap your application in an <SSRProvider> to ensure consistent ids are generated between the client and server.');
 					let n = (function (e = !1) {
 							let t = (0, r.useContext)(a),
 								n = (0, r.useRef)(null);
 							if (null === n.current && !e) {
 								var i, s;
-								let e =
-									null === (s = r.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED) || void 0 === s
-										? void 0
-										: null === (i = s.ReactCurrentOwner) || void 0 === i
-											? void 0
-											: i.current;
+								let e = null === (s = r.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED) || void 0 === s ? void 0 : null === (i = s.ReactCurrentOwner) || void 0 === i ? void 0 : i.current;
 								if (e) {
 									let n = l.get(e);
 									null == n

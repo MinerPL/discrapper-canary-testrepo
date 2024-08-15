@@ -1,10 +1,7 @@
 function t(e, r) {
 	for (var t = 0; t < r.length; t++) {
 		var a = r[t];
-		(a.enumerable = a.enumerable || !1),
-			(a.configurable = !0),
-			'value' in a && (a.writable = !0),
-			Object.defineProperty(e, a.key, a);
+		(a.enumerable = a.enumerable || !1), (a.configurable = !0), 'value' in a && (a.writable = !0), Object.defineProperty(e, a.key, a);
 	}
 }
 var a = (function () {

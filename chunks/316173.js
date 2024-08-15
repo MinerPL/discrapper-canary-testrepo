@@ -17,11 +17,7 @@ t.Z = () => {
 	let [t, n] = (0, a.useState)((null === (e = o.K.get(m, 'false')) || void 0 === e ? void 0 : e.toString()) === 'true'),
 		s = (0, l.e7)([d.C], () => {
 			var e;
-			return (0, u.fD)()
-				? null === (e = d.C.getCurrentBuildOverride().overrides) || void 0 === e
-					? void 0
-					: e.discord_web
-				: null;
+			return (0, u.fD)() ? (null === (e = d.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
 		});
 	if (t) return null;
 	let I = () => {
@@ -46,11 +42,7 @@ t.Z = () => {
 		: 'staging' === window.GLOBAL_ENV.RELEASE_CHANNEL
 			? (0, i.jsxs)('div', {
 					className: r()(h.devBanner, h.staging),
-					children: [
-						(0, i.jsx)(_.Z, { className: h.icon }),
-						E.Z.Messages.DEV_NOTICE_STAGING.format({ buildNumber: '318833' }),
-						(0, i.jsx)(g, {})
-					]
+					children: [(0, i.jsx)(_.Z, { className: h.icon }), E.Z.Messages.DEV_NOTICE_STAGING.format({ buildNumber: '318916' }), (0, i.jsx)(g, {})]
 				})
 			: null;
 };

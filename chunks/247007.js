@@ -153,9 +153,7 @@ s.Z = (e) => {
 											(0, t.jsx)(c.Text, {
 												className: h.centerText,
 												variant: 'text-md/normal',
-												children: x.Z.Messages.HUB_EMAIL_CONNECTION_GUILD_SELECT_NO_RESULTS_SUBHEADER.format({
-													onJoinWaitlist: L
-												})
+												children: x.Z.Messages.HUB_EMAIL_CONNECTION_GUILD_SELECT_NO_RESULTS_SUBHEADER.format({ onJoinWaitlist: L })
 											})
 										]
 									})

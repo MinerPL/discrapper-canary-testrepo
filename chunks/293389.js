@@ -109,12 +109,7 @@ function b(e) {
 			application_id: null == e ? void 0 : e.id,
 			game_name: m.name
 		}),
-			(0, c.showToast)(
-				(0, c.createToast)(
-					h.Z.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION_CONFIRMATION.format({ gameName: m.name }),
-					c.ToastType.SUCCESS
-				)
-			),
+			(0, c.showToast)((0, c.createToast)(h.Z.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION_CONFIRMATION.format({ gameName: m.name }), c.ToastType.SUCCESS)),
 			O(!0);
 	}
 	return (0, n.jsxs)('div', {
@@ -162,9 +157,7 @@ function b(e) {
 						let e;
 						let { played: s, exePath: t } = m;
 						return (
-							i
-								? (e = h.Z.Messages.SETTINGS_GAMES_NOW_PLAYING_STATE)
-								: null != s && '' !== s && (e = h.Z.Messages.SETTINGS_GAMES_LAST_PLAYED.format({ when: s })),
+							i ? (e = h.Z.Messages.SETTINGS_GAMES_NOW_PLAYING_STATE) : null != s && '' !== s && (e = h.Z.Messages.SETTINGS_GAMES_LAST_PLAYED.format({ when: s })),
 							(0, n.jsx)('div', {
 								className: p.lastPlayed,
 								children: (0, n.jsx)(E.Z, {
@@ -379,9 +372,7 @@ s.Z = function (e) {
 					]
 				}),
 				0 === i.length
-					? (0, n.jsx)(v, {
-							children: (0, n.jsx)(c.EmptyStateText, { children: h.Z.Messages.SETTINGS_GAMES_NO_GAMES_HEADER })
-						})
+					? (0, n.jsx)(v, { children: (0, n.jsx)(c.EmptyStateText, { children: h.Z.Messages.SETTINGS_GAMES_NO_GAMES_HEADER }) })
 					: (0, n.jsxs)(c.FormSection, {
 							className: f.marginTop40,
 							children: [
@@ -391,9 +382,7 @@ s.Z = function (e) {
 								}),
 								(0, n.jsx)(c.FormText, {
 									type: c.FormTextTypes.DESCRIPTION,
-									children: h.Z.Messages.SETTINGS_GAMES_IGDB_ATTRIBUTION.format({
-										igdbLink: 'https://www.igdb.com/about'
-									})
+									children: h.Z.Messages.SETTINGS_GAMES_IGDB_ATTRIBUTION.format({ igdbLink: 'https://www.igdb.com/about' })
 								}),
 								i.map((e) =>
 									(0, n.jsx)(

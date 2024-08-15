@@ -33,16 +33,7 @@ var i,
 	I = n(701488);
 ((l = i || (i = {}))[(l.START = 0)] = 'START'), (l[(l.JOIN = 1)] = 'JOIN'), (l[(l.LEAVE = 2)] = 'LEAVE');
 function E(e) {
-	let {
-			activityItem: t,
-			channel: n,
-			locationObject: i,
-			onActivityItemSelected: l,
-			embeddedActivitiesManager: r,
-			assetNames: o = ['embedded_cover'],
-			backgroundResolution: u = 250,
-			launchingComponentId: c
-		} = e,
+	let { activityItem: t, channel: n, locationObject: i, onActivityItemSelected: l, embeddedActivitiesManager: r, assetNames: o = ['embedded_cover'], backgroundResolution: u = 250, launchingComponentId: c } = e,
 		{ application: s, activity: p } = t,
 		f = p.client_platform_config[(0, Z.Z)((0, d.getOS)())],
 		m = null != f.label_until && Date.now() < Date.parse(f.label_until),
@@ -91,22 +82,10 @@ function A(e) {
 			let { embeddedActivity: t } = e;
 			return null != d && d.id === t.applicationId;
 		});
-	return null == d
-		? i
-		: (null != l && (null == a ? void 0 : a.channelId) === l.id && (null == o ? void 0 : o.id) === d.id
-				? (i = 2)
-				: null != s && (i = 1),
-			i);
+	return null == d ? i : (null != l && (null == a ? void 0 : a.channelId) === l.id && (null == o ? void 0 : o.id) === d.id ? (i = 2) : null != s && (i = 1), i);
 }
 function w(e) {
-	let {
-			applicationId: t,
-			channelId: n,
-			locationObject: i,
-			embeddedActivitiesManager: l,
-			onActivityItemSelectedProp: r,
-			launchingComponentId: a
-		} = e,
+	let { applicationId: t, channelId: n, locationObject: i, embeddedActivitiesManager: l, onActivityItemSelectedProp: r, launchingComponentId: a } = e,
 		u = A({
 			channelId: n,
 			applicationId: t

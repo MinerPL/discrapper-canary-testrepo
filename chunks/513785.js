@@ -21,9 +21,7 @@ function l(e, t, n) {
 		e
 	);
 }
-((r = i || (i = {}))[(r.NOT_FETCHED = 0)] = 'NOT_FETCHED'),
-	(r[(r.FETCHING = 1)] = 'FETCHING'),
-	(r[(r.FETCHED = 2)] = 'FETCHED');
+((r = i || (i = {}))[(r.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (r[(r.FETCHING = 1)] = 'FETCHING'), (r[(r.FETCHED = 2)] = 'FETCHED');
 let u = {
 		userTenureRewardStatusByRewardId: {},
 		lastFetchTimeMs: null,

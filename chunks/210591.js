@@ -45,18 +45,7 @@ function T(e) {
 		o = r.filter((e) => e).length / r.length,
 		T = 1 === o,
 		m = (0, c.useSpring)({ width: ''.concat(100 * o, '%') }),
-		N = [
-			_.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_PROMO_PAGE.format({
-				promoPageGuideUrl: u.iv.PROMO_PAGE_GUIDE
-			}),
-			_.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_CASE_STUDIES.format({ caseStudiesUrl: u.iv.CASE_STUDIES }),
-			_.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_SUBSCRIPTION_OFFERING.format({
-				subscriptionOfferingGuideUrl: u.iv.SUBSCRIPTION_OFFERING_GUIDE
-			}),
-			_.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_TIER_STRUCTURE.format({
-				tierStructureGuideUrl: u.iv.TIER_STRUCTURE_GUIDE
-			})
-		],
+		N = [_.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_PROMO_PAGE.format({ promoPageGuideUrl: u.iv.PROMO_PAGE_GUIDE }), _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_CASE_STUDIES.format({ caseStudiesUrl: u.iv.CASE_STUDIES }), _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_SUBSCRIPTION_OFFERING.format({ subscriptionOfferingGuideUrl: u.iv.SUBSCRIPTION_OFFERING_GUIDE }), _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_TIER_STRUCTURE.format({ tierStructureGuideUrl: u.iv.TIER_STRUCTURE_GUIDE })],
 		S = n
 			? null
 			: (0, s.jsxs)(s.Fragment, {

@@ -35,13 +35,7 @@ class _ extends s.Z {
 	}
 	destroy() {
 		var e;
-		null === (e = this.audioElement) || void 0 === e || e.pause(),
-			null != this.videoStreamId && (0, l.jC)(this.videoStreamId),
-			null != this.streamSourceNode && (this.streamSourceNode.disconnect(), (this.streamSourceNode = null)),
-			null != this.levelNode &&
-				(this.levelNode.disconnect(), this.levelNode.port.postMessage('close'), (this.levelNode = null)),
-			this.setSpeakingFlags(u.Dg.NONE),
-			this.removeAllListeners();
+		null === (e = this.audioElement) || void 0 === e || e.pause(), null != this.videoStreamId && (0, l.jC)(this.videoStreamId), null != this.streamSourceNode && (this.streamSourceNode.disconnect(), (this.streamSourceNode = null)), null != this.levelNode && (this.levelNode.disconnect(), this.levelNode.port.postMessage('close'), (this.levelNode = null)), this.setSpeakingFlags(u.Dg.NONE), this.removeAllListeners();
 	}
 	addTrack(e) {
 		if (this.stream.getTracks().includes(e)) return this.stream.getTracks().length;
@@ -49,9 +43,7 @@ class _ extends s.Z {
 			let e = document.createElement('audio');
 			e.srcObject = this.stream;
 			let t = e.play();
-			null != t && t.catch(() => this.emit('interactionrequired', !0)),
-				(this.audioElement = e),
-				this.updateAudioElement();
+			null != t && t.catch(() => this.emit('interactionrequired', !0)), (this.audioElement = e), this.updateAudioElement();
 		}
 		if (null == this.levelNode && this.stream.getAudioTracks().length > 0) {
 			this.streamSourceNode = this.audioContext.createMediaStreamSource(this.stream);
@@ -81,11 +73,7 @@ class _ extends s.Z {
 		);
 	}
 	removeTrack(e) {
-		return (
-			this.stream.removeTrack(e),
-			'video' === e.kind && (null != this.videoStreamId && (0, l.jC)(this.videoStreamId), this.emit('video', null)),
-			this.stream.getTracks().length
-		);
+		return this.stream.removeTrack(e), 'video' === e.kind && (null != this.videoStreamId && (0, l.jC)(this.videoStreamId), this.emit('video', null)), this.stream.getTracks().length;
 	}
 	setSinkId(e) {
 		(this.sinkId = e), this.updateAudioElement();
@@ -120,19 +108,6 @@ class _ extends s.Z {
 		}
 	}
 	constructor(e, t) {
-		super(),
-			c(this, 'id', void 0),
-			c(this, '_speakingFlags', u.Dg.NONE),
-			c(this, '_mute', !1),
-			c(this, '_volume', u.Qx),
-			c(this, 'sinkId', null),
-			c(this, 'audioElement', null),
-			c(this, 'stream', new MediaStream()),
-			c(this, 'videoStreamId', null),
-			c(this, 'levelNode', null),
-			c(this, 'streamSourceNode', null),
-			c(this, 'audioContext', void 0),
-			(this.id = e),
-			(this.audioContext = t);
+		super(), c(this, 'id', void 0), c(this, '_speakingFlags', u.Dg.NONE), c(this, '_mute', !1), c(this, '_volume', u.Qx), c(this, 'sinkId', null), c(this, 'audioElement', null), c(this, 'stream', new MediaStream()), c(this, 'videoStreamId', null), c(this, 'levelNode', null), c(this, 'streamSourceNode', null), c(this, 'audioContext', void 0), (this.id = e), (this.audioContext = t);
 	}
 }

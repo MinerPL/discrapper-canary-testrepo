@@ -120,10 +120,7 @@ var r = n(67867),
 		!0
 	),
 	ed = function (e) {
-		(this.entries = []),
-			(this.url = null),
-			void 0 !== e &&
-				(k(e) ? this.parseObject(e) : this.parseQuery('string' == typeof e ? ('?' === Y(e, 0) ? et(e, 1) : e) : C(e)));
+		(this.entries = []), (this.url = null), void 0 !== e && (k(e) ? this.parseObject(e) : this.parseQuery('string' == typeof e ? ('?' === Y(e, 0) ? et(e, 1) : e) : C(e)));
 	};
 ed.prototype = {
 	type: O,
@@ -142,8 +139,7 @@ ed.prototype = {
 			u = N(e);
 		if (u)
 			for (n = (t = S(e, u)).next; !(r = a(n, t)).done; ) {
-				if ((s = a((i = (o = S(_(r.value))).next), o)).done || (c = a(i, o)).done || !a(i, o).done)
-					throw new K('Expected sequence with length 2');
+				if ((s = a((i = (o = S(_(r.value))).next), o)).done || (c = a(i, o)).done || !a(i, o).done) throw new K('Expected sequence with length 2');
 				$(l, {
 					key: C(s.value),
 					value: C(c.value)
@@ -200,17 +196,7 @@ if (
 					n.updateURL();
 			},
 			delete: function (e) {
-				for (
-					var t = M(this),
-						n = P(arguments.length, 1),
-						r = t.entries,
-						o = C(e),
-						a = n < 2 ? void 0 : arguments[1],
-						i = void 0 === a ? a : C(a),
-						c = 0;
-					c < r.length;
-
-				) {
+				for (var t = M(this), n = P(arguments.length, 1), r = t.entries, o = C(e), a = n < 2 ? void 0 : arguments[1], i = void 0 === a ? a : C(a), c = 0; c < r.length; ) {
 					var l = r[c];
 					if (l.key === o && (void 0 === i || l.value === i)) {
 						if ((X(r, c, 1), void 0 !== i)) break;
@@ -231,16 +217,7 @@ if (
 				return r;
 			},
 			has: function (e) {
-				for (
-					var t = M(this).entries,
-						n = P(arguments.length, 1),
-						r = C(e),
-						o = n < 2 ? void 0 : arguments[1],
-						a = void 0 === o ? o : C(o),
-						i = 0;
-					i < t.length;
-
-				) {
+				for (var t = M(this).entries, n = P(arguments.length, 1), r = C(e), o = n < 2 ? void 0 : arguments[1], a = void 0 === o ? o : C(o), i = 0; i < t.length; ) {
 					var s = t[i++];
 					if (s.key === r && (void 0 === a || s.value === a)) return !0;
 				}
@@ -250,8 +227,7 @@ if (
 				var n,
 					r = M(this);
 				P(arguments.length, 1);
-				for (var o = r.entries, a = !1, i = C(e), c = C(t), l = 0; l < o.length; l++)
-					(n = o[l]).key === i && (a ? X(o, l--, 1) : ((a = !0), (n.value = c)));
+				for (var o = r.entries, a = !1, i = C(e), c = C(t), l = 0; l < o.length; l++) (n = o[l]).key === i && (a ? X(o, l--, 1) : ((a = !0), (n.value = c)));
 				!a &&
 					$(o, {
 						key: i,
@@ -268,8 +244,7 @@ if (
 					e.updateURL();
 			},
 			forEach: function (e) {
-				for (var t, n = M(this).entries, r = g(e, arguments.length > 1 ? arguments[1] : void 0), o = 0; o < n.length; )
-					r((t = n[o++]).value, t.key, this);
+				for (var t, n = M(this).entries, r = g(e, arguments.length > 1 ? arguments[1] : void 0), o = 0; o < n.length; ) r((t = n[o++]).value, t.key, this);
 			},
 			keys: function () {
 				return new eu(this, 'keys');
@@ -319,8 +294,7 @@ if (
 					n = e.body;
 				if (b(n) === O)
 					return (
-						!ef((t = e.headers ? new j(e.headers) : new j()), 'content-type') &&
-							em(t, 'content-type', 'application/x-www-form-urlencoded;charset=UTF-8'),
+						!ef((t = e.headers ? new j(e.headers) : new j()), 'content-type') && em(t, 'content-type', 'application/x-www-form-urlencoded;charset=UTF-8'),
 						Z(e, {
 							body: w(0, C(n)),
 							headers: w(0, t)

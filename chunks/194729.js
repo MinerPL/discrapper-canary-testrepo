@@ -98,12 +98,8 @@ class $ extends a.PureComponent {
 				length: parseInt(n, 10)
 			});
 		} else null != l && l !== Y.Hk && h.Z.wait(() => (0, m.uY)(l));
-		let u =
-			null !== (t = null === (e = (0, L.s1)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t
-				? t
-				: 0;
-		u > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({ to: u })),
-			(0, O.e)('guild_discovery');
+		let u = null !== (t = null === (e = (0, L.s1)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
+		u > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({ to: u })), (0, O.e)('guild_discovery');
 	}
 	componentDidUpdate(e) {
 		let {
@@ -127,14 +123,11 @@ class $ extends a.PureComponent {
 			var l;
 			null === (l = this._scroller.current) || void 0 === l || l.scrollTo({ to: 0 });
 		}
-		e.currentCategoryId !== r && y.Az(this.loadId, Array.from(this._guildIdsSeen)),
-			e.mostRecentQuery.length > 0 && a.length < 1 && s !== r && (0, m.uY)(null != s ? s : Y.Hk);
+		e.currentCategoryId !== r && y.Az(this.loadId, Array.from(this._guildIdsSeen)), e.mostRecentQuery.length > 0 && a.length < 1 && s !== r && (0, m.uY)(null != s ? s : Y.Hk);
 	}
 	componentWillUnmount() {
 		let { currentCategoryId: e, recommendationsLoadId: t, recommendationsGuilds: n } = this.props;
-		e === Y.Hk
-			? null != n && null != t && y.Az(t, this.getOrderedGuildIdsSeen(n.map((e) => e.id)), 'Game Recommendations')
-			: y.Az(this.loadId, Array.from(this._guildIdsSeen));
+		e === Y.Hk ? null != n && null != t && y.Az(t, this.getOrderedGuildIdsSeen(n.map((e) => e.id)), 'Game Recommendations') : y.Az(this.loadId, Array.from(this._guildIdsSeen));
 	}
 	getOrderedGuildIdsSeen(e) {
 		return e.filter((e) => this._guildIdsSeen.has(e));
@@ -171,17 +164,8 @@ class $ extends a.PureComponent {
 			currentCategoryName: c
 		} = this.props;
 		j.w.trackExposure({ location: '54961b_1' });
-		let { shouldDisplayRecommendedSearchTags: d } = j.w.getCurrentConfig(
-				{ location: '54961b_2' },
-				{ autoTrackExposure: !1 }
-			),
-			u = d
-				? l === Y.Hk
-					? K.Z.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER_TAGS
-					: K.Z.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER_TAGS.format({ categoryName: c })
-				: l === Y.Hk
-					? K.Z.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER
-					: K.Z.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({ categoryName: c }),
+		let { shouldDisplayRecommendedSearchTags: d } = j.w.getCurrentConfig({ location: '54961b_2' }, { autoTrackExposure: !1 }),
+			u = d ? (l === Y.Hk ? K.Z.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER_TAGS : K.Z.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER_TAGS.format({ categoryName: c })) : l === Y.Hk ? K.Z.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : K.Z.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({ categoryName: c }),
 			_ = null !== (t = null === (e = a[n]) || void 0 === e ? void 0 : e[l]) && void 0 !== t ? t : P.xk;
 		return (0, i.jsx)(V.Z, {
 			loadId: this.loadId,
@@ -207,10 +191,7 @@ class $ extends a.PureComponent {
 				currentCategoryName: d
 			} = this.props,
 			{ loadingGuildId: u } = this.state,
-			_ =
-				c === Y.Hk
-					? K.Z.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER
-					: K.Z.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({ categoryName: d }),
+			_ = c === Y.Hk ? K.Z.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : K.Z.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({ categoryName: d }),
 			E = null !== (t = null === (e = a[n]) || void 0 === e ? void 0 : e[c]) && void 0 !== t ? t : P.xk;
 		return (0, i.jsx)(H.Z, {
 			loadId: this.loadId,
@@ -268,23 +249,10 @@ class $ extends a.PureComponent {
 		let { currentCategoryName: n, mostRecentQuery: s, currentCategoryId: l, guilds: c } = this.props,
 			d = s.length > 0;
 		j.w.trackExposure({ location: '54961b_3' });
-		let { shouldDisplayRecommendedSearchTags: _ } = j.w.getCurrentConfig(
-				{ location: '54961b_4' },
-				{ autoTrackExposure: !1 }
-			),
-			h =
-				l === Y.Hk
-					? null === (e = c[W.Lcj.FEATURED]) || void 0 === e
-						? void 0
-						: e.guilds
-					: null === (t = c[l]) || void 0 === t
-						? void 0
-						: t.guilds;
+		let { shouldDisplayRecommendedSearchTags: _ } = j.w.getCurrentConfig({ location: '54961b_4' }, { autoTrackExposure: !1 }),
+			h = l === Y.Hk ? (null === (e = c[W.Lcj.FEATURED]) || void 0 === e ? void 0 : e.guilds) : null === (t = c[l]) || void 0 === t ? void 0 : t.guilds;
 		if (l === Y.U) return (0, i.jsx)(N.Z, { loadId: this.loadId });
-		let m =
-			l === Y.Hk
-				? K.Z.Messages.GUILD_DISCOVERY_HOME_TITLE
-				: K.Z.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({ categoryName: n });
+		let m = l === Y.Hk ? K.Z.Messages.GUILD_DISCOVERY_HOME_TITLE : K.Z.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({ categoryName: n });
 		return (0, i.jsxs)('div', {
 			className: q.pageWrapper,
 			children: [
@@ -320,10 +288,7 @@ class $ extends a.PureComponent {
 														(0, i.jsx)(E.Heading, {
 															variant: 'heading-xl/semibold',
 															className: q.searchTitle,
-															children:
-																l === Y.Hk
-																	? K.Z.Messages.GUILD_DISCOVERY_HOME_TITLE
-																	: K.Z.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({ categoryName: n })
+															children: l === Y.Hk ? K.Z.Messages.GUILD_DISCOVERY_HOME_TITLE : K.Z.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({ categoryName: n })
 														}),
 														(0, i.jsx)(E.Text, {
 															variant: 'text-md/normal',
@@ -399,12 +364,7 @@ class $ extends a.PureComponent {
 			J(this, 'handleScroll', () => {
 				var e, t;
 				let { animatedValue: n } = this.state,
-					i =
-						null !==
-							(t = null === (e = this._scroller.current) || void 0 === e ? void 0 : e.getScrollerState().scrollTop) &&
-						void 0 !== t
-							? t
-							: 0;
+					i = null !== (t = null === (e = this._scroller.current) || void 0 === e ? void 0 : e.getScrollerState().scrollTop) && void 0 !== t ? t : 0;
 				n.setValue(Math.min(1, i / 200));
 			}),
 			J(this, 'handleViewGuild', async (e, t, n, i) => {
@@ -412,12 +372,7 @@ class $ extends a.PureComponent {
 				let { currentCategoryId: r } = this.props,
 					{ loadingGuildId: l } = this.state;
 				if (e === l) return;
-				let o =
-						null !==
-							(s = null === (a = this._scroller.current) || void 0 === a ? void 0 : a.getScrollerState().scrollTop) &&
-						void 0 !== s
-							? s
-							: 0,
+				let o = null !== (s = null === (a = this._scroller.current) || void 0 === a ? void 0 : a.getScrollerState().scrollTop) && void 0 !== s ? s : 0,
 					{ location: c } = (0, L.s1)();
 				(0, L.dL)({
 					...c,

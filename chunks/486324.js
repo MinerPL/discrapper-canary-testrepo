@@ -68,13 +68,7 @@ var r,
 	u,
 	i,
 	c = e(678916);
-((r = u || (u = {}))[(r.AVATAR = 0)] = 'AVATAR'),
-	(r[(r.BANNER = 1)] = 'BANNER'),
-	(r[(r.GUILD_BANNER = 2)] = 'GUILD_BANNER'),
-	(r[(r.VIDEO_BACKGROUND = 3)] = 'VIDEO_BACKGROUND'),
-	(r[(r.SCHEDULED_EVENT_IMAGE = 4)] = 'SCHEDULED_EVENT_IMAGE'),
-	(r[(r.HOME_HEADER = 5)] = 'HOME_HEADER'),
-	(r[(r.AVATAR_DECORATION = 6)] = 'AVATAR_DECORATION');
+((r = u || (u = {}))[(r.AVATAR = 0)] = 'AVATAR'), (r[(r.BANNER = 1)] = 'BANNER'), (r[(r.GUILD_BANNER = 2)] = 'GUILD_BANNER'), (r[(r.VIDEO_BACKGROUND = 3)] = 'VIDEO_BACKGROUND'), (r[(r.SCHEDULED_EVENT_IMAGE = 4)] = 'SCHEDULED_EVENT_IMAGE'), (r[(r.HOME_HEADER = 5)] = 'HOME_HEADER'), (r[(r.AVATAR_DECORATION = 6)] = 'AVATAR_DECORATION');
 let f = 568,
 	a = 2400,
 	s = 848,
@@ -94,6 +88,4 @@ let f = 568,
 	R = 142,
 	I = c.HE.width / c.HE.height,
 	A = f / I;
-((o = i || (i = {}))[(o.CROP_GIF_START = 0)] = 'CROP_GIF_START'),
-	(o[(o.CROP_GIF_COMPLETE = 1)] = 'CROP_GIF_COMPLETE'),
-	(o[(o.CROP_GIF_ERROR = 2)] = 'CROP_GIF_ERROR');
+((o = i || (i = {}))[(o.CROP_GIF_START = 0)] = 'CROP_GIF_START'), (o[(o.CROP_GIF_COMPLETE = 1)] = 'CROP_GIF_COMPLETE'), (o[(o.CROP_GIF_ERROR = 2)] = 'CROP_GIF_ERROR');

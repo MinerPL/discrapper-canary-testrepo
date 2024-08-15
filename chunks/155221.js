@@ -18,8 +18,8 @@ var r = n(735250),
 	f = n(765717),
 	h = n(663993),
 	p = n(329816),
-	I = n(554608),
-	m = n(83949),
+	m = n(554608),
+	I = n(83949),
 	T = n(137412),
 	g = n(314897),
 	S = n(626135),
@@ -67,93 +67,14 @@ let D = (0, h.Un)({
 		name: 'ActivateDevice'
 	}),
 	x = (0, h.Un)({
-		createPromise: () =>
-			Promise.all([
-				n.e('77298'),
-				n.e('23357'),
-				n.e('23755'),
-				n.e('89350'),
-				n.e('11751'),
-				n.e('50990'),
-				n.e('35535'),
-				n.e('18438'),
-				n.e('29549'),
-				n.e('6380'),
-				n.e('18543'),
-				n.e('31605'),
-				n.e('72181'),
-				n.e('30671'),
-				n.e('65840'),
-				n.e('81272'),
-				n.e('95393'),
-				n.e('53115'),
-				n.e('18101'),
-				n.e('29637'),
-				n.e('86975'),
-				n.e('90508'),
-				n.e('46097'),
-				n.e('8739'),
-				n.e('58059'),
-				n.e('22173'),
-				n.e('18146'),
-				n.e('30243'),
-				n.e('37229'),
-				n.e('99008'),
-				n.e('7590'),
-				n.e('39285'),
-				n.e('59743'),
-				n.e('26138'),
-				n.e('93414'),
-				n.e('59217'),
-				n.e('54535'),
-				n.e('1187'),
-				n.e('71661'),
-				n.e('22036'),
-				n.e('92557'),
-				n.e('29975'),
-				n.e('64679'),
-				n.e('5562'),
-				n.e('64714'),
-				n.e('48800'),
-				n.e('17764'),
-				n.e('23693'),
-				n.e('87713'),
-				n.e('21351'),
-				n.e('90029'),
-				n.e('37220'),
-				n.e('80026'),
-				n.e('91315'),
-				n.e('51182'),
-				n.e('95437'),
-				n.e('20822'),
-				n.e('4775'),
-				n.e('84921'),
-				n.e('95468'),
-				n.e('11256'),
-				n.e('36859')
-			]).then(n.bind(n, 457094)),
+		createPromise: () => Promise.all([n.e('77298'), n.e('23357'), n.e('23755'), n.e('89350'), n.e('11751'), n.e('50990'), n.e('35535'), n.e('18438'), n.e('29549'), n.e('6380'), n.e('18543'), n.e('31605'), n.e('72181'), n.e('30671'), n.e('65840'), n.e('81272'), n.e('95393'), n.e('53115'), n.e('18101'), n.e('29637'), n.e('86975'), n.e('90508'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('22173'), n.e('18146'), n.e('30243'), n.e('37229'), n.e('99008'), n.e('7590'), n.e('39285'), n.e('59743'), n.e('26138'), n.e('93414'), n.e('59217'), n.e('54535'), n.e('1187'), n.e('71661'), n.e('22036'), n.e('92557'), n.e('29975'), n.e('64679'), n.e('5562'), n.e('64714'), n.e('48800'), n.e('17764'), n.e('23693'), n.e('87713'), n.e('21351'), n.e('90029'), n.e('37220'), n.e('80026'), n.e('91315'), n.e('51182'), n.e('95437'), n.e('20822'), n.e('4775'), n.e('84921'), n.e('95468'), n.e('11256'), n.e('36859')]).then(n.bind(n, 457094)),
 		webpackId: 457094,
 		name: 'ViewsWithMainInterface',
 		memo: !0,
 		id: 457094
 	}),
 	G = (0, h.Un)({
-		createPromise: () =>
-			Promise.all([
-				n.e('96427'),
-				n.e('32873'),
-				n.e('75492'),
-				n.e('18543'),
-				n.e('95393'),
-				n.e('86975'),
-				n.e('10778'),
-				n.e('52030'),
-				n.e('17764'),
-				n.e('11260'),
-				n.e('4775'),
-				n.e('84956'),
-				n.e('21824')
-			]).then(n.bind(n, 822699)),
+		createPromise: () => Promise.all([n.e('96427'), n.e('32873'), n.e('75492'), n.e('18543'), n.e('95393'), n.e('86975'), n.e('10778'), n.e('52030'), n.e('17764'), n.e('11260'), n.e('4775'), n.e('84956'), n.e('21824')]).then(n.bind(n, 822699)),
 		webpackId: 822699,
 		name: 'ViewsWithAuth'
 	}),
@@ -173,61 +94,7 @@ let D = (0, h.Un)({
 		name: 'MobileWebHandoffFallback'
 	}),
 	V = (0, h.Un)({
-		createPromise: () =>
-			Promise.all([
-				n.e('77298'),
-				n.e('23357'),
-				n.e('23755'),
-				n.e('89350'),
-				n.e('11751'),
-				n.e('50990'),
-				n.e('35535'),
-				n.e('29549'),
-				n.e('6380'),
-				n.e('18543'),
-				n.e('31605'),
-				n.e('72181'),
-				n.e('30671'),
-				n.e('65840'),
-				n.e('81272'),
-				n.e('95393'),
-				n.e('53115'),
-				n.e('18101'),
-				n.e('29637'),
-				n.e('86975'),
-				n.e('90508'),
-				n.e('46097'),
-				n.e('8739'),
-				n.e('58059'),
-				n.e('22173'),
-				n.e('30243'),
-				n.e('99008'),
-				n.e('7590'),
-				n.e('39285'),
-				n.e('59743'),
-				n.e('26138'),
-				n.e('93414'),
-				n.e('59217'),
-				n.e('1187'),
-				n.e('22036'),
-				n.e('92557'),
-				n.e('29975'),
-				n.e('64679'),
-				n.e('5562'),
-				n.e('64714'),
-				n.e('48800'),
-				n.e('17764'),
-				n.e('87713'),
-				n.e('21351'),
-				n.e('90029'),
-				n.e('37220'),
-				n.e('91315'),
-				n.e('51182'),
-				n.e('95437'),
-				n.e('20822'),
-				n.e('84921'),
-				n.e('41916')
-			]).then(n.bind(n, 290161)),
+		createPromise: () => Promise.all([n.e('77298'), n.e('23357'), n.e('23755'), n.e('89350'), n.e('11751'), n.e('50990'), n.e('35535'), n.e('29549'), n.e('6380'), n.e('18543'), n.e('31605'), n.e('72181'), n.e('30671'), n.e('65840'), n.e('81272'), n.e('95393'), n.e('53115'), n.e('18101'), n.e('29637'), n.e('86975'), n.e('90508'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('22173'), n.e('30243'), n.e('99008'), n.e('7590'), n.e('39285'), n.e('59743'), n.e('26138'), n.e('93414'), n.e('59217'), n.e('1187'), n.e('22036'), n.e('92557'), n.e('29975'), n.e('64679'), n.e('5562'), n.e('64714'), n.e('48800'), n.e('17764'), n.e('87713'), n.e('21351'), n.e('90029'), n.e('37220'), n.e('91315'), n.e('51182'), n.e('95437'), n.e('20822'), n.e('84921'), n.e('41916')]).then(n.bind(n, 290161)),
 		webpackId: 290161,
 		name: 'Overlay'
 	}),
@@ -252,13 +119,7 @@ let D = (0, h.Un)({
 		name: 'ApplicationDirectoryRoutes'
 	}),
 	W = () => (0, r.jsx)(x, {}),
-	K = new Set([
-		R.Z5c.LOGIN,
-		R.Z5c.LOGIN_HANDOFF,
-		R.Z5c.INVITE_LOGIN(':inviteCode'),
-		R.Z5c.GIFT_CODE_LOGIN(':giftCode'),
-		R.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode')
-	]);
+	K = new Set([R.Z5c.LOGIN, R.Z5c.LOGIN_HANDOFF, R.Z5c.INVITE_LOGIN(':inviteCode'), R.Z5c.GIFT_CODE_LOGIN(':giftCode'), R.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode')]);
 function z(e, t) {
 	return t ? e.filter((e) => !K.has(e)) : e;
 }
@@ -274,7 +135,7 @@ class q extends i.Component {
 		let { isAuthenticated: t, migrationStatus: n, skipsSettingDefaultPageTitle: i } = this.props;
 		return (
 			(e =
-				n === I.P.IN_PROGRESS
+				n === m.P.IN_PROGRESS
 					? null
 					: y.KO
 						? v.isPlatformEmbedded
@@ -291,18 +152,7 @@ class q extends i.Component {
 											component: L
 										}),
 										(0, r.jsx)(s.AW, {
-											path: z(
-												[
-													R.Z5c.LOGIN,
-													R.Z5c.REGISTER,
-													R.Z5c.INVITE(':inviteCode'),
-													R.Z5c.INVITE_LOGIN(':inviteCode'),
-													R.Z5c.GIFT_CODE(':giftCode'),
-													R.Z5c.GIFT_CODE_LOGIN(':giftCode'),
-													R.Z5c.RESET
-												],
-												C.a
-											),
+											path: z([R.Z5c.LOGIN, R.Z5c.REGISTER, R.Z5c.INVITE(':inviteCode'), R.Z5c.INVITE_LOGIN(':inviteCode'), R.Z5c.GIFT_CODE(':giftCode'), R.Z5c.GIFT_CODE_LOGIN(':giftCode'), R.Z5c.RESET], C.a),
 											component: G
 										}),
 										(0, r.jsx)(f.Z, {
@@ -328,27 +178,7 @@ class q extends i.Component {
 											render: () => (0, r.jsx)(E.Z, {})
 										}),
 										(0, r.jsx)(s.AW, {
-											path: z(
-												[
-													R.Z5c.LOGIN,
-													R.Z5c.LOGIN_HANDOFF,
-													R.Z5c.REGISTER,
-													R.Z5c.BILLING_PREFIX,
-													R.Z5c.BILLING_PROMOTION_REDEMPTION(':code'),
-													R.Z5c.INVITE(':inviteCode'),
-													R.Z5c.INVITE_LOGIN(':inviteCode'),
-													R.Z5c.GIFT_CODE(':giftCode'),
-													R.Z5c.GIFT_CODE_LOGIN(':giftCode'),
-													R.Z5c.GUILD_TEMPLATE(':guildTemplateCode'),
-													R.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode'),
-													R.Z5c.DISABLE_EMAIL_NOTIFICATIONS,
-													R.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
-													R.Z5c.RESET,
-													R.Z5c.REPORT,
-													R.Z5c.REPORT_SECOND_LOOK
-												],
-												C.a
-											),
+											path: z([R.Z5c.LOGIN, R.Z5c.LOGIN_HANDOFF, R.Z5c.REGISTER, R.Z5c.BILLING_PREFIX, R.Z5c.BILLING_PROMOTION_REDEMPTION(':code'), R.Z5c.INVITE(':inviteCode'), R.Z5c.INVITE_LOGIN(':inviteCode'), R.Z5c.GIFT_CODE(':giftCode'), R.Z5c.GIFT_CODE_LOGIN(':giftCode'), R.Z5c.GUILD_TEMPLATE(':guildTemplateCode'), R.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode'), R.Z5c.DISABLE_EMAIL_NOTIFICATIONS, R.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, R.Z5c.RESET, R.Z5c.REPORT, R.Z5c.REPORT_SECOND_LOOK], C.a),
 											component: G
 										}),
 										t
@@ -440,10 +270,7 @@ class q extends i.Component {
 												var e, t;
 												let n = null === (e = S.default.getSuperProperties()) || void 0 === e ? void 0 : e.os,
 													i = (0, N.o)(null !== (t = window.location.search) && void 0 !== t ? t : '');
-												if ('iOS' !== n && 'Android' !== n)
-													return (0, r.jsx)(s.l_, {
-														to: null != i.desktop ? ''.concat(i.desktop.pathname).concat(i.desktop.search) : R.Z5c.APP
-													});
+												if ('iOS' !== n && 'Android' !== n) return (0, r.jsx)(s.l_, { to: null != i.desktop ? ''.concat(i.desktop.pathname).concat(i.desktop.search) : R.Z5c.APP });
 												{
 													let e = (0, A.Gn)('app_open_from_email', n, i.mobile),
 														t = (0, u.zS)(e);
@@ -466,12 +293,7 @@ class q extends i.Component {
 											}
 										}),
 										(0, r.jsx)(s.AW, {
-											path: [
-												R.Z5c.OAUTH2_AUTHORIZED,
-												R.Z5c.OAUTH2_AUTHORIZE,
-												R.Z5c.OAUTH2_ERROR,
-												R.Z5c.OAUTH2_WHITELIST_ACCEPT
-											],
+											path: [R.Z5c.OAUTH2_AUTHORIZED, R.Z5c.OAUTH2_AUTHORIZE, R.Z5c.OAUTH2_ERROR, R.Z5c.OAUTH2_WHITELIST_ACCEPT],
 											component: k
 										}),
 										t
@@ -492,21 +314,16 @@ class q extends i.Component {
 						: (0, r.jsx)(s.rs, { children: (0, r.jsx)(f.Z, { component: D }) })),
 			(0, r.jsxs)(p.Z, {
 				skipsSettingDefaultPageTitle: i,
-				children: [
-					e,
-					v.isPlatformEmbedded && (n === I.P.NOT_STARTED || n === I.P.IN_PROGRESS) && !0 !== _.K.get(l.SV)
-						? (0, r.jsx)(m.Z, {})
-						: null
-				]
+				children: [e, v.isPlatformEmbedded && (n === m.P.NOT_STARTED || n === m.P.IN_PROGRESS) && !0 !== _.K.get(l.SV) ? (0, r.jsx)(I.Z, {}) : null]
 			})
 		);
 	}
 }
 t.Z = d.ZP.connectStores(
-	[g.default, I.Z],
+	[g.default, m.Z],
 	() => ({
 		isAuthenticated: g.default.isAuthenticated(),
-		migrationStatus: I.Z.getMigrationStatus()
+		migrationStatus: m.Z.getMigrationStatus()
 	}),
 	{ forwardRef: !0 }
 )(function (e) {

@@ -13,13 +13,13 @@ var r = n(392711),
 	f = n(709054),
 	h = n(725380),
 	p = n(340332),
-	I = n(675478),
-	m = n(65154);
+	m = n(675478),
+	I = n(65154);
 let T = (e) => 'AudioContextSettingsMigrated:'.concat(e),
-	g = (e) => (e === m.Yn.STREAM ? a.h.STREAM : a.h.USER);
+	g = (e) => (e === I.Yn.STREAM ? a.h.STREAM : a.h.USER);
 function S() {
 	o.K.get(T(_.default.getId())) ||
-		I.hW.updateAsync(
+		m.hW.updateAsync(
 			'audioContextSettings',
 			(e) => {
 				let t = !1;
@@ -51,7 +51,7 @@ function S() {
 				}
 				return o.K.set(T(_.default.getId()), !0), t;
 			},
-			I.fy.AUTOMATED
+			m.fy.AUTOMATED
 		);
 }
 let A = i().debounce(() => {
@@ -59,7 +59,7 @@ let A = i().debounce(() => {
 	}, 2000),
 	N = i().debounce(u.On, 500, { maxWait: 500 });
 function v() {
-	I.hW.updateAsync(
+	m.hW.updateAsync(
 		'audioContextSettings',
 		(e) => {
 			let t = !1;
@@ -112,7 +112,7 @@ function v() {
 				t
 			);
 		},
-		I.fy.INFREQUENT_USER_ACTION
+		m.fy.INFREQUENT_USER_ACTION
 	);
 }
 function O(e) {

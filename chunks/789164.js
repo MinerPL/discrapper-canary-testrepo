@@ -11,19 +11,9 @@ var r = n(735250),
 	l = n(70638);
 let u = i.forwardRef(function (e, t) {
 	var n;
-	let {
-			children: u,
-			className: c,
-			titleClassName: d,
-			title: _,
-			icon: E,
-			disabled: f,
-			htmlFor: h,
-			tag: p = 'h5',
-			...I
-		} = e,
-		m = i.useId(),
-		T = null !== (n = I.titleId) && void 0 !== n ? n : m;
+	let { children: u, className: c, titleClassName: d, title: _, icon: E, disabled: f, htmlFor: h, tag: p = 'h5', ...m } = e,
+		I = i.useId(),
+		T = null !== (n = m.titleId) && void 0 !== n ? n : I;
 	return (0, r.jsx)('div', {
 		ref: t,
 		className: c,

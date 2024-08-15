@@ -31,14 +31,8 @@ e.exports = function (e, a) {
 					return !0;
 				}
 				if (a.constructor === RegExp) return a.source === s.source && a.flags === s.flags;
-				if (a.valueOf !== Object.prototype.valueOf && 'function' == typeof a.valueOf && 'function' == typeof s.valueOf)
-					return a.valueOf() === s.valueOf();
-				if (
-					a.toString !== Object.prototype.toString &&
-					'function' == typeof a.toString &&
-					'function' == typeof s.toString
-				)
-					return a.toString() === s.toString();
+				if (a.valueOf !== Object.prototype.valueOf && 'function' == typeof a.valueOf && 'function' == typeof s.valueOf) return a.valueOf() === s.valueOf();
+				if (a.toString !== Object.prototype.toString && 'function' == typeof a.toString && 'function' == typeof s.toString) return a.toString() === s.toString();
 				if ((o = (u = Object.keys(a)).length) !== Object.keys(s).length) return !1;
 				for (l = o; 0 != l--; ) if (!Object.prototype.hasOwnProperty.call(s, u[l])) return !1;
 				if (t && a instanceof Element) return !1;
@@ -52,8 +46,7 @@ e.exports = function (e, a) {
 			return a != a && s != s;
 		})(e, a);
 	} catch (e) {
-		if ((e.message || '').match(/stack|recursion/i))
-			return console.warn('react-fast-compare cannot handle circular refs'), !1;
+		if ((e.message || '').match(/stack|recursion/i)) return console.warn('react-fast-compare cannot handle circular refs'), !1;
 		throw e;
 	}
 };

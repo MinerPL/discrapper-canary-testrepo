@@ -32,14 +32,12 @@ function I() {
 				}),
 				(0, n.jsx)(o.FormSwitch, {
 					value: s.all || s.mutualFriends,
-					onChange: (s) =>
-						d.xq.updateSetting(s ? l.pj(e, _.SOq.MUTUAL_FRIENDS) : l.M1(e, _.SOq.MUTUAL_FRIENDS, _.SOq.NO_RELATION)),
+					onChange: (s) => d.xq.updateSetting(s ? l.pj(e, _.SOq.MUTUAL_FRIENDS) : l.M1(e, _.SOq.MUTUAL_FRIENDS, _.SOq.NO_RELATION)),
 					children: E.Z.Messages.FRIEND_PERMITTED_SOURCE_MUTUAL_FRIENDS
 				}),
 				(0, n.jsx)(o.FormSwitch, {
 					value: s.all || s.mutualGuilds,
-					onChange: (s) =>
-						d.xq.updateSetting(s ? l.pj(e, _.SOq.MUTUAL_GUILDS) : l.M1(e, _.SOq.MUTUAL_GUILDS, _.SOq.NO_RELATION)),
+					onChange: (s) => d.xq.updateSetting(s ? l.pj(e, _.SOq.MUTUAL_GUILDS) : l.M1(e, _.SOq.MUTUAL_GUILDS, _.SOq.NO_RELATION)),
 					children: E.Z.Messages.FRIEND_PERMITTED_SOURCE_MUTUAL_GUILDS
 				})
 			]

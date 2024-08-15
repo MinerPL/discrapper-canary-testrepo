@@ -13,16 +13,7 @@ var i = t(735250),
 	c = t(13051),
 	u = t(288179);
 function I(e) {
-	let {
-			integrations: n,
-			editedIntegration: t,
-			guild: I,
-			platformType: m,
-			labelText: _,
-			descriptionText: N,
-			helpText: E,
-			canNavigate: T
-		} = e,
+	let { integrations: n, editedIntegration: t, guild: I, platformType: m, labelText: _, descriptionText: N, helpText: E, canNavigate: T } = e,
 		h = r.Z.get(m),
 		g = a.useCallback(
 			async (e) => {
@@ -32,8 +23,7 @@ function I(e) {
 		),
 		p = a.useCallback(
 			(e) => {
-				T() &&
-					(e.id === (null == t ? void 0 : t.id) && l.Z.stopEditingIntegration(), o.Z.disableIntegration(I.id, e.id));
+				T() && (e.id === (null == t ? void 0 : t.id) && l.Z.stopEditingIntegration(), o.Z.disableIntegration(I.id, e.id));
 			},
 			[T, t, I.id]
 		),

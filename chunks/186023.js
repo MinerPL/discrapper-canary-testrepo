@@ -10,8 +10,8 @@ var r = n(735250),
 	d = n(981631),
 	_ = n(182450);
 t.Z = (e) => {
-	let { reportType: t, menu: n, modalProps: E, onSubmit: f, onNavigate: h, emailToken: p, isAuthenticated: I = !0 } = e,
-		m = (0, o.Dt)(),
+	let { reportType: t, menu: n, modalProps: E, onSubmit: f, onNavigate: h, emailToken: p, isAuthenticated: m = !0 } = e,
+		I = (0, o.Dt)(),
 		{ nodes: T, root_node_id: g, success_node_id: S, fail_node_id: A } = n,
 		[N, v] = i.useState(g),
 		[O, R] = i.useState(void 0),
@@ -24,21 +24,12 @@ t.Z = (e) => {
 			let { destination: r } = e,
 				[, i] = r,
 				a = T[i];
-			if (
-				a.elements.some((e) => 'skip' === e.type) &&
-				(null === (n = a.button) || void 0 === n ? void 0 : n.type) === 'next'
-			)
+			if (a.elements.some((e) => 'skip' === e.type) && (null === (n = a.button) || void 0 === n ? void 0 : n.type) === 'next')
 				return w({
 					...e,
 					destination: ['', a.button.target]
 				});
-			if (
-				(L([...D, e]),
-				null != a.key && (null == h || h(a.key)),
-				R(void 0),
-				y(void 0),
-				t.name === l.b.MESSAGE || t.name === l.b.FIRST_DM)
-			) {
+			if ((L([...D, e]), null != a.key && (null == h || h(a.key)), R(void 0), y(void 0), t.name === l.b.MESSAGE || t.name === l.b.FIRST_DM)) {
 				let e = t.record.id;
 				s.ZP.trackWithMetadata(d.rMx.IAR_NAVIGATE, {
 					message_id: e,
@@ -52,7 +43,7 @@ t.Z = (e) => {
 		},
 		x = async (e) => {
 			var r;
-			let i = I ? await (0, u.ZD)(n, t, [...D, e]) : await (0, u.fw)(n, t, [...D, e], p),
+			let i = m ? await (0, u.ZD)(n, t, [...D, e]) : await (0, u.fw)(n, t, [...D, e], p),
 				a = null == i ? void 0 : null === (r = i.body) || void 0 === r ? void 0 : r.report_id;
 			null != a && M(a), U(T[e.nodeRef].report_type), null == f || f(a);
 		},
@@ -72,11 +63,7 @@ t.Z = (e) => {
 					next_node: T[a].id
 				});
 			}
-			R(null == i ? void 0 : null === (e = i.multiSelect) || void 0 === e ? void 0 : e.state),
-				y(null == i ? void 0 : i.textInput),
-				v(a),
-				L(r),
-				null == h || h('..');
+			R(null == i ? void 0 : null === (e = i.multiSelect) || void 0 === e ? void 0 : e.state), y(null == i ? void 0 : i.textInput), v(a), L(r), null == h || h('..');
 		},
 		k = i.useMemo(() => {
 			let e = [],
@@ -100,7 +87,7 @@ t.Z = (e) => {
 		}, [T, g, A, S]);
 	return (0, r.jsx)(a.ModalRoot, {
 		transitionState: E.transitionState,
-		'aria-labelledby': m,
+		'aria-labelledby': I,
 		children: (0, r.jsx)(a.Slides, {
 			width: 440,
 			activeSlide: N,

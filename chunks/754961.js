@@ -81,15 +81,7 @@ function E(e) {
 	});
 }
 function h(e) {
-	let {
-		steps: t,
-		currentStepIndex: n,
-		furthestStepIndex: a,
-		onStepClick: s,
-		stepFillColor: o,
-		animationStyle: c,
-		className: d
-	} = e;
+	let { steps: t, currentStepIndex: n, furthestStepIndex: a, onStepClick: s, stepFillColor: o, animationStyle: c, className: d } = e;
 	return (0, i.jsx)(l.animated.div, {
 		style: c,
 		className: r()(_.progressContainer, d),
@@ -112,16 +104,7 @@ function h(e) {
 	});
 }
 function m(e) {
-	let {
-		className: t,
-		isBackDisabled: n,
-		isNextDisabled: a,
-		onNextClick: s,
-		onBackClick: c,
-		nextButtonBackgroundColor: E,
-		nextButtonClassName: h,
-		nextButtonAnimationStyle: m
-	} = e;
+	let { className: t, isBackDisabled: n, isNextDisabled: a, onNextClick: s, onBackClick: c, nextButtonBackgroundColor: E, nextButtonClassName: h, nextButtonAnimationStyle: m } = e;
 	return (0, i.jsxs)('div', {
 		className: r()(_.buttonsContainer, t),
 		children: [

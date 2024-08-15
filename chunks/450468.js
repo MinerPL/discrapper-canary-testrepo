@@ -58,12 +58,7 @@ function p(e) {
 							try {
 								E(!0);
 								let e = (0, N.g)(s, 1);
-								l()(
-									(0, A.uV)(e) <= (0, A.uV)(s.additionalPlans),
-									'Uncanceling should not increase the number of guild subscriptions'
-								),
-									await h(s, e, t, I),
-									n();
+								l()((0, A.uV)(e) <= (0, A.uV)(s.additionalPlans), 'Uncanceling should not increase the number of guild subscriptions'), await h(s, e, t, I), n();
 							} catch (e) {
 								E(!1);
 							}
@@ -99,12 +94,7 @@ function R(e) {
 			}),
 			(0, i.jsxs)(_.ModalContent, {
 				className: g.body,
-				children: [
-					(0, i.jsx)('div', { className: g.uncancelImage }),
-					(0, i.jsx)('div', {
-						children: O.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_CONFIRM_DESCRIPTION
-					})
-				]
+				children: [(0, i.jsx)('div', { className: g.uncancelImage }), (0, i.jsx)('div', { children: O.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_CONFIRM_DESCRIPTION })]
 			}),
 			(0, i.jsx)(_.ModalFooter, {
 				children: (0, i.jsx)(_.Button, {

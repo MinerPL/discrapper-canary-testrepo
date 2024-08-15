@@ -2,10 +2,7 @@ var r = (function () {
 	function e(e, t) {
 		for (var n = 0; n < t.length; n++) {
 			var r = t[n];
-			(r.enumerable = r.enumerable || !1),
-				(r.configurable = !0),
-				'value' in r && (r.writable = !0),
-				Object.defineProperty(e, r.key, r);
+			(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 		}
 	}
 	return function (t, n, r) {
@@ -30,23 +27,11 @@ var i = n(592093),
 					x: 0,
 					y: 0
 				};
-			return (
-				'number' == typeof r.x && 'number' == typeof r.y
-					? ((n.x = new i(r.x)), (n.y = new i(r.y)))
-					: (s(
-							r.x instanceof i && r.y instanceof i,
-							'AnimatedValueXY must be initalized with an object of numbers or AnimatedValues.'
-						),
-						(n.x = r.x),
-						(n.y = r.y)),
-				(n._listeners = {}),
-				n
-			);
+			return 'number' == typeof r.x && 'number' == typeof r.y ? ((n.x = new i(r.x)), (n.y = new i(r.y))) : (s(r.x instanceof i && r.y instanceof i, 'AnimatedValueXY must be initalized with an object of numbers or AnimatedValues.'), (n.x = r.x), (n.y = r.y)), (n._listeners = {}), n;
 		}
 		return (
 			!(function (e, t) {
-				if ('function' != typeof t && null !== t)
-					throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+				if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
 				(e.prototype = Object.create(t && t.prototype, {
 					constructor: {
 						value: e,
@@ -111,9 +96,7 @@ var i = n(592093),
 				{
 					key: 'removeListener',
 					value: function (e) {
-						this.x.removeListener(this._listeners[e].x),
-							this.y.removeListener(this._listeners[e].y),
-							delete this._listeners[e];
+						this.x.removeListener(this._listeners[e].x), this.y.removeListener(this._listeners[e].y), delete this._listeners[e];
 					}
 				},
 				{

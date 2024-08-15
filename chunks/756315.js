@@ -27,23 +27,15 @@ function l(e) {
 class u {
 	start() {
 		let { resolution: e, fps: t } = a.Z.getState();
-		(this._targetResolution = e),
-			(this._targetFPS = t),
-			this._statInterval.start(1000, this._sampleStats),
-			(this._lastLayoutChanged = (0, r.zO)());
+		(this._targetResolution = e), (this._targetFPS = t), this._statInterval.start(1000, this._sampleStats), (this._lastLayoutChanged = (0, r.zO)());
 	}
 	stop() {
-		this._statInterval.stop(),
-			(this._streamEnd = (0, r.zO)()),
-			this._incrementLayout(this._lastLayout, (this._streamEnd - this._lastLayoutChanged) / 1000);
+		this._statInterval.stop(), (this._streamEnd = (0, r.zO)()), this._incrementLayout(this._lastLayout, (this._streamEnd - this._lastLayoutChanged) / 1000);
 	}
 	layoutChange(e) {
 		if (e === this._lastLayout || null != this._streamEnd) return;
 		let t = (0, r.zO)();
-		this._incrementLayout(this._lastLayout, (t - this._lastLayoutChanged) / 1000),
-			this._layoutChanges++,
-			(this._lastLayout = e),
-			(this._lastLayoutChanged = t);
+		this._incrementLayout(this._lastLayout, (t - this._lastLayoutChanged) / 1000), this._layoutChanges++, (this._lastLayout = e), (this._lastLayoutChanged = t);
 	}
 	getLayout() {
 		return this._lastLayout;

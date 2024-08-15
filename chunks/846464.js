@@ -23,29 +23,14 @@ var r = n(120356),
 	I = n(627133);
 function E(e) {
 	let { handleStepChange: s, handleClose: n, referralTrialOfferId: r } = e,
-		{
-			setSelectedSkuId: i,
-			activeSubscription: l,
-			startedPaymentFlowWithPaymentSourcesRef: C,
-			setSelectedPlanId: d,
-			priceOptions: f
-		} = (0, _.usePaymentContext)(),
+		{ setSelectedSkuId: i, activeSubscription: l, startedPaymentFlowWithPaymentSourcesRef: C, setSelectedPlanId: d, priceOptions: f } = (0, _.usePaymentContext)(),
 		{ isGift: I } = (0, c.wD)(),
 		E = (0, o.N)(r),
 		N = (0, a.Nx)();
 	return (0, t.jsx)(M, {
 		selectSku: (e) =>
 			(function (e) {
-				let {
-					activeSubscription: s,
-					newSkuId: n,
-					setSelectedSkuId: t,
-					handleStepChange: r,
-					isGift: i,
-					userTrialOffer: l,
-					setSelectedPlanId: a,
-					startedPaymentFlowWithPaymentSources: o
-				} = e;
+				let { activeSubscription: s, newSkuId: n, setSelectedSkuId: t, handleStepChange: r, isGift: i, userTrialOffer: l, setSelectedPlanId: a, startedPaymentFlowWithPaymentSources: o } = e;
 				t(n);
 				let C = p.h8.PLAN_SELECT,
 					d = (0, u.k5)(s);
@@ -61,8 +46,7 @@ function E(e) {
 						selectedSkuId: n,
 						startedPaymentFlowWithPaymentSources: o
 					});
-				C !== p.h8.WHAT_YOU_LOSE && _ && ((C = p.h8.REVIEW), a((0, x.nA)(n, s))),
-					r(C, { analyticsDataOverride: { sku_id: n } });
+				C !== p.h8.WHAT_YOU_LOSE && _ && ((C = p.h8.REVIEW), a((0, x.nA)(n, s))), r(C, { analyticsDataOverride: { sku_id: n } });
 			})({
 				activeSubscription: l,
 				newSkuId: e,

@@ -32,10 +32,7 @@ a.default = (e) => {
 		null == M || null == Z || null == k)
 	)
 		return null;
-	let P =
-		null != j
-			? { background: 'radial-gradient(circle at top, '.concat(n()(j).alpha(0.3).hex(), ' 0%, transparent 50%)') }
-			: void 0;
+	let P = null != j ? { background: 'radial-gradient(circle at top, '.concat(n()(j).alpha(0.3).hex(), ' 0%, transparent 50%)') } : void 0;
 	return (0, t.jsx)(c.ModalRoot, {
 		className: N.modal,
 		transitionState: E,

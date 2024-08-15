@@ -15,8 +15,7 @@ t.exports = function (t, e, r, o, a) {
 		v = g.get('start'),
 		m = f ? y + r : null,
 		_ = g ? v + a : null;
-	if (u.getAnchorKey() === c && u.getAnchorOffset() === m && u.getFocusKey() === h && u.getFocusOffset() === _)
-		return u;
+	if (u.getAnchorKey() === c && u.getAnchorOffset() === m && u.getFocusKey() === h && u.getFocusOffset() === _) return u;
 	var b = !1;
 	if (c === h) {
 		var S = f.get('end'),

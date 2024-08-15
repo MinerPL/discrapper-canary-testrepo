@@ -19,8 +19,7 @@ function R(e) {
 		n = e.sku.id,
 		r = A[t],
 		i = S.Z.createFromServer(e);
-	if (!(null != r && !r.isSlimDirectoryVersion() && i.isSlimDirectoryVersion()))
-		!1 === e.published ? (null == T[n] && (T[n] = new Set()), T[n].add(t)) : (I[n] = t), (A[t] = i), d.delete(e.sku.id);
+	if (!(null != r && !r.isSlimDirectoryVersion() && i.isSlimDirectoryVersion())) !1 === e.published ? (null == T[n] && (T[n] = new Set()), T[n].add(t)) : (I[n] = t), (A[t] = i), d.delete(e.sku.id);
 }
 function C(e, t) {
 	return ''.concat(e, ':').concat(t);

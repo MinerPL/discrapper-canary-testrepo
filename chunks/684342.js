@@ -16,22 +16,7 @@ var r = n(468343),
 		childList: !0,
 		subtree: !0
 	},
-	l = [
-		'resize',
-		'load',
-		'transitionend',
-		'animationend',
-		'animationstart',
-		'animationiteration',
-		'keyup',
-		'keydown',
-		'mouseup',
-		'mousedown',
-		'mouseover',
-		'mouseout',
-		'blur',
-		'focus'
-	],
+	l = ['resize', 'load', 'transitionend', 'animationend', 'animationstart', 'animationiteration', 'keyup', 'keydown', 'mouseup', 'mousedown', 'mouseover', 'mouseout', 'blur', 'focus'],
 	u = !1,
 	c = new ((function () {
 		function e() {

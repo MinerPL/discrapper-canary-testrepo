@@ -6,35 +6,7 @@ function t(e, t) {
 function n() {
 	this._defaults = [];
 }
-for (
-	var r = 0,
-		i = [
-			'use',
-			'on',
-			'once',
-			'set',
-			'query',
-			'type',
-			'accept',
-			'auth',
-			'withCredentials',
-			'sortQuery',
-			'retry',
-			'ok',
-			'redirects',
-			'timeout',
-			'buffer',
-			'serialize',
-			'parse',
-			'ca',
-			'key',
-			'pfx',
-			'cert',
-			'disableTLSCerts'
-		];
-	r < i.length;
-	r++
-) {
+for (var r = 0, i = ['use', 'on', 'once', 'set', 'query', 'type', 'accept', 'auth', 'withCredentials', 'sortQuery', 'retry', 'ok', 'redirects', 'timeout', 'buffer', 'serialize', 'parse', 'ca', 'key', 'pfx', 'cert', 'disableTLSCerts']; r < i.length; r++) {
 	let e = i[r];
 	n.prototype[e] = function () {
 		for (var t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
@@ -58,8 +30,7 @@ for (
 						if (e) {
 							if ('string' == typeof e) return t(e, n);
 							var r = Object.prototype.toString.call(e).slice(8, -1);
-							if (('Object' === r && e.constructor && (r = e.constructor.name), 'Map' === r || 'Set' === r))
-								return Array.from(e);
+							if (('Object' === r && e.constructor && (r = e.constructor.name), 'Map' === r || 'Set' === r)) return Array.from(e);
 							if ('Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return t(e, n);
 						}
 					})(e))
@@ -83,9 +54,7 @@ for (
 						f: a
 					};
 				}
-				throw TypeError(
-					'Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
-				);
+				throw TypeError('Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
 			}
 			var s,
 				o = !0,

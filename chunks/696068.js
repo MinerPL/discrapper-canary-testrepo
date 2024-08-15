@@ -44,15 +44,7 @@ function x(e) {
 					channel: n.channel,
 					users: u.ZP.getVoiceStatesForChannel(n.channel).filter(d.lm)
 				});
-	return null !==
-		(t =
-			null === (a = f.sort((e, n) => (e.users.length > n.users.length ? -1 : 1))[0]) || void 0 === a
-				? void 0
-				: null === (n = a.channel) || void 0 === n
-					? void 0
-					: n.id) && void 0 !== t
-		? t
-		: null;
+	return null !== (t = null === (a = f.sort((e, n) => (e.users.length > n.users.length ? -1 : 1))[0]) || void 0 === a ? void 0 : null === (n = a.channel) || void 0 === n ? void 0 : n.id) && void 0 !== t ? t : null;
 }
 function v(e, n) {
 	if (e.length !== n.length) return !1;

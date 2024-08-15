@@ -25,14 +25,7 @@ function L(e) {
 		title: c.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_MODAL_HEADER,
 		body: r,
 		glowUp: r,
-		analyticsSource: {
-			page:
-				(null == (n = L) ? void 0 : n.getGuildId()) != null
-					? i.ZY5.GUILD_CHANNEL
-					: (null == n ? void 0 : n.isGroupDM()) || (null == n ? void 0 : n.isPrivate())
-						? i.ZY5.DM_CHANNEL
-						: null
-		},
+		analyticsSource: { page: (null == (n = L) ? void 0 : n.getGuildId()) != null ? i.ZY5.GUILD_CHANNEL : (null == n ? void 0 : n.isGroupDM()) || (null == n ? void 0 : n.isPrivate()) ? i.ZY5.DM_CHANNEL : null },
 		analyticsLocation: {
 			section: i.jXE.MESSAGE_LENGTH_UPSELL_MODAL,
 			object: i.qAy.BUTTON_CTA

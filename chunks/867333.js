@@ -15,16 +15,7 @@ var r = n(735250),
 	_ = n(939350),
 	E = n(837244);
 function f(e) {
-	let {
-			color: t = 'default',
-			label: n,
-			checked: a,
-			subtext: f,
-			disabled: h,
-			isFocused: p,
-			menuItemProps: I,
-			action: m
-		} = e,
+	let { color: t = 'default', label: n, checked: a, subtext: f, disabled: h, isFocused: p, menuItemProps: m, action: I } = e,
 		T = i.useRef(null);
 	return (
 		i.useEffect(() => {
@@ -36,8 +27,8 @@ function f(e) {
 				[E.disabled]: h,
 				[E.focused]: p
 			}),
-			onClick: h ? void 0 : m,
-			...I,
+			onClick: h ? void 0 : I,
+			...m,
 			'aria-checked': a,
 			'aria-disabled': h,
 			children: [

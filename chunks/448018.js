@@ -13,8 +13,7 @@ let c = {
 		component: l.Z,
 		getCollapsedHeight: () => 40,
 		getPreEnrollmentExpandedHeight: () => 240,
-		getPostEnrollmentBackgroundImage: (e) =>
-			'linear-gradient(90deg, '.concat(e.config.colors.primary, ', ').concat(e.config.colors.secondary, ')'),
+		getPostEnrollmentBackgroundImage: (e) => 'linear-gradient(90deg, '.concat(e.config.colors.primary, ', ').concat(e.config.colors.secondary, ')'),
 		getPreEnrollmentBackgroundColor: (e) => void 0,
 		canCollapseOnBlur: (e) => {
 			var t;

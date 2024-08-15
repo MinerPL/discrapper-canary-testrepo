@@ -36,14 +36,7 @@ function c(e, t, r = (0, n.x)(e.bufferSize || 64)) {
 			return r
 				.add(() =>
 					t({ body: (0, a.V$)(l) }).then(
-						(e) => (
-							void 0 !== e.statusCode &&
-								(e.statusCode < 200 || e.statusCode >= 300) &&
-								s.X &&
-								_.kg.warn(`Sentry responded with status code ${e.statusCode} to sent event.`),
-							(c = (0, o.WG)(c, e)),
-							e
-						),
+						(e) => (void 0 !== e.statusCode && (e.statusCode < 200 || e.statusCode >= 300) && s.X && _.kg.warn(`Sentry responded with status code ${e.statusCode} to sent event.`), (c = (0, o.WG)(c, e)), e),
 						(e) => {
 							throw (R('network_error'), e);
 						}
@@ -52,10 +45,7 @@ function c(e, t, r = (0, n.x)(e.bufferSize || 64)) {
 				.then(
 					(e) => e,
 					(e) => {
-						if (e instanceof E.b)
-							return (
-								s.X && _.kg.error('Skipped sending event because buffer is full.'), R('queue_overflow'), (0, i.WD)({})
-							);
+						if (e instanceof E.b) return s.X && _.kg.error('Skipped sending event because buffer is full.'), R('queue_overflow'), (0, i.WD)({});
 						throw e;
 					}
 				);

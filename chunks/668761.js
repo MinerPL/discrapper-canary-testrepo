@@ -17,9 +17,7 @@ var s = n(481060),
 	d = n(987650),
 	u = n(689938);
 function h() {
-	let { trackView: e, trackClick: t } = (0, a.R)(d.n0.ClipsReminderNotification, {
-			notif_type: d.n0.ClipsReminderNotification
-		}),
+	let { trackView: e, trackClick: t } = (0, a.R)(d.n0.ClipsReminderNotification, { notif_type: d.n0.ClipsReminderNotification }),
 		n = r.Z.getKeybindForAction(c.kg4.SAVE_CLIP);
 	if (null == n) return null;
 	let h = l.BB(n.shortcut, !0);

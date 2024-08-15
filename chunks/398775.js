@@ -25,15 +25,7 @@ var n = t(735250),
 	N = t(689938),
 	C = t(391717);
 async function m(e) {
-	let {
-		premiumSubscription: s,
-		pauseDuration: t,
-		onClose: n,
-		setHasError: a,
-		setIsCancelling: i,
-		analyticsLocations: r,
-		analyticsLocation: o
-	} = e;
+	let { premiumSubscription: s, pauseDuration: t, onClose: n, setHasError: a, setIsCancelling: i, analyticsLocations: r, analyticsLocation: o } = e;
 	try {
 		i(!0), a(!1), await (0, d.Mg)(s, { pauseDuration: t }, r, o), n();
 	} catch {
@@ -49,15 +41,9 @@ function A(e) {
 			},
 			[r]
 		),
-		E =
-			d.status === S.O0b.PAUSED
-				? N.Z.Messages.PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE
-				: N.Z.Messages.PREMIUM_PAUSE_SELECT_SUBTITLE,
+		E = d.status === S.O0b.PAUSED ? N.Z.Messages.PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE : N.Z.Messages.PREMIUM_PAUSE_SELECT_SUBTITLE,
 		m = (function (e) {
-			let s =
-					e.status === S.O0b.PAUSED
-						? N.Z.Messages.PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE
-						: N.Z.Messages.PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE,
+			let s = e.status === S.O0b.PAUSED ? N.Z.Messages.PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE : N.Z.Messages.PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE,
 				{ durations: t, currentDaysPaused: n } = (0, I.AT)(e),
 				a = [];
 			for (let e of t) {

@@ -20,11 +20,7 @@ t.exports = function (t, r, n) {
 			e = s;
 		return (a = s = void 0), (h = r), (l = t.apply(e, n));
 	}
-	(r = o(r) || 0),
-		e(n) &&
-			((d = !!n.leading),
-			(f = (g = 'maxWait' in n) ? u(o(n.maxWait) || 0, r) : f),
-			(x = 'trailing' in n ? !!n.trailing : x));
+	(r = o(r) || 0), e(n) && ((d = !!n.leading), (f = (g = 'maxWait' in n) ? u(o(n.maxWait) || 0, r) : f), (x = 'trailing' in n ? !!n.trailing : x));
 	function b(t) {
 		var n = t - v,
 			e = t - h;

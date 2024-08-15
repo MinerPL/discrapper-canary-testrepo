@@ -22,9 +22,7 @@ class c extends s.Z {
 		l.Z.addChangeListener(this.handlePopoutWindowChange), a.Z.subscribe('WINDOW_FOCUS', this.handleMainWindowFocus);
 	}
 	_terminate() {
-		l.Z.removeChangeListener(this.handlePopoutWindowChange),
-			a.Z.unsubscribe('WINDOW_FOCUS', this.handleMainWindowFocus),
-			this.injectWindowAnimationFrame(window);
+		l.Z.removeChangeListener(this.handlePopoutWindowChange), a.Z.unsubscribe('WINDOW_FOCUS', this.handleMainWindowFocus), this.injectWindowAnimationFrame(window);
 	}
 	injectWindowAnimationFrame(e) {
 		let t = (t) => e.requestAnimationFrame(t),

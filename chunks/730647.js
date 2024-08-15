@@ -16,13 +16,7 @@ var r = t(735250),
 let s = i.createContext(void 0);
 function c(e) {
 	let n = i.useContext(s);
-	if (null == n)
-		throw Error(
-			''.concat(
-				null != e ? e : 'useGroupListingsFetchContext',
-				' must be used within a GroupListingsFetchContextProvider'
-			)
-		);
+	if (null == n) throw Error(''.concat(null != e ? e : 'useGroupListingsFetchContext', ' must be used within a GroupListingsFetchContextProvider'));
 	let { listingsLoaded: t, fetchGroupListingsForGuild: r } = n;
 	return r(), t;
 }

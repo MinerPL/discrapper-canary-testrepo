@@ -41,19 +41,7 @@ function E(e) {
 	);
 }
 function C(e) {
-	let {
-			id: t,
-			children: a,
-			rowLabel: l,
-			checked: s,
-			onSelect: c,
-			disabled: u,
-			showCheckbox: m,
-			selected: h,
-			onMouseEnter: S,
-			'aria-posinset': x,
-			'aria-setsize': T
-		} = e,
+	let { id: t, children: a, rowLabel: l, checked: s, onSelect: c, disabled: u, showCheckbox: m, selected: h, onMouseEnter: S, 'aria-posinset': x, 'aria-setsize': T } = e,
 		g = (0, i.JA)(t);
 	return (0, n.jsx)(o.Clickable, {
 		...g,
@@ -97,27 +85,7 @@ function C(e) {
 	});
 }
 function R(e) {
-	let {
-			listClassName: t,
-			pendingAdditions: a,
-			query: s,
-			onQueryChange: i,
-			onClickRow: u,
-			onRemovePendingAddition: R,
-			roles: p = [],
-			members: I = [],
-			users: M = [],
-			guilds: A = [],
-			placeholderText: w,
-			disabledText: N,
-			hintText: Z,
-			searchTitleText: j,
-			renderEmptyText: L,
-			focusSearchAfterReady: U,
-			isReady: D,
-			maxCount: y,
-			hideRowLabel: O = !1
-		} = e,
+	let { listClassName: t, pendingAdditions: a, query: s, onQueryChange: i, onClickRow: u, onRemovePendingAddition: R, roles: p = [], members: I = [], users: M = [], guilds: A = [], placeholderText: w, disabledText: N, hintText: Z, searchTitleText: j, renderEmptyText: L, focusSearchAfterReady: U, isReady: D, maxCount: y, hideRowLabel: O = !1 } = e,
 		G = l.useRef(null),
 		B = l.useRef(null),
 		k = [p.length, I.length, M.length, A.length],
@@ -153,21 +121,12 @@ function R(e) {
 		q = l.useCallback(
 			(e) => {
 				var t;
-				if (null != e && e.rowType !== T.aC.EMPTY_STATE)
-					u(e), i(''), null === (t = G.current) || void 0 === t || t.focus();
+				if (null != e && e.rowType !== T.aC.EMPTY_STATE) u(e), i(''), null === (t = G.current) || void 0 === t || t.focus();
 			},
 			[u, i]
 		),
 		V = l.useMemo(() => Object.keys(a), [a]),
-		Y =
-			l.useMemo(
-				() =>
-					I.some((e) => !e.disabled) ||
-					p.some((e) => !e.disabled) ||
-					M.some((e) => !e.disabled) ||
-					A.some((e) => !e.disabled),
-				[I, p, M, A]
-			) || '' === s.trim();
+		Y = l.useMemo(() => I.some((e) => !e.disabled) || p.some((e) => !e.disabled) || M.some((e) => !e.disabled) || A.some((e) => !e.disabled), [I, p, M, A]) || '' === s.trim();
 	function J() {
 		var e;
 		F(!(null === (e = B.current) || void 0 === e ? void 0 : e.isScrolledToTop()) && Y);

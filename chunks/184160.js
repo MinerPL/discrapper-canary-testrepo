@@ -21,12 +21,7 @@ var r = n(512722),
 function h(e) {
 	let { handleStepChange: s, handleClose: n } = e,
 		r = (0, o.ZP)(),
-		{
-			activeSubscription: h,
-			selectedSkuId: f,
-			setSelectedPlanId: I,
-			startedPaymentFlowWithPaymentSourcesRef: E
-		} = (0, c.usePaymentContext)(),
+		{ activeSubscription: h, selectedSkuId: f, setSelectedPlanId: I, startedPaymentFlowWithPaymentSourcesRef: E } = (0, c.usePaymentContext)(),
 		{ isGift: M } = (0, u.wD)(),
 		N = null != h ? (0, d.Af)(h) : null,
 		j = null != N ? (0, d.gq)(N.planId) : null,

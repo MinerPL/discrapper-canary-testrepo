@@ -17,8 +17,7 @@ function a(e, t) {
 			(0, i.Z)().then((t) => {
 				if (null != t)
 					t.identifyGame(e, (e, t) => {
-						if (0 === e && null != t.icon && '' !== t.icon && null != t.name && '' !== t.name)
-							a('data:image/png;base64,'.concat(t.icon));
+						if (0 === e && null != t.icon && '' !== t.icon && null != t.name && '' !== t.name) a('data:image/png;base64,'.concat(t.icon));
 					});
 			});
 		}, [e, t]),

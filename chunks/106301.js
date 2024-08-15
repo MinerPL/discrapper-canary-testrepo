@@ -105,10 +105,7 @@ _(h, 'displayName', 'HangStatusStore'),
 			t.forEach((e) => {
 				let { status: t, emoji: s } = e,
 					o = n.findIndex((e) => e.status === t && l().isEqual(e.emoji, s));
-				-1 !== o && n.splice(o, 1),
-					t === (null == i ? void 0 : i.status) &&
-						l().isEqual(s, null == i ? void 0 : i.emoji) &&
-						((r = null), (i = null), (E.currentDefaultStatus = null), (a = null));
+				-1 !== o && n.splice(o, 1), t === (null == i ? void 0 : i.status) && l().isEqual(s, null == i ? void 0 : i.emoji) && ((r = null), (i = null), (E.currentDefaultStatus = null), (a = null));
 			}),
 				(E.recentCustomStatuses = n);
 		},

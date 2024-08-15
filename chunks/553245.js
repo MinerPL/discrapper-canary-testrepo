@@ -52,8 +52,7 @@ class s {
 	}
 	upstreamItems() {
 		if (!!this.canUpstreamItems()) {
-			for (let [e, t] of this.extended.entries())
-				if ((this.primary.put(e, t), this.extended.delete(e), !this.canUpstreamItems())) break;
+			for (let [e, t] of this.extended.entries()) if ((this.primary.put(e, t), this.extended.delete(e), !this.canUpstreamItems())) break;
 		}
 	}
 	canUpstreamItems() {

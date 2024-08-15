@@ -30,9 +30,7 @@ function l(e) {
 }
 function u(e, t) {
 	var n, r;
-	return ((n = e), (r = t), 0 === n.toLowerCase().indexOf(r.toLowerCase()) && -1 !== '/?#'.indexOf(n.charAt(r.length)))
-		? e.substr(t.length)
-		: e;
+	return ((n = e), (r = t), 0 === n.toLowerCase().indexOf(r.toLowerCase()) && -1 !== '/?#'.indexOf(n.charAt(r.length))) ? e.substr(t.length) : e;
 }
 function c(e) {
 	return '/' === e.charAt(e.length - 1) ? e.slice(0, -1) : e;
@@ -42,11 +40,7 @@ function d(e) {
 		n = e.search,
 		r = e.hash,
 		i = t || '/';
-	return (
-		n && '?' !== n && (i += '?' === n.charAt(0) ? n : '?' + n),
-		r && '#' !== r && (i += '#' === r.charAt(0) ? r : '#' + r),
-		i
-	);
+	return n && '?' !== n && (i += '?' === n.charAt(0) ? n : '?' + n), r && '#' !== r && (i += '#' === r.charAt(0) ? r : '#' + r), i;
 }
 function _(e, t, n, a) {
 	var s, o, l, u, c, d;
@@ -60,38 +54,17 @@ function _(e, t, n, a) {
 				search: '?' === l ? '' : l,
 				hash: '#' === u ? '' : u
 			}).state = t);
-	} else
-		void 0 === (s = (0, r.Z)({}, e)).pathname && (s.pathname = ''),
-			s.search ? '?' !== s.search.charAt(0) && (s.search = '?' + s.search) : (s.search = ''),
-			s.hash ? '#' !== s.hash.charAt(0) && (s.hash = '#' + s.hash) : (s.hash = ''),
-			void 0 !== t && void 0 === s.state && (s.state = t);
+	} else void 0 === (s = (0, r.Z)({}, e)).pathname && (s.pathname = ''), s.search ? '?' !== s.search.charAt(0) && (s.search = '?' + s.search) : (s.search = ''), s.hash ? '#' !== s.hash.charAt(0) && (s.hash = '#' + s.hash) : (s.hash = ''), void 0 !== t && void 0 === s.state && (s.state = t);
 	try {
 		s.pathname = decodeURI(s.pathname);
 	} catch (e) {
-		if (e instanceof URIError)
-			throw URIError(
-				'Pathname "' + s.pathname + '" could not be decoded. This is likely caused by an invalid percent-encoding.'
-			);
+		if (e instanceof URIError) throw URIError('Pathname "' + s.pathname + '" could not be decoded. This is likely caused by an invalid percent-encoding.');
 		throw e;
 	}
-	return (
-		n && (s.key = n),
-		a
-			? s.pathname
-				? '/' !== s.pathname.charAt(0) && (s.pathname = (0, i.default)(s.pathname, a.pathname))
-				: (s.pathname = a.pathname)
-			: !s.pathname && (s.pathname = '/'),
-		s
-	);
+	return n && (s.key = n), a ? (s.pathname ? '/' !== s.pathname.charAt(0) && (s.pathname = (0, i.default)(s.pathname, a.pathname)) : (s.pathname = a.pathname)) : !s.pathname && (s.pathname = '/'), s;
 }
 function E(e, t) {
-	return (
-		e.pathname === t.pathname &&
-		e.search === t.search &&
-		e.hash === t.hash &&
-		e.key === t.key &&
-		(0, a.default)(e.state, t.state)
-	);
+	return e.pathname === t.pathname && e.search === t.search && e.hash === t.hash && e.key === t.key && (0, a.default)(e.state, t.state);
 }
 function f() {
 	var e = null,
@@ -138,8 +111,8 @@ var h = !!('undefined' != typeof window && window.document && window.document.cr
 function p(e, t) {
 	t(window.confirm(e));
 }
-var I = 'popstate',
-	m = 'hashchange';
+var m = 'popstate',
+	I = 'hashchange';
 function T() {
 	try {
 		return window.history.state || {};
@@ -151,13 +124,7 @@ function g(e) {
 	void 0 === e && (e = {}), h || (0, s.Z)(!1);
 	var t,
 		n = window.history;
-	var i =
-			((-1 === (t = window.navigator.userAgent).indexOf('Android 2.') && -1 === t.indexOf('Android 4.0')) ||
-				-1 === t.indexOf('Mobile Safari') ||
-				-1 !== t.indexOf('Chrome') ||
-				-1 !== t.indexOf('Windows Phone')) &&
-			window.history &&
-			'pushState' in window.history,
+	var i = ((-1 === (t = window.navigator.userAgent).indexOf('Android 2.') && -1 === t.indexOf('Android 4.0')) || -1 === t.indexOf('Mobile Safari') || -1 !== t.indexOf('Chrome') || -1 !== t.indexOf('Windows Phone')) && window.history && 'pushState' in window.history,
 		a = -1 !== window.navigator.userAgent.indexOf('Trident'),
 		l = e,
 		E = l.forceRefresh,
@@ -219,9 +186,7 @@ function g(e) {
 	}
 	var k = 0;
 	function B(e) {
-		1 === (k += e) && 1 === e
-			? (window.addEventListener(I, L), a && window.addEventListener(m, b))
-			: 0 === k && (window.removeEventListener(I, L), a && window.removeEventListener(m, b));
+		1 === (k += e) && 1 === e ? (window.addEventListener(m, L), a && window.addEventListener(I, b)) : 0 === k && (window.removeEventListener(m, L), a && window.removeEventListener(I, b));
 	}
 	var F = !1,
 		V = {
@@ -366,9 +331,9 @@ function R(e) {
 		a = void 0 === i ? p : i,
 		l = n.hashType,
 		E = e.basename ? c(o(e.basename)) : '',
-		I = A[void 0 === l ? 'slash' : l],
-		m = I.encodePath,
-		T = I.decodePath;
+		m = A[void 0 === l ? 'slash' : l],
+		I = m.encodePath,
+		T = m.decodePath;
 	function g() {
 		var e = T(v());
 		return E && (e = u(e, E)), _(e);
@@ -381,18 +346,14 @@ function R(e) {
 		D = null;
 	function L() {
 		var e = v(),
-			t = m(e);
+			t = I(e);
 		if (e !== t) O(t);
 		else {
 			var n,
 				r,
 				i = g(),
 				s = B.location;
-			if (
-				(!y && ((n = s), (r = i), n.pathname === r.pathname && n.search === r.search && n.hash === r.hash)) ||
-				D === d(i)
-			)
-				return;
+			if ((!y && ((n = s), (r = i), n.pathname === r.pathname && n.search === r.search && n.hash === r.hash)) || D === d(i)) return;
 			(D = null),
 				(function (e) {
 					y
@@ -417,7 +378,7 @@ function R(e) {
 		}
 	}
 	var b = v(),
-		M = m(b);
+		M = I(b);
 	b !== M && O(M);
 	var P = g(),
 		U = [d(P)];
@@ -436,7 +397,7 @@ function R(e) {
 			createHref: function (e) {
 				var t = document.querySelector('base'),
 					n = '';
-				return t && t.getAttribute('href') && (n = N(window.location.href)), n + '#' + m(E + d(e));
+				return t && t.getAttribute('href') && (n = N(window.location.href)), n + '#' + I(E + d(e));
 			},
 			push: function (e, t) {
 				var n = 'PUSH',
@@ -444,7 +405,7 @@ function R(e) {
 				R.confirmTransitionTo(r, n, a, function (e) {
 					if (e) {
 						var t = d(r),
-							i = m(E + t);
+							i = I(E + t);
 						if (v() !== i) {
 							(D = t), (a = i), (window.location.hash = a);
 							var a,
@@ -466,7 +427,7 @@ function R(e) {
 				R.confirmTransitionTo(r, n, a, function (e) {
 					if (e) {
 						var t = d(r),
-							i = m(E + t);
+							i = I(E + t);
 						v() !== i && ((D = t), O(i));
 						var a = U.indexOf(d(B.location));
 						-1 !== a && (U[a] = t),
@@ -520,7 +481,7 @@ function y(e) {
 		l = void 0 === o ? 6 : o,
 		u = f();
 	function c(e) {
-		(0, r.Z)(m, e), (m.length = m.entries.length), u.notifyListeners(m.location, m.action);
+		(0, r.Z)(I, e), (I.length = I.entries.length), u.notifyListeners(I.location, I.action);
 	}
 	function E() {
 		return Math.random().toString(36).substr(2, l);
@@ -529,9 +490,9 @@ function y(e) {
 		p = a.map(function (e) {
 			return 'string' == typeof e ? _(e, void 0, E()) : _(e, void 0, e.key || E());
 		});
-	function I(e) {
-		var t = C(m.index + e, 0, m.entries.length - 1),
-			r = m.entries[t];
+	function m(e) {
+		var t = C(I.index + e, 0, I.entries.length - 1),
+			r = I.entries[t];
 		u.confirmTransitionTo(r, 'POP', n, function (e) {
 			e
 				? c({
@@ -542,7 +503,7 @@ function y(e) {
 				: c();
 		});
 	}
-	var m = {
+	var I = {
 		length: p.length,
 		action: 'POP',
 		location: p[h],
@@ -551,11 +512,11 @@ function y(e) {
 		createHref: d,
 		push: function (e, t) {
 			var r = 'PUSH',
-				i = _(e, t, E(), m.location);
+				i = _(e, t, E(), I.location);
 			u.confirmTransitionTo(i, r, n, function (e) {
 				if (e) {
-					var t = m.index + 1,
-						n = m.entries.slice(0);
+					var t = I.index + 1,
+						n = I.entries.slice(0);
 					n.length > t ? n.splice(t, n.length - t, i) : n.push(i),
 						c({
 							action: r,
@@ -568,26 +529,26 @@ function y(e) {
 		},
 		replace: function (e, t) {
 			var r = 'REPLACE',
-				i = _(e, t, E(), m.location);
+				i = _(e, t, E(), I.location);
 			u.confirmTransitionTo(i, r, n, function (e) {
 				e &&
-					((m.entries[m.index] = i),
+					((I.entries[I.index] = i),
 					c({
 						action: r,
 						location: i
 					}));
 			});
 		},
-		go: I,
+		go: m,
 		goBack: function () {
-			I(-1);
+			m(-1);
 		},
 		goForward: function () {
-			I(1);
+			m(1);
 		},
 		canGo: function (e) {
-			var t = m.index + e;
-			return t >= 0 && t < m.entries.length;
+			var t = I.index + e;
+			return t >= 0 && t < I.entries.length;
 		},
 		block: function (e) {
 			return void 0 === e && (e = !1), u.setPrompt(e);
@@ -596,5 +557,5 @@ function y(e) {
 			return u.appendListener(e);
 		}
 	};
-	return m;
+	return I;
 }

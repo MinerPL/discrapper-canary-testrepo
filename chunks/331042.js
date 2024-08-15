@@ -173,14 +173,7 @@ let P = (e) => {
 	},
 	U = (e) => {
 		var t;
-		let {
-				product: n,
-				onClose: s,
-				confettiTarget: o,
-				confettiCanvas: i,
-				hideConfetti: E = !1,
-				analyticsLocations: b
-			} = e,
+		let { product: n, onClose: s, confettiTarget: o, confettiCanvas: i, hideConfetti: E = !1, analyticsLocations: b } = e,
 			{ confettiColors: T } = (0, N.Z)(n.styles),
 			R = (0, u.e7)([p.Z], () => p.Z.useReducedMotion),
 			j = (0, x.m)('CollectiblesCollectedModal'),

@@ -48,11 +48,7 @@ function P(e) {
 		F = (null == G ? void 0 : G.applicationId) === P,
 		[w] = (0, _.Z)([P, null !== (n = null == G ? void 0 : G.applicationId) && void 0 !== n ? n : '']),
 		V = (0, S.ZP)(null !== (r = null == w ? void 0 : w.maxParticipants) && void 0 !== r ? r : 0),
-		[H] = (0, s.Wu)(
-			[C.ZP],
-			() => (k ? C.ZP.getEmbeddedActivitiesForChannel(U).filter((e) => e.applicationId === P) : []),
-			[P, U, k]
-		),
+		[H] = (0, s.Wu)([C.ZP], () => (k ? C.ZP.getEmbeddedActivitiesForChannel(U).filter((e) => e.applicationId === P) : []), [P, U, k]),
 		Y = Array.from(null !== (f = null == H ? void 0 : H.userIds) && void 0 !== f ? f : []),
 		W = (0, s.Wu)([T.default], () => Y.map((e) => T.default.getUser(e)).filter(N.lm), [Y]),
 		K = (0, A.Z)({

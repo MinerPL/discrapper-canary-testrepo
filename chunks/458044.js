@@ -17,11 +17,7 @@ var t = s(689938),
 function m(e) {
 	return [
 		{
-			tags: [
-				t.Z.Messages.FORUM_UPSELL_DEMO_1_TAG_NAME_1,
-				t.Z.Messages.FORUM_UPSELL_DEMO_1_TAG_NAME_2,
-				t.Z.Messages.FORUM_UPSELL_DEMO_1_TAG_NAME_3
-			],
+			tags: [t.Z.Messages.FORUM_UPSELL_DEMO_1_TAG_NAME_1, t.Z.Messages.FORUM_UPSELL_DEMO_1_TAG_NAME_2, t.Z.Messages.FORUM_UPSELL_DEMO_1_TAG_NAME_3],
 			posts: [
 				{
 					user: {
@@ -102,11 +98,7 @@ function m(e) {
 			ariaLabel: t.Z.Messages.FORUM_UPSELL_DEMO_1_ALT_TEXT
 		},
 		{
-			tags: [
-				t.Z.Messages.FORUM_UPSELL_DEMO_2_TAG_NAME_1,
-				t.Z.Messages.FORUM_UPSELL_DEMO_2_TAG_NAME_2,
-				t.Z.Messages.FORUM_UPSELL_DEMO_2_TAG_NAME_3
-			],
+			tags: [t.Z.Messages.FORUM_UPSELL_DEMO_2_TAG_NAME_1, t.Z.Messages.FORUM_UPSELL_DEMO_2_TAG_NAME_2, t.Z.Messages.FORUM_UPSELL_DEMO_2_TAG_NAME_3],
 			posts: [
 				{
 					user: {
@@ -187,11 +179,7 @@ function m(e) {
 			ariaLabel: t.Z.Messages.FORUM_UPSELL_DEMO_2_ALT_TEXT
 		},
 		{
-			tags: [
-				t.Z.Messages.FORUM_UPSELL_DEMO_3_TAG_NAME_1,
-				t.Z.Messages.FORUM_UPSELL_DEMO_3_TAG_NAME_2,
-				t.Z.Messages.FORUM_UPSELL_DEMO_3_TAG_NAME_3
-			],
+			tags: [t.Z.Messages.FORUM_UPSELL_DEMO_3_TAG_NAME_1, t.Z.Messages.FORUM_UPSELL_DEMO_3_TAG_NAME_2, t.Z.Messages.FORUM_UPSELL_DEMO_3_TAG_NAME_3],
 			posts: [
 				{
 					user: {

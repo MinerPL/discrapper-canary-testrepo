@@ -28,9 +28,7 @@ function g() {
 		c.yq();
 	}, []),
 	a.useEffect(() => {
-		t &&
-			(o.default.track(A.rMx.SAFETY_HUB_VIEWED, { account_standing: n.state }),
-			r.Z.increment({ name: s.V.SAFETY_HUB_VIEW }));
+		t && (o.default.track(A.rMx.SAFETY_HUB_VIEWED, { account_standing: n.state }), r.Z.increment({ name: s.V.SAFETY_HUB_VIEW }));
 	}, [t]),
 	e)
 		? (0, i.jsx)('div', { children: (0, i.jsx)(l.Spinner, {}) })

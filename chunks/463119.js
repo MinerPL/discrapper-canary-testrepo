@@ -118,37 +118,7 @@ let L = (e) => {
 			U = (0, E.ZP)(),
 			G = b.entrypointDecorationAssets,
 			k = (0, c.wj)(U);
-		y
-			? k
-				? ((C = null === (t = b.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered),
-					(N =
-						null === (s = b.entrypointBackgroundStyle) || void 0 === s
-							? void 0
-							: null === (n = s.hovered) || void 0 === n
-								? void 0
-								: n.dark))
-				: ((C = null === (l = b.entryPointBackgroundAssets) || void 0 === l ? void 0 : l.srcLightHovered),
-					(N =
-						null === (_ = b.entrypointBackgroundStyle) || void 0 === _
-							? void 0
-							: null === (u = _.hovered) || void 0 === u
-								? void 0
-								: u.light))
-			: k
-				? ((C = null === (m = b.entryPointBackgroundAssets) || void 0 === m ? void 0 : m.srcDark),
-					(N =
-						null === (g = b.entrypointBackgroundStyle) || void 0 === g
-							? void 0
-							: null === (I = g.resting) || void 0 === I
-								? void 0
-								: I.dark))
-				: ((C = null === (p = b.entryPointBackgroundAssets) || void 0 === p ? void 0 : p.srcLight),
-					(N =
-						null === (f = b.entrypointBackgroundStyle) || void 0 === f
-							? void 0
-							: null === (T = f.resting) || void 0 === T
-								? void 0
-								: T.light));
+		y ? (k ? ((C = null === (t = b.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered), (N = null === (s = b.entrypointBackgroundStyle) || void 0 === s ? void 0 : null === (n = s.hovered) || void 0 === n ? void 0 : n.dark)) : ((C = null === (l = b.entryPointBackgroundAssets) || void 0 === l ? void 0 : l.srcLightHovered), (N = null === (_ = b.entrypointBackgroundStyle) || void 0 === _ ? void 0 : null === (u = _.hovered) || void 0 === u ? void 0 : u.light))) : k ? ((C = null === (m = b.entryPointBackgroundAssets) || void 0 === m ? void 0 : m.srcDark), (N = null === (g = b.entrypointBackgroundStyle) || void 0 === g ? void 0 : null === (I = g.resting) || void 0 === I ? void 0 : I.dark)) : ((C = null === (p = b.entryPointBackgroundAssets) || void 0 === p ? void 0 : p.srcLight), (N = null === (f = b.entrypointBackgroundStyle) || void 0 === f ? void 0 : null === (T = f.resting) || void 0 === T ? void 0 : T.light));
 		let w = a.useCallback(
 				(e) => {
 					D((e) => (e + 1) % b.assetIds.length), j(!0), null == e || e();
@@ -210,12 +180,7 @@ let L = (e) => {
 		let { selected: t, locationState: n, displayOptions: s } = e,
 			r = a.useMemo(() => {
 				var e;
-				let t =
-					null != s.emojiName
-						? null === (e = T.ZP.getByName(s.emojiName)) || void 0 === e
-							? void 0
-							: e.surrogates
-						: null;
+				let t = null != s.emojiName ? (null === (e = T.ZP.getByName(s.emojiName)) || void 0 === e ? void 0 : e.surrogates) : null;
 				return (0, i.jsxs)(d.Text, {
 					variant: 'text-sm/medium',
 					className: Z.marketingBadgeTooltipContent,

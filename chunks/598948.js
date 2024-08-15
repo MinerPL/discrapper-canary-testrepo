@@ -43,15 +43,7 @@ let f = {
 	Z = (e) => e.metaKey || e.ctrlKey || ['Meta', 'Control'].includes(e.key),
 	j = a.memo(
 		function (e) {
-			let {
-					members: t,
-					guild: l,
-					className: o,
-					searchState: i,
-					compact: r,
-					onSelectRow: m,
-					onResetForNewMembers: _
-				} = e,
+			let { members: t, guild: l, className: o, searchState: i, compact: r, onSelectRow: m, onResetForNewMembers: _ } = e,
 				h = (0, C.e7)([u.Z], () => u.Z.useReducedMotion),
 				p = (0, c.f9)(),
 				j = (0, E.n)(),

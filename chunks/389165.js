@@ -1,11 +1,4 @@
-Object.defineProperty(t, '__esModule', { value: !0 }),
-	(t.isvalidColorString =
-		t.red =
-		t.getContrastingColor =
-		t.isValidHex =
-		t.toState =
-		t.simpleCheckForValidColor =
-			void 0);
+Object.defineProperty(t, '__esModule', { value: !0 }), (t.isvalidColorString = t.red = t.getContrastingColor = t.isValidHex = t.toState = t.simpleCheckForValidColor = void 0);
 var r = a(n(876344)),
 	i = a(n(979590));
 function a(e) {
@@ -47,11 +40,7 @@ var s = (t.toState = function (e, t) {
 	(t.getContrastingColor = function (e) {
 		if (!e) return '#fff';
 		var t = s(e);
-		return 'transparent' === t.hex
-			? 'rgba(0,0,0,0.4)'
-			: (299 * t.rgb.r + 587 * t.rgb.g + 114 * t.rgb.b) / 1000 >= 128
-				? '#000'
-				: '#fff';
+		return 'transparent' === t.hex ? 'rgba(0,0,0,0.4)' : (299 * t.rgb.r + 587 * t.rgb.g + 114 * t.rgb.b) / 1000 >= 128 ? '#000' : '#fff';
 	}),
 	(t.red = {
 		hsl: {

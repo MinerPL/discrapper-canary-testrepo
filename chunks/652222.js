@@ -8,14 +8,7 @@ var r = n(182823),
 	a = n(251433),
 	s = n(616073);
 function o(e) {
-	let {
-			value: t = 0,
-			minValue: n = 0,
-			maxValue: o = 100,
-			valueLabel: l,
-			isIndeterminate: u,
-			formatOptions: c = { style: 'percent' }
-		} = e,
+	let { value: t = 0, minValue: n = 0, maxValue: o = 100, valueLabel: l, isIndeterminate: u, formatOptions: c = { style: 'percent' } } = e,
 		d = (0, r.zL)(e, { labelable: !0 }),
 		{ labelProps: _, fieldProps: E } = (0, a.N)({
 			...e,

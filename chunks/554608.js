@@ -11,10 +11,7 @@ var r,
 	l,
 	u = n(442837),
 	c = n(570140);
-((r = o || (o = {}))[(r.NOT_STARTED = 0)] = 'NOT_STARTED'),
-	(r[(r.IN_PROGRESS = 1)] = 'IN_PROGRESS'),
-	(r[(r.FAILED = 2)] = 'FAILED'),
-	(r[(r.SKIPPED = 3)] = 'SKIPPED');
+((r = o || (o = {}))[(r.NOT_STARTED = 0)] = 'NOT_STARTED'), (r[(r.IN_PROGRESS = 1)] = 'IN_PROGRESS'), (r[(r.FAILED = 2)] = 'FAILED'), (r[(r.SKIPPED = 3)] = 'SKIPPED');
 let d = 0;
 class _ extends (l = u.ZP.Store) {
 	getMigrationStatus() {

@@ -37,13 +37,7 @@ function f(e) {
 	let R = a.useMemo(() => {
 		var e, n, i;
 		let a = C[t.getEveryoneRoleId()],
-			l =
-				null !==
-					(n =
-						null == S ? void 0 : null === (e = S.roles) || void 0 === e ? void 0 : e.map((e) => C[e]).filter(T.lm)) &&
-				void 0 !== n
-					? n
-					: [],
+			l = null !== (n = null == S ? void 0 : null === (e = S.roles) || void 0 === e ? void 0 : e.map((e) => C[e]).filter(T.lm)) && void 0 !== n ? n : [],
 			r = null !== (i = null == a ? void 0 : a.permissions) && void 0 !== i ? i : h.Hn;
 		for (let e of l) r = s.IH(r, e.permissions);
 		return r;

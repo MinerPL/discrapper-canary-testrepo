@@ -33,9 +33,7 @@ let v = [
 			(0, r.jsx)(d.J, {
 				...e,
 				onReturn: () => {
-					0 === Object.keys(g.Z.paymentSources).length
-						? e.handleClose()
-						: e.handleStepChange(l.h8.REVIEW, { trackedFromStep: l.h8.ADD_PAYMENT_STEPS });
+					0 === Object.keys(g.Z.paymentSources).length ? e.handleClose() : e.handleStepChange(l.h8.REVIEW, { trackedFromStep: l.h8.ADD_PAYMENT_STEPS });
 				}
 			})
 	},

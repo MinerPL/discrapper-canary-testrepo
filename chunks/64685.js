@@ -73,11 +73,7 @@ function I(e, t = !1) {
 								endTimestamp: 1000 * (0, i.ph)(),
 								error: t
 							};
-							throw (
-								((0, E.rK)('fetch', e),
-								(0, n.VZ)(t) && void 0 === t.stack && ((t.stack = I), (0, a.xp)(t, 'framesToPop', 1)),
-								t)
-							);
+							throw ((0, E.rK)('fetch', e), (0, n.VZ)(t) && void 0 === t.stack && ((t.stack = I), (0, a.xp)(t, 'framesToPop', 1)), t);
 						}
 					}
 				);

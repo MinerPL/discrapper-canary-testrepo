@@ -21,9 +21,7 @@ let u = new Set(),
 	c = {};
 class d extends (r = i.ZP.PersistedStore) {
 	initialize(e) {
-		null != e &&
-			(Array.isArray(e.hiddenHotspots) && (u = new Set(e.hiddenHotspots)),
-			null != e.hotspotOverrides && (c = e.hotspotOverrides));
+		null != e && (Array.isArray(e.hiddenHotspots) && (u = new Set(e.hiddenHotspots)), null != e.hotspotOverrides && (c = e.hotspotOverrides));
 	}
 	hasHotspot(e) {
 		let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],

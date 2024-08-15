@@ -83,16 +83,8 @@ function C(e, t) {
 		i = r.useRef(null),
 		[c, d] = r.useState(!1),
 		[f, Z] = r.useState(!1),
-		C = (0, u.e7)(
-			[o.Z, s.Z],
-			() =>
-				null != t && null != e && o.Z.getChannelId() === e && null != s.Z.isInChannel(e, t) && o.Z.isUserConnected(t)
-		),
-		E = (0, u.e7)(
-			[o.Z, s.Z],
-			() =>
-				null != t && null != e && o.Z.getChannelId() === e && null != s.Z.isInChannel(e, t) && !o.Z.isUserConnected(t)
-		);
+		C = (0, u.e7)([o.Z, s.Z], () => null != t && null != e && o.Z.getChannelId() === e && null != s.Z.isInChannel(e, t) && o.Z.isUserConnected(t)),
+		E = (0, u.e7)([o.Z, s.Z], () => null != t && null != e && o.Z.getChannelId() === e && null != s.Z.isInChannel(e, t) && !o.Z.isUserConnected(t));
 	return (
 		r.useEffect(() => {
 			C && Z(!0);

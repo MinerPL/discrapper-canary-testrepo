@@ -21,14 +21,7 @@ var o = n(735250),
 	T = n(981631),
 	p = n(771553);
 function f(e) {
-	let {
-			transitionState: t,
-			initialSlide: n = m._m.GUILD_TEMPLATES,
-			onSuccess: a,
-			onClose: f,
-			onSlideChange: S,
-			hasJoinButton: C
-		} = e,
+	let { transitionState: t, initialSlide: n = m._m.GUILD_TEMPLATES, onSuccess: a, onClose: f, onSlideChange: S, hasJoinButton: C } = e,
 		[L, A] = l.useState(n),
 		D = (0, c.Z)(L),
 		[M, O] = l.useState(null),

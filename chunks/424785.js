@@ -90,25 +90,7 @@ class F extends y.ZP {
 		return this.props.channelInfo;
 	}
 	render() {
-		let {
-				channel: e,
-				selected: t,
-				connected: n,
-				locked: l,
-				connectChannelDropTarget: a,
-				connectChannelDragSource: o,
-				connectUserDropTarget: c,
-				connectDragPreview: u,
-				canReorderChannel: d,
-				canMoveMembers: p,
-				stageInstance: _,
-				isSubscriptionGated: f,
-				needSubscriptionToAccess: g,
-				unread: m,
-				resolvedUnreadSetting: C,
-				mentionCount: I,
-				isFavoriteSuggestion: E
-			} = this.props,
+		let { channel: e, selected: t, connected: n, locked: l, connectChannelDropTarget: a, connectChannelDragSource: o, connectUserDropTarget: c, connectDragPreview: u, canReorderChannel: d, canMoveMembers: p, stageInstance: _, isSubscriptionGated: f, needSubscriptionToAccess: g, unread: m, resolvedUnreadSetting: C, mentionCount: I, isFavoriteSuggestion: E } = this.props,
 			{ shouldShowGuildVerificationPopout: N } = this.state,
 			x = this.getVoiceStatesCount(),
 			S = (0, i.jsxs)('li', {
@@ -154,14 +136,7 @@ class F extends y.ZP {
 											needSubscriptionToAccess: g
 										}),
 										...c,
-										children: [
-											E && this.renderAcceptSuggestionButton(),
-											E && this.renderRemoveSuggestionButton(),
-											!E && this.renderOpenChatButton(),
-											!E && this.renderInviteButton(),
-											!E && this.renderEditButton(),
-											!E && this.renderChannelInfo()
-										]
+										children: [E && this.renderAcceptSuggestionButton(), E && this.renderRemoveSuggestionButton(), !E && this.renderOpenChatButton(), !E && this.renderInviteButton(), !E && this.renderEditButton(), !E && this.renderChannelInfo()]
 									});
 								}
 							})
@@ -180,10 +155,7 @@ class F extends y.ZP {
 			V(this, 'handleClick', () => {
 				let { channel: e, locked: t, connected: n, unverifiedAccount: i } = this.props,
 					l = e.getGuildId();
-				null != l && (0, f.n)(l) && (0, _.hk)(l),
-					i && this.setState({ shouldShowGuildVerificationPopout: !0 }),
-					!t && !n && !e.isRoleSubscriptionTemplatePreviewChannel() && (0, I.Cq)(e),
-					!__OVERLAY__ && (0, C.Kh)(e.id);
+				null != l && (0, f.n)(l) && (0, _.hk)(l), i && this.setState({ shouldShowGuildVerificationPopout: !0 }), !t && !n && !e.isRoleSubscriptionTemplatePreviewChannel() && (0, I.Cq)(e), !__OVERLAY__ && (0, C.Kh)(e.id);
 			}),
 			V(this, 'handleClickChat', () => {
 				let { channel: e, locked: t } = this.props;
@@ -264,9 +236,7 @@ function z(e) {
 				i = A.Z.getCheck(n.guild_id);
 			return {
 				canManageChannel: null != t && b.Z.can(U.Plq.MANAGE_CHANNELS, n),
-				canReorderChannel:
-					!0 !== l &&
-					(t.id === G._ || (null != e ? b.Z.can(U.Plq.MANAGE_CHANNELS, e) : b.Z.can(U.Plq.MANAGE_CHANNELS, t))),
+				canReorderChannel: !0 !== l && (t.id === G._ || (null != e ? b.Z.can(U.Plq.MANAGE_CHANNELS, e) : b.Z.can(U.Plq.MANAGE_CHANNELS, t))),
 				canMoveMembers: b.Z.can(U.Plq.MOVE_MEMBERS, n),
 				locked: !b.Z.can(U.Plq.CONNECT, n),
 				bypassLimit: b.Z.can(U.Plq.MOVE_MEMBERS, n),

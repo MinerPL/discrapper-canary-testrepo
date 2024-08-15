@@ -43,9 +43,7 @@ let R = () => {
 				s = T.Z.getSortDeltas(),
 				a = null,
 				i = null;
-			T.Z.hasRoleConfigurationChanges &&
-				((i = T.Z.editedRoleIdsForConfigurations), (a = T.Z.getEditedRoleConnectionConfigurationsMap())),
-				(0, E.Gf)(t, n, s, i, a);
+			T.Z.hasRoleConfigurationChanges && ((i = T.Z.editedRoleIdsForConfigurations), (a = T.Z.getEditedRoleConnectionConfigurationsMap())), (0, E.Gf)(t, n, s, i, a);
 		},
 		submitting: t === x.QZA.SUBMITTING,
 		onReset: E.S1

@@ -13,7 +13,7 @@ var r = n(735250),
 	f = n(981631),
 	h = n(1094),
 	p = n(224499);
-function I(e, t, n) {
+function m(e, t, n) {
 	return (
 		t in e
 			? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function I(e, t, n) {
 		e
 	);
 }
-let m = l().memoize((e) => {
+let I = l().memoize((e) => {
 	let t = !1;
 	if (null != e && (0, u.FX)(e)) {
 		let n = (0, u._i)(e);
@@ -38,7 +38,7 @@ class T extends i.PureComponent {
 	render() {
 		let e;
 		let { selected: t, color: n, className: i, children: a } = this.props,
-			o = m(n);
+			o = I(n);
 		return (
 			t
 				? (e = {
@@ -84,14 +84,14 @@ class T extends i.PureComponent {
 	}
 	constructor(...e) {
 		super(...e),
-			I(this, 'state', { color: m(this.props.color) }),
-			I(this, 'handleKeyUp', (e) => {
+			m(this, 'state', { color: I(this.props.color) }),
+			m(this, 'handleKeyUp', (e) => {
 				if (e.which === f.yXg.ENTER || e.which === f.yXg.SPACE) {
 					let { onClick: e, ...t } = this.props;
 					e(t);
 				}
 			}),
-			I(this, 'handleClick', () => {
+			m(this, 'handleClick', () => {
 				let { onClick: e, ...t } = this.props;
 				e(t);
 			});

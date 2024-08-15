@@ -106,13 +106,7 @@ let I = {
 ((E = a || (a = {})).MEMBERS = 'members'), (E.CONTENT = 'content');
 let T = {
 		members: [I[s.fX.USER_PROFILE]],
-		content: [
-			I[s.fX.SERVER_POLICY],
-			I[s.fX.MENTION_SPAM],
-			I[s.fX.ML_SPAM],
-			I[s.fX.DEFAULT_KEYWORD_LIST],
-			I[s.fX.KEYWORD]
-		]
+		content: [I[s.fX.SERVER_POLICY], I[s.fX.MENTION_SPAM], I[s.fX.ML_SPAM], I[s.fX.DEFAULT_KEYWORD_LIST], I[s.fX.KEYWORD]]
 	},
 	O = (e, t) => I[e].flags.has(t);
 function A(e) {
@@ -121,10 +115,8 @@ function A(e) {
 function N(e, t) {
 	let { id: n, eventType: r, triggerType: a, actions: i } = e,
 		E = I[a];
-	if (t.filter((e) => n !== e.id && e.triggerType === a).length > E.perGuildMaxCount)
-		throw Error('You have exceeded the maximum number of rules of type '.concat(a));
-	if (i.some((e) => !E.availableActionTypes.has(e.type)))
-		throw Error('You have provided an action that is not available for this trigger type');
+	if (t.filter((e) => n !== e.id && e.triggerType === a).length > E.perGuildMaxCount) throw Error('You have exceeded the maximum number of rules of type '.concat(a));
+	if (i.some((e) => !E.availableActionTypes.has(e.type))) throw Error('You have provided an action that is not available for this trigger type');
 	if (r !== E.eventType) throw Error('You have provided an event type that is not available for this trigger type');
 }
 function S(e) {
@@ -133,11 +125,7 @@ function S(e) {
 		() =>
 			Object.keys(T).reduce(
 				(e, n) => {
-					let r = T[n]
-						.filter(
-							(e) => e.type !== s.fX.SERVER_POLICY && (e.type !== s.fX.USER_PROFILE || !!t) && e.perGuildMaxCount > 0
-						)
-						.map((e) => e.type);
+					let r = T[n].filter((e) => e.type !== s.fX.SERVER_POLICY && (e.type !== s.fX.USER_PROFILE || !!t) && e.perGuildMaxCount > 0).map((e) => e.type);
 					return (e[n] = r), e;
 				},
 				{

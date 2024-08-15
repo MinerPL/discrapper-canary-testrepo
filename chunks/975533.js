@@ -32,9 +32,7 @@ let Z = {
 	},
 	[A.kg4.PUSH_TO_TALK]: {
 		onTrigger(e, t) {
-			p.Z.getMode(t.context) === A.pM4.PUSH_TO_TALK &&
-				((Z[A.kg4.PUSH_TO_TALK].isPressed = e),
-				p.Z.getMediaEngine().eachConnection((t) => t.setForceAudioInput(e, !1), t.context));
+			p.Z.getMode(t.context) === A.pM4.PUSH_TO_TALK && ((Z[A.kg4.PUSH_TO_TALK].isPressed = e), p.Z.getMediaEngine().eachConnection((t) => t.setForceAudioInput(e, !1), t.context));
 		},
 		keyEvents: {
 			keyup: !0,
@@ -44,9 +42,7 @@ let Z = {
 	},
 	[A.kg4.PUSH_TO_TALK_PRIORITY]: {
 		onTrigger(e) {
-			p.Z.getMode() === A.pM4.PUSH_TO_TALK &&
-				((Z[A.kg4.PUSH_TO_TALK_PRIORITY].isPressed = e),
-				p.Z.getMediaEngine().eachConnection((t) => t.setForceAudioInput(e, !0), v.Yn.DEFAULT));
+			p.Z.getMode() === A.pM4.PUSH_TO_TALK && ((Z[A.kg4.PUSH_TO_TALK_PRIORITY].isPressed = e), p.Z.getMediaEngine().eachConnection((t) => t.setForceAudioInput(e, !0), v.Yn.DEFAULT));
 		},
 		keyEvents: {
 			keyup: !0,
@@ -56,8 +52,7 @@ let Z = {
 	},
 	[A.kg4.PUSH_TO_MUTE]: {
 		onTrigger(e) {
-			if (!(p.Z.getMode() !== A.pM4.VOICE_ACTIVITY || p.Z.isSelfDeaf()))
-				(Z[A.kg4.PUSH_TO_MUTE].isPressed = e), a.Z.setTemporarySelfMute(e);
+			if (!(p.Z.getMode() !== A.pM4.VOICE_ACTIVITY || p.Z.isSelfDeaf())) (Z[A.kg4.PUSH_TO_MUTE].isPressed = e), a.Z.setTemporarySelfMute(e);
 		},
 		keyEvents: {
 			keyup: !0,
@@ -115,12 +110,7 @@ let Z = {
 		onTrigger() {
 			let e = S.Z.getFocusedPID(),
 				t = null != e;
-			null != e &&
-				t &&
-				f.Z.isPinned(A.Odu.TEXT) &&
-				S.Z.isReady(e) &&
-				S.Z.isInputLocked(e) &&
-				s.Z.activateRegion(A.O0n.TEXT_WIDGET);
+			null != e && t && f.Z.isPinned(A.Odu.TEXT) && S.Z.isReady(e) && S.Z.isInputLocked(e) && s.Z.activateRegion(A.O0n.TEXT_WIDGET);
 		},
 		keyEvents: {
 			keyup: !0,

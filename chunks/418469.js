@@ -18,7 +18,7 @@ function d(e, t, d) {
 		f = (0, i.e7)([l.default], () => l.default.getId()),
 		h = null != e ? (0, s.V9)(e) : u.Z.getActiveStreamKey(),
 		p = null !== (_ = u.Z.getVideoStats(h)) && void 0 !== _ ? _ : {},
-		I = {
+		m = {
 			media_session_id: u.Z.getMediaSessionId(h),
 			rtc_connection_id: u.Z.getRtcConnectionId(h),
 			stream_region: u.Z.getRegion(h),
@@ -40,7 +40,7 @@ function d(e, t, d) {
 										stream: e,
 										streamApplication: E,
 										isStreamer: f === (null == e ? void 0 : e.ownerId),
-										analyticsData: I,
+										analyticsData: m,
 										...n
 									});
 							});

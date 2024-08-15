@@ -4,17 +4,7 @@ n.d(t, {
 	}
 });
 function i(e) {
-	let {
-		userId: t,
-		nick: n,
-		guildId: i,
-		avatar: a,
-		avatarDecoration: s,
-		banner: r,
-		bio: l,
-		pronouns: o,
-		colorString: c
-	} = e;
+	let { userId: t, nick: n, guildId: i, avatar: a, avatarDecoration: s, banner: r, bio: l, pronouns: o, colorString: c } = e;
 	return {
 		user_id: t,
 		nick: n,

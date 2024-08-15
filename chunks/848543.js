@@ -87,22 +87,15 @@ function v(e) {
 							disabled: b,
 							onClick: () => {
 								var t, n;
-								null != j && j !== o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && U(C.L.UNKNOWN),
-									null == e || null === (t = e.onClick) || void 0 === t || t.call(e),
-									M(!P),
-									B();
+								null != j && j !== o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && U(C.L.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), M(!P), B();
 							},
 							onMouseEnter: (t) => {
 								var n, i;
-								null === (n = L.onMouseEnter) || void 0 === n || n.call(L, t),
-									null == e || null === (i = e.onMouseEnter) || void 0 === i || i.call(e),
-									H();
+								null === (n = L.onMouseEnter) || void 0 === n || n.call(L, t), null == e || null === (i = e.onMouseEnter) || void 0 === i || i.call(e), H();
 							},
 							onMouseLeave: (t) => {
 								var n, i;
-								null === (n = L.onMouseLeave) || void 0 === n || n.call(L, t),
-									null == e || null === (i = e.onMouseLeave) || void 0 === i || i.call(e),
-									V();
+								null === (n = L.onMouseLeave) || void 0 === n || n.call(L, t), null == e || null === (i = e.onMouseLeave) || void 0 === i || i.call(e), V();
 							},
 							onContextMenu: k,
 							fullWidth: !0,

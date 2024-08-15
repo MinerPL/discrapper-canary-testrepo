@@ -17,16 +17,7 @@ var n = t(735250),
 	N = t(564510);
 let h = new d.Z('TwoWayLinkDiscordConsentWeb');
 function m(e) {
-	let {
-			platformType: a,
-			clientId: t,
-			scopes: s,
-			authToken: d,
-			onContinue: m,
-			onError: C,
-			onClose: j,
-			redirectUri: E
-		} = e,
+	let { platformType: a, clientId: t, scopes: s, authToken: d, onContinue: m, onError: C, onClose: j, redirectUri: E } = e,
 		[v, f] = r.useState(!1),
 		p = r.useCallback(
 			async (e) => {

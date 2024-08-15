@@ -120,9 +120,5 @@ function o(n, i, e) {
 }
 i.Z = function (n, i, t) {
 	var a = e[n];
-	return null != t && t.addSuffix
-		? t.comparison && t.comparison > 0
-			? 'za ' + o(a, i, 'future')
-			: o(a, i, 'past') + ' temu'
-		: o(a, i, 'regular');
+	return null != t && t.addSuffix ? (t.comparison && t.comparison > 0 ? 'za ' + o(a, i, 'future') : o(a, i, 'past') + ' temu') : o(a, i, 'regular');
 };

@@ -138,10 +138,7 @@ function v(e) {
 let L = () => {
 		let e = (0, g.Z)(),
 			t = (0, p.mq)(M.ne.ACTIVE),
-			n = (0, T.o)(
-				b.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({ activeLinks: t.length }),
-				b.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT
-			),
+			n = (0, T.o)(b.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({ activeLinks: t.length }), b.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
 			a = (0, u.Qr)(!!e),
 			r = (0, p.Rd)(a);
 		return e && t.length > 1

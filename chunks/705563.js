@@ -1,6 +1,6 @@
 n.d(t, {
 	Z: function () {
-		return g;
+		return C;
 	}
 });
 var i = n(735250);
@@ -19,16 +19,16 @@ var a = n(442837),
 	_ = n(981631),
 	f = n(689938),
 	E = n(617803);
-function g(e) {
-	let { channelId: t, showProfile: n = !1, showTrailingDivider: g = !1 } = e,
-		C = d.default.cast(t),
+function C(e) {
+	let { channelId: t, showProfile: n = !1, showTrailingDivider: C = !1 } = e,
+		g = d.default.cast(t),
 		{
 			joinRequest: I,
 			isModmin: x,
 			guildId: T,
 			maxMembers: N
 		} = (0, a.cj)([h.Z, c.Z, u.Z], () => {
-			let e = h.Z.getRequest(C),
+			let e = h.Z.getRequest(g),
 				t = c.Z.getGuild(null == e ? void 0 : e.guildId);
 			return {
 				joinRequest: e,
@@ -39,11 +39,7 @@ function g(e) {
 		}),
 		v = (0, a.e7)([o.Z], () => (null != T ? o.Z.getMemberCount(T) : 0)),
 		S = null != N && (null != v ? v : 0) >= N,
-		{
-			approveRequest: Z,
-			rejectRequest: A,
-			submitting: M
-		} = (0, p.s)(null == I ? void 0 : I.guildId, null == I ? void 0 : I.userId);
+		{ approveRequest: Z, rejectRequest: A, submitting: M } = (0, p.s)(null == I ? void 0 : I.guildId, null == I ? void 0 : I.userId);
 	return null != I && I.applicationStatus === m.wB.SUBMITTED && x
 		? (0, i.jsxs)('div', {
 				className: E.buttons,
@@ -85,7 +81,7 @@ function g(e) {
 							size: s.ButtonSizes.SMALL,
 							children: f.Z.Messages.VIEW_PROFILE
 						}),
-					g && (0, i.jsx)(l.ZP.Divider, {})
+					C && (0, i.jsx)(l.ZP.Divider, {})
 				]
 			})
 		: null;

@@ -2,11 +2,7 @@ function t(i, n) {
 	if (void 0 !== i.one && 1 === n) return i.one;
 	var t = n % 10,
 		e = n % 100;
-	return 1 === t && 11 !== e
-		? i.singularNominative.replace('{{count}}', String(n))
-		: t >= 2 && t <= 4 && (e < 10 || e > 20)
-			? i.singularGenitive.replace('{{count}}', String(n))
-			: i.pluralGenitive.replace('{{count}}', String(n));
+	return 1 === t && 11 !== e ? i.singularNominative.replace('{{count}}', String(n)) : t >= 2 && t <= 4 && (e < 10 || e > 20) ? i.singularGenitive.replace('{{count}}', String(n)) : i.pluralGenitive.replace('{{count}}', String(n));
 }
 function e(i) {
 	return function (n, e) {

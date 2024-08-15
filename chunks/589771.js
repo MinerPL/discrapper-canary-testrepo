@@ -14,18 +14,7 @@ var r = n(735250),
 	c = n(456251);
 function d(e) {
 	let { initialStep: t, initialPlanId: n, guildId: d, setAnalyticsData: I, handleClose: _ } = e,
-		{
-			blockedPayments: f,
-			setStep: h,
-			hasFetchedSubscriptions: E,
-			hasFetchedSubscriptionPlans: S,
-			currencyLoading: m,
-			selectedSkuId: p,
-			setSelectedSkuId: T,
-			setSelectedPlanId: C,
-			priceOptions: N,
-			setSubscriptionMetadataRequest: A
-		} = (0, u.usePaymentContext)(),
+		{ blockedPayments: f, setStep: h, hasFetchedSubscriptions: E, hasFetchedSubscriptionPlans: S, currencyLoading: m, selectedSkuId: p, setSelectedSkuId: T, setSelectedPlanId: C, priceOptions: N, setSubscriptionMetadataRequest: A } = (0, u.usePaymentContext)(),
 		{ isGift: O } = (0, o.wD)(),
 		[P, b] = a.useState(!E || !S || m);
 	return (a.useEffect(() => {

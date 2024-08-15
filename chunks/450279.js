@@ -70,10 +70,7 @@ function a(e, t, n, a) {
 				pliCount: e.pliCount,
 				bitrateTarget: e.targetBitrate,
 				qpSum: e.qpSum,
-				averageEncodeTime:
-					null == e.framesEncoded || null === (l = e.totalEncodeTime) || 0 === l
-						? void 0
-						: ((1000 * e.totalEncodeTime) / e.framesEncoded).toFixed(1),
+				averageEncodeTime: null == e.framesEncoded || null === (l = e.totalEncodeTime) || 0 === l ? void 0 : ((1000 * e.totalEncodeTime) / e.framesEncoded).toFixed(1),
 				resolution: t,
 				framesSent: e.framesSent,
 				frameRateInput: e.framesPerSecond,
@@ -100,10 +97,7 @@ function a(e, t, n, a) {
 			packetsLost: e.packetsLost
 		};
 		if ('audio' === e.kind) {
-			let t =
-				void 0 !== e.jitterBufferDelay && void 0 !== e.jitterBufferEmittedCount
-					? Math.round((1000 * e.jitterBufferDelay) / e.jitterBufferEmittedCount)
-					: 0;
+			let t = void 0 !== e.jitterBufferDelay && void 0 !== e.jitterBufferEmittedCount ? Math.round((1000 * e.jitterBufferDelay) / e.jitterBufferEmittedCount) : 0;
 			null == h[o] && (h[o] = []),
 				h[o].push({
 					...l,
@@ -128,10 +122,7 @@ function a(e, t, n, a) {
 				framesDropped: e.framesDropped,
 				framesReceived: e.framesReceived,
 				frameRateDecode: e.framesPerSecond,
-				averageDecodeTime:
-					null == e.framesDecoded || null == e.totalDecodeTime
-						? void 0
-						: ((1000 * e.totalDecodeTime) / e.framesDecoded).toFixed(1),
+				averageDecodeTime: null == e.framesDecoded || null == e.totalDecodeTime ? void 0 : ((1000 * e.totalDecodeTime) / e.framesDecoded).toFixed(1),
 				firCount: e.firCount,
 				nackCount: e.nackCount,
 				pliCount: e.pliCount,

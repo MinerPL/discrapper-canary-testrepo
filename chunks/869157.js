@@ -35,14 +35,7 @@ var i = t(735250),
 	v = t(689938),
 	M = t(570767);
 function L(e) {
-	let {
-			commandId: n,
-			editPermissions: t,
-			guildId: s,
-			noneSelectedText: r,
-			overwrites: I,
-			hasAccessToMutatePermissions: N
-		} = e,
+	let { commandId: n, editPermissions: t, guildId: s, noneSelectedText: r, overwrites: I, hasAccessToMutatePermissions: N } = e,
 		T = (0, d.e7)([g.Z], () => g.Z.getGuild(s));
 	l()(null != T, '');
 	let h = (0, d.e7)([g.Z], () => g.Z.getRoles(s)),
@@ -162,39 +155,12 @@ function L(e) {
 function j(e) {
 	var n, t, s;
 	let l,
-		{
-			guild: r,
-			commandId: o,
-			onChange: d,
-			onRemove: u,
-			overwrite: E,
-			integration: g,
-			canShowMigrationTooltip: p,
-			hasAccessToMutatePermissions: C
-		} = e,
+		{ guild: r, commandId: o, onChange: d, onRemove: u, overwrite: E, integration: g, canShowMigrationTooltip: p, hasAccessToMutatePermissions: C } = e,
 		O = E.id === r.id || E.id === (0, _.bD)(r.id),
-		x =
-			null == g
-				? void 0
-				: null === (t = g.application) || void 0 === t
-					? void 0
-					: null === (n = t.bot) || void 0 === n
-						? void 0
-						: n.username,
+		x = null == g ? void 0 : null === (t = g.application) || void 0 === t ? void 0 : null === (n = t.bot) || void 0 === n ? void 0 : n.username,
 		S = !E.canWrite || !C,
 		A = h.default.getId();
-	C
-		? !E.canWrite &&
-			(E.type === m.Kw.USER
-				? (l =
-						E.id === A
-							? v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_SELF
-							: v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_OTHER)
-				: E.type === m.Kw.ROLE && (l = v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_ROLE))
-		: (l =
-				null != o
-					? v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_COMMAND
-					: v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_APPLICATION);
+	C ? !E.canWrite && (E.type === m.Kw.USER ? (l = E.id === A ? v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_SELF : v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_OTHER) : E.type === m.Kw.ROLE && (l = v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_ROLE)) : (l = null != o ? v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_COMMAND : v.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_APPLICATION);
 	let L = p && null != g && E.id === r.id && void 0 !== x && !E.permission;
 	a.useEffect(() => {
 		if (L) {

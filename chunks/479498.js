@@ -28,14 +28,7 @@ function _(e, t, n) {
 }
 class E extends (r = a.PureComponent) {
 	async componentDidMount() {
-		let {
-				importData: e,
-				nextScene: t,
-				pauseWhileUnfocused: r,
-				pause: i,
-				isWindowFocused: a,
-				useReducedMotion: s
-			} = this.props,
+		let { importData: e, nextScene: t, pauseWhileUnfocused: r, pause: i, isWindowFocused: a, useReducedMotion: s } = this.props,
 			[o, { default: l }] = await Promise.all([e(), n.e('23755').then(n.t.bind(n, 500923, 23))]);
 		if (null != this.animationRef)
 			(this.animation = l.loadAnimation({
@@ -57,15 +50,7 @@ class E extends (r = a.PureComponent) {
 	componentDidUpdate(e) {
 		var t, n, r;
 		let { nextScene: i, pauseWhileUnfocused: a, pause: s, isWindowFocused: o, useReducedMotion: l } = this.props;
-		i !== this.currentScene && this.shouldForcePlayAfter() && !s && this.playScene(i),
-			null != this.animation &&
-				(a && !e.isWindowFocused && o && !l && !0 !== s
-					? this.animation.play()
-					: (l || (a && e.isWindowFocused && !o)) && this.animation.pause()),
-			!e.pause && s
-				? null === (t = this.animation) || void 0 === t || t.pause()
-				: e.pause && !s && !l && (null === (n = this.animation) || void 0 === n || n.play()),
-			e.nextScene !== i && s && (this.playScene(i), null === (r = this.animation) || void 0 === r || r.pause());
+		i !== this.currentScene && this.shouldForcePlayAfter() && !s && this.playScene(i), null != this.animation && (a && !e.isWindowFocused && o && !l && !0 !== s ? this.animation.play() : (l || (a && e.isWindowFocused && !o)) && this.animation.pause()), !e.pause && s ? null === (t = this.animation) || void 0 === t || t.pause() : e.pause && !s && !l && (null === (n = this.animation) || void 0 === n || n.play()), e.nextScene !== i && s && (this.playScene(i), null === (r = this.animation) || void 0 === r || r.pause());
 	}
 	shouldForcePlayAfter() {
 		let { sceneSegments: e } = this.props;
@@ -76,14 +61,7 @@ class E extends (r = a.PureComponent) {
 		let { onScenePlay: t, sceneSegments: n, useReducedMotion: r } = this.props,
 			i = n[e],
 			a = n[this.currentScene];
-		if (
-			(null != this.animation &&
-				(e === this.currentScene || i.BEG !== a.BEG || i.END !== a.END) &&
-				this.animation.playSegments([i.BEG, i.END], !0),
-			(this.currentScene = e),
-			null != t && t(this.currentScene),
-			r)
-		) {
+		if ((null != this.animation && (e === this.currentScene || i.BEG !== a.BEG || i.END !== a.END) && this.animation.playSegments([i.BEG, i.END], !0), (this.currentScene = e), null != t && t(this.currentScene), r)) {
 			var s;
 			null === (s = this.animation) || void 0 === s || s.pause();
 		}

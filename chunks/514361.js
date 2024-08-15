@@ -12,8 +12,8 @@ var a,
 	f = n(695346),
 	h = n(581883),
 	p = n(131704),
-	I = n(592125),
-	m = n(594174),
+	m = n(592125),
+	I = n(594174),
 	T = n(74538),
 	g = n(51144),
 	S = n(47760),
@@ -42,7 +42,7 @@ function D() {
 	R && (r = void 0), (C = !1), (O = !1);
 }
 let L = () => {
-		R = !T.ZP.canUseClientThemes(m.default.getCurrentUser());
+		R = !T.ZP.canUseClientThemes(I.default.getCurrentUser());
 	},
 	b = () => {
 		let e = f.L1.getSetting().backgroundGradientPresetId;
@@ -67,11 +67,7 @@ let L = () => {
 	};
 class P extends (a = s.ZP.PersistedStore) {
 	initialize(e) {
-		null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? A.qt[e.gradientPresetId] : void 0),
-			this.waitFor(m.default, _.Z, I.Z, c.Z, h.Z),
-			this.syncWith([m.default], L),
-			this.syncWith([c.Z], b),
-			this.syncWith([h.Z], M);
+		null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? A.qt[e.gradientPresetId] : void 0), this.waitFor(I.default, _.Z, m.Z, c.Z, h.Z), this.syncWith([I.default], L), this.syncWith([c.Z], b), this.syncWith([h.Z], M);
 	}
 	getState() {
 		return R ? {} : { gradientPresetId: null == r ? void 0 : r.id };
@@ -99,9 +95,7 @@ class P extends (a = s.ZP.PersistedStore) {
 			v(this, 'migrations', [
 				(e) => {
 					var t;
-					return {
-						gradientPresetId: null == e ? void 0 : null === (t = e.gradientPreset) || void 0 === t ? void 0 : t.id
-					};
+					return { gradientPresetId: null == e ? void 0 : null === (t = e.gradientPreset) || void 0 === t ? void 0 : t.id };
 				}
 			]);
 	}
@@ -138,9 +132,9 @@ v(P, 'displayName', 'ClientThemesBackgroundStore'),
 		},
 		CHANNEL_SELECT: (e) => {
 			let { channelId: t, guildId: n } = e,
-				r = m.default.getCurrentUser();
+				r = I.default.getCurrentUser();
 			if (null == t || null == n || (0, u.un)(o.z.CLIENT_THEMES_COACHMARK) || !(0, g.Fc)(r)) return;
-			let i = I.Z.getChannel(t);
+			let i = m.Z.getChannel(t);
 			null != i &&
 				(0, p.zi)(i.type) &&
 				((C = !0),

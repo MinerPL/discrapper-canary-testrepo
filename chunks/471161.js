@@ -14,20 +14,7 @@ t.Z = function (e) {
 	return (
 		void 0 === e && (e = {}),
 		{
-			plugins: [
-				(0, n.Z)(),
-				(0, i.Z)(e.observable),
-				(0, o.Z)(),
-				(0, s.Z)(),
-				(0, a.Z)(),
-				(0, u.Z)(),
-				(0, l.Z)(),
-				(0, c.Z)(),
-				(0, f.Z)(e.defaultUnit),
-				(0, d.Z)(),
-				(0, h.Z)(),
-				(0, p.Z)()
-			]
+			plugins: [(0, n.Z)(), (0, i.Z)(e.observable), (0, o.Z)(), (0, s.Z)(), (0, a.Z)(), (0, u.Z)(), (0, l.Z)(), (0, c.Z)(), (0, f.Z)(e.defaultUnit), (0, d.Z)(), (0, h.Z)(), (0, p.Z)()]
 		}
 	);
 };

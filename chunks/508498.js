@@ -36,6 +36,4 @@ function d() {
 		...t
 	};
 }
-((r = s || (s = {}))[(r.SETTINGS = 0)] = 'SETTINGS'),
-	(r[(r.CHANGELOG = 1)] = 'CHANGELOG'),
-	(r[(r.DM_LIST = 2)] = 'DM_LIST');
+((r = s || (s = {}))[(r.SETTINGS = 0)] = 'SETTINGS'), (r[(r.CHANGELOG = 1)] = 'CHANGELOG'), (r[(r.DM_LIST = 2)] = 'DM_LIST');

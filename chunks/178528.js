@@ -78,8 +78,7 @@ class w extends s.PureComponent {
 	setAnimatedValue(e) {
 		let { guild: t } = this.props,
 			n = null == t ? void 0 : t.hasCommunityInfoSubheader();
-		if (null != t && (null != t.banner || !!n))
-			null != t.banner ? this.setAnimatedValueForBanner(e) : this.setAnimatedValueForCommunityInfo(e);
+		if (null != t && (null != t.banner || !!n)) null != t.banner ? this.setAnimatedValueForBanner(e) : this.setAnimatedValueForCommunityInfo(e);
 	}
 	setAnimatedValueForBanner(e) {
 		let { renderBanner: t, communityInfoVisible: n, bannerVisible: i, controller: s } = this.state;

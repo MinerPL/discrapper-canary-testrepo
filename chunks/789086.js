@@ -13,9 +13,7 @@ var a = t(735250),
 function d() {
 	let e = (0, n.e7)([l.Z], () => {
 			var e;
-			return (
-				(null === (e = l.Z.getFeed(s.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.refresh_stale_inbox_after_ms) != null
-			);
+			return (null === (e = l.Z.getFeed(s.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.refresh_stale_inbox_after_ms) != null;
 		}),
 		{ loading: r, nextFetchDate: t } = (0, n.cj)([l.Z], () => {
 			var e;
@@ -31,10 +29,7 @@ function d() {
 					})
 				: (0, a.jsxs)(i.Text, {
 						variant: 'text-md/normal',
-						children: [
-							'Next fetch: ',
-							null != t ? (0, a.jsx)(o.Z, { deadline: t }) : e ? '(awaiting push)' : '(unscheduled)'
-						]
+						children: ['Next fetch: ', null != t ? (0, a.jsx)(o.Z, { deadline: t }) : e ? '(awaiting push)' : '(unscheduled)']
 					}),
 			(0, a.jsxs)(i.Text, {
 				variant: 'text-md/normal',

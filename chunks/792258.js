@@ -70,9 +70,7 @@ t.Z = (e) => {
 						? (0, s.jsx)(o.Text, {
 								variant: 'text-xs/medium',
 								color: 'text-muted',
-								children: u.Z.Messages.FAMILY_CENTER_ACTIVITY_GUILD_ROW_MEMBER_COUNT.format({
-									members: n.approximateMemberCount
-								})
+								children: u.Z.Messages.FAMILY_CENTER_ACTIVITY_GUILD_ROW_MEMBER_COUNT.format({ members: n.approximateMemberCount })
 							})
 						: null
 				]

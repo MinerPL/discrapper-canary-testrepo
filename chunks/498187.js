@@ -33,12 +33,7 @@ function E(e) {
 				'aria-label': m.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
 			});
 	}
-	l =
-		r.content_type === t.s.PLAYED_GAME
-			? (0, s.kr)(r) && !(0, s.n2)(r)
-				? m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING
-				: m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED
-			: m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED;
+	l = r.content_type === t.s.PLAYED_GAME ? ((0, s.kr)(r) && !(0, s.n2)(r) ? m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED) : m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED;
 	let C = p[a],
 		h = (0, u.Z)({
 			location: C,

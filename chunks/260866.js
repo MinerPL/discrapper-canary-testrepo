@@ -75,10 +75,6 @@ class _ {
 		delete this.handlers, (this.handlers = new Map());
 	}
 	constructor(e) {
-		r(this, 'makeHandler', void 0),
-			r(this, 'handlers', void 0),
-			(this.makeHandler = e),
-			(this.handlers = new Map()),
-			(this.makeHandler = e);
+		r(this, 'makeHandler', void 0), r(this, 'handlers', void 0), (this.makeHandler = e), (this.handlers = new Map()), (this.makeHandler = e);
 	}
 }

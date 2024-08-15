@@ -193,12 +193,7 @@ function h(...e) {
 		for (let e in r) {
 			let n = t[e],
 				i = r[e];
-			'function' == typeof n &&
-			'function' == typeof i &&
-			'o' === e[0] &&
-			'n' === e[1] &&
-			e.charCodeAt(2) >= 65 &&
-			90 >= e.charCodeAt(2)
+			'function' == typeof n && 'function' == typeof i && 'o' === e[0] && 'n' === e[1] && e.charCodeAt(2) >= 65 && 90 >= e.charCodeAt(2)
 				? (t[e] = _(n, i))
 				: ('className' === e || 'UNSAFE_className' === e) && 'string' == typeof n && 'string' == typeof i
 					? (t[e] = (0, a.Z)(n, i))
@@ -216,16 +211,13 @@ function h(...e) {
 	return t;
 }
 let p = new Set(['id']),
-	I = new Set(['aria-label', 'aria-labelledby', 'aria-describedby', 'aria-details']),
-	m = new Set(['href', 'target', 'rel', 'download', 'ping', 'referrerPolicy']),
+	m = new Set(['aria-label', 'aria-labelledby', 'aria-describedby', 'aria-details']),
+	I = new Set(['href', 'target', 'rel', 'download', 'ping', 'referrerPolicy']),
 	T = /^(data-.*)$/;
 function g(e, t = {}) {
 	let { labelable: n, isLink: r, propNames: i } = t,
 		a = {};
-	for (let t in e)
-		Object.prototype.hasOwnProperty.call(e, t) &&
-			(p.has(t) || (n && I.has(t)) || (r && m.has(t)) || (null == i ? void 0 : i.has(t)) || T.test(t)) &&
-			(a[t] = e[t]);
+	for (let t in e) Object.prototype.hasOwnProperty.call(e, t) && (p.has(t) || (n && m.has(t)) || (r && I.has(t)) || (null == i ? void 0 : i.has(t)) || T.test(t)) && (a[t] = e[t]);
 	return a;
 }
 function S(e) {
@@ -247,11 +239,7 @@ function S(e) {
 		e.focus({ preventScroll: !0 });
 	else {
 		let t = (function (e) {
-			for (
-				var t = e.parentNode, n = [], r = document.scrollingElement || document.documentElement;
-				t instanceof HTMLElement && t !== r;
-
-			)
+			for (var t = e.parentNode, n = [], r = document.scrollingElement || document.documentElement; t instanceof HTMLElement && t !== r; )
 				(t.offsetHeight < t.scrollHeight || t.offsetWidth < t.scrollWidth) &&
 					n.push({
 						element: t,
@@ -278,22 +266,11 @@ function S(e) {
 let A = null;
 function N(e) {
 	var t;
-	return (
-		'undefined' != typeof window &&
-		null != window.navigator &&
-		((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.brands.some((t) => e.test(t.brand))) ||
-			e.test(window.navigator.userAgent))
-	);
+	return 'undefined' != typeof window && null != window.navigator && ((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.brands.some((t) => e.test(t.brand))) || e.test(window.navigator.userAgent));
 }
 function v(e) {
 	var t;
-	return (
-		'undefined' != typeof window &&
-		null != window.navigator &&
-		e.test(
-			(null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.platform) || window.navigator.platform
-		)
-	);
+	return 'undefined' != typeof window && null != window.navigator && e.test((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.platform) || window.navigator.platform);
 }
 function O() {
 	return v(/^Mac/i);
@@ -328,15 +305,7 @@ let M = (0, r.createContext)({
 			if (e instanceof HTMLAnchorElement) t(e);
 			else if (e.hasAttribute('data-href')) {
 				let n = document.createElement('a');
-				(n.href = e.getAttribute('data-href')),
-					e.hasAttribute('data-target') && (n.target = e.getAttribute('data-target')),
-					e.hasAttribute('data-rel') && (n.rel = e.getAttribute('data-rel')),
-					e.hasAttribute('data-download') && (n.download = e.getAttribute('data-download')),
-					e.hasAttribute('data-ping') && (n.ping = e.getAttribute('data-ping')),
-					e.hasAttribute('data-referrer-policy') && (n.referrerPolicy = e.getAttribute('data-referrer-policy')),
-					e.appendChild(n),
-					t(n),
-					e.removeChild(n);
+				(n.href = e.getAttribute('data-href')), e.hasAttribute('data-target') && (n.target = e.getAttribute('data-target')), e.hasAttribute('data-rel') && (n.rel = e.getAttribute('data-rel')), e.hasAttribute('data-download') && (n.download = e.getAttribute('data-download')), e.hasAttribute('data-ping') && (n.ping = e.getAttribute('data-ping')), e.hasAttribute('data-referrer-policy') && (n.referrerPolicy = e.getAttribute('data-referrer-policy')), e.appendChild(n), t(n), e.removeChild(n);
 			}
 		})(e, (e) => w(e, t));
 	}
@@ -346,27 +315,12 @@ function P() {
 }
 function U(e, t) {
 	let n = e.getAttribute('target');
-	return (
-		(!n || '_self' === n) &&
-		e.origin === location.origin &&
-		!e.hasAttribute('download') &&
-		!t.metaKey &&
-		!t.ctrlKey &&
-		!t.altKey &&
-		!t.shiftKey
-	);
+	return (!n || '_self' === n) && e.origin === location.origin && !e.hasAttribute('download') && !t.metaKey && !t.ctrlKey && !t.altKey && !t.shiftKey;
 }
 function w(e, t, n = !0) {
 	var r, i;
 	let { metaKey: a, ctrlKey: s, altKey: o, shiftKey: l } = t;
-	N(/Firefox/i) &&
-		(null === (i = window.event) || void 0 === i
-			? void 0
-			: null === (r = i.type) || void 0 === r
-				? void 0
-				: r.startsWith('key')) &&
-		'_blank' === e.target &&
-		(O() ? (a = !0) : (s = !0));
+	N(/Firefox/i) && (null === (i = window.event) || void 0 === i ? void 0 : null === (r = i.type) || void 0 === r ? void 0 : r.startsWith('key')) && '_blank' === e.target && (O() ? (a = !0) : (s = !0));
 	let u =
 		L() && O() && !C()
 			? new KeyboardEvent('keydown', {
@@ -403,20 +357,14 @@ function B() {
 	if ('undefined' == typeof window) return;
 	let e = (t) => {
 		let n = G.get(t.target);
-		if (
-			n &&
-			(n.delete(t.propertyName),
-			0 === n.size && (t.target.removeEventListener('transitioncancel', e), G.delete(t.target)),
-			0 === G.size)
-		) {
+		if (n && (n.delete(t.propertyName), 0 === n.size && (t.target.removeEventListener('transitioncancel', e), G.delete(t.target)), 0 === G.size)) {
 			for (let e of k) e();
 			k.clear();
 		}
 	};
 	document.body.addEventListener('transitionrun', (t) => {
 		let n = G.get(t.target);
-		!n && ((n = new Set()), G.set(t.target, n), t.target.addEventListener('transitioncancel', e)),
-			n.add(t.propertyName);
+		!n && ((n = new Set()), G.set(t.target, n), t.target.addEventListener('transitioncancel', e)), n.add(t.propertyName);
 	}),
 		document.body.addEventListener('transitionend', e);
 }
@@ -503,8 +451,7 @@ function Y(e, t) {
 			n.current ? (n.current = !1) : (!i.current || t.some((e, t) => !Object.is(e, i[t]))) && e(), (i.current = t);
 		}, t);
 }
-'undefined' != typeof document &&
-	('loading' !== document.readyState ? B() : document.addEventListener('DOMContentLoaded', B));
+'undefined' != typeof document && ('loading' !== document.readyState ? B() : document.addEventListener('DOMContentLoaded', B));
 function j(e) {
 	let { ref: t, onResize: n } = e;
 	(0, r.useEffect)(() => {
@@ -611,10 +558,7 @@ function J(e, t) {
 		d = e.scrollTop + parseInt(l, 10),
 		_ = c + e.clientWidth,
 		E = d + e.clientHeight;
-	n <= s ? (s = n - parseInt(u, 10)) : n + i > _ && (s += n + i - _),
-		r <= d ? (o = r - parseInt(l, 10)) : r + a > E && (o += r + a - E),
-		(e.scrollLeft = s),
-		(e.scrollTop = o);
+	n <= s ? (s = n - parseInt(u, 10)) : n + i > _ && (s += n + i - _), r <= d ? (o = r - parseInt(l, 10)) : r + a > E && (o += r + a - E), (e.scrollLeft = s), (e.scrollTop = o);
 }
 function ee(e, t, n) {
 	let r = 'left' === n ? 'offsetLeft' : 'offsetTop',
@@ -654,16 +598,10 @@ function et(e, t) {
 	}
 }
 function en(e) {
-	return (
-		(0 === e.mozInputSource && !!e.isTrusted) ||
-		(b() && e.pointerType ? 'click' === e.type && 1 === e.buttons : 0 === e.detail && !e.pointerType)
-	);
+	return (0 === e.mozInputSource && !!e.isTrusted) || (b() && e.pointerType ? 'click' === e.type && 1 === e.buttons : 0 === e.detail && !e.pointerType);
 }
 function er(e) {
-	return (
-		(!b() && 0 === e.width && 0 === e.height) ||
-		(1 === e.width && 1 === e.height && 0 === e.pressure && 0 === e.detail && 'mouse' === e.pointerType)
-	);
+	return (!b() && 0 === e.width && 0 === e.height) || (1 === e.width && 1 === e.height && 0 === e.pressure && 0 === e.detail && 'mouse' === e.pointerType);
 }
 function ei(e, t) {
 	let n = (0, r.useRef)(null);

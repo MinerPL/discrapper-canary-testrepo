@@ -25,20 +25,13 @@ function p(e, t, n) {
 		e
 	);
 }
-let I = 1 * E.Z.Millis.MINUTE;
-class m extends i.Z {
+let m = 1 * E.Z.Millis.MINUTE;
+class I extends i.Z {
 	_initialize() {
-		__OVERLAY__
-			? (this.stores = new Map())
-			: ((this.stores = new Map()
-					.set(d.Z, () => this._handleSpeakingStoreChanged())
-					.set(u.Z, () => this._handleRTCConnectionStoreChanged())),
-				this._reset());
+		__OVERLAY__ ? (this.stores = new Map()) : ((this.stores = new Map().set(d.Z, () => this._handleSpeakingStoreChanged()).set(u.Z, () => this._handleRTCConnectionStoreChanged())), this._reset());
 	}
 	_reset() {
-		(this._currentUserSpeaking = !1),
-			(this._anyoneElseSpeaking = !1),
-			null != this._reportInterval && (this._reportInterval.stop(), (this._reportInterval = null));
+		(this._currentUserSpeaking = !1), (this._anyoneElseSpeaking = !1), null != this._reportInterval && (this._reportInterval.stop(), (this._reportInterval = null));
 	}
 	_trackStartSpeaking() {
 		if (this._currentUserSpeaking) {
@@ -83,9 +76,7 @@ class m extends i.Z {
 		});
 	}
 	_terminate() {
-		this._reset(),
-			d.Z.removeChangeListener(this._handleSpeakingStoreChanged),
-			u.Z.removeChangeListener(this._handleRTCConnectionStoreChanged);
+		this._reset(), d.Z.removeChangeListener(this._handleSpeakingStoreChanged), u.Z.removeChangeListener(this._handleRTCConnectionStoreChanged);
 	}
 	getGameMetadata() {
 		let e = c.Z.findActivity((e) => e.type === h.IIU.PLAYING),
@@ -112,7 +103,7 @@ class m extends i.Z {
 					}
 					null == this._reportInterval &&
 						((this._reportInterval = new r.Xp()),
-						this._reportInterval.start(I, () => {
+						this._reportInterval.start(m, () => {
 							this._trackStartSpeaking(), this._trackStartListening();
 						}));
 				}
@@ -125,4 +116,4 @@ class m extends i.Z {
 			});
 	}
 }
-t.Z = new m();
+t.Z = new I();

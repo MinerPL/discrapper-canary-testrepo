@@ -21,10 +21,7 @@ function u(e) {
 		}),
 		E = (0, c.Z)({ application: m }),
 		x = null === (n = m.categories) || void 0 === n ? void 0 : n[0],
-		b =
-			(null !== (_ = null === (i = m.directory_entry) || void 0 === i ? void 0 : i.guild_count) && void 0 !== _
-				? _
-				: 0) > 0 || E.length > 0,
+		b = (null !== (_ = null === (i = m.directory_entry) || void 0 === i ? void 0 : i.guild_count) && void 0 !== _ ? _ : 0) > 0 || E.length > 0,
 		A = a.useCallback(() => {
 			h({ mutualGuilds: E });
 		}, [h, E]),
@@ -59,11 +56,7 @@ function u(e) {
 						className: d.listingDescription,
 						variant: 'text-sm/normal',
 						lineClamp: 2,
-						children:
-							null !== (p = null === (u = m.directory_entry) || void 0 === u ? void 0 : u.short_description) &&
-							void 0 !== p
-								? p
-								: m.description
+						children: null !== (p = null === (u = m.directory_entry) || void 0 === u ? void 0 : u.short_description) && void 0 !== p ? p : m.description
 					})
 				}),
 			b &&

@@ -35,14 +35,7 @@ function _(e) {
 }
 async function u(e, n) {
 	let t = new Set(e.features);
-	t.has(c.oNc.COMMUNITY)
-		? n
-			? t.delete(c.oNc.RAID_ALERTS_DISABLED)
-			: t.add(c.oNc.RAID_ALERTS_DISABLED)
-		: n
-			? t.add(c.oNc.NON_COMMUNITY_RAID_ALERTS)
-			: t.delete(c.oNc.NON_COMMUNITY_RAID_ALERTS),
-		await l.Z.saveGuild(e.id, { features: t }, { throwErr: !0 });
+	t.has(c.oNc.COMMUNITY) ? (n ? t.delete(c.oNc.RAID_ALERTS_DISABLED) : t.add(c.oNc.RAID_ALERTS_DISABLED)) : n ? t.add(c.oNc.NON_COMMUNITY_RAID_ALERTS) : t.delete(c.oNc.NON_COMMUNITY_RAID_ALERTS), await l.Z.saveGuild(e.id, { features: t }, { throwErr: !0 });
 }
 async function I(e, n, t, o) {
 	let s = i()().add(o, 'hours').toISOString();
@@ -68,7 +61,5 @@ async function E(e, n, t) {
 }
 async function C(e) {
 	let n = r.Z.getGuild(e);
-	return null == (null == n ? void 0 : n.getSafetyAlertsChannelId())
-		? null
-		: await a.tn.post({ url: c.ANM.GUILD_INCIDENT_REPORT_RAID(e) });
+	return null == (null == n ? void 0 : n.getSafetyAlertsChannelId()) ? null : await a.tn.post({ url: c.ANM.GUILD_INCIDENT_REPORT_RAID(e) });
 }

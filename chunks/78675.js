@@ -18,28 +18,18 @@ var r = n(735250),
 	f = n(695346),
 	h = n(451478),
 	p = n(768581),
-	I = n(888778),
-	m = n(943217),
+	m = n(888778),
+	I = n(943217),
 	T = n(793397),
 	g = n(439779);
 function S(e) {
 	var t;
-	let {
-			user: n,
-			displayProfile: a,
-			guildId: S,
-			profileType: A,
-			pendingBanner: N,
-			children: v,
-			animateOnHover: O = !1,
-			hasProfileEffect: R = !1,
-			canUsePremiumCustomization: C = !1
-		} = e,
+	let { user: n, displayProfile: a, guildId: S, profileType: A, pendingBanner: N, children: v, animateOnHover: O = !1, hasProfileEffect: R = !1, canUsePremiumCustomization: C = !1 } = e,
 		y = C || (null == a ? void 0 : a.canUsePremiumProfileCustomization) || !1,
 		[D, L] = i.useState(!1),
 		b = (0, l.e7)([h.Z], () => h.Z.isFocused()),
 		M = f.QK.getSetting(),
-		{ bannerSrc: P, status: U } = (0, I.Z)({
+		{ bannerSrc: P, status: U } = (0, m.Z)({
 			displayProfile: a,
 			pendingBanner: N,
 			size: (0, T.e7)(A),
@@ -49,7 +39,7 @@ function S(e) {
 		x = (0, c.getAvatarSize)(c.AvatarSizes.SIZE_80),
 		G = (0, o._i)((0, d.ZP)(n.getAvatarURL(S, x), w, !1)),
 		k = (0, _.Z)(null !== (t = null == a ? void 0 : a.primaryColor) && void 0 !== t ? t : G).hsl;
-	return (0, r.jsx)(m.Z, {
+	return (0, r.jsx)(I.Z, {
 		isPremium: y,
 		hasThemeColors: y,
 		profileType: A,
@@ -72,7 +62,7 @@ function S(e) {
 			onMouseLeave: () => L(!1),
 			style: {
 				backgroundImage: null != P ? 'url('.concat(P, ')') : void 0,
-				backgroundColor: U !== I.s.COMPLETE ? u.Z.unsafe_rawColors.PRIMARY_800.css : k
+				backgroundColor: U !== m.s.COMPLETE ? u.Z.unsafe_rawColors.PRIMARY_800.css : k
 			},
 			children: [!M && (0, p.F8)(P) && (0, r.jsx)(E.Z, { className: g.gifTag }), v]
 		})

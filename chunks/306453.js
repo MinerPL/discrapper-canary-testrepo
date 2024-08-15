@@ -69,10 +69,7 @@ function u(e) {
 	if (null != _ && '' !== _)
 		return (0, E.jsxs)('div', {
 			className: T.container,
-			children: [
-				(0, E.jsx)(r.Dx, { children: c.Z.Messages.INVITE_MODAL_ERROR_TITLE }),
-				(0, E.jsx)(r.DK, { children: _ })
-			]
+			children: [(0, E.jsx)(r.Dx, { children: c.Z.Messages.INVITE_MODAL_ERROR_TITLE }), (0, E.jsx)(r.DK, { children: _ })]
 		});
 	if (a.state === M.Rj.RESOLVING)
 		return (0, E.jsx)('div', {

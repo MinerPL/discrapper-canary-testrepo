@@ -41,12 +41,7 @@ var l = (t.Raised = function (e) {
 			),
 			{ 'zDepth-1': 1 === t }
 		);
-	return r.default.createElement(
-		'div',
-		{ style: u.wrap },
-		r.default.createElement('div', { style: u.bg }),
-		r.default.createElement('div', { style: u.content }, o)
-	);
+	return r.default.createElement('div', { style: u.wrap }, r.default.createElement('div', { style: u.bg }), r.default.createElement('div', { style: u.content }, o));
 });
 (l.propTypes = {
 	background: i.default.string,

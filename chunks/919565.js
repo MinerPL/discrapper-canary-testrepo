@@ -1,10 +1,7 @@
 e.exports = function (e) {
 	var t = void 0;
 	t = 'string' == typeof e ? [e] : e.raw;
-	for (var r = '', a = 0; a < t.length; a++)
-		(r += t[a].replace(/\\\n[ \t]*/g, '').replace(/\\`/g, '`')),
-			a < (arguments.length <= 1 ? 0 : arguments.length - 1) &&
-				(r += arguments.length <= a + 1 ? void 0 : arguments[a + 1]);
+	for (var r = '', a = 0; a < t.length; a++) (r += t[a].replace(/\\\n[ \t]*/g, '').replace(/\\`/g, '`')), a < (arguments.length <= 1 ? 0 : arguments.length - 1) && (r += arguments.length <= a + 1 ? void 0 : arguments[a + 1]);
 	var n = r.split('\n'),
 		s = null;
 	return (

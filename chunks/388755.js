@@ -39,15 +39,7 @@ class f extends i.PureComponent {
 		window.removeEventListener('keydown', this.handleKeyDown);
 	}
 	render() {
-		let {
-				className: e,
-				NavigationMessages: t,
-				TrackClick: a,
-				onChangeLocale: i,
-				avoidRouter: r,
-				openNavAriaLabel: o,
-				hideNavAriaLabel: s
-			} = this.props,
+		let { className: e, NavigationMessages: t, TrackClick: a, onChangeLocale: i, avoidRouter: r, openNavAriaLabel: o, hideNavAriaLabel: s } = this.props,
 			{ menuOpen: k } = this.state;
 		return (0, n.jsx)('header', {
 			className: l()(N.header, e),

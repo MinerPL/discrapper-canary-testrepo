@@ -46,11 +46,7 @@ function O(e, t, n) {
 		e
 	);
 }
-((d = a || (a = {})).NORMAL = 'normal'),
-	(d.SPEED_START = 'speed_start'),
-	(d.SPEED_LOOP = 'speed_loop'),
-	(d.FINISH = 'finish'),
-	(d.IDLE = 'idle');
+((d = a || (a = {})).NORMAL = 'normal'), (d.SPEED_START = 'speed_start'), (d.SPEED_LOOP = 'speed_loop'), (d.FINISH = 'finish'), (d.IDLE = 'idle');
 let L = {
 	normal: {
 		BEG: 0,
@@ -95,14 +91,7 @@ class g extends (r = D.PureComponent) {
 			});
 	}
 	render() {
-		let {
-			className: e,
-			nextScene: t,
-			onScenePlay: n,
-			onSceneComplete: a,
-			pause: r,
-			pauseWhileUnfocused: s
-		} = this.props;
+		let { className: e, nextScene: t, onScenePlay: n, onSceneComplete: a, pause: r, pauseWhileUnfocused: s } = this.props;
 		return (0, p.jsx)(A.SequencedLottieAnimation, {
 			className: _()(T.sequencedAnimation, e),
 			importData: this.importDefault,
@@ -115,12 +104,7 @@ class g extends (r = D.PureComponent) {
 		});
 	}
 }
-O(g, 'Scenes', a),
-	((E = s || (s = {})).NORMAL = 'normal'),
-	(E.SPEED_START = 'speed_start'),
-	(E.SPEED_LOOP = 'speed_loop'),
-	(E.FINISH = 'finish'),
-	(E.IDLE = 'idle');
+O(g, 'Scenes', a), ((E = s || (s = {})).NORMAL = 'normal'), (E.SPEED_START = 'speed_start'), (E.SPEED_LOOP = 'speed_loop'), (E.FINISH = 'finish'), (E.IDLE = 'idle');
 let f = {
 	normal: {
 		BEG: 0,
@@ -165,14 +149,7 @@ class R extends (i = D.PureComponent) {
 			});
 	}
 	render() {
-		let {
-			className: e,
-			nextScene: t,
-			onScenePlay: n,
-			onSceneComplete: a,
-			pause: r,
-			pauseWhileUnfocused: s
-		} = this.props;
+		let { className: e, nextScene: t, onScenePlay: n, onSceneComplete: a, pause: r, pauseWhileUnfocused: s } = this.props;
 		return (0, p.jsx)(A.SequencedLottieAnimation, {
 			className: _()(T.sequencedAnimation, e),
 			importData: this.importDefault,
@@ -185,14 +162,7 @@ class R extends (i = D.PureComponent) {
 		});
 	}
 }
-O(R, 'Scenes', s),
-	((S = o || (o = {})).IDLE_ENTRY = 'idle_entry'),
-	(S.IDLE_LOOP = 'idle_loop'),
-	(S.BOOST_START = 'boost_start'),
-	(S.BOOST_LOOP = 'boost_loop'),
-	(S.BOOST_END = 'boost_end'),
-	(S.VICTORY = 'victory'),
-	(S.ERROR = 'error');
+O(R, 'Scenes', s), ((S = o || (o = {})).IDLE_ENTRY = 'idle_entry'), (S.IDLE_LOOP = 'idle_loop'), (S.BOOST_START = 'boost_start'), (S.BOOST_LOOP = 'boost_loop'), (S.BOOST_END = 'boost_end'), (S.VICTORY = 'victory'), (S.ERROR = 'error');
 let y = {
 	idle_entry: {
 		BEG: 0,
@@ -357,10 +327,7 @@ class P extends (l = D.PureComponent) {
 					? (0, p.jsx)(p.Fragment, {
 							children: (0, p.jsxs)('div', {
 								className: T.panningAnimation,
-								children: [
-									(0, p.jsx)('div', { className: T.tier2Background }),
-									(0, p.jsx)('div', { className: T.tier2Foreground })
-								]
+								children: [(0, p.jsx)('div', { className: T.tier2Background }), (0, p.jsx)('div', { className: T.tier2Foreground })]
 							})
 						})
 					: (0, p.jsxs)(p.Fragment, {
@@ -441,12 +408,7 @@ class P extends (l = D.PureComponent) {
 			});
 	}
 }
-O(P, 'Scenes', o),
-	((m = u || (u = {})).ENTRY = 'entry'),
-	(m.IDLE = 'idle'),
-	(m.STARS = 'stars'),
-	(m.ERROR = 'error'),
-	(m.SUCCESS = 'success');
+O(P, 'Scenes', o), ((m = u || (u = {})).ENTRY = 'entry'), (m.IDLE = 'idle'), (m.STARS = 'stars'), (m.ERROR = 'error'), (m.SUCCESS = 'success');
 let b = {
 		entry: {
 			BEG: 0,
@@ -615,14 +577,7 @@ class V extends (c = D.PureComponent) {
 			});
 	}
 	render() {
-		let {
-			className: e,
-			nextScene: t,
-			pause: n,
-			onScenePlay: a,
-			onSceneComplete: r,
-			pauseWhileUnfocused: s
-		} = this.props;
+		let { className: e, nextScene: t, pause: n, onScenePlay: a, onSceneComplete: r, pauseWhileUnfocused: s } = this.props;
 		return (0, p.jsxs)('div', {
 			className: _()(T.guildWrapper, e),
 			children: [

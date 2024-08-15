@@ -80,10 +80,7 @@ let c = (e) => (t) => {
 				},
 				t
 			);
-		(o.blacklist || o.whitelist) &&
-			console.warn(
-				`The ${o.blacklist ? 'blacklist' : 'whitelist'} option is deprecated and will be removed in the next version. Please use the 'partialize' option instead.`
-			);
+		(o.blacklist || o.whitelist) && console.warn(`The ${o.blacklist ? 'blacklist' : 'whitelist'} option is deprecated and will be removed in the next version. Please use the 'partialize' option instead.`);
 		let l = !1,
 			d = new Set(),
 			_ = new Set();
@@ -93,18 +90,12 @@ let c = (e) => (t) => {
 		if (!a)
 			return e(
 				(...e) => {
-					console.warn(
-						`[zustand persist middleware] Unable to update item '${o.name}', the given storage is currently unavailable.`
-					),
-						n(...e);
+					console.warn(`[zustand persist middleware] Unable to update item '${o.name}', the given storage is currently unavailable.`), n(...e);
 				},
 				r,
 				i
 			);
-		!a.removeItem &&
-			console.warn(
-				`[zustand persist middleware] The given storage for item '${o.name}' does not contain a 'removeItem' method, which will be required in v4.`
-			);
+		!a.removeItem && console.warn(`[zustand persist middleware] The given storage for item '${o.name}' does not contain a 'removeItem' method, which will be required in v4.`);
 		let E = c(o.serialize),
 			f = () => {
 				let e;
@@ -137,7 +128,7 @@ let c = (e) => (t) => {
 				r,
 				i
 			),
-			I = () => {
+			m = () => {
 				var e;
 				if (!a) return;
 				(l = !1), d.forEach((e) => e(r()));
@@ -173,7 +164,7 @@ let c = (e) => (t) => {
 					var e;
 					null == (e = null == a ? void 0 : a.removeItem) || e.call(a, o.name);
 				},
-				rehydrate: () => I(),
+				rehydrate: () => m(),
 				hasHydrated: () => l,
 				onHydrate: (e) => (
 					d.add(e),
@@ -188,7 +179,7 @@ let c = (e) => (t) => {
 					}
 				)
 			}),
-			I(),
+			m(),
 			s || p
 		);
 	};

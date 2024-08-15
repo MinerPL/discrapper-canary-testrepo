@@ -141,10 +141,7 @@ function F(e) {
 	let { guild: t } = e,
 		[i, r] = (0, c.Wu)([S.Z], () => {
 			var e;
-			return [
-				null !== (e = S.Z.getSoundsForGuild(t.id)) && void 0 !== e ? e : v.Hy,
-				S.Z.isFetchingSounds() || S.Z.isFetchingDefaultSounds()
-			];
+			return [null !== (e = S.Z.getSoundsForGuild(t.id)) && void 0 !== e ? e : v.Hy, S.Z.isFetchingSounds() || S.Z.isFetchingDefaultSounds()];
 		}),
 		{ canCreateExpressions: l } = (0, m.XJ)(t),
 		o = a.useRef(null),
@@ -244,11 +241,7 @@ function F(e) {
 								children: [
 									(0, s.jsxs)('div', {
 										className: Z.tableHeaders,
-										children: [
-											(0, s.jsx)(G, { children: j.Z.Messages.EMOJI }),
-											(0, s.jsx)(G, { children: j.Z.Messages.GUILD_SETTINGS_SOUND_NAME_COLUMN }),
-											(0, s.jsx)(G, { children: j.Z.Messages.GUILD_SETTINGS_SOUND_UPLOADER_COLUMN })
-										]
+										children: [(0, s.jsx)(G, { children: j.Z.Messages.EMOJI }), (0, s.jsx)(G, { children: j.Z.Messages.GUILD_SETTINGS_SOUND_NAME_COLUMN }), (0, s.jsx)(G, { children: j.Z.Messages.GUILD_SETTINGS_SOUND_UPLOADER_COLUMN })]
 									}),
 									i.map((e) =>
 										(0, s.jsx)(

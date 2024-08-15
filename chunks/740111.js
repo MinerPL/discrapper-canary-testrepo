@@ -15,9 +15,7 @@ var i,
 	r = n(320215),
 	l = n(240773),
 	o = n(495852);
-((a = i || (i = {}))[(a.UNSPECIFIED = 0)] = 'UNSPECIFIED'),
-	(a[(a.OPEN_MARKETING_PAGE = 1)] = 'OPEN_MARKETING_PAGE'),
-	(a[(a.OPEN_TIER_2_PAYMENT_MODAL = 2)] = 'OPEN_TIER_2_PAYMENT_MODAL');
+((a = i || (i = {}))[(a.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (a[(a.OPEN_MARKETING_PAGE = 1)] = 'OPEN_MARKETING_PAGE'), (a[(a.OPEN_TIER_2_PAYMENT_MODAL = 2)] = 'OPEN_TIER_2_PAYMENT_MODAL');
 class c extends o.C {
 	create(e) {
 		let t = {
@@ -59,10 +57,7 @@ class c extends o.C {
 					break;
 				default:
 					let r = n.readUnknownField;
-					if ('throw' === r)
-						throw new globalThis.Error(
-							'Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName)
-						);
+					if ('throw' === r) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
 					let l = e.skip(i);
 					!1 !== r && (!0 === r ? s.z.onRead : r)(this.typeName, a, t, i, l);
 			}
@@ -70,11 +65,7 @@ class c extends o.C {
 		return a;
 	}
 	internalBinaryWrite(e, t, n) {
-		'' !== e.header && t.tag(1, s.TD.LengthDelimited).string(e.header),
-			'' !== e.pill && t.tag(2, s.TD.LengthDelimited).string(e.pill),
-			'' !== e.body && t.tag(3, s.TD.LengthDelimited).string(e.body),
-			'' !== e.imageLink && t.tag(4, s.TD.LengthDelimited).string(e.imageLink),
-			'' !== e.imageLinkLightTheme && t.tag(5, s.TD.LengthDelimited).string(e.imageLinkLightTheme);
+		'' !== e.header && t.tag(1, s.TD.LengthDelimited).string(e.header), '' !== e.pill && t.tag(2, s.TD.LengthDelimited).string(e.pill), '' !== e.body && t.tag(3, s.TD.LengthDelimited).string(e.body), '' !== e.imageLink && t.tag(4, s.TD.LengthDelimited).string(e.imageLink), '' !== e.imageLinkLightTheme && t.tag(5, s.TD.LengthDelimited).string(e.imageLinkLightTheme);
 		let i = n.writeUnknownFields;
 		return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, t), t;
 	}
@@ -143,10 +134,7 @@ class u extends o.C {
 					break;
 				default:
 					let r = n.readUnknownField;
-					if ('throw' === r)
-						throw new globalThis.Error(
-							'Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName)
-						);
+					if ('throw' === r) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
 					let l = e.skip(i);
 					!1 !== r && (!0 === r ? s.z.onRead : r)(this.typeName, a, t, i, l);
 			}
@@ -154,8 +142,7 @@ class u extends o.C {
 		return a;
 	}
 	internalBinaryWrite(e, t, n) {
-		'' !== e.copy && t.tag(1, s.TD.LengthDelimited).string(e.copy),
-			0 !== e.buttonAction && t.tag(2, s.TD.Varint).int32(e.buttonAction);
+		'' !== e.copy && t.tag(1, s.TD.LengthDelimited).string(e.copy), 0 !== e.buttonAction && t.tag(2, s.TD.Varint).int32(e.buttonAction);
 		let i = n.writeUnknownFields;
 		return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, t), t;
 	}
@@ -210,10 +197,7 @@ class E extends o.C {
 					break;
 				default:
 					let r = n.readUnknownField;
-					if ('throw' === r)
-						throw new globalThis.Error(
-							'Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName)
-						);
+					if ('throw' === r) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
 					let l = e.skip(i);
 					!1 !== r && (!0 === r ? s.z.onRead : r)(this.typeName, a, t, i, l);
 			}
@@ -235,9 +219,7 @@ class E extends o.C {
 					r = t.string();
 					break;
 				default:
-					throw new globalThis.Error(
-						'unknown map entry field for field discord_protos.premium_marketing.v1.Variant1Storage.hero_art_localized_video_links_dark_theme'
-					);
+					throw new globalThis.Error('unknown map entry field for field discord_protos.premium_marketing.v1.Variant1Storage.hero_art_localized_video_links_dark_theme');
 			}
 		}
 		e[null != s ? s : ''] = null != r ? r : '';
@@ -257,9 +239,7 @@ class E extends o.C {
 					r = t.string();
 					break;
 				default:
-					throw new globalThis.Error(
-						'unknown map entry field for field discord_protos.premium_marketing.v1.Variant1Storage.hero_art_localized_video_links_light_theme'
-					);
+					throw new globalThis.Error('unknown map entry field for field discord_protos.premium_marketing.v1.Variant1Storage.hero_art_localized_video_links_light_theme');
 			}
 		}
 		e[null != s ? s : ''] = null != r ? r : '';
@@ -279,38 +259,15 @@ class E extends o.C {
 					r = t.string();
 					break;
 				default:
-					throw new globalThis.Error(
-						'unknown map entry field for field discord_protos.premium_marketing.v1.Variant1Storage.hero_art_video_subtitle_links'
-					);
+					throw new globalThis.Error('unknown map entry field for field discord_protos.premium_marketing.v1.Variant1Storage.hero_art_video_subtitle_links');
 			}
 		}
 		e[null != s ? s : ''] = null != r ? r : '';
 	}
 	internalBinaryWrite(e, t, n) {
-		for (let n of Object.keys(e.heroArtLocalizedVideoLinksDarkTheme))
-			t.tag(1, s.TD.LengthDelimited)
-				.fork()
-				.tag(1, s.TD.LengthDelimited)
-				.string(n)
-				.tag(2, s.TD.LengthDelimited)
-				.string(e.heroArtLocalizedVideoLinksDarkTheme[n])
-				.join();
-		for (let n of Object.keys(e.heroArtLocalizedVideoLinksLightTheme))
-			t.tag(2, s.TD.LengthDelimited)
-				.fork()
-				.tag(1, s.TD.LengthDelimited)
-				.string(n)
-				.tag(2, s.TD.LengthDelimited)
-				.string(e.heroArtLocalizedVideoLinksLightTheme[n])
-				.join();
-		for (let n of Object.keys(e.heroArtVideoSubtitleLinks))
-			t.tag(3, s.TD.LengthDelimited)
-				.fork()
-				.tag(1, s.TD.LengthDelimited)
-				.string(n)
-				.tag(2, s.TD.LengthDelimited)
-				.string(e.heroArtVideoSubtitleLinks[n])
-				.join();
+		for (let n of Object.keys(e.heroArtLocalizedVideoLinksDarkTheme)) t.tag(1, s.TD.LengthDelimited).fork().tag(1, s.TD.LengthDelimited).string(n).tag(2, s.TD.LengthDelimited).string(e.heroArtLocalizedVideoLinksDarkTheme[n]).join();
+		for (let n of Object.keys(e.heroArtLocalizedVideoLinksLightTheme)) t.tag(2, s.TD.LengthDelimited).fork().tag(1, s.TD.LengthDelimited).string(n).tag(2, s.TD.LengthDelimited).string(e.heroArtLocalizedVideoLinksLightTheme[n]).join();
+		for (let n of Object.keys(e.heroArtVideoSubtitleLinks)) t.tag(3, s.TD.LengthDelimited).fork().tag(1, s.TD.LengthDelimited).string(n).tag(2, s.TD.LengthDelimited).string(e.heroArtVideoSubtitleLinks[n]).join();
 		let i = n.writeUnknownFields;
 		return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, t), t;
 	}
@@ -383,10 +340,7 @@ class m extends o.C {
 					break;
 				default:
 					let r = n.readUnknownField;
-					if ('throw' === r)
-						throw new globalThis.Error(
-							'Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName)
-						);
+					if ('throw' === r) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
 					let l = e.skip(i);
 					!1 !== r && (!0 === r ? s.z.onRead : r)(this.typeName, a, t, i, l);
 			}
@@ -394,9 +348,7 @@ class m extends o.C {
 		return a;
 	}
 	internalBinaryWrite(e, t, n) {
-		'' !== e.link && t.tag(1, s.TD.LengthDelimited).string(e.link),
-			'' !== e.locale && t.tag(2, s.TD.LengthDelimited).string(e.locale),
-			!1 !== e.isDefault && t.tag(3, s.TD.Varint).bool(e.isDefault);
+		'' !== e.link && t.tag(1, s.TD.LengthDelimited).string(e.link), '' !== e.locale && t.tag(2, s.TD.LengthDelimited).string(e.locale), !1 !== e.isDefault && t.tag(3, s.TD.Varint).bool(e.isDefault);
 		let i = n.writeUnknownFields;
 		return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, t), t;
 	}
@@ -499,10 +451,7 @@ class g extends o.C {
 					break;
 				default:
 					let r = n.readUnknownField;
-					if ('throw' === r)
-						throw new globalThis.Error(
-							'Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName)
-						);
+					if ('throw' === r) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
 					let l = e.skip(i);
 					!1 !== r && (!0 === r ? s.z.onRead : r)(this.typeName, a, t, i, l);
 			}
@@ -510,21 +459,10 @@ class g extends o.C {
 		return a;
 	}
 	internalBinaryWrite(e, t, n) {
-		'' !== e.header && t.tag(1, s.TD.LengthDelimited).string(e.header),
-			'' !== e.subheader && t.tag(2, s.TD.LengthDelimited).string(e.subheader),
-			'' !== e.videoLink && t.tag(3, s.TD.LengthDelimited).string(e.videoLink),
-			'' !== e.helpArticleId && t.tag(4, s.TD.LengthDelimited).string(e.helpArticleId);
-		for (let i = 0; i < e.featureCards.length; i++)
-			d.internalBinaryWrite(e.featureCards[i], t.tag(5, s.TD.LengthDelimited).fork(), n).join();
-		e.button && _.internalBinaryWrite(e.button, t.tag(6, s.TD.LengthDelimited).fork(), n).join(),
-			'' !== e.dismissKey && t.tag(7, s.TD.LengthDelimited).string(e.dismissKey),
-			'' !== e.heroArtVideoLinkLightTheme && t.tag(8, s.TD.LengthDelimited).string(e.heroArtVideoLinkLightTheme),
-			'' !== e.heroArtImageLinkDarkTheme && t.tag(9, s.TD.LengthDelimited).string(e.heroArtImageLinkDarkTheme),
-			'' !== e.heroArtImageLinkLightTheme && t.tag(10, s.TD.LengthDelimited).string(e.heroArtImageLinkLightTheme),
-			'' !== e.modalTopPill && t.tag(11, s.TD.LengthDelimited).string(e.modalTopPill),
-			'' !== e.body && t.tag(12, s.TD.LengthDelimited).string(e.body);
-		for (let i = 0; i < e.heroArtVideoSubtitles.length; i++)
-			I.internalBinaryWrite(e.heroArtVideoSubtitles[i], t.tag(13, s.TD.LengthDelimited).fork(), n).join();
+		'' !== e.header && t.tag(1, s.TD.LengthDelimited).string(e.header), '' !== e.subheader && t.tag(2, s.TD.LengthDelimited).string(e.subheader), '' !== e.videoLink && t.tag(3, s.TD.LengthDelimited).string(e.videoLink), '' !== e.helpArticleId && t.tag(4, s.TD.LengthDelimited).string(e.helpArticleId);
+		for (let i = 0; i < e.featureCards.length; i++) d.internalBinaryWrite(e.featureCards[i], t.tag(5, s.TD.LengthDelimited).fork(), n).join();
+		e.button && _.internalBinaryWrite(e.button, t.tag(6, s.TD.LengthDelimited).fork(), n).join(), '' !== e.dismissKey && t.tag(7, s.TD.LengthDelimited).string(e.dismissKey), '' !== e.heroArtVideoLinkLightTheme && t.tag(8, s.TD.LengthDelimited).string(e.heroArtVideoLinkLightTheme), '' !== e.heroArtImageLinkDarkTheme && t.tag(9, s.TD.LengthDelimited).string(e.heroArtImageLinkDarkTheme), '' !== e.heroArtImageLinkLightTheme && t.tag(10, s.TD.LengthDelimited).string(e.heroArtImageLinkLightTheme), '' !== e.modalTopPill && t.tag(11, s.TD.LengthDelimited).string(e.modalTopPill), '' !== e.body && t.tag(12, s.TD.LengthDelimited).string(e.body);
+		for (let i = 0; i < e.heroArtVideoSubtitles.length; i++) I.internalBinaryWrite(e.heroArtVideoSubtitles[i], t.tag(13, s.TD.LengthDelimited).fork(), n).join();
 		e.storage && h.internalBinaryWrite(e.storage, t.tag(14, s.TD.LengthDelimited).fork(), n).join();
 		let i = n.writeUnknownFields;
 		return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, t), t;

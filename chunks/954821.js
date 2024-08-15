@@ -41,10 +41,7 @@ let C = (e) => {
 		let { transitionState: t, groupListing: a, guildId: i, listing: l, subscription: m, onClose: A } = e,
 			O = (0, _.Dt)(),
 			g = (0, u.YB)(i),
-			h =
-				(null == g ? void 0 : null === (s = g.cover_image_asset) || void 0 === s ? void 0 : s.application_id) != null
-					? (0, E._W)(g.cover_image_asset.application_id, g.cover_image_asset, 440)
-					: void 0,
+			h = (null == g ? void 0 : null === (s = g.cover_image_asset) || void 0 === s ? void 0 : s.application_id) != null ? (0, E._W)(g.cover_image_asset.application_id, g.cover_image_asset, 440) : void 0,
 			{ analyticsLocations: p } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
 			{ cancelSubscription: R, error: x, submitting: M } = C(p),
 			f = async () => {

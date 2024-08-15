@@ -26,29 +26,7 @@ e.exports = function (e) {
 		};
 	return {
 		name: 'Elm',
-		keywords: [
-			'let',
-			'in',
-			'if',
-			'then',
-			'else',
-			'case',
-			'of',
-			'where',
-			'module',
-			'import',
-			'exposing',
-			'type',
-			'alias',
-			'as',
-			'infix',
-			'infixl',
-			'infixr',
-			'port',
-			'effect',
-			'command',
-			'subscription'
-		],
+		keywords: ['let', 'in', 'if', 'then', 'else', 'case', 'of', 'where', 'module', 'import', 'exposing', 'type', 'alias', 'as', 'infix', 'infixl', 'infixr', 'port', 'effect', 'command', 'subscription'],
 		contains: [
 			{
 				beginKeywords: 'port effect module',

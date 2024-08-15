@@ -14,11 +14,5 @@ let r = (e) => {
 		l = (0, i.eA)({ location: 'subsettings' }),
 		c = (0, a.Gj)(t),
 		d = o[t];
-	return null == d.predicate || (null === (s = d.predicate) || void 0 === s ? void 0 : s.call(d)) === !0
-		? l
-			? c.size > 0 && !c.has(t)
-				? null
-				: (0, n.jsx)(n.Fragment, { children: r })
-			: (0, n.jsx)(n.Fragment, { children: r })
-		: null;
+	return null == d.predicate || (null === (s = d.predicate) || void 0 === s ? void 0 : s.call(d)) === !0 ? (l ? (c.size > 0 && !c.has(t) ? null : (0, n.jsx)(n.Fragment, { children: r })) : (0, n.jsx)(n.Fragment, { children: r })) : null;
 };

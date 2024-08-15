@@ -18,10 +18,7 @@ function o(e) {
 		label: d.Z.Messages.FORM_LABEL_MUTE_SCHEDULED_EVENTS,
 		action: () => {
 			var t;
-			return (
-				(t = { mute_scheduled_events: !n }),
-				void c.Z.updateGuildNotificationSettings(e, t, a.UE.mutedEvents(t.mute_scheduled_events))
-			);
+			return (t = { mute_scheduled_events: !n }), void c.Z.updateGuildNotificationSettings(e, t, a.UE.mutedEvents(t.mute_scheduled_events));
 		},
 		checked: n
 	});

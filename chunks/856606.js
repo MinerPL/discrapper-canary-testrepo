@@ -127,10 +127,7 @@ function k(e) {
 		},
 		S = (e) => {
 			let t = v.Z.can(B.Plq.ADMINISTRATOR, l) || v.Z.can(B.Plq.MANAGE_ROLES, s, void 0, void 0, !0);
-			return s.isGuildStageVoice() && f.xS.has(e)
-				? U.Z.Messages.STAGE_CHANNEL_CANNOT_OVERWRITE_PERMISSION
-				: !((!r.fS(e, B.Plq.MANAGE_ROLES) || t) && (null == e || v.Z.can(e, l) || t)) &&
-						U.Z.Messages.HELP_MISSING_PERMISSION;
+			return s.isGuildStageVoice() && f.xS.has(e) ? U.Z.Messages.STAGE_CHANNEL_CANNOT_OVERWRITE_PERMISSION : !((!r.fS(e, B.Plq.MANAGE_ROLES) || t) && (null == e || v.Z.can(e, l) || t)) && U.Z.Messages.HELP_MISSING_PERMISSION;
 		},
 		C = g === i,
 		M = s.isForumLikeChannel() && r.e$(t.deny, B.Plq.SEND_MESSAGES),
@@ -426,13 +423,7 @@ function Y() {
 }
 function Q() {
 	let { channel: e, permissionOverwrites: t, selectedOverwriteId: s } = (0, o.cj)([I.Z], () => I.Z);
-	if (
-		null == (0, o.e7)([Z.Z], () => (null != e ? Z.Z.getGuild(e.getGuildId()) : null)) ||
-		null == e ||
-		null == t ||
-		null == s
-	)
-		return null;
+	if (null == (0, o.e7)([Z.Z], () => (null != e ? Z.Z.getGuild(e.getGuildId()) : null)) || null == e || null == t || null == s) return null;
 	let l = t[s];
 	return (0, n.jsxs)(x.ZP, {
 		className: H.container,

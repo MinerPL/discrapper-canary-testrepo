@@ -18,36 +18,7 @@ var i = t(512722),
 	m = t(981631),
 	I = t(474936);
 async function f(e) {
-	let {
-		setPurchaseState: n,
-		setHasAcceptedTerms: t,
-		setIsSubmitting: i,
-		setPurchaseError: f,
-		hasRedirectURL: E,
-		setHasRedirectURL: x,
-		isGift: N,
-		baseAnalyticsData: S,
-		analyticsLocation: T,
-		analyticsLocations: h,
-		flowStartTime: b,
-		subscriptionPlan: g,
-		planGroup: P,
-		trialId: v,
-		priceOptions: A,
-		paymentSource: y,
-		isPrepaidPaymentPastDue: M,
-		openInvoiceId: C,
-		premiumSubscription: O,
-		onNext: R,
-		metadata: L,
-		sku: j,
-		skuPricePreview: Z,
-		purchaseType: D,
-		referralCode: w,
-		loadId: G,
-		giftInfoOptions: B,
-		invoicePreview: U
-	} = e;
+	let { setPurchaseState: n, setHasAcceptedTerms: t, setIsSubmitting: i, setPurchaseError: f, hasRedirectURL: E, setHasRedirectURL: x, isGift: N, baseAnalyticsData: S, analyticsLocation: T, analyticsLocations: h, flowStartTime: b, subscriptionPlan: g, planGroup: P, trialId: v, priceOptions: A, paymentSource: y, isPrepaidPaymentPastDue: M, openInvoiceId: C, premiumSubscription: O, onNext: R, metadata: L, sku: j, skuPricePreview: Z, purchaseType: D, referralCode: w, loadId: G, giftInfoOptions: B, invoicePreview: U } = e;
 	n(p.A.PURCHASING), t(!0), i(!0), r.Z.wait(l.fw), f(null);
 	try {
 		let e, t, i;
@@ -121,11 +92,7 @@ async function f(e) {
 			x(null != e.redirectURL);
 			return;
 		}
-		n(p.A.COMPLETED),
-			'subscription' in e
-				? (t = null != e.subscription ? u.Z.createFromServer(e.subscription) : null)
-				: 'entitlements' in e && (i = null != e.entitlements ? e.entitlements : void 0),
-			R(t, i);
+		n(p.A.COMPLETED), 'subscription' in e ? (t = null != e.subscription ? u.Z.createFromServer(e.subscription) : null) : 'entitlements' in e && (i = null != e.entitlements ? e.entitlements : void 0), R(t, i);
 	} catch (e) {
 		n(p.A.FAIL),
 			f(e),

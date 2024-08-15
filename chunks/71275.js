@@ -16,11 +16,7 @@ var r = n(442837),
 	o = n(501655);
 function l(e) {
 	let t = (function (e) {
-		return (0, r.e7)(
-			[s.Z],
-			() => null != s.Z.getMutableParticipants(e, o.pV.SPEAKER).find((e) => e.type === o.Ui.STREAM),
-			[e]
-		);
+		return (0, r.e7)([s.Z], () => null != s.Z.getMutableParticipants(e, o.pV.SPEAKER).find((e) => e.type === o.Ui.STREAM), [e]);
 	})(e);
 	return (0, r.e7)([a.Z], () => a.Z.hasVideo(e), [e]) || t;
 }

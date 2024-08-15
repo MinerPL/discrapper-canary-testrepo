@@ -47,16 +47,12 @@ function R(e) {
 					(0, i.jsx)(c.Heading, {
 						variant: 'heading-md/semibold',
 						color: 'header-primary',
-						children: _
-							? L.Z.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE_ACTIVITY_PANEL
-							: L.Z.Messages.QUESTS_TITLE.format({ questName: n.config.messages.questName })
+						children: _ ? L.Z.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE_ACTIVITY_PANEL : L.Z.Messages.QUESTS_TITLE.format({ questName: n.config.messages.questName })
 					}),
 					(0, i.jsx)(c.Text, {
 						variant: 'text-xs/normal',
 						color: 'header-secondary',
-						children: _
-							? L.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: s })
-							: L.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: a })
+						children: _ ? L.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: s }) : L.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: a })
 					})
 				]
 			})

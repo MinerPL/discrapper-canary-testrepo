@@ -11,11 +11,7 @@ t.Z = (e) => {
 	var t, n;
 	let { message: s, channel: d, renderColon: h, hasUnreads: m } = e,
 		{ user: p, author: g } = (0, r.AJ)(d),
-		f =
-			null !== (n = null !== (t = null == g ? void 0 : g.nick) && void 0 !== t ? t : null == p ? void 0 : p.username) &&
-			void 0 !== n
-				? n
-				: '',
+		f = null !== (n = null !== (t = null == g ? void 0 : g.nick) && void 0 !== t ? t : null == p ? void 0 : p.username) && void 0 !== n ? n : '',
 		T = (0, l.l)({
 			user: null == s ? void 0 : s.author,
 			channelId: d.id,

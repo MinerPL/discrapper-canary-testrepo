@@ -37,12 +37,7 @@ let o = {
 			try {
 				a = i()(e.toDate()).fromNow();
 			} catch (e) {}
-			return (
-				i().relativeTimeThreshold('s', t),
-				i().relativeTimeThreshold('ss', n),
-				i().relativeTimeThreshold('m', r),
-				null != a ? a : i()(e.toDate()).fromNow()
-			);
+			return i().relativeTimeThreshold('s', t), i().relativeTimeThreshold('ss', n), i().relativeTimeThreshold('m', r), null != a ? a : i()(e.toDate()).fromNow();
 		}
 	},
 	l = 'f';

@@ -65,10 +65,7 @@ function l(e, t) {
 					};
 					e.length > 0 && ((e[e.length - 1].nextKey = i.key), (i.prevKey = e[e.length - 1].key)), e.push(i);
 				}
-				e.length > 0 && ((e[e.length - 1].nextKey = n.key), (n.prevKey = e[e.length - 1].key)),
-					(n.level = t),
-					(n.colIndex = s),
-					e.push(n);
+				e.length > 0 && ((e[e.length - 1].nextKey = n.key), (n.prevKey = e[e.length - 1].key)), (n.level = t), (n.colIndex = s), e.push(n);
 			}
 			t--;
 		}
@@ -219,12 +216,7 @@ class u extends a.V {
 			(this.body = r),
 			(this.headerRows = _),
 			(this._size = [...r.childNodes].length),
-			0 === this.rowHeaderColumnKeys.size &&
-				((null == n ? void 0 : n.showSelectionCheckboxes)
-					? (null == n ? void 0 : n.showDragButtons)
-						? this.rowHeaderColumnKeys.add(this.columns[2].key)
-						: this.rowHeaderColumnKeys.add(this.columns[1].key)
-					: this.rowHeaderColumnKeys.add(this.columns[0].key));
+			0 === this.rowHeaderColumnKeys.size && ((null == n ? void 0 : n.showSelectionCheckboxes) ? ((null == n ? void 0 : n.showDragButtons) ? this.rowHeaderColumnKeys.add(this.columns[2].key) : this.rowHeaderColumnKeys.add(this.columns[1].key)) : this.rowHeaderColumnKeys.add(this.columns[0].key));
 	}
 }
 let c = {
@@ -265,12 +257,7 @@ function d(e) {
 			var r;
 			e.onSortChange({
 				column: t,
-				direction:
-					null != n
-						? n
-						: (null === (r = e.sortDescriptor) || void 0 === r ? void 0 : r.column) === t
-							? c[e.sortDescriptor.direction]
-							: 'ascending'
+				direction: null != n ? n : (null === (r = e.sortDescriptor) || void 0 === r ? void 0 : r.column) === t ? c[e.sortDescriptor.direction] : 'ascending'
 			});
 		}
 	};
@@ -321,8 +308,7 @@ _.getCollectionNode = function* (e, t) {
 				if (
 					(i.Children.forEach(n, (n) => {
 						if (n.type === _) {
-							if (e.length < t.columns.length)
-								throw Error("All of a Row's child Cells must be positioned before any child Rows.");
+							if (e.length < t.columns.length) throw Error("All of a Row's child Cells must be positioned before any child Rows.");
 							r.push({
 								type: 'item',
 								element: n
@@ -339,11 +325,6 @@ _.getCollectionNode = function* (e, t) {
 				yield* e, yield* r;
 			}
 		},
-		shouldInvalidate: (e) =>
-			e.columns.length !== t.columns.length ||
-			e.columns.some((e, n) => e.key !== t.columns[n].key) ||
-			e.showSelectionCheckboxes !== t.showSelectionCheckboxes ||
-			e.showDragButtons !== t.showDragButtons ||
-			e.selectionMode !== t.selectionMode
+		shouldInvalidate: (e) => e.columns.length !== t.columns.length || e.columns.some((e, n) => e.key !== t.columns[n].key) || e.showSelectionCheckboxes !== t.showSelectionCheckboxes || e.showDragButtons !== t.showDragButtons || e.selectionMode !== t.selectionMode
 	};
 };

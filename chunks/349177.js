@@ -20,10 +20,7 @@ function l(e) {
 				placeholder: e.placeholder,
 				maxLength: r.JuI,
 				onChange: e.onGlobalNameChange,
-				value:
-					null !== (t = null !== (s = e.pendingGlobalName) && void 0 !== s ? s : e.currentGlobalName) && void 0 !== t
-						? t
-						: ''
+				value: null !== (t = null !== (s = e.pendingGlobalName) && void 0 !== s ? s : e.currentGlobalName) && void 0 !== t ? t : ''
 			})
 		})
 	});

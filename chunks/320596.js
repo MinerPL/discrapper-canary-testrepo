@@ -12,9 +12,9 @@ let d = (e) => {
 			data: { title: t, subtitle: n, placeholder: d, rows: _, character_limit: E, pattern: f },
 			onChange: h,
 			initialText: p,
-			isRequired: I
+			isRequired: m
 		} = e,
-		m = i.useRef(
+		I = i.useRef(
 			s.Z.reactParserFor({
 				...s.Z.defaultRules,
 				link: o.s
@@ -55,7 +55,7 @@ let d = (e) => {
 						variant: 'text-sm/bold',
 						children: [
 							t,
-							I &&
+							m &&
 								(0, r.jsx)('span', {
 									className: u.required,
 									children: '*'
@@ -76,7 +76,7 @@ let d = (e) => {
 				(0, r.jsx)('div', {
 					children: (0, r.jsx)(a.Text, {
 						variant: 'text-sm/normal',
-						children: m.current(n)
+						children: I.current(n)
 					})
 				})
 		]

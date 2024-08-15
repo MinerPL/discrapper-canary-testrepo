@@ -22,14 +22,7 @@ class d extends a.Z {
 				if ((0, l.isDesktop)() || (0, l.isWeb)()) {
 					let e = Object.values(s.Z.getGuilds()),
 						t = r.default.getCurrentUser(),
-						n = e.filter(
-							(e) =>
-								e.isOwner(t) &&
-								!e.hasFeature(c.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) &&
-								!e.hasFeature(c.oNc.CREATOR_MONETIZABLE_RESTRICTED) &&
-								!e.hasFeature(c.oNc.CREATOR_MONETIZABLE_DISABLED) &&
-								(e.hasFeature(c.oNc.CREATOR_MONETIZABLE) || e.hasFeature(c.oNc.CREATOR_MONETIZABLE_PROVISIONAL))
-						);
+						n = e.filter((e) => e.isOwner(t) && !e.hasFeature(c.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) && !e.hasFeature(c.oNc.CREATOR_MONETIZABLE_RESTRICTED) && !e.hasFeature(c.oNc.CREATOR_MONETIZABLE_DISABLED) && (e.hasFeature(c.oNc.CREATOR_MONETIZABLE) || e.hasFeature(c.oNc.CREATOR_MONETIZABLE_PROVISIONAL)));
 					n.length > 0 && (await (0, o.av)(n.map((e) => e.id)));
 				}
 			}),

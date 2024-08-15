@@ -22,10 +22,7 @@ function N(e) {
 	let { onOpen: t, onClose: n, className: N } = e,
 		f = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
 		C = a.useRef(null),
-		p = (0, s.e7)(
-			[u.ZP],
-			() => (null == f ? void 0 : f.id) != null && u.ZP.getMentionCount(f.id, m.W.NOTIFICATION_CENTER) > 0
-		),
+		p = (0, s.e7)([u.ZP], () => (null == f ? void 0 : f.id) != null && u.ZP.getMentionCount(f.id, m.W.NOTIFICATION_CENTER) > 0),
 		{ enabled: g } = o.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),
 		S = (0, s.e7)([l.Z], () => g && l.Z.getUnseenInviteCount() > 0);
 	return (0, i.jsx)(E.k, {

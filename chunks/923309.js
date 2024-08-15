@@ -42,18 +42,12 @@ e.exports = function (e) {
 		u = {
 			className: 'number',
 			relevance: 0,
-			variants: [
-				{ match: `\\b(${o})(\\.(${o}))?([eE][+-]?(${o}))?\\b` },
-				{ match: `\\b0[xX]_*(${l})(\\.(${l}))?([pP][+-]?(${o}))?\\b` },
-				{ match: '\\b0[oO](([0-7]_*)+)\\b' },
-				{ match: '\\b0[bB](([01]_*)+)\\b' }
-			]
+			variants: [{ match: `\\b(${o})(\\.(${o}))?([eE][+-]?(${o}))?\\b` }, { match: `\\b0[xX]_*(${l})(\\.(${l}))?([pP][+-]?(${o}))?\\b` }, { match: '\\b0[oO](([0-7]_*)+)\\b' }, { match: '\\b0[bB](([01]_*)+)\\b' }]
 		};
 	return {
 		name: 'Haskell',
 		aliases: ['hs'],
-		keywords:
-			'let in if then else case of where do module import hiding qualified type data newtype deriving class instance as default infix infixl infixr foreign export ccall stdcall cplusplus jvm dotnet safe unsafe family forall mdo proc rec',
+		keywords: 'let in if then else case of where do module import hiding qualified type data newtype deriving class instance as default infix infixl infixr foreign export ccall stdcall cplusplus jvm dotnet safe unsafe family forall mdo proc rec',
 		contains: [
 			{
 				beginKeywords: 'module',

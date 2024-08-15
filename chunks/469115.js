@@ -501,14 +501,5 @@ let u = [
 			midpointPercentage: 50
 		}
 	];
-[...c, ...u],
-	((i = r || (r = {}))[(i.DARK = 0)] = 'DARK'),
-	(i[(i.LIGHT = 1)] = 'LIGHT'),
-	(i[(i.SYSTEM = 2)] = 'SYSTEM'),
-	o.BR.DARK,
-	o.BR.LIGHT,
-	o.BR.DARKER,
-	o.BR.LIGHT,
-	o.BR.MIDNIGHT,
-	() => l.Z.Messages.THEME_MIDNIGHT;
+[...c, ...u], ((i = r || (r = {}))[(i.DARK = 0)] = 'DARK'), (i[(i.LIGHT = 1)] = 'LIGHT'), (i[(i.SYSTEM = 2)] = 'SYSTEM'), o.BR.DARK, o.BR.LIGHT, o.BR.DARKER, o.BR.LIGHT, o.BR.MIDNIGHT, () => l.Z.Messages.THEME_MIDNIGHT;
 let E = (0, a.keyBy)(_, 'id');

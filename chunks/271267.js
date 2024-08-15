@@ -89,15 +89,7 @@ function E(e) {
 }
 function T(e) {
 	let { guild: t, monetizationEligibility: n } = e,
-		{
-			eligibilityLoading: a,
-			eligibilityError: i,
-			refreshEligibility: r,
-			eligibility: l,
-			eligibleForMonetization: c,
-			acceptTermsCheckboxText: d,
-			wasRejectedInV1: u
-		} = n;
+		{ eligibilityLoading: a, eligibilityError: i, refreshEligibility: r, eligibility: l, eligibleForMonetization: c, acceptTermsCheckboxText: d, wasRejectedInV1: u } = n;
 	return c
 		? u
 			? (0, s.jsx)(o.Z, { ...n })

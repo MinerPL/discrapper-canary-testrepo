@@ -111,38 +111,9 @@ function P(e) {
 		M = r.useCallback((e) => {
 			var a, n, t, r;
 			let { indexToRemove: l, numberOfAnswers: s } = e;
-			s === R.gY + 1
-				? null === (n = j.current) || void 0 === n || null === (a = n.ref) || void 0 === a || a.focus()
-				: null === (r = D.current[l === s - 1 ? l - 1 : l + 1]) ||
-					void 0 === r ||
-					null === (t = r.ref) ||
-					void 0 === t ||
-					t.focus();
+			s === R.gY + 1 ? null === (n = j.current) || void 0 === n || null === (a = n.ref) || void 0 === a || a.focus() : null === (r = D.current[l === s - 1 ? l - 1 : l + 1]) || void 0 === r || null === (t = r.ref) || void 0 === t || t.focus();
 		}, []),
-		{
-			answers: w,
-			question: S,
-			selectedLayoutType: b,
-			setSelectedLayoutType: k,
-			allowMultiSelect: Z,
-			setAllowMultiSelect: y,
-			duration: B,
-			setDuration: U,
-			handleQuestionChange: W,
-			handleAnswerTextChange: H,
-			handleEmojiSelect: Y,
-			canAddMoreAnswers: F,
-			handleRemoveAnswerImage: G,
-			canRemoveMoreAnswers: z,
-			handleAddAnswer: K,
-			handleRemoveAnswer: V,
-			createPollError: J,
-			handleSubmitPoll: q,
-			fieldErrors: Q,
-			submitting: X,
-			shouldFocusOnInvalidField: $,
-			setShouldFocusOnInvalidField: ee
-		} = (0, E.Z)(a, l, M),
+		{ answers: w, question: S, selectedLayoutType: b, setSelectedLayoutType: k, allowMultiSelect: Z, setAllowMultiSelect: y, duration: B, setDuration: U, handleQuestionChange: W, handleAnswerTextChange: H, handleEmojiSelect: Y, canAddMoreAnswers: F, handleRemoveAnswerImage: G, canRemoveMoreAnswers: z, handleAddAnswer: K, handleRemoveAnswer: V, createPollError: J, handleSubmitPoll: q, fieldErrors: Q, submitting: X, shouldFocusOnInvalidField: $, setShouldFocusOnInvalidField: ee } = (0, E.Z)(a, l, M),
 		{ trackPollCreationCancelled: ea } = (0, f.l)(w, Z, b),
 		en = r.useRef(w.length),
 		et = b === i.C.DEFAULT,
@@ -272,9 +243,7 @@ function P(e) {
 							),
 							F &&
 								(0, t.jsxs)(c.Clickable, {
-									className: s()(et ? p.addAnswerButtonDefault : p.addAnswerButtonImageOnly, {
-										[p.canRemoveMoreAnswers]: z
-									}),
+									className: s()(et ? p.addAnswerButtonDefault : p.addAnswerButtonImageOnly, { [p.canRemoveMoreAnswers]: z }),
 									onClick: F ? K : void 0,
 									'aria-label': x.Z.Messages.CREATE_POLL_ADD_ANSWER_BUTTON,
 									ref: j,

@@ -38,11 +38,7 @@ function d(e) {
 	if (null != e) return Array.from(e).find((e) => u(e));
 }
 function _(e, t) {
-	if (null != t)
-		return Array.from(t).find(
-			(t) =>
-				t.type === o.qc2.PREMIUM_PURCHASE && e.includes(t.skuId) && t.applicationId === a.RQ && t.isValid(null, r.Z)
-		);
+	if (null != t) return Array.from(t).find((t) => t.type === o.qc2.PREMIUM_PURCHASE && e.includes(t.skuId) && t.applicationId === a.RQ && t.isValid(null, r.Z));
 }
 function E(e) {
 	return null != e.redeemable_at && null != e.next_tenure_reward_id;
@@ -60,7 +56,5 @@ function f(e) {
 }
 function h() {
 	var e;
-	return null !== (e = i.Z.getTenureRewardStatusForRewardId(s.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e
-		? e
-		: i.Z.getTenureRewardStatusForRewardId(s.Ft.FREE_GUILD_BOOST_3_MONTHS);
+	return null !== (e = i.Z.getTenureRewardStatusForRewardId(s.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : i.Z.getTenureRewardStatusForRewardId(s.Ft.FREE_GUILD_BOOST_3_MONTHS);
 }

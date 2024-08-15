@@ -26,10 +26,7 @@ function l(e, t, r, l, A, T) {
 		O = r.integrations || e.integrations.map((e) => e.name);
 	(function (e, t) {
 		let { environment: r, release: n, dist: a, maxValueLength: i = 250 } = t;
-		!('environment' in e) && (e.environment = 'environment' in t ? r : E.J),
-			void 0 === e.release && void 0 !== n && (e.release = n),
-			void 0 === e.dist && void 0 !== a && (e.dist = a),
-			e.message && (e.message = (0, o.$G)(e.message, i));
+		!('environment' in e) && (e.environment = 'environment' in t ? r : E.J), void 0 === e.release && void 0 !== n && (e.release = n), void 0 === e.dist && void 0 !== a && (e.dist = a), e.message && (e.message = (0, o.$G)(e.message, i));
 		let _ = e.exception && e.exception.values && e.exception.values[0];
 		_ && _.value && (_.value = (0, o.$G)(_.value, i));
 		let s = e.request;
@@ -93,9 +90,7 @@ function l(e, t, r, l, A, T) {
 				try {
 					e.exception.values.forEach((e) => {
 						e.stacktrace.frames.forEach((e) => {
-							e.debug_id &&
-								(e.abs_path ? (t[e.abs_path] = e.debug_id) : e.filename && (t[e.filename] = e.debug_id),
-								delete e.debug_id);
+							e.debug_id && (e.abs_path ? (t[e.abs_path] = e.debug_id) : e.filename && (t[e.filename] = e.debug_id), delete e.debug_id);
 						});
 					});
 				} catch (e) {}
@@ -126,11 +121,7 @@ function l(e, t, r, l, A, T) {
 						...(e.extra && { extra: (0, _.Fv)(e.extra, t, r) })
 					};
 					return (
-						e.contexts &&
-							e.contexts.trace &&
-							n.contexts &&
-							((n.contexts.trace = e.contexts.trace),
-							e.contexts.trace.data && (n.contexts.trace.data = (0, _.Fv)(e.contexts.trace.data, t, r))),
+						e.contexts && e.contexts.trace && n.contexts && ((n.contexts.trace = e.contexts.trace), e.contexts.trace.data && (n.contexts.trace.data = (0, _.Fv)(e.contexts.trace.data, t, r))),
 						e.spans &&
 							(n.spans = e.spans.map((e) => ({
 								...e,

@@ -13,9 +13,7 @@ e.default = (s) =>
 		onConfirm: () => {
 			C.Z.clearPendingRelationships();
 		},
-		body: a.Z.Messages.CLEAR_INCOMING_REQUESTS_CONFIRMATION_BODY.format({
-			incomingRequestCount: s.incomingRequestCount
-		}),
+		body: a.Z.Messages.CLEAR_INCOMING_REQUESTS_CONFIRMATION_BODY.format({ incomingRequestCount: s.incomingRequestCount }),
 		confirmColor: t.ButtonColors.RED,
 		...s
 	});

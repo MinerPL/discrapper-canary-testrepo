@@ -90,13 +90,7 @@ let k = (e, t, n) => ((0, a.wj)(e) ? t : n),
 							analyticsLocations: e
 						});
 					};
-					return a
-						? T.Z.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILE_THEMES_PERK_DESCRIPTION_CHECK_IT_OUT.format({
-								onCheckItOutClick: t
-							})
-						: T.Z.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILE_THEMES_PERK_DESCRIPTION_TRY_IT_OUT.format({
-								onTryItOutClick: t
-							});
+					return a ? T.Z.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILE_THEMES_PERK_DESCRIPTION_CHECK_IT_OUT.format({ onCheckItOutClick: t }) : T.Z.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILE_THEMES_PERK_DESCRIPTION_TRY_IT_OUT.format({ onTryItOutClick: t });
 				},
 				imageSource: p,
 				imageClassName: t.perGuildProfilesImage

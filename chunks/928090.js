@@ -69,9 +69,7 @@ function x(e) {
 						confirmButtonColor: i.Button.Colors.BRAND,
 						children: (0, r.jsx)(i.Text, {
 							variant: 'text-md/normal',
-							children: f.Z.Messages.SERVER_SUBSCRIPTION_OWNERSHIP_TRANSFER_FAILURE_MODAL_BODY.format({
-								server_subscription_owner_transfer_article: N.T23
-							})
+							children: f.Z.Messages.SERVER_SUBSCRIPTION_OWNERSHIP_TRANSFER_FAILURE_MODAL_BODY.format({ server_subscription_owner_transfer_article: N.T23 })
 						})
 					})
 				);
@@ -184,9 +182,7 @@ function x(e) {
 							(0, r.jsx)(i.FormText, {
 								type: i.FormText.Types.DESCRIPTION,
 								className: I.roleSubscriptionText,
-								children: f.Z.Messages.TRANSFER_OWNERSHIP_SERVER_SUBSCRIPTION_GUILD.format({
-									server_subscription_owner_transfer_article: N.T23
-								})
+								children: f.Z.Messages.TRANSFER_OWNERSHIP_SERVER_SUBSCRIPTION_GUILD.format({ server_subscription_owner_transfer_article: N.T23 })
 							}),
 						(0, r.jsx)(i.FormSwitch, {
 							disabled: F,

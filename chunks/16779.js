@@ -22,8 +22,7 @@ var i = n(278074),
 function d(e) {
 	var t, n, u;
 	let { activity: d } = e,
-		_ =
-			null !== (u = null === (t = d.timestamps) || void 0 === t ? void 0 : t.start) && void 0 !== u ? u : d.created_at;
+		_ = null !== (u = null === (t = d.timestamps) || void 0 === t ? void 0 : t.start) && void 0 !== u ? u : d.created_at;
 	if (null == _) return null;
 	let E = (0, i.EQ)(d)
 		.when(s.Z, () => a.ActivitiesIcon)

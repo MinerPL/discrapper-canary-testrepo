@@ -13,12 +13,7 @@ var s,
 	N = t(689938),
 	m = t(977018),
 	_ = t(702512);
-((n = s || (s = {})).CARD_NUMBER = 'cardNumber'),
-	(n.EXPIRATION_DATE = 'cardExpiry'),
-	(n.CVC = 'cardCvc'),
-	(n.NAME = 'name'),
-	(n.COUNTRY = 'country'),
-	(n.POSTAL_CODE = 'postalCode');
+((n = s || (s = {})).CARD_NUMBER = 'cardNumber'), (n.EXPIRATION_DATE = 'cardExpiry'), (n.CVC = 'cardCvc'), (n.NAME = 'name'), (n.COUNTRY = 'country'), (n.POSTAL_CODE = 'postalCode');
 a.Z = function (e) {
 	var a;
 	let { onCardInfoChange: t, error: s } = e,
@@ -102,27 +97,11 @@ a.Z = function (e) {
 			(null === (a = d.default.getCurrentUser()) || void 0 === a ? void 0 : a.nsfwAllowed)
 				? (0, l.jsxs)('div', {
 						className: m.cardBrands,
-						children: [
-							(0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.visa, m.cardFormHeader) }),
-							(0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.mastercard, m.cardFormHeader) }),
-							(0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.discover, m.cardFormHeader) }),
-							(0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.amex, m.cardFormHeader) }),
-							(0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.jcb, m.cardFormHeader) }),
-							(0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.dinersclub, m.cardFormHeader) }),
-							(0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.unionpay, m.cardFormHeader) })
-						]
+						children: [(0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.visa, m.cardFormHeader) }), (0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.mastercard, m.cardFormHeader) }), (0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.discover, m.cardFormHeader) }), (0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.amex, m.cardFormHeader) }), (0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.jcb, m.cardFormHeader) }), (0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.dinersclub, m.cardFormHeader) }), (0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.unionpay, m.cardFormHeader) })]
 					})
 				: (0, l.jsxs)('div', {
 						className: m.cardBrands,
-						children: [
-							(0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.visa_monochrome, m.cardFormHeader) }),
-							(0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.mastercard_monochrome, m.cardFormHeader) }),
-							(0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.discover_monochrome, m.cardFormHeader) }),
-							(0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.amex_monochrome, m.cardFormHeader) }),
-							(0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.jcb_monochrome, m.cardFormHeader) }),
-							(0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.dinersclub_monochrome, m.cardFormHeader) }),
-							(0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.unionpay_monochrome, m.cardFormHeader) })
-						]
+						children: [(0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.visa_monochrome, m.cardFormHeader) }), (0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.mastercard_monochrome, m.cardFormHeader) }), (0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.discover_monochrome, m.cardFormHeader) }), (0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.amex_monochrome, m.cardFormHeader) }), (0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.jcb_monochrome, m.cardFormHeader) }), (0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.dinersclub_monochrome, m.cardFormHeader) }), (0, l.jsx)('div', { className: i()(u.Uy.SMALL, m.unionpay_monochrome, m.cardFormHeader) })]
 					}),
 			(0, l.jsx)(E.Z, {
 				form: [
@@ -140,12 +119,7 @@ a.Z = function (e) {
 					let t = { ...C },
 						s = { ...I },
 						n = { name: R.name };
-					!I[a] && '' !== e && (s[a] = !0),
-						(t[a] = e),
-						s[a] && '' === e ? 'name' === a && (n.name = N.Z.Messages.PAYMENT_SOURCE_NAME_ERROR_REQUIRED) : delete n[a],
-						S(t),
-						P(s),
-						f(n);
+					!I[a] && '' !== e && (s[a] = !0), (t[a] = e), s[a] && '' === e ? 'name' === a && (n.name = N.Z.Messages.PAYMENT_SOURCE_NAME_ERROR_REQUIRED) : delete n[a], S(t), P(s), f(n);
 				},
 				onFieldBlur: function () {
 					f(b());

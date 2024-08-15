@@ -43,19 +43,7 @@ var a = t(481060),
 n.default = (0, u.Z)(
 	(0, r.Z)(
 		function (e) {
-			let {
-					user: n,
-					channel: t,
-					channelSelected: r = !1,
-					showMute: u = !0,
-					showMediaItems: d = !1,
-					showChannelCallItems: z = !1,
-					showModalItems: w = !0,
-					targetIsUser: B = !1,
-					context: K,
-					onSelect: W,
-					onHeightUpdate: H
-				} = e,
+			let { user: n, channel: t, channelSelected: r = !1, showMute: u = !0, showMediaItems: d = !1, showChannelCallItems: z = !1, showModalItems: w = !0, targetIsUser: B = !1, context: K, onSelect: W, onHeightUpdate: H } = e,
 				X = (0, L.Z)({
 					userId: n.id,
 					guildId: null

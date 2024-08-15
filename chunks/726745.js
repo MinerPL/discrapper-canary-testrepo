@@ -27,19 +27,17 @@ function f(e, t, n) {
 		e
 	);
 }
-((o = a || (a = {}))[(o.INVALID = 0)] = 'INVALID'),
-	(o[(o.VALIDATING = 1)] = 'VALIDATING'),
-	(o[(o.VALID = 2)] = 'VALID');
+((o = a || (a = {}))[(o.INVALID = 0)] = 'INVALID'), (o[(o.VALIDATING = 1)] = 'VALIDATING'), (o[(o.VALID = 2)] = 'VALID');
 let h = [],
 	p = !1;
-function I(e) {
+function m(e) {
 	(h = h.filter((t) => {
 		let { id: n } = t;
 		return n !== e;
 	})),
 		l.removeToken(e);
 }
-function m(e, t) {
+function I(e, t) {
 	let n = h.slice(),
 		r = n.find((t) => {
 			let { id: n } = t;
@@ -82,10 +80,7 @@ class T extends (s = u.ZP.PersistedStore) {
 		});
 	}
 	get canUseMultiAccountNotifications() {
-		return (
-			this.getCanUseMultiAccountMobile() &&
-			_.N.getCurrentConfig({ location: '09e468_1' }, { autoTrackExposure: !1 }).isMultiAccountMobileNotificationsEnabled
-		);
+		return this.getCanUseMultiAccountMobile() && _.N.getCurrentConfig({ location: '09e468_1' }, { autoTrackExposure: !1 }).isMultiAccountMobileNotificationsEnabled;
 	}
 	get isSwitchingAccount() {
 		return p;
@@ -118,10 +113,7 @@ f(T, 'displayName', 'MultiAccountStore'),
 					return n === t.id;
 				});
 			i > -1
-				? ((h[i].avatar = t.avatar),
-					(h[i].username = t.username),
-					(h[i].discriminator = t.discriminator),
-					(h[i].tokenStatus = 2))
+				? ((h[i].avatar = t.avatar), (h[i].username = t.username), (h[i].discriminator = t.discriminator), (h[i].tokenStatus = 2))
 				: n.push({
 						id: t.id,
 						avatar: t.avatar,
@@ -133,7 +125,7 @@ f(T, 'displayName', 'MultiAccountStore'),
 				(h = n).length > E.$H &&
 					h.splice(E.$H).forEach((e) => {
 						let { id: t } = e;
-						I(t);
+						m(t);
 					});
 		},
 		LOGOUT: function (e) {
@@ -145,10 +137,10 @@ f(T, 'displayName', 'MultiAccountStore'),
 					})),
 				(r = null);
 		},
-		MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: (e) => m(e.userId, 1),
-		MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: (e) => m(e.userId, 2),
-		MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: (e) => m(e.userId, 0),
-		MULTI_ACCOUNT_REMOVE_ACCOUNT: (e) => I(e.userId),
+		MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: (e) => I(e.userId, 1),
+		MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: (e) => I(e.userId, 2),
+		MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: (e) => I(e.userId, 0),
+		MULTI_ACCOUNT_REMOVE_ACCOUNT: (e) => m(e.userId),
 		MULTI_ACCOUNT_MOVE_ACCOUNT: function (e) {
 			let { from: t, to: n } = e;
 			h = (0, d.aB)(h, t, n);

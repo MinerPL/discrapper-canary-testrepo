@@ -7,39 +7,7 @@ var n = r(151122),
 	a = r(370336),
 	o = r(688838),
 	i = r(163162);
-let _ = [
-		'EventTarget',
-		'Window',
-		'Node',
-		'ApplicationCache',
-		'AudioTrackList',
-		'BroadcastChannel',
-		'ChannelMergerNode',
-		'CryptoOperation',
-		'EventSource',
-		'FileReader',
-		'HTMLUnknownElement',
-		'IDBDatabase',
-		'IDBRequest',
-		'IDBTransaction',
-		'KeyOperation',
-		'MediaController',
-		'MessagePort',
-		'ModalWindow',
-		'Notification',
-		'SVGElementInstance',
-		'Screen',
-		'SharedWorker',
-		'TextTrack',
-		'TextTrackCue',
-		'TextTrackList',
-		'WebSocket',
-		'WebSocketWorker',
-		'Worker',
-		'XMLHttpRequest',
-		'XMLHttpRequestEventTarget',
-		'XMLHttpRequestUpload'
-	],
+let _ = ['EventTarget', 'Window', 'Node', 'ApplicationCache', 'AudioTrackList', 'BroadcastChannel', 'ChannelMergerNode', 'CryptoOperation', 'EventSource', 'FileReader', 'HTMLUnknownElement', 'IDBDatabase', 'IDBRequest', 'IDBTransaction', 'KeyOperation', 'MediaController', 'MessagePort', 'ModalWindow', 'Notification', 'SVGElementInstance', 'Screen', 'SharedWorker', 'TextTrack', 'TextTrackCue', 'TextTrackList', 'WebSocket', 'WebSocketWorker', 'Worker', 'XMLHttpRequest', 'XMLHttpRequestEventTarget', 'XMLHttpRequestUpload'],
 	E = (0, n._I)((e = {}) => {
 		let t = {
 			XMLHttpRequest: !0,
@@ -52,10 +20,7 @@ let _ = [
 		return {
 			name: 'BrowserApiErrors',
 			setupOnce() {
-				t.setTimeout && (0, a.hl)(i.m9, 'setTimeout', s),
-					t.setInterval && (0, a.hl)(i.m9, 'setInterval', s),
-					t.requestAnimationFrame && (0, a.hl)(i.m9, 'requestAnimationFrame', c),
-					t.XMLHttpRequest && 'XMLHttpRequest' in i.m9 && (0, a.hl)(XMLHttpRequest.prototype, 'send', I);
+				t.setTimeout && (0, a.hl)(i.m9, 'setTimeout', s), t.setInterval && (0, a.hl)(i.m9, 'setInterval', s), t.requestAnimationFrame && (0, a.hl)(i.m9, 'requestAnimationFrame', c), t.XMLHttpRequest && 'XMLHttpRequest' in i.m9 && (0, a.hl)(XMLHttpRequest.prototype, 'send', I);
 				let e = t.eventTarget;
 				e && (Array.isArray(e) ? e : _).forEach(u);
 			}

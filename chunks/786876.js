@@ -41,13 +41,7 @@ var v = p(function (t, n) {
 					} catch (n) {
 						throw (t.preventDefault(), n);
 					}
-					if (
-						!t.defaultPrevented &&
-						0 === t.button &&
-						(!s || '_self' === s) &&
-						!((n = t).metaKey || n.altKey || n.ctrlKey || n.shiftKey)
-					)
-						t.preventDefault(), r();
+					if (!t.defaultPrevented && 0 === t.button && (!s || '_self' === s) && !((n = t).metaKey || n.altKey || n.ctrlKey || n.shiftKey)) t.preventDefault(), r();
 				}
 			});
 		return f !== p ? (l.ref = n || e) : (l.ref = e), i.createElement('a', l);
@@ -95,20 +89,7 @@ var y = d(function (t, n) {
 		Z = t.style,
 		_ = t.to,
 		k = t.innerRef,
-		N = (0, c.Z)(t, [
-			'aria-current',
-			'activeClassName',
-			'activeStyle',
-			'className',
-			'exact',
-			'isActive',
-			'location',
-			'sensitive',
-			'strict',
-			'style',
-			'to',
-			'innerRef'
-		]);
+		N = (0, c.Z)(t, ['aria-current', 'activeClassName', 'activeStyle', 'className', 'exact', 'isActive', 'location', 'sensitive', 'strict', 'style', 'to', 'innerRef']);
 	return i.createElement(r.s6.Consumer, null, function (t) {
 		t || (0, u.Z)(!1);
 		var e = g || t.location,

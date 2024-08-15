@@ -27,11 +27,7 @@ e.exports = function (e, t, r, o, i, _) {
 	if (A && !T) {
 		var O = e.constructor,
 			f = t.constructor;
-		O != f &&
-			'constructor' in e &&
-			'constructor' in t &&
-			!('function' == typeof O && O instanceof O && 'function' == typeof f && f instanceof f) &&
-			(A = !1);
+		O != f && 'constructor' in e && 'constructor' in t && !('function' == typeof O && O instanceof O && 'function' == typeof f && f instanceof f) && (A = !1);
 	}
 	return _.delete(e), _.delete(t), A;
 };

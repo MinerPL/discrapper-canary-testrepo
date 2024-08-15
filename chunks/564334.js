@@ -40,13 +40,7 @@ class s {
 				(e = t + t + n + n + r + r), null != i && (e += i + i);
 			}
 			var t = e.match(/.{1,2}/g);
-			if (null != t)
-				return new s(
-					parseInt(t[0], 16),
-					parseInt(t[1], 16),
-					parseInt(t[2], 16),
-					null != t[3] ? parseInt(t[3], 16) / 255 : 1
-				);
+			if (null != t) return new s(parseInt(t[0], 16), parseInt(t[1], 16), parseInt(t[2], 16), null != t[3] ? parseInt(t[3], 16) / 255 : 1);
 		}
 	}
 	static parseColorFnString(e) {
@@ -74,18 +68,7 @@ class s {
 					s = (1 - Math.abs(2 * (i /= 255) - 1)) * (r /= 255),
 					o = s * (1 - Math.abs(((n / 60) % 2) - 1)),
 					l = i - s / 2,
-					u = (t =
-						n < 60
-							? [s, o, 0]
-							: n < 120
-								? [o, s, 0]
-								: n < 180
-									? [0, s, o]
-									: n < 240
-										? [0, o, s]
-										: n < 300
-											? [o, 0, s]
-											: [s, 0, o]).map((e) => Math.round((e + l) * 255));
+					u = (t = n < 60 ? [s, o, 0] : n < 120 ? [o, s, 0] : n < 180 ? [0, s, o] : n < 240 ? [0, o, s] : n < 300 ? [o, 0, s] : [s, 0, o]).map((e) => Math.round((e + l) * 255));
 				return {
 					red: u[0],
 					green: u[1],
@@ -148,20 +131,9 @@ class s {
 		var e = this.red / 255,
 			t = this.green / 255,
 			n = this.blue / 255;
-		return (
-			0.2126 * (e <= 0.03928 ? e / 12.92 : Math.pow((e + 0.055) / 1.055, 2.4)) +
-			0.7152 * (t <= 0.03928 ? t / 12.92 : Math.pow((t + 0.055) / 1.055, 2.4)) +
-			0.0722 * (n <= 0.03928 ? n / 12.92 : Math.pow((n + 0.055) / 1.055, 2.4))
-		);
+		return 0.2126 * (e <= 0.03928 ? e / 12.92 : Math.pow((e + 0.055) / 1.055, 2.4)) + 0.7152 * (t <= 0.03928 ? t / 12.92 : Math.pow((t + 0.055) / 1.055, 2.4)) + 0.0722 * (n <= 0.03928 ? n / 12.92 : Math.pow((n + 0.055) / 1.055, 2.4));
 	}
 	constructor(e, t, n, i) {
-		r(this, 'red', void 0),
-			r(this, 'green', void 0),
-			r(this, 'blue', void 0),
-			r(this, 'alpha', void 0),
-			(this.red = e),
-			(this.green = t),
-			(this.blue = n),
-			(this.alpha = i);
+		r(this, 'red', void 0), r(this, 'green', void 0), r(this, 'blue', void 0), r(this, 'alpha', void 0), (this.red = e), (this.green = t), (this.blue = n), (this.alpha = i);
 	}
 }

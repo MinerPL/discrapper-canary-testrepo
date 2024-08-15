@@ -23,10 +23,7 @@ function u(e, t, n) {
 		e
 	);
 }
-((a = r || (r = {}))[(a.NOT_FETCHED = 0)] = 'NOT_FETCHED'),
-	(a[(a.FETCHING = 1)] = 'FETCHING'),
-	(a[(a.FETCHED = 2)] = 'FETCHED'),
-	(a[(a.ERROR = 3)] = 'ERROR');
+((a = r || (r = {}))[(a.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (a[(a.FETCHING = 1)] = 'FETCHING'), (a[(a.FETCHED = 2)] = 'FETCHED'), (a[(a.ERROR = 3)] = 'ERROR');
 let c = {
 	applicationIdToGuildIds: {},
 	lastFetchTimeMs: null,
@@ -35,18 +32,11 @@ let c = {
 };
 function d(e) {
 	let { applicationId: t, guildId: n } = e;
-	null == c.applicationIdToGuildIds[t] && (c.applicationIdToGuildIds[t] = new Set()),
-		c.applicationIdToGuildIds[t].add(n),
-		(c.applicationIdToGuildIds[t] = new Set(c.applicationIdToGuildIds[t]));
+	null == c.applicationIdToGuildIds[t] && (c.applicationIdToGuildIds[t] = new Set()), c.applicationIdToGuildIds[t].add(n), (c.applicationIdToGuildIds[t] = new Set(c.applicationIdToGuildIds[t]));
 }
 class _ extends (i = s.ZP.PersistedStore) {
 	initialize(e) {
-		if (null != e)
-			for (let t in ((c.lastFetchTimeMs = e.lastFetchTimeMs),
-			(c.nextFetchRetryTimeMs = e.nextFetchRetryTimeMs),
-			(c.fetchState = e.fetchState),
-			e.applicationIdToGuildIds))
-				c.applicationIdToGuildIds[t] = new Set(e.applicationIdToGuildIds[t]);
+		if (null != e) for (let t in ((c.lastFetchTimeMs = e.lastFetchTimeMs), (c.nextFetchRetryTimeMs = e.nextFetchRetryTimeMs), (c.fetchState = e.fetchState), e.applicationIdToGuildIds)) c.applicationIdToGuildIds[t] = new Set(e.applicationIdToGuildIds[t]);
 	}
 	getState() {
 		return c;
@@ -75,11 +65,7 @@ u(_, 'displayName', 'MyGuildApplicationsStore'),
 		},
 		FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS_SUCCESS: function (e) {
 			let { guildIdToApplicationIds: t } = e;
-			for (let e in ((c.fetchState = 2),
-			(c.lastFetchTimeMs = Date.now()),
-			(c.applicationIdToGuildIds = {}),
-			(c.nextFetchRetryTimeMs = null),
-			t))
+			for (let e in ((c.fetchState = 2), (c.lastFetchTimeMs = Date.now()), (c.applicationIdToGuildIds = {}), (c.nextFetchRetryTimeMs = null), t))
 				for (let n of t[e])
 					d({
 						applicationId: n,
@@ -106,9 +92,7 @@ u(_, 'displayName', 'MyGuildApplicationsStore'),
 			if (null != t)
 				!(function (e) {
 					let { applicationId: t, guildId: n } = e;
-					if (null != c.applicationIdToGuildIds[t])
-						c.applicationIdToGuildIds[t].delete(n),
-							(c.applicationIdToGuildIds[t] = new Set(c.applicationIdToGuildIds[t]));
+					if (null != c.applicationIdToGuildIds[t]) c.applicationIdToGuildIds[t].delete(n), (c.applicationIdToGuildIds[t] = new Set(c.applicationIdToGuildIds[t]));
 				})({
 					applicationId: t,
 					guildId: n

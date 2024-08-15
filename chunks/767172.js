@@ -161,30 +161,10 @@ var t = (e.exports = {
 		{
 			push: 'candidates',
 			reg: /^candidate:(\S*) (\d*) (\S*) (\d*) (\S*) (\d*) typ (\S*)(?: raddr (\S*) rport (\d*))?(?: tcptype (\S*))?(?: generation (\d*))?(?: network-id (\d*))?(?: network-cost (\d*))?/,
-			names: [
-				'foundation',
-				'component',
-				'transport',
-				'priority',
-				'ip',
-				'port',
-				'type',
-				'raddr',
-				'rport',
-				'tcptype',
-				'generation',
-				'network-id',
-				'network-cost'
-			],
+			names: ['foundation', 'component', 'transport', 'priority', 'ip', 'port', 'type', 'raddr', 'rport', 'tcptype', 'generation', 'network-id', 'network-cost'],
 			format: function (e) {
 				var t = 'candidate:%s %d %s %d %s %d typ %s';
-				return (
-					(t += (null != e.raddr ? ' raddr %s rport %d' : '%v%v') + (null != e.tcptype ? ' tcptype %s' : '%v')),
-					null != e.generation && (t += ' generation %d'),
-					(t +=
-						(null != e['network-id'] ? ' network-id %d' : '%v') +
-						(null != e['network-cost'] ? ' network-cost %d' : '%v'))
-				);
+				return (t += (null != e.raddr ? ' raddr %s rport %d' : '%v%v') + (null != e.tcptype ? ' tcptype %s' : '%v')), null != e.generation && (t += ' generation %d'), (t += (null != e['network-id'] ? ' network-id %d' : '%v') + (null != e['network-cost'] ? ' network-cost %d' : '%v'));
 			}
 		},
 		{
@@ -259,9 +239,7 @@ var t = (e.exports = {
 		},
 		{
 			push: 'imageattrs',
-			reg: RegExp(
-				'^imageattr:(\\d+|\\*)[\\s\\t]+(send|recv)[\\s\\t]+(\\*|\\[\\S+\\](?:[\\s\\t]+\\[\\S+\\])*)(?:[\\s\\t]+(recv|send)[\\s\\t]+(\\*|\\[\\S+\\](?:[\\s\\t]+\\[\\S+\\])*))?'
-			),
+			reg: RegExp('^imageattr:(\\d+|\\*)[\\s\\t]+(send|recv)[\\s\\t]+(\\*|\\[\\S+\\](?:[\\s\\t]+\\[\\S+\\])*)(?:[\\s\\t]+(recv|send)[\\s\\t]+(\\*|\\[\\S+\\](?:[\\s\\t]+\\[\\S+\\])*))?'),
 			names: ['pt', 'dir1', 'attrs1', 'dir2', 'attrs2'],
 			format: function (e) {
 				return 'imageattr:%s %s %s' + (e.dir2 ? ' %s %s' : '');

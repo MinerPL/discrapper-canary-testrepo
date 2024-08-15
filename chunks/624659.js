@@ -30,19 +30,7 @@ function N() {
 	});
 }
 function L(e) {
-	let {
-			header: t,
-			body: n,
-			problems: o,
-			transitionState: I,
-			feedbackProblems: L = [],
-			otherKey: T,
-			hasCloseButton: x,
-			onSubmit: D,
-			onClose: h,
-			canDismissForever: S = !0,
-			showHelpdeskLink: Z = !0
-		} = e,
+	let { header: t, body: n, problems: o, transitionState: I, feedbackProblems: L = [], otherKey: T, hasCloseButton: x, onSubmit: D, onClose: h, canDismissForever: S = !0, showHelpdeskLink: Z = !0 } = e,
 		p = (0, i.Z)(o),
 		[B, M] = a.useState(!1),
 		[R, O] = a.useState(null),

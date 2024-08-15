@@ -18,8 +18,8 @@ var r = n(735250),
 	f = n(906732),
 	h = n(676035),
 	p = n(314897),
-	I = n(158776),
-	m = n(785717),
+	m = n(158776),
+	I = n(785717),
 	T = n(277085),
 	g = n(228168),
 	S = n(981631),
@@ -30,9 +30,9 @@ let v = 'text-sm/medium',
 	R = 144;
 function C(e) {
 	var t;
-	let { statusActivity: a, profileType: h, editEnabled: p, hasEntered: I = !0, animate: S = !0, onClose: C } = e,
+	let { statusActivity: a, profileType: h, editEnabled: p, hasEntered: m = !0, animate: S = !0, onClose: C } = e,
 		{ analyticsLocations: y } = (0, f.ZP)(E.Z.PROFILE_CUSTOM_STATUS),
-		{ trackUserProfileAction: D } = (0, m.KZ)(),
+		{ trackUserProfileAction: D } = (0, I.KZ)(),
 		L = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
 		[b] = i.useState(() => new u.V7()),
 		[M, P] = i.useState(!0),
@@ -58,21 +58,13 @@ function C(e) {
 	i.useLayoutEffect(() => {
 		if (null == U.current || Z) return;
 		let e = U.current.getBoundingClientRect().height;
-		if (($(Z || e <= j), I)) {
+		if (($(Z || e <= j), m)) {
 			var t, n, r, i;
-			let e =
-					null !== (r = null === (t = U.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) &&
-					void 0 !== r
-						? r
-						: W,
-				a =
-					null !== (i = null === (n = x.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) &&
-					void 0 !== i
-						? i
-						: K;
+			let e = null !== (r = null === (t = U.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== r ? r : W,
+				a = null !== (i = null === (n = x.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== i ? i : K;
 			ee(!Z && e > a), (w.current = e), (G.current = a);
 		}
-	}, [I, Z, j, W, K]);
+	}, [m, Z, j, W, K]);
 	let [er, ei] = (0, c.useSpring)(() => ({
 		maxHeight: ''.concat(K, 'px'),
 		config: {
@@ -180,9 +172,7 @@ function C(e) {
 									}),
 								z &&
 									(0, r.jsxs)('div', {
-										className: s()(N.content, N.unclamp, N.placeholderWidth, N.incorporeal, {
-											[N.panel]: h === g.y0.PANEL
-										}),
+										className: s()(N.content, N.unclamp, N.placeholderWidth, N.incorporeal, { [N.panel]: h === g.y0.PANEL }),
 										ref: U,
 										children: [es(), eo()]
 									})
@@ -264,8 +254,8 @@ function y(e) {
 	let { user: t, editEnabled: n, ...i } = e,
 		a = (0, l.e7)([p.default], () => p.default.getId() === t.id),
 		s = (0, h.a)(),
-		o = (0, l.e7)([I.Z], () =>
-			I.Z.findActivity(t.id, (e) => {
+		o = (0, l.e7)([m.Z], () =>
+			m.Z.findActivity(t.id, (e) => {
 				let { type: t } = e;
 				return t === S.IIU.CUSTOM_STATUS;
 			})

@@ -13,8 +13,8 @@ var r = n(735250),
 	f = n(822686),
 	h = n(356110),
 	p = n(730719),
-	I = n(996701),
-	m = n(320596),
+	m = n(996701),
+	I = n(320596),
 	T = n(273514),
 	g = n(995712),
 	S = n(234937),
@@ -47,18 +47,7 @@ function G(e, t) {
 	});
 }
 t.Z = (e) => {
-	let {
-			node: t,
-			reportType: n,
-			reportSubType: k,
-			history: B,
-			onSelectChild: F,
-			onModalClose: V,
-			onSubmit: H,
-			multiSelect: Z,
-			reportId: Y,
-			textInput: j
-		} = e,
+	let { node: t, reportType: n, reportSubType: k, history: B, onSelectChild: F, onModalClose: V, onSubmit: H, multiSelect: Z, reportId: Y, textInput: j } = e,
 		W = x(t, 'checkbox'),
 		K = x(t, 'text_line_resource'),
 		z = G(t, 'external_link'),
@@ -141,20 +130,14 @@ t.Z = (e) => {
 				separator: !1,
 				direction: s.Z.Direction.VERTICAL,
 				className: w.header,
-				children: [
-					(0, r.jsx)(D.Z, { element: x(t, 'success') }),
-					(0, r.jsx)(A.Z, { node: t }),
-					(0, r.jsx)(N.Z, { node: t })
-				]
+				children: [(0, r.jsx)(D.Z, { element: x(t, 'success') }), (0, r.jsx)(A.Z, { node: t }), (0, r.jsx)(N.Z, { node: t })]
 			}),
 			(0, r.jsxs)(a.ModalContent, {
 				className: w.body,
 				children: [
 					null != K ? (0, r.jsx)(L.Z, { element: K }) : null,
 					null != x(t, 'breadcrumbs') && (0, r.jsx)(_.Z, { history: B }),
-					null != x(t, 'message_preview') &&
-						('message' === n.name || 'first_dm' === n.name) &&
-						(0, r.jsx)(O.Z, { message: n.record }),
+					null != x(t, 'message_preview') && ('message' === n.name || 'first_dm' === n.name) && (0, r.jsx)(O.Z, { message: n.record }),
 					null != x(t, 'user_preview') && 'user' === n.name ? (0, r.jsx)(b.Z, { user: n.record }) : null,
 					(function (e) {
 						let { elements: t } = e;
@@ -198,15 +181,9 @@ t.Z = (e) => {
 							channelId: n.record.channel_id
 						}),
 					null != x(t, 'channel_preview') && 'stage_channel' === n.name && (0, r.jsx)(y.Z, { stageInstance: n.record }),
-					null != x(t, 'guild_scheduled_event_preview') &&
-						'guild_scheduled_event' === n.name &&
-						(0, r.jsx)(S.Z, { event: n.record }),
-					null != x(t, 'guild_directory_entry_preview') &&
-						'guild_directory_entry' === n.name &&
-						(0, r.jsx)(T.Z, { entry: n.record }),
-					null != x(t, 'guild_discovery_preview') &&
-						'guild_discovery' === n.name &&
-						(0, r.jsx)(g.Z, { entry: n.record }),
+					null != x(t, 'guild_scheduled_event_preview') && 'guild_scheduled_event' === n.name && (0, r.jsx)(S.Z, { event: n.record }),
+					null != x(t, 'guild_directory_entry_preview') && 'guild_directory_entry' === n.name && (0, r.jsx)(T.Z, { entry: n.record }),
+					null != x(t, 'guild_discovery_preview') && 'guild_discovery' === n.name && (0, r.jsx)(g.Z, { entry: n.record }),
 					null != W &&
 						(0, r.jsx)(R.Z, {
 							element: W,
@@ -227,7 +204,7 @@ t.Z = (e) => {
 					('user_urf' === n.name || 'message_urf' === n.name) &&
 						null != q &&
 						q.length > 0 &&
-						(0, r.jsx)(m.Z, {
+						(0, r.jsx)(I.Z, {
 							elements: q,
 							onChange: eu,
 							state: ea
@@ -236,7 +213,7 @@ t.Z = (e) => {
 						node: t,
 						onSelectChild: ec
 					}),
-					null != z && z.length > 0 ? (0, r.jsx)(I.Z, { elements: z }) : null,
+					null != z && z.length > 0 ? (0, r.jsx)(m.Z, { elements: z }) : null,
 					(0, r.jsx)(p.Z, {
 						errorMessage: et,
 						onClose: () => {

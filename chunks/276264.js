@@ -18,8 +18,8 @@ var r = n(735250),
 	f = n(33934),
 	h = n(736144),
 	p = n(113434),
-	I = n(918701),
-	m = n(553393),
+	m = n(918701),
+	I = n(553393),
 	T = n(204197),
 	g = n(594174),
 	S = n(709586),
@@ -34,40 +34,7 @@ var r = n(735250),
 let L = (0, A.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
 t.Z = function (e) {
 	var t;
-	let {
-			selected: n = !1,
-			colorString: a,
-			colorRoleName: o,
-			isOwner: A,
-			ownerTooltipText: L,
-			lostPermissionTooltipText: b,
-			isTyping: M = !1,
-			nick: P,
-			user: U,
-			currentUser: w,
-			activities: x,
-			applicationStream: G,
-			status: k,
-			shouldAnimateStatus: B = !1,
-			isMobile: F,
-			premiumSince: V,
-			channel: H,
-			guildId: Z,
-			className: Y,
-			onMouseDown: j,
-			onKeyDown: W,
-			onClick: K,
-			onContextMenu: z,
-			onClickPremiumGuildIcon: q,
-			onFocus: Q,
-			'aria-controls': X,
-			'aria-expanded': $,
-			'aria-posinset': J,
-			'aria-setsize': ee,
-			id: et,
-			tabIndex: en,
-			itemProps: er
-		} = e,
+	let { selected: n = !1, colorString: a, colorRoleName: o, isOwner: A, ownerTooltipText: L, lostPermissionTooltipText: b, isTyping: M = !1, nick: P, user: U, currentUser: w, activities: x, applicationStream: G, status: k, shouldAnimateStatus: B = !1, isMobile: F, premiumSince: V, channel: H, guildId: Z, className: Y, onMouseDown: j, onKeyDown: W, onClick: K, onContextMenu: z, onClickPremiumGuildIcon: q, onFocus: Q, 'aria-controls': X, 'aria-expanded': $, 'aria-posinset': J, 'aria-setsize': ee, id: et, tabIndex: en, itemProps: er } = e,
 		ei = null == U ? void 0 : U.id,
 		ea = N.ZP.useName(U),
 		es = (null === (t = g.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === ei,
@@ -91,12 +58,12 @@ t.Z = function (e) {
 			}),
 			[ei]
 		),
-		[ep, eI] = i.useState(!1);
+		[ep, em] = i.useState(!1);
 	i.useEffect(() => {
-		n && eI(!1);
+		n && em(!1);
 	}, [n]);
-	let em = (0, p.Fr)(x),
-		eT = null != em && !es && n && !ep && (0, I.dl)(em),
+	let eI = (0, p.Fr)(x),
+		eT = null != eI && !es && n && !ep && (0, m.dl)(eI),
 		eg = () => {
 			eu(!0);
 		},
@@ -119,7 +86,7 @@ t.Z = function (e) {
 				hideEmoji: !t,
 				hideTooltip: !0,
 				user: U,
-				hasQuest: null != em && (0, I.dl)(em)
+				hasQuest: null != eI && (0, m.dl)(eI)
 			});
 		},
 		ev = () =>
@@ -219,12 +186,12 @@ t.Z = function (e) {
 			})
 		: (0, r.jsx)(l.Popout, {
 				renderPopout: (e) =>
-					(0, r.jsx)(m.Z, {
-						quest: em,
+					(0, r.jsx)(I.Z, {
+						quest: eI,
 						memberListItemRef: eo,
 						applicationStream: G,
 						...e,
-						closePopout: () => eI(!0)
+						closePopout: () => em(!0)
 					}),
 				position: 'bottom',
 				shouldShow: eT,

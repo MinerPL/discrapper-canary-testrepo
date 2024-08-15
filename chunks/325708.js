@@ -20,11 +20,7 @@ var i,
 	m = n(740492),
 	p = n(36645),
 	_ = n(589958);
-((a = i || (i = {}))[(a.PostSidebar = 0)] = 'PostSidebar'),
-	(a[(a.ThreadSidebar = 1)] = 'ThreadSidebar'),
-	(a[(a.CallChatSidebar = 2)] = 'CallChatSidebar'),
-	(a[(a.MessageRequestSidebar = 3)] = 'MessageRequestSidebar'),
-	(a[(a.HomeSidebar = 4)] = 'HomeSidebar');
+((a = i || (i = {}))[(a.PostSidebar = 0)] = 'PostSidebar'), (a[(a.ThreadSidebar = 1)] = 'ThreadSidebar'), (a[(a.CallChatSidebar = 2)] = 'CallChatSidebar'), (a[(a.MessageRequestSidebar = 3)] = 'MessageRequestSidebar'), (a[(a.HomeSidebar = 4)] = 'HomeSidebar');
 function f(e) {
 	let { resizableNode: t, onResize: n, onResizeEnd: i, maxWidth: a } = e,
 		l = (0, h.Z)({
@@ -57,7 +53,7 @@ function E(e) {
 					return 'homeSidebarWidth';
 			}
 		})(t),
-		[g, C] = l.useState(m.ZP[E]),
+		[C, g] = l.useState(m.ZP[E]),
 		I = l.useCallback(
 			(e) => {
 				d.ZP.updatedUnsyncedSettings({ [E]: e });
@@ -65,7 +61,7 @@ function E(e) {
 			[E]
 		),
 		x = (0, p.W)({ maxWidth: n }),
-		T = (0, c.clamp)(g, p.C, n),
+		T = (0, c.clamp)(C, p.C, n),
 		N = x ? T : T + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
 	l.useEffect(() => {
 		null == i || i(T, x);
@@ -89,7 +85,7 @@ function E(e) {
 							(0, s.jsx)(f, {
 								maxWidth: n,
 								resizableNode: h,
-								onResize: C,
+								onResize: g,
 								onResizeEnd: I
 							}),
 						(0, s.jsx)('div', {

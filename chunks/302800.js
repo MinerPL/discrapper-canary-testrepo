@@ -52,32 +52,14 @@ var s,
 	M = n(428251),
 	x = n(937641),
 	b = n(522892);
-((r = s || (s = {}))[(r.NONE = 0)] = 'NONE'),
-	(r[(r.TOOLTIP = 1)] = 'TOOLTIP'),
-	(r[(r.COACHTIP = 2)] = 'COACHTIP'),
-	(r[(r.COACHTIP_HEADLINE_ONLY = 3)] = 'COACHTIP_HEADLINE_ONLY'),
-	(r[(r.BADGE = 4)] = 'BADGE'),
-	((i = a || (a = {})).NONE = 'NONE'),
-	(i.SHY = 'SHY'),
-	(i.LOFI_VIBES = 'LOFI_VIBES'),
-	(i.GALAXY = 'GALAXY'),
-	(i.RETRO_AND_PIRATES = 'RETRO_AND_PIRATES'),
-	(i.ARCADE = 'ARCADE'),
-	(i.TIDE = 'TIDE'),
-	(i.DARK_FANTASY = 'DARK_FANTASY'),
-	(i.ROBERT = 'ROBERT'),
-	(i.STORM = 'STORM');
+((r = s || (s = {}))[(r.NONE = 0)] = 'NONE'), (r[(r.TOOLTIP = 1)] = 'TOOLTIP'), (r[(r.COACHTIP = 2)] = 'COACHTIP'), (r[(r.COACHTIP_HEADLINE_ONLY = 3)] = 'COACHTIP_HEADLINE_ONLY'), (r[(r.BADGE = 4)] = 'BADGE'), ((i = a || (a = {})).NONE = 'NONE'), (i.SHY = 'SHY'), (i.LOFI_VIBES = 'LOFI_VIBES'), (i.GALAXY = 'GALAXY'), (i.RETRO_AND_PIRATES = 'RETRO_AND_PIRATES'), (i.ARCADE = 'ARCADE'), (i.TIDE = 'TIDE'), (i.DARK_FANTASY = 'DARK_FANTASY'), (i.ROBERT = 'ROBERT'), (i.STORM = 'STORM');
 let O = {
 		[d.z.COLLECTIBLES_SHOP_TIDE_COACHTIP]: {
 			type: 2,
 			title: () => T.Z.Messages.COLLECTIBLES_TIDE_COACHTIP_TITLE,
 			body: () => T.Z.Messages.COLLECTIBLES_TIDE_COACHTIP_DESCRIPTION,
 			imageSrc: h,
-			assetIds: [
-				'a_48b8411feb1e80a69048fc65b3275b75',
-				'a_0830085f29712a6f3a23a123302050b4',
-				'a_949a575b693c81ced8f56a7579d0969f'
-			],
+			assetIds: ['a_48b8411feb1e80a69048fc65b3275b75', 'a_0830085f29712a6f3a23a123302050b4', 'a_949a575b693c81ced8f56a7579d0969f'],
 			entryPointClassName: 'tideButton'
 		},
 		[d.z.COLLECTIBLES_SHOP_DARK_FANTASY_MARKETING]: {
@@ -85,22 +67,14 @@ let O = {
 			title: () => T.Z.Messages.COLLECTIBLES_DARK_FANTASY_COACHTIP_TITLE,
 			body: () => T.Z.Messages.COLLECTIBLES_DARK_FANTASY_COACHTIP_DESCRIPTION,
 			imageSrc: I,
-			assetIds: [
-				'a_ef8d97374ffdbf140df1164be6c69e46',
-				'a_4430a4ee89b7fba456e765db21f38485',
-				'a_1005898c6acf56a9ac5010baf444f6fd'
-			]
+			assetIds: ['a_ef8d97374ffdbf140df1164be6c69e46', 'a_4430a4ee89b7fba456e765db21f38485', 'a_1005898c6acf56a9ac5010baf444f6fd']
 		},
 		[d.z.COLLECTIBLES_SHOP_ROBERT_MARKETING]: {
 			type: 2,
 			title: () => T.Z.Messages.COLLECTIBLES_ROBERT_COACHTIP_TITLE,
 			body: () => T.Z.Messages.COLLECTIBLES_ROBERT_COACHTIP_DESCRIPTION,
 			imageSrc: A,
-			assetIds: [
-				'a_914f20f4984a11b5255f0e42c661fa5b',
-				'a_0f7fa66bc185c858f92a7918ea4dd47a',
-				'a_bba669bfb28f492b64852e00fde4989d'
-			],
+			assetIds: ['a_914f20f4984a11b5255f0e42c661fa5b', 'a_0f7fa66bc185c858f92a7918ea4dd47a', 'a_bba669bfb28f492b64852e00fde4989d'],
 			entryPointIcon: E._,
 			entryPointBackgroundAssets: {
 				srcDark: m,
@@ -116,20 +90,14 @@ let O = {
 			title: () => T.Z.Messages.COLLECTIBLES_STORM_COACHTIP_TITLE,
 			body: () => T.Z.Messages.COLLECTIBLES_STORM_COACHTIP_DESCRIPTION,
 			imageSrc: b,
-			assetIds: [
-				'a_da532f804b47f1681006c2996eb07b2a',
-				'a_b1efe77f379c6c9c6e47e6b6299d5a7d',
-				'a_62cd9d7c0031a7c1eb5ad5cc96992189'
-			],
+			assetIds: ['a_da532f804b47f1681006c2996eb07b2a', 'a_b1efe77f379c6c9c6e47e6b6299d5a7d', 'a_62cd9d7c0031a7c1eb5ad5cc96992189'],
 			entrypointBackgroundStyle: {
 				resting: {
-					light:
-						'linear-gradient(90deg, rgba(211, 211, 211, 0.00) 19.2%, rgba(211, 211, 211, 0.25) 61.36%, rgba(99, 5, 160, 0.50) 101.79%)',
+					light: 'linear-gradient(90deg, rgba(211, 211, 211, 0.00) 19.2%, rgba(211, 211, 211, 0.25) 61.36%, rgba(99, 5, 160, 0.50) 101.79%)',
 					dark: 'linear-gradient(90deg, rgba(0, 0, 0, 0.00) 18.53%, rgba(0, 0, 0, 0.25) 61.03%, rgba(99, 5, 160, 0.50) 101.79%)'
 				},
 				hovered: {
-					light:
-						'linear-gradient(90deg, rgba(211, 211, 211, 0.00) 0%, rgba(211, 211, 211, 0.50) 52.53%, rgba(99, 5, 160, 0.80) 102.9%)',
+					light: 'linear-gradient(90deg, rgba(211, 211, 211, 0.00) 0%, rgba(211, 211, 211, 0.50) 52.53%, rgba(99, 5, 160, 0.80) 102.9%)',
 					dark: 'linear-gradient(90deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.50) 52.64%, #6305A0 103.12%)'
 				}
 			},
@@ -144,11 +112,7 @@ let O = {
 			type: 3,
 			title: () => T.Z.Messages.COLLECTIBLES_DARK_FANTASY_COACHTIP_NEUTRAL_TEXT,
 			imageSrc: I,
-			assetIds: [
-				'a_ef8d97374ffdbf140df1164be6c69e46',
-				'a_4430a4ee89b7fba456e765db21f38485',
-				'a_1005898c6acf56a9ac5010baf444f6fd'
-			]
+			assetIds: ['a_ef8d97374ffdbf140df1164be6c69e46', 'a_4430a4ee89b7fba456e765db21f38485', 'a_1005898c6acf56a9ac5010baf444f6fd']
 		}
 	},
 	v = (e) =>

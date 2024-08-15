@@ -30,14 +30,7 @@ function v(e, t) {
 	if (null == e || null == t) return null;
 	if (e !== x.I_8) return _.Z.getChannel(t);
 	let l = g.ZP.getChannels(e),
-		r =
-			null !==
-				(i =
-					null !== (n = l[g.sH].find((e) => e.channel.id === t)) && void 0 !== n
-						? n
-						: l[g.Zb].find((e) => e.channel.id === t)) && void 0 !== i
-				? i
-				: l[x.d4z.GUILD_CATEGORY].find((e) => e.channel.id === t);
+		r = null !== (i = null !== (n = l[g.sH].find((e) => e.channel.id === t)) && void 0 !== n ? n : l[g.Zb].find((e) => e.channel.id === t)) && void 0 !== i ? i : l[x.d4z.GUILD_CATEGORY].find((e) => e.channel.id === t);
 	return null == r ? void 0 : r.channel;
 }
 function Z(e) {
@@ -67,9 +60,7 @@ function Z(e) {
 								n = _.Z.getChannel(t);
 							if (null == n) return !1;
 							let i = _.Z.getChannel(n.parent_id);
-							return n.type === x.d4z.GUILD_CATEGORY || null == i
-								? C.Z.can(x.Plq.MANAGE_CHANNELS, p)
-								: C.Z.can(x.Plq.MANAGE_CHANNELS, i);
+							return n.type === x.d4z.GUILD_CATEGORY || null == i ? C.Z.can(x.Plq.MANAGE_CHANNELS, p) : C.Z.can(x.Plq.MANAGE_CHANNELS, i);
 						})),
 						u.parent_id !== a.parentId &&
 							g.find((e) => {
@@ -172,8 +163,7 @@ function Z(e) {
 						type: l,
 						channelList: (0, u.Z)(s._categories, s, (e) => {
 							let { channel: t } = e;
-							if (t.type === x.d4z.GUILD_CATEGORY && null != s[t.id] && 0 === s[t.id].length)
-								return a === x.I_8 || (C.Z.can(x.Plq.MANAGE_CHANNELS, t) && C.Z.can(x.Plq.VIEW_CHANNEL, t));
+							if (t.type === x.d4z.GUILD_CATEGORY && null != s[t.id] && 0 === s[t.id].length) return a === x.I_8 || (C.Z.can(x.Plq.MANAGE_CHANNELS, t) && C.Z.can(x.Plq.VIEW_CHANNEL, t));
 							return !p.Z.isCollapsed(t.parent_id);
 						}),
 						guildId: i

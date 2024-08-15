@@ -26,20 +26,7 @@ function o(e, t) {
 r(s, i),
 	(t.DecoderBuffer = s),
 	(s.isDecoderBuffer = function (e) {
-		return (
-			e instanceof s ||
-			('object' == typeof e &&
-				a.isBuffer(e.base) &&
-				'DecoderBuffer' === e.constructor.name &&
-				'number' == typeof e.offset &&
-				'number' == typeof e.length &&
-				'function' == typeof e.save &&
-				'function' == typeof e.restore &&
-				'function' == typeof e.isEmpty &&
-				'function' == typeof e.readUInt8 &&
-				'function' == typeof e.skip &&
-				'function' == typeof e.raw)
-		);
+		return e instanceof s || ('object' == typeof e && a.isBuffer(e.base) && 'DecoderBuffer' === e.constructor.name && 'number' == typeof e.offset && 'number' == typeof e.length && 'function' == typeof e.save && 'function' == typeof e.restore && 'function' == typeof e.isEmpty && 'function' == typeof e.readUInt8 && 'function' == typeof e.skip && 'function' == typeof e.raw);
 	}),
 	(s.prototype.save = function () {
 		return {
@@ -49,45 +36,25 @@ r(s, i),
 	}),
 	(s.prototype.restore = function (e) {
 		let t = new s(this.base);
-		return (
-			(t.offset = e.offset),
-			(t.length = this.offset),
-			(this.offset = e.offset),
-			i.prototype.restore.call(this, e.reporter),
-			t
-		);
+		return (t.offset = e.offset), (t.length = this.offset), (this.offset = e.offset), i.prototype.restore.call(this, e.reporter), t;
 	}),
 	(s.prototype.isEmpty = function () {
 		return this.offset === this.length;
 	}),
 	(s.prototype.readUInt8 = function (e) {
-		return this.offset + 1 <= this.length
-			? this.base.readUInt8(this.offset++, !0)
-			: this.error(e || 'DecoderBuffer overrun');
+		return this.offset + 1 <= this.length ? this.base.readUInt8(this.offset++, !0) : this.error(e || 'DecoderBuffer overrun');
 	}),
 	(s.prototype.skip = function (e, t) {
 		if (!(this.offset + e <= this.length)) return this.error(t || 'DecoderBuffer overrun');
 		let n = new s(this.base);
-		return (
-			(n._reporterState = this._reporterState),
-			(n.offset = this.offset),
-			(n.length = this.offset + e),
-			(this.offset += e),
-			n
-		);
+		return (n._reporterState = this._reporterState), (n.offset = this.offset), (n.length = this.offset + e), (this.offset += e), n;
 	}),
 	(s.prototype.raw = function (e) {
 		return this.base.slice(e ? e.offset : this.offset, this.length);
 	}),
 	(t.EncoderBuffer = o),
 	(o.isEncoderBuffer = function (e) {
-		return (
-			e instanceof o ||
-			('object' == typeof e &&
-				'EncoderBuffer' === e.constructor.name &&
-				'number' == typeof e.length &&
-				'function' == typeof e.join)
-		);
+		return e instanceof o || ('object' == typeof e && 'EncoderBuffer' === e.constructor.name && 'number' == typeof e.length && 'function' == typeof e.join);
 	}),
 	(o.prototype.join = function (e, t) {
 		return (!e && (e = a.alloc(this.length)), !t && (t = 0), 0 === this.length)
@@ -96,11 +63,6 @@ r(s, i),
 					? this.value.forEach(function (n) {
 							n.join(e, t), (t += n.length);
 						})
-					: ('number' == typeof this.value
-							? (e[t] = this.value)
-							: 'string' == typeof this.value
-								? e.write(this.value, t)
-								: a.isBuffer(this.value) && this.value.copy(e, t),
-						(t += this.length)),
+					: ('number' == typeof this.value ? (e[t] = this.value) : 'string' == typeof this.value ? e.write(this.value, t) : a.isBuffer(this.value) && this.value.copy(e, t), (t += this.length)),
 				e);
 	});

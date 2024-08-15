@@ -50,20 +50,14 @@ function m(e) {
 					children: [
 						(0, i.jsx)(l.Text, {
 							variant: 'text-md/normal',
-							children:
-								m === _.c2C.AGREEMENTS ? E.Z.Messages.TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION.format() : null
+							children: m === _.c2C.AGREEMENTS ? E.Z.Messages.TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION.format() : null
 						}),
 						(0, i.jsxs)('div', {
 							className: h.container,
 							children: [
 								(0, i.jsxs)('ul', {
 									className: h.links,
-									children: [
-										(0, i.jsx)('li', { children: E.Z.Messages.TERMS_OF_SERVICE.format({ url: _.EYA.TERMS }) }),
-										(0, i.jsx)('li', { children: E.Z.Messages.PAID_SERVICES_TERMS.format({ url: _.EYA.PAID_TERMS }) }),
-										(0, i.jsx)('li', { children: E.Z.Messages.PRIVACY_POLICY.format({ url: _.EYA.PRIVACY }) }),
-										(0, i.jsx)('li', { children: E.Z.Messages.COMMUNITY_GUIDELINES.format({ url: _.EYA.GUIDELINES }) })
-									]
+									children: [(0, i.jsx)('li', { children: E.Z.Messages.TERMS_OF_SERVICE.format({ url: _.EYA.TERMS }) }), (0, i.jsx)('li', { children: E.Z.Messages.PAID_SERVICES_TERMS.format({ url: _.EYA.PAID_TERMS }) }), (0, i.jsx)('li', { children: E.Z.Messages.PRIVACY_POLICY.format({ url: _.EYA.PRIVACY }) }), (0, i.jsx)('li', { children: E.Z.Messages.COMMUNITY_GUIDELINES.format({ url: _.EYA.GUIDELINES }) })]
 								}),
 								(0, i.jsx)('img', {
 									className: h.image,

@@ -9,15 +9,7 @@ var a = t(735250),
 	d = t(689938),
 	u = t(944455);
 n.Z = r.memo(function (e) {
-	let {
-			renderHeader: n,
-			children: t,
-			isExpanded: i,
-			isStuck: m,
-			onExpand: _,
-			disableAnimation: f,
-			disableBackground: C
-		} = e,
+	let { renderHeader: n, children: t, isExpanded: i, isStuck: m, onExpand: _, disableAnimation: f, disableBackground: C } = e,
 		[h, x] = r.useState(!0),
 		[p, g] = r.useState(!1),
 		{ ref: T, height: E = 0 } = (0, c.Z)(),

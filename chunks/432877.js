@@ -22,10 +22,7 @@ function l(e, t, n) {
 		e
 	);
 }
-((a = r || (r = {}))[(a.MESSAGING = 0)] = 'MESSAGING'),
-	(a[(a.OVERLAYS = 1)] = 'OVERLAYS'),
-	(a[(a.PREMIUM = 2)] = 'PREMIUM'),
-	(a[(a.REPORTING = 3)] = 'REPORTING');
+((a = r || (r = {}))[(a.MESSAGING = 0)] = 'MESSAGING'), (a[(a.OVERLAYS = 1)] = 'OVERLAYS'), (a[(a.PREMIUM = 2)] = 'PREMIUM'), (a[(a.REPORTING = 3)] = 'REPORTING');
 let u = {
 		visual_effect_view_overrides: {
 			label: 'Blur view overrides for designers to test with',
@@ -68,10 +65,7 @@ class d extends (i = s.ZP.DeviceSettingsStore) {
 	initialize(e) {
 		for (var t in u) {
 			var n, r;
-			let i =
-				null !== (r = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) &&
-				void 0 !== r &&
-				r;
+			let i = null !== (r = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== r && r;
 			c[t] = i;
 		}
 	}

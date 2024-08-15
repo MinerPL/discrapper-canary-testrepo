@@ -26,32 +26,15 @@ var l = n(735250),
 function h(e) {
 	var t;
 	let { renderHeader: n, referralTrialOfferId: u, handleClose: h } = e,
-		{
-			selectedSkuId: v,
-			step: I,
-			selectedPlan: y,
-			purchaseState: N,
-			purchaseType: R,
-			selectedSku: C
-		} = (0, p.usePaymentContext)(),
+		{ selectedSkuId: v, step: I, selectedPlan: y, purchaseState: N, purchaseType: R, selectedSku: C } = (0, p.usePaymentContext)(),
 		{ isGift: k, selectedGiftStyle: L, giftRecipient: Z } = (0, T.wD)(),
-		O =
-			k &&
-			(0, m.pO)(Z) &&
-			I === A.h8.CONFIRM &&
-			null != L &&
-			(null == C ? void 0 : C.productLine) !== g.POd.COLLECTIBLES,
+		O = k && (0, m.pO)(Z) && I === A.h8.CONFIRM && null != L && (null == C ? void 0 : C.productLine) !== g.POd.COLLECTIBLES,
 		b = null != n && null != I,
 		w = I !== A.h8.SKU_SELECT && null != v,
 		D = (0, c.N)(u),
 		x = !k && null != D && null != v && S.nG[D.trial_id].skus.includes(v),
 		U = (0, d.Ng)(),
-		G =
-			null == U
-				? void 0
-				: null === (t = U.discount) || void 0 === t
-					? void 0
-					: t.plan_ids.some((e) => S.GP[e].skuId === v),
+		G = null == U ? void 0 : null === (t = U.discount) || void 0 === t ? void 0 : t.plan_ids.some((e) => S.GP[e].skuId === v),
 		Y = !k && null != U && null != v && G,
 		{ enabled: W } = s.ZP.useExperiment({ location: 'PaymentModalHeader' }, { autoTrackExposure: !1 }),
 		F = (0, s.rK)(),

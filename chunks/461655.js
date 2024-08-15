@@ -89,9 +89,7 @@ class I extends r.Z {
 		return this.isGift && Object.values(E.Si).includes(this.skuId);
 	}
 	get isGuildProductPurchase() {
-		return (
-			null != this.sku && (this.sku.productLine === _.POd.GUILD_PRODUCT || o.yE(this.sku.flags, i.l.GUILD_PRODUCT))
-		);
+		return null != this.sku && (this.sku.productLine === _.POd.GUILD_PRODUCT || o.yE(this.sku.flags, i.l.GUILD_PRODUCT));
 	}
 	get isSoftDeletedProduct() {
 		var e;
@@ -101,46 +99,6 @@ class I extends r.Z {
 		return null != this.sku && this.sku.productLine === _.POd.COLLECTIBLES;
 	}
 	constructor(e) {
-		super(),
-			u(this, 'id', void 0),
-			u(this, 'createdAt', void 0),
-			u(this, 'currency', void 0),
-			u(this, 'tax', void 0),
-			u(this, 'taxInclusive', void 0),
-			u(this, 'amount', void 0),
-			u(this, 'amountRefunded', void 0),
-			u(this, 'status', void 0),
-			u(this, 'description', void 0),
-			u(this, 'downloadableInvoice', void 0),
-			u(this, 'downloadableRefundInvoices', void 0),
-			u(this, 'flags', void 0),
-			u(this, 'paymentSource', void 0),
-			u(this, 'paymentGateway', void 0),
-			u(this, 'paymentGatewayPaymentId', void 0),
-			u(this, 'subscription', void 0),
-			u(this, 'skuId', void 0),
-			u(this, 'skuPrice', void 0),
-			u(this, 'sku', void 0),
-			u(this, 'premiumRefundDisqualificationReasons', void 0),
-			(this.id = e.id),
-			(this.amount = e.amount),
-			(this.amountRefunded = e.amountRefunded),
-			(this.createdAt = e.createdAt),
-			(this.currency = e.currency),
-			(this.description = e.description),
-			(this.paymentSource = e.paymentSource),
-			(this.paymentGateway = e.paymentGateway),
-			(this.paymentGatewayPaymentId = e.paymentGatewayPaymentId),
-			(this.status = e.status),
-			(this.tax = e.tax),
-			(this.taxInclusive = e.taxInclusive),
-			(this.subscription = e.subscription),
-			(this.skuId = e.skuId),
-			(this.skuPrice = e.skuPrice),
-			(this.sku = e.sku),
-			(this.flags = e.flags),
-			(this.downloadableInvoice = e.downloadableInvoice),
-			(this.downloadableRefundInvoices = e.downloadableRefundInvoices),
-			(this.premiumRefundDisqualificationReasons = e.premiumRefundDisqualificationReasons);
+		super(), u(this, 'id', void 0), u(this, 'createdAt', void 0), u(this, 'currency', void 0), u(this, 'tax', void 0), u(this, 'taxInclusive', void 0), u(this, 'amount', void 0), u(this, 'amountRefunded', void 0), u(this, 'status', void 0), u(this, 'description', void 0), u(this, 'downloadableInvoice', void 0), u(this, 'downloadableRefundInvoices', void 0), u(this, 'flags', void 0), u(this, 'paymentSource', void 0), u(this, 'paymentGateway', void 0), u(this, 'paymentGatewayPaymentId', void 0), u(this, 'subscription', void 0), u(this, 'skuId', void 0), u(this, 'skuPrice', void 0), u(this, 'sku', void 0), u(this, 'premiumRefundDisqualificationReasons', void 0), (this.id = e.id), (this.amount = e.amount), (this.amountRefunded = e.amountRefunded), (this.createdAt = e.createdAt), (this.currency = e.currency), (this.description = e.description), (this.paymentSource = e.paymentSource), (this.paymentGateway = e.paymentGateway), (this.paymentGatewayPaymentId = e.paymentGatewayPaymentId), (this.status = e.status), (this.tax = e.tax), (this.taxInclusive = e.taxInclusive), (this.subscription = e.subscription), (this.skuId = e.skuId), (this.skuPrice = e.skuPrice), (this.sku = e.sku), (this.flags = e.flags), (this.downloadableInvoice = e.downloadableInvoice), (this.downloadableRefundInvoices = e.downloadableRefundInvoices), (this.premiumRefundDisqualificationReasons = e.premiumRefundDisqualificationReasons);
 	}
 }

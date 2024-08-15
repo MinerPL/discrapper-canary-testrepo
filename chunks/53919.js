@@ -12,15 +12,11 @@ var r = n(762378),
 	f = '[object DataView]',
 	h = u(r),
 	p = u(i),
-	I = u(a),
-	m = u(s),
+	m = u(a),
+	I = u(s),
 	T = u(o),
 	g = l;
-((r && g(new r(new ArrayBuffer(1))) != f) ||
-	(i && g(new i()) != c) ||
-	(a && g(a.resolve()) != d) ||
-	(s && g(new s()) != _) ||
-	(o && g(new o()) != E)) &&
+((r && g(new r(new ArrayBuffer(1))) != f) || (i && g(new i()) != c) || (a && g(a.resolve()) != d) || (s && g(new s()) != _) || (o && g(new o()) != E)) &&
 	(g = function (e) {
 		var t = l(e),
 			n = '[object Object]' == t ? e.constructor : void 0,
@@ -31,9 +27,9 @@ var r = n(762378),
 					return f;
 				case p:
 					return c;
-				case I:
-					return d;
 				case m:
+					return d;
+				case I:
 					return _;
 				case T:
 					return E;

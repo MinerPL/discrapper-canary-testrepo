@@ -18,23 +18,7 @@ let o = Object.freeze({
 	}
 });
 function l(e) {
-	let {
-			sections: t,
-			columns: n,
-			getItemKey: l,
-			getItemHeight: u,
-			getSectionHeight: c,
-			chunkSize: d = 250,
-			getScrollerState: _,
-			maxBufferWidth: E,
-			itemGutter: f,
-			removeEdgeItemGutters: h,
-			sectionGutter: p,
-			padding: I,
-			paddingVertical: m,
-			paddingHorizontal: T,
-			dir: g
-		} = e,
+	let { sections: t, columns: n, getItemKey: l, getItemHeight: u, getSectionHeight: c, chunkSize: d = 250, getScrollerState: _, maxBufferWidth: E, itemGutter: f, removeEdgeItemGutters: h, sectionGutter: p, padding: m, paddingVertical: I, paddingHorizontal: T, dir: g } = e,
 		S = (0, a.Z)(),
 		A = (0, r.useRef)(o),
 		[N] = (0, r.useState)(() => new i.ZP()),
@@ -66,15 +50,15 @@ function l(e) {
 							itemGutter: f,
 							removeEdgeItemGutters: h,
 							sectionGutter: p,
-							padding: I,
-							paddingVertical: m,
+							padding: m,
+							paddingVertical: I,
 							paddingHorizontal: T,
 							marginLeft: R / 2,
 							dir: g
 						}),
 						N.computeVisibleSections(Math.max(0, y * d), D * d),
 						N.getState()),
-			[C, N, t, n, l, u, c, y, D, d, f, h, p, I, m, T, O, g]
+			[C, N, t, n, l, u, c, y, D, d, f, h, p, m, I, T, O, g]
 		)),
 		{
 			...A.current,

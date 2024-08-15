@@ -214,8 +214,7 @@ function x(e) {
 		N = (0, L.e7)([o.Z], () => o.Z.roleStyle),
 		l = Z.Z.getHighestRole(_),
 		S = g.ZP.getMember(_.id, E.id),
-		U = (e) =>
-			(0, i.Gy)(_.id, e.id) && !e.managed && Z.Z.isRoleHigher(_, l, e) && (null == S || -1 === S.roles.indexOf(e.id));
+		U = (e) => (0, i.Gy)(_.id, e.id) && !e.managed && Z.Z.isRoleHigher(_, l, e) && (null == S || -1 === S.roles.indexOf(e.id));
 	return (0, s.jsx)(D.Popout, {
 		renderPopout: (e) => {
 			let { closePopout: E } = e;
@@ -249,25 +248,13 @@ function x(e) {
 }
 function z(e) {
 	let _;
-	let {
-			user: E,
-			guild: I,
-			userRoles: t,
-			wrap: l = !0,
-			width: S,
-			className: D,
-			readOnly: U,
-			roleClassName: O,
-			disableBorderColor: o
-		} = e,
+	let { user: E, guild: I, userRoles: t, wrap: l = !0, width: S, className: D, readOnly: U, roleClassName: O, disableBorderColor: o } = e,
 		i = T.useRef({}),
 		M = T.useCallback(
 			(e) => {
 				var _;
 				let s = t.filter((_) => _ !== e.id);
-				(null === (_ = e.tags) || void 0 === _ ? void 0 : _.guild_connections) === null
-					? G.Z.unassignGuildRoleConnection(I.id, e.id)
-					: d.Z.updateMemberRoles(I.id, E.id, s, [], [e.id]);
+				(null === (_ = e.tags) || void 0 === _ ? void 0 : _.guild_connections) === null ? G.Z.unassignGuildRoleConnection(I.id, e.id) : d.Z.updateMemberRoles(I.id, E.id, s, [], [e.id]);
 			},
 			[t, I.id, E.id]
 		),
@@ -327,9 +314,7 @@ function z(e) {
 				{
 					className: O,
 					role: e,
-					canRemove:
-						(z && H.r6(I, V.id, K, e)) ||
-						((null === (_ = e.tags) || void 0 === _ ? void 0 : _.guild_connections) === null && E.id === V.id),
+					canRemove: (z && H.r6(I, V.id, K, e)) || ((null === (_ = e.tags) || void 0 === _ ? void 0 : _.guild_connections) === null && E.id === V.id),
 					onRemove: () => M(e),
 					ref: (_) => {
 						var E, s;

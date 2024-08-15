@@ -8,15 +8,7 @@ var i = n(470079),
 	s = n(308083);
 function r(e) {
 	let { progress: t, updateCurrentStep: n } = e,
-		{
-			currentStep: r,
-			gameApplicationIds: l,
-			playstyle: o,
-			interests: c,
-			description: d,
-			tag: u,
-			verificationForm: _
-		} = t,
+		{ currentStep: r, gameApplicationIds: l, playstyle: o, interests: c, description: d, tag: u, verificationForm: _ } = t,
 		E = i.useMemo(() => null != _ && _.formFields.some((e) => !(0, a.J)(e)), [_]),
 		h = i.useMemo(() => Array.from(c).filter((e) => !s.WZ.has(e) && !s.gh.has(e)), [c]),
 		m = i.useCallback(() => {

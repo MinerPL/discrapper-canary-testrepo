@@ -42,16 +42,7 @@ let c = 'custom-image',
 		});
 	});
 function C(e) {
-	let {
-			presetImages: A,
-			image: t,
-			imageName: r,
-			savedImageName: C,
-			onChange: g,
-			uploadButtonLabel: T = i.Z.Messages.UPLOAD_IMAGE,
-			radioGroupAriaLabel: p = i.Z.Messages.CUSTOM_IMAGE_SELECTOR_RADIO_GROUP_ARIA_LABEL,
-			disabled: h = !1
-		} = e,
+	let { presetImages: A, image: t, imageName: r, savedImageName: C, onChange: g, uploadButtonLabel: T = i.Z.Messages.UPLOAD_IMAGE, radioGroupAriaLabel: p = i.Z.Messages.CUSTOM_IMAGE_SELECTOR_RADIO_GROUP_ARIA_LABEL, disabled: h = !1 } = e,
 		m = r === c,
 		[I, U] = n.useState(m ? t : null),
 		[f, v] = n.useState(null),
@@ -60,10 +51,7 @@ function C(e) {
 	n.useEffect(() => {
 		C !== c && (U(null), v(null));
 	}, [C]);
-	let N =
-			null != f
-				? i.Z.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE_WITH_FILENAME.format({ filename: f })
-				: i.Z.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE,
+	let N = null != f ? i.Z.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE_WITH_FILENAME.format({ filename: f }) : i.Z.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE,
 		D = (0, o.useRadioGroup)({
 			orientation: 'horizontal',
 			isDisabled: h
@@ -128,9 +116,7 @@ function C(e) {
 										...e,
 										className: d.customImageAction,
 										onClick: O,
-										'aria-label': i.Z.Messages.CUSTOM_IMAGE_SELECTOR_EDIT_CUSTOM_IMAGE_ARIA_LABEL.format({
-											filename: f
-										}),
+										'aria-label': i.Z.Messages.CUSTOM_IMAGE_SELECTOR_EDIT_CUSTOM_IMAGE_ARIA_LABEL.format({ filename: f }),
 										children: (0, a.jsx)(o.PencilIcon, {
 											size: 'xs',
 											color: 'currentColor',
@@ -146,9 +132,7 @@ function C(e) {
 										...e,
 										className: d.customImageAction,
 										onClick: R,
-										'aria-label': i.Z.Messages.CUSTOM_IMAGE_SELECTOR_DELETE_CUSTOM_IMAGE_ARIA_LABEL.format({
-											filename: f
-										}),
+										'aria-label': i.Z.Messages.CUSTOM_IMAGE_SELECTOR_DELETE_CUSTOM_IMAGE_ARIA_LABEL.format({ filename: f }),
 										children: (0, a.jsx)(o.TrashIcon, {
 											size: 'md',
 											color: 'currentColor',

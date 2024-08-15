@@ -17,8 +17,8 @@ var r = n(735250),
 	f = n(594174),
 	h = n(74538),
 	p = n(697426),
-	I = n(526617),
-	m = n(474936),
+	m = n(526617),
+	I = n(474936),
 	T = n(689938),
 	g = n(517947);
 let S = [8, 8, 8, 8];
@@ -148,10 +148,10 @@ function v(e) {
 	let { soundboardListRef: t, categories: n, shouldUpsellLockedCategories: a, listPadding: s = S, guildId: o } = e,
 		u = i.useRef(null),
 		c = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
-		E = (0, h.I5)(c, m.p9.TIER_2),
+		E = (0, h.I5)(c, I.p9.TIER_2),
 		p = i.useCallback(
 			(e, t, n, i) => {
-				let s = a && (0, I.O)(e.categoryInfo, E, o);
+				let s = a && (0, m.O)(e.categoryInfo, E, o);
 				return (0, r.jsx)(N, {
 					category: e,
 					categoryIndex: t,

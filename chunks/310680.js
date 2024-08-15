@@ -1,11 +1,7 @@
 n.d(t, {
 	Z: function () {
 		return function e(t) {
-			return ['html', 'body', '#document'].indexOf((0, a.Z)(t)) >= 0
-				? t.ownerDocument.body
-				: (0, s.Re)(t) && (0, i.Z)(t)
-					? t
-					: e((0, r.Z)(t));
+			return ['html', 'body', '#document'].indexOf((0, a.Z)(t)) >= 0 ? t.ownerDocument.body : (0, s.Re)(t) && (0, i.Z)(t) ? t : e((0, r.Z)(t));
 		};
 	}
 });

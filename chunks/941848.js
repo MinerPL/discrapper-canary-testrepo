@@ -249,9 +249,7 @@ function M(e) {
 		}, [a]),
 		n.useEffect(() => {
 			var e;
-			0 === s &&
-				(null == l ? void 0 : null === (e = l.current) || void 0 === e ? void 0 : e.clientHeight) != null &&
-				_(l.current.clientHeight - 40);
+			0 === s && (null == l ? void 0 : null === (e = l.current) || void 0 === e ? void 0 : e.clientHeight) != null && _(l.current.clientHeight - 40);
 		}, [s]),
 		(0, t.jsxs)('div', {
 			className: i.container,

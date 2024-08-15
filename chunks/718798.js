@@ -44,16 +44,7 @@ function E(e) {
 				{
 					let n = (function (e) {
 						var t, n, r, i;
-						let a =
-							null === (i = window) || void 0 === i
-								? void 0
-								: null === (r = i.DiscordNative) || void 0 === r
-									? void 0
-									: null === (n = r.app) || void 0 === n
-										? void 0
-										: null === (t = n.getReleaseChannel) || void 0 === t
-											? void 0
-											: t.call(n);
+						let a = null === (i = window) || void 0 === i ? void 0 : null === (r = i.DiscordNative) || void 0 === r ? void 0 : null === (n = r.app) || void 0 === n ? void 0 : null === (t = n.getReleaseChannel) || void 0 === t ? void 0 : t.call(n);
 						return 'canary' === a || 'development' === a ? (0, d.m)(e) : (0, c.y)(e);
 					})(e);
 					if (null == n) return;

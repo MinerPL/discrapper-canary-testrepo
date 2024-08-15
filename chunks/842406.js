@@ -23,10 +23,7 @@ function p(e, t) {
 }
 (t.isArgumentsObject = r), (t.isGeneratorFunction = i), (t.isTypedArray = s);
 t.isPromise = function (e) {
-	return (
-		('undefined' != typeof Promise && e instanceof Promise) ||
-		(null !== e && 'object' == typeof e && 'function' == typeof e.then && 'function' == typeof e.catch)
-	);
+	return ('undefined' != typeof Promise && e instanceof Promise) || (null !== e && 'object' == typeof e && 'function' == typeof e.then && 'function' == typeof e.catch);
 };
 t.isArrayBufferView = function (e) {
 	return 'undefined' != typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : s(e) || v(e);
@@ -61,25 +58,25 @@ t.isFloat64Array = function (e) {
 t.isBigInt64Array = function (e) {
 	return 'BigInt64Array' === a(e);
 };
-function I(e) {
+function m(e) {
 	return '[object Map]' === c(e);
 }
 (t.isBigUint64Array = function (e) {
 	return 'BigUint64Array' === a(e);
 }),
-	(I.working = 'undefined' != typeof Map && I(new Map()));
-function m(e) {
+	(m.working = 'undefined' != typeof Map && m(new Map()));
+function I(e) {
 	return '[object Set]' === c(e);
 }
 (t.isMap = function (e) {
-	return 'undefined' != typeof Map && (I.working ? I(e) : e instanceof Map);
+	return 'undefined' != typeof Map && (m.working ? m(e) : e instanceof Map);
 }),
-	(m.working = 'undefined' != typeof Set && m(new Set()));
+	(I.working = 'undefined' != typeof Set && I(new Set()));
 function T(e) {
 	return '[object WeakMap]' === c(e);
 }
 (t.isSet = function (e) {
-	return 'undefined' != typeof Set && (m.working ? m(e) : e instanceof Set);
+	return 'undefined' != typeof Set && (I.working ? I(e) : e instanceof Set);
 }),
 	(T.working = 'undefined' != typeof WeakMap && T(new WeakMap()));
 function g(e) {
@@ -106,8 +103,7 @@ function v(e) {
 }),
 	(S.working = 'undefined' != typeof ArrayBuffer && S(new ArrayBuffer())),
 	(t.isArrayBuffer = A),
-	(N.working =
-		'undefined' != typeof ArrayBuffer && 'undefined' != typeof DataView && N(new DataView(new ArrayBuffer(1), 0, 1))),
+	(N.working = 'undefined' != typeof ArrayBuffer && 'undefined' != typeof DataView && N(new DataView(new ArrayBuffer(1), 0, 1))),
 	(t.isDataView = v);
 var O = 'undefined' != typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
 function R(e) {

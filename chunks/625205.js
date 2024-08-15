@@ -41,17 +41,13 @@ function m() {
 		(e = (0, n.jsx)(l.FormText, {
 			type: l.FormText.Types.DESCRIPTION,
 			className: C.marginTop8,
-			children: S.Z.Messages.BROWSER_INPUT_DEVICE_WARNING.format({
-				onDownloadClick: () => (0, I.y)('Help Text Input Devices')
-			})
+			children: S.Z.Messages.BROWSER_INPUT_DEVICE_WARNING.format({ onDownloadClick: () => (0, I.y)('Help Text Input Devices') })
 		})),
 		!A &&
 			(s = (0, n.jsx)(l.FormText, {
 				type: l.FormText.Types.DESCRIPTION,
 				className: C.marginTop8,
-				children: S.Z.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({
-					onDownloadClick: () => (0, I.y)('Help Text Output Devices')
-				})
+				children: S.Z.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({ onDownloadClick: () => (0, I.y)('Help Text Output Devices') })
 			}));
 	let R = i()(h).values().first(),
 		x = null != R ? R.disabled : null != e,

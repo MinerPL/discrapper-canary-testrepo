@@ -26,11 +26,7 @@ function T(e) {
 		j = (0, t.e7)([d.Z], () => d.Z.getChannel(L), [L]),
 		M = (0, t.e7)([c.Z], () => c.Z.getGuild(h), [h]),
 		D = (0, _.cS)(C),
-		R = (0, t.e7)(
-			[u.default],
-			() => (null != g.creatorId ? u.default.getUser(g.creatorId) : u.default.getCurrentUser()),
-			[g.creatorId]
-		),
+		R = (0, t.e7)([u.default], () => (null != g.creatorId ? u.default.getUser(g.creatorId) : u.default.getCurrentUser()), [g.creatorId]),
 		p = (0, t.e7)([o.Z], () => o.Z.isLurking(h), [h]),
 		V = (0, r.KS)(j, M);
 	return (0, s.jsxs)('div', {
@@ -44,9 +40,7 @@ function T(e) {
 				creator: R,
 				name: A,
 				description: f,
-				imageSource:
-					((l = (0, E.Gb)(g, h, v)),
-					null == (T = Z) && null == l.image ? null : null != T && /^data:/.test(T) ? T : (0, I.Z)(l)),
+				imageSource: ((l = (0, E.Gb)(g, h, v)), null == (T = Z) && null == l.image ? null : null != T && /^data:/.test(T) ? T : (0, I.Z)(l)),
 				isActive: !1,
 				isUserLurking: p,
 				speakers: [],

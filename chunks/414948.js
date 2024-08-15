@@ -21,7 +21,7 @@ n.d(t, {
 		return T;
 	},
 	yU: function () {
-		return I;
+		return m;
 	},
 	zL: function () {
 		return _;
@@ -38,12 +38,7 @@ function o(...e) {
 		for (let e in r) {
 			let n = t[e],
 				a = r[e];
-			'function' == typeof n &&
-			'function' == typeof a &&
-			'o' === e[0] &&
-			'n' === e[1] &&
-			e.charCodeAt(2) >= 65 &&
-			90 >= e.charCodeAt(2)
+			'function' == typeof n && 'function' == typeof a && 'o' === e[0] && 'n' === e[1] && e.charCodeAt(2) >= 65 && 90 >= e.charCodeAt(2)
 				? (t[e] = (function (...e) {
 						return (...t) => {
 							for (let n of e) 'function' == typeof n && n(...t);
@@ -77,10 +72,7 @@ let u = new Set(['id']),
 function _(e, t = {}) {
 	let { labelable: n, propNames: r } = t,
 		i = {};
-	for (let t in e)
-		Object.prototype.hasOwnProperty.call(e, t) &&
-			(u.has(t) || (n && c.has(t)) || (null == r ? void 0 : r.has(t)) || d.test(t)) &&
-			(i[t] = e[t]);
+	for (let t in e) Object.prototype.hasOwnProperty.call(e, t) && (u.has(t) || (n && c.has(t)) || (null == r ? void 0 : r.has(t)) || d.test(t)) && (i[t] = e[t]);
 	return i;
 }
 let E = new Map(),
@@ -89,20 +81,14 @@ function h() {
 	if ('undefined' == typeof window) return;
 	let e = (t) => {
 		let n = E.get(t.target);
-		if (
-			n &&
-			(n.delete(t.propertyName),
-			0 === n.size && (t.target.removeEventListener('transitioncancel', e), E.delete(t.target)),
-			0 === E.size)
-		) {
+		if (n && (n.delete(t.propertyName), 0 === n.size && (t.target.removeEventListener('transitioncancel', e), E.delete(t.target)), 0 === E.size)) {
 			for (let e of f) e();
 			f.clear();
 		}
 	};
 	document.body.addEventListener('transitionrun', (t) => {
 		let n = E.get(t.target);
-		!n && ((n = new Set()), E.set(t.target, n), t.target.addEventListener('transitioncancel', e)),
-			n.add(t.propertyName);
+		!n && ((n = new Set()), E.set(t.target, n), t.target.addEventListener('transitioncancel', e)), n.add(t.propertyName);
 	}),
 		document.body.addEventListener('transitionend', e);
 }
@@ -120,9 +106,8 @@ function p(e) {
 		[e]
 	);
 }
-'undefined' != typeof document &&
-	('loading' !== document.readyState ? h() : document.addEventListener('DOMContentLoaded', h));
-function I(e) {
+'undefined' != typeof document && ('loading' !== document.readyState ? h() : document.addEventListener('DOMContentLoaded', h));
+function m(e) {
 	let { ref: t, onResize: n } = e;
 	(0, r.useEffect)(() => {
 		let e = null == t ? void 0 : t.current;
@@ -148,7 +133,7 @@ function I(e) {
 		}
 	}, [n, t]);
 }
-let m = 'undefined' != typeof document && window.visualViewport;
+let I = 'undefined' != typeof document && window.visualViewport;
 function T() {
 	let [e, t] = (0, r.useState)(() => g());
 	return (
@@ -160,9 +145,9 @@ function T() {
 				});
 			};
 			return (
-				m ? m.addEventListener('resize', e) : window.addEventListener('resize', e),
+				I ? I.addEventListener('resize', e) : window.addEventListener('resize', e),
 				() => {
-					m ? m.removeEventListener('resize', e) : window.removeEventListener('resize', e);
+					I ? I.removeEventListener('resize', e) : window.removeEventListener('resize', e);
 				}
 			);
 		}, []),
@@ -171,28 +156,17 @@ function T() {
 }
 function g() {
 	return {
-		width: (null == m ? void 0 : m.width) || window.innerWidth,
-		height: (null == m ? void 0 : m.height) || window.innerHeight
+		width: (null == I ? void 0 : I.width) || window.innerWidth,
+		height: (null == I ? void 0 : I.height) || window.innerHeight
 	};
 }
 function S(e) {
 	var t;
-	return (
-		'undefined' != typeof window &&
-		null != window.navigator &&
-		((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.brands.some((t) => e.test(t.brand))) ||
-			e.test(window.navigator.userAgent))
-	);
+	return 'undefined' != typeof window && null != window.navigator && ((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.brands.some((t) => e.test(t.brand))) || e.test(window.navigator.userAgent));
 }
 function A(e) {
 	var t;
-	return (
-		'undefined' != typeof window &&
-		null != window.navigator &&
-		e.test(
-			(null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.platform) || window.navigator.platform
-		)
-	);
+	return 'undefined' != typeof window && null != window.navigator && e.test((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.platform) || window.navigator.platform);
 }
 function N() {
 	return A(/^iPhone/i) || A(/^iPad/i) || (A(/^Mac/i) && navigator.maxTouchPoints > 1);

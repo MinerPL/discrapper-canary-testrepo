@@ -123,9 +123,7 @@ function A(e) {
 							(0, s.jsx)(c.Text, {
 								color: 'header-secondary',
 								variant: 'text-sm/normal',
-								children: f.Z.Messages.FORM_HELP_EXPLICIT_CONTENT_FILTER_V2.format({
-									helpdeskArticle: S.Z.getArticleURL(R.BhN.SAFE_DIRECT_MESSAGING)
-								})
+								children: f.Z.Messages.FORM_HELP_EXPLICIT_CONTENT_FILTER_V2.format({ helpdeskArticle: S.Z.getArticleURL(R.BhN.SAFE_DIRECT_MESSAGING) })
 							})
 						]
 					}),
@@ -144,12 +142,7 @@ function A(e) {
 async function M(e, t) {
 	if (e.hasFeature(R.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) === t) return;
 	let n = e.features;
-	return (
-		t
-			? n.add(R.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)
-			: n.delete(R.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
-		await g.Z.saveGuild(e.id, { features: n })
-	);
+	return t ? n.add(R.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) : n.delete(R.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY), await g.Z.saveGuild(e.id, { features: n });
 }
 function D(e) {
 	let { guild: t } = e,
@@ -182,10 +175,7 @@ function D(e) {
 										(0, s.jsxs)(c.Text, {
 											color: 'header-primary',
 											variant: 'text-md/semibold',
-											children: [
-												f.Z.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE,
-												(0, s.jsx)(_.Z, { className: L.betaTag })
-											]
+											children: [f.Z.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE, (0, s.jsx)(_.Z, { className: L.betaTag })]
 										}),
 										(0, s.jsx)(c.Text, {
 											color: 'header-secondary',

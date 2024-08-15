@@ -66,8 +66,8 @@ f = Object.keys(f).reduce(function (e, t) {
 	);
 }, f);
 var p = /^(matrix|translate|scale|rotate|skew)/,
-	I = /^(translate)/,
-	m = /^(rotate|skew)/,
+	m = /^(translate)/,
+	I = /^(rotate|skew)/,
 	T = function (e, t) {
 		return c.is.num(e) && 0 !== e ? e + t : e;
 	},
@@ -111,7 +111,7 @@ var p = /^(matrix|translate|scale|rotate|skew)/,
 							});
 					else if (p.test(t)) {
 						if ((delete s[t], c.is.und(e))) return;
-						var n = I.test(t) ? 'px' : m.test(t) ? 'deg' : '';
+						var n = m.test(t) ? 'px' : I.test(t) ? 'deg' : '';
 						o.push(c.toArray(e)),
 							l.push(
 								'rotate3d' === t
@@ -147,9 +147,7 @@ var p = /^(matrix|translate|scale|rotate|skew)/,
 	A = (function (e) {
 		function t(t, n) {
 			var r;
-			return (
-				((r = e.call(this) || this).inputs = t), (r.transforms = n), (r._value = null), (r._children = new Set()), r
-			);
+			return ((r = e.call(this) || this).inputs = t), (r.transforms = n), (r._value = null), (r._children = new Set()), r;
 		}
 		d(t, e);
 		var n = t.prototype;
@@ -208,189 +206,46 @@ a.Globals.assign({
 	createStringInterpolator: o.createStringInterpolator,
 	batchedUpdates: s.unstable_batchedUpdates
 });
-var N = u.createHost(
-	[
-		'a',
-		'abbr',
-		'address',
-		'area',
-		'article',
-		'aside',
-		'audio',
-		'b',
-		'base',
-		'bdi',
-		'bdo',
-		'big',
-		'blockquote',
-		'body',
-		'br',
-		'button',
-		'canvas',
-		'caption',
-		'cite',
-		'code',
-		'col',
-		'colgroup',
-		'data',
-		'datalist',
-		'dd',
-		'del',
-		'details',
-		'dfn',
-		'dialog',
-		'div',
-		'dl',
-		'dt',
-		'em',
-		'embed',
-		'fieldset',
-		'figcaption',
-		'figure',
-		'footer',
-		'form',
-		'h1',
-		'h2',
-		'h3',
-		'h4',
-		'h5',
-		'h6',
-		'head',
-		'header',
-		'hgroup',
-		'hr',
-		'html',
-		'i',
-		'iframe',
-		'img',
-		'input',
-		'ins',
-		'kbd',
-		'keygen',
-		'label',
-		'legend',
-		'li',
-		'link',
-		'main',
-		'map',
-		'mark',
-		'menu',
-		'menuitem',
-		'meta',
-		'meter',
-		'nav',
-		'noscript',
-		'object',
-		'ol',
-		'optgroup',
-		'option',
-		'output',
-		'p',
-		'param',
-		'picture',
-		'pre',
-		'progress',
-		'q',
-		'rp',
-		'rt',
-		'ruby',
-		's',
-		'samp',
-		'script',
-		'section',
-		'select',
-		'small',
-		'source',
-		'span',
-		'strong',
-		'style',
-		'sub',
-		'summary',
-		'sup',
-		'table',
-		'tbody',
-		'td',
-		'textarea',
-		'tfoot',
-		'th',
-		'thead',
-		'time',
-		'title',
-		'tr',
-		'track',
-		'u',
-		'ul',
-		'var',
-		'video',
-		'wbr',
-		'circle',
-		'clipPath',
-		'defs',
-		'ellipse',
-		'foreignObject',
-		'g',
-		'image',
-		'line',
-		'linearGradient',
-		'mask',
-		'path',
-		'pattern',
-		'polygon',
-		'polyline',
-		'radialGradient',
-		'rect',
-		'stop',
-		'svg',
-		'text',
-		'tspan'
-	],
-	{
-		applyAnimatedValues: function (e, t) {
-			if (!e.nodeType || !e.setAttribute) return !1;
-			var n = 'filter' === e.nodeName || (e.parentNode && 'filter' === e.parentNode.nodeName),
-				r = t.style,
-				a = t.children,
-				s = t.scrollTop,
-				o = t.scrollLeft,
-				l = i(t, ['style', 'children', 'scrollTop', 'scrollLeft']),
-				u = Object.values(l),
-				d = Object.keys(l).map(function (t) {
-					return n || e.hasAttribute(t)
-						? t
-						: E[t] ||
-								(E[t] = t.replace(/([A-Z])/g, function (e) {
-									return '-' + e.toLowerCase();
-								}));
-				});
-			c.Globals.frameLoop.onWrite(function () {
-				for (var t in (void 0 !== a && (e.textContent = a), r))
-					if (r.hasOwnProperty(t)) {
-						var n,
-							i,
-							l =
-								((n = t),
-								null == (i = r[t]) || 'boolean' == typeof i || '' === i
-									? ''
-									: 'number' != typeof i || 0 === i || _.test(n) || (f.hasOwnProperty(n) && f[n])
-										? ('' + i).trim()
-										: i + 'px');
-						'float' === t ? (t = 'cssFloat') : _.test(t) ? e.style.setProperty(t, l) : (e.style[t] = l);
-					}
-				d.forEach(function (t, n) {
-					e.setAttribute(t, u[n]);
-				}),
-					void 0 !== s && (e.scrollTop = s),
-					void 0 !== o && (e.scrollLeft = o);
+var N = u.createHost(['a', 'abbr', 'address', 'area', 'article', 'aside', 'audio', 'b', 'base', 'bdi', 'bdo', 'big', 'blockquote', 'body', 'br', 'button', 'canvas', 'caption', 'cite', 'code', 'col', 'colgroup', 'data', 'datalist', 'dd', 'del', 'details', 'dfn', 'dialog', 'div', 'dl', 'dt', 'em', 'embed', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'head', 'header', 'hgroup', 'hr', 'html', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'keygen', 'label', 'legend', 'li', 'link', 'main', 'map', 'mark', 'menu', 'menuitem', 'meta', 'meter', 'nav', 'noscript', 'object', 'ol', 'optgroup', 'option', 'output', 'p', 'param', 'picture', 'pre', 'progress', 'q', 'rp', 'rt', 'ruby', 's', 'samp', 'script', 'section', 'select', 'small', 'source', 'span', 'strong', 'style', 'sub', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'title', 'tr', 'track', 'u', 'ul', 'var', 'video', 'wbr', 'circle', 'clipPath', 'defs', 'ellipse', 'foreignObject', 'g', 'image', 'line', 'linearGradient', 'mask', 'path', 'pattern', 'polygon', 'polyline', 'radialGradient', 'rect', 'stop', 'svg', 'text', 'tspan'], {
+	applyAnimatedValues: function (e, t) {
+		if (!e.nodeType || !e.setAttribute) return !1;
+		var n = 'filter' === e.nodeName || (e.parentNode && 'filter' === e.parentNode.nodeName),
+			r = t.style,
+			a = t.children,
+			s = t.scrollTop,
+			o = t.scrollLeft,
+			l = i(t, ['style', 'children', 'scrollTop', 'scrollLeft']),
+			u = Object.values(l),
+			d = Object.keys(l).map(function (t) {
+				return n || e.hasAttribute(t)
+					? t
+					: E[t] ||
+							(E[t] = t.replace(/([A-Z])/g, function (e) {
+								return '-' + e.toLowerCase();
+							}));
 			});
-		},
-		createAnimatedStyle: function (e) {
-			return new S(e);
-		},
-		getComponentProps: function (e) {
-			return e.scrollTop, e.scrollLeft, i(e, ['scrollTop', 'scrollLeft']);
-		}
+		c.Globals.frameLoop.onWrite(function () {
+			for (var t in (void 0 !== a && (e.textContent = a), r))
+				if (r.hasOwnProperty(t)) {
+					var n,
+						i,
+						l = ((n = t), null == (i = r[t]) || 'boolean' == typeof i || '' === i ? '' : 'number' != typeof i || 0 === i || _.test(n) || (f.hasOwnProperty(n) && f[n]) ? ('' + i).trim() : i + 'px');
+					'float' === t ? (t = 'cssFloat') : _.test(t) ? e.style.setProperty(t, l) : (e.style[t] = l);
+				}
+			d.forEach(function (t, n) {
+				e.setAttribute(t, u[n]);
+			}),
+				void 0 !== s && (e.scrollTop = s),
+				void 0 !== o && (e.scrollLeft = o);
+		});
+	},
+	createAnimatedStyle: function (e) {
+		return new S(e);
+	},
+	getComponentProps: function (e) {
+		return e.scrollTop, e.scrollLeft, i(e, ['scrollTop', 'scrollLeft']);
 	}
-).animated;
+}).animated;
 Object.keys(a).forEach(function (e) {
 	'default' !== e &&
 		Object.defineProperty(t, e, {

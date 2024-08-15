@@ -61,8 +61,8 @@ var E = n(703558),
 	f = n(895924),
 	h = n(531010),
 	p = n(689079),
-	I = n(981631),
-	m = n(231338);
+	m = n(981631),
+	I = n(231338);
 function T(e) {
 	var t, n, r;
 	let i,
@@ -163,11 +163,7 @@ function g(e, t) {
 								useKeyedPermissions: l
 							})
 						];
-				} else if (
-					a.type !== c.jw.SUB_COMMAND &&
-					a.type !== c.jw.SUB_COMMAND_GROUP &&
-					(null == a.options || 0 === a.options.length)
-				)
+				} else if (a.type !== c.jw.SUB_COMMAND && a.type !== c.jw.SUB_COMMAND_GROUP && (null == a.options || 0 === a.options.length))
 					return [
 						T({
 							rootCommand: i,
@@ -238,7 +234,7 @@ function g(e, t) {
 	);
 }
 function S(e) {
-	return I.Xyh.test(e.trim());
+	return m.Xyh.test(e.trim());
 }
 function A(e, t, n, r) {
 	let i = [];
@@ -269,15 +265,8 @@ function v(e) {
 }
 let O = u.vB(0);
 function R(e) {
-	let {
-		PermissionStore: t,
-		guild: n,
-		selfMember: r,
-		applicationLevelPermissions: i,
-		commandLevelPermissions: a,
-		defaultMemberPermissions: s
-	} = e;
-	if (n.ownerId === r.userId || t.can(m.Pl.ADMINISTRATOR, n)) return !0;
+	let { PermissionStore: t, guild: n, selfMember: r, applicationLevelPermissions: i, commandLevelPermissions: a, defaultMemberPermissions: s } = e;
+	if (n.ownerId === r.userId || t.can(I.Pl.ADMINISTRATOR, n)) return !0;
 	let o = n.id;
 	if (null != a) {
 		let e = C(r, o, a);
@@ -307,23 +296,14 @@ function y(e) {
 	}
 }
 function D(e) {
-	return null == e
-		? void 0
-		: e.id === p.bi.BUILT_IN
-			? f.ub.BUILT_IN
-			: e.id === p.bi.FRECENCY
-				? f.ub.FRECENCY
-				: f.ub.APP;
+	return null == e ? void 0 : e.id === p.bi.BUILT_IN ? f.ub.BUILT_IN : e.id === p.bi.FRECENCY ? f.ub.FRECENCY : f.ub.APP;
 }
 function L(e, t) {
 	var n, r;
 	return {
 		type: f.Qi.APPLICATION,
 		id: e.id,
-		name:
-			null !== (r = null == e ? void 0 : null === (n = e.bot) || void 0 === n ? void 0 : n.username) && void 0 !== r
-				? r
-				: e.name,
+		name: null !== (r = null == e ? void 0 : null === (n = e.bot) || void 0 === n ? void 0 : n.username) && void 0 !== r ? r : e.name,
 		icon: e.icon,
 		application: e,
 		isUserApp: null != t && t
@@ -357,17 +337,8 @@ function M(e, t, n) {
 }
 function P(e) {
 	var t, n;
-	let {
-		command: r,
-		location: i,
-		triggerSection: a,
-		queryLength: s,
-		sectionName: o,
-		query: l,
-		searchResultsPosition: u,
-		source: c
-	} = e;
-	(0, d.yw)(I.rMx.APPLICATION_COMMAND_SELECTED, {
+	let { command: r, location: i, triggerSection: a, queryLength: s, sectionName: o, query: l, searchResultsPosition: u, source: c } = e;
+	(0, d.yw)(m.rMx.APPLICATION_COMMAND_SELECTED, {
 		command_id: null !== (n = null === (t = r.rootCommand) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : r.id,
 		application_id: r.applicationId,
 		location: i,

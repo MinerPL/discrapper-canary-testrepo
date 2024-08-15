@@ -132,28 +132,9 @@ function _(e) {
 	});
 }
 let C = (e) => null == e || e,
-	N = (e, n) =>
-		C(e)
-			? u.Z.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE
-			: C(n)
-				? u.Z.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE_WITHOUT_PERMISSION
-				: u.Z.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE_PRIVATE_CHANNEL;
+	N = (e, n) => (C(e) ? u.Z.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE : C(n) ? u.Z.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE_WITHOUT_PERMISSION : u.Z.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE_PRIVATE_CHANNEL);
 function h(e) {
-	let {
-			isActive: n,
-			isUserLurking: t,
-			rsvped: s,
-			canInvite: o,
-			isChannelPublic: C = !0,
-			entityType: N,
-			onContextMenu: h,
-			onJoinClick: m,
-			onRsvpClick: I,
-			onStartClick: g,
-			onInviteClick: L,
-			onEndClick: x,
-			isJoined: M = !1
-		} = e,
+	let { isActive: n, isUserLurking: t, rsvped: s, canInvite: o, isChannelPublic: C = !0, entityType: N, onContextMenu: h, onJoinClick: m, onRsvpClick: I, onStartClick: g, onInviteClick: L, onEndClick: x, isJoined: M = !1 } = e,
 		T = void 0 !== m;
 	return (0, l.jsxs)('div', {
 		className: a.container,
@@ -187,13 +168,7 @@ function h(e) {
 				? (0, l.jsx)(c, {
 						text: (function (e) {
 							let { isJoined: n, canJoin: t, isVoiceChannel: l } = e;
-							return t
-								? n
-									? u.Z.Messages.GO_TO_CHANNEL
-									: l
-										? u.Z.Messages.GUILD_EVENT_JOIN
-										: u.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON
-								: u.Z.Messages.CHANNEL_LOCKED_SHORT;
+							return t ? (n ? u.Z.Messages.GO_TO_CHANNEL : l ? u.Z.Messages.GUILD_EVENT_JOIN : u.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON) : u.Z.Messages.CHANNEL_LOCKED_SHORT;
 						})({
 							isJoined: M,
 							canJoin: T,

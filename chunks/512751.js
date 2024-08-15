@@ -12,10 +12,7 @@ function l(e) {
 	return (
 		n &&
 		(function (e) {
-			return (
-				null != e &&
-				(!!e.isMultiUserDM() || (!!e.isDM() && !e.isSystemDM() && null == e.rawRecipients.find((e) => e.bot)))
-			);
+			return null != e && (!!e.isMultiUserDM() || (!!e.isDM() && !e.isSystemDM() && null == e.rawRecipients.find((e) => e.bot)));
 		})(t)
 	);
 }

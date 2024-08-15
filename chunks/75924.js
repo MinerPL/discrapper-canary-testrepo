@@ -5,9 +5,7 @@ function r(e) {
 					return typeof e;
 				}
 			: function (e) {
-					return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype
-						? 'symbol'
-						: typeof e;
+					return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
 				})(e);
 }
 n.d(t, {
@@ -18,10 +16,7 @@ n.d(t, {
 function i(e, t) {
 	for (var n = 0; n < t.length; n++) {
 		var r = t[n];
-		(r.enumerable = r.enumerable || !1),
-			(r.configurable = !0),
-			'value' in r && (r.writable = !0),
-			Object.defineProperty(e, r.key, r);
+		(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 	}
 }
 function o(e, t, n) {
@@ -60,10 +55,7 @@ var u = (function () {
 						t = this.spec,
 						n = this.monitor,
 						i = null;
-					return null !== (e = i = 'object' === r(t.item) ? t.item : 'function' == typeof t.item ? t.item(n) : {}) &&
-						void 0 !== e
-						? e
-						: null;
+					return null !== (e = i = 'object' === r(t.item) ? t.item : 'function' == typeof t.item ? t.item(n) : {}) && void 0 !== e ? e : null;
 				}
 			},
 			{

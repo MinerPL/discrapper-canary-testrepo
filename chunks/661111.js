@@ -50,9 +50,7 @@ t.Z = {
 		if ((arguments.length > 2 && void 0 !== arguments[2] && arguments[2], null != a.Z.getChangelog(e, t))) return null;
 		let n = l.Vw.DESKTOP;
 		try {
-			let a = await r.tn.get({
-				url: 'https://cdn.discordapp.com/changelogs/'.concat(n, '/').concat(e, '/').concat(t, '.json?').concat(u())
-			});
+			let a = await r.tn.get({ url: 'https://cdn.discordapp.com/changelogs/'.concat(n, '/').concat(e, '/').concat(t, '.json?').concat(u()) });
 			return (
 				i.Z.dispatch({
 					type: 'CHANGE_LOG_FETCH_SUCCESS',

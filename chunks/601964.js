@@ -112,97 +112,22 @@ class d extends r.Z {
 		return this.hasFeature(o.oNc.COMMUNITY);
 	}
 	hasVerificationGate() {
-		return (
-			this.hasFeature(o.oNc.MEMBER_VERIFICATION_GATE_ENABLED) &&
-			(this.hasFeature(o.oNc.COMMUNITY) || this.hasFeature(o.oNc.CLAN))
-		);
+		return this.hasFeature(o.oNc.MEMBER_VERIFICATION_GATE_ENABLED) && (this.hasFeature(o.oNc.COMMUNITY) || this.hasFeature(o.oNc.CLAN));
 	}
 	hasCommunityInfoSubheader() {
 		return this.hasFeature(o.oNc.COMMUNITY) && this.hasFeature(o.oNc.DISCOVERABLE);
 	}
 	canHaveRaidActivityAlerts() {
-		return (
-			(!this.hasFeature(o.oNc.COMMUNITY) && this.hasFeature(o.oNc.NON_COMMUNITY_RAID_ALERTS)) ||
-			(this.hasFeature(o.oNc.COMMUNITY) && !this.hasFeature(o.oNc.RAID_ALERTS_DISABLED))
-		);
+		return (!this.hasFeature(o.oNc.COMMUNITY) && this.hasFeature(o.oNc.NON_COMMUNITY_RAID_ALERTS)) || (this.hasFeature(o.oNc.COMMUNITY) && !this.hasFeature(o.oNc.RAID_ALERTS_DISABLED));
 	}
 	updateJoinedAt(e) {
 		return this.set('joinedAt', 'string' == typeof e ? new Date(e) : e);
 	}
 	constructor(e) {
 		var t, n, r;
-		super(),
-			c(this, 'id', void 0),
-			c(this, 'name', void 0),
-			c(this, 'description', void 0),
-			c(this, 'ownerId', void 0),
-			c(this, 'icon', void 0),
-			c(this, 'splash', void 0),
-			c(this, 'banner', void 0),
-			c(this, 'homeHeader', void 0),
-			c(this, 'preferredLocale', void 0),
-			c(this, 'features', void 0),
-			c(this, 'afkChannelId', void 0),
-			c(this, 'afkTimeout', void 0),
-			c(this, 'systemChannelId', void 0),
-			c(this, 'verificationLevel', void 0),
-			c(this, 'joinedAt', void 0),
-			c(this, 'defaultMessageNotifications', void 0),
-			c(this, 'mfaLevel', void 0),
-			c(this, 'application_id', void 0),
-			c(this, 'explicitContentFilter', void 0),
-			c(this, 'vanityURLCode', void 0),
-			c(this, 'premiumTier', void 0),
-			c(this, 'premiumSubscriberCount', void 0),
-			c(this, 'premiumProgressBarEnabled', void 0),
-			c(this, 'systemChannelFlags', void 0),
-			c(this, 'rulesChannelId', void 0),
-			c(this, 'safetyAlertsChannelId', void 0),
-			c(this, 'discoverySplash', void 0),
-			c(this, 'publicUpdatesChannelId', void 0),
-			c(this, 'maxStageVideoChannelUsers', void 0),
-			c(this, 'maxVideoChannelUsers', void 0),
-			c(this, 'maxMembers', void 0),
-			c(this, 'nsfwLevel', void 0),
-			c(this, 'hubType', void 0),
-			c(this, 'latestOnboardingQuestionId', void 0),
-			c(this, 'clan', void 0);
+		super(), c(this, 'id', void 0), c(this, 'name', void 0), c(this, 'description', void 0), c(this, 'ownerId', void 0), c(this, 'icon', void 0), c(this, 'splash', void 0), c(this, 'banner', void 0), c(this, 'homeHeader', void 0), c(this, 'preferredLocale', void 0), c(this, 'features', void 0), c(this, 'afkChannelId', void 0), c(this, 'afkTimeout', void 0), c(this, 'systemChannelId', void 0), c(this, 'verificationLevel', void 0), c(this, 'joinedAt', void 0), c(this, 'defaultMessageNotifications', void 0), c(this, 'mfaLevel', void 0), c(this, 'application_id', void 0), c(this, 'explicitContentFilter', void 0), c(this, 'vanityURLCode', void 0), c(this, 'premiumTier', void 0), c(this, 'premiumSubscriberCount', void 0), c(this, 'premiumProgressBarEnabled', void 0), c(this, 'systemChannelFlags', void 0), c(this, 'rulesChannelId', void 0), c(this, 'safetyAlertsChannelId', void 0), c(this, 'discoverySplash', void 0), c(this, 'publicUpdatesChannelId', void 0), c(this, 'maxStageVideoChannelUsers', void 0), c(this, 'maxVideoChannelUsers', void 0), c(this, 'maxMembers', void 0), c(this, 'nsfwLevel', void 0), c(this, 'hubType', void 0), c(this, 'latestOnboardingQuestionId', void 0), c(this, 'clan', void 0);
 		let i = e.features instanceof Set ? e.features : new Set(Array.from(e.features || []));
-		(this.id = e.id),
-			(this.name = e.name || ''),
-			(this.description = e.description || null),
-			(this.ownerId = e.ownerId || null),
-			(this.icon = e.icon || null),
-			(this.splash = e.splash || null),
-			(this.banner = e.banner || null),
-			(this.homeHeader = e.homeHeader || null),
-			(this.features = i),
-			(this.preferredLocale = e.preferredLocale || 'en-US'),
-			(this.afkChannelId = e.afkChannelId || null),
-			(this.afkTimeout = e.afkTimeout),
-			(this.systemChannelId = e.systemChannelId || null),
-			(this.verificationLevel = e.verificationLevel || o.sFg.NONE),
-			(this.joinedAt = e.joinedAt instanceof Date ? e.joinedAt : new Date(e.joinedAt)),
-			(this.defaultMessageNotifications = e.defaultMessageNotifications || o.bL.ALL_MESSAGES),
-			(this.mfaLevel = e.mfaLevel || o.BpS.NONE),
-			(this.application_id = e.application_id || null),
-			(this.explicitContentFilter = e.explicitContentFilter || o.lxg.DISABLED),
-			(this.vanityURLCode = e.vanityURLCode || void 0),
-			(this.premiumTier = e.premiumTier || o.Eu4.NONE),
-			(this.premiumSubscriberCount = e.premiumSubscriberCount || 0),
-			(this.premiumProgressBarEnabled = e.premiumProgressBarEnabled || !1),
-			(this.systemChannelFlags = e.systemChannelFlags),
-			(this.discoverySplash = e.discoverySplash || null),
-			(this.rulesChannelId = e.rulesChannelId || null),
-			(this.safetyAlertsChannelId = e.safetyAlertsChannelId || null),
-			(this.publicUpdatesChannelId = e.publicUpdatesChannelId || null),
-			(this.maxStageVideoChannelUsers = e.maxStageVideoChannelUsers || -1),
-			(this.maxVideoChannelUsers = e.maxVideoChannelUsers || -1),
-			(this.maxMembers = e.maxMembers || -1),
-			(this.nsfwLevel = null !== (t = e.nsfwLevel) && void 0 !== t ? t : o.V_K.DEFAULT),
-			(this.hubType = e.hubType),
-			(this.latestOnboardingQuestionId = null !== (n = e.latestOnboardingQuestionId) && void 0 !== n ? n : null),
-			(this.clan = null !== (r = e.clan) && void 0 !== r ? r : null);
+		(this.id = e.id), (this.name = e.name || ''), (this.description = e.description || null), (this.ownerId = e.ownerId || null), (this.icon = e.icon || null), (this.splash = e.splash || null), (this.banner = e.banner || null), (this.homeHeader = e.homeHeader || null), (this.features = i), (this.preferredLocale = e.preferredLocale || 'en-US'), (this.afkChannelId = e.afkChannelId || null), (this.afkTimeout = e.afkTimeout), (this.systemChannelId = e.systemChannelId || null), (this.verificationLevel = e.verificationLevel || o.sFg.NONE), (this.joinedAt = e.joinedAt instanceof Date ? e.joinedAt : new Date(e.joinedAt)), (this.defaultMessageNotifications = e.defaultMessageNotifications || o.bL.ALL_MESSAGES), (this.mfaLevel = e.mfaLevel || o.BpS.NONE), (this.application_id = e.application_id || null), (this.explicitContentFilter = e.explicitContentFilter || o.lxg.DISABLED), (this.vanityURLCode = e.vanityURLCode || void 0), (this.premiumTier = e.premiumTier || o.Eu4.NONE), (this.premiumSubscriberCount = e.premiumSubscriberCount || 0), (this.premiumProgressBarEnabled = e.premiumProgressBarEnabled || !1), (this.systemChannelFlags = e.systemChannelFlags), (this.discoverySplash = e.discoverySplash || null), (this.rulesChannelId = e.rulesChannelId || null), (this.safetyAlertsChannelId = e.safetyAlertsChannelId || null), (this.publicUpdatesChannelId = e.publicUpdatesChannelId || null), (this.maxStageVideoChannelUsers = e.maxStageVideoChannelUsers || -1), (this.maxVideoChannelUsers = e.maxVideoChannelUsers || -1), (this.maxMembers = e.maxMembers || -1), (this.nsfwLevel = null !== (t = e.nsfwLevel) && void 0 !== t ? t : o.V_K.DEFAULT), (this.hubType = e.hubType), (this.latestOnboardingQuestionId = null !== (n = e.latestOnboardingQuestionId) && void 0 !== n ? n : null), (this.clan = null !== (r = e.clan) && void 0 !== r ? r : null);
 	}
 }
 class _ extends d {

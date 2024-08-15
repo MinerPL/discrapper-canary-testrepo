@@ -81,20 +81,14 @@ var l = (0, n.createContext)(),
 							t
 						);
 					}
-					(r = t),
-						(o = e),
-						(r.prototype = Object.create(o.prototype)),
-						(r.prototype.constructor = r),
-						(r.__proto__ = o);
+					(r = t), (o = e), (r.prototype = Object.create(o.prototype)), (r.prototype.constructor = r), (r.__proto__ = o);
 					var r,
 						o,
 						l = t.prototype;
 					return (
 						(l.getTheme = function (e) {
 							if (this.props.theme !== this.lastTheme || e !== this.lastOuterTheme || !this.cachedTheme) {
-								if (
-									((this.lastOuterTheme = e), (this.lastTheme = this.props.theme), 'function' == typeof this.lastTheme)
-								) {
+								if (((this.lastOuterTheme = e), (this.lastTheme = this.props.theme), 'function' == typeof this.lastTheme)) {
 									var t = this.props.theme;
 									this.cachedTheme = t(e);
 								} else {

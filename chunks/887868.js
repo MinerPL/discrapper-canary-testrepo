@@ -12,9 +12,7 @@ t.exports = function (t) {
 		c = t.getCurrentContent(),
 		l = c.getBlockForKey(s).getLength();
 	if (l <= 1) return t;
-	u === l
-		? ((e = a.set('anchorOffset', u - 1)), (r = a))
-		: (r = (e = a.set('focusOffset', u + 1)).set('anchorOffset', u + 1));
+	u === l ? ((e = a.set('anchorOffset', u - 1)), (r = a)) : (r = (e = a.set('focusOffset', u + 1)).set('anchorOffset', u + 1));
 	var f = o(c, e),
 		p = n.removeRange(c, e, 'backward'),
 		h = p.getSelectionAfter(),

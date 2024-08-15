@@ -49,11 +49,7 @@ function I(e) {
 			var e;
 			return null === (e = a.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application;
 		}),
-		{
-			hasMessageContent: I,
-			hasGuildPresences: _,
-			hasGuildMembers: f
-		} = (0, r.w)({ flags: null == t ? void 0 : t.flags });
+		{ hasMessageContent: I, hasGuildPresences: _, hasGuildMembers: f } = (0, r.w)({ flags: null == t ? void 0 : t.flags });
 	return (0, s.jsxs)(i.zJ, {
 		fade: !0,
 		className: d.scroller,
@@ -78,9 +74,7 @@ function I(e) {
 				}),
 			(0, s.jsx)(l.Text, {
 				variant: 'text-xs/normal',
-				children: c.Z.Messages.BOTS_DATA_ACCESS_BASELINE.format({
-					helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975'
-				})
+				children: c.Z.Messages.BOTS_DATA_ACCESS_BASELINE.format({ helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975' })
 			})
 		]
 	});

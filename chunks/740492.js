@@ -25,16 +25,9 @@ function p(e, t, n) {
 		e
 	);
 }
-((r = a || (a = {})).DATA_SAVER = 'data_saver'),
-	(r.STANDARD = 'standard'),
-	(r.BEST = 'best'),
-	((i = s || (s = {})).VERY_LOW = 'very_low'),
-	(i.LOW = 'low'),
-	(i.MEDIUM = 'medium'),
-	(i.HIGH = 'high'),
-	(i.VERY_HIGH = 'very_high');
-let I = (window.innerWidth - f.PrS) / 2,
-	m = null,
+((r = a || (a = {})).DATA_SAVER = 'data_saver'), (r.STANDARD = 'standard'), (r.BEST = 'best'), ((i = s || (s = {})).VERY_LOW = 'very_low'), (i.LOW = 'low'), (i.MEDIUM = 'medium'), (i.HIGH = 'high'), (i.VERY_HIGH = 'very_high');
+let m = (window.innerWidth - f.PrS) / 2,
+	I = null,
 	T = {};
 class g extends (o = c.ZP.DeviceSettingsStore) {
 	initialize(e) {
@@ -66,9 +59,7 @@ class g extends (o = c.ZP.DeviceSettingsStore) {
 	}
 	get dataSavingMode() {
 		var e, t;
-		return (
-			null !== (t = null !== (e = T.dataSavingMode) && void 0 !== e ? e : T.lowQualityImageMode) && void 0 !== t && t
-		);
+		return null !== (t = null !== (e = T.dataSavingMode) && void 0 !== e ? e : T.lowQualityImageMode) && void 0 !== t && t;
 	}
 	get expressionPickerWidth() {
 		var e;
@@ -84,7 +75,7 @@ class g extends (o = c.ZP.DeviceSettingsStore) {
 	}
 	get postSidebarWidth() {
 		var e;
-		return null !== (e = T.postSidebarWidth) && void 0 !== e ? e : I;
+		return null !== (e = T.postSidebarWidth) && void 0 !== e ? e : m;
 	}
 	get callChatSidebarWidth() {
 		var e;
@@ -92,9 +83,7 @@ class g extends (o = c.ZP.DeviceSettingsStore) {
 	}
 	get homeSidebarWidth() {
 		var e;
-		return null !== (e = T.homeSidebarWidth) && void 0 !== e
-			? e
-			: (null == m && (m = Math.max((window.innerWidth - f.PrS) * 0.4, f.$Y6)), m);
+		return null !== (e = T.homeSidebarWidth) && void 0 !== e ? e : (null == I && (I = Math.max((window.innerWidth - f.PrS) * 0.4, f.$Y6)), I);
 	}
 	get callHeaderHeight() {
 		return T.callHeaderHeight;
@@ -168,27 +157,7 @@ p(g, 'displayName', 'UnsyncedUserSettingsStore'),
 	p(g, 'migrations', [
 		() => {
 			let e = d.K.get('UserSettingsStore');
-			return (
-				d.K.remove('UserSettingsStore'),
-				u().pick(
-					e,
-					'dataSavingMode',
-					'videoUploadQuality',
-					'lowQualityImageMode',
-					'useSystemTheme',
-					'expressionPickerWidth',
-					'disableVoiceChannelChangeAlert',
-					'disableHideSelfStreamAndVideoConfirmationAlert',
-					'pushUpsellDismissed',
-					'disableEmbeddedActivityPopOutAlert',
-					'disableActivityHardwareAccelerationPrompt',
-					'disableInviteWithTextChannelActivityLaunch',
-					'disableActivityHostLeftNitroUpsell',
-					'disableCallUserConfirmationPrompt',
-					'disableApplicationSubscriptionCancellationSurvey',
-					'enableAndroidChatListAnimations'
-				)
-			);
+			return d.K.remove('UserSettingsStore'), u().pick(e, 'dataSavingMode', 'videoUploadQuality', 'lowQualityImageMode', 'useSystemTheme', 'expressionPickerWidth', 'disableVoiceChannelChangeAlert', 'disableHideSelfStreamAndVideoConfirmationAlert', 'pushUpsellDismissed', 'disableEmbeddedActivityPopOutAlert', 'disableActivityHardwareAccelerationPrompt', 'disableInviteWithTextChannelActivityLaunch', 'disableActivityHostLeftNitroUpsell', 'disableCallUserConfirmationPrompt', 'disableApplicationSubscriptionCancellationSurvey', 'enableAndroidChatListAnimations');
 		}
 	]),
 	(t.ZP = new g(_.Z, {

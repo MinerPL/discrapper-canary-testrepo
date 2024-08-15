@@ -13,11 +13,7 @@ t.Z = {
 				socket: t,
 				args: { use_interactive_pip: n }
 			} = e;
-			if (t.transport !== r.He.POST_MESSAGE)
-				throw new a.Z(
-					{ errorCode: l.lTL.INVALID_COMMAND },
-					'command not available from "'.concat(t.transport, ' transport')
-				);
+			if (t.transport !== r.He.POST_MESSAGE) throw new a.Z({ errorCode: l.lTL.INVALID_COMMAND }, 'command not available from "'.concat(t.transport, ' transport'));
 			if (null == t.application.id) throw new a.Z({ errorCode: l.lTL.INVALID_COMMAND }, 'invalid application');
 			return (
 				i.Z.dispatch({

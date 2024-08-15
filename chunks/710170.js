@@ -11,9 +11,4 @@ function l(e) {
 		this.set(r[0], r[1]);
 	}
 }
-(l.prototype.clear = r),
-	(l.prototype.delete = i),
-	(l.prototype.get = a),
-	(l.prototype.has = s),
-	(l.prototype.set = o),
-	(e.exports = l);
+(l.prototype.clear = r), (l.prototype.delete = i), (l.prototype.get = a), (l.prototype.has = s), (l.prototype.set = o), (e.exports = l);

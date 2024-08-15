@@ -29,12 +29,7 @@ var i = r(118658),
 	h = (function () {
 		function t(t) {
 			var e = this;
-			n(this, 'observer', void 0),
-				n(this, 'container', void 0),
-				n(this, 'mutations', void 0),
-				n(this, 'onCharData', void 0),
-				(this.container = t),
-				(this.mutations = l());
+			n(this, 'observer', void 0), n(this, 'container', void 0), n(this, 'mutations', void 0), n(this, 'onCharData', void 0), (this.container = t), (this.mutations = l());
 			var r = a(t);
 			r.MutationObserver && !p
 				? (this.observer = new r.MutationObserver(function (t) {
@@ -51,15 +46,11 @@ var i = r(118658),
 		var e = t.prototype;
 		return (
 			(e.start = function () {
-				this.observer
-					? this.observer.observe(this.container, f)
-					: this.container.addEventListener('DOMCharacterDataModified', this.onCharData);
+				this.observer ? this.observer.observe(this.container, f) : this.container.addEventListener('DOMCharacterDataModified', this.onCharData);
 			}),
 			(e.stopAndFlushMutations = function () {
 				var t = this.observer;
-				t
-					? (this.registerMutations(t.takeRecords()), t.disconnect())
-					: this.container.removeEventListener('DOMCharacterDataModified', this.onCharData);
+				t ? (this.registerMutations(t.takeRecords()), t.disconnect()) : this.container.removeEventListener('DOMCharacterDataModified', this.onCharData);
 				var e = this.mutations;
 				return (this.mutations = l()), e;
 			}),

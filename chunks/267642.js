@@ -3,7 +3,7 @@ n.d(t, {
 		return T;
 	},
 	FZ: function () {
-		return m;
+		return I;
 	},
 	Je: function () {
 		return A;
@@ -101,33 +101,18 @@ Object.freeze({
 	8: 18,
 	9: 24
 });
-((i = r || (r = {}))[(i.EMOJI = 1)] = 'EMOJI'),
-	(i[(i.AUDIO = 2)] = 'AUDIO'),
-	(i[(i.ANIMATED = 3)] = 'ANIMATED'),
-	(i[(i.CUSTOMIZATION = 4)] = 'CUSTOMIZATION'),
-	(i[(i.UPLOAD = 5)] = 'UPLOAD'),
-	(i[(i.VANITY = 6)] = 'VANITY'),
-	(i[(i.STREAM = 7)] = 'STREAM'),
-	(i[(i.STICKER = 8)] = 'STICKER'),
-	(i[(i.CUSTOM_ROLE_ICON = 11)] = 'CUSTOM_ROLE_ICON'),
-	(i[(i.STAGE_VIDEO = 12)] = 'STAGE_VIDEO'),
-	(i[(i.SOUNDBOARD = 13)] = 'SOUNDBOARD');
-let I = [f.Eu4.NONE, f.Eu4.TIER_1, f.Eu4.TIER_2, f.Eu4.TIER_3],
-	m = (e, t) => {
+((i = r || (r = {}))[(i.EMOJI = 1)] = 'EMOJI'), (i[(i.AUDIO = 2)] = 'AUDIO'), (i[(i.ANIMATED = 3)] = 'ANIMATED'), (i[(i.CUSTOMIZATION = 4)] = 'CUSTOMIZATION'), (i[(i.UPLOAD = 5)] = 'UPLOAD'), (i[(i.VANITY = 6)] = 'VANITY'), (i[(i.STREAM = 7)] = 'STREAM'), (i[(i.STICKER = 8)] = 'STICKER'), (i[(i.CUSTOM_ROLE_ICON = 11)] = 'CUSTOM_ROLE_ICON'), (i[(i.STAGE_VIDEO = 12)] = 'STAGE_VIDEO'), (i[(i.SOUNDBOARD = 13)] = 'SOUNDBOARD');
+let m = [f.Eu4.NONE, f.Eu4.TIER_1, f.Eu4.TIER_2, f.Eu4.TIER_3],
+	I = (e, t) => {
 		var n;
-		return e === f.Eu4.NONE
-			? f.Eu4.TIER_1
-			: null === (n = x(t).find((t) => t.tier === e)) || void 0 === n
-				? void 0
-				: n.nextTier;
+		return e === f.Eu4.NONE ? f.Eu4.TIER_1 : null === (n = x(t).find((t) => t.tier === e)) || void 0 === n ? void 0 : n.nextTier;
 	},
-	T = (e, t) =>
-		null != t && t.hasFeature(f.oNc.MORE_STICKERS) && e === f.Eu4.TIER_3 ? o.D.MAX_STICKER_SLOTS : h.$8[e],
+	T = (e, t) => (null != t && t.hasFeature(f.oNc.MORE_STICKERS) && e === f.Eu4.TIER_3 ? o.D.MAX_STICKER_SLOTS : h.$8[e]),
 	g = (e) => h.pH[e],
 	S = (e, t) => (null != t && t.hasFeature(f.oNc.MORE_SOUNDBOARD) ? 96 : h._k[e]),
 	A = (e) => {
 		if (e === f.Eu4.NONE) return h._k[e];
-		let t = I[I.indexOf(e) - 1];
+		let t = m[m.indexOf(e) - 1];
 		return h._k[e] - h._k[t];
 	},
 	N = (e) => [
@@ -160,9 +145,7 @@ let I = [f.Eu4.NONE, f.Eu4.TIER_1, f.Eu4.TIER_2, f.Eu4.TIER_3],
 					icon: 13
 				},
 				{
-					title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_AUDIO_QUALITY.format({
-						bitrate: h.HO[f.Eu4.TIER_1].limits.bitrate / 1000
-					}),
+					title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_AUDIO_QUALITY.format({ bitrate: h.HO[f.Eu4.TIER_1].limits.bitrate / 1000 }),
 					description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_AUDIO_QUALITY,
 					icon: 2
 				},
@@ -212,9 +195,7 @@ let I = [f.Eu4.NONE, f.Eu4.TIER_1, f.Eu4.TIER_2, f.Eu4.TIER_3],
 					icon: 13
 				},
 				{
-					title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_AUDIO_QUALITY.format({
-						bitrate: h.HO[f.Eu4.TIER_2].limits.bitrate / 1000
-					}),
+					title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_AUDIO_QUALITY.format({ bitrate: h.HO[f.Eu4.TIER_2].limits.bitrate / 1000 }),
 					description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_AUDIO_QUALITY,
 					icon: 2
 				},
@@ -224,9 +205,7 @@ let I = [f.Eu4.NONE, f.Eu4.TIER_1, f.Eu4.TIER_2, f.Eu4.TIER_3],
 					icon: 4
 				},
 				{
-					title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_UPLOAD_LIMIT.format({
-						fileSize: (0, c.BU)(h.HO[f.Eu4.TIER_2].limits.fileSize / 1024, { useKibibytes: !0 })
-					}),
+					title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_UPLOAD_LIMIT.format({ fileSize: (0, c.BU)(h.HO[f.Eu4.TIER_2].limits.fileSize / 1024, { useKibibytes: !0 }) }),
 					description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_UPLOAD_LIMIT.format(),
 					icon: 5
 				},
@@ -278,23 +257,17 @@ let I = [f.Eu4.NONE, f.Eu4.TIER_1, f.Eu4.TIER_2, f.Eu4.TIER_3],
 					icon: 13
 				},
 				{
-					title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_AUDIO_QUALITY.format({
-						bitrate: h.HO[f.Eu4.TIER_3].limits.bitrate / 1000
-					}),
+					title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_AUDIO_QUALITY.format({ bitrate: h.HO[f.Eu4.TIER_3].limits.bitrate / 1000 }),
 					description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_AUDIO_QUALITY,
 					icon: 2
 				},
 				{
 					title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_3_VANITY_URL,
-					description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_VANITY_URL.format({
-						helpdeskArticle: _.Z.getArticleURL(f.BhN.GUILD_VANITY_URL)
-					}),
+					description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_VANITY_URL.format({ helpdeskArticle: _.Z.getArticleURL(f.BhN.GUILD_VANITY_URL) }),
 					icon: 6
 				},
 				{
-					title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_UPLOAD_LIMIT.format({
-						fileSize: (0, c.BU)(h.HO[f.Eu4.TIER_3].limits.fileSize / 1024, { useKibibytes: !0 })
-					}),
+					title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_UPLOAD_LIMIT.format({ fileSize: (0, c.BU)(h.HO[f.Eu4.TIER_3].limits.fileSize / 1024, { useKibibytes: !0 }) }),
 					description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_UPLOAD_LIMIT.format(),
 					icon: 5
 				},
@@ -343,15 +316,7 @@ function O(e) {
 			throw Error('Not a valid tier type');
 	}
 }
-let R = s().memoize((e) =>
-		h.HO[f.Eu4.TIER_1].features.includes(e)
-			? f.Eu4.TIER_1
-			: h.HO[f.Eu4.TIER_2].features.includes(e)
-				? f.Eu4.TIER_2
-				: h.HO[f.Eu4.TIER_3].features.includes(e)
-					? f.Eu4.TIER_3
-					: null
-	),
+let R = s().memoize((e) => (h.HO[f.Eu4.TIER_1].features.includes(e) ? f.Eu4.TIER_1 : h.HO[f.Eu4.TIER_2].features.includes(e) ? f.Eu4.TIER_2 : h.HO[f.Eu4.TIER_3].features.includes(e) ? f.Eu4.TIER_3 : null)),
 	C = (e) => {
 		if (e === f.Eu4.NONE) return f.Qqv.NONE;
 		if (e === f.Eu4.TIER_1) return f.Qqv.TIER_1;
@@ -376,27 +341,18 @@ function b(e) {
 }
 function M() {
 	let e = u.ZP.getPremiumTypeSubscription();
-	if (null == e ? void 0 : e.isPausedOrPausePending)
-		return p.Z.Messages.GUILD_BOOSTING_DISABLED_FOR_PAUSED_SUBSCRIPTION;
-	let { numAvailableGuildBoostSlots: t, numCanceledGuildBoostSlots: n } = Object.values(l.Z.boostSlots).reduce(
-		(e, t) => (V(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e),
-		{
-			numAvailableGuildBoostSlots: 0,
-			numCanceledGuildBoostSlots: 0
-		}
-	);
+	if (null == e ? void 0 : e.isPausedOrPausePending) return p.Z.Messages.GUILD_BOOSTING_DISABLED_FOR_PAUSED_SUBSCRIPTION;
+	let { numAvailableGuildBoostSlots: t, numCanceledGuildBoostSlots: n } = Object.values(l.Z.boostSlots).reduce((e, t) => (V(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
+		numAvailableGuildBoostSlots: 0,
+		numCanceledGuildBoostSlots: 0
+	});
 	if (null == e || t > 0) return null;
-	if (e.status === f.O0b.PAST_DUE)
-		return p.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_SUBSCRIPTION_PAST_DUE;
-	if (e.status === f.O0b.ACCOUNT_HOLD)
-		return p.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_SUBSCRIPTION_ACCOUNT_HOLD;
-	if (n > 0)
-		return p.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION;
+	if (e.status === f.O0b.PAST_DUE) return p.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_SUBSCRIPTION_PAST_DUE;
+	if (e.status === f.O0b.ACCOUNT_HOLD) return p.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_SUBSCRIPTION_ACCOUNT_HOLD;
+	if (n > 0) return p.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION;
 	if (null == e.renewalMutations) return null;
 	let r = E.uV(e.renewalMutations.additionalPlans);
-	return E.uV(e.additionalPlans) > r
-		? p.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION
-		: p.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_PENDING_MUTATION_PLAN;
+	return E.uV(e.additionalPlans) > r ? p.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION : p.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_PENDING_MUTATION_PLAN;
 }
 function P(e, t) {
 	return U(e, t) > 0;
@@ -433,24 +389,22 @@ function x(e) {
 function G(e, t) {
 	let n = U(e, t);
 	if (n > 0) {
-		let t = e
-			.sort((e, t) => (null != e.endsAt && null != t.endsAt ? e.endsAt.getTime() - t.endsAt.getTime() : -1))
-			.filter((e) => null != e.endsAt);
+		let t = e.sort((e, t) => (null != e.endsAt && null != t.endsAt ? e.endsAt.getTime() - t.endsAt.getTime() : -1)).filter((e) => null != e.endsAt);
 		return t[t.length - n].endsAt;
 	}
 	return null;
 }
 function k(e, t) {
 	let n = g(t),
-		r = I.indexOf(t);
+		r = m.indexOf(t);
 	if (-1 === r) return 0;
-	let i = I[r - 1],
+	let i = m[r - 1],
 		a = null != i ? T(i) : 0,
 		s = T(t);
 	return Math.max(0, n - e.slice(a, s).length);
 }
 function B(e, t, n) {
-	return -1 === I.indexOf(n) ? 0 : Math.max(0, S(n, e) - t.length);
+	return -1 === m.indexOf(n) ? 0 : Math.max(0, S(n, e) - t.length);
 }
 function F(e, t) {
 	let n = e.premiumSubscriberCount;

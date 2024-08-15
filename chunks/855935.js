@@ -14,12 +14,7 @@ var n = l(735250),
 	d = l(527379),
 	u = l(981631),
 	m = l(689938);
-let _ = [
-	C.d$.ORDER_BY_GUILD_JOINED_AT_DESC,
-	C.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
-	C.d$.ORDER_BY_USER_ID_DESC,
-	C.d$.ORDER_BY_USER_ID_ASC
-];
+let _ = [C.d$.ORDER_BY_GUILD_JOINED_AT_DESC, C.d$.ORDER_BY_GUILD_JOINED_AT_ASC, C.d$.ORDER_BY_USER_ID_DESC, C.d$.ORDER_BY_USER_ID_ASC];
 function E(e) {
 	let { guildId: t, onClose: l } = e,
 		o = (0, i.e7)([c.Z], () => c.Z.getSearchStateByGuildId(t), [t], s()),
@@ -60,11 +55,7 @@ function E(e) {
 									return null;
 							}
 						})(e),
-						checked:
-							((t = e),
-							(l = o.selectedSort) === C.d$.ORDER_BY_UNSPECIFIED || null == l
-								? t === C.d$.ORDER_BY_GUILD_JOINED_AT_DESC
-								: t === l),
+						checked: ((t = e), (l = o.selectedSort) === C.d$.ORDER_BY_UNSPECIFIED || null == l ? t === C.d$.ORDER_BY_GUILD_JOINED_AT_DESC : t === l),
 						disabled: !1,
 						action: () => E(e),
 						group: 'members-table-sort'

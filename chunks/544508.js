@@ -41,19 +41,7 @@ let M = s.forwardRef(function (e, t) {
 	});
 });
 t.Z = s.forwardRef(function (e, t) {
-	let {
-			user: a,
-			error: i,
-			formValues: v,
-			displayProfile: P,
-			onChangeFormValue: L,
-			onFocusDisplayName: C,
-			onFocusUsername: x,
-			editState: A,
-			footerNotice: p,
-			usernameSuggestionLoading: R,
-			oneClickFlow: y
-		} = e,
+	let { user: a, error: i, formValues: v, displayProfile: P, onChangeFormValue: L, onFocusDisplayName: C, onFocusUsername: x, editState: A, footerNotice: p, usernameSuggestionLoading: R, oneClickFlow: y } = e,
 		{ username: Z, globalName: U } = v,
 		b = s.useRef(null),
 		G = s.useRef(null),
@@ -77,17 +65,11 @@ t.Z = s.forwardRef(function (e, t) {
 			() => ({
 				focusDisplayName: () => {
 					var e, t, a;
-					null === (t = G.current) ||
-						void 0 === t ||
-						t.setSelection(0, null === (e = G.current) || void 0 === e ? void 0 : e.value.length),
-						null === (a = G.current) || void 0 === a || a.focus();
+					null === (t = G.current) || void 0 === t || t.setSelection(0, null === (e = G.current) || void 0 === e ? void 0 : e.value.length), null === (a = G.current) || void 0 === a || a.focus();
 				},
 				focusUsername: () => {
 					var e, t, a;
-					null === (t = b.current) ||
-						void 0 === t ||
-						t.setSelection(0, null === (e = b.current) || void 0 === e ? void 0 : e.value.length),
-						null === (a = b.current) || void 0 === a || a.focus();
+					null === (t = b.current) || void 0 === t || t.setSelection(0, null === (e = b.current) || void 0 === e ? void 0 : e.value.length), null === (a = b.current) || void 0 === a || a.focus();
 				}
 			}),
 			[]

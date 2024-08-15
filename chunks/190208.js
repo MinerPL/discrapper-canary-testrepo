@@ -106,12 +106,10 @@ var n = {
 	'dragonpay.voucher.bank.selectField.placeholder': 'Velg din bank',
 	'voucher.paymentReferenceLabel': 'Betalingsreferanse',
 	'voucher.surcharge': 'Inkl. %@ tilleggsavgift',
-	'voucher.introduction.doku':
-		'Takk for ditt kjøp, vennligst bruk den følgende informasjonen for å fullføre betalingen.',
+	'voucher.introduction.doku': 'Takk for ditt kjøp, vennligst bruk den følgende informasjonen for å fullføre betalingen.',
 	'voucher.shopperName': 'Kundenavn',
 	'voucher.merchantName': 'Forhandler',
-	'voucher.introduction.econtext':
-		'Takk for ditt kjøp, vennligst bruk den følgende informasjonen for å fullføre betalingen.',
+	'voucher.introduction.econtext': 'Takk for ditt kjøp, vennligst bruk den følgende informasjonen for å fullføre betalingen.',
 	'voucher.telephoneNumber': 'Telefonnummer',
 	'voucher.shopperReference': 'Kundereferanse',
 	'voucher.collectionInstitutionNumber': 'Innbetalingslokasjonsnummer',
@@ -172,8 +170,7 @@ var n = {
 	'blik.invalid': 'Tast inn 6 tall',
 	'blik.code': '6-sifret kode',
 	'blik.help': 'Hent koden fra bank-appen din.',
-	'swish.pendingMessage':
-		'Etter at du har skannet koden kan det ta opptil 10 minutter før betalingen vises som bekreftet. Forsøk på å betale igjen kan føre til flere innbetalinger.',
+	'swish.pendingMessage': 'Etter at du har skannet koden kan det ta opptil 10 minutter før betalingen vises som bekreftet. Forsøk på å betale igjen kan føre til flere innbetalinger.',
 	'field.valid': 'Feltet er gyldig',
 	'field.invalid': 'Feltet er ikke gyldig',
 	'error.va.gen.01': 'Ufullstendig felt',
@@ -209,10 +206,8 @@ var n = {
 	'bankTransfer.iban': 'IBAN',
 	'bankTransfer.bic': 'BIC',
 	'bankTransfer.reference': 'referanse',
-	'bankTransfer.introduction':
-		'Fortsett for å opprette en ny betaling via bankoverføring. Du kan bruke detaljene i det følgende skjermbildet for å fullføre betalingen.',
-	'bankTransfer.instructions':
-		'Takk for kjøpet. Vennligst benytt den følgende informasjonen til å fullføre betalingen.',
+	'bankTransfer.introduction': 'Fortsett for å opprette en ny betaling via bankoverføring. Du kan bruke detaljene i det følgende skjermbildet for å fullføre betalingen.',
+	'bankTransfer.instructions': 'Takk for kjøpet. Vennligst benytt den følgende informasjonen til å fullføre betalingen.',
 	'bacs.accountHolderName': 'Kontoholders navn',
 	'bacs.accountHolderName.invalid': 'Ugyldig kontoholdernavn',
 	'bacs.accountNumber': 'Bankkontonummer',
@@ -220,8 +215,7 @@ var n = {
 	'bacs.bankLocationId': 'Sorteringskode',
 	'bacs.bankLocationId.invalid': 'Ugyldig sorteringskode',
 	'bacs.consent.amount': 'Jeg samtykker til at beløpet ovenfor blir trukket fra bankkontoen min.',
-	'bacs.consent.account':
-		'Jeg bekrefter at kontoen står i mitt navn, og at jeg er den eneste signataren som kreves for å autorisere direktebelastningen på denne kontoen.',
+	'bacs.consent.account': 'Jeg bekrefter at kontoen står i mitt navn, og at jeg er den eneste signataren som kreves for å autorisere direktebelastningen på denne kontoen.',
 	edit: 'Endre',
 	'bacs.confirm': 'Bekreft og betal',
 	'bacs.result.introduction': 'Last ned instruksjoner for direktebelastning (DDI/ mandat)',
@@ -254,8 +248,7 @@ var n = {
 	'upi.vpaWaitingMessage': 'Åpne UPI-appen for å bekrefte betalingen',
 	'upi.modeSelection': 'Velg hvordan du vil bruke UPI.',
 	'onlineBanking.termsAndConditions': 'Ved å fortsette godtar du %#terms and conditions%#',
-	'onlineBankingPL.termsAndConditions':
-		'Ved å fortsette godtar du %#reglene%# og %#informasjonsplikten%# til Przelewy24.',
+	'onlineBankingPL.termsAndConditions': 'Ved å fortsette godtar du %#reglene%# og %#informasjonsplikten%# til Przelewy24.',
 	'ctp.loading.poweredByCtp': 'Drevet av Click to Pay',
 	'ctp.loading.intro': 'Vi sjekker om du har noen lagrede kort med Click to Pay\u2026',
 	'ctp.login.title': 'Fortsett til Click to Pay',
@@ -283,8 +276,7 @@ var n = {
 	'ctp.infoPopup.benefit2': 'Bruk den hos forhandlere over hele verden',
 	'ctp.infoPopup.benefit3': 'Konfigurer én gang for lettvinte betalinger i fremtiden',
 	'ctp.errors.AUTH_INVALID': 'Autentiseringen er ugyldig',
-	'ctp.errors.NOT_FOUND':
-		'Vi finner ingen konto. Skriv inn en gyldig e-postadresse eller fortsett ved hjelp av manuell kortinntasting',
+	'ctp.errors.NOT_FOUND': 'Vi finner ingen konto. Skriv inn en gyldig e-postadresse eller fortsett ved hjelp av manuell kortinntasting',
 	'ctp.errors.ID_FORMAT_UNSUPPORTED': 'Formatet støttes ikke',
 	'ctp.errors.FRAUD': 'Brukerkontoen er låst eller deaktivert',
 	'ctp.errors.CONSUMER_ID_MISSING': 'Forbrukerens identitet mangler i forespørselen',

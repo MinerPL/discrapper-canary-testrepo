@@ -56,8 +56,8 @@ var r = n(512722),
 	f = n(592125),
 	h = n(430824),
 	p = n(944486),
-	I = n(979651),
-	m = n(934415),
+	m = n(979651),
+	I = n(934415),
 	T = n(70956),
 	g = n(557457),
 	S = n(573261),
@@ -87,7 +87,7 @@ function D(e, t) {
 }
 function L(e, t) {
 	let n = f.Z.getChannel(t);
-	return i()(null != n, 'Cannot join a null voice channel'), !I.Z.isInChannel(t) && (0, m.rY)(n, I.Z, h.Z);
+	return i()(null != n, 'Cannot join a null voice channel'), !m.Z.isInChannel(t) && (0, I.rY)(n, m.Z, h.Z);
 }
 function b(e, t) {
 	if (null != l.Z.getRemoteSessionId()) return;

@@ -54,11 +54,6 @@ t.Z = (e) => {
 	});
 	return (0, r.jsxs)(s.RX, {
 		className: f.upsell,
-		children: [
-			(0, r.jsx)(s.z5, {
-				children: (0, r.jsx)(s.BR, { children: E.Z.Messages.AUTOCOMPLETE_EMOJI_UPSELL.format({ count: t.length }) })
-			}),
-			(0, r.jsx)(s.dY, { children: h })
-		]
+		children: [(0, r.jsx)(s.z5, { children: (0, r.jsx)(s.BR, { children: E.Z.Messages.AUTOCOMPLETE_EMOJI_UPSELL.format({ count: t.length }) }) }), (0, r.jsx)(s.dY, { children: h })]
 	});
 };

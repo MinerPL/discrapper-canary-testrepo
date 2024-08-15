@@ -17,8 +17,8 @@ var r = n(735250),
 	f = n(165583),
 	h = n(592125),
 	p = n(944486),
-	I = n(626135),
-	m = n(981631),
+	m = n(626135),
+	I = n(981631),
 	T = n(474936),
 	g = n(689938),
 	S = n(540451);
@@ -37,7 +37,7 @@ function N(e) {
 	let { className: n, iconOnly: a, remaining: N } = e,
 		v = (0, o.e7)([p.Z, h.Z], () => {
 			let e = h.Z.getChannel(p.Z.getChannelId());
-			return (null == e ? void 0 : e.isPrivate()) ? m.ZY5.DM_CHANNEL : m.ZY5.GUILD_CHANNEL;
+			return (null == e ? void 0 : e.isPrivate()) ? I.ZY5.DM_CHANNEL : I.ZY5.GUILD_CHANNEL;
 		}),
 		{ analyticsLocations: O } = (0, c.ZP)(u.Z.PREMIUM_UPSELL),
 		R = (0, _.Ng)(),
@@ -45,11 +45,11 @@ function N(e) {
 		y = (0, _.Wp)(R, T.Si.TIER_2),
 		D = (null == C ? void 0 : null === (t = C.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === T.Si.TIER_2;
 	return (i.useEffect(() => {
-		I.default.track(m.rMx.PREMIUM_UPSELL_VIEWED, {
+		m.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
 			type: 'longer messages inline',
 			location: {
 				location_page: v,
-				location_section: m.jXE.CHANNEL_TEXT_AREA
+				location_section: I.jXE.CHANNEL_TEXT_AREA
 			},
 			location_stack: O
 		});

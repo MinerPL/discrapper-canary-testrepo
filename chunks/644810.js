@@ -31,16 +31,7 @@ let o = (e, t, n) => ({
 		);
 	},
 	u = async (e) => {
-		let {
-				mediaImageSrc: t,
-				entry: n,
-				avatarSrc: u,
-				description: d,
-				timestamp: h,
-				episodeDescription: m,
-				colors: p,
-				channelId: _
-			} = e,
+		let { mediaImageSrc: t, entry: n, avatarSrc: u, description: d, timestamp: h, episodeDescription: m, colors: p, channelId: _ } = e,
 			f = n.extra.media_title,
 			E = o(u, t);
 		return await (0, s.f)({

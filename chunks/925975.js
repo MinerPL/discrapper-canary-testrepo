@@ -20,9 +20,7 @@ let p = /\\([*?+/])/g,
 	_ = {
 		tts: { action: () => ({ tts: d.OW.getSetting() }) },
 		me: { action: (e) => ({ content: '_'.concat(e, '_') }) },
-		tableflip: {
-			action: (e) => ({ content: ''.concat(e, ' (\u256F\xB0\u25A1\xB0)\u256F\uFE35 \u253B\u2501\u253B').trim() })
-		},
+		tableflip: { action: (e) => ({ content: ''.concat(e, ' (\u256F\xB0\u25A1\xB0)\u256F\uFE35 \u253B\u2501\u253B').trim() }) },
 		unflip: { action: (e) => ({ content: ''.concat(e, ' \u252C\u2500\u252Cノ( º _ ºノ)').trim() }) },
 		shrug: { action: (e) => ({ content: ''.concat(e, ' \xAF\\_(ツ)_/\xAF').trim() }) },
 		nick: {
@@ -53,12 +51,7 @@ let p = /\\([*?+/])/g,
 				let [, r, o] = Array.from(null !== (n = e.match(this.match.regex)) && void 0 !== n ? n : []);
 				(r = r.replace(p, (e, t) => t)), (o = o.replace(p, (e, t) => t));
 				let c = s.content.replace(r, o);
-				return (
-					(null == c || '' === c) && 0 === s.attachments.length
-						? l.Z.deleteMessage(a.id, s.id)
-						: e !== s.content && l.Z.editMessage(a.id, s.id, { content: c }),
-					{ content: '' }
-				);
+				return (null == c || '' === c) && 0 === s.attachments.length ? l.Z.deleteMessage(a.id, s.id) : e !== s.content && l.Z.editMessage(a.id, s.id, { content: c }), { content: '' };
 			}
 		},
 		spoiler: { action: (e) => ({ content: (0, m.XmY)(e).trim() }) }

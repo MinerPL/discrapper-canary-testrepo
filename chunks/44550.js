@@ -40,9 +40,7 @@ class I extends (r = l.ZP.Store) {
 	(t.Z = new I(o.Z, {
 		GUILD_SETTINGS_SET_VANITY_URL: function (e) {
 			var t, n;
-			(u = c = null !== (t = e.code) && void 0 !== t ? t : ''),
-				(d = e.uses),
-				(_ = null !== (n = e.error) && void 0 !== n ? n : null);
+			(u = c = null !== (t = e.code) && void 0 !== t ? t : ''), (d = e.uses), (_ = null !== (n = e.error) && void 0 !== n ? n : null);
 		},
 		GUILD_SETTINGS_VANITY_URL_CLOSE: function () {
 			(u = c = null), (d = 0), (_ = null);

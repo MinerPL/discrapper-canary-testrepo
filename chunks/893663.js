@@ -17,18 +17,12 @@ var r,
 function l(e) {
 	return (0, a.e7)([s.Z], () => {
 		var t, n;
-		return c(
-			e,
-			null !== (n = null === (t = s.Z.settings.guilds) || void 0 === t ? void 0 : t.guilds) && void 0 !== n ? n : {}
-		);
+		return c(e, null !== (n = null === (t = s.Z.settings.guilds) || void 0 === t ? void 0 : t.guilds) && void 0 !== n ? n : {});
 	});
 }
 function u(e) {
 	var t, n;
-	return c(
-		e,
-		null !== (n = null === (t = s.Z.settings.guilds) || void 0 === t ? void 0 : t.guilds) && void 0 !== n ? n : {}
-	);
+	return c(e, null !== (n = null === (t = s.Z.settings.guilds) || void 0 === t ? void 0 : t.guilds) && void 0 !== n ? n : {});
 }
 function c(e, t) {
 	var n, r;

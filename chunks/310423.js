@@ -39,10 +39,7 @@ t.Z = a.memo(function (e) {
 	let M,
 		{ channel: v, messageId: L, interactionData: Z } = e,
 		{ analyticsLocations: P } = (0, u.ZP)(),
-		{ onCopy: b, copyRef: D } = (0, d.Z)(
-			v,
-			null == Z ? void 0 : null === (t = Z.application_command) || void 0 === t ? void 0 : t.id
-		),
+		{ onCopy: b, copyRef: D } = (0, d.Z)(v, null == Z ? void 0 : null === (t = Z.application_command) || void 0 === t ? void 0 : t.id),
 		j = (0, l.e7)([T.Z], () => T.Z.getGuild(v.guild_id), [v.guild_id]);
 	if (
 		(a.useEffect(() => {
@@ -56,26 +53,13 @@ t.Z = a.memo(function (e) {
 		});
 	else {
 		let e = [],
-			t = Object.fromEntries(
-				(null !== (r = null === (n = Z.application_command) || void 0 === n ? void 0 : n.options) && void 0 !== r
-					? r
-					: []
-				).map((e) => [e.name, e])
-			);
+			t = Object.fromEntries((null !== (r = null === (n = Z.application_command) || void 0 === n ? void 0 : n.options) && void 0 !== r ? r : []).map((e) => [e.name, e]));
 		for (let n of null !== (x = Z.options) && void 0 !== x ? x : [])
 			e = e.concat(
 				(function e(t) {
 					var n, s, r, l, u, d, _;
 					let g,
-						{
-							option: x,
-							channel: O,
-							guild: M,
-							messageId: v,
-							parentOptionKey: L,
-							commandOptionSpec: Z,
-							sourceAnalyticsLocations: P
-						} = t,
+						{ option: x, channel: O, guild: M, messageId: v, parentOptionKey: L, commandOptionSpec: Z, sourceAnalyticsLocations: P } = t,
 						b = null != L ? L + ' ' + x.name : x.name;
 					if (x.type === c.jw.SUB_COMMAND || x.type === c.jw.SUB_COMMAND_GROUP) {
 						let t = [
@@ -93,11 +77,7 @@ t.Z = a.memo(function (e) {
 									b
 								)
 							],
-							c = Object.fromEntries(
-								null === (n = null !== (r = null == Z ? void 0 : Z.options) && void 0 !== r ? r : []) || void 0 === n
-									? void 0
-									: n.map((e) => [e.name, e])
-							);
+							c = Object.fromEntries(null === (n = null !== (r = null == Z ? void 0 : Z.options) && void 0 !== r ? r : []) || void 0 === n ? void 0 : n.map((e) => [e.name, e]));
 						for (let n of null !== (l = x.options) && void 0 !== l ? l : [])
 							t = t.concat(
 								e({
@@ -185,12 +165,7 @@ t.Z = a.memo(function (e) {
 								g = R(p.Z.Messages.EXECUTED_COMMAND_POPOUT_ATTACHMENT_OPTION_VALUE);
 								break;
 							default: {
-								let e =
-									null == Z
-										? void 0
-										: null === (u = Z.choices) || void 0 === u
-											? void 0
-											: u.find((e) => e.value === x.value);
+								let e = null == Z ? void 0 : null === (u = Z.choices) || void 0 === u ? void 0 : u.find((e) => e.value === x.value);
 								null != e && (D = null !== (d = e.name_localized) && void 0 !== d ? d : e.name);
 							}
 						}
@@ -203,11 +178,7 @@ t.Z = a.memo(function (e) {
 									children: [
 										(0, i.jsxs)(o.Text, {
 											...S,
-											children: [
-												' ',
-												null !== (_ = null == Z ? void 0 : Z.name_localized) && void 0 !== _ ? _ : x.name,
-												': '
-											]
+											children: [' ', null !== (_ = null == Z ? void 0 : Z.name_localized) && void 0 !== _ ? _ : x.name, ': ']
 										}),
 										g
 									]
@@ -230,13 +201,7 @@ t.Z = a.memo(function (e) {
 			children: [
 				(0, i.jsxs)(o.Text, {
 					...S,
-					children: [
-						'/',
-						null !== (O = null === (s = Z.application_command) || void 0 === s ? void 0 : s.name_localized) &&
-						void 0 !== O
-							? O
-							: Z.name
-					]
+					children: ['/', null !== (O = null === (s = Z.application_command) || void 0 === s ? void 0 : s.name_localized) && void 0 !== O ? O : Z.name]
 				}),
 				e
 			]
@@ -246,16 +211,7 @@ t.Z = a.memo(function (e) {
 		className: g.container,
 		onCopy: (e) => {
 			var t, n, i;
-			let a =
-				null !==
-					(i =
-						null === (n = window) || void 0 === n
-							? void 0
-							: null === (t = n.getSelection()) || void 0 === t
-								? void 0
-								: t.toString()) && void 0 !== i
-					? i
-					: '';
+			let a = null !== (i = null === (n = window) || void 0 === n ? void 0 : null === (t = n.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== i ? i : '';
 			a.startsWith('/') && a.endsWith('\n') && b(e, Z);
 		},
 		children: [

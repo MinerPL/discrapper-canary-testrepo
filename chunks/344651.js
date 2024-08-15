@@ -22,8 +22,8 @@ var a = n(442837),
 	f = n(952537),
 	h = n(218543),
 	p = n(48481),
-	I = n(131704),
-	m = n(209747),
+	m = n(131704),
+	I = n(209747),
 	T = n(598077),
 	g = n(592125),
 	S = n(271383),
@@ -48,7 +48,7 @@ let b = new d.Z('ConnectionStore'),
 							type: 'CHANNEL_UPDATES',
 							channels: []
 						};
-			let r = (0, I.q_)(t),
+			let r = (0, m.q_)(t),
 				i = g.Z.getChannel(t.id),
 				a =
 					null == i
@@ -144,28 +144,9 @@ function F(e) {
 }
 function V(e, t, n) {
 	var r;
-	let {
-			roles: a,
-			nick: s,
-			avatar: o,
-			avatar_decoration_data: l,
-			flags: u,
-			premium_since: d,
-			pending: _,
-			joined_at: E,
-			communication_disabled_until: f,
-			unusual_dm_activity_until: h
-		} = n,
+	let { roles: a, nick: s, avatar: o, avatar_decoration_data: l, flags: u, premium_since: d, pending: _, joined_at: E, communication_disabled_until: f, unusual_dm_activity_until: h } = n,
 		p = S.ZP.getMember(e, t.id);
-	if (
-		!(null != p && p.nick === s && p.avatar === o && i().isEqual(p.roles, a) && (0, c.sr)(p.avatarDecoration, l)) ||
-		p.premiumSince !== d ||
-		p.isPending !== _ ||
-		p.joinedAt !== E ||
-		p.communicationDisabledUntil !== f ||
-		p.flags !== u ||
-		(null !== (r = p.unusualDMActivityUntil) && void 0 !== r ? r : null) !== (null != h ? h : null)
-	)
+	if (!(null != p && p.nick === s && p.avatar === o && i().isEqual(p.roles, a) && (0, c.sr)(p.avatarDecoration, l)) || p.premiumSince !== d || p.isPending !== _ || p.joinedAt !== E || p.communicationDisabledUntil !== f || p.flags !== u || (null !== (r = p.unusualDMActivityUntil) && void 0 !== r ? r : null) !== (null != h ? h : null))
 		F({
 			type: 'GUILD_MEMBER_ADD',
 			guildId: e,
@@ -270,7 +251,7 @@ k(
 					e.presences = r(e.presences || []);
 				});
 				let a = e.presences ? r(e.presences) : [],
-					s = (null !== (t = e.lazy_private_channels) && void 0 !== t ? t : []).map((e) => (0, I.q_)(e)),
+					s = (null !== (t = e.lazy_private_channels) && void 0 !== t ? t : []).map((e) => (0, m.q_)(e)),
 					o = null !== (n = e.game_invites) && void 0 !== n ? n : [];
 				h.Z.dispatchReadySupplemental.measure(() => {
 					F({
@@ -319,13 +300,7 @@ k(
 				r = e.guilds
 					.filter((e) => {
 						var t, n;
-						return (
-							!e.unavailable &&
-							'partial' === e.data_mode &&
-							(!!((null !== (t = e.partial_updates.channels) && void 0 !== t ? t : []).length > 0) ||
-								!!((null !== (n = e.partial_updates.deleted_channel_ids) && void 0 !== n ? n : []).length > 0) ||
-								void 0)
-						);
+						return !e.unavailable && 'partial' === e.data_mode && (!!((null !== (t = e.partial_updates.channels) && void 0 !== t ? t : []).length > 0) || !!((null !== (n = e.partial_updates.deleted_channel_ids) && void 0 !== n ? n : []).length > 0) || void 0);
 					})
 					.map((e) => e.id);
 			return Promise.all([n, null !== (t = g.o.loadGuildIds(r)) && void 0 !== t ? t : Promise.resolve()]).then((e) => {
@@ -340,9 +315,7 @@ k(
 			}
 			h.Z.ready.measure(() => {
 				a.ZP.Emitter.batched(() => {
-					let t = (e = h.Z.hydrateReady.measure(() => y.IM(e, L.Wb.identifyStartTime, n))).private_channels.map((e) =>
-							(0, I.q_)(e)
-						),
+					let t = (e = h.Z.hydrateReady.measure(() => y.IM(e, L.Wb.identifyStartTime, n))).private_channels.map((e) => (0, m.q_)(e)),
 						r = e.guilds.filter((e) => !0 === e.unavailable && !0 !== e.geo_restricted).map((e) => e.id),
 						i = e.guilds.filter((e) => !0 !== e.unavailable),
 						a = e.guilds.filter((e) => !0 === e.geo_restricted);
@@ -536,7 +509,7 @@ k(
 		(e, t) => {
 			F({
 				type: t,
-				channel: (0, I.q_)(e)
+				channel: (0, m.q_)(e)
 			});
 		}
 	),
@@ -570,7 +543,7 @@ k(
 			F({
 				type: t,
 				isNewlyCreated: n,
-				channel: (0, I.q_)(r)
+				channel: (0, m.q_)(r)
 			});
 		}
 	),
@@ -583,7 +556,7 @@ k(
 				guildId: e.guild_id,
 				threads: e.threads.map((e) => {
 					let t = g.Z.getChannel(e.parent_id);
-					return null != t && ((e.nsfw = t.nsfw), (e.parentChannelThreadType = t.type)), (0, I.q_)(e);
+					return null != t && ((e.nsfw = t.nsfw), (e.parentChannelThreadType = t.type)), (0, m.q_)(e);
 				}),
 				mostRecentMessages: e.most_recent_messages,
 				members: e.members ? i().map(e.members, f.Z) : void 0,
@@ -967,7 +940,6 @@ k(
 			type: 'CALL_CREATE',
 			channelId: e.channel_id,
 			messageId: e.message_id,
-			embeddedActivities: e.embedded_activities,
 			region: e.region,
 			ringing: e.ringing
 		});
@@ -1109,13 +1081,13 @@ k(
 	G(['USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE'], (e) => {
 		F({
 			type: 'GUILD_BOOST_SLOT_CREATE',
-			guildBoostSlot: m.Z.createFromServer(e, R.ZP.getSubscriptionById(e.subscription_id))
+			guildBoostSlot: I.Z.createFromServer(e, R.ZP.getSubscriptionById(e.subscription_id))
 		});
 	}),
 	G(['USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_UPDATE'], (e) => {
 		F({
 			type: 'GUILD_BOOST_SLOT_UPDATE',
-			guildBoostSlot: m.Z.createFromServer(e, R.ZP.getSubscriptionById(e.subscription_id))
+			guildBoostSlot: I.Z.createFromServer(e, R.ZP.getSubscriptionById(e.subscription_id))
 		});
 	}),
 	G(['BILLING_POPUP_BRIDGE_CALLBACK'], (e) => {
@@ -1554,20 +1526,6 @@ k(
 			}))
 		});
 	}),
-	k(
-		['EMBEDDED_ACTIVITY_UPDATE'],
-		(e) => g.o.loadGuildIds([e.guild_id]),
-		(e) => {
-			F({
-				type: 'EMBEDDED_ACTIVITY_UPDATE',
-				guildId: e.guild_id,
-				channelId: e.channel_id,
-				embeddedActivity: e.embedded_activity,
-				connections: e.connections,
-				updateCode: e.update_code
-			});
-		}
-	),
 	k(
 		['EMBEDDED_ACTIVITY_UPDATE_V2'],
 		(e) => g.o.loadGuildIds([e.guild_id]),

@@ -33,11 +33,7 @@ function o(e) {
 					let [n, r] = s.M8.edges(e.selection);
 					return (
 						s.bN.withoutNormalizing(e, () => {
-							a.Q.select(e, n),
-								e.insertText('['),
-								a.Q.select(e, r),
-								0 === s.C0.compare(n.path, r.path) && a.Q.move(e, { distance: 1 }),
-								e.insertText(']('.concat(t.target, ')'));
+							a.Q.select(e, n), e.insertText('['), a.Q.select(e, r), 0 === s.C0.compare(n.path, r.path) && a.Q.move(e, { distance: 1 }), e.insertText(']('.concat(t.target, ')'));
 						}),
 						!0
 					);

@@ -54,11 +54,7 @@ function E(e, t, n) {
 	if (null != e) return e;
 	let { size: i = 80, canAnimate: a = !0 } = r,
 		o = null === e;
-	return o && null == t
-		? s.ZP.getDefaultAvatarURL(n.id, n.discriminator)
-		: o || (null == t ? void 0 : t.avatar) == null
-			? n.getAvatarURL(void 0, i, a)
-			: n.getAvatarURL(null == t ? void 0 : t.guildId, i, a);
+	return o && null == t ? s.ZP.getDefaultAvatarURL(n.id, n.discriminator) : o || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, i, a) : n.getAvatarURL(null == t ? void 0 : t.guildId, i, a);
 }
 function f(e) {
 	var t;

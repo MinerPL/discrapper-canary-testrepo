@@ -25,9 +25,7 @@ function I(e, n, t) {
 	return null != T && null != N && (p || A) && S.speaker
 		? (0, i.jsx)(u.MenuItem, {
 				id: 'audience',
-				label: A
-					? E.Z.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE
-					: E.Z.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE_OTHER,
+				label: A ? E.Z.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE : E.Z.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE_OTHER,
 				action: () => {
 					A ? (0, s.yi)(T) : (0, s.hz)(e, T);
 				}

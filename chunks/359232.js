@@ -10,16 +10,13 @@ var l = n(512722),
 	r = n(689938);
 let a = (e, t) => {
 		let { minValues: n, maxValues: l } = e;
-		if (null == t)
-			return 0 === n ? null : r.Z.Messages.MESSAGE_SELECT_COMPONENT_SELECT_REQUIREMENT.format({ count: n });
+		if (null == t) return 0 === n ? null : r.Z.Messages.MESSAGE_SELECT_COMPONENT_SELECT_REQUIREMENT.format({ count: n });
 		if (t.type === i.re.STRING_SELECT) {
 			if (t.values.length < n) return r.Z.Messages.MESSAGE_SELECT_COMPONENT_SELECT_REQUIREMENT.format({ count: n });
 			if (t.values.length > l) return r.Z.Messages.MESSAGE_SELECT_COMPONENT_MAX_SELECT_REQUIREMENT.format({ count: l });
 		} else {
-			if (t.selectedOptions.length < n)
-				return r.Z.Messages.MESSAGE_SELECT_COMPONENT_SELECT_REQUIREMENT.format({ count: n });
-			if (t.selectedOptions.length > l)
-				return r.Z.Messages.MESSAGE_SELECT_COMPONENT_MAX_SELECT_REQUIREMENT.format({ count: l });
+			if (t.selectedOptions.length < n) return r.Z.Messages.MESSAGE_SELECT_COMPONENT_SELECT_REQUIREMENT.format({ count: n });
+			if (t.selectedOptions.length > l) return r.Z.Messages.MESSAGE_SELECT_COMPONENT_MAX_SELECT_REQUIREMENT.format({ count: l });
 		}
 		return null;
 	},

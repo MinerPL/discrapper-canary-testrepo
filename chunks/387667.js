@@ -33,8 +33,7 @@ function a(e) {
 	if (e <= A.rsA.GUILD_UPDATE) return A.KFR.GUILD;
 	if (e <= A.rsA.CHANNEL_DELETE || e === A.rsA.MESSAGE_BULK_DELETE) return A.KFR.CHANNEL;
 	else if (e <= A.rsA.CHANNEL_OVERWRITE_DELETE) return A.KFR.CHANNEL_OVERWRITE;
-	else if (e <= A.rsA.BOT_ADD || e === A.rsA.MESSAGE_DELETE || e === A.rsA.MESSAGE_PIN || e === A.rsA.MESSAGE_UNPIN)
-		return A.KFR.USER;
+	else if (e <= A.rsA.BOT_ADD || e === A.rsA.MESSAGE_DELETE || e === A.rsA.MESSAGE_PIN || e === A.rsA.MESSAGE_UNPIN) return A.KFR.USER;
 	else if (e <= A.rsA.ROLE_DELETE) return A.KFR.ROLE;
 	else if (e <= A.rsA.INVITE_DELETE) return A.KFR.INVITE;
 	else if (e <= A.rsA.WEBHOOK_DELETE) return A.KFR.WEBHOOK;
@@ -145,44 +144,13 @@ function N(e) {
 }
 class l {
 	constructor(e, _, E) {
-		r(this, 'key', void 0),
-			r(this, 'oldValue', void 0),
-			r(this, 'newValue', void 0),
-			r(this, 'subtarget', void 0),
-			(this.key = e),
-			(this.oldValue = _),
-			(this.newValue = E);
+		r(this, 'key', void 0), r(this, 'oldValue', void 0), r(this, 'newValue', void 0), r(this, 'subtarget', void 0), (this.key = e), (this.oldValue = _), (this.newValue = E);
 	}
 }
 class L extends I.Z {
 	constructor(e) {
 		var _, E, s, I, n, A;
-		super(),
-			r(this, 'id', void 0),
-			r(this, 'actionType', void 0),
-			r(this, 'action', void 0),
-			r(this, 'targetType', void 0),
-			r(this, 'targetId', void 0),
-			r(this, 'target', void 0),
-			r(this, 'userId', void 0),
-			r(this, 'changes', void 0),
-			r(this, 'timestampStart', void 0),
-			r(this, 'timestampEnd', void 0),
-			r(this, 'user', void 0),
-			r(this, 'options', void 0),
-			(this.id = e.id),
-			(this.action = e.action),
-			(this.actionType = N(this.action)),
-			(this.targetId = e.targetId),
-			(this.timestampStart =
-				null !== (_ = e.timestampStart) && void 0 !== _ ? _ : T()(t.default.extractTimestamp(this.id))),
-			(this.timestampEnd = null !== (E = e.timestampEnd) && void 0 !== E ? E : this.timestampStart),
-			(this.userId = e.userId),
-			(this.changes = null !== (s = e.changes) && void 0 !== s ? s : []),
-			(this.targetType = a(this.action)),
-			(this.options = null !== (I = e.options) && void 0 !== I ? I : {}),
-			(this.target = null !== (n = e.target) && void 0 !== n ? n : e.id),
-			(this.user = null !== (A = e.user) && void 0 !== A ? A : null);
+		super(), r(this, 'id', void 0), r(this, 'actionType', void 0), r(this, 'action', void 0), r(this, 'targetType', void 0), r(this, 'targetId', void 0), r(this, 'target', void 0), r(this, 'userId', void 0), r(this, 'changes', void 0), r(this, 'timestampStart', void 0), r(this, 'timestampEnd', void 0), r(this, 'user', void 0), r(this, 'options', void 0), (this.id = e.id), (this.action = e.action), (this.actionType = N(this.action)), (this.targetId = e.targetId), (this.timestampStart = null !== (_ = e.timestampStart) && void 0 !== _ ? _ : T()(t.default.extractTimestamp(this.id))), (this.timestampEnd = null !== (E = e.timestampEnd) && void 0 !== E ? E : this.timestampStart), (this.userId = e.userId), (this.changes = null !== (s = e.changes) && void 0 !== s ? s : []), (this.targetType = a(this.action)), (this.options = null !== (I = e.options) && void 0 !== I ? I : {}), (this.target = null !== (n = e.target) && void 0 !== n ? n : e.id), (this.user = null !== (A = e.user) && void 0 !== A ? A : null);
 	}
 }
 _.ZP = L;

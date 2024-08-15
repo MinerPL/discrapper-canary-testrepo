@@ -22,10 +22,7 @@ class l extends r.Z {
 	_handleEventResponse(e) {
 		if (null != e)
 			e.forEach((e) => {
-				'cdm' === e.type &&
-					(e.name === o.rMx.CDM_LOAD_STATUS || e.name === o.rMx.CDM_READY_COMPLETE
-						? i.default.track(e.name, e.data)
-						: console.log('[analytics] received unknown cdm analytic event '.concat(e.name)));
+				'cdm' === e.type && (e.name === o.rMx.CDM_LOAD_STATUS || e.name === o.rMx.CDM_READY_COMPLETE ? i.default.track(e.name, e.data) : console.log('[analytics] received unknown cdm analytic event '.concat(e.name)));
 			});
 	}
 }

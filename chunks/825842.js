@@ -74,11 +74,7 @@ function s(e, t) {
 		let n = e ? String(e) : '';
 		return t ? '0000000'.slice(n.length) + n : n;
 	}
-	return (
-		i >= 10000000 && ((a += Math.floor(i / 10000000)), (i %= 10000000)),
-		a >= 10000000 && ((s += Math.floor(a / 10000000)), (a %= 10000000)),
-		o(s, 0) + o(a, s) + o(i, 1)
-	);
+	return i >= 10000000 && ((a += Math.floor(i / 10000000)), (i %= 10000000)), a >= 10000000 && ((s += Math.floor(a / 10000000)), (a %= 10000000)), o(s, 0) + o(a, s) + o(i, 1);
 }
 function o(e, t) {
 	if (e >= 0) {

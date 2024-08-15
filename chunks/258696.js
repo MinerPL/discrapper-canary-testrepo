@@ -13,8 +13,8 @@ var r = n(735250),
 	f = n(913663),
 	h = n(117530),
 	p = n(594174),
-	I = n(74538),
-	m = n(94161),
+	m = n(74538),
+	I = n(94161),
 	T = n(9277),
 	g = n(897291),
 	S = n(764794),
@@ -57,12 +57,7 @@ t.Z = i.memo(function (e) {
 		H = [],
 		{ enabled: Z } = E.Z.getCurrentConfig({ location: 'dc120b_4' }, { autoTrackExposure: !1 }),
 		Y = p.default.getCurrentUser(),
-		j =
-			null !==
-				(_ = (0, s.e7)([d.Z], () => (Z && I.ZP.isPremiumExactly(Y, O.p9.TIER_2) ? d.Z.getReferralsRemaining() : 0))) &&
-			void 0 !== _
-				? _
-				: 0,
+		j = null !== (_ = (0, s.e7)([d.Z], () => (Z && m.ZP.isPremiumExactly(Y, O.p9.TIER_2) ? d.Z.getReferralsRemaining() : 0))) && void 0 !== _ ? _ : 0,
 		W = (0, s.e7)([d.Z], () => {
 			if (!M.isDM() || void 0 === M.recipients || M.recipients.length > 1 || !Z) return !1;
 			let e = M.recipients[0];
@@ -82,7 +77,7 @@ t.Z = i.memo(function (e) {
 		(M.isDM() &&
 			(null === (g = L.gifts) || void 0 === g ? void 0 : g.button) != null &&
 			null == B &&
-			(I.ZP.isPremiumExactly(Y, O.p9.TIER_2) && z && E.Z.trackExposure({ location: 'dc120b_5' }),
+			(m.ZP.isPremiumExactly(Y, O.p9.TIER_2) && z && E.Z.trackExposure({ location: 'dc120b_5' }),
 			K &&
 				H.push(
 					(0, r.jsx)(
@@ -137,7 +132,7 @@ t.Z = i.memo(function (e) {
 		(null == B || (null != F && F.type !== o.jw.ATTACHMENT)) &&
 		H.push(
 			(0, r.jsx)(
-				m.Z,
+				I.Z,
 				{
 					disabled: b,
 					type: L

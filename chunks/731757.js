@@ -135,8 +135,7 @@ var o = {
 	'creditCard.encryptedPassword.placeholder': '12',
 	'creditCard.encryptedPassword.invalid': 'Neplané heslo',
 	'creditCard.taxNumber': 'Dátum narodenia držiteľa karty alebo identifikačné číslo organizácie',
-	'creditCard.taxNumber.label':
-		'Dátum narodenia držiteľa karty (RRRMMDD) alebo identifikačné číslo organizácie (10 číslic)',
+	'creditCard.taxNumber.label': 'Dátum narodenia držiteľa karty (RRRMMDD) alebo identifikačné číslo organizácie (10 číslic)',
 	'creditCard.taxNumber.labelAlt': 'Identifikačné číslo organizácie (10 číslic)',
 	'creditCard.taxNumber.invalid': 'Neplatný dátum narodenia držiteľa karty alebo identifikačné číslo organizácie',
 	'storedPaymentMethod.disable.button': 'Odstrániť',
@@ -171,8 +170,7 @@ var o = {
 	'blik.invalid': 'Zadajte 6 číslic',
 	'blik.code': '6-ciferný kód',
 	'blik.help': 'Získajte kód zo svojej bankovej aplikácie.',
-	'swish.pendingMessage':
-		'Po nasnímaní môže spracovanie trvať až 10 minút. Pokus o opätovné zaplatenie v tejto lehote môže viesť k niekoľkým poplatkom.',
+	'swish.pendingMessage': 'Po nasnímaní môže spracovanie trvať až 10 minút. Pokus o opätovné zaplatenie v tejto lehote môže viesť k niekoľkým poplatkom.',
 	'field.valid': 'Pole je platné',
 	'field.invalid': 'Pole je neplatné',
 	'error.va.gen.01': 'Neúplné pole',
@@ -208,8 +206,7 @@ var o = {
 	'bankTransfer.iban': 'IBAN',
 	'bankTransfer.bic': 'BIC',
 	'bankTransfer.reference': 'Referencie',
-	'bankTransfer.introduction':
-		'Pokračujte vo vytváraní novej platby bankovým prevodom. Túto platbu môžete dokončiť pomocou informácií na nasledujúcej obrazovke.',
+	'bankTransfer.introduction': 'Pokračujte vo vytváraní novej platby bankovým prevodom. Túto platbu môžete dokončiť pomocou informácií na nasledujúcej obrazovke.',
 	'bankTransfer.instructions': 'Ďakujeme vám za nákup. Na dokončenie platby použite nasledujúce informácie.',
 	'bacs.accountHolderName': 'Meno majiteľa bankového účtu',
 	'bacs.accountHolderName.invalid': 'Neplatné meno majiteľa bankového účtu',
@@ -218,8 +215,7 @@ var o = {
 	'bacs.bankLocationId': 'Variabilný symbol',
 	'bacs.bankLocationId.invalid': 'Neplatný variabilný symbol',
 	'bacs.consent.amount': 'Súhlasím s tým, že nižšie uvedená čiastka bude odpísaná z môjho bankového účtu.',
-	'bacs.consent.account':
-		'Potvrdzujem, že účet je na moje meno a som jediný podpisovateľ, ktorý je povinný autorizovať inkaso v tomto účte.',
+	'bacs.consent.account': 'Potvrdzujem, že účet je na moje meno a som jediný podpisovateľ, ktorý je povinný autorizovať inkaso v tomto účte.',
 	edit: 'Upraviť',
 	'bacs.confirm': 'Potvrdiť a zaplatiť',
 	'bacs.result.introduction': 'Stiahnite si pokyny k inkasu (DDI/Mandát)',
@@ -252,8 +248,7 @@ var o = {
 	'upi.vpaWaitingMessage': 'Otvorte aplikáciu UPI a potvrďte platbu',
 	'upi.modeSelection': 'Vyberte si, ako by ste chceli používať UPI.',
 	'onlineBanking.termsAndConditions': 'Pokračovaním súhlasíte so %#zmluvnými podmienkami%#',
-	'onlineBankingPL.termsAndConditions':
-		'Pokračovaním súhlasíte, že budete dodržiavať %#regulations%# a %#information obligation%# spoločnosti Przelewy24',
+	'onlineBankingPL.termsAndConditions': 'Pokračovaním súhlasíte, že budete dodržiavať %#regulations%# a %#information obligation%# spoločnosti Przelewy24',
 	'ctp.loading.poweredByCtp': 'Využíva technológiu Click to Pay',
 	'ctp.loading.intro': 'Zisťujeme, či máte uložené nejaké karty v\xA0službe Click to Pay...',
 	'ctp.login.title': 'Pokračovať do služby Click to Pay',
@@ -276,8 +271,7 @@ var o = {
 	'ctp.manualCardEntry': 'Manuálne zadanie karty',
 	'ctp.aria.infoModalButton': 'Čo znamená Click to Pay',
 	'ctp.infoPopup.title': 'Click to Pay prináša jednoduchosť bezkontaktných platieb online',
-	'ctp.infoPopup.subtitle':
-		'Rýchly a\xA0bezpečný spôsob platby podporovaný platobnými kartami Mastercard, Visa a\xA0ďalšími.',
+	'ctp.infoPopup.subtitle': 'Rýchly a\xA0bezpečný spôsob platby podporovaný platobnými kartami Mastercard, Visa a\xA0ďalšími.',
 	'ctp.infoPopup.benefit1': 'Click to Pay používa šifrovanie, aby boli vaše údaje v\xA0bezpečí',
 	'ctp.infoPopup.benefit2': 'Používajte ju u\xA0obchodníkov po celom svete',
 	'ctp.infoPopup.benefit3': 'Jedno nastavenie pre pohodlné platby v\xA0budúcnosti',

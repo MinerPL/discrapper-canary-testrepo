@@ -9,15 +9,7 @@ var r = n(470079),
 	s = n(691251),
 	o = n(98528);
 let l = (e) => {
-	let {
-			columnCounts: t,
-			stickersGrid: n,
-			stickersListRef: l,
-			store: u,
-			gridNavigatorId: c,
-			setInspectedStickerPosition: d,
-			onGridItemSelect: _
-		} = e,
+	let { columnCounts: t, stickersGrid: n, stickersListRef: l, store: u, gridNavigatorId: c, setInspectedStickerPosition: d, onGridItemSelect: _ } = e,
 		E = (0, a.O)(),
 		f = r.useCallback(
 			(e) => {
@@ -33,8 +25,8 @@ let l = (e) => {
 		),
 		{
 			gridDispatch: p,
-			getItemProps: I,
-			getRowProps: m,
+			getItemProps: m,
+			getRowProps: I,
 			gridContainerProps: T,
 			handleGridContainerKeyDown: g,
 			isUsingKeyboardNavigation: S
@@ -65,8 +57,8 @@ let l = (e) => {
 			[p, u]
 		),
 		{
-			getItemProps: I,
-			getRowProps: m,
+			getItemProps: m,
+			getRowProps: I,
 			gridContainerProps: T,
 			handleGridContainerKeyDown: g,
 			isUsingKeyboardNavigation: S

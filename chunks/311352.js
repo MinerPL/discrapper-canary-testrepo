@@ -93,10 +93,7 @@ t.Z = () => {
 		keybindString: o,
 		children: (0, i.jsx)(c.Z, {
 			disabled: r,
-			tooltipText:
-				null != s
-					? m.Z.Messages.CLIPS_SAVE_CLIP_TOOLTIP.format({ hotkey: h.BB(null == s ? void 0 : s.shortcut, !0) })
-					: m.Z.Messages.CLIPS_EDIT_SAVE_CLIP,
+			tooltipText: null != s ? m.Z.Messages.CLIPS_SAVE_CLIP_TOOLTIP.format({ hotkey: h.BB(null == s ? void 0 : s.shortcut, !0) }) : m.Z.Messages.CLIPS_EDIT_SAVE_CLIP,
 			onClick: E,
 			onContextMenu: I,
 			icon: a.ClipsIcon

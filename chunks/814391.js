@@ -16,13 +16,7 @@ let s = 3600,
 	d = (e, t) => null != t && null != t[e],
 	_ = (e, t, n) => {
 		var r, i, a;
-		return d(e, t)
-			? null !== (i = null !== (r = t[e]) && void 0 !== r ? r : null == n ? void 0 : n[e]) && void 0 !== i
-				? i
-				: null
-			: null !== (a = null == n ? void 0 : n[e]) && void 0 !== a
-				? a
-				: null;
+		return d(e, t) ? (null !== (i = null !== (r = t[e]) && void 0 !== r ? r : null == n ? void 0 : n[e]) && void 0 !== i ? i : null) : null !== (a = null == n ? void 0 : n[e]) && void 0 !== a ? a : null;
 	};
 t.Z = function (e, t) {
 	let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],

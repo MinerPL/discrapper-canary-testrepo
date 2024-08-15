@@ -39,7 +39,7 @@ n.d(t, {
 		return r;
 	},
 	xs: function () {
-		return I;
+		return m;
 	},
 	zV: function () {
 		return d;
@@ -63,4 +63,4 @@ var r = 'top',
 	p = [].concat(l, [o]).reduce(function (e, t) {
 		return e.concat([t, t + '-' + u, t + '-' + c]);
 	}, []),
-	I = ['beforeRead', 'read', 'afterRead', 'beforeMain', 'main', 'afterMain', 'beforeWrite', 'write', 'afterWrite'];
+	m = ['beforeRead', 'read', 'afterRead', 'beforeMain', 'main', 'afterMain', 'beforeWrite', 'write', 'afterWrite'];

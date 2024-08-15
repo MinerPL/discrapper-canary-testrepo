@@ -16,28 +16,7 @@ var i = n(735250),
 	c = n(626135),
 	d = n(981631),
 	u = n(671078);
-let _ = [
-		'egirl',
-		'egirls',
-		'waifu',
-		'dating',
-		'nsfw',
-		'sex',
-		'playboy',
-		'stupid',
-		'harem',
-		'playgirl',
-		'shitcoin',
-		'shitpost',
-		'porno',
-		'nudes',
-		'sexy',
-		'horny',
-		'fart',
-		'tits',
-		'balls',
-		'cum'
-	],
+let _ = ['egirl', 'egirls', 'waifu', 'dating', 'nsfw', 'sex', 'playboy', 'stupid', 'harem', 'playgirl', 'shitcoin', 'shitpost', 'porno', 'nudes', 'sexy', 'horny', 'fart', 'tits', 'balls', 'cum'],
 	E = (e) => {
 		let { text: t, onClick: n, className: a, hide: s } = e;
 		return (0, i.jsx)('li', {
@@ -103,15 +82,7 @@ let _ = [
 		ALT: u.tagAlt
 	},
 	g = (e) => {
-		let {
-				tags: t,
-				onTagClick: n,
-				className: s,
-				discoveryTagStyle: l = I.DEFAULT,
-				hideOverflow: c = !1,
-				guildId: d,
-				section: h
-			} = e,
+		let { tags: t, onTagClick: n, className: s, discoveryTagStyle: l = I.DEFAULT, hideOverflow: c = !1, guildId: d, section: h } = e,
 			{ ref: g, width: p } = (0, o.Z)(),
 			[T, S] = a.useState(null),
 			f = t.filter((e) => !_.includes(e.toLowerCase()));
@@ -121,11 +92,7 @@ let _ = [
 				let e = 0,
 					t = 0,
 					n = p - 40 - 4;
-				for (
-					let i = 0;
-					i < f.length && ((t += g.current.children[i].clientWidth + 4), i === f.length - 1 ? !(t > n + 40) : !(t > n));
-					i++
-				) {
+				for (let i = 0; i < f.length && ((t += g.current.children[i].clientWidth + 4), i === f.length - 1 ? !(t > n + 40) : !(t > n)); i++) {
 					e++;
 				}
 				S((t) => (e <= f.length ? e : t));

@@ -160,9 +160,7 @@ s.ZP = function (e) {
 									(0, n.jsx)(r.Text, {
 										variant: 'text-md/normal',
 										className: I.dropBodyText,
-										children: a
-											? u.Z.Messages.DROPS_MODAL_CHOOSE_SINGLE_PLATFORM.format({ platform: (0, E.Un)(g[0]) })
-											: u.Z.Messages.DROPS_MODAL_CHOOSE_PLATFORM.format({ title: S.title })
+										children: a ? u.Z.Messages.DROPS_MODAL_CHOOSE_SINGLE_PLATFORM.format({ platform: (0, E.Un)(g[0]) }) : u.Z.Messages.DROPS_MODAL_CHOOSE_PLATFORM.format({ title: S.title })
 									}),
 									(0, n.jsx)(r.FormDivider, { className: I.formDivider }),
 									(0, n.jsxs)(r.FormSection, {

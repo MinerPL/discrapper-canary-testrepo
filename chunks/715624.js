@@ -1,6 +1,5 @@
-Object.defineProperty(e, '__esModule', { value: !0 }),
-	(e.IntlManagerReact = e.DEFAULT_LOCALE = e.createLoader = e.IntlManager = void 0);
-var n = r(461277);
+Object.defineProperty(e, '__esModule', { value: !0 }), (e.IntlManagerReact = e.DEFAULT_LOCALE = e.createLoader = e.IntlManager = void 0);
+var n = r(563803);
 Object.defineProperty(e, 'IntlManager', {
 	enumerable: !0,
 	get: function () {
@@ -19,7 +18,7 @@ Object.defineProperty(e, 'IntlManager', {
 			return n.DEFAULT_LOCALE;
 		}
 	});
-var i = r(436685);
+var i = r(935343);
 Object.defineProperty(e, 'IntlManagerReact', {
 	enumerable: !0,
 	get: function () {

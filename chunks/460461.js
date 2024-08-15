@@ -110,17 +110,8 @@ let D = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
 					var t, n, s, a;
 					let i = new URL(e).hostname.split('.');
 					if (3 === i.length && 'bandcamp' === i[1].toLowerCase()) return O.zo.bandcamp.presentation;
-					let r =
-						null !== (n = null === (t = i.shift()) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== n ? n : '';
-					if (
-						('www' === r &&
-							(r =
-								null !== (a = null === (s = i.shift()) || void 0 === s ? void 0 : s.toLowerCase()) && void 0 !== a
-									? a
-									: ''),
-						r in O.zo)
-					)
-						return O.zo[r].presentation;
+					let r = null !== (n = null === (t = i.shift()) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== n ? n : '';
+					if (('www' === r && (r = null !== (a = null === (s = i.shift()) || void 0 === s ? void 0 : s.toLowerCase()) && void 0 !== a ? a : ''), r in O.zo)) return O.zo[r].presentation;
 					return null;
 				} catch {
 					return null;
@@ -149,14 +140,11 @@ let D = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
 			},
 			q = (e) => {
 				var t;
-				(null == n ? void 0 : n.id) != null &&
-					u.TA(null == n ? void 0 : n.id, null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : O.o3);
+				(null == n ? void 0 : n.id) != null && u.TA(null == n ? void 0 : n.id, null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : O.o3);
 			},
 			X = (e) => {
 				var t;
-				x.Z.updateGuild({
-					description: null !== (t = null == e ? void 0 : e.replaceAll('\n', '')) && void 0 !== t ? t : ''
-				});
+				x.Z.updateGuild({ description: null !== (t = null == e ? void 0 : e.replaceAll('\n', '')) && void 0 !== t ? t : '' });
 			},
 			Q = (e) => {
 				u.mA(n.id, e);
@@ -209,9 +197,7 @@ let D = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
 				let s = [...b.socialLinks],
 					a = s[t],
 					i = e;
-				0 === a.length && i.length > 1 && !1 === RegExp('^https?:').test(i) && (i = 'https://' + i),
-					(s[t] = i),
-					u.t$(n.id, s);
+				0 === a.length && i.length > 1 && !1 === RegExp('^https?:').test(i) && (i = 'https://' + i), (s[t] = i), u.t$(n.id, s);
 			},
 			en = (e) => {
 				let t = [...F];
@@ -249,10 +235,7 @@ let D = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
 						},
 						{
 							description: A.Z.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_REASONS,
-							completed:
-								null !== b.reasonsToJoin &&
-								b.reasonsToJoin.every((e) => ea(e) || es(e)) &&
-								b.reasonsToJoin.filter(es).length >= 2
+							completed: null !== b.reasonsToJoin && b.reasonsToJoin.every((e) => ea(e) || es(e)) && b.reasonsToJoin.filter(es).length >= 2
 						}
 					]
 				}
@@ -289,15 +272,7 @@ let D = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
 											(0, s.jsxs)(l.FormText, {
 												className: M.tabMainDescription,
 												type: l.FormTextTypes.DESCRIPTION,
-												children: [
-													A.Z.Messages.DISCOVERY_LANDING_PAGE_DESCRIPTION.format({
-														discordURL: window.GLOBAL_ENV.MARKETING_ENDPOINT
-													}),
-													' ',
-													A.Z.Messages.DISCOVERY_LANDING_PAGE_LEARN_MORE.format({
-														learnMoreURL: C.Z.getArticleURL(L.BhN.SERVER_WEB_PAGES)
-													})
-												]
+												children: [A.Z.Messages.DISCOVERY_LANDING_PAGE_DESCRIPTION.format({ discordURL: window.GLOBAL_ENV.MARKETING_ENDPOINT }), ' ', A.Z.Messages.DISCOVERY_LANDING_PAGE_LEARN_MORE.format({ learnMoreURL: C.Z.getArticleURL(L.BhN.SERVER_WEB_PAGES) })]
 											}),
 											(() => {
 												if (!b.isPublished || null == U) return;
@@ -561,8 +536,7 @@ let D = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
 																			{
 																				className: b.isPublished ? M.socialLinksDropdownMax : M.socialLinksDropdownMin,
 																				options: V(w[t]),
-																				placeholder:
-																					A.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_DROPDOWN_PLACEHOLDER,
+																				placeholder: A.Z.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_DROPDOWN_PLACEHOLDER,
 																				value: w[t],
 																				onChange: (e) => ee(e, t),
 																				isDisabled: !j
@@ -608,13 +582,7 @@ let D = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
 																			(0, s.jsx)(
 																				o.Z,
 																				{
-																					className: F[t]
-																						? b.isPublished
-																							? M.deleteButtonMax
-																							: M.deleteButtonMin
-																						: b.isPublished
-																							? M.deleteButtonHiddenMax
-																							: M.deleteButtonHiddenMin,
+																					className: F[t] ? (b.isPublished ? M.deleteButtonMax : M.deleteButtonMin) : b.isPublished ? M.deleteButtonHiddenMax : M.deleteButtonHiddenMin,
 																					onClick: () => en(t)
 																				},
 																				'delete-button-' + t

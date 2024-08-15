@@ -31,20 +31,4 @@ class c {
 		u(this, 'id', void 0), u(this, 'text', void 0), (this.id = e), (this.text = e);
 	}
 }
-((s = r || (r = {})).UP = 'UP'),
-	(s.DOWN = 'DOWN'),
-	((o = i || (i = {})).GUILD = 'GUILD'),
-	(o.TEXT_CHANNEL = 'TEXT_CHANNEL'),
-	(o.GROUP_DM = 'GROUP_DM'),
-	(o.VOICE_CHANNEL = 'VOICE_CHANNEL'),
-	(o.USER = 'USER'),
-	(o.HEADER = 'HEADER'),
-	(o.APPLICATION = 'APPLICATION'),
-	(o.SKU = 'SKU'),
-	(o.LINK = 'LINK'),
-	(o.IN_APP_NAVIGATION = 'IN_APP_NAVIGATION'),
-	((l = a || (a = {})).USER = '@'),
-	(l.TEXT_CHANNEL = '#'),
-	(l.VOICE_CHANNEL = '!'),
-	(l.GUILD = '*'),
-	(l.APPLICATION = '$');
+((s = r || (r = {})).UP = 'UP'), (s.DOWN = 'DOWN'), ((o = i || (i = {})).GUILD = 'GUILD'), (o.TEXT_CHANNEL = 'TEXT_CHANNEL'), (o.GROUP_DM = 'GROUP_DM'), (o.VOICE_CHANNEL = 'VOICE_CHANNEL'), (o.USER = 'USER'), (o.HEADER = 'HEADER'), (o.APPLICATION = 'APPLICATION'), (o.SKU = 'SKU'), (o.LINK = 'LINK'), (o.IN_APP_NAVIGATION = 'IN_APP_NAVIGATION'), ((l = a || (a = {})).USER = '@'), (l.TEXT_CHANNEL = '#'), (l.VOICE_CHANNEL = '!'), (l.GUILD = '*'), (l.APPLICATION = '$');

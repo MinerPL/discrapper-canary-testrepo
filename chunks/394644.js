@@ -53,18 +53,7 @@ function Z(e) {
 	let s = [
 			{
 				header: b.Z.Messages.USER_SETTINGS,
-				settings: [
-					P.s6.ACCOUNT,
-					P.s6.GAMES,
-					P.s6.PROFILE_CUSTOMIZATION,
-					P.s6.PRIVACY_AND_SAFETY,
-					P.s6.PRIVACY_FAMILY_CENTER,
-					P.s6.AUTHORIZED_APPS,
-					P.s6.SESSIONS,
-					P.s6.CONNECTIONS,
-					P.s6.CLIPS,
-					P.s6.FRIEND_REQUESTS
-				]
+				settings: [P.s6.ACCOUNT, P.s6.GAMES, P.s6.PROFILE_CUSTOMIZATION, P.s6.PRIVACY_AND_SAFETY, P.s6.PRIVACY_FAMILY_CENTER, P.s6.AUTHORIZED_APPS, P.s6.SESSIONS, P.s6.CONNECTIONS, P.s6.CLIPS, P.s6.FRIEND_REQUESTS]
 			},
 			{
 				header: b.Z.Messages.BILLING_SETTINGS,
@@ -74,39 +63,11 @@ function Z(e) {
 			{
 				header: b.Z.Messages.APP_SETTINGS,
 				divider: !0,
-				settings: [
-					P.s6.APPEARANCE,
-					P.s6.ACCESSIBILITY,
-					P.s6.VOICE_AND_VIDEO,
-					P.s6.POGGERMODE,
-					P.s6.CHAT,
-					P.s6.NOTIFICATIONS,
-					P.s6.KEYBINDS,
-					P.s6.LANGUAGE,
-					P.s6.WINDOW_SETTINGS,
-					P.s6.LINUX_SETTINGS,
-					P.s6.STREAMER_MODE,
-					P.s6.SETTINGS_ADVANCED
-				]
+				settings: [P.s6.APPEARANCE, P.s6.ACCESSIBILITY, P.s6.VOICE_AND_VIDEO, P.s6.POGGERMODE, P.s6.CHAT, P.s6.NOTIFICATIONS, P.s6.KEYBINDS, P.s6.LANGUAGE, P.s6.WINDOW_SETTINGS, P.s6.LINUX_SETTINGS, P.s6.STREAMER_MODE, P.s6.SETTINGS_ADVANCED]
 			},
 			{
 				divider: !0,
-				settings: [
-					P.s6.CHANGELOG,
-					P.s6.MERCHANDISE,
-					P.s6.HYPESQUAD,
-					P.s6.EXPERIMENTS,
-					P.s6.DEVELOPER_OPTIONS,
-					P.s6.HOTSPOT_OPTIONS,
-					P.s6.DISMISSIBLE_CONTENT_OPTIONS,
-					P.s6.PAYMENT_FLOW_MODALS,
-					P.s6.DESIGN_SYSTEMS,
-					P.s6.TEXT_PLAYGROUND,
-					P.s6.TEXT_COMPONENTS,
-					P.s6.INTL_TESTING,
-					P.s6.PROFILE_EFFECTS_PREVIEW_TOOL,
-					P.s6.QUEST_PREVIEW_TOOL
-				]
+				settings: [P.s6.CHANGELOG, P.s6.MERCHANDISE, P.s6.HYPESQUAD, P.s6.EXPERIMENTS, P.s6.DEVELOPER_OPTIONS, P.s6.HOTSPOT_OPTIONS, P.s6.DISMISSIBLE_CONTENT_OPTIONS, P.s6.PAYMENT_FLOW_MODALS, P.s6.DESIGN_SYSTEMS, P.s6.TEXT_PLAYGROUND, P.s6.TEXT_COMPONENTS, P.s6.INTL_TESTING, P.s6.PROFILE_EFFECTS_PREVIEW_TOOL, P.s6.QUEST_PREVIEW_TOOL]
 			},
 			{
 				divider: !0,
@@ -145,10 +106,7 @@ function v() {
 	let { shouldMergeGameSettings: j } = p.b.useExperiment({ location: 'settings' }),
 		B = (0, M.eA)({ location: 'settings' }),
 		U = (0, E.Xo)({ location: 'settings' }),
-		G =
-			null !== (s = null === (e = h.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) &&
-			void 0 !== s &&
-			s,
+		G = null !== (s = null === (e = h.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== s && s,
 		F = (0, m.y0)({ location: 'settings' }),
 		y = (0, l.Q)(),
 		V = (0, C.Zy)({ location: L.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
@@ -268,10 +226,7 @@ function B(e, s) {
 						...s[e],
 						tabPredicate: () => {
 							var s, t, a;
-							return (
-								null == n ||
-								((s = e), (t = n), (a = o), (s === P.s6.SEARCH_NO_RESULTS && 0 === t.size) || a.has(s) || t.has(s))
-							);
+							return null == n || ((s = e), (t = n), (a = o), (s === P.s6.SEARCH_NO_RESULTS && 0 === t.size) || a.has(s) || t.has(s));
 						},
 						searchFilterCount: !t || (null == n ? void 0 : n.has(e)) ? void 0 : o.get(e)
 					});

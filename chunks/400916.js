@@ -19,19 +19,8 @@ function I(e) {
 	var t, n, a, I;
 	let { guildId: m, productId: T } = e,
 		h = (0, r.e7)([c.Z], () => c.Z.getGuildProduct(T)),
-		N =
-			(null !== (I = null == h ? void 0 : null === (t = h.attachments) || void 0 === t ? void 0 : t.length) &&
-			void 0 !== I
-				? I
-				: 0) > 1,
-		f =
-			null == h
-				? void 0
-				: null === (a = h.attachments) || void 0 === a
-					? void 0
-					: null === (n = a[0]) || void 0 === n
-						? void 0
-						: n.id;
+		N = (null !== (I = null == h ? void 0 : null === (t = h.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== I ? I : 0) > 1,
+		f = null == h ? void 0 : null === (a = h.attachments) || void 0 === a ? void 0 : null === (n = a[0]) || void 0 === n ? void 0 : n.id;
 	return N
 		? (0, i.jsxs)(l.Button, {
 				onClick: function () {

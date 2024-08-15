@@ -97,10 +97,7 @@ f.subscribe(
 						flow_type: e.type,
 						from_step: e.lastStep,
 						to_step: e.currentStep,
-						seconds_on_from_step:
-							'function' != typeof (null === (t = e.lastTimestamp) || void 0 === t ? void 0 : t.getTime)
-								? 0
-								: (e.currentTimestamp.getTime() - e.lastTimestamp.getTime()) / 1000
+						seconds_on_from_step: 'function' != typeof (null === (t = e.lastTimestamp) || void 0 === t ? void 0 : t.getTime) ? 0 : (e.currentTimestamp.getTime() - e.lastTimestamp.getTime()) / 1000
 					},
 					{ flush: !0 }
 				),

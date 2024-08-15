@@ -100,10 +100,7 @@ function p() {
 								t.length > 0
 									? (0, n.jsxs)(d.FormSection, {
 											tag: d.FormTitleTags.H5,
-											title:
-												p.size > 0
-													? g.Z.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_TITLE
-													: g.Z.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_TITLE,
+											title: p.size > 0 ? g.Z.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_TITLE : g.Z.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_TITLE,
 											children: [
 												(0, n.jsx)(d.FormText, {
 													type: d.FormTextTypes.DESCRIPTION,
@@ -117,10 +114,7 @@ function p() {
 													onClick: () => {
 														p.size > 0 ? (0, u.L$)(Array.from(p)) : (0, u.L$)(t.map((e) => e.id_hash));
 													},
-													children:
-														p.size > 0
-															? g.Z.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_ACTION.format({ count: p.size })
-															: g.Z.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_ACTION
+													children: p.size > 0 ? g.Z.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_ACTION.format({ count: p.size }) : g.Z.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_ACTION
 												})
 											]
 										})
@@ -175,12 +169,7 @@ function p() {
 function R(e) {
 	var s, t, a, i, o;
 	let { session: l, current: c, setChecked: _, checked: E, useChecks: T } = e,
-		S =
-			null !== (o = null === (s = l.client_info) || void 0 === s ? void 0 : s.location) && void 0 !== o
-				? o
-				: null === (t = l.client_info) || void 0 === t
-					? void 0
-					: t.ip,
+		S = null !== (o = null === (s = l.client_info) || void 0 === s ? void 0 : s.location) && void 0 !== o ? o : null === (t = l.client_info) || void 0 === t ? void 0 : t.ip,
 		N = null === (a = l.client_info) || void 0 === a ? void 0 : a.platform,
 		{ text: C, icon: A } = (function (e) {
 			switch (null == e ? void 0 : e.toLowerCase().trim()) {
@@ -298,11 +287,7 @@ function x() {
 						variant: 'text-sm/medium',
 						className: h.sessionInfoRow,
 						color: 'text-muted',
-						children: (0, n.jsx)('span', {
-							children: g.Z.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY_LOG_OUT.format({
-								onClick: () => _.Z.setSection(A.oAB.ACCOUNT)
-							})
-						})
+						children: (0, n.jsx)('span', { children: g.Z.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY_LOG_OUT.format({ onClick: () => _.Z.setSection(A.oAB.ACCOUNT) }) })
 					})
 				]
 			})

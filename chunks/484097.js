@@ -24,10 +24,7 @@ t.default = (e) => {
 						c.ZP.focus();
 						let e = n.guild_id,
 							t = n.id;
-						return (
-							n.type === h.d4z.GUILD_VOICE && (null != n.getGuildId() && r.default.selectVoiceChannel(n.id), (t = e)),
-							null != t && null != e ? h.Z5c.CHANNEL(e, t) : null
-						);
+						return n.type === h.d4z.GUILD_VOICE && (null != n.getGuildId() && r.default.selectVoiceChannel(n.id), (t = e)), null != t && null != e ? h.Z5c.CHANNEL(e, t) : null;
 					}
 					if (l) {
 						let l = () => {

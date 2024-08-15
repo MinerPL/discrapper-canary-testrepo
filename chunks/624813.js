@@ -9,11 +9,7 @@ var o = n(230371),
 		return e.replace(l, '-$&').toLowerCase();
 	}),
 	p = function (e, t) {
-		return null == t || 'boolean' == typeof t
-			? ''
-			: 1 === r.Z[e] || 45 === e.charCodeAt(1) || isNaN(t) || 0 === t
-				? t
-				: t + 'px';
+		return null == t || 'boolean' == typeof t ? '' : 1 === r.Z[e] || 45 === e.charCodeAt(1) || isNaN(t) || 0 === t ? t : t + 'px';
 	},
 	d = function e(t) {
 		for (var n = t.length, o = 0, r = ''; o < n; o++) {
@@ -41,13 +37,7 @@ var o = n(230371),
 	f = 'undefined' != typeof document;
 function h(e) {
 	var t = document.createElement('style');
-	return (
-		t.setAttribute('data-emotion', e.key || ''),
-		void 0 !== e.nonce && t.setAttribute('nonce', e.nonce),
-		t.appendChild(document.createTextNode('')),
-		(void 0 !== e.container ? e.container : document.head).appendChild(t),
-		t
-	);
+	return t.setAttribute('data-emotion', e.key || ''), void 0 !== e.nonce && t.setAttribute('nonce', e.nonce), t.appendChild(document.createTextNode('')), (void 0 !== e.container ? e.container : document.head).appendChild(t), t;
 }
 var m = (function () {
 	function e(e) {
@@ -67,8 +57,7 @@ var m = (function () {
 			if (this.isSpeedy) {
 				var n = (function (e) {
 					if (e.sheet) return e.sheet;
-					for (var t = 0; t < document.styleSheets.length; t++)
-						if (document.styleSheets[t].ownerNode === e) return document.styleSheets[t];
+					for (var t = 0; t < document.styleSheets.length; t++) if (document.styleSheets[t].ownerNode === e) return document.styleSheets[t];
 				})(this.tags[this.tags.length - 1]);
 				try {
 					n.insertRule(e, n.cssRules.length);

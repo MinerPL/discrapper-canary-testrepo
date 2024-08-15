@@ -35,15 +35,15 @@ function f(e) {
 			color: d.Button.Colors.BRAND,
 			look: d.Button.Looks.FILLED
 		},
-		secondaryButtonProps: I = { color: d.Button.Colors.BRAND_INVERTED },
-		onComponentMount: m,
+		secondaryButtonProps: m = { color: d.Button.Colors.BRAND_INVERTED },
+		onComponentMount: I,
 		asset: T,
 		markAsDismissed: g,
 		caretPosition: S = 'caretTopCenter',
 		buttonLayout: A = 0
 	} = e;
 	l.useEffect(() => {
-		null == m || m();
+		null == I || I();
 	}, []);
 	let N = null != u;
 	return (0, o.jsxs)('div', {
@@ -72,7 +72,7 @@ function f(e) {
 						children: [
 							N
 								? (0, o.jsx)(d.Button, {
-										...I,
+										...m,
 										fullWidth: 1 === A,
 										onClick: () => {
 											null == h || h(), null == g || g(_.L.SECONDARY);
@@ -96,16 +96,4 @@ function f(e) {
 		]
 	});
 }
-((r = a || (a = {})).TOP_CENTER = 'caretTopCenter'),
-	(r.TOP_RIGHT = 'caretTopRight'),
-	(r.TOP_LEFT = 'caretTopLeft'),
-	(r.BOTTOM_CENTER = 'caretBottomCenter'),
-	(r.BOTTOM_LEFT = 'caretBottomLeft'),
-	(r.LEFT_CENTER = 'caretLeftCenter'),
-	(r.LEFT_TOP = 'caretLeftTop'),
-	(r.RIGHT_CENTER = 'caretRightCenter'),
-	(r.RIGHT_TOP = 'caretRightTop'),
-	((i = s || (s = {}))[(i.ADJACENT = 0)] = 'ADJACENT'),
-	(i[(i.STACKED = 1)] = 'STACKED'),
-	(f.CaretPosition = a),
-	(f.ButtonLayout = s);
+((r = a || (a = {})).TOP_CENTER = 'caretTopCenter'), (r.TOP_RIGHT = 'caretTopRight'), (r.TOP_LEFT = 'caretTopLeft'), (r.BOTTOM_CENTER = 'caretBottomCenter'), (r.BOTTOM_LEFT = 'caretBottomLeft'), (r.LEFT_CENTER = 'caretLeftCenter'), (r.LEFT_TOP = 'caretLeftTop'), (r.RIGHT_CENTER = 'caretRightCenter'), (r.RIGHT_TOP = 'caretRightTop'), ((i = s || (s = {}))[(i.ADJACENT = 0)] = 'ADJACENT'), (i[(i.STACKED = 1)] = 'STACKED'), (f.CaretPosition = a), (f.ButtonLayout = s);

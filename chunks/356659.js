@@ -6,7 +6,7 @@ n.d(t, {
 		return S;
 	},
 	Bg: function () {
-		return I;
+		return m;
 	},
 	D5: function () {
 		return c;
@@ -45,7 +45,7 @@ n.d(t, {
 		return R;
 	},
 	WM: function () {
-		return m;
+		return I;
 	},
 	X9: function () {
 		return u;
@@ -103,23 +103,13 @@ var r,
 	c,
 	d = n(710845),
 	_ = n(70956);
-((r = o || (o = {}))[(r.SECONDS_30 = 30 * _.Z.Millis.SECOND)] = 'SECONDS_30'),
-	(r[(r.MINUTES_1 = _.Z.Millis.MINUTE)] = 'MINUTES_1'),
-	(r[(r.MINUTES_2 = 2 * _.Z.Millis.MINUTE)] = 'MINUTES_2'),
-	((i = l || (l = {}))[(i.ALL = 0)] = 'ALL'),
-	(i[(i.FRIENDS = 1)] = 'FRIENDS'),
-	((a = u || (u = {})).DECOUPLED = 'decoupled'),
-	(a.VIEWER = 'viewer'),
-	(a.STREAMER = 'streamer'),
-	((s = c || (c = {}))[(s.Error = 0)] = 'Error'),
-	(s[(s.Disabled = 1)] = 'Disabled'),
-	(s[(s.Enabled = 2)] = 'Enabled');
+((r = o || (o = {}))[(r.SECONDS_30 = 30 * _.Z.Millis.SECOND)] = 'SECONDS_30'), (r[(r.MINUTES_1 = _.Z.Millis.MINUTE)] = 'MINUTES_1'), (r[(r.MINUTES_2 = 2 * _.Z.Millis.MINUTE)] = 'MINUTES_2'), ((i = l || (l = {}))[(i.ALL = 0)] = 'ALL'), (i[(i.FRIENDS = 1)] = 'FRIENDS'), ((a = u || (u = {})).DECOUPLED = 'decoupled'), (a.VIEWER = 'viewer'), (a.STREAMER = 'streamer'), ((s = c || (c = {}))[(s.Error = 0)] = 'Error'), (s[(s.Disabled = 1)] = 'Disabled'), (s[(s.Enabled = 2)] = 'Enabled');
 let E = 'alt+c',
 	f = 6 * _.Z.Millis.SECOND,
 	h = new d.Z('Clips'),
 	p = (e) => 'Discord_Clip_'.concat(e, '.mp4'),
-	I = 3,
-	m = 1,
+	m = 3,
+	I = 1,
 	T = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
 	g = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
 	S = /(Apple M[12].*)/,

@@ -33,20 +33,8 @@ function Z() {
 		x = (0, d.lg)(O),
 		b = !C.MU.has(O),
 		P = (0, r.iN)('global_discovery_servers_layout'),
-		{
-			searchBarState: M,
-			onTabsAvailableWidthChange: D,
-			onCollapsedSearchBarClick: y,
-			onSearchBarBlur: j,
-			tabsClassName: U
-		} = (0, E.U)({ isSearchBarVisible: b }),
-		{
-			searchQuery: G,
-			onSearchTextChange: k,
-			onClearSearch: w,
-			onSearchSubmit: B,
-			isSearchVisible: H
-		} = (0, S.H)({ loadId: e.current }),
+		{ searchBarState: M, onTabsAvailableWidthChange: D, onCollapsedSearchBarClick: y, onSearchBarBlur: j, tabsClassName: U } = (0, E.U)({ isSearchBarVisible: b }),
+		{ searchQuery: G, onSearchTextChange: k, onClearSearch: w, onSearchSubmit: B, isSearchVisible: H } = (0, S.H)({ loadId: e.current }),
 		V = a.useCallback(
 			(e) => {
 				R(e), H && w();
@@ -87,10 +75,7 @@ function Z() {
 			default:
 				return (0, i.jsx)(m.Z, {
 					query: G,
-					placeholder:
-						x === N.Hk
-							? A.Z.Messages.SEARCH
-							: A.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({ title: (0, d.vb)(O) }),
+					placeholder: x === N.Hk ? A.Z.Messages.SEARCH : A.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({ title: (0, d.vb)(O) }),
 					onTextChange: k,
 					onClear: w,
 					onSubmit: B,

@@ -8,35 +8,19 @@ var r = n(735250),
 	a = n(1561),
 	s = n(251475);
 function o(e) {
-	let {
-			tag: t = 'div',
-			children: n,
-			className: o,
-			focusProps: l,
-			onClick: u,
-			onDoubleClick: c,
-			onContextMenu: d,
-			onKeyDown: _,
-			onFocus: E,
-			onBlur: f,
-			onMouseOver: h,
-			onMouseDown: p,
-			onMouseLeave: I,
-			buttonProps: m,
-			'aria-label': T
-		} = e,
+	let { tag: t = 'div', children: n, className: o, focusProps: l, onClick: u, onDoubleClick: c, onContextMenu: d, onKeyDown: _, onFocus: E, onBlur: f, onMouseOver: h, onMouseDown: p, onMouseLeave: m, buttonProps: I, 'aria-label': T } = e,
 		g = i.useRef(null);
 	return (0, r.jsxs)(t, {
 		ref: g,
 		className: o,
 		onClick: u,
 		onMouseOver: h,
-		onMouseLeave: I,
+		onMouseLeave: m,
 		onDoubleClick: c,
 		onContextMenu: d,
 		children: [
 			(0, r.jsx)(a.P, {
-				...m,
+				...I,
 				focusProps: {
 					ringTarget: g,
 					...l

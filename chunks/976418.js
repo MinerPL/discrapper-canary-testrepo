@@ -13,8 +13,7 @@ var e = n(175440),
 		return t;
 	},
 	f = function (t, r, n, e) {
-		for (var o = r.length, i = n.length, u = 0, f = 0; u < o || f < i; )
-			t[u + f] = u < o && f < i ? (0 >= e(r[u], n[f]) ? r[u++] : n[f++]) : u < o ? r[u++] : n[f++];
+		for (var o = r.length, i = n.length, u = 0, f = 0; u < o || f < i; ) t[u + f] = u < o && f < i ? (0 >= e(r[u], n[f]) ? r[u++] : n[f++]) : u < o ? r[u++] : n[f++];
 		return t;
 	};
 t.exports = i;

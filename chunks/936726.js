@@ -42,16 +42,7 @@ function A(e, n) {
 			});
 }
 function R(e) {
-	let {
-			id: n,
-			webhook: t,
-			editedWebhook: s,
-			channelOptions: N,
-			isExpanded: T,
-			isNew: p,
-			errors: R,
-			onToggleExpand: b
-		} = e,
+	let { id: n, webhook: t, editedWebhook: s, channelOptions: N, isExpanded: T, isNew: p, errors: R, onToggleExpand: b } = e,
 		[Z, v] = a.useState(!1),
 		[M] = a.useState(new o.V7());
 	a.useEffect(() => () => M.stop(), [M]);
@@ -186,11 +177,7 @@ function R(e) {
 														...o,
 														'aria-label': '',
 														onClick: () => {
-															null == n || n(),
-																v(!0),
-																d.AccessibilityAnnouncer.announce(O.Z.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL),
-																M.start(1000, () => v(!1)),
-																j();
+															null == n || n(), v(!0), d.AccessibilityAnnouncer.announce(O.Z.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL), M.start(1000, () => v(!1)), j();
 														},
 														size: d.Button.Sizes.SMALL,
 														color: d.Button.Colors.PRIMARY,

@@ -154,16 +154,7 @@ function h(e) {
 				});
 }
 n.Z = (e) => {
-	let {
-			title: n,
-			description: t,
-			onUpdateGames: r,
-			gameApplicationIds: i,
-			minGames: l = 1,
-			error: c,
-			guildId: d,
-			includeSuggestedGames: u
-		} = e,
+	let { title: n, description: t, onUpdateGames: r, gameApplicationIds: i, minGames: l = 1, error: c, guildId: d, includeSuggestedGames: u } = e,
 		m = i.size <= l;
 	return (0, a.jsxs)('div', {
 		className: s()(f.slideContent, _.container),

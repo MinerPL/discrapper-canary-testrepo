@@ -38,24 +38,10 @@ class N extends a.PureComponent {
 		this._initTimeout.start(1000, this.setupVoiceActivity);
 	}
 	componentWillUnmount() {
-		this._initTimeout.stop(),
-			this._silenceTimeout.stop(),
-			this._micTestStop(),
-			E.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, this.handleVoiceActivity);
+		this._initTimeout.stop(), this._silenceTimeout.stop(), this._micTestStop(), E.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, this.handleVoiceActivity);
 	}
 	_micTestStart() {
-		let {
-				isVoiceConnected: e,
-				inputDeviceName: t,
-				inputVolume: n,
-				outputDeviceName: s,
-				outputVolume: a,
-				inputMode: r,
-				vadAutoThreshold: i,
-				vadThreshold: l,
-				location: o,
-				isDeafened: c
-			} = this.props,
+		let { isVoiceConnected: e, inputDeviceName: t, inputVolume: n, outputDeviceName: s, outputVolume: a, inputMode: r, vadAutoThreshold: i, vadThreshold: l, location: o, isDeafened: c } = this.props,
 			d = !1;
 		e && !c && (_.Z.toggleSelfDeaf(), (d = !0)),
 			_.Z.setLoopback(!0),
@@ -89,9 +75,7 @@ class N extends a.PureComponent {
 			}),
 			null != this._micTestStartTime)
 		)
-			I.default.track(R.rMx.MIC_TESTING_STOPPED, {
-				testing_duration: Math.round((Date.now() - this._micTestStartTime) / 1000)
-			});
+			I.default.track(R.rMx.MIC_TESTING_STOPPED, { testing_duration: Math.round((Date.now() - this._micTestStartTime) / 1000) });
 	}
 	renderCaption() {
 		let { captionVoice: e, captionNoVoice: t } = this.props,
@@ -103,17 +87,7 @@ class N extends a.PureComponent {
 		});
 	}
 	render() {
-		let {
-				isVoiceConnected: e,
-				title: t,
-				description: n,
-				notchBackground: a,
-				buttonTest: r,
-				buttonStop: i,
-				buttonClassName: l,
-				buttonColor: o,
-				isDeafened: c
-			} = this.props,
+		let { isVoiceConnected: e, title: t, description: n, notchBackground: a, buttonTest: r, buttonStop: i, buttonClassName: l, buttonColor: o, isDeafened: c } = this.props,
 			{ isMicTesting: _, volume: E } = this.state,
 			T = e && !_ ? C.Z.Messages.MIC_TEST_VOICE_CHANNEL_WARNING : null;
 		return (

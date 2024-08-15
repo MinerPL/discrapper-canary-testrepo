@@ -40,22 +40,10 @@ function f(e, t) {
 }
 function E(e) {
 	var t, n, i, l;
-	let {
-		emojiHose: E,
-		context: g,
-		canvasWidth: C,
-		canvasHeight: I,
-		fallbackColor: x,
-		outlineColorDark: T,
-		outlineColorLight: N,
-		streamerId: v,
-		deadDrawables: S
-	} = e;
-	g.save();
-	let Z = c.Z.getEmojiImage(
-			null !== (n = null !== (t = E.emojiId) && void 0 !== t ? t : E.emojiName) && void 0 !== n ? n : ''
-		),
-		A = (0, d.np)(E.x, C),
+	let { emojiHose: E, context: C, canvasWidth: g, canvasHeight: I, fallbackColor: x, outlineColorDark: T, outlineColorLight: N, streamerId: v, deadDrawables: S } = e;
+	C.save();
+	let Z = c.Z.getEmojiImage(null !== (n = null !== (t = E.emojiId) && void 0 !== t ? t : E.emojiName) && void 0 !== n ? n : ''),
+		A = (0, d.np)(E.x, g),
 		M = (0, d.np)(E.y, I),
 		{ outlineColor: b } = (0, d.bg)(E.userId, T, N, x);
 	if (
@@ -69,13 +57,7 @@ function E(e) {
 				(n.opacity -= n.opacitySpeed),
 				n.opacity <= 0 &&
 					(0, r.j)(() => {
-						_.setState(
-							(e) => (
-								delete e.particles[t.id][n.id],
-								0 === Object.keys(e.particles[t.id]).length && delete e.particles[t.id],
-								e
-							)
-						);
+						_.setState((e) => (delete e.particles[t.id][n.id], 0 === Object.keys(e.particles[t.id]).length && delete e.particles[t.id], e));
 					}))
 			);
 		}),
@@ -109,8 +91,8 @@ function E(e) {
 					});
 				});
 		})(E, A, M),
-		(0, h.I)(g, A, M, b, m.q2),
-		(0, h.T)(g, A, M, E.userId),
+		(0, h.I)(C, A, M, b, m.q2),
+		(0, h.T)(C, A, M, E.userId),
 		f(E, (e) =>
 			(function (e, t, n) {
 				if (null == t) return;
@@ -118,12 +100,11 @@ function E(e) {
 					a = n.x - (i / 2) * window.devicePixelRatio,
 					s = n.y - 1.2 * i * window.devicePixelRatio;
 				(e.globalAlpha = n.opacity), e.drawImage(t, i / 2 + a, i / 2 + s, i, i);
-			})(g, Z, e)
+			})(C, Z, e)
 		),
 		E.lastUpdatedAt + m.FO < Date.now() && (0, o.ZZ)(v, E),
-		E.state === u.f.STOP &&
-			((i = E), !(Object.keys(null !== (l = _.getState().particles[i.id]) && void 0 !== l ? l : {}).length > 0)))
+		E.state === u.f.STOP && ((i = E), !(Object.keys(null !== (l = _.getState().particles[i.id]) && void 0 !== l ? l : {}).length > 0)))
 	)
 		S.push(E);
-	g.restore();
+	C.restore();
 }

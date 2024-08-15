@@ -121,10 +121,7 @@ async function T(e, t, n, r, l) {
 		var o, c;
 		s.Z.dispatch({
 			type: 'GUILD_SETTINGS_ROLES_SAVE_FAIL',
-			message:
-				null !== (c = null === (o = e.body) || void 0 === o ? void 0 : o.message) && void 0 !== c
-					? c
-					: Object.values(e.body)[0]
+			message: null !== (c = null === (o = e.body) || void 0 === o ? void 0 : o.message) && void 0 !== c ? c : Object.values(e.body)[0]
 		});
 		return;
 	}

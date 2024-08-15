@@ -15,17 +15,7 @@ var r = n(570140),
 async function _(e, t) {
 	var n, _, E;
 	let f,
-		{
-			withMutualGuilds: h = !1,
-			withMutualFriendsCount: p = !1,
-			withMutualFriends: I = !1,
-			friendToken: m,
-			preloadUserBanner: T = !0,
-			dispatchWait: g = !1,
-			guildId: S,
-			channelId: A,
-			abortSignal: N
-		} = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+		{ withMutualGuilds: h = !1, withMutualFriendsCount: p = !1, withMutualFriends: m = !1, friendToken: I, preloadUserBanner: T = !0, dispatchWait: g = !1, guildId: S, channelId: A, abortSignal: N } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
 	if ('' === e) return;
 	(0, o.z)(),
 		null != t && (0, a.vM)(t),
@@ -51,7 +41,7 @@ async function _(e, t) {
 		D = c.Z.isFetchingProfile(e),
 		L = T ? d.Z : void 0,
 		b = null == R && h,
-		M = null == C && I,
+		M = null == C && m,
 		P = null == y && p,
 		U = null != S && null == O,
 		w = Date.now() - (null !== (E = null == v ? void 0 : v.lastFetched) && void 0 !== E ? E : 0) >= 60000;
@@ -62,9 +52,9 @@ async function _(e, t) {
 						e,
 						{
 							withMutualGuilds: h,
-							withMutualFriends: I,
+							withMutualFriends: m,
 							withMutualFriendsCount: p,
-							friendToken: m,
+							friendToken: I,
 							guildId: S,
 							connectionsRoleId: f,
 							abortSignal: N
@@ -76,9 +66,9 @@ async function _(e, t) {
 					e,
 					{
 						withMutualGuilds: h,
-						withMutualFriends: I,
+						withMutualFriends: m,
 						withMutualFriendsCount: p,
-						friendToken: m,
+						friendToken: I,
 						guildId: S,
 						connectionsRoleId: f,
 						abortSignal: N

@@ -1,26 +1,26 @@
 t.d(n, {
 	Z: function () {
-		return s;
+		return u;
 	}
 });
 var o = t(735250);
 t(470079);
 var r = t(442837),
 	a = t(481060),
-	c = t(857595),
-	i = t(607070),
+	i = t(857595),
+	c = t(607070),
 	l = t(689938);
-function s() {
+function u() {
 	let {
 			saturation: e,
 			useReducedMotion: n,
 			roleStyle: t
-		} = (0, r.cj)([i.Z], () => ({
-			saturation: i.Z.saturation,
-			useReducedMotion: i.Z.useReducedMotion,
-			roleStyle: i.Z.roleStyle
+		} = (0, r.cj)([c.Z], () => ({
+			saturation: c.Z.saturation,
+			useReducedMotion: c.Z.useReducedMotion,
+			roleStyle: c.Z.roleStyle
 		})),
-		s = [
+		u = [
 			{
 				name: l.Z.Messages.ACCESSIBILITY_SETTINGS_ROLE_STYLE_USERNAME_LABEL,
 				value: 'username'
@@ -42,7 +42,7 @@ function s() {
 					id: 'reduced-motion',
 					label: l.Z.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_ENABLE,
 					checked: n,
-					action: () => (0, c.Zt)(n ? 'no-preference' : 'reduce')
+					action: () => (0, i.Zt)(n ? 'no-preference' : 'reduce')
 				})
 			},
 			'reduced-motion'
@@ -58,7 +58,7 @@ function s() {
 							...n,
 							ref: t,
 							value: 100 * e,
-							onChange: (e) => (0, c.o2)(e / 100),
+							onChange: (e) => (0, i.o2)(e / 100),
 							'aria-label': l.Z.Messages.ACCESSIBILITY_SETTINGS_SATURATION_TITLE
 						})
 				})
@@ -71,7 +71,7 @@ function s() {
 				children: (0, o.jsx)(a.MenuItem, {
 					id: 'role-colors',
 					label: l.Z.Messages.ACCESSIBILITY_SETTINGS_ROLE_STYLE_TITLE,
-					children: s.map((e) => {
+					children: u.map((e) => {
 						let { name: n, value: r } = e;
 						return (0, o.jsx)(
 							a.MenuRadioItem,
@@ -80,7 +80,7 @@ function s() {
 								group: 'role-colors',
 								checked: r === t,
 								label: n,
-								action: () => (0, c.u1)(r)
+								action: () => (0, i.u1)(r)
 							},
 							r
 						);

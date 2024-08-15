@@ -64,9 +64,5 @@ function p(e) {
 function T(e) {
 	let { channel: t } = e,
 		n = (0, l.ZP)();
-	return t.isGuildStageVoice()
-		? (0, i.jsx)(g, { channel: t })
-		: n && t.isBroadcastChannel()
-			? (0, i.jsx)(I, {})
-			: (0, i.jsx)(p, { channel: t });
+	return t.isGuildStageVoice() ? (0, i.jsx)(g, { channel: t }) : n && t.isBroadcastChannel() ? (0, i.jsx)(I, {}) : (0, i.jsx)(p, { channel: t });
 }

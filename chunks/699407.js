@@ -4,7 +4,7 @@ n.d(t, {
 		return h;
 	},
 	l: function () {
-		return m;
+		return I;
 	}
 }),
 	n(177593),
@@ -40,17 +40,9 @@ let _ = 1500,
 		handleTrack: () => {}
 	},
 	p = [],
-	I = () => Promise.resolve({ sessionId: void 0 }),
-	m = (e) => {
-		let {
-			dispatcher: t,
-			actionHandler: n,
-			getFingerprint: s,
-			getSessionId: c = I,
-			TRACKING_URL: m,
-			drainTimeoutOverride: T,
-			waitFor: g
-		} = e;
+	m = () => Promise.resolve({ sessionId: void 0 }),
+	I = (e) => {
+		let { dispatcher: t, actionHandler: n, getFingerprint: s, getSessionId: c = m, TRACKING_URL: I, drainTimeoutOverride: T, waitFor: g } = e;
 		_ = null != T ? T : 1500;
 		function S() {
 			return 0 !== p.length && (null != i ? null != r : null != s());
@@ -86,7 +78,7 @@ let _ = 1500,
 					}
 				}));
 			return u.tn.post({
-				url: m,
+				url: I,
 				body: {
 					token: r,
 					events: n

@@ -25,11 +25,7 @@ function f(e, n) {
 				id: 'delete',
 				label: E.Z.Messages.DELETE_MESSAGE,
 				action: function (t) {
-					e.state === c.yb.SEND_FAILED
-						? a.Z.deleteMessage(n.id, e.id, !0)
-						: t.shiftKey
-							? a.Z.deleteMessage(n.id, e.id)
-							: r.Z.confirmDelete(n, e, !0);
+					e.state === c.yb.SEND_FAILED ? a.Z.deleteMessage(n.id, e.id, !0) : t.shiftKey ? a.Z.deleteMessage(n.id, e.id) : r.Z.confirmDelete(n, e, !0);
 				},
 				color: 'danger',
 				icon: l.TrashIcon

@@ -22,15 +22,7 @@ function a(e) {
 					},
 					getNodeWindow: () => {
 						var t, n, r;
-						return null !==
-							(r =
-								null === (n = e.current) || void 0 === n
-									? void 0
-									: null === (t = n.ownerDocument) || void 0 === t
-										? void 0
-										: t.defaultView) && void 0 !== r
-							? r
-							: null;
+						return null !== (r = null === (n = e.current) || void 0 === n ? void 0 : null === (t = n.ownerDocument) || void 0 === t ? void 0 : t.defaultView) && void 0 !== r ? r : null;
 					}
 				})
 		);

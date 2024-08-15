@@ -22,11 +22,7 @@ function c() {
 		}, a.Z),
 		n = (0, s.e7)([r.Z], () => {
 			var n, i;
-			return null != t &&
-				null !== (i = null === (n = r.Z.getResults(e, t)) || void 0 === n ? void 0 : n.total) &&
-				void 0 !== i
-				? i
-				: 0;
+			return null != t && null !== (i = null === (n = r.Z.getResults(e, t)) || void 0 === n ? void 0 : n.total) && void 0 !== i ? i : 0;
 		}),
 		c = (0, s.e7)([l.ZP], () => l.ZP.getTopCategoryCounts(e));
 	return i.useMemo(() => {

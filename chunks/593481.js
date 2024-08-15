@@ -131,15 +131,7 @@ class S extends (a = r.PureComponent) {
 	}
 	renderFooter() {
 		let {
-			props: {
-				renderFooter: e,
-				cancelText: t,
-				confirmText: n,
-				onConfirmClick: i,
-				onCancelClick: s,
-				hint: a,
-				colorScheme: l
-			},
+			props: { renderFooter: e, cancelText: t, confirmText: n, onConfirmClick: i, onCancelClick: s, hint: a, colorScheme: l },
 			state: { expanded: c }
 		} = this;
 		if (!c) return null != a ? this.renderHint() : null;

@@ -45,27 +45,9 @@ class L extends r.Component {
 		throw Error('Invalid interval type: '.concat(e));
 	}
 	render() {
-		let {
-				eulaId: e,
-				applicationName: n,
-				hasPreviouslyAcceptedEULA: r,
-				forceShow: l,
-				disabled: a,
-				className: o,
-				checkboxClassname: I,
-				checkboxLabelClassname: d,
-				finePrint: A,
-				showPricingLink: L,
-				showWithdrawalWaiver: P,
-				isTrial: R,
-				inReverseTrial: S,
-				isDiscount: m,
-				subscriptionPlan: U,
-				finePrintClassname: p
-			} = this.props,
+		let { eulaId: e, applicationName: n, hasPreviouslyAcceptedEULA: r, forceShow: l, disabled: a, className: o, checkboxClassname: I, checkboxLabelClassname: d, finePrint: A, showPricingLink: L, showWithdrawalWaiver: P, isTrial: R, inReverseTrial: S, isDiscount: m, subscriptionPlan: U, finePrintClassname: p } = this.props,
 			{ hasAcceptedEULA: v, hasAcceptedWithdrawalWaiver: C } = this.state;
-		return (c()(!R || null != U, 'subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true'),
-		l || (null != e && !r) || P)
+		return (c()(!R || null != U, 'subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true'), l || (null != e && !r) || P)
 			? (0, s.jsxs)('div', {
 					className: o,
 					children: [
@@ -131,12 +113,7 @@ class L extends r.Component {
 						L &&
 							(0, s.jsxs)('div', {
 								className: M.finePrint,
-								children: [
-									'*',
-									N.Z.Messages.BILLING_HOW_PRICING_WORKS.format({
-										documentationLink: _.Z.getArticleURL(T.BhN.LOCALIZED_PRICING)
-									})
-								]
+								children: ['*', N.Z.Messages.BILLING_HOW_PRICING_WORKS.format({ documentationLink: _.Z.getArticleURL(T.BhN.LOCALIZED_PRICING) })]
 							}),
 						R &&
 							null != U &&

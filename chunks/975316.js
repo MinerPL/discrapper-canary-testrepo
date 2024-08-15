@@ -19,14 +19,7 @@ function u(e) {
 	let { refToScroller: t } = e,
 		{ channel: s } = (0, l.e7)([d.Z], () => d.Z.getProps(), []),
 		a = (0, l.e7)([c.Z], () => (null != s ? c.Z.getGuild(s.getGuildId()) : null), [s]),
-		{
-			section: i,
-			sectionId: u,
-			webhooks: h,
-			editedWebhook: m,
-			isFetching: g,
-			errors: E
-		} = (0, l.e7)([o.Z], () => o.Z.getProps(), []);
+		{ section: i, sectionId: u, webhooks: h, editedWebhook: m, isFetching: g, errors: E } = (0, l.e7)([o.Z], () => o.Z.getProps(), []);
 	return null == a || null == s
 		? null
 		: (0, n.jsx)(r.Z, {

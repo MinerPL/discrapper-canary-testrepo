@@ -67,9 +67,7 @@ function m(e) {
 				className: E.helpText,
 				color: 'header-secondary',
 				variant: 'text-sm/normal',
-				children: I.Z.Messages.ROLE_LIST_BODY_WITH_HELP.format({
-					articleURL: c.Z.getArticleURL(_.BhN.PERMISSIONS_TUTORIAL)
-				})
+				children: I.Z.Messages.ROLE_LIST_BODY_WITH_HELP.format({ articleURL: c.Z.getArticleURL(_.BhN.PERMISSIONS_TUTORIAL) })
 			}),
 			(0, s.jsx)('div', {
 				className: E.rolesTable,

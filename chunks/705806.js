@@ -14,9 +14,7 @@ if (u)
 	}
 e.exports = function (e) {
 	var t = o(r, s, arguments);
-	return (
-		l && u && l(t, 'length').configurable && u(t, 'length', { value: 1 + c(0, e.length - (arguments.length - 1)) }), t
-	);
+	return l && u && l(t, 'length').configurable && u(t, 'length', { value: 1 + c(0, e.length - (arguments.length - 1)) }), t;
 };
 var d = function () {
 	return o(r, a, arguments);

@@ -131,13 +131,7 @@ function T(e) {
 }
 function d(e, t, r) {
 	var n, a, o, E;
-	return (
-		(n = e.failedRequestStatusCodes),
-		(a = t),
-		n.some((e) => ('number' == typeof e ? e === a : a >= e[0] && a <= e[1])) &&
-			((o = e.failedRequestTargets), (E = r), o.some((e) => ('string' == typeof e ? E.includes(e) : e.test(E)))) &&
-			!(0, _.W)(r, (0, i.s3)())
-	);
+	return (n = e.failedRequestStatusCodes), (a = t), n.some((e) => ('number' == typeof e ? e === a : a >= e[0] && a <= e[1])) && ((o = e.failedRequestTargets), (E = r), o.some((e) => ('string' == typeof e ? E.includes(e) : e.test(E)))) && !(0, _.W)(r, (0, i.s3)());
 }
 function N(e) {
 	let t = `HTTP Client Error with status code: ${e.status}`,

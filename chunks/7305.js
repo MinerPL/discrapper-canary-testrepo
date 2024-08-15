@@ -41,32 +41,7 @@ var t = n(735250),
 	S = n(689938);
 let R = [x.h8.PLAN_SELECT, x.h8.ADD_PAYMENT_STEPS, x.h8.REVIEW, x.h8.CONFIRM];
 function P(e) {
-	let {
-			analyticsLocation: s,
-			analyticsObject: n,
-			analyticsSourceLocation: i,
-			onComplete: o,
-			transitionState: u,
-			initialPlanId: h,
-			subscriptionTier: f,
-			onClose: I,
-			trialId: E,
-			trialFooterMessageOverride: M,
-			reviewWarningMessage: N,
-			openInvoiceId: j,
-			onSubscriptionConfirmation: T,
-			renderPurchaseConfirmation: g,
-			postSuccessGuild: m,
-			followupSKUInfo: S,
-			renderHeader: R,
-			applicationId: P,
-			guildId: Z,
-			referralTrialOfferId: v,
-			skuId: y,
-			returnRef: b,
-			skipConfirm: U = !1,
-			continueSession: B = !1
-		} = e,
+	let { analyticsLocation: s, analyticsObject: n, analyticsSourceLocation: i, onComplete: o, transitionState: u, initialPlanId: h, subscriptionTier: f, onClose: I, trialId: E, trialFooterMessageOverride: M, reviewWarningMessage: N, openInvoiceId: j, onSubscriptionConfirmation: T, renderPurchaseConfirmation: g, postSuccessGuild: m, followupSKUInfo: S, renderHeader: R, applicationId: P, guildId: Z, referralTrialOfferId: v, skuId: y, returnRef: b, skipConfirm: U = !1, continueSession: B = !1 } = e,
 		{ analyticsLocations: H } = (0, C.ZP)();
 	r.useEffect(() => {
 		!d.Z.isLoadedForPremiumSKUs() && l.Z.wait(() => (0, a.Y2)());
@@ -201,17 +176,7 @@ let y = [
 function b(e) {
 	let s = (0, i.e7)([u.ZP], () => u.ZP.getPremiumTypeSubscription()),
 		{ analyticsLocations: n } = (0, C.ZP)(e.analyticsLocations, o.Z.PREMIUM_PAYMENT_MODAL),
-		{
-			subscriptionTier: r,
-			isGift: l,
-			giftRecipient: a,
-			giftMessage: d,
-			giftStyle: c,
-			loadId: x,
-			defaultPlanId: L,
-			referralCode: h,
-			repeatPurchase: f
-		} = e;
+		{ subscriptionTier: r, isGift: l, giftRecipient: a, giftMessage: d, giftStyle: c, loadId: x, defaultPlanId: L, referralCode: h, repeatPurchase: f } = e;
 	if (null != r && !Object.values(O.Si).includes(r)) throw Error('subscriptionTier must be a premium subscription');
 	return (0, t.jsx)(C.Gt, {
 		value: n,

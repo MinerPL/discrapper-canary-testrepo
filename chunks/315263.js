@@ -19,8 +19,8 @@ var r = n(729594),
 	f = n(543842),
 	h = n(754688),
 	p = n(336197),
-	I = n(977156),
-	m = n(540709),
+	m = n(977156),
+	I = n(540709),
 	T = n(881706),
 	g = n(701190),
 	S = n(944486),
@@ -60,11 +60,9 @@ let L = {
 	analyticsLocations: []
 };
 function b(e) {
-	let { skipExtensionCheck: t, analyticsLocations: a } =
-			arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L,
+	let { skipExtensionCheck: t, analyticsLocations: a } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L,
 		s = (0, d.zO)(e);
-	if (null != s && (s.type === c.g.INVITE || s.type === c.g.EMBEDDED_ACTIVITY_INVITE))
-		return (e) => (null == e || e.preventDefault(), D(s), !0);
+	if (null != s && (s.type === c.g.INVITE || s.type === c.g.EMBEDDED_ACTIVITY_INVITE)) return (e) => (null == e || e.preventDefault(), D(s), !0);
 	if (null != s && s.type === c.g.APP_DIRECTORY_PROFILE)
 		return (e) => {
 			var t;
@@ -109,7 +107,7 @@ function b(e) {
 				!0
 			);
 		};
-	if (null != s && s.type === c.g.QUESTS_EMBED && (0, I.cB)({ location: C.dr.EMBED_MOBILE }))
+	if (null != s && s.type === c.g.QUESTS_EMBED && (0, m.cB)({ location: C.dr.EMBED_MOBILE }))
 		return (e) => (
 			null == e || e.preventDefault(),
 			Promise.resolve()
@@ -165,11 +163,7 @@ function b(e) {
 	}
 	if (null != g && P && O.Z.isAppRoute(g)) {
 		let e = {};
-		return (
-			null != b && (e.search = b),
-			null != M && (e.hash = M),
-			(t) => (null == t || t.preventDefault(), (0, p.Z)(g, Object.keys(e).length > 0 ? e : null), !0)
-		);
+		return null != b && (e.search = b), null != M && (e.hash = M), (t) => (null == t || t.preventDefault(), (0, p.Z)(g, Object.keys(e).length > 0 ? e : null), !0);
 	}
 	if (null != g && P) {
 		let { getOAuth2AuthorizeProps: t, openOAuth2ModalWithCreateGuildModal: r } = n(69580),
@@ -199,5 +193,5 @@ function b(e) {
 				!0
 			);
 	}
-	if (!t && null != (0, T.v)(e)) return (t) => (null == t || t.preventDefault(), m.Z.show(e), !0);
+	if (!t && null != (0, T.v)(e)) return (t) => (null == t || t.preventDefault(), I.Z.show(e), !0);
 }

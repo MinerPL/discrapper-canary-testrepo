@@ -11,16 +11,7 @@ var i = n(735250),
 	o = n(49898),
 	c = n(328759);
 function d(e) {
-	let {
-			state: t,
-			query: n,
-			placeholder: s,
-			onTextChange: d,
-			onCollapsedClick: u,
-			onClear: _,
-			onBlur: E,
-			onSubmit: h
-		} = e,
+	let { state: t, query: n, placeholder: s, onTextChange: d, onCollapsedClick: u, onClear: _, onBlur: E, onSubmit: h } = e,
 		m = a.useRef(null),
 		I = a.useCallback(
 			(e) => {

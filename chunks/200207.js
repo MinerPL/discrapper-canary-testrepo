@@ -13,15 +13,7 @@ var t = i(557533),
 	d = i(25378),
 	u = i(778342);
 function c(e) {
-	let {
-		title: n,
-		description: i,
-		headerImage: t,
-		onDetails: c,
-		onPurchase: p,
-		PurchaseButton: m,
-		availabilityLabel: v
-	} = e;
+	let { title: n, description: i, headerImage: t, onDetails: c, onPurchase: p, PurchaseButton: m, availabilityLabel: v } = e;
 	return (0, l.jsx)(s.tE, {
 		children: (0, l.jsxs)('div', {
 			className: r()(d.wrapper, u.hoverCard),

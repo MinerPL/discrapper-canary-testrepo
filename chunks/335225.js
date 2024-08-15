@@ -14,19 +14,7 @@ var e = n(566885),
 			p = 7 === t,
 			h = 5 === t || y;
 		return function (v, d, g, l) {
-			for (
-				var A,
-					w,
-					x = u(v),
-					b = i(x),
-					T = e(d, g),
-					E = f(b),
-					I = 0,
-					R = l || a,
-					m = r ? R(v, E) : n || p ? R(v, 0) : void 0;
-				E > I;
-				I++
-			)
+			for (var A, w, x = u(v), b = i(x), T = e(d, g), E = f(b), I = 0, R = l || a, m = r ? R(v, E) : n || p ? R(v, 0) : void 0; E > I; I++)
 				if ((h || I in b) && ((w = T((A = b[I]), I, x)), t)) {
 					if (r) m[I] = w;
 					else if (w)

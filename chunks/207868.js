@@ -13,12 +13,12 @@ var i = n(735250),
 	_ = n(585483),
 	f = n(665149),
 	E = n(981631),
-	g = n(689938);
+	C = n(689938);
 t.Z = a.memo(function (e) {
 	let { channel: t } = e,
 		n = (0, u.Z)(),
 		s = (0, r.e7)([p.Z], () => p.Z.isInChannel(t.id)),
-		C = (0, r.e7)([p.Z], () => !l().isEmpty(p.Z.getVoiceStatesForChannel(t.id))),
+		g = (0, r.e7)([p.Z], () => !l().isEmpty(p.Z.getVoiceStatesForChannel(t.id))),
 		I = (0, r.e7)([m.Z], () => m.Z.can(E.Plq.CONNECT, t)),
 		{ needSubscriptionToAccess: x } = (0, d.Z)(t.id),
 		T = (0, h.$R)(t),
@@ -54,7 +54,7 @@ t.Z = a.memo(function (e) {
 		? (0, i.jsx)(f.ZP.Icon, {
 				icon: o.PhoneCallIcon,
 				onClick: N,
-				tooltip: C ? g.Z.Messages.JOIN_VOICE_CALL : g.Z.Messages.START_VOICE_CALL
+				tooltip: g ? C.Z.Messages.JOIN_VOICE_CALL : C.Z.Messages.START_VOICE_CALL
 			})
 		: null;
 });

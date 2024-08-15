@@ -8,11 +8,7 @@ function t(e) {
 e.exports = t;
 (t.prototype.on = t.prototype.addEventListener =
 	function (e, t) {
-		return (
-			(this._callbacks = this._callbacks || {}),
-			(this._callbacks['$' + e] = this._callbacks['$' + e] || []).push(t),
-			this
-		);
+		return (this._callbacks = this._callbacks || {}), (this._callbacks['$' + e] = this._callbacks['$' + e] || []).push(t), this;
 	}),
 	(t.prototype.once = function (e, t) {
 		function n() {
@@ -39,8 +35,7 @@ e.exports = t;
 			}),
 	(t.prototype.emit = function (e) {
 		this._callbacks = this._callbacks || {};
-		for (var t = Array(arguments.length - 1), n = this._callbacks['$' + e], r = 1; r < arguments.length; r++)
-			t[r - 1] = arguments[r];
+		for (var t = Array(arguments.length - 1), n = this._callbacks['$' + e], r = 1; r < arguments.length; r++) t[r - 1] = arguments[r];
 		if (n) {
 			n = n.slice(0);
 			for (var r = 0, i = n.length; r < i; ++r) n[r].apply(this, t);

@@ -94,34 +94,26 @@ function O(e, t, n, i) {
 }
 class R extends m.Z {
 	send(e) {
-		(u.default.isLoggingOverlayEvents || (e.cmd !== p.Etm.OVERLAY && e.evt !== p.zMe.OVERLAY)) &&
-			N.info('Socket Emit: '.concat(this.id), (0, h.Z)(e)),
-			null != i && 'etf' === this.encoding
-				? this._socket.send(i.pack(e), { binary: !0 })
-				: this._socket.send(JSON.stringify(e));
+		(u.default.isLoggingOverlayEvents || (e.cmd !== p.Etm.OVERLAY && e.evt !== p.zMe.OVERLAY)) && N.info('Socket Emit: '.concat(this.id), (0, h.Z)(e)), null != i && 'etf' === this.encoding ? this._socket.send(i.pack(e), { binary: !0 }) : this._socket.send(JSON.stringify(e));
 	}
 	close(e, t) {
 		this._socket.close(e, t);
 	}
 	constructor(e, t, n) {
-		if ((super('ws', t, n), S(this, '_socket', void 0), -1 === ['etf', 'json'].indexOf(n)))
-			throw new E.Z({ closeCode: p.$VG.INVALID_ENCODING }, 'Invalid Encoding: '.concat(n));
-		if ('etf' === n && null == i)
-			throw new E.Z({ closeCode: p.$VG.INVALID_ENCODING }, 'Erlpack cannot be used on this client');
+		if ((super('ws', t, n), S(this, '_socket', void 0), -1 === ['etf', 'json'].indexOf(n))) throw new E.Z({ closeCode: p.$VG.INVALID_ENCODING }, 'Invalid Encoding: '.concat(n));
+		if ('etf' === n && null == i) throw new E.Z({ closeCode: p.$VG.INVALID_ENCODING }, 'Erlpack cannot be used on this client');
 		this._socket = e;
 	}
 }
 class x extends m.Z {
 	send(e) {
-		(u.default.isLoggingOverlayEvents || e.cmd !== p.Etm.OVERLAY) && N.info('Socket Emit: '.concat(this.id), e),
-			this._sendCallback(e);
+		(u.default.isLoggingOverlayEvents || e.cmd !== p.Etm.OVERLAY) && N.info('Socket Emit: '.concat(this.id), e), this._sendCallback(e);
 	}
 	close(e, t) {
 		this._closeCallback(t, e);
 	}
 	constructor(e, t, n, i) {
-		if ((super('http', n, i), S(this, '_sendCallback', void 0), S(this, '_closeCallback', void 0), 'json' !== i))
-			throw new E.Z({ closeCode: p.$VG.INVALID_ENCODING }, 'Invalid Encoding: '.concat(i));
+		if ((super('http', n, i), S(this, '_sendCallback', void 0), S(this, '_closeCallback', void 0), 'json' !== i)) throw new E.Z({ closeCode: p.$VG.INVALID_ENCODING }, 'Invalid Encoding: '.concat(i));
 		(this._sendCallback = e), (this._closeCallback = t);
 	}
 }
@@ -140,20 +132,14 @@ class b extends s.EventEmitter {
 				l = function () {
 					var e;
 					let { protocol: i, host: a } = o.parse(null !== (e = n.get('callback')) && void 0 !== e ? e : '');
-					i === location.protocol && a === location.host
-						? t.setHeader('Location', n.get('callback'))
-						: t.setHeader('Location', C),
-						t.writeHead(301),
-						t.end();
+					i === location.protocol && a === location.host ? t.setHeader('Location', n.get('callback')) : t.setHeader('Location', C), t.writeHead(301), t.end();
 				},
 				c = new x(s ? L.bind(null, e, t) : l, s ? O.bind(null, e, t, 400) : l, Number(n.get('v')), a);
 			if (s)
 				(0, I.em)(c, v(e.headers).origin, n.get('client_id'))
 					.then(() => {
 						let n = '';
-						e.on('data', (e) => (n += e)),
-							e.on('error', () => O(e, t, 500, 'Internal Server Error')),
-							e.on('end', () => this.handleMessage(c, n));
+						e.on('data', (e) => (n += e)), e.on('error', () => O(e, t, 500, 'Internal Server Error')), e.on('end', () => this.handleMessage(c, n));
 					})
 					.catch((e) => {
 						let { code: t, message: n } = e;
@@ -161,8 +147,7 @@ class b extends s.EventEmitter {
 					});
 			else {
 				var r;
-				(c.authorization.scopes = [g.CN]),
-					this.handleMessage(c, decodeURIComponent(null !== (r = n.get('payload')) && void 0 !== r ? r : ''));
+				(c.authorization.scopes = [g.CN]), this.handleMessage(c, decodeURIComponent(null !== (r = n.get('payload')) && void 0 !== r ? r : ''));
 			}
 			return;
 		}
@@ -182,9 +167,7 @@ class b extends s.EventEmitter {
 		N.info('Socket Opened: '.concat(i.id)),
 			e.on('error', (e) => N.error('WS Error: '.concat(e.message))),
 			e.on('close', (e, t) => {
-				N.info('Socket Closed: '.concat(i.id, ', code ').concat(e, ', message ').concat(t)),
-					l().remove(A, (e) => e === i),
-					this.emit('disconnect', i);
+				N.info('Socket Closed: '.concat(i.id, ', code ').concat(e, ', message ').concat(t)), l().remove(A, (e) => e === i), this.emit('disconnect', i);
 			}),
 			(0, I.em)(i, s, a.get('client_id'))
 				.then(() => {
@@ -205,17 +188,14 @@ class b extends s.EventEmitter {
 			e.close(p.$VG.CLOSE_UNSUPPORTED, 'Payload not '.concat(e.encoding));
 			return;
 		}
-		(u.default.isLoggingOverlayEvents || n.cmd !== p.Etm.OVERLAY) &&
-			N.info('Socket Message: '.concat(e.id), (0, h.Z)(n)),
-			this.emit('request', e, n);
+		(u.default.isLoggingOverlayEvents || n.cmd !== p.Etm.OVERLAY) && N.info('Socket Message: '.concat(e.id), (0, h.Z)(n)), this.emit('request', e, n);
 	}
 	constructor() {
 		var e;
 		super();
 		let t = 0;
 		(a = f.http.createServer()).on('error', (e) => {
-			N.error('Error: '.concat(e.message)),
-				('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => Z(++t), 1000);
+			N.error('Error: '.concat(e.message)), ('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => Z(++t), 1000);
 		}),
 			a.on('request', this.handleRequest.bind(this)),
 			Z(t);

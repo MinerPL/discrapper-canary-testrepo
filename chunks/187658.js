@@ -23,11 +23,7 @@ function o(e) {
 			action: () => {
 				if (!!(0, _.rD)(a)) (0, t.KH)(a), (0, _.$w)(a);
 			},
-			label: (0, _.rD)(a)
-				? o
-					? i.Z.Messages.VIDEO_BACKGROUND_CANNOT_REMOVE_SELECTED
-					: i.Z.Messages.VIDEO_BACKGROUND_REMOVE
-				: i.Z.Messages.VIDEO_BACKGROUND_CANNOT_REMOVE_DEFAULT,
+			label: (0, _.rD)(a) ? (o ? i.Z.Messages.VIDEO_BACKGROUND_CANNOT_REMOVE_SELECTED : i.Z.Messages.VIDEO_BACKGROUND_REMOVE) : i.Z.Messages.VIDEO_BACKGROUND_CANNOT_REMOVE_DEFAULT,
 			disabled: !(0, _.rD)(a) || o,
 			color: 'danger'
 		})

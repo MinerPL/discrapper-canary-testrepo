@@ -160,8 +160,7 @@ function y(e, n) {
 		let e = { ...(null != t ? t : N.k) };
 		if (void 0 !== o) {
 			var n, r;
-			(e.icon = null !== (n = o.icon) && void 0 !== n ? n : ''),
-				(e.unicodeEmoji = null !== (r = o.unicodeEmoji) && void 0 !== r ? r : '');
+			(e.icon = null !== (n = o.icon) && void 0 !== n ? n : ''), (e.unicodeEmoji = null !== (r = o.unicodeEmoji) && void 0 !== r ? r : '');
 		}
 		return void 0 !== i && ((e.color = i), (e.colorString = (0, a.Rf)(i))), e;
 	}, [t, o, i]);
@@ -182,10 +181,7 @@ function G(e, n) {
 	return M(
 		e,
 		'channelAccessFormat',
-		r.useMemo(
-			() => (null == t ? h.I.SOME_CHANNELS_ACCESS : (0, C.MT)(t) ? h.I.ALL_CHANNELS_ACCESS : h.I.SOME_CHANNELS_ACCESS),
-			[t]
-		)
+		r.useMemo(() => (null == t ? h.I.SOME_CHANNELS_ACCESS : (0, C.MT)(t) ? h.I.ALL_CHANNELS_ACCESS : h.I.SOME_CHANNELS_ACCESS), [t])
 	);
 }
 let j = [];
@@ -229,11 +225,7 @@ function V(e) {
 function Y(e) {
 	var n;
 	let t = (0, p.oC)(e);
-	return M(
-		e,
-		'trialLimit',
-		null !== (n = null == t ? void 0 : t.max_num_active_trial_users) && void 0 !== n ? n : null
-	);
+	return M(e, 'trialLimit', null !== (n = null == t ? void 0 : t.max_num_active_trial_users) && void 0 !== n ? n : null);
 }
 function K(e) {
 	return (0, h.n)((n) => void 0 !== n.listings[e]);
@@ -329,19 +321,8 @@ async function Q(e) {
 	let { guildId: n, editStateId: t, groupListingId: r, onBeforeDispatchNewListing: i } = e,
 		l = h.n.getState().listings[t];
 	o()(null != l, 'edit state does not exist');
-	let {
-		name: u,
-		description: a,
-		channelBenefits: s,
-		intangibleBenefits: c,
-		priceTier: d,
-		image: _,
-		channelAccessFormat: f
-	} = l;
-	o()(null != u, 'no name provided'),
-		o()(null != a, 'no description provided'),
-		o()(null != d, 'no priceTier provided'),
-		o()(null != _, 'no image provided');
+	let { name: u, description: a, channelBenefits: s, intangibleBenefits: c, priceTier: d, image: _, channelAccessFormat: f } = l;
+	o()(null != u, 'no name provided'), o()(null != a, 'no description provided'), o()(null != d, 'no priceTier provided'), o()(null != _, 'no image provided');
 	let E = f === h.I.ALL_CHANNELS_ACCESS,
 		I = r;
 	null == I && (I = (await g.uw(n, {})).id), null != s && s.length > 0 && (await (0, T.r4)(n, s));
@@ -369,13 +350,7 @@ function $() {
 		loading: e,
 		error: t,
 		handleCreateOrUpdateFromEditState: r.useCallback(async (e) => {
-			let {
-					guildId: t,
-					editStateId: r,
-					groupListingId: u,
-					onBeforeDispatchNewListing: a,
-					onAfterDispatchNewListing: c
-				} = e,
+			let { guildId: t, editStateId: r, groupListingId: u, onBeforeDispatchNewListing: a, onAfterDispatchNewListing: c } = e,
 				d = r,
 				_ = S.Z.getSubscriptionListing(d);
 			try {
@@ -388,24 +363,9 @@ function $() {
 							o()(null != u, 'listing doesnt exist');
 							let a = h.n.getState().listings[r];
 							o()(null != a, 'edit state does not exist');
-							let {
-									name: s,
-									description: c,
-									channelBenefits: d,
-									intangibleBenefits: _,
-									priceTier: f,
-									image: E,
-									channelAccessFormat: p
-								} = a,
+							let { name: s, description: c, channelBenefits: d, intangibleBenefits: _, priceTier: f, image: E, channelAccessFormat: p } = a,
 								C = {};
-							if (
-								(s !== u.name && (C.name = s),
-								c !== u.description && (C.description = c),
-								f !== (null === (n = u.subscription_plans[0]) || void 0 === n ? void 0 : n.price) && (C.priceTier = f),
-								null != E && (C.image = E),
-								null != p && (C.can_access_all_channels = p === h.I.ALL_CHANNELS_ACCESS),
-								null != d || null != _)
-							) {
+							if ((s !== u.name && (C.name = s), c !== u.description && (C.description = c), f !== (null === (n = u.subscription_plans[0]) || void 0 === n ? void 0 : n.price) && (C.priceTier = f), null != E && (C.image = E), null != p && (C.can_access_all_channels = p === h.I.ALL_CHANNELS_ACCESS), null != d || null != _)) {
 								let e = u.role_benefits.benefits.filter(I.rC),
 									n = u.role_benefits.benefits.filter(I.lL),
 									t = [...(null != d ? d : e), ...(null != _ ? _ : n)];

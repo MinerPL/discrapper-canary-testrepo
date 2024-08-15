@@ -50,12 +50,7 @@ let i = new WeakMap(),
 			(a = null != a ? a : e.selection), (i = null != i ? i : r.bN.richValue(e));
 			let { history: o } = e,
 				l = s.currentEntry(e);
-			for (
-				null != l && (l.mergeable = !1), o.stack.length > 0 && (o.stack.length = o.index + 1);
-				o.stack.length >= 250;
-
-			)
-				o.stack.shift();
+			for (null != l && (l.mergeable = !1), o.stack.length > 0 && (o.stack.length = o.index + 1); o.stack.length >= 250; ) o.stack.shift();
 			o.stack.push({
 				type: t,
 				mergeable: n,
@@ -80,15 +75,7 @@ function o(e, t, n, a) {
 	i.set(e, !1);
 	try {
 		let i = a();
-		return (
-			u &&
-				(n
-					? s.mergeEntry(e)
-					: e.children !== o
-						? s.insertEntry(e, t, !1)
-						: s.isMerging(e) && null != e.selection && (null == l || !r.M8.equals(e.selection, l)) && s.mergeEntry(e)),
-			i
-		);
+		return u && (n ? s.mergeEntry(e) : e.children !== o ? s.insertEntry(e, t, !1) : s.isMerging(e) && null != e.selection && (null == l || !r.M8.equals(e.selection, l)) && s.mergeEntry(e)), i;
 	} finally {
 		i.set(e, u);
 	}

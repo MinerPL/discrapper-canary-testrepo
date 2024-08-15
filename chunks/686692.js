@@ -21,11 +21,7 @@ let i = (0, n(818083).B)({
 		]
 	}),
 	a = function (e) {
-		let {
-				autoTrackExposure: t = !1,
-				disable: n = !1,
-				location: a = r.Z.GUILD_MEMBER_MOD_VIEW
-			} = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+		let { autoTrackExposure: t = !1, disable: n = !1, location: a = r.Z.GUILD_MEMBER_MOD_VIEW } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
 			{ enabled: s } = i.getCurrentConfig(
 				{
 					guildId: e,
@@ -39,11 +35,7 @@ let i = (0, n(818083).B)({
 		return s;
 	},
 	s = function (e) {
-		let {
-				autoTrackExposure: t = !1,
-				disable: n = !1,
-				location: a = r.Z.GUILD_MEMBER_MOD_VIEW
-			} = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+		let { autoTrackExposure: t = !1, disable: n = !1, location: a = r.Z.GUILD_MEMBER_MOD_VIEW } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
 			{ enabled: s } = i.useExperiment(
 				{
 					guildId: null != e ? e : void 0,

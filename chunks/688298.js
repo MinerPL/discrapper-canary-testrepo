@@ -78,15 +78,7 @@ function l(e) {
 	);
 }
 function c(e) {
-	let {
-		shouldShow: n,
-		showSecondaryColor: t,
-		onRequestClose: r,
-		children: s,
-		palette: o,
-		onPrimaryColorChange: c,
-		onSecondaryColorChange: d
-	} = e;
+	let { shouldShow: n, showSecondaryColor: t, onRequestClose: r, children: s, palette: o, onPrimaryColorChange: c, onSecondaryColorChange: d } = e;
 	return (0, a.jsx)(i.Popout, {
 		renderPopout: () =>
 			(0, a.jsx)(l, {

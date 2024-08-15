@@ -4,13 +4,5 @@ var r = n(6170),
 	s = n(175056),
 	o = n(69958);
 t.Z = function (e) {
-	return 'function' == typeof e
-		? e
-		: null == e
-			? a.Z
-			: 'object' == typeof e
-				? (0, s.Z)(e)
-					? (0, i.Z)(e[0], e[1])
-					: (0, r.Z)(e)
-				: (0, o.Z)(e);
+	return 'function' == typeof e ? e : null == e ? a.Z : 'object' == typeof e ? ((0, s.Z)(e) ? (0, i.Z)(e[0], e[1]) : (0, r.Z)(e)) : (0, o.Z)(e);
 };

@@ -18,17 +18,7 @@ var l = t(557533),
 	u = t(772421),
 	S = t(778342);
 function m(n) {
-	let {
-		description: e,
-		imgSrc: t,
-		PurchaseButton: l,
-		onPurchase: m,
-		subscriptionType: I,
-		title: x,
-		onDetails: f,
-		benefitItems: _,
-		benefitsSummary: p
-	} = n;
+	let { description: e, imgSrc: t, PurchaseButton: l, onPurchase: m, subscriptionType: I, title: x, onDetails: f, benefitItems: _, benefitsSummary: p } = n;
 	return (0, i.jsx)(o.tE, {
 		children: (0, i.jsxs)('div', {
 			className: r()(u.container, S.hoverCard),

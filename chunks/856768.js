@@ -57,9 +57,7 @@ function _(e) {
 		}, [x, _, t]),
 		C = i.useCallback(
 			(e) => {
-				let n =
-					(null == e ? void 0 : e.label) === (null == t ? void 0 : t.label) &&
-					(null == e ? void 0 : e.value) === (null == t ? void 0 : t.value);
+				let n = (null == e ? void 0 : e.label) === (null == t ? void 0 : t.label) && (null == e ? void 0 : e.value) === (null == t ? void 0 : t.value);
 				return null == e || '' === e.value || n
 					? null
 					: (0, r.jsx)(c.Z, {

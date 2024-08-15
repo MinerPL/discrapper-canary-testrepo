@@ -1,9 +1,9 @@
 n.d(t, {
 	Wc: function () {
-		return I;
+		return m;
 	},
 	Ye: function () {
-		return m;
+		return I;
 	},
 	bp: function () {
 		return p;
@@ -31,10 +31,7 @@ function _(e) {
 	if (null == e) return;
 	let t = e.maxResolution.type === c.uA.SOURCE ? l.LY.RESOLUTION_SOURCE : e.maxResolution.height,
 		n = (0, l.aW)(t);
-	return (
-		(0, l.L9)(e.maxFrameRate) !== l.ws.FPS_5 &&
-		null == l.ND.find((e) => e.resolution === n && e.fps !== l.ws.FPS_5 && !f(e))
-	);
+	return (0, l.L9)(e.maxFrameRate) !== l.ws.FPS_5 && null == l.ND.find((e) => e.resolution === n && e.fps !== l.ws.FPS_5 && !f(e));
 }
 function E(e) {
 	if (null == e) return;
@@ -45,14 +42,12 @@ function f(e) {
 	return null != e.quality || null != e.guildPremiumTier;
 }
 function h(e) {
-	return e.type === c.uA.SOURCE
-		? d.Z.Messages.SCREENSHARE_SOURCE
-		: d.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({ resolution: e.height });
+	return e.type === c.uA.SOURCE ? d.Z.Messages.SCREENSHARE_SOURCE : d.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({ resolution: e.height });
 }
 function p(e) {
 	return d.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({ fps: e });
 }
-function I(e) {
+function m(e) {
 	return null == e.maxResolution || null == e.maxFrameRate
 		? null
 		: {
@@ -60,13 +55,9 @@ function I(e) {
 				maxResolution: e.maxResolution
 			};
 }
-function m(e, t, n) {
+function I(e, t, n) {
 	var c, d, _;
-	let E =
-			((c = e),
-			(d = t),
-			(_ = n),
-			l.ND.find((e) => (null == e.preset || e.preset === c) && e.resolution === d && e.fps === _)),
+	let E = ((c = e), (d = t), (_ = n), l.ND.find((e) => (null == e.preset || e.preset === c) && e.resolution === d && e.fps === _)),
 		f = a.default.getCurrentUser(),
 		h = i.Z.getGuildId(),
 		p = null != h ? r.Z.getGuild(h) : null;

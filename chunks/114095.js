@@ -64,10 +64,6 @@ var e = {
 a.Z = function (i, a, n) {
 	var t,
 		r = e[i];
-	if (
-		((t = 'string' == typeof r ? r : 1 === a ? r.one : r.other.replace('{{count}}', String(a))),
-		null != n && n.addSuffix)
-	)
-		return n.comparison && n.comparison > 0 ? 'în ' + t : t + ' în urmă';
+	if (((t = 'string' == typeof r ? r : 1 === a ? r.one : r.other.replace('{{count}}', String(a))), null != n && n.addSuffix)) return n.comparison && n.comparison > 0 ? 'în ' + t : t + ' în urmă';
 	return t;
 };

@@ -13,9 +13,7 @@ var i = t(857595),
 	l = t(607070),
 	o = t(981631);
 function r(e) {
-	return o.yqN.ZOOM_SCALES[
-		Math.max(0, Math.min(o.yqN.ZOOM_SCALES.indexOf(l.Z.zoom) + e, o.yqN.ZOOM_SCALES.length - 1))
-	];
+	return o.yqN.ZOOM_SCALES[Math.max(0, Math.min(o.yqN.ZOOM_SCALES.indexOf(l.Z.zoom) + e, o.yqN.ZOOM_SCALES.length - 1))];
 }
 let E = {
 		binds: ['mod+plus'],

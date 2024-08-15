@@ -58,19 +58,13 @@ t.Z = function (e) {
 										if (r.type === j.fO.STREAM) {
 											let e = null !== (a = (0, _.Um)(r.stream, n)) && void 0 !== a ? a : null,
 												s = (0, g.ZZ)(t, e);
-											if (null != s && (null === (i = s.userStatus) || void 0 === i ? void 0 : i.claimedAt) == null)
-												return s;
+											if (null != s && (null === (i = s.userStatus) || void 0 === i ? void 0 : i.claimedAt) == null) return s;
 										}
 										for (let i of e) {
 											if (!(0, j.I)(i))
 												for (let e of n.getActivities(i.user.id)) {
 													let n = (0, g.ZZ)(t, e);
-													if (
-														null != n &&
-														(null === (s = n.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null &&
-														((0, g.Nj)({ quest: n }) || (0, g.$J)(n))
-													)
-														return n;
+													if (null != n && (null === (s = n.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null && ((0, g.Nj)({ quest: n }) || (0, g.$J)(n))) return n;
 												}
 										}
 									}
@@ -109,10 +103,7 @@ t.Z = function (e) {
 		),
 		ee = !0 === G || Q || $,
 		et = (0, l.e7)([C.Z], () => null != q && C.Z.isEnrolling(q.id), [q]),
-		en = (0, l.e7)([u.Z], () => ((null == W ? void 0 : W.id) == null ? null : u.Z.getParticipant(B, W.id)) != null, [
-			B,
-			W
-		]),
+		en = (0, l.e7)([u.Z], () => ((null == W ? void 0 : W.id) == null ? null : u.Z.getParticipant(B, W.id)) != null, [B, W]),
 		ei = (0, f.B6)(null == q ? void 0 : q.config.expiresAt),
 		ea = (0, f.B6)(null == X ? void 0 : X.rewardsExpireAt),
 		es = a.useCallback(() => {
@@ -232,8 +223,7 @@ t.Z = function (e) {
 														questContent: p.jn.QUEST_LIVE_STREAM,
 														quest: q,
 														preventIdle: !0,
-														shouldShowDisclosure:
-															(null === (e = q.userStatus) || void 0 === e ? void 0 : e.enrolledAt) == null,
+														shouldShowDisclosure: (null === (e = q.userStatus) || void 0 === e ? void 0 : e.enrolledAt) == null,
 														children: (e) =>
 															(0, i.jsx)(c.Clickable, {
 																...e,
@@ -251,9 +241,7 @@ t.Z = function (e) {
 											(0, i.jsx)(c.Text, {
 												color: 'header-secondary',
 												variant: 'text-xs/medium',
-												children: e_
-													? U.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: ea })
-													: U.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: ei })
+												children: e_ ? U.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: ea }) : U.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: ei })
 											})
 										]
 									})

@@ -18,8 +18,8 @@ var r,
 	f = n(866442),
 	h = n(692547),
 	p = n(84735),
-	I = n(481060),
-	m = n(981631),
+	m = n(481060),
+	I = n(981631),
 	T = n(693297);
 function g(e, t, n) {
 	return (
@@ -34,12 +34,7 @@ function g(e, t, n) {
 		e
 	);
 }
-((s = r || (r = {})).DEFAULT = 'default'),
-	(s.INVERTED = 'inverted'),
-	(s.GHOST = 'ghost'),
-	(s.ROW = 'row'),
-	((o = i || (i = {})).TOP = 'top'),
-	(o.CENTER = 'center');
+((s = r || (r = {})).DEFAULT = 'default'), (s.INVERTED = 'inverted'), (s.GHOST = 'ghost'), (s.ROW = 'row'), ((o = i || (i = {})).TOP = 'top'), (o.CENTER = 'center');
 let S = {
 		BOX: T.box,
 		ROUND: T.round,
@@ -79,10 +74,7 @@ class N extends (a = u.PureComponent) {
 					if (r.startsWith('var(--')) {
 						let e = ''.concat(r.slice(0, -1), '-hsl)');
 						(i.borderColor = 'rgba('.concat(e, ', 0.15)')), (i.backgroundColor = 'rgba('.concat(e, ', 0.15)'));
-					} else
-						E()((0, f.FX)(r), 'Checkbox: '.concat(r, ' is not a valid hex color')),
-							(i.borderColor = (0, f.wK)(r, 0.15)),
-							(i.backgroundColor = (0, f.wK)(r, 0.15));
+					} else E()((0, f.FX)(r), 'Checkbox: '.concat(r, ' is not a valid hex color')), (i.borderColor = (0, f.wK)(r, 0.15)), (i.backgroundColor = (0, f.wK)(r, 0.15));
 					break;
 				case 'row':
 				case 'inverted':
@@ -92,29 +84,10 @@ class N extends (a = u.PureComponent) {
 	}
 	getColor() {
 		let { value: e, type: t, color: n } = this.props;
-		return e
-			? 'inverted' === t || 'row' === t
-				? h.Z.unsafe_rawColors.WHITE_500.css
-				: n
-			: h.Z.unsafe_rawColors.TRANSPARENT.css;
+		return e ? ('inverted' === t || 'row' === t ? h.Z.unsafe_rawColors.WHITE_500.css : n) : h.Z.unsafe_rawColors.TRANSPARENT.css;
 	}
 	render() {
-		let {
-				disabled: e,
-				readOnly: t,
-				value: n,
-				shape: r,
-				align: i = 'center',
-				className: a,
-				innerClassName: s,
-				children: o,
-				size: u,
-				reverse: c,
-				checkboxColor: _,
-				displayOnly: E,
-				type: f,
-				onClick: h
-			} = this.props,
+		let { disabled: e, readOnly: t, value: n, shape: r, align: i = 'center', className: a, innerClassName: s, children: o, size: u, reverse: c, checkboxColor: _, displayOnly: E, type: f, onClick: h } = this.props,
 			g =
 				null != o
 					? (0, l.jsx)('div', {
@@ -137,7 +110,7 @@ class N extends (a = u.PureComponent) {
 							className: d()(s, S),
 							type: 'checkbox',
 							onClick: h,
-							onChange: e || t ? m.dG4 : this.handleChange,
+							onChange: e || t ? I.dG4 : this.handleChange,
 							checked: n,
 							style: {
 								width: u,
@@ -153,7 +126,7 @@ class N extends (a = u.PureComponent) {
 						borderColor: _,
 						...this.getStyle()
 					},
-					children: (0, l.jsx)(I.CheckmarkLargeIcon, {
+					children: (0, l.jsx)(m.CheckmarkLargeIcon, {
 						size: 'sm',
 						color: this.getColor(),
 						'aria-hidden': !0
@@ -184,6 +157,6 @@ g(N, 'Types', r),
 		color: h.Z.unsafe_rawColors.BRAND_500.css,
 		shape: S.BOX,
 		align: 'center',
-		onChange: m.dG4,
+		onChange: I.dG4,
 		reverse: !1
 	});

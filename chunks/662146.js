@@ -10,19 +10,7 @@ var i = n(735250),
 	s = n(481060),
 	o = n(809642);
 function c(e) {
-	let {
-		children: t,
-		text: n,
-		color: r,
-		disableWrapper: c = !1,
-		disabled: u = !1,
-		hideOnClick: d = !0,
-		shouldShow: h,
-		forceOpen: p,
-		selected: _ = !1,
-		tooltipClass: f,
-		tooltipContentClass: g
-	} = e;
+	let { children: t, text: n, color: r, disableWrapper: c = !1, disabled: u = !1, hideOnClick: d = !0, shouldShow: h, forceOpen: p, selected: _ = !1, tooltipClass: f, tooltipContentClass: g } = e;
 	return (0, i.jsx)(s.Tooltip, {
 		shouldShow: h,
 		forceOpen: p,

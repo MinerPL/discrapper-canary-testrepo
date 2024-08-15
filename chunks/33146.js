@@ -16,8 +16,7 @@ function c(e) {
 		{ category: c, className: o, onViewAll: d } = e;
 	return (
 		null == c || (0, l.m0)(c)
-			? ((t = s.Z.Messages.APP_DIRECTORY_EMPTY_SEARCH_HEADING),
-				(n = s.Z.Messages.APP_DIRECTORY_EMPTY_SEARCH_SUBHEADING))
+			? ((t = s.Z.Messages.APP_DIRECTORY_EMPTY_SEARCH_HEADING), (n = s.Z.Messages.APP_DIRECTORY_EMPTY_SEARCH_SUBHEADING))
 			: ((t = s.Z.Messages.APP_DIRECTORY_EMPTY_CATEGORY_SEARCH_HEADING.format({ categoryName: c.name })),
 				(n = s.Z.Messages.APP_DIRECTORY_EMPTY_CATEGORY_SEARCH_SUBHEADING.format({
 					viewAllHook: (e, t) =>

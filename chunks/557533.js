@@ -10,8 +10,7 @@
 						if ('string' == typeof e || 'number' == typeof e) return e;
 						if ('object' != typeof e) return '';
 						if (Array.isArray(e)) return n.apply(null, e);
-						if (e.toString !== Object.prototype.toString && !e.toString.toString().includes('[native code]'))
-							return e.toString();
+						if (e.toString !== Object.prototype.toString && !e.toString.toString().includes('[native code]')) return e.toString();
 						var i = '';
 						for (var a in e) t.call(e, a) && e[a] && (i = r(i, a));
 						return i;

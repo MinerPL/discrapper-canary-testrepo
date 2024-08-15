@@ -45,21 +45,7 @@ n.Z = (e) => {
 				}),
 				(0, t.jsx)('div', {
 					className: N.text,
-					children: ((n = l),
-					(a = r),
-					'PL' === n
-						? a
-							? f.Z.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_BOOST_WARNING
-							: f.Z.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_WARNING
-						: 'TR' === n
-							? a
-								? f.Z.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_BOOST_WARNING
-								: f.Z.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_WARNING
-							: a
-								? f.Z.Messages.LOCALIZED_PRICING_LEGACY_PRICING_BOOST_WARNING
-								: f.Z.Messages.LOCALIZED_PRICING_LEGACY_PRICING_WARNING).format({
-						helpCenterLink: I.Z.getArticleURL(d.BhN.LOCALIZED_PRICING)
-					})
+					children: ((n = l), (a = r), 'PL' === n ? (a ? f.Z.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_BOOST_WARNING : f.Z.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_WARNING) : 'TR' === n ? (a ? f.Z.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_BOOST_WARNING : f.Z.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_WARNING) : a ? f.Z.Messages.LOCALIZED_PRICING_LEGACY_PRICING_BOOST_WARNING : f.Z.Messages.LOCALIZED_PRICING_LEGACY_PRICING_WARNING).format({ helpCenterLink: I.Z.getArticleURL(d.BhN.LOCALIZED_PRICING) })
 				})
 			]
 		})

@@ -43,24 +43,10 @@ class i {
 		})(this.analyser, this.fftBins)),
 			this.speakingHistory[this.speakingHistoryIndex] && this.speakingCounter--;
 		let e = this.currentVolume > this.threshold;
-		(this.speakingHistory[this.speakingHistoryIndex] = e),
-			e && this.speakingCounter++,
-			++this.speakingHistoryIndex === this.speakingHistory.length && (this.speakingHistoryIndex = 0),
-			this.speakingCounter > 0 ? (this.silentFrames = 0) : this.silentFrames++;
+		(this.speakingHistory[this.speakingHistoryIndex] = e), e && this.speakingCounter++, ++this.speakingHistoryIndex === this.speakingHistory.length && (this.speakingHistoryIndex = 0), this.speakingCounter > 0 ? (this.silentFrames = 0) : this.silentFrames++;
 	}
 	constructor(e, t, n, i = 0.1, a = 10) {
-		r(this, 'threshold', void 0),
-			r(this, 'currentVolume', 0),
-			r(this, 'analyser', void 0),
-			r(this, 'interval', void 0),
-			r(this, 'fftBins', void 0),
-			r(this, 'source', void 0),
-			r(this, 'speakingHistory', void 0),
-			r(this, 'speakingHistoryIndex', 0),
-			r(this, 'speakingCounter', 0),
-			r(this, 'silenceThreshold', void 0),
-			r(this, 'silentFrames', void 0),
-			r(this, 'onProcess', null);
+		r(this, 'threshold', void 0), r(this, 'currentVolume', 0), r(this, 'analyser', void 0), r(this, 'interval', void 0), r(this, 'fftBins', void 0), r(this, 'source', void 0), r(this, 'speakingHistory', void 0), r(this, 'speakingHistoryIndex', 0), r(this, 'speakingCounter', 0), r(this, 'silenceThreshold', void 0), r(this, 'silentFrames', void 0), r(this, 'onProcess', null);
 		let s = e.createAnalyser();
 		(s.fftSize = 512), (s.smoothingTimeConstant = i);
 		let o = e.createMediaStreamSource(t);
@@ -71,13 +57,6 @@ class i {
 			var e;
 			this.update(), null === (e = this.onProcess) || void 0 === e || e.call(this, this.speaking, this.currentVolume);
 		}, 20);
-		(this.threshold = n),
-			(this.analyser = s),
-			(this.interval = u),
-			(this.fftBins = new Float32Array(s.fftSize)),
-			(this.source = o),
-			(this.speakingHistory = l),
-			(this.silenceThreshold = this.speakingHistory.length),
-			(this.silentFrames = this.silenceThreshold);
+		(this.threshold = n), (this.analyser = s), (this.interval = u), (this.fftBins = new Float32Array(s.fftSize)), (this.source = o), (this.speakingHistory = l), (this.silenceThreshold = this.speakingHistory.length), (this.silentFrames = this.silenceThreshold);
 	}
 }

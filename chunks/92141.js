@@ -15,9 +15,9 @@ e.exports = function (e, t, n, a, s, o) {
 	o.set(e, t), o.set(t, e);
 	for (var h = l; ++d < c; ) {
 		var p = e[(_ = u[d])],
-			I = t[_];
-		if (a) var m = l ? a(I, p, _, t, e, o) : a(p, I, _, e, t, o);
-		if (!(void 0 === m ? p === I || s(p, I, n, a, o) : m)) {
+			m = t[_];
+		if (a) var I = l ? a(m, p, _, t, e, o) : a(p, m, _, e, t, o);
+		if (!(void 0 === I ? p === m || s(p, m, n, a, o) : I)) {
 			f = !1;
 			break;
 		}
@@ -26,11 +26,7 @@ e.exports = function (e, t, n, a, s, o) {
 	if (f && !h) {
 		var T = e.constructor,
 			g = t.constructor;
-		T != g &&
-			'constructor' in e &&
-			'constructor' in t &&
-			!('function' == typeof T && T instanceof T && 'function' == typeof g && g instanceof g) &&
-			(f = !1);
+		T != g && 'constructor' in e && 'constructor' in t && !('function' == typeof T && T instanceof T && 'function' == typeof g && g instanceof g) && (f = !1);
 	}
 	return o.delete(e), o.delete(t), f;
 };

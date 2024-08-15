@@ -40,8 +40,7 @@ e(
 				v = p(u, 0),
 				l = 0;
 			for (r = -1, e = arguments.length; r < e; r++)
-				if (((i = -1 === r ? u : arguments[r]), d(i)))
-					for (f(l + (o = c(i))), n = 0; n < o; n++, l++) n in i && a(v, l, i[n]);
+				if (((i = -1 === r ? u : arguments[r]), d(i))) for (f(l + (o = c(i))), n = 0; n < o; n++, l++) n in i && a(v, l, i[n]);
 				else f(l + 1), a(v, l++, i);
 			return (v.length = l), v;
 		}

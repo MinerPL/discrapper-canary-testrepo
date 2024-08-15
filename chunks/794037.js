@@ -11,10 +11,7 @@ var r =
 		function e(e, t) {
 			for (var n = 0; n < t.length; n++) {
 				var r = t[n];
-				(r.enumerable = r.enumerable || !1),
-					(r.configurable = !0),
-					'value' in r && (r.writable = !0),
-					Object.defineProperty(e, r.key, r);
+				(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 			}
 		}
 		return function (t, n, r) {
@@ -43,8 +40,7 @@ var _ = (function (e) {
 	}
 	return (
 		!(function (e, t) {
-			if ('function' != typeof t && null !== t)
-				throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+			if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
 			(e.prototype = Object.create(t && t.prototype, {
 				constructor: {
 					value: e,
@@ -101,11 +97,7 @@ var _ = (function (e) {
 			{
 				key: 'render',
 				value: function () {
-					if (
-						((0, c.default)(this.props.children, 'Expected children to be one of function or React.Element'),
-						!this.state.initiated)
-					)
-						return s.default.createElement('div', null);
+					if (((0, c.default)(this.props.children, 'Expected children to be one of function or React.Element'), !this.state.initiated)) return s.default.createElement('div', null);
 					if ('function' == typeof this.props.children) {
 						var e = this.props.children(this.state);
 						return e && a.Children.only(e);

@@ -45,10 +45,7 @@ class l extends r.EventEmitter {
 		} catch (e) {
 			throw ((n.error = e), e);
 		} finally {
-			(n.totalTime = a.Sv.now() - n.startTime),
-				this.persist && n.totalTime > 0 && this.logs.push(n),
-				this.logs.length > 1000 && this.logs.shift(),
-				this.emit('log', e);
+			(n.totalTime = a.Sv.now() - n.startTime), this.persist && n.totalTime > 0 && this.logs.push(n), this.logs.length > 1000 && this.logs.shift(), this.emit('log', e);
 		}
 		return n;
 	}
@@ -73,12 +70,7 @@ class l extends r.EventEmitter {
 					return (s += n), ''.concat(t.padEnd(a + 1, ' '), ' - ').concat(n, 'ms');
 				})
 				.join('\n');
-		return 0 === i.length || i[0][2] < 10 || s < 20
-			? i
-			: (o.log('Using Hermes:', void 0 !== (null === (t = n.g) || void 0 === t ? void 0 : t.HermesInternal)),
-				o.log(''.concat(null != e ? '\n\n=== '.concat(e, ' ===') : '', '\n').concat(l, '\n')),
-				o.log('Total Time: '.concat(s, 'ms')),
-				i);
+		return 0 === i.length || i[0][2] < 10 || s < 20 ? i : (o.log('Using Hermes:', void 0 !== (null === (t = n.g) || void 0 === t ? void 0 : t.HermesInternal)), o.log(''.concat(null != e ? '\n\n=== '.concat(e, ' ===') : '', '\n').concat(l, '\n')), o.log('Total Time: '.concat(s, 'ms')), i);
 	}
 	getLastActionMetrics(e) {
 		var t;
@@ -99,14 +91,7 @@ class l extends r.EventEmitter {
 					return (l += n), ''.concat(t.padEnd(s + 1, ' '), ' - ').concat(n, 'ms');
 				})
 				.join('\n');
-		return 0 === a.length || l < 8
-			? a
-			: (o.log(
-					'\nUsing Hermes: '.concat(void 0 !== (null === (t = n.g) || void 0 === t ? void 0 : t.HermesInternal)),
-					'\n\n=== '.concat(e, ' ===\n').concat(u),
-					'\nTotal Time: '.concat(l, 'ms\n\n')
-				),
-				a);
+		return 0 === a.length || l < 8 ? a : (o.log('\nUsing Hermes: '.concat(void 0 !== (null === (t = n.g) || void 0 === t ? void 0 : t.HermesInternal)), '\n\n=== '.concat(e, ' ===\n').concat(u), '\nTotal Time: '.concat(l, 'ms\n\n')), a);
 	}
 	constructor({ persist: e = !1 } = {}) {
 		super(), s(this, 'logs', []), s(this, 'persist', void 0), (this.persist = e);
@@ -127,15 +112,6 @@ class c {
 		};
 	}
 	constructor(e) {
-		s(this, 'id', void 0),
-			s(this, 'action', void 0),
-			s(this, 'createdAt', void 0),
-			s(this, 'startTime', 0),
-			s(this, 'totalTime', 0),
-			s(this, 'traces', []),
-			s(this, 'error', void 0),
-			(this.id = u++),
-			(this.action = e),
-			(this.createdAt = new Date());
+		s(this, 'id', void 0), s(this, 'action', void 0), s(this, 'createdAt', void 0), s(this, 'startTime', 0), s(this, 'totalTime', 0), s(this, 'traces', []), s(this, 'error', void 0), (this.id = u++), (this.action = e), (this.createdAt = new Date());
 	}
 }

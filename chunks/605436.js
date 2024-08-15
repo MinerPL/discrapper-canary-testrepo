@@ -6,7 +6,7 @@ n.d(t, {
 		return B;
 	},
 	GJ: function () {
-		return m;
+		return I;
 	},
 	Gy: function () {
 		return v;
@@ -81,8 +81,8 @@ var r = n(149765),
 	f = n(51144),
 	h = n(71080),
 	p = n(981631),
-	I = n(689938);
-function m(e) {
+	m = n(689938);
+function I(e) {
 	return r.e$(e.permissions, p.Plq.ADMINISTRATOR);
 }
 function T(e) {
@@ -94,21 +94,18 @@ function T(e) {
 		colorString: null !== (t = e.colorString) && void 0 !== t ? t : (0, i.Rf)(p.p6O),
 		name: e.name,
 		id: e.id,
-		disabled: m(e) || a,
+		disabled: I(e) || a,
 		key: ''.concat(s, ':').concat(e.id),
 		tags: e.tags
 	};
 }
 function g(e, t) {
-	let n = m(e) ? 0 : 1,
-		r = m(t) ? 0 : 1;
+	let n = I(e) ? 0 : 1,
+		r = I(t) ? 0 : 1;
 	return n !== r ? n - r : t.position - e.position;
 }
 function S() {
-	let e =
-		arguments.length > 0 && void 0 !== arguments[0]
-			? arguments[0]
-			: I.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_NO_ROLES;
+	let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_NO_ROLES;
 	return [
 		{
 			rowType: h.aC.EMPTY_STATE,
@@ -138,31 +135,21 @@ function O(e, t) {
 function R(e, t, n, r) {
 	let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
 	return Object.values(t)
-		.filter((t) => !m(t) && A(n, t.id, r) && O(e, t) && i(t.name))
+		.filter((t) => !I(t) && A(n, t.id, r) && O(e, t) && i(t.name))
 		.sort(g)
 		.map((e) => T(e));
 }
 function C(e, t, n, i) {
 	let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
 	return Object.values(t)
-		.filter((t) => !m(t) && A(n, t.id, i) && O(e, t) && a(t.name))
+		.filter((t) => !I(t) && A(n, t.id, i) && O(e, t) && a(t.name))
 		.sort(g)
 		.map((e) => T(e, r.e$(e.permissions, i)));
 }
 function y(e, t, n, r, i) {
 	var a, s, o, l, u;
 	let c = [];
-	return 0 ===
-		(c = ((a = e),
-		(s = t),
-		(o = n),
-		(l = r),
-		(u = i),
-		Object.values(s).filter((e) => m(e) || (!A(o, e.id, l, u) && O(a, e))))
-			.sort(g)
-			.map((e) => T(e))).length
-		? S(I.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES)
-		: c;
+	return 0 === (c = ((a = e), (s = t), (o = n), (l = r), (u = i), Object.values(s).filter((e) => I(e) || (!A(o, e.id, l, u) && O(a, e)))).sort(g).map((e) => T(e))).length ? S(m.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : c;
 }
 function D(e, t, n, i, a) {
 	var s, o, l, u, c;
@@ -175,15 +162,11 @@ function D(e, t, n, i, a) {
 		(c = a),
 		Object.values(o).filter((e) => {
 			var t;
-			return (
-				m(e) ||
-				(!A(l, e.id, u, c) && O(s, e)) ||
-				r.e$(r.$e(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u)
-			);
+			return I(e) || (!A(l, e.id, u, c) && O(s, e)) || r.e$(r.$e(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u);
 		}))
 			.sort(g)
 			.map((e) => T(e, r.e$(e.permissions, i)))).length
-		? S(I.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES)
+		? S(m.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES)
 		: d;
 }
 function L(e, t) {
@@ -210,9 +193,7 @@ function M(e, t) {
 	};
 }
 function P(e, t) {
-	return e.rowType !== t.rowType
-		? e.rowType - t.rowType
-		: e.name.toLocaleLowerCase().localeCompare(t.name.toLocaleLowerCase());
+	return e.rowType !== t.rowType ? e.rowType - t.rowType : e.name.toLocaleLowerCase().localeCompare(t.name.toLocaleLowerCase());
 }
 function U(e, t, n, r) {
 	let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
@@ -243,17 +224,17 @@ function w(e, t, n, r, i) {
 function x(e, t) {
 	switch (e) {
 		case h.aC.ROLE:
-			return I.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ROLE;
+			return m.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ROLE;
 		case h.aC.OWNER:
-			return I.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_OWNER;
+			return m.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_OWNER;
 		case h.aC.ADMINISTRATOR:
-			return I.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ADMINISTRATOR;
+			return m.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_ADMINISTRATOR;
 		case h.aC.MEMBER:
-			return t ? I.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_MEMBER : null;
+			return t ? m.Z.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_ROW_MEMBER : null;
 		case h.aC.USER:
-			return I.Z.Messages.USER;
+			return m.Z.Messages.USER;
 		case h.aC.GUILD:
-			return I.Z.Messages.SERVER;
+			return m.Z.Messages.SERVER;
 		case h.aC.EMPTY_STATE:
 			return null;
 	}
@@ -261,13 +242,13 @@ function x(e, t) {
 function G(e) {
 	switch (e) {
 		case h.aC.ROLE:
-			return I.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
+			return m.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
 		case h.aC.OWNER:
-			return I.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
+			return m.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
 		case h.aC.ADMINISTRATOR:
-			return I.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
+			return m.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
 		case h.aC.MEMBER:
-			return I.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
+			return m.Z.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP;
 		case h.aC.EMPTY_STATE:
 		default:
 			return null;
@@ -304,28 +285,24 @@ function F(e, t) {
 function V(e, t) {
 	if (null == e) return !1;
 	let n = e.permissionOverwrites[e.guild_id];
-	return (
-		(null == t ? void 0 : t[e.guild_id]) != null && (n = t[e.guild_id]), null != n && r.e$(n.deny, e.accessPermissions)
-	);
+	return (null == t ? void 0 : t[e.guild_id]) != null && (n = t[e.guild_id]), null != n && r.e$(n.deny, e.accessPermissions);
 }
 function H(e, t) {
 	let n = Object.keys(t);
 	return 0 !== n.length && (1 !== n.length || n[0] !== e.id);
 }
 function Z(e, t, n) {
-	return e === p.d4z.GUILD_TEXT || e === p.d4z.GUILD_ANNOUNCEMENT
-		? t
-		: (!(0, o.bw)(e) && e !== p.d4z.GUILD_CATEGORY) || (t && n);
+	return e === p.d4z.GUILD_TEXT || e === p.d4z.GUILD_ANNOUNCEMENT ? t : (!(0, o.bw)(e) && e !== p.d4z.GUILD_CATEGORY) || (t && n);
 }
 function Y(e) {
 	switch (e) {
 		case p.d4z.GUILD_TEXT:
 		case p.d4z.GUILD_ANNOUNCEMENT:
-			return I.Z.Messages.PRIVATE_TEXT_CHANNEL_CREATION_PERMISSION_MISSING_HINT.format();
+			return m.Z.Messages.PRIVATE_TEXT_CHANNEL_CREATION_PERMISSION_MISSING_HINT.format();
 		case p.d4z.GUILD_VOICE:
-			return I.Z.Messages.PRIVATE_VOICE_CHANNEL_CREATION_PERMISSION_MISSING_HINT.format();
+			return m.Z.Messages.PRIVATE_VOICE_CHANNEL_CREATION_PERMISSION_MISSING_HINT.format();
 		case p.d4z.GUILD_CATEGORY:
-			return I.Z.Messages.PRIVATE_CATEGORY_CREATION_PERMISSION_MISSING_HINT.format();
+			return m.Z.Messages.PRIVATE_CATEGORY_CREATION_PERMISSION_MISSING_HINT.format();
 		default:
 			return null;
 	}
@@ -335,11 +312,7 @@ function j(e, t) {
 	return (
 		Object.values(e).forEach((e) => {
 			let { row: r } = e;
-			null != r.id &&
-				'' !== r.id &&
-				(r.rowType === h.aC.ROLE
-					? n.push((0, c.rX)(r.id, t))
-					: r.rowType === h.aC.MEMBER && n.push((0, c.jZ)(r.id, t)));
+			null != r.id && '' !== r.id && (r.rowType === h.aC.ROLE ? n.push((0, c.rX)(r.id, t)) : r.rowType === h.aC.MEMBER && n.push((0, c.jZ)(r.id, t)));
 		}),
 		n
 	);

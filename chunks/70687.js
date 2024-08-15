@@ -30,11 +30,7 @@ r.inherits(_, c),
 				h = l(s(i, 5), u(f, a, c, _), E, n[r], d[f]);
 			(E = _), (_ = c), (c = s(a, 30)), (a = i), (i = h);
 		}
-		(this.h[0] = o(this.h[0], i)),
-			(this.h[1] = o(this.h[1], a)),
-			(this.h[2] = o(this.h[2], c)),
-			(this.h[3] = o(this.h[3], _)),
-			(this.h[4] = o(this.h[4], E));
+		(this.h[0] = o(this.h[0], i)), (this.h[1] = o(this.h[1], a)), (this.h[2] = o(this.h[2], c)), (this.h[3] = o(this.h[3], _)), (this.h[4] = o(this.h[4], E));
 	}),
 	(_.prototype._digest = function (e) {
 		return 'hex' === e ? r.toHex32(this.h, 'big') : r.split32(this.h, 'big');

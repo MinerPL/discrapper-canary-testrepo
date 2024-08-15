@@ -24,16 +24,4 @@ let d = 25,
 function E(e) {
 	return null != e && 'TERMS' === e.field_type;
 }
-((o = r || (r = {})).TERMS = 'TERMS'),
-	(o.TEXT_INPUT = 'TEXT_INPUT'),
-	(o.PARAGRAPH = 'PARAGRAPH'),
-	(o.MULTIPLE_CHOICE = 'MULTIPLE_CHOICE'),
-	(o.VERIFICATION = 'VERIFICATION'),
-	((l = i || (i = {})).EMAIL = 'email'),
-	(l.PHONE = 'phone'),
-	((u = a || (a = {})).TIMESTAMP_DESC = 'NEWEST'),
-	(u.TIMESTAMP_ASC = 'OLDEST'),
-	((c = s || (s = {})).STARTED = 'STARTED'),
-	(c.SUBMITTED = 'SUBMITTED'),
-	(c.REJECTED = 'REJECTED'),
-	(c.APPROVED = 'APPROVED');
+((o = r || (r = {})).TERMS = 'TERMS'), (o.TEXT_INPUT = 'TEXT_INPUT'), (o.PARAGRAPH = 'PARAGRAPH'), (o.MULTIPLE_CHOICE = 'MULTIPLE_CHOICE'), (o.VERIFICATION = 'VERIFICATION'), ((l = i || (i = {})).EMAIL = 'email'), (l.PHONE = 'phone'), ((u = a || (a = {})).TIMESTAMP_DESC = 'NEWEST'), (u.TIMESTAMP_ASC = 'OLDEST'), ((c = s || (s = {})).STARTED = 'STARTED'), (c.SUBMITTED = 'SUBMITTED'), (c.REJECTED = 'REJECTED'), (c.APPROVED = 'APPROVED');

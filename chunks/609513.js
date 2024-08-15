@@ -3,16 +3,7 @@ var r,
 	a = n(814084),
 	s = n(685053).assert;
 function o(e) {
-	'short' === e.type
-		? (this.curve = new a.short(e))
-		: 'edwards' === e.type
-			? (this.curve = new a.edwards(e))
-			: (this.curve = new a.mont(e)),
-		(this.g = this.curve.g),
-		(this.n = this.curve.n),
-		(this.hash = e.hash),
-		s(this.g.validate(), 'Invalid curve'),
-		s(this.g.mul(this.n).isInfinity(), 'Invalid curve, G*N != O');
+	'short' === e.type ? (this.curve = new a.short(e)) : 'edwards' === e.type ? (this.curve = new a.edwards(e)) : (this.curve = new a.mont(e)), (this.g = this.curve.g), (this.n = this.curve.n), (this.hash = e.hash), s(this.g.validate(), 'Invalid curve'), s(this.g.mul(this.n).isInfinity(), 'Invalid curve, G*N != O');
 }
 function l(e, n) {
 	Object.defineProperty(t, e, {
@@ -41,10 +32,7 @@ function l(e, n) {
 		n: 'ffffffff ffffffff ffffffff 99def836 146bc9b1 b4d22831',
 		hash: i.sha256,
 		gRed: !1,
-		g: [
-			'188da80e b03090f6 7cbf20eb 43a18800 f4ff0afd 82ff1012',
-			'07192b95 ffc8da78 631011ed 6b24cdd5 73f977a1 1e794811'
-		]
+		g: ['188da80e b03090f6 7cbf20eb 43a18800 f4ff0afd 82ff1012', '07192b95 ffc8da78 631011ed 6b24cdd5 73f977a1 1e794811']
 	}),
 	l('p224', {
 		type: 'short',
@@ -55,10 +43,7 @@ function l(e, n) {
 		n: 'ffffffff ffffffff ffffffff ffff16a2 e0b8f03e 13dd2945 5c5c2a3d',
 		hash: i.sha256,
 		gRed: !1,
-		g: [
-			'b70e0cbd 6bb4bf7f 321390b9 4a03c1d3 56c21122 343280d6 115c1d21',
-			'bd376388 b5f723fb 4c22dfe6 cd4375a0 5a074764 44d58199 85007e34'
-		]
+		g: ['b70e0cbd 6bb4bf7f 321390b9 4a03c1d3 56c21122 343280d6 115c1d21', 'bd376388 b5f723fb 4c22dfe6 cd4375a0 5a074764 44d58199 85007e34']
 	}),
 	l('p256', {
 		type: 'short',
@@ -69,10 +54,7 @@ function l(e, n) {
 		n: 'ffffffff 00000000 ffffffff ffffffff bce6faad a7179e84 f3b9cac2 fc632551',
 		hash: i.sha256,
 		gRed: !1,
-		g: [
-			'6b17d1f2 e12c4247 f8bce6e5 63a440f2 77037d81 2deb33a0 f4a13945 d898c296',
-			'4fe342e2 fe1a7f9b 8ee7eb4a 7c0f9e16 2bce3357 6b315ece cbb64068 37bf51f5'
-		]
+		g: ['6b17d1f2 e12c4247 f8bce6e5 63a440f2 77037d81 2deb33a0 f4a13945 d898c296', '4fe342e2 fe1a7f9b 8ee7eb4a 7c0f9e16 2bce3357 6b315ece cbb64068 37bf51f5']
 	}),
 	l('p384', {
 		type: 'short',
@@ -83,10 +65,7 @@ function l(e, n) {
 		n: 'ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff c7634d81 f4372ddf 581a0db2 48b0a77a ecec196a ccc52973',
 		hash: i.sha384,
 		gRed: !1,
-		g: [
-			'aa87ca22 be8b0537 8eb1c71e f320ad74 6e1d3b62 8ba79b98 59f741e0 82542a38 5502f25d bf55296c 3a545e38 72760ab7',
-			'3617de4a 96262c6f 5d9e98bf 9292dc29 f8f41dbd 289a147c e9da3113 b5f0b8c0 0a60b1ce 1d7e819d 7a431d7c 90ea0e5f'
-		]
+		g: ['aa87ca22 be8b0537 8eb1c71e f320ad74 6e1d3b62 8ba79b98 59f741e0 82542a38 5502f25d bf55296c 3a545e38 72760ab7', '3617de4a 96262c6f 5d9e98bf 9292dc29 f8f41dbd 289a147c e9da3113 b5f0b8c0 0a60b1ce 1d7e819d 7a431d7c 90ea0e5f']
 	}),
 	l('p521', {
 		type: 'short',
@@ -97,10 +76,7 @@ function l(e, n) {
 		n: '000001ff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff fffffffa 51868783 bf2f966b 7fcc0148 f709a5d0 3bb5c9b8 899c47ae bb6fb71e 91386409',
 		hash: i.sha512,
 		gRed: !1,
-		g: [
-			'000000c6 858e06b7 0404e9cd 9e3ecb66 2395b442 9c648139 053fb521 f828af60 6b4d3dba a14b5e77 efe75928 fe1dc127 a2ffa8de 3348b3c1 856a429b f97e7e31 c2e5bd66',
-			'00000118 39296a78 9a3bc004 5c8a5fb4 2c7d1bd9 98f54449 579b4468 17afbd17 273e662c 97ee7299 5ef42640 c550b901 3fad0761 353c7086 a272c240 88be9476 9fd16650'
-		]
+		g: ['000000c6 858e06b7 0404e9cd 9e3ecb66 2395b442 9c648139 053fb521 f828af60 6b4d3dba a14b5e77 efe75928 fe1dc127 a2ffa8de 3348b3c1 856a429b f97e7e31 c2e5bd66', '00000118 39296a78 9a3bc004 5c8a5fb4 2c7d1bd9 98f54449 579b4468 17afbd17 273e662c 97ee7299 5ef42640 c550b901 3fad0761 353c7086 a272c240 88be9476 9fd16650']
 	}),
 	l('curve25519', {
 		type: 'mont',
@@ -123,10 +99,7 @@ function l(e, n) {
 		n: '1000000000000000 0000000000000000 14def9dea2f79cd6 5812631a5cf5d3ed',
 		hash: i.sha256,
 		gRed: !1,
-		g: [
-			'216936d3cd6e53fec0a4e231fdd6dc5c692cc7609525a7b2c9562d608f25d51a',
-			'6666666666666666666666666666666666666666666666666666666666666658'
-		]
+		g: ['216936d3cd6e53fec0a4e231fdd6dc5c692cc7609525a7b2c9562d608f25d51a', '6666666666666666666666666666666666666666666666666666666666666658']
 	});
 try {
 	r = n(542610);
@@ -155,9 +128,5 @@ l('secp256k1', {
 		}
 	],
 	gRed: !1,
-	g: [
-		'79be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798',
-		'483ada7726a3c4655da4fbfc0e1108a8fd17b448a68554199c47d08ffb10d4b8',
-		r
-	]
+	g: ['79be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798', '483ada7726a3c4655da4fbfc0e1108a8fd17b448a68554199c47d08ffb10d4b8', r]
 });

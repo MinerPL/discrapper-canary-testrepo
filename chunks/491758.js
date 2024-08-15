@@ -33,24 +33,12 @@ var n = t(735250),
 	P = t(224499);
 function L() {
 	let e = (0, o.e7)([T.Z], () => T.Z.getHardwareEncoding()),
-		{
-			clipsEnabled: s,
-			remindersEnabled: t,
-			decoupledClipsEnabled: i,
-			clipsLength: L,
-			clipsQuality: b
-		} = (0, o.cj)([C.Z], () => C.Z.getSettings()),
+		{ clipsEnabled: s, remindersEnabled: t, decoupledClipsEnabled: i, clipsLength: L, clipsQuality: b } = (0, o.cj)([C.Z], () => C.Z.getSettings()),
 		Z = (0, o.e7)([C.Z], () => C.Z.getHardwareClassification()),
 		v = (0, o.e7)([S.Z], () => S.Z.getKeybindForAction(p.kg4.SAVE_CLIP, !0)),
-		{ enableDecoupledGameClipping: j } = E.Z.useExperiment(
-			{ location: 'clips_recording_settings' },
-			{ autoTrackExposure: !1 }
-		),
+		{ enableDecoupledGameClipping: j } = E.Z.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 }),
 		B = (0, A.Z)(T.Z),
-		{ showClipsHeaderEntrypoint: U } = N.NV.useExperiment(
-			{ location: 'clips_recording_settings' },
-			{ autoTrackExposure: !1 }
-		);
+		{ showClipsHeaderEntrypoint: U } = N.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
 	r()(null != v, 'Save clip keybind unset');
 	let G = (0, o.e7)([u.default], () => u.default.locale),
 		F = a.useMemo(
@@ -130,12 +118,7 @@ function L() {
 						(0, n.jsx)(I.Z, {
 							look: I.z.WARNING,
 							className: D.formItem,
-							children: M.Z.Messages.CLIPS_SETTINGS_HW_ENCODING_MUST_BE_ENABLED_INFOBOX.format({
-								onClick: () =>
-									d.Z.open(p.oAB.VOICE, null, {
-										scrollPosition: x.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION
-									})
-							})
+							children: M.Z.Messages.CLIPS_SETTINGS_HW_ENCODING_MUST_BE_ENABLED_INFOBOX.format({ onClick: () => d.Z.open(p.oAB.VOICE, null, { scrollPosition: x.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
 						}),
 					Z === m.x.BELOW_MINIMUM
 						? (0, n.jsx)(I.Z, {

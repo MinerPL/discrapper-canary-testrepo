@@ -18,11 +18,7 @@ function l(e) {
 			l
 				? null
 				: (0, r.jsxs)(r.Fragment, {
-						children: [
-							(0, r.jsx)(s.Z, { foreground: o.sparkleStarTopRight }),
-							(0, r.jsx)(s.Z, { foreground: o.sparkleStarRight }),
-							(0, r.jsx)(s.Z, { foreground: o.sparkleStarBottomLeft })
-						]
+						children: [(0, r.jsx)(s.Z, { foreground: o.sparkleStarTopRight }), (0, r.jsx)(s.Z, { foreground: o.sparkleStarRight }), (0, r.jsx)(s.Z, { foreground: o.sparkleStarBottomLeft })]
 					})
 		]
 	});

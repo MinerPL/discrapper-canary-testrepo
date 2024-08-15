@@ -57,12 +57,7 @@ let h = (e) => {
 	M = (e) => {
 		let { isFullscreen: t } = e;
 		return (0, s.jsxs)(s.Fragment, {
-			children: [
-				(0, s.jsx)(d.A, { className: t ? S.fullscreenSparkleStar1 : S.settingsSparkleStar1 }),
-				(0, s.jsx)(d.A, { className: t ? S.fullscreenSparkleStar2 : S.settingsSparkleStar2 }),
-				(0, s.jsx)(d.A, { className: t ? S.fullscreenSparkleStar3 : S.settingsSparkleStar3 }),
-				(0, s.jsx)(d.A, { className: t ? S.fullscreenSparkleStar4 : S.settingsSparkleStar4 })
-			]
+			children: [(0, s.jsx)(d.A, { className: t ? S.fullscreenSparkleStar1 : S.settingsSparkleStar1 }), (0, s.jsx)(d.A, { className: t ? S.fullscreenSparkleStar2 : S.settingsSparkleStar2 }), (0, s.jsx)(d.A, { className: t ? S.fullscreenSparkleStar3 : S.settingsSparkleStar3 }), (0, s.jsx)(d.A, { className: t ? S.fullscreenSparkleStar4 : S.settingsSparkleStar4 })]
 		});
 	};
 function x(e) {
@@ -76,15 +71,7 @@ function x(e) {
 	});
 }
 t.Z = (e) => {
-	let {
-			isFullscreen: t,
-			className: n,
-			buttonClassName: a,
-			subscriptionTier: d,
-			hideSparkles: g,
-			hideSubscribeAndGiftButton: A,
-			entrypoint: b
-		} = e,
+	let { isFullscreen: t, className: n, buttonClassName: a, subscriptionTier: d, hideSparkles: g, hideSubscribeAndGiftButton: A, entrypoint: b } = e,
 		{ analyticsLocations: O } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
 		P = (0, E._O)(),
 		v = (0, u.Nx)(),

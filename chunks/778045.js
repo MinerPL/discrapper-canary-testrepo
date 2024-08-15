@@ -111,14 +111,8 @@ function f(e) {
 }
 let h = (e) => (t, n) => {
 	var r, i, a, s;
-	let o =
-			null !== (a = null == e ? void 0 : null === (r = e[t.id]) || void 0 === r ? void 0 : r.score) && void 0 !== a
-				? a
-				: 0,
-		l =
-			null !== (s = null == e ? void 0 : null === (i = e[n.id]) || void 0 === i ? void 0 : i.score) && void 0 !== s
-				? s
-				: 0;
+	let o = null !== (a = null == e ? void 0 : null === (r = e[t.id]) || void 0 === r ? void 0 : r.score) && void 0 !== a ? a : 0,
+		l = null !== (s = null == e ? void 0 : null === (i = e[n.id]) || void 0 === i ? void 0 : i.score) && void 0 !== s ? s : 0;
 	return o !== l ? l - o : 0;
 };
 t.Z = i.memo(function (e) {

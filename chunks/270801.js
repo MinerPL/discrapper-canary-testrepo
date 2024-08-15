@@ -34,9 +34,7 @@ t.Z = (e) => {
 							variant: 'heading-xl/semibold',
 							className: r.header,
 							id: t,
-							children: l.Z.Messages.MEMBER_VERIFICATION_APPROVED_APPLICATION_MODAL_TITLE.format({
-								guildName: e.guildName
-							})
+							children: l.Z.Messages.MEMBER_VERIFICATION_APPROVED_APPLICATION_MODAL_TITLE.format({ guildName: e.guildName })
 						}),
 						(0, i.jsx)(a.Text, {
 							variant: 'text-sm/normal',

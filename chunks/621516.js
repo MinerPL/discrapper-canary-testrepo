@@ -140,46 +140,15 @@ t.Z = (e) => {
 	s.useEffect(() => {
 		!(0, x.c)(r.id) && D(!P);
 	}, [r, D, P]);
-	let U = s.useMemo(
-			() => [
-				N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_FAN_ART_TAG,
-				N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_DESK_SETUP_TAG,
-				N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PETS_TAG,
-				N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_HOUSEPLANTS_TAG
-			],
-			[]
-		),
-		k = s.useMemo(
-			() => [
-				N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_BEHIND_THE_SCENES_TAG,
-				N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_EXCLUSIVE_ART_TAG,
-				N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PRERELEASES_TAG,
-				N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_TUTORIALS_TAG
-			],
-			[]
-		),
+	let U = s.useMemo(() => [N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_FAN_ART_TAG, N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_DESK_SETUP_TAG, N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PETS_TAG, N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_HOUSEPLANTS_TAG], []),
+		k = s.useMemo(() => [N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_BEHIND_THE_SCENES_TAG, N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_EXCLUSIVE_ART_TAG, N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PRERELEASES_TAG, N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_TUTORIALS_TAG], []),
 		H = () => {
 			C.Z.open(r.guild_id, E.pNK.ROLE_SUBSCRIPTIONS);
 		},
-		B =
-			null !== (t = null == Z ? void 0 : Z.hasFeature(E.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) &&
-			void 0 !== t &&
-			t
-				? N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_HAS_TIERS_CTA
-				: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_NO_TIERS_CTA,
-		G =
-			null !==
-				(n =
-					(null == Z ? void 0 : Z.hasFeature(E.oNc.CREATOR_MONETIZABLE)) ||
-					(null == Z ? void 0 : Z.hasFeature(E.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) &&
-			void 0 !== n &&
-			n,
-		z = G
-			? N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_MONETIZING_TITLE
-			: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_NON_MONETIZING_TITLE,
-		V = G
-			? N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_MONETIZING_SUBTITLE
-			: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_NON_MONETIZING_SUBTITLE;
+		B = null !== (t = null == Z ? void 0 : Z.hasFeature(E.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && void 0 !== t && t ? N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_HAS_TIERS_CTA : N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_NO_TIERS_CTA,
+		G = null !== (n = (null == Z ? void 0 : Z.hasFeature(E.oNc.CREATOR_MONETIZABLE)) || (null == Z ? void 0 : Z.hasFeature(E.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && void 0 !== n && n,
+		z = G ? N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_MONETIZING_TITLE : N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_NON_MONETIZING_TITLE,
+		V = G ? N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_MONETIZING_SUBTITLE : N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_NON_MONETIZING_SUBTITLE;
 	return (0, a.jsx)(a.Fragment, {
 		children: y((e, t) =>
 			t
@@ -218,8 +187,7 @@ t.Z = (e) => {
 													children: [
 														(0, a.jsx)(R, {
 															username: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_USERNAME_ONE,
-															videoSrc:
-																'https://cdn.discordapp.com/assets/media_channel/admin_edu_discord_birthday.mp4',
+															videoSrc: 'https://cdn.discordapp.com/assets/media_channel/admin_edu_discord_birthday.mp4',
 															title: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_TITLE_ONE,
 															messageCount: '34',
 															reaction: '\u26A1️',
@@ -228,8 +196,7 @@ t.Z = (e) => {
 														}),
 														(0, a.jsx)(R, {
 															username: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_USERNAME_TWO,
-															videoSrc:
-																'https://cdn.discordapp.com/assets/media_channel/admin_edu_wumpus_onboarding.mp4',
+															videoSrc: 'https://cdn.discordapp.com/assets/media_channel/admin_edu_wumpus_onboarding.mp4',
 															title: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_TITLE_TWO,
 															messageCount: '34',
 															reactionCount: '84',
@@ -238,8 +205,7 @@ t.Z = (e) => {
 														}),
 														(0, a.jsx)(R, {
 															username: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_USERNAME_THREE,
-															videoSrc:
-																'https://cdn.discordapp.com/assets/media_channel/admin_edu_scientist_wumpus.mp4',
+															videoSrc: 'https://cdn.discordapp.com/assets/media_channel/admin_edu_scientist_wumpus.mp4',
 															title: N.Z.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_TITLE_THREE,
 															messageCount: '7,103',
 															reaction: '\u26A1️',

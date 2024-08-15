@@ -15,9 +15,7 @@ function i(e, t, n, i) {
 			let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
 				[i, a] = s(e, n),
 				o = t();
-			return r
-				? i >= o.scrollTop && i + a <= o.scrollTop + o.offsetHeight
-				: i + a >= o.scrollTop && i <= o.scrollTop + o.offsetHeight;
+			return r ? i >= o.scrollTop && i + a <= o.scrollTop + o.offsetHeight : i + a >= o.scrollTop && i <= o.scrollTop + o.offsetHeight;
 		},
 		scrollToIndex(e) {
 			let { section: t, row: n, animate: r, callback: i, padding: o = 0 } = e,

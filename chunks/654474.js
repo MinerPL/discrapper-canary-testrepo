@@ -11,8 +11,7 @@ var r = n(470079),
 					borderRadius: '22px',
 					border: '2px #fff solid',
 					transform: 'translate(-12px, -13px)',
-					background:
-						'hsl(' + Math.round(e.hsl.h) + ', ' + Math.round(100 * e.hsl.s) + '%, ' + Math.round(100 * e.hsl.l) + '%)'
+					background: 'hsl(' + Math.round(e.hsl.h) + ', ' + Math.round(100 * e.hsl.s) + '%, ' + Math.round(100 * e.hsl.l) + '%)'
 				}
 			}
 		});

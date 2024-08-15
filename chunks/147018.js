@@ -16,11 +16,7 @@ t.exports = function (t, n) {
 		g = t.stat;
 	if ((r = y ? e : g ? e[b] || c(b, {}) : (e[b] || {}).prototype))
 		for (s in n) {
-			if (
-				((l = n[s]),
-				(p = t.dontCallGetSet ? (v = o(r, s)) && v.value : r[s]),
-				!a(y ? s : b + (g ? '.' : '#') + s, t.forced) && void 0 !== p)
-			) {
+			if (((l = n[s]), (p = t.dontCallGetSet ? (v = o(r, s)) && v.value : r[s]), !a(y ? s : b + (g ? '.' : '#') + s, t.forced) && void 0 !== p)) {
 				if (typeof l == typeof p) continue;
 				f(l, p);
 			}

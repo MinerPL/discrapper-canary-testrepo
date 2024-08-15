@@ -32,22 +32,7 @@ let d = (e) => {
 	);
 };
 t.Z = function (e) {
-	let {
-			categoryListRef: t,
-			expressionsListRef: n,
-			categories: a,
-			store: u,
-			children: _,
-			className: E,
-			listPadding: f,
-			rowCount: h,
-			getScrollOffsetForIndex: p,
-			categoryHeight: I,
-			onScroll: m,
-			renderCategoryListItem: T,
-			rowCountBySection: g,
-			renderSection: S
-		} = e,
+	let { categoryListRef: t, expressionsListRef: n, categories: a, store: u, children: _, className: E, listPadding: f, rowCount: h, getScrollOffsetForIndex: p, categoryHeight: m, onScroll: I, renderCategoryListItem: T, rowCountBySection: g, renderSection: S } = e,
 		A = u.useStore((e) => e.activeCategoryIndex);
 	d({
 		activeIndex: A,
@@ -66,13 +51,13 @@ t.Z = function (e) {
 			[n, u]
 		),
 		v = i.useCallback((e) => T(a[e], e, () => N(e), A === e), [A, a, N, T]),
-		O = i.useMemo(() => ('function' == typeof I ? (e) => I(a[e], e) : I), [a, I]);
+		O = i.useMemo(() => ('function' == typeof m ? (e) => m(a[e], e) : m), [a, m]);
 	return (0, r.jsxs)('div', {
 		className: s()(c.wrapper, E),
 		children: [
 			(0, r.jsx)(o.Z, {
 				listPadding: f,
-				onScroll: m,
+				onScroll: I,
 				ref: t,
 				renderRow: v,
 				rowCount: h,

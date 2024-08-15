@@ -22,13 +22,9 @@ let d = 5 * r.Z.Millis.DAY,
 	u = { readIdToTimestampMap: {} };
 class _ extends (i = a.ZP.DeviceSettingsStore) {
 	initialize(e) {
-		u =
-			null != e && null != e.readIdToTimestampMap
-				? { readIdToTimestampMap: e.readIdToTimestampMap }
-				: { readIdToTimestampMap: {} };
+		u = null != e && null != e.readIdToTimestampMap ? { readIdToTimestampMap: e.readIdToTimestampMap } : { readIdToTimestampMap: {} };
 		let t = Date.now() - d;
-		for (let e of Object.keys(u.readIdToTimestampMap).filter((e) => u.readIdToTimestampMap[e] < t))
-			delete u.readIdToTimestampMap[e];
+		for (let e of Object.keys(u.readIdToTimestampMap).filter((e) => u.readIdToTimestampMap[e] < t)) delete u.readIdToTimestampMap[e];
 	}
 	getReadTimestamp(e) {
 		return u.readIdToTimestampMap[e];
@@ -51,14 +47,6 @@ c(_, 'displayName', 'GravityUnreadStateStore'),
 		},
 		LOAD_GRAVITY_DEHYDRATED: function (e) {
 			let { items: t } = e;
-			for (let e of t)
-				e.type === l.Rr.MESSAGE
-					? null == u.readIdToTimestampMap[e.id] &&
-						!(0, o.$U)(e.data.channel_id, e.data.message_id) &&
-						(u.readIdToTimestampMap[e.id] = 0)
-					: e.type === l.Rr.SUMMARY &&
-						null == u.readIdToTimestampMap[e.id] &&
-						!(0, o.$U)(e.data.channel_id, e.data.summary_id) &&
-						(u.readIdToTimestampMap[e.id] = 0);
+			for (let e of t) e.type === l.Rr.MESSAGE ? null == u.readIdToTimestampMap[e.id] && !(0, o.$U)(e.data.channel_id, e.data.message_id) && (u.readIdToTimestampMap[e.id] = 0) : e.type === l.Rr.SUMMARY && null == u.readIdToTimestampMap[e.id] && !(0, o.$U)(e.data.channel_id, e.data.summary_id) && (u.readIdToTimestampMap[e.id] = 0);
 		}
 	}));

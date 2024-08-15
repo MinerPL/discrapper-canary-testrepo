@@ -31,10 +31,7 @@ class A extends n.PureComponent {
 						value: e,
 						editable: !1,
 						readOnly: !0,
-						placeholder:
-							null == t
-								? d.Z.Messages.PAYMENT_SOURCE_PAYPAL_LOADING
-								: d.Z.Messages.PAYMENT_SOURCE_CONFIRM_PAYPAL_DETAILS,
+						placeholder: null == t ? d.Z.Messages.PAYMENT_SOURCE_PAYPAL_LOADING : d.Z.Messages.PAYMENT_SOURCE_CONFIRM_PAYPAL_DETAILS,
 						inputClassName: E.paypalInput
 					})
 				]

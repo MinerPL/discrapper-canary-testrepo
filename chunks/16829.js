@@ -119,10 +119,7 @@ let u = T.memo(function () {
 		},
 		[o.gq.MANUAL_MEMBER_VERIFICATION]: {
 			type: o.gq.MANUAL_MEMBER_VERIFICATION,
-			getJoinTypeLabel: (e) =>
-				null != e
-					? i.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_MANUAL_VERIFICATION_CODE.format({ code: e })
-					: i.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_MANUAL_VERIFICATION,
+			getJoinTypeLabel: (e) => (null != e ? i.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_MANUAL_VERIFICATION_CODE.format({ code: e }) : i.Z.Messages.MEMBER_SAFETY_JOIN_TYPE_MANUAL_VERIFICATION),
 			icon: (0, s.jsx)(D.Z, {
 				height: 12,
 				width: 12
@@ -147,10 +144,7 @@ function C(e) {
 				children: [
 					(0, s.jsx)(A.Text, {
 						variant: 'text-xs/medium',
-						children:
-							r !== o.gq.BOT
-								? i.Z.Messages.MEMBER_SAFETY_INVITER_TOOLTIP
-								: i.Z.Messages.MEMBER_SAFETY_INVITER_BOT_TOOLTIP
+						children: r !== o.gq.BOT ? i.Z.Messages.MEMBER_SAFETY_INVITER_TOOLTIP : i.Z.Messages.MEMBER_SAFETY_INVITER_BOT_TOOLTIP
 					}),
 					(0, s.jsxs)(A.Clickable, {
 						className: n()(M.inviterUserContainer, null != L && M.clickable),
@@ -176,8 +170,7 @@ function d(e) {
 	let { children: _, hasTooltip: E, guildId: T, inviterUser: I, joinSourceType: n } = e;
 	return E && null != I
 		? (0, s.jsx)(A.Tooltip, {
-				'aria-label':
-					n !== o.gq.BOT ? i.Z.Messages.MEMBER_SAFETY_INVITER_TOOLTIP : i.Z.Messages.MEMBER_SAFETY_INVITER_BOT_TOOLTIP,
+				'aria-label': n !== o.gq.BOT ? i.Z.Messages.MEMBER_SAFETY_INVITER_TOOLTIP : i.Z.Messages.MEMBER_SAFETY_INVITER_BOT_TOOLTIP,
 				allowOverflow: !0,
 				text: (0, s.jsx)(C, {
 					guildId: T,
@@ -203,16 +196,7 @@ function g(e) {
 			});
 }
 function f(e) {
-	let {
-			sourceInviteCode: _,
-			joinSourceType: E,
-			integrationType: I,
-			showInviterAsFooter: t,
-			guildId: r,
-			inviterUser: a,
-			onClickInviter: N,
-			...l
-		} = e,
+	let { sourceInviteCode: _, joinSourceType: E, integrationType: I, showInviterAsFooter: t, guildId: r, inviterUser: a, onClickInviter: N, ...l } = e,
 		L = null != E ? c[E] : null,
 		S = E === o.gq.INTEGRATION && null != I,
 		D = T.useCallback(

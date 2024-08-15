@@ -13,13 +13,7 @@ function a() {
 	return (function (e, t) {
 		let n = e.reduce((e, t) => {
 			var n;
-			let i =
-				null !==
-					(n = t.party.currentActivities
-						.filter((e) => null != e.game.name && e.game.type === r.wW.GAME)
-						.map((e) => e.game.name)) && void 0 !== n
-					? n
-					: [];
+			let i = null !== (n = t.party.currentActivities.filter((e) => null != e.game.name && e.game.type === r.wW.GAME).map((e) => e.game.name)) && void 0 !== n ? n : [];
 			return e.concat(i);
 		}, []);
 		return {

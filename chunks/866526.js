@@ -4,14 +4,7 @@ var n = r(599295),
 	s = '@global ',
 	a = (function () {
 		function e(e, t, r) {
-			for (var s in ((this.type = 'global'),
-			(this.at = o),
-			(this.isProcessed = !1),
-			(this.key = e),
-			(this.options = r),
-			(this.rules = new i.RB((0, n.Z)({}, r, { parent: this }))),
-			t))
-				this.rules.add(s, t[s]);
+			for (var s in ((this.type = 'global'), (this.at = o), (this.isProcessed = !1), (this.key = e), (this.options = r), (this.rules = new i.RB((0, n.Z)({}, r, { parent: this }))), t)) this.rules.add(s, t[s]);
 			this.rules.process();
 		}
 		var t = e.prototype;
@@ -61,11 +54,7 @@ t.Z = function () {
 			if (e === o) return new a(e, t, r);
 			if ('@' === e[0] && e.substr(0, s.length) === s) return new u(e, t, r);
 			var n = r.parent;
-			return (
-				n && ('global' === n.type || (n.options.parent && 'global' === n.options.parent.type)) && (r.scoped = !1),
-				!r.selector && !1 === r.scoped && (r.selector = e),
-				null
-			);
+			return n && ('global' === n.type || (n.options.parent && 'global' === n.options.parent.type)) && (r.scoped = !1), !r.selector && !1 === r.scoped && (r.selector = e), null;
 		},
 		onProcessRule: function (e, t) {
 			'style' === e.type &&

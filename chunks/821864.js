@@ -93,14 +93,7 @@ function T(e) {
 	});
 }
 async function O(e) {
-	let {
-			applicationId: t,
-			commandId: n,
-			defaultEveryoneValue: r,
-			defaultEverywhereValue: _,
-			guildId: u,
-			permissions: l
-		} = e,
+	let { applicationId: t, commandId: n, defaultEveryoneValue: r, defaultEverywhereValue: _, guildId: u, permissions: l } = e,
 		s =
 			n === t
 				? (function (e, t, n, r) {

@@ -13,8 +13,8 @@ var r = n(481060),
 	f = n(163268),
 	h = n(539573),
 	p = n(786761),
-	I = n(3148),
-	m = n(48854),
+	m = n(3148),
+	I = n(48854),
 	T = n(785359),
 	g = n(79390),
 	S = n(623292),
@@ -40,18 +40,11 @@ async function L(e) {
 			sticker_ids: null == P ? void 0 : P.stickerIds,
 			poll: null == P ? void 0 : P.poll
 		};
-	null != M && (G.content = null == M ? void 0 : M.content),
-		null != A.Z.getPendingReply(_) &&
-			((G.type = y.uaV.REPLY),
-			(G.message_reference = P.messageReference),
-			(G.allowed_mentions = P.allowedMentions),
-			(0, S.A6)(_));
+	null != M && (G.content = null == M ? void 0 : M.content), null != A.Z.getPendingReply(_) && ((G.type = y.uaV.REPLY), (G.message_reference = P.messageReference), (G.allowed_mentions = P.allowedMentions), (0, S.A6)(_));
 	let [k, B] = (0, N.Z)(G.content);
-	k &&
-		((G.content = B),
-		(G.flags = (0, R.pj)(null !== (t = G.flags) && void 0 !== t ? t : 0, y.iLy.SUPPRESS_NOTIFICATIONS)));
-	let F = null !== (n = P.nonce) && void 0 !== n ? n : (0, m.r)(),
-		V = (0, I.ZP)({
+	k && ((G.content = B), (G.flags = (0, R.pj)(null !== (t = G.flags) && void 0 !== t ? t : 0, y.iLy.SUPPRESS_NOTIFICATIONS)));
+	let F = null !== (n = P.nonce) && void 0 !== n ? n : (0, I.r)(),
+		V = (0, m.ZP)({
 			channelId: _,
 			content: G.content,
 			tts: null !== (r = null == M ? void 0 : M.tts) && void 0 !== r && r,
@@ -98,11 +91,7 @@ async function L(e) {
 				}),
 				t === y.evJ.EXPLICIT_CONTENT)
 			) {
-				s.Z.sendExplicitMediaClydeError(
-					_,
-					null == n ? void 0 : n.attachments,
-					f.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED
-				);
+				s.Z.sendExplicitMediaClydeError(_, null == n ? void 0 : n.attachments, f.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
 				return;
 			}
 			if (t === y.evJ.AUTOMOD_MESSAGE_BLOCKED) {
@@ -141,10 +130,7 @@ async function L(e) {
 					var E;
 					(0, l.openUploadError)({
 						title: D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
-						help:
-							null !== (E = null == n ? void 0 : n.message) && void 0 !== E
-								? E
-								: D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
+						help: null !== (E = null == n ? void 0 : n.message) && void 0 !== E ? E : D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
 					});
 				}
 				'' !== G.content && '' === v.Z.getDraft(_, b) && a.Z.saveDraft(_, G.content, b),
@@ -204,10 +190,7 @@ t.Z = {
 			let e = A.Z.getPendingReply(n);
 			if (null != e) {
 				let t = s.Z.getSendMessageOptionsForReply(e);
-				(h.type = y.uaV.REPLY),
-					(h.message_reference = t.messageReference),
-					(h.allowed_mentions = t.allowedMentions),
-					(0, S.A6)(n);
+				(h.type = y.uaV.REPLY), (h.message_reference = t.messageReference), (h.allowed_mentions = t.allowedMentions), (0, S.A6)(n);
 			}
 		}
 		let p = new E.Z(y.ANM.MESSAGES(n));
@@ -239,11 +222,7 @@ t.Z = {
 					}),
 					d === y.evJ.EXPLICIT_CONTENT)
 				) {
-					s.Z.sendExplicitMediaClydeError(
-						n,
-						null == _ ? void 0 : _.attachments,
-						f.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED
-					);
+					s.Z.sendExplicitMediaClydeError(n, null == _ ? void 0 : _.attachments, f.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
 					return;
 				}
 				(0, l.openUploadError)({

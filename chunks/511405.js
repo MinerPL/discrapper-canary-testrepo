@@ -37,11 +37,5 @@ function o(e) {
 	);
 }
 function l(e) {
-	return i().cloneDeepWith(e, (e) =>
-		null != e && 'object' == typeof e && '__tag__' in e && 'bigflag' === e.__tag__
-			? a.vB(e.data)
-			: (0, s.Bx)(e)
-				? new Uint8Array(e.data)
-				: void 0
-	);
+	return i().cloneDeepWith(e, (e) => (null != e && 'object' == typeof e && '__tag__' in e && 'bigflag' === e.__tag__ ? a.vB(e.data) : (0, s.Bx)(e) ? new Uint8Array(e.data) : void 0));
 }

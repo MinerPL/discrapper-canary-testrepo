@@ -103,9 +103,7 @@ function B(e) {
 				(0, n.jsx)(u.Text, {
 					className: j.boostingDesktopAppBlurb,
 					variant: 'text-sm/normal',
-					children: v.Z.Messages.GUILD_BOOSTING_MANAGEMENT_OPEN_DESKTOP_APP.format({
-						openAppHook: () => (0, N.Z)('app')
-					})
+					children: v.Z.Messages.GUILD_BOOSTING_MANAGEMENT_OPEN_DESKTOP_APP.format({ openAppHook: () => (0, N.Z)('app') })
 				})
 		]
 	});
@@ -243,17 +241,7 @@ function V(e) {
 	});
 }
 function Y(e) {
-	let {
-			subscription: s,
-			analyticsLocation: t,
-			paymentSource: a,
-			busy: i,
-			fromStandaloneBillingPage: o,
-			showInvalidPaymentMethod: l,
-			showNoPaymentMethod: c,
-			fetchedCurrentInvoicePreview: d,
-			fetchedRenewalInvoicePreview: _
-		} = e,
+	let { subscription: s, analyticsLocation: t, paymentSource: a, busy: i, fromStandaloneBillingPage: o, showInvalidPaymentMethod: l, showNoPaymentMethod: c, fetchedCurrentInvoicePreview: d, fetchedRenewalInvoicePreview: _ } = e,
 		{ analyticsLocations: E } = (0, S.ZP)(T.Z.SUBSCRIPTION_DETAILS),
 		I =
 			null != d
@@ -319,12 +307,7 @@ function Y(e) {
 											(0, n.jsx)(u.FormTitle, {
 												tag: 'h3',
 												className: j.detailBlockHeader,
-												children:
-													s.isPurchasedExternally && null != s.paymentGateway
-														? v.Z.Messages.BILLING_MANAGED_BY_PAYMENT_GATEWAY.format({
-																paymentGatewayName: Z.Vzj[s.paymentGateway]
-															})
-														: v.Z.Messages.BILLING_PAY_FOR_IT_WITH
+												children: s.isPurchasedExternally && null != s.paymentGateway ? v.Z.Messages.BILLING_MANAGED_BY_PAYMENT_GATEWAY.format({ paymentGatewayName: Z.Vzj[s.paymentGateway] }) : v.Z.Messages.BILLING_PAY_FOR_IT_WITH
 											}),
 											(0, n.jsx)(L.Z, {
 												subscription: s,
@@ -361,9 +344,7 @@ function H() {
 				(0, n.jsx)(u.Text, {
 					className: j.duplicateSubscriptionsBannerText,
 					variant: 'text-sm/normal',
-					children: v.Z.Messages.DUPLICATE_SUBSCRIPTIONS_BANNER.format({
-						helpCenterLink: p.Z.getArticleURL(Z.BhN.NITRO)
-					})
+					children: v.Z.Messages.DUPLICATE_SUBSCRIPTIONS_BANNER.format({ helpCenterLink: p.Z.getArticleURL(Z.BhN.NITRO) })
 				})
 			]
 		})
@@ -372,15 +353,7 @@ function H() {
 function k(e) {
 	var s;
 	let t,
-		{
-			subscription: a,
-			subscriptions: i,
-			paymentSource: r,
-			busy: o,
-			className: l,
-			fromStandaloneBillingPage: c = !0,
-			analyticsLocation: E
-		} = e;
+		{ subscription: a, subscriptions: i, paymentSource: r, busy: o, className: l, fromStandaloneBillingPage: c = !0, analyticsLocation: E } = e;
 	null != i && null != i[0] && (a = i[0]);
 	let { analyticsLocations: I } = (0, S.ZP)(T.Z.SUBSCRIPTION_DETAILS),
 		N = null != i ? i.slice(1) : [],
@@ -417,8 +390,7 @@ function k(e) {
 	return null == C || null == m
 		? (0, n.jsx)(u.Spinner, {})
 		: (null != a.renewalMutations &&
-				((a.renewalMutations.planId !== a.planId && !(0, O.Q0)(a.renewalMutations.planId)) ||
-					a.hasExternalPlanChange) &&
+				((a.renewalMutations.planId !== a.planId && !(0, O.Q0)(a.renewalMutations.planId)) || a.hasExternalPlanChange) &&
 				(t = (0, n.jsx)(b.Z, {
 					subscription: a,
 					renewalMutations: a.renewalMutations,

@@ -18,8 +18,8 @@ var i = n(735250),
 	_ = n(532490),
 	f = n(979264),
 	E = n(570938),
-	g = n(550271),
-	C = n(116175),
+	C = n(550271),
+	g = n(116175),
 	I = n(308083),
 	x = n(689938),
 	T = n(329809);
@@ -40,7 +40,7 @@ function N(e) {
 				textVariant: 'heading-lg/semibold',
 				textColor: 'text-normal',
 				badgeSize: I.NC.SIZE_24,
-				clanBadge: (0, i.jsx)(g.A, {
+				clanBadge: (0, i.jsx)(C.A, {
 					className: T.charterClanBadge,
 					badge: a,
 					width: I.NC.SIZE_24,
@@ -78,9 +78,7 @@ t.Z =
 					n = (0, h.Wg)(),
 					s = (0, c.e7)([d.Z], () => {
 						var e, n;
-						return null !== (n = null === (e = d.Z.getGuild(t)) || void 0 === e ? void 0 : e.name) && void 0 !== n
-							? n
-							: '';
+						return null !== (n = null === (e = d.Z.getGuild(t)) || void 0 === e ? void 0 : e.name) && void 0 !== n ? n : '';
 					}),
 					{
 						gameApplicationIds: l,
@@ -88,7 +86,7 @@ t.Z =
 						interests: p,
 						tag: f,
 						badgeKind: E,
-						badgePrimaryColor: g,
+						badgePrimaryColor: C,
 						badgeSecondaryColor: S
 					} = (0, c.cj)([h.ZP], () => {
 						var e;
@@ -102,8 +100,8 @@ t.Z =
 							guildId: t,
 							tag: f,
 							badge: E,
-							primaryColor: null != g ? g : C.Nh,
-							secondaryColor: null != S ? S : C.vY
+							primaryColor: null != C ? C : g.Nh,
+							secondaryColor: null != S ? S : g.vY
 						}),
 						(0, i.jsx)(u.Heading, {
 							variant: 'heading-xl/normal',

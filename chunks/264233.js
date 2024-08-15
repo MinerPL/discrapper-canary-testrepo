@@ -26,10 +26,7 @@ function h(e) {
 			() =>
 				r().partition(f, (e) => {
 					var t;
-					return (
-						(null === (t = C[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 &&
-						(Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl
-					);
+					return (null === (t = C[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
 				}),
 			[f, C]
 		);

@@ -43,20 +43,7 @@ function R(e, n) {
 	}
 }
 n.Z = a.memo(function (e) {
-	let {
-			section: n,
-			sectionId: t,
-			guild: s,
-			channel: b,
-			integrations: Z,
-			editedIntegration: v,
-			webhooks: M,
-			editedWebhook: L,
-			isFetching: j,
-			refToScroller: D,
-			errors: P,
-			hasChanges: B
-		} = e,
+	let { section: n, sectionId: t, guild: s, channel: b, integrations: Z, editedIntegration: v, webhooks: M, editedWebhook: L, isFetching: j, refToScroller: D, errors: P, hasChanges: B } = e,
 		y = (0, r.e7)([N.ZP], () => (null != s ? N.ZP.getDefaultChannel(s.id) : null)),
 		G = (0, r.cj)([N.ZP], () => N.ZP.getChannels(null == s ? void 0 : s.id)),
 		k = (0, r.cj)([E.Z], () =>
@@ -110,17 +97,11 @@ n.Z = a.memo(function (e) {
 								integration: i,
 								webhooks: []
 							}),
-								(null === (s = i.application.bot) || void 0 === s ? void 0 : s.id) !== void 0 &&
-									(n[i.application.bot.id] = i.application.id);
+								(null === (s = i.application.bot) || void 0 === s ? void 0 : s.id) !== void 0 && (n[i.application.bot.id] = i.application.id);
 						}
 					} else !(i.type in t) && (t[i.type] = []), t[i.type].push(i);
 			for (let n of M) {
-				if (n.channel_id in k || n.channel_id in U)
-					null != n.application_id && n.application_id in e
-						? e[n.application_id].webhooks.push(n)
-						: n.type === x.ylB.CHANNEL_FOLLOWER
-							? a.push(n)
-							: i.push(n);
+				if (n.channel_id in k || n.channel_id in U) null != n.application_id && n.application_id in e ? e[n.application_id].webhooks.push(n) : n.type === x.ylB.CHANNEL_FOLLOWER ? a.push(n) : i.push(n);
 			}
 			return {
 				applicationIntegrations: e,
@@ -144,8 +125,7 @@ n.Z = a.memo(function (e) {
 			}
 	}, [Y, z, q, w, n, j]),
 		a.useEffect(() => {
-			if ((null == s ? void 0 : s.id) != null)
-				_.Z.getEntitlementsForGuildFetchState(s.id) === _.M.NOT_FETCHED && m.i1(s.id);
+			if ((null == s ? void 0 : s.id) != null) _.Z.getEntitlementsForGuildFetchState(s.id) === _.M.NOT_FETCHED && m.i1(s.id);
 		}, [null == s ? void 0 : s.id]);
 	let Q = null;
 	switch (n) {

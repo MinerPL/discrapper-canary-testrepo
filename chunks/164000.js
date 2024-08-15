@@ -14,10 +14,7 @@ function c(e) {
 			let t = r.Z.getGuild(e);
 			return null != t ? r.Z.getRole(t.id, t.getEveryoneRoleId()) : void 0;
 		}),
-		n = s.useMemo(
-			() => (null == t ? l.e3.SOME_CHANNELS : a.e$(t.permissions, o) ? l.e3.SOME_CHANNELS : l.e3.ALL_CHANNELS),
-			[t]
-		),
+		n = s.useMemo(() => (null == t ? l.e3.SOME_CHANNELS : a.e$(t.permissions, o) ? l.e3.SOME_CHANNELS : l.e3.ALL_CHANNELS), [t]),
 		c = n === l.e3.ALL_CHANNELS;
 	return {
 		format: n,

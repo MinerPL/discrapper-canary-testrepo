@@ -33,22 +33,12 @@ var a = n(243814),
 async function M(e, t, n, i) {
 	let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : '',
 		s = p.Z.getApplicationActivity(t);
-	if (null == s || null == s.secrets || !(0, Z.t9)(i, s.party, s.secrets))
-		throw new v.Z(
-			{ errorCode: P.lTL.NO_ELIGIBLE_ACTIVITY },
-			'No eligible activity for application. Ensure an activity includes a party and appropriate secret.'
-		);
+	if (null == s || null == s.secrets || !(0, Z.t9)(i, s.party, s.secrets)) throw new v.Z({ errorCode: P.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
 	let r = (0, h.Z)(s, T.Z);
 	if (r) {
 		let { lock: t } = (0, x.s0)(e);
 		return (0, o.h7)(s, r).then(() => {
-			throw (
-				(t(),
-				new v.Z(
-					{ errorCode: P.lTL.NO_ELIGIBLE_ACTIVITY },
-					'No eligible activity for application. Ensure user does have have privacy enabled.'
-				))
-			);
+			throw (t(), new v.Z({ errorCode: P.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure user does have have privacy enabled.'));
 		});
 	}
 	await l.Z.sendActivityInviteUser({
@@ -216,10 +206,7 @@ t.Z = {
 				);
 			}).catch((e) => {
 				var t;
-				throw new v.Z(
-					{ errorCode: P.lTL.UNKNOWN_ERROR },
-					null !== (t = null == e ? void 0 : e.message) && void 0 !== t ? t : 'Failed to upload image'
-				);
+				throw new v.Z({ errorCode: P.lTL.UNKNOWN_ERROR }, null !== (t = null == e ? void 0 : e.message) && void 0 !== t ? t : 'Failed to upload image');
 			});
 		}
 	}),
@@ -234,12 +221,10 @@ t.Z = {
 			(0, Z.bu)(n.transport);
 			let a = n.application.id;
 			if (null == a) throw new v.Z({ errorCode: P.lTL.INVALID_COMMAND }, 'No application.');
-			if (!(0, f.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, P.udG.EMBEDDED))
-				throw new v.Z({ errorCode: P.lTL.INVALID_COMMAND }, 'This application cannot access this API');
+			if (!(0, f.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, P.udG.EMBEDDED)) throw new v.Z({ errorCode: P.lTL.INVALID_COMMAND }, 'This application cannot access this API');
 			let s = (0, O.Z)();
 			if (null == s) throw new v.Z({ errorCode: P.lTL.INVALID_COMMAND }, 'No channel found');
-			if (!N.Z.isDiscordCdnUrl(i))
-				throw new v.Z({ errorCode: P.lTL.INVALID_PAYLOAD }, 'mediaUrl must be a Discord CDN url');
+			if (!N.Z.isDiscordCdnUrl(i)) throw new v.Z({ errorCode: P.lTL.INVALID_PAYLOAD }, 'mediaUrl must be a Discord CDN url');
 			(0, m.Z)({
 				applicationId: a,
 				channelId: s.id,

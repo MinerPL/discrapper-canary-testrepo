@@ -14,13 +14,7 @@ function s(e) {
 	return (
 		(e.apply = (n) => {
 			var r;
-			if (
-				'set_selection' === n.type &&
-				(null === (r = e.composition) || void 0 === r ? void 0 : r.startedInsideInline) &&
-				a.M8.isRange(n.properties) &&
-				a.M8.isRange(n.newProperties) &&
-				a.M8.isCollapsed(n.newProperties)
-			) {
+			if ('set_selection' === n.type && (null === (r = e.composition) || void 0 === r ? void 0 : r.startedInsideInline) && a.M8.isRange(n.properties) && a.M8.isRange(n.newProperties) && a.M8.isCollapsed(n.newProperties)) {
 				let t = a.bN.getParentInline(e, n.properties),
 					r = a.bN.getParentInline(e, n.newProperties);
 				if (null != t && (null == r || !a.C0.equals(t[1], r[1]))) return;
@@ -55,16 +49,12 @@ function s(e) {
 				if (null != d) {
 					let [, t] = d,
 						[i, s] = a.bN.edges(e, t);
-					E && a.Jz.equals(u, i)
-						? (u = null !== (n = a.bN.before(e, i)) && void 0 !== n ? n : a.bN.start(e, []))
-						: !E && a.Jz.equals(u, s) && (u = null !== (r = a.bN.after(e, s)) && void 0 !== r ? r : a.bN.end(e, []));
+					E && a.Jz.equals(u, i) ? (u = null !== (n = a.bN.before(e, i)) && void 0 !== n ? n : a.bN.start(e, [])) : !E && a.Jz.equals(u, s) && (u = null !== (r = a.bN.after(e, s)) && void 0 !== r ? r : a.bN.end(e, []));
 				}
 				if (null != _) {
 					let [, t] = _,
 						[n, r] = a.bN.edges(e, t);
-					!E && a.Jz.equals(c, n)
-						? (c = null !== (s = a.bN.before(e, n)) && void 0 !== s ? s : a.bN.start(e, []))
-						: E && a.Jz.equals(c, r) && (c = null !== (o = a.bN.after(e, r)) && void 0 !== o ? o : a.bN.end(e, []));
+					!E && a.Jz.equals(c, n) ? (c = null !== (s = a.bN.before(e, n)) && void 0 !== s ? s : a.bN.start(e, [])) : E && a.Jz.equals(c, r) && (c = null !== (o = a.bN.after(e, r)) && void 0 !== o ? o : a.bN.end(e, []));
 				}
 				i.Q.delete(e, {
 					at: {
@@ -162,21 +152,17 @@ function* u(e) {
 	}
 	if (null == _) return;
 	let p = a.bN.range(e, _),
-		[I, m] = a.M8.edges(p),
+		[m, I] = a.M8.edges(p),
 		T = a.bN.richValue(e),
 		g = f ? -1 : 1,
-		S = null !== (r = null === (t = I.path) || void 0 === t ? void 0 : t[0]) && void 0 !== r ? r : 0,
-		A = null !== (i = null === (n = m.path) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : T.length - 1,
+		S = null !== (r = null === (t = m.path) || void 0 === t ? void 0 : t[0]) && void 0 !== r ? r : 0,
+		A = null !== (i = null === (n = I.path) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : T.length - 1,
 		N = f ? S : A,
 		v = f ? A : S;
 	for (;;) {
 		let t = T[v],
-			n =
-				null !== (u = v === S ? (null === (s = I.path) || void 0 === s ? void 0 : s[1]) : null) && void 0 !== u ? u : 0,
-			r =
-				null !== (c = v === A ? (null === (o = m.path) || void 0 === o ? void 0 : o[1]) : null) && void 0 !== c
-					? c
-					: t.children.length - 1,
+			n = null !== (u = v === S ? (null === (s = m.path) || void 0 === s ? void 0 : s[1]) : null) && void 0 !== u ? u : 0,
+			r = null !== (c = v === A ? (null === (o = I.path) || void 0 === o ? void 0 : o[1]) : null) && void 0 !== c ? c : t.children.length - 1,
 			i = f ? r : n,
 			_ = f ? n : r,
 			E = i;
@@ -184,21 +170,7 @@ function* u(e) {
 			let n, r;
 			let i = t.children[E],
 				s = [v, E];
-			if (
-				((n =
-					a.C0.equals(s, I.path) || a.C0.isAncestor(s, I.path)
-						? !f && a.bN.isEnd(e, I, s)
-							? null
-							: I
-						: a.bN.start(e, s)),
-				(r =
-					a.C0.equals(s, m.path) || a.C0.isAncestor(s, m.path)
-						? f && a.bN.isStart(e, m, s)
-							? null
-							: m
-						: a.bN.end(e, s)),
-				null != n && null != r)
-			) {
+			if (((n = a.C0.equals(s, m.path) || a.C0.isAncestor(s, m.path) ? (!f && a.bN.isEnd(e, m, s) ? null : m) : a.bN.start(e, s)), (r = a.C0.equals(s, I.path) || a.C0.isAncestor(s, I.path) ? (f && a.bN.isStart(e, I, s) ? null : I) : a.bN.end(e, s)), null != n && null != r)) {
 				if (a.LC.isText(i) && 0 === i.text.length) {
 					let e = {
 						path: s,

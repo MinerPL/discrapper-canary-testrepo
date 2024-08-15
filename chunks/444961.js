@@ -36,9 +36,7 @@ class g extends r.Z {
 		if (null != i)
 			!i.isGuildStageVoice() &&
 				m.start(e + n.afkTimeout * _.Z.Millis.SECOND - Date.now(), () => {
-					null != (n = c.Z.getGuild(u.Z.getGuildId())) &&
-						null != n.afkChannelId &&
-						s.default.selectVoiceChannel(n.afkChannelId);
+					null != (n = c.Z.getGuild(u.Z.getGuildId())) && null != n.afkChannelId && s.default.selectVoiceChannel(n.afkChannelId);
 				});
 	}
 }

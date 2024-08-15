@@ -13,8 +13,8 @@ var r,
 	f = n(70956),
 	h = n(881952),
 	p = n(246364),
-	I = n(937111),
-	m = n(981631);
+	m = n(937111),
+	I = n(981631);
 let T = new Map(),
 	g = {};
 function S(e) {
@@ -49,15 +49,12 @@ function b(e) {
 	return y.get(e);
 }
 function M(e) {
-	(G[e.joinRequestId] = e),
-		y.set(e.joinRequestId, e),
-		(0, h.Nd)(e.applicationStatus) && (L.delete(e.joinRequestId), D.set(e.joinRequestId, e)),
-		(0, h.bk)(e.applicationStatus) && (D.delete(e.joinRequestId), L.set(e.joinRequestId, e));
+	(G[e.joinRequestId] = e), y.set(e.joinRequestId, e), (0, h.Nd)(e.applicationStatus) && (L.delete(e.joinRequestId), D.set(e.joinRequestId, e)), (0, h.bk)(e.applicationStatus) && (D.delete(e.joinRequestId), L.set(e.joinRequestId, e));
 }
 function P(e) {
 	var t, n;
 	let { guildId: r, request: i } = e,
-		a = (0, I.j)(i),
+		a = (0, m.j)(i),
 		s = E.default.getCurrentUser();
 	if (null == s || a.userId === s.id) return !1;
 	let o = null === ((n = a.joinRequestId), (t = y.get(n))) || void 0 === t ? void 0 : t.applicationStatus;
@@ -90,7 +87,7 @@ class B extends (r = u.ZP.Store) {
 	getSelectedApplicationTab(e) {
 		var t;
 		let n = _.Z.getGuild(e),
-			r = (null == n ? void 0 : n.hasFeature(m.oNc.CLAN)) ? 'REVIEW_APPLICATION' : p.wB.SUBMITTED;
+			r = (null == n ? void 0 : n.hasFeature(I.oNc.CLAN)) ? 'REVIEW_APPLICATION' : p.wB.SUBMITTED;
 		return null !== (t = U[e]) && void 0 !== t ? t : r;
 	}
 	getSelectedSortOrder(e) {

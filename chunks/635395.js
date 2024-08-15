@@ -14,12 +14,7 @@ var i,
 	m = n(358085),
 	I = n(998502),
 	g = n(981631);
-((a = i || (i = {})).DEFAULT = 'DEFAULT'),
-	(a.UNREAD = 'UNREAD'),
-	(a.CONNECTED = 'CONNECTED'),
-	(a.SPEAKING = 'SPEAKING'),
-	(a.MUTED = 'MUTED'),
-	(a.DEAFENED = 'DEAFENED');
+((a = i || (i = {})).DEFAULT = 'DEFAULT'), (a.UNREAD = 'UNREAD'), (a.CONNECTED = 'CONNECTED'), (a.SPEAKING = 'SPEAKING'), (a.MUTED = 'MUTED'), (a.DEAFENED = 'DEAFENED');
 let p = (0, m.isMac)() ? null : 'DEFAULT';
 class T extends s.PureComponent {
 	componentDidMount() {
@@ -42,11 +37,7 @@ class T extends s.PureComponent {
 			(i = () => {
 				let { deafened: e, muted: t, speaking: n, connected: i, unread: a } = this.props,
 					s = p;
-				return (0, m.isMac)() && !i
-					? s
-					: (0, m.isLinux)() || !i
-						? (a && (s = 'UNREAD'), s)
-						: (s = e ? 'DEAFENED' : t ? 'MUTED' : n ? 'SPEAKING' : 'CONNECTED');
+				return (0, m.isMac)() && !i ? s : (0, m.isLinux)() || !i ? (a && (s = 'UNREAD'), s) : (s = e ? 'DEAFENED' : t ? 'MUTED' : n ? 'SPEAKING' : 'CONNECTED');
 			}),
 			n in t
 				? Object.defineProperty(t, n, {

@@ -11,11 +11,7 @@ n.d(t, {
 var r = n(392711),
 	i = n.n(r);
 function a(e) {
-	let t = (e, t) =>
-			e.subscriptionPlanId === t.subscriptionPlanId &&
-			e.subscriptionPlanPrice === t.subscriptionPlanPrice &&
-			e.amount === t.amount &&
-			i().isEqual(e.discounts, t.discounts),
+	let t = (e, t) => e.subscriptionPlanId === t.subscriptionPlanId && e.subscriptionPlanPrice === t.subscriptionPlanPrice && e.amount === t.amount && i().isEqual(e.discounts, t.discounts),
 		n = [],
 		r = new Set();
 	return (

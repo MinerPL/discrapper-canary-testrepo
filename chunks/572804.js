@@ -31,23 +31,14 @@ function o(e) {
 		userId: s,
 		channelId: a.channel_id,
 		mentionEveryone: null !== (n = a.mention_everyone) && void 0 !== n && n,
-		mentionUsers:
-			null !== (r = null === (t = a.mentions) || void 0 === t ? void 0 : t.map((e) => e.id)) && void 0 !== r ? r : [],
+		mentionUsers: null !== (r = null === (t = a.mentions) || void 0 === t ? void 0 : t.map((e) => e.id)) && void 0 !== r ? r : [],
 		mentionRoles: null !== (i = a.mention_roles) && void 0 !== i ? i : [],
 		suppressEveryone: o,
 		suppressRoles: u
 	});
 }
 function l(e) {
-	let {
-		userId: t,
-		channelId: n,
-		mentionEveryone: s,
-		mentionUsers: o,
-		mentionRoles: l,
-		suppressEveryone: u = !1,
-		suppressRoles: c = !1
-	} = e;
+	let { userId: t, channelId: n, mentionEveryone: s, mentionUsers: o, mentionRoles: l, suppressEveryone: u = !1, suppressRoles: c = !1 } = e;
 	if ((s && !u) || o.includes(t)) return !0;
 	if (c || null == l || 0 === l.length) return !1;
 	let d = r.Z.getChannel(n);

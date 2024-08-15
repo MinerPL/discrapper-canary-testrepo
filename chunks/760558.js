@@ -25,19 +25,13 @@ var n,
 	U = l(981631),
 	R = l(689938),
 	h = l(222162);
-((t = n || (n = {})).UNUSED_QUANTITY_SELECT = 'UNUSED_QUANTITY_SELECT'),
-	(t.GUILD_SELECT = 'GUILD_SELECT'),
-	(t.CONFIRM = 'CONFIRM'),
-	(t.SUCCESS = 'SUCCESS');
+((t = n || (n = {})).UNUSED_QUANTITY_SELECT = 'UNUSED_QUANTITY_SELECT'), (t.GUILD_SELECT = 'GUILD_SELECT'), (t.CONFIRM = 'CONFIRM'), (t.SUCCESS = 'SUCCESS');
 s.default = (e) => {
 	var s, l;
 	let { guildBoostSlots: n, selectedGuild: t, locationSection: i, transitionState: N, onClose: g } = e,
 		L = (0, M.vx)(S.Z.boostSlots);
-	o()(null != n || null != t, 'Must either provide slots or an initial selected guild'),
-		o()(!(null == n ? void 0 : n.some((e) => e.isOnCooldown())), 'If slots are provided, they must not be on cooldown');
-	let f = [null == n ? 'UNUSED_QUANTITY_SELECT' : null, null == t ? 'GUILD_SELECT' : null, 'CONFIRM', 'SUCCESS'].filter(
-			(e) => null != e
-		),
+	o()(null != n || null != t, 'Must either provide slots or an initial selected guild'), o()(!(null == n ? void 0 : n.some((e) => e.isOnCooldown())), 'If slots are provided, they must not be on cooldown');
+	let f = [null == n ? 'UNUSED_QUANTITY_SELECT' : null, null == t ? 'GUILD_SELECT' : null, 'CONFIRM', 'SUCCESS'].filter((e) => null != e),
 		[p, j] = (0, d.Wu)([C.Z], () => [C.Z.isModifyingAppliedBoost, C.Z.applyBoostError]),
 		[B, v] = a.useState(''),
 		[D, G] = a.useState(f[0]),
@@ -197,12 +191,8 @@ s.default = (e) => {
 							}
 						};
 					return (0, r.jsx)(_.Z.Footer, {
-						confirmation: F
-							? R.Z.Messages.PREMIUM_GUILD_SUBSCRIBE_TRANSFER_CONFIRM_CONFIRMATION.format({ slotCount: e })
-							: R.Z.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_CONFIRMATION.format({ slotCount: e }),
-						confirmationLabel: F
-							? R.Z.Messages.PREMIUM_GUILD_SUBSCRIBE_TRANSFER_CONFIRM_CONFIRMATION_LABEL.format({ slotCount: e })
-							: R.Z.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_CONFIRMATION_LABEL.format({ slotCount: e }),
+						confirmation: F ? R.Z.Messages.PREMIUM_GUILD_SUBSCRIBE_TRANSFER_CONFIRM_CONFIRMATION.format({ slotCount: e }) : R.Z.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_CONFIRMATION.format({ slotCount: e }),
+						confirmationLabel: F ? R.Z.Messages.PREMIUM_GUILD_SUBSCRIBE_TRANSFER_CONFIRM_CONFIRMATION_LABEL.format({ slotCount: e }) : R.Z.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_CONFIRMATION_LABEL.format({ slotCount: e }),
 						onConfirm: l,
 						onCancel: s,
 						isModifyingSubscription: p

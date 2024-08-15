@@ -18,8 +18,8 @@ var r,
 	f = n(689938),
 	h = n(791170),
 	p = n(787223),
-	I = n(594402);
-function m(e, t, n) {
+	m = n(594402);
+function I(e, t, n) {
 	return (
 		t in e
 			? Object.defineProperty(e, t, {
@@ -61,11 +61,7 @@ class A extends (r = a.Component) {
 			return (0, i.jsxs)('div', {
 				className: o()(h.maxLength, { [h.errorOverflow]: this.hasError() }),
 				'aria-hidden': 'true',
-				children: [
-					null !== (e = null == t ? void 0 : t.length) && void 0 !== e ? e : 0,
-					' ',
-					null != n && '/ '.concat(n)
-				]
+				children: [null !== (e = null == t ? void 0 : t.length) && void 0 !== e ? e : 0, ' ', null != n && '/ '.concat(n)]
 			});
 		}
 		return null;
@@ -82,25 +78,13 @@ class A extends (r = a.Component) {
 				});
 	}
 	hasError() {
-		return (
-			null != this.props.error ||
-			null != this.context.error ||
-			(!1 !== this.state.dirty && (this.getIsOverflowing() || this.getIsUnderflowing() || !1))
-		);
+		return null != this.props.error || null != this.context.error || (!1 !== this.state.dirty && (this.getIsOverflowing() || this.getIsUnderflowing() || !1));
 	}
 	getErrorMessage() {
 		let { error: e, maxLength: t, minLength: n } = this.props,
 			r = this.getIsOverflowing() ? f.Z.Messages.MAXIMUM_LENGTH_ERROR.format({ maxLength: t }) : null,
 			i = this.getIsUnderflowing() ? f.Z.Messages.MINIMUM_LENGTH_ERROR.format({ minLength: n }) : null;
-		return (null != e && e.length < 1) || null === e
-			? null
-			: void 0 !== e
-				? e
-				: !1 === this.state.dirty
-					? null
-					: null != r
-						? r
-						: i;
+		return (null != e && e.length < 1) || null === e ? null : void 0 !== e ? e : !1 === this.state.dirty ? null : null != r ? r : i;
 	}
 	renderErrorMessage() {
 		let e = this.getErrorMessage();
@@ -116,33 +100,10 @@ class A extends (r = a.Component) {
 	}
 	render() {
 		var e, t;
-		let {
-				disabled: n,
-				value: r,
-				placeholder: a,
-				autoFocus: s,
-				minLength: l,
-				maxLength: c,
-				allowOverflow: _,
-				spellCheck: m,
-				resizeable: T,
-				className: A,
-				id: N,
-				rows: v,
-				flex: O,
-				autosize: R,
-				required: C,
-				onInvalid: y,
-				inputRef: D
-			} = this.props,
+		let { disabled: n, value: r, placeholder: a, autoFocus: s, minLength: l, maxLength: c, allowOverflow: _, spellCheck: I, resizeable: T, className: A, id: N, rows: v, flex: O, autosize: R, required: C, onInvalid: y, inputRef: D } = this.props,
 			L = R ? E.l : 'textarea',
 			b = this.hasError(),
-			M =
-				null !== (t = this.props['aria-labelledby']) && void 0 !== t
-					? t
-					: null === (e = this.context) || void 0 === e
-						? void 0
-						: e.titleId,
+			M = null !== (t = this.props['aria-labelledby']) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId,
 			P = this.getAriaDescribedBy();
 		return (0, i.jsxs)('div', {
 			className: o()(p.inputWrapper, { [h.flex]: O }),
@@ -153,7 +114,7 @@ class A extends (r = a.Component) {
 						(0, i.jsx)(u.t, {
 							children: (0, i.jsx)(L, {
 								type: 'text',
-								className: o()(p.inputDefault, h.textArea, I.scrollbarDefault, A, {
+								className: o()(p.inputDefault, h.textArea, m.scrollbarDefault, A, {
 									[p.error]: b,
 									[p.disabled]: n,
 									[h.resizeable]: T
@@ -169,7 +130,7 @@ class A extends (r = a.Component) {
 								autoFocus: s,
 								minLength: l,
 								maxLength: _ ? void 0 : c,
-								spellCheck: m,
+								spellCheck: I,
 								required: C,
 								onChange: this.onChange,
 								onBlur: this.onBlur,
@@ -201,38 +162,34 @@ class A extends (r = a.Component) {
 	constructor(e) {
 		var t;
 		super(e),
-			m(this, 'getAriaDescribedBy', () => {
+			I(this, 'getAriaDescribedBy', () => {
 				var e;
 				let { maxLength: t, minLength: n, error: r } = this.props,
 					i = [],
 					a = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
-				return (
-					null != a && i.push(a),
-					null != r ? i.push(T) : (null != t && i.push(S), null != n && i.push(g)),
-					i.length > 0 ? i.join(' ') : void 0
-				);
+				return null != a && i.push(a), null != r ? i.push(T) : (null != t && i.push(S), null != n && i.push(g)), i.length > 0 ? i.join(' ') : void 0;
 			}),
-			m(this, 'onChange', (e) => {
+			I(this, 'onChange', (e) => {
 				let { onChange: t, name: n } = this.props;
 				null == t || t(e.currentTarget.value, n), this.setState({ dirty: !0 });
 			}),
-			m(this, 'onFocus', (e) => {
+			I(this, 'onFocus', (e) => {
 				let { onFocus: t, name: n } = this.props;
 				null == t || t(e, n);
 			}),
-			m(this, 'onBlur', (e) => {
+			I(this, 'onBlur', (e) => {
 				let { onBlur: t, name: n } = this.props;
 				null == t || t(e, n);
 			}),
-			m(this, 'onKeyDown', (e) => {
+			I(this, 'onKeyDown', (e) => {
 				let { onKeyDown: t } = this.props;
 				null == t || t(e);
 			}),
 			(this.state = { dirty: null !== (t = e.defaultDirty) && void 0 !== t && t });
 	}
 }
-m(A, 'contextType', c.q3),
-	m(A, 'defaultProps', {
+I(A, 'contextType', c.q3),
+	I(A, 'defaultProps', {
 		name: '',
 		disabled: !1,
 		placeholder: '',

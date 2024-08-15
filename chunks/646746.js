@@ -21,13 +21,11 @@ function g(e) {
 	let { message: I, forwardOptions: A } = e,
 		p = null == A ? void 0 : A.onlyAttachmentIds,
 		C = null == A ? void 0 : A.onlyEmbedIndices,
-		N =
-			null !== (n = null === (t = I.messageSnapshots[0]) || void 0 === t ? void 0 : t.message) && void 0 !== n ? n : I,
+		N = null !== (n = null === (t = I.messageSnapshots[0]) || void 0 === t ? void 0 : t.message) && void 0 !== n ? n : I,
 		L = N.attachments;
 	null != p ? (L = N.attachments.filter((e) => p.includes(e.id))) : null != C && (L = []);
 	let b = N.embeds;
-	null != C ? (b = N.embeds.filter((e, t) => C.includes(t))) : null != p && (b = []),
-		(null != C || ('' === N.content && b.length > 0)) && (N = N.set('content', b.map((e) => e.url).join('\n')));
+	null != C ? (b = N.embeds.filter((e, t) => C.includes(t))) : null != p && (b = []), (null != C || ('' === N.content && b.length > 0)) && (N = N.set('content', b.map((e) => e.url).join('\n')));
 	let v = '' !== N.content && null == p,
 		T = a.useMemo(
 			() =>
@@ -88,11 +86,7 @@ function g(e) {
 								height: 56
 							})
 						}))
-					: (null === (g = b[0]) || void 0 === g
-							? void 0
-							: null === (s = g.thumbnail) || void 0 === s
-								? void 0
-								: s.proxyURL) != null &&
+					: (null === (g = b[0]) || void 0 === g ? void 0 : null === (s = g.thumbnail) || void 0 === s ? void 0 : s.proxyURL) != null &&
 						(M = (0, l.jsx)('div', {
 							className: E.attachmentPreview,
 							children: (0, l.jsx)(u.Z, {

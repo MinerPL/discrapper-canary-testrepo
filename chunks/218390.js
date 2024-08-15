@@ -71,13 +71,9 @@ function X() {
 								children: [
 									(u || !I) &&
 										(0, n.jsx)(G.Cy, {
-											text: u
-												? k.Z.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED
-												: k.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
+											text: u ? k.Z.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED : k.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
 											className: W.topRimPill,
-											colorOptions: (0, _.wj)(d)
-												? G.VE.PREMIUM_TIER_2_WHITE_FILL
-												: G.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
+											colorOptions: (0, _.wj)(d) ? G.VE.PREMIUM_TIER_2_WHITE_FILL : G.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
 										}),
 									(u || !I) && (0, n.jsx)('div', { className: W.rimGlowTier2 }),
 									(0, n.jsx)(E.Heading, {
@@ -181,16 +177,12 @@ function q() {
 					(0, n.jsx)(E.Heading, {
 						className: r()(W.giftTitle, { [W.seasonalColor]: t }),
 						variant: 'heading-xl/extrabold',
-						children: t
-							? k.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING
-							: k.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_HEADING
+						children: t ? k.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : k.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_HEADING
 					}),
 					(0, n.jsx)(E.Text, {
 						className: r()(W.giftText, { [W.seasonalColor]: t }),
 						variant: 'text-sm/normal',
-						children: t
-							? k.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY
-							: k.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
+						children: t ? k.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : k.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
 					}),
 					(0, n.jsx)(U.Z, {
 						isGift: !0,

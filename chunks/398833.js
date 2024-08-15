@@ -35,10 +35,7 @@ var s = {
 	}
 };
 function o(e) {
-	(this.curveType = s[e]),
-		!this.curveType && (this.curveType = { name: e }),
-		(this.curve = new i.ec(this.curveType.name)),
-		(this.keys = void 0);
+	(this.curveType = s[e]), !this.curveType && (this.curveType = { name: e }), (this.curve = new i.ec(this.curveType.name)), (this.keys = void 0);
 }
 function l(e, t, n) {
 	!Array.isArray(e) && (e = e.toArray());
@@ -58,11 +55,7 @@ function l(e, t, n) {
 		return (this.keys = this.curve.genKeyPair()), this.getPublicKey(e, t);
 	}),
 	(o.prototype.computeSecret = function (e, t, n) {
-		return (
-			(t = t || 'utf8'),
-			!r.isBuffer(e) && (e = new r(e, t)),
-			l(this.curve.keyFromPublic(e).getPublic().mul(this.keys.getPrivate()).getX(), n, this.curveType.byteLength)
-		);
+		return (t = t || 'utf8'), !r.isBuffer(e) && (e = new r(e, t)), l(this.curve.keyFromPublic(e).getPublic().mul(this.keys.getPrivate()).getX(), n, this.curveType.byteLength);
 	}),
 	(o.prototype.getPublicKey = function (e, t) {
 		var n = this.keys.getPublic('compressed' === t, !0);

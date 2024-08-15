@@ -14,21 +14,21 @@ var i = n(735250),
 	_ = n(889901),
 	f = n(64078),
 	E = n(351780),
-	g = n(843693),
-	C = n(641033),
+	C = n(843693),
+	g = n(641033),
 	I = n(989830),
 	x = n(689938),
 	T = n(37834);
 let N = a.memo(function (e) {
 		let { channelId: t, width: n } = e,
 			s = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
-			l = (0, o.e7)([g.ZP], () => g.ZP.getMostRecentMessageCombo(t), [t]),
+			l = (0, o.e7)([C.ZP], () => C.ZP.getMostRecentMessageCombo(t), [t]),
 			[u, h] = a.useState(!1);
 		a.useEffect(() => {
 			if (null == l ? void 0 : l.displayed) return;
 			h(!1),
 				setImmediate(() => {
-					h((null != l ? (0, C.Eo)(l.combo) : 0) > 0);
+					h((null != l ? (0, g.Eo)(l.combo) : 0) > 0);
 				});
 			let e = setTimeout(() => {
 				h(!1), null != l && (0, f.ew)(l);
@@ -55,14 +55,14 @@ let N = a.memo(function (e) {
 					children: (0, i.jsx)(c.Text, {
 						className: T.comboScore,
 						variant: 'text-sm/bold',
-						children: (0, C.Eo)(l.combo)
+						children: (0, g.Eo)(l.combo)
 					})
 				})
 		});
 	}),
 	v = a.memo(function (e) {
 		let { value: t, multiplier: n } = e,
-			{ color: s, square: r, flair: o } = a.useMemo(() => (0, C.yz)(n), [n]),
+			{ color: s, square: r, flair: o } = a.useMemo(() => (0, g.yz)(n), [n]),
 			u = (0, h.Lq)(s);
 		return (0, i.jsxs)(i.Fragment, {
 			children: [
@@ -129,14 +129,14 @@ t.Z = a.memo(function (e) {
 		n = (0, o.e7)([m.default], () => m.default.getId()),
 		s = (0, o.e7)([p.Z], () => p.Z.isTyping(t, n), [t, n]),
 		l = (0, o.e7)([E.Z], () => E.Z.isEnabled()),
-		d = (0, o.e7)([g.ZP], () => g.ZP.isComboing(n, t), [t, n]),
+		d = (0, o.e7)([C.ZP], () => C.ZP.isComboing(n, t), [t, n]),
 		{ ref: h, width: _ = 0 } = (0, u.Z)(),
-		[f, C] = a.useState(!1),
+		[f, g] = a.useState(!1),
 		x = (0, I.Z)(t),
 		S = l && d && s;
 	a.useEffect(() => {
-		S && C(!0);
-		let e = setTimeout(() => C(S), 1000);
+		S && g(!0);
+		let e = setTimeout(() => g(S), 1000);
 		return () => clearTimeout(e);
 	}, [S]);
 	let Z = (0, c.useSpring)({

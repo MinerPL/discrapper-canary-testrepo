@@ -74,14 +74,7 @@ function m(e) {
 	});
 }
 function p(e) {
-	let {
-			toggleRequestToSpeakSidebar: t,
-			showRequestToSpeakSidebar: n,
-			className: s,
-			numRequestToSpeak: l,
-			onClick: r,
-			...o
-		} = e,
+	let { toggleRequestToSpeakSidebar: t, showRequestToSpeakSidebar: n, className: s, numRequestToSpeak: l, onClick: r, ...o } = e,
 		d = a.useCallback(() => {
 			null == r || r(), t();
 		}, [r, t]);

@@ -44,9 +44,7 @@ t.Z = function () {
 							})(l, r)),
 							(h = h.replace(s, u));
 						var p = t.key + '-' + c;
-						'replaceRule' in l
-							? l.replaceRule(p, e[c], (0, n.Z)({}, a, { selector: h }))
-							: l.addRule(p, e[c], (0, n.Z)({}, a, { selector: h }));
+						'replaceRule' in l ? l.replaceRule(p, e[c], (0, n.Z)({}, a, { selector: h })) : l.addRule(p, e[c], (0, n.Z)({}, a, { selector: h }));
 					} else d && l.addRule(c, {}, a).addRule(t.key, e[c], { selector: t.selector });
 					delete e[c];
 				}

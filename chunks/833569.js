@@ -50,31 +50,14 @@ var n,
 	V = t(981631),
 	Y = t(689938),
 	w = t(758294);
-((a = n || (n = {}))[(a.WHAT_YOU_LOSE = 1)] = 'WHAT_YOU_LOSE'),
-	(a[(a.CONFIRM = 2)] = 'CONFIRM'),
-	(a[(a.PREVIEW = 3)] = 'PREVIEW'),
-	(a[(a.CONFIRM_DISCOUNT = 4)] = 'CONFIRM_DISCOUNT'),
-	(a[(a.DISCOUNT_APPLIED = 5)] = 'DISCOUNT_APPLIED'),
-	(a[(a.PAUSE_SELECT = 6)] = 'PAUSE_SELECT'),
-	(a[(a.PAUSE_CONFIRM = 7)] = 'PAUSE_CONFIRM');
+((a = n || (n = {}))[(a.WHAT_YOU_LOSE = 1)] = 'WHAT_YOU_LOSE'), (a[(a.CONFIRM = 2)] = 'CONFIRM'), (a[(a.PREVIEW = 3)] = 'PREVIEW'), (a[(a.CONFIRM_DISCOUNT = 4)] = 'CONFIRM_DISCOUNT'), (a[(a.DISCOUNT_APPLIED = 5)] = 'DISCOUNT_APPLIED'), (a[(a.PAUSE_SELECT = 6)] = 'PAUSE_SELECT'), (a[(a.PAUSE_CONFIRM = 7)] = 'PAUSE_CONFIRM');
 async function H(e) {
-	let {
-		premiumSubscription: s,
-		onClose: t,
-		setHasError: n,
-		setIsCancelling: a,
-		analyticsLocations: i,
-		analyticsLocation: r
-	} = e;
+	let { premiumSubscription: s, onClose: t, setHasError: n, setIsCancelling: a, analyticsLocations: i, analyticsLocation: r } = e;
 	try {
-		if ((a(!0), n(!1), [V.O0b.PAST_DUE, V.O0b.PAUSED, V.O0b.BILLING_RETRY].includes(s.status)))
-			await (0, T.EO)(s.id, i, r);
+		if ((a(!0), n(!1), [V.O0b.PAST_DUE, V.O0b.PAUSED, V.O0b.BILLING_RETRY].includes(s.status))) await (0, T.EO)(s.id, i, r);
 		else {
 			var o, l;
-			let e =
-				null !== (l = null === (o = s.renewalMutations) || void 0 === o ? void 0 : o.items) && void 0 !== l
-					? l
-					: s.items;
+			let e = null !== (l = null === (o = s.renewalMutations) || void 0 === o ? void 0 : o.items) && void 0 !== l ? l : s.items;
 			await (0, T.Mg)(s, { items: (0, R.Ue)(e) }, i, r);
 		}
 		t();
@@ -84,14 +67,7 @@ async function H(e) {
 }
 function k(e) {
 	var s;
-	let {
-			premiumSubscription: t,
-			premiumType: n,
-			setStep: a,
-			onClose: o,
-			whatYouLoseExperienceEnabled: l,
-			analyticsLocation: c
-		} = e,
+	let { premiumSubscription: t, premiumType: n, setStep: a, onClose: o, whatYouLoseExperienceEnabled: l, analyticsLocation: c } = e,
 		d = (0, m.Q)(),
 		[_, E] = r.useState(!1),
 		[T, N] = r.useState(!1),
@@ -161,9 +137,7 @@ function k(e) {
 							analyticsLocation: c
 						});
 					},
-					children: l
-						? Y.Z.Messages.CONFIRM
-						: Y.Z.Messages.PREMIUM_CANCEL_CONFIRM_NEW.format({ planPremiumType: R.ZP.getDisplayPremiumType(t.planId) })
+					children: l ? Y.Z.Messages.CONFIRM : Y.Z.Messages.PREMIUM_CANCEL_CONFIRM_NEW.format({ planPremiumType: R.ZP.getDisplayPremiumType(t.planId) })
 				}),
 		f = (0, i.jsx)(I.Button, {
 			look: I.Button.Looks.LINK,
@@ -184,9 +158,7 @@ function k(e) {
 						children: [
 							(0, i.jsx)(I.FormTitle, {
 								tag: I.FormTitleTags.H4,
-								children: Y.Z.Messages.PREMIUM_CANCEL_CONFIRM_TITLE.format({
-									planPremiumType: R.ZP.getDisplayPremiumType(t.planId)
-								})
+								children: Y.Z.Messages.PREMIUM_CANCEL_CONFIRM_TITLE.format({ planPremiumType: R.ZP.getDisplayPremiumType(t.planId) })
 							}),
 							(0, i.jsx)(I.ModalCloseButton, { onClick: o })
 						]
@@ -217,11 +189,7 @@ function W(e) {
 		{ analyticsLocations: a } = (0, C.ZP)(),
 		[r] = (0, M.ED)({
 			subscriptionId: n.id,
-			items: (0, R.Ue)(
-				null !== (t = null === (s = n.renewalMutations) || void 0 === s ? void 0 : s.items) && void 0 !== t
-					? t
-					: n.items
-			),
+			items: (0, R.Ue)(null !== (t = null === (s = n.renewalMutations) || void 0 === s ? void 0 : s.items) && void 0 !== t ? t : n.items),
 			renewal: !0,
 			analyticsLocations: a,
 			analyticsLocation: N.Z.CANCEL_INVOICE_PREVIEW
@@ -301,9 +269,7 @@ function K(e) {
 								analyticsLocation: o
 							});
 						},
-						children: Y.Z.Messages.PREMIUM_CANCEL_CONFIRM_NEW.format({
-							planPremiumType: R.ZP.getDisplayPremiumType(s.planId)
-						})
+						children: Y.Z.Messages.PREMIUM_CANCEL_CONFIRM_NEW.format({ planPremiumType: R.ZP.getDisplayPremiumType(s.planId) })
 					}),
 					(0, i.jsx)(j.Z, { onClick: n })
 				]
@@ -333,14 +299,7 @@ let Q = {
 function X(e) {
 	var s;
 	let t,
-		{
-			premiumSubscription: n,
-			transitionState: a,
-			onClose: o,
-			analyticsLocations: l,
-			analyticsLocation: d,
-			initialStep: E
-		} = e,
+		{ premiumSubscription: n, transitionState: a, onClose: o, analyticsLocations: l, analyticsLocation: d, initialStep: E } = e,
 		T = r.useRef(new c.qA()),
 		[m, A] = r.useState(null),
 		O = (0, D.yQ)(),
@@ -447,9 +406,7 @@ function X(e) {
 			t = (0, i.jsx)(v.Z, {
 				premiumType: M,
 				titleText: Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_TITLE,
-				subtitleText: p
-					? Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD_V2
-					: Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE.format(),
+				subtitleText: p ? Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD_V2 : Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE.format(),
 				subtitleClassName: p ? w.subtitleSection : void 0,
 				subtitleIcon:
 					p &&

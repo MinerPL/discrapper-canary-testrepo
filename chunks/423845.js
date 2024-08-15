@@ -12,8 +12,8 @@ var r = n(620014),
 	f = n(65064),
 	h = n(207635),
 	p = n(354199),
-	I = n(671660),
-	m = n(402428),
+	m = n(671660),
+	I = n(402428),
 	T = n(207757),
 	g = n(397985),
 	S = n(706627),
@@ -24,30 +24,7 @@ var r = n(620014),
 	R = '[object Function]',
 	C = '[object Object]',
 	y = {};
-(y[O] =
-	y['[object Array]'] =
-	y['[object ArrayBuffer]'] =
-	y['[object DataView]'] =
-	y['[object Boolean]'] =
-	y['[object Date]'] =
-	y['[object Float32Array]'] =
-	y['[object Float64Array]'] =
-	y['[object Int8Array]'] =
-	y['[object Int16Array]'] =
-	y['[object Int32Array]'] =
-	y['[object Map]'] =
-	y['[object Number]'] =
-	y[C] =
-	y['[object RegExp]'] =
-	y['[object Set]'] =
-	y['[object String]'] =
-	y['[object Symbol]'] =
-	y['[object Uint8Array]'] =
-	y['[object Uint8ClampedArray]'] =
-	y['[object Uint16Array]'] =
-	y['[object Uint32Array]'] =
-		!0),
-	(y['[object Error]'] = y[R] = y['[object WeakMap]'] = !1);
+(y[O] = y['[object Array]'] = y['[object ArrayBuffer]'] = y['[object DataView]'] = y['[object Boolean]'] = y['[object Date]'] = y['[object Float32Array]'] = y['[object Float64Array]'] = y['[object Int8Array]'] = y['[object Int16Array]'] = y['[object Int32Array]'] = y['[object Map]'] = y['[object Number]'] = y[C] = y['[object RegExp]'] = y['[object Set]'] = y['[object String]'] = y['[object Symbol]'] = y['[object Uint8Array]'] = y['[object Uint8ClampedArray]'] = y['[object Uint16Array]'] = y['[object Uint32Array]'] = !0), (y['[object Error]'] = y[R] = y['[object WeakMap]'] = !1);
 e.exports = function e(t, n, D, L, b, M) {
 	var P,
 		U = 1 & n,
@@ -55,7 +32,7 @@ e.exports = function e(t, n, D, L, b, M) {
 		x = 4 & n;
 	if ((D && (P = b ? D(t, L, b, M) : D(t)), void 0 !== P)) return P;
 	if (!S(t)) return t;
-	var G = m(t);
+	var G = I(t);
 	if (G) {
 		if (((P = h(t)), !U)) return u(t, P);
 	} else {
@@ -63,7 +40,7 @@ e.exports = function e(t, n, D, L, b, M) {
 			B = k == R || '[object GeneratorFunction]' == k;
 		if (T(t)) return l(t, U);
 		if (k == C || k == O || (B && !b)) {
-			if (((P = w || B ? {} : I(t)), !U)) return w ? d(t, o(P, t)) : c(t, s(P, t));
+			if (((P = w || B ? {} : m(t)), !U)) return w ? d(t, o(P, t)) : c(t, s(P, t));
 		} else {
 			if (!y[k]) return b ? t : {};
 			P = p(t, k, U);

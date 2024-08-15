@@ -16,9 +16,7 @@ let s = [
 				o = Math.pow(10, Math.floor(Math.log10(s))),
 				l = a.Z.Messages.EVERYONE_POPOUT_BODY;
 			return (
-				t.isForumPost()
-					? (l = a.Z.Messages.EVERYONE_POPOUT_BODY_FORUM_POST)
-					: t.isThread() && (l = a.Z.Messages.EVERYONE_POPOUT_BODY_THREAD),
+				t.isForumPost() ? (l = a.Z.Messages.EVERYONE_POPOUT_BODY_FORUM_POST) : t.isThread() && (l = a.Z.Messages.EVERYONE_POPOUT_BODY_THREAD),
 				{
 					body: l.format({
 						role: i,

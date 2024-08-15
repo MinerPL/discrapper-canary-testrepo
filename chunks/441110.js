@@ -60,9 +60,7 @@ t.Z = function (e) {
 							innerClassName: f.ctaButtonContent,
 							fullWidth: !0,
 							onClick: () => {
-								s.ZP.trackWithMetadata(_.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }),
-									h(),
-									(0, l.q)(n.author, p.id);
+								s.ZP.trackWithMetadata(_.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), h(), (0, l.q)(n.author, p.id);
 							},
 							children: E.Z.Messages.MENTION_USER.format({ username: n.author.username })
 						})

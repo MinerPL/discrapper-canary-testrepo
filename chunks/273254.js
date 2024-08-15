@@ -30,8 +30,7 @@ function c(e) {
 							id: t.id,
 							name: t.name,
 							icon: t.icon,
-							description:
-								null !== (e = t.description) && void 0 !== e ? e : o.Z.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER,
+							description: null !== (e = t.description) && void 0 !== e ? e : o.Z.Messages.CLAN_SETUP_DESCRIPTION_PLACEHOLDER,
 							memberCount: 0,
 							games: [],
 							playstyle: l.zv.CASUAL,

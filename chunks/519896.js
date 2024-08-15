@@ -19,25 +19,12 @@ var i = t(735250),
 	x = t(938337);
 function f(n) {
 	var e;
-	let {
-			appId: t,
-			groupListingId: f,
-			groupListingType: _,
-			guildId: p,
-			onClose: h,
-			skuId: T,
-			transitionState: v,
-			onHeaderTitleClick: E
-		} = n,
+	let { appId: t, groupListingId: f, groupListingType: _, guildId: p, onClose: h, skuId: T, transitionState: v, onHeaderTitleClick: E } = n,
 		{ data: N } = (0, c.H)(T),
 		{ data: g } = (0, a.Z)(T),
 		L = l.useMemo(() => {
 			var n;
-			return (null == g ? void 0 : g.thumbnail) != null &&
-				null !== (n = S.Z.toURLSafe((0, u._W)(t, g.thumbnail, 256))) &&
-				void 0 !== n
-				? n
-				: void 0;
+			return (null == g ? void 0 : g.thumbnail) != null && null !== (n = S.Z.toURLSafe((0, u._W)(t, g.thumbnail, 256))) && void 0 !== n ? n : void 0;
 		}, [t, null == g ? void 0 : g.thumbnail]),
 		R = l.useMemo(() => {
 			let n = null == g ? void 0 : g.benefits;

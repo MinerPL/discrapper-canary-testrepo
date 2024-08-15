@@ -2,33 +2,29 @@ var i = n(735250),
 	a = n(470079),
 	s = n(120356),
 	l = n.n(s),
-	r = n(149765),
-	o = n(442837),
-	c = n(704215),
-	u = n(749280),
-	d = n(481060),
-	h = n(367907),
-	m = n(499254),
-	p = n(424602),
-	_ = n(541099),
-	f = n(827498),
-	E = n(663924),
-	g = n(998698),
-	C = n(605236),
-	I = n(665906),
-	x = n(271383),
-	T = n(496675),
-	N = n(594174),
-	v = n(291407),
-	S = n(981631),
-	Z = n(314734),
-	A = n(921944),
-	M = n(689938),
-	b = n(664179);
-let R = a.forwardRef(function (e, t) {
+	r = n(442837),
+	o = n(704215),
+	c = n(749280),
+	u = n(481060),
+	d = n(367907),
+	h = n(499254),
+	m = n(424602),
+	p = n(541099),
+	_ = n(827498),
+	f = n(663924),
+	E = n(998698),
+	C = n(873387),
+	g = n(605236),
+	I = n(291407),
+	x = n(981631),
+	T = n(314734),
+	N = n(921944),
+	v = n(689938),
+	S = n(664179);
+let Z = a.forwardRef(function (e, t) {
 	let { type: n, animateRef: s } = e,
-		r = (0, o.e7)([_.Z], () => _.Z.shouldShowPopup() && _.Z.activeViewType() === n),
-		{ Component: p, events: E, play: g } = (0, u.w)();
+		m = (0, r.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === n),
+		{ Component: f, events: E, play: C } = (0, c.w)();
 	a.useImperativeHandle(
 		s,
 		() => ({
@@ -39,22 +35,18 @@ let R = a.forwardRef(function (e, t) {
 		[E]
 	);
 	let I = a.useCallback(() => {
-		(0, h.yw)(S.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED),
-			r
-				? m.y(f.ti.DISMISSED)
-				: ((0, C.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: A.L.TAKE_ACTION }), m._(f._b.TEXT, n)),
-			g();
-	}, [r, n, g]);
+		(0, d.yw)(x.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), m ? h.y(_.ti.DISMISSED) : ((0, g.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: N.L.TAKE_ACTION }), h._(_._b.TEXT, n)), C();
+	}, [m, n, C]);
 	return (0, i.jsx)('div', {
-		className: l()(b.buttonContainer, Z.t4),
+		className: l()(S.buttonContainer, T.t4),
 		ref: t,
-		children: (0, i.jsx)(d.Button, {
-			look: d.Button.Looks.BLANK,
-			size: d.Button.Sizes.NONE,
+		children: (0, i.jsx)(u.Button, {
+			look: u.Button.Looks.BLANK,
+			size: u.Button.Sizes.NONE,
 			tabIndex: 0,
-			className: l()(b.button, { [b.buttonActive]: r }),
+			className: l()(S.button, { [S.buttonActive]: m }),
 			onClick: I,
-			'aria-label': M.Z.Messages.APP_LAUNCHER_ENTRYPOINT_BUTTON_ARIA_LABEL,
+			'aria-label': v.Z.Messages.APP_LAUNCHER_ENTRYPOINT_BUTTON_ARIA_LABEL,
 			focusProps: {
 				offset: {
 					top: 4,
@@ -63,9 +55,9 @@ let R = a.forwardRef(function (e, t) {
 					right: -4
 				}
 			},
-			innerClassName: b.buttonContents,
+			innerClassName: S.buttonContents,
 			...E,
-			children: (0, i.jsx)(p, { color: 'currentColor' })
+			children: (0, i.jsx)(f, { color: 'currentColor' })
 		})
 	});
 });
@@ -73,75 +65,37 @@ t.Z = a.memo(
 	a.forwardRef(function (e) {
 		let { channel: t, type: n, animateRef: s } = e,
 			l = a.useRef(null),
-			c = (function (e, t) {
-				let n = e.getGuildId(),
-					i = (0, o.e7)([x.ZP, N.default], () => {
-						var e, t;
-						let i = N.default.getCurrentUser();
-						return (
-							null !==
-								(t =
-									null != n && null != i
-										? null === (e = x.ZP.getMember(n, i.id)) || void 0 === e
-											? void 0
-											: e.isPending
-										: null) &&
-							void 0 !== t &&
-							t
-						);
-					}),
-					{ messagesDisabled: a } = (0, o.cj)(
-						[T.Z],
-						() => {
-							var n, a;
-							let s = e.isPrivate(),
-								l = T.Z.computePermissions(e),
-								o = r.e$(l, S.Plq.CREATE_PUBLIC_THREADS) || r.e$(l, S.Plq.CREATE_PRIVATE_THREADS),
-								c =
-									(!(null === (n = t.permissions) || void 0 === n ? void 0 : n.requireCreateTherads) || o) &&
-									(!(null === (a = t.permissions) || void 0 === a ? void 0 : a.requireSendMessages) ||
-										r.e$(l, S.Plq.SEND_MESSAGES)),
-								u = (0, I.xl)(e);
-							return { messagesDisabled: i || (!s && !c) || u };
-						},
-						[e, t.permissions.requireCreateTherads, t.permissions.requireSendMessages, i]
-					);
-				return a;
-			})(t, n),
-			{ activeCommand: u } = (0, o.cj)([g.Z], () => {
+			o = (0, C.g)(t),
+			{ activeCommand: c } = (0, r.cj)([E.Z], () => {
 				var e;
-				return {
-					activeCommand: (null === (e = n.commands) || void 0 === e ? void 0 : e.enabled)
-						? g.Z.getActiveCommand(t.id)
-						: null
-				};
+				return { activeCommand: (null === (e = n.commands) || void 0 === e ? void 0 : e.enabled) ? E.Z.getActiveCommand(t.id) : null };
 			}),
-			d = p.T.useExperiment({ location: 'chat_input' }, { autoTrackExposure: !0 }).enabled,
-			h = (0, o.e7)(
-				[_.Z],
+			u = m.T.useExperiment({ location: 'chat_input' }, { autoTrackExposure: !0 }).enabled,
+			d = (0, r.e7)(
+				[p.Z],
 				() => {
-					let e = _.Z.activeViewType();
-					return null != e && e === n && _.Z.shouldShowPopup();
+					let e = p.Z.activeViewType();
+					return null != e && e === n && p.Z.shouldShowPopup();
 				},
 				[n]
 			);
-		return d && null == u && !c
+		return u && null == c && o
 			? (0, i.jsxs)('div', {
-					className: b.channelAppLauncher,
+					className: S.channelAppLauncher,
 					children: [
-						(0, i.jsx)(v.Z, {
+						(0, i.jsx)(I.Z, {
 							channel: t,
-							animationContainerClassName: b.entrypointAnimation,
-							glowClassName: b.animationGlow,
-							trinketsClassName: b.animationTrinkets,
-							children: (0, i.jsx)(R, {
+							animationContainerClassName: S.entrypointAnimation,
+							glowClassName: S.animationGlow,
+							trinketsClassName: S.animationTrinkets,
+							children: (0, i.jsx)(Z, {
 								type: n,
 								ref: l,
 								animateRef: s
 							})
 						}),
-						h
-							? (0, i.jsx)(E.Z, {
+						d
+							? (0, i.jsx)(f.Z, {
 									positionTargetRef: l,
 									channel: t
 								})

@@ -16,9 +16,7 @@ var n,
 	E = u(570140),
 	C = u(70956),
 	s = u(709054);
-((l = n || (n = {}))[(l.NOT_FETCHED = 0)] = 'NOT_FETCHED'),
-	(l[(l.FETCHING = 1)] = 'FETCHING'),
-	(l[(l.FETCHED = 2)] = 'FETCHED');
+((l = n || (n = {}))[(l.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (l[(l.FETCHING = 1)] = 'FETCHING'), (l[(l.FETCHED = 2)] = 'FETCHED');
 let _ = {},
 	T = {},
 	D = {},

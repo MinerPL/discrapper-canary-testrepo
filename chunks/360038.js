@@ -23,21 +23,6 @@ let _ = {
 	action(e, t) {
 		let n,
 			_ = parseInt(t.split('+')[1], 10);
-		return (0 === _ && (_ = 10),
-		isNaN(_) ||
-			0 === _ ||
-			null ==
-				(n =
-					1 === _
-						? d.ME
-						: (0, i.z)(r.Z, o.Z, l.Z)
-							? 2 === _
-								? d.I_8
-								: c.ZP.getFlattenedGuildIds()[_ - 3]
-							: c.ZP.getFlattenedGuildIds()[_ - 2]))
-			? void 0
-			: n === d.ME && null == u.Z.getGuildId()
-				? ((0, a.uL)(d.Z5c.CHANNEL(n)), !1)
-				: ((0, s.X)(n), !1);
+		return (0 === _ && (_ = 10), isNaN(_) || 0 === _ || null == (n = 1 === _ ? d.ME : (0, i.z)(r.Z, o.Z, l.Z) ? (2 === _ ? d.I_8 : c.ZP.getFlattenedGuildIds()[_ - 3]) : c.ZP.getFlattenedGuildIds()[_ - 2])) ? void 0 : n === d.ME && null == u.Z.getGuildId() ? ((0, a.uL)(d.Z5c.CHANNEL(n)), !1) : ((0, s.X)(n), !1);
 	}
 };

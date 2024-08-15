@@ -25,10 +25,7 @@ e.default = i.ZP.connectStores([l.Z], (t) => {
 				children: [
 					(0, a.jsx)(n.FormTitle, {
 						tag: n.FormTitleTags.H4,
-						children:
-							null != e
-								? N.Z.Messages.MISSING_ENTITLEMENT_MODAL_HEADER.format({ applicationName: e.name })
-								: N.Z.Messages.MISSING_ENTITLEMENT_MODAL_HEADER_UNKNOWN_APPLICATION
+						children: null != e ? N.Z.Messages.MISSING_ENTITLEMENT_MODAL_HEADER.format({ applicationName: e.name }) : N.Z.Messages.MISSING_ENTITLEMENT_MODAL_HEADER_UNKNOWN_APPLICATION
 					}),
 					(0, a.jsx)(n.ModalCloseButton, { onClick: i })
 				]

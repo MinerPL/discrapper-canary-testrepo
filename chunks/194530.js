@@ -30,12 +30,7 @@ function E(e) {
 	async function g(e) {
 		e.preventDefault(), (0, r.b9)();
 		let s = !1;
-		if (
-			('' === N ? (Z(_.Z.Messages.PASSWORD_REQUIREMENTS_EMPTY), (s = !0)) : Z(null),
-			N !== P ? (D(_.Z.Messages.FORM_LABEL_NEW_PASSWORD_MISMATCH), (s = !0)) : D(null),
-			s)
-		)
-			return;
+		if (('' === N ? (Z(_.Z.Messages.PASSWORD_REQUIREMENTS_EMPTY), (s = !0)) : Z(null), N !== P ? (D(_.Z.Messages.FORM_LABEL_NEW_PASSWORD_MISMATCH), (s = !0)) : D(null), s)) return;
 		let t = await (0, r.Mn)({
 			password: v,
 			newPassword: N
@@ -70,9 +65,7 @@ function E(e) {
 							color: 'header-secondary',
 							variant: 'text-md/normal',
 							className: S.subtitle,
-							children: h
-								? _.Z.Messages.FORCE_PASSWORD_UPDATE_DESCRIPTION
-								: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_PASSWORD_PROMPT_DESKTOP
+							children: h ? _.Z.Messages.FORCE_PASSWORD_UPDATE_DESCRIPTION : _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_PASSWORD_PROMPT_DESKTOP
 						}),
 						!0 !== m &&
 							(0, o.jsx)(a.ModalCloseButton, {
@@ -100,16 +93,7 @@ function E(e) {
 								(0, o.jsx)(a.FormItem, {
 									className: S.newPassword,
 									title: _.Z.Messages.FORM_LABEL_NEW_PASSWORD,
-									error:
-										null !==
-											(R =
-												null !==
-													(E = null == O ? void 0 : null === (t = O.new_password) || void 0 === t ? void 0 : t[0]) &&
-												void 0 !== E
-													? E
-													: I) && void 0 !== R
-											? R
-											: void 0,
+									error: null !== (R = null !== (E = null == O ? void 0 : null === (t = O.new_password) || void 0 === t ? void 0 : t[0]) && void 0 !== E ? E : I) && void 0 !== R ? R : void 0,
 									children: (0, o.jsx)(a.TextInput, {
 										type: 'password',
 										value: N,

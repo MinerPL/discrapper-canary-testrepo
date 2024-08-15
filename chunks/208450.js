@@ -48,14 +48,7 @@ let D = (0, f.hQ)(),
 class U extends a.PureComponent {
 	componentDidMount() {
 		var e, t;
-		A.S.subscribe(L.CkL.PERFORM_SEARCH, this.search),
-			A.S.subscribe(L.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery),
-			A.S.subscribe(L.CkL.FOCUS_SEARCH, this.handleFocusSearch),
-			null === (t = this._editorRef) ||
-				void 0 === t ||
-				null === (e = t.editor) ||
-				void 0 === e ||
-				e.setAttribute('aria-haspopup', 'listbox');
+		A.S.subscribe(L.CkL.PERFORM_SEARCH, this.search), A.S.subscribe(L.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), A.S.subscribe(L.CkL.FOCUS_SEARCH, this.handleFocusSearch), null === (t = this._editorRef) || void 0 === t || null === (e = t.editor) || void 0 === e || e.setAttribute('aria-haspopup', 'listbox');
 	}
 	componentDidUpdate(e) {
 		let { editorState: t, searchId: n } = this.props;
@@ -66,9 +59,7 @@ class U extends a.PureComponent {
 		}
 	}
 	componentWillUnmount() {
-		A.S.unsubscribe(L.CkL.PERFORM_SEARCH, this.search),
-			A.S.unsubscribe(L.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery),
-			A.S.unsubscribe(L.CkL.FOCUS_SEARCH, this.handleFocusSearch);
+		A.S.unsubscribe(L.CkL.PERFORM_SEARCH, this.search), A.S.unsubscribe(L.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), A.S.unsubscribe(L.CkL.FOCUS_SEARCH, this.handleFocusSearch);
 	}
 	tokenize(e) {
 		let t = x.kG(R.Sq(e)).filter((e) => e.type !== I.ZP.NON_TOKEN_TYPE);
@@ -172,22 +163,13 @@ class U extends a.PureComponent {
 				let { query: t, anchor: n, focus: i, performSearch: a, replace: s } = e,
 					{ editorState: r } = this.props,
 					l = R.Sq(r);
-				' ' !== t.charAt(t.length - 1) && (t += ' '),
-					null != n && 0 !== n && ' ' !== l.charAt(n - 1) && ' ' !== t.charAt(0) && (t = ' ' + t),
-					s ? ((r = R.c2(t, r)), (n = 0)) : (r = R.x0(t, r, n, i)),
-					(r = R.Hl(r, 512)),
-					(r = this.tokenize(r));
+				' ' !== t.charAt(t.length - 1) && (t += ' '), null != n && 0 !== n && ' ' !== l.charAt(n - 1) && ' ' !== t.charAt(0) && (t = ' ' + t), s ? ((r = R.c2(t, r)), (n = 0)) : (r = R.x0(t, r, n, i)), (r = R.Hl(r, 512)), (r = this.tokenize(r));
 				let o = Number(n) + t.length;
 				(r = R.iK(o, r)), this.setEditorState(r), a && this.search({ queryString: R.Sq(r) });
 			}),
 			b(this, 'handleSelectedIndexChanged', (e) => {
 				var t, n;
-				null === (n = this._editorRef) ||
-					void 0 === n ||
-					null === (t = n.editor) ||
-					void 0 === t ||
-					t.setAttribute('aria-activedescendant', null != e ? ''.concat(D, '-').concat(e) : void 0),
-					this.setState({ selectedIndex: e });
+				null === (n = this._editorRef) || void 0 === n || null === (t = n.editor) || void 0 === t || t.setAttribute('aria-activedescendant', null != e ? ''.concat(D, '-').concat(e) : void 0), this.setState({ selectedIndex: e });
 			}),
 			b(this, 'renderPopout', () =>
 				(0, i.jsx)(v.ZP, {
@@ -206,8 +188,7 @@ class U extends a.PureComponent {
 				if (null != t && !n) {
 					let e = x.kG(i),
 						n = x.$G(e);
-					for (let t = 0; t < e.length; t++)
-						!x.Fr(e[t], e[t + 1]) && (i = i.substring(0, e[t].start) + i.substring(e[t].end));
+					for (let t = 0; t < e.length; t++) !x.Fr(e[t], e[t + 1]) && (i = i.substring(0, e[t].start) + i.substring(e[t].end));
 					if (0 === e.length || 0 === Object.keys(n).length) return !1;
 					j(t, n, i, !!a), d.AccessibilityAnnouncer.announce(Z.Z.Messages.SEARCH_STARTED_A11Y_ANNOUNCE), this.onBlur();
 				}
@@ -230,10 +211,7 @@ class U extends a.PureComponent {
 				}
 				let n = S.Z.getChannelId(),
 					i = C.Z.getChannel(n);
-				if (
-					((null == i ? void 0 : i.isThread()) && (i = C.Z.getChannel(null == i ? void 0 : i.parent_id)),
-					null == i || i.isPrivate())
-				) {
+				if (((null == i ? void 0 : i.isThread()) && (i = C.Z.getChannel(null == i ? void 0 : i.parent_id)), null == i || i.isPrivate())) {
 					this.focusEditor();
 					return;
 				}
@@ -272,23 +250,12 @@ class U extends a.PureComponent {
 				let { shiftKey: t } = e;
 				e.preventDefault();
 				let { current: n } = this._searchPopoutRef;
-				return (
-					!(null != n && n.selectOption()) && ((0, M.X)() && t ? this.search({ searchEverywhere: !0 }) : this.search()),
-					!0
-				);
+				return !(null != n && n.selectOption()) && ((0, M.X)() && t ? this.search({ searchEverywhere: !0 }) : this.search()), !0;
 			}),
 			b(this, 'handleBeforeInput', (e) => {
 				let { editorState: t } = this.props,
 					{ focused: n } = this.state;
-				return (
-					!!(R.Sq(t).length >= 512) ||
-					((t = R.x0(e, t)),
-					(t = R.Hl(t, 512)),
-					(t = this.tokenize(t)),
-					this.setEditorState(t),
-					!n && this.setState({ focused: !0 }),
-					!0)
-				);
+				return !!(R.Sq(t).length >= 512) || ((t = R.x0(e, t)), (t = R.Hl(t, 512)), (t = this.tokenize(t)), this.setEditorState(t), !n && this.setState({ focused: !0 }), !0);
 			}),
 			b(this, 'handleKeyCommand', (e) => {
 				let { editorState: t } = this.props,
@@ -299,9 +266,7 @@ class U extends a.PureComponent {
 					case 'backspace-to-start-of-line':
 					case 'delete':
 					case 'delete-word':
-						return (
-							(t = R.yd(e, t)), (t = this.tokenize(t)), this.setEditorState(t), !n && this.setState({ focused: !0 }), !0
-						);
+						return (t = R.yd(e, t)), (t = this.tokenize(t)), this.setEditorState(t), !n && this.setState({ focused: !0 }), !0;
 					case 'transpose-characters':
 					case 'move-selection-to-start-of-block':
 					case 'move-selection-to-end-of-block':
@@ -316,15 +281,7 @@ class U extends a.PureComponent {
 			b(this, 'handlePastedText', (e) => {
 				let { editorState: t } = this.props,
 					{ focused: n } = this.state;
-				return (
-					(e = null != e ? e.replace(/\n/g, '') : ''),
-					(t = R.x0(e, t)),
-					(t = R.Hl(t, 512)),
-					(t = this.tokenize(t)),
-					!n && this.setState({ focused: !0 }),
-					this.setEditorState(t),
-					!0
-				);
+				return (e = null != e ? e.replace(/\n/g, '') : ''), (t = R.x0(e, t)), (t = R.Hl(t, 512)), (t = this.tokenize(t)), !n && this.setState({ focused: !0 }), this.setEditorState(t), !0;
 			}),
 			b(this, 'setEditorState', (e) => {
 				let { searchId: t } = this.props;
@@ -355,10 +312,8 @@ class U extends a.PureComponent {
 					if (r) return;
 					return (0, T.Qj)(), !0;
 				}
-				if ('Home' === t || ('ArrowLeft' === t && n))
-					return e.preventDefault(), (a = i ? R.R8(a) : R.eE(a)), this.setEditorState(a), !0;
-				if ('End' === t || ('ArrowRight' === t && n))
-					return e.preventDefault(), (a = i ? R.Wg(a) : R.NJ(a)), this.setEditorState(a), !0;
+				if ('Home' === t || ('ArrowLeft' === t && n)) return e.preventDefault(), (a = i ? R.R8(a) : R.eE(a)), this.setEditorState(a), !0;
+				if ('End' === t || ('ArrowRight' === t && n)) return e.preventDefault(), (a = i ? R.Wg(a) : R.NJ(a)), this.setEditorState(a), !0;
 				if (('Delete' === t || 'Backspace' === t) && n) {
 					let e = R.FZ(a);
 					return this.setEditorState(e), !0;

@@ -27,24 +27,10 @@ function _(n) {
 		R = (0, u.M)(v);
 	if (null == L) return null;
 	let j = null !== (t = L.name) && void 0 !== t ? t : '',
-		C =
-			null !== (_ = null == g ? void 0 : null === (e = g.description) || void 0 === e ? void 0 : e.trim()) &&
-			void 0 !== _
-				? _
-				: void 0,
-		O =
-			(null == g ? void 0 : g.headerBackground) != null &&
-			null !== (p = d.Z.toURLSafe((0, c._W)(E, g.headerBackground, 256))) &&
-			void 0 !== p
-				? p
-				: void 0,
+		C = null !== (_ = null == g ? void 0 : null === (e = g.description) || void 0 === e ? void 0 : e.trim()) && void 0 !== _ ? _ : void 0,
+		O = (null == g ? void 0 : g.headerBackground) != null && null !== (p = d.Z.toURLSafe((0, c._W)(E, g.headerBackground, 256))) && void 0 !== p ? p : void 0,
 		Z = L.type === x.epS.DURABLE && R,
-		A =
-			L.type === x.epS.DURABLE
-				? Z
-					? f.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE
-					: f.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY
-				: void 0,
+		A = L.type === x.epS.DURABLE ? (Z ? f.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : f.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY) : void 0,
 		{ price: M } = L;
 	return null == M
 		? null

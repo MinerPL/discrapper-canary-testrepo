@@ -10,10 +10,7 @@ var u = n(960048),
 	c = n(591759),
 	d = n(303850),
 	_ = n(981631);
-let E = [
-		'https://cdn.discordapp.com/bad-domains/updated_hashes.json',
-		'https://cdn.discordapp.com/bad-domains/hashes.json'
-	],
+let E = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://cdn.discordapp.com/bad-domains/hashes.json'],
 	f = new d.R(),
 	h = /\/api(\/v\d+)?\/science/;
 (0, r.lg)({
@@ -26,8 +23,7 @@ let E = [
 			{ isPlatformEmbedded: d } = n(358085);
 		if ('/' === e.url[0]) {
 			var _, p;
-			(e.url = (0, r.K0)() + e.url),
-				!('Authorization' in e.header) && !('authorization' in e.header) && e.set('Authorization', t.getToken());
+			(e.url = (0, r.K0)() + e.url), !('Authorization' in e.header) && !('authorization' in e.header) && e.set('Authorization', t.getToken());
 			let n = l.getSuperPropertiesBase64();
 			null != n && e.set('X-Super-Properties', n);
 			let i = t.getFingerprint();
@@ -35,14 +31,7 @@ let E = [
 				let t,
 					n = [];
 				null != navigator && (n = ((_ = [...navigator.languages]), _));
-				let r =
-					((t = 10),
-					n
-						.reduce(
-							(e, n) => (10 === t ? e.push(n) : e.push(''.concat(n, ';q=0.').concat(t)), (t = Math.max(t - 1, 1)), e),
-							[]
-						)
-						.join(','));
+				let r = ((t = 10), n.reduce((e, n) => (10 === t ? e.push(n) : e.push(''.concat(n, ';q=0.').concat(t)), (t = Math.max(t - 1, 1)), e), []).join(','));
 				e.set('Accept-Language', r);
 			}
 			e.set('X-Discord-Locale', s.locale);
@@ -100,12 +89,7 @@ let E = [
 					let n = '[FILTERED]';
 					if (E.includes(e.url)) {
 						var r, a;
-						n =
-							null === (a = e.xhr) || void 0 === a
-								? void 0
-								: null === (r = a.responseText) || void 0 === r
-									? void 0
-									: r.slice(0, 1000);
+						n = null === (a = e.xhr) || void 0 === a ? void 0 : null === (r = a.responseText) || void 0 === r ? void 0 : r.slice(0, 1000);
 					}
 					u.Z.addBreadcrumb({
 						category: 'superagent',
@@ -135,9 +119,7 @@ let E = [
 					})
 					.catch(r),
 				!0)
-			: 401 === e.statusCode &&
-				  (null === (l = e.body) || void 0 === l ? void 0 : l.code) === _.evJ.MFA_REQUIRED &&
-				  (null === (u = e.body) || void 0 === u ? void 0 : u.mfa)
+			: 401 === e.statusCode && (null === (l = e.body) || void 0 === l ? void 0 : l.code) === _.evJ.MFA_REQUIRED && (null === (u = e.body) || void 0 === u ? void 0 : u.mfa)
 				? (Promise.all([n.e('52030'), n.e('92569')])
 						.then(n.bind(n, 24031))
 						.then((n) => {
@@ -176,6 +158,5 @@ let E = [
 	}
 }),
 	(0, r.Jt)(async (e) => {
-		if ((i.Hj('Network', 'Request to '.concat(e, ' failed, will retry.')), !l.Z.isOnline()))
-			await l.Z.awaitOnline(), i.Hj('Network', 'Network detected online, retrying '.concat(e));
+		if ((i.Hj('Network', 'Request to '.concat(e, ' failed, will retry.')), !l.Z.isOnline())) await l.Z.awaitOnline(), i.Hj('Network', 'Network detected online, retrying '.concat(e));
 	});

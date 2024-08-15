@@ -49,15 +49,7 @@ let b = (e) => {
 	});
 };
 function R(e) {
-	let {
-			transitionState: t,
-			onClose: s,
-			initialRoleIds: i = [],
-			listingChoices: n,
-			emojiUrl: o,
-			saving: c,
-			onSave: _
-		} = e,
+	let { transitionState: t, onClose: s, initialRoleIds: i = [], listingChoices: n, emojiUrl: o, saving: c, onSave: _ } = e,
 		h = (0, u.Dt)(),
 		[m, x] = l.useState(() => new Set(i)),
 		E = l.useMemo(

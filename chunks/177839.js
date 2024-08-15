@@ -39,16 +39,7 @@ let N = (e) => (e ? g.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : g.Z.
 		});
 	},
 	m = (e) => {
-		let {
-				title: t,
-				description: n,
-				className: a,
-				imageSource: r,
-				imageClassName: l,
-				titleBadge: c,
-				isNew: T = !1,
-				isEarlyAccess: I = !1
-			} = e,
+		let { title: t, description: n, className: a, imageSource: r, imageClassName: l, titleBadge: c, isNew: T = !1, isEarlyAccess: I = !1 } = e,
 			{ analyticsLocations: R } = (0, _.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD);
 		return (0, s.jsx)(_.Gt, {
 			value: R,
@@ -93,17 +84,7 @@ t.Z = (e) => {
 		E = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
 		{ analyticsLocations: g } = (0, _.ZP)(),
 		f = (0, T._f)(),
-		S = [
-			u.emoji,
-			u.streaming,
-			u.upload,
-			u.customAppIcons,
-			u.soundboard,
-			f ? u.remix : u.videoBackground,
-			u.superReactions,
-			u.stickersPerkDiscoverability,
-			u.badgeAlt
-		];
+		S = [u.emoji, u.streaming, u.upload, u.customAppIcons, u.soundboard, f ? u.remix : u.videoBackground, u.superReactions, u.stickersPerkDiscoverability, u.badgeAlt];
 	return (0, s.jsxs)('div', {
 		className: i()(p.perksContainer, t, {
 			[p.partiallyHidden]: n && !r,

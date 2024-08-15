@@ -183,9 +183,7 @@ class O extends (i = s.PureComponent) {
 																		className: N.memberCountText,
 																		variant: 'text-xs/normal',
 																		color: 'header-secondary',
-																		children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
-																			membersOnline: O
-																		})
+																		children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: O })
 																	})
 																]
 															}),

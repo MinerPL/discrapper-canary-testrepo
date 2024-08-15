@@ -15,23 +15,7 @@ e.exports = function (e) {
 				: !(function (s, o) {
 						var l,
 							u,
-							c =
-								((l = [
-									'display: block',
-									'position: absolute',
-									'top: 0',
-									'left: 0',
-									'width: 100%',
-									'height: 100%',
-									'border: none',
-									'padding: 0',
-									'margin: 0',
-									'opacity: 0',
-									'z-index: -1000',
-									'pointer-events: none'
-								]),
-								(u = e.important ? ' !important; ' : '; '),
-								(l.join(u) + u).trim()),
+							c = ((l = ['display: block', 'position: absolute', 'top: 0', 'left: 0', 'width: 100%', 'height: 100%', 'border: none', 'padding: 0', 'margin: 0', 'opacity: 0', 'z-index: -1000', 'pointer-events: none']), (u = e.important ? ' !important; ' : '; '), (l.join(u) + u).trim()),
 							d = !1,
 							_ = window.getComputedStyle(s),
 							E = s.offsetWidth,
@@ -42,18 +26,7 @@ e.exports = function (e) {
 									s.style.setProperty('position', 'relative', a.important ? 'important' : '');
 									var e = function (e, t, n, r) {
 										var i = n[r];
-										if ('auto' !== i && '0' !== i.replace(/[^-\d\.]/g, ''))
-											e.warn(
-												'An element that is positioned static has style.' +
-													r +
-													'=' +
-													i +
-													' which is ignored due to the static positioning. The element will need to be positioned relative, so the style.' +
-													r +
-													' will be set to 0. Element: ',
-												t
-											),
-												t.style.setProperty(r, '0', a.important ? 'important' : '');
+										if ('auto' !== i && '0' !== i.replace(/[^-\d\.]/g, '')) e.warn('An element that is positioned static has style.' + r + '=' + i + ' which is ignored due to the static positioning. The element will need to be positioned relative, so the style.' + r + ' will be set to 0. Element: ', t), t.style.setProperty(r, '0', a.important ? 'important' : '');
 									};
 									e(t, s, _, 'top'), e(t, s, _, 'right'), e(t, s, _, 'bottom'), e(t, s, _, 'left');
 								}
@@ -109,10 +82,7 @@ e.exports = function (e) {
 		uninstall: function (e) {
 			if (!i(e)) return;
 			var t = i(e).object;
-			if (!!t)
-				r.isIE(8) ? e.detachEvent('onresize', t.proxy) : e.removeChild(t),
-					i(e).checkForObjectDocumentTimeoutId && window.clearTimeout(i(e).checkForObjectDocumentTimeoutId),
-					delete i(e).object;
+			if (!!t) r.isIE(8) ? e.detachEvent('onresize', t.proxy) : e.removeChild(t), i(e).checkForObjectDocumentTimeoutId && window.clearTimeout(i(e).checkForObjectDocumentTimeoutId), delete i(e).object;
 		}
 	};
 };

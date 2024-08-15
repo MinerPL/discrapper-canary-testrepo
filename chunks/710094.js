@@ -33,46 +33,8 @@ var i = t(735250),
 function y(e) {
 	var n, t;
 	let r,
-		{
-			handleStepChange: y,
-			trialId: M,
-			trialFooterMessageOverride: C,
-			reviewWarningMessage: O,
-			planGroup: R,
-			openInvoiceId: L,
-			analyticsData: j,
-			analyticsLocation: Z,
-			referralTrialOfferId: D,
-			initialPlanId: w,
-			subscriptionTier: G,
-			handleClose: B
-		} = e,
-		{
-			activeSubscription: U,
-			setUpdatedSubscription: k,
-			contextMetadata: F,
-			currencies: H,
-			paymentSourceId: W,
-			paymentSources: Y,
-			priceOptions: K,
-			purchaseError: V,
-			purchaseTokenAuthState: z,
-			selectedPlan: X,
-			selectedSkuId: q,
-			setCurrency: J,
-			setPaymentSourceId: Q,
-			setPurchaseState: $,
-			setPurchaseError: ee,
-			step: en,
-			purchaseState: et,
-			isPremium: ei,
-			setHasAcceptedTerms: ea,
-			purchaseType: er,
-			setEntitlementsGranted: es,
-			startedPaymentFlowWithPaymentSourcesRef: el,
-			invoicePreview: eo,
-			inReverseTrial: ec
-		} = (0, f.usePaymentContext)(),
+		{ handleStepChange: y, trialId: M, trialFooterMessageOverride: C, reviewWarningMessage: O, planGroup: R, openInvoiceId: L, analyticsData: j, analyticsLocation: Z, referralTrialOfferId: D, initialPlanId: w, subscriptionTier: G, handleClose: B } = e,
+		{ activeSubscription: U, setUpdatedSubscription: k, contextMetadata: F, currencies: H, paymentSourceId: W, paymentSources: Y, priceOptions: K, purchaseError: V, purchaseTokenAuthState: z, selectedPlan: X, selectedSkuId: q, setCurrency: J, setPaymentSourceId: Q, setPurchaseState: $, setPurchaseError: ee, step: en, purchaseState: et, isPremium: ei, setHasAcceptedTerms: ea, purchaseType: er, setEntitlementsGranted: es, startedPaymentFlowWithPaymentSourcesRef: el, invoicePreview: eo, inReverseTrial: ec } = (0, f.usePaymentContext)(),
 		{ isGift: eu, giftMessage: ed, giftRecipient: e_ } = (0, I.wD)();
 	s()(null != en, 'Step should be set');
 	let ep = a.useRef(null),
@@ -100,10 +62,7 @@ function y(e) {
 			[y, k, es]
 		),
 		eh = null != W ? Y[W] : null,
-		eb =
-			null != X && P.o4.has(X.id) && null != eh && !(0, o.aQ)(eh)
-				? Error(A.Z.Messages.BILLING_ERROR_INVALID_PLAN_FOR_PAYMENT_SOURCE)
-				: null,
+		eb = null != X && P.o4.has(X.id) && null != eh && !(0, o.aQ)(eh) ? Error(A.Z.Messages.BILLING_ERROR_INVALID_PLAN_FOR_PAYMENT_SOURCE) : null,
 		eg = a.useRef(null),
 		[eP, ev] = a.useState(null),
 		eA = !eu && null != ex && null != q && P.nG[ex.trial_id].skus.includes(q),

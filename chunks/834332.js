@@ -22,9 +22,7 @@ class h extends a.Z {
 						let e = d.default.getUser(n);
 						null != e && (0, E.U)(t, e, h);
 					} else {
-						let e = l.Z.getMessages(t).findNewest(
-							(e) => e.type === r.u.STAGE_RAISE_HAND && e.hasFlag(f.iLy.EPHEMERAL) && e.author.id === n
-						);
+						let e = l.Z.getMessages(t).findNewest((e) => e.type === r.u.STAGE_RAISE_HAND && e.hasFlag(f.iLy.EPHEMERAL) && e.author.id === n);
 						null != e && i.Z.deleteMessage(t, e.id, !0);
 					}
 				}

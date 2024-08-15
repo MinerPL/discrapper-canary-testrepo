@@ -48,8 +48,7 @@ function s(e, t, r) {
 							if (e) {
 								if ('string' == typeof e) return n(e, t);
 								var r = Object.prototype.toString.call(e).slice(8, -1);
-								if (('Object' === r && e.constructor && (r = e.constructor.name), 'Map' === r || 'Set' === r))
-									return Array.from(e);
+								if (('Object' === r && e.constructor && (r = e.constructor.name), 'Map' === r || 'Set' === r)) return Array.from(e);
 								if ('Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return n(e, t);
 							}
 						})(e))
@@ -73,9 +72,7 @@ function s(e, t, r) {
 							f: s
 						};
 					}
-					throw TypeError(
-						'Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
-					);
+					throw TypeError('Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
 				}
 				var o,
 					i = !0,
@@ -157,10 +154,7 @@ function i(e, t, r, n) {
 		f = s.bind(null, e, t, r);
 	if (!n) return f().entries;
 	var d = b < 1 / 0;
-	var h = Math.min(
-		b - l,
-		((i = e), (c = t), 'Object' === i ? Object.keys(c).length : 'Array' === i ? c.length : 1 / 0)
-	);
+	var h = Math.min(b - l, ((i = e), (c = t), 'Object' === i ? Object.keys(c).length : 'Array' === i ? c.length : 1 / 0));
 	if ('Iterable' !== e) {
 		if (h <= n || n < 7) return f(l, b).entries;
 	} else if (h <= n && !d) return f(l, b).entries;
@@ -169,9 +163,6 @@ function i(e, t, r, n) {
 			y = p.hasMore,
 			g = p.entries;
 		u = y ? [].concat((0, a.Z)(g), (0, a.Z)(o(l + n, l + 2 * n - 1, n))) : g;
-	} else
-		u = d
-			? o(l, b, n)
-			: [].concat((0, a.Z)(f(0, n - 5).entries), (0, a.Z)(o(n - 4, h - 5, n)), (0, a.Z)(f(h - 4, h - 1).entries));
+	} else u = d ? o(l, b, n) : [].concat((0, a.Z)(f(0, n - 5).entries), (0, a.Z)(o(n - 4, h - 5, n)), (0, a.Z)(f(h - 4, h - 1).entries));
 	return u;
 }

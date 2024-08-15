@@ -7,28 +7,11 @@ var r = n(735250),
 	u = n(579482);
 let c = i.forwardRef(function (e, t) {
 	var n;
-	let {
-		avatar: i,
-		name: a,
-		children: c,
-		subText: d,
-		decorators: _,
-		onClick: E,
-		selected: f,
-		muted: h,
-		to: p,
-		avatarClassName: I,
-		selectedClassName: m,
-		innerClassName: T,
-		wrapContent: g,
-		highlighted: S,
-		focusProps: A,
-		...N
-	} = e;
+	let { avatar: i, name: a, children: c, subText: d, decorators: _, onClick: E, selected: f, muted: h, to: p, avatarClassName: m, selectedClassName: I, innerClassName: T, wrapContent: g, highlighted: S, focusProps: A, ...N } = e;
 	(N.className = s()(N.className, u.container, {
 		[u.selected]: f,
 		[u.highlighted]: S,
-		[null != m ? m : '']: f,
+		[null != I ? I : '']: f,
 		[u.clickable]: !f && (null != p || null != E)
 	})),
 		(N['aria-selected'] = null !== (n = N['aria-selected']) && void 0 !== n ? n : f);
@@ -39,7 +22,7 @@ let c = i.forwardRef(function (e, t) {
 		}),
 		children: [
 			(0, r.jsx)('div', {
-				className: s()(u.avatar, I),
+				className: s()(u.avatar, m),
 				children: i
 			}),
 			(0, r.jsxs)('div', {

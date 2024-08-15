@@ -10,21 +10,7 @@ var s = t(481060),
 	i = t(689938),
 	r = t(638002);
 function u(e) {
-	let {
-		isActive: n,
-		isUserLurking: t,
-		rsvped: u,
-		onContextMenu: a,
-		onRsvpClick: c,
-		onGoToGuildClick: d,
-		isDetailsView: E = !1,
-		isMember: _,
-		onJoinGuildClick: C,
-		guildName: N,
-		onInviteClick: h,
-		canInvite: m,
-		isChannelPublic: I
-	} = e;
+	let { isActive: n, isUserLurking: t, rsvped: u, onContextMenu: a, onRsvpClick: c, onGoToGuildClick: d, isDetailsView: E = !1, isMember: _, onJoinGuildClick: C, guildName: N, onInviteClick: h, canInvite: m, isChannelPublic: I } = e;
 	return (0, l.jsxs)('div', {
 		className: r.container,
 		children: [

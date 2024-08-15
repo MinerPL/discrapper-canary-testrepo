@@ -21,8 +21,8 @@ t.Z = {
 					f = void 0 === E || E,
 					h = n.fallbackPlacements,
 					p = n.padding,
-					I = n.boundary,
-					m = n.rootBoundary,
+					m = n.boundary,
+					I = n.rootBoundary,
 					T = n.altBoundary,
 					g = n.flipVariations,
 					S = void 0 === g || g,
@@ -43,8 +43,8 @@ t.Z = {
 							(0, i.Z)(n) === l.d7
 								? (0, o.Z)(t, {
 										placement: n,
-										boundary: I,
-										rootBoundary: m,
+										boundary: m,
+										rootBoundary: I,
 										padding: p,
 										flipVariations: S,
 										allowedAutoPlacements: A
@@ -68,8 +68,8 @@ t.Z = {
 					G = x ? 'width' : 'height',
 					k = (0, s.Z)(t, {
 						placement: P,
-						boundary: I,
-						rootBoundary: m,
+						boundary: m,
+						rootBoundary: I,
 						altBoundary: T,
 						padding: p
 					}),

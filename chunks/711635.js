@@ -6,17 +6,7 @@ let d = window.GLOBAL_ENV.PUBLIC_PATH;
 d.endsWith('/') && (d = d.substring(0, d.length - 1)),
 	(s.OGVLoader.base = d),
 	(t.default = u.forwardRef(function (e, t) {
-		let {
-				className: r,
-				src: d,
-				playing: a,
-				preload: l = '',
-				onEnded: f,
-				onLoadedMetadata: i,
-				onError: o,
-				muted: c,
-				volume: v
-			} = e,
+		let { className: r, src: d, playing: a, preload: l = '', onEnded: f, onLoadedMetadata: i, onError: o, muted: c, volume: v } = e,
 			E = u.useRef(null),
 			[p] = u.useState(() => {
 				let e = new s.OGVPlayer();

@@ -40,13 +40,7 @@ let i = {
 	l = '__formValidationState' + Date.now();
 function u(e) {
 	if (e[l]) {
-		let {
-			realtimeValidation: t,
-			displayValidation: n,
-			updateValidation: r,
-			resetValidation: i,
-			commitValidation: a
-		} = e[l];
+		let { realtimeValidation: t, displayValidation: n, updateValidation: r, resetValidation: i, commitValidation: a } = e[l];
 		return {
 			realtimeValidation: t,
 			displayValidation: n,
@@ -56,15 +50,7 @@ function u(e) {
 		};
 	}
 	return (function (e) {
-		let {
-			isInvalid: t,
-			validationState: n,
-			name: i,
-			value: l,
-			builtinValidation: u,
-			validate: E,
-			validationBehavior: f = 'aria'
-		} = e;
+		let { isInvalid: t, validationState: n, name: i, value: l, builtinValidation: u, validate: E, validationBehavior: f = 'aria' } = e;
 		n && (t || (t = 'invalid' === n));
 		let h = t
 				? {
@@ -87,12 +73,12 @@ function u(e) {
 				[E, l]
 			);
 		(null == u ? void 0 : u.validationDetails.valid) && (u = null);
-		let I = (0, r.useContext)(o),
-			m = (0, r.useMemo)(() => (i ? (Array.isArray(i) ? i.flatMap((e) => c(I[e])) : c(I[i])) : []), [I, i]),
-			[T, g] = (0, r.useState)(I),
+		let m = (0, r.useContext)(o),
+			I = (0, r.useMemo)(() => (i ? (Array.isArray(i) ? i.flatMap((e) => c(m[e])) : c(m[i])) : []), [m, i]),
+			[T, g] = (0, r.useState)(m),
 			[S, A] = (0, r.useState)(!1);
-		I !== T && (g(I), A(!1));
-		let N = (0, r.useMemo)(() => d(S ? [] : m), [S, m]),
+		m !== T && (g(m), A(!1));
+		let N = (0, r.useMemo)(() => d(S ? [] : I), [S, I]),
 			v = (0, r.useRef)(s),
 			[O, R] = (0, r.useState)(s),
 			C = (0, r.useRef)(s),
@@ -133,15 +119,7 @@ function d(e) {
 		: null;
 }
 function _(e, t) {
-	return (
-		e === t ||
-		(e &&
-			t &&
-			e.isInvalid === t.isInvalid &&
-			e.validationErrors.length === t.validationErrors.length &&
-			e.validationErrors.every((e, n) => e === t.validationErrors[n]) &&
-			Object.entries(e.validationDetails).every(([e, n]) => t.validationDetails[e] === n))
-	);
+	return e === t || (e && t && e.isInvalid === t.isInvalid && e.validationErrors.length === t.validationErrors.length && e.validationErrors.every((e, n) => e === t.validationErrors[n]) && Object.entries(e.validationDetails).every(([e, n]) => t.validationDetails[e] === n));
 }
 function E(...e) {
 	let t = new Set(),

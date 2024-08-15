@@ -49,19 +49,7 @@ function c(e) {
 	return Date.now() - s(e);
 }
 function d(e, t) {
-	return e === t
-		? 0
-		: null == t
-			? 1
-			: null == e
-				? -1
-				: e.length > t.length
-					? 1
-					: e.length < t.length
-						? -1
-						: e > t
-							? 1
-							: -1;
+	return e === t ? 0 : null == t ? 1 : null == e ? -1 : e.length > t.length ? 1 : e.length < t.length ? -1 : e > t ? 1 : -1;
 }
 class _ {
 	next() {

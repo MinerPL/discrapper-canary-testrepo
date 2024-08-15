@@ -53,8 +53,7 @@ function P(e) {
 				a = (0, O.Dq)(D);
 				break;
 			case h.ABu.TWITTER:
-				(a = (0, O.rJ)(D)),
-					'1' === D[R.PC.TWITTER_VERIFIED] && ((o = M), (j = x.Z.Messages.CONNECTION_VERIFIED_ON_TWITTER));
+				(a = (0, O.rJ)(D)), '1' === D[R.PC.TWITTER_VERIFIED] && ((o = M), (j = x.Z.Messages.CONNECTION_VERIFIED_ON_TWITTER));
 				break;
 			case h.ABu.PAYPAL:
 				a = (0, O.li)(D);
@@ -109,11 +108,7 @@ function P(e) {
 				})
 			: null;
 	return (0, c.jsxs)('div', {
-		className: l()(
-			v.connectedAccountContainer,
-			(null != a && a.length > 0) || null != g ? v.connectedAccountContainerWithMetadata : null,
-			f
-		),
+		className: l()(v.connectedAccountContainer, (null != a && a.length > 0) || null != g ? v.connectedAccountContainerWithMetadata : null, f),
 		children: [
 			(0, c.jsxs)('div', {
 				className: v.connectedAccount,
@@ -188,11 +183,7 @@ function f(e) {
 				});
 		};
 	return (0, c.jsxs)('div', {
-		className: l()(
-			v.connectedAccountContainer,
-			null != i && i.length > 0 ? v.connectedAccountContainerWithMetadata : null,
-			t
-		),
+		className: l()(v.connectedAccountContainer, null != i && i.length > 0 ? v.connectedAccountContainerWithMetadata : null, t),
 		children: [
 			(0, c.jsx)('div', {
 				className: v.connectedAccount,

@@ -64,13 +64,9 @@ function Z(e) {
 				.filter((e) => {
 					if ('' === y.trim()) return !0;
 					let t = y.toLowerCase();
-					return (
-						(null != e.name && '' !== e.name && i()(t, e.name.toLowerCase())) || i()(t, e.applicationName.toLowerCase())
-					);
+					return (null != e.name && '' !== e.name && i()(t, e.name.toLowerCase())) || i()(t, e.applicationName.toLowerCase());
 				})
-				.sort((e, t) =>
-					'ascending' === j ? h.default.compare(e.id, t.id) : 'descending' === j ? h.default.compare(t.id, e.id) : 0
-				)
+				.sort((e, t) => ('ascending' === j ? h.default.compare(e.id, t.id) : 'descending' === j ? h.default.compare(t.id, e.id) : 0))
 				.chunk(3)
 				.value(),
 		[w, y, j]

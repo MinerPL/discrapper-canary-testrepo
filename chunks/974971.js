@@ -19,15 +19,5 @@ t.exports = e
 	? o
 	: function (t) {
 			var r, n, e;
-			return void 0 === t
-				? 'Undefined'
-				: null === t
-					? 'Null'
-					: 'string' == typeof (n = s((r = c(t)), u))
-						? n
-						: a
-							? o(r)
-							: 'Object' === (e = o(r)) && i(r.callee)
-								? 'Arguments'
-								: e;
+			return void 0 === t ? 'Undefined' : null === t ? 'Null' : 'string' == typeof (n = s((r = c(t)), u)) ? n : a ? o(r) : 'Object' === (e = o(r)) && i(r.callee) ? 'Arguments' : e;
 		};

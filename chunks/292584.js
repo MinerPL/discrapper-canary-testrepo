@@ -13,11 +13,9 @@ var r,
 	f = n(314897),
 	h = n(709054),
 	p = n(770471),
-	I = n(860852);
-((a = r || (r = {}))[(a.INVALID = 0)] = 'INVALID'),
-	(a[(a.VALID_USER_ONLY = 1)] = 'VALID_USER_ONLY'),
-	(a[(a.VALID = 2)] = 'VALID');
-let m = new Set(),
+	m = n(860852);
+((a = r || (r = {}))[(a.INVALID = 0)] = 'INVALID'), (a[(a.VALID_USER_ONLY = 1)] = 'VALID_USER_ONLY'), (a[(a.VALID = 2)] = 'VALID');
+let I = new Set(),
 	T = new Set(),
 	g = new Set(),
 	S = [],
@@ -26,7 +24,7 @@ let m = new Set(),
 	v = (e) => 'validity:'.concat(e),
 	O = new d.h(
 		function (e) {
-			let t = m.has(e.userId) ? 1 : 0;
+			let t = I.has(e.userId) ? 1 : 0;
 			return null != e.viewers && (t = 2), [A(e.userId), N(e.channelId), v(t)];
 		},
 		(e) => e.channelId
@@ -37,17 +35,17 @@ function R(e, t, n) {
 		let t = O.get(e);
 		return !!(null != t && (0, u.isEqual)(t.source, n)) && (O.delete(e), void 0);
 	}
-	!m.has(e) && !T.has(e) && (g.add(e), (S = [...g]));
-	let r = (0, I.tI)(t, e, n);
+	!I.has(e) && !T.has(e) && (g.add(e), (S = [...g]));
+	let r = (0, m.tI)(t, e, n);
 	O.set(e, r);
 }
 function C(e) {
 	return null != e
 		? {
-				type: I.$C.GUILD,
+				type: m.$C.GUILD,
 				guildId: e
 			}
-		: { type: I.$C.GLOBAL };
+		: { type: m.$C.GLOBAL };
 }
 class y extends (i = c.ZP.Store) {
 	getBroadcasts() {
@@ -107,7 +105,7 @@ class y extends (i = c.ZP.Store) {
 		BROADCASTER_BUCKETS_RECEIVED: function (e) {
 			let { data: t } = e;
 			h.default.keys(t).forEach((e) => {
-				p.g.includes(t[e]) ? m.add(e) : T.add(e), g.clear(), (S = [...g]);
+				p.g.includes(t[e]) ? I.add(e) : T.add(e), g.clear(), (S = [...g]);
 				let n = O.get(e);
 				null != n && (O.delete(e), O.set(e, n));
 			});
@@ -154,6 +152,6 @@ class y extends (i = c.ZP.Store) {
 			});
 		},
 		LOGOUT: function () {
-			m.clear(), T.clear(), g.clear(), (S = []), O.clear();
+			I.clear(), T.clear(), g.clear(), (S = []), O.clear();
 		}
 	}));

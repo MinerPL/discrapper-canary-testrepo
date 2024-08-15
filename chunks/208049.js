@@ -49,7 +49,7 @@ var r = n(392711),
 	f = n(981631),
 	h = n(526761),
 	p = n(689938);
-let I = async (e) => {
+let m = async (e) => {
 		try {
 			let t = (
 				await a.tn.get({
@@ -65,7 +65,7 @@ let I = async (e) => {
 			throw (s.Z.dispatch({ type: 'SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE' }), new l.Z(e));
 		}
 	},
-	m = (e) =>
+	I = (e) =>
 		new Promise((t) => {
 			let n = () => {
 				s.Z.unsubscribe(e, n), setTimeout(t, 0);
@@ -75,13 +75,13 @@ let I = async (e) => {
 	T = (e) => {
 		if (!c.Z.shouldFetchDefaultSounds()) return Promise.resolve();
 		s.Z.dispatch({ type: 'SOUNDBOARD_FETCH_DEFAULT_SOUNDS' });
-		let t = m('SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS');
-		return I(e), t;
+		let t = I('SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS');
+		return m(e), t;
 	},
 	g = () => {
 		let e = (0, _.D)();
 		if (0 === e.length) return Promise.resolve();
-		let t = m('SOUNDBOARD_SOUNDS_RECEIVED');
+		let t = I('SOUNDBOARD_SOUNDS_RECEIVED');
 		return (
 			s.Z.dispatch({ type: 'GUILD_SOUNDBOARD_FETCH' }),
 			s.Z.dispatch({
@@ -91,10 +91,7 @@ let I = async (e) => {
 			t
 		);
 	},
-	S = () =>
-		__OVERLAY__
-			? (s.Z.dispatch({ type: 'OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST' }), Promise.all([]))
-			: Promise.all([T(), g()]);
+	S = () => (__OVERLAY__ ? (s.Z.dispatch({ type: 'OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST' }), Promise.all([])) : Promise.all([T(), g()]));
 async function A(e) {
 	let { guildId: t, name: n, sound: r, volume: i, emojiId: s, emojiName: o } = e,
 		l = await a.tn.post({

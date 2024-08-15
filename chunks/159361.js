@@ -21,16 +21,7 @@ function i(e) {
 				l = 43200,
 				o = Math.round((n - s) / 60000),
 				c = (e) => Math.round(o / e);
-			return (t =
-				o >= 43200
-					? a.Z.Messages.DURATION_MONTHS.format({ months: c(l) })
-					: o >= r
-						? a.Z.Messages.DURATION_WEEKS.format({ weeks: c(r) })
-						: o >= i
-							? a.Z.Messages.DURATION_DAYS.format({ days: c(i) })
-							: o >= 60
-								? a.Z.Messages.DURATION_HOURS.format({ hours: c(60) })
-								: a.Z.Messages.DURATION_MINUTES.format({ minutes: o }));
+			return (t = o >= 43200 ? a.Z.Messages.DURATION_MONTHS.format({ months: c(l) }) : o >= r ? a.Z.Messages.DURATION_WEEKS.format({ weeks: c(r) }) : o >= i ? a.Z.Messages.DURATION_DAYS.format({ days: c(i) }) : o >= 60 ? a.Z.Messages.DURATION_HOURS.format({ hours: c(60) }) : a.Z.Messages.DURATION_MINUTES.format({ minutes: o }));
 		})(null == e ? void 0 : null === (n = e.rejection) || void 0 === n ? void 0 : n.can_reapply_at)
 	};
 }

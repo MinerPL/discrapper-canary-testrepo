@@ -52,11 +52,7 @@ function d(e, t, n) {
 	return !(null == t || (n.enabled && t.hasFlag(s.eHb.PRIVATE))) && !t.isHidden();
 }
 function _(e) {
-	return null == e
-		? null
-		: e.type === s.vxO.INSTALLING || e.type === s.vxO.UPDATING || e.type === s.vxO.UNINSTALLING
-			? e
-			: null;
+	return null == e ? null : e.type === s.vxO.INSTALLING || e.type === s.vxO.UPDATING || e.type === s.vxO.UNINSTALLING ? e : null;
 }
 function E(e) {
 	return e.reduce(

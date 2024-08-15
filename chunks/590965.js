@@ -89,19 +89,7 @@ class L extends (l = o.ZP.Store) {
 				return !1;
 			(x = e.context), (v = !1);
 			let n = (function (e) {
-				let {
-						approximate_member_count: t,
-						approximate_presence_count: n,
-						code: i,
-						state: l,
-						target_type: r,
-						target_user: a,
-						target_application: s,
-						stage_instance: o,
-						type: c,
-						channel: u,
-						guild: d
-					} = e,
+				let { approximate_member_count: t, approximate_presence_count: n, code: i, state: l, target_type: r, target_user: a, target_application: s, stage_instance: o, type: c, channel: u, guild: d } = e,
 					h = {
 						code: i,
 						state: l,
@@ -113,12 +101,7 @@ class L extends (l = o.ZP.Store) {
 						stage_instance: o,
 						type: c
 					};
-				return (
-					null != u && (h.channel = { ...u }),
-					null != d && (h.guild = new p.ZP(d)),
-					null != e.inviter && (h.inviter = { ...e.inviter }),
-					h
-				);
+				return null != u && (h.channel = { ...u }), null != d && (h.guild = new p.ZP(d)), null != e.inviter && (h.inviter = { ...e.inviter }), h;
 			})(t);
 			Z.push([n, e.resolve]);
 		},

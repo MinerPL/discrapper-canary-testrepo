@@ -32,8 +32,8 @@ var r = n(392711),
 	f = n(966552),
 	h = n(561763),
 	p = n(529306),
-	I = n(90075),
-	m = n(862666),
+	m = n(90075),
+	I = n(862666),
 	T = n(252611),
 	g = n(136144),
 	S = n(316137),
@@ -54,7 +54,7 @@ let U = {
 		end: 15
 	},
 	w = [a],
-	x = [s, o, l, u, c, d, _, E, f, h, p, I, m, T, g, S, A, N, v, O, R],
+	x = [s, o, l, u, c, d, _, E, f, h, p, m, I, T, g, S, A, N, v, O, R],
 	G = {
 		[M.q.BASIC]: w,
 		[M.q.PREMIUM]: x
@@ -71,10 +71,7 @@ let U = {
 						else {
 							var i;
 							let e = document.createElement('canvas');
-							(e.width = r),
-								(e.height = r),
-								null === (i = e.getContext('2d')) || void 0 === i || i.drawImage(n, 0, 0),
-								t(e.toDataURL('image/png'));
+							(e.width = r), (e.height = r), null === (i = e.getContext('2d')) || void 0 === i || i.drawImage(n, 0, 0), t(e.toDataURL('image/png'));
 						}
 					});
 			})

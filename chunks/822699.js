@@ -114,9 +114,7 @@ class em extends r.PureComponent {
 	}
 	componentDidUpdate(e) {
 		var t, n;
-		!e.hasLoadedExperiments && this.props.hasLoadedExperiments && !Q.a && this.resolveInvite(),
-			(null === (t = e.invite) || void 0 === t ? void 0 : t.state) !==
-				(null === (n = this.props.invite) || void 0 === n ? void 0 : n.state) && this.maybeFetchApplicationSplash();
+		!e.hasLoadedExperiments && this.props.hasLoadedExperiments && !Q.a && this.resolveInvite(), (null === (t = e.invite) || void 0 === t ? void 0 : t.state) !== (null === (n = this.props.invite) || void 0 === n ? void 0 : n.state) && this.maybeFetchApplicationSplash();
 	}
 	componentWillUnmount() {
 		h.Z.terminate();

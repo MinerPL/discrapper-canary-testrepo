@@ -24,16 +24,7 @@ var n = r(967752),
 let f = "Not capturing exception because it's already been captured.";
 class S {
 	constructor(e) {
-		if (
-			((this._options = e),
-			(this._integrations = {}),
-			(this._numProcessing = 0),
-			(this._outcomes = {}),
-			(this._hooks = {}),
-			(this._eventProcessors = []),
-			e.dsn ? (this._dsn = (0, n.vK)(e.dsn)) : R.X && a.kg.warn('No DSN provided, client will not send events.'),
-			this._dsn)
-		) {
+		if (((this._options = e), (this._integrations = {}), (this._numProcessing = 0), (this._outcomes = {}), (this._hooks = {}), (this._eventProcessors = []), e.dsn ? (this._dsn = (0, n.vK)(e.dsn)) : R.X && a.kg.warn('No DSN provided, client will not send events.'), this._dsn)) {
 			let t = (0, u.U)(this._dsn, e.tunnel, e._metadata ? e._metadata.sdk : void 0);
 			this._transport = e.transport({
 				tunnel: this._options.tunnel,
@@ -72,9 +63,7 @@ class S {
 		return this._process(this._captureEvent(e, i, _ || r)), i.event_id;
 	}
 	captureSession(e) {
-		'string' != typeof e.release
-			? R.X && a.kg.warn('Discarded session because of missing or non-string release')
-			: (this.sendSession(e), (0, d.CT)(e, { init: !1 }));
+		'string' != typeof e.release ? R.X && a.kg.warn('Discarded session because of missing or non-string release') : (this.sendSession(e), (0, d.CT)(e, { init: !1 }));
 	}
 	getDsn() {
 		return this._dsn;
@@ -90,9 +79,7 @@ class S {
 	}
 	flush(e) {
 		let t = this._transport;
-		return t
-			? (this.emit('flush'), this._isClientDoneProcessing(e).then((r) => t.flush(e).then((e) => r && e)))
-			: (0, _.WD)(!0);
+		return t ? (this.emit('flush'), this._isClientDoneProcessing(e).then((r) => t.flush(e).then((e) => r && e))) : (0, _.WD)(!0);
 	}
 	close(e) {
 		return this.flush(e).then((e) => ((this.getOptions().enabled = !1), this.emit('close'), e));
@@ -128,8 +115,7 @@ class S {
 		if (this._options.sendClientReports) {
 			let n = 'number' == typeof r ? r : 1,
 				o = `${e}:${t}`;
-			R.X && a.kg.log(`Recording outcome: "${o}"${n > 1 ? ` (${n} times)` : ''}`),
-				(this._outcomes[o] = (this._outcomes[o] || 0) + n);
+			R.X && a.kg.log(`Recording outcome: "${o}"${n > 1 ? ` (${n} times)` : ''}`), (this._outcomes[o] = (this._outcomes[o] || 0) + n);
 		}
 	}
 	on(e, t) {
@@ -147,9 +133,7 @@ class S {
 		r && r.forEach((e) => e(...t));
 	}
 	sendEnvelope(e) {
-		return (this.emit('beforeEnvelope', e), this._isEnabled() && this._transport)
-			? this._transport.send(e).then(null, (e) => (R.X && a.kg.error('Error while sending event:', e), e))
-			: (R.X && a.kg.error('Transport disabled'), (0, _.WD)({}));
+		return (this.emit('beforeEnvelope', e), this._isEnabled() && this._transport) ? this._transport.send(e).then(null, (e) => (R.X && a.kg.error('Error while sending event:', e), e)) : (R.X && a.kg.error('Transport disabled'), (0, _.WD)({}));
 	}
 	_setupIntegrations() {
 		let { integrations: e } = this._options;
@@ -235,22 +219,12 @@ class S {
 			s = e.type || 'error',
 			I = `before send for type \`${s}\``,
 			u = void 0 === a ? void 0 : (0, p.o)(a);
-		if (E && 'number' == typeof u && Math.random() > u)
-			return (
-				this.recordDroppedEvent('sample_rate', 'error', e),
-				(0, _.$2)(
-					new c.b(`Discarding event because it's not included in the random sample (sampling rate = ${a})`, 'log')
-				)
-			);
+		if (E && 'number' == typeof u && Math.random() > u) return this.recordDroppedEvent('sample_rate', 'error', e), (0, _.$2)(new c.b(`Discarding event because it's not included in the random sample (sampling rate = ${a})`, 'log'));
 		let l = 'replay_event' === s ? 'replay' : s,
 			R = (e.sdkProcessingMetadata || {}).capturedSpanIsolationScope;
 		return this._prepareEvent(e, t, r, R)
 			.then((r) => {
-				if (null === r)
-					throw (
-						(this.recordDroppedEvent('event_processor', l, e),
-						new c.b('An event processor returned `null`, will not send event.', 'log'))
-					);
+				if (null === r) throw (this.recordDroppedEvent('event_processor', l, e), new c.b('An event processor returned `null`, will not send event.', 'log'));
 				return t.data && !0 === t.data.__sentry__
 					? r
 					: (function (e, t) {

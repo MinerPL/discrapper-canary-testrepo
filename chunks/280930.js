@@ -1,9 +1,9 @@
 n.d(t, {
 	Z: function () {
-		return I;
+		return m;
 	},
 	m: function () {
-		return m;
+		return I;
 	}
 }),
 	n(47120),
@@ -22,7 +22,7 @@ var r = n(470079),
 	f = n(606301),
 	h = n(549058);
 let p = (0, E.ad)(l.$p, h.J7),
-	I = (e, t, n) => {
+	m = (e, t, n) => {
 		let i = (0, u.fQ)(n),
 			a = (0, s.e7)([d.default], () => d.default.getCurrentUser());
 		return r.useMemo(() => {
@@ -42,19 +42,11 @@ let p = (0, E.ad)(l.$p, h.J7),
 				r === o.eb.SENDABLE ? s.push(i) : r === o.eb.SENDABLE_WITH_PREMIUM && l.push(i);
 			});
 			let d = [];
-			return (
-				s.length > 0 && ((d = s.slice(0, h.qm)), 0 !== l.length && (d.length === h.qm && d.pop(), d.push(l[0]))), d
-			);
+			return s.length > 0 && ((d = s.slice(0, h.qm)), 0 !== l.length && (d.length === h.qm && d.pop(), d.push(l[0]))), d;
 		}, [e, n, i, t, a]);
 	},
-	m = (e) => {
-		let {
-				setTextInputValue: t,
-				setHasDismissed: n,
-				setHasSelection: i,
-				setFocusedSuggestionType: s,
-				delayBeforeSuggestions: o
-			} = e,
+	I = (e) => {
+		let { setTextInputValue: t, setHasDismissed: n, setHasSelection: i, setFocusedSuggestionType: s, delayBeforeSuggestions: o } = e,
 			l = r.useRef(null),
 			u = r.useRef(!1),
 			d = r.useRef(!1),
@@ -62,14 +54,7 @@ let p = (0, E.ad)(l.$p, h.J7),
 		return {
 			handleTextChange: async (e) => {
 				var r;
-				if (null == e || '' === e)
-					_.cancel(),
-						null == t || t(''),
-						null == n || n(!1),
-						null == i || i(!1),
-						null == s || s(null),
-						(l.current = null),
-						(u.current = !1);
+				if (null == e || '' === e) _.cancel(), null == t || t(''), null == n || n(!1), null == i || i(!1), null == s || s(null), (l.current = null), (u.current = !1);
 				else if (!u.current && e.trim() !== (null === (r = l.current) || void 0 === r ? void 0 : r.trim())) {
 					if (((l.current = e), (0, f.wN)(e).length > h.t7)) {
 						(u.current = !0), _.cancel(), t('');

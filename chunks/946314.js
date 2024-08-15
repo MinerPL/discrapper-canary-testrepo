@@ -26,15 +26,7 @@ class _ extends (s = o.ZP.Store) {
 	}
 	isPendingSuccess(e) {
 		let n = u[e];
-		return (
-			null != n &&
-			!m &&
-			n.healthScorePending &&
-			n.safeEnvironment &&
-			0 === Object.keys(n.nsfwProperties).length &&
-			n.size &&
-			n.protected
-		);
+		return null != n && !m && n.healthScorePending && n.safeEnvironment && 0 === Object.keys(n.nsfwProperties).length && n.size && n.protected;
 	}
 	getDiscoveryChecklist(e) {
 		return u[e];

@@ -62,10 +62,7 @@ function b(e) {
 		isTabSelected: t,
 		badgeCopy: r,
 		offerExpiresAt: a.expires_at,
-		className:
-			(null == o ? void 0 : o.sku_id) === f.Si.TIER_2
-				? g.premiumTrialTier2UnacknowledgedBadge
-				: g.premiumTrialTier0UnacknowledgedBadge
+		className: (null == o ? void 0 : o.sku_id) === f.Si.TIER_2 ? g.premiumTrialTier2UnacknowledgedBadge : g.premiumTrialTier0UnacknowledgedBadge
 	});
 }
 function v(e) {

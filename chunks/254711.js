@@ -22,8 +22,8 @@ var r = n(512722),
 	f = n(957730),
 	h = n(968437),
 	p = n(928477),
-	I = n(665906),
-	m = n(695346),
+	m = n(665906),
+	I = n(695346),
 	T = n(592125),
 	g = n(496675),
 	S = n(594174),
@@ -182,7 +182,7 @@ let D = n(227419).Z,
 			],
 			predicate: (e) => {
 				let { channel: t } = e;
-				return !t.isPrivate() && m.OW.getSetting() && g.Z.can(R.Plq.SEND_TTS_MESSAGES, t);
+				return !t.isPrivate() && I.OW.getSetting() && g.Z.can(R.Plq.SEND_TTS_MESSAGES, t);
 			},
 			execute: (e) => {
 				var t;
@@ -337,7 +337,7 @@ let D = n(227419).Z,
 			],
 			predicate: (e) => {
 				let { channel: t } = e;
-				return (0, I.ki)(t);
+				return (0, m.ki)(t);
 			},
 			execute: async (e, t) => {
 				var n, r;
@@ -404,8 +404,7 @@ let D = n(227419).Z,
 					var t;
 					let n = S.default.getUser(a);
 					if (null == n) throw Error();
-					await c.Z.kickUser(r.id, a, null !== (t = L(e, 'reason')) && void 0 !== t ? t : ''),
-						d.Z.sendBotMessage(i.id, y.Z.Messages.COMMAND_KICK_CONFIRMATION.format({ user: N.ZP.getUserTag(n) }));
+					await c.Z.kickUser(r.id, a, null !== (t = L(e, 'reason')) && void 0 !== t ? t : ''), d.Z.sendBotMessage(i.id, y.Z.Messages.COMMAND_KICK_CONFIRMATION.format({ user: N.ZP.getUserTag(n) }));
 				})().catch(() => {
 					d.Z.sendBotMessage(i.id, y.Z.Messages.COMMAND_KICK_ERROR);
 				});
@@ -520,11 +519,7 @@ let D = n(227419).Z,
 					let s = null !== (t = L(e, 'delete_messages')) && void 0 !== t ? t : 0,
 						o = null !== (n = L(e, 'reason')) && void 0 !== n ? n : '',
 						l = S.default.getUser(a);
-					await c.Z.banUser(r.id, a, s, o),
-						d.Z.sendBotMessage(
-							i.id,
-							y.Z.Messages.COMMAND_BAN_CONFIRMATION.format({ user: null != l ? N.ZP.getUserTag(l) : a })
-						);
+					await c.Z.banUser(r.id, a, s, o), d.Z.sendBotMessage(i.id, y.Z.Messages.COMMAND_BAN_CONFIRMATION.format({ user: null != l ? N.ZP.getUserTag(l) : a }));
 				})().catch(() => {
 					d.Z.sendBotMessage(i.id, y.Z.Messages.COMMAND_BAN_ERROR);
 				});
@@ -684,13 +679,8 @@ let D = n(227419).Z,
 			}
 		}
 	],
-	U = M.filter((e) =>
-		['gif', 'tenor', 'tts', 'me', 'tableflip', 'unflip', 'shrug', 'spoiler', 'nick'].includes(e.name)
-	),
+	U = M.filter((e) => ['gif', 'tenor', 'tts', 'me', 'tableflip', 'unflip', 'shrug', 'spoiler', 'nick'].includes(e.name)),
 	w = (e, t, n) => {
 		let r = t ? M : U;
-		return (r = r.filter(
-			(t) =>
-				e.includes(t.type) && (!n || t.inputType === v.iw.BUILT_IN_TEXT || t.inputType === v.iw.BUILT_IN_INTEGRATION)
-		));
+		return (r = r.filter((t) => e.includes(t.type) && (!n || t.inputType === v.iw.BUILT_IN_TEXT || t.inputType === v.iw.BUILT_IN_INTEGRATION)));
 	};

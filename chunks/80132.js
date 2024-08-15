@@ -18,8 +18,8 @@ var i = n(120356),
 	f = n(221292),
 	h = n(290421),
 	p = n(228168),
-	I = n(981631),
-	m = n(689938),
+	m = n(981631),
+	I = n(689938),
 	T = n(498799);
 function g(e) {
 	let { badges: t, className: n, badgeClassName: i, onClose: g } = e,
@@ -27,7 +27,7 @@ function g(e) {
 		{ context: A, trackUserProfileAction: N } = (0, E.KZ)();
 	return (0, r.jsx)('div', {
 		className: a()(T.container, n),
-		'aria-label': m.Z.Messages.PROFILE_USER_BADGES,
+		'aria-label': I.Z.Messages.PROFILE_USER_BADGES,
 		role: 'group',
 		children: t.map((e) =>
 			(0, r.jsx)(
@@ -47,7 +47,7 @@ function g(e) {
 							if (null != n) return null == g || g(), n(t);
 						},
 						onMouseEnter: () => {
-							e.id === h.i && _.default.track(I.rMx.QUEST_CONTENT_VIEWED, { ...(0, c.mH)(d.jn.QUEST_BADGE) }),
+							e.id === h.i && _.default.track(m.rMx.QUEST_CONTENT_VIEWED, { ...(0, c.mH)(d.jn.QUEST_BADGE) }),
 								N({ action: 'HOVER_BADGE' }),
 								(0, f.Qf)({
 									badge: e.id,

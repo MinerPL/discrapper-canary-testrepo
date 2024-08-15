@@ -42,10 +42,7 @@ function j(e) {
 		i = {
 			border: '1px solid '.concat(n.config.colors.primary),
 			background: '\n    linear-gradient(\n      150deg,\n      transparent 68%,\n      '
-				.concat(
-					(0, g.aD)(n.config.colors.primary, 0.2),
-					' 85%,\n      transparent 100%\n    ),\n    linear-gradient(\n      150deg,\n      transparent 13%,\n      '
-				)
+				.concat((0, g.aD)(n.config.colors.primary, 0.2), ' 85%,\n      transparent 100%\n    ),\n    linear-gradient(\n      150deg,\n      transparent 13%,\n      ')
 				.concat((0, g.aD)(n.config.colors.primary, 0.6), ' 44%,\n      transparent 76%\n    ),\n    ')
 				.concat(l ? 'var(--black)' : 'var(--white)', '\n    ')
 		},
@@ -59,12 +56,7 @@ function j(e) {
 				c = l
 					? (0, b.o9)({
 							quest: a,
-							idx:
-								null !== (r = null == o ? void 0 : o.tier) && void 0 !== r
-									? r
-									: null === (n = a.userStatus) || void 0 === n
-										? void 0
-										: n.claimedTier
+							idx: null !== (r = null == o ? void 0 : o.tier) && void 0 !== r ? r : null === (n = a.userStatus) || void 0 === n ? void 0 : n.claimedTier
 						})
 					: null,
 				u = A.r.build(a.config),
@@ -179,11 +171,7 @@ function L(e) {
 			selectedPlatformType: I
 		}),
 		X = null;
-	_ && null != P
-		? (X = v.Z.Messages.QUESTS_REWARD_CODE_HEADER)
-		: null != P
-			? (X = v.Z.Messages.QUESTS_REWARD_CODE_CONGRATS)
-			: q && (X = v.Z.Messages.QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER);
+	_ && null != P ? (X = v.Z.Messages.QUESTS_REWARD_CODE_HEADER) : null != P ? (X = v.Z.Messages.QUESTS_REWARD_CODE_CONGRATS) : q && (X = v.Z.Messages.QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER);
 	let Y =
 			null != X
 				? (0, r.jsx)(u.Heading, {
@@ -201,11 +189,7 @@ function L(e) {
 					variant: 'text-sm/normal',
 					color: 'text-normal',
 					className: N.bodyCopy,
-					children: o
-						? v.Z.Messages.QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS_TIERED.format()
-						: v.Z.Messages.QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS.format({
-								rewardName: l.defaultReward.messages.name
-							})
+					children: o ? v.Z.Messages.QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS_TIERED.format() : v.Z.Messages.QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS.format({ rewardName: l.defaultReward.messages.name })
 				});
 			let i = (0, b.C1)({
 				quest: t,

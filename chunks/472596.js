@@ -85,11 +85,7 @@ function U(e) {
 			var _;
 			if (null == e) return null;
 			let E = r.Z.getGuild(e.guildId);
-			return null == E || null == e.highestRoleId
-				? null
-				: null !== (_ = r.Z.getRole(E.id, e.highestRoleId)) && void 0 !== _
-					? _
-					: null;
+			return null == E || null == e.highestRoleId ? null : null !== (_ = r.Z.getRole(E.id, e.highestRoleId)) && void 0 !== _ ? _ : null;
 		},
 		[e]
 	);
@@ -97,7 +93,4 @@ function U(e) {
 function G(e, _, E) {
 	return _ ? 0 : e ? 1 : E <= 0 ? 2 : 3;
 }
-((s = T || (T = {}))[(s.LOADING = 0)] = 'LOADING'),
-	(s[(s.SUCCESS_STILL_INDEXING = 1)] = 'SUCCESS_STILL_INDEXING'),
-	(s[(s.SUCCESS_EMPTY = 2)] = 'SUCCESS_EMPTY'),
-	(s[(s.SUCCESS_FULL = 3)] = 'SUCCESS_FULL');
+((s = T || (T = {}))[(s.LOADING = 0)] = 'LOADING'), (s[(s.SUCCESS_STILL_INDEXING = 1)] = 'SUCCESS_STILL_INDEXING'), (s[(s.SUCCESS_EMPTY = 2)] = 'SUCCESS_EMPTY'), (s[(s.SUCCESS_FULL = 3)] = 'SUCCESS_FULL');

@@ -37,11 +37,7 @@ let p = (e) => {
 		let { user: t, userProfile: n, guildMember: r, guildMemberProfile: i } = e,
 			a = null != n ? n : i,
 			s = [];
-		if (
-			((null == r ? void 0 : r.nick) && s.push(E.cm.NICKNAME),
-			(null == a ? void 0 : a.pronouns) && s.push(E.cm.PRONOUNS),
-			null == t ? void 0 : t.avatar)
-		) {
+		if (((null == r ? void 0 : r.nick) && s.push(E.cm.NICKNAME), (null == a ? void 0 : a.pronouns) && s.push(E.cm.PRONOUNS), null == t ? void 0 : t.avatar)) {
 			let e = (0, c.xR)(null == t ? void 0 : t.avatar);
 			s.push(e ? E.cm.ANIMATED_AVATAR : E.cm.AVATAR);
 		}
@@ -49,22 +45,14 @@ let p = (e) => {
 			let e = (0, c.xR)(null == a ? void 0 : a.banner);
 			s.push(e ? E.cm.ANIMATED_BANNER : E.cm.BANNER);
 		}
-		return (
-			(null == a ? void 0 : a.bio) && s.push(E.cm.BIO),
-			(null == a ? void 0 : a.themeColors) != null &&
-				void 0 !== a.themeColors.find((e) => null !== e) &&
-				s.push(E.cm.THEME),
-			(null == t ? void 0 : t.avatarDecoration) != null && s.push(E.cm.AVATAR_DECORATION),
-			(null == a ? void 0 : a.profileEffectId) != null && s.push(E.cm.PROFILE_EFFECT),
-			s
-		);
+		return (null == a ? void 0 : a.bio) && s.push(E.cm.BIO), (null == a ? void 0 : a.themeColors) != null && void 0 !== a.themeColors.find((e) => null !== e) && s.push(E.cm.THEME), (null == t ? void 0 : t.avatarDecoration) != null && s.push(E.cm.AVATAR_DECORATION), (null == a ? void 0 : a.profileEffectId) != null && s.push(E.cm.PROFILE_EFFECT), s;
 	},
-	I = (e) => {
+	m = (e) => {
 		let t = s.Z.getStatus(e),
 			n = s.Z.isMobileOnline(e);
 		return t === h.Sk.ONLINE && n ? ''.concat(t, '-mobile') : t === h.Sk.ONLINE ? ''.concat(t, '-desktop') : t;
 	},
-	m = (e) => (null == e ? e : Object.keys(f.IIU)[Object.values(f.IIU).indexOf(e)]),
+	I = (e) => (null == e ? e : Object.keys(f.IIU)[Object.values(f.IIU).indexOf(e)]),
 	T = (e) => {
 		var t, n;
 		let { layout: r, userId: i, guildId: o, sessionId: u, sourceSessionId: c, showGuildProfile: d = !0 } = e,
@@ -101,7 +89,7 @@ let p = (e) => {
 							}),
 			avatar_decoration_sku_id: null === (n = E.avatarDecoration) || void 0 === n ? void 0 : n.skuId,
 			profile_effect_sku_id: null == f ? void 0 : f.profileEffectId,
-			user_status: I(E.id),
+			user_status: m(E.id),
 			is_guild_profile: (null == f ? void 0 : f.guildId) != null,
 			is_bot_profile: E.bot
 		};
@@ -135,24 +123,14 @@ let p = (e) => {
 		});
 	},
 	A = (e) => {
-		let {
-			guildId: t,
-			channelId: n,
-			analyticsLocations: i,
-			activityType: a,
-			activityName: s,
-			activityPlatform: o,
-			activitySessionId: l,
-			applicationId: c,
-			voiceChannelId: d
-		} = e;
+		let { guildId: t, channelId: n, analyticsLocations: i, activityType: a, activityName: s, activityPlatform: o, activitySessionId: l, applicationId: c, voiceChannelId: d } = e;
 		u.default.track(f.rMx.USER_PROFILE_ACTIVITY_JOINED, {
 			...(0, r.hH)(t),
 			...(0, r.JS)(n),
 			...T(e),
 			...g(e),
 			location_stack: i,
-			activity_type: null != d ? 'VOICE' : m(a),
+			activity_type: null != d ? 'VOICE' : I(a),
 			activity_name: s,
 			activity_platform: o,
 			activity_session_id: l,
@@ -161,17 +139,7 @@ let p = (e) => {
 		});
 	},
 	N = (e) => {
-		let {
-			guildId: t,
-			channelId: n,
-			analyticsLocations: i,
-			action: a,
-			display: s,
-			activity: o,
-			stream: l,
-			entry: c,
-			outbox: d
-		} = e;
+		let { guildId: t, channelId: n, analyticsLocations: i, action: a, display: s, activity: o, stream: l, entry: c, outbox: d } = e;
 		u.default.track(f.rMx.USER_PROFILE_ACTIVITY_ACTION, {
 			...(0, r.hH)(t),
 			...(0, r.JS)(n),
@@ -180,7 +148,7 @@ let p = (e) => {
 			location_stack: i,
 			activity_action: a,
 			activity_display: s,
-			activity_type: m(null != l ? f.IIU.STREAMING : null == o ? void 0 : o.type),
+			activity_type: I(null != l ? f.IIU.STREAMING : null == o ? void 0 : o.type),
 			activity_name: null == o ? void 0 : o.name,
 			activity_platform: null == o ? void 0 : o.platform,
 			activity_session_id: null == o ? void 0 : o.session_id,

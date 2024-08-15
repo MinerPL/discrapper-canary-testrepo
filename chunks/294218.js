@@ -28,21 +28,7 @@ var i = n(735250),
 	v = n(58755);
 t.Z = a.memo(function (e) {
 	var t, n;
-	let {
-			message: a,
-			compact: s = !1,
-			className: L,
-			onContextMenu: Z,
-			onClick: P,
-			hideSimpleEmbedContent: b = !0,
-			channel: D,
-			isGroupStart: j,
-			animateAvatar: U,
-			subscribeToComponentDispatch: y,
-			renderThreadAccessory: B,
-			trackAnnouncementViews: k = !1,
-			...G
-		} = e,
+	let { message: a, compact: s = !1, className: L, onContextMenu: Z, onClick: P, hideSimpleEmbedContent: b = !0, channel: D, isGroupStart: j, animateAvatar: U, subscribeToComponentDispatch: y, renderThreadAccessory: B, trackAnnouncementViews: k = !1, ...G } = e,
 		F = a.type === M.uaV.POLL_RESULT || (null !== (t = e.disableInteraction) && void 0 !== t && t),
 		w = a.isFirstMessageInForumPost(D),
 		V = (0, u.A)((null !== (n = a.editedTimestamp) && void 0 !== n ? n : a.timestamp).valueOf()),

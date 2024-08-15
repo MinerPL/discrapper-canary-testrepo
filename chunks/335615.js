@@ -20,8 +20,8 @@ var i = n(735250),
 	_ = n(239091),
 	f = n(941028),
 	E = n(144144),
-	g = n(276264),
-	C = n(607070),
+	C = n(276264),
+	g = n(607070),
 	I = n(100527),
 	x = n(367907),
 	T = n(906732),
@@ -63,7 +63,7 @@ function Y(e, t, n) {
 	);
 }
 let K = V.ZP.getEnableHardwareAcceleration(),
-	q = 44 + g.x,
+	q = 44 + C.x,
 	X = {
 		origin: {
 			x: 38,
@@ -81,24 +81,8 @@ class Q extends a.Component {
 		return !(0, m.Z)(this.props, e, ['channelId']);
 	}
 	render() {
-		let {
-				colorString: e,
-				colorRoleName: t,
-				isOwner: n,
-				nick: a,
-				user: s,
-				currentUser: l,
-				activities: r,
-				applicationStream: o,
-				status: c,
-				channel: u,
-				guildId: h,
-				isTyping: m,
-				isMobileOnline: _,
-				premiumSince: f,
-				...E
-			} = this.props,
-			C = null != f ? new Date(f) : null;
+		let { colorString: e, colorRoleName: t, isOwner: n, nick: a, user: s, currentUser: l, activities: r, applicationStream: o, status: c, channel: u, guildId: h, isTyping: m, isMobileOnline: _, premiumSince: f, ...E } = this.props,
+			g = null != f ? new Date(f) : null;
 		return (0, i.jsx)(p.Popout, {
 			preload: () =>
 				(0, O.Z)(s, {
@@ -111,7 +95,7 @@ class Q extends a.Component {
 			onShiftClick: this.handleShiftClick,
 			children: (d, p) => {
 				let { isShown: f } = p;
-				return (0, i.jsx)(g.Z, {
+				return (0, i.jsx)(C.Z, {
 					className: z.member,
 					onContextMenu: this.renderUserContextMenu,
 					shouldAnimateStatus: K,
@@ -122,7 +106,7 @@ class Q extends a.Component {
 					activities: r,
 					applicationStream: o,
 					isOwner: n,
-					premiumSince: C,
+					premiumSince: g,
 					colorString: e,
 					colorRoleName: t,
 					isTyping: m,
@@ -141,9 +125,7 @@ class Q extends a.Component {
 		super(...e),
 			Y(this, 'renderUserContextMenu', (e) => {
 				(0, _.jW)(e, async () => {
-					let { default: e } = await Promise.all([n.e('79695'), n.e('70474'), n.e('12435'), n.e('46563')]).then(
-						n.bind(n, 757387)
-					);
+					let { default: e } = await Promise.all([n.e('79695'), n.e('70474'), n.e('12435'), n.e('46563')]).then(n.bind(n, 757387));
 					return (t) =>
 						(0, i.jsx)(e, {
 							...t,
@@ -257,25 +239,17 @@ let J = a.memo((e) => {
 function ee(e) {
 	let { index: t } = e,
 		n = (0, c.JA)(''.concat(t));
-	return (0, i.jsx)(g.Z, { itemProps: n });
+	return (0, i.jsx)(C.Z, { itemProps: n });
 }
 class et extends a.Component {
 	shouldComponentUpdate(e) {
-		return (
-			e.channel.id !== this.props.channel.id ||
-			e.version !== this.props.version ||
-			e.groups.length !== this.props.groups.length
-		);
+		return e.channel.id !== this.props.channel.id || e.version !== this.props.version || e.groups.length !== this.props.groups.length;
 	}
 	componentDidMount() {
-		this.updateSubscription(),
-			this.trackMemberListViewed(),
-			(this._areActivitiesExperimentallyHidden = (0, N.$)('ChannelMembers'));
+		this.updateSubscription(), this.trackMemberListViewed(), (this._areActivitiesExperimentallyHidden = (0, N.$)('ChannelMembers'));
 	}
 	componentDidUpdate(e) {
-		e.channel.id !== this.props.channel.id && this.updateSubscription(),
-			this.trackMemberListViewed(),
-			this.updateMaxContentFeedRowSeen();
+		e.channel.id !== this.props.channel.id && this.updateSubscription(), this.trackMemberListViewed(), this.updateMaxContentFeedRowSeen();
 	}
 	getContentFeedAdjustedDimensions(e) {
 		let { height: t, rowHeight: n, y: i } = e,
@@ -332,10 +306,7 @@ class et extends a.Component {
 												innerAriaLabel: W.Z.Messages.MEMBERS,
 												ref: (e) => {
 													var t;
-													(this._list = e),
-														(this.props.listRef.current = e),
-														(s.current =
-															null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
+													(this._list = e), (this.props.listRef.current = e), (s.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
 												},
 												className: l()(z.members, { [z.fullWidth]: d.tq }),
 												paddingTop: 0,
@@ -409,18 +380,7 @@ class et extends a.Component {
 					l = this.getRowProps(e);
 				if (null != l) {
 					if (l.type === D.so.MEMBER && 'user' in l) {
-						let {
-							colorString: e,
-							colorRoleId: t,
-							user: n,
-							status: r,
-							isOwner: o,
-							isMobileOnline: c,
-							nick: u,
-							activities: d,
-							applicationStream: h,
-							premiumSince: m
-						} = l;
+						let { colorString: e, colorRoleId: t, user: n, status: r, isOwner: o, isMobileOnline: c, nick: u, activities: d, applicationStream: h, premiumSince: m } = l;
 						return (0, i.jsx)(
 							J,
 							{
@@ -525,35 +485,21 @@ class et extends a.Component {
 					.slice(0, n + 1)
 					.filter(H.lm);
 				if (0 === i.length) return;
-				let a = i.reduce(
-					(e, t) =>
-						t.type !== D.so.MEMBER
-							? e
-							: (e.num_users_visible++,
-								t.isMobileOnline && e.num_users_visible_with_mobile_indicator++,
-								null != t.activities &&
-									t.activities.length > 0 &&
-									(e.num_users_visible_with_activity++,
-									t.activities.some((e) => e.type === F.IIU.PLAYING) && e.num_users_visible_with_game_activity++),
-								null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++,
-								e),
-					{
-						num_users_visible: 0,
-						num_users_visible_with_mobile_indicator: 0,
-						num_users_visible_with_game_activity: 0,
-						num_users_visible_with_activity: 0,
-						num_users_visible_with_avatar_decoration: 0
-					}
-				);
-				(this.lastReportedAnalyticsChannel = this.props.channel.id),
-					x.ZP.trackWithMetadata(F.rMx.MEMBER_LIST_VIEWED, { ...a });
+				let a = i.reduce((e, t) => (t.type !== D.so.MEMBER ? e : (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some((e) => e.type === F.IIU.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, e)), {
+					num_users_visible: 0,
+					num_users_visible_with_mobile_indicator: 0,
+					num_users_visible_with_game_activity: 0,
+					num_users_visible_with_activity: 0,
+					num_users_visible_with_avatar_decoration: 0
+				});
+				(this.lastReportedAnalyticsChannel = this.props.channel.id), x.ZP.trackWithMetadata(F.rMx.MEMBER_LIST_VIEWED, { ...a });
 			});
 	}
 }
 function en(e) {
 	let { channel: t, className: n } = e,
 		{ analyticsLocations: s } = (0, T.ZP)(I.Z.MEMBER_LIST),
-		r = (0, h.e7)([C.Z], () => C.Z.keyboardModeEnabled),
+		r = (0, h.e7)([g.Z], () => g.Z.keyboardModeEnabled),
 		o = (0, h.cj)([D.ZP], () => D.ZP.getProps(t.guild_id, t.id)),
 		{
 			rows: d,
@@ -584,7 +530,7 @@ function en(e) {
 				}
 			});
 		}, []),
-		g = a.useCallback(
+		C = a.useCallback(
 			() =>
 				new Promise((e) => {
 					let t = f.current;
@@ -610,7 +556,7 @@ function en(e) {
 			id: 'members-'.concat(t.id),
 			setFocus: E,
 			isEnabled: r,
-			scrollToStart: g,
+			scrollToStart: C,
 			scrollToEnd: x
 		});
 	return (0, i.jsx)(T.Gt, {

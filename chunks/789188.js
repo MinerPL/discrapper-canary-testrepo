@@ -3,19 +3,11 @@ var r = n(903799),
 	a = n(21841);
 function s(e) {
 	if (!(this instanceof s)) return new s(e);
-	(this.hash = e.hash),
-		(this.predResist = !!e.predResist),
-		(this.outLen = this.hash.outSize),
-		(this.minEntropy = e.minEntropy || this.hash.hmacStrength),
-		(this._reseed = null),
-		(this.reseedInterval = null),
-		(this.K = null),
-		(this.V = null);
+	(this.hash = e.hash), (this.predResist = !!e.predResist), (this.outLen = this.hash.outSize), (this.minEntropy = e.minEntropy || this.hash.hmacStrength), (this._reseed = null), (this.reseedInterval = null), (this.K = null), (this.V = null);
 	var t = i.toArray(e.entropy, e.entropyEnc || 'hex'),
 		n = i.toArray(e.nonce, e.nonceEnc || 'hex'),
 		r = i.toArray(e.pers, e.persEnc || 'hex');
-	a(t.length >= this.minEntropy / 8, 'Not enough entropy. Minimum is: ' + this.minEntropy + ' bits'),
-		this._init(t, n, r);
+	a(t.length >= this.minEntropy / 8, 'Not enough entropy. Minimum is: ' + this.minEntropy + ' bits'), this._init(t, n, r);
 }
 (e.exports = s),
 	(s.prototype._init = function (e, t, n) {
@@ -29,20 +21,10 @@ function s(e) {
 	}),
 	(s.prototype._update = function (e) {
 		var t = this._hmac().update(this.V).update([0]);
-		e && (t = t.update(e)),
-			(this.K = t.digest()),
-			(this.V = this._hmac().update(this.V).digest()),
-			e &&
-				((this.K = this._hmac().update(this.V).update([1]).update(e).digest()),
-				(this.V = this._hmac().update(this.V).digest()));
+		e && (t = t.update(e)), (this.K = t.digest()), (this.V = this._hmac().update(this.V).digest()), e && ((this.K = this._hmac().update(this.V).update([1]).update(e).digest()), (this.V = this._hmac().update(this.V).digest()));
 	}),
 	(s.prototype.reseed = function (e, t, n, r) {
-		'string' != typeof t && ((r = n), (n = t), (t = null)),
-			(e = i.toArray(e, t)),
-			(n = i.toArray(n, r)),
-			a(e.length >= this.minEntropy / 8, 'Not enough entropy. Minimum is: ' + this.minEntropy + ' bits'),
-			this._update(e.concat(n || [])),
-			(this._reseed = 1);
+		'string' != typeof t && ((r = n), (n = t), (t = null)), (e = i.toArray(e, t)), (n = i.toArray(n, r)), a(e.length >= this.minEntropy / 8, 'Not enough entropy. Minimum is: ' + this.minEntropy + ' bits'), this._update(e.concat(n || [])), (this._reseed = 1);
 	}),
 	(s.prototype.generate = function (e, t, n, r) {
 		if (this._reseed > this.reseedInterval) throw Error('Reseed is required');

@@ -33,22 +33,10 @@ function h(e, t) {
 				e.push(c.Sk.ONLINE, c.Sk.OFFLINE),
 				e.map((e) => {
 					var t, i, a, s;
-					let l =
-						e === c.Sk.ONLINE
-							? u.Z.Messages.STATUS_ONLINE
-							: e === c.Sk.OFFLINE
-								? u.Z.Messages.STATUS_OFFLINE
-								: null !== (a = null == n ? void 0 : null === (t = n[e]) || void 0 === t ? void 0 : t.name) &&
-									  void 0 !== a
-									? a
-									: '';
+					let l = e === c.Sk.ONLINE ? u.Z.Messages.STATUS_ONLINE : e === c.Sk.OFFLINE ? u.Z.Messages.STATUS_OFFLINE : null !== (a = null == n ? void 0 : null === (t = n[e]) || void 0 === t ? void 0 : t.name) && void 0 !== a ? a : '';
 					return {
 						label: l,
-						userIds:
-							null !== (s = null == h ? void 0 : null === (i = h[e]) || void 0 === i ? void 0 : i.userIds) &&
-							void 0 !== s
-								? s
-								: [],
+						userIds: null !== (s = null == h ? void 0 : null === (i = h[e]) || void 0 === i ? void 0 : i.userIds) && void 0 !== s ? s : [],
 						id: e,
 						roleId: e
 					};

@@ -3,22 +3,7 @@ e.exports = function (e) {
 	return {
 		name: 'Thrift',
 		keywords: {
-			keyword: [
-				'namespace',
-				'const',
-				'typedef',
-				'struct',
-				'enum',
-				'service',
-				'exception',
-				'void',
-				'oneway',
-				'set',
-				'list',
-				'map',
-				'required',
-				'optional'
-			],
+			keyword: ['namespace', 'const', 'typedef', 'struct', 'enum', 'service', 'exception', 'void', 'oneway', 'set', 'list', 'map', 'required', 'optional'],
 			type: t,
 			literal: 'true false'
 		},

@@ -23,13 +23,7 @@ var a = n(581282),
 function m(e) {
 	let { content: t, isPreview: n } = e,
 		i = s.t.fromBinary((0, a.c)(t));
-	return 'announcementModalVariant1' !== i.properties.oneofKind
-		? null
-		: !n &&
-			  (0 === i.properties.announcementModalVariant1.dismissKey.trim().length ||
-					(0, u.un)(Number(i.properties.announcementModalVariant1.dismissKey)))
-			? null
-			: (n && (i.properties.announcementModalVariant1.dismissKey = ''), i);
+	return 'announcementModalVariant1' !== i.properties.oneofKind ? null : !n && (0 === i.properties.announcementModalVariant1.dismissKey.trim().length || (0, u.un)(Number(i.properties.announcementModalVariant1.dismissKey))) ? null : (n && (i.properties.announcementModalVariant1.dismissKey = ''), i);
 }
 function I(e) {
 	let { renderModalProps: t, properties: n } = e,
@@ -47,10 +41,5 @@ function I(e) {
 		});
 		return (0, i.jsx)(h.Z, { ...e });
 	}
-	return (
-		_.Z.captureMessage(
-			'Property type '.concat(n.properties.oneofKind, ' is not supported to render ServerDriveAnnouncementModal')
-		),
-		null
-	);
+	return _.Z.captureMessage('Property type '.concat(n.properties.oneofKind, ' is not supported to render ServerDriveAnnouncementModal')), null;
 }

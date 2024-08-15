@@ -3,7 +3,7 @@ n.d(t, {
 		return E;
 	},
 	Z: function () {
-		return g;
+		return C;
 	}
 });
 var i = n(735250);
@@ -54,7 +54,7 @@ function E(e) {
 		]
 	});
 }
-function g(e) {
+function C(e) {
 	let { user: t, onClose: n } = e,
 		{ mutualFriends: a } = (0, d.Z)(t.id),
 		{ analyticsLocations: l } = (0, o.ZP)(),

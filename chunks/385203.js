@@ -48,10 +48,7 @@ e.exports = function (e, t, n) {
 					break;
 				}
 			var s = t.slice(2, i - 1);
-			if (
-				((('0002' !== r.toString('hex') && !n) || ('0001' !== r.toString('hex') && n)) && a++, s.length < 8 && a++, a)
-			)
-				throw Error('decryption error');
+			if (((('0002' !== r.toString('hex') && !n) || ('0001' !== r.toString('hex') && n)) && a++, s.length < 8 && a++, a)) throw Error('decryption error');
 			return t.slice(i);
 		})(E, _, n);
 	if (3 === d) return _;

@@ -35,17 +35,7 @@ var a = n(735250),
 	y = n(689938),
 	D = n(286124);
 function F(e) {
-	let {
-			id: t,
-			channel: n,
-			goToThread: r,
-			overrideMedia: u,
-			className: m,
-			coords: h,
-			gridCoords: _,
-			gridSectionBoundaries: g,
-			observePostVisibilityAnalytics: f
-		} = e,
+	let { id: t, channel: n, goToThread: r, overrideMedia: u, className: m, coords: h, gridCoords: _, gridSectionBoundaries: g, observePostVisibilityAnalytics: f } = e,
 		C = (0, o.e7)([I.Z], () => I.Z.getChannel(n.parent_id)),
 		S = n.id,
 		j = s.useRef(null),
@@ -262,17 +252,7 @@ function U(e) {
 	});
 }
 t.Z = s.memo(function (e) {
-	let {
-			id: t,
-			threadId: n,
-			goToThread: s,
-			overrideMedia: r,
-			className: l,
-			coords: i,
-			gridCoords: c,
-			gridSectionBoundaries: d,
-			observePostVisibilityAnalytics: u
-		} = e,
+	let { id: t, threadId: n, goToThread: s, overrideMedia: r, className: l, coords: i, gridCoords: c, gridSectionBoundaries: d, observePostVisibilityAnalytics: u } = e,
 		m = (0, o.e7)([I.Z], () => I.Z.getChannel(n));
 	return null == m
 		? null
@@ -293,14 +273,7 @@ let k = (e) => e.preventDefault(),
 		return (0, a.jsx)(a.Fragment, { children: (0, C.Yi)(e) });
 	}),
 	B = s.memo(function (e) {
-		let {
-				mediaAttachments: t,
-				globalSpoilerRenderSetting: n,
-				containerWidth: r,
-				containerHeight: i,
-				canAutoPlay: o,
-				shouldMaintainAspectRatio: c = !1
-			} = e,
+		let { mediaAttachments: t, globalSpoilerRenderSetting: n, containerWidth: r, containerHeight: i, canAutoPlay: o, shouldMaintainAspectRatio: c = !1 } = e,
 			{ containsVideo: u, containsGif: x } = s.useMemo(() => (0, v.cp)(t), [t]),
 			f = s.useMemo(() => t.slice(j.$x, j.GV), [t]),
 			C = (0, j.tu)({

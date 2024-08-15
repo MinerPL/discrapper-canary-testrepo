@@ -41,10 +41,7 @@ class s {
 			for (let n in ((r = {}), e)) r[n] = new s({ [t]: e[n] }, t);
 		}
 		let n = null == r ? void 0 : r[e];
-		if (!n)
-			throw Error(
-				`Strings for package "${e}" were not included by LocalizedStringProvider. Please add it to the list passed to createLocalizedStringDictionary.`
-			);
+		if (!n) throw Error(`Strings for package "${e}" were not included by LocalizedStringProvider. Please add it to the list passed to createLocalizedStringDictionary.`);
 		return n;
 	}
 	constructor(e, t = 'en-US') {
@@ -63,10 +60,7 @@ class u {
 		if (r) return 'function' == typeof r ? r() : r;
 		let i = this.locale + ':' + n,
 			a = o.get(i);
-		return (
-			!a && ((a = new Intl.PluralRules(this.locale, { type: n })), o.set(i, a)),
-			'function' == typeof (r = t[a.select(e)] || t.other) ? r() : r
-		);
+		return !a && ((a = new Intl.PluralRules(this.locale, { type: n })), o.set(i, a)), 'function' == typeof (r = t[a.select(e)] || t.other) ? r() : r;
 	}
 	number(e) {
 		let t = l.get(this.locale);

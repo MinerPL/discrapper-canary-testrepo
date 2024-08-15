@@ -37,17 +37,7 @@ n.default = (0, t.Z)(
 	(0, d.Z)(
 		function (e) {
 			var n;
-			let {
-					user: a,
-					channel: d,
-					context: t,
-					showChatItems: u = !0,
-					showMediaItems: w = !1,
-					showChannelCallItems: b = !1,
-					showModalItems: k = !0,
-					onSelect: W,
-					onHeightUpdate: y
-				} = e,
+			let { user: a, channel: d, context: t, showChatItems: u = !0, showMediaItems: w = !1, showChannelCallItems: b = !1, showModalItems: k = !0, onSelect: W, onHeightUpdate: y } = e,
 				z = (0, S.Z)({
 					userId: a.id,
 					guildId: null

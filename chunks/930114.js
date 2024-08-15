@@ -40,16 +40,7 @@ function _(e) {
 		{
 			onCloseCallback: () => {
 				var e;
-				m &&
-					null != T &&
-					!N &&
-					T.isSubscription &&
-					(null == T
-						? void 0
-						: null === (e = T.subscriptionPlan) || void 0 === e
-							? void 0
-							: e.premiumSubscriptionType) === u.p9.TIER_2 &&
-					l.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED);
+				m && null != T && !N && T.isSubscription && (null == T ? void 0 : null === (e = T.subscriptionPlan) || void 0 === e ? void 0 : e.premiumSubscriptionType) === u.p9.TIER_2 && l.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED);
 			}
 		}
 	);

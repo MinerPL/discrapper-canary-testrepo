@@ -40,10 +40,7 @@ let f = a.forwardRef(function (e, t) {
 		N = (0, u.e7)([T.Z], () => T.Z.getSearchStateByGuildId(l.id), [l.id], c()),
 		R = (0, x.gm)(l.id),
 		[A, S] = a.useState(N.query),
-		Z =
-			null != N.selectedSort &&
-			N.selectedSort !== b.d$.ORDER_BY_GUILD_JOINED_AT_DESC &&
-			N.selectedSort !== b.d$.ORDER_BY_UNSPECIFIED,
+		Z = null != N.selectedSort && N.selectedSort !== b.d$.ORDER_BY_GUILD_JOINED_AT_DESC && N.selectedSort !== b.d$.ORDER_BY_UNSPECIFIED,
 		j = a.useCallback(
 			(e) => {
 				let t = e.trim();

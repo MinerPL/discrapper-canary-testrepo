@@ -12,8 +12,8 @@ var r,
 	f = n(979651),
 	h = n(981631);
 let p = !0,
-	I = !0;
-function m() {
+	m = !0;
+function I() {
 	let e;
 	let t = E.Z.getChannelId();
 	if (null == t) e = !0;
@@ -21,19 +21,10 @@ function m() {
 		var n;
 		let r = c.Z.getChannel(t),
 			i = f.Z.getVoiceState(null == r ? void 0 : r.getGuildId(), u.default.getId());
-		e =
-			d.Z.getMode() !== h.pM4.VOICE_ACTIVITY ||
-			null == r ||
-			r.isPrivate() ||
-			r.isGuildStageVoice() ||
-			_.Z.can(h.Plq.USE_VAD, r) ||
-			null == (n = i) ||
-			!!n.suppress ||
-			null != n.requestToSpeakTimestamp ||
-			!1;
+		e = d.Z.getMode() !== h.pM4.VOICE_ACTIVITY || null == r || r.isPrivate() || r.isGuildStageVoice() || _.Z.can(h.Plq.USE_VAD, r) || null == (n = i) || !!n.suppress || null != n.requestToSpeakTimestamp || !1;
 	}
 	if (p === e) return !1;
-	(I = e),
+	(m = e),
 		(p = e),
 		l.Z.dispatch({
 			type: 'SET_VAD_PERMISSION',
@@ -45,7 +36,7 @@ class T extends (s = o.ZP.Store) {
 		this.waitFor(_.Z, d.Z, E.Z, f.Z);
 	}
 	shouldShowWarning() {
-		return !I;
+		return !m;
 	}
 	canUseVoiceActivity() {
 		return p;
@@ -61,26 +52,26 @@ class T extends (s = o.ZP.Store) {
 			})
 		: (r[i] = a),
 	(t.Z = new T(l.Z, {
-		RTC_CONNECTION_STATE: m,
-		MEDIA_ENGINE_SET_AUDIO_ENABLED: m,
-		AUDIO_SET_MODE: m,
-		CHANNEL_UPDATES: m,
-		THREAD_UPDATE: m,
-		GUILD_ROLE_UPDATE: m,
-		GUILD_MEMBER_UPDATE: m,
-		IMPERSONATE_UPDATE: m,
-		IMPERSONATE_STOP: m,
+		RTC_CONNECTION_STATE: I,
+		MEDIA_ENGINE_SET_AUDIO_ENABLED: I,
+		AUDIO_SET_MODE: I,
+		CHANNEL_UPDATES: I,
+		THREAD_UPDATE: I,
+		GUILD_ROLE_UPDATE: I,
+		GUILD_MEMBER_UPDATE: I,
+		IMPERSONATE_UPDATE: I,
+		IMPERSONATE_STOP: I,
 		VOICE_STATE_UPDATES: function (e) {
 			let { voiceStates: t } = e;
 			return t.some((e) => {
 				let { userId: t } = e;
-				return t === u.default.getId() && m();
+				return t === u.default.getId() && I();
 			});
 		},
 		AUDIO_TOGGLE_SELF_MUTE: function () {
-			I = p;
+			m = p;
 		},
 		PERMISSION_CLEAR_VAD_WARNING: function () {
-			I = !0;
+			m = !0;
 		}
 	}));

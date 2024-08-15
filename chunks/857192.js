@@ -13,7 +13,7 @@ var r,
 	f = n(70956),
 	h = n(960048),
 	p = n(981631);
-let I = (() => {
+let m = (() => {
 		let e = ''.concat(location.protocol, '//').concat(location.host, '/__development/source_maps'),
 			t = null,
 			n = new o.Z(5 * f.Z.Millis.SECOND, 1 * f.Z.Millis.MINUTE, !0),
@@ -26,11 +26,7 @@ let I = (() => {
 					})
 					.then(
 						(e) => {
-							401 === e.status || 403 === e.status
-								? ((t = null), (0, E.y)({ sourceMapsEnabled: !1 }))
-								: 200 !== e.status
-									? (t = setTimeout(r, n.fail()))
-									: (n.succeed(), (t = setTimeout(r, e.body.sourceMapCookieTTLSeconds * f.Z.Millis.SECOND * 0.75)));
+							401 === e.status || 403 === e.status ? ((t = null), (0, E.y)({ sourceMapsEnabled: !1 })) : 200 !== e.status ? (t = setTimeout(r, n.fail())) : (n.succeed(), (t = setTimeout(r, e.body.sourceMapCookieTTLSeconds * f.Z.Millis.SECOND * 0.75)));
 						},
 						() => {
 							t = setTimeout(r, n.fail());
@@ -52,7 +48,7 @@ let I = (() => {
 			}
 		};
 	})(),
-	m = 'DeveloperOptionsStore',
+	I = 'DeveloperOptionsStore',
 	T = {
 		trace: !1,
 		canary: !1,
@@ -75,12 +71,12 @@ function S(e) {
 		...g,
 		...e
 	}),
-		I.set(g.sourceMapsEnabled),
-		d.K.set(m, g);
+		m.set(g.sourceMapsEnabled),
+		d.K.set(I, g);
 }
 class A extends (r = u.ZP.Store) {
 	initialize() {
-		let e = d.K.get(m);
+		let e = d.K.get(I);
 		null != e &&
 			(g = {
 				...T,
@@ -152,7 +148,7 @@ class A extends (r = u.ZP.Store) {
 			var t;
 			let n = ((null !== (t = e.user.flags) && void 0 !== t ? t : 0) & p.xW$.STAFF) === p.xW$.STAFF,
 				r = n || null != e.user.personal_connection_id;
-			n && I.set(g.sourceMapsEnabled), h.Z.setTags({ isStaff: r.toString() });
+			n && m.set(g.sourceMapsEnabled), h.Z.setTags({ isStaff: r.toString() });
 		},
 		DEVELOPER_OPTIONS_UPDATE_SETTINGS: function (e) {
 			let { settings: t } = e;

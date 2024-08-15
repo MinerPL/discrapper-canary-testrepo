@@ -18,8 +18,8 @@ var i = n(735250),
 	_ = n(639351),
 	f = n(823379),
 	E = n(192918),
-	g = n(22211),
-	C = n(561308),
+	C = n(22211),
+	g = n(561308),
 	I = n(919394),
 	x = n(438226),
 	T = n(206295),
@@ -43,19 +43,10 @@ let R = {
 t.Z = (e) => {
 	var t;
 	let { channel: n, entry: s, requestId: p, closePopout: _ } = e,
-		{
-			iconUrl: j,
-			iconTitle: L,
-			user: P,
-			details: O,
-			appName: y,
-			activity: D,
-			coverImageUrl: k,
-			richIcon: U
-		} = (0, A.n)(s),
+		{ iconUrl: j, iconTitle: L, user: P, details: O, appName: y, activity: D, coverImageUrl: k, richIcon: U } = (0, A.n)(s),
 		{ primaryColor: w, secondaryColor: B } = (0, T.Z)(j),
 		H = (0, l.e7)([m.default], () => m.default.locale),
-		{ streamPreviewUrl: G, stream: V } = (0, g.Z)(s),
+		{ streamPreviewUrl: G, stream: V } = (0, C.Z)(s),
 		{ displayParticipants: F, participant1: W, participant2: z, numOtherParticipants: Y } = (0, E.Z)(s, 3),
 		K = a.useCallback(
 			(e) => {
@@ -74,7 +65,7 @@ t.Z = (e) => {
 					applicationImageSrc: j,
 					avatarSrcs: F.map((e) => e.getAvatarURL(n.guild_id, 128)),
 					description: t,
-					timestamp: (0, C.yh)(s, H),
+					timestamp: (0, g.yh)(s, H),
 					colors: [w, B],
 					channelId: e
 				});
@@ -100,9 +91,7 @@ t.Z = (e) => {
 										Icon: q,
 										'aria-label': b.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
 									}),
-						userDescription: (0, C.kr)(s)
-							? b.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING
-							: b.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
+						userDescription: (0, g.kr)(s) ? b.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : b.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
 						title: y,
 						subtitle: O,
 						badges: X,

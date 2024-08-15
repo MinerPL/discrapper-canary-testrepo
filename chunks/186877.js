@@ -17,8 +17,7 @@ function u(e) {
 	return (0, i.e7)(
 		[l.Z, a.Z, r.Z, o.default],
 		() => {
-			if (null != u || !t || a.Z.isMessageRequest(e.id) || (null != n && r.Z.getRelationshipType(n) === c.OGo.BLOCKED))
-				return !1;
+			if (null != u || !t || a.Z.isMessageRequest(e.id) || (null != n && r.Z.getRelationshipType(n) === c.OGo.BLOCKED)) return !1;
 			if (null != n) {
 				let e = o.default.getUser(n);
 				if (null != e && e.hasFlag(c.xW$.PROVISIONAL_ACCOUNT)) return !1;

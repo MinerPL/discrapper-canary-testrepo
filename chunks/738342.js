@@ -45,15 +45,7 @@ function A(e) {
 		onFieldChange: function (e, s) {
 			if (null != s)
 				!n[s] && '' !== e && i((e) => ((e[s] = !0), e)),
-					n[s] && '' === e
-						? A(
-								(e) => (
-									'email' === s && (e[s] = u.Z.Messages.PAYMENT_SOURCE_EMAIL_ERROR_REQUIRED),
-									'name' === s && (e[s] = u.Z.Messages.PAYMENT_SOURCE_NAME_ERROR_REQUIRED),
-									e
-								)
-							)
-						: A((e) => (delete e[s], e)),
+					n[s] && '' === e ? A((e) => ('email' === s && (e[s] = u.Z.Messages.PAYMENT_SOURCE_EMAIL_ERROR_REQUIRED), 'name' === s && (e[s] = u.Z.Messages.PAYMENT_SOURCE_NAME_ERROR_REQUIRED), e)) : A((e) => (delete e[s], e)),
 					a({
 						name: t.name,
 						email: t.email,

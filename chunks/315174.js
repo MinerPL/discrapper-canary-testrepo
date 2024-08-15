@@ -29,13 +29,7 @@ function E(e) {
 		},
 		children: (0, i.jsx)(s.animated.div, {
 			className: a()(I.bannerImage, { [I.bannerImgFullWidth]: o.tq }),
-			style: {
-				transform: u.to((e) =>
-					d
-						? 'translateY('.concat((1 - e) * 60, 'px) scale(').concat(1 + (1 - e) * 0.2, ')')
-						: 'translateY('.concat((1 - e) * 90, 'px)')
-				)
-			},
+			style: { transform: u.to((e) => (d ? 'translateY('.concat((1 - e) * 60, 'px) scale(').concat(1 + (1 - e) * 0.2, ')') : 'translateY('.concat((1 - e) * 90, 'px)'))) },
 			children: (0, i.jsx)('img', {
 				className: a()(I.bannerImg, { [I.bannerImgFullWidth]: o.tq }),
 				src:
@@ -109,24 +103,7 @@ function x() {
 }
 t.ZP = l.memo(function (e) {
 	var t;
-	let {
-			bannerVisible: n,
-			controller: r,
-			className: s,
-			onClick: S,
-			onContextMenu: v,
-			onMouseDown: Z,
-			disableBannerAnimation: T,
-			'aria-expanded': L,
-			'aria-controls': A,
-			guild: b,
-			guildBanner: M,
-			animationOverlayHeight: R,
-			children: O,
-			headerClassName: P,
-			communityInfoVisible: y,
-			hasSubheader: j
-		} = e,
+	let { bannerVisible: n, controller: r, className: s, onClick: S, onContextMenu: v, onMouseDown: Z, disableBannerAnimation: T, 'aria-expanded': L, 'aria-controls': A, guild: b, guildBanner: M, animationOverlayHeight: R, children: O, headerClassName: P, communityInfoVisible: y, hasSubheader: j } = e,
 		D = b.hasFeature(g.oNc.ANIMATED_BANNER),
 		w = (0, d.Z)(b),
 		U = !w && b.hasCommunityInfoSubheader(),
@@ -203,9 +180,7 @@ t.ZP = l.memo(function (e) {
 													},
 													onClick: S,
 													onContextMenu: v,
-													'aria-label': C.Z.Messages.GUILD_SIDEBAR_ACTIONS_BUTTON.format({
-														guildName: null !== (t = null == b ? void 0 : b.toString()) && void 0 !== t ? t : ''
-													})
+													'aria-label': C.Z.Messages.GUILD_SIDEBAR_ACTIONS_BUTTON.format({ guildName: null !== (t = null == b ? void 0 : b.toString()) && void 0 !== t ? t : '' })
 												}),
 											(0, i.jsx)('div', {
 												className: I.headerChildren,

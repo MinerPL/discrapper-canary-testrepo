@@ -21,9 +21,9 @@ var a = n(442837),
 function f(e) {
 	let { guild: t, disabledUntil: n } = e,
 		[f, E] = (0, d.i)(t.id),
-		g = (0, a.e7)([c.ZP, o.default], () => c.ZP.getMember(t.id, o.default.getId()), [t.id]);
+		C = (0, a.e7)([c.ZP, o.default], () => c.ZP.getMember(t.id, o.default.getId()), [t.id]);
 	return (
-		(0, u.$)(g),
+		(0, u.$)(C),
 		(0, i.jsxs)('div', {
 			children: [
 				f

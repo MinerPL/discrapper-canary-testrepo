@@ -55,11 +55,7 @@ function x() {
 	let v = !0,
 		j = !0;
 	return (
-		L &&
-			1 === b.length &&
-			(b.includes(h.s6.PROFILE_SERVER_PROFILES)
-				? (Z(g.NB.GUILD), (j = !1))
-				: b.includes(h.s6.PROFILE_USER_PROFILE) && (Z(g.NB.USER_PROFILE), (v = !1))),
+		L && 1 === b.length && (b.includes(h.s6.PROFILE_SERVER_PROFILES) ? (Z(g.NB.GUILD), (j = !1)) : b.includes(h.s6.PROFILE_USER_PROFILE) && (Z(g.NB.USER_PROFILE), (v = !1))),
 		(0, n.jsx)(l.Gt, {
 			value: P,
 			children: (0, n.jsxs)(r.HeadingLevel, {

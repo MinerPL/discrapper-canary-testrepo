@@ -178,19 +178,7 @@ class eU extends a.PureComponent {
 	}
 	renderCopiedSuccess() {
 		let { copiedStreak: e } = this.state,
-			t = [
-				eb.Z.Messages.COPY_SUCCESS_1,
-				eb.Z.Messages.COPY_SUCCESS_2,
-				eb.Z.Messages.COPY_SUCCESS_3,
-				eb.Z.Messages.COPY_SUCCESS_4,
-				eb.Z.Messages.COPY_SUCCESS_5,
-				eb.Z.Messages.COPY_SUCCESS_6,
-				eb.Z.Messages.COPY_SUCCESS_7,
-				eb.Z.Messages.COPY_SUCCESS_8,
-				eb.Z.Messages.COPY_SUCCESS_9,
-				eb.Z.Messages.COPY_SUCCESS_10,
-				eb.Z.Messages.COPY_SUCCESS_11
-			],
+			t = [eb.Z.Messages.COPY_SUCCESS_1, eb.Z.Messages.COPY_SUCCESS_2, eb.Z.Messages.COPY_SUCCESS_3, eb.Z.Messages.COPY_SUCCESS_4, eb.Z.Messages.COPY_SUCCESS_5, eb.Z.Messages.COPY_SUCCESS_6, eb.Z.Messages.COPY_SUCCESS_7, eb.Z.Messages.COPY_SUCCESS_8, eb.Z.Messages.COPY_SUCCESS_9, eb.Z.Messages.COPY_SUCCESS_10, eb.Z.Messages.COPY_SUCCESS_11],
 			n = Math.min(Math.max(0, e - 1), t.length - 1);
 		return (0, i.jsx)(E.Shaker, {
 			isShaking: this.isCopiedStreakGodlike,
@@ -259,16 +247,7 @@ class eU extends a.PureComponent {
 				});
 	}
 	render() {
-		let {
-				currentUser: e,
-				selfDeaf: t,
-				selfMute: n,
-				awaitingRemote: a,
-				serverMute: s,
-				serverDeaf: r,
-				suppress: l,
-				dismissibleContents: c
-			} = this.props,
+		let { currentUser: e, selfDeaf: t, selfMute: n, awaitingRemote: a, serverMute: s, serverDeaf: r, suppress: l, dismissibleContents: c } = this.props,
 			{ shouldShowSpeakingWhileMutedTooltip: d } = this.state;
 		return null == e
 			? null
@@ -431,30 +410,7 @@ class eU extends a.PureComponent {
 				let { currentUser: t } = this.props;
 				null != t &&
 					(0, m.jW)(e, async () => {
-						let { default: e } = await Promise.all([
-							n.e('96427'),
-							n.e('44733'),
-							n.e('52249'),
-							n.e('54803'),
-							n.e('15685'),
-							n.e('47006'),
-							n.e('32776'),
-							n.e('18209'),
-							n.e('33053'),
-							n.e('8016'),
-							n.e('37581'),
-							n.e('76540'),
-							n.e('68136'),
-							n.e('87624'),
-							n.e('22646'),
-							n.e('5528'),
-							n.e('43331'),
-							n.e('30419'),
-							n.e('18824'),
-							n.e('52619'),
-							n.e('29291'),
-							n.e('28342')
-						]).then(n.bind(n, 923422));
+						let { default: e } = await Promise.all([n.e('96427'), n.e('35728'), n.e('52249'), n.e('54803'), n.e('15685'), n.e('47006'), n.e('32776'), n.e('18209'), n.e('33053'), n.e('8016'), n.e('37581'), n.e('76540'), n.e('68136'), n.e('87624'), n.e('22646'), n.e('5528'), n.e('43331'), n.e('30419'), n.e('18824'), n.e('52619'), n.e('29291'), n.e('28342')]).then(n.bind(n, 923422));
 						return (n) =>
 							(0, i.jsx)(e, {
 								...n,
@@ -520,8 +476,7 @@ class eU extends a.PureComponent {
 				};
 				!t && (i.copiedStreak = n + 1),
 					this.setState(i, () => {
-						this.copiedTimeout.start(1000, () => this.setState({ shouldShowNametagTooltip: !1 })),
-							this.copiedDecayTimeout.start(2000, () => this.setState({ copiedStreak: 0 }));
+						this.copiedTimeout.start(1000, () => this.setState({ shouldShowNametagTooltip: !1 })), this.copiedDecayTimeout.start(2000, () => this.setState({ copiedStreak: 0 }));
 					});
 			}),
 			eM(this, 'handleOccludedChanged', () => {
@@ -542,9 +497,7 @@ class eU extends a.PureComponent {
 						!n &&
 						!a &&
 						this.setState({ shouldShowSpeakingWhileMutedTooltip: !0 }, () => {
-							this.speakingWhileMutedTooltipTimeout.start(2000, () =>
-								this.setState({ shouldShowSpeakingWhileMutedTooltip: !1 })
-							);
+							this.speakingWhileMutedTooltipTimeout.start(2000, () => this.setState({ shouldShowSpeakingWhileMutedTooltip: !1 }));
 						})
 					: (this.setState({ shouldShowSpeakingWhileMutedTooltip: !1 }), this.speakingWhileMutedTooltipTimeout.stop());
 			}),
@@ -579,11 +532,7 @@ function eG() {
 		{ selfDeaf: L, deaf: O } = (0, el.Z)(g),
 		R = (0, l.e7)([v.C], () => {
 			var e;
-			return (0, Z.fD)()
-				? null === (e = v.C.getCurrentBuildOverride().overrides) || void 0 === e
-					? void 0
-					: e.discord_web
-				: null;
+			return (0, Z.fD)() ? (null === (e = v.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
 		}),
 		x = (0, l.e7)([eg.ZP], () => eg.ZP.getPremiumTypeSubscription()),
 		b = (0, l.e7)([e_.Z], () => e_.Z.getEverSpeakingWhileMuted()),
@@ -614,10 +563,7 @@ function eG() {
 		ep = (function () {
 			let e = (0, j.wE)(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2),
 				[t, n] = (0, l.Wu)([z.Z], () => [z.Z.hasFetchedRelevance, z.Z.profileThemesRelevanceExceeded]),
-				[i, s] = (0, l.Wu)([eg.ZP], () => [
-					eg.ZP.hasFetchedMostRecentPremiumTypeSubscription(),
-					eg.ZP.getMostRecentPremiumTypeSubscription()
-				]),
+				[i, s] = (0, l.Wu)([eg.ZP], () => [eg.ZP.hasFetchedMostRecentPremiumTypeSubscription(), eg.ZP.getMostRecentPremiumTypeSubscription()]),
 				{ enabled: r } = K.Z.useExperiment({ location: '08bd40_1' }, { autoTrackExposure: !0 }),
 				c = a.useMemo(() => {
 					let e = new Date().getTime();
@@ -642,22 +588,7 @@ function eG() {
 			settings: []
 		};
 	return (
-		!M &&
-			(ep && eT.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2),
-			s &&
-				(eT.settings.push(o.z.QUEST_2_ENROLLMENT_TOOLTIP),
-				B &&
-					H === (null === (t = (0, w.BS)(ex.X2.FORTNITE)) || void 0 === t ? void 0 : t.title) &&
-					eT.settings.push(o.z.QUEST_2_COMPLETION_TOOLTIP)),
-			Y && q && eT.settings.push(o.z.USER_SAFETY_SAFE_DIRECT_MESSAGING),
-			J &&
-				(1 === $
-					? eT.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE)
-					: eT.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)),
-			er && eT.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION),
-			ee && eT.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING),
-			en && eT.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK),
-			ei && eT.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
+		!M && (ep && eT.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), s && (eT.settings.push(o.z.QUEST_2_ENROLLMENT_TOOLTIP), B && H === (null === (t = (0, w.BS)(ex.X2.FORTNITE)) || void 0 === t ? void 0 : t.title) && eT.settings.push(o.z.QUEST_2_COMPLETION_TOOLTIP)), Y && q && eT.settings.push(o.z.USER_SAFETY_SAFE_DIRECT_MESSAGING), J && (1 === $ ? eT.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eT.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), er && eT.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), ee && eT.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), en && eT.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), ei && eT.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
 		(0, i.jsx)(eU, {
 			currentUser: n,
 			customStatusActivity: c,
@@ -706,10 +637,7 @@ function ek(e) {
 						'aria-hidden': !0
 					})),
 		(0, i.jsx)(ev.Z, {
-			tooltipText:
-				null != t
-					? eb.Z.Messages.USER_SETTINGS_WITH_BUILD_OVERRIDE.format({ webBuildOverride: t.id })
-					: eb.Z.Messages.USER_SETTINGS,
+			tooltipText: null != t ? eb.Z.Messages.USER_SETTINGS_WITH_BUILD_OVERRIDE.format({ webBuildOverride: t.id }) : eb.Z.Messages.USER_SETTINGS,
 			onClick: a,
 			onContextMenu: s,
 			innerClassName: null != t || n ? eP.buildOverrideButton : null,
@@ -720,19 +648,7 @@ function ek(e) {
 	);
 }
 function ew(e) {
-	let {
-			selfMute: t,
-			serverMute: n,
-			suppress: s,
-			awaitingRemote: r,
-			tooltipText: l,
-			tooltipColor: o,
-			tooltipForceOpen: c,
-			onMouseEnter: d,
-			onMouseLeave: _,
-			onClick: h,
-			onContextMenu: m
-		} = e,
+	let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: r, tooltipText: l, tooltipColor: o, tooltipForceOpen: c, onMouseEnter: d, onMouseLeave: _, onClick: h, onContextMenu: m } = e,
 		I = t || s || n,
 		{ Component: g, play: p, events: T } = (0, u.O)(I ? 'unmute' : 'mute'),
 		S = n || s ? E.MicrophoneDenyIcon : g;

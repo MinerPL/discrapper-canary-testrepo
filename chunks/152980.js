@@ -78,14 +78,7 @@ function U(e) {
 }
 function f(e) {
 	let { onFileAdded: A } = e,
-		{
-			uploads: t,
-			canAttachFiles: r,
-			canAttachArchives: s,
-			addAttachment: d,
-			deleteAttachment: c,
-			fileUploadProgresses: g
-		} = (0, C.P)(),
+		{ uploads: t, canAttachFiles: r, canAttachArchives: s, addAttachment: d, deleteAttachment: c, fileUploadProgresses: g } = (0, C.P)(),
 		f = n.useRef(!1);
 	function v(e) {
 		try {
@@ -141,11 +134,7 @@ function f(e) {
 					id: I,
 					color: 'text-muted',
 					variant: 'text-xs/normal',
-					children: s
-						? h.Z.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS_ARCHIVES_ALLOWED.format({
-								fileUploadLimit: p.TR
-							})
-						: h.Z.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS.format({ fileUploadLimit: p.TR })
+					children: s ? h.Z.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS_ARCHIVES_ALLOWED.format({ fileUploadLimit: p.TR }) : h.Z.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS.format({ fileUploadLimit: p.TR })
 				}),
 				t.length > 0 &&
 					(0, a.jsxs)(a.Fragment, {

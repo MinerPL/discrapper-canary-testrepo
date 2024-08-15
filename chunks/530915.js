@@ -32,15 +32,7 @@ let E = {
 };
 ((r = s || (s = {})).GO_TO_SLIDE = 'GO_TO_SLIDE'), (r.NEXT = 'NEXT'), (r.PREVIOUS = 'PREVIOUS');
 let I = (e) => {
-		let {
-				currentSlideIndex: t,
-				numSlides: n,
-				onNext: s,
-				onPrevious: r,
-				onIndicatorClick: i,
-				className: o,
-				paginationButtonClassName: l
-			} = e,
+		let { currentSlideIndex: t, numSlides: n, onNext: s, onPrevious: r, onIndicatorClick: i, className: o, paginationButtonClassName: l } = e,
 			d = c()(x.paginationButton, l);
 		return (0, a.jsxs)('div', {
 			className: c()(x.controls, o),
@@ -82,22 +74,7 @@ let I = (e) => {
 		});
 	},
 	v = (e) => {
-		let {
-				carouselId: t,
-				items: n = [],
-				renderItem: s,
-				getItemId: r,
-				onIntentionalChange: o,
-				onChangeItem: l,
-				className: u,
-				controlsClassName: f,
-				paginationButtonClassName: p,
-				springConfig: m,
-				delay: b,
-				initialPaused: v = !1,
-				unidirectional: S = !1,
-				analyticsLocations: L
-			} = e,
+		let { carouselId: t, items: n = [], renderItem: s, getItemId: r, onIntentionalChange: o, onChangeItem: l, className: u, controlsClassName: f, paginationButtonClassName: p, springConfig: m, delay: b, initialPaused: v = !1, unidirectional: S = !1, analyticsLocations: L } = e,
 			{ trackSlideView: T, trackPagination: N } = (0, h.X)(t, L),
 			[O, k] = (0, i.useState)(0),
 			[j, P] = (0, i.useState)(!1),
@@ -109,10 +86,7 @@ let I = (e) => {
 			w = i.useCallback((e) => (n.length + O + e) % n.length, [n, O]),
 			D = i.useCallback(
 				d()((e, t, s) => {
-					null != s && (null == o || o(n[e], t, e, s), N(e, O, r(e), r(t))),
-						P('GO_TO_SLIDE' === s),
-						null == l || l(n[e], t, e),
-						k(e);
+					null != s && (null == o || o(n[e], t, e, s), N(e, O, r(e), r(t))), P('GO_TO_SLIDE' === s), null == l || l(n[e], t, e), k(e);
 				}, 200),
 				[n, o, l]
 			);

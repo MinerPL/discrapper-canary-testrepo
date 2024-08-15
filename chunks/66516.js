@@ -71,9 +71,7 @@ function D(e) {
 					children: [
 						(0, n.jsx)(l.Text, {
 							variant: 'text-sm/normal',
-							children: M.Z.Messages.PROFILE_CUSTOMIZATION_GUILD_HINT.format({
-								helpCenterLink: m.Z.getArticleURL(x.BhN.GUILD_PROFILES)
-							})
+							children: M.Z.Messages.PROFILE_CUSTOMIZATION_GUILD_HINT.format({ helpCenterLink: m.Z.getArticleURL(x.BhN.GUILD_PROFILES) })
 						}),
 						null != s
 							? (0, n.jsxs)(n.Fragment, {
@@ -85,9 +83,7 @@ function D(e) {
 											}
 										}),
 										(0, n.jsx)(I.Z, {
-											previewTitle: M.Z.Messages.CHANGE_IDENTITY_PREVIEW_WITH_GUILD_NAME.format({
-												guildName: null == s ? void 0 : s.name
-											}),
+											previewTitle: M.Z.Messages.CHANGE_IDENTITY_PREVIEW_WITH_GUILD_NAME.format({ guildName: null == s ? void 0 : s.name }),
 											profilePreview: (0, n.jsx)(T.Z, {
 												user: i,
 												guild: s,

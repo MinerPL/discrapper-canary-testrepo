@@ -77,8 +77,7 @@ function u(e, t, n, r) {
 					begin: o,
 					'on:begin': (e, t) => {
 						let n = e[1].split(';');
-						for (let e of (void 0 === t.data.isOn && (t.data.isOn = !1), n))
-							e === a ? (t.data.isOn = !0) : s.includes(e) && (t.data.isOn = !1);
+						for (let e of (void 0 === t.data.isOn && (t.data.isOn = !1), n)) e === a ? (t.data.isOn = !0) : s.includes(e) && (t.data.isOn = !1);
 						!t.data.isOn && t.ignoreMatch();
 					}
 				}

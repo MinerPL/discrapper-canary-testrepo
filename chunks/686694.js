@@ -12,8 +12,8 @@ var r,
 	f = n(636879),
 	h = n(810847),
 	p = n(898625),
-	I = n(981631),
-	m = n(328237);
+	m = n(981631),
+	I = n(328237);
 function T(e, t, n) {
 	return (
 		t in e
@@ -41,27 +41,16 @@ class A extends (r = a.Component) {
 		this.terminate();
 	}
 	initialize() {
-		this.children.forEach((e) => e.initialize()),
-			this.bindEvents(),
-			this.resizeCanvas(),
-			document.hidden && this.delayedPause();
+		this.children.forEach((e) => e.initialize()), this.bindEvents(), this.resizeCanvas(), document.hidden && this.delayedPause();
 	}
 	terminate() {
 		this.pause(), this.unbindEvents(), this.children.forEach((e) => e.terminate());
 	}
 	bindEvents() {
-		window.addEventListener('resize', this.resizeCanvas, !1),
-			window.addEventListener('blur', this.delayedPause, !1),
-			window.addEventListener('focus', this.play, !1),
-			document.addEventListener('visibilitychange', this.handleVisibilityChange, !1),
-			d.S.subscribe(I.CkL.WAVE_EMPHASIZE, this.handleWaveEmphasize);
+		window.addEventListener('resize', this.resizeCanvas, !1), window.addEventListener('blur', this.delayedPause, !1), window.addEventListener('focus', this.play, !1), document.addEventListener('visibilitychange', this.handleVisibilityChange, !1), d.S.subscribe(m.CkL.WAVE_EMPHASIZE, this.handleWaveEmphasize);
 	}
 	unbindEvents() {
-		window.removeEventListener('resize', this.resizeCanvas, !1),
-			window.removeEventListener('blur', this.delayedPause, !1),
-			window.removeEventListener('focus', this.play, !1),
-			document.removeEventListener('visibilitychange', this.handleVisibilityChange, !1),
-			d.S.unsubscribe(I.CkL.WAVE_EMPHASIZE, this.handleWaveEmphasize);
+		window.removeEventListener('resize', this.resizeCanvas, !1), window.removeEventListener('blur', this.delayedPause, !1), window.removeEventListener('focus', this.play, !1), document.removeEventListener('visibilitychange', this.handleVisibilityChange, !1), d.S.unsubscribe(m.CkL.WAVE_EMPHASIZE, this.handleWaveEmphasize);
 	}
 	advanceTransitionalState() {
 		let { waveState: e } = this.props;
@@ -76,8 +65,7 @@ class A extends (r = a.Component) {
 	renderAnimation() {
 		let { canvasFillStyle: e } = this.props,
 			{ canvasContext: t } = this;
-		if (null != t)
-			(t.fillStyle = e), t.fillRect(0, 0, this.width, this.height), this.children.forEach((e) => e.render(t));
+		if (null != t) (t.fillStyle = e), t.fillRect(0, 0, this.width, this.height), this.children.forEach((e) => e.render(t));
 	}
 	render() {
 		let { waveState: e, hideFallback: t, embedded: n } = this.props;
@@ -86,13 +74,13 @@ class A extends (r = a.Component) {
 				let { reducedMotion: a } = r;
 				return a.enabled
 					? (0, i.jsx)('div', {
-							className: o()(m.fallbackImage, {
-								[m.embedded]: n,
-								[m.visible]: !t && e >= p.hO.ENTERED
+							className: o()(I.fallbackImage, {
+								[I.embedded]: n,
+								[I.visible]: !t && e >= p.hO.ENTERED
 							})
 						})
 					: (0, i.jsx)('canvas', {
-							className: o()(m.canvas, { [m.embedded]: n }),
+							className: o()(I.canvas, { [I.embedded]: n }),
 							ref: this.setCanvas
 						});
 			}
@@ -116,28 +104,13 @@ class A extends (r = a.Component) {
 				if (null == e) return;
 				(this.canvas = e), (this.canvasContext = this.canvas.getContext('2d'));
 				let n = null !== (t = window.devicePixelRatio) && void 0 !== t ? t : 1,
-					r =
-						this.canvasContext.webkitBackingStorePixelRatio ||
-						this.canvasContext.mozBackingStorePixelRatio ||
-						this.canvasContext.msBackingStorePixelRatio ||
-						this.canvasContext.oBackingStorePixelRatio ||
-						this.canvasContext.backingStorePixelRatio ||
-						1;
+					r = this.canvasContext.webkitBackingStorePixelRatio || this.canvasContext.mozBackingStorePixelRatio || this.canvasContext.msBackingStorePixelRatio || this.canvasContext.oBackingStorePixelRatio || this.canvasContext.backingStorePixelRatio || 1;
 				(this.ratio = n / r), this.resizeCanvas();
 			}),
 			T(this, 'resizeCanvas', () => {
 				(this.width = window.innerWidth), (this.height = window.innerHeight);
 				let { canvas: e, canvasContext: t, width: n, height: r, ratio: i } = this;
-				null != e &&
-					null != t &&
-					((e.width = n * i),
-					(e.height = r * i),
-					(e.style.width = n + 'px'),
-					(e.style.height = r + 'px'),
-					t.scale(i, i)),
-					n <= g ? this.pause() : this.play(),
-					this.wave.resizeWave(),
-					this.renderAnimation();
+				null != e && null != t && ((e.width = n * i), (e.height = r * i), (e.style.width = n + 'px'), (e.style.height = r + 'px'), t.scale(i, i)), n <= g ? this.pause() : this.play(), this.wave.resizeWave(), this.renderAnimation();
 			}),
 			T(this, 'handleVisibilityChange', () => {
 				document.hidden ? this.delayedPause() : this.play();
@@ -146,11 +119,7 @@ class A extends (r = a.Component) {
 				clearTimeout(this._pauseTimeout), !this._isPlaying && ((this._isPlaying = !0), this.run());
 			}),
 			T(this, 'pause', () => {
-				clearTimeout(this._pauseTimeout),
-					(this._isPlaying = !1),
-					null != this._reqAnimId && window.cancelAnimationFrame(this._reqAnimId),
-					(this._reqAnimId = null),
-					this.advanceTransitionalState();
+				clearTimeout(this._pauseTimeout), (this._isPlaying = !1), null != this._reqAnimId && window.cancelAnimationFrame(this._reqAnimId), (this._reqAnimId = null), this.advanceTransitionalState();
 			}),
 			T(this, 'delayedPause', () => {
 				clearTimeout(this._pauseTimeout), (this._pauseTimeout = setTimeout(this.pause, 4000));

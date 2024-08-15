@@ -25,12 +25,7 @@ function p(e) {
 	let t = I[e];
 	if (null == t) return !1;
 	let n = t.gameId;
-	return (
-		null != m[n] && ((m = { ...m }), delete m[n][e], 0 === Object.values(m[n]).length && delete m[n]),
-		(I = { ...I }),
-		delete I[e],
-		!0
-	);
+	return null != m[n] && ((m = { ...m }), delete m[n][e], 0 === Object.values(m[n]).length && delete m[n]), (I = { ...I }), delete I[e], !0;
 }
 function T(e) {
 	let { user: t, activities: n } = e;
@@ -46,10 +41,7 @@ function T(e) {
 				if (null == r) return p(t.id);
 				let l = I[t.id];
 				null != l && l.gameId !== r && p(t.id);
-				let o =
-						null !== (i = null === (n = e.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== i
-							? i
-							: Date.now(),
+				let o = null !== (i = null === (n = e.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== i ? i : Date.now(),
 					d = {
 						userId: t.id,
 						activity: e,

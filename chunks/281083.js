@@ -17,9 +17,7 @@ function c(e) {
 		if (null == r || null == i || null != r.error) continue;
 		let a = (function (e) {
 			var t, n;
-			return ''
-				.concat(null !== (t = e.major) && void 0 !== t ? t : 0, '.')
-				.concat(null !== (n = e.minor) && void 0 !== n ? n : 0, '.0');
+			return ''.concat(null !== (t = e.major) && void 0 !== t ? t : 0, '.').concat(null !== (n = e.minor) && void 0 !== n ? n : 0, '.0');
 		})(r);
 		if (!o().satisfies(a, i)) return !0;
 	}

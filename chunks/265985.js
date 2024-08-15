@@ -32,10 +32,7 @@ let p = (e) => {
 			E = (() => {
 				var e;
 				if (d) return null;
-				let t =
-					(null == o ? void 0 : null === (e = o.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null
-						? (0, _._W)(o.cover_image_asset.application_id, o.cover_image_asset, 440)
-						: void 0;
+				let t = (null == o ? void 0 : null === (e = o.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null ? (0, _._W)(o.cover_image_asset.application_id, o.cover_image_asset, 440) : void 0;
 				return null == t && a !== u.h8.CONFIRM
 					? null
 					: null == t
@@ -88,9 +85,7 @@ let p = (e) => {
 					className: C.confirmationHeader,
 					variant: 'heading-xl/semibold',
 					color: 'header-secondary',
-					children: f.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_TITLE.format({
-						serverName: null == s ? void 0 : s.toString()
-					})
+					children: f.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_TITLE.format({ serverName: null == s ? void 0 : s.toString() })
 				}),
 				(0, i.jsx)(l.Text, {
 					className: C.confirmationSubtitle,
@@ -150,16 +145,12 @@ let p = (e) => {
 												variant: 'text-md/medium',
 												color: 'header-primary',
 												className: C.emojiName,
-												children:
-													f.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_PREMIUM_EMOJI_BENEFIT_TEXT
+												children: f.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_PREMIUM_EMOJI_BENEFIT_TEXT
 											}),
 											(0, i.jsx)(l.Text, {
 												color: 'interactive-normal',
 												variant: 'text-sm/normal',
-												children:
-													f.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_PREMIUM_EMOJI_BENEFIT_DESCRIPTION.format(
-														{ count: c.length }
-													)
+												children: f.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_PREMIUM_EMOJI_BENEFIT_DESCRIPTION.format({ count: c.length })
 											})
 										]
 									})

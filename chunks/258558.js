@@ -38,10 +38,8 @@ n(653041),
 			a.webkitMeasure ||
 			function (e, t, n) {
 				var r, i;
-				if (void 0 !== n && void 0 === o[n])
-					throw SyntaxError("Failed to execute 'measure' on 'Performance': The mark '" + n + "' does not exist.");
-				if (void 0 !== t && void 0 === o[t])
-					throw SyntaxError("Failed to execute 'measure' on 'Performance': The mark '" + t + "' does not exist.");
+				if (void 0 !== n && void 0 === o[n]) throw SyntaxError("Failed to execute 'measure' on 'Performance': The mark '" + n + "' does not exist.");
+				if (void 0 !== t && void 0 === o[t]) throw SyntaxError("Failed to execute 'measure' on 'Performance': The mark '" + t + "' does not exist.");
 				(r = o[t] ? o[t].startTime : 0),
 					(i = o[n] ? o[n].startTime : a.now()),
 					s.push({

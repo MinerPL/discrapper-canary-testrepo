@@ -51,13 +51,7 @@ if ('object' == typeof document) {
 			if ((c || !e) && (void 0 === e || 'object' == typeof e))
 				try {
 					var t = l.call(e);
-					return (
-						('[object HTMLAllCollection]' === t ||
-							'[object HTML document.all class]' === t ||
-							'[object HTMLCollection]' === t ||
-							'[object Object]' === t) &&
-						null == e('')
-					);
+					return ('[object HTMLAllCollection]' === t || '[object HTML document.all class]' === t || '[object HTMLCollection]' === t || '[object Object]' === t) && null == e('');
 				} catch (e) {}
 			return !1;
 		});

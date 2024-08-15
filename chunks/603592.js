@@ -10,24 +10,7 @@ var i = n(735250),
 	d = n(662146),
 	h = n(653890);
 let p = l.forwardRef(function (e, t) {
-	let {
-			id: n,
-			onClick: r,
-			onContextMenu: p,
-			icon: _,
-			selected: f,
-			tooltip: g,
-			upperBadge: m,
-			lowerBadge: C,
-			lowerBadgeSize: I,
-			showPill: E = !0,
-			className: N,
-			'aria-label': x,
-			children: S,
-			onMouseEnter: v,
-			onMouseLeave: Z,
-			onMouseDown: T
-		} = e,
+	let { id: n, onClick: r, onContextMenu: p, icon: _, selected: f, tooltip: g, upperBadge: m, lowerBadge: C, lowerBadgeSize: I, showPill: E = !0, className: N, 'aria-label': x, children: S, onMouseEnter: v, onMouseLeave: Z, onMouseDown: T } = e,
 		L = (0, s.Ie)(n),
 		[A, b] = l.useState(!1),
 		M = 'string' == typeof g && null == x ? g : x;

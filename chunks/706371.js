@@ -77,16 +77,7 @@ function c(e, t) {
 	);
 }
 function d(e) {
-	let {
-			guildId: t,
-			selectedChannelIds: n,
-			onChange: a,
-			placeholder: i,
-			includeRoleRestrictedPrivateChannels: r = !1,
-			includeStageVoiceChannels: o = !1,
-			helperText: d,
-			className: u
-		} = e,
+	let { guildId: t, selectedChannelIds: n, onChange: a, placeholder: i, includeRoleRestrictedPrivateChannels: r = !1, includeStageVoiceChannels: o = !1, helperText: d, className: u } = e,
 		_ = c(t, n, r, o);
 	return (0, s.jsx)(l.ZP, {
 		channelRows: _,

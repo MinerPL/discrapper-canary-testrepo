@@ -27,9 +27,7 @@ t.Z = new (class e {
 	initialize() {
 		this.cleanup(), (this.unlistenHistory = (0, c.s1)().listen(this.handleRouteChange));
 		let { pathname: e } = (0, c.s1)().location;
-		d.Z.getState().resetPath(e),
-			(this.unlistenKeyboardChange = d.Z.subscribe(this.handleKeybindRouteChange)),
-			l.Z.addChangeListener(this.handleConnectionChange);
+		d.Z.getState().resetPath(e), (this.unlistenKeyboardChange = d.Z.subscribe(this.handleKeybindRouteChange)), l.Z.addChangeListener(this.handleConnectionChange);
 	}
 	convertRouteToNavigation(e, t) {
 		var n;
@@ -46,11 +44,7 @@ t.Z = new (class e {
 			return;
 		}
 		if (i.startsWith('/channels/')) {
-			let t = (0, r.LX)(i, {
-				path: ''
-					.concat(g.Z5c.CHANNEL(':guildId', ':channelId?'))
-					.concat(g.Z5c.VOICE_CHAT_CHANNEL_PARTIAL(':voiceGuildId', ':voiceChannelId', ':voiceMessageId?'))
-			});
+			let t = (0, r.LX)(i, { path: ''.concat(g.Z5c.CHANNEL(':guildId', ':channelId?')).concat(g.Z5c.VOICE_CHAT_CHANNEL_PARTIAL(':voiceGuildId', ':voiceChannelId', ':voiceMessageId?')) });
 			if (null != t) {
 				let { voiceGuildId: e, voiceChannelId: n, voiceMessageId: i } = t.params;
 				!(0, h.ur)() &&
@@ -159,18 +153,10 @@ t.Z = new (class e {
 	}
 	cleanup() {
 		var e, t;
-		null === (e = this.unlistenHistory) || void 0 === e || e.call(this),
-			(this.unlistenHistory = void 0),
-			null === (t = this.unlistenKeyboardChange) || void 0 === t || t.call(this),
-			(this.unlistenKeyboardChange = void 0),
-			l.Z.removeChangeListener(this.handleConnectionChange);
+		null === (e = this.unlistenHistory) || void 0 === e || e.call(this), (this.unlistenHistory = void 0), null === (t = this.unlistenKeyboardChange) || void 0 === t || t.call(this), (this.unlistenKeyboardChange = void 0), l.Z.removeChangeListener(this.handleConnectionChange);
 	}
 	addRouteChangeListener(e) {
-		return (
-			null != this.unlistenHistory && e((0, c.s1)().location, 'REPLACE'),
-			this.listeners.add(e),
-			() => this.removeRouteChangeListener(e)
-		);
+		return null != this.unlistenHistory && e((0, c.s1)().location, 'REPLACE'), this.listeners.add(e), () => this.removeRouteChangeListener(e);
 	}
 	addRouteRewriter(e) {
 		if (null != this.unlistenHistory) {
@@ -199,8 +185,7 @@ t.Z = new (class e {
 			f(this, 'handleConnectionChange', () => {
 				let e = l.Z.isConnected(),
 					t = e && !this.connected;
-				(this.connected = e),
-					t && ((this.routeChangeCount = 0), this.executeRouteRewrites((0, c.s1)().location, 'REPLACE'));
+				(this.connected = e), t && ((this.routeChangeCount = 0), this.executeRouteRewrites((0, c.s1)().location, 'REPLACE'));
 			}),
 			f(this, 'handleRouteChange', (e, t) => {
 				if (this.executeRouteRewrites(e, t)) return;
@@ -215,9 +200,7 @@ t.Z = new (class e {
 			}),
 			f(this, 'handleKeybindRouteChange', (e) => {
 				let { path: t } = e;
-				null != t
-					? (clearTimeout(this.timer), (this.timer = setTimeout(this.flushRoute, 200)))
-					: null == t && clearTimeout(this.timer);
+				null != t ? (clearTimeout(this.timer), (this.timer = setTimeout(this.flushRoute, 200))) : null == t && clearTimeout(this.timer);
 			}),
 			f(this, 'flushRoute', () => {
 				clearTimeout(this.timer);

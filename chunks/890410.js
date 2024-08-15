@@ -13,17 +13,7 @@ var a = n(120356),
 	c = n(464891),
 	u = n(612950);
 function d(e) {
-	let {
-			message: t,
-			channel: n,
-			content: a,
-			className: d,
-			compact: _,
-			popoutProps: E,
-			hideTimestamp: I = !1,
-			withFooter: m = !1,
-			...T
-		} = e,
+	let { message: t, channel: n, content: a, className: d, compact: _, popoutProps: E, hideTimestamp: I = !1, withFooter: m = !1, ...T } = e,
 		h = (0, r.ZP)(t);
 	return (0, i.jsx)('div', {
 		className: s()({ [u.withFooter]: m }, u.embedCard, { [u.compact]: _ }, d),

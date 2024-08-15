@@ -13,16 +13,16 @@ var r,
 let f = new Set([E.ABu.CONTACTS]),
 	h = !0,
 	p = [],
-	I = [],
-	m = {},
+	m = [],
+	I = {},
 	T = {},
 	g = {},
 	S = (e) => {
-		(p = e.filter((e) => !f.has(e.type) && c.Z.isSupported(e.type))), (I = e.filter((e) => f.has(e.type))), (h = !1);
+		(p = e.filter((e) => !f.has(e.type) && c.Z.isSupported(e.type))), (m = e.filter((e) => f.has(e.type))), (h = !1);
 	};
 class A extends (r = o.ZP.Store) {
 	isJoining(e) {
-		return m[e] || !1;
+		return I[e] || !1;
 	}
 	joinErrorMessage(e) {
 		return g[e];
@@ -34,13 +34,13 @@ class A extends (r = o.ZP.Store) {
 		return p;
 	}
 	getLocalAccounts() {
-		return I;
+		return m;
 	}
 	getAccount(e, t) {
 		return p.find((n) => (null == e || n.id === e) && n.type === t);
 	}
 	getLocalAccount(e) {
-		return I.find((t) => t.type === e);
+		return m.find((t) => t.type === e);
 	}
 	isSuggestedAccountType(e) {
 		return T[e] || !1;
@@ -76,7 +76,7 @@ class A extends (r = o.ZP.Store) {
 				: u.Z.fetch();
 		},
 		USER_CONNECTIONS_INTEGRATION_JOINING: function (e) {
-			m[e.integrationId] = e.joining;
+			I[e.integrationId] = e.joining;
 		},
 		USER_CONNECTION_UPDATE: function (e) {
 			let { platformType: t, id: n, revoked: r, accessToken: i } = e,

@@ -348,15 +348,7 @@ function B() {
 					: (t) => {
 							if (null == t || 0 === e.trim().length) return !1;
 							let [[n], s] = (0, g.C)(e);
-							return (
-								!!s.includes(t.id) ||
-								(null != n &&
-									(!!(
-										t.username.toLowerCase().includes(n.toLowerCase()) ||
-										(null != t.globalName && t.globalName.toLowerCase().includes(n.toLowerCase()))
-									) ||
-										!1))
-							);
+							return !!s.includes(t.id) || (null != n && (!!(t.username.toLowerCase().includes(n.toLowerCase()) || (null != t.globalName && t.globalName.toLowerCase().includes(n.toLowerCase()))) || !1));
 						},
 			[]
 		),
@@ -398,16 +390,7 @@ function B() {
 		w = a.useCallback(
 			(e) => {
 				var t, n, s;
-				if (
-					(null === (t = f.current) || void 0 === t || t.scrollToSectionTop(0),
-					(e + 1) * B.pageSize > M.length &&
-						b &&
-						!I &&
-						((H.current =
-							null !== (s = null === (n = M[M.length - 1]) || void 0 === n ? void 0 : n.id) && void 0 !== s ? s : null),
-						F(H.current)),
-					null != k[e - 1] || !!b)
-				)
+				if ((null === (t = f.current) || void 0 === t || t.scrollToSectionTop(0), (e + 1) * B.pageSize > M.length && b && !I && ((H.current = null !== (s = null === (n = M[M.length - 1]) || void 0 === n ? void 0 : n.id) && void 0 !== s ? s : null), F(H.current)), null != k[e - 1] || !!b))
 					y((t) => ({
 						...t,
 						currentPage: e

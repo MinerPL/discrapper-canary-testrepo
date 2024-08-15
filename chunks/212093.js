@@ -17,7 +17,7 @@ n.d(t, {
 	bR: function () {
 		return function e(t, n) {
 			let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-				{ categoryId: i = h.Hk, preferredLocale: a, offset: d, length: p, tag: I } = n,
+				{ categoryId: i = h.Hk, preferredLocale: a, offset: d, length: p, tag: m } = n,
 				T = c.ZP.getSearchIndex();
 			if (null == T) return;
 			r &&
@@ -33,15 +33,14 @@ n.d(t, {
 							tag: o
 						}),
 						d = l.location.search;
-					(!(null != d && d.length > 0 && d.startsWith('?')) || (d.startsWith('?') && d.split('?')[1] !== c)) &&
-						(0, u.uL)(f.Z5c.GUILD_DISCOVERY, { search: c });
+					(!(null != d && d.length > 0 && d.startsWith('?')) || (d.startsWith('?') && d.split('?')[1] !== c)) && (0, u.uL)(f.Z5c.GUILD_DISCOVERY, { search: c });
 				})({
 					query: t,
 					preferredLocale: a,
 					offset: d,
 					limit: p,
 					categoryId: i,
-					tag: I
+					tag: m
 				}),
 				l.Z.dispatch({
 					type: 'GUILD_DISCOVERY_SEARCH_FETCH_START',
@@ -49,7 +48,7 @@ n.d(t, {
 					query: t,
 					categoryId: i
 				});
-			let g = Object.assign({}, m, n.filters),
+			let g = Object.assign({}, I, n.filters),
 				S = Object.keys(g).map((e) => ''.concat(e).concat(g[e]));
 			i !== h.Hk && S.push('(primary_category_id='.concat(i, ' OR categories.id=').concat(i, ')'));
 			let A = S.join(' AND ');
@@ -59,16 +58,7 @@ n.d(t, {
 						optionalFilters: ['preferred_locale: '.concat(a)],
 						length: p,
 						offset: d,
-						restrictSearchableAttributes: [
-							'name',
-							'description',
-							'keywords',
-							'categories.name',
-							'categories.name_localizations.'.concat(a),
-							'primary_category.name',
-							'primary_category.name_localizations.'.concat(a),
-							'vanity_url_code'
-						]
+						restrictSearchableAttributes: ['name', 'description', 'keywords', 'categories.name', 'categories.name_localizations.'.concat(a), 'primary_category.name', 'primary_category.name_localizations.'.concat(a), 'vanity_url_code']
 					}),
 					u = o.tn.get({
 						url: f.ANM.GUILD_DISCOVERY_VALID_TERM,
@@ -148,20 +138,15 @@ var r = n(807034),
 	f = n(981631),
 	h = n(731455);
 let p = window.GLOBAL_ENV.ALGOLIA_KEY,
-	I =
-		'production' === window.GLOBAL_ENV.PROJECT_ENV
-			? 'prod_discoverable_guilds'
-			: 'staging' === window.GLOBAL_ENV.PROJECT_ENV
-				? 'stg_discoverable_guilds'
-				: 'dev_discoverable_guilds',
-	m = {
+	m = 'production' === window.GLOBAL_ENV.PROJECT_ENV ? 'prod_discoverable_guilds' : 'staging' === window.GLOBAL_ENV.PROJECT_ENV ? 'stg_discoverable_guilds' : 'dev_discoverable_guilds',
+	I = {
 		'auto_removed:': !1,
 		approximate_presence_count: '> 0',
 		approximate_member_count: '> 0'
 	};
 function T() {
 	if (null == p) return;
-	let e = a()('NKTZZ4AIZU', p, { responsesCache: (0, r.A)() }).initIndex(I);
+	let e = a()('NKTZZ4AIZU', p, { responsesCache: (0, r.A)() }).initIndex(m);
 	l.Z.wait(() =>
 		l.Z.dispatch({
 			type: 'GUILD_DISCOVERY_SEARCH_INIT',
@@ -172,7 +157,7 @@ function T() {
 function g(e, t) {
 	let n = c.ZP.getSearchIndex();
 	if (null == n) return;
-	let r = Object.assign({}, m, t),
+	let r = Object.assign({}, I, t),
 		i = Object.keys(r).map((e) => ''.concat(e).concat(r[e]));
 	try {
 		let t = n.search(e, {

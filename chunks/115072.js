@@ -371,11 +371,7 @@ function C(e) {
 												ref: M,
 												onChange: (e) => {
 													var t, n;
-													(null === (n = e.currentTarget) || void 0 === n
-														? void 0
-														: null === (t = n.files) || void 0 === t
-															? void 0
-															: t[0]) != null &&
+													(null === (n = e.currentTarget) || void 0 === n ? void 0 : null === (t = n.files) || void 0 === t ? void 0 : t[0]) != null &&
 														k([
 															...F,
 															...Array.from(e.currentTarget.files).map(

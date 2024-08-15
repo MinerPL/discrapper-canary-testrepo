@@ -39,14 +39,7 @@ function p(e) {
 	switch (n) {
 		case h.x_.OPEN:
 			return (0, i.jsxs)(i.Fragment, {
-				children: [
-					null != o
-						? g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING_OR_SCHEDULED_WITH_DATE.format({
-								payoutDate: o
-							})
-						: g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING,
-					(0, i.jsx)(E.Z, { className: C.statusScheduledIcon })
-				]
+				children: [null != o ? g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING_OR_SCHEDULED_WITH_DATE.format({ payoutDate: o }) : g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING, (0, i.jsx)(E.Z, { className: C.statusScheduledIcon })]
 			});
 		case h.x_.CANCELED:
 			return (0, i.jsxs)(i.Fragment, {
@@ -72,10 +65,7 @@ function p(e) {
 					]
 				});
 			return (0, i.jsxs)(i.Fragment, {
-				children: [
-					g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_DEFERRED,
-					(0, i.jsx)(T.Z, { className: C.statusDeferredIcon })
-				]
+				children: [g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_DEFERRED, (0, i.jsx)(T.Z, { className: C.statusDeferredIcon })]
 			});
 	}
 	switch (s) {
@@ -88,14 +78,7 @@ function p(e) {
 		case h.jw.CANCELED:
 		case h.jw.ERROR:
 			return (0, i.jsxs)(i.Fragment, {
-				children: [
-					null != o
-						? g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING_OR_SCHEDULED_WITH_DATE.format({
-								payoutDate: o
-							})
-						: g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_SCHEDULED,
-					(0, i.jsx)(E.Z, { className: C.statusScheduledIcon })
-				]
+				children: [null != o ? g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_PENDING_OR_SCHEDULED_WITH_DATE.format({ payoutDate: o }) : g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_STATUS_SCHEDULED, (0, i.jsx)(E.Z, { className: C.statusScheduledIcon })]
 			});
 		case h.jw.PAID:
 			return (0, i.jsxs)(i.Fragment, {

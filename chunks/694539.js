@@ -1,20 +1,4 @@
-t(47120),
-	t(642549),
-	t(518263),
-	t(970173),
-	t(520712),
-	t(268111),
-	t(941497),
-	t(32026),
-	t(480839),
-	t(744285),
-	t(492257),
-	t(873817),
-	t(315314),
-	t(610138),
-	t(216116),
-	t(78328),
-	t(815648);
+t(47120), t(642549), t(518263), t(970173), t(520712), t(268111), t(941497), t(32026), t(480839), t(744285), t(492257), t(873817), t(315314), t(610138), t(216116), t(78328), t(815648);
 var n = t(735250),
 	a = t(470079),
 	i = t(120356),
@@ -239,8 +223,7 @@ s.Z = (e) => {
 											(0, n.jsx)(c.Button, {
 												color: c.ButtonColors.BRAND,
 												onClick: () => {
-													(0, u.JG)((0, T.HV)(L, 'proto')),
-														(0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
+													(0, u.JG)((0, T.HV)(L, 'proto')), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
 												},
 												children: 'Export'
 											})

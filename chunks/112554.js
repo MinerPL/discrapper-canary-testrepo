@@ -24,10 +24,7 @@ let r = (e, n, t) => {
 							},
 							(0, l.HH)(o)
 						);
-		return null !== (s = null == o ? void 0 : null === (r = o.attachments) || void 0 === r ? void 0 : r.filter(u)) &&
-			void 0 !== s
-			? s
-			: [];
+		return null !== (s = null == o ? void 0 : null === (r = o.attachments) || void 0 === r ? void 0 : r.filter(u)) && void 0 !== s ? s : [];
 	},
 	s = (e, n, t) => {
 		var r, s;
@@ -44,8 +41,5 @@ let r = (e, n, t) => {
 							},
 							(0, l.HH)(o)
 						);
-		return null !== (s = null == o ? void 0 : null === (r = o.embeds) || void 0 === r ? void 0 : r.filter(u)) &&
-			void 0 !== s
-			? s
-			: [];
+		return null !== (s = null == o ? void 0 : null === (r = o.embeds) || void 0 === r ? void 0 : r.filter(u)) && void 0 !== s ? s : [];
 	};

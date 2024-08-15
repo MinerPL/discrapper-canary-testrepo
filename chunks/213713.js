@@ -67,10 +67,7 @@ function I(e) {
 	var r, t;
 	let { type: n } = e,
 		i = (0, d.e7)([_.Z], () => _.Z.getFilters()),
-		o =
-			null !== (t = null == i ? void 0 : null === (r = i.types) || void 0 === r ? void 0 : r.has(n)) &&
-			void 0 !== t &&
-			t;
+		o = null !== (t = null == i ? void 0 : null === (r = i.types) || void 0 === r ? void 0 : r.has(n)) && void 0 !== t && t;
 	return (0, a.jsx)(h.Checkbox, {
 		value: o,
 		onClick: function () {
@@ -111,13 +108,7 @@ function E() {
 			[x.Z, g.Z],
 			() => {
 				var e, r, t;
-				return parseInt(E) > 0
-					? E
-					: null !== (t = null === (e = x.Z.getGameByName(E)) || void 0 === e ? void 0 : e.id) && void 0 !== t
-						? t
-						: null === (r = g.Z.getApplicationByName(E)) || void 0 === r
-							? void 0
-							: r.id;
+				return parseInt(E) > 0 ? E : null !== (t = null === (e = x.Z.getGameByName(E)) || void 0 === e ? void 0 : e.id) && void 0 !== t ? t : null === (r = g.Z.getApplicationByName(E)) || void 0 === r ? void 0 : r.id;
 			},
 			[E]
 		),
@@ -211,17 +202,10 @@ function E() {
 							onKeyDown: (e) => {
 								'Enter' === e.key && (E === e.currentTarget.value ? null == A || A() : R(e.currentTarget.value));
 							},
-							error:
-								E.length > 0 && null == A
-									? 'No game profile for '.concat(null != O ? O : E + ' - try by id', '.')
-									: void 0,
+							error: E.length > 0 && null == A ? 'No game profile for '.concat(null != O ? O : E + ' - try by id', '.') : void 0,
 							style: null != A ? { border: '1px solid green' } : {}
 						}),
-						(0, a.jsx)('ul', {
-							children: L.map((e) =>
-								(0, a.jsx)('li', { children: (0, a.jsx)(Z, { application: e }) }, 'follow-game-'.concat(e.id))
-							)
-						})
+						(0, a.jsx)('ul', { children: L.map((e) => (0, a.jsx)('li', { children: (0, a.jsx)(Z, { application: e }) }, 'follow-game-'.concat(e.id))) })
 					]
 				})
 			]

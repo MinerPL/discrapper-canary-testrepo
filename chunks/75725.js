@@ -4,9 +4,5 @@ n.d(t, {
 	}
 });
 var r = function (e, t) {
-	(this.activeTargets = []),
-		(this.skippedTargets = []),
-		(this.observationTargets = []),
-		(this.observer = e),
-		(this.callback = t);
+	(this.activeTargets = []), (this.skippedTargets = []), (this.observationTargets = []), (this.observer = e), (this.callback = t);
 };

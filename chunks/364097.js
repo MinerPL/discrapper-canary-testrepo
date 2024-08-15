@@ -20,10 +20,7 @@ function E(e) {
 		I = (0, a.e7)([o.Z], () => o.Z.getGuildTemplate(E));
 	if (null == I || I.state === c.Rj.RESOLVING)
 		return (0, i.jsxs)(r.Z, {
-			children: [
-				(0, i.jsx)(r.Z.Header, { text: u.Z.Messages.GUILD_TEMPLATE_RESOLVING_TITLE }),
-				(0, i.jsx)(r.Z.Body, { resolving: !0 })
-			]
+			children: [(0, i.jsx)(r.Z.Header, { text: u.Z.Messages.GUILD_TEMPLATE_RESOLVING_TITLE }), (0, i.jsx)(r.Z.Body, { resolving: !0 })]
 		});
 	if (I.state === c.Rj.EXPIRED)
 		return (0, i.jsxs)(r.Z, {
@@ -72,9 +69,7 @@ function E(e) {
 							(0, i.jsx)(l.Z, { className: d.icon }),
 							(0, i.jsx)(r.Z.Info, {
 								title: I.name,
-								children: u.Z.Messages.GUILD_TEMPLATE_USAGES.format({
-									usageCount: String(null !== (t = I.usageCount) && void 0 !== t ? t : 0)
-								})
+								children: u.Z.Messages.GUILD_TEMPLATE_USAGES.format({ usageCount: String(null !== (t = I.usageCount) && void 0 !== t ? t : 0) })
 							})
 						]
 					}),

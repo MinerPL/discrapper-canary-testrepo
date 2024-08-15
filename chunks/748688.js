@@ -47,21 +47,12 @@ let R = String(0),
 	d = '',
 	N = (l.m9.navigator && l.m9.navigator.userAgent) || '',
 	p = '',
-	O =
-		(l.m9.navigator && l.m9.navigator.language) ||
-		(l.m9.navigator && l.m9.navigator.languages && l.m9.navigator.languages['0']) ||
-		'',
+	O = (l.m9.navigator && l.m9.navigator.language) || (l.m9.navigator && l.m9.navigator.languages && l.m9.navigator.languages['0']) || '',
 	f = l.m9.navigator && l.m9.navigator.userAgentData;
 if ('object' == typeof (n = f) && null !== n && 'getHighEntropyValues' in n)
 	f.getHighEntropyValues(['architecture', 'model', 'platform', 'platformVersion', 'fullVersionList'])
 		.then((e) => {
-			if (
-				((A = e.platform || ''),
-				(d = e.architecture || ''),
-				(p = e.model || ''),
-				(T = e.platformVersion || ''),
-				e.fullVersionList && e.fullVersionList.length > 0)
-			) {
+			if (((A = e.platform || ''), (d = e.architecture || ''), (p = e.model || ''), (T = e.platformVersion || ''), e.fullVersionList && e.fullVersionList.length > 0)) {
 				let t = e.fullVersionList[e.fullVersionList.length - 1];
 				N = `${t.brand} ${t.version}`;
 			}
@@ -94,8 +85,7 @@ let h = new WeakMap(),
 function M() {
 	let e = l.m9.Profiler;
 	if ('function' != typeof e) {
-		u.X &&
-			_.kg.log('[Profiling] Profiling is not supported by this browser, Profiler interface missing on window object.');
+		u.X && _.kg.log('[Profiling] Profiling is not supported by this browser, Profiler interface missing on window object.');
 		return;
 	}
 	let t = Math.floor(g / 10);
@@ -105,71 +95,28 @@ function M() {
 			maxBufferSize: t
 		});
 	} catch (e) {
-		u.X &&
-			(_.kg.log(
-				"[Profiling] Failed to initialize the Profiling constructor, this is likely due to a missing 'Document-Policy': 'js-profiling' header."
-			),
-			_.kg.log('[Profiling] Disabling profiling for current user session.')),
-			(C = !0);
+		u.X && (_.kg.log("[Profiling] Failed to initialize the Profiling constructor, this is likely due to a missing 'Document-Policy': 'js-profiling' header."), _.kg.log('[Profiling] Disabling profiling for current user session.')), (C = !0);
 	}
 }
 function P(e) {
 	var t;
-	if (C)
-		return u.X && _.kg.log('[Profiling] Profiling has been disabled for the duration of the current user session.'), !1;
-	if (!e.isRecording())
-		return u.X && _.kg.log('[Profiling] Discarding profile because transaction was not sampled.'), !1;
+	if (C) return u.X && _.kg.log('[Profiling] Profiling has been disabled for the duration of the current user session.'), !1;
+	if (!e.isRecording()) return u.X && _.kg.log('[Profiling] Discarding profile because transaction was not sampled.'), !1;
 	let r = (0, i.s3)(),
 		n = r && r.getOptions();
 	if (!n) return u.X && _.kg.log('[Profiling] Profiling disabled, no options found.'), !1;
 	let a = n.profilesSampleRate;
-	return (
-		('number' != typeof (t = a) && 'boolean' != typeof t) || ('number' == typeof t && isNaN(t))
-			? (u.X &&
-					_.kg.warn(
-						`[Profiling] Invalid sample rate. Sample rate must be a boolean or a number between 0 and 1. Got ${JSON.stringify(t)} of type ${JSON.stringify(typeof t)}.`
-					),
-				!1)
-			: !0 === t ||
-				!1 === t ||
-				(!(t < 0) && !(t > 1)) ||
-				(u.X && _.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be between 0 and 1. Got ${t}.`), !1)
-	)
-		? a
-			? !!(!0 === a || Math.random() < a) ||
-				(u.X &&
-					_.kg.log(
-						`[Profiling] Discarding profile because it's not included in the random sample (sampling rate = ${Number(a)})`
-					),
-				!1)
-			: (u.X &&
-					_.kg.log(
-						'[Profiling] Discarding profile because a negative sampling decision was inherited or profileSampleRate is set to 0'
-					),
-				!1)
-		: (u.X && _.kg.warn('[Profiling] Discarding profile because of invalid sample rate.'), !1);
+	return (('number' != typeof (t = a) && 'boolean' != typeof t) || ('number' == typeof t && isNaN(t)) ? (u.X && _.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be a boolean or a number between 0 and 1. Got ${JSON.stringify(t)} of type ${JSON.stringify(typeof t)}.`), !1) : !0 === t || !1 === t || (!(t < 0) && !(t > 1)) || (u.X && _.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be between 0 and 1. Got ${t}.`), !1)) ? (a ? !!(!0 === a || Math.random() < a) || (u.X && _.kg.log(`[Profiling] Discarding profile because it's not included in the random sample (sampling rate = ${Number(a)})`), !1) : (u.X && _.kg.log('[Profiling] Discarding profile because a negative sampling decision was inherited or profileSampleRate is set to 0'), !1)) : (u.X && _.kg.warn('[Profiling] Discarding profile because of invalid sample rate.'), !1);
 }
 function m(e, t, r, n) {
 	var o;
-	return (
-		(o = r).samples.length < 2
-			? (u.X && _.kg.log('[Profiling] Discarding profile because it contains less than 2 samples'), !1)
-			: !!o.frames.length || (u.X && _.kg.log('[Profiling] Discarding profile because it contains no frames'), !1)
-	)
+	return ((o = r).samples.length < 2 ? (u.X && _.kg.log('[Profiling] Discarding profile because it contains less than 2 samples'), !1) : !!o.frames.length || (u.X && _.kg.log('[Profiling] Discarding profile because it contains no frames'), !1))
 		? (function (e, t, r, n) {
-				if ('transaction' !== n.type)
-					throw TypeError('Profiling events may only be attached to transactions, this should never occur.');
-				if (null == r)
-					throw TypeError(`Cannot construct profiling event envelope without a valid profile. Got ${r} instead.`);
+				if ('transaction' !== n.type) throw TypeError('Profiling events may only be attached to transactions, this should never occur.');
+				if (null == r) throw TypeError(`Cannot construct profiling event envelope without a valid profile. Got ${r} instead.`);
 				let o = (function (e) {
 						let t = e && e.contexts && e.contexts.trace && e.contexts.trace.trace_id;
-						return ('string' == typeof t &&
-							32 !== t.length &&
-							u.X &&
-							_.kg.log(`[Profiling] Invalid traceId: ${t} on profiled event`),
-						'string' != typeof t)
-							? ''
-							: t;
+						return ('string' == typeof t && 32 !== t.length && u.X && _.kg.log(`[Profiling] Invalid traceId: ${t} on profiled event`), 'string' != typeof t) ? '' : t;
 					})(n),
 					c = (function (e) {
 						return 'thread_metadata' in e

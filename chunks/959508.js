@@ -26,18 +26,7 @@ var s = n(735250),
 let x = { optionErrors: [] };
 function p(e) {
 	var t;
-	let {
-			guild: n,
-			prompt: i,
-			disableAutofocus: d,
-			promptIndex: S,
-			dragIndex: p,
-			includeCount: L,
-			singleColumn: O,
-			onPromptDragComplete: A,
-			onPromptDragStart: M,
-			onPromptDragReset: D
-		} = e,
+	let { guild: n, prompt: i, disableAutofocus: d, promptIndex: S, dragIndex: p, includeCount: L, singleColumn: O, onPromptDragComplete: A, onPromptDragStart: M, onPromptDragReset: D } = e,
 		{ dropdownsAllowed: v } = (0, _.Ug)(n.id),
 		j = (0, l.e7)([T.Z], () => T.Z.editedDefaultChannelIds),
 		Z = v ? h.qm : h.M$,
@@ -223,9 +212,7 @@ function p(e) {
 													children: (0, s.jsx)(o.Text, {
 														variant: 'text-sm/normal',
 														color: 'interactive-normal',
-														children: L
-															? g.Z.Messages.ONBOARDING_PROMPT_REQUIRED_LABEL_WITH_COUNT.format({ count: W })
-															: g.Z.Messages.ONBOARDING_PROMPT_REQUIRED_LABEL
+														children: L ? g.Z.Messages.ONBOARDING_PROMPT_REQUIRED_LABEL_WITH_COUNT.format({ count: W }) : g.Z.Messages.ONBOARDING_PROMPT_REQUIRED_LABEL
 													})
 												})
 											: null
@@ -289,12 +276,7 @@ function R(e) {
 			}),
 			(0, s.jsxs)('div', {
 				className: C.examples,
-				children: [
-					l(g.Z.Messages.ONBOARDING_PROMPT_EXAMPLES_1),
-					l(g.Z.Messages.ONBOARDING_PROMPT_EXAMPLES_2),
-					l(g.Z.Messages.ONBOARDING_PROMPT_EXAMPLES_3),
-					l(g.Z.Messages.ONBOARDING_PROMPT_EXAMPLES_4)
-				]
+				children: [l(g.Z.Messages.ONBOARDING_PROMPT_EXAMPLES_1), l(g.Z.Messages.ONBOARDING_PROMPT_EXAMPLES_2), l(g.Z.Messages.ONBOARDING_PROMPT_EXAMPLES_3), l(g.Z.Messages.ONBOARDING_PROMPT_EXAMPLES_4)]
 			})
 		]
 	});
@@ -303,11 +285,7 @@ function f(e) {
 	let { guild: t, prompt: n, promptIndex: a, singleColumn: i, errors: r } = e,
 		{ dropdownsAllowed: l } = (0, _.Ug)(t.id),
 		o = l ? h.qm : h.M$,
-		{
-			handleDragStart: c,
-			handleDragReset: u,
-			handleDragComplete: I
-		} = (0, d.Z)(n.options, (e) => (0, m.Kk)(t, n.id, { options: e }));
+		{ handleDragStart: c, handleDragReset: u, handleDragComplete: I } = (0, d.Z)(n.options, (e) => (0, m.Kk)(t, n.id, { options: e }));
 	return (0, s.jsxs)('div', {
 		className: C.options,
 		children: [

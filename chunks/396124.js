@@ -88,10 +88,7 @@ class s {
 		};
 	}
 	constructor(e, t, n, r = !0) {
-		a(this, 'originalPrefix', void 0),
-			a(this, 'table', void 0),
-			(this.originalPrefix = e),
-			(this.table = new i.i([e], t, n, r));
+		a(this, 'originalPrefix', void 0), a(this, 'table', void 0), (this.originalPrefix = e), (this.table = new i.i([e], t, n, r));
 	}
 }
 class o {

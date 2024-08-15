@@ -98,12 +98,7 @@ n.default = (e) => {
 		(a.useLayoutEffect(() => {
 			var e, n;
 			let t = (null == B ? void 0 : B.recurrence_rule) != null ? 16 : 0;
-			$(
-				(null !== (n = null == q ? void 0 : null === (e = q.current) || void 0 === e ? void 0 : e.offsetHeight) &&
-				void 0 !== n
-					? n
-					: 0) + t
-			);
+			$((null !== (n = null == q ? void 0 : null === (e = q.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== n ? n : 0) + t);
 		}, [q, null == B ? void 0 : B.recurrence_rule]),
 		null == B || null == A || (!G && !O))
 	)

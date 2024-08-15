@@ -27,11 +27,11 @@ function o(e) {
 		});
 	}, [n]);
 	let { focusPath: h } = _,
-		[p, I] = r.useState(!1),
-		[m, T] = r.useState(!1),
+		[p, m] = r.useState(!1),
+		[I, T] = r.useState(!1),
 		[{ onItemFocusMemoizer: g, onItemMouseEnterMemoizer: S }] = r.useState(() => ({
 			onItemFocusMemoizer: new s.$o((e) => () => {
-				I(!0),
+				m(!0),
 					E({
 						type: i.B.SET_FOCUS_PATH,
 						path: e.split('--')
@@ -79,22 +79,19 @@ function o(e) {
 							l(h);
 							return;
 						}
-						let E =
-							((u = null !== (r = e.target.ownerDocument) && void 0 !== r ? r : document),
-							(_ = ((i = t), null != (o = h) ? ''.concat((0, s.qR)(i, o.join('--'))) : i)),
-							u.getElementById(_));
+						let E = ((u = null !== (r = e.target.ownerDocument) && void 0 !== r ? r : document), (_ = ((i = t), null != (o = h) ? ''.concat((0, s.qR)(i, o.join('--'))) : i)), u.getElementById(_));
 						null == E || E.click();
 				}
 			},
 			[f, t, h, l, c]
 		),
 		N = r.useCallback(() => {
-			!p && I(!0);
+			!p && m(!0);
 		}, [p]),
 		v = r.useCallback(
 			(e) => {
 				if (e.target !== e.currentTarget) {
-					if (!e.currentTarget.contains(e.relatedTarget)) p && I(!1);
+					if (!e.currentTarget.contains(e.relatedTarget)) p && m(!1);
 				}
 			},
 			[p]
@@ -104,7 +101,7 @@ function o(e) {
 				type: i.B.SET_FOCUS_PATH,
 				path: []
 			}),
-				I(!1);
+				m(!1);
 		}, []),
 		R = r.useCallback((e) => e.every((e, t) => h[t] === e), [h]),
 		C = r.useCallback(
@@ -128,10 +125,10 @@ function o(e) {
 					tabIndex: -1,
 					'aria-activedescendant': R(n) ? (0, s.qR)(t, h.join('--')) : void 0,
 					focusIndex: _.focusIndex,
-					isUsingKeyboardNavigation: m
+					isUsingKeyboardNavigation: I
 				};
 			},
-			[t, h, R, _.focusIndex, m]
+			[t, h, R, _.focusIndex, I]
 		),
 		D = r.useCallback(
 			(e) => {
@@ -160,8 +157,8 @@ function o(e) {
 			getSubmenuProps: y,
 			getItemProps: D,
 			isFocused: R,
-			isUsingKeyboardNavigation: m
+			isUsingKeyboardNavigation: I
 		}),
-		[f, C, y, D, R, m]
+		[f, C, y, D, R, I]
 	);
 }

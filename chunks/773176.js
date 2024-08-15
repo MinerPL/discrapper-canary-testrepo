@@ -14,8 +14,8 @@ var i = n(735250),
 	_ = n(706140),
 	f = n(543241),
 	E = n(689789),
-	g = n(346610),
-	C = n(868643),
+	C = n(346610),
+	g = n(868643),
 	I = n(245216),
 	x = n(223606),
 	T = n(188597),
@@ -88,15 +88,9 @@ let ei = a.memo(function (e) {
 		children: r.map((e) => {
 			var a;
 			let s = o.find((t) => (0, S.ir)(t.emoji, (0, S.g1)(e))),
-				l =
-					null != s
-						? J.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_REMOVE
-						: J.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_ADD,
+				l = null != s ? J.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_REMOVE : J.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_ADD,
 				r = null == e.id ? e.uniqueName : e.name,
-				c =
-					null != s
-						? J.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_REMOVE_ALLY.format({ emojiName: r })
-						: J.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_ADD_ALLY.format({ emojiName: r });
+				c = null != s ? J.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_REMOVE_ALLY.format({ emojiName: r }) : J.Z.Messages.MESSAGE_HOVER_BAR_REACTION_SUGGESTION_ADD_ALLY.format({ emojiName: r });
 			return (0, i.jsx)(
 				W.sF,
 				{
@@ -166,15 +160,7 @@ function ea(e) {
 			isGuildInviteReminder: eo,
 			isFocused: ec
 		} = (function (e) {
-			let {
-					channel: t,
-					message: n,
-					showEmojiPicker: i,
-					showEmojiBurstPicker: a,
-					showMoreUtilities: s,
-					setPopout: l,
-					isFocused: r
-				} = e,
+			let { channel: t, message: n, showEmojiPicker: i, showEmojiBurstPicker: a, showMoreUtilities: s, setPopout: l, isFocused: r } = e,
 				{ author: o } = n,
 				u = (0, c.e7)([y.Z], () => y.Z.getGuild(t.guild_id), [t.guild_id]),
 				d = (0, c.e7)([L.default], () => L.default.getId()),
@@ -213,12 +199,9 @@ function ea(e) {
 				}),
 				J = t.type === X.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(X.oNc.NEWS) && (H || x) && (0, p.Z)(n),
 				$ = t.getGuildId(),
-				ee =
-					null != $ &&
-					(n.type === X.uaV.USER_JOIN || n.type === X.uaV.GUILD_INVITE_REMINDER) &&
-					k.Z.canWithPartialContext(X.Plq.MANAGE_GUILD, { guildId: $ }),
-				{ canForwardMessages: et } = (0, g.yk)({ location: 'useMessageUtilitiesProps' }, { autoTrackExposure: !1 }),
-				en = (0, C.a)(n),
+				ee = null != $ && (n.type === X.uaV.USER_JOIN || n.type === X.uaV.GUILD_INVITE_REMINDER) && k.Z.canWithPartialContext(X.Plq.MANAGE_GUILD, { guildId: $ }),
+				{ canForwardMessages: et } = (0, C.yk)({ location: 'useMessageUtilitiesProps' }, { autoTrackExposure: !1 }),
+				en = (0, g.a)(n),
 				{ enabled: ei } = b.Z.useExperiment({ location: 'message_utilities' }, { autoTrackExposure: !1 }),
 				ea = (0, c.e7)([M.Z], () => M.Z.isMessageBookmarked(t.id, n.id)),
 				es = (0, q.Z)(),
@@ -265,12 +248,12 @@ function ea(e) {
 		em = n.hasFlag(X.iLy.CROSSPOSTED),
 		[ep, e_] = (0, _.cv)(Z ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
 		ef = ep === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
-		[eE, eg] = a.useState(!1),
-		eC = a.useCallback(() => {
-			eg(!0);
+		[eE, eC] = a.useState(!1),
+		eg = a.useCallback(() => {
+			eC(!0);
 		}, []),
 		eI = a.useCallback(() => {
-			eg(!1);
+			eC(!1);
 		}, []),
 		ex = a.useCallback(
 			(e, t) => {
@@ -278,10 +261,7 @@ function ea(e) {
 			},
 			[e_]
 		),
-		{ canShowReactionsOnMessageHover: eT } = H.Z.useExperiment(
-			{ location: 'ExpandingButtons' },
-			{ autoTrackExposure: !0 }
-		);
+		{ canShowReactionsOnMessageHover: eT } = H.Z.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
 	return (0, i.jsxs)(i.Fragment, {
 		children: [
 			P
@@ -432,7 +412,7 @@ function ea(e) {
 							label: J.Z.Messages.MESSAGE_ACTION_FORWARD,
 							icon: I.Z,
 							onClick: () => ex(t, n),
-							onTooltipShow: eC,
+							onTooltipShow: eg,
 							onTooltipHide: eI,
 							showNewBadge: !eE && ef
 						},

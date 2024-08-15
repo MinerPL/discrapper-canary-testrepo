@@ -71,19 +71,7 @@ let L = (0, l.animated)(d.ChevronSmallDownIcon),
 	};
 t.Z = (e) => {
 	var t;
-	let {
-			isFocused: n,
-			isQuestExpired: s,
-			quest: u,
-			location: I,
-			size: T,
-			expansionSpring: b,
-			isAnimating: D,
-			isExpanded: j,
-			isInConcurrentQuestExperiment: U,
-			contentPosition: y,
-			toggleExpanded: B
-		} = e,
+	let { isFocused: n, isQuestExpired: s, quest: u, location: I, size: T, expansionSpring: b, isAnimating: D, isExpanded: j, isInConcurrentQuestExperiment: U, contentPosition: y, toggleExpanded: B } = e,
 		{ ref: k, height: G } = (0, _.Z)(),
 		{ ref: F, width: w, scrollWidth: V } = (0, _.Z)(),
 		H = (0, c.e7)([m.Z], () => m.Z.getState().theme),
@@ -256,8 +244,7 @@ t.Z = (e) => {
 														children: (e) =>
 															(0, i.jsx)(d.Heading, {
 																ref: F,
-																variant:
-																	'lg' === T ? 'heading-xxl/bold' : 'sm' === T ? 'heading-xl/bold' : 'heading-lg/bold',
+																variant: 'lg' === T ? 'heading-xxl/bold' : 'sm' === T ? 'heading-xl/bold' : 'heading-lg/bold',
 																className: v.heading,
 																...e,
 																children: M.Z.Messages.QUEST.format({ questName: u.config.messages.questName })
@@ -265,11 +252,7 @@ t.Z = (e) => {
 													}),
 													(0, i.jsx)(d.Text, {
 														variant: 'text-xs/normal',
-														children: X
-															? M.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: $ })
-															: s
-																? M.Z.Messages.QUESTS_EXPIRED_ON.format({ expirationDate: J })
-																: M.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: J })
+														children: X ? M.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: $ }) : s ? M.Z.Messages.QUESTS_EXPIRED_ON.format({ expirationDate: J }) : M.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: J })
 													})
 												]
 											})

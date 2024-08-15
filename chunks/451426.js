@@ -98,10 +98,7 @@ function I(e) {
 							children: (0, a.jsx)(i.Heading, {
 								variant: 'heading-md/normal',
 								color: 'text-link',
-								children:
-									L.length > 0
-										? u.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_EDIT_DETAILS
-										: u.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ADD_DETAILS
+								children: L.length > 0 ? u.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_EDIT_DETAILS : u.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ADD_DETAILS
 							})
 						})
 					}),

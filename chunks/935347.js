@@ -57,9 +57,7 @@ class O extends a.PureComponent {
 						hide: s
 					}))
 				: t.hide !== i
-					? (i ? this.clearProblemsTimeout() : this.setProblemsTimeout(),
-						this.setState({ shouldRender: !0 }),
-						setTimeout(() => this.setState({ shouldRender: !i }), 200))
+					? (i ? this.clearProblemsTimeout() : this.setProblemsTimeout(), this.setState({ shouldRender: !0 }), setTimeout(() => this.setState({ shouldRender: !i }), 200))
 					: t.problems !== a && a && _.Z.checkIncidents();
 	}
 	componentWillUnmount() {
@@ -340,10 +338,7 @@ class O extends a.PureComponent {
 								)
 						})
 					];
-					return (
-						g.default.locale.startsWith('en-') && e.push(v.Z.Messages.POLLS_MARKETING_EASTER_EGG_LOADING_LINE),
-						e[o().random(e.length - 1)]
-					);
+					return g.default.locale.startsWith('en-') && e.push(v.Z.Messages.POLLS_MARKETING_EASTER_EGG_LOADING_LINE), e[o().random(e.length - 1)];
 				})()
 			),
 			L(
@@ -355,16 +350,13 @@ class O extends a.PureComponent {
 				})()
 			),
 			L(this, 'handleReady', () => {
-				this.setState({ ready: !0 }),
-					(0, S.isDesktop)() &&
-						(C.ZP.send('UPDATED_QUOTES', ['Hold Tight \u2014 Loading Discord']), C.ZP.send('UPDATE_OPEN_ON_STARTUP'));
+				this.setState({ ready: !0 }), (0, S.isDesktop)() && (C.ZP.send('UPDATED_QUOTES', ['Hold Tight \u2014 Loading Discord']), C.ZP.send('UPDATE_OPEN_ON_STARTUP'));
 			}),
 			L(this, 'setVideoRef', (e) => {
 				this.videoRef = e;
 			}),
 			L(this, 'setProblemsTimeout', () => {
-				null == this._problemsTimeout &&
-					(this._problemsTimeout = setTimeout(() => this.setState({ problems: !0 }), 10000));
+				null == this._problemsTimeout && (this._problemsTimeout = setTimeout(() => this.setState({ problems: !0 }), 10000));
 			}),
 			L(this, 'clearProblemsTimeout', () => {
 				clearTimeout(this._problemsTimeout), (this._problemsTimeout = null);

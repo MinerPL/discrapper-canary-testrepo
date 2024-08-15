@@ -23,10 +23,7 @@ class c extends (i = a.ZP.PersistedStore) {
 	}
 	isLiveChannelNoticeHidden(e) {
 		let { eventId: t, stageId: n } = e;
-		return (
-			!!(null != n && o.hiddenEventsAndStages.includes('stage-'.concat(n))) ||
-			(null != t && o.hiddenEventsAndStages.includes('event-'.concat(t)))
-		);
+		return !!(null != n && o.hiddenEventsAndStages.includes('stage-'.concat(n))) || (null != t && o.hiddenEventsAndStages.includes('event-'.concat(t)));
 	}
 	getState() {
 		return o;
@@ -37,16 +34,12 @@ l(c, 'displayName', 'LiveChannelNoticesStore'),
 	(t.Z = new c(s.Z, {
 		LIVE_CHANNEL_NOTICE_HIDE: function (e) {
 			let { eventId: t, stageId: n } = e;
-			null != t
-				? o.hiddenEventsAndStages.push('event-'.concat(t))
-				: null != n && o.hiddenEventsAndStages.push('stage-'.concat(n));
+			null != t ? o.hiddenEventsAndStages.push('event-'.concat(t)) : null != n && o.hiddenEventsAndStages.push('stage-'.concat(n));
 		},
 		GUILD_SCHEDULED_EVENT_UPDATE: function (e) {
 			let { guildScheduledEvent: t } = e,
 				n = 'event-'.concat(t.id);
-			o.hiddenEventsAndStages.includes(n) &&
-				(t.status === r.p1.CANCELED || t.status === r.p1.COMPLETED) &&
-				(o.hiddenEventsAndStages = o.hiddenEventsAndStages.filter((e) => e !== n));
+			o.hiddenEventsAndStages.includes(n) && (t.status === r.p1.CANCELED || t.status === r.p1.COMPLETED) && (o.hiddenEventsAndStages = o.hiddenEventsAndStages.filter((e) => e !== n));
 		},
 		GUILD_SCHEDULED_EVENT_DELETE: function (e) {
 			let { guildScheduledEvent: t } = e,

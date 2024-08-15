@@ -243,16 +243,7 @@ let D = (e) => {
 							(0, i.jsx)(r.PrimaryCTANoticeButton, {
 								noticeType: D,
 								onClick: () => {
-									A(M.L.PRIMARY),
-										(0, g.uL)(
-											1 === B.length
-												? v.Z5c.GUILD_SETTINGS(B[0], 'role-subscriptions')
-												: v.Z5c.PICK_GUILD_SETTINGS(
-														'role-subscriptions',
-														void 0,
-														'server-subscriptions-finish-setting-up'
-													)
-										);
+									A(M.L.PRIMARY), (0, g.uL)(1 === B.length ? v.Z5c.GUILD_SETTINGS(B[0], 'role-subscriptions') : v.Z5c.PICK_GUILD_SETTINGS('role-subscriptions', void 0, 'server-subscriptions-finish-setting-up'));
 								},
 								children: P.Z.Messages.LETS_GO
 							})

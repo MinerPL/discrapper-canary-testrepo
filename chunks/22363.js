@@ -10,21 +10,7 @@ var i = n(120356),
 	d = n(185923),
 	_ = n(23022);
 t.Z = (e) => {
-	let {
-			accessory: t,
-			pickerIntention: n,
-			headerClassName: i,
-			emojiListRef: E,
-			onKeyDown: f,
-			onFocus: h,
-			autoFocus: p,
-			searchBarRef: I,
-			hasTabWrapper: m,
-			diversitySurrogate: T,
-			isBurstReaction: g,
-			onBurstReactionToggle: S,
-			renderHeader: A
-		} = e,
+	let { accessory: t, pickerIntention: n, headerClassName: i, emojiListRef: E, onKeyDown: f, onFocus: h, autoFocus: p, searchBarRef: m, hasTabWrapper: I, diversitySurrogate: T, isBurstReaction: g, onBurstReactionToggle: S, renderHeader: A } = e,
 		N = (0, r.jsxs)(r.Fragment, {
 			children: [
 				(0, r.jsx)(u.Z, {
@@ -32,7 +18,7 @@ t.Z = (e) => {
 					gridNavigatorId: c.Vr,
 					onKeyDown: f,
 					className: _.searchBar,
-					ref: I,
+					ref: m,
 					isFullRow: !1,
 					onFocus: h,
 					autoFocus: p,
@@ -50,9 +36,9 @@ t.Z = (e) => {
 				null != t
 					? t
 					: (0, r.jsx)(l.Z, {
-							searchBarRef: I,
+							searchBarRef: m,
 							className: _.diversitySelector,
-							hasTabWrapper: m,
+							hasTabWrapper: I,
 							selectedSurrogate: T
 						})
 			]

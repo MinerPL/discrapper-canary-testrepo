@@ -35,21 +35,14 @@ function N(e) {
 					onClick: t,
 					noticeType: T.kVF.CASH_APP_PAY_AWARENESS_NAGBAR
 				}),
-				N
-					? h.Z.Messages.CASH_APP_PAY_AWARENESS_SUBSCRIBER_CONTENT
-					: h.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_CONTENT,
+				N ? h.Z.Messages.CASH_APP_PAY_AWARENESS_SUBSCRIBER_CONTENT : h.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_CONTENT,
 				(0, i.jsx)(l.PrimaryCTANoticeButton, {
 					onClick: () => {
 						c.Z.open(f),
 							setTimeout(() => {
 								(0, l.openModalLazy)(
 									async () => {
-										let { default: e } = await Promise.all([
-											n.e('96427'),
-											n.e('54803'),
-											n.e('52619'),
-											n.e('79336')
-										]).then(n.bind(n, 623573));
+										let { default: e } = await Promise.all([n.e('96427'), n.e('54803'), n.e('52619'), n.e('79336')]).then(n.bind(n, 623573));
 										return (t) =>
 											(0, i.jsx)(e, {
 												...t,
@@ -66,9 +59,7 @@ function N(e) {
 							t();
 					},
 					noticeType: T.kVF.CASH_APP_PAY_AWARENESS_NAGBAR,
-					children: N
-						? h.Z.Messages.CASH_APP_PAY_AWARENESS_SUBSCRIBER_CTA
-						: h.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_CTA
+					children: N ? h.Z.Messages.CASH_APP_PAY_AWARENESS_SUBSCRIBER_CTA : h.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_CTA
 				})
 			]
 		})

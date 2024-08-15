@@ -160,10 +160,7 @@ var c = r(660793),
 							a = t || E(o),
 							u = a.x,
 							s = a.y;
-						K(i) || O(!1),
-							i.focus(),
-							o === window ? window.scrollTo(u, s) : b.setTop(o, s),
-							!n && r.update(m.forceSelection(e, e.getSelection()));
+						K(i) || O(!1), i.focus(), o === window ? window.scrollTo(u, s) : b.setTop(o, s), !n && r.update(m.forceSelection(e, e.getSelection()));
 					}
 				}),
 				u(a(r), 'blur', function () {
@@ -256,11 +253,7 @@ var c = r(660793),
 				};
 			}),
 			(n._showPlaceholder = function () {
-				return (
-					!!this.props.placeholder &&
-					!this.props.editorState.isInCompositionMode() &&
-					!this.props.editorState.getCurrentContent().hasText()
-				);
+				return !!this.props.placeholder && !this.props.editorState.isInCompositionMode() && !this.props.editorState.getCurrentContent().hasText();
 			}),
 			(n._renderPlaceholder = function () {
 				if (this._showPlaceholder()) {
@@ -379,18 +372,10 @@ var c = r(660793),
 				);
 			}),
 			(n.componentDidMount = function () {
-				(this._blockSelectEvents = !1),
-					!B && D('draft_ods_enabled') && ((B = !0), v.initODS()),
-					this.setMode('edit'),
-					M &&
-						(this.editor
-							? this.editor.ownerDocument.execCommand('AutoUrlDetect', !1, !1)
-							: r.g.execCommand('AutoUrlDetect', !1, !1));
+				(this._blockSelectEvents = !1), !B && D('draft_ods_enabled') && ((B = !0), v.initODS()), this.setMode('edit'), M && (this.editor ? this.editor.ownerDocument.execCommand('AutoUrlDetect', !1, !1) : r.g.execCommand('AutoUrlDetect', !1, !1));
 			}),
 			(n.componentDidUpdate = function () {
-				(this._blockSelectEvents = !1),
-					(this._latestEditorState = this.props.editorState),
-					(this._latestCommittedEditorState = this.props.editorState);
+				(this._blockSelectEvents = !1), (this._latestEditorState = this.props.editorState), (this._latestCommittedEditorState = this.props.editorState);
 			}),
 			e
 		);

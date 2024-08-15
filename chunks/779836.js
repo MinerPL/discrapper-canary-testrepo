@@ -1,6 +1,6 @@
 n.d(t, {
 	Z: function () {
-		return C;
+		return g;
 	}
 });
 var i = n(735250);
@@ -19,7 +19,7 @@ var a = n(120356),
 	_ = n(959517),
 	f = n(689938),
 	E = n(774103);
-function g(e) {
+function C(e) {
 	let { summary: t, channel: n } = e,
 		a = (0, r.e7)([h.Z], () => h.Z.summaryFeedback(t)),
 		s = (e, i) => {
@@ -84,7 +84,7 @@ function g(e) {
 		)
 	});
 }
-function C(e) {
+function g(e) {
 	var t, n;
 	let a,
 		{ item: l, channel: u, index: d } = e,
@@ -106,7 +106,7 @@ function C(e) {
 				})
 			: (0, i.jsxs)(i.Fragment, {
 					children: [
-						(0, i.jsx)(g, {
+						(0, i.jsx)(C, {
 							summary: m,
 							channel: u
 						}),
@@ -126,9 +126,7 @@ function C(e) {
 				id: p ? _.j1 : void 0,
 				children: a
 			},
-			'divider-'.concat(
-				null !== (n = null !== (t = l.contentKey) && void 0 !== t ? t : l.unreadId) && void 0 !== n ? n : d
-			)
+			'divider-'.concat(null !== (n = null !== (t = l.contentKey) && void 0 !== t ? t : l.unreadId) && void 0 !== n ? n : d)
 		)
 	);
 }

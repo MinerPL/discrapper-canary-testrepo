@@ -24,13 +24,7 @@ async function s(e) {
 			n.onReady = e;
 		}),
 		s = await e.arrayBuffer();
-	for (let e of ((s.fileStart = 0),
-	n.appendBuffer(s),
-	n.flush(),
-	await r,
-	i()(null != n.boxes, 'mp4boxInputFile.boxes should not be null after parsing'),
-	n.boxes))
-		'uuid' === e.type && (t = e.start);
+	for (let e of ((s.fileStart = 0), n.appendBuffer(s), n.flush(), await r, i()(null != n.boxes, 'mp4boxInputFile.boxes should not be null after parsing'), n.boxes)) 'uuid' === e.type && (t = e.start);
 	let o = e.slice(0, t, e.type),
 		l = e.slice(t + 4, t + 8 + 16, e.type);
 	return new Blob([o, new Uint8Array([0, 0, 0, 24]), l], { type: e.type });

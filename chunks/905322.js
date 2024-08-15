@@ -8,14 +8,7 @@ var l = i(735250),
 	r = i(777207),
 	s = i(393713);
 function a(e) {
-	let {
-			title: n,
-			subtitle: i,
-			iconSrc: a,
-			backgroundSrc: o,
-			animatedBackgroundSrc: d,
-			prefersReducedMotion: u = !0
-		} = e,
+	let { title: n, subtitle: i, iconSrc: a, backgroundSrc: o, animatedBackgroundSrc: d, prefersReducedMotion: u = !0 } = e,
 		c = t.useMemo(() => {
 			let e = null != o ? o : a;
 			if (null != e) return { '--custom-background-url': 'url('.concat(e.toString(), ')') };

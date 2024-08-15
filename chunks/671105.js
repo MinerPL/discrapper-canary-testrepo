@@ -27,11 +27,7 @@ function a(e) {
 }
 function s(e) {
 	var t, n;
-	return d(
-		e,
-		void 0,
-		null !== (n = null === (t = l.Z.settings.guilds) || void 0 === t ? void 0 : t.guilds) && void 0 !== n ? n : {}
-	);
+	return d(e, void 0, null !== (n = null === (t = l.Z.settings.guilds) || void 0 === t ? void 0 : t.guilds) && void 0 !== n ? n : {});
 }
 function o(e, t) {
 	let n = (0, i.e7)([l.Z], () => {
@@ -42,8 +38,7 @@ function o(e, t) {
 }
 function r(e, t) {
 	var n, i;
-	let u =
-		null !== (i = null === (n = l.Z.settings.guilds) || void 0 === n ? void 0 : n.guilds) && void 0 !== i ? i : {};
+	let u = null !== (i = null === (n = l.Z.settings.guilds) || void 0 === n ? void 0 : n.guilds) && void 0 !== i ? i : {};
 	return null != t ? d(e, t, u) : void 0;
 }
 function d(e, t, n) {

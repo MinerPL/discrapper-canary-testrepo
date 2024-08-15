@@ -20,8 +20,8 @@ var r,
 	f = n(914010),
 	h = n(594174),
 	p = n(981631),
-	I = n(176505),
-	m = n(231338);
+	m = n(176505),
+	I = n(231338);
 function T(e, t, n) {
 	return (
 		t in e
@@ -44,9 +44,9 @@ let g = 'message_requests',
 	R = {};
 function C(e) {
 	if (null == e) return null;
-	if ((0, I.AB)(e)) {
+	if ((0, m.AB)(e)) {
 		let t = f.Z.getGuildId();
-		return null == t ? null : (0, I.Qk)(e, t);
+		return null == t ? null : (0, m.Qk)(e, t);
 	}
 	return e;
 }
@@ -65,7 +65,7 @@ function L() {
 		let n = O[t];
 		if (n.type === o.tI.VIEW_THREAD || n.type === o.tI.VIEW_CHANNEL) {
 			let r = c.Z.getChannel(n.channelId);
-			(null == r || !d.Z.can(m.Pl.VIEW_CHANNEL, r)) && (delete O[t], (e = !0));
+			(null == r || !d.Z.can(I.Pl.VIEW_CHANNEL, r)) && (delete O[t], (e = !0));
 		}
 	}
 	return e;
@@ -78,11 +78,7 @@ class M extends (r = a.ZP.PersistedStore) {
 	initialize(e) {
 		if (null != e) {
 			var t, n, r, i, a;
-			(S = null !== (t = e.isMembersOpen) && void 0 !== t && t),
-				(A = null !== (n = e.isSummariesOpen) && void 0 !== n && n),
-				(N = null === (r = e.isProfileOpen) || void 0 === r || r),
-				(O = null !== (i = e.sidebars) && void 0 !== i ? i : {}),
-				(R = null !== (a = e.guildSidebars) && void 0 !== a ? a : {});
+			(S = null !== (t = e.isMembersOpen) && void 0 !== t && t), (A = null !== (n = e.isSummariesOpen) && void 0 !== n && n), (N = null === (r = e.isProfileOpen) || void 0 === r || r), (O = null !== (i = e.sidebars) && void 0 !== i ? i : {}), (R = null !== (a = e.guildSidebars) && void 0 !== a ? a : {});
 		}
 		this.syncWith([_.Z], b), this.syncWith([d.Z], L);
 	}
@@ -98,15 +94,7 @@ class M extends (r = a.ZP.PersistedStore) {
 	getSection(e, t) {
 		if (v) return p.ULH.SEARCH;
 		let n = C(e);
-		return null != n && null != O[n]
-			? p.ULH.SIDEBAR_CHAT
-			: t && N
-				? p.ULH.PROFILE
-				: A
-					? p.ULH.SUMMARIES
-					: S
-						? p.ULH.MEMBERS
-						: p.ULH.NONE;
+		return null != n && null != O[n] ? p.ULH.SIDEBAR_CHAT : t && N ? p.ULH.PROFILE : A ? p.ULH.SUMMARIES : S ? p.ULH.MEMBERS : p.ULH.NONE;
 	}
 	getSidebarState(e) {
 		let t = C(e);
@@ -126,13 +114,7 @@ class M extends (r = a.ZP.PersistedStore) {
 		let n = C(e);
 		if (null == n || v) return null;
 		let r = O[n];
-		return null == r
-			? null
-			: r.type === o.tI.VIEW_THREAD || r.type === o.tI.VIEW_CHANNEL
-				? null === (t = r.details) || void 0 === t
-					? void 0
-					: t.initialMessageId
-				: null;
+		return null == r ? null : r.type === o.tI.VIEW_THREAD || r.type === o.tI.VIEW_CHANNEL ? (null === (t = r.details) || void 0 === t ? void 0 : t.initialMessageId) : null;
 	}
 }
 T(M, 'displayName', 'ChannelSectionStore'),

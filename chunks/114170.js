@@ -3,9 +3,7 @@ var a = r(553616),
 	s = {},
 	o = Object.keys(a);
 o.forEach(function (e) {
-	(s[e] = {}),
-		Object.defineProperty(s[e], 'channels', { value: a[e].channels }),
-		Object.defineProperty(s[e], 'labels', { value: a[e].labels });
+	(s[e] = {}), Object.defineProperty(s[e], 'channels', { value: a[e].channels }), Object.defineProperty(s[e], 'labels', { value: a[e].labels });
 	var t = n(e);
 	Object.keys(t).forEach(function (r) {
 		var a,

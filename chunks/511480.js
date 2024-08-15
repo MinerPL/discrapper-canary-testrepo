@@ -141,9 +141,7 @@ class V extends a.PureComponent {
 									color: n ? l.Button.Colors.PRIMARY : l.Button.Colors.GREEN,
 									disabled: !t,
 									...e,
-									children: n
-										? F.Z.Messages.GUILD_SETTINGS_DISABLE_DISCOVERABLE
-										: F.Z.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
+									children: n ? F.Z.Messages.GUILD_SETTINGS_DISABLE_DISCOVERABLE : F.Z.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
 								})
 						})
 					]
@@ -265,9 +263,7 @@ class V extends a.PureComponent {
 							color: o ? l.Button.Colors.PRIMARY : l.Button.Colors.GREEN,
 							disabled: !t,
 							onClick: this.handleToggleEmojiDiscoverability,
-							children: o
-								? F.Z.Messages.GUILD_SETTINGS_DISCOVERY_EMOJI_DISCOVERABILITY_DISABLE
-								: F.Z.Messages.GUILD_SETTINGS_DISCOVERY_EMOJI_DISCOVERABILITY_ENABLE
+							children: o ? F.Z.Messages.GUILD_SETTINGS_DISCOVERY_EMOJI_DISCOVERABILITY_DISABLE : F.Z.Messages.GUILD_SETTINGS_DISCOVERY_EMOJI_DISCOVERABILITY_ENABLE
 						})
 					]
 				}),
@@ -416,19 +412,7 @@ class V extends a.PureComponent {
 					className: k.__invalid_discoverySettings,
 					title: F.Z.Messages.DISCOVERY,
 					tag: l.FormTitleTags.H1,
-					children: [
-						this.renderDiscoverableSection(),
-						(0, s.jsx)(l.FormDivider, { className: k.divider }),
-						this.renderCoverImageSection(),
-						(0, s.jsx)(l.FormDivider, { className: k.divider }),
-						this.renderEmojiDiscoverabilitySection(),
-						(0, s.jsx)(l.FormDivider, { className: k.divider }),
-						this.renderCategoriesSection(),
-						(0, s.jsx)(l.FormDivider, { className: k.divider }),
-						this.renderKeywordsSection(),
-						(0, s.jsx)(l.FormDivider, { className: k.divider }),
-						this.renderLocaleSelector()
-					]
+					children: [this.renderDiscoverableSection(), (0, s.jsx)(l.FormDivider, { className: k.divider }), this.renderCoverImageSection(), (0, s.jsx)(l.FormDivider, { className: k.divider }), this.renderEmojiDiscoverabilitySection(), (0, s.jsx)(l.FormDivider, { className: k.divider }), this.renderCategoriesSection(), (0, s.jsx)(l.FormDivider, { className: k.divider }), this.renderKeywordsSection(), (0, s.jsx)(l.FormDivider, { className: k.divider }), this.renderLocaleSelector()]
 				});
 			default:
 				return null;
@@ -456,8 +440,7 @@ class V extends a.PureComponent {
 				let { guild: e } = this.props;
 				if (null == e) return;
 				let t = new Set(e.features);
-				e.hasFeature(B.oNc.DISCOVERABLE) ? t.delete(B.oNc.DISCOVERABLE) : t.add(B.oNc.DISCOVERABLE),
-					j.Z.updateGuild({ features: t });
+				e.hasFeature(B.oNc.DISCOVERABLE) ? t.delete(B.oNc.DISCOVERABLE) : t.add(B.oNc.DISCOVERABLE), j.Z.updateGuild({ features: t });
 			}),
 			w(this, 'handleEnableDiscovery', async () => {
 				let e = await (0, l.openModalLazy)(
@@ -484,8 +467,7 @@ class V extends a.PureComponent {
 			w(this, 'handlePrimaryCategoryChange', (e) => {
 				var t;
 				let { guild: n } = this.props;
-				(null == n ? void 0 : n.id) != null &&
-					m.TA(null == n ? void 0 : n.id, null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : y.o3);
+				(null == n ? void 0 : n.id) != null && m.TA(null == n ? void 0 : n.id, null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : y.o3);
 			}),
 			w(this, 'handleRemoveKeyword', (e) => {
 				let { guild: t, guildMetadata: n } = this.props;

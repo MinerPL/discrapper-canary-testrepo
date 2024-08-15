@@ -14,8 +14,7 @@ var r = n(735250),
 function d(e) {
 	return {
 		react(t, n, d) {
-			if (e.enableBuildOverrides && (0, o._G)(t.target))
-				return (0, r.jsx)(i.Fragment, { children: (0, r.jsx)(l.Z, { url: t.target }, t.target) }, d.key);
+			if (e.enableBuildOverrides && (0, o._G)(t.target)) return (0, r.jsx)(i.Fragment, { children: (0, r.jsx)(l.Z, { url: t.target }, t.target) }, d.key);
 			let _ = n(t.content, d),
 				E = 'string' == typeof t.title && 0 !== t.title.length ? t.title : (0, a.Rp)(t.content),
 				f = (null == e ? void 0 : e.mustConfirmExternalLink)

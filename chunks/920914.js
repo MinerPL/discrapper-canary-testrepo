@@ -87,12 +87,7 @@ let w = (e) => {
 									children: i.guild.toString()
 								}),
 								(0, n.jsx)(_.Anchor, {
-									href:
-										null === (t = C.Z.get(i.type)) || void 0 === t
-											? void 0
-											: null === (s = t.getPlatformUserUrl) || void 0 === s
-												? void 0
-												: s.call(t, i.account),
+									href: null === (t = C.Z.get(i.type)) || void 0 === t ? void 0 : null === (s = t.getPlatformUserUrl) || void 0 === s ? void 0 : s.call(t, i.account),
 									children: (0, n.jsx)(_.Text, {
 										variant: 'text-xs/normal',
 										color: 'header-secondary',
@@ -135,9 +130,7 @@ function H(e) {
 		p(I.friendSync), M(I.visibility), D(I.metadataVisibility), b(I.showActivity);
 	}, [I]),
 		a.useEffect(() => {
-			if (!1 !== I.verified)
-				null != F && (M(F), u.Z.setVisibility(I.type, I.id, F), Y(null)),
-					null != H && (D(H), u.Z.setMetadataVisibility(I.type, I.id, H), k(null));
+			if (!1 !== I.verified) null != F && (M(F), u.Z.setVisibility(I.type, I.id, F), Y(null)), null != H && (D(H), u.Z.setMetadataVisibility(I.type, I.id, H), k(null));
 		}, [I]);
 	function J() {
 		(0, O.Z)({
@@ -154,9 +147,7 @@ function H(e) {
 					s,
 					(0, n.jsx)(v.Z, {
 						className: V.infoBox,
-						children: y.Z.Messages.CONNECTED_ACCOUNT_IS_AUTHORIZED_APP_DISCONNECT_WARNING.format({
-							platformName: e.name
-						})
+						children: y.Z.Messages.CONNECTED_ACCOUNT_IS_AUTHORIZED_APP_DISCONNECT_WARNING.format({ platformName: e.name })
 					})
 				]
 			})),
@@ -351,9 +342,7 @@ function H(e) {
 							{
 								variant: 'text-xs/normal',
 								className: V.connectionMetadataUpsellDescription,
-								children: y.Z.Messages.CONNECTED_ACCOUNT_ADD_DETAILS_DESCRIPTION.format({
-									helpdeskUrl: L.Z.getArticleURL(U.BhN.CONNECTION_DETAILS)
-								})
+								children: y.Z.Messages.CONNECTED_ACCOUNT_ADD_DETAILS_DESCRIPTION.format({ helpdeskUrl: L.Z.getArticleURL(U.BhN.CONNECTION_DETAILS) })
 							},
 							'label'
 						)
@@ -449,8 +438,7 @@ function H(e) {
 				})
 			})),
 			(function () {
-				if (I.revoked || I.integrations.length > 0)
-					return (0, n.jsx)(_.FormDivider, { className: V.connectedAccountSeparator });
+				if (I.revoked || I.integrations.length > 0) return (0, n.jsx)(_.FormDivider, { className: V.connectedAccountSeparator });
 			})(),
 			I.revoked
 				? (0, n.jsx)(_.FormItem, {
@@ -498,9 +486,7 @@ function k() {
 				(0, n.jsx)(_.Text, {
 					variant: 'text-xs/normal',
 					color: 'header-secondary',
-					children: y.Z.Messages.CONNECTIONS_USER_SETTINGS_CONNECT_ACCOUNTS_DESCRIPTION.format({
-						privacyPolicyUrl: U.EYA.PRIVACY
-					})
+					children: y.Z.Messages.CONNECTIONS_USER_SETTINGS_CONNECT_ACCOUNTS_DESCRIPTION.format({ privacyPolicyUrl: U.EYA.PRIVACY })
 				}),
 				(0, n.jsx)(K, {})
 			]

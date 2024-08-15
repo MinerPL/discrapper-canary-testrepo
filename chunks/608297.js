@@ -5,9 +5,7 @@ function r(e) {
 					return typeof e;
 				}
 			: function (e) {
-					return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype
-						? 'symbol'
-						: typeof e;
+					return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
 				})(e);
 }
 function i(e, t) {
@@ -74,10 +72,7 @@ function u(e, t) {
 function c(e, t) {
 	for (var n = 0; n < t.length; n++) {
 		var r = t[n];
-		(r.enumerable = r.enumerable || !1),
-			(r.configurable = !0),
-			'value' in r && (r.writable = !0),
-			Object.defineProperty(e, r.key, r);
+		(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 	}
 }
 function d(e, t, n) {
@@ -117,15 +112,7 @@ var E = (function () {
 		var t = s(n);
 		function n(e, r, i, a, s) {
 			var o;
-			return (
-				u(this, n),
-				((o = t.call(this)).value = e),
-				(o.validateValue = r),
-				(o.setValue = i),
-				(o.priority = a),
-				s && (o.subPriority = s),
-				o
-			);
+			return u(this, n), ((o = t.call(this)).value = e), (o.validateValue = r), (o.setValue = i), (o.priority = a), s && (o.subPriority = s), o;
 		}
 		return (
 			d(n, [
@@ -161,11 +148,7 @@ var E = (function () {
 					value: function (e, t) {
 						if (t.timestampIsSet) return e;
 						var n = new Date(0);
-						return (
-							n.setFullYear(e.getUTCFullYear(), e.getUTCMonth(), e.getUTCDate()),
-							n.setHours(e.getUTCHours(), e.getUTCMinutes(), e.getUTCSeconds(), e.getUTCMilliseconds()),
-							n
-						);
+						return n.setFullYear(e.getUTCFullYear(), e.getUTCMonth(), e.getUTCDate()), n.setHours(e.getUTCHours(), e.getUTCMinutes(), e.getUTCSeconds(), e.getUTCMilliseconds()), n;
 					}
 				}
 			]),

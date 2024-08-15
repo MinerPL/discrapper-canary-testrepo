@@ -1,9 +1,5 @@
 !(function (e, t) {
-	if (
-		'IntersectionObserver' in e &&
-		'IntersectionObserverEntry' in e &&
-		'intersectionRatio' in e.IntersectionObserverEntry.prototype
-	) {
+	if ('IntersectionObserver' in e && 'IntersectionObserverEntry' in e && 'intersectionRatio' in e.IntersectionObserverEntry.prototype) {
 		!('isIntersecting' in e.IntersectionObserverEntry.prototype) &&
 			Object.defineProperty(e.IntersectionObserverEntry.prototype, 'isIntersecting', {
 				get: function () {
@@ -14,12 +10,7 @@
 	}
 	var n = [];
 	function r(e) {
-		(this.time = e.time),
-			(this.target = e.target),
-			(this.rootBounds = e.rootBounds),
-			(this.boundingClientRect = e.boundingClientRect),
-			(this.intersectionRect = e.intersectionRect || l()),
-			(this.isIntersecting = !!e.intersectionRect);
+		(this.time = e.time), (this.target = e.target), (this.rootBounds = e.rootBounds), (this.boundingClientRect = e.boundingClientRect), (this.intersectionRect = e.intersectionRect || l()), (this.isIntersecting = !!e.intersectionRect);
 		var t = this.boundingClientRect,
 			n = t.width * t.height,
 			r = this.intersectionRect,
@@ -88,8 +79,7 @@
 			return (
 				!Array.isArray(t) && (t = [t]),
 				t.sort().filter(function (e, t, n) {
-					if ('number' != typeof e || isNaN(e) || e < 0 || e > 1)
-						throw Error('threshold must be a number between 0 and 1 inclusively');
+					if ('number' != typeof e || isNaN(e) || e < 0 || e > 1) throw Error('threshold must be a number between 0 and 1 inclusively');
 					return e !== n[t - 1];
 				})
 			);
@@ -123,13 +113,7 @@
 							}))));
 		}),
 		(i.prototype._unmonitorIntersections = function () {
-			this._monitoringIntersections &&
-				((this._monitoringIntersections = !1),
-				clearInterval(this._monitoringInterval),
-				(this._monitoringInterval = null),
-				s(e, 'resize', this._checkForIntersections, !0),
-				s(t, 'scroll', this._checkForIntersections, !0),
-				this._domObserver && (this._domObserver.disconnect(), (this._domObserver = null)));
+			this._monitoringIntersections && ((this._monitoringIntersections = !1), clearInterval(this._monitoringInterval), (this._monitoringInterval = null), s(e, 'resize', this._checkForIntersections, !0), s(t, 'scroll', this._checkForIntersections, !0), this._domObserver && (this._domObserver.disconnect(), (this._domObserver = null)));
 		}),
 		(i.prototype._checkForIntersections = function () {
 			var t = this._rootIsInDom(),
@@ -149,11 +133,7 @@
 						rootBounds: n,
 						intersectionRect: c
 					}));
-				u
-					? t && l
-						? this._hasCrossedThreshold(u, d) && this._queuedEntries.push(d)
-						: u && u.isIntersecting && this._queuedEntries.push(d)
-					: this._queuedEntries.push(d);
+				u ? (t && l ? this._hasCrossedThreshold(u, d) && this._queuedEntries.push(d) : u && u.isIntersecting && this._queuedEntries.push(d)) : this._queuedEntries.push(d);
 			}, this),
 				this._queuedEntries.length && this._callback(this.takeRecords(), this);
 		}),
@@ -164,9 +144,7 @@
 						u = 1 == a.nodeType ? e.getComputedStyle(a) : {};
 					if ('none' == u.display) return;
 					if (
-						(a == this.root || a == t
-							? ((s = !0), (l = r))
-							: a != t.body && a != t.documentElement && 'visible' != u.overflow && (l = o(a)),
+						(a == this.root || a == t ? ((s = !0), (l = r)) : a != t.body && a != t.documentElement && 'visible' != u.overflow && (l = o(a)),
 						l &&
 							!(i = (function (e, t) {
 								var n = Math.max(e.top, t.top),
@@ -246,14 +224,10 @@
 			-1 != e && n.splice(e, 1);
 		});
 	function a(e, t, n, r) {
-		'function' == typeof e.addEventListener
-			? e.addEventListener(t, n, r || !1)
-			: 'function' == typeof e.attachEvent && e.attachEvent('on' + t, n);
+		'function' == typeof e.addEventListener ? e.addEventListener(t, n, r || !1) : 'function' == typeof e.attachEvent && e.attachEvent('on' + t, n);
 	}
 	function s(e, t, n, r) {
-		'function' == typeof e.removeEventListener
-			? e.removeEventListener(t, n, r || !1)
-			: 'function' == typeof e.detatchEvent && e.detatchEvent('on' + t, n);
+		'function' == typeof e.removeEventListener ? e.removeEventListener(t, n, r || !1) : 'function' == typeof e.detatchEvent && e.detatchEvent('on' + t, n);
 	}
 	function o(e) {
 		var t;

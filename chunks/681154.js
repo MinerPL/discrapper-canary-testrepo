@@ -36,14 +36,6 @@ function u(e, t) {
 }
 function m(e, t) {
 	var n;
-	return null == e ||
-		(0 === e.type && null != t.content && t.content.trim().length > 0) ||
-		(2 === e.type && null != t.tags && t.tags.length > 0)
-		? null
-		: null !== (n = e.message) && void 0 !== n
-			? n
-			: null;
+	return null == e || (0 === e.type && null != t.content && t.content.trim().length > 0) || (2 === e.type && null != t.tags && t.tags.length > 0) ? null : null !== (n = e.message) && void 0 !== n ? n : null;
 }
-((a = s || (s = {}))[(a.EmptyContent = 0)] = 'EmptyContent'),
-	(a[(a.AutomodViolation = 1)] = 'AutomodViolation'),
-	(a[(a.EmptyTags = 2)] = 'EmptyTags');
+((a = s || (s = {}))[(a.EmptyContent = 0)] = 'EmptyContent'), (a[(a.AutomodViolation = 1)] = 'AutomodViolation'), (a[(a.EmptyTags = 2)] = 'EmptyTags');

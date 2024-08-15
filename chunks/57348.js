@@ -37,16 +37,7 @@ function C(e) {
 			(0, n.jsx)('div', {
 				className: f.list,
 				children: C.map((e) => {
-					let {
-						id: t,
-						type: a,
-						application: _,
-						image_hash: m,
-						title: C,
-						description: x,
-						call_to_action_label: b,
-						call_to_action_url: N
-					} = e;
+					let { id: t, type: a, application: _, image_hash: m, title: C, description: x, call_to_action_label: b, call_to_action_url: N } = e;
 					if (null == m) return;
 					let v = (0, d.$_)({
 						itemId: t,

@@ -28,19 +28,12 @@ e.exports = function (e, t, n) {
 	if (!i) {
 		if (l(n)) throw new a('This environment does not support accessor property descriptors.');
 		var r = !(t in e) && n['[[Writable]]'] && n['[[Enumerable]]'] && n['[[Configurable]]'] && '[[Value]]' in n,
-			p =
-				t in e &&
-				(!('[[Configurable]]' in n) || n['[[Configurable]]']) &&
-				(!('[[Enumerable]]' in n) || n['[[Enumerable]]']) &&
-				(!('[[Writable]]' in n) || n['[[Writable]]']) &&
-				'[[Value]]' in n;
+			p = t in e && (!('[[Configurable]]' in n) || n['[[Configurable]]']) && (!('[[Enumerable]]' in n) || n['[[Enumerable]]']) && (!('[[Writable]]' in n) || n['[[Writable]]']) && '[[Value]]' in n;
 		if (r || p) return (e[t] = n['[[Value]]']), E(e[t], n['[[Value]]']);
-		throw new a(
-			'This environment does not support defining non-writable, non-enumerable, or non-configurable properties'
-		);
+		throw new a('This environment does not support defining non-writable, non-enumerable, or non-configurable properties');
 	}
-	var I = i(e, t),
-		m = I && _(I),
+	var m = i(e, t),
+		I = m && _(m),
 		T = c(e);
-	return h(e, t, T, n, m);
+	return h(e, t, T, n, I);
 };

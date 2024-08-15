@@ -61,9 +61,7 @@ let f = {
 				...e
 			},
 			B = (0, n.PR)();
-		t && (0, a.N)(),
-			A && PerformanceObserver.supportedEntryTypes.includes('long-animation-frame') ? (0, n.Jk)() : r && (0, n.Fv)(),
-			T && (0, n.sn)();
+		t && (0, a.N)(), A && PerformanceObserver.supportedEntryTypes.includes('long-animation-frame') ? (0, n.Jk)() : r && (0, n.Fv)(), T && (0, n.sn)();
 		let w = {
 			name: void 0,
 			source: void 0
@@ -102,9 +100,7 @@ let f = {
 				let n = N.m9.location && N.m9.location.href;
 				e.on('startNavigationSpan', (t) => {
 					if ((0, s.s3)() === e)
-						r &&
-							!(0, c.XU)(r).timestamp &&
-							(d.X && u.kg.log(`[Tracing] Finishing current root span with op: ${(0, c.XU)(r).op}`), r.end()),
+						r && !(0, c.XU)(r).timestamp && (d.X && u.kg.log(`[Tracing] Finishing current root span with op: ${(0, c.XU)(r).op}`), r.end()),
 							(r = H(e, {
 								op: 'navigation',
 								...t
@@ -112,9 +108,7 @@ let f = {
 				}),
 					e.on('startPageLoadSpan', (t, n = {}) => {
 						if ((0, s.s3)() !== e) return;
-						r &&
-							!(0, c.XU)(r).timestamp &&
-							(d.X && u.kg.log(`[Tracing] Finishing current root span with op: ${(0, c.XU)(r).op}`), r.end());
+						r && !(0, c.XU)(r).timestamp && (d.X && u.kg.log(`[Tracing] Finishing current root span with op: ${(0, c.XU)(r).op}`), r.end());
 						let a = n.sentryTrace || h('sentry-trace'),
 							o = n.baggage || h('baggage'),
 							i = (0, l.pT)(a, o);
@@ -173,15 +167,11 @@ let f = {
 											_ = (0, c.HN)(),
 											s = _ && (0, c.Gx)(_);
 										if (s && ['navigation', 'pageload'].includes((0, c.XU)(s).op)) {
-											d.X &&
-												u.kg.warn(
-													`[Tracing] Did not create ${o} span because a pageload or navigation span is in progress.`
-												);
+											d.X && u.kg.warn(`[Tracing] Did not create ${o} span because a pageload or navigation span is in progress.`);
 											return;
 										}
 										if ((a && (a.setAttribute(E.ju, 'interactionInterrupted'), a.end(), (a = void 0)), !n.name)) {
-											d.X &&
-												u.kg.warn(`[Tracing] Did not create ${o} transaction because _latestRouteName is missing.`);
+											d.X && u.kg.warn(`[Tracing] Did not create ${o} transaction because _latestRouteName is missing.`);
 											return;
 										}
 										a = (0, i.R)(
@@ -220,10 +210,7 @@ function D(e, t, r) {
 	return 'pageload' === (n && (0, c.XU)(n).op) ? n : void 0;
 }
 function L(e, t) {
-	(0, s.aF)().setPropagationContext((0, A.Q)()),
-		(0, s.nZ)().setPropagationContext((0, A.Q)()),
-		e.emit('startNavigationSpan', t),
-		(0, s.nZ)().setTransactionName(t.name);
+	(0, s.aF)().setPropagationContext((0, A.Q)()), (0, s.nZ)().setPropagationContext((0, A.Q)()), e.emit('startNavigationSpan', t), (0, s.nZ)().setTransactionName(t.name);
 	let r = (0, c.HN)();
 	return 'navigation' === (r && (0, c.XU)(r).op) ? r : void 0;
 }

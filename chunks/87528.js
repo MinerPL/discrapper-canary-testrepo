@@ -35,9 +35,7 @@ function f(e) {
 			var e;
 			let t = null === (e = E.current) || void 0 === e ? void 0 : e.offsetWidth,
 				i = 1;
-			return null == t
-				? 300
-				: (t >= 500 && (i = 2), t >= 700 && (i = 3), t >= 1000 && (i = 4), N(i), (t - (i - 1) * v) / i);
+			return null == t ? 300 : (t >= 500 && (i = 2), t >= 700 && (i = 3), t >= 1000 && (i = 4), N(i), (t - (i - 1) * v) / i);
 		}
 		let t = E.current;
 		if (null == t) return;

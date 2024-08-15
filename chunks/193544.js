@@ -44,11 +44,7 @@ function T(e) {
 		};
 	return (0, s.jsx)(u.Z, {
 		title: x ? T : null !== (t = null == O ? void 0 : O.title) && void 0 !== t ? t : T,
-		description: x
-			? '('.concat(null !== (n = null == O ? void 0 : O.title) && void 0 !== n ? n : I.Z.Messages.NONE, ')')
-			: null !== (i = null == O ? void 0 : O.description) && void 0 !== i
-				? i
-				: '',
+		description: x ? '('.concat(null !== (n = null == O ? void 0 : O.title) && void 0 !== n ? n : I.Z.Messages.NONE, ')') : null !== (i = null == O ? void 0 : O.description) && void 0 !== i ? i : '',
 		highlightColor: x ? d.q.NONE : null == O ? void 0 : O.highlightColor,
 		action: (0, s.jsx)(l.Button, {
 			look: l.Button.Looks.LINK,
@@ -67,8 +63,7 @@ function T(e) {
 					highlightColor: e.highlightColor,
 					className: r()(E.groupCollapsedRow, g === e.value && E.selected),
 					selected: g === e.value,
-					action:
-						g === e.value ? (0, s.jsx)(c.Z, { className: E.radioItem }) : (0, s.jsx)(o.Z, { className: E.radioItem }),
+					action: g === e.value ? (0, s.jsx)(c.Z, { className: E.radioItem }) : (0, s.jsx)(o.Z, { className: E.radioItem }),
 					onClick: () => A(e),
 					disabled: e.disabled
 				},

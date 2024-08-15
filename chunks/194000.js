@@ -26,39 +26,13 @@ var o = t(799761),
 			values: {
 				narrow: ['L', 'Ú', 'B', 'D', 'K', 'Č', 'Č', 'S', 'Z', 'Ř', 'L', 'P'],
 				abbreviated: ['led', 'úno', 'bře', 'dub', 'kvě', 'čvn', 'čvc', 'srp', 'zář', 'říj', 'lis', 'pro'],
-				wide: [
-					'leden',
-					'únor',
-					'březen',
-					'duben',
-					'květen',
-					'červen',
-					'červenec',
-					'srpen',
-					'září',
-					'říjen',
-					'listopad',
-					'prosinec'
-				]
+				wide: ['leden', 'únor', 'březen', 'duben', 'květen', 'červen', 'červenec', 'srpen', 'září', 'říjen', 'listopad', 'prosinec']
 			},
 			defaultWidth: 'wide',
 			formattingValues: {
 				narrow: ['L', 'Ú', 'B', 'D', 'K', 'Č', 'Č', 'S', 'Z', 'Ř', 'L', 'P'],
 				abbreviated: ['led', 'úno', 'bře', 'dub', 'kvě', 'čvn', 'čvc', 'srp', 'zář', 'říj', 'lis', 'pro'],
-				wide: [
-					'ledna',
-					'února',
-					'března',
-					'dubna',
-					'května',
-					'června',
-					'července',
-					'srpna',
-					'září',
-					'října',
-					'listopadu',
-					'prosince'
-				]
+				wide: ['ledna', 'února', 'března', 'dubna', 'května', 'června', 'července', 'srpna', 'září', 'října', 'listopadu', 'prosince']
 			},
 			defaultFormattingWidth: 'wide'
 		}),

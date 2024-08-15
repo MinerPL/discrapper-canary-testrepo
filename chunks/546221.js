@@ -23,11 +23,7 @@ var a = n(481060),
 	h = n(700017);
 function g(e) {
 	let { payoutsByPeriod: t, team: n } = e,
-		i = (0, c.mY)()
-			? null
-			: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EDIT_PAYMENT_METHOD_LINK.format({
-					url: null != n ? N.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(n.id) : null
-				});
+		i = (0, c.mY)() ? null : S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EDIT_PAYMENT_METHOD_LINK.format({ url: null != n ? N.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(n.id) : null });
 	return 0 === t.length
 		? (0, s.jsxs)(a.FormText, {
 				type: a.FormText.Types.DESCRIPTION,
@@ -67,14 +63,7 @@ let x = (e) => {
 				children: [
 					f &&
 						(0, s.jsxs)(s.Fragment, {
-							children: [
-								(0, s.jsx)(i.Z, {
-									children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_INSIGHTS_NOTICE_TEXT.format({
-										insightsURL: N.EYA.DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION(l)
-									})
-								}),
-								(0, s.jsx)(a.Spacer, { size: 32 })
-							]
+							children: [(0, s.jsx)(i.Z, { children: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_INSIGHTS_NOTICE_TEXT.format({ insightsURL: N.EYA.DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION(l) }) }), (0, s.jsx)(a.Spacer, { size: 32 })]
 						}),
 					(0, s.jsxs)(a.FormSection, {
 						title: S.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_HEADER,

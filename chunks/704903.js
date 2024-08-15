@@ -27,10 +27,7 @@ function p(e, t, s) {
 }
 class E extends (i = a.PureComponent) {
 	async componentDidMount() {
-		let [e, { default: t }] = await Promise.all([
-			s.e('27526').then(s.t.bind(s, 555589, 19)),
-			Promise.resolve().then(s.t.bind(s, 500923, 23))
-		]);
+		let [e, { default: t }] = await Promise.all([s.e('27526').then(s.t.bind(s, 555589, 19)), Promise.resolve().then(s.t.bind(s, 500923, 23))]);
 		null != this._lottieRef &&
 			(this._animItem = t.loadAnimation({
 				container: this._lottieRef,
@@ -113,12 +110,7 @@ class E extends (i = a.PureComponent) {
 		let { resent: t } = this.state,
 			{ email: s, canResend: i, transitionState: a } = this.props;
 		return (
-			(e =
-				t && null != s
-					? c.Z.Messages.VERIFY_EMAIL_BODY_RESENT.format({ email: s })
-					: i
-						? c.Z.Messages.VERIFY_EMAIL_BODY
-						: c.Z.Messages.ENTER_EMAIL_BODY),
+			(e = t && null != s ? c.Z.Messages.VERIFY_EMAIL_BODY_RESENT.format({ email: s }) : i ? c.Z.Messages.VERIFY_EMAIL_BODY : c.Z.Messages.ENTER_EMAIL_BODY),
 			(0, n.jsxs)(d.ModalRoot, {
 				transitionState: a,
 				'aria-labelledby': this._headerId,

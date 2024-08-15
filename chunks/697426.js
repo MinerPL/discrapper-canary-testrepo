@@ -1,5 +1,5 @@
 var r, i, a, s, o, l, u, c, d, _, E, f, h, p;
-function I(e, t) {
+function m(e, t) {
 	let { sound_id: n, emoji_id: r, emoji_name: i, user_id: a, available: s, ...o } = e;
 	return {
 		...o,
@@ -11,7 +11,7 @@ function I(e, t) {
 		available: null == s || s
 	};
 }
-function m(e) {
+function I(e) {
 	let { soundId: t, guildId: n, emojiId: r, emojiName: i, userId: a, ...s } = e;
 	return {
 		...s,
@@ -33,7 +33,7 @@ n.d(t, {
 		return r;
 	},
 	QL: function () {
-		return m;
+		return I;
 	},
 	YQ: function () {
 		return u;
@@ -45,7 +45,7 @@ n.d(t, {
 		return i;
 	},
 	o3: function () {
-		return I;
+		return m;
 	},
 	vB: function () {
 		return l;

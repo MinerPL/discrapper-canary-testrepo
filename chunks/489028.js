@@ -103,10 +103,7 @@ t.Z = (e) => {
 			() =>
 				h.filter((e) => {
 					var t;
-					return (
-						e.payout_account_status !== f.C.BLOCKED &&
-						(0, _.Z)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : p.lds, e)
-					);
+					return e.payout_account_status !== f.C.BLOCKED && (0, _.Z)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : p.lds, e);
 				}),
 			[h, n]
 		),

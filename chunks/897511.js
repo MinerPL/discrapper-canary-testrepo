@@ -26,12 +26,7 @@ var n = o(735250),
 function I(e, t) {
 	let o = URL.createObjectURL(t),
 		n = document.createElement('a');
-	(n.href = o),
-		(n.download = 'receipt_'.concat(e, '.pdf')),
-		document.body.appendChild(n),
-		n.click(),
-		document.body.removeChild(n),
-		URL.revokeObjectURL(o);
+	(n.href = o), (n.download = 'receipt_'.concat(e, '.pdf')), document.body.appendChild(n), n.click(), document.body.removeChild(n), URL.revokeObjectURL(o);
 }
 async function N(e, t, o) {
 	let n = c.ANM.BILLING_INVOICE_PDF,

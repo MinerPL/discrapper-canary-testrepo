@@ -18,8 +18,8 @@ var i = n(735250),
 	_ = n(569545),
 	f = n(382182),
 	E = n(352978),
-	g = n(184301),
-	C = n(103575),
+	C = n(184301),
+	g = n(103575),
 	I = n(199902),
 	x = n(430824),
 	T = n(496675),
@@ -32,17 +32,7 @@ var i = n(735250),
 	b = n(711612);
 let R = 16 / 9,
 	j = (e) => {
-		let {
-				stageParticipant: t,
-				rtcParticipant: n,
-				channel: s,
-				guildId: l,
-				user: r,
-				width: c,
-				isModerator: u,
-				onContextMenu: d,
-				inPopout: h
-			} = e,
+		let { stageParticipant: t, rtcParticipant: n, channel: s, guildId: l, user: r, width: c, isModerator: u, onContextMenu: d, inPopout: h } = e,
 			{ reducedMotion: m } = a.useContext(o.AccessibilityPreferencesContext),
 			{ blocked: p, id: _ } = t;
 		return (0, i.jsx)(o.Popout, {
@@ -50,12 +40,12 @@ let R = 16 / 9,
 				null == n
 					? void 0
 					: () =>
-							(0, g.Z)(n.user, {
+							(0, C.Z)(n.user, {
 								guildId: s.guild_id,
 								channelId: s.id
 							}),
 			renderPopout: (e) =>
-				(0, i.jsx)(C.Z, {
+				(0, i.jsx)(g.Z, {
 					...e,
 					location: 'StageTile',
 					guildId: l,
@@ -89,16 +79,8 @@ let R = 16 / 9,
 		});
 	},
 	L = (e) => {
-		let {
-				stageParticipant: t,
-				rtcParticipant: n,
-				channel: s,
-				width: l,
-				isModerator: u,
-				onContextMenu: h,
-				inPopout: g
-			} = e,
-			{ reducedMotion: C } = a.useContext(o.AccessibilityPreferencesContext),
+		let { stageParticipant: t, rtcParticipant: n, channel: s, width: l, isModerator: u, onContextMenu: h, inPopout: C } = e,
+			{ reducedMotion: g } = a.useContext(o.AccessibilityPreferencesContext),
 			{ id: v, blocked: j } = t,
 			L = (0, r.Wu)([I.Z], () => I.Z.getAllActiveStreams(), []),
 			{ selectedParticipant: P, largeStream: O } = (0, r.cj)([m.Z], () => ({
@@ -107,18 +89,11 @@ let R = 16 / 9,
 			})),
 			y = a.useCallback(
 				(e, t) => {
-					if (
-						e.type === M.fO.STREAM &&
-						0 === L.filter((t) => (0, _.V9)(t) === e.id && t.state !== A.jm8.ENDED).length
-					) {
+					if (e.type === M.fO.STREAM && 0 === L.filter((t) => (0, _.V9)(t) === e.id && t.state !== A.jm8.ENDED).length) {
 						if (!(0, f.p9)(s, N.Z, x.Z, T.Z, p.Z)[0]) return;
 						(0, d.rn)((0, _.my)(e.id), { forceMultiple: t.shiftKey });
 					}
-					(null == P ? void 0 : P.id) === e.id
-						? O
-							? (c.Z.selectParticipant(s.id, null), c.Z.updateStageStreamSize(s.id, !1))
-							: c.Z.updateStageStreamSize(s.id, !0)
-						: (c.Z.updateStageStreamSize(s.id, !1), c.Z.selectParticipant(s.id, e.id));
+					(null == P ? void 0 : P.id) === e.id ? (O ? (c.Z.selectParticipant(s.id, null), c.Z.updateStageStreamSize(s.id, !1)) : c.Z.updateStageStreamSize(s.id, !0)) : (c.Z.updateStageStreamSize(s.id, !1), c.Z.selectParticipant(s.id, e.id));
 				},
 				[L, s, P, O]
 			);
@@ -132,11 +107,11 @@ let R = 16 / 9,
 				channel: s,
 				className: b.tile,
 				inCall: !0,
-				inPopout: g,
+				inPopout: C,
 				onClick: y,
 				onContextMenu: h,
 				paused: !1,
-				pulseSpeakingIndicator: !C.enabled,
+				pulseSpeakingIndicator: !g.enabled,
 				width: l,
 				children: u && n.type === M.fO.USER && (0, i.jsx)(Z.Z, {})
 			},
@@ -177,9 +152,7 @@ t.Z = a.memo(function (e) {
 					(0, u.jW)(
 						t,
 						async () => {
-							let { default: e } = await Promise.all([n.e('79695'), n.e('70474'), n.e('12435'), n.e('46563')]).then(
-								n.bind(n, 757387)
-							);
+							let { default: e } = await Promise.all([n.e('79695'), n.e('70474'), n.e('12435'), n.e('46563')]).then(n.bind(n, 757387));
 							return (t) =>
 								(0, i.jsx)(e, {
 									...t,
@@ -195,9 +168,9 @@ t.Z = a.memo(function (e) {
 					);
 			}
 		},
-		g = _.type === M.fO.USER && !(null === (t = _.voiceState) || void 0 === t ? void 0 : t.selfVideo);
+		C = _.type === M.fO.USER && !(null === (t = _.voiceState) || void 0 === t ? void 0 : t.selfVideo);
 	return (0, i.jsx)(i.Fragment, {
-		children: g
+		children: C
 			? (0, i.jsx)(j, {
 					stageParticipant: a,
 					rtcParticipant: _,

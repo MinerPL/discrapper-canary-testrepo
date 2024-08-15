@@ -19,8 +19,8 @@ var i = n(735250),
 	_ = n(633302),
 	f = n(970731),
 	E = n(594174),
-	g = n(176354),
-	C = n(823379),
+	C = n(176354),
+	g = n(823379),
 	I = n(74538),
 	x = n(401062),
 	T = n(696900),
@@ -42,17 +42,10 @@ let D = j.Hz.CHAT,
 		section: b.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
 		openPopoutType: 'voice_channel_effect_emoji_picker'
 	},
-	U = [
-		_.ZP.getByName('thumbsup'),
-		_.ZP.getByName('eyes'),
-		_.ZP.getByName('laughing'),
-		_.ZP.getByName('watermelon'),
-		_.ZP.getByName('fork_and_knife'),
-		_.ZP.getByName('yum')
-	].filter(C.lm);
+	U = [_.ZP.getByName('thumbsup'), _.ZP.getByName('eyes'), _.ZP.getByName('laughing'), _.ZP.getByName('watermelon'), _.ZP.getByName('fork_and_knife'), _.ZP.getByName('yum')].filter(g.lm);
 function w(e) {
 	var t;
-	let { channel: n, closePopout: _, onFocus: C } = e,
+	let { channel: n, closePopout: _, onFocus: g } = e,
 		j = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
 		w = (0, l.e7)([E.default], () => E.default.getCurrentUser()),
 		B = I.ZP.canUseFancyVoiceChannelReactions(w),
@@ -62,16 +55,14 @@ function w(e) {
 		F = (0, s.uniqBy)([...V, ...U], 'name')
 			.filter(
 				(e) =>
-					!g.ZP.isEmojiFilteredOrLocked({
+					!C.ZP.isEmojiFilteredOrLocked({
 						emoji: e,
 						channel: n,
 						intention: D
 					})
 			)
 			.slice(0, R.e5),
-		W = (null !== (t = N.Z.recentlyUsedEmojis) && void 0 !== t ? t : []).filter(
-			(e) => !F.slice(0, R.e5 - 1).some((t) => t.name === e.name)
-		);
+		W = (null !== (t = N.Z.recentlyUsedEmojis) && void 0 !== t ? t : []).filter((e) => !F.slice(0, R.e5 - 1).some((t) => t.name === e.name));
 	W.length > 0 && F.splice(F.length - 1, 1, W[0]);
 	let z = (0, v.Iu)(H),
 		Y = (e) => {
@@ -125,7 +116,7 @@ function w(e) {
 				shouldShow: s,
 				renderPopout: () =>
 					(0, i.jsx)('div', {
-						onMouseEnter: C,
+						onMouseEnter: g,
 						children: (0, i.jsx)(f.ZP, {
 							className: y.reducedMotionTooltip,
 							header: O.Z.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_TITLE,
@@ -146,7 +137,7 @@ function w(e) {
 						closePopout: _,
 						onSelectEmoji: Y,
 						onSelectDisabledEmoji: K,
-						onFocus: C,
+						onFocus: g,
 						onExpandedToggle: q,
 						analyticsOverride: k,
 						emojiSearchProps: {
@@ -167,9 +158,7 @@ function w(e) {
 								onShowUpsell: () =>
 									(0, Z.openEffectsUpsellModal)({
 										analytics: {
-											type: G.current
-												? L.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED
-												: L.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED,
+											type: G.current ? L.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED : L.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED,
 											object: b.qAy.VOICE_CHANNEL_EFFECTS_TOGGLE,
 											section: G.current ? b.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER : b.jXE.VOICE_CHANNEL_EFFECTS_BAR
 										}

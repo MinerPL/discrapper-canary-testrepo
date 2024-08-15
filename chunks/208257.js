@@ -98,9 +98,7 @@ function b(e) {
 		t.useEffect(() => {
 			if (V.current && 0 !== O.length && 'REVIEW_APPLICATION' !== v) {
 				var e;
-				(V.current = !1),
-					I.Z.setSelectedGuildJoinRequest(b, O[0]),
-					null === (e = j.current) || void 0 === e || e.scrollToTop();
+				(V.current = !1), I.Z.setSelectedGuildJoinRequest(b, O[0]), null === (e = j.current) || void 0 === e || e.scrollToTop();
 			}
 		}, [b, O, Z, v]);
 	let F = t.useCallback(
@@ -167,9 +165,7 @@ function b(e) {
 											messageType: c.Q.WARNING,
 											textVariant: 'text-sm/medium',
 											className: P.headerWarning,
-											children: S.Z.Messages.CLAN_MAX_MEMBER_LIMIT_WARNING.format({
-												count: null == L ? void 0 : L.maxMembers
-											})
+											children: S.Z.Messages.CLAN_MAX_MEMBER_LIMIT_WARNING.format({ count: null == L ? void 0 : L.maxMembers })
 										}),
 									(0, a.jsx)('div', {
 										className: P.listControls,

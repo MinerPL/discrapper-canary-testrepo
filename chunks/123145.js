@@ -14,10 +14,7 @@ function o(e) {
 		l = (0, s.x)({
 			message: e.message,
 			channel: e.channel,
-			user:
-				null !== (n = null === (t = e.message) || void 0 === t ? void 0 : t.author) && void 0 !== n
-					? n
-					: e.userOverride,
+			user: null !== (n = null === (t = e.message) || void 0 === t ? void 0 : t.author) && void 0 !== n ? n : e.userOverride,
 			compact: !!e.compact,
 			isRepliedMessage: !!e.isRepliedMessage
 		}),

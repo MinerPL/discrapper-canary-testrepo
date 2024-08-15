@@ -25,35 +25,10 @@ let _ = '',
 	h = null,
 	p = null;
 function m() {
-	(A = null),
-		(_ = ''),
-		(S = null),
-		(s = ''),
-		(c = !1),
-		(T = null),
-		(I = 'US'),
-		(d = ''),
-		(R = ''),
-		(C = ''),
-		(N = ''),
-		(M = ''),
-		(P = ''),
-		(U = ''),
-		(f = !1),
-		(L = null),
-		(O = null),
-		(h = null),
-		(p = null);
+	(A = null), (_ = ''), (S = null), (s = ''), (c = !1), (T = null), (I = 'US'), (d = ''), (R = ''), (C = ''), (N = ''), (M = ''), (P = ''), (U = ''), (f = !1), (L = null), (O = null), (h = null), (p = null);
 }
 function Z(e) {
-	(d = e.name),
-		(I = e.country),
-		(C = e.line1),
-		(N = e.line2),
-		(M = e.city),
-		(P = e.postalCode),
-		(U = e.state),
-		(R = e.email);
+	(d = e.name), (I = e.country), (C = e.line1), (N = e.line2), (M = e.city), (P = e.postalCode), (U = e.state), (R = e.email);
 }
 function G() {
 	L = null;
@@ -138,16 +113,7 @@ class F extends (l = o.ZP.Store) {
 		},
 		NEW_PAYMENT_SOURCE_ADDRESS_INFO_UPDATE: function (e) {
 			let { info: t, isValid: n } = e;
-			null != t.name && '' !== t.name && (d = t.name),
-				(I = t.country),
-				(d = t.name),
-				(C = t.line1),
-				(N = t.line2),
-				(M = t.city),
-				(P = t.postalCode),
-				(U = t.state),
-				(R = t.email),
-				(f = n);
+			null != t.name && '' !== t.name && (d = t.name), (I = t.country), (d = t.name), (C = t.line1), (N = t.line2), (M = t.city), (P = t.postalCode), (U = t.state), (R = t.email), (f = n);
 		},
 		BRAINTREE_TOKENIZE_PAYPAL_START: function () {
 			(_ = ''), (S = null);
@@ -176,9 +142,7 @@ class F extends (l = o.ZP.Store) {
 		LOGOUT: m,
 		BILLING_POPUP_BRIDGE_CALLBACK: function (e) {
 			let { query: t } = e;
-			(null == t ? void 0 : t.payment_id) != null
-				? ((h = !0), (O = t.payment_id))
-				: (null == t ? void 0 : t.payment_source_id) != null && ((h = !0), (p = t.payment_source_id));
+			(null == t ? void 0 : t.payment_id) != null ? ((h = !0), (O = t.payment_id)) : (null == t ? void 0 : t.payment_source_id) != null && ((h = !0), (p = t.payment_source_id));
 		},
 		RESET_PAYMENT_ID: function () {
 			(h = !1), (O = null);

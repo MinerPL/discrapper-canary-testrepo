@@ -13,8 +13,8 @@ var r = n(913527),
 	f = n(106255),
 	h = n(474936),
 	p = n(735825);
-let I = null,
-	m = !1;
+let m = null,
+	I = !1;
 function T(e) {
 	let t = o.Z.createFromServer(e.entitlement);
 	(0, f._k)(t)
@@ -51,10 +51,7 @@ function g() {
 						})() ||
 						(function () {
 							var e;
-							let t =
-								null !== (e = E.Z.getTenureRewardStatusForRewardId(p.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e
-									? e
-									: E.Z.getTenureRewardStatusForRewardId(p.Ft.FREE_GUILD_BOOST_3_MONTHS);
+							let t = null !== (e = E.Z.getTenureRewardStatusForRewardId(p.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : E.Z.getTenureRewardStatusForRewardId(p.Ft.FREE_GUILD_BOOST_3_MONTHS);
 							return null != t && null != t.redeemable_at && 0 >= i()(t.redeemable_at).diff(i().utc(), 'seconds');
 						})()
 					);
@@ -76,27 +73,23 @@ function g() {
 		}
 }
 async function S() {
-	if (!m)
-		(m = !0),
+	if (!I)
+		(I = !0),
 			await d.V(),
-			(m = !1),
+			(I = !1),
 			a.Z.wait(() =>
 				(function () {
 					var e;
-					if ((A(), E.Z.getFetchState() !== E.M.FETCHED || m)) return;
-					let t =
-						null !== (e = E.Z.getTenureRewardStatusForRewardId(p.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e
-							? e
-							: E.Z.getTenureRewardStatusForRewardId(p.Ft.FREE_GUILD_BOOST_3_MONTHS);
+					if ((A(), E.Z.getFetchState() !== E.M.FETCHED || I)) return;
+					let t = null !== (e = E.Z.getTenureRewardStatusForRewardId(p.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : E.Z.getTenureRewardStatusForRewardId(p.Ft.FREE_GUILD_BOOST_3_MONTHS);
 					if ((null == t ? void 0 : t.redeemable_at) == null) return;
-					let n =
-						(null == t ? void 0 : t.redeemable_at) != null ? new Date(t.redeemable_at).getTime() - Date.now() : null;
-					null != n && n > 0 && (I = setTimeout(g, n));
+					let n = (null == t ? void 0 : t.redeemable_at) != null ? new Date(t.redeemable_at).getTime() - Date.now() : null;
+					null != n && n > 0 && (m = setTimeout(g, n));
 				})()
 			);
 }
 function A() {
-	clearTimeout(I), (I = null);
+	clearTimeout(m), (m = null);
 }
 function N() {
 	A();

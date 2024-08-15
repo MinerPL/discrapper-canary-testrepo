@@ -59,13 +59,7 @@ function y(e, s, t) {
 		e
 	);
 }
-((i = n || (n = {})).MUTED = 'muted'),
-	(i.MESSAGE_NOTIFICATIONS = 'message_notifications'),
-	(i.SUPPRESS_EVERYONE = 'suppress_everyone'),
-	(i.SUPPRESS_ROLES = 'suppress_roles'),
-	(i.MOBILE_PUSH = 'mobile_push'),
-	(i.MUTE_EVENTS = 'mute_scheduled_events'),
-	(i.NOTIFY_HIGHLIGHTS = 'notify_highlights');
+((i = n || (n = {})).MUTED = 'muted'), (i.MESSAGE_NOTIFICATIONS = 'message_notifications'), (i.SUPPRESS_EVERYONE = 'suppress_everyone'), (i.SUPPRESS_ROLES = 'suppress_roles'), (i.MOBILE_PUSH = 'mobile_push'), (i.MUTE_EVENTS = 'mute_scheduled_events'), (i.NOTIFY_HIGHLIGHTS = 'notify_highlights');
 class Y extends a.PureComponent {
 	static getDerivedStateFromProps(e, s) {
 		let { overrides: t, channelOverridesProp: n } = s;
@@ -98,9 +92,7 @@ class Y extends a.PureComponent {
 		}
 		if (this.props.channelOverrides !== e.channelOverrides) {
 			let { overrides: e } = this.state;
-			(e = new Set(e)),
-				(0, O.OD)(this.props.channelOverrides).forEach((s) => e.add(s)),
-				this.setState({ overrides: e });
+			(e = new Set(e)), (0, O.OD)(this.props.channelOverrides).forEach((s) => e.add(s)), this.setState({ overrides: e });
 		}
 	}
 	handleCheckboxChange(e, s, t) {
@@ -230,15 +222,7 @@ class Y extends a.PureComponent {
 		});
 	}
 	renderNotificationOptions() {
-		let {
-			suppressEveryone: e,
-			suppressRoles: s,
-			mobilePush: t,
-			muted: n,
-			muteEvents: i,
-			notifyHighlights: a,
-			guildId: r
-		} = this.props;
+		let { suppressEveryone: e, suppressRoles: s, mobilePush: t, muted: n, muteEvents: i, notifyHighlights: a, guildId: r } = this.props;
 		return (0, l.jsxs)(E.FormItem, {
 			className: H.largeSpacing,
 			children: [
@@ -254,11 +238,7 @@ class Y extends a.PureComponent {
 				}),
 				(0, l.jsx)(E.FormSwitch, {
 					onChange: (e) => {
-						g.Z.updateGuildNotificationSettings(
-							r,
-							{ notify_highlights: e ? k.gLR.DISABLED : k.gLR.ENABLED },
-							D.UE.highlights(!e)
-						);
+						g.Z.updateGuildNotificationSettings(r, { notify_highlights: e ? k.gLR.DISABLED : k.gLR.ENABLED }, D.UE.highlights(!e));
 					},
 					value: n || a === k.gLR.DISABLED,
 					disabled: n,
@@ -341,14 +321,7 @@ class Y extends a.PureComponent {
 		});
 	}
 	renderChannelNotifications() {
-		let {
-				channelOverrides: e,
-				muted: s,
-				channels: t,
-				messageNotifications: n,
-				categories: i,
-				checkboxColor: a
-			} = this.props,
+		let { channelOverrides: e, muted: s, channels: t, messageNotifications: n, categories: i, checkboxColor: a } = this.props,
 			{ overrides: r } = this.state,
 			o = t
 				.map((t) => {
@@ -443,14 +416,7 @@ class Y extends a.PureComponent {
 				this.renderHeader(),
 				(0, l.jsxs)(E.ModalContent, {
 					scrollerRef: this.setScrollerRef,
-					children: [
-						this.renderMute(),
-						this.renderServerSettings(),
-						this.renderCustomNotificationSoundOptions(),
-						this.renderNotificationOptions(),
-						this.renderOverrideSelect(),
-						this.renderChannelNotifications()
-					]
+					children: [this.renderMute(), this.renderServerSettings(), this.renderCustomNotificationSoundOptions(), this.renderNotificationOptions(), this.renderOverrideSelect(), this.renderChannelNotifications()]
 				}),
 				this.renderFooter()
 			]

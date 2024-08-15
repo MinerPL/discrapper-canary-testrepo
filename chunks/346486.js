@@ -19,12 +19,7 @@ function u(e, t, a) {
 		e
 	);
 }
-let d = () => [
-	c.Z.Messages.COUNTDOWN_UNITS_SECONDS,
-	c.Z.Messages.COUNTDOWN_UNITS_MINUTES,
-	c.Z.Messages.COUNTDOWN_UNITS_HOURS,
-	c.Z.Messages.COUNTDOWN_UNITS_DAYS
-];
+let d = () => [c.Z.Messages.COUNTDOWN_UNITS_SECONDS, c.Z.Messages.COUNTDOWN_UNITS_MINUTES, c.Z.Messages.COUNTDOWN_UNITS_HOURS, c.Z.Messages.COUNTDOWN_UNITS_DAYS];
 class _ extends (s = l.PureComponent) {
 	componentDidMount() {
 		let { intervalDuration: e, onInterval: t } = this.props;

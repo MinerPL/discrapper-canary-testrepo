@@ -88,20 +88,7 @@ _(C, 'defaultProps', {
 });
 class g extends (a = i.PureComponent) {
 	render() {
-		let {
-				children: e,
-				className: t,
-				direction: n,
-				justify: s,
-				align: a,
-				wrap: i,
-				shrink: l,
-				grow: c,
-				basis: _,
-				style: u,
-				gutter: E,
-				...T
-			} = this.props,
+		let { children: e, className: t, direction: n, justify: s, align: a, wrap: i, shrink: l, grow: c, basis: _, style: u, gutter: E, ...T } = this.props,
 			I = {
 				flexShrink: l,
 				flexGrow: c,

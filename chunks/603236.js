@@ -78,24 +78,7 @@ let A = o.ZP.connectStores([E.Z], () => ({ hideValue: E.Z.hideInstantInvites }))
 		);
 	}),
 	Z = (e) => {
-		let {
-				guild: n,
-				noInvitesAvailable: l,
-				showFriends: t,
-				onClose: o,
-				modalState: d,
-				isGuestInviteCreationToggleEnabled: E,
-				inviteFlags: S,
-				setInviteFlags: C,
-				showGuestInviteToggleForCurrentVoiceChannel: Z,
-				copyValue: f,
-				changePage: j,
-				inviteChannel: M,
-				source: D,
-				code: R,
-				guildScheduledEvent: p,
-				disabled: V
-			} = e,
+		let { guild: n, noInvitesAvailable: l, showFriends: t, onClose: o, modalState: d, isGuestInviteCreationToggleEnabled: E, inviteFlags: S, setInviteFlags: C, showGuestInviteToggleForCurrentVoiceChannel: Z, copyValue: f, changePage: j, inviteChannel: M, source: D, code: R, guildScheduledEvent: p, disabled: V } = e,
 			{ maxAge: G, maxUses: O, networkError: U, showVanityURL: y } = d,
 			b = a.useCallback(() => {
 				(0, I.JG)(f),

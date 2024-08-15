@@ -96,10 +96,7 @@ function h(e, t, n) {
 function g(e, t) {
 	let n = s.useRef(!1);
 	s.useEffect(() => {
-		u.Z.requestMembers(e, t, 200),
-			'' !== t &&
-				!n.current &&
-				(c.default.track(T.rMx.SEARCH_STARTED, { search_type: 'Role Members' }), (n.current = !0));
+		u.Z.requestMembers(e, t, 200), '' !== t && !n.current && (c.default.track(T.rMx.SEARCH_STARTED, { search_type: 'Role Members' }), (n.current = !0));
 	}, [e, t]);
 }
 function C(e, t) {

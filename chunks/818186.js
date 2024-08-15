@@ -24,10 +24,7 @@ function m(e) {
 		children: (0, i.jsxs)(s.Clickable, {
 			className: I.friendRequestsButton,
 			onClick: () => {
-				d.default.track(_.rMx.NOTIFICATION_CENTER_ACTION, { action_type: o.ud.FRIEND_REQUESTS_BUTTON_CLICK }),
-					(0, c.uL)(_.Z5c.FRIENDS),
-					r.Z.setSection(_.pJs.PENDING),
-					t();
+				d.default.track(_.rMx.NOTIFICATION_CENTER_ACTION, { action_type: o.ud.FRIEND_REQUESTS_BUTTON_CLICK }), (0, c.uL)(_.Z5c.FRIENDS), r.Z.setSection(_.pJs.PENDING), t();
 			},
 			children: [
 				(0, i.jsx)(s.FriendsIcon, {

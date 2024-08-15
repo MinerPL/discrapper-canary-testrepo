@@ -19,9 +19,7 @@ var a = t(442837),
 function O(e) {
 	let { onClose: s, source: O, ...T } = e,
 		M = (0, a.e7)([r.default], () => r.default.getCurrentUser()),
-		R = _.ZP.isPremium(M)
-			? I.Z.Messages.PREMIUM_PROFILE_CUSTOMIZATION_UPGRADE_BODY
-			: I.Z.Messages.PREMIUM_PROFILE_CUSTOMIZATION_UPSELL_BODY,
+		R = _.ZP.isPremium(M) ? I.Z.Messages.PREMIUM_PROFILE_CUSTOMIZATION_UPGRADE_BODY : I.Z.Messages.PREMIUM_PROFILE_CUSTOMIZATION_UPSELL_BODY,
 		L = R.format({
 			onLearnMore: function () {
 				s(), (0, c.z)(!0);

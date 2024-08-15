@@ -36,11 +36,7 @@ let T = (e) => {
 		var n;
 		let { profileEffect: t } = e,
 			s = (0, f.V)(t.id),
-			{
-				accessibilityLabel: i,
-				thumbnailPreviewSrc: l,
-				title: r
-			} = null !== (n = null == s ? void 0 : s.config) && void 0 !== n ? n : {};
+			{ accessibilityLabel: i, thumbnailPreviewSrc: l, title: r } = null !== (n = null == s ? void 0 : s.config) && void 0 !== n ? n : {};
 		return (0, a.jsxs)('div', {
 			className: x.profileEffectContainer,
 			children: [
@@ -122,12 +118,7 @@ n.Z = (e) => {
 							(0, a.jsx)(o.Heading, {
 								variant: 'heading-sm/medium',
 								color: 'header-secondary',
-								children:
-									N.type === l.Z.AVATAR_DECORATION
-										? p.Z.Messages.USER_SETTINGS_AVATAR_DECORATION
-										: N.type === l.Z.PROFILE_EFFECT
-											? p.Z.Messages.USER_SETTINGS_PROFILE_EFFECT
-											: null
+								children: N.type === l.Z.AVATAR_DECORATION ? p.Z.Messages.USER_SETTINGS_AVATAR_DECORATION : N.type === l.Z.PROFILE_EFFECT ? p.Z.Messages.USER_SETTINGS_PROFILE_EFFECT : null
 							})
 						]
 					}),

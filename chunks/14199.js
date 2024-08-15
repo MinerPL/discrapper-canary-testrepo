@@ -122,10 +122,7 @@ var i = function (e) {
 				}),
 				(t.execute = function () {
 					return new Promise(function (e, n) {
-						return t.state.invisible
-							? (t.state.rendered && (t._executeRecaptcha(), e()),
-								n(Error('This recaptcha instance did not render yet.')))
-							: n(Error('Manual execution is only available for invisible size.'));
+						return t.state.invisible ? (t.state.rendered && (t._executeRecaptcha(), e()), n(Error('This recaptcha instance did not render yet.'))) : n(Error('Manual execution is only available for invisible size.'));
 					});
 				}),
 				(t.getResponse = function () {

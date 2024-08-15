@@ -22,12 +22,7 @@ var s,
 	v = n(231338),
 	x = n(689938),
 	h = n(888902);
-((a = s || (s = {}))[(a.SCHEDULED = 0)] = 'SCHEDULED'),
-	(a[(a.STARTING_SOON = 1)] = 'STARTING_SOON'),
-	(a[(a.READY = 2)] = 'READY'),
-	(a[(a.STARTED = 3)] = 'STARTED'),
-	(a[(a.ENDED = 4)] = 'ENDED'),
-	(a[(a.CANCELED = 5)] = 'CANCELED');
+((a = s || (s = {}))[(a.SCHEDULED = 0)] = 'SCHEDULED'), (a[(a.STARTING_SOON = 1)] = 'STARTING_SOON'), (a[(a.READY = 2)] = 'READY'), (a[(a.STARTED = 3)] = 'STARTED'), (a[(a.ENDED = 4)] = 'ENDED'), (a[(a.CANCELED = 5)] = 'CANCELED');
 function g() {
 	return (0, l.jsx)(d.TextBadge, {
 		className: h.newBadge,
@@ -57,27 +52,13 @@ function f(e) {
 	});
 }
 function L(e) {
-	let {
-			startTime: t,
-			status: n,
-			eventType: s,
-			className: a,
-			endTime: i,
-			liveText: c,
-			textVariant: E = 'text-sm/semibold',
-			isNew: L,
-			recurrenceRule: S,
-			guildEventId: A,
-			recurrenceId: I
-		} = e,
+	let { startTime: t, status: n, eventType: s, className: a, endTime: i, liveText: c, textVariant: E = 'text-sm/semibold', isNew: L, recurrenceRule: S, guildEventId: A, recurrenceId: I } = e,
 		Z = (0, N.O0)(v.tP.TEXT_BRAND),
 		C = (0, N.O0)(v.tP.TEXT_POSITIVE),
 		R = (0, N.O0)(v.tP.TEXT_DANGER);
-	null == c &&
-		(c = s === D.WX.EXTERNAL ? x.Z.Messages.STAGE_CHANNEL_HAPPENING_NOW : x.Z.Messages.STAGE_CHANNEL_LIVE_NOW);
+	null == c && (c = s === D.WX.EXTERNAL ? x.Z.Messages.STAGE_CHANNEL_HAPPENING_NOW : x.Z.Messages.STAGE_CHANNEL_LIVE_NOW);
 	let p = (0, _.Z)(I, A),
-		[{ startDateTimeString: j, endDateTimeString: O, currentOrPastEvent: M, upcomingEvent: U, diffMinutes: w }, G] =
-			r.useState((0, T.ub)(t, i));
+		[{ startDateTimeString: j, endDateTimeString: O, currentOrPastEvent: M, upcomingEvent: U, diffMinutes: w }, G] = r.useState((0, T.ub)(t, i));
 	r.useEffect(() => {
 		G((0, T.ub)(t, i));
 		let e = setInterval(() => G((0, T.ub)(t, i)), 1000);
@@ -92,21 +73,7 @@ function L(e) {
 			start: j,
 			end: O
 		}));
-	let b = r.useMemo(
-			() =>
-				n === D.p1.CANCELED || (null == p ? void 0 : p.is_canceled)
-					? 5
-					: n === D.p1.ACTIVE
-						? 3
-						: D.$I.has(n)
-							? 4
-							: M
-								? 2
-								: U
-									? 1
-									: 0,
-			[n, null == p ? void 0 : p.is_canceled, M, U]
-		),
+	let b = r.useMemo(() => (n === D.p1.CANCELED || (null == p ? void 0 : p.is_canceled) ? 5 : n === D.p1.ACTIVE ? 3 : D.$I.has(n) ? 4 : M ? 2 : U ? 1 : 0), [n, null == p ? void 0 : p.is_canceled, M, U]),
 		H = (function (e, t, n, s, a) {
 			switch (e) {
 				case 1:
@@ -142,14 +109,7 @@ function L(e) {
 			() =>
 				(function (e) {
 					let t,
-						{
-							timeStatus: n,
-							textBrand: s,
-							textPositive: a,
-							textDanger: l,
-							endDateTimeString: r,
-							startDateTimeString: i
-						} = e,
+						{ timeStatus: n, textBrand: s, textPositive: a, textDanger: l, endDateTimeString: r, startDateTimeString: i } = e,
 						u = d.CalendarIcon,
 						c = s,
 						o = 'header-secondary';

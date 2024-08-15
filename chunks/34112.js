@@ -35,16 +35,7 @@ var s = n(735250),
 	v = n(214099);
 let j = 'DRAGGABLE_ROLE';
 function Z(e) {
-	let {
-			setEditRoleId: t,
-			guild: n,
-			everyoneRole: i,
-			otherRoles: r,
-			setSelectedSection: l,
-			renderHeader: o,
-			headerHeight: c,
-			query: u
-		} = e,
+	let { setEditRoleId: t, guild: n, everyoneRole: i, otherRoles: r, setSelectedSection: l, renderHeader: o, headerHeight: c, query: u } = e,
 		_ = (0, d.e7)([p.Z], () => p.Z.getRoleMemberCount(n.id), [n.id]),
 		E = (0, d.e7)([g.Z], () => g.Z.getHighestRole(n), [n]),
 		T = u.trim();
@@ -53,8 +44,7 @@ function Z(e) {
 	}, [n.id]);
 	let m = a.useRef(!1);
 	a.useEffect(() => {
-		if (!m.current && '' !== u.trimStart())
-			C.default.track(A.rMx.SEARCH_STARTED, { search_type: 'Roles' }), (m.current = !0);
+		if (!m.current && '' !== u.trimStart()) C.default.track(A.rMx.SEARCH_STARTED, { search_type: 'Roles' }), (m.current = !0);
 	}, [u]);
 	let N = a.useMemo(() => r.filter((e) => (0, R.uo)(e, T)), [r, T]),
 		S = a.useMemo(() => [...r, i], [r, i]),
@@ -114,20 +104,7 @@ function b() {
 }
 function U(e) {
 	var t, i, c;
-	let {
-			role: d,
-			guild: I,
-			highestRole: T,
-			currentPosition: S,
-			memberCount: g,
-			onDragStart: C,
-			onDragReset: x,
-			onDragComplete: p,
-			disableHover: R,
-			disableDrag: L,
-			setEditRoleId: A,
-			setSelectedSection: Z
-		} = e,
+	let { role: d, guild: I, highestRole: T, currentPosition: S, memberCount: g, onDragStart: C, onDragReset: x, onDragComplete: p, disableHover: R, disableDrag: L, setEditRoleId: A, setSelectedSection: Z } = e,
 		b = (0, f.T)(I, T, d),
 		U = null != b,
 		[P, B] = a.useState(!1),
@@ -161,9 +138,7 @@ function U(e) {
 				canDrop: () => !U,
 				collect: (e) => {
 					let t = e.getItem();
-					return null != t && e.isOver() && e.canDrop()
-						? { dragSourcePosition: t.position }
-						: { dragSourcePosition: null };
+					return null != t && e.isOver() && e.canDrop() ? { dragSourcePosition: t.position } : { dragSourcePosition: null };
 				},
 				drop: () => ({ roleId: d.id })
 			}),

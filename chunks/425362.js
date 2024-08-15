@@ -1,106 +1,9 @@
 let t = '[A-Za-z$_][0-9A-Za-z$_]*',
-	n = [
-		'as',
-		'in',
-		'of',
-		'if',
-		'for',
-		'while',
-		'finally',
-		'var',
-		'new',
-		'function',
-		'do',
-		'return',
-		'void',
-		'else',
-		'break',
-		'catch',
-		'instanceof',
-		'with',
-		'throw',
-		'case',
-		'default',
-		'try',
-		'switch',
-		'continue',
-		'typeof',
-		'delete',
-		'let',
-		'yield',
-		'const',
-		'class',
-		'debugger',
-		'async',
-		'await',
-		'static',
-		'import',
-		'from',
-		'export',
-		'extends'
-	],
+	n = ['as', 'in', 'of', 'if', 'for', 'while', 'finally', 'var', 'new', 'function', 'do', 'return', 'void', 'else', 'break', 'catch', 'instanceof', 'with', 'throw', 'case', 'default', 'try', 'switch', 'continue', 'typeof', 'delete', 'let', 'yield', 'const', 'class', 'debugger', 'async', 'await', 'static', 'import', 'from', 'export', 'extends'],
 	r = ['true', 'false', 'null', 'undefined', 'NaN', 'Infinity'],
-	i = [
-		'Object',
-		'Function',
-		'Boolean',
-		'Symbol',
-		'Math',
-		'Date',
-		'Number',
-		'BigInt',
-		'String',
-		'RegExp',
-		'Array',
-		'Float32Array',
-		'Float64Array',
-		'Int8Array',
-		'Uint8Array',
-		'Uint8ClampedArray',
-		'Int16Array',
-		'Int32Array',
-		'Uint16Array',
-		'Uint32Array',
-		'BigInt64Array',
-		'BigUint64Array',
-		'Set',
-		'Map',
-		'WeakSet',
-		'WeakMap',
-		'ArrayBuffer',
-		'SharedArrayBuffer',
-		'Atomics',
-		'DataView',
-		'JSON',
-		'Promise',
-		'Generator',
-		'GeneratorFunction',
-		'AsyncFunction',
-		'Reflect',
-		'Proxy',
-		'Intl',
-		'WebAssembly'
-	],
+	i = ['Object', 'Function', 'Boolean', 'Symbol', 'Math', 'Date', 'Number', 'BigInt', 'String', 'RegExp', 'Array', 'Float32Array', 'Float64Array', 'Int8Array', 'Uint8Array', 'Uint8ClampedArray', 'Int16Array', 'Int32Array', 'Uint16Array', 'Uint32Array', 'BigInt64Array', 'BigUint64Array', 'Set', 'Map', 'WeakSet', 'WeakMap', 'ArrayBuffer', 'SharedArrayBuffer', 'Atomics', 'DataView', 'JSON', 'Promise', 'Generator', 'GeneratorFunction', 'AsyncFunction', 'Reflect', 'Proxy', 'Intl', 'WebAssembly'],
 	a = ['Error', 'EvalError', 'InternalError', 'RangeError', 'ReferenceError', 'SyntaxError', 'TypeError', 'URIError'],
-	s = [
-		'setInterval',
-		'setTimeout',
-		'clearInterval',
-		'clearTimeout',
-		'require',
-		'exports',
-		'eval',
-		'isFinite',
-		'isNaN',
-		'parseFloat',
-		'parseInt',
-		'decodeURI',
-		'decodeURIComponent',
-		'encodeURI',
-		'encodeURIComponent',
-		'escape',
-		'unescape'
-	],
+	s = ['setInterval', 'setTimeout', 'clearInterval', 'clearTimeout', 'require', 'exports', 'eval', 'isFinite', 'isNaN', 'parseFloat', 'parseInt', 'decodeURI', 'decodeURIComponent', 'encodeURI', 'encodeURIComponent', 'escape', 'unescape'],
 	o = ['arguments', 'this', 'super', 'console', 'window', 'document', 'localStorage', 'module', 'global'],
 	l = [].concat(s, i, a);
 e.exports = function (e) {
@@ -129,34 +32,26 @@ e.exports = function (e) {
 				return;
 			}
 		},
-		I = {
+		m = {
 			$pattern: t,
 			keyword: n,
 			literal: r,
 			built_in: l,
 			'variable.language': o
 		},
-		m = '[0-9](_?[0-9])*',
-		T = `\\.(${m})`,
+		I = '[0-9](_?[0-9])*',
+		T = `\\.(${I})`,
 		g = '0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*',
 		S = {
 			className: 'number',
-			variants: [
-				{ begin: `(\\b(${g})((${T})|\\.)?|(${T}))[eE][+-]?(${m})\\b` },
-				{ begin: `\\b(${g})\\b((${T})\\b|\\.)?|(${T})\\b` },
-				{ begin: '\\b(0|[1-9](_?[0-9])*)n\\b' },
-				{ begin: '\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b' },
-				{ begin: '\\b0[bB][0-1](_?[0-1])*n?\\b' },
-				{ begin: '\\b0[oO][0-7](_?[0-7])*n?\\b' },
-				{ begin: '\\b0[0-7]+n?\\b' }
-			],
+			variants: [{ begin: `(\\b(${g})((${T})|\\.)?|(${T}))[eE][+-]?(${I})\\b` }, { begin: `\\b(${g})\\b((${T})\\b|\\.)?|(${T})\\b` }, { begin: '\\b(0|[1-9](_?[0-9])*)n\\b' }, { begin: '\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b' }, { begin: '\\b0[bB][0-1](_?[0-1])*n?\\b' }, { begin: '\\b0[oO][0-7](_?[0-7])*n?\\b' }, { begin: '\\b0[0-7]+n?\\b' }],
 			relevance: 0
 		},
 		A = {
 			className: 'subst',
 			begin: '\\$\\{',
 			end: '\\}',
-			keywords: I,
+			keywords: m,
 			contains: []
 		},
 		N = {
@@ -229,7 +124,7 @@ e.exports = function (e) {
 	A.contains = C.concat({
 		begin: /\{/,
 		end: /\}/,
-		keywords: I,
+		keywords: m,
 		contains: ['self'].concat(C)
 	});
 	let y = [].concat(R, A.contains),
@@ -237,7 +132,7 @@ e.exports = function (e) {
 			{
 				begin: /\(/,
 				end: /\)/,
-				keywords: I,
+				keywords: m,
 				contains: ['self'].concat(y)
 			}
 		]),
@@ -247,7 +142,7 @@ e.exports = function (e) {
 			end: /\)/,
 			excludeBegin: !0,
 			excludeEnd: !0,
-			keywords: I,
+			keywords: m,
 			contains: D
 		},
 		b = {
@@ -272,12 +167,7 @@ e.exports = function (e) {
 		},
 		M = {
 			relevance: 0,
-			match: c.either(
-				/\bJSON/,
-				/\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/,
-				/\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/,
-				/\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/
-			),
+			match: c.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
 			className: 'title.class',
 			keywords: {
 				_: [...i, ...a]
@@ -309,7 +199,7 @@ e.exports = function (e) {
 	return {
 		name: 'Javascript',
 		aliases: ['js', 'jsx', 'mjs', 'cjs'],
-		keywords: I,
+		keywords: m,
 		exports: {
 			PARAMS_CONTAINS: D,
 			CLASS_REFERENCE: M
@@ -372,7 +262,7 @@ e.exports = function (e) {
 										end: /\)/,
 										excludeBegin: !0,
 										excludeEnd: !0,
-										keywords: I,
+										keywords: m,
 										contains: D
 									}
 								]
@@ -431,8 +321,7 @@ e.exports = function (e) {
 			},
 			{ beginKeywords: 'while if switch catch for' },
 			{
-				begin:
-					'\\b(?!function)' + e.UNDERSCORE_IDENT_RE + '\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{',
+				begin: '\\b(?!function)' + e.UNDERSCORE_IDENT_RE + '\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{',
 				returnBegin: !0,
 				label: 'func.def',
 				contains: [

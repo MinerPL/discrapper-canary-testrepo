@@ -30,13 +30,7 @@ let _ = new i.Y('Output'),
 class f extends r.EventEmitter {
 	destroy() {
 		var e, t;
-		this.removeAllListeners(),
-			null === (e = this.cleanup) || void 0 === e || e.call(this),
-			this.reset(),
-			null != this.stream && (E.release(this.stream), (this.stream = void 0)),
-			null === (t = this._audioFilter) || void 0 === t || t.dispose(),
-			(this._audioFilter = void 0),
-			(this.destroyed = !0);
+		this.removeAllListeners(), null === (e = this.cleanup) || void 0 === e || e.call(this), this.reset(), null != this.stream && (E.release(this.stream), (this.stream = void 0)), null === (t = this._audioFilter) || void 0 === t || t.dispose(), (this._audioFilter = void 0), (this.destroyed = !0);
 	}
 	reset() {
 		this.setSpeaking(!1);
@@ -87,8 +81,7 @@ class f extends r.EventEmitter {
 		this._automaticGainControl !== e && ((this._automaticGainControl = e), null != this.stream && this.enable());
 	}
 	async enable() {
-		null != this.cleanup && (this.cleanup(), (this.cleanup = void 0)),
-			null != this.stream && (E.release(this.stream), (this.stream = void 0));
+		null != this.cleanup && (this.cleanup(), (this.cleanup = void 0)), null != this.stream && (E.release(this.stream), (this.stream = void 0));
 		let e = await (0, a.Hg)(),
 			t = {
 				echoCancellation: this.echoCancellation,
@@ -117,9 +110,7 @@ class f extends r.EventEmitter {
 					_.error('failure creating krisp node'), _.error(t), (this.stream = e);
 				}
 			else this.stream = e;
-			return (
-				this.updateMode(), this.updateAudioTracks(), this.emit('permission', !0), this.emit('stream', this.stream), e
-			);
+			return this.updateMode(), this.updateAudioTracks(), this.emit('permission', !0), this.emit('stream', this.stream), e;
 		} catch (e) {
 			if ('string' != typeof e)
 				switch (e.name) {
@@ -142,8 +133,7 @@ class f extends r.EventEmitter {
 	}
 	setPTTActive(e) {
 		if (!this.mute && this.speaking !== e)
-			null != this.pttReleaseDelayTimeout &&
-				(window.clearTimeout(this.pttReleaseDelayTimeout), (this.pttReleaseDelayTimeout = void 0)),
+			null != this.pttReleaseDelayTimeout && (window.clearTimeout(this.pttReleaseDelayTimeout), (this.pttReleaseDelayTimeout = void 0)),
 				e
 					? this.setSpeaking(e)
 					: (this.pttReleaseDelayTimeout = window.setTimeout(() => {
@@ -154,10 +144,7 @@ class f extends r.EventEmitter {
 		(this.mode = e), (this.modeOptions = t), null != this.stream && this.enable();
 	}
 	updateMode() {
-		null != this.cleanup && (this.cleanup(), (this.cleanup = void 0)),
-			null != this.stream &&
-				this.mode === u.pM.VOICE_ACTIVITY &&
-				(this.cleanup = this.setupVoiceActivity(this.modeOptions));
+		null != this.cleanup && (this.cleanup(), (this.cleanup = void 0)), null != this.stream && this.mode === u.pM.VOICE_ACTIVITY && (this.cleanup = this.setupVoiceActivity(this.modeOptions));
 	}
 	setupVoiceActivity(e) {
 		let { threshold: t } = e;

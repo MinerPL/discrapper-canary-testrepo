@@ -31,9 +31,7 @@ t.Z = {
 				return Promise.race([
 					(function (e, t) {
 						let n = u.Z.isEntitledToSku(d.default.getCurrentUser(), e, t);
-						return null != n
-							? Promise.resolve(n)
-							: (0, l.yD)(t).then(() => !0 === u.Z.isEntitledToSku(d.default.getCurrentUser(), e, t));
+						return null != n ? Promise.resolve(n) : (0, l.yD)(t).then(() => !0 === u.Z.isEntitledToSku(d.default.getCurrentUser(), e, t));
 					})(t, e.id).then((e) => {
 						if (!e) throw new m.Z({ errorCode: g.lTL.INVALID_ENTITLEMENT }, 'User does not have entitlement.');
 					}),

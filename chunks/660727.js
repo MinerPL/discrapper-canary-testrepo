@@ -162,12 +162,7 @@ a.default = function (e) {
 									if ((null == e ? void 0 : e.id) != null) (null == e ? void 0 : e.type) === v.B.GUILD && o(await h(e));
 									else if ((null == e ? void 0 : e.surrogates) != null) {
 										var a, l;
-										n(
-											null !== (l = null === (a = e.defaultDiversityChild) || void 0 === a ? void 0 : a.surrogates) &&
-												void 0 !== l
-												? l
-												: e.surrogates
-										);
+										n(null !== (l = null === (a = e.defaultDiversityChild) || void 0 === a ? void 0 : a.surrogates) && void 0 !== l ? l : e.surrogates);
 									}
 									t();
 								},

@@ -34,23 +34,15 @@ function _(e) {
 		});
 	return (function (e) {
 		let t = (function (e) {
-			let {
-					quest: t,
-					taskDetails: n,
-					location: r,
-					useV2Variants: a = !1,
-					connectedConsoleLinkOnClick: c,
-					thirdPartyTaskDetails: d,
-					withoutMarkdown: _
-				} = e,
+			let { quest: t, taskDetails: n, location: r, useV2Variants: a = !1, connectedConsoleLinkOnClick: c, thirdPartyTaskDetails: d, withoutMarkdown: _ } = e,
 				E = t.config.messages.gameTitle,
 				f = o.r.build(t.config).defaultReward.messages.nameWithArticle,
 				{ targetMinutes: h } = n,
 				p = (0, i.zK)(t, l.S7.IN_HOUSE_CONSOLE_QUEST),
-				I = (0, i.Kr)(t.config),
-				m = (0, i.$J)(t) && (0, i.$H)(t),
+				m = (0, i.Kr)(t.config),
+				I = (0, i.$J)(t) && (0, i.$H)(t),
 				T = (0, s.T)({ location: r });
-			if (p && null != I)
+			if (p && null != m)
 				return (function (e) {
 					var t;
 					let { quest: n, taskDetails: r, withoutMarkdown: a } = e,
@@ -73,16 +65,10 @@ function _(e) {
 					taskDetails: n,
 					withoutMarkdown: _
 				});
-			if (m)
+			if (I)
 				return (function (e) {
 					var t;
-					let {
-							quest: n,
-							taskDetails: r,
-							connectedConsoleLinkOnClick: a,
-							withoutMarkdown: s,
-							mobileGAExperiment: l
-						} = e,
+					let { quest: n, taskDetails: r, connectedConsoleLinkOnClick: a, withoutMarkdown: s, mobileGAExperiment: l } = e,
 						c = o.r.build(n.config).defaultReward.messages.nameWithArticle,
 						d = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
 						_ = (0, i.Kr)(n.config),
@@ -147,9 +133,7 @@ function _(e) {
 						{ targetMinutes: l } = n,
 						c = t.config.messages.gameTitle;
 					return null != s
-						? u.Z.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD[
-								r ? 'astFormat' : 'format'
-							]({
+						? u.Z.Messages.QUESTS_PLAY_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD[r ? 'astFormat' : 'format']({
 								gameTitle: c,
 								streamingDurationRequirement: l,
 								rewardNameWithArticle: a,
@@ -187,15 +171,13 @@ function _(e) {
 				});
 			return null != d
 				? d.description
-				: null != I
-					? u.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD[_ ? 'astFormat' : 'format'](
-							{
-								gameTitle: E,
-								streamingDurationRequirement: h,
-								questReward: f,
-								duration: I
-							}
-						)
+				: null != m
+					? u.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_WITH_EXPIRING_COLLECTIBLE_REWARD[_ ? 'astFormat' : 'format']({
+							gameTitle: E,
+							streamingDurationRequirement: h,
+							questReward: f,
+							duration: m
+						})
 					: a
 						? u.Z.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD_V2[_ ? 'astFormat' : 'format']({
 								gameTitle: E,

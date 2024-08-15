@@ -13,6 +13,5 @@ var r = n(320387),
 e.exports = function (e, t, n) {
 	var a;
 	if (!r(t)) throw TypeError('iterator must be a function');
-	arguments.length >= 3 && (a = n),
-		'[object Array]' === i.call(e) ? s(e, t, a) : 'string' == typeof e ? o(e, t, a) : l(e, t, a);
+	arguments.length >= 3 && (a = n), '[object Array]' === i.call(e) ? s(e, t, a) : 'string' == typeof e ? o(e, t, a) : l(e, t, a);
 };

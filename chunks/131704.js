@@ -134,7 +134,7 @@ var r = n(392711),
 	f = n(709054),
 	h = n(981631),
 	p = n(176505);
-function I(e, t, n) {
+function m(e, t, n) {
 	return (
 		t in e
 			? Object.defineProperty(e, t, {
@@ -147,70 +147,17 @@ function I(e, t, n) {
 		e
 	);
 }
-let m = new Set([
-	h.d4z.GUILD_TEXT,
-	h.d4z.GUILD_ANNOUNCEMENT,
-	h.d4z.GUILD_STORE,
-	h.d4z.ANNOUNCEMENT_THREAD,
-	h.d4z.PUBLIC_THREAD,
-	h.d4z.PRIVATE_THREAD,
-	h.d4z.GUILD_DIRECTORY,
-	h.d4z.GUILD_FORUM,
-	h.d4z.GUILD_MEDIA,
-	h.d4z.DM,
-	h.d4z.GROUP_DM
-]);
+let I = new Set([h.d4z.GUILD_TEXT, h.d4z.GUILD_ANNOUNCEMENT, h.d4z.GUILD_STORE, h.d4z.ANNOUNCEMENT_THREAD, h.d4z.PUBLIC_THREAD, h.d4z.PRIVATE_THREAD, h.d4z.GUILD_DIRECTORY, h.d4z.GUILD_FORUM, h.d4z.GUILD_MEDIA, h.d4z.DM, h.d4z.GROUP_DM]);
 function T(e) {
-	return m.has(e);
+	return I.has(e);
 }
-let g = new Set([
-		h.d4z.DM,
-		h.d4z.GROUP_DM,
-		h.d4z.GUILD_TEXT,
-		h.d4z.GUILD_VOICE,
-		h.d4z.GUILD_STAGE_VOICE,
-		h.d4z.GUILD_CATEGORY,
-		h.d4z.GUILD_ANNOUNCEMENT,
-		h.d4z.GUILD_STORE,
-		h.d4z.ANNOUNCEMENT_THREAD,
-		h.d4z.PUBLIC_THREAD,
-		h.d4z.PRIVATE_THREAD,
-		h.d4z.GUILD_DIRECTORY,
-		h.d4z.GUILD_FORUM,
-		h.d4z.GUILD_MEDIA
-	]),
-	S = new Set([
-		h.d4z.GUILD_TEXT,
-		h.d4z.GUILD_ANNOUNCEMENT,
-		h.d4z.ANNOUNCEMENT_THREAD,
-		h.d4z.PUBLIC_THREAD,
-		h.d4z.PRIVATE_THREAD
-	]);
+let g = new Set([h.d4z.DM, h.d4z.GROUP_DM, h.d4z.GUILD_TEXT, h.d4z.GUILD_VOICE, h.d4z.GUILD_STAGE_VOICE, h.d4z.GUILD_CATEGORY, h.d4z.GUILD_ANNOUNCEMENT, h.d4z.GUILD_STORE, h.d4z.ANNOUNCEMENT_THREAD, h.d4z.PUBLIC_THREAD, h.d4z.PRIVATE_THREAD, h.d4z.GUILD_DIRECTORY, h.d4z.GUILD_FORUM, h.d4z.GUILD_MEDIA]),
+	S = new Set([h.d4z.GUILD_TEXT, h.d4z.GUILD_ANNOUNCEMENT, h.d4z.ANNOUNCEMENT_THREAD, h.d4z.PUBLIC_THREAD, h.d4z.PRIVATE_THREAD]);
 function A(e) {
 	return S.has(e);
 }
-let N = new Set([
-		h.d4z.GUILD_TEXT,
-		h.d4z.GUILD_ANNOUNCEMENT,
-		h.d4z.GUILD_FORUM,
-		h.d4z.GUILD_MEDIA,
-		h.d4z.GUILD_VOICE,
-		h.d4z.GUILD_STAGE_VOICE
-	]),
-	v = new Set([
-		h.d4z.GUILD_TEXT,
-		h.d4z.GUILD_VOICE,
-		h.d4z.GUILD_STAGE_VOICE,
-		h.d4z.GUILD_CATEGORY,
-		h.d4z.GUILD_ANNOUNCEMENT,
-		h.d4z.GUILD_STORE,
-		h.d4z.ANNOUNCEMENT_THREAD,
-		h.d4z.PUBLIC_THREAD,
-		h.d4z.PRIVATE_THREAD,
-		h.d4z.GUILD_DIRECTORY,
-		h.d4z.GUILD_FORUM,
-		h.d4z.GUILD_MEDIA
-	]);
+let N = new Set([h.d4z.GUILD_TEXT, h.d4z.GUILD_ANNOUNCEMENT, h.d4z.GUILD_FORUM, h.d4z.GUILD_MEDIA, h.d4z.GUILD_VOICE, h.d4z.GUILD_STAGE_VOICE]),
+	v = new Set([h.d4z.GUILD_TEXT, h.d4z.GUILD_VOICE, h.d4z.GUILD_STAGE_VOICE, h.d4z.GUILD_CATEGORY, h.d4z.GUILD_ANNOUNCEMENT, h.d4z.GUILD_STORE, h.d4z.ANNOUNCEMENT_THREAD, h.d4z.PUBLIC_THREAD, h.d4z.PRIVATE_THREAD, h.d4z.GUILD_DIRECTORY, h.d4z.GUILD_FORUM, h.d4z.GUILD_MEDIA]);
 function O(e) {
 	return v.has(e);
 }
@@ -228,41 +175,15 @@ let b = new Set([h.d4z.GROUP_DM]);
 function M(e) {
 	return b.has(e);
 }
-let P = new Set([
-	h.d4z.DM,
-	h.d4z.GROUP_DM,
-	h.d4z.GUILD_TEXT,
-	h.d4z.GUILD_ANNOUNCEMENT,
-	h.d4z.ANNOUNCEMENT_THREAD,
-	h.d4z.PUBLIC_THREAD,
-	h.d4z.PRIVATE_THREAD
-]);
+let P = new Set([h.d4z.DM, h.d4z.GROUP_DM, h.d4z.GUILD_TEXT, h.d4z.GUILD_ANNOUNCEMENT, h.d4z.ANNOUNCEMENT_THREAD, h.d4z.PUBLIC_THREAD, h.d4z.PRIVATE_THREAD]);
 function U(e) {
 	return P.has(e);
 }
-let w = new Set([
-	h.d4z.DM,
-	h.d4z.GROUP_DM,
-	h.d4z.GUILD_VOICE,
-	h.d4z.GUILD_STAGE_VOICE,
-	h.d4z.PUBLIC_THREAD,
-	h.d4z.PRIVATE_THREAD
-]);
+let w = new Set([h.d4z.DM, h.d4z.GROUP_DM, h.d4z.GUILD_VOICE, h.d4z.GUILD_STAGE_VOICE, h.d4z.PUBLIC_THREAD, h.d4z.PRIVATE_THREAD]);
 function x(e) {
 	return w.has(e);
 }
-let G = new Set([
-	h.d4z.GUILD_TEXT,
-	h.d4z.GUILD_ANNOUNCEMENT,
-	h.d4z.ANNOUNCEMENT_THREAD,
-	h.d4z.PUBLIC_THREAD,
-	h.d4z.PRIVATE_THREAD,
-	h.d4z.GUILD_DIRECTORY,
-	h.d4z.GUILD_FORUM,
-	h.d4z.GUILD_MEDIA,
-	h.d4z.DM,
-	h.d4z.GROUP_DM
-]);
+let G = new Set([h.d4z.GUILD_TEXT, h.d4z.GUILD_ANNOUNCEMENT, h.d4z.ANNOUNCEMENT_THREAD, h.d4z.PUBLIC_THREAD, h.d4z.PRIVATE_THREAD, h.d4z.GUILD_DIRECTORY, h.d4z.GUILD_FORUM, h.d4z.GUILD_MEDIA, h.d4z.DM, h.d4z.GROUP_DM]);
 function k(e) {
 	return G.has(e);
 }
@@ -271,74 +192,17 @@ let B = new Set([h.d4z.ANNOUNCEMENT_THREAD, h.d4z.PUBLIC_THREAD, h.d4z.PRIVATE_T
 function V(e) {
 	return B.has(e);
 }
-let H = new Set([
-	h.d4z.DM,
-	h.d4z.GROUP_DM,
-	h.d4z.GUILD_TEXT,
-	h.d4z.GUILD_ANNOUNCEMENT,
-	h.d4z.ANNOUNCEMENT_THREAD,
-	h.d4z.PUBLIC_THREAD,
-	h.d4z.PRIVATE_THREAD,
-	h.d4z.GUILD_FORUM,
-	h.d4z.GUILD_MEDIA,
-	h.d4z.GUILD_DIRECTORY,
-	h.d4z.GUILD_VOICE,
-	h.d4z.GUILD_STAGE_VOICE
-]);
+let H = new Set([h.d4z.DM, h.d4z.GROUP_DM, h.d4z.GUILD_TEXT, h.d4z.GUILD_ANNOUNCEMENT, h.d4z.ANNOUNCEMENT_THREAD, h.d4z.PUBLIC_THREAD, h.d4z.PRIVATE_THREAD, h.d4z.GUILD_FORUM, h.d4z.GUILD_MEDIA, h.d4z.GUILD_DIRECTORY, h.d4z.GUILD_VOICE, h.d4z.GUILD_STAGE_VOICE]);
 function Z(e) {
 	return H.has(e);
 }
-let Y = new Set([
-		h.d4z.GUILD_TEXT,
-		h.d4z.GUILD_ANNOUNCEMENT,
-		h.d4z.GUILD_STORE,
-		h.d4z.GUILD_VOICE,
-		h.d4z.GUILD_STAGE_VOICE,
-		h.d4z.ANNOUNCEMENT_THREAD,
-		h.d4z.PUBLIC_THREAD,
-		h.d4z.PRIVATE_THREAD,
-		h.d4z.GUILD_DIRECTORY,
-		h.d4z.GUILD_FORUM,
-		h.d4z.GUILD_MEDIA
-	]),
-	j = new Set([
-		h.d4z.GUILD_ANNOUNCEMENT,
-		h.d4z.GUILD_CATEGORY,
-		h.d4z.GUILD_STORE,
-		h.d4z.GUILD_TEXT,
-		h.d4z.GUILD_VOICE,
-		h.d4z.GUILD_STAGE_VOICE,
-		h.d4z.GUILD_DIRECTORY,
-		h.d4z.GUILD_FORUM,
-		h.d4z.GUILD_MEDIA
-	]),
+let Y = new Set([h.d4z.GUILD_TEXT, h.d4z.GUILD_ANNOUNCEMENT, h.d4z.GUILD_STORE, h.d4z.GUILD_VOICE, h.d4z.GUILD_STAGE_VOICE, h.d4z.ANNOUNCEMENT_THREAD, h.d4z.PUBLIC_THREAD, h.d4z.PRIVATE_THREAD, h.d4z.GUILD_DIRECTORY, h.d4z.GUILD_FORUM, h.d4z.GUILD_MEDIA]),
+	j = new Set([h.d4z.GUILD_ANNOUNCEMENT, h.d4z.GUILD_CATEGORY, h.d4z.GUILD_STORE, h.d4z.GUILD_TEXT, h.d4z.GUILD_VOICE, h.d4z.GUILD_STAGE_VOICE, h.d4z.GUILD_DIRECTORY, h.d4z.GUILD_FORUM, h.d4z.GUILD_MEDIA]),
 	W = new Set([h.d4z.GUILD_TEXT, h.d4z.GUILD_ANNOUNCEMENT]),
 	K = new Set([h.d4z.GUILD_TEXT, h.d4z.GUILD_ANNOUNCEMENT, h.d4z.GUILD_FORUM, h.d4z.GUILD_MEDIA]),
-	z = new Set([
-		h.d4z.GUILD_TEXT,
-		h.d4z.GUILD_ANNOUNCEMENT,
-		h.d4z.GUILD_FORUM,
-		h.d4z.GUILD_MEDIA,
-		h.d4z.GUILD_VOICE,
-		h.d4z.GUILD_STAGE_VOICE
-	]),
-	q = new Set([
-		h.d4z.GUILD_ANNOUNCEMENT,
-		h.d4z.GUILD_TEXT,
-		h.d4z.GUILD_FORUM,
-		h.d4z.GUILD_MEDIA,
-		h.d4z.ANNOUNCEMENT_THREAD
-	]),
-	Q = new Set([
-		h.d4z.GUILD_TEXT,
-		h.d4z.GUILD_FORUM,
-		h.d4z.GUILD_MEDIA,
-		h.d4z.ANNOUNCEMENT_THREAD,
-		h.d4z.PUBLIC_THREAD,
-		h.d4z.PRIVATE_THREAD,
-		h.d4z.GUILD_VOICE,
-		h.d4z.GUILD_STAGE_VOICE
-	]),
+	z = new Set([h.d4z.GUILD_TEXT, h.d4z.GUILD_ANNOUNCEMENT, h.d4z.GUILD_FORUM, h.d4z.GUILD_MEDIA, h.d4z.GUILD_VOICE, h.d4z.GUILD_STAGE_VOICE]),
+	q = new Set([h.d4z.GUILD_ANNOUNCEMENT, h.d4z.GUILD_TEXT, h.d4z.GUILD_FORUM, h.d4z.GUILD_MEDIA, h.d4z.ANNOUNCEMENT_THREAD]),
+	Q = new Set([h.d4z.GUILD_TEXT, h.d4z.GUILD_FORUM, h.d4z.GUILD_MEDIA, h.d4z.ANNOUNCEMENT_THREAD, h.d4z.PUBLIC_THREAD, h.d4z.PRIVATE_THREAD, h.d4z.GUILD_VOICE, h.d4z.GUILD_STAGE_VOICE]),
 	X = new Set([h.d4z.PUBLIC_THREAD, h.d4z.PRIVATE_THREAD, h.d4z.GUILD_VOICE, h.d4z.GUILD_STAGE_VOICE]),
 	$ = new Set([h.d4z.GUILD_TEXT, h.d4z.GUILD_FORUM, h.d4z.GUILD_MEDIA]),
 	J = new Set([h.d4z.GUILD_TEXT, h.d4z.GUILD_CATEGORY, h.d4z.GUILD_FORUM, h.d4z.GUILD_ANNOUNCEMENT]),
@@ -391,73 +255,11 @@ function el(e) {
 class eu {
 	constructor(e) {
 		var t, n, r;
-		I(this, 'id', void 0),
-			I(this, 'type', void 0),
-			I(this, 'name', void 0),
-			I(this, 'guild_id', void 0),
-			I(this, 'topic_', void 0),
-			I(this, 'position_', void 0),
-			I(this, 'permissionOverwrites_', void 0),
-			I(this, 'bitrate_', void 0),
-			I(this, 'rtcRegion', void 0),
-			I(this, 'videoQualityMode', void 0),
-			I(this, 'userLimit_', void 0),
-			I(this, 'recipients', void 0),
-			I(this, 'rawRecipients', void 0),
-			I(this, 'ownerId', void 0),
-			I(this, 'icon', void 0),
-			I(this, 'application_id', void 0),
-			I(this, 'nicks', void 0),
-			I(this, 'nsfw_', void 0),
-			I(this, 'parent_id', void 0),
-			I(this, 'memberListId', void 0),
-			I(this, 'rateLimitPerUser_', void 0),
-			I(this, 'defaultThreadRateLimitPerUser', void 0),
-			I(this, 'defaultAutoArchiveDuration', void 0),
-			I(this, 'flags_', void 0),
-			I(this, 'originChannelId', void 0),
-			I(this, 'lastMessageId', void 0),
-			I(this, 'lastPinTimestamp', void 0),
-			I(this, 'availableTags', void 0),
-			I(this, 'appliedTags', void 0),
-			I(this, 'messageCount', void 0),
-			I(this, 'memberCount', void 0),
-			I(this, 'threadMetadata', void 0),
-			I(this, 'memberIdsPreview', void 0),
-			I(this, 'member', void 0),
-			I(this, 'parentChannelThreadType', void 0),
-			I(this, 'template', void 0),
-			I(this, 'defaultReactionEmoji', void 0),
-			I(this, 'isMessageRequest', void 0),
-			I(this, 'isMessageRequestTimestamp', void 0),
-			I(this, 'isSpam', void 0),
-			I(this, 'totalMessageSent', void 0),
-			I(this, 'defaultSortOrder', void 0),
-			I(this, 'version', void 0),
-			I(this, 'defaultForumLayout', void 0),
-			I(this, 'iconEmoji', void 0),
-			I(this, 'themeColor', void 0),
-			I(this, 'safetyWarnings', void 0),
-			I(this, 'blockedUserWarningDismissed', void 0),
-			I(this, 'linkedLobby', void 0),
-			(this.id = e.id),
-			(this.type = null !== (t = e.type) && void 0 !== t ? t : h.d4z.GUILD_TEXT),
-			(this.name = null !== (n = e.name) && void 0 !== n ? n : ''),
-			(this.guild_id = null !== (r = e.guild_id) && void 0 !== r ? r : null);
+		m(this, 'id', void 0), m(this, 'type', void 0), m(this, 'name', void 0), m(this, 'guild_id', void 0), m(this, 'topic_', void 0), m(this, 'position_', void 0), m(this, 'permissionOverwrites_', void 0), m(this, 'bitrate_', void 0), m(this, 'rtcRegion', void 0), m(this, 'videoQualityMode', void 0), m(this, 'userLimit_', void 0), m(this, 'recipients', void 0), m(this, 'rawRecipients', void 0), m(this, 'ownerId', void 0), m(this, 'icon', void 0), m(this, 'application_id', void 0), m(this, 'nicks', void 0), m(this, 'nsfw_', void 0), m(this, 'parent_id', void 0), m(this, 'memberListId', void 0), m(this, 'rateLimitPerUser_', void 0), m(this, 'defaultThreadRateLimitPerUser', void 0), m(this, 'defaultAutoArchiveDuration', void 0), m(this, 'flags_', void 0), m(this, 'originChannelId', void 0), m(this, 'lastMessageId', void 0), m(this, 'lastPinTimestamp', void 0), m(this, 'availableTags', void 0), m(this, 'appliedTags', void 0), m(this, 'messageCount', void 0), m(this, 'memberCount', void 0), m(this, 'threadMetadata', void 0), m(this, 'memberIdsPreview', void 0), m(this, 'member', void 0), m(this, 'parentChannelThreadType', void 0), m(this, 'template', void 0), m(this, 'defaultReactionEmoji', void 0), m(this, 'isMessageRequest', void 0), m(this, 'isMessageRequestTimestamp', void 0), m(this, 'isSpam', void 0), m(this, 'totalMessageSent', void 0), m(this, 'defaultSortOrder', void 0), m(this, 'version', void 0), m(this, 'defaultForumLayout', void 0), m(this, 'iconEmoji', void 0), m(this, 'themeColor', void 0), m(this, 'safetyWarnings', void 0), m(this, 'blockedUserWarningDismissed', void 0), m(this, 'linkedLobby', void 0), (this.id = e.id), (this.type = null !== (t = e.type) && void 0 !== t ? t : h.d4z.GUILD_TEXT), (this.name = null !== (n = e.name) && void 0 !== n ? n : ''), (this.guild_id = null !== (r = e.guild_id) && void 0 !== r ? r : null);
 	}
 }
 function ec(e) {
-	return (
-		'topic' in e && ((e.topic_ = e.topic), delete e.topic),
-		'position' in e && ((e.position_ = e.position), delete e.position),
-		'permissionOverwrites' in e && ((e.permissionOverwrites_ = e.permissionOverwrites), delete e.permissionOverwrites),
-		'bitrate' in e && ((e.bitrate_ = e.bitrate), delete e.bitrate),
-		'userLimit' in e && ((e.userLimit_ = e.userLimit), delete e.userLimit),
-		'nsfw' in e && ((e.nsfw_ = e.nsfw), delete e.nsfw),
-		'rateLimitPerUser' in e && ((e.rateLimitPerUser_ = e.rateLimitPerUser), delete e.rateLimitPerUser),
-		'flags' in e && ((e.flags_ = e.flags), delete e.flags),
-		e
-	);
+	return 'topic' in e && ((e.topic_ = e.topic), delete e.topic), 'position' in e && ((e.position_ = e.position), delete e.position), 'permissionOverwrites' in e && ((e.permissionOverwrites_ = e.permissionOverwrites), delete e.permissionOverwrites), 'bitrate' in e && ((e.bitrate_ = e.bitrate), delete e.bitrate), 'userLimit' in e && ((e.userLimit_ = e.userLimit), delete e.userLimit), 'nsfw' in e && ((e.nsfw_ = e.nsfw), delete e.nsfw), 'rateLimitPerUser' in e && ((e.rateLimitPerUser_ = e.rateLimitPerUser), delete e.rateLimitPerUser), 'flags' in e && ((e.flags_ = e.flags), delete e.flags), e;
 }
 let ed = Object.freeze({});
 class e_ extends eu {
@@ -547,18 +349,10 @@ class e_ extends eu {
 	}
 	isArchivedLockedThread() {
 		var e, t;
-		return (
-			B.has(this.type) &&
-			(null === (e = this.threadMetadata) || void 0 === e ? void 0 : e.archived) === !0 &&
-			(null === (t = this.threadMetadata) || void 0 === t ? void 0 : t.locked) === !0
-		);
+		return B.has(this.type) && (null === (e = this.threadMetadata) || void 0 === e ? void 0 : e.archived) === !0 && (null === (t = this.threadMetadata) || void 0 === t ? void 0 : t.locked) === !0;
 	}
 	isForumPost() {
-		return (
-			this.type === h.d4z.PUBLIC_THREAD &&
-			null != this.parentChannelThreadType &&
-			h.TPd.GUILD_THREADS_ONLY.has(this.parentChannelThreadType)
-		);
+		return this.type === h.d4z.PUBLIC_THREAD && null != this.parentChannelThreadType && h.TPd.GUILD_THREADS_ONLY.has(this.parentChannelThreadType);
 	}
 	isCategory() {
 		return this.type === h.d4z.GUILD_CATEGORY;
@@ -626,11 +420,7 @@ class e_ extends eu {
 		return null !== (e = this.defaultSortOrder) && void 0 !== e ? e : l.z.LATEST_ACTIVITY;
 	}
 	getDefaultLayout() {
-		return this.isMediaChannel()
-			? o.X.GRID
-			: null == this.defaultForumLayout || this.defaultForumLayout === o.X.DEFAULT
-				? o.X.LIST
-				: this.defaultForumLayout;
+		return this.isMediaChannel() ? o.X.GRID : null == this.defaultForumLayout || this.defaultForumLayout === o.X.DEFAULT ? o.X.LIST : this.defaultForumLayout;
 	}
 	get accessPermissions() {
 		return eo(this.type);
@@ -720,51 +510,7 @@ class eE extends e_ {
 		return (0, c.gh)(a, eE);
 	}
 	constructor(e) {
-		super(e),
-			(this.application_id = e.application_id),
-			(this.appliedTags = e.appliedTags),
-			(this.availableTags = e.availableTags),
-			(this.bitrate_ = e.bitrate_),
-			(this.defaultAutoArchiveDuration = e.defaultAutoArchiveDuration),
-			(this.defaultForumLayout = e.defaultForumLayout),
-			(this.defaultReactionEmoji = e.defaultReactionEmoji),
-			(this.defaultSortOrder = e.defaultSortOrder),
-			(this.defaultThreadRateLimitPerUser = e.defaultThreadRateLimitPerUser),
-			(this.flags_ = e.flags_),
-			(this.icon = e.icon),
-			(this.iconEmoji = e.iconEmoji),
-			(this.isMessageRequest = e.isMessageRequest),
-			(this.isMessageRequestTimestamp = e.isMessageRequestTimestamp),
-			(this.isSpam = e.isSpam),
-			(this.lastMessageId = e.lastMessageId),
-			(this.lastPinTimestamp = e.lastPinTimestamp),
-			(this.member = e.member),
-			(this.memberCount = e.memberCount),
-			(this.memberIdsPreview = e.memberIdsPreview),
-			(this.memberListId = e.memberListId),
-			(this.messageCount = e.messageCount),
-			(this.nicks = e.nicks),
-			(this.nsfw_ = e.nsfw_),
-			(this.originChannelId = e.originChannelId),
-			(this.ownerId = e.ownerId),
-			(this.parent_id = e.parent_id),
-			(this.parentChannelThreadType = e.parentChannelThreadType),
-			(this.permissionOverwrites_ = e.permissionOverwrites_),
-			(this.position_ = e.position_),
-			(this.rateLimitPerUser_ = e.rateLimitPerUser_),
-			(this.rawRecipients = e.rawRecipients),
-			(this.recipients = e.recipients),
-			(this.rtcRegion = e.rtcRegion),
-			(this.safetyWarnings = e.safetyWarnings),
-			(this.blockedUserWarningDismissed = e.blockedUserWarningDismissed),
-			(this.template = e.template),
-			(this.themeColor = e.themeColor),
-			(this.threadMetadata = e.threadMetadata),
-			(this.topic_ = e.topic_),
-			(this.userLimit_ = e.userLimit_),
-			(this.version = e.version),
-			(this.videoQualityMode = e.videoQualityMode),
-			(this.linkedLobby = e.linkedLobby);
+		super(e), (this.application_id = e.application_id), (this.appliedTags = e.appliedTags), (this.availableTags = e.availableTags), (this.bitrate_ = e.bitrate_), (this.defaultAutoArchiveDuration = e.defaultAutoArchiveDuration), (this.defaultForumLayout = e.defaultForumLayout), (this.defaultReactionEmoji = e.defaultReactionEmoji), (this.defaultSortOrder = e.defaultSortOrder), (this.defaultThreadRateLimitPerUser = e.defaultThreadRateLimitPerUser), (this.flags_ = e.flags_), (this.icon = e.icon), (this.iconEmoji = e.iconEmoji), (this.isMessageRequest = e.isMessageRequest), (this.isMessageRequestTimestamp = e.isMessageRequestTimestamp), (this.isSpam = e.isSpam), (this.lastMessageId = e.lastMessageId), (this.lastPinTimestamp = e.lastPinTimestamp), (this.member = e.member), (this.memberCount = e.memberCount), (this.memberIdsPreview = e.memberIdsPreview), (this.memberListId = e.memberListId), (this.messageCount = e.messageCount), (this.nicks = e.nicks), (this.nsfw_ = e.nsfw_), (this.originChannelId = e.originChannelId), (this.ownerId = e.ownerId), (this.parent_id = e.parent_id), (this.parentChannelThreadType = e.parentChannelThreadType), (this.permissionOverwrites_ = e.permissionOverwrites_), (this.position_ = e.position_), (this.rateLimitPerUser_ = e.rateLimitPerUser_), (this.rawRecipients = e.rawRecipients), (this.recipients = e.recipients), (this.rtcRegion = e.rtcRegion), (this.safetyWarnings = e.safetyWarnings), (this.blockedUserWarningDismissed = e.blockedUserWarningDismissed), (this.template = e.template), (this.themeColor = e.themeColor), (this.threadMetadata = e.threadMetadata), (this.topic_ = e.topic_), (this.userLimit_ = e.userLimit_), (this.version = e.version), (this.videoQualityMode = e.videoQualityMode), (this.linkedLobby = e.linkedLobby);
 	}
 }
 class ef extends e_ {
@@ -798,26 +544,7 @@ class ef extends e_ {
 	}
 	constructor(e) {
 		var t;
-		super(e),
-			(this.application_id = e.application_id),
-			(this.bitrate_ = e.bitrate_),
-			(this.flags_ = e.flags_),
-			(this.iconEmoji = e.iconEmoji),
-			(this.lastMessageId = e.lastMessageId),
-			(this.lastPinTimestamp = e.lastPinTimestamp),
-			(this.memberListId = e.memberListId),
-			(this.nsfw_ = e.nsfw_),
-			(this.originChannelId = e.originChannelId),
-			(this.parent_id = e.parent_id),
-			(this.permissionOverwrites_ = null !== (t = e.permissionOverwrites_) && void 0 !== t ? t : {}),
-			(this.position_ = e.position_),
-			(this.rateLimitPerUser_ = e.rateLimitPerUser_),
-			(this.rtcRegion = e.rtcRegion),
-			(this.themeColor = e.themeColor),
-			(this.topic_ = e.topic_),
-			(this.userLimit_ = e.userLimit_),
-			(this.version = e.version),
-			(this.videoQualityMode = e.videoQualityMode);
+		super(e), (this.application_id = e.application_id), (this.bitrate_ = e.bitrate_), (this.flags_ = e.flags_), (this.iconEmoji = e.iconEmoji), (this.lastMessageId = e.lastMessageId), (this.lastPinTimestamp = e.lastPinTimestamp), (this.memberListId = e.memberListId), (this.nsfw_ = e.nsfw_), (this.originChannelId = e.originChannelId), (this.parent_id = e.parent_id), (this.permissionOverwrites_ = null !== (t = e.permissionOverwrites_) && void 0 !== t ? t : {}), (this.position_ = e.position_), (this.rateLimitPerUser_ = e.rateLimitPerUser_), (this.rtcRegion = e.rtcRegion), (this.themeColor = e.themeColor), (this.topic_ = e.topic_), (this.userLimit_ = e.userLimit_), (this.version = e.version), (this.videoQualityMode = e.videoQualityMode);
 	}
 }
 class eh extends e_ {
@@ -849,24 +576,7 @@ class eh extends e_ {
 	}
 	constructor(e) {
 		var t;
-		super(e),
-			(this.application_id = e.application_id),
-			(this.defaultAutoArchiveDuration = e.defaultAutoArchiveDuration),
-			(this.defaultThreadRateLimitPerUser = e.defaultThreadRateLimitPerUser),
-			(this.flags_ = e.flags_),
-			(this.iconEmoji = e.iconEmoji),
-			(this.lastMessageId = e.lastMessageId),
-			(this.lastPinTimestamp = e.lastPinTimestamp),
-			(this.memberListId = e.memberListId),
-			(this.nsfw_ = e.nsfw_),
-			(this.parent_id = e.parent_id),
-			(this.permissionOverwrites_ = null !== (t = e.permissionOverwrites_) && void 0 !== t ? t : {}),
-			(this.position_ = e.position_),
-			(this.rateLimitPerUser_ = e.rateLimitPerUser_),
-			(this.themeColor = e.themeColor),
-			(this.topic_ = e.topic_),
-			(this.version = e.version),
-			(this.linkedLobby = e.linkedLobby);
+		super(e), (this.application_id = e.application_id), (this.defaultAutoArchiveDuration = e.defaultAutoArchiveDuration), (this.defaultThreadRateLimitPerUser = e.defaultThreadRateLimitPerUser), (this.flags_ = e.flags_), (this.iconEmoji = e.iconEmoji), (this.lastMessageId = e.lastMessageId), (this.lastPinTimestamp = e.lastPinTimestamp), (this.memberListId = e.memberListId), (this.nsfw_ = e.nsfw_), (this.parent_id = e.parent_id), (this.permissionOverwrites_ = null !== (t = e.permissionOverwrites_) && void 0 !== t ? t : {}), (this.position_ = e.position_), (this.rateLimitPerUser_ = e.rateLimitPerUser_), (this.themeColor = e.themeColor), (this.topic_ = e.topic_), (this.version = e.version), (this.linkedLobby = e.linkedLobby);
 	}
 }
 class ep extends e_ {
@@ -908,30 +618,10 @@ class ep extends e_ {
 	}
 	constructor(e) {
 		var t, n;
-		super(e),
-			(this.availableTags = null !== (t = e.availableTags) && void 0 !== t ? t : []),
-			(this.defaultAutoArchiveDuration = e.defaultAutoArchiveDuration),
-			(this.defaultForumLayout = e.defaultForumLayout),
-			(this.defaultReactionEmoji = e.defaultReactionEmoji),
-			(this.defaultSortOrder = e.defaultSortOrder),
-			(this.defaultThreadRateLimitPerUser = e.defaultThreadRateLimitPerUser),
-			(this.flags_ = e.flags_),
-			(this.iconEmoji = e.iconEmoji),
-			(this.lastMessageId = e.lastMessageId),
-			(this.lastPinTimestamp = e.lastPinTimestamp),
-			(this.memberListId = e.memberListId),
-			(this.nsfw_ = e.nsfw_),
-			(this.parent_id = e.parent_id),
-			(this.permissionOverwrites_ = null !== (n = e.permissionOverwrites_) && void 0 !== n ? n : {}),
-			(this.position_ = e.position_),
-			(this.rateLimitPerUser_ = e.rateLimitPerUser_),
-			(this.template = e.template),
-			(this.themeColor = e.themeColor),
-			(this.topic_ = e.topic_),
-			(this.version = e.version);
+		super(e), (this.availableTags = null !== (t = e.availableTags) && void 0 !== t ? t : []), (this.defaultAutoArchiveDuration = e.defaultAutoArchiveDuration), (this.defaultForumLayout = e.defaultForumLayout), (this.defaultReactionEmoji = e.defaultReactionEmoji), (this.defaultSortOrder = e.defaultSortOrder), (this.defaultThreadRateLimitPerUser = e.defaultThreadRateLimitPerUser), (this.flags_ = e.flags_), (this.iconEmoji = e.iconEmoji), (this.lastMessageId = e.lastMessageId), (this.lastPinTimestamp = e.lastPinTimestamp), (this.memberListId = e.memberListId), (this.nsfw_ = e.nsfw_), (this.parent_id = e.parent_id), (this.permissionOverwrites_ = null !== (n = e.permissionOverwrites_) && void 0 !== n ? n : {}), (this.position_ = e.position_), (this.rateLimitPerUser_ = e.rateLimitPerUser_), (this.template = e.template), (this.themeColor = e.themeColor), (this.topic_ = e.topic_), (this.version = e.version);
 	}
 }
-class eI {
+class em {
 	getOrCompute(e) {
 		let t = this.cache.get(e);
 		if (null != t) return t;
@@ -941,14 +631,14 @@ class eI {
 		}
 	}
 	constructor(e = 100) {
-		I(this, 'cache', void 0), (this.cache = new (s())(e));
+		m(this, 'cache', void 0), (this.cache = new (s())(e));
 	}
 }
-let em = new eI(),
-	eT = new eI();
+let eI = new em(),
+	eT = new em();
 class eg extends e_ {
 	static sortRecipients(e, t) {
-		let n = em.getOrCompute(t);
+		let n = eI.getOrCompute(t);
 		return [...(null != e ? e : [])].sort((e, t) => {
 			let r = eT.getOrCompute(e.id);
 			return (r ^ n) - (eT.getOrCompute(t.id) ^ n);
@@ -1009,21 +699,7 @@ class eg extends e_ {
 	}
 	constructor(e) {
 		var t, n;
-		super(e),
-			(this.application_id = e.application_id),
-			(this.flags_ = e.flags_),
-			(this.icon = e.icon),
-			(this.isMessageRequest = e.isMessageRequest),
-			(this.isMessageRequestTimestamp = e.isMessageRequestTimestamp),
-			(this.isSpam = e.isSpam),
-			(this.lastMessageId = e.lastMessageId),
-			(this.lastPinTimestamp = e.lastPinTimestamp),
-			(this.nicks = e.nicks),
-			(this.ownerId = e.ownerId),
-			(this.rawRecipients = eg.sortRecipients(e.rawRecipients, this.id)),
-			(this.recipients = [...(null !== (t = e.recipients) && void 0 !== t ? t : [])].sort(f.default.compare)),
-			(this.safetyWarnings = null !== (n = e.safetyWarnings) && void 0 !== n ? n : []),
-			(this.blockedUserWarningDismissed = e.blockedUserWarningDismissed);
+		super(e), (this.application_id = e.application_id), (this.flags_ = e.flags_), (this.icon = e.icon), (this.isMessageRequest = e.isMessageRequest), (this.isMessageRequestTimestamp = e.isMessageRequestTimestamp), (this.isSpam = e.isSpam), (this.lastMessageId = e.lastMessageId), (this.lastPinTimestamp = e.lastPinTimestamp), (this.nicks = e.nicks), (this.ownerId = e.ownerId), (this.rawRecipients = eg.sortRecipients(e.rawRecipients, this.id)), (this.recipients = [...(null !== (t = e.recipients) && void 0 !== t ? t : [])].sort(f.default.compare)), (this.safetyWarnings = null !== (n = e.safetyWarnings) && void 0 !== n ? n : []), (this.blockedUserWarningDismissed = e.blockedUserWarningDismissed);
 	}
 }
 class eS extends e_ {
@@ -1076,25 +752,7 @@ class eS extends e_ {
 	}
 	constructor(e) {
 		var t;
-		super(e),
-			(this.appliedTags = null !== (t = e.appliedTags) && void 0 !== t ? t : []),
-			(this.bitrate_ = e.bitrate_),
-			(this.flags_ = e.flags_),
-			(this.lastMessageId = e.lastMessageId),
-			(this.lastPinTimestamp = e.lastPinTimestamp),
-			(this.member = e.member),
-			(this.memberCount = e.memberCount),
-			(this.memberIdsPreview = e.memberIdsPreview),
-			(this.messageCount = e.messageCount),
-			(this.nsfw_ = e.nsfw_),
-			(this.ownerId = e.ownerId),
-			(this.parent_id = e.parent_id),
-			(this.parentChannelThreadType = e.parentChannelThreadType),
-			(this.rateLimitPerUser_ = e.rateLimitPerUser_),
-			(this.rtcRegion = e.rtcRegion),
-			(this.threadMetadata = e.threadMetadata),
-			(this.userLimit_ = e.userLimit_),
-			(this.videoQualityMode = e.videoQualityMode);
+		super(e), (this.appliedTags = null !== (t = e.appliedTags) && void 0 !== t ? t : []), (this.bitrate_ = e.bitrate_), (this.flags_ = e.flags_), (this.lastMessageId = e.lastMessageId), (this.lastPinTimestamp = e.lastPinTimestamp), (this.member = e.member), (this.memberCount = e.memberCount), (this.memberIdsPreview = e.memberIdsPreview), (this.messageCount = e.messageCount), (this.nsfw_ = e.nsfw_), (this.ownerId = e.ownerId), (this.parent_id = e.parent_id), (this.parentChannelThreadType = e.parentChannelThreadType), (this.rateLimitPerUser_ = e.rateLimitPerUser_), (this.rtcRegion = e.rtcRegion), (this.threadMetadata = e.threadMetadata), (this.userLimit_ = e.userLimit_), (this.videoQualityMode = e.videoQualityMode);
 	}
 }
 let eA = {
@@ -1115,9 +773,7 @@ let eA = {
 };
 function eN(e, t) {
 	var n, r;
-	return (
-		null !== (r = eA[null !== (n = e.type) && void 0 !== n ? n : h.d4z.GUILD_TEXT]) && void 0 !== r ? r : eE.fromServer
-	)(e, t);
+	return (null !== (r = eA[null !== (n = e.type) && void 0 !== n ? n : h.d4z.GUILD_TEXT]) && void 0 !== r ? r : eE.fromServer)(e, t);
 }
 function ev(e) {
 	return eC(e);
@@ -1145,7 +801,5 @@ function eR(e) {
 }
 function eC(e) {
 	var t, n;
-	return new (null !== (n = eO[null !== (t = e.type) && void 0 !== t ? t : h.d4z.GUILD_TEXT]) && void 0 !== n ? n : eE)(
-		ec(e)
-	);
+	return new (null !== (n = eO[null !== (t = e.type) && void 0 !== t ? t : h.d4z.GUILD_TEXT]) && void 0 !== n ? n : eE)(ec(e));
 }

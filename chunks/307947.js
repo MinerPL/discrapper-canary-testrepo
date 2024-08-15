@@ -26,12 +26,7 @@ function _(e) {
 				lightSrc: u,
 				darkSrc: d
 			}),
-			(0, i.jsx)(s.EmptyStateText, {
-				note:
-					t === l.pS.SPAM
-						? o.Z.Messages.MESSAGE_REQUESTS_SPAM_EMPTY_STATE_BODY
-						: o.Z.Messages.MESSAGE_REQUESTS_EMPTY_STATE_BODY
-			})
+			(0, i.jsx)(s.EmptyStateText, { note: t === l.pS.SPAM ? o.Z.Messages.MESSAGE_REQUESTS_SPAM_EMPTY_STATE_BODY : o.Z.Messages.MESSAGE_REQUESTS_EMPTY_STATE_BODY })
 		]
 	});
 }

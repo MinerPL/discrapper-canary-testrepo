@@ -5,17 +5,7 @@ var r = n(735250),
 	o = n(481060),
 	l = n(658198);
 let u = i.memo(function (e) {
-	let {
-			text: t,
-			variant: n = 'text-xs/medium',
-			color: a = 'text-normal',
-			icon: u,
-			className: c,
-			selected: d,
-			onMouseEnter: _,
-			onMouseLeave: E,
-			onClick: f
-		} = e,
+	let { text: t, variant: n = 'text-xs/medium', color: a = 'text-normal', icon: u, className: c, selected: d, onMouseEnter: _, onMouseLeave: E, onClick: f } = e,
 		h = i.useMemo(() => {
 			if (null != f) return () => f(t);
 		}, [f, t]);

@@ -17,30 +17,8 @@ var i = t(512722),
 	m = t(981631),
 	I = t(474936);
 function f(e) {
-	let {
-			analyticsData: n,
-			initialPlanId: t,
-			breadcrumbSteps: i,
-			handleStepChange: f,
-			referralTrialOfferId: E,
-			onReturn: x,
-			continueSession: N = !1
-		} = e,
-		{
-			contextMetadata: S,
-			step: T,
-			paymentSources: h,
-			paymentSourceId: b,
-			setPaymentSourceId: g,
-			purchaseError: P,
-			setPurchaseError: v,
-			purchaseErrorBlockRef: A,
-			paymentAuthenticationState: y,
-			selectedSkuId: M,
-			activeSubscription: C,
-			previousStepRef: O,
-			setPurchaseState: R
-		} = (0, u.usePaymentContext)(),
+	let { analyticsData: n, initialPlanId: t, breadcrumbSteps: i, handleStepChange: f, referralTrialOfferId: E, onReturn: x, continueSession: N = !1 } = e,
+		{ contextMetadata: S, step: T, paymentSources: h, paymentSourceId: b, setPaymentSourceId: g, purchaseError: P, setPurchaseError: v, purchaseErrorBlockRef: A, paymentAuthenticationState: y, selectedSkuId: M, activeSubscription: C, previousStepRef: O, setPurchaseState: R } = (0, u.usePaymentContext)(),
 		{ isGift: L } = (0, c.wD)(),
 		j = {
 			...(0, l.fL)(),
@@ -60,9 +38,7 @@ function f(e) {
 			null != x
 				? x
 				: () => {
-						f(Object.values(h).length < 1 && null == t ? d.h8.PLAN_SELECT : d.h8.REVIEW, {
-							trackedFromStep: d.h8.PAYMENT_TYPE
-						});
+						f(Object.values(h).length < 1 && null == t ? d.h8.PLAN_SELECT : d.h8.REVIEW, { trackedFromStep: d.h8.PAYMENT_TYPE });
 					};
 	a()(T, 'Step should be set here');
 	let G = (0, r.Z)(() => Date.now(), [T]);
@@ -76,9 +52,7 @@ function f(e) {
 		usePaymentModalStep: !0,
 		onReturn: w,
 		onComplete: (e) => {
-			e === d.h8.AWAITING_BROWSER_CHECKOUT
-				? (R(_.A.COMPLETED), f(d.h8.CONFIRM, { trackedFromStep: e }))
-				: f(d.h8.REVIEW, { trackedFromStep: e });
+			e === d.h8.AWAITING_BROWSER_CHECKOUT ? (R(_.A.COMPLETED), f(d.h8.CONFIRM, { trackedFromStep: e })) : f(d.h8.REVIEW, { trackedFromStep: e });
 		},
 		onStepChange: (e) => {
 			let { currentStep: t, toStep: i } = e,

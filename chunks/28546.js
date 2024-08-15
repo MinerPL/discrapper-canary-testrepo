@@ -1,6 +1,6 @@
 n.d(t, {
 	Iu: function () {
-		return I;
+		return m;
 	},
 	PG: function () {
 		return d;
@@ -91,4 +91,4 @@ let u = Object.freeze({
 			})
 		);
 	},
-	I = c;
+	m = c;

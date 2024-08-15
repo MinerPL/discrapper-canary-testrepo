@@ -59,9 +59,7 @@ function p(e) {
 				children: M
 					? (0, i.jsx)(C, {
 							onClick: () => {
-								null != x &&
-									(E.d$.updateSetting(x.id),
-									I.default.track(h.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
+								null != x && (E.d$.updateSetting(x.id), I.default.track(h.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
 							}
 						})
 					: null

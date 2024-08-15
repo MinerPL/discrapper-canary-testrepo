@@ -20,15 +20,7 @@ var a = t(120356),
 	S = t(302823),
 	N = t(224499);
 function C() {
-	let {
-			enabled: e,
-			autoToggle: s,
-			hideInstantInvites: a,
-			hidePersonalInformation: C,
-			disableSounds: m,
-			disableNotifications: A,
-			enableContentProtection: O
-		} = (0, r.cj)([_.Z], () => ({ ..._.Z.getSettings() })),
+	let { enabled: e, autoToggle: s, hideInstantInvites: a, hidePersonalInformation: C, disableSounds: m, disableNotifications: A, enableContentProtection: O } = (0, r.cj)([_.Z], () => ({ ..._.Z.getSettings() })),
 		g = (e, s) => {
 			l.Z.update({ [e]: s });
 		};

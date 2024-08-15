@@ -14,8 +14,8 @@ var i = n(735250),
 	_ = n(135938),
 	f = n(160404),
 	E = n(765104),
-	g = n(695346),
-	C = n(314897),
+	C = n(695346),
+	g = n(314897),
 	I = n(323873),
 	x = n(607744),
 	T = n(375954),
@@ -36,29 +36,11 @@ var i = n(735250),
 let k = a.memo(
 	function (e) {
 		var t, n;
-		let {
-				className: s,
-				messageGroupSpacing: d,
-				scrollerClassName: m,
-				channel: p,
-				messages: _,
-				unreadCount: E,
-				showNewMessagesBar: g,
-				messageDisplayCompact: C,
-				channelStream: I,
-				uploads: x,
-				hasUnreads: T,
-				editingMessageId: v,
-				fontSize: S,
-				keyboardModeEnabled: Z,
-				filterAfterTimestamp: M,
-				showingQuarantineBanner: b,
-				hideSummaries: k = !1
-			} = e,
+		let { className: s, messageGroupSpacing: d, scrollerClassName: m, channel: p, messages: _, unreadCount: E, showNewMessagesBar: C, messageDisplayCompact: g, channelStream: I, uploads: x, hasUnreads: T, editingMessageId: v, fontSize: S, keyboardModeEnabled: Z, filterAfterTimestamp: M, showingQuarantineBanner: b, hideSummaries: k = !1 } = e,
 			[U, w] = a.useState(!1),
 			B = a.useMemo(
 				() =>
-					C
+					g
 						? (0, R.aJ)({
 								compact: !0,
 								messageGroups: 30,
@@ -75,12 +57,12 @@ let k = a.memo(
 								fontSize: S,
 								groupSpacing: d
 							}),
-				[C, S, d]
+				[g, S, d]
 			),
 			H = (0, L.ZP)({
 				messages: _,
 				channel: p,
-				compact: C,
+				compact: g,
 				hasUnreads: T,
 				focusId: v,
 				placeholderHeight: B.totalHeight,
@@ -94,11 +76,7 @@ let k = a.memo(
 				keyboardModeEnabled: Z,
 				hasMoreAfter: _.hasMoreAfter
 			});
-		let V =
-				((n = p),
-				(0, o.e7)([f.Z], () =>
-					N.Z.can(O.Plq.READ_MESSAGE_HISTORY, n) ? null : f.Z.getViewingRolesTimestamp(n.getGuildId())
-				)),
+		let V = ((n = p), (0, o.e7)([f.Z], () => (N.Z.can(O.Plq.READ_MESSAGE_HISTORY, n) ? null : f.Z.getViewingRolesTimestamp(n.getGuildId())))),
 			{
 				channelStreamMarkup: F,
 				newMessagesBar: W,
@@ -109,8 +87,8 @@ let k = a.memo(
 				channel: p,
 				messages: _,
 				unreadCount: E,
-				showNewMessagesBar: g,
-				messageDisplayCompact: C,
+				showNewMessagesBar: C,
+				messageDisplayCompact: g,
 				channelStream: I,
 				uploads: x,
 				loadMore: H.loadMore,
@@ -138,9 +116,7 @@ let k = a.memo(
 				}, [e]),
 				i = a.useCallback(() => {
 					var t;
-					return null === (t = e.current) || void 0 === t
-						? void 0
-						: t.scrollPageDown({ animate: !h.Z.useReducedMotion });
+					return null === (t = e.current) || void 0 === t ? void 0 : t.scrollPageDown({ animate: !h.Z.useReducedMotion });
 				}, [e]);
 			(0, A.yp)({
 				event: O.CkL.SCROLLTO_PRESENT,
@@ -159,8 +135,7 @@ let k = a.memo(
 			{ ref: X, ...Q } = (0, r.l2)(G),
 			J = a.useCallback((e) => {
 				var t;
-				(H.ref.current = e),
-					(X.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
+				(H.ref.current = e), (X.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
 			}, []);
 		return (0, i.jsxs)(r.bG, {
 			navigator: G,
@@ -200,11 +175,7 @@ let k = a.memo(
 											className: l()({
 												[D.scrollerSpacer]: !b,
 												[D.empty]: 0 === _.length && !_.loadingMore,
-												[D.emptyForum]:
-													1 === _.length &&
-													!_.loadingMore &&
-													p.isForumPost() &&
-													(null === (t = _.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(p))
+												[D.emptyForum]: 1 === _.length && !_.loadingMore && p.isForumPost() && (null === (t = _.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(p))
 											})
 										})
 									]
@@ -220,14 +191,7 @@ let k = a.memo(
 	(e, t) => null != e.isHidden && null != t.isHidden && e.isHidden && t.isHidden
 );
 t.Z = a.memo(function (e) {
-	let {
-			channel: t,
-			showingQuarantineBanner: n,
-			hideSummaries: s = !1,
-			forceCompact: l = !1,
-			forceCozy: r = !1,
-			...c
-		} = e,
+	let { channel: t, showingQuarantineBanner: n, hideSummaries: s = !1, forceCompact: l = !1, forceCozy: r = !1, ...c } = e,
 		{
 			canManageMessages: u,
 			permissionVersion: f,
@@ -256,8 +220,8 @@ t.Z = a.memo(function (e) {
 			renderSpoilers: P,
 			keyboardModeEnabled: y
 		} = (function () {
-			let e = g.jU.useSetting(),
-				t = g.cC.useSetting(),
+			let e = C.jU.useSetting(),
+				t = C.cC.useSetting(),
 				{
 					messageGroupSpacing: n,
 					fontSize: i,
@@ -295,14 +259,7 @@ t.Z = a.memo(function (e) {
 					[e.id]
 				),
 				{ enabled: l } = _.Z.useExperiment({ location: '41de6d_1' }, { autoTrackExposure: !1 }),
-				r =
-					null !==
-						(n =
-							null === (t = Z.default.getUser(C.default.getId())) || void 0 === t
-								? void 0
-								: t.hasFlag(O.xW$.SPAMMER)) &&
-					void 0 !== n &&
-					n,
+				r = null !== (n = null === (t = Z.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(O.xW$.SPAMMER)) && void 0 !== n && n,
 				c = (0, d.ts)(e),
 				u = (0, p.Z)('use_topic_dividers_in_chat'),
 				h = (0, o.Wu)(

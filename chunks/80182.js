@@ -53,12 +53,7 @@ var o = r(642512),
 			b = e.prototype;
 		return (
 			(b.shouldComponentUpdate = function (t) {
-				return (
-					this.props.block !== t.block ||
-					this.props.tree !== t.tree ||
-					this.props.direction !== t.direction ||
-					(_(t.selection, t.block.getKey()) && t.forceSelection)
-				);
+				return this.props.block !== t.block || this.props.tree !== t.tree || this.props.direction !== t.direction || (_(t.selection, t.block.getKey()) && t.forceSelection);
 			}),
 			(b.componentDidMount = function () {
 				if (this.props.preventScroll) return;

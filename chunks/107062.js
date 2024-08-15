@@ -14,8 +14,8 @@ var i = n(735250),
 	_ = n(823379),
 	f = n(5192),
 	E = n(192918),
-	g = n(561308),
-	C = n(907152),
+	C = n(561308),
+	g = n(907152),
 	I = n(206295),
 	x = n(297781),
 	T = n(591853),
@@ -80,12 +80,12 @@ t.ZP = (e) => {
 								countOthers: W
 							})
 						: M(f, n, O);
-				return (0, C.C4)({
+				return (0, g.C4)({
 					entry: f,
 					applicationImageSrc: L,
 					avatarSrcs: G.map((e) => e.getAvatarURL(n.guild_id, 128)),
 					description: t,
-					timestamp: (0, g.yh)(f, H),
+					timestamp: (0, C.yh)(f, H),
 					colors: [w, B],
 					channelId: e
 				});
@@ -101,9 +101,7 @@ t.ZP = (e) => {
 			thumbnailSrc: null !== (t = null != U ? U : k) && void 0 !== t ? t : L,
 			thumbnailTitle: P,
 			channel: n,
-			userDescription: (0, g.kr)(f)
-				? Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING
-				: Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
+			userDescription: (0, C.kr)(f) ? Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
 			title: f.extra.activity_name,
 			subtitle: y,
 			badges: Q,

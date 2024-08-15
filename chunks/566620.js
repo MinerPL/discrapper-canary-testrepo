@@ -56,8 +56,8 @@ var r = n(990547),
 	f = n(213459),
 	h = n(812236),
 	p = n(812206),
-	I = n(358221),
-	m = n(233764),
+	m = n(358221),
+	I = n(233764),
 	T = n(188597),
 	g = n(835873),
 	S = n(973616),
@@ -101,18 +101,10 @@ function K(e, t) {
 }
 async function z(e) {
 	var t, n;
-	let {
-			channelId: r,
-			applicationId: i,
-			isStart: s,
-			analyticsLocations: o,
-			locationObject: l,
-			embeddedActivitiesManager: u,
-			componentId: c
-		} = e,
-		I = N.Z.getChannel(r),
-		g = null !== (t = null == I ? void 0 : I.getGuildId()) && void 0 !== t ? t : void 0;
-	if (null == g && !(null !== (n = null == I ? void 0 : I.isPrivate()) && void 0 !== n && n)) return !1;
+	let { channelId: r, applicationId: i, isStart: s, analyticsLocations: o, locationObject: l, embeddedActivitiesManager: u, componentId: c } = e,
+		m = N.Z.getChannel(r),
+		g = null !== (t = null == m ? void 0 : m.getGuildId()) && void 0 !== t ? t : void 0;
+	if (null == g && !(null !== (n = null == m ? void 0 : m.isPrivate()) && void 0 !== n && n)) return !1;
 	try {
 		a.Z.dispatch({
 			type: 'EMBEDDED_ACTIVITY_LAUNCH_START',
@@ -175,28 +167,26 @@ async function z(e) {
 					);
 				},
 				n = Y.Yq.includes(i),
-				a = (null == I ? void 0 : I.type) === Z.d4z.GUILD_VOICE,
+				a = (null == m ? void 0 : m.type) === Z.d4z.GUILD_VOICE,
 				s = p.Z.getApplication(i),
 				o = null != s && (0, D.yE)(s.flags, Z.udG.EMBEDDED),
 				l = null != s && (0, D.yE)(s.flags, Z.udG.EMBEDDED_RELEASED),
-				u = (0, M.l5)(I);
+				u = (0, M.l5)(m);
 			if (n) {
 				if (((t = !1), !(await e({ canSendFakeCommand: !1 })))) throw Error();
 			} else if (a) {
 				if (o && !l) t = !(await e({ canSendFakeCommand: !1 }));
 				else if (o && l) {
 					U.j.trackExposure({ location: 'EmbeddedActivitiesActionCreators.launchEmbeddedActivity' });
-					let { enabled: n } = U.j.getCurrentConfig({
-						location: 'EmbeddedActivitiesActionCreators.launchEmbeddedActivity'
-					});
+					let { enabled: n } = U.j.getCurrentConfig({ location: 'EmbeddedActivitiesActionCreators.launchEmbeddedActivity' });
 					if (n) {
-						if (!(await e({ canSendFakeCommand: !1 }))) throw new m.Z(m.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
+						if (!(await e({ canSendFakeCommand: !1 }))) throw new I.Z(I.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
 						t = !1;
 					} else t = !0;
 				}
 			} else if (u) {
 				let n = await e({ canSendFakeCommand: o && l });
-				if (((t = !n), o && !n)) throw new m.Z(m.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
+				if (((t = !n), o && !n)) throw new I.Z(I.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
 			}
 		}
 		if (
@@ -208,7 +198,7 @@ async function z(e) {
 				guildId: g
 			}))
 		)
-			throw new m.Z(m.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED);
+			throw new I.Z(I.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED);
 		a.Z.dispatch({
 			type: 'EMBEDDED_ACTIVITY_LAUNCH_SUCCESS',
 			applicationId: i,
@@ -221,7 +211,7 @@ async function z(e) {
 				guildId: g,
 				applicationId: i,
 				channelId: r,
-				error: e instanceof m.Z ? e : new d.Z(e)
+				error: e instanceof I.Z ? e : new d.Z(e)
 			}),
 			!1
 		);
@@ -275,7 +265,7 @@ async function q(e) {
 	)
 		return !1;
 	let h = (0, B.Z)(a),
-		I = H.wP.includes(_.type);
+		m = H.wP.includes(_.type);
 	if (h) {
 		if (
 			!(await (0, F.Z)({
@@ -284,7 +274,7 @@ async function q(e) {
 			}))
 		)
 			return !1;
-	} else if (!(0, M.WS)(_, !0) || !I) return !1;
+	} else if (!(0, M.WS)(_, !0) || !m) return !1;
 	return (
 		await b.Z.post({
 			url: Z.ANM.ACTIVITY_CHANNEL_LAUNCH(a, i),
@@ -319,10 +309,9 @@ function Q(e) {
 		instanceId: null == o ? void 0 : o.launchId,
 		showFeedback: s
 	});
-	let u = I.Z.getSelectedParticipantId(r),
+	let u = m.Z.getSelectedParticipantId(r),
 		c = null === (n = R.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
-	if (null != P.ZP.getEmbeddedActivitiesForChannel(r).find((e) => e.applicationId === i) && null != c && '' !== c)
-		u === i && l.Z.selectParticipant(r, null);
+	if (null != P.ZP.getEmbeddedActivitiesForChannel(r).find((e) => e.applicationId === i) && null != c && '' !== c) u === i && l.Z.selectParticipant(r, null);
 }
 function X(e, t) {
 	let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -393,9 +382,7 @@ async function et(e) {
 				r = new Promise((e) => {
 					(t = ee.bind(null, o, e)), a.Z.subscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL', t);
 				});
-			await Promise.race([n, r]),
-				null != e && (a.Z.unsubscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS', e), (e = null)),
-				null != t && (a.Z.unsubscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL', t), (t = null));
+			await Promise.race([n, r]), null != e && (a.Z.unsubscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS', e), (e = null)), null != t && (a.Z.unsubscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL', t), (t = null));
 		}
 		return {
 			activityConfigs: u,

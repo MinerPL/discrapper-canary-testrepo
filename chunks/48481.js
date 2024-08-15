@@ -6,7 +6,7 @@ n.d(t, {
 		return p;
 	},
 	cv: function () {
-		return I;
+		return m;
 	},
 	d5: function () {
 		return h;
@@ -30,7 +30,7 @@ n.d(t, {
 		return A;
 	},
 	xU: function () {
-		return m;
+		return I;
 	},
 	xt: function () {
 		return N;
@@ -68,10 +68,10 @@ function h(e, t) {
 function p(e) {
 	return h(l.o8, e);
 }
-function I(e, t) {
-	return m(E[e], t);
-}
 function m(e, t) {
+	return I(E[e], t);
+}
+function I(e, t) {
 	return (0, i.m)(e.toBinary(t));
 }
 function T(e, t, n) {
@@ -134,11 +134,7 @@ function v(e, t) {
 	let r = {};
 	for (let [e, t] of n) {
 		let n = o._F.create();
-		(n.frecency = t.frecency),
-			(n.recentUses = t.recentUses.filter((e) => null != e && e > 0).map(String)),
-			(n.score = Math.round(t.score)),
-			(n.totalUses = t.totalUses),
-			(r[e] = n);
+		(n.frecency = t.frecency), (n.recentUses = t.recentUses.filter((e) => null != e && e > 0).map(String)), (n.score = Math.round(t.score)), (n.totalUses = t.totalUses), (r[e] = n);
 	}
 	return r;
 }

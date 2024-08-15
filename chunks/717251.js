@@ -11,17 +11,7 @@ var a = n(120356),
 	l = n(2150),
 	o = n(270068);
 function c(e) {
-	let {
-		title: t,
-		description: n,
-		action: a,
-		highlightColor: c = l.q.NONE,
-		selected: d = !1,
-		subsection: u = null,
-		onClick: _,
-		className: I,
-		disabled: E
-	} = e;
+	let { title: t, description: n, action: a, highlightColor: c = l.q.NONE, selected: d = !1, subsection: u = null, onClick: _, className: I, disabled: E } = e;
 	return (0, s.jsxs)('div', {
 		className: i()(o.container, I),
 		children: [

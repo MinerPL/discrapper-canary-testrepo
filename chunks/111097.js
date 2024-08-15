@@ -73,15 +73,7 @@ t.Z = {
 				} catch (e) {
 					if ((l(), null != e)) {
 						let t = '';
-						throw (
-							((t =
-								'object' == typeof e && 'message' in e && 'string' == typeof e.message
-									? e.message
-									: 'string' == typeof e
-										? e
-										: JSON.stringify(e)),
-							new r.Z({ errorCode: _.lTL.PURCHASE_ERROR }, t))
-						);
+						throw ((t = 'object' == typeof e && 'message' in e && 'string' == typeof e.message ? e.message : 'string' == typeof e ? e : JSON.stringify(e)), new r.Z({ errorCode: _.lTL.PURCHASE_ERROR }, t));
 					}
 					throw new r.Z({ errorCode: _.lTL.PURCHASE_CANCELED }, 'Purchase was canceled by the user.');
 				}
@@ -96,8 +88,7 @@ t.Z = {
 				socket: t,
 				args: { pid: n }
 			} = e;
-			if (((0, c.f)(t.transport), null == t.application.id))
-				throw new r.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'No application.');
+			if (((0, c.f)(t.transport), null == t.application.id)) throw new r.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'No application.');
 			let { lock: i, context: a } = m(t.transport !== u.He.POST_MESSAGE ? n : null);
 			return I(a, { page: _.ZY5.IN_APP }).then(
 				() => {

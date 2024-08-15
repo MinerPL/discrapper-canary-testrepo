@@ -31,17 +31,12 @@ class l {
 				return;
 			}
 			this.framerateReductionTimeout = setTimeout(() => {
-				if (!this.connection.destroyed)
-					o.info('BaseConnection.userSpeakingChange: Reduced framerate after '.concat(a.u$, ' ms.')),
-						(this.framerateReductionTimeout = void 0),
-						(this.sinkWants.isMuted = !0),
-						this.updateRemoteWantsFramerate();
+				if (!this.connection.destroyed) o.info('BaseConnection.userSpeakingChange: Reduced framerate after '.concat(a.u$, ' ms.')), (this.framerateReductionTimeout = void 0), (this.sinkWants.isMuted = !0), this.updateRemoteWantsFramerate();
 			}, a.u$);
 		}
 	}
 	destroyFramerateScaleFactorTimers() {
-		'number' == typeof this.framerateReductionTimeout &&
-			(clearTimeout(this.framerateReductionTimeout), (this.framerateReductionTimeout = void 0));
+		'number' == typeof this.framerateReductionTimeout && (clearTimeout(this.framerateReductionTimeout), (this.framerateReductionTimeout = void 0));
 	}
 	updateRemoteWantsFramerate() {
 		this.connection.updateVideoQuality(['remoteSinkWantsMaxFramerate']);
@@ -61,8 +56,7 @@ class l {
 				e === this.connection.userId && this.userSpeakingChange(t === a.Dg.NONE);
 			}),
 			(this.handleSelfMute = (e) => {
-				if (!this.connection.hasDesktopSource())
-					this.destroyFramerateScaleFactorTimers(), (this.sinkWants.isMuted = e), this.updateRemoteWantsFramerate();
+				if (!this.connection.hasDesktopSource()) this.destroyFramerateScaleFactorTimers(), (this.sinkWants.isMuted = e), this.updateRemoteWantsFramerate();
 			}),
 			e.on(i.Sh.Speaking, this.handleSpeaking),
 			e.on(i.Sh.Mute, this.handleSelfMute),

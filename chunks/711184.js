@@ -160,14 +160,7 @@ class H extends r.Component {
 		});
 	}
 	renderPrimaryAction() {
-		let {
-				currentStep: e,
-				responses: t,
-				hasUnknownError: s,
-				hasSubmittedHouse: r,
-				isRequestPending: o,
-				questions: i
-			} = this.state,
+		let { currentStep: e, responses: t, hasUnknownError: s, hasSubmittedHouse: r, isRequestPending: o, questions: i } = this.state,
 			a = null == t[e];
 		return s
 			? (0, n.jsx)(u.Button, {

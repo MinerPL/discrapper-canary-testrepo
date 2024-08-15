@@ -43,12 +43,7 @@ let f = () => {
 		var e, s;
 		let { analyticsLocations: t } = (0, d.ZP)(c.Z.USER_SETTINGS),
 			r = (0, i.e7)([E.Z], () => E.Z.isPreview),
-			l =
-				(null === (s = (0, S.N)()) || void 0 === s
-					? void 0
-					: null === (e = s.subscription_trial) || void 0 === e
-						? void 0
-						: e.sku_id) === p.Si.TIER_2,
+			l = (null === (s = (0, S.N)()) || void 0 === s ? void 0 : null === (e = s.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === p.Si.TIER_2,
 			_ = (0, T.Ng)(),
 			I = (0, T.Wp)(_, p.Si.TIER_2),
 			h = !r || l,
@@ -73,11 +68,7 @@ let f = () => {
 								(0, n.jsx)(m.Z, {
 									showGradient: D,
 									subscriptionTier: p.Si.TIER_2,
-									buttonText: D
-										? R.Z.Messages.PREMIUM_UPSELL_GET_NITRO
-										: I
-											? R.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: null == _ ? void 0 : _.discount.amount })
-											: R.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
+									buttonText: D ? R.Z.Messages.PREMIUM_UPSELL_GET_NITRO : I ? R.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: null == _ ? void 0 : _.discount.amount }) : R.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
 									className: x.premiumCta
 								})
 							]

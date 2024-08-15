@@ -38,10 +38,5 @@ t.Z = function () {
 			}
 		}
 	});
-	return r.createElement(
-		'div',
-		{ style: e.pointer },
-		r.createElement('div', { style: e.left }, r.createElement('div', { style: e.leftInside })),
-		r.createElement('div', { style: e.right }, r.createElement('div', { style: e.rightInside }))
-	);
+	return r.createElement('div', { style: e.pointer }, r.createElement('div', { style: e.left }, r.createElement('div', { style: e.leftInside })), r.createElement('div', { style: e.right }, r.createElement('div', { style: e.rightInside })));
 };

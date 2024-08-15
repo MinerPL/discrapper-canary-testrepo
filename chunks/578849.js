@@ -33,12 +33,7 @@ class r {
 	}
 }
 function i(e) {
-	return e
-		.replace(/&/g, '&amp;')
-		.replace(/</g, '&lt;')
-		.replace(/>/g, '&gt;')
-		.replace(/"/g, '&quot;')
-		.replace(/'/g, '&#x27;');
+	return e.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#x27;');
 }
 function a(e, ...t) {
 	let n = Object.create(null);
@@ -114,12 +109,7 @@ class c {
 		return this.constructor._walk(e, this.rootNode);
 	}
 	static _walk(e, t) {
-		return (
-			'string' == typeof t
-				? e.addText(t)
-				: t.children && (e.openNode(t), t.children.forEach((t) => this._walk(e, t)), e.closeNode(t)),
-			e
-		);
+		return 'string' == typeof t ? e.addText(t) : t.children && (e.openNode(t), t.children.forEach((t) => this._walk(e, t)), e.closeNode(t)), e;
 	}
 	static _collapse(e) {
 		if ('string' != typeof e)
@@ -167,7 +157,7 @@ function h(e) {
 function p(...e) {
 	return e.map((e) => _(e)).join('');
 }
-function I(...e) {
+function m(...e) {
 	return (
 		'(' +
 		((function (e) {
@@ -180,7 +170,7 @@ function I(...e) {
 		')'
 	);
 }
-function m(e) {
+function I(e) {
 	return RegExp(e.toString() + '|').exec('').length - 1;
 }
 let T = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
@@ -197,9 +187,7 @@ function g(e, { joinWith: t }) {
 					i += r;
 					break;
 				}
-				(i += r.substring(0, e.index)),
-					(r = r.substring(e.index + e[0].length)),
-					'\\' === e[0][0] && e[1] ? (i += '\\' + String(Number(e[1]) + t)) : ((i += e[0]), '(' === e[0] && n++);
+				(i += r.substring(0, e.index)), (r = r.substring(e.index + e[0].length)), '\\' === e[0][0] && e[1] ? (i += '\\' + String(Number(e[1]) + t)) : ((i += e[0]), '(' === e[0] && n++);
 			}
 			return i;
 		})
@@ -232,22 +220,7 @@ let S = '[a-zA-Z]\\w*',
 			excludeBegin: !0,
 			relevance: 0
 		});
-		let i = I(
-			'I',
-			'a',
-			'is',
-			'so',
-			'us',
-			'to',
-			'at',
-			'if',
-			'in',
-			'it',
-			'on',
-			/[A-Za-z]+['](d|ve|re|ll|t|s|n)/,
-			/[A-Za-z]+[-][a-z]+/,
-			/[A-Za-z][a-z]{2,}/
-		);
+		let i = m('I', 'a', 'is', 'so', 'us', 'to', 'at', 'if', 'in', 'it', 'on', /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
 		return r.contains.push({ begin: p(/[ ]+/, '(', i, /[.]?[:]?([.][ ]|[ ])/, '){3}') }), r;
 	},
 	y = C('//', '$'),
@@ -261,8 +234,7 @@ var b = Object.freeze({
 	NUMBER_RE: N,
 	C_NUMBER_RE: v,
 	BINARY_NUMBER_RE: O,
-	RE_STARTERS_RE:
-		'!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~',
+	RE_STARTERS_RE: '!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~',
 	SHEBANG: (e = {}) => {
 		let t = /^#![ ]*\//;
 		return (
@@ -296,10 +268,7 @@ var b = Object.freeze({
 		illegal: '\\n',
 		contains: [R]
 	},
-	PHRASAL_WORDS_MODE: {
-		begin:
-			/\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
-	},
+	PHRASAL_WORDS_MODE: { begin: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/ },
 	COMMENT: C,
 	C_LINE_COMMENT_MODE: y,
 	C_BLOCK_COMMENT_MODE: D,
@@ -371,16 +340,10 @@ function P(e, t) {
 	void 0 !== e.className && ((e.scope = e.className), delete e.className);
 }
 function U(e, t) {
-	if (!!t)
-		e.beginKeywords &&
-			((e.begin = '\\b(' + e.beginKeywords.split(' ').join('|') + ')(?!\\.)(?=\\b|\\s)'),
-			(e.__beforeBegin = M),
-			(e.keywords = e.keywords || e.beginKeywords),
-			delete e.beginKeywords,
-			void 0 === e.relevance && (e.relevance = 0));
+	if (!!t) e.beginKeywords && ((e.begin = '\\b(' + e.beginKeywords.split(' ').join('|') + ')(?!\\.)(?=\\b|\\s)'), (e.__beforeBegin = M), (e.keywords = e.keywords || e.beginKeywords), delete e.beginKeywords, void 0 === e.relevance && (e.relevance = 0));
 }
 function w(e, t) {
-	Array.isArray(e.illegal) && (e.illegal = I(...e.illegal));
+	Array.isArray(e.illegal) && (e.illegal = m(...e.illegal));
 }
 function x(e, t) {
 	if (e.match) {
@@ -424,7 +387,7 @@ function j(e, t, { key: n }) {
 		i = e[n],
 		a = {},
 		s = {};
-	for (let e = 1; e <= t.length; e++) (s[e + r] = i[e]), (a[e + r] = !0), (r += m(t[e - 1]));
+	for (let e = 1; e <= t.length; e++) (s[e + r] = i[e]), (a[e + r] = !0), (r += I(t[e - 1]));
 	(e[n] = s), (e[n]._emit = a), (e[n]._multi = !0);
 }
 function W(e) {
@@ -434,16 +397,14 @@ function W(e) {
 		'string' == typeof e.endScope && (e.endScope = { _wrap: e.endScope }),
 		!(function (e) {
 			if (Array.isArray(e.begin)) {
-				if (e.skip || e.excludeBegin || e.returnBegin)
-					throw (V('skip, excludeBegin, returnBegin not compatible with beginScope: {}'), Y);
+				if (e.skip || e.excludeBegin || e.returnBegin) throw (V('skip, excludeBegin, returnBegin not compatible with beginScope: {}'), Y);
 				if ('object' != typeof e.beginScope || null === e.beginScope) throw (V('beginScope must be object'), Y);
 				j(e, e.begin, { key: 'beginScope' }), (e.begin = g(e.begin, { joinWith: '' }));
 			}
 		})(e),
 		!(function (e) {
 			if (Array.isArray(e.end)) {
-				if (e.skip || e.excludeEnd || e.returnEnd)
-					throw (V('skip, excludeEnd, returnEnd not compatible with endScope: {}'), Y);
+				if (e.skip || e.excludeEnd || e.returnEnd) throw (V('skip, excludeEnd, returnEnd not compatible with endScope: {}'), Y);
 				if ('object' != typeof e.endScope || null === e.endScope) throw (V('endScope must be object'), Y);
 				j(e, e.end, { key: 'endScope' }), (e.end = g(e.end, { joinWith: '' }));
 			}
@@ -482,16 +443,7 @@ var q = (function (e) {
 	function A(e, t, n) {
 		let r = '',
 			i = '';
-		'object' == typeof t
-			? ((r = e), (n = t.ignoreIllegals), (i = t.language))
-			: (Z('10.7.0', 'highlight(lang, code, ...args) has been deprecated.'),
-				Z(
-					'10.7.0',
-					'Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277'
-				),
-				(i = e),
-				(r = t)),
-			void 0 === n && (n = !0);
+		'object' == typeof t ? ((r = e), (n = t.ignoreIllegals), (i = t.language)) : (Z('10.7.0', 'highlight(lang, code, ...args) has been deprecated.'), Z('10.7.0', 'Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277'), (i = e), (r = t)), void 0 === n && (n = !0);
 		let a = {
 			code: r,
 			language: i
@@ -559,17 +511,10 @@ var q = (function (e) {
 			}
 		}
 		function h(e, t) {
-			return (
-				e.scope && 'string' == typeof e.scope && D.openNode(S.classNameAliases[e.scope] || e.scope),
-				e.beginScope &&
-					(e.beginScope._wrap
-						? (D.addKeyword(L, S.classNameAliases[e.beginScope._wrap] || e.beginScope._wrap), (L = ''))
-						: e.beginScope._multi && (f(e.beginScope, t), (L = ''))),
-				(R = Object.create(e, { parent: { value: R } }))
-			);
+			return e.scope && 'string' == typeof e.scope && D.openNode(S.classNameAliases[e.scope] || e.scope), e.beginScope && (e.beginScope._wrap ? (D.addKeyword(L, S.classNameAliases[e.beginScope._wrap] || e.beginScope._wrap), (L = '')) : e.beginScope._multi && (f(e.beginScope, t), (L = ''))), (R = Object.create(e, { parent: { value: R } }));
 		}
 		let p = {};
-		function I(n, i) {
+		function m(n, i) {
 			let a = i && i[0];
 			if (((L += n), null == a)) return E(), 0;
 			if ('begin' === p.type && 'end' === i.type && p.index === i.index && '' === a) {
@@ -589,11 +534,7 @@ var q = (function (e) {
 							var a;
 							return (a = t), 0 === R.matcher.regexIndex ? ((L += a[0]), 1) : ((H = !0), 0);
 						}
-					return (
-						n.skip ? (L += t) : (n.excludeBegin && (L += t), E(), !n.returnBegin && !n.excludeBegin && (L = t)),
-						h(n, e),
-						n.returnBegin ? 0 : t.length
-					);
+					return n.skip ? (L += t) : (n.excludeBegin && (L += t), E(), !n.returnBegin && !n.excludeBegin && (L = t)), h(n, e), n.returnBegin ? 0 : t.length;
 				})(i);
 			if ('illegal' !== i.type || s) {
 				if ('end' === i.type) {
@@ -619,13 +560,7 @@ var q = (function (e) {
 							})(R, e, i);
 						if (!a) return z;
 						let s = R;
-						R.endScope && R.endScope._wrap
-							? (E(), D.addKeyword(n, R.endScope._wrap))
-							: R.endScope && R.endScope._multi
-								? (E(), f(R.endScope, e))
-								: s.skip
-									? (L += n)
-									: (!(s.returnEnd || s.excludeEnd) && (L += n), E(), s.excludeEnd && (L = n));
+						R.endScope && R.endScope._wrap ? (E(), D.addKeyword(n, R.endScope._wrap)) : R.endScope && R.endScope._multi ? (E(), f(R.endScope, e)) : s.skip ? (L += n) : (!(s.returnEnd || s.excludeEnd) && (L += n), E(), s.excludeEnd && (L = n));
 						do R.scope && D.closeNode(), !R.skip && !R.subLanguage && (b += R.relevance), (R = R.parent);
 						while (R !== a.parent);
 						return a.starts && h(a.starts, e), s.returnEnd ? 0 : n.length;
@@ -651,10 +586,7 @@ var q = (function (e) {
 						(this.matchIndexes = {}), (this.regexes = []), (this.matchAt = 1), (this.position = 0);
 					}
 					addRule(e, t) {
-						(t.position = this.position++),
-							(this.matchIndexes[this.matchAt] = t),
-							this.regexes.push([t, e]),
-							(this.matchAt += m(e) + 1);
+						(t.position = this.position++), (this.matchIndexes[this.matchAt] = t), this.regexes.push([t, e]), (this.matchAt += I(e) + 1);
 					}
 					compile() {
 						0 === this.regexes.length && (this.exec = () => null);
@@ -702,22 +634,15 @@ var q = (function (e) {
 						return n && ((this.regexIndex += n.position + 1), this.regexIndex === this.count && this.considerAll()), n;
 					}
 				}
-				if ((!e.compilerExtensions && (e.compilerExtensions = []), e.contains && e.contains.includes('self')))
-					throw Error('ERR: contains `self` is not supported at the top-level of a language.  See documentation.');
+				if ((!e.compilerExtensions && (e.compilerExtensions = []), e.contains && e.contains.includes('self'))) throw Error('ERR: contains `self` is not supported at the top-level of a language.  See documentation.');
 				return (
 					(e.classNameAliases = a(e.classNameAliases || {})),
 					(function n(i, s) {
 						if (i.isCompiled) return i;
-						[P, x, W, k].forEach((e) => e(i, s)),
-							e.compilerExtensions.forEach((e) => e(i, s)),
-							(i.__beforeBegin = null),
-							[U, w, G].forEach((e) => e(i, s)),
-							(i.isCompiled = !0);
+						[P, x, W, k].forEach((e) => e(i, s)), e.compilerExtensions.forEach((e) => e(i, s)), (i.__beforeBegin = null), [U, w, G].forEach((e) => e(i, s)), (i.isCompiled = !0);
 						let o = null;
 						return (
-							'object' == typeof i.keywords &&
-								i.keywords.$pattern &&
-								((i.keywords = Object.assign({}, i.keywords)), (o = i.keywords.$pattern), delete i.keywords.$pattern),
+							'object' == typeof i.keywords && i.keywords.$pattern && ((i.keywords = Object.assign({}, i.keywords)), (o = i.keywords.$pattern), delete i.keywords.$pattern),
 							(o = o || /\w+/),
 							i.keywords &&
 								(i.keywords = (function e(t, n, r = 'keyword') {
@@ -752,13 +677,7 @@ var q = (function (e) {
 									}
 								})(i.keywords, e.case_insensitive)),
 							(i.keywordPatternRe = t(o, !0)),
-							s &&
-								(!i.begin && (i.begin = /\B|\b/),
-								(i.beginRe = t(i.begin)),
-								!i.end && !i.endsWithParent && (i.end = /\B|\b/),
-								i.end && (i.endRe = t(i.end)),
-								(i.terminatorEnd = _(i.end) || ''),
-								i.endsWithParent && s.terminatorEnd && (i.terminatorEnd += (i.end ? '|' : '') + s.terminatorEnd)),
+							s && (!i.begin && (i.begin = /\B|\b/), (i.beginRe = t(i.begin)), !i.end && !i.endsWithParent && (i.end = /\B|\b/), i.end && (i.endRe = t(i.end)), (i.terminatorEnd = _(i.end) || ''), i.endsWithParent && s.terminatorEnd && (i.terminatorEnd += (i.end ? '|' : '') + s.terminatorEnd)),
 							i.illegal && (i.illegalRe = t(i.illegal)),
 							!i.contains && (i.contains = []),
 							(i.contains = [].concat(
@@ -824,11 +743,11 @@ var q = (function (e) {
 				let e = R.matcher.exec(t);
 				if (!e) break;
 				let n = t.substring(M, e.index),
-					r = I(n, e);
+					r = m(n, e);
 				M = e.index + r;
 			}
 			return (
-				I(t.substring(M)),
+				m(t.substring(M)),
 				D.closeAllNodes(),
 				D.finalize(),
 				(O = D.toHTML()),
@@ -905,10 +824,7 @@ var q = (function (e) {
 				let n = T.languageDetectRe.exec(t);
 				if (n) {
 					let t = y(n[1]);
-					return (
-						!t && (H(u.replace('{}', n[1])), H('Falling back to no-highlight mode for this block.', e)),
-						t ? n[1] : 'no-highlight'
-					);
+					return !t && (H(u.replace('{}', n[1])), H('Falling back to no-highlight mode for this block.', e)), t ? n[1] : 'no-highlight';
 				}
 				return t.split(/\s+/).find((e) => S(e) || y(e));
 			})(e);
@@ -918,15 +834,7 @@ var q = (function (e) {
 				el: e,
 				language: n
 			}),
-			e.children.length > 0 &&
-				(!T.ignoreUnescapedHTML &&
-					(console.warn(
-						'One of your code blocks includes unescaped HTML. This is a potentially serious security risk.'
-					),
-					console.warn('https://github.com/highlightjs/highlight.js/wiki/security'),
-					console.warn('The element with unescaped HTML:'),
-					console.warn(e)),
-				T.throwUnescapedHTML))
+			e.children.length > 0 && (!T.ignoreUnescapedHTML && (console.warn('One of your code blocks includes unescaped HTML. This is a potentially serious security risk.'), console.warn('https://github.com/highlightjs/highlight.js/wiki/security'), console.warn('The element with unescaped HTML:'), console.warn(e)), T.throwUnescapedHTML))
 		)
 			throw new K('One of your code blocks includes unescaped HTML.', e.innerHTML);
 		let r = (t = e).textContent,
@@ -998,11 +906,7 @@ var q = (function (e) {
 		highlightAll: C,
 		highlightElement: O,
 		highlightBlock: function (e) {
-			return (
-				Z('10.7.0', 'highlightBlock will be removed entirely in v12.0'),
-				Z('10.7.0', 'Please use highlightElement now.'),
-				O(e)
-			);
+			return Z('10.7.0', 'highlightBlock will be removed entirely in v12.0'), Z('10.7.0', 'Please use highlightElement now.'), O(e);
 		},
 		configure: function (e) {
 			T = a(T, e);
@@ -1022,10 +926,7 @@ var q = (function (e) {
 				else throw e;
 				i = c;
 			}
-			!i.name && (i.name = t),
-				(n[t] = i),
-				(i.rawDefinition = r.bind(null, e)),
-				i.aliases && D(i.aliases, { languageName: t });
+			!i.name && (i.name = t), (n[t] = i), (i.rawDefinition = r.bind(null, e)), i.aliases && D(i.aliases, { languageName: t });
 		},
 		unregisterLanguage: function (e) {
 			for (let t of (delete n[e], Object.keys(s))) s[t] === e && delete s[t];
@@ -1062,7 +963,7 @@ var q = (function (e) {
 	(e.regex = {
 		concat: p,
 		lookahead: E,
-		either: I,
+		either: m,
 		optional: h,
 		anyNumberOfTimes: f
 	}),

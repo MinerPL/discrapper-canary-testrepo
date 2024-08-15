@@ -26,23 +26,7 @@ let _ = (e) => {
 	});
 };
 s.Z = (e) => {
-	let {
-			className: s,
-			title: t,
-			stepData: i,
-			transitionState: E,
-			onClose: N,
-			completeButtonText: I,
-			overviewFooter: T,
-			onNextPressed: M,
-			onPrevPressed: m,
-			onComplete: x,
-			sequencerClassName: u,
-			initialStep: L = 0,
-			forceStep: O,
-			submitting: C = !1,
-			autoCloseOnComplete: h = !0
-		} = e,
+	let { className: s, title: t, stepData: i, transitionState: E, onClose: N, completeButtonText: I, overviewFooter: T, onNextPressed: M, onPrevPressed: m, onComplete: x, sequencerClassName: u, initialStep: L = 0, forceStep: O, submitting: C = !1, autoCloseOnComplete: h = !0 } = e,
 		[A, p] = l.useState([]),
 		[S, f] = l.useState(L),
 		g = (0, r.Dt)();

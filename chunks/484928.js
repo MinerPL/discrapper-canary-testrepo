@@ -46,20 +46,7 @@ var t = a(475637),
 			defaultMatchWidth: 'wide',
 			parsePatterns: {
 				narrow: [/^s/i, /^v/i, /^k/i, /^b/i, /^g/i, /^b/i, /^l/i, /^r/i, /^r/i, /^s/i, /^l/i, /^g/i],
-				any: [
-					/^saus/i,
-					/^vas/i,
-					/^kov/i,
-					/^bal/i,
-					/^geg/i,
-					/^birž/i,
-					/^liep/i,
-					/^rugp/i,
-					/^rugs/i,
-					/^spal/i,
-					/^lapkr/i,
-					/^gruod/i
-				]
+				any: [/^saus/i, /^vas/i, /^kov/i, /^bal/i, /^geg/i, /^birž/i, /^liep/i, /^rugp/i, /^rugs/i, /^spal/i, /^lapkr/i, /^gruod/i]
 			},
 			defaultParseWidth: 'any'
 		}),

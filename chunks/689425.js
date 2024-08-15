@@ -133,8 +133,7 @@ class _ extends (r = a.PureComponent) {
 						t.addEventListener('mousemove', this.handleMouseMove),
 						t.addEventListener('mouseup', this.handleMouseUp),
 						(this._removeListeners = () => {
-							t.removeEventListener('mousemove', this.handleMouseMove),
-								t.removeEventListener('mouseup', this.handleMouseUp);
+							t.removeEventListener('mousemove', this.handleMouseMove), t.removeEventListener('mouseup', this.handleMouseUp);
 						});
 				}
 			}),

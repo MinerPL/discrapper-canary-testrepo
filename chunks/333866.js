@@ -25,10 +25,5 @@ function a(e) {
 		1: u.Z.Messages.GUILD_STORE_SORT_OPTION_NAME
 	}[e];
 }
-((r = o || (o = {}))[(r.NAME = 1)] = 'NAME'),
-	(r[(r.PRICE_ASC = 2)] = 'PRICE_ASC'),
-	(r[(r.PRICE_DESC = 3)] = 'PRICE_DESC'),
-	(r[(r.NEWEST_ARRIVALS = 4)] = 'NEWEST_ARRIVALS'),
-	((i = l || (l = {}))[(i.SUBS_FIRST = 1)] = 'SUBS_FIRST'),
-	(i[(i.PRODUCTS_FIRST = 2)] = 'PRODUCTS_FIRST');
+((r = o || (o = {}))[(r.NAME = 1)] = 'NAME'), (r[(r.PRICE_ASC = 2)] = 'PRICE_ASC'), (r[(r.PRICE_DESC = 3)] = 'PRICE_DESC'), (r[(r.NEWEST_ARRIVALS = 4)] = 'NEWEST_ARRIVALS'), ((i = l || (l = {}))[(i.SUBS_FIRST = 1)] = 'SUBS_FIRST'), (i[(i.PRODUCTS_FIRST = 2)] = 'PRODUCTS_FIRST');
 let s = [4, 2, 3, 1];

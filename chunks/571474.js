@@ -29,8 +29,6 @@ class m extends (r = l.ZP.Store) {
 		: (i[a] = s),
 	(t.Z = new m(o.Z, {
 		CONNECTION_OPEN: function () {
-			return (
-				I !== (I = _.Z.getFriendIDs().length >= 10 && u.default.extractTimestamp(d.default.getId()) < Date.now() - E)
-			);
+			return I !== (I = _.Z.getFriendIDs().length >= 10 && u.default.extractTimestamp(d.default.getId()) < Date.now() - E);
 		}
 	}));

@@ -23,8 +23,8 @@ var i = n(470079),
 	_ = n(178762),
 	f = n(206583),
 	E = n(809017),
-	g = n(981631),
-	C = n(689938);
+	C = n(981631),
+	g = n(689938);
 let I = 0;
 function x(e) {
 	let {
@@ -58,12 +58,12 @@ function x(e) {
 				key: E.G,
 				count: e.length,
 				index: n.length,
-				title: C.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE,
+				title: g.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE,
 				onToggleExpand: () => {
 					v((e) => {
 						let t = !e;
 						return (
-							u.default.track(g.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
+							u.default.track(C.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
 								channel_id: x,
 								guild_id: T,
 								expanded: t
@@ -105,13 +105,10 @@ function x(e) {
 				() => {
 					var e, t;
 					if (null == S || null == B.current || Date.now() - B.current < 3000) return;
-					let n =
-							null !== (t = null === (e = w.current) || void 0 === e ? void 0 : e.map((e) => e.id)) && void 0 !== t
-								? t
-								: [],
+					let n = null !== (t = null === (e = w.current) || void 0 === e ? void 0 : e.map((e) => e.id)) && void 0 !== t ? t : [],
 						i = n.slice(0, U.current);
 					if (!M && !!b && !!P)
-						u.default.track(g.rMx.RANKING_ITEMS_SEEN, {
+						u.default.track(C.rMx.RANKING_ITEMS_SEEN, {
 							request_id: S,
 							first_shown_at: B.current,
 							item_ids: i,

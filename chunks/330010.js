@@ -19,13 +19,7 @@ function l(e) {
 			oldFormErrors: !0
 		})
 		.then((t) => {
-			let n = t.body.map(
-				(e) => (
-					null != e.user && (e.user = new s.Z(e.user)),
-					null != e.application && (e.application = a.Z.createFromServer(e.application)),
-					e
-				)
-			);
+			let n = t.body.map((e) => (null != e.user && (e.user = new s.Z(e.user)), null != e.application && (e.application = a.Z.createFromServer(e.application)), e));
 			i.Z.dispatch({
 				type: 'GUILD_SETTINGS_LOADED_INTEGRATIONS',
 				guildId: e,

@@ -68,9 +68,7 @@ s.default = (e) => {
 						className: N.marginBottom20,
 						variant: 'text-sm/normal',
 						color: 'header-secondary',
-						children: b.Z.Messages.FAMILY_CENTER_QR_CODE_MODAL_DESCRIPTION.format({
-							link: 'https://support.discord.com/hc/articles/14155060633623'
-						})
+						children: b.Z.Messages.FAMILY_CENTER_QR_CODE_MODAL_DESCRIPTION.format({ link: 'https://support.discord.com/hc/articles/14155060633623' })
 					}),
 					(0, r.jsx)('div', {
 						className: x.qrCode,
@@ -99,9 +97,7 @@ s.default = (e) => {
 								size: l.Button.Sizes.LARGE,
 								onClick: O,
 								submitting: a && p,
-								children: a
-									? b.Z.Messages.FAMILY_CENTER_QR_CODE_MODAL_BUTTON_HIDE
-									: b.Z.Messages.FAMILY_CENTER_QR_CODE_MODAL_BUTTON_SHOW
+								children: a ? b.Z.Messages.FAMILY_CENTER_QR_CODE_MODAL_BUTTON_HIDE : b.Z.Messages.FAMILY_CENTER_QR_CODE_MODAL_BUTTON_SHOW
 							}),
 							(0, r.jsx)(l.Button, {
 								grow: !0,

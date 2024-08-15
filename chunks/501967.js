@@ -62,15 +62,12 @@ class p extends a.PureComponent {
 		super(e), (this.state = { animation: new l.Z.Value(0) });
 	}
 }
-class I extends (r = a.PureComponent) {
+class m extends (r = a.PureComponent) {
 	componentDidMount() {
-		document.addEventListener('mousedown', this.handleMouseEvent, !0),
-			document.addEventListener('mousemove', this.handleMouseEvent, !0);
+		document.addEventListener('mousedown', this.handleMouseEvent, !0), document.addEventListener('mousemove', this.handleMouseEvent, !0);
 	}
 	componentWillUnmount() {
-		document.removeEventListener('mousedown', this.handleMouseEvent, !0),
-			document.removeEventListener('mousemove', this.handleMouseEvent, !0),
-			this._timeout.stop();
+		document.removeEventListener('mousedown', this.handleMouseEvent, !0), document.removeEventListener('mousemove', this.handleMouseEvent, !0), this._timeout.stop();
 	}
 	static getDerivedStateFromProps(e, t) {
 		if (e.layout !== t.layoutProp)
@@ -143,8 +140,7 @@ class I extends (r = a.PureComponent) {
 			f(this, '_timeout', new u.V7()),
 			f(this, 'handleMouseEvent', () => {
 				let { layout: e } = this.props;
-				if (e === _.AEg.FULL_SCREEN || e === _.AEg.NO_CHAT)
-					this._timeout.start(3000, () => this.setState({ idle: !0 })), this.state.idle && this.setState({ idle: !1 });
+				if (e === _.AEg.FULL_SCREEN || e === _.AEg.NO_CHAT) this._timeout.start(3000, () => this.setState({ idle: !0 })), this.state.idle && this.setState({ idle: !1 });
 			}),
 			(this.state = {
 				idle: !1,
@@ -153,7 +149,7 @@ class I extends (r = a.PureComponent) {
 			});
 	}
 }
-f(I, 'defaultProps', {
+f(m, 'defaultProps', {
 	layout: _.AEg.MINIMUM,
 	animated: !0
 });

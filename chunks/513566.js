@@ -13,8 +13,8 @@ var r = n(348327),
 	f = n(173507),
 	h = n(592125),
 	p = n(131951),
-	I = n(944486),
-	m = n(358085),
+	m = n(944486),
+	I = n(358085),
 	T = n(998502),
 	g = n(981631),
 	S = n(689938);
@@ -33,39 +33,10 @@ function A(e, t, n) {
 }
 class N extends c.Z {
 	_initialize() {
-		if (!!this.isSupported)
-			o.Z.subscribe('AUDIO_SET_MODE', this.handleViewUpdate),
-				o.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleViewUpdate),
-				o.Z.subscribe('START_SESSION', this.handleViewUpdate),
-				o.Z.subscribe('CONNECTION_OPEN', this.handleViewUpdate),
-				o.Z.subscribe('CONNECTION_CLOSED', this.handleViewUpdate),
-				o.Z.subscribe('CALL_CREATE', this.handleViewUpdate),
-				o.Z.subscribe('CALL_UPDATE', this.handleViewUpdate),
-				o.Z.subscribe('CALL_DELETE', this.handleViewUpdate),
-				o.Z.subscribe('CHANNEL_DELETE', this.handleViewUpdate),
-				o.Z.subscribe('VOICE_STATE_UPDATES', this.handleViewUpdate),
-				o.Z.subscribe('AUDIO_TOGGLE_SELF_MUTE', this.handleViewUpdate),
-				o.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', this.handleViewUpdate),
-				o.Z.subscribe('AUDIO_TOGGLE_LOCAL_MUTE', this.handleViewUpdate),
-				o.Z.subscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleViewUpdate),
-				T.ZP.on('THUMBAR_BUTTONS_CLICKED', (e, t) => this.buttonClicked(t));
+		if (!!this.isSupported) o.Z.subscribe('AUDIO_SET_MODE', this.handleViewUpdate), o.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleViewUpdate), o.Z.subscribe('START_SESSION', this.handleViewUpdate), o.Z.subscribe('CONNECTION_OPEN', this.handleViewUpdate), o.Z.subscribe('CONNECTION_CLOSED', this.handleViewUpdate), o.Z.subscribe('CALL_CREATE', this.handleViewUpdate), o.Z.subscribe('CALL_UPDATE', this.handleViewUpdate), o.Z.subscribe('CALL_DELETE', this.handleViewUpdate), o.Z.subscribe('CHANNEL_DELETE', this.handleViewUpdate), o.Z.subscribe('VOICE_STATE_UPDATES', this.handleViewUpdate), o.Z.subscribe('AUDIO_TOGGLE_SELF_MUTE', this.handleViewUpdate), o.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', this.handleViewUpdate), o.Z.subscribe('AUDIO_TOGGLE_LOCAL_MUTE', this.handleViewUpdate), o.Z.subscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleViewUpdate), T.ZP.on('THUMBAR_BUTTONS_CLICKED', (e, t) => this.buttonClicked(t));
 	}
 	_terminate() {
-		if (!!this.isSupported)
-			o.Z.unsubscribe('AUDIO_SET_MODE', this.handleViewUpdate),
-				o.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.handleViewUpdate),
-				o.Z.unsubscribe('START_SESSION', this.handleViewUpdate),
-				o.Z.unsubscribe('CONNECTION_OPEN', this.handleViewUpdate),
-				o.Z.unsubscribe('CONNECTION_CLOSED', this.handleViewUpdate),
-				o.Z.unsubscribe('CALL_CREATE', this.handleViewUpdate),
-				o.Z.unsubscribe('CALL_UPDATE', this.handleViewUpdate),
-				o.Z.unsubscribe('CALL_DELETE', this.handleViewUpdate),
-				o.Z.unsubscribe('CHANNEL_DELETE', this.handleViewUpdate),
-				o.Z.unsubscribe('VOICE_STATE_UPDATES', this.handleViewUpdate),
-				o.Z.unsubscribe('AUDIO_TOGGLE_SELF_MUTE', this.handleViewUpdate),
-				o.Z.unsubscribe('AUDIO_TOGGLE_SELF_DEAF', this.handleViewUpdate),
-				o.Z.unsubscribe('AUDIO_TOGGLE_LOCAL_MUTE', this.handleViewUpdate),
-				o.Z.unsubscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleViewUpdate);
+		if (!!this.isSupported) o.Z.unsubscribe('AUDIO_SET_MODE', this.handleViewUpdate), o.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.handleViewUpdate), o.Z.unsubscribe('START_SESSION', this.handleViewUpdate), o.Z.unsubscribe('CONNECTION_OPEN', this.handleViewUpdate), o.Z.unsubscribe('CONNECTION_CLOSED', this.handleViewUpdate), o.Z.unsubscribe('CALL_CREATE', this.handleViewUpdate), o.Z.unsubscribe('CALL_UPDATE', this.handleViewUpdate), o.Z.unsubscribe('CALL_DELETE', this.handleViewUpdate), o.Z.unsubscribe('CHANNEL_DELETE', this.handleViewUpdate), o.Z.unsubscribe('VOICE_STATE_UPDATES', this.handleViewUpdate), o.Z.unsubscribe('AUDIO_TOGGLE_SELF_MUTE', this.handleViewUpdate), o.Z.unsubscribe('AUDIO_TOGGLE_SELF_DEAF', this.handleViewUpdate), o.Z.unsubscribe('AUDIO_TOGGLE_LOCAL_MUTE', this.handleViewUpdate), o.Z.unsubscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleViewUpdate);
 	}
 	setThumbarButtons(e) {
 		!i()(this.prevButtons, e) && ((this.prevButtons = e), T.ZP.setThumbarButtons(e));
@@ -80,7 +51,7 @@ class N extends c.Z {
 				[T.tS.DEAFEN]: () => l.Z.toggleSelfDeaf(),
 				[T.tS.DISCONNECT]: () => u.default.disconnect()
 			}),
-			A(this, 'isSupported', (0, m.isMac)() || (0, m.isWindows)()),
+			A(this, 'isSupported', (0, I.isMac)() || (0, I.isWindows)()),
 			A(this, 'prevButtons', []),
 			A(this, 'buttonClicked', (e) => {
 				if (!(e.buttonName in this.callbackActions)) {
@@ -93,7 +64,7 @@ class N extends c.Z {
 				this,
 				'handleViewUpdate',
 				s().debounce(() => {
-					let e = I.Z.getVoiceChannelId();
+					let e = m.Z.getVoiceChannelId();
 					if (null == e) {
 						this.setThumbarButtons([]);
 						return;

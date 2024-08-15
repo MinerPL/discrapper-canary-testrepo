@@ -32,9 +32,7 @@ function g(e, n, g) {
 		O
 			? (0, t.jsx)(a.MenuItem, {
 					id: 'remove',
-					label: m.isForumPost()
-						? f.Z.Messages.REMOVE_USER_FROM_FORUM_POST.format({ user: e.username })
-						: f.Z.Messages.REMOVE_USER_FROM_THREAD.format({ user: e.username }),
+					label: m.isForumPost() ? f.Z.Messages.REMOVE_USER_FROM_FORUM_POST.format({ user: e.username }) : f.Z.Messages.REMOVE_USER_FROM_THREAD.format({ user: e.username }),
 					color: 'danger',
 					action: () => d.Z.removeMember(m, e.id, 'Context Menu')
 				})
@@ -42,9 +40,7 @@ function g(e, n, g) {
 		E.Z.canManageUser(_.Plq.KICK_MEMBERS, e, R)
 			? (0, t.jsx)(a.MenuItem, {
 					id: 'kick',
-					label: O
-						? f.Z.Messages.KICK_USER_FROM_SERVER.format({ user: e.username })
-						: f.Z.Messages.KICK_USER.format({ user: e.username }),
+					label: O ? f.Z.Messages.KICK_USER_FROM_SERVER.format({ user: e.username }) : f.Z.Messages.KICK_USER.format({ user: e.username }),
 					color: 'danger',
 					action: () =>
 						(0, a.openModalLazy)(async () => {
@@ -61,9 +57,7 @@ function g(e, n, g) {
 		E.Z.canManageUser(_.Plq.BAN_MEMBERS, e, R)
 			? (0, t.jsx)(a.MenuItem, {
 					id: 'ban',
-					label: O
-						? f.Z.Messages.BAN_USER_FROM_SERVER.format({ user: e.username })
-						: f.Z.Messages.BAN_USER.format({ user: e.username }),
+					label: O ? f.Z.Messages.BAN_USER_FROM_SERVER.format({ user: e.username }) : f.Z.Messages.BAN_USER.format({ user: e.username }),
 					color: 'danger',
 					action: () =>
 						(0, a.openModalLazy)(async () => {

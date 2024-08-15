@@ -32,14 +32,9 @@ class p extends l.y {
 			var t;
 			if (e.isPushNotification) return;
 			let n = e.message;
-			if (
-				c.default.getId() !== (null === (t = n.author) || void 0 === t ? void 0 : t.id) ||
-				!(0, h.z9)(n.id, n.channel_id)
-			)
-				return;
+			if (c.default.getId() !== (null === (t = n.author) || void 0 === t ? void 0 : t.id) || !(0, h.z9)(n.id, n.channel_id)) return;
 			let i = u.Z.getChannel(n.channel_id);
-			if (null != i && null != i.parent_id)
-				o.Z.isChannelGated(i.guild_id, i.parent_id) && m.add(d.default.castMessageIdAsChannelId(e.message.id));
+			if (null != i && null != i.parent_id) o.Z.isChannelGated(i.guild_id, i.parent_id) && m.add(d.default.castMessageIdAsChannelId(e.message.id));
 		},
 		DISMISS_MEDIA_POST_SHARE_PROMPT: function (e) {
 			let { threadId: t } = e;

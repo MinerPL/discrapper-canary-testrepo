@@ -20,8 +20,7 @@ var r,
 	p = t(624138),
 	f = t(689938),
 	h = t(66465);
-((i = r || (r = {}))[(i.SMALL = (0, p.Mg)(a.Z.GUILD_COUNT_SMALL_ICON_SIZE))] = 'SMALL'),
-	(i[(i.LARGE = (0, p.Mg)(a.Z.GUILD_COUNT_LARGE_ICON_SIZE))] = 'LARGE');
+((i = r || (r = {}))[(i.SMALL = (0, p.Mg)(a.Z.GUILD_COUNT_SMALL_ICON_SIZE))] = 'SMALL'), (i[(i.LARGE = (0, p.Mg)(a.Z.GUILD_COUNT_LARGE_ICON_SIZE))] = 'LARGE');
 let A = {
 		[r.SMALL]: h.moreGuildsSmall,
 		[r.LARGE]: h.moreGuildsLarge
@@ -32,18 +31,9 @@ let A = {
 	};
 function I(e) {
 	var n, t, i;
-	let {
-			application: c,
-			mutualGuilds: a,
-			mutualGuildShownMax: p = 4,
-			className: I,
-			textVariant: _ = 'text-sm/normal',
-			compact: L,
-			guildIconSize: g = r.LARGE
-		} = e,
+	let { application: c, mutualGuilds: a, mutualGuildShownMax: p = 4, className: I, textVariant: _ = 'text-sm/normal', compact: L, guildIconSize: g = r.LARGE } = e,
 		m = new Intl.ListFormat('en-US'),
-		T =
-			null !== (t = null === (n = c.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== t ? t : 0,
+		T = null !== (t = null === (n = c.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== t ? t : 0,
 		R = null !== (i = null == a ? void 0 : a.length) && void 0 !== i ? i : 0,
 		v = Math.max(0, T - R),
 		{ shownMutualGuilds: O, hiddenMutualGuilds: P } = l.useMemo(() => {
@@ -122,9 +112,7 @@ function I(e) {
 											}),
 											N > 0
 												? (0, o.jsx)(u.Tooltip, {
-														text: f.Z.Messages.APP_DIRECTORY_GUILD_COUNT_PLUS_MUTUALS_TOOLTIP.format({
-															appNames: m.format(P.map((e) => e.name))
-														}),
+														text: f.Z.Messages.APP_DIRECTORY_GUILD_COUNT_PLUS_MUTUALS_TOOLTIP.format({ appNames: m.format(P.map((e) => e.name)) }),
 														position: 'top',
 														children: (e) =>
 															(0, o.jsxs)('div', {

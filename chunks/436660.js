@@ -106,8 +106,7 @@ let o = {
 		}),
 			0 === s.offset && r.YR.insertNodes(e, [{ text: '' }], { at: s.path }),
 			r.YR.insertNodes(e, [t], { at: s }),
-			(!a.bN.hasPath(e, l.path) || !a.LC.isText(a.bN.node(e, l.path)[0])) &&
-				r.YR.insertNodes(e, [{ text: '' }], { at: l.path }),
+			(!a.bN.hasPath(e, l.path) || !a.LC.isText(a.bN.node(e, l.path)[0])) && r.YR.insertNodes(e, [{ text: '' }], { at: l.path }),
 			u(e, i, s, l, l);
 	},
 	textToInline(e, t, n) {

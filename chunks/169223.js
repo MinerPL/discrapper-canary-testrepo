@@ -14,8 +14,8 @@ var i = n(481060),
 	f = n(959457),
 	h = n(178635),
 	p = n(531578),
-	I = n(981631);
-function m(e, t, n) {
+	m = n(981631);
+function I(e, t, n) {
 	return (
 		t in e
 			? Object.defineProperty(e, t, {
@@ -34,14 +34,14 @@ class T extends h.Z {
 	}
 	constructor(...e) {
 		super(...e),
-			m(this, 'actions', {
+			I(this, 'actions', {
 				VOICE_CHANNEL_SHOW_FEEDBACK: (e) => this.handleVoiceChannelFeedback(e),
 				STREAM_CLOSE: (e) => this.handleStreamClose(e),
 				VIDEO_BACKGROUND_SHOW_FEEDBACK: (e) => this.handleVideoBackgroundShowFeedback(e),
 				EMBEDDED_ACTIVITY_CLOSE: (e) => this.handleActivityClose(e),
 				IN_APP_REPORTS_SHOW_FEEDBACK: (e) => this.handleInAppReportsFeedback(e)
 			}),
-			m(this, 'handleVoiceChannelFeedback', (e) => {
+			I(this, 'handleVoiceChannelFeedback', (e) => {
 				let { analyticsData: t } = e;
 				this.possiblyShowFeedbackModal(p.nw.VOICE, () => {
 					(0, i.openModalLazy)(async () => {
@@ -54,7 +54,7 @@ class T extends h.Z {
 					});
 				});
 			}),
-			m(this, 'handleStreamClose', (e) => {
+			I(this, 'handleStreamClose', (e) => {
 				var t;
 				let { streamKey: a, canShowFeedback: l } = e,
 					u = (0, s.my)(a),
@@ -82,7 +82,7 @@ class T extends h.Z {
 						});
 					});
 			}),
-			m(this, 'handleVideoBackgroundShowFeedback', (e) => {
+			I(this, 'handleVideoBackgroundShowFeedback', (e) => {
 				let { analyticsData: t } = e;
 				this.possiblyShowFeedbackModal(p.nw.VIDEO_BACKGROUND, () => {
 					(0, i.openModalLazy)(async () => {
@@ -95,7 +95,7 @@ class T extends h.Z {
 					});
 				});
 			}),
-			m(this, 'handleActivityClose', (e) => {
+			I(this, 'handleActivityClose', (e) => {
 				let { applicationId: t, channelId: s, showFeedback: o } = e,
 					l = a.Z.getApplication(t),
 					c = d.Z.getChannel(s),
@@ -103,7 +103,7 @@ class T extends h.Z {
 						rtc_connection_id: E.Z.getRTCConnectionId(),
 						media_session_id: E.Z.getMediaSessionId()
 					},
-					f = u.Z.getWindowOpen(I.KJ3.CHANNEL_CALL_POPOUT) ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
+					f = u.Z.getWindowOpen(m.KJ3.CHANNEL_CALL_POPOUT) ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
 				null != l &&
 					null != c &&
 					o &&
@@ -123,7 +123,7 @@ class T extends h.Z {
 						);
 					});
 			}),
-			m(this, 'handleInAppReportsFeedback', (e) => {
+			I(this, 'handleInAppReportsFeedback', (e) => {
 				let { reportId: t, reportType: a } = e;
 				this.possiblyShowFeedbackModal(p.nw.IN_APP_REPORTS, () => {
 					(0, i.openModalLazy)(async () => {

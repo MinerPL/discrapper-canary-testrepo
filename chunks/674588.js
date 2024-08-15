@@ -1,6 +1,6 @@
 n.d(t, {
 	CP: function () {
-		return m;
+		return I;
 	},
 	T4: function () {
 		return T;
@@ -15,7 +15,7 @@ n.d(t, {
 		return p;
 	},
 	i6: function () {
-		return I;
+		return m;
 	},
 	yC: function () {
 		return g;
@@ -74,7 +74,7 @@ async function p(e) {
 		});
 	}
 }
-async function I(e) {
+async function m(e) {
 	let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
 		n = Date.now(),
 		r = l.Z.getApplicationFetchState(e),
@@ -103,7 +103,7 @@ async function I(e) {
 		}
 	}
 }
-async function m() {
+async function I() {
 	let e = Date.now(),
 		t = u.Z.getLastFetchTimeMs();
 	if (null != t && t + 600000 > e) return;
@@ -171,16 +171,7 @@ async function T(e) {
 async function g(e) {
 	var t;
 	let { query: n, guildId: r, options: l, onSuccessCallback: u } = e,
-		{
-			page: c,
-			categoryId: _,
-			integrationType: E,
-			minUserInstallCommandCount: h,
-			excludeAppsWithCustomInstallUrl: p,
-			excludeNonEmbeddedApps: I,
-			excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: m,
-			source: T = i.F.APP_DIRECTORY
-		} = null != l ? l : {},
+		{ page: c, categoryId: _, integrationType: E, minUserInstallCommandCount: h, excludeAppsWithCustomInstallUrl: p, excludeNonEmbeddedApps: m, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: I, source: T = i.F.APP_DIRECTORY } = null != l ? l : {},
 		g = Date.now(),
 		S = d.Z.getFetchState({
 			query: n,
@@ -210,8 +201,8 @@ async function g(e) {
 			integrationType: E,
 			minUserInstallCommandCount: h,
 			excludeAppsWithCustomInstallUrl: p,
-			excludeNonEmbeddedApps: I,
-			excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: m,
+			excludeNonEmbeddedApps: m,
+			excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: I,
 			source: T
 		});
 		try {
@@ -226,8 +217,8 @@ async function g(e) {
 					integration_type: E,
 					min_user_install_command_count: h,
 					exclude_apps_with_custom_install_url: p,
-					exclude_non_embedded_apps: I,
-					exclude_embedded_apps_without_primary_entry_point_app_command: m,
+					exclude_non_embedded_apps: m,
+					exclude_embedded_apps_without_primary_entry_point_app_command: I,
 					source: T
 				}
 			});
@@ -248,8 +239,8 @@ async function g(e) {
 				},
 				minUserInstallCommandCount: h,
 				excludeAppsWithCustomInstallUrl: p,
-				excludeNonEmbeddedApps: I,
-				excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: m,
+				excludeNonEmbeddedApps: m,
+				excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: I,
 				source: T
 			}),
 				null == u || u(e.body.result_count);
@@ -263,8 +254,8 @@ async function g(e) {
 				integrationType: E,
 				minUserInstallCommandCount: h,
 				excludeAppsWithCustomInstallUrl: p,
-				excludeNonEmbeddedApps: I,
-				excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: m,
+				excludeNonEmbeddedApps: m,
+				excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: I,
 				source: T
 			});
 		}
@@ -319,13 +310,7 @@ async function A() {
 			let e = (null == t ? void 0 : t.status) === 429;
 			s.Z.dispatch({
 				type: 'FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS_FAILURE',
-				retryAfterSeconds: e
-					? null == t
-						? void 0
-						: null === (i = t.body) || void 0 === i
-							? void 0
-							: i.retry_after
-					: void 0
+				retryAfterSeconds: e ? (null == t ? void 0 : null === (i = t.body) || void 0 === i ? void 0 : i.retry_after) : void 0
 			});
 		}
 	}

@@ -60,9 +60,7 @@ let O = () => {
 										? (0, n.jsx)(I.Z, {
 												showGradient: t,
 												subscriptionTier: N.Si.TIER_2,
-												buttonText: t
-													? C.Z.Messages.PREMIUM_UPSELL_GET_NITRO
-													: C.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
+												buttonText: t ? C.Z.Messages.PREMIUM_UPSELL_GET_NITRO : C.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
 											})
 										: null
 								]

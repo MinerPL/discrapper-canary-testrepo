@@ -28,15 +28,7 @@ function m() {
 		let a = () => {
 				let n = performance.now(),
 					l = n - r.current;
-				if (
-					((r.current = n),
-					(i.current -= e.current[c.current]),
-					(e.current[c.current] = l),
-					(i.current += l),
-					o.current < h && (o.current += 1),
-					(c.current = (c.current + 1) % h),
-					l > u)
-				) {
+				if (((r.current = n), (i.current -= e.current[c.current]), (e.current[c.current] = l), (i.current += l), o.current < h && (o.current += 1), (c.current = (c.current + 1) % h), l > u)) {
 					let e = 0 === o.current ? d : i.current / o.current,
 						r = Math.min(2 * d, e),
 						a = Math.floor(l / (g ? r : d));
@@ -46,13 +38,7 @@ function m() {
 			},
 			n = requestAnimationFrame(a);
 		return () => {
-			cancelAnimationFrame(n),
-				e.current.fill(0),
-				(t.current = 0),
-				(i.current = 0),
-				(o.current = 0),
-				(c.current = 0),
-				null != m.current && clearTimeout(m.current);
+			cancelAnimationFrame(n), e.current.fill(0), (t.current = 0), (i.current = 0), (o.current = 0), (c.current = 0), null != m.current && clearTimeout(m.current);
 		};
 	}, [g]),
 		n.useEffect(() => {
@@ -132,12 +118,7 @@ function m() {
 			(0, a.jsx)(l.Button, {
 				size: l.Button.Sizes.SMALL,
 				onClick: () => {
-					e.current.fill(0),
-						(t.current = 0),
-						(i.current = 0),
-						(o.current = 0),
-						(c.current = 0),
-						(r.current = performance.now());
+					e.current.fill(0), (t.current = 0), (i.current = 0), (o.current = 0), (c.current = 0), (r.current = performance.now());
 				},
 				children: 'Reset Frame Data'
 			})

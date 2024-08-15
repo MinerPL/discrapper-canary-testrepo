@@ -3,7 +3,7 @@ n.d(t, {
 		return E;
 	},
 	LJ: function () {
-		return g;
+		return C;
 	},
 	mV: function () {
 		return _;
@@ -15,7 +15,7 @@ n.d(t, {
 		return i;
 	},
 	wi: function () {
-		return C;
+		return g;
 	}
 }),
 	n(789020),
@@ -38,14 +38,7 @@ function _(e, t) {
 	let a = (0, o.e7)([d.default], () => d.default.getUser(e), [e]),
 		s = (0, o.e7)([c.ZP], () => c.ZP.getMember(t, e), [t, e]),
 		l = (0, o.e7)([u.Z], () => u.Z.getGuild(t), [t]);
-	return (null == l ? void 0 : l.hasVerificationGate())
-		? null == a || null == s || null == l
-			? 1
-			: (0, h.yE)(null !== (n = s.flags) && void 0 !== n ? n : 0, p.q.BYPASSES_VERIFICATION) ||
-				  (0, h.yE)(null !== (i = s.flags) && void 0 !== i ? i : 0, p.q.COMPLETED_ONBOARDING)
-				? 2
-				: 1
-		: 0;
+	return (null == l ? void 0 : l.hasVerificationGate()) ? (null == a || null == s || null == l ? 1 : (0, h.yE)(null !== (n = s.flags) && void 0 !== n ? n : 0, p.q.BYPASSES_VERIFICATION) || (0, h.yE)(null !== (i = s.flags) && void 0 !== i ? i : 0, p.q.COMPLETED_ONBOARDING) ? 2 : 1) : 0;
 }
 function f(e, t) {
 	var n;
@@ -63,17 +56,15 @@ function E(e) {
 		return r()(new Date(t)).format('MMM DD, YYYY');
 	}, [e]);
 }
-function g(e) {
+function C(e) {
 	return s.useMemo(() => {
 		let t = m.default.extractTimestamp(e);
 		return r()(new Date(t)).format('MM/DD/YYYY');
 	}, [e]);
 }
-function C(e, t) {
+function g(e, t) {
 	let n = (0, o.e7)([c.ZP], () => c.ZP.getMember(t, e), [t, e]),
 		i = null == n ? void 0 : n.joinedAt;
 	return s.useMemo(() => (null == i ? '' : r()(new Date(i)).format('MMM DD, YYYY')), [i]);
 }
-((a = i || (i = {}))[(a.NO_GATE = 0)] = 'NO_GATE'),
-	(a[(a.NO_AGREEMENT = 1)] = 'NO_AGREEMENT'),
-	(a[(a.AGREED = 2)] = 'AGREED');
+((a = i || (i = {}))[(a.NO_GATE = 0)] = 'NO_GATE'), (a[(a.NO_AGREEMENT = 1)] = 'NO_AGREEMENT'), (a[(a.AGREED = 2)] = 'AGREED');

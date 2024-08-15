@@ -69,19 +69,6 @@ e.Z = function (t, e, a) {
 	a = a || {};
 	var r,
 		i = n[t];
-	if (
-		((r =
-			'string' == typeof i
-				? i
-				: 1 === e
-					? a.addSuffix && i.oneWithSuffix
-						? i.oneWithSuffix
-						: i.one
-					: a.addSuffix && i.otherWithSuffix
-						? i.otherWithSuffix.replace('{{count}}', String(e))
-						: i.other.replace('{{count}}', String(e))),
-		a.addSuffix)
-	)
-		return a.comparison && a.comparison > 0 ? r + '後' : r + '前';
+	if (((r = 'string' == typeof i ? i : 1 === e ? (a.addSuffix && i.oneWithSuffix ? i.oneWithSuffix : i.one) : a.addSuffix && i.otherWithSuffix ? i.otherWithSuffix.replace('{{count}}', String(e)) : i.other.replace('{{count}}', String(e))), a.addSuffix)) return a.comparison && a.comparison > 0 ? r + '後' : r + '前';
 	return r;
 };

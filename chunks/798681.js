@@ -27,20 +27,14 @@ function d(e, t, n) {
 		e
 	);
 }
-((r = i || (i = {})).WindowVisibilityChanged = 'window-visibility-changed'),
-	(r.IncomingVideoEnabledChanged = 'incoming-video-enabled-changed');
+((r = i || (i = {})).WindowVisibilityChanged = 'window-visibility-changed'), (r.IncomingVideoEnabledChanged = 'incoming-video-enabled-changed');
 class _ extends a.Z {
 	isIncomingVideoEnabled() {
 		return this.incomingVideoEnabled;
 	}
 	setIncomingVideoEnabled(e) {
 		let t = this.incomingVideoEnabled !== e;
-		(this.incomingVideoEnabled = e),
-			t &&
-				(this.logger.info(
-					'Window visibility incoming video changed, incomingVideoEnabled = '.concat(this.incomingVideoEnabled)
-				),
-				this.emit('incoming-video-enabled-changed', this.incomingVideoEnabled));
+		(this.incomingVideoEnabled = e), t && (this.logger.info('Window visibility incoming video changed, incomingVideoEnabled = '.concat(this.incomingVideoEnabled)), this.emit('incoming-video-enabled-changed', this.incomingVideoEnabled));
 	}
 	constructor() {
 		super(),

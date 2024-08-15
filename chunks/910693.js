@@ -68,10 +68,7 @@ function D(e) {
 		[e]
 	);
 }
-((s = I || (I = {})).UNUSUAL_DM_ACTIVITY = 'unusual_dm_activity'),
-	(s.COMMUNICATION_DISABLED = 'communication_disabled'),
-	(s.UNUSUAL_ACCOUNT_ACTIVITY = 'unusual_account_activity'),
-	(s.USERNAME_QUARANTINED = 'username_quarantined');
+((s = I || (I = {})).UNUSUAL_DM_ACTIVITY = 'unusual_dm_activity'), (s.COMMUNICATION_DISABLED = 'communication_disabled'), (s.UNUSUAL_ACCOUNT_ACTIVITY = 'unusual_account_activity'), (s.USERNAME_QUARANTINED = 'username_quarantined');
 function U(e) {
 	return t.useCallback(
 		(_) => {
@@ -111,11 +108,4 @@ function O(e, _) {
 		location: _
 	});
 }
-((T = n || (n = {})).BAN = 'ban'),
-	(T.KICK = 'kick'),
-	(T.MUTE = 'mute'),
-	(T.TIMEOUT = 'timeout'),
-	(T.ADD_ROLE = 'add_role'),
-	(T.REMOVE_ROLE = 'remove_role'),
-	(T.COPY_ID = 'copy_id'),
-	(T.CHANGE_NICKNAME = 'change_nickname');
+((T = n || (n = {})).BAN = 'ban'), (T.KICK = 'kick'), (T.MUTE = 'mute'), (T.TIMEOUT = 'timeout'), (T.ADD_ROLE = 'add_role'), (T.REMOVE_ROLE = 'remove_role'), (T.COPY_ID = 'copy_id'), (T.CHANGE_NICKNAME = 'change_nickname');

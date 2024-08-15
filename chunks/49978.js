@@ -46,13 +46,7 @@ function A(e) {
 let Z = ['embedded_background'];
 function y(e) {
 	var t, n;
-	let {
-			applicationId: c,
-			guildId: d,
-			selectedChannelId: f,
-			setSelectedChannelId: _,
-			enableSelectedTextChannelInvite: h
-		} = e,
+	let { applicationId: c, guildId: d, selectedChannelId: f, setSelectedChannelId: _, enableSelectedTextChannelInvite: h } = e,
 		N = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
 		y = (0, C.T)(null != d ? d : null, null != c ? c : null),
 		[D, L] = i.useState(h && !v.ZP.disableInviteWithTextChannelActivityLaunch),
@@ -72,10 +66,7 @@ function y(e) {
 		P = (0, l.e7)([m.Z, I.Z], () => m.Z.getChannel(I.Z.getChannelId())),
 		H = A(null != d ? d : void 0);
 	if ((null == y ? void 0 : y.application) == null || null == k) return null;
-	let F =
-		(null == P ? void 0 : P.name) == null || (null == P ? void 0 : P.name) === ''
-			? j.Z.Messages.EMBEDDED_ACTIVITIES_FALLBACK_CHANNEL_NAME
-			: '#'.concat(P.name);
+	let F = (null == P ? void 0 : P.name) == null || (null == P ? void 0 : P.name) === '' ? j.Z.Messages.EMBEDDED_ACTIVITIES_FALLBACK_CHANNEL_NAME : '#'.concat(P.name);
 	return (0, a.jsxs)(s.Scroller, {
 		className: M.scroll,
 		children: [
@@ -158,11 +149,7 @@ function y(e) {
 							}),
 							(0, a.jsxs)(s.Text, {
 								variant: 'text-sm/normal',
-								children: [
-									j.Z.Messages.EMBEDDED_ACTIVITIES_SEND_ACTIVITY_INVITE,
-									' ',
-									(0, a.jsx)('strong', { children: F })
-								]
+								children: [j.Z.Messages.EMBEDDED_ACTIVITIES_SEND_ACTIVITY_INVITE, ' ', (0, a.jsx)('strong', { children: F })]
 							})
 						]
 					})
@@ -171,23 +158,12 @@ function y(e) {
 	});
 }
 function D(e) {
-	let {
-			applicationId: t,
-			guildId: n,
-			locationObject: i,
-			onBack: r,
-			onClose: o,
-			selectedChannelId: u,
-			enableSelectedTextChannelInvite: g
-		} = e,
+	let { applicationId: t, guildId: n, locationObject: i, onBack: r, onClose: o, selectedChannelId: u, enableSelectedTextChannelInvite: g } = e,
 		{ analyticsLocations: p } = (0, d.ZP)(c.Z.ACTIVITY_CHANNEL_SELECTOR),
 		f = (0, C.T)(null != n ? n : null, null != t ? t : null),
 		T = (0, l.e7)([m.Z, I.Z], () => m.Z.getChannel(I.Z.getChannelId())),
 		E = (0, l.e7)([v.ZP], () => g && !v.ZP.disableInviteWithTextChannelActivityLaunch),
-		S = (0, l.e7)(
-			[_.ZP],
-			() => null != u && '' !== u && _.ZP.getEmbeddedActivitiesForChannel(u).some((e) => e.applicationId === t)
-		),
+		S = (0, l.e7)([_.ZP], () => null != u && '' !== u && _.ZP.getEmbeddedActivitiesForChannel(u).some((e) => e.applicationId === t)),
 		b = A(n),
 		Z = async () => {
 			var e;

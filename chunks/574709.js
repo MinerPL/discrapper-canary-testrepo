@@ -64,9 +64,7 @@ u(f, 'displayName', 'CollectiblesPersistedStore'),
 				let { skuId: i } = t,
 					a = n.reduce((e, t) => {
 						var n;
-						return (null === (n = E.categoryItemViews[i]) || void 0 === n ? void 0 : n[t]) != null
-							? e
-							: (null == E.categoryItemViews[i] && (E.categoryItemViews[i] = {}), (E.categoryItemViews[i][t] = r), !0);
+						return (null === (n = E.categoryItemViews[i]) || void 0 === n ? void 0 : n[t]) != null ? e : (null == E.categoryItemViews[i] && (E.categoryItemViews[i] = {}), (E.categoryItemViews[i][t] = r), !0);
 					}, !1);
 				return e || a;
 			}, !1);

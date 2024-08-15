@@ -33,9 +33,7 @@ function f(e) {
 					(0, n.jsx)(i.Text, {
 						variant: 'text-sm/medium',
 						color: 'text-normal',
-						children: o
-							? x.Z.Messages.GUILD_PRODUCT_INFO_MODAL_COLLAPSE_CONTENTS
-							: x.Z.Messages.GUILD_PRODUCT_INFO_MODAL_VIEW_CONTENTS
+						children: o ? x.Z.Messages.GUILD_PRODUCT_INFO_MODAL_COLLAPSE_CONTENTS : x.Z.Messages.GUILD_PRODUCT_INFO_MODAL_VIEW_CONTENTS
 					}),
 					(0, n.jsx)(l.Z, {
 						className: _.caretIcon,

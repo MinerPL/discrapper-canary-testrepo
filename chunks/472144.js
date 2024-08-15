@@ -8,15 +8,7 @@ var s = n(735250),
 	d = n(642145),
 	u = n(416744);
 t.Z = o.forwardRef((e, t) => {
-	let {
-			quest: n,
-			percentComplete: o,
-			size: a = 42,
-			strokeWidth: p = 3,
-			glowBlur: x = 0.4,
-			percentCompleteText: m,
-			children: g
-		} = e,
+	let { quest: n, percentComplete: o, size: a = 42, strokeWidth: p = 3, glowBlur: x = 0.4, percentCompleteText: m, children: g } = e,
 		_ = (0, c.EK)(n, o > 0),
 		C = a / 2,
 		f = a / 2 - p / 2,
@@ -74,12 +66,7 @@ t.Z = o.forwardRef((e, t) => {
 										stdDeviation: x
 									}),
 									(0, s.jsxs)('feMerge', {
-										children: [
-											(0, s.jsx)('feMergeNode', { in: 'coloredBlur' }),
-											(0, s.jsx)('feMergeNode', { in: 'coloredBlur' }),
-											(0, s.jsx)('feMergeNode', { in: 'coloredBlur' }),
-											(0, s.jsx)('feMergeNode', { in: 'SourceGraphic' })
-										]
+										children: [(0, s.jsx)('feMergeNode', { in: 'coloredBlur' }), (0, s.jsx)('feMergeNode', { in: 'coloredBlur' }), (0, s.jsx)('feMergeNode', { in: 'coloredBlur' }), (0, s.jsx)('feMergeNode', { in: 'SourceGraphic' })]
 									})
 								]
 							}),

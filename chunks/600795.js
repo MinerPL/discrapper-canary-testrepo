@@ -34,28 +34,17 @@ function u(e, t) {
 function c(e) {
 	var t;
 	let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-	return (
-		(!!n && !1 === e.isTrusted) ||
-		((null === (t = e.key) || void 0 === t ? void 0 : t.toLowerCase()) === 'd' && (e.metaKey || e.ctrlKey) && !e.altKey)
-	);
+	return (!!n && !1 === e.isTrusted) || ((null === (t = e.key) || void 0 === t ? void 0 : t.toLowerCase()) === 'd' && (e.metaKey || e.ctrlKey) && !e.altKey);
 }
 class d {
 	setup() {
 		var e;
 		if (d.isSetUp) throw Error('Cannot have two Keyboard backends at the same time.');
-		(d.isSetUp = !0),
-			(this._handlingFirstEvent = !0),
-			null === (e = this.context.window) ||
-				void 0 === e ||
-				e.addEventListener('keydown', this.handleGlobalKeyDown, { capture: !0 });
+		(d.isSetUp = !0), (this._handlingFirstEvent = !0), null === (e = this.context.window) || void 0 === e || e.addEventListener('keydown', this.handleGlobalKeyDown, { capture: !0 });
 	}
 	teardown() {
 		var e;
-		(d.isSetUp = !1),
-			null === (e = this.context.window) ||
-				void 0 === e ||
-				e.removeEventListener('keydown', this.handleGlobalKeyDown, { capture: !0 }),
-			this.endDrag();
+		(d.isSetUp = !1), null === (e = this.context.window) || void 0 === e || e.removeEventListener('keydown', this.handleGlobalKeyDown, { capture: !0 }), this.endDrag();
 	}
 	setDndMode(e) {
 		var t;
@@ -99,11 +88,7 @@ class d {
 	}
 	endDrag(e) {
 		var t;
-		null != e && l(e),
-			null === (t = this._navigator) || void 0 === t || t.disconnect(),
-			this._previewer.clear(),
-			this.monitor.isDragging() && this.actions.endDrag(),
-			this.setDndMode(!1);
+		null != e && l(e), null === (t = this._navigator) || void 0 === t || t.disconnect(), this._previewer.clear(), this.monitor.isDragging() && this.actions.endDrag(), this.setDndMode(!1);
 	}
 	constructor(e, t, n) {
 		s(this, 'manager', void 0),

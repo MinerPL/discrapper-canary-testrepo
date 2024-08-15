@@ -22,8 +22,7 @@ var r = n(684342),
 			(e.observe = function (e, t, n) {
 				if (o.has(e)) {
 					var a = o.get(e);
-					0 > l(a.observationTargets, t) &&
-						(a.observationTargets.push(new i.Q(t, n && n.box)), (0, r.t)(1), r.p.schedule());
+					0 > l(a.observationTargets, t) && (a.observationTargets.push(new i.Q(t, n && n.box)), (0, r.t)(1), r.p.schedule());
 				}
 			}),
 			(e.unobserve = function (e, t) {

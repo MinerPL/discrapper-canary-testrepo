@@ -13,8 +13,8 @@ var r,
 	f = n(41776),
 	h = n(93093),
 	p = n(430824),
-	I = n(70956),
-	m = n(373228),
+	m = n(70956),
+	I = n(373228),
 	T = n(378233);
 let g = 2,
 	S = new Map(),
@@ -27,15 +27,13 @@ let g = 2,
 	y = (e, t) => {
 		C = new Map(C.set(e, t));
 	},
-	D = I.Z.Millis.HOUR,
+	D = m.Z.Millis.HOUR,
 	L = async () => {
 		if (0 !== g) return;
 		let e = c.Z.database();
 		if (null == e) return;
 		g = 2;
-		let t = await (0, d.gs)('StickerStore.loadSavedGuildStickers', () =>
-			o.Z.timeAsync('\uD83D\uDCBE', 'loadSavedGuildStickers', () => _.Z.getAsync(e))
-		);
+		let t = await (0, d.gs)('StickerStore.loadSavedGuildStickers', () => o.Z.timeAsync('\uD83D\uDCBE', 'loadSavedGuildStickers', () => _.Z.getAsync(e)));
 		if (null != t)
 			u.Z.dispatch({
 				type: 'CACHED_STICKERS_LOADED',
@@ -52,7 +50,7 @@ let g = 2,
 		if (null == N) return;
 		let { tags: n } = e,
 			r = {
-				type: m.MO.STICKER_NAME,
+				type: I.MO.STICKER_NAME,
 				value: e.name.trim().toLocaleLowerCase()
 			};
 		if ((0, T.jl)(e)) {
@@ -60,13 +58,13 @@ let g = 2,
 				i = [
 					r,
 					...(null != n ? n : '').split(',').map((e) => ({
-						type: m.MO.TAG,
+						type: I.MO.TAG,
 						value: e.trim().toLocaleLowerCase()
 					}))
 				];
 			null != t &&
 				i.push({
-					type: m.MO.PACK_NAME,
+					type: I.MO.PACK_NAME,
 					value: t.name
 				}),
 				N.set(e.id, i);
@@ -75,7 +73,7 @@ let g = 2,
 				a = [
 					r,
 					{
-						type: m.MO.TAG,
+						type: I.MO.TAG,
 						value: n.trim().toLocaleLowerCase()
 					}
 				];
@@ -84,7 +82,7 @@ let g = 2,
 				null != e &&
 					'' !== e &&
 					a.push({
-						type: m.MO.GUILD_NAME,
+						type: I.MO.GUILD_NAME,
 						value: e
 					});
 			}
@@ -93,12 +91,12 @@ let g = 2,
 				return;
 			}
 			a.push({
-				type: m.MO.CORRELATED_EMOJI,
+				type: I.MO.CORRELATED_EMOJI,
 				value: i.surrogates
 			}),
 				i.forEachDiversity((e) =>
 					a.push({
-						type: m.MO.CORRELATED_EMOJI,
+						type: I.MO.CORRELATED_EMOJI,
 						value: e.surrogates
 					})
 				),

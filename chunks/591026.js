@@ -105,8 +105,7 @@ function E(e) {
 										(0, s.jsx)('div', {
 											children: (0, s.jsx)(i.Checkbox, {
 												type: i.Checkbox.Types.INVERTED,
-												value:
-													null === (n = E.triggerMetadata) || void 0 === n ? void 0 : n.mentionRaidProtectionEnabled,
+												value: null === (n = E.triggerMetadata) || void 0 === n ? void 0 : n.mentionRaidProtectionEnabled,
 												onChange: (e, t) => {
 													T({
 														...E,

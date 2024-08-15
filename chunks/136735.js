@@ -115,12 +115,7 @@ function B(e) {
 	let { transitionState: G, onClose: y, guildId: w, sticker: F } = e,
 		z = (0, u.e7)([f.Z], () => f.Z.theme),
 		H = (0, u.e7)([m.ZP], () => ((null == F ? void 0 : F.tags) != null ? m.ZP.getCustomEmojiById(F.tags) : null)),
-		V =
-			null !== (s = null === (l = L.default.getCurrentUser()) || void 0 === l ? void 0 : l.isStaff()) &&
-			void 0 !== s &&
-			s
-				? j.OC
-				: j.Ht,
+		V = null !== (s = null === (l = L.default.getCurrentUser()) || void 0 === l ? void 0 : l.isStaff()) && void 0 !== s && s ? j.OC : j.Ht,
 		[W, q] = n.useState(null),
 		[Y, J] = n.useState(null !== (i = null == F ? void 0 : F.name) && void 0 !== i ? i : ''),
 		[X, Q] = n.useState({
@@ -133,18 +128,11 @@ function B(e) {
 		[ei, ea] = n.useState(!1),
 		[eo, er] = n.useState(null),
 		eu = (0, u.e7)([g.Z], () => g.Z.getGuild(w)),
-		ed =
-			(null == eu ? void 0 : eu.hasFeature(h.oNc.PARTNERED)) || (null == eu ? void 0 : eu.hasFeature(h.oNc.VERIFIED)),
+		ed = (null == eu ? void 0 : eu.hasFeature(h.oNc.PARTNERED)) || (null == eu ? void 0 : eu.hasFeature(h.oNc.VERIFIED)),
 		ec = null != F,
 		eI = ec || (null == X ? void 0 : X.file) != null,
 		em = 0 === et.length || (et.length >= 2 && et.length <= 100),
-		e_ =
-			!ei &&
-			(null == eo ? void 0 : eo.isBlocking) !== !0 &&
-			Y.length >= 2 &&
-			(null != $ || null != el || ((null == F ? void 0 : F.tags) != null && (null == F ? void 0 : F.tags) !== '')) &&
-			eI &&
-			em,
+		e_ = !ei && (null == eo ? void 0 : eo.isBlocking) !== !0 && Y.length >= 2 && (null != $ || null != el || ((null == F ? void 0 : F.tags) != null && (null == F ? void 0 : F.tags) !== '')) && eI && em,
 		eE = async (e) => {
 			var l;
 			if (null == e) return;
@@ -180,9 +168,7 @@ function B(e) {
 			if (n === C.u3.LOTTIE) {
 				if (!ed) {
 					er({
-						message: P.Z.Messages.GUILD_STICKER_UNSUPPORTED_MIME_TYPE.format({
-							articleURL: D.Z.getArticleURL(h.BhN.STICKERS_UPLOAD)
-						}),
+						message: P.Z.Messages.GUILD_STICKER_UNSUPPORTED_MIME_TYPE.format({ articleURL: D.Z.getArticleURL(h.BhN.STICKERS_UPLOAD) }),
 						isBlocking: !0
 					});
 					return;
@@ -214,11 +200,7 @@ function B(e) {
 		ef = async (e) => {
 			var l, s, t, n, i, a;
 			e.preventDefault();
-			let o =
-				null !== (s = null !== (l = null != $ ? $ : el) && void 0 !== l ? l : null == F ? void 0 : F.tags) &&
-				void 0 !== s
-					? s
-					: '';
+			let o = null !== (s = null !== (l = null != $ ? $ : el) && void 0 !== l ? l : null == F ? void 0 : F.tags) && void 0 !== s ? s : '';
 			try {
 				if ((ea(!0), ec))
 					await (0, p.Jf)(w, null !== (t = null == F ? void 0 : F.id) && void 0 !== t ? t : '', {
@@ -228,14 +210,7 @@ function B(e) {
 					});
 				else {
 					let e = new FormData();
-					e.append('name', Y),
-						e.append('tags', o),
-						e.append('description', et),
-						(null == X ? void 0 : X.file) != null && e.append('file', X.file),
-						(a = null !== (i = null === (n = X.file) || void 0 === n ? void 0 : n.type) && void 0 !== i ? i : ''),
-						T.default.track(h.rMx.STICKER_UPLOAD_STARTED, { filetype: a }),
-						await (0, p.lY)(w, e),
-						A(!0);
+					e.append('name', Y), e.append('tags', o), e.append('description', et), (null == X ? void 0 : X.file) != null && e.append('file', X.file), (a = null !== (i = null === (n = X.file) || void 0 === n ? void 0 : n.type) && void 0 !== i ? i : ''), T.default.track(h.rMx.STICKER_UPLOAD_STARTED, { filetype: a }), await (0, p.lY)(w, e), A(!0);
 				}
 				y();
 			} catch (e) {
@@ -300,9 +275,7 @@ function B(e) {
 								className: a()(N.formItem, N.formItemRow),
 								children: [
 									(0, t.jsx)(c.FormItem, {
-										title: ec
-											? P.Z.Messages.GUILD_STICKER_UPLOAD_FILE_TITLE_BLOCKED
-											: P.Z.Messages.GUILD_STICKER_UPLOAD_FILE_TITLE,
+										title: ec ? P.Z.Messages.GUILD_STICKER_UPLOAD_FILE_TITLE_BLOCKED : P.Z.Messages.GUILD_STICKER_UPLOAD_FILE_TITLE,
 										required: !0,
 										className: N.formItemRowChild,
 										children: ec

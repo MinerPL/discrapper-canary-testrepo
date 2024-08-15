@@ -42,8 +42,7 @@ class o {
 					else this.message(t, n, r.T(), r.no, s);
 					break;
 				case 'map':
-					for (let [e, i] of ((0, a.hu)('object' == typeof s && null !== s), Object.entries(s)))
-						this.mapEntry(t, n, r, e, i);
+					for (let [e, i] of ((0, a.hu)('object' == typeof s && null !== s), Object.entries(s))) this.mapEntry(t, n, r, e, i);
 			}
 		}
 		let s = n.writeUnknownFields;

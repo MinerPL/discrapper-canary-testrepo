@@ -41,8 +41,7 @@ function l(e, t) {
 }
 function u(e, t, n) {
 	if (null == t) {
-		if (null != n && n.isPrivate())
-			return !!n.hasFlag(o.zZ.CLYDE_AI) || r.Z.getGuildIds().some((e) => d(r.Z.getGuild(e)));
+		if (null != n && n.isPrivate()) return !!n.hasFlag(o.zZ.CLYDE_AI) || r.Z.getGuildIds().some((e) => d(r.Z.getGuild(e)));
 		return !1;
 	}
 	return null != e && e !== a.P.None && i.Z.can(s.Plq.USE_CLYDE_AI, n);

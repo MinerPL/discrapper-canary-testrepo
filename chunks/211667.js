@@ -43,9 +43,7 @@ s.Z = function (e) {
 			errors: null != u ? { expirationDate: u } : {},
 			formError: r,
 			onFieldChange: (e) => {
-				!l && '' !== e && _(!0),
-					(l && '' === e) || !(0, o.eH)(e) ? I(d.Z.Messages.CREDIT_CARD_ERROR_EXPIRATION) : I(null),
-					S(e);
+				!l && '' !== e && _(!0), (l && '' === e) || !(0, o.eH)(e) ? I(d.Z.Messages.CREDIT_CARD_ERROR_EXPIRATION) : I(null), S(e);
 			}
 		})
 	);

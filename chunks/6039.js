@@ -48,9 +48,7 @@ t.Z = (e) => {
 			_.Z.resetGuildJoinRequest(v);
 		};
 	let U =
-			((n = C.Z.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({
-				name: null == M ? void 0 : M.toString()
-			})),
+			((n = C.Z.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({ name: null == M ? void 0 : M.toString() })),
 			(A = () => {
 				O(Math.max(L, f.hO.FILLING)), _.Z.removeGuildJoinRequest(v), (0, o.uL)(S.Z5c.ME);
 			}),

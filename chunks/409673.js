@@ -20,8 +20,8 @@ var r = n(735250),
 	f = n(745510),
 	h = n(631771),
 	p = n(594174),
-	I = n(208049),
-	m = n(763296),
+	m = n(208049),
+	I = n(763296),
 	T = n(697426),
 	g = n(242291),
 	S = n(706667),
@@ -65,31 +65,11 @@ function C(e) {
 }
 t.ZP = i.forwardRef(function (e, t) {
 	var n, a, y;
-	let {
-			sound: D,
-			channel: L,
-			className: b,
-			focused: M,
-			forceSecondaryActions: P = !1,
-			interactive: U = !0,
-			enableSecondaryActions: w = !1,
-			suppressPlaySound: x,
-			onMouseEnter: G,
-			onSelectItem: k,
-			analyticsLocations: B,
-			buttonOverlay: F = T.Pb.PLAY,
-			showLockForDisabledSound: V = !0,
-			inNitroLockedSection: H = !1,
-			...Z
-		} = e,
+	let { sound: D, channel: L, className: b, focused: M, forceSecondaryActions: P = !1, interactive: U = !0, enableSecondaryActions: w = !1, suppressPlaySound: x, onMouseEnter: G, onSelectItem: k, analyticsLocations: B, buttonOverlay: F = T.Pb.PLAY, showLockForDisabledSound: V = !0, inNitroLockedSection: H = !1, ...Z } = e,
 		{ soundId: Y, name: j, emojiId: W, emojiName: K } = D,
 		z = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
 		q = (0, A.z)(D, null == L ? void 0 : L.guild_id),
-		{
-			playSoundboardSound: Q,
-			previewSound: X,
-			isPlayingSound: $
-		} = (0, S.Z)(D, null !== (n = null == L ? void 0 : L.id) && void 0 !== n ? n : null),
+		{ playSoundboardSound: Q, previewSound: X, isPlayingSound: $ } = (0, S.Z)(D, null !== (n = null == L ? void 0 : L.id) && void 0 !== n ? n : null),
 		{ createMultipleConfettiAt: J } = i.useContext(f.h),
 		ee = i.useRef(null);
 	let et =
@@ -111,7 +91,7 @@ t.ZP = i.forwardRef(function (e, t) {
 		er = i.useRef(0.01),
 		ei = i.useRef(new u.Xp()),
 		ea = '1' === D.soundId,
-		es = (0, l.e7)([m.Z], () => m.Z.isFavoriteSound(Y), [Y]),
+		es = (0, l.e7)([I.Z], () => I.Z.isFavoriteSound(Y), [Y]),
 		eo = 'sound-'.concat(D.soundId),
 		el = (0, o.JA)(eo),
 		eu = null != W || null != K,
@@ -120,7 +100,7 @@ t.ZP = i.forwardRef(function (e, t) {
 		e_ = ec && V,
 		{ enableInlineUpsell: eE } = h.Qs.useExperiment({ location: 'Soundboard Sound Button' }, { autoTrackExposure: e_ });
 	function ef(e) {
-		e.stopPropagation(), e.currentTarget.blur(), es ? (0, I.hs)(Y) : (0, I.TB)(Y);
+		e.stopPropagation(), e.currentTarget.blur(), es ? (0, m.hs)(Y) : (0, m.TB)(Y);
 	}
 	function eh() {
 		return (0, r.jsx)(R, {
@@ -148,7 +128,7 @@ t.ZP = i.forwardRef(function (e, t) {
 			previewSound: X,
 			disabled: ec && !P
 		}),
-		eI = (e) =>
+		em = (e) =>
 			x || ec
 				? ec && V && eE
 					? (0, r.jsx)(d.LockIcon, {
@@ -162,12 +142,12 @@ t.ZP = i.forwardRef(function (e, t) {
 						color: 'currentColor',
 						className: s()(O.primaryIcon, e)
 					}),
-		em = () =>
+		eI = () =>
 			eE && ec && V && !H
 				? (0, r.jsxs)(r.Fragment, {
 						children: [
 							(0, r.jsx)('div', { className: O.buttonOverlayBackground }),
-							eI(O.primaryIconTopLevel),
+							em(O.primaryIconTopLevel),
 							(0, r.jsx)('div', {
 								className: O.buttonOverlay,
 								children: (0, r.jsxs)('div', {
@@ -183,7 +163,7 @@ t.ZP = i.forwardRef(function (e, t) {
 							(0, r.jsx)('div', { className: s()({ [O.buttonOverlayBackground]: !x }) }),
 							(0, r.jsxs)('div', {
 								className: O.buttonOverlayActions,
-								children: [ed && ep, eI(), ed && eh()]
+								children: [ed && ep, em(), ed && eh()]
 							})
 						]
 					});
@@ -224,13 +204,7 @@ t.ZP = i.forwardRef(function (e, t) {
 						[O.focused]: U && M
 					}),
 					onClick: function () {
-						if (
-							(ea &&
-								!en &&
-								((er.current = Math.min(er.current + 0.01, 0.1)),
-								Math.random() < er.current && J(et.x, et.y, void 0, void 0, { sprite: N.vv })),
-							null != k)
-						) {
+						if ((ea && !en && ((er.current = Math.min(er.current + 0.01, 0.1)), Math.random() < er.current && J(et.x, et.y, void 0, void 0, { sprite: N.vv })), null != k)) {
 							k();
 							return;
 						}
@@ -290,7 +264,7 @@ t.ZP = i.forwardRef(function (e, t) {
 									});
 								case T.Pb.PLAY:
 								default:
-									return em();
+									return eI();
 							}
 						})()
 					]

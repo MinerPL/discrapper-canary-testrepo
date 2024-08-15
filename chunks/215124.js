@@ -33,9 +33,7 @@ function _(e) {
 				children: [
 					(0, s.jsx)(i.FormText, {
 						type: i.FormText.Types.DESCRIPTION,
-						children: u.Z.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_DESCRIPTION.format({
-							guildName: I.toString()
-						})
+						children: u.Z.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_DESCRIPTION.format({ guildName: I.toString() })
 					}),
 					(0, s.jsx)(i.Spacer, { size: 16 }),
 					(0, s.jsx)(i.Button, {

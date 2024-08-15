@@ -20,14 +20,7 @@ var i = t(718528),
 	I = t(176505);
 let A = () => {
 	let e = o.Z.getMessageRequestsCount() > 0 || r.Z.getSpamChannelsCount() > 0;
-	return [
-		C.Z5c.FRIENDS,
-		u.Z.hasLibraryApplication() && !a.bm.getSetting() ? C.Z5c.APPLICATION_LIBRARY : null,
-		C.Z5c.APPLICATION_STORE,
-		e ? C.Z5c.MESSAGE_REQUESTS : null,
-		C.Z5c.COLLECTIBLES_SHOP,
-		a.Ex.getSetting() ? C.Z5c.FAMILY_CENTER : null
-	].filter(_.lm);
+	return [C.Z5c.FRIENDS, u.Z.hasLibraryApplication() && !a.bm.getSetting() ? C.Z5c.APPLICATION_LIBRARY : null, C.Z5c.APPLICATION_STORE, e ? C.Z5c.MESSAGE_REQUESTS : null, C.Z5c.COLLECTIBLES_SHOP, a.Ex.getSetting() ? C.Z5c.FAMILY_CENTER : null].filter(_.lm);
 };
 function S(e, n) {
 	(0, c.K)(e, n);
@@ -41,12 +34,7 @@ function T() {
 				let { channelId: l, path: o, basePath: r } = E.Z.getState(),
 					a = d.Z.getPrivateChannelIds(),
 					u = __OVERLAY__ ? a : [...A(), ...a];
-				let _ =
-					(null == l
-						? ((n = null != o ? o : r), A().findIndex((e) => n.startsWith(e)))
-						: null != l
-							? u.indexOf(l)
-							: 0) + e;
+				let _ = (null == l ? ((n = null != o ? o : r), A().findIndex((e) => n.startsWith(e))) : null != l ? u.indexOf(l) : 0) + e;
 				_ >= u.length ? (_ = 0) : _ < 0 && (_ = u.length - 1);
 				let I = u[_];
 				if (A().includes(I))

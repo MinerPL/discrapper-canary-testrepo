@@ -92,10 +92,7 @@ function f(e, t, n, i) {
 		c = null == r ? void 0 : r.drop,
 		u = (0, a.e7)([_.Z], () => null != c && _.Z.serverEligibleByQuestIds[c.dropsQuestId]),
 		d = (0, a.e7)([_.Z], () => _.Z.getIsPartnerGameQuestComplete(e)),
-		I = (0, E.wj)(
-			null == t ? void 0 : t.name,
-			null !== (s = null == c ? void 0 : c.gameSearchTerm) && void 0 !== s ? s : []
-		),
+		I = (0, E.wj)(null == t ? void 0 : t.name, null !== (s = null == c ? void 0 : c.gameSearchTerm) && void 0 !== s ? s : []),
 		T = (0, l.ot)([n, i]),
 		h = (0, o.wE)(i),
 		N = null == c || (0, E.hM)(c),

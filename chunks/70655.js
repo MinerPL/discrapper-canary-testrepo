@@ -50,8 +50,7 @@ class f extends i.Z {
 			c(this, '_handleConnectionOpen', () => {
 				if (u.isPlatformEmbedded && !__OVERLAY__) {
 					let e = Math.floor(d + Math.random() * _);
-					null != this.refetchTimeout && clearTimeout(this.refetchTimeout),
-						(this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, e));
+					null != this.refetchTimeout && clearTimeout(this.refetchTimeout), (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, e));
 				}
 			});
 	}

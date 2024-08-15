@@ -38,12 +38,7 @@ var r = n(470079),
 				),
 				{ 'zDepth-1': 1 === t }
 			);
-		return r.createElement(
-			'div',
-			{ style: u.wrap },
-			r.createElement('div', { style: u.bg }),
-			r.createElement('div', { style: u.content }, a)
-		);
+		return r.createElement('div', { style: u.wrap }, r.createElement('div', { style: u.bg }), r.createElement('div', { style: u.content }, a));
 	};
 (l.propTypes = {
 	background: a().string,

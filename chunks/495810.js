@@ -105,13 +105,7 @@ function ej() {
 		m = (0, c.TH)(),
 		g = (0, V.e7)([v.Z], () => v.Z.getState().theme),
 		[D] = n.useState((0, Q.c)(W.Z) > 0),
-		{ analyticsLocations: A } = (0, f.ZP)([
-			...(null !== (L = null == m ? void 0 : null === (e = m.state) || void 0 === e ? void 0 : e.analyticsLocations) &&
-			void 0 !== L
-				? L
-				: []),
-			p.Z.ACTIVITIES_PAGE
-		]),
+		{ analyticsLocations: A } = (0, f.ZP)([...(null !== (L = null == m ? void 0 : null === (e = m.state) || void 0 === e ? void 0 : e.analyticsLocations) && void 0 !== L ? L : []), p.Z.ACTIVITIES_PAGE]),
 		S = n.useRef(new Date());
 	return (
 		n.useEffect(() => {
@@ -157,9 +151,7 @@ function ej() {
 				children: [
 					(0, r.jsxs)(N.ZP, {
 						children: [
-							(0, r.jsx)(j.Z, {
-								className: o()(eH.activitiesBirthdayIcon, { [eH.activitiesBirthdayIconLight]: 'light' === g })
-							}),
+							(0, r.jsx)(j.Z, { className: o()(eH.activitiesBirthdayIcon, { [eH.activitiesBirthdayIconLight]: 'light' === g }) }),
 							(0, r.jsx)(Z.Heading, {
 								variant: 'heading-md/semibold',
 								children: eo.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_TAB_TITLE
@@ -321,13 +313,7 @@ function eB() {
 let eO = 'whats-new',
 	ek = (0, P.Mg)(M.Z.ACTIVITIES_HOME_WHATS_NEW_TILE_WIDTH),
 	eP = (0, P.Mg)(M.Z.ACTIVITIES_HOME_WHATS_NEW_HORIZONTAL_MARGIN),
-	ey = [
-		Z.tokens.unsafe_rawColors.DISCORD_8TH_BDAY_BLUE.css,
-		Z.tokens.unsafe_rawColors.DISCORD_8TH_BDAY_GREEN.css,
-		Z.tokens.unsafe_rawColors.DISCORD_8TH_BDAY_PINK.css,
-		Z.tokens.unsafe_rawColors.DISCORD_8TH_BDAY_PURPLE.css,
-		Z.tokens.unsafe_rawColors.DISCORD_8TH_BDAY_YELLOW.css
-	];
+	ey = [Z.tokens.unsafe_rawColors.DISCORD_8TH_BDAY_BLUE.css, Z.tokens.unsafe_rawColors.DISCORD_8TH_BDAY_GREEN.css, Z.tokens.unsafe_rawColors.DISCORD_8TH_BDAY_PINK.css, Z.tokens.unsafe_rawColors.DISCORD_8TH_BDAY_PURPLE.css, Z.tokens.unsafe_rawColors.DISCORD_8TH_BDAY_YELLOW.css];
 function eF() {
 	let { enabled: e } = Y.q.useExperiment({ location: 'd72ecf_2' }),
 		{ enabled: L } = K.q.useExperiment({ location: 'd72ecf_3' }),
@@ -439,18 +425,7 @@ function eF() {
 			});
 }
 function eW(e) {
-	let {
-			imgUrl: L,
-			imgAlt: a,
-			title: C,
-			content: t,
-			link: i,
-			isAppLink: s,
-			id: l,
-			cardImgUrl: c,
-			revealDate: d,
-			enabled: M
-		} = e,
+	let { imgUrl: L, imgAlt: a, title: C, content: t, link: i, isAppLink: s, id: l, cardImgUrl: c, revealDate: d, enabled: M } = e,
 		_ = (0, V.e7)([u.Z], () => u.Z.useReducedMotion),
 		E = (0, V.e7)([D.default], () => D.default.locale),
 		{ analyticsLocations: h } = (0, f.ZP)(p.Z.ACTIVITIES_PAGE_WHATS_NEW_TILE),
@@ -571,17 +546,13 @@ function eW(e) {
 											return (0, r.jsx)(Z.Text, {
 												variant: 'text-sm/semibold',
 												className: eH.flipCardClosedText,
-												children: eo.Z.Messages.EMBEDDED_ACTIVITIES_CLICK_TO_REVEAL_DATE.format({
-													revealDate: new Intl.DateTimeFormat(E).format(d)
-												})
+												children: eo.Z.Messages.EMBEDDED_ACTIVITIES_CLICK_TO_REVEAL_DATE.format({ revealDate: new Intl.DateTimeFormat(E).format(d) })
 											});
 										case 1:
 											return (0, r.jsx)(Z.Text, {
 												variant: 'text-sm/semibold',
 												className: eH.flipCardText,
-												children: eo.Z.Messages.EMBEDDED_ACTIVITIES_REVEAL_THIS_WEEKS_DROP.format({
-													revealDate: new Intl.DateTimeFormat(E).format(d)
-												})
+												children: eo.Z.Messages.EMBEDDED_ACTIVITIES_REVEAL_THIS_WEEKS_DROP.format({ revealDate: new Intl.DateTimeFormat(E).format(d) })
 											});
 										default:
 											return null;
@@ -601,9 +572,7 @@ function eG(e) {
 		n = (0, V.e7)([u.Z], () => u.Z.useReducedMotion);
 	switch (L) {
 		case 0:
-			return (0, r.jsx)('div', {
-				className: o()(eH.clickableContainer, eH.noPointer, { [eH.clickableContainerReducedMotion]: n })
-			});
+			return (0, r.jsx)('div', { className: o()(eH.clickableContainer, eH.noPointer, { [eH.clickableContainerReducedMotion]: n }) });
 		case 1:
 			return (0, r.jsx)(Z.Clickable, {
 				'aria-label': eo.Z.Messages.EMBEDDED_ACTIVITIES_OPEN_BIRTHDAY_SURPRISE,
@@ -611,10 +580,7 @@ function eG(e) {
 				onClick: t
 			});
 		case 2:
-			if (null == a)
-				return (0, r.jsx)('div', {
-					className: o()(eH.clickableContainer, eH.noPointer, { [eH.clickableContainerReducedMotion]: n })
-				});
+			if (null == a) return (0, r.jsx)('div', { className: o()(eH.clickableContainer, eH.noPointer, { [eH.clickableContainerReducedMotion]: n }) });
 			if (C)
 				return (0, r.jsx)(ei.o, {
 					className: o()(eH.clickableContainer, { [eH.clickableContainerReducedMotion]: n }),
@@ -641,13 +607,7 @@ let eU = 'happening-now',
 	eK = (0, P.Mg)(M.Z.ACTIVITIES_HOME_HAPPENING_NOW_GAP);
 function eX(e, L) {
 	if (e.length !== L.length) return !1;
-	for (let a = 0; a < e.length; a++)
-		if (
-			e[a].activityItem.application.id !== L[a].activityItem.application.id ||
-			e[a].channel.id !== L[a].channel.id ||
-			e[a].users.length !== L[a].users.length
-		)
-			return !1;
+	for (let a = 0; a < e.length; a++) if (e[a].activityItem.application.id !== L[a].activityItem.application.id || e[a].channel.id !== L[a].channel.id || e[a].users.length !== L[a].users.length) return !1;
 	return !0;
 }
 function eJ() {
@@ -840,12 +800,7 @@ function eq(e) {
 			size: 512
 		}),
 		i = (0, V.e7)([u.Z], () => u.Z.useReducedMotion),
-		s =
-			(null === (L = a.application.embeddedActivityConfig) || void 0 === L
-				? void 0
-				: L.activity_preview_video_asset_id) != null
-				? (0, $.Z)(a.application.id, a.application.embeddedActivityConfig.activity_preview_video_asset_id)
-				: null,
+		s = (null === (L = a.application.embeddedActivityConfig) || void 0 === L ? void 0 : L.activity_preview_video_asset_id) != null ? (0, $.Z)(a.application.id, a.application.embeddedActivityConfig.activity_preview_video_asset_id) : null,
 		[l, H] = n.useState(!1),
 		[c, d] = n.useState(l);
 	n.useEffect(() => {
@@ -853,10 +808,7 @@ function eq(e) {
 	}, [l]);
 	let M = () => H(!0),
 		_ = () => H(!1),
-		E =
-			null == a.application.maxParticipants || -1 === a.application.maxParticipants
-				? eo.Z.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS
-				: eo.Z.Messages.EMBEDDED_ACTIVITIES_ONE_TO_N_PARTICIPANTS.format({ count: a.application.maxParticipants });
+		E = null == a.application.maxParticipants || -1 === a.application.maxParticipants ? eo.Z.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS : eo.Z.Messages.EMBEDDED_ACTIVITIES_ONE_TO_N_PARTICIPANTS.format({ count: a.application.maxParticipants });
 	return (0, r.jsxs)(ei.o, {
 		to: {
 			pathname: el.Z5c.ACTIVITY_DETAILS(a.application.id),
@@ -1019,8 +971,7 @@ function e$() {
 						className: eH.celebrateCardContainer,
 						onClick: (e) => {
 							var L;
-							B.default.track(el.rMx.ACTIVITIES_PAGE_CELEBRATE_TILE_CLICKED, { section: 'town_hall' }),
-								null === (L = (0, h.default)(eb)) || void 0 === L || L(e);
+							B.default.track(el.rMx.ACTIVITIES_PAGE_CELEBRATE_TILE_CLICKED, { section: 'town_hall' }), null === (L = (0, h.default)(eb)) || void 0 === L || L(e);
 						},
 						children: [
 							(0, r.jsx)(Z.Heading, {
@@ -1031,9 +982,7 @@ function e$() {
 							(0, r.jsx)(Z.Heading, {
 								variant: 'heading-sm/normal',
 								className: eH.celebrateCardSubheader,
-								children: eo.Z.Messages.EMBEDDED_ACTIVITIES_CELEBRATE_TOWN_HALL_DESCRIPTION.format({
-									clickHandler: (0, h.default)(eb)
-								})
+								children: eo.Z.Messages.EMBEDDED_ACTIVITIES_CELEBRATE_TOWN_HALL_DESCRIPTION.format({ clickHandler: (0, h.default)(eb) })
 							}),
 							(0, r.jsx)('div', { className: eH.celebrateCardFiller }),
 							(0, r.jsx)('img', {

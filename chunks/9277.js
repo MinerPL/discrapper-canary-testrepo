@@ -13,24 +13,15 @@ var r = n(735250),
 	f = n(443603),
 	h = n(981631),
 	p = n(957825),
-	I = n(689938),
-	m = n(305489);
+	m = n(689938),
+	I = n(305489);
 t.Z = i.memo(
 	i.forwardRef(function (e, t) {
 		let { disabled: n, type: a } = e,
 			[T, g] = i.useState(!1),
 			S = (0, l.e7)([_.Z], () => {
 				var e, t;
-				return (
-					T &&
-					Object.values(
-						null !==
-							(t = null === (e = _.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) &&
-							void 0 !== t
-							? t
-							: {}
-					).length <= 2
-				);
+				return T && Object.values(null !== (t = null === (e = _.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2;
 			}),
 			[A, N, v] = (0, d.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.Z),
 			O = i.useRef(0),
@@ -52,15 +43,15 @@ t.Z = i.memo(
 		if (n) return null;
 		let b = A === p.X1.GIF && N === a;
 		return (0, r.jsx)(c.Tooltip, {
-			text: S ? I.Z.Messages.GIF_TOOLTIP_FAVORITED_PICKER_BUTTON : null,
+			text: S ? m.Z.Messages.GIF_TOOLTIP_FAVORITED_PICKER_BUTTON : null,
 			forceOpen: !0,
 			children: (e) =>
 				(0, r.jsx)('div', {
 					ref: t,
-					className: s()(p.CT, m.buttonContainer),
+					className: s()(p.CT, I.buttonContainer),
 					...e,
 					children: (0, r.jsx)(f.Z, {
-						innerClassName: m.button,
+						innerClassName: I.button,
 						onMouseEnter: D.onMouseEnter,
 						onMouseLeave: D.onMouseLeave,
 						onClick: () => {
@@ -68,7 +59,7 @@ t.Z = i.memo(
 						},
 						isActive: b,
 						pulse: T,
-						'aria-label': I.Z.Messages.GIF_BUTTON_LABEL,
+						'aria-label': m.Z.Messages.GIF_BUTTON_LABEL,
 						'aria-expanded': b,
 						'aria-haspopup': 'dialog',
 						'aria-controls': v,

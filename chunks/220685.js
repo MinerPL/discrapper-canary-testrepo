@@ -28,12 +28,8 @@ var s = n(735250),
 	R = n(981631),
 	f = n(689938),
 	L = n(217611);
-let O = [
-		14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 2196594, 4752414, 13064760, 13058360, 12401000,
-		12933021, 5659039, 4092591, 5868359, 6586142, 8876063, 8484432, 9979976, 5269106, 3421236
-	],
-	A =
-		/^(https?:\/\/)?(?:m\.|www\.)?(youtu\.be|youtube\.com)\/(embed\/|v\/|watch\?v=|watch\?.+&v=)?((\w|-){11})(?:\S+)?$/,
+let O = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 2196594, 4752414, 13064760, 13058360, 12401000, 12933021, 5659039, 4092591, 5868359, 6586142, 8876063, 8484432, 9979976, 5269106, 3421236],
+	A = /^(https?:\/\/)?(?:m\.|www\.)?(youtu\.be|youtube\.com)\/(embed\/|v\/|watch\?v=|watch\?.+&v=)?((\w|-){11})(?:\S+)?$/,
 	M = O[4],
 	D = (e) => {
 		var t, n;
@@ -46,21 +42,12 @@ let O = [
 			U = null == Z || null != Z.match(A),
 			[G, P] = a.useState(null !== (n = null == c ? void 0 : c.store_page_show_subscriber_count) && void 0 !== n && n),
 			B = a.useRef(null == c ? void 0 : c.store_page_slug).current,
-			y =
-				x !== i.hasFeature(R.oNc.CREATOR_STORE_PAGE) ||
-				((null == c ? void 0 : c.store_page_primary_color) == null && v !== M) ||
-				((null == c ? void 0 : c.store_page_primary_color) != null &&
-					v !== (null == c ? void 0 : c.store_page_primary_color)) ||
-				Z !== (null == c ? void 0 : c.store_page_trailer_url) ||
-				(null != G && G !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
+			y = x !== i.hasFeature(R.oNc.CREATOR_STORE_PAGE) || ((null == c ? void 0 : c.store_page_primary_color) == null && v !== M) || ((null == c ? void 0 : c.store_page_primary_color) != null && v !== (null == c ? void 0 : c.store_page_primary_color)) || Z !== (null == c ? void 0 : c.store_page_trailer_url) || (null != G && G !== (null == c ? void 0 : c.store_page_show_subscriber_count)),
 			F = async () => {
 				o()(null != c, 'Settings must be defined');
 				let e = {};
 				x !== i.hasFeature(R.oNc.CREATOR_STORE_PAGE) && (e.store_page_enabled = x),
-					(((null == c ? void 0 : c.store_page_primary_color) == null && v !== M) ||
-						((null == c ? void 0 : c.store_page_primary_color) != null &&
-							v !== (null == c ? void 0 : c.store_page_primary_color))) &&
-						(e.store_page_primary_color = v),
+					(((null == c ? void 0 : c.store_page_primary_color) == null && v !== M) || ((null == c ? void 0 : c.store_page_primary_color) != null && v !== (null == c ? void 0 : c.store_page_primary_color))) && (e.store_page_primary_color = v),
 					Z !== (null == c ? void 0 : c.store_page_trailer_url) && (e.store_page_trailer_url = Z),
 					G !== (null == c ? void 0 : c.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = G),
 					!d().isEmpty(e) &&
@@ -89,8 +76,7 @@ let O = [
 					className: L.enableSwitch,
 					value: x,
 					disabled: H || (!x && !l),
-					tooltipNote:
-						x || l ? void 0 : f.Z.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_PRIMARY_TOGGLE_DISABLED_TOOLTIP,
+					tooltipNote: x || l ? void 0 : f.Z.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_PRIMARY_TOGGLE_DISABLED_TOOLTIP,
 					hideBorder: !0,
 					onChange: (e) => D(e),
 					children: (0, s.jsx)(E.Text, {
@@ -215,15 +201,12 @@ let O = [
 											(0, s.jsx)(E.Text, {
 												variant: 'text-md/medium',
 												color: 'header-primary',
-												children:
-													f.Z.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_DISPLAY_OPTIONS_PREMIUM_MEMBER_COUNT
+												children: f.Z.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_DISPLAY_OPTIONS_PREMIUM_MEMBER_COUNT
 											}),
 											(0, s.jsx)(E.Text, {
 												variant: 'text-sm/normal',
 												color: 'header-secondary',
-												children:
-													f.Z.Messages
-														.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_DISPLAY_OPTIONS_PREMIUM_MEMBER_COUNT_DESCRIPTION
+												children: f.Z.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_DISPLAY_OPTIONS_PREMIUM_MEMBER_COUNT_DESCRIPTION
 											})
 										]
 									})
@@ -242,10 +225,7 @@ let O = [
 								submitting: u,
 								onReset: () => {
 									var e, t;
-									D(i.hasFeature(R.oNc.CREATOR_STORE_PAGE)),
-										j(null !== (e = null == c ? void 0 : c.store_page_primary_color) && void 0 !== e ? e : M),
-										b(null == c ? void 0 : c.store_page_trailer_url),
-										P(null !== (t = null == c ? void 0 : c.store_page_show_subscriber_count) && void 0 !== t && t);
+									D(i.hasFeature(R.oNc.CREATOR_STORE_PAGE)), j(null !== (e = null == c ? void 0 : c.store_page_primary_color) && void 0 !== e ? e : M), b(null == c ? void 0 : c.store_page_trailer_url), P(null !== (t = null == c ? void 0 : c.store_page_show_subscriber_count) && void 0 !== t && t);
 								},
 								onSave: F,
 								disabled: V

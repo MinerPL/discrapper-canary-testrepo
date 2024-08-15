@@ -44,11 +44,7 @@ class p extends (s = d.ZP.Store) {
 			(h = !0), (i = void 0);
 		},
 		COLLECTIBLES_PURCHASES_FETCH_SUCCESS: (e) => {
-			0 === e.purchases.length
-				? (f = E)
-				: !(0, c.isEqual)([...f.values()], e.purchases) && (f = new Map(e.purchases.map((e) => [e.skuId, e]))),
-				(h = !1),
-				(i = void 0);
+			0 === e.purchases.length ? (f = E) : !(0, c.isEqual)([...f.values()], e.purchases) && (f = new Map(e.purchases.map((e) => [e.skuId, e]))), (h = !1), (i = void 0);
 		},
 		COLLECTIBLES_PURCHASES_FETCH_FAILURE: (e) => {
 			let { error: t } = e;
@@ -58,11 +54,7 @@ class p extends (s = d.ZP.Store) {
 			(r = e.skuId), (a = void 0);
 		},
 		COLLECTIBLES_CLAIM_SUCCESS: (e) => {
-			null == e.purchases || 0 === e.purchases.length
-				? (f = E)
-				: !(0, c.isEqual)([...f.values()], e.purchases) && (f = new Map(e.purchases.map((e) => [e.skuId, e]))),
-				(r = void 0),
-				(a = void 0);
+			null == e.purchases || 0 === e.purchases.length ? (f = E) : !(0, c.isEqual)([...f.values()], e.purchases) && (f = new Map(e.purchases.map((e) => [e.skuId, e]))), (r = void 0), (a = void 0);
 		},
 		COLLECTIBLES_CLAIM_FAILURE: (e) => {
 			let { error: t, skuId: n } = e;

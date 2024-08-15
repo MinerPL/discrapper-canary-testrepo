@@ -44,13 +44,7 @@ function h(e) {
 					}
 				].filter((e) => {
 					var t, r;
-					return (
-						(null === (r = n.integrationTypesConfig) || void 0 === r
-							? void 0
-							: null === (t = r[e.type]) || void 0 === t
-								? void 0
-								: t.oauth2InstallParams) != null
-					);
+					return (null === (r = n.integrationTypesConfig) || void 0 === r ? void 0 : null === (t = r[e.type]) || void 0 === t ? void 0 : t.oauth2InstallParams) != null;
 				}),
 			[n.integrationTypesConfig]
 		);

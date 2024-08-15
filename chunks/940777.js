@@ -63,9 +63,7 @@ function O() {
 				}),
 				l = (0, o.e7)([C.Z], () => C.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
 				r = (0, o.e7)([N.Z], () => n && null != t && N.Z.hasVideo(t), [n, t]),
-				a = (0, o.Wu)([h.ZP], () =>
-					x.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])
-				),
+				a = (0, o.Wu)([h.ZP], () => x.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
 				s = (0, o.e7)([h.ZP], () =>
 					Array.from(h.ZP.getSelfEmbeddedActivities().values()).some((t) => {
 						let { channelId: n } = t;

@@ -21,7 +21,7 @@ n(464942);
 var f = n(538605),
 	h = n(19109),
 	p = n(816479),
-	I = function (e, t, n) {
+	m = function (e, t, n) {
 		if (e instanceof o) {
 			var i = r({}, t),
 				a = r({}, t);
@@ -35,9 +35,9 @@ var f = n(538605),
 		}
 		return null;
 	},
-	m = function e(t, n) {
+	I = function e(t, n) {
 		return (
-			I(t, n, e) || {
+			m(t, n, e) || {
 				start: function (e) {
 					t.stopTracking(), n.toValue instanceof a ? t.track(new _(t, n.toValue, f, n, e)) : t.animate(new f(n), e);
 				},
@@ -96,7 +96,7 @@ var f = n(538605),
 		return a;
 	},
 	S = function (e) {
-		return m(new s(0), {
+		return I(new s(0), {
 			toValue: 0,
 			delay: e,
 			duration: 0
@@ -107,7 +107,7 @@ e.exports = {
 	ValueXY: o,
 	decay: function e(t, n) {
 		return (
-			I(t, n, e) || {
+			m(t, n, e) || {
 				start: function (e) {
 					t.stopTracking(), t.animate(new h(n), e);
 				},
@@ -117,10 +117,10 @@ e.exports = {
 			}
 		);
 	},
-	timing: m,
+	timing: I,
 	spring: function e(t, n) {
 		return (
-			I(t, n, e) || {
+			m(t, n, e) || {
 				start: function (e) {
 					t.stopTracking(), n.toValue instanceof a ? t.track(new _(t, n.toValue, p, n, e)) : t.animate(new p(n), e);
 				},
@@ -158,17 +158,10 @@ e.exports = {
 			for (var n = arguments.length, r = Array(n), a = 0; a < n; a++) r[a] = arguments[a];
 			var o = function e(t, n, r) {
 				if ('number' == typeof n) {
-					i(
-						t instanceof s,
-						'Bad mapping of type ' + typeof t + ' for key ' + r + ', event value must map to AnimatedValue'
-					),
-						t.setValue(n);
+					i(t instanceof s, 'Bad mapping of type ' + typeof t + ' for key ' + r + ', event value must map to AnimatedValue'), t.setValue(n);
 					return;
 				}
-				for (var r in (i('object' == typeof t, 'Bad mapping of type ' + typeof t + ' for key ' + r),
-				i('object' == typeof n, 'Bad event of type ' + typeof n + ' for key ' + r),
-				t))
-					e(t[r], n[r], r);
+				for (var r in (i('object' == typeof t, 'Bad mapping of type ' + typeof t + ' for key ' + r), i('object' == typeof n, 'Bad event of type ' + typeof n + ' for key ' + r), t)) e(t[r], n[r], r);
 			};
 			e.forEach(function (e, t) {
 				o(e, r[t], 'arg' + t);

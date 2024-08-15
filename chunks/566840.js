@@ -35,11 +35,7 @@ function u(e, t) {
 				r = () => {
 					requestAnimationFrame(() => {
 						var i, r, o;
-						let c =
-							null !== (r = null === (i = l.current) || void 0 === i ? void 0 : i.getBoundingClientRect()) &&
-							void 0 !== r
-								? r
-								: null;
+						let c = null !== (r = null === (i = l.current) || void 0 === i ? void 0 : i.getBoundingClientRect()) && void 0 !== r ? r : null;
 						(o = {
 							name: t,
 							guildId: e,

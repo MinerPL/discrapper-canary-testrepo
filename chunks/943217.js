@@ -57,15 +57,7 @@ let u = (e) => {
 		}
 	};
 function d(e) {
-	let {
-			children: t,
-			profileType: n,
-			isPremium: i,
-			hasThemeColors: u,
-			hasBanner: d,
-			overrideBannerWidth: _,
-			hasProfileEffect: E = !1
-		} = e,
+	let { children: t, profileType: n, isPremium: i, hasThemeColors: u, hasBanner: d, overrideBannerWidth: _, hasProfileEffect: E = !1 } = e,
 		f = (0, a.Dt)(),
 		h = null != _ ? _ : (0, s.e7)(n),
 		p = (0, s.Wo)({
@@ -76,7 +68,7 @@ function d(e) {
 				hasProfileEffect: E
 			}
 		}),
-		{ radius: I, offsetX: m, offsetY: T } = c[n],
+		{ radius: m, offsetX: I, offsetY: T } = c[n],
 		g = u && (n === o.y0.POPOUT || n === o.y0.BITE_SIZE) ? 4 : 0,
 		S = p - T - g;
 	return (0, r.jsxs)('svg', {
@@ -99,9 +91,9 @@ function d(e) {
 					}),
 					(0, r.jsx)('circle', {
 						fill: 'black',
-						cx: I + m - g,
+						cx: m + I - g,
 						cy: S,
-						r: I
+						r: m
 					})
 				]
 			}),

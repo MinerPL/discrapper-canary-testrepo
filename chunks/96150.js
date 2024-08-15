@@ -23,8 +23,7 @@ class c extends i.Z {
 		r.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), r.Z.subscribe('LOGOUT', this.handleLogout);
 	}
 	_terminate() {
-		r.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect),
-			r.Z.unsubscribe('LOGOUT', this.handleLogout);
+		r.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.handleVoiceChannelSelect), r.Z.unsubscribe('LOGOUT', this.handleLogout);
 	}
 	constructor(...e) {
 		super(...e),

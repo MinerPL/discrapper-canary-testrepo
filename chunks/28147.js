@@ -106,10 +106,7 @@ function O(e) {
 			? (0, i.jsx)(I.A, {
 					type: A.LG.SEARCH_EMPTY,
 					searchQuery: t,
-					textContent:
-						l === A._b.TEXT
-							? S.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY
-							: S.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
+					textContent: l === A._b.TEXT ? S.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : S.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
 				})
 			: (0, i.jsxs)('div', {
 					children: [
@@ -162,10 +159,7 @@ function Z(e) {
 			? (0, i.jsx)(I.A, {
 					type: A.LG.SEARCH_EMPTY,
 					searchQuery: t,
-					textContent:
-						l === A._b.TEXT
-							? S.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY
-							: S.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
+					textContent: l === A._b.TEXT ? S.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : S.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
 				})
 			: (0, i.jsxs)('div', {
 					children: [

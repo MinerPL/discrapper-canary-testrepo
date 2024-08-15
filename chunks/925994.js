@@ -1,6 +1,6 @@
 n.d(t, {
 	sg: function () {
-		return I;
+		return m;
 	},
 	sk: function () {
 		return h;
@@ -34,15 +34,7 @@ function h(e, t) {
 }
 function p(e, t) {
 	var n, r;
-	let {
-			mode: i,
-			start: a,
-			end: s,
-			separator: o,
-			ignoreEmptyNodes: l,
-			ignoreTrailingEmptyNodes: u,
-			preventEmojiSurrogates: c
-		} = null != t ? t : {},
+	let { mode: i, start: a, end: s, separator: o, ignoreEmptyNodes: l, ignoreTrailingEmptyNodes: u, preventEmojiSurrogates: c } = null != t ? t : {},
 		d = e.length > 0 && !f.LC.isText(e[0]);
 	null == o && (o = d ? '\n' : '');
 	let _ = null !== (n = null == a ? void 0 : a.path[0]) && void 0 !== n ? n : 0,
@@ -63,7 +55,7 @@ function p(e, t) {
 		}
 	let h = _ > 0 && f.aj.isType(e[_ - 1], 'blockQuote'),
 		p = f.aj.isType(e[_], 'blockQuote'),
-		m = f.aj.isType(e[E], 'blockQuote'),
+		I = f.aj.isType(e[E], 'blockQuote'),
 		T = [];
 	for (let t = _; t <= E; t++) {
 		let n = e[t];
@@ -82,31 +74,24 @@ function p(e, t) {
 							offset: s.offset
 						}
 					: void 0,
-			u = I(n, {
+			u = m(n, {
 				mode: i,
 				start: r,
 				end: o,
-				allowBlockQuotePrefix: null == a || null == s || (!h && (!p || m)),
+				allowBlockQuotePrefix: null == a || null == s || (!h && (!p || I)),
 				preventEmojiSurrogates: c
 			});
 		(!l || u.length > 0) && T.push(u);
 	}
 	return T.join(o);
 }
-function I(e, t) {
-	let { mode: n, start: r, allowBlockQuotePrefix: h = !1, preventEmojiSurrogates: I = !1 } = null != t ? t : {};
+function m(e, t) {
+	let { mode: n, start: r, allowBlockQuotePrefix: h = !1, preventEmojiSurrogates: m = !1 } = null != t ? t : {};
 	if (f.LC.isText(e))
 		return (function (e, t) {
 			var n, r;
 			let { start: a, end: s } = null != t ? t : {};
-			return (
-				i()(null == a || 0 === a.path.length, 'Invalid start provided to serializeText'),
-				i()(null == s || 0 === s.path.length, 'Invalid end provided to serializeText'),
-				e.substring(
-					null !== (n = null == a ? void 0 : a.offset) && void 0 !== n ? n : 0,
-					null !== (r = null == s ? void 0 : s.offset) && void 0 !== r ? r : e.length
-				)
-			);
+			return i()(null == a || 0 === a.path.length, 'Invalid start provided to serializeText'), i()(null == s || 0 === s.path.length, 'Invalid end provided to serializeText'), e.substring(null !== (n = null == a ? void 0 : a.offset) && void 0 !== n ? n : 0, null !== (r = null == s ? void 0 : s.offset) && void 0 !== r ? r : e.length);
 		})(e.text, t);
 	switch (e.type) {
 		case 'line':
@@ -122,7 +107,7 @@ function I(e, t) {
 		}
 		case 'emoji': {
 			let t = e.emoji;
-			if (!I && null != t.surrogate) return t.surrogate;
+			if (!m && null != t.surrogate) return t.surrogate;
 			return t.name;
 		}
 		case 'customEmoji': {

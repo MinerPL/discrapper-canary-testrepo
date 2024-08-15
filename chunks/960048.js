@@ -50,9 +50,7 @@ t.Z = {
 			void 0 === n ||
 			n.withScope((t) => {
 				var n;
-				null != r.tags && t.setTags(r.tags),
-					t.setExtras(r.extra),
-					null === (n = window.DiscordSentry) || void 0 === n || n.captureException(e);
+				null != r.tags && t.setTags(r.tags), t.setExtras(r.extra), null === (n = window.DiscordSentry) || void 0 === n || n.captureException(e);
 			});
 	},
 	captureCrash(e, t) {
@@ -69,12 +67,7 @@ t.Z = {
 						t.setLevel('fatal'),
 						t.addEventProcessor((e) => {
 							var t, n;
-							let r =
-								null === (n = e.exception) || void 0 === n
-									? void 0
-									: null === (t = n.values) || void 0 === t
-										? void 0
-										: t[0];
+							let r = null === (n = e.exception) || void 0 === n ? void 0 : null === (t = n.values) || void 0 === t ? void 0 : t[0];
 							return (
 								null != r &&
 									(r.mechanism = {
@@ -96,9 +89,7 @@ t.Z = {
 			void 0 === n ||
 			n.withScope((t) => {
 				var n;
-				null != r.tags && t.setTags(r.tags),
-					t.setExtras(r.extra),
-					null === (n = window.DiscordSentry) || void 0 === n || n.captureMessage(e);
+				null != r.tags && t.setTags(r.tags), t.setExtras(r.extra), null === (n = window.DiscordSentry) || void 0 === n || n.captureMessage(e);
 			});
 	},
 	addBreadcrumb(e) {

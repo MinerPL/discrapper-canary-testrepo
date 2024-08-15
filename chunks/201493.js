@@ -14,8 +14,8 @@ var i = n(735250),
 	_ = n(273387),
 	f = n(683818),
 	E = n(102888),
-	g = n(65839),
-	C = n(453879),
+	C = n(65839),
+	g = n(453879),
 	I = n(408310),
 	x = n(486527),
 	T = n(981631),
@@ -52,7 +52,7 @@ t.Z = (e) => {
 		},
 		[v.id]
 	);
-	let j = a.useMemo(() => (null != A ? (0, C.v)(Object.values(A), Z) : null), [A, Z]),
+	let j = a.useMemo(() => (null != A ? (0, g.v)(Object.values(A), Z) : null), [A, Z]),
 		{
 			mostRecentQuery: L,
 			searchFetching: P,
@@ -135,7 +135,7 @@ t.Z = (e) => {
 							onAddGuild: w
 						})
 					})
-				: (0, i.jsx)(g.Z, {
+				: (0, i.jsx)(C.Z, {
 						channel: v,
 						searchQuery: y,
 						setSearchQuery: D,

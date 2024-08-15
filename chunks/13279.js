@@ -13,17 +13,5 @@ function l(e, n) {
 		l = (0, o.c)(),
 		s = (0, a.h)(e),
 		d = (0, r.S)(e, i.pj.INAPPROPRIATE_CONVERSATION_TIER_2);
-	if (
-		!(
-			!t ||
-			!l ||
-			0 === s.length ||
-			s.some(
-				(e) =>
-					e.type === i.pj.INAPPROPRIATE_CONVERSATION_TIER_1 ||
-					(e.type === i.pj.INAPPROPRIATE_CONVERSATION_TIER_2 && null != e.dismiss_timestamp)
-			)
-		)
-	)
-		return d;
+	if (!(!t || !l || 0 === s.length || s.some((e) => e.type === i.pj.INAPPROPRIATE_CONVERSATION_TIER_1 || (e.type === i.pj.INAPPROPRIATE_CONVERSATION_TIER_2 && null != e.dismiss_timestamp)))) return d;
 }

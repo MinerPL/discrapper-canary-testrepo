@@ -8,14 +8,7 @@ var i = t(470079),
 	a = t(442837),
 	l = t(607070);
 function o(e) {
-	let {
-			key: n,
-			isExpanded: t,
-			durationMs: o = 100,
-			minHeightOverride: r,
-			maxHeightOverride: s,
-			maxAnimationHeight: c
-		} = e,
+	let { key: n, isExpanded: t, durationMs: o = 100, minHeightOverride: r, maxHeightOverride: s, maxAnimationHeight: c } = e,
 		d = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
 		[u, m] = i.useState(null),
 		p = i.useCallback(() => {}, []),
@@ -40,8 +33,7 @@ function o(e) {
 			var e, i, a;
 			if (null == u) return;
 			let { height: l } = u.getBoundingClientRect();
-			!t && (null == _.current || l < _.current) && (_.current = l),
-				t && (null == C.current || l > C.current) && (C.current = l);
+			!t && (null == _.current || l < _.current) && (_.current = l), t && (null == C.current || l > C.current) && (C.current = l);
 			let o = null !== (e = A.current) && void 0 !== e ? e : _.current,
 				r = null !== (i = E.current) && void 0 !== i ? i : C.current,
 				s = f.current !== n;
@@ -54,9 +46,7 @@ function o(e) {
 			let p = null;
 			return (
 				(p = requestAnimationFrame(() => {
-					(p = null),
-						(u.style.height = ''.concat(m, 'px')),
-						(u.style.transition = 'height '.concat(h.current, 'ms ease-in-out'));
+					(p = null), (u.style.height = ''.concat(m, 'px')), (u.style.transition = 'height '.concat(h.current, 'ms ease-in-out'));
 				})),
 				() => (null != p ? cancelAnimationFrame(p) : void 0)
 			);

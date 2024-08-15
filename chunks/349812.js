@@ -49,13 +49,7 @@ function _(e) {
 				return s(r), (E = 5000), t;
 			} catch (o) {
 				var I, u, l;
-				if (
-					await ((I = e),
-					(u = o),
-					(l = E),
-					!(0, a.R)(I, ['client_report']) && (!r.shouldStore || r.shouldStore(I, u, l)))
-				)
-					return n ? await _.unshift(e) : await _.push(e), c(), t('Error sending. Event queued.', o), {};
+				if (await ((I = e), (u = o), (l = E), !(0, a.R)(I, ['client_report']) && (!r.shouldStore || r.shouldStore(I, u, l)))) return n ? await _.unshift(e) : await _.push(e), c(), t('Error sending. Event queued.', o), {};
 				throw o;
 			}
 		}

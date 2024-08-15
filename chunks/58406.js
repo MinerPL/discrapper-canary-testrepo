@@ -12,8 +12,7 @@ var r = n(626135),
 	l = n(689938);
 class u {
 	async requestAuthorization(e, t, n) {
-		if ('function' != typeof t)
-			throw Error('requestAuthorization: Was provided with not a function for '.concat(e, '.'));
+		if ('function' != typeof t) throw Error('requestAuthorization: Was provided with not a function for '.concat(e, '.'));
 		r.default.track(o.rMx.PERMISSIONS_REQUESTED, { type: e });
 		let a = (await t()) === s.NZ.AUTHORIZED,
 			l = a ? s.PQ.ACCEPTED : s.PQ.DENIED;
@@ -32,9 +31,7 @@ class u {
 			[s.Eu.CAMERA]: ''.concat(l.Z.Messages.NO_CAMERA_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS),
 			[s.Eu.AUDIO]: ''.concat(l.Z.Messages.NO_MICRPHONE_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS),
 			[s.Eu.PHOTOS]: ''.concat(l.Z.Messages.NO_PHOTOS_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS),
-			[s.Eu.INPUT_MONITORING]: ''
-				.concat(l.Z.Messages.NO_INPUT_MONITORING_ACCESS, '. ')
-				.concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS),
+			[s.Eu.INPUT_MONITORING]: ''.concat(l.Z.Messages.NO_INPUT_MONITORING_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS),
 			[s.Eu.CONTACTS]: ''.concat(l.Z.Messages.NO_CONTACTS_ACCESS, '. ').concat(l.Z.Messages.ENABLE_PRIVACY_ACCESS)
 		}[e];
 		if (null != t)

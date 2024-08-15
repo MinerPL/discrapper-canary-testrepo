@@ -28,42 +28,23 @@ class u extends l.C {
 	}
 	internalJsonWrite(e, t) {
 		let n = 1000 * o.M.from(e.seconds).toNumber();
-		if (n < Date.parse('0001-01-01T00:00:00Z') || n > Date.parse('9999-12-31T23:59:59Z'))
-			throw Error(
-				'Unable to encode Timestamp to JSON. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.'
-			);
+		if (n < Date.parse('0001-01-01T00:00:00Z') || n > Date.parse('9999-12-31T23:59:59Z')) throw Error('Unable to encode Timestamp to JSON. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.');
 		if (e.nanos < 0) throw Error('Unable to encode invalid Timestamp to JSON. Nanos must not be negative.');
 		let r = 'Z';
 		if (e.nanos > 0) {
 			let t = (e.nanos + 1000000000).toString().substring(1);
-			r =
-				'000000' === t.substring(3)
-					? '.' + t.substring(0, 3) + 'Z'
-					: '000' === t.substring(6)
-						? '.' + t.substring(0, 6) + 'Z'
-						: '.' + t + 'Z';
+			r = '000000' === t.substring(3) ? '.' + t.substring(0, 3) + 'Z' : '000' === t.substring(6) ? '.' + t.substring(0, 6) + 'Z' : '.' + t + 'Z';
 		}
 		return new Date(n).toISOString().replace('.000Z', r);
 	}
 	internalJsonRead(e, t, n) {
 		if ('string' != typeof e) throw Error('Unable to parse Timestamp from JSON ' + (0, s.Z)(e) + '.');
-		let r = e.match(
-			/^([0-9]{4})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})(?:Z|\.([0-9]{3,9})Z|([+-][0-9][0-9]:[0-9][0-9]))$/
-		);
+		let r = e.match(/^([0-9]{4})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})(?:Z|\.([0-9]{3,9})Z|([+-][0-9][0-9]:[0-9][0-9]))$/);
 		if (!r) throw Error('Unable to parse Timestamp from JSON. Invalid format.');
 		let i = Date.parse(r[1] + '-' + r[2] + '-' + r[3] + 'T' + r[4] + ':' + r[5] + ':' + r[6] + (r[8] ? r[8] : 'Z'));
 		if (Number.isNaN(i)) throw Error('Unable to parse Timestamp from JSON. Invalid value.');
-		if (i < Date.parse('0001-01-01T00:00:00Z') || i > Date.parse('9999-12-31T23:59:59Z'))
-			throw new globalThis.Error(
-				'Unable to parse Timestamp from JSON. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.'
-			);
-		return (
-			!n && (n = this.create()),
-			(n.seconds = o.M.from(i / 1000).toString()),
-			(n.nanos = 0),
-			r[7] && (n.nanos = parseInt('1' + r[7] + '0'.repeat(9 - r[7].length)) - 1000000000),
-			n
-		);
+		if (i < Date.parse('0001-01-01T00:00:00Z') || i > Date.parse('9999-12-31T23:59:59Z')) throw new globalThis.Error('Unable to parse Timestamp from JSON. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.');
+		return !n && (n = this.create()), (n.seconds = o.M.from(i / 1000).toString()), (n.nanos = 0), r[7] && (n.nanos = parseInt('1' + r[7] + '0'.repeat(9 - r[7].length)) - 1000000000), n;
 	}
 	create(e) {
 		let t = {
@@ -93,10 +74,7 @@ class u extends l.C {
 					break;
 				default:
 					let s = n.readUnknownField;
-					if ('throw' === s)
-						throw new globalThis.Error(
-							'Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName)
-						);
+					if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
 					let o = e.skip(i);
 					!1 !== s && (!0 === s ? r.z.onRead : s)(this.typeName, a, t, i, o);
 			}

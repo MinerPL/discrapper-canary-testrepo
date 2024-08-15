@@ -10,8 +10,8 @@ var o,
 	f = n.n(E),
 	h = n(442837),
 	p = n(570140),
-	I = n(902840),
-	m = n(212819),
+	m = n(902840),
+	I = n(212819),
 	T = n(353926),
 	g = n(823385),
 	S = n(592125),
@@ -39,7 +39,7 @@ let b = {},
 	k = [];
 function B() {
 	G = g.Z.getProps()
-		.results.filter((e) => e.type === m.h8.TEXT_CHANNEL && 0 === e.record.type)
+		.results.filter((e) => e.type === I.h8.TEXT_CHANNEL && 0 === e.record.type)
 		.map((e) => e.record.id);
 }
 class F extends (l = h.ZP.PersistedStore) {
@@ -48,9 +48,7 @@ class F extends (l = h.ZP.PersistedStore) {
 	}
 	initialize(e) {
 		var t;
-		(r = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t),
-			this.waitFor(S.Z, R.default, v.Z, A.Z, T.Z),
-			this.syncWith([g.Z], B);
+		(r = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t), this.waitFor(S.Z, R.default, v.Z, A.Z, T.Z), this.syncWith([g.Z], B);
 	}
 	allSummaries() {
 		return b;
@@ -58,9 +56,7 @@ class F extends (l = h.ZP.PersistedStore) {
 	topSummaries() {
 		return Object.values(b)
 			.flat()
-			.filter(
-				(e) => e.people.length > 1 && y.default.extractTimestamp(e.endId) > new Date().getTime() - 5 * C.Z.Millis.HOUR
-			)
+			.filter((e) => e.people.length > 1 && y.default.extractTimestamp(e.endId) > new Date().getTime() - 5 * C.Z.Millis.HOUR)
 			.sort((e, t) => y.default.extractTimestamp(t.endId) - y.default.extractTimestamp(e.endId));
 	}
 	summaries(e) {
@@ -75,18 +71,14 @@ class F extends (l = h.ZP.PersistedStore) {
 		return null !== (n = this.summaries(e).find((e) => e.id === t)) && void 0 !== n ? n : null;
 	}
 	selectedSummary(e) {
-		return null != s && s.channelId === e && null != s.summaryId
-			? this.findSummary(e, null == s ? void 0 : s.summaryId)
-			: null;
+		return null != s && s.channelId === e && null != s.summaryId ? this.findSummary(e, null == s ? void 0 : s.summaryId) : null;
 	}
 	summaryFeedback(e) {
 		return null == e ? null : P[e.id];
 	}
 	isFetching(e, t) {
 		var n, r;
-		return null != t
-			? (null === (r = M[e]) || void 0 === r ? void 0 : r.summaryId) === t
-			: (null === (n = M[e]) || void 0 === n ? void 0 : n.fetching) === !0;
+		return null != t ? (null === (r = M[e]) || void 0 === r ? void 0 : r.summaryId) === t : (null === (n = M[e]) || void 0 === n ? void 0 : n.fetching) === !0;
 	}
 	status(e) {
 		return M[e];
@@ -95,7 +87,7 @@ class F extends (l = h.ZP.PersistedStore) {
 		var n, r;
 		let i = M[e],
 			a = S.Z.getChannel(e);
-		if (!(0, I.Lp)(a)) return !1;
+		if (!(0, m.Lp)(a)) return !1;
 		if (null != t) {
 			let e = null !== (n = null == i ? void 0 : i.summaryIdLastRequestedAt) && void 0 !== n ? n : 0,
 				r = Date.now() - e;
@@ -114,10 +106,7 @@ class F extends (l = h.ZP.PersistedStore) {
 		return x;
 	}
 	shouldFetchChannelAffinities() {
-		return (
-			!('fetching' === x.status || (null != x.lastResponse && Date.now() - x.lastResponse < 30 * C.Z.Millis.SECOND)) &&
-			!0
-		);
+		return !('fetching' === x.status || (null != x.lastResponse && Date.now() - x.lastResponse < 30 * C.Z.Millis.SECOND)) && !0;
 	}
 	defaultChannelIds(e) {
 		let { withQuickSwitcher: t, withChannelAffinities: n, withUnreads: r, numChannels: i = 25 } = e,
@@ -132,7 +121,7 @@ class F extends (l = h.ZP.PersistedStore) {
 				})),
 			(a = a.filter((e) => {
 				let t = S.Z.getChannel(e);
-				return (0, I.Lp)(t, !1, !1);
+				return (0, m.Lp)(t, !1, !1);
 			})).slice(0, i)
 		);
 	}
@@ -211,11 +200,7 @@ let V = new F(p.Z, {
 	},
 	SET_HIGHLIGHTED_SUMMARY(e) {
 		var t;
-		if (
-			(null == i && null == e.channelId) ||
-			(e.channelId === (null == i ? void 0 : i.channelId) && e.summaryId === (null == i ? void 0 : i.summaryId))
-		)
-			return !1;
+		if ((null == i && null == e.channelId) || (e.channelId === (null == i ? void 0 : i.channelId) && e.summaryId === (null == i ? void 0 : i.summaryId))) return !1;
 		if (
 			null !=
 				(i =
@@ -245,13 +230,7 @@ let V = new F(p.Z, {
 						? void 0
 						: n.findIndex((t) => {
 								var n, r, i, a;
-								return (
-									(n = e.topVisibleMessage),
-									(r = e.bottomVisibleMessage),
-									(i = t.startId),
-									(a = t.endId),
-									!(null == n || n > a) && !(null == r || r < i)
-								);
+								return (n = e.topVisibleMessage), (r = e.bottomVisibleMessage), (i = t.startId), (a = t.endId), !(null == n || n > a) && !(null == r || r < i);
 							});
 			}
 		}
@@ -292,10 +271,7 @@ let V = new F(p.Z, {
 			return;
 		}
 		(U = null != n ? n : []),
-			(w =
-				null !== (t = null == n ? void 0 : n.reduce((e, t) => ((e[t.channel_id] = t.affinity), e), {})) && void 0 !== t
-					? t
-					: {}),
+			(w = null !== (t = null == n ? void 0 : n.reduce((e, t) => ((e[t.channel_id] = t.affinity), e), {})) && void 0 !== t ? t : {}),
 			(x = {
 				...x,
 				status: 'ok',

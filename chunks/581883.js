@@ -24,21 +24,21 @@ function p(e, t, n) {
 		e
 	);
 }
-let I = {
+let m = {
 		ProtoClass: c.o8,
 		proto: c.o8.create(),
 		lazyLoaded: !1,
 		editInfo: (0, h.JC)()
 	},
-	m = {
+	I = {
 		ProtoClass: u.ji,
 		proto: u.ji.create(),
 		lazyLoaded: !0,
 		editInfo: (0, h.JC)()
 	},
 	T = {
-		[h.yP.PRELOADED_USER_SETTINGS]: I,
-		[h.yP.FRECENCY_AND_FAVORITES_SETTINGS]: m
+		[h.yP.PRELOADED_USER_SETTINGS]: m,
+		[h.yP.FRECENCY_AND_FAVORITES_SETTINGS]: I
 	},
 	g = !1;
 function S() {
@@ -48,14 +48,7 @@ function A() {
 	Object.values(T).forEach((e) => {
 		if (null != e.editInfo.timeout) {
 			var t, n;
-			clearTimeout(e.editInfo.timeout),
-				(e.editInfo.timeout = void 0),
-				(e.editInfo.timeoutDelay = Number.MAX_SAFE_INTEGER),
-				(e.editInfo.rateLimited = !1),
-				(e.editInfo.offlineEditDataVersion =
-					null !== (n = null === (t = e.proto.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== n
-						? n
-						: 0);
+			clearTimeout(e.editInfo.timeout), (e.editInfo.timeout = void 0), (e.editInfo.timeoutDelay = Number.MAX_SAFE_INTEGER), (e.editInfo.rateLimited = !1), (e.editInfo.offlineEditDataVersion = null !== (n = null === (t = e.proto.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== n ? n : 0);
 		}
 	});
 }
@@ -71,14 +64,7 @@ function v(e) {
 	} = e;
 	g = !s;
 	let o = T[n];
-	i && N(o),
-		r
-			? ((o.proto = (0, f.re)(o.ProtoClass, o.proto, t)),
-				a()('string' != typeof o.proto, 'UserSettingsProto cannot be a string'))
-			: ((o.proto = t),
-				a()('string' != typeof o.proto, 'UserSettingsProto cannot be a string'),
-				(o.editInfo.loaded = !0),
-				(o.editInfo.loading = !1));
+	i && N(o), r ? ((o.proto = (0, f.re)(o.ProtoClass, o.proto, t)), a()('string' != typeof o.proto, 'UserSettingsProto cannot be a string')) : ((o.proto = t), a()('string' != typeof o.proto, 'UserSettingsProto cannot be a string'), (o.editInfo.loaded = !0), (o.editInfo.loading = !1));
 }
 function O(e) {
 	null != e &&
@@ -106,23 +92,17 @@ class R extends (r = l.ZP.PersistedStore) {
 	computeState() {
 		return o().mapValues(T, (e) => {
 			let t = { proto: (0, f.xU)(e.ProtoClass, e.proto) };
-			return (
-				null != e.editInfo.offlineEditDataVersion &&
-					null != e.editInfo.protoToSave &&
-					((t.protoToSave = (0, f.xU)(e.ProtoClass, e.editInfo.protoToSave)),
-					(t.offlineEditDataVersion = e.editInfo.offlineEditDataVersion)),
-				t
-			);
+			return null != e.editInfo.offlineEditDataVersion && null != e.editInfo.protoToSave && ((t.protoToSave = (0, f.xU)(e.ProtoClass, e.editInfo.protoToSave)), (t.offlineEditDataVersion = e.editInfo.offlineEditDataVersion)), t;
 		});
 	}
 	hasLoaded(e) {
 		return T[e].editInfo.loaded;
 	}
 	get settings() {
-		return I.proto;
+		return m.proto;
 	}
 	get frecencyWithoutFetchingLatest() {
-		return m.proto;
+		return I.proto;
 	}
 	get wasMostRecentUpdateFromServer() {
 		return g;
@@ -132,7 +112,7 @@ class R extends (r = l.ZP.PersistedStore) {
 	}
 	getGuildFolders() {
 		var e;
-		let t = null === (e = I.proto.guildFolders) || void 0 === e ? void 0 : e.folders;
+		let t = null === (e = m.proto.guildFolders) || void 0 === e ? void 0 : e.folders;
 		return null == t
 			? null
 			: t.map((e) => {
@@ -150,31 +130,16 @@ class R extends (r = l.ZP.PersistedStore) {
 	getGuildRecentsDismissedAt(e) {
 		var t, n;
 		if (null == e) return 0;
-		let r =
-			null === (n = this.settings.guilds) || void 0 === n
-				? void 0
-				: null === (t = n.guilds[e]) || void 0 === t
-					? void 0
-					: t.guildRecentsDismissedAt;
+		let r = null === (n = this.settings.guilds) || void 0 === n ? void 0 : null === (t = n.guilds[e]) || void 0 === t ? void 0 : t.guildRecentsDismissedAt;
 		return null == r ? 0 : d.E.toDate(r).getTime();
 	}
 	getDismissedGuildContent(e) {
 		var t, n, r;
-		return null == e
-			? null
-			: null === (r = this.settings.guilds) || void 0 === r
-				? void 0
-				: null === (n = r.guilds) || void 0 === n
-					? void 0
-					: null === (t = n[e]) || void 0 === t
-						? void 0
-						: t.dismissedGuildContent;
+		return null == e ? null : null === (r = this.settings.guilds) || void 0 === r ? void 0 : null === (n = r.guilds) || void 0 === n ? void 0 : null === (t = n[e]) || void 0 === t ? void 0 : t.dismissedGuildContent;
 	}
 	getGuildsProto() {
 		var e, t;
-		return null !== (t = null === (e = this.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== t
-			? t
-			: null;
+		return null !== (t = null === (e = this.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : null;
 	}
 }
 p(R, 'displayName', 'UserSettingsProtoStore'),
@@ -202,14 +167,14 @@ p(R, 'displayName', 'UserSettingsProtoStore'),
 		},
 		CONNECTION_OPEN: function (e) {
 			let { userSettingsProto: t } = e;
-			null != t && ((I.proto = t), a()('string' != typeof I.proto, 'UserSettingsProto cannot be a string'));
-			let { proto: n, isDirty: r, cleanupFuncs: i } = (0, f.xt)(I.proto, E.Z[h.yP.PRELOADED_USER_SETTINGS]);
-			r && N(I),
-				(I.proto = n),
-				a()('string' != typeof I.proto, 'UserSettingsProto cannot be a string'),
-				(I.editInfo.triggeredMigrations = r),
-				(I.editInfo.cleanupFuncs = i),
-				(I.editInfo.loaded = !0),
+			null != t && ((m.proto = t), a()('string' != typeof m.proto, 'UserSettingsProto cannot be a string'));
+			let { proto: n, isDirty: r, cleanupFuncs: i } = (0, f.xt)(m.proto, E.Z[h.yP.PRELOADED_USER_SETTINGS]);
+			r && N(m),
+				(m.proto = n),
+				a()('string' != typeof m.proto, 'UserSettingsProto cannot be a string'),
+				(m.editInfo.triggeredMigrations = r),
+				(m.editInfo.cleanupFuncs = i),
+				(m.editInfo.loaded = !0),
 				Object.values(T).forEach((e) => {
 					e.lazyLoaded && ((e.editInfo.loaded = !1), (e.editInfo.loading = !1));
 				}),
@@ -219,7 +184,7 @@ p(R, 'displayName', 'UserSettingsProtoStore'),
 		CONNECTION_RESUMED: S,
 		OVERLAY_INITIALIZE: function (e) {
 			let { userSettingsProto: t } = e;
-			(I.proto = (0, f.ac)(t)), a()('string' != typeof I.proto, 'UserSettingsProto cannot be a string');
+			(m.proto = (0, f.ac)(t)), a()('string' != typeof m.proto, 'UserSettingsProto cannot be a string');
 		},
 		LOGOUT: function () {
 			A(),

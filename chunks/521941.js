@@ -17,13 +17,7 @@ function r(e) {
 			i = [];
 		for (var r = 0; r < n.length; r++) {
 			let s = n[r];
-			s.isNew
-				? t.push(s)
-				: s.hasNewAnswers
-					? (l.push(s), (e += s.options.filter((e) => e.isUnseen).length))
-					: s.inOnboarding
-						? i.push(s)
-						: a.push(s);
+			s.isNew ? t.push(s) : s.hasNewAnswers ? (l.push(s), (e += s.options.filter((e) => e.isUnseen).length)) : s.inOnboarding ? i.push(s) : a.push(s);
 		}
 		return {
 			onboardingPromptsRaw: n,

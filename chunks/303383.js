@@ -17,10 +17,7 @@ function E(e) {
 	let { applicationId: t, guildId: n, page: r } = e;
 	return 'applicationId:'.concat(t, ' guildId:').concat(n, ' page:').concat(r);
 }
-((r = o || (o = {}))[(r.NOT_FETCHED = 0)] = 'NOT_FETCHED'),
-	(r[(r.FETCHING = 1)] = 'FETCHING'),
-	(r[(r.FETCHED = 2)] = 'FETCHED'),
-	(r[(r.ERROR = 3)] = 'ERROR');
+((r = o || (o = {}))[(r.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (r[(r.FETCHING = 1)] = 'FETCHING'), (r[(r.FETCHED = 2)] = 'FETCHED'), (r[(r.ERROR = 3)] = 'ERROR');
 let f = new (c())({ max: 20 }),
 	h = {};
 class p extends (l = d.ZP.Store) {

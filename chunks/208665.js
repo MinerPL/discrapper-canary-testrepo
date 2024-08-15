@@ -19,9 +19,7 @@ function D() {
 	(function () {
 		(E = !1), (T = null), (S = []), (O = !1);
 	})(),
-		null != (T = N.Z.getGuildId()) &&
-			N.Z.getSection() === _.pNK.ONBOARDING &&
-			((m = I.Z.getOnboardingPrompts(T)), (O = I.Z.isAdvancedMode(T)));
+		null != (T = N.Z.getGuildId()) && N.Z.getSection() === _.pNK.ONBOARDING && ((m = I.Z.getOnboardingPrompts(T)), (O = I.Z.isAdvancedMode(T)));
 }
 class G extends (i = c.ZP.Store) {
 	initialize() {

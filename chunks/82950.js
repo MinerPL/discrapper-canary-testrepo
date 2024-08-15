@@ -12,21 +12,7 @@ var i = n(735250),
 	h = n(848696);
 let m = r().debounce(o.ZP.trackWithMetadata, 500),
 	I = (e) => {
-		let {
-			guild: t,
-			title: n,
-			message: s,
-			image: r,
-			type: d,
-			imageMarginX: u,
-			imageMarginTop: I,
-			trackingSource: g,
-			undismissable: p,
-			onDismissed: T,
-			onClick: S,
-			cta: f,
-			ctaColor: C
-		} = e;
+		let { guild: t, title: n, message: s, image: r, type: d, imageMarginX: u, imageMarginTop: I, trackingSource: g, undismissable: p, onDismissed: T, onClick: S, cta: f, ctaColor: C } = e;
 		a.useEffect(() => {
 			m(_.rMx.CHANNEL_NOTICE_VIEWED, {
 				notice_type: d,

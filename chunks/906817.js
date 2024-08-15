@@ -51,14 +51,7 @@ function g(e, t) {
 	}
 }
 t.ZP = l.memo(function (e) {
-	let {
-			sectionIndex: t,
-			guild: n,
-			guildChannels: f,
-			guildChannelsVersion: g,
-			selectedChannelId: m,
-			disableManageChannels: C
-		} = e,
+	let { sectionIndex: t, guild: n, guildChannels: f, guildChannelsVersion: g, selectedChannelId: m, disableManageChannels: C } = e,
 		{ isFavoritesPerk: I } = (0, a.z)('ChannelListSection'),
 		E = l.useCallback(() => {
 			let e = f.getCategoryFromSection(f.recentsSectionNumber);

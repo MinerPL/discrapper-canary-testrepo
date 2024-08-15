@@ -30,10 +30,7 @@ function u(e, t, n) {
 		e
 	);
 }
-((r || (r = {})).FORUM_CHANNEL = 'forum_channel'),
-	((a = i || (i = {}))[(a.IMMEDIATE = 0)] = 'IMMEDIATE'),
-	(a[(a.IMMEDIATE_WITH_COOLDOWN = 1)] = 'IMMEDIATE_WITH_COOLDOWN'),
-	(a[(a.IMMEDIATE_WITH_DELAY = 2)] = 'IMMEDIATE_WITH_DELAY');
+((r || (r = {})).FORUM_CHANNEL = 'forum_channel'), ((a = i || (i = {}))[(a.IMMEDIATE = 0)] = 'IMMEDIATE'), (a[(a.IMMEDIATE_WITH_COOLDOWN = 1)] = 'IMMEDIATE_WITH_COOLDOWN'), (a[(a.IMMEDIATE_WITH_DELAY = 2)] = 'IMMEDIATE_WITH_DELAY');
 class c {
 	maybeMarkSeen(e) {
 		let t = this.seenIntervals[this.seenIntervals.length - 1];
@@ -70,11 +67,7 @@ class c {
 }
 class d {
 	maybeFlushSeenItems(e) {
-		if (
-			(null == e && Date.now() - this._lastFlushTimeMillis < 60000) ||
-			(1 === e && Date.now() - this._lastFlushTimeMillis < 3000)
-		)
-			return Promise.resolve();
+		if ((null == e && Date.now() - this._lastFlushTimeMillis < 60000) || (1 === e && Date.now() - this._lastFlushTimeMillis < 3000)) return Promise.resolve();
 		let t = this.createFlushSeenItemsFunction(e);
 		return null == t
 			? Promise.resolve()
@@ -102,26 +95,11 @@ class d {
 			u(this, 'onFeedItemUnseen', void 0),
 			u(this, 'initialize', () => {
 				var e;
-				l.Z.subscribe('ANALYTICS_FEED_ITEM_SEEN', this.handleFeedItemSeen),
-					l.Z.subscribe('ANALYTICS_FEED_ITEM_UNSEEN', this.handleFeedItemUnseen),
-					l.Z.subscribe('ANALYTICS_FEED_FLUSH', this.handleFeedItemFlush),
-					l.Z.subscribe('APP_STATE_UPDATE', this.handleAppStateUpdate),
-					l.Z.subscribe('DRAWER_OPEN', this.handleDrawerOpen),
-					l.Z.subscribe('DRAWER_CLOSE', this.handleDrawerClose),
-					l.Z.subscribe('WINDOW_FOCUS', this.handleWindowFocus),
-					null === (e = this.onInitialize) || void 0 === e || e.call(this);
+				l.Z.subscribe('ANALYTICS_FEED_ITEM_SEEN', this.handleFeedItemSeen), l.Z.subscribe('ANALYTICS_FEED_ITEM_UNSEEN', this.handleFeedItemUnseen), l.Z.subscribe('ANALYTICS_FEED_FLUSH', this.handleFeedItemFlush), l.Z.subscribe('APP_STATE_UPDATE', this.handleAppStateUpdate), l.Z.subscribe('DRAWER_OPEN', this.handleDrawerOpen), l.Z.subscribe('DRAWER_CLOSE', this.handleDrawerClose), l.Z.subscribe('WINDOW_FOCUS', this.handleWindowFocus), null === (e = this.onInitialize) || void 0 === e || e.call(this);
 			}),
 			u(this, 'terminate', () => {
 				var e;
-				l.Z.unsubscribe('ANALYTICS_FEED_ITEM_SEEN', this.handleFeedItemSeen),
-					l.Z.unsubscribe('ANALYTICS_FEED_ITEM_UNSEEN', this.handleFeedItemUnseen),
-					l.Z.unsubscribe('ANALYTICS_FEED_FLUSH', this.handleFeedItemFlush),
-					l.Z.unsubscribe('APP_STATE_UPDATE', this.handleAppStateUpdate),
-					l.Z.unsubscribe('DRAWER_OPEN', this.handleDrawerOpen),
-					l.Z.unsubscribe('DRAWER_CLOSE', this.handleDrawerClose),
-					l.Z.unsubscribe('WINDOW_FOCUS', this.handleWindowFocus),
-					null === (e = this.onTerminate) || void 0 === e || e.call(this),
-					this.maybeFlushSeenItems(0);
+				l.Z.unsubscribe('ANALYTICS_FEED_ITEM_SEEN', this.handleFeedItemSeen), l.Z.unsubscribe('ANALYTICS_FEED_ITEM_UNSEEN', this.handleFeedItemUnseen), l.Z.unsubscribe('ANALYTICS_FEED_FLUSH', this.handleFeedItemFlush), l.Z.unsubscribe('APP_STATE_UPDATE', this.handleAppStateUpdate), l.Z.unsubscribe('DRAWER_OPEN', this.handleDrawerOpen), l.Z.unsubscribe('DRAWER_CLOSE', this.handleDrawerClose), l.Z.unsubscribe('WINDOW_FOCUS', this.handleWindowFocus), null === (e = this.onTerminate) || void 0 === e || e.call(this), this.maybeFlushSeenItems(0);
 			}),
 			u(this, 'handleFeedItemFlush', (e) => {
 				let { id: t, force: n } = e;
@@ -150,11 +128,7 @@ class d {
 				let a = this.getTrackedFeedItem(i).maybeMarkUnseen(r);
 				null === (t = this.onFeedItemUnseen) || void 0 === t || t.call(this, i, a), this.maybeFlushSeenItems();
 			}),
-			u(
-				this,
-				'getTrackedFeedItem',
-				(e) => (null == this.trackedFeedItems[e] && (this.trackedFeedItems[e] = new c()), this.trackedFeedItems[e])
-			),
+			u(this, 'getTrackedFeedItem', (e) => (null == this.trackedFeedItems[e] && (this.trackedFeedItems[e] = new c()), this.trackedFeedItems[e])),
 			u(
 				this,
 				'getVisibleFeedItemIds',
@@ -174,8 +148,7 @@ class d {
 			}),
 			u(this, 'handleAppStateUpdate', (e) => {
 				let { state: t } = e;
-				'active' === t && this._isReactNavigationFocused && this.resume(),
-					'background' === t && (this._isReactNavigationFocused && this.pause(), this.maybeFlushSeenItems(0));
+				'active' === t && this._isReactNavigationFocused && this.resume(), 'background' === t && (this._isReactNavigationFocused && this.pause(), this.maybeFlushSeenItems(0));
 			}),
 			u(this, 'clearPausedFeedItemIds', () => {
 				(this._pausedFeedItemIds = new Set()), (this._paused = !1);

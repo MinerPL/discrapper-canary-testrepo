@@ -61,15 +61,7 @@ let E = a.forwardRef(function (e, t) {
 });
 function T(e) {
 	var t;
-	let {
-			initialValue: n,
-			onChangeTags: i,
-			onChangeNewTagValue: o,
-			tagErrors: d = {},
-			placeholder: I,
-			className: T,
-			maxTags: m
-		} = e,
+	let { initialValue: n, onChangeTags: i, onChangeNewTagValue: o, tagErrors: d = {}, placeholder: I, className: T, maxTags: m } = e,
 		N = a.useRef(null),
 		S = a.useRef(null),
 		h = a.useRef(null),

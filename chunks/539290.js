@@ -21,17 +21,7 @@ let E = {
 	BOTTOM: d.verticalStatusWarningBlock
 };
 function _(e) {
-	let {
-			className: n,
-			color: t = c.W.YELLOW,
-			buttonPosition: o = E.BOTTOM,
-			notice: _,
-			ctaLabel: I,
-			ctaLoading: N,
-			ctaDisabled: h,
-			ctaClassName: p,
-			onClick: g
-		} = e,
+	let { className: n, color: t = c.W.YELLOW, buttonPosition: o = E.BOTTOM, notice: _, ctaLabel: I, ctaLoading: N, ctaDisabled: h, ctaClassName: p, onClick: g } = e,
 		R = (0, i.ZP)();
 	return (0, s.jsx)(u.Z, {
 		className: r()(d.statusWarningBlock, { [d.statusWarningBlockWithCta]: null != I }, n),

@@ -17,14 +17,8 @@ var a = t(373793),
 function M(e) {
 	var n, t, M;
 	if (!(0, s.a)(e)) return null;
-	let I =
-			null === (n = e.interactionMetadata) || void 0 === n
-				? void 0
-				: n.authorizing_integration_owners[a.Y.USER_INSTALL],
-		m =
-			null === (t = e.interactionMetadata) || void 0 === t
-				? void 0
-				: t.authorizing_integration_owners[a.Y.GUILD_INSTALL],
+	let I = null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.authorizing_integration_owners[a.Y.USER_INSTALL],
+		m = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[a.Y.GUILD_INSTALL],
 		_ = d.default.getUser(I),
 		g = u.Z.getGuild(m),
 		f = d.default.getUser(null === (M = e.interactionMetadata) || void 0 === M ? void 0 : M.user.id),

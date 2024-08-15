@@ -188,16 +188,7 @@ class J extends s.PureComponent {
 	}
 }
 function q(e) {
-	let {
-			emoji: t,
-			user: n,
-			message: s,
-			channel: o,
-			guildId: a,
-			reactionType: l,
-			onRemoveReactor: r,
-			disableManage: c = !1
-		} = e,
+	let { emoji: t, user: n, message: s, channel: o, guildId: a, reactionType: l, onRemoveReactor: r, disableManage: c = !1 } = e,
 		d = (0, u.e7)([Z.default], () => Z.default.getId()),
 		m = (0, u.e7)([w.default], () => w.default.getUser(n.id), [n]),
 		f = (0, N.$R)(o),
@@ -339,10 +330,7 @@ class X extends s.PureComponent {
 				let { current: e } = this.scrollerRef;
 				if (null == e) return;
 				let t = e.getScrollerState();
-				t.scrollTop + t.offsetHeight >= t.scrollHeight - 44 &&
-					this.props.hasMore &&
-					!this.state.loadingMore &&
-					this.loadMore();
+				t.scrollTop + t.offsetHeight >= t.scrollHeight - 44 && this.props.hasMore && !this.state.loadingMore && this.loadMore();
 			}),
 			z(this, 'getRowHeight', (e, t) => {
 				let { reactors: n } = this.props;
@@ -355,15 +343,7 @@ class X extends s.PureComponent {
 			}),
 			z(this, 'renderRow', (e) => {
 				let { section: t, row: n } = e,
-					{
-						message: s,
-						guildId: o,
-						channel: a,
-						reaction: l,
-						reactors: r,
-						reactionType: c,
-						disableManage: u
-					} = this.props,
+					{ message: s, guildId: o, channel: a, reaction: l, reactors: r, reactionType: c, disableManage: u } = this.props,
 					d = r[n];
 				if (1 === t) return 0 === n ? (0, i.jsx)(h.Spinner, { className: G.spinnerMore }, 'hasMore') : null;
 				return 0 === r.length && this.state.loadingMore
@@ -403,27 +383,14 @@ let $ = u.ZP.connectStores([A.Z], (e) => {
 })(X);
 function Q(e) {
 	var t;
-	let {
-			message: n,
-			selectedReaction: o,
-			disableManage: a = !1,
-			disableTabs: l = !1,
-			onClose: r,
-			transitionState: c,
-			'aria-label': m = H.Z.Messages.REACTIONS
-		} = e,
+	let { message: n, selectedReaction: o, disableManage: a = !1, disableTabs: l = !1, onClose: r, transitionState: c, 'aria-label': m = H.Z.Messages.REACTIONS } = e,
 		p = (0, u.e7)([j.Z], () => j.Z.getChannel(n.getChannelId())),
 		g = null == p ? void 0 : p.getGuildId(),
 		T = (0, u.e7)(
 			[y.Z, b.Z],
 			() => {
 				var e, t;
-				let i =
-					null !== (t = y.Z.getMessage(n.getChannelId(), n.id)) && void 0 !== t
-						? t
-						: null === (e = b.Z.getMessage(D.default.castMessageIdAsChannelId(n.id))) || void 0 === e
-							? void 0
-							: e.firstMessage;
+				let i = null !== (t = y.Z.getMessage(n.getChannelId(), n.id)) && void 0 !== t ? t : null === (e = b.Z.getMessage(D.default.castMessageIdAsChannelId(n.id))) || void 0 === e ? void 0 : e.firstMessage;
 				return null != i ? i.reactions : [];
 			},
 			[n]

@@ -14,8 +14,8 @@ var i = n(735250),
 	_ = n(424602),
 	f = n(924557),
 	E = n(435064),
-	g = n(712114),
-	C = n(605236),
+	C = n(712114),
+	g = n(605236),
 	I = n(536442),
 	x = n(79390),
 	T = n(665906),
@@ -50,10 +50,7 @@ t.Z = a.memo(function (e) {
 		ee = (0, r.e7)([E.Z], () => E.Z.getLastClipsSession()),
 		et = (0, r.Wu)([E.Z], () => E.Z.getNewClipIds()),
 		en = (0, r.e7)([S.ZP], () => null == S.ZP.getCurrentSidebarChannelId(W.id)),
-		{ showClipsHeaderEntrypoint: ei } = f.NV.useExperiment(
-			{ location: 'ChannelAttachButton' },
-			{ autoTrackExposure: !1 }
-		),
+		{ showClipsHeaderEntrypoint: ei } = f.NV.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
 		{ enabled: ea } = _.T.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
 		es = (0, r.e7)([I.qc], () => I.qc.hasHotspot(I.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
 		el = (0, c.useModalsStore)((e) => (0, c.hasModalOpenSelector)(e, w.Qr)),
@@ -66,15 +63,7 @@ t.Z = a.memo(function (e) {
 		ep = (0, r.e7)([N.default], () => N.default.locale),
 		e_ = ['en-US', 'en-GB'].includes(ep) ? H.Z.Messages.CHAT_ATTACH_PLUS_BUTTON_A11Y_LABEL : H.Z.Messages.MORE_OPTIONS,
 		ef = (0, d.Z)(ee);
-	(null == ef ? void 0 : ef.newClipIds.length) !== (null == ee ? void 0 : ee.newClipIds.length) &&
-		(null !== (t = null == ee ? void 0 : ee.newClipIds.length) && void 0 !== t ? t : 0) > 0 &&
-		null == ec &&
-		es &&
-		en &&
-		!el &&
-		!ei &&
-		!er &&
-		eu('recentClips');
+	(null == ef ? void 0 : ef.newClipIds.length) !== (null == ee ? void 0 : ee.newClipIds.length) && (null !== (t = null == ee ? void 0 : ee.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ec && es && en && !el && !ei && !er && eu('recentClips');
 	let eE = (e, t, n) => {
 			null != t && 'ETOOLARGE' === t.code
 				? (0, O.G)(W, [])
@@ -84,8 +73,8 @@ t.Z = a.memo(function (e) {
 					}),
 				L.S.dispatchToLastSubscribed(U.CkL.TEXTAREA_FOCUS);
 		},
-		eg = (0, r.e7)([A.Z], () => A.Z.hasCurrentUserSentMessageSinceAppStart());
-	function eC() {
+		eC = (0, r.e7)([A.Z], () => A.Z.hasCurrentUserSentMessageSinceAppStart());
+	function eg() {
 		(0, c.openModalLazy)(
 			async () => {
 				let { default: e } = await Promise.all([n.e('2668'), n.e('18963')]).then(n.bind(n, 542055));
@@ -168,18 +157,17 @@ t.Z = a.memo(function (e) {
 		position: 'top',
 		positionKey: null != ec ? ec : 'null',
 		onRequestOpen: () => {
-			eg && (0, C.EW)(o.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: B.L.TAKE_ACTION }), eu('attachMenu');
+			eC && (0, g.EW)(o.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: B.L.TAKE_ACTION }), eu('attachMenu');
 		},
 		onRequestClose: () => {
-			!(0, c.hasAnyModalOpen)() &&
-				(eg && (0, C.EW)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: B.L.TAKE_ACTION }), eu(null));
+			!(0, c.hasAnyModalOpen)() && (eC && (0, g.EW)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: B.L.TAKE_ACTION }), eu(null));
 		},
 		renderPopout: (e) => {
 			switch (ec) {
 				case 'recentClips':
-					return (0, i.jsx)(g.Z, {
+					return (0, i.jsx)(C.Z, {
 						...e,
-						onOpenClips: eC,
+						onOpenClips: eg,
 						lastClipsSession: ee
 					});
 				case 'attachMenu':
@@ -195,7 +183,7 @@ t.Z = a.memo(function (e) {
 						draftType: z,
 						editorTextContent: Y,
 						setValue: K,
-						openClips: eC
+						openClips: eg
 					});
 				default:
 					throw Error('Invalid popout type provided');

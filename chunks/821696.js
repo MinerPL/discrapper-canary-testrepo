@@ -170,8 +170,7 @@ var t = {
 	'blik.invalid': '輸入 6 個數字',
 	'blik.code': '6 位數代碼',
 	'blik.help': '從您的銀行應用程式中獲取代碼\u3002',
-	'swish.pendingMessage':
-		'掃描後\uFF0C該待完成狀態可能持續長達 10 分鐘\u3002試圖在這段時間內再次付款可能會導致多重收費\u3002',
+	'swish.pendingMessage': '掃描後\uFF0C該待完成狀態可能持續長達 10 分鐘\u3002試圖在這段時間內再次付款可能會導致多重收費\u3002',
 	'field.valid': '欄位有效',
 	'field.invalid': '欄位無效',
 	'error.va.gen.01': '不完整欄位',

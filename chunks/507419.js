@@ -26,14 +26,7 @@ n.Z = a.memo(function (e) {
 					onClick: m
 						? void 0
 						: function () {
-								null != _ &&
-									(_.paused
-										? ((_.volume = (0, r.Z)(t)),
-											(_.currentTime = 0),
-											_.play(),
-											g(!0),
-											_.addEventListener('ended', () => g(!1), { once: !0 }))
-										: (_.pause(), g(!1)));
+								null != _ && (_.paused ? ((_.volume = (0, r.Z)(t)), (_.currentTime = 0), _.play(), g(!0), _.addEventListener('ended', () => g(!1), { once: !0 })) : (_.pause(), g(!1)));
 							},
 					className: f.playButton,
 					'aria-label': h ? d.Z.Messages.STOP : d.Z.Messages.PLAY,

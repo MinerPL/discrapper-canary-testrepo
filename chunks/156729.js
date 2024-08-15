@@ -185,9 +185,7 @@ class p extends (n = i.PureComponent) {
 								: null,
 							(0, a.jsx)('div', {
 								className: O.subText,
-								children: l
-									? A.Z.Messages.PAYMENT_SOURCE_EDIT_HELP_PAYPAL.format({ paypalURL: 'https://www.paypal.com' })
-									: A.Z.Messages.PAYMENT_SOURCE_EDIT_HELP_CARD
+								children: l ? A.Z.Messages.PAYMENT_SOURCE_EDIT_HELP_PAYPAL.format({ paypalURL: 'https://www.paypal.com' }) : A.Z.Messages.PAYMENT_SOURCE_EDIT_HELP_CARD
 							})
 						]
 					}),
@@ -215,8 +213,7 @@ class p extends (n = i.PureComponent) {
 		var s, t, n, a, i, r, o;
 		super(e),
 			g(this, 'handleSubmit', (e) => {
-				if ((e.preventDefault(), e.stopPropagation(), 0 === Object.values(this.state.dirtyFields).filter(S.lm).length))
-					this.props.onCancel();
+				if ((e.preventDefault(), e.stopPropagation(), 0 === Object.values(this.state.dirtyFields).filter(S.lm).length)) this.props.onCancel();
 				else {
 					let { billingAddress: e, isDefault: s, expiresMonth: t, expiresYear: n } = this.state;
 					this.props.onSubmit(this.props.paymentSource.id, {
@@ -248,11 +245,7 @@ class p extends (n = i.PureComponent) {
 				let { expirationDate: t } = e;
 				if ((this.setState({ expirationValid: s }), null == t || '' === t)) return;
 				let [n, a] = t.split('/');
-				this.handleFieldChange(Number(n), 'expiresMonth'),
-					this.handleFieldChange(
-						Number(''.concat(new Date().getFullYear().toString().slice(0, 2)).concat(a)),
-						'expiresYear'
-					);
+				this.handleFieldChange(Number(n), 'expiresMonth'), this.handleFieldChange(Number(''.concat(new Date().getFullYear().toString().slice(0, 2)).concat(a)), 'expiresYear');
 			}),
 			g(this, 'handleFieldChange', (e, s) => {
 				null != s &&

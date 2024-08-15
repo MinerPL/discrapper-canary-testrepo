@@ -49,11 +49,7 @@ function s(e, s, l, u) {
 }
 function o(e, t, n, a) {
 	var s = Object.getOwnPropertyDescriptor(a, n);
-	void 0 !== s.get
-		? s.configurable
-			? (Object.defineProperty(a, n, { value: e }), r.push([a, n, t, s]))
-			: i.push([t, n, e])
-		: ((a[n] = e), r.push([a, n, t]));
+	void 0 !== s.get ? (s.configurable ? (Object.defineProperty(a, n, { value: e }), r.push([a, n, t, s])) : i.push([t, n, e])) : ((a[n] = e), r.push([a, n, t]));
 }
 function l(e, t) {
 	return e < t ? -1 : e > t ? 1 : 0;

@@ -19,8 +19,8 @@ var i = n(735250),
 	_ = n(526120),
 	f = n(734893),
 	E = n(655359),
-	g = n(931261),
-	C = n(305762),
+	C = n(931261),
+	g = n(305762),
 	I = n(689938),
 	x = n(396056);
 function T(e) {
@@ -45,26 +45,26 @@ function N(e) {
 		l = (0, o.e7)([m.Z], () => m.Z.getChannel(n));
 	if (null == l) return null;
 	let r = null !== (t = (0, h.KS)(l)) && void 0 !== t ? t : c.TextIcon;
-	return (0, i.jsx)(C.Z, {
+	return (0, i.jsx)(g.Z, {
 		emojiId: a,
 		emojiName: s,
-		size: C.R.MEDIUM,
+		size: g.R.MEDIUM,
 		defaultComponent: (0, i.jsx)(r, { className: x.channelIcon })
 	});
 }
 function v(e) {
 	var t, n, s, d;
 	let { guildId: h, channel: m, className: p } = e,
-		{ channelAction: g, completed: C } = (0, E.P3)(h, m),
-		v = (0, E.K_)(h, null == g ? void 0 : g.channelId),
+		{ channelAction: C, completed: g } = (0, E.P3)(h, m),
+		v = (0, E.K_)(h, null == C ? void 0 : C.channelId),
 		S = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-		Z = (null == g ? void 0 : g.actionType) === f.oi.VIEW,
+		Z = (null == C ? void 0 : C.actionType) === f.oi.VIEW,
 		A = (0, c.useToken)(c.tokens.colors.WHITE),
 		[M, b] = a.useState(!1),
 		[R] = a.useState(new r.Z.Value(0)),
 		[j] = a.useState(new r.Z.Value(0));
 	a.useEffect(() => {
-		C
+		g
 			? r.Z.timing(R, {
 					toValue: 0,
 					duration: S ? 1 : 350,
@@ -77,9 +77,9 @@ function v(e) {
 					easing: r.Z.Easing.quad,
 					delay: 400
 				}).start();
-	}, [C, R, Z, S]),
+	}, [g, R, Z, S]),
 		a.useEffect(() => {
-			C &&
+			g &&
 				M &&
 				r.Z.timing(j, {
 					toValue: 1,
@@ -87,11 +87,11 @@ function v(e) {
 					easing: r.Z.Easing.quad,
 					delay: 400
 				}).start();
-		}, [C, j, M, S]);
+		}, [g, j, M, S]);
 	let L = a.useCallback(() => {
 		null != v && (0, _.gp)(h, v.channelId);
 	}, [h, v]);
-	return null == g || (Z && !M)
+	return null == C || (Z && !M)
 		? null
 		: (0, i.jsx)('div', {
 				className: l()(x.container, p),
@@ -145,9 +145,9 @@ function v(e) {
 								},
 								children: [
 									(0, i.jsx)(N, {
-										channelId: g.channelId,
-										emojiId: null === (s = g.emoji) || void 0 === s ? void 0 : s.id,
-										emojiName: null == g ? void 0 : null === (d = g.emoji) || void 0 === d ? void 0 : d.name
+										channelId: C.channelId,
+										emojiId: null === (s = C.emoji) || void 0 === s ? void 0 : s.id,
+										emojiName: null == C ? void 0 : null === (d = C.emoji) || void 0 === d ? void 0 : d.name
 									}),
 									(0, i.jsxs)('div', {
 										className: x.text,
@@ -155,7 +155,7 @@ function v(e) {
 											(0, i.jsx)(c.Text, {
 												variant: 'text-md/semibold',
 												color: 'header-primary',
-												children: g.title
+												children: C.title
 											}),
 											(0, i.jsx)(c.Text, {
 												variant: 'text-xxs/normal',
@@ -164,7 +164,7 @@ function v(e) {
 											})
 										]
 									}),
-									C
+									g
 										? (0, i.jsx)(c.CircleCheckIcon, {
 												size: 'custom',
 												color: 'currentColor',
@@ -180,7 +180,7 @@ function v(e) {
 }
 function S(e) {
 	let { guildId: t, channel: n, className: a } = e,
-		s = (0, g.g)(t),
+		s = (0, C.g)(t),
 		l = (0, o.e7)([p.ZP], () => {
 			var e;
 			return (null === (e = p.ZP.getSelfMember(t)) || void 0 === e ? void 0 : e.isPending) === !0;

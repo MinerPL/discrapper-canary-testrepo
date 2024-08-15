@@ -59,9 +59,7 @@ function I(e) {
 								children: [
 									(0, s.jsx)('div', {
 										className: E.iconWrapper,
-										children: (0, s.jsx)(d.Z, {
-											emojiName: null === (a = _.ZP.getByName('eyes')) || void 0 === a ? void 0 : a.surrogates
-										})
+										children: (0, s.jsx)(d.Z, { emojiName: null === (a = _.ZP.getByName('eyes')) || void 0 === a ? void 0 : a.surrogates })
 									}),
 									(0, s.jsx)(c.Text, {
 										variant: 'text-md/normal',
@@ -75,9 +73,7 @@ function I(e) {
 								children: [
 									(0, s.jsx)('div', {
 										className: E.iconWrapper,
-										children: (0, s.jsx)(d.Z, {
-											emojiName: null === (t = _.ZP.getByName('star_struck')) || void 0 === t ? void 0 : t.surrogates
-										})
+										children: (0, s.jsx)(d.Z, { emojiName: null === (t = _.ZP.getByName('star_struck')) || void 0 === t ? void 0 : t.surrogates })
 									}),
 									(0, s.jsx)(c.Text, {
 										variant: 'text-md/normal',
@@ -91,9 +87,7 @@ function I(e) {
 								children: [
 									(0, s.jsx)('div', {
 										className: E.iconWrapper,
-										children: (0, s.jsx)(d.Z, {
-											emojiName: null === (n = _.ZP.getByName('books')) || void 0 === n ? void 0 : n.surrogates
-										})
+										children: (0, s.jsx)(d.Z, { emojiName: null === (n = _.ZP.getByName('books')) || void 0 === n ? void 0 : n.surrogates })
 									}),
 									(0, s.jsx)(c.Text, {
 										variant: 'text-md/normal',

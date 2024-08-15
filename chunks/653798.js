@@ -60,16 +60,7 @@ function _(e) {
 	});
 }
 function E(e) {
-	let {
-			label: n,
-			value: t,
-			discounts: r,
-			originalAmount: l,
-			interval: u,
-			currency: I,
-			className: E,
-			intervalCount: T
-		} = e,
+	let { label: n, value: t, discounts: r, originalAmount: l, interval: u, currency: I, className: E, intervalCount: T } = e,
 		d = (e) => (null != r ? r.find((n) => n.type === e) : null),
 		N = d(i.eW.SUBSCRIPTION_PLAN),
 		M = d(i.eW.ENTITLEMENT),

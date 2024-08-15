@@ -2,10 +2,7 @@ var r = (function () {
 		function e(e, t) {
 			for (var n = 0; n < t.length; n++) {
 				var r = t[n];
-				(r.enumerable = r.enumerable || !1),
-					(r.configurable = !0),
-					'value' in r && (r.writable = !0),
-					Object.defineProperty(e, r.key, r);
+				(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 			}
 		}
 		return function (t, n, r) {
@@ -26,8 +23,7 @@ var r = (function () {
 		}
 		return (
 			!(function (e, t) {
-				if ('function' != typeof t && null !== t)
-					throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+				if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
 				(e.prototype = Object.create(t && t.prototype, {
 					constructor: {
 						value: e,
@@ -48,23 +44,20 @@ var r = (function () {
 				{
 					key: '__getValue',
 					value: function () {
-						for (var e = this._strings[0], t = 0; t < this._values.length; ++t)
-							e += this.__transformValue(this._values[t]) + this._strings[1 + t];
+						for (var e = this._strings[0], t = 0; t < this._values.length; ++t) e += this.__transformValue(this._values[t]) + this._strings[1 + t];
 						return e;
 					}
 				},
 				{
 					key: '__attach',
 					value: function () {
-						for (var e = 0; e < this._values.length; ++e)
-							this._values[e] instanceof i && this._values[e].__addChild(this);
+						for (var e = 0; e < this._values.length; ++e) this._values[e] instanceof i && this._values[e].__addChild(this);
 					}
 				},
 				{
 					key: '__detach',
 					value: function () {
-						for (var e = 0; e < this._values.length; ++e)
-							this._values[e] instanceof i && this._values[e].__removeChild(this);
+						for (var e = 0; e < this._values.length; ++e) this._values[e] instanceof i && this._values[e].__removeChild(this);
 					}
 				}
 			]),

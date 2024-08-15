@@ -19,11 +19,8 @@ var r = n(644387),
 			(e.prototype.isActive = function () {
 				var e,
 					t = (0, i.Y9)(this.target, this.observedBox);
-				if (((e = this.target), !(0, a.zd)(e) && !(0, a.jD)(e) && 'inline' === getComputedStyle(e).display))
-					this.lastReportedSize = t;
-				return (
-					this.lastReportedSize.inlineSize !== t.inlineSize || this.lastReportedSize.blockSize !== t.blockSize || !1
-				);
+				if (((e = this.target), !(0, a.zd)(e) && !(0, a.jD)(e) && 'inline' === getComputedStyle(e).display)) this.lastReportedSize = t;
+				return this.lastReportedSize.inlineSize !== t.inlineSize || this.lastReportedSize.blockSize !== t.blockSize || !1;
 			}),
 			e
 		);

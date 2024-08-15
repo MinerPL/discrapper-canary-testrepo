@@ -18,7 +18,7 @@ n.d(t, {
 		return h;
 	},
 	t1: function () {
-		return I;
+		return m;
 	},
 	v0: function () {
 		return r;
@@ -35,19 +35,7 @@ var r,
 	c = n(868888),
 	d = n(731965),
 	_ = n(433517);
-((s = r || (r = {})).ADMIN_UPSELL = 'admin_upsell'),
-	(s.GET_STARTED = 'get_started'),
-	(s.DISCOVERY = 'discovery'),
-	(s.PLAYSTYLE = 'playstyle'),
-	(s.TRAITS = 'traits'),
-	(s.GAMES = 'games'),
-	(s.SAVED_GUILDS = 'saved_guilds'),
-	(s.PREFERENCES = 'preferences'),
-	((o = i || (i = {})).NONE = 'none'),
-	(o.VALORANT = 'valorant'),
-	(o.GENSHIN = 'genshin'),
-	((l = a || (a = {})).USER_UPSELL = 'user_upsell'),
-	(l.USER_ONBOARDING = 'user_onboarding');
+((s = r || (r = {})).ADMIN_UPSELL = 'admin_upsell'), (s.GET_STARTED = 'get_started'), (s.DISCOVERY = 'discovery'), (s.PLAYSTYLE = 'playstyle'), (s.TRAITS = 'traits'), (s.GAMES = 'games'), (s.SAVED_GUILDS = 'saved_guilds'), (s.PREFERENCES = 'preferences'), ((o = i || (i = {})).NONE = 'none'), (o.VALORANT = 'valorant'), (o.GENSHIN = 'genshin'), ((l = a || (a = {})).USER_UPSELL = 'user_upsell'), (l.USER_ONBOARDING = 'user_onboarding');
 let E = (0, u.Z)(
 	(0, c.tJ)(
 		(e) => ({
@@ -138,7 +126,7 @@ function p() {
 		});
 	});
 }
-function I(e) {
+function m(e) {
 	var t;
 	let n = e.selectedGames,
 		r = null !== (t = e.selectedPlaystyle) && void 0 !== t ? t : void 0;

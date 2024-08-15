@@ -20,17 +20,7 @@ var n = t(735250),
 	N = t(689938),
 	C = t(733691);
 function m(e) {
-	let {
-			user: s,
-			guild: t,
-			className: i,
-			sectionTitle: m,
-			forcedDivider: A = !1,
-			withTutorial: O = !1,
-			showBorder: g = !1,
-			isTryItOutFlow: h = !1,
-			initialSelectedEffectId: p
-		} = e,
+	let { user: s, guild: t, className: i, sectionTitle: m, forcedDivider: A = !1, withTutorial: O = !1, showBorder: g = !1, isTryItOutFlow: h = !1, initialSelectedEffectId: p } = e,
 		R = (0, E.Kg)(s, t),
 		x = _.ZP.canUsePremiumProfileCustomization(s),
 		{ analyticsLocations: M } = (0, l.ZP)(),
@@ -80,9 +70,7 @@ function m(e) {
 						onClick: function () {
 							(0, E.s6)(null, R, t);
 						},
-						children: L
-							? N.Z.Messages.USER_SETTINGS_USE_DEFAULT_PROFILE_EFFECT
-							: N.Z.Messages.USER_SETTINGS_REMOVE_PROFILE_EFFECT
+						children: L ? N.Z.Messages.USER_SETTINGS_USE_DEFAULT_PROFILE_EFFECT : N.Z.Messages.USER_SETTINGS_REMOVE_PROFILE_EFFECT
 					})
 			]
 		})

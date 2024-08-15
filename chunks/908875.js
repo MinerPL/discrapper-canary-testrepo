@@ -1,8 +1,7 @@
 e.exports = function (e) {
 	let t = {
 			className: 'built_in',
-			begin:
-				'\\b(void|bool|int8|int16|int32|int64|int|uint8|uint16|uint32|uint64|uint|string|ref|array|double|float|auto|dictionary)'
+			begin: '\\b(void|bool|int8|int16|int32|int64|int|uint8|uint16|uint32|uint64|uint|string|ref|array|double|float|auto|dictionary)'
 		},
 		n = {
 			className: 'symbol',
@@ -20,54 +19,7 @@ e.exports = function (e) {
 		{
 			name: 'AngelScript',
 			aliases: ['asc'],
-			keywords: [
-				'for',
-				'in|0',
-				'break',
-				'continue',
-				'while',
-				'do|0',
-				'return',
-				'if',
-				'else',
-				'case',
-				'switch',
-				'namespace',
-				'is',
-				'cast',
-				'or',
-				'and',
-				'xor',
-				'not',
-				'get|0',
-				'in',
-				'inout|10',
-				'out',
-				'override',
-				'set|0',
-				'private',
-				'public',
-				'const',
-				'default|0',
-				'final',
-				'shared',
-				'external',
-				'mixin|10',
-				'enum',
-				'typedef',
-				'funcdef',
-				'this',
-				'super',
-				'import',
-				'from',
-				'interface',
-				'abstract|0',
-				'try',
-				'catch',
-				'protected',
-				'explicit',
-				'property'
-			],
+			keywords: ['for', 'in|0', 'break', 'continue', 'while', 'do|0', 'return', 'if', 'else', 'case', 'switch', 'namespace', 'is', 'cast', 'or', 'and', 'xor', 'not', 'get|0', 'in', 'inout|10', 'out', 'override', 'set|0', 'private', 'public', 'const', 'default|0', 'final', 'shared', 'external', 'mixin|10', 'enum', 'typedef', 'funcdef', 'this', 'super', 'import', 'from', 'interface', 'abstract|0', 'try', 'catch', 'protected', 'explicit', 'property'],
 			illegal: '(^using\\s+[A-Za-z0-9_\\.]+;$|\\bfunction\\s*[^\\(])',
 			contains: [
 				{

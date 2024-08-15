@@ -9,7 +9,7 @@ n.d(t, {
 		return E;
 	},
 	jU: function () {
-		return I;
+		return m;
 	},
 	nG: function () {
 		return h;
@@ -46,10 +46,7 @@ function h(e) {
 		() => {
 			let t = s.Z.getChannel(e),
 				n = o.Z.getGuild(null == t ? void 0 : t.getGuildId());
-			return (
-				!!(l.Z.can(_.Plq.ADMINISTRATOR, n) || l.Z.can(_.Plq.MANAGE_ROLES, t, void 0, void 0, !0) || l.Z.can(c.N, t)) ||
-				!1
-			);
+			return !!(l.Z.can(_.Plq.ADMINISTRATOR, n) || l.Z.can(_.Plq.MANAGE_ROLES, t, void 0, void 0, !0) || l.Z.can(c.N, t)) || !1;
 		},
 		[e]
 	);
@@ -57,6 +54,6 @@ function h(e) {
 function p(e) {
 	return (0, i.e7)([s.Z, l.Z], () => null != e && l.Z.can(_.Plq.MUTE_MEMBERS, s.Z.getChannel(e)), [e]);
 }
-function I(e) {
+function m(e) {
 	return !!(null != e && e.isGuildStageVoice() && a.Z.isLurking(e.guild_id) && d.Z.isPublic(e.id)) && l.Z.can(c.gl, e);
 }

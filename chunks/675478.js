@@ -24,7 +24,7 @@ n.d(t, {
 		return U;
 	},
 	fy: function () {
-		return I.fy;
+		return m.fy;
 	},
 	hW: function () {
 		return v;
@@ -65,8 +65,8 @@ var r = n(512722),
 	f = n(262847),
 	h = n(581883),
 	p = n(48481),
-	I = n(526761),
-	m = n(981631);
+	m = n(526761),
+	I = n(981631);
 function T(e, t, n) {
 	return (
 		t in e
@@ -89,8 +89,7 @@ d.Z.subscribe('CONNECTION_OPEN', () => {
 	d.Z.subscribe('CONNECTION_CLOSED', () => {
 		Date.now();
 	}),
-	'undefined' != typeof document &&
-		(document.addEventListener('mousedown', () => {}), document.addEventListener('keydown', () => {}));
+	'undefined' != typeof document && (document.addEventListener('mousedown', () => {}), document.addEventListener('keydown', () => {}));
 class N {
 	getEditInfo() {
 		return h.Z.getFullState()[this.type];
@@ -116,7 +115,7 @@ class N {
 							proto: o
 						},
 						delaySeconds: n,
-						jitter: n === I.fy.AUTOMATED || n === I.fy.DAILY,
+						jitter: n === m.fy.AUTOMATED || n === m.fy.DAILY,
 						partial: !0,
 						resetEditInfo: !1,
 						local: !0
@@ -124,7 +123,7 @@ class N {
 				: (this.logger.log('Updating '.concat(String(e), ' with delay ').concat(n)),
 					this.markDirty(o, {
 						delaySeconds: n,
-						jitter: n === I.fy.AUTOMATED || n === I.fy.DAILY
+						jitter: n === m.fy.AUTOMATED || n === m.fy.DAILY
 					}));
 	}
 	markDirty(e, t) {
@@ -132,8 +131,7 @@ class N {
 		i()(!__OVERLAY__, 'this cannot run in the overlay');
 		let { editInfo: r } = this.getEditInfo(),
 			a = { timeout: r.timeout };
-		if (!r.loaded)
-			throw Error('Cannot edit user settings proto because we have not yet loaded the stored version from the DB');
+		if (!r.loaded) throw Error('Cannot edit user settings proto because we have not yet loaded the stored version from the DB');
 		!1 !== t.dispatch &&
 			d.Z.dispatch({
 				type: 'USER_SETTINGS_PROTO_UPDATE',
@@ -145,19 +143,11 @@ class N {
 				local: !0
 			});
 		let s = null !== (n = t.delaySeconds) && void 0 !== n ? n : 0;
-		if (
-			(null != a.timeout && s < r.timeoutDelay && !r.rateLimited && (clearTimeout(a.timeout), (a.timeout = void 0)),
-			null == a.timeout)
-		) {
+		if ((null != a.timeout && s < r.timeoutDelay && !r.rateLimited && (clearTimeout(a.timeout), (a.timeout = void 0)), null == a.timeout)) {
 			let e = s * _.Z.Millis.SECOND;
-			t.jitter && (e += Math.floor(Math.random() * Math.min(e, 30 * _.Z.Millis.SECOND))),
-				this.logger.log('Scheduling save from markDirty'),
-				(a.timeout = setTimeout(this.persistChanges, e)),
-				(a.timeoutDelay = s);
+			t.jitter && (e += Math.floor(Math.random() * Math.min(e, 30 * _.Z.Millis.SECOND))), this.logger.log('Scheduling save from markDirty'), (a.timeout = setTimeout(this.persistChanges, e)), (a.timeoutDelay = s);
 		}
-		null != t.cleanup && (a.cleanupFuncs = [...r.cleanupFuncs, ...t.cleanup]),
-			null == r.protoToSave ? (a.protoToSave = e) : (a.protoToSave = (0, p.re)(this.ProtoClass, r.protoToSave, e)),
-			this.dispatchChanges(a);
+		null != t.cleanup && (a.cleanupFuncs = [...r.cleanupFuncs, ...t.cleanup]), null == r.protoToSave ? (a.protoToSave = e) : (a.protoToSave = (0, p.re)(this.ProtoClass, r.protoToSave, e)), this.dispatchChanges(a);
 	}
 	dispatchChanges(e) {
 		d.Z.dispatch({
@@ -187,7 +177,7 @@ class N {
 			try {
 				let {
 						body: { settings: t }
-					} = await s.tn.get({ url: m.ANM.USER_SETTINGS_PROTO(this.type) }),
+					} = await s.tn.get({ url: I.ANM.USER_SETTINGS_PROTO(this.type) }),
 					n = (0, p.d5)(this.ProtoClass, t);
 				if (null == n) {
 					this.dispatchChanges({
@@ -219,14 +209,11 @@ class N {
 	markDirtyFromMigration(e, t) {
 		i()(!__OVERLAY__, 'this cannot run in the overlay'),
 			this.logger.log('Marking dirty due to migrates'),
-			i()(
-				null == this.getEditInfo().editInfo.offlineEditDataVersion,
-				'offline changes are not supported with migrations'
-			),
+			i()(null == this.getEditInfo().editInfo.offlineEditDataVersion, 'offline changes are not supported with migrations'),
 			this.markDirty(e, {
 				cleanup: t,
 				dispatch: !1,
-				delaySeconds: I.fy.AUTOMATED,
+				delaySeconds: m.fy.AUTOMATED,
 				jitter: !0
 			});
 	}
@@ -244,9 +231,7 @@ class N {
 	scheduleSaveFromOfflineEdit() {
 		i()(!__OVERLAY__, 'this cannot run in the overlay'), this.logger.log('Scheduling save from offline edit');
 		let { editInfo: e } = this.getEditInfo();
-		i()(null != e.protoToSave, 'protoToSave cannot be null'),
-			i()(null != e.offlineEditDataVersion, 'offlineEditDataVersion cannot be null'),
-			i()(null == e.timeout, 'timeout must not be set already');
+		i()(null != e.protoToSave, 'protoToSave cannot be null'), i()(null != e.offlineEditDataVersion, 'offlineEditDataVersion cannot be null'), i()(null == e.timeout, 'timeout must not be set already');
 		let t = 5000 + Math.floor(5000 * Math.random()),
 			n = setTimeout(this.persistChanges, t);
 		this.dispatchChanges({
@@ -284,14 +269,13 @@ class N {
 				try {
 					this.saveLastSendTime();
 					let { body: n } = await s.tn.patch({
-						url: m.ANM.USER_SETTINGS_PROTO(this.type),
+						url: I.ANM.USER_SETTINGS_PROTO(this.type),
 						body: {
 							settings: t,
 							required_data_version: e.offlineEditDataVersion
 						}
 					});
-					n.out_of_date && this.logger.log('Proto was out of date, discarding changes'),
-						this.getEditInfo().editInfo.cleanupFuncs.forEach((e) => e());
+					n.out_of_date && this.logger.log('Proto was out of date, discarding changes'), this.getEditInfo().editInfo.cleanupFuncs.forEach((e) => e());
 					let r = (0, p.d5)(this.ProtoClass, n.settings);
 					if (null == r) return;
 					d.Z.dispatch({
@@ -308,33 +292,23 @@ class N {
 					var n, r;
 					if (429 === e.status) {
 						this.logger.log('Rate limited, scheduling retry');
-						let t = setTimeout(
-							this.persistChanges,
-							Math.min(
-								30 * _.Z.Millis.SECOND,
-								(null !== (r = e.body.retry_after) && void 0 !== r ? r : 60) * _.Z.Millis.SECOND
-							)
-						);
+						let t = setTimeout(this.persistChanges, Math.min(30 * _.Z.Millis.SECOND, (null !== (r = e.body.retry_after) && void 0 !== r ? r : 60) * _.Z.Millis.SECOND));
 						this.dispatchChanges({
 							rateLimited: !0,
 							timeout: t
 						});
-					} else if (
-						400 === e.status &&
-						(null === (n = e.body) || void 0 === n ? void 0 : n.code) === m.evJ.INVALID_USER_SETTINGS_DATA
-					)
-						throw (this.logger.log('Reloading do to invalid data'), this.loadIfNecessary(!0), e);
+					} else if (400 === e.status && (null === (n = e.body) || void 0 === n ? void 0 : n.code) === I.evJ.INVALID_USER_SETTINGS_DATA) throw (this.logger.log('Reloading do to invalid data'), this.loadIfNecessary(!0), e);
 					else throw (this.logger.log('Unknown user settings error'), e);
 				}
 			}),
 			(this.logger = new a.Y(this.ProtoClass.typeName));
 	}
 }
-let v = new N(u.o8, I.yP.PRELOADED_USER_SETTINGS),
-	O = new N(l.ji, I.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+let v = new N(u.o8, m.yP.PRELOADED_USER_SETTINGS),
+	O = new N(l.ji, m.yP.FRECENCY_AND_FAVORITES_SETTINGS),
 	R = {
-		[I.yP.PRELOADED_USER_SETTINGS]: v,
-		[I.yP.FRECENCY_AND_FAVORITES_SETTINGS]: O
+		[m.yP.PRELOADED_USER_SETTINGS]: v,
+		[m.yP.FRECENCY_AND_FAVORITES_SETTINGS]: O
 	};
 function C(e, t, n) {
 	return v.updateAsync('guilds', (n) => (0, p.u0)(n, e, t), n);
@@ -349,18 +323,16 @@ function D(e) {
 			if ((0, E.jl)(t.dismissedContents, e)) return !1;
 			t.dismissedContents = (0, E.GV)(t.dismissedContents, e);
 		},
-		I.fy.INFREQUENT_USER_ACTION
+		m.fy.INFREQUENT_USER_ACTION
 	);
 }
 function L(e, t) {
 	return v.updateAsync(
 		'userContent',
 		(n) => {
-			null == n.recurringDismissibleContentStates[e]
-				? (n.recurringDismissibleContentStates[e] = { lastDismissedVersion: t })
-				: (n.recurringDismissibleContentStates[e].lastDismissedVersion = t);
+			null == n.recurringDismissibleContentStates[e] ? (n.recurringDismissibleContentStates[e] = { lastDismissedVersion: t }) : (n.recurringDismissibleContentStates[e].lastDismissedVersion = t);
 		},
-		I.fy.INFREQUENT_USER_ACTION
+		m.fy.INFREQUENT_USER_ACTION
 	);
 }
 function b(e) {
@@ -370,7 +342,7 @@ function b(e) {
 			if (!(0, E.jl)(t.dismissedContents, e)) return !1;
 			t.dismissedContents = (0, E.jx)(t.dismissedContents, e);
 		},
-		I.fy.INFREQUENT_USER_ACTION
+		m.fy.INFREQUENT_USER_ACTION
 	);
 }
 function M(e) {
@@ -380,7 +352,7 @@ function M(e) {
 			if (null == t.recurringDismissibleContentStates[e]) return !1;
 			t.recurringDismissibleContentStates[e].lastDismissedVersion = 0;
 		},
-		I.fy.INFREQUENT_USER_ACTION
+		m.fy.INFREQUENT_USER_ACTION
 	);
 }
 function P() {
@@ -389,7 +361,7 @@ function P() {
 		(e) => {
 			(e.dismissedContents = new Uint8Array()), (e.recurringDismissibleContentStates = {});
 		},
-		I.fy.INFREQUENT_USER_ACTION
+		m.fy.INFREQUENT_USER_ACTION
 	);
 }
 function U() {
@@ -400,6 +372,6 @@ function U() {
 			for (let e of Object.keys(o.z)) t = (0, E.GV)(t, o.z[e]);
 			e.dismissedContents = t;
 		},
-		I.fy.INFREQUENT_USER_ACTION
+		m.fy.INFREQUENT_USER_ACTION
 	);
 }

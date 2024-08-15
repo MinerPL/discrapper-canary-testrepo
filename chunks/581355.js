@@ -20,18 +20,7 @@ var a = t(735250),
 	x = t(689938),
 	I = t(469433);
 function T(e) {
-	let {
-		guild: n,
-		channel: t,
-		stageInstance: l,
-		headerId: s,
-		onClose: o,
-		loading: r,
-		error: c,
-		onSave: u,
-		defaultOptions: m,
-		isSlideReady: h
-	} = e;
+	let { guild: n, channel: t, stageInstance: l, headerId: s, onClose: o, loading: r, error: c, onSave: u, defaultOptions: m, isSlideReady: h } = e;
 	return (0, a.jsxs)(a.Fragment, {
 		children: [
 			(0, a.jsxs)('div', {
@@ -54,15 +43,13 @@ function T(e) {
 						variant: 'heading-xl/semibold',
 						color: 'header-primary',
 						className: I.headerTitle,
-						children:
-							null == l ? x.Z.Messages.START_STAGE_CHANNEL_EVENT_MODAL_TITLE : x.Z.Messages.EDIT_STAGE_CHANNEL_TITLE
+						children: null == l ? x.Z.Messages.START_STAGE_CHANNEL_EVENT_MODAL_TITLE : x.Z.Messages.EDIT_STAGE_CHANNEL_TITLE
 					}),
 					(0, a.jsx)(i.Text, {
 						variant: 'text-sm/normal',
 						color: 'header-secondary',
 						className: I.headerSubtitle,
-						children:
-							null == l ? x.Z.Messages.START_STAGE_CHANNEL_EVENT_MODAL_SUBTITLE : x.Z.Messages.EDIT_STAGE_SUBTITLE
+						children: null == l ? x.Z.Messages.START_STAGE_CHANNEL_EVENT_MODAL_SUBTITLE : x.Z.Messages.EDIT_STAGE_SUBTITLE
 					})
 				]
 			}),

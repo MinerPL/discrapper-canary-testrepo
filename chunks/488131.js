@@ -26,14 +26,14 @@ var r = n(512722),
 	f = n(695346),
 	h = n(703558),
 	p = n(944486),
-	I = n(979651),
-	m = n(585483),
+	m = n(979651),
+	I = n(585483),
 	T = n(124368),
 	g = n(981631),
 	S = n(176505);
 function A(e, t, n) {
 	u.UI.dispatch(g.CkL.POPOUT_CLOSE);
-	let r = !s().isEmpty(I.Z.getVoiceStatesForChannel(e.id));
+	let r = !s().isEmpty(m.Z.getVoiceStatesForChannel(e.id));
 	if (t || !f.vF.getSetting() || __OVERLAY__ || r) {
 		o.Z.dispatch({
 			type: 'SIDEBAR_CLOSE',
@@ -45,12 +45,9 @@ function A(e, t, n) {
 	i()(null != e.parent_id, 'all threads must have parents');
 	let a = p.Z.getChannelId();
 	e.parent_id !== a && !(0, S.ME)(a) && (0, E.Kh)(e.parent_id),
-		(0, _.uL)(
-			g.Z5c.CHANNEL_THREAD_VIEW((0, d.e)(e), (0, S.ME)(a) ? S.oC.GUILD_HOME : e.parent_id, e.id),
-			e.isForumPost() ? { source: T.on.FORUM } : void 0
-		),
+		(0, _.uL)(g.Z5c.CHANNEL_THREAD_VIEW((0, d.e)(e), (0, S.ME)(a) ? S.oC.GUILD_HOME : e.parent_id, e.id), e.isForumPost() ? { source: T.on.FORUM } : void 0),
 		setTimeout(() => {
-			m.S.dispatch(g.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
+			I.S.dispatch(g.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
 		}, 0);
 }
 function N(e, t, n) {

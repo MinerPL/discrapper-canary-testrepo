@@ -17,11 +17,7 @@ function s(e) {
 }
 function o(e) {
 	var t, n;
-	return (
-		null !== (n = null === (t = i.default.getUser(e)) || void 0 === t ? void 0 : t.hasFlag(a.xW$.SPAMMER)) &&
-		void 0 !== n &&
-		n
-	);
+	return null !== (n = null === (t = i.default.getUser(e)) || void 0 === t ? void 0 : t.hasFlag(a.xW$.SPAMMER)) && void 0 !== n && n;
 }
 function l(e) {
 	return o(e.author.id) && !(0, r.nY)(e);

@@ -17,7 +17,6 @@ for (
 	r++
 )
 	e.EXP_TABLE[r] = 1 << r;
-for (var r = 8; r < 256; r++)
-	e.EXP_TABLE[r] = e.EXP_TABLE[r - 4] ^ e.EXP_TABLE[r - 5] ^ e.EXP_TABLE[r - 6] ^ e.EXP_TABLE[r - 8];
+for (var r = 8; r < 256; r++) e.EXP_TABLE[r] = e.EXP_TABLE[r - 4] ^ e.EXP_TABLE[r - 5] ^ e.EXP_TABLE[r - 6] ^ e.EXP_TABLE[r - 8];
 for (var r = 0; r < 255; r++) e.LOG_TABLE[e.EXP_TABLE[r]] = r;
 t.exports = e;

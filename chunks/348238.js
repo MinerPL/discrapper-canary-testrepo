@@ -158,9 +158,7 @@ function j(e, t, s, l) {
 									});
 							}
 							{
-								let { default: e } = await Promise.all([n.e('92557'), n.e('29975'), n.e('37220'), n.e('31766')]).then(
-									n.bind(n, 225138)
-								);
+								let { default: e } = await Promise.all([n.e('92557'), n.e('29975'), n.e('37220'), n.e('31766')]).then(n.bind(n, 225138));
 								return (n) =>
 									(0, i.jsx)(e, {
 										...n,
@@ -228,10 +226,7 @@ function k(e, t) {
 	);
 }
 function G(e, t, n) {
-	let { canShowReactionsOnMessageHover: i } = p.Z.useExperiment(
-			{ location: 'useHoveredMessage' },
-			{ autoTrackExposure: !1 }
-		),
+	let { canShowReactionsOnMessageHover: i } = p.Z.useExperiment({ location: 'useHoveredMessage' }, { autoTrackExposure: !1 }),
 		s = ''.concat(e, ':').concat(t),
 		r = a.useRef(n),
 		[l, o] = a.useState(n);
@@ -255,10 +250,7 @@ function F(e, t) {
 		l = a.useCallback(
 			(t) => {
 				var n, a;
-				let s =
-					null !== (a = null === (n = (0, T.uB)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a
-						? a
-						: null;
+				let s = null !== (a = null === (n = (0, T.uB)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;
 				(t.target === t.currentTarget || t.currentTarget.contains(s)) && (r(!0), i(!0)), null != e && e(t);
 			},
 			[e]
@@ -268,10 +260,7 @@ function F(e, t) {
 		handleBlur: a.useCallback(
 			(e) => {
 				var n, a;
-				let s =
-					null !== (a = null === (n = (0, T.uB)(e)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a
-						? a
-						: null;
+				let s = null !== (a = null === (n = (0, T.uB)(e)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;
 				(e.target === e.currentTarget || !e.currentTarget.contains(s)) && i(!1), null != t && t(e);
 			},
 			[t]

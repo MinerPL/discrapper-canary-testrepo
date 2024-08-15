@@ -38,8 +38,8 @@ var r = n(963663),
 	f = n(779138),
 	h = n(81272),
 	p = n(306670),
-	I = n(320564),
-	m = n(25163),
+	m = n(320564),
+	I = n(25163),
 	T = n(869940),
 	g = n(904838),
 	S = n(740519),
@@ -124,13 +124,7 @@ class K {
 				let n = this.collection.getItem(t.parentKey),
 					r = (0, G._P)(n, this.collection),
 					i = 'rtl' === this.direction ? (0, G.Em)(r, t.index - 1) : (0, G.Em)(r, t.index + 1);
-				return i
-					? i.key
-					: 'row' === this.focusMode
-						? t.parentKey
-						: 'rtl' === this.direction
-							? this.getFirstKey(e)
-							: this.getLastKey(e);
+				return i ? i.key : 'row' === this.focusMode ? t.parentKey : 'rtl' === this.direction ? this.getFirstKey(e) : this.getLastKey(e);
 			}
 		}
 	}
@@ -145,13 +139,7 @@ class K {
 				let n = this.collection.getItem(t.parentKey),
 					r = (0, G._P)(n, this.collection),
 					i = 'rtl' === this.direction ? (0, G.Em)(r, t.index + 1) : (0, G.Em)(r, t.index - 1);
-				return i
-					? i.key
-					: 'row' === this.focusMode
-						? t.parentKey
-						: 'rtl' === this.direction
-							? this.getLastKey(e)
-							: this.getFirstKey(e);
+				return i ? i.key : 'row' === this.focusMode ? t.parentKey : 'rtl' === this.direction ? this.getLastKey(e) : this.getFirstKey(e);
 			}
 		}
 	}
@@ -198,25 +186,11 @@ class K {
 	}
 	getPageHeight() {
 		var e, t, n;
-		return this.layout
-			? null === (e = this.layout.virtualizer) || void 0 === e
-				? void 0
-				: e.visibleRect.height
-			: null === (n = this.ref) || void 0 === n
-				? void 0
-				: null === (t = n.current) || void 0 === t
-					? void 0
-					: t.offsetHeight;
+		return this.layout ? (null === (e = this.layout.virtualizer) || void 0 === e ? void 0 : e.visibleRect.height) : null === (n = this.ref) || void 0 === n ? void 0 : null === (t = n.current) || void 0 === t ? void 0 : t.offsetHeight;
 	}
 	getContentHeight() {
 		var e, t;
-		return this.layout
-			? this.layout.getContentSize().height
-			: null === (t = this.ref) || void 0 === t
-				? void 0
-				: null === (e = t.current) || void 0 === e
-					? void 0
-					: e.scrollHeight;
+		return this.layout ? this.layout.getContentSize().height : null === (t = this.ref) || void 0 === t ? void 0 : null === (e = t.current) || void 0 === e ? void 0 : e.scrollHeight;
 	}
 	getKeyPageAbove(e) {
 		let t = this.getItemRect(e);
@@ -257,13 +231,7 @@ class K {
 		return null;
 	}
 	constructor(e) {
-		(this.collection = e.collection),
-			(this.disabledKeys = e.disabledKeys),
-			(this.ref = e.ref),
-			(this.direction = e.direction),
-			(this.collator = e.collator),
-			(this.layout = e.layout),
-			(this.focusMode = e.focusMode || 'row');
+		(this.collection = e.collection), (this.disabledKeys = e.disabledKeys), (this.ref = e.ref), (this.direction = e.direction), (this.collator = e.collator), (this.layout = e.layout), (this.focusMode = e.focusMode || 'row');
 	}
 }
 let z = new WeakMap();
@@ -272,12 +240,7 @@ function Q(e, t) {
 	let {
 			getRowText: n = (e) => {
 				var n, r, i, a;
-				return null !== (a = null === (n = (r = t.collection).getTextValue) || void 0 === n ? void 0 : n.call(r, e)) &&
-					void 0 !== a
-					? a
-					: null === (i = t.collection.getItem(e)) || void 0 === i
-						? void 0
-						: i.textValue;
+				return null !== (a = null === (n = (r = t.collection).getTextValue) || void 0 === n ? void 0 : n.call(r, e)) && void 0 !== a ? a : null === (i = t.collection.getItem(e)) || void 0 === i ? void 0 : i.textValue;
 			}
 		} = e,
 		r = (0, V.qb)(W(q), '@react-aria/grid'),
@@ -305,15 +268,7 @@ function Q(e, t) {
 			let e = n(o.keys().next().value);
 			e && u.push(r.format('deselectedItem', { item: e }));
 		}
-		'multiple' === t.selectionManager.selectionMode &&
-			(0 === u.length ||
-				'all' === i ||
-				i.size > 1 ||
-				'all' === a.current ||
-				(null === (e = a.current) || void 0 === e ? void 0 : e.size) > 1) &&
-			u.push('all' === i ? r.format('selectedAll') : r.format('selectedCount', { count: i.size })),
-			u.length > 0 && (0, Y.xQ)(u.join(' ')),
-			(a.current = i);
+		'multiple' === t.selectionManager.selectionMode && (0 === u.length || 'all' === i || i.size > 1 || 'all' === a.current || (null === (e = a.current) || void 0 === e ? void 0 : e.size) > 1) && u.push('all' === i ? r.format('selectedAll') : r.format('selectedCount', { count: i.size })), u.length > 0 && (0, Y.xQ)(u.join(' ')), (a.current = i);
 	}, [i]);
 }
 function X(e, t) {
@@ -335,19 +290,9 @@ function $(e) {
 	return (0, B.PK)(i);
 }
 function J(e, t, n) {
-	let {
-			isVirtualized: r,
-			keyboardDelegate: i,
-			focusMode: a,
-			scrollRef: s,
-			getRowText: o,
-			onRowAction: l,
-			onCellAction: u
-		} = e,
+	let { isVirtualized: r, keyboardDelegate: i, focusMode: a, scrollRef: s, getRowText: o, onRowAction: l, onCellAction: u } = e,
 		{ selectionManager: c } = t;
-	!e['aria-label'] &&
-		!e['aria-labelledby'] &&
-		console.warn('An aria-label or aria-labelledby prop is required for accessibility.');
+	!e['aria-label'] && !e['aria-labelledby'] && console.warn('An aria-label or aria-labelledby prop is required for accessibility.');
 	let d = (0, V.Xe)({
 			usage: 'search',
 			sensitivity: 'base'
@@ -382,11 +327,11 @@ function J(e, t, n) {
 			onCellAction: u
 		}
 	});
-	let I = $({
+	let m = $({
 			selectionManager: c,
 			hasItemActions: !!(l || u)
 		}),
-		m = (0, B.zL)(e, { labelable: !0 }),
+		I = (0, B.zL)(e, { labelable: !0 }),
 		T = (0, F.useCallback)(
 			(e) => {
 				if (c.isFocused) {
@@ -406,7 +351,7 @@ function J(e, t, n) {
 		),
 		S = (0, H.pu)(n, { isDisabled: 0 !== t.collection.size }),
 		A = (0, B.dG)(
-			m,
+			I,
 			{
 				role: 'grid',
 				id: p,
@@ -414,13 +359,9 @@ function J(e, t, n) {
 			},
 			t.isKeyboardNavigationDisabled ? g : h,
 			0 === t.collection.size && { tabIndex: S ? -1 : 0 },
-			I
+			m
 		);
-	return (
-		r && ((A['aria-rowcount'] = t.collection.size), (A['aria-colcount'] = t.collection.columnCount)),
-		Q({ getRowText: o }, t),
-		{ gridProps: A }
-	);
+	return r && ((A['aria-rowcount'] = t.collection.size), (A['aria-colcount'] = t.collection.columnCount)), Q({ getRowText: o }, t), { gridProps: A };
 }
 function ee() {
 	return { rowGroupProps: { role: 'rowgroup' } };
@@ -473,8 +414,7 @@ function en(e, t, n) {
 					return;
 				}
 			}
-			((null != _.current && i.key !== _.current) || !n.current.contains(document.activeElement)) &&
-				(0, H.ex)(n.current);
+			((null != _.current && i.key !== _.current) || !n.current.contains(document.activeElement)) && (0, H.ex)(n.current);
 		},
 		{ itemProps: f, isPressed: h } = (0, Z.Cs)({
 			selectionManager: t.selectionManager,
@@ -494,49 +434,25 @@ function en(e, t, n) {
 				switch (((r.currentNode = document.activeElement), e.key)) {
 					case 'ArrowLeft': {
 						let t = 'rtl' === u ? r.nextNode() : r.previousNode();
-						if (('child' === s && t === n.current && (t = null), t))
-							e.preventDefault(),
-								e.stopPropagation(),
-								(0, H.ex)(t),
-								(0, B.Gt)(t, { containingElement: (0, B.rP)(n.current) });
+						if (('child' === s && t === n.current && (t = null), t)) e.preventDefault(), e.stopPropagation(), (0, H.ex)(t), (0, B.Gt)(t, { containingElement: (0, B.rP)(n.current) });
 						else {
 							if (c.getKeyLeftOf(i.key) !== i.key) break;
-							e.preventDefault(),
-								e.stopPropagation(),
-								'cell' === s && 'rtl' === u
-									? ((0, H.ex)(n.current), (0, B.Gt)(n.current, { containingElement: (0, B.rP)(n.current) }))
-									: ((r.currentNode = n.current),
-										(t = 'rtl' === u ? r.firstChild() : er(r)) &&
-											((0, H.ex)(t), (0, B.Gt)(t, { containingElement: (0, B.rP)(n.current) })));
+							e.preventDefault(), e.stopPropagation(), 'cell' === s && 'rtl' === u ? ((0, H.ex)(n.current), (0, B.Gt)(n.current, { containingElement: (0, B.rP)(n.current) })) : ((r.currentNode = n.current), (t = 'rtl' === u ? r.firstChild() : er(r)) && ((0, H.ex)(t), (0, B.Gt)(t, { containingElement: (0, B.rP)(n.current) })));
 						}
 						break;
 					}
 					case 'ArrowRight': {
 						let t = 'rtl' === u ? r.previousNode() : r.nextNode();
-						if (('child' === s && t === n.current && (t = null), t))
-							e.preventDefault(),
-								e.stopPropagation(),
-								(0, H.ex)(t),
-								(0, B.Gt)(t, { containingElement: (0, B.rP)(n.current) });
+						if (('child' === s && t === n.current && (t = null), t)) e.preventDefault(), e.stopPropagation(), (0, H.ex)(t), (0, B.Gt)(t, { containingElement: (0, B.rP)(n.current) });
 						else {
 							if (c.getKeyRightOf(i.key) !== i.key) break;
-							e.preventDefault(),
-								e.stopPropagation(),
-								'cell' === s && 'ltr' === u
-									? ((0, H.ex)(n.current), (0, B.Gt)(n.current, { containingElement: (0, B.rP)(n.current) }))
-									: ((r.currentNode = n.current),
-										(t = 'rtl' === u ? er(r) : r.firstChild()) &&
-											((0, H.ex)(t), (0, B.Gt)(t, { containingElement: (0, B.rP)(n.current) })));
+							e.preventDefault(), e.stopPropagation(), 'cell' === s && 'ltr' === u ? ((0, H.ex)(n.current), (0, B.Gt)(n.current, { containingElement: (0, B.rP)(n.current) })) : ((r.currentNode = n.current), (t = 'rtl' === u ? er(r) : r.firstChild()) && ((0, H.ex)(t), (0, B.Gt)(t, { containingElement: (0, B.rP)(n.current) })));
 						}
 						break;
 					}
 					case 'ArrowUp':
 					case 'ArrowDown':
-						!e.altKey &&
-							n.current.contains(e.target) &&
-							(e.stopPropagation(),
-							e.preventDefault(),
-							n.current.parentElement.dispatchEvent(new KeyboardEvent(e.nativeEvent.type, e.nativeEvent)));
+						!e.altKey && n.current.contains(e.target) && (e.stopPropagation(), e.preventDefault(), n.current.parentElement.dispatchEvent(new KeyboardEvent(e.nativeEvent.type, e.nativeEvent)));
 				}
 			},
 			onFocus: (e) => {
@@ -605,8 +521,8 @@ q = {
 	'he-IL': f.Z,
 	'hr-HR': h.Z,
 	'hu-HU': p.Z,
-	'it-IT': I.Z,
-	'ja-JP': m.Z,
+	'it-IT': m.Z,
+	'ja-JP': I.Z,
 	'ko-KR': T.Z,
 	'lt-LT': g.Z,
 	'lv-LV': S.Z,

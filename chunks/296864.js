@@ -37,10 +37,7 @@ function T(e) {
 		[w, R] = a.useState(y),
 		[b, { loading: M, error: G }] = (0, m.Z)();
 	if (!Z) return null;
-	let P =
-			A === E.j8.PUBLIC
-				? g.Z.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PUBLIC_LABEL
-				: g.Z.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PRIVATE_LABEL,
+	let P = A === E.j8.PUBLIC ? g.Z.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PUBLIC_LABEL : g.Z.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PRIVATE_LABEL,
 		O = () => {
 			null == T || T(), I(), (0, h.Ku)(!1);
 		},

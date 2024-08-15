@@ -13,10 +13,7 @@ function l(e) {
 	let l = (0, i.B3)(e);
 	if (null != l) {
 		var a, u;
-		return [
-			null === (a = l.params) || void 0 === a ? void 0 : a.guildId,
-			null === (u = l.params) || void 0 === u ? void 0 : u.channelId
-		];
+		return [null === (a = l.params) || void 0 === a ? void 0 : a.guildId, null === (u = l.params) || void 0 === u ? void 0 : u.channelId];
 	}
 	return [void 0, void 0];
 }

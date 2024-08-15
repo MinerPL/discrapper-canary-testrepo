@@ -42,21 +42,7 @@ function U(e) {
 }
 function f(e) {
 	var A;
-	let {
-			'aria-labelledby': t,
-			className: r,
-			id: o,
-			autoFocus: c,
-			maxLength: C,
-			onChange: p,
-			onSubmit: f,
-			showCharacterCount: v = !1,
-			placeholder: q,
-			required: E,
-			value: N,
-			enableThemedBackground: D = !1,
-			parentModalKey: O
-		} = e,
+	let { 'aria-labelledby': t, className: r, id: o, autoFocus: c, maxLength: C, onChange: p, onSubmit: f, showCharacterCount: v = !1, placeholder: q, required: E, value: N, enableThemedBackground: D = !1, parentModalKey: O } = e,
 		R = (0, l.useFormContext)(),
 		[x, L] = n.useState(() => (0, i.JM)(N)),
 		b = n.useRef(!0 === c),

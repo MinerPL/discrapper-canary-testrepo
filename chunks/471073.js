@@ -18,9 +18,7 @@ var o,
 	p = n(911969),
 	N = n(603721),
 	m = n(70956);
-((o = E || (E = {}))[(o.IN_FLIGHT = 0)] = 'IN_FLIGHT'),
-	(o[(o.ERRORED = 1)] = 'ERRORED'),
-	(o[(o.SUCCEEDED = 2)] = 'SUCCEEDED');
+((o = E || (E = {}))[(o.IN_FLIGHT = 0)] = 'IN_FLIGHT'), (o[(o.ERRORED = 1)] = 'ERRORED'), (o[(o.SUCCEEDED = 2)] = 'SUCCEEDED');
 class g extends (T = S.ZP.Store) {
 	getModalState(e) {
 		return e !== l ? null : u;

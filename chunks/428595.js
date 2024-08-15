@@ -13,8 +13,8 @@ var r = n(392711),
 	f = n(51144),
 	h = n(298552),
 	p = n(444758),
-	I = n(723454),
-	m = n(772096),
+	m = n(723454),
+	I = n(772096),
 	T = n(800927),
 	g = n(945884),
 	S = n(594199),
@@ -30,7 +30,7 @@ let D = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
 	b = /^ *>>> ?/,
 	M = /^ *> ?/gm;
 function P(e) {
-	let t = (0, m.yw)(e[1]);
+	let t = (0, I.yw)(e[1]);
 	if (null == t)
 		return {
 			type: 'text',
@@ -95,7 +95,7 @@ let U = (e) => {
 				);
 			}
 		},
-		link: m.ZP,
+		link: I.ZP,
 		autolink: {
 			...s().defaultRules.autolink,
 			parse: P
@@ -250,10 +250,7 @@ let U = (e) => {
 		commandMention: {
 			order: s().defaultRules.text.order,
 			requiredFirstCharacters: ['<'],
-			match: (e) =>
-				/^<\/((?:[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})(?: [-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})?(?: [-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})?):(\d+)>/u.exec(
-					e
-				),
+			match: (e) => /^<\/((?:[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})(?: [-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})?(?: [-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})?):(\d+)>/u.exec(e),
 			parse(e, t, n) {
 				if (n.returnMentionIds)
 					return {
@@ -369,27 +366,13 @@ let U = (e) => {
 				id: e[1]
 			})
 		},
-		heading: I.Z,
+		heading: m.Z,
 		list: T.Z,
 		subtext: g.Z
 	},
 	G = (0, v.Z)([x, A.Z]),
 	k = i().omit(G, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'subtext']),
-	B = i().omit(G, [
-		'inlineCode',
-		'codeBlock',
-		'br',
-		'blockQuote',
-		'autolink',
-		'url',
-		'attachmentLink',
-		'mention',
-		'roleMention',
-		'channelMention',
-		'channelOrMessageUrl',
-		'mediaPostLink',
-		'subtext'
-	]),
+	B = i().omit(G, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'autolink', 'url', 'attachmentLink', 'mention', 'roleMention', 'channelMention', 'channelOrMessageUrl', 'mediaPostLink', 'subtext']),
 	F = i().omit(G, ['codeBlock', 'br', 'mention', 'channel', 'roleMention', 'attachmentLink', 'subtext']),
 	V = i().omit(
 		(0, v.Z)([
@@ -408,17 +391,7 @@ let U = (e) => {
 		['blockQuote', 'codeBlock', 'br']
 	),
 	H = i().omit(G, ['codeBlock', 'br', 'blockQuote']),
-	Z = i().omit(G, [
-		'codeBlock',
-		'br',
-		'attachmentLink',
-		'mention',
-		'roleMention',
-		'channel',
-		'paragraph',
-		'newline',
-		'subtext'
-	]),
+	Z = i().omit(G, ['codeBlock', 'br', 'attachmentLink', 'mention', 'roleMention', 'channel', 'paragraph', 'newline', 'subtext']),
 	Y = i().omit(G, ['codeBlock', 'blockQuote', 'br']),
 	j = i().omit(G, ['codeBlock', 'br', 'inlineCode']);
 function W(e, t) {
@@ -429,8 +402,7 @@ let K = (0, v.Z)([
 		highlightWord: {
 			order: -1,
 			match(e, t) {
-				if ((null != t.parseDepth && t.parseDepth > 10) || null == t.highlightWord || 0 === t.highlightWord.length)
-					return null;
+				if ((null != t.parseDepth && t.parseDepth > 10) || null == t.highlightWord || 0 === t.highlightWord.length) return null;
 				let n = e.indexOf(t.highlightWord);
 				if (-1 === n) return null;
 				let r = !W(e, n);

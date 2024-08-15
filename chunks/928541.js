@@ -22,17 +22,10 @@ function _(e) {
 		r(e);
 	});
 }
-((n = a || (a = {}))[(n.PENDING = 0)] = 'PENDING'),
-	(n[(n.RESOLVED = 1)] = 'RESOLVED'),
-	(n[(n.REJECTED = 2)] = 'REJECTED');
+((n = a || (a = {}))[(n.PENDING = 0)] = 'PENDING'), (n[(n.RESOLVED = 1)] = 'RESOLVED'), (n[(n.REJECTED = 2)] = 'REJECTED');
 class E {
 	constructor(e) {
-		E.prototype.__init.call(this),
-			E.prototype.__init2.call(this),
-			E.prototype.__init3.call(this),
-			E.prototype.__init4.call(this),
-			(this._state = a.PENDING),
-			(this._handlers = []);
+		E.prototype.__init.call(this), E.prototype.__init2.call(this), E.prototype.__init3.call(this), E.prototype.__init4.call(this), (this._state = a.PENDING), (this._handlers = []);
 		try {
 			e(this._resolve, this._reject);
 		} catch (e) {
@@ -114,10 +107,7 @@ class E {
 			let e = this._handlers.slice();
 			(this._handlers = []),
 				e.forEach((e) => {
-					if (!e[0])
-						this._state === a.RESOLVED && e[1](this._value),
-							this._state === a.REJECTED && e[2](this._value),
-							(e[0] = !0);
+					if (!e[0]) this._state === a.RESOLVED && e[1](this._value), this._state === a.REJECTED && e[2](this._value), (e[0] = !0);
 				});
 		};
 	}

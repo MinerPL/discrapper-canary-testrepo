@@ -7,13 +7,7 @@ var r = n(903799),
 	u = n(452610);
 function c(e) {
 	if ((s('ed25519' === e, 'only tested with ed25519 so far'), !(this instanceof c))) return new c(e);
-	(e = i[e].curve),
-		(this.curve = e),
-		(this.g = e.g),
-		this.g.precompute(e.n.bitLength() + 1),
-		(this.pointClass = e.point().constructor),
-		(this.encodingLength = Math.ceil(e.n.bitLength() / 8)),
-		(this.hash = r.sha512);
+	(e = i[e].curve), (this.curve = e), (this.g = e.g), this.g.precompute(e.n.bitLength() + 1), (this.pointClass = e.point().constructor), (this.encodingLength = Math.ceil(e.n.bitLength() / 8)), (this.hash = r.sha512);
 }
 (e.exports = c),
 	(c.prototype.sign = function (e, t) {

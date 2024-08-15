@@ -51,8 +51,7 @@ t.Z = function () {
 						imgSrc: d
 					}),
 					(0, r.jsx)(E, {
-						description:
-							o.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_ANIMATED_GUILD_ICON_DESCRIPTION,
+						description: o.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_ANIMATED_GUILD_ICON_DESCRIPTION,
 						heading: o.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TOP_PERKS_CARDS_ANIMATED_GUILD_ICON_HEADING,
 						imgSrc: e ? c : u
 					}),

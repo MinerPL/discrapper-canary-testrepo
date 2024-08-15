@@ -36,8 +36,7 @@ function S(e, l) {
 		case m.oi.VIEW:
 			return x.Uu(O.Plq.VIEW_CHANNEL, l);
 		case m.oi.CHAT:
-			if (O.TPd.GUILD_THREADS_ONLY.has(l.type))
-				return x.Uu(O.Plq.SEND_MESSAGES_IN_THREADS, l) || x.Uu(O.Plq.SEND_MESSAGES, l);
+			if (O.TPd.GUILD_THREADS_ONLY.has(l.type)) return x.Uu(O.Plq.SEND_MESSAGES_IN_THREADS, l) || x.Uu(O.Plq.SEND_MESSAGES, l);
 			return x.Uu(O.Plq.SEND_MESSAGES, l);
 		default:
 			return !1;
@@ -57,8 +56,7 @@ function M(e) {
 	let l = f(),
 		n = N.Z.getChannel(e.channelId);
 	return (
-		(null == e.title || e.title.length < m.Wz) &&
-			l.title.push(A.Z.Messages.NEW_MEMBER_ACTION_VALIDATION_ERROR_TITLE_REQUIRED.format({ minLength: m.Wz })),
+		(null == e.title || e.title.length < m.Wz) && l.title.push(A.Z.Messages.NEW_MEMBER_ACTION_VALIDATION_ERROR_TITLE_REQUIRED.format({ minLength: m.Wz })),
 		null != e.actionType &&
 			null != n &&
 			!S(e.actionType, n) &&
@@ -104,12 +102,7 @@ function G(e) {
 				},
 				{
 					value: m.oi.CHAT,
-					name:
-						(null == z ? void 0 : z.type) === O.d4z.GUILD_FORUM
-							? W
-								? A.Z.Messages.GUILD_SETTINGS_ONBOARDING_ACTION_TALK_IN_MEDIA_CHANNEL
-								: A.Z.Messages.GUILD_SETTINGS_ONBOARDING_ACTION_TALK_IN_FORUM
-							: A.Z.Messages.GUILD_SETTINGS_ONBOARDING_ACTION_TALK
+					name: (null == z ? void 0 : z.type) === O.d4z.GUILD_FORUM ? (W ? A.Z.Messages.GUILD_SETTINGS_ONBOARDING_ACTION_TALK_IN_MEDIA_CHANNEL : A.Z.Messages.GUILD_SETTINGS_ONBOARDING_ACTION_TALK_IN_FORUM) : A.Z.Messages.GUILD_SETTINGS_ONBOARDING_ACTION_TALK
 				}
 			],
 			[null == z ? void 0 : z.type, W]
@@ -122,10 +115,7 @@ function G(e) {
 			let l = new Set(e.newMemberActions.map((e) => e.channelId));
 			return null != H && l.delete(H.value), l;
 		});
-	let [J, $] = o.useState(
-			((x = F),
-			null == (G = U) ? null : null !== (b = x.find((e) => e.value === G.actionType)) && void 0 !== b ? b : null)
-		),
+	let [J, $] = o.useState(((x = F), null == (G = U) ? null : null !== (b = x.find((e) => e.value === G.actionType)) && void 0 !== b ? b : null)),
 		[ee, el] = o.useState(null !== (n = null == U ? void 0 : U.emoji) && void 0 !== n ? n : null),
 		en = (0, s.e7)([g.Z], () => {
 			var e;
@@ -330,10 +320,7 @@ function G(e) {
 								}),
 								(0, a.jsx)(r.TextInput, {
 									value: q,
-									error:
-										(null !== (T = null == q ? void 0 : q.length) && void 0 !== T ? T : 0) > 0
-											? K.title.join(', ')
-											: null,
+									error: (null !== (T = null == q ? void 0 : q.length) && void 0 !== T ? T : 0) > 0 ? K.title.join(', ') : null,
 									onChange: eu,
 									placeholder: A.Z.Messages.GUILD_SETTINGS_ONBOARDING_ACTION_TITLE_PLACEHOLDER,
 									maxLength: m.Z3

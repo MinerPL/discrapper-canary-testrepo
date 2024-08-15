@@ -77,9 +77,7 @@ function L(e) {
 						(0, o.jsx)(T.Z, {
 							subscriptionTier: d.Si.TIER_2,
 							size: i.Button.Sizes.SMALL,
-							buttonText: p.ZP.isPremium(I)
-								? S.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE
-								: S.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
+							buttonText: p.ZP.isPremium(I) ? S.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : S.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
 						}),
 						(0, o.jsx)(i.Button, {
 							onClick: () => {

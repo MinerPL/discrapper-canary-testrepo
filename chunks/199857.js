@@ -40,25 +40,11 @@ class p extends l.Z {
 	setCodecs(e, t, n) {
 		var r, i, a;
 		let s;
-		if (this.audioCodec !== e || this.videoCodec !== t)
-			(s = this.codecs.find((t) => t.name === e)),
-				(this.audioCodec = e),
-				(this.audioPayloadType = null !== (r = null == s ? void 0 : s.payloadType) && void 0 !== r ? r : 0),
-				(s = this.codecs.find((e) => e.name === t)),
-				(this.videoCodec = t),
-				(this.videoPayloadType = null !== (i = null == s ? void 0 : s.payloadType) && void 0 !== i ? i : 0),
-				(this.rtxPayloadType = null !== (a = null == s ? void 0 : s.rtxPayloadType) && void 0 !== a ? a : 0),
-				this.logger.info('Renegotiating: Codecs changed'),
-				this.handleNegotiationNeeded();
+		if (this.audioCodec !== e || this.videoCodec !== t) (s = this.codecs.find((t) => t.name === e)), (this.audioCodec = e), (this.audioPayloadType = null !== (r = null == s ? void 0 : s.payloadType) && void 0 !== r ? r : 0), (s = this.codecs.find((e) => e.name === t)), (this.videoCodec = t), (this.videoPayloadType = null !== (i = null == s ? void 0 : s.payloadType) && void 0 !== i ? i : 0), (this.rtxPayloadType = null !== (a = null == s ? void 0 : s.rtxPayloadType) && void 0 !== a ? a : 0), this.logger.info('Renegotiating: Codecs changed'), this.handleNegotiationNeeded();
 	}
 	setStream(e) {
 		let t = 'closed' === this.iceConnectionState;
-		null != e &&
-			!t &&
-			(h(this.audioTransceiver, e.getAudioTracks()[0]),
-			this.videoSupported && h(this.videoTransceiver, e.getVideoTracks()[0])),
-			this.logger.info('Renegotiating: Streams changed'),
-			this.handleNegotiationNeeded();
+		null != e && !t && (h(this.audioTransceiver, e.getAudioTracks()[0]), this.videoSupported && h(this.videoTransceiver, e.getVideoTracks()[0])), this.logger.info('Renegotiating: Streams changed'), this.handleNegotiationNeeded();
 	}
 	createUser(e, t, n) {
 		var r;
@@ -104,20 +90,14 @@ class p extends l.Z {
 		if (i) {
 			this.users.set(e, a), t > 0 && this.userIdsBySsrc.set(t, e);
 			let r = null != n && n.length > 0 ? n[0] : 0;
-			r > 0 && this.userIdsBySsrc.set(r, e),
-				this.logger.info('Renegotiating: User joined'),
-				this.handleNegotiationNeeded();
+			r > 0 && this.userIdsBySsrc.set(r, e), this.logger.info('Renegotiating: User joined'), this.handleNegotiationNeeded();
 		}
 	}
 	destroyUser(e) {
 		let t = this.users.get(e);
 		if (null != t) {
 			let { audioSSRC: n, videoSSRC: r } = t;
-			this.users.delete(e),
-				null != n && this.userIdsBySsrc.delete(n),
-				null != r && this.userIdsBySsrc.delete(r),
-				this.logger.info('Renegotiating: User left'),
-				this.handleNegotiationNeeded();
+			this.users.delete(e), null != n && this.userIdsBySsrc.delete(n), null != r && this.userIdsBySsrc.delete(r), this.logger.info('Renegotiating: User left'), this.handleNegotiationNeeded();
 		}
 	}
 	setBitRate(e) {
@@ -155,24 +135,10 @@ class p extends l.Z {
 			r = n.getParameters();
 		if (null == r.encodings) return;
 		let i = !1;
-		for (let e of r.encodings)
-			for (let { propertyName: n, value: r } of t)
-				e[n] !== r &&
-					(this.logger.info(
-						'UnifiedConnection.setTransceiverEncodingParameters: '
-							.concat(n, ": from '")
-							.concat(e[n], "' to '")
-							.concat(r, "'")
-					),
-					(i = !0),
-					(e[n] = r));
+		for (let e of r.encodings) for (let { propertyName: n, value: r } of t) e[n] !== r && (this.logger.info('UnifiedConnection.setTransceiverEncodingParameters: '.concat(n, ": from '").concat(e[n], "' to '").concat(r, "'")), (i = !0), (e[n] = r));
 		if (!i) return;
 		let a = (e) => {
-			this.logger.error(
-				'UnifiedConnection.setTransceiverEncodingProperty: setParameters failed: "'
-					.concat(e, '" (')
-					.concat(JSON.stringify(t), ')"')
-			);
+			this.logger.error('UnifiedConnection.setTransceiverEncodingProperty: setParameters failed: "'.concat(e, '" (').concat(JSON.stringify(t), ')"'));
 		};
 		n.setParameters(r)
 			.then(
@@ -228,27 +194,7 @@ class p extends l.Z {
 		if (null == e) throw Error('localDescription is null');
 		let t = e.sdp,
 			{ outboundStreams: n, codecs: r, audioSSRC: i, videoSSRC: a, rtxSSRC: s } = (0, c.Nl)(t);
-		return (
-			(this.outboundStreams = n),
-			(this.codecs = r),
-			(this.extensions = (0, c.nX)(t)),
-			(this.audioSSRC = i),
-			(this.videoReady = a > 0 && s > 0),
-			(this.videoStreamParameters[0].ssrc !== a || this.videoStreamParameters[0].rtxSsrc !== s || this.videoReady) &&
-				((this.videoStreamParameters[0].ssrc = 0 === a ? this.videoStreamParameters[0].ssrc : a),
-				(this.videoStreamParameters[0].rtxSsrc = 0 === s ? this.videoStreamParameters[0].rtxSsrc : s),
-				(this.videoStreamParameters[0].active = this.videoReady),
-				this.emit(
-					o.Sh.Video,
-					this.userId,
-					this.input.getVideoStreamId(),
-					this.audioSSRC,
-					a,
-					s,
-					this.videoStreamParameters
-				)),
-			t
-		);
+		return (this.outboundStreams = n), (this.codecs = r), (this.extensions = (0, c.nX)(t)), (this.audioSSRC = i), (this.videoReady = a > 0 && s > 0), (this.videoStreamParameters[0].ssrc !== a || this.videoStreamParameters[0].rtxSsrc !== s || this.videoReady) && ((this.videoStreamParameters[0].ssrc = 0 === a ? this.videoStreamParameters[0].ssrc : a), (this.videoStreamParameters[0].rtxSsrc = 0 === s ? this.videoStreamParameters[0].rtxSsrc : s), (this.videoStreamParameters[0].active = this.videoReady), this.emit(o.Sh.Video, this.userId, this.input.getVideoStreamId(), this.audioSSRC, a, s, this.videoStreamParameters)), t;
 	}
 	addTransceivers(e, t, n, r) {
 		let i = this.pc,
@@ -298,13 +244,7 @@ class p extends l.Z {
 			r = this.audioPayloadType,
 			i = this.videoCodec,
 			a = this.videoPayloadType,
-			s =
-				this.videoSupported &&
-				(null === (t = this.videoTransceiver) || void 0 === t
-					? void 0
-					: null === (e = t.sender) || void 0 === e
-						? void 0
-						: e.track) != null,
+			s = this.videoSupported && (null === (t = this.videoTransceiver) || void 0 === t ? void 0 : null === (e = t.sender) || void 0 === e ? void 0 : e.track) != null,
 			o = this.rtxPayloadType,
 			l = this.sdp;
 		if (null == n || null == r || null == i || null == a || null == o || null == l)
@@ -336,18 +276,10 @@ class p extends l.Z {
 	async setRemoteAnswer() {
 		let e = this.pc,
 			t = this.generateSDPAnswer();
-		await e.setRemoteDescription(t),
-			(this.unassignedStreams.audio.length > 0 || this.unassignedStreams.video.length > 0) &&
-				((this.negotiationNeeded = !0),
-				this.logger.info('Renegotiating: Streams left unassigned after negotiation - renegotiate')),
-			(this.negotiating = !1),
-			this.negotiationNeeded && this.handleNegotiationNeeded();
+		await e.setRemoteDescription(t), (this.unassignedStreams.audio.length > 0 || this.unassignedStreams.video.length > 0) && ((this.negotiationNeeded = !0), this.logger.info('Renegotiating: Streams left unassigned after negotiation - renegotiate')), (this.negotiating = !1), this.negotiationNeeded && this.handleNegotiationNeeded();
 	}
 	setConnected() {
-		this.input.reset(),
-			this.setConnectionState(d.$j.CONNECTED),
-			this.on(o.Sh.Stats, this.handleStats),
-			this.input.on(u.G.VoiceActivity, this.handleVoiceActivity);
+		this.input.reset(), this.setConnectionState(d.$j.CONNECTED), this.on(o.Sh.Stats, this.handleStats), this.input.on(u.G.VoiceActivity, this.handleVoiceActivity);
 	}
 	async handleNegotiationNeeded() {
 		let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -399,9 +331,7 @@ class p extends l.Z {
 						this.setConnected();
 						break;
 					case 'connecting':
-						'connected' === this.iceConnectionState
-							? this.setConnectionState(d.$j.DTLS_CONNECTING)
-							: this.setConnectionState(d.$j.ICE_CHECKING);
+						'connected' === this.iceConnectionState ? this.setConnectionState(d.$j.DTLS_CONNECTING) : this.setConnectionState(d.$j.ICE_CHECKING);
 						break;
 					case 'failed':
 						this.setConnectionState(d.$j.NO_ROUTE);
@@ -443,22 +373,7 @@ class p extends l.Z {
 					let [e, o] = t.split('-');
 					this.trackUserIds[n.id] = e;
 					let l = this.users.get(e);
-					if (
-						(null == l
-							? void 0
-							: null === (i = l.videoSSRC) || void 0 === i
-								? void 0
-								: null === (r = i.toString) || void 0 === r
-									? void 0
-									: r.call(i)) !== o &&
-						(null == l
-							? void 0
-							: null === (s = l.audioSSRC) || void 0 === s
-								? void 0
-								: null === (a = s.toString) || void 0 === a
-									? void 0
-									: a.call(s)) !== o
-					) {
+					if ((null == l ? void 0 : null === (i = l.videoSSRC) || void 0 === i ? void 0 : null === (r = i.toString) || void 0 === r ? void 0 : r.call(i)) !== o && (null == l ? void 0 : null === (s = l.audioSSRC) || void 0 === s ? void 0 : null === (a = s.toString) || void 0 === a ? void 0 : a.call(s)) !== o) {
 						this.logger.info('Got stale ssrc '.concat(o, ' for ').concat(n.kind, ' track, user ID ').concat(e));
 						return;
 					}
@@ -466,8 +381,7 @@ class p extends l.Z {
 						(n.onunmute = () => this.createOutput(e, n)),
 						(n.onmute = () => {
 							var t;
-							(null === (t = this.users.get(e)) || void 0 === t ? void 0 : t.videoSSRC) == null &&
-								this.destroyOutput(e, n);
+							(null === (t = this.users.get(e)) || void 0 === t ? void 0 : t.videoSSRC) == null && this.destroyOutput(e, n);
 						});
 				}
 			}),
@@ -477,10 +391,7 @@ class p extends l.Z {
 			bundlePolicy: 'max-bundle',
 			sdpSemantics: 'unified-plan'
 		}));
-		_.X6
-			? ((i.onconnectionstatechange = this.handlePeerConnectionStateChange),
-				(i.oniceconnectionstatechange = this.handlePeerConnectionStateChange))
-			: (i.oniceconnectionstatechange = this.handleIceConnectionStateChange),
+		_.X6 ? ((i.onconnectionstatechange = this.handlePeerConnectionStateChange), (i.oniceconnectionstatechange = this.handlePeerConnectionStateChange)) : (i.oniceconnectionstatechange = this.handleIceConnectionStateChange),
 			(i.onsignalingstatechange = this.handleSignalingStateChange),
 			(i.onicegatheringstatechange = this.handleIceGatheringStateChange),
 			(i.ontrack = this.handleTrack),
@@ -489,9 +400,7 @@ class p extends l.Z {
 				sendEncodings: [{ maxBitrate: this.voiceBitrate }]
 			}),
 			(this.audioTransceiver = i.getTransceivers()[0]),
-			this.videoSupported &&
-				(this.addTransceivers('video', 'recvonly', 1, this.input.getVideoStream()),
-				(this.videoTransceiver = i.getTransceivers()[1])),
+			this.videoSupported && (this.addTransceivers('video', 'recvonly', 1, this.input.getVideoStream()), (this.videoTransceiver = i.getTransceivers()[1])),
 			this.addTransceivers('audio', 'recvonly', 10),
 			this.videoSupported && this.addTransceivers('video', 'recvonly', 10),
 			this.setStream(this.input.stream),

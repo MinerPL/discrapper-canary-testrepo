@@ -29,24 +29,8 @@ function u(e) {
 }
 function c() {
 	var e;
-	let n =
-		arguments.length > 0 && void 0 !== arguments[0]
-			? arguments[0]
-			: null === (e = i().os) || void 0 === e
-				? void 0
-				: e.family;
-	return null == n
-		? 'win'
-		: -1 !== n.indexOf('Ubuntu') ||
-			  -1 !== n.indexOf('Debian') ||
-			  -1 !== n.indexOf('Fedora') ||
-			  -1 !== n.indexOf('Red Hat') ||
-			  -1 !== n.indexOf('SuSE') ||
-			  -1 !== n.indexOf('Linux')
-			? o
-			: -1 !== n.indexOf('OS X')
-				? 'osx'
-				: 'win';
+	let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null === (e = i().os) || void 0 === e ? void 0 : e.family;
+	return null == n ? 'win' : -1 !== n.indexOf('Ubuntu') || -1 !== n.indexOf('Debian') || -1 !== n.indexOf('Fedora') || -1 !== n.indexOf('Red Hat') || -1 !== n.indexOf('SuSE') || -1 !== n.indexOf('Linux') ? o : -1 !== n.indexOf('OS X') ? 'osx' : 'win';
 }
 function d(e) {
 	return {

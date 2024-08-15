@@ -14,8 +14,7 @@ function s(e, a, n) {
 				o = 0;
 			e.forEach((e) => {
 				let a = e.image;
-				null != a &&
-					(null != a.emoji ? (s += 1) : null != a.stickerId ? (o += 1) : null != a.mediaAttachmentState && (t += 1));
+				null != a && (null != a.emoji ? (s += 1) : null != a.stickerId ? (o += 1) : null != a.mediaAttachmentState && (t += 1));
 			}),
 				r.ZP.trackWithMetadata(l.rMx.POLL_CREATION_CANCELLED, {
 					answers_count: e.length,

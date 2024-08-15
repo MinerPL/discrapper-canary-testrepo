@@ -17,24 +17,13 @@ var r,
 	f = n(43085),
 	h = n(981631),
 	p = n(689938),
-	I = n(258502);
-function m(e) {
+	m = n(258502);
+function I(e) {
 	e.stopPropagation();
 }
 ((r = i || (i = {}))[(r.SMALL = 0)] = 'SMALL'), (r[(r.MEDIUM = 1)] = 'MEDIUM'), (r[(r.CLIP = 2)] = 'CLIP');
 t.Z = s.forwardRef(function (e, t) {
-	let {
-			id: n,
-			channelId: r,
-			className: i,
-			children: s,
-			actions: o,
-			handleEditModal: T,
-			keyboardModeEnabled: g,
-			onKeyDown: S,
-			draftType: A,
-			size: N = 1
-		} = e,
+	let { id: n, channelId: r, className: i, children: s, actions: o, handleEditModal: T, keyboardModeEnabled: g, onKeyDown: S, draftType: A, size: N = 1 } = e,
 		{ onFocus: v, ...O } = (0, u.JA)(n),
 		{ handleFocus: R, handleBlur: C } = (0, f.b)(v),
 		y = 0 === N,
@@ -63,21 +52,21 @@ t.Z = s.forwardRef(function (e, t) {
 					null == S || S(e);
 				}
 			},
-			className: l()(I.upload, i, { [I.sizeClip]: 2 === N }),
+			className: l()(m.upload, i, { [m.sizeClip]: 2 === N }),
 			ref: t,
 			children: (0, a.jsxs)('div', {
-				className: I.uploadContainer,
+				className: m.uploadContainer,
 				children: [
 					s,
 					D
 						? (0, a.jsx)('div', {
-								className: I.actionBarContainer,
+								className: m.actionBarContainer,
 								children: (0, a.jsx)('div', {
-									className: l()(I.actionBar, { [I.smallActionBar]: y }),
-									onContextMenu: m,
+									className: l()(m.actionBar, { [m.smallActionBar]: y }),
+									onContextMenu: I,
 									'aria-label': p.Z.Messages.ATTACHMENT_UTILITIES,
 									children: (0, a.jsx)(_.ZP, {
-										className: l()({ [I.miniPopover]: y }),
+										className: l()({ [m.miniPopover]: y }),
 										children: o
 									})
 								})

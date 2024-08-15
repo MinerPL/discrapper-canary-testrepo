@@ -22,14 +22,7 @@ t.Z = class e {
 		window.removeEventListener('mousemove', this.handleMouseMove);
 	}
 	update() {
-		this.x !== this.px &&
-			this.y !== this.py &&
-			((this.forceX += r(this.x, this.px)),
-			(this.forceY += r(this.y, this.py)),
-			(this.px = this.x),
-			(this.py = this.y)),
-			0 !== this.forceX && (this.forceX = this.forceX * this.resistance),
-			0 !== this.forceY && (this.forceY = this.forceY * this.resistance);
+		this.x !== this.px && this.y !== this.py && ((this.forceX += r(this.x, this.px)), (this.forceY += r(this.y, this.py)), (this.px = this.x), (this.py = this.y)), 0 !== this.forceX && (this.forceX = this.forceX * this.resistance), 0 !== this.forceY && (this.forceY = this.forceY * this.resistance);
 	}
 	render() {}
 	constructor() {

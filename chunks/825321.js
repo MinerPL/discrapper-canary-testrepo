@@ -17,10 +17,7 @@ let s = [1800, 3000],
 				c = (0, i.I)('FCP'),
 				I = (0, _.N)('paint', (e) => {
 					e.forEach((e) => {
-						'first-contentful-paint' === e.name &&
-							(I.disconnect(),
-							e.startTime < E.firstHiddenTime &&
-								((c.value = Math.max(e.startTime - (0, a.A)(), 0)), c.entries.push(e), r(!0)));
+						'first-contentful-paint' === e.name && (I.disconnect(), e.startTime < E.firstHiddenTime && ((c.value = Math.max(e.startTime - (0, a.A)(), 0)), c.entries.push(e), r(!0)));
 					});
 				});
 			I && (r = (0, n._)(e, c, s, t.reportAllChanges));

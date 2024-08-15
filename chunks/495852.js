@@ -18,15 +18,7 @@ var r = n(36056),
 	h = n(647943);
 class p {
 	constructor(e, t, n) {
-		(this.defaultCheckDepth = 16),
-			(this.typeName = e),
-			(this.fields = t.map(r.nb)),
-			(this.options = null != n ? n : {}),
-			(this.refTypeCheck = new i.Z(this)),
-			(this.refJsonReader = new a.C(this)),
-			(this.refJsonWriter = new s.k(this)),
-			(this.refBinReader = new o.I(this)),
-			(this.refBinWriter = new l.R(this));
+		(this.defaultCheckDepth = 16), (this.typeName = e), (this.fields = t.map(r.nb)), (this.options = null != n ? n : {}), (this.refTypeCheck = new i.Z(this)), (this.refJsonReader = new a.C(this)), (this.refJsonWriter = new s.k(this)), (this.refBinReader = new o.I(this)), (this.refBinWriter = new l.R(this));
 	}
 	create(e) {
 		let t = (0, u.t)(this);
@@ -64,11 +56,7 @@ class p {
 	}
 	toJsonString(e, t) {
 		var n;
-		return JSON.stringify(
-			this.toJson(e, t),
-			null,
-			null !== (n = null == t ? void 0 : t.prettySpaces) && void 0 !== n ? n : 0
-		);
+		return JSON.stringify(this.toJson(e, t), null, null !== (n = null == t ? void 0 : t.prettySpaces) && void 0 !== n ? n : 0);
 	}
 	toBinary(e, t) {
 		let n = (0, f.X)(t);

@@ -57,13 +57,7 @@ var o,
 	A = ['light', 'lighter', 'normal', '100', '200', '300', '400'],
 	I = ['className', 'href', 'rel', 'target', 'title'],
 	B = ['alt', 'className', 'height', 'src', 'width'],
-	L =
-		(i((o = {}), p('public/DraftStyleDefault/depth0'), 0),
-		i(o, p('public/DraftStyleDefault/depth1'), 1),
-		i(o, p('public/DraftStyleDefault/depth2'), 2),
-		i(o, p('public/DraftStyleDefault/depth3'), 3),
-		i(o, p('public/DraftStyleDefault/depth4'), 4),
-		o),
+	L = (i((o = {}), p('public/DraftStyleDefault/depth0'), 0), i(o, p('public/DraftStyleDefault/depth1'), 1), i(o, p('public/DraftStyleDefault/depth2'), 2), i(o, p('public/DraftStyleDefault/depth3'), 3), i(o, p('public/DraftStyleDefault/depth4'), 4), o),
 	R = m({
 		b: 'BOLD',
 		code: 'CODE',
@@ -104,11 +98,7 @@ var o,
 			n = t.style.fontStyle,
 			i = t.style.textDecoration;
 		return e.withMutations(function (t) {
-			M.indexOf(r) >= 0 ? t.add('BOLD') : A.indexOf(r) >= 0 && t.remove('BOLD'),
-				'italic' === n ? t.add('ITALIC') : 'normal' === n && t.remove('ITALIC'),
-				'underline' === i && t.add('UNDERLINE'),
-				'line-through' === i && t.add('STRIKETHROUGH'),
-				'none' === i && (t.remove('UNDERLINE'), t.remove('STRIKETHROUGH'));
+			M.indexOf(r) >= 0 ? t.add('BOLD') : A.indexOf(r) >= 0 && t.remove('BOLD'), 'italic' === n ? t.add('ITALIC') : 'normal' === n && t.remove('ITALIC'), 'underline' === i && t.add('UNDERLINE'), 'line-through' === i && t.add('STRIKETHROUGH'), 'none' === i && (t.remove('UNDERLINE'), t.remove('STRIKETHROUGH'));
 		});
 	},
 	P = function (t) {
@@ -116,49 +106,20 @@ var o,
 	},
 	j = (function () {
 		function t(t, e) {
-			i(this, 'characterList', v()),
-				i(this, 'currentBlockType', 'unstyled'),
-				i(this, 'currentDepth', 0),
-				i(this, 'currentEntity', null),
-				i(this, 'currentText', ''),
-				i(this, 'wrapper', null),
-				i(this, 'blockConfigs', []),
-				i(this, 'contentBlocks', []),
-				i(this, 'entityMap', l),
-				i(this, 'blockTypeMap', void 0),
-				i(this, 'disambiguate', void 0),
-				this.clear(),
-				(this.blockTypeMap = t),
-				(this.disambiguate = e);
+			i(this, 'characterList', v()), i(this, 'currentBlockType', 'unstyled'), i(this, 'currentDepth', 0), i(this, 'currentEntity', null), i(this, 'currentText', ''), i(this, 'wrapper', null), i(this, 'blockConfigs', []), i(this, 'contentBlocks', []), i(this, 'entityMap', l), i(this, 'blockTypeMap', void 0), i(this, 'disambiguate', void 0), this.clear(), (this.blockTypeMap = t), (this.disambiguate = e);
 		}
 		var e = t.prototype;
 		return (
 			(e.clear = function () {
-				(this.characterList = v()),
-					(this.blockConfigs = []),
-					(this.currentBlockType = 'unstyled'),
-					(this.currentDepth = 0),
-					(this.currentEntity = null),
-					(this.currentText = ''),
-					(this.entityMap = l),
-					(this.wrapper = null),
-					(this.contentBlocks = []);
+				(this.characterList = v()), (this.blockConfigs = []), (this.currentBlockType = 'unstyled'), (this.currentDepth = 0), (this.currentEntity = null), (this.currentText = ''), (this.entityMap = l), (this.wrapper = null), (this.contentBlocks = []);
 			}),
 			(e.addDOMNode = function (t) {
 				var e;
-				return (
-					(this.contentBlocks = []),
-					(this.currentDepth = 0),
-					(e = this.blockConfigs).push.apply(e, this._toBlockConfigs([t], _())),
-					this._trimCurrentText(),
-					'' !== this.currentText && this.blockConfigs.push(this._makeBlockConfig()),
-					this
-				);
+				return (this.contentBlocks = []), (this.currentDepth = 0), (e = this.blockConfigs).push.apply(e, this._toBlockConfigs([t], _())), this._trimCurrentText(), '' !== this.currentText && this.blockConfigs.push(this._makeBlockConfig()), this;
 			}),
 			(e.getContentBlocks = function () {
 				return (
-					0 === this.contentBlocks.length &&
-						(x ? this._toContentBlocks(this.blockConfigs) : this._toFlatContentBlocks(this.blockConfigs)),
+					0 === this.contentBlocks.length && (x ? this._toContentBlocks(this.blockConfigs) : this._toFlatContentBlocks(this.blockConfigs)),
 					{
 						contentBlocks: this.contentBlocks,
 						entityMap: this.entityMap
@@ -194,10 +155,7 @@ var o,
 						this._trimCurrentText(), '' !== this.currentText && r.push(this._makeBlockConfig());
 						var s = this.currentDepth,
 							c = this.wrapper;
-						P(u) && ((this.wrapper = u), P(c) && this.currentDepth++),
-							r.push.apply(r, this._toBlockConfigs(Array.from(a.childNodes), e)),
-							(this.currentDepth = s),
-							(this.wrapper = c);
+						P(u) && ((this.wrapper = u), P(c) && this.currentDepth++), r.push.apply(r, this._toBlockConfigs(Array.from(a.childNodes), e)), (this.currentDepth = s), (this.wrapper = c);
 						continue;
 					}
 					var l = this.blockTypeMap.get(u);
@@ -205,12 +163,7 @@ var o,
 						this._trimCurrentText(), '' !== this.currentText && r.push(this._makeBlockConfig());
 						var f = this.currentDepth,
 							p = this.wrapper;
-						(this.wrapper = 'pre' === u ? 'pre' : this.wrapper),
-							'string' != typeof l && (l = this.disambiguate(u, this.wrapper) || l[0] || 'unstyled'),
-							!x &&
-								w(a) &&
-								('unordered-list-item' === l || 'ordered-list-item' === l) &&
-								(this.currentDepth = F(a, this.currentDepth));
+						(this.wrapper = 'pre' === u ? 'pre' : this.wrapper), 'string' != typeof l && (l = this.disambiguate(u, this.wrapper) || l[0] || 'unstyled'), !x && w(a) && ('unordered-list-item' === l || 'ordered-list-item' === l) && (this.currentDepth = F(a, this.currentDepth));
 						var d = h(),
 							g = this._toBlockConfigs(Array.from(a.childNodes), e);
 						this._trimCurrentText(),
@@ -242,9 +195,7 @@ var o,
 						continue;
 					}
 					var y = e;
-					R.has(u) && (y = y.add(R.get(u))),
-						(y = z(a, y)),
-						r.push.apply(r, this._toBlockConfigs(Array.from(a.childNodes), y));
+					R.has(u) && (y = y.add(R.get(u))), (y = z(a, y)), r.push.apply(r, this._toBlockConfigs(Array.from(a.childNodes), y));
 				}
 				return r;
 			}),
@@ -274,14 +225,11 @@ var o,
 							? Math.max(r, t - n[0])
 							: r)
 						? ((this.currentText = ''), (this.characterList = v()))
-						: ((this.currentText = this.currentText.slice(e, r)),
-							(this.characterList = this.characterList.slice(e, r)));
+						: ((this.currentText = this.currentText.slice(e, r)), (this.characterList = this.characterList.slice(e, r)));
 			}),
 			(e._addTextNode = function (t, e) {
 				var r = t.textContent;
-				'' === r.trim() && 'pre' !== this.wrapper && (r = ' '),
-					'pre' !== this.wrapper && (r = (r = r.replace(D, '')).replace(E, ' ')),
-					this._appendText(r, e);
+				'' === r.trim() && 'pre' !== this.wrapper && (r = ' '), 'pre' !== this.wrapper && (r = (r = r.replace(D, '')).replace(E, ' ')), this._appendText(r, e);
 			}),
 			(e._addBreakNode = function (t, e) {
 				if (!!S(t)) this._appendText('\n', e);
@@ -294,9 +242,7 @@ var o,
 						n && (r[e] = n);
 					}),
 						(this.currentEntity = this.entityMap.__create('IMAGE', 'IMMUTABLE', r)),
-						g('draftjs_fix_paste_for_img')
-							? 'presentation' !== t.getAttribute('role') && this._appendText('\uD83D\uDCF7', e)
-							: this._appendText('\uD83D\uDCF7', e),
+						g('draftjs_fix_paste_for_img') ? 'presentation' !== t.getAttribute('role') && this._appendText('\uD83D\uDCF7', e) : this._appendText('\uD83D\uDCF7', e),
 						(this.currentEntity = null);
 				}
 			}),
@@ -314,11 +260,7 @@ var o,
 				}
 			}),
 			(e._toContentBlocks = function (t) {
-				for (
-					var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, r = t.length - 1, i = 0;
-					i <= r;
-					i++
-				) {
+				for (var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, r = t.length - 1, i = 0; i <= r; i++) {
 					var o = t[i];
 					(o.parent = e),
 						(o.prevSibling = i > 0 ? t[i - 1].key : null),
@@ -357,9 +299,7 @@ var o,
 			(e._extractTextFromBlockConfigs = function (t) {
 				for (var e = t.length - 1, r = '', n = v(), i = 0; i <= e; i++) {
 					var o = t[i];
-					(r += o.text),
-						(n = n.concat(o.characterList)),
-						'' !== r && 'unstyled' !== o.type && ((r += '\n'), (n = n.push(n.last())));
+					(r += o.text), (n = n.concat(o.characterList)), '' !== r && 'unstyled' !== o.type && ((r += '\n'), (n = n.push(n.last())));
 					var a = this._extractTextFromBlockConfigs(o.childConfigs);
 					(r += a.text), (n = n.concat(a.characterList));
 				}

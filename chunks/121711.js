@@ -105,11 +105,7 @@ t.Z = function (e) {
 													width: 415,
 													height: 200
 												}),
-												(0, i.jsx)(l.EmptyStateText, {
-													note: N.Z.Messages.QUESTS_CLAIMED_QUEST_EMPTY_STATE.format({
-														onClick: () => L(I.e5.UNCLAIMED)
-													})
-												})
+												(0, i.jsx)(l.EmptyStateText, { note: N.Z.Messages.QUESTS_CLAIMED_QUEST_EMPTY_STATE.format({ onClick: () => L(I.e5.UNCLAIMED) }) })
 											]
 										})
 									: (0, i.jsx)('div', {

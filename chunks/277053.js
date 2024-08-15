@@ -32,14 +32,7 @@ function R(e) {
 function x() {
 	if (((A = m.Z.getChannel()), (v = m.Z.getCategory()), null == A)) return !1;
 	let e = A.getGuildId();
-	(N = C = R(A)),
-		null == C[Z] && (Z = e),
-		(a = null != v),
-		(i = h.o4(A, v)),
-		(L = null),
-		(f = !1),
-		(S = g.QZA.CLOSED),
-		T.clear();
+	(N = C = R(A)), null == C[Z] && (Z = e), (a = null != v), (i = h.o4(A, v)), (L = null), (f = !1), (S = g.QZA.CLOSED), T.clear();
 }
 class b extends (s = u.ZP.Store) {
 	initialize() {

@@ -27,8 +27,5 @@ function d() {
 				},
 				e
 			);
-	return [
-		n(c.pM4.VOICE_ACTIVITY, u.Z.Messages.INPUT_MODE_VAD),
-		n(c.pM4.PUSH_TO_TALK, e ? u.Z.Messages.INPUT_MODE_PTT_LIMITED : u.Z.Messages.INPUT_MODE_PTT)
-	];
+	return [n(c.pM4.VOICE_ACTIVITY, u.Z.Messages.INPUT_MODE_VAD), n(c.pM4.PUSH_TO_TALK, e ? u.Z.Messages.INPUT_MODE_PTT_LIMITED : u.Z.Messages.INPUT_MODE_PTT)];
 }

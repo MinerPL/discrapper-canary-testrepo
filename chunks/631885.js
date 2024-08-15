@@ -53,9 +53,7 @@ function u() {
 function E() {
 	let e = (0, s.e7)([a.default], () => a.default.getCurrentUser()),
 		t = (0, s.e7)([r.Z], () => r.Z.getLinkedUsers());
-	return null == e
-		? 0
-		: Object.values(t).filter((t) => null != t && t.link_status === c.ne.PENDING && e.id !== t.requestor_id).length;
+	return null == e ? 0 : Object.values(t).filter((t) => null != t && t.link_status === c.ne.PENDING && e.id !== t.requestor_id).length;
 }
 function T() {
 	let e = (0, s.e7)([a.default], () => a.default.getCurrentUser()),

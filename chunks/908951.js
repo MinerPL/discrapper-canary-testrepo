@@ -32,15 +32,7 @@ var n = t(735250),
 	M = t(553136),
 	f = t(257995);
 function D(e) {
-	let {
-			subscription: s,
-			onPaymentSourceAdded: t,
-			highlightAddPaymentMethodButton: i,
-			dropdownClassName: o,
-			analyticsLocation: D,
-			currentInvoicePreview: L,
-			disabled: b = !1
-		} = e,
+	let { subscription: s, onPaymentSourceAdded: t, highlightAddPaymentMethodButton: i, dropdownClassName: o, analyticsLocation: D, currentInvoicePreview: L, disabled: b = !1 } = e,
 		Z = (0, c.e7)([C.Z], () => C.Z.hidePersonalInformation),
 		[v, j] = (0, c.Wu)([m.Z], () => [m.Z.paymentSources, m.Z.hasFetchedPaymentSources]),
 		B = (0, N.V)((0, h.yb)(s)),

@@ -30,29 +30,9 @@ let M = 'MMM Do, YYYY',
 		createPromise: () => Promise.resolve().then(l.bind(l, 547800)),
 		webpackId: 547800
 	});
-((a = n || (n = {}))[(a.ALL = 0)] = 'ALL'),
-	(a[(a['1_HOUR'] = 1)] = '1_HOUR'),
-	(a[(a['24_HOURS'] = 2)] = '24_HOURS'),
-	(a[(a['7_DAYS'] = 3)] = '7_DAYS'),
-	(a[(a['2_WEEKS'] = 4)] = '2_WEEKS'),
-	(a[(a['4_WEEKS'] = 5)] = '4_WEEKS'),
-	(a[(a['3_MONTHS'] = 6)] = '3_MONTHS'),
-	(a[(a.CUSTOM = 7)] = 'CUSTOM');
+((a = n || (n = {}))[(a.ALL = 0)] = 'ALL'), (a[(a['1_HOUR'] = 1)] = '1_HOUR'), (a[(a['24_HOURS'] = 2)] = '24_HOURS'), (a[(a['7_DAYS'] = 3)] = '7_DAYS'), (a[(a['2_WEEKS'] = 4)] = '2_WEEKS'), (a[(a['4_WEEKS'] = 5)] = '4_WEEKS'), (a[(a['3_MONTHS'] = 6)] = '3_MONTHS'), (a[(a.CUSTOM = 7)] = 'CUSTOM');
 function T(e) {
-	let {
-			startDateLabel: t,
-			endDateLabel: l,
-			afterDate: n,
-			beforeDate: a,
-			selectedOption: i,
-			isCustomDateRange: C,
-			menuName: d,
-			onClose: M,
-			onSelectDateOption: T,
-			onToggleCustomDateRange: L,
-			onSelectStartDate: g,
-			onSelectEndDate: I
-		} = e,
+	let { startDateLabel: t, endDateLabel: l, afterDate: n, beforeDate: a, selectedOption: i, isCustomDateRange: C, menuName: d, onClose: M, onSelectDateOption: T, onToggleCustomDateRange: L, onSelectStartDate: g, onSelectEndDate: I } = e,
 		p = [
 			{
 				id: 0,

@@ -30,8 +30,7 @@
 								var o = r.iterator[n.method];
 								if (e === o) {
 									if (((n.delegate = null), 'throw' === n.method)) {
-										if (r.iterator.return && ((n.method = 'return'), (n.arg = e), t(r, n), 'throw' === n.method))
-											return v;
+										if (r.iterator.return && ((n.method = 'return'), (n.arg = e), t(r, n), 'throw' === n.method)) return v;
 										(n.method = 'throw'), (n.arg = TypeError("The iterator does not provide a 'throw' method"));
 									}
 									return v;
@@ -39,18 +38,7 @@
 								var i = h(o, r.iterator, n.arg);
 								if ('throw' === i.type) return (n.method = 'throw'), (n.arg = i.arg), (n.delegate = null), v;
 								var a = i.arg;
-								return a
-									? a.done
-										? ((n[r.resultName] = a.value),
-											(n.next = r.nextLoc),
-											'return' !== n.method && ((n.method = 'next'), (n.arg = e)),
-											(n.delegate = null),
-											v)
-										: a
-									: ((n.method = 'throw'),
-										(n.arg = TypeError('iterator result is not an object')),
-										(n.delegate = null),
-										v);
+								return a ? (a.done ? ((n[r.resultName] = a.value), (n.next = r.nextLoc), 'return' !== n.method && ((n.method = 'next'), (n.arg = e)), (n.delegate = null), v) : a) : ((n.method = 'throw'), (n.arg = TypeError('iterator result is not an object')), (n.delegate = null), v);
 							})(c, n);
 							if (u) {
 								if (u === v) continue;
@@ -157,13 +145,7 @@
 			return !!r && (r === g || 'GeneratorFunction' === (r.displayName || r.name));
 		}),
 		(s.mark = function (t) {
-			return (
-				Object.setPrototypeOf
-					? Object.setPrototypeOf(t, m)
-					: ((t.__proto__ = m), !(u in t) && (t[u] = 'GeneratorFunction')),
-				(t.prototype = Object.create(E)),
-				t
-			);
+			return Object.setPrototypeOf ? Object.setPrototypeOf(t, m) : ((t.__proto__ = m), !(u in t) && (t[u] = 'GeneratorFunction')), (t.prototype = Object.create(E)), t;
 		}),
 		(s.awrap = function (t) {
 			return { __await: t };
@@ -240,18 +222,7 @@
 		(O.prototype = {
 			constructor: O,
 			reset: function (t) {
-				if (
-					((this.prev = 0),
-					(this.next = 0),
-					(this.sent = this._sent = e),
-					(this.done = !1),
-					(this.delegate = null),
-					(this.method = 'next'),
-					(this.arg = e),
-					this.tryEntries.forEach(j),
-					!t)
-				)
-					for (var r in this) 't' === r.charAt(0) && o.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = e);
+				if (((this.prev = 0), (this.next = 0), (this.sent = this._sent = e), (this.done = !1), (this.delegate = null), (this.method = 'next'), (this.arg = e), this.tryEntries.forEach(j), !t)) for (var r in this) 't' === r.charAt(0) && o.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = e);
 			},
 			stop: function () {
 				this.done = !0;
@@ -293,20 +264,11 @@
 				}
 				i && ('break' === t || 'continue' === t) && i.tryLoc <= r && r <= i.finallyLoc && (i = null);
 				var a = i ? i.completion : {};
-				return ((a.type = t), (a.arg = r), i)
-					? ((this.method = 'next'), (this.next = i.finallyLoc), v)
-					: this.complete(a);
+				return ((a.type = t), (a.arg = r), i) ? ((this.method = 'next'), (this.next = i.finallyLoc), v) : this.complete(a);
 			},
 			complete: function (t, r) {
 				if ('throw' === t.type) throw t.arg;
-				return (
-					'break' === t.type || 'continue' === t.type
-						? (this.next = t.arg)
-						: 'return' === t.type
-							? ((this.rval = this.arg = t.arg), (this.method = 'return'), (this.next = 'end'))
-							: 'normal' === t.type && r && (this.next = r),
-					v
-				);
+				return 'break' === t.type || 'continue' === t.type ? (this.next = t.arg) : 'return' === t.type ? ((this.rval = this.arg = t.arg), (this.method = 'return'), (this.next = 'end')) : 'normal' === t.type && r && (this.next = r), v;
 			},
 			finish: function (t) {
 				for (var r = this.tryEntries.length - 1; r >= 0; --r) {

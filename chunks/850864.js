@@ -106,31 +106,17 @@ function W(e) {
 }
 function z(e) {
 	var t, i, o, d, u;
-	let {
-			guildId: E,
-			action: T,
-			actionIndex: m,
-			onChange: g,
-			onDelete: C,
-			onDragStart: x,
-			onDragComplete: p,
-			onDragReset: R
-		} = e,
+	let { guildId: E, action: T, actionIndex: m, onChange: g, onDelete: C, onDragStart: x, onDragComplete: p, onDragReset: R } = e,
 		L = (0, l.e7)([f.Z], () => f.Z.getChannel(T.channelId)),
 		A = (0, l.e7)([O.Z], () => O.Z.getGuild(E)),
-		{ customEmoji: D, unicodeEmoji: v } = (0, N.Z)(
-			null === (t = T.emoji) || void 0 === t ? void 0 : t.id,
-			null === (i = T.emoji) || void 0 === i ? void 0 : i.name
-		),
+		{ customEmoji: D, unicodeEmoji: v } = (0, N.Z)(null === (t = T.emoji) || void 0 === t ? void 0 : t.id, null === (i = T.emoji) || void 0 === i ? void 0 : i.name),
 		j = null == T.emoji || null != D || null != v,
 		Z = M.ZP.getNewMemberActionIconURL({
 			channelId: T.channelId,
 			icon: T.icon
 		}),
 		b = null;
-	null != L && (0, S.kb)(L)
-		? !j && (b = F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL_EMOJI)
-		: (b = F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL);
+	null != L && (0, S.kb)(L) ? !j && (b = F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL_EMOJI) : (b = F.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL);
 	let {
 			drag: U,
 			dragSourcePosition: G,
@@ -791,23 +777,11 @@ function et(e) {
 		n = (0, l.e7)([O.Z], () => O.Z.getGuild(t)),
 		i = (0, l.Wu)([b.Z], () => {
 			var e, t;
-			return null !==
-				(t = null === (e = b.Z.getSettings().resourceChannels) || void 0 === e ? void 0 : e.map((e) => e.channelId)) &&
-				void 0 !== t
-				? t
-				: [];
+			return null !== (t = null === (e = b.Z.getSettings().resourceChannels) || void 0 === e ? void 0 : e.map((e) => e.channelId)) && void 0 !== t ? t : [];
 		}),
 		r = (0, l.Wu)([b.Z], () => b.Z.getDismissedSuggestedChannelIds(t)),
 		o = (0, l.e7)([L.ZP], () => (null == t ? [] : L.ZP.getSelectableChannels(t)))
-			.filter(
-				(e) =>
-					!r.includes(e.channel.id) &&
-					!i.includes(e.channel.id) &&
-					e.channel.type === G.d4z.GUILD_TEXT &&
-					D.Uu(G.Plq.VIEW_CHANNEL, e.channel) &&
-					!D.Uu(G.Plq.SEND_MESSAGES, e.channel) &&
-					e.channel.id !== (null == n ? void 0 : n.rulesChannelId)
-			)
+			.filter((e) => !r.includes(e.channel.id) && !i.includes(e.channel.id) && e.channel.type === G.d4z.GUILD_TEXT && D.Uu(G.Plq.VIEW_CHANNEL, e.channel) && !D.Uu(G.Plq.SEND_MESSAGES, e.channel) && e.channel.id !== (null == n ? void 0 : n.rulesChannelId))
 			.slice(0, 5),
 		d = a.useCallback(() => {
 			let e = o.map((e) => e.channel.id);

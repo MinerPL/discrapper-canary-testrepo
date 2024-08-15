@@ -22,24 +22,10 @@ var o = s(735250),
 	M = s(689938),
 	v = s(761291);
 function C(e) {
-	let {
-			applicationIcon: i,
-			applicationId: s,
-			applicationName: t,
-			command: u,
-			guildId: C,
-			onClose: j,
-			transitionState: y
-		} = e,
+	let { applicationIcon: i, applicationId: s, applicationName: t, command: u, guildId: C, onClose: j, transitionState: y } = e,
 		[b, N] = a.useState(null),
 		[A, f] = a.useState(!1),
-		{
-			originalApplicationPermissions: g,
-			originalCommandPermissions: k,
-			editedTargetPermissions: P,
-			hasChanges: S,
-			selectedPermissionCount: _
-		} = (0, x.Z)(C, s, u.id),
+		{ originalApplicationPermissions: g, originalCommandPermissions: k, editedTargetPermissions: P, hasChanges: S, selectedPermissionCount: _ } = (0, x.Z)(C, s, u.id),
 		B = a.useCallback(async () => {
 			var e, i, o, a, t;
 			if (!S) {

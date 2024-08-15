@@ -17,7 +17,7 @@ t.Z = (e) => {
 	i.useEffect(() => {
 		f(!p);
 	}, [p]);
-	let I = i.useCallback(() => {
+	let m = i.useCallback(() => {
 		f(!0),
 			s.ZP.trackWithMetadata(c.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
 				guild_id: t,
@@ -26,13 +26,13 @@ t.Z = (e) => {
 			l.Z.leaveGuild(t);
 	}, [t, n]);
 	if (null == h) return null;
-	let m = () => {
+	let I = () => {
 		(0, a.openModal)((e) =>
 			(0, r.jsx)(a.ConfirmModal, {
 				header: d.Z.Messages.LEAVE_SERVER_TITLE.format({ name: h.name }),
 				confirmText: d.Z.Messages.LEAVE_SERVER,
 				cancelText: d.Z.Messages.CANCEL,
-				onConfirm: I,
+				onConfirm: m,
 				...e,
 				children: (0, r.jsx)(a.Text, {
 					variant: 'text-md/normal',
@@ -72,7 +72,7 @@ t.Z = (e) => {
 						]
 					}),
 					(0, r.jsx)(a.Button, {
-						onClick: () => m(),
+						onClick: () => I(),
 						disabled: E,
 						size: a.Button.Sizes.SMALL,
 						color: a.Button.Colors.RED,

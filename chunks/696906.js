@@ -24,15 +24,7 @@ var t = i(735250),
 n.Z = (e) => {
 	var n;
 	let i,
-		{
-			guildId: r,
-			groupListingId: P,
-			analyticsLocation: T,
-			showBenefitsFirst: R,
-			skuId: N,
-			onComplete: S,
-			forcesTransitionToGuild: L
-		} = e,
+		{ guildId: r, groupListingId: P, analyticsLocation: T, showBenefitsFirst: R, skuId: N, onComplete: S, forcesTransitionToGuild: L } = e,
 		O = (0, l.e7)([f.Z], () => (null != N ? f.Z.get(N) : void 0), [N]),
 		j = (0, l.e7)([g.Z], () => (null != N ? g.Z.getForSKU(N) : void 0), [N]),
 		y = (0, l.e7)([I.Z], () => (null != N ? I.Z.getForSKU(N) : void 0), [N]),
@@ -54,13 +46,7 @@ n.Z = (e) => {
 		J = W && V,
 		Q = null != D && null != k && z && K && (q || W) && !J;
 	return (
-		z
-			? q
-				? J &&
-					null != D &&
-					(i = A.Z.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({ tierName: D.name }))
-				: (i = A.Z.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE)
-			: (i = A.Z.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION),
+		z ? (q ? J && null != D && (i = A.Z.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({ tierName: D.name })) : (i = A.Z.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE)) : (i = A.Z.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION),
 		a.useEffect(() => {
 			M &&
 				null != B &&
@@ -72,9 +58,7 @@ n.Z = (e) => {
 		}, [M, B, Y]),
 		{
 			openModal: a.useCallback(() => {
-				o()(null != k, 'No application'),
-					o()(null != D, 'No subscription plan'),
-					o()(M, 'Cannot purchase this unpublished plan');
+				o()(null != k, 'No application'), o()(null != D, 'No subscription plan'), o()(M, 'Cannot purchase this unpublished plan');
 				let e = () => {
 					(0, p.h)({
 						activeSubscription: H,

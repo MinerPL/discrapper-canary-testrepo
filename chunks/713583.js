@@ -17,7 +17,7 @@ function d(e) {
 		d,
 		_,
 		{ className: E, activeCommand: f, activeOption: h, optionStates: p } = e,
-		I = i.useCallback(
+		m = i.useCallback(
 			(e) => {
 				var t;
 				let i = null == f ? void 0 : null === (t = f.rootCommand) || void 0 === t ? void 0 : t.id;
@@ -40,13 +40,11 @@ function d(e) {
 	if (null == f) return null;
 	if (null != h) {
 		let e = p[h.name].lastValidationResult;
-		(a = h.displayName),
-			(d = h.displayDescription),
-			(_ = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error);
+		(a = h.displayName), (d = h.displayDescription), (_ = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error);
 	} else (a = ''.concat(l.GI).concat(f.displayName)), (d = f.displayDescription), (_ = null);
 	return (0, r.jsxs)('div', {
 		className: s()(E, c.bar),
-		onContextMenu: I,
+		onContextMenu: m,
 		children: [
 			(0, r.jsx)('span', {
 				className: c.name,

@@ -30,12 +30,7 @@ function m(e) {
 			onChannelClick: l.useCallback((e, n, t) => {
 				let l = o.ZP.isChannelOptedIn(e, n),
 					a = n === t;
-				!l && s.Z.isCollapsed(t) && null != t && (0, r.mJ)(t),
-					(0, d.hi)(e)
-						? a
-							? (0, d.rz)(e, { include: new Set([n]) })
-							: (0, d.rz)(e, { exclude: new Set([n]) })
-						: (0, c.k$)(e, n, !l, { section: u.jXE.CHANNEL_BROWSER });
+				!l && s.Z.isCollapsed(t) && null != t && (0, r.mJ)(t), (0, d.hi)(e) ? (a ? (0, d.rz)(e, { include: new Set([n]) }) : (0, d.rz)(e, { exclude: new Set([n]) })) : (0, c.k$)(e, n, !l, { section: u.jXE.CHANNEL_BROWSER });
 			}, [])
 		}
 	);

@@ -77,20 +77,11 @@ function J(e) {
 function $(e) {
 	if ((0, _.Z)(e)) return v.r9;
 	let t = null != e.application_id ? C.Z.getApplication(e.application_id) : null;
-	return null != t
-		? t
-		: (0, f.Z)(e)
-			? Q(e.name)
-			: (0, g.Z)(e) && null != e.url
-				? X(e.url)
-				: (null != e.application_id && J(e.application_id), t);
+	return null != t ? t : (0, f.Z)(e) ? Q(e.name) : (0, g.Z)(e) && null != e.url ? X(e.url) : (null != e.application_id && J(e.application_id), t);
 }
 function ee(e) {
 	let t = w.Z.getVoiceStateForUser(e);
-	return (null == t ? void 0 : t.channelId) != null &&
-		P.Z.canWithPartialContext(G.Plq.VIEW_CHANNEL, { channelId: t.channelId })
-		? t.channelId
-		: null;
+	return (null == t ? void 0 : t.channelId) != null && P.Z.canWithPartialContext(G.Plq.VIEW_CHANNEL, { channelId: t.channelId }) ? t.channelId : null;
 }
 function et(e) {
 	return j.Z.isFriend(e.id);
@@ -127,21 +118,7 @@ function en(e, t, n) {
 		j = c === v.XB;
 		let u = (function (e) {
 				let t = C.Z.getApplication(e);
-				return null != t
-					? t
-					: 'string' != typeof e
-						? (new I.Z('NowPlayingViewStore').error(
-								'Unknown type for applicationId: '.concat(typeof e, ', value: ').concat(e),
-								{ tags: { source: 'ACTIVITIES' } }
-							),
-							null)
-						: e === v.XB
-							? v.r9
-							: e.startsWith(T.H)
-								? Q(e.slice(T.H.length))
-								: e.startsWith(Z._)
-									? X(e.slice(Z._.length))
-									: (J(e), null);
+				return null != t ? t : 'string' != typeof e ? (new I.Z('NowPlayingViewStore').error('Unknown type for applicationId: '.concat(typeof e, ', value: ').concat(e), { tags: { source: 'ACTIVITIES' } }), null) : e === v.XB ? v.r9 : e.startsWith(T.H) ? Q(e.slice(T.H.length)) : e.startsWith(Z._) ? X(e.slice(Z._.length)) : (J(e), null);
 			})(c),
 			g = null === (l = s.timestamps) || void 0 === l ? void 0 : l.start;
 		if ((0, p.Z)(s)) {
@@ -196,8 +173,7 @@ function en(e, t, n) {
 			i = A.Z.getChannel(n),
 			l = null != i ? i.getGuildId() : null,
 			r = O.Z.getGuild(l);
-		if ((V.has(l) && H.has(n)) || null == i || null == r || i.id === r.afkChannelId)
-			null == i && ((u = null), (k = !0));
+		if ((V.has(l) && H.has(n)) || null == i || null == r || i.id === r.afkChannelId) null == i && ((u = null), (k = !0));
 		else {
 			let e = o()(w.Z.getVoiceStatesForChannel(i.id))
 				.map((e) => {
@@ -259,29 +235,13 @@ let el = o().throttle(() => {
 					var t;
 					let n = ee(e.id),
 						i = q(e.id);
-					return null != n
-						? ''.concat('channel-', '-').concat(n)
-						: (null == i ? void 0 : null === (t = i.party) || void 0 === t ? void 0 : t.id) != null
-							? ''.concat('party-', '-').concat(i.party.id)
-							: ''.concat('user-', '-').concat(e.id);
+					return null != n ? ''.concat('channel-', '-').concat(n) : (null == i ? void 0 : null === (t = i.party) || void 0 === t ? void 0 : t.id) != null ? ''.concat('party-', '-').concat(i.party.id) : ''.concat('user-', '-').concat(e.id);
 				}))
 			)
 				.values()
-				.orderBy(
-					[
-						(e) => e.partiedMembers.length > 1,
-						(e) => e.applicationStreams.length > 0,
-						(e) => e.voiceChannels.length > 0,
-						(e) => e.currentActivities.length > 0,
-						(e) => e.isSpotifyActivity,
-						(e) => e.priorityMembers.map((e) => e.user.username.toLowerCase()).join(' ')
-					],
-					['desc', 'desc', 'desc', 'desc', 'asc', 'asc']
-				)
+				.orderBy([(e) => e.partiedMembers.length > 1, (e) => e.applicationStreams.length > 0, (e) => e.voiceChannels.length > 0, (e) => e.currentActivities.length > 0, (e) => e.isSpotifyActivity, (e) => e.priorityMembers.map((e) => e.user.username.toLowerCase()).join(' ')], ['desc', 'desc', 'desc', 'desc', 'asc', 'asc'])
 				.value()
-				.filter(
-					(e) => e.voiceChannels.length >= 1 || e.currentActivities.length > 0 || e.applicationStreams.length > 0
-				)).map((e) => ({
+				.filter((e) => e.voiceChannels.length >= 1 || e.currentActivities.length > 0 || e.applicationStreams.length > 0)).map((e) => ({
 				type: G.GOo.USER,
 				party: e
 			}))),

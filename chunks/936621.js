@@ -37,8 +37,7 @@ class c extends i.Component {
 		this._animationCleanup();
 	}
 	shake(e, t) {
-		if (((this.animProps = this.getDefaultAnimProps(e, t)), !this.state.shaking))
-			this.setState({ shaking: !0 }, this._animate);
+		if (((this.animProps = this.getDefaultAnimProps(e, t)), !this.state.shaking)) this.setState({ shaking: !0 }, this._animate);
 	}
 	stop() {
 		this.state.shaking && this.setState({ shaking: !1 });
@@ -70,10 +69,7 @@ class c extends i.Component {
 					let t = e.lastDirection * e.intensity,
 						n = l().random(-e.intensity, e.intensity, !0),
 						r = Math.max(0, Math.cbrt(e.duration - e.progress / 1000));
-					(e.intensity *= Math.min(1, r)),
-						(e.lastDirection *= -1),
-						s()(null != this.ref.current, 'Shakeable style set when not mounted'),
-						(this.ref.current.style.transform = 'translate3d('.concat(t, 'px,').concat(n, 'px,0px)'));
+					(e.intensity *= Math.min(1, r)), (e.lastDirection *= -1), s()(null != this.ref.current, 'Shakeable style set when not mounted'), (this.ref.current.style.transform = 'translate3d('.concat(t, 'px,').concat(n, 'px,0px)'));
 				}
 				(e.frameCount += 1), (this._animationFrame = requestAnimationFrame(this._animate));
 			}),

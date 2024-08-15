@@ -31,7 +31,4 @@ n.d(t, {
 	(u[(u.VOICE_CHANNEL_PREVIEWED = 7)] = 'VOICE_CHANNEL_PREVIEWED');
 let d = 10000,
 	_ = 7;
-((c = s || (s = {}))[(c.SPOTIFY = 1)] = 'SPOTIFY'),
-	(c[(c.CRUNCHYROLL = 2)] = 'CRUNCHYROLL'),
-	(c[(c.XBOX = 3)] = 'XBOX'),
-	(c[(c.PLAYSTATION = 4)] = 'PLAYSTATION');
+((c = s || (s = {}))[(c.SPOTIFY = 1)] = 'SPOTIFY'), (c[(c.CRUNCHYROLL = 2)] = 'CRUNCHYROLL'), (c[(c.XBOX = 3)] = 'XBOX'), (c[(c.PLAYSTATION = 4)] = 'PLAYSTATION');

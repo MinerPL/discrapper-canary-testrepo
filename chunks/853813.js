@@ -51,10 +51,7 @@ function O(e) {
 		(a.useEffect(() => {
 			var e, t;
 			let s = (0, S.UT)(O),
-				a =
-					null !== (t = null === (e = T.Z.getRoleMemberCount(M.id)) || void 0 === e ? void 0 : e[n]) && void 0 !== t
-						? t
-						: 0;
+				a = null !== (t = null === (e = T.Z.getRoleMemberCount(M.id)) || void 0 === e ? void 0 : e[n]) && void 0 !== t ? t : 0;
 			I.default.track(f.rMx.ROLE_PAGE_VIEWED, {
 				tab_opened: s,
 				is_everyone: (0, d.pM)(M.id, n),

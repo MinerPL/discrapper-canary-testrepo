@@ -26,10 +26,6 @@ function E(e) {
 		onClose: n,
 		'aria-label': m,
 		onSelect: E,
-		children: [
-			(0, i.jsx)(s.MenuGroup, { children: (0, r.ZP)(t, T) }),
-			h ? (0, i.jsx)(s.MenuGroup, { children: p }) : null,
-			g ? f : (0, i.jsx)(s.MenuGroup, { children: N })
-		]
+		children: [(0, i.jsx)(s.MenuGroup, { children: (0, r.ZP)(t, T) }), h ? (0, i.jsx)(s.MenuGroup, { children: p }) : null, g ? f : (0, i.jsx)(s.MenuGroup, { children: N })]
 	});
 }

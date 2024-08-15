@@ -4,8 +4,7 @@ var n =
 			return (n =
 				Object.assign ||
 				function (t) {
-					for (var e, r = 1, n = arguments.length; r < n; r++)
-						for (var i in ((e = arguments[r]), e)) Object.prototype.hasOwnProperty.call(e, i) && (t[i] = e[i]);
+					for (var e, r = 1, n = arguments.length; r < n; r++) for (var i in ((e = arguments[r]), e)) Object.prototype.hasOwnProperty.call(e, i) && (t[i] = e[i]);
 					return t;
 				}).apply(this, arguments);
 		},
@@ -32,12 +31,12 @@ var n =
 		};
 Object.defineProperty(e, '__esModule', { value: !0 }),
 	(e.IntlManager = e.DEFAULT_LOCALE = void 0),
-	(e.createLoader = function (t, e) {
-		return new s.MessageLoader(t, e);
+	(e.createLoader = function (t, e, r) {
+		return new s.MessageLoader(t, e, r);
 	});
 var o = r(65243),
 	a = r(766989),
-	s = r(793173);
+	s = r(955050);
 e.DEFAULT_LOCALE = 'en-US';
 var u = (function () {
 	function t(t, r) {
@@ -96,12 +95,12 @@ var u = (function () {
 				h = !1;
 			try {
 				for (var f = i(c), p = f.next(); !p.done; p = f.next()) {
-					var m = p.value;
-					if (h && (h = m.type === a.PART_TYPE.literal)) {
-						l[l.length - 1] += m.value;
+					var d = p.value;
+					if (h && (h = d.type === a.PART_TYPE.literal)) {
+						l[l.length - 1] += d.value;
 						continue;
 					}
-					(h = m.type === a.PART_TYPE.literal), l.push(m.value);
+					(h = d.type === a.PART_TYPE.literal), l.push(d.value);
 				}
 			} catch (t) {
 				r = { error: t };

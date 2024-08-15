@@ -24,8 +24,8 @@ e.exports = function (e, t, n) {
 				f = n - c - 1,
 				h = i(c),
 				p = o(d.concat([u, E, d.alloc(1, 1), t], f), s(h, f)),
-				I = o(h, s(p, c));
-			return new l(d.concat([d.alloc(1), I, p], n));
+				m = o(h, s(p, c));
+			return new l(d.concat([d.alloc(1), m, p], n));
 		})(f, t);
 	else if (1 === _)
 		E = (function (e, t, n) {
@@ -37,8 +37,7 @@ e.exports = function (e, t, n) {
 				(r = n
 					? d.alloc(s - a - 3, 255)
 					: (function (e) {
-							for (var t, n = d.allocUnsafe(e), r = 0, a = i(2 * e), s = 0; r < e; )
-								s === a.length && ((a = i(2 * e)), (s = 0)), (t = a[s++]) && (n[r++] = t);
+							for (var t, n = d.allocUnsafe(e), r = 0, a = i(2 * e), s = 0; r < e; ) s === a.length && ((a = i(2 * e)), (s = 0)), (t = a[s++]) && (n[r++] = t);
 							return n;
 						})(s - a - 3)),
 				new l(d.concat([d.from([0, n ? 1 : 2]), r, d.alloc(1), t], s))

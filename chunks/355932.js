@@ -29,8 +29,7 @@ function d(e) {
 		i.useLayoutEffect(() => {
 			var e;
 			if (null == d.current) return;
-			(l.current.length = n.length),
-				(u.current = null !== (e = d.current.getBoundingClientRect().width) && void 0 !== e ? e : 0);
+			(l.current.length = n.length), (u.current = null !== (e = d.current.getBoundingClientRect().width) && void 0 !== e ? e : 0);
 			let i = (function (e) {
 				let { items: t, maxLines: n, itemWidths: r, itemGapPx: i, containerWidth: a, overflowWidth: s } = e,
 					o = 0,
@@ -100,7 +99,7 @@ function E(e) {
 }
 t.ZP = function (e) {
 	let { className: t, items: n, renderItem: a, itemGapPx: o = 0, maxLines: f, renderOverflow: h } = e,
-		{ ref: p, width: I } = (function () {
+		{ ref: p, width: m } = (function () {
 			let [e, t] = i.useState(0);
 			return {
 				ref: (0, l.y)((e) => {
@@ -111,14 +110,14 @@ t.ZP = function (e) {
 			};
 		})(),
 		{
-			lastVisibleIndex: m,
+			lastVisibleIndex: I,
 			onItemLayout: T,
 			overflowItemsRef: g
 		} = d({
 			items: n,
 			itemGapPx: o,
 			maxLines: f,
-			containerWidth: I
+			containerWidth: m
 		}),
 		S = i.useCallback(
 			(e) =>
@@ -128,8 +127,8 @@ t.ZP = function (e) {
 				}),
 			[a]
 		),
-		A = i.useMemo(() => n.slice(0, m + 1), [n, m]),
-		N = i.useMemo(() => n.slice(m + 1), [n, m]);
+		A = i.useMemo(() => n.slice(0, I + 1), [n, I]),
+		N = i.useMemo(() => n.slice(I + 1), [n, I]);
 	return (0, r.jsxs)('div', {
 		className: s()(t, c.items),
 		ref: p,

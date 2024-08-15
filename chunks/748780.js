@@ -29,15 +29,7 @@ r.inject.ApplyAnimatedValues(
 		else {
 			if (!e.nodeType || void 0 === e.setAttribute) return !1;
 			var r;
-			u().setValueForStyles(
-				e,
-				((r = t.style) &&
-					(r.transform && (r.transform = r.WebkitTransform = r.MozTransform = r.transform.map(c).join(' ')),
-					r.color && (r.color = _(r.color)),
-					r.backgroundColor && (r.backgroundColor = _(r.backgroundColor))),
-				r),
-				n._reactInternalInstance
-			);
+			u().setValueForStyles(e, ((r = t.style) && (r.transform && (r.transform = r.WebkitTransform = r.MozTransform = r.transform.map(c).join(' ')), r.color && (r.color = _(r.color)), r.backgroundColor && (r.backgroundColor = _(r.backgroundColor))), r), n._reactInternalInstance);
 		}
 	},
 	(e) => e
@@ -53,26 +45,12 @@ t.Z = {
 	},
 	animate: function e(t, n) {
 		let i;
-		let {
-				toValueMin: a,
-				toValueMax: s,
-				tension: o = 0,
-				friction: l = 0,
-				loop: u,
-				reverse: c,
-				invert: d,
-				callback: _,
-				type: f = 'spring',
-				shouldLoop: h,
-				durationMin: p,
-				durationMax: I,
-				...m
-			} = n,
+		let { toValueMin: a, toValueMax: s, tension: o = 0, friction: l = 0, loop: u, reverse: c, invert: d, callback: _, type: f = 'spring', shouldLoop: h, durationMin: p, durationMax: m, ...I } = n,
 			T = t._value,
-			g = E(n.duration, p, I),
+			g = E(n.duration, p, m),
 			S = E(n.toValue, a, s),
 			A = r[f](t, {
-				...m,
+				...I,
 				toValue: S,
 				tension: o,
 				friction: l,
@@ -80,9 +58,9 @@ t.Z = {
 			}),
 			N = A;
 		if (c || d) {
-			let e = E(n.duration, p, I);
+			let e = E(n.duration, p, m);
 			(i = r[f](t, {
-				...m,
+				...I,
 				toValue: c ? T : -S,
 				tension: o,
 				friction: l,

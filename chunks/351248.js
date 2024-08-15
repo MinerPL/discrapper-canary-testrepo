@@ -20,8 +20,8 @@ var i = n(735250),
 	_ = n(354459),
 	f = n(817632),
 	E = n(257995),
-	g = n(658371);
-function C(e, t, n) {
+	C = n(658371);
+function g(e, t, n) {
 	return (
 		t in e
 			? Object.defineProperty(e, t, {
@@ -130,8 +130,8 @@ class v extends a.PureComponent {
 		let { theme: e, children: t, className: n } = this.props,
 			a = (0, u.wj)(e),
 			s = l()(f.sprite, {
-				[g.crossWhite]: a,
-				[g.crossGrey]: !a
+				[C.crossWhite]: a,
+				[C.crossGrey]: !a
 			});
 		return (0, i.jsxs)(r.Z.div, {
 			className: l()(f.transition, n),
@@ -152,21 +152,14 @@ class v extends a.PureComponent {
 		});
 	}
 	constructor(...e) {
-		super(...e),
-			C(this, 'scaleAnimation', new r.Z.Value(0)),
-			C(this, 'spriteAnimation', new r.Z.Value(0)),
-			C(this, 'spriteOpacity', new r.Z.Value(0)),
-			C(this, 'widthAnimation', new r.Z.Value(0));
+		super(...e), g(this, 'scaleAnimation', new r.Z.Value(0)), g(this, 'spriteAnimation', new r.Z.Value(0)), g(this, 'spriteOpacity', new r.Z.Value(0)), g(this, 'widthAnimation', new r.Z.Value(0));
 	}
 }
 function S(e) {
 	var t, n;
-	let { participants: a, onContextMenu: s, className: r, onClick: u, width: E, guildId: g } = e,
-		C = (0, h.ZP)();
-	let I =
-			((t = E),
-			(n = a.length),
-			((0, d.getAvatarSize)(d.AvatarSizes.SIZE_80) + 16) * n > t ? d.AvatarSizes.SIZE_40 : d.AvatarSizes.SIZE_80),
+	let { participants: a, onContextMenu: s, className: r, onClick: u, width: E, guildId: C } = e,
+		g = (0, h.ZP)();
+	let I = ((t = E), (n = a.length), ((0, d.getAvatarSize)(d.AvatarSizes.SIZE_80) + 16) * n > t ? d.AvatarSizes.SIZE_40 : d.AvatarSizes.SIZE_80),
 		x = (0, o.e7)([m.Z], () => m.Z.isFocused()),
 		T = a.map((e) => {
 			var t, n;
@@ -177,11 +170,11 @@ function S(e) {
 				{
 					className: f.participant,
 					width: (0, d.getAvatarSize)(I),
-					theme: C,
+					theme: g,
 					children: (0, i.jsx)(
 						p.Z,
 						{
-							src: a.getAvatarURL(g, (0, d.getAvatarSize)(I), r && x),
+							src: a.getAvatarURL(C, (0, d.getAvatarSize)(I), r && x),
 							size: I,
 							muted: null !== (t = null == l ? void 0 : l.isVoiceMuted()) && void 0 !== t && t,
 							deafen: null !== (n = null == l ? void 0 : l.isVoiceDeafened()) && void 0 !== n && n,

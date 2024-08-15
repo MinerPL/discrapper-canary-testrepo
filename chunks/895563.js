@@ -21,17 +21,7 @@ var a = t(392711),
 	M = t(981631),
 	I = t(689938);
 function f(e, n) {
-	return e.type === M.d4z.GROUP_DM
-		? n
-			? I.Z.Messages.UNFAVORITE_GDM
-			: I.Z.Messages.FAVORITE_GDM
-		: e.type === M.d4z.DM
-			? n
-				? I.Z.Messages.UNFAVORITE_DM
-				: I.Z.Messages.FAVORITE_DM
-			: n
-				? I.Z.Messages.UNFAVORITE_CHANNEL
-				: I.Z.Messages.FAVORITE_CHANNEL;
+	return e.type === M.d4z.GROUP_DM ? (n ? I.Z.Messages.UNFAVORITE_GDM : I.Z.Messages.FAVORITE_GDM) : e.type === M.d4z.DM ? (n ? I.Z.Messages.UNFAVORITE_DM : I.Z.Messages.FAVORITE_DM) : n ? I.Z.Messages.UNFAVORITE_CHANNEL : I.Z.Messages.FAVORITE_CHANNEL;
 }
 function E(e) {
 	let n = (0, r.e7)([s.ZP], () => s.ZP.getChannels(M.I_8))[M.d4z.GUILD_CATEGORY],

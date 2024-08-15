@@ -72,18 +72,8 @@ function b() {
 		});
 	let q = (0, x.ZP)(B.id),
 		J = null == q ? void 0 : q.getLegacyUsername(),
-		$ =
-			(null !== (t = null === (e = k.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== t ? t : 0) > 0
-				? k.global_name
-				: null !== (a = null == W ? void 0 : W.nick) && void 0 !== a
-					? a
-					: [],
-		ee =
-			(null !== (b = null === (s = k.bio) || void 0 === s ? void 0 : s.length) && void 0 !== b ? b : 0) > 0
-				? k.bio
-				: null !== (Z = null == W ? void 0 : W.bio) && void 0 !== Z
-					? Z
-					: [],
+		$ = (null !== (t = null === (e = k.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== t ? t : 0) > 0 ? k.global_name : null !== (a = null == W ? void 0 : W.nick) && void 0 !== a ? a : [],
+		ee = (null !== (b = null === (s = k.bio) || void 0 === s ? void 0 : s.length) && void 0 !== b ? b : 0) > 0 ? k.bio : null !== (Z = null == W ? void 0 : W.bio) && void 0 !== Z ? Z : [],
 		es = (0, c.Z)('user_profile'),
 		et = (0, d.V)();
 	return (0, n.jsxs)('div', {

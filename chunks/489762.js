@@ -13,8 +13,8 @@ var r = n(735250),
 	f = n(880949),
 	h = n(806966),
 	p = n(28546),
-	I = n(691251),
-	m = n(98528),
+	m = n(691251),
+	I = n(98528),
 	T = n(551058),
 	g = n(695346),
 	S = n(430824),
@@ -83,9 +83,7 @@ let F = (0, v.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
 			o = (0, p.Iu)((e) => e.searchQuery),
 			l = i.useCallback((e) => {
 				let { visibleRowIndex: t, columnIndex: n, gridSectionIndex: r } = e;
-				h.ZN.setActiveCategoryIndex(r),
-					h.ZN.setInspectedExpressionPosition(n, t, I.u.MOUSE_EVENT),
-					e.type === y.al.STICKER && h.ZN.setSearchPlaceholder(e.sticker.name);
+				h.ZN.setActiveCategoryIndex(r), h.ZN.setInspectedExpressionPosition(n, t, m.u.MOUSE_EVENT), e.type === y.al.STICKER && h.ZN.setSearchPlaceholder(e.sticker.name);
 			}, []);
 		return {
 			handleStickerInspect: l,
@@ -122,22 +120,7 @@ let F = (0, v.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
 		};
 	},
 	eo = (e) => {
-		let {
-				collapsedStickersCategories: t,
-				gridWidth: n,
-				onSelectSticker: a,
-				getStickerItemProps: o,
-				getStickerRowProps: u,
-				gutterWidth: d,
-				inspectedStickerPosition: _,
-				isScrolling: E,
-				isUsingKeyboardNavigation: h,
-				stickersGrid: p,
-				stickersCategories: I,
-				filteredStickers: m,
-				ownedStickerPacks: v,
-				channel: O
-			} = e,
+		let { collapsedStickersCategories: t, gridWidth: n, onSelectSticker: a, getStickerItemProps: o, getStickerRowProps: u, gutterWidth: d, inspectedStickerPosition: _, isScrolling: E, isUsingKeyboardNavigation: h, stickersGrid: p, stickersCategories: m, filteredStickers: I, ownedStickerPacks: v, channel: O } = e,
 			R = (0, c.O)(),
 			M = (0, s.e7)([A.default], () => A.default.getCurrentUser()),
 			{ handleStickerInspect: U, handleSelect: B } = es({
@@ -199,9 +182,9 @@ let F = (0, v.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
 			),
 			$ = i.useCallback(
 				(e) => {
-					let n = I[e];
-					if (null != m) {
-						let { sendable: t, sendableWithPremium: n } = m;
+					let n = m[e];
+					if (null != I) {
+						let { sendable: t, sendableWithPremium: n } = I;
 						if (0 === e && t.length > 0) return null;
 						let i = t.length > 0 && n.length > 0;
 						return (0, r.jsxs)(r.Fragment, {
@@ -300,23 +283,23 @@ let F = (0, v.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
 						}
 					}
 				},
-				[t, I, X, m]
+				[t, m, X, I]
 			),
 			J = i.useCallback(
 				(e) => {
-					if (null != m) {
-						let { sendable: t, sendableWithPremium: n } = m;
+					if (null != I) {
+						let { sendable: t, sendableWithPremium: n } = I;
 						return 0 === e && t.length > 0 ? 0 : z + (t.length > 0 && n.length > 0 ? K : 0);
 					}
 					return z;
 				},
-				[m]
+				[I]
 			),
 			ee = i.useCallback(
 				(e) => {
-					let n = I[e],
+					let n = m[e],
 						i = t.has(n.id);
-					return n.type !== y.Ih.EMPTY_GUILD_UPSELL || null != m || i
+					return n.type !== y.Ih.EMPTY_GUILD_UPSELL || null != I || i
 						? null
 						: (0, r.jsx)(
 								b.Z,
@@ -330,7 +313,7 @@ let F = (0, v.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
 								'sticker-picker-empty-guild-inline-upsell-'.concat(n.id)
 							);
 				},
-				[I, t, m, O, H]
+				[m, t, I, O, H]
 			);
 		return {
 			renderRow: j,
@@ -340,30 +323,16 @@ let F = (0, v.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
 			renderSectionFooter: ee,
 			sectionFooterHeight: i.useCallback(
 				(e) => {
-					let n = I[e],
+					let n = m[e],
 						r = t.has(n.id);
 					return n.type !== y.Ih.EMPTY_GUILD_UPSELL || r ? 0 : er;
 				},
-				[I, t]
+				[m, t]
 			)
 		};
 	},
 	el = i.forwardRef(function (e, t) {
-		let {
-				collapsedStickersCategories: n,
-				gridWidth: o,
-				filteredStickers: l,
-				getStickerItemProps: c,
-				getStickerRowProps: f,
-				gutterWidth: I,
-				isUsingKeyboardNavigation: T,
-				onSelectSticker: g,
-				rowCount: S,
-				rowCountBySection: A,
-				stickersCategories: N,
-				stickersGrid: v,
-				channel: O
-			} = e,
+		let { collapsedStickersCategories: n, gridWidth: o, filteredStickers: l, getStickerItemProps: c, getStickerRowProps: f, gutterWidth: m, isUsingKeyboardNavigation: T, onSelectSticker: g, rowCount: S, rowCountBySection: A, stickersCategories: N, stickersGrid: v, channel: O } = e,
 			R = i.useRef(!1),
 			y = i.useRef(null),
 			[D, L] = h.ZN.useStore((e) => [e.activeCategoryIndex, e.inspectedExpressionPosition], a.Z),
@@ -387,13 +356,13 @@ let F = (0, v.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
 				onSelectSticker: g,
 				getStickerItemProps: c,
 				getStickerRowProps: f,
-				gutterWidth: I,
+				gutterWidth: m,
 				inspectedStickerPosition: L,
 				filteredStickers: l,
 				ownedStickerPacks: i.useMemo(() => new Set(U.map((e) => e.id)), [U]),
 				channel: O
 			}),
-			j = (0, m.Qs)({
+			j = (0, I.Qs)({
 				activeCategoryIndex: D,
 				isScrolling: R,
 				listRef: y,
@@ -402,7 +371,7 @@ let F = (0, v.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
 				searchQuery: P
 			});
 		return (
-			(0, m.Xs)({
+			(0, I.Xs)({
 				searchQuery: P,
 				activeCategoryIndex: D,
 				listRef: y
@@ -416,17 +385,11 @@ let F = (0, v.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
 					},
 					getRowDescriptors: () => {
 						var e, t;
-						return null !== (t = null === (e = y.current) || void 0 === e ? void 0 : e.getRowDescriptors()) &&
-							void 0 !== t
-							? t
-							: [];
+						return null !== (t = null === (e = y.current) || void 0 === e ? void 0 : e.getRowDescriptors()) && void 0 !== t ? t : [];
 					},
 					getSectionDescriptors: () => {
 						var e, t;
-						return null !== (t = null === (e = y.current) || void 0 === e ? void 0 : e.getSectionDescriptors()) &&
-							void 0 !== t
-							? t
-							: [];
+						return null !== (t = null === (e = y.current) || void 0 === e ? void 0 : e.getSectionDescriptors()) && void 0 !== t ? t : [];
 					},
 					scrollToSectionTop: function () {
 						for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
@@ -446,8 +409,7 @@ let F = (0, v.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
 					},
 					getListDimensions: function () {
 						for (var e, t, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
-						return null !== (t = null === (e = y.current) || void 0 === e ? void 0 : e.getListDimensions(...r)) &&
-							void 0 !== t
+						return null !== (t = null === (e = y.current) || void 0 === e ? void 0 : e.getListDimensions(...r)) && void 0 !== t
 							? t
 							: {
 									height: -1,

@@ -28,8 +28,7 @@ function N(e, t, n) {
 		e
 	);
 }
-((a = s || (s = {})).CERTIFIED = 'New Audio Device Detected - Certified'),
-	(a.NOT_CERTIFIED = 'New Audio Device Detected - Not Certified');
+((a = s || (s = {})).CERTIFIED = 'New Audio Device Detected - Certified'), (a.NOT_CERTIFIED = 'New Audio Device Detected - Not Certified');
 class _ extends o.Component {
 	track() {
 		let { certifiedDeviceMetadata: e, device: t } = this.props;

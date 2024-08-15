@@ -237,9 +237,7 @@ function F(e) {
 				(0, i.jsx)(I.Text, {
 					variant: 'text-md/semibold',
 					color: 'text-danger',
-					children: O
-						? D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_DM_RAID_TITLE
-						: D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_TITLE
+					children: O ? D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_DM_RAID_TITLE : D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_TITLE
 				})
 			]
 		}),
@@ -276,9 +274,7 @@ function F(e) {
 				? (0, i.jsx)(I.Text, {
 						variant: 'text-md/normal',
 						color: 'text-muted',
-						children: D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_ACTION_DESCRIPTION.format({
-							dateTime: l.toLocaleString(D.Z.getLocale(), N.pQ)
-						})
+						children: D.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_ACTION_DESCRIPTION.format({ dateTime: l.toLocaleString(D.Z.getLocale(), N.pQ) })
 					})
 				: null,
 		footerButtons: S

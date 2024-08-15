@@ -25,18 +25,9 @@ function l(e, t) {
 	return (0, r.e7)([a.Z], () => a.Z.getParticipantCount(e, t), [e, t]);
 }
 function u(e) {
-	let [t] = (0, r.e7)(
-		[a.Z],
-		() => [a.Z.getMutableRequestToSpeakParticipants(e), a.Z.getRequestToSpeakParticipantsVersion(e)],
-		[e],
-		i.Q
-	);
+	let [t] = (0, r.e7)([a.Z], () => [a.Z.getMutableRequestToSpeakParticipants(e), a.Z.getRequestToSpeakParticipantsVersion(e)], [e], i.Q);
 	return t;
 }
 function c(e) {
-	return (0, r.e7)(
-		[a.Z],
-		() => a.Z.getMutableParticipants(e, s.pV.SPEAKER).filter((e) => e.type === s.Ui.VOICE).length,
-		[e]
-	);
+	return (0, r.e7)([a.Z], () => a.Z.getMutableParticipants(e, s.pV.SPEAKER).filter((e) => e.type === s.Ui.VOICE).length, [e]);
 }

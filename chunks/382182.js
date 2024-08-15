@@ -3,13 +3,13 @@ n.d(t, {
 		return p;
 	},
 	P9: function () {
-		return I;
+		return m;
 	},
 	h_: function () {
 		return g;
 	},
 	p9: function () {
-		return m;
+		return I;
 	},
 	wq: function () {
 		return T;
@@ -36,16 +36,9 @@ function p(e, t, n) {
 	if (e.isPrivate()) return !0;
 	let a = t.getGuild(e.getGuildId()),
 		o = null !== (r = null == a ? void 0 : a.maxStageVideoChannelUsers) && void 0 !== r ? r : 0;
-	return (
-		(!e.isGuildStageVoice() || !(o <= 0)) &&
-		(!i || !!(0, s.Z)(e, n)) &&
-		!!n.can(f.Plq.STREAM, e) &&
-		null != a &&
-		a.afkChannelId !== e.id &&
-		!0
-	);
+	return (!e.isGuildStageVoice() || !(o <= 0)) && (!i || !!(0, s.Z)(e, n)) && !!n.can(f.Plq.STREAM, e) && null != a && a.afkChannelId !== e.id && !0;
 }
-function I(e) {
+function m(e) {
 	switch (e) {
 		case 0:
 			return h.Z.Messages.CONSOLE_STREAM_UNAVAILABLE;
@@ -57,7 +50,7 @@ function I(e) {
 			return h.Z.Messages.WATCH_STREAM;
 	}
 }
-function m(e, t, n, r, i) {
+function I(e, t, n, r, i) {
 	let a;
 	if (null == e) return [!1, 2];
 	let o = t.isInChannel(e.id),
@@ -67,13 +60,11 @@ function m(e, t, n, r, i) {
 	return d ? (a = 0) : c || o ? u && !o && (a = 1) : (a = 2), [!__OVERLAY__ && !d && (o || (c && !u)), a];
 }
 function T(e) {
-	return (0, a.Wu)([_.Z, c.Z, d.Z, o.Z], () => m(e, _.Z, c.Z, d.Z, o.Z));
+	return (0, a.Wu)([_.Z, c.Z, d.Z, o.Z], () => I(e, _.Z, c.Z, d.Z, o.Z));
 }
 function g(e, t, n) {
 	let r = [];
 	for (let { channel: i } of e[u.Zb]) p(i, t, n) && r.push(i);
 	return r;
 }
-((i = r || (r = {}))[(i.REMOTE_MODE = 0)] = 'REMOTE_MODE'),
-	(i[(i.CHANNEL_FULL = 1)] = 'CHANNEL_FULL'),
-	(i[(i.NO_PERMISSION = 2)] = 'NO_PERMISSION');
+((i = r || (r = {}))[(i.REMOTE_MODE = 0)] = 'REMOTE_MODE'), (i[(i.CHANNEL_FULL = 1)] = 'CHANNEL_FULL'), (i[(i.NO_PERMISSION = 2)] = 'NO_PERMISSION');

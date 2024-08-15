@@ -184,19 +184,13 @@ function P() {
 			(e) => {
 				let a = m.Z.getVoiceStateForUser(S.default.getId()),
 					i = N.Z.getChannel(null == a ? void 0 : a.channelId);
-				S.default.getSessionId() === (null == a ? void 0 : a.sessionId) &&
-				null != i &&
-				i.type !== O.d4z.GUILD_STAGE_VOICE
+				S.default.getSessionId() === (null == a ? void 0 : a.sessionId) && null != i && i.type !== O.d4z.GUILD_STAGE_VOICE
 					? (0, r.openModalLazy)(async () => {
 							let { default: s } = await t.e('34999').then(t.bind(t, 396473));
 							return (t) =>
 								(0, n.jsx)(s, {
-									title: e
-										? h.Z.Messages.E2EE_ENABLE_PERSISTENT_KEY_CONFIRM_TITLE
-										: h.Z.Messages.E2EE_DISABLE_PERSISTENT_KEY_CONFIRM_TITLE,
-									subtitle: e
-										? h.Z.Messages.E2EE_ENABLE_PERSISTENT_KEY_CONFIRM_SUBTITLE
-										: h.Z.Messages.E2EE_DISABLE_PERSISTENT_KEY_CONFIRM_SUBTITLE,
+									title: e ? h.Z.Messages.E2EE_ENABLE_PERSISTENT_KEY_CONFIRM_TITLE : h.Z.Messages.E2EE_DISABLE_PERSISTENT_KEY_CONFIRM_TITLE,
+									subtitle: e ? h.Z.Messages.E2EE_ENABLE_PERSISTENT_KEY_CONFIRM_SUBTITLE : h.Z.Messages.E2EE_DISABLE_PERSISTENT_KEY_CONFIRM_SUBTITLE,
 									onConfirm: () => {
 										l(i.id, e);
 									},

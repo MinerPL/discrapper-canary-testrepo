@@ -31,11 +31,7 @@ function h(e, t) {
 					let d = null != u.joinedAt ? new Date(u.joinedAt) : null,
 						h = null != d && Date.now() - d.getTime() > 259200000,
 						{ identityGuildId: m, identityEnabled: p } = s.clan;
-					return null != m && null == p
-						? e === m
-						: null == m && null == p
-							? h
-							: (m !== e || !1 !== p) && null != m && !1 === p && h;
+					return null != m && null == p ? e === m : null == m && null == p ? h : (m !== e || !1 !== p) && null != m && !1 === p && h;
 				})(e, [o.default, r.Z, l.ZP]),
 			[e]
 		),

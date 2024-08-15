@@ -49,21 +49,6 @@ class _ extends l.Z {
 		});
 	}
 	constructor(e) {
-		super(e),
-			d(this, 'prices', void 0),
-			d(this, 'type', void 0),
-			d(this, 'premiumType', void 0),
-			d(this, 'items', void 0),
-			d(this, 'categorySkuId', void 0),
-			d(this, 'bundledProducts', void 0),
-			d(this, 'googleSkuIds', void 0),
-			(this.summary = e.summary),
-			(this.type = e.type),
-			(this.premiumType = e.premiumType),
-			(this.items = e.items),
-			(this.categorySkuId = e.categorySkuId),
-			(this.prices = e.prices),
-			(this.bundledProducts = e.bundledProducts),
-			(this.googleSkuIds = e.googleSkuIds);
+		super(e), d(this, 'prices', void 0), d(this, 'type', void 0), d(this, 'premiumType', void 0), d(this, 'items', void 0), d(this, 'categorySkuId', void 0), d(this, 'bundledProducts', void 0), d(this, 'googleSkuIds', void 0), (this.summary = e.summary), (this.type = e.type), (this.premiumType = e.premiumType), (this.items = e.items), (this.categorySkuId = e.categorySkuId), (this.prices = e.prices), (this.bundledProducts = e.bundledProducts), (this.googleSkuIds = e.googleSkuIds);
 	}
 }

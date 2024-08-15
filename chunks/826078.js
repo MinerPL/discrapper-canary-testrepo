@@ -21,12 +21,7 @@ function C(e) {
 	let t = Math.floor(e / 60),
 		a = Math.floor(e % 60),
 		n = Math.floor((e % 1) * 100);
-	return (
-		(t = t < 10 ? '0' + t : t),
-		(a = a < 10 ? '0' + a : a),
-		(n = n < 10 ? '0' + n : n),
-		''.concat(t, ':').concat(a, '.').concat(n)
-	);
+	return (t = t < 10 ? '0' + t : t), (a = a < 10 ? '0' + a : a), (n = n < 10 ? '0' + n : n), ''.concat(t, ':').concat(a, '.').concat(n);
 }
 function _(e) {
 	let t = Math.floor(e / 60),
@@ -38,14 +33,7 @@ t.Z = function (e) {
 	var t, a, i, j, S, I;
 	let { sourceURL: E } = e,
 		{ videoPlayerRef: T, cropData: y, setCropData: w } = (0, b.S)(),
-		[N, L] = l.useState(
-			((I = !(null === (a = T.current) || void 0 === a
-				? void 0
-				: null === (t = a.videoElement) || void 0 === t
-					? void 0
-					: t.paused)),
-			I)
-		),
+		[N, L] = l.useState(((I = !(null === (a = T.current) || void 0 === a ? void 0 : null === (t = a.videoElement) || void 0 === t ? void 0 : t.paused)), I)),
 		k = l.useRef(null),
 		[R, M] = l.useState(null),
 		[P, Z] = l.useState(),
@@ -123,16 +111,7 @@ t.Z = function (e) {
 				let l = (((0, o.clamp)(e, U.left, U.right) - U.left) / U.width) * P,
 					i = (0, o.clamp)(l, 0, P),
 					r = R;
-				if (
-					(null == r &&
-						t &&
-						((r = i <= y.start ? 'start' : i >= y.end ? 'end' : 'playhead'),
-						null === (a = T.current) || void 0 === a || a.pause(),
-						M(r),
-						H(N)),
-					'start' === r)
-				)
-					q(i);
+				if ((null == r && t && ((r = i <= y.start ? 'start' : i >= y.end ? 'end' : 'playhead'), null === (a = T.current) || void 0 === a || a.pause(), M(r), H(N)), 'start' === r)) q(i);
 				else if ('end' === r) $(i);
 				else if ('playhead' === r) {
 					let e = (0, o.clamp)(i, y.start, y.end);
@@ -252,13 +231,7 @@ t.Z = function (e) {
 						tabIndex: 0,
 						onClick: () => {
 							var e, t;
-							return N
-								? null === (e = T.current) || void 0 === e
-									? void 0
-									: e.pause()
-								: null === (t = T.current) || void 0 === t
-									? void 0
-									: t.play();
+							return N ? (null === (e = T.current) || void 0 === e ? void 0 : e.pause()) : null === (t = T.current) || void 0 === t ? void 0 : t.play();
 						},
 						className: g.playPauseButton,
 						children: N
@@ -367,12 +340,7 @@ t.Z = function (e) {
 										'aria-valuemin': y.start + h.Hp,
 										'aria-valuenow': y.end,
 										'aria-valuetext': _(y.end),
-										'aria-valuemax':
-											null === (S = T.current) || void 0 === S
-												? void 0
-												: null === (j = S.videoElement) || void 0 === j
-													? void 0
-													: j.duration,
+										'aria-valuemax': null === (S = T.current) || void 0 === S ? void 0 : null === (j = S.videoElement) || void 0 === j ? void 0 : j.duration,
 										'aria-label': x.Z.Messages.CLIPS_CROP_END,
 										children: (0, n.jsx)('div', { className: g.cropRightArrow })
 									})

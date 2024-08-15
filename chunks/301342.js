@@ -38,16 +38,7 @@ function v(e) {
 }
 let Z = l.memo(function (e) {
 	let t,
-		{
-			channel: r,
-			connectChannelDragSource: h,
-			connectChannelDropTarget: I,
-			disableManageChannels: E,
-			position: Z,
-			sortingPosition: T,
-			hideIcon: L,
-			children: A
-		} = e,
+		{ channel: r, connectChannelDragSource: h, connectChannelDropTarget: I, disableManageChannels: E, position: Z, sortingPosition: T, hideIcon: L, children: A } = e,
 		b = (0, o.e7)([C.ZP], () => C.ZP.isChannelMuted(r.getGuildId(), r.id)),
 		M = (0, o.e7)([f.Z], () => f.Z.isCollapsed(r.id)),
 		R = (0, o.e7)([m.Z], () => m.Z.can(N.Plq.MANAGE_CHANNELS, r));

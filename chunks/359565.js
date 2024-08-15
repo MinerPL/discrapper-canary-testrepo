@@ -36,9 +36,7 @@ function _(e) {
 					className: p.chatHeaderBarText,
 					variant: 'text-sm/normal',
 					color: 'header-secondary',
-					children: t.isForumPost()
-						? m.Z.Messages.FORUM_POST_HEADER_NOTICE_LOCKED
-						: m.Z.Messages.THREAD_HEADER_NOTICE_LOCKED
+					children: t.isForumPost() ? m.Z.Messages.FORUM_POST_HEADER_NOTICE_LOCKED : m.Z.Messages.THREAD_HEADER_NOTICE_LOCKED
 				}),
 				s
 					? (0, i.jsx)(r.Button, {
@@ -79,9 +77,7 @@ function f(e) {
 					className: p.chatHeaderBarText,
 					variant: 'text-sm/normal',
 					color: 'header-secondary',
-					children: t.isForumPost()
-						? m.Z.Messages.FORUM_POST_HEADER_NOTICE_ACTIVE_LOCKED
-						: m.Z.Messages.THREAD_HEADER_NOTICE_ACTIVE_LOCKED
+					children: t.isForumPost() ? m.Z.Messages.FORUM_POST_HEADER_NOTICE_ACTIVE_LOCKED : m.Z.Messages.THREAD_HEADER_NOTICE_ACTIVE_LOCKED
 				}),
 				s
 					? (0, i.jsx)(r.Button, {

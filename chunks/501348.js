@@ -77,9 +77,7 @@ let Y = {
 			(0, O.e5)({
 				...(0, g.ZP)({
 					channelId: W,
-					content: (0, c.wj)(e)
-						? G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_DARK
-						: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_LIGHT
+					content: (0, c.wj)(e) ? G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_DARK : G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_LIGHT
 				}),
 				state: j.yb.SENT,
 				id: ''.concat(s++)
@@ -221,12 +219,7 @@ class Q extends a.Component {
 			i = (0, c.wj)(s) ? this.darkMessages : this.lightMessages;
 		return (0, n.jsx)(d.FocusBlock, {
 			children: (0, n.jsx)(d.Card, {
-				className: r()(
-					F.preview,
-					y.marginBottom40,
-					e ? F.compactPreview : void 0,
-					'group-spacing-'.concat(null != t ? t : e ? U.c8 : U.pq)
-				),
+				className: r()(F.preview, y.marginBottom40, e ? F.compactPreview : void 0, 'group-spacing-'.concat(null != t ? t : e ? U.c8 : U.pq)),
 				outline: !0,
 				'aria-hidden': !0,
 				children: i.map((s, t) =>
@@ -323,12 +316,7 @@ class Q extends a.Component {
 	}
 	renderScalingAndSpacing() {
 		return (0, n.jsxs)(n.Fragment, {
-			children: [
-				this.renderFontScaleSlider(),
-				this.renderMessageGroupSpacingSlider(),
-				this.renderZoomSlider(),
-				(0, n.jsx)(d.FormDivider, { className: y.marginTop20 })
-			]
+			children: [this.renderFontScaleSlider(), this.renderMessageGroupSpacingSlider(), this.renderZoomSlider(), (0, n.jsx)(d.FormDivider, { className: y.marginTop20 })]
 		});
 	}
 	render() {
@@ -424,10 +412,7 @@ function q() {
 			zoom: T.Z.zoom,
 			messageGroupSpacing: T.Z.messageGroupSpacing,
 			displayCompactAvatars: P.ZP.displayCompactAvatars,
-			isStaff:
-				null !== (s = null === (e = M.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) &&
-				void 0 !== s &&
-				s,
+			isStaff: null !== (s = null === (e = M.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== s && s,
 			gradientPreset: N.Z.gradientPreset
 		};
 	});

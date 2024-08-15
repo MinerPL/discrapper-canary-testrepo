@@ -16,11 +16,7 @@ class A extends n.PureComponent {
 		var e, a;
 		let { className: t, cashAppPayComponent: n } = this.props,
 			l = this.props.adyenPaymentData,
-			i =
-				null !== (a = null == l ? void 0 : null === (e = l.paymentMethod) || void 0 === e ? void 0 : e.cashtag) &&
-				void 0 !== a
-					? a
-					: '',
+			i = null !== (a = null == l ? void 0 : null === (e = l.paymentMethod) || void 0 === e ? void 0 : e.cashtag) && void 0 !== a ? a : '',
 			c = null != l && '' !== i;
 		return (0, s.jsxs)('div', {
 			className: t,
@@ -48,10 +44,7 @@ class A extends n.PureComponent {
 					: (0, s.jsx)(r.Text, {
 							variant: 'text-md/medium',
 							className: E.connectionInstructions,
-							children:
-								null == n
-									? d.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY_LOADING
-									: d.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY_CONNECTION_INSTRUCTIONS
+							children: null == n ? d.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY_LOADING : d.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY_CONNECTION_INSTRUCTIONS
 						})
 			]
 		});

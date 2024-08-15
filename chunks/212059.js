@@ -64,10 +64,6 @@ var n = {
 t.Z = function (e, t, r) {
 	var i,
 		a = n[e];
-	if (
-		((i = 'string' == typeof a ? a : 1 === t ? a.one : a.other.replace('{{count}}', t.toString())),
-		null != r && r.addSuffix)
-	)
-		return r.comparison && r.comparison > 0 ? 'in ' + i : i + ' ago';
+	if (((i = 'string' == typeof a ? a : 1 === t ? a.one : a.other.replace('{{count}}', t.toString())), null != r && r.addSuffix)) return r.comparison && r.comparison > 0 ? 'in ' + i : i + ' ago';
 	return i;
 };

@@ -56,9 +56,7 @@ function x(e) {
 								className: C.coverageTitle,
 								variant: 'text-xs/medium',
 								color: 'text-muted',
-								children: g.Z.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_MISSING_CHANNELS.format({
-									numChannelsMissing: E - I
-								})
+								children: g.Z.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_MISSING_CHANNELS.format({ numChannelsMissing: E - I })
 							})
 						]
 					}),
@@ -127,9 +125,7 @@ function x(e) {
 													(0, s.jsx)(r.Text, {
 														variant: 'text-xs/normal',
 														color: 'text-muted',
-														children: g.Z.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_ADD_HELP.format({
-															numChannels: m
-														})
+														children: g.Z.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_ADD_HELP.format({ numChannels: m })
 													})
 												]
 											})
@@ -184,9 +180,7 @@ function R(e) {
 			(0, s.jsx)(r.Heading, {
 				className: C.header,
 				variant: 'heading-lg/extrabold',
-				children: d
-					? g.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER_ADVANCED
-					: g.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER
+				children: d ? g.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER_ADVANCED : g.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER
 			}),
 			(0, s.jsx)(r.Text, {
 				variant: 'text-sm/normal',

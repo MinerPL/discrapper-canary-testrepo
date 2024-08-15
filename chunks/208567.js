@@ -40,34 +40,12 @@ function T(e) {
 }
 class h extends (s = t.PureComponent) {
 	handleExternalFileChange(e) {
-		d()(null != this.inputRef.current, 'ImageInputRef asked to handleExternalFileChange when not mounted'),
-			this.inputRef.current.handleFileChange(e);
+		d()(null != this.inputRef.current, 'ImageInputRef asked to handleExternalFileChange when not mounted'), this.inputRef.current.handleFileChange(e);
 	}
 	render() {
 		var e;
 		let n, l, s, t;
-		let {
-			image: i,
-			hint: o,
-			name: d,
-			makeURL: E,
-			disabled: N,
-			onChange: h,
-			showIcon: g,
-			showIconDisabled: v,
-			className: S,
-			imageClassName: C,
-			iconClassName: L,
-			iconWrapperClassName: A,
-			icon: Z,
-			hideSize: f,
-			imageStyle: j,
-			showRemoveButton: M,
-			maxFileSizeBytes: D,
-			onFileSizeError: R,
-			onOpenImageSelectModal: p,
-			'aria-label': V
-		} = this.props;
+		let { image: i, hint: o, name: d, makeURL: E, disabled: N, onChange: h, showIcon: g, showIconDisabled: v, className: S, imageClassName: C, iconClassName: L, iconWrapperClassName: A, icon: Z, hideSize: f, imageStyle: j, showRemoveButton: M, maxFileSizeBytes: D, onFileSizeError: R, onOpenImageSelectModal: p, 'aria-label': V } = this.props;
 		if (
 			(null != (n = null != i && /^data:/.test(i) ? i : E(i))
 				? (l = 'url("'.concat(n, '")'))

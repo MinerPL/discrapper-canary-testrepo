@@ -9,41 +9,7 @@ n.d(t, {
 var i = n(392711),
 	s = n.n(i),
 	o = n(697741);
-let a = new Set([
-	'a',
-	'an',
-	'and',
-	'are',
-	'as',
-	'at',
-	'be',
-	'but',
-	'by',
-	'for',
-	'if',
-	'in',
-	'into',
-	'is',
-	'it',
-	'no',
-	'not',
-	'of',
-	'on',
-	'or',
-	'such',
-	'that',
-	'the',
-	'their',
-	'then',
-	'there',
-	'these',
-	'they',
-	'this',
-	'to',
-	'was',
-	'will',
-	'with'
-]);
+let a = new Set(['a', 'an', 'and', 'are', 'as', 'at', 'be', 'but', 'by', 'for', 'if', 'in', 'into', 'is', 'it', 'no', 'not', 'of', 'on', 'or', 'such', 'that', 'the', 'their', 'then', 'there', 'these', 'they', 'this', 'to', 'was', 'will', 'with']);
 function l(e) {
 	return e.replace(/('|\u2019|\uFF07)(s|S)$/, '');
 }

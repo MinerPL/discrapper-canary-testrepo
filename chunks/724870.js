@@ -19,39 +19,12 @@ var a = i(512722),
 	u = i(987209),
 	_ = i(981631);
 function p(e) {
-	let {
-		initialPlanId: n,
-		activeSubscription: a,
-		analyticsObject: r,
-		analyticsLocation: l,
-		analyticsLocations: s,
-		analyticsSubscriptionType: c,
-		renderHeader: d,
-		planGroup: p,
-		skuId: m,
-		guildId: I,
-		reviewWarningMessage: f,
-		applicationId: g,
-		showBenefitsFirst: h,
-		eligibleApplicationSubscriptionGuilds: C,
-		onComplete: v,
-		forcesTransitionToGuild: E
-	} = e;
+	let { initialPlanId: n, activeSubscription: a, analyticsObject: r, analyticsLocation: l, analyticsLocations: s, analyticsSubscriptionType: c, renderHeader: d, planGroup: p, skuId: m, guildId: I, reviewWarningMessage: f, applicationId: g, showBenefitsFirst: h, eligibleApplicationSubscriptionGuilds: C, onComplete: v, forcesTransitionToGuild: E } = e;
 	(0, o.openModalLazy)(
 		async () => {
 			let { PaymentContextProvider: e } = await Promise.resolve().then(i.bind(i, 598)),
-				o = (await Promise.all([i.e('52249'), i.e('47006'), i.e('32776'), i.e('66517')]).then(i.bind(i, 405083)))
-					.default,
-				{ getApplicationPaymentSteps: _ } = await Promise.all([
-					i.e('96427'),
-					i.e('77298'),
-					i.e('23357'),
-					i.e('54803'),
-					i.e('15685'),
-					i.e('18209'),
-					i.e('30671'),
-					i.e('86751')
-				]).then(i.bind(i, 759386)),
+				o = (await Promise.all([i.e('52249'), i.e('47006'), i.e('32776'), i.e('66517')]).then(i.bind(i, 405083))).default,
+				{ getApplicationPaymentSteps: _ } = await Promise.all([i.e('96427'), i.e('77298'), i.e('23357'), i.e('54803'), i.e('15685'), i.e('18209'), i.e('30671'), i.e('86751')]).then(i.bind(i, 759386)),
 				x = _({
 					guildId: I,
 					showBenefitsFirst: h,
@@ -87,21 +60,12 @@ function p(e) {
 	);
 }
 let m = async (e, n) => {
-	let i = (await (0, l.yD)(e))
-		.filter((e) => null == e.ends_at || new Date(e.ends_at) > new Date())
-		.find((e) => e.sku_id === n);
+	let i = (await (0, l.yD)(e)).filter((e) => null == e.ends_at || new Date(e.ends_at) > new Date()).find((e) => e.sku_id === n);
 	r()(null == i, 'User already has an active subscription to this SKU');
 };
 async function I(e) {
 	var n;
-	let {
-			applicationId: i,
-			skuId: t,
-			initialPlanId: a,
-			analyticsLocationObject: o,
-			analyticsLocations: l,
-			renderHeader: u
-		} = e,
+	let { applicationId: i, skuId: t, initialPlanId: a, analyticsLocationObject: o, analyticsLocations: l, renderHeader: u } = e,
 		I = d.Z.get(t),
 		f = c.Z.getForSKU(t);
 	r()(null != I, 'Failed to find SKU');

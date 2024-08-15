@@ -8,9 +8,4 @@ function u(e) {
 	var t = (this.__data__ = new r.Z(e));
 	this.size = t.size;
 }
-(u.prototype.clear = i.Z),
-	(u.prototype.delete = a.Z),
-	(u.prototype.get = s.Z),
-	(u.prototype.has = o.Z),
-	(u.prototype.set = l.Z),
-	(t.Z = u);
+(u.prototype.clear = i.Z), (u.prototype.delete = a.Z), (u.prototype.get = s.Z), (u.prototype.has = o.Z), (u.prototype.set = l.Z), (t.Z = u);

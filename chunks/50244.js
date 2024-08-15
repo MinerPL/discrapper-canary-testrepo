@@ -17,16 +17,5 @@ function _(e, t) {
 	var n, _;
 	let E = a.Z.getGuild(e),
 		f = r.Z.getChannel(t);
-	return (
-		null != E &&
-		null != f &&
-		(0, u.Z)(E) &&
-		E.hasFeature(c.oNc.GUILD_SERVER_GUIDE) &&
-		!s.yE(
-			null !== (_ = null === (n = i.ZP.getSelfMember(E.id)) || void 0 === n ? void 0 : n.flags) && void 0 !== _ ? _ : 0,
-			d.q.COMPLETED_HOME_ACTIONS
-		) &&
-		o.Z.hasMemberAction(E.id, f.id) &&
-		!l.Z.hasCompletedActionForChannel(E.id, f.id)
-	);
+	return null != E && null != f && (0, u.Z)(E) && E.hasFeature(c.oNc.GUILD_SERVER_GUIDE) && !s.yE(null !== (_ = null === (n = i.ZP.getSelfMember(E.id)) || void 0 === n ? void 0 : n.flags) && void 0 !== _ ? _ : 0, d.q.COMPLETED_HOME_ACTIONS) && o.Z.hasMemberAction(E.id, f.id) && !l.Z.hasCompletedActionForChannel(E.id, f.id);
 }

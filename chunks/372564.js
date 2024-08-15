@@ -14,8 +14,8 @@ var i = n(735250),
 	_ = n(984370),
 	f = n(981631),
 	E = n(689938),
-	g = n(119338);
-function C(e, t, n) {
+	C = n(119338);
+function g(e, t, n) {
 	return (
 		t in e
 			? Object.defineProperty(e, t, {
@@ -49,14 +49,14 @@ function I(e) {
 					(0, i.jsx)(o.Text, {
 						selectable: !0,
 						variant: 'text-md/normal',
-						className: g.content,
+						className: C.content,
 						children: m.Z.parseTopic(n.topic, !0, { channelId: n.id })
 					}),
 					null != r
 						? (0, i.jsxs)('div', {
-								className: g.linkedLobbyNotice,
+								className: C.linkedLobbyNotice,
 								children: [
-									(0, i.jsx)(o.RefreshIcon, { className: g.linkedLobbyApplicationIcon }),
+									(0, i.jsx)(o.RefreshIcon, { className: C.linkedLobbyApplicationIcon }),
 									(0, i.jsx)(o.Text, {
 										variant: 'text-sm/normal',
 										color: 'header-secondary',
@@ -67,7 +67,7 @@ function I(e) {
 												(0, i.jsx)(
 													'span',
 													{
-														className: g.linkedLobbyNoticeSeparator,
+														className: C.linkedLobbyNoticeSeparator,
 														children: e
 													},
 													t
@@ -94,7 +94,7 @@ class T extends a.Component {
 					children: [
 						(0, i.jsx)(_.Z.Divider, {}),
 						(0, i.jsxs)('div', {
-							className: l()(g.topic, g.expandable),
+							className: l()(C.topic, C.expandable),
 							onMouseDown: this.onMouseDown,
 							onMouseMove: this.onMouseMove,
 							onMouseUp: this.onMouseUp,
@@ -104,7 +104,7 @@ class T extends a.Component {
 								(0, i.jsx)(o.Clickable, {
 									onClick: this.handleClick,
 									'aria-label': E.Z.Messages.OPEN_CHANNEL_TOPIC,
-									className: g.topicClickTarget
+									className: C.topicClickTarget
 								}),
 								m.Z.parseTopic(e.topic, !0, {
 									channelId: e.id,
@@ -117,9 +117,9 @@ class T extends a.Component {
 	}
 	constructor(...e) {
 		super(...e),
-			C(this, '_mouseDown', !1),
-			C(this, '_mouseUp', !1),
-			C(this, 'handleOpenTopic', (e) => {
+			g(this, '_mouseDown', !1),
+			g(this, '_mouseUp', !1),
+			g(this, 'handleOpenTopic', (e) => {
 				let t = e.target;
 				if ((0, r.k)(t)) {
 					if (x(t)) return;
@@ -133,18 +133,16 @@ class T extends a.Component {
 					})
 				);
 			}),
-			C(this, 'onMouseDown', () => {
+			g(this, 'onMouseDown', () => {
 				this._mouseDown = !0;
 			}),
-			C(this, 'onMouseMove', () => {
+			g(this, 'onMouseMove', () => {
 				this._mouseDown && (this._mouseDown = !1);
 			}),
-			C(this, 'onMouseUp', (e) => {
-				this._mouseDown && e.button !== f.AeJ.SECONDARY && this.handleOpenTopic(e),
-					(this._mouseUp = !0),
-					(this._mouseDown = !1);
+			g(this, 'onMouseUp', (e) => {
+				this._mouseDown && e.button !== f.AeJ.SECONDARY && this.handleOpenTopic(e), (this._mouseUp = !0), (this._mouseDown = !1);
 			}),
-			C(this, 'handleContextMenu', (e) => {
+			g(this, 'handleContextMenu', (e) => {
 				let { channel: t, guild: a } = this.props;
 				(0, c.jW)(e, async () => {
 					let { default: e } = await n.e('24783').then(n.bind(n, 439635));
@@ -157,7 +155,7 @@ class T extends a.Component {
 						});
 				});
 			}),
-			C(this, 'handleClick', (e) => {
+			g(this, 'handleClick', (e) => {
 				if (this._mouseUp) {
 					this._mouseUp = !1;
 					return;

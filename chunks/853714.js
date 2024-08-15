@@ -138,18 +138,7 @@ class G extends a.PureComponent {
 	}
 }
 function P(e) {
-	let {
-			logs: t,
-			guildId: n,
-			guild: i,
-			expandedId: r,
-			lastExpandedId: l,
-			scroller: c,
-			setExpandedRef: d,
-			setLastExpandedRef: u,
-			onHeaderClick: _,
-			onContentClick: I
-		} = e,
+	let { logs: t, guildId: n, guild: i, expandedId: r, lastExpandedId: l, scroller: c, setExpandedRef: d, setLastExpandedRef: u, onHeaderClick: _, onContentClick: I } = e,
 		E = a.useRef(c);
 	a.useEffect(() => {
 		E.current = c;
@@ -194,12 +183,7 @@ class B extends a.PureComponent {
 		document.removeEventListener('click', this.handleOutsideClick);
 	}
 	componentDidUpdate(e, t) {
-		this.state.expandedId !== t.expandedId && this.fixScroll(),
-			!this.props.showLoadMore &&
-				this.props.logs.length !== e.logs.length &&
-				null != this._scrollerRef &&
-				this.isScrollerAtBottom() &&
-				(0, _.OY)(this.props.guildId, !0);
+		this.state.expandedId !== t.expandedId && this.fixScroll(), !this.props.showLoadMore && this.props.logs.length !== e.logs.length && null != this._scrollerRef && this.isScrollerAtBottom() && (0, _.OY)(this.props.guildId, !0);
 	}
 	isScrollerAtBottom() {
 		var e;
@@ -210,8 +194,7 @@ class B extends a.PureComponent {
 		if (null == e) return;
 		let t = this.getRects(),
 			n = this._prevRects;
-		if (null == t.expanded || null == t.lastExpanded || null == n.expanded || t.expanded.top < t.lastExpanded.top)
-			return;
+		if (null == t.expanded || null == t.lastExpanded || null == n.expanded || t.expanded.top < t.lastExpanded.top) return;
 		let s = n.expanded.height - t.lastExpanded.height,
 			a = e.getScrollerState().scrollTop - s;
 		e.scrollTo({ to: a });
@@ -266,12 +249,8 @@ class B extends a.PureComponent {
 		if (r) return (0, s.jsx)(E.Z, {});
 		if (o || l) return this.renderSpinner();
 		if (0 === a.length) {
-			let e = c
-					? v.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_BODY
-					: v.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_BODY,
-				t = c
-					? v.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_TITLE
-					: v.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_TITLE;
+			let e = c ? v.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_BODY : v.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_BODY,
+				t = c ? v.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_TITLE : v.Z.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_TITLE;
 			return (0, s.jsxs)(u.EmptyState, {
 				theme: i,
 				className: j.empty,
@@ -318,12 +297,7 @@ class B extends a.PureComponent {
 						ref: this._contentRef,
 						children: (0, s.jsxs)(u.FocusRingScope, {
 							containerRef: this._contentRef,
-							children: [
-								this.renderHeader(),
-								this.renderContent(),
-								this.renderLoadMore(),
-								!e || t || n ? null : this.renderSpinner()
-							]
+							children: [this.renderHeader(), this.renderContent(), this.renderLoadMore(), !e || t || n ? null : this.renderSpinner()]
 						})
 					})
 				})

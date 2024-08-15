@@ -50,10 +50,7 @@ function C(e) {
 								className: N.rowApplied,
 								variant: 'heading-sm/semibold',
 								color: 'header-secondary',
-								children:
-									I && null != r
-										? S.Z.Messages.PREMIUM_SUBSCRIPTION_CREDIT_APPLIED_ON.format({ date: r.currentPeriodEnd })
-										: S.Z.Messages.PREMIUM_SUBSCRIPTION_CREDIT_APPLIED_MISMATCHED_PLAN.format({ planName: C })
+								children: I && null != r ? S.Z.Messages.PREMIUM_SUBSCRIPTION_CREDIT_APPLIED_ON.format({ date: r.currentPeriodEnd }) : S.Z.Messages.PREMIUM_SUBSCRIPTION_CREDIT_APPLIED_MISMATCHED_PLAN.format({ planName: C })
 							})
 				]
 			}),

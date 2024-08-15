@@ -14,7 +14,7 @@ var i = n(735250),
 	_ = n(177480);
 t.Z = (e) => {
 	let { channel: t, className: n } = e,
-		{ isHovered: s, setIsHovered: f, onMouseEnter: E, onMouseLeave: g, cancelTimers: C } = (0, u.Z)(200, 300),
+		{ isHovered: s, setIsHovered: f, onMouseEnter: E, onMouseLeave: C, cancelTimers: g } = (0, u.Z)(200, 300),
 		[I, x] = a.useState(!1),
 		T = (0, r.e7)([h.Z], () => h.Z.effectCooldownEndTime),
 		N = a.useMemo(() => (null != T ? (T.getTime() - Date.now()) / 1000 : 0), [T]),
@@ -27,13 +27,13 @@ t.Z = (e) => {
 			[I, S, E]
 		),
 		A = a.useCallback(() => {
-			!I && g();
-		}, [g, I]),
+			!I && C();
+		}, [C, I]),
 		M = a.useCallback(
 			(e, t) => {
-				C(), x(!I), (!s || I) && (null == t || t(e));
+				g(), x(!I), (!s || I) && (null == t || t(e));
 			},
-			[C, I, s]
+			[g, I, s]
 		),
 		b = s || I;
 	return (0, i.jsx)(o.Popout, {

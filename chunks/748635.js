@@ -13,8 +13,7 @@ t.Z = (e) => {
 		logger: d,
 		postClose: u,
 		onSendingToRPCClient: (e, t) => {
-			(i.default.isLoggingOverlayEvents || (e.cmd !== r.Etm.OVERLAY && e.evt !== r.zMe.OVERLAY)) &&
-				d.info('Socket Emit: '.concat(t), (0, a.Z)(e));
+			(i.default.isLoggingOverlayEvents || (e.cmd !== r.Etm.OVERLAY && e.evt !== r.zMe.OVERLAY)) && d.info('Socket Emit: '.concat(t), (0, a.Z)(e));
 		}
 	});
 };

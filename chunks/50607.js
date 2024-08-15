@@ -7,16 +7,7 @@ var r = n(519953),
 	i = n(436660),
 	a = n(887490);
 let s = (e, t) => {
-	let {
-		addMark: n,
-		removeMark: s,
-		deleteBackward: o,
-		deleteForward: l,
-		setFragmentData: u,
-		insertData: c,
-		insertFragmentData: d,
-		insertTextData: _
-	} = e;
+	let { addMark: n, removeMark: s, deleteBackward: o, deleteForward: l, setFragmentData: u, insertData: c, insertFragmentData: d, insertTextData: _ } = e;
 	return (
 		((e = (0, r.BU)(e)).addMark = n),
 		(e.removeMark = s),

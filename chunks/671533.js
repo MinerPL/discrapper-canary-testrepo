@@ -7,23 +7,9 @@ var o = n(120356),
 	r = n.n(o),
 	l = n(325767),
 	c = n(24701);
-((s = i || (i = {})).LEFT = 'LEFT'),
-	(s.RIGHT = 'RIGHT'),
-	(s.UP = 'UP'),
-	(s.DOWN = 'DOWN'),
-	(s.UP_LEFT = 'UP_LEFT'),
-	(s.DOWN_RIGHT = 'DOWN_RIGHT');
+((s = i || (i = {})).LEFT = 'LEFT'), (s.RIGHT = 'RIGHT'), (s.UP = 'UP'), (s.DOWN = 'DOWN'), (s.UP_LEFT = 'UP_LEFT'), (s.DOWN_RIGHT = 'DOWN_RIGHT');
 let d = (e) => {
-	let {
-		width: t = 24,
-		height: n = 24,
-		color: i = 'currentColor',
-		direction: s,
-		foreground: o,
-		className: d,
-		title: m,
-		...u
-	} = e;
+	let { width: t = 24, height: n = 24, color: i = 'currentColor', direction: s, foreground: o, className: d, title: m, ...u } = e;
 	return (0, a.jsxs)('svg', {
 		...(0, l.Z)(u),
 		width: t,

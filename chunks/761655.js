@@ -81,11 +81,7 @@ function a(e, t) {
 	}),
 	r(a, Error),
 	(a.prototype.rethrow = function (e) {
-		if (
-			((this.message = e + ' at: ' + (this.path || '(shallow)')),
-			Error.captureStackTrace && Error.captureStackTrace(this, a),
-			!this.stack)
-		)
+		if (((this.message = e + ' at: ' + (this.path || '(shallow)')), Error.captureStackTrace && Error.captureStackTrace(this, a), !this.stack))
 			try {
 				throw Error(this.message);
 			} catch (e) {

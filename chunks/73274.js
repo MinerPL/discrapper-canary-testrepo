@@ -32,12 +32,7 @@ function u(e) {
 			(e) => {
 				var i, a, s;
 				if (!n.keyboardModeEnabled) return;
-				let l =
-						null === (a = t.current) || void 0 === a
-							? void 0
-							: null === (i = a.getScrollerNode()) || void 0 === i
-								? void 0
-								: i.ownerDocument,
+				let l = null === (a = t.current) || void 0 === a ? void 0 : null === (i = a.getScrollerNode()) || void 0 === i ? void 0 : i.ownerDocument,
 					r = null == l ? void 0 : l.querySelector(e);
 				null != r &&
 					(null === (s = t.current) ||

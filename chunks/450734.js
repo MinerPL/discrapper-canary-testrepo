@@ -19,20 +19,7 @@ var s = n(120356),
 	p = n(651058);
 let _ = u.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 function h(e) {
-	let {
-			user: t,
-			guild: n,
-			displayProfile: s,
-			canUsePremiumCustomization: u,
-			previewAvatar: h,
-			previewAvatarDecoration: g,
-			previewTheme: I,
-			previewPrimaryColor: v,
-			className: C,
-			disabledInputs: x,
-			isTryItOutFlow: P,
-			onUpsellClick: A
-		} = e,
+	let { user: t, guild: n, displayProfile: s, canUsePremiumCustomization: u, previewAvatar: h, previewAvatarDecoration: g, previewTheme: I, previewPrimaryColor: v, className: C, disabledInputs: x, isTryItOutFlow: P, onUpsellClick: A } = e,
 		{ analyticsLocations: Z } = (0, o.ZP)(),
 		T = (0, l.e7)([d.Z], () => d.Z.getStatus(t.id)),
 		N = null == n || (null == s ? void 0 : s.canUsePremiumProfileCustomization) || u,

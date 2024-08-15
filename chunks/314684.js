@@ -55,10 +55,7 @@ function M() {
 	let e = (function () {
 			var e;
 			let t = (0, i.cj)([A.Z], () => A.Z.getState());
-			if (null != t)
-				return null !== (e = t.userTenureRewardStatusByRewardId[S.Ft.FREE_GUILD_BOOST_1_MONTH]) && void 0 !== e
-					? e
-					: t.userTenureRewardStatusByRewardId[S.Ft.FREE_GUILD_BOOST_3_MONTHS];
+			if (null != t) return null !== (e = t.userTenureRewardStatusByRewardId[S.Ft.FREE_GUILD_BOOST_1_MONTH]) && void 0 !== e ? e : t.userTenureRewardStatusByRewardId[S.Ft.FREE_GUILD_BOOST_3_MONTHS];
 		})(),
 		t = O(),
 		n = (0, i.e7)([T.Z], () => T.Z.boostSlots),
@@ -95,9 +92,7 @@ function M() {
 			let a = !1,
 				i = !1;
 			return (
-				e.next_tenure_reward_id === S.Ft.FREE_GUILD_BOOST_1_MONTH
-					? ((i = t <= S.bm), (a = t <= S.dF))
-					: e.next_tenure_reward_id === S.Ft.FREE_GUILD_BOOST_3_MONTHS && ((i = t <= S.yj), (a = t <= S.LJ)),
+				e.next_tenure_reward_id === S.Ft.FREE_GUILD_BOOST_1_MONTH ? ((i = t <= S.bm), (a = t <= S.dF)) : e.next_tenure_reward_id === S.Ft.FREE_GUILD_BOOST_3_MONTHS && ((i = t <= S.yj), (a = t <= S.LJ)),
 				{
 					...n,
 					nitroTenureStatus: S.EB.PENDING,
@@ -160,13 +155,7 @@ let P = (e) => {
 			if (!1 !== a) n(P(e));
 		}, [e, a]);
 		let [r] = (0, u.US)(a ? t : []);
-		return a
-			? null != e &&
-				!0 === e.showNotification &&
-				(r === l.z.TENURE_REWARD_REDEEMABLE || r === l.z.TENURE_REWARD_PENDING)
-				? (0, m.Wb)(e.nitroTenureStatus)
-				: null
-			: null;
+		return a ? (null != e && !0 === e.showNotification && (r === l.z.TENURE_REWARD_REDEEMABLE || r === l.z.TENURE_REWARD_PENDING) ? (0, m.Wb)(e.nitroTenureStatus) : null) : null;
 	},
 	L = () => {
 		var e;
@@ -197,13 +186,10 @@ let P = (e) => {
 		}, [e, n]);
 	};
 function D() {
-	let { hasFetchedPremiumApplicationEntitlements: e, isFetchingPremiumApplicationEntitlements: t } = (0, i.cj)(
-			[I.Z],
-			() => ({
-				hasFetchedPremiumApplicationEntitlements: I.Z.isFetchedForApplication(f.RQ),
-				isFetchingPremiumApplicationEntitlements: I.Z.isFetchingForApplication(f.RQ)
-			})
-		),
+	let { hasFetchedPremiumApplicationEntitlements: e, isFetchingPremiumApplicationEntitlements: t } = (0, i.cj)([I.Z], () => ({
+			hasFetchedPremiumApplicationEntitlements: I.Z.isFetchedForApplication(f.RQ),
+			isFetchingPremiumApplicationEntitlements: I.Z.isFetchingForApplication(f.RQ)
+		})),
 		n = (0, i.e7)([E.default], () => {
 			let e = E.default.getCurrentUser();
 			return null != e && (0, g.M5)(e, f.p9.TIER_2);

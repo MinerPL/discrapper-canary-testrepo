@@ -2,10 +2,7 @@ var r = n(24124);
 function i(e, t) {
 	for (var n = 0; n < t.length; n++) {
 		var i = t[n];
-		(i.enumerable = i.enumerable || !1),
-			(i.configurable = !0),
-			'value' in i && (i.writable = !0),
-			Object.defineProperty(e, r(i.key), i);
+		(i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, r(i.key), i);
 	}
 }
 (e.exports = function (e, t, n) {

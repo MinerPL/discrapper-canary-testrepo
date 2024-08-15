@@ -51,9 +51,7 @@ async function h(e, t, n) {
 			removingChat: !1
 		};
 	return (
-		e.isForumLikeChannel()
-			? (u.removingChat = r.e$(t, d.Plq.SEND_MESSAGES_IN_THREADS) && !r.e$(l, d.Plq.SEND_MESSAGES_IN_THREADS))
-			: (u.removingChat = r.e$(t, d.Plq.SEND_MESSAGES) && !r.e$(l, d.Plq.SEND_MESSAGES)),
+		e.isForumLikeChannel() ? (u.removingChat = r.e$(t, d.Plq.SEND_MESSAGES_IN_THREADS) && !r.e$(l, d.Plq.SEND_MESSAGES_IN_THREADS)) : (u.removingChat = r.e$(t, d.Plq.SEND_MESSAGES) && !r.e$(l, d.Plq.SEND_MESSAGES)),
 		(!u.removingChat && !u.removingView) ||
 			!!(await f(s, e.id, u)) ||
 			(i.Z.show({

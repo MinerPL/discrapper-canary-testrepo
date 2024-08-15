@@ -15,7 +15,7 @@ n.d(t, {
 		return S;
 	},
 	bU: function () {
-		return I;
+		return m;
 	},
 	qb: function () {
 		return g;
@@ -28,33 +28,10 @@ var r = n(470079),
 	o = n(182823),
 	l = n(881085);
 let u = new Set(['Arab', 'Syrc', 'Samr', 'Mand', 'Thaa', 'Mend', 'Nkoo', 'Adlm', 'Rohg', 'Hebr']),
-	c = new Set([
-		'ae',
-		'ar',
-		'arc',
-		'bcc',
-		'bqi',
-		'ckb',
-		'dv',
-		'fa',
-		'glk',
-		'he',
-		'ku',
-		'mzn',
-		'nqo',
-		'pnb',
-		'ps',
-		'sd',
-		'ug',
-		'ur',
-		'yi'
-	]),
+	c = new Set(['ae', 'ar', 'arc', 'bcc', 'bqi', 'ckb', 'dv', 'fa', 'glk', 'he', 'ku', 'mzn', 'nqo', 'pnb', 'ps', 'sd', 'ug', 'ur', 'yi']),
 	d = Symbol.for('react-aria.i18n.locale');
 function _() {
-	let e =
-		('undefined' != typeof window && window[d]) ||
-		('undefined' != typeof navigator && (navigator.language || navigator.userLanguage)) ||
-		'en-US';
+	let e = ('undefined' != typeof window && window[d]) || ('undefined' != typeof navigator && (navigator.language || navigator.userLanguage)) || 'en-US';
 	try {
 		Intl.DateTimeFormat.supportedLocalesOf([e]);
 	} catch (t) {
@@ -82,7 +59,7 @@ function h() {
 	for (let e of ((E = _()), f)) e(E);
 }
 let p = r.createContext(null);
-function I() {
+function m() {
 	let e = (function () {
 		let e = (0, i.Av)(),
 			[t, n] = (0, r.useState)(E);
@@ -105,22 +82,20 @@ function I() {
 	})();
 	return (0, r.useContext)(p) || e;
 }
-let m = new WeakMap();
+let I = new WeakMap();
 function T(e, t) {
 	var n;
 	let r;
-	return (
-		(t && (0, a.J).getGlobalDictionaryForPackage(t)) || ((n = e), !(r = m.get(n)) && ((r = new a.J(n)), m.set(n, r)), r)
-	);
+	return (t && (0, a.J).getGlobalDictionaryForPackage(t)) || ((n = e), !(r = I.get(n)) && ((r = new a.J(n)), I.set(n, r)), r);
 }
 function g(e, t) {
-	let { locale: n } = I(),
+	let { locale: n } = m(),
 		i = T(e, t);
 	return (0, r.useMemo)(() => new a.E(n, i), [n, i]);
 }
 function S(e) {
 	e = (0, o.vE)(null != e ? e : {}, A);
-	let { locale: t } = I();
+	let { locale: t } = m();
 	return (0, r.useMemo)(() => new s.CN(t, e), [t, e]);
 }
 function A(e, t) {
@@ -132,12 +107,12 @@ function A(e, t) {
 	return !0;
 }
 function N(e = {}) {
-	let { locale: t } = I();
+	let { locale: t } = m();
 	return (0, r.useMemo)(() => new l.e(t, e), [t, e]);
 }
 let v = new Map();
 function O(e) {
-	let { locale: t } = I(),
+	let { locale: t } = m(),
 		n =
 			t +
 			(e
@@ -154,17 +129,8 @@ function R(e) {
 			usage: 'search',
 			...e
 		}),
-		n = (0, r.useCallback)(
-			(e, n) =>
-				0 === n.length ||
-				((e = e.normalize('NFC')), (n = n.normalize('NFC')), 0 === t.compare(e.slice(0, n.length), n)),
-			[t]
-		),
-		i = (0, r.useCallback)(
-			(e, n) =>
-				0 === n.length || ((e = e.normalize('NFC')), (n = n.normalize('NFC')), 0 === t.compare(e.slice(-n.length), n)),
-			[t]
-		),
+		n = (0, r.useCallback)((e, n) => 0 === n.length || ((e = e.normalize('NFC')), (n = n.normalize('NFC')), 0 === t.compare(e.slice(0, n.length), n)), [t]),
+		i = (0, r.useCallback)((e, n) => 0 === n.length || ((e = e.normalize('NFC')), (n = n.normalize('NFC')), 0 === t.compare(e.slice(-n.length), n)), [t]),
 		a = (0, r.useCallback)(
 			(e, n) => {
 				if (0 === n.length) return !0;

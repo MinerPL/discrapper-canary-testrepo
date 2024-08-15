@@ -53,20 +53,12 @@ class o {
 					if (null != e.isIntersecting) t = e.isIntersecting;
 					else {
 						let { threshold: n } = this._options;
-						t =
-							null == n
-								? e.intersectionRatio > 0
-								: Array.isArray(n)
-									? n.some((t) => e.intersectionRatio > t)
-									: e.intersectionRatio > n;
+						t = null == n ? e.intersectionRatio > 0 : Array.isArray(n) ? n.some((t) => e.intersectionRatio > t) : e.intersectionRatio > n;
 					}
 					let n = this._nodes.get(e.target);
 					if (null != n) {
 						let e = !1;
-						t
-							? !this._visibleComponents.has(n) && (this._visibleComponents.add(n), (e = !0))
-							: this._visibleComponents.has(n) && (this._visibleComponents.delete(n), (e = !0)),
-							e && n.forceUpdate();
+						t ? !this._visibleComponents.has(n) && (this._visibleComponents.add(n), (e = !0)) : this._visibleComponents.has(n) && (this._visibleComponents.delete(n), (e = !0)), e && n.forceUpdate();
 					}
 				});
 			}),

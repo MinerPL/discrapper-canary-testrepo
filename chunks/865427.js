@@ -6,7 +6,7 @@ n.d(t, {
 		return c;
 	},
 	_G: function () {
-		return I;
+		return m;
 	},
 	_I: function () {
 		return E;
@@ -61,7 +61,7 @@ function E(e) {
 	if (T(e))
 		return Promise.resolve(
 			(function (e) {
-				let t = e.match(m);
+				let t = e.match(I);
 				if (null == t || 2 !== t.length) return null;
 				let n = (0, s.getNativePlatform)(),
 					r = t[1];
@@ -109,21 +109,14 @@ function h() {
 	}
 }
 let p = RegExp('^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link?[\\S]+$', 'i');
-function I(e) {
+function m(e) {
 	return null != e && p.test(e);
 }
-let m = RegExp('^dev://branch/([\\w-./]+)$', 'i');
+let I = RegExp('^dev://branch/([\\w-./]+)$', 'i');
 function T(e) {
-	return null != e && m.test(e);
+	return null != e && I.test(e);
 }
-let g = new Set([
-		'canary.discord.com',
-		'ptb.discord.com',
-		'discord.com',
-		'canary.discordapp.com',
-		'ptb.discordapp.com',
-		'discordapp.com'
-	]),
+let g = new Set(['canary.discord.com', 'ptb.discord.com', 'discord.com', 'canary.discordapp.com', 'ptb.discordapp.com', 'discordapp.com']),
 	S = new Set(['/__development/link', '/__development/link/']);
 function A(e) {
 	if (T(e))

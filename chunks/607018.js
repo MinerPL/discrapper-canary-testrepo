@@ -22,9 +22,7 @@ t.default = i.forwardRef(function (e, t) {
 			async (e) => {
 				v(!0);
 				try {
-					c.Z.isPhoneReverification(g, y) ? await r.Z.beginReverifyPhone(e, f) : await r.Z.beginAddPhone(e, f),
-						b(null),
-						x(e);
+					c.Z.isPhoneReverification(g, y) ? await r.Z.beginReverifyPhone(e, f) : await r.Z.beginAddPhone(e, f), b(null), x(e);
 				} catch (e) {
 					b(new a.Z(e));
 				}
@@ -49,10 +47,7 @@ t.default = i.forwardRef(function (e, t) {
 		),
 		I = i.useCallback(
 			async (e) => {
-				if (null != R)
-					c.Z.isPhoneReverification(g, y) ? await r.Z.reverifyPhone(R, e, f) : await r.Z.addPhone(R, e, f),
-						null == s || s(),
-						m();
+				if (null != R) c.Z.isPhoneReverification(g, y) ? await r.Z.reverifyPhone(R, e, f) : await r.Z.addPhone(R, e, f), null == s || s(), m();
 			},
 			[s, m, R, f, g, y]
 		);

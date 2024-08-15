@@ -21,17 +21,17 @@ function h(e) {
 		_ = i.useRef(c),
 		h = (0, s.Z)({ editorHeight: r }),
 		p = (0, d.Z)(),
-		I = (0, a.e7)([u.ZP, o.default, l.Z], () => {
+		m = (0, a.e7)([u.ZP, o.default, l.Z], () => {
 			var e;
 			return u.ZP.isComboing(o.default.getId(), null !== (e = l.Z.getChannelId()) && void 0 !== e ? e : E.lds);
 		}),
-		m = null !== (t = null == h ? void 0 : h.left) && void 0 !== t ? t : 0,
+		I = null !== (t = null == h ? void 0 : h.left) && void 0 !== t ? t : 0,
 		T = (null !== (n = null == h ? void 0 : h.top) && void 0 !== n ? n : 0) - 16,
 		g = i.useMemo(() => 0.05 > Math.random(), [0 === c.length]);
 	return (
 		i.useEffect(() => {
-			0 !== c.length && c !== _.current && I && (p.fire(m, T, g ? { sprite: f.vv } : null), (_.current = c));
-		}, [c, I, m, T, g, p]),
+			0 !== c.length && c !== _.current && m && (p.fire(I, T, g ? { sprite: f.vv } : null), (_.current = c));
+		}, [c, m, I, T, g, p]),
 		null
 	);
 }

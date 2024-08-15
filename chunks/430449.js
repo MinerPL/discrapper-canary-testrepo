@@ -9,9 +9,7 @@ var r,
 	c = n.n(u),
 	d = n(442837),
 	_ = n(570140);
-((a = r || (r = {}))[(a.NOT_FETCHED = 0)] = 'NOT_FETCHED'),
-	(a[(a.FETCHING = 1)] = 'FETCHING'),
-	(a[(a.FETCH_SUCCESS = 2)] = 'FETCH_SUCCESS');
+((a = r || (r = {}))[(a.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (a[(a.FETCHING = 1)] = 'FETCHING'), (a[(a.FETCH_SUCCESS = 2)] = 'FETCH_SUCCESS');
 let E = {},
 	f = {};
 function h(e) {

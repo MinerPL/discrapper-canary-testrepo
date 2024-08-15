@@ -5,8 +5,7 @@ function t(e) {
 	}
 }
 (t.prototype.toArray = function () {
-	for (var e = this._length, t = Array(e), n = this._front, r = this._capacity, i = 0; i < e; ++i)
-		t[i] = this[(n + i) & (r - 1)];
+	for (var e = this._length, t = Array(e), n = this._front, r = this._capacity, i = 0; i < e; ++i) t[i] = this[(n + i) & (r - 1)];
 	return t;
 }),
 	(t.prototype.push = function (e) {
@@ -121,8 +120,7 @@ function t(e) {
 			n = this._capacity,
 			i = Array(n),
 			a = this._length;
-		if ((r(this, 0, i, 0, n), (this._capacity = e), this._makeCapacity(), (this._front = 0), t + a <= n))
-			r(i, t, this, 0, a);
+		if ((r(this, 0, i, 0, n), (this._capacity = e), this._makeCapacity(), (this._front = 0), t + a <= n)) r(i, t, this, 0, a);
 		else {
 			var s = a - ((t + a) & (n - 1));
 			r(i, t, this, 0, s), r(i, 0, this, s, a - s);
@@ -138,13 +136,6 @@ function i(e) {
 		if (!n(e)) return 16;
 		e = e.length;
 	}
-	return (
-		(t = (Math.min(Math.max(16, e), 1073741824) >>> 0) - 1),
-		(t |= t >> 1),
-		(t |= t >> 2),
-		(t |= t >> 4),
-		(t |= t >> 8),
-		(t |= t >> 16) + 1
-	);
+	return (t = (Math.min(Math.max(16, e), 1073741824) >>> 0) - 1), (t |= t >> 1), (t |= t >> 2), (t |= t >> 4), (t |= t >> 8), (t |= t >> 16) + 1;
 }
 e.exports = t;

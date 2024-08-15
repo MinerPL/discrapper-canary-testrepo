@@ -23,10 +23,7 @@ function c(e) {
 		onCancel: n,
 		children: (0, s.jsx)(i.Text, {
 			variant: 'text-sm/normal',
-			children:
-				null != d
-					? o.Z.Messages.WELCOME_CHANNEL_DELETE_CONFIRM_BODY.format({ channelName: u })
-					: o.Z.Messages.WELCOME_CHANNEL_DELETE_CONFIRM_BODY_GENERIC
+			children: null != d ? o.Z.Messages.WELCOME_CHANNEL_DELETE_CONFIRM_BODY.format({ channelName: u }) : o.Z.Messages.WELCOME_CHANNEL_DELETE_CONFIRM_BODY_GENERIC
 		})
 	});
 }

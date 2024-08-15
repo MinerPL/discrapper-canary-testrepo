@@ -26,10 +26,10 @@ function E(e) {
 	E.months = Math.abs((0, l.Z)(n, h));
 	var p = (0, i.Z)(h, { months: f * E.months });
 	E.days = Math.abs((0, a.Z)(n, p));
-	var I = (0, i.Z)(p, { days: f * E.days });
-	E.hours = Math.abs((0, s.Z)(n, I));
-	var m = (0, i.Z)(I, { hours: f * E.hours });
-	E.minutes = Math.abs((0, o.Z)(n, m));
-	var T = (0, i.Z)(m, { minutes: f * E.minutes });
+	var m = (0, i.Z)(p, { days: f * E.days });
+	E.hours = Math.abs((0, s.Z)(n, m));
+	var I = (0, i.Z)(m, { hours: f * E.hours });
+	E.minutes = Math.abs((0, o.Z)(n, I));
+	var T = (0, i.Z)(I, { minutes: f * E.minutes });
 	return (E.seconds = Math.abs((0, u.Z)(n, T))), E;
 }

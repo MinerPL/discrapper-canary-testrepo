@@ -76,15 +76,11 @@ let C = {
 			children: [
 				(0, s.jsx)(i.FormText, {
 					type: i.FormTextTypes.DESCRIPTION,
-					children: h.Z.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_INSTRUCTIONS.format({
-						fileSize: (0, I.IC)(S.Ht, { useKibibytes: !0 })
-					})
+					children: h.Z.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_INSTRUCTIONS.format({ fileSize: (0, I.IC)(S.Ht, { useKibibytes: !0 }) })
 				}),
 				(0, s.jsx)(i.FormText, {
 					type: i.FormTextTypes.DESCRIPTION,
-					children: h.Z.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_HELP.format({
-						articleUrl: T.Z.getArticleURL(N.BhN.STICKERS_UPLOAD)
-					})
+					children: h.Z.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_HELP.format({ articleUrl: T.Z.getArticleURL(N.BhN.STICKERS_UPLOAD) })
 				})
 			]
 		}),
@@ -101,9 +97,7 @@ let C = {
 		return null == d || l === N.Eu4.TIER_3 || o > 0
 			? (0, s.jsx)(s.Fragment, {})
 			: (_ > u
-					? ((t = h.Z.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TOO_MANY_STICKERS_HEADER.format({ level: d })),
-						(n = h.Z.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TOO_MANY_STICKERS_TEXT.format({ level: d })),
-						(a = N.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL))
+					? ((t = h.Z.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TOO_MANY_STICKERS_HEADER.format({ level: d })), (n = h.Z.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TOO_MANY_STICKERS_TEXT.format({ level: d })), (a = N.qAy.BOOST_UPSELL_BANNER_LOST_LEVEL))
 					: ((t = h.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_BANNER_HEADER),
 						(n = h.Z.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TEXT.format({
 							level: d,

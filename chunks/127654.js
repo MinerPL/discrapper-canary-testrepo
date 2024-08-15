@@ -35,12 +35,7 @@ function M(e, t) {
 		d = 0,
 		u = 0,
 		_ = [];
-	for (let e of t)
-		(u += 1),
-			(o += e.size),
-			s.push(e.size),
-			e.size > d && (d = e.size),
-			null != e.type ? _.push(e.type) : _.push('unknown');
+	for (let e of t) (u += 1), (o += e.size), s.push(e.size), e.size > d && (d = e.size), null != e.type ? _.push(e.type) : _.push('unknown');
 	if (d > n) {
 		(0, r.yw)(h.rMx.FILE_SIZE_LIMIT_EXCEEDED, {
 			channel_id: e.id,
@@ -66,12 +61,7 @@ function M(e, t) {
 	});
 }
 function x(e, t, l) {
-	let {
-		filesMetadata: r,
-		requireConfirm: c = !0,
-		showLargeMessageDialog: m = !1,
-		isThumbnail: f = !1
-	} = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+	let { filesMetadata: r, requireConfirm: c = !0, showLargeMessageDialog: m = !1, isThumbnail: f = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
 	if (e.length < 1) return;
 	if (null != r && r.length !== e.length) throw Error('Unexpected mismatch between files and file metadata');
 	let E = t.getGuildId();
@@ -90,12 +80,7 @@ function x(e, t, l) {
 			});
 		return;
 	}
-	if (
-		((t.type === h.d4z.GUILD_VOICE || t.type === h.d4z.GUILD_STAGE_VOICE) &&
-			!d.Z.getChatOpen(t.id) &&
-			i.Z.updateChatOpen(t.id, !0),
-		c)
-	) {
+	if (((t.type === h.d4z.GUILD_VOICE || t.type === h.d4z.GUILD_STAGE_VOICE) && !d.Z.getChatOpen(t.id) && i.Z.updateChatOpen(t.id, !0), c)) {
 		let i = Array.from(e).map((e, t) => ({
 			file: e,
 			platform: o.ow.WEB,

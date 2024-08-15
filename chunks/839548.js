@@ -29,11 +29,7 @@ function u(e, t, n) {
 let c = 0;
 class d extends a.Z {
 	destroy() {
-		(this.destroyed = !0),
-			this.framerateReducer.destroy(),
-			this.setConnectionState(l.$j.DISCONNECTED),
-			this.emit(s.S.Destroy, this),
-			this.removeAllListeners();
+		(this.destroyed = !0), this.framerateReducer.destroy(), this.setConnectionState(l.$j.DISCONNECTED), this.emit(s.S.Destroy, this), this.removeAllListeners();
 	}
 	getLocalMute(e) {
 		return this.localMutes[e] || !1;
@@ -71,30 +67,16 @@ class d extends a.Z {
 		t ? this.experimentFlags.add(e) : this.experimentFlags.delete(e);
 	}
 	setConnectionState(e) {
-		this.logger.info('Connection state change: '.concat(this.connectionState, ' => ').concat(e)),
-			(this.connectionState = e),
-			this.emit(s.S.ConnectionStateChange, this.connectionState);
+		this.logger.info('Connection state change: '.concat(this.connectionState, ' => ').concat(e)), (this.connectionState = e), this.emit(s.S.ConnectionStateChange, this.connectionState);
 	}
 	updateVideoQuality(e) {
 		var t, n;
 		let { quality: r, constraints: a } = this.applyQualityConstraints({}, this.videoStreamParameters[0].ssrc),
 			s = i()(this.videoStreamParameters);
-		null != r &&
-			((s[0].maxBitrate = r.bitrateMax),
-			(s[0].minBitrate = r.bitrateMin),
-			(s[0].targetBitrate = null !== (t = r.bitrateTarget) && void 0 !== t ? t : 0),
-			null != r.encode && ((s[0].maxPixelCount = r.encode.pixelCount), (s[0].maxFrameRate = r.encode.framerate))),
-			(this.videoStreamParameters = s);
+		null != r && ((s[0].maxBitrate = r.bitrateMax), (s[0].minBitrate = r.bitrateMin), (s[0].targetBitrate = null !== (t = r.bitrateTarget) && void 0 !== t ? t : 0), null != r.encode && ((s[0].maxPixelCount = r.encode.pixelCount), (s[0].maxFrameRate = r.encode.framerate))), (this.videoStreamParameters = s);
 		for (let e = 1; e < this.videoStreamParameters.length; e++) {
 			let { quality: t, constraints: i } = this.applyQualityConstraints({}, this.videoStreamParameters[e].ssrc);
-			null != t &&
-				((this.videoStreamParameters[e].maxBitrate = t.bitrateMax),
-				(this.videoStreamParameters[e].minBitrate = t.bitrateMin),
-				(this.videoStreamParameters[e].targetBitrate = null !== (n = t.bitrateTarget) && void 0 !== n ? n : 0),
-				null != t.encode &&
-					((this.videoStreamParameters[e].maxPixelCount = t.encode.pixelCount),
-					(this.videoStreamParameters[e].maxFrameRate = t.encode.framerate))),
-				100 === this.videoStreamParameters[e].quality && ((a = i), (r = t));
+			null != t && ((this.videoStreamParameters[e].maxBitrate = t.bitrateMax), (this.videoStreamParameters[e].minBitrate = t.bitrateMin), (this.videoStreamParameters[e].targetBitrate = null !== (n = t.bitrateTarget) && void 0 !== n ? n : 0), null != t.encode && ((this.videoStreamParameters[e].maxPixelCount = t.encode.pixelCount), (this.videoStreamParameters[e].maxFrameRate = t.encode.framerate))), 100 === this.videoStreamParameters[e].quality && ((a = i), (r = t));
 		}
 		(a.streamParameters = i()(this.videoStreamParameters)),
 			(a.remoteSinkWantsPixelCount = Math.max(
@@ -151,13 +133,7 @@ class d extends a.Z {
 	}
 	getLocalWant(e) {
 		var t, n;
-		let r =
-			this.remoteVideoSinkWants[
-				null !== (n = null != e ? e : null === (t = this.videoStreamParameters[0]) || void 0 === t ? void 0 : t.ssrc) &&
-				void 0 !== n
-					? n
-					: 0
-			];
+		let r = this.remoteVideoSinkWants[null !== (n = null != e ? e : null === (t = this.videoStreamParameters[0]) || void 0 === t ? void 0 : t.ssrc) && void 0 !== n ? n : 0];
 		if (null != r && r > 0) return r;
 		let i = this.remoteVideoSinkWants.any;
 		return null != i && i > 0 ? i : 100;
@@ -167,38 +143,7 @@ class d extends a.Z {
 		return null != e && this.emit(s.S.Stats, e), e;
 	}
 	constructor(e, t) {
-		super(),
-			u(this, 'mediaEngineConnectionId', 'WebRTC-'.concat(c++)),
-			u(this, 'context', void 0),
-			u(this, 'userId', void 0),
-			u(this, 'streamUserId', void 0),
-			u(this, 'destroyed', !1),
-			u(this, 'audioSSRC', 0),
-			u(this, 'selfDeaf', !1),
-			u(this, 'localMutes', {}),
-			u(this, 'disabledLocalVideos', {}),
-			u(this, 'localVolumes', {}),
-			u(this, 'isActiveOutputSinksEnabled', !1),
-			u(this, 'activeOutputSinks', {}),
-			u(this, 'videoSupported', !1),
-			u(this, 'useElectronVideo', !1),
-			u(this, 'voiceBitrate', l.dX),
-			u(this, 'remoteSinkWantsMaxFramerate', l.Gs),
-			u(this, 'videoQualityManager', void 0),
-			u(this, 'wantsPriority', new Set()),
-			u(this, 'localSpeakingFlags', {}),
-			u(this, 'videoReady', !1),
-			u(this, 'videoStreamParameters', []),
-			u(this, 'remoteVideoSinkWants', { any: 100 }),
-			u(this, 'localVideoSinkWants', { any: 100 }),
-			u(this, 'connectionState', l.$j.CONNECTING),
-			u(this, 'stats', void 0),
-			u(this, 'onDesktopEncodingOptionsSet', (e, t, n) => {}),
-			u(this, 'experimentFlags', new Set()),
-			u(this, 'framerateReducer', void 0),
-			(this.context = e),
-			(this.userId = t),
-			(this.videoQualityManager = new o.iY(e, this));
+		super(), u(this, 'mediaEngineConnectionId', 'WebRTC-'.concat(c++)), u(this, 'context', void 0), u(this, 'userId', void 0), u(this, 'streamUserId', void 0), u(this, 'destroyed', !1), u(this, 'audioSSRC', 0), u(this, 'selfDeaf', !1), u(this, 'localMutes', {}), u(this, 'disabledLocalVideos', {}), u(this, 'localVolumes', {}), u(this, 'isActiveOutputSinksEnabled', !1), u(this, 'activeOutputSinks', {}), u(this, 'videoSupported', !1), u(this, 'useElectronVideo', !1), u(this, 'voiceBitrate', l.dX), u(this, 'remoteSinkWantsMaxFramerate', l.Gs), u(this, 'videoQualityManager', void 0), u(this, 'wantsPriority', new Set()), u(this, 'localSpeakingFlags', {}), u(this, 'videoReady', !1), u(this, 'videoStreamParameters', []), u(this, 'remoteVideoSinkWants', { any: 100 }), u(this, 'localVideoSinkWants', { any: 100 }), u(this, 'connectionState', l.$j.CONNECTING), u(this, 'stats', void 0), u(this, 'onDesktopEncodingOptionsSet', (e, t, n) => {}), u(this, 'experimentFlags', new Set()), u(this, 'framerateReducer', void 0), (this.context = e), (this.userId = t), (this.videoQualityManager = new o.iY(e, this));
 		let r = n(988746).Z;
 		this.framerateReducer = new r(this, this.videoQualityManager);
 	}

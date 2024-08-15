@@ -19,11 +19,7 @@ function i(e) {
 					id: o,
 					htmlFor: 'label' === s ? t : void 0
 				}))
-			: !i &&
-				!a &&
-				console.warn(
-					'If you do not provide a visible label, you must specify an aria-label or aria-labelledby attribute for accessibility'
-				),
+			: !i && !a && console.warn('If you do not provide a visible label, you must specify an aria-label or aria-labelledby attribute for accessibility'),
 		{
 			labelProps: l,
 			fieldProps: (0, r.bE)({

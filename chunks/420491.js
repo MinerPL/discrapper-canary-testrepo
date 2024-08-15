@@ -66,16 +66,16 @@ let h = (0, d.B)({
 			}
 		]
 	}),
-	I = new l.Y('GatewayZstdStore');
-let m = !1,
+	m = new l.Y('GatewayZstdStore');
+let I = !1,
 	T = 0,
 	g = !0;
 function S() {
 	return null == r && (r = (0, E.NF)() && (0, E.MF)()), r;
 }
 function A() {
-	if (m) {
-		I.info('Ignoring zstd experiment config because we fell back to zlib');
+	if (I) {
+		m.info('Ignoring zstd experiment config because we fell back to zlib');
 		return;
 	}
 	let e = h.getCurrentConfig({ location: 'GatewayZstdStore' }),
@@ -84,10 +84,10 @@ function A() {
 }
 function N(e) {
 	if (e && !(0, E.NF)()) {
-		I.warn('Attempting to enable zstd but it is not supported');
+		m.warn('Attempting to enable zstd but it is not supported');
 		return;
 	}
-	(0, E.CG)(e), e !== r && I.info('Setting Zstd to '.concat(e)), (r = e);
+	(0, E.CG)(e), e !== r && m.info('Setting Zstd to '.concat(e)), (r = e);
 }
 class v extends (o = u.ZP.Store) {
 	initialize() {
@@ -116,8 +116,7 @@ class v extends (o = u.ZP.Store) {
 		CONNECTION_OPEN: A,
 		CONNECTION_INTERRUPTED: function (e) {
 			let { code: t } = e;
-			if (!!S() && !!g && 1000 !== t)
-				(T += 1) > 3 && (I.error('Disabling zstd due to consecutive errors'), N(!1), (m = !0));
+			if (!!S() && !!g && 1000 !== t) (T += 1) > 3 && (m.error('Disabling zstd due to consecutive errors'), N(!1), (I = !0));
 		},
 		CONNECTION_RESUMED: A
 	}));

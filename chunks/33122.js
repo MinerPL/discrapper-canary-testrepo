@@ -38,10 +38,7 @@ function b(e, t, s) {
 }
 function P() {
 	var e, t;
-	let s =
-		((e = ['grayscale(', ')']),
-		!t && (t = e.slice(0)),
-		Object.freeze(Object.defineProperties(e, { raw: { value: Object.freeze(t) } })));
+	let s = ((e = ['grayscale(', ')']), !t && (t = e.slice(0)), Object.freeze(Object.defineProperties(e, { raw: { value: Object.freeze(t) } })));
 	return (
 		(P = function () {
 			return s;
@@ -80,27 +77,14 @@ let S = {
 		let t,
 			s,
 			n,
-			{
-				item: a,
-				size: r,
-				onPlay: l,
-				onEnded: o,
-				onClick: d,
-				playable: p,
-				volume: m,
-				isMuted: g,
-				onVolumeChange: I,
-				onMute: C
-			} = e;
+			{ item: a, size: r, onPlay: l, onEnded: o, onClick: d, playable: p, volume: m, isMuted: g, onVolumeChange: I, onMute: C } = e;
 		if (a.type === N.s9s.YOUTUBE_VIDEO)
 			(t = {
 				url: (0, N.n8r)(a.youtubeVideoId),
 				...E
 			}),
 				(s = {
-					url: ''
-						.concat((0, N.ivE)(a.youtubeVideoId), '?')
-						.concat('rel=0&iv_load_policy=3&showinfo=0&modestbranding=1'),
+					url: ''.concat((0, N.ivE)(a.youtubeVideoId), '?').concat('rel=0&iv_load_policy=3&showinfo=0&modestbranding=1'),
 					...L
 				}),
 				(n = c.pn.YOUTUBE);
@@ -216,13 +200,7 @@ class M extends (n = a.PureComponent) {
 				});
 	}
 	getPaginationSrc(e) {
-		return e.type === N.s9s.YOUTUBE_VIDEO
-			? (0, N.n8r)(e.youtubeVideoId)
-			: e.type === N.s9s.IMG
-				? e.src
-				: e.type === N.s9s.VIDEO
-					? e.thumbnailSrc
-					: null;
+		return e.type === N.s9s.YOUTUBE_VIDEO ? (0, N.n8r)(e.youtubeVideoId) : e.type === N.s9s.IMG ? e.src : e.type === N.s9s.VIDEO ? e.thumbnailSrc : null;
 	}
 	render() {
 		let { items: e, className: t, autoplayInterval: s, paused: n } = this.props,

@@ -37,18 +37,6 @@ class s extends i.Z {
 		});
 	}
 	constructor(e) {
-		super(e),
-			a(this, 'products', void 0),
-			a(this, 'logo', void 0),
-			a(this, 'pdpBg', void 0),
-			a(this, 'mobileBg', void 0),
-			a(this, 'successModalBg', void 0),
-			a(this, 'mobileBanner', void 0),
-			(this.products = e.products),
-			(this.logo = e.logo),
-			(this.pdpBg = e.pdpBg),
-			(this.mobileBg = e.mobileBg),
-			(this.successModalBg = e.successModalBg),
-			(this.mobileBanner = e.mobileBanner);
+		super(e), a(this, 'products', void 0), a(this, 'logo', void 0), a(this, 'pdpBg', void 0), a(this, 'mobileBg', void 0), a(this, 'successModalBg', void 0), a(this, 'mobileBanner', void 0), (this.products = e.products), (this.logo = e.logo), (this.pdpBg = e.pdpBg), (this.mobileBg = e.mobileBg), (this.successModalBg = e.successModalBg), (this.mobileBanner = e.mobileBanner);
 	}
 }

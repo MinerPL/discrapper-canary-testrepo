@@ -21,7 +21,7 @@ var r = n(512722),
 	f = n(70956),
 	h = n(40786),
 	p = n(362092);
-let I = {
+let m = {
 		link: { type: 'skip' },
 		highlight: { type: 'skip' },
 		blockQuote: { type: 'skip' },
@@ -124,18 +124,13 @@ let I = {
 			after: ''
 		}
 	},
-	m = new Set(['*', '_', '\\']),
+	I = new Set(['*', '_', '\\']),
 	T = {},
 	g = {};
 for (let e in d.Z.RULES) {
-	if (!(e in I))
-		throw Error(
-			'Slate: Unknown markdown rule: '.concat(e, '.  If you have just added a new markdown rule ') +
-				'then you probably need to add it to this file so that the rich chat box understands it.'
-		);
-	let t = I[e];
-	'skip' !== t.type && (T[e] = S(d.Z.RULES[e])),
-		'skip' !== t.type && 'inlineObject' !== t.type && (g[e] = S('text' === e ? _.ZP : d.Z.RULES[e]));
+	if (!(e in m)) throw Error('Slate: Unknown markdown rule: '.concat(e, '.  If you have just added a new markdown rule ') + 'then you probably need to add it to this file so that the rich chat box understands it.');
+	let t = m[e];
+	'skip' !== t.type && (T[e] = S(d.Z.RULES[e])), 'skip' !== t.type && 'inlineObject' !== t.type && (g[e] = S('text' === e ? _.ZP : d.Z.RULES[e]));
 }
 function S(e) {
 	i()(null != e.parse, 'Slate: rule must have a parse function');
@@ -264,9 +259,7 @@ function b(e, t) {
 							let r = t[t.length - 1],
 								i = r.start + r.text.length,
 								a = e[n];
-							a.start === i && null == r.data && null == a.data && r.attributes.join('-') === a.attributes.join('-')
-								? (r.text += a.text)
-								: t.push(a);
+							a.start === i && null == r.data && null == a.data && r.attributes.join('-') === a.attributes.join('-') ? (r.text += a.text) : t.push(a);
 						}
 						return t;
 					})(r);
@@ -375,18 +368,11 @@ function M(e, t, n, r, a) {
 						before: N.exec(r.input)[1],
 						after: ''
 					};
-				let i = I['link' === t ? 'url' : t];
+				let i = m['link' === t ? 'url' : t];
 				if ('inlineStyle' === i.type) return i;
 				throw Error('Slate: rule must be an inlineStyle');
 			})(t, o, r, l);
-			return (
-				(r = U(e, t, n, r, 'syntaxBefore')),
-				a.push(o),
-				(r = P(e, t, null != s ? s : '', r, a)),
-				a.pop(),
-				(r = U(e, t, i, r, 'syntaxAfter')),
-				x(t, r)
-			);
+			return (r = U(e, t, n, r, 'syntaxBefore')), a.push(o), (r = P(e, t, null != s ? s : '', r, a)), a.pop(), (r = U(e, t, i, r, 'syntaxAfter')), x(t, r);
 		}
 		default:
 			throw Error('Slate: Unknown rule type: '.concat(o));
@@ -460,7 +446,7 @@ function x(e, t) {
 }
 function G(e, t, n, r) {
 	for (; n < r; )
-		if (m.has(t[n])) (n = U(e, t, t[n], n, 'syntaxBefore')), (n = x(t, n));
+		if (I.has(t[n])) (n = U(e, t, t[n], n, 'syntaxBefore')), (n = x(t, n));
 		else break;
 	return n;
 }

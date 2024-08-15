@@ -15,9 +15,7 @@ t.exports = function (t) {
 		}
 		for (var c = 1; c < e.length; c++) {
 			var l = e[c];
-			0 !== l.height &&
-				0 !== l.width &&
-				((r = Math.min(r, l.top)), (i = Math.max(i, l.right)), (o = Math.max(o, l.bottom)), (a = Math.min(a, l.left)));
+			0 !== l.height && 0 !== l.width && ((r = Math.min(r, l.top)), (i = Math.max(i, l.right)), (o = Math.max(o, l.bottom)), (a = Math.min(a, l.left)));
 		}
 	}
 	return {

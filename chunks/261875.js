@@ -21,10 +21,7 @@ function u(e, t, n) {
 let c = new s.Z('DatabaseManager');
 class d extends r.yh {
 	initialize() {
-		this.waitFor(o.default),
-			this.carefullySpeculativelyOpen(l.n()),
-			this.handleAuthenticationStoreChanged(),
-			o.default.addChangeListener(() => this.handleAuthenticationStoreChanged());
+		this.waitFor(o.default), this.carefullySpeculativelyOpen(l.n()), this.handleAuthenticationStoreChanged(), o.default.addChangeListener(() => this.handleAuthenticationStoreChanged());
 	}
 	databaseName(e) {
 		return _(e);
@@ -37,8 +34,7 @@ class d extends r.yh {
 		return null;
 	}
 	carefullyOpenDatabase(e) {
-		if (this.preventWritingCachesAgainThisSession)
-			return c.verbose('Not opening database because caches have been manually cleared.'), null;
+		if (this.preventWritingCachesAgainThisSession) return c.verbose('Not opening database because caches have been manually cleared.'), null;
 		if (null != e && !this.databases.has(e)) {
 			let t = (function (e) {
 				return null;
@@ -56,14 +52,10 @@ class d extends r.yh {
 	}
 	remove(e) {
 		let t = this.databases.get(e);
-		c.log('removing database (user: '.concat(e, ', database: ').concat(t, ')')),
-			null == t || t.close(),
-			this.databases.delete(e),
-			this.emitChange();
+		c.log('removing database (user: '.concat(e, ', database: ').concat(t, ')')), null == t || t.close(), this.databases.delete(e), this.emitChange();
 	}
 	handleClearCaches(e) {
-		e.preventWritingCachesAgainThisSession && (this.preventWritingCachesAgainThisSession = !0),
-			this.replaceDisableAllDatabases('DatabaseManager ('.concat(e.reason, ')'));
+		e.preventWritingCachesAgainThisSession && (this.preventWritingCachesAgainThisSession = !0), this.replaceDisableAllDatabases('DatabaseManager ('.concat(e.reason, ')'));
 	}
 	handleConnectionOpen() {
 		let e = o.default.getId(),
@@ -76,11 +68,7 @@ class d extends r.yh {
 			t = this.activeUserId;
 		if (e !== t) {
 			let n = this.databases.get(t);
-			c.verbose('active user changed (now: '.concat(e, ', was: ').concat(t, ', was: ').concat(n, ')')),
-				null == n || n.close(),
-				l.I(e),
-				(this.activeUserId = e),
-				this.databases.delete(t);
+			c.verbose('active user changed (now: '.concat(e, ', was: ').concat(t, ', was: ').concat(n, ')')), null == n || n.close(), l.I(e), (this.activeUserId = e), this.databases.delete(t);
 		}
 	}
 	async carefullySpeculativelyOpen(e) {
@@ -90,11 +78,7 @@ class d extends r.yh {
 		}
 		if (null != e) {
 			let t = await E(e);
-			null == t || this.databases.has(e)
-				? (c.verbose('discarding speculative database ('.concat(e, ' \u2192 ').concat(t, ')')), null == t || t.close())
-				: (c.verbose('added speculative database ('.concat(e, ' \u2192 ').concat(t, ')')),
-					this.databases.set(e, t),
-					this.emitChange());
+			null == t || this.databases.has(e) ? (c.verbose('discarding speculative database ('.concat(e, ' \u2192 ').concat(t, ')')), null == t || t.close()) : (c.verbose('added speculative database ('.concat(e, ' \u2192 ').concat(t, ')')), this.databases.set(e, t), this.emitChange());
 		}
 	}
 	constructor() {

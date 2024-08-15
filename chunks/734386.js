@@ -19,8 +19,8 @@ var i = n(735250),
 	_ = n(933557),
 	f = n(605436),
 	E = n(185413),
-	g = n(42311),
-	C = n(626786),
+	C = n(42311),
+	g = n(626786),
 	I = n(434404),
 	x = n(454585),
 	T = n(430824),
@@ -178,7 +178,7 @@ function P(e) {
 							o = (null === (a = e.tags) || void 0 === a ? void 0 : a.guild_connections) !== void 0;
 						return w
 							? (0, i.jsx)(
-									g.Z,
+									C.Z,
 									{
 										className: l()(L.role, { [L.last]: n === k.length - 1 }),
 										roleName: e.name,
@@ -192,7 +192,7 @@ function P(e) {
 									e.id
 								)
 							: (0, i.jsx)(
-									C.Z,
+									g.Z,
 									{
 										className: l()(L.role, { [L.last]: n === k.length - 1 }),
 										roleName: e.name,

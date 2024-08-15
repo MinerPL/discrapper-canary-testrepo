@@ -55,14 +55,10 @@ class h extends r.Z {
 			}),
 			u(this, 'handleUserSettingsProtoUpdate', (e) => {
 				let { partial: t, settings: n, wasSaved: r } = e;
-				if (!(!('localization' in n.proto) || !t || r || Date.now() - this.lastFetchedQuestForLocaleChangeAt <= E))
-					(this.lastFetchedQuestForLocaleChangeAt = Date.now()), this._fetch();
+				if (!(!('localization' in n.proto) || !t || r || Date.now() - this.lastFetchedQuestForLocaleChangeAt <= E)) (this.lastFetchedQuestForLocaleChangeAt = Date.now()), this._fetch();
 			}),
 			u(this, 'handleLogout', () => {
-				window.clearTimeout(this.initialFetchTimerId),
-					window.clearTimeout(this.recurringFetchTimerId),
-					(this.lastFetchAttemptedAt = 0),
-					(this.lastFetchedQuestForLocaleChangeAt = 0);
+				window.clearTimeout(this.initialFetchTimerId), window.clearTimeout(this.recurringFetchTimerId), (this.lastFetchAttemptedAt = 0), (this.lastFetchedQuestForLocaleChangeAt = 0);
 			}),
 			u(this, 'actions', {
 				QUESTS_FETCH_CURRENT_QUESTS_BEGIN: this.handleQuestsFetchCurrentQuestsBegin,

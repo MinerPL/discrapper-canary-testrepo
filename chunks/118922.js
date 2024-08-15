@@ -17,16 +17,7 @@ var t,
 	l = r(747313);
 ((o = t || (t = {})).DANGER = 'danger'), (o.WARNING = 'warning');
 function d(n) {
-	let {
-			transitionState: e,
-			onClose: r,
-			title: t,
-			body: o,
-			cta: d,
-			closeLabel: u,
-			onConfirm: h,
-			iconVariant: g = 'warning'
-		} = n,
+	let { transitionState: e, onClose: r, title: t, body: o, cta: d, closeLabel: u, onConfirm: h, iconVariant: g = 'warning' } = n,
 		[x, I] = i.useState(!1),
 		f = null != t ? t : s.Z.Messages.CREATE_POLL_MODAL_WARNING_MODAL_TITLE;
 	return (0, a.jsxs)(c.ModalRoot, {

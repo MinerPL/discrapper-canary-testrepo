@@ -31,13 +31,7 @@ function p(e, t, n) {
 		e
 	);
 }
-((a = i || (i = {})).SELF_VIDEO = 'self_video'),
-	(a.SELF_STREAM = 'self_stream'),
-	(a.REMOTE_VIDEO = 'remote_video'),
-	(a.REMOTE_STREAM = 'remote_stream'),
-	(a.CHANGE_VIDEO_BACKGROUND = 'change_video_background'),
-	(a.VIDEO_PLAYER = 'video_player'),
-	(a.REPLAY_VIDEO_STREAM = 'replay_video_stream');
+((a = i || (i = {})).SELF_VIDEO = 'self_video'), (a.SELF_STREAM = 'self_stream'), (a.REMOTE_VIDEO = 'remote_video'), (a.REMOTE_STREAM = 'remote_stream'), (a.CHANGE_VIDEO_BACKGROUND = 'change_video_background'), (a.VIDEO_PLAYER = 'video_player'), (a.REPLAY_VIDEO_STREAM = 'replay_video_stream');
 let _ = new Map();
 class f {
 	onSpinnerStarted() {
@@ -52,9 +46,7 @@ class f {
 			})(n),
 			a = (0, l.zO)() - this.spinnerVisibleStart;
 		if (((this.spinnerVisibleStart = null), a < 0)) {
-			this.logger.warn(
-				'spinner duration is negative: '.concat(a, ' ms\n        [').concat(e, ', count for stream: ').concat(i, ']')
-			);
+			this.logger.warn('spinner duration is negative: '.concat(a, ' ms\n        [').concat(e, ', count for stream: ').concat(i, ']'));
 			return;
 		}
 		this.logger.info('spinner visible for '.concat(a, ' ms\n      [').concat(e, ', count for stream: ').concat(i, ']'));

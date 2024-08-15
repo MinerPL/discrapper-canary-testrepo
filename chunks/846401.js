@@ -30,11 +30,7 @@ function E() {
 	return (
 		l.useEffect(() => {
 			let e = a().duration(s.diff(a()()));
-			1 > e.seconds()
-				? (n('00:00:00'), d.current.stop())
-				: 1 > e.days()
-					? (E(), d.current.start(1000, E))
-					: (n(u.Z.Messages.HUMANIZE_DURATION_DAYS.format({ time: Math.floor(e.asDays()) })), d.current.stop());
+			1 > e.seconds() ? (n('00:00:00'), d.current.stop()) : 1 > e.days() ? (E(), d.current.start(1000, E)) : (n(u.Z.Messages.HUMANIZE_DURATION_DAYS.format({ time: Math.floor(e.asDays()) })), d.current.stop());
 		}, [s, E]),
 		e
 	);

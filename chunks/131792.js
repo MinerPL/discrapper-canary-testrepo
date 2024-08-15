@@ -19,10 +19,6 @@ function i(e, t, n) {
 }
 class a extends r.Z {
 	constructor(e) {
-		super(),
-			i(this, 'id', void 0),
-			i(this, 'widgets', void 0),
-			(this.id = e.id || ''),
-			(this.widgets = e.widgets || []);
+		super(), i(this, 'id', void 0), i(this, 'widgets', void 0), (this.id = e.id || ''), (this.widgets = e.widgets || []);
 	}
 }

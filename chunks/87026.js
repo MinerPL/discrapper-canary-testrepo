@@ -37,15 +37,7 @@ var a = t(735250),
 	F = t(162752),
 	Y = t(438825);
 let y = (e) => {
-		let {
-				guild: s,
-				onAcceptVerificationLevel: t,
-				onAcceptContentFilter: l,
-				disableContentFilter: i,
-				disableVerificationLevel: n,
-				headerId: o,
-				theme: c
-			} = e,
+		let { guild: s, onAcceptVerificationLevel: t, onAcceptContentFilter: l, disableContentFilter: i, disableVerificationLevel: n, headerId: o, theme: c } = e,
 			E = (0, r.e7)([C.Z], () => C.Z.getGuild(s.id), [s.id]),
 			N = null != E && E.verificationLevel > b.sFg.NONE,
 			I = (null == E ? void 0 : E.explicitContentFilter) === b.lxg.ALL_MEMBERS,
@@ -82,9 +74,7 @@ let y = (e) => {
 						(0, a.jsx)(_.FormText, {
 							type: _.FormTextTypes.DESCRIPTION,
 							className: j.description,
-							children: N
-								? D.Z.Messages.ENABLE_COMMUNITY_MODAL_VERIFICATION_LEVEL_MET
-								: D.Z.Messages.ENABLE_COMMUNITY_MODAL_VERIFICATION_LEVEL_HELP
+							children: N ? D.Z.Messages.ENABLE_COMMUNITY_MODAL_VERIFICATION_LEVEL_MET : D.Z.Messages.ENABLE_COMMUNITY_MODAL_VERIFICATION_LEVEL_HELP
 						}),
 						(0, a.jsx)(_.Checkbox, {
 							type: _.Checkbox.Types.ROW,
@@ -105,9 +95,7 @@ let y = (e) => {
 						(0, a.jsx)(_.FormText, {
 							type: _.FormTextTypes.DESCRIPTION,
 							className: j.description,
-							children: I
-								? D.Z.Messages.ENABLE_COMMUNITY_MODAL_CONTENT_FILTER_MET
-								: D.Z.Messages.ENABLE_PUBLIC_MODAL_CONTENT_FILTER_HELP
+							children: I ? D.Z.Messages.ENABLE_COMMUNITY_MODAL_CONTENT_FILTER_MET : D.Z.Messages.ENABLE_PUBLIC_MODAL_CONTENT_FILTER_HELP
 						}),
 						(0, a.jsx)(_.Checkbox, {
 							type: _.Checkbox.Types.ROW,
@@ -125,16 +113,7 @@ let y = (e) => {
 		});
 	},
 	G = (e) => {
-		let {
-			selectableChannels: s,
-			onRuleChannelChange: t,
-			ruleChannel: i,
-			onPublicUpdatesChannelChange: n,
-			publicUpdatesChannel: o,
-			headerId: r,
-			theme: c,
-			guildId: E
-		} = e;
+		let { selectableChannels: s, onRuleChannelChange: t, ruleChannel: i, onPublicUpdatesChannelChange: n, publicUpdatesChannel: o, headerId: r, theme: c, guildId: E } = e;
 		l.useEffect(() => {
 			(0, g.BF)({
 				fromStep: v.IO.SAFETY_CHECK,
@@ -207,18 +186,7 @@ let y = (e) => {
 		});
 	},
 	k = (e) => {
-		let {
-				guild: s,
-				policyAccepted: t,
-				everyoneRolePermissionsAccepted: i,
-				onAcceptPolicy: o,
-				onAcceptDefaultNotifications: r,
-				onAcceptEveryoneRolePermissions: c,
-				disableDefaultNotifications: E,
-				disableEveryoneRolePermissions: N,
-				headerId: I,
-				theme: T
-			} = e,
+		let { guild: s, policyAccepted: t, everyoneRolePermissionsAccepted: i, onAcceptPolicy: o, onAcceptDefaultNotifications: r, onAcceptEveryoneRolePermissions: c, disableDefaultNotifications: E, disableEveryoneRolePermissions: N, headerId: I, theme: T } = e,
 			M = (0, d.wj)(T) ? B : P;
 		return (
 			l.useEffect(() => {
@@ -711,9 +679,7 @@ s.default = (e) => {
 					policyAccepted: d,
 					onAcceptPolicy: (e, s) => {
 						if (s) {
-							_(!0),
-								!$ && T.Z.updateGuild({ defaultMessageNotifications: b.bL.ONLY_MENTIONS }),
-								!u && null != H && S(!0);
+							_(!0), !$ && T.Z.updateGuild({ defaultMessageNotifications: b.bL.ONLY_MENTIONS }), !u && null != H && S(!0);
 							return;
 						}
 						_(!1), $ && T.Z.updateGuild({ defaultMessageNotifications: P }), u && null != H && S(!1);

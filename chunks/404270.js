@@ -21,13 +21,7 @@ t.Z = (e) => {
 		S = (0, r.e7)([o.default], () => o.default.locale),
 		h = (0, r.e7)([u.ZP], () => u.ZP.getPremiumTypeSubscription()),
 		g = (0, r.e7)([d.Z], () => (null != h ? d.Z.get(h.planId) : void 0)),
-		C =
-			null !==
-				(t = (0, r.e7)([d.Z], () =>
-					null != g ? d.Z.getForSkuAndInterval((0, I.Wz)(T.Si.GUILD), g.interval, g.intervalCount) : void 0
-				)) && void 0 !== t
-				? t
-				: T.GP[T.Xh.PREMIUM_MONTH_GUILD];
+		C = null !== (t = (0, r.e7)([d.Z], () => (null != g ? d.Z.getForSkuAndInterval((0, I.Wz)(T.Si.GUILD), g.interval, g.intervalCount) : void 0))) && void 0 !== t ? t : T.GP[T.Xh.PREMIUM_MONTH_GUILD];
 	return (0, s.jsxs)('div', {
 		className: i()(N.wrapper, n),
 		children: [

@@ -3,7 +3,7 @@ n.d(t, {
 		return ed;
 	},
 	CE: function () {
-		return eI;
+		return em;
 	},
 	DE: function () {
 		return ef;
@@ -61,8 +61,8 @@ var r,
 	f = n(835473),
 	h = n(12498),
 	p = n(557135),
-	I = n(471445),
-	m = n(66999),
+	m = n(471445),
+	I = n(66999),
 	T = n(15274),
 	g = n(924301),
 	S = n(230900),
@@ -114,10 +114,7 @@ function en(e, t) {
 					[
 						(e) => {
 							var t, n;
-							return null !== (n = null === (t = y.Z.getUserAffinity(e)) || void 0 === t ? void 0 : t.affinity) &&
-								void 0 !== n
-								? n
-								: 0;
+							return null !== (n = null === (t = y.Z.getUserAffinity(e)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0;
 						}
 					],
 					['desc']
@@ -206,13 +203,13 @@ function ei(e) {
 		}),
 		h = (0, l.e7)([x.Z], () => x.Z.getRelationships()),
 		p = a.useMemo(() => Object.keys(h).filter((e) => h[e] === W.OGo.BLOCKED), [h]),
-		I = (0, l.e7)([B.ZP], () => B.ZP.getVoiceStates(t), [t]),
-		m = a.useMemo(() => {
-			let t = Object.keys(I);
+		m = (0, l.e7)([B.ZP], () => B.ZP.getVoiceStates(t), [t]),
+		I = a.useMemo(() => {
+			let t = Object.keys(m);
 			return 0 === t.length
 				? []
 				: t.filter((t) => {
-						let n = I[t].filter(V.lm);
+						let n = m[t].filter(V.lm);
 						return (
 							!(0 === n.length || f.includes(t)) &&
 							null ==
@@ -224,14 +221,14 @@ function ei(e) {
 							c.includes(t)
 						);
 					});
-		}, [I, f, c, p, e.afkChannelId]),
+		}, [m, f, c, p, e.afkChannelId]),
 		T = (0, l.e7)(
 			[d.ZP, k.Z, D.Z, w.Z, L.Z],
 			() =>
-				m.map((e) => {
+				I.map((e) => {
 					var t;
 					let n = D.Z.getAllApplicationStreamsForChannel(e).map((e) => e.ownerId),
-						r = I[e].filter(V.lm),
+						r = m[e].filter(V.lm),
 						i = d.ZP.getEmbeddedActivitiesForChannel(e),
 						a = j.L.HANGOUT,
 						s = [],
@@ -244,8 +241,7 @@ function ei(e) {
 						c = [];
 					for (let e of (i.length > 0 && (a = j.L.EMBEDDED_ACTIVITY), r)) {
 						let t = w.Z.findActivity(e.user.id, ea(e));
-						null != t && !(0, _.Z)(t) && ((a = j.L.GAMING), s.push(t), u.push(e.user.id)),
-							e.voiceState.selfVideo && c.push(e.user.id);
+						null != t && !(0, _.Z)(t) && ((a = j.L.GAMING), s.push(t), u.push(e.user.id)), e.voiceState.selfVideo && c.push(e.user.id);
 					}
 					if (a === j.L.EMBEDDED_ACTIVITY)
 						return {
@@ -273,7 +269,7 @@ function ei(e) {
 						isStage: !!(null === (t = L.Z.getChannel(e)) || void 0 === t ? void 0 : t.isGuildStageVoice())
 					};
 				}),
-			[I, m],
+			[m, I],
 			s.isEqual
 		),
 		S = (0, l.e7)([b.Z], () => b.Z.hasConsented(W.pjP.PERSONALIZATION)),
@@ -293,16 +289,7 @@ function ei(e) {
 						s = t.findIndex((e) => e.category === j.L.HANGOUT && e.streamUserIds.length > 0),
 						o = t.findIndex((e) => e.category === j.L.HANGOUT && e.videoUserIds.length > 0),
 						l = t.findIndex((e) => e.category === j.L.GAMING);
-					if (
-						(n === j.L.EVENT && 0 === r) ||
-						(n === j.L.HANGOUT && 0 === i) ||
-						(n === j.L.EMBEDDED_ACTIVITY && 0 === a) ||
-						(n === j.L.HANGOUT && 0 === s && -1 === i) ||
-						(n === j.L.HANGOUT && 0 === o && -1 === i && -1 === s) ||
-						(n === j.L.GAMING && 0 === l) ||
-						(-1 === r && -1 === i && -1 === a && -1 === s && -1 === o && -1 === l)
-					)
-						return e;
+					if ((n === j.L.EVENT && 0 === r) || (n === j.L.HANGOUT && 0 === i) || (n === j.L.EMBEDDED_ACTIVITY && 0 === a) || (n === j.L.HANGOUT && 0 === s && -1 === i) || (n === j.L.HANGOUT && 0 === o && -1 === i && -1 === s) || (n === j.L.GAMING && 0 === l) || (-1 === r && -1 === i && -1 === a && -1 === s && -1 === o && -1 === l)) return e;
 					if (-1 !== r) {
 						let e = t.splice(r, 1);
 						return t.splice(0, 0, e[0]), t;
@@ -340,11 +327,7 @@ function ei(e) {
 												e
 													.map((e) => {
 														var t, n;
-														return null !==
-															(n = null === (t = y.Z.getUserAffinity(e)) || void 0 === t ? void 0 : t.affinity) &&
-															void 0 !== n
-															? n
-															: 0;
+														return null !== (n = null === (t = y.Z.getUserAffinity(e)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0;
 													})
 													.map(n),
 											i = (0, o.EQ)(e)
@@ -399,10 +382,7 @@ function ei(e) {
 		n
 	);
 }
-let ea = (e) => (e) =>
-	[W.IIU.PLAYING, W.IIU.WATCHING].includes(e.type) &&
-	(null != e.assets || null != e.state || null != e.details || null != e.party) &&
-	!1;
+let ea = (e) => (e) => [W.IIU.PLAYING, W.IIU.WATCHING].includes(e.type) && (null != e.assets || null != e.state || null != e.details || null != e.party) && !1;
 function es(e) {
 	return (0, l.Wu)(
 		[b.Z, y.Z],
@@ -415,10 +395,7 @@ function es(e) {
 						[
 							(e) => {
 								var t, n;
-								return null !== (n = null === (t = y.Z.getUserAffinity(e)) || void 0 === t ? void 0 : t.affinity) &&
-									void 0 !== n
-									? n
-									: 0;
+								return null !== (n = null === (t = y.Z.getUserAffinity(e)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0;
 							}
 						],
 						['desc']
@@ -440,10 +417,7 @@ function eo(e) {
 						[
 							(e) => {
 								var t, n;
-								return null !== (n = null === (t = y.Z.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) &&
-									void 0 !== n
-									? n
-									: 0;
+								return null !== (n = null === (t = y.Z.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0;
 							}
 						],
 						['desc']
@@ -518,12 +492,7 @@ function eu(e, t) {
 	if (s > 0)
 		return 1 === s || i
 			? z.Z.Messages.USER_SUMMARY_ONE.format({ first: a[0] })
-			: (2 === s
-					? z.Z.Messages.USER_SUMMARY_TWO
-					: 3 === s
-						? z.Z.Messages.USER_SUMMARY_THREE
-						: z.Z.Messages.USER_SUMMARY_THREE_AND_OTHERS
-				).format({
+			: (2 === s ? z.Z.Messages.USER_SUMMARY_TWO : 3 === s ? z.Z.Messages.USER_SUMMARY_THREE : z.Z.Messages.USER_SUMMARY_THREE_AND_OTHERS).format({
 					first: a[0],
 					second: null == a ? void 0 : a[1],
 					third: null == a ? void 0 : a[2],
@@ -534,11 +503,7 @@ function ec(e, t, n, r) {
 	var i, a;
 	let s = {},
 		o = null !== (a = (0, Y.i)(e)) && void 0 !== a ? a : '';
-	(s.source = r),
-		(s.card_type = e.category),
-		(s.card_position = n),
-		(s.channel_id = o),
-		(s.channel_type = null === (i = L.Z.getChannel(o)) || void 0 === i ? void 0 : i.type);
+	(s.source = r), (s.card_type = e.category), (s.card_position = n), (s.channel_id = o), (s.channel_type = null === (i = L.Z.getChannel(o)) || void 0 === i ? void 0 : i.type);
 	let l = en(o, t);
 	(s.card_affinity_users_count = Math.min(l.length, 6)),
 		(s.card_total_users_count = l.length),
@@ -546,10 +511,7 @@ function ec(e, t, n, r) {
 		(s.card_max_affinity_user_id = l.length > 0 ? l[0].id : '0'),
 		(s.card_user_affinity_scores = l.slice(0, 6).map((e) => {
 			var t, n;
-			return null !== (n = null === (t = y.Z.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) &&
-				void 0 !== n
-				? n
-				: 0;
+			return null !== (n = null === (t = y.Z.getUserAffinity(e.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== n ? n : 0;
 		})),
 		F.default.track(W.rMx.GUILD_TOOLTIP_CARD_CLICKED, {
 			...s,
@@ -590,7 +552,7 @@ let e_ = async (e, t) => {
 		p.Z.handleVoiceConnect({
 			channel: t,
 			connected: k.Z.isInChannel(t.id),
-			needSubscriptionToAccess: (0, m.$)(t.id).needSubscriptionToAccess,
+			needSubscriptionToAccess: (0, I.$)(t.id).needSubscriptionToAccess,
 			locked: !1
 		}),
 			(0, A.XU)(e, t.id);
@@ -632,7 +594,7 @@ function eh(e) {
 		i = null == r ? void 0 : r.replace(/[<#>]/g, ''),
 		a = null != i ? L.Z.getChannel(i) : L.Z.getChannel(e.channel_id),
 		s = U.Z.can(W.Plq.VIEW_CHANNEL, a);
-	if (null != a && s) (t = (0, I.Th)(a.type)), (n = a.name);
+	if (null != a && s) (t = (0, m.Th)(a.type)), (n = a.name);
 	else {
 		if (null == r) return null;
 		(t = u.LocationIcon), (n = r);
@@ -646,7 +608,7 @@ function ep(e) {
 	let t = e.category === j.L.EMBEDDED_ACTIVITY ? e.embeddedActivities[0].applicationId : null;
 	return (0, f.q)(t);
 }
-function eI(e) {
+function em(e) {
 	let t = (0, l.e7)([h.Z], () => h.Z.getChannelStatus(e)),
 		n = null != t && t.trim().length > 0;
 	return {

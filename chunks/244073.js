@@ -65,19 +65,7 @@ class M extends s.PureComponent {
 		});
 	}
 	render() {
-		let {
-			className: e,
-			contentClassName: t,
-			pinned: n,
-			lobbyId: s,
-			channel: a,
-			quality: r,
-			lastPing: l,
-			hasVideo: d,
-			connectionState: u,
-			deaf: h,
-			mute: p
-		} = this.props;
+		let { className: e, contentClassName: t, pinned: n, lobbyId: s, channel: a, quality: r, lastPing: l, hasVideo: d, connectionState: u, deaf: h, mute: p } = this.props;
 		return null == a
 			? null
 			: (0, i.jsx)(T.ZP.Bar, {

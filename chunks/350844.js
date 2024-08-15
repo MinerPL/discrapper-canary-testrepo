@@ -109,8 +109,7 @@ var r = {
 	'voucher.introduction.doku': 'Obrigado pela sua compra, use as seguintes informações para concluir o seu pagamento.',
 	'voucher.shopperName': 'Nome do comprador',
 	'voucher.merchantName': 'Comerciante',
-	'voucher.introduction.econtext':
-		'Obrigado pela sua compra, use as seguintes informações para concluir o seu pagamento.',
+	'voucher.introduction.econtext': 'Obrigado pela sua compra, use as seguintes informações para concluir o seu pagamento.',
 	'voucher.telephoneNumber': 'Número de telefone',
 	'voucher.shopperReference': 'Referência do consumidor',
 	'voucher.collectionInstitutionNumber': 'Número da instituição de recolha',
@@ -137,8 +136,7 @@ var r = {
 	'creditCard.encryptedPassword.placeholder': '12',
 	'creditCard.encryptedPassword.invalid': 'Palavra-passe inválida',
 	'creditCard.taxNumber': 'Data de nascimento do titular do cartão ou número de registo da Empresa',
-	'creditCard.taxNumber.label':
-		'Data de nascimento do titular do cartão (AAMMDD) ou número de registo da Empresa (10 dígitos)',
+	'creditCard.taxNumber.label': 'Data de nascimento do titular do cartão (AAMMDD) ou número de registo da Empresa (10 dígitos)',
 	'creditCard.taxNumber.labelAlt': 'Número de registo da empresa (10 dígitos)',
 	'creditCard.taxNumber.invalid': 'Data de nascimento do titular do cartão ou número de registo empresarial inválido',
 	'storedPaymentMethod.disable.button': 'Remover',
@@ -173,8 +171,7 @@ var r = {
 	'blik.invalid': 'Digite 6 números',
 	'blik.code': 'Código de 6 dígitos',
 	'blik.help': 'Obtenha o código da sua aplicação bancária.',
-	'swish.pendingMessage':
-		'Após a leitura, o estado pode estar pendente por até 10 minutos. Tentar pagar novamente dentro desse prazo pode resultar em várias cobranças.',
+	'swish.pendingMessage': 'Após a leitura, o estado pode estar pendente por até 10 minutos. Tentar pagar novamente dentro desse prazo pode resultar em várias cobranças.',
 	'field.valid': 'Campo válido',
 	'field.invalid': 'Campo inválido',
 	'error.va.gen.01': 'Campo incompleto',
@@ -210,8 +207,7 @@ var r = {
 	'bankTransfer.iban': 'IBAN',
 	'bankTransfer.bic': 'BIC',
 	'bankTransfer.reference': 'Referência',
-	'bankTransfer.introduction':
-		'Continue para criar um novo pagamento de transferência bancária. Pode usar os detalhes no ecrã a seguir para finalizar este pagamento.',
+	'bankTransfer.introduction': 'Continue para criar um novo pagamento de transferência bancária. Pode usar os detalhes no ecrã a seguir para finalizar este pagamento.',
 	'bankTransfer.instructions': 'Obrigado pela sua compra, use as seguintes informações para concluir o seu pagamento.',
 	'bacs.accountHolderName': 'Nome do titular da conta bancária',
 	'bacs.accountHolderName.invalid': 'Nome do titular da conta bancária inválido',
@@ -220,8 +216,7 @@ var r = {
 	'bacs.bankLocationId': 'Código de classificação',
 	'bacs.bankLocationId.invalid': 'Código de classificação inválido',
 	'bacs.consent.amount': 'Concordo que o valor acima seja deduzido da minha conta bancária.',
-	'bacs.consent.account':
-		'Confirmo que a conta está em meu nome e sou o único signatário necessário para autorizar o débito automático nesta conta.',
+	'bacs.consent.account': 'Confirmo que a conta está em meu nome e sou o único signatário necessário para autorizar o débito automático nesta conta.',
 	edit: 'Editar',
 	'bacs.confirm': 'Confirmar e pagar',
 	'bacs.result.introduction': 'Descarregue a sua Instrução de Débito Direto (DDI / Mandato)',
@@ -247,8 +242,7 @@ var r = {
 	'ach.encryptedBankAccountNumber.aria.label': 'Número da conta',
 	'ach.encryptedBankLocationId.aria.iframeTitle': 'Iframe para número de identificação bancária',
 	'ach.encryptedBankLocationId.aria.label': 'Número de encaminhamento da ABA',
-	'pix.instructions':
-		'Abra a aplicação com a chave registada PIX, escolha Pagar com PIX e digitalize o QR Code ou copie e cole o código',
+	'pix.instructions': 'Abra a aplicação com a chave registada PIX, escolha Pagar com PIX e digitalize o QR Code ou copie e cole o código',
 	'twint.saved': 'salvou',
 	orPayWith: 'ou pague com',
 	invalidFormatExpects: 'Formato inválido. Formato esperado: %{format}',
@@ -256,8 +250,7 @@ var r = {
 	'upi.vpaWaitingMessage': 'Abra a aplicação UPI para confirmar o pagamento',
 	'upi.modeSelection': 'Faça uma seleção de como gostaria de usar a UPI.',
 	'onlineBanking.termsAndConditions': 'Ao continuar, concorda com os %#termos e condições%#',
-	'onlineBankingPL.termsAndConditions':
-		'Ao continuar, concorda com o %#regulamento%# e a %#obrigação de informação%# da Przelewy24',
+	'onlineBankingPL.termsAndConditions': 'Ao continuar, concorda com o %#regulamento%# e a %#obrigação de informação%# da Przelewy24',
 	'ctp.loading.poweredByCtp': 'Fornecido pelo Click to Pay',
 	'ctp.loading.intro': 'Estamos a verificar se tem algum cartão Click to Pay guardado...',
 	'ctp.login.title': 'Continuar para o Click to Pay',
@@ -280,14 +273,12 @@ var r = {
 	'ctp.manualCardEntry': 'Introdução manual do cartão',
 	'ctp.aria.infoModalButton': 'O que é Click to Pay',
 	'ctp.infoPopup.title': 'O Click to Pay traz a facilidade do contactless online',
-	'ctp.infoPopup.subtitle':
-		'Um método de pagamento rápido e seguro suportado pela Mastercard, Visa e outros cartões de pagamento.',
+	'ctp.infoPopup.subtitle': 'Um método de pagamento rápido e seguro suportado pela Mastercard, Visa e outros cartões de pagamento.',
 	'ctp.infoPopup.benefit1': 'Click to Pay utiliza encriptação para manter as suas informações seguras',
 	'ctp.infoPopup.benefit2': 'Use-o com comerciantes em todo o mundo',
 	'ctp.infoPopup.benefit3': 'Configure uma vez para pagamentos sem complicações no futuro',
 	'ctp.errors.AUTH_INVALID': 'Autenticação inválida',
-	'ctp.errors.NOT_FOUND':
-		'Nenhuma conta encontrada, insira um e-mail válido ou continue usando a entrada manual do cartão',
+	'ctp.errors.NOT_FOUND': 'Nenhuma conta encontrada, insira um e-mail válido ou continue usando a entrada manual do cartão',
 	'ctp.errors.ID_FORMAT_UNSUPPORTED': 'Formato não suportado',
 	'ctp.errors.FRAUD': 'A conta de utilizador foi bloqueada ou desativada',
 	'ctp.errors.CONSUMER_ID_MISSING': 'A identidade do consumidor está em falta no pedido',
@@ -308,7 +299,6 @@ var r = {
 	'consent.checkbox.invalid': 'Tem de aceitar os termos e condições',
 	'form.instruction': 'Todos os campos são obrigatórios, a menos que assinalados em contrário.',
 	'trustly.descriptor': 'Pagamento bancário instantâneo',
-	'trustly.description1':
-		'Pague diretamente a partir de qualquer uma das suas contas bancárias, com a segurança de um banco',
+	'trustly.description1': 'Pague diretamente a partir de qualquer uma das suas contas bancárias, com a segurança de um banco',
 	'trustly.description2': 'Sem cartões, sem transferir aplicações, sem registo'
 };

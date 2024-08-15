@@ -64,9 +64,7 @@ var l = function (e, t) {
 				(t.onEntered = function (e, n) {
 					var o = t.getClassNames('appear').doneClassName,
 						r = t.getClassNames('enter').doneClassName;
-					t.removeClasses(e, n ? 'appear' : 'enter'),
-						l(e, n ? o + ' ' + r : r),
-						t.props.onEntered && t.props.onEntered(e, n);
+					t.removeClasses(e, n ? 'appear' : 'enter'), l(e, n ? o + ' ' + r : r), t.props.onEntered && t.props.onEntered(e, n);
 				}),
 				(t.onExit = function (e) {
 					var n = t.getClassNames('exit').className;

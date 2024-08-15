@@ -109,11 +109,7 @@ function T(e) {
 								height: 20
 							}),
 							title: E.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
-							body: n
-								? E.Z.Messages.GUILD_ROLE_SUB_TYPE_BODY_AFTER_CONSOLIDATION
-								: E.Z.Messages.GUILD_ROLE_SUB_TYPE_BODY.format({
-										openRoleSubPage: () => (0, C.uL)(m.Z5c.CHANNEL(t.id, L.oC.ROLE_SUBSCRIPTIONS))
-									}),
+							body: n ? E.Z.Messages.GUILD_ROLE_SUB_TYPE_BODY_AFTER_CONSOLIDATION : E.Z.Messages.GUILD_ROLE_SUB_TYPE_BODY.format({ openRoleSubPage: () => (0, C.uL)(m.Z5c.CHANNEL(t.id, L.oC.ROLE_SUBSCRIPTIONS)) }),
 							disabled: !n,
 							selected: s === x.y.GUILD_ROLE_SUBSCRIPTIONS,
 							onClick: () => i(x.y.GUILD_ROLE_SUBSCRIPTIONS)
@@ -126,9 +122,7 @@ function T(e) {
 						{
 							icon: R
 								? (0, r.jsx)('img', {
-										src: j
-											? (0, d.b)('server_products/storefront/question-mark.png')
-											: (0, d.b)('server_products/storefront/question-mark.gif'),
+										src: j ? (0, d.b)('server_products/storefront/question-mark.png') : (0, d.b)('server_products/storefront/question-mark.gif'),
 										className: S.questionMark,
 										alt: ''
 									})

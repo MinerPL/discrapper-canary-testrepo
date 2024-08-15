@@ -67,10 +67,7 @@ var k = (function (e) {
 			function () {
 				var e,
 					a = (0, c.Z)(t);
-				return (
-					(e = r ? Reflect.construct(a, arguments, (0, c.Z)(this).constructor) : a.apply(this, arguments)),
-					(0, i.Z)(this, e)
-				);
+				return (e = r ? Reflect.construct(a, arguments, (0, c.Z)(this).constructor) : a.apply(this, arguments)), (0, i.Z)(this, e);
 			});
 	function h(e) {
 		var t;
@@ -99,10 +96,7 @@ var k = (function (e) {
 					var r = this;
 					return (
 						!!Object.keys(e).find(function (t) {
-							return (
-								'circularCache' !== t &&
-								('keyPath' === t ? e[t].join('/') !== r.props[t].join('/') : e[t] !== r.props[t])
-							);
+							return 'circularCache' !== t && ('keyPath' === t ? e[t].join('/') !== r.props[t].join('/') : e[t] !== r.props[t]);
 						}) || t.expanded !== this.state.expanded
 					);
 				}
@@ -176,11 +170,7 @@ var k = (function (e) {
 						k = t(a, n, f.createElement('span', i('nestedNodeItemType', m), r), o(n, c), u),
 						E = [u, a, m, h];
 					return s
-						? f.createElement(
-								'li',
-								i.apply(void 0, ['rootNode'].concat(E)),
-								f.createElement('ul', i.apply(void 0, ['rootNodeChildren'].concat(E)), w)
-							)
+						? f.createElement('li', i.apply(void 0, ['rootNode'].concat(E)), f.createElement('ul', i.apply(void 0, ['rootNodeChildren'].concat(E)), w))
 						: f.createElement(
 								'li',
 								i.apply(void 0, ['nestedNode'].concat(E)),
@@ -191,18 +181,8 @@ var k = (function (e) {
 										expanded: m,
 										onClick: this.handleClick
 									}),
-								f.createElement(
-									'label',
-									(0, b.Z)({}, i.apply(void 0, [['label', 'nestedNodeLabel']].concat(E)), {
-										onClick: this.handleClick
-									}),
-									d.apply(void 0, E)
-								),
-								f.createElement(
-									'span',
-									(0, b.Z)({}, i.apply(void 0, ['nestedNodeItemString'].concat(E)), { onClick: this.handleClick }),
-									k
-								),
+								f.createElement('label', (0, b.Z)({}, i.apply(void 0, [['label', 'nestedNodeLabel']].concat(E)), { onClick: this.handleClick }), d.apply(void 0, E)),
+								f.createElement('span', (0, b.Z)({}, i.apply(void 0, ['nestedNodeItemString'].concat(E)), { onClick: this.handleClick }), k),
 								f.createElement('ul', i.apply(void 0, ['nestedNodeChildren'].concat(E)), w)
 							);
 				}

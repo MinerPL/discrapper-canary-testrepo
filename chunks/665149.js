@@ -17,31 +17,7 @@ var r = n(735250),
 	d = n(686546),
 	_ = n(648914);
 let E = (e) => {
-		let {
-				className: t,
-				iconClassName: n,
-				children: i,
-				selected: a = !1,
-				disabled: o = !1,
-				showBadge: l = !1,
-				color: c,
-				foreground: E,
-				background: f,
-				icon: h,
-				onClick: p,
-				onContextMenu: I,
-				tooltip: m = null,
-				tooltipColor: T,
-				tooltipPosition: g = 'bottom',
-				tooltipDisabled: S,
-				hideOnClick: A = !0,
-				role: N,
-				'aria-label': v,
-				'aria-hidden': O,
-				'aria-checked': R,
-				'aria-expanded': C,
-				'aria-haspopup': y
-			} = e,
+		let { className: t, iconClassName: n, children: i, selected: a = !1, disabled: o = !1, showBadge: l = !1, color: c, foreground: E, background: f, icon: h, onClick: p, onContextMenu: m, tooltip: I = null, tooltipColor: T, tooltipPosition: g = 'bottom', tooltipDisabled: S, hideOnClick: A = !0, role: N, 'aria-label': v, 'aria-hidden': O, 'aria-checked': R, 'aria-expanded': C, 'aria-haspopup': y } = e,
 			D = (0, r.jsx)(h, {
 				x: 0,
 				y: 0,
@@ -55,15 +31,15 @@ let E = (e) => {
 			}),
 			L = v;
 		return (
-			null == L && 'string' == typeof m && (L = m),
+			null == L && 'string' == typeof I && (L = I),
 			(0, r.jsx)(u.Tooltip, {
-				text: m,
+				text: I,
 				color: T,
 				position: g,
 				hideOnClick: A,
 				shouldShow: !S,
 				children: (e) => {
-					let { onMouseEnter: m, onMouseLeave: T, onFocus: g, onBlur: S } = e;
+					let { onMouseEnter: I, onMouseLeave: T, onFocus: g, onBlur: S } = e;
 					return null == p
 						? (0, r.jsx)('div', {
 								className: s()(t, [_.iconWrapper]),
@@ -78,7 +54,7 @@ let E = (e) => {
 									secondaryColorClass: null != f ? f : void 0,
 									color: null != c ? c : 'currentColor',
 									'aria-hidden': O,
-									onMouseEnter: m,
+									onMouseEnter: I,
 									onMouseLeave: T,
 									onFocus: g,
 									onBlur: S
@@ -87,8 +63,8 @@ let E = (e) => {
 						: (0, r.jsxs)(u.Clickable, {
 								tag: 'div',
 								onClick: o ? void 0 : p,
-								onContextMenu: o ? void 0 : I,
-								onMouseEnter: m,
+								onContextMenu: o ? void 0 : m,
+								onMouseEnter: I,
 								onMouseLeave: T,
 								onFocus: g,
 								onBlur: S,
@@ -124,19 +100,7 @@ let E = (e) => {
 		return (0, r.jsx)('div', { className: s()(_.divider, t) });
 	},
 	h = (e) => {
-		let {
-				className: t,
-				innerClassName: n,
-				children: a,
-				childrenBottom: d,
-				toolbar: E,
-				onDoubleClick: f,
-				'aria-label': h,
-				'aria-labelledby': p,
-				role: I,
-				scrollable: m,
-				transparent: T = !1
-			} = e,
+		let { className: t, innerClassName: n, children: a, childrenBottom: d, toolbar: E, onDoubleClick: f, 'aria-label': h, 'aria-labelledby': p, role: m, scrollable: I, transparent: T = !1 } = e,
 			g = i.useRef(null),
 			S = i.useContext(c.Z);
 		return (0, r.jsx)('section', {
@@ -147,7 +111,7 @@ let E = (e) => {
 			}),
 			'aria-label': h,
 			'aria-labelledby': p,
-			role: I,
+			role: m,
 			ref: g,
 			children: (0, r.jsxs)(u.FocusRingScope, {
 				containerRef: g,
@@ -156,7 +120,7 @@ let E = (e) => {
 						className: _.upperContainer,
 						children: [
 							(0, r.jsxs)('div', {
-								className: s()(_.children, n, { [_.scrollable]: m }),
+								className: s()(_.children, n, { [_.scrollable]: I }),
 								onDoubleClick: f,
 								children: [
 									l.tq && null != S
@@ -183,16 +147,7 @@ let E = (e) => {
 	};
 (h.Icon = E),
 	(h.Title = (e) => {
-		let {
-				className: t,
-				wrapperClassName: n,
-				children: i,
-				onContextMenu: a,
-				onClick: o,
-				id: l,
-				muted: c = !1,
-				level: d = 1
-			} = e,
+		let { className: t, wrapperClassName: n, children: i, onContextMenu: a, onClick: o, id: l, muted: c = !1, level: d = 1 } = e,
 			E = (0, r.jsx)(u.HeadingLevel, {
 				forceLevel: d,
 				children: (0, r.jsx)(u.Heading, {

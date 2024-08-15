@@ -22,9 +22,7 @@ async function d(e) {
 					let s = new FileReader();
 					(s.onload = (t) => {
 						var s;
-						'string' == typeof (null === (s = t.target) || void 0 === s ? void 0 : s.result)
-							? e(t.target.result)
-							: n(Error('Failed to read file'));
+						'string' == typeof (null === (s = t.target) || void 0 === s ? void 0 : s.result) ? e(t.target.result) : n(Error('Failed to read file'));
 					}),
 						s.readAsDataURL(t);
 				}
@@ -74,16 +72,7 @@ let _ = (e) => {
 	});
 };
 t.Z = (e) => {
-	let {
-			onChange: t,
-			multiple: o = !0,
-			disabled: c,
-			className: d,
-			tabIndex: _ = -1,
-			'aria-label': I,
-			filters: E,
-			setLoading: T
-		} = e,
+	let { onChange: t, multiple: o = !0, disabled: c, className: d, tabIndex: _ = -1, 'aria-label': I, filters: E, setLoading: T } = e,
 		m = a.createRef(),
 		N = a.useRef(null),
 		[S, h] = a.useState(!1);
@@ -98,17 +87,7 @@ t.Z = (e) => {
 		},
 		x = async (e) => {
 			var t, a, r;
-			if (
-				(e.stopPropagation(),
-				e.preventDefault(),
-				(null === (t = e.currentTarget) || void 0 === t ? void 0 : t.files) == null ||
-					(null === (r = e.currentTarget) || void 0 === r
-						? void 0
-						: null === (a = r.files) || void 0 === a
-							? void 0
-							: a.length) === 0)
-			)
-				return;
+			if ((e.stopPropagation(), e.preventDefault(), (null === (t = e.currentTarget) || void 0 === t ? void 0 : t.files) == null || (null === (r = e.currentTarget) || void 0 === r ? void 0 : null === (a = r.files) || void 0 === a ? void 0 : a.length) === 0)) return;
 			let l = e.currentTarget.files;
 			N.current = await (0, i.openModalLazy)(async () => {
 				let { default: e } = await n.e('16169').then(n.bind(n, 935333));

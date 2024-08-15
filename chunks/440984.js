@@ -22,14 +22,7 @@ var n = t(735250),
 	C = t(982404),
 	m = t(299156);
 function A(e) {
-	let {
-			premiumSubscription: s,
-			premiumType: t,
-			onClose: A,
-			confettiCanvas: O,
-			userWasChurned: g = !1,
-			userDiscountOffer: h
-		} = e,
+	let { premiumSubscription: s, premiumType: t, onClose: A, confettiCanvas: O, userWasChurned: g = !1, userDiscountOffer: h } = e,
 		p = (0, l.ZP)(),
 		R = (0, r.wj)(p) ? C : m,
 		x = a.useRef(null),
@@ -83,9 +76,7 @@ function A(e) {
 												}),
 												(0, n.jsx)(o.Heading, {
 													variant: 'heading-xl/bold',
-													children: g
-														? S.Z.Messages.PREMIUM_TRIAL_TUTORIAL_WELCOME_BACK
-														: S.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED_PUNCTUATED
+													children: g ? S.Z.Messages.PREMIUM_TRIAL_TUTORIAL_WELCOME_BACK : S.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED_PUNCTUATED
 												})
 											]
 										}),

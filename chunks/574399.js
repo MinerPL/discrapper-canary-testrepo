@@ -35,13 +35,7 @@ function N(e) {
 	let I = null == n ? void 0 : n.applicationId,
 		g = (0, i.e7)([d.Z], () => (null != I ? d.Z.getSubscriptionGroupListingForApplication(I) : null), [I]),
 		S = r.useCallback(() => {
-			if (
-				(null == n ? void 0 : n.applicationId) == null ||
-				(null == n ? void 0 : n.id) == null ||
-				(null == g ? void 0 : g.id) == null ||
-				(null == g ? void 0 : g.sku_flags) == null
-			)
-				return null;
+			if ((null == n ? void 0 : n.applicationId) == null || (null == n ? void 0 : n.id) == null || (null == g ? void 0 : g.id) == null || (null == g ? void 0 : g.sku_flags) == null) return null;
 			(0, a.openModal)((e) => {
 				let { onClose: l, transitionState: r } = e;
 				return (0, t.jsx)(h.SubscriptionDetailsModal, {
@@ -53,12 +47,7 @@ function N(e) {
 					transitionState: r
 				});
 			});
-		}, [
-			null == n ? void 0 : n.applicationId,
-			null == n ? void 0 : n.id,
-			null == g ? void 0 : g.id,
-			null == g ? void 0 : g.sku_flags
-		]),
+		}, [null == n ? void 0 : n.applicationId, null == n ? void 0 : n.id, null == g ? void 0 : g.id, null == g ? void 0 : g.sku_flags]),
 		O = r.useCallback(() => {
 			if (null == n) return null;
 			(0, a.openModal)((e) => {

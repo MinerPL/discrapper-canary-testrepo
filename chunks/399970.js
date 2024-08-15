@@ -152,9 +152,7 @@ function m(e) {
 									type: 'submit',
 									disabled: !M || 0 === A.length || ('localhost' === p && 0 === g.length),
 									color: D ? l.Button.Colors.RED : l.Button.Colors.GREEN,
-									children: D
-										? T.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR
-										: T.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
+									children: D ? T.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : T.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
 								})
 							]
 						})

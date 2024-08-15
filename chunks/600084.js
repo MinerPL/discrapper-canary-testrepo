@@ -18,8 +18,8 @@ var i = n(735250),
 	_ = n(984933),
 	f = n(496675),
 	E = n(594174),
-	g = n(51144),
-	C = n(7782),
+	C = n(51144),
+	g = n(7782),
 	I = n(967128),
 	x = n(320781),
 	T = n(269203),
@@ -50,22 +50,16 @@ function O(e) {
 		u = (0, o.ZP)(n),
 		{ type: p } = n,
 		_ = (0, s.e7)([E.default], () => (n.isPrivate() ? E.default.getUser(n.getRecipientId()) : null)),
-		x = g.ZP.useUserTag(_),
+		x = C.ZP.useUserTag(_),
 		{ canManageRoles: v, canReadMessageHistory: Z } = (0, s.cj)([f.Z], () => ({
 			canManageRoles: f.Z.can(b.Plq.MANAGE_ROLES, n),
 			canReadMessageHistory: f.Z.can(b.Plq.READ_MESSAGE_HISTORY, n)
 		})),
 		A = (0, s.e7)([h.Z], () => (p === b.d4z.DM ? h.Z.getMutualGuilds(n.getRecipientId()) : null), [n, p]),
-		{ systemDMRedesignEnabled: M } = d.Z.useExperiment(
-			{ location: 'bf1a4f_1' },
-			{ autoTrackExposure: null !== (t = n.isSystemDM()) && void 0 !== t && t }
-		);
+		{ systemDMRedesignEnabled: M } = d.Z.useExperiment({ location: 'bf1a4f_1' }, { autoTrackExposure: null !== (t = n.isSystemDM()) && void 0 !== t && t });
 	if (
 		(a.useEffect(() => {
-			p === b.d4z.DM &&
-				null == A &&
-				null != _ &&
-				r.Z.wait(() => (0, m.Z)(n.getRecipientId(), _.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
+			p === b.d4z.DM && null == A && null != _ && r.Z.wait(() => (0, m.Z)(n.getRecipientId(), _.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
 		}, [A, p, n, _]),
 		n.isSystemDM())
 	)
@@ -87,7 +81,7 @@ function O(e) {
 						children: x
 					}),
 				j.Z.Messages.BEGINNING_DM.format({ username: u }),
-				(0, i.jsx)(C.Z, {
+				(0, i.jsx)(g.Z, {
 					userId: n.getRecipientId(),
 					channel: n,
 					showingBanner: c
@@ -98,10 +92,7 @@ function O(e) {
 		return n.isManaged()
 			? (0, i.jsxs)(I.ZP, {
 					channelId: n.id,
-					children: [
-						(0, i.jsx)(I.Ot, { children: j.Z.Messages.BEGINNING_CHANNEL_WELCOME.format({ channelName: u }) }),
-						(0, i.jsx)(I.jz, { children: j.Z.Messages.BEGINNING_GROUP_DM_MANAGED })
-					]
+					children: [(0, i.jsx)(I.Ot, { children: j.Z.Messages.BEGINNING_CHANNEL_WELCOME.format({ channelName: u }) }), (0, i.jsx)(I.jz, { children: j.Z.Messages.BEGINNING_GROUP_DM_MANAGED })]
 				})
 			: n.hasFlag(R.zZ.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)
 				? (0, i.jsx)(T.Z, { channel: n })

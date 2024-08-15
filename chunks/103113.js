@@ -18,8 +18,8 @@ var r = n(735250),
 	f = n(318661),
 	h = n(78675),
 	p = n(741308),
-	I = n(588822),
-	m = n(899007),
+	m = n(588822),
+	I = n(899007),
 	T = n(502762),
 	g = n(530),
 	S = n(256059),
@@ -30,17 +30,7 @@ var r = n(735250),
 	R = n(689938),
 	C = n(122269);
 function y(e) {
-	let {
-			user: t,
-			guildId: n,
-			channelId: y,
-			messageId: D,
-			roleId: L,
-			setPopoutRef: b,
-			closePopout: M,
-			disableUserProfileLink: P = __OVERLAY__,
-			newAnalyticsLocations: U = []
-		} = e,
+	let { user: t, guildId: n, channelId: y, messageId: D, roleId: L, setPopoutRef: b, closePopout: M, disableUserProfileLink: P = __OVERLAY__, newAnalyticsLocations: U = [] } = e,
 		w = (0, f.ZP)(t.id, n),
 		{ analyticsLocations: x } = (0, l.ZP)([...U, o.Z.BITE_SIZE_PROFILE_POPOUT]),
 		G = (0, _.ZB)({
@@ -107,7 +97,7 @@ function y(e) {
 										profileType: O.y0.BITE_SIZE,
 										hasProfileEffect: (null == w ? void 0 : w.profileEffectId) != null
 									}),
-									(0, r.jsx)(m.Z, {
+									(0, r.jsx)(I.Z, {
 										user: t,
 										displayProfile: w,
 										guildId: n,
@@ -133,7 +123,7 @@ function y(e) {
 											onClose: M
 										})
 									}),
-									(0, r.jsx)(I.Z, {
+									(0, r.jsx)(m.Z, {
 										userId: t.id,
 										userBio: null == w ? void 0 : w.bio,
 										setLineClamp: !1,

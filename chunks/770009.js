@@ -24,10 +24,7 @@ function m(e) {
 }
 function f(e) {
 	let n = (0, o.CJ)();
-	i()(
-		null != n,
-		'Component context is not defined. Did you forget to wrap your component in a ComponentStateContextProvider?'
-	);
+	i()(null != n, 'Component context is not defined. Did you forget to wrap your component in a ComponentStateContextProvider?');
 	let { channelId: l } = n,
 		r = (0, a.e7)([s.Z], () => s.Z.getChannel(l));
 	return (

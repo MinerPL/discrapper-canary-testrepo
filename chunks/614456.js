@@ -15,17 +15,12 @@ class u {
 	}
 	prepare() {
 		var e;
-		if (void 0 === this.fMap)
-			for (let t of ((this.fMap = {}), null !== (e = this.info.fields) && void 0 !== e ? e : []))
-				(this.fMap[t.name] = t), (this.fMap[t.jsonName] = t), (this.fMap[t.localName] = t);
+		if (void 0 === this.fMap) for (let t of ((this.fMap = {}), null !== (e = this.info.fields) && void 0 !== e ? e : [])) (this.fMap[t.name] = t), (this.fMap[t.jsonName] = t), (this.fMap[t.localName] = t);
 	}
 	assert(e, t, n) {
 		if (!e) {
 			let e = (0, r.Z)(n);
-			throw (
-				(('number' == e || 'boolean' == e) && (e = n.toString()),
-				Error(`Cannot parse JSON ${e} for ${this.info.typeName}#${t}`))
-			);
+			throw (('number' == e || 'boolean' == e) && (e = n.toString()), Error(`Cannot parse JSON ${e} for ${this.info.typeName}#${t}`));
 		}
 	}
 	read(e, t, n) {
@@ -35,14 +30,12 @@ class u {
 			let e;
 			let l = this.fMap[s];
 			if (!l) {
-				if (!n.ignoreUnknownFields)
-					throw Error(`Found unknown field while reading ${this.info.typeName} from JSON format. JSON key: ${s}`);
+				if (!n.ignoreUnknownFields) throw Error(`Found unknown field while reading ${this.info.typeName} from JSON format. JSON key: ${s}`);
 				continue;
 			}
 			let u = l.localName;
 			if (l.oneof) {
-				if (i.includes(l.oneof))
-					throw Error(`Multiple members of the oneof group "${l.oneof}" of ${this.info.typeName} are present in JSON.`);
+				if (i.includes(l.oneof)) throw Error(`Multiple members of the oneof group "${l.oneof}" of ${this.info.typeName} are present in JSON.`);
 				i.push(l.oneof), (e = t[l.oneof] = { oneofKind: u });
 			} else e = t;
 			if ('map' == l.kind) {
@@ -63,8 +56,7 @@ class u {
 					}
 					this.assert(void 0 !== i, l.name + ' map value', r);
 					let s = e;
-					l.K == a.wx.BOOL && (s = 'true' == s || ('false' != s && s)),
-						(t[(s = this.scalar(s, l.K, a.pz.STRING, l.name).toString())] = i);
+					l.K == a.wx.BOOL && (s = 'true' == s || ('false' != s && s)), (t[(s = this.scalar(s, l.K, a.pz.STRING, l.name).toString())] = i);
 				}
 			} else if (l.repeat) {
 				if (null === o) continue;
@@ -104,33 +96,16 @@ class u {
 		}
 	}
 	enum(e, t, n, r) {
-		if (
-			('google.protobuf.NullValue' == e[0] &&
-				(0, o.hu)(null === t, `Unable to parse field ${this.info.typeName}#${n}, enum ${e[0]} only accepts null.`),
-			null === t)
-		)
-			return 0;
+		if (('google.protobuf.NullValue' == e[0] && (0, o.hu)(null === t, `Unable to parse field ${this.info.typeName}#${n}, enum ${e[0]} only accepts null.`), null === t)) return 0;
 		switch (typeof t) {
 			case 'number':
-				return (
-					(0, o.hu)(
-						Number.isInteger(t),
-						`Unable to parse field ${this.info.typeName}#${n}, enum can only be integral number, got ${t}.`
-					),
-					t
-				);
+				return (0, o.hu)(Number.isInteger(t), `Unable to parse field ${this.info.typeName}#${n}, enum can only be integral number, got ${t}.`), t;
 			case 'string':
 				let i = t;
 				e[2] && t.substring(0, e[2].length) === e[2] && (i = t.substring(e[2].length));
 				let a = e[1][i];
 				if (void 0 === a && r) return !1;
-				return (
-					(0, o.hu)(
-						'number' == typeof a,
-						`Unable to parse field ${this.info.typeName}#${n}, enum ${e[0]} has no value for "${t}".`
-					),
-					a
-				);
+				return (0, o.hu)('number' == typeof a, `Unable to parse field ${this.info.typeName}#${n}, enum ${e[0]} has no value for "${t}".`), a;
 		}
 		(0, o.hu)(!1, `Unable to parse field ${this.info.typeName}#${n}, cannot parse enum value from ${typeof t}".`);
 	}
@@ -170,15 +145,7 @@ class u {
 				case a.wx.UINT32:
 					let c;
 					if (null === e) return 0;
-					if (
-						('number' == typeof e
-							? (c = e)
-							: '' === e
-								? (u = 'empty string')
-								: 'string' == typeof e && (e.trim().length !== e.length ? (u = 'extra whitespace') : (c = Number(e))),
-						void 0 === c)
-					)
-						break;
+					if (('number' == typeof e ? (c = e) : '' === e ? (u = 'empty string') : 'string' == typeof e && (e.trim().length !== e.length ? (u = 'extra whitespace') : (c = Number(e))), void 0 === c)) break;
 					return t == a.wx.UINT32 ? (0, o.fp)(c) : (0, o.ug)(c), c;
 				case a.wx.INT64:
 				case a.wx.SFIXED64:

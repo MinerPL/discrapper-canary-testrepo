@@ -15,8 +15,5 @@ e.exports = function (e, t, r) {
 		}
 		!c && this.fireCallback(i[a].callback, r, i[a].combo);
 	}
-	(o = 'keypress' === r.type && this.ignoreNextKeypress),
-		(s = n(64000)),
-		r.type === this.nextExpectedAction && !s(e) && !o && this.resetSequences(l),
-		(this.ignoreNextKeypress = c && 'keydown' === r.type);
+	(o = 'keypress' === r.type && this.ignoreNextKeypress), (s = n(64000)), r.type === this.nextExpectedAction && !s(e) && !o && this.resetSequences(l), (this.ignoreNextKeypress = c && 'keydown' === r.type);
 };

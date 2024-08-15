@@ -19,43 +19,16 @@ var t = n(735250),
 function L(e) {
 	var s, n;
 	let i,
-		{
-			handleClose: L,
-			planGroup: h,
-			onSubscriptionConfirmation: f,
-			renderPurchaseConfirmation: I,
-			postSuccessGuild: E,
-			followupSKUInfo: M,
-			continueSession: N
-		} = e,
-		{
-			activeSubscription: j,
-			paymentSources: T,
-			paymentSourceId: g,
-			selectedPlan: m,
-			selectedSkuId: A,
-			step: O,
-			updatedSubscription: S,
-			startingPremiumSubscriptionPlanIdRef: R
-		} = (0, c.usePaymentContext)(),
-		{
-			isGift: P,
-			giftRecipient: Z,
-			giftCode: v,
-			hasSentMessage: y,
-			isSendingMessage: b,
-			sendGiftMessage: U
-		} = (0, u.wD)();
-	l()(null != m, 'Expected plan to selected'),
-		l()(null != A, 'Expected selectedSkuId'),
-		l()(null != O, 'Step should be set');
+		{ handleClose: L, planGroup: h, onSubscriptionConfirmation: f, renderPurchaseConfirmation: I, postSuccessGuild: E, followupSKUInfo: M, continueSession: N } = e,
+		{ activeSubscription: j, paymentSources: T, paymentSourceId: g, selectedPlan: m, selectedSkuId: A, step: O, updatedSubscription: S, startingPremiumSubscriptionPlanIdRef: R } = (0, c.usePaymentContext)(),
+		{ isGift: P, giftRecipient: Z, giftCode: v, hasSentMessage: y, isSendingMessage: b, sendGiftMessage: U } = (0, u.wD)();
+	l()(null != m, 'Expected plan to selected'), l()(null != A, 'Expected selectedSkuId'), l()(null != O, 'Step should be set');
 	let B = r.useCallback(() => {
 		L(), null == f || f();
 	}, [L, f]);
 	return (
 		r.useEffect(() => {
-			if (!(!P || null == Z || null == v || y || b || (0, C.pO)(Z)))
-				a.F.getCurrentConfig({ location: '36b986_1' }).enabled && U({ onSubscriptionConfirmation: f });
+			if (!(!P || null == Z || null == v || y || b || (0, C.pO)(Z))) a.F.getCurrentConfig({ location: '36b986_1' }).enabled && U({ onSubscriptionConfirmation: f });
 		}, [U, P, Z, v, y, b, f]),
 		(i =
 			null != I

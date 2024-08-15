@@ -12,8 +12,8 @@ var a,
 	f = n(592125),
 	h = n(70956),
 	p = n(622449);
-let I = 5 * h.Z.Millis.MINUTE,
-	m = 10 * h.Z.Millis.SECOND,
+let m = 5 * h.Z.Millis.MINUTE,
+	I = 10 * h.Z.Millis.SECOND,
 	T = {},
 	g = {},
 	S = {};
@@ -57,9 +57,7 @@ class O extends (a = u.ZP.Store) {
 	}
 	canQueueInteraction(e, t) {
 		let n = g[e];
-		return (
-			(null == n || null == T[n] || T[n].state === p.F.FAILED) && (null == T[t] || T[t].state === p.F.FAILED) && !0
-		);
+		return (null == n || null == T[n] || T[n].state === p.F.FAILED) && (null == T[t] || T[t].state === p.F.FAILED) && !0;
 	}
 	getIFrameModalApplicationId() {
 		return i;
@@ -85,8 +83,8 @@ class O extends (a = u.ZP.Store) {
 				(A = {}),
 				setInterval(() => {
 					let e = Date.now();
-					for (let [t, n] of Object.entries(A)) e - n.insertedAt > m && delete A[t];
-				}, I);
+					for (let [t, n] of Object.entries(A)) e - n.insertedAt > I && delete A[t];
+				}, m);
 		},
 		INTERACTION_QUEUE: function (e) {
 			let { nonce: t, messageId: n, data: r, onCreate: i, onCancel: a, onSuccess: s, onFailure: o } = e;
@@ -167,10 +165,6 @@ class O extends (a = u.ZP.Store) {
 				s = r.find((e) => e.user_id === a && e.session_id === i);
 			if (null == s || null == s.nonce) return;
 			let o = A[s.nonce];
-			if (
-				(null == o ? ((t = S[s.nonce]), (n = T[s.nonce])) : ((t = o.messageId), (n = o.interaction)),
-				null != n && null != t)
-			)
-				v(s.nonce), null != t && 'channelId' in n.data && d.Z.deleteMessage(n.data.channelId, t, !0);
+			if ((null == o ? ((t = S[s.nonce]), (n = T[s.nonce])) : ((t = o.messageId), (n = o.interaction)), null != n && null != t)) v(s.nonce), null != t && 'channelId' in n.data && d.Z.deleteMessage(n.data.channelId, t, !0);
 		}
 	}));

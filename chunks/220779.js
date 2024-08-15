@@ -21,12 +21,12 @@ var r = n(735250),
 	f = n(131704),
 	h = n(792125),
 	p = n(142550),
-	I = n(981631),
-	m = n(689938),
+	m = n(981631),
+	I = n(689938),
 	T = n(763072);
 let g = (0, f.kt)({
 		id: '1',
-		type: I.d4z.DM
+		type: m.d4z.DM
 	}),
 	S = i.forwardRef(function (e, t) {
 		let { placeholder: n, headerText: i, onEnter: a, showPopout: u, children: c, body: d, hide: _ } = e,
@@ -47,14 +47,14 @@ let g = (0, f.kt)({
 								(0, r.jsx)(o.Text, {
 									variant: 'text-xs/bold',
 									className: T.replyHeader,
-									children: null != i ? i : m.Z.Messages.CHAT
+									children: null != i ? i : I.Z.Messages.CHAT
 								}),
 								d,
 								(0, r.jsx)(A, {
 									onEnter: (e) => {
 										a(e), _();
 									},
-									placeholder: null != n ? n : m.Z.Messages.CHAT
+									placeholder: null != n ? n : I.Z.Messages.CHAT
 								})
 							]
 						})
@@ -64,21 +64,11 @@ let g = (0, f.kt)({
 		});
 	});
 function A(e) {
-	let {
-			placeholder: t,
-			onEnter: n,
-			setEditorRef: a,
-			showEmojiButton: o = !1,
-			renderAttachButton: l,
-			autoFocus: _ = !0,
-			onFocus: E,
-			channel: f,
-			className: h
-		} = e,
-		[I, m] = i.useState(''),
+	let { placeholder: t, onEnter: n, setEditorRef: a, showEmojiButton: o = !1, renderAttachButton: l, autoFocus: _ = !0, onFocus: E, channel: f, className: h } = e,
+		[m, I] = i.useState(''),
 		[S, A] = i.useState((0, c.JM)('')),
 		N = () => {
-			m(''), A((0, c.JM)(''));
+			I(''), A((0, c.JM)(''));
 		},
 		v = u.I.ATOMIC_REACTOR_REPLY_INPUT,
 		O = i.useRef(null);
@@ -92,7 +82,7 @@ function A(e) {
 		maxCharacterCount: p.z,
 		channel: null != f ? f : g,
 		onChange: (e, t, n) => {
-			m(t), A(n);
+			I(t), A(n);
 		},
 		type: o
 			? {
@@ -100,7 +90,7 @@ function A(e) {
 					emojis: { button: !0 }
 				}
 			: v,
-		textValue: I,
+		textValue: m,
 		richValue: S,
 		onSubmit: (e) => {
 			let { value: t } = e;
@@ -138,13 +128,7 @@ let N = (e, t) => {
 				},
 				r = (n) => {
 					var r;
-					null != n.target &&
-						!(null == t
-							? void 0
-							: null === (r = t.current) || void 0 === r
-								? void 0
-								: r.contains(null == n ? void 0 : n.target)) &&
-						e();
+					null != n.target && !(null == t ? void 0 : null === (r = t.current) || void 0 === r ? void 0 : r.contains(null == n ? void 0 : n.target)) && e();
 				};
 			return (
 				document.addEventListener('keydown', n),
@@ -172,7 +156,7 @@ let N = (e, t) => {
 						className: (0, h.Q)(a),
 						ref: c,
 						children: (0, r.jsx)(E.$, {
-							messageId: I.lds,
+							messageId: m.lds,
 							channel: g,
 							closePopout: () => {
 								u(!1);
@@ -184,7 +168,7 @@ let N = (e, t) => {
 					}),
 				children: () =>
 					(0, r.jsx)(o.Tooltip, {
-						text: m.Z.Messages.ADD_REACTION,
+						text: I.Z.Messages.ADD_REACTION,
 						children: (e) =>
 							(0, r.jsx)('div', {
 								...e,
@@ -247,7 +231,7 @@ t.ZP = (e) => {
 								});
 							},
 							children: (0, r.jsx)(o.Tooltip, {
-								text: m.Z.Messages.MESSAGE_ACTION_REPLY,
+								text: I.Z.Messages.MESSAGE_ACTION_REPLY,
 								children: (e) =>
 									(0, r.jsx)('button', {
 										...e,

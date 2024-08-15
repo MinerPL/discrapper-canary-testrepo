@@ -25,15 +25,7 @@ let v = 409600,
 	p = (0, f.G)(async () => {
 		let t = await Promise.all([i.e('91789'), i.e('43903')]).then(i.bind(i, 241441)),
 			e = await t.default();
-		(a = e.cwrap('lottie_create', 'number', ['string'])),
-			(s = e._lottie_destroy),
-			(h = e._lottie_draw_into_bgra),
-			(o = e._lottie_draw_into_rgba),
-			(l = e._lottie_frame_count),
-			(c = e._lottie_frame_rate),
-			(u = e._memory_create),
-			(n = e),
-			(r = u(v));
+		(a = e.cwrap('lottie_create', 'number', ['string'])), (s = e._lottie_destroy), (h = e._lottie_draw_into_bgra), (o = e._lottie_draw_into_rgba), (l = e._lottie_frame_count), (c = e._lottie_frame_rate), (u = e._memory_create), (n = e), (r = u(v));
 	});
 function w(t, e) {
 	return new Uint8ClampedArray(n.HEAPU8.buffer, r, t * e * 4);
@@ -46,20 +38,10 @@ class g {
 		return l(this.native);
 	}
 	get_bgra(t, e, i) {
-		return (
-			d()(e <= 320, 'width exceeds static allocation.'),
-			d()(i <= 320, 'height exceeds static allocation.'),
-			h(this.native, r, t, e, i),
-			w(e, i)
-		);
+		return d()(e <= 320, 'width exceeds static allocation.'), d()(i <= 320, 'height exceeds static allocation.'), h(this.native, r, t, e, i), w(e, i);
 	}
 	get_rgba(t, e, i) {
-		return (
-			d()(e <= 320, 'width exceeds static allocation.'),
-			d()(i <= 320, 'height exceeds static allocation.'),
-			o(this.native, r, t, e, i),
-			w(e, i)
-		);
+		return d()(e <= 320, 'width exceeds static allocation.'), d()(i <= 320, 'height exceeds static allocation.'), o(this.native, r, t, e, i), w(e, i);
 	}
 	drop() {
 		s(this.native);

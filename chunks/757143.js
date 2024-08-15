@@ -49,11 +49,7 @@ o(
 					'' === v(O[0]) && (o.lastIndex = d(a, h(o.lastIndex), T));
 				}
 				for (var m = '', C = 0, S = 0; S < y.length; S++) {
-					for (
-						var w, T, O, _, U = v((O = y[S])[0]), M = E(b(l(O.index), a.length), 0), K = [], N = 1;
-						N < O.length;
-						N++
-					) {
+					for (var w, T, O, _, U = v((O = y[S])[0]), M = E(b(l(O.index), a.length), 0), K = [], N = 1; N < O.length; N++) {
 						$(K, void 0 === (w = O[N]) ? w : String(w));
 					}
 					var P = O.groups;

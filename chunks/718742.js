@@ -17,16 +17,7 @@ var a = n(735250),
 	l = n(480781);
 let u = new Set([i.ModalTransitionState.ENTERING, i.ModalTransitionState.ENTERED]);
 function f(e) {
-	let {
-			onClose: t,
-			onCaptchaVerify: n,
-			onReject: f,
-			transitionState: v,
-			headerText: m,
-			bodyText: y,
-			rqtoken: C,
-			...E
-		} = e,
+	let { onClose: t, onCaptchaVerify: n, onReject: f, transitionState: v, headerText: m, bodyText: y, rqtoken: C, ...E } = e,
 		R = (0, c.Z)(f);
 	return (r.useEffect(() => {
 		o.S.subscribe(p.CkL.LAYER_POP_ESCAPE_KEY, t);

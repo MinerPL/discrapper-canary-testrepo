@@ -27,21 +27,7 @@ var n = (function () {
 										s = c(e),
 										o = t.callback(s, t);
 									if (s && o) {
-										for (r in ((i = '<img '.concat(
-											'class="',
-											t.className,
-											'" ',
-											'draggable="false" ',
-											'alt="',
-											e,
-											'"',
-											' src="',
-											o,
-											'"'
-										)),
-										(n = t.attributes(e, s))))
-											if (n.hasOwnProperty(r) && 0 !== r.indexOf('on') && -1 === i.indexOf(' ' + r + '='))
-												i = i.concat(' ', r, '="', n[r].replace(a, d), '"');
+										for (r in ((i = '<img '.concat('class="', t.className, '" ', 'draggable="false" ', 'alt="', e, '"', ' src="', o, '"')), (n = t.attributes(e, s)))) if (n.hasOwnProperty(r) && 0 !== r.indexOf('on') && -1 === i.indexOf(' ' + r + '=')) i = i.concat(' ', r, '="', n[r].replace(a, d), '"');
 										i = i.concat('/>');
 									}
 									return i;
@@ -60,36 +46,20 @@ var n = (function () {
 										f,
 										h,
 										p,
-										I,
 										m,
+										I,
 										T = (function e(t, n) {
-											for (var r, i, a = t.childNodes, o = a.length; o--; )
-												3 === (i = (r = a[o]).nodeType)
-													? n.push(r)
-													: 1 === i && !('ownerSVGElement' in r) && !s.test(r.nodeName.toLowerCase()) && e(r, n);
+											for (var r, i, a = t.childNodes, o = a.length; o--; ) 3 === (i = (r = a[o]).nodeType) ? n.push(r) : 1 === i && !('ownerSVGElement' in r) && !s.test(r.nodeName.toLowerCase()) && e(r, n);
 											return n;
 										})(e, []),
 										g = T.length;
 									g--;
 
 								) {
-									for (
-										a = !1, o = document.createDocumentFragment(), d = (u = T[g]).nodeValue, E = 0;
-										(_ = n.exec(d));
-
-									) {
-										if (
-											((f = _.index) !== E && o.appendChild(l(d.slice(E, f), !0)),
-											(I = c((p = _[0]))),
-											(E = f + p.length),
-											(m = t.callback(I, t)),
-											I && m)
-										) {
-											for (i in (((h = new Image()).onerror = t.onerror),
-											h.setAttribute('draggable', 'false'),
-											(r = t.attributes(p, I))))
-												r.hasOwnProperty(i) && 0 !== i.indexOf('on') && !h.hasAttribute(i) && h.setAttribute(i, r[i]);
-											(h.className = t.className), (h.alt = p), (h.src = m), (a = !0), o.appendChild(h);
+									for (a = !1, o = document.createDocumentFragment(), d = (u = T[g]).nodeValue, E = 0; (_ = n.exec(d)); ) {
+										if (((f = _.index) !== E && o.appendChild(l(d.slice(E, f), !0)), (m = c((p = _[0]))), (E = f + p.length), (I = t.callback(m, t)), m && I)) {
+											for (i in (((h = new Image()).onerror = t.onerror), h.setAttribute('draggable', 'false'), (r = t.attributes(p, m)))) r.hasOwnProperty(i) && 0 !== i.indexOf('on') && !h.hasAttribute(i) && h.setAttribute(i, r[i]);
+											(h.className = t.className), (h.alt = p), (h.src = I), (a = !0), o.appendChild(h);
 										}
 										!h && o.appendChild(l(p, !1)), (h = null);
 									}
@@ -148,13 +118,7 @@ var n = (function () {
 		return String(e).replace(n, t);
 	}
 	function f(e, t) {
-		for (var n = [], r = 0, i = 0, a = 0; a < e.length; )
-			(r = e.charCodeAt(a++)),
-				i
-					? (n.push((65536 + ((i - 55296) << 10) + (r - 56320)).toString(16)), (i = 0))
-					: 55296 <= r && r <= 56319
-						? (i = r)
-						: n.push(r.toString(16));
+		for (var n = [], r = 0, i = 0, a = 0; a < e.length; ) (r = e.charCodeAt(a++)), i ? (n.push((65536 + ((i - 55296) << 10) + (r - 56320)).toString(16)), (i = 0)) : 55296 <= r && r <= 56319 ? (i = r) : n.push(r.toString(16));
 		return n.join(t || '-');
 	}
 })();

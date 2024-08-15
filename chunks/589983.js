@@ -8,16 +8,16 @@ r.d(e, {
 						value: e[0].value
 					}
 				];
-			for (var f, p = [], m = 0; m < e.length; m++) {
-				var d = e[m];
-				if ((0, o.isLiteralElement)(d)) {
+			for (var f, p = [], d = 0; d < e.length; d++) {
+				var m = e[d];
+				if ((0, o.isLiteralElement)(m)) {
 					p.push({
 						type: i.literal,
-						value: d.value
+						value: m.value
 					});
 					continue;
 				}
-				if ((0, o.isPoundElement)(d)) {
+				if ((0, o.isPoundElement)(m)) {
 					'number' == typeof l &&
 						p.push({
 							type: i.literal,
@@ -25,51 +25,35 @@ r.d(e, {
 						});
 					continue;
 				}
-				var v = d.value;
+				var v = m.value;
 				if (!(c && v in c)) throw new a.HR(v, h);
 				var g = c[v];
-				if ((0, o.isArgumentElement)(d)) {
-					(!g || 'string' == typeof g || 'number' == typeof g) &&
-						(g = 'string' == typeof g || 'number' == typeof g ? String(g) : ''),
+				if ((0, o.isArgumentElement)(m)) {
+					(!g || 'string' == typeof g || 'number' == typeof g) && (g = 'string' == typeof g || 'number' == typeof g ? String(g) : ''),
 						p.push({
 							type: 'string' == typeof g ? i.literal : i.object,
 							value: g
 						});
 					continue;
 				}
-				if ((0, o.isDateElement)(d)) {
-					var y =
-						'string' == typeof d.style
-							? u.date[d.style]
-							: (0, o.isDateTimeSkeleton)(d.style)
-								? d.style.parsedOptions
-								: void 0;
+				if ((0, o.isDateElement)(m)) {
+					var y = 'string' == typeof m.style ? u.date[m.style] : (0, o.isDateTimeSkeleton)(m.style) ? m.style.parsedOptions : void 0;
 					p.push({
 						type: i.literal,
 						value: n.getDateTimeFormat(r, y).format(g)
 					});
 					continue;
 				}
-				if ((0, o.isTimeElement)(d)) {
-					var y =
-						'string' == typeof d.style
-							? u.time[d.style]
-							: (0, o.isDateTimeSkeleton)(d.style)
-								? d.style.parsedOptions
-								: u.time.medium;
+				if ((0, o.isTimeElement)(m)) {
+					var y = 'string' == typeof m.style ? u.time[m.style] : (0, o.isDateTimeSkeleton)(m.style) ? m.style.parsedOptions : u.time.medium;
 					p.push({
 						type: i.literal,
 						value: n.getDateTimeFormat(r, y).format(g)
 					});
 					continue;
 				}
-				if ((0, o.isNumberElement)(d)) {
-					var y =
-						'string' == typeof d.style
-							? u.number[d.style]
-							: (0, o.isNumberSkeleton)(d.style)
-								? d.style.parsedOptions
-								: void 0;
+				if ((0, o.isNumberElement)(m)) {
+					var y = 'string' == typeof m.style ? u.number[m.style] : (0, o.isNumberSkeleton)(m.style) ? m.style.parsedOptions : void 0;
 					y && y.scale && (g *= y.scale || 1),
 						p.push({
 							type: i.literal,
@@ -77,9 +61,9 @@ r.d(e, {
 						});
 					continue;
 				}
-				if ((0, o.isTagElement)(d)) {
-					var b = d.children,
-						E = d.value,
+				if ((0, o.isTagElement)(m)) {
+					var b = m.children,
+						E = m.value,
 						T = c[E];
 					if (!s(T)) throw new a.YR(E, 'function', h);
 					var _ = T(
@@ -98,26 +82,21 @@ r.d(e, {
 							})
 						);
 				}
-				if ((0, o.isSelectElement)(d)) {
-					var A = d.options[g] || d.options.other;
-					if (!A) throw new a.C8(d.value, g, Object.keys(d.options), h);
+				if ((0, o.isSelectElement)(m)) {
+					var A = m.options[g] || m.options.other;
+					if (!A) throw new a.C8(m.value, g, Object.keys(m.options), h);
 					p.push.apply(p, t(A.value, r, n, u, c));
 					continue;
 				}
-				if ((0, o.isPluralElement)(d)) {
-					var A = d.options['='.concat(g)];
+				if ((0, o.isPluralElement)(m)) {
+					var A = m.options['='.concat(g)];
 					if (!A) {
-						if (!Intl.PluralRules)
-							throw new a.u_(
-								'Intl.PluralRules is not available in this environment.\nTry polyfilling it using "@formatjs/intl-pluralrules"\n',
-								a.jK.MISSING_INTL_API,
-								h
-							);
-						var I = n.getPluralRules(r, { type: d.pluralType }).select(g - (d.offset || 0));
-						A = d.options[I] || d.options.other;
+						if (!Intl.PluralRules) throw new a.u_('Intl.PluralRules is not available in this environment.\nTry polyfilling it using "@formatjs/intl-pluralrules"\n', a.jK.MISSING_INTL_API, h);
+						var I = n.getPluralRules(r, { type: m.pluralType }).select(g - (m.offset || 0));
+						A = m.options[I] || m.options.other;
 					}
-					if (!A) throw new a.C8(d.value, g, Object.keys(d.options), h);
-					p.push.apply(p, t(A.value, r, n, u, c, g - (d.offset || 0)));
+					if (!A) throw new a.C8(m.value, g, Object.keys(m.options), h);
+					p.push.apply(p, t(A.value, r, n, u, c, g - (m.offset || 0)));
 					continue;
 				}
 			}

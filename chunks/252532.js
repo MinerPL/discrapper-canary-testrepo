@@ -15,24 +15,24 @@ function c(e) {
 	let { user: t, guildId: n, size: c, showPending: d = !1, animateOnHover: _ = !1, avatarOverride: E } = e,
 		[f, h] = r.useState(!1),
 		p = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
-		I = (0, i.e7)([l.Z], () => l.Z.isFocused()) && (f || (!p && !_)),
-		{ pendingAvatar: m } = (0, u.Z)({}),
-		T = void 0 !== E ? E : d ? m : void 0,
+		m = (0, i.e7)([l.Z], () => l.Z.isFocused()) && (f || (!p && !_)),
+		{ pendingAvatar: I } = (0, u.Z)({}),
+		T = void 0 !== E ? E : d ? I : void 0,
 		g = (0, i.e7)([o.ZP], () => (null != n && null != t ? o.ZP.getMember(n, t.id) : null)),
 		S = r.useMemo(
 			() =>
 				null != t
 					? (0, s.SG)(T, g, t, {
-							canAnimate: I,
+							canAnimate: m,
 							size: c
 						})
 					: void 0,
-			[T, g, t, I, c]
+			[T, g, t, m, c]
 		),
 		A = r.useCallback(() => h(!0), []);
 	return {
 		avatarSrc: S,
-		isAvatarAnimating: I,
+		isAvatarAnimating: m,
 		eventHandlers: {
 			onMouseEnter: A,
 			onMouseLeave: r.useCallback(() => h(!1), [])

@@ -34,8 +34,7 @@ let i = (0, r.B)({
 		treatments: [
 			{
 				id: 1,
-				label:
-					'Enable the desktop app launcher in activities shelf: On home screen, clicking activity card -> performs activity action (i.e. launch)',
+				label: 'Enable the desktop app launcher in activities shelf: On home screen, clicking activity card -> performs activity action (i.e. launch)',
 				config: {
 					enabled: !0,
 					clickOnHomeActivityOpensAppDetail: !1
@@ -43,8 +42,7 @@ let i = (0, r.B)({
 			},
 			{
 				id: 2,
-				label:
-					'Enable the desktop app launcher in activities shelf: On home screen, clicking activity card -> activity detail page',
+				label: 'Enable the desktop app launcher in activities shelf: On home screen, clicking activity card -> activity detail page',
 				config: {
 					enabled: !0,
 					clickOnHomeActivityOpensAppDetail: !0

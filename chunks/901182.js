@@ -18,12 +18,7 @@ t.exports = {
 		var i = t.getPrevSiblingKey();
 		if (null != i && e.get(i).getNextSiblingKey() !== r) return !1;
 		var o = t.getNextSiblingKey();
-		return (
-			(null == o || e.get(o).getPrevSiblingKey() === r) &&
-			(null === o || null === i || i !== o) &&
-			('' == t.text || !(t.getChildKeys().size > 0)) &&
-			!0
-		);
+		return (null == o || e.get(o).getPrevSiblingKey() === r) && (null === o || null === i || i !== o) && ('' == t.text || !(t.getChildKeys().size > 0)) && !0;
 	},
 	isConnectedTree: function (t) {
 		var e = t.toArray().filter(function (t) {

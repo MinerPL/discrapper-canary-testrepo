@@ -29,10 +29,7 @@ class u extends (r = i.ZP.PersistedStore) {
 	}
 	shouldShowChannelNotice(e) {
 		var n, t;
-		return (
-			!a.guildNoticeDismissed.includes(e) &&
-			(null !== (t = null === (n = c.get(e)) || void 0 === n ? void 0 : n.size) && void 0 !== t ? t : 0) > 0
-		);
+		return !a.guildNoticeDismissed.includes(e) && (null !== (t = null === (n = c.get(e)) || void 0 === n ? void 0 : n.size) && void 0 !== t ? t : 0) > 0;
 	}
 	canShowOverviewTooltip(e, n) {
 		var t;

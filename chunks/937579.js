@@ -25,9 +25,7 @@ async function c(e) {
 				E = null !== (c = t.body.user_discount) && void 0 !== c ? c : null,
 				f = null !== (d = t.body.user_discount_offer) && void 0 !== d ? d : null;
 			return (
-				null == _ &&
-					(0, s.un)(i.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) &&
-					(0, o.w9)(i.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING),
+				null == _ && (0, s.un)(i.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (0, o.w9)(i.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING),
 				a.Z.dispatch({
 					type: 'BILLING_USER_OFFER_FETCH_SUCCESS',
 					userTrialOffer: _,

@@ -33,9 +33,7 @@ function a(E) {
 				N.Z.open(D.oAB.KEYBINDS);
 			}
 		}),
-		SOUNDBOARD_DESCRIPTION: L.Z.Messages.ROLE_PERMISSIONS_USE_SOUNDBOARD_DESCRIPTION_LEARN_MORE.format({
-			helpCenterArticle: C.Z.getArticleURL(D.BhN.SOUNDBOARD)
-		}),
+		SOUNDBOARD_DESCRIPTION: L.Z.Messages.ROLE_PERMISSIONS_USE_SOUNDBOARD_DESCRIPTION_LEARN_MORE.format({ helpCenterArticle: C.Z.getArticleURL(D.BhN.SOUNDBOARD) }),
 		showStageChannelPermissions: S,
 		showExperimental: !0,
 		showForumPermissions: _,
@@ -76,9 +74,7 @@ S.Z = {
 					}),
 					I.WV(G, L.Z.Messages.ROLE_PERMISSIONS_SECTION_VOICE),
 					I.xU(G, L.Z.Messages.ROLE_PERMISSIONS_SECTION_APPS),
-					...((R = u.showStageChannelPermissions),
-					(A = () => I.kv(G, L.Z.Messages.ROLE_PERMISSIONS_SECTION_STAGE)),
-					R ? [A()] : []),
+					...((R = u.showStageChannelPermissions), (A = () => I.kv(G, L.Z.Messages.ROLE_PERMISSIONS_SECTION_STAGE)), R ? [A()] : []),
 					I.uu(G, L.Z.Messages.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS)
 				];
 			case D.d4z.GUILD_VOICE:
@@ -118,9 +114,7 @@ S.Z = {
 			case D.d4z.GUILD_FORUM:
 			case D.d4z.GUILD_MEDIA:
 				let h = d ? L.Z.Messages.ROLE_PERMISSIONS_SECTION_MEDIA_CHANNEL : L.Z.Messages.ROLE_PERMISSIONS_SECTION_FORUMS,
-					B = d
-						? L.Z.Messages.ROLE_PERMISSIONS_SECTION_MEDIA_CHANNEL_DESCRIPTION
-						: L.Z.Messages.ROLE_PERMISSIONS_SECTION_FORUMS_DESCRIPTION;
+					B = d ? L.Z.Messages.ROLE_PERMISSIONS_SECTION_MEDIA_CHANNEL_DESCRIPTION : L.Z.Messages.ROLE_PERMISSIONS_SECTION_FORUMS_DESCRIPTION;
 				return [
 					I.zO(G, L.Z.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL),
 					I.Ny(G, L.Z.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP),

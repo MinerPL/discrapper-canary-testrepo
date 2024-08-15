@@ -25,13 +25,7 @@ async function d(e, t) {
 	} catch (r) {
 		var n, s;
 		let e = new i.Hx(r).errors;
-		if (
-			!(
-				'object' == typeof (n = e) &&
-				(null == n ? void 0 : null === (s = n.trigger_metadata) || void 0 === s ? void 0 : s.regex_patterns) != null
-			)
-		)
-			return;
+		if (!('object' == typeof (n = e) && (null == n ? void 0 : null === (s = n.trigger_metadata) || void 0 === s ? void 0 : s.regex_patterns) != null)) return;
 		let a = (function (e) {
 			var t;
 			let n = null == e ? void 0 : null === (t = e.trigger_metadata) || void 0 === t ? void 0 : t.regex_patterns;
@@ -64,10 +58,7 @@ async function d(e, t) {
 							var a, i, r, d;
 							s.push({
 								pattern: o,
-								message:
-									null !== (r = null === (a = t[0]) || void 0 === a ? void 0 : a.message) && void 0 !== r
-										? r
-										: l.Z.Messages.GUILD_AUTOMOD_REGEX_GENERIC_SAVE_ERROR,
+								message: null !== (r = null === (a = t[0]) || void 0 === a ? void 0 : a.message) && void 0 !== r ? r : l.Z.Messages.GUILD_AUTOMOD_REGEX_GENERIC_SAVE_ERROR,
 								code: null !== (d = null === (i = t[0]) || void 0 === i ? void 0 : i.code) && void 0 !== d ? d : c
 							});
 						}
@@ -82,12 +73,7 @@ function _(e, t) {
 	var n, i;
 	let [r, l] = s.useState([]),
 		[o, c] = s.useState(null),
-		[_, I] = s.useState(
-			null !== (i = null == e ? void 0 : null === (n = e.triggerMetadata) || void 0 === n ? void 0 : n.regexPatterns) &&
-				void 0 !== i
-				? i
-				: []
-		),
+		[_, I] = s.useState(null !== (i = null == e ? void 0 : null === (n = e.triggerMetadata) || void 0 === n ? void 0 : n.regexPatterns) && void 0 !== i ? i : []),
 		E = s.useCallback(
 			(t) => {
 				if (!(t.length < 3))

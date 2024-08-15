@@ -42,16 +42,14 @@ function Z() {
 			x(t.map((e) => e.channel.id));
 		}, [t, x]);
 	a.useEffect(() => {
-		h.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }),
-			E.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
+		h.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), E.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
 	}, []);
 	let P = a.useCallback(
 			(e) => {
 				var n, a;
 				let { row: l } = e,
 					o = t[l],
-					c =
-						null === (a = t[l + 1]) || void 0 === a ? void 0 : null === (n = a.channel) || void 0 === n ? void 0 : n.id,
+					c = null === (a = t[l + 1]) || void 0 === a ? void 0 : null === (n = a.channel) || void 0 === n ? void 0 : n.id,
 					d = o.channel.id;
 				return (0, i.jsx)(
 					f.Z,
@@ -121,8 +119,7 @@ function Z() {
 								innerAriaLabel: A.Z.Messages.MESSAGE_REQUESTS,
 								ref: (t) => {
 									var n;
-									(e.current = t),
-										(a.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null);
+									(e.current = t), (a.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null);
 								},
 								paddingTop: 24,
 								paddingBottom: 24,

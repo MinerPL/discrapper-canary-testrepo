@@ -21,10 +21,7 @@ function i(e) {
 		breadcrumbsData: n
 			.filter((e) => {
 				var t;
-				return (
-					null != e.key &&
-					(null == e ? void 0 : null === (t = e.options) || void 0 === t ? void 0 : t.useBreadcrumbLabel) != null
-				);
+				return null != e.key && (null == e ? void 0 : null === (t = e.options) || void 0 === t ? void 0 : t.useBreadcrumbLabel) != null;
 			})
 			.map((e) => ({
 				id: e.key,

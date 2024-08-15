@@ -13,18 +13,7 @@ var i = t(399606),
 	d = t(981631),
 	o = t(689938);
 function _(e) {
-	let {
-			header: n,
-			children: t,
-			sku_id: _,
-			sku_name: R,
-			guild_id: c,
-			cancelLabel: m,
-			confirmLabel: E,
-			transitionState: O,
-			onClose: T,
-			...f
-		} = e,
+	let { header: n, children: t, sku_id: _, sku_name: R, guild_id: c, cancelLabel: m, confirmLabel: E, transitionState: O, onClose: T, ...f } = e,
 		M = (0, i.e7)([u.default], () => u.default.getCurrentUser());
 	return (0, s.jsx)(a.ConfirmModal, {
 		header: null != n ? n : o.Z.Messages.REPORT,

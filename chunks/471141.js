@@ -14,17 +14,7 @@ var r = n(735250),
 	d = n(534542),
 	_ = n(57292);
 function E(e) {
-	let {
-			value: t,
-			disabled: n = !1,
-			hideBorder: a = !1,
-			tooltipNote: E,
-			onChange: f,
-			className: h,
-			style: p,
-			note: I,
-			children: m
-		} = e,
+	let { value: t, disabled: n = !1, hideBorder: a = !1, tooltipNote: E, onChange: f, className: h, style: p, note: m, children: I } = e,
 		T = i.useRef(null),
 		g = i.useRef(null),
 		S = i.useId(),
@@ -52,7 +42,7 @@ function E(e) {
 						(0, r.jsx)('label', {
 							htmlFor: S,
 							className: _.title,
-							children: m
+							children: I
 						}),
 						(0, r.jsx)('div', {
 							className: _.control,
@@ -67,13 +57,13 @@ function E(e) {
 					]
 				})
 			}),
-			null != I &&
+			null != m &&
 				(0, r.jsx)('div', {
 					className: _.note,
 					children: (0, r.jsx)(d.R, {
 						disabled: n,
 						type: d.g.DESCRIPTION,
-						children: I
+						children: m
 					})
 				}),
 			!a && (0, r.jsx)(c.$, { className: _.dividerDefault })

@@ -12,8 +12,7 @@ r(
 	},
 	{
 		getOwnPropertyDescriptors: function (e) {
-			for (var t, n, r = i(e), o = s.f, l = a(r), u = {}, d = 0; l.length > d; )
-				void 0 !== (n = o(r, (t = l[d++]))) && c(u, t, n);
+			for (var t, n, r = i(e), o = s.f, l = a(r), u = {}, d = 0; l.length > d; ) void 0 !== (n = o(r, (t = l[d++]))) && c(u, t, n);
 			return u;
 		}
 	}

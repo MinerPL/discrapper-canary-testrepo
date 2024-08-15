@@ -11,20 +11,12 @@ var i = n(735250),
 	o = n(348238);
 let c = a.memo(function (e) {
 	var t;
-	let {
-			message: n,
-			channel: c,
-			compact: u = !1,
-			interactionUsernameProfile: d,
-			interactionAvatarProfile: h,
-			interactionData: m,
-			setPopout: p
-		} = e,
+	let { message: n, channel: c, compact: u = !1, interactionUsernameProfile: d, interactionAvatarProfile: h, interactionData: m, setPopout: p } = e,
 		_ = (0, s.e7)([l.Z], () => l.Z.isBlockedForMessage(n), [n]),
 		f = (0, o.wq)(null === (t = n.interaction) || void 0 === t ? void 0 : t.user.id, c.id),
 		E = (0, o.Nk)(n.interaction, c, d, p),
-		g = (0, o.NU)(h, p),
-		C = (0, o.Xn)(m, p),
+		C = (0, o.NU)(h, p),
+		g = (0, o.Xn)(m, p),
 		I = a.useCallback(
 			() =>
 				p({
@@ -42,9 +34,9 @@ let c = a.memo(function (e) {
 		showAvatarPopout: h,
 		showUsernamePopout: d,
 		showDataPopout: m,
-		onClickAvatar: g,
+		onClickAvatar: C,
 		onClickUsername: E,
-		onClickCommand: C,
+		onClickCommand: g,
 		onUserContextMenu: f,
 		onPopoutRequestClose: I
 	});

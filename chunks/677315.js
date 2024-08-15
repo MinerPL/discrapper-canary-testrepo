@@ -56,11 +56,7 @@ var r,
 			l = e.reject,
 			u = e.domain;
 		try {
-			s
-				? (!i && (2 === t.rejection && J(t), (t.rejection = 1)),
-					!0 === s ? (n = a) : (u && u.enter(), (n = s(a)), u && (u.exit(), (o = !0))),
-					n === e.promise ? l(new L('Promise-chain cycle')) : (r = z(n)) ? d(r, n, c, l) : c(n))
-				: l(a);
+			s ? (!i && (2 === t.rejection && J(t), (t.rejection = 1)), !0 === s ? (n = a) : (u && u.enter(), (n = s(a)), u && (u.exit(), (o = !0))), n === e.promise ? l(new L('Promise-chain cycle')) : (r = z(n)) ? d(r, n, c, l) : c(n)) : l(a);
 		} catch (e) {
 			u && !o && u.exit(), l(e);
 		}

@@ -15,8 +15,8 @@ function d(e, t, n, d) {
 	var _, E, f;
 	let h = i.Z.getChannel(s.Z.getVoiceChannelId()),
 		p = null == h ? void 0 : h.getGuildId(),
-		I = a.Z.getMediaSessionId(),
-		m = a.Z.getRTCConnectionId(),
+		m = a.Z.getMediaSessionId(),
+		I = a.Z.getRTCConnectionId(),
 		T = null === (_ = r.ZP.getCurrentGameForAnalytics()) || void 0 === _ ? void 0 : _.name,
 		g = p !== n.guildId && n.guildId !== l.X8;
 	let S = ((E = n), (f = g), E.guildId === l.X8 ? 'default' : f ? 'custom-external' : 'custom');
@@ -25,8 +25,8 @@ function d(e, t, n, d) {
 		feature_tier: g ? c.h1.PREMIUM_STANDARD : c.h1.FREE,
 		guild_id: p,
 		location_stack: e,
-		rtc_connection_id: m,
-		media_session_id: I,
+		rtc_connection_id: I,
+		media_session_id: m,
 		in_overlay: t,
 		application_name: T,
 		emoji_count: null != n.emojiId || null != n.emojiName ? 1 : 0,

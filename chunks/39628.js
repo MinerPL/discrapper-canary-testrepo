@@ -41,13 +41,7 @@ function f(e) {
 		r = Math.floor(t) % 60,
 		i = Math.floor(t / 60) % 60,
 		a = Math.floor(t / 3600);
-	return 0 === a
-		? n
-			? ''.concat(E(i), ':').concat(E(r))
-			: ''.concat(i, ':').concat(E(r))
-		: n
-			? ''.concat(E(a), ':').concat(E(i), ':').concat(E(r))
-			: ''.concat(a, ':').concat(E(i), ':').concat(E(r));
+	return 0 === a ? (n ? ''.concat(E(i), ':').concat(E(r)) : ''.concat(i, ':').concat(E(r))) : n ? ''.concat(E(a), ':').concat(E(i), ':').concat(E(r)) : ''.concat(a, ':').concat(E(i), ':').concat(E(r));
 }
 class h extends (r = a.PureComponent) {
 	componentDidMount() {

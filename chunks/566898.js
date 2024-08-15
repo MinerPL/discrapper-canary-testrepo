@@ -1,6 +1,6 @@
 n.d(t, {
 	M9: function () {
-		return g;
+		return C;
 	},
 	Pb: function () {
 		return E;
@@ -9,7 +9,7 @@ n.d(t, {
 		return _;
 	},
 	ZP: function () {
-		return C;
+		return g;
 	},
 	ZT: function () {
 		return h;
@@ -50,15 +50,7 @@ function h(e) {
 }
 function m(e) {
 	let t,
-		{
-			groupStart: n = !1,
-			compact: a = !1,
-			attachmentSpecs: l,
-			usernameWidth: u,
-			usernameOpacity: m,
-			className: p,
-			style: _
-		} = e,
+		{ groupStart: n = !1, compact: a = !1, attachmentSpecs: l, usernameWidth: u, usernameOpacity: m, className: p, style: _ } = e,
 		f = a ? 50 : r().random(40, 50);
 	return (
 		!a && n
@@ -145,8 +137,8 @@ let p = 44,
 	_ = 22,
 	f = 26,
 	E = 26,
-	g = 6;
-function C(e) {
+	C = 6;
+function g(e) {
 	let { messages: t, groupSpacing: n = 0, compact: a = !1, attachmentSpecs: s, className: l } = e,
 		o = null != s ? (s.last ? t - 1 : r().random(0, t - 1)) : -1,
 		c = r().random(80, 120),

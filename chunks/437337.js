@@ -34,7 +34,7 @@ let f = {
 		}
 	},
 	p = function (e) {
-		let { id: t, onChange: n, checked: a, disabled: p, className: I, focusProps: m, innerRef: T } = e,
+		let { id: t, onChange: n, checked: a, disabled: p, className: m, focusProps: I, innerRef: T } = e,
 			{ reducedMotion: g } = i.useContext(u.S),
 			S = i.useRef(null),
 			[A, N] = i.useState(!1),
@@ -49,11 +49,11 @@ let f = {
 				'animate-always'
 			);
 		return (0, r.jsx)(c.t, {
-			...m,
+			...I,
 			within: !0,
 			offset: -2,
 			children: (0, r.jsxs)(o.animated.div, {
-				className: s()(E.container, I, {
+				className: s()(E.container, m, {
 					[E.checked]: a,
 					[E.disabled]: p
 				}),
@@ -104,9 +104,7 @@ let f = {
 										output: [t, n]
 									}),
 									s = i ? [h.X.TOP, h.X.TOP, h.CHECK.TOP, h.CHECK.TOP] : [h.X.TOP, h.BAR.TOP, h.BAR.TOP, h.CHECK.TOP],
-									l = i
-										? [h.X.BOTTOM, h.X.BOTTOM, h.CHECK.BOTTOM, h.CHECK.BOTTOM]
-										: [h.X.BOTTOM, h.BAR.BOTTOM, h.BAR.BOTTOM, h.CHECK.BOTTOM];
+									l = i ? [h.X.BOTTOM, h.X.BOTTOM, h.CHECK.BOTTOM, h.CHECK.BOTTOM] : [h.X.BOTTOM, h.BAR.BOTTOM, h.BAR.BOTTOM, h.CHECK.BOTTOM];
 								return (0, r.jsxs)('svg', {
 									viewBox: '0 0 20 20',
 									fill: 'none',
@@ -143,8 +141,7 @@ let f = {
 						},
 						onKeyUp: function (e) {
 							var t;
-							if (!p && !!A && !e.repeat)
-								N(!1), 'Enter' === e.key && (null === (t = S.current) || void 0 === t || t.click());
+							if (!p && !!A && !e.repeat) N(!1), 'Enter' === e.key && (null === (t = S.current) || void 0 === t || t.click());
 						},
 						onChange: function (e) {
 							N(!1), null == n || n(e.currentTarget.checked, e);

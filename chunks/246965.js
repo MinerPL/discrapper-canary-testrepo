@@ -28,10 +28,7 @@ t.Z = function (e) {
 		),
 		T = (0, c.N)(),
 		h = (0, s.Z)(null != T && null != T.expires_at ? Date.parse(T.expires_at) : 0);
-	return null == T ||
-		(null === (t = T.subscription_trial) || void 0 === t ? void 0 : t.sku_id) !== I ||
-		null == T.expires_at ||
-		Object.values(h).every((e) => 0 === e)
+	return null == T || (null === (t = T.subscription_trial) || void 0 === t ? void 0 : t.sku_id) !== I || null == T.expires_at || Object.values(h).every((e) => 0 === e)
 		? null
 		: (0, i.jsxs)(a.Notice, {
 				color: (function (e) {
@@ -54,21 +51,9 @@ t.Z = function (e) {
 					(function (e, t) {
 						switch (e) {
 							case u.Si.TIER_0:
-								return t.days > 0
-									? _.Z.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_DAYS_VARIANT.format({ days: t.days })
-									: t.hours > 0
-										? _.Z.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_HOURS_VARIANT.format({ hours: t.hours })
-										: _.Z.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_MINUTES_VARIANT.format({
-												minutes: Math.max(t.minutes, 1)
-											});
+								return t.days > 0 ? _.Z.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_DAYS_VARIANT.format({ days: t.days }) : t.hours > 0 ? _.Z.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_HOURS_VARIANT.format({ hours: t.hours }) : _.Z.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_MINUTES_VARIANT.format({ minutes: Math.max(t.minutes, 1) });
 							case u.Si.TIER_2:
-								return t.days > 0
-									? _.Z.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_DAYS_VARIANT.format({ days: t.days })
-									: t.hours > 0
-										? _.Z.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_HOURS_VARIANT.format({ hours: t.hours })
-										: _.Z.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_MINUTES_VARIANT.format({
-												minutes: Math.max(t.minutes, 1)
-											});
+								return t.days > 0 ? _.Z.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_DAYS_VARIANT.format({ days: t.days }) : t.hours > 0 ? _.Z.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_HOURS_VARIANT.format({ hours: t.hours }) : _.Z.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_MINUTES_VARIANT.format({ minutes: Math.max(t.minutes, 1) });
 							default:
 								throw Error('Unsupported subscription tier: '.concat(e));
 						}

@@ -61,15 +61,9 @@ class l {
 			n = i.Z.getEffectiveConnectionSpeed();
 		n === a.IyS.SLOW_TWO_G && (n = a.IyS.TWO_G);
 		let r = i.Z.getType();
-		r === a.IWh.WIMAX && (r = a.IWh.WIFI),
-			(this._networkStats.effectiveConnectionSpeedBuckets[n] += t),
-			(this._networkStats.connectionTypeBuckets[r] += t),
-			(this._lastSampleTimestamp = e);
+		r === a.IWh.WIMAX && (r = a.IWh.WIFI), (this._networkStats.effectiveConnectionSpeedBuckets[n] += t), (this._networkStats.connectionTypeBuckets[r] += t), (this._lastSampleTimestamp = e);
 	}
 	constructor() {
-		s(this, '_networkStats', void 0),
-			s(this, '_lastSampleTimestamp', void 0),
-			(this._networkStats = this._initStats()),
-			(this._lastSampleTimestamp = (0, r.zO)());
+		s(this, '_networkStats', void 0), s(this, '_lastSampleTimestamp', void 0), (this._networkStats = this._initStats()), (this._lastSampleTimestamp = (0, r.zO)());
 	}
 }

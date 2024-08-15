@@ -31,17 +31,13 @@ class A extends l.PureComponent {
 				return t;
 			}),
 			{ newInstallationPath: s } = this.state;
-		for (let e of (null != s && t.push(s), (t = t.filter((e) => !this.fetchedMetadataPaths.has(e))), (0, r.ec)(t), t))
-			this.fetchedMetadataPaths.add(e);
+		for (let e of (null != s && t.push(s), (t = t.filter((e) => !this.fetchedMetadataPaths.has(e))), (0, r.ec)(t), t)) this.fetchedMetadataPaths.add(e);
 	}
 	componentDidMount() {
 		this.fetchAllDirectoryMetadata();
 	}
 	componentDidUpdate(e) {
-		this.fetchAllDirectoryMetadata(),
-			(this.props.requiredDiskKB !== e.requiredDiskKB ||
-				this.props.installationPathsMetadata !== e.installationPathsMetadata) &&
-				this.sendChange(this.props.value);
+		this.fetchAllDirectoryMetadata(), (this.props.requiredDiskKB !== e.requiredDiskKB || this.props.installationPathsMetadata !== e.installationPathsMetadata) && this.sendChange(this.props.value);
 	}
 	getOptions() {
 		let { installationPaths: e } = this.props,

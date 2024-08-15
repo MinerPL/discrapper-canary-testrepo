@@ -17,11 +17,7 @@ function _(e) {
 	let { userId: t } = e;
 	return (0, i.e7)([l.Z], () => {
 		var e, n;
-		return (
-			null !== (n = null === (e = l.Z.getUserProfile(t)) || void 0 === e ? void 0 : e.profileFetchFailed) &&
-			void 0 !== n &&
-			n
-		);
+		return null !== (n = null === (e = l.Z.getUserProfile(t)) || void 0 === e ? void 0 : e.profileFetchFailed) && void 0 !== n && n;
 	})
 		? (0, r.jsx)(s.DY, {
 				className: d.container,

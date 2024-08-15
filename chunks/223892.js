@@ -24,17 +24,11 @@ n.d(t, {
 var r = n(586072),
 	i = n(981631);
 function a() {
-	let { isUserEligibleForCreatorMonetization: e } = r.bT.useExperiment(
-		{ location: 'e3bb71_1' },
-		{ autoTrackExposure: !1 }
-	);
+	let { isUserEligibleForCreatorMonetization: e } = r.bT.useExperiment({ location: 'e3bb71_1' }, { autoTrackExposure: !1 });
 	return e;
 }
 function s() {
-	let { isUserEligibleForCreatorMonetization: e } = r.bT.getCurrentConfig(
-		{ location: 'e3bb71_2' },
-		{ autoTrackExposure: !1 }
-	);
+	let { isUserEligibleForCreatorMonetization: e } = r.bT.getCurrentConfig({ location: 'e3bb71_2' }, { autoTrackExposure: !1 });
 	return e;
 }
 function o(e) {
@@ -46,17 +40,11 @@ function o(e) {
 					},
 					{ autoTrackExposure: !0 }
 				),
-				{ enableFastMonetizationOnboardingForUser: n } = r.AC.useExperiment(
-					{ location: 'e3bb71_4' },
-					{ autoTrackExposure: !1 }
-				);
+				{ enableFastMonetizationOnboardingForUser: n } = r.AC.useExperiment({ location: 'e3bb71_4' }, { autoTrackExposure: !1 });
 			return null != e && t && n;
 		})(null == e ? void 0 : e.id),
 		n = (function (e) {
-			let { enableFastMonetizationOnboardingForUser: t } = r.AC.useExperiment(
-				{ location: 'e3bb71_7' },
-				{ autoTrackExposure: !1 }
-			);
+			let { enableFastMonetizationOnboardingForUser: t } = r.AC.useExperiment({ location: 'e3bb71_7' }, { autoTrackExposure: !1 });
 			return null != e && e.hasFeature(i.oNc.CREATOR_MONETIZABLE_WHITEGLOVE) && t;
 		})(e);
 	return t || n;
@@ -95,9 +83,6 @@ function c(e) {
 	return t;
 }
 function d() {
-	let { enableCreatorMonetizationNagActivateForUser: e } = r.aC.getCurrentConfig(
-		{ location: 'e3bb71_11' },
-		{ autoTrackExposure: !0 }
-	);
+	let { enableCreatorMonetizationNagActivateForUser: e } = r.aC.getCurrentConfig({ location: 'e3bb71_11' }, { autoTrackExposure: !0 });
 	return e;
 }

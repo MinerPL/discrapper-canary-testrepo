@@ -23,15 +23,7 @@ function _(e, t, n) {
 				a().debounce(
 					(e) => {
 						var r, a, l, _;
-						if (
-							((r = e),
-							(a = i),
-							(l = t),
-							(_ = n),
-							d(u.ZP.getProps(l, _).groups) ||
-								(!(r.length < c.length) && !(r.length > a) && -1 !== r.indexOf(c) && ((0, s.b8)(l, _, o.KV), 1)))
-						)
-							E(!0);
+						if (((r = e), (a = i), (l = t), (_ = n), d(u.ZP.getProps(l, _).groups) || (!(r.length < c.length) && !(r.length > a) && -1 !== r.indexOf(c) && ((0, s.b8)(l, _, o.KV), 1)))) E(!0);
 					},
 					200,
 					{ maxWait: 500 }

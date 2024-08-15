@@ -35,8 +35,7 @@ t.Z = {
 			let { socket: t } = e;
 			(0, o.bu)(t.transport);
 			let n = (0, o._f)(t.application);
-			if (!E.has(n))
-				throw new l.Z({ errorCode: u.lTL.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
+			if (!E.has(n)) throw new l.Z({ errorCode: u.lTL.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
 			i.Z.open(u.oAB.CONNECTIONS);
 		}
 	}

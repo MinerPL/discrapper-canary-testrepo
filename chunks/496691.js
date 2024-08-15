@@ -14,10 +14,7 @@ var n = a(735250),
 class N extends i.Component {
 	shouldScrollToTop(e) {
 		let { location: t } = e;
-		return (
-			t.pathname.startsWith(h.Z5c.APPLICATION_STORE_LISTING_SKU('')) ||
-			t.pathname.startsWith(h.Z5c.APPLICATION_STORE_LISTING_APPLICATION(''))
-		);
+		return t.pathname.startsWith(h.Z5c.APPLICATION_STORE_LISTING_SKU('')) || t.pathname.startsWith(h.Z5c.APPLICATION_STORE_LISTING_APPLICATION(''));
 	}
 	render() {
 		let { location: e, className: t, render: a, locale: s } = this.props;

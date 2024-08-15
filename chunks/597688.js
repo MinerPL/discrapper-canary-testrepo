@@ -12,19 +12,19 @@ var a,
 let f = new Map(),
 	h = new Map(),
 	p = f,
-	I = h,
-	m = !1,
+	m = h,
+	I = !1,
 	T = new Set();
 let g = {},
 	S = () => {
-		(p = f), (I = h), (i = void 0), (m = !1), (T = new Set()), (r = void 0), (g = {});
+		(p = f), (m = h), (i = void 0), (I = !1), (T = new Set()), (r = void 0), (g = {});
 	};
 class A extends (a = c.ZP.Store) {
 	initialize() {
 		this.syncWith([_.default], S);
 	}
 	get isFetchingCategories() {
-		return m;
+		return I;
 	}
 	isFetchingProduct(e) {
 		return null != e && T.has(e);
@@ -42,13 +42,13 @@ class A extends (a = c.ZP.Store) {
 		return p;
 	}
 	get products() {
-		return I;
+		return m;
 	}
 	getCategory(e) {
 		return null != e ? p.get(e) : void 0;
 	}
 	getProduct(e) {
-		return null != e ? I.get(e) : void 0;
+		return null != e ? m.get(e) : void 0;
 	}
 	getCategoryForProduct(e) {
 		let t = this.getProduct(e);
@@ -66,20 +66,14 @@ class A extends (a = c.ZP.Store) {
 		: (s[o] = l),
 	(t.Z = new A(d.Z, {
 		COLLECTIBLES_CATEGORIES_FETCH: (e) => {
-			(m = !0), (r = void 0), (g = e.options);
+			(I = !0), (r = void 0), (g = e.options);
 		},
 		COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: (e) => {
-			0 === e.categories.length
-				? ((p = f), (I = h))
-				: !(0, u.isEqual)([...p.values()], e.categories) &&
-					((p = new Map(e.categories.map((e) => [e.skuId, e]))), (I = new Map((0, E.Cs)(p).map((e) => [e.skuId, e])))),
-				(i = Date.now()),
-				(m = !1),
-				(r = void 0);
+			0 === e.categories.length ? ((p = f), (m = h)) : !(0, u.isEqual)([...p.values()], e.categories) && ((p = new Map(e.categories.map((e) => [e.skuId, e]))), (m = new Map((0, E.Cs)(p).map((e) => [e.skuId, e])))), (i = Date.now()), (I = !1), (r = void 0);
 		},
 		COLLECTIBLES_CATEGORIES_FETCH_FAILURE: (e) => {
 			let { error: t } = e;
-			(p = f), (I = h), (m = !1), (T = new Set()), (r = t);
+			(p = f), (m = h), (I = !1), (T = new Set()), (r = t);
 		},
 		COLLECTIBLES_PRODUCT_FETCH: (e) => {
 			let { skuId: t } = e;
@@ -87,7 +81,7 @@ class A extends (a = c.ZP.Store) {
 		},
 		COLLECTIBLES_PRODUCT_FETCH_SUCCESS: (e) => {
 			let { skuId: t, product: n } = e;
-			I.set(t, n), (T = new Set(T)).delete(t), (r = void 0);
+			m.set(t, n), (T = new Set(T)).delete(t), (r = void 0);
 		},
 		COLLECTIBLES_PRODUCT_FETCH_FAILURE: (e) => {
 			let { skuId: t, error: n } = e;

@@ -51,11 +51,7 @@ let A = (e) => {
 							icon: A(e.categoryId)
 						})),
 			v = (e) => {
-				(0, r.uY)(e, !0),
-					c.Z.closeSidebar(),
-					t && (0, r.AQ)(),
-					(0, d.OG)() && e !== T.Gj.Quests && (0, E.uL)(S.Z5c.GUILD_DISCOVERY),
-					!(0, d.OG)() && e === T.Gj.Quests && (0, E.uL)(S.Z5c.QUEST_HOME);
+				(0, r.uY)(e, !0), c.Z.closeSidebar(), t && (0, r.AQ)(), (0, d.OG)() && e !== T.Gj.Quests && (0, E.uL)(S.Z5c.GUILD_DISCOVERY), !(0, d.OG)() && e === T.Gj.Quests && (0, E.uL)(S.Z5c.QUEST_HOME);
 			};
 		return (0, i.jsxs)(s.Scroller, {
 			className: N.sidebarContainer,

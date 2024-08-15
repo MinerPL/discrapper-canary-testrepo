@@ -107,9 +107,7 @@ function A() {
 					(0, s.jsx)(r.FormText, {
 						type: r.FormText.Types.DESCRIPTION,
 						className: R.titleBlurb,
-						children: p.Z.Messages.GUILD_SETTINGS_PREMIUM_GUILD_BLURB.format({
-							helpdeskArticle: g.Z.getArticleURL(x.BhN.GUILD_SUBSCRIPTIONS)
-						})
+						children: p.Z.Messages.GUILD_SETTINGS_PREMIUM_GUILD_BLURB.format({ helpdeskArticle: g.Z.getArticleURL(x.BhN.GUILD_SUBSCRIPTIONS) })
 					})
 				]
 			}),

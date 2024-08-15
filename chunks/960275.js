@@ -23,19 +23,16 @@ function u(e, t, n) {
 let _ = new Set();
 class E extends a.Z {
 	_initialize() {
-		i.Z.subscribe('MESSAGE_CREATE', this.handleMessageCreate),
-			i.Z.subscribe('POGGERMODE_SETTINGS_UPDATE', this.handleSettingsUpdate);
+		i.Z.subscribe('MESSAGE_CREATE', this.handleMessageCreate), i.Z.subscribe('POGGERMODE_SETTINGS_UPDATE', this.handleSettingsUpdate);
 	}
 	_terminate() {
-		i.Z.unsubscribe('MESSAGE_CREATE', this.handleMessageCreate),
-			i.Z.unsubscribe('POGGERMODE_SETTINGS_UPDATE', this.handleSettingsUpdate);
+		i.Z.unsubscribe('MESSAGE_CREATE', this.handleMessageCreate), i.Z.unsubscribe('POGGERMODE_SETTINGS_UPDATE', this.handleSettingsUpdate);
 	}
 	constructor(...e) {
 		super(...e),
 			u(this, 'handleSettingsUpdate', (e) => {
 				let { settings: t } = e;
-				t.enabled ? (0, r.T)(o.hn.ENABLE_POGGERMODE) : !1 === t.enabled && (0, r.T)(o.hn.DISABLE_POGGERMODE),
-					Object.keys(t).some((e) => e.startsWith('confetti')) && (0, r.T)(o.hn.CUSTOMIZE_CONFETTI);
+				t.enabled ? (0, r.T)(o.hn.ENABLE_POGGERMODE) : !1 === t.enabled && (0, r.T)(o.hn.DISABLE_POGGERMODE), Object.keys(t).some((e) => e.startsWith('confetti')) && (0, r.T)(o.hn.CUSTOMIZE_CONFETTI);
 			}),
 			u(this, 'handleMessageCreate', (e) => {
 				var t;
@@ -45,15 +42,7 @@ class E extends a.Z {
 				} = e;
 				if (!c.Z.isEnabled()) return !1;
 				let E = s.default.getId();
-				if (
-					((null == u ? void 0 : u.find((e) => e.id === E)) != null
-						? (0, r.T)(o.hn.PING_ME)
-						: (null !== (t = null == u ? void 0 : u.length) && void 0 !== t ? t : 0) > 0 &&
-							(null == i ? void 0 : i.id) === E &&
-							(0, r.T)(o.hn.PING_SOMEONE),
-					!(0, d.wU)(null == i ? void 0 : i.id, E, a, _))
-				)
-					return !1;
+				if (((null == u ? void 0 : u.find((e) => e.id === E)) != null ? (0, r.T)(o.hn.PING_ME) : (null !== (t = null == u ? void 0 : u.length) && void 0 !== t ? t : 0) > 0 && (null == i ? void 0 : i.id) === E && (0, r.T)(o.hn.PING_SOMEONE), !(0, d.wU)(null == i ? void 0 : i.id, E, a, _))) return !1;
 				let h = d.ZP.getMostRecentMessageCombo(n),
 					{ combo: m } = null != h ? h : {};
 				if (null == m) return !1;

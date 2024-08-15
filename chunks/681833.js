@@ -19,10 +19,7 @@ var n = t(735250),
 function S(e) {
 	let { onClickManageSubscription: s } = e,
 		t = (0, o.e7)([d.ZP], () => d.ZP.getSubscriptions()),
-		i = a.useMemo(
-			() => Object.values(null != t ? t : {}).filter((e) => e.type === _.NYc.APPLICATION && e.status !== _.O0b.ENDED),
-			[t]
-		);
+		i = a.useMemo(() => Object.values(null != t ? t : {}).filter((e) => e.type === _.NYc.APPLICATION && e.status !== _.O0b.ENDED), [t]);
 	return 0 === i.length
 		? null
 		: (0, n.jsxs)('div', {
@@ -59,9 +56,7 @@ function S(e) {
 									(0, n.jsx)(l.Text, {
 										variant: 'text-md/normal',
 										className: u.description,
-										children: E.Z.Messages.APPLICATION_ACTIVE_USER_SUBSCRIPTIONS_DESCRIPTION.format({
-											numSubscriptions: i.length
-										})
+										children: E.Z.Messages.APPLICATION_ACTIVE_USER_SUBSCRIPTIONS_DESCRIPTION.format({ numSubscriptions: i.length })
 									})
 								]
 							}),

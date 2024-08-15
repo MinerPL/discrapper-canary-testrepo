@@ -23,25 +23,15 @@ function l(e, t, n) {
 }
 class o extends a.Z {
 	_initialize() {
-		!__OVERLAY__ &&
-			(i.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', this._handleSoundboardSoundReceived),
-			i.Z.subscribe('GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY', this._handleSoundboardSoundPlayLocally),
-			i.Z.subscribe('VOICE_CHANNEL_SELECT', this._handleVoiceChannelSelect),
-			i.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', this._handleToggleSelfDeafened));
+		!__OVERLAY__ && (i.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', this._handleSoundboardSoundReceived), i.Z.subscribe('GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY', this._handleSoundboardSoundPlayLocally), i.Z.subscribe('VOICE_CHANNEL_SELECT', this._handleVoiceChannelSelect), i.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', this._handleToggleSelfDeafened));
 	}
 	_terminate() {
-		!__OVERLAY__ &&
-			(i.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', this._handleSoundboardSoundReceived),
-			i.Z.unsubscribe('GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY', this._handleSoundboardSoundPlayLocally),
-			i.Z.unsubscribe('VOICE_CHANNEL_SELECT', this._handleVoiceChannelSelect),
-			i.Z.unsubscribe('AUDIO_TOGGLE_SELF_DEAF', this._handleToggleSelfDeafened));
+		!__OVERLAY__ && (i.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', this._handleSoundboardSoundReceived), i.Z.unsubscribe('GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY', this._handleSoundboardSoundPlayLocally), i.Z.unsubscribe('VOICE_CHANNEL_SELECT', this._handleVoiceChannelSelect), i.Z.unsubscribe('AUDIO_TOGGLE_SELF_DEAF', this._handleToggleSelfDeafened));
 	}
 	constructor(...e) {
 		super(...e),
 			l(this, '_playSound', function (e) {
-				arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-					arguments.length > 2 && arguments[2],
-					arguments.length > 3 && arguments[3];
+				arguments.length > 1 && void 0 !== arguments[1] && arguments[1], arguments.length > 2 && arguments[2], arguments.length > 3 && arguments[3];
 			}),
 			l(this, '_stopAndClearSounds', () => {}),
 			l(this, '_handleToggleSelfDeafened', () => {

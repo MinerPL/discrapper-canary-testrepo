@@ -36,5 +36,4 @@ var r = n(470079),
 			return (e[n] = r), e;
 		}, {});
 	},
-	l =
-		'undefined' != typeof window && window.document && window.document.createElement ? r.useLayoutEffect : r.useEffect;
+	l = 'undefined' != typeof window && window.document && window.document.createElement ? r.useLayoutEffect : r.useEffect;

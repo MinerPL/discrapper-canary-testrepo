@@ -30,15 +30,12 @@ function _(e) {
 	var t, n;
 	let s = (0, o.e7)([l.default], () => l.default.locale),
 		{ percentComplete: a } = (0, c.Rf)(e);
-	if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null)
-		return g.Z.Messages.QUESTS_COMPLETION_COMPLETE;
+	if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null) return g.Z.Messages.QUESTS_COMPLETION_COMPLETE;
 	if ((null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null && a > 0) {
 		let e = (0, i.T3)(s, a, { roundingMode: 'floor' });
 		return g.Z.Messages.QUESTS_COMPLETION_PROGRESS_STARTED_V2.format({ percent: e });
 	}
-	return (0, u.$J)(e)
-		? g.Z.Messages.QUEST_BAR_TITLE_START_PLAYING
-		: g.Z.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED;
+	return (0, u.$J)(e) ? g.Z.Messages.QUEST_BAR_TITLE_START_PLAYING : g.Z.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED;
 }
 function C(e, t, n) {
 	var s;

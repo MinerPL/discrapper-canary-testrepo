@@ -48,12 +48,7 @@ let T = (e) => [
 	},
 	{
 		key: m.Z.Messages.APPLICATION_STORE_SPECS_MEMORY,
-		value:
-			null != e.ram
-				? m.Z.Messages.APPLICATION_STORE_SPECS_MEMORY_VALUE.format({
-						size: (0, d.BU)(1000 * e.ram, { showDecimalForGB: !1 })
-					})
-				: null
+		value: null != e.ram ? m.Z.Messages.APPLICATION_STORE_SPECS_MEMORY_VALUE.format({ size: (0, d.BU)(1000 * e.ram, { showDecimalForGB: !1 }) }) : null
 	},
 	{
 		key: m.Z.Messages.APPLICATION_STORE_SPECS_VIDEO,
@@ -155,20 +150,13 @@ class S extends a.PureComponent {
 		let { minimum: e, recommended: t } = this.props.systemRequirements[this.state.selectedOperatingSystem];
 		return (0, i.jsxs)('div', {
 			className: I.requirementsContainer,
-			children: [
-				this.renderRequirementsSection(e, m.Z.Messages.APPLICATION_STORE_SPECS_MINIMUM),
-				this.renderRequirementsSection(t, m.Z.Messages.APPLICATION_STORE_SPECS_RECOMMENDED)
-			]
+			children: [this.renderRequirementsSection(e, m.Z.Messages.APPLICATION_STORE_SPECS_MINIMUM), this.renderRequirementsSection(t, m.Z.Messages.APPLICATION_STORE_SPECS_RECOMMENDED)]
 		});
 	}
 	render() {
 		return (0, i.jsxs)('div', {
 			className: this.props.className,
-			children: [
-				(0, i.jsx)(o.Z, { children: m.Z.Messages.APPLICATION_STORE_SECTION_TITLE_SYSTEM_REQUIREMENTS }),
-				this.renderTabs(),
-				this.renderBody()
-			]
+			children: [(0, i.jsx)(o.Z, { children: m.Z.Messages.APPLICATION_STORE_SECTION_TITLE_SYSTEM_REQUIREMENTS }), this.renderTabs(), this.renderBody()]
 		});
 	}
 	constructor(e) {

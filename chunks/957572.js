@@ -25,10 +25,7 @@ function c() {
 							(0, r.jsx)(s.Text, {
 								variant: 'text-sm/normal',
 								className: l.previewNoticeText,
-								children:
-									e === o.y.GUILD_PRODUCTS_PREVIEW
-										? a.Z.Messages.GUILD_SHOP_TAB_PREVIEW_NOTICE_LABEL
-										: a.Z.Messages.GUILD_SHOP_PAGE_PREVIEW_NOTICE_LABEL
+								children: e === o.y.GUILD_PRODUCTS_PREVIEW ? a.Z.Messages.GUILD_SHOP_TAB_PREVIEW_NOTICE_LABEL : a.Z.Messages.GUILD_SHOP_PAGE_PREVIEW_NOTICE_LABEL
 							})
 						]
 					}),
@@ -37,10 +34,7 @@ function c() {
 						color: s.Button.Colors.PRIMARY,
 						className: l.removePreviewButton,
 						onClick: n,
-						children:
-							e === o.y.GUILD_PRODUCTS_PREVIEW
-								? a.Z.Messages.GUILD_SHOP_REMOVE_PREVIEW_TAB_BUTTON
-								: a.Z.Messages.GUILD_SHOP_REMOVE_PREVIEW_PAGE_BUTTON
+						children: e === o.y.GUILD_PRODUCTS_PREVIEW ? a.Z.Messages.GUILD_SHOP_REMOVE_PREVIEW_TAB_BUTTON : a.Z.Messages.GUILD_SHOP_REMOVE_PREVIEW_PAGE_BUTTON
 					})
 				]
 			})

@@ -49,21 +49,13 @@ function I(e) {
 						} catch (t) {
 							var n;
 							let e = new u.Hx(t);
-							(0, o.showToast)(
-								(0, o.createToast)(
-									null !== (n = e.getAnyErrorMessage()) && void 0 !== n ? n : U.Z.Messages.ERROR_OCCURRED_TRY_AGAIN,
-									o.ToastType.FAILURE
-								)
-							);
+							(0, o.showToast)((0, o.createToast)(null !== (n = e.getAnyErrorMessage()) && void 0 !== n ? n : U.Z.Messages.ERROR_OCCURRED_TRY_AGAIN, o.ToastType.FAILURE));
 						} finally {
 							i(!1);
 						}
 					}
 				},
-				I =
-					e.triggerType === R.fX.MENTION_SPAM &&
-					(null == d ? void 0 : d.features) != null &&
-					d.features.has(D.oNc.COMMUNITY);
+				I = e.triggerType === R.fX.MENTION_SPAM && (null == d ? void 0 : d.features) != null && d.features.has(D.oNc.COMMUNITY);
 			return (0, n.jsx)(o.MenuItem, {
 				id: 'delete-automod-rule',
 				label: U.Z.Messages.GUILD_AUTOMOD_DELETE_RULE,

@@ -6,15 +6,7 @@ n.d(t, {
 var s,
 	a,
 	r = n(818083);
-((s = a || (a = {}))[(s.DEFAULT = 0)] = 'DEFAULT'),
-	(s[(s.WINTER_2023_DROP = 1)] = 'WINTER_2023_DROP'),
-	(s[(s.MONSTER_DROP = 2)] = 'MONSTER_DROP'),
-	(s[(s.SPRINGTOONS = 4)] = 'SPRINGTOONS'),
-	(s[(s.SHY = 5)] = 'SHY'),
-	(s[(s.GALAXY = 6)] = 'GALAXY'),
-	(s[(s.TIDE = 7)] = 'TIDE'),
-	(s[(s.ROBERT = 8)] = 'ROBERT'),
-	(s[(s.STORM = 9)] = 'STORM');
+((s = a || (a = {}))[(s.DEFAULT = 0)] = 'DEFAULT'), (s[(s.WINTER_2023_DROP = 1)] = 'WINTER_2023_DROP'), (s[(s.MONSTER_DROP = 2)] = 'MONSTER_DROP'), (s[(s.SPRINGTOONS = 4)] = 'SPRINGTOONS'), (s[(s.SHY = 5)] = 'SHY'), (s[(s.GALAXY = 6)] = 'GALAXY'), (s[(s.TIDE = 7)] = 'TIDE'), (s[(s.ROBERT = 8)] = 'ROBERT'), (s[(s.STORM = 9)] = 'STORM');
 let i = (0, r.B)({
 	kind: 'user',
 	id: '2023-12_collectibles_shop_marketing',

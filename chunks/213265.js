@@ -40,24 +40,11 @@ var R = ((i = /b*/g), u(x, (e = /a/), 'a'), u(x, i, 'a'), 0 !== e.lastIndex || 0
 			T = 0,
 			O = p;
 		if (
-			(C &&
-				(-1 === y((S = E(S, 'y', '')), 'g') && (S += 'g'),
-				(O = b(p, this.lastIndex)),
-				this.lastIndex > 0 &&
-					(!this.multiline || (this.multiline && '\n' !== I(p, this.lastIndex - 1))) &&
-					((w = '(?: ' + w + ')'), (O = ' ' + O), T++),
-				(r = RegExp('^(?:' + w + ')', S))),
+			(C && (-1 === y((S = E(S, 'y', '')), 'g') && (S += 'g'), (O = b(p, this.lastIndex)), this.lastIndex > 0 && (!this.multiline || (this.multiline && '\n' !== I(p, this.lastIndex - 1))) && ((w = '(?: ' + w + ')'), (O = ' ' + O), T++), (r = RegExp('^(?:' + w + ')', S))),
 			A && (r = RegExp('^' + w + '$(?!\\s)', S)),
 			R && (e = this.lastIndex),
 			(i = u(x, C ? r : this, O)),
-			C
-				? i
-					? ((i.input = b(i.input, T)),
-						(i[0] = b(i[0], T)),
-						(i.index = this.lastIndex),
-						(this.lastIndex += i[0].length))
-					: (this.lastIndex = 0)
-				: R && i && (this.lastIndex = this.global ? i.index + i[0].length : e),
+			C ? (i ? ((i.input = b(i.input, T)), (i[0] = b(i[0], T)), (i.index = this.lastIndex), (this.lastIndex += i[0].length)) : (this.lastIndex = 0)) : R && i && (this.lastIndex = this.global ? i.index + i[0].length : e),
 			A &&
 				i &&
 				i.length > 1 &&

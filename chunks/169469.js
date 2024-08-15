@@ -157,10 +157,6 @@ var n = {
 t.Z = function (e, t, a) {
 	var i,
 		o = null != a && a.addSuffix ? n[e].withPreposition : n[e].standalone;
-	if (
-		((i = 'string' == typeof o ? o : 1 === t ? o.one : o.other.replace('{{count}}', String(t))),
-		null != a && a.addSuffix)
-	)
-		return a.comparison && a.comparison > 0 ? 'in ' + i : 'vor ' + i;
+	if (((i = 'string' == typeof o ? o : 1 === t ? o.one : o.other.replace('{{count}}', String(t))), null != a && a.addSuffix)) return a.comparison && a.comparison > 0 ? 'in ' + i : 'vor ' + i;
 	return i;
 };

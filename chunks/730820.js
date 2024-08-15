@@ -56,10 +56,7 @@ function Z(e) {
 			(e) => {
 				if ('c' === e.key && e.metaKey && g.wS) {
 					var s;
-					e.preventDefault(),
-						e.stopPropagation(),
-						(0, g.JG)(i),
-						null == r || null === (s = r.current) || void 0 === s || s.focus();
+					e.preventDefault(), e.stopPropagation(), (0, g.JG)(i), null == r || null === (s = r.current) || void 0 === s || s.focus();
 				}
 			},
 			[i]

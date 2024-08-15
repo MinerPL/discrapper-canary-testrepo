@@ -10,13 +10,13 @@ var r = n(735250),
 t.Z = (e) => {
 	let { children: t, className: n, color: a, iconType: d, onMouseEnter: _, onMouseLeave: E, ...f } = e,
 		[h, p] = i.useState(!1),
-		I = i.useCallback(
+		m = i.useCallback(
 			(e) => {
 				p(!0), null == _ || _(e);
 			},
 			[p, _]
 		),
-		m = i.useCallback(
+		I = i.useCallback(
 			(e) => {
 				p(!1), null == E || E(e);
 			},
@@ -36,8 +36,8 @@ t.Z = (e) => {
 				[c.wrapper]: !0,
 				interactive: f.onClick
 			}),
-			onMouseEnter: I,
-			onMouseLeave: m,
+			onMouseEnter: m,
+			onMouseLeave: I,
 			style: T,
 			tabIndex: null != f.onClick ? 0 : -1,
 			children:

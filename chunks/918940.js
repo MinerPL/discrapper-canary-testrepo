@@ -11,11 +11,7 @@ t.Z = {
 				.required()
 				.keys({
 					lock_state: e.number().valid(r.xK.UNLOCKED, r.xK.PORTRAIT, r.xK.LANDSCAPE).required(),
-					picture_in_picture_lock_state: e
-						.number()
-						.valid(r.xK.UNLOCKED, r.xK.PORTRAIT, r.xK.LANDSCAPE)
-						.allow(null)
-						.optional(),
+					picture_in_picture_lock_state: e.number().valid(r.xK.UNLOCKED, r.xK.PORTRAIT, r.xK.LANDSCAPE).allow(null).optional(),
 					grid_lock_state: e.number().valid(r.xK.UNLOCKED, r.xK.PORTRAIT, r.xK.LANDSCAPE).allow(null).optional()
 				}),
 		handler(e) {

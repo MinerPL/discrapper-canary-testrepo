@@ -44,9 +44,7 @@ function c(t) {
 					(0, o.jsx)(a.Text, {
 						className: i.warningText,
 						variant: 'text-md/normal',
-						children: c
-							? r.Z.Messages.MASKED_LINK_ALERT_V2_WARNING_PROTOCOL.format({})
-							: r.Z.Messages.MASKED_LINK_ALERT_V2_WARNING_WEBSITE
+						children: c ? r.Z.Messages.MASKED_LINK_ALERT_V2_WARNING_PROTOCOL.format({}) : r.Z.Messages.MASKED_LINK_ALERT_V2_WARNING_WEBSITE
 					}),
 					(0, o.jsxs)(a.Scroller, {
 						className: i.linkCalloutContainer,
@@ -78,9 +76,7 @@ function c(t) {
 						onChange: (t, e) => E(e),
 						children: (0, o.jsx)(a.Text, {
 							variant: 'text-sm/normal',
-							children: c
-								? r.Z.Messages.MASKED_LINK_ALERT_V2_TRUST_PROTOCOL.format({ protocol: h.replace(':', '') })
-								: r.Z.Messages.MASKED_LINK_ALERT_V2_TRUST_WEBSITE.format({ domain: m })
+							children: c ? r.Z.Messages.MASKED_LINK_ALERT_V2_TRUST_PROTOCOL.format({ protocol: h.replace(':', '') }) : r.Z.Messages.MASKED_LINK_ALERT_V2_TRUST_WEBSITE.format({ domain: m })
 						})
 					})
 				]
@@ -92,9 +88,7 @@ function c(t) {
 						size: a.Button.Sizes.MEDIUM,
 						color: a.Button.Colors.BRAND,
 						onClick: C,
-						children: c
-							? r.Z.Messages.MASKED_LINK_ALERT_V2_CONFIRM_PROTOCOL
-							: r.Z.Messages.MASKED_LINK_ALERT_V2_CONFIRM_WEBSITE
+						children: c ? r.Z.Messages.MASKED_LINK_ALERT_V2_CONFIRM_PROTOCOL : r.Z.Messages.MASKED_LINK_ALERT_V2_CONFIRM_WEBSITE
 					}),
 					(0, o.jsx)(a.Button, {
 						type: 'button',

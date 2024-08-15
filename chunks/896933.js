@@ -15,9 +15,7 @@ function s(e, t) {
 }
 (t.default = n),
 	(n.prototype.compile = function (e) {
-		return (
-			(this.pluralStack = []), (this.currentPlural = null), (this.pluralNumberFormat = null), this.compileMessage(e)
-		);
+		return (this.pluralStack = []), (this.currentPlural = null), (this.pluralNumberFormat = null), this.compileMessage(e);
 	}),
 	(n.prototype.compileMessage = function (e) {
 		if (!(e && 'messageFormatPattern' === e.type)) throw Error('Message AST is not of type: "messageFormatPattern"');
@@ -40,10 +38,7 @@ function s(e, t) {
 		return a;
 	}),
 	(n.prototype.compileMessageText = function (e) {
-		return this.currentPlural && /(^|[^\\])#/g.test(e.value)
-			? (!this.pluralNumberFormat && (this.pluralNumberFormat = new Intl.NumberFormat(this.locales)),
-				new a(this.currentPlural.id, this.currentPlural.format.offset, this.pluralNumberFormat, e.value))
-			: e.value.replace(/\\#/g, '#');
+		return this.currentPlural && /(^|[^\\])#/g.test(e.value) ? (!this.pluralNumberFormat && (this.pluralNumberFormat = new Intl.NumberFormat(this.locales)), new a(this.currentPlural.id, this.currentPlural.format.offset, this.pluralNumberFormat, e.value)) : e.value.replace(/\\#/g, '#');
 	}),
 	(n.prototype.compileArgument = function (e) {
 		var t = e.format;
@@ -92,15 +87,7 @@ function s(e, t) {
 			i = e.format,
 			a = i.options,
 			s = {};
-		for (
-			this.pluralStack.push(this.currentPlural),
-				this.currentPlural = 'pluralFormat' === i.type ? e : null,
-				t = 0,
-				n = a.length;
-			t < n;
-			t += 1
-		)
-			s[(r = a[t]).selector] = this.compileMessage(r.value);
+		for (this.pluralStack.push(this.currentPlural), this.currentPlural = 'pluralFormat' === i.type ? e : null, t = 0, n = a.length; t < n; t += 1) s[(r = a[t]).selector] = this.compileMessage(r.value);
 		return (this.currentPlural = this.pluralStack.pop()), s;
 	}),
 	(r.prototype.format = function (e) {

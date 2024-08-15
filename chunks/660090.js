@@ -13,10 +13,7 @@ function r(e) {
 		[r, s] = i.useState(o.bS.ALPHABETICAL),
 		c = i.useMemo(() => {
 			var e, i;
-			return null !== (i = null === (e = t.find((e) => e.section.id === n)) || void 0 === e ? void 0 : e.data) &&
-				void 0 !== i
-				? i
-				: [];
+			return null !== (i = null === (e = t.find((e) => e.section.id === n)) || void 0 === e ? void 0 : e.data) && void 0 !== i ? i : [];
 		}, [t, n]),
 		{ popularSortedCommands: d, canSort: u } = (function (e) {
 			let { alphabeticalSortedCommands: n } = e;

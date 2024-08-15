@@ -13,8 +13,8 @@ var r,
 	f = n(355863),
 	h = n(914010),
 	p = n(358085),
-	I = n(998502),
-	m = n(145597),
+	m = n(998502),
+	I = n(145597),
 	T = n(451478),
 	g = n(981631),
 	S = n(987650);
@@ -59,108 +59,20 @@ function U(e) {
 	return null == t && (t = O[e] = { ...N }), t;
 }
 let w = { ...N },
-	x = new Set([
-		'AUDIO_SET_INPUT_DEVICE',
-		'AUDIO_SET_INPUT_VOLUME',
-		'AUDIO_SET_LOCAL_VIDEO_DISABLED',
-		'AUDIO_SET_LOCAL_VOLUME',
-		'AUDIO_SET_MODE',
-		'AUDIO_SET_NOISE_CANCELLATION',
-		'AUDIO_SET_NOISE_SUPPRESSION',
-		'AUDIO_SET_OUTPUT_DEVICE',
-		'AUDIO_SET_OUTPUT_VOLUME',
-		'AUDIO_TOGGLE_LOCAL_MUTE',
-		'AUDIO_TOGGLE_SELF_DEAF',
-		'AUDIO_TOGGLE_SELF_MUTE',
-		'BILLING_SUBSCRIPTION_UPDATE_SUCCESS',
-		'CATEGORY_COLLAPSE',
-		'CATEGORY_EXPAND',
-		'CHANNEL_ACK',
-		'CHANNEL_PRELOAD',
-		'GIFT_CODE_REDEEM',
-		'GIFT_CODE_REDEEM_FAILURE',
-		'GIFT_CODE_REDEEM_SUCCESS',
-		'HOTSPOT_HIDE',
-		'INVITE_MODAL_CLOSE',
-		'LAYOUT_CREATE',
-		'LAYOUT_CREATE_WIDGETS',
-		'LAYOUT_DELETE_ALL_WIDGETS',
-		'LAYOUT_DELETE_WIDGET',
-		'LAYOUT_SET_PINNED',
-		'LAYOUT_SET_TOP_WIDGET',
-		'LAYOUT_UPDATE_WIDGET',
-		'LOAD_MESSAGES',
-		'LOAD_MESSAGES_FAILURE',
-		'LOAD_MESSAGES_SUCCESS',
-		'MEDIA_ENGINE_SET_GO_LIVE_SOURCE',
-		'OVERLAY_ACTIVATE_REGION',
-		'OVERLAY_DEACTIVATE_ALL_REGIONS',
-		'OVERLAY_MESSAGE_EVENT_ACTION',
-		'OVERLAY_SET_AVATAR_SIZE_MODE',
-		'OVERLAY_SET_CLICK_ZONES',
-		'OVERLAY_SET_DISPLAY_NAME_MODE',
-		'OVERLAY_SET_DISPLAY_USER_MODE',
-		'OVERLAY_SET_INPUT_LOCKED',
-		'OVERLAY_SET_NOTIFICATION_POSITION_MODE',
-		'OVERLAY_SET_TEXT_CHAT_NOTIFICATION_MODE',
-		'OVERLAY_SET_SHOW_KEYBIND_INDICATORS',
-		'OVERLAY_SET_TEXT_WIDGET_OPACITY',
-		'OVERLAY_SET_UI_LOCKED',
-		'OVERLAY_NOTIFY_READY_TO_SHOW',
-		'PREMIUM_PAYMENT_ERROR_CLEAR',
-		'PREMIUM_PAYMENT_MODAL_CLOSE',
-		'PREMIUM_PAYMENT_MODAL_OPEN',
-		'PREMIUM_PAYMENT_SUBSCRIBE_FAIL',
-		'PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS',
-		'PREMIUM_PAYMENT_UPDATE_FAIL',
-		'PREMIUM_PAYMENT_UPDATE_SUCCESS',
-		'PREMIUM_REQUIRED_MODAL_CLOSE',
-		'PREMIUM_REQUIRED_MODAL_OPEN',
-		'PURCHASE_CONFIRMATION_MODAL_CLOSE',
-		'PURCHASE_CONFIRMATION_MODAL_OPEN',
-		'SKU_PURCHASE_CLEAR_ERROR',
-		'SKU_PURCHASE_FAIL',
-		'SKU_PURCHASE_MODAL_CLOSE',
-		'SKU_PURCHASE_MODAL_OPEN',
-		'SKU_PURCHASE_PREVIEW_FETCH_SUCCESS',
-		'SKU_PURCHASE_SHOW_CONFIRMATION_STEP',
-		'SKU_PURCHASE_START',
-		'SKU_PURCHASE_SUCCESS',
-		'STREAM_CLOSE',
-		'STREAM_START',
-		'VOICE_CHANNEL_SELECT',
-		'USER_SETTINGS_PROTO_ENQUEUE_UPDATE',
-		'USER_SETTINGS_PROTO_LOAD_IF_NECESSARY'
-	]),
-	G = new Set([
-		...x.values(),
-		'ACTIVITY_INVITE_MODAL_CLOSE',
-		'CALL_DELETE',
-		'CHANNEL_COLLAPSE',
-		'CHANNEL_SELECT',
-		'GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY',
-		'OVERLAY_CALL_PRIVATE_CHANNEL',
-		'OVERLAY_JOIN_GAME',
-		'OVERLAY_NOTIFICATION_EVENT',
-		'OVERLAY_SELECT_CALL',
-		'OVERLAY_SET_NOT_IDLE',
-		'OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST',
-		'OVERLAY_WIDGET_CHANGED',
-		'SOUNDBOARD_SET_OVERLAY_ENABLED',
-		'STREAM_STOP'
-	]);
+	x = new Set(['AUDIO_SET_INPUT_DEVICE', 'AUDIO_SET_INPUT_VOLUME', 'AUDIO_SET_LOCAL_VIDEO_DISABLED', 'AUDIO_SET_LOCAL_VOLUME', 'AUDIO_SET_MODE', 'AUDIO_SET_NOISE_CANCELLATION', 'AUDIO_SET_NOISE_SUPPRESSION', 'AUDIO_SET_OUTPUT_DEVICE', 'AUDIO_SET_OUTPUT_VOLUME', 'AUDIO_TOGGLE_LOCAL_MUTE', 'AUDIO_TOGGLE_SELF_DEAF', 'AUDIO_TOGGLE_SELF_MUTE', 'BILLING_SUBSCRIPTION_UPDATE_SUCCESS', 'CATEGORY_COLLAPSE', 'CATEGORY_EXPAND', 'CHANNEL_ACK', 'CHANNEL_PRELOAD', 'GIFT_CODE_REDEEM', 'GIFT_CODE_REDEEM_FAILURE', 'GIFT_CODE_REDEEM_SUCCESS', 'HOTSPOT_HIDE', 'INVITE_MODAL_CLOSE', 'LAYOUT_CREATE', 'LAYOUT_CREATE_WIDGETS', 'LAYOUT_DELETE_ALL_WIDGETS', 'LAYOUT_DELETE_WIDGET', 'LAYOUT_SET_PINNED', 'LAYOUT_SET_TOP_WIDGET', 'LAYOUT_UPDATE_WIDGET', 'LOAD_MESSAGES', 'LOAD_MESSAGES_FAILURE', 'LOAD_MESSAGES_SUCCESS', 'MEDIA_ENGINE_SET_GO_LIVE_SOURCE', 'OVERLAY_ACTIVATE_REGION', 'OVERLAY_DEACTIVATE_ALL_REGIONS', 'OVERLAY_MESSAGE_EVENT_ACTION', 'OVERLAY_SET_AVATAR_SIZE_MODE', 'OVERLAY_SET_CLICK_ZONES', 'OVERLAY_SET_DISPLAY_NAME_MODE', 'OVERLAY_SET_DISPLAY_USER_MODE', 'OVERLAY_SET_INPUT_LOCKED', 'OVERLAY_SET_NOTIFICATION_POSITION_MODE', 'OVERLAY_SET_TEXT_CHAT_NOTIFICATION_MODE', 'OVERLAY_SET_SHOW_KEYBIND_INDICATORS', 'OVERLAY_SET_TEXT_WIDGET_OPACITY', 'OVERLAY_SET_UI_LOCKED', 'OVERLAY_NOTIFY_READY_TO_SHOW', 'PREMIUM_PAYMENT_ERROR_CLEAR', 'PREMIUM_PAYMENT_MODAL_CLOSE', 'PREMIUM_PAYMENT_MODAL_OPEN', 'PREMIUM_PAYMENT_SUBSCRIBE_FAIL', 'PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS', 'PREMIUM_PAYMENT_UPDATE_FAIL', 'PREMIUM_PAYMENT_UPDATE_SUCCESS', 'PREMIUM_REQUIRED_MODAL_CLOSE', 'PREMIUM_REQUIRED_MODAL_OPEN', 'PURCHASE_CONFIRMATION_MODAL_CLOSE', 'PURCHASE_CONFIRMATION_MODAL_OPEN', 'SKU_PURCHASE_CLEAR_ERROR', 'SKU_PURCHASE_FAIL', 'SKU_PURCHASE_MODAL_CLOSE', 'SKU_PURCHASE_MODAL_OPEN', 'SKU_PURCHASE_PREVIEW_FETCH_SUCCESS', 'SKU_PURCHASE_SHOW_CONFIRMATION_STEP', 'SKU_PURCHASE_START', 'SKU_PURCHASE_SUCCESS', 'STREAM_CLOSE', 'STREAM_START', 'VOICE_CHANNEL_SELECT', 'USER_SETTINGS_PROTO_ENQUEUE_UPDATE', 'USER_SETTINGS_PROTO_LOAD_IF_NECESSARY']),
+	G = new Set([...x.values(), 'ACTIVITY_INVITE_MODAL_CLOSE', 'CALL_DELETE', 'CHANNEL_COLLAPSE', 'CHANNEL_SELECT', 'GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY', 'OVERLAY_CALL_PRIVATE_CHANNEL', 'OVERLAY_JOIN_GAME', 'OVERLAY_NOTIFICATION_EVENT', 'OVERLAY_SELECT_CALL', 'OVERLAY_SET_NOT_IDLE', 'OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', 'OVERLAY_WIDGET_CHANGED', 'SOUNDBOARD_SET_OVERLAY_ENABLED', 'STREAM_STOP']);
 function k() {
 	if (!__OVERLAY__) return !1;
-	let e = v === (0, m.QF)(),
-		t = C.has((0, m.QF)()) || M.size > 0;
+	let e = v === (0, I.QF)(),
+		t = C.has((0, I.QF)()) || M.size > 0;
 	e && t ? (0, o.T_)(window, !0) : (0, o.T_)(window, !1);
 }
 function B() {
-	if (v !== (0, m.QF)()) return !1;
+	if (v !== (0, I.QF)()) return !1;
 	M.clear();
 }
 function F(e) {
-	let t = (0, m.QF)();
+	let t = (0, I.QF)();
 	if (null == e.pid || e.pid === t)
 		switch (e.type) {
 			case g.BmY.STORAGE_SYNC:
@@ -172,13 +84,7 @@ function F(e) {
 					e.payloads.forEach((e) =>
 						(function (e) {
 							var t, n, r, i, a, o;
-							if (
-								'OVERLAY_INITIALIZE' === e.type &&
-								((null == (t = e).version && 1 === m.Tq) ||
-									t.version === m.Tq ||
-									(s.Z.dispatch({ type: 'OVERLAY_INCOMPATIBLE_APP' }), (0, l.zP)(), 0))
-							)
-								b = !0;
+							if ('OVERLAY_INITIALIZE' === e.type && ((null == (t = e).version && 1 === I.Tq) || t.version === I.Tq || (s.Z.dispatch({ type: 'OVERLAY_INCOMPATIBLE_APP' }), (0, l.zP)(), 0))) b = !0;
 							if (b) {
 								switch (e.type) {
 									case 'CHANNEL_CREATE':
@@ -200,10 +106,7 @@ function F(e) {
 										});
 										break;
 									case 'CONNECTION_OPEN_SUPPLEMENTAL':
-										(e.lazyPrivateChannels = (null !== (n = e.lazyPrivateChannels) && void 0 !== n ? n : []).map((e) =>
-											(0, c.kt)(e)
-										)),
-											s.Z.dispatch(e);
+										(e.lazyPrivateChannels = (null !== (n = e.lazyPrivateChannels) && void 0 !== n ? n : []).map((e) => (0, c.kt)(e))), s.Z.dispatch(e);
 										break;
 									case 'THREAD_LIST_SYNC':
 										s.Z.dispatch({
@@ -214,14 +117,9 @@ function F(e) {
 									case 'GUILD_CREATE':
 										let l = (e) => (0, c.kt)(e),
 											d = e.guild;
-										(d.channels =
-											null !== (a = null === (r = d.channels) || void 0 === r ? void 0 : r.map(l)) && void 0 !== a
-												? a
-												: null),
+										(d.channels = null !== (a = null === (r = d.channels) || void 0 === r ? void 0 : r.map(l)) && void 0 !== a ? a : null),
 											(d.threads = null === (i = d.threads) || void 0 === i ? void 0 : i.map(l)),
-											null != d.channelUpdates &&
-												(d.channelUpdates.writes =
-													null === (o = d.channelUpdates.writes) || void 0 === o ? void 0 : o.map(l)),
+											null != d.channelUpdates && (d.channelUpdates.writes = null === (o = d.channelUpdates.writes) || void 0 === o ? void 0 : o.map(l)),
 											s.Z.dispatch({
 												type: 'GUILD_CREATE',
 												guild: d
@@ -253,14 +151,12 @@ class V extends (r = i.ZP.PersistedStore) {
 				let e = d.default.getId();
 				w = null != e ? U(e) : { ...N };
 			}),
-			__OVERLAY__ && (p.isPlatformEmbedded && I.ZP.requireModule('discord_overlay2'), C.delete((0, m.QF)())),
+			__OVERLAY__ && (p.isPlatformEmbedded && m.ZP.requireModule('discord_overlay2'), C.delete((0, I.QF)())),
 			null != e)
 		) {
 			O = e;
 			let t = d.default.getId();
-			null != t &&
-				(null == (w = U(t)).textChatNotifications && (w.textChatNotifications = N.textChatNotifications),
-				null == w.textWidgetOpacity && (w.textWidgetOpacity = N.textWidgetOpacity));
+			null != t && (null == (w = U(t)).textChatNotifications && (w.textChatNotifications = N.textChatNotifications), null == w.textWidgetOpacity && (w.textWidgetOpacity = N.textWidgetOpacity));
 		}
 	}
 	getState() {
@@ -271,17 +167,17 @@ class V extends (r = i.ZP.PersistedStore) {
 	}
 	isInstanceUILocked() {
 		if (!__OVERLAY__) throw Error('OverlayStore: App instance should never call .isInstanceUILocked()');
-		return !C.has((0, m.QF)());
+		return !C.has((0, I.QF)());
 	}
 	isInstanceFocused() {
 		if (!__OVERLAY__) throw Error('OverlayStore: App instance should never call .isInstanceFocused()');
-		return v === (0, m.QF)();
+		return v === (0, I.QF)();
 	}
 	isFocused(e) {
 		return v === e;
 	}
 	isPinned(e) {
-		let t = f.Z.getLayout(m.qU);
+		let t = f.Z.getLayout(I.qU);
 		return (
 			null != t &&
 			null !=
@@ -374,8 +270,8 @@ A(V, 'displayName', 'OverlayStore'),
 						null != n &&
 						((0, l.lW)({
 							type: g.BmY.DISPATCH,
-							pid: (0, m.QF)(),
-							token: (0, m.Ht)(),
+							pid: (0, I.QF)(),
+							token: (0, I.Ht)(),
 							payloads: [
 								{
 									type: 'CHANNEL_PRELOAD',
@@ -396,19 +292,19 @@ A(V, 'displayName', 'OverlayStore'),
 				return (
 					(0, l.lW)({
 						type: g.BmY.DISPATCH,
-						pid: (0, m.QF)(),
-						token: (0, m.Ht)(),
+						pid: (0, I.QF)(),
+						token: (0, I.Ht)(),
 						payloads: [e]
 					}),
 					!x.has(e.type)
 				);
 			}),
-				(0, l.Ty)(F, (0, m.Ht)()),
+				(0, l.Ty)(F, (0, I.Ht)()),
 				(0, l.$j)(),
 				(0, l.lW)({
 					type: g.BmY.CONNECT,
-					pid: (0, m.QF)(),
-					token: (0, m.Ht)()
+					pid: (0, I.QF)(),
+					token: (0, I.Ht)()
 				});
 		},
 		OVERLAY_INITIALIZE: function (e) {
@@ -418,14 +314,7 @@ A(V, 'displayName', 'OverlayStore'),
 		OVERLAY_READY: function () {
 			let e = w.selectedGuildId,
 				t = w.selectedChannelId;
-			if (
-				(null != e &&
-					(!E.ZP.hasChannels(e) || (null != t && !E.ZP.hasSelectableChannel(e, t))) &&
-					((e = null), (t = null)),
-				null != t && null == _.Z.getChannel(t) && ((e = null), (t = null)),
-				null == e && null == t && (e = h.Z.getGuildId()),
-				null != e && null == t)
-			) {
+			if ((null != e && (!E.ZP.hasChannels(e) || (null != t && !E.ZP.hasSelectableChannel(e, t))) && ((e = null), (t = null)), null != t && null == _.Z.getChannel(t) && ((e = null), (t = null)), null == e && null == t && (e = h.Z.getGuildId()), null != e && null == t)) {
 				let n = E.ZP.getDefaultChannel(e);
 				null != n && (t = n.id);
 			}
@@ -488,7 +377,7 @@ A(V, 'displayName', 'OverlayStore'),
 		},
 		OVERLAY_ACTIVATE_REGION: function (e) {
 			let { region: t } = e;
-			if (v !== (0, m.QF)() || M.has(t)) return !1;
+			if (v !== (0, I.QF)() || M.has(t)) return !1;
 			M.add(t);
 		},
 		OVERLAY_DEACTIVATE_ALL_REGIONS: B,
@@ -498,7 +387,7 @@ A(V, 'displayName', 'OverlayStore'),
 		WINDOW_RESIZED: function () {
 			if (__OVERLAY__) {
 				let e = T.Z.windowSize();
-				!(0, m.Te)(e) && (P = !1);
+				!(0, I.Te)(e) && (P = !1);
 			}
 		},
 		OVERLAY_SET_ASSOCIATED_GAME: function (e) {

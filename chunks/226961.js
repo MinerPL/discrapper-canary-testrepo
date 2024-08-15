@@ -3,7 +3,7 @@ n.d(t, {
 		return v;
 	},
 	Pz: function () {
-		return I;
+		return m;
 	},
 	fZ: function () {
 		return O;
@@ -37,7 +37,7 @@ let E = v(d.Yn.DEFAULT, c._s_.TRANSPORT, 0),
 	f = E,
 	h = {},
 	p = new Map(),
-	I = {
+	m = {
 		availableOutgoingBitrate: !0,
 		bitrate: !0,
 		bitrateTarget: !0,
@@ -57,7 +57,7 @@ let E = v(d.Yn.DEFAULT, c._s_.TRANSPORT, 0),
 		packetsSent: !0,
 		ping: !0
 	};
-function m(e, t, n) {
+function I(e, t, n) {
 	return ''.concat(e, ':').concat(t, ':').concat(n);
 }
 function T(e, t) {
@@ -70,15 +70,15 @@ class g {
 	put(e, t, n, r) {
 		if ('' === r) {
 			let r = { ...this.state };
-			return delete r[m(e, t, n)], new g(r);
+			return delete r[I(e, t, n)], new g(r);
 		}
 		return new g({
-			[m(e, t, n)]: r,
+			[I(e, t, n)]: r,
 			...this.state
 		});
 	}
 	get(e, t, n) {
-		let r = this.state[m(e, t, n)];
+		let r = this.state[I(e, t, n)];
 		return null != r ? r : null;
 	}
 	constructor(e) {
@@ -172,7 +172,7 @@ _(y, 'displayName', 'RTCDebugStore'),
 						} else if ('object' == typeof s && null !== s) {
 							let n = 'object' == typeof t && null !== t ? t : {};
 							i[a] = e(s, n, r);
-						} else if (a in I && 'number' == typeof s) {
+						} else if (a in m && 'number' == typeof s) {
 							let e = (i[a] = Array.isArray(t) ? t : []);
 							e.push({
 								value: s,

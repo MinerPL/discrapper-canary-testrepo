@@ -52,27 +52,18 @@ class s {
 				n.save();
 			return;
 		}
-		'boolean' == typeof t.disabled && (r.disabled = t.disabled),
-			'number' == typeof t.screen && (r.screen = t.screen),
-			(r.date = Date.now()),
-			n.save();
+		'boolean' == typeof t.disabled && (r.disabled = t.disabled), 'number' == typeof t.screen && (r.screen = t.screen), (r.date = Date.now()), n.save();
 	}
 	static isPromptingForGameDisable(e) {
 		var t, n;
-		return (
-			null !== (n = null === (t = s.getGameSettings(e)) || void 0 === t ? void 0 : t.disabled) && void 0 !== n && n
-		);
+		return null !== (n = null === (t = s.getGameSettings(e)) || void 0 === t ? void 0 : t.disabled) && void 0 !== n && n;
 	}
 	static setPromptingForGameDisable(e, t) {
 		s.updateGameSettings(e, { disabled: t });
 	}
 	static getGameDisplayMode(e) {
 		var t, n;
-		return null == e
-			? null
-			: null !== (n = null === (t = s.getGameSettings(e)) || void 0 === t ? void 0 : t.screen) && void 0 !== n
-				? n
-				: null;
+		return null == e ? null : null !== (n = null === (t = s.getGameSettings(e)) || void 0 === t ? void 0 : t.screen) && void 0 !== n ? n : null;
 	}
 	static setGameDisplayMode(e, t) {
 		s.updateGameSettings(e, { screen: t });

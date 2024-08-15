@@ -41,11 +41,7 @@ t.Z = {
 	getGuildNameSuggestion: function (e) {
 		let t = c.default.getCurrentUser(),
 			n = _.oY(t);
-		return null == n || 0 === n.length
-			? ''
-			: E.Z.Messages.CREATE_SERVER_DEFAULT_SERVER_NAME_FORMAT.format({
-					username: (null == e ? void 0 : e.truncateUsername) ? n.slice(0, 20) : n
-				});
+		return null == n || 0 === n.length ? '' : E.Z.Messages.CREATE_SERVER_DEFAULT_SERVER_NAME_FORMAT.format({ username: (null == e ? void 0 : e.truncateUsername) ? n.slice(0, 20) : n });
 	},
 	requestMembers(e, t) {
 		let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,

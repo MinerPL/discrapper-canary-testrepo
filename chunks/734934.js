@@ -26,8 +26,7 @@ function f(e, t) {
 	o.hW.updateAsync(
 		'notifications',
 		(n) => {
-			(n.quietMode = r.D5.create({ value: e })),
-				(n.focusModeExpiresAtMs = e && null != t ? ''.concat(Date.now() + t) : '0');
+			(n.quietMode = r.D5.create({ value: e })), (n.focusModeExpiresAtMs = e && null != t ? ''.concat(Date.now() + t) : '0');
 		},
 		o.fy.INFREQUENT_USER_ACTION
 	),

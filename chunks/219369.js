@@ -15,10 +15,7 @@ var s,
 	r = n(626135),
 	l = n(63063),
 	o = n(981631);
-((s = a || (a = {})).DESCRIPTION = 'description'),
-	(s.CATEGORIES = 'categories'),
-	(s.TAGS = 'tags'),
-	(s.AGREE_TO_RULES = 'agree_to_rules');
+((s = a || (a = {})).DESCRIPTION = 'description'), (s.CATEGORIES = 'categories'), (s.TAGS = 'tags'), (s.AGREE_TO_RULES = 'agree_to_rules');
 let c = (e, t, n) => {
 		r.default.track(o.rMx.USER_FLOW_TRANSITION, {
 			flow_type: o.jXE.DISCOVERY_SETUP_MODAL,

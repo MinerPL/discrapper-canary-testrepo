@@ -62,8 +62,7 @@ let a = (0, r.B)({
 		]
 	});
 function o(e) {
-	c.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }),
-		u.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
+	c.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }), u.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
 	let { enabled: t } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
 	t && s.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
 	let { enabled: n } = i.C.getCurrentConfig(

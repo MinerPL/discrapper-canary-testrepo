@@ -11,10 +11,7 @@ var i = n(979714),
 	o = n(79320),
 	l = n(600795);
 let u = (0, a.vQ)('keydown', (e) => !!(0, l.Tm)(e) && (e.preventDefault(), !0)),
-	c = (0, a.vQ)(
-		'mousedown',
-		(e) => -1 === e.type.indexOf('touch') && -1 !== e.type.indexOf('mouse') && ((0, o.Yk)(!1), !0)
-	),
+	c = (0, a.vQ)('mousedown', (e) => -1 === e.type.indexOf('touch') && -1 !== e.type.indexOf('mouse') && ((0, o.Yk)(!1), !0)),
 	d = {
 		backends: [
 			{

@@ -21,8 +21,8 @@ var r = n(512722),
 	f = n(201133),
 	h = n(55000),
 	p = n(314091),
-	I = n(981631),
-	m = n(689938);
+	m = n(981631),
+	I = n(689938);
 let T = async (e) => {
 		let { reaction: t, altText: n, ...r } = e,
 			i = await A(r);
@@ -55,18 +55,9 @@ let T = async (e) => {
 			{ assets: u, application_id: c } = r,
 			d = (0, _.getAssetImage)(c, null == u ? void 0 : u.large_image, 64),
 			f = null == i ? void 0 : i.getIconURL(64),
-			h =
-				null != l
-					? o
-						? l.icon.darkPNG
-						: l.icon.lightPNG
-					: r.type === I.IIU.PLAYING
-						? o
-							? n(414575)
-							: n(807612)
-						: null,
-			m =
-				r.type === I.IIU.HANG_STATUS && (null === (t = r.emoji) || void 0 === t ? void 0 : t.id) != null
+			h = null != l ? (o ? l.icon.darkPNG : l.icon.lightPNG) : r.type === m.IIU.PLAYING ? (o ? n(414575) : n(807612)) : null,
+			I =
+				r.type === m.IIU.HANG_STATUS && (null === (t = r.emoji) || void 0 === t ? void 0 : t.id) != null
 					? (0, E.qc)({
 							id: r.emoji.id,
 							name: r.emoji.name,
@@ -77,7 +68,7 @@ let T = async (e) => {
 			...(null != h && { Platform: h }),
 			...(null != d && { AssetImage: d.includes('http') ? d : n(869469)(d) }),
 			...(null != f && { ApplicationImage: f }),
-			...(null != m && { HangStatus: m })
+			...(null != I && { HangStatus: I })
 		};
 	},
 	A = async (e) => {
@@ -93,15 +84,7 @@ let T = async (e) => {
 			drawImage: (e) => {
 				var r;
 				e.setFont({ truncate: u.GX.Truncate }),
-					null != i
-						? y(e, n, t)
-						: (0, l.Z)(n)
-							? O(e, n, t)
-							: (0, o.Z)(n) && n.name === s.Z.get(I.ABu.LEAGUE_OF_LEGENDS).name
-								? C(e, n, t)
-								: n.type === I.IIU.HANG_STATUS
-									? R(e, n, t)
-									: v(e, n, t),
+					null != i ? y(e, n, t) : (0, l.Z)(n) ? O(e, n, t) : (0, o.Z)(n) && n.name === s.Z.get(m.ABu.LEAGUE_OF_LEGENDS).name ? C(e, n, t) : n.type === m.IIU.HANG_STATUS ? R(e, n, t) : v(e, n, t),
 					(null === (r = e.assetMap) || void 0 === r ? void 0 : r.has('Platform')) &&
 						e.drawImage(
 							'Platform',
@@ -344,7 +327,7 @@ let T = async (e) => {
 				weight: 700
 			}),
 			e.drawText(
-				m.Z.Messages.STATUS_LEAD_IN_JUST,
+				I.Z.Messages.STATUS_LEAD_IN_JUST,
 				{
 					x: l,
 					y: h.SG + 1 * h.Nv,

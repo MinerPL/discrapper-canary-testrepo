@@ -26,7 +26,7 @@ var r = n(470079),
 						n
 					);
 			},
-			I = (0, s.default)(
+			m = (0, s.default)(
 				(0, o.Z)(
 					{
 						default: {
@@ -85,26 +85,21 @@ var r = n(470079),
 		return r.createElement(
 			'div',
 			{
-				style: I.card,
+				style: m.card,
 				className: 'block-picker ' + (void 0 === f ? '' : f)
 			},
-			r.createElement('div', { style: I.triangle }),
+			r.createElement('div', { style: m.triangle }),
+			r.createElement('div', { style: m.head }, h && r.createElement(u.QN, { borderRadius: '6px 6px 0 0' }), r.createElement('div', { style: m.label }, i)),
 			r.createElement(
 				'div',
-				{ style: I.head },
-				h && r.createElement(u.QN, { borderRadius: '6px 6px 0 0' }),
-				r.createElement('div', { style: I.label }, i)
-			),
-			r.createElement(
-				'div',
-				{ style: I.body },
+				{ style: m.body },
 				r.createElement(c.Z, {
 					colors: a,
 					onClick: p,
 					onSwatchHover: n
 				}),
 				r.createElement(u.Vm, {
-					style: { input: I.input },
+					style: { input: m.input },
 					value: i,
 					onChange: p
 				})

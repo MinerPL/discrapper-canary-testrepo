@@ -21,27 +21,14 @@ let c = (0, E._I)((e = {}) => {
 				let I = t.originalException.name || t.originalException.constructor.name,
 					u = (function (e, t, r) {
 						try {
-							let a = [
-									'name',
-									'message',
-									'stack',
-									'line',
-									'column',
-									'fileName',
-									'lineNumber',
-									'columnNumber',
-									'toJSON'
-								],
+							let a = ['name', 'message', 'stack', 'line', 'column', 'fileName', 'lineNumber', 'columnNumber', 'toJSON'],
 								o = {};
 							for (let t of Object.keys(e)) {
 								if (-1 !== a.indexOf(t)) continue;
 								let _ = e[t];
 								o[t] = (0, n.VZ)(_) || 'string' == typeof _ ? (0, i.$G)(`${_}`, r) : _;
 							}
-							if (
-								(t && void 0 !== e.cause && (o.cause = (0, n.VZ)(e.cause) ? e.cause.toString() : e.cause),
-								'function' == typeof e.toJSON)
-							) {
+							if ((t && void 0 !== e.cause && (o.cause = (0, n.VZ)(e.cause) ? e.cause.toString() : e.cause), 'function' == typeof e.toJSON)) {
 								let t = e.toJSON();
 								for (let e of Object.keys(t)) {
 									let r = t[e];

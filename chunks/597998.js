@@ -21,8 +21,8 @@ var i,
 	_ = n(833858),
 	f = n(223135),
 	E = n(374129),
-	g = n(639351),
-	C = n(630388),
+	C = n(639351),
+	g = n(630388),
 	I = n(51144),
 	x = n(981631),
 	T = n(354459),
@@ -101,18 +101,7 @@ class b extends (i = s.Component) {
 		});
 	}
 	renderName() {
-		let {
-				nick: e,
-				user: t,
-				collapsed: n,
-				speaking: i,
-				userNameClassName: s,
-				mute: l,
-				serverMute: o,
-				isGuest: c,
-				isOverlay: u,
-				guildId: d
-			} = this.props,
+		let { nick: e, user: t, collapsed: n, speaking: i, userNameClassName: s, mute: l, serverMute: o, isGuest: c, isOverlay: u, guildId: d } = this.props,
 			h = (0, a.jsxs)('div', {
 				className: r()(s, {
 					[S.username]: !0,
@@ -150,33 +139,7 @@ class b extends (i = s.Component) {
 			: null;
 	}
 	renderIcons() {
-		let {
-			mute: e,
-			localMute: t,
-			localVideoDisabled: n,
-			serverMute: i,
-			deaf: s,
-			serverDeaf: l,
-			collapsed: c,
-			video: d,
-			isStreaming: m,
-			disabled: p,
-			isWatching: _,
-			iconClassName: f,
-			embeddedApplication: I,
-			otherClientSessionType: Z,
-			voicePlatform: A,
-			hangStatusActivity: b,
-			showHangStatus: L,
-			isSelf: P,
-			application: O,
-			guildId: y,
-			channelId: D,
-			user: k,
-			handleHoverHangStatus: U,
-			handleHoverIcons: w,
-			disconnected: B
-		} = this.props;
+		let { mute: e, localMute: t, localVideoDisabled: n, serverMute: i, deaf: s, serverDeaf: l, collapsed: c, video: d, isStreaming: m, disabled: p, isWatching: _, iconClassName: f, embeddedApplication: I, otherClientSessionType: Z, voicePlatform: A, hangStatusActivity: b, showHangStatus: L, isSelf: P, application: O, guildId: y, channelId: D, user: k, handleHoverHangStatus: U, handleHoverIcons: w, disconnected: B } = this.props;
 		if (c || p) return null;
 		let H = [],
 			G = (0, a.jsx)(j, {
@@ -257,7 +220,7 @@ class b extends (i = s.Component) {
 							'div',
 							{
 								className: r()(S.iconSpacing),
-								children: (0, a.jsx)(g.Z, { className: r()(S.icon, f) })
+								children: (0, a.jsx)(C.Z, { className: r()(S.icon, f) })
 							},
 							'xbox'
 						)
@@ -300,7 +263,7 @@ class b extends (i = s.Component) {
 							'watch'
 						)
 					);
-		let V = null != O && !(0, C.yE)(O.flags, x.udG.EMBEDDED),
+		let V = null != O && !(0, g.yE)(O.flags, x.udG.EMBEDDED),
 			F = null == b && V;
 		return 0 !== H.length || null != G || L || F
 			? (0, a.jsxs)('div', {
@@ -341,18 +304,7 @@ class b extends (i = s.Component) {
 			: null;
 	}
 	render() {
-		let {
-			onClick: e,
-			onKeyDown: t,
-			flipped: n,
-			size: i,
-			className: s,
-			selected: l,
-			disabled: c,
-			overlap: u,
-			'aria-label': d,
-			tabIndex: h
-		} = this.props;
+		let { onClick: e, onKeyDown: t, flipped: n, size: i, className: s, selected: l, disabled: c, overlap: u, 'aria-label': d, tabIndex: h } = this.props;
 		return (0, a.jsx)(o.Clickable, {
 			className: r()(s, {
 				[S.voiceUser]: !0,

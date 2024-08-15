@@ -7,21 +7,7 @@ var i = n(735250),
 	c = n(433355),
 	u = n(841829);
 t.Z = a.memo(function (e) {
-	let {
-			message: t,
-			subtitle: n,
-			countdown: d,
-			buttonText: h,
-			buttonColor: m,
-			buttonSubmitting: p,
-			onButtonClick: _,
-			imageSrc: f,
-			animationSrc: E,
-			secondaryButtonText: g,
-			onSecondaryButtonClick: C,
-			children: I,
-			useReducedMotion: x = !1
-		} = e,
+	let { message: t, subtitle: n, countdown: d, buttonText: h, buttonColor: m, buttonSubmitting: p, onButtonClick: _, imageSrc: f, animationSrc: E, secondaryButtonText: C, onSecondaryButtonClick: g, children: I, useReducedMotion: x = !1 } = e,
 		T = (0, l.e7)([c.ZP], () => c.ZP.getState().isMembersOpen);
 	if (s.tq && T) return null;
 	if (null == t) return (0, i.jsx)(i.Fragment, { children: a.Children.only(I) });
@@ -67,15 +53,15 @@ t.Z = a.memo(function (e) {
 				(0, i.jsxs)('div', {
 					className: u.buttonContainer,
 					children: [
-						null != g &&
+						null != C &&
 							(0, i.jsx)(r.Button, {
 								className: u.button,
 								size: r.Button.Sizes.SMALL,
-								onClick: C,
+								onClick: g,
 								look: r.Button.Looks.LINK,
 								color: r.Button.Colors.PRIMARY,
 								submitting: p,
-								children: g
+								children: C
 							}),
 						null != h &&
 							(0, i.jsx)(r.Button, {

@@ -50,9 +50,7 @@ d(p, 'displayName', 'CategoryCollapseStore'),
 	d(p, 'persistKey', 'collapsedCategories'),
 	(t.Z = new p(a.Z, {
 		CONNECTION_OPEN: function (e) {
-			for (let t of (!e.userGuildSettings.partial && (_ = {}), e.userGuildSettings.entries))
-				if (null != t.channel_overrides)
-					for (let e of t.channel_overrides) e.collapsed ? (_[e.channel_id] = !0) : delete _[e.channel_id];
+			for (let t of (!e.userGuildSettings.partial && (_ = {}), e.userGuildSettings.entries)) if (null != t.channel_overrides) for (let e of t.channel_overrides) e.collapsed ? (_[e.channel_id] = !0) : delete _[e.channel_id];
 		},
 		USER_GUILD_SETTINGS_FULL_UPDATE: function (e) {
 			let { userGuildSettings: t } = e,

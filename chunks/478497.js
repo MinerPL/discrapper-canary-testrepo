@@ -11,14 +11,13 @@ var r = n(690244),
 	E = i('Map.prototype.set', !0),
 	f = i('Map.prototype.has', !0),
 	h = function (e, t) {
-		for (var n, r = e; null !== (n = r.next); r = n)
-			if (n.key === t) return (r.next = n.next), (n.next = e.next), (e.next = n), n;
+		for (var n, r = e; null !== (n = r.next); r = n) if (n.key === t) return (r.next = n.next), (n.next = e.next), (e.next = n), n;
 	},
 	p = function (e, t) {
 		var n = h(e, t);
 		return n && n.value;
 	},
-	I = function (e, t, n) {
+	m = function (e, t, n) {
 		var r = h(e, t);
 		r
 			? (r.value = n)
@@ -61,7 +60,7 @@ e.exports = function () {
 									key: {},
 									next: null
 								}),
-							I(n, r, i));
+							m(n, r, i));
 			}
 		};
 	return r;

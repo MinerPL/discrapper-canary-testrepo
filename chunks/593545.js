@@ -13,7 +13,7 @@ var r = n(735250),
 	f = n(689938),
 	h = n(48182),
 	p = n(594402);
-function I(e) {
+function m(e) {
 	let { text: t, language: i } = e,
 		a = () =>
 			(0, r.jsx)('pre', {
@@ -40,7 +40,7 @@ function I(e) {
 		renderFallback: () => a()
 	});
 }
-function m(e) {
+function I(e) {
 	let { expanded: t, setExpanded: n, isWholeFile: i, numLines: a } = e,
 		s = (i ? f.Z.Messages.PREVIEW_NUM_LINES : f.Z.Messages.PREVIEW_NUM_LINES_AT_LEAST).format({ lines: a });
 	return (0, r.jsx)(l.Tooltip, {
@@ -52,10 +52,7 @@ function m(e) {
 				onClick: () => {
 					n(!t);
 				},
-				children: [
-					(0, r.jsx)(_.Z, { direction: t ? _.Z.Directions.UP : _.Z.Directions.DOWN }),
-					t ? f.Z.Messages.COLLAPSE : f.Z.Messages.EXPAND
-				]
+				children: [(0, r.jsx)(_.Z, { direction: t ? _.Z.Directions.UP : _.Z.Directions.DOWN }), t ? f.Z.Messages.COLLAPSE : f.Z.Messages.EXPAND]
 			})
 	});
 }
@@ -172,28 +169,13 @@ function S(e) {
 }
 function A(e) {
 	var t;
-	let {
-			url: n,
-			fileName: i,
-			fileSize: a,
-			fileContents: o,
-			expanded: u,
-			setExpanded: d,
-			language: _,
-			setLanguage: p,
-			bytesLeft: A,
-			className: N
-		} = e,
+	let { url: n, fileName: i, fileSize: a, fileContents: o, expanded: u, setExpanded: d, language: _, setLanguage: p, bytesLeft: A, className: N } = e,
 		v = null == o ? void 0 : o.split('\n'),
 		O = null !== (t = null == v ? void 0 : v.length) && void 0 !== t ? t : 0,
 		R = u ? 100 : 6,
 		C = 0 === A,
 		y = '';
-	C && u && O > R ? (y = '\n...') : !C && (y = '...'),
-		'' !== y &&
-			(C
-				? (y += ' ' + f.Z.Messages.PREVIEW_LINES_LEFT.format({ lines: O - R }))
-				: (y += ' ' + f.Z.Messages.PREVIEW_BYTES_LEFT.format({ formattedBytes: (0, E.IC)(A) })));
+	C && u && O > R ? (y = '\n...') : !C && (y = '...'), '' !== y && (C ? (y += ' ' + f.Z.Messages.PREVIEW_LINES_LEFT.format({ lines: O - R })) : (y += ' ' + f.Z.Messages.PREVIEW_BYTES_LEFT.format({ formattedBytes: (0, E.IC)(A) })));
 	let D = (null == v ? void 0 : v.slice(0, R).join('\n')) + y,
 		L = (0, c.yx)(D),
 		b = u || R < O;
@@ -205,7 +187,7 @@ function A(e) {
 				children:
 					null == o
 						? (0, r.jsx)(l.Spinner, { className: h.spinner })
-						: (0, r.jsx)(I, {
+						: (0, r.jsx)(m, {
 								text: L,
 								language: _
 							})
@@ -218,7 +200,7 @@ function A(e) {
 					b
 						? (0, r.jsxs)(r.Fragment, {
 								children: [
-									(0, r.jsx)(m, {
+									(0, r.jsx)(I, {
 										expanded: u,
 										setExpanded: d,
 										isWholeFile: C,
@@ -269,7 +251,7 @@ function N(e) {
 						children:
 							null == u
 								? (0, r.jsx)(l.Spinner, { className: h.spinner })
-								: (0, r.jsx)(I, {
+								: (0, r.jsx)(m, {
 										text: p,
 										language: d
 									})
@@ -302,8 +284,8 @@ t.Z = i.memo(
 			[_, E] = i.useState(!1),
 			[f, p] = i.useState(n.split('.').slice(-1)[0]),
 			{
-				fileContents: I,
-				bytesLeft: m,
+				fileContents: m,
+				bytesLeft: I,
 				hadError: T
 			} = (function (e, t) {
 				let [n, r] = i.useState(!1),
@@ -327,8 +309,7 @@ t.Z = i.memo(
 										try {
 											return new TextDecoder(r);
 										} catch (t) {
-											if ((null == e ? void 0 : e.startsWith('text')) || r.toLowerCase().includes('utf'))
-												return new TextDecoder(n);
+											if ((null == e ? void 0 : e.startsWith('text')) || r.toLowerCase().includes('utf')) return new TextDecoder(n);
 											throw t;
 										}
 									})(t).decode(await a.arrayBuffer()),
@@ -361,8 +342,8 @@ t.Z = i.memo(
 					url: t,
 					fileName: n,
 					fileSize: a,
-					fileContents: I,
-					bytesLeft: m,
+					fileContents: m,
+					bytesLeft: I,
 					expanded: _,
 					setExpanded: E,
 					language: f,

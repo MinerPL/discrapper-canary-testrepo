@@ -19,8 +19,8 @@ var i = n(735250),
 	_ = n(768581),
 	f = n(906605),
 	E = n(106301),
-	g = n(833858),
-	C = n(866071),
+	C = n(833858),
+	g = n(866071),
 	I = n(223135),
 	x = n(981631),
 	T = n(231338),
@@ -43,7 +43,7 @@ let S = (e) => {
 		let { currentStatus: t, channel: s } = e,
 			r = a.useRef(E.Z.getRecentCustomStatuses()),
 			Z = a.useRef((0, m.un)(u.z.HANG_STATUS_NEW_BADGE)).current,
-			A = (0, g.V)(),
+			A = (0, C.V)(),
 			[M, b] = a.useState(null != t ? t : null),
 			R = (0, c.e7)([p.default], () => p.default.getCurrentUser()),
 			j = () => {
@@ -161,10 +161,7 @@ let S = (e) => {
 													alt: '',
 													className: v.icon
 												}),
-												style:
-													n === (null == t ? void 0 : t.state)
-														? { backgroundColor: null != a.color ? a.color : void 0 }
-														: {}
+												style: n === (null == t ? void 0 : t.state) ? { backgroundColor: null != a.color ? a.color : void 0 } : {}
 											})
 										},
 										n
@@ -192,10 +189,8 @@ let S = (e) => {
 							className: v.iconsContainer,
 							children: [
 								r.current.map((e, n) => {
-									let a =
-											e.status === (null == t ? void 0 : t.details) &&
-											o().isEqual(e.emoji, null == t ? void 0 : t.emoji),
-										r = null != e.emoji && !(0, C.K)(e.emoji, s);
+									let a = e.status === (null == t ? void 0 : t.details) && o().isEqual(e.emoji, null == t ? void 0 : t.emoji),
+										r = null != e.emoji && !(0, g.K)(e.emoji, s);
 									return (0, i.jsxs)(
 										d.Clickable,
 										{
@@ -236,13 +231,11 @@ let S = (e) => {
 									? (0, i.jsx)(
 											d.Clickable,
 											{
-												'aria-label':
-													null != t ? N.Z.Messages.STATUS_POPOUT_EDIT_CUSTOM : N.Z.Messages.STATUS_POPOUT_SET_CUSTOM,
+												'aria-label': null != t ? N.Z.Messages.STATUS_POPOUT_EDIT_CUSTOM : N.Z.Messages.STATUS_POPOUT_SET_CUSTOM,
 												onClick: y,
 												children: (0, i.jsx)(S, {
 													className: v.optionButton,
-													name:
-														null != t ? N.Z.Messages.STATUS_POPOUT_EDIT_CUSTOM : N.Z.Messages.STATUS_POPOUT_SET_CUSTOM,
+													name: null != t ? N.Z.Messages.STATUS_POPOUT_EDIT_CUSTOM : N.Z.Messages.STATUS_POPOUT_SET_CUSTOM,
 													icon: (0, i.jsx)(d.PencilIcon, {
 														size: 'custom',
 														color: 'currentColor',

@@ -28,10 +28,7 @@ function o(e) {
 				(0, i.jsxs)(s.Text, {
 					variant: o,
 					color: 'text-normal',
-					children: [
-						(0, i.jsx)(s.HiddenVisually, { children: r.Z.Messages.GUILD_PRODUCT_CARD_HIDDEN_ROLE_SCREEN_READER }),
-						n.name
-					]
+					children: [(0, i.jsx)(s.HiddenVisually, { children: r.Z.Messages.GUILD_PRODUCT_CARD_HIDDEN_ROLE_SCREEN_READER }), n.name]
 				}),
 				!0 === t &&
 					(0, i.jsxs)(i.Fragment, {

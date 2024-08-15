@@ -1,19 +1,6 @@
 t.Z = {
 	dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-	monthNames: [
-		'January',
-		'February',
-		'March',
-		'April',
-		'May',
-		'June',
-		'July',
-		'August',
-		'September',
-		'October',
-		'November',
-		'December'
-	],
+	monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
 	tokens: {
 		SKIP: /^[ \r\n\t]+|^\.$/,
 		number: /^[1-9][0-9]*/,

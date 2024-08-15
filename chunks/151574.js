@@ -13,8 +13,8 @@ var r,
 	f = n(481060),
 	h = n(100527),
 	p = n(906732),
-	I = n(570220),
-	m = n(686546),
+	m = n(570220),
+	I = n(686546),
 	T = n(28546),
 	g = n(285651),
 	S = n(926491),
@@ -45,8 +45,8 @@ function k(e) {
 		onClick: () => c(s, r),
 		onMouseOver: o,
 		children: [
-			(0, a.jsx)(m.ZP, {
-				mask: m.ZP.Masks.STICKER_ROUNDED_RECT,
+			(0, a.jsx)(I.ZP, {
+				mask: I.ZP.Masks.STICKER_ROUNDED_RECT,
 				width: w + 4,
 				height: w + 4,
 				className: P.mask,
@@ -65,15 +65,8 @@ function k(e) {
 (i = r || (r = {}))[(i.STICKER = 0)] = 'STICKER';
 t.Z = s.memo(function (e) {
 	var t;
-	let {
-			editorRef: n,
-			channel: r,
-			isEditorFocused: i,
-			onSelectSticker: o,
-			stickerIconVisible: _ = !1,
-			submitButtonVisible: E = !1
-		} = e,
-		m = s.useContext(I.ZP),
+	let { editorRef: n, channel: r, isEditorFocused: i, onSelectSticker: o, stickerIconVisible: _ = !1, submitButtonVisible: E = !1 } = e,
+		I = s.useContext(m.ZP),
 		[v, O] = s.useState(null),
 		[U, w] = s.useState(!1),
 		[B, F] = s.useState(null),
@@ -103,16 +96,14 @@ t.Z = s.memo(function (e) {
 				}
 			};
 		return (
-			m.addListener('text-changed', J),
-			m.addListener('autocomplete-visibility-change', e),
-			m.addListener('selection-changed', t),
+			I.addListener('text-changed', J),
+			I.addListener('autocomplete-visibility-change', e),
+			I.addListener('selection-changed', t),
 			() => {
-				m.removeListener('text-changed', J),
-					m.removeListener('autocomplete-visibility-change', e),
-					m.removeListener('selection-changed', t);
+				I.removeListener('text-changed', J), I.removeListener('autocomplete-visibility-change', e), I.removeListener('selection-changed', t);
 			}
 		);
-	}, [J, n, m]),
+	}, [J, n, I]),
 		s.useLayoutEffect(() => {
 			null == v && F(null);
 		}, [v]);
@@ -126,16 +117,7 @@ t.Z = s.memo(function (e) {
 	let er = X.length > 0,
 		ei = et && !V && !K && !U && !q && er,
 		{ stickersNavigator: ea } = (function (e) {
-			let {
-					editorRef: t,
-					hasStickerResults: n,
-					shouldRenderSuggestions: r,
-					focusedSuggestionType: i,
-					setFocusedStickerListItem: a,
-					setFocusedSuggestionType: o,
-					setHasDismissed: l,
-					setTextInputValue: u
-				} = e,
+			let { editorRef: t, hasStickerResults: n, shouldRenderSuggestions: r, focusedSuggestionType: i, setFocusedStickerListItem: a, setFocusedSuggestionType: o, setHasDismissed: l, setTextInputValue: u } = e,
 				_ = s.useCallback(
 					(e, t) => {
 						a(t);
@@ -169,10 +151,7 @@ t.Z = s.memo(function (e) {
 							0 === i && E.containerProps.onKeyDown(e);
 						}
 					};
-					return (
-						window.addEventListener('keydown', e, { capture: !0 }),
-						() => window.removeEventListener('keydown', e, { capture: !0 })
-					);
+					return window.addEventListener('keydown', e, { capture: !0 }), () => window.removeEventListener('keydown', e, { capture: !0 });
 				}, [E, r, i, o, n, t, l, a, u]),
 				{ stickersNavigator: E }
 			);
@@ -204,17 +183,14 @@ t.Z = s.memo(function (e) {
 							analyticsLocations: $
 						});
 				}
-				m.emit('sticker-suggestions-hidden');
+				I.emit('sticker-suggestions-hidden');
 			}
 		},
 		eo = s.useRef([]),
 		el = s.useRef(!1);
 	s.useEffect(() => {
-		ei && (eo.current = X),
-			ei !== el.current &&
-				(m.emit(ei ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), ei && ((0, L.Tk)(Z), W(Z))),
-			(el.current = ei);
-	}, [m, ei, X, Z]);
+		ei && (eo.current = X), ei !== el.current && (I.emit(ei ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), ei && ((0, L.Tk)(Z), W(Z))), (el.current = ei);
+	}, [I, ei, X, Z]);
 	let eu = !ei,
 		ec = ei ? X : eo.current;
 	return (0, a.jsx)(p.Gt, {
@@ -286,9 +262,7 @@ t.Z = s.memo(function (e) {
 											variant: 'text-sm/normal',
 											children:
 												null != B
-													? M.Z.Messages.EXPRESSION_SUGGESTIONS_STICKER_NAME.format({
-															stickerName: null === (t = X[+B]) || void 0 === t ? void 0 : t.sticker.name
-														})
+													? M.Z.Messages.EXPRESSION_SUGGESTIONS_STICKER_NAME.format({ stickerName: null === (t = X[+B]) || void 0 === t ? void 0 : t.sticker.name })
 													: M.Z.Messages.EXPRESSION_SUGGESTIONS_STICKER_SHORT_NAV_PROMPT.format({
 															upHook: (e, t) =>
 																(0, a.jsx)(

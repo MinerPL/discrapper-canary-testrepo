@@ -13,7 +13,6 @@ function u(e, n) {
 		a = (0, l.n)(),
 		s = t && a && u;
 	return r.useMemo(() => {
-		if ((null == e ? void 0 : e.image_asset) != null)
-			return (0, o._W)(e.application_id, e.image_asset, n, s ? void 0 : 'webp');
+		if ((null == e ? void 0 : e.image_asset) != null) return (0, o._W)(e.application_id, e.image_asset, n, s ? void 0 : 'webp');
 	}, [n, e, s]);
 }

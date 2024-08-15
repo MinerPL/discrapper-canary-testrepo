@@ -17,21 +17,17 @@ let h = {
 		overrides: {}
 	},
 	p = h;
-function I() {
+function m() {
 	r = f.Z.getCurrentConfig({ location: 'PerksDemosStore' }, { autoTrackExposure: !1 });
 }
-class m extends (o = u.ZP.Store) {
+class I extends (o = u.ZP.Store) {
 	isAvailable(e) {
 		var t;
 		return null !== (t = p.available[e]) && void 0 !== t && t;
 	}
 	hasActiveDemo(e) {
 		let t = p.activated[e];
-		return (
-			null != t &&
-			null != r &&
-			((r.enabled && !r.extendedDemoDuration) || (r.extendedDemoDuration && new Date() <= new Date(t.end_time)))
-		);
+		return null != t && null != r && ((r.enabled && !r.extendedDemoDuration) || (r.extendedDemoDuration && new Date() <= new Date(t.end_time)));
 	}
 	hasActivated(e) {
 		return null != p.activated[e];
@@ -52,7 +48,7 @@ class m extends (o = u.ZP.Store) {
 	}
 }
 (s = 'PerksDemosStore'),
-	(a = 'displayName') in (i = m)
+	(a = 'displayName') in (i = I)
 		? Object.defineProperty(i, a, {
 				value: s,
 				enumerable: !0,
@@ -60,7 +56,7 @@ class m extends (o = u.ZP.Store) {
 				writable: !0
 			})
 		: (i[a] = s),
-	(t.Z = new m(c.Z, {
+	(t.Z = new I(c.Z, {
 		PREMIUM_PERKS_DEMOS_FETCH_SUCCESS: function (e) {
 			let {
 				demos: { available: t, activated: n }
@@ -105,7 +101,7 @@ class m extends (o = u.ZP.Store) {
 		STREAM_STOP: function () {
 			(0, E.cD)(!1);
 		},
-		CONNECTION_OPEN: I,
-		EXPERIMENTS_FETCH_SUCCESS: I,
-		EXPERIMENT_OVERRIDE_BUCKET: I
+		CONNECTION_OPEN: m,
+		EXPERIMENTS_FETCH_SUCCESS: m,
+		EXPERIMENT_OVERRIDE_BUCKET: m
 	}));

@@ -23,18 +23,7 @@ var t = s(735250),
 	M = s(689938),
 	f = s(361307);
 function k(e) {
-	let {
-			editPermissions: a,
-			guildId: s,
-			hasMemberSearch: n,
-			headerText: i,
-			onClose: k,
-			overwrittenKeys: p,
-			search: g,
-			searchPlaceholderText: N,
-			selectedPermissionCount: _,
-			transitionState: S
-		} = e,
+	let { editPermissions: a, guildId: s, hasMemberSearch: n, headerText: i, onClose: k, overwrittenKeys: p, search: g, searchPlaceholderText: N, selectedPermissionCount: _, transitionState: S } = e,
 		j = (0, c.e7)([C.Z], () => C.Z.getGuild(s), [s]);
 	o()(null != j, '');
 	let [E, A] = l.useState(null),

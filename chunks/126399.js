@@ -19,8 +19,7 @@ class h extends u.Z {
 		r.Z.subscribe('BROWSER_HANDOFF_END', this.handleEnd), r.Z.subscribe('BROWSER_HANDOFF_FROM_APP', this.handleHandoff);
 	}
 	_terminate() {
-		r.Z.unsubscribe('BROWSER_HANDOFF_END', this.handleEnd),
-			r.Z.unsubscribe('BROWSER_HANDOFF_FROM_APP', this.handleHandoff);
+		r.Z.unsubscribe('BROWSER_HANDOFF_END', this.handleEnd), r.Z.unsubscribe('BROWSER_HANDOFF_FROM_APP', this.handleHandoff);
 	}
 	handleHandoff(e) {
 		let { handoffKey: t, handoffToken: n, fingerprint: r, handoffSource: o } = e;

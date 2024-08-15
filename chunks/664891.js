@@ -40,30 +40,8 @@ var i = t(735250),
 function D(e) {
 	var n;
 	let t,
-		{
-			premiumSubscription: r,
-			paymentSources: m,
-			priceOptions: I,
-			onPaymentSourceChange: P,
-			onPaymentSourceAdd: y,
-			planId: O,
-			setHasAcceptedTerms: j,
-			legalTermsNodeRef: D,
-			hasLegalTermsFlash: F,
-			onInvoiceError: H,
-			planGroup: W,
-			currencies: Y,
-			onCurrencyChange: K,
-			hasOpenInvoice: V,
-			purchaseState: z,
-			handleClose: X
-		} = e,
-		{
-			selectedSkuId: q,
-			defaultPlanId: J,
-			isPremium: Q,
-			startedPaymentFlowWithPaymentSourcesRef: $
-		} = (0, E.usePaymentContext)(),
+		{ premiumSubscription: r, paymentSources: m, priceOptions: I, onPaymentSourceChange: P, onPaymentSourceAdd: y, planId: O, setHasAcceptedTerms: j, legalTermsNodeRef: D, hasLegalTermsFlash: F, onInvoiceError: H, planGroup: W, currencies: Y, onCurrencyChange: K, hasOpenInvoice: V, purchaseState: z, handleClose: X } = e,
+		{ selectedSkuId: q, defaultPlanId: J, isPremium: Q, startedPaymentFlowWithPaymentSourcesRef: $ } = (0, E.usePaymentContext)(),
 		{ isGift: ee } = (0, f.wD)(),
 		en = I.paymentSourceId,
 		et = (0, o.e7)([h.Z], () => h.Z.get(O));
@@ -92,12 +70,7 @@ function D(e) {
 				}),
 			[q, r, J, Q, ee]
 		);
-	t =
-		V || el
-			? L.Z.Messages.BILLING_PURCHASE_DETAILS_HEADER
-			: (0, b.PV)(O)
-				? (0, b.W_)(r, et)
-				: L.Z.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format({ planName: et.name });
+	t = V || el ? L.Z.Messages.BILLING_PURCHASE_DETAILS_HEADER : (0, b.PV)(O) ? (0, b.W_)(r, et) : L.Z.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format({ planName: et.name });
 	let ec = null;
 	return (
 		null != r &&
@@ -332,18 +305,7 @@ function G(e) {
 function B(e) {
 	var n, t;
 	let r,
-		{
-			premiumSubscription: s,
-			newPlan: l,
-			onInvoiceError: o,
-			planGroup: u,
-			priceOptions: _,
-			preventFetch: f,
-			disabled: E,
-			isEEA: x,
-			paymentSources: N,
-			setHasAcceptedTerms: S
-		} = e,
+		{ premiumSubscription: s, newPlan: l, onInvoiceError: o, planGroup: u, priceOptions: _, preventFetch: f, disabled: E, isEEA: x, paymentSources: N, setHasAcceptedTerms: S } = e,
 		{ analyticsLocations: T } = (0, I.ZP)(),
 		h = (0, b.al)(s, l.id, 1, new Set(u)),
 		[g, v] = (0, P.ED)({
@@ -374,10 +336,7 @@ function B(e) {
 					onChange: S,
 					finePrint: (0, i.jsx)(d.Z, {
 						subscriptionPlan: l,
-						paymentSourceType:
-							null === (n = N[null !== (t = _.paymentSourceId) && void 0 !== t ? t : '']) || void 0 === n
-								? void 0
-								: n.type,
+						paymentSourceType: null === (n = N[null !== (t = _.paymentSourceId) && void 0 !== t ? t : '']) || void 0 === n ? void 0 : n.type,
 						basePrice: r,
 						currentSubscription: s,
 						planGroup: u

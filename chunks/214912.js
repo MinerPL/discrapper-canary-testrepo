@@ -118,9 +118,7 @@ function C(e) {
 								(0, t.jsx)(o.Text, {
 									variant: 'text-xs/normal',
 									color: 'header-secondary',
-									children: I.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
-										count: n.approximate_member_count
-									})
+									children: I.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: n.approximate_member_count })
 								})
 							]
 						})

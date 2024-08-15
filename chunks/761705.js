@@ -109,16 +109,10 @@ class _ extends o.Component {
 }
 class N extends (a = o.Component) {
 	componentDidMount() {
-		this.preloadNextImages(),
-			p.Z.disable(),
-			p.Z.enableTemp(h.P),
-			C.S.subscribe(f.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled),
-			C.S.subscribe(f.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
+		this.preloadNextImages(), p.Z.disable(), p.Z.enableTemp(h.P), C.S.subscribe(f.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled), C.S.subscribe(f.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
 	}
 	componentWillUnmount() {
-		p.Z.disableTemp(),
-			C.S.unsubscribe(f.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled),
-			C.S.unsubscribe(f.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
+		p.Z.disableTemp(), C.S.unsubscribe(f.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled), C.S.unsubscribe(f.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
 	}
 	preloadNextImages() {
 		var t, e;

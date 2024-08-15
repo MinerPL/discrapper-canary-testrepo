@@ -65,10 +65,7 @@ function A(e, n) {
 							id: r.id,
 							action: () => {
 								var l;
-								return (
-									(l = r),
-									void (e.id === d.default.getId() ? s.default.selectVoiceChannel(l.id) : a.Z.setChannel(n, e.id, l.id))
-								);
+								return (l = r), void (e.id === d.default.getId() ? s.default.selectVoiceChannel(l.id) : a.Z.setChannel(n, e.id, l.id));
 							},
 							label: (0, u.F6)(r, f.default, _.Z)
 						},

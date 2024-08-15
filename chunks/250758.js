@@ -150,11 +150,7 @@ function O(e, t) {
 								((function (e) {
 									let t = h.Z.getSearchType(e),
 										n = [C.dCx.FILTER_HAS];
-									return (
-										!N.Z.hidePersonalInformation && (n.push(C.dCx.FILTER_FROM), n.push(C.dCx.FILTER_MENTIONS)),
-										t === C.aib.GUILD && n.push(C.dCx.FILTER_IN),
-										n
-									);
+									return !N.Z.hidePersonalInformation && (n.push(C.dCx.FILTER_FROM), n.push(C.dCx.FILTER_MENTIONS)), t === C.aib.GUILD && n.push(C.dCx.FILTER_IN), n;
 								})(t).forEach((n) => {
 									if (null == n) return;
 									let a = R(n, e, t, 3);
@@ -165,18 +161,9 @@ function O(e, t) {
 										let n = (null != e ? e.getFullMatch() : '').trim();
 										if (null != n && '' !== n) {
 											var i, a, s;
-											let e =
-													null === (i = c.ZP[C.dCx.FILTER_BEFORE]) || void 0 === i
-														? void 0
-														: i.getAutocompletions(n, t, 1)[0],
-												r =
-													null === (a = c.ZP[C.dCx.FILTER_ON]) || void 0 === a
-														? void 0
-														: a.getAutocompletions(n, t, 1)[0],
-												l =
-													null === (s = c.ZP[C.dCx.FILTER_AFTER]) || void 0 === s
-														? void 0
-														: s.getAutocompletions(n, t, 1)[0];
+											let e = null === (i = c.ZP[C.dCx.FILTER_BEFORE]) || void 0 === i ? void 0 : i.getAutocompletions(n, t, 1)[0],
+												r = null === (a = c.ZP[C.dCx.FILTER_ON]) || void 0 === a ? void 0 : a.getAutocompletions(n, t, 1)[0],
+												l = null === (s = c.ZP[C.dCx.FILTER_AFTER]) || void 0 === s ? void 0 : s.getAutocompletions(n, t, 1)[0];
 											return null == e
 												? null
 												: {
@@ -266,19 +253,10 @@ let P = new Z(o.Z, {
 			c = g[i],
 			u = !0;
 		if (r === o.query && (null == o.mode || o.mode.filter === l.filter)) (n = o.autocompletes), (u = !1);
-		else if (
-			l.type === C.Sap.EMPTY ||
-			(l.type === C.Sap.FILTER && l.filter !== C.dCx.FILTER_FROM && l.filter !== C.dCx.FILTER_MENTIONS)
-		)
-			null != c && (c.context.clearQuery(), (c.results = [])), (n = O(i, l));
+		else if (l.type === C.Sap.EMPTY || (l.type === C.Sap.FILTER && l.filter !== C.dCx.FILTER_FROM && l.filter !== C.dCx.FILTER_MENTIONS)) null != c && (c.context.clearQuery(), (c.results = [])), (n = O(i, l));
 		else if (null != c) {
 			let { token: e } = l;
-			null != e && e.getFullMatch().trim().length > 0
-				? (E.Z.requestMembers(i, e.getFullMatch().trim(), 10),
-					c.context.setQuery(e.getFullMatch().trim(), { guild: i }),
-					(n = o.autocompletes),
-					(u = !1))
-				: (c.context.clearQuery(), (n = O(i, l)));
+			null != e && e.getFullMatch().trim().length > 0 ? (E.Z.requestMembers(i, e.getFullMatch().trim(), 10), c.context.setQuery(e.getFullMatch().trim(), { guild: i }), (n = o.autocompletes), (u = !1)) : (c.context.clearQuery(), (n = O(i, l)));
 		}
 		return (
 			(p[i] = S({

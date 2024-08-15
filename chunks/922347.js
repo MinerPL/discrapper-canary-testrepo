@@ -30,11 +30,6 @@ class o extends i.Z {
 		});
 	}
 	constructor(e) {
-		super(e),
-			a(this, 'asset', void 0),
-			a(this, 'label', void 0),
-			(this.type = r.Z.AVATAR_DECORATION),
-			(this.asset = e.asset),
-			(this.label = e.label);
+		super(e), a(this, 'asset', void 0), a(this, 'label', void 0), (this.type = r.Z.AVATAR_DECORATION), (this.asset = e.asset), (this.label = e.label);
 	}
 }

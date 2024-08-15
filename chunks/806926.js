@@ -20,16 +20,7 @@ var i = t(442837),
 	m = t(392214);
 function p(e) {
 	var n;
-	let {
-			user: t,
-			currentUser: p,
-			channelId: x,
-			displayProfile: Z,
-			initialSection: v,
-			initialSubsection: h,
-			friendToken: S,
-			onClose: T
-		} = e,
+	let { user: t, currentUser: p, channelId: x, displayProfile: Z, initialSection: v, initialSubsection: h, friendToken: S, onClose: T } = e,
 		A = (0, i.e7)([o.Z], () => o.Z.getRelationshipType(t.id)),
 		g = (0, _.Z)({
 			user: t,

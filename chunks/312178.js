@@ -70,10 +70,7 @@ let C = {
 };
 class v extends s.PureComponent {
 	componentDidUpdate(e) {
-		this.props.locked &&
-			!e.locked &&
-			null != this.state.lastLayoutUpdate &&
-			(r.Z.track(I.rMx.OVERLAY_LAYOUT_UPDATED, this.state.lastLayoutUpdate), this.setState({ lastLayoutUpdate: null }));
+		this.props.locked && !e.locked && null != this.state.lastLayoutUpdate && (r.Z.track(I.rMx.OVERLAY_LAYOUT_UPDATED, this.state.lastLayoutUpdate), this.setState({ lastLayoutUpdate: null }));
 	}
 	renderWidget(e, t, n) {
 		let {

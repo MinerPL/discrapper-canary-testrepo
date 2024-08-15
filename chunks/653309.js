@@ -53,11 +53,7 @@ function d(e, t) {
 					let [t, n] = e;
 					if ('hljsTypes' === t) return n;
 					if (!0 === n) {
-						if (
-							(('codeBlockLang' === t || 'codeBlockSyntax' === t) && (E = !1),
-							t.startsWith('before_') || t.startsWith('after_'))
-						)
-							return [o[t]];
+						if ((('codeBlockLang' === t || 'codeBlockSyntax' === t) && (E = !1), t.startsWith('before_') || t.startsWith('after_'))) return [o[t]];
 						if (t in c) return [c[t]];
 						throw Error('Slate: Unknown decoration attribute: '.concat(t));
 					}

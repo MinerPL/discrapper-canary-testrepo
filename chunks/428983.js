@@ -21,9 +21,7 @@ let u = [2500, 4000],
 				R = (0, _.I)('LCP'),
 				A = (e) => {
 					let t = e[e.length - 1];
-					t &&
-						t.startTime < I.firstHiddenTime &&
-						((R.value = Math.max(t.startTime - (0, o.A)(), 0)), (R.entries = [t]), r());
+					t && t.startTime < I.firstHiddenTime && ((R.value = Math.max(t.startTime - (0, o.A)(), 0)), (R.entries = [t]), r());
 				},
 				T = (0, E.N)('largest-contentful-paint', A);
 			if (T) {

@@ -9,13 +9,13 @@ n.d(t, {
 		return S;
 	},
 	Lq: function () {
-		return I;
+		return m;
 	},
 	P1: function () {
 		return r;
 	},
 	PP: function () {
-		return m;
+		return I;
 	},
 	Ub: function () {
 		return p;
@@ -55,13 +55,7 @@ var r,
 	_ = n(430824),
 	E = n(626135),
 	f = n(981631);
-((i = r || (r = {})).SEARCH = 'Search'),
-	(i.RECOMMENDED = 'Recommended'),
-	(i.POPULAR = 'Popular'),
-	(i.RECOMMENDED_E3 = 'Recommended - E3'),
-	(i.HEADER = 'Header'),
-	(i.GLOBAL_DISCOVERY = 'Global Discovery'),
-	(i.FORWARD_BREADCRUMB = 'Forward Breadcrumb');
+((i = r || (r = {})).SEARCH = 'Search'), (i.RECOMMENDED = 'Recommended'), (i.POPULAR = 'Popular'), (i.RECOMMENDED_E3 = 'Recommended - E3'), (i.HEADER = 'Header'), (i.GLOBAL_DISCOVERY = 'Global Discovery'), (i.FORWARD_BREADCRUMB = 'Forward Breadcrumb');
 let h = '>200';
 async function p(e, t) {
 	let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
@@ -90,7 +84,7 @@ async function p(e, t) {
 				))),
 		null == i || i();
 }
-async function I(e) {
+async function m(e) {
 	let t,
 		{ loadId: n, guildId: i, index: a, analyticsContext: s, categoryId: o } = e;
 	'string' == typeof s && s in r && (t = s);
@@ -123,7 +117,7 @@ async function I(e) {
 			categoryId: o
 		});
 }
-function m(e) {
+function I(e) {
 	return {
 		id: e.id,
 		name: e.name,
@@ -225,7 +219,7 @@ async function C(e) {
 			}),
 			i = null === (n = r.body) || void 0 === n ? void 0 : null === (t = n.guilds) || void 0 === t ? void 0 : t[0];
 		if (null == i) return i;
-		return m(i);
+		return I(i);
 	} catch (e) {
 		return null;
 	}

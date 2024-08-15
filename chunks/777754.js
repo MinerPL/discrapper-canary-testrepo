@@ -2,18 +2,7 @@ let n = /^([\w-+]+(?:\.[\w-+]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,63}(?:\
 	r = /^((https:\/\/)?(discord\.gg\/)|(discord\.com\/)(invite\/)?)?[A-Za-z0-9]{8,8}$/,
 	i = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/,
 	a = /^(.*)#[0-9]{1,5}$/,
-	s = [
-		'@',
-		'#',
-		':',
-		'```',
-		'discord',
-		'hypesquad',
-		'system message',
-		'system mesage',
-		'sustem message',
-		'sustem mesage'
-	],
+	s = ['@', '#', ':', '```', 'discord', 'hypesquad', 'system message', 'system mesage', 'sustem message', 'sustem mesage'],
 	o = ['discordtag', 'everyone', 'here', 'discord nitro', 'discord'];
 t.Z = {
 	isEmail: function (e) {

@@ -256,19 +256,7 @@ function c(e, t) {
 			(e) => {
 				var t, n, s, i;
 				let r = e.metaKey || e.ctrlKey;
-				'z' === e.key && r
-					? (_().selections.length > 0
-							? null === (t = a.current) || void 0 === t || t.blur()
-							: null === (n = a.current) || void 0 === n || n.focus(),
-						e.preventDefault(),
-						e.stopPropagation())
-					: 'y' === e.key &&
-						r &&
-						(I().selections.length > 0
-							? null === (s = a.current) || void 0 === s || s.blur()
-							: null === (i = a.current) || void 0 === i || i.focus(),
-						e.preventDefault(),
-						e.stopPropagation());
+				'z' === e.key && r ? (_().selections.length > 0 ? null === (t = a.current) || void 0 === t || t.blur() : null === (n = a.current) || void 0 === n || n.focus(), e.preventDefault(), e.stopPropagation()) : 'y' === e.key && r && (I().selections.length > 0 ? null === (s = a.current) || void 0 === s || s.blur() : null === (i = a.current) || void 0 === i || i.focus(), e.preventDefault(), e.stopPropagation());
 			},
 			[_, I, a]
 		),
@@ -311,16 +299,7 @@ function c(e, t) {
 		L = s.useCallback(
 			(e) => {
 				let t = e.metaKey || e.ctrlKey;
-				if ('Meta' !== e.key)
-					l.ye.has(e.key)
-						? C(e)
-						: 'Backspace' === e.key
-							? x(e)
-							: 'Escape' === e.key
-								? h(e)
-								: 'a' === e.key && t
-									? R(e)
-									: l.Bd.has(e.key) && t && p(e);
+				if ('Meta' !== e.key) l.ye.has(e.key) ? C(e) : 'Backspace' === e.key ? x(e) : 'Escape' === e.key ? h(e) : 'a' === e.key && t ? R(e) : l.Bd.has(e.key) && t && p(e);
 			},
 			[C, x, h, R, p]
 		);
@@ -332,15 +311,7 @@ function c(e, t) {
 			(e) => {
 				if (document.activeElement !== i.current) return;
 				let t = e.metaKey || e.ctrlKey;
-				'Backspace' === e.key
-					? x(e)
-					: 'a' === e.key && t
-						? R(e)
-						: 'Escape' === e.key
-							? h(e)
-							: l.Bd.has(e.key) && t
-								? p(e)
-								: 'Meta' !== e.key && h(e);
+				'Backspace' === e.key ? x(e) : 'a' === e.key && t ? R(e) : 'Escape' === e.key ? h(e) : l.Bd.has(e.key) && t ? p(e) : 'Meta' !== e.key && h(e);
 			},
 			[p, x, R, h, i]
 		),

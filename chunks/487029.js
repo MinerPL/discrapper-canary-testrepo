@@ -25,16 +25,7 @@ var i = n(735250),
 	E = n(710111),
 	N = n(827126);
 function x(e) {
-	let {
-			guildId: t,
-			channel: n,
-			width: x,
-			height: S,
-			keepOpen: v,
-			interactive: Z = !0,
-			analyticsSource: T,
-			onClose: L
-		} = e,
+	let { guildId: t, channel: n, width: x, height: S, keepOpen: v, interactive: Z = !0, analyticsSource: T, onClose: L } = e,
 		A = (function (e) {
 			let [t, n] = (0, a.Wu)([_.Z], () => [_.Z.getSounds(), _.Z.getFavorites()]);
 			return l.useMemo(() => {
@@ -42,13 +33,7 @@ function x(e) {
 					l = [...e, E.X8],
 					r = (e, l) => {
 						var r, a;
-						for (let s of null !==
-							(a =
-								null === (r = t.get(e)) || void 0 === r
-									? void 0
-									: r.sort((e, t) => h.default.compare(e.soundId, t.soundId))) && void 0 !== a
-							? a
-							: []) {
+						for (let s of null !== (a = null === (r = t.get(e)) || void 0 === r ? void 0 : r.sort((e, t) => h.default.compare(e.soundId, t.soundId))) && void 0 !== a ? a : []) {
 							let e = n.has(s.soundId);
 							((e && l) || (!e && !l)) && s.available && i.push(s);
 						}

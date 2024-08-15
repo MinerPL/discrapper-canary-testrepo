@@ -32,15 +32,7 @@ function _(e) {
 function p(e) {
 	let { transitionState: i, onClose: t, feature: s, section: S, subsection: C } = e,
 		p = (0, u.Dt)(),
-		{
-			canCreateGuild: G,
-			createGuildCta: T,
-			createGuildDescription: g,
-			selectGuildCta: R,
-			title: Z,
-			description: L,
-			isGuildSupported: N
-		} = (0, I.K)(s),
+		{ canCreateGuild: G, createGuildCta: T, createGuildDescription: g, selectGuildCta: R, title: Z, description: L, isGuildSupported: N } = (0, I.K)(s),
 		[m, D] = l.useState(),
 		[h, O] = l.useState(!1),
 		f = async () => {

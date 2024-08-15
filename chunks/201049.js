@@ -36,11 +36,7 @@ function _(e) {
 		),
 		[k, I] = t.useState(null == p ? void 0 : p.moderated),
 		A = (0, a.e7)([c.ZP], () => ((null == B ? void 0 : B.id) != null ? c.ZP.getUsableCustomEmojiById(B.id) : null)),
-		f =
-			(null == p ? void 0 : p.name) !== T ||
-			(null == p ? void 0 : p.emojiId) !== (null == B ? void 0 : B.id) ||
-			(null == p ? void 0 : p.emojiName) !== (null == B ? void 0 : B.name) ||
-			k !== (null == p ? void 0 : p.moderated),
+		f = (null == p ? void 0 : p.name) !== T || (null == p ? void 0 : p.emojiId) !== (null == B ? void 0 : B.id) || (null == p ? void 0 : p.emojiName) !== (null == B ? void 0 : B.name) || k !== (null == p ? void 0 : p.moderated),
 		Z = () => {
 			if (null != T && f) {
 				if (g) {

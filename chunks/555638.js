@@ -11,15 +11,7 @@ var i = t(212598),
 	l = t(283554),
 	c = t(124248);
 function a(e) {
-	let {
-			platformType: n,
-			isWaitingForConnection: t,
-			onWaitingForConnection: a,
-			expectedCallbackState: C,
-			onAuthToken: d,
-			onError: u,
-			onClose: _
-		} = e,
+	let { platformType: n, isWaitingForConnection: t, onWaitingForConnection: a, expectedCallbackState: C, onAuthToken: d, onError: u, onClose: _ } = e,
 		T = t
 			? (0, o.jsx)('img', {
 					src: c,

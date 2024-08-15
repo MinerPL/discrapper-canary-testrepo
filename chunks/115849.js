@@ -58,8 +58,7 @@ function N() {
 		{ canSend: l, hint: u, success: N, error: A } = n;
 	return (
 		a.useEffect(() => {
-			null != N &&
-				(o()(null != e.current, 'Input is submitting when not mounted'), (e.current.value = ''), e.current.focus());
+			null != N && (o()(null != e.current, 'Input is submitting when not mounted'), (e.current.value = ''), e.current.focus());
 		}, [N, e]),
 		(0, i.jsxs)('form', {
 			onSubmit: (t) => {
@@ -124,9 +123,7 @@ function N() {
 												a = e.current.selectionStart,
 												s = t.key === h.mR.Backspace || t.key === h.mR.ArrowRight || t.key === h.mR.ArrowLeft,
 												r = t.which >= 48 && t.which <= 57;
-											null != a && a > i && /^(.+?#\d{4})$/.test(n) && !s
-												? t.preventDefault()
-												: null != a && a > i && !r && !s && t.preventDefault();
+											null != a && a > i && /^(.+?#\d{4})$/.test(n) && !s ? t.preventDefault() : null != a && a > i && !r && !s && t.preventDefault();
 										}
 									}
 								},

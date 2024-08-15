@@ -43,9 +43,7 @@ class o {
 	}
 	onCaptureLegacyEnd(e) {
 		var t;
-		return (null === (t = this.application) || void 0 === t ? void 0 : t.windowHandle) != null
-			? this.onCaptureEnd(e, this.application.windowHandle)
-			: this._stop();
+		return (null === (t = this.application) || void 0 === t ? void 0 : t.windowHandle) != null ? this.onCaptureEnd(e, this.application.windowHandle) : this._stop();
 	}
 	_update(e) {
 		let t = (0, a.s)(e, this.application);
@@ -73,11 +71,6 @@ class o {
 		this.active && ((this.application.windowHandle = null), this.callback({ type: 'pause' }));
 	}
 	constructor(e) {
-		s(this, 'callback', void 0),
-			s(this, 'active', void 0),
-			s(this, 'application', void 0),
-			(this.callback = e),
-			(this.active = !1),
-			(this.application = null);
+		s(this, 'callback', void 0), s(this, 'active', void 0), s(this, 'application', void 0), (this.callback = e), (this.active = !1), (this.application = null);
 	}
 }

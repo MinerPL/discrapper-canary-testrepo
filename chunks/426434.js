@@ -35,10 +35,7 @@ function T(e) {
 				});
 		}, 1000);
 	if (!m) return null;
-	!C &&
-		(t = S
-			? I.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_OWNER_DETAIL.format({ settingsHook: () => l.Z.open(_.oAB.ACCOUNT) })
-			: I.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_NON_OWNER_DETAIL);
+	!C && (t = S ? I.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_OWNER_DETAIL.format({ settingsHook: () => l.Z.open(_.oAB.ACCOUNT) }) : I.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_NON_OWNER_DETAIL);
 	let p = n.hasFeature(_.oNc.DISCOVERABLE);
 	return (0, s.jsxs)('div', {
 		className: E.simpleItemWrapper,
@@ -60,11 +57,7 @@ function T(e) {
 			}),
 			!C || (g && p)
 				? (0, s.jsx)(r.Tooltip, {
-						text: p
-							? I.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_DISCOVERABLE_DISABLED_TOOLTIP
-							: S
-								? I.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_OWNER_TOOLTIP
-								: I.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_NON_OWNER_TOOLTIP,
+						text: p ? I.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_DISCOVERABLE_DISABLED_TOOLTIP : S ? I.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_OWNER_TOOLTIP : I.Z.Messages.GUILD_SETTINGS_SAFETY_MFA_NON_OWNER_TOOLTIP,
 						children: (e) =>
 							(0, s.jsx)(u.Z, {
 								checked: g,

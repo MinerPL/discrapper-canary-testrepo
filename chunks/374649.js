@@ -28,16 +28,7 @@ var r = n(470079),
 	_ = n(73346),
 	E = n(981631);
 async function f(e) {
-	let {
-			items: t,
-			paymentSourceId: n,
-			trialId: r,
-			code: i,
-			applyEntitlements: a = !1,
-			currency: s,
-			renewal: c,
-			metadata: _
-		} = e,
+	let { items: t, paymentSourceId: n, trialId: r, code: i, applyEntitlements: a = !1, currency: s, renewal: c, metadata: _ } = e,
 		f = {
 			items: (t = (0, d.gB)(t)).map((e) => {
 				let { planId: t, ...n } = e;
@@ -66,17 +57,7 @@ async function f(e) {
 	}
 }
 async function h(e) {
-	let {
-		subscriptionId: t,
-		items: n,
-		paymentSourceId: r,
-		renewal: i,
-		currency: a,
-		applyEntitlements: s = !1,
-		analyticsLocations: c,
-		analyticsLocation: _,
-		userDiscountOfferId: f
-	} = e;
+	let { subscriptionId: t, items: n, paymentSourceId: r, renewal: i, currency: a, applyEntitlements: s = !1, analyticsLocations: c, analyticsLocation: _, userDiscountOfferId: f } = e;
 	null != n && (n = (0, d.gB)(n));
 	let h = {
 		items:
@@ -130,7 +111,7 @@ async function p(e) {
 		throw new l.HF(e);
 	}
 }
-async function I(e) {
+async function m(e) {
 	let { subscriptionId: t, preventFetch: n } = e;
 	if (n) return null;
 	let r = await o.tn.get({
@@ -139,7 +120,7 @@ async function I(e) {
 	});
 	return u.Z.createInvoiceFromServer(r.body);
 }
-function m(e, t) {
+function I(e, t) {
 	let { preventFetch: n = !1 } = e,
 		[i, a] = (0, r.useState)(null),
 		[o, l] = (0, r.useState)(null),
@@ -168,7 +149,7 @@ function m(e, t) {
 }
 function T(e) {
 	let t = (0, r.useCallback)(() => p(e), [JSON.stringify(e)]);
-	return m(e, t);
+	return I(e, t);
 }
 function g(e) {
 	if ('subscriptionId' in e && null == e.subscriptionId) {
@@ -176,11 +157,11 @@ function g(e) {
 		e = n;
 	}
 	let t = (0, r.useCallback)(() => ('subscriptionId' in e ? h(e) : 'items' in e ? f(e) : null), [JSON.stringify(e)]);
-	return m(e, t);
+	return I(e, t);
 }
 function S(e) {
-	let t = (0, r.useCallback)(() => I(e), [JSON.stringify(e)]);
-	return m(e, t);
+	let t = (0, r.useCallback)(() => m(e), [JSON.stringify(e)]);
+	return I(e, t);
 }
 function A(e) {
 	let t = e.subscriptionPlanPrice;

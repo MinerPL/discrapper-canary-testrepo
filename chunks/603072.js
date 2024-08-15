@@ -40,9 +40,7 @@ function B(e) {
 	a.useEffect(() => {
 		(0, m.EW)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX, { dismissAction: S.L.DISMISS });
 	});
-	let r = i
-			? R.Z.Messages.CHANNELS_AND_ROLES_HTML_TITLE.format({ guildName: n.name })
-			: R.Z.Messages.CHANNEL_BROWSER_HTML_TITLE.format({ guildName: n.name }),
+	let r = i ? R.Z.Messages.CHANNELS_AND_ROLES_HTML_TITLE.format({ guildName: n.name }) : R.Z.Messages.CHANNEL_BROWSER_HTML_TITLE.format({ guildName: n.name }),
 		s = i ? R.Z.Messages.CHANNELS_AND_ROLES : R.Z.Messages.CHANNEL_BROWSER_TITLE;
 	return (
 		(0, h.Tt)({ location: r }),

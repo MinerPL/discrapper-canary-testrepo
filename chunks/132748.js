@@ -32,8 +32,7 @@ t.Z = (0, s.Z)(
 			return n(r, e, t);
 		}
 		constructor(...e) {
-			super(...e),
-				o(this, 'state', { columns: l(this.props.width, this.props.desiredItemWidth, this.props.maxColumns) });
+			super(...e), o(this, 'state', { columns: l(this.props.width, this.props.desiredItemWidth, this.props.maxColumns) });
 		}
 	}),
 	o(i, 'defaultProps', { desiredItemWidth: 200 }),

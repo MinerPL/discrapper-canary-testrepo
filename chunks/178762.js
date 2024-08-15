@@ -22,8 +22,8 @@ var i = n(735250),
 	_ = n(687694),
 	f = n(69259),
 	E = n(370370),
-	g = n(107062),
-	C = n(91140),
+	C = n(107062),
+	g = n(91140),
 	I = n(227172),
 	x = n(551228),
 	T = n(678869),
@@ -53,7 +53,7 @@ let P = l().throttle(
 		let { entry: t, ...n } = e;
 		switch (t.content_type) {
 			case o.s.PLAYED_GAME:
-				return (0, i.jsx)(C.Z, {
+				return (0, i.jsx)(g.Z, {
 					...n,
 					entry: t
 				});
@@ -115,7 +115,7 @@ let P = l().throttle(
 					entry: t
 				});
 			case o.s.LAUNCHED_ACTIVITY:
-				return (0, i.jsx)(g.ZP, {
+				return (0, i.jsx)(C.ZP, {
 					...n,
 					entry: t
 				});
@@ -128,14 +128,14 @@ t.ZP = a.memo((e) => {
 	let { index: s, ...l } = e,
 		[o, m] = a.useState('default'),
 		E = (0, r.JA)(''.concat(s)),
-		g = null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
-		{ isRich: C, appName: I } = (0, b.n)(l.entry),
+		C = null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
+		{ isRich: g, appName: I } = (0, b.n)(l.entry),
 		x = {
 			entry: l.entry,
 			channelId: l.channel.id,
 			guildId: l.channel.guild_id,
 			requestId: l.requestId,
-			richPresenceName: C ? I : void 0
+			richPresenceName: g ? I : void 0
 		},
 		{ openOnHover: T } = (0, _.C)({ location: 'MemberListContentRow' }),
 		N = a.useRef(!1),
@@ -148,7 +148,7 @@ t.ZP = a.memo((e) => {
 	}, [v, L]);
 	let D = a.useCallback(
 			(e) => {
-				if (!!g)
+				if (!!C)
 					(0, d.jW)(e, async () => {
 						let { default: e } = await n.e('153').then(n.bind(n, 330150));
 						return () =>
@@ -158,7 +158,7 @@ t.ZP = a.memo((e) => {
 							});
 					});
 			},
-			[l, g]
+			[l, C]
 		),
 		k = a.useCallback(() => {
 			m(String(Date.now()));
@@ -197,29 +197,27 @@ t.ZP = a.memo((e) => {
 			children: (e, t) => {
 				let { isShown: n } = t;
 				return (0, i.jsx)(u.Clickable, {
-					onClick: () => {
-						T && !v && S(!0), !T && A((e) => !e);
-					},
-					children: (0, i.jsx)(u.FocusRing, {
+					...e,
+					...E,
+					focusProps: {
 						offset: {
 							top: 4,
 							bottom: 4,
 							left: 4,
 							right: 4
-						},
-						children: (0, i.jsx)('div', {
-							...e,
-							...E,
-							onMouseEnter: () => {
-								P(x);
-							},
-							onContextMenu: D,
-							children: (0, i.jsx)(O, {
-								...l,
-								selected: n,
-								hovered: N.current
-							})
-						})
+						}
+					},
+					onClick: () => {
+						T && !v && S(!0), !T && A((e) => !e);
+					},
+					onMouseEnter: () => {
+						P(x);
+					},
+					onContextMenu: D,
+					children: (0, i.jsx)(O, {
+						...l,
+						selected: n,
+						hovered: N.current
 					})
 				});
 			}

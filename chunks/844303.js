@@ -1,5 +1,4 @@
-Object.defineProperty(t, '__esModule', { value: !0 }),
-	(t.ReactCSS = t.loop = t.handleActive = t.handleHover = t.hover = void 0);
+Object.defineProperty(t, '__esModule', { value: !0 }), (t.ReactCSS = t.loop = t.handleActive = t.handleHover = t.hover = void 0);
 var r = u(n(914461)),
 	i = u(n(4817)),
 	a = u(n(685931)),

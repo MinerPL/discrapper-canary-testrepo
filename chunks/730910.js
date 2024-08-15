@@ -101,8 +101,7 @@ function G(e) {
 			let e = R.Z.advancedMode;
 			if (G)
 				try {
-					if (S === L.PG.DEFAULT_CHANNELS)
-						await (0, h.DO)(t).then(() => (e ? (0, p.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
+					if (S === L.PG.DEFAULT_CHANNELS) await (0, h.DO)(t).then(() => (e ? (0, p.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
 					else if (S === L.PG.CUSTOMIZATION_QUESTIONS) await (0, p.rS)(t, { ignoreDefaultPrompt: !0 });
 					else if (S === L.PG.HOME_SETTINGS) {
 						let e = x.Z.getSettings();
@@ -133,14 +132,7 @@ function G(e) {
 				(await X()) && (0, g.Wy)(i, S);
 		},
 		$ = null;
-	y &&
-		(S === L.PG.SAFETY_CHECK
-			? ($ = (0, s.jsx)(A.j7, {}))
-			: S === L.PG.DEFAULT_CHANNELS
-				? ($ = (0, s.jsx)(A.Io, {}))
-				: S === L.PG.CUSTOMIZATION_QUESTIONS
-					? ($ = (0, s.jsx)(A.cZ, {}))
-					: S === L.PG.HOME_SETTINGS && ($ = (0, s.jsx)(A.g6, {})));
+	y && (S === L.PG.SAFETY_CHECK ? ($ = (0, s.jsx)(A.j7, {})) : S === L.PG.DEFAULT_CHANNELS ? ($ = (0, s.jsx)(A.Io, {})) : S === L.PG.CUSTOMIZATION_QUESTIONS ? ($ = (0, s.jsx)(A.cZ, {})) : S === L.PG.HOME_SETTINGS && ($ = (0, s.jsx)(A.g6, {})));
 	let ee = (0, s.jsx)(_.Button, {
 			className: r()(b.button, { [b.hidden]: y }),
 			color: _.Button.Colors.PRIMARY,

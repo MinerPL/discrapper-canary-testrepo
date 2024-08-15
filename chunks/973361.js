@@ -43,13 +43,7 @@
 			if (!a.test(i.path)) throw TypeError('option path is invalid');
 			l.push('Path=' + i.path);
 		}
-		return (
-			i.expires && l.push('Expires=' + i.expires.toUTCString()),
-			i.httpOnly && l.push('HttpOnly'),
-			i.secure && l.push('Secure'),
-			i.firstPartyOnly && l.push('First-Party-Only'),
-			l.join('; ')
-		);
+		return i.expires && l.push('Expires=' + i.expires.toUTCString()), i.httpOnly && l.push('HttpOnly'), i.secure && l.push('Secure'), i.firstPartyOnly && l.push('First-Party-Only'), l.join('; ');
 	});
 var n = decodeURIComponent,
 	r = encodeURIComponent,

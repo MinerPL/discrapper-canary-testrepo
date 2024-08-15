@@ -18,8 +18,8 @@ var r = n(735250),
 	f = n(158776),
 	h = n(74538),
 	p = n(998502),
-	I = n(785717),
-	m = n(204197),
+	m = n(785717),
+	I = n(204197),
 	T = n(825801),
 	g = n(215105),
 	S = n(652853),
@@ -30,24 +30,10 @@ var r = n(735250),
 	R = n(234328);
 let C = p.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 function y(e) {
-	let {
-			user: t,
-			displayProfile: n,
-			guildId: a,
-			channelId: p,
-			profileType: y,
-			animateOnHover: D,
-			onOpenProfile: L,
-			isInteractionSource: b,
-			onInteraction: M,
-			showReplyPopout: P = !1,
-			setInteractionToastShown: U,
-			setInteractionSent: w,
-			setIsReplyInteraction: x
-		} = e,
+	let { user: t, displayProfile: n, guildId: a, channelId: p, profileType: y, animateOnHover: D, onOpenProfile: L, isInteractionSource: b, onInteraction: M, showReplyPopout: P = !1, setInteractionToastShown: U, setInteractionSent: w, setIsReplyInteraction: x } = e,
 		{ theme: G } = (0, S.z)(),
 		{ analyticsLocations: k } = (0, d.ZP)(c.Z.AVATAR),
-		{ trackUserProfileAction: B } = (0, I.KZ)(),
+		{ trackUserProfileAction: B } = (0, m.KZ)(),
 		F = y === N.y0.FULL_SIZE ? (0, A.z)(t.id, null == n ? void 0 : n.guildId) : void 0,
 		V = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, O.p9.TIER_2),
 		H = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, p), [t, p]),
@@ -80,7 +66,7 @@ function y(e) {
 			avatarDecorationSrc: X,
 			avatarSrc: $,
 			eventHandlers: J
-		} = (0, m.Z)({
+		} = (0, I.Z)({
 			user: t,
 			guildId: null != n ? n.guildId : a,
 			size: q,

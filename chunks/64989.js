@@ -17,13 +17,7 @@ function l(e, r) {
 	for (
 		var i = (function (e) {
 				var r;
-				return Math.min(
-					Math.max(
-						isNaN((r = Number(e))) ? 0 : 0 !== r && isFinite(r) ? (r > 0 ? 1 : -1) * Math.floor(Math.abs(r)) : r,
-						0
-					),
-					n
-				);
+				return Math.min(Math.max(isNaN((r = Number(e))) ? 0 : 0 !== r && isFinite(r) ? (r > 0 ? 1 : -1) * Math.floor(Math.abs(r)) : r, 0), n);
 			})(l.length),
 			s = o(a) ? Object(new a(i)) : Array(i),
 			u = 0;

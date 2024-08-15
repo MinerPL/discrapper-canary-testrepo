@@ -75,15 +75,8 @@ function f(e) {
 	let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
 	return (function (e, t, n) {
 		var a;
-		let {
-				toAST: s = !1,
-				hideSimpleEmbedContent: l = !0,
-				formatInline: _ = !1,
-				postProcessor: E,
-				shouldFilterKeywords: f,
-				contentMessage: h
-			} = n,
-			m = !1,
+		let { toAST: s = !1, hideSimpleEmbedContent: l = !0, formatInline: _ = !1, postProcessor: E, shouldFilterKeywords: f, contentMessage: h } = n,
+			I = !1,
 			T = (null != h ? h : t).content,
 			g = e(
 				f
@@ -107,12 +100,10 @@ function f(e) {
 						})(e, (null != h ? h : t).embeds)),
 					!_ &&
 						(e = (function (e, t) {
-							return t
-								? p(e)
-								: ('paragraph' === e[0].type && e[0].content instanceof Array && (e[0].content = p(e[0].content)), e);
+							return t ? p(e) : ('paragraph' === e[0].type && e[0].content instanceof Array && (e[0].content = p(e[0].content)), e);
 						})(e, n)),
-					(m = (function (e, t) {
-						return t ? I(e) : 'paragraph' === e[0].type && e[0].content instanceof Array && I(e[0].content);
+					(I = (function (e, t) {
+						return t ? m(e) : 'paragraph' === e[0].type && e[0].content instanceof Array && m(e[0].content);
 					})(
 						(e = (function (e) {
 							let t = e.some((e) => 'link' !== e.type || !1);
@@ -128,9 +119,7 @@ function f(e) {
 						(e = (function e(t) {
 							return (
 								t.forEach((t) => {
-									c.has(t.type) &&
-										null != t.content &&
-										(Array.isArray(t.content) ? e(t.content) : (t.content = t.content.replace(/\n/g, ' ')));
+									c.has(t.type) && null != t.content && (Array.isArray(t.content) ? e(t.content) : (t.content = t.content.replace(/\n/g, ' ')));
 								}),
 								t
 							);
@@ -140,7 +129,7 @@ function f(e) {
 				)
 			);
 		return {
-			hasSpoilerEmbeds: m,
+			hasSpoilerEmbeds: I,
 			content: g
 		};
 	})(t.formatInline ? a.Z.parseInlineReply : a.Z.parse, e, t);
@@ -173,17 +162,7 @@ function h(e, t, n) {
 	);
 }
 function p(e) {
-	if (
-		e.some(
-			(e) =>
-				'emoji' !== e.type &&
-				'customEmoji' !== e.type &&
-				'soundboard' !== e.type &&
-				('string' != typeof e.content || '' !== e.content.trim()) &&
-				!0
-		)
-	)
-		return e;
+	if (e.some((e) => 'emoji' !== e.type && 'customEmoji' !== e.type && 'soundboard' !== e.type && ('string' != typeof e.content || '' !== e.content.trim()) && !0)) return e;
 	let t = 0;
 	return (e.forEach((e) => {
 		if ((('emoji' === e.type || 'customEmoji' === e.type || 'soundboard' === e.type) && (t += 1), t > 30)) return !1;
@@ -195,11 +174,6 @@ function p(e) {
 			}),
 			e);
 }
-function I(e) {
-	return e.some(
-		(e) =>
-			'spoiler' === e.type &&
-			Array.isArray(e.content) &&
-			e.content.some((e) => 'link' === e.type || 'attachmentLink' === e.type)
-	);
+function m(e) {
+	return e.some((e) => 'spoiler' === e.type && Array.isArray(e.content) && e.content.some((e) => 'link' === e.type || 'attachmentLink' === e.type));
 }

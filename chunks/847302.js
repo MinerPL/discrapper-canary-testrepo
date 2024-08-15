@@ -3,10 +3,10 @@ n.d(t, {
 		return S;
 	},
 	KH: function () {
-		return m;
+		return I;
 	},
 	ZP: function () {
-		return I;
+		return m;
 	}
 }),
 	n(47120),
@@ -21,22 +21,11 @@ var r = n(512722),
 	c = n(925994),
 	d = n(436660),
 	_ = n(887490);
-let E =
-		/(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#"(?:\ |\\\\|\\"|(?!")\w)+")|(#[^\s\t@#:]+(?=[\s\t@#:]))/g,
-	f = new Set([
-		'emoji',
-		'customEmoji',
-		'textMention',
-		'userMention',
-		'roleMention',
-		'channelMention',
-		'staticRouteLink',
-		'soundboard',
-		'timestamp'
-	]),
+let E = /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#"(?:\ |\\\\|\\"|(?!")\w)+")|(#[^\s\t@#:]+(?=[\s\t@#:]))/g,
+	f = new Set(['emoji', 'customEmoji', 'textMention', 'userMention', 'roleMention', 'channelMention', 'staticRouteLink', 'soundboard', 'timestamp']),
 	h = new Set(['line', 'blockQuote']),
 	p = new Set(['applicationCommandOption']);
-function I(e, t, n) {
+function m(e, t, n) {
 	let { isInline: r, isVoid: i, onChange: a } = e;
 	(e.isVoid = (e) => !!f.has(e.type) || i(e)), (e.isInline = (e) => !!f.has(e.type) || r(e));
 	let s = null,
@@ -46,7 +35,7 @@ function I(e, t, n) {
 			let r = _.bN.richValue(e);
 			(r !== s || e.previewMarkdown !== o) &&
 				(l.T.withMergedEntry(e, () => {
-					_.bN.withoutNormalizing(e, () => m(e, t, n));
+					_.bN.withoutNormalizing(e, () => I(e, t, n));
 				}),
 				(s = r),
 				(o = e.previewMarkdown)),
@@ -55,7 +44,7 @@ function I(e, t, n) {
 		e
 	);
 }
-function m(e, t, n) {
+function I(e, t, n) {
 	let r = _.bN.areStylesDisabled(e);
 	for (let i of _.bN.blocks(e))
 		if (h.has(i[0].type)) r ? g(e, i, !0, null) : T(e, i, t, n);
@@ -72,8 +61,7 @@ function m(e, t, n) {
 }
 function T(e, t, n, r) {
 	var a;
-	let s =
-			'line' === t[0].type && (null === (a = t[0].codeBlockState) || void 0 === a ? void 0 : a.isInCodeBlock) === !0,
+	let s = 'line' === t[0].type && (null === (a = t[0].codeBlockState) || void 0 === a ? void 0 : a.isInCodeBlock) === !0,
 		l = _.q.markdown(t[0], n);
 	g(e, t, s, l) && ((t = _.q.updateElement(e, t)), (l = _.q.markdown(t[0], n))),
 		!s &&
@@ -86,7 +74,7 @@ function T(e, t, n, r) {
 					let h = s.children[c];
 					if (!_.LC.isText(h)) continue;
 					let p = _.C0.child(l, c),
-						I = [];
+						m = [];
 					for (E.lastIndex = 0; null != (f = E.exec(h.text)); ) {
 						if (0 !== f.index && null == h.text.charAt(f.index - 1).match(/(\t|\s)/)) {
 							E.lastIndex = f.index + 1;
@@ -106,14 +94,14 @@ function T(e, t, n, r) {
 							continue;
 						let i = (0, o.i)(f[0], n, r);
 						null != i && N(r, t[0], i)
-							? I.push({
+							? m.push({
 									index: f.index,
 									length: f[0].length,
 									node: i
 								})
 							: (E.lastIndex = f.index + 1);
 					}
-					for (let t of I.reverse())
+					for (let t of m.reverse())
 						(function (e, t, n, r, a) {
 							let [s, o] = t,
 								l = {
@@ -124,14 +112,8 @@ function T(e, t, n, r) {
 									path: o,
 									offset: n + r
 								};
-							i()(
-								l.offset >= 0 && l.offset <= s.text.length,
-								'Failed to find valid start position for raw mention replace'
-							),
-								i()(
-									u.offset >= 0 && u.offset <= s.text.length,
-									'Failed to find valid end position for raw mention replace'
-								),
+							i()(l.offset >= 0 && l.offset <= s.text.length, 'Failed to find valid start position for raw mention replace'),
+								i()(u.offset >= 0 && u.offset <= s.text.length, 'Failed to find valid end position for raw mention replace'),
 								d.Q.textToVoid(e, a, {
 									anchor: l,
 									focus: u
@@ -317,9 +299,7 @@ function N(e, t, n) {
 		case a.jw.USER:
 			return 'userMention' === n.type;
 		case a.jw.MENTIONABLE:
-			return (
-				'roleMention' === n.type || 'userMention' === n.type || ('textMention' === n.type && '@everyone' === n.name)
-			);
+			return 'roleMention' === n.type || 'userMention' === n.type || ('textMention' === n.type && '@everyone' === n.name);
 		case a.jw.STRING: {
 			let n = null != e ? s.Z.getOption(e, t.optionName) : null;
 			return (null == n ? void 0 : n.choices) == null && (null == n ? void 0 : n.autocomplete) !== !0;

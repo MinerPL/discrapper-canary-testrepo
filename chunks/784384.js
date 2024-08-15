@@ -15,16 +15,8 @@ function c(e, t, n) {
 	let c = n instanceof s.Sf;
 	if (t.isNSFW() && !(c && n.isNSFW())) return { label: o.Z.Messages.MESSAGE_FORWARDING_NSFW_NOT_ALLOWED };
 	if (c && (0, s.Km)(n.type)) {
-		if (
-			(e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) &&
-			!i.Z.can(r.Plq.ATTACH_FILES, n)
-		)
-			return { label: o.Z.Messages.MESSAGE_CHANNEL_ATTACHMENTS_DISABLED };
-		if (
-			(e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) &&
-			!i.Z.can(r.Plq.EMBED_LINKS, n)
-		)
-			return { label: o.Z.Messages.MESSAGE_CHANNEL_EMBEDS_DISABLED };
+		if ((e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) && !i.Z.can(r.Plq.ATTACH_FILES, n)) return { label: o.Z.Messages.MESSAGE_CHANNEL_ATTACHMENTS_DISABLED };
+		if ((e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) && !i.Z.can(r.Plq.EMBED_LINKS, n)) return { label: o.Z.Messages.MESSAGE_CHANNEL_EMBEDS_DISABLED };
 		let t = [
 			...(0, a.cv)(e),
 			...e.messageSnapshots.flatMap((e) => {

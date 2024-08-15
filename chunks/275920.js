@@ -6,16 +6,7 @@ n.d(t, {
 var r = n(626135),
 	i = n(981631);
 function a(e) {
-	let {
-		type: t,
-		source: n,
-		userId: a,
-		applicationId: s,
-		partyId: o,
-		messageId: l,
-		locationObject: u,
-		analyticsLocations: c
-	} = e;
+	let { type: t, source: n, userId: a, applicationId: s, partyId: o, messageId: l, locationObject: u, analyticsLocations: c } = e;
 	r.default.track(i.rMx.APPLICATION_OPENED, {
 		type: t,
 		source: n,

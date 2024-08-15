@@ -37,9 +37,7 @@ t.Z = (e) => {
 		B = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
 		j = (0, N.mN)();
 	return (
-		P === I.mJ.DEFAULT
-			? ((t = m.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE), (n = m.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD))
-			: ((t = m.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD), (n = m.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE)),
+		P === I.mJ.DEFAULT ? ((t = m.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE), (n = m.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD)) : ((t = m.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD), (n = m.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE)),
 		(0, s.jsx)(c.AdvancedScrollerAuto, {
 			className: i()(f.allPerksScroller, {
 				[f.open]: r,
@@ -124,9 +122,7 @@ t.Z = (e) => {
 						(0, s.jsx)('div', { className: f.footerSpacing }),
 						(0, s.jsx)(o.$, {
 							onChange: (e) => {
-								e &&
-									!L &&
-									(T.default.track(A.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: v }), Z(!0));
+								e && !L && (T.default.track(A.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: v }), Z(!0));
 							},
 							children: (0, s.jsx)('div', { className: f.bottomOfPageVisibilitySensor })
 						}),

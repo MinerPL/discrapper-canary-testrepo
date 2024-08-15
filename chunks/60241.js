@@ -38,10 +38,7 @@ function E(e) {
 						onClick: E,
 						children: (0, r.jsx)(o.f, {
 							src: t.src,
-							alt:
-								null !== (i = null !== (n = t.alt) && void 0 !== n ? n : t.text) && void 0 !== i
-									? i
-									: l.Z.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL,
+							alt: null !== (i = null !== (n = t.alt) && void 0 !== n ? n : t.text) && void 0 !== i ? i : l.Z.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL,
 							size: d,
 							className: u.contentImage,
 							constrain: 'width'

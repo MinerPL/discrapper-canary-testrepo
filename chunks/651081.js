@@ -270,8 +270,7 @@ function w(e) {
 					let t = {};
 					for (let s of e) {
 						var n, a;
-						let e =
-								null !== (a = null === (n = s.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== a ? a : 0,
+						let e = null !== (a = null === (n = s.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== a ? a : 0,
 							l = s.emoji.id;
 						null != l && (t[l] = e);
 					}
@@ -288,9 +287,7 @@ function w(e) {
 					void 0 === e ||
 					e.answers.forEach((e) => {
 						var n;
-						(null == e ? void 0 : e.answer_id) != null &&
-							(null === (n = e.poll_media) || void 0 === n ? void 0 : n.text) != null &&
-							(t[e.answer_id] = e.poll_media.text);
+						(null == e ? void 0 : e.answer_id) != null && (null === (n = e.poll_media) || void 0 === n ? void 0 : n.text) != null && (t[e.answer_id] = e.poll_media.text);
 					}),
 				t
 			);

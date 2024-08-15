@@ -27,13 +27,7 @@ function E(e, t, r, a) {
 	var o, i;
 	let _ = (0, n.HY)(r),
 		E = e.type && 'replay_event' !== e.type ? e.type : 'event';
-	(o = e),
-		!(i = r && r.sdk) ||
-			((o.sdk = o.sdk || {}),
-			(o.sdk.name = o.sdk.name || i.name),
-			(o.sdk.version = o.sdk.version || i.version),
-			(o.sdk.integrations = [...(o.sdk.integrations || []), ...(i.integrations || [])]),
-			(o.sdk.packages = [...(o.sdk.packages || []), ...(i.packages || [])]));
+	(o = e), !(i = r && r.sdk) || ((o.sdk = o.sdk || {}), (o.sdk.name = o.sdk.name || i.name), (o.sdk.version = o.sdk.version || i.version), (o.sdk.integrations = [...(o.sdk.integrations || []), ...(i.integrations || [])]), (o.sdk.packages = [...(o.sdk.packages || []), ...(i.packages || [])]));
 	let s = (0, n.Cd)(e, _, a, t);
 	delete e.sdkProcessingMetadata;
 	let c = [{ type: E }, e];

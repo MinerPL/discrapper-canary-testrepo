@@ -74,10 +74,7 @@ function h(e) {
 					e.addEventListener('focus', s),
 					e.addEventListener('scroll', r, { passive: !0 }),
 					() => {
-						e.removeEventListener('focusin', n),
-							e.removeEventListener('focusout', a),
-							e.removeEventListener('focus', s),
-							e.removeEventListener('scroll', r);
+						e.removeEventListener('focusin', n), e.removeEventListener('focusout', a), e.removeEventListener('focus', s), e.removeEventListener('scroll', r);
 					}
 				);
 			function n() {

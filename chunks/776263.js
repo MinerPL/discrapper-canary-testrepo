@@ -65,15 +65,7 @@ let x = (e) => {
 	},
 	_ = (e) => {
 		var t;
-		let {
-				quest: n,
-				useReducedMotion: o,
-				isExpanded: a,
-				awaitingConsoleConnections: l,
-				hasMadeProgress: c,
-				isProgressing: u,
-				activeScreen: p
-			} = e,
+		let { quest: n, useReducedMotion: o, isExpanded: a, awaitingConsoleConnections: l, hasMadeProgress: c, isProgressing: u, activeScreen: p } = e,
 			_ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
 			C = (0, i.P)({ location: d.dr.QUESTS_BAR });
 		if (_)

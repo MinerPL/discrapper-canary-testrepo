@@ -13,15 +13,6 @@ e.exports = function (e, t) {
 		E = n || c || d || _,
 		f = E ? r(e.length, String) : [],
 		h = f.length;
-	for (var p in e)
-		(t || u.call(e, p)) &&
-			!(
-				E &&
-				('length' == p ||
-					(d && ('offset' == p || 'parent' == p)) ||
-					(_ && ('buffer' == p || 'byteLength' == p || 'byteOffset' == p)) ||
-					o(p, h))
-			) &&
-			f.push(p);
+	for (var p in e) (t || u.call(e, p)) && !(E && ('length' == p || (d && ('offset' == p || 'parent' == p)) || (_ && ('buffer' == p || 'byteLength' == p || 'byteOffset' == p)) || o(p, h))) && f.push(p);
 	return f;
 };

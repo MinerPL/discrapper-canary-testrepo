@@ -133,11 +133,9 @@ var o = {
 	'creditCard.encryptedPassword.placeholder': '12',
 	'creditCard.encryptedPassword.invalid': 'Password non valida',
 	'creditCard.taxNumber': 'Data di nascita del titolare della carta o numero di registrazione aziendale',
-	'creditCard.taxNumber.label':
-		'Data di nascita del titolare della carta (AAMMGG) o numero di registrazione aziendale (10 cifre)',
+	'creditCard.taxNumber.label': 'Data di nascita del titolare della carta (AAMMGG) o numero di registrazione aziendale (10 cifre)',
 	'creditCard.taxNumber.labelAlt': 'Numero di registrazione aziendale (10 cifre)',
-	'creditCard.taxNumber.invalid':
-		'Data di nascita del titolare della carta o numero di registrazione aziendale non validi',
+	'creditCard.taxNumber.invalid': 'Data di nascita del titolare della carta o numero di registrazione aziendale non validi',
 	'storedPaymentMethod.disable.button': 'Rimuovi',
 	'storedPaymentMethod.disable.confirmation': 'Rimuovi il metodo di pagamento archiviato',
 	'storedPaymentMethod.disable.confirmButton': 'Sì, rimuoverli',
@@ -170,8 +168,7 @@ var o = {
 	'blik.invalid': 'Inserisci 6 numeri',
 	'blik.code': 'Codice a 6 cifre',
 	'blik.help': 'Ottieni il codice dalla app della tua banca.',
-	'swish.pendingMessage':
-		'In seguito alla scansione, lo stato della transazione può rimanere in sospeso per un massimo di 10 minuti. Un nuovo tentativo di pagamento durante questo lasso di tempo può comportare pagamenti multipli.',
+	'swish.pendingMessage': 'In seguito alla scansione, lo stato della transazione può rimanere in sospeso per un massimo di 10 minuti. Un nuovo tentativo di pagamento durante questo lasso di tempo può comportare pagamenti multipli.',
 	'field.valid': 'Campo valido',
 	'field.invalid': 'Campo non valido',
 	'error.va.gen.01': 'Campo incompleto',
@@ -207,8 +204,7 @@ var o = {
 	'bankTransfer.iban': 'IBAN',
 	'bankTransfer.bic': 'BIC',
 	'bankTransfer.reference': 'Riferimento',
-	'bankTransfer.introduction':
-		"Continua per creare un nuovo pagamento tramite bonifico bancario. Puoi utilizzare i dettagli nella schermata seguente per completare l'operazione.",
+	'bankTransfer.introduction': "Continua per creare un nuovo pagamento tramite bonifico bancario. Puoi utilizzare i dettagli nella schermata seguente per completare l'operazione.",
 	'bankTransfer.instructions': 'Grazie per il tuo acquisto, utilizza i seguenti dati per completare il pagamento.',
 	'bacs.accountHolderName': 'Nome del titolare del conto bancario',
 	'bacs.accountHolderName.invalid': 'Nome del titolare del conto bancario non valido',
@@ -217,8 +213,7 @@ var o = {
 	'bacs.bankLocationId': 'Sort code',
 	'bacs.bankLocationId.invalid': 'Sort code non valido',
 	'bacs.consent.amount': "Accetto che l'importo sopra indicato venga detratto dal mio conto bancario.",
-	'bacs.consent.account':
-		"Confermo che il conto è intestato al sottoscritto e che sono l'unico firmatario a dover autorizzare l'addebito diretto su questo conto.",
+	'bacs.consent.account': "Confermo che il conto è intestato al sottoscritto e che sono l'unico firmatario a dover autorizzare l'addebito diretto su questo conto.",
 	edit: 'Modifica',
 	'bacs.confirm': 'Conferma e paga',
 	'bacs.result.introduction': "Scarica le Istruzioni per l'addebito diretto (DDI / Mandato)",
@@ -247,13 +242,11 @@ var o = {
 	'twint.saved': 'memorizzato',
 	orPayWith: 'oppure paga con',
 	invalidFormatExpects: 'Formato non valido. Formato previsto: %{format}',
-	'upi.qrCodeWaitingMessage':
-		'Per completare il pagamento, scansiona il codice QR utilizzando la tua app UPI preferita',
+	'upi.qrCodeWaitingMessage': 'Per completare il pagamento, scansiona il codice QR utilizzando la tua app UPI preferita',
 	'upi.vpaWaitingMessage': "Apri l'app UPI per confermare il pagamento",
 	'upi.modeSelection': 'Scegli la modalità di utilizzo di UPI.',
 	'onlineBanking.termsAndConditions': 'Facendo clic, accetti i %#termini e le condizioni%#',
-	'onlineBankingPL.termsAndConditions':
-		"Continuando accetti il %#regolamento%# e l'%#obbligo di informativa%# di Przelewy24",
+	'onlineBankingPL.termsAndConditions': "Continuando accetti il %#regolamento%# e l'%#obbligo di informativa%# di Przelewy24",
 	'ctp.loading.poweredByCtp': 'Realizzato da Click to Pay',
 	'ctp.loading.intro': 'Stiamo verificando se hai delle carte salvate con Click to Pay...',
 	'ctp.login.title': 'Continua su Click to Pay',
@@ -276,16 +269,12 @@ var o = {
 	'ctp.manualCardEntry': 'Inserimento manuale della carta',
 	'ctp.aria.infoModalButton': "Che cos'è Click to Pay",
 	'ctp.infoPopup.title': 'Click to Pay offre la facilità del contactless online',
-	'ctp.infoPopup.subtitle':
-		'Un metodo di pagamento veloce e sicuro supportato da Mastercard, Visa e altre carte di pagamento.',
-	'ctp.infoPopup.benefit1':
-		'Click to Pay si avvale della crittografia per garantire la sicurezza delle tue informazioni',
+	'ctp.infoPopup.subtitle': 'Un metodo di pagamento veloce e sicuro supportato da Mastercard, Visa e altre carte di pagamento.',
+	'ctp.infoPopup.benefit1': 'Click to Pay si avvale della crittografia per garantire la sicurezza delle tue informazioni',
 	'ctp.infoPopup.benefit2': 'Usa questo strumento con i commercianti di tutto il mondo',
-	'ctp.infoPopup.benefit3':
-		'Effettua una sola configurazione per avere la possibilità di effettuare pagamenti più agevoli in futuro',
+	'ctp.infoPopup.benefit3': 'Effettua una sola configurazione per avere la possibilità di effettuare pagamenti più agevoli in futuro',
 	'ctp.errors.AUTH_INVALID': 'Autenticazione non valida',
-	'ctp.errors.NOT_FOUND':
-		"Nessun account trovato. Inserisci un'e-mail valida o procedi con l'inserimento manuale della carta.",
+	'ctp.errors.NOT_FOUND': "Nessun account trovato. Inserisci un'e-mail valida o procedi con l'inserimento manuale della carta.",
 	'ctp.errors.ID_FORMAT_UNSUPPORTED': 'Formato non supportato',
 	'ctp.errors.FRAUD': "L'account utente è stato bloccato o disattivato",
 	'ctp.errors.CONSUMER_ID_MISSING': "L'identità del consumatore non è presente nella richiesta",
@@ -306,7 +295,6 @@ var o = {
 	'consent.checkbox.invalid': 'È necessario accettare i termini e le condizioni',
 	'form.instruction': 'Se non diversamente indicato, tutti i campi sono obbligatori.',
 	'trustly.descriptor': 'Pagamento bancario istantaneo',
-	'trustly.description1':
-		'Paga direttamente da uno qualsiasi dei tuoi conti bancari, garantito da una sicurezza di livello bancario',
+	'trustly.description1': 'Paga direttamente da uno qualsiasi dei tuoi conti bancari, garantito da una sicurezza di livello bancario',
 	'trustly.description2': 'Nessuna carta, nessun download di app, nessuna registrazione'
 };

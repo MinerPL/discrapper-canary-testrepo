@@ -9,7 +9,7 @@ n.d(t, {
 		return h;
 	},
 	iy: function () {
-		return m;
+		return I;
 	},
 	yp: function () {
 		return p;
@@ -82,20 +82,20 @@ function p() {
 				if (!t.isPremium) return Promise.reject(Error('spotify account is not premium'));
 			});
 }
-function I(e) {
+function m(e) {
 	if ('string' == typeof e) return e;
 	throw Error('value is not a string');
 }
-async function m(e, t) {
+async function I(e, t) {
 	var n;
 	let i = await (0, r.sd)(e, t),
-		a = (0, c.c8)(I(null !== (n = i.type) && void 0 !== n ? n : c.Hw.TRACK));
+		a = (0, c.c8)(m(null !== (n = i.type) && void 0 !== n ? n : c.Hw.TRACK));
 	if (null === a) throw Error('invalid type '.concat(i.type));
 	return {
 		context_uri: 'string' == typeof i.context_uri ? i.context_uri : void 0,
-		album_id: I(i.album_id),
-		artist_ids: Array.isArray(i.artist_ids) ? i.artist_ids.map(I) : [],
+		album_id: m(i.album_id),
+		artist_ids: Array.isArray(i.artist_ids) ? i.artist_ids.map(m) : [],
 		type: a,
-		button_urls: Array.isArray(i.button_urls) ? i.button_urls.map(I) : []
+		button_urls: Array.isArray(i.button_urls) ? i.button_urls.map(m) : []
 	};
 }

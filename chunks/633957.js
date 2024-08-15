@@ -32,11 +32,7 @@ function R(e) {
 		{ analyticsLocations: O } = (0, I.ZP)(E.Z.ACTIVITY_INSTANCE_EMBED),
 		M = (0, l.O)(),
 		v = (0, s.e7)([h.Z], () => h.Z.getChannel(R)),
-		L = (null == v ? void 0 : null === (t = v.isThread) || void 0 === t ? void 0 : t.call(v))
-			? null == v
-				? void 0
-				: v.parent_id
-			: R,
+		L = (null == v ? void 0 : null === (t = v.isThread) || void 0 === t ? void 0 : t.call(v)) ? (null == v ? void 0 : v.parent_id) : R,
 		Z = (0, s.e7)([T.default], () => T.default.getId()),
 		{
 			embeddedActivity: P,
@@ -56,11 +52,7 @@ function R(e) {
 		U = (0, s.e7)([N.Z], () => {
 			var e;
 			let t = null == P ? void 0 : P.userIds.values().next().value;
-			return null == t
-				? null
-				: null === (e = N.Z.findActivity(t, (e) => e.application_id === n.id)) || void 0 === e
-					? void 0
-					: e.details;
+			return null == t ? null : null === (e = N.Z.findActivity(t, (e) => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
 		}),
 		y = a.useMemo(() => {
 			let e = new m.Z(n);
@@ -97,9 +89,7 @@ function R(e) {
 						componentId: F
 					});
 		},
-		H = G.disabled
-			? S.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED
-			: S.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED;
+		H = G.disabled ? S.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED : S.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED;
 	return (0, i.jsx)('div', {
 		className: A.container,
 		children: (0, i.jsxs)('div', {

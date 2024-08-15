@@ -52,8 +52,7 @@ function d(e, t) {
 function _(e, t, n) {
 	var a, s;
 	do {
-		for (a = r.alloc(0); 8 * a.length < e.bitLength(); )
-			(t.v = i(n, t.k).update(t.v).digest()), (a = r.concat([a, t.v]));
+		for (a = r.alloc(0); 8 * a.length < e.bitLength(); ) (t.v = i(n, t.k).update(t.v).digest()), (a = r.concat([a, t.v]));
 		(s = d(a, e)),
 			(t.k = i(n, t.k)
 				.update(t.v)
@@ -77,19 +76,7 @@ function _(e, t, n) {
 	if ('dsa' === f.type) {
 		if ('dsa' !== i) throw Error('wrong private key type');
 		return (function (e, t, n) {
-			for (
-				var i,
-					a = t.params.priv_key,
-					s = t.params.p,
-					l = t.params.q,
-					u = t.params.g,
-					E = new o(0),
-					f = d(e, l).mod(l),
-					h = !1,
-					p = c(a, l, e, n);
-				!1 === h;
-
-			)
+			for (var i, a = t.params.priv_key, s = t.params.p, l = t.params.q, u = t.params.g, E = new o(0), f = d(e, l).mod(l), h = !1, p = c(a, l, e, n); !1 === h; )
 				(E = (function (e, t, n, r) {
 					return e.toRed(o.mont(n)).redPow(t).fromRed().mod(r);
 				})(u, (i = _(l, p, n)), s, l)),
@@ -109,7 +96,7 @@ function _(e, t, n) {
 	e = r.concat([E, e]);
 	for (var h = f.modulus.byteLength(), p = [0, 1]; e.length + p.length + 1 < h; ) p.push(255);
 	p.push(0);
-	for (var I = -1; ++I < e.length; ) p.push(e[I]);
+	for (var m = -1; ++m < e.length; ) p.push(e[m]);
 	return a(p, f);
 }),
 	(e.exports.getKey = c),

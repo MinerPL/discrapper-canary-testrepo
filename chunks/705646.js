@@ -17,11 +17,7 @@ function s(e, t) {
 			.map((e) => {
 				let n = e.silent ? 'Silent' : 'Displayed',
 					r = t ? ''.concat(e.channelId, ' - ').concat(e.messageId) : ''.concat(e.title, ' - ').concat(e.content);
-				return ''
-					.concat(new Date(e.receivedTimestamp).toISOString(), ' [')
-					.concat(e.type, '] ')
-					.concat(n, ' - ')
-					.concat(r);
+				return ''.concat(new Date(e.receivedTimestamp).toISOString(), ' [').concat(e.type, '] ').concat(n, ' - ').concat(r);
 			})
 			.join('\n');
 	return ''

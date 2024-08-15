@@ -13,10 +13,7 @@ function o(e) {
 		r.ZP.addConditionalChangeListener(() => {
 			var n;
 			let o = r.ZP.getSelfMember(e);
-			return (
-				!(0, i.yE)(null !== (n = null == o ? void 0 : o.flags) && void 0 !== n ? n : 0, s.q.COMPLETED_ONBOARDING) ||
-				(a.Z.finishOnboarding(e), t(), !1)
-			);
+			return !(0, i.yE)(null !== (n = null == o ? void 0 : o.flags) && void 0 !== n ? n : 0, s.q.COMPLETED_ONBOARDING) || (a.Z.finishOnboarding(e), t(), !1);
 		});
 	});
 }

@@ -18,16 +18,7 @@ var s = n(735250),
 let h = [16, 16, 14, 14, 12, 10, 8];
 t.Z = function (e) {
 	var t, n;
-	let {
-			guild: i,
-			disabled: g,
-			small: C,
-			loading: x = !1,
-			description: p,
-			memberCount: R,
-			presenceCount: f,
-			className: L
-		} = e,
+	let { guild: i, disabled: g, small: C, loading: x = !1, description: p, memberCount: R, presenceCount: f, className: L } = e,
 		O = (0, c.ZP)(),
 		[A, M] = a.useState(!1);
 	if (null == i || x)
@@ -149,9 +140,7 @@ t.Z = function (e) {
 										(0, s.jsx)('div', { className: m.dotOnline }),
 										(0, s.jsx)(o.Text, {
 											variant: 'text-xs/normal',
-											children: C
-												? T.Z.Messages.NUMBERS_ONLY.format({ count: G })
-												: T.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: G })
+											children: C ? T.Z.Messages.NUMBERS_ONLY.format({ count: G }) : T.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: G })
 										})
 									]
 								}),
@@ -162,9 +151,7 @@ t.Z = function (e) {
 										(0, s.jsx)('div', { className: m.dotOffline }),
 										(0, s.jsx)(o.Text, {
 											variant: 'text-xs/normal',
-											children: C
-												? T.Z.Messages.NUMBERS_ONLY.format({ count: U })
-												: T.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: U })
+											children: C ? T.Z.Messages.NUMBERS_ONLY.format({ count: U }) : T.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: U })
 										})
 									]
 								})

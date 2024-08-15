@@ -72,8 +72,7 @@ function h(e) {
 								variant: 'text-xs/normal',
 								color: 'text-secondary',
 								className: f.clanInfoItem,
-								children:
-									null !== (n = (0, m.mv)(I)) && void 0 !== n ? n : _.Z.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
+								children: null !== (n = (0, m.mv)(I)) && void 0 !== n ? n : _.Z.Messages.CLAN_DISCOVERY_UNKNOWN_PLAYSTYLE
 							}),
 							null != g &&
 								(0, a.jsx)(c.cS, {

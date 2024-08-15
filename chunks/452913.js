@@ -20,9 +20,7 @@ n.Z = l().throttle(function () {
 			let t = e.indexOf(n);
 			return -1 === t ? -2 : t;
 		})(n);
-	if (
-		(-1 === (t += e) && !(0, r.z)(o.Z, a.Z, u.Z) && (t += e), -3 === t && (t = n.length - 1), t >= n.length || -2 === t)
-	) {
+	if ((-1 === (t += e) && !(0, r.z)(o.Z, a.Z, u.Z) && (t += e), -3 === t && (t = n.length - 1), t >= n.length || -2 === t)) {
 		(0, c.z)(_.Z.getHomeLink());
 		return;
 	}

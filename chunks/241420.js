@@ -30,17 +30,7 @@ var n,
 	S = t(689938),
 	N = t(205548);
 function C(e) {
-	let {
-			isGuildRestricted: s,
-			handleRestrictedGuildChange: t,
-			isGuildActivityRestricted: n,
-			handleActivityRestrictedGuildChange: a,
-			isGuildActivityJoiningRestricted: r,
-			handleActivityJoiningRestrictedGuildChange: c,
-			isGuildMessageRequestRestricted: d,
-			handleMessageRequestRestrictedGuildChange: E,
-			guild: I
-		} = e,
+	let { isGuildRestricted: s, handleRestrictedGuildChange: t, isGuildActivityRestricted: n, handleActivityRestrictedGuildChange: a, isGuildActivityJoiningRestricted: r, handleActivityJoiningRestrictedGuildChange: c, isGuildMessageRequestRestricted: d, handleMessageRequestRestrictedGuildChange: E, guild: I } = e,
 		C = I.hasFeature(u.oNc.HUB);
 	return (0, i.jsxs)(i.Fragment, {
 		children: [
@@ -50,9 +40,7 @@ function C(e) {
 					(0, i.jsx)(o.FormItem, {
 						children: (0, i.jsx)(o.FormSwitch, {
 							value: !s,
-							note: C
-								? S.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC_HUB
-								: S.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC,
+							note: C ? S.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC_HUB : S.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC,
 							onChange: t,
 							hideBorder: !0,
 							children: S.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES
@@ -68,13 +56,7 @@ function C(e) {
 						(0, i.jsx)(o.FormItem, {
 							children: (0, i.jsx)(o.FormSwitch, {
 								value: !d,
-								note: C
-									? S.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC_HUB.format({
-											helpdeskArticle: _.Z.getArticleURL(u.BhN.MESSAGE_REQUESTS)
-										})
-									: S.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC.format({
-											helpdeskArticle: _.Z.getArticleURL(u.BhN.MESSAGE_REQUESTS)
-										}),
+								note: C ? S.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC_HUB.format({ helpdeskArticle: _.Z.getArticleURL(u.BhN.MESSAGE_REQUESTS) }) : S.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC.format({ helpdeskArticle: _.Z.getArticleURL(u.BhN.MESSAGE_REQUESTS) }),
 								onChange: E,
 								disabled: s,
 								hideBorder: !0,
@@ -94,9 +76,7 @@ function C(e) {
 								value: !n,
 								onChange: a,
 								hideBorder: !0,
-								note: S.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_STATUS_DESC.format({
-									helpdeskArticle: _.Z.getArticleURL(u.BhN.ACTIVITY_STATUS_SETTINGS)
-								}),
+								note: S.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_STATUS_DESC.format({ helpdeskArticle: _.Z.getArticleURL(u.BhN.ACTIVITY_STATUS_SETTINGS) }),
 								children: S.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_STATUS
 							})
 						}),
@@ -112,9 +92,7 @@ function C(e) {
 							value: !r,
 							onChange: c,
 							hideBorder: !0,
-							note: S.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_JOINING_DESC.format({
-								helpdeskArticle: _.Z.getArticleURL(u.BhN.ACTIVITY_STATUS_SETTINGS)
-							}),
+							note: S.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_JOINING_DESC.format({ helpdeskArticle: _.Z.getArticleURL(u.BhN.ACTIVITY_STATUS_SETTINGS) }),
 							children: S.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_JOINING
 						})
 					}),
@@ -126,9 +104,7 @@ function C(e) {
 				children: (0, i.jsx)(o.Text, {
 					color: 'header-secondary',
 					variant: 'text-sm/normal',
-					children: S.Z.Messages.PRIVACY_SETTINGS_COMMUNITY_GUILDS_DISCLAIMER.format({
-						policyLink: 'https://discord.com/safety/360043709612-our-policies'
-					})
+					children: S.Z.Messages.PRIVACY_SETTINGS_COMMUNITY_GUILDS_DISCLAIMER.format({ policyLink: 'https://discord.com/safety/360043709612-our-policies' })
 				})
 			})
 		]
@@ -235,5 +211,4 @@ function A(e) {
 		guild: s
 	});
 }
-((a = n || (n = {})).USER_SETTINGS_PRIVACY_SAFETY = 'user_settings_privacy_safety'),
-	(a.SERVER_PRIVACY_MODAL = 'server_privacy_modal');
+((a = n || (n = {})).USER_SETTINGS_PRIVACY_SAFETY = 'user_settings_privacy_safety'), (a.SERVER_PRIVACY_MODAL = 'server_privacy_modal');

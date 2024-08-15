@@ -282,11 +282,4 @@ function Z(e) {
 				})
 			: null;
 }
-((s = i || (i = {})).UPSELL = 'upsell'),
-	(s.TOP_PICKS = 'top_picks'),
-	(s.OTHER_GUILDS = 'other_guilds'),
-	(s.HERO = 'hero'),
-	((r = a || (a = {})).DEFAULT = 'default'),
-	(r.UPSELL = 'upsell'),
-	(r.GLOBAL_DISCOVERY = 'global_discovery'),
-	(r.SAVED_GUILDS = 'saved_guilds');
+((s = i || (i = {})).UPSELL = 'upsell'), (s.TOP_PICKS = 'top_picks'), (s.OTHER_GUILDS = 'other_guilds'), (s.HERO = 'hero'), ((r = a || (a = {})).DEFAULT = 'default'), (r.UPSELL = 'upsell'), (r.GLOBAL_DISCOVERY = 'global_discovery'), (r.SAVED_GUILDS = 'saved_guilds');

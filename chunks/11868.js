@@ -136,17 +136,7 @@ let R = (e, n) => (l) => {
 		});
 	}),
 	P = t.memo(function (e) {
-		let {
-				guildId: n,
-				guildScheduledEventId: l,
-				recurrenceId: t,
-				isActive: a,
-				isEnded: i,
-				isMember: u,
-				isExternal: c,
-				onAcceptInstantInvite: d,
-				onTransitionToInviteChannel: m
-			} = e,
+		let { guildId: n, guildScheduledEventId: l, recurrenceId: t, isActive: a, isEnded: i, isMember: u, isExternal: c, onAcceptInstantInvite: d, onTransitionToInviteChannel: m } = e,
 			N = (0, o.e7)([E.ZP], () => E.ZP.isInterestedInEventRecurrence(l, t), [l, t]),
 			v = (e) => {
 				e.stopPropagation(), u ? a && m() : d();
@@ -205,20 +195,9 @@ let R = (e, n) => (l) => {
 	}),
 	y = t.memo(function (e) {
 		var n;
-		let {
-				guildScheduledEvent: l,
-				guild: a,
-				channel: o,
-				isMember: u,
-				recurrenceId: c,
-				onAcceptInstantInvite: d,
-				onTransitionToInviteChannel: N
-			} = e,
+		let { guildScheduledEvent: l, guild: a, channel: o, isMember: u, recurrenceId: c, onAcceptInstantInvite: d, onTransitionToInviteChannel: N } = e,
 			v = null != c ? c : null != l ? (0, j.DK)(l) : null,
-			C =
-				(null == l ? void 0 : l.recurrence_rule) == null ||
-				null == v ||
-				(0, j.Rp)((0, x.KV)(null == l ? void 0 : l.recurrence_rule), v),
+			C = (null == l ? void 0 : l.recurrence_rule) == null || null == v || (0, j.Rp)((0, x.KV)(null == l ? void 0 : l.recurrence_rule), v),
 			p = (0, I.Z)(l),
 			g = t.useCallback(() => {
 				u &&

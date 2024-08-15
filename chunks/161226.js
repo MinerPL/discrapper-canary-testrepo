@@ -28,12 +28,6 @@ class a extends r.Z {
 		});
 	}
 	constructor(e) {
-		super(e),
-			i(this, 'purchaseType', void 0),
-			i(this, 'purchasedAt', void 0),
-			i(this, 'expiresAt', void 0),
-			(this.purchasedAt = e.purchasedAt),
-			(this.purchaseType = e.purchaseType),
-			(this.expiresAt = e.expiresAt);
+		super(e), i(this, 'purchaseType', void 0), i(this, 'purchasedAt', void 0), i(this, 'expiresAt', void 0), (this.purchasedAt = e.purchasedAt), (this.purchaseType = e.purchaseType), (this.expiresAt = e.expiresAt);
 	}
 }

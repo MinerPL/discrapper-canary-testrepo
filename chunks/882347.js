@@ -1,6 +1,6 @@
 n.d(t, {
 	p: function () {
-		return m;
+		return I;
 	}
 }),
 	n(789020);
@@ -18,9 +18,7 @@ var r = n(570140),
 async function f(e, t, n) {
 	try {
 		var l;
-		return null !== (l = s.Z.getApplication(e)) && void 0 !== l
-			? l
-			: o.Z.createFromServer(await a.Z.fetchApplication(e));
+		return null !== (l = s.Z.getApplication(e)) && void 0 !== l ? l : o.Z.createFromServer(await a.Z.fetchApplication(e));
 	} catch (a) {
 		r.Z.dispatch({
 			type: 'EMBEDDED_ACTIVITY_LAUNCH_FAIL',
@@ -75,7 +73,7 @@ async function p(e) {
 	}
 	return !0;
 }
-async function I(e) {
+async function m(e) {
 	let { application: t, applicationId: n, channel: r } = e,
 		i = null != t ? t : await f(n, r.id, r.getGuildId());
 	return (
@@ -90,6 +88,6 @@ async function I(e) {
 			}))
 	);
 }
-async function m(e) {
-	return !!((await h(e)) && (await p(e)) && (await I(e))) || !1;
+async function I(e) {
+	return !!((await h(e)) && (await p(e)) && (await m(e))) || !1;
 }

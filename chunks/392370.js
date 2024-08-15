@@ -43,15 +43,7 @@ function L(e, n) {
 	return (0, m.un)(e.displayName, n.displayName);
 }
 function b(e) {
-	let {
-		channel: n,
-		query: t,
-		commandLimit: a,
-		applicationLimit: o,
-		searchesCommands: r = !0,
-		searchesBots: s = !0,
-		searchesActivities: C = !0
-	} = e;
+	let { channel: n, query: t, commandLimit: a, applicationLimit: o, searchesCommands: r = !0, searchesBots: s = !0, searchesActivities: C = !0 } = e;
 	t.startsWith(''.concat(I.GI)) && (t = t.substring(1));
 	let {
 			commands: f,
@@ -83,38 +75,20 @@ function b(e) {
 					commandSectionMap: _,
 					loading: !0 === r.fetchState.fetching || !0 === s.fetchState.fetching
 				};
-			}, [
-				a,
-				l,
-				r.fetchState.fetching,
-				null === (n = r.result) || void 0 === n ? void 0 : n.sections,
-				s.fetchState.fetching,
-				null === (t = s.result) || void 0 === t ? void 0 : t.sections
-			]);
+			}, [a, l, r.fetchState.fetching, null === (n = r.result) || void 0 === n ? void 0 : n.sections, s.fetchState.fetching, null === (t = s.result) || void 0 === t ? void 0 : t.sections]);
 		})({
 			channel: n,
 			includeBuiltIn: !0
 		}),
 		{ apps: N } = (function (e) {
-			let {
-					channel: n,
-					onlyWithCommands: t,
-					includeBuiltIn: a,
-					allowFetch: l = !0,
-					includeEmbeddedApps: o,
-					includeNonEmbeddedApps: r
-				} = e,
+			let { channel: n, onlyWithCommands: t, includeBuiltIn: a, allowFetch: l = !0, includeEmbeddedApps: o, includeNonEmbeddedApps: r } = e,
 				s = (0, p.Hs)(n, [c.yU.CHAT]).hasBaseAccessPermissions,
 				d = (0, m.em)(n, s, l),
 				u = (0, m.PL)(s, l),
 				_ = i.useCallback(
 					(e) => {
 						let n = e.descriptor.application;
-						return (
-							null != n &&
-							(!!(o && (0, v.ye)({ application: n })) ||
-								(null != n && r && !(0, v.ye)({ application: n }) && (!t || Object.keys(e.commands).length > 0)))
-						);
+						return null != n && (!!(o && (0, v.ye)({ application: n })) || (null != n && r && !(0, v.ye)({ application: n }) && (!t || Object.keys(e.commands).length > 0)));
 					},
 					[o, r, t]
 				),
@@ -134,8 +108,7 @@ function b(e) {
 				r && a && C.push(v.Wx),
 				{
 					apps: C,
-					loading:
-						(null == d ? void 0 : d.fetchState.fetching) === !0 || (null == u ? void 0 : u.fetchState.fetching) === !0
+					loading: (null == d ? void 0 : d.fetchState.fetching) === !0 || (null == u ? void 0 : u.fetchState.fetching) === !0
 				}
 			);
 		})({
@@ -169,13 +142,7 @@ function b(e) {
 									isUserInstalled: c
 								};
 							}
-							let {
-								descriptor: s,
-								applicationAllowedForChannel: c,
-								applicationAllowedForUser: d,
-								isGuildInstalled: u,
-								isUserInstalled: p
-							} = t[i.applicationId];
+							let { descriptor: s, applicationAllowedForChannel: c, applicationAllowedForUser: d, isGuildInstalled: u, isUserInstalled: p } = t[i.applicationId];
 							return (
 								_.Ft(i, n, {
 									applicationAllowedForUser: d,
@@ -203,12 +170,7 @@ function b(e) {
 						return (e) => {
 							let n = e.name,
 								a = e.displayName;
-							return (
-								!!(
-									(n.startsWith(t) && n.split(' ').slice(1).join(' ').startsWith(i)) ||
-									(a.startsWith(t) && a.split(' ').slice(1).join(' ').startsWith(i))
-								) || !1
-							);
+							return !!((n.startsWith(t) && n.split(' ').slice(1).join(' ').startsWith(i)) || (a.startsWith(t) && a.split(' ').slice(1).join(' ').startsWith(i))) || !1;
 						};
 					})(e),
 					(function (e) {
@@ -221,25 +183,14 @@ function b(e) {
 					(function (e) {
 						return (n) => {
 							var t;
-							for (let { name: i, serverLocalizedName: a } of null !== (t = n.options) && void 0 !== t ? t : [])
-								if (
-									i.startsWith(e) ||
-									''.concat(n.name, ' ').concat(i).startsWith(e) ||
-									(null != n.displayName && ''.concat(n.displayName, ' ').concat(i).startsWith(e)) ||
-									(null != a &&
-										(a.startsWith(e) ||
-											''.concat(n.name, ' ').concat(a).startsWith(e) ||
-											(null != n.displayName && ''.concat(n.displayName, ' ').concat(a).startsWith(e))))
-								)
-									return !0;
+							for (let { name: i, serverLocalizedName: a } of null !== (t = n.options) && void 0 !== t ? t : []) if (i.startsWith(e) || ''.concat(n.name, ' ').concat(i).startsWith(e) || (null != n.displayName && ''.concat(n.displayName, ' ').concat(i).startsWith(e)) || (null != a && (a.startsWith(e) || ''.concat(n.name, ' ').concat(a).startsWith(e) || (null != n.displayName && ''.concat(n.displayName, ' ').concat(a).startsWith(e))))) return !0;
 							return !1;
 						};
 					})(e),
 					(function (e) {
 						return (n) => {
 							var t;
-							for (let { name: i, serverLocalizedName: a } of null !== (t = n.options) && void 0 !== t ? t : [])
-								if (i.includes(e) || (null == a ? void 0 : a.includes(e))) return !0;
+							for (let { name: i, serverLocalizedName: a } of null !== (t = n.options) && void 0 !== t ? t : []) if (i.includes(e) || (null == a ? void 0 : a.includes(e))) return !0;
 							return !1;
 						};
 					})(e)
@@ -432,13 +383,7 @@ function R(e) {
 		),
 		x = i.useCallback(() => {
 			let e = v.length;
-			h === f.M.FETCHED &&
-				e === _.current &&
-				e > 0 &&
-				e < A &&
-				e < l &&
-				v[e - 1].length > 0 &&
-				(_.current++, p((e) => e + 1));
+			h === f.M.FETCHED && e === _.current && e > 0 && e < A && e < l && v[e - 1].length > 0 && (_.current++, p((e) => e + 1));
 		}, [h, l, v, A]),
 		g = i.useCallback(
 			(e) => {

@@ -48,19 +48,7 @@ var i,
 	O = t(413097);
 function Z(e) {
 	var n;
-	let {
-			application: t,
-			look: i = 'large_banner',
-			isPartner: a,
-			onClick: o,
-			bannerImageStyle: r,
-			enableVideoBanner: s = !0,
-			children: c,
-			sectionName: d,
-			resultsPosition: m,
-			tracksImpression: p = !0,
-			disabled: _ = !1
-		} = e,
+	let { application: t, look: i = 'large_banner', isPartner: a, onClick: o, bannerImageStyle: r, enableVideoBanner: s = !0, children: c, sectionName: d, resultsPosition: m, tracksImpression: p = !0, disabled: _ = !1 } = e,
 		C = null !== (n = (0, u.Z)(_)) && void 0 !== n ? n : _;
 	return (0, l.jsx)(H, {
 		application: t,
@@ -88,17 +76,7 @@ function Z(e) {
 	});
 }
 function H(e) {
-	let {
-			application: n,
-			onClick: t,
-			children: i,
-			sectionName: a,
-			resultsPosition: r,
-			tracksImpression: c,
-			disabled: u,
-			containerStyle: m,
-			look: p
-		} = e,
+	let { application: n, onClick: t, children: i, sectionName: a, resultsPosition: r, tracksImpression: c, disabled: u, containerStyle: m, look: p } = e,
 		{ name: _, description: C } = o.useMemo(() => (0, g.sl)(n, { fakeAppIconURL: O }), [n]),
 		{ trackItemImpressionRef: f } = (0, b.Z)({
 			applicationId: n.id,
@@ -159,15 +137,7 @@ function U(e) {
 	});
 }
 function k(e) {
-	let {
-			application: n,
-			look: t,
-			isPartner: i,
-			bannerImageStyle: a,
-			enableVideoBanner: r,
-			disableBannerFadeIn: c,
-			children: u
-		} = e,
+	let { application: n, look: t, isPartner: i, bannerImageStyle: a, enableVideoBanner: r, disableBannerFadeIn: c, children: u } = e,
 		{ iconURL: m, name: p, description: _ } = o.useMemo(() => (0, g.sl)(n, { fakeAppIconURL: O }), [n]),
 		C = o.useMemo(() => (null == _ ? null : (0, L.ae)(_)), [_]),
 		f = (0, E.ZP)(m, ''),
@@ -277,9 +247,7 @@ function D(e) {
 		}),
 		r = o.useMemo(() => {
 			let e = (0, g.yJ)(n);
-			return null != e && null != e.activity_preview_video_asset_id
-				? (0, _.Z)(n.id, e.activity_preview_video_asset_id)
-				: null;
+			return null != e && null != e.activity_preview_video_asset_id ? (0, _.Z)(n.id, e.activity_preview_video_asset_id) : null;
 		}, [n]),
 		[c, d] = o.useState(t);
 	o.useEffect(() => {
@@ -440,8 +408,4 @@ function Y(e) {
 		})
 	});
 }
-((a = i || (i = {})).ICON = 'icon'),
-	(a.ROW = 'row'),
-	(a.NO_BANNER = 'no_banner'),
-	(a.MEDIUM_BANNER = 'medium_banner'),
-	(a.LARGE_BANNER = 'large_banner');
+((a = i || (i = {})).ICON = 'icon'), (a.ROW = 'row'), (a.NO_BANNER = 'no_banner'), (a.MEDIUM_BANNER = 'medium_banner'), (a.LARGE_BANNER = 'large_banner');

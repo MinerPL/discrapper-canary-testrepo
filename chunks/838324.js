@@ -40,10 +40,7 @@ function E(e) {
 			secondaryColor: i.Z.colors.BACKGROUND_ACCENT.css
 		}),
 		O = [(Math.min(u.X, C) / u.md) * 100, (Math.min(u.md, g) / u.md) * 100],
-		A =
-			!x && p
-				? [i.Z.colors.TEXT_POSITIVE.css, i.Z.colors.TEXT_POSITIVE.css]
-				: [i.Z.colors.TEXT_BRAND.css, i.Z.colors.TEXT_MUTED.css];
+		A = !x && p ? [i.Z.colors.TEXT_POSITIVE.css, i.Z.colors.TEXT_POSITIVE.css] : [i.Z.colors.TEXT_BRAND.css, i.Z.colors.TEXT_MUTED.css];
 	return (0, s.jsxs)('div', {
 		className: I.container,
 		children: [

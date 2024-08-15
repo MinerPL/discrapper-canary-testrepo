@@ -22,11 +22,7 @@ let S = [],
 	v = !1,
 	Z = null;
 function L() {
-	if (
-		((i = null != (a = m.Z.getChannel()) ? I.Z.getGuild(a.guild_id) : null),
-		(S = null != a && null != i && g.Z.can(T.Plq.MANAGE_WEBHOOKS, a) ? p.Z.getWebhooksForChannel(i.id, a.id) : []),
-		null != f)
-	) {
+	if (((i = null != (a = m.Z.getChannel()) ? I.Z.getGuild(a.guild_id) : null), (S = null != a && null != i && g.Z.can(T.Plq.MANAGE_WEBHOOKS, a) ? p.Z.getWebhooksForChannel(i.id, a.id) : []), null != f)) {
 		let e = R(f.id);
 		null != e && (f = e);
 	}
@@ -117,11 +113,7 @@ let b = new x(
 				INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function (e) {
 					let { settings: t } = e;
 					if (null == f) return !1;
-					(f = { ...f }),
-						null != t.name && f.name !== t.name && ((f.name = t.name), (v = !0)),
-						void 0 !== t.avatar && f.avatar !== t.avatar && ((f.avatar = t.avatar), (v = !0)),
-						null != t.channelId && f.channel_id !== t.channelId && ((f.channel_id = t.channelId), (v = !0)),
-						v && O();
+					(f = { ...f }), null != t.name && f.name !== t.name && ((f.name = t.name), (v = !0)), void 0 !== t.avatar && f.avatar !== t.avatar && ((f.avatar = t.avatar), (v = !0)), null != t.channelId && f.channel_id !== t.channelId && ((f.channel_id = t.channelId), (v = !0)), v && O();
 				},
 				CHANNEL_SETTINGS_CLOSE: function () {
 					(a = null), (i = null), (S = []), (f = null), (N = T.QZA.CLOSED);

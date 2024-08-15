@@ -40,13 +40,7 @@ function m(e) {
 function N(e) {
 	var t, n;
 	let { rule: i, onChangeText: l, className: o } = e,
-		{
-			patterns: _,
-			valueError: N,
-			errors: S,
-			validatePatternsChanged: h,
-			validateEditingValueChanged: g
-		} = (0, d.Z)(i, l),
+		{ patterns: _, valueError: N, errors: S, validatePatternsChanged: h, validateEditingValueChanged: g } = (0, d.Z)(i, l),
 		[C] = a.useState(() => ({
 			tags: _,
 			value: '',
@@ -56,13 +50,7 @@ function N(e) {
 		x = a.useMemo(
 			() =>
 				S.reduce((e, t) => {
-					let {
-						pattern: n,
-						message: s,
-						description: a,
-						erroringCharacterLength: i = n.length,
-						erroringCharacterOffset: r = 0
-					} = t;
+					let { pattern: n, message: s, description: a, erroringCharacterLength: i = n.length, erroringCharacterOffset: r = 0 } = t;
 					return null == _.find((e) => e === n)
 						? e
 						: ((e[n] = {

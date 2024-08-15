@@ -38,8 +38,8 @@ var r,
 	f = n(957730),
 	h = n(467798),
 	p = n(592125),
-	I = n(703558),
-	m = n(375954),
+	m = n(703558),
+	I = n(375954),
 	T = n(300429),
 	g = n(70956),
 	S = n(630388),
@@ -64,31 +64,9 @@ function b(e, t) {
 }
 function M(e, t) {
 	var n, r, i, a, s, o, l;
-	let u = null == t ? null : m.Z.getMessage(e.id, t),
-		c =
-			null !==
-				(s =
-					null == u
-						? void 0
-						: null === (r = u.embeds) || void 0 === r
-							? void 0
-							: null === (n = r[0]) || void 0 === n
-								? void 0
-								: n.rawTitle) && void 0 !== s
-				? s
-				: '',
-		d =
-			null !==
-				(o =
-					null == u
-						? void 0
-						: null === (a = u.poll) || void 0 === a
-							? void 0
-							: null === (i = a.question) || void 0 === i
-								? void 0
-								: i.text) && void 0 !== o
-				? o
-				: '';
+	let u = null == t ? null : I.Z.getMessage(e.id, t),
+		c = null !== (s = null == u ? void 0 : null === (r = u.embeds) || void 0 === r ? void 0 : null === (n = r[0]) || void 0 === n ? void 0 : n.rawTitle) && void 0 !== s ? s : '',
+		d = null !== (o = null == u ? void 0 : null === (a = u.poll) || void 0 === a ? void 0 : null === (i = a.question) || void 0 === i ? void 0 : i.text) && void 0 !== o ? o : '';
 	if ('' !== c) return b(c, 40);
 	if ('' !== d) return b(d, 80);
 	{
@@ -114,22 +92,13 @@ function M(e, t) {
 	}
 }
 function P(e) {
-	let {
-		parentChannel: t,
-		parentMessageId: n,
-		threadSettings: r,
-		privateThreadMode: i,
-		location: o,
-		onThreadCreated: l,
-		useDefaultThreadName: _,
-		uploadHandler: E
-	} = e;
+	let { parentChannel: t, parentMessageId: n, threadSettings: r, privateThreadMode: i, location: o, onThreadCreated: l, useDefaultThreadName: _, uploadHandler: E } = e;
 	return a.useCallback(
 		async (e, a, h) => {
-			var m;
+			var I;
 			let T = null == n,
 				g = L(r, i),
-				S = null !== (m = r.name) && void 0 !== m ? m : '';
+				S = null !== (I = r.name) && void 0 !== I ? I : '';
 			if ('' === S && _) {
 				let e = M(t, n);
 				S = '' !== e ? e : y.Z.Messages.THREAD;
@@ -142,19 +111,15 @@ function P(e) {
 						url: e,
 						body: {
 							name: S,
-							type: g
-								? C.d4z.PRIVATE_THREAD
-								: t.type === C.d4z.GUILD_ANNOUNCEMENT
-									? C.d4z.ANNOUNCEMENT_THREAD
-									: C.d4z.PUBLIC_THREAD,
+							type: g ? C.d4z.PRIVATE_THREAD : t.type === C.d4z.GUILD_ANNOUNCEMENT ? C.d4z.ANNOUNCEMENT_THREAD : C.d4z.PUBLIC_THREAD,
 							auto_archive_duration: v,
 							location: o
 						}
 					});
 				});
 			R !== O &&
-				(u.Z.clearDraft(t.id, I.d.ThreadSettings),
-				u.Z.clearDraft(t.id, I.d.FirstThreadMessage),
+				(u.Z.clearDraft(t.id, m.d.ThreadSettings),
+				u.Z.clearDraft(t.id, m.d.FirstThreadMessage),
 				null == l || l(R),
 				(T || e.length > 0 || (null != a && a.length > 0) || (null != h && h.length > 0)) &&
 					(function (e, t, n, r, i) {
@@ -162,7 +127,7 @@ function P(e) {
 						else if (null != n && n.length > 0) c.Z.sendStickers(e.id, n, t);
 						else c.Z.sendMessage(e.id, f.ZP.parse(e, t));
 					})(R, e, a, h, E)),
-				d.Z.clearAll(t.id, I.d.FirstThreadMessage);
+				d.Z.clearAll(t.id, m.d.FirstThreadMessage);
 		},
 		[t, n, r, l, i, o, _, E]
 	);
@@ -188,7 +153,7 @@ function w(e) {
 				[_, f] = (0, h.Z)(e);
 			_ && ((e = f), (c = (0, S.pj)(c, C.iLy.SUPPRESS_NOTIFICATIONS)));
 			let p = (0, N.WD)(t, null),
-				m = C.ANM.CHANNEL_THREADS(t.id) + '?use_nested_fields=true',
+				I = C.ANM.CHANNEL_THREADS(t.id) + '?use_nested_fields=true',
 				T = {
 					name: n,
 					auto_archive_duration: p,
@@ -201,16 +166,16 @@ function w(e) {
 				},
 				g = await x(t, () =>
 					null != l && l.length > 0
-						? o(m, T, l)
+						? o(I, T, l)
 						: s.tn.post({
-								url: m,
+								url: I,
 								body: T
 							})
 				);
 			return (
-				u.Z.clearDraft(t.id, I.d.ThreadSettings),
-				u.Z.clearDraft(t.id, I.d.FirstThreadMessage),
-				d.Z.clearAll(t.id, I.d.FirstThreadMessage),
+				u.Z.clearDraft(t.id, m.d.ThreadSettings),
+				u.Z.clearDraft(t.id, m.d.FirstThreadMessage),
+				d.Z.clearAll(t.id, m.d.FirstThreadMessage),
 				(0, E.Je)({
 					guildId: t.guild_id,
 					channelId: t.id,
@@ -223,9 +188,7 @@ function w(e) {
 		[t, n, i, r, o]
 	);
 }
-((i = r || (r = {}))[(i.Disabled = 1)] = 'Disabled'),
-	(i[(i.Enabled = 2)] = 'Enabled'),
-	(i[(i.PrivateOnly = 3)] = 'PrivateOnly');
+((i = r || (r = {}))[(i.Disabled = 1)] = 'Disabled'), (i[(i.Enabled = 2)] = 'Enabled'), (i[(i.PrivateOnly = 3)] = 'PrivateOnly');
 async function x(e, t) {
 	let n;
 	let r = e.isForumLikeChannel();

@@ -44,8 +44,7 @@ function E(e) {
 									className: _.container,
 									ref: (e) => {
 										var n;
-										(m.current = e),
-											(t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
+										(m.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
 									},
 									...a,
 									onScroll: h,

@@ -33,18 +33,7 @@ let A = 'DRAGGABLE_ROLE';
 function M(e) {
 	var t, a;
 	let i,
-		{
-			guild: d,
-			role: I,
-			highestRole: E,
-			selectedItem: N,
-			onClick: S,
-			currentPosition: h,
-			onDragStart: g,
-			onDragReset: x,
-			onDragComplete: p,
-			roleStyle: R
-		} = e,
+		{ guild: d, role: I, highestRole: E, selectedItem: N, onClick: S, currentPosition: h, onDragStart: g, onDragReset: x, onDragComplete: p, roleStyle: R } = e,
 		L = (0, C.T)(d, E, I),
 		M = (0, T.pM)(d.id, I.id),
 		D = null == L && !M,
@@ -73,9 +62,7 @@ function M(e) {
 			canDrop: () => D,
 			collect: (e) => {
 				let t = e.getItem();
-				return null != t && e.isOver() && e.canDrop()
-					? { dragSourcePosition: t.position }
-					: { dragSourcePosition: null };
+				return null != t && e.isOver() && e.canDrop() ? { dragSourcePosition: t.position } : { dragSourcePosition: null };
 			},
 			drop: () => ({ roleId: I.id })
 		}),
@@ -150,11 +137,7 @@ function D(e) {
 			(e) => {
 				var t, n;
 				let s = o.findIndex((t) => t.id === e);
-				null === (n = j.current) ||
-					void 0 === n ||
-					null === (t = n.getScrollerNode()) ||
-					void 0 === t ||
-					t.scrollTo({ top: Math.max((s - 2) * 34, 0) });
+				null === (n = j.current) || void 0 === n || null === (t = n.getScrollerNode()) || void 0 === t || t.scrollTo({ top: Math.max((s - 2) * 34, 0) });
 			},
 			[o]
 		);

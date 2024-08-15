@@ -3,7 +3,7 @@ n.d(t, {
 		return T;
 	},
 	e: function () {
-		return m;
+		return I;
 	}
 }),
 	n(47120);
@@ -45,15 +45,15 @@ class p extends (r = a.ZP.PersistedStore) {
 	}
 }
 f(p, 'displayName', 'PTOStore'), f(p, 'persistKey', 'PTOStore');
-let I = new p(o.Z, {}),
-	m = (e) =>
-		(0, a.e7)([u.ZP, d.default, I], () => {
+let m = new p(o.Z, {}),
+	I = (e) =>
+		(0, a.e7)([u.ZP, d.default, m], () => {
 			let t = d.default.getCurrentUser();
 			if (null == t || !t.isStaff() || !e.isDM()) return !1;
 			let n = d.default.getUser(e.getRecipientId());
 			if (!(null == n ? void 0 : n.isStaff())) return !1;
 			let r = u.ZP.getNicknames(n.id).some((e) => e.endsWith('[PTO]') || e.endsWith('[OOO]'));
-			return r ? !I.hasId(n.id) && r : (h.delete(n.id) && I.emitChange(), !1);
+			return r ? !m.hasId(n.id) && r : (h.delete(n.id) && m.emitChange(), !1);
 		}),
 	T = () =>
 		(0, i.jsxs)('div', {
@@ -66,7 +66,7 @@ let I = new p(o.Z, {}),
 						let e = c.Z.getChannelId();
 						if (null == e) return;
 						let t = l.Z.getChannel(e);
-						null != t && t.isPrivate() && !h.has(t.getRecipientId()) && (h.add(t.getRecipientId()), I.emitChange());
+						null != t && t.isPrivate() && !h.has(t.getRecipientId()) && (h.add(t.getRecipientId()), m.emitChange());
 					},
 					children: (0, i.jsx)(s.CircleXIcon, {
 						size: 'md',

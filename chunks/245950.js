@@ -39,9 +39,7 @@ function I(e) {
 					return {
 						memberSince: a,
 						nextRenewalDate: t,
-						nextRenewalLabel: r
-							? u.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_INFO_MEMBERSHIP_ENDS
-							: u.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_INFO_NEXT_RENEWAL,
+						nextRenewalLabel: r ? u.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_INFO_MEMBERSHIP_ENDS : u.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_INFO_NEXT_RENEWAL,
 						subscriptionPrice: n,
 						isCancelled: r,
 						isPastDue: o,

@@ -28,32 +28,7 @@ function u(e, n, a) {
 		e
 	);
 }
-((r = t || (t = {})).UNKNOWN = 'unknown'),
-	(r.VISA = 'visa'),
-	(r.DISCOVER = 'discover'),
-	(r.MASTERCARD = 'mastercard'),
-	(r.AMEX = 'amex'),
-	(r.PAYPAL = 'paypal'),
-	(r.PAYMENT_REQUEST = 'paymentRequest'),
-	(r.G_PAY = 'gPay'),
-	(r.DINERS = 'diners'),
-	(r.JCB = 'jcb'),
-	(r.UNIONPAY = 'unionpay'),
-	(r.SOFORT = 'sofort'),
-	(r.PRZELEWY24 = 'przelewy24'),
-	(r.GIROPAY = 'giropay'),
-	(r.PAYSAFECARD = 'paysafecard'),
-	(r.GCASH = 'gcash'),
-	(r.GRABPAY = 'grabpay'),
-	(r.MOMO_WALLET = 'momo_wallet'),
-	(r.VENMO = 'venmo'),
-	(r.KAKAOPAY = 'kakaopay'),
-	(r.GOPAY_WALLET = 'gopay_wallet'),
-	(r.BANCONTACT = 'bancontact'),
-	(r.EPS = 'eps'),
-	(r.IDEAL = 'ideal'),
-	(r.CASH_APP = 'cash_app'),
-	(r.APPLE = 'apple');
+((r = t || (t = {})).UNKNOWN = 'unknown'), (r.VISA = 'visa'), (r.DISCOVER = 'discover'), (r.MASTERCARD = 'mastercard'), (r.AMEX = 'amex'), (r.PAYPAL = 'paypal'), (r.PAYMENT_REQUEST = 'paymentRequest'), (r.G_PAY = 'gPay'), (r.DINERS = 'diners'), (r.JCB = 'jcb'), (r.UNIONPAY = 'unionpay'), (r.SOFORT = 'sofort'), (r.PRZELEWY24 = 'przelewy24'), (r.GIROPAY = 'giropay'), (r.PAYSAFECARD = 'paysafecard'), (r.GCASH = 'gcash'), (r.GRABPAY = 'grabpay'), (r.MOMO_WALLET = 'momo_wallet'), (r.VENMO = 'venmo'), (r.KAKAOPAY = 'kakaopay'), (r.GOPAY_WALLET = 'gopay_wallet'), (r.BANCONTACT = 'bancontact'), (r.EPS = 'eps'), (r.IDEAL = 'ideal'), (r.CASH_APP = 'cash_app'), (r.APPLE = 'apple');
 let p = {
 	SMALL: d.cardIconSmall,
 	MEDIUM: d.cardIconMedium,

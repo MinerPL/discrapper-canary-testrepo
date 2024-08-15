@@ -13,8 +13,8 @@ var r,
 	f = n(433517),
 	h = n(570140),
 	p = n(51025),
-	I = n(594190),
-	m = n(314897),
+	m = n(594190),
+	I = n(314897),
 	T = n(173747),
 	g = n(780570),
 	S = n(830168),
@@ -22,10 +22,7 @@ var r,
 	N = n(417363),
 	v = n(981631),
 	O = n(186901);
-((s = r || (r = {})).INSTALL = 'Install'),
-	(s.REPAIR = 'Repair'),
-	((o = i || (i = {})).PATCH = 'Patch'),
-	(o.REPAIR = 'Repair');
+((s = r || (r = {})).INSTALL = 'Install'), (s.REPAIR = 'Repair'), ((o = i || (i = {})).PATCH = 'Patch'), (o.REPAIR = 'Repair');
 let R = [O.ff.AUTHENTICATION_FAILED, O.ff.NOT_ENTITLED],
 	C = 'DispatchManagerStore',
 	y = [],
@@ -51,14 +48,9 @@ function k() {
 		var t, n;
 		let { comboId: r, action: i } = e,
 			{ applicationId: a, branchId: s } = (0, g.CP)(r);
-		if (
-			((t = a),
-			(n = s),
-			(null == b || b.applicationId !== t || b.branchId !== n) &&
-				(null == M || M.applicationId !== t || M.branchId !== n))
-		) {
-			let e = m.default.getToken(),
-				t = m.default.getId();
+		if (((t = a), (n = s), (null == b || b.applicationId !== t || b.branchId !== n) && (null == M || M.applicationId !== t || M.branchId !== n))) {
+			let e = I.default.getToken(),
+				t = I.default.getId();
 			if (null == e) throw Error('missing user token');
 			w = !S.Z.setCurrentTask(a, s, i, t, e);
 		}
@@ -77,9 +69,7 @@ function F(e, t, n, r) {
 		s = D.indexOf(i);
 	-1 !== s && D.splice(s, 1);
 	let o = B(e, t);
-	0 !== o && (n ? -1 === o && (y.push(a), k()) : (o > 0 && y.splice(o, 1), y.unshift(a), k())),
-		!n && L && S.Z.resume(),
-		G();
+	0 !== o && (n ? -1 === o && (y.push(a), k()) : (o > 0 && y.splice(o, 1), y.unshift(a), k())), !n && L && S.Z.resume(), G();
 }
 function V(e, t) {
 	let n = (0, g.Tu)(e, t),
@@ -99,13 +89,13 @@ function Z(e) {
 	-1 !== i && D.splice(i, 1);
 }
 function Y() {
-	let e = m.default.getToken(),
-		t = m.default.getId();
+	let e = I.default.getToken(),
+		t = I.default.getId();
 	if (null != e) S.Z.setCredentials(t, e);
 }
 function j() {
-	for (let e of I.ZP.getRunningDiscordApplicationIds()) p.al(e, e);
-	let e = I.ZP.getVisibleGame();
+	for (let e of m.ZP.getRunningDiscordApplicationIds()) p.al(e, e);
+	let e = m.ZP.getVisibleGame();
 	return !L && null != e && e.pid !== x && p.wO(), (x = null == e ? null : e.pid), !1;
 }
 class W extends (a = E.ZP.Store) {
@@ -128,11 +118,7 @@ class W extends (a = E.ZP.Store) {
 						}
 					: e
 			);
-		null != t.paused && (L = t.paused),
-			null != t.userActions && (U = new Map(Array.from(t.userActions))),
-			this.waitFor(N.Z, I.ZP),
-			this.syncWith([I.ZP], j),
-			this.waitFor(N.Z);
+		null != t.paused && (L = t.paused), null != t.userActions && (U = new Map(Array.from(t.userActions))), this.waitFor(N.Z, m.ZP), this.syncWith([m.ZP], j), this.waitFor(N.Z);
 	}
 	get activeItems() {
 		return y.map((e) => {
@@ -198,14 +184,7 @@ class W extends (a = E.ZP.Store) {
 					a = N.Z.getState(n, i),
 					s = T.Z.getTargetBuildId(n, i),
 					o = T.Z.getTargetManifests(n, i);
-				if (
-					null != a &&
-					a.type === v.vxO.UP_TO_DATE &&
-					a.buildId === a.targetBuildId &&
-					a.buildId === s &&
-					_().isEqual(a.manifestIds, a.targetManifestIds) &&
-					_().isEqual(a.manifestIds, o)
-				) {
+				if (null != a && a.type === v.vxO.UP_TO_DATE && a.buildId === a.targetBuildId && a.buildId === s && _().isEqual(a.manifestIds, a.targetManifestIds) && _().isEqual(a.manifestIds, o)) {
 					if ((D.push(t), U.has(t))) {
 						switch (U.get(t)) {
 							case 'Install':

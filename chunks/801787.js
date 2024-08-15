@@ -38,12 +38,7 @@ function u(e) {
 		key: t
 	};
 }
-((i = r || (r = {}))[(i.MOBILE_REDESIGN_ENABLED = 2)] = 'MOBILE_REDESIGN_ENABLED'),
-	(i[(i.MOBILE_DARK_GRADIENT_THEME_ENABLED = 4)] = 'MOBILE_DARK_GRADIENT_THEME_ENABLED'),
-	(i[(i.MOBILE_LIGHT_GRADIENT_THEME_ENABLED = 8)] = 'MOBILE_LIGHT_GRADIENT_THEME_ENABLED'),
-	(i[(i.REDUCED_CONTRAST_ENABLED = 16)] = 'REDUCED_CONTRAST_ENABLED'),
-	(i[(i.INCREASED_CONTRAST_ENABLED = 32)] = 'INCREASED_CONTRAST_ENABLED'),
-	(i[(i.REDUCE_SATURATION_ENABLED = 64)] = 'REDUCE_SATURATION_ENABLED');
+((i = r || (r = {}))[(i.MOBILE_REDESIGN_ENABLED = 2)] = 'MOBILE_REDESIGN_ENABLED'), (i[(i.MOBILE_DARK_GRADIENT_THEME_ENABLED = 4)] = 'MOBILE_DARK_GRADIENT_THEME_ENABLED'), (i[(i.MOBILE_LIGHT_GRADIENT_THEME_ENABLED = 8)] = 'MOBILE_LIGHT_GRADIENT_THEME_ENABLED'), (i[(i.REDUCED_CONTRAST_ENABLED = 16)] = 'REDUCED_CONTRAST_ENABLED'), (i[(i.INCREASED_CONTRAST_ENABLED = 32)] = 'INCREASED_CONTRAST_ENABLED'), (i[(i.REDUCE_SATURATION_ENABLED = 64)] = 'REDUCE_SATURATION_ENABLED');
 let c = {
 		theme: 'light',
 		primaryColor: null,
@@ -56,16 +51,7 @@ let c = {
 	},
 	d = s.createContext(c);
 function _(e) {
-	let {
-			children: t,
-			theme: n = o.BR.DARK,
-			primaryColor: r = null,
-			secondaryColor: i = null,
-			gradient: l = null,
-			flags: c = 0,
-			contrast: _ = 1,
-			saturation: E = 1
-		} = e,
+	let { children: t, theme: n = o.BR.DARK, primaryColor: r = null, secondaryColor: i = null, gradient: l = null, flags: c = 0, contrast: _ = 1, saturation: E = 1 } = e,
 		f = s.useMemo(
 			() =>
 				u({
@@ -85,16 +71,7 @@ function _(e) {
 	});
 }
 function E(e) {
-	let {
-			children: t,
-			theme: n,
-			primaryColor: r,
-			secondaryColor: i,
-			gradient: o,
-			flags: l,
-			contrast: c,
-			saturation: _
-		} = e,
+	let { children: t, theme: n, primaryColor: r, secondaryColor: i, gradient: o, flags: l, contrast: c, saturation: _ } = e,
 		E = s.useContext(d),
 		f = s.useMemo(
 			() =>

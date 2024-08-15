@@ -11,8 +11,7 @@ t.Z = {
 			let { server: t, socket: n, evt: c, args: d } = e,
 				u = t.events[c];
 			if (null == u) throw new s.Z({ errorCode: o.lTL.INVALID_EVENT }, 'Invalid event: '.concat(c));
-			if (!(0, r.Z)(n.authorization.scopes, u.scope))
-				throw new s.Z({ errorCode: o.lTL.INVALID_PERMISSIONS }, 'Not authenticated or invalid scope');
+			if (!(0, r.Z)(n.authorization.scopes, u.scope)) throw new s.Z({ errorCode: o.lTL.INVALID_PERMISSIONS }, 'Not authenticated or invalid scope');
 			if (
 				(a.N.getCurrentConfig({ location: 'RPCServer' }).enabled &&
 					i.default.track(o.rMx.RPC_SUBSCRIPTION_REQUESTED, {
@@ -24,8 +23,7 @@ t.Z = {
 				null != u.validation)
 			) {
 				let e = await t.getJoi();
-				if (null != e.validate(d, u.validation(e), { convert: !1 }).error)
-					throw new s.Z({ errorCode: o.lTL.INVALID_PAYLOAD }, 'Invalid subscription parameters provided');
+				if (null != e.validate(d, u.validation(e), { convert: !1 }).error) throw new s.Z({ errorCode: o.lTL.INVALID_PAYLOAD }, 'Invalid subscription parameters provided');
 			}
 			let _ = u.handler({
 					args: d,

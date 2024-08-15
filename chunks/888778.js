@@ -35,6 +35,4 @@ function l(e) {
 		}
 	);
 }
-((i = r || (r = {}))[(i.SHOULD_LOAD = 0)] = 'SHOULD_LOAD'),
-	(i[(i.LOADING = 1)] = 'LOADING'),
-	(i[(i.COMPLETE = 2)] = 'COMPLETE');
+((i = r || (r = {}))[(i.SHOULD_LOAD = 0)] = 'SHOULD_LOAD'), (i[(i.LOADING = 1)] = 'LOADING'), (i[(i.COMPLETE = 2)] = 'COMPLETE');

@@ -28,10 +28,7 @@ var l,
 	S = t(981631),
 	x = t(689938),
 	y = t(835274);
-((a = l || (l = {})).READY = 'ready'),
-	(a.ENCODING_FAILED = 'encoding-failed'),
-	(a.ENCODING = 'encoding'),
-	(a.UPLOADING = 'uploading');
+((a = l || (l = {})).READY = 'ready'), (a.ENCODING_FAILED = 'encoding-failed'), (a.ENCODING = 'encoding'), (a.UPLOADING = 'uploading');
 let E = [
 	{
 		name: 'audio',
@@ -41,12 +38,7 @@ let E = [
 function A(e) {
 	var n, t, l, a;
 	let { guildId: r, sourceFile: o, existingSound: A, onClose: b, transitionState: M, showGuildPicker: j = !1 } = e,
-		[C, I] = s.useState(
-			null !== (t = null !== (n = null == o ? void 0 : o.name) && void 0 !== n ? n : null == A ? void 0 : A.name) &&
-				void 0 !== t
-				? t
-				: ''
-		),
+		[C, I] = s.useState(null !== (t = null !== (n = null == o ? void 0 : o.name) && void 0 !== n ? n : null == A ? void 0 : A.name) && void 0 !== t ? t : ''),
 		[w, U] = s.useState(null !== (l = null == A ? void 0 : A.volume) && void 0 !== l ? l : 1),
 		[L, Z] = s.useState(null == A ? void 0 : A.emojiId),
 		[R, P] = s.useState(null == A ? void 0 : A.emojiName),
@@ -191,9 +183,7 @@ function A(e) {
 				children: (0, i.jsx)(d.Heading, {
 					className: y.header,
 					variant: 'heading-xl/extrabold',
-					children: et
-						? x.Z.Messages.SOUNDBOARD_SOUND_UPDATE_MODAL_HEADER
-						: x.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_HEADER
+					children: et ? x.Z.Messages.SOUNDBOARD_SOUND_UPDATE_MODAL_HEADER : x.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_HEADER
 				})
 			}),
 			(0, i.jsxs)(d.ModalContent, {
@@ -276,9 +266,7 @@ function A(e) {
 						submitting: G,
 						size: d.Button.Sizes.SMALL,
 						onClick: es,
-						children: et
-							? x.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_SAVE
-							: x.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_UPLOAD
+						children: et ? x.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_SAVE : x.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_UPLOAD
 					}),
 					(0, i.jsx)(d.Button, {
 						disabled: G,

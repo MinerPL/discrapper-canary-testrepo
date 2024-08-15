@@ -43,9 +43,7 @@ var n = r(381538),
 					var f = this.leaf;
 					f || a(!1);
 					var p = f.firstChild;
-					p || a(!1),
-						p.nodeType === Node.TEXT_NODE ? (t = p) : u(p) ? (t = f) : (t = p.firstChild) || a(!1),
-						s(e, t, c, i, l);
+					p || a(!1), p.nodeType === Node.TEXT_NODE ? (t = p) : u(p) ? (t = f) : (t = p.firstChild) || a(!1), s(e, t, c, i, l);
 				}
 			}),
 			(l.shouldComponentUpdate = function (t) {
@@ -71,12 +69,7 @@ var n = r(381538),
 					f = l.reduce(function (t, e) {
 						var r = {},
 							i = u[e];
-						return (
-							void 0 !== i &&
-								t.textDecoration !== i.textDecoration &&
-								(r.textDecoration = [t.textDecoration, i.textDecoration].join(' ').trim()),
-							n(t, i, r)
-						);
+						return void 0 !== i && t.textDecoration !== i.textDecoration && (r.textDecoration = [t.textDecoration, i.textDecoration].join(' ').trim()), n(t, i, r);
 					}, {});
 				return (
 					s && (f = n(f, s(l, e))),

@@ -49,47 +49,11 @@ function H(e) {
 	let Y,
 		K,
 		V,
-		{
-			selectedPlanId: z,
-			paymentSources: X,
-			priceOptions: q,
-			currencies: J,
-			onCurrencyChange: Q,
-			onPaymentSourceChange: $,
-			handlePaymentSourceAdd: ee,
-			setHasAcceptedTerms: en,
-			legalTermsNodeRef: et,
-			hasLegalTermsFlash: ei,
-			trialId: ea,
-			trialFooterMessageOverride: er,
-			reviewWarningMessage: es,
-			metadata: el,
-			purchaseState: eo,
-			hideSubscriptionDetails: ec,
-			referralTrialOfferId: eu,
-			isTrial: ed = !1,
-			isDiscount: e_ = !1,
-			handleClose: ep
-		} = e,
-		{
-			isEmbeddedIAP: em,
-			activeSubscription: eI,
-			selectedSkuId: ef,
-			defaultPlanId: eE,
-			isPremium: ex,
-			startedPaymentFlowWithPaymentSourcesRef: eN,
-			setInvoicePreview: eS,
-			contextMetadata: eT,
-			inReverseTrial: eh
-		} = (0, E.usePaymentContext)(),
+		{ selectedPlanId: z, paymentSources: X, priceOptions: q, currencies: J, onCurrencyChange: Q, onPaymentSourceChange: $, handlePaymentSourceAdd: ee, setHasAcceptedTerms: en, legalTermsNodeRef: et, hasLegalTermsFlash: ei, trialId: ea, trialFooterMessageOverride: er, reviewWarningMessage: es, metadata: el, purchaseState: eo, hideSubscriptionDetails: ec, referralTrialOfferId: eu, isTrial: ed = !1, isDiscount: e_ = !1, handleClose: ep } = e,
+		{ isEmbeddedIAP: em, activeSubscription: eI, selectedSkuId: ef, defaultPlanId: eE, isPremium: ex, startedPaymentFlowWithPaymentSourcesRef: eN, setInvoicePreview: eS, contextMetadata: eT, inReverseTrial: eh } = (0, E.usePaymentContext)(),
 		{ isGift: eb, giftRecipient: eg, selectedGiftStyle: eP } = (0, f.wD)(),
 		ev = (0, M.Ng)(),
-		eA =
-			null == ev
-				? void 0
-				: null === (n = ev.discount) || void 0 === n
-					? void 0
-					: n.plan_ids.some((e) => G.GP[e].skuId === ef),
+		eA = null == ev ? void 0 : null === (n = ev.discount) || void 0 === n ? void 0 : n.plan_ids.some((e) => G.GP[e].skuId === ef),
 		ey = !eb && null != ev && null != ef && eA,
 		eM = (0, o.e7)([b.Z], () => b.Z.get(z));
 	s()(null != eM, 'Missing plan');
@@ -181,8 +145,7 @@ function H(e) {
 		e$ = a.useMemo(() => (ed && null != eR ? eR : eh && null != ej ? ej : void 0), [eh, ed, eR, ej]);
 	if (null != ek) {
 		let e = ek.message;
-		ek.code === I.SM.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (e = k.Z.Messages.BILLING_ERROR_UNSUPPORTED_CURRENCY),
-			(K = (0, i.jsx)(u.FormErrorBlock, { children: e }));
+		ek.code === I.SM.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (e = k.Z.Messages.BILLING_ERROR_UNSUPPORTED_CURRENCY), (K = (0, i.jsx)(u.FormErrorBlock, { children: e }));
 	} else if (eb && null != eG)
 		V = (0, i.jsx)(Z.e9, {
 			plan: eM,
@@ -207,9 +170,7 @@ function H(e) {
 								}),
 								(0, i.jsx)(u.Text, {
 									variant: 'text-md/normal',
-									children: k.Z.Messages.BILLING_TRIAL_PRICE_NOW.format({
-										price: (0, v.T4)(0, e$.currency, { maximumFractionDigits: 0 })
-									})
+									children: k.Z.Messages.BILLING_TRIAL_PRICE_NOW.format({ price: (0, v.T4)(0, e$.currency, { maximumFractionDigits: 0 }) })
 								})
 							]
 						}),
@@ -284,11 +245,7 @@ function H(e) {
 		})(null != ed && ed, ej, Y),
 		e2 = k.Z.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format({ planName: eM.name });
 	return (
-		eb && !eU
-			? (e2 = k.Z.Messages.PAYMENT_MODAL_SUBTITLE_PREMIUM_GIFT)
-			: eb && eU
-				? (e2 = '')
-				: (0, P.PV)(eM.id) && (e2 = P.ZP.getBillingReviewSubheader(null, eM)),
+		eb && !eU ? (e2 = k.Z.Messages.PAYMENT_MODAL_SUBTITLE_PREMIUM_GIFT) : eb && eU ? (e2 = '') : (0, P.PV)(eM.id) && (e2 = P.ZP.getBillingReviewSubheader(null, eM)),
 		eV
 			? null
 			: (0, i.jsxs)('div', {
@@ -338,9 +295,7 @@ function H(e) {
 								variant: 'heading-md/normal',
 								color: 'always-white',
 								className: F.trialHeader,
-								children: k.Z.Messages.REVERSE_TRIAL_PAYMENT_MODAL_INFO.format({
-									trialEnd: null == eI ? void 0 : eI.currentPeriodEnd
-								})
+								children: k.Z.Messages.REVERSE_TRIAL_PAYMENT_MODAL_INFO.format({ trialEnd: null == eI ? void 0 : eI.currentPeriodEnd })
 							}),
 						!ed &&
 							(0, i.jsx)(u.FormTitle, {
@@ -392,9 +347,7 @@ function H(e) {
 								eW && null == eH
 									? (0, i.jsx)('div', {
 											className: F.paymentSourceOptionalWarning,
-											children: k.Z.Messages.ATTACH_PAYMENT_SOURCE_OPTIONAL_WITH_ENTITLEMENTS_WARNING.format({
-												months: eY.length
-											})
+											children: k.Z.Messages.ATTACH_PAYMENT_SOURCE_OPTIONAL_WITH_ENTITLEMENTS_WARNING.format({ months: eY.length })
 										})
 									: null,
 								e_

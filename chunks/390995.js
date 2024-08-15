@@ -6,59 +6,8 @@ e.exports = function (e) {
 		a = {
 			'variable.constant': ['__FILE__', '__LINE__', '__ENCODING__'],
 			'variable.language': ['self', 'super'],
-			keyword: [
-				'alias',
-				'and',
-				'begin',
-				'BEGIN',
-				'break',
-				'case',
-				'class',
-				'defined',
-				'do',
-				'else',
-				'elsif',
-				'end',
-				'END',
-				'ensure',
-				'for',
-				'if',
-				'in',
-				'module',
-				'next',
-				'not',
-				'or',
-				'redo',
-				'require',
-				'rescue',
-				'retry',
-				'return',
-				'then',
-				'undef',
-				'unless',
-				'until',
-				'when',
-				'while',
-				'yield',
-				'include',
-				'extend',
-				'prepend',
-				'public',
-				'private',
-				'protected',
-				'raise',
-				'throw'
-			],
-			built_in: [
-				'proc',
-				'lambda',
-				'attr_accessor',
-				'attr_reader',
-				'attr_writer',
-				'define_method',
-				'private_constant',
-				'module_function'
-			],
+			keyword: ['alias', 'and', 'begin', 'BEGIN', 'break', 'case', 'class', 'defined', 'do', 'else', 'elsif', 'end', 'END', 'ensure', 'for', 'if', 'in', 'module', 'next', 'not', 'or', 'redo', 'require', 'rescue', 'retry', 'return', 'then', 'undef', 'unless', 'until', 'when', 'while', 'yield', 'include', 'extend', 'prepend', 'public', 'private', 'protected', 'raise', 'throw'],
+			built_in: ['proc', 'lambda', 'attr_accessor', 'attr_reader', 'attr_writer', 'define_method', 'private_constant', 'module_function'],
 			literal: ['true', 'false', 'nil']
 		},
 		s = {
@@ -153,14 +102,7 @@ e.exports = function (e) {
 		_ = {
 			className: 'number',
 			relevance: 0,
-			variants: [
-				{ begin: `\\b([1-9](_?[0-9])*|0)(\\.(${d}))?([eE][+-]?(${d})|r)?i?\\b` },
-				{ begin: '\\b0[dD][0-9](_?[0-9])*r?i?\\b' },
-				{ begin: '\\b0[bB][0-1](_?[0-1])*r?i?\\b' },
-				{ begin: '\\b0[oO][0-7](_?[0-7])*r?i?\\b' },
-				{ begin: '\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*r?i?\\b' },
-				{ begin: '\\b0(_?[0-7])+r?i?\\b' }
-			]
+			variants: [{ begin: `\\b([1-9](_?[0-9])*|0)(\\.(${d}))?([eE][+-]?(${d})|r)?i?\\b` }, { begin: '\\b0[dD][0-9](_?[0-9])*r?i?\\b' }, { begin: '\\b0[bB][0-1](_?[0-1])*r?i?\\b' }, { begin: '\\b0[oO][0-7](_?[0-7])*r?i?\\b' }, { begin: '\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*r?i?\\b' }, { begin: '\\b0(_?[0-7])+r?i?\\b' }]
 		},
 		E = {
 			variants: [

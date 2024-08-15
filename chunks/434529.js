@@ -35,20 +35,7 @@ function o(e, t) {
 }
 function l(e, t, n, r, i) {
 	let { top: a, bottom: s, left: o, right: l } = e;
-	if (
-		(null == a && null == s
-			? ((a = 0), (s = n - i))
-			: null == a && null != s
-				? (a = n - (s + i))
-				: null != a && (s = n - (a + i)),
-		null == o && null == l
-			? ((o = 0), (l = t - r))
-			: null == o && null != l
-				? (o = t - (l + r))
-				: null == l && null != o && (l = t - (o + r)),
-		null == a || null == s || null == o || null == l)
-	)
-		throw Error('Logically this can never happen based on our if/else statements');
+	if ((null == a && null == s ? ((a = 0), (s = n - i)) : null == a && null != s ? (a = n - (s + i)) : null != a && (s = n - (a + i)), null == o && null == l ? ((o = 0), (l = t - r)) : null == o && null != l ? (o = t - (l + r)) : null == l && null != o && (l = t - (o + r)), null == a || null == s || null == o || null == l)) throw Error('Logically this can never happen based on our if/else statements');
 	return {
 		top: a,
 		left: o,

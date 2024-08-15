@@ -71,20 +71,7 @@ function en(e, t, n) {
 	);
 }
 function ei(e) {
-	let {
-			flipped: t = !1,
-			locked: n = !1,
-			user: i,
-			nick: o,
-			displayNameMode: c,
-			displayUserMode: d,
-			size: u = q.ipw.LARGE,
-			onClick: h,
-			onContextMenu: p,
-			context: f,
-			guildId: _,
-			voiceState: m
-		} = e,
+	let { flipped: t = !1, locked: n = !1, user: i, nick: o, displayNameMode: c, displayUserMode: d, size: u = q.ipw.LARGE, onClick: h, onContextMenu: p, context: f, guildId: _, voiceState: m } = e,
 		{ showKeybindIndicators: E } = H.Z.useExperiment({ location: 'overlay_voice_widget' }),
 		Z = (0, l.e7)([G.Z], () => G.Z.showKeybindIndicators),
 		I = (0, l.e7)([D.default], () => D.default.getId()),
@@ -145,17 +132,7 @@ function ei(e) {
 }
 class es extends (i = a.PureComponent) {
 	renderVoiceUsers() {
-		let {
-				context: e,
-				sortedVoiceStates: t,
-				displayNameMode: n,
-				displayUserMode: i,
-				locked: a,
-				isPreviewingInGame: o,
-				channel: l,
-				anchor: c,
-				avatarSizeMode: u
-			} = this.props,
+		let { context: e, sortedVoiceStates: t, displayNameMode: n, displayUserMode: i, locked: a, isPreviewingInGame: o, channel: l, anchor: c, avatarSizeMode: u } = this.props,
 			h = null != c.right,
 			p = t.map((t) => {
 				var r;
@@ -246,16 +223,7 @@ class es extends (i = a.PureComponent) {
 	}
 	renderStreamerSettings() {
 		var e;
-		let {
-			locked: t,
-			pinned: n,
-			isPreviewingInGame: i,
-			channel: a,
-			application: o,
-			streamMetadata: l,
-			streamApplication: c,
-			stream: d
-		} = this.props;
+		let { locked: t, pinned: n, isPreviewingInGame: i, channel: a, application: o, streamMetadata: l, streamApplication: c, stream: d } = this.props;
 		if (t || null == d || null == a) return null;
 		let { sanitizedTitle: h, title: p } = (0, x.Z)(l);
 		return (0, s.jsx)(J.ZP.Bar, {
@@ -427,21 +395,14 @@ function ea(e) {
 					[z.ZP, y.Z, V.Z, w.Z],
 					() => {
 						let e = w.Z.getChannel(V.Z.getVoiceChannelId());
-						return null == e
-							? [[], -1]
-							: e.isGuildStageVoice()
-								? [y.Z.getMutableParticipants(e.id, R.pV.SPEAKER), y.Z.getParticipantsVersion(e.id)]
-								: [z.ZP.getVoiceStatesForChannel(e), z.ZP.getVoiceStateVersion(e.getGuildId())];
+						return null == e ? [[], -1] : e.isGuildStageVoice() ? [y.Z.getMutableParticipants(e.id, R.pV.SPEAKER), y.Z.getParticipantsVersion(e.id)] : [z.ZP.getVoiceStatesForChannel(e), z.ZP.getVoiceStateVersion(e.getGuildId())];
 					},
 					[],
 					W.Q
 				),
 				t = (0, l.e7)([D.default], () => D.default.getId()),
 				{ showKeybindIndicators: n } = H.Z.useExperiment({ location: 'voice_widget' });
-			return a.useMemo(
-				() => (n ? [...e].sort((e, n) => (e.user.id === t ? -1 : n.user.id === t ? 1 : 0)) : e),
-				[e, t, n]
-			);
+			return a.useMemo(() => (n ? [...e].sort((e, n) => (e.user.id === t ? -1 : n.user.id === t ? 1 : 0)) : e), [e, t, n]);
 		})(),
 		r = (0, l.e7)([P.Z], () => P.Z.getStreamerActiveStreamMetadata()),
 		c = (0, l.e7)([S.ZP, U.Z, j.Z], () => {

@@ -16,17 +16,7 @@ var r = n(735250),
 	C = n(689938),
 	m = n(323125);
 t.default = (e) => {
-	let {
-			file: t,
-			imgURI: n,
-			transitionState: f,
-			allowSkip: w = !1,
-			onCrop: R,
-			onClose: M,
-			uploadType: _ = E.pC.AVATAR,
-			showUpsellHeader: N = !1,
-			analyticsPage: L
-		} = e,
+	let { file: t, imgURI: n, transitionState: f, allowSkip: w = !1, onCrop: R, onClose: M, uploadType: _ = E.pC.AVATAR, showUpsellHeader: N = !1, analyticsPage: L } = e,
 		[v, I] = i.useState({
 			width: 0,
 			height: 0
@@ -98,9 +88,7 @@ t.default = (e) => {
 		},
 		Y = i.useCallback(
 			(e, t, n) => {
-				(U.current = (0, d.U$)(e, t, n)),
-					null != F.current &&
-						(F.current.style.transform = 'translate3d('.concat(U.current.x, 'px, ').concat(U.current.y, 'px, 0)'));
+				(U.current = (0, d.U$)(e, t, n)), null != F.current && (F.current.style.transform = 'translate3d('.concat(U.current.x, 'px, ').concat(U.current.y, 'px, 0)'));
 			},
 			[F]
 		),
@@ -144,9 +132,7 @@ t.default = (e) => {
 					(H.current = a), (e = await i), (H.current = null);
 				} catch (e) {
 					var i;
-					throw (
-						(null === (i = H.current) || void 0 === i || i.call(H), (H.current = null), Error('Error cropping GIF'))
-					);
+					throw (null === (i = H.current) || void 0 === i || i.call(H), (H.current = null), Error('Error cropping GIF'));
 				}
 			else e = (0, s.PT)(n, v, U.current, r);
 			await R(e, t), G(!1), M();
@@ -257,9 +243,7 @@ t.default = (e) => {
 											let { width: t, height: n } = P,
 												r = (0, d.kH)(t * e, n * e, v),
 												{ x: i, y: s } = U.current;
-											(!(0, a.inRange)(i, r.right, r.left) || !(0, a.inRange)(s, r.top, r.bottom)) && Y(i, s, r),
-												B(e),
-												x(r);
+											(!(0, a.inRange)(i, r.right, r.left) || !(0, a.inRange)(s, r.top, r.bottom)) && Y(i, s, r), B(e), x(r);
 										},
 										disabled: j,
 										equidistant: !0,

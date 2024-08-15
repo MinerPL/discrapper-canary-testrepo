@@ -164,15 +164,7 @@ function j() {
 		R = (0, s.e7)([C.ZP], () => C.ZP.getSection()),
 		v = (0, s.e7)([C.ZP], () => C.ZP.getVideoStreams()),
 		b = (function (e) {
-			let {
-					defaultStats: t,
-					streamStats: n,
-					videoStreams: a,
-					screenshare: i,
-					clips: o,
-					channel: s,
-					connectionState: c
-				} = e,
+			let { defaultStats: t, streamStats: n, videoStreams: a, screenshare: i, clips: o, channel: s, connectionState: c } = e,
 				d = t.flatMap((e, t) => I(P.Yn.DEFAULT, e, t, a, null == s ? void 0 : s.getGuildId())),
 				m = n.flatMap((e, t) => I(P.Yn.STREAM, e, t, a, null == s ? void 0 : s.getGuildId())),
 				p = [],

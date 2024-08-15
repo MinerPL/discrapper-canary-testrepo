@@ -18,8 +18,8 @@ var r = n(735250),
 	f = n(906732),
 	h = n(676035),
 	p = n(633302),
-	I = n(314897),
-	m = n(158776),
+	m = n(314897),
+	I = n(158776),
 	T = n(785717),
 	g = n(277085),
 	S = n(825801),
@@ -33,24 +33,7 @@ let y = 'text-sm/medium',
 	D = 36,
 	L = 144;
 function b(e) {
-	let {
-			statusActivity: t,
-			user: a,
-			displayProfile: h,
-			guildId: I,
-			channelId: m,
-			profileType: O,
-			hasEntered: b = !0,
-			animate: M = !0,
-			editEnabled: P,
-			onInteraction: U,
-			isInteractionSource: w,
-			showReplyPopout: x = !1,
-			onClose: G,
-			setInteractionToastShown: k,
-			setInteractionSent: B,
-			setIsReplyInteraction: F
-		} = e,
+	let { statusActivity: t, user: a, displayProfile: h, guildId: m, channelId: I, profileType: O, hasEntered: b = !0, animate: M = !0, editEnabled: P, onInteraction: U, isInteractionSource: w, showReplyPopout: x = !1, onClose: G, setInteractionToastShown: k, setInteractionSent: B, setIsReplyInteraction: F } = e,
 		{ analyticsLocations: V } = (0, f.ZP)(E.Z.PROFILE_CUSTOM_STATUS),
 		{ trackUserProfileAction: H } = (0, T.KZ)(),
 		Z = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
@@ -81,20 +64,12 @@ function b(e) {
 		let e = K.current.getBoundingClientRect().height;
 		if ((ed(en || e <= ei), b)) {
 			var t, n, r, i;
-			let e =
-					null !== (r = null === (t = K.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) &&
-					void 0 !== r
-						? r
-						: ea,
-				a =
-					null !== (i = null === (n = q.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) &&
-					void 0 !== i
-						? i
-						: es;
+			let e = null !== (r = null === (t = K.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== r ? r : ea,
+				a = null !== (i = null === (n = q.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== i ? i : es;
 			eE(!en && e > a), (z.current = e), (Q.current = a);
 		}
 	}, [b, en, ei, ea, es]);
-	let [eI, em] = (0, c.useSpring)(() => ({
+	let [em, eI] = (0, c.useSpring)(() => ({
 		maxHeight: ''.concat(es, 'px'),
 		config: {
 			clamp: !0,
@@ -107,7 +82,7 @@ function b(e) {
 			if (!!e_) {
 				if (e) {
 					let e = Math.min(null !== (t = z.current) && void 0 !== t ? t : ea, ea);
-					em({
+					eI({
 						maxHeight: ''.concat(e, 'px'),
 						delay: Z ? 0 : 300,
 						config: {
@@ -117,7 +92,7 @@ function b(e) {
 					});
 				} else {
 					let e = Math.min(null !== (n = Q.current) && void 0 !== n ? n : es, es);
-					em({
+					eI({
 						maxHeight: ''.concat(e, 'px'),
 						delay: 0
 					});
@@ -156,7 +131,7 @@ function b(e) {
 				[C.singleLineAlign]: ec
 			});
 			return (0, r.jsxs)(o.animated.div, {
-				style: eI,
+				style: em,
 				className: e,
 				children: [eg(), eS()]
 			});
@@ -297,8 +272,8 @@ function b(e) {
 					let { setPopoutRef: t } = e;
 					return (0, r.jsx)(A.Z, {
 						user: a,
-						guildId: I,
-						channelId: m,
+						guildId: m,
+						channelId: I,
 						profileType: O,
 						sourceDetails: eU(),
 						sourceType: v.n_.STATUS,
@@ -322,10 +297,10 @@ function b(e) {
 }
 function M(e) {
 	let { user: t, editEnabled: n, ...i } = e,
-		a = (0, l.e7)([I.default], () => I.default.getId() === t.id),
+		a = (0, l.e7)([m.default], () => m.default.getId() === t.id),
 		s = (0, h.a)(),
-		o = (0, l.e7)([m.Z], () =>
-			m.Z.findActivity(t.id, (e) => {
+		o = (0, l.e7)([I.Z], () =>
+			I.Z.findActivity(t.id, (e) => {
 				let { type: t } = e;
 				return t === O.IIU.CUSTOM_STATUS;
 			})

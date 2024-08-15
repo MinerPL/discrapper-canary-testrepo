@@ -1,16 +1,5 @@
 let r;
-n(242167),
-	n(970173),
-	n(520712),
-	n(268111),
-	n(941497),
-	n(32026),
-	n(480839),
-	n(744285),
-	n(492257),
-	n(873817),
-	n(411104),
-	n(773603);
+n(242167), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817), n(411104), n(773603);
 var i = n(512722),
 	a = n.n(i),
 	s = n(392711),
@@ -24,8 +13,8 @@ var i = n(512722),
 	f = n(710845),
 	h = n(314897),
 	p = n(358085),
-	I = n(998502),
-	m = n(569545),
+	m = n(998502),
+	I = n(569545),
 	T = n(70722),
 	g = n(981631),
 	S = n(65154);
@@ -41,7 +30,7 @@ function C() {
 let y = o().debounce((e, t, n, r) => {
 	D(
 		e,
-		(0, m.V9)({
+		(0, I.V9)({
 			streamType: null != t ? T.lo.GUILD : T.lo.CALL,
 			guildId: t,
 			channelId: n,
@@ -84,10 +73,7 @@ async function D(e, t) {
 								let { width: r, height: i } = n.getVideoTracks()[0].getSettings(),
 									a = document.createElement('video'),
 									s = document.createElement('canvas');
-								(a.width = s.width = null != r ? r : 512),
-									(a.height = s.height = null != i ? i : 288),
-									(a.srcObject = n),
-									a.play();
+								(a.width = s.width = null != r ? r : 512), (a.height = s.height = null != i ? i : 288), (a.srcObject = n), a.play();
 								let o = s.getContext('2d');
 								return new Promise((e, n) => {
 									a.ontimeupdate = () => {
@@ -137,7 +123,7 @@ async function D(e, t) {
 			) {
 				let e = h.default.getToken();
 				a()(null != e, 'Auth token was null while sending screenshot.'),
-					await I.ZP.makeChunkedRequest(
+					await m.ZP.makeChunkedRequest(
 						g.ANM.STREAM_PREVIEW(t),
 						{ thumbnail: i },
 						{
@@ -152,8 +138,7 @@ async function D(e, t) {
 					oldFormErrors: !0
 				});
 		} catch (t) {
-			new f.Z('ApplicationStreamPreviewUploadManager').error('Failed to post stream preview', t),
-				r === e && N.start(60000, n);
+			new f.Z('ApplicationStreamPreviewUploadManager').error('Failed to post stream preview', t), r === e && N.start(60000, n);
 			return;
 		}
 	r === e && (v ? N.start(60000, n) : N.start(300000, n));

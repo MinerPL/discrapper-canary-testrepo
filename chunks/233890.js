@@ -135,8 +135,7 @@ var o = {
 	'creditCard.encryptedPassword.placeholder': '12',
 	'creditCard.encryptedPassword.invalid': 'Neveljavno geslo',
 	'creditCard.taxNumber': 'Datum rojstva imetnika kartice ali matična številka podjetja',
-	'creditCard.taxNumber.label':
-		'Datum rojstva imetnika kartice (LLMMDD) ali registracijska številka podjetja (10 števk)',
+	'creditCard.taxNumber.label': 'Datum rojstva imetnika kartice (LLMMDD) ali registracijska številka podjetja (10 števk)',
 	'creditCard.taxNumber.labelAlt': 'Matična številka podjetja (10 števk)',
 	'creditCard.taxNumber.invalid': 'Neveljaven datum rojstva imetnika kartice ali matična številka podjetja',
 	'storedPaymentMethod.disable.button': 'Odstrani',
@@ -171,8 +170,7 @@ var o = {
 	'blik.invalid': 'Vnesite 6 številk',
 	'blik.code': '6-mestna koda',
 	'blik.help': 'Pridobite kodo iz bančne aplikacije.',
-	'swish.pendingMessage':
-		'Ko optično preberete, lahko čakanje traja do 10 minut. Poskus ponovnega plačila v tem času lahko povzroči več odtegljajev.',
+	'swish.pendingMessage': 'Ko optično preberete, lahko čakanje traja do 10 minut. Poskus ponovnega plačila v tem času lahko povzroči več odtegljajev.',
 	'field.valid': 'Polje je veljavno',
 	'field.invalid': 'Polje ni veljavno',
 	'error.va.gen.01': 'Nepopolno polje',
@@ -208,8 +206,7 @@ var o = {
 	'bankTransfer.iban': 'IBAN',
 	'bankTransfer.bic': 'BIC',
 	'bankTransfer.reference': 'Referenca',
-	'bankTransfer.introduction':
-		'Nadaljujte ustvarjanje novega plačila z bančnim nakazilom. Za dokončanje tega plačila lahko uporabite podatke na naslednjem zaslonu.',
+	'bankTransfer.introduction': 'Nadaljujte ustvarjanje novega plačila z bančnim nakazilom. Za dokončanje tega plačila lahko uporabite podatke na naslednjem zaslonu.',
 	'bankTransfer.instructions': 'Zahvaljujemo se vam za nakup. Za dokončanje plačila uporabite naslednji kupon.',
 	'bacs.accountHolderName': 'Ime imetnika bančnega računa',
 	'bacs.accountHolderName.invalid': 'Neveljavno ime imetnika računa',
@@ -218,8 +215,7 @@ var o = {
 	'bacs.bankLocationId': 'Številka banke',
 	'bacs.bankLocationId.invalid': 'Neveljavna številka banke',
 	'bacs.consent.amount': 'Soglašam s tem, da bo zgornji znesek odtegnjen z mojega bančnega računa.',
-	'bacs.consent.account':
-		'Potrjujem, da je račun ustvarjen v mojem imenu in sem edini podpisnik za odobritev neposredne bremenitve za ta račun.',
+	'bacs.consent.account': 'Potrjujem, da je račun ustvarjen v mojem imenu in sem edini podpisnik za odobritev neposredne bremenitve za ta račun.',
 	edit: 'Uredi',
 	'bacs.confirm': 'Potrdi in plačaj',
 	'bacs.result.introduction': 'Prenesite navodila za neposredno bremenitev (DDI/mandat)',
@@ -252,8 +248,7 @@ var o = {
 	'upi.vpaWaitingMessage': 'Za potrditev plačila odprite svojo aplikacijo UPI',
 	'upi.modeSelection': 'Izberite, kako želite uporabljati aplikacijo UPI.',
 	'onlineBanking.termsAndConditions': 'Z nadaljevanjem se strinjate s %#pogoji%#',
-	'onlineBankingPL.termsAndConditions':
-		'Z nadaljevanjem se strinjate s %#predpisi%# in %#obveznostjo obveščanja%# družbe Przelewy24',
+	'onlineBankingPL.termsAndConditions': 'Z nadaljevanjem se strinjate s %#predpisi%# in %#obveznostjo obveščanja%# družbe Przelewy24',
 	'ctp.loading.poweredByCtp': 'Omogoča storitev Click to Pay',
 	'ctp.loading.intro': 'Preverjamo, ali imate shranjene kartice v storitvi Click to Pay...',
 	'ctp.login.title': 'Nadaljuj na storitev Click to Pay',
@@ -281,8 +276,7 @@ var o = {
 	'ctp.infoPopup.benefit2': 'Uporabljate jo lahko pri prodajalcih po vsem svetu',
 	'ctp.infoPopup.benefit3': 'Enkratna nastavitev za brezskrbno plačevanje v prihodnje',
 	'ctp.errors.AUTH_INVALID': 'Preverjanje pristnosti ni veljavno',
-	'ctp.errors.NOT_FOUND':
-		'Računa ni bilo mogoče najti, vnesite veljaven e-poštni naslov ali nadaljujte z uporabo ročnega vnosa kartice',
+	'ctp.errors.NOT_FOUND': 'Računa ni bilo mogoče najti, vnesite veljaven e-poštni naslov ali nadaljujte z uporabo ročnega vnosa kartice',
 	'ctp.errors.ID_FORMAT_UNSUPPORTED': 'Oblika zapisa ni podprta',
 	'ctp.errors.FRAUD': 'Uporabniški račun je bil zaklenjen ali onemogočen',
 	'ctp.errors.CONSUMER_ID_MISSING': 'V zahtevi manjka identiteta potrošnika',
@@ -303,7 +297,6 @@ var o = {
 	'consent.checkbox.invalid': 'Strinjati se morate s pogoji in določili',
 	'form.instruction': 'Vsa polja so obvezna, razen če ni označeno drugače.',
 	'trustly.descriptor': 'Takojšnje bančno nakazilo',
-	'trustly.description1':
-		'Plačajte neposredno s svojega poljubnega bančnega računa, pri čemer je varnost zagotovljena na ravni banke.',
+	'trustly.description1': 'Plačajte neposredno s svojega poljubnega bančnega računa, pri čemer je varnost zagotovljena na ravni banke.',
 	'trustly.description2': 'Brez kartic, brez prenosa aplikacije, brez registracije'
 };

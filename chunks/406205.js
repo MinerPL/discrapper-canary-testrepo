@@ -123,17 +123,7 @@ function C(e) {
 								value: l,
 								className: x.input,
 								onChange: (e) => {
-									C(!1),
-										d.Z.updateGuildNotificationSettings(
-											s,
-											{
-												flags: (0, h.Q4)(
-													t,
-													e === m.i.ALL_MESSAGES ? _.vc.UNREADS_ALL_MESSAGES : _.vc.UNREADS_ONLY_MENTIONS
-												)
-											},
-											u.UE.unreads(e)
-										);
+									C(!1), d.Z.updateGuildNotificationSettings(s, { flags: (0, h.Q4)(t, e === m.i.ALL_MESSAGES ? _.vc.UNREADS_ALL_MESSAGES : _.vc.UNREADS_ONLY_MENTIONS) }, u.UE.unreads(e));
 								},
 								options: (0, S.y)({ notificationSetting: a }),
 								renderOptionLabel: (e) => {
@@ -169,10 +159,7 @@ function C(e) {
 								onChange: (e) => {
 									C(!1);
 									let t = { message_notifications: e };
-									e === g.bL.ALL_MESSAGES &&
-										l !== m.i.ALL_MESSAGES &&
-										(t.flags = (0, h.Q4)(c.ZP.getGuildFlags(s), _.vc.UNREADS_ALL_MESSAGES)),
-										d.Z.updateGuildNotificationSettings(s, t, u.UE.notifications(e));
+									e === g.bL.ALL_MESSAGES && l !== m.i.ALL_MESSAGES && (t.flags = (0, h.Q4)(c.ZP.getGuildFlags(s), _.vc.UNREADS_ALL_MESSAGES)), d.Z.updateGuildNotificationSettings(s, t, u.UE.notifications(e));
 								},
 								options: (0, S.d)({ notificationSetting: a }),
 								renderOptionLabel: (e) => {

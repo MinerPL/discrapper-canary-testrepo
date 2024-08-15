@@ -120,9 +120,7 @@ function N(e) {
 						className: T.tabBarItem,
 						id: I.ZI.MEMBERS,
 						disabled: C,
-						children: C
-							? E.Z.Messages.ROLE_EDIT_TAB_MANAGE_MEMBERS
-							: E.Z.Messages.ROLE_EDIT_TAB_MEMBERS_WITH_LIST.format({ numMembers: String(g) })
+						children: C ? E.Z.Messages.ROLE_EDIT_TAB_MANAGE_MEMBERS : E.Z.Messages.ROLE_EDIT_TAB_MEMBERS_WITH_LIST.format({ numMembers: String(g) })
 					})
 				]
 			})

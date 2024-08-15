@@ -49,9 +49,7 @@ n.default = (l) => {
 				children: (0, o.jsxs)('div', {
 					className: u.body,
 					children: [
-						(0, o.jsx)('div', {
-							children: c.Z.Messages.DISPATCH_ERROR_MODAL_DESCRIPTION.format({ link: 'https://dis.gd/dispatch-error' })
-						}),
+						(0, o.jsx)('div', { children: c.Z.Messages.DISPATCH_ERROR_MODAL_DESCRIPTION.format({ link: 'https://dis.gd/dispatch-error' }) }),
 						(0, o.jsx)('div', {
 							className: u.supportCallToAction,
 							children: c.Z.Messages.DISPATCH_ERROR_MODAL_BODY
@@ -63,18 +61,7 @@ n.default = (l) => {
 						(0, o.jsx)('div', {
 							className: u.errorDetails,
 							children: (0, o.jsxs)('div', {
-								children: [
-									null != h ? 'Game: '.concat(h, '\n') : null,
-									(null == p ? void 0 : p.applicationId) != null ? 'Game ID: '.concat(p.applicationId, '\n') : null,
-									(null == p ? void 0 : p.branchId) != null &&
-									(null == p ? void 0 : p.applicationId) !== (null == p ? void 0 : p.branchId)
-										? 'Branch ID: '.concat(null == p ? void 0 : p.branchId, '\n')
-										: null,
-									(null == p ? void 0 : p.code) != null
-										? 'Error Code: '.concat(null == p ? void 0 : p.code, '\n')
-										: null,
-									(null == p ? void 0 : p.uuid) != null ? 'Unique Case ID: '.concat(null == p ? void 0 : p.uuid) : null
-								]
+								children: [null != h ? 'Game: '.concat(h, '\n') : null, (null == p ? void 0 : p.applicationId) != null ? 'Game ID: '.concat(p.applicationId, '\n') : null, (null == p ? void 0 : p.branchId) != null && (null == p ? void 0 : p.applicationId) !== (null == p ? void 0 : p.branchId) ? 'Branch ID: '.concat(null == p ? void 0 : p.branchId, '\n') : null, (null == p ? void 0 : p.code) != null ? 'Error Code: '.concat(null == p ? void 0 : p.code, '\n') : null, (null == p ? void 0 : p.uuid) != null ? 'Unique Case ID: '.concat(null == p ? void 0 : p.uuid) : null]
 							})
 						})
 					]

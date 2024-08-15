@@ -41,8 +41,7 @@ class a {
 		this.prepare();
 		let r = Object.keys(e),
 			a = this.data;
-		if (r.length < a.req.length || a.req.some((e) => !r.includes(e)) || (!n && r.some((e) => !a.known.includes(e))))
-			return !1;
+		if (r.length < a.req.length || a.req.some((e) => !r.includes(e)) || (!n && r.some((e) => !a.known.includes(e)))) return !1;
 		if (t < 1) return !0;
 		for (let r of a.oneofs) {
 			let a = e[r];

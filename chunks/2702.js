@@ -87,14 +87,7 @@ function T(e) {
 		G = n.useRef(null),
 		y = n.useMemo(() => {
 			var e, t, s;
-			return null !== (s = null == O ? void 0 : null === (e = O.username) || void 0 === e ? void 0 : e[0]) &&
-				void 0 !== s
-				? s
-				: null == O
-					? void 0
-					: null === (t = O.discriminator) || void 0 === t
-						? void 0
-						: t[0];
+			return null !== (s = null == O ? void 0 : null === (e = O.username) || void 0 === e ? void 0 : e[0]) && void 0 !== s ? s : null == O ? void 0 : null === (t = O.discriminator) || void 0 === t ? void 0 : t[0];
 		}, [O]);
 	n.useEffect(() => {
 		if (s === _.ModalTransitionState.ENTERED) {

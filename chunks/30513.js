@@ -35,8 +35,7 @@ let c = () => ({
 		description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_CUSTOM_INVITE
 	}),
 	d = function () {
-		let e =
-			arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r.Z.unsafe_rawColors.PREMIUM_PERK_ORANGE.css;
+		let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r.Z.unsafe_rawColors.PREMIUM_PERK_ORANGE.css;
 		return {
 			color: e,
 			icon: i.GifIcon,
@@ -59,8 +58,7 @@ let c = () => ({
 		description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_ROLE_ICON
 	}),
 	h = function () {
-		let e =
-			arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r.Z.unsafe_rawColors.PREMIUM_PERK_PURPLE.css;
+		let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r.Z.unsafe_rawColors.PREMIUM_PERK_PURPLE.css;
 		return {
 			color: e,
 			icon: i.StickerIcon,
@@ -68,8 +66,7 @@ let c = () => ({
 		};
 	},
 	p = function (e) {
-		let t =
-				arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.Z.unsafe_rawColors.PREMIUM_PERK_PURPLE.css,
+		let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.Z.unsafe_rawColors.PREMIUM_PERK_PURPLE.css,
 			n = 0,
 			a = 0;
 		switch (e) {
@@ -91,12 +88,12 @@ let c = () => ({
 			})
 		};
 	},
-	I = () => ({
+	m = () => ({
 		color: r.Z.unsafe_rawColors.PREMIUM_PERK_GOLD.css,
 		icon: i.StarIcon,
 		description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_VANITY_URL
 	}),
-	m = () => ({
+	I = () => ({
 		icon: a.Z,
 		description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_PROFILE_BADGE
 	}),
@@ -116,10 +113,7 @@ let c = () => ({
 		description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_OTHERS
 	}),
 	A = function () {
-		let e =
-			arguments.length > 0 && void 0 !== arguments[0]
-				? arguments[0]
-				: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_OTHER;
+		let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_OTHER;
 		return {
 			color: r.Z.unsafe_rawColors.PREMIUM_PERK_BLUE.css,
 			icon: i.ReactionIcon,
@@ -132,8 +126,7 @@ let c = () => ({
 		description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_FILE_UPLOAD_TIER_3
 	}),
 	v = function () {
-		let e =
-			arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css;
+		let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css;
 		return {
 			color: e,
 			icon: i.ScreenArrowIcon,
@@ -147,10 +140,10 @@ function R() {
 	return [f(), p(l.Eu4.TIER_2), v(), A()];
 }
 function C() {
-	return [p(l.Eu4.TIER_3, r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), N(), I(), A()];
+	return [p(l.Eu4.TIER_3, r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), N(), m(), A()];
 }
 function y() {
-	return [I(), E(), p(l.Eu4.TIER_3), A()];
+	return [m(), E(), p(l.Eu4.TIER_3), A()];
 }
 function D() {
 	return [c(), h(), d(), A()];
@@ -159,5 +152,5 @@ function L() {
 	return [h(), A()];
 }
 function b() {
-	return [T(), g(), m(), S()];
+	return [T(), g(), I(), S()];
 }

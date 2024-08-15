@@ -44,10 +44,7 @@ let c = [200, 500],
 			let s = (0, o.I)('INP'),
 				l = (e) => {
 					e.forEach((e) => {
-						e.interactionId && R(e),
-							'first-input' === e.entryType &&
-								!u.some((t) => t.entries.some((t) => e.duration === t.duration && e.startTime === t.startTime)) &&
-								R(e);
+						e.interactionId && R(e), 'first-input' === e.entryType && !u.some((t) => t.entries.some((t) => e.duration === t.duration && e.startTime === t.startTime)) && R(e);
 					});
 					let t = A();
 					t && t.latency !== s.value && ((s.value = t.latency), (s.entries = t.entries), r());

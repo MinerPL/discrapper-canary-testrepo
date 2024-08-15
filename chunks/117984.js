@@ -81,9 +81,7 @@ function _(e) {
 		r.hW.updateAsync(
 			'favorites',
 			(t) => {
-				if ((delete t.favoriteChannels[e], n.type === i.Dd.CATEGORY))
-					for (let n in t.favoriteChannels)
-						t.favoriteChannels[n].parentId === e && (t.favoriteChannels[n].parentId = '0');
+				if ((delete t.favoriteChannels[e], n.type === i.Dd.CATEGORY)) for (let n in t.favoriteChannels) t.favoriteChannels[n].parentId === e && (t.favoriteChannels[n].parentId = '0');
 				E(t.favoriteChannels);
 			},
 			r.fy.INFREQUENT_USER_ACTION

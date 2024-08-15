@@ -20,8 +20,8 @@ var i = n(735250),
 	_ = n(422559),
 	f = n(271383),
 	E = n(430824),
-	g = n(496675),
-	C = n(594174),
+	C = n(496675),
+	g = n(594174),
 	I = n(233608),
 	x = n(370595),
 	T = n(351127),
@@ -31,23 +31,20 @@ var i = n(735250),
 	Z = n(553162);
 function A(e) {
 	var t, n, s, r;
-	let { permission: o, roleIds: f, guild: C, specMap: I, categoryTitle: x, userId: S } = e,
-		A = (0, c.e7)([E.Z], () => E.Z.getRoles(C.id)),
+	let { permission: o, roleIds: f, guild: g, specMap: I, categoryTitle: x, userId: S } = e,
+		A = (0, c.e7)([E.Z], () => E.Z.getRoles(g.id)),
 		M = N.Plq[o],
-		b =
-			null !== (s = null === (t = I[M.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== s
-				? s
-				: (0, _.wt)(M),
+		b = null !== (s = null === (t = I[M.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== s ? s : (0, _.wt)(M),
 		R = null !== (r = null === (n = I[M.toString()]) || void 0 === n ? void 0 : n.description) && void 0 !== r ? r : '',
 		j = T._o.has(M),
 		L = T.Qn.includes(o),
 		P = f.length,
-		O = (0, c.e7)([g.Z], () => g.Z.can(N.Plq.MANAGE_ROLES, C), [C]),
+		O = (0, c.e7)([C.Z], () => C.Z.can(N.Plq.MANAGE_ROLES, g), [g]),
 		y = a.useCallback(
 			async (e) => {
-				if (!!O) await p.Z.open(C.id, N.pNK.ROLES), await p.Z.selectRole(e);
+				if (!!O) await p.Z.open(g.id, N.pNK.ROLES), await p.Z.selectRole(e);
 			},
-			[O, C.id]
+			[O, g.id]
 		);
 	return (0, i.jsxs)('div', {
 		className: l()(Z.permissionItemContainer, { [Z.elevatedPermission]: j }),
@@ -166,11 +163,11 @@ function A(e) {
 						: (0, i.jsx)(
 								u.Clickable,
 								{
-									className: l()(Z.roleTooltipItem, { [Z.editable]: O && !(0, d.pM)(C.id, e) }),
+									className: l()(Z.roleTooltipItem, { [Z.editable]: O && !(0, d.pM)(g.id, e) }),
 									onClick: () => y(e),
 									children: (0, i.jsx)(m.Z, {
 										role: A[e],
-										guildId: C.id,
+										guildId: g.id,
 										className: Z.roleChiplet
 									})
 								},
@@ -186,11 +183,11 @@ function M(e, t) {
 }
 function b(e) {
 	let { userId: t, guildId: n, location: s, className: r, onNavigate: d } = e,
-		h = (0, c.e7)([C.default], () => C.default.getUser(t), [t]),
+		h = (0, c.e7)([g.default], () => g.default.getUser(t), [t]),
 		m = (0, c.e7)([E.Z], () => E.Z.getGuild(n), [n]),
 		p = (0, c.e7)([f.ZP], () => f.ZP.getMember(n, t), [n, t]),
-		g = (0, T.B2)(t, n, T.pd),
-		b = Object.keys(g).length,
+		C = (0, T.B2)(t, n, T.pd),
+		b = Object.keys(C).length,
 		R = a.useMemo(() => (null != m ? I.Z.getGuildPermissionSpecMap(m) : null), [m]),
 		j = a.useMemo(() => (null != m ? I.Z.generateGuildPermissionSpec(m) : null), [m]),
 		[L, P] = a.useState(''),
@@ -220,37 +217,21 @@ function b(e) {
 							let s = a.flag,
 								l = T.pd.find((e) => N.Plq[e] === s);
 							if (null == l) return;
-							let r = g[l];
+							let r = C[l];
 							if (null != r) {
 								if (O.length > 0) {
 									var o, c, u, d, h;
-									let e =
-											null !== (d = null === (o = R[s.toString()]) || void 0 === o ? void 0 : o.title) && void 0 !== d
-												? d
-												: (0, _.wt)(s),
-										t =
-											null !==
-												(h =
-													null === (u = R[s.toString()]) || void 0 === u
-														? void 0
-														: null === (c = u.description) || void 0 === c
-															? void 0
-															: c.toString()) && void 0 !== h
-												? h
-												: '',
+									let e = null !== (d = null === (o = R[s.toString()]) || void 0 === o ? void 0 : o.title) && void 0 !== d ? d : (0, _.wt)(s),
+										t = null !== (h = null === (u = R[s.toString()]) || void 0 === u ? void 0 : null === (c = u.description) || void 0 === c ? void 0 : c.toString()) && void 0 !== h ? h : '',
 										i = n.title,
 										a = T._o.has(s),
 										r = T.Qn.includes(l),
-										m = a
-											? v.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION
-											: r
-												? v.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION
-												: null,
+										m = a ? v.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION : r ? v.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION : null,
 										p = M(O, e),
 										f = M(O, t),
 										E = M(O, i),
-										g = null != m && M(O, m);
-									if (!p && !f && !E && !g) return;
+										C = null != m && M(O, m);
+									if (!p && !f && !E && !C) return;
 								}
 								e.push(
 									(0, i.jsx)(
@@ -271,7 +252,7 @@ function b(e) {
 					}),
 				e
 			);
-		}, [m, R, p, b, j, g, O, t]);
+		}, [m, R, p, b, j, C, O, t]);
 	return null == h || null == p
 		? null
 		: (0, i.jsxs)('div', {

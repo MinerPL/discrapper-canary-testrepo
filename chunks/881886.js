@@ -78,8 +78,7 @@ function v(t, e) {
 				(t = t.slice()), g(t, (e = e.slice()).length);
 				for (var r = 0; r < e.length; r++) {
 					var n = e[r].match(/^[x*]$/i);
-					if (n && ((e[r] = t[r] = '0'), '*' === n[0] && r === e.length - 1))
-						for (var i = r; i < t.length; i++) t[i] = '0';
+					if (n && ((e[r] = t[r] = '0'), '*' === n[0] && r === e.length - 1)) for (var i = r; i < t.length; i++) t[i] = '0';
 				}
 				return g(e, t.length), [t, e];
 			})(t, e),

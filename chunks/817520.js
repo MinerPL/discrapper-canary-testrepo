@@ -13,9 +13,7 @@ function c(e) {
 	let t = (0, i.e7)([a.Z], () => a.Z.getGuild(e)),
 		n = (0, r.ss)(e),
 		c = (0, r.Gp)(),
-		d =
-			(null == t ? void 0 : t.hasFeature(o.oNc.ROLE_SUBSCRIPTIONS_ENABLED)) === !0 &&
-			(null == t ? void 0 : t.hasFeature(o.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !1,
+		d = (null == t ? void 0 : t.hasFeature(o.oNc.ROLE_SUBSCRIPTIONS_ENABLED)) === !0 && (null == t ? void 0 : t.hasFeature(o.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !1,
 		u = (0, l.H2)(t);
 	return (
 		d &&

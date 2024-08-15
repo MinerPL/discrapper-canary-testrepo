@@ -1,10 +1,8 @@
 e.exports = function (e) {
 	let t = {
 			$pattern: e.UNDERSCORE_IDENT_RE,
-			keyword:
-				'abstract alias align asm assert auto body break byte case cast catch class const continue debug default delete deprecated do else enum export extern final finally for foreach foreach_reverse|10 goto if immutable import in inout int interface invariant is lazy macro mixin module new nothrow out override package pragma private protected public pure ref return scope shared static struct super switch synchronized template this throw try typedef typeid typeof union unittest version void volatile while with __FILE__ __LINE__ __gshared|10 __thread __traits __DATE__ __EOF__ __TIME__ __TIMESTAMP__ __VENDOR__ __VERSION__',
-			built_in:
-				'bool cdouble cent cfloat char creal dchar delegate double dstring float function idouble ifloat ireal long real short string ubyte ucent uint ulong ushort wchar wstring',
+			keyword: 'abstract alias align asm assert auto body break byte case cast catch class const continue debug default delete deprecated do else enum export extern final finally for foreach foreach_reverse|10 goto if immutable import in inout int interface invariant is lazy macro mixin module new nothrow out override package pragma private protected public pure ref return scope shared static struct super switch synchronized template this throw try typedef typeid typeof union unittest version void volatile while with __FILE__ __LINE__ __gshared|10 __thread __traits __DATE__ __EOF__ __TIME__ __TIMESTAMP__ __VENDOR__ __VERSION__',
+			built_in: 'bool cdouble cent cfloat char creal dchar delegate double dstring float function idouble ifloat ireal long real short string ubyte ucent uint ulong ushort wchar wstring',
 			literal: 'false null true'
 		},
 		n = '(0|[1-9][\\d_]*)',
@@ -58,16 +56,7 @@ e.exports = function (e) {
 			},
 			{
 				className: 'number',
-				begin:
-					'\\b(' +
-					('(' +
-						('(0[xX](' + i + '\\.' + i + '|\\.?' + i + ')[pP][+-]?' + r) +
-						')|' +
-						('(' + r + '(\\.\\d*|' + a + ')|\\d+\\.' + r + '|\\.' + n + a) +
-						'?)') +
-					')([fF]|L|i|[fF]i|Li)?|' +
-					s +
-					'(i|[fF]i|Li))',
+				begin: '\\b(' + ('(' + ('(0[xX](' + i + '\\.' + i + '|\\.?' + i + ')[pP][+-]?' + r) + ')|' + ('(' + r + '(\\.\\d*|' + a + ')|\\d+\\.' + r + '|\\.' + n + a) + '?)') + ')([fF]|L|i|[fF]i|Li)?|' + s + '(i|[fF]i|Li))',
 				relevance: 0
 			},
 			{

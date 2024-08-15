@@ -65,9 +65,7 @@ t.exports = function (t, e) {
 	if (k) {
 		var C = w.getChildKeys(),
 			E = s(_, y);
-		w.getNextSiblingKey() && (x = x.concat(E)),
-			!C.isEmpty() && (x = x.concat(E.concat([_]))),
-			(x = x.concat(s(i(w, y), y)));
+		w.getNextSiblingKey() && (x = x.concat(E)), !C.isEmpty() && (x = x.concat(E.concat([_]))), (x = x.concat(s(i(w, y), y)));
 	}
 	g = S === w ? p(S.getCharacterList(), m, b) : S.getCharacterList().slice(0, m).concat(w.getCharacterList().slice(b));
 	var D = S.merge({
@@ -156,10 +154,7 @@ t.exports = function (t, e) {
 							});
 						});
 					}),
-					null == r.get(o.getKey()) &&
-						null != r.get(h.getKey()) &&
-						h.getParentKey() === o.getKey() &&
-						null == h.getPrevSiblingKey())
+					null == r.get(o.getKey()) && null != r.get(h.getKey()) && h.getParentKey() === o.getKey() && null == h.getPrevSiblingKey())
 				) {
 					var e = o.getPrevSiblingKey();
 					u(h.getKey(), t, function (t) {

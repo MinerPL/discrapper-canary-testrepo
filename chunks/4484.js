@@ -13,8 +13,8 @@ var r = n(735250),
 	f = n(53529),
 	h = n(288897),
 	p = n(925994),
-	I = n(436660),
-	m = n(887490),
+	m = n(436660),
+	I = n(887490),
 	T = n(194625),
 	g = n(77188),
 	S = n(230554),
@@ -28,56 +28,17 @@ var r = n(735250),
 	D = n(981631),
 	L = n(278085);
 t.Z = i.forwardRef(function (e, t) {
-	let {
-			value: n,
-			type: a,
-			channel: b,
-			className: M,
-			id: P,
-			disabled: U,
-			submitting: w,
-			placeholder: x,
-			required: G,
-			textAreaPaddingClassName: k,
-			onChange: B,
-			onPaste: F,
-			onResize: V,
-			onFocus: H,
-			onBlur: Z,
-			onKeyDown: Y,
-			onKeyUp: j,
-			onTab: W,
-			onEnter: K,
-			onSubmit: z,
-			maybeShowAutocomplete: q,
-			hideAutocomplete: Q,
-			moveSelection: X,
-			spellcheckEnabled: $,
-			canUseCommands: J,
-			canOnlyUseTextCommands: ee,
-			disableAutoFocus: et,
-			disableEnterToSubmit: en,
-			allowNewLines: er,
-			'aria-owns': ei,
-			'aria-expanded': ea,
-			'aria-haspopup': es,
-			'aria-activedescendant': eo,
-			'aria-controls': el,
-			'aria-invalid': eu,
-			'aria-describedby': ec,
-			'aria-labelledby': ed,
-			'aria-autocomplete': e_
-		} = e,
+	let { value: n, type: a, channel: b, className: M, id: P, disabled: U, submitting: w, placeholder: x, required: G, textAreaPaddingClassName: k, onChange: B, onPaste: F, onResize: V, onFocus: H, onBlur: Z, onKeyDown: Y, onKeyUp: j, onTab: W, onEnter: K, onSubmit: z, maybeShowAutocomplete: q, hideAutocomplete: Q, moveSelection: X, spellcheckEnabled: $, canUseCommands: J, canOnlyUseTextCommands: ee, disableAutoFocus: et, disableEnterToSubmit: en, allowNewLines: er, 'aria-owns': ei, 'aria-expanded': ea, 'aria-haspopup': es, 'aria-activedescendant': eo, 'aria-controls': el, 'aria-invalid': eu, 'aria-describedby': ec, 'aria-labelledby': ed, 'aria-autocomplete': e_ } = e,
 		eE = i.useRef(null),
 		ef = i.useRef(null),
 		eh = i.useRef(!0),
 		ep = i.useRef(!0),
-		eI = U || w,
-		em = i.useCallback(
+		em = U || w,
+		eI = i.useCallback(
 			(e, t, n) => {
 				var r;
 				let { value: i, selection: a } = n,
-					s = m.bN.richValue(e),
+					s = I.bN.richValue(e),
 					o = e.selection,
 					l = !1;
 				if (void 0 !== i && i !== s) {
@@ -91,14 +52,14 @@ t.Z = i.forwardRef(function (e, t) {
 					}
 					'undo' !== t && void 0 !== i && i !== s && f.T.insertEntry(e, 'other', !1, s, o), (l = !0);
 				}
-				if ((null != a && !m.Ew.isValid(e, a) && (a = void 0), (l || !m.Ew.isValid(e, o)) && void 0 === a)) {
-					let t = m.bN.end(e, []);
+				if ((null != a && !I.Ew.isValid(e, a) && (a = void 0), (l || !I.Ew.isValid(e, o)) && void 0 === a)) {
+					let t = I.bN.end(e, []);
 					a = {
 						anchor: t,
 						focus: t
 					};
 				}
-				if (null != a && !m.Ew.equals(a, o)) {
+				if (null != a && !I.Ew.equals(a, o)) {
 					e.selection = a;
 					let t = f.T.currentEntry(e);
 					null != t && (t.selection = a), (l = !0);
@@ -112,7 +73,7 @@ t.Z = i.forwardRef(function (e, t) {
 						}),
 					l)
 				) {
-					if ((!et && m.bN.focus(e), 'parent' === t))
+					if ((!et && I.bN.focus(e), 'parent' === t))
 						try {
 							(ep.current = !1), e.onChange();
 						} finally {
@@ -136,7 +97,7 @@ t.Z = i.forwardRef(function (e, t) {
 			canOnlyUseTextCommands: ee,
 			onChangeStart: eT,
 			onChangeEnd: eg,
-			updateState: em
+			updateState: eI
 		}),
 		eA = i.useCallback(
 			(e, t) => {
@@ -161,11 +122,11 @@ t.Z = i.forwardRef(function (e, t) {
 						var n;
 						return (null !== (n = t.options) && void 0 !== n ? n : []).find((t) => t.name === e);
 					});
-				for (let e of t.options) e.required && !(e.name in i.values) && (I.Q.insertCommandOption(eS, e), a.push(e));
+				for (let e of t.options) e.required && !(e.name in i.values) && (m.Q.insertCommandOption(eS, e), a.push(e));
 				if (a.length > 0) {
 					var n, r;
 					let e = a[0];
-					I.Q.selectCommandOption(eS, e.name),
+					m.Q.selectCommandOption(eS, e.name),
 						_.S.dispatch(D.CkL.SHAKE_APP, {
 							duration: 200,
 							intensity: 2
@@ -181,7 +142,7 @@ t.Z = i.forwardRef(function (e, t) {
 			}
 			null == z ||
 				z(
-					(0, p.sk)(m.bN.richValue(eS), {
+					(0, p.sk)(I.bN.richValue(eS), {
 						mode: 'raw',
 						ignoreTrailingEmptyNodes: !0
 					}),
@@ -203,7 +164,7 @@ t.Z = i.forwardRef(function (e, t) {
 			hideAutocomplete: Q,
 			moveSelection: X
 		}),
-		{ handlePaste: eR, handleGlobalPaste: eC } = (0, N.Z)(eS, eI, F),
+		{ handlePaste: eR, handleGlobalPaste: eC } = (0, N.Z)(eS, em, F),
 		ey = i.useCallback(
 			(e) => {
 				null == q || q();
@@ -217,8 +178,8 @@ t.Z = i.forwardRef(function (e, t) {
 			[q, B]
 		);
 	i.useLayoutEffect(() => {
-		eh.current && ((ef.current = n), em(eS, 'parent', { value: n }));
-	}, [eS, n, em]),
+		eh.current && ((ef.current = n), eI(eS, 'parent', { value: n }));
+	}, [eS, n, eI]),
 		i.useEffect(() => {
 			let e = () => {
 				var e;
@@ -246,7 +207,7 @@ t.Z = i.forwardRef(function (e, t) {
 					guildId: b.guild_id,
 					className: s()(L.slateTextArea, k),
 					placeholder: x,
-					readOnly: eI,
+					readOnly: em,
 					spellCheck: $,
 					autoFocus: !et,
 					canFocus: !U,

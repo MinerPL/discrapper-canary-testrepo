@@ -33,30 +33,8 @@ let s = parseInt(null !== (r = a().version) && void 0 !== r ? r : '0', 10),
 				return !0;
 		}
 	})(),
-	u =
-		o ||
-		('Firefox' === a().name && s >= 80) ||
-		('Chrome' === a().name && s >= 37) ||
-		('Opera' === a().name && s >= 66) ||
-		('Node.js' === a().name && s >= 6) ||
-		('Electron' === a().name && s >= 1) ||
-		('Safari' === a().name && s >= 13) ||
-		('Microsoft Edge' === a().name && s >= 37),
-	c =
-		'Chrome' === a().name ||
-		'Safari' === a().name ||
-		('Firefox' === a().name && s >= 80) ||
-		'Opera' === a().name ||
-		'Microsoft Edge' === a().name,
-	d =
-		o ||
-		('Firefox' === a().name && s >= 73) ||
-		('Safari' === a().name && s >= 13) ||
-		('Chrome' === a().name && s >= 80) ||
-		('Microsoft Edge' === a().name && s >= 80),
+	u = o || ('Firefox' === a().name && s >= 80) || ('Chrome' === a().name && s >= 37) || ('Opera' === a().name && s >= 66) || ('Node.js' === a().name && s >= 6) || ('Electron' === a().name && s >= 1) || ('Safari' === a().name && s >= 13) || ('Microsoft Edge' === a().name && s >= 37),
+	c = 'Chrome' === a().name || 'Safari' === a().name || ('Firefox' === a().name && s >= 80) || 'Opera' === a().name || 'Microsoft Edge' === a().name,
+	d = o || ('Firefox' === a().name && s >= 73) || ('Safari' === a().name && s >= 13) || ('Chrome' === a().name && s >= 80) || ('Microsoft Edge' === a().name && s >= 80),
 	_ = ('Chrome' === a().name && s >= 58) || ('Safari' === a().name && s >= 15) || ('Firefox' === a().name && s >= 108),
-	E =
-		('Chrome' === a().name && s >= 72) ||
-		('Safari' === a().name && s >= 11) ||
-		('Opera' === a().name && s >= 60) ||
-		('Microsoft Edge' === a().name && s >= 79);
+	E = ('Chrome' === a().name && s >= 72) || ('Safari' === a().name && s >= 11) || ('Opera' === a().name && s >= 60) || ('Microsoft Edge' === a().name && s >= 79);

@@ -32,23 +32,11 @@ t.Z = class e {
 		(this.img = null), (this.loaded = !1), (this.isFilled = !1), (this.alpha = 0), this.unbind();
 	}
 	update(e) {
-		if (!!this.loaded)
-			!this.isFilled && this.alpha < 1
-				? (this.alpha = Math.min(1, this.alpha + e))
-				: this.isFilled && this.alpha > 0 && (this.alpha = Math.max(0, this.alpha - 3 * e)),
-				(this.velX += (0, r.B)(this.targetX, this.x, this.velX, this.spring) * e),
-				(this.velY += (0, r.B)(this.targetY, this.y, this.velY, this.spring) * e),
-				(this.x += this.velX * e),
-				(this.y += this.velY * e);
+		if (!!this.loaded) !this.isFilled && this.alpha < 1 ? (this.alpha = Math.min(1, this.alpha + e)) : this.isFilled && this.alpha > 0 && (this.alpha = Math.max(0, this.alpha - 3 * e)), (this.velX += (0, r.B)(this.targetX, this.x, this.velX, this.spring) * e), (this.velY += (0, r.B)(this.targetY, this.y, this.velY, this.spring) * e), (this.x += this.velX * e), (this.y += this.velY * e);
 	}
 	render(e) {
 		let { img: t } = this;
-		if (!!this.loaded && null != t)
-			e.save(),
-				(e.globalCompositeOperation = 'source-atop'),
-				(e.globalAlpha = this.alpha),
-				e.drawImage(t, this.x + 20, this.y + 20),
-				e.restore();
+		if (!!this.loaded && null != t) e.save(), (e.globalCompositeOperation = 'source-atop'), (e.globalAlpha = this.alpha), e.drawImage(t, this.x + 20, this.y + 20), e.restore();
 	}
 	fill() {
 		this.isFilled = !0;

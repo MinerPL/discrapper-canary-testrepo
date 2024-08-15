@@ -81,13 +81,7 @@ function b(e) {
 							case A.bm.CHANNEL:
 								a++;
 						}
-						return t.type === A.bm.GROUP_DM || t.type === A.bm.CHANNEL
-							? d.Z.sendActivityBookmark(t.item.id, n, u.Z.ACTIVITY_DETAIL_PAGE, null)
-							: t.type === A.bm.DM || t.type === A.bm.FRIEND
-								? o.Z.ensurePrivateChannel(t.item.id).then((e) =>
-										d.Z.sendActivityBookmark(e, b, u.Z.ACTIVITY_DETAIL_PAGE, null)
-									)
-								: Promise.resolve();
+						return t.type === A.bm.GROUP_DM || t.type === A.bm.CHANNEL ? d.Z.sendActivityBookmark(t.item.id, n, u.Z.ACTIVITY_DETAIL_PAGE, null) : t.type === A.bm.DM || t.type === A.bm.FRIEND ? o.Z.ensurePrivateChannel(t.item.id).then((e) => d.Z.sendActivityBookmark(e, b, u.Z.ACTIVITY_DETAIL_PAGE, null)) : Promise.resolve();
 					})(t, b)
 				);
 		await n,

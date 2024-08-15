@@ -8,15 +8,7 @@ var l = n(442837),
 	i = n(689938);
 s.default = (e) => {
 	var s;
-	let {
-			guildId: o,
-			welcomeChannel: E,
-			onEdit: u,
-			onChannelReorder: c,
-			setShowConfirmModal: I,
-			index: L,
-			onSelect: M
-		} = e,
+	let { guildId: o, welcomeChannel: E, onEdit: u, onChannelReorder: c, setShowConfirmModal: I, index: L, onSelect: M } = e,
 		r = (0, l.e7)([_.Z], () => _.Z.get(o)),
 		C = (null !== (s = null == r ? void 0 : r.welcome_channels) && void 0 !== s ? s : []).length - 1,
 		N = (e) => {

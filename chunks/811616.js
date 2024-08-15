@@ -24,37 +24,20 @@ var a = t(120356),
 	S = t(689938),
 	T = t(379573);
 function h(e) {
-	let {
-			premiumSubscription: n,
-			planId: t,
-			selectPlan: a,
-			selected: s,
-			priceOptions: h,
-			shouldShowUpdatedPaymentModal: b,
-			isEligibleForDiscount: g,
-			discountAmountOff: P,
-			isEligibleForTrial: v
-		} = e,
+	let { premiumSubscription: n, planId: t, selectPlan: a, selected: s, priceOptions: h, shouldShowUpdatedPaymentModal: b, isEligibleForDiscount: g, discountAmountOff: P, isEligibleForTrial: v } = e,
 		A = (0, o.e7)([_.default], () => _.default.locale),
 		y = (0, o.e7)([p.Z], () => p.Z.get(t)),
 		{ isGift: M, giftRecipient: C } = (0, d.wD)(),
 		O = M && (0, m.pO)(C);
 	l()(null != y, 'Missing subscriptionPlan');
 	let R = null != n && n.planId === t,
-		L =
-			R ||
-			(t === N.Xh.PREMIUM_MONTH_TIER_2 &&
-				null != n &&
-				[N.Xh.PREMIUM_YEAR_TIER_0, N.Xh.PREMIUM_YEAR_TIER_1].includes(n.planId)),
+		L = R || (t === N.Xh.PREMIUM_MONTH_TIER_2 && null != n && [N.Xh.PREMIUM_YEAR_TIER_0, N.Xh.PREMIUM_YEAR_TIER_1].includes(n.planId)),
 		j = N.nH[t],
 		Z = (0, f.aS)(t, !1, M, h),
 		D = (0, f.Ap)(h.paymentSourceId),
 		w = null != j && !b,
 		G = (0, x.Ng)(),
-		B =
-			y.interval === N.rV.YEAR
-				? S.Z.Messages.BILLING_TRIAL_YEARLY_PRICE_AFTER_TRIAL
-				: S.Z.Messages.BILLING_TRIAL_MONTHLY_PRICE_AFTER_TRIAL,
+		B = y.interval === N.rV.YEAR ? S.Z.Messages.BILLING_TRIAL_YEARLY_PRICE_AFTER_TRIAL : S.Z.Messages.BILLING_TRIAL_MONTHLY_PRICE_AFTER_TRIAL,
 		U = () =>
 			null != j &&
 			(0, i.jsx)(u.Text, {
@@ -136,14 +119,7 @@ function h(e) {
 					b
 						? (0, i.jsx)('div', {
 								className: r()({ [T.optionPriceSelected]: s }),
-								children: S.Z.Messages.BILLING_TRIAL_PRICE_NOW.format({
-									price:
-										g && null != P && y.interval === N.rV.MONTH
-											? (0, E.T4)(Z.amount - P, Z.currency)
-											: v
-												? (0, E.T4)(0, Z.currency, { maximumFractionDigits: 0 })
-												: (0, E.T4)(Z.amount, Z.currency)
-								})
+								children: S.Z.Messages.BILLING_TRIAL_PRICE_NOW.format({ price: g && null != P && y.interval === N.rV.MONTH ? (0, E.T4)(Z.amount - P, Z.currency) : v ? (0, E.T4)(0, Z.currency, { maximumFractionDigits: 0 }) : (0, E.T4)(Z.amount, Z.currency) })
 							})
 						: (0, i.jsx)('div', {
 								className: r()({ [T.optionSelected]: s || O }),
@@ -167,9 +143,7 @@ function h(e) {
 									regularPrice: (0, E.T4)(Z.amount, Z.currency)
 								});
 							}
-							return v
-								? B.format({ price: (0, E.T4)(Z.amount, Z.currency) })
-								: (y.interval === N.rV.YEAR && S.Z.Messages.BILLING_YEARLY_PLAN_SAVINGS.format({ percent: j }), null);
+							return v ? B.format({ price: (0, E.T4)(Z.amount, Z.currency) }) : (y.interval === N.rV.YEAR && S.Z.Messages.BILLING_YEARLY_PLAN_SAVINGS.format({ percent: j }), null);
 						})()
 					})
 				})

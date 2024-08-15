@@ -40,7 +40,5 @@ s.default = function (e) {
 	let { match: s } = e,
 		t = s.params.type,
 		{ two_way_link_type: i } = r.parse(window.location.search);
-	return [c.ABu.XBOX, c.ABu.PLAYSTATION_STAGING, c.ABu.PLAYSTATION, c.ABu.CRUNCHYROLL].includes(t) && i === a.g.DESKTOP
-		? (0, n.jsx)(d, { platformType: t })
-		: null;
+	return [c.ABu.XBOX, c.ABu.PLAYSTATION_STAGING, c.ABu.PLAYSTATION, c.ABu.CRUNCHYROLL].includes(t) && i === a.g.DESKTOP ? (0, n.jsx)(d, { platformType: t }) : null;
 };

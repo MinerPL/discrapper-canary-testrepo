@@ -17,7 +17,7 @@ var i = n(974674),
 	E = n(689938),
 	f = n(658471);
 function h(e) {
-	let { id: t, user: n, application: h, bot: p, accountScopes: I, showLogout: m, location: T, isTrustedName: g } = e,
+	let { id: t, user: n, application: h, bot: p, accountScopes: m, showLogout: I, location: T, isTrustedName: g } = e,
 		S = l.ZP.getApplicationIconURL({
 			id: h.id,
 			icon: h.icon
@@ -37,11 +37,7 @@ function h(e) {
 					}),
 					(0, r.jsxs)('div', {
 						className: f.ellipseGroup,
-						children: [
-							(0, r.jsx)('div', { className: f.ellipse }),
-							(0, r.jsx)('div', { className: f.ellipse }),
-							(0, r.jsx)('div', { className: f.ellipse })
-						]
+						children: [(0, r.jsx)('div', { className: f.ellipse }), (0, r.jsx)('div', { className: f.ellipse }), (0, r.jsx)('div', { className: f.ellipse })]
 					}),
 					(0, r.jsx)(i.qE, {
 						src: A,
@@ -70,7 +66,7 @@ function h(e) {
 						: null
 				]
 			}),
-			I.length > 0
+			m.length > 0
 				? (0, r.jsx)(s.x, {
 						variant: 'text-md/normal',
 						color: 'header-secondary',
@@ -83,7 +79,7 @@ function h(e) {
 						className: f.label,
 						children: E.Z.Messages.OAUTH2_CONNECT_TO_DISCORD
 					}),
-			m
+			I
 				? (0, r.jsx)('div', {
 						className: f.currentUser,
 						children: (0, r.jsxs)(s.x, {

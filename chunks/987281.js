@@ -44,10 +44,7 @@ function b(e) {
 				t = (0, I.Z)(T.Z),
 				a = g.Z.getSettings().clipsEnabled,
 				s = e.ownerId === A.default.getId(),
-				{ enableViewerClipping: o, ignoreSenderPreference: i } = h.Z.useExperiment(
-					{ location: 'StreamContextMenu' },
-					{ autoTrackExposure: !1 }
-				),
+				{ enableViewerClipping: o, ignoreSenderPreference: i } = h.Z.useExperiment({ location: 'StreamContextMenu' }, { autoTrackExposure: !1 }),
 				d = (0, r.e7)([g.Z], () => g.Z.getIsAtMaxSaveClipOperations()),
 				c = (0, r.e7)([g.Z], () => g.Z.isViewerClippingAllowedForUser(e.ownerId)) || i;
 			return t && o && n
@@ -72,8 +69,7 @@ function b(e) {
 				s = _(e),
 				d = m.default.getCurrentUser(),
 				c = null != d && e.ownerId === d.id;
-			return ((n = c ? U.Z.Messages.STOP_STREAMING : s ? U.Z.Messages.STOP_WATCHING : U.Z.Messages.WATCH_STREAM),
-			t || (!c && s && (null == a ? void 0 : a.isGuildStageVoice())))
+			return ((n = c ? U.Z.Messages.STOP_STREAMING : s ? U.Z.Messages.STOP_WATCHING : U.Z.Messages.WATCH_STREAM), t || (!c && s && (null == a ? void 0 : a.isGuildStageVoice())))
 				? null
 				: (0, l.jsx)(u.MenuItem, {
 						id: 'watch',

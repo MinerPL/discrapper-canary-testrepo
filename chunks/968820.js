@@ -14,15 +14,7 @@ var a = n(481060),
 	d = n(689938),
 	u = n(481904);
 function _(e) {
-	let {
-		children: t,
-		revenue: n,
-		revenueTrend: _,
-		summaryMetricLabel: I,
-		summaryMetricValue: E,
-		summaryMetricTrend: T,
-		summaryMetricTrendIsPercent: m
-	} = e;
+	let { children: t, revenue: n, revenueTrend: _, summaryMetricLabel: I, summaryMetricValue: E, summaryMetricTrend: T, summaryMetricTrendIsPercent: m } = e;
 	return (0, s.jsx)(a.FormSection, {
 		title: d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_HEADER,
 		children: (0, s.jsxs)('div', {

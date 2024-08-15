@@ -9,14 +9,7 @@ var a = n(145641),
 	s = n(322701),
 	r = n(617015);
 function l(e) {
-	let {
-		relationshipCount: t,
-		statusSections: n,
-		renderRow: l,
-		searchQuery: o,
-		sectionFilter: c,
-		useReducedMotion: d
-	} = e;
+	let { relationshipCount: t, statusSections: n, renderRow: l, searchQuery: o, sectionFilter: c, useReducedMotion: d } = e;
 	return t >= r.nG
 		? (0, i.jsx)(a.Z, {
 				statusSections: n,

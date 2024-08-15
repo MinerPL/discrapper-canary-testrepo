@@ -35,10 +35,7 @@ class l {
 	}
 	close() {
 		var e;
-		(this.lastState = s.hi.Closed),
-			null === (e = this.raw) || void 0 === e || e.close(),
-			(this.raw = null),
-			a.r.removeCompletionCallback(this.databaseStateCallback);
+		(this.lastState = s.hi.Closed), null === (e = this.raw) || void 0 === e || e.close(), (this.raw = null), a.r.removeCompletionCallback(this.databaseStateCallback);
 	}
 	disable(e) {
 		return null == this.raw
@@ -60,9 +57,7 @@ class l {
 						handle: 0
 					});
 				});
-		return null === t
-			? i()
-			: r.Z.timeAsync('\uD83D\uDCBE', ''.concat(null != t ? t : e.type, ' ').concat(null != n ? n : ''), i);
+		return null === t ? i() : r.Z.timeAsync('\uD83D\uDCBE', ''.concat(null != t ? t : e.type, ' ').concat(null != n ? n : ''), i);
 	}
 	executeSync(e) {
 		if (null == this.raw) throw Error('database is no longer open (database: '.concat(this));

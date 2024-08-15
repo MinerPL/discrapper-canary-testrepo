@@ -15,7 +15,7 @@ n.d(t, {
 		return E;
 	},
 	yC: function () {
-		return I;
+		return m;
 	}
 }),
 	n(47120),
@@ -61,10 +61,7 @@ class l extends o.C {
 			if (1 === t) a.value = e.double();
 			else {
 				let s = n.readUnknownField;
-				if ('throw' === s)
-					throw new globalThis.Error(
-						'Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName)
-					);
+				if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
 				let o = e.skip(r);
 				!1 !== s && (!0 === s ? i.z.onRead : s)(this.typeName, a, t, r, o);
 			}
@@ -114,10 +111,7 @@ class u extends o.C {
 			if (1 === t) a.value = e.float();
 			else {
 				let s = n.readUnknownField;
-				if ('throw' === s)
-					throw new globalThis.Error(
-						'Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName)
-					);
+				if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
 				let o = e.skip(r);
 				!1 !== s && (!0 === s ? i.z.onRead : s)(this.typeName, a, t, r, o);
 			}
@@ -167,10 +161,7 @@ class c extends o.C {
 			if (1 === t) a.value = e.int64().toString();
 			else {
 				let s = n.readUnknownField;
-				if ('throw' === s)
-					throw new globalThis.Error(
-						'Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName)
-					);
+				if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
 				let o = e.skip(r);
 				!1 !== s && (!0 === s ? i.z.onRead : s)(this.typeName, a, t, r, o);
 			}
@@ -220,10 +211,7 @@ class _ extends o.C {
 			if (1 === t) a.value = e.uint64().toString();
 			else {
 				let s = n.readUnknownField;
-				if ('throw' === s)
-					throw new globalThis.Error(
-						'Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName)
-					);
+				if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
 				let o = e.skip(r);
 				!1 !== s && (!0 === s ? i.z.onRead : s)(this.typeName, a, t, r, o);
 			}
@@ -273,10 +261,7 @@ class f extends o.C {
 			if (1 === t) a.value = e.int32();
 			else {
 				let s = n.readUnknownField;
-				if ('throw' === s)
-					throw new globalThis.Error(
-						'Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName)
-					);
+				if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
 				let o = e.skip(r);
 				!1 !== s && (!0 === s ? i.z.onRead : s)(this.typeName, a, t, r, o);
 			}
@@ -326,10 +311,7 @@ class p extends o.C {
 			if (1 === t) a.value = e.uint32();
 			else {
 				let s = n.readUnknownField;
-				if ('throw' === s)
-					throw new globalThis.Error(
-						'Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName)
-					);
+				if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
 				let o = e.skip(r);
 				!1 !== s && (!0 === s ? i.z.onRead : s)(this.typeName, a, t, r, o);
 			}
@@ -352,8 +334,8 @@ class p extends o.C {
 		]);
 	}
 }
-let I = new p();
-class m extends o.C {
+let m = new p();
+class I extends o.C {
 	internalJsonWrite(e, t) {
 		return e.value;
 	}
@@ -379,10 +361,7 @@ class m extends o.C {
 			if (1 === t) a.value = e.bool();
 			else {
 				let s = n.readUnknownField;
-				if ('throw' === s)
-					throw new globalThis.Error(
-						'Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName)
-					);
+				if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
 				let o = e.skip(r);
 				!1 !== s && (!0 === s ? i.z.onRead : s)(this.typeName, a, t, r, o);
 			}
@@ -405,7 +384,7 @@ class m extends o.C {
 		]);
 	}
 }
-let T = new m();
+let T = new I();
 class g extends o.C {
 	internalJsonWrite(e, t) {
 		return e.value;
@@ -432,10 +411,7 @@ class g extends o.C {
 			if (1 === t) a.value = e.string();
 			else {
 				let s = n.readUnknownField;
-				if ('throw' === s)
-					throw new globalThis.Error(
-						'Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName)
-					);
+				if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
 				let o = e.skip(r);
 				!1 !== s && (!0 === s ? i.z.onRead : s)(this.typeName, a, t, r, o);
 			}
@@ -485,10 +461,7 @@ class A extends o.C {
 			if (1 === t) a.value = e.bytes();
 			else {
 				let s = n.readUnknownField;
-				if ('throw' === s)
-					throw new globalThis.Error(
-						'Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName)
-					);
+				if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
 				let o = e.skip(r);
 				!1 !== s && (!0 === s ? i.z.onRead : s)(this.typeName, a, t, r, o);
 			}

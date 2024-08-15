@@ -34,22 +34,7 @@ function u(e) {
 	});
 }
 function m(e) {
-	let {
-		title: n,
-		titleIcon: t,
-		titleId: i,
-		description: a,
-		children: m,
-		className: h,
-		errors: f,
-		disabled: g = !1,
-		hideDivider: v = !1,
-		showBorder: x = !1,
-		borderType: _,
-		hasBackground: p = !1,
-		forcedDivider: C = !1,
-		showPremiumIcon: B = !1
-	} = e;
+	let { title: n, titleIcon: t, titleId: i, description: a, children: m, className: h, errors: f, disabled: g = !1, hideDivider: v = !1, showBorder: x = !1, borderType: _, hasBackground: p = !1, forcedDivider: C = !1, showPremiumIcon: B = !1 } = e;
 	return (0, r.jsx)('div', {
 		className: o()(s.customizationSection, h, {
 			[s.disabled]: g,

@@ -48,14 +48,7 @@ function c(e) {
 	});
 }
 function j(e) {
-	let {
-			guildId: o,
-			initialTierEmojiIds: a,
-			onSubmit: l,
-			transitionToManageEmoji: j,
-			transitionState: u,
-			onClose: h
-		} = e,
+	let { guildId: o, initialTierEmojiIds: a, onSubmit: l, transitionToManageEmoji: j, transitionState: u, onClose: h } = e,
 		_ = (0, r.Z)(o),
 		[x, C] = s.useState(new Set()),
 		b = x.size > 0,
@@ -87,9 +80,7 @@ function j(e) {
 						(0, t.jsx)(i.Text, {
 							variant: 'text-sm/normal',
 							color: 'header-secondary',
-							children: d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_ADD_MODAL_DESCRIPTION.format({
-								transitionToManageEmoji: j
-							})
+							children: d.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_ADD_MODAL_DESCRIPTION.format({ transitionToManageEmoji: j })
 						}),
 						(0, t.jsx)(i.Spacer, { size: 16 }),
 						null != _ &&

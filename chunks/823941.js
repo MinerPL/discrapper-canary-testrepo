@@ -150,13 +150,7 @@ function k(e) {
 						size: x.yV,
 						format: 'jpg'
 					}),
-		p = u
-			? null === (t = a.leftOverflow) || void 0 === t
-				? void 0
-				: t.call(a)
-			: null === (n = a.rightOverflow) || void 0 === n
-				? void 0
-				: n.call(a),
+		p = u ? (null === (t = a.leftOverflow) || void 0 === t ? void 0 : t.call(a)) : null === (n = a.rightOverflow) || void 0 === n ? void 0 : n.call(a),
 		g = u ? a.rightLogo() : a.leftLogo(),
 		{ backgroundColors: m } = (0, _.Z)(c.styles),
 		b = {

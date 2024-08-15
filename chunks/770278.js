@@ -15,14 +15,7 @@ var r,
 	_ = n(287122);
 ((r = i || (i = {})).SUBTLE = 'SUBTLE'), (r.DARK = 'DARK'), (r.BLUR = 'BLUR');
 let E = s.forwardRef(function (e, t) {
-	let {
-			backdropStyle: n = 'SUBTLE',
-			backdropInstant: r = !1,
-			zIndexBoost: i = 0,
-			LayerComponent: s,
-			isVisible: o,
-			onClose: E
-		} = e,
+	let { backdropStyle: n = 'SUBTLE', backdropInstant: r = !1, zIndexBoost: i = 0, LayerComponent: s, isVisible: o, onClose: E } = e,
 		f = (function () {
 			let e = (0, c.useToken)(c.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0.25 }),
 				t = (0, c.useToken)(c.tokens.colors.BG_BACKDROP).spring();
@@ -37,12 +30,12 @@ let E = s.forwardRef(function (e, t) {
 			background: h,
 			backdropFilter: 'blur(0px)'
 		},
-		I = (0, d.Z)(r),
-		m = (0, c.useTransition)(
+		m = (0, d.Z)(r),
+		I = (0, c.useTransition)(
 			o,
 			{
 				keys: (e) => (e ? 'backdrop' : 'empty'),
-				config: { duration: r || I ? 0 : 300 },
+				config: { duration: r || m ? 0 : 300 },
 				from: p,
 				enter: {
 					background: f,
@@ -54,7 +47,7 @@ let E = s.forwardRef(function (e, t) {
 		);
 	if (null == s) {
 		let e = { zIndex: 1000 + i };
-		return m((t, n) =>
+		return I((t, n) =>
 			n
 				? (0, a.jsx)(u.animated.div, {
 						className: _.backdrop,
@@ -68,7 +61,7 @@ let E = s.forwardRef(function (e, t) {
 		);
 	}
 	return (0, a.jsx)(s, {
-		children: m((e, t) =>
+		children: I((e, t) =>
 			t
 				? (0, a.jsx)(u.animated.div, {
 						className: l()(_.backdrop, _.withLayer),

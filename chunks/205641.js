@@ -111,9 +111,7 @@ class N extends (a = l.Component) {
 				duration: T.HOVERING.Y_DURATION,
 				easing: _.Z.Easing.inOut(_.Z.Easing.ease)
 			});
-		(this.currentAnimation = _.Z.parallel([r, i])),
-			await (null === (t = this.currentAnimation) || void 0 === t ? void 0 : t.start()),
-			this.hoverAnimate(e * T.HOVERING.Y_VALUE_MODIFIER);
+		(this.currentAnimation = _.Z.parallel([r, i])), await (null === (t = this.currentAnimation) || void 0 === t ? void 0 : t.start()), this.hoverAnimate(e * T.HOVERING.Y_VALUE_MODIFIER);
 	}
 	createShakeAnimation(e, t, n) {
 		return m(this.x, e, t, (e) => u().random(1, n) * (e % 2 == 0 ? 1 : -1));
@@ -134,12 +132,7 @@ class N extends (a = l.Component) {
 				duration: T.STAGING.DURATION
 			}),
 			i = this.createShakeAnimation(T.STAGING.SHAKE_COUNT, T.STAGING.DURATION, T.STAGING.SHAKE_INTENSITY),
-			r = this.createFireAnimation(
-				T.STAGING.FIRE_COUNT,
-				T.STAGING.DURATION,
-				T.STAGING.FIRE_MIN_INTENSITY,
-				T.STAGING.FIRE_MAX_INTENSITY
-			),
+			r = this.createFireAnimation(T.STAGING.FIRE_COUNT, T.STAGING.DURATION, T.STAGING.FIRE_MIN_INTENSITY, T.STAGING.FIRE_MAX_INTENSITY),
 			l = _.Z.parallel([a, i, r]),
 			o = _.Z.timing(this.y, {
 				toValue: T.FLYING.Y_VALUE,
@@ -156,18 +149,9 @@ class N extends (a = l.Component) {
 				duration: T.FLYING.DURATION / T.FLYING.OPACITY_DURATION_DIVIDEND,
 				delay: T.FLYING.DURATION / T.FLYING.OPACITY_DURATION_DIVIDEND
 			}),
-			u = this.createFireAnimation(
-				T.FLYING.FIRE_COUNT,
-				T.FLYING.DURATION,
-				T.FLYING.FIRE_MIN_INTENSITY,
-				T.FLYING.FIRE_MAX_INTENSITY
-			),
+			u = this.createFireAnimation(T.FLYING.FIRE_COUNT, T.FLYING.DURATION, T.FLYING.FIRE_MIN_INTENSITY, T.FLYING.FIRE_MAX_INTENSITY),
 			I = _.Z.parallel([o, c, d, u]);
-		if (
-			((this.currentAnimation = _.Z.sequence([s, l, I])),
-			await (null === (e = this.currentAnimation) || void 0 === e ? void 0 : e.start()),
-			!this.isUnmounted)
-		) {
+		if (((this.currentAnimation = _.Z.sequence([s, l, I])), await (null === (e = this.currentAnimation) || void 0 === e ? void 0 : e.start()), !this.isUnmounted)) {
 			let { onFlyingComplete: e } = this.props;
 			null != e && e();
 		}
@@ -222,13 +206,7 @@ class N extends (a = l.Component) {
 		});
 	}
 	constructor(...e) {
-		super(...e),
-			E(this, 'x', new _.Z.Value(0)),
-			E(this, 'y', new _.Z.Value(0)),
-			E(this, 'opacity', new _.Z.Value(1)),
-			E(this, 'fireScale', new _.Z.Value(1)),
-			E(this, 'currentAnimation', null),
-			E(this, 'isUnmounted', !1);
+		super(...e), E(this, 'x', new _.Z.Value(0)), E(this, 'y', new _.Z.Value(0)), E(this, 'opacity', new _.Z.Value(1)), E(this, 'fireScale', new _.Z.Value(1)), E(this, 'currentAnimation', null), E(this, 'isUnmounted', !1);
 	}
 }
 E(N, 'Stages', s), (t.Z = N);

@@ -40,10 +40,7 @@ let i = (0, n(818083).B)({
 });
 function a() {
 	let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-		{ showRedesignedChannelNotice: t, showRedesignedLiveChannelNotice: n } = i.useExperiment(
-			{ location: 'c0d6eb_1' },
-			{ autoTrackExposure: e }
-		);
+		{ showRedesignedChannelNotice: t, showRedesignedLiveChannelNotice: n } = i.useExperiment({ location: 'c0d6eb_1' }, { autoTrackExposure: e });
 	return {
 		showRedesignedChannelNotice: t,
 		showRedesignedLiveChannelNotice: n

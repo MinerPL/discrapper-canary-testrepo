@@ -6,15 +6,7 @@ a.d(t, {
 var n = a(626135),
 	s = a(981631);
 function l(e) {
-	let {
-		problem: t,
-		channel: a,
-		feedback: l,
-		activityApplication: i,
-		analyticsData: o,
-		location: r,
-		rating: c = null
-	} = e;
+	let { problem: t, channel: a, feedback: l, activityApplication: i, analyticsData: o, location: r, rating: c = null } = e;
 	n.default.track(s.rMx.ACTIVITY_REPORT_PROBLEM, {
 		reason: t,
 		guild_id: a.getGuildId(),

@@ -133,27 +133,7 @@ class E extends s.Z {
 		return e instanceof E ? e : e instanceof o.ZP ? E.createFromGuildRecord(e) : E.createFromDiscoverableGuild(e);
 	}
 	constructor(e) {
-		super(),
-			d(this, 'id', void 0),
-			d(this, 'name', void 0),
-			d(this, 'icon', void 0),
-			d(this, 'description', void 0),
-			d(this, 'features', void 0),
-			d(this, 'premiumTier', void 0),
-			d(this, 'premiumSubscriberCount', void 0),
-			d(this, 'presenceCount', void 0),
-			d(this, 'memberCount', void 0),
-			d(this, 'emojis', void 0),
-			(this.id = e.id),
-			(this.name = e.name),
-			(this.icon = e.icon),
-			(this.description = e.description),
-			(this.features = e.features),
-			(this.premiumTier = e.premiumTier),
-			(this.premiumSubscriberCount = e.premiumSubscriberCount),
-			(this.presenceCount = e.presenceCount),
-			(this.memberCount = e.memberCount),
-			(this.emojis = e.emojis);
+		super(), d(this, 'id', void 0), d(this, 'name', void 0), d(this, 'icon', void 0), d(this, 'description', void 0), d(this, 'features', void 0), d(this, 'premiumTier', void 0), d(this, 'premiumSubscriberCount', void 0), d(this, 'presenceCount', void 0), d(this, 'memberCount', void 0), d(this, 'emojis', void 0), (this.id = e.id), (this.name = e.name), (this.icon = e.icon), (this.description = e.description), (this.features = e.features), (this.premiumTier = e.premiumTier), (this.premiumSubscriberCount = e.premiumSubscriberCount), (this.presenceCount = e.presenceCount), (this.memberCount = e.memberCount), (this.emojis = e.emojis);
 	}
 }
 class f extends s.Z {

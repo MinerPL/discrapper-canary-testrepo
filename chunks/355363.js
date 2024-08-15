@@ -12,9 +12,7 @@ function r(e) {
 			let { channel: t, video: n, considerMaxStageVoiceUserLimit: r = !0 } = e,
 				{ limit: a } = (0, i.Z)(t),
 				s = -1;
-			return (t.userLimit > 0 && (s = t.userLimit), n && a > 0 && (s = s > 0 ? Math.min(s, a) : a), r && s === l.xGv)
-				? 0
-				: s;
+			return (t.userLimit > 0 && (s = t.userLimit), n && a > 0 && (s = s > 0 ? Math.min(s, a) : a), r && s === l.xGv) ? 0 : s;
 		})({
 			channel: t,
 			video: r

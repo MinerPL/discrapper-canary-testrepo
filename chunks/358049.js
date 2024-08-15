@@ -17,8 +17,7 @@ function o(e, t) {
 			if (t.current && !t.current.contains(document.activeElement)) {
 				(0, i.ex)(t.current);
 				let e = setTimeout(() => {
-					document.activeElement === t.current &&
-						((l.current = !0), t.current && (t.current.blur(), (0, i.ex)(t.current)), (l.current = !1));
+					document.activeElement === t.current && ((l.current = !0), t.current && (t.current.blur(), (0, i.ex)(t.current)), (l.current = !1));
 				}, 500);
 				return () => {
 					clearTimeout(e);

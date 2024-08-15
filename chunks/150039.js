@@ -3,7 +3,7 @@ n.d(t, {
 		return f;
 	},
 	Jw: function () {
-		return m;
+		return I;
 	},
 	Kg: function () {
 		return h;
@@ -30,7 +30,7 @@ n.d(t, {
 		return g;
 	},
 	xQ: function () {
-		return I;
+		return m;
 	}
 }),
 	n(653041);
@@ -79,13 +79,7 @@ function h(e, t) {
 		[c.Z],
 		() => {
 			var n, r;
-			return null == t
-				? null === (n = c.Z.getUserProfile(e.id)) || void 0 === n
-					? void 0
-					: n.profileEffectId
-				: null === (r = c.Z.getGuildMemberProfile(e.id, t.id)) || void 0 === r
-					? void 0
-					: r.profileEffectId;
+			return null == t ? (null === (n = c.Z.getUserProfile(e.id)) || void 0 === n ? void 0 : n.profileEffectId) : null === (r = c.Z.getGuildMemberProfile(e.id, t.id)) || void 0 === r ? void 0 : r.profileEffectId;
 		},
 		[e, t]
 	);
@@ -106,10 +100,10 @@ function p(e) {
 		[e]
 	);
 }
-function I(e, t) {
+function m(e, t) {
 	(0, u.Cf)(e === t ? void 0 : e);
 }
-function m(e, t) {
+function I(e, t) {
 	(0, a.I5)(e === t ? void 0 : e);
 }
 function T(e, t) {

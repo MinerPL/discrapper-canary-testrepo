@@ -43,14 +43,7 @@ o(d, 'displayName', 'GuildOnboardingHomeNavigationStore'),
 			let i = l.Z.getChannel(t),
 				a = c[n],
 				s = u[n];
-			if (
-				!(
-					(null == i ? void 0 : i.isThread()) &&
-					(null == i ? void 0 : i.parent_id) != null &&
-					[s, a].includes(null == i ? void 0 : i.parent_id)
-				)
-			)
-				t !== a && delete c[n], t !== s && delete u[n];
+			if (!((null == i ? void 0 : i.isThread()) && (null == i ? void 0 : i.parent_id) != null && [s, a].includes(null == i ? void 0 : i.parent_id))) t !== a && delete c[n], t !== s && delete u[n];
 		},
 		SELECT_HOME_RESOURCE_CHANNEL: function (e) {
 			let { channelId: t, guildId: n } = e;

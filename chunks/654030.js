@@ -167,24 +167,7 @@ class G extends (i = s.PureComponent) {
 			}),
 			B(this, 'renderEmbed', () => {
 				let e;
-				let {
-					activity: t,
-					partyId: n,
-					myPartyId: i,
-					application: s,
-					partyMembers: r,
-					isPreview: l,
-					isLaunching: o,
-					isSender: c,
-					activityActionType: u,
-					className: d,
-					channelId: _,
-					message: E,
-					hideParty: I,
-					isSyncable: T,
-					isLaunchable: h,
-					guildId: N
-				} = this.props;
+				let { activity: t, partyId: n, myPartyId: i, application: s, partyMembers: r, isPreview: l, isLaunching: o, isSender: c, activityActionType: u, className: d, channelId: _, message: E, hideParty: I, isSyncable: T, isLaunchable: h, guildId: N } = this.props;
 				if (null != s) e = s.name;
 				else if (null != n) {
 					let [t] = n.split(':');

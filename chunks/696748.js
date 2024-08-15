@@ -120,12 +120,7 @@ class T extends s.PureComponent {
 					className: O.description,
 					children: A.Z.Messages.CLOUD_SYNC_MODAL_CONFLICT_DESCRIPTION.format({ applicationName: t.name })
 				}),
-				this.renderConflictButton(
-					A.Z.Messages.CLOUD_SYNC_MODAL_CONFLICT_CHOICE_DOWNLOAD,
-					e.remote.timestamp,
-					O.conflictDownloadArt,
-					this.handleChooseDownload
-				),
+				this.renderConflictButton(A.Z.Messages.CLOUD_SYNC_MODAL_CONFLICT_CHOICE_DOWNLOAD, e.remote.timestamp, O.conflictDownloadArt, this.handleChooseDownload),
 				(0, i.jsxs)(p.Z, {
 					className: O.choiceWrapper,
 					align: p.Z.Align.CENTER,
@@ -138,21 +133,13 @@ class T extends s.PureComponent {
 						(0, i.jsx)('div', { className: O.choiceLine })
 					]
 				}),
-				this.renderConflictButton(
-					A.Z.Messages.CLOUD_SYNC_MODAL_CONFLICT_CHOICE_UPLOAD,
-					e.next.timestamp,
-					O.conflictUploadArt,
-					this.handleChooseUpload
-				)
+				this.renderConflictButton(A.Z.Messages.CLOUD_SYNC_MODAL_CONFLICT_CHOICE_UPLOAD, e.next.timestamp, O.conflictUploadArt, this.handleChooseUpload)
 			]
 		});
 	}
 	render() {
 		let { cloudSyncState: t, transitionState: e } = this.props,
-			n =
-				t.type === f.TzF.CONFLICT
-					? A.Z.Messages.CLOUD_SYNC_MODAL_CONFLICT_HEADER
-					: A.Z.Messages.CLOUD_SYNC_MODAL_ERROR_HEADER;
+			n = t.type === f.TzF.CONFLICT ? A.Z.Messages.CLOUD_SYNC_MODAL_CONFLICT_HEADER : A.Z.Messages.CLOUD_SYNC_MODAL_ERROR_HEADER;
 		return (0, i.jsxs)(r.ModalRoot, {
 			transitionState: e,
 			className: O.modal,

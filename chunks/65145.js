@@ -43,10 +43,7 @@ function d(e) {
 	return (
 		r.useEffect(() => {
 			var e, t, i;
-			'POLL_ANSWERS' === n &&
-				null != o.current &&
-				(null === (t = o.current) || void 0 === t || null === (e = t.ref) || void 0 === e || e.focus()),
-				'ACTION_BUTTON' === n && null != a.current && (null === (i = a.current) || void 0 === i || i.focus());
+			'POLL_ANSWERS' === n && null != o.current && (null === (t = o.current) || void 0 === t || null === (e = t.ref) || void 0 === e || e.focus()), 'ACTION_BUTTON' === n && null != a.current && (null === (i = a.current) || void 0 === i || i.focus());
 		}, [n]),
 		(0, s.jsx)(u, {
 			pollAnswerRef: o,

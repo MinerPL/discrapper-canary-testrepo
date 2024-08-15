@@ -13,8 +13,8 @@ var i = n(470079),
 	_ = n(323873),
 	f = n(271383),
 	E = n(607744),
-	g = n(375954),
-	C = n(496675),
+	C = n(375954),
+	g = n(496675),
 	I = n(572004),
 	x = n(585483),
 	T = n(358085),
@@ -25,7 +25,7 @@ var i = n(470079),
 	A = n(996861),
 	M = n(981631);
 function b(e) {
-	return C.Z.can(M.Plq.MANAGE_MESSAGES, e);
+	return g.Z.can(M.Plq.MANAGE_MESSAGES, e);
 }
 t.Z = function (e, t, n) {
 	let R = i.useRef(n);
@@ -40,7 +40,7 @@ t.Z = function (e, t, n) {
 					k = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
 					U = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
 					w = n.shiftKey && !(n.altKey || n.ctrlKey || n.metaKey),
-					B = g.Z.getMessage(t, e),
+					B = C.Z.getMessage(t, e),
 					H = p.Z.getChannel(t);
 				if (null == B || null == H) return;
 				let G = m.default.getId();
@@ -58,8 +58,7 @@ t.Z = function (e, t, n) {
 						break;
 					case 'p':
 						if (y || w) {
-							if (((P = H), (O = B), !P.isSystemDM() && !(0, S.Z)(O) && (b(P) || P.isPrivate())))
-								n.preventDefault(), (0, A.rY)(H, B, n);
+							if (((P = H), (O = B), !P.isSystemDM() && !(0, S.Z)(O) && (b(P) || P.isPrivate()))) n.preventDefault(), (0, A.rY)(H, B, n);
 						}
 						break;
 					case '+':
@@ -71,7 +70,7 @@ t.Z = function (e, t, n) {
 										channel: e,
 										canChat: t,
 										renderReactions: n,
-										canAddNewReactions: t && C.Z.can(M.Plq.ADD_REACTIONS, e),
+										canAddNewReactions: t && g.Z.can(M.Plq.ADD_REACTIONS, e),
 										isLurking: null != e.guild_id && o.Z.isLurking(e.guild_id),
 										isGuest: null != e.guild_id && f.ZP.isCurrentUserGuest(e.guild_id),
 										isActiveChannelOrUnarchivableThread: (0, u.RG)(e)

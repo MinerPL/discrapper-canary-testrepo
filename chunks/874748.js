@@ -21,19 +21,11 @@ var r = n(830121),
 	d = n(689938);
 function _(e) {
 	var t, n, r, i, a;
-	let {
-		mediaPostEmbedData: u,
-		guild: _,
-		parentChannel: E,
-		postThread: f,
-		user: h,
-		selectedGuildId: p,
-		canAccess: I = !1
-	} = e;
+	let { mediaPostEmbedData: u, guild: _, parentChannel: E, postThread: f, user: h, selectedGuildId: p, canAccess: m = !1 } = e;
 	if (null == u) return null;
-	let m = (0, l.EY)(u.thumbnail),
-		T = !I && u.has_media_attachment,
-		g = I ? d.Z.Messages.MEDIA_POST_EMBED_SUBSCRIBED_CTA : d.Z.Messages.MEDIA_POST_EMBED_SUBSCRIBE_CTA,
+	let I = (0, l.EY)(u.thumbnail),
+		T = !m && u.has_media_attachment,
+		g = m ? d.Z.Messages.MEDIA_POST_EMBED_SUBSCRIBED_CTA : d.Z.Messages.MEDIA_POST_EMBED_SUBSCRIBE_CTA,
 		S = null != h ? o.ZP.getName(u.guild_id, u.channel_id, h) : void 0,
 		A = null == h ? void 0 : h.getAvatarURL(null == _ ? void 0 : _.id, 40);
 	(null == A || p !== u.guild_id) &&
@@ -49,24 +41,18 @@ function _(e) {
 				let { height: t, width: n } = e;
 				return null != t && null != n && t >= n;
 			})(u.thumbnail) && !T,
-		v =
-			(null === (t = u.thumbnail) || void 0 === t ? void 0 : t.filename) != null &&
-			(null === (r = u.thumbnail) || void 0 === r
-				? void 0
-				: null === (n = r.filename) || void 0 === n
-					? void 0
-					: n.startsWith(c._j));
+		v = (null === (t = u.thumbnail) || void 0 === t ? void 0 : t.filename) != null && (null === (r = u.thumbnail) || void 0 === r ? void 0 : null === (n = r.filename) || void 0 === n ? void 0 : n.startsWith(c._j));
 	return {
 		title: null !== (i = u.title) && void 0 !== i ? i : '',
 		subtitle: u.description,
 		ctaText: g,
-		coverImage: m,
+		coverImage: I,
 		coverImageOverlayText: T ? d.Z.Messages.MEDIA_POST_EMBED_BLURRED_THUMBNAIL_TEXT : void 0,
 		parentChannelId: u.parent_channel_id,
 		threadId: u.channel_id,
 		postThread: f,
 		messageId: u.message_id,
-		canAccess: I,
+		canAccess: m,
 		guildId: u.guild_id,
 		guildName: null !== (a = null == _ ? void 0 : _.name) && void 0 !== a ? a : u.guild_name,
 		authorId: null == u ? void 0 : u.author_id,

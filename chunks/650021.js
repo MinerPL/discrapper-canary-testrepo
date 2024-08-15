@@ -4,8 +4,7 @@ var r = n(424706),
 	o = n(207662);
 t.Z = {
 	id: 'input-label',
-	selector:
-		'input, textarea, select, [role="checkbox"], [role="radio"], [role="radiogroup"], [role="searchbox"], [role="slider"], [role="textbox"], [role="combobox"]',
+	selector: 'input, textarea, select, [role="checkbox"], [role="radio"], [role="radiogroup"], [role="searchbox"], [role="slider"], [role="textbox"], [role="combobox"]',
 	tags: ['wcag2a', 'wcag131', 'wcag412', 'section508', 'section508.22.a', 'ACT'],
 	metadata: {
 		description: 'Form inputs require a label',

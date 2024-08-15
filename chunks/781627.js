@@ -9,16 +9,7 @@ var i = n(481060),
 	l = n(689938),
 	r = n(813801);
 function s(e) {
-	let {
-			imageSrc: t,
-			header: n,
-			description: s,
-			secondaryInfo: c,
-			mutualGuildCount: o,
-			ctaLabel: d,
-			onCtaClick: u,
-			children: _
-		} = e,
+	let { imageSrc: t, header: n, description: s, secondaryInfo: c, mutualGuildCount: o, ctaLabel: d, onCtaClick: u, children: _ } = e,
 		g = (0, a.jsx)(a.Fragment, {
 			children: (0, a.jsxs)('div', {
 				className: r.topWrapper,

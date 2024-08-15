@@ -155,5 +155,4 @@ class N extends (s = i.PureComponent) {
 			});
 	}
 }
-f(N, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }),
-	(t.Z = l.ZP.connectStores([E.Z], () => ({ defaultRoute: E.Z.defaultRoute }))(N));
+f(N, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }), (t.Z = l.ZP.connectStores([E.Z], () => ({ defaultRoute: E.Z.defaultRoute }))(N));

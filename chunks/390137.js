@@ -1,13 +1,11 @@
 e.exports = function (e) {
-	let t =
-		'group clone ms master location colocation order fencing_topology rsc_ticket acl_target acl_group user role tag xml';
+	let t = 'group clone ms master location colocation order fencing_topology rsc_ticket acl_target acl_group user role tag xml';
 	return {
 		name: 'crmsh',
 		aliases: ['crm', 'pcmk'],
 		case_insensitive: !0,
 		keywords: {
-			keyword:
-				'params meta operations op rule attributes utilization read write deny defined not_defined in_range date spec in ref reference attribute type xpath version and or lt gt tag lte gte eq ne \\ number string',
+			keyword: 'params meta operations op rule attributes utilization read write deny defined not_defined in_range date spec in ref reference attribute type xpath version and or lt gt tag lte gte eq ne \\ number string',
 			literal: 'Master Started Slave Stopped start promote demote stop monitor true false'
 		},
 		contains: [

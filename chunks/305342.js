@@ -261,9 +261,7 @@ t.Z = (e) => {
 								}),
 								(0, i.jsx)(o.Tooltip, {
 									clickableOnMobile: !0,
-									text: L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_DISCLAIMER.format({
-										activeTrialUserLimit: null != K ? K : 0
-									}),
+									text: L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_DISCLAIMER.format({ activeTrialUserLimit: null != K ? K : 0 }),
 									children: (e) =>
 										(0, i.jsx)(o.CircleInformationIcon, {
 											size: 'xs',
@@ -301,9 +299,7 @@ t.Z = (e) => {
 															look: o.Button.Looks.OUTLINED,
 															color: o.Button.Colors.PRIMARY,
 															disabled: !0,
-															children: B
-																? L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL
-																: L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBED_LABEL
+															children: B ? L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBED_LABEL
 														})
 													: (0, i.jsx)(o.Tooltip, {
 															text: p ? null : S,

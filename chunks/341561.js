@@ -13,8 +13,8 @@ var i = n(952265),
 	f = n(590921),
 	h = n(665692),
 	p = n(981631),
-	I = n(689938),
-	m = n(339626);
+	m = n(689938),
+	I = n(339626);
 function T(e, t) {
 	return (0, r.jsx)(c.ZP, {
 		sticker: e,
@@ -79,8 +79,8 @@ let g = {
 					autocompletes: t,
 					onHover: c,
 					onClick: _,
-					titleWithQuery: I.Z.Messages.EMOJI_MATCHING,
-					titleWithoutQuery: I.Z.Messages.EMOJI,
+					titleWithQuery: m.Z.Messages.EMOJI_MATCHING,
+					titleWithoutQuery: m.Z.Messages.EMOJI,
 					Component: a.ZP.Emoji,
 					getProps: (e) => ({
 						emoji: e,
@@ -103,8 +103,8 @@ let g = {
 									return (t) => (0, r.jsx)(e, { ...t });
 								});
 							},
-							titleWithQuery: 0 === t.length ? I.Z.Messages.EMOJI_MATCHING : null,
-							titleWithoutQuery: 0 === t.length ? I.Z.Messages.EMOJI : null,
+							titleWithQuery: 0 === t.length ? m.Z.Messages.EMOJI_MATCHING : null,
+							titleWithoutQuery: 0 === t.length ? m.Z.Messages.EMOJI : null,
 							Component: a.ZP.EmojiUpsell,
 							getProps: (e) => {
 								let { emojis: t } = e;
@@ -118,17 +118,15 @@ let g = {
 							indexOffset: t.length
 						})
 					: null,
-				(t.length > 0 || o.length > 0) &&
-					s.length > 0 &&
-					(0, r.jsx)(a.ZP.Divider, { className: m.emojiStickersDivider }),
+				(t.length > 0 || o.length > 0) && s.length > 0 && (0, r.jsx)(a.ZP.Divider, { className: I.emojiStickersDivider }),
 				(0, E.HI)({
 					query: u,
 					selectedIndex: l,
 					autocompletes: s,
 					onHover: c,
 					onClick: _,
-					titleWithQuery: I.Z.Messages.STICKERS_MATCHING,
-					titleWithoutQuery: I.Z.Messages.STICKER,
+					titleWithQuery: m.Z.Messages.STICKERS_MATCHING,
+					titleWithoutQuery: m.Z.Messages.STICKER,
 					Component: a.ZP.Sticker,
 					getProps: (e) => {
 						let { comparator: t, sticker: n } = e;
@@ -142,7 +140,7 @@ let g = {
 					getQuery: (e) => e,
 					key: 'stickers',
 					indexOffset: t.length + o.length,
-					headerClassName: t.length > 0 ? m.stickersHeaderWithEmojiResults : void 0
+					headerClassName: t.length > 0 ? I.stickersHeaderWithEmojiResults : void 0
 				})
 			]
 		});

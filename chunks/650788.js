@@ -47,8 +47,7 @@ function b(e) {
 	return null == a || (!C && _)
 		? (0, r.jsx)(c.Spinner, {})
 		: (0, r.jsx)(L.Z, {
-				defaultSortOption:
-					null !== (t = null == o ? void 0 : o.store_page_guild_products_default_sort) && void 0 !== t ? t : Z.zJ.NAME,
+				defaultSortOption: null !== (t = null == o ? void 0 : o.store_page_guild_products_default_sort) && void 0 !== t ? t : Z.zJ.NAME,
 				children: (0, r.jsxs)('div', {
 					className: N.contentContainer,
 					children: [

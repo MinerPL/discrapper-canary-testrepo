@@ -43,13 +43,8 @@ let C = new Set([i.pK.ARS, i.pK.CLP, i.pK.COP]),
 	d = (e, n, a, t) => {
 		if (null == e) return '';
 		let o = (0, r.q9)(e);
-		if (n === i.pK.EUR)
-			return a
-				? _.Z.Messages.LOCALIZED_PRICING_NOTICE_GENERALIZED_PAYMENT_METHODS_PROMO.format({ country: o })
-				: _.Z.Messages.LOCALIZED_PRICING_NOTICE_NO_LOWERED_PRICE.format({ currencyISOCode: n.toUpperCase() });
-		return t
-			? _.Z.Messages.NOTICE_NITRO_PRICE_CHANGED.format({ countryName: o })
-			: _.Z.Messages.LOCALIZED_PRICING_NOTICE.format({ country: o });
+		if (n === i.pK.EUR) return a ? _.Z.Messages.LOCALIZED_PRICING_NOTICE_GENERALIZED_PAYMENT_METHODS_PROMO.format({ country: o }) : _.Z.Messages.LOCALIZED_PRICING_NOTICE_NO_LOWERED_PRICE.format({ currencyISOCode: n.toUpperCase() });
+		return t ? _.Z.Messages.NOTICE_NITRO_PRICE_CHANGED.format({ countryName: o }) : _.Z.Messages.LOCALIZED_PRICING_NOTICE.format({ country: o });
 	},
 	c = (e) => {
 		let { localizedPricingPromo: n, subscription: a, forceSingleLine: t = !1, userLocale: d } = e,
@@ -101,9 +96,7 @@ let C = new Set([i.pK.ARS, i.pK.CLP, i.pK.COP]),
 			let e = E.filter((e) => y.includes(e)),
 				n = [...e, ...y.filter((e) => !E.includes(e))].slice(0, 2).map((e) => {
 					var n, a;
-					return null !== (a = null === (n = u[e]) || void 0 === n ? void 0 : n.call(u)) && void 0 !== a
-						? a
-						: _.Z.Messages.PAYMENT_SOURCE_UNKNOWN;
+					return null !== (a = null === (n = u[e]) || void 0 === n ? void 0 : n.call(u)) && void 0 !== a ? a : _.Z.Messages.PAYMENT_SOURCE_UNKNOWN;
 				});
 			y.length >= 3 && n.push(_.Z.Messages.LOCALIZED_PRICING_MORE_NEW_WAYS_TO_PAY);
 			let a = new Intl.ListFormat(d, {
@@ -118,9 +111,7 @@ let C = new Set([i.pK.ARS, i.pK.CLP, i.pK.COP]),
 		return {
 			localizedPricingBannerHeader: _.Z.Messages.LOCALIZED_PRICING_BANNER_HEADER.format({ country: (0, r.q9)(c) }),
 			localizedPricingBannerBody: g,
-			localizedPricingBannerLinkOnly: _.Z.Messages.LOCALIZED_PRICING_BANNER_LINK_ONLY.format({
-				helpCenterLink: o.Z.getArticleURL(l.BhN.LOCALIZED_PRICING)
-			}),
+			localizedPricingBannerLinkOnly: _.Z.Messages.LOCALIZED_PRICING_BANNER_LINK_ONLY.format({ helpCenterLink: o.Z.getArticleURL(l.BhN.LOCALIZED_PRICING) }),
 			localizedPricingBannerSubNotif: R ? void 0 : _.Z.Messages.LOCALIZED_PRICING_BANNER_SUB_NOTIF
 		};
 	},

@@ -37,16 +37,7 @@ class M extends a.PureComponent {
 		_.Z.setSection(p.oAB.INVENTORY);
 	}
 	render() {
-		let {
-			syncing: e,
-			hide: s,
-			paymentSources: t,
-			defaultPaymentSourceId: a,
-			locale: i,
-			premiumSubscription: r,
-			isRemovingPaymentSource: o,
-			isUpdatingPaymentSource: c
-		} = this.props;
+		let { syncing: e, hide: s, paymentSources: t, defaultPaymentSourceId: a, locale: i, premiumSubscription: r, isRemovingPaymentSource: o, isUpdatingPaymentSource: c } = this.props;
 		return s
 			? (0, n.jsx)(E.Z, {})
 			: (0, n.jsxs)('div', {
@@ -62,8 +53,7 @@ class M extends a.PureComponent {
 									children: (0, n.jsx)(I.Z, {
 										paymentSources: t,
 										defaultPaymentSourceId: a,
-										premiumSubscriptionPaymentSourceId:
-											null != r && r.status !== p.O0b.CANCELED ? r.paymentSourceId : null,
+										premiumSubscriptionPaymentSourceId: null != r && r.status !== p.O0b.CANCELED ? r.paymentSourceId : null,
 										locale: i,
 										removing: o,
 										submitting: c

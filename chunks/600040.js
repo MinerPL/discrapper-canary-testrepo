@@ -20,10 +20,7 @@ var r,
 									OfferToReceiveAudio: e.offerToReceiveAudio || !1,
 									OfferToReceiveVideo: e.offerToReceiveVideo || !1
 								},
-								optional: [
-									{ VoiceActivityDetection: e.voiceActivityDetection || !1 },
-									{ IceRestart: e.iceRestart || !1 }
-								]
+								optional: [{ VoiceActivityDetection: e.voiceActivityDetection || !1 }, { IceRestart: e.iceRestart || !1 }]
 							}),
 						new Promise((n, r) => t.apply(i, [n, r, e]))
 					);

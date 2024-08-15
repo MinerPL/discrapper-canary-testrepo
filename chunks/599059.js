@@ -29,11 +29,7 @@ class u extends a.Component {
 			var n;
 			null === (n = this.inputRef.current) || void 0 === n || n.focus();
 		}
-		null !== this.props.value &&
-			this.props.value !== e.value &&
-			this.props.value !== this.state.value &&
-			d(this.props.value, this.props, this.state) &&
-			this.setState({ value: this.props.value });
+		null !== this.props.value && this.props.value !== e.value && this.props.value !== this.state.value && d(this.props.value, this.props, this.state) && this.setState({ value: this.props.value });
 	}
 	render() {
 		let e;

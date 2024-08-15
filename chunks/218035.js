@@ -91,10 +91,7 @@ function o(e) {
 			[r.ZP],
 			() => {
 				let t = L.bL.NULL;
-				return (
-					null != e.parent_id && (t = r.ZP.getChannelMessageNotifications(n, e.parent_id)),
-					t !== L.bL.NULL ? t : r.ZP.getMessageNotifications(n)
-				);
+				return null != e.parent_id && (t = r.ZP.getChannelMessageNotifications(n, e.parent_id)), t !== L.bL.NULL ? t : r.ZP.getMessageNotifications(n);
 			},
 			[n, e.parent_id]
 		),
@@ -134,9 +131,7 @@ function o(e) {
 												let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
 												switch (e) {
 													case L.bL.ALL_MESSAGES:
-														return n.type === L.d4z.GUILD_VOICE && t
-															? S.Z.Messages.FORM_LABEL_ALL_VOICE_ACTIVITY
-															: S.Z.Messages.FORM_LABEL_ALL_MESSAGES;
+														return n.type === L.d4z.GUILD_VOICE && t ? S.Z.Messages.FORM_LABEL_ALL_VOICE_ACTIVITY : S.Z.Messages.FORM_LABEL_ALL_MESSAGES;
 													case L.bL.ONLY_MENTIONS:
 														return S.Z.Messages.FORM_LABEL_ONLY_MENTIONS.format();
 													case L.bL.NO_MESSAGES:
@@ -149,13 +144,7 @@ function o(e) {
 										: void 0,
 								action: () => {
 									var e;
-									return (
-										(e = d),
-										void (
-											null != n &&
-											_.Z.updateChannelOverrideSettings(n, t, { message_notifications: e }, l.UE.notifications(e))
-										)
-									);
+									return (e = d), void (null != n && _.Z.updateChannelOverrideSettings(n, t, { message_notifications: e }, l.UE.notifications(e)));
 								},
 								checked: d === N
 							},

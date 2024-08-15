@@ -29,33 +29,18 @@ class r {
 		null === (t = this.native) || void 0 === t || t.drop(), (this.native = null);
 	}
 	requireFrame(t) {
-		if (null != this.native)
-			!this.renderedFrames.has(t) && (this.paint(t), this.renderedFrames.add(t)),
-				this.renderedFrames.size === this.frameCount && this.drop();
+		if (null != this.native) !this.renderedFrames.has(t) && (this.paint(t), this.renderedFrames.add(t)), this.renderedFrames.size === this.frameCount && this.drop();
 	}
 	paint(t) {
 		if (null != this.native) {
 			var e;
-			let i = new ImageData(
-					this.native.get_bgra(t, this.frameWidth, this.frameHeight),
-					this.frameWidth,
-					this.frameHeight
-				),
+			let i = new ImageData(this.native.get_bgra(t, this.frameWidth, this.frameHeight), this.frameWidth, this.frameHeight),
 				[n, r, s, h] = a(t, this.frameWidth, this.frameHeight, this.cells);
 			null === (e = this.context) || void 0 === e || e.putImageData(i, n, r, 0, 0, s, h);
 		}
 	}
 	constructor(t, e, i, r) {
-		n(this, 'key', void 0),
-			n(this, 'canvas', void 0),
-			n(this, 'context', void 0),
-			n(this, 'cells', void 0),
-			n(this, 'native', void 0),
-			n(this, 'renderedFrames', void 0),
-			n(this, 'frameWidth', void 0),
-			n(this, 'frameHeight', void 0),
-			n(this, 'frameRate', void 0),
-			n(this, 'frameCount', void 0);
+		n(this, 'key', void 0), n(this, 'canvas', void 0), n(this, 'context', void 0), n(this, 'cells', void 0), n(this, 'native', void 0), n(this, 'renderedFrames', void 0), n(this, 'frameWidth', void 0), n(this, 'frameHeight', void 0), n(this, 'frameRate', void 0), n(this, 'frameCount', void 0);
 		let [a, s, h] = (function (t, e, i) {
 			let n = Math.ceil(Math.sqrt(i));
 			return [n, n * t, n * e];

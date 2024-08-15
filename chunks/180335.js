@@ -6,7 +6,7 @@ n.d(t, {
 		return g;
 	},
 	RL: function () {
-		return m;
+		return I;
 	},
 	Ym: function () {
 		return p;
@@ -15,7 +15,7 @@ n.d(t, {
 		return h;
 	},
 	pB: function () {
-		return I;
+		return m;
 	},
 	vu: function () {
 		return T;
@@ -36,13 +36,7 @@ var r = n(423875),
 function f(e) {
 	if ((0, l.dU)(e)) {
 		var t, n;
-		return (
-			(null === (n = e.extra.entries[0]) || void 0 === n
-				? void 0
-				: null === (t = n.media) || void 0 === t
-					? void 0
-					: t.provider) === r.p.SPOTIFY
-		);
+		return (null === (n = e.extra.entries[0]) || void 0 === n ? void 0 : null === (t = n.media) || void 0 === t ? void 0 : t.provider) === r.p.SPOTIFY;
 	}
 	return !!(0, l.KF)(e) && e.extra.media.provider === r.p.SPOTIFY;
 }
@@ -51,30 +45,21 @@ function h(e) {
 }
 function p(e, t) {
 	let n = e.extra;
-	return (
-		null != n &&
-		(('application_id' in t && t.application_id === n.application_id) || ('game_name' in n && t.name === n.game_name))
-	);
+	return null != n && (('application_id' in t && t.application_id === n.application_id) || ('game_name' in n && t.name === n.game_name));
 }
-function I(e, t) {
+function m(e, t) {
 	if (f(e)) {
 		var n;
 		return (0, _.Ps)(null === (n = t.party) || void 0 === n ? void 0 : n.id);
 	}
 	return !1;
 }
-function m(e, t) {
+function I(e, t) {
 	return !!((0, a.Z)(t) && h(e)) && e.extra.media_title === t.details;
 }
 function T(e, t) {
 	let n = e.filter(u.kr);
-	return t.type === d.IIU.PLAYING
-		? n.filter(l.dX).find((e) => p(e, t))
-		: t.type === d.IIU.LISTENING
-			? n.filter(l.dU).find((e) => I(e, t))
-			: t.type === d.IIU.WATCHING
-				? e.filter(l.y0).find((e) => m(e, t))
-				: void 0;
+	return t.type === d.IIU.PLAYING ? n.filter(l.dX).find((e) => p(e, t)) : t.type === d.IIU.LISTENING ? n.filter(l.dU).find((e) => m(e, t)) : t.type === d.IIU.WATCHING ? e.filter(l.y0).find((e) => I(e, t)) : void 0;
 }
 function g(e) {
 	let { activity: t, user: n } = e,

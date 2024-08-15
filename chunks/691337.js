@@ -27,13 +27,7 @@ class d extends i.PureComponent {
 			(t = this),
 			(n = 'renderBreadcrumb'),
 			(i = (e, t) => {
-				let {
-						activeId: n,
-						onBreadcrumbClick: i,
-						breadcrumbs: a,
-						renderCustomBreadcrumb: l,
-						separatorClassName: d
-					} = this.props,
+				let { activeId: n, onBreadcrumbClick: i, breadcrumbs: a, renderCustomBreadcrumb: l, separatorClassName: d } = this.props,
 					_ = e.id === n,
 					E = t === a.length - 1,
 					f =

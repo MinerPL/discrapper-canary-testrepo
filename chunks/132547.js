@@ -70,9 +70,7 @@ t.Z = () => {
 							(0, s.jsx)('div', { className: m.footerSpacing }),
 							(0, s.jsx)(l.$, {
 								onChange: (e) => {
-									e &&
-										!S &&
-										(u.default.track(A.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: r }), h(!0));
+									e && !S && (u.default.track(A.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: r }), h(!0));
 								},
 								children: (0, s.jsx)('div', { className: m.bottomOfPageVisibilitySensor })
 							}),

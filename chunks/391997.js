@@ -16,22 +16,7 @@ var r = n(608748),
 		childList: !0,
 		subtree: !0
 	},
-	l = [
-		'resize',
-		'load',
-		'transitionend',
-		'animationend',
-		'animationstart',
-		'animationiteration',
-		'keyup',
-		'keydown',
-		'mouseup',
-		'mousedown',
-		'mouseover',
-		'mouseout',
-		'blur',
-		'focus'
-	],
+	l = ['resize', 'load', 'transitionend', 'animationend', 'animationstart', 'animationiteration', 'keyup', 'keydown', 'mouseup', 'mousedown', 'mouseover', 'mouseout', 'blur', 'focus'],
 	u = function (e) {
 		return void 0 === e && (e = 0), Date.now() + e;
 	},

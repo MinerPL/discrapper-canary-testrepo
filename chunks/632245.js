@@ -3,23 +3,12 @@ var t = '[0-9](_*[0-9])*',
 	r = '[0-9a-fA-F](_*[0-9a-fA-F])*',
 	i = {
 		className: 'number',
-		variants: [
-			{ begin: `(\\b(${t})((${n})|\\.)?|(${n}))[eE][+-]?(${t})[fFdD]?\\b` },
-			{ begin: `\\b(${t})((${n})[fFdD]?\\b|\\.([fFdD]\\b)?)` },
-			{ begin: `(${n})[fFdD]?\\b` },
-			{ begin: `\\b(${t})[fFdD]\\b` },
-			{ begin: `\\b0[xX]((${r})\\.?|(${r})?\\.(${r}))[pP][+-]?(${t})[fFdD]?\\b` },
-			{ begin: '\\b(0|[1-9](_*[0-9])*)[lL]?\\b' },
-			{ begin: `\\b0[xX](${r})[lL]?\\b` },
-			{ begin: '\\b0(_*[0-7])*[lL]?\\b' },
-			{ begin: '\\b0[bB][01](_*[01])*[lL]?\\b' }
-		],
+		variants: [{ begin: `(\\b(${t})((${n})|\\.)?|(${n}))[eE][+-]?(${t})[fFdD]?\\b` }, { begin: `\\b(${t})((${n})[fFdD]?\\b|\\.([fFdD]\\b)?)` }, { begin: `(${n})[fFdD]?\\b` }, { begin: `\\b(${t})[fFdD]\\b` }, { begin: `\\b0[xX]((${r})\\.?|(${r})?\\.(${r}))[pP][+-]?(${t})[fFdD]?\\b` }, { begin: '\\b(0|[1-9](_*[0-9])*)[lL]?\\b' }, { begin: `\\b0[xX](${r})[lL]?\\b` }, { begin: '\\b0(_*[0-7])*[lL]?\\b' }, { begin: '\\b0[bB][01](_*[01])*[lL]?\\b' }],
 		relevance: 0
 	};
 e.exports = function (e) {
 	let t = {
-			keyword:
-				'abstract as val var vararg get set class object open private protected public noinline crossinline dynamic final enum if else do while for when throw try catch finally import package is in fun override companion reified inline lateinit init interface annotation data sealed internal infix operator out by constructor super tailrec where const inner suspend typealias external expect actual',
+			keyword: 'abstract as val var vararg get set class object open private protected public noinline crossinline dynamic final enum if else do while for when throw try catch finally import package is in fun override companion reified inline lateinit init interface annotation data sealed internal infix operator out by constructor super tailrec where const inner suspend typealias external expect actual',
 			built_in: 'Byte Short Char Int Long Boolean Float Double Void Unit Nothing',
 			literal: 'true false null'
 		},
@@ -62,8 +51,7 @@ e.exports = function (e) {
 	r.contains.push(s);
 	let o = {
 			className: 'meta',
-			begin:
-				'@(?:file|property|field|get|set|receiver|param|setparam|delegate)\\s*:(?:\\s*' + e.UNDERSCORE_IDENT_RE + ')?'
+			begin: '@(?:file|property|field|get|set|receiver|param|setparam|delegate)\\s*:(?:\\s*' + e.UNDERSCORE_IDENT_RE + ')?'
 		},
 		l = {
 			className: 'meta',

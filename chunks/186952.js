@@ -130,8 +130,7 @@ class w {
 			}),
 			o(this, 'handleMessage', (i) => {
 				var t, e;
-				i.data.type === r.u.FIRST_DRAW && (null === (t = this.onInitialDraw) || void 0 === t || t.call(this)),
-					i.data.type === r.u.ERROR && (null === (e = this.onError) || void 0 === e || e.call(this));
+				i.data.type === r.u.FIRST_DRAW && (null === (t = this.onInitialDraw) || void 0 === t || t.call(this)), i.data.type === r.u.ERROR && (null === (e = this.onError) || void 0 === e || e.call(this));
 			}),
 			o(this, 'handleError', (i) => {
 				var t;
@@ -147,8 +146,7 @@ class w {
 			h
 				? (this.initializationPromise = I().then(() => {
 						var s, n, o;
-						null === (s = this.worker) || void 0 === s || s.addEventListener('message', this.handleMessage),
-							null === (n = this.worker) || void 0 === n || n.addEventListener('error', this.handleError);
+						null === (s = this.worker) || void 0 === s || s.addEventListener('message', this.handleMessage), null === (n = this.worker) || void 0 === n || n.addEventListener('error', this.handleError);
 						let l = i.transferControlToOffscreen();
 						null === (o = this.worker) ||
 							void 0 === o ||

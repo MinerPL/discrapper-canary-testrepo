@@ -23,31 +23,7 @@ function c(e, t, n) {
 		});
 	return (0, i.forwardRef)(function (n, _) {
 		var E;
-		let {
-				onScroll: f,
-				dir: h = 'ltr',
-				sections: p,
-				columns: I,
-				getItemKey: m,
-				getItemHeight: T,
-				getSectionHeight: g,
-				chunkSize: S,
-				renderSection: A,
-				renderItem: N,
-				getSectionProps: v,
-				itemGutter: O,
-				removeEdgeItemGutters: R,
-				sectionGutter: C,
-				padding: y,
-				paddingVertical: D,
-				paddingHorizontal: L,
-				fade: b = !1,
-				className: M,
-				style: P,
-				maxContentWidth: U,
-				renderAccessory: w,
-				...x
-			} = n,
+		let { onScroll: f, dir: h = 'ltr', sections: p, columns: m, getItemKey: I, getItemHeight: T, getSectionHeight: g, chunkSize: S, renderSection: A, renderItem: N, getSectionProps: v, itemGutter: O, removeEdgeItemGutters: R, sectionGutter: C, padding: y, paddingVertical: D, paddingHorizontal: L, fade: b = !1, className: M, style: P, maxContentWidth: U, renderAccessory: w, ...x } = n,
 			G = i.useRef(null),
 			k = i.useRef(null),
 			[B, F] = i.useState(!1),
@@ -69,8 +45,8 @@ function c(e, t, n) {
 				masonryComputer: Q
 			} = (0, l.QB)({
 				sections: p,
-				columns: I,
-				getItemKey: m,
+				columns: m,
+				getItemKey: I,
 				getItemHeight: T,
 				getSectionHeight: g,
 				chunkSize: S,

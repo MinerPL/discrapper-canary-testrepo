@@ -22,60 +22,10 @@ let C = {
 	512412940897484800: 'http://jameslantz.net/smilebot'
 };
 ((s = t || (t = {})).NORMAL = 'NORMAL'), (s.CLAN = 'CLAN');
-let o = () => [
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_001_HOOK,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_002_HOOK,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_003_HOOK,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_004_HOOK,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_005_HOOK,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_006_HOOK,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_007_HOOK,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_008_HOOK,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_009_HOOK,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_010_HOOK,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_011_HOOK,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_012_HOOK,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_013_HOOK
-	],
-	c = () => [
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_001,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_002,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_003,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_004,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_005,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_006,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_007,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_008,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_009,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_010,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_011,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_012,
-		R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_013
-	],
-	g = () => [
-		R.Z.Messages.CLAN_WELCOME_MESSAGE_0_HOOK,
-		R.Z.Messages.CLAN_WELCOME_MESSAGE_1_HOOK,
-		R.Z.Messages.CLAN_WELCOME_MESSAGE_2_HOOK,
-		R.Z.Messages.CLAN_WELCOME_MESSAGE_3_HOOK,
-		R.Z.Messages.CLAN_WELCOME_MESSAGE_4_HOOK,
-		R.Z.Messages.CLAN_WELCOME_MESSAGE_5_HOOK,
-		R.Z.Messages.CLAN_WELCOME_MESSAGE_6_HOOK,
-		R.Z.Messages.CLAN_WELCOME_MESSAGE_7_HOOK,
-		R.Z.Messages.CLAN_WELCOME_MESSAGE_8_HOOK,
-		R.Z.Messages.CLAN_WELCOME_MESSAGE_9_HOOK
-	],
-	d = () => [
-		R.Z.Messages.CLAN_WELCOME_MESSAGE_0,
-		R.Z.Messages.CLAN_WELCOME_MESSAGE_1,
-		R.Z.Messages.CLAN_WELCOME_MESSAGE_2,
-		R.Z.Messages.CLAN_WELCOME_MESSAGE_3,
-		R.Z.Messages.CLAN_WELCOME_MESSAGE_4,
-		R.Z.Messages.CLAN_WELCOME_MESSAGE_5,
-		R.Z.Messages.CLAN_WELCOME_MESSAGE_6,
-		R.Z.Messages.CLAN_WELCOME_MESSAGE_7,
-		R.Z.Messages.CLAN_WELCOME_MESSAGE_8,
-		R.Z.Messages.CLAN_WELCOME_MESSAGE_9
-	],
+let o = () => [R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_001_HOOK, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_002_HOOK, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_003_HOOK, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_004_HOOK, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_005_HOOK, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_006_HOOK, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_007_HOOK, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_008_HOOK, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_009_HOOK, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_010_HOOK, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_011_HOOK, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_012_HOOK, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_013_HOOK],
+	c = () => [R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_001, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_002, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_003, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_004, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_005, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_006, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_007, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_008, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_009, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_010, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_011, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_012, R.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_013],
+	g = () => [R.Z.Messages.CLAN_WELCOME_MESSAGE_0_HOOK, R.Z.Messages.CLAN_WELCOME_MESSAGE_1_HOOK, R.Z.Messages.CLAN_WELCOME_MESSAGE_2_HOOK, R.Z.Messages.CLAN_WELCOME_MESSAGE_3_HOOK, R.Z.Messages.CLAN_WELCOME_MESSAGE_4_HOOK, R.Z.Messages.CLAN_WELCOME_MESSAGE_5_HOOK, R.Z.Messages.CLAN_WELCOME_MESSAGE_6_HOOK, R.Z.Messages.CLAN_WELCOME_MESSAGE_7_HOOK, R.Z.Messages.CLAN_WELCOME_MESSAGE_8_HOOK, R.Z.Messages.CLAN_WELCOME_MESSAGE_9_HOOK],
+	d = () => [R.Z.Messages.CLAN_WELCOME_MESSAGE_0, R.Z.Messages.CLAN_WELCOME_MESSAGE_1, R.Z.Messages.CLAN_WELCOME_MESSAGE_2, R.Z.Messages.CLAN_WELCOME_MESSAGE_3, R.Z.Messages.CLAN_WELCOME_MESSAGE_4, R.Z.Messages.CLAN_WELCOME_MESSAGE_5, R.Z.Messages.CLAN_WELCOME_MESSAGE_6, R.Z.Messages.CLAN_WELCOME_MESSAGE_7, R.Z.Messages.CLAN_WELCOME_MESSAGE_8, R.Z.Messages.CLAN_WELCOME_MESSAGE_9],
 	Z = (e) => {
 		switch (e) {
 			case 'NORMAL':
@@ -170,10 +120,7 @@ E.Z = {
 				return;
 			case G.uaV.CHANNEL_NAME_CHANGE:
 				return (0, n.Rp)(
-					(E.isForumPost()
-						? R.Z.Messages.SYSTEM_MESSAGE_FORUM_POST_TITLE_CHANGE
-						: R.Z.Messages.SYSTEM_MESSAGE_CHANNEL_NAME_CHANGE
-					).astFormat({
+					(E.isForumPost() ? R.Z.Messages.SYSTEM_MESSAGE_FORUM_POST_TITLE_CHANGE : R.Z.Messages.SYSTEM_MESSAGE_CHANNEL_NAME_CHANGE).astFormat({
 						username: g,
 						usernameOnClick: G.dG4,
 						channelName: e.content
@@ -224,15 +171,7 @@ E.Z = {
 					})
 				);
 			case G.uaV.PURCHASE_NOTIFICATION:
-				if (
-					e instanceof A.ZP ||
-					(null === (t = e.purchase_notification) || void 0 === t
-						? void 0
-						: null === (s = t.guild_product_purchase) || void 0 === s
-							? void 0
-							: s.product_name) == null
-				)
-					return null;
+				if (e instanceof A.ZP || (null === (t = e.purchase_notification) || void 0 === t ? void 0 : null === (s = t.guild_product_purchase) || void 0 === s ? void 0 : s.product_name) == null) return null;
 				return (0, n.Rp)(
 					(0, a.i)({
 						username: g,
@@ -277,9 +216,7 @@ E.Z = {
 						let E = i.Z.getChannel(e);
 						if (null == E) return null;
 						let _ = l.Z.getGuild(E.getGuildId());
-						return null == _
-							? null
-							: (0, n.Rp)(R.Z.Messages.GUILD_SERVER_RAID_ALERT_NOTIFICATION.astFormat({ guildName: _.name }));
+						return null == _ ? null : (0, n.Rp)(R.Z.Messages.GUILD_SERVER_RAID_ALERT_NOTIFICATION.astFormat({ guildName: _.name }));
 					})(c);
 				return e.content;
 			case G.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED:
@@ -328,9 +265,7 @@ E.Z = {
 	},
 	getSystemMessageUserJoinMobile: D,
 	getSystemMessageBotJoin: function (e) {
-		return null == C[e]
-			? null
-			: R.Z.Messages.SYSTEM_MESSAGE_GUILD_BOT_JOIN.format({ learnOnClick: { onClick: () => window.open(C[e]) } });
+		return null == C[e] ? null : R.Z.Messages.SYSTEM_MESSAGE_GUILD_BOT_JOIN.format({ learnOnClick: { onClick: () => window.open(C[e]) } });
 	},
 	getWelcomeMessageKind: p
 };

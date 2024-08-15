@@ -87,10 +87,7 @@ function R(e, n, r, O) {
 		},
 		Y = j ? u.Text : M.Z,
 		z = (0, h.LB)(),
-		w =
-			null !== (m = null === (S = z.find((e) => e.value === G)) || void 0 === S ? void 0 : S.label) && void 0 !== m
-				? m
-				: x.Z.Messages.SOUNDPACK_DEFAULT_LABEL,
+		w = null !== (m = null === (S = z.find((e) => e.value === G)) || void 0 === S ? void 0 : S.label) && void 0 !== m ? m : x.Z.Messages.SOUNDPACK_DEFAULT_LABEL,
 		B = (0, i.jsx)(u.TextBadge, {
 			className: g.newBadge,
 			text: x.Z.Messages.NEW

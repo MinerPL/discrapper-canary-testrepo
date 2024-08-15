@@ -18,10 +18,7 @@ var r,
 function _(e) {
 	return null != e && ['started', 'ready'].includes(e);
 }
-((r = o || (o = {})).STARTED = 'started'),
-	(r.READY = 'ready'),
-	(r.COMPLETED = 'completed'),
-	(r.NOT_APPLICABLE = 'not_applicable');
+((r = o || (o = {})).STARTED = 'started'), (r.READY = 'ready'), (r.COMPLETED = 'completed'), (r.NOT_APPLICABLE = 'not_applicable');
 let E = {},
 	f = {};
 class h extends (l = u.ZP.Store) {

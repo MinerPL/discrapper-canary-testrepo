@@ -1,6 +1,6 @@
 n.d(t, {
 	Z: function () {
-		return C;
+		return g;
 	}
 }),
 	n(653041);
@@ -19,9 +19,9 @@ var i = n(735250),
 	_ = n(918559),
 	f = n(981631),
 	E = n(689938),
-	g = n(225029);
-function C(e) {
-	let { channelId: t, className: n, ...C } = e,
+	C = n(225029);
+function g(e) {
+	let { channelId: t, className: n, ...g } = e,
 		I = a.useRef(null),
 		x = (0, l.e7)([p.ZP], () => p.ZP.getFocusedLayout() === _.MI.RESIZABLE),
 		T = a.useCallback(() => {
@@ -54,13 +54,12 @@ function C(e) {
 	});
 	let Z = x ? E.Z.Messages.HIDE_CHAT : E.Z.Messages.SHOW_CHAT,
 		A = [Z];
-	v > 0 && A.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: v })),
-		N > 0 && A.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
+	v > 0 && A.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: v })), N > 0 && A.push(E.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
 	let M = (0, l.e7)([p.ZP], () => p.ZP.getFocusedLayout()),
 		b = v > 0 ? v : N,
 		R = b > 0;
 	return (0, i.jsxs)('div', {
-		className: g.wrapper,
+		className: C.wrapper,
 		children: [
 			(0, i.jsx)(c.d, {
 				buttonRef: I,
@@ -71,13 +70,13 @@ function C(e) {
 				iconComponent: M === _.MI.NO_CHAT ? r.ChevronLargeUpIcon : r.ChevronLargeDownIcon,
 				themeable: !0,
 				className: n,
-				...C
+				...g
 			}),
 			R
 				? (0, i.jsx)(o.Z, {
 						hasMentions: v > 0,
 						truncatedCount: b > 99 ? '99+' : b,
-						className: g.badge
+						className: C.badge
 					})
 				: null
 		]

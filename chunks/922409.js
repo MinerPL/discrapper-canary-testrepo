@@ -12,9 +12,6 @@ function l() {
 		n = null == t ? void 0 : t.channelId;
 	return {
 		channelId: n,
-		hasSingleMessageRequest:
-			(null == t ? void 0 : t.details) != null &&
-			t.details.type === a.Ff.MESSAGE_REQUEST &&
-			t.details.hasSingleMessageRequest
+		hasSingleMessageRequest: (null == t ? void 0 : t.details) != null && t.details.type === a.Ff.MESSAGE_REQUEST && t.details.hasSingleMessageRequest
 	};
 }

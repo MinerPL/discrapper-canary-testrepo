@@ -51,12 +51,7 @@ function h(e) {
 			[o.ZP, c.Z],
 			() => {
 				let t = c.Z.getChannel(e.parent_id);
-				return null != t && n.includes(t.id)
-					? ['parent', (0, _.p1)((0, _.gs)(o.ZP.resolveUnreadSetting(t), o.ZP.resolvedMessageNotifications(t)))]
-					: [
-							'guild',
-							(0, _.p1)((0, _.gs)(o.ZP.getGuildUnreadSetting(e.guild_id), o.ZP.getMessageNotifications(e.guild_id)))
-						];
+				return null != t && n.includes(t.id) ? ['parent', (0, _.p1)((0, _.gs)(o.ZP.resolveUnreadSetting(t), o.ZP.resolvedMessageNotifications(t)))] : ['guild', (0, _.p1)((0, _.gs)(o.ZP.getGuildUnreadSetting(e.guild_id), o.ZP.getMessageNotifications(e.guild_id)))];
 			},
 			[e.guild_id, e.parent_id, n]
 		);
@@ -112,12 +107,7 @@ function E(e, n) {
 }
 function b(e, n, t) {
 	let i = o.ZP.getChannelIdFlags(e, n);
-	a.Z.updateChannelOverrideSettings(
-		e,
-		n,
-		{ flags: (0, d.pq)(i, t === u.i.ALL_MESSAGES ? g.ic.UNREADS_ALL_MESSAGES : g.ic.UNREADS_ONLY_MENTIONS) },
-		s.UE.unreads(t)
-	);
+	a.Z.updateChannelOverrideSettings(e, n, { flags: (0, d.pq)(i, t === u.i.ALL_MESSAGES ? g.ic.UNREADS_ALL_MESSAGES : g.ic.UNREADS_ONLY_MENTIONS) }, s.UE.unreads(t));
 }
 function L(e, n, t) {
 	a.Z.updateChannelOverrideSettings(e, n, { message_notifications: t }, s.UE.notifications(t));

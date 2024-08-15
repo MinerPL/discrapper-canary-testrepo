@@ -41,9 +41,7 @@ function c(e) {
 							id: C,
 							variant: 'text-sm/normal',
 							color: 'text-normal',
-							children: r
-								? i.Z.Messages.GUILD_PRODUCT_UNPUBLISH_DESCRIPTION
-								: i.Z.Messages.GUILD_PRODUCT_PUBLISH_DESCRIPTION
+							children: r ? i.Z.Messages.GUILD_PRODUCT_UNPUBLISH_DESCRIPTION : i.Z.Messages.GUILD_PRODUCT_PUBLISH_DESCRIPTION
 						})
 					]
 				}),
@@ -65,9 +63,7 @@ function c(e) {
 							onClick: A ? void 0 : u,
 							submitting: c,
 							children: [
-								r
-									? i.Z.Messages.GUILD_PRODUCT_EDIT_MODAL_UNPUBLISH_BUTTON
-									: i.Z.Messages.GUILD_PRODUCT_EDIT_MODAL_PUBLISH_BUTTON,
+								r ? i.Z.Messages.GUILD_PRODUCT_EDIT_MODAL_UNPUBLISH_BUTTON : i.Z.Messages.GUILD_PRODUCT_EDIT_MODAL_PUBLISH_BUTTON,
 								r
 									? (0, a.jsx)(o.EyeSlashIcon, {
 											size: 'md',

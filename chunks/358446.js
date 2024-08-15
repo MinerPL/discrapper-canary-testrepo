@@ -30,9 +30,7 @@ function _() {
 }
 function g(e) {
 	let { markAsDismissed: t } = e,
-		{ trackView: n, trackClick: s } = (0, r.R)(u.n0.KeybindIndicatorsNotification, {
-			notif_type: u.n0.KeybindIndicatorsNotification
-		});
+		{ trackView: n, trackClick: s } = (0, r.R)(u.n0.KeybindIndicatorsNotification, { notif_type: u.n0.KeybindIndicatorsNotification });
 	return {
 		icon: null,
 		body: (0, i.jsxs)('div', {

@@ -11,10 +11,7 @@ var r = n(120356),
 	_ = n(689938),
 	I = n(799095),
 	E = n(88401);
-((s = a || (a = {})).TIER_NAME = 'tier_name'),
-	(s.SUBSCRIBERS = 'subscribers'),
-	(s.AMOUNT = 'amount'),
-	(s.PRICE = 'price');
+((s = a || (a = {})).TIER_NAME = 'tier_name'), (s.SUBSCRIBERS = 'subscribers'), (s.AMOUNT = 'amount'), (s.PRICE = 'price');
 let T = [
 	{
 		key: 'tier_name',

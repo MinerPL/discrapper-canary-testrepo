@@ -25,9 +25,9 @@ var r = n(470079),
 			f = e.onSwatchHover,
 			h = e.disableAlpha,
 			p = e.presetColors,
-			I = e.renderers,
-			m = e.styles,
-			T = void 0 === m ? {} : m,
+			m = e.renderers,
+			I = e.styles,
+			T = void 0 === I ? {} : I,
 			g = e.className,
 			S = (0, s.default)(
 				(0, o.Z)(
@@ -144,17 +144,12 @@ var r = n(470079),
 							style: S.Alpha,
 							rgb: n,
 							hsl: _,
-							renderers: I,
+							renderers: m,
 							onChange: E
 						})
 					)
 				),
-				r.createElement(
-					'div',
-					{ style: S.color },
-					r.createElement(l.QN, null),
-					r.createElement('div', { style: S.activeColor })
-				)
+				r.createElement('div', { style: S.color }, r.createElement(l.QN, null), r.createElement('div', { style: S.activeColor }))
 			),
 			r.createElement(u.Z, {
 				rgb: n,
@@ -179,22 +174,6 @@ var r = n(470079),
 		disableAlpha: !1,
 		width: 200,
 		styles: {},
-		presetColors: [
-			'#D0021B',
-			'#F5A623',
-			'#F8E71C',
-			'#8B572A',
-			'#7ED321',
-			'#417505',
-			'#BD10E0',
-			'#9013FE',
-			'#4A90E2',
-			'#50E3C2',
-			'#B8E986',
-			'#000000',
-			'#4A4A4A',
-			'#9B9B9B',
-			'#FFFFFF'
-		]
+		presetColors: ['#D0021B', '#F5A623', '#F8E71C', '#8B572A', '#7ED321', '#417505', '#BD10E0', '#9013FE', '#4A90E2', '#50E3C2', '#B8E986', '#000000', '#4A4A4A', '#9B9B9B', '#FFFFFF']
 	}),
 	(0, l.t1)(_);

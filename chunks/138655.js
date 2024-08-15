@@ -33,29 +33,29 @@ let f = Object.freeze({
 function h(e) {
 	let { theme: t, primaryColor: n, secondaryColor: i } = e,
 		[h, p] = (0, o.Wu)([u.Z], () => [u.Z.desaturateUserColors, u.Z.syncProfileThemeWithUserTheme]),
-		I = (0, E.fq)(t),
-		m = (0, E.wu)(t, n, p),
+		m = (0, E.fq)(t),
+		I = (0, E.wu)(t, n, p),
 		T = (0, E.lM)(t, n),
 		g = (0, E.e4)(t, i),
-		S = p ? (null == I ? void 0 : I.overlaySyncedWithUserTheme) : null == I ? void 0 : I.overlay;
+		S = p ? (null == m ? void 0 : m.overlaySyncedWithUserTheme) : null == m ? void 0 : m.overlay;
 	return {
 		profileThemeStyle: (0, r.useMemo)(() => {
-			if (null == n || null == i || null == I || null == m || null == T || null == g || null == S) return f;
+			if (null == n || null == i || null == m || null == I || null == T || null == g || null == S) return f;
 			let e = (e, t) => (0, s.ho)(e, h, null, t);
 			return {
 				'--profile-gradient-primary-color': e(n),
 				'--profile-gradient-secondary-color': e(i),
 				'--profile-gradient-overlay-color': S,
 				'--profile-gradient-button-color': e((0, E.ZB)(n)),
-				'--profile-avatar-border-color': e(m),
-				'--profile-body-background-color': I.sectionBox,
-				'--profile-body-background-hover': I.profileBodyBackgroundHover,
-				'--profile-body-divider-color': e(T, I.dividerOpacity),
+				'--profile-avatar-border-color': e(I),
+				'--profile-body-background-color': m.sectionBox,
+				'--profile-body-background-hover': m.profileBodyBackgroundHover,
+				'--profile-body-divider-color': e(T, m.dividerOpacity),
 				'--profile-body-border-color': e(T, 0.12),
 				'--profile-message-input-border-color': e(g),
-				'--profile-note-background-color': I.noteBackgroundColor,
-				'--profile-role-pill-background-color': I.rolePillBackgroundColor,
-				'--profile-role-pill-border-color': I.rolePillBorderColor,
+				'--profile-note-background-color': m.noteBackgroundColor,
+				'--profile-role-pill-background-color': m.rolePillBackgroundColor,
+				'--profile-role-pill-border-color': m.rolePillBorderColor,
 				...(0, c.W4)({
 					enabled: !0,
 					primaryColor: n,
@@ -64,7 +64,7 @@ function h(e) {
 					textMixAmount: 25
 				})
 			};
-		}, [n, i, I, m, T, g, S, t, h]),
+		}, [n, i, m, I, T, g, S, t, h]),
 		profileThemeClassName: a()((0, _.Q)(t), {
 			[d.e3]: null != n,
 			'custom-profile-theme': null != n

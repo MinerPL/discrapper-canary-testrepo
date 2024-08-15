@@ -23,17 +23,11 @@ var l = n(442837),
 function C() {
 	var e;
 	let t = (0, o.Dt)(),
-		[n, C] = (0, l.Wu)([d.Z, c.Z], () => [
-			c.Z.getChannel(d.Z.getVoiceChannelId()),
-			d.Z.getCurrentlySelectedChannelId(null)
-		]),
+		[n, C] = (0, l.Wu)([d.Z, c.Z], () => [c.Z.getChannel(d.Z.getVoiceChannelId()), d.Z.getCurrentlySelectedChannelId(null)]),
 		I = (0, l.e7)([u.ZP], () => (null != n ? u.ZP.getMentionCount(n.id) : 0)),
 		E = (0, l.e7)([h.default], () => h.default.getUser(null == n ? void 0 : n.ownerId)),
 		N = null !== (e = _.ZP.getGlobalName(E)) && void 0 !== e ? e : _.ZP.getUserTag(E),
-		{ canViewBroadcasts: x } = s.Z.useExperiment(
-			{ location: 'broadcast_button_guilds_bar_no_track' },
-			{ autoTrackExposure: !1 }
-		),
+		{ canViewBroadcasts: x } = s.Z.useExperiment({ location: 'broadcast_button_guilds_bar_no_track' }, { autoTrackExposure: !1 }),
 		S = null == n ? void 0 : n.isBroadcastChannel(),
 		v = S && C === (null == n ? void 0 : n.id);
 	return S && x

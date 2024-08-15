@@ -24,10 +24,7 @@ function g(e) {
 		C = 'AnnouncementModalVariant1_'.concat(a.z[Number(g.dismissKey)]),
 		{ onClose: N } = p,
 		A = null != g.button && '' !== g.button.copy ? g.button.copy : h.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN,
-		v =
-			(null === (t = g.button) || void 0 === t ? void 0 : t.buttonAction) === s.Wc.OPEN_MARKETING_PAGE
-				? 'jump_to_mkt_button'
-				: 'get_nitro_button',
+		v = (null === (t = g.button) || void 0 === t ? void 0 : t.buttonAction) === s.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
 		Z =
 			(null === (n = g.button) || void 0 === n ? void 0 : n.buttonAction) === s.Wc.OPEN_MARKETING_PAGE
 				? () => {

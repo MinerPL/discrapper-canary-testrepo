@@ -54,33 +54,15 @@ function B(e) {
 			[x.ZP, O.default],
 			() => {
 				var e;
-				return x.ZP.isMember(
-					null == G ? void 0 : G.guildId,
-					null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.id
-				);
+				return x.ZP.isMember(null == G ? void 0 : G.guildId, null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
 			},
 			[G]
 		),
-		X = (0, d.e7)([x.ZP], () =>
-			(null == G ? void 0 : G.authorId) != null ? x.ZP.getMember(G.guildId, G.authorId) : null
-		),
-		J = (0, T.Z)(
-			(null == X ? void 0 : X.avatarDecoration) != null
-				? null == X
-					? void 0
-					: X.avatarDecoration
-				: null == G
-					? void 0
-					: null === (t = G.user) || void 0 === t
-						? void 0
-						: t.avatarDecoration
-		),
+		X = (0, d.e7)([x.ZP], () => ((null == G ? void 0 : G.authorId) != null ? x.ZP.getMember(G.guildId, G.authorId) : null)),
+		J = (0, T.Z)((null == X ? void 0 : X.avatarDecoration) != null ? (null == X ? void 0 : X.avatarDecoration) : null == G ? void 0 : null === (t = G.user) || void 0 === t ? void 0 : t.avatarDecoration),
 		[$, ee] = a.useMemo(() => {
 			var e;
-			return [
-				null !== (e = null == X ? void 0 : X.colorString) && void 0 !== e ? e : 'inherit',
-				null == X ? void 0 : X.colorRoleId
-			];
+			return [null !== (e = null == X ? void 0 : X.colorString) && void 0 !== e ? e : 'inherit', null == X ? void 0 : X.colorRoleId];
 		}, [X]),
 		{ reducedMotion: et } = a.useContext(_.AccessibilityPreferencesContext),
 		[en, ei] = a.useState(!1),
@@ -98,11 +80,7 @@ function B(e) {
 					can_access: G.canAccess,
 					is_member: q
 				}),
-				G.canAccess
-					? (0, f.Z)(b.Z5c.CHANNEL(G.guildId, G.threadId, G.messageId))
-					: q
-						? (0, f.Z)(b.Z5c.CHANNEL(G.guildId, G.parentChannelId))
-						: await v.Ub(G.guildId, {}, { channelId: G.parentChannelId }));
+				G.canAccess ? (0, f.Z)(b.Z5c.CHANNEL(G.guildId, G.threadId, G.messageId)) : q ? (0, f.Z)(b.Z5c.CHANNEL(G.guildId, G.parentChannelId)) : await v.Ub(G.guildId, {}, { channelId: G.parentChannelId }));
 		}, [G, k, q]),
 		el = a.useCallback(
 			() => (

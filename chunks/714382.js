@@ -1,11 +1,5 @@
 function r(e) {
-	return (
-		'Minified Redux error #' +
-		e +
-		'; visit https://redux.js.org/Errors?code=' +
-		e +
-		' for the full message or use the non-minified dev environment for full errors. '
-	);
+	return 'Minified Redux error #' + e + '; visit https://redux.js.org/Errors?code=' + e + ' for the full message or use the non-minified dev environment for full errors. ';
 }
 n.d(t, {
 	MT: function () {
@@ -25,11 +19,7 @@ var i = ('function' == typeof Symbol && Symbol.observable) || '@@observable',
 		}
 	};
 function o(e, t, n) {
-	if (
-		('function' == typeof t && 'function' == typeof n) ||
-		('function' == typeof n && 'function' == typeof arguments[3])
-	)
-		throw Error(r(0));
+	if (('function' == typeof t && 'function' == typeof n) || ('function' == typeof n && 'function' == typeof arguments[3])) throw Error(r(0));
 	if (('function' == typeof t && void 0 === n && ((n = t), (t = void 0)), void 0 !== n)) {
 		if ('function' != typeof n) throw Error(r(1));
 		return n(o)(e, t);

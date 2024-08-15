@@ -39,9 +39,7 @@ function A(e) {
 				m();
 		} catch (e) {
 			var n, o;
-			(null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.email) && S(e.body.email),
-				(null == e ? void 0 : null === (o = e.body) || void 0 === o ? void 0 : o.password) && M(e.body.password),
-				O(!1);
+			(null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.email) && S(e.body.email), (null == e ? void 0 : null === (o = e.body) || void 0 === o ? void 0 : o.password) && M(e.body.password), O(!1);
 		}
 	};
 	return (0, o.jsxs)('div', {

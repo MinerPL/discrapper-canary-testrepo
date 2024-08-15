@@ -55,16 +55,12 @@ function x(e) {
 								className: h.heading,
 								variant: 'heading-lg/semibold',
 								color: 'text-danger',
-								children: (0, d.kk)(a)
-									? E.Z.Messages.MEMBER_SAFETY_DM_RAID_ALERT_HEADER
-									: E.Z.Messages.MEMBER_SAFETY_JOIN_RAID_ALERT_HEADER
+								children: (0, d.kk)(a) ? E.Z.Messages.MEMBER_SAFETY_DM_RAID_ALERT_HEADER : E.Z.Messages.MEMBER_SAFETY_JOIN_RAID_ALERT_HEADER
 							}),
 							(0, o.jsx)(r.Text, {
 								className: h.tagLine,
 								variant: 'text-sm/medium',
-								children: E.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_ACTION_DESCRIPTION.format({
-									dateTime: new Date(null != s ? s : '').toLocaleString(E.Z.getLocale(), d.pQ)
-								})
+								children: E.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_ACTION_DESCRIPTION.format({ dateTime: new Date(null != s ? s : '').toLocaleString(E.Z.getLocale(), d.pQ) })
 							})
 						]
 					})
@@ -287,7 +283,4 @@ function L(e) {
 			return null;
 	}
 }
-((n = a || (a = {}))[(n.DEFAULT = 0)] = 'DEFAULT'),
-	(n[(n.RAID_DETECTED = 1)] = 'RAID_DETECTED'),
-	(n[(n.LOCKDOWN_ENABLED = 2)] = 'LOCKDOWN_ENABLED'),
-	(n[(n.RAID_DETECTED_LOCKDOWN_ENABLED = 3)] = 'RAID_DETECTED_LOCKDOWN_ENABLED');
+((n = a || (a = {}))[(n.DEFAULT = 0)] = 'DEFAULT'), (n[(n.RAID_DETECTED = 1)] = 'RAID_DETECTED'), (n[(n.LOCKDOWN_ENABLED = 2)] = 'LOCKDOWN_ENABLED'), (n[(n.RAID_DETECTED_LOCKDOWN_ENABLED = 3)] = 'RAID_DETECTED_LOCKDOWN_ENABLED');

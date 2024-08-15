@@ -38,21 +38,7 @@ function u(e) {
 	});
 }
 async function c(e) {
-	let {
-		authorize: t,
-		clientId: n,
-		scopes: r,
-		responseType: a,
-		redirectUri: u,
-		codeChallenge: c,
-		codeChallengeMethod: d,
-		state: _,
-		permissions: E,
-		guildId: f,
-		channelId: h,
-		integrationType: p,
-		nonce: I
-	} = e;
+	let { authorize: t, clientId: n, scopes: r, responseType: a, redirectUri: u, codeChallenge: c, codeChallengeMethod: d, state: _, permissions: E, guildId: f, channelId: h, integrationType: p, nonce: m } = e;
 	return (
 		await i.tn.post({
 			url: l.ANM.OAUTH2_AUTHORIZE,
@@ -64,7 +50,7 @@ async function c(e) {
 				code_challenge_method: d,
 				scope: r.join(' '),
 				state: _,
-				nonce: I
+				nonce: m
 			},
 			body: {
 				guild_id: f,
@@ -89,17 +75,7 @@ async function c(e) {
 	).body;
 }
 async function d(e) {
-	let {
-		clientId: t,
-		scopes: n,
-		responseType: r,
-		redirectUri: a,
-		codeChallenge: s,
-		codeChallengeMethod: o,
-		state: u,
-		integrationType: c,
-		nonce: d
-	} = e;
+	let { clientId: t, scopes: n, responseType: r, redirectUri: a, codeChallenge: s, codeChallengeMethod: o, state: u, integrationType: c, nonce: d } = e;
 	return (
 		await i.tn.get({
 			url: l.ANM.OAUTH2_AUTHORIZE,

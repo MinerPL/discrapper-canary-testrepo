@@ -21,8 +21,7 @@ function o(t) {
 	) {
 		var o = e[n].split('/');
 		if (0 === o.length) throw Error('Invalid number skeleton');
-		for (var a = o[0], s = o.slice(1), u = 0; u < s.length; u++)
-			if (0 === s[u].length) throw Error('Invalid number skeleton');
+		for (var a = o[0], s = o.slice(1), u = 0; u < s.length; u++) if (0 === s[u].length) throw Error('Invalid number skeleton');
 		r.push({
 			stem: a,
 			options: s
@@ -37,21 +36,9 @@ var a = /^\.(?:(0+)(\*)?|(#+)|(0+)(#+))$/g,
 function l(t) {
 	var e = {};
 	return (
-		'r' === t[t.length - 1]
-			? (e.roundingPriority = 'morePrecision')
-			: 's' === t[t.length - 1] && (e.roundingPriority = 'lessPrecision'),
+		'r' === t[t.length - 1] ? (e.roundingPriority = 'morePrecision') : 's' === t[t.length - 1] && (e.roundingPriority = 'lessPrecision'),
 		t.replace(s, function (t, r, n) {
-			return (
-				'string' != typeof n
-					? ((e.minimumSignificantDigits = r.length), (e.maximumSignificantDigits = r.length))
-					: '+' === n
-						? (e.minimumSignificantDigits = r.length)
-						: '#' === r[0]
-							? (e.maximumSignificantDigits = r.length)
-							: ((e.minimumSignificantDigits = r.length),
-								(e.maximumSignificantDigits = r.length + ('string' == typeof n ? n.length : 0))),
-				''
-			);
+			return 'string' != typeof n ? ((e.minimumSignificantDigits = r.length), (e.maximumSignificantDigits = r.length)) : '+' === n ? (e.minimumSignificantDigits = r.length) : '#' === r[0] ? (e.maximumSignificantDigits = r.length) : ((e.minimumSignificantDigits = r.length), (e.maximumSignificantDigits = r.length + ('string' == typeof n ? n.length : 0))), '';
 		}),
 		e
 	);
@@ -196,21 +183,10 @@ function p(t) {
 		if (a.test(i.stem)) {
 			if (i.options.length > 1) throw RangeError('Fraction-precision stems only accept a single optional option');
 			i.stem.replace(a, function (t, r, n, i, o, a) {
-				return (
-					'*' === n
-						? (e.minimumFractionDigits = r.length)
-						: i && '#' === i[0]
-							? (e.maximumFractionDigits = i.length)
-							: o && a
-								? ((e.minimumFractionDigits = o.length), (e.maximumFractionDigits = o.length + a.length))
-								: ((e.minimumFractionDigits = r.length), (e.maximumFractionDigits = r.length)),
-					''
-				);
+				return '*' === n ? (e.minimumFractionDigits = r.length) : i && '#' === i[0] ? (e.maximumFractionDigits = i.length) : o && a ? ((e.minimumFractionDigits = o.length), (e.maximumFractionDigits = o.length + a.length)) : ((e.minimumFractionDigits = r.length), (e.maximumFractionDigits = r.length)), '';
 			});
 			var o = i.options[0];
-			'w' === o
-				? (e = (0, n.pi)((0, n.pi)({}, e), { trailingZeroDisplay: 'stripIfInteger' }))
-				: o && (e = (0, n.pi)((0, n.pi)({}, e), l(o)));
+			'w' === o ? (e = (0, n.pi)((0, n.pi)({}, e), { trailingZeroDisplay: 'stripIfInteger' })) : o && (e = (0, n.pi)((0, n.pi)({}, e), l(o)));
 			continue;
 		}
 		if (s.test(i.stem)) {
@@ -219,27 +195,16 @@ function p(t) {
 		}
 		var p = h(i.stem);
 		p && (e = (0, n.pi)((0, n.pi)({}, e), p));
-		var m = (function (t) {
+		var d = (function (t) {
 			var e;
-			if (
-				('E' === t[0] && 'E' === t[1]
-					? ((e = { notation: 'engineering' }), (t = t.slice(2)))
-					: 'E' === t[0] && ((e = { notation: 'scientific' }), (t = t.slice(1))),
-				e)
-			) {
+			if (('E' === t[0] && 'E' === t[1] ? ((e = { notation: 'engineering' }), (t = t.slice(2))) : 'E' === t[0] && ((e = { notation: 'scientific' }), (t = t.slice(1))), e)) {
 				var r = t.slice(0, 2);
-				if (
-					('+!' === r
-						? ((e.signDisplay = 'always'), (t = t.slice(2)))
-						: '+?' === r && ((e.signDisplay = 'exceptZero'), (t = t.slice(2))),
-					!c.test(t))
-				)
-					throw Error('Malformed concise eng/scientific notation');
+				if (('+!' === r ? ((e.signDisplay = 'always'), (t = t.slice(2))) : '+?' === r && ((e.signDisplay = 'exceptZero'), (t = t.slice(2))), !c.test(t))) throw Error('Malformed concise eng/scientific notation');
 				e.minimumIntegerDigits = t.length;
 			}
 			return e;
 		})(i.stem);
-		m && (e = (0, n.pi)((0, n.pi)({}, e), m));
+		d && (e = (0, n.pi)((0, n.pi)({}, e), d));
 	}
 	return e;
 }

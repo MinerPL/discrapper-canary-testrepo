@@ -50,20 +50,9 @@ function S(e) {
 }
 function A(e) {
 	var n;
-	let {
-			guild: t,
-			applicationIntegration: r,
-			selectableWebhookChannels: d,
-			editedWebhook: A,
-			errors: R,
-			canNavigate: b
-		} = e,
+	let { guild: t, applicationIntegration: r, selectableWebhookChannels: d, editedWebhook: A, errors: R, canNavigate: b } = e,
 		{ application: Z, integration: v, webhooks: M } = r,
-		[L, j] = (0, s.Wu)(
-			[_.Z],
-			() => [_.Z.can(C.Plq.MANAGE_ROLES, t), null == Z.bot || _.Z.canManageUser(C.Plq.MANAGE_GUILD, Z.bot.id, t)],
-			[Z.bot, t]
-		),
+		[L, j] = (0, s.Wu)([_.Z], () => [_.Z.can(C.Plq.MANAGE_ROLES, t), null == Z.bot || _.Z.canManageUser(C.Plq.MANAGE_GUILD, Z.bot.id, t)], [Z.bot, t]),
 		D = (0, s.e7)([_.Z], () => _.Z.can(C.Plq.MANAGE_WEBHOOKS, t), [t]),
 		P = a.useCallback(() => {
 			b() &&
@@ -195,9 +184,7 @@ function A(e) {
 								children: (0, i.jsx)(l.Text, {
 									color: 'text-muted',
 									variant: 'text-sm/normal',
-									children: D
-										? O.Z.Messages.INTEGRATIONS_APPLICATION_NO_WEBHOOKS
-										: O.Z.Messages.INTEGRATIONS_APPLICATION_APPLICATION_WEBHOOK_PERMISSIONS
+									children: D ? O.Z.Messages.INTEGRATIONS_APPLICATION_NO_WEBHOOKS : O.Z.Messages.INTEGRATIONS_APPLICATION_APPLICATION_WEBHOOK_PERMISSIONS
 								})
 							})
 				]
@@ -211,9 +198,7 @@ function A(e) {
 					(0, i.jsx)(l.Text, {
 						color: 'header-secondary',
 						variant: 'text-sm/normal',
-						children: j
-							? O.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_SUMMARY
-							: O.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_NO_PERMISSIONS
+						children: j ? O.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_SUMMARY : O.Z.Messages.INTEGRATIONS_APPLICATION_REMOVE_NO_PERMISSIONS
 					}),
 					(0, i.jsx)(o.Z.Child, {
 						grow: 0,

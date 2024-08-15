@@ -19,25 +19,6 @@ function o(e) {
 		_ = (0, r.Z)(o).filter((e) => e.roles.includes(d)).length;
 	return i.useMemo(() => {
 		let e = [];
-		return (
-			!0 === t && e.push(l.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_VISUAL_FLAIR),
-			0 !== c &&
-				e.push(
-					l.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_EXCLUSIVE_CHANNELS_SUBTITLE.format({
-						channelCount: c
-					})
-				),
-			0 !== u &&
-				e.push(
-					l.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_BENEFITS_SUBTITLE.format({
-						benefitCount: u
-					})
-				),
-			0 !== _ &&
-				e.push(
-					l.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_EMOJI_SUBTITLE.format({ emojiCount: _ })
-				),
-			new a.Z(e)
-		);
+		return !0 === t && e.push(l.Z.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_VISUAL_FLAIR), 0 !== c && e.push(l.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_EXCLUSIVE_CHANNELS_SUBTITLE.format({ channelCount: c })), 0 !== u && e.push(l.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_BENEFITS_SUBTITLE.format({ benefitCount: u })), 0 !== _ && e.push(l.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_EMOJI_SUBTITLE.format({ emojiCount: _ })), new a.Z(e);
 	}, [c, u, _, t]);
 }

@@ -21,15 +21,7 @@ var a = s(735250),
 	E = s(486527),
 	I = s(625263);
 function L(e) {
-	let {
-			directoryChannelId: t,
-			transitionState: s,
-			initialSlide: L = E.VX.CHOOSE_GUILD,
-			onClose: f,
-			directoryGuildName: T,
-			directoryGuildId: h,
-			currentCategoryId: g
-		} = e,
+	let { directoryChannelId: t, transitionState: s, initialSlide: L = E.VX.CHOOSE_GUILD, onClose: f, directoryGuildName: T, directoryGuildId: h, currentCategoryId: g } = e,
 		[N, B] = n.useState(L),
 		[M, Z] = n.useState(null),
 		[p, b] = n.useState(null),

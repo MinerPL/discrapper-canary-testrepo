@@ -31,13 +31,5 @@ let a = 'SAFETY_WARNING_BANNER_WEB',
 	l = 'https://discord.findahelpline.com/',
 	o = 'InappropriateConversationModal-web',
 	c = 'PRIVATE_DM_SAFETY_TOOLS_MODAL',
-	u = () => [
-		i.Z.Messages.STRANGER_DANGER_TIPS_1,
-		i.Z.Messages.STRANGER_DANGER_TIPS_2,
-		i.Z.Messages.STRANGER_DANGER_TIPS_3
-	],
-	d = () => [
-		i.Z.Messages.INAPPROPRIATE_CONVERSATION_TIPS_1,
-		i.Z.Messages.INAPPROPRIATE_CONVERSATION_TIPS_2,
-		i.Z.Messages.INAPPROPRIATE_CONVERSATION_TIPS_3
-	];
+	u = () => [i.Z.Messages.STRANGER_DANGER_TIPS_1, i.Z.Messages.STRANGER_DANGER_TIPS_2, i.Z.Messages.STRANGER_DANGER_TIPS_3],
+	d = () => [i.Z.Messages.INAPPROPRIATE_CONVERSATION_TIPS_1, i.Z.Messages.INAPPROPRIATE_CONVERSATION_TIPS_2, i.Z.Messages.INAPPROPRIATE_CONVERSATION_TIPS_3];

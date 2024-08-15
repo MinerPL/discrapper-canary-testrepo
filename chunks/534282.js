@@ -158,11 +158,7 @@ var m = function (t, e) {
 					n = e.direction,
 					i = e.tree,
 					o = !r.getChildKeys().isEmpty(),
-					a =
-						r !== t.block ||
-						i !== t.tree ||
-						n !== t.direction ||
-						(m(t.selection, t.block.getKey()) && t.forceSelection);
+					a = r !== t.block || i !== t.tree || n !== t.direction || (m(t.selection, t.block.getKey()) && t.forceSelection);
 				return o || a;
 			}),
 			(g.componentDidMount = function () {

@@ -54,17 +54,12 @@ let { Themes: l } = I.V,
 					let e = i.gradient[null == r ? void 0 : r.gradient.theme];
 					if (null != e) {
 						let t = a()(e.color in A ? A[e.color] : null == r ? void 0 : r.gradient.colors[e.color]);
-						'saturation' in e && (t = t.set('hsl.s', e.saturation)),
-							'lightness' in e && (t = t.set('hsl.l', e.lightness)),
-							(s = t.hex()),
-							(c = 'opacity' in e ? e.opacity : 1);
+						'saturation' in e && (t = t.set('hsl.s', e.saturation)), 'lightness' in e && (t = t.set('hsl.l', e.lightness)), (s = t.hex()), (c = 'opacity' in e ? e.opacity : 1);
 					}
 				}
 				let I = null !== (n = null == r ? void 0 : r.contrast) && void 0 !== n ? n : 1,
 					T = null !== (o = null == r ? void 0 : r.saturation) && void 0 !== o ? o : 1;
-				return (T < 1 && (s = (0, u.dO)(s, _, T)), 1 !== I && (s = (0, u.pq)(s, _, e, I)), 1 === c)
-					? s
-					: a()(s).alpha(c).hex();
+				return (T < 1 && (s = (0, u.dO)(s, _, T)), 1 !== I && (s = (0, u.pq)(s, _, e, I)), 1 === c) ? s : a()(s).alpha(c).hex();
 			},
 			adjustColorSaturation: (e, t, r) => (0, u.dO)(e, r, t),
 			adjustColorContrast: (e, t, r, n) => (0, u.pq)(e, r, n, t)

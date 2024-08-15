@@ -24,16 +24,7 @@ async function d(t, e, n) {
 		});
 		I = t.url;
 	} catch (t) {
-		throw (
-			(await _(
-				n,
-				null !== (r = null == t ? void 0 : null === (a = t.body) || void 0 === a ? void 0 : a.code) && void 0 !== r
-					? r
-					: 0,
-				'authorize'
-			),
-			Error('error during two way authorize'))
-		);
+		throw (await _(n, null !== (r = null == t ? void 0 : null === (a = t.body) || void 0 === a ? void 0 : a.code) && void 0 !== r ? r : 0, 'authorize'), Error('error during two way authorize'));
 	}
 	let C = null;
 	try {
@@ -49,16 +40,7 @@ async function d(t, e, n) {
 			state: C
 		});
 	} catch (t) {
-		throw (
-			(await _(
-				n,
-				null !== (d = null == t ? void 0 : null === (l = t.body) || void 0 === l ? void 0 : l.code) && void 0 !== d
-					? d
-					: 0,
-				'callback'
-			),
-			Error('error during two way callback'))
-		);
+		throw (await _(n, null !== (d = null == t ? void 0 : null === (l = t.body) || void 0 === l ? void 0 : l.code) && void 0 !== d ? d : 0, 'callback'), Error('error during two way callback'));
 	}
 }
 async function _(t, e, n) {

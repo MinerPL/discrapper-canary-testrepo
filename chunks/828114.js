@@ -50,10 +50,7 @@ t.exports = function (t, e, r, c, v, h, A) {
 		M = (!g && G) || w(v),
 		E = ('Array' === e && C.entries) || G;
 	if (
-		(E &&
-			(k = s(E.call(new t()))) !== Object.prototype &&
-			k.next &&
-			(!i && s(k) !== S && (f ? f(k, S) : !u(k[x]) && y(k, x, _)), p(k, R, !0, !0), i && (d[R] = _)),
+		(E && (k = s(E.call(new t()))) !== Object.prototype && k.next && (!i && s(k) !== S && (f ? f(k, S) : !u(k[x]) && y(k, x, _)), p(k, R, !0, !0), i && (d[R] = _)),
 		L &&
 			v === T &&
 			G &&

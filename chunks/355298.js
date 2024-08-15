@@ -24,12 +24,7 @@ function d(e) {
 }
 function _(e) {
 	let t = !1;
-	return (
-		d(e) && !o.has(e.id) && (o.add(e.id), (t = !0)),
-		!d(e) && o.has(e.id) && (o.delete(e.id), (t = !0)),
-		!d(e) && l.has(e.id) && (l.delete(e.id), (t = !0)),
-		t
-	);
+	return d(e) && !o.has(e.id) && (o.add(e.id), (t = !0)), !d(e) && o.has(e.id) && (o.delete(e.id), (t = !0)), !d(e) && l.has(e.id) && (l.delete(e.id), (t = !0)), t;
 }
 function E(e) {
 	var t;
@@ -52,11 +47,11 @@ function p(e) {
 	let { channel: t } = e;
 	return _(t);
 }
-function I(e) {
+function m(e) {
 	let { channels: t } = e;
 	for (let e of t) _(e);
 }
-function m(e) {
+function I(e) {
 	let { channel: t } = e;
 	return !!o.has(t.id) && (o.delete(t.id), !0);
 }
@@ -107,8 +102,8 @@ class S extends a.Z {
 			CACHE_LOADED_LAZY: () => this.loadCache(),
 			OVERLAY_INITIALIZE: T,
 			CHANNEL_CREATE: p,
-			CHANNEL_UPDATES: I,
-			CHANNEL_DELETE: m,
+			CHANNEL_UPDATES: m,
+			CHANNEL_DELETE: I,
 			SET_LOCATION_METADATA: g,
 			MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: h
 		});

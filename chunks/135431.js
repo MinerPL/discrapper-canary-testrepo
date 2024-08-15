@@ -14,21 +14,10 @@ var r = n(873546),
 	l = n(981631);
 function u(e) {
 	let { customInstallUrl: t, installParams: n, integrationTypesConfig: r } = e;
-	return (
-		null != t || null != n || (null != r && Object.values(r).some((e) => null != e && null != e.oauth2_install_params))
-	);
+	return null != t || null != n || (null != r && Object.values(r).some((e) => null != e && null != e.oauth2_install_params));
 }
 function c(e) {
-	let {
-		applicationId: t,
-		customInstallUrl: n,
-		installParams: u,
-		integrationTypesConfig: c,
-		guildId: d,
-		channelId: _,
-		disableGuildSelect: E,
-		source: f
-	} = e;
+	let { applicationId: t, customInstallUrl: n, installParams: u, integrationTypesConfig: c, guildId: d, channelId: _, disableGuildSelect: E, source: f } = e;
 	if (null != n) {
 		s.default.track(l.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
 			application_id: t,

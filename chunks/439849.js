@@ -41,22 +41,8 @@ async function f() {
 	}
 	if ((0, l.isWindows)()) {
 		let e = s.Z.process.env;
-		_(e.LOCALAPPDATA),
-			_(e['PROGRAMFILES(X86)']),
-			_(e.PROGRAMFILES),
-			_(e.PROGRAMW6432),
-			_(e.PROGRAMDATA),
-			_('/games/'),
-			_('/steamlibrary/steamapps/common/');
+		_(e.LOCALAPPDATA), _(e['PROGRAMFILES(X86)']), _(e.PROGRAMFILES), _(e.PROGRAMW6432), _(e.PROGRAMDATA), _('/games/'), _('/steamlibrary/steamapps/common/');
 	}
 	let e = s.Z.remoteApp.getPath;
-	return (
-		_(await e('home')),
-		_(await e('appData')),
-		_(await e('desktop')),
-		_(await e('documents')),
-		_(await e('downloads')),
-		(c = a().uniq(c)).sort((e, t) => t.length - e.length),
-		r
-	);
+	return _(await e('home')), _(await e('appData')), _(await e('desktop')), _(await e('documents')), _(await e('downloads')), (c = a().uniq(c)).sort((e, t) => t.length - e.length), r;
 }

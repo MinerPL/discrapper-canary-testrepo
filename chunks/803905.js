@@ -33,7 +33,7 @@ n.d(t, {
 		return M;
 	},
 	_G: function () {
-		return m;
+		return I;
 	},
 	_O: function () {
 		return A;
@@ -57,7 +57,7 @@ n.d(t, {
 		return B;
 	},
 	lX: function () {
-		return I;
+		return m;
 	},
 	m_: function () {
 		return E;
@@ -102,26 +102,13 @@ class d extends s.Z {
 					if (null == t || null == t.premiumType) return !1;
 					try {
 						let n = c[t.premiumType];
-						if (null == n)
-							return u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
+						if (null == n) return u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
 						let r = k[n];
-						if (null == r)
-							return (
-								u.warn(
-									"Cannot find the corresponding product catalog entry to the user's SKU "
-										.concat(n, ' and premium type ')
-										.concat(t.premiumType)
-								),
-								!1
-							);
+						if (null == r) return u.warn("Cannot find the corresponding product catalog entry to the user's SKU ".concat(n, ' and premium type ').concat(t.premiumType)), !1;
 						return r.skuFeatures.includes(e);
 					} catch (e) {
 						var n;
-						u.error(
-							"Error while retrieving user's feature access: ".concat(
-								null !== (n = e.message) && void 0 !== n ? n : JSON.stringify(e)
-							)
-						);
+						u.error("Error while retrieving user's feature access: ".concat(null !== (n = e.message) && void 0 !== n ? n : JSON.stringify(e)));
 					}
 					return !1;
 				})(this, e),
@@ -134,8 +121,8 @@ let _ = new d(r.q.ANIMATED_EMOJIS),
 	f = new d(r.q.STICKERS_EVERYWHERE),
 	h = new d(r.q.SOUNDBOARD_EVERYWHERE),
 	p = new d(r.q.CUSTOM_CALL_SOUNDS),
-	I = new d(r.q.ANIMATED_AVATAR),
-	m = new d(r.q.CUSTOM_DISCRIMINATOR),
+	m = new d(r.q.ANIMATED_AVATAR),
+	I = new d(r.q.CUSTOM_DISCRIMINATOR),
 	T = new d(r.q.PREMIUM_GUILD_MEMBER_PROFILE),
 	g = new d('profileBadges'),
 	S = new d(r.q.PROFILE_PREMIUM_FEATURES, 'custom banner and avatar decoration'),
@@ -158,8 +145,8 @@ let U = new d(r.q.INCREASED_GUILD_LIMIT),
 	G = new d('uploadLargeFiles'),
 	k = Object.freeze({
 		[l.Si.TIER_0]: new o.Z(l.Si.TIER_0, [_, E, f, g, P, x, G, N]),
-		[l.Si.TIER_1]: new o.Z(l.Si.TIER_1, [_, E, I, m, g, O, C, L, x, G, N]),
-		[l.Si.TIER_2]: new o.Z(l.Si.TIER_2, [_, E, f, h, p, I, m, T, g, S, v, O, R, C, y, L, b, M, P, U, w, x, G, N, A, D])
+		[l.Si.TIER_1]: new o.Z(l.Si.TIER_1, [_, E, m, I, g, O, C, L, x, G, N]),
+		[l.Si.TIER_2]: new o.Z(l.Si.TIER_2, [_, E, f, h, p, m, I, T, g, S, v, O, R, C, y, L, b, M, P, U, w, x, G, N, A, D])
 	});
 function B(e, t) {
 	return e.getFeatureValue(t);

@@ -78,9 +78,7 @@ function p(e) {
 				{ analyticsLocations: u } = (0, l.ZP)(r.Z.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE),
 				E = i.roleSubscriptionData,
 				I = a.useCallback(() => {
-					(0, d.uL)(m.Z5c.CHANNEL(s, T.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: u }),
-						(null == E ? void 0 : E.role_subscription_listing_id) != null &&
-							(0, _.y8)(s, n.id, i.id, E.role_subscription_listing_id);
+					(0, d.uL)(m.Z5c.CHANNEL(s, T.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: u }), (null == E ? void 0 : E.role_subscription_listing_id) != null && (0, _.y8)(s, n.id, i.id, E.role_subscription_listing_id);
 				}, [s, n, i, E, u]);
 			return null == E
 				? null
@@ -96,9 +94,7 @@ function p(e) {
 			message: h,
 			author: f
 		}),
-		g =
-			(null === (t = h.roleSubscriptionData) || void 0 === t ? void 0 : t.total_months_subscribed) != null &&
-			(null === (s = h.roleSubscriptionData) || void 0 === s ? void 0 : s.total_months_subscribed) <= 1;
+		g = (null === (t = h.roleSubscriptionData) || void 0 === t ? void 0 : t.total_months_subscribed) != null && (null === (s = h.roleSubscriptionData) || void 0 === s ? void 0 : s.total_months_subscribed) <= 1;
 	return null == p
 		? null
 		: (0, i.jsxs)(i.Fragment, {

@@ -72,9 +72,7 @@ function u(e) {
 				className: s.confirmationSubtitle,
 				variant: 'text-sm/normal',
 				color: 'header-secondary',
-				children: l.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_SUBTITLE.format({
-					timestamp: null == o ? void 0 : o.currentPeriodEnd
-				})
+				children: l.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_SUBTITLE.format({ timestamp: null == o ? void 0 : o.currentPeriodEnd })
 			}),
 			(0, r.jsxs)('div', {
 				className: s.buttonContainer,

@@ -42,8 +42,8 @@ let l = ['#be0351', '#ff2c52', '#f0f0f0'],
 	],
 	f = (e) => {
 		let { width: t = 24, height: n = 24, primaryTintColor: f, secondaryTintColor: h, ...p } = e,
-			I = i.useMemo(() => 'badge-force-gradient-'.concat((0, a.Z)()), []),
-			{ primaryColorsTransformed: m, secondaryColorsTransformed: T } = (0, o.s)({
+			m = i.useMemo(() => 'badge-force-gradient-'.concat((0, a.Z)()), []),
+			{ primaryColorsTransformed: I, secondaryColorsTransformed: T } = (0, o.s)({
 				primaryBaseColors: l,
 				primaryTintColor: f,
 				primaryTintLuminances: c,
@@ -71,7 +71,7 @@ let l = ['#be0351', '#ff2c52', '#f0f0f0'],
 				}),
 				(0, r.jsx)('path', {
 					d: 'M15 3h-4v1h4V3Z',
-					fill: m[2]
+					fill: I[2]
 				}),
 				(0, r.jsx)('path', {
 					d: 'M7 15H4v1h3v-1Z',
@@ -119,15 +119,15 @@ let l = ['#be0351', '#ff2c52', '#f0f0f0'],
 				}),
 				(0, r.jsx)('path', {
 					d: 'M10 13v-1H9v-2H8V6h1V4h1V3H7v1H6v3H5v4h1v2h1v1h4v-1h-1Z',
-					fill: 'url(#'.concat(I, ')')
+					fill: 'url(#'.concat(m, ')')
 				}),
 				(0, r.jsx)('path', {
 					d: 'M14 12v-1h-1V9h-1V7h1V5h1V4h-3v1h-1v1H9v4h1v2h1v1h4v-1h-1Z',
-					fill: m[1]
+					fill: I[1]
 				}),
 				(0, r.jsx)('path', {
 					d: 'M13 5h-1v2h1V5ZM14 4h-1v1h1V4ZM13 9h-1v1h1V9ZM12 12v-1h-2v1h1v1h4v-1h-3Z',
-					fill: m[0]
+					fill: I[0]
 				}),
 				(0, r.jsx)('path', {
 					d: 'M3 3H2v1h1V3ZM3 7H2v1h1V7ZM7 3H6v1h1V3Z',
@@ -135,7 +135,7 @@ let l = ['#be0351', '#ff2c52', '#f0f0f0'],
 				}),
 				(0, r.jsx)('path', {
 					d: 'M11 4h-1v1h1V4ZM10 6H9v1h1V6Z',
-					fill: m[2]
+					fill: I[2]
 				}),
 				(0, r.jsx)('path', {
 					d: 'M10 4H9v2h1V4ZM7 13H6v1h1v-1ZM6 11H5v2h1v-2ZM11 12h-1v1h1v-1ZM10 10H9v2h1v-2Z',
@@ -143,7 +143,7 @@ let l = ['#be0351', '#ff2c52', '#f0f0f0'],
 				}),
 				(0, r.jsx)('defs', {
 					children: (0, r.jsxs)('radialGradient', {
-						id: I,
+						id: m,
 						cx: '0.75',
 						cy: '0.5',
 						r: '1',
@@ -151,7 +151,7 @@ let l = ['#be0351', '#ff2c52', '#f0f0f0'],
 						fy: '0.5',
 						children: [
 							(0, r.jsx)('stop', {
-								stopColor: m[1],
+								stopColor: I[1],
 								offset: '30%'
 							}),
 							(0, r.jsx)('stop', {

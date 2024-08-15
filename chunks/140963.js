@@ -25,8 +25,8 @@ function p(e, t, n) {
 		e
 	);
 }
-let I = /(\t|\s)/;
-class m extends i.PureComponent {
+let m = /(\t|\s)/;
+class I extends i.PureComponent {
 	componentDidMount() {
 		!this.props.disableAutoFocus &&
 			(Promise.resolve().then(() => {
@@ -43,9 +43,7 @@ class m extends i.PureComponent {
 				});
 	}
 	componentDidUpdate(e, t) {
-		this.state.nextSelection !== t.nextSelection &&
-			null != this._ref &&
-			this._ref.setSelection(this.state.nextSelection, this.state.nextSelection);
+		this.state.nextSelection !== t.nextSelection && null != this._ref && this._ref.setSelection(this.state.nextSelection, this.state.nextSelection);
 	}
 	getCurrentWord() {
 		let e = this._ref;
@@ -62,7 +60,7 @@ class m extends i.PureComponent {
 			};
 		let n = e.selectionStart,
 			r = e.selectionEnd;
-		for (; n > 0 && !I.test(t[n - 1]); ) {
+		for (; n > 0 && !m.test(t[n - 1]); ) {
 			n--;
 		}
 		return {
@@ -115,21 +113,7 @@ class m extends i.PureComponent {
 		return null != t && t.length > 0 && t.length % 2 != 0;
 	}
 	render() {
-		let {
-			value: e,
-			disabled: t,
-			placeholder: n,
-			required: i,
-			onResize: a,
-			className: l,
-			id: u,
-			submitting: c,
-			textAreaPaddingClassName: _,
-			spellcheckEnabled: E,
-			'aria-controls': f,
-			'aria-expanded': p,
-			'aria-activedescendant': I
-		} = this.props;
+		let { value: e, disabled: t, placeholder: n, required: i, onResize: a, className: l, id: u, submitting: c, textAreaPaddingClassName: _, spellcheckEnabled: E, 'aria-controls': f, 'aria-expanded': p, 'aria-activedescendant': m } = this.props;
 		return (0, r.jsxs)(r.Fragment, {
 			children: [
 				(0, r.jsx)(d.d9, {
@@ -160,7 +144,7 @@ class m extends i.PureComponent {
 					spellCheck: E,
 					'aria-controls': f,
 					'aria-expanded': p,
-					'aria-activedescendant': I,
+					'aria-activedescendant': m,
 					'aria-haspopup': 'listbox',
 					'aria-autocomplete': 'list',
 					'aria-multiline': !0
@@ -169,15 +153,7 @@ class m extends i.PureComponent {
 		});
 	}
 	handleTabOrEnterDown(e) {
-		e.which === h.yXg.TAB && this.props.onTab()
-			? (e.preventDefault(), e.stopPropagation())
-			: e.which === h.yXg.ENTER && this.props.onEnter(e)
-				? (e.preventDefault(), e.stopPropagation())
-				: e.which === h.yXg.ESCAPE
-					? (e.preventDefault(), e.stopPropagation(), this.props.hideAutocomplete())
-					: e.which === h.yXg.TAB &&
-						this.hasOpenCodeBlock() &&
-						(e.preventDefault(), e.stopPropagation(), this.insertText('\t', void 0, !1));
+		e.which === h.yXg.TAB && this.props.onTab() ? (e.preventDefault(), e.stopPropagation()) : e.which === h.yXg.ENTER && this.props.onEnter(e) ? (e.preventDefault(), e.stopPropagation()) : e.which === h.yXg.ESCAPE ? (e.preventDefault(), e.stopPropagation(), this.props.hideAutocomplete()) : e.which === h.yXg.TAB && this.hasOpenCodeBlock() && (e.preventDefault(), e.stopPropagation(), this.insertText('\t', void 0, !1));
 	}
 	insertEmoji(e, t) {
 		this.insertText(''.concat(':').concat(e.name).concat(':'), void 0, t);
@@ -198,8 +174,7 @@ class m extends i.PureComponent {
 			}),
 			p(this, 'handleKeyPress', (e) => {
 				if (e.which === h.yXg.ENTER) {
-					if (!e.shiftKey && !this.hasOpenCodeBlock() && (!this.props.disableEnterToSubmit || e.ctrlKey))
-						return e.preventDefault(), this.props.onSubmit(this.props.value);
+					if (!e.shiftKey && !this.hasOpenCodeBlock() && (!this.props.disableEnterToSubmit || e.ctrlKey)) return e.preventDefault(), this.props.onSubmit(this.props.value);
 				}
 			}),
 			p(this, 'handleKeyDown', (e) => {
@@ -272,4 +247,4 @@ class m extends i.PureComponent {
 			});
 	}
 }
-t.Z = m;
+t.Z = I;

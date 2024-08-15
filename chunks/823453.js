@@ -13,8 +13,8 @@ var r = n(735250),
 	f = n(168551),
 	h = n(540059),
 	p = n(19759),
-	I = n(706454),
-	m = n(210887),
+	m = n(706454),
+	I = n(210887),
 	T = n(451478),
 	g = n(792125),
 	S = n(597952),
@@ -32,9 +32,9 @@ t.Z = i.memo(function (e) {
 	return (0, r.jsxs)(o.ql, {
 		children: [
 			(function (e) {
-				let { locale: t, theme: n } = (0, c.cj)([m.Z, I.default], () => ({
-						locale: I.default.locale,
-						theme: m.Z.theme
+				let { locale: t, theme: n } = (0, c.cj)([I.Z, m.default], () => ({
+						locale: m.default.locale,
+						theme: I.Z.theme
 					})),
 					a = (0, c.e7)([T.Z], () => T.Z.isFocused(), []),
 					{ reducedMotion: o, alwaysShowLinkDecorations: d } = i.useContext(_.AccessibilityPreferencesContext),
@@ -47,15 +47,7 @@ t.Z = i.memo(function (e) {
 						useForcedColors: D,
 						systemForcedColors: L
 					} = (0, c.cj)([E.Z], () => {
-						let {
-							fontScale: e,
-							fontScaleClass: t,
-							keyboardModeEnabled: n,
-							saturation: r,
-							desaturateUserColors: i,
-							useForcedColors: a,
-							systemForcedColors: s
-						} = E.Z;
+						let { fontScale: e, fontScaleClass: t, keyboardModeEnabled: n, saturation: r, desaturateUserColors: i, useForcedColors: a, systemForcedColors: s } = E.Z;
 						return {
 							fontScale: e,
 							fontScaleClass: t,
@@ -76,10 +68,7 @@ t.Z = i.memo(function (e) {
 					G = (0, h.Q)('AppHelmet');
 				return (0, r.jsx)('html', {
 					lang: t,
-					style: 'font-size: '
-						.concat(f, '%; --saturation-factor: ')
-						.concat(C, '; --devtools-sidebar-width: ')
-						.concat(U, 'px;'),
+					style: 'font-size: '.concat(f, '%; --saturation-factor: ').concat(C, '; --devtools-sidebar-width: ').concat(U, 'px;'),
 					className: s()(
 						e,
 						{

@@ -16,25 +16,20 @@ let u = new WeakMap();
 function c(e, t, n) {
 	let { value: o, children: l, 'aria-label': c, 'aria-labelledby': d } = e,
 		_ = e.isDisabled || t.isDisabled;
-	!(null != l) &&
-		!(null != c || null != d) &&
-		console.warn('If you do not provide children, you must specify an aria-label for accessibility');
+	!(null != l) && !(null != c || null != d) && console.warn('If you do not provide children, you must specify an aria-label for accessibility');
 	let E = t.selectedValue === o,
 		{ pressProps: f, isPressed: h } = (0, s.r7)({ isDisabled: _ }),
-		{ pressProps: p, isPressed: I } = (0, s.r7)({
+		{ pressProps: p, isPressed: m } = (0, s.r7)({
 			isDisabled: _,
 			onPress() {
 				t.setSelectedValue(o);
 			}
 		}),
-		{ focusableProps: m } = (0, i.kc)((0, r.dG)(e, { onFocus: () => t.setLastFocusedValue(o) }), n),
-		T = (0, r.dG)(f, m),
+		{ focusableProps: I } = (0, i.kc)((0, r.dG)(e, { onFocus: () => t.setLastFocusedValue(o) }), n),
+		T = (0, r.dG)(f, I),
 		g = (0, r.zL)(e, { labelable: !0 }),
 		S = -1;
-	null != t.selectedValue
-		? t.selectedValue === o && (S = 0)
-		: (t.lastFocusedValue === o || null == t.lastFocusedValue) && (S = 0),
-		_ && (S = void 0);
+	null != t.selectedValue ? t.selectedValue === o && (S = 0) : (t.lastFocusedValue === o || null == t.lastFocusedValue) && (S = 0), _ && (S = void 0);
 	let { name: A, descriptionId: N, errorMessageId: v, validationBehavior: O } = u.get(t);
 	return (
 		(0, r.y$)(n, t.selectedValue, t.setSelectedValue),
@@ -57,23 +52,16 @@ function c(e, t, n) {
 			}),
 			isDisabled: _,
 			isSelected: E,
-			isPressed: h || I
+			isPressed: h || m
 		}
 	);
 }
 function d(e, t) {
-	let {
-			name: n,
-			isReadOnly: a,
-			isRequired: c,
-			isDisabled: d,
-			orientation: _ = 'vertical',
-			validationBehavior: E = 'aria'
-		} = e,
+	let { name: n, isReadOnly: a, isRequired: c, isDisabled: d, orientation: _ = 'vertical', validationBehavior: E = 'aria' } = e,
 		{ direction: f } = (0, l.bU)(),
-		{ isInvalid: h, validationErrors: p, validationDetails: I } = t.displayValidation,
+		{ isInvalid: h, validationErrors: p, validationDetails: m } = t.displayValidation,
 		{
-			labelProps: m,
+			labelProps: I,
 			fieldProps: T,
 			descriptionProps: g,
 			errorMessageProps: S
@@ -123,10 +111,7 @@ function d(e, t) {
 					}
 					e.preventDefault();
 					let a = (0, i.QL)(e.currentTarget, { from: e.target });
-					'next' === n
-						? !(r = a.nextNode()) && ((a.currentNode = e.currentTarget), (r = a.firstChild()))
-						: !(r = a.previousNode()) && ((a.currentNode = e.currentTarget), (r = a.lastChild())),
-						r && (r.focus(), t.setSelectedValue(r.value));
+					'next' === n ? !(r = a.nextNode()) && ((a.currentNode = e.currentTarget), (r = a.firstChild())) : !(r = a.previousNode()) && ((a.currentNode = e.currentTarget), (r = a.lastChild())), r && (r.focus(), t.setSelectedValue(r.value));
 				},
 				'aria-invalid': t.isInvalid || void 0,
 				'aria-errormessage': e['aria-errormessage'],
@@ -137,12 +122,12 @@ function d(e, t) {
 				...T,
 				...N
 			}),
-			labelProps: m,
+			labelProps: I,
 			descriptionProps: g,
 			errorMessageProps: S,
 			isInvalid: h,
 			validationErrors: p,
-			validationDetails: I
+			validationDetails: m
 		}
 	);
 }

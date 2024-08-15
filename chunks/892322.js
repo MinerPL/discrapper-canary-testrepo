@@ -43,9 +43,7 @@ function m(e) {
 							className: u.__invalid_subtitle,
 							color: 'header-secondary',
 							variant: 'text-md/normal',
-							children: n
-								? d.Z.Messages.HUB_ADD_SERVER_CONFIRMATION_SUBTITLE.format({ guildName: t })
-								: d.Z.Messages.HUB_CREATE_SERVER_CONFIRMATION_SUBTITLE.format({ guildName: t })
+							children: n ? d.Z.Messages.HUB_ADD_SERVER_CONFIRMATION_SUBTITLE.format({ guildName: t }) : d.Z.Messages.HUB_CREATE_SERVER_CONFIRMATION_SUBTITLE.format({ guildName: t })
 						})
 					]
 				}),

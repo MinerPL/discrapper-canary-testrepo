@@ -11,17 +11,7 @@ var r = n(442837),
 	c = n(689938),
 	_ = n(830716);
 s.Z = function (e) {
-	let {
-			subscriptionTier: s,
-			initialPlanId: n,
-			giftStyle: p,
-			onClick: x,
-			buttonText: L,
-			analyticsLocation: h,
-			analyticsLocationsOverride: f,
-			repeatPurchase: I,
-			...E
-		} = e,
+	let { subscriptionTier: s, initialPlanId: n, giftStyle: p, onClick: x, buttonText: L, analyticsLocation: h, analyticsLocationsOverride: f, repeatPurchase: I, ...E } = e,
 		M = (0, r.e7)([C.default], () => C.default.getCurrentUser()),
 		N = (0, r.e7)([d.Z], () => d.Z.isFocused()),
 		{ analyticsLocations: j } = (0, l.ZP)();

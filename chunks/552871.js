@@ -44,28 +44,9 @@ async function d(e, t) {
 		});
 	} catch (e) {
 		if (429 === e.status) throw new a.n0(a.cz.PROGRESS);
-		throw (
-			(c.error('Debug log upload error: status: '.concat(e.status, ', message: ').concat(e.message)),
-			new a.n0(a.cz.UPLOAD))
-		);
+		throw (c.error('Debug log upload error: status: '.concat(e.status, ', message: ').concat(e.message)), new a.n0(a.cz.UPLOAD));
 	}
 	let d = r.length + 1;
-	if ('success_count' in n.body && n.body.success_count !== d)
-		throw (
-			(c.error('Debug log upload: stored files '.concat(n.body.success_count, ' !== ').concat(d)),
-			new a.n0(a.cz.GENERAL))
-		);
-	if (
-		('store_success' in n.body && !n.body.store_success) ||
-		('id_match' in n.body && !n.body.id_match) ||
-		('all_success' in n.body && !n.body.all_success)
-	)
-		throw (
-			(c.error(
-				'Debug log upload: store_success: '.concat(n.body.store_success, ' / ') +
-					'id_match: '.concat(n.body.id_match, ' / ') +
-					'all_success: '.concat(n.body.all_success)
-			),
-			new a.n0(a.cz.GENERAL))
-		);
+	if ('success_count' in n.body && n.body.success_count !== d) throw (c.error('Debug log upload: stored files '.concat(n.body.success_count, ' !== ').concat(d)), new a.n0(a.cz.GENERAL));
+	if (('store_success' in n.body && !n.body.store_success) || ('id_match' in n.body && !n.body.id_match) || ('all_success' in n.body && !n.body.all_success)) throw (c.error('Debug log upload: store_success: '.concat(n.body.store_success, ' / ') + 'id_match: '.concat(n.body.id_match, ' / ') + 'all_success: '.concat(n.body.all_success)), new a.n0(a.cz.GENERAL));
 }

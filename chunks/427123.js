@@ -35,9 +35,7 @@ function R() {
 			!f.Z.isFetching(t) && !f.Z.didFetchingSkuFail(t) && E.$N(i.id, t);
 			continue;
 		}
-		N.Z.applicationIdsFetching.has(i.id) ||
-		N.Z.isEntitledToSku(h.default.getCurrentUser(), t, i.id, i.id) ||
-		!a.available
+		N.Z.applicationIdsFetching.has(i.id) || N.Z.isEntitledToSku(h.default.getCurrentUser(), t, i.id, i.id) || !a.available
 			? null != g[t] && (delete g[t], (e = !0))
 			: ((g[t] = {
 					skuId: t,
@@ -85,10 +83,7 @@ class x extends (i = c.ZP.Store) {
 					for (let { skuId: n, applicationId: i } of C.Lg6) {
 						if (!(i !== t || A.includes(n)))
 							null == S[n] &&
-								(!N.Z.applicationIdsFetched.has(i) &&
-									!N.Z.applicationIdsFetching.has(i) &&
-									null == N.Z.getForSku(n) &&
-									_.yD(i),
+								(!N.Z.applicationIdsFetched.has(i) && !N.Z.applicationIdsFetching.has(i) && null == N.Z.getForSku(n) && _.yD(i),
 								(S[n] = {
 									skuId: n,
 									applicationId: i

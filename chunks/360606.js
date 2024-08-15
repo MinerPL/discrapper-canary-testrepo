@@ -48,9 +48,7 @@ function v(e) {
 	(p = null), (S = T.QZA.OPEN), (A = {}), (R = !1);
 }
 let M = c().debounce(() => {
-	R &&
-		(null != f ? c().isEqual(f, L(f.id)) && (R = !1) : null != C && c().isEqual(C, j(C.id)) && (R = !1),
-		!R && P.emitChange());
+	R && (null != f ? c().isEqual(f, L(f.id)) && (R = !1) : null != C && c().isEqual(C, j(C.id)) && (R = !1), !R && P.emitChange());
 }, 500);
 function L(e) {
 	return h.find((n) => {
@@ -171,26 +169,12 @@ let P = new D(
 				INTEGRATION_SETTINGS_UPDATE_INTEGRATION: function (e) {
 					let { settings: n } = e;
 					if (null == f) return !1;
-					(f = { ...f }),
-						null != n.enableEmoticons &&
-							f.enable_emoticons !== n.enableEmoticons &&
-							((f.enable_emoticons = n.enableEmoticons), (R = !0)),
-						null != n.expireBehavior &&
-							f.expire_behavior !== n.expireBehavior &&
-							((f.expire_behavior = n.expireBehavior), (R = !0)),
-						null != n.expireGracePeriod &&
-							f.expire_grace_period !== n.expireGracePeriod &&
-							((f.expire_grace_period = n.expireGracePeriod), (R = !0)),
-						R && M();
+					(f = { ...f }), null != n.enableEmoticons && f.enable_emoticons !== n.enableEmoticons && ((f.enable_emoticons = n.enableEmoticons), (R = !0)), null != n.expireBehavior && f.expire_behavior !== n.expireBehavior && ((f.expire_behavior = n.expireBehavior), (R = !0)), null != n.expireGracePeriod && f.expire_grace_period !== n.expireGracePeriod && ((f.expire_grace_period = n.expireGracePeriod), (R = !0)), R && M();
 				},
 				INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function (e) {
 					let { settings: n } = e;
 					if (null == C) return !1;
-					(C = { ...C }),
-						null != n.name && C.name !== n.name && ((C.name = n.name), (R = !0)),
-						void 0 !== n.avatar && C.avatar !== n.avatar && ((C.avatar = n.avatar), (R = !0)),
-						null != n.channelId && C.channel_id !== n.channelId && ((C.channel_id = n.channelId), (R = !0)),
-						R && M();
+					(C = { ...C }), null != n.name && C.name !== n.name && ((C.name = n.name), (R = !0)), void 0 !== n.avatar && C.avatar !== n.avatar && ((C.avatar = n.avatar), (R = !0)), null != n.channelId && C.channel_id !== n.channelId && ((C.channel_id = n.channelId), (R = !0)), R && M();
 				},
 				INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function (e) {
 					let { webhookId: n } = e,
@@ -216,11 +200,7 @@ let P = new D(
 							})
 						) {
 							var a, s;
-							h.push(e),
-								e.type === (null == f ? void 0 : f.type) &&
-									(null === (a = e.account) || void 0 === a ? void 0 : a.id) ===
-										(null === (s = f.account) || void 0 === s ? void 0 : s.id) &&
-									(f = e);
+							h.push(e), e.type === (null == f ? void 0 : f.type) && (null === (a = e.account) || void 0 === a ? void 0 : a.id) === (null === (s = f.account) || void 0 === s ? void 0 : s.id) && (f = e);
 						}
 					for (let e = h.length - 1; e >= 0; e--) {
 						let n = h[e],

@@ -106,10 +106,7 @@ class q extends n.Component {
 			{ giftCode: i, subscriptionPlan: n, collectiblesItemType: a } = this.props;
 		if (e && this.step === H.wZ8.ERROR) return B.Z.Messages.GIFT_CONFIRMATION_HEADER_FAIL;
 		if (e && !s) {
-			if (!t)
-				return B.Z.Messages.GIFT_RECIPIENT_INFO.format({
-					recipientDisplayName: w.ZP.getName(O.default.getCurrentUser())
-				});
+			if (!t) return B.Z.Messages.GIFT_RECIPIENT_INFO.format({ recipientDisplayName: w.ZP.getName(O.default.getCurrentUser()) });
 			{
 				let e = O.default.getUser(i.userId),
 					t = w.ZP.getName(e);
@@ -119,10 +116,7 @@ class q extends n.Component {
 						? B.Z.Messages.COLLECTIBLES_SENDER_GIFTED_YOU_EFFECT.format({ sender: t })
 						: B.Z.Messages.GIFT_SUBSCRIPTION_INFO.format({
 								sender: t,
-								timeInterval:
-									(null == n ? void 0 : n.interval) === U.rV.MONTH
-										? B.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH
-										: B.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_YEAR
+								timeInterval: (null == n ? void 0 : n.interval) === U.rV.MONTH ? B.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH : B.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_YEAR
 							});
 			}
 		}
@@ -184,29 +178,12 @@ class q extends n.Component {
 		});
 	}
 	render() {
-		let {
-				application: e,
-				accepting: t,
-				onClose: s,
-				giftCode: n,
-				headerId: a,
-				transitionState: r,
-				useReducedMotion: o,
-				onComplete: d,
-				customGiftMessage: c,
-				emojiName: h,
-				soundId: p,
-				isThemeDark: f
-			} = this.props,
+		let { application: e, accepting: t, onClose: s, giftCode: n, headerId: a, transitionState: r, useReducedMotion: o, onComplete: d, customGiftMessage: c, emojiName: h, soundId: p, isThemeDark: f } = this.props,
 			m = O.default.getUser(n.userId),
 			{ isCustomGift: g, isCollectiblesGift: I, accepted: Z, opened: S, emojiURL: E } = this.state,
 			T = O.default.getCurrentUser(),
 			C = this.step === H.wZ8.ERROR,
-			_ =
-				(null == n ? void 0 : n.userId) != null &&
-				null != T &&
-				(null == T ? void 0 : T.id) != null &&
-				n.userId === T.id;
+			_ = (null == n ? void 0 : n.userId) != null && null != T && (null == T ? void 0 : T.id) != null && n.userId === T.id;
 		switch (this.step) {
 			case H.wZ8.ERROR:
 				null == d || d(n, !1);
@@ -303,9 +280,7 @@ class q extends n.Component {
 									!_ &&
 									(0, i.jsxs)(i.Fragment, {
 										children: [
-											(0, i.jsx)(u.FormTitle, {
-												children: B.Z.Messages.GIFT_SENDER_INFO.format({ sender: w.ZP.getName(m) })
-											}),
+											(0, i.jsx)(u.FormTitle, { children: B.Z.Messages.GIFT_SENDER_INFO.format({ sender: w.ZP.getName(m) }) }),
 											(0, i.jsx)(u.Heading, {
 												id: a,
 												className: z.customMessage,
@@ -400,10 +375,7 @@ let J = o.ZP.connectStores([N.Z, j.Z, I.Z, A.Z, y.Z, p.Z], (e) => {
 		n = p.Z.useReducedMotion;
 	return {
 		sku: s,
-		libraryApplication:
-			null != s && (null == t ? void 0 : t.entitlementBranches) != null
-				? (0, P.z2)(t.entitlementBranches, s, N.Z)
-				: null,
+		libraryApplication: null != s && (null == t ? void 0 : t.entitlementBranches) != null ? (0, P.z2)(t.entitlementBranches, s, N.Z) : null,
 		application: i,
 		subscriptionPlan: null != t.subscriptionPlanId ? (0, L.oE)(t.subscriptionPlanId) : null,
 		accepting: A.Z.getIsAccepting(t.code),

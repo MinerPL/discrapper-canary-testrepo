@@ -16,22 +16,22 @@ var r = n(735250),
 	E = n(421802);
 function f(e) {
 	let { applicationId: t, commandIds: n, guildId: f, channel: h, onClick: p } = e,
-		{ trackUserProfileAction: I } = (0, u.KZ)(),
-		{ commands: m } = s.Qm(h, t, n),
+		{ trackUserProfileAction: m } = (0, u.KZ)(),
+		{ commands: I } = s.Qm(h, t, n),
 		T = i.useMemo(
 			() =>
-				null == m
+				null == I
 					? void 0
-					: m.filter((e) => {
+					: I.filter((e) => {
 							let { nsfw: t } = e;
 							return !0 !== t;
 						}),
-			[m]
+			[I]
 		);
 	if (null == T || 0 === T.length) return null;
 	let g = (e) => {
 		null == p || p(),
-			I({ action: 'PRESS_APP_COMMAND' }),
+			m({ action: 'PRESS_APP_COMMAND' }),
 			l.default.track(d.rMx.POPULAR_APPLICATION_COMMAND_CLICKED, {
 				application_id: t,
 				command_id: e,

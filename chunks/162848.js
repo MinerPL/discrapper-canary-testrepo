@@ -27,10 +27,7 @@ var r = n(710659),
 						var i = (n = this.rules[r]).exec(this.text);
 						i && (null === e || i[0].length > e[0].length) && ((e = i), (t = r));
 					}
-					if (
-						(null != e && ((this.text = this.text.substr(e[0].length)), '' === this.text && (this.done = !0)),
-						null == e)
-					) {
+					if ((null != e && ((this.text = this.text.substr(e[0].length)), '' === this.text && (this.done = !0)), null == e)) {
 						(this.done = !0), (this.symbol = null), (this.value = null);
 						return;
 					}
@@ -164,13 +161,9 @@ function s(e, t) {
 				var r = c(),
 					a = u(),
 					o = l();
-				if (r)
-					a
-						? (s.nextSymbol(), !n.byweekday && (n.byweekday = []), n.byweekday.push(i.Ci[a].nth(r)))
-						: (!n.bymonthday && (n.bymonthday = []), n.bymonthday.push(r), s.accept('day(s)'));
+				if (r) a ? (s.nextSymbol(), !n.byweekday && (n.byweekday = []), n.byweekday.push(i.Ci[a].nth(r))) : (!n.bymonthday && (n.bymonthday = []), n.bymonthday.push(r), s.accept('day(s)'));
 				else if (a) s.nextSymbol(), !n.byweekday && (n.byweekday = []), n.byweekday.push(i.Ci[a]);
-				else if ('weekday(s)' === s.symbol)
-					s.nextSymbol(), !n.byweekday && (n.byweekday = [i.Ci.MO, i.Ci.TU, i.Ci.WE, i.Ci.TH, i.Ci.FR]);
+				else if ('weekday(s)' === s.symbol) s.nextSymbol(), !n.byweekday && (n.byweekday = [i.Ci.MO, i.Ci.TU, i.Ci.WE, i.Ci.TH, i.Ci.FR]);
 				else if ('week(s)' === s.symbol) {
 					s.nextSymbol();
 					var d = s.acceptNumber();

@@ -40,9 +40,7 @@ function _(e) {
 								(0, l.jsx)(o.Text, {
 									className: g.spacing,
 									variant: 'text-sm/normal',
-									children: d.Z.Messages.PUBLISH_FOLLOWED_NEWS_BODY_REACH.format({
-										numGuildsFollowing: F.guildsFollowing
-									})
+									children: d.Z.Messages.PUBLISH_FOLLOWED_NEWS_BODY_REACH.format({ numGuildsFollowing: F.guildsFollowing })
 								}),
 								(0, l.jsx)(o.Text, {
 									variant: 'text-sm/normal',

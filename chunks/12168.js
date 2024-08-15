@@ -22,21 +22,14 @@ var i = n(735250),
 	_ = n(907040),
 	f = n(633302),
 	E = n(806966),
-	g = n(176354),
-	C = n(823379),
+	C = n(176354),
+	g = n(823379),
 	I = n(354459),
 	x = n(185923),
 	T = n(420212),
 	N = n(894967);
 let v = x.Hz.CHAT,
-	S = [
-		f.ZP.getByName('thumbsup'),
-		f.ZP.getByName('eyes'),
-		f.ZP.getByName('laughing'),
-		f.ZP.getByName('watermelon'),
-		f.ZP.getByName('fork_and_knife'),
-		f.ZP.getByName('yum')
-	].filter(C.lm);
+	S = [f.ZP.getByName('thumbsup'), f.ZP.getByName('eyes'), f.ZP.getByName('laughing'), f.ZP.getByName('watermelon'), f.ZP.getByName('fork_and_knife'), f.ZP.getByName('yum')].filter(g.lm);
 function Z(e) {
 	let { emoji: t, isDisabled: n = !1, onClick: s, className: r } = e,
 		h = a.useRef(null),
@@ -90,32 +83,21 @@ function A(e) {
 	});
 }
 function M(e) {
-	let {
-			channel: t,
-			title: n,
-			closePopout: s,
-			onFocus: o,
-			onSelectEmoji: u,
-			onSelectDisabledEmoji: d,
-			onExpandedToggle: p,
-			emojiSearchProps: f,
-			recentlyUsedEmojis: C,
-			analyticsOverride: M
-		} = e,
+	let { channel: t, title: n, closePopout: s, onFocus: o, onSelectEmoji: u, onSelectDisabledEmoji: d, onExpandedToggle: p, emojiSearchProps: f, recentlyUsedEmojis: g, analyticsOverride: M } = e,
 		b = (0, h.Dt)(),
 		[R, j] = a.useState(!1),
 		L = (0, m.wC)(t.guild_id),
 		P = (0, r.uniqBy)([...L, ...S], 'name')
 			.filter(
 				(e) =>
-					!g.ZP.isEmojiFilteredOrLocked({
+					!C.ZP.isEmojiFilteredOrLocked({
 						emoji: e,
 						channel: t,
 						intention: v
 					})
 			)
 			.slice(0, I.e5);
-	null != C && C.length > 0 && P.splice(P.length - 1, 1, C[0]);
+	null != g && g.length > 0 && P.splice(P.length - 1, 1, g[0]);
 	let O = (e) => {
 			j(e), null == p || p(e);
 		},
@@ -170,7 +152,7 @@ function M(e) {
 						children: (0, i.jsx)('div', {
 							className: l()(N.slots, N.slotsWide),
 							children: P.map((e) => {
-								let n = g.ZP.isEmojiDisabled({
+								let n = C.ZP.isEmojiDisabled({
 									emoji: e,
 									channel: t,
 									intention: x.Hz.CHAT

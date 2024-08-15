@@ -27,21 +27,7 @@ function g(e) {
 	});
 }
 function p(e) {
-	let {
-		email: t,
-		phoneToken: n,
-		username: s,
-		globalName: g,
-		consent: p,
-		password: I,
-		guildTemplateCode: m,
-		birthday: f,
-		invite: N = null,
-		giftCodeSKUId: T = null,
-		multiStep: x = !1,
-		promoEmailConsent: A = null,
-		usedUsernameSuggestion: C = null
-	} = e;
+	let { email: t, phoneToken: n, username: s, globalName: g, consent: p, password: I, guildTemplateCode: m, birthday: f, invite: N = null, giftCodeSKUId: T = null, multiStep: x = !1, promoEmailConsent: A = null, usedUsernameSuggestion: C = null } = e;
 	return (
 		a.Z.dispatch({
 			type: 'REGISTER',
@@ -56,9 +42,7 @@ function p(e) {
 			!(function (e) {
 				let t;
 				let n = r()().diff(e, 'years');
-				!(n < 13) &&
-					((t = n >= 13 && n <= 17 ? '13-17' : n >= 18 && n <= 22 ? '18-22' : '23+'),
-					u.default.track(h.rMx.USER_AGE_SUBMITTED, { age_bucket: t }));
+				!(n < 13) && ((t = n >= 13 && n <= 17 ? '13-17' : n >= 18 && n <= 22 ? '18-22' : '23+'), u.default.track(h.rMx.USER_AGE_SUBMITTED, { age_bucket: t }));
 			})(f)),
 		d.Z.post({
 			url: h.ANM.REGISTER,

@@ -38,18 +38,7 @@ function j(e) {
 	return null != e && h.Z.getCurrentConfig({ location: 'ba216b_1' }, { autoTrackExposure: !0 }).includeRules;
 }
 function O(e) {
-	let {
-			headerId: t,
-			guild: n,
-			step: r,
-			lastPrompt: i,
-			questionCount: a,
-			currentPrompt: d,
-			selectOption: m,
-			gotoPrevPrompt: p,
-			gotoNextPrompt: h,
-			completeOnboarding: _
-		} = e,
+	let { headerId: t, guild: n, step: r, lastPrompt: i, questionCount: a, currentPrompt: d, selectOption: m, gotoPrevPrompt: p, gotoNextPrompt: h, completeOnboarding: _ } = e,
 		I = (0, o.Wu)([g.Z], () => g.Z.getOnboardingResponsesForPrompt(n.id, d.id)),
 		b = 0 === I.length && (null == d ? void 0 : d.required),
 		j = null == d ? void 0 : d.options.filter((e) => I.includes(e.id)),
@@ -214,18 +203,7 @@ function O(e) {
 	});
 }
 function Z(e) {
-	let {
-			headerId: t,
-			guild: n,
-			step: r,
-			lastPrompt: i,
-			questionCount: a,
-			currentPrompt: d,
-			selectOption: c,
-			gotoPrevPrompt: m,
-			gotoNextPrompt: p,
-			completeOnboarding: h
-		} = e,
+	let { headerId: t, guild: n, step: r, lastPrompt: i, questionCount: a, currentPrompt: d, selectOption: c, gotoPrevPrompt: m, gotoNextPrompt: p, completeOnboarding: h } = e,
 		N = (0, o.Wu)([g.Z], () => g.Z.getOnboardingResponsesForPrompt(n.id, d.id)),
 		I = 0 === N.length && (null == d ? void 0 : d.required),
 		b = null == d ? void 0 : d.options.filter((e) => N.includes(e.id)),
@@ -381,16 +359,7 @@ function Z(e) {
 	});
 }
 function B(e) {
-	let {
-			guild: t,
-			prompts: n,
-			step: l,
-			selectOption: c,
-			completeOnboarding: u,
-			setCurrentStep: h,
-			headerId: g,
-			disableTracking: x
-		} = e,
+	let { guild: t, prompts: n, step: l, selectOption: c, completeOnboarding: u, setCurrentStep: h, headerId: g, disableTracking: x } = e,
 		f = (0, o.e7)([d.Z], () => d.Z.getRulesPrompt(t.id));
 	r.useEffect(() => {
 		a.Z.fetchVerificationForm(t.id);

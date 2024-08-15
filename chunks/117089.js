@@ -22,12 +22,9 @@ function a(e, t, n, a, s, o) {
 		for (var d = u[c], _ = d[0], E = d[1] - 1, f = 0; f < o.bynweekday.length; f++) {
 			var h = void 0,
 				p = o.bynweekday[f],
-				I = p[0],
-				m = p[1];
-			m < 0
-				? ((h = E + (m + 1) * 7), (h -= (0, i.Vy)(s[h] - I, 7)))
-				: ((h = _ + (m - 1) * 7), (h += (0, i.Vy)(7 - s[h] + I, 7))),
-				_ <= h && h <= E && (l.nwdaymask[h] = 1);
+				m = p[0],
+				I = p[1];
+			I < 0 ? ((h = E + (I + 1) * 7), (h -= (0, i.Vy)(s[h] - m, 7))) : ((h = _ + (I - 1) * 7), (h += (0, i.Vy)(7 - s[h] + m, 7))), _ <= h && h <= E && (l.nwdaymask[h] = 1);
 		}
 	}
 	return l;

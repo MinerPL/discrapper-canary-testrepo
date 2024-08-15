@@ -41,10 +41,7 @@ var n = l(735250),
 let y = a.memo(function (e) {
 	let { member: t } = e,
 		l = a.useMemo(() => (0, x.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
-		o = a.useMemo(
-			() => (null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil)),
-			[t.communicationDisabledUntil]
-		);
+		o = a.useMemo(() => (null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil)), [t.communicationDisabledUntil]);
 	return (0, n.jsxs)('div', {
 		className: s()(F.flagContainer),
 		children: [
@@ -133,13 +130,7 @@ function P(e) {
 							.filter((e) => e.id !== t.highestRoleId && t.roles.includes(e.id))
 							.sort((e, t) => {
 								var l, n;
-								return null !==
-									(n =
-										null !== (l = null == e ? void 0 : e.position) && void 0 !== l
-											? l
-											: 0 - (null == t ? void 0 : t.position)) && void 0 !== n
-									? n
-									: 0;
+								return null !== (n = null !== (l = null == e ? void 0 : e.position) && void 0 !== l ? l : 0 - (null == t ? void 0 : t.position)) && void 0 !== n ? n : 0;
 							})
 							.map((e) => e.id),
 			[t.roles, t.highestRoleId, l]
@@ -361,15 +352,7 @@ let W = a.memo(function (e) {
 				});
 	}),
 	J = a.memo(function (e) {
-		let {
-				member: t,
-				user: l,
-				highestRole: o,
-				isHoldingAdvancedInfoKey: i,
-				onOpenModerationMenu: r,
-				onOpenProfileMenu: d,
-				compact: m
-			} = e,
+		let { member: t, user: l, highestRole: o, isHoldingAdvancedInfoKey: i, onOpenModerationMenu: r, onOpenProfileMenu: d, compact: m } = e,
 			_ = (0, c.e7)([I.Z, g.Z], () => I.Z.can(w.Plq.MANAGE_GUILD, g.Z.getGuild(t.guildId)), [t.guildId]),
 			{ selectedUserIds: E, addUsers: h, removeUser: M } = (0, B.Z)(t.guildId),
 			x = (0, j.xC)(t.guildId),
@@ -379,17 +362,14 @@ let W = a.memo(function (e) {
 				[v.Z],
 				() => {
 					var e;
-					return null !== (e = v.Z.getSearchStateByGuildId(t.guildId).selectedSort) && void 0 !== e
-						? e
-						: Z.d$.ORDER_BY_UNSPECIFIED;
+					return null !== (e = v.Z.getSearchStateByGuildId(t.guildId).selectedSort) && void 0 !== e ? e : Z.d$.ORDER_BY_UNSPECIFIED;
 				},
 				[t.guildId],
 				C()
 			),
 			H = a.useCallback(
 				(e) => {
-					if ((e.stopPropagation(), e.preventDefault(), null != t && !!T))
-						E.has(t.userId) ? M(t.userId) : h([t.userId]);
+					if ((e.stopPropagation(), e.preventDefault(), null != t && !!T)) E.has(t.userId) ? M(t.userId) : h([t.userId]);
 				},
 				[h, T, t, M, E]
 			),
@@ -466,9 +446,7 @@ let W = a.memo(function (e) {
 						className: s()(F.actionCell),
 						children: [
 							(0, n.jsx)(u.Tooltip, {
-								text: L
-									? k.Z.Messages.MEMBER_SAFETY_TABLE_MOD_VIEW_TOOLTIP
-									: k.Z.Messages.MEMBER_SAFETY_TABLE_PROFILE_TOOLTIP,
+								text: L ? k.Z.Messages.MEMBER_SAFETY_TABLE_MOD_VIEW_TOOLTIP : k.Z.Messages.MEMBER_SAFETY_TABLE_PROFILE_TOOLTIP,
 								children: (e) => {
 									let { onMouseEnter: t, onMouseLeave: l } = e;
 									return (0, n.jsx)(u.Clickable, {
@@ -517,16 +495,7 @@ let W = a.memo(function (e) {
 	K = 18,
 	$ = ['sourceInviteCode', 'joinSourceType', 'inviterId', 'integrationType', 'joinedAt', 'joinedAtTimestamp'];
 t.Z = a.memo(function (e) {
-	let {
-			userId: t,
-			guildId: l,
-			style: o,
-			onSelect: r,
-			rowSelected: d,
-			isLoading: u = !1,
-			isHoldingAdvancedInfoKey: m = !1,
-			compact: _ = !1
-		} = e,
+	let { userId: t, guildId: l, style: o, onSelect: r, rowSelected: d, isLoading: u = !1, isHoldingAdvancedInfoKey: m = !1, compact: _ = !1 } = e,
 		E = (0, c.e7)([L.ZP], () => L.ZP.getGuildSidebarState(l), [l]),
 		h = (null == E ? void 0 : E.details.userId) === t,
 		M = (0, c.e7)([v.Z], () => v.Z.getEnhancedMember(l, t), [l, t]),

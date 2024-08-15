@@ -12,36 +12,15 @@ var r = n(735250),
 	f = n(285651),
 	h = n(373228),
 	p = n(378233),
-	I = n(419922),
-	m = n(490095),
+	m = n(419922),
+	I = n(490095),
 	T = n(981631),
 	g = n(689938),
 	S = n(323276);
 let A = (0, l.Mg)(S.__invalid_stickerPickerPreviewDimensions),
 	N = (0, l.Mg)(S.__invalid_stickerPickerPreviewPadding),
 	v = i.memo(function (e) {
-		let {
-				isDisplayingIndividualStickers: t = !1,
-				preferAnimation: a = !0,
-				getStickerItemProps: l,
-				getStickerRowProps: v,
-				gutterWidth: O,
-				inspectedStickerPosition: R,
-				isScrolling: C,
-				isUsingKeyboardNavigation: y,
-				onInspect: D,
-				onSelect: L,
-				rowIndex: b,
-				stickerClassName: M,
-				stickerDescriptors: P,
-				stickerPadding: U = N,
-				stickerSize: w = A,
-				ownedStickerPacks: x,
-				enlargeOnInteraction: G = !1,
-				channel: k,
-				currentUser: B,
-				checkSendability: F = !0
-			} = e,
+		let { isDisplayingIndividualStickers: t = !1, preferAnimation: a = !0, getStickerItemProps: l, getStickerRowProps: v, gutterWidth: O, inspectedStickerPosition: R, isScrolling: C, isUsingKeyboardNavigation: y, onInspect: D, onSelect: L, rowIndex: b, stickerClassName: M, stickerDescriptors: P, stickerPadding: U = N, stickerSize: w = A, ownedStickerPacks: x, enlargeOnInteraction: G = !1, channel: k, currentUser: B, checkSendability: F = !0 } = e,
 			{ location: V } = (0, d.O)(),
 			H = w + 2 * U,
 			Z = i.useMemo(
@@ -67,22 +46,12 @@ let A = (0, l.Mg)(S.__invalid_stickerPickerPreviewDimensions),
 			...(null == v ? void 0 : v(b)),
 			children: P.map((e) => {
 				var d;
-				let A =
-						e.visibleRowIndex === (null == R ? void 0 : R.rowIndex) &&
-						e.columnIndex === (null == R ? void 0 : R.columnIndex),
+				let A = e.visibleRowIndex === (null == R ? void 0 : R.rowIndex) && e.columnIndex === (null == R ? void 0 : R.columnIndex),
 					N = e.type === h.al.STICKER && G && A,
 					v = (0, o.throttle)(() => {
-						(null == C ? void 0 : C.current) !== !0 &&
-							(null == y ? void 0 : y.current) !== !0 &&
-							!A &&
-							(null == D || D(e));
+						(null == C ? void 0 : C.current) !== !0 && (null == y ? void 0 : y.current) !== !0 && !A && (null == D || D(e));
 					}, 250),
-					{
-						ref: O,
-						tabIndex: P,
-						onFocus: U,
-						...H
-					} = null !== (d = null == l ? void 0 : l(e.columnIndex, b)) && void 0 !== d ? d : {};
+					{ ref: O, tabIndex: P, onFocus: U, ...H } = null !== (d = null == l ? void 0 : l(e.columnIndex, b)) && void 0 !== d ? d : {};
 				switch (e.type) {
 					case h.al.CREATE_STICKER:
 						return (0, r.jsx)(
@@ -147,9 +116,7 @@ let A = (0, l.Mg)(S.__invalid_stickerPickerPreviewDimensions),
 								onFocus: null != U ? U : v,
 								onMouseMove: v,
 								onClick: (t) => {
-									(null == C ? void 0 : C.current) !== !0 &&
-										(null == y ? void 0 : y.current) !== !0 &&
-										(null == L || L(e, t));
+									(null == C ? void 0 : C.current) !== !0 && (null == y ? void 0 : y.current) !== !0 && (null == L || L(e, t));
 								},
 								onContextMenu: (e) => {
 									(0, c.jW)(e, async () => {
@@ -161,12 +128,12 @@ let A = (0, l.Mg)(S.__invalid_stickerPickerPreviewDimensions),
 								'data-type': _.S.STICKER,
 								'data-id': e.sticker.id,
 								children: [
-									(0, r.jsx)(u.HiddenVisually, { children: (0, I.Co)(e.sticker) }),
+									(0, r.jsx)(u.HiddenVisually, { children: (0, m.Co)(e.sticker) }),
 									(0, r.jsxs)('div', {
 										'aria-hidden': !0,
 										children: [
 											!G && (0, r.jsx)('div', { className: S.inspectedIndicator }),
-											(0, r.jsx)(I.ZP, {
+											(0, r.jsx)(m.ZP, {
 												className: s()(S.stickerNode, {
 													[S.stickerNodeDimmed]: G && !A && null != R && -1 !== R.rowIndex && -1 !== R.columnIndex,
 													[S.stickerNodeHidden]: N,
@@ -179,7 +146,7 @@ let A = (0, l.Mg)(S.__invalid_stickerPickerPreviewDimensions),
 												sticker: e.sticker,
 												size: w
 											}),
-											o ? (0, r.jsx)(m.Z, { size: 20 }) : null
+											o ? (0, r.jsx)(I.Z, { size: 20 }) : null
 										]
 									})
 								]

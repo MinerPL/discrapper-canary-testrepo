@@ -89,14 +89,7 @@ function C(e) {
 				});
 }
 function h(e) {
-	let {
-		eligibility: t,
-		eligibilityLoading: i,
-		eligibilityError: o,
-		refreshEligibility: l,
-		guildId: r,
-		transitionState: s
-	} = e;
+	let { eligibility: t, eligibilityLoading: i, eligibilityError: o, refreshEligibility: l, guildId: r, transitionState: s } = e;
 	return (0, n.jsxs)(a.ModalRoot, {
 		className: M.eligibilityModal,
 		size: a.ModalSize.MEDIUM,

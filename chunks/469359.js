@@ -41,10 +41,7 @@ function I() {
 								try {
 									let r = this.__sentry_instrumentation_handlers__ || {},
 										a = r[t];
-									a &&
-										(a.refCount--,
-										a.refCount <= 0 && (e.call(this, t, a.handler, n), (a.handler = void 0), delete r[t]),
-										0 === Object.keys(r).length && delete this.__sentry_instrumentation_handlers__);
+									a && (a.refCount--, a.refCount <= 0 && (e.call(this, t, a.handler, n), (a.handler = void 0), delete r[t]), 0 === Object.keys(r).length && delete this.__sentry_instrumentation_handlers__);
 								} catch (e) {}
 							return e.call(this, t, r, n);
 						};
@@ -62,13 +59,7 @@ function u(e, t = !1) {
 				return null;
 			}
 		})(r);
-		if (
-			((i = r.type),
-			(c = I),
-			'keypress' === i &&
-				(!c || !c.tagName || ('INPUT' !== c.tagName && 'TEXTAREA' !== c.tagName && !c.isContentEditable)))
-		)
-			return;
+		if (((i = r.type), (c = I), 'keypress' === i && (!c || !c.tagName || ('INPUT' !== c.tagName && 'TEXTAREA' !== c.tagName && !c.isContentEditable)))) return;
 		(0, _.xp)(r, '_sentryCaptured', !0), I && !I._sentryId && (0, _.xp)(I, '_sentryId', (0, E.DM)());
 		let u = 'keypress' === r.type ? 'input' : r.type;
 		!(function (e) {

@@ -23,8 +23,7 @@ t.Z = (e) => {
 			? void 0
 			: () => {
 					window.requestAnimationFrame(() => {
-						null != c.current &&
-							((d.current = !0), c.current.classList.remove(o.imageLoading), c.current.classList.add(o.image));
+						null != c.current && ((d.current = !0), c.current.classList.remove(o.imageLoading), c.current.classList.add(o.image));
 					});
 				}
 	});

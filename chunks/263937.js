@@ -23,24 +23,9 @@ function d() {
 	var e, t, n, r, i, a;
 	let s = o.Z.settings;
 	return {
-		gifAutoPlay:
-			null === (t = s.textAndImages) || void 0 === t
-				? void 0
-				: null === (e = t.gifAutoPlay) || void 0 === e
-					? void 0
-					: e.value,
-		animateEmoji:
-			null === (r = s.textAndImages) || void 0 === r
-				? void 0
-				: null === (n = r.animateEmoji) || void 0 === n
-					? void 0
-					: n.value,
-		animateStickers:
-			null === (a = s.textAndImages) || void 0 === a
-				? void 0
-				: null === (i = a.animateStickers) || void 0 === i
-					? void 0
-					: i.value
+		gifAutoPlay: null === (t = s.textAndImages) || void 0 === t ? void 0 : null === (e = t.gifAutoPlay) || void 0 === e ? void 0 : e.value,
+		animateEmoji: null === (r = s.textAndImages) || void 0 === r ? void 0 : null === (n = r.animateEmoji) || void 0 === n ? void 0 : n.value,
+		animateStickers: null === (a = s.textAndImages) || void 0 === a ? void 0 : null === (i = a.animateStickers) || void 0 === i ? void 0 : i.value
 	};
 }
 function _() {

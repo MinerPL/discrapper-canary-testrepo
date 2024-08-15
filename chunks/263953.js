@@ -18,7 +18,7 @@ var r,
 	f = n(215569),
 	h = n(186325),
 	p = n(441861);
-function I(e, t, n) {
+function m(e, t, n) {
 	return (
 		t in e
 			? Object.defineProperty(e, t, {
@@ -31,13 +31,8 @@ function I(e, t, n) {
 		e
 	);
 }
-((o = r || (r = {}))[(o.ENTERING = 0)] = 'ENTERING'),
-	(o[(o.LEAVING = 1)] = 'LEAVING'),
-	(o[(o.APPEARING = 2)] = 'APPEARING'),
-	(o[(o.STATIC = 3)] = 'STATIC'),
-	((l = i || (i = {})).SLIDE = 'slide'),
-	(l.LIFT = 'lift');
-class m extends (a = c.PureComponent) {
+((o = r || (r = {}))[(o.ENTERING = 0)] = 'ENTERING'), (o[(o.LEAVING = 1)] = 'LEAVING'), (o[(o.APPEARING = 2)] = 'APPEARING'), (o[(o.STATIC = 3)] = 'STATIC'), ((l = i || (i = {})).SLIDE = 'slide'), (l.LIFT = 'lift');
+class I extends (a = c.PureComponent) {
 	componentDidMount() {
 		if (null != this._measureRef.current) {
 			let { height: e } = this._measureRef.current.getBoundingClientRect();
@@ -184,17 +179,17 @@ class m extends (a = c.PureComponent) {
 	}
 	constructor(...e) {
 		super(...e),
-			I(this, 'state', {
+			m(this, 'state', {
 				animationProgress: new E.Z.Value(0),
 				targetHeight: 0,
 				baseHeight: 0,
 				animationState: null
 			}),
-			I(this, 'direction', this.props.getDirection()),
-			I(this, '_measureRef', c.createRef());
+			m(this, 'direction', this.props.getDirection()),
+			m(this, '_measureRef', c.createRef());
 	}
 }
-I(m, 'contextType', h.S), I(m, 'defaultProps', { duration: 300 });
+m(I, 'contextType', h.S), m(I, 'defaultProps', { duration: 300 });
 class T extends (s = c.Component) {
 	componentDidMount() {
 		this.setPrevSteps();
@@ -207,23 +202,12 @@ class T extends (s = c.Component) {
 		(this.prevStep = e), (this.prevSteps = t);
 	}
 	render() {
-		let {
-			step: e,
-			className: t,
-			innerClassName: n,
-			animatedNodeClassName: r,
-			staticClassName: i,
-			sideMargin: a,
-			verticalMargin: s,
-			children: o,
-			fillParent: l,
-			animationMotionType: c
-		} = this.props;
+		let { step: e, className: t, innerClassName: n, animatedNodeClassName: r, staticClassName: i, sideMargin: a, verticalMargin: s, children: o, fillParent: l, animationMotionType: c } = this.props;
 		return (0, u.jsx)(f.W, {
 			component: 'div',
 			className: _()(p.transitionGroup, t),
 			children: (0, u.jsx)(
-				m,
+				I,
 				{
 					fillParent: l,
 					sideMargin: a,
@@ -243,25 +227,23 @@ class T extends (s = c.Component) {
 	}
 	constructor(...e) {
 		super(...e),
-			I(this, 'stepHeights', {}),
-			I(this, 'prevStep', null),
-			I(this, 'prevSteps', []),
-			I(this, 'getBaseHeight', () =>
-				null != this.prevStep && null != this.stepHeights[this.prevStep] ? this.stepHeights[this.prevStep] : 0
-			),
-			I(this, 'getDirection', () => {
+			m(this, 'stepHeights', {}),
+			m(this, 'prevStep', null),
+			m(this, 'prevSteps', []),
+			m(this, 'getBaseHeight', () => (null != this.prevStep && null != this.stepHeights[this.prevStep] ? this.stepHeights[this.prevStep] : 0)),
+			m(this, 'getDirection', () => {
 				let { steps: e, step: t } = this.props,
 					n = null != this.prevStep ? e.indexOf(this.prevStep) : -1,
 					r = -1 === n && null != this.prevStep ? this.prevSteps.indexOf(this.prevStep) : -1;
 				return Math.max(n, r) > e.indexOf(t) ? -1 : 1;
 			}),
-			I(this, 'setHeight', (e) => {
+			m(this, 'setHeight', (e) => {
 				let { step: t } = this.props;
 				this.stepHeights[t] = e;
 			});
 	}
 }
-I(T, 'defaultProps', {
+m(T, 'defaultProps', {
 	fillParent: !1,
 	animationMotionType: 'slide'
 });

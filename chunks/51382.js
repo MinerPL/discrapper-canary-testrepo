@@ -15,8 +15,7 @@ t.Z = (e) => {
 			(0, s.Kw)(s.v6.HUB_STUDY_ROOM_NOTICE);
 		},
 		onClick: () => {
-			(0, s.Kw)(s.v6.HUB_STUDY_ROOM_NOTICE),
-				null != t && null != t.getGuildId() && ((0, l.Cq)(t), (0, r.XU)(t.getGuildId(), t.id));
+			(0, s.Kw)(s.v6.HUB_STUDY_ROOM_NOTICE), null != t && null != t.getGuildId() && ((0, l.Cq)(t), (0, r.XU)(t.getGuildId(), t.id));
 		},
 		title: c.Z.Messages.HUB_STUDY_ROOM_NOTICE_TITLE,
 		message: c.Z.Messages.HUB_STUDY_ROOM_NOTICE_DESCRIPTION,

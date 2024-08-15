@@ -9,15 +9,7 @@ var r = {},
 		var i = r ? new r() : document.createElement('canvas');
 		(i.width = 2 * n), (i.height = 2 * n);
 		var a = i.getContext('2d');
-		return a
-			? ((a.fillStyle = e),
-				a.fillRect(0, 0, i.width, i.height),
-				(a.fillStyle = t),
-				a.fillRect(0, 0, n, n),
-				a.translate(n, n),
-				a.fillRect(0, 0, n, n),
-				i.toDataURL())
-			: null;
+		return a ? ((a.fillStyle = e), a.fillRect(0, 0, i.width, i.height), (a.fillStyle = t), a.fillRect(0, 0, n, n), a.translate(n, n), a.fillRect(0, 0, n, n), i.toDataURL()) : null;
 	},
 	a = function (e, t, n, a) {
 		var s = e + '-' + t + '-' + n + (a ? '-server' : '');

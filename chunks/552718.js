@@ -46,9 +46,7 @@ Object.keys(u).forEach(function (e) {
 		return 'string' == typeof e && (e = r.from(e, t)), this._hash.update(e), this;
 	}),
 	(d.prototype.verify = function (e, t, n) {
-		return (
-			'string' == typeof t && (t = r.from(t, n)), this.end(), l(t, this._hash.digest(), e, this._signType, this._tag)
-		);
+		return 'string' == typeof t && (t = r.from(t, n)), this.end(), l(t, this._hash.digest(), e, this._signType, this._tag);
 	}),
 	(e.exports = {
 		Sign: _,

@@ -19,11 +19,7 @@ class h extends (r = l.ZP.Store) {
 	getChannelStatus(e) {
 		var t;
 		if (null != e && null != e.guild_id) {
-			if (e.type === o.d.GUILD_VOICE)
-				return (
-					!d.has(e.guild_id) && (d.add(e.guild_id), c.Z.getSocket().requestChannelStatuses(e.guild_id)),
-					null === (t = _[e.guild_id]) || void 0 === t ? void 0 : t[e.id]
-				);
+			if (e.type === o.d.GUILD_VOICE) return !d.has(e.guild_id) && (d.add(e.guild_id), c.Z.getSocket().requestChannelStatuses(e.guild_id)), null === (t = _[e.guild_id]) || void 0 === t ? void 0 : t[e.id];
 		}
 	}
 }

@@ -19,21 +19,9 @@ let o = Object.freeze({
 	isSidebarVisible: !1
 });
 function l(e) {
-	let {
-			sections: t,
-			sectionHeight: n,
-			rowHeight: l,
-			footerHeight: u,
-			sidebarHeight: c,
-			listHeaderHeight: d,
-			chunkSize: _ = 256,
-			paddingTop: E = 0,
-			paddingBottom: f = 0,
-			getScrollerState: h,
-			getAnchorId: p
-		} = e,
-		I = (0, a.Z)(),
-		m = (0, r.useRef)(o),
+	let { sections: t, sectionHeight: n, rowHeight: l, footerHeight: u, sidebarHeight: c, listHeaderHeight: d, chunkSize: _ = 256, paddingTop: E = 0, paddingBottom: f = 0, getScrollerState: h, getAnchorId: p } = e,
+		m = (0, a.Z)(),
+		I = (0, r.useRef)(o),
 		[T] = (0, r.useState)(() => new i.Z()),
 		{
 			dirty: g,
@@ -43,9 +31,9 @@ function l(e) {
 		} = (0, s.Z)({
 			chunkSize: _,
 			getScrollerState: h,
-			forceUpdate: I
+			forceUpdate: m
 		}),
-		{ items: v } = m.current,
+		{ items: v } = I.current,
 		O = null,
 		{ scrollTop: R } = h();
 	for (let e of v) {
@@ -69,7 +57,7 @@ function l(e) {
 		y = (0, r.useMemo)(
 			() =>
 				g > 0
-					? m.current
+					? I.current
 					: (T.mergeProps({
 							sectionHeight: n,
 							rowHeight: l,
@@ -84,7 +72,7 @@ function l(e) {
 			[g, S, A, n, l, u, d, f, E, t, T, _, p]
 		);
 	return (
-		(0, r.useLayoutEffect)(() => void (m.current = y)),
+		(0, r.useLayoutEffect)(() => void (I.current = y)),
 		{
 			...y,
 			listComputer: T,

@@ -1,33 +1,6 @@
 e.exports = function (e) {
 	let t = e.regex,
-		n = [
-			'div',
-			'mod',
-			'in',
-			'and',
-			'or',
-			'not',
-			'xor',
-			'asserterror',
-			'begin',
-			'case',
-			'do',
-			'downto',
-			'else',
-			'end',
-			'exit',
-			'for',
-			'local',
-			'if',
-			'of',
-			'repeat',
-			'then',
-			'to',
-			'until',
-			'while',
-			'with',
-			'var'
-		],
+		n = ['div', 'mod', 'in', 'and', 'or', 'not', 'xor', 'asserterror', 'begin', 'case', 'do', 'downto', 'else', 'end', 'exit', 'for', 'local', 'if', 'of', 'repeat', 'then', 'to', 'until', 'while', 'with', 'var'],
 		r = [e.C_LINE_COMMENT_MODE, e.COMMENT(/\{/, /\}/, { relevance: 0 }), e.COMMENT(/\(\*/, /\*\)/, { relevance: 10 })],
 		i = {
 			className: 'string',
@@ -57,16 +30,7 @@ e.exports = function (e) {
 			]
 		},
 		o = {
-			match: [
-				/OBJECT/,
-				/\s+/,
-				t.either('Table', 'Form', 'Report', 'Dataport', 'Codeunit', 'XMLport', 'MenuSuite', 'Page', 'Query'),
-				/\s+/,
-				/\d+/,
-				/\s+(?=[^\s])/,
-				/.*/,
-				/$/
-			],
+			match: [/OBJECT/, /\s+/, t.either('Table', 'Form', 'Report', 'Dataport', 'Codeunit', 'XMLport', 'MenuSuite', 'Page', 'Query'), /\s+/, /\d+/, /\s+(?=[^\s])/, /.*/, /$/],
 			relevance: 3,
 			scope: {
 				1: 'keyword',

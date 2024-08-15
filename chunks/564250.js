@@ -29,25 +29,20 @@ var r = n(505388),
 			c = l.split(t.delimiter, u),
 			d = -1,
 			_ = t.charset;
-		if (t.charsetSentinel)
-			for (E = 0; E < c.length; ++E)
-				0 === c[E].indexOf('utf8=') &&
-					('utf8=%E2%9C%93' === c[E] ? (_ = 'utf-8') : 'utf8=%26%2310003%3B' === c[E] && (_ = 'iso-8859-1'),
-					(d = E),
-					(E = c.length));
+		if (t.charsetSentinel) for (E = 0; E < c.length; ++E) 0 === c[E].indexOf('utf8=') && ('utf8=%E2%9C%93' === c[E] ? (_ = 'utf-8') : 'utf8=%26%2310003%3B' === c[E] && (_ = 'iso-8859-1'), (d = E), (E = c.length));
 		for (E = 0; E < c.length; ++E) {
 			if (E !== d) {
 				var E,
 					f,
 					h,
 					p = c[E],
-					I = p.indexOf(']='),
-					m = -1 === I ? p.indexOf('=') : I + 1;
+					m = p.indexOf(']='),
+					I = -1 === m ? p.indexOf('=') : m + 1;
 				if (
-					(-1 === m
+					(-1 === I
 						? ((f = t.decoder(p, s.decoder, _, 'key')), (h = t.strictNullHandling ? null : ''))
-						: ((f = t.decoder(p.slice(0, m), s.decoder, _, 'key')),
-							(h = r.maybeMap(o(p.slice(m + 1), t), function (e) {
+						: ((f = t.decoder(p.slice(0, I), s.decoder, _, 'key')),
+							(h = r.maybeMap(o(p.slice(I + 1), t), function (e) {
 								return t.decoder(e, s.decoder, _, 'value');
 							}))),
 					h && t.interpretNumericEntities && 'iso-8859-1' === _)
@@ -69,11 +64,7 @@ var r = n(505388),
 				s = n.plainObjects ? Object.create(null) : {};
 				var u = '[' === l.charAt(0) && ']' === l.charAt(l.length - 1) ? l.slice(1, -1) : l,
 					c = parseInt(u, 10);
-				n.parseArrays || '' !== u
-					? !isNaN(c) && l !== u && String(c) === u && c >= 0 && n.parseArrays && c <= n.arrayLimit
-						? ((s = [])[c] = i)
-						: '__proto__' !== u && (s[u] = i)
-					: (s = { 0: i });
+				n.parseArrays || '' !== u ? (!isNaN(c) && l !== u && String(c) === u && c >= 0 && n.parseArrays && c <= n.arrayLimit ? ((s = [])[c] = i) : '__proto__' !== u && (s[u] = i)) : (s = { 0: i });
 			}
 			i = s;
 		}
@@ -99,10 +90,8 @@ var r = n(505388),
 	},
 	d = function (e) {
 		if (!e) return s;
-		if (null !== e.decoder && void 0 !== e.decoder && 'function' != typeof e.decoder)
-			throw TypeError('Decoder has to be a function.');
-		if (void 0 !== e.charset && 'utf-8' !== e.charset && 'iso-8859-1' !== e.charset)
-			throw TypeError('The charset option must be either utf-8, iso-8859-1, or undefined');
+		if (null !== e.decoder && void 0 !== e.decoder && 'function' != typeof e.decoder) throw TypeError('Decoder has to be a function.');
+		if (void 0 !== e.charset && 'utf-8' !== e.charset && 'iso-8859-1' !== e.charset) throw TypeError('The charset option must be either utf-8, iso-8859-1, or undefined');
 		var t = void 0 === e.charset ? s.charset : e.charset;
 		return {
 			allowDots: void 0 === e.allowDots ? s.allowDots : !!e.allowDots,
@@ -116,8 +105,7 @@ var r = n(505388),
 			delimiter: 'string' == typeof e.delimiter || r.isRegExp(e.delimiter) ? e.delimiter : s.delimiter,
 			depth: 'number' == typeof e.depth || !1 === e.depth ? +e.depth : s.depth,
 			ignoreQueryPrefix: !0 === e.ignoreQueryPrefix,
-			interpretNumericEntities:
-				'boolean' == typeof e.interpretNumericEntities ? e.interpretNumericEntities : s.interpretNumericEntities,
+			interpretNumericEntities: 'boolean' == typeof e.interpretNumericEntities ? e.interpretNumericEntities : s.interpretNumericEntities,
 			parameterLimit: 'number' == typeof e.parameterLimit ? e.parameterLimit : s.parameterLimit,
 			parseArrays: !1 !== e.parseArrays,
 			plainObjects: 'boolean' == typeof e.plainObjects ? e.plainObjects : s.plainObjects,
@@ -127,14 +115,7 @@ var r = n(505388),
 e.exports = function (e, t) {
 	var n = d(t);
 	if ('' === e || null == e) return n.plainObjects ? Object.create(null) : {};
-	for (
-		var i = 'string' == typeof e ? l(e, n) : e,
-			a = n.plainObjects ? Object.create(null) : {},
-			s = Object.keys(i),
-			o = 0;
-		o < s.length;
-		++o
-	) {
+	for (var i = 'string' == typeof e ? l(e, n) : e, a = n.plainObjects ? Object.create(null) : {}, s = Object.keys(i), o = 0; o < s.length; ++o) {
 		var u = s[o],
 			_ = c(u, i[u], n, 'string' == typeof e);
 		a = r.merge(a, _, n);

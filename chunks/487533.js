@@ -3,9 +3,7 @@ function k(a, i, x) {
 	let k = a.layers.findIndex((a) => 'flag' === a.nm);
 	return (
 		a.layers[k].shapes[0].it.forEach((i, r) => {
-			'gr' === a.layers[k].shapes[0].it[r].ty &&
-				a.layers[k].shapes[0].it[r].it.findIndex((a) => 'fl' === a.ty) >= 0 &&
-				(a.layers[k].shapes[0].it[r].it[1].c.k = [...x.map((a) => a / 256), 1]);
+			'gr' === a.layers[k].shapes[0].it[r].ty && a.layers[k].shapes[0].it[r].it.findIndex((a) => 'fl' === a.ty) >= 0 && (a.layers[k].shapes[0].it[r].it[1].c.k = [...x.map((a) => a / 256), 1]);
 		}),
 		a
 	);

@@ -30,13 +30,6 @@ function a(e) {
 			var o = this._comparator(e, n.data);
 			(s = o > 0), 0 === o && (a = n);
 		}
-		return (
-			null !== a &&
-			((a.data = n.data),
-			r.set_child(r.right === n, n.get_child(null === n.left)),
-			(this._root = t.right),
-			this.size--,
-			!0)
-		);
+		return null !== a && ((a.data = n.data), r.set_child(r.right === n, n.get_child(null === n.left)), (this._root = t.right), this.size--, !0);
 	}),
 	(e.exports = a);

@@ -11,8 +11,7 @@ var r = n(735250),
 let E = {
 	sentinel: d.ME,
 	stores: [s.ZP],
-	matches: (e, t, n, r, i) =>
-		(i.mentions.user !== c.h3.DENY || i.mentions.role !== c.Fw.DENY || i.mentions.global !== c.VV.DENY) && !0,
+	matches: (e, t, n, r, i) => (i.mentions.user !== c.h3.DENY || i.mentions.role !== c.Fw.DENY || i.mentions.global !== c.VV.DENY) && !0,
 	queryResults(e, t, n, r, i) {
 		let a = r.mentions.global === c.VV.ALLOW_EVERYONE || r.mentions.global === c.VV.ALLOW_EVERYONE_OR_HERE,
 			s = r.mentions.global === c.VV.ALLOW_EVERYONE_OR_HERE,
@@ -43,16 +42,16 @@ let E = {
 				channel: f,
 				query: h,
 				options: p,
-				onHover: I,
-				onClick: m
+				onHover: m,
+				onClick: I
 			} = e,
 			T = s.map((e, t) =>
 				(0, r.jsx)(
 					a.ZP.User,
 					{
 						guildId: f.guild_id,
-						onClick: m,
-						onHover: I,
+						onClick: I,
+						onHover: m,
 						selected: E === t,
 						index: t,
 						user: e.user,
@@ -67,8 +66,8 @@ let E = {
 				(0, r.jsx)(
 					a.ZP.Generic,
 					{
-						onClick: m,
-						onHover: I,
+						onClick: I,
+						onHover: m,
 						selected: E === t + s.length,
 						index: s.length + t,
 						text: e.text,
@@ -82,8 +81,8 @@ let E = {
 				(0, r.jsx)(
 					a.ZP.Role,
 					{
-						onClick: m,
-						onHover: I,
+						onClick: I,
+						onHover: m,
 						selected: E === t + s.length + o.length,
 						index: s.length + o.length + t,
 						role: e,
@@ -93,9 +92,7 @@ let E = {
 				)
 			);
 		return (
-			p.mentions.user === c.h3.DENY
-				? ((t = _.Z.Messages.ROLES_MATCHING), (n = _.Z.Messages.ROLES))
-				: ((t = _.Z.Messages.MEMBERS_MATCHING), (n = _.Z.Messages.MEMBERS)),
+			p.mentions.user === c.h3.DENY ? ((t = _.Z.Messages.ROLES_MATCHING), (n = _.Z.Messages.ROLES)) : ((t = _.Z.Messages.MEMBERS_MATCHING), (n = _.Z.Messages.MEMBERS)),
 			(0, r.jsxs)(
 				i.Fragment,
 				{
@@ -131,9 +128,7 @@ let E = {
 			null != u
 				? a.insertText(
 						(function (e, t, n) {
-							return o.ZP.hasSameRoleAsUsername(t, e)
-								? ''.concat(d.ME).concat(e.tag)
-								: ''.concat(d.ME).concat(l.ZP.getUserTag(e, { identifiable: n ? 'never' : 'always' }));
+							return o.ZP.hasSameRoleAsUsername(t, e) ? ''.concat(d.ME).concat(e.tag) : ''.concat(d.ME).concat(l.ZP.getUserTag(e, { identifiable: n ? 'never' : 'always' }));
 						})(u.user, s, a.hidePersonalInformation),
 						(function (e) {
 							return '<@'.concat(e.id, '>');

@@ -145,29 +145,15 @@ q(el, 'displayName', 'NotificationStore'),
 						if (null == E || null == T || E.isBroadcastChannel()) return !1;
 						let f = (0, w.eF)(o, a, !K),
 							g = R.Z.getNotifyMessagesInSelectedChannel() && (0, w.N_)(o, a);
-						if (
-							(!f && !g) ||
-							(o.type === W.uaV.CHANGELOG && (null == o.changelog_id || c.Z.latestChangelogId() !== o.changelog_id))
-						)
-							return !1;
+						if ((!f && !g) || (o.type === W.uaV.CHANGELOG && (null == o.changelog_id || c.Z.latestChangelogId() !== o.changelog_id))) return !1;
 						let A = !R.Z.isSoundDisabled(X),
 							O = H.ZP.canUseCustomNotificationSounds(I),
 							h = S.Y.getCurrentConfig({ location: 'NotificationStore' }).enabled,
-							D =
-								O && h && A
-									? null !== (u = (0, C.bb)(null !== (l = E.guild_id) && void 0 !== l ? l : W.aIL, a)) && void 0 !== u
-										? u
-										: (0, C.iD)(E.guild_id)
-									: void 0;
+							D = O && h && A ? (null !== (u = (0, C.bb)(null !== (l = E.guild_id) && void 0 !== l ? l : W.aIL, a)) && void 0 !== u ? u : (0, C.iD)(E.guild_id)) : void 0;
 						if ((g && (A && Y.GN('message3', 0.4, void 0, D), !K)) || !f) return !1;
 						let v = n(808506).Z,
 							p = n(237997).Z;
-						if (
-							null != v.getFocusedPID() &&
-							p.getTextChatNotificationMode() === W.Ypu.ENABLED &&
-							!G.Z.disableNotifications
-						)
-							return !1;
+						if (null != v.getFocusedPID() && p.getTextChatNotificationMode() === W.Ypu.ENABLED && !G.Z.disableNotifications) return !1;
 						let { icon: m, title: L, body: U } = (0, w.Xi)(E, o, T);
 						if (
 							(s.Z.dispatch({
@@ -202,10 +188,7 @@ q(el, 'displayName', 'NotificationStore'),
 								soundpack: D,
 								volume: J,
 								onClick() {
-									(0, Z.Kh)(E.id),
-										(E.type === W.d4z.GUILD_VOICE || E.type === W.d4z.GUILD_STAGE_VOICE) &&
-											r.Z.updateChatOpen(E.id, !0),
-										_.default.clickedNotification();
+									(0, Z.Kh)(E.id), (E.type === W.d4z.GUILD_VOICE || E.type === W.d4z.GUILD_STAGE_VOICE) && r.Z.updateChatOpen(E.id, !0), _.default.clickedNotification();
 								}
 							}
 						);
@@ -291,16 +274,7 @@ q(el, 'displayName', 'NotificationStore'),
 							i = p.Z.getGuild(t.guild_id),
 							u = M.Z.getChannel(t.channel_id),
 							a = P.default.getUser(t.host_id);
-						if (
-							null == n ||
-							null == u ||
-							null == i ||
-							null == a ||
-							!(0, w.LL)(n, a, u) ||
-							!m.Z.can(l.$e(W.Plq.CONNECT, W.Plq.VIEW_CHANNEL), u) ||
-							j.has(t.id)
-						)
-							return !1;
+						if (null == n || null == u || null == i || null == a || !(0, w.LL)(n, a, u) || !m.Z.can(l.$e(W.Plq.CONNECT, W.Plq.VIEW_CHANNEL), u) || j.has(t.id)) return !1;
 						j.add(t.id),
 							b.Z.showNotification(
 								i.getIconURL(128),
@@ -338,14 +312,7 @@ q(el, 'displayName', 'NotificationStore'),
 											i = p.Z.getGuild(e.guild_id),
 											u = M.Z.getChannel(e.channel_id),
 											a = P.default.getUser(e.host_id);
-										if (
-											null == n ||
-											null == u ||
-											null == i ||
-											null == a ||
-											!m.Z.can(l.$e(W.Plq.CONNECT, W.Plq.VIEW_CHANNEL), u)
-										)
-											return !1;
+										if (null == n || null == u || null == i || null == a || !m.Z.can(l.$e(W.Plq.CONNECT, W.Plq.VIEW_CHANNEL), u)) return !1;
 										b.Z.showNotification(
 											i.getIconURL(128),
 											z.Z.Messages.GUILD_SCHEDULED_EVENT_STAGE_START_TITLE.format({ guildName: i.name }),
@@ -360,8 +327,7 @@ q(el, 'displayName', 'NotificationStore'),
 											},
 											{
 												onClick() {
-													e.entity_type === x.WX.STAGE_INSTANCE && (0, O.Cq)(u),
-														e.entity_type === x.WX.VOICE && E.default.selectVoiceChannel(u.id);
+													e.entity_type === x.WX.STAGE_INSTANCE && (0, O.Cq)(u), e.entity_type === x.WX.VOICE && E.default.selectVoiceChannel(u.id);
 												}
 											}
 										);
@@ -404,8 +370,7 @@ q(el, 'displayName', 'NotificationStore'),
 							}),
 							r = z.Z.Messages.FORUM_CHANNEL_THREAD_CREATED_PUSH_BODY_MOBILE.format({
 								channelName: n.name,
-								userUsername:
-									null !== (t = null == u ? void 0 : u.nick) && void 0 !== t ? t : null == a ? void 0 : a.username
+								userUsername: null !== (t = null == u ? void 0 : u.nick) && void 0 !== t ? t : null == a ? void 0 : a.username
 							}),
 							d = a.getAvatarURL(void 0, 128);
 						b.Z.showNotification(

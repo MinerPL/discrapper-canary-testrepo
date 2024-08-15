@@ -28,9 +28,7 @@ function v(e) {
 	let { guild: t, selected: v } = e,
 		Z = (0, h.Z)(t),
 		T = (0, u.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
-		L = (0, r.Wu)([p.Z], () =>
-			Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))
-		),
+		L = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
 		A = (0, r.e7)([f.ZP], () => f.ZP.hasUnread(t.id, N.W.GUILD_ONBOARDING_QUESTION)),
 		b = L.length > m.Cb,
 		M = (0, r.e7)([d.Z, f.ZP], () => {

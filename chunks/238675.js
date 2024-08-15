@@ -16,6 +16,4 @@ async function c(t) {
 		body: { decider: t }
 	});
 }
-((n = o || (o = {})).HCAPTCHA_EASY = 'hCaptchaEasy'),
-	(n.HCAPTCHA_RQDATA = 'hCaptchaRqdata'),
-	(n.SMITE_RQDATA = 'SmiteRqdata');
+((n = o || (o = {})).HCAPTCHA_EASY = 'hCaptchaEasy'), (n.HCAPTCHA_RQDATA = 'hCaptchaRqdata'), (n.SMITE_RQDATA = 'SmiteRqdata');

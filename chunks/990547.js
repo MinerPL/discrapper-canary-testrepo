@@ -2,13 +2,13 @@ let r, i;
 n.r(t),
 	n.d(t, {
 		AnalyticsActionHandlers: function () {
-			return I.X;
+			return m.X;
 		},
 		Impression: function () {
-			return m.Impression;
+			return I.Impression;
 		},
 		ImpressionGroups: function () {
-			return m.A;
+			return I.A;
 		},
 		ImpressionNames: function () {
 			return T.z;
@@ -17,22 +17,22 @@ n.r(t),
 			return T.ImpressionSchema;
 		},
 		ImpressionTypes: function () {
-			return m.n;
+			return I.n;
 		},
 		NetworkActionNames: function () {
 			return T.a;
 		},
 		StandardAnalyticsLocation: function () {
-			return m.StandardAnalyticsLocation;
+			return I.StandardAnalyticsLocation;
 		},
 		StandardAnalyticsSchemaNameMap: function () {
 			return T.StandardAnalyticsSchemaNameMap;
 		},
 		TypedEventProperties: function () {
-			return m.TypedEventProperties;
+			return I.TypedEventProperties;
 		},
 		analyticsTrackingStoreMaker: function () {
-			return I.l;
+			return m.l;
 		},
 		encodeProperties: function () {
 			return p.Z;
@@ -77,8 +77,8 @@ var a,
 	h = n(979675),
 	p = n(947486);
 n(804098);
-var I = n(699407),
-	m = n(20281),
+var m = n(699407),
+	I = n(20281),
 	T = n(525769);
 let g = 'deviceProperties',
 	S = 'referralProperties',
@@ -118,8 +118,7 @@ if (null != v) {
 			app_arch: o,
 			system_locale: u
 		}),
-		(null === (a = d().name) || void 0 === a ? void 0 : a.toLocaleLowerCase()) === 'electron' &&
-			((r.browser_user_agent = d().ua || ''), (r.browser_version = d().version || '')),
+		(null === (a = d().name) || void 0 === a ? void 0 : a.toLocaleLowerCase()) === 'electron' && ((r.browser_user_agent = d().ua || ''), (r.browser_version = d().version || '')),
 		'linux' === n)
 	) {
 		let e = v.crashReporter.getMetadata();
@@ -149,8 +148,7 @@ function y() {
 	if (/(iPhone|iPad|iPod)/.test(e)) return 'iOS';
 	if (/Android/.test(e)) return 'Android';
 	else if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return 'BlackBerry';
-	else if (/Mac/i.test(e))
-		return null != window.navigator.maxTouchPoints && window.navigator.maxTouchPoints > 2 ? 'iOS' : 'Mac OS X';
+	else if (/Mac/i.test(e)) return null != window.navigator.maxTouchPoints && window.navigator.maxTouchPoints > 2 ? 'iOS' : 'Mac OS X';
 	else if (/Linux/i.test(e)) return 'Linux';
 	else return '';
 }
@@ -215,11 +213,7 @@ if (null == r)
 							if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return 'BlackBerry';
 							if (/FBIOS/.test(e)) return 'Facebook Mobile';
 							else if (/CriOS/.test(e)) return 'Chrome iOS';
-							else if (/Apple/.test(t))
-								return /Mobile/.test(e) ||
-									(null != window.navigator.maxTouchPoints && window.navigator.maxTouchPoints > 2)
-									? 'Mobile Safari'
-									: 'Safari';
+							else if (/Apple/.test(t)) return /Mobile/.test(e) || (null != window.navigator.maxTouchPoints && window.navigator.maxTouchPoints > 2) ? 'Mobile Safari' : 'Safari';
 							else if (/Android/.test(e)) return /Chrome/.test(e) ? 'Android Chrome' : 'Android Mobile';
 							else if (/Edge/.test(e)) return 'Edge';
 							else if (/Chrome/.test(e)) return 'Chrome';
@@ -254,16 +248,7 @@ if (null == r)
 					};
 					return {
 						...n,
-						os_version:
-							null !==
-								(t =
-									null === d() || void 0 === d()
-										? void 0
-										: null === (e = d().os) || void 0 === e
-											? void 0
-											: e.version) && void 0 !== t
-								? t
-								: ''
+						os_version: null !== (t = null === d() || void 0 === d() ? void 0 : null === (e = d().os) || void 0 === e ? void 0 : e.version) && void 0 !== t ? t : ''
 					};
 				})(),
 				...t,
@@ -285,7 +270,7 @@ M(
 		let r = {},
 			i = window.GLOBAL_ENV.RELEASE_CHANNEL;
 		i && (r.release_channel = i.split('-')[0]);
-		let a = parseInt(((n = '318833'), '318833'), 10);
+		let a = parseInt(((n = '318916'), '318916'), 10);
 		!isNaN(a) && (r.client_build_number = a);
 		let s = null == v ? void 0 : null === (e = (t = v.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
 		return (

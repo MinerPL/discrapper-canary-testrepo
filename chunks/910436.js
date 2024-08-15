@@ -37,9 +37,7 @@ function S(e) {
 			}
 			let s = L[a - 1],
 				r = ''.concat(null !== (t = null == e ? void 0 : e.key) && void 0 !== t ? t : ''),
-				l =
-					''.concat(null !== (n = null == s ? void 0 : s.key) && void 0 !== n ? n : '').startsWith('game') &&
-					r.startsWith('rich-presence');
+				l = ''.concat(null !== (n = null == s ? void 0 : s.key) && void 0 !== n ? n : '').startsWith('game') && r.startsWith('rich-presence');
 			L.push((0, i.jsx)(I.Z.Separator, { inset: l }, 'sep-'.concat(r))), L.push(e);
 		};
 	for (let { activity: e } of (C.length > 0 &&
@@ -120,9 +118,7 @@ function S(e) {
 							},
 							members: b
 						},
-						'game-'
-							.concat(null !== (n = R.session_id) && void 0 !== n ? n : t, '-')
-							.concat(null !== (a = R.application_id) && void 0 !== a ? a : t)
+						'game-'.concat(null !== (n = R.session_id) && void 0 !== n ? n : t, '-').concat(null !== (a = R.application_id) && void 0 !== a ? a : t)
 					)
 				);
 			else if ((0, l.Z)(R)) {
@@ -197,24 +193,8 @@ function S(e) {
 									'rich-presence-'.concat(null !== (f = R.session_id) && void 0 !== f ? f : t, '-').concat(P.id)
 								)
 							)
-						: (0, c.Z)(R) &&
-							O(
-								(0, i.jsx)(
-									I.Z.XboxSection,
-									{ title: x.name },
-									'xbox-'.concat(null !== (v = R.session_id) && void 0 !== v ? v : t)
-								)
-							);
-			null != S &&
-				null != x &&
-				(0, u._D)(R, S) &&
-				O(
-					(0, i.jsx)(
-						_.Z,
-						{ quest: S },
-						'quest-'.concat(S.id, '-').concat(null !== (L = R.session_id) && void 0 !== L ? L : t)
-					)
-				);
+						: (0, c.Z)(R) && O((0, i.jsx)(I.Z.XboxSection, { title: x.name }, 'xbox-'.concat(null !== (v = R.session_id) && void 0 !== v ? v : t)));
+			null != S && null != x && (0, u._D)(R, S) && O((0, i.jsx)(_.Z, { quest: S }, 'quest-'.concat(S.id, '-').concat(null !== (L = R.session_id) && void 0 !== L ? L : t)));
 		}),
 		L.length > 0 ? (0, i.jsx)(I.Z.Body, { children: L }) : null
 	);

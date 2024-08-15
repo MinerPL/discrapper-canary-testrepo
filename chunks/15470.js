@@ -119,9 +119,7 @@ class N extends i.PureComponent {
 							className: m.toggleCollapseButton,
 							onClick: this.handleToggleCollapse,
 							color: h.Button.Colors.PRIMARY,
-							children: l
-								? p.Z.Messages.APPLICATION_STORE_DESCRIPTION_READ_MORE
-								: p.Z.Messages.APPLICATION_STORE_DESCRIPTION_READ_LESS
+							children: l ? p.Z.Messages.APPLICATION_STORE_DESCRIPTION_READ_MORE : p.Z.Messages.APPLICATION_STORE_DESCRIPTION_READ_LESS
 						})
 					: null
 			]

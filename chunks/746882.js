@@ -54,10 +54,7 @@ function C(e) {
 			if (null != t.body && null != t.body.date_of_birth) (0, T.C8)(a, t.body.date_of_birth);
 			else {
 				var e;
-				(null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.username) != null
-					? O(y.Z.Messages.USER_SETTINGS_UPDATE_FAILURE)
-					: O(null == t ? void 0 : t.body.message),
-					S(!1);
+				(null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.username) != null ? O(y.Z.Messages.USER_SETTINGS_UPDATE_FAILURE) : O(null == t ? void 0 : t.body.message), S(!1);
 			}
 		}
 	}

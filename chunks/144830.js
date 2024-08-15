@@ -37,22 +37,7 @@ function h(e, t, n) {
 		e
 	);
 }
-((s = r || (r = {})).ACTIVITY_FEED = 'ACTIVITY_FEED'),
-	(s.ACTIVITY_FEED_NEW = 'ACTIVITY_FEED_NEW'),
-	(s.USER_ACTIVITY = 'USER_ACTIVITY'),
-	(s.GAME_LIBRARY_TIME_PLAYED = 'GAME_LIBRARY_TIME_PLAYED'),
-	(s.GAME_LIBRARY_LAST_PLAYED = 'GAME_LIBRARY_LAST_PLAYED'),
-	((o = i || (i = {})).NONE = 'NONE'),
-	(o.SECONDS = 'SECONDS'),
-	(o.MINUTES = 'MINUTES'),
-	(o.HOURS = 'HOURS'),
-	(o.DAYS = 'DAYS'),
-	(o.WEEKS = 'WEEKS'),
-	(o.MONTHS = 'MONTHS'),
-	(o.YEARS = 'YEARS'),
-	((l = a || (a = {})).START = 'START'),
-	(l.END = 'END'),
-	(l.TIME = 'TIME');
+((s = r || (r = {})).ACTIVITY_FEED = 'ACTIVITY_FEED'), (s.ACTIVITY_FEED_NEW = 'ACTIVITY_FEED_NEW'), (s.USER_ACTIVITY = 'USER_ACTIVITY'), (s.GAME_LIBRARY_TIME_PLAYED = 'GAME_LIBRARY_TIME_PLAYED'), (s.GAME_LIBRARY_LAST_PLAYED = 'GAME_LIBRARY_LAST_PLAYED'), ((o = i || (i = {})).NONE = 'NONE'), (o.SECONDS = 'SECONDS'), (o.MINUTES = 'MINUTES'), (o.HOURS = 'HOURS'), (o.DAYS = 'DAYS'), (o.WEEKS = 'WEEKS'), (o.MONTHS = 'MONTHS'), (o.YEARS = 'YEARS'), ((l = a || (a = {})).START = 'START'), (l.END = 'END'), (l.TIME = 'TIME');
 let p = {
 		NONE: (e) => 0,
 		SECONDS: (e) => 60 * e,
@@ -63,7 +48,7 @@ let p = {
 		MONTHS: (e) => e / 60 / 24 / 31,
 		YEARS: (e) => e / 60 / 24 / 365
 	},
-	I = [
+	m = [
 		{
 			unit: 'NONE',
 			max: 0
@@ -97,7 +82,7 @@ let p = {
 			max: 1 / 0
 		}
 	],
-	m = (e) => (t, n) =>
+	I = (e) => (t, n) =>
 		null == n
 			? ''
 			: e().format({
@@ -124,10 +109,10 @@ let p = {
 		},
 		ACTIVITY_FEED_NEW: {
 			START: {
-				SECONDS: m(() => f.Z.Messages.ACTIVITY_FEED_USER_PLAYING_JUST_STARTED),
-				MINUTES: m(() => f.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_MINUTES),
-				HOURS: m(() => f.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_HOURS),
-				DAYS: m(() => f.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_DAYS)
+				SECONDS: I(() => f.Z.Messages.ACTIVITY_FEED_USER_PLAYING_JUST_STARTED),
+				MINUTES: I(() => f.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_MINUTES),
+				HOURS: I(() => f.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_HOURS),
+				DAYS: I(() => f.Z.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_DAYS)
 			},
 			END: {
 				SECONDS: (e) => f.Z.Messages.DURATION_SECONDS_AGO.format({ seconds: e }),
@@ -141,21 +126,15 @@ let p = {
 				SECONDS: () => f.Z.Messages.GAME_FEED_USER_PLAYING_JUST_STARTED,
 				MINUTES: function (e, t) {
 					let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-					return n
-						? f.Z.Messages.GAME_FEED_USER_PLAYING_FOR_MINUTES.format({ time: e })
-						: f.Z.Messages.USER_ACTIVITY_USER_PLAYING_FOR_MINUTES.format({ time: e });
+					return n ? f.Z.Messages.GAME_FEED_USER_PLAYING_FOR_MINUTES.format({ time: e }) : f.Z.Messages.USER_ACTIVITY_USER_PLAYING_FOR_MINUTES.format({ time: e });
 				},
 				HOURS: function (e, t) {
 					let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-					return n
-						? f.Z.Messages.GAME_FEED_USER_PLAYING_FOR_HOURS.format({ time: e })
-						: f.Z.Messages.USER_ACTIVITY_USER_PLAYING_FOR_HOURS.format({ time: e });
+					return n ? f.Z.Messages.GAME_FEED_USER_PLAYING_FOR_HOURS.format({ time: e }) : f.Z.Messages.USER_ACTIVITY_USER_PLAYING_FOR_HOURS.format({ time: e });
 				},
 				DAYS: function (e, t) {
 					let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-					return n
-						? f.Z.Messages.GAME_FEED_USER_PLAYING_FOR_DAYS.format({ time: e })
-						: f.Z.Messages.USER_ACTIVITY_USER_PLAYING_FOR_DAYS.format({ time: e });
+					return n ? f.Z.Messages.GAME_FEED_USER_PLAYING_FOR_DAYS.format({ time: e }) : f.Z.Messages.USER_ACTIVITY_USER_PLAYING_FOR_DAYS.format({ time: e });
 				}
 			}
 		},
@@ -181,12 +160,12 @@ let p = {
 		}
 	};
 function g(e, t) {
-	let n = I.findIndex((t) => {
+	let n = m.findIndex((t) => {
 			let { max: n, unit: r } = t;
 			return ('NONE' === r && e === n) || e < n;
 		}),
 		r = _().findLast(
-			I,
+			m,
 			(e) => {
 				let { unit: n } = e;
 				return t(n);
@@ -194,7 +173,7 @@ function g(e, t) {
 			n
 		);
 	if (null != r) return r.unit;
-	let i = I.find((e) => {
+	let i = m.find((e) => {
 		let { unit: n } = e;
 		return t(n);
 	});
@@ -240,13 +219,7 @@ function A(e) {
 						return !1;
 					})(e, n, t)
 				);
-				if (null == r)
-					throw Error(
-						'Could not get the time unit in PlayTime with time: '
-							.concat(e, ' for type: ')
-							.concat(n, ' in location: ')
-							.concat(t)
-					);
+				if (null == r) throw Error('Could not get the time unit in PlayTime with time: '.concat(e, ' for type: ').concat(n, ' in location: ').concat(t));
 				return r;
 			}
 			getType() {

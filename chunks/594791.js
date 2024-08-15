@@ -1,18 +1,18 @@
 t.d(n, {
 	Z: function () {
-		return s;
+		return u;
 	}
 });
 var o = t(735250);
 t(470079);
 var r = t(481060),
 	a = t(626135),
-	c = t(695346),
-	i = t(981631),
+	i = t(695346),
+	c = t(981631),
 	l = t(689938);
-function s() {
-	let e = c.dN.useSetting(),
-		n = c.R$.useSetting();
+function u() {
+	let e = i.dN.useSetting(),
+		n = i.R$.useSetting();
 	return e
 		? null
 		: (0, o.jsx)(r.MenuCheckboxItem, {
@@ -20,11 +20,11 @@ function s() {
 				label: l.Z.Messages.PREVIEW_MARKDOWN,
 				action: () => {
 					let e = !n;
-					a.default.track(i.rMx.PREVIEW_MARKDOWN_TOGGLED, {
+					a.default.track(c.rMx.PREVIEW_MARKDOWN_TOGGLED, {
 						enabled: e,
-						location: { section: i.jXE.SETTINGS_CONTEXT_MENU }
+						location: { section: c.jXE.SETTINGS_CONTEXT_MENU }
 					}),
-						c.R$.updateSetting(e);
+						i.R$.updateSetting(e);
 				},
 				checked: n
 			});

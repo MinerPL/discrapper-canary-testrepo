@@ -20,8 +20,8 @@ var i = n(735250),
 	_ = n(131951),
 	f = n(626135),
 	E = n(120522),
-	g = n(386542),
-	C = n(933843),
+	C = n(386542),
+	g = n(933843),
 	I = n(746599),
 	x = n(1163),
 	T = n(738672),
@@ -51,14 +51,14 @@ function R(e) {
 		n = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
 		[s, l] = a.useState(!1),
 		{ preset: o } = (0, c.cj)([p.Z], () => p.Z.getState()),
-		g = (0, c.e7)([_.Z], () => _.Z.getGoLiveSource()),
+		C = (0, c.e7)([_.Z], () => _.Z.getGoLiveSource()),
 		x = a.useCallback(() => {
 			l(!0),
 				(0, E.S)(r.q.STREAM_HIGH_QUALITY)
 					.then((e) => {
 						if (e) {
 							if (
-								((0, I.J1)(!(0, C.mc)(M, b)),
+								((0, I.J1)(!(0, g.mc)(M, b)),
 								f.default.track(N.rMx.PERK_DEMO_OFFER_ACCEPTED, {
 									guild_id: t.guild_id,
 									channel_id: t.id,
@@ -67,7 +67,7 @@ function R(e) {
 									max_fps: b
 								}),
 								(0, I.cD)(!1),
-								null == g)
+								null == C)
 							)
 								return;
 							let e = {
@@ -78,15 +78,15 @@ function R(e) {
 								},
 								context: u.Yn.STREAM
 							};
-							null != g.desktopSource
+							null != C.desktopSource
 								? (e.desktopSettings = {
-										sourceId: g.desktopSource.id,
+										sourceId: C.desktopSource.id,
 										sound: !0
 									})
-								: null != g.cameraSource &&
+								: null != C.cameraSource &&
 									(e.cameraSettings = {
-										videoDeviceGuid: g.cameraSource.videoDeviceGuid,
-										audioDeviceGuid: g.cameraSource.audioDeviceGuid
+										videoDeviceGuid: C.cameraSource.videoDeviceGuid,
+										audioDeviceGuid: C.cameraSource.audioDeviceGuid
 									}),
 								h.Z.setGoLiveSource(e);
 						}
@@ -95,7 +95,7 @@ function R(e) {
 					.finally(() => {
 						l(!1);
 					});
-		}, [o, t, g]);
+		}, [o, t, C]);
 	return (0, i.jsx)(d.ShinyButton, {
 		fullWidth: !0,
 		pauseAnimation: n,
@@ -109,10 +109,7 @@ function R(e) {
 }
 function j(e) {
 	let { channel: t, hidden: n, onDismiss: a } = e,
-		s = x.Z.useExperiment(
-			{ location: 'StreamButtonDemoOptInPopoutContent' },
-			{ autoTrackExposure: !1 }
-		).extendedDemoDuration;
+		s = x.Z.useExperiment({ location: 'StreamButtonDemoOptInPopoutContent' }, { autoTrackExposure: !1 }).extendedDemoDuration;
 	return (0, i.jsxs)('div', {
 		className: l()(Z.optInPopout, Z.variant2OptInPopout, { [Z.hidden]: n }),
 		children: [
@@ -133,9 +130,7 @@ function j(e) {
 						(0, i.jsx)(o.x, {
 							className: Z.variant2Text,
 							variant: 'text-sm/medium',
-							children: s
-								? S.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_POPOUT_BODY
-								: S.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_POPOUT_BODY
+							children: s ? S.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_POPOUT_BODY : S.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_POPOUT_BODY
 						}),
 						(0, i.jsx)(R, { channel: t })
 					]
@@ -148,7 +143,7 @@ function L(e) {
 	let { channel: t, ...n } = e,
 		{
 			hqStreamingState: { hqStreamingOptInPopoutShouldShow: s }
-		} = (0, g.k)(r.q.STREAM_HIGH_QUALITY),
+		} = (0, C.k)(r.q.STREAM_HIGH_QUALITY),
 		{ enabled: l } = x.Z.useExperiment(
 			{ location: 'StreamButtonDemoOptInPopout' },
 			{

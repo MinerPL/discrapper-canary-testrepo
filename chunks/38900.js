@@ -28,12 +28,7 @@ t.Z = () =>
 									className: a()(c.skeleton, l.shopCard),
 									children: (0, s.jsxs)('div', {
 										className: c.cardBody,
-										children: [
-											(0, s.jsx)('div', { className: c.cardAvatar }),
-											(0, s.jsx)('div', { className: c.cardTitle }),
-											(0, s.jsx)('div', { className: c.cardDescription }),
-											(0, s.jsx)('div', { className: c.cardSummary })
-										]
+										children: [(0, s.jsx)('div', { className: c.cardAvatar }), (0, s.jsx)('div', { className: c.cardTitle }), (0, s.jsx)('div', { className: c.cardDescription }), (0, s.jsx)('div', { className: c.cardSummary })]
 									})
 								},
 								e

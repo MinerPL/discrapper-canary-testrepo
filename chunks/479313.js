@@ -3,7 +3,7 @@ n.d(t, {
 		return R;
 	},
 	G1: function () {
-		return m;
+		return I;
 	},
 	JR: function () {
 		return A;
@@ -35,7 +35,7 @@ var r = n(470079),
 	f = n(765104),
 	h = n(981631);
 let p = 30 * E.Z.Millis.SECOND;
-async function I(e, t) {
+async function m(e, t) {
 	let n, r;
 	if (!f.Z.shouldFetch(e, t)) return;
 	let i = Date.now();
@@ -60,7 +60,7 @@ async function I(e, t) {
 		receivedAt: Date.now()
 	});
 }
-async function m(e) {
+async function I(e) {
 	var t, n;
 	let r, i;
 	if (!f.Z.shouldFetch(e)) return;
@@ -75,12 +75,7 @@ async function m(e) {
 	} catch (e) {
 		r = new u.Hx(e);
 	}
-	let c =
-		(null == i ? void 0 : null === (t = i.body) || void 0 === t ? void 0 : t.summaries) instanceof Array
-			? i.body.summaries
-			: null !== (n = null == i ? void 0 : i.body) && void 0 !== n
-				? n
-				: [];
+	let c = (null == i ? void 0 : null === (t = i.body) || void 0 === t ? void 0 : t.summaries) instanceof Array ? i.body.summaries : null !== (n = null == i ? void 0 : i.body) && void 0 !== n ? n : [];
 	(c = a().takeRight(c, 75)),
 		l.Z.dispatch({
 			type: 'RECEIVE_CHANNEL_SUMMARIES',
@@ -102,7 +97,7 @@ function g() {
 	l.Z.dispatch({ type: 'TOGGLE_TOPICS_BAR' });
 }
 function S(e, t) {
-	null != e && null != t && I(e, t),
+	null != e && null != t && m(e, t),
 		l.Z.dispatch({
 			type: 'SET_SELECTED_SUMMARY',
 			channelId: e,
@@ -149,8 +144,7 @@ async function v() {
 async function O(e) {
 	let t,
 		n,
-		{ useQuickSwitcher: r = !0, useChannelAffinities: i = !0 } =
-			arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+		{ useQuickSwitcher: r = !0, useChannelAffinities: i = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
 	e = null != e ? e : [];
 	let a = Date.now();
 	if (
@@ -222,7 +216,7 @@ t.ZP = {
 		});
 	},
 	setHighlightedSummary: T,
-	fetchSummaries: m,
+	fetchSummaries: I,
 	fetchSummariesBulk: O,
 	useChannelSummaries: function (e) {
 		let { channelIds: t = [] } = e;

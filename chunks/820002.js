@@ -7,22 +7,10 @@ var r = n(182823),
 	i = n(706682),
 	a = n(612001);
 function s(e, t, n) {
-	let {
-		isDisabled: s = !1,
-		isReadOnly: o = !1,
-		value: l,
-		name: u,
-		children: c,
-		'aria-label': d,
-		'aria-labelledby': _,
-		validationState: E = 'valid',
-		isInvalid: f
-	} = e;
-	!(null != c) &&
-		!(null != d || null != _) &&
-		console.warn('If you do not provide children, you must specify an aria-label for accessibility');
+	let { isDisabled: s = !1, isReadOnly: o = !1, value: l, name: u, children: c, 'aria-label': d, 'aria-labelledby': _, validationState: E = 'valid', isInvalid: f } = e;
+	!(null != c) && !(null != d || null != _) && console.warn('If you do not provide children, you must specify an aria-label for accessibility');
 	let { pressProps: h, isPressed: p } = (0, a.r7)({ isDisabled: s }),
-		{ pressProps: I, isPressed: m } = (0, a.r7)({
+		{ pressProps: m, isPressed: I } = (0, a.r7)({
 			isDisabled: s || o,
 			onPress() {
 				t.toggle();
@@ -34,7 +22,7 @@ function s(e, t, n) {
 	return (
 		(0, r.y$)(n, t.isSelected, t.setSelected),
 		{
-			labelProps: (0, r.dG)(I, { onClick: (e) => e.preventDefault() }),
+			labelProps: (0, r.dG)(m, { onClick: (e) => e.preventDefault() }),
 			inputProps: (0, r.dG)(S, {
 				'aria-invalid': f || 'invalid' === E || void 0,
 				'aria-errormessage': e['aria-errormessage'],
@@ -50,7 +38,7 @@ function s(e, t, n) {
 				...g
 			}),
 			isSelected: t.isSelected,
-			isPressed: p || m,
+			isPressed: p || I,
 			isDisabled: s,
 			isReadOnly: o,
 			isInvalid: f || 'invalid' === E

@@ -60,9 +60,7 @@ function c(e) {
 						endTime: f.end
 					})
 				}),
-				!t && p && [i.ModalTransitionState.ENTERED, i.ModalTransitionState.HIDDEN].includes(p)
-					? (0, n.jsx)(o.Z, { sourceURL: c })
-					: null
+				!t && p && [i.ModalTransitionState.ENTERED, i.ModalTransitionState.HIDDEN].includes(p) ? (0, n.jsx)(o.Z, { sourceURL: c }) : null
 			]
 		})
 	);

@@ -158,17 +158,7 @@ function w(e, t, l) {
 			: null;
 }
 function k(e) {
-	let {
-			guildId: t,
-			roleRows: l = [],
-			channelRows: n = [],
-			selectedChannelIds: a = new Set(),
-			selectedRoleIds: o = new Set(),
-			onChange: s,
-			placeholder: i,
-			helperText: r,
-			className: d
-		} = e,
+	let { guildId: t, roleRows: l = [], channelRows: n = [], selectedChannelIds: a = new Set(), selectedRoleIds: o = new Set(), onChange: s, placeholder: i, helperText: r, className: d } = e,
 		m = (0, E.e7)([H.Z], () => H.Z.getRoles(t)),
 		x = c.useMemo(
 			() =>
@@ -399,8 +389,4 @@ function k(e) {
 		]
 	});
 }
-((i = a || (a = {}))[(i.CHANNELS = 0)] = 'CHANNELS'),
-	(i[(i.ROLES = 1)] = 'ROLES'),
-	((r = o || (o = {}))[(r.NONE = 0)] = 'NONE'),
-	(r[(r.LIST = 1)] = 'LIST'),
-	(r[(r.INPUT = 2)] = 'INPUT');
+((i = a || (a = {}))[(i.CHANNELS = 0)] = 'CHANNELS'), (i[(i.ROLES = 1)] = 'ROLES'), ((r = o || (o = {}))[(r.NONE = 0)] = 'NONE'), (r[(r.LIST = 1)] = 'LIST'), (r[(r.INPUT = 2)] = 'INPUT');

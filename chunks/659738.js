@@ -13,9 +13,7 @@
 		(d.test = function (t) {
 			return 'string' == typeof t && /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(t);
 		}),
-		'undefined' != typeof crypto
-			? (e = crypto)
-			: 'undefined' != typeof window && void 0 !== window.msCrypto && (e = window.msCrypto);
+		'undefined' != typeof crypto ? (e = crypto) : 'undefined' != typeof window && void 0 !== window.msCrypto && (e = window.msCrypto);
 	(e = e || a(636463)),
 		(t.exports = d),
 		(d.randomBytes = (function () {
@@ -41,35 +39,11 @@
 		})());
 	function o() {
 		var t,
-			e =
-				((t = 16),
-				(!i || n + 16 > d.BUFFER_SIZE) && ((n = 0), (i = d.randomBytes(d.BUFFER_SIZE))),
-				i.slice(n, (n += t)));
+			e = ((t = 16), (!i || n + 16 > d.BUFFER_SIZE) && ((n = 0), (i = d.randomBytes(d.BUFFER_SIZE))), i.slice(n, (n += t)));
 		return (e[6] = (15 & e[6]) | 64), (e[8] = (63 & e[8]) | 128), e;
 	}
 	function d() {
 		var t = o();
-		return (
-			s[t[0]] +
-			s[t[1]] +
-			s[t[2]] +
-			s[t[3]] +
-			'-' +
-			s[t[4]] +
-			s[t[5]] +
-			'-' +
-			s[t[6]] +
-			s[t[7]] +
-			'-' +
-			s[t[8]] +
-			s[t[9]] +
-			'-' +
-			s[t[10]] +
-			s[t[11]] +
-			s[t[12]] +
-			s[t[13]] +
-			s[t[14]] +
-			s[t[15]]
-		);
+		return s[t[0]] + s[t[1]] + s[t[2]] + s[t[3]] + '-' + s[t[4]] + s[t[5]] + '-' + s[t[6]] + s[t[7]] + '-' + s[t[8]] + s[t[9]] + '-' + s[t[10]] + s[t[11]] + s[t[12]] + s[t[13]] + s[t[14]] + s[t[15]];
 	}
 })();

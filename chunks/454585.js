@@ -31,25 +31,11 @@ let d = {
 		})
 	]),
 	p = c(o.Z.EMBED_TITLE_RULES, [(0, s.Z)(d)]),
-	I = c(o.Z.INLINE_REPLY_RULES, [(0, s.Z)(d)]),
-	m = c(o.Z.GUILD_VERIFICATION_FORM_RULES, [(0, s.Z)(d)]),
+	m = c(o.Z.INLINE_REPLY_RULES, [(0, s.Z)(d)]),
+	I = c(o.Z.GUILD_VERIFICATION_FORM_RULES, [(0, s.Z)(d)]),
 	T = c(o.Z.GUILD_EVENT_RULES, [(0, s.Z)(d)]),
 	g = c(o.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, s.Z)(d)]),
-	S = i().omit(
-		c(o.Z.RULES, [(0, s.Z)(d)]),
-		'paragraph',
-		'newline',
-		'strong',
-		'codeBlock',
-		'inlineCode',
-		'u',
-		'link',
-		'url',
-		'autolink',
-		'list',
-		'heading',
-		'subtext'
-	),
+	S = i().omit(c(o.Z.RULES, [(0, s.Z)(d)]), 'paragraph', 'newline', 'strong', 'codeBlock', 'inlineCode', 'u', 'link', 'url', 'autolink', 'list', 'heading', 'subtext'),
 	A = { text: o.Z.RULES.text };
 t.Z = {
 	combineAndInjectMentionRule: c,
@@ -65,14 +51,14 @@ t.Z = {
 	parseTopic: a.w4(f),
 	parseVoiceChannelStatus: a.w4(h),
 	parseEmbedTitle: a.w4(p),
-	parseInlineReply: a.w4(I),
-	parseGuildVerificationFormRule: a.w4(m),
+	parseInlineReply: a.w4(m),
+	parseGuildVerificationFormRule: a.w4(I),
 	parseGuildEventDescription: a.w4(T),
 	parseAutoModerationSystemMessage: a.w4(g),
 	parseForumPostGuidelines: a.w4(E),
 	parseToAST: a._p(_),
 	parseTopicToAST: a._p(f),
 	parseEmbedTitleToAST: a._p(p),
-	parseInlineReplyToAST: a._p(I),
+	parseInlineReplyToAST: a._p(m),
 	parseAutoModerationSystemMessageToAST: a._p(g)
 };

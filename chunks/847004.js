@@ -67,16 +67,12 @@ function x(e) {
 				children: [
 					(0, n.jsx)(r.Heading, {
 						variant: 'heading-md/semibold',
-						children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_PRICE_RESELECTION_HEADER.format({
-							tierName: t.listings[0].name
-						})
+						children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_PRICE_RESELECTION_HEADER.format({ tierName: t.listings[0].name })
 					}),
 					(0, n.jsx)(r.Text, {
 						variant: 'text-sm/normal',
 						className: m.bodyText,
-						children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_PRICE_RESELECTION_BODY.format({
-							price: (0, o.T4)(t.listings[0].price_tier, d.pKx.USD)
-						})
+						children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_PRICE_RESELECTION_BODY.format({ price: (0, o.T4)(t.listings[0].price_tier, d.pKx.USD) })
 					}),
 					l.map((e, t) =>
 						(0, n.jsx)(

@@ -13,8 +13,8 @@ var r = n(274616),
 	f = n(998502),
 	h = n(981631);
 let p = new i.Z('Games'),
-	I = {},
-	m = 0,
+	m = {},
+	I = 0,
 	T = null;
 function g() {
 	return null != T
@@ -59,13 +59,13 @@ async function N(e) {
 	)
 		throw Error('No remaining launchable queries');
 	let t = Date.now();
-	t > m && ((m = t + 3600000), (I = {}));
+	t > I && ((I = t + 3600000), (m = {}));
 	let n = await g();
 	for (let t of e) {
-		let e = I[t.id];
+		let e = m[t.id];
 		if (null != e) return e;
 		let r = await new Promise((e) => n.findLaunchable(t, e));
-		if (null != r) return (I[t.id] = r), r;
+		if (null != r) return (m[t.id] = r), r;
 	}
 	throw Error('could not find launchable');
 }
@@ -83,9 +83,7 @@ function O(e) {
 	return (
 		p.info('launch', e),
 		new Promise((t, n) => {
-			null == E.Z.safeParseWithQuery(e.launchTarget)
-				? n(Error('Failed to parse launch target. '.concat(e.launchTarget)))
-				: (window.open(e.launchTarget), t([]));
+			null == E.Z.safeParseWithQuery(e.launchTarget) ? n(Error('Failed to parse launch target. '.concat(e.launchTarget))) : (window.open(e.launchTarget), t([]));
 		})
 	);
 }
@@ -100,25 +98,17 @@ t.Z = {
 			.catch(() => !1),
 	launch: (e) => N(S(e)).then(O),
 	launchDispatchApplication(e, t, n, i, s) {
-		let {
-			launchOptions: l,
-			defaultLaunchOptionId: u,
-			installPath: _,
-			applicationId: E,
-			branchId: f,
-			buildId: p,
-			shouldPatch: I
-		} = e;
+		let { launchOptions: l, defaultLaunchOptionId: u, installPath: _, applicationId: E, branchId: f, buildId: p, shouldPatch: m } = e;
 		if (null == l || null == u || null == _) throw Error("Couldn't construct launchable for ".concat(e.applicationId));
 		null == s && (s = u);
-		let m = l[s];
-		if (null == m) throw Error("Couldn't construct launchable for ".concat(e.applicationId, '. No launch option.'));
+		let I = l[s];
+		if (null == I) throw Error("Couldn't construct launchable for ".concat(e.applicationId, '. No launch option.'));
 		return (0, r.o)([f])
 			.then((e) => {
 				let t = e[0];
 				if (null == t) return Promise.reject(Error('branch is null'));
 				let { liveBuildId: n } = t;
-				if (I && n !== p) return Promise.reject(Error('live build id changed'));
+				if (m && n !== p) return Promise.reject(Error('live build id changed'));
 			})
 			.then(() => d.Z.runLaunchSetup(E, f))
 			.then(() => {
@@ -130,16 +120,14 @@ t.Z = {
 						DISCORD_CURRENT_BRANCH: i,
 						DISCORD_STORAGE_PATH: h.SRg.ROOT_STORAGE_PATH(e, o.default.getId())
 					};
-				return d.Z.launch(E, f, m.name, r);
+				return d.Z.launch(E, f, I.name, r);
 			});
 	},
 	removeShortcuts: (e) =>
 		(0, _.isWindows)()
 			? g().then((t) => {
 					var n, r;
-					return (
-						null !== (r = null === (n = t.removeShortcuts) || void 0 === n ? void 0 : n.call(t, e)) && void 0 !== r && r
-					);
+					return null !== (r = null === (n = t.removeShortcuts) || void 0 === n ? void 0 : n.call(t, e)) && void 0 !== r && r;
 				})
 			: Promise.resolve(!1),
 	createShortcuts(e, t, n, r, i) {
@@ -148,11 +136,7 @@ t.Z = {
 			s = ''.concat(i, '\\icon.ico');
 		return g().then((r) => {
 			var i, o;
-			return (
-				null !== (o = null === (i = r.createShortcuts) || void 0 === i ? void 0 : i.call(r, e, t, n, a, s)) &&
-				void 0 !== o &&
-				o
-			);
+			return null !== (o = null === (i = r.createShortcuts) || void 0 === i ? void 0 : i.call(r, e, t, n, a, s)) && void 0 !== o && o;
 		});
 	},
 	isGameLaunchable: (e) =>
@@ -166,11 +150,7 @@ t.Z = {
 	isProtocolRegistered: (e) =>
 		g().then((t) => {
 			var n, r;
-			return (
-				null !== (r = null === (n = t.isProtocolSchemeRegistered) || void 0 === n ? void 0 : n.call(t, e)) &&
-				void 0 !== r &&
-				r
-			);
+			return null !== (r = null === (n = t.isProtocolSchemeRegistered) || void 0 === n ? void 0 : n.call(t, e)) && void 0 !== r && r;
 		}),
 	setRecentGames(e) {
 		g()

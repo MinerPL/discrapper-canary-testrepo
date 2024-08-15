@@ -24,8 +24,7 @@ function E(e) {
 				children: [
 					(0, r.jsx)(u.ef, {
 						icon: i.UserPlayIcon,
-						tooltipText:
-							null !== (t = p.tooltip) && void 0 !== t ? t : d.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_LISTEN_ALONG,
+						tooltipText: null !== (t = p.tooltip) && void 0 !== t ? t : d.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_LISTEN_ALONG,
 						disabled: p.disabled,
 						submitting: p.loading,
 						fullWidth: !0,
@@ -40,10 +39,7 @@ function E(e) {
 							return (0, r.jsx)(u.tG, {
 								...e,
 								icon: () => (0, r.jsx)(l.Z, {}),
-								text:
-									null !== (t = h.label) && void 0 !== t
-										? t
-										: d.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_PLAY_ON_SPOTIFY,
+								text: null !== (t = h.label) && void 0 !== t ? t : d.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_PLAY_ON_SPOTIFY,
 								disabled: h.disabled,
 								submitting: h.loading,
 								wrapperClassName: _.primaryButton,

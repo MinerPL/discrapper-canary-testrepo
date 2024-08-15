@@ -95,8 +95,7 @@ function p(e) {
 							(0, r.jsx)(c.Z, {
 								emojiId: null === (o = e.emoji) || void 0 === o ? void 0 : o.id,
 								emojiName: null === (l = e.emoji) || void 0 === l ? void 0 : l.name,
-								animated:
-									null !== (u = null === (i = e.emoji) || void 0 === i ? void 0 : i.animated) && void 0 !== u && u
+								animated: null !== (u = null === (i = e.emoji) || void 0 === i ? void 0 : i.animated) && void 0 !== u && u
 							}),
 						(0, r.jsx)(s.Text, {
 							variant: 'text-sm/normal',
@@ -133,8 +132,7 @@ function p(e) {
 									(0, r.jsx)(c.Z, {
 										emojiId: null === (n = e.emoji) || void 0 === n ? void 0 : n.id,
 										emojiName: null === (t = e.emoji) || void 0 === t ? void 0 : t.name,
-										animated:
-											null !== (a = null === (o = e.emoji) || void 0 === o ? void 0 : o.animated) && void 0 !== a && a
+										animated: null !== (a = null === (o = e.emoji) || void 0 === o ? void 0 : o.animated) && void 0 !== a && a
 									}),
 								(0, r.jsx)(s.Text, {
 									variant: 'text-sm/normal',

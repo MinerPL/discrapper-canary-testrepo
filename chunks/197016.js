@@ -16,18 +16,18 @@ function c(e) {
 		f = t ? l.d : l.Z,
 		h = n.isBroadcastChannel(),
 		p = (0, o.zW)(n.id),
-		{ Component: I, events: m } = (0, i.K)();
+		{ Component: m, events: I } = (0, i.K)();
 	return (0, r.jsx)(f, {
 		...E,
 		onClick: () => {
 			p && (0, s.b_)(), a.default.disconnect(), null == c || c();
 		},
-		iconComponent: I,
+		iconComponent: m,
 		onMouseEnter: (e) => {
-			null == d || d(e), m.onMouseEnter();
+			null == d || d(e), I.onMouseEnter();
 		},
 		onMouseLeave: (e) => {
-			null == _ || _(e), m.onMouseLeave();
+			null == _ || _(e), I.onMouseLeave();
 		},
 		label: p ? u.Z.Messages.STOP_BROADCASTING : h ? u.Z.Messages.LEAVE_BROADCAST : u.Z.Messages.DISCONNECT_SELF
 	});

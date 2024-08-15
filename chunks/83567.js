@@ -29,13 +29,10 @@ t.Z = {
 			(0, d.bu)(t.transport);
 			let _ = (0, d._f)(t.application),
 				h = s.Z.get(n);
-			if (null == h)
-				throw new c.Z({ errorCode: m.lT.INVALID_PROVIDER }, 'Platform not found for provider "'.concat(n, '"'));
+			if (null == h) throw new c.Z({ errorCode: m.lT.INVALID_PROVIDER }, 'Platform not found for provider "'.concat(n, '"'));
 			if (n === E.ABu.AMAZON_MUSIC) {
-				if (!I.has(_))
-					throw new c.Z({ errorCode: m.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
-			} else
-				throw new c.Z({ errorCode: m.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
+				if (!I.has(_)) throw new c.Z({ errorCode: m.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
+			} else throw new c.Z({ errorCode: m.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
 			return new Promise(async (e, t) => {
 				let s = l.Z.getAccount(null, n);
 				if (null == s) {
@@ -61,11 +58,7 @@ t.Z = {
 				} else
 					try {
 						let t = await a.Z.refreshAccessToken(h.type, s.id);
-						if (null == t)
-							throw new c.Z(
-								{ errorCode: m.lT.OAUTH2_ERROR },
-								'Refreshing access token did not return a new access token'
-							);
+						if (null == t) throw new c.Z({ errorCode: m.lT.OAUTH2_ERROR }, 'Refreshing access token did not return a new access token');
 						e({ access_token: t });
 					} catch (e) {
 						t(e);
@@ -84,18 +77,14 @@ t.Z = {
 			(0, d.bu)(t.transport);
 			let i = (0, d._f)(t.application),
 				r = s.Z.get(n);
-			if (null == r)
-				throw new c.Z({ errorCode: m.lT.INVALID_PROVIDER }, 'Platform not found for provider "'.concat(n, '"'));
+			if (null == r) throw new c.Z({ errorCode: m.lT.INVALID_PROVIDER }, 'Platform not found for provider "'.concat(n, '"'));
 			if (n === E.ABu.AMAZON_MUSIC) {
-				if (!I.has(i))
-					throw new c.Z({ errorCode: m.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
-			} else
-				throw new c.Z({ errorCode: m.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
+				if (!I.has(i)) throw new c.Z({ errorCode: m.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
+			} else throw new c.Z({ errorCode: m.lT.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
 			let o = l.Z.getAccount(null, n);
 			if (null == o) throw new c.Z({ errorCode: m.lT.NO_CONNECTION_FOUND }, 'No connection found');
 			let u = await a.Z.refreshAccessToken(r.type, o.id);
-			if (null == u)
-				throw new c.Z({ errorCode: m.lT.OAUTH2_ERROR }, 'Refreshing access token did not return a new access token');
+			if (null == u) throw new c.Z({ errorCode: m.lT.OAUTH2_ERROR }, 'Refreshing access token did not return a new access token');
 			return { access_token: u };
 		}
 	}

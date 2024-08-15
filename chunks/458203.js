@@ -27,14 +27,8 @@ t.Z = function (e) {
 				languageCode: null !== (e = n.searchLanguageCode) && void 0 !== e ? e : (0, c.X)()
 			});
 		}, [t]),
-		I =
-			n === d.Hk
-				? u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER
-				: u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({ categoryName: h }),
-		g =
-			n === d.Hk
-				? u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY
-				: u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({ onClick: m });
+		I = n === d.Hk ? u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({ categoryName: h }),
+		g = n === d.Hk ? u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY : u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({ onClick: m });
 	return (0, i.jsxs)('div', {
 		className: _.container,
 		children: [

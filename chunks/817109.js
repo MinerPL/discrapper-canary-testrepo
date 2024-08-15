@@ -22,12 +22,7 @@ class i {
 		return null != this.fields[e] ? this.fields[e][0] : null;
 	}
 	constructor(e, t, n = 'An unexpected error occurred.') {
-		r(this, 'message', void 0),
-			r(this, 'code', void 0),
-			r(this, 'retryAfter', void 0),
-			r(this, 'fields', void 0),
-			r(this, 'error', void 0),
-			r(this, 'status', void 0);
+		r(this, 'message', void 0), r(this, 'code', void 0), r(this, 'retryAfter', void 0), r(this, 'fields', void 0), r(this, 'error', void 0), r(this, 'status', void 0);
 		let {
 			message: i,
 			code: a,
@@ -41,11 +36,7 @@ class i {
 					code: t
 				};
 			if (null != e.body) {
-				if (
-					null != e.body.message &&
-					!Array.isArray(e.body.message) &&
-					(null == e.body.code || !Array.isArray(e.body.code))
-				)
+				if (null != e.body.message && !Array.isArray(e.body.message) && (null == e.body.code || !Array.isArray(e.body.code)))
 					return {
 						message: e.body.message,
 						code: e.body.code,
@@ -64,11 +55,6 @@ class i {
 			}
 			return {};
 		})(e, t);
-		(this.message = i || n),
-			(this.retryAfter = s),
-			(this.code = a || -1),
-			(this.fields = o || {}),
-			(this.status = l),
-			(this.error = Error(i));
+		(this.message = i || n), (this.retryAfter = s), (this.code = a || -1), (this.fields = o || {}), (this.status = l), (this.error = Error(i));
 	}
 }

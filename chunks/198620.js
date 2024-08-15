@@ -6,7 +6,7 @@ n.d(t, {
 		return _;
 	},
 	k5: function () {
-		return m;
+		return I;
 	},
 	q5: function () {
 		return E;
@@ -19,10 +19,7 @@ var r,
 	s = n(591759),
 	o = n(796798),
 	l = n(981631);
-let u = new Set([
-		window.GLOBAL_ENV.CDN_HOST,
-		null === (r = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === r ? void 0 : r.substring(2)
-	]),
+let u = new Set([window.GLOBAL_ENV.CDN_HOST, null === (r = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === r ? void 0 : r.substring(2)]),
 	c = new Set(['/attachments/', '/ephemeral-attachments/']),
 	d = 1 * a.Z.Millis.HOUR;
 function _(e) {
@@ -51,12 +48,12 @@ function p(e) {
 	let t = s.Z.toURLSafe(e.url);
 	return !!(null != t && _(t)) && f(t);
 }
-function I(e) {
+function m(e) {
 	var t;
 	return p(e.image) || (null === (t = e.images) || void 0 === t ? void 0 : t.some(p)) || p(e.video);
 }
-function m(e) {
-	return e.attachments.some(h) || e.embeds.some(I);
+function I(e) {
+	return e.attachments.some(h) || e.embeds.some(m);
 }
 async function T(e) {
 	let t = await i.tn.post({

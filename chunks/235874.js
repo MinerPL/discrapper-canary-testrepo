@@ -38,28 +38,7 @@ let E = Object.freeze({
 });
 class f extends (i = o.Component) {
 	render() {
-		let {
-			children: e,
-			shouldShow: t,
-			position: n,
-			onRequestOpen: r,
-			onRequestClose: i,
-			align: a,
-			autoInvert: o,
-			fixed: l,
-			nudgeAlignIntoViewport: c,
-			useRawTargetDimensions: d,
-			spacing: _,
-			onShiftClick: E,
-			positionKey: f,
-			preload: h,
-			disablePointerEvents: p,
-			ignoreModalClicks: I,
-			closeOnScroll: m,
-			useMouseEnter: T,
-			renderPopout: g,
-			layerContext: S
-		} = this.props;
+		let { children: e, shouldShow: t, position: n, onRequestOpen: r, onRequestClose: i, align: a, autoInvert: o, fixed: l, nudgeAlignIntoViewport: c, useRawTargetDimensions: d, spacing: _, onShiftClick: E, positionKey: f, preload: h, disablePointerEvents: p, ignoreModalClicks: m, closeOnScroll: I, useMouseEnter: T, renderPopout: g, layerContext: S } = this.props;
 		return (0, s.jsx)(u.H, {
 			ref: this.ref,
 			preload: h,
@@ -93,8 +72,8 @@ class f extends (i = o.Component) {
 			onShiftClick: E,
 			positionKey: f,
 			disablePointerEvents: p,
-			ignoreModalClicks: I,
-			closeOnScroll: m,
+			ignoreModalClicks: m,
+			closeOnScroll: I,
 			useMouseEnter: T,
 			layerContext: S,
 			children: e
@@ -131,17 +110,7 @@ function h(e) {
 	o.useLayoutEffect(() => {
 		if (i > 0) {
 			var e, t, n, a, s;
-			null === (s = r.current) ||
-				void 0 === s ||
-				null === (a = s.ref) ||
-				void 0 === a ||
-				null === (n = a.current) ||
-				void 0 === n ||
-				null === (t = n.layerRef) ||
-				void 0 === t ||
-				null === (e = t.current) ||
-				void 0 === e ||
-				e.updatePosition();
+			null === (s = r.current) || void 0 === s || null === (a = s.ref) || void 0 === a || null === (n = a.current) || void 0 === n || null === (t = n.layerRef) || void 0 === t || null === (e = t.current) || void 0 === e || e.updatePosition();
 		}
 	}, [i]),
 		o.useEffect(() => {
@@ -161,16 +130,7 @@ function h(e) {
 	}
 	function E() {
 		var e, t, n, i;
-		let a =
-				null === (i = r.current) || void 0 === i
-					? void 0
-					: null === (n = i.ref) || void 0 === n
-						? void 0
-						: null === (t = n.current) || void 0 === t
-							? void 0
-							: null === (e = t.domElementRef) || void 0 === e
-								? void 0
-								: e.current,
+		let a = null === (i = r.current) || void 0 === i ? void 0 : null === (n = i.ref) || void 0 === n ? void 0 : null === (t = n.current) || void 0 === t ? void 0 : null === (e = t.domElementRef) || void 0 === e ? void 0 : e.current,
 			o = Math.max(100, null == a ? 100 : a.offsetWidth - 20);
 		return (0, s.jsx)('div', {
 			className: d.loader,

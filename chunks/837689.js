@@ -32,12 +32,10 @@ function T(e, t, n) {
 let S = 'PremiumServerDriveAnnouncementModal';
 class f extends l.Z {
 	_initialize() {
-		r.Z.subscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal),
-			r.Z.subscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
+		r.Z.subscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), r.Z.subscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
 	}
 	_terminate() {
-		r.Z.unsubscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal),
-			r.Z.unsubscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
+		r.Z.unsubscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), r.Z.unsubscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
 	}
 	constructor(...e) {
 		super(...e),
@@ -48,11 +46,7 @@ class f extends l.Z {
 				});
 				if (null != a)
 					return (
-						!!(
-							!1 !== t ||
-							(null == a ? void 0 : a.contentIdentifier) !== 'summer_bogo_content' ||
-							(await (0, I.k)())
-						) &&
+						!!(!1 !== t || (null == a ? void 0 : a.contentIdentifier) !== 'summer_bogo_content' || (await (0, I.k)())) &&
 						((0, s.closeModal)(S),
 						(0, s.openModalLazy)(
 							async () => {
@@ -89,13 +83,8 @@ class f extends l.Z {
 			}),
 			T(this, 'mayShowAnnouncementModal', async () => {
 				if ((await (0, I.l2)(), !u.s.isDisallowPopupsSet())) {
-					if (
-						!(0, s.hasAnyModalOpen)() &&
-						_.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled &&
-						!a.tq
-					) {
-						for (let e of await (0, h.H)(this.getOfferFromStore()))
-							if (await this.maybeOpenServerDriveAnnouncementModal(e, !1)) break;
+					if (!(0, s.hasAnyModalOpen)() && _.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !a.tq) {
+						for (let e of await (0, h.H)(this.getOfferFromStore())) if (await this.maybeOpenServerDriveAnnouncementModal(e, !1)) break;
 					}
 				}
 			});

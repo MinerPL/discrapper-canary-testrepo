@@ -57,15 +57,7 @@ class Z extends a.PureComponent {
 				});
 	}
 	render() {
-		let {
-			guild: e,
-			inChannel: t,
-			isInGuild: n,
-			isLurking: a,
-			isAuthenticated: s,
-			className: l,
-			pageSize: o
-		} = this.props;
+		let { guild: e, inChannel: t, isInGuild: n, isLurking: a, isAuthenticated: s, className: l, pageSize: o } = this.props;
 		if (t && n) return null;
 		let d = new T.ZP(e),
 			u = N.Z.Messages.LURKER_MODE_VIEW_GUILD,

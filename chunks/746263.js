@@ -25,18 +25,7 @@ let E = (e) => {
 			children: [
 				(0, n.jsx)('div', {
 					className: _.previewCardImage,
-					style: {
-						backgroundImage: 'url('.concat(
-							null === (a = i.config) || void 0 === a
-								? void 0
-								: null === (t = a.effects) || void 0 === t
-									? void 0
-									: null === (s = t[0]) || void 0 === s
-										? void 0
-										: s.base64,
-							')'
-						)
-					}
+					style: { backgroundImage: 'url('.concat(null === (a = i.config) || void 0 === a ? void 0 : null === (t = a.effects) || void 0 === t ? void 0 : null === (s = t[0]) || void 0 === s ? void 0 : s.base64, ')') }
 				}),
 				(0, n.jsxs)('div', {
 					className: r()(_.previewCardFooter, _.row),

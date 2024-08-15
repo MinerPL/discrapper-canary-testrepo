@@ -20,8 +20,8 @@ var a = n(120356),
 	_ = n(925329),
 	f = n(554747),
 	E = n(854698),
-	g = n(897669),
-	C = n(665149),
+	C = n(897669),
+	g = n(665149),
 	I = n(984370),
 	x = n(910611),
 	T = n(454585),
@@ -90,7 +90,7 @@ function G(e) {
 		null != n &&
 			(t = (0, i.jsxs)(i.Fragment, {
 				children: [
-					(0, i.jsx)(C.ZP.Divider, { className: U.divider }),
+					(0, i.jsx)(g.ZP.Divider, { className: U.divider }),
 					(0, i.jsx)(_.Z, {
 						game: n,
 						className: U.activityIcon
@@ -113,7 +113,7 @@ function G(e) {
 			n = a.stream;
 		t = (0, i.jsxs)(i.Fragment, {
 			children: [
-				(0, i.jsx)(C.ZP.Divider, { className: U.divider }),
+				(0, i.jsx)(g.ZP.Divider, { className: U.divider }),
 				(0, i.jsx)(H, {
 					user: e,
 					channel: s,
@@ -129,7 +129,7 @@ function G(e) {
 		});
 	} else
 		d &&
-			(t = (0, i.jsx)(g.Z, {
+			(t = (0, i.jsx)(C.Z, {
 				guildEvent: o,
 				recurrenceId: c
 			}));
@@ -149,7 +149,7 @@ function V(e) {
 			[t.id]
 		),
 		E = (0, m.ZP)(t),
-		g = (0, p.KS)(t),
+		C = (0, p.KS)(t),
 		[S] = (0, d.Z)((null == f ? void 0 : f.type) === O.fO.ACTIVITY ? [f.id] : []),
 		Z = k.Z.Messages.VOICE_CHANNEL;
 	t.isDM() ? (Z = k.Z.Messages.DM) : t.isGroupDM() && (Z = k.Z.Messages.GROUP_DM);
@@ -205,7 +205,7 @@ function V(e) {
 	return (0, i.jsxs)('div', {
 		className: U.subtitleContainer,
 		children: [
-			(0, i.jsxs)(C.ZP, {
+			(0, i.jsxs)(g.ZP, {
 				onDoubleClick: I.O,
 				transparent: !0,
 				className: (0, A.Q)(D.BR.DARK),
@@ -219,14 +219,14 @@ function V(e) {
 					exitFullScreen: _
 				}),
 				children: [
-					null != g
-						? (0, i.jsx)(C.ZP.Icon, {
-								icon: g,
+					null != C
+						? (0, i.jsx)(g.ZP.Icon, {
+								icon: C,
 								disabled: !0,
 								'aria-label': Z
 							})
 						: null,
-					(0, i.jsx)(C.ZP.Title, {
+					(0, i.jsx)(g.ZP.Title, {
 						children: (0, i.jsxs)(i.Fragment, {
 							children: [
 								E,

@@ -26,33 +26,15 @@ function p(e) {
 		E = (0, o.e7)([u.default], () => u.default.getUser(e.author_id));
 	if (null == _ || null == E) return {};
 	let f = e.extra.entries[0],
-		h =
-			null !==
-				(i =
-					null !== (r = (0, l.Z)(_)) && void 0 !== r
-						? r
-						: null === (t = _.assets) || void 0 === t
-							? void 0
-							: t.small_image) && void 0 !== i
-				? i
-				: f.media.image_url,
-		p =
-			null !==
-				(s =
-					null !== (a = _.state) && void 0 !== a
-						? a
-						: null === (n = f.media.artists[0]) || void 0 === n
-							? void 0
-							: n.name) && void 0 !== s
-				? s
-				: f.media.title,
-		I = null !== (d = _.details) && void 0 !== d ? d : f.media.title;
+		h = null !== (i = null !== (r = (0, l.Z)(_)) && void 0 !== r ? r : null === (t = _.assets) || void 0 === t ? void 0 : t.small_image) && void 0 !== i ? i : f.media.image_url,
+		p = null !== (s = null !== (a = _.state) && void 0 !== a ? a : null === (n = f.media.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== s ? s : f.media.title,
+		m = null !== (d = _.details) && void 0 !== d ? d : f.media.title;
 	return {
 		activity: _,
 		artist: p,
 		currentEntry: f,
 		imageUrl: h,
-		title: I,
+		title: m,
 		user: E
 	};
 }

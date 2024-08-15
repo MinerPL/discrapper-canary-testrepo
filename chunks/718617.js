@@ -18,20 +18,14 @@ var i = n(735250),
 	_ = n(313692),
 	f = n(596443),
 	E = n(50493),
-	g = n(981631);
-function C(e, t) {
+	C = n(981631);
+function g(e, t) {
 	return (n) => {
 		if (0 === n) return 'auto';
 		let i = 'forwards' === t.current,
 			a = n > 0,
 			s = !1;
-		return (
-			a && i && 'left' === e && (s = !0),
-			a && !i && 'right' === e && (s = !0),
-			!a && i && 'right' === e && (s = !0),
-			!a && !i && 'left' === e && (s = !0),
-			s ? 'calc('.concat(100 * Math.abs(n), '% + ').concat(Math.round(12 * Math.abs(n)), 'px)') : 'auto'
-		);
+		return a && i && 'left' === e && (s = !0), a && !i && 'right' === e && (s = !0), !a && i && 'right' === e && (s = !0), !a && !i && 'left' === e && (s = !0), s ? 'calc('.concat(100 * Math.abs(n), '% + ').concat(Math.round(12 * Math.abs(n)), 'px)') : 'auto';
 	};
 }
 function I(e) {
@@ -51,7 +45,7 @@ function I(e) {
 		),
 		L = a.useMemo(
 			() => ({
-				[g.EkH.CLOSE_MODAL]: {
+				[C.EkH.CLOSE_MODAL]: {
 					binds: ['esc'],
 					comboKeysBindGlobal: !0,
 					action() {
@@ -96,8 +90,8 @@ function I(e) {
 						...(R.enabled
 							? { opacity: null === (a = e.value) || void 0 === a ? void 0 : a.to((e) => 1 - Math.abs(e)) }
 							: {
-									left: null === (l = e.value) || void 0 === l ? void 0 : l.to(C('left', b)),
-									right: null === (r = e.value) || void 0 === r ? void 0 : r.to(C('right', b))
+									left: null === (l = e.value) || void 0 === l ? void 0 : l.to(g('left', b)),
+									right: null === (r = e.value) || void 0 === r ? void 0 : r.to(g('right', b))
 								})
 					},
 					children: (function (e) {

@@ -46,33 +46,15 @@ function f() {
 					var t;
 					let n = d.Z.getChannel(e);
 					if (null == n || E.Z.isOpen(e)) return !1;
-					a.Z.wait(() => s.bA(n.id, p.NYg.VIDEO, { channel: n })),
-						null === (t = h.Z.getRTCConnection()) || void 0 === t || t.setPipOpen(!0),
-						(i = e);
+					a.Z.wait(() => s.bA(n.id, p.NYg.VIDEO, { channel: n })), null === (t = h.Z.getRTCConnection()) || void 0 === t || t.setPipOpen(!0), (i = e);
 				})(e));
 }
 class C extends r.Z {
 	_initialize() {
-		m.Z.addChangeListener(f),
-			I.Z.addChangeListener(f),
-			h.Z.addChangeListener(f),
-			g.Z.addChangeListener(f),
-			u.Z.addChangeListener(f),
-			c.Z.addChangeListener(f),
-			o.Z.addChangeListener(f),
-			_.Z.addChangeListener(f),
-			l.ZP.addChangeListener(f);
+		m.Z.addChangeListener(f), I.Z.addChangeListener(f), h.Z.addChangeListener(f), g.Z.addChangeListener(f), u.Z.addChangeListener(f), c.Z.addChangeListener(f), o.Z.addChangeListener(f), _.Z.addChangeListener(f), l.ZP.addChangeListener(f);
 	}
 	_terminate() {
-		m.Z.removeChangeListener(f),
-			I.Z.removeChangeListener(f),
-			h.Z.removeChangeListener(f),
-			g.Z.removeChangeListener(f),
-			u.Z.removeChangeListener(f),
-			c.Z.removeChangeListener(f),
-			o.Z.removeChangeListener(f),
-			_.Z.removeChangeListener(f),
-			l.ZP.removeChangeListener(f);
+		m.Z.removeChangeListener(f), I.Z.removeChangeListener(f), h.Z.removeChangeListener(f), g.Z.removeChangeListener(f), u.Z.removeChangeListener(f), c.Z.removeChangeListener(f), o.Z.removeChangeListener(f), _.Z.removeChangeListener(f), l.ZP.removeChangeListener(f);
 	}
 }
 t.Z = new C();

@@ -90,27 +90,7 @@ var a = t(990547),
 let eb = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
 	eZ = eO.Z,
 	ev = (e) => {
-		let {
-			unseenGiftCount: s,
-			showPrepaidPaymentPastDueWarning: ev,
-			impressionSource: ej,
-			numOfPendingFamilyRequests: eB,
-			isOverlaySupported: eU,
-			isClipsBetaTagShowing: eG = !1,
-			shouldMergeGameSettings: eF,
-			isUserSettingsSearchEnabled: ey,
-			isKeywordFilteringEnabled: eV,
-			isStaff: eY,
-			isInappropriateConversationWarningEnabled: ew,
-			paymentsBlocked: eH,
-			isEligibleForQuests: ek,
-			showGiftNitro: eW,
-			isStricterMessageRequestsEnabled: eK,
-			hasLibraryApplication: ez,
-			hasTOTPEnabled: eQ,
-			canBroadcastActivity: eX,
-			developerMode: eq
-		} = e;
+		let { unseenGiftCount: s, showPrepaidPaymentPastDueWarning: ev, impressionSource: ej, numOfPendingFamilyRequests: eB, isOverlaySupported: eU, isClipsBetaTagShowing: eG = !1, shouldMergeGameSettings: eF, isUserSettingsSearchEnabled: ey, isKeywordFilteringEnabled: eV, isStaff: eY, isInappropriateConversationWarningEnabled: ew, paymentsBlocked: eH, isEligibleForQuests: ek, showGiftNitro: eW, isStricterMessageRequestsEnabled: eK, hasLibraryApplication: ez, hasTOTPEnabled: eQ, canBroadcastActivity: eX, developerMode: eq } = e;
 		return Object.freeze({
 			[ex.s6.SEARCH_NO_RESULTS]: {
 				section: E.ID.CUSTOM,
@@ -286,31 +266,17 @@ let eb = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
 			},
 			[ex.s6.PRIVACY_SENSITIVE_MEDIA]: {
 				section: eM.oAB.PRIVACY_AND_SAFETY,
-				searchableTitles: [
-					eP.Z.Messages.OBSCURED_CONTENT_SETTINGS_HEADER,
-					eP.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_FILTER,
-					eP.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_BLUR,
-					eP.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_SENSITIVE_CONTENT,
-					eP.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_EXPLICIT
-				],
+				searchableTitles: [eP.Z.Messages.OBSCURED_CONTENT_SETTINGS_HEADER, eP.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_FILTER, eP.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_BLUR, eP.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_SENSITIVE_CONTENT, eP.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_EXPLICIT],
 				parent: ex.s6.PRIVACY_USER_SETTINGS
 			},
 			[ex.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER]: {
 				section: eM.oAB.PRIVACY_AND_SAFETY,
-				searchableTitles: [
-					eP.Z.Messages.SETTINGS_DM_SPAM_FILTER,
-					eP.Z.Messages.SETTINGS_DM_SPAM_FILTER_SEARCH_TERM_MESSAGES,
-					eP.Z.Messages.SETTINGS_DM_SPAM_FILTER_SEARCH_TERM_INBOX
-				],
+				searchableTitles: [eP.Z.Messages.SETTINGS_DM_SPAM_FILTER, eP.Z.Messages.SETTINGS_DM_SPAM_FILTER_SEARCH_TERM_MESSAGES, eP.Z.Messages.SETTINGS_DM_SPAM_FILTER_SEARCH_TERM_INBOX],
 				parent: ex.s6.PRIVACY_USER_SETTINGS
 			},
 			[ex.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS]: {
 				section: eM.oAB.PRIVACY_AND_SAFETY,
-				searchableTitles: [
-					eP.Z.Messages.USER_DM_SETTINGS,
-					eP.Z.Messages.USER_DM_SEARCH_TERM_DIRECT_MESSAGES,
-					eP.Z.Messages.USER_DM_SEARCH_TERM_DM
-				],
+				searchableTitles: [eP.Z.Messages.USER_DM_SETTINGS, eP.Z.Messages.USER_DM_SEARCH_TERM_DIRECT_MESSAGES, eP.Z.Messages.USER_DM_SEARCH_TERM_DM],
 				parent: ex.s6.PRIVACY_USER_SETTINGS
 			},
 			[ex.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_DMS]: {
@@ -398,10 +364,7 @@ let eb = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
 			},
 			[ex.s6.PRIVACY_KEYWORD_FILTER]: {
 				section: eM.oAB.PRIVACY_AND_SAFETY,
-				searchableTitles: [
-					eP.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_SEARCHABLE,
-					eP.Z.Messages.USER_KEYWORD_FILTERS_SEARCH_TERM_KEYWORD
-				],
+				searchableTitles: [eP.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_SEARCHABLE, eP.Z.Messages.USER_KEYWORD_FILTERS_SEARCH_TERM_KEYWORD],
 				parent: ex.s6.PRIVACY_USER_SETTINGS,
 				predicate: () => eV
 			},
@@ -683,32 +646,17 @@ let eb = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
 			},
 			[ex.s6.VOICE_AND_VIDEO_DEVICES]: {
 				section: eM.oAB.VOICE,
-				searchableTitles: [
-					eP.Z.Messages.FORM_LABEL_INPUT_DEVICE,
-					eP.Z.Messages.FORM_LABEL_OUTPUT_DEVICE,
-					eP.Z.Messages.INPUT_SEARCH_TERM_MICROPHONE,
-					eP.Z.Messages.OUTPUT_SEARCH_TERM_SPEAKERS,
-					eP.Z.Messages.OUTPUT_SEARCH_TERM_HEADPHONES
-				],
+				searchableTitles: [eP.Z.Messages.FORM_LABEL_INPUT_DEVICE, eP.Z.Messages.FORM_LABEL_OUTPUT_DEVICE, eP.Z.Messages.INPUT_SEARCH_TERM_MICROPHONE, eP.Z.Messages.OUTPUT_SEARCH_TERM_SPEAKERS, eP.Z.Messages.OUTPUT_SEARCH_TERM_HEADPHONES],
 				parent: ex.s6.VOICE_AND_VIDEO
 			},
 			[ex.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS]: {
 				section: eM.oAB.VOICE,
-				searchableTitles: [
-					eP.Z.Messages.FORM_LABEL_INPUT_VOLUME,
-					eP.Z.Messages.FORM_LABEL_OUTPUT_VOLUME,
-					eP.Z.Messages.INPUT_SEARCH_TERM_MICROPHONE,
-					eP.Z.Messages.OUTPUT_SEARCH_TERM_SPEAKERS,
-					eP.Z.Messages.OUTPUT_SEARCH_TERM_HEADPHONES
-				],
+				searchableTitles: [eP.Z.Messages.FORM_LABEL_INPUT_VOLUME, eP.Z.Messages.FORM_LABEL_OUTPUT_VOLUME, eP.Z.Messages.INPUT_SEARCH_TERM_MICROPHONE, eP.Z.Messages.OUTPUT_SEARCH_TERM_SPEAKERS, eP.Z.Messages.OUTPUT_SEARCH_TERM_HEADPHONES],
 				parent: ex.s6.VOICE_AND_VIDEO
 			},
 			[ex.s6.VOICE_AND_VIDEO_MIC_TEST]: {
 				section: eM.oAB.VOICE,
-				searchableTitles: [
-					eP.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_TITLE,
-					eP.Z.Messages.INPUT_SEARCH_TERM_MICROPHONE
-				],
+				searchableTitles: [eP.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_TITLE, eP.Z.Messages.INPUT_SEARCH_TERM_MICROPHONE],
 				parent: ex.s6.VOICE_AND_VIDEO
 			},
 			[ex.s6.VOICE_AND_VIDEO_INPUT_MODE]: {
@@ -840,8 +788,7 @@ let eb = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
 				section: eM.oAB.VOICE,
 				searchableTitles: [eP.Z.Messages.FORM_LABEL_DEBUG],
 				parent: ex.s6.VOICE_AND_VIDEO_ADVANCED,
-				predicate: () =>
-					F.isPlatformEmbedded && v.Z.supports(eD.AN.DEBUG_LOGGING) && null != u.Z.fileManager.readLogFiles
+				predicate: () => F.isPlatformEmbedded && v.Z.supports(eD.AN.DEBUG_LOGGING) && null != u.Z.fileManager.readLogFiles
 			},
 			[ex.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP]: {
 				section: eM.oAB.VOICE,
@@ -853,10 +800,7 @@ let eb = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
 				section: eM.oAB.VOICE,
 				searchableTitles: [eP.Z.Messages.FORM_CHECKBOX_CONNECTION_LOG],
 				parent: ex.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-				predicate: () =>
-					('canary' === y.ZP.releaseChannel || 'development' === y.ZP.releaseChannel) &&
-					eY &&
-					v.Z.supports(eD.AN.CONNECTION_REPLAY)
+				predicate: () => ('canary' === y.ZP.releaseChannel || 'development' === y.ZP.releaseChannel) && eY && v.Z.supports(eD.AN.CONNECTION_REPLAY)
 			},
 			[ex.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING]: {
 				section: eM.oAB.VOICE,
@@ -1164,19 +1108,7 @@ let eb = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
 				parent: ex.s6.STREAMER_MODE,
 				predicate: () => {
 					var e, s, t;
-					return (
-						null !==
-							(t =
-								null === u.Z || void 0 === u.Z
-									? void 0
-									: null === (s = u.Z.window) || void 0 === s
-										? void 0
-										: null === (e = s.supportsContentProtection) || void 0 === e
-											? void 0
-											: e.call(s)) &&
-						void 0 !== t &&
-						t
-					);
+					return null !== (t = null === u.Z || void 0 === u.Z ? void 0 : null === (s = u.Z.window) || void 0 === s ? void 0 : null === (e = s.supportsContentProtection) || void 0 === e ? void 0 : e.call(s)) && void 0 !== t && t;
 				}
 			},
 			[ex.s6.SETTINGS_ADVANCED]: {

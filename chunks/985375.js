@@ -16,9 +16,7 @@ var r = n(470079),
 let o = {};
 function l() {
 	var e, t;
-	return null !== (t = null === (e = (0, s.D)().favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t
-		? t
-		: o;
+	return null !== (t = null === (e = (0, s.D)().favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : o;
 }
 function u() {
 	let e = l();

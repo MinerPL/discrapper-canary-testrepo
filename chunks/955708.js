@@ -17,9 +17,7 @@ var s,
 	T = n(463439),
 	I = n(689938),
 	_ = n(303690);
-((o = s || (s = {}))[(o.INTRO = 0)] = 'INTRO'),
-	(o[(o.SAFETY_TIPS = 1)] = 'SAFETY_TIPS'),
-	(o[(o.TAKE_ACTION = 2)] = 'TAKE_ACTION');
+((o = s || (s = {}))[(o.INTRO = 0)] = 'INTRO'), (o[(o.SAFETY_TIPS = 1)] = 'SAFETY_TIPS'), (o[(o.TAKE_ACTION = 2)] = 'TAKE_ACTION');
 t.default = (e) => {
 	let { warningId: t, warningType: n, senderId: s, modalProps: o, channelId: l } = e,
 		[A, d] = a.useState(0),

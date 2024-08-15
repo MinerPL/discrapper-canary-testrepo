@@ -75,9 +75,7 @@ function p(e) {
 											variant: 'text-xs/medium',
 											color: 'text-normal',
 											className: g.availableUntil,
-											children: O.Z.Messages.DROPS_CARD_REDEEM_UNTIL.format({
-												endDate: l()(S, 'YYYY-MM-DD HH:mm').format('MMMM Do, YYYY')
-											})
+											children: O.Z.Messages.DROPS_CARD_REDEEM_UNTIL.format({ endDate: l()(S, 'YYYY-MM-DD HH:mm').format('MMMM Do, YYYY') })
 										})
 									]
 								})
@@ -213,10 +211,7 @@ s.Z = function (e) {
 			E = (0, T.A5)(n);
 		if (null == E) continue;
 		_ && E.trackExposure({ location: 'ENTITLEMENT_GIFTS' });
-		let u = !!(
-			(null == o ? void 0 : o.isStaff()) &&
-			E.getCurrentConfig({ location: '076035_2' }, { autoTrackExposure: !1 }).showUnenroll
-		);
+		let u = !!((null == o ? void 0 : o.isStaff()) && E.getCurrentConfig({ location: '076035_2' }, { autoTrackExposure: !1 }).showUnenroll);
 		if (!E.getCurrentConfig({ location: '076035_3' }, { autoTrackExposure: !1 }).dropsEnabled) continue;
 		c = !0;
 		let I = l()(s.endDate, h),
@@ -319,11 +314,7 @@ s.Z = function (e) {
 						'string' == typeof (null == o ? void 0 : o.id) && r.length > 0
 							? (0, n.jsx)('div', {
 									className: g.feedback,
-									children: O.Z.Messages.DROPS_REQUEST_FEEDBACK_SUCCESS.format({
-										feedbackURL: 'https://survey.alchemer.com/s3/7043098/Discord-Drops-CSAT?user_id='.concat(
-											null !== (s = null == o ? void 0 : o.id) && void 0 !== s ? s : ''
-										)
-									})
+									children: O.Z.Messages.DROPS_REQUEST_FEEDBACK_SUCCESS.format({ feedbackURL: 'https://survey.alchemer.com/s3/7043098/Discord-Drops-CSAT?user_id='.concat(null !== (s = null == o ? void 0 : o.id) && void 0 !== s ? s : '') })
 								})
 							: null
 					]

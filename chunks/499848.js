@@ -13,15 +13,11 @@ var r = n(735250),
 class h extends a.PureComponent {
 	render() {
 		let { streams: e, context: t, userId: n, mediaEngineConnectionId: a, videoStreams: i } = this.props;
-		if (null == n || null == e || 0 === e.length)
-			return (0, r.jsx)(o.Spinner, { type: o.Spinner.Type.SPINNING_CIRCLE });
+		if (null == n || null == e || 0 === e.length) return (0, r.jsx)(o.Spinner, { type: o.Spinner.Type.SPINNING_CIRCLE });
 		let c = l.Z.getGuildId(),
 			h = d.default.getUser(n),
 			g = s.ZP.getNick(c, n),
-			f =
-				null == h
-					? p.Z.Messages.RTC_DEBUG_RTP_INBOUND
-					: ''.concat(p.Z.Messages.RTC_DEBUG_RTP_INBOUND, ' \u2014 ').concat(null != g ? g : u.ZP.getName(h));
+			f = null == h ? p.Z.Messages.RTC_DEBUG_RTP_INBOUND : ''.concat(p.Z.Messages.RTC_DEBUG_RTP_INBOUND, ' \u2014 ').concat(null != g ? g : u.ZP.getName(h));
 		return (0, r.jsx)(o.FormSection, {
 			tag: o.FormTitleTags.H2,
 			title: f,

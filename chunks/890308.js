@@ -20,30 +20,23 @@
 		function p(e) {
 			throw RangeError(_[e]);
 		}
-		function I(e, t) {
+		function m(e, t) {
 			for (var n = e.length, r = []; n--; ) r[n] = t(e[n]);
 			return r;
 		}
-		function m(e, t) {
+		function I(e, t) {
 			var n = e.split('@'),
 				r = '';
-			return n.length > 1 && ((r = n[0] + '@'), (e = n[1])), r + I((e = e.replace(d, '.')).split('.'), t).join('.');
+			return n.length > 1 && ((r = n[0] + '@'), (e = n[1])), r + m((e = e.replace(d, '.')).split('.'), t).join('.');
 		}
 		function T(e) {
-			for (var t, n, r = [], i = 0, a = e.length; i < a; )
-				(t = e.charCodeAt(i++)) >= 55296 && t <= 56319 && i < a
-					? (64512 & (n = e.charCodeAt(i++))) == 56320
-						? r.push(((1023 & t) << 10) + (1023 & n) + 65536)
-						: (r.push(t), i--)
-					: r.push(t);
+			for (var t, n, r = [], i = 0, a = e.length; i < a; ) (t = e.charCodeAt(i++)) >= 55296 && t <= 56319 && i < a ? ((64512 & (n = e.charCodeAt(i++))) == 56320 ? r.push(((1023 & t) << 10) + (1023 & n) + 65536) : (r.push(t), i--)) : r.push(t);
 			return r;
 		}
 		function g(e) {
-			return I(e, function (e) {
+			return m(e, function (e) {
 				var t = '';
-				return (
-					e > 65535 && ((e -= 65536), (t += h(((e >>> 10) & 1023) | 55296)), (e = 56320 | (1023 & e))), (t += h(e))
-				);
+				return e > 65535 && ((e -= 65536), (t += h(((e >>> 10) & 1023) | 55296)), (e = 56320 | (1023 & e))), (t += h(e));
 			}).join('');
 		}
 		function S(e, t) {
@@ -69,29 +62,15 @@
 				_ = [],
 				E = e.length,
 				h = 0,
-				I = 128,
-				m = 72;
-			for ((r = e.lastIndexOf('-')) < 0 && (r = 0), i = 0; i < r; ++i)
-				e.charCodeAt(i) >= 128 && p('not-basic'), _.push(e.charCodeAt(i));
+				m = 128,
+				I = 72;
+			for ((r = e.lastIndexOf('-')) < 0 && (r = 0), i = 0; i < r; ++i) e.charCodeAt(i) >= 128 && p('not-basic'), _.push(e.charCodeAt(i));
 			for (a = r > 0 ? r + 1 : 0; a < E; ) {
 				for (s = h, o = 1, l = 36; ; l += 36) {
-					if (
-						(a >= E && p('invalid-input'),
-						((u = (t = e.charCodeAt(a++)) - 48 < 10 ? t - 22 : t - 65 < 26 ? t - 65 : t - 97 < 26 ? t - 97 : 36) >=
-							36 ||
-							u > f((2147483647 - h) / o)) &&
-							p('overflow'),
-						(h += u * o),
-						u < (c = l <= m ? 1 : l >= m + 26 ? 26 : l - m))
-					)
-						break;
+					if ((a >= E && p('invalid-input'), ((u = (t = e.charCodeAt(a++)) - 48 < 10 ? t - 22 : t - 65 < 26 ? t - 65 : t - 97 < 26 ? t - 97 : 36) >= 36 || u > f((2147483647 - h) / o)) && p('overflow'), (h += u * o), u < (c = l <= I ? 1 : l >= I + 26 ? 26 : l - I))) break;
 					o > f(2147483647 / (d = 36 - c)) && p('overflow'), (o *= d);
 				}
-				(m = A(h - s, (n = _.length + 1), 0 == s)),
-					f(h / n) > 2147483647 - I && p('overflow'),
-					(I += f(h / n)),
-					(h %= n),
-					_.splice(h++, 0, I);
+				(I = A(h - s, (n = _.length + 1), 0 == s)), f(h / n) > 2147483647 - m && p('overflow'), (m += f(h / n)), (h %= n), _.splice(h++, 0, m);
 			}
 			return g(_);
 		}
@@ -109,8 +88,8 @@
 				d,
 				_,
 				E,
-				I,
 				m,
+				I,
 				g = [];
 			for (s = 0, _ = (e = T(e)).length, t = 128, n = 0, a = 72; s < _; ++s) (d = e[s]) < 128 && g.push(h(d));
 			for (r = i = g.length, i && g.push('-'); r < _; ) {
@@ -118,7 +97,7 @@
 				for (o - t > f((2147483647 - n) / (E = r + 1)) && p('overflow'), n += (o - t) * E, t = o, s = 0; s < _; ++s)
 					if (((d = e[s]) < t && ++n > 2147483647 && p('overflow'), d == t)) {
 						for (l = n, u = 36; !(l < (c = u <= a ? 1 : u >= a + 26 ? 26 : u - a)); u += 36) {
-							(m = l - c), (I = 36 - c), g.push(h(S(c + (m % I), 0))), (l = f(m / I));
+							(I = l - c), (m = 36 - c), g.push(h(S(c + (I % m), 0))), (l = f(I / m));
 						}
 						g.push(h(S(l, 0))), (a = A(n, E, r == i)), (n = 0), ++r;
 					}
@@ -136,12 +115,12 @@
 				decode: N,
 				encode: v,
 				toASCII: function (e) {
-					return m(e, function (e) {
+					return I(e, function (e) {
 						return c.test(e) ? 'xn--' + v(e) : e;
 					});
 				},
 				toUnicode: function (e) {
-					return m(e, function (e) {
+					return I(e, function (e) {
 						return u.test(e) ? N(e.slice(4).toLowerCase()) : e;
 					});
 				}

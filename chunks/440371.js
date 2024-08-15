@@ -13,18 +13,7 @@ var a = l(913527),
 	d = l(689938),
 	c = l(201750);
 function u(e) {
-	let {
-		className: n,
-		onScheduleChange: l,
-		onRecurrenceChange: a,
-		onTimeChange: u,
-		timeSelected: E = !0,
-		schedule: _,
-		recurrenceRule: I,
-		showEndDate: x = !1,
-		requireEndDate: m = !1,
-		disableStartDateTime: N = !1
-	} = e;
+	let { className: n, onScheduleChange: l, onRecurrenceChange: a, onTimeChange: u, timeSelected: E = !0, schedule: _, recurrenceRule: I, showEndDate: x = !1, requireEndDate: m = !1, disableStartDateTime: N = !1 } = e;
 	if (null == _) return null;
 	let T = null,
 		h = _.startDate,

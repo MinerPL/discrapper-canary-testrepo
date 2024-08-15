@@ -20,17 +20,7 @@ var t = s(735250),
 	g = s(689938),
 	L = s(109261);
 function T(e) {
-	let {
-			className: l,
-			guildId: s,
-			error: i,
-			emojiId: T,
-			emojiName: v,
-			isRequiredField: D = !0,
-			shouldUpdateBothEmojiFields: x = !1,
-			setEmojiId: p,
-			setEmojiName: C
-		} = e,
+	let { className: l, guildId: s, error: i, emojiId: T, emojiName: v, isRequiredField: D = !0, shouldUpdateBothEmojiFields: x = !1, setEmojiId: p, setEmojiName: C } = e,
 		R = (0, E.Z)({
 			emojiId: T,
 			emojiName: v
@@ -43,11 +33,7 @@ function T(e) {
 		},
 		N = (e) => (l, s) => {
 			let t = (null == l ? void 0 : l.id) == null;
-			P(),
-				t
-					? C(null == l ? void 0 : l.optionallyDiverseSequence)
-					: (x && C(null == l ? void 0 : l.name), p(null == l ? void 0 : l.id)),
-				s && e();
+			P(), t ? C(null == l ? void 0 : l.optionallyDiverseSequence) : (x && C(null == l ? void 0 : l.name), p(null == l ? void 0 : l.id)), s && e();
 		},
 		U = (e) => {
 			e.stopPropagation(), P();

@@ -36,10 +36,6 @@ function d(e, t) {
 }
 function h(e, t) {
 	var n;
-	return null == e || (0 === e.type && null != t.content && t.content.trim().length > 0)
-		? null
-		: null !== (n = e.message) && void 0 !== n
-			? n
-			: null;
+	return null == e || (0 === e.type && null != t.content && t.content.trim().length > 0) ? null : null !== (n = e.message) && void 0 !== n ? n : null;
 }
 ((i = a || (a = {}))[(i.EmptyContent = 0)] = 'EmptyContent'), (i[(i.AutomodViolation = 1)] = 'AutomodViolation');

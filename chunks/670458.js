@@ -38,12 +38,7 @@ var u = (function () {
 				var e = f.formatToParts(t);
 				if (1 === e.length) return e[0].value;
 				var r = e.reduce(function (t, e) {
-					return (
-						t.length && e.type === a.du.literal && 'string' == typeof t[t.length - 1]
-							? (t[t.length - 1] += e.value)
-							: t.push(e.value),
-						t
-					);
+					return t.length && e.type === a.du.literal && 'string' == typeof t[t.length - 1] ? (t[t.length - 1] += e.value) : t.push(e.value), t;
 				}, []);
 				return r.length <= 1 ? r[0] || '' : r;
 			}),
@@ -52,11 +47,7 @@ var u = (function () {
 			}),
 			(this.resolvedOptions = function () {
 				var t;
-				return {
-					locale:
-						(null === (t = f.resolvedLocale) || void 0 === t ? void 0 : t.toString()) ||
-						Intl.NumberFormat.supportedLocalesOf(f.locales)[0]
-				};
+				return { locale: (null === (t = f.resolvedLocale) || void 0 === t ? void 0 : t.toString()) || Intl.NumberFormat.supportedLocalesOf(f.locales)[0] };
 			}),
 			(this.getAst = function () {
 				return f.ast;
@@ -65,11 +56,10 @@ var u = (function () {
 			(this.resolvedLocale = t.resolveLocale(r)),
 			'string' == typeof e)
 		) {
-			if (((this.message = e), !t.__parse))
-				throw TypeError('IntlMessageFormat.__parse must be set to process `message` of type `string`');
+			if (((this.message = e), !t.__parse)) throw TypeError('IntlMessageFormat.__parse must be set to process `message` of type `string`');
 			var p = u || {},
-				m = (p.formatters, (0, n._T)(p, ['formatters']));
-			this.ast = t.__parse(e, (0, n.pi)((0, n.pi)({}, m), { locale: this.resolvedLocale }));
+				d = (p.formatters, (0, n._T)(p, ['formatters']));
+			this.ast = t.__parse(e, (0, n.pi)((0, n.pi)({}, d), { locale: this.resolvedLocale }));
 		} else this.ast = e;
 		if (!Array.isArray(this.ast)) throw TypeError('A message must be provided as a String or AST.');
 		(this.formats =
@@ -139,10 +129,7 @@ var u = (function () {
 	return (
 		Object.defineProperty(t, 'defaultLocale', {
 			get: function () {
-				return (
-					!t.memoizedDefaultLocale && (t.memoizedDefaultLocale = new Intl.NumberFormat().resolvedOptions().locale),
-					t.memoizedDefaultLocale
-				);
+				return !t.memoizedDefaultLocale && (t.memoizedDefaultLocale = new Intl.NumberFormat().resolvedOptions().locale), t.memoizedDefaultLocale;
 			},
 			enumerable: !1,
 			configurable: !0

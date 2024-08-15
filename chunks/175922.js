@@ -12,10 +12,7 @@ function o(e, t, n) {
 	var o = e.getBoundingClientRect(),
 		l = 1,
 		u = 1;
-	t &&
-		(0, r.Re)(e) &&
-		((l = (e.offsetWidth > 0 && (0, i.NM)(o.width) / e.offsetWidth) || 1),
-		(u = (e.offsetHeight > 0 && (0, i.NM)(o.height) / e.offsetHeight) || 1));
+	t && (0, r.Re)(e) && ((l = (e.offsetWidth > 0 && (0, i.NM)(o.width) / e.offsetWidth) || 1), (u = (e.offsetHeight > 0 && (0, i.NM)(o.height) / e.offsetHeight) || 1));
 	var c = ((0, r.kK)(e) ? (0, a.Z)(e) : window).visualViewport,
 		d = !(0, s.Z)() && n,
 		_ = (o.left + (d && c ? c.offsetLeft : 0)) / l,

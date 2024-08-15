@@ -53,16 +53,7 @@ function O() {
 }
 let A = O()[1].value;
 function R(e) {
-	let {
-			guildId: s,
-			user: o,
-			location: t,
-			userIds: _,
-			onBanMultiple: R,
-			transitionState: M,
-			onClose: C,
-			canBulkBan: I = !1
-		} = e,
+	let { guildId: s, user: o, location: t, userIds: _, onBanMultiple: R, transitionState: M, onClose: C, canBulkBan: I = !1 } = e,
 		[m, T] = n.useState(A),
 		[b, g] = n.useState(''),
 		[p, h] = n.useState(0),
@@ -119,12 +110,7 @@ function R(e) {
 				value: S.Z.Messages.BAN_REASON_OPTION_BREAKING_RULES
 			}
 		],
-		D =
-			null != R && null != _
-				? S.Z.Messages.BAN_MULTIPLE_CONFIRM_TITLE.format({ count: null == _ ? void 0 : _.size })
-				: null == o
-					? ''
-					: S.Z.Messages.BAN_CONFIRM_TITLE.format({ username: '@'.concat(E.ZP.getName(s, null, o)) });
+		D = null != R && null != _ ? S.Z.Messages.BAN_MULTIPLE_CONFIRM_TITLE.format({ count: null == _ ? void 0 : _.size }) : null == o ? '' : S.Z.Messages.BAN_CONFIRM_TITLE.format({ username: '@'.concat(E.ZP.getName(s, null, o)) });
 	return (0, l.jsxs)(r.ModalRoot, {
 		transitionState: M,
 		children: [

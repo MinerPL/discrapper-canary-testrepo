@@ -6,7 +6,7 @@ n.d(t, {
 		return h;
 	},
 	ub: function () {
-		return I;
+		return m;
 	}
 });
 var r = n(735250),
@@ -61,7 +61,7 @@ let p = (e) => {
 		]
 	});
 };
-class I extends i.PureComponent {
+class m extends i.PureComponent {
 	render() {
 		let { children: e, theme: t, className: n, style: i } = this.props;
 		return (0, r.jsx)(E, {

@@ -42,10 +42,7 @@ function R(e) {
 	!(function (e, t) {
 		let n = i.useRef(new Set()),
 			l = i.useRef(new o.V7()),
-			{ shouldSubscribeToGuildMemberUpdates: a } = T.ZP.useExperiment(
-				{ location: 'useGuildMediaState' },
-				{ autoTrackExposure: !1 }
-			),
+			{ shouldSubscribeToGuildMemberUpdates: a } = T.ZP.useExperiment({ location: 'useGuildMediaState' }, { autoTrackExposure: !1 }),
 			u = (0, s.e7)([I.Z], () => {
 				let t = I.Z.getMemberCount(e);
 				return null == t || t > 1000;
@@ -139,11 +136,7 @@ function R(e) {
 					let t = C.Z.getChannel(e);
 					return null != t && N.Z.can(p.gl, t);
 				}),
-				v =
-					o &&
-					null !== (r = null === (i = C.Z.getChannel(s)) || void 0 === i ? void 0 : i.isGuildStageVoice()) &&
-					void 0 !== r &&
-					r,
+				v = o && null !== (r = null === (i = C.Z.getChannel(s)) || void 0 === i ? void 0 : i.isGuildStageVoice()) && void 0 !== r && r,
 				T = !!o && null != g.Z.getActiveStreamForUser(j, e),
 				L = g.Z.getAllApplicationStreams().some((t) => t.guildId === e),
 				b = o && y,
@@ -157,9 +150,7 @@ function R(e) {
 				})(),
 				D = d.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
 			return (
-				o
-					? ((c = !0), (u = (null == l ? void 0 : l.channel_id) === s), (h = v), (m = b), (I = T), (E = D))
-					: ((c = O), (u = null != l), (h = S), (m = P), (I = L), (E = M)),
+				o ? ((c = !0), (u = (null == l ? void 0 : l.channel_id) === s), (h = v), (m = b), (I = T), (E = D)) : ((c = O), (u = null != l), (h = S), (m = P), (I = L), (E = M)),
 				{
 					audio: c,
 					video: m,

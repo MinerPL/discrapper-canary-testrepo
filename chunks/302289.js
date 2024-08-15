@@ -7,10 +7,7 @@ var a = n(481060),
 	o = n(145994),
 	c = n(128216);
 t.Z = () => {
-	let e = (0, r.o)(
-		l.Z.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_DESCRIPTION_TEEN,
-		l.Z.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_DESCRIPTION_PARENT
-	);
+	let e = (0, r.o)(l.Z.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_DESCRIPTION_TEEN, l.Z.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_DESCRIPTION_PARENT);
 	return (0, s.jsxs)('div', {
 		className: o.container,
 		children: [
@@ -20,9 +17,7 @@ t.Z = () => {
 					(0, s.jsx)(a.Heading, {
 						className: o.header,
 						variant: 'heading-md/bold',
-						children: (0, s.jsx)(a.HeadingLevel, {
-							children: l.Z.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_HEADER
-						})
+						children: (0, s.jsx)(a.HeadingLevel, { children: l.Z.Messages.FAMILY_CENTER_ACTIVITY_DATA_CONFIRMATION_BANNER_HEADER })
 					}),
 					(0, s.jsx)(a.Text, {
 						className: o.description,

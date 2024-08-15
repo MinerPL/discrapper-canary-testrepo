@@ -127,9 +127,7 @@ let A = (e) => {
 			'aria-hidden': !0,
 			filters: v,
 			'aria-describedby': S,
-			'aria-label': A
-				? N.Z.Messages.MEDIA_CHANNEL_CHANGE_THUMBNAIL_LABEL
-				: N.Z.Messages.MEDIA_CHANNEL_UPLOAD_THUMBNAIL_LABEL,
+			'aria-label': A ? N.Z.Messages.MEDIA_CHANNEL_CHANGE_THUMBNAIL_LABEL : N.Z.Messages.MEDIA_CHANNEL_UPLOAD_THUMBNAIL_LABEL,
 			children: A
 				? (0, a.jsxs)(a.Fragment, {
 						children: [
@@ -139,9 +137,7 @@ let A = (e) => {
 								containerHeight: j.height
 							}),
 							(0, a.jsxs)('div', {
-								className: l()(b.changeThumbnailLabelContainer, {
-									[b.changeThumbnailLabelOverflow]: (null == f ? void 0 : f.length) > 2
-								}),
+								className: l()(b.changeThumbnailLabelContainer, { [b.changeThumbnailLabelOverflow]: (null == f ? void 0 : f.length) > 2 }),
 								children: [
 									(0, a.jsx)(d.Text, {
 										variant: 'text-xs/medium',

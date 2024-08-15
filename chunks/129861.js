@@ -11,18 +11,7 @@ var i = n(120356),
 	_ = n(689938),
 	E = n(442129);
 let f = (e) => {
-	let {
-		primary: t,
-		secondary: n,
-		botType: i,
-		botVerified: s,
-		discriminatorClass: u,
-		className: c,
-		usernameClass: d,
-		color: f,
-		botClass: h,
-		showStreamerModeTooltip: p
-	} = e;
+	let { primary: t, secondary: n, botType: i, botVerified: s, discriminatorClass: u, className: c, usernameClass: d, color: f, botClass: h, showStreamerModeTooltip: p } = e;
 	return (0, r.jsxs)('div', {
 		className: a()(E.info, c),
 		children: [
@@ -54,20 +43,10 @@ let f = (e) => {
 	});
 };
 t.Z = (e) => {
-	let {
-			user: t,
-			nick: n,
-			forceUsername: i,
-			showAccountIdentifier: a,
-			overrideDiscriminator: o,
-			forcePomelo: l,
-			hideBotTag: _ = !1,
-			hideDiscriminator: E = !1,
-			...h
-		} = e,
+	let { user: t, nick: n, forceUsername: i, showAccountIdentifier: a, overrideDiscriminator: o, forcePomelo: l, hideBotTag: _ = !1, hideDiscriminator: E = !1, ...h } = e,
 		p = (0, s.e7)([c.Z], () => c.Z.hidePersonalInformation),
-		I = p || E || t.isNonUserBot(),
-		m = t.toString(),
+		m = p || E || t.isNonUserBot(),
+		I = t.toString(),
 		T = _
 			? null
 			: (function (e) {
@@ -78,11 +57,11 @@ t.Z = (e) => {
 				})(t),
 		g = t.isVerifiedBot(),
 		S = d.ZP.getName(t),
-		A = i ? m : null != n ? n : S,
+		A = i ? I : null != n ? n : S,
 		N = t.isPomelo() || l;
-	if (N || A !== m) {
-		let e = A === m && N && i ? d.ZP.getUserTag(t, { forcePomelo: l }) : A,
-			n = a && e !== '@'.concat(m) ? d.ZP.getUserTag(t) : void 0;
+	if (N || A !== I) {
+		let e = A === I && N && i ? d.ZP.getUserTag(t, { forcePomelo: l }) : A,
+			n = a && e !== '@'.concat(I) ? d.ZP.getUserTag(t) : void 0;
 		return (0, r.jsx)(f, {
 			primary: e,
 			secondary: n,
@@ -96,7 +75,7 @@ t.Z = (e) => {
 		name: A,
 		botType: T,
 		botVerified: g,
-		discriminator: I || A !== m ? null : null != o ? o : t.discriminator,
+		discriminator: m || A !== I ? null : null != o ? o : t.discriminator,
 		...h
 	});
 };

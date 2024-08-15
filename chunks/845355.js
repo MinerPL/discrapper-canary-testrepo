@@ -10,18 +10,11 @@ e.exports = function (e, t, n, o) {
 		var f = a((l + u) / 2),
 			h = n(e[f]),
 			p = void 0 !== h,
-			I = null === h,
-			m = h == h,
+			m = null === h,
+			I = h == h,
 			T = r(h);
-		if (c) var g = o || m;
-		else
-			g = E
-				? m && (o || p)
-				: d
-					? m && p && (o || !I)
-					: _
-						? m && p && !I && (o || !T)
-						: !I && !T && (o ? h <= t : h < t);
+		if (c) var g = o || I;
+		else g = E ? I && (o || p) : d ? I && p && (o || !m) : _ ? I && p && !m && (o || !T) : !m && !T && (o ? h <= t : h < t);
 		g ? (l = f + 1) : (u = f);
 	}
 	return s(u, i);

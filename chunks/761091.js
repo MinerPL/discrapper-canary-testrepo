@@ -1,6 +1,6 @@
 n.d(t, {
 	Z: function () {
-		return _;
+		return f;
 	}
 }),
 	n(653041);
@@ -9,37 +9,26 @@ var i = n(399606),
 	r = n(697379),
 	a = n(241559),
 	s = n(563534),
-	o = n(931261),
-	c = n(460347),
-	u = n(994592),
-	d = n(265418),
-	h = n(443063),
-	p = n(981631);
-function _(e) {
-	let t = (0, d.Z)(e.id),
+	o = n(655359),
+	c = n(931261),
+	u = n(460347),
+	d = n(994592),
+	h = n(265418),
+	p = n(443063),
+	_ = n(981631);
+function f(e) {
+	let t = (0, h.Z)(e.id),
 		n = (0, r.W)(e.id),
-		_ = (0, u.j0)(e.id),
-		f = (0, l.u)(e),
-		g = (0, o.g)(e.id),
-		m = (0, i.e7)([s.Z], () => s.Z.getNewMemberActions(e.id), [e.id]),
-		C = (0, c.Z)(e.id),
-		I = (0, a.n2)(e.id),
-		E = [],
-		N = e.hasFeature(p.oNc.HUB),
-		x = e.hasFeature(p.oNc.COMMUNITY),
-		S = e.hasFeature(p.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY);
-	return (
-		N && E.push(h.z.GUILD_HUB_HEADER_OPTIONS),
-		g && C && null != m && m.length > 0
-			? E.push(h.z.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR)
-			: e.premiumProgressBarEnabled && E.push(h.z.GUILD_PREMIUM_PROGRESS_BAR),
-		!N && g && E.push(h.z.GUILD_HOME),
-		t && E.push(h.z.GUILD_SCHEDULED_EVENTS),
-		!N && x && E.push(h.z.CHANNELS_AND_ROLES),
-		_ && E.push(h.z.GUILD_ROLE_SUBSCRIPTIONS),
-		f && E.push(h.z.GUILD_SHOP),
-		n && E.push(h.z.GUILD_MEMBER_APPLICATIONS),
-		I && (x || S) && E.push(h.z.GUILD_MOD_DASH_MEMBER_SAFETY),
-		E
-	);
+		f = (0, d.j0)(e.id),
+		g = (0, l.u)(e),
+		m = (0, c.g)(e.id),
+		C = (0, i.e7)([s.Z], () => s.Z.getNewMemberActions(e.id), [e.id]),
+		I = (0, u.Z)(e.id),
+		E = (0, o.PE)(e.id),
+		N = (0, a.n2)(e.id),
+		x = [],
+		S = e.hasFeature(_.oNc.HUB),
+		v = e.hasFeature(_.oNc.COMMUNITY),
+		Z = e.hasFeature(_.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY);
+	return S && x.push(p.z.GUILD_HUB_HEADER_OPTIONS), !E && m && I && null != C && C.length > 0 ? x.push(p.z.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR) : e.premiumProgressBarEnabled && x.push(p.z.GUILD_PREMIUM_PROGRESS_BAR), !S && m && x.push(p.z.GUILD_HOME), t && x.push(p.z.GUILD_SCHEDULED_EVENTS), !S && v && x.push(p.z.CHANNELS_AND_ROLES), f && x.push(p.z.GUILD_ROLE_SUBSCRIPTIONS), g && x.push(p.z.GUILD_SHOP), n && x.push(p.z.GUILD_MEMBER_APPLICATIONS), N && (v || Z) && x.push(p.z.GUILD_MOD_DASH_MEMBER_SAFETY), x;
 }

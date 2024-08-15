@@ -44,9 +44,7 @@ function S(e) {
 		e.stopPropagation(), (0, N.Z)(M, k, P);
 	}
 	async function W(e) {
-		e.stopPropagation(),
-			await o.Z.joinGuild(P),
-			v.Z.addConditionalChangeListener(() => null == v.Z.getGuild(P) || (!D && z(e), X(e), !1));
+		e.stopPropagation(), await o.Z.joinGuild(P), v.Z.addConditionalChangeListener(() => null == v.Z.getGuild(P) || (!D && z(e), X(e), !1));
 	}
 	function X(e) {
 		e.stopPropagation();
@@ -94,9 +92,7 @@ function S(e) {
 							null == R || R(), (0, c.hk)(P);
 							return;
 						}
-						(null == S ? void 0 : S.isGuildStageVoice())
-							? ((0, _.Cq)(S), null == R || R())
-							: (null == S ? void 0 : S.isGuildVoice()) && (m.Z.joinVoiceEvent(S.guild_id, S.id), null == R || R());
+						(null == S ? void 0 : S.isGuildStageVoice()) ? ((0, _.Cq)(S), null == R || R()) : (null == S ? void 0 : S.isGuildVoice()) && (m.Z.joinVoiceEvent(S.guild_id, S.id), null == R || R());
 					}
 				: void 0,
 		onRsvpClick: z,

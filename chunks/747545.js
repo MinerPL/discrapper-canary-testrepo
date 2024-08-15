@@ -45,16 +45,7 @@ function x() {
 		: null;
 }
 function A(e) {
-	let {
-			hideDeviceSelector: n = !1,
-			hideDeviceHeader: s = !1,
-			onLearnMore: o,
-			selectedBackgroundOption: c,
-			onSelectBackgroundOption: x,
-			renderCamera: A,
-			hidePreviewToggle: C = !1,
-			showSmallBackgroundOptions: N = !1
-		} = e,
+	let { hideDeviceSelector: n = !1, hideDeviceHeader: s = !1, onLearnMore: o, selectedBackgroundOption: c, onSelectBackgroundOption: x, renderCamera: A, hidePreviewToggle: C = !1, showSmallBackgroundOptions: N = !1 } = e,
 		M = (0, i.e7)([O.Z], () => O.Z.getVideoDeviceId()),
 		R = (0, i.Wu)([O.Z], () => Object.values(O.Z.getVideoDevices())),
 		k = u.qF.useSetting(),

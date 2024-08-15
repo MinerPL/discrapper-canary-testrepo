@@ -170,8 +170,7 @@ var t = {
 	'blik.invalid': '6자리 숫자 입력',
 	'blik.code': '6자리 코드',
 	'blik.help': '뱅킹 앱에서 코드를 가져오세요.',
-	'swish.pendingMessage':
-		'스캔 후 최대 10분 동안 상태가 보류될 수 있습니다. 10분 내에 다시 시도할 경우 금액이 여러 번 청구될 수 있습니다.',
+	'swish.pendingMessage': '스캔 후 최대 10분 동안 상태가 보류될 수 있습니다. 10분 내에 다시 시도할 경우 금액이 여러 번 청구될 수 있습니다.',
 	'field.valid': '필드가 유효합니다',
 	'field.invalid': '필드가 유효하지 않습니다',
 	'error.va.gen.01': '미완료 필드',
@@ -207,8 +206,7 @@ var t = {
 	'bankTransfer.iban': 'IBAN',
 	'bankTransfer.bic': 'BIC',
 	'bankTransfer.reference': '참조 번호',
-	'bankTransfer.introduction':
-		'새 계좌 이체 건을 계속 진행합니다. 다음 화면에 나오는 정보를 이용해 이체를 완료하실 수 있습니다.',
+	'bankTransfer.introduction': '새 계좌 이체 건을 계속 진행합니다. 다음 화면에 나오는 정보를 이용해 이체를 완료하실 수 있습니다.',
 	'bankTransfer.instructions': '구매해 주셔서 감사합니다. 다음 정보를 이용하여 결제를 완료하십시오.',
 	'bacs.accountHolderName': '예금주 이름',
 	'bacs.accountHolderName.invalid': '예금주 이름이 유효하지 않습니다',
@@ -217,8 +215,7 @@ var t = {
 	'bacs.bankLocationId': '은행 식별 코드',
 	'bacs.bankLocationId.invalid': '은행 식별 코드가 유효하지 않습니다',
 	'bacs.consent.amount': '계좌에서 위의 금액을 이체하는 것에 동의합니다.',
-	'bacs.consent.account':
-		'본인이 이 계좌의 예금주이며, 이 계좌에서의 자동 이체를 승인하기 위해 필요한 유일한 서명인입니다.',
+	'bacs.consent.account': '본인이 이 계좌의 예금주이며, 이 계좌에서의 자동 이체를 승인하기 위해 필요한 유일한 서명인입니다.',
 	edit: '수정',
 	'bacs.confirm': '확인 및 결제',
 	'bacs.result.introduction': '자동 이체 안내(DDI/필수) 다운로드',

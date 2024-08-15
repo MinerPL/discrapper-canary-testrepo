@@ -46,8 +46,7 @@ function f() {
 			() => {
 				var e;
 				let t = {};
-				for (let a of null !== (e = null == r ? void 0 : r.entries) && void 0 !== e ? e : [])
-					t[(0, s.T)(a.content)] = s.Z.canRenderContent(a.content);
+				for (let a of null !== (e = null == r ? void 0 : r.entries) && void 0 !== e ? e : []) t[(0, s.T)(a.content)] = s.Z.canRenderContent(a.content);
 				return t;
 			},
 			[r]
@@ -89,9 +88,6 @@ function f() {
 						});
 					});
 	return (0, a.jsxs)(i.FormSection, {
-		children: [
-			(0, a.jsx)(i.FormTitle, { children: 'Selected Content' }),
-			null != c ? (0, a.jsx)('ul', { children: c }) : (0, a.jsx)('div', { children: '(none?)' })
-		]
+		children: [(0, a.jsx)(i.FormTitle, { children: 'Selected Content' }), null != c ? (0, a.jsx)('ul', { children: c }) : (0, a.jsx)('div', { children: '(none?)' })]
 	});
 }

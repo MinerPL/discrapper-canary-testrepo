@@ -20,12 +20,7 @@ var r = n(735250),
 	E = n(689938);
 function S(e) {
 	let { handleStepChange: t, handleClose: n } = e,
-		{
-			subscriptionMetadataRequest: S,
-			selectedSku: m,
-			selectedStoreListing: p,
-			application: T
-		} = (0, d.usePaymentContext)(),
+		{ subscriptionMetadataRequest: S, selectedSku: m, selectedStoreListing: p, application: T } = (0, d.usePaymentContext)(),
 		C = (0, l.Z)(h.i),
 		N = (0, i.e7)([c.Z], () => c.Z.getGuild(null == S ? void 0 : S.guild_id)),
 		A = a.useCallback(() => t(I.h8.REVIEW), [t]);
@@ -39,14 +34,8 @@ function S(e) {
 							confirmCta: E.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_CONTINUE_BUTTON,
 							onConfirm: A,
 							onCancel: n,
-							title: E.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_LITE_TITLE_V2.format({
-								tier: m.name
-							}),
-							subtitle: O
-								? E.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_LITE_SUBTITLE
-								: E.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_LITE_SUBTITLE.format({
-										guildName: null == N ? void 0 : N.name
-									}),
+							title: E.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_LITE_TITLE_V2.format({ tier: m.name }),
+							subtitle: O ? E.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_LITE_SUBTITLE : E.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_LITE_SUBTITLE.format({ guildName: null == N ? void 0 : N.name }),
 							showOpenDiscord: !1
 						})
 					: (0, r.jsx)(o.Oc, {
@@ -54,14 +43,8 @@ function S(e) {
 							storeListingBenefits: null == p ? void 0 : p.benefits,
 							application: null != T ? T : void 0,
 							title: E.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_TITLE_V2.format({ tier: m.name }),
-							subtitle: O
-								? E.Z.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_HEADER
-								: E.Z.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_HEADER,
-							description: O
-								? E.Z.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_DETAILS.format({
-										applicationName: null == T ? void 0 : T.name
-									})
-								: E.Z.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_DETAILS
+							subtitle: O ? E.Z.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_HEADER : E.Z.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_HEADER,
+							description: O ? E.Z.Messages.APPLICATION_USER_SUBSCRIPTION_LISTING_DETAILS.format({ applicationName: null == T ? void 0 : T.name }) : E.Z.Messages.APPLICATION_GUILD_SUBSCRIPTION_LISTING_DETAILS
 						})
 			}),
 			!C &&

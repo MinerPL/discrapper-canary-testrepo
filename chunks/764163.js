@@ -105,17 +105,7 @@ function x(e) {
 }
 function p(e) {
 	var t;
-	let {
-			guildId: n,
-			initialData: i,
-			benefitTypeInput: r,
-			descriptionPlaceholder: l,
-			canSubmit: c,
-			onSave: _,
-			onDelete: I,
-			transitionState: E,
-			onClose: T
-		} = e,
+	let { guildId: n, initialData: i, benefitTypeInput: r, descriptionPlaceholder: l, canSubmit: c, onSave: _, onDelete: I, transitionState: E, onClose: T } = e,
 		m = (0, u.Dt)(),
 		N = (0, u.Dt)(),
 		S = (0, u.Dt)(),

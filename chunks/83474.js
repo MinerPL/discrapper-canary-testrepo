@@ -129,14 +129,7 @@ function M(e) {
 		G = b,
 		w = null;
 	return (
-		null != G &&
-			G.length > 6 &&
-			null != b &&
-			((G =
-				null !== (t = null == b ? void 0 : b.slice(Math.max((null == b ? void 0 : b.length) - 6, 0))) && void 0 !== t
-					? t
-					: []),
-			(w = b.length - 6)),
+		null != G && G.length > 6 && null != b && ((G = null !== (t = null == b ? void 0 : b.slice(Math.max((null == b ? void 0 : b.length) - 6, 0))) && void 0 !== t ? t : []), (w = b.length - 6)),
 		(0, l.jsxs)(c.Dialog, {
 			'aria-label': I,
 			className: A.guildPopout,

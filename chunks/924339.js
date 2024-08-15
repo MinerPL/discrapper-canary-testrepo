@@ -25,13 +25,7 @@ async function L(r, t, e, n) {
 		let { body: r } = await d.Z.authorize(n, { twoWayLinkType: c.g.WEB });
 		A = r.url;
 	} catch (r) {
-		throw Error(
-			'error at authorize with code '.concat(
-				null !== (l = null == r ? void 0 : null === (o = r.body) || void 0 === o ? void 0 : o.code) && void 0 !== l
-					? l
-					: 0
-			)
-		);
+		throw Error('error at authorize with code '.concat(null !== (l = null == r ? void 0 : null === (o = r.body) || void 0 === o ? void 0 : o.code) && void 0 !== l ? l : 0));
 	}
 	let I = null;
 	try {
@@ -45,13 +39,7 @@ async function L(r, t, e, n) {
 		let o = await d.Z.completeTwoWayLink(n, r, t, I, e);
 		return null == o ? void 0 : null === (i = o.body) || void 0 === i ? void 0 : i.redirect;
 	} catch (r) {
-		throw Error(
-			'error at callback with code '.concat(
-				null !== (s = null == r ? void 0 : null === (u = r.body) || void 0 === u ? void 0 : u.code) && void 0 !== s
-					? s
-					: 0
-			)
-		);
+		throw Error('error at callback with code '.concat(null !== (s = null == r ? void 0 : null === (u = r.body) || void 0 === u ? void 0 : u.code) && void 0 !== s ? s : 0));
 	}
 }
 function P(r) {
@@ -72,13 +60,7 @@ function P(r) {
 					f.error('Error Creating Discord link', null == t ? void 0 : t.message);
 					let r = v.Z.toURLSafe(e);
 					if (null == r) return;
-					r.searchParams.delete('code'),
-						r.searchParams.set('error', 'two_way_link_error'),
-						r.searchParams.set(
-							'error_description',
-							null !== (c = null == t ? void 0 : t.message) && void 0 !== c ? c : 'unknown_error'
-						),
-						(e = r.toString());
+					r.searchParams.delete('code'), r.searchParams.set('error', 'two_way_link_error'), r.searchParams.set('error_description', null !== (c = null == t ? void 0 : t.message) && void 0 !== c ? c : 'unknown_error'), (e = r.toString());
 				}
 			window.location = null == u || u === i.b.OAUTH_REDIRECT ? e : u;
 		};

@@ -24,10 +24,7 @@ var i,
 	p = n(921944),
 	T = n(689938),
 	S = n(36110);
-((i = a || (a = {})).BOOSTING = 'BOOSTING'),
-	(i.NITRO = 'NITRO'),
-	(i.BASH_OUT = 'BASH_OUT'),
-	(i.GAME_NIGHT = 'GAME_NIGHT');
+((i = a || (a = {})).BOOSTING = 'BOOSTING'), (i.NITRO = 'NITRO'), (i.BASH_OUT = 'BASH_OUT'), (i.GAME_NIGHT = 'GAME_NIGHT');
 let f = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4',
 	C = 'https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png',
 	N = (e) => {
@@ -76,8 +73,7 @@ let f = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
 							description: T.Z.Messages.EMBEDDED_ACTIVITY_NOTICE_BASH_OUT_DESCRIPTION,
 							learnMore: !1,
 							title: T.Z.Messages.EMBEDDED_ACTIVITIES_AVAILABLE_NOW,
-							videoPosterUrl:
-								'https://cdn.discordapp.com/attachments/860252504826445825/1037963592227635230/bash_out.jpg',
+							videoPosterUrl: 'https://cdn.discordapp.com/attachments/860252504826445825/1037963592227635230/bash_out.jpg',
 							videoUrl: 'https://cdn.discordapp.com/attachments/860252504826445825/1037967755955146762/bash_out.mp4',
 							ctaText: T.Z.Messages.PLAY,
 							dismissText: T.Z.Messages.DISMISS
@@ -89,10 +85,8 @@ let f = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
 							description: T.Z.Messages.EMBEDDED_ACTIVITIES_GAME_NIGHT_BODY,
 							learnMore: !1,
 							title: T.Z.Messages.EMBEDDED_ACTIVITIES_GAME_NIGHT_HEADING,
-							videoPosterUrl:
-								'https://cdn.discordapp.com/attachments/860252504826445825/1093287297950175272/game_night_desktop.jpg',
-							videoUrl:
-								'https://cdn.discordapp.com/attachments/860252504826445825/1093286971708813382/game_night_desktop.mp4',
+							videoPosterUrl: 'https://cdn.discordapp.com/attachments/860252504826445825/1093287297950175272/game_night_desktop.jpg',
+							videoUrl: 'https://cdn.discordapp.com/attachments/860252504826445825/1093286971708813382/game_night_desktop.mp4',
 							ctaText: T.Z.Messages.PLAY_NOW,
 							dismissText: T.Z.Messages.MAYBE_LATER
 						};

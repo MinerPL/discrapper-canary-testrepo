@@ -73,12 +73,7 @@ let o = (e) => {
 				return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_DISPLAY_HELPER.format({ channelName: u });
 			}
 			case u.jj.USER_COMMUNICATION_DISABLED: {
-				let e =
-						null !==
-							(o = null == t ? void 0 : null === (r = t.metadata) || void 0 === r ? void 0 : r.durationSeconds) &&
-						void 0 !== o
-							? o
-							: 0,
+				let e = null !== (o = null == t ? void 0 : null === (r = t.metadata) || void 0 === r ? void 0 : r.durationSeconds) && void 0 !== o ? o : 0,
 					n = (0, l.L9)(e);
 				if (null == n) return null;
 				return s.Z.Messages.GUILD_AUTOMOD_ACTIONS_USER_DISABLE_COMMUNICATION_DISPLAY_HELPER.format({ duration: n });

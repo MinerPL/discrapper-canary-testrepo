@@ -64,28 +64,7 @@ class P extends Z.ZP {
 				});
 	}
 	render() {
-		let {
-				channel: e,
-				guild: t,
-				selected: n,
-				muted: l,
-				unread: a,
-				hasActiveThreads: o,
-				hasMoreActiveThreads: c,
-				mentionCount: u,
-				connectChannelDropTarget: d,
-				connectChannelDragSource: h,
-				connectDragPreview: f,
-				canReorderChannel: g,
-				isSubscriptionGated: m,
-				isFavoriteSuggestion: C,
-				subtitle: I,
-				forceTopLevelThread: E,
-				embeddedApps: N,
-				resolvedUnreadSetting: x,
-				withGuildIcon: S,
-				enableActivities: v
-			} = this.props,
+		let { channel: e, guild: t, selected: n, muted: l, unread: a, hasActiveThreads: o, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: f, canReorderChannel: g, isSubscriptionGated: m, isFavoriteSuggestion: C, subtitle: I, forceTopLevelThread: E, embeddedApps: N, resolvedUnreadSetting: x, withGuildIcon: S, enableActivities: v } = this.props,
 			Z = v && null != N && N.length > 0,
 			T = (0, _.D)(I),
 			A = (0, i.jsx)('li', {
@@ -127,13 +106,7 @@ class P extends Z.ZP {
 								mentionCount: u,
 								isSubscriptionGated: m
 							}),
-							children: [
-								C && this.renderAcceptSuggestionButton(),
-								C && this.renderRemoveSuggestionButton(),
-								!C && this.renderInviteButton(),
-								!C && this.renderEditButton(),
-								!C && this.renderChannelInfo()
-							]
+							children: [C && this.renderAcceptSuggestionButton(), C && this.renderRemoveSuggestionButton(), !C && this.renderInviteButton(), !C && this.renderEditButton(), !C && this.renderChannelInfo()]
 						})
 				})
 			});
@@ -151,16 +124,13 @@ class P extends Z.ZP {
 				if (!!this.props.canShowThreadPreviewForUser || null != this.props.embeddedApps)
 					this.resetTextChannelPopoutTimers(),
 						(this.enterTimer = setTimeout(() => {
-							null != this.props.embeddedApps && this.props.embeddedApps.length > 0
-								? this.setState({ shouldShowActivities: !0 })
-								: this.props.canShowThreadPreviewForUser && this.setState({ shouldShowThreadsPopout: !0 });
+							null != this.props.embeddedApps && this.props.embeddedApps.length > 0 ? this.setState({ shouldShowActivities: !0 }) : this.props.canShowThreadPreviewForUser && this.setState({ shouldShowThreadsPopout: !0 });
 						}, 200));
 			}),
 			O(this, 'handleMouseLeave', () => {
 				this.resetTextChannelPopoutTimers(),
 					(this.exitTimer = setTimeout(() => {
-						this.state.shouldShowActivities && this.setState({ shouldShowActivities: !1 }),
-							this.state.shouldShowThreadsPopout && this.setState({ shouldShowThreadsPopout: !1 });
+						this.state.shouldShowActivities && this.setState({ shouldShowActivities: !1 }), this.state.shouldShowThreadsPopout && this.setState({ shouldShowThreadsPopout: !1 });
 					}, 250));
 			}),
 			O(this, 'handleThreadsPopoutClose', () => {
@@ -170,8 +140,7 @@ class P extends Z.ZP {
 				this.resetTextChannelPopoutTimers(), this.setState({ shouldShowActivities: !1 });
 			}),
 			O(this, 'handleClosePopout', () => {
-				this.state.shouldShowActivities && this.handleActivitiesPopoutClose(),
-					this.state.shouldShowThreadsPopout && this.handleThreadsPopoutClose();
+				this.state.shouldShowActivities && this.handleActivitiesPopoutClose(), this.state.shouldShowThreadsPopout && this.handleThreadsPopoutClose();
 			}),
 			O(this, 'handleMouseDown', () => {
 				this.handleActivitiesPopoutClose(), this.handleThreadsPopoutClose();
@@ -210,9 +179,7 @@ class P extends Z.ZP {
 					let l = S.default.getUser(t.getRecipientId());
 					null != l &&
 						(0, c.jW)(e, async () => {
-							let { default: e } = await Promise.all([n.e('79695'), n.e('70474'), n.e('56826'), n.e('38834')]).then(
-								n.bind(n, 131404)
-							);
+							let { default: e } = await Promise.all([n.e('79695'), n.e('70474'), n.e('56826'), n.e('38834')]).then(n.bind(n, 131404));
 							return (n) =>
 								(0, i.jsx)(e, {
 									...n,
@@ -251,9 +218,7 @@ function j(e) {
 			let e = C.Z.getChannel(t.parent_id);
 			return {
 				canManageChannel: E.Z.can(b.Plq.MANAGE_CHANNELS, t),
-				canReorderChannel:
-					!0 !== l &&
-					(n.id === M._ || (null != e ? E.Z.can(b.Plq.MANAGE_CHANNELS, e) : E.Z.can(b.Plq.MANAGE_CHANNELS, n)))
+				canReorderChannel: !0 !== l && (n.id === M._ || (null != e ? E.Z.can(b.Plq.MANAGE_CHANNELS, e) : E.Z.can(b.Plq.MANAGE_CHANNELS, n)))
 			};
 		}),
 		v = (0, a.e7)([g.Z], () => g.Z.shouldIndicateNewChannel(n.id, t.id)),

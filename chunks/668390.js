@@ -47,23 +47,7 @@ function g(e) {
 		: null;
 }
 function E(e) {
-	let {
-			color: t,
-			id: a,
-			role: i,
-			guild: c,
-			children: E,
-			isDragging: T,
-			selectedItem: p,
-			onItemSelect: N,
-			itemType: _,
-			locked: S,
-			lockTooltip: x,
-			showContextMenu: f,
-			theme: C,
-			roleStyle: I,
-			'aria-label': M
-		} = e,
+	let { color: t, id: a, role: i, guild: c, children: E, isDragging: T, selectedItem: p, onItemSelect: N, itemType: _, locked: S, lockTooltip: x, showContextMenu: f, theme: C, roleStyle: I, 'aria-label': M } = e,
 		R = l.useCallback(
 			(e) => {
 				(0, d.jW)(e, async () => {

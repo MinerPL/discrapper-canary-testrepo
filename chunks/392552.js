@@ -6,9 +6,7 @@ n.d(t, {
 var r,
 	i,
 	a = n(818083);
-((r = i || (i = {}))[(r.NONE = 0)] = 'NONE'),
-	(r[(r.WITH_TOP_LIST = 1)] = 'WITH_TOP_LIST'),
-	(r[(r.WITHOUT_TOP_LIST = 2)] = 'WITHOUT_TOP_LIST');
+((r = i || (i = {}))[(r.NONE = 0)] = 'NONE'), (r[(r.WITH_TOP_LIST = 1)] = 'WITH_TOP_LIST'), (r[(r.WITHOUT_TOP_LIST = 2)] = 'WITHOUT_TOP_LIST');
 let s = (0, a.B)({
 	kind: 'user',
 	id: '2024-02_emoji_picker_upload_desktop',

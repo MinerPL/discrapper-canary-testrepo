@@ -22,8 +22,7 @@ class o {
 			}
 			let i = e[r.oneof];
 			if (i.oneofKind !== r.localName) continue;
-			let a =
-					'scalar' == r.kind || 'enum' == r.kind ? Object.assign(Object.assign({}, t), { emitDefaultValues: !0 }) : t,
+			let a = 'scalar' == r.kind || 'enum' == r.kind ? Object.assign(Object.assign({}, t), { emitDefaultValues: !0 }) : t,
 				o = this.field(r, i[r.localName], a);
 			(0, s.hu)(void 0 !== o), (n[t.useProtoFieldName ? r.name : r.jsonName] = o);
 		}
@@ -102,12 +101,7 @@ class o {
 			(0, s.hu)(r);
 			return;
 		}
-		if (0 !== t || i || r)
-			return ((0, s.hu)('number' == typeof t), (0, s.hu)(Number.isInteger(t)), a || !e[1].hasOwnProperty(t))
-				? t
-				: e[2]
-					? e[2] + e[1][t]
-					: e[1][t];
+		if (0 !== t || i || r) return ((0, s.hu)('number' == typeof t), (0, s.hu)(Number.isInteger(t)), a || !e[1].hasOwnProperty(t)) ? t : e[2] ? e[2] + e[1][t] : e[1][t];
 	}
 	message(e, t, n, r) {
 		return void 0 === t ? (r.emitDefaultValues ? null : void 0) : e.internalJsonWrite(t, r);

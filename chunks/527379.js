@@ -56,13 +56,7 @@ async function E(e, n) {
 function I(e) {
 	let n = (0, u.lv)(e),
 		t = l.Z.getGuild(e);
-	return (
-		!!n &&
-		null != t &&
-		(t.hasFeature(s.oNc.COMMUNITY) || t.hasFeature(s.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)
-			? ((0, o.uL)(s.Z5c.CHANNEL(e, c.oC.MEMBER_SAFETY)), !0)
-			: (i.Z.open(t.id, s.pNK.MEMBERS), !0))
-	);
+	return !!n && null != t && (t.hasFeature(s.oNc.COMMUNITY) || t.hasFeature(s.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) ? ((0, o.uL)(s.Z5c.CHANNEL(e, c.oC.MEMBER_SAFETY)), !0) : (i.Z.open(t.id, s.pNK.MEMBERS), !0));
 }
 async function g(e, n) {
 	let t = await (0, a._2)(e, n);

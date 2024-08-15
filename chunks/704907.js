@@ -45,22 +45,11 @@ t.Z = class e {
 				frecency: -1,
 				score: 0
 			};
-		else
-			for (
-				n.frecency = -1,
-					n.totalUses += 1,
-					null == t ? n.recentUses.push(Date.now()) : (n.recentUses.push(t), n.recentUses.sort());
-				n.recentUses.length > this.maxSamples;
-
-			)
-				n.recentUses.shift();
+		else for (n.frecency = -1, n.totalUses += 1, null == t ? n.recentUses.push(Date.now()) : (n.recentUses.push(t), n.recentUses.sort()); n.recentUses.length > this.maxSamples; ) n.recentUses.shift();
 		(this.usageHistory[e] = n), this.markDirty();
 	}
 	getEntry(e) {
-		return null == e
-			? null
-			: (this.dirty && this.compute(),
-				Object.prototype.hasOwnProperty.call(this.usageHistory, e) ? this.usageHistory[e] : void 0);
+		return null == e ? null : (this.dirty && this.compute(), Object.prototype.hasOwnProperty.call(this.usageHistory, e) ? this.usageHistory[e] : void 0);
 	}
 	getScore(e) {
 		let t = this.getEntry(e);
@@ -82,9 +71,7 @@ t.Z = class e {
 					let i = this.computeWeight(e.diff(s()(n), 'days'));
 					t.score += l * i;
 				}),
-				t.score > 0
-					? (t.recentUses.length > 0 && (t.frecency = Math.ceil(r * (t.score / a.length))), (this.usageHistory[n] = t))
-					: delete this.usageHistory[n];
+				t.score > 0 ? (t.recentUses.length > 0 && (t.frecency = Math.ceil(r * (t.score / a.length))), (this.usageHistory[n] = t)) : delete this.usageHistory[n];
 		}),
 			(this.frequently = i()(this.usageHistory)
 				.map((e, t) => {
@@ -111,31 +98,7 @@ t.Z = class e {
 	set frequently(e) {
 		this._frequently = e;
 	}
-	constructor({
-		computeBonus: e,
-		computeWeight: t,
-		lookupKey: n,
-		afterCompute: r,
-		numFrequentlyItems: i = 32,
-		maxSamples: a = 10
-	}) {
-		o(this, 'dirty', void 0),
-			o(this, '_frequently', void 0),
-			o(this, 'numFrequentlyItems', void 0),
-			o(this, 'maxSamples', void 0),
-			o(this, 'computeBonus', void 0),
-			o(this, 'computeWeight', void 0),
-			o(this, 'lookupKey', void 0),
-			o(this, 'usageHistory', void 0),
-			o(this, 'afterCompute', void 0),
-			(this.computeBonus = e),
-			(this.computeWeight = t),
-			(this.afterCompute = r),
-			(this.lookupKey = n),
-			(this.usageHistory = {}),
-			(this.frequently = []),
-			(this.maxSamples = a),
-			(this.numFrequentlyItems = i),
-			(this.dirty = !1);
+	constructor({ computeBonus: e, computeWeight: t, lookupKey: n, afterCompute: r, numFrequentlyItems: i = 32, maxSamples: a = 10 }) {
+		o(this, 'dirty', void 0), o(this, '_frequently', void 0), o(this, 'numFrequentlyItems', void 0), o(this, 'maxSamples', void 0), o(this, 'computeBonus', void 0), o(this, 'computeWeight', void 0), o(this, 'lookupKey', void 0), o(this, 'usageHistory', void 0), o(this, 'afterCompute', void 0), (this.computeBonus = e), (this.computeWeight = t), (this.afterCompute = r), (this.lookupKey = n), (this.usageHistory = {}), (this.frequently = []), (this.maxSamples = a), (this.numFrequentlyItems = i), (this.dirty = !1);
 	}
 };

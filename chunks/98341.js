@@ -26,20 +26,7 @@ var n = t(799761),
 			values: {
 				narrow: ['O', 'Ş', 'M', 'N', 'M', 'H', 'T', 'A', 'E', 'E', 'K', 'A'],
 				abbreviated: ['Oca', 'Şub', 'Mar', 'Nis', 'May', 'Haz', 'Tem', 'Ağu', 'Eyl', 'Eki', 'Kas', 'Ara'],
-				wide: [
-					'Ocak',
-					'Şubat',
-					'Mart',
-					'Nisan',
-					'Mayıs',
-					'Haziran',
-					'Temmuz',
-					'Ağustos',
-					'Eylül',
-					'Ekim',
-					'Kasım',
-					'Aralık'
-				]
+				wide: ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık']
 			},
 			defaultWidth: 'wide'
 		}),

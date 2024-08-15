@@ -13,8 +13,8 @@ var r,
 	f = n(984933),
 	h = n(271383),
 	p = n(430824),
-	I = n(594174),
-	m = n(979651),
+	m = n(594174),
+	I = n(979651),
 	T = n(700785),
 	g = n(146085),
 	S = n(590415);
@@ -36,7 +36,7 @@ function v(e, t) {
 		if (null == l || null == s || !s.isGuildStageVoice()) return N;
 		return {
 			speaker: (function (e, t) {
-				let n = m.Z.getVoiceStateForChannel(t, e);
+				let n = I.Z.getVoiceStateForChannel(t, e);
 				return (0, S.gf)(n) === S.xO.ON_STAGE;
 			})(e, t),
 			moderator: a
@@ -86,7 +86,7 @@ function C(e) {
 }
 class y extends (i = d.ZP.Store) {
 	initialize() {
-		this.waitFor(h.ZP, E.Z, p.Z, I.default, m.Z);
+		this.waitFor(h.ZP, E.Z, p.Z, m.default, I.Z);
 	}
 	isSpeaker(e, t) {
 		return this.getPermissionsForUser(e, t).speaker;

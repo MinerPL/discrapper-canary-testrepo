@@ -22,15 +22,7 @@ var i = t(481060),
 	Z = t(981631),
 	f = t(689938);
 function g(e) {
-	let {
-			guildEventId: n,
-			recurrenceId: t,
-			channel: g,
-			guild: M,
-			analyticsContext: D,
-			isRecurrenceItem: v = !1,
-			onSelect: S
-		} = e,
+	let { guildEventId: n, recurrenceId: t, channel: g, guild: M, analyticsContext: D, isRecurrenceItem: v = !1, onSelect: S } = e,
 		O = (0, T.Z)({
 			guildEventId: n,
 			recurrenceId: t,

@@ -115,18 +115,7 @@ class R extends (i = r.PureComponent) {
 		return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, h.x)(e);
 	}
 	render() {
-		let {
-				channel: e,
-				channelName: t,
-				selected: n,
-				badge: i,
-				audio: r,
-				video: o,
-				stream: u,
-				isCurrentUserInThisDMCall: d,
-				unread: h,
-				isGDMFacepileEnabled: p
-			} = this.props,
+		let { channel: e, channelName: t, selected: n, badge: i, audio: r, video: o, stream: u, isCurrentUserInThisDMCall: d, unread: h, isGDMFacepileEnabled: p } = this.props,
 			{ hovered: _, animating: g } = this.state,
 			m = e.isMultiUserDM() && null == e.icon && p;
 		return (0, l.jsx)(a.animated.div, {
@@ -199,9 +188,7 @@ class R extends (i = r.PureComponent) {
 					i = t.type === T.d4z.DM ? E.default.getUser(t.getRecipientId()) : null;
 				null != i
 					? (0, u.jW)(e, async () => {
-							let { default: e } = await Promise.all([n.e('79695'), n.e('70474'), n.e('56826'), n.e('38834')]).then(
-								n.bind(n, 131404)
-							);
+							let { default: e } = await Promise.all([n.e('79695'), n.e('70474'), n.e('56826'), n.e('38834')]).then(n.bind(n, 131404));
 							return (n) =>
 								(0, l.jsx)(e, {
 									...n,

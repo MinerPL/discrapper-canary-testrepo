@@ -18,9 +18,7 @@ var T,
 	c = s(486213),
 	O = s(689938),
 	d = s(643415);
-((o = T || (T = {})).ACTIONS = 'ACTIONS'),
-	(o.SAFETY_TIPS = 'SAFETY_TIPS'),
-	(o.ABOUT_SAFETY_ALERTS = 'ABOUT_SAFETY_ALERTS');
+((o = T || (T = {})).ACTIONS = 'ACTIONS'), (o.SAFETY_TIPS = 'SAFETY_TIPS'), (o.ABOUT_SAFETY_ALERTS = 'ABOUT_SAFETY_ALERTS');
 t.default = (e) => {
 	let { onClose: t, channelId: s, warningId: T, warningType: o, otherUserId: A, transitionState: u } = e,
 		I = null != (0, i.M)(s),

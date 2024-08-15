@@ -39,12 +39,7 @@ t.Z = class e {
 		this.points = [];
 	}
 	update(e) {
-		if (0 !== this.points.length)
-			this.points.forEach((t) => t.update(Math.min(e, E))),
-				!this.hasEntered && this.points[0].x > _ && ((this.hasEntered = !0), this.updateWaveState(u.hO.ENTERED)),
-				this.isFilling &&
-					this.points[0].x > this.points[0].targetX &&
-					((this.isFilling = !1), this.updateWaveState(u.hO.FILLED));
+		if (0 !== this.points.length) this.points.forEach((t) => t.update(Math.min(e, E))), !this.hasEntered && this.points[0].x > _ && ((this.hasEntered = !0), this.updateWaveState(u.hO.ENTERED)), this.isFilling && this.points[0].x > this.points[0].targetX && ((this.isFilling = !1), this.updateWaveState(u.hO.FILLED));
 	}
 	render(e) {
 		if (0 === this.points.length) return;
@@ -71,22 +66,14 @@ t.Z = class e {
 		let e = Math.sqrt(window.innerWidth * window.innerWidth + window.innerHeight * window.innerHeight) + 100,
 			t = h() - 140,
 			n = (e, t, n, r) => {
-				(e.targetX = -40 + t * Math.cos(u.uo * ((n / 15) * 0.25 + 0))),
-					(e.targetY = -40 + t * Math.sin(u.uo * ((n / 15) * 0.25 + 0))),
-					r &&
-						((e.targetX += (0, l.M)(0, 30) - 15),
-						(e.targetY += (0, l.M)(0, 30) - 15),
-						(e.speedUp = 3),
-						(e.spring.tension = u.O1 * Math.random() * 0.5 + u.O1));
+				(e.targetX = -40 + t * Math.cos(u.uo * ((n / 15) * 0.25 + 0))), (e.targetY = -40 + t * Math.sin(u.uo * ((n / 15) * 0.25 + 0))), r && ((e.targetX += (0, l.M)(0, 30) - 15), (e.targetY += (0, l.M)(0, 30) - 15), (e.speedUp = 3), (e.spring.tension = u.O1 * Math.random() * 0.5 + u.O1));
 			};
 		this.points.forEach((e, r) => n(e, t, r, !0)),
 			setTimeout(() => {
 				this.points.forEach((t, r) => {
 					n(t, e, r, !1);
 					let i = 1 - t.index / 7.5;
-					(t.spring.friction += t.spring.friction + t.spring.friction * i),
-						(t.spring.tension = 0.7 * u.O1 + 80 * Math.random()),
-						(t.waveRange = 2 * t.waveRange);
+					(t.spring.friction += t.spring.friction + t.spring.friction * i), (t.spring.tension = 0.7 * u.O1 + 80 * Math.random()), (t.waveRange = 2 * t.waveRange);
 				}),
 					(this.isFilling = !0),
 					this.updateWaveState(u.hO.FILLING);
@@ -102,10 +89,7 @@ t.Z = class e {
 				this.points.forEach((t, n) => {
 					let r = -40 + e * Math.cos(u.uo * ((n / 15) * 0.25 + 0)),
 						i = -40 + e * Math.sin(u.uo * ((n / 15) * 0.25 + 0));
-					0 !== n ? (i += (0, l.M)(0, 30) - 15) : (r += (0, l.M)(0, 30) - 15),
-						(t.targetX = r),
-						(t.targetY = i),
-						(t.angle = Math.atan2(i, r));
+					0 !== n ? (i += (0, l.M)(0, 30) - 15) : (r += (0, l.M)(0, 30) - 15), (t.targetX = r), (t.targetY = i), (t.angle = Math.atan2(i, r));
 				});
 			}),
 			c(this, 'resizeWave', i()(this._resizeWave, 200)),

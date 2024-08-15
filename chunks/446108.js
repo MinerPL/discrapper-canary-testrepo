@@ -42,10 +42,6 @@ function u() {
 	].forEach((e) => {
 		let { id: t, text: n } = e,
 			r = document.getElementById(t);
-		null == r &&
-			((r = document.createElement('div')).setAttribute('id', t),
-			(r.innerText = n),
-			(r.style.display = 'none'),
-			document.body.appendChild(r));
+		null == r && ((r = document.createElement('div')).setAttribute('id', t), (r.innerText = n), (r.style.display = 'none'), document.body.appendChild(r));
 	});
 }

@@ -16,18 +16,18 @@ var r = n(735250),
 t.Z = function (e) {
 	let { soundId: t, jumbo: n = !1 } = e,
 		{ currentPreviewRef: a } = i.useContext(_.Z),
-		I = (0, o.e7)([E.Z], () => E.Z.getSoundById(t)),
-		m = (null == I ? void 0 : I.emojiId) != null || (null == I ? void 0 : I.emojiName) != null,
+		m = (0, o.e7)([E.Z], () => E.Z.getSoundById(t)),
+		I = (null == m ? void 0 : m.emojiId) != null || (null == m ? void 0 : m.emojiName) != null,
 		[T, g] = i.useState(!1),
 		S = (0, c.P)('soundmoji_chat_mention'),
 		A = i.useCallback(() => {
 			var e;
-			null == I && (0, d.w)();
+			null == m && (0, d.w)();
 			let n = new Audio((0, f.Z)(t));
 			null != a.current && a.current.pause(),
 				(a.current = n),
 				(n.currentTime = 0),
-				(n.volume = (0, h.Z)(null !== (e = null == I ? void 0 : I.volume) && void 0 !== e ? e : 0.5)),
+				(n.volume = (0, h.Z)(null !== (e = null == m ? void 0 : m.volume) && void 0 !== e ? e : 0.5)),
 				g(!0),
 				n.play(),
 				n.addEventListener(
@@ -37,9 +37,9 @@ t.Z = function (e) {
 					},
 					{ once: !0 }
 				);
-		}, [t, I, a, g]);
+		}, [t, m, a, g]);
 	return S
-		? null == I
+		? null == m
 			? (0, r.jsxs)(l.Clickable, {
 					title: 'Risky Click',
 					tag: 'span',
@@ -73,10 +73,10 @@ t.Z = function (e) {
 									className: p.__invalid_jumboPlayIcon
 								})
 							}),
-							m &&
+							I &&
 								(0, r.jsx)(u.Z, {
-									emojiId: null == I ? void 0 : I.emojiId,
-									emojiName: null == I ? void 0 : I.emojiName,
+									emojiId: null == m ? void 0 : m.emojiId,
+									emojiName: null == m ? void 0 : m.emojiName,
 									className: p.jumboEmoji
 								}),
 							(0, r.jsx)(l.Text, {
@@ -84,7 +84,7 @@ t.Z = function (e) {
 								variant: 'text-lg/normal',
 								color: 'none',
 								className: p.text,
-								children: I.name
+								children: m.name
 							})
 						]
 					})
@@ -93,10 +93,10 @@ t.Z = function (e) {
 						onClick: A,
 						className: p.container,
 						children: [
-							m &&
+							I &&
 								(0, r.jsx)(u.Z, {
-									emojiId: null == I ? void 0 : I.emojiId,
-									emojiName: null == I ? void 0 : I.emojiName,
+									emojiId: null == m ? void 0 : m.emojiId,
+									emojiName: null == m ? void 0 : m.emojiName,
 									className: p.emoji
 								}),
 							(0, r.jsx)(l.Text, {
@@ -104,7 +104,7 @@ t.Z = function (e) {
 								variant: 'text-md/normal',
 								color: 'none',
 								className: p.text,
-								children: I.name
+								children: m.name
 							})
 						]
 					})

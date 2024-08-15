@@ -29,30 +29,21 @@ function _(e) {
 					isGuildApp: !1,
 					isUserApp: !1
 				};
-			let s = Object.values(
-					null !== (l = null === (e = I.result) || void 0 === e ? void 0 : e.sections) && void 0 !== l ? l : {}
-				),
-				a = Object.values(
-					null !== (t = null === (i = g.result) || void 0 === i ? void 0 : i.sections) && void 0 !== t ? t : {}
-				);
+			let s = Object.values(null !== (l = null === (e = I.result) || void 0 === e ? void 0 : e.sections) && void 0 !== l ? l : {}),
+				a = Object.values(null !== (t = null === (i = g.result) || void 0 === i ? void 0 : i.sections) && void 0 !== t ? t : {});
 			return {
 				isGuildApp: s.some((e) => {
 					var i;
-					return (
-						(null === (i = e.descriptor.application) || void 0 === i ? void 0 : i.id) === (null == n ? void 0 : n.id)
-					);
+					return (null === (i = e.descriptor.application) || void 0 === i ? void 0 : i.id) === (null == n ? void 0 : n.id);
 				}),
 				isUserApp: a.some((e) => {
 					var i;
-					return (
-						(null === (i = e.descriptor.application) || void 0 === i ? void 0 : i.id) === (null == n ? void 0 : n.id)
-					);
+					return (null === (i = e.descriptor.application) || void 0 === i ? void 0 : i.id) === (null == n ? void 0 : n.id);
 				})
 			};
 		}, [I, g, null == n ? void 0 : n.id]),
 		m = t.useCallback(() => {
-			if ((null == N ? void 0 : N.id) != null)
-				r.Z.open(N.id, M.pNK.INTEGRATIONS), o.Z.setSection(M.b4C.APPLICATION, null == n ? void 0 : n.id);
+			if ((null == N ? void 0 : N.id) != null) r.Z.open(N.id, M.pNK.INTEGRATIONS), o.Z.setSection(M.b4C.APPLICATION, null == n ? void 0 : n.id);
 		}, [null == n ? void 0 : n.id, null == N ? void 0 : N.id]),
 		p = t.useCallback(() => {
 			u.Z.open(M.oAB.AUTHORIZED_APPS);

@@ -114,32 +114,14 @@ function I(e, t, r, a, n, s, o, i, c, u) {
 		if (
 			(a &&
 				(m = (function (e, t, r, a) {
-					for (
-						var n = -1, s = e.length, o = r.length, i = -1, c = t.length, u = B(s - o, 0), l = Array(c + u), b = !a;
-						++i < c;
-
-					)
-						l[i] = t[i];
+					for (var n = -1, s = e.length, o = r.length, i = -1, c = t.length, u = B(s - o, 0), l = Array(c + u), b = !a; ++i < c; ) l[i] = t[i];
 					for (; ++n < o; ) (b || n < s) && (l[r[n]] = e[n]);
 					for (; u--; ) l[i++] = e[n++];
 					return l;
 				})(m, a, n, d)),
 			s &&
 				(m = (function (e, t, r, a) {
-					for (
-						var n = -1,
-							s = e.length,
-							o = -1,
-							i = r.length,
-							c = -1,
-							u = t.length,
-							l = B(s - i, 0),
-							b = Array(l + u),
-							f = !a;
-						++n < l;
-
-					)
-						b[n] = e[n];
+					for (var n = -1, s = e.length, o = -1, i = r.length, c = -1, u = t.length, l = B(s - i, 0), b = Array(l + u), f = !a; ++n < l; ) b[n] = e[n];
 					for (var d = n; ++c < u; ) b[d + c] = t[c];
 					for (; ++o < i; ) (f || n < s) && (b[d + r[o]] = e[n++]);
 					return b;
@@ -171,15 +153,7 @@ function I(e, t, r, a, n, s, o, i, c, u) {
 							var s,
 								o,
 								i = t[a];
-							(s = i),
-								(e[a] =
-									(o = null == (o = r) ? 9007199254740991 : o) &&
-									('number' == typeof s || v.test(s)) &&
-									s > -1 &&
-									s % 1 == 0 &&
-									s < o
-										? n[i]
-										: void 0);
+							(s = i), (e[a] = (o = null == (o = r) ? 9007199254740991 : o) && ('number' == typeof s || v.test(s)) && s > -1 && s % 1 == 0 && s < o ? n[i] : void 0);
 						}
 						return e;
 					})(m, i))
@@ -302,27 +276,13 @@ function U(e, t, r) {
 		var c = 2 & t;
 		if (!c && 'function' != typeof e) throw TypeError('Expected a function');
 		var u = a ? a.length : 0;
-		if (
-			(!u && ((t &= -97), (a = n = void 0)),
-			(o = void 0 === o ? o : B(W(o), 0)),
-			(i = void 0 === i ? i : W(i)),
-			(u -= n ? n.length : 0),
-			64 & t)
-		) {
+		if ((!u && ((t &= -97), (a = n = void 0)), (o = void 0 === o ? o : B(W(o), 0)), (i = void 0 === i ? i : W(i)), (u -= n ? n.length : 0), 64 & t)) {
 			var l = a,
 				b = n;
 			a = n = void 0;
 		}
 		var f = [e, t, r, a, n, l, b, s, o, i];
-		if (
-			((e = f[0]),
-			(t = f[1]),
-			(r = f[2]),
-			(a = f[3]),
-			(n = f[4]),
-			!(i = f[9] = null == f[9] ? (c ? 0 : e.length) : B(f[9] - u, 0)) && 24 & t && (t &= -25),
-			t && 1 != t)
-		) {
+		if (((e = f[0]), (t = f[1]), (r = f[2]), (a = f[3]), (n = f[4]), !(i = f[9] = null == f[9] ? (c ? 0 : e.length) : B(f[9] - u, 0)) && 24 & t && (t &= -25), t && 1 != t)) {
 			if (8 == t || 16 == t) {
 				(d = e),
 					(h = t),
@@ -331,9 +291,7 @@ function U(e, t, r) {
 					(R = function e() {
 						for (var t = arguments.length, r = Array(t), a = t, n = q(e); a--; ) r[a] = arguments[a];
 						var s = t < 3 && r[0] !== n && r[t - 1] !== n ? [] : j(r, n);
-						return (t -= s.length) < p
-							? L(d, h, I, e.placeholder, void 0, r, s, void 0, void 0, p - t)
-							: E(this && this !== k && this instanceof e ? y : d, this, r);
+						return (t -= s.length) < p ? L(d, h, I, e.placeholder, void 0, r, s, void 0, void 0, p - t) : E(this && this !== k && this instanceof e ? y : d, this, r);
 					});
 			} else if ((32 != t && 33 != t) || n.length) R = I.apply(void 0, f);
 			else {
@@ -344,17 +302,7 @@ function U(e, t, r) {
 					(w = 1 & v),
 					(x = N(g)),
 					(R = function e() {
-						for (
-							var t = -1,
-								r = arguments.length,
-								a = -1,
-								n = O.length,
-								s = Array(n + r),
-								o = this && this !== k && this instanceof e ? x : g;
-							++a < n;
-
-						)
-							s[a] = O[a];
+						for (var t = -1, r = arguments.length, a = -1, n = O.length, s = Array(n + r), o = this && this !== k && this instanceof e ? x : g; ++a < n; ) s[a] = O[a];
 						for (; r--; ) s[a++] = arguments[++t];
 						return E(o, w ? m : this, s);
 					});
@@ -398,8 +346,7 @@ function W(e) {
 		r = (t = e)
 			? (t = (function (e) {
 					if ('number' == typeof e) return e;
-					if ('symbol' == typeof (t = e) || ((r = t) && 'object' == typeof r && '[object Symbol]' == S.call(t)))
-						return c;
+					if ('symbol' == typeof (t = e) || ((r = t) && 'object' == typeof r && '[object Symbol]' == S.call(t))) return c;
 					if (G(e)) {
 						var t,
 							r,

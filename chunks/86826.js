@@ -32,10 +32,7 @@ t.Z = function (e) {
 								}),
 								(0, i.jsx)('div', {
 									className: u.rate,
-									children:
-										(c = (e[e.length - 1] / t) * 1000) > 1000
-											? d.Z.Messages.FILE_RATE_MB.format({ size: Math.round(c / 1000) })
-											: d.Z.Messages.FILE_RATE_KB.format({ size: Math.round(c) })
+									children: (c = (e[e.length - 1] / t) * 1000) > 1000 ? d.Z.Messages.FILE_RATE_MB.format({ size: Math.round(c / 1000) }) : d.Z.Messages.FILE_RATE_KB.format({ size: Math.round(c) })
 								})
 							]
 						}),

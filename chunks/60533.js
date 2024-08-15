@@ -31,8 +31,7 @@ function c(e) {
 			(0, s.jsx)(i.Text, {
 				variant: 'text-md/normal',
 				color: 'header-secondary',
-				children:
-					"This server is overdue for accepting our new terms of service so we've had to temporarily suspend monetization. Don't worry, existing subscribers can still access their benefits and renew their subscription. However, new subscriptions cannot be made until the owner accepts our new terms of service."
+				children: "This server is overdue for accepting our new terms of service so we've had to temporarily suspend monetization. Don't worry, existing subscribers can still access their benefits and renew their subscription. However, new subscriptions cannot be made until the owner accepts our new terms of service."
 			}),
 			(0, s.jsx)(i.Spacer, { size: 24 }),
 			(0, s.jsx)(i.Tooltip, {

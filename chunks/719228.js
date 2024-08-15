@@ -36,9 +36,7 @@ function x(e) {
 			(0, n.jsx)(o.Heading, {
 				className: _.selectHeader,
 				variant: 'heading-md/semibold',
-				children: s
-					? M.Z.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_TRANSFER_HEADER
-					: M.Z.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_HEADER
+				children: s ? M.Z.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_TRANSFER_HEADER : M.Z.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_HEADER
 			}),
 			(0, n.jsx)(o.SearchBar, {
 				size: o.SearchBar.Sizes.MEDIUM,
@@ -58,9 +56,7 @@ function E(e) {
 		U = (0, i.Wu)([C.Z], () =>
 			E.reduce((e, s) => {
 				let n = C.Z.getGuild(s);
-				return null == n || (null != l && l.some((e) => e.id === s))
-					? e
-					: ((x.length <= 0 || a()(x.toLowerCase(), null == n ? void 0 : n.name.toLowerCase())) && e.push(n), e);
+				return null == n || (null != l && l.some((e) => e.id === s)) ? e : ((x.length <= 0 || a()(x.toLowerCase(), null == n ? void 0 : n.name.toLowerCase())) && e.push(n), e);
 			}, [])
 		);
 	function R() {
@@ -124,9 +120,7 @@ function E(e) {
 								className: _.selectGuildPseudoCta,
 								color: 'always-white',
 								variant: 'text-sm/medium',
-								children: s
-									? M.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_HERE
-									: M.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION
+								children: s ? M.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_HERE : M.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION
 							})
 						]
 					},

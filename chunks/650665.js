@@ -119,11 +119,7 @@ function D() {
 				a = t.scripts[0];
 			if (a) {
 				let { invoker: e, invokerType: t, sourceURL: r, sourceFunctionName: o, sourceCharPosition: i } = a;
-				(n['browser.script.invoker'] = e),
-					(n['browser.script.invoker_type'] = t),
-					r && (n['code.filepath'] = r),
-					o && (n['code.function'] = o),
-					-1 !== i && (n['browser.script.source_char_position'] = i);
+				(n['browser.script.invoker'] = e), (n['browser.script.invoker_type'] = t), r && (n['code.filepath'] = r), o && (n['code.function'] = o), -1 !== i && (n['browser.script.source_char_position'] = i);
 			}
 			let E = (0, i.qp)({
 				name: 'Main UI thread blocked',
@@ -206,9 +202,7 @@ function h(e) {
 								i = a + Math.max(r, (0, T.XL)(o ? o.requestStart : 0)),
 								E = a + r,
 								s = { [_.S3]: 'auto.resource.browser.metrics' };
-							i !== E &&
-								((s['sentry.browser.measure_happened_before_request'] = !0),
-								(s['sentry.browser.measure_start_time'] = i)),
+							i !== E && ((s['sentry.browser.measure_happened_before_request'] = !0), (s['sentry.browser.measure_start_time'] = i)),
 								(0, T.Y)(e, i, E + n, {
 									name: t.name,
 									op: t.entryType,
@@ -238,13 +232,7 @@ function h(e) {
 							if ('xmlhttprequest' === t.initiatorType || 'fetch' === t.initiatorType) return;
 							let i = (0, u.en)(r),
 								E = { [_.S3]: 'auto.resource.browser.metrics' };
-							g(E, t, 'transferSize', 'http.response_transfer_size'),
-								g(E, t, 'encodedBodySize', 'http.response_content_length'),
-								g(E, t, 'decodedBodySize', 'http.decoded_response_content_length'),
-								'renderBlockingStatus' in t && (E['resource.render_blocking_status'] = t.renderBlockingStatus),
-								i.protocol && (E['url.scheme'] = i.protocol.split(':').pop()),
-								i.host && (E['server.address'] = i.host),
-								(E['url.same_origin'] = r.includes(R.m.location.origin));
+							g(E, t, 'transferSize', 'http.response_transfer_size'), g(E, t, 'encodedBodySize', 'http.response_content_length'), g(E, t, 'decodedBodySize', 'http.decoded_response_content_length'), 'renderBlockingStatus' in t && (E['resource.render_blocking_status'] = t.renderBlockingStatus), i.protocol && (E['url.scheme'] = i.protocol.split(':').pop()), i.host && (E['server.address'] = i.host), (E['url.same_origin'] = r.includes(R.m.location.origin));
 							let s = o + n;
 							(0, T.Y)(e, s, s + a, {
 								name: r.replace(R.m.location.origin, ''),
@@ -305,16 +293,7 @@ function h(e) {
 				(0, E.o)(e, t.value, t.unit);
 			}),
 			(function (e) {
-				n &&
-					(l.X && I.kg.log('[Measurements] Adding LCP Data'),
-					n.element && e.setAttribute('lcp.element', (0, c.Rt)(n.element)),
-					n.id && e.setAttribute('lcp.id', n.id),
-					n.url && e.setAttribute('lcp.url', n.url.trim().slice(0, 200)),
-					e.setAttribute('lcp.size', n.size)),
-					a &&
-						a.sources &&
-						(l.X && I.kg.log('[Measurements] Adding CLS Data'),
-						a.sources.forEach((t, r) => e.setAttribute(`cls.source.${r + 1}`, (0, c.Rt)(t.node))));
+				n && (l.X && I.kg.log('[Measurements] Adding LCP Data'), n.element && e.setAttribute('lcp.element', (0, c.Rt)(n.element)), n.id && e.setAttribute('lcp.id', n.id), n.url && e.setAttribute('lcp.url', n.url.trim().slice(0, 200)), e.setAttribute('lcp.size', n.size)), a && a.sources && (l.X && I.kg.log('[Measurements] Adding CLS Data'), a.sources.forEach((t, r) => e.setAttribute(`cls.source.${r + 1}`, (0, c.Rt)(t.node))));
 			})(e);
 	}
 	(n = void 0), (a = void 0), (O = {});

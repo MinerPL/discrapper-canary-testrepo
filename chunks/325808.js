@@ -54,9 +54,7 @@ function p(e) {
 				? (0, n.jsx)(o.FormText, {
 						type: o.FormText.Types.DESCRIPTION,
 						className: i()(C.pttToolsMessage, m.marginBottom8),
-						children: N.Z.Messages.USER_SETTINGS_VOICE_ADD_MULTIPLE.format({
-							onClick: () => c.Z.setSection(S.oAB.KEYBINDS)
-						})
+						children: N.Z.Messages.USER_SETTINGS_VOICE_ADD_MULTIPLE.format({ onClick: () => c.Z.setSection(S.oAB.KEYBINDS) })
 					})
 				: (0, n.jsx)(o.FormText, {
 						type: o.FormText.Types.DESCRIPTION,

@@ -18,14 +18,9 @@ function d(e, t, n) {
 		E,
 		f,
 		h = (0, s.Re)(t);
-	var p =
-			(0, s.Re)(t) &&
-			((_ = (d = t).getBoundingClientRect()),
-			(E = (0, c.NM)(_.width) / d.offsetWidth || 1),
-			(f = (0, c.NM)(_.height) / d.offsetHeight || 1),
-			1 !== E || 1 !== f),
-		I = (0, l.Z)(t),
-		m = (0, r.Z)(e, p, n),
+	var p = (0, s.Re)(t) && ((_ = (d = t).getBoundingClientRect()), (E = (0, c.NM)(_.width) / d.offsetWidth || 1), (f = (0, c.NM)(_.height) / d.offsetHeight || 1), 1 !== E || 1 !== f),
+		m = (0, l.Z)(t),
+		I = (0, r.Z)(e, p, n),
 		T = {
 			scrollLeft: 0,
 			scrollTop: 0
@@ -35,14 +30,12 @@ function d(e, t, n) {
 			y: 0
 		};
 	return (
-		(h || (!h && !n)) &&
-			(('body' !== (0, a.Z)(t) || (0, u.Z)(I)) && (T = (0, i.Z)(t)),
-			(0, s.Re)(t) ? ((g = (0, r.Z)(t, !0)), (g.x += t.clientLeft), (g.y += t.clientTop)) : I && (g.x = (0, o.Z)(I))),
+		(h || (!h && !n)) && (('body' !== (0, a.Z)(t) || (0, u.Z)(m)) && (T = (0, i.Z)(t)), (0, s.Re)(t) ? ((g = (0, r.Z)(t, !0)), (g.x += t.clientLeft), (g.y += t.clientTop)) : m && (g.x = (0, o.Z)(m))),
 		{
-			x: m.left + T.scrollLeft - g.x,
-			y: m.top + T.scrollTop - g.y,
-			width: m.width,
-			height: m.height
+			x: I.left + T.scrollLeft - g.x,
+			y: I.top + T.scrollTop - g.y,
+			width: I.width,
+			height: I.height
 		}
 	);
 }

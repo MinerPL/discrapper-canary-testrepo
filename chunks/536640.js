@@ -21,9 +21,7 @@ function h(e) {
 					return typeof e;
 				}
 			: function (e) {
-					return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype
-						? 'symbol'
-						: typeof e;
+					return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
 				})(e);
 }
 function m(e, t) {
@@ -32,10 +30,7 @@ function m(e, t) {
 function v(e, t) {
 	for (var n = 0; n < t.length; n++) {
 		var o = t[n];
-		(o.enumerable = o.enumerable || !1),
-			(o.configurable = !0),
-			'value' in o && (o.writable = !0),
-			Object.defineProperty(e, o.key, o);
+		(o.enumerable = o.enumerable || !1), (o.configurable = !0), 'value' in o && (o.writable = !0), Object.defineProperty(e, o.key, o);
 	}
 }
 function g(e, t, n) {
@@ -143,8 +138,7 @@ function k(e) {
 			}
 		})(e) ||
 		(function (e) {
-			if (Symbol.iterator in Object(e) || '[object Arguments]' === Object.prototype.toString.call(e))
-				return Array.from(e);
+			if (Symbol.iterator in Object(e) || '[object Arguments]' === Object.prototype.toString.call(e)) return Array.from(e);
 		})(e) ||
 		(function () {
 			throw TypeError('Invalid attempt to spread non-iterable instance');
@@ -552,16 +546,14 @@ function G(e, t) {
 			return t != t && n != n;
 		})(e, t);
 	} catch (e) {
-		if (e.message && e.message.match(/stack|recursion/i))
-			return console.warn('Warning: react-fast-compare does not handle circular references.', e.name, e.message), !1;
+		if (e.message && e.message.match(/stack|recursion/i)) return console.warn('Warning: react-fast-compare does not handle circular references.', e.name, e.message), !1;
 		throw e;
 	}
 }
 var $ = [
 		{
 			base: 'A',
-			letters:
-				/[\u0041\u24B6\uFF21\u00C0\u00C1\u00C2\u1EA6\u1EA4\u1EAA\u1EA8\u00C3\u0100\u0102\u1EB0\u1EAE\u1EB4\u1EB2\u0226\u01E0\u00C4\u01DE\u1EA2\u00C5\u01FA\u01CD\u0200\u0202\u1EA0\u1EAC\u1EB6\u1E00\u0104\u023A\u2C6F]/g
+			letters: /[\u0041\u24B6\uFF21\u00C0\u00C1\u00C2\u1EA6\u1EA4\u1EAA\u1EA8\u00C3\u0100\u0102\u1EB0\u1EAE\u1EB4\u1EB2\u0226\u01E0\u00C4\u01DE\u1EA2\u00C5\u01FA\u01CD\u0200\u0202\u1EA0\u1EAC\u1EB6\u1E00\u0104\u023A\u2C6F]/g
 		},
 		{
 			base: 'AA',
@@ -609,8 +601,7 @@ var $ = [
 		},
 		{
 			base: 'E',
-			letters:
-				/[\u0045\u24BA\uFF25\u00C8\u00C9\u00CA\u1EC0\u1EBE\u1EC4\u1EC2\u1EBC\u0112\u1E14\u1E16\u0114\u0116\u00CB\u1EBA\u011A\u0204\u0206\u1EB8\u1EC6\u0228\u1E1C\u0118\u1E18\u1E1A\u0190\u018E]/g
+			letters: /[\u0045\u24BA\uFF25\u00C8\u00C9\u00CA\u1EC0\u1EBE\u1EC4\u1EC2\u1EBC\u0112\u1E14\u1E16\u0114\u0116\u00CB\u1EBA\u011A\u0204\u0206\u1EB8\u1EC6\u0228\u1E1C\u0118\u1E18\u1E1A\u0190\u018E]/g
 		},
 		{
 			base: 'F',
@@ -626,8 +617,7 @@ var $ = [
 		},
 		{
 			base: 'I',
-			letters:
-				/[\u0049\u24BE\uFF29\u00CC\u00CD\u00CE\u0128\u012A\u012C\u0130\u00CF\u1E2E\u1EC8\u01CF\u0208\u020A\u1ECA\u012E\u1E2C\u0197]/g
+			letters: /[\u0049\u24BE\uFF29\u00CC\u00CD\u00CE\u0128\u012A\u012C\u0130\u00CF\u1E2E\u1EC8\u01CF\u0208\u020A\u1ECA\u012E\u1E2C\u0197]/g
 		},
 		{
 			base: 'J',
@@ -639,8 +629,7 @@ var $ = [
 		},
 		{
 			base: 'L',
-			letters:
-				/[\u004C\u24C1\uFF2C\u013F\u0139\u013D\u1E36\u1E38\u013B\u1E3C\u1E3A\u0141\u023D\u2C62\u2C60\uA748\uA746\uA780]/g
+			letters: /[\u004C\u24C1\uFF2C\u013F\u0139\u013D\u1E36\u1E38\u013B\u1E3C\u1E3A\u0141\u023D\u2C62\u2C60\uA748\uA746\uA780]/g
 		},
 		{
 			base: 'LJ',
@@ -668,8 +657,7 @@ var $ = [
 		},
 		{
 			base: 'O',
-			letters:
-				/[\u004F\u24C4\uFF2F\u00D2\u00D3\u00D4\u1ED2\u1ED0\u1ED6\u1ED4\u00D5\u1E4C\u022C\u1E4E\u014C\u1E50\u1E52\u014E\u022E\u0230\u00D6\u022A\u1ECE\u0150\u01D1\u020C\u020E\u01A0\u1EDC\u1EDA\u1EE0\u1EDE\u1EE2\u1ECC\u1ED8\u01EA\u01EC\u00D8\u01FE\u0186\u019F\uA74A\uA74C]/g
+			letters: /[\u004F\u24C4\uFF2F\u00D2\u00D3\u00D4\u1ED2\u1ED0\u1ED6\u1ED4\u00D5\u1E4C\u022C\u1E4E\u014C\u1E50\u1E52\u014E\u022E\u0230\u00D6\u022A\u1ECE\u0150\u01D1\u020C\u020E\u01A0\u1EDC\u1EDA\u1EE0\u1EDE\u1EE2\u1ECC\u1ED8\u01EA\u01EC\u00D8\u01FE\u0186\u019F\uA74A\uA74C]/g
 		},
 		{
 			base: 'OI',
@@ -693,13 +681,11 @@ var $ = [
 		},
 		{
 			base: 'R',
-			letters:
-				/[\u0052\u24C7\uFF32\u0154\u1E58\u0158\u0210\u0212\u1E5A\u1E5C\u0156\u1E5E\u024C\u2C64\uA75A\uA7A6\uA782]/g
+			letters: /[\u0052\u24C7\uFF32\u0154\u1E58\u0158\u0210\u0212\u1E5A\u1E5C\u0156\u1E5E\u024C\u2C64\uA75A\uA7A6\uA782]/g
 		},
 		{
 			base: 'S',
-			letters:
-				/[\u0053\u24C8\uFF33\u1E9E\u015A\u1E64\u015C\u1E60\u0160\u1E66\u1E62\u1E68\u0218\u015E\u2C7E\uA7A8\uA784]/g
+			letters: /[\u0053\u24C8\uFF33\u1E9E\u015A\u1E64\u015C\u1E60\u0160\u1E66\u1E62\u1E68\u0218\u015E\u2C7E\uA7A8\uA784]/g
 		},
 		{
 			base: 'T',
@@ -711,8 +697,7 @@ var $ = [
 		},
 		{
 			base: 'U',
-			letters:
-				/[\u0055\u24CA\uFF35\u00D9\u00DA\u00DB\u0168\u1E78\u016A\u1E7A\u016C\u00DC\u01DB\u01D7\u01D5\u01D9\u1EE6\u016E\u0170\u01D3\u0214\u0216\u01AF\u1EEA\u1EE8\u1EEE\u1EEC\u1EF0\u1EE4\u1E72\u0172\u1E76\u1E74\u0244]/g
+			letters: /[\u0055\u24CA\uFF35\u00D9\u00DA\u00DB\u0168\u1E78\u016A\u1E7A\u016C\u00DC\u01DB\u01D7\u01D5\u01D9\u1EE6\u016E\u0170\u01D3\u0214\u0216\u01AF\u1EEA\u1EE8\u1EEE\u1EEC\u1EF0\u1EE4\u1E72\u0172\u1E76\u1E74\u0244]/g
 		},
 		{
 			base: 'V',
@@ -740,8 +725,7 @@ var $ = [
 		},
 		{
 			base: 'a',
-			letters:
-				/[\u0061\u24D0\uFF41\u1E9A\u00E0\u00E1\u00E2\u1EA7\u1EA5\u1EAB\u1EA9\u00E3\u0101\u0103\u1EB1\u1EAF\u1EB5\u1EB3\u0227\u01E1\u00E4\u01DF\u1EA3\u00E5\u01FB\u01CE\u0201\u0203\u1EA1\u1EAD\u1EB7\u1E01\u0105\u2C65\u0250]/g
+			letters: /[\u0061\u24D0\uFF41\u1E9A\u00E0\u00E1\u00E2\u1EA7\u1EA5\u1EAB\u1EA9\u00E3\u0101\u0103\u1EB1\u1EAF\u1EB5\u1EB3\u0227\u01E1\u00E4\u01DF\u1EA3\u00E5\u01FB\u01CE\u0201\u0203\u1EA1\u1EAD\u1EB7\u1E01\u0105\u2C65\u0250]/g
 		},
 		{
 			base: 'aa',
@@ -785,8 +769,7 @@ var $ = [
 		},
 		{
 			base: 'e',
-			letters:
-				/[\u0065\u24D4\uFF45\u00E8\u00E9\u00EA\u1EC1\u1EBF\u1EC5\u1EC3\u1EBD\u0113\u1E15\u1E17\u0115\u0117\u00EB\u1EBB\u011B\u0205\u0207\u1EB9\u1EC7\u0229\u1E1D\u0119\u1E19\u1E1B\u0247\u025B\u01DD]/g
+			letters: /[\u0065\u24D4\uFF45\u00E8\u00E9\u00EA\u1EC1\u1EBF\u1EC5\u1EC3\u1EBD\u0113\u1E15\u1E17\u0115\u0117\u00EB\u1EBB\u011B\u0205\u0207\u1EB9\u1EC7\u0229\u1E1D\u0119\u1E19\u1E1B\u0247\u025B\u01DD]/g
 		},
 		{
 			base: 'f',
@@ -806,8 +789,7 @@ var $ = [
 		},
 		{
 			base: 'i',
-			letters:
-				/[\u0069\u24D8\uFF49\u00EC\u00ED\u00EE\u0129\u012B\u012D\u00EF\u1E2F\u1EC9\u01D0\u0209\u020B\u1ECB\u012F\u1E2D\u0268\u0131]/g
+			letters: /[\u0069\u24D8\uFF49\u00EC\u00ED\u00EE\u0129\u012B\u012D\u00EF\u1E2F\u1EC9\u01D0\u0209\u020B\u1ECB\u012F\u1E2D\u0268\u0131]/g
 		},
 		{
 			base: 'j',
@@ -819,8 +801,7 @@ var $ = [
 		},
 		{
 			base: 'l',
-			letters:
-				/[\u006C\u24DB\uFF4C\u0140\u013A\u013E\u1E37\u1E39\u013C\u1E3D\u1E3B\u017F\u0142\u019A\u026B\u2C61\uA749\uA781\uA747]/g
+			letters: /[\u006C\u24DB\uFF4C\u0140\u013A\u013E\u1E37\u1E39\u013C\u1E3D\u1E3B\u017F\u0142\u019A\u026B\u2C61\uA749\uA781\uA747]/g
 		},
 		{
 			base: 'lj',
@@ -832,8 +813,7 @@ var $ = [
 		},
 		{
 			base: 'n',
-			letters:
-				/[\u006E\u24DD\uFF4E\u01F9\u0144\u00F1\u1E45\u0148\u1E47\u0146\u1E4B\u1E49\u019E\u0272\u0149\uA791\uA7A5]/g
+			letters: /[\u006E\u24DD\uFF4E\u01F9\u0144\u00F1\u1E45\u0148\u1E47\u0146\u1E4B\u1E49\u019E\u0272\u0149\uA791\uA7A5]/g
 		},
 		{
 			base: 'nj',
@@ -841,8 +821,7 @@ var $ = [
 		},
 		{
 			base: 'o',
-			letters:
-				/[\u006F\u24DE\uFF4F\u00F2\u00F3\u00F4\u1ED3\u1ED1\u1ED7\u1ED5\u00F5\u1E4D\u022D\u1E4F\u014D\u1E51\u1E53\u014F\u022F\u0231\u00F6\u022B\u1ECF\u0151\u01D2\u020D\u020F\u01A1\u1EDD\u1EDB\u1EE1\u1EDF\u1EE3\u1ECD\u1ED9\u01EB\u01ED\u00F8\u01FF\u0254\uA74B\uA74D\u0275]/g
+			letters: /[\u006F\u24DE\uFF4F\u00F2\u00F3\u00F4\u1ED3\u1ED1\u1ED7\u1ED5\u00F5\u1E4D\u022D\u1E4F\u014D\u1E51\u1E53\u014F\u022F\u0231\u00F6\u022B\u1ECF\u0151\u01D2\u020D\u020F\u01A1\u1EDD\u1EDB\u1EE1\u1EDF\u1EE3\u1ECD\u1ED9\u01EB\u01ED\u00F8\u01FF\u0254\uA74B\uA74D\u0275]/g
 		},
 		{
 			base: 'oi',
@@ -866,13 +845,11 @@ var $ = [
 		},
 		{
 			base: 'r',
-			letters:
-				/[\u0072\u24E1\uFF52\u0155\u1E59\u0159\u0211\u0213\u1E5B\u1E5D\u0157\u1E5F\u024D\u027D\uA75B\uA7A7\uA783]/g
+			letters: /[\u0072\u24E1\uFF52\u0155\u1E59\u0159\u0211\u0213\u1E5B\u1E5D\u0157\u1E5F\u024D\u027D\uA75B\uA7A7\uA783]/g
 		},
 		{
 			base: 's',
-			letters:
-				/[\u0073\u24E2\uFF53\u00DF\u015B\u1E65\u015D\u1E61\u0161\u1E67\u1E63\u1E69\u0219\u015F\u023F\uA7A9\uA785\u1E9B]/g
+			letters: /[\u0073\u24E2\uFF53\u00DF\u015B\u1E65\u015D\u1E61\u0161\u1E67\u1E63\u1E69\u0219\u015F\u023F\uA7A9\uA785\u1E9B]/g
 		},
 		{
 			base: 't',
@@ -884,8 +861,7 @@ var $ = [
 		},
 		{
 			base: 'u',
-			letters:
-				/[\u0075\u24E4\uFF55\u00F9\u00FA\u00FB\u0169\u1E79\u016B\u1E7B\u016D\u00FC\u01DC\u01D8\u01D6\u01DA\u1EE7\u016F\u0171\u01D4\u0215\u0217\u01B0\u1EEB\u1EE9\u1EEF\u1EED\u1EF1\u1EE5\u1E73\u0173\u1E77\u1E75\u0289]/g
+			letters: /[\u0075\u24E4\uFF55\u00F9\u00FA\u00FB\u0169\u1E79\u016B\u1E7B\u016D\u00FC\u01DC\u01D8\u01D6\u01DA\u1EE7\u016F\u0171\u01D4\u0215\u0217\u01B0\u1EEB\u1EE9\u1EEF\u1EED\u1EF1\u1EE5\u1E73\u0173\u1E77\u1E75\u0289]/g
 		},
 		{
 			base: 'v',
@@ -1080,13 +1056,7 @@ var ei = !!('undefined' != typeof window && window.document && window.document.c
 								}),
 									i && (i.paddingRight = ''.concat(s, 'px'));
 							}
-							r &&
-								er() &&
-								(r.addEventListener('touchmove', et, this.listenerOptions),
-								o &&
-									(o.addEventListener('touchstart', eo, this.listenerOptions),
-									o.addEventListener('touchmove', en, this.listenerOptions))),
-								(ea += 1);
+							r && er() && (r.addEventListener('touchmove', et, this.listenerOptions), o && (o.addEventListener('touchstart', eo, this.listenerOptions), o.addEventListener('touchmove', en, this.listenerOptions))), (ea += 1);
 						}
 					}
 				},
@@ -1107,12 +1077,7 @@ var ei = !!('undefined' != typeof window && window.document && window.document.c
 										var n = e.originalStyles[t];
 										i && (i[t] = n);
 									}),
-								r &&
-									er() &&
-									(r.removeEventListener('touchmove', et, this.listenerOptions),
-									o &&
-										(o.removeEventListener('touchstart', eo, this.listenerOptions),
-										o.removeEventListener('touchmove', en, this.listenerOptions)));
+								r && er() && (r.removeEventListener('touchmove', et, this.listenerOptions), o && (o.removeEventListener('touchstart', eo, this.listenerOptions), o.removeEventListener('touchmove', en, this.listenerOptions)));
 						}
 					}
 				},
@@ -1202,12 +1167,7 @@ var es = (function (e) {
 						f = t > 0,
 						h = c - p - l,
 						m = !1;
-					h > t && n.isBottom && (i && i(e), (n.isBottom = !1)),
-						f && n.isTop && (u && u(e), (n.isTop = !1)),
-						f && t > h
-							? (r && !n.isBottom && r(e), (d.scrollTop = c), (m = !0), (n.isBottom = !0))
-							: !f && -t > l && (a && !n.isTop && a(e), (d.scrollTop = 0), (m = !0), (n.isTop = !0)),
-						m && n.cancelScroll(e);
+					h > t && n.isBottom && (i && i(e), (n.isBottom = !1)), f && n.isTop && (u && u(e), (n.isTop = !1)), f && t > h ? (r && !n.isBottom && r(e), (d.scrollTop = c), (m = !0), (n.isBottom = !0)) : !f && -t > l && (a && !n.isTop && a(e), (d.scrollTop = 0), (m = !0), (n.isTop = !0)), m && n.cancelScroll(e);
 				}),
 				E(S(S(n)), 'onWheel', function (e) {
 					n.handleEventDelta(e, e.deltaY);
@@ -1243,20 +1203,13 @@ var es = (function (e) {
 				{
 					key: 'startListening',
 					value: function (e) {
-						if (!!e)
-							!(e.scrollHeight <= e.clientHeight) &&
-								('function' == typeof e.addEventListener && e.addEventListener('wheel', this.onWheel, !1),
-								'function' == typeof e.addEventListener && e.addEventListener('touchstart', this.onTouchStart, !1),
-								'function' == typeof e.addEventListener && e.addEventListener('touchmove', this.onTouchMove, !1));
+						if (!!e) !(e.scrollHeight <= e.clientHeight) && ('function' == typeof e.addEventListener && e.addEventListener('wheel', this.onWheel, !1), 'function' == typeof e.addEventListener && e.addEventListener('touchstart', this.onTouchStart, !1), 'function' == typeof e.addEventListener && e.addEventListener('touchmove', this.onTouchMove, !1));
 					}
 				},
 				{
 					key: 'stopListening',
 					value: function (e) {
-						!(e.scrollHeight <= e.clientHeight) &&
-							('function' == typeof e.removeEventListener && e.removeEventListener('wheel', this.onWheel, !1),
-							'function' == typeof e.removeEventListener && e.removeEventListener('touchstart', this.onTouchStart, !1),
-							'function' == typeof e.removeEventListener && e.removeEventListener('touchmove', this.onTouchMove, !1));
+						!(e.scrollHeight <= e.clientHeight) && ('function' == typeof e.removeEventListener && e.removeEventListener('wheel', this.onWheel, !1), 'function' == typeof e.removeEventListener && e.removeEventListener('touchstart', this.onTouchStart, !1), 'function' == typeof e.removeEventListener && e.removeEventListener('touchmove', this.onTouchMove, !1));
 					}
 				},
 				{
@@ -1298,10 +1251,7 @@ var ep = function (e) {
 			i = t.isDisabled;
 		switch (e) {
 			case 'menu':
-				return 'Use Up and Down to choose options'.concat(
-					i ? '' : ', press Enter to select the currently focused option',
-					', press Escape to exit the menu, press Tab to select the option and exit the menu.'
-				);
+				return 'Use Up and Down to choose options'.concat(i ? '' : ', press Enter to select the currently focused option', ', press Escape to exit the menu, press Tab to select the option and exit the menu.');
 			case 'input':
 				return ''
 					.concat(r || 'Select', ' is focused ')
@@ -1414,22 +1364,10 @@ var ep = function (e) {
 		);
 	},
 	eb = function (e) {
-		return r.createElement(
-			eE,
-			b({ size: 20 }, e),
-			r.createElement('path', {
-				d: 'M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z'
-			})
-		);
+		return r.createElement(eE, b({ size: 20 }, e), r.createElement('path', { d: 'M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z' }));
 	},
 	ey = function (e) {
-		return r.createElement(
-			eE,
-			b({ size: 20 }, e),
-			r.createElement('path', {
-				d: 'M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z'
-			})
-		);
+		return r.createElement(eE, b({ size: 20 }, e), r.createElement('path', { d: 'M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z' }));
 	},
 	eC = function (e) {
 		var t = e.isFocused,
@@ -1573,10 +1511,7 @@ var ew = function (e) {
 								l
 							),
 							g = { className: i((0, a.iv)(s('multiValueLabel', this.props)), { 'multi-value__label': !0 }, n) },
-							E = y(
-								{ className: i((0, a.iv)(s('multiValueRemove', this.props)), { 'multi-value__remove': !0 }, n) },
-								p
-							);
+							E = y({ className: i((0, a.iv)(s('multiValueRemove', this.props)), { 'multi-value__remove': !0 }, n) }, p);
 						return r.createElement(
 							f,
 							{
@@ -1714,10 +1649,7 @@ var eD = {
 				o = e.getStyles,
 				i = e.theme,
 				u = (e.selectProps, A(e, ['className', 'cx', 'getStyles', 'theme', 'selectProps']));
-			return r.createElement(
-				'div',
-				b({ className: n((0, a.iv)(o('groupHeading', y({ theme: i }, u))), { 'group-heading': !0 }, t) }, u)
-			);
+			return r.createElement('div', b({ className: n((0, a.iv)(o('groupHeading', y({ theme: i }, u))), { 'group-heading': !0 }, t) }, u));
 		},
 		IndicatorsContainer: function (e) {
 			var t = e.children,
@@ -1731,10 +1663,7 @@ var eD = {
 				n = e.cx,
 				o = e.getStyles,
 				i = e.innerProps;
-			return r.createElement(
-				'span',
-				b({}, i, { className: n((0, a.iv)(o('indicatorSeparator', e)), { 'indicator-separator': !0 }, t) })
-			);
+			return r.createElement('span', b({}, i, { className: n((0, a.iv)(o('indicatorSeparator', e)), { 'indicator-separator': !0 }, t) }));
 		},
 		Input: function (e) {
 			var t = e.className,
@@ -1744,9 +1673,7 @@ var eD = {
 				u = e.isHidden,
 				s = e.isDisabled,
 				l = e.theme,
-				c =
-					(e.selectProps,
-					A(e, ['className', 'cx', 'getStyles', 'innerRef', 'isHidden', 'isDisabled', 'theme', 'selectProps']));
+				c = (e.selectProps, A(e, ['className', 'cx', 'getStyles', 'innerRef', 'isHidden', 'isDisabled', 'theme', 'selectProps']));
 			return r.createElement(
 				'div',
 				{ className: (0, a.iv)(o('input', y({ theme: l }, c))) },
@@ -2249,11 +2176,7 @@ var eL = {
 				u = n.matchFrom,
 				s = a ? Z(t) : t,
 				l = a ? Z(i(e)) : i(e);
-			return (
-				o && ((s = s.toLowerCase()), (l = l.toLowerCase())),
-				r && ((s = Y(s)), (l = Y(l))),
-				'start' === u ? l.substr(0, s.length) === s : l.indexOf(s) > -1
-			);
+			return o && ((s = s.toLowerCase()), (l = l.toLowerCase())), r && ((s = Y(s)), (l = Y(l))), 'start' === u ? l.substr(0, s.length) === s : l.indexOf(s) > -1;
 		},
 		formatGroupLabel: function (e) {
 			return e.label;
@@ -2498,12 +2421,7 @@ var eL = {
 				}),
 				E(S(S(n)), 'onControlMouseDown', function (e) {
 					var t = n.props.openMenuOnClick;
-					n.state.isFocused
-						? n.props.menuIsOpen
-							? 'INPUT' !== e.target.tagName && n.onMenuClose()
-							: t && n.openMenu('first')
-						: (t && (n.openAfterFocus = !0), n.focusInput()),
-						'INPUT' !== e.target.tagName && e.preventDefault();
+					n.state.isFocused ? (n.props.menuIsOpen ? 'INPUT' !== e.target.tagName && n.onMenuClose() : t && n.openMenu('first')) : (t && (n.openAfterFocus = !0), n.focusInput()), 'INPUT' !== e.target.tagName && e.preventDefault();
 				}),
 				E(S(S(n)), 'onDropdownIndicatorMouseDown', function (e) {
 					if (!e || 'mousedown' !== e.type || 0 === e.button) {
@@ -2511,10 +2429,7 @@ var eL = {
 							var t = n.props,
 								o = t.isMulti,
 								r = t.menuIsOpen;
-							n.focusInput(),
-								r ? ((n.inputIsHiddenAfterUpdate = !o), n.onMenuClose()) : n.openMenu('first'),
-								e.preventDefault(),
-								e.stopPropagation();
+							n.focusInput(), r ? ((n.inputIsHiddenAfterUpdate = !o), n.onMenuClose()) : n.openMenu('first'), e.preventDefault(), e.stopPropagation();
 						}
 					}
 				}),
@@ -2528,9 +2443,7 @@ var eL = {
 							});
 				}),
 				E(S(S(n)), 'onScroll', function (e) {
-					'boolean' == typeof n.props.closeMenuOnScroll
-						? e.target instanceof HTMLElement && I(e.target) && n.props.onMenuClose()
-						: 'function' == typeof n.props.closeMenuOnScroll && n.props.closeMenuOnScroll(e) && n.props.onMenuClose();
+					'boolean' == typeof n.props.closeMenuOnScroll ? e.target instanceof HTMLElement && I(e.target) && n.props.onMenuClose() : 'function' == typeof n.props.closeMenuOnScroll && n.props.closeMenuOnScroll(e) && n.props.onMenuClose();
 				}),
 				E(S(S(n)), 'onCompositionStart', function () {
 					n.setState({ isComposing: !0 });
@@ -2551,14 +2464,7 @@ var eL = {
 					}
 				}),
 				E(S(S(n)), 'onTouchEnd', function (e) {
-					!n.userIsDragging &&
-						(n.controlRef &&
-							!n.controlRef.contains(e.target) &&
-							n.menuListRef &&
-							!n.menuListRef.contains(e.target) &&
-							n.blurInput(),
-						(n.initialTouchX = 0),
-						(n.initialTouchY = 0));
+					!n.userIsDragging && (n.controlRef && !n.controlRef.contains(e.target) && n.menuListRef && !n.menuListRef.contains(e.target) && n.blurInput(), (n.initialTouchX = 0), (n.initialTouchY = 0));
 				}),
 				E(S(S(n)), 'onControlTouchEnd', function (e) {
 					!n.userIsDragging && n.onControlMouseDown(e);
@@ -2662,9 +2568,7 @@ var eL = {
 								}
 								return;
 							case 'Escape':
-								l
-									? ((n.inputIsHiddenAfterUpdate = !1), n.onInputChange('', { action: 'menu-close' }), n.onMenuClose())
-									: u && i && n.clearValue();
+								l ? ((n.inputIsHiddenAfterUpdate = !1), n.onInputChange('', { action: 'menu-close' }), n.onMenuClose()) : u && i && n.clearValue();
 								break;
 							case ' ':
 								if (a) return;
@@ -2705,9 +2609,7 @@ var eL = {
 				});
 			var n,
 				o = e.value;
-			(n.cacheComponents = (0, i.Z)(n.cacheComponents, G).bind(S(S(n)))),
-				n.cacheComponents(e.components),
-				(n.instancePrefix = 'react-select-' + (n.props.instanceId || ++eV));
+			(n.cacheComponents = (0, i.Z)(n.cacheComponents, G).bind(S(S(n)))), n.cacheComponents(e.components), (n.instancePrefix = 'react-select-' + (n.props.instanceId || ++eV));
 			var r = M(o),
 				a = n.buildMenuOptions(e, r);
 			return (n.state.menuOptions = a), (n.state.selectValue = r), n;
@@ -2718,13 +2620,7 @@ var eL = {
 				{
 					key: 'componentDidMount',
 					value: function () {
-						this.startListeningComposition(),
-							this.startListeningToTouch(),
-							this.props.closeMenuOnScroll &&
-								document &&
-								document.addEventListener &&
-								document.addEventListener('scroll', this.onScroll, !0),
-							this.props.autoFocus && this.focusInput();
+						this.startListeningComposition(), this.startListeningToTouch(), this.props.closeMenuOnScroll && document && document.addEventListener && document.addEventListener('scroll', this.onScroll, !0), this.props.autoFocus && this.focusInput();
 					}
 				},
 				{
@@ -2746,8 +2642,7 @@ var eL = {
 								focusedValue: u
 							});
 						}
-						null != this.inputIsHiddenAfterUpdate &&
-							(this.setState({ inputIsHidden: this.inputIsHiddenAfterUpdate }), delete this.inputIsHiddenAfterUpdate);
+						null != this.inputIsHiddenAfterUpdate && (this.setState({ inputIsHidden: this.inputIsHiddenAfterUpdate }), delete this.inputIsHiddenAfterUpdate);
 					}
 				},
 				{
@@ -2762,18 +2657,8 @@ var eL = {
 							u = a.isDisabled,
 							s = a.menuIsOpen,
 							l = this.state.isFocused;
-						if (
-							(((l && !u && e.isDisabled) || (l && s && !e.menuIsOpen)) && this.focusInput(),
-							this.menuListRef && this.focusedOptionRef && this.scrollToFocusedOptionOnUpdate)
-						) {
-							(t = this.menuListRef),
-								(n = this.focusedOptionRef),
-								(o = t.getBoundingClientRect()),
-								(r = n.getBoundingClientRect()),
-								(i = n.offsetHeight / 3),
-								r.bottom + i > o.bottom
-									? L(t, Math.min(n.offsetTop + n.clientHeight - t.offsetHeight + i, t.scrollHeight))
-									: r.top - i < o.top && L(t, Math.max(n.offsetTop - i, 0));
+						if ((((l && !u && e.isDisabled) || (l && s && !e.menuIsOpen)) && this.focusInput(), this.menuListRef && this.focusedOptionRef && this.scrollToFocusedOptionOnUpdate)) {
+							(t = this.menuListRef), (n = this.focusedOptionRef), (o = t.getBoundingClientRect()), (r = n.getBoundingClientRect()), (i = n.offsetHeight / 3), r.bottom + i > o.bottom ? L(t, Math.min(n.offsetTop + n.clientHeight - t.offsetHeight + i, t.scrollHeight)) : r.top - i < o.top && L(t, Math.max(n.offsetTop - i, 0));
 						}
 						this.scrollToFocusedOptionOnUpdate = !1;
 					}
@@ -2781,9 +2666,7 @@ var eL = {
 				{
 					key: 'componentWillUnmount',
 					value: function () {
-						this.stopListeningComposition(),
-							this.stopListeningToTouch(),
-							document.removeEventListener('scroll', this.onScroll, !0);
+						this.stopListeningComposition(), this.stopListeningToTouch(), document.removeEventListener('scroll', this.onScroll, !0);
 					}
 				},
 				{
@@ -2901,15 +2784,7 @@ var eL = {
 							var i = 0,
 								a = r.indexOf(o);
 							!o && ((a = -1), this.announceAriaLiveContext({ event: 'menu' })),
-								'up' === e
-									? (i = a > 0 ? a - 1 : r.length - 1)
-									: 'down' === e
-										? (i = (a + 1) % r.length)
-										: 'pageup' === e
-											? (i = a - t) < 0 && (i = 0)
-											: 'pagedown' === e
-												? (i = a + t) > r.length - 1 && (i = r.length - 1)
-												: 'last' === e && (i = r.length - 1),
+								'up' === e ? (i = a > 0 ? a - 1 : r.length - 1) : 'down' === e ? (i = (a + 1) % r.length) : 'pageup' === e ? (i = a - t) < 0 && (i = 0) : 'pagedown' === e ? (i = a + t) > r.length - 1 && (i = r.length - 1) : 'last' === e && (i = r.length - 1),
 								(this.scrollToFocusedOptionOnUpdate = !0),
 								this.setState({
 									focusedOption: r[i],
@@ -2925,11 +2800,7 @@ var eL = {
 				{
 					key: 'getTheme',
 					value: function () {
-						return this.props.theme
-							? 'function' == typeof this.props.theme
-								? this.props.theme(eP)
-								: y({}, eP, this.props.theme)
-							: eP;
+						return this.props.theme ? ('function' == typeof this.props.theme ? this.props.theme(eP) : y({}, eP, this.props.theme)) : eP;
 					}
 				},
 				{
@@ -3058,39 +2929,25 @@ var eL = {
 				{
 					key: 'startListeningComposition',
 					value: function () {
-						document &&
-							document.addEventListener &&
-							(document.addEventListener('compositionstart', this.onCompositionStart, !1),
-							document.addEventListener('compositionend', this.onCompositionEnd, !1));
+						document && document.addEventListener && (document.addEventListener('compositionstart', this.onCompositionStart, !1), document.addEventListener('compositionend', this.onCompositionEnd, !1));
 					}
 				},
 				{
 					key: 'stopListeningComposition',
 					value: function () {
-						document &&
-							document.removeEventListener &&
-							(document.removeEventListener('compositionstart', this.onCompositionStart),
-							document.removeEventListener('compositionend', this.onCompositionEnd));
+						document && document.removeEventListener && (document.removeEventListener('compositionstart', this.onCompositionStart), document.removeEventListener('compositionend', this.onCompositionEnd));
 					}
 				},
 				{
 					key: 'startListeningToTouch',
 					value: function () {
-						document &&
-							document.addEventListener &&
-							(document.addEventListener('touchstart', this.onTouchStart, !1),
-							document.addEventListener('touchmove', this.onTouchMove, !1),
-							document.addEventListener('touchend', this.onTouchEnd, !1));
+						document && document.addEventListener && (document.addEventListener('touchstart', this.onTouchStart, !1), document.addEventListener('touchmove', this.onTouchMove, !1), document.addEventListener('touchend', this.onTouchEnd, !1));
 					}
 				},
 				{
 					key: 'stopListeningToTouch',
 					value: function () {
-						document &&
-							document.removeEventListener &&
-							(document.removeEventListener('touchstart', this.onTouchStart),
-							document.removeEventListener('touchmove', this.onTouchMove),
-							document.removeEventListener('touchend', this.onTouchEnd));
+						document && document.removeEventListener && (document.removeEventListener('touchstart', this.onTouchStart), document.removeEventListener('touchmove', this.onTouchMove), document.removeEventListener('touchend', this.onTouchEnd));
 					}
 				},
 				{
@@ -3473,10 +3330,7 @@ var eL = {
 						if (!S) return null;
 						var V = function (e) {
 							var n = h === e.data;
-							return (
-								(e.innerRef = n ? t.getFocusedOptionRef : void 0),
-								r.createElement(p, b({}, d, e, { isFocused: n }), t.formatOptionLabel(e.data, 'menu'))
-							);
+							return (e.innerRef = n ? t.getFocusedOptionRef : void 0), r.createElement(p, b({}, d, e, { isFocused: n }), t.formatOptionLabel(e.data, 'menu'));
 						};
 						if (this.hasOptions())
 							e = m.render.map(function (e) {
@@ -3620,14 +3474,7 @@ var eL = {
 				{
 					key: 'renderLiveRegion',
 					value: function () {
-						return this.state.isFocused
-							? r.createElement(
-									X,
-									{ 'aria-live': 'assertive' },
-									r.createElement('p', { id: 'aria-selection-event' }, '\xA0', this.state.ariaLiveSelection),
-									r.createElement('p', { id: 'aria-context' }, '\xA0', this.constructAriaLiveMessage())
-								)
-							: null;
+						return this.state.isFocused ? r.createElement(X, { 'aria-live': 'assertive' }, r.createElement('p', { id: 'aria-selection-event' }, '\xA0', this.state.ariaLiveSelection), r.createElement('p', { id: 'aria-context' }, '\xA0', this.constructAriaLiveMessage())) : null;
 					}
 				},
 				{
@@ -3670,14 +3517,7 @@ var eL = {
 									menuIsOpen: c
 								}),
 								r.createElement(i, b({}, d, { isDisabled: l }), this.renderPlaceholderOrValue(), this.renderInput()),
-								r.createElement(
-									n,
-									b({}, d, { isDisabled: l }),
-									this.renderClearIndicator(),
-									this.renderLoadingIndicator(),
-									this.renderIndicatorSeparator(),
-									this.renderDropdownIndicator()
-								)
+								r.createElement(n, b({}, d, { isDisabled: l }), this.renderClearIndicator(), this.renderLoadingIndicator(), this.renderIndicatorSeparator(), this.renderDropdownIndicator())
 							),
 							this.renderMenu(),
 							this.renderFormField()
@@ -3750,8 +3590,7 @@ var eN = {
 								key: 'callProp',
 								value: function (e) {
 									if ('function' == typeof this.props[e]) {
-										for (var t, n = arguments.length, o = Array(n > 1 ? n - 1 : 0), r = 1; r < n; r++)
-											o[r - 1] = arguments[r];
+										for (var t, n = arguments.length, o = Array(n > 1 ? n - 1 : 0), r = 1; r < n; r++) o[r - 1] = arguments[r];
 										return (t = this.props)[e].apply(t, o);
 									}
 								}
@@ -3761,11 +3600,7 @@ var eN = {
 								value: function () {
 									var t = this,
 										n = this.props,
-										o =
-											(n.defaultInputValue,
-											n.defaultMenuIsOpen,
-											n.defaultValue,
-											A(n, ['defaultInputValue', 'defaultMenuIsOpen', 'defaultValue']));
+										o = (n.defaultInputValue, n.defaultMenuIsOpen, n.defaultValue, A(n, ['defaultInputValue', 'defaultMenuIsOpen', 'defaultValue']));
 									return r.createElement(
 										e,
 										b({}, o, {
@@ -3899,9 +3734,7 @@ var eN = {
 							{
 								key: 'componentWillReceiveProps',
 								value: function (e) {
-									e.cacheOptions !== this.props.cacheOptions && (this.optionsCache = {}),
-										e.defaultOptions !== this.props.defaultOptions &&
-											this.setState({ defaultOptions: Array.isArray(e.defaultOptions) ? e.defaultOptions : void 0 });
+									e.cacheOptions !== this.props.cacheOptions && (this.optionsCache = {}), e.defaultOptions !== this.props.defaultOptions && this.setState({ defaultOptions: Array.isArray(e.defaultOptions) ? e.defaultOptions : void 0 });
 								}
 							},
 							{

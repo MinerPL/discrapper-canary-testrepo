@@ -17,8 +17,7 @@ var n = r(735250),
 		return (h =
 			Object.assign ||
 			function (e) {
-				for (var t, r = 1, n = arguments.length; r < n; r++)
-					for (var i in ((t = arguments[r]), t)) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i]);
+				for (var t, r = 1, n = arguments.length; r < n; r++) for (var i in ((t = arguments[r]), t)) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i]);
 				return e;
 			}).apply(this, arguments);
 	},
@@ -58,19 +57,9 @@ var n = r(735250),
 		var n = e.reduce(function (e, t, n) {
 			var i,
 				o = p(Math.abs(y(t, 90) - 180), 0, 180, -r / 2, r / 2);
-			return h(
-				h({}, e),
-				(((i = {})['@keyframes x-axis-'.concat(n)] = { to: { transform: 'translateX('.concat(o, 'px)') } }), i)
-			);
+			return h(h({}, e), (((i = {})['@keyframes x-axis-'.concat(n)] = { to: { transform: 'translateX('.concat(o, 'px)') } }), i));
 		}, {});
-		return h(
-			{
-				'@keyframes y-axis': {
-					to: { transform: 'translateY('.concat('string' == typeof t ? t : ''.concat(t, 'px'), ')') }
-				}
-			},
-			n
-		);
+		return h({ '@keyframes y-axis': { to: { transform: 'translateY('.concat('string' == typeof t ? t : ''.concat(t, 'px'), ')') } } }, n);
 	},
 	w = function (e, t, r, n, i) {
 		var o,
@@ -88,22 +77,11 @@ var n = r(735250),
 			P = c()(Math.max(p(Math.abs(e.degree - 180), 0, 180, r, -r), 0), 4);
 		return (
 			((s = {})['&#confetti-particle-'.concat(i)] = {
-				animation: '$x-axis-'
-					.concat(i, ' ')
-					.concat(l, 'ms forwards cubic-bezier(')
-					.concat(x, ', ')
-					.concat(w, ', ')
-					.concat(x, ', ')
-					.concat(k, ')'),
+				animation: '$x-axis-'.concat(i, ' ').concat(l, 'ms forwards cubic-bezier(').concat(x, ', ').concat(w, ', ').concat(x, ', ').concat(k, ')'),
 				'& > div': {
 					width: b ? n : Math.round(4 * Math.random()) + n / 2,
 					height: b ? n : Math.round(2 * Math.random()) + n,
-					animation: '$y-axis '
-						.concat(l, 'ms forwards cubic-bezier(')
-						.concat(S, ', ')
-						.concat(R, ', ')
-						.concat(0.5, ', ')
-						.concat(P, ')'),
+					animation: '$y-axis '.concat(l, 'ms forwards cubic-bezier(').concat(S, ', ').concat(R, ', ').concat(0.5, ', ').concat(P, ')'),
 					'&:after': h(
 						{
 							backgroundColor: e.color,
@@ -195,9 +173,7 @@ function P(e) {
 		y = (function (e, t) {
 			var r = {};
 			for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && 0 > t.indexOf(n) && (r[n] = e[n]);
-			if (null != e && 'function' == typeof Object.getOwnPropertySymbols)
-				for (var i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++)
-					0 > t.indexOf(n[i]) && Object.prototype.propertyIsEnumerable.call(e, n[i]) && (r[n[i]] = e[n[i]]);
+			if (null != e && 'function' == typeof Object.getOwnPropertySymbols) for (var i = 0, n = Object.getOwnPropertySymbols(e); i < n.length; i++) 0 > t.indexOf(n[i]) && Object.prototype.propertyIsEnumerable.call(e, n[i]) && (r[n[i]] = e[n[i]]);
 			return r;
 		})(e, ['particleCount', 'duration', 'colors', 'particleSize', 'force', 'height', 'width', 'zIndex', 'onComplete']),
 		g = i.useState(),

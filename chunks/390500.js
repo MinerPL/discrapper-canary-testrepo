@@ -32,12 +32,7 @@ t.Z = function (e) {
 						(0, i.jsx)(s.Heading, {
 							variant: 'heading-xl/semibold',
 							className: c.header,
-							children:
-								(null == n ? void 0 : n.name) != null
-									? o.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE_WITH_GUILD_NAME.format({
-											guildName: n.name
-										})
-									: o.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE
+							children: (null == n ? void 0 : n.name) != null ? o.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE_WITH_GUILD_NAME.format({ guildName: n.name }) : o.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE
 						}),
 						(0, i.jsx)(s.Text, {
 							variant: 'text-sm/normal',

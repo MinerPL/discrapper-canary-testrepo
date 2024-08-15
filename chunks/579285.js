@@ -18,8 +18,8 @@ var r = n(735250),
 	f = n(434404),
 	h = n(271383),
 	p = n(430824),
-	I = n(496675),
-	m = n(259580),
+	m = n(496675),
+	I = n(259580),
 	T = n(700785),
 	g = n(785717),
 	S = n(256226),
@@ -28,18 +28,7 @@ var r = n(735250),
 	v = n(689938),
 	O = n(304747);
 let R = (0, E.Z)(function (e) {
-	let {
-		user: t,
-		currentUser: n,
-		guild: a,
-		guildMember: c,
-		roles: _,
-		highestRole: E,
-		canManageRoles: f,
-		width: h,
-		onAddRole: p,
-		onRemoveRole: I
-	} = e;
+	let { user: t, currentUser: n, guild: a, guildMember: c, roles: _, highestRole: E, canManageRoles: f, width: h, onAddRole: p, onRemoveRole: m } = e;
 	s()(null != h, 'Unexpected null width');
 	let R = i.useRef({}),
 		C = (e, t) => {
@@ -55,26 +44,8 @@ let R = (0, E.Z)(function (e) {
 		k = i.useRef(null);
 	i.useLayoutEffect(() => {
 		var e, t, n, r, i, a, s, o;
-		let l =
-				null !==
-					(i =
-						null === (t = G.current) || void 0 === t
-							? void 0
-							: null === (e = t.getBoundingClientRect()) || void 0 === e
-								? void 0
-								: e.width) && void 0 !== i
-					? i
-					: 0,
-			u =
-				null !==
-					(a =
-						null === (r = k.current) || void 0 === r
-							? void 0
-							: null === (n = r.getBoundingClientRect()) || void 0 === n
-								? void 0
-								: n.width) && void 0 !== a
-					? a
-					: 0,
+		let l = null !== (i = null === (t = G.current) || void 0 === t ? void 0 : null === (e = t.getBoundingClientRect()) || void 0 === e ? void 0 : e.width) && void 0 !== i ? i : 0,
+			u = null !== (a = null === (r = k.current) || void 0 === r ? void 0 : null === (n = r.getBoundingClientRect()) || void 0 === n ? void 0 : n.width) && void 0 !== a ? a : 0,
 			c = h - (l > 0 ? l + 4 : 0) - (u > 0 ? u + 4 : 0),
 			d = 0;
 		for (let e = 0; e < 2; e++) {
@@ -84,10 +55,7 @@ let R = (0, E.Z)(function (e) {
 				let r = M[e],
 					i = R.current[r.id];
 				if (null == i) continue;
-				let a =
-					null !== (o = null === (s = i.getBoundingClientRect()) || void 0 === s ? void 0 : s.width) && void 0 !== o
-						? o
-						: 0;
+				let a = null !== (o = null === (s = i.getBoundingClientRect()) || void 0 === s ? void 0 : s.width) && void 0 !== o ? o : 0;
 				if ((n > 0 && !t && n + a > h) || (n > 0 && t && n + a > c)) break;
 				(n += a + 4), d++;
 			}
@@ -114,10 +82,8 @@ let R = (0, E.Z)(function (e) {
 					style: { maxWidth: i === M.length - 1 ? P : h },
 					disableBorderColor: !0,
 					ref: (t) => C(e.id, t),
-					onRemove: () => I(e),
-					canRemove: f
-						? T.r6(a, n.id, E, e)
-						: (null === (s = e.tags) || void 0 === s ? void 0 : s.guild_connections) === null && t.id === n.id
+					onRemove: () => m(e),
+					canRemove: f ? T.r6(a, n.id, E, e) : (null === (s = e.tags) || void 0 === s ? void 0 : s.guild_connections) === null && t.id === n.id
 				},
 				e.id
 			);
@@ -160,8 +126,8 @@ let R = (0, E.Z)(function (e) {
 								children: (0, r.jsx)(d.Clickable, {
 									onClick: W,
 									className: O.collapseButton,
-									children: (0, r.jsx)(m.Z, {
-										direction: m.Z.Directions.LEFT,
+									children: (0, r.jsx)(I.Z, {
+										direction: I.Z.Directions.LEFT,
 										width: 12,
 										height: 12
 									})
@@ -203,15 +169,13 @@ function C(e) {
 			[l, u]
 		),
 		E = T.e9(a, n.id),
-		[m] = (0, c.Wu)([I.Z], () => [I.Z.can(N.Plq.MANAGE_ROLES, a), null != a ? I.Z.getGuildVersion(a.id) : null]),
+		[I] = (0, c.Wu)([m.Z], () => [m.Z.can(N.Plq.MANAGE_ROLES, a), null != a ? m.Z.getGuildVersion(a.id) : null]),
 		S = i.useCallback(
 			(e) => {
 				var n, r;
 				s({ action: 'REMOVE_ROLE' });
 				let i = null !== (r = null == u ? void 0 : u.filter((t) => t !== e.id)) && void 0 !== r ? r : [];
-				(null === (n = e.tags) || void 0 === n ? void 0 : n.guild_connections) === null
-					? _.Z.unassignGuildRoleConnection(a.id, e.id)
-					: f.Z.updateMemberRoles(a.id, t.id, i, [], [e.id]);
+				(null === (n = e.tags) || void 0 === n ? void 0 : n.guild_connections) === null ? _.Z.unassignGuildRoleConnection(a.id, e.id) : f.Z.updateMemberRoles(a.id, t.id, i, [], [e.id]);
 			},
 			[u, a.id, t.id, s]
 		),
@@ -223,7 +187,7 @@ function C(e) {
 			},
 			[u, a.id, t.id, s]
 		),
-		v = m && null != o;
+		v = I && null != o;
 	return 0 !== d.length || v
 		? (0, r.jsx)('div', {
 				children: (0, r.jsx)(R, {
@@ -233,7 +197,7 @@ function C(e) {
 					guildMember: o,
 					roles: d,
 					highestRole: E,
-					canManageRoles: m,
+					canManageRoles: I,
 					onAddRole: A,
 					onRemoveRole: S
 				})

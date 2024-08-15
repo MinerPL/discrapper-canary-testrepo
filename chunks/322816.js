@@ -141,10 +141,7 @@ function A(e) {
 				...e,
 				permissions: e.permissions.filter((e) => {
 					let t = d.trimStart().toLowerCase();
-					return (
-						e.title.toLowerCase().includes(t) ||
-						(null != e.description && e.description.toString().toLowerCase().includes(t))
-					);
+					return e.title.toLowerCase().includes(t) || (null != e.description && e.description.toString().toLowerCase().includes(t));
 				})
 			}))
 			.filter((e) => e.permissions.length > 0),
@@ -153,8 +150,7 @@ function A(e) {
 		A = a.useRef(!1);
 	return (
 		a.useEffect(() => {
-			if (!A.current && '' !== d.trimStart())
-				I.default.track(x.rMx.SEARCH_STARTED, { search_type: 'Permissions' }), (A.current = !0);
+			if (!A.current && '' !== d.trimStart()) I.default.track(x.rMx.SEARCH_STARTED, { search_type: 'Permissions' }), (A.current = !0);
 		}, [d]),
 		(0, s.jsx)(c.AdvancedScrollerAuto, {
 			className: R.scroller,

@@ -8,21 +8,11 @@ var i = n(120356),
 	u = n(689938),
 	c = n(438379);
 t.Z = function (e) {
-	let {
-			children: t,
-			className: n,
-			compact: i = !1,
-			timestamp: d,
-			isVisibleOnlyOnHover: _ = !1,
-			cozyAlt: E = !1,
-			isInline: f = !0,
-			id: h,
-			isEdited: p = !1
-		} = e,
-		I = (0, o.Hg)(d),
-		m = i ? (0, o.vc)(d, 'LT') : (0, o.Y4)(d),
-		T = i ? (0, l.Z)(m) : null,
-		g = p ? u.Z.Messages.MESSAGE_EDITED_TIMESTAMP_A11Y_LABEL.format({ timeFormatted: I }) : I;
+	let { children: t, className: n, compact: i = !1, timestamp: d, isVisibleOnlyOnHover: _ = !1, cozyAlt: E = !1, isInline: f = !0, id: h, isEdited: p = !1 } = e,
+		m = (0, o.Hg)(d),
+		I = i ? (0, o.vc)(d, 'LT') : (0, o.Y4)(d),
+		T = i ? (0, l.Z)(I) : null,
+		g = p ? u.Z.Messages.MESSAGE_EDITED_TIMESTAMP_A11Y_LABEL.format({ timeFormatted: m }) : m;
 	return (0, r.jsx)('span', {
 		className: a()(n, T, {
 			[c.timestamp]: !0,
@@ -50,7 +40,7 @@ t.Z = function (e) {
 											'aria-hidden': !0,
 											children: i ? '[' : ' \u2014 '
 										}),
-										m,
+										I,
 										i &&
 											(0, r.jsxs)('i', {
 												className: c.separator,

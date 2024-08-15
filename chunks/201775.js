@@ -137,8 +137,7 @@ var r = {
 	'creditCard.taxNumber': 'Datum rođenja vlasnika kartice ili registracijski broj tvrtke',
 	'creditCard.taxNumber.label': 'Datum rođenja vlasnika kartice (GGMMDD) ili registracijski broj tvrtke (10 znamenki)',
 	'creditCard.taxNumber.labelAlt': 'Registracijski broj tvrtke (10 znamenki)',
-	'creditCard.taxNumber.invalid':
-		'Netočan datum rođenja vlasnika kartice (GGMMDD) ili registracijski broj tvrtke (10 znamenki)',
+	'creditCard.taxNumber.invalid': 'Netočan datum rođenja vlasnika kartice (GGMMDD) ili registracijski broj tvrtke (10 znamenki)',
 	'storedPaymentMethod.disable.button': 'Ukloni',
 	'storedPaymentMethod.disable.confirmation': 'Uklonite pohranjeni način plaćanja',
 	'storedPaymentMethod.disable.confirmButton': 'Da, ukloni',
@@ -171,8 +170,7 @@ var r = {
 	'blik.invalid': 'Unesite 6 znamenki',
 	'blik.code': '6-znamenkasti kôd',
 	'blik.help': 'Preuzmite kôd iz bankovne aplikacije.',
-	'swish.pendingMessage':
-		'Nakon skeniranja status može biti na čekanju do 10 minuta. Pokušaj ponovnog plaćanja u istom periodu može rezultirati višestrukim naplatama.',
+	'swish.pendingMessage': 'Nakon skeniranja status može biti na čekanju do 10 minuta. Pokušaj ponovnog plaćanja u istom periodu može rezultirati višestrukim naplatama.',
 	'field.valid': 'Valjano polje',
 	'field.invalid': 'Nevažeće polje',
 	'error.va.gen.01': 'Nepotpuno polje',
@@ -208,8 +206,7 @@ var r = {
 	'bankTransfer.iban': 'IBAN',
 	'bankTransfer.bic': 'BIC',
 	'bankTransfer.reference': 'Referenca',
-	'bankTransfer.introduction':
-		'Nastavite da biste kreirali novu uplatu putem bankovne transakcije. Za finaliziranje ovog plaćanja možete se koristiti pojedinostima na sljedećem zaslonu.',
+	'bankTransfer.introduction': 'Nastavite da biste kreirali novu uplatu putem bankovne transakcije. Za finaliziranje ovog plaćanja možete se koristiti pojedinostima na sljedećem zaslonu.',
 	'bankTransfer.instructions': 'Zahvaljujemo na kupnji, upotrijebite sljedeće podatke za dovršetak plaćanja.',
 	'bacs.accountHolderName': 'Ime vlasnika bankovnog računa',
 	'bacs.accountHolderName.invalid': 'Nevažeće ime vlasnika bankovnog računa',
@@ -218,8 +215,7 @@ var r = {
 	'bacs.bankLocationId': 'Identifikacijski kôd banke (UK)',
 	'bacs.bankLocationId.invalid': 'Nevažeći identifikacijski kôd banke (UK)',
 	'bacs.consent.amount': 'Slažem se da se gore navedeni iznos oduzme s mog bankovnog računa.',
-	'bacs.consent.account':
-		'Potvrđujem da je račun na moje ime i da sam jedini potpisnik potreban za autorizaciju izravnog terećenja na ovom računu.',
+	'bacs.consent.account': 'Potvrđujem da je račun na moje ime i da sam jedini potpisnik potreban za autorizaciju izravnog terećenja na ovom računu.',
 	edit: 'Uredi',
 	'bacs.confirm': 'Potvrdi i plati',
 	'bacs.result.introduction': 'Preuzmite upute za izravno terećenje (DDI / mandat)',
@@ -252,8 +248,7 @@ var r = {
 	'upi.vpaWaitingMessage': 'Otvorite svoju UPI aplikaciju kako biste potvrdili plaćanje',
 	'upi.modeSelection': 'Odaberite kako želite koristiti UPI.',
 	'onlineBanking.termsAndConditions': 'Nastavkom prihvaćate %#uvjete i odredbe%#',
-	'onlineBankingPL.termsAndConditions':
-		'Nastavljanjem prihvaćate %#propise%# i %#obvezu informiranja%# tvrtke Przelewy24',
+	'onlineBankingPL.termsAndConditions': 'Nastavljanjem prihvaćate %#propise%# i %#obvezu informiranja%# tvrtke Przelewy24',
 	'ctp.loading.poweredByCtp': 'Pokreće se uslugom Click to Pay',
 	'ctp.loading.intro': 'Provjeravamo imate li spremljenih kartica u sklopu usluge Click to Pay...',
 	'ctp.login.title': 'Nastavite na uslugu Click to Pay',
@@ -276,10 +271,8 @@ var r = {
 	'ctp.manualCardEntry': 'Ručni upis kartice',
 	'ctp.aria.infoModalButton': 'Što je usluga Click to Pay',
 	'ctp.infoPopup.title': 'Uslugom Click to Pay nudi se jednostavnost mrežnog beskontaktnog plaćanja',
-	'ctp.infoPopup.subtitle':
-		'Brza i sigurna metoda plaćanja koja se podržava platnim karticama Mastercard, Visa i drugim.',
-	'ctp.infoPopup.benefit1':
-		'Uslugom Click to Pay upotrebljava se šifriranje da bi vaši podatci bili sigurni i zaštićeni',
+	'ctp.infoPopup.subtitle': 'Brza i sigurna metoda plaćanja koja se podržava platnim karticama Mastercard, Visa i drugim.',
+	'ctp.infoPopup.benefit1': 'Uslugom Click to Pay upotrebljava se šifriranje da bi vaši podatci bili sigurni i zaštićeni',
 	'ctp.infoPopup.benefit2': 'Upotrebljavajte je za trgovce diljem svijeta',
 	'ctp.infoPopup.benefit3': 'Postavljanje obavite samo jednom za nesmetana plaćanja u budućnosti',
 	'ctp.errors.AUTH_INVALID': 'Nevažeća provjera autentičnosti',

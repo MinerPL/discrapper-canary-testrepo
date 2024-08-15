@@ -21,29 +21,11 @@ s.Z = (e) => {
 			e.preventDefault(), O(null), L(!0);
 			try {
 				var t, n, i, r, d;
-				let e =
-					null !==
-						(d =
-							null !== (r = null == h ? void 0 : null === (t = h.guild) || void 0 === t ? void 0 : t.id) && void 0 !== r
-								? r
-								: null ===
-											(n = N.Z.getChannel(
-												null == h ? void 0 : null === (i = h.channel) || void 0 === i ? void 0 : i.id
-											)) || void 0 === n
-									? void 0
-									: n.getGuildId()) && void 0 !== d
-						? d
-						: void 0;
+				let e = null !== (d = null !== (r = null == h ? void 0 : null === (t = h.guild) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : null === (n = N.Z.getChannel(null == h ? void 0 : null === (i = h.channel) || void 0 === i ? void 0 : i.id)) || void 0 === n ? void 0 : n.getGuildId()) && void 0 !== d ? d : void 0;
 				e === u.fQ && (e = void 0);
 				let c = await o.Z.sendVerificationEmail(l, !0, e),
 					_ = c.guilds_info;
-				c.has_matching_guild
-					? (x(e), s(u.tF.VERIFY_PIN))
-					: 0 === _.length
-						? s(u.tF.SUBMIT_SCHOOL)
-						: 1 === _.length
-							? (x(_[0].id), await o.Z.sendVerificationEmail(l, !0, _[0].id), s(u.tF.VERIFY_PIN))
-							: (a(_), s(u.tF.SELECT_SCHOOL));
+				c.has_matching_guild ? (x(e), s(u.tF.VERIFY_PIN)) : 0 === _.length ? s(u.tF.SUBMIT_SCHOOL) : 1 === _.length ? (x(_[0].id), await o.Z.sendVerificationEmail(l, !0, _[0].id), s(u.tF.VERIFY_PIN)) : (a(_), s(u.tF.SELECT_SCHOOL));
 			} catch (e) {
 				O(new c.Hx(e));
 			} finally {
@@ -52,13 +34,8 @@ s.Z = (e) => {
 		},
 		M = m.Z.Messages.HUB_EMAIL_CONNECTION_CONTENT_HEADER,
 		A = m.Z.Messages.HUB_EMAIL_CONNECTION_CONTENT_DESCRIPTION;
-	if (T)
-		(M = m.Z.Messages.HUB_EMAIL_CONNECTION_NUX_HEADER), (A = m.Z.Messages.HUB_EMAIL_CONNECTION_NUX_CONTENT_DESCRIPTION);
-	else if (
-		(null == h ? void 0 : h.guild) != null &&
-		h.guild.id !== u.fQ &&
-		(null == h ? void 0 : h.approximate_member_count) != null
-	) {
+	if (T) (M = m.Z.Messages.HUB_EMAIL_CONNECTION_NUX_HEADER), (A = m.Z.Messages.HUB_EMAIL_CONNECTION_NUX_CONTENT_DESCRIPTION);
+	else if ((null == h ? void 0 : h.guild) != null && h.guild.id !== u.fQ && (null == h ? void 0 : h.approximate_member_count) != null) {
 		let { name: e } = h.guild;
 		M = m.Z.Messages.HUB_EMAIL_CONNECTION_INVITE_HEADER.format({
 			guildName: e,

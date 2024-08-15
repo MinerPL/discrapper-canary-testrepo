@@ -14,9 +14,7 @@ var i = t(735250),
 	c = t(689938);
 function E(e) {
 	let n = s.useCallback(() => {
-		a()(null != e, 'text cannot be null'),
-			o.default.track(d.rMx.MESSAGE_MENU_GOOGLE_SEARCHED),
-			window.open('https://www.google.com/search?q='.concat(encodeURIComponent(e)), '_blank');
+		a()(null != e, 'text cannot be null'), o.default.track(d.rMx.MESSAGE_MENU_GOOGLE_SEARCHED), window.open('https://www.google.com/search?q='.concat(encodeURIComponent(e)), '_blank');
 	}, [e]);
 	return u.isPlatformEmbedded && null != e && (null == e ? void 0 : e.length) !== 0
 		? [

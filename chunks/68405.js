@@ -51,15 +51,15 @@ var r = n(392711),
 	f = n(626135),
 	h = n(708406),
 	p = n(591759),
-	I = n(668781),
-	m = n(981631),
+	m = n(668781),
+	I = n(981631),
 	T = n(526761),
 	g = n(689938);
 let S = /-/g;
 function A(e) {
 	let t = null != e ? { [e]: 1 } : {};
-	u.ZP.trackWithMetadata(m.rMx.SEARCH_STARTED, {
-		search_type: m.aib.GIF,
+	u.ZP.trackWithMetadata(I.rMx.SEARCH_STARTED, {
+		search_type: I.aib.GIF,
 		load_id: E.Z.getAnalyticsID(),
 		num_modifiers: Object.keys(t).length,
 		modifiers: t
@@ -78,7 +78,7 @@ function N(e, t) {
 			results: e
 		}),
 		s = null == n ? {} : { load_duration_ms: Date.now() - n };
-	u.ZP.trackWithMetadata(m.rMx.SEARCH_RESULT_VIEWED, {
+	u.ZP.trackWithMetadata(I.rMx.SEARCH_RESULT_VIEWED, {
 		...a,
 		...s
 	});
@@ -88,7 +88,7 @@ function v(e, t, n) {
 	A(t),
 		s.tn
 			.get({
-				url: m.ANM.GIFS_SEARCH,
+				url: I.ANM.GIFS_SEARCH,
 				query: {
 					q: e,
 					media_format: E.Z.getSelectedFormat(),
@@ -134,7 +134,7 @@ function C(e) {
 	if ('' !== e && null != e)
 		s.tn
 			.get({
-				url: m.ANM.GIFS_SUGGEST,
+				url: I.ANM.GIFS_SUGGEST,
 				query: {
 					q: e,
 					provider: 'tenor',
@@ -166,7 +166,7 @@ function D(e) {
 			results: a,
 			totalResults: o
 		});
-	u.ZP.trackWithMetadata(m.rMx.SEARCH_RESULT_SELECTED, {
+	u.ZP.trackWithMetadata(I.rMx.SEARCH_RESULT_SELECTED, {
 		...d,
 		index_num: n,
 		source_object: 'GIF Picker',
@@ -174,7 +174,7 @@ function D(e) {
 	}),
 		null != c &&
 			s.tn.post({
-				url: m.ANM.GIFS_SELECT,
+				url: I.ANM.GIFS_SELECT,
 				body: {
 					id: c,
 					q: l
@@ -184,8 +184,8 @@ function D(e) {
 }
 function L() {
 	let e = (0, a.Z)().replace(S, '');
-	u.ZP.trackWithMetadata(m.rMx.SEARCH_OPENED, {
-		search_type: m.aib.GIF,
+	u.ZP.trackWithMetadata(I.rMx.SEARCH_OPENED, {
+		search_type: I.aib.GIF,
 		load_id: e
 	}),
 		l.Z.wait(() => {
@@ -198,7 +198,7 @@ function L() {
 function b() {
 	s.tn
 		.get({
-			url: m.ANM.GIFS_TRENDING,
+			url: I.ANM.GIFS_TRENDING,
 			query: {
 				provider: 'tenor',
 				locale: d.default.locale,
@@ -218,10 +218,10 @@ function b() {
 }
 function M(e) {
 	let t = Date.now();
-	A(m.wI2.TRENDING_GIFS),
+	A(I.wI2.TRENDING_GIFS),
 		s.tn
 			.get({
-				url: m.ANM.GIFS_TRENDING_GIFS,
+				url: I.ANM.GIFS_TRENDING_GIFS,
 				query: {
 					media_format: E.Z.getSelectedFormat(),
 					provider: 'tenor',
@@ -233,7 +233,7 @@ function M(e) {
 			.then(
 				(n) => {
 					let { body: r } = n;
-					N(r, m.wI2.TRENDING_GIFS, {
+					N(r, I.wI2.TRENDING_GIFS, {
 						startTime: t,
 						limit: e
 					}),
@@ -265,14 +265,14 @@ function U(e) {
 				o.wK.toBinary(t).length > T.vY)
 			)
 				return (
-					I.Z.show({
+					m.Z.show({
 						title: g.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
 						body: g.Z.Messages.FAVORITE_GIFS_LIMIT_REACHED_BODY
 					}),
 					!1
 				);
 			let a = i().size(t.gifs);
-			a > 2 && (t.hideTooltip = !0), f.default.track(m.rMx.GIF_FAVORITED, { total_num_favorited: a });
+			a > 2 && (t.hideTooltip = !0), f.default.track(I.rMx.GIF_FAVORITED, { total_num_favorited: a });
 		},
 		T.fy.INFREQUENT_USER_ACTION
 	);
@@ -281,8 +281,7 @@ function w(e) {
 	_.DZ.updateAsync(
 		'favoriteGifs',
 		(t) => {
-			e in t.gifs ? delete t.gifs[e] : delete t.gifs[P(e)],
-				f.default.track(m.rMx.GIF_UNFAVORITED, { total_num_favorited: i().size(t.gifs) });
+			e in t.gifs ? delete t.gifs[e] : delete t.gifs[P(e)], f.default.track(I.rMx.GIF_UNFAVORITED, { total_num_favorited: i().size(t.gifs) });
 		},
 		T.fy.INFREQUENT_USER_ACTION
 	);

@@ -16,7 +16,7 @@ var i = n(120356),
 	_ = n(689938),
 	E = n(139665);
 function f(e) {
-	let { user: t, activity: n, entry: i, display: f, className: h, onSelect: p, onClose: I, onRequestOpen: m } = e,
+	let { user: t, activity: n, entry: i, display: f, className: h, onSelect: p, onClose: m, onRequestOpen: I } = e,
 		{ newActivityCardsEnabled: T } = (0, u.z)({ location: 'UserProfileActivityContextMenu' }),
 		{ analyticsLocations: g } = (0, l.ZP)(o.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
 		{ onAction: S } = (0, c.Z)({
@@ -31,7 +31,7 @@ function f(e) {
 			activity: n,
 			user: t,
 			display: f,
-			onClose: I,
+			onClose: m,
 			onAction: S
 		});
 	return !T || 0 === A.length || t.bot
@@ -41,7 +41,7 @@ function f(e) {
 				position: 'right',
 				disablePointerEvents: !1,
 				onRequestOpen: () => {
-					S({ action: 'OPEN_MENU' }), null == m || m();
+					S({ action: 'OPEN_MENU' }), null == I || I();
 				},
 				renderPopout: (e) => {
 					let { closePopout: t } = e;

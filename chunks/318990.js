@@ -22,15 +22,7 @@ function E() {
 			animateOnHover: !0
 		}),
 		E = (e) => (null != e.globalName ? e.globalName : e.username),
-		f = i.useMemo(
-			() =>
-				e.length >= 2
-					? d.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_3.format({ username: E(e[0]) })
-					: 1 === e.length
-						? d.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_1.format({ username: E(e[0]) })
-						: '',
-			[e]
-		);
+		f = i.useMemo(() => (e.length >= 2 ? d.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_3.format({ username: E(e[0]) }) : 1 === e.length ? d.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_1.format({ username: E(e[0]) }) : ''), [e]);
 	return 0 === e.length
 		? null
 		: (0, r.jsxs)('div', {

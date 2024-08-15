@@ -62,8 +62,7 @@ function N(e) {
 	});
 }
 let b = (e) => {
-	if (e.toString() === _.Plq.MENTION_EVERYONE.toString())
-		return u.Z.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_MENTION_EVERYONE;
+	if (e.toString() === _.Plq.MENTION_EVERYONE.toString()) return u.Z.Messages.ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_MENTION_EVERYONE;
 	return (0, l.wt)(e);
 };
 function h(e) {

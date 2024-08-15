@@ -19,9 +19,7 @@ var t = i(293810),
 	a = i(474936),
 	r = i(689938);
 function o(e) {
-	return 'roles' in e
-		? 'emoji-'.concat(e.id)
-		: ''.concat(e.ref_type, '-').concat(e.emoji_id, '-').concat(e.name, '-').concat(e.ref_id);
+	return 'roles' in e ? 'emoji-'.concat(e.id) : ''.concat(e.ref_type, '-').concat(e.emoji_id, '-').concat(e.name, '-').concat(e.ref_id);
 }
 function l(e) {
 	let { interval: n, interval_count: i } = e;

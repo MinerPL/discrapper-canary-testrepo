@@ -178,15 +178,11 @@ function y() {
 					l = h.Z.getAllActiveStreams();
 				if (null != n) {
 					let i = I.Z.getChannel(n);
-					null != i &&
-						((e = i.type),
-						(t = A.ZP.countVoiceStatesForChannel(i.id) - (N.Z.isInChannel(i.id) ? 1 : 0)),
-						(a = h.Z.getAllApplicationStreamsForChannel(i.id).map((e) => e.ownerId)));
+					null != i && ((e = i.type), (t = A.ZP.countVoiceStatesForChannel(i.id) - (N.Z.isInChannel(i.id) ? 1 : 0)), (a = h.Z.getAllApplicationStreamsForChannel(i.id).map((e) => e.ownerId)));
 				}
 				let o = null;
 				return (
-					(null == (o = 1 === l.length ? l[0] : h.Z.getCurrentUserActiveStream()) ? void 0 : o.state) ===
-						L.jm8.CONNECTING && (o = null),
+					(null == (o = 1 === l.length ? l[0] : h.Z.getCurrentUserActiveStream()) ? void 0 : o.state) === L.jm8.CONNECTING && (o = null),
 					null != o && ((s = (0, d.V9)(o)), (r = h.Z.getViewerIds(s).filter((e) => e !== i).length)),
 					{
 						channelType: e,
@@ -201,15 +197,7 @@ function y() {
 				);
 			},
 			(e, t) => {
-				let {
-					channelType: n,
-					voiceChannelId: i,
-					voiceChannelUserCount: a,
-					streamingUserIds: s,
-					singleActiveStreamKey: r,
-					singleActiveStreamViewerCount: l,
-					currentUserId: o
-				} = t;
+				let { channelType: n, voiceChannelId: i, voiceChannelUserCount: a, streamingUserIds: s, singleActiveStreamKey: r, singleActiveStreamViewerCount: l, currentUserId: o } = t;
 				if (
 					e.voiceChannelId !== i ||
 					null == i ||
@@ -230,24 +218,10 @@ function y() {
 					_ = e.streamingUserIds.some((e) => !s.includes(e) && (e === o || u.includes(e)));
 				if (d) return 'stream_started';
 				if (_) return 'stream_ended';
-				if (e.singleActiveStreamViewerCount <= 25 && c && l > e.singleActiveStreamViewerCount)
-					return 'stream_user_joined';
-				else if (
-					null != e.voiceChannelUserCount &&
-					null != a &&
-					e.voiceChannelUserCount <= 25 &&
-					a > e.voiceChannelUserCount
-				)
-					return 'user_join';
-				else if (
-					null != e.voiceChannelUserCount &&
-					null != a &&
-					e.voiceChannelUserCount <= 25 &&
-					a < e.voiceChannelUserCount
-				)
-					return 'user_leave';
-				else if (e.singleActiveStreamViewerCount <= 25 && c && l < e.singleActiveStreamViewerCount)
-					return 'stream_user_left';
+				if (e.singleActiveStreamViewerCount <= 25 && c && l > e.singleActiveStreamViewerCount) return 'stream_user_joined';
+				else if (null != e.voiceChannelUserCount && null != a && e.voiceChannelUserCount <= 25 && a > e.voiceChannelUserCount) return 'user_join';
+				else if (null != e.voiceChannelUserCount && null != a && e.voiceChannelUserCount <= 25 && a < e.voiceChannelUserCount) return 'user_leave';
+				else if (e.singleActiveStreamViewerCount <= 25 && c && l < e.singleActiveStreamViewerCount) return 'stream_user_left';
 			}
 		),
 		null
@@ -276,36 +250,17 @@ function j() {
 			},
 			(e, t) => {
 				let n,
-					{
-						voiceChannelId: i,
-						currentUserId: a,
-						channelActivities: s,
-						connectedChannelActivities: r,
-						userConnectedActivity: l,
-						voiceChannelActivities: o
-					} = t;
+					{ voiceChannelId: i, currentUserId: a, channelActivities: s, connectedChannelActivities: r, userConnectedActivity: l, voiceChannelActivities: o } = t;
 				let c = o.some((e) => e.applicationId === (null == l ? void 0 : l.applicationId) && e.launchId === l.launchId);
 				if ((0, v.lm)(i)) {
 					let t = e.voiceChannelActivities.find((e) => e.userIds.has(a)),
 						i = o.find((e) => e.userIds.has(a));
-					e.voiceChannelActivities.length < o.length && (0, v.lm)(e.voiceChannelId) && (n = 'activity_launch'),
-						void 0 === i && (0, v.lm)(t) && (n = 'activity_end'),
-						void 0 === t && (0, v.lm)(i) && i.userIds.size > 1 && (n = 'activity_user_join'),
-						(0, v.lm)(i) &&
-							(0, v.lm)(t) &&
-							(i.userIds.size > t.userIds.size && (n = 'activity_user_join'),
-							i.userIds.size < t.userIds.size && (n = 'activity_user_left'));
+					e.voiceChannelActivities.length < o.length && (0, v.lm)(e.voiceChannelId) && (n = 'activity_launch'), void 0 === i && (0, v.lm)(t) && (n = 'activity_end'), void 0 === t && (0, v.lm)(i) && i.userIds.size > 1 && (n = 'activity_user_join'), (0, v.lm)(i) && (0, v.lm)(t) && (i.userIds.size > t.userIds.size && (n = 'activity_user_join'), i.userIds.size < t.userIds.size && (n = 'activity_user_left'));
 				}
 				if (!c) {
-					e.connectedChannelActivities.length < r.length &&
-						e.channelActivities.length < s.length &&
-						(n = 'activity_launch');
+					e.connectedChannelActivities.length < r.length && e.channelActivities.length < s.length && (n = 'activity_launch');
 					let t = e.userConnectedActivity;
-					null == l && (0, v.lm)(t) && (n = 'activity_end'),
-						(0, v.lm)(l) &&
-							(0, v.lm)(t) &&
-							(l.userIds.size > t.userIds.size && (n = 'activity_user_join'),
-							l.userIds.size < t.userIds.size && (n = 'activity_user_left'));
+					null == l && (0, v.lm)(t) && (n = 'activity_end'), (0, v.lm)(l) && (0, v.lm)(t) && (l.userIds.size > t.userIds.size && (n = 'activity_user_join'), l.userIds.size < t.userIds.size && (n = 'activity_user_left'));
 				}
 				return n;
 			}
@@ -325,14 +280,7 @@ function U() {
 			(e, t) => {
 				var n, i;
 				let { hangStatus: a, customHangStatus: s } = t;
-				if (
-					e.inVoice &&
-					((null != a && a !== e.hangStatus) ||
-						(null != s &&
-							(s.status !== (null === (n = e.customHangStatus) || void 0 === n ? void 0 : n.status) ||
-								!r().isEqual(s.emoji, null === (i = e.customHangStatus) || void 0 === i ? void 0 : i.emoji))))
-				)
-					return 'hang_status_select';
+				if (e.inVoice && ((null != a && a !== e.hangStatus) || (null != s && (s.status !== (null === (n = e.customHangStatus) || void 0 === n ? void 0 : n.status) || !r().isEqual(s.emoji, null === (i = e.customHangStatus) || void 0 === i ? void 0 : i.emoji))))) return 'hang_status_select';
 			},
 			0.15
 		),
@@ -341,16 +289,6 @@ function U() {
 }
 function G() {
 	return (0, i.jsxs)(i.Fragment, {
-		children: [
-			(0, i.jsx)(R, {}),
-			(0, i.jsx)(x, {}),
-			(0, i.jsx)(b, {}),
-			(0, i.jsx)(P, {}),
-			(0, i.jsx)(M, {}),
-			(0, i.jsx)(y, {}),
-			(0, i.jsx)(D, {}),
-			(0, i.jsx)(j, {}),
-			(0, i.jsx)(U, {})
-		]
+		children: [(0, i.jsx)(R, {}), (0, i.jsx)(x, {}), (0, i.jsx)(b, {}), (0, i.jsx)(P, {}), (0, i.jsx)(M, {}), (0, i.jsx)(y, {}), (0, i.jsx)(D, {}), (0, i.jsx)(j, {}), (0, i.jsx)(U, {})]
 	});
 }

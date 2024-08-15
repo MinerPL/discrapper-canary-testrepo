@@ -31,10 +31,7 @@ var t, i;
 						function t(e, t) {
 							for (var i = 0; i < t.length; i++) {
 								var r = t[i];
-								(r.enumerable = r.enumerable || !1),
-									(r.configurable = !0),
-									'value' in r && (r.writable = !0),
-									Object.defineProperty(e, r.key, r);
+								(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 							}
 						}
 						(e.exports = function (e, i, r) {
@@ -83,8 +80,7 @@ var t, i;
 					205: (e, t, i) => {
 						var r = i(489);
 						(e.exports = function (e, t) {
-							if ('function' != typeof t && null !== t)
-								throw TypeError('Super expression must either be null or a function');
+							if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function');
 							(e.prototype = Object.create(t && t.prototype, {
 								constructor: {
 									value: e,
@@ -149,9 +145,7 @@ var t, i;
 												return typeof e;
 											}
 										: function (e) {
-												return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype
-													? 'symbol'
-													: typeof e;
+												return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
 											}),
 								(e.exports.__esModule = !0),
 								(e.exports.default = e.exports),
@@ -184,10 +178,7 @@ var t, i;
 											});
 									}),
 									(i.r = function (e) {
-										'undefined' != typeof Symbol &&
-											Symbol.toStringTag &&
-											Object.defineProperty(e, Symbol.toStringTag, { value: 'Module' }),
-											Object.defineProperty(e, '__esModule', { value: !0 });
+										'undefined' != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, { value: 'Module' }), Object.defineProperty(e, '__esModule', { value: !0 });
 									}),
 									(i.t = function (e, t) {
 										if ((1 & t && (e = i(e)), 8 & t || (4 & t && 'object' == typeof e && e && e.__esModule))) return e;
@@ -234,9 +225,7 @@ var t, i;
 										(this.channels = e), (this.bufferSize = t), this.flush();
 									}
 									(i.prototype.flush = function () {
-										(this._buffers = []),
-											(this._pendingBuffer = this.createBuffer(this.bufferSize)),
-											(this._pendingPos = 0);
+										(this._buffers = []), (this._pendingBuffer = this.createBuffer(this.bufferSize)), (this._pendingPos = 0);
 									}),
 										(i.prototype.sampleCount = function () {
 											var e = 0;
@@ -263,30 +252,16 @@ var t, i;
 										}),
 										(i.prototype.appendBuffer = function (e) {
 											if (!this.validate(e)) throw 'Invalid audio buffer passed to BufferQueue.appendBuffer';
-											for (
-												var t = e[0].length,
-													i = this.channels,
-													r = this._pendingPos,
-													o = this._pendingBuffer,
-													n = this.bufferSize,
-													a = 0;
-												a < t;
-												a++
-											) {
+											for (var t = e[0].length, i = this.channels, r = this._pendingPos, o = this._pendingBuffer, n = this.bufferSize, a = 0; a < t; a++) {
 												for (var s = 0; s < i; s++) o[s][r] = e[s][a];
-												++r == n &&
-													(this._buffers.push(o),
-													(r = this._pendingPos = 0),
-													(o = this._pendingBuffer = this.createBuffer(n)));
+												++r == n && (this._buffers.push(o), (r = this._pendingPos = 0), (o = this._pendingBuffer = this.createBuffer(n)));
 											}
 											this._pendingPos = r;
 										}),
 										(i.prototype.prependBuffer = function (e) {
 											if (!this.validate(e)) throw 'Invalid audio buffer passed to BufferQueue.prependBuffer';
 											var t = this._buffers.slice(0);
-											t.push(this.trimBuffer(this._pendingBuffer, 0, this._pendingPos)),
-												this.flush(),
-												this.appendBuffer(e);
+											t.push(this.trimBuffer(this._pendingBuffer, 0, this._pendingPos)), this.flush(), this.appendBuffer(e);
 											for (var i = 0; i < t.length; i++) this.appendBuffer(t[i]);
 										}),
 										(i.prototype.nextBuffer = function () {
@@ -309,11 +284,7 @@ var t, i;
 										var t = i(2),
 											r = i(4);
 										function o(e) {
-											(this._options = e || {}),
-												(this._backend = null),
-												(this._resampleFractional = 0),
-												(this._resampleLastSampleData = void 0),
-												(this._tempoChanger = null);
+											(this._options = e || {}), (this._backend = null), (this._resampleFractional = 0), (this._resampleLastSampleData = void 0), (this._tempoChanger = null);
 										}
 										(o.prototype.rate = 0),
 											(o.prototype.targetRate = 0),
@@ -385,8 +356,7 @@ var t, i;
 												}
 											}),
 											(o.prototype.init = function (e, i) {
-												if (((this.channels = e), (this.rate = i), this._options.backendFactory))
-													this._backend = this._options.backendFactory(e, i, this._options);
+												if (((this.channels = e), (this.rate = i), this._options.backendFactory)) this._backend = this._options.backendFactory(e, i, this._options);
 												else {
 													if (!t.isSupported()) throw 'No supported backend';
 													this._backend = new t(e, i, this._options);
@@ -446,8 +416,7 @@ var t, i;
 													l >= i && (_ = 0);
 													var p = e[_],
 														m = new Float32Array(c);
-													n(p, m, this._resampleLastSampleData ? this._resampleLastSampleData[_] : void 0, f),
-														a.push(m);
+													n(p, m, this._resampleLastSampleData ? this._resampleLastSampleData[_] : void 0, f), a.push(m);
 												}
 												return (this._resampleFractional = h), (this._resampleLastSampleData = e), a;
 											}),
@@ -459,11 +428,7 @@ var t, i;
 											(o.prototype.getPlaybackState = function () {
 												if (this._backend) {
 													var e = this._backend.getPlaybackState();
-													return (
-														(e.outputPlaybackPosition = e.playbackPosition),
-														(e.playbackPosition = this._tempoChanger.mapOutputToInputTime(e.outputPlaybackPosition)),
-														e
-													);
+													return (e.outputPlaybackPosition = e.playbackPosition), (e.playbackPosition = this._tempoChanger.mapOutputToInputTime(e.outputPlaybackPosition)), e;
 												}
 												throw 'Invalid state: AudioFeeder cannot getPlaybackState before init';
 											}),
@@ -480,8 +445,7 @@ var t, i;
 												this._backend.stop();
 											}),
 											(o.prototype.flush = function () {
-												if (((this._resampleFractional = 0), (this._resampleLastSampleData = void 0), !this._backend))
-													throw 'Invalid state: AudioFeeder cannot flush before init';
+												if (((this._resampleFractional = 0), (this._resampleLastSampleData = void 0), !this._backend)) throw 'Invalid state: AudioFeeder cannot flush before init';
 												this._tempoChanger.flush(this.durationBuffered), this._backend.flush();
 											}),
 											(o.prototype.close = function () {
@@ -505,22 +469,7 @@ var t, i;
 											o = i(3);
 										function n(e, t, i) {
 											var o = i.audioContext || n.initSharedAudioContext();
-											if (
-												((this._context = o),
-												(this.output = i.output || o.destination),
-												(this.rate = o.sampleRate),
-												(this.channels = 2),
-												i.bufferSize && (this.bufferSize = 0 | i.bufferSize),
-												(this.bufferThreshold = 2 * this.bufferSize),
-												(this._bufferQueue = new r(this.channels, this.bufferSize)),
-												(this._playbackTimeAtBufferTail = o.currentTime),
-												(this._queuedTime = 0),
-												(this._delayedTime = 0),
-												(this._dropped = 0),
-												(this._liveBuffer = this._bufferQueue.createBuffer(this.bufferSize)),
-												o.createScriptProcessor)
-											)
-												this._node = o.createScriptProcessor(this.bufferSize, 0, this.channels);
+											if (((this._context = o), (this.output = i.output || o.destination), (this.rate = o.sampleRate), (this.channels = 2), i.bufferSize && (this.bufferSize = 0 | i.bufferSize), (this.bufferThreshold = 2 * this.bufferSize), (this._bufferQueue = new r(this.channels, this.bufferSize)), (this._playbackTimeAtBufferTail = o.currentTime), (this._queuedTime = 0), (this._delayedTime = 0), (this._dropped = 0), (this._liveBuffer = this._bufferQueue.createBuffer(this.bufferSize)), o.createScriptProcessor)) this._node = o.createScriptProcessor(this.bufferSize, 0, this.channels);
 											else {
 												if (!o.createJavaScriptNode) throw Error('Bad version of web audio API?');
 												this._node = o.createJavaScriptNode(this.bufferSize, 0, this.channels);
@@ -547,40 +496,22 @@ var t, i;
 												}
 											}),
 											(n.prototype._audioProcess = function (e) {
-												a =
-													'number' == typeof e.playbackTime
-														? e.playbackTime
-														: this._context.currentTime + this.bufferSize / this.rate;
+												a = 'number' == typeof e.playbackTime ? e.playbackTime : this._context.currentTime + this.bufferSize / this.rate;
 												var t,
 													i,
 													r,
 													n,
 													a,
 													s = this._playbackTimeAtBufferTail;
-												if (
-													(s < a && (this._delayedTime += a - s),
-													this._bufferQueue.sampleCount() < this.bufferSize && this.onstarved && this.onstarved(),
-													this._bufferQueue.sampleCount() < this.bufferSize)
-												) {
-													for (t = 0; t < this.channels; t++)
-														for (r = e.outputBuffer.getChannelData(t), n = 0; n < this.bufferSize; n++) r[n] = 0;
+												if ((s < a && (this._delayedTime += a - s), this._bufferQueue.sampleCount() < this.bufferSize && this.onstarved && this.onstarved(), this._bufferQueue.sampleCount() < this.bufferSize)) {
+													for (t = 0; t < this.channels; t++) for (r = e.outputBuffer.getChannelData(t), n = 0; n < this.bufferSize; n++) r[n] = 0;
 													this._dropped++;
 												} else {
 													var u = this.muted ? 0 : this.volume,
 														d = this._bufferQueue.nextBuffer();
 													if (d[0].length < this.bufferSize) throw 'Audio buffer not expected length.';
-													for (t = 0; t < this.channels; t++)
-														for (
-															i = d[t], this._liveBuffer[t].set(d[t]), r = e.outputBuffer.getChannelData(t), n = 0;
-															n < i.length;
-															n++
-														)
-															r[n] = i[n] * u;
-													(this._queuedTime += this.bufferSize / this.rate),
-														(this._playbackTimeAtBufferTail = a + this.bufferSize / this.rate),
-														this._bufferQueue.sampleCount() < Math.max(this.bufferSize, this.bufferThreshold) &&
-															this.onbufferlow &&
-															o(this.onbufferlow.bind(this));
+													for (t = 0; t < this.channels; t++) for (i = d[t], this._liveBuffer[t].set(d[t]), r = e.outputBuffer.getChannelData(t), n = 0; n < i.length; n++) r[n] = i[n] * u;
+													(this._queuedTime += this.bufferSize / this.rate), (this._playbackTimeAtBufferTail = a + this.bufferSize / this.rate), this._bufferQueue.sampleCount() < Math.max(this.bufferSize, this.bufferThreshold) && this.onbufferlow && o(this.onbufferlow.bind(this));
 												}
 											}),
 											(n.prototype._samplesQueued = function () {
@@ -604,9 +535,7 @@ var t, i;
 												this._bufferQueue.appendBuffer(e);
 											}),
 											(n.prototype.start = function () {
-												(this._node.onaudioprocess = this._audioProcess.bind(this)),
-													this._node.connect(this.output),
-													(this._playbackTimeAtBufferTail = this._context.currentTime);
+												(this._node.onaudioprocess = this._audioProcess.bind(this)), this._node.connect(this.output), (this._playbackTimeAtBufferTail = this._context.currentTime);
 											}),
 											(n.prototype.stop = function () {
 												if (this._node) {
@@ -614,13 +543,7 @@ var t, i;
 													if (e > 0) {
 														var t = Math.round(e * this.rate),
 															i = this._liveBuffer ? this._liveBuffer[0].length : 0;
-														t > i
-															? (this._bufferQueue.prependBuffer(this._liveBuffer),
-																this._bufferQueue.prependBuffer(this._bufferQueue.createBuffer(t - i)))
-															: this._bufferQueue.prependBuffer(
-																	this._bufferQueue.trimBuffer(this._liveBuffer, i - t, t)
-																),
-															(this._playbackTimeAtBufferTail -= e);
+														t > i ? (this._bufferQueue.prependBuffer(this._liveBuffer), this._bufferQueue.prependBuffer(this._bufferQueue.createBuffer(t - i))) : this._bufferQueue.prependBuffer(this._bufferQueue.trimBuffer(this._liveBuffer, i - t, t)), (this._playbackTimeAtBufferTail -= e);
 													}
 													(this._node.onaudioprocess = null), this._node.disconnect();
 												}
@@ -669,8 +592,7 @@ var t, i;
 													}
 												}),
 												function (t) {
-													e.push(t),
-														window.postMessage({ nextTickBrowserPingMessage: !0 }, document.location.toString());
+													e.push(t), window.postMessage({ nextTickBrowserPingMessage: !0 }, document.location.toString());
 												}
 											);
 										}
@@ -705,14 +627,10 @@ var t, i;
 															});
 													}),
 													(i.r = function (e) {
-														'undefined' != typeof Symbol &&
-															Symbol.toStringTag &&
-															Object.defineProperty(e, Symbol.toStringTag, { value: 'Module' }),
-															Object.defineProperty(e, '__esModule', { value: !0 });
+														'undefined' != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, { value: 'Module' }), Object.defineProperty(e, '__esModule', { value: !0 });
 													}),
 													(i.t = function (e, t) {
-														if ((1 & t && (e = i(e)), 8 & t || (4 & t && 'object' == typeof e && e && e.__esModule)))
-															return e;
+														if ((1 & t && (e = i(e)), 8 & t || (4 & t && 'object' == typeof e && e && e.__esModule))) return e;
 														var r = Object.create(null);
 														if (
 															(i.r(r),
@@ -773,17 +691,7 @@ var t, i;
 																u = o(i),
 																d = 1 << (i - 2);
 															d -= d % 100;
-															for (
-																var c = r.float_array(s + d + 5),
-																	h = r.float_array(s + d + 5),
-																	f = d,
-																	l = d,
-																	_ = r.float_array(s),
-																	p = 0;
-																p < s;
-																p++
-															)
-																_[p] = 0.5 * (1 - Math.cos((2 * Math.PI * p) / s));
+															for (var c = r.float_array(s + d + 5), h = r.float_array(s + d + 5), f = d, l = d, _ = r.float_array(s), p = 0; p < s; p++) _[p] = 0.5 * (1 - Math.cos((2 * Math.PI * p) / s));
 															var m = 1 + (s >> 1),
 																V = r.float_array(m),
 																v = r.float_array(m),
@@ -797,11 +705,7 @@ var t, i;
 																P = [],
 																w = [],
 																x = [];
-															for (p = 0; p < 2; p++)
-																E.push(r.float_array(A)),
-																	P.push(r.float_array(A)),
-																	w.push(r.float_array(A)),
-																	x.push(r.float_array(m));
+															for (p = 0; p < 2; p++) E.push(r.float_array(A)), P.push(r.float_array(A)), w.push(r.float_array(A)), x.push(r.float_array(m));
 															var R = r.float_array(A),
 																F = r.float_array(A),
 																O = 0,
@@ -875,20 +779,7 @@ var t, i;
 																	return ((n = e - i - a) - 2 * Math.PI * Math.round(n / (2 * Math.PI)) + a) * o;
 																},
 																X = function (e, t, i, r, o, n) {
-																	for (
-																		var u = e % 2,
-																			d = 1 - u,
-																			c = x[d],
-																			h = k[d],
-																			f = E[d],
-																			l = P[d],
-																			_ = w[d],
-																			p = x[u],
-																			m = 1;
-																		m < p.length;
-																		m++
-																	)
-																		p[m] = t[m] * t[m] + i[m] * i[m];
+																	for (var u = e % 2, d = 1 - u, c = x[d], h = k[d], f = E[d], l = P[d], _ = w[d], p = x[u], m = 1; m < p.length; m++) p[m] = t[m] * t[m] + i[m] * i[m];
 																	var V = E[u],
 																		v = (k[u] = (function (e, t) {
 																			for (var i = 0, r = 0; r < e.length; r++) e[r] > i && (i = e[r]);
@@ -899,9 +790,7 @@ var t, i;
 																				var u = r * a;
 																				if (e[r] > o && e[r] > e[r - 1] && e[r] >= e[r + 1]) {
 																					var d = r + (e[r - 1] - e[r + 1]) / (2 * (e[r - 1] - 2 * e[r] + e[r + 1]));
-																					d - t[n - 1] > u
-																						? ((t[n++] = d), (s = r))
-																						: e[r] > e[s] && ((t[n - 1] = d), (s = r));
+																					d - t[n - 1] > u ? ((t[n++] = d), (s = r)) : e[r] > e[s] && ((t[n - 1] = d), (s = r));
 																				}
 																			}
 																			return n;
@@ -942,28 +831,16 @@ var t, i;
 																	var e = 0 | (I += 2 * j);
 																	I -= e;
 																	for (var t = 0; t < s; t++) (u.m_re[t] = _[t] * c[t]), (u.m_im[t] = _[t] * c[f + t]);
-																	r.blit(c, 2 * f, c, 0, s - f),
-																		u.inplace(!1),
-																		u.unpack(V, v, g, y),
-																		X(D, V, v, 0, 0, (1 * l) / f),
-																		X(D + 1, g, y, 0, 0, (1 * (l + e)) / f),
-																		r.blit(g, 0, b, 0, m),
-																		r.blit(y, 0, T, 0, m),
-																		u.repack(V, v, g, y),
-																		u.inplace(!0);
+																	r.blit(c, 2 * f, c, 0, s - f), u.inplace(!1), u.unpack(V, v, g, y), X(D, V, v, 0, 0, (1 * l) / f), X(D + 1, g, y, 0, 0, (1 * (l + e)) / f), r.blit(g, 0, b, 0, m), r.blit(y, 0, T, 0, m), u.repack(V, v, g, y), u.inplace(!0);
 																	var i = h.length;
 																	for (r.blit(h, M, h, 0, i - M), t = i - M; t < i; t++) h[t] = 0;
 																	var o = 0,
 																		n = B;
 																	for (t = 0; t < l; t++) Math.abs(2 * u.m_re[t]) > o && (o = Math.abs(2 * u.m_re[t]));
-																	for (t = 0; t < s - l; t++)
-																		Math.abs(u.m_re[t + l + e] + u.m_im[t]) > o &&
-																			(o = Math.abs(u.m_re[t + l + e] + u.m_im[t]));
-																	for (t = s - l; t < s; t++)
-																		Math.abs(2 * u.m_im[t]) > o && (o = Math.abs(2 * u.m_im[t]));
+																	for (t = 0; t < s - l; t++) Math.abs(u.m_re[t + l + e] + u.m_im[t]) > o && (o = Math.abs(u.m_re[t + l + e] + u.m_im[t]));
+																	for (t = s - l; t < s; t++) Math.abs(2 * u.m_im[t]) > o && (o = Math.abs(2 * u.m_im[t]));
 																	var a = 1 / Math.floor((1 * s) / (2 * l));
-																	for (n * o > a && (n = a / o), t = 0; t < s; t++)
-																		(h[t] += n * u.m_re[t]), (h[t + l + e] += n * u.m_im[t]);
+																	for (n * o > a && (n = a / o), t = 0; t < s; t++) (h[t] += n * u.m_re[t]), (h[t + l + e] += n * u.m_im[t]);
 																	return (D += 2), (M = 2 * l + e);
 																};
 															return (
@@ -972,8 +849,7 @@ var t, i;
 																		o = e[0];
 																	if (e.length > 1) {
 																		o = r.float_array(e[0].length);
-																		for (var a = 1 / e.length, u = 0; u < e.length; u++)
-																			for (var d = 0; d < i; d++) o[d] += a * e[u][d];
+																		for (var a = 1 / e.length, u = 0; u < e.length; u++) for (var d = 0; d < i; d++) o[d] += a * e[u][d];
 																	}
 																	if (1 == n) {
 																		if (U + L > 0) {
@@ -981,10 +857,7 @@ var t, i;
 																				p = [];
 																			for (u = 0; u < e.length; u++) {
 																				var m = r.float_array(_);
-																				r.blit(h, 0, m, 0, U),
-																					r.blit(c, 0, m, U, L),
-																					r.blit(e[u], 0, m, U + L, i),
-																					p.push(m);
+																				r.blit(h, 0, m, 0, U), r.blit(c, 0, m, U, L), r.blit(e[u], 0, m, U + L, i), p.push(m);
 																			}
 																			G.flush(0), (i = _), (e = p);
 																		}
@@ -1001,13 +874,7 @@ var t, i;
 																			r.blit(o, y, c, L, i - y), (L += i - y), (y = i);
 																			break;
 																		}
-																		k <= 0 ? (L -= 2 * f) : (r.blit(o, y, c, L, k), (y += k), (L = s - f)),
-																			(A = H()),
-																			(O += (2 * f) / t),
-																			(S += A / t),
-																			(T = b + A - v) < 0 && (T = 0),
-																			r.blit(h, 0, g, b, A - T),
-																			(b += A);
+																		k <= 0 ? (L -= 2 * f) : (r.blit(o, y, c, L, k), (y += k), (L = s - f)), (A = H()), (O += (2 * f) / t), (S += A / t), (T = b + A - v) < 0 && (T = 0), r.blit(h, 0, g, b, A - T), (b += A);
 																	}
 																	r.blit(h, A - T, h, 0, T), (U = T);
 																	var E = [];
@@ -1062,14 +929,7 @@ var t, i;
 																			b = r[p],
 																			T = t[m],
 																			A = r[m];
-																		(t[p] = y + T),
-																			(r[p] = b + A),
-																			(T = y - T),
-																			(A = b - A),
-																			(t[m] = T * V - A * v),
-																			(r[m] = T * v + A * V),
-																			p++,
-																			m++;
+																		(t[p] = y + T), (r[p] = b + A), (T = y - T), (A = b - A), (t[m] = T * V - A * v), (r[m] = T * v + A * V), p++, m++;
 																		var k = V;
 																		(V = V * f - v * l), (v = k * l + v * f);
 																	}
@@ -1077,37 +937,17 @@ var t, i;
 																}
 																(a >>= 1), (s >>= 1), (u >>= 1);
 															}
-															for (var E, P, w = i.m_revTgt, x = 0; x < o; x++)
-																w[x] > x &&
-																	((P = t[(E = w[x])]),
-																	(t[E] = t[x]),
-																	(t[x] = P),
-																	(P = r[E]),
-																	(r[E] = r[x]),
-																	(r[x] = P));
+															for (var E, P, w = i.m_revTgt, x = 0; x < o; x++) w[x] > x && ((P = t[(E = w[x])]), (t[E] = t[x]), (t[x] = P), (P = r[E]), (r[E] = r[x]), (r[x] = P));
 														};
 														var h = t >> 1;
 														return (
 															(i.unpack = function (e, r, o, n) {
-																(e[0] = i.m_re[0]),
-																	(o[0] = i.m_im[0]),
-																	(r[0] = n[0] = 0),
-																	(e[h] = i.m_re[h]),
-																	(o[h] = i.m_im[h]),
-																	(r[h] = n[h] = 0);
-																for (var a = 1; a < h; a++)
-																	(e[a] = (i.m_re[a] + i.m_re[t - a]) / 2),
-																		(r[a] = (i.m_im[a] - i.m_im[t - a]) / 2),
-																		(o[a] = (i.m_im[a] + i.m_im[t - a]) / 2),
-																		(n[a] = (-i.m_re[a] + i.m_re[t - a]) / 2);
+																(e[0] = i.m_re[0]), (o[0] = i.m_im[0]), (r[0] = n[0] = 0), (e[h] = i.m_re[h]), (o[h] = i.m_im[h]), (r[h] = n[h] = 0);
+																for (var a = 1; a < h; a++) (e[a] = (i.m_re[a] + i.m_re[t - a]) / 2), (r[a] = (i.m_im[a] - i.m_im[t - a]) / 2), (o[a] = (i.m_im[a] + i.m_im[t - a]) / 2), (n[a] = (-i.m_re[a] + i.m_re[t - a]) / 2);
 															}),
 															(i.repack = function (e, r, o, n) {
 																(i.m_re[0] = e[0]), (i.m_im[0] = o[0]), (i.m_re[h] = e[h]), (i.m_im[h] = o[h]);
-																for (var a = 1; a < h; a++)
-																	(i.m_re[a] = e[a] - n[a]),
-																		(i.m_im[a] = r[a] + o[a]),
-																		(i.m_re[t - a] = e[a] + n[a]),
-																		(i.m_im[t - a] = -r[a] + o[a]);
+																for (var a = 1; a < h; a++) (i.m_re[a] = e[a] - n[a]), (i.m_im[a] = r[a] + o[a]), (i.m_re[t - a] = e[a] + n[a]), (i.m_im[t - a] = -r[a] + o[a]);
 															}),
 															i
 														);
@@ -1126,23 +966,14 @@ var t, i;
 							n = r(i(913)),
 							a = (function () {
 								function e(t) {
-									(0, o.default)(this, e),
-										(this.lower = t.start),
-										(this.upper = t.end),
-										(this.onprocess = t.process),
-										(this.position = 0),
-										(this.n = 0);
+									(0, o.default)(this, e), (this.lower = t.start), (this.upper = t.end), (this.onprocess = t.process), (this.position = 0), (this.n = 0);
 								}
 								return (
 									(0, n.default)(e, [
 										{
 											key: 'iterate',
 											value: function () {
-												return (
-													this.n++,
-													(this.position = Math.floor((this.lower + this.upper) / 2)),
-													this.onprocess(this.lower, this.upper, this.position)
-												);
+												return this.n++, (this.position = Math.floor((this.lower + this.upper) / 2)), this.onprocess(this.lower, this.upper, this.position);
 											}
 										},
 										{
@@ -1231,9 +1062,7 @@ var t, i;
 										{
 											key: 'supported',
 											value: function (e) {
-												return 'OGVDecoder' === e
-													? this.hasWebAssembly()
-													: 'OGVPlayer' === e && this.supported('OGVDecoder') && this.hasAudio();
+												return 'OGVDecoder' === e ? this.hasWebAssembly() : 'OGVPlayer' === e && this.supported('OGVDecoder') && this.hasAudio();
 											}
 										}
 									]),
@@ -1268,12 +1097,7 @@ var t, i;
 										function () {
 											var e,
 												r = (0, u.default)(t);
-											return (
-												(e = i
-													? Reflect.construct(r, arguments, (0, u.default)(this).constructor)
-													: r.apply(this, arguments)),
-												(0, s.default)(this, e)
-											);
+											return (e = i ? Reflect.construct(r, arguments, (0, u.default)(this).constructor) : r.apply(this, arguments)), (0, s.default)(this, e);
 										});
 								function d() {
 									return (0, o.default)(this, d), r.apply(this, arguments);
@@ -1343,12 +1167,7 @@ var t, i;
 										function () {
 											var e,
 												r = (0, u.default)(t);
-											return (
-												(e = i
-													? Reflect.construct(r, arguments, (0, u.default)(this).constructor)
-													: r.apply(this, arguments)),
-												(0, s.default)(this, e)
-											);
+											return (e = i ? Reflect.construct(r, arguments, (0, u.default)(this).constructor) : r.apply(this, arguments)), (0, s.default)(this, e);
 										});
 								function d() {
 									return (0, o.default)(this, d), r.apply(this, arguments);
@@ -1388,11 +1207,7 @@ var t, i;
 										{
 											key: 'recycleFrame',
 											value: function (e) {
-												this.proxy('recycleFrame', [e], function () {}, [
-													e.y.bytes.buffer,
-													e.u.bytes.buffer,
-													e.v.bytes.buffer
-												]);
+												this.proxy('recycleFrame', [e], function () {}, [e.y.bytes.buffer, e.u.bytes.buffer, e.v.bytes.buffer]);
 											}
 										}
 									]),
@@ -1551,12 +1366,7 @@ var t, i;
 										function () {
 											var e,
 												r = (0, d.default)(t);
-											return (
-												(e = i
-													? Reflect.construct(r, arguments, (0, d.default)(this).constructor)
-													: r.apply(this, arguments)),
-												(0, u.default)(this, e)
-											);
+											return (e = i ? Reflect.construct(r, arguments, (0, d.default)(this).constructor) : r.apply(this, arguments)), (0, u.default)(this, e);
 										});
 								function c() {
 									var e;
@@ -1573,24 +1383,13 @@ var t, i;
 										{
 											key: 'defaultBase',
 											value: function () {
-												for (
-													var e,
-														t,
-														i = document.querySelectorAll('script'),
-														r = /^(?:|(.*)\/)ogv(?:-support|-es2017)?\.js(?:\?|#|$)/,
-														o = 0;
-													o < i.length;
-													o++
-												)
-													if ((e = i[o].getAttribute('src')) && (t = e.match(r))) return t[1];
+												for (var e, t, i = document.querySelectorAll('script'), r = /^(?:|(.*)\/)ogv(?:-support|-es2017)?\.js(?:\?|#|$)/, o = 0; o < i.length; o++) if ((e = i[o].getAttribute('src')) && (t = e.match(r))) return t[1];
 											}
 										},
 										{
 											key: 'loadClass',
 											value: function (e, t, i) {
-												(i = i || {}).worker
-													? this.workerProxy(e, t)
-													: (0, a.default)((0, d.default)(c.prototype), 'loadClass', this).call(this, e, t, i);
+												(i = i || {}).worker ? this.workerProxy(e, t) : (0, a.default)((0, d.default)(c.prototype), 'loadClass', this).call(this, e, t, i);
 											}
 										},
 										{
@@ -1610,10 +1409,7 @@ var t, i;
 																	e();
 																});
 														};
-													r.addEventListener('load', o),
-														r.addEventListener('error', o),
-														(r.src = e),
-														document.querySelector('head').appendChild(r);
+													r.addEventListener('load', o), r.addEventListener('error', o), (r.src = e), document.querySelector('head').appendChild(r);
 												}
 											}
 										},
@@ -1642,10 +1438,7 @@ var t, i;
 																try {
 																	m = new Blob([e], { type: 'application/javascript' });
 																} catch (t) {
-																	(window.BlobBuilder =
-																		window.BlobBuilder || window.WebKitBlobBuilder || window.MozBlobBuilder),
-																		(m = new BlobBuilder()).append(e),
-																		(m = m.getBlob());
+																	(window.BlobBuilder = window.BlobBuilder || window.WebKitBlobBuilder || window.MozBlobBuilder), (m = new BlobBuilder()).append(e), (m = m.getBlob());
 																}
 																(r = new Worker(URL.createObjectURL(m))),
 																	t(function (e) {
@@ -1789,18 +1582,9 @@ var t, i;
 							I = 'fast';
 						function j() {
 							var e = document.createElement('ogvjs');
-							return (
-								Object.setPrototypeOf
-									? Object.setPrototypeOf(e, Object.getPrototypeOf(this))
-									: (e.__proto__ = this.__proto__),
-								e
-							);
+							return Object.setPrototypeOf ? Object.setPrototypeOf(e, Object.getPrototypeOf(this)) : (e.__proto__ = this.__proto__), e;
 						}
-						(T =
-							'undefined' == typeof performance || void 0 === (0, c.default)(performance.now)
-								? Date.now
-								: performance.now.bind(performance)),
-							(j.prototype = Object.create(HTMLElement.prototype, {}));
+						(T = 'undefined' == typeof performance || void 0 === (0, c.default)(performance.now) ? Date.now : performance.now.bind(performance)), (j.prototype = Object.create(HTMLElement.prototype, {}));
 						var L = (function (e) {
 							(0, s.default)(c, e);
 							var t,
@@ -1819,25 +1603,11 @@ var t, i;
 									function () {
 										var e,
 											r = (0, d.default)(t);
-										return (
-											(e = i
-												? Reflect.construct(r, arguments, (0, d.default)(this).constructor)
-												: r.apply(this, arguments)),
-											(0, u.default)(this, e)
-										);
+										return (e = i ? Reflect.construct(r, arguments, (0, d.default)(this).constructor) : r.apply(this, arguments)), (0, u.default)(this, e);
 									});
 							function c(e) {
 								var t;
-								if (
-									((0, o.default)(this, c),
-									(t = r.call(this)),
-									((e = e || {}).base = e.base || _.default.base),
-									(t._options = e),
-									(t._instanceId = 'ogvjs' + ++c.instanceCount),
-									void 0 !== e.worker ? (t._enableWorker = !!e.worker) : (t._enableWorker = !!window.Worker),
-									!_.default.wasmSupported())
-								)
-									throw Error('WebAssembly not supported');
+								if (((0, o.default)(this, c), (t = r.call(this)), ((e = e || {}).base = e.base || _.default.base), (t._options = e), (t._instanceId = 'ogvjs' + ++c.instanceCount), void 0 !== e.worker ? (t._enableWorker = !!e.worker) : (t._enableWorker = !!window.Worker), !_.default.wasmSupported())) throw Error('WebAssembly not supported');
 								return (
 									(t._enableThreading = !!e.threading),
 									(t._enableSIMD = !!e.simd),
@@ -1966,26 +1736,12 @@ var t, i;
 										},
 										seekable: {
 											get: function () {
-												return new g.default(
-													this.duration < 1 / 0 &&
-													this._stream &&
-													this._stream.seekable &&
-													this._codec &&
-													this._codec.seekable
-														? [[0, this._duration]]
-														: []
-												);
+												return new g.default(this.duration < 1 / 0 && this._stream && this._stream.seekable && this._codec && this._codec.seekable ? [[0, this._duration]] : []);
 											}
 										},
 										currentTime: {
 											get: function () {
-												return this._state == O
-													? this._seekTargetTime
-													: this._codec
-														? this._state != F || this._paused
-															? this._initialPlaybackOffset
-															: this._getPlaybackTime()
-														: this._initialSeekTime;
+												return this._state == O ? this._seekTargetTime : this._codec ? (this._state != F || this._paused ? this._initialPlaybackOffset : this._getPlaybackTime()) : this._initialSeekTime;
 											},
 											set: function (e) {
 												this._seek(e, 'exact');
@@ -1993,11 +1749,7 @@ var t, i;
 										},
 										duration: {
 											get: function () {
-												return this._codec && this._codec.loadedMetadata
-													? null !== this._duration
-														? this._duration
-														: 1 / 0
-													: NaN;
+												return this._codec && this._codec.loadedMetadata ? (null !== this._duration ? this._duration : 1 / 0) : NaN;
 											}
 										},
 										paused: {
@@ -2020,17 +1772,7 @@ var t, i;
 												return this._muted;
 											},
 											set: function (e) {
-												(this._muted = e),
-													this._audioFeeder
-														? (this._audioFeeder.muted = this._muted)
-														: this._started &&
-															!this._muted &&
-															this._codec &&
-															this._codec.hasAudio &&
-															(this._log('unmuting: switching from timer to audio clock'),
-															this._initAudioFeeder(),
-															this._startPlayback(this._audioEndTimestamp)),
-													this._fireEventAsync('volumechange');
+												(this._muted = e), this._audioFeeder ? (this._audioFeeder.muted = this._muted) : this._started && !this._muted && this._codec && this._codec.hasAudio && (this._log('unmuting: switching from timer to audio clock'), this._initAudioFeeder(), this._startPlayback(this._audioEndTimestamp)), this._fireEventAsync('volumechange');
 											}
 										},
 										poster: {
@@ -2077,11 +1819,7 @@ var t, i;
 										},
 										ogvjsVideoFrameRate: {
 											get: function () {
-												return this._videoInfo
-													? 0 == this._videoInfo.fps
-														? this._totalFrameCount / (this._totalFrameTime / 1000)
-														: this._videoInfo.fps
-													: 0;
+												return this._videoInfo ? (0 == this._videoInfo.fps ? this._totalFrameCount / (this._totalFrameTime / 1000) : this._videoInfo.fps) : 0;
 											}
 										},
 										ogvjsAudioChannels: {
@@ -2164,11 +1902,7 @@ var t, i;
 										},
 										error: {
 											get: function () {
-												return this._state === S
-													? this._mediaError
-														? this._mediaError
-														: new V.default('unknown error occurred in media procesing')
-													: null;
+												return this._state === S ? (this._mediaError ? this._mediaError : new V.default('unknown error occurred in media procesing')) : null;
 											}
 										},
 										preload: {
@@ -2181,20 +1915,12 @@ var t, i;
 										},
 										readyState: {
 											get: function () {
-												return this._stream && this._codec && this._codec.loadedMetadata
-													? c.HAVE_ENOUGH_DATA
-													: c.HAVE_NOTHING;
+												return this._stream && this._codec && this._codec.loadedMetadata ? c.HAVE_ENOUGH_DATA : c.HAVE_NOTHING;
 											}
 										},
 										networkState: {
 											get: function () {
-												return this._stream
-													? this._stream.waiting
-														? c.NETWORK_LOADING
-														: c.NETWORK_IDLE
-													: this.readyState == c.HAVE_NOTHING
-														? c.NETWORK_EMPTY
-														: c.NETWORK_NO_SOURCE;
+												return this._stream ? (this._stream.waiting ? c.NETWORK_LOADING : c.NETWORK_IDLE) : this.readyState == c.HAVE_NOTHING ? c.NETWORK_EMPTY : c.NETWORK_NO_SOURCE;
 											}
 										},
 										playbackRate: {
@@ -2203,13 +1929,7 @@ var t, i;
 											},
 											set: function (e) {
 												var t = Number(e) || 1;
-												this._audioFeeder
-													? (this._audioFeeder.tempo = t)
-													: this._paused ||
-														((this._initialPlaybackOffset = this._getPlaybackTime()),
-														(this._initialPlaybackPosition = (t * T()) / 1000)),
-													(this._playbackRate = t),
-													this._fireEventAsync('ratechange');
+												this._audioFeeder ? (this._audioFeeder.tempo = t) : this._paused || ((this._initialPlaybackOffset = this._getPlaybackTime()), (this._initialPlaybackPosition = (t * T()) / 1000)), (this._playbackRate = t), this._fireEventAsync('ratechange');
 											}
 										},
 										played: {
@@ -2222,9 +1942,7 @@ var t, i;
 												return this._volume;
 											},
 											set: function (e) {
-												(this._volume = +e),
-													this._audioFeeder && (this._audioFeeder.volume = this._volume),
-													this._fireEventAsync('volumechange');
+												(this._volume = +e), this._audioFeeder && (this._audioFeeder.volume = this._volume), this._fireEventAsync('volumechange');
 											}
 										}
 									}),
@@ -2274,8 +1992,7 @@ var t, i;
 												var t = this._options;
 												if (t.debug) {
 													var i = T() - this._startTime;
-													(t.debugFilter && !e.match(t.debugFilter)) ||
-														console.log('[' + Math.round(10 * i) / 10 + 'ms] ' + e);
+													(t.debugFilter && !e.match(t.debugFilter)) || console.log('[' + Math.round(10 * i) / 10 + 'ms] ' + e);
 												}
 											}
 										},
@@ -2286,11 +2003,7 @@ var t, i;
 												this._log('fireEvent ' + e);
 												var i,
 													r = 'function' == typeof Event;
-												for (var o in (r
-													? (i = new CustomEvent(e))
-													: (i = document.createEvent('Event')).initEvent(e, !1, !1),
-												t))
-													t.hasOwnProperty(o) && (i[o] = t[o]);
+												for (var o in (r ? (i = new CustomEvent(e)) : (i = document.createEvent('Event')).initEvent(e, !1, !1), t)) t.hasOwnProperty(o) && (i[o] = t[o]);
 												var n = this.dispatchEvent(i);
 												!r && 'resize' === e && this.onresize && n && this.onresize.call(this, i);
 											}
@@ -2312,9 +2025,7 @@ var t, i;
 												var e = this,
 													t = this._options,
 													i = { bufferSize: 8192 };
-												t.audioContext && (i.audioContext = t.audioContext),
-													t.audioDestination && (i.output = t.audioDestination),
-													t.audioBackendFactory && (i.backendFactory = t.audioBackendFactory);
+												t.audioContext && (i.audioContext = t.audioContext), t.audioDestination && (i.output = t.audioDestination), t.audioBackendFactory && (i.backendFactory = t.audioBackendFactory);
 												var r = (this._audioFeeder = new l.default(i));
 												r.init(this._audioInfo.channels, this._audioInfo.rate),
 													this.onaudiofeedercreated && this.onaudiofeedercreated(this._audioFeeder),
@@ -2323,18 +2034,10 @@ var t, i;
 													(r.muted = this.muted),
 													(r.tempo = this.playbackRate),
 													(r.onbufferlow = function () {
-														e._log('onbufferlow'),
-															(e._stream && (e._stream.buffering || e._stream.seeking)) ||
-																e._pendingAudio ||
-																e._pingProcessing();
+														e._log('onbufferlow'), (e._stream && (e._stream.buffering || e._stream.seeking)) || e._pendingAudio || e._pingProcessing();
 													}),
 													(r.onstarved = function () {
-														e._dataEnded
-															? e._log('onstarved: appear to have reached end of audio')
-															: (e._log('onstarved: halting audio due to starvation'),
-																e._stopPlayback(),
-																(e._prebufferingAudio = !0)),
-															e._isProcessing() || e._pingProcessing(0);
+														e._dataEnded ? e._log('onstarved: appear to have reached end of audio') : (e._log('onstarved: halting audio due to starvation'), e._stopPlayback(), (e._prebufferingAudio = !0)), e._isProcessing() || e._pingProcessing(0);
 													});
 											}
 										},
@@ -2346,66 +2049,25 @@ var t, i;
 													var t = this._audioFeeder.getPlaybackState();
 													this._initialPlaybackPosition = t.playbackPosition;
 												} else this._initialPlaybackPosition = (this._playbackRate * T()) / 1000;
-												void 0 !== e && (this._initialPlaybackOffset = e),
-													(this._prebufferingAudio = !1),
-													this._log(
-														'continuing at ' + this._initialPlaybackPosition + ', ' + this._initialPlaybackOffset
-													);
+												void 0 !== e && (this._initialPlaybackOffset = e), (this._prebufferingAudio = !1), this._log('continuing at ' + this._initialPlaybackPosition + ', ' + this._initialPlaybackOffset);
 											}
 										},
 										{
 											key: '_stopPlayback',
 											value: function () {
-												(this._initialPlaybackOffset = this._getPlaybackTime()),
-													this._log('pausing at ' + this._initialPlaybackOffset),
-													this._audioFeeder && this._audioFeeder.stop();
+												(this._initialPlaybackOffset = this._getPlaybackTime()), this._log('pausing at ' + this._initialPlaybackOffset), this._audioFeeder && this._audioFeeder.stop();
 											}
 										},
 										{
 											key: '_getPlaybackTime',
 											value: function (e) {
-												return this._prebufferingAudio || this._paused
-													? this._initialPlaybackOffset
-													: (this._audioFeeder
-															? (e = e || this._audioFeeder.getPlaybackState()).playbackPosition
-															: (this._playbackRate * T()) / 1000) -
-															this._initialPlaybackPosition +
-															this._initialPlaybackOffset;
+												return this._prebufferingAudio || this._paused ? this._initialPlaybackOffset : (this._audioFeeder ? (e = e || this._audioFeeder.getPlaybackState()).playbackPosition : (this._playbackRate * T()) / 1000) - this._initialPlaybackPosition + this._initialPlaybackOffset;
 											}
 										},
 										{
 											key: '_stopVideo',
 											value: function () {
-												this._log('STOPPING'),
-													(this._state = E),
-													(this._seekState = C),
-													(this._started = !1),
-													(this._ended = !1),
-													(this._frameEndTimestamp = 0),
-													(this._audioEndTimestamp = 0),
-													(this._lastFrameDecodeTime = 0),
-													(this._prebufferingAudio = !1),
-													this._actionQueue.splice(0, this._actionQueue.length),
-													this._stream && (this._stream.abort(), (this._stream = null), (this._streamEnded = !1)),
-													this._codec &&
-														(this._codec.close(),
-														(this._codec = null),
-														(this._pendingFrame = 0),
-														(this._pendingAudio = 0),
-														(this._dataEnded = !1)),
-													(this._videoInfo = null),
-													(this._audioInfo = null),
-													this._audioFeeder && (this._audioFeeder.close(), (this._audioFeeder = null)),
-													this._nextProcessingTimer &&
-														(clearTimeout(this._nextProcessingTimer), (this._nextProcessingTimer = null)),
-													this._nextFrameTimer && (clearTimeout(this._nextFrameTimer), (this._nextFrameTimer = null)),
-													this._frameSink && (this._frameSink.clear(), (this._frameSink = null)),
-													this._decodedFrames && (this._decodedFrames = []),
-													this._pendingFrames && (this._pendingFrames = []),
-													(this._initialSeekTime = 0),
-													(this._initialPlaybackPosition = 0),
-													(this._initialPlaybackOffset = 0),
-													(this._duration = null);
+												this._log('STOPPING'), (this._state = E), (this._seekState = C), (this._started = !1), (this._ended = !1), (this._frameEndTimestamp = 0), (this._audioEndTimestamp = 0), (this._lastFrameDecodeTime = 0), (this._prebufferingAudio = !1), this._actionQueue.splice(0, this._actionQueue.length), this._stream && (this._stream.abort(), (this._stream = null), (this._streamEnded = !1)), this._codec && (this._codec.close(), (this._codec = null), (this._pendingFrame = 0), (this._pendingAudio = 0), (this._dataEnded = !1)), (this._videoInfo = null), (this._audioInfo = null), this._audioFeeder && (this._audioFeeder.close(), (this._audioFeeder = null)), this._nextProcessingTimer && (clearTimeout(this._nextProcessingTimer), (this._nextProcessingTimer = null)), this._nextFrameTimer && (clearTimeout(this._nextFrameTimer), (this._nextFrameTimer = null)), this._frameSink && (this._frameSink.clear(), (this._frameSink = null)), this._decodedFrames && (this._decodedFrames = []), this._pendingFrames && (this._pendingFrames = []), (this._initialSeekTime = 0), (this._initialPlaybackPosition = 0), (this._initialPlaybackOffset = 0), (this._duration = null);
 											}
 										},
 										{
@@ -2437,49 +2099,7 @@ var t, i;
 												function a(e) {
 													return Math.round(10 * e) / 10;
 												}
-												this._codec &&
-													((n.demuxerTime = this._codec.demuxerCpuTime - this._lastFrameDemuxerCpuTime),
-													(n.videoTime += this._currentVideoCpuTime - this._lastFrameVideoCpuTime),
-													(n.audioTime += this._codec.audioCpuTime - this._lastFrameAudioCpuTime)),
-													(n.cpuTime += n.demuxerTime),
-													(this._lastFrameDecodeTime = 0),
-													(this._lastFrameTimestamp = i),
-													this._codec
-														? ((this._lastFrameVideoCpuTime = this._currentVideoCpuTime),
-															(this._lastFrameAudioCpuTime = this._codec.audioCpuTime),
-															(this._lastFrameDemuxerCpuTime = this._codec.demuxerCpuTime))
-														: ((this._lastFrameVideoCpuTime = 0),
-															(this._lastFrameAudioCpuTime = 0),
-															(this._lastFrameDemuxerCpuTime = 0)),
-													(this._lastFrameDrawingTime = this._drawingTime),
-													(this._lastFrameBufferTime = this._bufferTime),
-													(this._lastFrameProxyTime = this._proxyTime),
-													this._log(
-														'drew frame ' +
-															t.frameEndTimestamp +
-															': clock time ' +
-															a(r) +
-															' (jitter ' +
-															a(o) +
-															') cpu: ' +
-															a(n.cpuTime) +
-															' (mux: ' +
-															a(n.demuxerTime) +
-															' buf: ' +
-															a(n.bufferTime) +
-															' draw: ' +
-															a(n.drawingTime) +
-															' proxy: ' +
-															a(n.proxyTime) +
-															') vid: ' +
-															a(n.videoTime) +
-															' aud: ' +
-															a(n.audioTime)
-													),
-													this._fireEventAsync('framecallback', n),
-													(!this._lastTimeUpdate || i - this._lastTimeUpdate >= this._timeUpdateInterval) &&
-														((this._lastTimeUpdate = i), this._fireEventAsync('timeupdate')),
-													this._codec && t.yCbCrBuffer && this._codec.recycleFrame(t.yCbCrBuffer);
+												this._codec && ((n.demuxerTime = this._codec.demuxerCpuTime - this._lastFrameDemuxerCpuTime), (n.videoTime += this._currentVideoCpuTime - this._lastFrameVideoCpuTime), (n.audioTime += this._codec.audioCpuTime - this._lastFrameAudioCpuTime)), (n.cpuTime += n.demuxerTime), (this._lastFrameDecodeTime = 0), (this._lastFrameTimestamp = i), this._codec ? ((this._lastFrameVideoCpuTime = this._currentVideoCpuTime), (this._lastFrameAudioCpuTime = this._codec.audioCpuTime), (this._lastFrameDemuxerCpuTime = this._codec.demuxerCpuTime)) : ((this._lastFrameVideoCpuTime = 0), (this._lastFrameAudioCpuTime = 0), (this._lastFrameDemuxerCpuTime = 0)), (this._lastFrameDrawingTime = this._drawingTime), (this._lastFrameBufferTime = this._bufferTime), (this._lastFrameProxyTime = this._proxyTime), this._log('drew frame ' + t.frameEndTimestamp + ': clock time ' + a(r) + ' (jitter ' + a(o) + ') cpu: ' + a(n.cpuTime) + ' (mux: ' + a(n.demuxerTime) + ' buf: ' + a(n.bufferTime) + ' draw: ' + a(n.drawingTime) + ' proxy: ' + a(n.proxyTime) + ') vid: ' + a(n.videoTime) + ' aud: ' + a(n.audioTime)), this._fireEventAsync('framecallback', n), (!this._lastTimeUpdate || i - this._lastTimeUpdate >= this._timeUpdateInterval) && ((this._lastTimeUpdate = i), this._fireEventAsync('timeupdate')), this._codec && t.yCbCrBuffer && this._codec.recycleFrame(t.yCbCrBuffer);
 											}
 										},
 										{
@@ -2504,36 +2124,18 @@ var t, i;
 										{
 											key: '_onStreamError',
 											value: function (e) {
-												'AbortError' === e.name
-													? this._log('i/o promise canceled; ignoring')
-													: (this._log('i/o error: ' + e),
-														(this._mediaError = new V.default(V.default.MEDIA_ERR_NETWORK, String(e))),
-														(this._state = S),
-														this._stopPlayback());
+												'AbortError' === e.name ? this._log('i/o promise canceled; ignoring') : (this._log('i/o error: ' + e), (this._mediaError = new V.default(V.default.MEDIA_ERR_NETWORK, String(e))), (this._state = S), this._stopPlayback());
 											}
 										},
 										{
 											key: '_seek',
 											value: function (e, t) {
 												var i = this;
-												if ((this._log('requested seek to ' + e + ', mode ' + t), this.readyState == this.HAVE_NOTHING))
-													return (
-														this._log('not yet loaded; saving seek position for later'),
-														void (this._initialSeekTime = e)
-													);
+												if ((this._log('requested seek to ' + e + ', mode ' + t), this.readyState == this.HAVE_NOTHING)) return this._log('not yet loaded; saving seek position for later'), void (this._initialSeekTime = e);
 												if (this._stream && !this._stream.seekable) throw Error('Cannot seek a non-seekable stream');
 												if (this._codec && !this._codec.seekable) throw Error('Cannot seek in a non-seekable file');
 												var r = function (r) {
-													i._stream && i._stream.buffering && i._stream.abort(),
-														i._stream && i._stream.seeking && i._stream.abort(),
-														i._actionQueue.splice(0, i._actionQueue.length),
-														i._stopPlayback(),
-														(i._prebufferingAudio = !1),
-														i._audioFeeder && i._audioFeeder.flush(),
-														(i._state = O),
-														(i._seekTargetTime = e),
-														(i._seekMode = t),
-														i._codec ? i._codec.flush(r) : r();
+													i._stream && i._stream.buffering && i._stream.abort(), i._stream && i._stream.seeking && i._stream.abort(), i._actionQueue.splice(0, i._actionQueue.length), i._stopPlayback(), (i._prebufferingAudio = !1), i._audioFeeder && i._audioFeeder.flush(), (i._state = O), (i._seekTargetTime = e), (i._seekMode = t), i._codec ? i._codec.flush(r) : r();
 												};
 												r(function () {
 													i._isProcessing() || i._pingProcessing(0);
@@ -2561,17 +2163,9 @@ var t, i;
 													(this._pendingAudio = 0),
 													(this._didSeek = !1),
 													this._codec.seekToKeypoint(e, function (i) {
-														if (i)
-															return (
-																(t._seekState = B),
-																t._fireEventAsync('seeking'),
-																t._didSeek ? void 0 : void t._pingProcessing()
-															);
+														if (i) return (t._seekState = B), t._fireEventAsync('seeking'), t._didSeek ? void 0 : void t._pingProcessing();
 														t._codec.getKeypointOffset(e, function (e) {
-															e > 0
-																? ((t._seekState = B), t._seekStream(e))
-																: ((t._seekState = D), t._startBisection(t._seekTargetTime)),
-																t._fireEventAsync('seeking');
+															e > 0 ? ((t._seekState = B), t._seekStream(e)) : ((t._seekState = D), t._startBisection(t._seekTargetTime)), t._fireEventAsync('seeking');
 														});
 													});
 											}
@@ -2603,19 +2197,9 @@ var t, i;
 											key: '_continueSeekedPlayback',
 											value: function () {
 												var e = this;
-												(this._seekState = C),
-													(this._state = R),
-													(this._frameEndTimestamp = this._codec.frameTimestamp),
-													(this._audioEndTimestamp = this._codec.audioTimestamp),
-													this._codec.hasAudio
-														? (this._seekTargetTime = this._codec.audioTimestamp)
-														: (this._seekTargetTime = this._codec.frameTimestamp),
-													(this._initialPlaybackOffset = this._seekTargetTime);
+												(this._seekState = C), (this._state = R), (this._frameEndTimestamp = this._codec.frameTimestamp), (this._audioEndTimestamp = this._codec.audioTimestamp), this._codec.hasAudio ? (this._seekTargetTime = this._codec.audioTimestamp) : (this._seekTargetTime = this._codec.frameTimestamp), (this._initialPlaybackOffset = this._seekTargetTime);
 												var t = function () {
-													(e._lastTimeUpdate = e._seekTargetTime),
-														e._fireEventAsync('timeupdate'),
-														e._fireEventAsync('seeked'),
-														e._isProcessing() || e._pingProcessing();
+													(e._lastTimeUpdate = e._seekTargetTime), e._fireEventAsync('timeupdate'), e._fireEventAsync('seeked'), e._isProcessing() || e._pingProcessing();
 												};
 												if (this._codec.hasVideo && this._decodedFrames.length) {
 													var i = this._decodedFrames.shift();
@@ -2635,8 +2219,7 @@ var t, i;
 										{
 											key: '_drawFrame',
 											value: function (e) {
-												this._thumbnail && (this.removeChild(this._thumbnail), (this._thumbnail = null)),
-													this._frameSink.drawFrame(e);
+												this._thumbnail && (this.removeChild(this._thumbnail), (this._thumbnail = null)), this._frameSink.drawFrame(e);
 											}
 										},
 										{
@@ -2644,22 +2227,13 @@ var t, i;
 											value: function () {
 												var e,
 													t = this;
-												if (
-													((e = this._codec.hasVideo ? this._targetPerFrameTime / 1000 : 1 / 256), this._codec.hasVideo)
-												) {
+												if (((e = this._codec.hasVideo ? this._targetPerFrameTime / 1000 : 1 / 256), this._codec.hasVideo)) {
 													if (this._pendingFrame) return;
 													if (!this._codec.frameReady)
 														return void this._codec.process(function (e) {
-															e
-																? t._pingProcessing()
-																: t._streamEnded
-																	? (t._log('stream ended during linear seeking on video'),
-																		(t._dataEnded = !0),
-																		t._continueSeekedPlayback())
-																	: t._readBytesAndWait();
+															e ? t._pingProcessing() : t._streamEnded ? (t._log('stream ended during linear seeking on video'), (t._dataEnded = !0), t._continueSeekedPlayback()) : t._readBytesAndWait();
 														});
-													if (this._seekMode === I && this._codec.keyframeTimestamp == this._codec.frameTimestamp)
-														return void this._continueSeekedPlayback();
+													if (this._seekMode === I && this._codec.keyframeTimestamp == this._codec.frameTimestamp) return void this._continueSeekedPlayback();
 													if (this._codec.frameTimestamp <= this._seekTargetTime) {
 														var i = this._codec.frameTimestamp;
 														return (
@@ -2690,13 +2264,7 @@ var t, i;
 																})
 															: void this._continueSeekedPlayback()
 														: void this._codec.process(function (e) {
-																e
-																	? t._pingProcessing()
-																	: t._streamEnded
-																		? (t._log('stream ended during linear seeking on audio'),
-																			(t._dataEnded = !0),
-																			t._continueSeekedPlayback())
-																		: t._readBytesAndWait();
+																e ? t._pingProcessing() : t._streamEnded ? (t._log('stream ended during linear seeking on audio'), (t._dataEnded = !0), t._continueSeekedPlayback()) : t._readBytesAndWait();
 															});
 												}
 											}
@@ -2707,44 +2275,31 @@ var t, i;
 												var e,
 													t,
 													i = this;
-												if (this._codec.hasVideo)
-													(t = this._codec.frameTimestamp), (e = this._targetPerFrameTime / 1000);
+												if (this._codec.hasVideo) (t = this._codec.frameTimestamp), (e = this._targetPerFrameTime / 1000);
 												else {
-													if (!this._codec.hasAudio)
-														throw Error('Invalid seek state; no audio or video track available');
+													if (!this._codec.hasAudio) throw Error('Invalid seek state; no audio or video track available');
 													(t = this._codec.audioTimestamp), (e = 1 / 256);
 												}
 												t < 0
 													? this._codec.process(function (e) {
 															if (e) i._pingProcessing();
 															else if (i._streamEnded) {
-																if ((i._log('stream ended during bisection seek'), !i._seekBisector.right()))
-																	throw (i._log('failed going back'), Error('not sure what to do'));
+																if ((i._log('stream ended during bisection seek'), !i._seekBisector.right())) throw (i._log('failed going back'), Error('not sure what to do'));
 															} else i._readBytesAndWait();
 														})
 													: t - e / 2 > this._bisectTargetTime
-														? this._seekBisector.left() ||
-															(this._log('close enough (left)'),
-															(this._seekTargetTime = t),
-															this._continueSeekedPlayback())
+														? this._seekBisector.left() || (this._log('close enough (left)'), (this._seekTargetTime = t), this._continueSeekedPlayback())
 														: t + e / 2 < this._bisectTargetTime
-															? this._seekBisector.right() ||
-																(this._log('close enough (right)'), (this._seekState = B), this._pingProcessing())
-															: this._seekState == D &&
-																  this._codec.hasVideo &&
-																  this._codec.keyframeTimestamp < this._codec.frameTimestamp
-																? (this._log('finding the keypoint now'),
-																	(this._seekState = M),
-																	this._startBisection(this._codec.keyframeTimestamp))
+															? this._seekBisector.right() || (this._log('close enough (right)'), (this._seekState = B), this._pingProcessing())
+															: this._seekState == D && this._codec.hasVideo && this._codec.keyframeTimestamp < this._codec.frameTimestamp
+																? (this._log('finding the keypoint now'), (this._seekState = M), this._startBisection(this._codec.keyframeTimestamp))
 																: (this._log('straight seeking now'), (this._seekState = B), this._pingProcessing());
 											}
 										},
 										{
 											key: '_setupVideo',
 											value: function () {
-												this._videoInfo.fps > 0
-													? (this._targetPerFrameTime = 1000 / this._videoInfo.fps)
-													: (this._targetPerFrameTime = 16.667),
+												this._videoInfo.fps > 0 ? (this._targetPerFrameTime = 1000 / this._videoInfo.fps) : (this._targetPerFrameTime = 16.667),
 													(this._canvas.width = this._videoInfo.displayWidth),
 													(this._canvas.height = this._videoInfo.displayHeight),
 													c.styleManager.appendRule('.' + this._instanceId, {
@@ -2752,35 +2307,17 @@ var t, i;
 														height: this._videoInfo.displayHeight + 'px'
 													});
 												var e = {};
-												void 0 !== this._options.webGL && (e.webGL = this._options.webGL),
-													this._options.forceWebGL && (e.webGL = 'required'),
-													(this._frameSink = h.default.attach(this._canvas, e));
+												void 0 !== this._options.webGL && (e.webGL = this._options.webGL), this._options.forceWebGL && (e.webGL = 'required'), (this._frameSink = h.default.attach(this._canvas, e));
 											}
 										},
 										{
 											key: '_doProcessing',
 											value: function () {
-												if (
-													(this._didSeek && (this._didSeek = !1),
-													(this._nextProcessingTimer = null),
-													this._isProcessing(),
-													this._depth > 0)
-												)
-													throw Error('REENTRANCY FAIL: doProcessing recursing unexpectedly');
+												if ((this._didSeek && (this._didSeek = !1), (this._nextProcessingTimer = null), this._isProcessing(), this._depth > 0)) throw Error('REENTRANCY FAIL: doProcessing recursing unexpectedly');
 												var e = 0;
 												do {
-													if (
-														((this._needProcessing = !1),
-														this._depth++,
-														this._doProcessingLoop(),
-														this._depth--,
-														this._needProcessing && this._isProcessing())
-													)
-														throw Error('REENTRANCY FAIL: waiting on input or codec but asked to keep processing');
-													++e > 500 &&
-														(this._log('stuck in processing loop; breaking with timer'),
-														(this._needProcessing = 0),
-														this._pingProcessing(0));
+													if (((this._needProcessing = !1), this._depth++, this._doProcessingLoop(), this._depth--, this._needProcessing && this._isProcessing())) throw Error('REENTRANCY FAIL: waiting on input or codec but asked to keep processing');
+													++e > 500 && (this._log('stuck in processing loop; breaking with timer'), (this._needProcessing = 0), this._pingProcessing(0));
 												} while (this._needProcessing);
 											}
 										},
@@ -2806,8 +2343,7 @@ var t, i;
 											value: function () {
 												var e = this;
 												if (this._codec.loadedMetadata) {
-													if (!this._codec.hasVideo && !this._codec.hasAudio)
-														throw Error('No audio or video found, something is wrong');
+													if (!this._codec.hasVideo && !this._codec.hasAudio) throw Error('No audio or video found, something is wrong');
 													this._codec.hasAudio && (this._audioInfo = this._codec.audioFormat),
 														this._codec.hasVideo && ((this._videoInfo = this._codec.videoFormat), this._setupVideo()),
 														isNaN(this._codec.duration) || (this._duration = this._codec.duration),
@@ -2861,19 +2397,14 @@ var t, i;
 										{
 											key: '_doProcessLoaded',
 											value: function () {
-												(this._state = x),
-													this._fireEventAsync('loadedmetadata'),
-													this._fireEventAsync('durationchange'),
-													this._codec.hasVideo && this._fireEventAsync('resize'),
-													this._pingProcessing(0);
+												(this._state = x), this._fireEventAsync('loadedmetadata'), this._fireEventAsync('durationchange'), this._codec.hasVideo && this._fireEventAsync('resize'), this._pingProcessing(0);
 											}
 										},
 										{
 											key: '_doProcessPreload',
 											value: function () {
 												var e = this;
-												(!this._codec.frameReady && this._codec.hasVideo) ||
-												(!this._codec.audioReady && this._codec.hasAudio)
+												(!this._codec.frameReady && this._codec.hasVideo) || (!this._codec.audioReady && this._codec.hasAudio)
 													? this._codec.process(function (t) {
 															t ? e._pingProcessing() : e._streamEnded ? (e._ended = !0) : e._readBytesAndWait();
 														})
@@ -2890,17 +2421,9 @@ var t, i;
 												} else if (this._paused) this._log('paused while in ready');
 												else {
 													var i = function () {
-														e._log('finishStartPlaying'),
-															(e._state = F),
-															(e._lastFrameTimestamp = T()),
-															e._codec.hasAudio && e._audioFeeder ? (e._prebufferingAudio = !0) : e._startPlayback(),
-															e._pingProcessing(0),
-															e._fireEventAsync('play'),
-															e._fireEventAsync('playing');
+														e._log('finishStartPlaying'), (e._state = F), (e._lastFrameTimestamp = T()), e._codec.hasAudio && e._audioFeeder ? (e._prebufferingAudio = !0) : e._startPlayback(), e._pingProcessing(0), e._fireEventAsync('play'), e._fireEventAsync('playing');
 													};
-													!this._codec.hasAudio || this._audioFeeder || this._muted
-														? i()
-														: (this._initAudioFeeder(), this._audioFeeder.waitUntilReady(i));
+													!this._codec.hasAudio || this._audioFeeder || this._muted ? i() : (this._initAudioFeeder(), this._audioFeeder.waitUntilReady(i));
 												}
 											}
 										},
@@ -2922,14 +2445,7 @@ var t, i;
 												var e = this,
 													t = this._codec;
 												if (this._paused) this._log('paused during playback; stopping loop');
-												else if (
-													(!t.hasAudio || t.audioReady || this._pendingAudio || this._dataEnded) &&
-													(!t.hasVideo ||
-														t.frameReady ||
-														this._pendingFrame ||
-														this._decodedFrames.length ||
-														this._dataEnded)
-												) {
+												else if ((!t.hasAudio || t.audioReady || this._pendingAudio || this._dataEnded) && (!t.hasVideo || t.frameReady || this._pendingFrame || this._decodedFrames.length || this._dataEnded)) {
 													var i,
 														r,
 														o,
@@ -2937,129 +2453,45 @@ var t, i;
 														a = 0,
 														s = !1,
 														u = 0;
-													if (
-														(t.hasAudio && this._audioFeeder
-															? ((n = this._audioFeeder.getPlaybackState()),
-																(a = this._getPlaybackTime(n)),
-																(s = this._dataEnded && 0 == this._audioFeeder.durationBuffered),
-																this._prebufferingAudio &&
-																	((this._audioFeeder.durationBuffered >= 2 * this._audioFeeder.bufferThreshold &&
-																		(!t.hasVideo || this._decodedFrames.length >= this._framePipelineDepth)) ||
-																		this._dataEnded) &&
-																	(this._log(
-																		'prebuffering audio done; buffered to ' + this._audioFeeder.durationBuffered
-																	),
-																	this._startPlayback(a),
-																	(this._prebufferingAudio = !1)),
-																n.dropped != this._droppedAudio &&
-																	this._log('dropped ' + (n.dropped - this._droppedAudio)),
-																n.delayed != this._delayedAudio &&
-																	this._log('delayed ' + (n.delayed - this._delayedAudio)),
-																(this._droppedAudio = n.dropped),
-																(this._delayedAudio = n.delayed),
-																(i = this._audioFeeder.durationBuffered <= 2 * this._audioFeeder.bufferThreshold) &&
-																	(this._codec.audioReady
-																		? this._pendingAudio >= this._audioPipelineDepth &&
-																			(this._log('audio decode disabled: ' + this._pendingAudio + ' packets in flight'),
-																			(i = !1))
-																		: (i = !1)))
-															: ((a = this._getPlaybackTime()),
-																(i = this._codec.audioReady && this._audioEndTimestamp < a)),
-														this._codec.hasVideo)
-													) {
-														(r = this._decodedFrames.length > 0),
-															(o =
-																this._pendingFrame + this._decodedFrames.length <
-																	this._framePipelineDepth + this._frameParallelism && this._codec.frameReady),
-															r &&
-																((u = 1000 * (this._decodedFrames[0].frameEndTimestamp - a)),
-																(this._actualPerFrameTime = this._targetPerFrameTime - u));
+													if ((t.hasAudio && this._audioFeeder ? ((n = this._audioFeeder.getPlaybackState()), (a = this._getPlaybackTime(n)), (s = this._dataEnded && 0 == this._audioFeeder.durationBuffered), this._prebufferingAudio && ((this._audioFeeder.durationBuffered >= 2 * this._audioFeeder.bufferThreshold && (!t.hasVideo || this._decodedFrames.length >= this._framePipelineDepth)) || this._dataEnded) && (this._log('prebuffering audio done; buffered to ' + this._audioFeeder.durationBuffered), this._startPlayback(a), (this._prebufferingAudio = !1)), n.dropped != this._droppedAudio && this._log('dropped ' + (n.dropped - this._droppedAudio)), n.delayed != this._delayedAudio && this._log('delayed ' + (n.delayed - this._delayedAudio)), (this._droppedAudio = n.dropped), (this._delayedAudio = n.delayed), (i = this._audioFeeder.durationBuffered <= 2 * this._audioFeeder.bufferThreshold) && (this._codec.audioReady ? this._pendingAudio >= this._audioPipelineDepth && (this._log('audio decode disabled: ' + this._pendingAudio + ' packets in flight'), (i = !1)) : (i = !1))) : ((a = this._getPlaybackTime()), (i = this._codec.audioReady && this._audioEndTimestamp < a)), this._codec.hasVideo)) {
+														(r = this._decodedFrames.length > 0), (o = this._pendingFrame + this._decodedFrames.length < this._framePipelineDepth + this._frameParallelism && this._codec.frameReady), r && ((u = 1000 * (this._decodedFrames[0].frameEndTimestamp - a)), (this._actualPerFrameTime = this._targetPerFrameTime - u));
 														var d = this._targetPerFrameTime;
-														if (this._prebufferingAudio)
-															o && this._log('decoding a frame during prebuffering'), (r = !1);
+														if (this._prebufferingAudio) o && this._log('decoding a frame during prebuffering'), (r = !1);
 														else if (r && this._dataEnded && s) this._log('audio timeline ended? ready to draw frame');
 														else if (r && -u >= d) {
-															for (var c = -1, h = 0; h < this._decodedFrames.length - 1; h++)
-																this._decodedFrames[h].frameEndTimestamp < a && (c = h - 1);
+															for (var c = -1, h = 0; h < this._decodedFrames.length - 1; h++) this._decodedFrames[h].frameEndTimestamp < a && (c = h - 1);
 															if (c >= 0)
 																for (; c-- >= 0; ) {
 																	this._lateFrames++;
 																	var f = this._decodedFrames.shift();
-																	this._log('skipping already-decoded late frame at ' + f.frameEndTimestamp),
-																		(u = 1000 * (f.frameEndTimestamp - a)),
-																		(this._frameEndTimestamp = f.frameEndTimestamp),
-																		(this._actualPerFrameTime = this._targetPerFrameTime - u),
-																		this._framesProcessed++,
-																		(f.dropped = !0),
-																		this._doFrameComplete(f);
+																	this._log('skipping already-decoded late frame at ' + f.frameEndTimestamp), (u = 1000 * (f.frameEndTimestamp - a)), (this._frameEndTimestamp = f.frameEndTimestamp), (this._actualPerFrameTime = this._targetPerFrameTime - u), this._framesProcessed++, (f.dropped = !0), this._doFrameComplete(f);
 																}
 															var l = this._codec.nextKeyframeTimestamp,
-																_ =
-																	l -
-																	(this._targetPerFrameTime / 1000) * (this._framePipelineDepth + this._pendingFrame);
+																_ = l - (this._targetPerFrameTime / 1000) * (this._framePipelineDepth + this._pendingFrame);
 															if (l >= 0 && l != this._codec.frameTimestamp && a >= _) {
-																this._log(
-																	'skipping late frame at ' +
-																		this._decodedFrames[0].frameEndTimestamp +
-																		' vs ' +
-																		a +
-																		', expect to see keyframe at ' +
-																		l
-																);
+																this._log('skipping late frame at ' + this._decodedFrames[0].frameEndTimestamp + ' vs ' + a + ', expect to see keyframe at ' + l);
 																for (var p = 0; p < this._decodedFrames.length; p++) {
 																	var m = this._decodedFrames[p];
-																	this._lateFrames++,
-																		this._framesProcessed++,
-																		(this._frameEndTimestamp = m.frameEndTimestamp),
-																		(u = 1000 * (m.frameEndTimestamp - a)),
-																		(this._actualPerFrameTime = this._targetPerFrameTime - u),
-																		(m.dropped = !0),
-																		this._doFrameComplete(m);
+																	this._lateFrames++, this._framesProcessed++, (this._frameEndTimestamp = m.frameEndTimestamp), (u = 1000 * (m.frameEndTimestamp - a)), (this._actualPerFrameTime = this._targetPerFrameTime - u), (m.dropped = !0), this._doFrameComplete(m);
 																}
 																this._decodedFrames = [];
 																for (var V = 0; V < this._pendingFrames.length; V++) {
 																	var v = this._pendingFrames[V];
-																	this._lateFrames++,
-																		this._framesProcessed++,
-																		(this._frameEndTimestamp = v.frameEndTimestamp),
-																		(u = 1000 * (v.frameEndTimestamp - a)),
-																		(this._actualPerFrameTime = this._targetPerFrameTime - u),
-																		(v.dropped = !0),
-																		this._doFrameComplete(v);
+																	this._lateFrames++, this._framesProcessed++, (this._frameEndTimestamp = v.frameEndTimestamp), (u = 1000 * (v.frameEndTimestamp - a)), (this._actualPerFrameTime = this._targetPerFrameTime - u), (v.dropped = !0), this._doFrameComplete(v);
 																}
-																for (
-																	this._pendingFrames = [], this._pendingFrame = 0;
-																	this._codec.frameReady && this._codec.frameTimestamp < l;
-
-																) {
+																for (this._pendingFrames = [], this._pendingFrame = 0; this._codec.frameReady && this._codec.frameTimestamp < l; ) {
 																	var g = {
 																		frameEndTimestamp: this._codec.frameTimestamp,
 																		dropped: !0
 																	};
-																	(u = 1000 * (g.frameEndTimestamp - a)),
-																		(this._actualPerFrameTime = this._targetPerFrameTime - u),
-																		this._lateFrames++,
-																		this._codec.discardFrame(function () {}),
-																		this._framesProcessed++,
-																		this._doFrameComplete(g);
+																	(u = 1000 * (g.frameEndTimestamp - a)), (this._actualPerFrameTime = this._targetPerFrameTime - u), this._lateFrames++, this._codec.discardFrame(function () {}), this._framesProcessed++, this._doFrameComplete(g);
 																}
 																return void (this._isProcessing() || this._pingProcessing());
 															}
 														} else (r && u <= 4) || (r = !1);
 													}
 													if (o) {
-														this._log(
-															'play loop: ready to decode frame; thread depth: ' +
-																this._pendingFrame +
-																', have buffered: ' +
-																this._decodedFrames.length
-														),
-															0 == this._videoInfo.fps &&
-																this._codec.frameTimestamp - this._frameEndTimestamp > 0 &&
-																(this._targetPerFrameTime =
-																	1000 * (this._codec.frameTimestamp - this._frameEndTimestamp)),
-															(this._totalFrameTime += this._targetPerFrameTime),
-															this._totalFrameCount++;
+														this._log('play loop: ready to decode frame; thread depth: ' + this._pendingFrame + ', have buffered: ' + this._decodedFrames.length), 0 == this._videoInfo.fps && this._codec.frameTimestamp - this._frameEndTimestamp > 0 && (this._targetPerFrameTime = 1000 * (this._codec.frameTimestamp - this._frameEndTimestamp)), (this._totalFrameTime += this._targetPerFrameTime), this._totalFrameCount++;
 														var y = (this._frameEndTimestamp = this._codec.frameTimestamp);
 														this._pendingFrame++, this._pendingFrames.push({ frameEndTimestamp: y });
 														var b = this._pendingFrames,
@@ -3083,22 +2515,13 @@ var t, i;
 																		: e._log('play loop callback after flush, discarding');
 																});
 															});
-														this._pendingFrame &&
-															((T = !0),
-															(this._proxyTime += A),
-															this._pingProcessing(),
-															this._dataEnded && this._codec.sync());
+														this._pendingFrame && ((T = !0), (this._proxyTime += A), this._pingProcessing(), this._dataEnded && this._codec.sync());
 													} else if (i) {
 														this._log('play loop: ready for audio; depth: ' + this._pendingAudio), this._pendingAudio++;
 														var k = this._codec.audioTimestamp,
 															E = this._time(function () {
 																e._codec.decodeAudio(function (t) {
-																	if (
-																		(e._pendingAudio--,
-																		e._log('play loop callback: decoded audio'),
-																		(e._audioEndTimestamp = k),
-																		t)
-																	) {
+																	if ((e._pendingAudio--, e._log('play loop callback: decoded audio'), (e._audioEndTimestamp = k), t)) {
 																		var i = e._codec.audioBuffer;
 																		if (
 																			i &&
@@ -3115,14 +2538,9 @@ var t, i;
 																	e._isProcessing() || e._pingProcessing();
 																});
 															});
-														this._pendingAudio &&
-															((this._proxyTime += E),
-															this._codec.audioReady ? this._pingProcessing() : this._doProcessPlayDemux());
+														this._pendingAudio && ((this._proxyTime += E), this._codec.audioReady ? this._pingProcessing() : this._doProcessPlayDemux());
 													} else if (r) {
-														this._log('play loop: ready to draw frame'),
-															this._nextFrameTimer &&
-																(clearTimeout(this._nextFrameTimer), (this._nextFrameTimer = null)),
-															this._thumbnail && (this.removeChild(this._thumbnail), (this._thumbnail = null));
+														this._log('play loop: ready to draw frame'), this._nextFrameTimer && (clearTimeout(this._nextFrameTimer), (this._nextFrameTimer = null)), this._thumbnail && (this.removeChild(this._thumbnail), (this._thumbnail = null));
 														var P = this._decodedFrames.shift();
 														(this._currentVideoCpuTime = P.videoCpuTime),
 															(this._drawingTime += this._time(function () {
@@ -3132,42 +2550,11 @@ var t, i;
 															this._doFrameComplete(P),
 															this._pingProcessing();
 													} else if (!this._decodedFrames.length || this._nextFrameTimer || this._prebufferingAudio) {
-														if (
-															this._dataEnded &&
-															!(this._pendingAudio || this._pendingFrame || this._decodedFrames.length)
-														) {
-															this._log(
-																'play loop: playback reached end of data ' +
-																	[this._pendingAudio, this._pendingFrame, this._decodedFrames.length]
-															);
+														if (this._dataEnded && !(this._pendingAudio || this._pendingFrame || this._decodedFrames.length)) {
+															this._log('play loop: playback reached end of data ' + [this._pendingAudio, this._pendingFrame, this._decodedFrames.length]);
 															var w = 0;
-															this._codec.hasAudio &&
-																this._audioFeeder &&
-																(w = 1000 * this._audioFeeder.durationBuffered),
-																w > 0
-																	? (this._log('play loop: ending pending ' + w + ' ms'),
-																		this._pingProcessing(Math.max(0, w)))
-																	: (this._log(
-																			'play loop: ENDING NOW: playback time ' +
-																				this._getPlaybackTime() +
-																				'; frameEndTimestamp: ' +
-																				this._frameEndTimestamp
-																		),
-																		this._stopPlayback(),
-																		(this._prebufferingAudio = !1),
-																		(this._initialPlaybackOffset = Math.max(
-																			this._audioEndTimestamp,
-																			this._frameEndTimestamp
-																		)),
-																		(this._ended = !0),
-																		(this._paused = !0),
-																		this._fireEventAsync('pause'),
-																		this._fireEventAsync('ended'));
-														} else
-															this._prebufferingAudio &&
-															((t.hasVideo && !t.frameReady) || (t.hasAudio && !t.audioReady))
-																? (this._log('play loop: prebuffering demuxing'), this._doProcessPlayDemux())
-																: this._log('play loop: waiting on async/timers');
+															this._codec.hasAudio && this._audioFeeder && (w = 1000 * this._audioFeeder.durationBuffered), w > 0 ? (this._log('play loop: ending pending ' + w + ' ms'), this._pingProcessing(Math.max(0, w))) : (this._log('play loop: ENDING NOW: playback time ' + this._getPlaybackTime() + '; frameEndTimestamp: ' + this._frameEndTimestamp), this._stopPlayback(), (this._prebufferingAudio = !1), (this._initialPlaybackOffset = Math.max(this._audioEndTimestamp, this._frameEndTimestamp)), (this._ended = !0), (this._paused = !0), this._fireEventAsync('pause'), this._fireEventAsync('ended'));
+														} else this._prebufferingAudio && ((t.hasVideo && !t.frameReady) || (t.hasAudio && !t.audioReady)) ? (this._log('play loop: prebuffering demuxing'), this._doProcessPlayDemux()) : this._log('play loop: waiting on async/timers');
 													} else {
 														var x = u;
 														this._log('play loop: setting a timer for drawing ' + x),
@@ -3185,16 +2572,7 @@ var t, i;
 													t = this._codec.frameReady,
 													i = this._codec.audioReady;
 												this._codec.process(function (r) {
-													(e._codec.frameReady && !t) || (e._codec.audioReady && !i)
-														? (e._log('demuxer has packets'), e._pingProcessing())
-														: r
-															? (e._log('demuxer processing to find more packets'), e._pingProcessing())
-															: (e._log('demuxer ran out of data'),
-																e._streamEnded
-																	? (e._log('demuxer reached end of data stream'),
-																		(e._dataEnded = !0),
-																		e._pingProcessing())
-																	: (e._log('demuxer loading more data'), e._readBytesAndWait()));
+													(e._codec.frameReady && !t) || (e._codec.audioReady && !i) ? (e._log('demuxer has packets'), e._pingProcessing()) : r ? (e._log('demuxer processing to find more packets'), e._pingProcessing()) : (e._log('demuxer ran out of data'), e._streamEnded ? (e._log('demuxer reached end of data stream'), (e._dataEnded = !0), e._pingProcessing()) : (e._log('demuxer loading more data'), e._readBytesAndWait()));
 												});
 											}
 										},
@@ -3205,10 +2583,7 @@ var t, i;
 										{
 											key: '_isProcessing',
 											value: function () {
-												return (
-													(this._stream && (this._stream.buffering || this._stream.seeking)) ||
-													(this._codec && this._codec.processing)
-												);
+												return (this._stream && (this._stream.buffering || this._stream.seeking)) || (this._codec && this._codec.processing);
 											}
 										},
 										{
@@ -3242,10 +2617,7 @@ var t, i;
 													t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
 												if (this._stream && this._stream.waiting) this._log('waiting on input');
 												else {
-													this._nextProcessingTimer &&
-														(this._log('canceling old processing timer'),
-														clearTimeout(this._nextProcessingTimer),
-														(this._nextProcessingTimer = null));
+													this._nextProcessingTimer && (this._log('canceling old processing timer'), clearTimeout(this._nextProcessingTimer), (this._nextProcessingTimer = null));
 													t > -1 / 256
 														? (this._nextProcessingTimer = setTimeout(function () {
 																e._pingProcessing();
@@ -3261,12 +2633,7 @@ var t, i;
 											value: function (e) {
 												var t = this;
 												if (!this._started && !this._codec) {
-													(this._framesProcessed = 0),
-														(this._bufferTime = 0),
-														(this._drawingTime = 0),
-														(this._proxyTime = 0),
-														(this._started = !0),
-														(this._ended = !1);
+													(this._framesProcessed = 0), (this._bufferTime = 0), (this._drawingTime = 0), (this._proxyTime = 0), (this._started = !0), (this._ended = !1);
 													var i = {
 														base: this._options.base,
 														worker: this._enableWorker,
@@ -3305,12 +2672,7 @@ var t, i;
 												var t = this;
 												this._stream.read(1024).then(function (i) {
 													var r = new Uint8Array(i);
-													r.length > 4 && 79 == r[0] && 103 == r[1] && 103 == r[2] && 83 == r[3]
-														? (t._detectedType = 'video/ogg')
-														: r.length > 4 && 26 == r[0] && 69 == r[1] && 223 == r[2] && 163 == r[3]
-															? (t._detectedType = 'video/webm')
-															: (t._detectedType = 'video/ogg'),
-														e(i);
+													r.length > 4 && 79 == r[0] && 103 == r[1] && 103 == r[2] && 83 == r[3] ? (t._detectedType = 'video/ogg') : r.length > 4 && 26 == r[0] && 69 == r[1] && 223 == r[2] && 163 == r[3] ? (t._detectedType = 'video/webm') : (t._detectedType = 'video/ogg'), e(i);
 												});
 											}
 										},
@@ -3334,9 +2696,7 @@ var t, i;
 																t._stream
 																	.load()
 																	.then(function () {
-																		(t._loading = !1),
-																			(t._currentSrc = t.src),
-																			(t._byteLength = t._stream.seekable ? t._stream.length : 0);
+																		(t._loading = !1), (t._currentSrc = t.src), (t._byteLength = t._stream.seekable ? t._stream.length : 0);
 																		var e = t._stream.headers['x-content-duration'];
 																		'string' == typeof e && (t._duration = parseFloat(e)),
 																			t._loadCodec(function (e) {
@@ -3373,31 +2733,13 @@ var t, i;
 													}
 													return 'maybe';
 												}
-												return 'ogg' !== t.minor ||
-													('audio' !== t.major && 'video' !== t.major && 'application' !== t.major)
-													? 'webm' !== t.minor || ('audio' !== t.major && 'video' !== t.major)
-														? ''
-														: i(['vorbis', 'opus', 'vp8', 'vp9'])
-													: i(['vorbis', 'opus', 'theora']);
+												return 'ogg' !== t.minor || ('audio' !== t.major && 'video' !== t.major && 'application' !== t.major) ? ('webm' !== t.minor || ('audio' !== t.major && 'video' !== t.major) ? '' : i(['vorbis', 'opus', 'vp8', 'vp9'])) : i(['vorbis', 'opus', 'theora']);
 											}
 										},
 										{
 											key: 'play',
 											value: function () {
-												this._muted || this._options.audioContext || c.initSharedAudioContext(),
-													this._paused &&
-														((this._startedPlaybackInDocument = document.body.contains(this)),
-														(this._paused = !1),
-														this._state == O ||
-															(this._started && this._codec && this._codec.loadedMetadata
-																? (this._ended && this._stream && this._byteLength
-																		? (this._log('.play() starting over after end'), this._seek(0))
-																		: this._log('.play() while already started'),
-																	(this._state = R),
-																	this._isProcessing() || this._pingProcessing())
-																: this._loading
-																	? this._log('.play() while loading')
-																	: (this._log('.play() before started'), this._stream || this.load())));
+												this._muted || this._options.audioContext || c.initSharedAudioContext(), this._paused && ((this._startedPlaybackInDocument = document.body.contains(this)), (this._paused = !1), this._state == O || (this._started && this._codec && this._codec.loadedMetadata ? (this._ended && this._stream && this._byteLength ? (this._log('.play() starting over after end'), this._seek(0)) : this._log('.play() while already started'), (this._state = R), this._isProcessing() || this._pingProcessing()) : this._loading ? this._log('.play() while loading') : (this._log('.play() before started'), this._stream || this.load())));
 											}
 										},
 										{
@@ -3425,20 +2767,7 @@ var t, i;
 										{
 											key: 'resetPlaybackStats',
 											value: function () {
-												(this._framesProcessed = 0),
-													(this._playTime = 0),
-													this._codec &&
-														((this._lastDemuxerCpuTime = this._codec.demuxerCpuTime),
-														(this._lastVideoCpuTime = this._codec.videoCpuTime),
-														(this._lastAudioCpuTime = this._codec.audioCpuTime),
-														(this._codec.videoBytes = 0),
-														(this._codec.audioBytes = 0)),
-													(this._lastBufferTime = this._bufferTime),
-													(this._lastDrawingTime = this._drawingTime),
-													(this._lastProxyTime = this._proxyTime),
-													(this._totalJitter = 0),
-													(this._totalFrameTime = 0),
-													(this._totalFrameCount = 0);
+												(this._framesProcessed = 0), (this._playTime = 0), this._codec && ((this._lastDemuxerCpuTime = this._codec.demuxerCpuTime), (this._lastVideoCpuTime = this._codec.videoCpuTime), (this._lastAudioCpuTime = this._codec.audioCpuTime), (this._codec.videoBytes = 0), (this._codec.audioBytes = 0)), (this._lastBufferTime = this._bufferTime), (this._lastDrawingTime = this._drawingTime), (this._lastProxyTime = this._proxyTime), (this._totalJitter = 0), (this._totalFrameTime = 0), (this._totalFrameCount = 0);
 											}
 										},
 										{
@@ -3462,13 +2791,7 @@ var t, i;
 										{
 											key: 'pause',
 											value: function () {
-												this._paused ||
-													(this._nextProcessingTimer &&
-														(clearTimeout(this._nextProcessingTimer), (this._nextProcessingTimer = null)),
-													this._stopPlayback(),
-													(this._prebufferingAudio = !1),
-													(this._paused = !0),
-													this._fireEvent('pause'));
+												this._paused || (this._nextProcessingTimer && (clearTimeout(this._nextProcessingTimer), (this._nextProcessingTimer = null)), this._stopPlayback(), (this._prebufferingAudio = !1), (this._paused = !0), this._fireEvent('pause'));
 											}
 										},
 										{
@@ -3501,10 +2824,7 @@ var t, i;
 							(L.instanceCount = 0),
 							(L.styleManager = new (function () {
 								var e = document.createElement('style');
-								(e.type = 'text/css'),
-									(e.textContent =
-										'ogvjs { display: inline-block; position: relative; -webkit-user-select: none; -webkit-tap-highlight-color: rgba(0,0,0,0); '),
-									document.head.appendChild(e);
+								(e.type = 'text/css'), (e.textContent = 'ogvjs { display: inline-block; position: relative; -webkit-user-select: none; -webkit-tap-highlight-color: rgba(0,0,0,0); '), document.head.appendChild(e);
 								var t = e.sheet;
 								this.appendRule = function (e, i) {
 									var r = [];
@@ -3574,18 +2894,13 @@ var t, i;
 													callbackId: o,
 													args: t || []
 												};
-												this.processingQueue++,
-													this.transferables ? this.worker.postMessage(n, r) : this.worker.postMessage(n);
+												this.processingQueue++, this.transferables ? this.worker.postMessage(n, r) : this.worker.postMessage(n);
 											}
 										},
 										{
 											key: 'terminate',
 											value: function () {
-												this.worker &&
-													(this.worker.terminate(),
-													(this.worker = null),
-													(this.processingQueue = 0),
-													(this.pendingCallbacks = {}));
+												this.worker && (this.worker.terminate(), (this.worker = null), (this.processingQueue = 0), (this.pendingCallbacks = {}));
 											}
 										},
 										{
@@ -3775,10 +3090,7 @@ var t, i;
 											var t,
 												i = this;
 											(this.processing = !0),
-												(t =
-													'video/webm' === this.options.type || 'audio/webm' === this.options.type
-														? 'OGVDemuxerWebMW'
-														: 'OGVDemuxerOggW'),
+												(t = 'video/webm' === this.options.type || 'audio/webm' === this.options.type ? 'OGVDemuxerWebMW' : 'OGVDemuxerOggW'),
 												a.default.loadClass(t, function (t) {
 													t().then(function (t) {
 														(i.demuxer = t),
@@ -3795,9 +3107,7 @@ var t, i;
 									{
 										key: 'close',
 										value: function () {
-											this.demuxer && (this.demuxer.close(), (this.demuxer = null)),
-												this.videoDecoder && (this.videoDecoder.close(), (this.videoDecoder = null)),
-												this.audioDecoder && (this.audioDecoder.close(), (this.audioDecoder = null));
+											this.demuxer && (this.demuxer.close(), (this.demuxer = null)), this.videoDecoder && (this.videoDecoder.close(), (this.videoDecoder = null)), this.audioDecoder && (this.audioDecoder.close(), (this.audioDecoder = null));
 										}
 									},
 									{
@@ -3821,18 +3131,12 @@ var t, i;
 											this.demuxer.loadedMetadata && !this.loadedDemuxerMetadata
 												? this.loadAudioCodec(function () {
 														t.loadVideoCodec(function () {
-															(t.loadedDemuxerMetadata = !0),
-																(t.loadedAudioMetadata = !t.audioDecoder),
-																(t.loadedVideoMetadata = !t.videoDecoder),
-																(t.loadedAllMetadata = t.loadedAudioMetadata && t.loadedVideoMetadata),
-																i(!0);
+															(t.loadedDemuxerMetadata = !0), (t.loadedAudioMetadata = !t.audioDecoder), (t.loadedVideoMetadata = !t.videoDecoder), (t.loadedAllMetadata = t.loadedAudioMetadata && t.loadedVideoMetadata), i(!0);
 														});
 													})
 												: this.loadedDemuxerMetadata && !this.loadedAudioMetadata
 													? this.audioDecoder.loadedMetadata
-														? ((this.loadedAudioMetadata = !0),
-															(this.loadedAllMetadata = this.loadedAudioMetadata && this.loadedVideoMetadata),
-															i(!0))
+														? ((this.loadedAudioMetadata = !0), (this.loadedAllMetadata = this.loadedAudioMetadata && this.loadedVideoMetadata), i(!0))
 														: this.demuxer.audioReady
 															? this.demuxer.dequeueAudioPacket(function (e, r) {
 																	(t.audioBytes += e.byteLength),
@@ -3843,9 +3147,7 @@ var t, i;
 															: r()
 													: this.loadedAudioMetadata && !this.loadedVideoMetadata
 														? this.videoDecoder.loadedMetadata
-															? ((this.loadedVideoMetadata = !0),
-																(this.loadedAllMetadata = this.loadedAudioMetadata && this.loadedVideoMetadata),
-																i(!0))
+															? ((this.loadedVideoMetadata = !0), (this.loadedAllMetadata = this.loadedAudioMetadata && this.loadedVideoMetadata), i(!0))
 															: this.demuxer.frameReady
 																? ((this.processing = !0),
 																	this.demuxer.dequeueVideoPacket(function (e) {
@@ -3857,9 +3159,7 @@ var t, i;
 																: r()
 														: this.loadedVideoMetadata && !this.loadedMetadata && this.loadedAllMetadata
 															? ((this.loadedMetadata = !0), i(!0))
-															: this.loadedMetadata &&
-																  (!this.hasAudio || this.demuxer.audioReady) &&
-																  (!this.hasVideo || this.demuxer.frameReady)
+															: this.loadedMetadata && (!this.hasAudio || this.demuxer.audioReady) && (!this.hasVideo || this.demuxer.frameReady)
 																? i(!0)
 																: r();
 										}
@@ -3900,13 +3200,8 @@ var t, i;
 																				if (e) {
 																					if ('string' == typeof e) return s(e, void 0);
 																					var i = Object.prototype.toString.call(e).slice(8, -1);
-																					if (
-																						('Object' === i && e.constructor && (i = e.constructor.name),
-																						'Map' === i || 'Set' === i)
-																					)
-																						return Array.from(e);
-																					if ('Arguments' === i || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(i))
-																						return s(e, t);
+																					if (('Object' === i && e.constructor && (i = e.constructor.name), 'Map' === i || 'Set' === i)) return Array.from(e);
+																					if ('Arguments' === i || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(i)) return s(e, t);
 																				}
 																			})(e))
 																		) {
@@ -3929,9 +3224,7 @@ var t, i;
 																				f: o
 																			};
 																		}
-																		throw TypeError(
-																			'Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
-																		);
+																		throw TypeError('Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
 																	}
 																	var n,
 																		a = !0,
@@ -3960,9 +3253,7 @@ var t, i;
 																for (a.s(); !(o = a.n()).done; ) {
 																	var u = o.value,
 																		d = Math.round((r * t.audioFormat.rate) / 1000000000);
-																	d > 0
-																		? n.push(u.subarray(0, u.length - Math.min(d, u.length)))
-																		: n.push(u.subarray(Math.min(Math.abs(d), u.length), u.length));
+																	d > 0 ? n.push(u.subarray(0, u.length - Math.min(d, u.length))) : n.push(u.subarray(Math.min(Math.abs(d), u.length), u.length));
 																}
 															} catch (e) {
 																a.e(e);
@@ -4061,20 +3352,8 @@ var t, i;
 													o = {
 														theora: 'OGVDecoderVideoTheoraW',
 														vp8: r ? 'OGVDecoderVideoVP8MTW' : 'OGVDecoderVideoVP8W',
-														vp9: r
-															? i
-																? 'OGVDecoderVideoVP9SIMDMTW'
-																: 'OGVDecoderVideoVP9MTW'
-															: i
-																? 'OGVDecoderVideoVP9SIMDW'
-																: 'OGVDecoderVideoVP9W',
-														av1: r
-															? i
-																? 'OGVDecoderVideoAV1SIMDMTW'
-																: 'OGVDecoderVideoAV1MTW'
-															: i
-																? 'OGVDecoderVideoAV1SIMDW'
-																: 'OGVDecoderVideoAV1W'
+														vp9: r ? (i ? 'OGVDecoderVideoVP9SIMDMTW' : 'OGVDecoderVideoVP9MTW') : i ? 'OGVDecoderVideoVP9SIMDW' : 'OGVDecoderVideoVP9W',
+														av1: r ? (i ? 'OGVDecoderVideoAV1SIMDMTW' : 'OGVDecoderVideoAV1MTW') : i ? 'OGVDecoderVideoAV1SIMDW' : 'OGVDecoderVideoAV1W'
 													}[this.demuxer.videoCodec];
 												(this.processing = !0),
 													a.default.loadClass(
@@ -4119,16 +3398,7 @@ var t, i;
 												if (!this.tested) {
 													try {
 														var e, t;
-														'object' === ('undefined' == typeof WebAssembly ? 'undefined' : (0, o.default)(WebAssembly))
-															? (this.testResult =
-																	((e = new Uint8Array([
-																		0, 97, 115, 109, 1, 0, 0, 0, 1, 6, 1, 96, 1, 127, 1, 127, 3, 2, 1, 0, 5, 3, 1, 0, 1,
-																		7, 8, 1, 4, 116, 101, 115, 116, 0, 0, 10, 16, 1, 14, 0, 32, 0, 65, 1, 54, 2, 0, 32,
-																		0, 40, 2, 0, 11
-																	])),
-																	(t = new WebAssembly.Module(e)),
-																	0 !== new WebAssembly.Instance(t, {}).exports.test(4)))
-															: (this.testResult = !1);
+														'object' === ('undefined' == typeof WebAssembly ? 'undefined' : (0, o.default)(WebAssembly)) ? (this.testResult = ((e = new Uint8Array([0, 97, 115, 109, 1, 0, 0, 0, 1, 6, 1, 96, 1, 127, 1, 127, 3, 2, 1, 0, 5, 3, 1, 0, 1, 7, 8, 1, 4, 116, 101, 115, 116, 0, 0, 10, 16, 1, 14, 0, 32, 0, 65, 1, 54, 2, 0, 32, 0, 40, 2, 0, 11])), (t = new WebAssembly.Module(e)), 0 !== new WebAssembly.Instance(t, {}).exports.test(4))) : (this.testResult = !1);
 													} catch (e) {
 														console.log('Exception while testing WebAssembly', e), (this.testResult = !1);
 													}
@@ -4154,10 +3424,7 @@ var t, i;
 								function e(e, t) {
 									for (var i = 0; i < t.length; i++) {
 										var r = t[i];
-										(r.enumerable = r.enumerable || !1),
-											(r.configurable = !0),
-											'value' in r && (r.writable = !0),
-											Object.defineProperty(e, r.key, r);
+										(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 									}
 								}
 								return function (t, i, r) {
@@ -4191,8 +3458,7 @@ var t, i;
 								}
 								return (
 									(function (e, t) {
-										if ('function' != typeof t && null !== t)
-											throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+										if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
 										(e.prototype = Object.create(t && t.prototype, {
 											constructor: {
 												value: e,
@@ -4207,8 +3473,7 @@ var t, i;
 										{
 											key: 'initXHR',
 											value: function () {
-												o(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), 'initXHR', this).call(this),
-													(this.xhr.responseType = a);
+												o(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), 'initXHR', this).call(this), (this.xhr.responseType = a);
 											}
 										},
 										{
@@ -4219,9 +3484,7 @@ var t, i;
 											key: 'onXHRLoad',
 											value: function () {
 												var e = this.xhr.response;
-												(this.bytesRead += e.byteLength),
-													this.emit('buffer', e),
-													o(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), 'onXHRLoad', this).call(this);
+												(this.bytesRead += e.byteLength), this.emit('buffer', e), o(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), 'onXHRLoad', this).call(this);
 											}
 										}
 									]),
@@ -4243,10 +3506,7 @@ var t, i;
 							function e(e, t) {
 								for (var i = 0; i < t.length; i++) {
 									var r = t[i];
-									(r.enumerable = r.enumerable || !1),
-										(r.configurable = !0),
-										'value' in r && (r.writable = !0),
-										Object.defineProperty(e, r.key, r);
+									(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 								}
 							}
 							return function (t, i, r) {
@@ -4270,24 +3530,11 @@ var t, i;
 									if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
 									return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 								})(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-								return (
-									(a.url = i),
-									(a.offset = r),
-									(a.length = o),
-									(a.cachever = void 0 === n ? 0 : n),
-									(a.loaded = !1),
-									(a.seekable = !1),
-									(a.headers = {}),
-									(a.eof = !1),
-									(a.bytesRead = 0),
-									(a.xhr = new XMLHttpRequest()),
-									a
-								);
+								return (a.url = i), (a.offset = r), (a.length = o), (a.cachever = void 0 === n ? 0 : n), (a.loaded = !1), (a.seekable = !1), (a.headers = {}), (a.eof = !1), (a.bytesRead = 0), (a.xhr = new XMLHttpRequest()), a;
 							}
 							return (
 								(function (e, t) {
-									if ('function' != typeof t && null !== t)
-										throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+									if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
 									(e.prototype = Object.create(t && t.prototype, {
 										constructor: {
 											value: e,
@@ -4315,21 +3562,7 @@ var t, i;
 																	a,
 																	s,
 																	u = (s = o(e.xhr)) ? parseInt(s[1], 10) : 0;
-																if (e.offset != u)
-																	return (
-																		console.log(
-																			'Expected start at ' +
-																				e.offset +
-																				' but got ' +
-																				u +
-																				'; working around Safari range caching bug: https://bugs.webkit.org/show_bug.cgi?id=82672'
-																		),
-																		e.cachever++,
-																		e.emit('cachever'),
-																		e.abort(),
-																		r(),
-																		void e.load().then(t).catch(i)
-																	);
+																if (e.offset != u) return console.log('Expected start at ' + e.offset + ' but got ' + u + '; working around Safari range caching bug: https://bugs.webkit.org/show_bug.cgi?id=82672'), e.cachever++, e.emit('cachever'), e.abort(), r(), void e.load().then(t).catch(i);
 																e.seekable = !0;
 															}
 															e.xhr.status >= 200 && e.xhr.status < 300
@@ -4363,10 +3596,7 @@ var t, i;
 														r(), t();
 													};
 												(r = function () {
-													e.xhr.removeEventListener('readystatechange', n),
-														e.xhr.removeEventListener('error', a),
-														e.off('open', s),
-														(e._onAbort = null);
+													e.xhr.removeEventListener('readystatechange', n), e.xhr.removeEventListener('error', a), e.off('open', s), (e._onAbort = null);
 												}),
 													e.initXHR(),
 													e.xhr.addEventListener('readystatechange', n),
@@ -4399,9 +3629,7 @@ var t, i;
 											var e = this.url;
 											this.cachever && (e += '?buggy_cachever=' + this.cachever), this.xhr.open('GET', e);
 											var t = null;
-											(this.offset || this.length) && (t = 'bytes=' + this.offset + '-'),
-												this.length && (t += this.offset + this.length - 1),
-												null !== t && this.xhr.setRequestHeader('Range', t);
+											(this.offset || this.length) && (t = 'bytes=' + this.offset + '-'), this.length && (t += this.offset + this.length - 1), null !== t && this.xhr.setRequestHeader('Range', t);
 										}
 									},
 									{
@@ -4421,10 +3649,7 @@ var t, i;
 								function e(e, t) {
 									for (var i = 0; i < t.length; i++) {
 										var r = t[i];
-										(r.enumerable = r.enumerable || !1),
-											(r.configurable = !0),
-											'value' in r && (r.writable = !0),
-											Object.defineProperty(e, r.key, r);
+										(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 									}
 								}
 								return function (t, i, r) {
@@ -4456,8 +3681,7 @@ var t, i;
 								}
 								return (
 									(function (e, t) {
-										if ('function' != typeof t && null !== t)
-											throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+										if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
 										(e.prototype = Object.create(t && t.prototype, {
 											constructor: {
 												value: e,
@@ -4472,9 +3696,7 @@ var t, i;
 										{
 											key: 'initXHR',
 											value: function () {
-												o(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), 'initXHR', this).call(this),
-													(this.xhr.responseType = 'text'),
-													this.xhr.overrideMimeType('text/plain; charset=x-user-defined');
+												o(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), 'initXHR', this).call(this), (this.xhr.responseType = 'text'), this.xhr.overrideMimeType('text/plain; charset=x-user-defined');
 											}
 										},
 										{
@@ -4487,8 +3709,7 @@ var t, i;
 										{
 											key: 'onXHRLoad',
 											value: function () {
-												this.onXHRProgress(),
-													o(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), 'onXHRLoad', this).call(this);
+												this.onXHRProgress(), o(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), 'onXHRLoad', this).call(this);
 											}
 										}
 									]),
@@ -4509,10 +3730,7 @@ var t, i;
 								function e(e, t) {
 									for (var i = 0; i < t.length; i++) {
 										var r = t[i];
-										(r.enumerable = r.enumerable || !1),
-											(r.configurable = !0),
-											'value' in r && (r.writable = !0),
-											Object.defineProperty(e, r.key, r);
+										(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 									}
 								}
 								return function (t, i, r) {
@@ -4544,8 +3762,7 @@ var t, i;
 								}
 								return (
 									(function (e, t) {
-										if ('function' != typeof t && null !== t)
-											throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+										if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
 										(e.prototype = Object.create(t && t.prototype, {
 											constructor: {
 												value: e,
@@ -4578,11 +3795,7 @@ var t, i;
 																o(), r(Error('error streaming'));
 															};
 														(o = function () {
-															(t.buffering = !1),
-																t.off('buffer', n),
-																t.off('done', a),
-																t.off('error', s),
-																(t._onAbort = null);
+															(t.buffering = !1), t.off('buffer', n), t.off('done', a), t.off('error', s), (t._onAbort = null);
 														}),
 															(t.buffering = !0),
 															t.on('buffer', n),
@@ -4645,8 +3858,7 @@ var t, i;
 							a = null;
 						e.exports = function (e) {
 							if (!1 === e.progressive) return new n(e);
-							if ((a || (a = r.supported() ? r : o.supported() ? o : null), !a))
-								throw Error('No supported backend class');
+							if ((a || (a = r.supported() ? r : o.supported() ? o : null), !a)) throw Error('No supported backend class');
 							return new a(e);
 						};
 					},
@@ -4655,10 +3867,7 @@ var t, i;
 								function e(e, t) {
 									for (var i = 0; i < t.length; i++) {
 										var r = t[i];
-										(r.enumerable = r.enumerable || !1),
-											(r.configurable = !0),
-											'value' in r && (r.writable = !0),
-											Object.defineProperty(e, r.key, r);
+										(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 									}
 								}
 								return function (t, i, r) {
@@ -4692,8 +3901,7 @@ var t, i;
 								}
 								return (
 									(function (e, t) {
-										if ('function' != typeof t && null !== t)
-											throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+										if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
 										(e.prototype = Object.create(t && t.prototype, {
 											constructor: {
 												value: e,
@@ -4708,8 +3916,7 @@ var t, i;
 										{
 											key: 'initXHR',
 											value: function () {
-												o(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), 'initXHR', this).call(this),
-													(this.xhr.responseType = a);
+												o(t.prototype.__proto__ || Object.getPrototypeOf(t.prototype), 'initXHR', this).call(this), (this.xhr.responseType = a);
 											}
 										},
 										{
@@ -4738,10 +3945,7 @@ var t, i;
 								function e(e, t) {
 									for (var i = 0; i < t.length; i++) {
 										var r = t[i];
-										(r.enumerable = r.enumerable || !1),
-											(r.configurable = !0),
-											'value' in r && (r.writable = !0),
-											Object.defineProperty(e, r.key, r);
+										(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 									}
 								}
 								return function (t, i, r) {
@@ -4848,10 +4052,7 @@ var t, i;
 								function e(e, t) {
 									for (var i = 0; i < t.length; i++) {
 										var r = t[i];
-										(r.enumerable = r.enumerable || !1),
-											(r.configurable = !0),
-											'value' in r && (r.writable = !0),
-											Object.defineProperty(e, r.key, r);
+										(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 									}
 								}
 								return function (t, i, r) {
@@ -4867,13 +4068,7 @@ var t, i;
 										if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 									})(this, e);
 									var r = new o({ eof: !0 });
-									(this.head = r),
-										(this.tail = r),
-										(this.readOffset = 0),
-										(this.readCursor = r),
-										(this.writeOffset = 0),
-										(this.writeCursor = r),
-										(this.cacheSize = void 0 === i ? 0 : i);
+									(this.head = r), (this.tail = r), (this.readOffset = 0), (this.readCursor = r), (this.writeOffset = 0), (this.writeCursor = r), (this.cacheSize = void 0 === i ? 0 : i);
 								}
 								return (
 									r(e, [
@@ -4924,16 +4119,7 @@ var t, i;
 										{
 											key: 'readBytes',
 											value: function (e) {
-												for (
-													var t = e.byteLength,
-														i = this.bytesReadable(t),
-														r = this.readOffset,
-														o = r + i,
-														n = r,
-														a = this.readCursor;
-													a && !a.empty && !(a.start >= o);
-													a = a.next
-												) {
+												for (var t = e.byteLength, i = this.bytesReadable(t), r = this.readOffset, o = r + i, n = r, a = this.readCursor; a && !a.empty && !(a.start >= o); a = a.next) {
 													var s = Math.min(o, a.end),
 														u = e.subarray(n - r, s - r);
 													a.readBytes(u, n, s), (n = s);
@@ -4954,12 +4140,7 @@ var t, i;
 													i = this.writeCursor;
 												if (!i.empty) throw Error('write cursor not empty');
 												if (!i.contains(t.end) && i.end !== t.end) throw Error('write cursor too small');
-												i.start < t.start && (this.split(i, t.start), (i = this.writeCursor)),
-													(t.end < i.end || i.eof) && (this.split(i, t.end), (i = this.writeCursor)),
-													this.splice(i, i, t, t),
-													(this.writeOffset = t.end),
-													(this.writeCursor = t.next),
-													this.gc();
+												i.start < t.start && (this.split(i, t.start), (i = this.writeCursor)), (t.end < i.end || i.eof) && (this.split(i, t.end), (i = this.writeCursor)), this.splice(i, i, t, t), (this.writeOffset = t.end), (this.writeCursor = t.next), this.gc();
 											}
 										},
 										{
@@ -5004,10 +4185,7 @@ var t, i;
 										{
 											key: 'gc',
 											value: function () {
-												for (var e = 0, t = [], i = this.head; i; i = i.next)
-													i.empty ||
-														((e += i.length),
-														(i.end < this.readOffset || i.start > this.readOffset + this.chunkSize) && t.push(i));
+												for (var e = 0, t = [], i = this.head; i; i = i.next) i.empty || ((e += i.length), (i.end < this.readOffset || i.start > this.readOffset + this.chunkSize) && t.push(i));
 												if (e > this.cacheSize) {
 													t.sort(function (e, t) {
 														return e.timestamp - t.timestamp;
@@ -5027,10 +4205,7 @@ var t, i;
 													start: e.start,
 													end: e.end
 												});
-												this.splice(e, e, t, t),
-													(e = t).prev && e.prev.empty && (e = this.consolidate(e.prev)),
-													e.next && e.next.empty && !e.next.eof && (e = this.consolidate(e)),
-													0 === e.start && (this.head = e);
+												this.splice(e, e, t, t), (e = t).prev && e.prev.empty && (e = this.consolidate(e.prev)), e.next && e.next.empty && !e.next.eof && (e = this.consolidate(e)), 0 === e.start && (this.head = e);
 											}
 										},
 										{
@@ -5088,10 +4263,7 @@ var t, i;
 								function e(e, t) {
 									for (var i = 0; i < t.length; i++) {
 										var r = t[i];
-										(r.enumerable = r.enumerable || !1),
-											(r.configurable = !0),
-											'value' in r && (r.writable = !0),
-											Object.defineProperty(e, r.key, r);
+										(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 									}
 								}
 								return function (t, i, r) {
@@ -5140,10 +4312,7 @@ var t, i;
 							function e(e, t) {
 								for (var i = 0; i < t.length; i++) {
 									var r = t[i];
-									(r.enumerable = r.enumerable || !1),
-										(r.configurable = !0),
-										'value' in r && (r.writable = !0),
-										Object.defineProperty(e, r.key, r);
+									(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 								}
 							}
 							return function (t, i, r) {
@@ -5201,12 +4370,7 @@ var t, i;
 														e
 															._openBackend()
 															.then(function (i) {
-																(e.seekable = i.seekable),
-																	(e.headers = i.headers),
-																	(e.length = i.length),
-																	(e.loaded = !0),
-																	(e.loading = !1),
-																	t();
+																(e.seekable = i.seekable), (e.headers = i.headers), (e.length = i.length), (e.loaded = !0), (e.loading = !1), t();
 															})
 															.catch(function (t) {
 																'AbortError' !== t.name && (e.loading = !1), i(t);
@@ -5245,9 +4409,7 @@ var t, i;
 																				d === e._backend && e._cache.write(t);
 																			}),
 																			d.on('done', function () {
-																				d === e._backend &&
-																					(-1 === e.length && (e.length = e._backend.offset + e._backend.bytesRead),
-																					(e._backend = null));
+																				d === e._backend && (-1 === e.length && (e.length = e._backend.offset + e._backend.bytesRead), (e._backend = null));
 																			}),
 																			t(d));
 																},
@@ -5295,10 +4457,7 @@ var t, i;
 													if (e !== (0 | e) || e < 0) throw Error('invalid input');
 													if (t.length >= 0 && e > t.length) throw Error('seek past end of file');
 													if (!t.seekable) throw Error('seek on non-seekable stream');
-													t._backend && t.abort(),
-														t._cache.seekRead(e),
-														t._cache.seekWrite(e),
-														t._readAhead().then(i).catch(r);
+													t._backend && t.abort(), t._cache.seekRead(e), t._cache.seekWrite(e), t._readAhead().then(i).catch(r);
 												});
 											}
 										},
@@ -5370,10 +4529,7 @@ var t, i;
 										{
 											key: 'abort',
 											value: function () {
-												this.loading && (this.loading = !1),
-													this.buffering && (this.buffering = !1),
-													this.seeking && (this.seeking = !1),
-													this._backend && (this._backend.abort(), (this._backend = null));
+												this.loading && (this.loading = !1), this.buffering && (this.buffering = !1), this.seeking && (this.seeking = !1), this._backend && (this._backend.abort(), (this._backend = null));
 											}
 										},
 										{
@@ -5396,19 +4552,14 @@ var t, i;
 					},
 					302: (e, t, i) => {
 						i.r(t), i.d(t, { default: () => r });
-						let r =
-							'data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU5LjE2LjEwMAAAAAAAAAAAAAAA//tQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAACAAAEEwCZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZ//////////////////////////////////////////////////////////////////8AAAAATGF2YzU5LjE4AAAAAAAAAAAAAAAAJAZAAAAAAAAABBMIw3vfAAAAAAAAAAAAAAAAAAAAAP/7kGQAD/AAAGkAAAAIAAANIAAAAQAAAaQAAAAgAAA0gAAABExBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/7kmRAj/AAAGkAAAAIAAANIAAAAQAAAaQAAAAgAAA0gAAABFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVU=';
+						let r = 'data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU5LjE2LjEwMAAAAAAAAAAAAAAA//tQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAACAAAEEwCZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZ//////////////////////////////////////////////////////////////////8AAAAATGF2YzU5LjE4AAAAAAAAAAAAAAAAJAZAAAAAAAAABBMIw3vfAAAAAAAAAAAAAAAAAAAAAP/7kGQAD/AAAGkAAAAIAAANIAAAAQAAAaQAAAAgAAA0gAAABExBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/7kmRAj/AAAGkAAAAIAAANIAAAAQAAAaQAAAAgAAA0gAAABFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVU=';
 					},
 					826: (e) => {
 						e.exports = {
-							vertex:
-								'precision mediump float;\n\nattribute vec2 aPosition;\nattribute vec2 aLumaPosition;\nattribute vec2 aChromaPosition;\nvarying vec2 vLumaPosition;\nvarying vec2 vChromaPosition;\nvoid main() {\n    gl_Position = vec4(aPosition, 0, 1);\n    vLumaPosition = aLumaPosition;\n    vChromaPosition = aChromaPosition;\n}\n',
-							fragment:
-								'// inspired by https://github.com/mbebenita/Broadway/blob/master/Player/canvas.js\n\nprecision mediump float;\n\nuniform sampler2D uTextureY;\nuniform sampler2D uTextureCb;\nuniform sampler2D uTextureCr;\nvarying vec2 vLumaPosition;\nvarying vec2 vChromaPosition;\nvoid main() {\n   // Y, Cb, and Cr planes are uploaded as ALPHA textures.\n   float fY = texture2D(uTextureY, vLumaPosition).w;\n   float fCb = texture2D(uTextureCb, vChromaPosition).w;\n   float fCr = texture2D(uTextureCr, vChromaPosition).w;\n\n   // Premultipy the Y...\n   float fYmul = fY * 1.1643828125;\n\n   // And convert that to RGB!\n   gl_FragColor = vec4(\n     fYmul + 1.59602734375 * fCr - 0.87078515625,\n     fYmul - 0.39176171875 * fCb - 0.81296875 * fCr + 0.52959375,\n     fYmul + 2.017234375   * fCb - 1.081390625,\n     1\n   );\n}\n',
-							vertexStripe:
-								'precision mediump float;\n\nattribute vec2 aPosition;\nattribute vec2 aTexturePosition;\nvarying vec2 vTexturePosition;\n\nvoid main() {\n    gl_Position = vec4(aPosition, 0, 1);\n    vTexturePosition = aTexturePosition;\n}\n',
-							fragmentStripe:
-								"// extra 'stripe' texture fiddling to work around IE 11's poor performance on gl.LUMINANCE and gl.ALPHA textures\n\nprecision mediump float;\n\nuniform sampler2D uStripe;\nuniform sampler2D uTexture;\nvarying vec2 vTexturePosition;\nvoid main() {\n   // Y, Cb, and Cr planes are mapped into a pseudo-RGBA texture\n   // so we can upload them without expanding the bytes on IE 11\n   // which doesn't allow LUMINANCE or ALPHA textures\n   // The stripe textures mark which channel to keep for each pixel.\n   // Each texture extraction will contain the relevant value in one\n   // channel only.\n\n   float fLuminance = dot(\n      texture2D(uStripe, vTexturePosition),\n      texture2D(uTexture, vTexturePosition)\n   );\n\n   gl_FragColor = vec4(0, 0, 0, fLuminance);\n}\n"
+							vertex: 'precision mediump float;\n\nattribute vec2 aPosition;\nattribute vec2 aLumaPosition;\nattribute vec2 aChromaPosition;\nvarying vec2 vLumaPosition;\nvarying vec2 vChromaPosition;\nvoid main() {\n    gl_Position = vec4(aPosition, 0, 1);\n    vLumaPosition = aLumaPosition;\n    vChromaPosition = aChromaPosition;\n}\n',
+							fragment: '// inspired by https://github.com/mbebenita/Broadway/blob/master/Player/canvas.js\n\nprecision mediump float;\n\nuniform sampler2D uTextureY;\nuniform sampler2D uTextureCb;\nuniform sampler2D uTextureCr;\nvarying vec2 vLumaPosition;\nvarying vec2 vChromaPosition;\nvoid main() {\n   // Y, Cb, and Cr planes are uploaded as ALPHA textures.\n   float fY = texture2D(uTextureY, vLumaPosition).w;\n   float fCb = texture2D(uTextureCb, vChromaPosition).w;\n   float fCr = texture2D(uTextureCr, vChromaPosition).w;\n\n   // Premultipy the Y...\n   float fYmul = fY * 1.1643828125;\n\n   // And convert that to RGB!\n   gl_FragColor = vec4(\n     fYmul + 1.59602734375 * fCr - 0.87078515625,\n     fYmul - 0.39176171875 * fCb - 0.81296875 * fCr + 0.52959375,\n     fYmul + 2.017234375   * fCb - 1.081390625,\n     1\n   );\n}\n',
+							vertexStripe: 'precision mediump float;\n\nattribute vec2 aPosition;\nattribute vec2 aTexturePosition;\nvarying vec2 vTexturePosition;\n\nvoid main() {\n    gl_Position = vec4(aPosition, 0, 1);\n    vTexturePosition = aTexturePosition;\n}\n',
+							fragmentStripe: "// extra 'stripe' texture fiddling to work around IE 11's poor performance on gl.LUMINANCE and gl.ALPHA textures\n\nprecision mediump float;\n\nuniform sampler2D uStripe;\nuniform sampler2D uTexture;\nvarying vec2 vTexturePosition;\nvoid main() {\n   // Y, Cb, and Cr planes are mapped into a pseudo-RGBA texture\n   // so we can upload them without expanding the bytes on IE 11\n   // which doesn't allow LUMINANCE or ALPHA textures\n   // The stripe textures mark which channel to keep for each pixel.\n   // Each texture extraction will contain the relevant value in one\n   // channel only.\n\n   float fLuminance = dot(\n      texture2D(uStripe, vTexturePosition),\n      texture2D(uTexture, vTexturePosition)\n   );\n\n   gl_FragColor = vec4(0, 0, 0, fLuminance);\n}\n"
 						};
 					},
 					487: (e) => {
@@ -5439,27 +4590,15 @@ var t, i;
 										var s,
 											u,
 											d = a.format;
-										(e.width === d.displayWidth && e.height === d.displayHeight) ||
-											((e.width = d.displayWidth), (e.height = d.displayHeight)),
+										(e.width === d.displayWidth && e.height === d.displayHeight) || ((e.width = d.displayWidth), (e.height = d.displayHeight)),
 											(null !== i && i.width == d.width && i.height == d.height) ||
 												(function (e, r) {
-													for (var o = (i = t.createImageData(e, r)).data, n = e * r * 4, a = 0; a < n; a += 4)
-														o[a + 3] = 255;
+													for (var o = (i = t.createImageData(e, r)).data, n = e * r * 4, a = 0; a < n; a += 4) o[a + 3] = 255;
 												})(d.width, d.height),
 											r.convertYCbCr(a, i.data);
 										var c,
 											h = d.cropWidth != d.displayWidth || d.cropHeight != d.displayHeight;
-										h
-											? (o ||
-													((s = d.cropWidth),
-													(u = d.cropHeight),
-													((o = document.createElement('canvas')).width = s),
-													(o.height = u),
-													(n = o.getContext('2d'))),
-												(c = n))
-											: (c = t),
-											c.putImageData(i, -d.cropLeft, -d.cropTop, d.cropLeft, d.cropTop, d.cropWidth, d.cropHeight),
-											h && t.drawImage(o, 0, 0, d.displayWidth, d.displayHeight);
+										h ? (o || ((s = d.cropWidth), (u = d.cropHeight), ((o = document.createElement('canvas')).width = s), (o.height = u), (n = o.getContext('2d'))), (c = n)) : (c = t), c.putImageData(i, -d.cropLeft, -d.cropTop, d.cropLeft, d.cropTop, d.cropWidth, d.cropHeight), h && t.drawImage(o, 0, 0, d.displayWidth, d.displayHeight);
 									}),
 									(this.clear = function () {
 										t.clearRect(0, 0, e.width, e.height);
@@ -5511,14 +4650,7 @@ var t, i;
 									if ((a.activeTexture(a.TEXTURE0), o.stripe)) {
 										var d = !g[e + '_temp'] || t,
 											c = T(e + '_temp', t);
-										a.bindTexture(a.TEXTURE_2D, c),
-											d
-												? (a.texParameteri(a.TEXTURE_2D, a.TEXTURE_WRAP_S, a.CLAMP_TO_EDGE),
-													a.texParameteri(a.TEXTURE_2D, a.TEXTURE_WRAP_T, a.CLAMP_TO_EDGE),
-													a.texParameteri(a.TEXTURE_2D, a.TEXTURE_MIN_FILTER, a.NEAREST),
-													a.texParameteri(a.TEXTURE_2D, a.TEXTURE_MAG_FILTER, a.NEAREST),
-													a.texImage2D(a.TEXTURE_2D, 0, a.RGBA, i / 4, r, 0, a.RGBA, a.UNSIGNED_BYTE, n))
-												: a.texSubImage2D(a.TEXTURE_2D, 0, 0, 0, i / 4, r, a.RGBA, a.UNSIGNED_BYTE, n);
+										a.bindTexture(a.TEXTURE_2D, c), d ? (a.texParameteri(a.TEXTURE_2D, a.TEXTURE_WRAP_S, a.CLAMP_TO_EDGE), a.texParameteri(a.TEXTURE_2D, a.TEXTURE_WRAP_T, a.CLAMP_TO_EDGE), a.texParameteri(a.TEXTURE_2D, a.TEXTURE_MIN_FILTER, a.NEAREST), a.texParameteri(a.TEXTURE_2D, a.TEXTURE_MAG_FILTER, a.NEAREST), a.texImage2D(a.TEXTURE_2D, 0, a.RGBA, i / 4, r, 0, a.RGBA, a.UNSIGNED_BYTE, n)) : a.texSubImage2D(a.TEXTURE_2D, 0, 0, 0, i / 4, r, a.RGBA, a.UNSIGNED_BYTE, n);
 										var h = g[e + '_stripe'],
 											f = !h || t;
 										f && (h = T(e + '_stripe', t)),
@@ -5539,71 +4671,30 @@ var t, i;
 													a.UNSIGNED_BYTE,
 													(function (e) {
 														if (b[e]) return b[e];
-														for (var t = new Uint32Array(e), i = 0; i < e; i += 4)
-															(t[i] = 255), (t[i + 1] = 65280), (t[i + 2] = 16711680), (t[i + 3] = 4278190080);
+														for (var t = new Uint32Array(e), i = 0; i < e; i += 4) (t[i] = 255), (t[i + 1] = 65280), (t[i + 2] = 16711680), (t[i + 3] = 4278190080);
 														return (b[e] = new Uint8Array(t.buffer));
 													})(i)
 												));
-									} else
-										a.bindTexture(a.TEXTURE_2D, u),
-											s
-												? (a.texParameteri(a.TEXTURE_2D, a.TEXTURE_WRAP_S, a.CLAMP_TO_EDGE),
-													a.texParameteri(a.TEXTURE_2D, a.TEXTURE_WRAP_T, a.CLAMP_TO_EDGE),
-													a.texParameteri(a.TEXTURE_2D, a.TEXTURE_MIN_FILTER, a.LINEAR),
-													a.texParameteri(a.TEXTURE_2D, a.TEXTURE_MAG_FILTER, a.LINEAR),
-													a.texImage2D(a.TEXTURE_2D, 0, a.ALPHA, i, r, 0, a.ALPHA, a.UNSIGNED_BYTE, n))
-												: a.texSubImage2D(a.TEXTURE_2D, 0, 0, 0, i, r, a.ALPHA, a.UNSIGNED_BYTE, n);
+									} else a.bindTexture(a.TEXTURE_2D, u), s ? (a.texParameteri(a.TEXTURE_2D, a.TEXTURE_WRAP_S, a.CLAMP_TO_EDGE), a.texParameteri(a.TEXTURE_2D, a.TEXTURE_WRAP_T, a.CLAMP_TO_EDGE), a.texParameteri(a.TEXTURE_2D, a.TEXTURE_MIN_FILTER, a.LINEAR), a.texParameteri(a.TEXTURE_2D, a.TEXTURE_MAG_FILTER, a.LINEAR), a.texImage2D(a.TEXTURE_2D, 0, a.ALPHA, i, r, 0, a.ALPHA, a.UNSIGNED_BYTE, n)) : a.texSubImage2D(a.TEXTURE_2D, 0, 0, 0, i, r, a.ALPHA, a.UNSIGNED_BYTE, n);
 								}
 								function k(e, t, r, o) {
 									var n = g[e];
 									a.useProgram(i);
 									var s = y[e];
-									(s && !t) ||
-										(a.activeTexture(a.TEXTURE0),
-										a.bindTexture(a.TEXTURE_2D, n),
-										a.texParameteri(a.TEXTURE_2D, a.TEXTURE_WRAP_S, a.CLAMP_TO_EDGE),
-										a.texParameteri(a.TEXTURE_2D, a.TEXTURE_WRAP_T, a.CLAMP_TO_EDGE),
-										a.texParameteri(a.TEXTURE_2D, a.TEXTURE_MIN_FILTER, a.LINEAR),
-										a.texParameteri(a.TEXTURE_2D, a.TEXTURE_MAG_FILTER, a.LINEAR),
-										a.texImage2D(a.TEXTURE_2D, 0, a.RGBA, r, o, 0, a.RGBA, a.UNSIGNED_BYTE, null),
-										(s = y[e] = a.createFramebuffer())),
-										a.bindFramebuffer(a.FRAMEBUFFER, s),
-										a.framebufferTexture2D(a.FRAMEBUFFER, a.COLOR_ATTACHMENT0, a.TEXTURE_2D, n, 0);
+									(s && !t) || (a.activeTexture(a.TEXTURE0), a.bindTexture(a.TEXTURE_2D, n), a.texParameteri(a.TEXTURE_2D, a.TEXTURE_WRAP_S, a.CLAMP_TO_EDGE), a.texParameteri(a.TEXTURE_2D, a.TEXTURE_WRAP_T, a.CLAMP_TO_EDGE), a.texParameteri(a.TEXTURE_2D, a.TEXTURE_MIN_FILTER, a.LINEAR), a.texParameteri(a.TEXTURE_2D, a.TEXTURE_MAG_FILTER, a.LINEAR), a.texImage2D(a.TEXTURE_2D, 0, a.RGBA, r, o, 0, a.RGBA, a.UNSIGNED_BYTE, null), (s = y[e] = a.createFramebuffer())), a.bindFramebuffer(a.FRAMEBUFFER, s), a.framebufferTexture2D(a.FRAMEBUFFER, a.COLOR_ATTACHMENT0, a.TEXTURE_2D, n, 0);
 									var _ = g[e + '_temp'];
 									a.activeTexture(a.TEXTURE1), a.bindTexture(a.TEXTURE_2D, _), a.uniform1i(l, 1);
 									var p = g[e + '_stripe'];
-									a.activeTexture(a.TEXTURE2),
-										a.bindTexture(a.TEXTURE_2D, p),
-										a.uniform1i(f, 2),
-										a.bindBuffer(a.ARRAY_BUFFER, u),
-										a.enableVertexAttribArray(d),
-										a.vertexAttribPointer(d, 2, a.FLOAT, !1, 0, 0),
-										a.bindBuffer(a.ARRAY_BUFFER, c),
-										a.enableVertexAttribArray(h),
-										a.vertexAttribPointer(h, 2, a.FLOAT, !1, 0, 0),
-										a.viewport(0, 0, r, o),
-										a.drawArrays(a.TRIANGLES, 0, v.length / 2),
-										a.bindFramebuffer(a.FRAMEBUFFER, null);
+									a.activeTexture(a.TEXTURE2), a.bindTexture(a.TEXTURE_2D, p), a.uniform1i(f, 2), a.bindBuffer(a.ARRAY_BUFFER, u), a.enableVertexAttribArray(d), a.vertexAttribPointer(d, 2, a.FLOAT, !1, 0, 0), a.bindBuffer(a.ARRAY_BUFFER, c), a.enableVertexAttribArray(h), a.vertexAttribPointer(h, 2, a.FLOAT, !1, 0, 0), a.viewport(0, 0, r, o), a.drawArrays(a.TRIANGLES, 0, v.length / 2), a.bindFramebuffer(a.FRAMEBUFFER, null);
 								}
 								function E(e, i, r) {
-									a.activeTexture(i),
-										a.bindTexture(a.TEXTURE_2D, g[e]),
-										a.texParameteri(a.TEXTURE_2D, a.TEXTURE_WRAP_S, a.CLAMP_TO_EDGE),
-										a.texParameteri(a.TEXTURE_2D, a.TEXTURE_WRAP_T, a.CLAMP_TO_EDGE),
-										a.texParameteri(a.TEXTURE_2D, a.TEXTURE_MIN_FILTER, a.LINEAR),
-										a.texParameteri(a.TEXTURE_2D, a.TEXTURE_MAG_FILTER, a.LINEAR),
-										a.uniform1i(a.getUniformLocation(t, e), r);
+									a.activeTexture(i), a.bindTexture(a.TEXTURE_2D, g[e]), a.texParameteri(a.TEXTURE_2D, a.TEXTURE_WRAP_S, a.CLAMP_TO_EDGE), a.texParameteri(a.TEXTURE_2D, a.TEXTURE_WRAP_T, a.CLAMP_TO_EDGE), a.texParameteri(a.TEXTURE_2D, a.TEXTURE_MIN_FILTER, a.LINEAR), a.texParameteri(a.TEXTURE_2D, a.TEXTURE_MAG_FILTER, a.LINEAR), a.uniform1i(a.getUniformLocation(t, e), r);
 								}
 								function P(e, t) {
 									var i = s(a.VERTEX_SHADER, e),
 										r = s(a.FRAGMENT_SHADER, t),
 										o = a.createProgram();
-									if (
-										(a.attachShader(o, i),
-										a.attachShader(o, r),
-										a.linkProgram(o),
-										!a.getProgramParameter(o, a.LINK_STATUS))
-									) {
+									if ((a.attachShader(o, i), a.attachShader(o, r), a.linkProgram(o), !a.getProgramParameter(o, a.LINK_STATUS))) {
 										var n = a.getProgramInfoLog(o);
 										throw (a.deleteProgram(o), Error('GL program linking failed: ' + n));
 									}
@@ -5618,25 +4709,11 @@ var t, i;
 											t ||
 												(function () {
 													if (o.stripe) {
-														(i = P(r.vertexStripe, r.fragmentStripe)),
-															a.getAttribLocation(i, 'aPosition'),
-															(c = a.createBuffer());
+														(i = P(r.vertexStripe, r.fragmentStripe)), a.getAttribLocation(i, 'aPosition'), (c = a.createBuffer());
 														var e = new Float32Array([0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1]);
-														a.bindBuffer(a.ARRAY_BUFFER, c),
-															a.bufferData(a.ARRAY_BUFFER, e, a.STATIC_DRAW),
-															(h = a.getAttribLocation(i, 'aTexturePosition')),
-															(f = a.getUniformLocation(i, 'uStripe')),
-															(l = a.getUniformLocation(i, 'uTexture'));
+														a.bindBuffer(a.ARRAY_BUFFER, c), a.bufferData(a.ARRAY_BUFFER, e, a.STATIC_DRAW), (h = a.getAttribLocation(i, 'aTexturePosition')), (f = a.getUniformLocation(i, 'uStripe')), (l = a.getUniformLocation(i, 'uTexture'));
 													}
-													(t = P(r.vertex, r.fragment)),
-														(u = a.createBuffer()),
-														a.bindBuffer(a.ARRAY_BUFFER, u),
-														a.bufferData(a.ARRAY_BUFFER, v, a.STATIC_DRAW),
-														(d = a.getAttribLocation(t, 'aPosition')),
-														(_ = a.createBuffer()),
-														(p = a.getAttribLocation(t, 'aLumaPosition')),
-														(m = a.createBuffer()),
-														(V = a.getAttribLocation(t, 'aChromaPosition'));
+													(t = P(r.vertex, r.fragment)), (u = a.createBuffer()), a.bindBuffer(a.ARRAY_BUFFER, u), a.bufferData(a.ARRAY_BUFFER, v, a.STATIC_DRAW), (d = a.getAttribLocation(t, 'aPosition')), (_ = a.createBuffer()), (p = a.getAttribLocation(t, 'aLumaPosition')), (m = a.createBuffer()), (V = a.getAttribLocation(t, 'aChromaPosition'));
 												})(),
 											y)
 										) {
@@ -5650,28 +4727,7 @@ var t, i;
 											};
 											b(_, 0, s.y.stride), b(m, 0, (s.u.stride * g.width) / g.chromaWidth);
 										}
-										A('uTextureY', y, s.y.stride, g.height, s.y.bytes),
-											A('uTextureCb', y, s.u.stride, g.chromaHeight, s.u.bytes),
-											A('uTextureCr', y, s.v.stride, g.chromaHeight, s.v.bytes),
-											o.stripe &&
-												(k('uTextureY', y, s.y.stride, g.height),
-												k('uTextureCb', y, s.u.stride, g.chromaHeight),
-												k('uTextureCr', y, s.v.stride, g.chromaHeight)),
-											a.useProgram(t),
-											a.viewport(0, 0, e.width, e.height),
-											E('uTextureY', a.TEXTURE0, 0),
-											E('uTextureCb', a.TEXTURE1, 1),
-											E('uTextureCr', a.TEXTURE2, 2),
-											a.bindBuffer(a.ARRAY_BUFFER, u),
-											a.enableVertexAttribArray(d),
-											a.vertexAttribPointer(d, 2, a.FLOAT, !1, 0, 0),
-											a.bindBuffer(a.ARRAY_BUFFER, _),
-											a.enableVertexAttribArray(p),
-											a.vertexAttribPointer(p, 2, a.FLOAT, !1, 0, 0),
-											a.bindBuffer(a.ARRAY_BUFFER, m),
-											a.enableVertexAttribArray(V),
-											a.vertexAttribPointer(V, 2, a.FLOAT, !1, 0, 0),
-											a.drawArrays(a.TRIANGLES, 0, v.length / 2);
+										A('uTextureY', y, s.y.stride, g.height, s.y.bytes), A('uTextureCb', y, s.u.stride, g.chromaHeight, s.u.bytes), A('uTextureCr', y, s.v.stride, g.chromaHeight, s.v.bytes), o.stripe && (k('uTextureY', y, s.y.stride, g.height), k('uTextureCb', y, s.u.stride, g.chromaHeight), k('uTextureCr', y, s.v.stride, g.chromaHeight)), a.useProgram(t), a.viewport(0, 0, e.width, e.height), E('uTextureY', a.TEXTURE0, 0), E('uTextureCb', a.TEXTURE1, 1), E('uTextureCr', a.TEXTURE2, 2), a.bindBuffer(a.ARRAY_BUFFER, u), a.enableVertexAttribArray(d), a.vertexAttribPointer(d, 2, a.FLOAT, !1, 0, 0), a.bindBuffer(a.ARRAY_BUFFER, _), a.enableVertexAttribArray(p), a.vertexAttribPointer(p, 2, a.FLOAT, !1, 0, 0), a.bindBuffer(a.ARRAY_BUFFER, m), a.enableVertexAttribArray(V), a.vertexAttribPointer(V, 2, a.FLOAT, !1, 0, 0), a.drawArrays(a.TRIANGLES, 0, v.length / 2);
 									}),
 									(n.clear = function () {
 										a.viewport(0, 0, e.width, e.height), a.clearColor(0, 0, 0, 0), a.clear(a.COLOR_BUFFER_BIT);
@@ -5706,16 +4762,7 @@ var t, i;
 											a = o.stripe ? 1 : 4,
 											s = o.stripe ? e.RGBA : e.ALPHA,
 											u = o.stripe ? e.NEAREST : e.LINEAR;
-										return (
-											e.activeTexture(i),
-											e.bindTexture(e.TEXTURE_2D, r),
-											e.texParameteri(e.TEXTURE_2D, e.TEXTURE_WRAP_S, e.CLAMP_TO_EDGE),
-											e.texParameteri(e.TEXTURE_2D, e.TEXTURE_WRAP_T, e.CLAMP_TO_EDGE),
-											e.texParameteri(e.TEXTURE_2D, e.TEXTURE_MIN_FILTER, u),
-											e.texParameteri(e.TEXTURE_2D, e.TEXTURE_MAG_FILTER, u),
-											e.texImage2D(e.TEXTURE_2D, 0, s, a, 4, 0, s, e.UNSIGNED_BYTE, n),
-											!e.getError()
-										);
+										return e.activeTexture(i), e.bindTexture(e.TEXTURE_2D, r), e.texParameteri(e.TEXTURE_2D, e.TEXTURE_WRAP_S, e.CLAMP_TO_EDGE), e.texParameteri(e.TEXTURE_2D, e.TEXTURE_WRAP_T, e.CLAMP_TO_EDGE), e.texParameteri(e.TEXTURE_2D, e.TEXTURE_MIN_FILTER, u), e.texParameteri(e.TEXTURE_2D, e.TEXTURE_MAG_FILTER, u), e.texImage2D(e.TEXTURE_2D, 0, s, a, 4, 0, s, e.UNSIGNED_BYTE, n), !e.getError();
 									}
 									return !1;
 								}),
@@ -5759,53 +4806,17 @@ var t, i;
 										O = 0;
 									if (1 == n && 1 == a)
 										for (y = 0, b = l, O = 0, R = 0; R < o; R += 2) {
-											for (m = ((p = (R * c) | 0) + c) | 0, V = (O * h) | 0, v = (O * f) | 0, x = 0; x < i; x += 2)
-												(T = 0 | u[V++]),
-													(E = (((409 * (A = 0 | d[v++])) | 0) - 57088) | 0),
-													(P = (((100 * T) | 0) + ((208 * A) | 0) - 34816) | 0),
-													(w = (((516 * T) | 0) - 70912) | 0),
-													(k = (298 * s[p++]) | 0),
-													(t[y] = (k + E) >> 8),
-													(t[y + 1] = (k - P) >> 8),
-													(t[y + 2] = (k + w) >> 8),
-													(y += 4),
-													(k = (298 * s[p++]) | 0),
-													(t[y] = (k + E) >> 8),
-													(t[y + 1] = (k - P) >> 8),
-													(t[y + 2] = (k + w) >> 8),
-													(y += 4),
-													(k = (298 * s[m++]) | 0),
-													(t[b] = (k + E) >> 8),
-													(t[b + 1] = (k - P) >> 8),
-													(t[b + 2] = (k + w) >> 8),
-													(b += 4),
-													(k = (298 * s[m++]) | 0),
-													(t[b] = (k + E) >> 8),
-													(t[b + 1] = (k - P) >> 8),
-													(t[b + 2] = (k + w) >> 8),
-													(b += 4);
+											for (m = ((p = (R * c) | 0) + c) | 0, V = (O * h) | 0, v = (O * f) | 0, x = 0; x < i; x += 2) (T = 0 | u[V++]), (E = (((409 * (A = 0 | d[v++])) | 0) - 57088) | 0), (P = (((100 * T) | 0) + ((208 * A) | 0) - 34816) | 0), (w = (((516 * T) | 0) - 70912) | 0), (k = (298 * s[p++]) | 0), (t[y] = (k + E) >> 8), (t[y + 1] = (k - P) >> 8), (t[y + 2] = (k + w) >> 8), (y += 4), (k = (298 * s[p++]) | 0), (t[y] = (k + E) >> 8), (t[y + 1] = (k - P) >> 8), (t[y + 2] = (k + w) >> 8), (y += 4), (k = (298 * s[m++]) | 0), (t[b] = (k + E) >> 8), (t[b + 1] = (k - P) >> 8), (t[b + 2] = (k + w) >> 8), (b += 4), (k = (298 * s[m++]) | 0), (t[b] = (k + E) >> 8), (t[b + 1] = (k - P) >> 8), (t[b + 2] = (k + w) >> 8), (b += 4);
 											(y += l), (b += l), O++;
 										}
-									else
-										for (g = 0, R = 0; R < o; R++)
-											for (F = 0, _ = (R * c) | 0, V = ((O = R >> a) * h) | 0, v = (O * f) | 0, x = 0; x < i; x++)
-												(T = 0 | u[V + (F = x >> n)]),
-													(E = (((409 * (A = 0 | d[v + F])) | 0) - 57088) | 0),
-													(P = (((100 * T) | 0) + ((208 * A) | 0) - 34816) | 0),
-													(w = (((516 * T) | 0) - 70912) | 0),
-													(k = (298 * s[_++]) | 0),
-													(t[g] = (k + E) >> 8),
-													(t[g + 1] = (k - P) >> 8),
-													(t[g + 2] = (k + w) >> 8),
-													(g += 4);
+									else for (g = 0, R = 0; R < o; R++) for (F = 0, _ = (R * c) | 0, V = ((O = R >> a) * h) | 0, v = (O * f) | 0, x = 0; x < i; x++) (T = 0 | u[V + (F = x >> n)]), (E = (((409 * (A = 0 | d[v + F])) | 0) - 57088) | 0), (P = (((100 * T) | 0) + ((208 * A) | 0) - 34816) | 0), (w = (((516 * T) | 0) - 70912) | 0), (k = (298 * s[_++]) | 0), (t[g] = (k + E) >> 8), (t[g + 1] = (k - P) >> 8), (t[g + 2] = (k + w) >> 8), (g += 4);
 								}
 							});
 					},
 					877: (e) => {
 						e.exports = function (e) {
 							for (var t = 0, i = e >> 1; 0 != i; ) (i >>= 1), t++;
-							if (e !== 1 << t)
-								throw 'chroma plane dimensions must be power of 2 ratio to luma plane dimensions; got ' + e;
+							if (e !== 1 << t) throw 'chroma plane dimensions must be power of 2 ratio to luma plane dimensions; got ' + e;
 							return t;
 						};
 					},
@@ -5842,10 +4853,7 @@ var t, i;
 			}),
 				(h.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t)),
 				(h.r = (e) => {
-					'undefined' != typeof Symbol &&
-						Symbol.toStringTag &&
-						Object.defineProperty(e, Symbol.toStringTag, { value: 'Module' }),
-						Object.defineProperty(e, '__esModule', { value: !0 });
+					'undefined' != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, { value: 'Module' }), Object.defineProperty(e, '__esModule', { value: !0 });
 				});
 			var f = {};
 			return (
@@ -5897,14 +4905,7 @@ var t, i;
 				(s = e(h(168))),
 				(u = '1.8.9-20220406232920-cb5f7ff'),
 				(f.OGVVersion = u),
-				'object' === ('undefined' == typeof window ? 'undefined' : (0, t.default)(window)) &&
-					((window.OGVCompat = i.default),
-					(window.OGVLoader = r.default),
-					(window.OGVMediaError = o.default),
-					(window.OGVMediaType = n.default),
-					(window.OGVTimeRanges = s.default),
-					(window.OGVPlayer = a.default),
-					(window.OGVVersion = u)),
+				'object' === ('undefined' == typeof window ? 'undefined' : (0, t.default)(window)) && ((window.OGVCompat = i.default), (window.OGVLoader = r.default), (window.OGVMediaError = o.default), (window.OGVMediaType = n.default), (window.OGVTimeRanges = s.default), (window.OGVPlayer = a.default), (window.OGVVersion = u)),
 				f
 			);
 		})();

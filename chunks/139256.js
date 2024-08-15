@@ -98,16 +98,7 @@ function Z(e) {
 	});
 }
 function P(e) {
-	let {
-			answers: t,
-			answersInteraction: n,
-			answerTapAccessibilityLabel: i,
-			canTapAnswers: a,
-			hasSelectedAnyAnswer: r,
-			className: l,
-			answerClassName: u,
-			renderAnswerContent: d
-		} = e,
+	let { answers: t, answersInteraction: n, answerTapAccessibilityLabel: i, canTapAnswers: a, hasSelectedAnyAnswer: r, className: l, answerClassName: u, renderAnswerContent: d } = e,
 		{ ContainerComponent: _, answerElementType: E } = (0, c.EQ)({
 			canTapAnswers: a,
 			answersInteraction: n
@@ -334,7 +325,4 @@ function G(e) {
 			})
 	});
 }
-((a = i || (i = {}))[(a.LIST_ITEM = 0)] = 'LIST_ITEM'),
-	(a[(a.RADIO = 1)] = 'RADIO'),
-	(a[(a.CHECKBOX = 2)] = 'CHECKBOX'),
-	(a[(a.LIST_ITEM_BUTTON = 3)] = 'LIST_ITEM_BUTTON');
+((a = i || (i = {}))[(a.LIST_ITEM = 0)] = 'LIST_ITEM'), (a[(a.RADIO = 1)] = 'RADIO'), (a[(a.CHECKBOX = 2)] = 'CHECKBOX'), (a[(a.LIST_ITEM_BUTTON = 3)] = 'LIST_ITEM_BUTTON');

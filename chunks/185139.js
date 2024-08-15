@@ -25,32 +25,11 @@ var f = n(122289),
 	x = n(83644);
 let I = new Set([m.h8.SKU_SELECT, m.h8.AWAITING_AUTHENTICATION, m.h8.AWAITING_PURCHASE_TOKEN_AUTH, m.h8.CONFIRM]);
 function S(e) {
-	let {
-			steps: r,
-			currentStep: n,
-			body: t,
-			paymentError: S,
-			header: C,
-			footer: T,
-			isGift: b = !1,
-			giftMessage: j = E.Z.Messages.PREMIUM_PAYMENT_IS_GIFT,
-			hideBreadcrumbs: v = !1,
-			isLoading: g = !1,
-			purchaseError: P,
-			purchaseErrorBlockRef: M,
-			planError: y,
-			onScroll: A,
-			scrollerClassName: R,
-			hasCurrencies: L = !1
-		} = e,
+	let { steps: r, currentStep: n, body: t, paymentError: S, header: C, footer: T, isGift: b = !1, giftMessage: j = E.Z.Messages.PREMIUM_PAYMENT_IS_GIFT, hideBreadcrumbs: v = !1, isLoading: g = !1, purchaseError: P, purchaseErrorBlockRef: M, planError: y, onScroll: A, scrollerClassName: R, hasCurrencies: L = !1 } = e,
 		k = null;
 	null != S && null == (0, m.ly)(S) ? (k = S) : null != P ? (k = P) : null != y && (k = y);
 	let D = null != k ? k.message : '';
-	null != k &&
-		k instanceof u.HF &&
-		(k.code === p.SM.CARD_DECLINED && L && (D += ' '.concat(E.Z.Messages.BILLING_ERROR_TRY_ANOTHER)),
-		k.code === p.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (D = E.Z.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT),
-		k.code === h.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (D = E.Z.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID));
+	null != k && k instanceof u.HF && (k.code === p.SM.CARD_DECLINED && L && (D += ' '.concat(E.Z.Messages.BILLING_ERROR_TRY_ANOTHER)), k.code === p.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (D = E.Z.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT), k.code === h.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (D = E.Z.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID));
 	let { stripe: B } = (0, _.usePaymentContext)();
 	g = g || null == B;
 	let O = o.useRef(new c.V7());

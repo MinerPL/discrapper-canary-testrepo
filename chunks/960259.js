@@ -60,11 +60,7 @@ function c(e, t) {
 				}
 				e[r] = n;
 			}
-			return (
-				(null !== (l = e.width) && void 0 !== l) || (e.width = i.size),
-				(null !== (c = e.height) && void 0 !== c) || (e.height = i.size),
-				(0, r.jsx)(t, { ...e })
-			);
+			return (null !== (l = e.width) && void 0 !== l) || (e.width = i.size), (null !== (c = e.height) && void 0 !== c) || (e.height = i.size), (0, r.jsx)(t, { ...e });
 		}
 	};
 }

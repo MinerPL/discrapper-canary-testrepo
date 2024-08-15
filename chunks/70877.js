@@ -45,10 +45,7 @@ function A(e, n, t, i) {
 				: D.Z.Messages.NOTIFICATION_TITLE_DISCORD;
 	let p = r()(R.scheduled_start_time),
 		V = null != R.scheduled_end_time ? r()(R.scheduled_end_time) : p,
-		U =
-			null != R.description && '' !== R.description
-				? c.ZP.unparse(R.description, null !== (s = null == t ? void 0 : t.id) && void 0 !== s ? s : M.lds, !0)
-				: '',
+		U = null != R.description && '' !== R.description ? c.ZP.unparse(R.description, null !== (s = null == t ? void 0 : t.id) && void 0 !== s ? s : M.lds, !0) : '',
 		G = (0, Z.KV)(R.recurrence_rule),
 		b = null != G ? (0, f.Ho)(G) : null,
 		{ startTime: x, endTime: y } = P,
@@ -64,9 +61,7 @@ function A(e, n, t, i) {
 				location: C,
 				repeating: b
 			}),
-				T.isPlatformEmbedded
-					? o.Z.fileManager.saveWithDialog(e.toString(), 'discord-event.ics')
-					: window.open(e.toURL(), '_blank');
+				T.isPlatformEmbedded ? o.Z.fileManager.saveWithDialog(e.toString(), 'discord-event.ics') : window.open(e.toURL(), '_blank');
 		};
 	return (0, l.jsxs)(E.MenuItem, {
 		id: D.Z.Messages.ADD_TO_CALENDAR,

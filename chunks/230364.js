@@ -32,9 +32,7 @@ var e = r(581031),
 					: (t.name = n)),
 			m && r && u(r, 'arity') && t.length !== r.arity && b(t, 'length', { value: r.arity });
 		try {
-			r && u(r, 'constructor') && r.constructor
-				? c && b(t, 'prototype', { writable: !1 })
-				: t.prototype && (t.prototype = void 0);
+			r && u(r, 'constructor') && r.constructor ? c && b(t, 'prototype', { writable: !1 }) : t.prototype && (t.prototype = void 0);
 		} catch (t) {}
 		var e = p(t);
 		return !u(e, 'source') && (e.source = h(x, 'string' == typeof n ? n : '')), t;

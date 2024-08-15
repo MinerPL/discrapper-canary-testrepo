@@ -26,12 +26,12 @@ let f = {
 	},
 	h = f,
 	p = new Set(),
-	I = !1;
-function m() {
+	m = !1;
+function I() {
 	a = null;
 }
 function T() {
-	(r = null), (i = null), (p = new Set()), (h.applicationId = null), (h.originURL = null), m();
+	(r = null), (i = null), (p = new Set()), (h.applicationId = null), (h.originURL = null), I();
 }
 class g extends (s = o.ZP.PersistedStore) {
 	initialize(e) {
@@ -40,7 +40,7 @@ class g extends (s = o.ZP.PersistedStore) {
 			this.waitFor(d.Z, u.Z),
 			this.syncWith([d.Z, u.Z], () => !0),
 			_.Z.whenInitialized(() => {
-				I = !0;
+				m = !0;
 			});
 	}
 	inTestModeForApplication(e) {
@@ -75,7 +75,7 @@ class g extends (s = o.ZP.PersistedStore) {
 	}
 	whenInitialized(e) {
 		this.addConditionalChangeListener(() => {
-			if (I) return setImmediate(e), !1;
+			if (m) return setImmediate(e), !1;
 		});
 	}
 }
@@ -98,7 +98,7 @@ E(g, 'displayName', 'TestModeStore'),
 			let { testModeApplicationId: t } = e;
 			r = t;
 		},
-		DEVELOPER_TEST_MODE_RESET_ERROR: m,
+		DEVELOPER_TEST_MODE_RESET_ERROR: I,
 		LOGOUT: T,
 		DEVELOPER_TEST_MODE_RESET: T
 	}));

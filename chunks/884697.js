@@ -1,6 +1,6 @@
 n.d(t, {
 	BH: function () {
-		return I;
+		return m;
 	},
 	Cs: function () {
 		return T;
@@ -45,7 +45,7 @@ n.d(t, {
 		return h;
 	},
 	rN: function () {
-		return m;
+		return I;
 	},
 	uV: function () {
 		return O;
@@ -84,19 +84,13 @@ let d = (e) => (null == e ? void 0 : e.premiumType) != null,
 	h = (e, t) => {
 		var n, r, i;
 		let a = null !== (i = e.prices[t]) && void 0 !== i ? i : null;
-		return null == a
-			? null
-			: null === (r = a.countryPrices) || void 0 === r
-				? void 0
-				: null === (n = r.prices) || void 0 === n
-					? void 0
-					: n[0];
+		return null == a ? null : null === (r = a.countryPrices) || void 0 === r ? void 0 : null === (n = r.prices) || void 0 === n ? void 0 : n[0];
 	},
 	p = {
 		original: -1,
 		discountPercentage: -1
 	},
-	I = (e, t) => {
+	m = (e, t) => {
 		let n = f(e);
 		if (n <= 0) return p;
 		let r = h(e, t ? c.tuJ.PREMIUM_TIER_2 : c.tuJ.DEFAULT);
@@ -107,7 +101,7 @@ let d = (e) => (null == e ? void 0 : e.premiumType) != null,
 					discountPercentage: Math.floor(((n - r.amount) / n) * 100)
 				};
 	},
-	m = (e) => {
+	I = (e) => {
 		var t;
 		return (null === (t = h(e, c.tuJ.DEFAULT)) || void 0 === t ? void 0 : t.amount) === 0;
 	},
@@ -144,14 +138,7 @@ let d = (e) => (null == e ? void 0 : e.premiumType) != null,
 		let { CDN_HOST: r, API_ENDPOINT: i } = window.GLOBAL_ENV,
 			s = (0, a.oO)(t.size * (0, a.x_)()),
 			o = null !== (n = null == t ? void 0 : t.format) && void 0 !== n ? n : 'png';
-		if (null != r)
-			return ''
-				.concat(location.protocol, '//')
-				.concat(r, '/app-assets/')
-				.concat(c.XAJ, '/')
-				.concat(e, '.')
-				.concat(o, '?size=')
-				.concat(s);
+		if (null != r) return ''.concat(location.protocol, '//').concat(r, '/app-assets/').concat(c.XAJ, '/').concat(e, '.').concat(o, '?size=').concat(s);
 		let l = c.ANM.APPLICATION_ASSET(c.XAJ, e, o);
 		return ''.concat(location.protocol).concat(i).concat(l, '?size=').concat(s);
 	},

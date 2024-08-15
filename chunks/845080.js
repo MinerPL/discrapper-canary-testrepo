@@ -9,17 +9,7 @@ var r = t(735250),
 	l = t(464891);
 let u = i.memo(l.ZP);
 function a(e) {
-	let {
-		message: n,
-		channel: t,
-		author: i,
-		compact: l,
-		animateAvatar: a,
-		guildId: s,
-		isGroupStart: c = !0,
-		roleIcon: d,
-		hideTimestamp: _
-	} = e;
+	let { message: n, channel: t, author: i, compact: l, animateAvatar: a, guildId: s, isGroupStart: c = !0, roleIcon: d, hideTimestamp: _ } = e;
 	return !(0, o.Z)(n) && (c || l)
 		? (0, r.jsx)(u, {
 				message: n,

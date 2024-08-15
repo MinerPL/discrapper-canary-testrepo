@@ -29,11 +29,7 @@ t.Z = new (class e {
 			i(this, 'getFilterTagIdsAnalytics', () => (null != this.filterTagIds ? Array.from(this.filterTagIds) : [])),
 			i(this, 'getSortOrderAnalytics', (e) => {
 				var t, n;
-				return null !== (n = this.sortOrder) && void 0 !== n
-					? n
-					: null === (t = r.Z.getChannel(e)) || void 0 === t
-						? void 0
-						: t.getDefaultSortOrder();
+				return null !== (n = this.sortOrder) && void 0 !== n ? n : null === (t = r.Z.getChannel(e)) || void 0 === t ? void 0 : t.getDefaultSortOrder();
 			}),
 			i(this, 'getLayoutAnalytics', (e) => {
 				var t;

@@ -23,26 +23,26 @@ var r,
 	f = n(481060),
 	h = n(727637),
 	p = n(600164),
-	I = n(745820);
+	m = n(745820);
 ((r = o || (o = {})).DEFAULT = 'default'), (r.SMALL = 'small');
-let m = {
-		default: I.shineDefault,
-		small: I.shineSmall
+let I = {
+		default: m.shineDefault,
+		small: m.shineSmall
 	},
 	T = {
-		default: I.shineInnerDefault,
-		small: I.shineInnerSmall
+		default: m.shineInnerDefault,
+		small: m.shineInnerSmall
 	};
 class g extends (l = c.PureComponent) {
 	render() {
 		let { className: e, shineSize: t, shinePaused: n, ...r } = this.props;
 		return (0, u.jsx)(E.Z.div, {
 			...r,
-			className: _()(I.shineContainer, e, { [I.shinePaused]: n }),
+			className: _()(m.shineContainer, e, { [m.shinePaused]: n }),
 			children: (0, u.jsx)(p.Z, {
 				align: p.Z.Align.CENTER,
 				justify: p.Z.Justify.CENTER,
-				className: m[t],
+				className: I[t],
 				children: (0, u.jsx)('div', { className: T[t] })
 			})
 		});
@@ -58,25 +58,14 @@ class g extends (l = c.PureComponent) {
 			})
 		: (i[a] = s);
 let S = (e) => {
-	let {
-			children: t,
-			className: n,
-			disabled: r,
-			submitting: i,
-			pauseAnimation: a,
-			shineSize: s = 'default',
-			shinePaused: o,
-			buttonShineClassName: l,
-			onlyShineOnHover: d,
-			...E
-		} = e,
+	let { children: t, className: n, disabled: r, submitting: i, pauseAnimation: a, shineSize: s = 'default', shinePaused: o, buttonShineClassName: l, onlyShineOnHover: d, ...E } = e,
 		p = c.createRef(),
-		m = (0, h.Z)(p),
-		T = !r && !i && !0 !== a && (!d || m);
+		I = (0, h.Z)(p),
+		T = !r && !i && !0 !== a && (!d || I);
 	return (0, u.jsxs)(f.Button, {
 		buttonRef: p,
 		...E,
-		className: _()(I.shinyButton, n),
+		className: _()(m.shinyButton, n),
 		disabled: r,
 		submitting: i,
 		children: [
@@ -84,7 +73,7 @@ let S = (e) => {
 			T
 				? (0, u.jsx)(g, {
 						shinePaused: o,
-						className: _()(I.buttonShine, d ? I.onlyShineOnHover : void 0, l),
+						className: _()(m.buttonShine, d ? m.onlyShineOnHover : void 0, l),
 						shineSize: s
 					})
 				: null

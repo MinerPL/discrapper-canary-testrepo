@@ -70,9 +70,7 @@ function s(e, t, n) {
 			e.addEventListener('change', c),
 			null == t || t.addEventListener('reset', l),
 			() => {
-				e.removeEventListener('invalid', u),
-					e.removeEventListener('change', c),
-					null == t || t.removeEventListener('reset', l);
+				e.removeEventListener('invalid', u), e.removeEventListener('change', c), null == t || t.removeEventListener('reset', l);
 			}
 		);
 	}, [n, u, c, l, s]);

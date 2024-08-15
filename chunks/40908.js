@@ -9,12 +9,7 @@ var n = t(470079),
 	i = t(997383);
 let r = [];
 function o(e) {
-	let {
-			visible: s,
-			autocompleterResultTypes: t,
-			autocompleterOptions: o,
-			autocompleterBeforeCreateSearchContext: l
-		} = e,
+	let { visible: s, autocompleterResultTypes: t, autocompleterOptions: o, autocompleterBeforeCreateSearchContext: l } = e,
 		[c, d] = n.useState(''),
 		[_, E] = n.useState(r),
 		u = n.useCallback((e, s) => {

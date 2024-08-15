@@ -58,22 +58,13 @@ function T(e) {
 						(0, s.jsx)(l.Z, {
 							rule: h,
 							onChangeRule: g,
-							collapsed:
-								(null == h ? void 0 : null === (n = h.triggerMetadata) || void 0 === n ? void 0 : n.regexPatterns) ==
-									null ||
-								(null == h
-									? void 0
-									: null === (T = h.triggerMetadata) || void 0 === T
-										? void 0
-										: T.regexPatterns.length) === 0
+							collapsed: (null == h ? void 0 : null === (n = h.triggerMetadata) || void 0 === n ? void 0 : n.regexPatterns) == null || (null == h ? void 0 : null === (T = h.triggerMetadata) || void 0 === T ? void 0 : T.regexPatterns.length) === 0
 						}),
 						(0, s.jsx)(i.Z, {
 							onChange: x,
 							initialValue: null === (m = h.triggerMetadata) || void 0 === m ? void 0 : m.allowList,
 							maxWordCount: _.n4,
-							collapsed:
-								(null === (N = h.triggerMetadata) || void 0 === N ? void 0 : N.allowList) == null ||
-								(null === (S = h.triggerMetadata) || void 0 === S ? void 0 : S.allowList.length) === 0
+							collapsed: (null === (N = h.triggerMetadata) || void 0 === N ? void 0 : N.allowList) == null || (null === (S = h.triggerMetadata) || void 0 === S ? void 0 : S.allowList.length) === 0
 						})
 					]
 				}),

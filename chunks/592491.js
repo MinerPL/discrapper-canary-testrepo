@@ -16,13 +16,11 @@ e.exports = function (e) {
 				.join('|') +
 			'|\\|>|&&|==|===)',
 		a = {
-			keyword:
-				'and as asr assert begin class constraint do done downto else end exception external for fun function functor if in include inherit initializer land lazy let lor lsl lsr lxor match method mod module mutable new nonrec object of open or private rec sig struct then to try type val virtual when while with',
+			keyword: 'and as asr assert begin class constraint do done downto else end exception external for fun function functor if in include inherit initializer land lazy let lor lsl lsr lxor match method mod module mutable new nonrec object of open or private rec sig struct then to try type val virtual when while with',
 			built_in: 'array bool bytes char exn|5 float int int32 int64 list lazy_t|5 nativeint|5 ref string unit ',
 			literal: 'true false'
 		},
-		s =
-			'\\b(0[xX][a-fA-F0-9_]+[Lln]?|0[oO][0-7_]+[Lln]?|0[bB][01_]+[Lln]?|[0-9][0-9_]*([Lln]|(\\.[0-9_]*)?([eE][-+]?[0-9_]+)?)?)',
+		s = '\\b(0[xX][a-fA-F0-9_]+[Lln]?|0[oO][0-7_]+[Lln]?|0[bB][01_]+[Lln]?|[0-9][0-9_]*([Lln]|(\\.[0-9_]*)?([eE][-+]?[0-9_]+)?)?)',
 		o = {
 			className: 'number',
 			relevance: 0,
@@ -89,13 +87,7 @@ e.exports = function (e) {
 					contains: [
 						{
 							className: 'params',
-							variants: [
-								{ begin: t },
-								{
-									begin: t + '(' + ('\\s*:\\s*[a-z$_][0-9a-z$_]*(\\(\\s*(' + r + '\\s*(,' + r) + '\\s*)*)?\\))?){0,2}'
-								},
-								{ begin: /\(\s*\)/ }
-							]
+							variants: [{ begin: t }, { begin: t + '(' + ('\\s*:\\s*[a-z$_][0-9a-z$_]*(\\(\\s*(' + r + '\\s*(,' + r) + '\\s*)*)?\\))?){0,2}' }, { begin: /\(\s*\)/ }]
 						}
 					]
 				},

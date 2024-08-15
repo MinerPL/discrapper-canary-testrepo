@@ -18,8 +18,8 @@ var r = n(735250),
 	f = n(43267),
 	h = n(933557),
 	p = n(703656),
-	I = n(932724),
-	m = n(672339),
+	m = n(932724),
+	I = n(672339),
 	T = n(898531),
 	g = n(923973),
 	S = n(189771),
@@ -58,8 +58,8 @@ function H(e) {
 		i.useEffect(() => {
 			let e = C.default.getCurrentUser();
 			if (s && null != e) {
-				let t = (0, I.P)(e);
-				(0, m.FU)(t, a, { track: !1 }).catch(P.dG4);
+				let t = (0, m.P)(e);
+				(0, I.FU)(t, a, { track: !1 }).catch(P.dG4);
 			}
 		}, [s, a]),
 		(0, r.jsxs)('div', {
@@ -138,8 +138,8 @@ function Z(e) {
 }
 function Y(e) {
 	let { animatedStyle: t, y: n, x: a, channel: _ } = e,
-		[p, I] = i.useState(!1),
-		m = (0, f.x)(_),
+		[p, m] = i.useState(!1),
+		I = (0, f.x)(_),
 		T = (0, h.ZP)(_),
 		[g, S] = (0, l.Wu)([R.Z], () => [R.Z.supports(U.AN.VIDEO), Object.keys(R.Z.getVideoDevices()).length]),
 		A = (0, l.e7)([y.Z], () => y.Z.isFocused()),
@@ -169,7 +169,7 @@ function Y(e) {
 				(0, r.jsx)(b.Z, {
 					className: x.icon,
 					ringing: A,
-					src: null != m ? m : '',
+					src: null != I ? I : '',
 					ringingType: b.Z.RingingType.INCOMING,
 					size: p ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80
 				}),
@@ -186,8 +186,7 @@ function Y(e) {
 							color: 'header-secondary',
 							className: x.subtitle,
 							variant: p ? 'text-sm/normal' : 'text-md/normal',
-							children:
-								N === P.WtW.VOICE ? w.Z.Messages.INCOMING_CALL_ELLIPSIS : w.Z.Messages.INCOMING_VIDEO_CALL_ELLIPSIS
+							children: N === P.WtW.VOICE ? w.Z.Messages.INCOMING_CALL_ELLIPSIS : w.Z.Messages.INCOMING_VIDEO_CALL_ELLIPSIS
 						})
 					]
 				})
@@ -233,7 +232,7 @@ function Y(e) {
 								look: u.Button.Looks.LINK,
 								color: u.Button.Colors.PRIMARY,
 								className: x.previewButton,
-								onClick: () => I(!0),
+								onClick: () => m(!0),
 								children: w.Z.Messages.INCOMING_CALL_PREVIEW_CAMERA
 							})
 						: null

@@ -363,11 +363,7 @@ class S extends i.Component {
 		let e;
 		let { user: n, comparator: s } = this.props,
 			t = _.Z.getNickname(n.id);
-		return (
-			((e = s === n.tag || null == s || '' === s ? n.username : s) === n.username || e === n.id) &&
-				(e = null != t ? t : I.ZP.getName(n)),
-			e
-		);
+		return ((e = s === n.tag || null == s || '' === s ? n.username : s) === n.username || e === n.id) && (e = null != t ? t : I.ZP.getName(n)), e;
 	}
 	renderName() {
 		let e;

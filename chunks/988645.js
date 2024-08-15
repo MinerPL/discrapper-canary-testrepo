@@ -28,17 +28,7 @@ function E(e) {
 			var t, s, l;
 			let { rating: i, problem: b, dontShowAgain: m, feedback: O } = e;
 			if ((m && (0, r.Kw)(d.v.VOICE_CALL_FEEDBACK), null != i))
-				(0, u.Z)(
-					i,
-					((t = b),
-					null !== (l = null === (s = (0, c.Z)(!1).find((e) => e.label === t)) || void 0 === s ? void 0 : s.code) &&
-					void 0 !== l
-						? l
-						: null),
-					b,
-					O,
-					E
-				),
+				(0, u.Z)(i, ((t = b), null !== (l = null === (s = (0, c.Z)(!1).find((e) => e.label === t)) || void 0 === s ? void 0 : s.code) && void 0 !== l ? l : null), b, O, E),
 					null != b &&
 						(0, a.openModalLazy)(async () => {
 							let { default: e } = await o.e('14466').then(o.bind(o, 729328));

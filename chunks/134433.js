@@ -18,10 +18,10 @@ function _(e) {
 	let t,
 		{ color: n, size: i, forcedIconColor: _, className: E, iconClassName: f } = e,
 		[h, p] = (0, o.Wu)([c.Z], () => [c.Z.desaturateUserColors, c.Z.saturation]),
-		I = (0, u.useToken)(l.Z.unsafe_rawColors.PRIMARY_300).hex(),
-		m = (0, s._i)(null != n ? n : I),
-		T = (0, s.ho)(m, !1, h ? p : null);
-	t = null != _ ? _ : 0.3 > (0, s.Bd)(m) ? l.Z.unsafe_rawColors.PRIMARY_630.css : l.Z.unsafe_rawColors.WHITE_500.css;
+		m = (0, u.useToken)(l.Z.unsafe_rawColors.PRIMARY_300).hex(),
+		I = (0, s._i)(null != n ? n : m),
+		T = (0, s.ho)(I, !1, h ? p : null);
+	t = null != _ ? _ : 0.3 > (0, s.Bd)(I) ? l.Z.unsafe_rawColors.PRIMARY_630.css : l.Z.unsafe_rawColors.WHITE_500.css;
 	let g = i / 8;
 	return (0, r.jsx)('div', {
 		style: {

@@ -44,11 +44,7 @@ class x extends (o = r.PureComponent) {
 		let { authenticated: t, transitionTo: s } = this.props;
 		if ((t && !e.authenticated && s(I.Z5c.APP), e.errors !== this.props.errors)) {
 			var o, n, r;
-			this.hasError('password')
-				? null === (o = this.passwordRef) || void 0 === o || o.focus()
-				: this.hasError('email') || this.hasError('login')
-					? null === (n = this.loginRef) || void 0 === n || n.focus()
-					: this.hasError('code') && (null === (r = this.codeRef) || void 0 === r || r.focus());
+			this.hasError('password') ? null === (o = this.passwordRef) || void 0 === o || o.focus() : this.hasError('email') || this.hasError('login') ? null === (n = this.loginRef) || void 0 === n || n.focus() : this.hasError('code') && (null === (r = this.codeRef) || void 0 === r || r.focus());
 		}
 	}
 	componentWillUnmount() {
@@ -217,9 +213,7 @@ class x extends (o = r.PureComponent) {
 						}),
 						(0, n.jsx)('div', {
 							className: i()(S.marginTop8, O.needAccount),
-							children: R.Z.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_CANCEL.format({
-								onClick: this.handleCancelAccountDeletion
-							})
+							children: R.Z.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_CANCEL.format({ onClick: this.handleCancelAccountDeletion })
 						})
 					]
 				})
@@ -246,9 +240,7 @@ class x extends (o = r.PureComponent) {
 				className: S.marginTop20,
 				children: (0, n.jsx)(f.Z, {
 					title: R.Z.Messages.PASSWORD_RECOVERY_VERIFY_PHONE_TITLE,
-					subtitle: R.Z.Messages.PASSWORD_RECOVERY_VERIFY_PHONE_SUBTITLE_RESEND.format({
-						onResendClick: this.handleResendCode
-					}),
+					subtitle: R.Z.Messages.PASSWORD_RECOVERY_VERIFY_PHONE_SUBTITLE_RESEND.format({ onResendClick: this.handleResendCode }),
 					error: t,
 					onSubmit: this.handlePasswordReset,
 					onCancel: void 0
@@ -289,9 +281,7 @@ class x extends (o = r.PureComponent) {
 					var t;
 					null === (t = this.passwordRef) || void 0 === t || t.focus(), e.stopPropagation(), e.preventDefault();
 				}
-				'Enter' === e.key &&
-					(e.target === this.loginRef || e.target === this.passwordRef) &&
-					(this.handleLogin(), e.stopPropagation(), e.preventDefault());
+				'Enter' === e.key && (e.target === this.loginRef || e.target === this.passwordRef) && (this.handleLogin(), e.stopPropagation(), e.preventDefault());
 			}),
 			M(this, 'setLoginRef', (e) => {
 				this.loginRef = e;

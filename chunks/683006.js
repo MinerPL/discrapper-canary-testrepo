@@ -5,9 +5,7 @@ function a() {}
 	(e.exports = function () {
 		function e(e, t, n, i, a, s) {
 			if (s !== r) {
-				var o = Error(
-					'Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types'
-				);
+				var o = Error('Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types');
 				throw ((o.name = 'Invariant Violation'), o);
 			}
 		}

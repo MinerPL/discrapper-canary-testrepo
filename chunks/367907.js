@@ -38,8 +38,8 @@ var r = n(392711),
 	f = n(430824),
 	h = n(131951),
 	p = n(496675),
-	I = n(158776),
-	m = n(19780),
+	m = n(158776),
+	I = n(19780),
 	T = n(306680),
 	g = n(944486),
 	S = n(914010),
@@ -113,7 +113,7 @@ function U(e) {
 	let t = c.Z.getChannel(e);
 	if (null == t) return null;
 	let n = h.Z.isVideoEnabled(),
-		r = m.Z.getMediaSessionId();
+		r = I.Z.getMediaSessionId();
 	return {
 		channel_id: t.id,
 		channel_type: t.type,
@@ -132,18 +132,7 @@ function w(e) {
 		u = 'guild_id' in s ? s.guild_id : l ? S.Z.getGuildId() : null,
 		d = 'channel_id' in s ? s.channel_id : l ? g.Z.getChannelId(u) : null,
 		_ = c.Z.getChannel(d);
-	let E =
-		((t = _),
-		(n = u),
-		null == t
-			? null != n
-				? n
-				: null
-			: t.isPrivate()
-				? null
-				: null !== (i = null !== (r = t.getGuildId()) && void 0 !== r ? r : n) && void 0 !== i
-					? i
-					: null);
+	let E = ((t = _), (n = u), null == t ? (null != n ? n : null) : t.isPrivate() ? null : null !== (i = null !== (r = t.getGuildId()) && void 0 !== r ? r : n) && void 0 !== i ? i : null);
 	let f = {
 		...s,
 		...b(E),
@@ -203,9 +192,7 @@ function k(e, t) {
 	let n = { custom_status_count: 0 };
 	return (
 		i()(N.Z.getVoiceStates(e)).forEach((e) => {
-			e.channelId === t &&
-				null != I.Z.findActivity(e.userId, (e) => e.type === y.IIU.CUSTOM_STATUS) &&
-				n.custom_status_count++;
+			e.channelId === t && null != m.Z.findActivity(e.userId, (e) => e.type === y.IIU.CUSTOM_STATUS) && n.custom_status_count++;
 		}),
 		n
 	);

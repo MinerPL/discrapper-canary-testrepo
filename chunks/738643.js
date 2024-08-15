@@ -12,14 +12,5 @@ var i = n(442837),
 function c(e, t) {
 	let n = (0, i.e7)([l.Z], () => l.Z.getGuild(t)),
 		c = (0, i.e7)([s.Z], () => s.Z.getChannel(e));
-	return (
-		e === (0, i.e7)([r.Z], () => r.Z.getChannelId(t)) &&
-		null != c &&
-		null != n &&
-		c.getGuildId() === n.id &&
-		(0, a.zi)(c.type) &&
-		n.hasFeature(o.oNc.WELCOME_SCREEN_ENABLED) &&
-		n.hasFeature(o.oNc.COMMUNITY) &&
-		!n.hasFeature(o.oNc.GUILD_SERVER_GUIDE)
-	);
+	return e === (0, i.e7)([r.Z], () => r.Z.getChannelId(t)) && null != c && null != n && c.getGuildId() === n.id && (0, a.zi)(c.type) && n.hasFeature(o.oNc.WELCOME_SCREEN_ENABLED) && n.hasFeature(o.oNc.COMMUNITY) && !n.hasFeature(o.oNc.GUILD_SERVER_GUIDE);
 }

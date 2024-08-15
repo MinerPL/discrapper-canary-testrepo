@@ -9,10 +9,7 @@ var r = n(521548),
 function u(e, t) {
 	for (var n = 0; n < t.length; n++) {
 		var r = t[n];
-		(r.enumerable = r.enumerable || !1),
-			(r.configurable = !0),
-			'value' in r && (r.writable = !0),
-			Object.defineProperty(e, r.key, r);
+		(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 	}
 }
 function a(e, t, n) {
@@ -40,10 +37,7 @@ var c = (function () {
 				'hooks',
 				(0, i.p)({
 					dropTarget: function (e, n) {
-						t.clearDropTarget(),
-							(t.dropTargetOptions = n),
-							(0, o.d)(e) ? (t.dropTargetRef = e) : (t.dropTargetNode = e),
-							t.reconnect();
+						t.clearDropTarget(), (t.dropTargetOptions = n), (0, o.d)(e) ? (t.dropTargetRef = e) : (t.dropTargetNode = e), t.reconnect();
 					}
 				})
 			),
@@ -78,11 +72,7 @@ var c = (function () {
 							this.lastConnectedDropTarget = t;
 							return;
 						}
-						e &&
-							((this.lastConnectedHandlerId = this.handlerId),
-							(this.lastConnectedDropTarget = t),
-							(this.lastConnectedDropTargetOptions = this.dropTargetOptions),
-							(this.unsubscribeDropTarget = this.backend.connectDropTarget(this.handlerId, t, this.dropTargetOptions)));
+						e && ((this.lastConnectedHandlerId = this.handlerId), (this.lastConnectedDropTarget = t), (this.lastConnectedDropTargetOptions = this.dropTargetOptions), (this.unsubscribeDropTarget = this.backend.connectDropTarget(this.handlerId, t, this.dropTargetOptions)));
 					}
 				}
 			},

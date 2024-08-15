@@ -15,17 +15,7 @@ var a = s(735250),
 	u = s(78247),
 	c = s(800010);
 function C(e) {
-	let {
-			transitionState: t,
-			onFormSubmit: s,
-			onResend: C,
-			onSuccess: _,
-			onClose: h,
-			headerText: T,
-			confirmButtonText: m,
-			confirmButtonColor: E,
-			impressionName: N
-		} = e,
+	let { transitionState: t, onFormSubmit: s, onResend: C, onSuccess: _, onClose: h, headerText: T, confirmButtonText: m, confirmButtonColor: E, impressionName: N } = e,
 		[M, S] = l.useState(!1),
 		[I, p] = l.useState(''),
 		[x, f] = l.useState(!1),
@@ -50,10 +40,7 @@ function C(e) {
 			if (!x) {
 				f(!0);
 				try {
-					await C(),
-						(0, n.showToast)(
-							(0, n.createToast)(d.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT, n.ToastType.SUCCESS)
-						);
+					await C(), (0, n.showToast)((0, n.createToast)(d.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT, n.ToastType.SUCCESS));
 				} catch (t) {
 					let e = new r.Z(t).getAnyErrorMessage();
 					null != e && (0, n.showToast)((0, n.createToast)(e, n.ToastType.FAILURE));

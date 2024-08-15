@@ -71,10 +71,7 @@ class c extends (r = a.PureComponent) {
 			className: o()(l.video, t, { [l.mirror]: e }),
 			onDoubleClick: this.handleDoubleClick,
 			onContextMenu: this.handleContextMenu,
-			children: [
-				this.renderVideo(this.state.aStreamId, this.state.aReady),
-				this.renderVideo(this.state.bStreamId, this.state.bReady)
-			]
+			children: [this.renderVideo(this.state.aStreamId, this.state.aReady), this.renderVideo(this.state.bStreamId, this.state.bReady)]
 		});
 	}
 	constructor(...e) {

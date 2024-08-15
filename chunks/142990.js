@@ -21,10 +21,7 @@ function u(e) {
 			let o = e.target[0];
 			return (0, a.mG)(o)
 				? (0, r.jsxs)(r.Fragment, {
-						children: [
-							(0, r.jsx)('span', { children: o }),
-							(0, r.jsx)(i.Fragment, { children: (0, r.jsx)(s.Z, { url: o }, o) }, n.key)
-						]
+						children: [(0, r.jsx)('span', { children: o }), (0, r.jsx)(i.Fragment, { children: (0, r.jsx)(s.Z, { url: o }, o) }, n.key)]
 					})
 				: (0, r.jsx)('span', { children: o });
 		},

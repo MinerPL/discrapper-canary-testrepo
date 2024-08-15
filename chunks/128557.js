@@ -23,8 +23,8 @@ var i = n(735250),
 	_ = n(644914),
 	f = n(434404),
 	E = n(330010),
-	g = n(314897),
-	C = n(430824),
+	C = n(314897),
+	g = n(430824),
 	I = n(594174),
 	x = n(259580),
 	T = n(585483),
@@ -76,16 +76,13 @@ function j(e) {
 }
 function L(e) {
 	let { channel: t } = e,
-		s = (0, c.e7)([C.Z], () => (null != t ? C.Z.getGuild(t.getGuildId()) : null), [t]),
+		s = (0, c.e7)([g.Z], () => (null != t ? g.Z.getGuild(t.getGuildId()) : null), [t]),
 		h = null != s && S.default.extractTimestamp(s.id) < Date.now() - A._8R,
-		x = (0, c.e7)([g.default], () => (null == s ? void 0 : s.ownerId) === g.default.getId(), [s]),
+		x = (0, c.e7)([C.default], () => (null == s ? void 0 : s.ownerId) === C.default.getId(), [s]),
 		{ canInvite: L, canManageGuild: P, canMessage: O } = (0, _.TE)(t, s),
 		y = (0, c.e7)([I.default], () => {
 			var e, t;
-			return (
-				(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 ||
-				(null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0
-			);
+			return (null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0;
 		}),
 		{ guildPopulated: D, guildMessaged: k, guildPersonalized: U } = (0, _.h_)(s),
 		{
@@ -325,10 +322,7 @@ function L(e) {
 		));
 	let q = x ? b.Z.Messages.WELCOME_CTA_SUBTITLE_OWNER : b.Z.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
 	h && (q = b.Z.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
-	let X = ''.concat(
-		N.Z.getArticleURL(A.BhN.GUILD_GETTING_STARTED),
-		'?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm'
-	);
+	let X = ''.concat(N.Z.getArticleURL(A.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
 	return (0, i.jsx)(Z.ZP, {
 		channelId: t.id,
 		children: (0, i.jsx)('div', {
@@ -351,11 +345,7 @@ function L(e) {
 									[R.noChildren]: 0 === K.length
 								}),
 								variant: 'text-sm/normal',
-								children: [
-									q,
-									' ',
-									K.length > 0 ? b.Z.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({ guideURL: X }) : null
-								]
+								children: [q, ' ', K.length > 0 ? b.Z.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({ guideURL: X }) : null]
 							})
 						]
 					}),

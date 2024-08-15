@@ -40,20 +40,7 @@ var r = t(442837),
 n.default = (0, o.Z)(
 	(0, a.Z)(
 		function (e) {
-			let {
-					user: n,
-					guildId: t,
-					channel: a,
-					showMediaItems: o = !1,
-					showChatItems: c = !0,
-					showChannelCallItems: F = !1,
-					showModalItems: V = !0,
-					showStageChannelItems: k = !1,
-					context: w,
-					onSelect: j,
-					onHeightUpdate: K,
-					viewingChannelId: W
-				} = e,
+			let { user: n, guildId: t, channel: a, showMediaItems: o = !1, showChatItems: c = !0, showChannelCallItems: F = !1, showModalItems: V = !0, showStageChannelItems: k = !1, context: w, onSelect: j, onHeightUpdate: K, viewingChannelId: W } = e,
 				Y = {
 					page: x.ZY5.GUILD_CHANNEL,
 					section: x.jXE.CHAT_USERNAME,

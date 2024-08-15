@@ -39,9 +39,7 @@ var t,
 	S = n(296507),
 	b = n(866402),
 	P = n(246403);
-((l = t || (t = {}))[(l.CLAIM_ACCOUNT = 0)] = 'CLAIM_ACCOUNT'),
-	(l[(l.EMAIL_CONFIRMATION = 1)] = 'EMAIL_CONFIRMATION'),
-	(l[(l.VERIFICATION_FORM = 2)] = 'VERIFICATION_FORM');
+((l = t || (t = {}))[(l.CLAIM_ACCOUNT = 0)] = 'CLAIM_ACCOUNT'), (l[(l.EMAIL_CONFIRMATION = 1)] = 'EMAIL_CONFIRMATION'), (l[(l.VERIFICATION_FORM = 2)] = 'VERIFICATION_FORM');
 let y = (e) => {
 		let { headerId: s, email: n, password: t, setEmail: l, setPassword: a, emailError: r, passwordError: o } = e;
 		return (0, i.jsxs)('div', {
@@ -222,9 +220,7 @@ s.Z = (e) => {
 			numGuildEmoji: e_
 		} = a.useMemo(() => {
 			var e;
-			let s = [
-					...(null !== (e = 0 === z.length ? (null == ec ? void 0 : ec.emojis) : z) && void 0 !== e ? e : [])
-				].reverse(),
+			let s = [...(null !== (e = 0 === z.length ? (null == ec ? void 0 : ec.emojis) : z) && void 0 !== e ? e : [])].reverse(),
 				n = 0,
 				t = s.length;
 			return (
@@ -270,15 +266,7 @@ s.Z = (e) => {
 			let e = q.some((e) => e.field_type !== A.QJ.TERMS && (0, O.OA)(e));
 			e && !S ? (0, F.a5)(!0) : !e && S && (0, F.a5)(!1);
 		}, [q, S]);
-	let eR = a.useMemo(
-			() =>
-				!(
-					(((null == eI ? void 0 : eI.verificationLevel) !== L.sFg.VERY_HIGH || (null == k ? void 0 : k.isStaff())) &&
-						H) ||
-					Y
-				) || q.some((e) => !(0, O.OA)(e)),
-			[q, eI, Y, H, k]
-		),
+	let eR = a.useMemo(() => !((((null == eI ? void 0 : eI.verificationLevel) !== L.sFg.VERY_HIGH || (null == k ? void 0 : k.isStaff())) && H) || Y) || q.some((e) => !(0, O.OA)(e)), [q, eI, Y, H, k]),
 		ef = (0, d.e7)([E.Z], () => E.Z.useReducedMotion);
 	if (null == eI) return null;
 	let eg = async () => {
@@ -292,8 +280,7 @@ s.Z = (e) => {
 					en(1);
 			} catch (n) {
 				var e, s;
-				eo(null == n ? void 0 : null === (e = n.body) || void 0 === e ? void 0 : e.email),
-					eu(null == n ? void 0 : null === (s = n.body) || void 0 === s ? void 0 : s.password);
+				eo(null == n ? void 0 : null === (e = n.body) || void 0 === e ? void 0 : e.email), eu(null == n ? void 0 : null === (s = n.body) || void 0 === s ? void 0 : s.password);
 			} finally {
 				K(!1);
 			}
@@ -316,10 +303,7 @@ s.Z = (e) => {
 			} catch (t) {
 				var s, n;
 				let e = null == t ? void 0 : t.body;
-				(null == e ? void 0 : null === (s = e.errors) || void 0 === s ? void 0 : s.version) != null ||
-				(null == e ? void 0 : null === (n = e.errors) || void 0 === n ? void 0 : n.form_fields) != null
-					? ee(p.Z.Messages.MEMBER_VERIFICATION_VERSION_MISMATCH_ERROR)
-					: ee(null == e ? void 0 : e.message);
+				(null == e ? void 0 : null === (s = e.errors) || void 0 === s ? void 0 : s.version) != null || (null == e ? void 0 : null === (n = e.errors) || void 0 === n ? void 0 : n.form_fields) != null ? ee(p.Z.Messages.MEMBER_VERIFICATION_VERSION_MISMATCH_ERROR) : ee(null == e ? void 0 : e.message);
 			} finally {
 				K(!1);
 			}
@@ -354,9 +338,7 @@ s.Z = (e) => {
 								? (0, i.jsxs)(i.Fragment, {
 										children: [
 											(0, i.jsx)('hr', { className: B.divider }),
-											(0, i.jsx)(u.FormTitle, {
-												children: p.Z.Messages.MEMBER_VERIFICATION_NUM_EMOJIS.format({ emojis: e_ })
-											}),
+											(0, i.jsx)(u.FormTitle, { children: p.Z.Messages.MEMBER_VERIFICATION_NUM_EMOJIS.format({ emojis: e_ }) }),
 											(0, i.jsxs)('div', {
 												className: B.emojisContainer,
 												children: [

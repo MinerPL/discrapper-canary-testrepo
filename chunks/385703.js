@@ -12,19 +12,7 @@ var r = n(710659),
 	},
 	u = (function () {
 		function e(e, t, n, i) {
-			if (
-				(void 0 === t && (t = o),
-				void 0 === n && (n = r.Z),
-				void 0 === i && (i = l),
-				(this.text = []),
-				(this.language = n || r.Z),
-				(this.gettext = t),
-				(this.dateFormatter = i),
-				(this.rrule = e),
-				(this.options = e.options),
-				(this.origOptions = e.origOptions),
-				this.origOptions.bymonthday)
-			) {
+			if ((void 0 === t && (t = o), void 0 === n && (n = r.Z), void 0 === i && (i = l), (this.text = []), (this.language = n || r.Z), (this.gettext = t), (this.dateFormatter = i), (this.rrule = e), (this.options = e.options), (this.origOptions = e.origOptions), this.origOptions.bymonthday)) {
 				var s = [].concat(this.options.bymonthday),
 					u = [].concat(this.options.bynmonthday);
 				s.sort(function (e, t) {
@@ -46,30 +34,13 @@ var r = n(710659),
 					someWeeks: c.filter(function (e) {
 						return !!e.n;
 					}),
-					isWeekdays:
-						-1 !== d.indexOf('MO') &&
-						-1 !== d.indexOf('TU') &&
-						-1 !== d.indexOf('WE') &&
-						-1 !== d.indexOf('TH') &&
-						-1 !== d.indexOf('FR') &&
-						-1 === d.indexOf('SA') &&
-						-1 === d.indexOf('SU'),
-					isEveryDay:
-						-1 !== d.indexOf('MO') &&
-						-1 !== d.indexOf('TU') &&
-						-1 !== d.indexOf('WE') &&
-						-1 !== d.indexOf('TH') &&
-						-1 !== d.indexOf('FR') &&
-						-1 !== d.indexOf('SA') &&
-						-1 !== d.indexOf('SU')
+					isWeekdays: -1 !== d.indexOf('MO') && -1 !== d.indexOf('TU') && -1 !== d.indexOf('WE') && -1 !== d.indexOf('TH') && -1 !== d.indexOf('FR') && -1 === d.indexOf('SA') && -1 === d.indexOf('SU'),
+					isEveryDay: -1 !== d.indexOf('MO') && -1 !== d.indexOf('TU') && -1 !== d.indexOf('WE') && -1 !== d.indexOf('TH') && -1 !== d.indexOf('FR') && -1 !== d.indexOf('SA') && -1 !== d.indexOf('SU')
 				};
 				var _ = function (e, t) {
 					return e.weekday - t.weekday;
 				};
-				this.byweekday.allWeeks.sort(_),
-					this.byweekday.someWeeks.sort(_),
-					!this.byweekday.allWeeks.length && (this.byweekday.allWeeks = null),
-					!this.byweekday.someWeeks.length && (this.byweekday.someWeeks = null);
+				this.byweekday.allWeeks.sort(_), this.byweekday.someWeeks.sort(_), !this.byweekday.allWeeks.length && (this.byweekday.allWeeks = null), !this.byweekday.someWeeks.length && (this.byweekday.someWeeks = null);
 			} else this.byweekday = null;
 		}
 		return (
@@ -100,63 +71,27 @@ var r = n(710659),
 			}),
 			(e.prototype.HOURLY = function () {
 				var e = this.gettext;
-				1 !== this.options.interval && this.add(this.options.interval.toString()),
-					this.add(e(this.plural(this.options.interval) ? 'hours' : 'hour'));
+				1 !== this.options.interval && this.add(this.options.interval.toString()), this.add(e(this.plural(this.options.interval) ? 'hours' : 'hour'));
 			}),
 			(e.prototype.MINUTELY = function () {
 				var e = this.gettext;
-				1 !== this.options.interval && this.add(this.options.interval.toString()),
-					this.add(e(this.plural(this.options.interval) ? 'minutes' : 'minute'));
+				1 !== this.options.interval && this.add(this.options.interval.toString()), this.add(e(this.plural(this.options.interval) ? 'minutes' : 'minute'));
 			}),
 			(e.prototype.DAILY = function () {
 				var e = this.gettext;
-				1 !== this.options.interval && this.add(this.options.interval.toString()),
-					this.byweekday && this.byweekday.isWeekdays
-						? this.add(e(this.plural(this.options.interval) ? 'weekdays' : 'weekday'))
-						: this.add(e(this.plural(this.options.interval) ? 'days' : 'day')),
-					this.origOptions.bymonth && (this.add(e('in')), this._bymonth()),
-					this.bymonthday
-						? this._bymonthday()
-						: this.byweekday
-							? this._byweekday()
-							: this.origOptions.byhour && this._byhour();
+				1 !== this.options.interval && this.add(this.options.interval.toString()), this.byweekday && this.byweekday.isWeekdays ? this.add(e(this.plural(this.options.interval) ? 'weekdays' : 'weekday')) : this.add(e(this.plural(this.options.interval) ? 'days' : 'day')), this.origOptions.bymonth && (this.add(e('in')), this._bymonth()), this.bymonthday ? this._bymonthday() : this.byweekday ? this._byweekday() : this.origOptions.byhour && this._byhour();
 			}),
 			(e.prototype.WEEKLY = function () {
 				var e = this.gettext;
-				1 !== this.options.interval &&
-					this.add(this.options.interval.toString()).add(e(this.plural(this.options.interval) ? 'weeks' : 'week')),
-					this.byweekday && this.byweekday.isWeekdays
-						? 1 === this.options.interval
-							? this.add(e(this.plural(this.options.interval) ? 'weekdays' : 'weekday'))
-							: this.add(e('on')).add(e('weekdays'))
-						: this.byweekday && this.byweekday.isEveryDay
-							? this.add(e(this.plural(this.options.interval) ? 'days' : 'day'))
-							: (1 === this.options.interval && this.add(e('week')),
-								this.origOptions.bymonth && (this.add(e('in')), this._bymonth()),
-								this.bymonthday ? this._bymonthday() : this.byweekday && this._byweekday());
+				1 !== this.options.interval && this.add(this.options.interval.toString()).add(e(this.plural(this.options.interval) ? 'weeks' : 'week')), this.byweekday && this.byweekday.isWeekdays ? (1 === this.options.interval ? this.add(e(this.plural(this.options.interval) ? 'weekdays' : 'weekday')) : this.add(e('on')).add(e('weekdays'))) : this.byweekday && this.byweekday.isEveryDay ? this.add(e(this.plural(this.options.interval) ? 'days' : 'day')) : (1 === this.options.interval && this.add(e('week')), this.origOptions.bymonth && (this.add(e('in')), this._bymonth()), this.bymonthday ? this._bymonthday() : this.byweekday && this._byweekday());
 			}),
 			(e.prototype.MONTHLY = function () {
 				var e = this.gettext;
-				this.origOptions.bymonth
-					? (1 !== this.options.interval &&
-							(this.add(this.options.interval.toString()).add(e('months')),
-							this.plural(this.options.interval) && this.add(e('in'))),
-						this._bymonth())
-					: (1 !== this.options.interval && this.add(this.options.interval.toString()),
-						this.add(e(this.plural(this.options.interval) ? 'months' : 'month'))),
-					this.bymonthday
-						? this._bymonthday()
-						: this.byweekday && this.byweekday.isWeekdays
-							? this.add(e('on')).add(e('weekdays'))
-							: this.byweekday && this._byweekday();
+				this.origOptions.bymonth ? (1 !== this.options.interval && (this.add(this.options.interval.toString()).add(e('months')), this.plural(this.options.interval) && this.add(e('in'))), this._bymonth()) : (1 !== this.options.interval && this.add(this.options.interval.toString()), this.add(e(this.plural(this.options.interval) ? 'months' : 'month'))), this.bymonthday ? this._bymonthday() : this.byweekday && this.byweekday.isWeekdays ? this.add(e('on')).add(e('weekdays')) : this.byweekday && this._byweekday();
 			}),
 			(e.prototype.YEARLY = function () {
 				var e = this.gettext;
-				this.origOptions.bymonth
-					? (1 !== this.options.interval && (this.add(this.options.interval.toString()), this.add(e('years'))),
-						this._bymonth())
-					: (1 !== this.options.interval && this.add(this.options.interval.toString()),
-						this.add(e(this.plural(this.options.interval) ? 'years' : 'year'))),
+				this.origOptions.bymonth ? (1 !== this.options.interval && (this.add(this.options.interval.toString()), this.add(e('years'))), this._bymonth()) : (1 !== this.options.interval && this.add(this.options.interval.toString()), this.add(e(this.plural(this.options.interval) ? 'years' : 'year'))),
 					this.bymonthday ? this._bymonthday() : this.byweekday && this._byweekday(),
 					this.options.byyearday &&
 						this.add(e('on the'))
@@ -178,12 +113,7 @@ var r = n(710659),
 			}),
 			(e.prototype._byweekday = function () {
 				var e = this.gettext;
-				this.byweekday.allWeeks &&
-					!this.byweekday.isWeekdays &&
-					this.add(e('on')).add(this.list(this.byweekday.allWeeks, this.weekdaytext)),
-					this.byweekday.someWeeks &&
-						(this.byweekday.allWeeks && this.add(e('and')),
-						this.add(e('on the')).add(this.list(this.byweekday.someWeeks, this.weekdaytext, e('and'))));
+				this.byweekday.allWeeks && !this.byweekday.isWeekdays && this.add(e('on')).add(this.list(this.byweekday.allWeeks, this.weekdaytext)), this.byweekday.someWeeks && (this.byweekday.allWeeks && this.add(e('and')), this.add(e('on the')).add(this.list(this.byweekday.someWeeks, this.weekdaytext, e('and'))));
 			}),
 			(e.prototype._byhour = function () {
 				var e = this.gettext;
@@ -243,8 +173,7 @@ var r = n(710659),
 				};
 				return n
 					? (function (e, t, n) {
-							for (var r = '', i = 0; i < e.length; i++)
-								0 !== i && (i === e.length - 1 ? (r += ' ' + n + ' ') : (r += t + ' ')), (r += e[i]);
+							for (var r = '', i = 0; i < e.length; i++) 0 !== i && (i === e.length - 1 ? (r += ' ' + n + ' ') : (r += t + ' ')), (r += e[i]);
 							return r;
 						})(e.map(s), r, n)
 					: e.map(s).join(r + ' ');

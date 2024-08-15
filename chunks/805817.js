@@ -12,10 +12,7 @@ var r = n(686942),
 		return (
 			(e.prototype.rebuild = function (e, t) {
 				var n = this.options;
-				if (
-					(e !== this.lastyear && (this.yearinfo = (0, a.h)(e, n)),
-					(0, r.Dw)(n.bynweekday) && (t !== this.lastmonth || e !== this.lastyear))
-				) {
+				if ((e !== this.lastyear && (this.yearinfo = (0, a.h)(e, n)), (0, r.Dw)(n.bynweekday) && (t !== this.lastmonth || e !== this.lastyear))) {
 					var i = this.yearinfo,
 						l = i.yearlen,
 						u = i.mrange,
@@ -112,16 +109,11 @@ var r = n(686942),
 				return [(0, r.w6)(this.yearlen), 0, this.yearlen];
 			}),
 			(e.prototype.mdayset = function (e, t) {
-				for (var n = this.mrange[t - 1], i = this.mrange[t], a = (0, r.rx)(null, this.yearlen), s = n; s < i; s++)
-					a[s] = s;
+				for (var n = this.mrange[t - 1], i = this.mrange[t], a = (0, r.rx)(null, this.yearlen), s = n; s < i; s++) a[s] = s;
 				return [a, n, i];
 			}),
 			(e.prototype.wdayset = function (e, t, n) {
-				for (
-					var i = (0, r.rx)(null, this.yearlen + 7), a = (0, u.fv)((0, u.t2)(e, t, n)) - this.yearordinal, s = a, o = 0;
-					o < 7 && ((i[a] = a), ++a, this.wdaymask[a] !== this.options.wkst);
-					o++
-				);
+				for (var i = (0, r.rx)(null, this.yearlen + 7), a = (0, u.fv)((0, u.t2)(e, t, n)) - this.yearordinal, s = a, o = 0; o < 7 && ((i[a] = a), ++a, this.wdaymask[a] !== this.options.wkst); o++);
 				return [i, s, a];
 			}),
 			(e.prototype.ddayset = function (e, t, n) {

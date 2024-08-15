@@ -12,24 +12,9 @@ var a = t(481060),
 	o = t(612853),
 	c = t(689938),
 	u = t(527926);
-((r = i || (i = {}))[(r.CONTINUE = 0)] = 'CONTINUE'),
-	(r[(r.UPGRADE = 1)] = 'UPGRADE'),
-	(r[(r.PURCHASE = 2)] = 'PURCHASE');
+((r = i || (i = {}))[(r.CONTINUE = 0)] = 'CONTINUE'), (r[(r.UPGRADE = 1)] = 'UPGRADE'), (r[(r.PURCHASE = 2)] = 'PURCHASE');
 let d = (e) => {
-	let {
-		onBack: n,
-		backText: t,
-		primaryIcon: r,
-		primaryCTA: i,
-		primaryType: d,
-		primaryText: m,
-		primaryTooltip: f,
-		primaryDisabled: x,
-		primarySubmitting: h,
-		onPrimary: j,
-		secondaryText: v,
-		onSecondary: N
-	} = e;
+	let { onBack: n, backText: t, primaryIcon: r, primaryCTA: i, primaryType: d, primaryText: m, primaryTooltip: f, primaryDisabled: x, primarySubmitting: h, onPrimary: j, secondaryText: v, onSecondary: N } = e;
 	return (0, l.jsxs)(a.ModalFooter, {
 		justify: s.Z.Justify.BETWEEN,
 		align: s.Z.Align.CENTER,

@@ -13,17 +13,7 @@ var r = n(735250),
 function u(e, t) {
 	let n = (0, l.G6)(e);
 	return i.forwardRef(function (a, u) {
-		let {
-				children: c,
-				className: d,
-				dir: _ = 'ltr',
-				orientation: E = 'vertical',
-				paddingFix: f = !0,
-				fade: h = !1,
-				onScroll: p,
-				style: I,
-				...m
-			} = a,
+		let { children: c, className: d, dir: _ = 'ltr', orientation: E = 'vertical', paddingFix: f = !0, fade: h = !1, onScroll: p, style: m, ...I } = a,
 			T = i.useRef(null),
 			g = (0, l.tT)({
 				paddingFix: f,
@@ -41,9 +31,9 @@ function u(e, t) {
 				[e]: !0,
 				[t]: h
 			}),
-			style: (0, l.uT)(I, E),
+			style: (0, l.uT)(m, E),
 			dir: _,
-			...m,
+			...I,
 			children: (0, r.jsxs)(o.Jc, {
 				containerRef: T,
 				children: [c, g]

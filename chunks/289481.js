@@ -99,11 +99,7 @@ let R = a.memo(function (e) {
 				mentionCount: t.mentionCount,
 				toggleCollapsed: r,
 				channelState: t,
-				children: [
-					(0, i.jsx)(h.Z, { channel: l }),
-					(0, i.jsx)(x, { ...e }),
-					'nsfw' === t.type ? null : (0, i.jsx)(O, { ...e })
-				]
+				children: [(0, i.jsx)(h.Z, { channel: l }), (0, i.jsx)(x, { ...e }), 'nsfw' === t.type ? null : (0, i.jsx)(O, { ...e })]
 			}),
 			children: t.collapsed
 				? null

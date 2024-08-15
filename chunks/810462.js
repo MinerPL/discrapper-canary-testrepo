@@ -8,27 +8,15 @@ var r = n(735250),
 	u = n(28546),
 	c = n(888436);
 let d = i.forwardRef(function (e, t) {
-	let {
-			store: n,
-			hasSendableExpressions: d,
-			onKeyDown: _,
-			gridNavigatorId: E,
-			expressionsListRef: f,
-			defaultSearchPlaceholder: h,
-			emptySearchPlaceholder: p
-		} = e,
-		I = i.useRef(null),
-		[m, T] = (0, u.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], a.Z),
+	let { store: n, hasSendableExpressions: d, onKeyDown: _, gridNavigatorId: E, expressionsListRef: f, defaultSearchPlaceholder: h, emptySearchPlaceholder: p } = e,
+		m = i.useRef(null),
+		[I, T] = (0, u.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], a.Z),
 		g = n.useStore((e) => e.searchPlaceholder),
 		S = n.useStore((e) => e.inspectedExpressionPosition, a.Z),
 		A = i.useCallback(
 			(e) => {
 				var t;
-				n.setActiveCategoryIndex('' === e ? 0 : l.c),
-					n.setInspectedExpressionPosition(0, 0),
-					n.setSearchPlaceholder(null),
-					(0, u.ql)(e),
-					null === (t = f.current) || void 0 === t || t.scrollTo(0);
+				n.setActiveCategoryIndex('' === e ? 0 : l.c), n.setInspectedExpressionPosition(0, 0), n.setSearchPlaceholder(null), (0, u.ql)(e), null === (t = f.current) || void 0 === t || t.scrollTo(0);
 			},
 			[f, n]
 		),
@@ -39,13 +27,13 @@ let d = i.forwardRef(function (e, t) {
 		i.useImperativeHandle(t, () => ({
 			focus: () => {
 				var e;
-				return null === (e = I.current) || void 0 === e ? void 0 : e.focus();
+				return null === (e = m.current) || void 0 === e ? void 0 : e.focus();
 			}
 		})),
 		i.useLayoutEffect(() => {
 			if (T) {
 				var e;
-				null === (e = I.current) || void 0 === e || e.focus();
+				null === (e = m.current) || void 0 === e || e.focus();
 			}
 		}, [T]),
 		(0, r.jsx)('div', {
@@ -53,8 +41,8 @@ let d = i.forwardRef(function (e, t) {
 			children: (0, r.jsx)(o.ZP, {
 				autoFocus: d,
 				disabled: !d,
-				query: m,
-				ref: I,
+				query: I,
+				ref: m,
 				size: o.ZP.Sizes.MEDIUM,
 				placeholder: null != g ? g : d || null == p ? h : p,
 				onClear: N,

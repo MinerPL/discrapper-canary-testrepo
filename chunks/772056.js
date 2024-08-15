@@ -15,25 +15,13 @@ var i,
 	d = n(259580),
 	h = n(722326),
 	m = n(261748);
-((a = i || (i = {}))[(a.MutualFriendsList = 0)] = 'MutualFriendsList'),
-	(a[(a.MutualGuildList = 1)] = 'MutualGuildList');
+((a = i || (i = {}))[(a.MutualFriendsList = 0)] = 'MutualFriendsList'), (a[(a.MutualGuildList = 1)] = 'MutualGuildList');
 t.Z = (e) => {
-	let {
-			header: t,
-			children: n,
-			itemType: i = 1,
-			isLoadingHeader: a,
-			isLoadingContents: r,
-			loadingContentsCount: p = 0,
-			className: _,
-			onExpand: f,
-			onHover: E,
-			onFocus: g
-		} = e,
-		[C, I] = l.useState(!0),
+	let { header: t, children: n, itemType: i = 1, isLoadingHeader: a, isLoadingContents: r, loadingContentsCount: p = 0, className: _, onExpand: f, onHover: E, onFocus: C } = e,
+		[g, I] = l.useState(!0),
 		x = (0, s.jsx)('div', {
 			className: h.iconWrapper,
-			children: (0, s.jsx)(d.Z, { direction: C ? d.Z.Directions.RIGHT : d.Z.Directions.DOWN })
+			children: (0, s.jsx)(d.Z, { direction: g ? d.Z.Directions.RIGHT : d.Z.Directions.DOWN })
 		});
 	return (0, s.jsxs)('div', {
 		className: _,
@@ -43,9 +31,9 @@ t.Z = (e) => {
 				innerClassName: h.collapseBtnContent,
 				color: c.ButtonColors.CUSTOM,
 				onMouseEnter: E,
-				onFocus: g,
+				onFocus: C,
 				onClick: () => {
-					I(!C), C && (null == f || f());
+					I(!g), g && (null == f || f());
 				},
 				children: a
 					? (0, s.jsxs)(s.Fragment, {
@@ -71,7 +59,7 @@ t.Z = (e) => {
 						})
 			}),
 			(0, s.jsx)('ul', {
-				className: o()(h.connectionList, { [h.isCollapsed]: C }),
+				className: o()(h.connectionList, { [h.isCollapsed]: g }),
 				children: r
 					? Array.from({ length: p }).map((e, t) =>
 							(0, s.jsxs)(

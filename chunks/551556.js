@@ -8,13 +8,7 @@ a(470079);
 var s = a(692547),
 	i = a(325767);
 function r(e) {
-	let {
-		width: t = 24,
-		height: a = 24,
-		color: r = s.Z.unsafe_rawColors.WHITE_500.css,
-		backgroundColor: o = s.Z.unsafe_rawColors.BRAND_500.css,
-		...l
-	} = e;
+	let { width: t = 24, height: a = 24, color: r = s.Z.unsafe_rawColors.WHITE_500.css, backgroundColor: o = s.Z.unsafe_rawColors.BRAND_500.css, ...l } = e;
 	return (0, n.jsxs)('svg', {
 		...(0, i.Z)(l),
 		width: t,

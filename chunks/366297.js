@@ -11,12 +11,7 @@ var r = n(258609),
 function l(e) {
 	if (i.ZP.disableVoiceChannelChangeAlert) return !1;
 	let t = r.Z.getRemoteSessionId();
-	if (
-		null != o.Z.getVoiceStateForSession(a.default.getId(), t) ||
-		!o.Z.isCurrentClientInVoiceChannel() ||
-		o.Z.isInChannel(e.id)
-	)
-		return !1;
+	if (null != o.Z.getVoiceStateForSession(a.default.getId(), t) || !o.Z.isCurrentClientInVoiceChannel() || o.Z.isInChannel(e.id)) return !1;
 	let n = s.Z.getGuild(e.getGuildId());
 	return !((null == n ? void 0 : n.afkChannelId) != null && o.Z.isInChannel(n.afkChannelId)) && !0;
 }

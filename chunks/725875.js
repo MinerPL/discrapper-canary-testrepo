@@ -18,14 +18,7 @@ var i = t(735250),
 	m = t(689938),
 	_ = t(785560);
 function N(e) {
-	let {
-			webhooks: n,
-			selectableWebhookChannels: t,
-			lastCreatedWebhookId: N,
-			editedWebhook: E,
-			errors: T,
-			canNavigate: h
-		} = e,
+	let { webhooks: n, selectableWebhookChannels: t, lastCreatedWebhookId: N, editedWebhook: E, errors: T, canNavigate: h } = e,
 		g = a.useMemo(
 			() =>
 				Object.values(t).map((e) => ({
@@ -59,15 +52,7 @@ function N(e) {
 		children: p.map((e) => {
 			let { channel: n, webhooks: t } = e;
 			return (function (e) {
-				let {
-					channel: n,
-					webhooks: t,
-					channelOptions: a,
-					lastCreatedWebhookId: l,
-					editedWebhook: N,
-					errors: E,
-					toggleWebhookExpand: T
-				} = e;
+				let { channel: n, webhooks: t, channelOptions: a, lastCreatedWebhookId: l, editedWebhook: N, errors: E, toggleWebhookExpand: T } = e;
 				return (0, i.jsxs)(
 					'div',
 					{

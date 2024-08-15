@@ -33,10 +33,7 @@ var a = r(599295),
 				function () {
 					var e,
 						a = (0, u.Z)(t);
-					return (
-						(e = r ? Reflect.construct(a, arguments, (0, u.Z)(this).constructor) : a.apply(this, arguments)),
-						(0, c.Z)(this, e)
-					);
+					return (e = r ? Reflect.construct(a, arguments, (0, u.Z)(this).constructor) : a.apply(this, arguments)), (0, c.Z)(this, e);
 				});
 		function d(e) {
 			var t;

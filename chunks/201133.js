@@ -22,10 +22,7 @@ let _ = (e) => {
 			? Promise.reject()
 			: new Promise((e, n) => {
 					let i = (a) => {
-						a.file.id === t.id &&
-							(r.Z.unsubscribe('UPLOAD_COMPLETE', i),
-							r.Z.unsubscribe('UPLOAD_FAIL', i),
-							'UPLOAD_COMPLETE' === a.type ? e(a.messageRecord) : n(Error('Upload failed')));
+						a.file.id === t.id && (r.Z.unsubscribe('UPLOAD_COMPLETE', i), r.Z.unsubscribe('UPLOAD_FAIL', i), 'UPLOAD_COMPLETE' === a.type ? e(a.messageRecord) : n(Error('Upload failed')));
 					};
 					r.Z.subscribe('UPLOAD_COMPLETE', i), r.Z.subscribe('UPLOAD_FAIL', i);
 				});
@@ -38,8 +35,7 @@ let _ = (e) => {
 			d = u.Z.getChannel(t);
 		if (((r = l.default.getToken()), a.ZP.parse(d, ''), i));
 		else {
-			if (null == u.Z.getChannel(t))
-				throw Error("AtomicReactor sendUtils: Couldn't resolve channel with id ".concat(t));
+			if (null == u.Z.getChannel(t)) throw Error("AtomicReactor sendUtils: Couldn't resolve channel with id ".concat(t));
 			{
 				let r = n(966390).Z;
 				(e.description = s),

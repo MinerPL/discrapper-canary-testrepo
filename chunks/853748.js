@@ -22,13 +22,7 @@ function C(e) {
 		o = (function (e, t, n, s) {
 			let r = (e, t) => ''.concat(e.toString().padStart(2, '0')).concat(t),
 				a = [];
-			return (
-				e > 0 && a.push(r(e, u.Z.Messages.COUNTDOWN_UNITS_DAYS)),
-				(t > 0 || a.length > 0) && a.push(r(t, u.Z.Messages.COUNTDOWN_UNITS_HOURS)),
-				(n > 0 || a.length > 0) && a.push(r(n, u.Z.Messages.COUNTDOWN_UNITS_MINUTES)),
-				a.push(r(s, u.Z.Messages.COUNTDOWN_UNITS_SECONDS)),
-				a.join(':')
-			);
+			return e > 0 && a.push(r(e, u.Z.Messages.COUNTDOWN_UNITS_DAYS)), (t > 0 || a.length > 0) && a.push(r(t, u.Z.Messages.COUNTDOWN_UNITS_HOURS)), (n > 0 || a.length > 0) && a.push(r(n, u.Z.Messages.COUNTDOWN_UNITS_MINUTES)), a.push(r(s, u.Z.Messages.COUNTDOWN_UNITS_SECONDS)), a.join(':');
 		})(n, r, a, i);
 	return (0, s.jsx)(l.Text, {
 		variant: 'heading-md/medium',

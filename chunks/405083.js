@@ -22,12 +22,7 @@ function c(e) {
 		onClose: (e) => {
 			t(e);
 			let a = null == h ? void 0 : h.guild_id;
-			e &&
-				null != a &&
-				(r.jg(),
-				(0, i.i1)(a),
-				null == n || n(),
-				null != a && (c || s.Z.getGuildId() !== a) && (0, l.uL)(u.Z5c.CHANNEL(a)));
+			e && null != a && (r.jg(), (0, i.i1)(a), null == n || n(), null != a && (c || s.Z.getGuildId() !== a) && (0, l.uL)(u.Z5c.CHANNEL(a)));
 		},
 		forceNewPaymentModal: !0
 	});

@@ -163,14 +163,7 @@ function F(e) {
 		: null;
 }
 function k(e) {
-	let {
-			transitionState: t,
-			fromSubscriptionListing: n,
-			existingChannelBenefits: s,
-			existingIntangibleBenefits: a,
-			onSubmit: l,
-			onClose: o
-		} = e,
+	let { transitionState: t, fromSubscriptionListing: n, existingChannelBenefits: s, existingIntangibleBenefits: a, onSubmit: l, onClose: o } = e,
 		c = n.role_benefits.benefits,
 		[d, u] = r.useState(() => new Set(c)),
 		_ = r.useMemo(() => c.filter(A.rC), [c]),
@@ -323,12 +316,7 @@ function H(e) {
 			() =>
 				Object.values(s).flatMap((e) => {
 					var n;
-					if (
-						(0, S.pM)(t.id, e.id) ||
-						(null === (n = e.tags) || void 0 === n ? void 0 : n.subscription_listing_id) != null ||
-						d.Db(e.permissions, j.TC2)
-					)
-						return [];
+					if ((0, S.pM)(t.id, e.id) || (null === (n = e.tags) || void 0 === n ? void 0 : n.subscription_listing_id) != null || d.Db(e.permissions, j.TC2)) return [];
 					let s = (0, M.Z)(l, e).length;
 					return s > 0
 						? {
@@ -428,9 +416,7 @@ function Y(e) {
 					(0, i.jsx)(T.Heading, {
 						id: G,
 						variant: 'heading-md/semibold',
-						children: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_FROM_ROLE_MODAL_HEADER_2.format({
-							roleName: d.name
-						})
+						children: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_FROM_ROLE_MODAL_HEADER_2.format({ roleName: d.name })
 					}),
 					(0, i.jsx)(T.ModalCloseButton, {
 						className: b.modalCloseButton,

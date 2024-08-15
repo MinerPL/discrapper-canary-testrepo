@@ -91,11 +91,7 @@ function N(e) {
 function T(e) {
 	let { eventUser: n, guildId: t, onContextMenu: a } = e,
 		c = (0, r.e7)([f.default], () => f.default.getUser(n.user_id)),
-		d = (0, r.e7)(
-			[h.Z, v.Z, g.default],
-			() => (n.user_id === g.default.getId() ? h.Z.getStatus() : v.Z.getStatus(n.user_id, t)),
-			[n.user_id, t]
-		);
+		d = (0, r.e7)([h.Z, v.Z, g.default], () => (n.user_id === g.default.getId() ? h.Z.getStatus() : v.Z.getStatus(n.user_id, t)), [n.user_id, t]);
 	return null == c
 		? null
 		: (0, i.jsx)(o.Popout, {
@@ -200,9 +196,7 @@ function L(e) {
 						guildId: n.guild_id,
 						onContextMenu: function (e, n) {
 							(0, c.jW)(e, async () => {
-								let { default: e } = await Promise.all([t.e('79695'), t.e('69220'), t.e('46611')]).then(
-									t.bind(t, 881351)
-								);
+								let { default: e } = await Promise.all([t.e('79695'), t.e('69220'), t.e('46611')]).then(t.bind(t, 881351));
 								return (t) =>
 									(0, i.jsx)(e, {
 										...t,

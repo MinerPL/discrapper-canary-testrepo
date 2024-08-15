@@ -90,8 +90,7 @@ e.exports = function (e) {
 		name: 'Scala',
 		keywords: {
 			literal: 'true false null',
-			keyword:
-				'type yield lazy override def with val var sealed abstract private trait object if then forSome for while do throw finally protected extends import final return else break new catch super class case package default try this match continue throws implicit export enum given transparent'
+			keyword: 'type yield lazy override def with val var sealed abstract private trait object if then forSome for while do throw finally protected extends import final return else break new catch super class case package default try this match continue throws implicit export enum given transparent'
 		},
 		contains: [
 			e.C_LINE_COMMENT_MODE,

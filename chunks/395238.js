@@ -12,7 +12,6 @@ e.exports = function (e, t) {
 		'[[Writable]]': !0
 	};
 	for (var r in t) if (i(t, r) && !n[r]) return !1;
-	if (e.IsDataDescriptor(t) && e.IsAccessorDescriptor(t))
-		throw new a('Property Descriptors may not be both accessor and data descriptors');
+	if (e.IsDataDescriptor(t) && e.IsAccessorDescriptor(t)) throw new a('Property Descriptors may not be both accessor and data descriptors');
 	return !0;
 };

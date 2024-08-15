@@ -37,10 +37,7 @@ async function N(e) {
 		[T, m] = (0, l.d9)(e.id, [...t]),
 		N = (0, l.kl)(e.id, t, _.Z.editedOnboardingPrompts),
 		S = (0, l.kl)(e.id, t, _.Z.editedOnboardingPrompts, l.V7);
-	if (
-		r.Z.getEnabled(e.id) &&
-		((!n && (m.length < I.md || T.length < I.X)) || (n && (N.length < I.md || S.length < I.X)))
-	) {
+	if (r.Z.getEnabled(e.id) && ((!n && (m.length < I.md || T.length < I.X)) || (n && (N.length < I.md || S.length < I.X)))) {
 		a.Z.show({
 			title: E.Z.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
 			body: E.Z.Messages.DEFAULT_CHANNELS_SAVE_INVALID_DEFAULT_CHANNELS

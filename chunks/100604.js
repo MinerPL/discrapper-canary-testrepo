@@ -123,11 +123,6 @@ class h {
 				};
 	}
 	constructor(e, t, n) {
-		m(this, 'parentMessage', void 0),
-			m(this, 'messageSnapshot', void 0),
-			m(this, 'snapshotIndex', void 0),
-			(this.parentMessage = e),
-			(this.messageSnapshot = t),
-			(this.snapshotIndex = n);
+		m(this, 'parentMessage', void 0), m(this, 'messageSnapshot', void 0), m(this, 'snapshotIndex', void 0), (this.parentMessage = e), (this.messageSnapshot = t), (this.snapshotIndex = n);
 	}
 }

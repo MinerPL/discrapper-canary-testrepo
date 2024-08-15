@@ -2,78 +2,14 @@ let r = n(761655).Reporter,
 	i = n(873994).EncoderBuffer,
 	a = n(873994).DecoderBuffer,
 	s = n(21841),
-	o = [
-		'seq',
-		'seqof',
-		'set',
-		'setof',
-		'objid',
-		'bool',
-		'gentime',
-		'utctime',
-		'null_',
-		'enum',
-		'int',
-		'objDesc',
-		'bitstr',
-		'bmpstr',
-		'charstr',
-		'genstr',
-		'graphstr',
-		'ia5str',
-		'iso646str',
-		'numstr',
-		'octstr',
-		'printstr',
-		't61str',
-		'unistr',
-		'utf8str',
-		'videostr'
-	],
+	o = ['seq', 'seqof', 'set', 'setof', 'objid', 'bool', 'gentime', 'utctime', 'null_', 'enum', 'int', 'objDesc', 'bitstr', 'bmpstr', 'charstr', 'genstr', 'graphstr', 'ia5str', 'iso646str', 'numstr', 'octstr', 'printstr', 't61str', 'unistr', 'utf8str', 'videostr'],
 	l = ['key', 'obj', 'use', 'optional', 'explicit', 'implicit', 'def', 'choice', 'any', 'contains'].concat(o);
 function u(e, t, n) {
 	let r = {};
-	(this._baseState = r),
-		(r.name = n),
-		(r.enc = e),
-		(r.parent = t || null),
-		(r.children = null),
-		(r.tag = null),
-		(r.args = null),
-		(r.reverseArgs = null),
-		(r.choice = null),
-		(r.optional = !1),
-		(r.any = !1),
-		(r.obj = !1),
-		(r.use = null),
-		(r.useDecoder = null),
-		(r.key = null),
-		(r.default = null),
-		(r.explicit = null),
-		(r.implicit = null),
-		(r.contains = null),
-		!r.parent && ((r.children = []), this._wrap());
+	(this._baseState = r), (r.name = n), (r.enc = e), (r.parent = t || null), (r.children = null), (r.tag = null), (r.args = null), (r.reverseArgs = null), (r.choice = null), (r.optional = !1), (r.any = !1), (r.obj = !1), (r.use = null), (r.useDecoder = null), (r.key = null), (r.default = null), (r.explicit = null), (r.implicit = null), (r.contains = null), !r.parent && ((r.children = []), this._wrap());
 }
 e.exports = u;
-let c = [
-	'enc',
-	'parent',
-	'children',
-	'tag',
-	'args',
-	'reverseArgs',
-	'choice',
-	'optional',
-	'any',
-	'obj',
-	'use',
-	'alteredUse',
-	'key',
-	'default',
-	'explicit',
-	'implicit',
-	'contains'
-];
+let c = ['enc', 'parent', 'children', 'tag', 'args', 'reverseArgs', 'choice', 'optional', 'any', 'obj', 'use', 'alteredUse', 'key', 'default', 'explicit', 'implicit', 'contains'];
 (u.prototype.clone = function () {
 	let e = this._baseState,
 		t = {};
@@ -129,25 +65,7 @@ let c = [
 					);
 				})));
 	}),
-	[
-		'_peekTag',
-		'_decodeTag',
-		'_use',
-		'_decodeStr',
-		'_decodeObjid',
-		'_decodeTime',
-		'_decodeNull',
-		'_decodeInt',
-		'_decodeBool',
-		'_decodeList',
-		'_encodeComposite',
-		'_encodeStr',
-		'_encodeObjid',
-		'_encodeTime',
-		'_encodeNull',
-		'_encodeInt',
-		'_encodeBool'
-	].forEach(function (e) {
+	['_peekTag', '_decodeTag', '_use', '_decodeStr', '_decodeObjid', '_decodeTime', '_decodeNull', '_decodeInt', '_decodeBool', '_decodeList', '_encodeComposite', '_encodeStr', '_encodeObjid', '_encodeTime', '_encodeNull', '_encodeInt', '_encodeBool'].forEach(function (e) {
 		u.prototype[e] = function () {
 			throw Error(e + ' not implemented for encoding: ' + this._baseState.enc);
 		};
@@ -217,14 +135,7 @@ let c = [
 			o = null;
 		if ((null !== r.key && (o = e.enterKey(r.key)), r.optional)) {
 			let n = null;
-			if (
-				(null !== r.explicit
-					? (n = r.explicit)
-					: null !== r.implicit
-						? (n = r.implicit)
-						: null !== r.tag && (n = r.tag),
-				null !== n || r.any)
-			) {
+			if ((null !== r.explicit ? (n = r.explicit) : null !== r.implicit ? (n = r.implicit) : null !== r.tag && (n = r.tag), null !== n || r.any)) {
 				if (((s = this._peekTag(e, n, r.any)), e.isError(s))) return s;
 			} else {
 				let n = e.save();
@@ -250,13 +161,7 @@ let c = [
 				if (e.isError(n)) return n;
 				r.any ? (i = e.raw(t)) : (e = n);
 			}
-			if (
-				(t && t.track && null !== r.tag && t.track(e.path(), n, e.length, 'tagged'),
-				t && t.track && null !== r.tag && t.track(e.path(), e.offset, e.length, 'content'),
-				r.any || (i = null === r.choice ? this._decodeGeneric(r.tag, e, t) : this._decodeChoice(e, t)),
-				e.isError(i))
-			)
-				return i;
+			if ((t && t.track && null !== r.tag && t.track(e.path(), n, e.length, 'tagged'), t && t.track && null !== r.tag && t.track(e.path(), e.offset, e.length, 'content'), r.any || (i = null === r.choice ? this._decodeGeneric(r.tag, e, t) : this._decodeChoice(e, t)), e.isError(i))) return i;
 			if (
 				(!r.any &&
 					null === r.choice &&
@@ -270,11 +175,7 @@ let c = [
 				i = this._getUse(r.contains, e._reporterState.obj)._decode(n, t);
 			}
 		}
-		return (
-			r.obj && s && (i = e.leaveObject(n)),
-			null !== r.key && (null !== i || !0 === s) ? e.leaveKey(o, r.key, i) : null !== o && e.exitKey(o),
-			i
-		);
+		return r.obj && s && (i = e.leaveObject(n)), null !== r.key && (null !== i || !0 === s) ? e.leaveKey(o, r.key, i) : null !== o && e.exitKey(o), i;
 	}),
 	(u.prototype._decodeGeneric = function (e, t, n) {
 		let r = this._baseState;
@@ -292,14 +193,7 @@ let c = [
 	}),
 	(u.prototype._getUse = function (e, t) {
 		let n = this._baseState;
-		return (
-			(n.useDecoder = this._use(e, t)),
-			s(null === n.useDecoder._baseState.parent),
-			(n.useDecoder = n.useDecoder._baseState.children[0]),
-			n.implicit !== n.useDecoder._baseState.implicit &&
-				((n.useDecoder = n.useDecoder.clone()), (n.useDecoder._baseState.implicit = n.implicit)),
-			n.useDecoder
-		);
+		return (n.useDecoder = this._use(e, t)), s(null === n.useDecoder._baseState.parent), (n.useDecoder = n.useDecoder._baseState.children[0]), n.implicit !== n.useDecoder._baseState.implicit && ((n.useDecoder = n.useDecoder.clone()), (n.useDecoder._baseState.implicit = n.implicit)), n.useDecoder;
 	}),
 	(u.prototype._decodeChoice = function (e, t) {
 		let n = this._baseState,
@@ -374,14 +268,11 @@ let c = [
 						return this._getUse(r.args[0], e)._encode(n, t);
 					}, n)
 				));
-		} else
-			null !== i.use ? (a = this._getUse(i.use, n)._encode(e, t)) : ((s = this._encodePrimitive(i.tag, e)), (o = !0));
+		} else null !== i.use ? (a = this._getUse(i.use, n)._encode(e, t)) : ((s = this._encodePrimitive(i.tag, e)), (o = !0));
 		if (!i.any && null === i.choice) {
 			let e = null !== i.implicit ? i.implicit : i.tag,
 				n = null === i.implicit ? 'universal' : 'context';
-			null === e
-				? null === i.use && t.error('Tag could be omitted only for .use()')
-				: null === i.use && (a = this._encodeComposite(e, o, n, s));
+			null === e ? null === i.use && t.error('Tag could be omitted only for .use()') : null === i.use && (a = this._encodeComposite(e, o, n, s));
 		}
 		return null !== i.explicit && (a = this._encodeComposite(i.explicit, !1, 'context', a)), a;
 	}),

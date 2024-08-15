@@ -84,20 +84,7 @@ class m extends (u = a.ZP.Store) {
 		: (l[o] = E),
 	(t.Z = new m(_.Z, {
 		SKU_PURCHASE_MODAL_OPEN: function (e) {
-			p(),
-				(A = e.skuId),
-				(T = e.applicationId),
-				(U = e.isIAP),
-				(I = e.analyticsLocation),
-				(O = e.context),
-				(L = e.isGift),
-				(f = !0),
-				(P = !1),
-				(r = e.resolve),
-				(i = e.reject),
-				(M = null),
-				(C = null),
-				(d = e.promotionId);
+			p(), (A = e.skuId), (T = e.applicationId), (U = e.isIAP), (I = e.analyticsLocation), (O = e.context), (L = e.isGift), (f = !0), (P = !1), (r = e.resolve), (i = e.reject), (M = null), (C = null), (d = e.promotionId);
 		},
 		SKU_PURCHASE_MODAL_CLOSE: function (e) {
 			let { error: t } = e;

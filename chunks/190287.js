@@ -15,17 +15,7 @@ var s = n(735250),
 	m = n(751583);
 let N = (e) => {
 	var t;
-	let {
-			reason: n = '',
-			emoji_name: i,
-			onSetReason: d,
-			onSelectEmoji: T,
-			onClearPressed: N,
-			reasonMinLength: S,
-			reasonMaxLength: h,
-			placeholder: g,
-			position: C
-		} = e,
+	let { reason: n = '', emoji_name: i, onSetReason: d, onSelectEmoji: T, onClearPressed: N, reasonMinLength: S, reasonMaxLength: h, placeholder: g, position: C } = e,
 		[x, p] = a.useState(!1),
 		R = (0, l.e7)([I.Z], () => I.Z.isGuildMetadataLoaded());
 	return (0, s.jsxs)('div', {
@@ -109,12 +99,7 @@ let N = (e) => {
 };
 t.Z = (e) => {
 	let { reasonMinLength: t, reasonMaxLength: n, guildId: a, reasons: i } = e,
-		r = [
-			T.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_ONE,
-			T.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_TWO,
-			T.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_THREE,
-			T.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_FOUR
-		],
+		r = [T.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_ONE, T.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_TWO, T.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_THREE, T.Z.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_FOUR],
 		l = [];
 	for (let e = 0; e < 4; e++)
 		l.push(

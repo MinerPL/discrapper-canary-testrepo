@@ -8,9 +8,4 @@ n.d(t, {
 	}
 });
 let a = 200;
-((i = r || (r = {})).ReactBegin = 'React Begin'),
-	(i.ReplyBegin = 'Reply Begin'),
-	(i.ReactSubmit = 'React Submit'),
-	(i.ReplySubmit = 'Reply Submit'),
-	(i.ReactSend = 'React Send'),
-	(i.ReplySend = 'Reply Send');
+((i = r || (r = {})).ReactBegin = 'React Begin'), (i.ReplyBegin = 'Reply Begin'), (i.ReactSubmit = 'React Submit'), (i.ReplySubmit = 'Reply Submit'), (i.ReactSend = 'React Send'), (i.ReplySend = 'Reply Send');

@@ -19,7 +19,7 @@ function _(e) {
 		E(!1, a.hX(n, h));
 	}, [h, E, n]);
 	let p = u.VY.filter((e) => a.e$(n, e)),
-		I = p
+		m = p
 			.filter((e) => !a.e$(h, e))
 			.map((e) => {
 				let t = (0, u.wt)(e),
@@ -41,7 +41,7 @@ function _(e) {
 					String(e)
 				);
 			}),
-		m = p
+		I = p
 			.filter((e) => a.e$(h, e))
 			.map((e) => {
 				let t = (0, u.wt)(e);
@@ -70,7 +70,7 @@ function _(e) {
 	return (0, r.jsxs)('div', {
 		className: d.botPermissions,
 		children: [
-			I.length > 0
+			m.length > 0
 				? (0, r.jsxs)(r.Fragment, {
 						children: [
 							(0, r.jsx)(o.x, {
@@ -84,12 +84,12 @@ function _(e) {
 							}),
 							(0, r.jsx)('ul', {
 								className: d.permissionsList,
-								children: I
+								children: m
 							})
 						]
 					})
 				: null,
-			m.length > 0
+			I.length > 0
 				? (0, r.jsxs)(r.Fragment, {
 						children: [
 							(0, r.jsx)(o.x, {
@@ -100,7 +100,7 @@ function _(e) {
 							}),
 							(0, r.jsx)('ul', {
 								className: d.permissionsList,
-								children: m
+								children: I
 							})
 						]
 					})

@@ -47,14 +47,7 @@ function D(e) {
 			errors: G,
 			guild: F
 		} = (0, r.cj)([h.Z], () => {
-			let {
-				pendingAvatar: e,
-				pendingNickname: s,
-				pendingBio: t,
-				pendingPronouns: n,
-				pendingBanner: a,
-				pendingThemeColors: i
-			} = h.Z.getAllPending();
+			let { pendingAvatar: e, pendingNickname: s, pendingBio: t, pendingPronouns: n, pendingBanner: a, pendingThemeColors: i } = h.Z.getAllPending();
 			return {
 				pendingAvatar: e,
 				pendingNickname: s,

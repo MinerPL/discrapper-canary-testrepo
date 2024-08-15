@@ -14,14 +14,9 @@ let l = {},
 	};
 class d extends r.Z {
 	async getGuildEventUserCounts(e, t, n) {
-		let r = n.filter(
-			(n) =>
-				null == l[''.concat(e, '-').concat(t, '-').concat(n)] ||
-				Date.now() - l[''.concat(e, '-').concat(t, '-').concat(n)] > 1800000
-		);
+		let r = n.filter((n) => null == l[''.concat(e, '-').concat(t, '-').concat(n)] || Date.now() - l[''.concat(e, '-').concat(t, '-').concat(n)] > 1800000);
 		if (!(Date.now() - l[''.concat(e, '-').concat(t)] < 1800000) || 0 !== r.length) {
-			(l[''.concat(e, '-').concat(t)] = Date.now()),
-				r.forEach((n) => (l[''.concat(e, '-').concat(t, '-').concat(n)] = Date.now()));
+			(l[''.concat(e, '-').concat(t)] = Date.now()), r.forEach((n) => (l[''.concat(e, '-').concat(t, '-').concat(n)] = Date.now()));
 			try {
 				await o.Z.fetchGuildEventUserCounts(e, t, r);
 			} catch (e) {}
@@ -37,10 +32,7 @@ class d extends r.Z {
 		u.clear(), (l = {});
 		let e = (0, i.cn)(),
 			t = a.Z.getLastSelectedGuildId();
-		if (e && null != t)
-			for (let e of s.ZP.getGuildScheduledEventsForGuild(t))
-				await this.getGuildEventUserCounts(t, e.id, []),
-					await new Promise((e) => setTimeout(e, 200 * Math.random() + 50));
+		if (e && null != t) for (let e of s.ZP.getGuildScheduledEventsForGuild(t)) await this.getGuildEventUserCounts(t, e.id, []), await new Promise((e) => setTimeout(e, 200 * Math.random() + 50));
 	}
 	handleGuildUnavailable(e) {
 		let { guildId: t } = e;

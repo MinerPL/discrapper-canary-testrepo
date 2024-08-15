@@ -81,9 +81,7 @@ function L(e) {
 											(0, i.jsx)(d.K9, {
 												title: E.Z.Messages.APPLICATION_CANCEL_SUBSCRIPTION_MODAL_HEADER,
 												description: M
-													? E.Z.Messages.APPLICATION_CANCEL_USER_SUBSCRIPTION_MODAL_DESCRIPTION.format({
-															timestamp: n.currentPeriodEnd.getTime()
-														})
+													? E.Z.Messages.APPLICATION_CANCEL_USER_SUBSCRIPTION_MODAL_DESCRIPTION.format({ timestamp: n.currentPeriodEnd.getTime() })
 													: E.Z.Messages.APPLICATION_CANCEL_GUILD_SUBSCRIPTION_MODAL_DESCRIPTION.format({
 															timestamp: n.currentPeriodEnd.getTime(),
 															guildName: null == o ? void 0 : o.name

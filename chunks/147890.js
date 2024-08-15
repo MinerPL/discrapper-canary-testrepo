@@ -37,26 +37,12 @@ var i = n(703656),
 	s = n(272242),
 	o = n(981631);
 let c = (e) => {
-		let {
-				view: t = a.ApplicationDirectoryViews.HOME,
-				guildId: n,
-				applicationId: i,
-				applicationSection: r,
-				entrypoint: c,
-				skuId: f
-			} = e,
+		let { view: t = a.ApplicationDirectoryViews.HOME, guildId: n, applicationId: i, applicationSection: r, entrypoint: c, skuId: f } = e,
 			g = {
 				...c,
 				pathname: window.location.pathname
 			};
-		switch (
-			(l.default.track(o.rMx.APP_DIRECTORY_OPENED, { source: null == g ? void 0 : g.name }),
-			(0, a.resetApplicationDirectoryHistory)(),
-			(0, a.setEntrypoint)(g),
-			null != n && (0, a.setGuildId)(n),
-			t === a.ApplicationDirectoryViews.APPLICATION && null == i && (t = a.ApplicationDirectoryViews.HOME),
-			t)
-		) {
+		switch ((l.default.track(o.rMx.APP_DIRECTORY_OPENED, { source: null == g ? void 0 : g.name }), (0, a.resetApplicationDirectoryHistory)(), (0, a.setEntrypoint)(g), null != n && (0, a.setGuildId)(n), t === a.ApplicationDirectoryViews.APPLICATION && null == i && (t = a.ApplicationDirectoryViews.HOME), t)) {
 			case a.ApplicationDirectoryViews.HOME:
 				u();
 				break;

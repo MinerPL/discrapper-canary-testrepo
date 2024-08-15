@@ -46,30 +46,7 @@ function _(e) {
 	});
 }
 function N(e) {
-	let {
-		name: t,
-		type: n,
-		topic: l,
-		bitrate: r,
-		userLimit: a,
-		nsfw: u,
-		flags: o,
-		rateLimitPerUser: s,
-		defaultThreadRateLimitPerUser: d,
-		defaultAutoArchiveDuration: c,
-		template: _,
-		defaultReactionEmoji: N,
-		rtcRegion: E,
-		videoQualityMode: T,
-		autoArchiveDuration: S,
-		locked: C,
-		invitable: h,
-		availableTags: f,
-		defaultSortOrder: I,
-		defaultForumLayout: A,
-		iconEmoji: m,
-		themeColor: p
-	} = e;
+	let { name: t, type: n, topic: l, bitrate: r, userLimit: a, nsfw: u, flags: o, rateLimitPerUser: s, defaultThreadRateLimitPerUser: d, defaultAutoArchiveDuration: c, template: _, defaultReactionEmoji: N, rtcRegion: E, videoQualityMode: T, autoArchiveDuration: S, locked: C, invitable: h, availableTags: f, defaultSortOrder: I, defaultForumLayout: A, iconEmoji: m, themeColor: p } = e;
 	i.Z.dispatch({
 		type: 'CHANNEL_SETTINGS_UPDATE',
 		name: t,
@@ -97,32 +74,7 @@ function N(e) {
 	});
 }
 async function E(e, t) {
-	let {
-			name: n,
-			type: o,
-			position: d,
-			topic: c,
-			bitrate: _,
-			userLimit: N,
-			nsfw: E,
-			flags: T,
-			permissionOverwrites: S,
-			rateLimitPerUser: C,
-			defaultThreadRateLimitPerUser: h,
-			defaultAutoArchiveDuration: f,
-			template: I,
-			defaultReactionEmoji: A,
-			rtcRegion: m,
-			videoQualityMode: p,
-			autoArchiveDuration: L,
-			locked: v,
-			invitable: Z,
-			availableTags: g,
-			defaultSortOrder: M,
-			defaultForumLayout: y,
-			iconEmoji: O,
-			themeColor: G
-		} = t,
+	let { name: n, type: o, position: d, topic: c, bitrate: _, userLimit: N, nsfw: E, flags: T, permissionOverwrites: S, rateLimitPerUser: C, defaultThreadRateLimitPerUser: h, defaultAutoArchiveDuration: f, template: I, defaultReactionEmoji: A, rtcRegion: m, videoQualityMode: p, autoArchiveDuration: L, locked: v, invitable: Z, availableTags: g, defaultSortOrder: M, defaultForumLayout: y, iconEmoji: O, themeColor: G } = t,
 		H = u.Z.getChannel(e);
 	return (
 		i.Z.dispatch({ type: 'CHANNEL_SETTINGS_SUBMIT' }),

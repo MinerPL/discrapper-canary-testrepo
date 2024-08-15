@@ -55,8 +55,7 @@ function b(e) {
 	}),
 		(e.updatedAt = n);
 	let o = O[e.applicationId];
-	null == o && (o = O[e.applicationId] = new d.Xp()).start(v, () => b(e)),
-		!t && ((L[e.applicationId] = e), c.K.set(A, L));
+	null == o && (o = O[e.applicationId] = new d.Xp()).start(v, () => b(e)), !t && ((L[e.applicationId] = e), c.K.set(A, L));
 }
 function P() {
 	let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],

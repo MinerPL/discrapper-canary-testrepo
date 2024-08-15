@@ -14,12 +14,7 @@ var i,
 	o = t(689938);
 function d(e, n) {
 	let t;
-	0 === e
-		? (t = o.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_SELF_DENY_MODAL_MESSAGE_REMOVE_SELF.format())
-		: 1 === e
-			? (t = o.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_SELF_DENY_MODAL_MESSAGE_REMOVE_ROLE.format({ name: n }))
-			: 2 === e &&
-				(t = o.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_SELF_DENY_MODAL_MESSAGE_DENY_ROLE.format({ name: n })),
+	0 === e ? (t = o.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_SELF_DENY_MODAL_MESSAGE_REMOVE_SELF.format()) : 1 === e ? (t = o.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_SELF_DENY_MODAL_MESSAGE_REMOVE_ROLE.format({ name: n })) : 2 === e && (t = o.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_SELF_DENY_MODAL_MESSAGE_DENY_ROLE.format({ name: n })),
 		s.Z.show({
 			title: o.Z.Messages.SELF_DENY_PERMISSION_TITLE,
 			body: t,
@@ -29,6 +24,4 @@ function d(e, n) {
 			}
 		});
 }
-((i = a || (a = {}))[(i.REMOVE_SELF = 0)] = 'REMOVE_SELF'),
-	(i[(i.REMOVE_ROLE = 1)] = 'REMOVE_ROLE'),
-	(i[(i.DENY_ROLE = 2)] = 'DENY_ROLE');
+((i = a || (a = {}))[(i.REMOVE_SELF = 0)] = 'REMOVE_SELF'), (i[(i.REMOVE_ROLE = 1)] = 'REMOVE_ROLE'), (i[(i.DENY_ROLE = 2)] = 'DENY_ROLE');

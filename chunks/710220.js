@@ -37,9 +37,7 @@ function d(e) {
 				(0, s.jsx)(a.Heading, {
 					variant: 'heading-lg/medium',
 					className: o.textContainer,
-					children: l.Z.Messages.REFERRAL_PROGRAM_SUBSCRIBER_HOMER_BANNER.format({
-						username: null != (t = n).globalName ? t.globalName : t.username
-					})
+					children: l.Z.Messages.REFERRAL_PROGRAM_SUBSCRIBER_HOMER_BANNER.format({ username: null != (t = n).globalName ? t.globalName : t.username })
 				}),
 				(0, s.jsx)('img', {
 					src: c,

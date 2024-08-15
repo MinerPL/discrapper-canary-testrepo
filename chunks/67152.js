@@ -14,8 +14,8 @@ var r = n(735250),
 let h = 57.75;
 t.Z = i.memo(function (e) {
 	let { user: t, onClose: n, bio: a, hidePersonalInformation: p } = e,
-		{ context: I } = (0, u.KZ)(),
-		{ analyticsLocations: m } = (0, l.ZP)(),
+		{ context: m } = (0, u.KZ)(),
+		{ analyticsLocations: I } = (0, l.ZP)(),
 		[T, g] = i.useState(!1),
 		[S, A] = i.useState(!1);
 	return p || null == a || '' === a
@@ -24,8 +24,7 @@ t.Z = i.memo(function (e) {
 				children: [
 					(0, r.jsx)('div', {
 						ref: (e) => {
-							null != e &&
-								(g(!S && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > h && A(!0));
+							null != e && (g(!S && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > h && A(!0));
 						},
 						className: s()(f.descriptionClamp, S && f.maxBioHeight),
 						children: (0, r.jsx)(c.Z, {
@@ -43,9 +42,9 @@ t.Z = i.memo(function (e) {
 							onClick: () => {
 								null == n || n(),
 									(0, d.openUserProfileModal)({
-										...I,
+										...m,
 										userId: t.id,
-										sourceAnalyticsLocations: m,
+										sourceAnalyticsLocations: I,
 										analyticsLocation: { section: _.jXE.BITE_SIZE_PROFILE_POPOUT }
 									});
 							},

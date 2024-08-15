@@ -39,14 +39,7 @@ t.ZP = {
 	moveItemFromTo: o,
 	calculatePositionDeltas: s,
 	getPositionUpdates: function (e) {
-		let {
-			objectArray: t,
-			fromPosition: n,
-			toPosition: r,
-			idGetter: a,
-			existingPositionGetter: l,
-			ascending: u = !0
-		} = e;
+		let { objectArray: t, fromPosition: n, toPosition: r, idGetter: a, existingPositionGetter: l, ascending: u = !0 } = e;
 		!Array.isArray(t) && (t = i().values(t));
 		let c = o(t, n, r);
 		return s({

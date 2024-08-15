@@ -35,16 +35,7 @@ let l = i.createContext(null),
 	},
 	c = (e) => {
 		var t;
-		let {
-				layout: n,
-				userId: r,
-				guildId: s,
-				channelId: o,
-				messageId: u,
-				roleId: c,
-				sourceSessionId: d,
-				showGuildProfile: _ = !0
-			} = e,
+		let { layout: n, userId: r, guildId: s, channelId: o, messageId: u, roleId: c, sourceSessionId: d, showGuildProfile: _ = !0 } = e,
 			E = null === (t = i.useContext(l)) || void 0 === t ? void 0 : t.sessionId;
 		return i.useMemo(
 			() => ({

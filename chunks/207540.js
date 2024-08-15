@@ -59,12 +59,7 @@ t.default = (e) => {
 		let e;
 		let t = D.Z.Messages.DELETE_DEFAULT_CHANNEL_BODY;
 		return (
-			(e =
-				G === a.j.TODO
-					? D.Z.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_TODO
-					: G === a.j.RESOURCE
-						? D.Z.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_RESOURCE
-						: D.Z.Messages.DESIGNATE_OTHER_CHANNEL_ONBOARDING),
+			(e = G === a.j.TODO ? D.Z.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_TODO : G === a.j.RESOURCE ? D.Z.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_RESOURCE : D.Z.Messages.DESIGNATE_OTHER_CHANNEL_ONBOARDING),
 			(0, l.jsxs)(u.ModalRoot, {
 				transitionState: v,
 				'aria-label': D.Z.Messages.CANNOT_DELETE_CHANNEL,
@@ -155,12 +150,7 @@ t.default = (e) => {
 			if (t.isForumPost())
 				return {
 					deleteText: R ? D.Z.Messages.DELETE_FORUM_POST : D.Z.Messages.DELETE_MESSAGE,
-					deleteBody:
-						R && U && !p
-							? D.Z.Messages.DELETE_FORUM_POST_OP_CONFIRM_BODY.format({ postName: L })
-							: R
-								? D.Z.Messages.DELETE_FORUM_POST_CONFIRM_BODY.format({ postName: L })
-								: D.Z.Messages.DELETE_FORUM_POST_OP_WITH_REPLIES_CONFIRM_BODY
+					deleteBody: R && U && !p ? D.Z.Messages.DELETE_FORUM_POST_OP_CONFIRM_BODY.format({ postName: L }) : R ? D.Z.Messages.DELETE_FORUM_POST_CONFIRM_BODY.format({ postName: L }) : D.Z.Messages.DELETE_FORUM_POST_OP_WITH_REPLIES_CONFIRM_BODY
 				};
 			if (t.isThread())
 				return {

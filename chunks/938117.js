@@ -23,13 +23,7 @@ var t = s(735250),
 	x = s(689938),
 	A = s(175792);
 function C(e) {
-	let {
-			onLearnMore: n,
-			selectedBackgroundOption: C,
-			onSelectBackgroundOption: N,
-			currentDeviceId: M,
-			smallerBackgroundOptions: R
-		} = e,
+	let { onLearnMore: n, selectedBackgroundOption: C, onSelectBackgroundOption: N, currentDeviceId: M, smallerBackgroundOptions: R } = e,
 		k = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
 		[D, j] = a.useState(null),
 		T = (0, O.Z)(),

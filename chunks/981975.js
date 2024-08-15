@@ -32,11 +32,7 @@ var s = n(735250),
 	L = n(151365);
 let O = (0, I.hQ)();
 function A(e, t) {
-	return t !== _.O1.AND
-		? Object.values(o().groupBy(e, (e) => ''.concat(e.connectionType, ':').concat(e.applicationId)))
-		: 0 === e.length
-			? []
-			: [[...e]];
+	return t !== _.O1.AND ? Object.values(o().groupBy(e, (e) => ''.concat(e.connectionType, ':').concat(e.applicationId))) : 0 === e.length ? [] : [[...e]];
 }
 function M(e) {
 	let { handleAddVerificationClicked: t, locked: n } = e;
@@ -51,9 +47,7 @@ function M(e) {
 			(0, s.jsx)(d.Text, {
 				variant: 'text-sm/normal',
 				color: 'header-secondary',
-				children: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_DESCRIPTION_LEARN_MORE.format({
-					helpdeskArticleUrl: E.Z.getArticleURL(x.BhN.CONNECTION_DETAILS_ADMIN)
-				})
+				children: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_DESCRIPTION_LEARN_MORE.format({ helpdeskArticleUrl: E.Z.getArticleURL(x.BhN.CONNECTION_DETAILS_ADMIN) })
 			}),
 			(0, s.jsx)(d.Button, {
 				disabled: n,
@@ -164,9 +158,7 @@ function D(e) {
 							}),
 							(0, s.jsx)(d.Text, {
 								variant: 'text-sm/normal',
-								children: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_DESCRIPTION_LEARN_MORE.format({
-									helpdeskArticleUrl: E.Z.getArticleURL(x.BhN.CONNECTION_DETAILS_ADMIN)
-								})
+								children: R.Z.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_DESCRIPTION_LEARN_MORE.format({ helpdeskArticleUrl: E.Z.getArticleURL(x.BhN.CONNECTION_DETAILS_ADMIN) })
 							})
 						]
 					})),
@@ -199,13 +191,7 @@ function D(e) {
 							for (let t of e) a.push({ ...t });
 							if (null == n) {
 								let t = e[s];
-								null !== t && null == t.connectionMetadataField && null == t.operator && null == t.value
-									? (a = a.filter((e) =>
-											null == t.applicationId
-												? e.connectionType !== t.connectionType
-												: e.connectionType !== t.connectionType && e.applicationId !== t.applicationId
-										))
-									: a.splice(s, 1);
+								null !== t && null == t.connectionMetadataField && null == t.operator && null == t.value ? (a = a.filter((e) => (null == t.applicationId ? e.connectionType !== t.connectionType : e.connectionType !== t.connectionType && e.applicationId !== t.applicationId))) : a.splice(s, 1);
 							} else -1 === s ? a.push(n) : s >= 0 && (a[s] = n);
 							t(a);
 						}

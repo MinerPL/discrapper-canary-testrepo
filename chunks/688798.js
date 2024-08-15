@@ -13,8 +13,8 @@ var r = n(913527),
 	f = n(695346),
 	h = n(375954),
 	p = n(306680),
-	I = n(709054),
-	m = n(839627),
+	m = n(709054),
+	I = n(839627),
 	T = n(802098),
 	g = n(128014),
 	S = n(163379),
@@ -36,7 +36,7 @@ function O(e, t, n) {
 }
 async function R(e, t) {
 	let n = f.l4.getSetting(),
-		r = I.default.extractTimestamp(e);
+		r = m.default.extractTimestamp(e);
 	if ((n >= e || i()().diff(r, 'days') > 30) && !t) return;
 	let a = await (0, _.Y7)();
 	if (!(null == a ? void 0 : a.categories[v.$Z.UPDATES_AND_ANNOUNCEMENTS])) return;
@@ -50,7 +50,7 @@ async function R(e, t) {
 		c = p.ZP.getOldestUnreadMessageId(s),
 		E = p.ZP.hasUnread(s);
 	if (null == u || null == c || E || u.id > c) return;
-	let m = (0, d.ZP)({
+	let I = (0, d.ZP)({
 		...u,
 		channelId: s,
 		messageReference: void 0,
@@ -60,7 +60,7 @@ async function R(e, t) {
 	l.Z.receiveMessage(
 		s,
 		{
-			...m,
+			...I,
 			state: N.yb.SENT,
 			channel_id: s
 		},
@@ -73,10 +73,7 @@ class C extends c.Z {
 		super(...e),
 			O(this, 'actions', { POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e) }),
 			O(this, 'handleConnectionOpen', async (e) => {
-				let { canReceiveMessage: t, canReceiveUnpublishedMessages: n } = m.Z.getCurrentConfig(
-						{ location: 'changelog_manager' },
-						{ autoTrackExposure: !1 }
-					),
+				let { canReceiveMessage: t, canReceiveUnpublishedMessages: n } = I.Z.getCurrentConfig({ location: 'changelog_manager' }, { autoTrackExposure: !1 }),
 					r = await s.Z.fetchChangelogConfig(),
 					i = r.body,
 					o = (function (e, t) {
@@ -101,7 +98,7 @@ class C extends c.Z {
 				if (!0 !== i[o].show_on_startup) return;
 				let l = T.Z.lastSeenChangelogId(),
 					c = T.Z.lastSeenChangelogDate();
-				if (null != l && 0 >= I.default.compare(o, l)) return;
+				if (null != l && 0 >= m.default.compare(o, l)) return;
 				let d = await s.Z.fetchChangelog(o, E.default.locale);
 				if (null != d) {
 					if (null == c || null == T.Z.lastSeenChangelogDate()) {

@@ -19,8 +19,8 @@ var i,
 	_ = n(58540),
 	f = n(665149),
 	E = n(484459),
-	g = n(103575),
-	C = n(271383),
+	C = n(103575),
+	g = n(271383),
 	I = n(496675),
 	x = n(158776),
 	T = n(471253),
@@ -66,7 +66,7 @@ let j = l.memo(function (e) {
 				isMobile: x.Z.isMobileOnline(i.user.id),
 				status: x.Z.getStatus(i.user.id, f)
 			})),
-			Z = (0, d.e7)([C.ZP], () => C.ZP.getMember(f, i.user.id)),
+			Z = (0, d.e7)([g.ZP], () => g.ZP.getMember(f, i.user.id)),
 			A = l.useMemo(() => ({ [f]: [i.user.id] }), [f, i.user.id]);
 		(0, _.$)(A);
 		let M = i.rtsState === S.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
@@ -78,9 +78,7 @@ let j = l.memo(function (e) {
 		}
 		let P = (e) => {
 			(0, m.jW)(e, async () => {
-				let { default: e } = await Promise.all([n.e('79695'), n.e('70474'), n.e('12435'), n.e('46563')]).then(
-					n.bind(n, 757387)
-				);
+				let { default: e } = await Promise.all([n.e('79695'), n.e('70474'), n.e('12435'), n.e('46563')]).then(n.bind(n, 757387));
 				return (n) =>
 					(0, s.jsx)(e, {
 						...n,
@@ -101,7 +99,7 @@ let j = l.memo(function (e) {
 							channelId: t.id
 						}),
 					renderPopout: (e) =>
-						(0, s.jsx)(g.Z, {
+						(0, s.jsx)(C.Z, {
 							...e,
 							location: 'RequestToSpeakSidebar',
 							userId: i.user.id,
@@ -210,10 +208,7 @@ let j = l.memo(function (e) {
 function y(e) {
 	let { channel: t, toggleRequestToSpeakSidebar: n, chatOpen: i } = e,
 		a = (0, N.Fd)(t.id),
-		l = [
-			(0, d.e7)([I.Z], () => I.Z.can(M.Pl.MANAGE_CHANNELS, t) || I.Z.can(M.Pl.MANAGE_ROLES, t)) ? 1 : 0,
-			Math.max(1, a.length)
-		];
+		l = [(0, d.e7)([I.Z], () => I.Z.can(M.Pl.MANAGE_CHANNELS, t) || I.Z.can(M.Pl.MANAGE_ROLES, t)) ? 1 : 0, Math.max(1, a.length)];
 	return (0, s.jsxs)('div', {
 		className: o()(R.container, { [R.chatOpen]: i }),
 		children: [
@@ -268,10 +263,7 @@ function y(e) {
 								className: R.listTitle,
 								variant: 'text-xs/bold',
 								color: 'header-secondary',
-								children:
-									a.length > 0
-										? b.Z.Messages.REQUEST_TO_SPEAK_LIST_TITLE.format({ numHands: a.length })
-										: b.Z.Messages.REQUEST_TO_SPEAK_AREA_TITLE
+								children: a.length > 0 ? b.Z.Messages.REQUEST_TO_SPEAK_LIST_TITLE.format({ numHands: a.length }) : b.Z.Messages.REQUEST_TO_SPEAK_AREA_TITLE
 							},
 							'participants-section'
 						);
@@ -281,5 +273,4 @@ function y(e) {
 		]
 	});
 }
-((a = i || (i = {}))[(a.TOGGLE_REQUEST_TO_SPEAK = 0)] = 'TOGGLE_REQUEST_TO_SPEAK'),
-	(a[(a.PARTICIPANTS = 1)] = 'PARTICIPANTS');
+((a = i || (i = {}))[(a.TOGGLE_REQUEST_TO_SPEAK = 0)] = 'TOGGLE_REQUEST_TO_SPEAK'), (a[(a.PARTICIPANTS = 1)] = 'PARTICIPANTS');

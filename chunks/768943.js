@@ -85,9 +85,7 @@ class h extends (r = o.ZP.Store) {
 			let { savedMessages: t } = e;
 			for (let e of ((_ = new Date().getTime()), d.clear(), t)) d.set(f(e.saveData), e);
 			t.forEach((e) => {
-				null != e.saveData.dueAt &&
-					(null != e.saveData.dueAt && e.saveData.dueAt > new Date() && E.delete(e.saveData.messageId),
-					null != e.saveData.dueAt && e.saveData.dueAt < new Date() && E.add(e.saveData.messageId));
+				null != e.saveData.dueAt && (null != e.saveData.dueAt && e.saveData.dueAt > new Date() && E.delete(e.saveData.messageId), null != e.saveData.dueAt && e.saveData.dueAt < new Date() && E.add(e.saveData.messageId));
 			});
 		},
 		SAVED_MESSAGE_CREATE: function (e) {

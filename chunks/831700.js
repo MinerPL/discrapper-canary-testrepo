@@ -120,29 +120,7 @@ class q extends U.ZP {
 				});
 	}
 	render() {
-		let {
-				channel: e,
-				selected: t,
-				connected: n,
-				unread: l,
-				resolvedUnreadSetting: a,
-				mentionCount: s,
-				locked: c,
-				sorting: u,
-				isUserOver: d,
-				connectChannelDropTarget: h,
-				connectChannelDragSource: p,
-				connectUserDropTarget: _,
-				connectDragPreview: m,
-				canReorderChannel: C,
-				canMoveMembers: I,
-				showTutorial: E,
-				hasActiveEvent: N,
-				embeddedApps: x,
-				isSubscriptionGated: S,
-				isFavoriteSuggestion: v,
-				withGuildIcon: Z
-			} = this.props,
+		let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: a, mentionCount: s, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: _, connectDragPreview: m, canReorderChannel: C, canMoveMembers: I, showTutorial: E, hasActiveEvent: N, embeddedApps: x, isSubscriptionGated: S, isFavoriteSuggestion: v, withGuildIcon: Z } = this.props,
 			{ shouldShowActivities: T, shouldShowGuildVerificationPopout: L } = this.state,
 			b = this.getVoiceStatesCount(),
 			M = (0, i.jsxs)('li', {
@@ -196,14 +174,7 @@ class q extends U.ZP {
 											}),
 											withGuildIcon: Z,
 											...h,
-											children: [
-												v && this.renderAcceptSuggestionButton(),
-												v && this.renderRemoveSuggestionButton(),
-												!v && this.renderOpenChatButton(),
-												!v && this.renderInviteButton(),
-												!v && this.renderEditButton(),
-												!v && this.renderChannelInfo()
-											]
+											children: [v && this.renderAcceptSuggestionButton(), v && this.renderRemoveSuggestionButton(), !v && this.renderOpenChatButton(), !v && this.renderInviteButton(), !v && this.renderEditButton(), !v && this.renderChannelInfo()]
 										});
 									}
 								})
@@ -366,9 +337,7 @@ function X(e) {
 				i = O.Z.getCheck(n.guild_id);
 			return {
 				canManageChannel: P.Z.can(F.Plq.MANAGE_CHANNELS, n),
-				canReorderChannel:
-					!0 !== l &&
-					(t.id === W._ || (null != e ? P.Z.can(F.Plq.MANAGE_CHANNELS, e) : P.Z.can(F.Plq.MANAGE_CHANNELS, t))),
+				canReorderChannel: !0 !== l && (t.id === W._ || (null != e ? P.Z.can(F.Plq.MANAGE_CHANNELS, e) : P.Z.can(F.Plq.MANAGE_CHANNELS, t))),
 				canMoveMembers: P.Z.can(F.Plq.MOVE_MEMBERS, n),
 				locked: !P.Z.can(F.Plq.CONNECT, n),
 				bypassLimit: P.Z.can(F.Plq.MOVE_MEMBERS, n),

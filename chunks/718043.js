@@ -6,9 +6,7 @@ function t(n) {
 						return typeof e;
 					}
 				: function (e) {
-						return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype
-							? 'symbol'
-							: typeof e;
+						return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
 					}),
 		(e.exports.__esModule = !0),
 		(e.exports.default = e.exports),

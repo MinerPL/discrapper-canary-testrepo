@@ -105,7 +105,6 @@ var l = {
 e.Z = function (a, e, i) {
 	var t = l[a],
 		n = 1 === e ? t.one : t.other.replace('{{count}}', String(e));
-	if (null != i && i.addSuffix)
-		return i.comparison && i.comparison > 0 ? t.futureTense(n) + ' kuluttua' : n + ' sitten';
+	if (null != i && i.addSuffix) return i.comparison && i.comparison > 0 ? t.futureTense(n) + ' kuluttua' : n + ' sitten';
 	return n;
 };

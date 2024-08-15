@@ -27,24 +27,13 @@ function T(e) {
 		{ error: S, loading: h, createEnableRequest: g, submittedRequest: C } = (0, c.Z)(null == e ? void 0 : e.id),
 		{ loading: x, error: p, refresh: R, eligibility: f } = (0, d.Z)(null == e ? void 0 : e.id),
 		{ isApplicationRejected: L, requestCooldownDuration: O } = (0, u.Z)(f),
-		A =
-			(null == e ? void 0 : e.hasFeature(I.oNc.CREATOR_MONETIZABLE_RESTRICTED)) === !0 ||
-			(null == e ? void 0 : e.hasFeature(I.oNc.CREATOR_MONETIZABLE_DISABLED)) === !0,
+		A = (null == e ? void 0 : e.hasFeature(I.oNc.CREATOR_MONETIZABLE_RESTRICTED)) === !0 || (null == e ? void 0 : e.hasFeature(I.oNc.CREATOR_MONETIZABLE_DISABLED)) === !0,
 		{ isMonetizationReapplicationDisabled: M } = (0, i.eC)(null == e ? void 0 : e.id),
 		D = C || (null == f ? void 0 : f.isApplicationPending) === !0,
 		v = (null == f ? void 0 : f.canApply) === !0,
-		j = E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUIREMENTS_DESCRIPTION.format({
-			faqUrl: l.Z.getArticleURL(I.BhN.CREATOR_FAQ)
-		});
+		j = E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUIREMENTS_DESCRIPTION.format({ faqUrl: l.Z.getArticleURL(I.BhN.CREATOR_FAQ) });
 	L && M
-		? (t =
-				!0 === T
-					? E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_HIGH_HARM.format({
-							communityGuidelineUrl: I.EYA.GUIDELINES
-						})
-					: E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_HIGH_HARM_ALT.format({
-							communityGuidelineUrl: I.EYA.GUIDELINES
-						}))
+		? (t = !0 === T ? E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_HIGH_HARM.format({ communityGuidelineUrl: I.EYA.GUIDELINES }) : E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_HIGH_HARM_ALT.format({ communityGuidelineUrl: I.EYA.GUIDELINES }))
 		: L &&
 			null != O &&
 			(t = E.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_REJECTED_V2.format({

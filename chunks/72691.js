@@ -80,12 +80,7 @@ let L = (e) => {
 								(0, o.jsx)(i.Text, {
 									variant: 'text-md/normal',
 									className: j.heading,
-									children:
-										null == a
-											? (0, o.jsx)(i.Spinner, { type: i.Spinner.Type.PULSING_ELLIPSIS })
-											: g.Z.Messages.STICKER_PREMIUM_TIER_2_UPSELL_ALERT_TITLE.format({
-													monthlyPrice: (0, x.T4)(a.amount, a.currency)
-												})
+									children: null == a ? (0, o.jsx)(i.Spinner, { type: i.Spinner.Type.PULSING_ELLIPSIS }) : g.Z.Messages.STICKER_PREMIUM_TIER_2_UPSELL_ALERT_TITLE.format({ monthlyPrice: (0, x.T4)(a.amount, a.currency) })
 								}),
 								(0, o.jsx)('div', {
 									className: j.perks,

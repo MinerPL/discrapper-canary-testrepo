@@ -13,8 +13,8 @@ var r,
 	f = n(430824),
 	h = n(981631);
 let p = null,
-	I = {},
-	m = null;
+	m = {},
+	I = null;
 function T() {
 	return {
 		_categories: [],
@@ -48,34 +48,34 @@ function A(e) {
 		t[E.sH].forEach(r),
 		t[E.Zb].forEach(r),
 		(0, u.Z)(n._categories, n).forEach(S),
-		(I[e] = n),
+		(m[e] = n),
 		n
 	);
 }
 function N() {
-	(I = {}), null != p && A(p);
+	(m = {}), null != p && A(p);
 }
 function v(e) {
 	let {
 		guild: { id: t }
 	} = e;
-	(I[t] = void 0), p === t && A(t);
+	(m[t] = void 0), p === t && A(t);
 }
 function O(e) {
 	let {
 		channel: { guild_id: t }
 	} = e;
 	if (null == t) return !1;
-	(I[t] = void 0), p === t && A(t);
+	(m[t] = void 0), p === t && A(t);
 }
 function R(e) {
 	let { guildId: t } = e;
-	(I[t] = void 0), t === p && A(t);
+	(m[t] = void 0), t === p && A(t);
 }
 function C(e, t) {
-	if (((m = t), null == e || null == e.getGuildId())) return !1;
+	if (((I = t), null == e || null == e.getGuildId())) return !1;
 	let n = e.getGuildId();
-	return null != n && ((I[n] = void 0), n === p && A(n), !0);
+	return null != n && ((m[n] = void 0), n === p && A(n), !0);
 }
 function y() {
 	A(h.I_8);
@@ -87,7 +87,7 @@ class D extends (r = o.ZP.Store) {
 	getCategories(e) {
 		return null != e
 			? (function (e) {
-					let t = I[e];
+					let t = m[e];
 					return null != t ? t : A(e);
 				})(e)
 			: g;
@@ -105,7 +105,7 @@ class D extends (r = o.ZP.Store) {
 	(t.Z = new D(l.Z, {
 		CHANNEL_SELECT: function (e) {
 			let { guildId: t } = e;
-			if (((p = null != t ? t : null), null == t || null != I[t])) return !1;
+			if (((p = null != t ? t : null), null == t || null != m[t])) return !1;
 			A(t);
 		},
 		CONNECTION_OPEN: N,
@@ -117,20 +117,20 @@ class D extends (r = o.ZP.Store) {
 			let {
 				guild: { id: t }
 			} = e;
-			delete I[t];
+			delete m[t];
 		},
 		CHANNEL_CREATE: O,
 		CHANNEL_DELETE: O,
 		CHANNEL_UPDATES: function (e) {
 			let { channels: t } = e,
 				n = !1;
-			for (let { guild_id: e } of t) null != e && ((I[e] = void 0), (n = !0), p === e && A(e));
+			for (let { guild_id: e } of t) null != e && ((m[e] = void 0), (n = !0), p === e && A(e));
 			return n;
 		},
 		GUILD_MEMBER_UPDATE: function (e) {
 			let { guildId: t, user: n } = e;
 			if (d.default.getId() !== n.id) return !1;
-			(I[t] = void 0), t === p && A(t);
+			(m[t] = void 0), t === p && A(t);
 		},
 		CURRENT_USER_UPDATE: function () {
 			if (null == p) return !1;
@@ -143,7 +143,7 @@ class D extends (r = o.ZP.Store) {
 		IMPERSONATE_STOP: R,
 		VOICE_CHANNEL_SELECT: function (e) {
 			let { channelId: t } = e;
-			return null == t && null != m ? C(_.Z.getChannel(m), null) : C(_.Z.getChannel(t), t);
+			return null == t && null != I ? C(_.Z.getChannel(I), null) : C(_.Z.getChannel(t), t);
 		},
 		VOICE_STATE_UPDATES: function (e) {
 			let { voiceStates: t } = e;

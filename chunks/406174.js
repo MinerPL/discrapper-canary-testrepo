@@ -61,9 +61,7 @@ function T(e) {
 									(0, n.jsx)(l.Text, {
 										variant: 'text-md/normal',
 										className: E.description,
-										children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_ACTIVE_USER_SUBSCRIPTIONS_DESCRIPTION.format({
-											numSubscriptions: i.length
-										})
+										children: _.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_ACTIVE_USER_SUBSCRIPTIONS_DESCRIPTION.format({ numSubscriptions: i.length })
 									})
 								]
 							}),

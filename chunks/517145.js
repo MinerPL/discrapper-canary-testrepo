@@ -52,7 +52,7 @@ e.exports = function (e, t, n, u, c) {
 	E = r.from(E);
 	var p = i.mont(d.modulus);
 	(e = (e = new i(e).toRed(p)).redPow(new i(d.publicExponent))), (e = r.from(e.fromRed().toArray()));
-	var I = f < 8 ? 1 : 0;
-	for (_ = Math.min(e.length, E.length), e.length !== E.length && (I = 1), h = -1; ++h < _; ) I |= e[h] ^ E[h];
-	return 0 === I;
+	var m = f < 8 ? 1 : 0;
+	for (_ = Math.min(e.length, E.length), e.length !== E.length && (m = 1), h = -1; ++h < _; ) m |= e[h] ^ E[h];
+	return 0 === m;
 };

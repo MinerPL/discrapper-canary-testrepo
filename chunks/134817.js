@@ -21,10 +21,7 @@ class E extends t.Component {
 				}),
 				(0, n.jsx)(o.Z.Content, {
 					type: o.Z.Types.UPGRADE,
-					children:
-						d.ZP.isPremium(e) && !d.ZP.canInstallPremiumApplications(e)
-							? u.Z.Messages.PREMIUM_UPGRADE_REQUIRED_BODY
-							: u.Z.Messages.PREMIUM_SUBSCRIPTION_REQUIRED_BODY
+					children: d.ZP.isPremium(e) && !d.ZP.canInstallPremiumApplications(e) ? u.Z.Messages.PREMIUM_UPGRADE_REQUIRED_BODY : u.Z.Messages.PREMIUM_SUBSCRIPTION_REQUIRED_BODY
 				}),
 				(0, n.jsx)(o.Z.Footer, {
 					primary: {

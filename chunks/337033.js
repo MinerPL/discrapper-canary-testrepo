@@ -18,13 +18,7 @@ function a(e) {
 		[l, u] = i.useState(null != t),
 		c = 1,
 		d = 1;
-	null != a
-		? null != t
-			? ((c = a), (d = a + 1))
-			: (d = a)
-		: null != t
-			? ((c = s.level), (d = s.level + 1))
-			: (d = s.level + (l ? 1 : 0));
+	null != a ? (null != t ? ((c = a), (d = a + 1)) : (d = a)) : null != t ? ((c = s.level), (d = s.level + 1)) : (d = s.level + (l ? 1 : 0));
 	let _ = i.useCallback(() => (u(!0), c), [c]),
 		E = i.useCallback(() => (u(!0), d), [d]);
 	return (0, r.jsxs)(r.Fragment, {

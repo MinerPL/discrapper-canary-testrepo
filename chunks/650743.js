@@ -18,15 +18,15 @@ var i = n(399606),
 	f = n(556296),
 	h = n(451478),
 	p = n(358085),
-	I = n(13140),
-	m = n(763296),
+	m = n(13140),
+	I = n(763296),
 	T = n(981631),
 	g = n(689938),
 	S = n(474288);
 function A(e) {
 	let { soundboardSound: t, closePicker: A } = e,
 		N = (0, d.Iu)((e) => e.searchQuery),
-		v = (0, i.e7)([m.Z], () => null != t && m.Z.isFavoriteSound(t.soundId)),
+		v = (0, i.e7)([I.Z], () => null != t && I.Z.isFavoriteSound(t.soundId)),
 		O = (0, i.e7)([E.Z], () => E.Z.getGuild(null == t ? void 0 : t.guildId)),
 		R = (0, i.e7)([l.Z], () => l.Z.useReducedMotion, []),
 		C = (0, i.e7)([h.Z], () => h.Z.isFocused()),
@@ -67,7 +67,7 @@ function A(e) {
 		b =
 			null != y && (0, p.isWindows)() && !L
 				? g.Z.Messages.SOUNDBOARD_KEYBIND_HINT_NO_POPOUT_WHEEL_SUPPORT.format({
-						keybind: (0, I.BB)(y.shortcut, !0),
+						keybind: (0, m.BB)(y.shortcut, !0),
 						openSettingsHook: (e, t) =>
 							(0, r.jsx)(
 								s.Anchor,

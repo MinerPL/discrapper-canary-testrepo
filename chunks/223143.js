@@ -24,13 +24,7 @@ function c() {
 			location: e + ' auto off',
 			autoTrackExposure: !1
 		});
-	let [t, n, u, c, d] = (0, i.Wu)([l.Z], () => [
-			l.Z.isFetching,
-			l.Z.isClaiming,
-			l.Z.fetchError,
-			l.Z.claimError,
-			l.Z.purchases
-		]),
+	let [t, n, u, c, d] = (0, i.Wu)([l.Z], () => [l.Z.isFetching, l.Z.isClaiming, l.Z.fetchError, l.Z.claimError, l.Z.purchases]),
 		{ shouldFakePurchaseSuccessFlowLocally: _ } = (0, o.Z)({ location: 'useFetchPurchases' });
 	return (
 		(0, r.useEffect)(() => {

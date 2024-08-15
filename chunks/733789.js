@@ -76,11 +76,7 @@ let p = {
 class T extends a.PureComponent {
 	renderDescription(e, t) {
 		let n = p[e];
-		return 1 === t.length
-			? n.single(t[0].user, (e) => this.renderActivityDiscordTag(e))
-			: 2 === t.length
-				? n.double(t[0].user, t[1].user, (e) => this.renderActivityDiscordTag(e))
-				: n.other(t.length);
+		return 1 === t.length ? n.single(t[0].user, (e) => this.renderActivityDiscordTag(e)) : 2 === t.length ? n.double(t[0].user, t[1].user, (e) => this.renderActivityDiscordTag(e)) : n.other(t.length);
 	}
 	renderActivityDiscordTag(e) {
 		return (0, i.jsx)(

@@ -24,14 +24,7 @@ function s(t, e) {
 	let i = Math.max(e - 60, 0);
 	i < 5 && (i = 0);
 	let s = Math.min(i + 140, r);
-	return (
-		s > r - 5 && (s = r),
-		s === r && (i = Math.max(s - 140, 0)),
-		(n = n.slice(i, s)),
-		i > 0 && (n = `'{snip} ${n}`),
-		s < r && (n += ' {snip}'),
-		n
-	);
+	return s > r - 5 && (s = r), s === r && (i = Math.max(s - 140, 0)), (n = n.slice(i, s)), i > 0 && (n = `'{snip} ${n}`), s < r && (n += ' {snip}'), n;
 }
 function o(t, e) {
 	if (!Array.isArray(t)) return '';

@@ -23,14 +23,9 @@ class u extends (i = s.PureComponent) {
 	onDataUpdate(e, t) {
 		let { maxValue: n, data: i, animate: a } = this.props,
 			s = null == e || (e.data !== t.data && !l().isEqual(e.data, t.data));
-		if (
-			(s && ((this.dataChangedAt = performance.now()), (this.maxValue = null != n ? n : Math.max(...i))),
-			s || null == e || (!e.animate && a) || e.color !== this.props.color)
-		) {
+		if ((s && ((this.dataChangedAt = performance.now()), (this.maxValue = null != n ? n : Math.max(...i))), s || null == e || (!e.animate && a) || e.color !== this.props.color)) {
 			let e = o.oo(this.props.color);
-			(this.fillColor = 'rgba('.concat(e.r, ', ').concat(e.g, ', ').concat(e.b, ', 0.5)')),
-				window.cancelAnimationFrame(this.animationFrameRequestId),
-				(this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));
+			(this.fillColor = 'rgba('.concat(e.r, ', ').concat(e.g, ', ').concat(e.b, ', 0.5)')), window.cancelAnimationFrame(this.animationFrameRequestId), (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));
 		}
 	}
 	componentDidMount() {
@@ -65,15 +60,7 @@ class u extends (i = s.PureComponent) {
 				let t, n;
 				let i = this.canvas.current;
 				if (null == i) return;
-				let {
-					data: a,
-					updateInterval: s,
-					color: r,
-					numUpdatesToShow: l,
-					lineWidth: c,
-					animate: d,
-					gradientStopColor: u
-				} = this.props;
+				let { data: a, updateInterval: s, color: r, numUpdatesToShow: l, lineWidth: c, animate: d, gradientStopColor: u } = this.props;
 				if (a.length < 2) return;
 				let _ = Math.max(Math.min((e - this.dataChangedAt) / s, 1), 0),
 					E = i.getContext('2d'),
@@ -88,9 +75,7 @@ class u extends (i = s.PureComponent) {
 				}
 				I.addColorStop(1, this.fillColor), (E.fillStyle = I);
 				let g = a.length >= l ? l : a.length;
-				E.setTransform(1, 0, 0, -1, 0, i.height),
-					E.clearRect(0, 0, i.width, i.height),
-					E.translate(0, 0.5 * E.lineWidth);
+				E.setTransform(1, 0, 0, -1, 0, i.height), E.clearRect(0, 0, i.width, i.height), E.translate(0, 0.5 * E.lineWidth);
 				let p = Math.floor(i.width / (g - 3)),
 					T = 0.5 * p;
 				E.translate(p - p * _, 0), E.beginPath();

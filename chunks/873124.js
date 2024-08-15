@@ -33,13 +33,7 @@ function a(e) {
 					})
 						.catch((e) => {
 							var t, s;
-							m(
-								null !== (s = e.message) && void 0 !== s
-									? s
-									: null === (t = e.body) || void 0 === t
-										? void 0
-										: t.message
-							);
+							m(null !== (s = e.message) && void 0 !== s ? s : null === (t = e.body) || void 0 === t ? void 0 : t.message);
 						})
 						.finally(() => {
 							h(!1);

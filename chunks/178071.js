@@ -33,14 +33,7 @@ let _ = {
 };
 class E extends a.PureComponent {
 	render() {
-		let {
-				storeListings: e,
-				primaryStoreListing: t,
-				skuId: n,
-				onStoreListingSelect: a,
-				currentStoreListingId: s,
-				...r
-			} = this.props,
+		let { storeListings: e, primaryStoreListing: t, skuId: n, onStoreListingSelect: a, currentStoreListingId: s, ...r } = this.props,
 			l = null != t ? 1 : 0;
 		return (l += e.length) < 2
 			? null

@@ -13,18 +13,13 @@ function s(e) {
 					return typeof e;
 				}
 			: function (e) {
-					return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype
-						? 'symbol'
-						: typeof e;
+					return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
 				})(e);
 }
 function o(e, t) {
 	for (var n = 0; n < t.length; n++) {
 		var r = t[n];
-		(r.enumerable = r.enumerable || !1),
-			(r.configurable = !0),
-			'value' in r && (r.writable = !0),
-			Object.defineProperty(e, r.key, r);
+		(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 	}
 }
 function l(e, t) {
@@ -71,14 +66,14 @@ var _ = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
 				}
 			})),
 				t && l(e, t);
-		})(I, e);
+		})(m, e);
 		var t,
 			n,
 			i,
 			f,
 			h,
 			p =
-				((t = I),
+				((t = m),
 				(n = (function () {
 					if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
 					if ('function' == typeof Proxy) return !0;
@@ -98,21 +93,16 @@ var _ = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
 						})(this, e)
 					);
 				});
-		function I() {
+		function m() {
 			var e;
 			!(function (e, t) {
 				if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-			})(this, I);
+			})(this, m);
 			for (var t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-			return (
-				d(u((e = p.call.apply(p, [this].concat(n)))), 'priority', 90),
-				d(u(e), 'subPriority', 1),
-				d(u(e), 'incompatibleTokens', ['Y', 'R', 'q', 'Q', 'w', 'I', 'D', 'i', 'e', 'c', 't', 'T']),
-				e
-			);
+			return d(u((e = p.call.apply(p, [this].concat(n)))), 'priority', 90), d(u(e), 'subPriority', 1), d(u(e), 'incompatibleTokens', ['Y', 'R', 'q', 'Q', 'w', 'I', 'D', 'i', 'e', 'c', 't', 'T']), e;
 		}
 		return (
-			(i = I),
+			(i = m),
 			(f = [
 				{
 					key: 'parse',
@@ -144,6 +134,6 @@ var _ = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
 				}
 			]),
 			o(i.prototype, f),
-			I
+			m
 		);
 	})(i._);

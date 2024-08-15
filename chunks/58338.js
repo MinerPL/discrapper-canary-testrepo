@@ -48,19 +48,12 @@ function g(e) {
 					h = (n) => {
 						g(!1);
 						let t = { message_notifications: n };
-						n === M.bL.ALL_MESSAGES &&
-							L !== N.i.ALL_MESSAGES &&
-							(t.flags = (0, o.Q4)(E.ZP.getGuildFlags(e), I.vc.UNREADS_ALL_MESSAGES)),
-							u.Z.updateGuildNotificationSettings(e, t, _.UE.notifications(n));
+						n === M.bL.ALL_MESSAGES && L !== N.i.ALL_MESSAGES && (t.flags = (0, o.Q4)(E.ZP.getGuildFlags(e), I.vc.UNREADS_ALL_MESSAGES)), u.Z.updateGuildNotificationSettings(e, t, _.UE.notifications(n));
 					},
 					f = (n) => {
 						g(!1);
 						let t = E.ZP.getGuildFlags(e);
-						u.Z.updateGuildNotificationSettings(
-							e,
-							{ flags: (0, o.Q4)(t, n === N.i.ALL_MESSAGES ? I.vc.UNREADS_ALL_MESSAGES : I.vc.UNREADS_ONLY_MENTIONS) },
-							_.UE.unreads(n)
-						);
+						u.Z.updateGuildNotificationSettings(e, { flags: (0, o.Q4)(t, n === N.i.ALL_MESSAGES ? I.vc.UNREADS_ALL_MESSAGES : I.vc.UNREADS_ONLY_MENTIONS) }, _.UE.unreads(n));
 					};
 				return (0, s.jsxs)(s.Fragment, {
 					children: [
@@ -119,10 +112,7 @@ function g(e) {
 													label: S.Z.Messages.NOTIFICATION_SETTINGS_PRESETS_MENTION_ONLY,
 													action: () => f(N.i.ONLY_MENTIONS),
 													disabled: L !== N.i.ONLY_MENTIONS && T === M.bL.ALL_MESSAGES,
-													subtext:
-														L !== N.i.ONLY_MENTIONS && T === M.bL.ALL_MESSAGES
-															? S.Z.Messages.NOTIFICATION_SETTINGS_UNREAD_MENTION_ONLY_DISABLED
-															: void 0
+													subtext: L !== N.i.ONLY_MENTIONS && T === M.bL.ALL_MESSAGES ? S.Z.Messages.NOTIFICATION_SETTINGS_UNREAD_MENTION_ONLY_DISABLED : void 0
 												})
 											]
 										},
@@ -140,10 +130,7 @@ function g(e) {
 													label: S.Z.Messages.NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES,
 													checked: T === M.bL.ALL_MESSAGES,
 													action: () => h(M.bL.ALL_MESSAGES),
-													subtext:
-														L !== N.i.ALL_MESSAGES && T !== M.bL.ALL_MESSAGES
-															? S.Z.Messages.NOTIFICATION_SETTINGS_UNREAD_UPDATE_WARNING
-															: void 0
+													subtext: L !== N.i.ALL_MESSAGES && T !== M.bL.ALL_MESSAGES ? S.Z.Messages.NOTIFICATION_SETTINGS_UNREAD_UPDATE_WARNING : void 0
 												}),
 												(0, s.jsx)(l.MenuRadioItem, {
 													group: 'notification-preset',
@@ -186,8 +173,7 @@ function g(e) {
 									id: 'mention',
 									checked: n.suppressEveryone,
 									label: S.Z.Messages.FORM_LABEL_SUPPRESS_EVERYONE.format(),
-									action: () =>
-										t(e, { suppress_everyone: !n.suppressEveryone }, _.UE.suppressEveryone(!n.suppressEveryone))
+									action: () => t(e, { suppress_everyone: !n.suppressEveryone }, _.UE.suppressEveryone(!n.suppressEveryone))
 								}),
 								(0, s.jsx)(l.MenuCheckboxItem, {
 									id: 'roles',
@@ -199,12 +185,7 @@ function g(e) {
 									id: 'hightlight',
 									label: S.Z.Messages.FORM_LABEL_SUPPRESS_HIGHLIGHTS,
 									checked: n.highligths === M.gLR.ENABLED,
-									action: () =>
-										t(
-											e,
-											{ notify_highlights: n.highligths === M.gLR.ENABLED ? M.gLR.DISABLED : M.gLR.ENABLED },
-											_.UE.highlights(n.highligths !== M.gLR.ENABLED)
-										)
+									action: () => t(e, { notify_highlights: n.highligths === M.gLR.ENABLED ? M.gLR.DISABLED : M.gLR.ENABLED }, _.UE.highlights(n.highligths !== M.gLR.ENABLED))
 								})
 							]
 						}),
@@ -214,8 +195,7 @@ function g(e) {
 									id: 'event',
 									checked: n.muteScheduledEvents,
 									label: S.Z.Messages.FORM_LABEL_MUTE_SCHEDULED_EVENTS,
-									action: () =>
-										t(e, { mute_scheduled_events: !n.muteScheduledEvents }, _.UE.mutedEvents(!n.muteScheduledEvents))
+									action: () => t(e, { mute_scheduled_events: !n.muteScheduledEvents }, _.UE.mutedEvents(!n.muteScheduledEvents))
 								}),
 								(0, s.jsx)(l.MenuCheckboxItem, {
 									id: 'mobile_push',

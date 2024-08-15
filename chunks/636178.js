@@ -21,13 +21,7 @@ var r = n(385703),
 		return void 0 === t && (t = o.Z), new a.Ci((0, i.Z)(e, t) || void 0);
 	},
 	u = ['count', 'until', 'interval', 'byweekday', 'bymonthday', 'bymonth'];
-(r.Z.IMPLEMENTED = []),
-	(r.Z.IMPLEMENTED[s.D.HOURLY] = u),
-	(r.Z.IMPLEMENTED[s.D.MINUTELY] = u),
-	(r.Z.IMPLEMENTED[s.D.DAILY] = ['byhour'].concat(u)),
-	(r.Z.IMPLEMENTED[s.D.WEEKLY] = u),
-	(r.Z.IMPLEMENTED[s.D.MONTHLY] = u),
-	(r.Z.IMPLEMENTED[s.D.YEARLY] = ['byweekno', 'byyearday'].concat(u));
+(r.Z.IMPLEMENTED = []), (r.Z.IMPLEMENTED[s.D.HOURLY] = u), (r.Z.IMPLEMENTED[s.D.MINUTELY] = u), (r.Z.IMPLEMENTED[s.D.DAILY] = ['byhour'].concat(u)), (r.Z.IMPLEMENTED[s.D.WEEKLY] = u), (r.Z.IMPLEMENTED[s.D.MONTHLY] = u), (r.Z.IMPLEMENTED[s.D.YEARLY] = ['byweekno', 'byyearday'].concat(u));
 var c = function (e, t, n, i) {
 		return new r.Z(e, t, n, i).toString();
 	},

@@ -1,5 +1,4 @@
-var r =
-		/Proc-Type: 4,ENCRYPTED[\n\r]+DEK-Info: AES-((?:128)|(?:192)|(?:256))-CBC,([0-9A-H]+)[\n\r]+([0-9A-z\n\r+/=]+)[\n\r]+/m,
+var r = /Proc-Type: 4,ENCRYPTED[\n\r]+DEK-Info: AES-((?:128)|(?:192)|(?:256))-CBC,([0-9A-H]+)[\n\r]+([0-9A-z\n\r+/=]+)[\n\r]+/m,
 	i = /^-----BEGIN ((?:.*? KEY)|CERTIFICATE)-----/m,
 	a = /^-----BEGIN ((?:.*? KEY)|CERTIFICATE)-----([0-9A-z\n\r+/=]+)-----END \1-----$/m,
 	s = n(245413),
@@ -18,8 +17,8 @@ e.exports = function (e, t) {
 			p = o.createDecipheriv(d, f, _);
 		h.push(p.update(E)), h.push(p.final()), (n = l.concat(h));
 	} else {
-		var I = u.match(a);
-		n = l.from(I[2].replace(/[\r\n]/g, ''), 'base64');
+		var m = u.match(a);
+		n = l.from(m[2].replace(/[\r\n]/g, ''), 'base64');
 	}
 	return {
 		tag: u.match(i)[1],

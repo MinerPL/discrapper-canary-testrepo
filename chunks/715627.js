@@ -12,21 +12,7 @@ let o = {
 	},
 	c = (e, t, n) => (null == n ? t : (e * n) / 100),
 	d = a.memo(function (e) {
-		let {
-				confettiTarget: t,
-				colors: n,
-				emojiURL: d,
-				numBursts: _,
-				particlesPerBurst: u,
-				offsetXPercentageMax: E,
-				offsetXPercentageMin: T,
-				offsetYPercentageMax: I,
-				offsetYPercentageMin: R,
-				customConfettiCanvas: C,
-				speedValues: g = o,
-				dragCoefficientValue: p = 0.001,
-				onAnimationEnd: N
-			} = e,
+		let { confettiTarget: t, colors: n, emojiURL: d, numBursts: _, particlesPerBurst: u, offsetXPercentageMax: E, offsetXPercentageMin: T, offsetYPercentageMax: I, offsetYPercentageMin: R, customConfettiCanvas: C, speedValues: g = o, dragCoefficientValue: p = 0.001, onAnimationEnd: N } = e,
 			[A, m] = a.useState(null),
 			{ confettiCanvas: f } = a.useContext(i.h),
 			S = (0, r.uR)(null != C ? C : f, A),

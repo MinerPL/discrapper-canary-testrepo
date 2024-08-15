@@ -41,30 +41,9 @@ let p = {
 	}
 };
 t.Z = s.memo(function (e) {
-	let {
-			className: t,
-			disabled: n = !1,
-			innerClassName: r,
-			childClassName: i,
-			iconClassName: s,
-			icon: o,
-			children: I,
-			onClick: m,
-			isActive: T,
-			onMouseEnter: g,
-			onMouseLeave: S,
-			onFocus: A,
-			onBlur: N,
-			pulse: v,
-			sparkle: O,
-			notification: R,
-			'aria-label': C,
-			'aria-expanded': y,
-			'aria-haspopup': D,
-			'aria-controls': L
-		} = e,
+	let { className: t, disabled: n = !1, innerClassName: r, childClassName: i, iconClassName: s, icon: o, children: m, onClick: I, isActive: T, onMouseEnter: g, onMouseLeave: S, onFocus: A, onBlur: N, pulse: v, sparkle: O, notification: R, 'aria-label': C, 'aria-expanded': y, 'aria-haspopup': D, 'aria-controls': L } = e,
 		b = (0, _.Q)('ChannelTextAreaButton'),
-		M = (0, c.useTransition)(null != I, {
+		M = (0, c.useTransition)(null != m, {
 			...p,
 			keys: (e) => (e ? 'children' : 'icon')
 		}),
@@ -96,7 +75,7 @@ t.Z = s.memo(function (e) {
 		disabled: n,
 		className: l()(t, { [h.active]: T }),
 		innerClassName: l()(h.button, r, { [h.pulseButton]: v }),
-		onClick: m,
+		onClick: I,
 		onMouseEnter: g,
 		onMouseLeave: S,
 		onFocus: A,
@@ -116,7 +95,7 @@ t.Z = s.memo(function (e) {
 							{
 								style: e,
 								className: l()(h.buttonWrapper, i),
-								children: P({ component: I })
+								children: P({ component: m })
 							},
 							r
 						)

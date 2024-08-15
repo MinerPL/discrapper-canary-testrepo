@@ -15,10 +15,7 @@ var i = n(442837),
 	_ = n(981631);
 function E(e) {
 	let t = (0, o.nM)({ autoTrackExposure: !0 }),
-		{ enableDecoupledGameClipping: n } = s.Z.useExperiment(
-			{ location: 'useShouldDisplayClipsGuildSidebarEducation' },
-			{ autoTrackExposure: !1 }
-		);
+		{ enableDecoupledGameClipping: n } = s.Z.useExperiment({ location: 'useShouldDisplayClipsGuildSidebarEducation' }, { autoTrackExposure: !1 });
 	return (0, i.e7)([c.Z, a.ZP, r.Z, l.Z], () => {
 		if (!(0, d.Z)(l.Z) || !t || !n) return !1;
 		if (null != c.Z.getLastClipsError()) return !0;

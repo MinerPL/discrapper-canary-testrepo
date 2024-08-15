@@ -19,19 +19,7 @@ var n = t(735250),
 	m = t(564510);
 let C = new N.Z('TwoWayLink');
 function j(e) {
-	let {
-			platformType: a,
-			isWaitingForConnection: t,
-			onWaitingForConnection: s,
-			expectedCallbackState: N,
-			onAuthToken: j,
-			onError: E,
-			onClose: v,
-			img: f,
-			title: p,
-			body: T,
-			redirectDestination: O
-		} = e,
+	let { platformType: a, isWaitingForConnection: t, onWaitingForConnection: s, expectedCallbackState: N, onAuthToken: j, onError: E, onClose: v, img: f, title: p, body: T, redirectDestination: O } = e,
 		b = r.useCallback(async () => {
 			let e;
 			try {

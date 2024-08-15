@@ -12,36 +12,7 @@ var r = n(735250),
 	u = n(689938);
 class c extends i.Component {
 	render() {
-		let {
-			src: e,
-			fileSize: t,
-			className: n,
-			mediaPlayerClassName: i,
-			poster: c,
-			fileName: d,
-			naturalWidth: _,
-			naturalHeight: E,
-			playable: f,
-			downloadable: h = !0,
-			volume: p,
-			autoPlay: I,
-			autoMute: m,
-			responsive: T,
-			mediaLayoutType: g,
-			mimeType: S,
-			renderOverlayContent: A,
-			renderLinkComponent: N,
-			onClick: v,
-			onPlay: O,
-			onPause: R,
-			onEnded: C,
-			onControlsShow: y,
-			onControlsHide: D,
-			onVolumeChange: L,
-			onMute: b,
-			alt: M = u.Z.Messages.VIDEO,
-			...P
-		} = this.props;
+		let { src: e, fileSize: t, className: n, mediaPlayerClassName: i, poster: c, fileName: d, naturalWidth: _, naturalHeight: E, playable: f, downloadable: h = !0, volume: p, autoPlay: m, autoMute: I, responsive: T, mediaLayoutType: g, mimeType: S, renderOverlayContent: A, renderLinkComponent: N, onClick: v, onPlay: O, onPause: R, onEnded: C, onControlsShow: y, onControlsHide: D, onVolumeChange: L, onMute: b, alt: M = u.Z.Messages.VIDEO, ...P } = this.props;
 		return (0, r.jsx)(s.Z, {
 			alt: M,
 			className: n,
@@ -68,8 +39,8 @@ class c extends i.Component {
 					height: c,
 					responsive: T,
 					volume: p,
-					autoPlay: null != I && I,
-					autoMute: null != m && m,
+					autoPlay: null != m && m,
+					autoMute: null != I && I,
 					type: o.ZP.Types.VIDEO,
 					mediaLayoutType: g,
 					fileName: d,

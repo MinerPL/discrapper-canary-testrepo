@@ -49,8 +49,8 @@ function h(e) {
 function p(e) {
 	i.nextTick(h, e);
 }
-var I = Object.getPrototypeOf(function () {}),
-	m = Object.setPrototypeOf(
+var m = Object.getPrototypeOf(function () {}),
+	I = Object.setPrototypeOf(
 		(a(
 			(r = {
 				get stream() {
@@ -111,12 +111,12 @@ var I = Object.getPrototypeOf(function () {}),
 			});
 		}),
 		r),
-		I
+		m
 	);
 e.exports = function (e) {
 	var t,
 		n = Object.create(
-			m,
+			I,
 			(a((t = {}), E, {
 				value: e,
 				writable: !0

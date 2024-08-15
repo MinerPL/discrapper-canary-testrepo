@@ -13,19 +13,15 @@ var r,
 	f = n(981631);
 let h = {},
 	p = {},
-	I = {},
-	m = 0,
+	m = {},
+	I = 0,
 	T = 0,
 	g = 0,
 	S = 0;
 function A() {
 	S = Object.values(h).length;
-	let {
-		[f.OGo.PENDING_INCOMING]: e = 0,
-		[f.OGo.PENDING_OUTGOING]: t = 0,
-		[f.OGo.FRIEND]: n = 0
-	} = l().countBy(Object.values(h), (e) => e);
-	(m = e), (T = t), (g = n);
+	let { [f.OGo.PENDING_INCOMING]: e = 0, [f.OGo.PENDING_OUTGOING]: t = 0, [f.OGo.FRIEND]: n = 0 } = l().countBy(Object.values(h), (e) => e);
+	(I = e), (T = t), (g = n);
 }
 class N extends (r = u.ZP.Store) {
 	initialize() {
@@ -41,30 +37,12 @@ class N extends (r = u.ZP.Store) {
 		var t, n, r, i;
 		if (null != e.author && h[e.author.id] === f.OGo.BLOCKED) return !0;
 		if (e instanceof d.ZP) {
-			if (
-				this.isBlocked(
-					null === (i = e.interactionMetadata) || void 0 === i
-						? void 0
-						: null === (r = i.user) || void 0 === r
-							? void 0
-							: r.id
-				)
-			)
-				return !0;
-		} else if (
-			this.isBlocked(
-				null === (n = e.interaction_metadata) || void 0 === n
-					? void 0
-					: null === (t = n.user) || void 0 === t
-						? void 0
-						: t.id
-			)
-		)
-			return !0;
+			if (this.isBlocked(null === (i = e.interactionMetadata) || void 0 === i ? void 0 : null === (r = i.user) || void 0 === r ? void 0 : r.id)) return !0;
+		} else if (this.isBlocked(null === (n = e.interaction_metadata) || void 0 === n ? void 0 : null === (t = n.user) || void 0 === t ? void 0 : t.id)) return !0;
 		return !1;
 	}
 	getPendingCount() {
-		return m;
+		return I;
 	}
 	getOutgoingCount() {
 		return T;
@@ -86,10 +64,10 @@ class N extends (r = u.ZP.Store) {
 		return p[e];
 	}
 	getSince(e) {
-		return I[e];
+		return m[e];
 	}
 	getSinces() {
-		return I;
+		return m;
 	}
 	getFriendIDs() {
 		return _.default.keys(h).filter((e) => h[e] === f.OGo.FRIEND);
@@ -108,9 +86,9 @@ class N extends (r = u.ZP.Store) {
 		CONNECTION_OPEN: function (e) {
 			(h = {}),
 				(p = {}),
-				(I = {}),
+				(m = {}),
 				e.relationships.forEach((e) => {
-					(h[e.id] = e.type), null != e.nickname && (p[e.id] = e.nickname), null != e.since && (I[e.id] = e.since);
+					(h[e.id] = e.type), null != e.nickname && (p[e.id] = e.nickname), null != e.since && (m[e.id] = e.since);
 				}),
 				A();
 		},
@@ -129,8 +107,8 @@ class N extends (r = u.ZP.Store) {
 						[e.relationship.id]: e.relationship.nickname
 					}),
 				null != e.relationship.since &&
-					(I = {
-						...I,
+					(m = {
+						...m,
 						[e.relationship.id]: e.relationship.since
 					}),
 				A(),
@@ -142,17 +120,10 @@ class N extends (r = u.ZP.Store) {
 					});
 		},
 		RELATIONSHIP_REMOVE: function (e) {
-			(h = { ...h }),
-				delete h[e.relationship.id],
-				null != p[e.relationship.id] && ((p = { ...p }), delete p[e.relationship.id]),
-				null != I[e.relationship.id] && ((I = { ...I }), delete I[e.relationship.id]),
-				A();
+			(h = { ...h }), delete h[e.relationship.id], null != p[e.relationship.id] && ((p = { ...p }), delete p[e.relationship.id]), null != m[e.relationship.id] && ((m = { ...m }), delete m[e.relationship.id]), A();
 		},
 		RELATIONSHIP_UPDATE: function (e) {
-			null == e.relationship.since ? delete I[e.relationship.id] : (I[e.relationship.id] = e.relationship.since),
-				null == e.relationship.nickname
-					? delete p[e.relationship.id]
-					: (p[e.relationship.id] = e.relationship.nickname);
+			null == e.relationship.since ? delete m[e.relationship.id] : (m[e.relationship.id] = e.relationship.since), null == e.relationship.nickname ? delete p[e.relationship.id] : (p[e.relationship.id] = e.relationship.nickname);
 		},
 		RELATIONSHIP_PENDING_INCOMING_REMOVED: function (e) {
 			(h = { ...h }),

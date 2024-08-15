@@ -12,7 +12,7 @@ n.d(t, {
 		return c;
 	},
 	YD: function () {
-		return I;
+		return m;
 	},
 	aD: function () {
 		return l;
@@ -41,9 +41,7 @@ var i = n(564334),
 function s(e, t) {
 	let n;
 	let r = e;
-	9 === e.length
-		? ((r = e.slice(0, 7)), (n = Math.round((parseInt(e.slice(7, 9), 16) / 255) * t * 255)))
-		: (n = Math.round(255 * t));
+	9 === e.length ? ((r = e.slice(0, 7)), (n = Math.round((parseInt(e.slice(7, 9), 16) / 255) * t * 255))) : (n = Math.round(255 * t));
 	let i = n.toString(16).toUpperCase().padStart(2, '0');
 	return ''.concat(r).concat(i).padEnd(9, '0');
 }
@@ -78,9 +76,7 @@ function c(e) {
 				o = 0,
 				l = 0;
 			return (
-				(s = Math.round(
-					60 * (s = 0 === a ? 0 : i === e ? ((t - n) / a) % 6 : i === t ? (n - e) / a + 2 : (e - t) / a + 4)
-				)) < 0 && (s += 360),
+				(s = Math.round(60 * (s = 0 === a ? 0 : i === e ? ((t - n) / a) % 6 : i === t ? (n - e) / a + 2 : (e - t) / a + 4))) < 0 && (s += 360),
 				(l = (i + r) / 2),
 				(o = +(100 * (o = 0 === a ? 0 : a / (1 - Math.abs(2 * l - 1)))).toFixed(1)),
 				{
@@ -161,13 +157,7 @@ function f(e, t, n) {
 	if (((e /= 360), 0 === t)) r = a = s = n;
 	else {
 		let i = function (e, t, n) {
-				return (n < 0 && (n += 1), n > 1 && (n -= 1), n < 1 / 6)
-					? e + (t - e) * 6 * n
-					: n < 0.5
-						? t
-						: n < 2 / 3
-							? e + (t - e) * (2 / 3 - n) * 6
-							: e;
+				return (n < 0 && (n += 1), n > 1 && (n -= 1), n < 1 / 6) ? e + (t - e) * 6 * n : n < 0.5 ? t : n < 2 / 3 ? e + (t - e) * (2 / 3 - n) * 6 : e;
 			},
 			o = n < 0.5 ? n * (1 + t) : n + t - n * t,
 			l = 2 * n - o;
@@ -178,12 +168,7 @@ function f(e, t, n) {
 function h(e, t) {
 	let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
 		r = E(e.red, e.green, e.blue);
-	return (
-		n
-			? (r.lightness = r.lightness + t > 1 ? 0.9 : r.lightness + t)
-			: (r.lightness = r.lightness - t < 0 ? 0.1 : r.lightness - t),
-		f(r.hue, r.saturation, r.lightness)
-	);
+	return n ? (r.lightness = r.lightness + t > 1 ? 0.9 : r.lightness + t) : (r.lightness = r.lightness - t < 0 ? 0.1 : r.lightness - t), f(r.hue, r.saturation, r.lightness);
 }
 function p(e) {
 	let { colors: t, ratio: n = 5, saturationFactor: i = 1 } = e;
@@ -205,7 +190,7 @@ function p(e) {
 	}
 	return f(c.hue, c.saturation, c.lightness);
 }
-function I(e) {
+function m(e) {
 	return e
 		.slice(0, 3)
 		.map((e) => {
@@ -232,10 +217,7 @@ function I(e) {
 								a = f / E;
 								t = (E - c) / 6 / f + 0.5;
 								n = (E - d) / 6 / f + 0.5;
-								(r = (E - _) / 6 / f + 0.5),
-									(i = c === E ? r - n : d === E ? 1 / 3 + t - r : _ === E ? 2 / 3 + n - t : 0) < 0
-										? (i += 1)
-										: i > 1 && (i -= 1);
+								(r = (E - _) / 6 / f + 0.5), (i = c === E ? r - n : d === E ? 1 / 3 + t - r : _ === E ? 2 / 3 + n - t : 0) < 0 ? (i += 1) : i > 1 && (i -= 1);
 							}
 							return {
 								h: Math.round(360 * i),
@@ -251,9 +233,9 @@ function I(e) {
 							}
 			};
 		})
-		.sort(m)[0].hex;
+		.sort(I)[0].hex;
 }
-function m(e, t) {
+function I(e, t) {
 	let n = e.hsv,
 		r = t.hsv;
 	return r.s + r.v - (n.s + n.v);

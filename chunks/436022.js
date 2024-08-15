@@ -70,13 +70,7 @@ function o(e) {
 						(0, r.jsxs)(t.Text, {
 							className: n.notice,
 							variant: 'text-sm/normal',
-							children: [
-								a.Z.Messages.BILLING_REFUND_REVOCATION_NOTICE,
-								' ',
-								_.isPremiumSubscription || _.isPremiumGuildSubscription || _.isPremiumGift
-									? a.Z.Messages.BILLING_REFUND_ONE_TIME_REFUND_NOTICE
-									: null
-							]
+							children: [a.Z.Messages.BILLING_REFUND_REVOCATION_NOTICE, ' ', _.isPremiumSubscription || _.isPremiumGuildSubscription || _.isPremiumGift ? a.Z.Messages.BILLING_REFUND_ONE_TIME_REFUND_NOTICE : null]
 						})
 					]
 				});
@@ -88,8 +82,7 @@ function o(e) {
 				separator: !1,
 				children: (0, r.jsx)(t.Heading, {
 					variant: 'heading-lg/semibold',
-					children:
-						null != d ? a.Z.Messages.BILLING_REFUND_MODAL_HEADER_ERROR : a.Z.Messages.BILLING_REFUND_MODAL_HEADER
+					children: null != d ? a.Z.Messages.BILLING_REFUND_MODAL_HEADER_ERROR : a.Z.Messages.BILLING_REFUND_MODAL_HEADER
 				})
 			}),
 			(0, r.jsx)(t.ModalContent, { children: s }),

@@ -139,9 +139,7 @@ function e_() {
 								}),
 								(0, i.jsx)(T.FormSwitch, {
 									value: n,
-									note: er.Z.Messages.SAFETY_ALERTS_SETTING_DESCRIPTION.format({
-										learnMoreLink: H.Z.getArticleURL(ea.BhN.SAFETY_ALERTS)
-									}),
+									note: er.Z.Messages.SAFETY_ALERTS_SETTING_DESCRIPTION.format({ learnMoreLink: H.Z.getArticleURL(ea.BhN.SAFETY_ALERTS) }),
 									onChange: U.Q,
 									hideBorder: !0,
 									children: er.Z.Messages.SAFETY_ALERTS_SETTING_TITLE
@@ -176,9 +174,7 @@ function eu() {
 						ref: t,
 						children: (0, i.jsx)(T.FormSwitch, {
 							value: !s,
-							note: er.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_CAPTION.format({
-								helpdeskArticle: H.Z.getArticleURL(ea.BhN.MESSAGE_REQUESTS)
-							}),
+							note: er.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_CAPTION.format({ helpdeskArticle: H.Z.getArticleURL(ea.BhN.MESSAGE_REQUESTS) }),
 							disabled: e,
 							onChange: () => {
 								var e;
@@ -254,9 +250,7 @@ function eI() {
 						(0, i.jsx)(T.FormText, {
 							type: T.FormTextTypes.DESCRIPTION,
 							className: el.marginBottom8,
-							children: er.Z.Messages.OBSCURED_CONTENT_SETTINGS_DESC.format({
-								learnMoreLink: H.Z.getArticleURL(ea.BhN.EXPLICIT_MEDIA_REDACTION)
-							})
+							children: er.Z.Messages.OBSCURED_CONTENT_SETTINGS_DESC.format({ learnMoreLink: H.Z.getArticleURL(ea.BhN.EXPLICIT_MEDIA_REDACTION) })
 						}),
 						(0, i.jsx)(T.FormItem, {
 							ref: r,
@@ -379,12 +373,7 @@ function eT(e) {
 		]
 	});
 }
-((a = n || (n = {})).USERS = 'Account'),
-	(a.MESSAGES = 'Messages'),
-	(a.GUILDS = 'Servers'),
-	(a.ANALYTICS = 'Analytics'),
-	(a.ACTIVITIES = 'Activities'),
-	(a.HUBSPOT = 'Programs');
+((a = n || (n = {})).USERS = 'Account'), (a.MESSAGES = 'Messages'), (a.GUILDS = 'Servers'), (a.ANALYTICS = 'Analytics'), (a.ACTIVITIES = 'Activities'), (a.HUBSPOT = 'Programs');
 function eS(e) {
 	let { body: s, ...t } = e;
 	(0, T.openModal)((e) =>
@@ -423,11 +412,7 @@ class eC extends r.PureComponent {
 			);
 	}
 	componentDidUpdate(e) {
-		e.defaultGuildsRestricted !== this.props.defaultGuildsRestricted &&
-			this.setState({ defaultGuildsRestricted: this.props.defaultGuildsRestricted }),
-			null != this.props.subsection &&
-				e.subsection !== this.props.subsection &&
-				this.setState({ selectedTab: this.props.subsection });
+		e.defaultGuildsRestricted !== this.props.defaultGuildsRestricted && this.setState({ defaultGuildsRestricted: this.props.defaultGuildsRestricted }), null != this.props.subsection && e.subsection !== this.props.subsection && this.setState({ selectedTab: this.props.subsection });
 	}
 	showGuildRestrictionModal(e) {
 		eS({
@@ -440,9 +425,7 @@ class eC extends r.PureComponent {
 				z.iG.updateSetting(e), this.trackDefaultDmsUpdated(e, !1);
 			},
 			onCancel: () => {
-				z.iG.updateSetting(e),
-					z.h2.updateSetting(e ? W.default.keys(y.Z.getGuilds()) : []),
-					this.trackDefaultDmsUpdated(e, !0);
+				z.iG.updateSetting(e), z.h2.updateSetting(e ? W.default.keys(y.Z.getGuilds()) : []), this.trackDefaultDmsUpdated(e, !0);
 			}
 		});
 	}
@@ -463,9 +446,7 @@ class eC extends r.PureComponent {
 				z.mX.updateSetting(e), this.trackDefaultMessageRequestUpdated(e, !1);
 			},
 			onCancel: () => {
-				z.mX.updateSetting(e),
-					z.zA.updateSetting(e ? W.default.keys(y.Z.getGuilds()) : []),
-					this.trackDefaultMessageRequestUpdated(e, !0);
+				z.mX.updateSetting(e), z.zA.updateSetting(e ? W.default.keys(y.Z.getGuilds()) : []), this.trackDefaultMessageRequestUpdated(e, !0);
 			}
 		});
 	}
@@ -485,9 +466,7 @@ class eC extends r.PureComponent {
 					(0, i.jsx)(T.FormText, {
 						type: T.FormTextTypes.DESCRIPTION,
 						className: el.marginBottom8,
-						children: er.Z.Messages.USER_EXPLICIT_CONTENT_FILTER_HELP_V3.format({
-							appealLink: H.Z.getArticleURL(ea.BhN.SAFE_DIRECT_MESSAGING)
-						})
+						children: er.Z.Messages.USER_EXPLICIT_CONTENT_FILTER_HELP_V3.format({ appealLink: H.Z.getArticleURL(ea.BhN.SAFE_DIRECT_MESSAGING) })
 					}),
 					(0, i.jsx)(T.RadioGroup, {
 						value: this.props.explicitContentFilter,
@@ -507,12 +486,7 @@ class eC extends r.PureComponent {
 	}
 	renderDMSafety() {
 		var e;
-		let s =
-			this.props.dmSpamFilter !== I.Xr.DEFAULT_UNSET
-				? this.props.dmSpamFilter
-				: null !== (e = ee.O7.get(this.props.explicitContentFilter)) && void 0 !== e
-					? e
-					: I.Xr.NON_FRIENDS;
+		let s = this.props.dmSpamFilter !== I.Xr.DEFAULT_UNSET ? this.props.dmSpamFilter : null !== (e = ee.O7.get(this.props.explicitContentFilter)) && void 0 !== e ? e : I.Xr.NON_FRIENDS;
 		return this.props.mediaRedactionIsEnabled
 			? (0, i.jsxs)(i.Fragment, {
 					children: [
@@ -535,9 +509,7 @@ class eC extends r.PureComponent {
 												(0, i.jsx)(T.FormText, {
 													type: T.FormTextTypes.DESCRIPTION,
 													className: el.marginBottom8,
-													children: er.Z.Messages.USER_DM_SPAM_FILTER_HELP.format({
-														appealLink: H.Z.getArticleURL(ea.BhN.SAFE_DIRECT_MESSAGING)
-													})
+													children: er.Z.Messages.USER_DM_SPAM_FILTER_HELP.format({ appealLink: H.Z.getArticleURL(ea.BhN.SAFE_DIRECT_MESSAGING) })
 												}),
 												(0, i.jsx)(T.RadioGroup, {
 													value: s,
@@ -573,9 +545,7 @@ class eC extends r.PureComponent {
 										(0, i.jsx)(T.FormText, {
 											type: T.FormTextTypes.DESCRIPTION,
 											className: el.marginBottom8,
-											children: er.Z.Messages.USER_DM_SPAM_FILTER_HELP.format({
-												appealLink: H.Z.getArticleURL(ea.BhN.SAFE_DIRECT_MESSAGING)
-											})
+											children: er.Z.Messages.USER_DM_SPAM_FILTER_HELP.format({ appealLink: H.Z.getArticleURL(ea.BhN.SAFE_DIRECT_MESSAGING) })
 										}),
 										(0, i.jsx)(T.RadioGroup, {
 											value: s,
@@ -608,9 +578,7 @@ class eC extends r.PureComponent {
 					setting: en.s6.PRIVACY_KEYWORD_FILTER,
 					children: (0, i.jsx)(T.FormSwitch, {
 						value: this.props.keywordFilter,
-						note: er.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_V2.format({
-							learnMoreLink: H.Z.getArticleURL(ea.BhN.KEYWORD_FILTERS)
-						}),
+						note: er.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_V2.format({ learnMoreLink: H.Z.getArticleURL(ea.BhN.KEYWORD_FILTERS) }),
 						onChange: (e) =>
 							z.gw.updateSetting({
 								profanity: e,
@@ -685,9 +653,7 @@ class eC extends r.PureComponent {
 					setting: en.s6.PRIVACY_DATA_IMPROVE_DISCORD,
 					children: (0, i.jsx)(T.FormSwitch, {
 						value: e,
-						note: er.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE.format({
-							helpdeskArticle: H.Z.getArticleURL(ea.BhN.DATA_USED_TO_IMPROVE_DISCORD)
-						}),
+						note: er.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE.format({ helpdeskArticle: H.Z.getArticleURL(ea.BhN.DATA_USED_TO_IMPROVE_DISCORD) }),
 						onChange: this.handleUsageStatisticsChange,
 						children: er.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE
 					})
@@ -696,9 +662,7 @@ class eC extends r.PureComponent {
 					setting: en.s6.PRIVACY_DATA_PERSONALIZE,
 					children: (0, i.jsx)(T.FormSwitch, {
 						value: s,
-						note: er.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE.format({
-							helpdeskArticle: H.Z.getArticleURL(ea.BhN.DATA_USED_FOR_RECOMMENDED)
-						}),
+						note: er.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE.format({ helpdeskArticle: H.Z.getArticleURL(ea.BhN.DATA_USED_FOR_RECOMMENDED) }),
 						onChange: this.handlePersonalizationChange,
 						children: er.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE
 					})
@@ -707,9 +671,7 @@ class eC extends r.PureComponent {
 					setting: en.s6.PRIVACY_DATA_QUESTS,
 					children: (0, i.jsx)(T.FormSwitch, {
 						value: !t,
-						note: er.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED.format({
-							helpdeskArticle: H.Z.getArticleURL(ea.BhN.DATA_PRIVACY_CONTROLS)
-						}),
+						note: er.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED.format({ helpdeskArticle: H.Z.getArticleURL(ea.BhN.DATA_PRIVACY_CONTROLS) }),
 						onChange: this.handleChangeDropsOptedOut,
 						children: (0, i.jsx)('div', { children: er.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT })
 					})
@@ -769,9 +731,7 @@ class eC extends r.PureComponent {
 					className: eo.card,
 					children: (0, i.jsx)(T.Text, {
 						variant: 'text-md/normal',
-						children: er.Z.Messages.DATA_DOWNLOAD_REQUESTED_STATUS_NOTE.format({
-							date: E()(n.created_at).add(ea.eBq, 'days').format('MMMM Do YYYY')
-						})
+						children: er.Z.Messages.DATA_DOWNLOAD_REQUESTED_STATUS_NOTE.format({ date: E()(n.created_at).add(ea.eBq, 'days').format('MMMM Do YYYY') })
 					})
 				})),
 				(o = null)),
@@ -785,9 +745,7 @@ class eC extends r.PureComponent {
 					(0, i.jsx)(T.FormText, {
 						type: T.FormTextTypes.DESCRIPTION,
 						className: el.marginBottom20,
-						children: er.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_NOTE.format({
-							helpdeskArticle: H.Z.getArticleURL(ea.BhN.GDPR_REQUEST_DATA)
-						})
+						children: er.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_NOTE.format({ helpdeskArticle: H.Z.getArticleURL(ea.BhN.GDPR_REQUEST_DATA) })
 					}),
 					e,
 					o
@@ -940,9 +898,7 @@ class eC extends r.PureComponent {
 				var e;
 				(e = {
 					header: er.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_TITLE,
-					body: er.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_WEB_NOTE.format({
-						helpdeskArticle: H.Z.getArticleURL(ea.BhN.GDPR_PACKAGE_CONTENTS)
-					}),
+					body: er.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_WEB_NOTE.format({ helpdeskArticle: H.Z.getArticleURL(ea.BhN.GDPR_PACKAGE_CONTENTS) }),
 					confirmText: er.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_CONFIRM,
 					cancelText: er.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_CANCEL,
 					confirmButtonColor: T.Button.Colors.BRAND,
@@ -952,8 +908,7 @@ class eC extends r.PureComponent {
 								.then(
 									(e) => {
 										null != e && null != e.body
-											? (this.setState({ currentHarvestRequest: e.body }),
-												N.Z.show({ body: er.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_SUCCESS }))
+											? (this.setState({ currentHarvestRequest: e.body }), N.Z.show({ body: er.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_SUCCESS }))
 											: N.Z.show({
 													title: er.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
 													body: er.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_BODY

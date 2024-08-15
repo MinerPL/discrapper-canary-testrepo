@@ -76,27 +76,7 @@ function I(e) {
 			});
 }
 function m(e) {
-	let {
-			imageUrl: t,
-			name: n,
-			description: a,
-			formattedPrice: c,
-			role: m,
-			ctaComponent: T,
-			shouldShowFullDescriptionButton: h = !0,
-			onShowFullDescription: N,
-			productType: f,
-			onTapCard: C,
-			actionMenu: p,
-			showOpaqueBackground: g = !1,
-			hideRoleTag: S = !1,
-			lineClamp: A = 1,
-			cardWidth: R = 332,
-			cardHeight: x,
-			thumbnailHeight: O = 187,
-			descriptionTextVariant: M = 'text-sm/normal',
-			isDraft: v = !1
-		} = e,
+	let { imageUrl: t, name: n, description: a, formattedPrice: c, role: m, ctaComponent: T, shouldShowFullDescriptionButton: h = !0, onShowFullDescription: N, productType: f, onTapCard: C, actionMenu: p, showOpaqueBackground: g = !1, hideRoleTag: S = !1, lineClamp: A = 1, cardWidth: R = 332, cardHeight: x, thumbnailHeight: O = 187, descriptionTextVariant: M = 'text-sm/normal', isDraft: v = !1 } = e,
 		L = (0, l.hQ)(),
 		Z = (0, i.jsxs)(i.Fragment, {
 			children: [

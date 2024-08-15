@@ -117,16 +117,9 @@ class q extends (s = i.PureComponent) {
 	componentDidUpdate(e) {
 		let { authenticated: t, location: n } = this.props,
 			{ checkingHandoff: s } = this.state;
-		if (
-			(t && !e.authenticated && !s && (this.state.conditionalMediationAbortController.abort(), this.loginOrSSO(t, n)),
-			e.errors !== this.props.errors)
-		) {
+		if ((t && !e.authenticated && !s && (this.state.conditionalMediationAbortController.abort(), this.loginOrSSO(t, n)), e.errors !== this.props.errors)) {
 			var r, i, a;
-			this.hasError('password')
-				? null === (r = this.passwordRef) || void 0 === r || r.focus()
-				: this.hasError('email') || this.hasError('login')
-					? null === (i = this.loginRef) || void 0 === i || i.focus()
-					: this.hasError('code') && (null === (a = this.codeRef) || void 0 === a || a.focus());
+			this.hasError('password') ? null === (r = this.passwordRef) || void 0 === r || r.focus() : this.hasError('email') || this.hasError('login') ? null === (i = this.loginRef) || void 0 === i || i.focus() : this.hasError('code') && (null === (a = this.codeRef) || void 0 === a || a.focus());
 		}
 	}
 	get loginSource() {
@@ -150,9 +143,7 @@ class q extends (s = i.PureComponent) {
 	}
 	loginOrSSO(e, t) {
 		let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-		if (!!e && null != t)
-			this.setState({ redirecting: !0 }),
-				n ? E.Z.verifySSOToken().then(() => this.transitionSSO(t)) : this.transitionSSO(t);
+		if (!!e && null != t) this.setState({ redirecting: !0 }), n ? E.Z.verifySSOToken().then(() => this.transitionSSO(t)) : this.transitionSSO(t);
 	}
 	transitionSSO(e) {
 		let { transitionTo: t, redirectTo: n, replaceWith: s } = this.props,
@@ -251,9 +242,7 @@ class q extends (s = i.PureComponent) {
 							}),
 							(0, r.jsx)('div', {
 								className: o()(K.marginTop8, z.needAccount),
-								children: V.Z.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_CANCEL.format({
-									onClick: this.handleCancelAccountDeletion
-								})
+								children: V.Z.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_CANCEL.format({ onClick: this.handleCancelAccountDeletion })
 							})
 						]
 					})
@@ -327,14 +316,7 @@ class q extends (s = i.PureComponent) {
 	renderDefaultForm(e) {
 		var t;
 		let n;
-		let {
-				invite: s,
-				giftCode: i,
-				loginStatus: a,
-				country: l,
-				showMobileWebHandoff: c,
-				disableAutofocusOnDefaultForm: u
-			} = this.props,
+		let { invite: s, giftCode: i, loginStatus: a, country: l, showMobileWebHandoff: c, disableAutofocusOnDefaultForm: u } = this.props,
 			d = !this.hasError('email') && this.hasError('password'),
 			h = (null == s ? void 0 : s.stage_instance) != null;
 		return (
@@ -353,9 +335,7 @@ class q extends (s = i.PureComponent) {
 										},
 										'title'
 									),
-									!1 === (0, G.isAndroidWeb)()
-										? (0, r.jsx)(m.DK, { children: V.Z.Messages.AUTH_LOGIN_BODY }, 'subtitle')
-										: null
+									!1 === (0, G.isAndroidWeb)() ? (0, r.jsx)(m.DK, { children: V.Z.Messages.AUTH_LOGIN_BODY }, 'subtitle') : null
 								]
 							})
 					: (0, r.jsx)(U.Z, { invite: s })),
@@ -546,9 +526,7 @@ class q extends (s = i.PureComponent) {
 			className: e,
 			children: (0, r.jsx)(f.Z, {
 				title: V.Z.Messages.PASSWORD_RECOVERY_VERIFY_PHONE_TITLE,
-				subtitle: V.Z.Messages.PASSWORD_RECOVERY_VERIFY_PHONE_SUBTITLE_RESEND.format({
-					onResendClick: this.handleResendCode
-				}),
+				subtitle: V.Z.Messages.PASSWORD_RECOVERY_VERIFY_PHONE_SUBTITLE_RESEND.format({ onResendClick: this.handleResendCode }),
 				error: t,
 				onSubmit: this.handlePasswordReset,
 				onCancel: E.Z.loginReset
@@ -737,19 +715,7 @@ class q extends (s = i.PureComponent) {
 				let { login: t } = this.state,
 					{ invite: n, giftCode: s, guildTemplate: r, location: i, transitionTo: a, redirectTo: l } = this.props,
 					o = null != i ? (0, c.parse)(i.search) : {};
-				'' !== t && (o.email = t),
-					null != n
-						? ((o.mode = 'register'), (e = w.Z5c.INVITE(n.code)))
-						: null != s
-							? ((o.mode = 'register'), (e = w.Z5c.GIFT_CODE(s.code)))
-							: null != r
-								? (e = w.Z5c.GUILD_TEMPLATE(r.code))
-								: null != l
-									? ((e = w.Z5c.REGISTER), (o.redirect_to = l))
-									: (e = w.Z5c.REGISTER),
-					E.Z.loginReset(),
-					a(e, { search: (0, c.stringify)(o) }),
-					y.S.dispatch(w.CkL.WAVE_EMPHASIZE);
+				'' !== t && (o.email = t), null != n ? ((o.mode = 'register'), (e = w.Z5c.INVITE(n.code))) : null != s ? ((o.mode = 'register'), (e = w.Z5c.GIFT_CODE(s.code))) : null != r ? (e = w.Z5c.GUILD_TEMPLATE(r.code)) : null != l ? ((e = w.Z5c.REGISTER), (o.redirect_to = l)) : (e = w.Z5c.REGISTER), E.Z.loginReset(), a(e, { search: (0, c.stringify)(o) }), y.S.dispatch(w.CkL.WAVE_EMPHASIZE);
 			});
 		let s = null != e.location ? (0, c.parse)(e.location.search) : {};
 		this.state = {

@@ -21,9 +21,7 @@ s.Z = {
 					t = null != e && 7 > n()().diff(n()(u.default.extractTimestamp(e.id)), 'days'),
 					o = null != Object.values(c.Z.getGuilds()).find((e) => e.hasFeature(m.oNc.HUB)),
 					N = !(0, r.un)(l.z.HUB_BACK_TO_SCHOOL_UPSELL);
-				!(t || s() || o || !N) &&
-					(0, _.b)() &&
-					(_.Z.trackExposure({ location: '8b792a_1' }), a(), (0, r.kk)(l.z.HUB_BACK_TO_SCHOOL_UPSELL));
+				!(t || s() || o || !N) && (0, _.b)() && (_.Z.trackExposure({ location: '8b792a_1' }), a(), (0, r.kk)(l.z.HUB_BACK_TO_SCHOOL_UPSELL));
 			});
 	},
 	hideHubUpsell() {

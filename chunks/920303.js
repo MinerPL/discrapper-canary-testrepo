@@ -18,8 +18,8 @@ var i,
 	f = n(228392),
 	h = n(131704),
 	p = n(592125),
-	I = n(306680),
-	m = n(823379),
+	m = n(306680),
+	I = n(823379),
 	T = n(709054),
 	g = n(569471);
 let S = 25,
@@ -35,7 +35,7 @@ function L() {
 	(A = !1), (N = !0), (v = !1), (O = !1), (R = null), (C = c.z.LATEST_ACTIVITY), (r = new Set()), (D = 0), (y = []);
 }
 function b(e, t) {
-	return t === c.z.LATEST_ACTIVITY ? I.ZP.lastMessageId(e.id) : e.id;
+	return t === c.z.LATEST_ACTIVITY ? m.ZP.lastMessageId(e.id) : e.id;
 }
 function M() {
 	if (null == R) return !1;
@@ -46,8 +46,7 @@ function M() {
 		.filter((e) => e.isArchivedThread())
 		.filter((t) => {
 			var i;
-			if (0 !== r.size && (null === (i = t.appliedTags) || void 0 === i ? void 0 : i.some((e) => r.has(e))) !== !0)
-				return !1;
+			if (0 !== r.size && (null === (i = t.appliedTags) || void 0 === i ? void 0 : i.some((e) => r.has(e))) !== !0) return !1;
 			if (e || null == n) return !0;
 			{
 				let e = null == t ? null : b(t, C);
@@ -66,7 +65,7 @@ function P(e) {
 let U = [];
 class w extends (i = d.ZP.Store) {
 	initialize() {
-		this.waitFor(p.Z, g.Z, I.ZP);
+		this.waitFor(p.Z, g.Z, m.ZP);
 	}
 	get canLoadMore() {
 		return v && !A && !O;
@@ -78,10 +77,10 @@ class w extends (i = d.ZP.Store) {
 		return N;
 	}
 	isLoading(e, t, n) {
-		return R === e && C === t && (0, m.OL)(r, n) ? A : (L(), !1);
+		return R === e && C === t && (0, I.OL)(r, n) ? A : (L(), !1);
 	}
 	getThreads(e, t, n) {
-		return R === e && C === t && (0, m.OL)(r, n) ? y : U;
+		return R === e && C === t && (0, I.OL)(r, n) ? y : U;
 	}
 }
 (o = 'ArchivedThreadsStore'),
@@ -108,15 +107,10 @@ class w extends (i = d.ZP.Store) {
 			L();
 		},
 		LOAD_ARCHIVED_THREADS: function (e) {
-			(e.channelId !== R || e.sortOrder !== C || !(0, m.OL)(e.tagFilter, r)) && L(),
-				(R = e.channelId),
-				(C = e.sortOrder),
-				(r = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter)),
-				(A = !0),
-				(N = !1);
+			(e.channelId !== R || e.sortOrder !== C || !(0, I.OL)(e.tagFilter, r)) && L(), (R = e.channelId), (C = e.sortOrder), (r = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter)), (A = !0), (N = !1);
 		},
 		LOAD_ARCHIVED_THREADS_SUCCESS: function (e) {
-			if (e.channelId !== R || e.sortOrder !== C || !(0, m.OL)(e.tagFilter, r)) return !1;
+			if (e.channelId !== R || e.sortOrder !== C || !(0, I.OL)(e.tagFilter, r)) return !1;
 			let t = e.threads.filter((e) => h.AW.has(e.type)).map((e) => e.id);
 			y = y.concat(t);
 			let n = p.Z.getChannel(R);
@@ -137,7 +131,7 @@ class w extends (i = d.ZP.Store) {
 				(N = !1);
 		},
 		LOAD_ARCHIVED_THREADS_FAIL: function (e) {
-			if (e.channelId !== R || e.sortOrder !== C || !(0, m.OL)(e.tagFilter, r)) return !1;
+			if (e.channelId !== R || e.sortOrder !== C || !(0, I.OL)(e.tagFilter, r)) return !1;
 			(A = !1), (O = !0), (N = !1);
 		},
 		RESORT_THREADS: function (e) {

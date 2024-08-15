@@ -11,18 +11,7 @@ var a = n(120356),
 	l = n(17845),
 	o = n(89866);
 function c(e) {
-	let {
-		title: t,
-		description: n,
-		onScroll: a,
-		backgroundImageUrl: c,
-		button: d,
-		children: u,
-		bannerContainerClassName: _,
-		bannerImageClassName: E,
-		headerTextColor: h,
-		descriptionTextColor: m
-	} = e;
+	let { title: t, description: n, onScroll: a, backgroundImageUrl: c, button: d, children: u, bannerContainerClassName: _, bannerImageClassName: E, headerTextColor: h, descriptionTextColor: m } = e;
 	return (0, i.jsxs)(r.AdvancedScroller, {
 		onScroll: a,
 		className: s()(o.container, o.background),

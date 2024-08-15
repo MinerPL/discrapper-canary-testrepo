@@ -21,16 +21,7 @@ t.getJSF = function (e, t) {
 			o,
 			l = (e.andln(3) + r) & 3,
 			u = (t.andln(3) + i) & 3;
-		3 === l && (l = -1),
-			3 === u && (u = -1),
-			(s = (1 & l) == 0 ? 0 : (3 == (a = (e.andln(7) + r) & 7) || 5 === a) && 2 === u ? -l : l),
-			n[0].push(s),
-			(o = (1 & u) == 0 ? 0 : (3 == (a = (t.andln(7) + i) & 7) || 5 === a) && 2 === l ? -u : u),
-			n[1].push(o),
-			2 * r === s + 1 && (r = 1 - r),
-			2 * i === o + 1 && (i = 1 - i),
-			e.iushrn(1),
-			t.iushrn(1);
+		3 === l && (l = -1), 3 === u && (u = -1), (s = (1 & l) == 0 ? 0 : (3 == (a = (e.andln(7) + r) & 7) || 5 === a) && 2 === u ? -l : l), n[0].push(s), (o = (1 & u) == 0 ? 0 : (3 == (a = (t.andln(7) + i) & 7) || 5 === a) && 2 === l ? -u : u), n[1].push(o), 2 * r === s + 1 && (r = 1 - r), 2 * i === o + 1 && (i = 1 - i), e.iushrn(1), t.iushrn(1);
 	}
 	return n;
 };

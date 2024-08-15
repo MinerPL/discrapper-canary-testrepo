@@ -19,18 +19,7 @@ var s = n(442837),
 	p = n(122269);
 function _(e) {
 	var t;
-	let {
-			user: n,
-			displayProfile: _,
-			guild: h,
-			pendingAvatar: g,
-			pendingNickname: I,
-			pendingGlobalName: v,
-			pendingBio: C,
-			pendingPronouns: x,
-			isTryItOutFlow: P,
-			hideBioSection: A
-		} = e,
+	let { user: n, displayProfile: _, guild: h, pendingAvatar: g, pendingNickname: I, pendingGlobalName: v, pendingBio: C, pendingPronouns: x, isTryItOutFlow: P, hideBioSection: A } = e,
 		Z = (0, s.e7)([u.ZP], () => (null == h ? null : u.ZP.getMember(h.id, n.id))),
 		T = (0, s.e7)([f.Z], () => f.Z.hidePersonalInformation),
 		N = (0, i.Z)('ProfileCustomizationPreviewBody'),

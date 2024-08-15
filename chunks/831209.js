@@ -239,10 +239,8 @@ var n, r;
 	(r.REDESIGN_BUTTON_PRIMARY_ALT_BORDER = 'var(--redesign-button-primary-alt-border)'),
 	(r.REDESIGN_BUTTON_PRIMARY_ALT_ON_BLURPLE_BACKGROUND = 'var(--redesign-button-primary-alt-on-blurple-background)'),
 	(r.REDESIGN_BUTTON_PRIMARY_ALT_ON_BLURPLE_BORDER = 'var(--redesign-button-primary-alt-on-blurple-border)'),
-	(r.REDESIGN_BUTTON_PRIMARY_ALT_ON_BLURPLE_PRESSED_BACKGROUND =
-		'var(--redesign-button-primary-alt-on-blurple-pressed-background)'),
-	(r.REDESIGN_BUTTON_PRIMARY_ALT_ON_BLURPLE_PRESSED_BORDER =
-		'var(--redesign-button-primary-alt-on-blurple-pressed-border)'),
+	(r.REDESIGN_BUTTON_PRIMARY_ALT_ON_BLURPLE_PRESSED_BACKGROUND = 'var(--redesign-button-primary-alt-on-blurple-pressed-background)'),
+	(r.REDESIGN_BUTTON_PRIMARY_ALT_ON_BLURPLE_PRESSED_BORDER = 'var(--redesign-button-primary-alt-on-blurple-pressed-border)'),
 	(r.REDESIGN_BUTTON_PRIMARY_ALT_ON_BLURPLE_TEXT = 'var(--redesign-button-primary-alt-on-blurple-text)'),
 	(r.REDESIGN_BUTTON_PRIMARY_ALT_PRESSED_BACKGROUND = 'var(--redesign-button-primary-alt-pressed-background)'),
 	(r.REDESIGN_BUTTON_PRIMARY_ALT_PRESSED_BORDER = 'var(--redesign-button-primary-alt-pressed-border)'),
@@ -258,8 +256,7 @@ var n, r;
 	(r.REDESIGN_BUTTON_SECONDARY_BACKGROUND = 'var(--redesign-button-secondary-background)'),
 	(r.REDESIGN_BUTTON_SECONDARY_BORDER = 'var(--redesign-button-secondary-border)'),
 	(r.REDESIGN_BUTTON_SECONDARY_OVERLAY_BACKGROUND = 'var(--redesign-button-secondary-overlay-background)'),
-	(r.REDESIGN_BUTTON_SECONDARY_OVERLAY_PRESSED_BACKGROUND =
-		'var(--redesign-button-secondary-overlay-pressed-background)'),
+	(r.REDESIGN_BUTTON_SECONDARY_OVERLAY_PRESSED_BACKGROUND = 'var(--redesign-button-secondary-overlay-pressed-background)'),
 	(r.REDESIGN_BUTTON_SECONDARY_OVERLAY_TEXT = 'var(--redesign-button-secondary-overlay-text)'),
 	(r.REDESIGN_BUTTON_SECONDARY_PRESSED_BACKGROUND = 'var(--redesign-button-secondary-pressed-background)'),
 	(r.REDESIGN_BUTTON_SECONDARY_PRESSED_BORDER = 'var(--redesign-button-secondary-pressed-border)'),

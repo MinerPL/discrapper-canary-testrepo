@@ -18,18 +18,7 @@ var r = n(735250),
 	I = n(492711);
 function R(e) {
 	var t;
-	let {
-			className: n,
-			copyValue: l,
-			copyMetaData: R,
-			copyTooltip: C,
-			copyTooltipDelay: g = 500,
-			children: p,
-			disableCopy: N,
-			showCopyIcon: A,
-			'aria-label': m,
-			onCopy: f
-		} = e,
+	let { className: n, copyValue: l, copyMetaData: R, copyTooltip: C, copyTooltipDelay: g = 500, children: p, disableCopy: N, showCopyIcon: A, 'aria-label': m, onCopy: f } = e,
 		[S, h] = i.useState(0),
 		[M, x] = i.useState(!1),
 		[b, O] = i.useState(!1);
@@ -47,19 +36,7 @@ function R(e) {
 		!u.wS || N)
 	)
 		return (0, r.jsx)(r.Fragment, { children: p });
-	let P = [
-			T.Z.Messages.COPY_SUCCESS_1,
-			T.Z.Messages.COPY_SUCCESS_2,
-			T.Z.Messages.COPY_SUCCESS_3,
-			T.Z.Messages.COPY_SUCCESS_4,
-			T.Z.Messages.COPY_SUCCESS_5,
-			T.Z.Messages.COPY_SUCCESS_6,
-			T.Z.Messages.COPY_SUCCESS_7,
-			T.Z.Messages.COPY_SUCCESS_8,
-			T.Z.Messages.COPY_SUCCESS_9,
-			T.Z.Messages.COPY_SUCCESS_10,
-			T.Z.Messages.COPY_SUCCESS_11
-		],
+	let P = [T.Z.Messages.COPY_SUCCESS_1, T.Z.Messages.COPY_SUCCESS_2, T.Z.Messages.COPY_SUCCESS_3, T.Z.Messages.COPY_SUCCESS_4, T.Z.Messages.COPY_SUCCESS_5, T.Z.Messages.COPY_SUCCESS_6, T.Z.Messages.COPY_SUCCESS_7, T.Z.Messages.COPY_SUCCESS_8, T.Z.Messages.COPY_SUCCESS_9, T.Z.Messages.COPY_SUCCESS_10, T.Z.Messages.COPY_SUCCESS_11],
 		v = Math.min(Math.max(S - 1, 0), P.length - 1),
 		L = null !== (t = P[v]) && void 0 !== t ? t : P[0],
 		Z = S >= P.length - 1,
@@ -69,15 +46,7 @@ function R(e) {
 			s.stop(), O(!1);
 		},
 		U = (e) => {
-			null == f || f(),
-				(0, u.JG)(l),
-				_.default.track(E.rMx.TEXT_COPIED, { type: R }),
-				'function' == typeof e && e(),
-				!b && h(S + 1),
-				O(!0),
-				x(!0),
-				s.start(1000, () => O(!1)),
-				a.start(2000, () => h(0));
+			null == f || f(), (0, u.JG)(l), _.default.track(E.rMx.TEXT_COPIED, { type: R }), 'function' == typeof e && e(), !b && h(S + 1), O(!0), x(!0), s.start(1000, () => O(!1)), a.start(2000, () => h(0));
 		};
 	return (0, r.jsx)(d.Tooltip, {
 		delay: g,

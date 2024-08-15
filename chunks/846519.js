@@ -59,12 +59,7 @@ class a {
 		return this._timeout.isStarted();
 	}
 	constructor(e, t) {
-		r(this, '_timeout', void 0),
-			r(this, '_delay', void 0),
-			r(this, '_handler', void 0),
-			(this._delay = e),
-			(this._handler = t),
-			(this._timeout = new i());
+		r(this, '_timeout', void 0), r(this, '_delay', void 0), r(this, '_handler', void 0), (this._delay = e), (this._handler = t), (this._timeout = new i());
 	}
 }
 class s {

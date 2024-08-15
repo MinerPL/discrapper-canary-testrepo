@@ -24,12 +24,7 @@ t.d(n, {
 	(a[(a.REVIEW = 5)] = 'REVIEW'),
 	(a[(a.HOME_SETTINGS = 6)] = 'HOME_SETTINGS');
 let r = [0, 1, 2, 4, 6, 5];
-((i = l || (l = {}))[(i.TOGGLE_ENABLED = 0)] = 'TOGGLE_ENABLED'),
-	(i[(i.TOGGLE_DISABLED = 1)] = 'TOGGLE_DISABLED'),
-	(i[(i.PREVIEW = 2)] = 'PREVIEW'),
-	(i[(i.EDIT_DEFAULT_CHANNELS = 3)] = 'EDIT_DEFAULT_CHANNELS'),
-	(i[(i.EDIT_CUSTOMIZATION_QUESTIONS = 4)] = 'EDIT_CUSTOMIZATION_QUESTIONS'),
-	(i[(i.EDIT_HOME_SETTINGS = 5)] = 'EDIT_HOME_SETTINGS');
+((i = l || (l = {}))[(i.TOGGLE_ENABLED = 0)] = 'TOGGLE_ENABLED'), (i[(i.TOGGLE_DISABLED = 1)] = 'TOGGLE_DISABLED'), (i[(i.PREVIEW = 2)] = 'PREVIEW'), (i[(i.EDIT_DEFAULT_CHANNELS = 3)] = 'EDIT_DEFAULT_CHANNELS'), (i[(i.EDIT_CUSTOMIZATION_QUESTIONS = 4)] = 'EDIT_CUSTOMIZATION_QUESTIONS'), (i[(i.EDIT_HOME_SETTINGS = 5)] = 'EDIT_HOME_SETTINGS');
 let o = r.filter((e) => 0 !== e);
 function c(e) {
 	switch (e) {

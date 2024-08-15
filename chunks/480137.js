@@ -29,13 +29,7 @@ function A(e, _) {
 			A = null == T ? I.Z.actionFilter : T,
 			r = null == s ? I.Z.targetIdFilter : s,
 			a = { limit: n.Rg9 };
-		return (
-			null != _ && (a.before = _),
-			null != t && (a.user_id = t),
-			null != A && (a.action_type = A),
-			null != r && (a.target_id = r),
-			a
-		);
+		return null != _ && (a.before = _), null != t && (a.user_id = t), null != A && (a.action_type = A), null != r && (a.target_id = r), a;
 	})(_);
 	return s.tn.get({
 		url: n.ANM.GUILD_AUDIT_LOG(e),
@@ -53,16 +47,7 @@ function r(e, _, E, s) {
 				targetId: E
 			}).then(
 				(e) => {
-					let {
-						audit_log_entries: _,
-						integrations: E,
-						users: s,
-						webhooks: I,
-						guild_scheduled_events: n,
-						auto_moderation_rules: t,
-						threads: A,
-						application_commands: r
-					} = e.body;
+					let { audit_log_entries: _, integrations: E, users: s, webhooks: I, guild_scheduled_events: n, auto_moderation_rules: t, threads: A, application_commands: r } = e.body;
 					T.Z.dispatch({
 						type: 'AUDIT_LOG_FETCH_SUCCESS',
 						logs: _,
@@ -94,16 +79,7 @@ function a(e) {
 		}),
 		A(e, { before: n }).then(
 			(e) => {
-				let {
-					audit_log_entries: _,
-					integrations: E,
-					users: s,
-					webhooks: I,
-					guild_scheduled_events: n,
-					auto_moderation_rules: t,
-					threads: A,
-					application_commands: r
-				} = e.body;
+				let { audit_log_entries: _, integrations: E, users: s, webhooks: I, guild_scheduled_events: n, auto_moderation_rules: t, threads: A, application_commands: r } = e.body;
 				T.Z.dispatch({
 					type: 'AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS',
 					logs: _,

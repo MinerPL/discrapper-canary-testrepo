@@ -38,11 +38,7 @@ function R(e) {
 			? arguments[1]
 			: (function (e) {
 					var t, n;
-					let i =
-							null !== (n = null !== (t = w.ZP.lastMessageId(e.id)) && void 0 !== t ? t : e.lastMessageId) &&
-							void 0 !== n
-								? n
-								: e.id,
+					let i = null !== (n = null !== (t = w.ZP.lastMessageId(e.id)) && void 0 !== t ? t : e.lastMessageId) && void 0 !== n ? n : e.id,
 						s = e.isMessageRequestTimestamp;
 					if (null != s) {
 						let e = C()(s).valueOf(),

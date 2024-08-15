@@ -11,7 +11,5 @@ t.Z = function (e, t, n) {
 		if (!(d = null != e && n(e, _))) break;
 		e = e[_];
 	}
-	return d || ++u != c
-		? d
-		: !!(c = null == e ? 0 : e.length) && (0, o.Z)(c) && (0, s.Z)(_, c) && ((0, a.Z)(e) || (0, i.Z)(e));
+	return d || ++u != c ? d : !!(c = null == e ? 0 : e.length) && (0, o.Z)(c) && (0, s.Z)(_, c) && ((0, a.Z)(e) || (0, i.Z)(e));
 };

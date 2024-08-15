@@ -15,14 +15,7 @@ r.default = {
 	],
 	requireContextRole: [],
 	requiredContextRole: [],
-	requiredOwnedElements: [
-		['menuitem', 'group'],
-		['menuitemradio', 'group'],
-		['menuitemcheckbox', 'group'],
-		['menuitem'],
-		['menuitemcheckbox'],
-		['menuitemradio']
-	],
+	requiredOwnedElements: [['menuitem', 'group'], ['menuitemradio', 'group'], ['menuitemcheckbox', 'group'], ['menuitem'], ['menuitemcheckbox'], ['menuitemradio']],
 	requiredProps: {},
 	superClass: [
 		['roletype', 'widget', 'composite', 'select', 'menu'],

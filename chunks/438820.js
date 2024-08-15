@@ -21,10 +21,7 @@ let r = {
 };
 class s extends (n = a.ZP.PersistedStore) {
 	initialize(e) {
-		null != e && (r = e),
-			(r.canPlayWowMoment = !1),
-			(r.isFetchingWowMomentMedia = !1),
-			(r.wowMomentWumpusMediaUrl = null);
+		null != e && (r = e), (r.canPlayWowMoment = !1), (r.isFetchingWowMomentMedia = !1), (r.wowMomentWumpusMediaUrl = null);
 	}
 	getState() {
 		return r;

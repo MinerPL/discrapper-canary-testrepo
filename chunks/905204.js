@@ -50,14 +50,7 @@ function p(e) {
 								h = [];
 							if (e.singleSelect && t) {
 								let t = e.options.find((e) => l.includes(e.id));
-								(d = i().difference(
-									null !== (a = n.roleIds) && void 0 !== a ? a : [],
-									null !== (r = null == t ? void 0 : t.roleIds) && void 0 !== r ? r : []
-								)),
-									(h = i().difference(
-										null !== (s = null == t ? void 0 : t.roleIds) && void 0 !== s ? s : [],
-										null !== (o = n.roleIds) && void 0 !== o ? o : []
-									));
+								(d = i().difference(null !== (a = n.roleIds) && void 0 !== a ? a : [], null !== (r = null == t ? void 0 : t.roleIds) && void 0 !== r ? r : [])), (h = i().difference(null !== (s = null == t ? void 0 : t.roleIds) && void 0 !== s ? s : [], null !== (o = n.roleIds) && void 0 !== o ? o : []));
 							} else if (t) (d = null !== (c = n.roleIds) && void 0 !== c ? c : []), (h = []);
 							else {
 								let t = e.options.filter((e) => l.includes(e.id)),
@@ -84,14 +77,7 @@ function p(e) {
 								C = [];
 							if (c.singleSelect && h) {
 								let e = c.options.find((e) => _.includes(e.id));
-								(f = i().difference(
-									null !== (n = d.channelIds) && void 0 !== n ? n : [],
-									null !== (t = null == e ? void 0 : e.channelIds) && void 0 !== t ? t : []
-								)),
-									(C = i().difference(
-										null !== (l = null == e ? void 0 : e.channelIds) && void 0 !== l ? l : [],
-										null !== (a = d.channelIds) && void 0 !== a ? a : []
-									));
+								(f = i().difference(null !== (n = d.channelIds) && void 0 !== n ? n : [], null !== (t = null == e ? void 0 : e.channelIds) && void 0 !== t ? t : [])), (C = i().difference(null !== (l = null == e ? void 0 : e.channelIds) && void 0 !== l ? l : [], null !== (a = d.channelIds) && void 0 !== a ? a : []));
 							} else if (h) (f = null !== (r = d.channelIds) && void 0 !== r ? r : []), (C = []);
 							else {
 								let e = c.options.filter((e) => _.includes(e.id)),

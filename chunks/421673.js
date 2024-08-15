@@ -50,18 +50,7 @@ function p(e, t, n, r, a) {
 						_ = null != t.emojiName ? l.ZP.convertSurrogateToName(t.emojiName, !1) : null,
 						E = null != _ ? l.ZP.getByName(_) : null,
 						f = null != c ? [c.name] : null !== (a = null == E ? void 0 : E.names) && void 0 !== a ? a : [];
-					return (
-						e === u && (s += 8),
-						f.includes(e) && (s += 7),
-						u.startsWith(e) && (s += 6),
-						f.some((t) => t.startsWith(e)) && (s += 5),
-						u.endsWith(e) && (s += 4),
-						f.some((t) => t.endsWith(e)) && (s += 3),
-						i()(e, t.name.toLocaleLowerCase()) && (s += 2),
-						f.some((t) => i()(e, t)) && (s += 1),
-						s > 0 && (0, d.Nq)(n, t, r) && (s += 100),
-						s
-					);
+					return e === u && (s += 8), f.includes(e) && (s += 7), u.startsWith(e) && (s += 6), f.some((t) => t.startsWith(e)) && (s += 5), u.endsWith(e) && (s += 4), f.some((t) => t.endsWith(e)) && (s += 3), i()(e, t.name.toLocaleLowerCase()) && (s += 2), f.some((t) => i()(e, t)) && (s += 1), s > 0 && (0, d.Nq)(n, t, r) && (s += 100), s;
 				})(e.toLocaleLowerCase(), s, n, r)),
 				t
 			),

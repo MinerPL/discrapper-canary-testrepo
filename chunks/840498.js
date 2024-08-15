@@ -14,8 +14,7 @@ n.d(t, {
 				}
 			} else if ('text' !== t.type) {
 				if (((n.limit -= 1), n.limit <= 0)) return r;
-				Array.isArray(t.content) && (t.content = e(t.content, n)),
-					'list' === t.type && (t.items = t.items.map((t) => e(t, n)));
+				Array.isArray(t.content) && (t.content = e(t.content, n)), 'list' === t.type && (t.items = t.items.map((t) => e(t, n)));
 			}
 			return t;
 		};
@@ -40,11 +39,7 @@ n.d(t, {
 					})(i, e(t[a], n));
 				return i;
 			}
-			return (null != t.content && (t.content = e(t.content, t)),
-			'list' === t.type && (t.items = t.items.map((t) => (Array.isArray(t) ? e(t, null) : t))),
-			null != n && t.type === n.type)
-				? t.content
-				: t;
+			return (null != t.content && (t.content = e(t.content, t)), 'list' === t.type && (t.items = t.items.map((t) => (Array.isArray(t) ? e(t, null) : t))), null != n && t.type === n.type) ? t.content : t;
 		};
 	}
 }),
@@ -53,13 +48,6 @@ let r = {};
 function i(e) {
 	return (function e(t) {
 		let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-		return (
-			Array.isArray(t)
-				? t.forEach((t) => e(t, n))
-				: 'string' == typeof t.content
-					? n.push(t.content)
-					: null != t.content && e(t.content, n),
-			n
-		);
+		return Array.isArray(t) ? t.forEach((t) => e(t, n)) : 'string' == typeof t.content ? n.push(t.content) : null != t.content && e(t.content, n), n;
 	})(e).join('');
 }

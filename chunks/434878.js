@@ -150,13 +150,7 @@ function eC(e) {
 			listViewCardHeights: o,
 			formOpen: u
 		} = (0, X.xH)((e) => {
-			let {
-				editorHeight: t,
-				editorAdditionRowHeight: n,
-				listViewCardHeights: a,
-				formOpen: s,
-				cardHeightVersion: r
-			} = e;
+			let { editorHeight: t, editorAdditionRowHeight: n, listViewCardHeights: a, formOpen: s, cardHeightVersion: r } = e;
 			return {
 				editorHeight: t,
 				editorAdditionRowHeight: n,
@@ -380,23 +374,11 @@ function eC(e) {
 			getListSectionHeight: eU,
 			getListItemHeight: ek
 		} = (function (e) {
-			let {
-					listRef: t,
-					hasActiveThreads: n,
-					threadIdsBySection: r,
-					listViewCardHeights: i,
-					editorHeight: o,
-					editorAdditionRowHeight: c,
-					renderSectionOrItem: d,
-					goToThread: u,
-					observePostVisibilityAnalytics: m,
-					isShowingSearchResult: h
-				} = e,
+			let { listRef: t, hasActiveThreads: n, threadIdsBySection: r, listViewCardHeights: i, editorHeight: o, editorAdditionRowHeight: c, renderSectionOrItem: d, goToThread: u, observePostVisibilityAnalytics: m, isShowingSearchResult: h } = e,
 				_ = s.useCallback(
 					(e) => (n) => {
 						var a;
-						(t.current = n),
-							(e.current = null !== (a = null == n ? void 0 : n.getScrollerNode()) && void 0 !== a ? a : null);
+						(t.current = n), (e.current = null !== (a = null == n ? void 0 : n.getScrollerNode()) && void 0 !== a ? a : null);
 					},
 					[t]
 				),
@@ -480,19 +462,7 @@ function eC(e) {
 			getSectionProps: eq,
 			handleGridFocus: eK
 		} = (function (e) {
-			let {
-					masonryListScrollerRef: t,
-					threadIdsBySection: n,
-					goToThread: r,
-					renderSectionOrItem: i,
-					hasActiveThreads: o,
-					isShowingSearchResult: c,
-					canSearchForumPosts: d,
-					canViewArchivedPosts: u,
-					observePostVisibilityAnalytics: m,
-					focusedThreadId: h,
-					headerHeight: _
-				} = e,
+			let { masonryListScrollerRef: t, threadIdsBySection: n, goToThread: r, renderSectionOrItem: i, hasActiveThreads: o, isShowingSearchResult: c, canSearchForumPosts: d, canViewArchivedPosts: u, observePostVisibilityAnalytics: m, focusedThreadId: h, headerHeight: _ } = e,
 				g = s.useRef(null),
 				x = s.useCallback(
 					(e) => {
@@ -610,10 +580,7 @@ function eC(e) {
 				renderGridSection: T,
 				renderGridItem: E,
 				getSectionProps: I,
-				getGridSectionHeight: s.useCallback(
-					(e) => (0 === e ? _ - 8 - 24 : 2 === e ? (o || !u ? 40 : 0) : 1 === e && c && !d ? 40 : 0),
-					[_, c, d, o, u]
-				)
+				getGridSectionHeight: s.useCallback((e) => (0 === e ? _ - 8 - 24 : 2 === e ? (o || !u ? 40 : 0) : 1 === e && c && !d ? 40 : 0), [_, c, d, o, u])
 			};
 		})({
 			masonryListScrollerRef: eH,
@@ -629,14 +596,7 @@ function eC(e) {
 			headerHeight: eZ
 		});
 	!(function (e) {
-		let {
-			masonryListScrollerRef: t,
-			containerWidth: n,
-			isGridLayout: a,
-			threadIdsBySection: r,
-			focusedThreadId: l,
-			parentId: i
-		} = e;
+		let { masonryListScrollerRef: t, containerWidth: n, isGridLayout: a, threadIdsBySection: r, focusedThreadId: l, parentId: i } = e;
 		s.useEffect(() => {
 			if (a) {
 				let e = setTimeout(() => {
@@ -672,13 +632,7 @@ function eC(e) {
 	let eY = s.useCallback(() => {
 			var e, n;
 			if (ed) return;
-			let a = en
-				? null === (e = eH.current) || void 0 === e
-					? void 0
-					: e.getScrollerState()
-				: null === (n = $.current) || void 0 === n
-					? void 0
-					: n.getScrollerState();
+			let a = en ? (null === (e = eH.current) || void 0 === e ? void 0 : e.getScrollerState()) : null === (n = $.current) || void 0 === n ? void 0 : n.getScrollerState();
 			if (null == a) return;
 			(0, V.ab)({
 				guildId: t.guild_id,
@@ -733,9 +687,7 @@ function eC(e) {
 										{
 											ref: (e) => {
 												var t;
-												(e$.current =
-													null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null),
-													eB(e);
+												(e$.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null), eB(e);
 											},
 											itemGutter: 16,
 											padding: 24,
@@ -847,15 +799,7 @@ function eN(e) {
 			onboardingExpanded: k,
 			setEditorAdditionRowHeight: G
 		} = (0, X.xH)((e) => {
-			let {
-				name: t,
-				formOpen: n,
-				titleFocused: a,
-				hasClickedForm: s,
-				textAreaState: r,
-				onboardingExpanded: l,
-				setEditorAdditionRowHeight: i
-			} = e;
+			let { name: t, formOpen: n, titleFocused: a, hasClickedForm: s, textAreaState: r, onboardingExpanded: l, setEditorAdditionRowHeight: i } = e;
 			return {
 				name: t,
 				formOpen: n,
@@ -899,12 +843,7 @@ function eN(e) {
 		eC = s.useRef(null),
 		[ep, eT] = s.useState(0),
 		{ width: eI } = (0, _.e7)([y.Z], () => y.Z.windowSize()),
-		eN =
-			null === (n = ef.current) || void 0 === n
-				? void 0
-				: null === (t = n.getBoundingClientRect()) || void 0 === t
-					? void 0
-					: t.width,
+		eN = null === (n = ef.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.width,
 		ev = s.useRef(null);
 	s.useLayoutEffect(() => {
 		var e;
@@ -922,13 +861,7 @@ function eN(e) {
 		}
 	}, [i.availableTags, eI, eN, z]);
 	let eS = A.length > 0 && !R && (T || null != b),
-		eM =
-			!__OVERLAY__ &&
-			!Z &&
-			!R &&
-			O &&
-			(0 === F.textValue.trim().length || F.textValue.trim() === ex) &&
-			0 === eg.length;
+		eM = !__OVERLAY__ && !Z && !R && O && (0 === F.textValue.trim().length || F.textValue.trim() === ex) && 0 === eg.length;
 	s.useLayoutEffect(() => {
 		let e = eS || eM;
 		if (!e) return G(0);
@@ -968,16 +901,7 @@ function eN(e) {
 					},
 					[e]
 				);
-			return (
-				s.useLayoutEffect(
-					() => (
-						t ? window.addEventListener('keydown', n) : window.removeEventListener('keydown', n),
-						() => window.removeEventListener('keydown', n)
-					),
-					[t, n]
-				),
-				e
-			);
+			return s.useLayoutEffect(() => (t ? window.addEventListener('keydown', n) : window.removeEventListener('keydown', n), () => window.removeEventListener('keydown', n)), [t, n]), e;
 		})(),
 		ew = s.useCallback(
 			(e) => {
@@ -1167,10 +1091,7 @@ function eN(e) {
 														className: l()(ec.tagsButton, { [ec.tagsButtonWithCount]: z.size > 0 }),
 														style: { left: ep },
 														innerClassName: ec.tagsButtonInner,
-														'aria-label':
-															z.size > 0
-																? eo.Z.Messages.FORUM_TAG_SEE_MORE_A11Y_LABEL
-																: eo.Z.Messages.FORUM_TAG_ALL_A11Y_LABEL,
+														'aria-label': z.size > 0 ? eo.Z.Messages.FORUM_TAG_SEE_MORE_A11Y_LABEL : eo.Z.Messages.FORUM_TAG_ALL_A11Y_LABEL,
 														children: [
 															z.size > 0
 																? (0, a.jsx)('div', {

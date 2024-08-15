@@ -14,8 +14,7 @@ function c() {
 	if (null == e) throw new r.Z({ errorCode: o.lTL.INVALID_CHANNEL }, 'Invalid channel');
 	let t = a.Z.getGuild(e.getGuildId());
 	if (null == t) throw new r.Z({ errorCode: o.lTL.INVALID_CHANNEL }, 'Invalid guild '.concat(e.getGuildId()));
-	if (!(0, i.b)(s.Z, t, e))
-		throw new r.Z({ errorCode: o.lTL.INVALID_PERMISSIONS }, 'No invite permissions for '.concat(e.id));
+	if (!(0, i.b)(s.Z, t, e)) throw new r.Z({ errorCode: o.lTL.INVALID_PERMISSIONS }, 'No invite permissions for '.concat(e.id));
 	return {
 		channel: e,
 		guild: t

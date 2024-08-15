@@ -11,10 +11,10 @@ n.r(t),
 			return g;
 		},
 		getPlatform: function () {
-			return I;
+			return m;
 		},
 		getPlatformName: function () {
-			return m;
+			return I;
 		},
 		isAndroid: function () {
 			return h;
@@ -67,12 +67,10 @@ function d() {
 	return l() || u() || c();
 }
 function _() {
-	return 'WEB' === I();
+	return 'WEB' === m();
 }
 function E() {
-	return (
-		null != navigator.userAgent && null != navigator.userAgent.toLowerCase().match('(android ).+chrome/[.0-9]* mobile')
-	);
+	return null != navigator.userAgent && null != navigator.userAgent.toLowerCase().match('(android ).+chrome/[.0-9]* mobile');
 }
 function f() {
 	var e;
@@ -84,10 +82,10 @@ function h() {
 function p() {
 	return 'ios' === o;
 }
-function I() {
+function m() {
 	return l() ? 'WINDOWS' : u() ? 'OSX' : c() ? 'LINUX' : 'WEB';
 }
-function m() {
+function I() {
 	return o;
 }
 function T() {
@@ -105,7 +103,6 @@ function g() {
 	if (/(iPhone|iPad|iPod)/.test(e)) return 'ios';
 	if (/Android/.test(e)) return 'android';
 	else if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return 'blackberry';
-	else if (/Mac/i.test(e))
-		return null != window.navigator.maxTouchPoints && window.navigator.maxTouchPoints > 2 ? 'ios' : 'macos';
+	else if (/Mac/i.test(e)) return null != window.navigator.maxTouchPoints && window.navigator.maxTouchPoints > 2 ? 'ios' : 'macos';
 	else if (/Linux/i.test(e)) return 'linux';
 }

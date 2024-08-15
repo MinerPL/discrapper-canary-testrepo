@@ -27,17 +27,13 @@ function g(e) {
 				className: i()(m.finishTitle, { [m.finishTitlePadding]: s }),
 				color: 'header-primary',
 				variant: 'heading-xl/bold',
-				children: s
-					? _.Z.Messages.UU_FORCE_MIGRATION_EXISTING_FLOW_REMINDER_BODY_1.format({ date: (0, d.IE)(g) })
-					: _.Z.Messages.POMELO_EXISTING_FLOW_REMINDER_TITLE
+				children: s ? _.Z.Messages.UU_FORCE_MIGRATION_EXISTING_FLOW_REMINDER_BODY_1.format({ date: (0, d.IE)(g) }) : _.Z.Messages.POMELO_EXISTING_FLOW_REMINDER_TITLE
 			}),
 			(0, n.jsx)(o.Text, {
 				className: m.subtitleFinish,
 				color: 'header-secondary',
 				variant: 'text-md/medium',
-				children: s
-					? _.Z.Messages.UU_FORCE_MIGRATION_EXISTING_FLOW_REMINDER_BODY_2.format({ date: (0, d.IE)(g) })
-					: _.Z.Messages.POMELO_EXISTING_FLOW_REMINDER_BODY_1
+				children: s ? _.Z.Messages.UU_FORCE_MIGRATION_EXISTING_FLOW_REMINDER_BODY_2.format({ date: (0, d.IE)(g) }) : _.Z.Messages.POMELO_EXISTING_FLOW_REMINDER_BODY_1
 			}),
 			(0, n.jsx)(o.Text, {
 				className: m.promptFinish,
@@ -54,9 +50,7 @@ function g(e) {
 				type: 'button',
 				size: o.Button.Sizes.SMALL,
 				onClick: s ? a : t,
-				children: s
-					? _.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_BUTTON_TEXT
-					: _.Z.Messages.INVITES_DISABLED_CONFIRMATION
+				children: s ? _.Z.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_BUTTON_TEXT : _.Z.Messages.INVITES_DISABLED_CONFIRMATION
 			})
 		]
 	});

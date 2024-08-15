@@ -19,15 +19,7 @@ var s = n(735250),
 	g = n(689938),
 	C = n(395589);
 let x = (e) => {
-	let {
-			name: t,
-			failingName: n,
-			description: a,
-			checked: i,
-			pending: r,
-			pendingDescription: l,
-			failingDescription: o
-		} = e,
+	let { name: t, failingName: n, description: a, checked: i, pending: r, pendingDescription: l, failingDescription: o } = e,
 		c = t,
 		d = null,
 		u = null;
@@ -109,10 +101,7 @@ t.Z = (e) => {
 			() => {
 				var e, n, s;
 				if (null == O) return [];
-				let a =
-						null !== (n = (null !== (e = T.ZP.getChannels(t.id)) && void 0 !== e ? e : {})[T.sH]) && void 0 !== n
-							? n
-							: [],
+				let a = null !== (n = (null !== (e = T.ZP.getChannels(t.id)) && void 0 !== e ? e : {})[T.sH]) && void 0 !== n ? n : [],
 					i =
 						null !==
 							(s =
@@ -152,9 +141,7 @@ t.Z = (e) => {
 				(0, s.jsx)(I.Spinner, { className: C.__invalid_spinner })
 			]
 		});
-	let M = L
-			? g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SIZE_DESCRIPTION_FAILING_PARTNERS
-			: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SIZE_DESCRIPTION_FAIL,
+	let M = L ? g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SIZE_DESCRIPTION_FAILING_PARTNERS : g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SIZE_DESCRIPTION_FAIL,
 		D = [
 			{
 				name: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SAFE,
@@ -168,9 +155,7 @@ t.Z = (e) => {
 			},
 			{
 				name: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SIZE.format({ minMembers: _.minimumGuildSize }),
-				failingName: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SIZE_FAIL.format({
-					minMembers: _.minimumGuildSize.toLocaleString()
-				}),
+				failingName: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SIZE_FAIL.format({ minMembers: _.minimumGuildSize.toLocaleString() }),
 				description: null,
 				failingDescription: M.format({ minMembers: _.minimumGuildSize.toLocaleString() }),
 				checked: null == _ ? void 0 : _.size
@@ -178,9 +163,7 @@ t.Z = (e) => {
 			{
 				name: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_AGE,
 				failingName: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_AGE_FAILING,
-				description: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_AGE_DESCRIPTION.format({
-					minimumGuildAge: Math.ceil(_.minimumGuildAge / 7)
-				}),
+				description: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_AGE_DESCRIPTION.format({ minimumGuildAge: Math.ceil(_.minimumGuildAge / 7) }),
 				failingDescription: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_AGE_DESCRIPTION_FAILING.format({
 					minimumGuildAge: Math.ceil(_.minimumGuildAge / 7),
 					passDate: d()(N.default.extractTimestamp(i)).add(_.minimumGuildAge, 'days').format('LL')
@@ -188,9 +171,7 @@ t.Z = (e) => {
 				checked: null == _ ? void 0 : _.age
 			},
 			{
-				name: (null == _ ? void 0 : _.healthScorePending)
-					? g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY_PENDING
-					: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY,
+				name: (null == _ ? void 0 : _.healthScorePending) ? g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY_PENDING : g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY,
 				failingName: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY_FAILING,
 				description: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY_DESCRIPTION,
 				failingDescription: (0, s.jsxs)(s.Fragment, {
@@ -251,9 +232,7 @@ t.Z = (e) => {
 									t
 								)
 						})
-					: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY_DESCRIPTION_PENDING_SIZE.format({
-							minMembers: 200
-						}),
+					: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_HEALTHY_DESCRIPTION_PENDING_SIZE.format({ minMembers: 200 }),
 				checked: null == _ ? void 0 : _.healthy,
 				pending: null == _ ? void 0 : _.healthScorePending
 			},
@@ -341,9 +320,7 @@ t.Z = (e) => {
 				name: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_2FA,
 				failingName: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_2FA_FAILING,
 				description: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_2FA_DESCRIPTION,
-				failingDescription: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_2FA_DESCRIPTION_FAILING.format({
-					onClick: () => S.Z.setSection(h.pNK.SAFETY, h.KsC.SAFETY_PERMISSIONS)
-				}),
+				failingDescription: g.Z.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_2FA_DESCRIPTION_FAILING.format({ onClick: () => S.Z.setSection(h.pNK.SAFETY, h.KsC.SAFETY_PERMISSIONS) }),
 				checked: null == _ ? void 0 : _.protected
 			}
 		];

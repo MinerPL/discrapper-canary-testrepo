@@ -24,41 +24,17 @@ var r,
 	u = n(594174),
 	c = n(923726),
 	d = n(981631);
-((r = i || (i = {}))[(r.NONE = 0)] = 'NONE'),
-	(r[(r.WAITLIST_ONLY = 1)] = 'WAITLIST_ONLY'),
-	(r[(r.NEEDS_COMMUNITY = 2)] = 'NEEDS_COMMUNITY'),
-	(r[(r.VISIBLE = 3)] = 'VISIBLE');
+((r = i || (i = {}))[(r.NONE = 0)] = 'NONE'), (r[(r.WAITLIST_ONLY = 1)] = 'WAITLIST_ONLY'), (r[(r.NEEDS_COMMUNITY = 2)] = 'NEEDS_COMMUNITY'), (r[(r.VISIBLE = 3)] = 'VISIBLE');
 function _(e) {
 	if (e.guild.hasFeature(d.oNc.CREATOR_MONETIZABLE_DISABLED)) return 0;
 	if (
 		(function (e) {
-			let {
-				guild: t,
-				isOwner: n,
-				canManageGuildRoleSubscriptions: r,
-				isGuildEligibleForRoleSubscriptions: i,
-				isExpeditedMonetizationOnboardingGuild: a,
-				isUserInCreatorMonetizationEligibleCountry: s,
-				shouldRestrictUpdatingRoleSubscriptionSettings: o
-			} = e;
-			return (
-				!!t.hasFeature(d.oNc.COMMUNITY) &&
-				!!r &&
-				(!o || !!n) &&
-				(!!(t.hasFeature(d.oNc.CREATOR_MONETIZABLE) || t.hasFeature(d.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) ||
-					((!!i || !!a) && n && s))
-			);
+			let { guild: t, isOwner: n, canManageGuildRoleSubscriptions: r, isGuildEligibleForRoleSubscriptions: i, isExpeditedMonetizationOnboardingGuild: a, isUserInCreatorMonetizationEligibleCountry: s, shouldRestrictUpdatingRoleSubscriptionSettings: o } = e;
+			return !!t.hasFeature(d.oNc.COMMUNITY) && !!r && (!o || !!n) && (!!(t.hasFeature(d.oNc.CREATOR_MONETIZABLE) || t.hasFeature(d.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) || ((!!i || !!a) && n && s));
 		})(e)
 	)
 		return 3;
-	let {
-		guild: t,
-		isOwner: n,
-		isUserInCreatorMonetizationEligibleCountry: r,
-		isMonetizationWaitlistEnabledForGuild: i,
-		isGuildEligibleForRoleSubscriptions: a,
-		isExpeditedMonetizationOnboardingGuild: s
-	} = e;
+	let { guild: t, isOwner: n, isUserInCreatorMonetizationEligibleCountry: r, isMonetizationWaitlistEnabledForGuild: i, isGuildEligibleForRoleSubscriptions: a, isExpeditedMonetizationOnboardingGuild: s } = e;
 	return n && !r && i ? 1 : n && i && (a || s) && !t.hasFeature(d.oNc.COMMUNITY) ? 2 : 0;
 }
 function E(e) {

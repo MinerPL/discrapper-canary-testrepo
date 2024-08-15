@@ -73,15 +73,7 @@ function P(e) {
 	});
 }
 function M(e) {
-	let {
-			selectedGuildId: t,
-			setSelectedGuildId: n,
-			eligibleGuilds: s,
-			onButtonClick: l,
-			buttonText: c,
-			hasCompletedUpsell: u,
-			preventBack: _
-		} = e,
+	let { selectedGuildId: t, setSelectedGuildId: n, eligibleGuilds: s, onButtonClick: l, buttonText: c, hasCompletedUpsell: u, preventBack: _ } = e,
 		E = (0, C.GN)((e) => e.started, o.Z),
 		h = a.useMemo(
 			() =>
@@ -118,11 +110,7 @@ function M(e) {
 							(0, i.jsxs)(d.Heading, {
 								className: L.upsellTitle,
 								variant: 'heading-xxl/semibold',
-								children: [
-									Z.Z.Messages.CLAN_DISCOVERY_UPSELL_CTA_GUILD_INVITE,
-									(0, i.jsx)('br', {}),
-									Z.Z.Messages.CLAN_DISCOVERY_UPSELL_CTA_RECRUIT
-								]
+								children: [Z.Z.Messages.CLAN_DISCOVERY_UPSELL_CTA_GUILD_INVITE, (0, i.jsx)('br', {}), Z.Z.Messages.CLAN_DISCOVERY_UPSELL_CTA_RECRUIT]
 							}),
 							(0, i.jsxs)('div', {
 								className: L.upsellDetails,
@@ -191,13 +179,7 @@ t.Z = a.memo(function (e) {
 			var e, i;
 			let a = new Set(I.ZP.getGuildIds());
 			for (let e of t) if (a.has(e.id)) return e.id;
-			return r
-				? null === (e = n[0]) || void 0 === e
-					? void 0
-					: e.id
-				: null === (i = t[0]) || void 0 === i
-					? void 0
-					: i.id;
+			return r ? (null === (e = n[0]) || void 0 === e ? void 0 : e.id) : null === (i = t[0]) || void 0 === i ? void 0 : i.id;
 		});
 	a.useEffect(() => {
 		!r &&
@@ -240,9 +222,7 @@ t.Z = a.memo(function (e) {
 		),
 		w = (0, d.useSpring)(
 			{
-				from: D
-					? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' }
-					: { transform: 'translate(324px, -56px) rotate(8deg) scale(1.25)' },
+				from: D ? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' } : { transform: 'translate(324px, -56px) rotate(8deg) scale(1.25)' },
 				to: { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' },
 				config: x,
 				delay: 400
@@ -251,9 +231,7 @@ t.Z = a.memo(function (e) {
 		),
 		B = (0, d.useSpring)(
 			{
-				from: D
-					? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' }
-					: { transform: 'translate(176px, -24px) rotate(4deg) scale(1.1111)' },
+				from: D ? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' } : { transform: 'translate(176px, -24px) rotate(4deg) scale(1.1111)' },
 				to: { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' },
 				config: x,
 				delay: 350
@@ -262,9 +240,7 @@ t.Z = a.memo(function (e) {
 		),
 		H = (0, d.useSpring)(
 			{
-				from: D
-					? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' }
-					: { transform: 'translate(-176px, -24px) rotate(-4deg) scale(1.1111)' },
+				from: D ? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' } : { transform: 'translate(-176px, -24px) rotate(-4deg) scale(1.1111)' },
 				to: { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' },
 				config: x,
 				delay: 350
@@ -273,9 +249,7 @@ t.Z = a.memo(function (e) {
 		),
 		V = (0, d.useSpring)(
 			{
-				from: D
-					? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' }
-					: { transform: 'translate(-324px, -56px) rotate(-8deg) scale(1.25)' },
+				from: D ? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' } : { transform: 'translate(-324px, -56px) rotate(-8deg) scale(1.25)' },
 				to: { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' },
 				config: x,
 				delay: 400
@@ -312,11 +286,7 @@ t.Z = a.memo(function (e) {
 			},
 			'animate-always'
 		),
-		W = a.useMemo(
-			() =>
-				null == R ? Z.Z.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : Z.Z.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP,
-			[R]
-		),
+		W = a.useMemo(() => (null == R ? Z.Z.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : Z.Z.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP), [R]),
 		z = a.useCallback(async () => {
 			await (0, h.Zx)(o), u.Z.transitionToGuildSync('936317138904440892');
 		}, [o]),

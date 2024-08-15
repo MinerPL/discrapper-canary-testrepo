@@ -34,9 +34,7 @@ let h = () => {
 		);
 	},
 	p = () => {
-		let { previewPaneVariant: e } = (0, i.cj)([d.Z], () => ({
-				previewPaneVariant: d.Z.isPreview ? E.h1.FREE : E.h1.PREMIUM_STANDARD
-			})),
+		let { previewPaneVariant: e } = (0, i.cj)([d.Z], () => ({ previewPaneVariant: d.Z.isPreview ? E.h1.FREE : E.h1.PREMIUM_STANDARD })),
 			t = (0, i.e7)([l.Z], () => {
 				var e;
 				let t = null === (e = l.Z.settings.appearance) || void 0 === e ? void 0 : e.theme;

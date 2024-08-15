@@ -147,15 +147,7 @@ e.exports = {
 					l,
 					c,
 					d = 0 === a.indexOf('--');
-				var _ =
-					((o = a),
-					(l = t[a]),
-					(c = d),
-					null == l || 'boolean' == typeof l || '' === l
-						? ''
-						: c || 'number' != typeof l || 0 === l || (s.hasOwnProperty(o) && s[o])
-							? ('' + l).trim()
-							: l + 'px');
+				var _ = ((o = a), (l = t[a]), (c = d), null == l || 'boolean' == typeof l || '' === l ? '' : c || 'number' != typeof l || 0 === l || (s.hasOwnProperty(o) && s[o]) ? ('' + l).trim() : l + 'px');
 				if (('float' === a && (a = 'cssFloat'), d)) i.setProperty(a, _);
 				else if (_) i[a] = _;
 				else {

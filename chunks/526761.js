@@ -60,18 +60,7 @@ let O = 250,
 	S = 'ROLE_SUBSCRIPTIONS',
 	D = 'APPLICATION_SUBSCRIPTION_SUBSECTION',
 	L = 'SOUNDBOARD_SUBSECTION';
-((l = n || (n = {})).USER_PROFILE = 'user_profile'),
-	(l.GUILD = 'guild'),
-	(l.TRY_IT_OUT = 'try_it_out'),
-	((a || (a = {})).CUSTOM_APP_ICONS = 'custom_app_icon'),
-	((o || (o = {})).TRY_IT_OUT = 'try_it_out'),
-	((R = i || (i = {})).REDUCED_MOTION = 'reduced_motion'),
-	(R.SYNC_PROFILE_THEME_WITH_USER_THEME = 'sync_profile_theme_with_user_theme'),
-	(R.LEGACY_CHAT_INPUT = 'legacy_chat_input'),
-	((_ || (_ = {})).HARDWARE_ACCELERATION = 'hardware_acceleration'),
-	((A = E || (E = {})).DM_SAFETY_ALERTS = 'dm_safety_alerts'),
-	(A.MESSAGE_REQUESTS = 'message_requests'),
-	(A.EXPLICIT_MEDIA_REDACTION = 'explicit_media_redaction');
+((l = n || (n = {})).USER_PROFILE = 'user_profile'), (l.GUILD = 'guild'), (l.TRY_IT_OUT = 'try_it_out'), ((a || (a = {})).CUSTOM_APP_ICONS = 'custom_app_icon'), ((o || (o = {})).TRY_IT_OUT = 'try_it_out'), ((R = i || (i = {})).REDUCED_MOTION = 'reduced_motion'), (R.SYNC_PROFILE_THEME_WITH_USER_THEME = 'sync_profile_theme_with_user_theme'), (R.LEGACY_CHAT_INPUT = 'legacy_chat_input'), ((_ || (_ = {})).HARDWARE_ACCELERATION = 'hardware_acceleration'), ((A = E || (E = {})).DM_SAFETY_ALERTS = 'dm_safety_alerts'), (A.MESSAGE_REQUESTS = 'message_requests'), (A.EXPLICIT_MEDIA_REDACTION = 'explicit_media_redaction');
 let h = {
 	ProfileCustomizationScrollPositions: o,
 	AccessibilityScrollPositions: i,
@@ -92,20 +81,7 @@ function C() {
 		offlineEditDataVersion: void 0
 	};
 }
-((T = s || (s = {}))[(T.PRELOADED_USER_SETTINGS = 1)] = 'PRELOADED_USER_SETTINGS'),
-	(T[(T.FRECENCY_AND_FAVORITES_SETTINGS = 2)] = 'FRECENCY_AND_FAVORITES_SETTINGS'),
-	(T[(T.TEST_SETTINGS = 3)] = 'TEST_SETTINGS'),
-	((d = c || (c = {}))[(d.INFREQUENT_USER_ACTION = 0)] = 'INFREQUENT_USER_ACTION'),
-	(d[(d.FREQUENT_USER_ACTION = 10)] = 'FREQUENT_USER_ACTION'),
-	(d[(d.SLOW_USER_ACTION = 20)] = 'SLOW_USER_ACTION'),
-	(d[(d.AUTOMATED = 30)] = 'AUTOMATED'),
-	(d[(d.DAILY = 86400)] = 'DAILY'),
-	((N = I || (I = {}))[(N.CONFIRM_START = 0)] = 'CONFIRM_START'),
-	(N[(N.CONFIRM_CODE = 1)] = 'CONFIRM_CODE'),
-	(N[(N.CHANGE_EMAIL_REASONS = 2)] = 'CHANGE_EMAIL_REASONS'),
-	(N[(N.CHANGE_EMAIL_WARNING = 3)] = 'CHANGE_EMAIL_WARNING'),
-	(N[(N.EMAIL_AND_PASSWORD = 4)] = 'EMAIL_AND_PASSWORD'),
-	(N[(N.COMPLETE = 5)] = 'COMPLETE');
+((T = s || (s = {}))[(T.PRELOADED_USER_SETTINGS = 1)] = 'PRELOADED_USER_SETTINGS'), (T[(T.FRECENCY_AND_FAVORITES_SETTINGS = 2)] = 'FRECENCY_AND_FAVORITES_SETTINGS'), (T[(T.TEST_SETTINGS = 3)] = 'TEST_SETTINGS'), ((d = c || (c = {}))[(d.INFREQUENT_USER_ACTION = 0)] = 'INFREQUENT_USER_ACTION'), (d[(d.FREQUENT_USER_ACTION = 10)] = 'FREQUENT_USER_ACTION'), (d[(d.SLOW_USER_ACTION = 20)] = 'SLOW_USER_ACTION'), (d[(d.AUTOMATED = 30)] = 'AUTOMATED'), (d[(d.DAILY = 86400)] = 'DAILY'), ((N = I || (I = {}))[(N.CONFIRM_START = 0)] = 'CONFIRM_START'), (N[(N.CONFIRM_CODE = 1)] = 'CONFIRM_CODE'), (N[(N.CHANGE_EMAIL_REASONS = 2)] = 'CHANGE_EMAIL_REASONS'), (N[(N.CHANGE_EMAIL_WARNING = 3)] = 'CHANGE_EMAIL_WARNING'), (N[(N.EMAIL_AND_PASSWORD = 4)] = 'EMAIL_AND_PASSWORD'), (N[(N.COMPLETE = 5)] = 'COMPLETE');
 let g = {
 		NEW_FORUM_THREADS_ON: 16384,
 		NEW_FORUM_THREADS_OFF: 8192,

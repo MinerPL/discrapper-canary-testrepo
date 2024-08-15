@@ -19,29 +19,15 @@ function o(e, t, n) {
 class l extends a.g {
 	requestPermissionCore(e, t) {
 		var n;
-		return this.asyncify(
-			null === (n = this.nativeUtils) || void 0 === n ? void 0 : n.nativePermssionRequestAuthorization,
-			e,
-			t
-		);
+		return this.asyncify(null === (n = this.nativeUtils) || void 0 === n ? void 0 : n.nativePermssionRequestAuthorization, e, t);
 	}
 	hasPermissionCore(e, t) {
 		var n;
-		return this.asyncify(
-			null === (n = this.nativeUtils) || void 0 === n ? void 0 : n.nativePermssionHasAuthorization,
-			e,
-			t
-		);
+		return this.asyncify(null === (n = this.nativeUtils) || void 0 === n ? void 0 : n.nativePermssionHasAuthorization, e, t);
 	}
 	asyncify(e, t, n) {
 		let r = l.requestTypeLookup[t];
-		return void 0 === r
-			? Promise.resolve(!0)
-			: this.requestAuthorization(
-					t,
-					() => (null == e ? Promise.resolve(s.NZ.AUTHORIZED) : new Promise((t, n) => e(t, r))),
-					n
-				);
+		return void 0 === r ? Promise.resolve(!0) : this.requestAuthorization(t, () => (null == e ? Promise.resolve(s.NZ.AUTHORIZED) : new Promise((t, n) => e(t, r))), n);
 	}
 	openSettings(e) {
 		var t;

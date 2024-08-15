@@ -14,9 +14,7 @@ var r,
 	c = t(570140);
 let d = new Map(),
 	_ = new Map();
-((o = r || (r = {}))[(o.NOT_FETCHED = 0)] = 'NOT_FETCHED'),
-	(o[(o.FETCHING = 1)] = 'FETCHING'),
-	(o[(o.FETCHED = 2)] = 'FETCHED');
+((o = r || (r = {}))[(o.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (o[(o.FETCHING = 1)] = 'FETCHING'), (o[(o.FETCHED = 2)] = 'FETCHED');
 class f extends (i = s.ZP.Store) {
 	getPriceTiersFetchStateForGuildAndType(e, n) {
 		var t, r;

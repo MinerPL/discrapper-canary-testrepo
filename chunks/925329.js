@@ -17,7 +17,7 @@ let _ = {
 	},
 	E = (e) => {
 		let t,
-			{ game: i, guild: E, skuId: f, pid: h, className: p, guildClassName: I, size: m = _.MEDIUM } = e;
+			{ game: i, guild: E, skuId: f, pid: h, className: p, guildClassName: m, size: I = _.MEDIUM } = e;
 		if (
 			(null != f &&
 				(t = (function (e) {
@@ -54,7 +54,7 @@ let _ = {
 							default:
 								return 80;
 						}
-					})(m)
+					})(I)
 				)),
 			null == (t = (0, o.Z)(h, t)) && null != E)
 		) {
@@ -70,9 +70,9 @@ let _ = {
 					case _.MEDIUM:
 						return l.Z.Sizes.MEDIUM;
 				}
-			})(m);
+			})(I);
 			return (0, r.jsx)(l.Z, {
-				className: a()(d.gameIcon, I, p),
+				className: a()(d.gameIcon, m, p),
 				guild: E,
 				size: e
 			});
@@ -81,17 +81,14 @@ let _ = {
 			return (0, r.jsx)(s.UnknownGameIcon, {
 				size: 'md',
 				color: 'currentColor',
-				className: a()(d.gameIcon, m, p)
+				className: a()(d.gameIcon, I, p)
 			});
 		let T = null == i ? void 0 : i.name,
-			g =
-				null != T && '' !== T
-					? c.Z.Messages.APPLICATION_ICON_A11Y_LABEL.format({ applicationName: T })
-					: c.Z.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL;
+			g = null != T && '' !== T ? c.Z.Messages.APPLICATION_ICON_A11Y_LABEL.format({ applicationName: T }) : c.Z.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL;
 		return (0, r.jsx)('img', {
 			alt: g,
 			src: t,
-			className: a()(d.gameIcon, m, p)
+			className: a()(d.gameIcon, I, p)
 		});
 	};
 (E.Sizes = _), (t.Z = E);

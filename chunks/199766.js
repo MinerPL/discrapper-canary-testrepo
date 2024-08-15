@@ -8,12 +8,7 @@ n.d(t, {
 });
 var i = n(673125);
 function a(e, t, n, i, a) {
-	e.save(),
-		e.beginPath(),
-		(e.fillStyle = i),
-		e.arc(t, n, Math.round(20 * window.devicePixelRatio) / 2 + a, 0, 2 * Math.PI),
-		e.fill(),
-		e.restore();
+	e.save(), e.beginPath(), (e.fillStyle = i), e.arc(t, n, Math.round(20 * window.devicePixelRatio) / 2 + a, 0, 2 * Math.PI), e.fill(), e.restore();
 }
 function s(e, t, n, a) {
 	e.save();

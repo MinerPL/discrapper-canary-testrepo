@@ -26,14 +26,7 @@ var a = n(120356),
 	O = n(689938),
 	M = n(315010),
 	v = n(789002);
-let L = (e, t, n) =>
-	(0, S.uq)(e) && !n && 'lg' === t
-		? 'text-lg/medium'
-		: 'lg' === t
-			? 'text-md/medium'
-			: 'sm' === t
-				? 'text-sm/medium'
-				: 'text-xs/medium';
+let L = (e, t, n) => ((0, S.uq)(e) && !n && 'lg' === t ? 'text-lg/medium' : 'lg' === t ? 'text-md/medium' : 'sm' === t ? 'text-sm/medium' : 'text-xs/medium');
 function Z(e) {
 	let { containerSize: t, onClick: n, children: a, tabIndex: s } = e;
 	return 'xs' === t
@@ -57,14 +50,7 @@ function Z(e) {
 			});
 }
 function P(e) {
-	let {
-			quest: t,
-			progressState: n,
-			isCollectibleQuest: a,
-			location: s,
-			questContentPosition: c,
-			inGiftInventory: u
-		} = e,
+	let { quest: t, progressState: n, isCollectibleQuest: a, location: s, questContentPosition: c, inGiftInventory: u } = e,
 		d = n >= E.OH.COMPLETED,
 		_ = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
 		m = (0, r.e7)([I.Z], () => I.Z.isEnrolling(t.id)),
@@ -114,16 +100,7 @@ function P(e) {
 	);
 }
 t.Z = (e) => {
-	let {
-			quest: t,
-			location: n,
-			size: a,
-			isFocused: o,
-			isQuestExpired: I,
-			isExpanded: C,
-			isAnimating: v,
-			contentPosition: b
-		} = e,
+	let { quest: t, location: n, size: a, isFocused: o, isQuestExpired: I, isExpanded: C, isAnimating: v, contentPosition: b } = e,
 		D = (0, E._Q)(t),
 		j = D >= E.OH.ACCEPTED,
 		U = D >= E.OH.COMPLETED,
@@ -196,9 +173,7 @@ t.Z = (e) => {
 							(0, i.jsx)(l.Text, {
 								variant: L(n, a, j),
 								className: M.taskInstructions,
-								children: I
-									? O.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_HEADING.format({ questName: t.config.messages.questName })
-									: V
+								children: I ? O.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_HEADING.format({ questName: t.config.messages.questName }) : V
 							}),
 							(0, i.jsx)(l.Text, {
 								variant: 'lg' === a ? 'text-sm/medium' : 'text-xs/medium',
@@ -252,9 +227,7 @@ t.Z = (e) => {
 											})
 										: null;
 									return _
-										? O.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_SUBHEADING.format({
-												reward: null !== (r = null == v ? void 0 : v.messages.nameWithArticle) && void 0 !== r ? r : g
-											})
+										? O.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_SUBHEADING.format({ reward: null !== (r = null == v ? void 0 : v.messages.nameWithArticle) && void 0 !== r ? r : g })
 										: null != v && null != v.approximateCount
 											? O.Z.Messages.QUEST_REWARD_TIERED.format({
 													maxReward: v.messages.nameWithArticle,

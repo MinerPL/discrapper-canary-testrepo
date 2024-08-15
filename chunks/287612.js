@@ -20,9 +20,9 @@ function f(e) {
 		{ mutualFriends: f } = (0, l.Z)(t.id),
 		{ mutualGuilds: h } = (0, u.Z)(t.id),
 		p = null != f && f.length > 0,
-		I = null != h && h.length > 0,
-		m = p && I ? 'text-xs/normal' : 'text-sm/normal';
-	return p || I
+		m = null != h && h.length > 0,
+		I = p && m ? 'text-xs/normal' : 'text-sm/normal';
+	return p || m
 		? (0, r.jsxs)('div', {
 				className: E.mutuals,
 				children: [
@@ -43,20 +43,20 @@ function f(e) {
 									}),
 									(0, r.jsx)(i.Text, {
 										className: E.text,
-										variant: m,
+										variant: I,
 										color: 'interactive-normal',
 										children: _.Z.Messages.USER_PROFILE_MUTUAL_FRIENDS.format({ count: f.length })
 									})
 								]
 							})
 						: null,
-					p && I
+					p && m
 						? (0, r.jsx)('div', {
 								'aria-hidden': 'true',
 								className: E.spacer
 							})
 						: null,
-					I
+					m
 						? (0, r.jsxs)(i.Clickable, {
 								className: E.section,
 								onClick: () => (null == n ? void 0 : n(c.oh.MUTUAL_GUILDS)),
@@ -74,7 +74,7 @@ function f(e) {
 										}),
 									(0, r.jsx)(i.Text, {
 										className: E.text,
-										variant: m,
+										variant: I,
 										color: 'interactive-normal',
 										children: _.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({ count: h.length })
 									})

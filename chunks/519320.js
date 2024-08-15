@@ -36,8 +36,4 @@ function c(e, t) {
 		error_message: t
 	});
 }
-((i = a || (a = {})).SENT = 'sent'),
-	(i.CANCELLED_DURATION = 'cancelled_duration'),
-	(i.CANCELLED_USER_REQUESTED = 'cancelled_user_requested'),
-	(i.CANCELLED_GESTURE_CONFLICT = 'cancelled_gesture_conflict'),
-	(i.CANCELLED_ON_BACKGROUND = 'cancelled_on_background');
+((i = a || (a = {})).SENT = 'sent'), (i.CANCELLED_DURATION = 'cancelled_duration'), (i.CANCELLED_USER_REQUESTED = 'cancelled_user_requested'), (i.CANCELLED_GESTURE_CONFLICT = 'cancelled_gesture_conflict'), (i.CANCELLED_ON_BACKGROUND = 'cancelled_on_background');

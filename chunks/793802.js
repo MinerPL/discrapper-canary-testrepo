@@ -13,8 +13,8 @@ var n = 'function' == typeof Symbol && Symbol.for,
 	f = n ? Symbol.for('react.suspense_list') : 60120,
 	h = n ? Symbol.for('react.memo') : 60115,
 	p = n ? Symbol.for('react.lazy') : 60116,
-	I = n ? Symbol.for('react.block') : 60121,
-	m = n ? Symbol.for('react.fundamental') : 60117,
+	m = n ? Symbol.for('react.block') : 60121,
+	I = n ? Symbol.for('react.fundamental') : 60117,
 	T = n ? Symbol.for('react.responder') : 60118,
 	g = n ? Symbol.for('react.scope') : 60119;
 function S(e) {
@@ -101,26 +101,6 @@ function A(e) {
 		return S(e) === E;
 	}),
 	(t.isValidElementType = function (e) {
-		return (
-			'string' == typeof e ||
-			'function' == typeof e ||
-			e === a ||
-			e === d ||
-			e === o ||
-			e === s ||
-			e === E ||
-			e === f ||
-			('object' == typeof e &&
-				null !== e &&
-				(e.$$typeof === p ||
-					e.$$typeof === h ||
-					e.$$typeof === l ||
-					e.$$typeof === u ||
-					e.$$typeof === _ ||
-					e.$$typeof === m ||
-					e.$$typeof === T ||
-					e.$$typeof === g ||
-					e.$$typeof === I))
-		);
+		return 'string' == typeof e || 'function' == typeof e || e === a || e === d || e === o || e === s || e === E || e === f || ('object' == typeof e && null !== e && (e.$$typeof === p || e.$$typeof === h || e.$$typeof === l || e.$$typeof === u || e.$$typeof === _ || e.$$typeof === I || e.$$typeof === T || e.$$typeof === g || e.$$typeof === m));
 	}),
 	(t.typeOf = S);

@@ -33,8 +33,8 @@ function p(e, t, n) {
 		e
 	);
 }
-let I = 'scientist:triggered',
-	m = 'exerimentOverrides',
+let m = 'scientist:triggered',
+	I = 'exerimentOverrides',
 	T = 'userExperimentOverrides',
 	g = 'guildExperimentOverrides',
 	S = new u.Z('ExperimentStore'),
@@ -64,18 +64,13 @@ function x(e, t) {
 }
 function G(e) {
 	var t;
-	return (
-		((null !== (t = e.flags) && void 0 !== t ? t : 0) & h.xW$.STAFF) === h.xW$.STAFF ||
-		null != e.personal_connection_id ||
-		!1
-	);
+	return ((null !== (t = e.flags) && void 0 !== t ? t : 0) & h.xW$.STAFF) === h.xW$.STAFF || null != e.personal_connection_id || !1;
 }
 function k(e, t, n, r) {
 	let i = ''.concat(t.type, '|').concat(e),
 		a = t.triggerDebuggingEnabled && void 0 !== n && n.length > 0;
 	if (t.type === f.xY.USER) return a && ((i += '|'.concat(n)), r && (i += '|triggerDebugging')), i;
-	if (t.type === f.xY.GUILD)
-		return (i += '|'.concat(t.guildId)), a && ((i += '|'.concat(n)), r && (i += '|triggerDebugging')), i;
+	if (t.type === f.xY.GUILD) return (i += '|'.concat(t.guildId)), a && ((i += '|'.concat(n)), r && (i += '|triggerDebugging')), i;
 	throw Error();
 }
 function B(e) {
@@ -89,16 +84,7 @@ function V(e, t, n, r) {
 	return !(null == i || Date.now() - i.time > 604800000) && i.hash === B(t);
 }
 function H(e) {
-	let {
-		experimentId: t,
-		descriptor: n,
-		location: r,
-		location_stack: i,
-		context: a,
-		fingerprint: s,
-		excluded: o,
-		exposureType: l
-	} = e;
+	let { experimentId: t, descriptor: n, location: r, location_stack: i, context: a, fingerprint: s, excluded: o, exposureType: l } = e;
 	if (n.override) return !1;
 	let u = l === f.a0.AUTO_FALLBACK && !!n.triggerDebuggingEnabled;
 	if (V(t, n, r, u)) return !1;
@@ -244,36 +230,23 @@ function z(e) {
 		var n;
 		let i = e[r];
 		for (let e of ((t[r] = { ...i }), t[r].populations)) e.filters = e.rawFilterData.map(Z);
-		for (let e of null !== (n = t[r].overridesFormatted) && void 0 !== n ? n : [])
-			for (let t of e) t.filters = t.rawFilterData.map(Z);
+		for (let e of null !== (n = t[r].overridesFormatted) && void 0 !== n ? n : []) for (let t of e) t.filters = t.rawFilterData.map(Z);
 	}
 	return t;
 }
 function q(e) {
 	let { serializedExperimentStore: t, user: n } = e;
-	!M && G(n) && (M = !0),
-		(A = t.hasLoadedExperiments),
-		(N = t.trackedExposureExperiments),
-		(C = t.loadedUserExperiments),
-		(L = t.userExperimentOverrides),
-		(b = t.guildExperimentOverrides),
-		(y = z(t.loadedGuildExperiments)),
-		(D = {});
+	!M && G(n) && (M = !0), (A = t.hasLoadedExperiments), (N = t.trackedExposureExperiments), (C = t.loadedUserExperiments), (L = t.userExperimentOverrides), (b = t.guildExperimentOverrides), (y = z(t.loadedGuildExperiments)), (D = {});
 }
 function Q() {
 	A = !0;
 }
 function X(e) {
 	let { isSwitchingAccount: t } = e;
-	o.K.remove(I),
-		!t && (o.K.remove(m), o.K.remove(T), o.K.remove(g), (L = {}), (b = {})),
-		(C = {}),
-		(O = []),
-		(N = {}),
-		(A = !1);
+	o.K.remove(m), !t && (o.K.remove(I), o.K.remove(T), o.K.remove(g), (L = {}), (b = {})), (C = {}), (O = []), (N = {}), (A = !1);
 }
 function $() {
-	(A = !1), (N = {}), o.K.remove(I);
+	(A = !1), (N = {}), o.K.remove(m);
 }
 function J() {
 	try {
@@ -297,7 +270,7 @@ function J() {
 }
 function ee(e) {
 	try {
-		o.K.set(I, {
+		o.K.set(m, {
 			v: 1,
 			e: e
 		});
@@ -362,7 +335,7 @@ function er(e) {
 class ei extends d.Z {
 	initialize() {
 		(N = (function () {
-			let e = o.K.get(I);
+			let e = o.K.get(m);
 			if (null == e || 1 !== e.v) return {};
 			let t = e.e,
 				n = Date.now(),
@@ -372,25 +345,13 @@ class ei extends d.Z {
 		})()),
 			!(function () {
 				var e, t, n;
-				let r = [
-					null !== (e = o.K.get(m)) && void 0 !== e ? e : {},
-					null !== (t = o.K.get(T)) && void 0 !== t ? t : {},
-					null !== (n = o.K.get(g)) && void 0 !== n ? n : {}
-				];
+				let r = [null !== (e = o.K.get(I)) && void 0 !== e ? e : {}, null !== (t = o.K.get(T)) && void 0 !== t ? t : {}, null !== (n = o.K.get(g)) && void 0 !== n ? n : {}];
 				(L = {}), (b = {});
 				let a = !i().isEmpty(r[0]);
 				for (let e of r)
 					for (let t in e) {
 						let n = e[t];
-						null == n ||
-						(n.type !== f.xY.USER && n.type !== f.xY.GUILD) ||
-						null == n.bucket ||
-						!0 !== n.override ||
-						n.fromCookie
-							? (delete e[t], (a = !0))
-							: n.type === f.xY.USER
-								? (L[t] = n)
-								: (b[t] = n);
+						null == n || (n.type !== f.xY.USER && n.type !== f.xY.GUILD) || null == n.bucket || !0 !== n.override || n.fromCookie ? (delete e[t], (a = !0)) : n.type === f.xY.USER ? (L[t] = n) : (b[t] = n);
 					}
 				let s = (0, l._S)();
 				for (let e in s)
@@ -415,10 +376,7 @@ class ei extends d.Z {
 	}
 	loadCache() {
 		let e = this.readSnapshot(ei.LATEST_SNAPSHOT_VERSION);
-		null != e &&
-			('loadedUserExperiments' in e
-				? ((C = e.loadedUserExperiments), (y = z(e.loadedGuildExperiments)))
-				: W(e.rawUserExperiments, e.rawGuildExperiments));
+		null != e && ('loadedUserExperiments' in e ? ((C = e.loadedUserExperiments), (y = z(e.loadedGuildExperiments))) : W(e.rawUserExperiments, e.rawGuildExperiments));
 	}
 	takeSnapshot() {
 		return {

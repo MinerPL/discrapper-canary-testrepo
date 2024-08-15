@@ -28,13 +28,9 @@ class E extends l.Z {
 	}
 	async compressAndCheckFileSize() {
 		var e, t;
-		let n = (0, s.F)(
-			null === (t = this.files[0]) || void 0 === t ? void 0 : null === (e = t.item) || void 0 === e ? void 0 : e.target
-		);
+		let n = (0, s.F)(null === (t = this.files[0]) || void 0 === t ? void 0 : null === (e = t.item) || void 0 === e ? void 0 : e.target);
 		return this.files.length > n.getMaxAttachmentsCount()
-			? (_.log('Too many attachments for '.concat(this.id)),
-				this._handleError({ code: u.evJ.TOO_MANY_ATTACHMENTS }),
-				!1)
+			? (_.log('Too many attachments for '.concat(this.id)), this._handleError({ code: u.evJ.TOO_MANY_ATTACHMENTS }), !1)
 			: !(this._fileSize() > n.getMaxTotalAttachmentSize()) ||
 					(this._handleError({
 						code: u.evJ.ENTITY_TOO_LARGE,
@@ -46,19 +42,11 @@ class E extends l.Z {
 		return this.files.some((e) => e.error === u.evJ.ENTITY_TOO_LARGE);
 	}
 	setUploadingTextForUI() {
-		let e =
-				1 === this.files.length && null != this.files[0].filename
-					? this.files[0].filename
-					: d.Z.Messages.UPLOADING_FILES.format({ count: this.files.length }),
+		let e = 1 === this.files.length && null != this.files[0].filename ? this.files[0].filename : d.Z.Messages.UPLOADING_FILES.format({ count: this.files.length }),
 			t = this.files.some((e) => e.isImage),
 			n = this.files.some((e) => e.isVideo),
 			r = this._fileSize();
-		_.log(
-			'setUploadingTextForUI - total content: '
-				.concat(r, ' bytes and ')
-				.concat(this.files.length, ' attachments for ')
-				.concat(this.id)
-		),
+		_.log('setUploadingTextForUI - total content: '.concat(r, ' bytes and ').concat(this.files.length, ' attachments for ').concat(this.id)),
 			(this._file = {
 				...this._file,
 				totalPostCompressionSize: r,
@@ -95,11 +83,7 @@ class E extends l.Z {
 		);
 	}
 	cancel() {
-		if ((_.log('Cancel called for '.concat(this.id)), !this._aborted))
-			(this._aborted = !0),
-				null != this._cancel && this._cancel(),
-				this.files.forEach((e) => e.cancel()),
-				this._handleComplete();
+		if ((_.log('Cancel called for '.concat(this.id)), !this._aborted)) (this._aborted = !0), null != this._cancel && this._cancel(), this.files.forEach((e) => e.cancel()), this._handleComplete();
 	}
 	async cancelItem(e) {
 		_.log('Cancel called for '.concat(this.id, ' for item ').concat(e));

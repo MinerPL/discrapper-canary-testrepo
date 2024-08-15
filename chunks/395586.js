@@ -13,10 +13,7 @@ var s = n(735250),
 let r = a.createContext(void 0);
 function l() {
 	let e = a.useContext(r);
-	if (null == e)
-		throw Error(
-			'useCreatorMonetizationSettingsDisabled must be used within a CreatorMonetizationSettingsDisabledContext'
-		);
+	if (null == e) throw Error('useCreatorMonetizationSettingsDisabled must be used within a CreatorMonetizationSettingsDisabledContext');
 	return e;
 }
 function o(e) {

@@ -68,15 +68,7 @@ function Z(e) {
 		B = i.useCallback(() => {
 			null != L && ((0, _.LO)(n, L, O), p());
 		}, [L, n, O, p]),
-		[Y, j] = i.useMemo(
-			() =>
-				v
-					? [g.Z.Messages.E2EE_VERIFIED, o.Z.BG_BRAND]
-					: O
-						? [g.Z.Messages.E2EE_PERSISTENT, o.Z.STATUS_DANGER]
-						: [g.Z.Messages.NEW, o.Z.STATUS_DANGER],
-			[O, v]
-		),
+		[Y, j] = i.useMemo(() => (v ? [g.Z.Messages.E2EE_VERIFIED, o.Z.BG_BRAND] : O ? [g.Z.Messages.E2EE_PERSISTENT, o.Z.STATUS_DANGER] : [g.Z.Messages.NEW, o.Z.STATUS_DANGER]), [O, v]),
 		G = i.useMemo(
 			() =>
 				(0, _.kK)({

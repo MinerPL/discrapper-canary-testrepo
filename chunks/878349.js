@@ -19,20 +19,7 @@ var i = n(735250),
 	_ = n(546240),
 	f = n(952009);
 function E(e) {
-	let {
-			checked: t,
-			labelText: n,
-			tooltipText: s,
-			canToggle: E,
-			iconAltText: g,
-			onChange: C,
-			tooltipColor: I,
-			className: x,
-			id: T = 'fancybutton-toggle',
-			collapseWhenChecked: N = !0,
-			onClick: v,
-			disabled: S
-		} = e,
+	let { checked: t, labelText: n, tooltipText: s, canToggle: E, iconAltText: C, onChange: g, tooltipColor: I, className: x, id: T = 'fancybutton-toggle', collapseWhenChecked: N = !0, onClick: v, disabled: S } = e,
 		Z = (0, r.e7)([h.Z], () => h.Z.useReducedMotion),
 		[A, M] = a.useState(!1),
 		b = (0, d.ZP)(),
@@ -56,7 +43,7 @@ function E(e) {
 				onChange: function () {
 					if (E) {
 						let e = !t;
-						M(!0), null == C || C(e);
+						M(!0), null == g || g(e);
 					}
 					'function' == typeof v && v();
 				},
@@ -82,7 +69,7 @@ function E(e) {
 					(0, i.jsx)('img', {
 						ref: L,
 						src: R,
-						alt: g
+						alt: C
 					}),
 					(0, i.jsx)('span', {
 						ref: O,

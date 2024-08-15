@@ -48,14 +48,7 @@ let N = Object.freeze({
 		[o.xQ.GUILD]: o.h8.GUILD,
 		[o.xQ.APPLICATION]: o.h8.APPLICATION
 	}),
-	L = new RegExp(
-		'^'
-			.concat(o.xQ.USER, '|')
-			.concat(o.xQ.TEXT_CHANNEL, '|')
-			.concat(o.xQ.VOICE_CHANNEL, '|\\')
-			.concat(o.xQ.GUILD, '|\\')
-			.concat(o.xQ.APPLICATION)
-	);
+	L = new RegExp('^'.concat(o.xQ.USER, '|').concat(o.xQ.TEXT_CHANNEL, '|').concat(o.xQ.VOICE_CHANNEL, '|\\').concat(o.xQ.GUILD, '|\\').concat(o.xQ.APPLICATION));
 function b(e) {
 	var t, n;
 	let l;
@@ -107,8 +100,7 @@ function v(e, t) {
 				break;
 			case o.h8.TEXT_CHANNEL:
 			case o.h8.VOICE_CHANNEL:
-				a instanceof h.Sf && (N.selected_guild_id = null != a.guild_id ? a.guild_id : null),
-					(N.selected_channel_id = a.id);
+				a instanceof h.Sf && (N.selected_guild_id = null != a.guild_id ? a.guild_id : null), (N.selected_channel_id = a.id);
 				break;
 			case o.h8.GROUP_DM:
 				N.selected_channel_id = a.id;

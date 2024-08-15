@@ -8,8 +8,7 @@ var n = r(310176),
 	l = r(467159),
 	f = a.isEngine('Gecko');
 t.exports = function (t, e) {
-	void 0 !== t._pendingStateFromBeforeInput &&
-		(t.update(t._pendingStateFromBeforeInput), (t._pendingStateFromBeforeInput = void 0));
+	void 0 !== t._pendingStateFromBeforeInput && (t.update(t._pendingStateFromBeforeInput), (t._pendingStateFromBeforeInput = void 0));
 	var r,
 		a,
 		p,

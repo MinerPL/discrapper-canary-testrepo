@@ -39,10 +39,7 @@ let f = {
 	P = (0, c.range)(0, 2.25, 0.25),
 	L = (0, c.range)(1, 11),
 	b = (0, c.range)(1, 26);
-((i = n || (n = {}))[(i.CONFETTI = 0)] = 'CONFETTI'),
-	(i[(i.SHAKE = 1)] = 'SHAKE'),
-	((r = a || (a = {}))[(r.USER_SETTINGS = 0)] = 'USER_SETTINGS'),
-	(r[(r.ACHIEVEMENT_LIST = 1)] = 'ACHIEVEMENT_LIST');
+((i = n || (n = {}))[(i.CONFETTI = 0)] = 'CONFETTI'), (i[(i.SHAKE = 1)] = 'SHAKE'), ((r = a || (a = {}))[(r.USER_SETTINGS = 0)] = 'USER_SETTINGS'), (r[(r.ACHIEVEMENT_LIST = 1)] = 'ACHIEVEMENT_LIST');
 let Z = () => [
 		{
 			location: p.Hn.CHAT_INPUT,
@@ -128,9 +125,7 @@ function U(e) {
 				e && (!t || a)
 					? (0, E.openModal)((e) =>
 							(0, o.jsx)(E.ConfirmModal, {
-								header: a
-									? x.Z.Messages.POGGERMODE_WARNING_TITLE_REDUCED_MOTION
-									: x.Z.Messages.POGGERMODE_WARNING_TITLE,
+								header: a ? x.Z.Messages.POGGERMODE_WARNING_TITLE_REDUCED_MOTION : x.Z.Messages.POGGERMODE_WARNING_TITLE,
 								confirmText: x.Z.Messages.ENABLE,
 								cancelText: x.Z.Messages.CANCEL,
 								onConfirm: () =>
@@ -145,9 +140,7 @@ function U(e) {
 								...e,
 								children: (0, o.jsx)(E.Text, {
 									variant: 'text-md/normal',
-									children: a
-										? x.Z.Messages.POGGERMODE_WARNING_BODY_REDUCED_MOTION
-										: x.Z.Messages.POGGERMODE_WARNING_BODY
+									children: a ? x.Z.Messages.POGGERMODE_WARNING_BODY_REDUCED_MOTION : x.Z.Messages.POGGERMODE_WARNING_BODY
 								})
 							})
 						)
@@ -301,8 +294,7 @@ function y(e) {
 						maxValue: P[P.length - 1],
 						initialValue: n,
 						onValueChange: (e) => c({ shakeIntensity: e }, 1),
-						onMarkerRender: (e) =>
-							e === P[P.length - 1] ? x.Z.Messages.POGGERMODE_SCREENSHAKE_MAX : ''.concat(100 * e, '%')
+						onMarkerRender: (e) => (e === P[P.length - 1] ? x.Z.Messages.POGGERMODE_SCREENSHAKE_MAX : ''.concat(100 * e, '%'))
 					})
 				]
 			}),

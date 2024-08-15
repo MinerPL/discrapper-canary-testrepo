@@ -16,9 +16,7 @@ var s = n(481060),
 	h = n(689938);
 function p(e) {
 	let { game: t } = e,
-		{ trackView: n, trackClick: p } = (0, r.R)(u.n0.StartBroadcastNotification, {
-			notif_type: u.n0.StartBroadcastNotification
-		});
+		{ trackView: n, trackClick: p } = (0, r.R)(u.n0.StartBroadcastNotification, { notif_type: u.n0.StartBroadcastNotification });
 	return {
 		colorScheme: l.IC.PRIMARY,
 		title: null,

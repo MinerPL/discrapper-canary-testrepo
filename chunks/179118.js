@@ -33,18 +33,7 @@ var t = n(735250),
 	g = n(689938),
 	h = n(851212);
 function Z(e) {
-	let {
-			giftCode: s,
-			application: n,
-			sku: i,
-			subscriptionPlan: l,
-			selectedGiftStyle: o,
-			onClose: _,
-			hasSentMessage: d,
-			giftRecipient: m,
-			giftMessageError: T,
-			isSendingMessage: N
-		} = e,
+	let { giftCode: s, application: n, sku: i, subscriptionPlan: l, selectedGiftStyle: o, onClose: _, hasSentMessage: d, giftRecipient: m, giftMessageError: T, isSendingMessage: N } = e,
 		[p, A] = a.useState(u.CopyInput.Modes.DEFAULT),
 		Z = (0, c.e7)([L.Z], () => L.Z.enabled),
 		U = d || (null != o && null != m),
@@ -57,18 +46,7 @@ function Z(e) {
 				? g.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_FAILURE_GENERIC_BLURB
 				: null == l
 					? null
-					: (e =
-							l.interval === f.rV.MONTH
-								? U
-									? s
-										? g.Z.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY
-										: g.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY
-									: g.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_MONTHLY
-								: U
-									? s
-										? g.Z.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY
-										: g.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY
-									: g.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_YEARLY).format({
+					: (e = l.interval === f.rV.MONTH ? (U ? (s ? g.Z.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : g.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY) : g.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_MONTHLY) : U ? (s ? g.Z.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : g.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY) : g.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_YEARLY).format({
 							skuName: (0, R.aq)(l.id),
 							intervalCount: l.intervalCount
 						});
@@ -159,12 +137,7 @@ function Z(e) {
 							[h.header]: null == o && !v,
 							[h.headerCustomGifting]: null != o && !v
 						}),
-						children:
-							null != m || (d && null == T)
-								? g.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_AND_MESSAGE_CONFIRMATION_TITLE
-								: null != T
-									? g.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_FAILED
-									: g.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_CONFIRMATION_TITLE
+						children: null != m || (d && null == T) ? g.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_AND_MESSAGE_CONFIRMATION_TITLE : null != T ? g.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_FAILED : g.Z.Messages.APPLICATION_STORE_PURCHASE_GIFT_CONFIRMATION_TITLE
 					}),
 					(d && null != m && null == T) || U
 						? (0, t.jsxs)(t.Fragment, {
@@ -285,9 +258,7 @@ let j = (e) => {
 			}),
 			(0, t.jsx)('div', {
 				className: l ? h.subtextError : h.subtext,
-				children: l
-					? g.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_ERROR_SENDING_LINK
-					: g.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_RECIPIENT_SUBTEXT
+				children: l ? g.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_ERROR_SENDING_LINK : g.Z.Messages.APPLICATION_STORE_GIFT_PURCHASE_GIFT_RECIPIENT_SUBTEXT
 			})
 		]
 	});

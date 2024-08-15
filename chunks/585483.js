@@ -30,9 +30,7 @@ class s {
 		for (var t, n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];
 		if (!this.hasSubscribers(e)) {
 			let [n] = r;
-			return (
-				(this._savedDispatches[e] = null !== (t = this._savedDispatches[e]) && void 0 !== t ? t : []).push(n), this
-			);
+			return (this._savedDispatches[e] = null !== (t = this._savedDispatches[e]) && void 0 !== t ? t : []).push(n), this;
 		}
 		return this.dispatch(e, ...r);
 	}
@@ -59,26 +57,13 @@ class s {
 			(this._savedDispatches[e] = void 0));
 	}
 	subscribe(e, t) {
-		return this.emitter.listeners(e).indexOf(t) >= 0
-			? (new i.Z('ComponentDispatchUtils').warn(
-					'ComponentDispatch.subscribe: Attempting to add a duplicate listener',
-					e
-				),
-				this)
-			: (this.emitter.on(e, t), this._checkSavedDispatches(e), this);
+		return this.emitter.listeners(e).indexOf(t) >= 0 ? (new i.Z('ComponentDispatchUtils').warn('ComponentDispatch.subscribe: Attempting to add a duplicate listener', e), this) : (this.emitter.on(e, t), this._checkSavedDispatches(e), this);
 	}
 	subscribeOnce(e, t) {
 		return this.emitter.once(e, t), this._checkSavedDispatches(e), this;
 	}
 	resubscribe(e, t) {
-		if (!this.emitter.listeners(e).includes(t))
-			return (
-				new i.Z('ComponentDispatchUtils').warn(
-					'ComponentDispatch.resubscribe: Resubscribe without existing subscription',
-					e
-				),
-				this
-			);
+		if (!this.emitter.listeners(e).includes(t)) return new i.Z('ComponentDispatchUtils').warn('ComponentDispatch.resubscribe: Resubscribe without existing subscription', e), this;
 		this.emitter.off(e, t), this.emitter.on(e, t);
 	}
 	unsubscribe(e, t) {

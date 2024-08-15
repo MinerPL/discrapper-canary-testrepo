@@ -26,39 +26,13 @@ var o = e(799761),
 			values: {
 				narrow: ['S', 'L', 'M', 'K', 'M', 'C', 'L', 'S', 'W', 'P', 'L', 'G'],
 				abbreviated: ['sty', 'lut', 'mar', 'kwi', 'maj', 'cze', 'lip', 'sie', 'wrz', 'paź', 'lis', 'gru'],
-				wide: [
-					'styczeń',
-					'luty',
-					'marzec',
-					'kwiecień',
-					'maj',
-					'czerwiec',
-					'lipiec',
-					'sierpień',
-					'wrzesień',
-					'październik',
-					'listopad',
-					'grudzień'
-				]
+				wide: ['styczeń', 'luty', 'marzec', 'kwiecień', 'maj', 'czerwiec', 'lipiec', 'sierpień', 'wrzesień', 'październik', 'listopad', 'grudzień']
 			},
 			defaultWidth: 'wide',
 			formattingValues: {
 				narrow: ['s', 'l', 'm', 'k', 'm', 'c', 'l', 's', 'w', 'p', 'l', 'g'],
 				abbreviated: ['sty', 'lut', 'mar', 'kwi', 'maj', 'cze', 'lip', 'sie', 'wrz', 'paź', 'lis', 'gru'],
-				wide: [
-					'stycznia',
-					'lutego',
-					'marca',
-					'kwietnia',
-					'maja',
-					'czerwca',
-					'lipca',
-					'sierpnia',
-					'września',
-					'października',
-					'listopada',
-					'grudnia'
-				]
+				wide: ['stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca', 'lipca', 'sierpnia', 'września', 'października', 'listopada', 'grudnia']
 			},
 			defaultFormattingWidth: 'wide'
 		}),

@@ -26,25 +26,18 @@ function s(e, t) {
 			labelable: !0,
 			isLink: 'a' === n
 		}),
-		I = (0, r.dG)(E, f),
-		m = (0, r.tv)();
+		m = (0, r.dG)(E, f),
+		I = (0, r.tv)();
 	return {
 		isPressed: h,
 		linkProps: (0, r.dG)(p, {
-			...I,
+			...m,
 			..._,
 			'aria-disabled': c || void 0,
 			'aria-current': e['aria-current'],
 			onClick: (e) => {
 				var t;
-				null === (t = f.onClick) || void 0 === t || t.call(f, e),
-					u && (u(e), console.warn('onClick is deprecated, please use onPress')),
-					!m.isNative &&
-						e.currentTarget instanceof HTMLAnchorElement &&
-						e.currentTarget.href &&
-						!e.isDefaultPrevented() &&
-						(0, r.b0)(e.currentTarget, e) &&
-						(e.preventDefault(), m.open(e.currentTarget, e));
+				null === (t = f.onClick) || void 0 === t || t.call(f, e), u && (u(e), console.warn('onClick is deprecated, please use onPress')), !I.isNative && e.currentTarget instanceof HTMLAnchorElement && e.currentTarget.href && !e.isDefaultPrevented() && (0, r.b0)(e.currentTarget, e) && (e.preventDefault(), I.open(e.currentTarget, e));
 			}
 		})
 	};

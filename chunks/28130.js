@@ -121,21 +121,7 @@ function v(e) {
 	});
 }
 function L(e) {
-	let {
-			transitionState: i,
-			onClose: c,
-			onComplete: C,
-			uploadType: T,
-			maxFileSizeBytes: A,
-			showUpsellHeader: L,
-			filters: O,
-			analyticsLocation: F,
-			analyticsLocations: B = [],
-			modalSubTitle: P,
-			imageSpecifications: S,
-			modalTitle: y = N.Z.Messages.SELECT_IMAGE_MODAL_TITLE,
-			uploadOptionTitle: Z = N.Z.Messages.UPLOAD_IMAGE
-		} = e,
+	let { transitionState: i, onClose: c, onComplete: C, uploadType: T, maxFileSizeBytes: A, showUpsellHeader: L, filters: O, analyticsLocation: F, analyticsLocations: B = [], modalSubTitle: P, imageSpecifications: S, modalTitle: y = N.Z.Messages.SELECT_IMAGE_MODAL_TITLE, uploadOptionTitle: Z = N.Z.Messages.UPLOAD_IMAGE } = e,
 		k = (0, a.e7)([x.Z], () => x.Z.isFocused()),
 		D = (0, a.e7)([p.default], () => p.default.getCurrentUser()),
 		G = (0, a.e7)([u.Z], () => u.Z.getGuildId()),
@@ -220,9 +206,7 @@ function L(e) {
 												if (i.type === I.m.MP4) return w(e, i);
 												(0, s.openModalLazy)(
 													async () => {
-														let { default: o } = await Promise.all([n.e('48017'), n.e('29625')]).then(
-															n.bind(n, 850085)
-														);
+														let { default: o } = await Promise.all([n.e('48017'), n.e('29625')]).then(n.bind(n, 850085));
 														return (n) =>
 															(0, t.jsx)(o, {
 																imgURI: e,

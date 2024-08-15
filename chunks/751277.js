@@ -17,9 +17,7 @@ var l = n(266067),
 function p(e) {
 	var t;
 	let { isOnHubVerificationRoute: n } = e,
-		p = (0, l.LX)(null !== (t = window.location.pathname) && void 0 !== t ? t : '', {
-			path: d.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(':guildId', ':inviteCode')
-		}),
+		p = (0, l.LX)(null !== (t = window.location.pathname) && void 0 !== t ? t : '', { path: d.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(':guildId', ':inviteCode') }),
 		_ = (0, r.e7)([o.Z], () => {
 			if (null == p) return null;
 			let { inviteCode: e } = p.params;

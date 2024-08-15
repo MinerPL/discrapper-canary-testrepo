@@ -42,10 +42,7 @@ function c(e, t, n, r) {
 		is_animated: null !== (d = null == r ? void 0 : r.isAnimated) && void 0 !== d && d
 	});
 }
-((r = i || (i = {})).AUTOCOMPLETE = 'autocomplete'),
-	(r.AUTOSUGGEST = 'autosuggest'),
-	(r.STICKER_PICKER = 'picker'),
-	(r.BUILT_IN_INTEGRATION = 'built_in_integration');
+((r = i || (i = {})).AUTOCOMPLETE = 'autocomplete'), (r.AUTOSUGGEST = 'autosuggest'), (r.STICKER_PICKER = 'picker'), (r.BUILT_IN_INTEGRATION = 'built_in_integration');
 function d(e) {
 	let { sticker: t, stickerSelectLocation: n, isReplacement: r, analyticsLocations: i } = e;
 	o.default.track(l.rMx.STICKER_ATTACHED, {

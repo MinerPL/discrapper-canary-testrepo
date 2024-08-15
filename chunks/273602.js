@@ -71,15 +71,7 @@ function C(e) {
 							e.currentSize > o && (a.cancel(), i(!1), s(), (0, p.G)(t, (0, M.KZ)(l)));
 						}),
 						a.on('error', (e, l, n) => {
-							i(!1),
-								l === O.evJ.EXPLICIT_CONTENT &&
-									(s(),
-									o.Z.sendExplicitMediaClydeError(
-										t.id,
-										null == n ? void 0 : n.attachments,
-										c.UU.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED
-									),
-									r.Z.clearAll(t.id, f.d.ChannelMessage));
+							i(!1), l === O.evJ.EXPLICIT_CONTENT && (s(), o.Z.sendExplicitMediaClydeError(t.id, null == n ? void 0 : n.attachments, c.UU.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED), r.Z.clearAll(t.id, f.d.ChannelMessage));
 						}),
 						a.on('complete', () => {
 							i(!1), s(), r.Z.clearAll(t.id, f.d.ChannelMessage);

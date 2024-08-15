@@ -28,8 +28,7 @@ E.delete('a', 1),
 					});
 				}),
 					s(n, 1);
-				for (var o = a(e), l = a(r), E = 0, f = 0, h = !1, p = i.length; E < p; )
-					(t = i[E++]), h || t.key === o ? ((h = !0), c(this, t.key)) : f++;
+				for (var o = a(e), l = a(r), E = 0, f = 0, h = !1, p = i.length; E < p; ) (t = i[E++]), h || t.key === o ? ((h = !0), c(this, t.key)) : f++;
 				for (; f < p; ) !((t = i[f++]).key === o && t.value === l) && u(this, t.key, t.value);
 			},
 			{

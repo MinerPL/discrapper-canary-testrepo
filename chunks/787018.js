@@ -22,17 +22,7 @@ var s = t(735250),
 	x = t(493248),
 	Z = t(161068);
 function v(e) {
-	let {
-			user: n,
-			guildId: t,
-			channelId: v,
-			messageId: h,
-			roleId: S,
-			transitionState: T,
-			onViewBlockedProfileClick: A,
-			showGuildProfile: g = !0,
-			sourceAnalyticsLocations: N = []
-		} = e,
+	let { user: n, guildId: t, channelId: v, messageId: h, roleId: S, transitionState: T, onViewBlockedProfileClick: A, showGuildProfile: g = !0, sourceAnalyticsLocations: N = [] } = e,
 		j = t === m.ME ? void 0 : t,
 		{ analyticsLocations: L } = (0, r.ZP)([...N, l.Z.BLOCKED_PROFILE_MODAL]),
 		R = (0, c.ZB)({

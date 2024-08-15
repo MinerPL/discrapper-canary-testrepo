@@ -28,9 +28,7 @@ class c extends (i = a.ZP.PersistedStore) {
 	}
 	getLastUsedCommandId() {
 		let e = Date.now();
-		return null == s.lastUsedTimeMs || null == s.lastUsedCommandId
-			? null
-			: (e > s.lastUsedTimeMs + r && ((s.lastUsedCommandId = null), (s.lastUsedTimeMs = null)), s.lastUsedCommandId);
+		return null == s.lastUsedTimeMs || null == s.lastUsedCommandId ? null : (e > s.lastUsedTimeMs + r && ((s.lastUsedCommandId = null), (s.lastUsedTimeMs = null)), s.lastUsedCommandId);
 	}
 }
 o(c, 'displayName', 'AppLauncherLastUsedCommandStore'),

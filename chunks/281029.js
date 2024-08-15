@@ -184,16 +184,7 @@ function h(e, t, n, a) {
 		p = (t) => {
 			var n, i, l, a;
 			let c;
-			if (
-				null == s ||
-				null == o ||
-				((n = e),
-				(i = s),
-				(l = o),
-				(a = t),
-				null != i && null != l && null != a[i] && a[i].channel === n && null != a[l] ? 0 : 1)
-			)
-				c = [...t];
+			if (null == s || null == o || ((n = e), (i = s), (l = o), (a = t), null != i && null != l && null != a[i] && a[i].channel === n && null != a[l] ? 0 : 1)) c = [...t];
 			else c = r.ZP.moveItemFromTo(t, s, o);
 			return (
 				(u = u.concat(

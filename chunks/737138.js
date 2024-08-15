@@ -67,8 +67,7 @@ t.exports = {
 		return (
 			i(v, {
 				clear: function () {
-					for (var t = h(this), r = t.index, n = t.first; n; )
-						(n.removed = !0), n.previous && (n.previous = n.previous.next = void 0), delete r[n.index], (n = n.next);
+					for (var t = h(this), r = t.index, n = t.first; n; ) (n.removed = !0), n.previous && (n.previous = n.previous.next = void 0), delete r[n.index], (n = n.next);
 					(t.first = t.last = void 0), l ? (t.size = 0) : (this.size = 0);
 				},
 				delete: function (t) {
@@ -77,19 +76,12 @@ t.exports = {
 					if (n) {
 						var e = n.next,
 							o = n.previous;
-						delete r.index[n.index],
-							(n.removed = !0),
-							o && (o.next = e),
-							e && (e.previous = o),
-							r.first === n && (r.first = e),
-							r.last === n && (r.last = o),
-							l ? r.size-- : this.size--;
+						delete r.index[n.index], (n.removed = !0), o && (o.next = e), e && (e.previous = o), r.first === n && (r.first = e), r.last === n && (r.last = o), l ? r.size-- : this.size--;
 					}
 					return !!n;
 				},
 				forEach: function (t) {
-					for (var r, n = h(this), e = u(t, arguments.length > 1 ? arguments[1] : void 0); (r = r ? r.next : n.first); )
-						for (e(r.value, r.key, this); r && r.removed; ) r = r.previous;
+					for (var r, n = h(this), e = u(t, arguments.length > 1 ? arguments[1] : void 0); (r = r ? r.next : n.first); ) for (e(r.value, r.key, this); r && r.removed; ) r = r.previous;
 				},
 				has: function (t) {
 					return !!b(this, t);
@@ -141,13 +133,7 @@ t.exports = {
 			},
 			function () {
 				for (var t = i(this), r = t.kind, n = t.last; n && n.removed; ) n = n.previous;
-				return t.target && (t.last = n = n ? n.next : t.state.first)
-					? 'keys' === r
-						? p(n.key, !1)
-						: 'values' === r
-							? p(n.value, !1)
-							: p([n.key, n.value], !1)
-					: ((t.target = void 0), p(void 0, !0));
+				return t.target && (t.last = n = n ? n.next : t.state.first) ? ('keys' === r ? p(n.key, !1) : 'values' === r ? p(n.value, !1) : p([n.key, n.value], !1)) : ((t.target = void 0), p(void 0, !0));
 			},
 			n ? 'entries' : 'values',
 			!n,

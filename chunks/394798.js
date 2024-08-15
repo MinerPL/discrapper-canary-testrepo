@@ -81,8 +81,7 @@ function f(t, e, n = 5) {
 		s = Math.max(Math.min(r - 1, e.lineno - 1), 0);
 	e.pre_context = t.slice(Math.max(0, s - n), s).map((t) => (0, i.JM)(t, 0));
 	let o = Math.min(r - 1, s);
-	(e.context_line = (0, i.JM)(t[o], e.colno || 0)),
-		(e.post_context = t.slice(Math.min(s + 1, r), s + 1 + n).map((t) => (0, i.JM)(t, 0)));
+	(e.context_line = (0, i.JM)(t[o], e.colno || 0)), (e.post_context = t.slice(Math.min(s + 1, r), s + 1 + n).map((t) => (0, i.JM)(t, 0)));
 }
 function h(t) {
 	if (t && t.__sentry_captured__) return !0;

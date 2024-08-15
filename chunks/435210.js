@@ -37,7 +37,7 @@ var r = n(444675),
 		n < i;
 		o = r[++n]
 	)
-		I(o) || !A(o) ? (s += ' ' + o) : (s += ' ' + u(o));
+		m(o) || !A(o) ? (s += ' ' + o) : (s += ' ' + u(o));
 	return s;
 }),
 	(t.deprecate = function (e, n) {
@@ -76,17 +76,7 @@ function u(e, n) {
 		seen: [],
 		stylize: d
 	};
-	return (
-		arguments.length >= 3 && (r.depth = arguments[2]),
-		arguments.length >= 4 && (r.colors = arguments[3]),
-		p(n) ? (r.showHidden = n) : n && t._extend(r, n),
-		g(r.showHidden) && (r.showHidden = !1),
-		g(r.depth) && (r.depth = 2),
-		g(r.colors) && (r.colors = !1),
-		g(r.customInspect) && (r.customInspect = !0),
-		r.colors && (r.stylize = c),
-		_(r, e, r.depth)
-	);
+	return arguments.length >= 3 && (r.depth = arguments[2]), arguments.length >= 4 && (r.colors = arguments[3]), p(n) ? (r.showHidden = n) : n && t._extend(r, n), g(r.showHidden) && (r.showHidden = !1), g(r.depth) && (r.depth = 2), g(r.colors) && (r.colors = !1), g(r.customInspect) && (r.customInspect = !0), r.colors && (r.stylize = c), _(r, e, r.depth);
 }
 function c(e, t) {
 	var n = u.styles[t];
@@ -134,13 +124,7 @@ function d(e, t) {
 		regexp: 'red'
 	});
 function _(e, n, r) {
-	if (
-		e.customInspect &&
-		n &&
-		O(n.inspect) &&
-		n.inspect !== t.inspect &&
-		!(n.constructor && n.constructor.prototype === n)
-	) {
+	if (e.customInspect && n && O(n.inspect) && n.inspect !== t.inspect && !(n.constructor && n.constructor.prototype === n)) {
 		var i,
 			a,
 			s = n.inspect(r, e);
@@ -152,13 +136,7 @@ function _(e, n, r) {
 			var n = "'" + JSON.stringify(t).replace(/^"|"$/g, '').replace(/'/g, "\\'").replace(/\\"/g, '"') + "'";
 			return e.stylize(n, 'string');
 		}
-		return m(t)
-			? e.stylize('' + t, 'number')
-			: p(t)
-				? e.stylize('' + t, 'boolean')
-				: I(t)
-					? e.stylize('null', 'null')
-					: void 0;
+		return I(t) ? e.stylize('' + t, 'number') : p(t) ? e.stylize('' + t, 'boolean') : m(t) ? e.stylize('null', 'null') : void 0;
 	})(e, n);
 	if (o) return o;
 	var l = Object.keys(n);
@@ -168,11 +146,7 @@ function _(e, n, r) {
 			i[e] = !0;
 		}),
 		i);
-	if (
-		(e.showHidden && (l = Object.getOwnPropertyNames(n)),
-		v(n) && (l.indexOf('message') >= 0 || l.indexOf('description') >= 0))
-	)
-		return E(n);
+	if ((e.showHidden && (l = Object.getOwnPropertyNames(n)), v(n) && (l.indexOf('message') >= 0 || l.indexOf('description') >= 0))) return E(n);
 	if (0 === l.length) {
 		if (O(n)) {
 			var c = n.name ? ': ' + n.name : '';
@@ -185,22 +159,13 @@ function _(e, n, r) {
 	var d = '',
 		A = !1,
 		R = ['{', '}'];
-	if (
-		(h(n) && ((A = !0), (R = ['[', ']'])),
-		O(n) && (d = ' [Function' + (n.name ? ': ' + n.name : '') + ']'),
-		S(n) && (d = ' ' + RegExp.prototype.toString.call(n)),
-		N(n) && (d = ' ' + Date.prototype.toUTCString.call(n)),
-		v(n) && (d = ' ' + E(n)),
-		0 === l.length && (!A || 0 == n.length))
-	)
-		return R[0] + d + R[1];
+	if ((h(n) && ((A = !0), (R = ['[', ']'])), O(n) && (d = ' [Function' + (n.name ? ': ' + n.name : '') + ']'), S(n) && (d = ' ' + RegExp.prototype.toString.call(n)), N(n) && (d = ' ' + Date.prototype.toUTCString.call(n)), v(n) && (d = ' ' + E(n)), 0 === l.length && (!A || 0 == n.length))) return R[0] + d + R[1];
 	if (r < 0) return S(n) ? e.stylize(RegExp.prototype.toString.call(n), 'regexp') : e.stylize('[Object]', 'special');
 	return (
 		e.seen.push(n),
 		(a = A
 			? (function (e, t, n, r, i) {
-					for (var a = [], s = 0, o = t.length; s < o; ++s)
-						D(t, String(s)) ? a.push(f(e, t, n, r, String(s), !0)) : a.push('');
+					for (var a = [], s = 0, o = t.length; s < o; ++s) D(t, String(s)) ? a.push(f(e, t, n, r, String(s), !0)) : a.push('');
 					return (
 						i.forEach(function (i) {
 							!i.match(/^\d+$/) && a.push(f(e, t, n, r, i, !0));
@@ -228,13 +193,11 @@ function E(e) {
 function f(e, t, n, r, i, a) {
 	var s, o, l;
 	if (
-		((l = Object.getOwnPropertyDescriptor(t, i) || { value: t[i] }).get
-			? (o = l.set ? e.stylize('[Getter/Setter]', 'special') : e.stylize('[Getter]', 'special'))
-			: l.set && (o = e.stylize('[Setter]', 'special')),
+		((l = Object.getOwnPropertyDescriptor(t, i) || { value: t[i] }).get ? (o = l.set ? e.stylize('[Getter/Setter]', 'special') : e.stylize('[Getter]', 'special')) : l.set && (o = e.stylize('[Setter]', 'special')),
 		!D(r, i) && (s = '[' + i + ']'),
 		!o &&
 			(0 > e.seen.indexOf(l.value)
-				? (o = I(n) ? _(e, l.value, null) : _(e, l.value, n - 1)).indexOf('\n') > -1 &&
+				? (o = m(n) ? _(e, l.value, null) : _(e, l.value, n - 1)).indexOf('\n') > -1 &&
 					(o = a
 						? o
 								.split('\n')
@@ -270,11 +233,11 @@ function h(e) {
 function p(e) {
 	return 'boolean' == typeof e;
 }
-function I(e) {
+function m(e) {
 	return null === e;
 }
-(t.types = n(842406)), (t.isArray = h), (t.isBoolean = p), (t.isNull = I);
-function m(e) {
+(t.types = n(842406)), (t.isArray = h), (t.isBoolean = p), (t.isNull = m);
+function I(e) {
 	return 'number' == typeof e;
 }
 function T(e) {
@@ -283,7 +246,7 @@ function T(e) {
 (t.isNullOrUndefined = function (e) {
 	return null == e;
 }),
-	(t.isNumber = m),
+	(t.isNumber = I),
 	(t.isString = T);
 function g(e) {
 	return void 0 === e;
@@ -322,14 +285,7 @@ function C(e) {
 	return e < 10 ? '0' + e.toString(10) : e.toString(10);
 }
 (t.isPrimitive = function (e) {
-	return (
-		null === e ||
-		'boolean' == typeof e ||
-		'number' == typeof e ||
-		'string' == typeof e ||
-		'symbol' == typeof e ||
-		void 0 === e
-	);
+	return null === e || 'boolean' == typeof e || 'number' == typeof e || 'string' == typeof e || 'symbol' == typeof e || void 0 === e;
 }),
 	(t.isBuffer = n(102439));
 var y = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -338,12 +294,7 @@ function D(e, t) {
 }
 (t.log = function () {
 	var e, n;
-	console.log(
-		'%s - %s',
-		((n = [C((e = new Date()).getHours()), C(e.getMinutes()), C(e.getSeconds())].join(':')),
-		[e.getDate(), y[e.getMonth()], n].join(' ')),
-		t.format.apply(t, arguments)
-	);
+	console.log('%s - %s', ((n = [C((e = new Date()).getHours()), C(e.getMinutes()), C(e.getSeconds())].join(':')), [e.getDate(), y[e.getMonth()], n].join(' ')), t.format.apply(t, arguments));
 }),
 	(t.inherits = n(689118)),
 	(t._extend = function (e, t) {

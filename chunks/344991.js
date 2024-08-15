@@ -60,12 +60,7 @@ function h(e) {
 		}),
 		w = U === f.gH.LOADING;
 	a.useEffect(() => {
-		if (
-			(null == b ? void 0 : b.type) === c.re.USER_SELECT ||
-			(null == b ? void 0 : b.type) === c.re.ROLE_SELECT ||
-			(null == b ? void 0 : b.type) === c.re.MENTIONABLE_SELECT ||
-			(null == b ? void 0 : b.type) === c.re.CHANNEL_SELECT
-		) {
+		if ((null == b ? void 0 : b.type) === c.re.USER_SELECT || (null == b ? void 0 : b.type) === c.re.ROLE_SELECT || (null == b ? void 0 : b.type) === c.re.MENTIONABLE_SELECT || (null == b ? void 0 : b.type) === c.re.CHANNEL_SELECT) {
 			let e = new Map(b.selectedOptions.map((e) => [e.value, e]));
 			Z(e), L(new Set(e.keys()));
 		}

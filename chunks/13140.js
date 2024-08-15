@@ -3,10 +3,10 @@ n.d(t, {
 		return O;
 	},
 	C$: function () {
-		return m;
+		return I;
 	},
 	H9: function () {
-		return I;
+		return m;
 	},
 	Kd: function () {
 		return v;
@@ -44,7 +44,7 @@ function p() {
 	if ((0, u.isWindows)()) return c.CgE.WINDOWS;
 	else return c.CgE.BROWSER;
 }
-function I(e) {
+function m(e) {
 	let [, t, n] = e;
 	switch (n) {
 		case c.CgE.LINUX:
@@ -59,7 +59,7 @@ function I(e) {
 			return h['' + t];
 	}
 }
-function m(e) {
+function I(e) {
 	let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p(),
 		n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.MoX.KEYBOARD_KEY;
 	switch (n) {
@@ -130,7 +130,7 @@ function N(e) {
 	return null == e
 		? []
 		: e.reduce((e, n) => {
-				let r = I(n),
+				let r = m(n),
 					i = { ...t };
 				if (null == r)
 					return (
@@ -142,7 +142,7 @@ function N(e) {
 					);
 				if (A.test(r)) return (t[r + 'Key'] = !0), e.map((e) => ((e[r + 'Key'] = !0), e));
 				{
-					let t = m(r, c.CgE.BROWSER);
+					let t = I(r, c.CgE.BROWSER);
 					return null != t && (i.keyCode = t), e.push(i), e;
 				}
 			}, []);
@@ -157,7 +157,7 @@ function v(e) {
 		.split('+')
 		.map((e) => e.trim().replace('plus', '+'))
 		.reduce((e, r) => {
-			let i = m(S(r), t, n);
+			let i = I(S(r), t, n);
 			return null != i && e.push([n, i, t]), e;
 		}, []);
 }
@@ -168,14 +168,12 @@ function O(e) {
 				let [t, n, r] = e;
 				if (t === c.MoX.KEYBOARD_KEY || t === c.MoX.KEYBOARD_MODIFIER_KEY) {
 					var i;
-					return null !== (i = I(null != r ? [t, n, r] : [t, n])) && void 0 !== i ? i : 'UNK'.concat(n);
+					return null !== (i = m(null != r ? [t, n, r] : [t, n])) && void 0 !== i ? i : 'UNK'.concat(n);
 				}
 				if (t === c.MoX.MOUSE_BUTTON) return 'mouse'.concat(n);
 				if (t === c.MoX.GAMEPAD_BUTTON) return 'gamepad'.concat(n);
 				else return 'dev'.concat(t, ',').concat(n);
 			})
 			.filter(l.lm);
-	return t
-		? (-1 !== n.g.navigator.appVersion.indexOf('Mac OS X') ? r.map(g) : r).join(' + ').toUpperCase()
-		: r.join('+');
+	return t ? (-1 !== n.g.navigator.appVersion.indexOf('Mac OS X') ? r.map(g) : r).join(' + ').toUpperCase() : r.join('+');
 }

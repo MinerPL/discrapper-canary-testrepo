@@ -10,10 +10,7 @@ var i,
 	l,
 	o = n(442837),
 	c = n(570140);
-((i = l || (l = {}))[(i.NOT_FETCHED = 0)] = 'NOT_FETCHED'),
-	(i[(i.FETCHING = 1)] = 'FETCHING'),
-	(i[(i.FETCHED = 2)] = 'FETCHED'),
-	(i[(i.FAILED = 3)] = 'FAILED');
+((i = l || (l = {}))[(i.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (i[(i.FETCHING = 1)] = 'FETCHING'), (i[(i.FETCHED = 2)] = 'FETCHED'), (i[(i.FAILED = 3)] = 'FAILED');
 let u = {},
 	d = {};
 class _ extends o.yh {

@@ -27,11 +27,7 @@ var i = n(735250),
 function S(e) {
 	var t, n;
 	let { code: S, message: A } = e,
-		[R, x, O] = (0, r.Wu)(
-			[h.Z],
-			() => [h.Z.getApplication(S), h.Z.isInvalidApplication(S), h.Z.getApplicationFetchState(S)],
-			[S]
-		),
+		[R, x, O] = (0, r.Wu)([h.Z], () => [h.Z.getApplication(S), h.Z.isInvalidApplication(S), h.Z.getApplicationFetchState(S)], [S]),
 		M = (0, r.e7)([u.default], () => u.default.locale),
 		v = (0, r.e7)([_.Z], () => {
 			var e;
@@ -105,17 +101,12 @@ function S(e) {
 	if (null == R || O === h.M.FETCHING)
 		return (0, i.jsxs)(c.Z, {
 			containerRef: D,
-			children: [
-				(0, i.jsx)(c.Z.Header, { text: p.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_RESOLVING_HEADER }),
-				(0, i.jsx)(c.Z.Body, { resolving: !0 })
-			]
+			children: [(0, i.jsx)(c.Z.Header, { text: p.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_RESOLVING_HEADER }), (0, i.jsx)(c.Z.Body, { resolving: !0 })]
 		});
 	let U = new Intl.NumberFormat(M, {
 		notation: 'compact',
 		compactDisplay: 'short'
-	}).format(
-		null !== (n = null === (t = R.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0
-	);
+	}).format(null !== (n = null === (t = R.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0);
 	return (0, i.jsxs)(c.Z, {
 		containerRef: D,
 		children: [

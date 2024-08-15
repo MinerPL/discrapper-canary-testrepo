@@ -13,12 +13,7 @@ t.Z = (e) => {
 		{ enabled: g, variant: _ } = l.Hp.useExperiment({ location: c.dr.QUESTS_BAR });
 	if (!g) return null;
 	let C = null;
-	return (_ === l.PW.REWARD_AVAILABLE
-		? (C = d.Z.Messages.REWARD_AVAILABLE)
-		: _ === l.PW.EARN_A_REWARD
-			? (C = d.Z.Messages.EARN_A_REWARD)
-			: _ === l.PW.EARN_A_REWARD_EXCLAMATION && (C = d.Z.Messages.EARN_A_REWARD_EXCLAIMATION),
-	null == C)
+	return (_ === l.PW.REWARD_AVAILABLE ? (C = d.Z.Messages.REWARD_AVAILABLE) : _ === l.PW.EARN_A_REWARD ? (C = d.Z.Messages.EARN_A_REWARD) : _ === l.PW.EARN_A_REWARD_EXCLAMATION && (C = d.Z.Messages.EARN_A_REWARD_EXCLAIMATION), null == C)
 		? null
 		: (0, s.jsxs)(s.Fragment, {
 				children: [

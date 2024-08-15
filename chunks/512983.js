@@ -16,17 +16,7 @@ var s = n(120356),
 	u = n(367242);
 function c(e) {
 	let t,
-		{
-			tag: n = 'h5',
-			children: r,
-			className: i,
-			faded: s,
-			disabled: c,
-			required: d = !1,
-			error: _,
-			errorId: E,
-			...f
-		} = e;
+		{ tag: n = 'h5', children: r, className: i, faded: s, disabled: c, required: d = !1, error: _, errorId: E, ...f } = e;
 	switch (n) {
 		case 'legend':
 		case 'label':
@@ -69,10 +59,4 @@ function c(e) {
 		]
 	});
 }
-((r = i || (i = {})).H1 = 'h1'),
-	(r.H2 = 'h2'),
-	(r.H3 = 'h3'),
-	(r.H4 = 'h4'),
-	(r.H5 = 'h5'),
-	(r.LABEL = 'label'),
-	(r.LEGEND = 'legend');
+((r = i || (i = {})).H1 = 'h1'), (r.H2 = 'h2'), (r.H3 = 'h3'), (r.H4 = 'h4'), (r.H5 = 'h5'), (r.LABEL = 'label'), (r.LEGEND = 'legend');

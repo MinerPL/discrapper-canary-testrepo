@@ -70,8 +70,7 @@ function b(e) {
 								size: r.SearchBar.Sizes.MEDIUM,
 								query: s,
 								onChange: (e) => {
-									'' === s && '' !== e && _.default.track(p.rMx.SEARCH_STARTED, { search_type: 'channel browser' }),
-										o(e.toLowerCase());
+									'' === s && '' !== e && _.default.track(p.rMx.SEARCH_STARTED, { search_type: 'channel browser' }), o(e.toLowerCase());
 								},
 								onClear: j,
 								placeholder: g.Z.Messages.CHANNEL_BROWSER_SEARCH_PLACEHOLDER

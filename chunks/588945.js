@@ -8,10 +8,7 @@ var r = n(470079),
 		function e(e, t) {
 			for (var n = 0; n < t.length; n++) {
 				var r = t[n];
-				(r.enumerable = r.enumerable || !1),
-					(r.configurable = !0),
-					'value' in r && (r.writable = !0),
-					Object.defineProperty(e, r.key, r);
+				(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 			}
 		}
 		return function (t, n, r) {
@@ -29,12 +26,7 @@ var r = n(470079),
 			})(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
 			return (
 				(n.toggleViews = function () {
-					'hex' === n.state.view
-						? n.setState({ view: 'rgb' })
-						: 'rgb' === n.state.view
-							? n.setState({ view: 'hsl' })
-							: 'hsl' === n.state.view &&
-								(1 === n.props.hsl.a ? n.setState({ view: 'hex' }) : n.setState({ view: 'rgb' }));
+					'hex' === n.state.view ? n.setState({ view: 'rgb' }) : 'rgb' === n.state.view ? n.setState({ view: 'hsl' }) : 'hsl' === n.state.view && (1 === n.props.hsl.a ? n.setState({ view: 'hex' }) : n.setState({ view: 'rgb' }));
 				}),
 				(n.handleChange = function (e, t) {
 					e.hex
@@ -94,8 +86,7 @@ var r = n(470079),
 		}
 		return (
 			!(function (e, t) {
-				if ('function' != typeof t && null !== t)
-					throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+				if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
 				(e.prototype = Object.create(t && t.prototype, {
 					constructor: {
 						value: e,

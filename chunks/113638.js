@@ -32,11 +32,6 @@ class i {
 			});
 	}
 	constructor(e) {
-		r(this, 'val', void 0),
-			r(this, 'loading', !1),
-			r(this, 'loaded', !1),
-			r(this, 'param', void 0),
-			r(this, 'loader', void 0),
-			(this.loader = e);
+		r(this, 'val', void 0), r(this, 'loading', !1), r(this, 'loaded', !1), r(this, 'param', void 0), r(this, 'loader', void 0), (this.loader = e);
 	}
 }

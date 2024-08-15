@@ -34,7 +34,5 @@ function d() {
 	}, [e]);
 }
 function _(e) {
-	return (Date.now() - e.valueOf()) / 1000 / 60 / 60 < 1
-		? c.Z.Messages.AUTH_SESSIONS_ACTIVE_RECENTLY
-		: i()(e).fromNow();
+	return (Date.now() - e.valueOf()) / 1000 / 60 / 60 < 1 ? c.Z.Messages.AUTH_SESSIONS_ACTIVE_RECENTLY : i()(e).fromNow();
 }

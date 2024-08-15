@@ -51,7 +51,7 @@ n.d(t, {
 		return eg;
 	},
 	QZ: function () {
-		return m;
+		return I;
 	},
 	R$: function () {
 		return E;
@@ -66,7 +66,7 @@ n.d(t, {
 		return ev;
 	},
 	Sb: function () {
-		return em;
+		return eI;
 	},
 	Sh: function () {
 		return eL;
@@ -183,7 +183,7 @@ n.d(t, {
 		return f;
 	},
 	vF: function () {
-		return I;
+		return m;
 	},
 	x4: function () {
 		return ed;
@@ -256,7 +256,7 @@ let _ = (0, o.Zc)(
 		},
 		(e) => a.Gm.create({ value: e })
 	),
-	I = (0, o.Zc)(
+	m = (0, o.Zc)(
 		'textAndImages',
 		'useThreadSidebar',
 		(e) => {
@@ -274,7 +274,7 @@ let _ = (0, o.Zc)(
 	},
 	(e) => a.D5.create({ value: e })
 );
-let m = (0, o.Zc)(
+let I = (0, o.Zc)(
 		'notifications',
 		'quietMode',
 		(e) => {
@@ -725,14 +725,14 @@ let et = new Set(Object.values(c.Skl)),
 	(e) => (null != e && ep.has(e.value) ? e.value : s.l.COZY),
 	(e) => a.Gm.create({ value: e })
 );
-let eI = new Set([s.Z.ALL, s.Z.UNREADS, s.Z.NONE]);
+let em = new Set([s.Z.ALL, s.Z.UNREADS, s.Z.NONE]);
 (0, o.Zc)(
 	'appearance',
 	'messagePreviews',
-	(e) => (null != e && eI.has(e.value) ? e.value : s.Z.ALL),
+	(e) => (null != e && em.has(e.value) ? e.value : s.Z.ALL),
 	(e) => a.Gm.create({ value: e })
 );
-let em = (0, o.KM)(
+let eI = (0, o.KM)(
 		(0, o.Zc)(
 			'appearance',
 			'developerMode',
@@ -747,15 +747,9 @@ let em = (0, o.KM)(
 		'clientThemeSettings',
 		(e) => {
 			var t;
-			return {
-				backgroundGradientPresetId:
-					null == e ? void 0 : null === (t = e.backgroundGradientPresetId) || void 0 === t ? void 0 : t.value
-			};
+			return { backgroundGradientPresetId: null == e ? void 0 : null === (t = e.backgroundGradientPresetId) || void 0 === t ? void 0 : t.value };
 		},
-		(e) => ({
-			backgroundGradientPresetId:
-				null != e.backgroundGradientPresetId ? a.yC.create({ value: e.backgroundGradientPresetId }) : void 0
-		})
+		(e) => ({ backgroundGradientPresetId: null != e.backgroundGradientPresetId ? a.yC.create({ value: e.backgroundGradientPresetId }) : void 0 })
 	),
 	eg = (0, o.R2)(
 		(0, o.KM)(

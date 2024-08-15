@@ -10,18 +10,7 @@ var a = n(735250),
 	h = n(626135),
 	l = n(981631);
 t.Z = (e) => {
-	let {
-			captchaService: t = p.hP.RECAPTCHA,
-			sitekey: n,
-			rqdata: u,
-			onRender: f,
-			onVerify: v,
-			onError: m,
-			onOpen: y,
-			onClose: C,
-			onChalExpired: E,
-			...R
-		} = e,
+	let { captchaService: t = p.hP.RECAPTCHA, sitekey: n, rqdata: u, onRender: f, onVerify: v, onError: m, onOpen: y, onClose: C, onChalExpired: E, ...R } = e,
 		_ = r.useRef(null),
 		b = (0, c.Z)(),
 		[x, g] = r.useState(!1),

@@ -64,10 +64,7 @@ function b(e) {
 		}, []),
 		er = a.useCallback(() => {
 			var e, t;
-			en(
-				(null !== (t = null === (e = es.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) +
-					2 * F.paddingVertical
-			);
+			en((null !== (t = null === (e = es.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 2 * F.paddingVertical);
 		}, [F.paddingVertical]),
 		ei = a.useCallback(() => {
 			er(), ea(!0);
@@ -239,9 +236,7 @@ t.Z =
 				let { overrideQuest: t } = e,
 					n = (0, o.e7)([I.Z], () => {
 						var e;
-						return null !== (e = null != t ? t : I.Z.questDeliveryOverride) && void 0 !== e
-							? e
-							: (0, C._)(I.Z.quests, R.jn.QUEST_BAR);
+						return null !== (e = null != t ? t : I.Z.questDeliveryOverride) && void 0 !== e ? e : (0, C._)(I.Z.quests, R.jn.QUEST_BAR);
 					});
 				return null == n
 					? null

@@ -38,18 +38,12 @@ let _ = (e) => {
 					(0, s.jsx)(l.Heading, {
 						variant: 'heading-xl/extrabold',
 						className: d.errorPageTitle,
-						children:
-							'guild_not_eligible' === t
-								? c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_ERROR_PAGE_GUILD_NOT_ELIGIBLE_TITLE
-								: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_ERROR_PAGE_NOT_GUILD_MEMBER_TITLE
+						children: 'guild_not_eligible' === t ? c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_ERROR_PAGE_GUILD_NOT_ELIGIBLE_TITLE : c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_ERROR_PAGE_NOT_GUILD_MEMBER_TITLE
 					}),
 					(0, s.jsx)(l.Text, {
 						variant: 'text-md/normal',
 						className: d.errorPagSubtitle,
-						children:
-							'guild_not_eligible' === t
-								? c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_ERROR_PAGE_GUILD_NOT_ELIGIBLE_SUBTITLE
-								: c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_ERROR_PAGE_NOT_GUILD_MEMBER_SUBTITLE
+						children: 'guild_not_eligible' === t ? c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_ERROR_PAGE_GUILD_NOT_ELIGIBLE_SUBTITLE : c.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_ERROR_PAGE_NOT_GUILD_MEMBER_SUBTITLE
 					})
 				]
 			})

@@ -19,8 +19,8 @@ var r = n(735250),
 	f = n(626135),
 	h = n(55935),
 	p = n(63063),
-	I = n(281494),
-	m = n(790368),
+	m = n(281494),
+	I = n(790368),
 	T = n(474936),
 	g = n(981631),
 	S = n(689938),
@@ -31,7 +31,7 @@ var r = n(735250),
 	R = n(90351);
 let C = async (e, t, n) => {
 		n(!0),
-			await (0, I.Eo)(e)
+			await (0, m.Eo)(e)
 				.then(() => {
 					t(), (0, d.Ou)();
 				})
@@ -71,10 +71,7 @@ let C = async (e, t, n) => {
 							className: A.confirmationBodyCopy,
 							variant: 'text-md/medium',
 							color: 'header-primary',
-							children:
-								_ > 0
-									? S.Z.Messages.SHARE_NITRO_MODAL_CONFIRMATION_GENERAL.format({ count: _ })
-									: S.Z.Messages.SHARE_NITRO_MODAL_CONFIRMATION_GENERAL_LAST_REFERRAL
+							children: _ > 0 ? S.Z.Messages.SHARE_NITRO_MODAL_CONFIRMATION_GENERAL.format({ count: _ }) : S.Z.Messages.SHARE_NITRO_MODAL_CONFIRMATION_GENERAL_LAST_REFERRAL
 						}),
 						(0, r.jsx)('hr', { className: A.confirmationBodySeparator })
 					]
@@ -114,10 +111,10 @@ let C = async (e, t, n) => {
 function D(e) {
 	let { referralsRemaining: t, channel: n, onClose: a, isResending: o } = e,
 		[u, d] = i.useState(!1),
-		[I, O] = i.useState(!1),
+		[m, O] = i.useState(!1),
 		D = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null,
 		{ analyticsLocations: L } = (0, E.ZP)(_.Z.REFERRAL_TRIALS_POPOUT),
-		{ enabled: b } = m.Z.useExperiment({ location: '200c24_1' }, { autoTrackExposure: !0 }),
+		{ enabled: b } = I.Z.useExperiment({ location: '200c24_1' }, { autoTrackExposure: !0 }),
 		M = new Date('2023-06-15T08:00:00-08:00');
 	return null == D
 		? null
@@ -159,20 +156,14 @@ function D(e) {
 												(0, r.jsx)(c.Anchor, {
 													className: s()(A.learnMore, { [A.learnMoreResendUnderlinedText]: o }),
 													href: p.Z.getArticleURL(g.BhN.SHARE_NITRO_FAQ),
-													children: o
-														? S.Z.Messages.SHARE_NITRO_RESEND_TRIAL_BODY
-														: S.Z.Messages.SHARE_NITRO_MODAL_BODY_GENERAL.format({ count: t })
+													children: o ? S.Z.Messages.SHARE_NITRO_RESEND_TRIAL_BODY : S.Z.Messages.SHARE_NITRO_MODAL_BODY_GENERAL.format({ count: t })
 												}),
 												o
 													? (0, r.jsx)('div', {
 															className: A.shareNitroResendCopySuffix,
 															children: S.Z.Messages.SHARE_NITRO_RESEND_TRIAL_BODY_2
 														})
-													: (0, r.jsx)('div', {
-															children: S.Z.Messages.SHARE_NITRO_MODAL_BODY_SHARE_THEM_BY.format({
-																date: (0, h.vc)(l()(M), 'LL')
-															})
-														})
+													: (0, r.jsx)('div', { children: S.Z.Messages.SHARE_NITRO_MODAL_BODY_SHARE_THEM_BY.format({ date: (0, h.vc)(l()(M), 'LL') }) })
 											]
 										})
 									]
@@ -189,7 +180,7 @@ function D(e) {
 							className: A.generalButtonContainer,
 							children: (0, r.jsx)(c.Button, {
 								className: A.generalShareButton,
-								submitting: I,
+								submitting: m,
 								onClick: () => {
 									o
 										? C(D, a, O)

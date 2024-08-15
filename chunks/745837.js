@@ -86,15 +86,7 @@ function C() {
 		clipsError: _.Z.getLastClipsError()
 	}));
 	let a = ((e = t), null != n ? h.D5.Error : e ? h.D5.Enabled : h.D5.Disabled),
-		{
-			bodyCopy: s,
-			buttonCopy: o,
-			ctaOnClick: c,
-			textColor: d,
-			buttonColor: u,
-			buttonLook: m,
-			containerClass: I
-		} = f[a];
+		{ bodyCopy: s, buttonCopy: o, ctaOnClick: c, textColor: d, buttonColor: u, buttonLook: m, containerClass: I } = f[a];
 	return (0, i.jsxs)('div', {
 		className: I,
 		children: [

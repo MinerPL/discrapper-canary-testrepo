@@ -36,10 +36,7 @@ function c(e) {
 				by_weekday: e.byWeekday,
 				by_n_weekday: e.byNWeekday,
 				by_month: e.byMonth,
-				by_month_day:
-					(null !== (n = null === (t = e.byMonthDay) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0) > 0
-						? e.byMonthDay
-						: null,
+				by_month_day: (null !== (n = null === (t = e.byMonthDay) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0) > 0 ? e.byMonthDay : null,
 				by_year_day: e.byYearDay,
 				count: e.count
 			};
@@ -62,19 +59,7 @@ function d(e) {
 }
 ((r = i || (i = {})).CHANNEL_SELECTOR = 'ChannelSelector'), (r.DETAILS = 'Details'), (r.PREVIEW = 'Preview');
 function _(e, t, n) {
-	let {
-		name: r,
-		description: i,
-		privacyLevel: s,
-		channelId: o,
-		scheduledStartTime: u,
-		scheduledEndTime: d,
-		entityType: _,
-		entityMetadata: E,
-		image: f,
-		recurrenceRule: h,
-		eventExceptions: p
-	} = e;
+	let { name: r, description: i, privacyLevel: s, channelId: o, scheduledStartTime: u, scheduledEndTime: d, entityType: _, entityMetadata: E, image: f, recurrenceRule: h, eventExceptions: p } = e;
 	return {
 		id: null != n ? n : l.Ku,
 		name: r,
@@ -106,8 +91,7 @@ function E(e, t) {
 		name: null !== (n = null == e ? void 0 : e.name) && void 0 !== n ? n : '',
 		privacyLevel: null !== (r = null == e ? void 0 : e.privacy_level) && void 0 !== r ? r : l.j8.GUILD_ONLY,
 		description: null !== (i = null == e ? void 0 : e.description) && void 0 !== i ? i : '',
-		scheduledStartTime:
-			null !== (a = null == e ? void 0 : e.scheduled_start_time) && void 0 !== a ? a : (0, o.ib)().toISOString(),
+		scheduledStartTime: null !== (a = null == e ? void 0 : e.scheduled_start_time) && void 0 !== a ? a : (0, o.ib)().toISOString(),
 		entityType: null !== (u = null == e ? void 0 : e.entity_type) && void 0 !== u ? u : l.WX.NONE,
 		entityMetadata: null !== (c = null == e ? void 0 : e.entity_metadata) && void 0 !== c ? c : void 0,
 		channelId: null == e ? void 0 : e.channel_id,
@@ -115,10 +99,7 @@ function E(e, t) {
 		image: null == e ? void 0 : e.image,
 		scheduledEndTime: null == e ? void 0 : e.scheduled_end_time,
 		recurrenceRule: d(null == e ? void 0 : e.recurrence_rule),
-		eventExceptions: (null !== (_ = null == e ? void 0 : e.guild_scheduled_event_exceptions) && void 0 !== _
-			? _
-			: []
-		).map((e) => ({
+		eventExceptions: (null !== (_ = null == e ? void 0 : e.guild_scheduled_event_exceptions) && void 0 !== _ ? _ : []).map((e) => ({
 			eventExceptionId: e.event_exception_id,
 			eventId: e.event_id,
 			guildId: e.guild_id,
@@ -130,10 +111,6 @@ function E(e, t) {
 	if (null != (E = e) && 'id' in E && (null == e ? void 0 : e.entity_type) === l.WX.EXTERNAL) {
 		let t = (0, s.cS)(e);
 		null != t && (f.entityMetadata = { location: t });
-	} else
-		null == f.channelId &&
-			null != t &&
-			((f.channelId = t.id),
-			t.isGuildStageVoice() ? (f.entityType = l.WX.STAGE_INSTANCE) : t.isGuildVoice() && (f.entityType = l.WX.VOICE));
+	} else null == f.channelId && null != t && ((f.channelId = t.id), t.isGuildStageVoice() ? (f.entityType = l.WX.STAGE_INSTANCE) : t.isGuildVoice() && (f.entityType = l.WX.VOICE));
 	return f;
 }

@@ -51,27 +51,14 @@ function c(e, t) {
 		_ = !(function () {
 			var e, t;
 			let n = RegExp('('.concat('WebView|(iPhone|iPod|iPad)(?!.*Safari/)', ')'), 'ig'),
-				r =
-					(null === i() || void 0 === i() ? void 0 : null === (e = i().ua) || void 0 === e ? void 0 : e.match(n)) !=
-					null,
+				r = (null === i() || void 0 === i() ? void 0 : null === (e = i().ua) || void 0 === e ? void 0 : e.match(n)) != null,
 				a = (null === i() || void 0 === i() ? void 0 : i().name) === 'Safari' && !r;
-			return (
-				(null === i() || void 0 === i() ? void 0 : null === (t = i().os) || void 0 === t ? void 0 : t.family) !==
-					'iOS' || a
-			);
+			return (null === i() || void 0 === i() ? void 0 : null === (t = i().os) || void 0 === t ? void 0 : t.family) !== 'iOS' || a;
 		})()
 			? 0
 			: 1,
 		E = null != r ? encodeURIComponent(r) : null,
 		f = null != a ? encodeURIComponent(a) : null,
-		h = ''
-			.concat(o, '/?link=')
-			.concat(c, '&utm_source=')
-			.concat(n, '&apn=')
-			.concat('com.discord', '&isi=')
-			.concat(985746746, '&ibi=')
-			.concat('com.hammerandchisel.discord', '&sd=')
-			.concat(d, '&efr=')
-			.concat(_);
+		h = ''.concat(o, '/?link=').concat(c, '&utm_source=').concat(n, '&apn=').concat('com.discord', '&isi=').concat(985746746, '&ibi=').concat('com.hammerandchisel.discord', '&sd=').concat(d, '&efr=').concat(_);
 	return null != E && (h += '&afl='.concat(E)), null != f && (h += '&ifl='.concat(f)), h;
 }

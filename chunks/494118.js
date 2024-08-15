@@ -23,9 +23,7 @@ function N(e) {
 		children: [
 			(0, i.jsx)(s.FormText, {
 				type: s.FormTextTypes.DESCRIPTION,
-				children: u.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_DESCRIPTION.format({
-					helpdeskArticle: o.Z.getArticleURL(c.BhN.CHANNEL_FOLLOWING)
-				})
+				children: u.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_DESCRIPTION.format({ helpdeskArticle: o.Z.getArticleURL(c.BhN.CHANNEL_FOLLOWING) })
 			}),
 			(0, i.jsx)(s.FormDivider, { className: I.headerDivider }),
 			n.length > 0

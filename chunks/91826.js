@@ -41,7 +41,7 @@ var p = function (e) {
 			t
 		);
 	},
-	I = function (e) {
+	m = function (e) {
 		var t = !1;
 		return (
 			r(h, function (n, r) {
@@ -57,7 +57,7 @@ e.exports = function (e) {
 	if (!e || 'object' != typeof e) return !1;
 	if (!u) {
 		var t = _(l(e), 8, -1);
-		return f(d, t) > -1 ? t : 'Object' === t && I(e);
+		return f(d, t) > -1 ? t : 'Object' === t && m(e);
 	}
 	return o ? p(e) : null;
 };

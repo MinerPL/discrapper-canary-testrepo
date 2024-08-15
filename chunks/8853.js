@@ -48,10 +48,7 @@ class o extends r.C {
 					break;
 				default:
 					let r = n.readUnknownField;
-					if ('throw' === r)
-						throw new globalThis.Error(
-							'Unknown field '.concat(t, ' (wire type ').concat(a, ') for ').concat(this.typeName)
-						);
+					if ('throw' === r) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(a, ') for ').concat(this.typeName));
 					let o = e.skip(a);
 					!1 !== r && (!0 === r ? i.z.onRead : r)(this.typeName, s, t, a, o);
 			}
@@ -59,12 +56,7 @@ class o extends r.C {
 		return s;
 	}
 	internalBinaryWrite(e, t, n) {
-		'placeholder' === e.properties.oneofKind && t.tag(1, i.TD.LengthDelimited).string(e.properties.placeholder),
-			'announcementModalVariant1' === e.properties.oneofKind &&
-				l.xY
-					.internalBinaryWrite(e.properties.announcementModalVariant1, t.tag(2, i.TD.LengthDelimited).fork(), n)
-					.join(),
-			'' !== e.contentIdentifier && t.tag(3, i.TD.LengthDelimited).string(e.contentIdentifier);
+		'placeholder' === e.properties.oneofKind && t.tag(1, i.TD.LengthDelimited).string(e.properties.placeholder), 'announcementModalVariant1' === e.properties.oneofKind && l.xY.internalBinaryWrite(e.properties.announcementModalVariant1, t.tag(2, i.TD.LengthDelimited).fork(), n).join(), '' !== e.contentIdentifier && t.tag(3, i.TD.LengthDelimited).string(e.contentIdentifier);
 		let a = n.writeUnknownFields;
 		return !1 !== a && (!0 == a ? i.z.onWrite : a)(this.typeName, e, t), t;
 	}

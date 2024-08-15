@@ -145,19 +145,11 @@ function j(e) {
 		_ = (0, v.getPreviousView)(),
 		g = i.useRef(),
 		T = (null == E ? void 0 : E.type) !== v.ApplicationDirectoryViews.HOME,
-		D =
-			(null == E ? void 0 : E.type) === v.ApplicationDirectoryViews.APPLICATION
-				? null == E
-					? void 0
-					: E.applicationId
-				: void 0;
+		D = (null == E ? void 0 : E.type) === v.ApplicationDirectoryViews.APPLICATION ? (null == E ? void 0 : E.applicationId) : void 0;
 	(0, h.Tt)({ location: Z.Z.Messages.APP_DIRECTORY });
 	let j = (null == E ? void 0 : E.type) !== v.ApplicationDirectoryViews.HOME && null != _;
 	i.useEffect(() => {
-		!f &&
-			null == C &&
-			(L.default.track(P.rMx.APP_DIRECTORY_OPENED, { source: v.ApplicationDirectoryEntrypointNames.EXTERNAL }),
-			(0, v.setTrackedOpenedFromExternalEntrypoint)(!0));
+		!f && null == C && (L.default.track(P.rMx.APP_DIRECTORY_OPENED, { source: v.ApplicationDirectoryEntrypointNames.EXTERNAL }), (0, v.setTrackedOpenedFromExternalEntrypoint)(!0));
 	}, [C, f]),
 		i.useEffect(() => {
 			if (o) return p.Z.setLayout(d.ZP), p.Z.enable(), () => p.Z.disable();
@@ -173,11 +165,7 @@ function j(e) {
 		}, [null == E ? void 0 : E.type, D]);
 	let H = i.useCallback(() => {
 		var e, n;
-		(0, I.uL)(null !== (e = null == C ? void 0 : C.pathname) && void 0 !== e ? e : ''),
-			null != C &&
-				C.name === v.ApplicationDirectoryEntrypointNames.GUILD_SETTINGS &&
-				null != c &&
-				A.Z.open(c, null !== (n = C.guildSettingsSection) && void 0 !== n ? n : void 0);
+		(0, I.uL)(null !== (e = null == C ? void 0 : C.pathname) && void 0 !== e ? e : ''), null != C && C.name === v.ApplicationDirectoryEntrypointNames.GUILD_SETTINGS && null != c && A.Z.open(c, null !== (n = C.guildSettingsSection) && void 0 !== n ? n : void 0);
 	}, [C, c]);
 	return (
 		i.useEffect(() => {

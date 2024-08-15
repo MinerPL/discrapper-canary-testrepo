@@ -1,6 +1,6 @@
 n.d(t, {
 	GV: function () {
-		return m;
+		return I;
 	},
 	Po: function () {
 		return E;
@@ -12,7 +12,7 @@ n.d(t, {
 		return p;
 	},
 	dh: function () {
-		return I;
+		return m;
 	},
 	g7: function () {
 		return h;
@@ -30,20 +30,7 @@ var r = n(512722),
 	d = n(895924),
 	_ = n(981631);
 function E(e) {
-	let {
-		channelId: t,
-		command: n,
-		section: r,
-		location: a,
-		initialValues: o,
-		triggerSection: l,
-		queryLength: u,
-		sectionName: c,
-		query: _,
-		searchResultsPosition: E,
-		source: f,
-		commandOrigin: h
-	} = e;
+	let { channelId: t, command: n, section: r, location: a, initialValues: o, triggerSection: l, queryLength: u, sectionName: c, query: _, searchResultsPosition: E, source: f, commandOrigin: h } = e;
 	null != n && i()(n.inputType !== d.iw.PLACEHOLDER, 'command should not be placeholder'),
 		s.Z.dispatch({
 			type: 'APPLICATION_COMMAND_SET_ACTIVE_COMMAND',
@@ -86,13 +73,13 @@ function p(e, t) {
 		)
 	);
 }
-function I(e, t, n, r) {
+function m(e, t, n, r) {
 	return a.tn.put({
 		body: { permissions: r },
 		url: _.ANM.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n)
 	});
 }
-function m(e, t, n) {
+function I(e, t, n) {
 	var r;
 	i()(null != t.autocomplete, 'Missing autocomplete context');
 	let { query: d, name: E } = t.autocomplete,

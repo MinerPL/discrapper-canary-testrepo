@@ -14,14 +14,9 @@ class c extends r.y {
 	}
 	async refresh() {
 		var e, t;
-		let n = await (null === (t = o.Z.database()) || void 0 === t
-			? void 0
-			: null === (e = t.fsInfo()) || void 0 === e
-				? void 0
-				: e.catch((e) => l.warn("couldn't get fs info", e)));
+		let n = await (null === (t = o.Z.database()) || void 0 === t ? void 0 : null === (e = t.fsInfo()) || void 0 === e ? void 0 : e.catch((e) => l.warn("couldn't get fs info", e)));
 		if (null != n) {
-			let e =
-					n.fs.available < 268435456 || n.fs.available < 3 * n.database.used || n.fs.available < 2 * n.database.total,
+			let e = n.fs.available < 268435456 || n.fs.available < 3 * n.database.used || n.fs.available < 2 * n.database.total,
 				t = n.fs.available > 805306368 && n.fs.available > 4 * n.database.used && n.fs.available > 4 * n.database.total,
 				r = !!e || (!t && null);
 			null != r && this.isLowDisk !== r && ((this.isLowDisk = r), this.emitChange());

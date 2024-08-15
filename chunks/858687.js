@@ -16,9 +16,7 @@ function c(e, n) {
 		let l = (0, s.F6)(e, o.default, u.Z),
 			c = d.Z.Messages.LEAVE_GROUP_DM_TITLE.format({ name: l }),
 			_ = d.Z.Messages.LEAVE_GROUP_DM_BODY.format({ name: l });
-		e.isManaged() &&
-			((c = d.Z.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({ name: l })),
-			(_ = d.Z.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({ name: l })));
+		e.isManaged() && ((c = d.Z.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({ name: l })), (_ = d.Z.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({ name: l })));
 		let M = function (t) {
 			let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
 			r.Z.closePrivateChannel(e.id, n, a);

@@ -12,26 +12,9 @@ var i = n(735250),
 	c = n(410030),
 	d = n(577798);
 function u(e) {
-	let {
-			title: t,
-			description: n,
-			button: s,
-			backgroundImageUrl: u,
-			className: _,
-			bannerImageClassName: E,
-			headerTextColor: h,
-			descriptionTextColor: m
-		} = e,
+	let { title: t, description: n, button: s, backgroundImageUrl: u, className: _, bannerImageClassName: E, headerTextColor: h, descriptionTextColor: m } = e,
 		I = (0, l.wj)((0, c.ZP)()),
-		g = a.useMemo(
-			() =>
-				null != u
-					? u
-					: I
-						? 'https://cdn.discordapp.com/assets/discovery/generic-banner-background-dark-mode.png'
-						: 'https://cdn.discordapp.com/assets/discovery/generic-banner-background-light-mode.png',
-			[I, u]
-		),
+		g = a.useMemo(() => (null != u ? u : I ? 'https://cdn.discordapp.com/assets/discovery/generic-banner-background-dark-mode.png' : 'https://cdn.discordapp.com/assets/discovery/generic-banner-background-light-mode.png'), [I, u]),
 		p = a.useMemo(() => ({ backgroundImage: 'url('.concat(g, ')') }), [g]),
 		T = null != h ? h : I ? 'always-white' : 'header-primary',
 		S = null != m ? m : I ? 'text-muted' : 'header-primary';

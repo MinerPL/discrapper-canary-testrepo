@@ -35,11 +35,7 @@ class h extends (i = o.Component) {
 					className: u()(_.multiplePlaceholder, n),
 					children: [
 						(0, s.jsxs)(d.Z, {
-							children: [
-								(0, s.jsx)('div', { className: u()(_.placeholderAvatar, f[t], _.avatarMasked) }),
-								(0, s.jsx)('div', { className: u()(_.placeholderAvatar, f[t], _.avatarMasked) }),
-								(0, s.jsx)('div', { className: u()(_.placeholderAvatar, f[t]) })
-							]
+							children: [(0, s.jsx)('div', { className: u()(_.placeholderAvatar, f[t], _.avatarMasked) }), (0, s.jsx)('div', { className: u()(_.placeholderAvatar, f[t], _.avatarMasked) }), (0, s.jsx)('div', { className: u()(_.placeholderAvatar, f[t]) })]
 						}),
 						(0, s.jsx)(d.Z, {
 							grow: 1,

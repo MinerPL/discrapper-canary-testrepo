@@ -45,8 +45,7 @@ async function E() {
 					})(),
 						(function () {
 							var e;
-							if (null == C.Z.cashAppPayComponent)
-								throw Error('Adyen CashAppPay component must be created before mounting.');
+							if (null == C.Z.cashAppPayComponent) throw Error('Adyen CashAppPay component must be created before mounting.');
 							null === (e = C.Z.cashAppPayComponent) || void 0 === e || e.mount('#'.concat(i.F));
 						})();
 					return;

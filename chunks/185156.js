@@ -23,16 +23,7 @@ var n = i(735250),
 	x = i(689938),
 	I = i(377351);
 function b(e) {
-	let {
-			collectionTitle: t,
-			title: i,
-			description: a,
-			handleClick: r,
-			imageSrc: s,
-			ctaLabel: l,
-			ctaLink: d,
-			applicationId: u
-		} = e,
+	let { collectionTitle: t, title: i, description: a, handleClick: r, imageSrc: s, ctaLabel: l, ctaLink: d, applicationId: u } = e,
 		_ = '936929561302675456' === u,
 		p =
 			null == u
@@ -110,10 +101,7 @@ function N(e) {
 			let e = null == h ? void 0 : h.current;
 			if (null == e) return;
 			let t = new ResizeObserver(() => {
-				let t =
-					document.body.offsetWidth < parseFloat(l.Z.COLLECTION_GALLERY_MEDIA_BREAKPOINT)
-						? parseFloat(l.Z.COLLECTION_GALLERY_COLUMN_CARD_HEIGHT)
-						: parseFloat(l.Z.COLLECTION_GALLERY_ROW_CARD_HEIGHT);
+				let t = document.body.offsetWidth < parseFloat(l.Z.COLLECTION_GALLERY_MEDIA_BREAKPOINT) ? parseFloat(l.Z.COLLECTION_GALLERY_COLUMN_CARD_HEIGHT) : parseFloat(l.Z.COLLECTION_GALLERY_ROW_CARD_HEIGHT);
 				N(e.offsetWidth / t);
 			});
 			return (
@@ -143,16 +131,7 @@ function N(e) {
 						});
 				},
 				renderItem: (e) => {
-					let {
-						id: t,
-						image_hash: a,
-						application: o,
-						type: l,
-						description: c,
-						title: d,
-						call_to_action_label: h,
-						call_to_action_url: p
-					} = e;
+					let { id: t, image_hash: a, application: o, type: l, description: c, title: d, call_to_action_label: h, call_to_action_url: p } = e;
 					if (null == a) return;
 					let g = (0, _.$_)({
 						itemId: t,
@@ -163,11 +142,7 @@ function N(e) {
 						return (0, n.jsx)(b, {
 							collectionTitle: r,
 							title: o.name,
-							description:
-								null !== (I = null === (f = o.directory_entry) || void 0 === f ? void 0 : f.short_description) &&
-								void 0 !== I
-									? I
-									: o.description,
+							description: null !== (I = null === (f = o.directory_entry) || void 0 === f ? void 0 : f.short_description) && void 0 !== I ? I : o.description,
 							handleClick: () => {
 								u.default.track(C.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
 									collection_id: i,

@@ -25,9 +25,7 @@ t.Z = (e) => {
 				color: 'header-secondary',
 				variant: 'text-sm/normal',
 				className: r.__invalid_description,
-				children: t
-					? s.Z.Messages.HUB_EMAIL_CONNECTION_ADD_DESCRIPTION
-					: s.Z.Messages.HUB_EMAIL_CONNECTION_JOIN_CARD_DESCRIPTION
+				children: t ? s.Z.Messages.HUB_EMAIL_CONNECTION_ADD_DESCRIPTION : s.Z.Messages.HUB_EMAIL_CONNECTION_JOIN_CARD_DESCRIPTION
 			}),
 			(0, i.jsx)('div', { className: r.gap }),
 			(0, i.jsx)(a.Button, {
@@ -42,9 +40,7 @@ t.Z = (e) => {
 					variant: 'text-sm/semibold',
 					className: r.addButton,
 					color: 'none',
-					children: t
-						? s.Z.Messages.HUB_EMAIL_CONNECTION_JOIN_ANOTHER
-						: s.Z.Messages.HUB_EMAIL_CONNECTION_JOIN_MY_SCHOOOL
+					children: t ? s.Z.Messages.HUB_EMAIL_CONNECTION_JOIN_ANOTHER : s.Z.Messages.HUB_EMAIL_CONNECTION_JOIN_MY_SCHOOOL
 				})
 			})
 		]

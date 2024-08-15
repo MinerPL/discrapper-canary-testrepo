@@ -122,37 +122,15 @@ function A(e, l, A, h) {
 			if (l.ctrlKey || l.metaKey)
 				try {
 					var a;
-					await s.Z.setCommunicationDisabledDuration(n, t, O.UK.DURATION_60_SEC, null, h),
-						F(M.jQ.TIMEOUT),
-						(0, r.showToast)(
-							(0, r.createToast)(
-								P.Z.Messages.GUILD_COMMUNICATION_DISABLED_SUCCESS.format({
-									user: null !== (a = R.ZP.getName(n, null, e)) && void 0 !== a ? a : ''
-								}),
-								r.ToastType.SUCCESS
-							)
-						);
+					await s.Z.setCommunicationDisabledDuration(n, t, O.UK.DURATION_60_SEC, null, h), F(M.jQ.TIMEOUT), (0, r.showToast)((0, r.createToast)(P.Z.Messages.GUILD_COMMUNICATION_DISABLED_SUCCESS.format({ user: null !== (a = R.ZP.getName(n, null, e)) && void 0 !== a ? a : '' }), r.ToastType.SUCCESS));
 				} catch (e) {
-					(0, r.showToast)(
-						(0, r.createToast)(P.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR, r.ToastType.FAILURE)
-					);
+					(0, r.showToast)((0, r.createToast)(P.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR, r.ToastType.FAILURE));
 				}
 		},
 		H = null,
-		W =
-			null != b &&
-			m.Z.canManageUser(N.Plq.MODERATE_MEMBERS, e, b) &&
-			m.Z.canManageUser(N.Plq.KICK_MEMBERS, e, b) &&
-			m.Z.canManageUser(N.Plq.BAN_MEMBERS, e, b),
+		W = null != b && m.Z.canManageUser(N.Plq.MODERATE_MEMBERS, e, b) && m.Z.canManageUser(N.Plq.KICK_MEMBERS, e, b) && m.Z.canManageUser(N.Plq.BAN_MEMBERS, e, b),
 		z = null != b && (m.Z.canManageUser(N.Plq.MANAGE_GUILD, e, b) || m.Z.canManageUser(N.Plq.MANAGE_ROLES, e, b));
-	if (
-		!L &&
-		null != b &&
-		null != V &&
-		null != V.joinedAt &&
-		(W || z) &&
-		b.hasFeature(N.oNc.GUILD_ONBOARDING_EVER_ENABLED)
-	) {
+	if (!L && null != b && null != V && null != V.joinedAt && (W || z) && b.hasFeature(N.oNc.GUILD_ONBOARDING_EVER_ENABLED)) {
 		var Q;
 		H = (0, f.yE)(null !== (Q = V.flags) && void 0 !== Q ? Q : 0, S.q.BYPASSES_VERIFICATION)
 			? (0, t.jsx)(
@@ -162,11 +140,7 @@ function A(e, l, A, h) {
 						label: P.Z.Messages.MANUALLY_UNVERIFY_MEMBER,
 						action: () => {
 							var l;
-							return u.Z.setMemberFlags(
-								b.id,
-								e.id,
-								(0, f.mB)(null !== (l = V.flags) && void 0 !== l ? l : 0, S.q.BYPASSES_VERIFICATION, !1)
-							);
+							return u.Z.setMemberFlags(b.id, e.id, (0, f.mB)(null !== (l = V.flags) && void 0 !== l ? l : 0, S.q.BYPASSES_VERIFICATION, !1));
 						}
 					},
 					'verify'
@@ -178,11 +152,7 @@ function A(e, l, A, h) {
 						label: P.Z.Messages.MANUALLY_VERIFY_MEMBER,
 						action: () => {
 							var l;
-							return u.Z.setMemberFlags(
-								b.id,
-								e.id,
-								(0, f.mB)(null !== (l = V.flags) && void 0 !== l ? l : 0, S.q.BYPASSES_VERIFICATION, !0)
-							);
+							return u.Z.setMemberFlags(b.id, e.id, (0, f.mB)(null !== (l = V.flags) && void 0 !== l ? l : 0, S.q.BYPASSES_VERIFICATION, !0));
 						}
 					},
 					'verify'

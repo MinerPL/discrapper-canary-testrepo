@@ -38,18 +38,7 @@ function c(e, t) {
 		});
 }
 let d = i().throttle((e) => {
-	let {
-		enabled: t,
-		combosEnabled: n,
-		combosRequiredCount: r,
-		screenshakeEnabled: i,
-		shakeIntensity: s,
-		screenshakeEnabledLocations: d,
-		confettiEnabled: _,
-		confettiSize: E,
-		confettiCount: f,
-		confettiEnabledLocations: h
-	} = e;
+	let { enabled: t, combosEnabled: n, combosRequiredCount: r, screenshakeEnabled: i, shakeIntensity: s, screenshakeEnabledLocations: d, confettiEnabled: _, confettiSize: E, confettiCount: f, confettiEnabledLocations: h } = e;
 	a.default.track(o.rMx.POGGERMODE_SETTINGS_UPDATED, {
 		enabled: t,
 		combos_enabled: n,

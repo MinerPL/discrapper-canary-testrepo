@@ -32,15 +32,7 @@ n(689118)(i, r),
 			if ((c(), 0 === r.listenerCount(this, 'error'))) throw e;
 		}
 		function c() {
-			n.removeListener('data', i),
-				e.removeListener('drain', a),
-				n.removeListener('end', o),
-				n.removeListener('close', l),
-				n.removeListener('error', u),
-				e.removeListener('error', u),
-				n.removeListener('end', c),
-				n.removeListener('close', c),
-				e.removeListener('close', c);
+			n.removeListener('data', i), e.removeListener('drain', a), n.removeListener('end', o), n.removeListener('close', l), n.removeListener('error', u), e.removeListener('error', u), n.removeListener('end', c), n.removeListener('close', c), e.removeListener('close', c);
 		}
 		return n.on('error', u), e.on('error', u), n.on('end', c), n.on('close', c), e.on('close', c), e.emit('pipe', n), e;
 	});

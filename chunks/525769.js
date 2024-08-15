@@ -43,8 +43,7 @@ n.d(t, {
 	(a.DROPS_QUEST_ENROLLMENT = 'impression_drops_quest_enrollment'),
 	(a.EMBEDDED_ACTIVITY_HAPPENING_NOW = 'impression_embedded_activity_happening_now'),
 	(a.ENABLE_CREATOR_MONETIZATION_ACCEPT_TERMS_LANDING = 'impression_enable_creator_monetization_accept_terms_landing'),
-	(a.ENABLE_CREATOR_MONETIZATION_CREATE_REQUEST_LANDING =
-		'impression_enable_creator_monetization_create_request_landing'),
+	(a.ENABLE_CREATOR_MONETIZATION_CREATE_REQUEST_LANDING = 'impression_enable_creator_monetization_create_request_landing'),
 	(a.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL = 'impression_enable_creator_monetization_guild_header_upsell'),
 	(a.ENABLE_CREATOR_MONETIZATION_WAITLIST_LANDING = 'impression_enable_creator_monetization_waitlist_landing'),
 	(a.FRIENDS = 'impression_friends'),
@@ -68,8 +67,7 @@ n.d(t, {
 	(a.GUILD_PERMANENT_LINKS_UPSELL = 'impression_guild_permanent_links_upsell'),
 	(a.GUILD_PRODUCT_LISTING_EMBED = 'impression_guild_product_listing_embed'),
 	(a.GUILD_PRODUCT_LISTING_INFO_MODAL = 'impression_guild_product_listing_info_modal'),
-	(a.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_GUILD_SETTINGS =
-		'impression_guild_role_subscription_store_page_guild_settings'),
+	(a.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_GUILD_SETTINGS = 'impression_guild_role_subscription_store_page_guild_settings'),
 	(a.GUILD_SETTINGS_ANALYTICS = 'impression_guild_settings_analytics'),
 	(a.GUILD_SETTINGS_AUDIT_LOG = 'impression_guild_settings_audit_log'),
 	(a.GUILD_SETTINGS_AUDIT_LOG_V2 = 'impression_guild_settings_audit_log_v2'),

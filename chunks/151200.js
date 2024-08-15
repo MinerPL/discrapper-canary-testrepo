@@ -18,18 +18,7 @@ var r = l(120356),
 	p = l(231338),
 	E = l(917056);
 function v(e) {
-	let {
-			entry: n,
-			channel: l,
-			title: r,
-			subtitle: v,
-			thumbnailUrl: C,
-			onClickTitle: h,
-			onClickSubtitle: x,
-			onClickThumbnail: _,
-			providerIconProps: N,
-			style: T = {}
-		} = e,
+	let { entry: n, channel: l, title: r, subtitle: v, thumbnailUrl: C, onClickTitle: h, onClickSubtitle: x, onClickThumbnail: _, providerIconProps: N, style: T = {} } = e,
 		{ primaryColor: I, secondaryColor: g } = (0, c.Z)(C);
 	return (
 		null != C && (T.background = 'linear-gradient(45deg, '.concat(I, ', ').concat(g, ')')),

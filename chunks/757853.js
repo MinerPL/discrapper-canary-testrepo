@@ -43,19 +43,7 @@ var l,
 	w = n(689938),
 	j = n(619499);
 function G(e) {
-	let {
-			message: t,
-			destination: n,
-			rowMode: l,
-			icon: a,
-			label: r,
-			subLabel: c,
-			selected: u,
-			disabled: h,
-			onPressDestination: f,
-			'aria-setsize': g,
-			'aria-posinset': m
-		} = e,
+	let { message: t, destination: n, rowMode: l, icon: a, label: r, subLabel: c, selected: u, disabled: h, onPressDestination: f, 'aria-setsize': g, 'aria-posinset': m } = e,
 		S = (0, d.JA)(n.id),
 		[I, A] = i.useState(!1),
 		p = i.useRef(!1),
@@ -268,16 +256,7 @@ function U(e) {
 	});
 }
 function W(e) {
-	let {
-			rowData: t,
-			rowMode: n,
-			message: l,
-			originChannel: a,
-			selectedDestinations: r,
-			handleToggleDestination: o,
-			disableSelection: c,
-			...u
-		} = e,
+	let { rowData: t, rowMode: n, message: l, originChannel: a, selectedDestinations: r, handleToggleDestination: o, disableSelection: c, ...u } = e,
 		h = i.useMemo(() => [t.length], [t.length]),
 		f = i.useCallback(() => 48, []),
 		E = i.useMemo(() => {
@@ -344,8 +323,7 @@ function W(e) {
 				return (0, s.jsx)(_.ModalListContent, {
 					scrollerRef: (e) => {
 						var n;
-						(I.current = e),
-							(t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
+						(I.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
 					},
 					...n,
 					...u,

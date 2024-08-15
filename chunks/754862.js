@@ -11,10 +11,7 @@ var o =
 		function e(e, t) {
 			for (var n = 0; n < t.length; n++) {
 				var o = t[n];
-				(o.enumerable = o.enumerable || !1),
-					(o.configurable = !0),
-					'value' in o && (o.writable = !0),
-					Object.defineProperty(e, o.key, o);
+				(o.enumerable = o.enumerable || !1), (o.configurable = !0), 'value' in o && (o.writable = !0), Object.defineProperty(e, o.key, o);
 			}
 		}
 		return function (t, n, o) {
@@ -36,23 +33,9 @@ var l = {
 		overflow: 'scroll',
 		whiteSpace: 'pre'
 	},
-	c = [
-		'extraWidth',
-		'injectStyles',
-		'inputClassName',
-		'inputRef',
-		'inputStyle',
-		'minWidth',
-		'onAutosize',
-		'placeholderIsMinWidth'
-	],
+	c = ['extraWidth', 'injectStyles', 'inputClassName', 'inputRef', 'inputStyle', 'minWidth', 'onAutosize', 'placeholderIsMinWidth'],
 	p = function (e, t) {
-		(t.style.fontSize = e.fontSize),
-			(t.style.fontFamily = e.fontFamily),
-			(t.style.fontWeight = e.fontWeight),
-			(t.style.fontStyle = e.fontStyle),
-			(t.style.letterSpacing = e.letterSpacing),
-			(t.style.textTransform = e.textTransform);
+		(t.style.fontSize = e.fontSize), (t.style.fontFamily = e.fontFamily), (t.style.fontWeight = e.fontWeight), (t.style.fontStyle = e.fontStyle), (t.style.letterSpacing = e.letterSpacing), (t.style.textTransform = e.textTransform);
 	},
 	d = 'undefined' != typeof window && !!window.navigator && /MSIE |Trident\/|Edge\//.test(window.navigator.userAgent),
 	f = function () {
@@ -86,8 +69,7 @@ var l = {
 		}
 		return (
 			!(function (e, t) {
-				if ('function' != typeof t && null !== t)
-					throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+				if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
 				(e.prototype = Object.create(t && t.prototype, {
 					constructor: {
 						value: e,
@@ -115,10 +97,7 @@ var l = {
 				{
 					key: 'componentDidUpdate',
 					value: function (e, t) {
-						t.inputWidth !== this.state.inputWidth &&
-							'function' == typeof this.props.onAutosize &&
-							this.props.onAutosize(this.state.inputWidth),
-							this.updateInputWidth();
+						t.inputWidth !== this.state.inputWidth && 'function' == typeof this.props.onAutosize && this.props.onAutosize(this.state.inputWidth), this.updateInputWidth();
 					}
 				},
 				{
@@ -140,15 +119,7 @@ var l = {
 					value: function () {
 						if (!!this.mounted && !!this.sizer && void 0 !== this.sizer.scrollWidth) {
 							var e = void 0;
-							(e =
-								this.props.placeholder && (!this.props.value || (this.props.value && this.props.placeholderIsMinWidth))
-									? Math.max(this.sizer.scrollWidth, this.placeHolderSizer.scrollWidth) + 2
-									: this.sizer.scrollWidth + 2),
-								(e +=
-									'number' === this.props.type && void 0 === this.props.extraWidth
-										? 16
-										: parseInt(this.props.extraWidth) || 0) < this.props.minWidth && (e = this.props.minWidth),
-								e !== this.state.inputWidth && this.setState({ inputWidth: e });
+							(e = this.props.placeholder && (!this.props.value || (this.props.value && this.props.placeholderIsMinWidth)) ? Math.max(this.sizer.scrollWidth, this.placeHolderSizer.scrollWidth) + 2 : this.sizer.scrollWidth + 2), (e += 'number' === this.props.type && void 0 === this.props.extraWidth ? 16 : parseInt(this.props.extraWidth) || 0) < this.props.minWidth && (e = this.props.minWidth), e !== this.state.inputWidth && this.setState({ inputWidth: e });
 						}
 					}
 				},
@@ -180,11 +151,7 @@ var l = {
 					key: 'renderStyles',
 					value: function () {
 						var e = this.props.injectStyles;
-						return d && e
-							? a.default.createElement('style', {
-									dangerouslySetInnerHTML: { __html: 'input#' + this.state.inputId + '::-ms-clear {display: none;}' }
-								})
-							: null;
+						return d && e ? a.default.createElement('style', { dangerouslySetInnerHTML: { __html: 'input#' + this.state.inputId + '::-ms-clear {display: none;}' } }) : null;
 					}
 				},
 				{

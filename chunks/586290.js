@@ -31,9 +31,7 @@ function I(e) {
 				if (null != n && null != t) {
 					let l = n.find((n) => n.id === e);
 					if (null == l) return;
-					let s = o().reduce(t, (e, n) =>
-						(0, c.stringSimilarity)(l.name, n.name) > (0, c.stringSimilarity)(l.name, e.name) ? n : e
-					);
+					let s = o().reduce(t, (e, n) => ((0, c.stringSimilarity)(l.name, n.name) > (0, c.stringSimilarity)(l.name, e.name) ? n : e));
 					if (null != s) return s.id;
 				}
 			})(n.id, i, I)

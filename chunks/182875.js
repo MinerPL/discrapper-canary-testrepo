@@ -14,8 +14,7 @@ function u(e, t, n) {
 		a = {},
 		u = null,
 		c = null;
-	for (r in (void 0 !== n && (u = '' + n), void 0 !== t.key && (u = '' + t.key), void 0 !== t.ref && (c = t.ref), t))
-		s.call(t, r) && !l.hasOwnProperty(r) && (a[r] = t[r]);
+	for (r in (void 0 !== n && (u = '' + n), void 0 !== t.key && (u = '' + t.key), void 0 !== t.ref && (c = t.ref), t)) s.call(t, r) && !l.hasOwnProperty(r) && (a[r] = t[r]);
 	if (e && e.defaultProps) for (r in (t = e.defaultProps)) void 0 === a[r] && (a[r] = t[r]);
 	return {
 		$$typeof: i,

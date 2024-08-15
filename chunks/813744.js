@@ -20,11 +20,7 @@ function _() {
 	let t = (0, i.e7)([o.default], () => o.default.isIdleStatusIndicatorEnabled),
 		n = (0, i.e7)([u.default], () => {
 			var e, t;
-			return (
-				null !== (t = null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) &&
-				void 0 !== t &&
-				t
-			);
+			return null !== (t = null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t;
 		}),
 		[_, E] = (0, i.Wu)([l.Z], () => [l.Z.isIdle(), l.Z.isAFK()]),
 		f = [];

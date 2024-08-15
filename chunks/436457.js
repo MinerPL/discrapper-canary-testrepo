@@ -19,11 +19,7 @@ var o = n(735250),
 	h = n(981631),
 	E = n(689938),
 	N = n(264123);
-let T =
-	((s = window.GLOBAL_ENV.INVITE_HOST),
-	(a = ''),
-	null == s && ((s = location.host), (a = h.Z5c.INVITE(''))),
-	''.concat(location.protocol, '//').concat(s).concat(a, '/'));
+let T = ((s = window.GLOBAL_ENV.INVITE_HOST), (a = ''), null == s && ((s = location.host), (a = h.Z5c.INVITE(''))), ''.concat(location.protocol, '//').concat(s).concat(a, '/'));
 function x(e) {
 	let { onBack: t, onComplete: n, onConnect: s, isSlideReady: a } = e,
 		[l, x] = r.useState(''),
@@ -61,9 +57,7 @@ function x(e) {
 									n(), d.Z.transitionToInvite(e);
 								}
 							}).catch((e) => {
-								e instanceof _.yZ || e instanceof _.Hx
-									? C((0, m.O)(e.code))
-									: C(E.Z.Messages.INVITE_MODAL_ERROR_DEFAULT);
+								e instanceof _.yZ || e instanceof _.Hx ? C((0, m.O)(e.code)) : C(E.Z.Messages.INVITE_MODAL_ERROR_DEFAULT);
 							});
 						}
 					},
@@ -117,9 +111,7 @@ function x(e) {
 						(0, o.jsx)(c.Text, {
 							color: 'header-secondary',
 							variant: 'text-xs/normal',
-							children: E.Z.Messages.JOIN_SERVER_EXAMPLES.format({
-								examples: ''.concat(T).concat('cool-people', ', ').concat('hTKzmak')
-							})
+							children: E.Z.Messages.JOIN_SERVER_EXAMPLES.format({ examples: ''.concat(T).concat('cool-people', ', ').concat('hTKzmak') })
 						}),
 						(0, o.jsx)(c.Text, {
 							variant: 'text-xs/normal',

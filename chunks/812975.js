@@ -1,6 +1,6 @@
 n.d(t, {
 	Ci: function () {
-		return I;
+		return m;
 	},
 	DY: function () {
 		return p;
@@ -54,12 +54,9 @@ var r = n(695170),
 		byeaster: null
 	},
 	p = Object.keys(h),
-	I = (function () {
+	m = (function () {
 		function e(e, t) {
-			void 0 === e && (e = {}),
-				void 0 === t && (t = !1),
-				(this._cache = t ? null : new d.C()),
-				(this.origOptions = (0, l.Fx)(e));
+			void 0 === e && (e = {}), void 0 === t && (t = !1), (this._cache = t ? null : new d.C()), (this.origOptions = (0, l.Fx)(e));
 			var n = (0, l.I6)(e).parsedOptions;
 			this.options = n;
 		}
@@ -88,8 +85,7 @@ var r = n(695170),
 				return !1 === t && ((t = this._iter(new i.Z('all', {}))), this._cacheAdd('all', t)), t;
 			}),
 			(e.prototype.between = function (e, t, n, s) {
-				if ((void 0 === n && (n = !1), !(0, r.qb)(e) || !(0, r.qb)(t)))
-					throw Error('Invalid date passed in to RRule.between');
+				if ((void 0 === n && (n = !1), !(0, r.qb)(e) || !(0, r.qb)(t))) throw Error('Invalid date passed in to RRule.between');
 				var o = {
 					before: t,
 					after: e,

@@ -4,10 +4,7 @@ n.d(t, {
 	}
 });
 var r = n(470079);
-let i =
-	'undefined' == typeof window || !window.navigator || /ServerSideRendering|^Deno\//.test(window.navigator.userAgent)
-		? r.useEffect
-		: r.useLayoutEffect;
+let i = 'undefined' == typeof window || !window.navigator || /ServerSideRendering|^Deno\//.test(window.navigator.userAgent) ? r.useEffect : r.useLayoutEffect;
 function a(e) {
 	let t =
 			'function' == typeof e

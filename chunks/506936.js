@@ -23,30 +23,11 @@ var a = n(442837),
 t.Z = (e) => {
 	let { type: t, guildId: i, closePopout: l } = e,
 		C = (0, u.Dt)(),
-		{
-			notClaimed: I,
-			notEmailVerified: E,
-			notPhoneVerified: N,
-			newAccount: x,
-			newMember: S
-		} = (0, a.e7)([h.Z], () => h.Z.getCheck(i), [i]),
+		{ notClaimed: I, notEmailVerified: E, notPhoneVerified: N, newAccount: x, newMember: S } = (0, a.e7)([h.Z], () => h.Z.getCheck(i), [i]),
 		v = 0 === t ? g.Z.Messages.GUILD_VERIFICATION_VOICE_HEADER : null,
 		Z = null,
 		T = null;
-	return (0 === t &&
-		(I
-			? ((Z = g.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED), (T = g.Z.Messages.CLAIM_ACCOUNT))
-			: N
-				? ((Z = g.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED), (T = g.Z.Messages.VERIFY_PHONE))
-				: E
-					? ((Z = g.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED), (T = g.Z.Messages.RESEND_VERIFICATION_EMAIL))
-					: S
-						? ((Z = g.Z.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({ min: _.YeM.MEMBER_AGE })),
-							(T = g.Z.Messages.OKAY))
-						: x &&
-							((Z = g.Z.Messages.GUILD_VERIFICATION_VOICE_ACCOUNT_AGE.format({ min: _.YeM.ACCOUNT_AGE })),
-							(T = g.Z.Messages.OKAY))),
-	null == v || null == Z)
+	return (0 === t && (I ? ((Z = g.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED), (T = g.Z.Messages.CLAIM_ACCOUNT)) : N ? ((Z = g.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED), (T = g.Z.Messages.VERIFY_PHONE)) : E ? ((Z = g.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED), (T = g.Z.Messages.RESEND_VERIFICATION_EMAIL)) : S ? ((Z = g.Z.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({ min: _.YeM.MEMBER_AGE })), (T = g.Z.Messages.OKAY)) : x && ((Z = g.Z.Messages.GUILD_VERIFICATION_VOICE_ACCOUNT_AGE.format({ min: _.YeM.ACCOUNT_AGE })), (T = g.Z.Messages.OKAY))), null == v || null == Z)
 		? null
 		: (0, r.jsxs)(s.Dialog, {
 				className: m.container,
@@ -81,9 +62,7 @@ t.Z = (e) => {
 														: N
 															? (0, s.openModalLazy)(
 																	async () => {
-																		let { default: e } = await Promise.all([n.e('76540'), n.e('97733')]).then(
-																			n.bind(n, 607018)
-																		);
+																		let { default: e } = await Promise.all([n.e('76540'), n.e('97733')]).then(n.bind(n, 607018));
 																		return (t) =>
 																			(0, r.jsx)(e, {
 																				reason: d.L.GUILD_PHONE_REQUIRED,
@@ -103,10 +82,7 @@ t.Z = (e) => {
 																		...e,
 																		children: (0, r.jsx)(s.Text, {
 																			variant: 'text-md/normal',
-																			children: g.Z.Messages.VERIFICATION_EMAIL_BODY.format({
-																				email:
-																					null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.email
-																			})
+																			children: g.Z.Messages.VERIFICATION_EMAIL_BODY.format({ email: null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.email })
 																		})
 																	});
 																})),

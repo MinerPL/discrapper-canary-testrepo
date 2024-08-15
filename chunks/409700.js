@@ -24,14 +24,7 @@ function l(e) {
 }
 function o(e) {
 	let t;
-	throw Error(
-		(t =
-			e.status >= 500 && e.status <= 599
-				? i.Z.Messages.DATA_PRIVACY_UPDATE_CONSENTS_FAILED
-				: null != e && null != e.body && null != e.body.message
-					? e.body.message
-					: i.Z.Messages.DATA_PRIVACY_UPDATE_CONSENTS_FAILED)
-	);
+	throw Error((t = e.status >= 500 && e.status <= 599 ? i.Z.Messages.DATA_PRIVACY_UPDATE_CONSENTS_FAILED : null != e && null != e.body && null != e.body.message ? e.body.message : i.Z.Messages.DATA_PRIVACY_UPDATE_CONSENTS_FAILED));
 }
 function c() {
 	return s.tn

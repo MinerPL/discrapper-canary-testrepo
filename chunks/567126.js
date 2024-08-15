@@ -76,19 +76,7 @@ async function P() {
 			s.filter((e) => e.id.startsWith(o.vA.WINDOW)),
 			l
 		),
-		c = [
-			'GQgGHISKZ5aYqYeYhX9isDUHGw',
-			'bAgKFITWhoVvmHVRuokCdjVQaA',
-			'XAgGDIJ/ipadd3iCiYUcWpCZBA',
-			'HRkGDIT5aXRneomGdlvUawB7qA',
-			'I9gNDISmlqqPmHiKd3isTp/5lg',
-			'XxgGBIIwT2ZGpneUeZev6fWLXQ',
-			'KzsKNIZDeYmfd3ihe1bXfr8Jxg',
-			'J9cRDIJ6iHd/d4h4eIUJf5LyRw',
-			'DggKFIQwtndKe3hVfXnAWQmddQ',
-			'WggKDILeh3ePZpd6l4jln1b5SQ',
-			'4PgJJIJVl3eAaod2iJeHj7tE8Q'
-		];
+		c = ['GQgGHISKZ5aYqYeYhX9isDUHGw', 'bAgKFITWhoVvmHVRuokCdjVQaA', 'XAgGDIJ/ipadd3iCiYUcWpCZBA', 'HRkGDIT5aXRneomGdlvUawB7qA', 'I9gNDISmlqqPmHiKd3isTp/5lg', 'XxgGBIIwT2ZGpneUeZev6fWLXQ', 'KzsKNIZDeYmfd3ihe1bXfr8Jxg', 'J9cRDIJ6iHd/d4h4eIUJf5LyRw', 'DggKFIQwtndKe3hVfXnAWQmddQ', 'WggKDILeh3ePZpd6l4jln1b5SQ', '4PgJJIJVl3eAaod2iJeHj7tE8Q'];
 	return {
 		windowSources: r,
 		screenSources: a,
@@ -139,11 +127,7 @@ async function D() {
 function G(e) {
 	let n = (0, f.isWindows)() ? (0, T.Z)(g.ZP, Z.Z) : null,
 		t = g.ZP.getRunningGames();
-	return null != n && (0, A.Z)(e.id, n.windowHandle)
-		? 2
-		: null != t.find((n) => (0, A.Z)(e.id, n.windowHandle))
-			? 1
-			: 0;
+	return null != n && (0, A.Z)(e.id, n.windowHandle) ? 2 : null != t.find((n) => (0, A.Z)(e.id, n.windowHandle)) ? 1 : 0;
 }
 function U(e) {
 	let { selectedSource: n, onChangeSelectedSource: t } = e,
@@ -167,11 +151,7 @@ function U(e) {
 					let t = n.find((e) => (0, A.Z)(l.id, e.windowHandle));
 					if ((null == t ? void 0 : t.id) == null) continue;
 					let r = (0, C.lQ)(e, t.id);
-					if (
-						null != r &&
-						(null === (s = r.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null &&
-						(null === (a = r.userStatus) || void 0 === a ? void 0 : a.completedAt) == null
-					)
+					if (null != r && (null === (s = r.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null && (null === (a = r.userStatus) || void 0 === a ? void 0 : a.completedAt) == null)
 						return {
 							source: l,
 							quest: r
@@ -184,19 +164,7 @@ function U(e) {
 			H,
 			Z
 		),
-		F = s.useMemo(
-			() =>
-				null == Z
-					? null
-					: [...Z].sort((e, n) =>
-							(null == W ? void 0 : W.source.id) === e.id
-								? -1
-								: (null == W ? void 0 : W.source.id) === n.id
-									? 1
-									: G(n) - G(e)
-						),
-			[W, Z]
-		);
+		F = s.useMemo(() => (null == Z ? null : [...Z].sort((e, n) => ((null == W ? void 0 : W.source.id) === e.id ? -1 : (null == W ? void 0 : W.source.id) === n.id ? 1 : G(n) - G(e)))), [W, Z]);
 	s.useEffect(() => {
 		let e = y.current;
 		return (

@@ -92,53 +92,17 @@ let ev = (0, m.Z)(function (e) {
 });
 class eZ extends l.PureComponent {
 	componentDidUpdate(e) {
-		!e.dropsActivityPanelExperienceBlocked &&
-			this.props.dropsActivityPanelExperienceBlocked &&
-			this.setState({ isDropsActivityPanelTooltipOpen: !1 });
+		!e.dropsActivityPanelExperienceBlocked && this.props.dropsActivityPanelExperienceBlocked && this.setState({ isDropsActivityPanelTooltipOpen: !1 });
 	}
 	isJoinableActivity() {
 		let { application: e, activity: t, embeddedActivity: n } = this.props;
-		return (
-			null != e &&
-			(null != n
-				? n.applicationId === e.id
-				: null != t && t.application_id === e.id && t.type === eC.IIU.PLAYING && (0, x.Z)(t, eC.xjy.JOIN))
-		);
+		return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === eC.IIU.PLAYING && (0, x.Z)(t, eC.xjy.JOIN));
 	}
 	renderGoLiveButton() {
 		let e, t, n, l;
-		let {
-			canGoLive: r,
-			guildId: a,
-			isStreaming: s,
-			channel: o,
-			canStream: c,
-			runningGame: u,
-			embeddedActivity: d
-		} = this.props;
+		let { canGoLive: r, guildId: a, isStreaming: s, channel: o, canStream: c, runningGame: u, embeddedActivity: d } = this.props;
 		return (null != u || null == d) && (s || (r && null != u))
-			? (s
-					? ((e = !1),
-						(t = this.handleClickStopStreamingButton),
-						(n = h.ScreenXIcon),
-						(l = eN.Z.Messages.STOP_STREAMING))
-					: c
-						? ((e = !1),
-							(t = this.handleClickGoLiveButton),
-							(n = h.ScreenArrowIcon),
-							(l =
-								null != u
-									? eN.Z.Messages.ACTIVITY_PANEL_GO_LIVE_STREAM_GAME.format({ game: u.name })
-									: eN.Z.Messages.ACTIVITY_PANEL_GO_LIVE))
-						: ((e = !0),
-							(t = null),
-							(n = h.ScreenArrowIcon),
-							(l =
-								null != o && (0, X.vd)(o.type)
-									? eN.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE
-									: null != a
-										? eN.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_GUILD
-										: eN.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NOT_IN_GUILD)),
+			? (s ? ((e = !1), (t = this.handleClickStopStreamingButton), (n = h.ScreenXIcon), (l = eN.Z.Messages.STOP_STREAMING)) : c ? ((e = !1), (t = this.handleClickGoLiveButton), (n = h.ScreenArrowIcon), (l = null != u ? eN.Z.Messages.ACTIVITY_PANEL_GO_LIVE_STREAM_GAME.format({ game: u.name }) : eN.Z.Messages.ACTIVITY_PANEL_GO_LIVE)) : ((e = !0), (t = null), (n = h.ScreenArrowIcon), (l = null != o && (0, X.vd)(o.type) ? eN.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE : null != a ? eN.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_GUILD : eN.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NOT_IN_GUILD)),
 				(0, i.jsx)('div', {
 					className: ex.panelButtonContainer,
 					children: (0, i.jsx)(ep.Z, {
@@ -345,9 +309,7 @@ class eZ extends l.PureComponent {
 		if (null == n || null == l || null == t) return null;
 		let s = { start: n.connectedSince },
 			o = r;
-		null != a
-			? ((e = eC.Z5c.CHANNEL(a.id, l.id)), (o = ''.concat(o, ' / ').concat(a.name)))
-			: (e = eC.Z5c.CHANNEL(eC.ME, l.id));
+		null != a ? ((e = eC.Z5c.CHANNEL(a.id, l.id)), (o = ''.concat(o, ' / ').concat(a.name))) : (e = eC.Z5c.CHANNEL(eC.ME, l.id));
 		let c = (0, i.jsx)(K.Z, {
 			href: e,
 			onClick: this.handleApplicationLinkClick,
@@ -382,28 +344,13 @@ class eZ extends l.PureComponent {
 		});
 	}
 	render() {
-		let {
-			canGoLive: e,
-			embeddedActivity: t,
-			runningGame: n,
-			isStreaming: l,
-			streamMetadata: r,
-			className: s
-		} = this.props;
+		let { canGoLive: e, embeddedActivity: t, runningGame: n, isStreaming: l, streamMetadata: r, className: s } = this.props;
 		return l || ((this.isJoinableActivity() || e) && (null != n || null != t))
 			? (0, i.jsx)('div', {
 					className: a()(ex.panel, s),
 					children: (0, i.jsxs)('div', {
 						className: ex.body,
-						children: [
-							(() =>
-								null == n || (l && (null == r ? void 0 : r.pid) == null)
-									? null != t
-										? this.renderEmbeddedActivity()
-										: this.renderScreenshare()
-									: this.renderGame())(),
-							this.renderActions()
-						]
+						children: [(() => (null == n || (l && (null == r ? void 0 : r.pid) == null) ? (null != t ? this.renderEmbeddedActivity() : this.renderScreenshare()) : this.renderGame()))(), this.renderActions()]
 					})
 				})
 			: null;
@@ -499,11 +446,7 @@ class eZ extends l.PureComponent {
 			eS(this, 'handleApplicationLinkClick', () => {
 				var e;
 				let { channel: t, embeddedActivity: n } = this.props;
-				o()(null != t, 'Channel is null during navigation click'),
-					o()(null != n, 'Activity null during navigation click'),
-					(0, X.vd)(t.type) && _.Z.selectParticipant(t.id, n.applicationId),
-					f.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : eC.ME, t.id),
-					(0, X.Qm)(t.type) && (0, E.tg)(eI.Ez.PANEL);
+				o()(null != t, 'Channel is null during navigation click'), o()(null != n, 'Activity null during navigation click'), (0, X.vd)(t.type) && _.Z.selectParticipant(t.id, n.applicationId), f.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : eC.ME, t.id), (0, X.Qm)(t.type) && (0, E.tg)(eI.Ez.PANEL);
 			});
 	}
 }
@@ -536,15 +479,9 @@ t.Z = (0, C.Z)(function (e) {
 		[p, _] = (0, c.Wu)([J.Z], () => [J.Z.getCurrentUserActiveStream(), J.Z.getStreamerActiveStreamMetadata()]),
 		f = (0, c.e7)([I.Z], () => I.Z.useReducedMotion),
 		g = (0, c.e7)([P.Z], () => P.Z.getActivityPanelTooltipAction()),
-		{
-			partnerGame: m,
-			dropsActivityPanelExperienceBlocked: C,
-			showDropsSparkles: E
-		} = (0, O.c)(eE.X2.FORTNITE, a, u.z.QUEST_2_ENROLLMENT_TOOLTIP, u.z.QUEST_2_COMPLETION_TOOLTIP),
+		{ partnerGame: m, dropsActivityPanelExperienceBlocked: C, showDropsSparkles: E } = (0, O.c)(eE.X2.FORTNITE, a, u.z.QUEST_2_ENROLLMENT_TOOLTIP, u.z.QUEST_2_COMPLETION_TOOLTIP),
 		x = (0, c.e7)([N.ZP], () => (null != d ? N.ZP.getSelfEmbeddedActivityForChannel(d.id) : null)),
-		S = (0, c.e7)([en.Z, el.Z, et.ZP], () =>
-			null != s ? H.JL(s, en.Z, el.Z, !1) : null != n && H.h_(et.ZP.getChannels(n), en.Z, el.Z).length > 0
-		),
+		S = (0, c.e7)([en.Z, el.Z, et.ZP], () => (null != s ? H.JL(s, en.Z, el.Z, !1) : null != n && H.h_(et.ZP.getChannels(n), en.Z, el.Z).length > 0)),
 		[Z] = (0, v.Z)([
 			null !==
 				(t = (function () {

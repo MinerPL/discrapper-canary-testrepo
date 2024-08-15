@@ -35,16 +35,7 @@ var l = n(735250),
 	y = n(619499),
 	M = n(621054);
 function R(e) {
-	let {
-			message: t,
-			forwardOptions: n,
-			sendLabel: s,
-			canSend: h,
-			selectedDestinations: f,
-			isSending: m,
-			onSend: S,
-			showPreview: I
-		} = e,
+	let { message: t, forwardOptions: n, sendLabel: s, canSend: h, selectedDestinations: f, isSending: m, onSend: S, showPreview: I } = e,
 		p = f.map(_.hl).find(A.lm),
 		N = (0, r.e7)([g.Z], () => g.Z.getChannel(p), [p]),
 		L = a.useMemo(
@@ -129,15 +120,7 @@ function R(e) {
 	});
 }
 function P(e) {
-	let {
-			channelId: t,
-			messageId: i,
-			initialSelectedDestinations: c,
-			forwardOptions: u,
-			onClose: d,
-			onRequestSent: E,
-			...P
-		} = e,
+	let { channelId: t, messageId: i, initialSelectedDestinations: c, forwardOptions: u, onClose: d, onRequestSent: E, ...P } = e,
 		{ hasOneTapSendButton: O, hasMessageInput: D, hasPreview: w } = (0, N.yk)({ location: 'ForwardModal' }),
 		j = a.useMemo(() => (0, _.dL)(t), [t]),
 		[G, k] = a.useState(!1),
@@ -220,11 +203,7 @@ function P(e) {
 		),
 		ei = a.useCallback(
 			async function (e) {
-				let {
-						withMessage: a,
-						transitionToDestination: s,
-						closeAfterSend: r
-					} = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+				let { withMessage: a, transitionToDestination: s, closeAfterSend: r } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
 					c = m.Z.getMessage(t, i);
 				if (null == c) {
 					(0, o.showToast)((0, o.createToast)(Z.Z.Messages.ERROR_GENERIC_TITLE, o.ToastType.FAILURE));
@@ -310,8 +289,7 @@ function P(e) {
 		eo = a.useCallback(() => er(), [er]),
 		ec = a.useCallback(
 			function (e) {
-				let { transitionToDestination: t, closeAfterSend: n } =
-					arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+				let { transitionToDestination: t, closeAfterSend: n } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
 				ei([e], {
 					transitionToDestination: t,
 					closeAfterSend: n

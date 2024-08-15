@@ -29,9 +29,7 @@ function S() {
 }
 class N extends (i = s.ZP.PersistedStore) {
 	initialize(e) {
-		this.waitFor(u.Z),
-			null != e && ((E.userAffinities = e.userAffinities), (E.lastFetched = e.lastFetched), S()),
-			this.syncWith([u.Z], S);
+		this.waitFor(u.Z), null != e && ((E.userAffinities = e.userAffinities), (E.lastFetched = e.lastFetched), S()), this.syncWith([u.Z], S);
 	}
 	shouldFetch() {
 		if (!l) return Date.now() - E.lastFetched > a.K;

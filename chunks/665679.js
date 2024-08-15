@@ -112,10 +112,10 @@ if (E)
 	try {
 		null.error;
 	} catch (e) {
-		var I = E(E(e));
-		p['%Error.prototype%'] = I;
+		var m = E(E(e));
+		p['%Error.prototype%'] = m;
 	}
-var m = function e(t) {
+var I = function e(t) {
 		var n;
 		if ('%AsyncFunction%' === t) n = o('async function () {}');
 		else if ('%GeneratorFunction%' === t) n = o('function* () {}');
@@ -209,8 +209,7 @@ var m = function e(t) {
 			r = e;
 		if ((S(T, r) && (r = '%' + (n = T[r])[0] + '%'), S(p, r))) {
 			var a = p[r];
-			if ((a === f && (a = m(r)), void 0 === a && !t))
-				throw new s('intrinsic ' + e + ' exists, but is not available. Please file an issue!');
+			if ((a === f && (a = I(r)), void 0 === a && !t)) throw new s('intrinsic ' + e + ' exists, but is not available. Please file an issue!');
 			return {
 				alias: n,
 				name: r,
@@ -222,8 +221,7 @@ var m = function e(t) {
 e.exports = function (e, t) {
 	if ('string' != typeof e || 0 === e.length) throw new s('intrinsic name must be a non-empty string');
 	if (arguments.length > 1 && 'boolean' != typeof t) throw new s('"allowMissing" argument must be a boolean');
-	if (null === R(/^%?[^%]*%?$/, e))
-		throw new i('`%` may not be present anywhere but at the beginning and end of the intrinsic name');
+	if (null === R(/^%?[^%]*%?$/, e)) throw new i('`%` may not be present anywhere but at the beginning and end of the intrinsic name');
 	var n = D(e),
 		r = n.length > 0 ? n[0] : '',
 		a = L('%' + r + '%', t),
@@ -235,9 +233,8 @@ e.exports = function (e, t) {
 	for (var _ = 1, E = !0; _ < n.length; _ += 1) {
 		var f = n[_],
 			h = O(f, 0, 1),
-			I = O(f, -1);
-		if (('"' === h || "'" === h || '`' === h || '"' === I || "'" === I || '`' === I) && h !== I)
-			throw new i('property names with quotes must have matching quotes');
+			m = O(f, -1);
+		if (('"' === h || "'" === h || '`' === h || '"' === m || "'" === m || '`' === m) && h !== m) throw new i('property names with quotes must have matching quotes');
 		if ((('constructor' === f || !E) && (c = !0), (r += '.' + f), S(p, (o = '%' + r + '%')))) u = p[o];
 		else if (null != u) {
 			if (!(f in u)) {
@@ -245,8 +242,8 @@ e.exports = function (e, t) {
 				return;
 			}
 			if (l && _ + 1 >= n.length) {
-				var m = l(u, f);
-				u = (E = !!m) && 'get' in m && !('originalValue' in m.get) ? m.get : u[f];
+				var I = l(u, f);
+				u = (E = !!I) && 'get' in I && !('originalValue' in I.get) ? I.get : u[f];
 			} else (E = S(u, f)), (u = u[f]);
 			E && !c && (p[o] = u);
 		}

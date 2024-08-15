@@ -40,10 +40,7 @@ var i,
 	j = n(765305),
 	U = n(689938),
 	G = n(167555);
-((a = i || (i = {}))[(a.STAGE = 0)] = 'STAGE'),
-	(a[(a.EVENT_EXTERNAL = 1)] = 'EVENT_EXTERNAL'),
-	(a[(a.EVENT_VOICE = 2)] = 'EVENT_VOICE'),
-	(a[(a.STUDY_ROOM = 3)] = 'STUDY_ROOM');
+((a = i || (i = {}))[(a.STAGE = 0)] = 'STAGE'), (a[(a.EVENT_EXTERNAL = 1)] = 'EVENT_EXTERNAL'), (a[(a.EVENT_VOICE = 2)] = 'EVENT_VOICE'), (a[(a.STUDY_ROOM = 3)] = 'STUDY_ROOM');
 function k(e) {
 	let { guild: t, isStudyRoomNotice: n = !1 } = e,
 		i = (0, S.y)(t.id),
@@ -80,19 +77,7 @@ function k(e) {
 	} = r.useMemo(
 		() =>
 			(function (e) {
-				let {
-						guildEvent: t,
-						stageInstance: n,
-						activeChannel: i,
-						canConnect: a,
-						myRole: r,
-						eventCreator: l,
-						speakers: o,
-						listenerCount: c,
-						isEventNoticeHidden: d,
-						isStageNoticeHidden: _,
-						isStudyRoomNotice: E
-					} = e,
+				let { guildEvent: t, stageInstance: n, activeChannel: i, canConnect: a, myRole: r, eventCreator: l, speakers: o, listenerCount: c, isEventNoticeHidden: d, isStageNoticeHidden: _, isStudyRoomNotice: E } = e,
 					m = null != n && null != i && !_,
 					p = null != t ? (0, N.DK)(t) : null;
 				if (E && null != i) {
@@ -119,9 +104,7 @@ function k(e) {
 					if (m) {
 						let e = U.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON;
 						return (
-							(null == r ? void 0 : r.speaker)
-								? (e = U.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON)
-								: null != r && (e = U.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON),
+							(null == r ? void 0 : r.speaker) ? (e = U.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON) : null != r && (e = U.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON),
 							{
 								noticeType: 0,
 								title: n.topic,
@@ -165,9 +148,7 @@ function k(e) {
 					if (t.entity_type === j.WX.STAGE_INSTANCE && m) {
 						let e = U.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON;
 						return (
-							(null == r ? void 0 : r.speaker)
-								? (e = U.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON)
-								: null != r && (e = U.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON),
+							(null == r ? void 0 : r.speaker) ? (e = U.Z.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON) : null != r && (e = U.Z.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON),
 							{
 								noticeType: 0,
 								title: n.topic,

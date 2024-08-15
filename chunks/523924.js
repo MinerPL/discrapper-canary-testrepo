@@ -6,15 +6,7 @@ var a = n(481060),
 	l = n(807907),
 	o = n(364632);
 t.Z = (e) => {
-	let {
-		headerId: t,
-		reapplyText: n,
-		onReapply: c,
-		confirmText: d,
-		onWithdrawApplication: u,
-		rejectionReason: _ = null,
-		guild: E = null
-	} = e;
+	let { headerId: t, reapplyText: n, onReapply: c, confirmText: d, onWithdrawApplication: u, rejectionReason: _ = null, guild: E = null } = e;
 	return (0, i.jsxs)('div', {
 		className: l.confirmation,
 		children: [
@@ -36,12 +28,7 @@ t.Z = (e) => {
 						id: t,
 						variant: 'heading-xl/semibold',
 						className: l.header,
-						children:
-							(null == E ? void 0 : E.name) != null
-								? r.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_TITLE_WITH_GUILD_NAME.format({
-										guildName: E.name
-									})
-								: r.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_TITLE
+						children: (null == E ? void 0 : E.name) != null ? r.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_TITLE_WITH_GUILD_NAME.format({ guildName: E.name }) : r.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_TITLE
 					}),
 					null != _ && '' !== _
 						? (0, i.jsx)(i.Fragment, {

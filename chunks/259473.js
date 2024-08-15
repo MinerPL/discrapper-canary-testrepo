@@ -27,11 +27,7 @@ function o(e) {
 								guildId: null !== (n = null == t ? void 0 : t.id) && void 0 !== n ? n : r.lds,
 								location: '6798be_1'
 							});
-			if (
-				(null == t ? void 0 : t.hasFeature(r.oNc.HUB)) === !0 ||
-				((null == t ? void 0 : t.hasFeature(r.oNc.COMMUNITY)) === !0 && s)
-			)
-				return a.ZP.INVITE_OPTIONS_FOREVER.value;
+			if ((null == t ? void 0 : t.hasFeature(r.oNc.HUB)) === !0 || ((null == t ? void 0 : t.hasFeature(r.oNc.COMMUNITY)) === !0 && s)) return a.ZP.INVITE_OPTIONS_FOREVER.value;
 		})({
 			guild: o,
 			experimentConfig: t

@@ -13,8 +13,8 @@ var r,
 	f = n(51025),
 	h = n(812206),
 	p = n(283595),
-	I = n(417363),
-	m = n(391690),
+	m = n(417363),
+	I = n(391690),
 	T = n(70956),
 	g = n(780570),
 	S = n(804739);
@@ -40,10 +40,10 @@ function P() {
 	d.Z.wait(() => _.o(t));
 }
 function U(e, t) {
-	if (null != N[t] && m.Z.shouldBeInstalled(e, t)) {
+	if (null != N[t] && I.Z.shouldBeInstalled(e, t)) {
 		let n = N[t],
 			r = n.manifestIds,
-			i = I.Z.getState(e, t);
+			i = m.Z.getState(e, t);
 		null != i &&
 			i.shouldPatch &&
 			(i.buildId !== n.id || !l().isEqual(i.manifestIds, r)) &&
@@ -58,7 +58,7 @@ function w() {
 }
 class x extends (r = u.ZP.Store) {
 	initialize() {
-		this.syncWith([p.Z], P), this.waitFor(I.Z, p.Z, h.Z);
+		this.syncWith([p.Z], P), this.waitFor(m.Z, p.Z, h.Z);
 	}
 	getTargetBuildId(e, t) {
 		return null == N[t] ? null : N[t].id;

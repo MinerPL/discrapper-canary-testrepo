@@ -9,13 +9,13 @@ n.d(t, {
 		return h;
 	},
 	mh: function () {
-		return m;
+		return I;
 	},
 	px: function () {
 		return p;
 	},
 	wL: function () {
-		return I;
+		return m;
 	}
 }),
 	n(47120);
@@ -76,11 +76,11 @@ let p = (e) => {
 		ref: a
 	});
 };
-function I(e) {
+function m(e) {
 	let t = (0, d.Z)(e, _.layerContainer);
 	return l()(null != t, 'Unexpected missing parent container'), t;
 }
-let m = (e) => {
+let I = (e) => {
 	let { layerContext: t, children: n } = e;
 	return (0, r.jsx)(t.Consumer, {
 		children: (e) =>
@@ -104,16 +104,11 @@ function T(e) {
 					...e
 				}),
 			Layer: (e) =>
-				(0, r.jsx)(m, {
+				(0, r.jsx)(I, {
 					layerContext: t,
 					...e
 				}),
 			layerContext: t
 		};
-	return (
-		(n.LayerProvider.displayName = ''.concat(e, 'LayerProvider')),
-		(n.LayerContainer.displayName = ''.concat(e, 'LayerContainer')),
-		(n.Layer.displayName = ''.concat(e, 'Layer')),
-		n
-	);
+	return (n.LayerProvider.displayName = ''.concat(e, 'LayerProvider')), (n.LayerContainer.displayName = ''.concat(e, 'LayerContainer')), (n.Layer.displayName = ''.concat(e, 'Layer')), n;
 }

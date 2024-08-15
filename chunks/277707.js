@@ -18,11 +18,5 @@ function a(e) {
 		else if (s) return i.Z.Messages.GUEST_INVITE_EMBED_TITLE_RECEIVER;
 		else return i.Z.Messages.INVITE_BUTTON_TITLE_INVITED_VOICE_CHANNEL;
 	}
-	return n
-		? a
-			? i.Z.Messages.INVITE_BUTTON_TITLE_INVITER_HUB
-			: i.Z.Messages.INVITE_BUTTON_TITLE_INVITED_HUB
-		: a
-			? i.Z.Messages.INVITE_BUTTON_TITLE_INVITER
-			: i.Z.Messages.INVITE_BUTTON_TITLE_INVITED;
+	return n ? (a ? i.Z.Messages.INVITE_BUTTON_TITLE_INVITER_HUB : i.Z.Messages.INVITE_BUTTON_TITLE_INVITED_HUB) : a ? i.Z.Messages.INVITE_BUTTON_TITLE_INVITER : i.Z.Messages.INVITE_BUTTON_TITLE_INVITED;
 }

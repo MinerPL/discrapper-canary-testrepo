@@ -33,14 +33,7 @@ var s,
 	R = n(689938),
 	O = n(157990),
 	b = n(224499);
-((i = s || (s = {}))[(i.INITIALIZING = 0)] = 'INITIALIZING'),
-	(i[(i.PENDING_REMOTE_INIT = 1)] = 'PENDING_REMOTE_INIT'),
-	(i[(i.PENDING_FINISH = 2)] = 'PENDING_FINISH'),
-	(i[(i.PENDING_TICKET = 3)] = 'PENDING_TICKET'),
-	(i[(i.PENDING_LOGIN = 4)] = 'PENDING_LOGIN'),
-	(i[(i.FINISH = 5)] = 'FINISH'),
-	((a = r || (r = {}))[(a.QR_CODE = 0)] = 'QR_CODE'),
-	(a[(a.CONFIRM = 1)] = 'CONFIRM');
+((i = s || (s = {}))[(i.INITIALIZING = 0)] = 'INITIALIZING'), (i[(i.PENDING_REMOTE_INIT = 1)] = 'PENDING_REMOTE_INIT'), (i[(i.PENDING_FINISH = 2)] = 'PENDING_FINISH'), (i[(i.PENDING_TICKET = 3)] = 'PENDING_TICKET'), (i[(i.PENDING_LOGIN = 4)] = 'PENDING_LOGIN'), (i[(i.FINISH = 5)] = 'FINISH'), ((a = r || (r = {}))[(a.QR_CODE = 0)] = 'QR_CODE'), (a[(a.CONFIRM = 1)] = 'CONFIRM');
 let D = n(515695),
 	L = new f.Z('LoginQRSocket');
 function M(e) {
@@ -108,9 +101,7 @@ function j(e) {
 						className: b.marginBottom8,
 						children: R.Z.Messages.LOGIN_WITH_QR
 					}),
-					null != s
-						? (0, l.jsx)(P, { children: s })
-						: (0, l.jsx)(I.DK, { children: R.Z.Messages.LOGIN_WITH_QR_DESCRIPTION.format() }),
+					null != s ? (0, l.jsx)(P, { children: s }) : (0, l.jsx)(I.DK, { children: R.Z.Messages.LOGIN_WITH_QR_DESCRIPTION.format() }),
 					(0, l.jsx)(h.Button, {
 						size: h.ButtonSizes.LARGE,
 						look: h.ButtonLooks.LINK,
@@ -184,10 +175,7 @@ function y(e) {
 				_ = o.useMemo(() => new u.Z(1500, 30000), []),
 				h = o.useRef();
 			h.current = o.useCallback(() => {
-				a({ step: 0 }),
-					d
-						? n((e) => e + 1)
-						: (L.info('document is not visible, will defer reconnection when document becomes visible.'), r(!0));
+				a({ step: 0 }), d ? n((e) => e + 1) : (L.info('document is not visible, will defer reconnection when document becomes visible.'), r(!0));
 			}, [d]);
 			let E = o.useCallback(() => {
 					(function (e) {
@@ -197,9 +185,7 @@ function y(e) {
 					})(h)();
 				}, [h]),
 				g = o.useCallback(() => {
-					L.error('Could not complete QR code login, trying to restart with a new QR code.'),
-						a({ step: 0 }),
-						!_.pending && _.fail(E);
+					L.error('Could not complete QR code login, trying to restart with a new QR code.'), a({ step: 0 }), !_.pending && _.fail(E);
 				}, [E, _]);
 			return (
 				o.useEffect(() => {
@@ -222,9 +208,7 @@ function y(e) {
 						throw Error('No key pair set');
 					}
 					let I = () => {
-						h
-							? ((h = !1), r.send(JSON.stringify({ op: 'heartbeat' })))
-							: (i('heartbeat timeout, reconnecting.'), r.close(), g());
+						h ? ((h = !1), r.send(JSON.stringify({ op: 'heartbeat' }))) : (i('heartbeat timeout, reconnecting.'), r.close(), g());
 					};
 					return (
 						(r.onmessage = async (t) => {
@@ -324,15 +308,7 @@ function y(e) {
 							i('disconnected, error: '.concat(JSON.stringify(e))), g();
 						}),
 						() => {
-							i('cleaning up'),
-								(r.onopen = () => null),
-								(r.onmessage = () => null),
-								(r.onclose = () => null),
-								(r.onerror = () => null),
-								r.close(1000),
-								_.cancel(),
-								null != d && clearTimeout(d),
-								null != u && clearInterval(u);
+							i('cleaning up'), (r.onopen = () => null), (r.onmessage = () => null), (r.onclose = () => null), (r.onerror = () => null), r.close(1000), _.cancel(), null != d && clearTimeout(d), null != u && clearInterval(u);
 						}
 					);
 				}, [E, e, t, _, g]),

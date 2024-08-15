@@ -170,8 +170,7 @@ var i = {
 	'blik.invalid': 'Syötä 6 lukua',
 	'blik.code': '6-numeroinen koodi',
 	'blik.help': 'Hanki koodi pankkisovelluksestasi.',
-	'swish.pendingMessage':
-		'Skannattuasi, tila voi odottaa jopa 10 minuuttia. Yritys maksaa uudelleen tässä ajassa voi tuottaa moninkertaisia maksuja.',
+	'swish.pendingMessage': 'Skannattuasi, tila voi odottaa jopa 10 minuuttia. Yritys maksaa uudelleen tässä ajassa voi tuottaa moninkertaisia maksuja.',
 	'field.valid': 'Kenttä kelvollinen',
 	'field.invalid': 'Kenttä ei kelpaa',
 	'error.va.gen.01': 'Täydentämätön kenttä',
@@ -207,8 +206,7 @@ var i = {
 	'bankTransfer.iban': 'IBAN',
 	'bankTransfer.bic': 'BIC',
 	'bankTransfer.reference': 'Viite',
-	'bankTransfer.introduction':
-		'Jatka uuden pankkisiirtomaksun luomista. Voit viimeistellä tämän maksun seuraavan näytön tietojen avulla.',
+	'bankTransfer.introduction': 'Jatka uuden pankkisiirtomaksun luomista. Voit viimeistellä tämän maksun seuraavan näytön tietojen avulla.',
 	'bankTransfer.instructions': 'Kiitos hankinnastasi, käytä seuraavia tietoja päättääksesi maksusi.',
 	'bacs.accountHolderName': 'Tilinhaltijan nimi',
 	'bacs.accountHolderName.invalid': 'Ei-kelvollinen tilinhaltijan nimi',
@@ -217,8 +215,7 @@ var i = {
 	'bacs.bankLocationId': 'Lajittelukoodi',
 	'bacs.bankLocationId.invalid': 'Ei-kelvollinen lajittelukoodi',
 	'bacs.consent.amount': 'Hyväksyn, että alla oleva summa veloitetaan pankkitililtäni.',
-	'bacs.consent.account':
-		'Vahvistan, että tili on nimessäni ja olen ainoa allekirjoittaja, joka vaaditaan valtuuttamaan suoraveloitus tällä tilillä.',
+	'bacs.consent.account': 'Vahvistan, että tili on nimessäni ja olen ainoa allekirjoittaja, joka vaaditaan valtuuttamaan suoraveloitus tällä tilillä.',
 	edit: 'Muokkaa',
 	'bacs.confirm': 'Vahvista ja maksa',
 	'bacs.result.introduction': 'Lataa suoraveloitusohjeet (DDI / Mandate)',

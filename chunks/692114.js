@@ -37,10 +37,6 @@ class a {
 		return this._set.has(e);
 	}
 	constructor(e) {
-		i(this, '_key', void 0),
-			i(this, '_set', void 0),
-			(this._key = '$persisted-set-'.concat(e)),
-			(this._set = new Set()),
-			this._load();
+		i(this, '_key', void 0), i(this, '_set', void 0), (this._key = '$persisted-set-'.concat(e)), (this._set = new Set()), this._load();
 	}
 }

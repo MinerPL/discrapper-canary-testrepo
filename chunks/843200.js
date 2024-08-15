@@ -14,13 +14,7 @@ var n = t(735250),
 class S extends a.Component {
 	renderNotice() {
 		let { isClaimed: e, unclaimedNotice: s, unverifiedNotice: t } = this.props;
-		return e
-			? null != t
-				? t
-				: I.Z.Messages.NOTICE_UNVERIFIED_ACCOUNT
-			: null != s
-				? s
-				: I.Z.Messages.NOTICE_UNCLAIMED_ACCOUNT;
+		return e ? (null != t ? t : I.Z.Messages.NOTICE_UNVERIFIED_ACCOUNT) : null != s ? s : I.Z.Messages.NOTICE_UNCLAIMED_ACCOUNT;
 	}
 	renderPrimaryAction() {
 		return this.props.isClaimed

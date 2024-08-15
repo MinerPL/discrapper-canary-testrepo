@@ -1,12 +1,12 @@
 t.d(n, {
 	Nv: function () {
-		return N;
+		return L;
 	},
 	pd: function () {
 		return A;
 	},
 	uX: function () {
-		return L;
+		return N;
 	},
 	wk: function () {
 		return S;
@@ -24,12 +24,7 @@ var i = t(350483),
 	_ = t(490897);
 let c = (e, n) => {
 		let t = E.Z.getChannel(n);
-		return (
-			null != t &&
-			((0, r.hv)(t.type) || d.TPd.GUILD_VOCAL.has(t.type)
-				? a.ZP.getMentionCount(n) > 0 || u.Z.getVoiceChannelId() === n
-				: (!s.ZP.isChannelMuted(e, n) || a.ZP.getMentionCount(n) > 0) && (0, l.d)(t))
-		);
+		return null != t && ((0, r.hv)(t.type) || d.TPd.GUILD_VOCAL.has(t.type) ? a.ZP.getMentionCount(n) > 0 || u.Z.getVoiceChannelId() === n : (!s.ZP.isChannelMuted(e, n) || a.ZP.getMentionCount(n) > 0) && (0, l.d)(t));
 	},
 	C = (e, n) => {
 		if (n === _.W.GUILD_EVENT) return !s.ZP.isMuteScheduledEventsEnabled(e) && a.ZP.hasUnread(e, n);
@@ -37,10 +32,7 @@ let c = (e, n) => {
 	},
 	I = (e, n) => {
 		let t = E.Z.getChannel(n);
-		return (
-			!!(null != t && d.TPd.GUILD_VOCAL.has(t.type)) &&
-			(!!(a.ZP.getMentionCount(n) > 0) || (u.Z.getVoiceChannelId() === n && a.ZP.getUnreadCount(n) > 0))
-		);
+		return !!(null != t && d.TPd.GUILD_VOCAL.has(t.type)) && (!!(a.ZP.getMentionCount(n) > 0) || (u.Z.getVoiceChannelId() === n && a.ZP.getUnreadCount(n) > 0));
 	},
 	A = {
 		binds: ['alt+shift+down'],
@@ -79,7 +71,7 @@ let c = (e, n) => {
 		}
 	},
 	T = (e, n) => a.ZP.getMentionCount(n) > 0,
-	N = {
+	L = {
 		binds: ['mod+shift+alt+down'],
 		comboKeysBindGlobal: !0,
 		action: () => (
@@ -91,7 +83,7 @@ let c = (e, n) => {
 			!1
 		)
 	},
-	L = {
+	N = {
 		binds: ['mod+shift+alt+up'],
 		comboKeysBindGlobal: !0,
 		action: () => (

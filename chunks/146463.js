@@ -24,16 +24,13 @@ function x(e) {
 		t = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_BODY;
 	switch (s) {
 		case T.wB.REJECTED:
-			(n = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_REJECTED_APPLICATIONS_TITLE),
-				(t = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_REJECTED_APPLICATIONS_BODY);
+			(n = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_REJECTED_APPLICATIONS_TITLE), (t = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_REJECTED_APPLICATIONS_BODY);
 			break;
 		case T.wB.APPROVED:
-			(n = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_APPROVED_APPLICATIONS_TITLE),
-				(t = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_APPROVED_APPLICATIONS_BODY);
+			(n = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_APPROVED_APPLICATIONS_TITLE), (t = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_APPROVED_APPLICATIONS_BODY);
 			break;
 		default:
-			(n = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_TITLE),
-				(t = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_BODY);
+			(n = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_TITLE), (t = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_BODY);
 	}
 	return (0, a.jsxs)('div', {
 		className: m.emptyContainer,
@@ -128,9 +125,7 @@ s.Z = function (e) {
 										innerAriaLabel: M.Z.Messages.MEMBERS,
 										ref: (e) => {
 											var n;
-											(h.current = e),
-												(s.current =
-													null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
+											(h.current = e), (s.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
 										},
 										paddingTop: 0,
 										paddingBottom: 16,

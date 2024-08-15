@@ -32,16 +32,10 @@ class s {
 			});
 	}
 	onSpeaking(e) {
-		e
-			? (this.speaking.start(), this.participation.start())
-			: (this.speaking.stop(), !this.listening.isRunning() && this.participation.stop());
+		e ? (this.speaking.start(), this.participation.start()) : (this.speaking.stop(), !this.listening.isRunning() && this.participation.stop());
 	}
 	onListening(e, t) {
-		e
-			? (this.listeningUsers.add(t), this.listening.start(), this.participation.start())
-			: this.listeningUsers.delete(t) &&
-				0 === this.listeningUsers.size &&
-				(this.listening.stop(), !this.speaking.isRunning() && this.participation.stop());
+		e ? (this.listeningUsers.add(t), this.listening.start(), this.participation.start()) : this.listeningUsers.delete(t) && 0 === this.listeningUsers.size && (this.listening.stop(), !this.speaking.isRunning() && this.participation.stop());
 	}
 	stop() {
 		this.speaking.stop(), this.listening.stop(), this.participation.stop(), this.connected.stop();
@@ -55,21 +49,6 @@ class s {
 		};
 	}
 	constructor(e, t, n = i.Z_) {
-		a(this, 'userId', void 0),
-			a(this, 'connection', void 0),
-			a(this, 'timestampProducer', void 0),
-			a(this, 'listeningUsers', void 0),
-			a(this, 'listening', void 0),
-			a(this, 'speaking', void 0),
-			a(this, 'participation', void 0),
-			a(this, 'connected', void 0),
-			(this.userId = e),
-			(this.connection = t),
-			(this.timestampProducer = n),
-			(this.listeningUsers = new Set()),
-			(this.listening = new i.G9(this.timestampProducer)),
-			(this.speaking = new i.G9(this.timestampProducer)),
-			(this.participation = new i.G9(this.timestampProducer)),
-			(this.connected = new i.G9(this.timestampProducer));
+		a(this, 'userId', void 0), a(this, 'connection', void 0), a(this, 'timestampProducer', void 0), a(this, 'listeningUsers', void 0), a(this, 'listening', void 0), a(this, 'speaking', void 0), a(this, 'participation', void 0), a(this, 'connected', void 0), (this.userId = e), (this.connection = t), (this.timestampProducer = n), (this.listeningUsers = new Set()), (this.listening = new i.G9(this.timestampProducer)), (this.speaking = new i.G9(this.timestampProducer)), (this.participation = new i.G9(this.timestampProducer)), (this.connected = new i.G9(this.timestampProducer));
 	}
 }

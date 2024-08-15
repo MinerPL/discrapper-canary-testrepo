@@ -28,18 +28,17 @@ function h(e) {
 		}
 		return E[e.id];
 	})(e);
-	null != e.memberCount && (t.memberCount = e.memberCount),
-		null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview);
+	null != e.memberCount && (t.memberCount = e.memberCount), null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview);
 }
 function p(e) {
 	let { channel: t } = e;
 	return h(t);
 }
-function I(e) {
+function m(e) {
 	let { threads: t } = e;
 	t.forEach(T);
 }
-function m(e) {
+function I(e) {
 	let t = !1;
 	for (let n of e.messages) for (let e of n) t = T(e.thread) || t;
 	return (
@@ -114,10 +113,10 @@ class g extends (r = u.ZP.Store) {
 			if (null == t) return !1;
 			null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview), (t.memberCount = e.memberCount);
 		},
-		SEARCH_FINISH: m,
-		MOD_VIEW_SEARCH_FINISH: m,
-		LOAD_THREADS_SUCCESS: I,
-		LOAD_ARCHIVED_THREADS_SUCCESS: I,
+		SEARCH_FINISH: I,
+		MOD_VIEW_SEARCH_FINISH: I,
+		LOAD_THREADS_SUCCESS: m,
+		LOAD_ARCHIVED_THREADS_SUCCESS: m,
 		THREAD_DELETE: function (e) {
 			let { channel: t } = e;
 			delete E[t.id];

@@ -91,14 +91,9 @@ class z extends r.PureComponent {
 				callback: this.handleContinue
 			});
 		}
-		if (
-			(n !== e.nativeAppState && n === j.kEZ.OPEN && this.track(j.rMx.INVITE_APP_INVOKED, !1),
-			this.getMode() === H.REGISTER && s && !e.authenticated)
-		) {
+		if ((n !== e.nativeAppState && n === j.kEZ.OPEN && this.track(j.rMx.INVITE_APP_INVOKED, !1), this.getMode() === H.REGISTER && s && !e.authenticated)) {
 			let { channel: e } = t;
-			null != e &&
-				((0, T.c)(G.M5.INVITE_UNCLAIMED),
-				null != t.guild ? r(j.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : d.Z.transitionToInvite(t, r));
+			null != e && ((0, T.c)(G.M5.INVITE_UNCLAIMED), null != t.guild ? r(j.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : d.Z.transitionToInvite(t, r));
 		}
 	}
 	getInviteKey() {
@@ -144,9 +139,7 @@ class z extends r.PureComponent {
 					className: a()(F.marginTop8, F.marginBottom8),
 					children: U.Z.Messages.AUTH_INVALID_INVITE_TITLE
 				}),
-				(0, s.jsx)(g.DK, {
-					children: e ? U.Z.Messages.AUTH_BANNED_INVITE_BODY : U.Z.Messages.AUTH_INVALID_INVITE_BODY
-				}),
+				(0, s.jsx)(g.DK, { children: e ? U.Z.Messages.AUTH_BANNED_INVITE_BODY : U.Z.Messages.AUTH_INVALID_INVITE_BODY }),
 				this.renderButton(U.Z.Messages.CONTINUE_TO_WEBAPP),
 				(0, s.jsx)(g.zx, {
 					onClick: () => window.open(O.Z.getArticleURL(j.BhN.INVALID_INVITES), '_blank'),
@@ -166,9 +159,7 @@ class z extends r.PureComponent {
 					invite: this.props.invite,
 					error: null === (e = this.state.error) || void 0 === e ? void 0 : e.message
 				}),
-				(null === (t = this.state.error) || void 0 === t ? void 0 : t.code) === j.evJ.INVALID_CANNOT_FRIEND_SELF
-					? this.renderButton(U.Z.Messages.CONTINUE_TO_WEBAPP)
-					: this.renderButton(U.Z.Messages.INSTANT_INVITE_ACCEPT, this.handleAccept)
+				(null === (t = this.state.error) || void 0 === t ? void 0 : t.code) === j.evJ.INVALID_CANNOT_FRIEND_SELF ? this.renderButton(U.Z.Messages.CONTINUE_TO_WEBAPP) : this.renderButton(U.Z.Messages.INSTANT_INVITE_ACCEPT, this.handleAccept)
 			]
 		});
 	}
@@ -231,10 +222,7 @@ class z extends r.PureComponent {
 	}
 	renderContinue() {
 		return (0, s.jsxs)(g.ZP, {
-			children: [
-				(0, s.jsx)(g.Dx, { children: U.Z.Messages.APP_NOT_OPENED }),
-				this.renderButton(U.Z.Messages.CONTINUE_TO_WEBAPP)
-			]
+			children: [(0, s.jsx)(g.Dx, { children: U.Z.Messages.APP_NOT_OPENED }), this.renderButton(U.Z.Messages.CONTINUE_TO_WEBAPP)]
 		});
 	}
 	render() {
@@ -246,15 +234,12 @@ class z extends r.PureComponent {
 			case j.r2o.APP_NOT_OPENED:
 				return this.renderContinue();
 			case j.r2o.RESOLVING:
-				return y.a
-					? this.renderSpinner(U.Z.Messages.DEFAULT_INPUT_PLACEHOLDER)
-					: this.renderSpinner(U.Z.Messages.APP_OPENING);
+				return y.a ? this.renderSpinner(U.Z.Messages.DEFAULT_INPUT_PLACEHOLDER) : this.renderSpinner(U.Z.Messages.APP_OPENING);
 			case j.r2o.APP_OPENING:
 				return this.renderSpinner(U.Z.Messages.APP_OPENING);
 			case j.r2o.RESOLVED:
 				var a;
-				if (n && (0, R.yE)(null !== (a = e.flags) && void 0 !== a ? a : 0, l.$.IS_GUEST_INVITE))
-					return d.Z.openApp(e.code), u.x.set(f.J, e.code), this.renderAppOpened(() => r(j.Z5c.APP));
+				if (n && (0, R.yE)(null !== (a = e.flags) && void 0 !== a ? a : 0, l.$.IS_GUEST_INVITE)) return d.Z.openApp(e.code), u.x.set(f.J, e.code), this.renderAppOpened(() => r(j.Z5c.APP));
 				if (n || !B.KO) return this.renderAuthenticatedOrDownload();
 				else if (this.getMode() === H.LOGIN)
 					return (0, s.jsx)(M.Z, {
@@ -292,9 +277,7 @@ class z extends r.PureComponent {
 				let { invite: t, transitionTo: n } = this.props;
 				if (null != t.channel || (null == e ? void 0 : e.channel) != null) {
 					var s;
-					(null === (s = t.guild) || void 0 === s ? void 0 : s.id) != null
-						? n(j.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code))
-						: d.Z.transitionToInvite(null != e ? e : t, n);
+					(null === (s = t.guild) || void 0 === s ? void 0 : s.id) != null ? n(j.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : d.Z.transitionToInvite(null != e ? e : t, n);
 				}
 			}),
 			k(this, 'handleAccept', () => {

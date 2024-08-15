@@ -34,16 +34,10 @@ var i = (function () {
 		},
 		updateScrollbarRange_: function (t) {
 			var i = this.getLength_() - this.canvas_.width;
-			i < 0 && (i = 0),
-				this.scrollbar_.position_ > i && (t = !0),
-				(this.scrollbar_.range_ = i),
-				t && ((this.scrollbar_.position_ = i), this.repaint());
+			i < 0 && (i = 0), this.scrollbar_.position_ > i && (t = !0), (this.scrollbar_.range_ = i), t && ((this.scrollbar_.position_ = i), this.repaint());
 		},
 		setDateRange: function (t, i) {
-			(this.startTime_ = t.getTime()),
-				(this.endTime_ = i.getTime()),
-				this.endTime_ <= this.startTime_ && (this.startTime_ = this.endTime_ - 1),
-				this.updateScrollbarRange_(!0);
+			(this.startTime_ = t.getTime()), (this.endTime_ = i.getTime()), this.endTime_ <= this.startTime_ && (this.startTime_ = this.endTime_ - 1), this.updateScrollbarRange_(!0);
 		},
 		updateEndDate: function (t) {
 			(this.endTime_ = t || new Date().getTime()), this.updateScrollbarRange_(this.graphScrolledToRightEdge_());
@@ -71,31 +65,12 @@ var i = (function () {
 				0 == this.scrollbar_.range_ && (s = this.getLength_() - t);
 				var a = this.startTime_ + s * this.scale_,
 					h = i;
-				(i -= Math.ceil(this.fontSize * this.devicePixelRatio) + 4),
-					this.drawTimeLabels(e, t, i, h, a),
-					(e.strokeStyle = this.gridColor),
-					(e.lineWidth = this.devicePixelRatio),
-					e.strokeRect(1, 1, t - 1, i - 1),
-					this.graph_ &&
-						(this.graph_.layout(t, i, this.fontSize, a, this.scale_),
-						this.graph_.drawTicks(e),
-						this.graph_.drawLines(e),
-						this.graph_.drawLabels(e)),
-					e.restore();
+				(i -= Math.ceil(this.fontSize * this.devicePixelRatio) + 4), this.drawTimeLabels(e, t, i, h, a), (e.strokeStyle = this.gridColor), (e.lineWidth = this.devicePixelRatio), e.strokeRect(1, 1, t - 1, i - 1), this.graph_ && (this.graph_.layout(t, i, this.fontSize, a, this.scale_), this.graph_.drawTicks(e), this.graph_.drawLines(e), this.graph_.drawLabels(e)), e.restore();
 			}
 		},
 		drawTimeLabels: function (t, i, e, s, a) {
 			var h = 60000 * Math.ceil(a / 60000);
-			for (
-				t.textBaseline = 'bottom',
-					t.textAlign = 'center',
-					t.fillStyle = this.textColor,
-					t.strokeStyle = this.gridColor,
-					t.lineWidth = this.devicePixelRatio,
-					t.font = `${this.fontWeight} ${this.fontSize * this.devicePixelRatio}px ${this.fontFamily}`;
-				;
-
-			) {
+			for (t.textBaseline = 'bottom', t.textAlign = 'center', t.fillStyle = this.textColor, t.strokeStyle = this.gridColor, t.lineWidth = this.devicePixelRatio, t.font = `${this.fontWeight} ${this.fontSize * this.devicePixelRatio}px ${this.fontFamily}`; ; ) {
 				var n = Math.round((h - a) / this.scale_);
 				if (n >= i) break;
 				var r = new Date(h).toLocaleTimeString(this.timeLocales, this.timeOptions);
@@ -111,16 +86,7 @@ var i = (function () {
 	};
 	var i = (function () {
 		function t(t) {
-			(this.devicePixelRatio = t || 1),
-				(this.dataSeries_ = []),
-				(this.width_ = 0),
-				(this.height_ = 0),
-				(this.fontHeight_ = 0),
-				(this.startTime_ = 0),
-				(this.scale_ = 0),
-				(this.min_ = 0),
-				(this.max_ = 0),
-				(this.labels_ = []);
+			(this.devicePixelRatio = t || 1), (this.dataSeries_ = []), (this.width_ = 0), (this.height_ = 0), (this.fontHeight_ = 0), (this.startTime_ = 0), (this.scale_ = 0), (this.min_ = 0), (this.max_ = 0), (this.labels_ = []);
 		}
 		return (
 			(t.prototype = {
@@ -179,11 +145,7 @@ var i = (function () {
 					for (var o = this.max_; o >= this.min_; o -= n) this.labels_.push(o.toFixed(r));
 				},
 				drawTicks: function (t) {
-					(i = this.width_ - 1),
-						(e = this.width_ - 1 - 10),
-						(t.fillStyle = this.gridColor),
-						(t.lineWidth = this.devicePixelRatio),
-						t.beginPath();
+					(i = this.width_ - 1), (e = this.width_ - 1 - 10), (t.fillStyle = this.gridColor), (t.lineWidth = this.devicePixelRatio), t.beginPath();
 					for (var i, e, s = 1; s < this.labels_.length - 1; ++s) {
 						var a = Math.round((this.height_ * s) / (this.labels_.length - 1));
 						t.moveTo(i, a), t.lineTo(e, a);
@@ -206,13 +168,8 @@ var i = (function () {
 				drawLabels: function (t) {
 					if (0 != this.labels_.length) {
 						var i = this.width_ - 3;
-						(t.fillStyle = this.textColor),
-							(t.textAlign = 'right'),
-							(t.textBaseline = 'top'),
-							t.fillText(this.labels_[0], i, 0),
-							(t.textBaseline = 'bottom');
-						for (var e = (this.height_ - 1) / (this.labels_.length - 1), s = 1; s < this.labels_.length; ++s)
-							t.fillText(this.labels_[s], i, e * s);
+						(t.fillStyle = this.textColor), (t.textAlign = 'right'), (t.textBaseline = 'top'), t.fillText(this.labels_[0], i, 0), (t.textBaseline = 'bottom');
+						for (var e = (this.height_ - 1) / (this.labels_.length - 1), s = 1; s < this.labels_.length; ++s) t.fillText(this.labels_[s], i, e * s);
 					}
 				}
 			}),

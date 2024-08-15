@@ -50,9 +50,7 @@ class d extends o.y {
 									d.shouldClear(e, t) && s.K.remove(t);
 								}),
 								o.y.getAll().forEach((t) => {
-									t instanceof d &&
-										d.shouldClear(e, t.getClass().persistKey) &&
-										((t._isInitialized = !1), t.initializeIfNeeded());
+									t instanceof d && d.shouldClear(e, t.getClass().persistKey) && ((t._isInitialized = !1), t.initializeIfNeeded());
 								}),
 								(d._clearAllPromise = null),
 								t();
@@ -65,10 +63,7 @@ class d extends o.y {
 	}
 	static shouldClear(e, t) {
 		var n;
-		return (
-			(null === (n = e.omit) || void 0 === n ? !void 0 : !n.includes(t)) &&
-			('all' === e.type || ('user-data-only' === e.type && !d.userAgnosticPersistKeys.has(t)))
-		);
+		return (null === (n = e.omit) || void 0 === n ? !void 0 : !n.includes(t)) && ('all' === e.type || ('user-data-only' === e.type && !d.userAgnosticPersistKeys.has(t)));
 	}
 	static clearPersistQueue(e) {
 		d._writeResolvers.forEach((t, n) => {
@@ -99,26 +94,16 @@ class d extends o.y {
 		});
 	}
 	initializeFromState(e) {
-		this.initialize(e) && this.asyncPersist(),
-			this._isInitialized
-				? this.emitChange()
-				: (d.allPersistKeys.add(this.getClass().persistKey), (this._isInitialized = !0));
+		this.initialize(e) && this.asyncPersist(), this._isInitialized ? this.emitChange() : (d.allPersistKeys.add(this.getClass().persistKey), (this._isInitialized = !0));
 	}
 	static destroy() {
-		(c = null),
-			o.y.destroy(),
-			d.clearPersistQueue({ type: 'all' }),
-			d.allPersistKeys.clear(),
-			d.userAgnosticPersistKeys.clear();
+		(c = null), o.y.destroy(), d.clearPersistQueue({ type: 'all' }), d.allPersistKeys.clear(), d.userAgnosticPersistKeys.clear();
 	}
 	initializeIfNeeded() {
 		if (!this._isInitialized) {
 			let e = Date.now();
 			d.allPersistKeys.add(this.getClass().persistKey);
-			let { state: t, requiresPersist: n } = d.migrateAndReadStoreState(
-				this.getClass().persistKey,
-				this.getClass().migrations
-			);
+			let { state: t, requiresPersist: n } = d.migrateAndReadStoreState(this.getClass().persistKey, this.getClass().migrations);
 			this.initialize(t) && this.asyncPersist(), n && this.asyncPersist(), (this._isInitialized = !0);
 			let r = Date.now() - e;
 			r > 5 && a.Z.mark('\uD83E\uDDA5', this.getName() + '.initialize()', r);
@@ -196,39 +181,13 @@ class d extends o.y {
 			),
 			'string' != typeof this.getClass().persistKey)
 		)
-			throw Error(
-				''.concat(
-					this.getClass().name,
-					' initialized without a `persistKey`. Add one so we know where to save your stuff!'
-				)
-			);
-		if ('function' != typeof this.initialize)
-			throw Error(
-				''.concat(
-					this.getClass().name,
-					' initialized without an `initialize` method. Add one that accepts the initial cached state.'
-				)
-			);
-		if ('function' != typeof this.getState)
-			throw Error(
-				''.concat(
-					this.getClass().name,
-					' initialized without a `getState` method. Add one that returns the full state of the store for persistance to work.'
-				)
-			);
+			throw Error(''.concat(this.getClass().name, ' initialized without a `persistKey`. Add one so we know where to save your stuff!'));
+		if ('function' != typeof this.initialize) throw Error(''.concat(this.getClass().name, ' initialized without an `initialize` method. Add one that accepts the initial cached state.'));
+		if ('function' != typeof this.getState) throw Error(''.concat(this.getClass().name, ' initialized without a `getState` method. Add one that returns the full state of the store for persistance to work.'));
 		this.addChangeListener(() => this.asyncPersist());
 	}
 }
-l(d, 'allPersistKeys', new Set()),
-	l(d, 'userAgnosticPersistKeys', new Set()),
-	l(d, '_writePromises', new Map()),
-	l(d, '_writeResolvers', new Map()),
-	l(d, '_clearAllPromise', void 0),
-	l(d, 'disableWrites', !1),
-	l(d, 'persistKey', void 0),
-	l(d, 'disableWrite', !1),
-	l(d, 'throttleDelay', 0),
-	l(d, 'migrations', void 0);
+l(d, 'allPersistKeys', new Set()), l(d, 'userAgnosticPersistKeys', new Set()), l(d, '_writePromises', new Map()), l(d, '_writeResolvers', new Map()), l(d, '_clearAllPromise', void 0), l(d, 'disableWrites', !1), l(d, 'persistKey', void 0), l(d, 'disableWrite', !1), l(d, 'throttleDelay', 0), l(d, 'migrations', void 0);
 class _ extends d {
 	initializeFromState(e) {
 		return d.userAgnosticPersistKeys.add(this.getClass().persistKey), super.initializeFromState(e);

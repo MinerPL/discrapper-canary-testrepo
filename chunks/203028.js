@@ -89,25 +89,17 @@ function I(e) {
 								location: c.ZP.Locations.ACTIVITY_FEED_NEW,
 								messageProps: N
 							}),
-							icon:
-								null != e
-									? (0, i.jsx)(_.Z.Header.Icon, { src: null != e.getIconURL(E.Z) ? e.getIconURL(E.Z) : n(211827) })
-									: null
+							icon: null != e ? (0, i.jsx)(_.Z.Header.Icon, { src: null != e.getIconURL(E.Z) ? e.getIconURL(E.Z) : n(211827) }) : null
 						};
 					case h.IIU.STREAMING:
 						return {
 							subtitle: m.Z.Messages.ACTIVITY_FEED_NOW_STREAMING_TWITCH,
-							icon:
-								null != e && null != e.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: e.getIconURL(E.Z) }) : null
+							icon: null != e && null != e.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: e.getIconURL(E.Z) }) : null
 						};
 					case h.IIU.LISTENING:
 						let a;
 						return (
-							(a = (0, l.Z)(f)
-								? (0, i.jsx)(_.Z.Header.Icon, { src: _.Z.Header.Icon.Src.SPOTIFY })
-								: null != e.getIconURL(E.Z)
-									? (0, i.jsx)(_.Z.Header.Icon, { src: e.getIconURL(E.Z) })
-									: (0, i.jsx)(_.Z.Header.Icon, { src: n(211827) })),
+							(a = (0, l.Z)(f) ? (0, i.jsx)(_.Z.Header.Icon, { src: _.Z.Header.Icon.Src.SPOTIFY }) : null != e.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: e.getIconURL(E.Z) }) : (0, i.jsx)(_.Z.Header.Icon, { src: n(211827) })),
 							{
 								subtitle: m.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_LISTENING.format({ name: f.name }),
 								icon: a
@@ -116,8 +108,7 @@ function I(e) {
 					case h.IIU.WATCHING:
 						return {
 							subtitle: m.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_WATCHING,
-							icon:
-								null != e && null != e.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: e.getIconURL(E.Z) }) : null
+							icon: null != e && null != e.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: e.getIconURL(E.Z) }) : null
 						};
 					default:
 						return {
@@ -161,8 +152,7 @@ function I(e) {
 							location: c.ZP.Locations.ACTIVITY_FEED_NEW,
 							messageProps: N
 						}),
-						icon:
-							null != n && null != n.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: n.getIconURL(E.Z) }) : null
+						icon: null != n && null != n.getIconURL(E.Z) ? (0, i.jsx)(_.Z.Header.Icon, { src: n.getIconURL(E.Z) }) : null
 					}
 				);
 			}

@@ -52,15 +52,7 @@ c(_, 'displayName', 'SelectivelySyncedUserSettingsStore'),
 				!1 === n[u.oAB.TEXT] &&
 					(i.text = {
 						shouldSync: !1,
-						settings: a().pick(r, [
-							'inlineAttachmentMedia',
-							'inlineEmbedMedia',
-							'renderEmbeds',
-							'renderReactions',
-							'animateEmoji',
-							'animateStickers',
-							'gifAutoPlay'
-						])
+						settings: a().pick(r, ['inlineAttachmentMedia', 'inlineEmbedMedia', 'renderEmbeds', 'renderReactions', 'animateEmoji', 'animateStickers', 'gifAutoPlay'])
 					}),
 				!1 === n[u.oAB.APPEARANCE] &&
 					(i.appearance = {
@@ -72,15 +64,7 @@ c(_, 'displayName', 'SelectivelySyncedUserSettingsStore'),
 		},
 		(e) => {
 			var t, n;
-			if (
-				(null == e
-					? void 0
-					: null === (n = e.appearance) || void 0 === n
-						? void 0
-						: null === (t = n.settings) || void 0 === t
-							? void 0
-							: t.theme) === 'amoled'
-			)
+			if ((null == e ? void 0 : null === (n = e.appearance) || void 0 === n ? void 0 : null === (t = n.settings) || void 0 === t ? void 0 : t.theme) === 'amoled')
 				return {
 					...e,
 					appearance: {
@@ -108,8 +92,7 @@ c(_, 'displayName', 'SelectivelySyncedUserSettingsStore'),
 						shouldSync: r,
 						settings: {}
 					});
-				if ((null === (n = d[e]) || void 0 === n ? void 0 : n.shouldSync) === !1)
-					for (let t in i) d[e].settings[t] = i[t];
+				if ((null === (n = d[e]) || void 0 === n ? void 0 : n.shouldSync) === !1) for (let t in i) d[e].settings[t] = i[t];
 			}
 		},
 		LOGOUT: function () {

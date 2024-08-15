@@ -29,25 +29,13 @@ t.Z = new (class e {
 			Promise.all(
 				e.emojis.map((e) => {
 					if ('unavailable' === e.dataMode) return Promise.resolve();
-					'full' === e.dataMode
-						? (a.verbose('Replacing '.concat(e.entities.length, ' emojis for ').concat(e.guildId)),
-							this.replace(e.guildId, e.entities, t))
-						: (e.updatedEntities.length > 0 || e.deletedEntityIds.length > 0) &&
-							(a.verbose(
-								'Updating '
-									.concat(e.updatedEntities.length, ' and deleting ')
-									.concat(e.deletedEntityIds.length, ' emojis for ')
-									.concat(e.guildId)
-							),
-							this.update(e.guildId, e.updatedEntities, e.deletedEntityIds, t));
+					'full' === e.dataMode ? (a.verbose('Replacing '.concat(e.entities.length, ' emojis for ').concat(e.guildId)), this.replace(e.guildId, e.entities, t)) : (e.updatedEntities.length > 0 || e.deletedEntityIds.length > 0) && (a.verbose('Updating '.concat(e.updatedEntities.length, ' and deleting ').concat(e.deletedEntityIds.length, ' emojis for ').concat(e.guildId)), this.update(e.guildId, e.updatedEntities, e.deletedEntityIds, t));
 				})
 			)
 		);
 	}
 	handleOneGuildCreate(e, t) {
-		null != e.emojiUpdates
-			? this.update(e.id, e.emojiUpdates.writes, e.emojiUpdates.deletes, t)
-			: null != e.emojis && this.replace(e.id, e.emojis, t);
+		null != e.emojiUpdates ? this.update(e.id, e.emojiUpdates.writes, e.emojiUpdates.deletes, t) : null != e.emojis && this.replace(e.id, e.emojis, t);
 	}
 	resetInMemoryState() {}
 	replace(e, t, n) {

@@ -19,7 +19,7 @@ var i = n(442837),
 	f = n(689938);
 function h(e) {
 	var t;
-	let { user: n, entry: h, display: p, onAction: I, onClose: m } = e,
+	let { user: n, entry: h, display: p, onAction: m, onClose: I } = e,
 		T = (0, i.e7)([d.default], () => {
 			var e;
 			return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === n.id;
@@ -31,7 +31,7 @@ function h(e) {
 			id: 'connect-spotify',
 			label: f.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({ platform: E.ai }),
 			action: () => {
-				null == I || I({ action: 'PRESS_CONNECT_SPOTIFY_MENU_ITEM' }), s.Z.open(_.oAB.CONNECTIONS), null == m || m();
+				null == m || m({ action: 'PRESS_CONNECT_SPOTIFY_MENU_ITEM' }), s.Z.open(_.oAB.CONNECTIONS), null == I || I();
 			}
 		});
 	if (T) return null;
@@ -42,7 +42,7 @@ function h(e) {
 				id: 'play-on-spotify',
 				label: f.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_PLAY_ON_SPOTIFY,
 				action: () => {
-					null == I || I({ action: 'PRESS_PLAY_ON_SPOTIFY_MENU_ITEM' }), (0, l.o)(E.Hw.TRACK, S.external_id);
+					null == m || m({ action: 'PRESS_PLAY_ON_SPOTIFY_MENU_ITEM' }), (0, l.o)(E.Hw.TRACK, S.external_id);
 				}
 			});
 }

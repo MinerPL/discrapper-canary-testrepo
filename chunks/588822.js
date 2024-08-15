@@ -14,18 +14,9 @@ var r = n(735250),
 	d = n(240991),
 	_ = n(910212);
 function E(e) {
-	let {
-			userBio: t,
-			className: n,
-			animateOnHover: a = !1,
-			isHovering: E = !1,
-			lineClamp: f = 6,
-			setLineClamp: h = !0,
-			textColor: p,
-			userId: I
-		} = e,
-		m = i.useMemo(() => ((0, u.Z)(I) ? (0, r.jsx)(l.Z, {}) : null == t || '' === t ? null : (0, d.YP)(t)), [I, t]);
-	return null == m
+	let { userBio: t, className: n, animateOnHover: a = !1, isHovering: E = !1, lineClamp: f = 6, setLineClamp: h = !0, textColor: p, userId: m } = e,
+		I = i.useMemo(() => ((0, u.Z)(m) ? (0, r.jsx)(l.Z, {}) : null == t || '' === t ? null : (0, d.YP)(t)), [m, t]);
+	return null == I
 		? null
 		: (0, r.jsx)('div', {
 				className: s()(n, _.markup),
@@ -38,7 +29,7 @@ function E(e) {
 							disableAnimations: a && !E,
 							disableInteractions: !1
 						},
-						children: m
+						children: I
 					})
 				})
 			});

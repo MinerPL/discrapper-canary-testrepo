@@ -21,10 +21,7 @@ var s,
 let r = 5,
 	l = 10,
 	o = 30;
-((s = a || (a = {}))[(s.DISPLAY = 0)] = 'DISPLAY'),
-	(s[(s.PERMISSIONS = 1)] = 'PERMISSIONS'),
-	(s[(s.MEMBERS = 2)] = 'MEMBERS'),
-	(s[(s.VERIFICATIONS = 3)] = 'VERIFICATIONS');
+((s = a || (a = {}))[(s.DISPLAY = 0)] = 'DISPLAY'), (s[(s.PERMISSIONS = 1)] = 'PERMISSIONS'), (s[(s.MEMBERS = 2)] = 'MEMBERS'), (s[(s.VERIFICATIONS = 3)] = 'VERIFICATIONS');
 let c = {
 	afk_channel_id: () => i.Z.Messages.FORM_LABEL_AFK_CHANNEL,
 	public_updates_channel_id: () => i.Z.Messages.GUILD_SETTINGS_COMMUNITY_MOD_CHANNEL_TITLE,

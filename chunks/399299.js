@@ -186,37 +186,13 @@ function q(e) {
 			onChange: i,
 			children: (0, l.jsx)(o.Text, {
 				variant: 'text-sm/normal',
-				children: a
-					? W.Z.Messages.GO_LIVE_MODAL_ENABLE_SCREEN_SOUNDSHARE_LABEL
-					: W.Z.Messages.GO_LIVE_MODAL_ENABLE_APP_SOUNDSHARE_LABEL
+				children: a ? W.Z.Messages.GO_LIVE_MODAL_ENABLE_SCREEN_SOUNDSHARE_LABEL : W.Z.Messages.GO_LIVE_MODAL_ENABLE_APP_SOUNDSHARE_LABEL
 			})
 		})
 	});
 }
 function J(e) {
-	let {
-			selectedSource: n,
-			selectedFPS: t,
-			selectedChannelId: a,
-			selectedPreset: r,
-			selectedResolution: o,
-			sourceChanged: u,
-			selectedGuildId: S,
-			targetGuildPremiumTier: g,
-			selectSource: h,
-			selectGuild: C,
-			sound: I,
-			onClose: Z,
-			onChangeSelectedFPS: f,
-			onChangeSelectedResolution: v,
-			onChangeSelectedPreset: L,
-			onChangeSelectedChannelId: M,
-			onChangeSource: O,
-			onChangeAudioDevice: P,
-			onChangeGuild: w,
-			onChangeSound: B,
-			isAnimationDone: V
-		} = e,
+	let { selectedSource: n, selectedFPS: t, selectedChannelId: a, selectedPreset: r, selectedResolution: o, sourceChanged: u, selectedGuildId: S, targetGuildPremiumTier: g, selectSource: h, selectGuild: C, sound: I, onClose: Z, onChangeSelectedFPS: f, onChangeSelectedResolution: v, onChangeSelectedPreset: L, onChangeSelectedChannelId: M, onChangeSource: O, onChangeAudioDevice: P, onChangeGuild: w, onChangeSound: B, isAnimationDone: V } = e,
 		z = (0, i.e7)([A.Z, x.Z], () => x.Z.getChannel(A.Z.getVoiceChannelId())),
 		J = (0, i.e7)([j.Z], () => j.Z.GPUDriversOutdated),
 		$ = (0, i.e7)([j.Z], () => j.Z.problematicGPUDriver),
@@ -224,10 +200,7 @@ function J(e) {
 		en = (0, m.Go)(),
 		et = (0, m.Zq)({ autoTrackExposure: !en }),
 		el = (0, D.Z)();
-	null != n &&
-		n.id.startsWith('screen') &&
-		!R.Z.supportsScreenSoundshare() &&
-		(el = W.Z.Messages.GO_LIVE_SCREENSHARE_NO_SOUND);
+	null != n && n.id.startsWith('screen') && !R.Z.supportsScreenSoundshare() && (el = W.Z.Messages.GO_LIVE_SCREENSHARE_NO_SOUND);
 	let es = en
 			? (0, l.jsx)(_.Z, {
 					guildId: S,
@@ -281,23 +254,14 @@ function J(e) {
 					}),
 			null != S && er && ei ? (0, l.jsx)(X, { guildId: S }) : null,
 			J ? (0, l.jsx)(Q, { text: W.Z.Messages.GO_LIVE_VIDEO_DRIVERS_OUTDATED }) : null,
-			$
-				? (0, l.jsx)(Q, {
-						text: W.Z.Messages.PROBLEMATIC_GPU_DRIVER_DETECTED.format({
-							helpCenterLink: p.Z.getArticleURL(y.BhN.NVIDIA_DRIVER_ISSUES)
-						})
-					})
-				: null,
+			$ ? (0, l.jsx)(Q, { text: W.Z.Messages.PROBLEMATIC_GPU_DRIVER_DETECTED.format({ helpCenterLink: p.Z.getArticleURL(y.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
 			eo &&
 				(0, l.jsx)(N.Z, {
 					look: N.z.WARNING,
 					className: F.hardwareWarning,
 					children: W.Z.Messages.GO_LIVE_MODAL_HARDWARE_WARNING_INFOBOX.format({
 						onClick: () => {
-							Z(),
-								c.Z.open(y.oAB.VOICE, null, {
-									scrollPosition: H.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION
-								});
+							Z(), c.Z.open(y.oAB.VOICE, null, { scrollPosition: H.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION });
 						}
 					})
 				}),

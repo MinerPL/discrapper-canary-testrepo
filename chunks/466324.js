@@ -20,14 +20,7 @@ function s(e) {
 			if ((null == n ? void 0 : n.type) === 'item') {
 				var a, s;
 				let o = (0, r._P)(n, t);
-				e =
-					'last' === i
-						? null === (a = (0, r.s)(o)) || void 0 === a
-							? void 0
-							: a.key
-						: null === (s = (0, r.l8)(o)) || void 0 === s
-							? void 0
-							: s.key;
+				e = 'last' === i ? (null === (a = (0, r.s)(o)) || void 0 === a ? void 0 : a.key) : null === (s = (0, r.l8)(o)) || void 0 === s ? void 0 : s.key;
 			}
 		}
 		l(e, i);
@@ -39,10 +32,7 @@ function s(e) {
 			if (null != s.focusedKey && !t.getItem(s.focusedKey)) {
 				let e;
 				let n = c.current.getItem(s.focusedKey),
-					i =
-						null != n.parentKey && ('cell' === n.type || 'rowheader' === n.type || 'column' === n.type)
-							? c.current.getItem(n.parentKey)
-							: n,
+					i = null != n.parentKey && ('cell' === n.type || 'rowheader' === n.type || 'column' === n.type) ? c.current.getItem(n.parentKey) : n,
 					a = c.current.rows,
 					o = t.rows,
 					l = a.length - o.length,
@@ -110,21 +100,13 @@ class o {
 	}
 	constructor(e) {
 		let t;
-		(this.keyMap = new Map()),
-			(this.keyMap = new Map()),
-			(this.columnCount = null == e ? void 0 : e.columnCount),
-			(this.rows = []);
+		(this.keyMap = new Map()), (this.keyMap = new Map()), (this.columnCount = null == e ? void 0 : e.columnCount), (this.rows = []);
 		let n = (t) => {
 				let i,
 					a = this.keyMap.get(t.key);
 				e.visitNode && (t = e.visitNode(t)), this.keyMap.set(t.key, t);
 				let s = new Set();
-				for (let e of t.childNodes)
-					'cell' === e.type && null == e.parentKey && (e.parentKey = t.key),
-						s.add(e.key),
-						i ? ((i.nextKey = e.key), (e.prevKey = i.key)) : (e.prevKey = null),
-						n(e),
-						(i = e);
+				for (let e of t.childNodes) 'cell' === e.type && null == e.parentKey && (e.parentKey = t.key), s.add(e.key), i ? ((i.nextKey = e.key), (e.prevKey = i.key)) : (e.prevKey = null), n(e), (i = e);
 				if ((i && (i.nextKey = null), a)) for (let e of a.childNodes) !s.has(e.key) && r(e);
 			},
 			r = (e) => {

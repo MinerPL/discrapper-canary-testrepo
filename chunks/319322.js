@@ -31,14 +31,7 @@ function s(e, t, n) {
 			return new e(t.x, t.y, void 0 !== t.z ? t.z : 0, void 0 !== t.w ? t.w : 1);
 		}
 		matrixTransform(t) {
-			return (t.is2D || t instanceof SVGMatrix) && 0 === this.z && 1 === this.w
-				? new e(this.x * t.a + this.y * t.c + t.e, this.x * t.b + this.y * t.d + t.f, 0, 1)
-				: new e(
-						this.x * t.m11 + this.y * t.m21 + this.z * t.m31 + this.w * t.m41,
-						this.x * t.m12 + this.y * t.m22 + this.z * t.m32 + this.w * t.m42,
-						this.x * t.m13 + this.y * t.m23 + this.z * t.m33 + this.w * t.m43,
-						this.x * t.m14 + this.y * t.m24 + this.z * t.m34 + this.w * t.m44
-					);
+			return (t.is2D || t instanceof SVGMatrix) && 0 === this.z && 1 === this.w ? new e(this.x * t.a + this.y * t.c + t.e, this.x * t.b + this.y * t.d + t.f, 0, 1) : new e(this.x * t.m11 + this.y * t.m21 + this.z * t.m31 + this.w * t.m41, this.x * t.m12 + this.y * t.m22 + this.z * t.m32 + this.w * t.m42, this.x * t.m13 + this.y * t.m23 + this.z * t.m33 + this.w * t.m43, this.x * t.m14 + this.y * t.m24 + this.z * t.m34 + this.w * t.m44);
 		}
 		toJSON() {
 			return {
@@ -49,14 +42,7 @@ function s(e, t, n) {
 			};
 		}
 		constructor(e = 0, t = 0, n = 0, r = 1) {
-			s(this, 'x', void 0),
-				s(this, 'y', void 0),
-				s(this, 'z', void 0),
-				s(this, 'w', void 0),
-				(this.x = e),
-				(this.y = t),
-				(this.z = n),
-				(this.w = r);
+			s(this, 'x', void 0), s(this, 'y', void 0), s(this, 'z', void 0), s(this, 'w', void 0), (this.x = e), (this.y = t), (this.z = n), (this.w = r);
 		}
 	}
 	null == window.DOMPoint && (window.DOMPoint = e);
@@ -91,14 +77,7 @@ function s(e, t, n) {
 			};
 		}
 		constructor(e = 0, t = 0, n = 0, r = 0) {
-			s(this, 'x', void 0),
-				s(this, 'y', void 0),
-				s(this, 'width', void 0),
-				s(this, 'height', void 0),
-				(this.x = e),
-				(this.y = t),
-				(this.width = n),
-				(this.height = r);
+			s(this, 'x', void 0), s(this, 'y', void 0), s(this, 'width', void 0), s(this, 'height', void 0), (this.x = e), (this.y = t), (this.width = n), (this.height = r);
 		}
 	}
 	null == window.DOMRect && (window.DOMRect = e);

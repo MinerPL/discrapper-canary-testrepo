@@ -21,8 +21,8 @@ var r = n(735250),
 	f = n(524444),
 	h = n(981631),
 	p = n(185923),
-	I = n(474936),
-	m = n(436547);
+	m = n(474936),
+	I = n(436547);
 let T = (e) => {
 		var t;
 		let { node: n, tooltipPosition: a = f.b_.position, enableClick: o = !0 } = e,
@@ -38,7 +38,7 @@ let T = (e) => {
 					alt: c,
 					animated: !1
 				}),
-			I = (e) =>
+			m = (e) =>
 				(0, r.jsx)(l.Tooltip, {
 					text: (0, f.Y)(n.name, o),
 					'aria-label': d,
@@ -60,7 +60,7 @@ let T = (e) => {
 								var n;
 								h(!0), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t);
 							},
-							className: s()(m.emojiContainer, { [m.emojiContainerClickable]: o }),
+							className: s()(I.emojiContainer, { [I.emojiContainerClickable]: o }),
 							children: p(t)
 						})
 				});
@@ -79,13 +79,13 @@ let T = (e) => {
 							...e,
 							node: n
 						}),
-					children: I
+					children: m
 				})
-			: I();
+			: m();
 	},
 	g = (e) => {
 		let { node: t, isInteracting: n, tooltipPosition: a = f.b_.position, enableClick: c = !0 } = e,
-			[I, T] = i.useState(String(Date.now())),
+			[m, T] = i.useState(String(Date.now())),
 			[g, A] = i.useState(!1),
 			[N, v] = i.useState(!1),
 			O = function () {
@@ -134,7 +134,7 @@ let T = (e) => {
 								g && (_.default.track(h.rMx.CLOSE_POPOUT, { nonce: R }), A(!1));
 							},
 							tag: 'span',
-							className: s()(m.emojiContainer, { [m.emojiContainerClickable]: c }),
+							className: s()(I.emojiContainer, { [I.emojiContainerClickable]: c }),
 							children: O(t)
 						})
 				});
@@ -155,7 +155,7 @@ let T = (e) => {
 							refreshPositionKey: () => T(String(Date.now())),
 							nonce: R
 						}),
-					positionKey: I,
+					positionKey: m,
 					children: C
 				})
 			: C();
@@ -163,7 +163,7 @@ let T = (e) => {
 	S = (e) => {
 		let { emojiNode: t, isCustomEmoji: n, nonce: r } = e;
 		c.ZP.trackWithMetadata(h.rMx.EXPRESSION_TOOLTIP_VIEWED, {
-			type: I.cd.EMOJI_IN_MESSAGE_HOVER,
+			type: m.cd.EMOJI_IN_MESSAGE_HOVER,
 			expression_id: t.emojiId,
 			expression_name: t.name,
 			is_animated: t.animated,

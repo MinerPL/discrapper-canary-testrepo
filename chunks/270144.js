@@ -49,27 +49,20 @@ var r,
 	f = n(580130),
 	h = n(55563),
 	p = n(801249),
-	I = n(106976),
-	m = n(307643),
+	m = n(106976),
+	I = n(307643),
 	T = n(488915),
 	g = n(171246),
 	S = n(981631);
-((i = r || (r = {}))[(i.NOT_LOADED = 0)] = 'NOT_LOADED'),
-	(i[(i.LOADING = 1)] = 'LOADING'),
-	(i[(i.LOADED = 2)] = 'LOADED'),
-	(i[(i.ERROR = 3)] = 'ERROR');
+((i = r || (r = {}))[(i.NOT_LOADED = 0)] = 'NOT_LOADED'), (i[(i.LOADING = 1)] = 'LOADING'), (i[(i.LOADED = 2)] = 'LOADED'), (i[(i.ERROR = 3)] = 'ERROR');
 let A = function (e, t) {
 		let { refetchOnMount: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-			r = (0, s.e7)(
-				[T.Z],
-				() => (null != e ? T.Z.getSubscriptionGroupListingsForApplicationFetchState(e) : T.M.FETCHED),
-				[e]
-			);
+			r = (0, s.e7)([T.Z], () => (null != e ? T.Z.getSubscriptionGroupListingsForApplicationFetchState(e) : T.M.FETCHED), [e]);
 		return (
 			a.useEffect(() => {
 				if (null == e || null == t) return;
 				let r = T.Z.getSubscriptionGroupListingsForApplicationFetchState(e);
-				(n || r === T.M.NOT_FETCHED) && (0, I.rx)(e, t);
+				(n || r === T.M.NOT_FETCHED) && (0, m.rx)(e, t);
 			}, [e, t, n]),
 			{ listingsLoaded: r === T.M.FETCHED }
 		);
@@ -81,7 +74,7 @@ let A = function (e, t) {
 			a.useEffect(() => {
 				if (null == t || t === S.ME) return;
 				let e = T.Z.getEntitlementsForGuildFetchState(t);
-				n && (e === T.M.NOT_FETCHED || r) && (0, I.i1)(t);
+				n && (e === T.M.NOT_FETCHED || r) && (0, m.i1)(t);
 			}, [t, n, r]),
 			{ entitlementsLoaded: i === T.M.FETCHED }
 		);
@@ -132,12 +125,7 @@ function y(e, t) {
 				return {
 					subscriptionGroupListing: null != e ? T.Z.getSubscriptionGroupListingForApplication(e) : null,
 					guildEntitlements: null != e && null != t ? T.Z.getApplicationEntitlementsForGuild(e, t) : R,
-					userEntitlements:
-						null != e &&
-						null !== (r = null === (n = f.Z.getForApplication(e)) || void 0 === n ? void 0 : n.values()) &&
-						void 0 !== r
-							? r
-							: C
+					userEntitlements: null != e && null !== (r = null === (n = f.Z.getForApplication(e)) || void 0 === n ? void 0 : n.values()) && void 0 !== r ? r : C
 				};
 			},
 			[e, t]
@@ -194,9 +182,7 @@ function D(e) {
 				}),
 			[o, l]
 		);
-	return r
-		? u.filter((e) => null != e.endsAt && e.endsAt.getTime() > Math.max(null != i ? i : 0, Date.now() - 2592000000))
-		: [];
+	return r ? u.filter((e) => null != e.endsAt && e.endsAt.getTime() > Math.max(null != i ? i : 0, Date.now() - 2592000000)) : [];
 }
 let L = (e) => {
 		let [t, n] = a.useState(!1),
@@ -206,7 +192,7 @@ let L = (e) => {
 			a.useEffect(() => {
 				i.length > 0 &&
 					(n(!0),
-					Promise.all(i.map((e) => (0, I.vY)(e)))
+					Promise.all(i.map((e) => (0, m.vY)(e)))
 						.catch(() => {})
 						.then(() => {
 							n(!1);
@@ -241,7 +227,7 @@ let L = (e) => {
 			r = null != n;
 		return (
 			a.useEffect(() => {
-				!r && null != e && t && (0, m.UM)(e);
+				!r && null != e && t && (0, I.UM)(e);
 			}, [r, e, t]),
 			n
 		);
@@ -258,15 +244,9 @@ function P(e) {
 		}),
 		d = M(r),
 		{ subscriptionGroupListing: _ } = y(r, a),
-		E =
-			null !== (n = null == _ ? void 0 : null === (t = _.subscription_listings) || void 0 === t ? void 0 : t.length) &&
-			void 0 !== n
-				? n
-				: 0,
+		E = null !== (n = null == _ ? void 0 : null === (t = _.subscription_listings) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0,
 		f = (null == d ? void 0 : d.isMonetized) === !0;
-	return {
-		applicationSubscriptionListingsShown: null != r && null != i && (null == a || u) && (!s || c) && o && f && E > 0
-	};
+	return { applicationSubscriptionListingsShown: null != r && null != i && (null == a || u) && (!s || c) && o && f && E > 0 };
 }
 function U(e, t) {
 	let n = (0, s.e7)([c.Z], () => c.Z.isLoaded()),
@@ -276,7 +256,7 @@ function U(e, t) {
 			null == t &&
 				null != e &&
 				n &&
-				(0, m.tn)(e).then((e) => {
+				(0, I.tn)(e).then((e) => {
 					i(e.map((e) => c.Z.getGuild(e)).filter((e) => null != e));
 				});
 		}, [e, t, n]),

@@ -78,9 +78,7 @@ function G(e) {
 		}, [m, i, s]),
 		(0, t.jsx)(u.Tooltip, {
 			tooltipContentClassName: b.premiumIconTooltipContent,
-			text: c
-				? v.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP
-				: v.Z.Messages.USER_SETTINGS_PROFILE_THEMES_USER_PROFILE_ICON_TOOLTIP_UPSELL,
+			text: c ? v.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP : v.Z.Messages.USER_SETTINGS_PROFILE_THEMES_USER_PROFILE_ICON_TOOLTIP_UPSELL,
 			children: (e) =>
 				(0, t.jsx)(u.Clickable, {
 					...e,
@@ -96,12 +94,11 @@ function G(e) {
 											return (0, t.jsx)(s, {
 												analyticsLocations: e,
 												title: v.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_TITLE,
-												description:
-													v.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_DESCRIPTION.format({
-														onAndMoreWithPremiumClick: () => {
-															a(), _.Z.open(j.oAB.PREMIUM, null, { analyticsLocations: e });
-														}
-													}),
+												description: v.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_DESCRIPTION.format({
+													onAndMoreWithPremiumClick: () => {
+														a(), _.Z.open(j.oAB.PREMIUM, null, { analyticsLocations: e });
+													}
+												}),
 												onClose: a,
 												...i
 											});
@@ -149,18 +146,7 @@ function D(e) {
 }
 function B(e) {
 	var s, n;
-	let {
-			user: i,
-			displayProfile: _,
-			onClose: d,
-			guildId: I,
-			profileType: L,
-			isHovering: O,
-			animateOnHover: F,
-			allowEdit: y = !0,
-			showPremiumBadgeUpsell: B = !0,
-			hasProfileEffect: k = !1
-		} = e,
+	let { user: i, displayProfile: _, onClose: d, guildId: I, profileType: L, isHovering: O, animateOnHover: F, allowEdit: y = !0, showPremiumBadgeUpsell: B = !0, hasProfileEffect: k = !1 } = e,
 		H = (0, o.e7)([p.Z], () => p.Z.getGuild(I)),
 		Y = (0, o.e7)([S.default], () => S.default.getId()) === i.id && y,
 		z = R.ZP.isPremiumAtLeast(null == _ ? void 0 : _.premiumType, U.p9.TIER_2),

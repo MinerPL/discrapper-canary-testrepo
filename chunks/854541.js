@@ -27,28 +27,19 @@ var r = n(735250),
 	f = n(481060),
 	h = n(408886),
 	p = n(44315),
-	I = n(665149),
-	m = n(534828),
+	m = n(665149),
+	I = n(534828),
 	T = n(981631),
 	g = n(689938),
 	S = n(773100);
 let A = () => Promise.resolve();
 function N(e) {
-	let {
-			color: t,
-			isDefault: n = !1,
-			isCustom: i = !1,
-			isSelected: a = !1,
-			disabled: l = !1,
-			style: c = {},
-			onClick: d,
-			'aria-label': E
-		} = e,
+	let { color: t, isDefault: n = !1, isCustom: i = !1, isSelected: a = !1, disabled: l = !1, style: c = {}, onClick: d, 'aria-label': E } = e,
 		h = (0, o.JA)('color-'.concat(t)),
-		I = null != t ? (0, u.Rf)(t) : c.backgroundColor,
-		m = !1;
+		m = null != t ? (0, u.Rf)(t) : c.backgroundColor,
+		I = !1;
 	return (
-		i && !a ? (m = !0) : (i || a) && (m = (0, u.Bd)(t) > 0.1),
+		i && !a ? (I = !0) : (i || a) && (I = (0, u.Bd)(t) > 0.1),
 		(0, r.jsx)(_.t, {
 			offset: -2,
 			children: (0, r.jsxs)('button', {
@@ -63,9 +54,9 @@ function N(e) {
 				onClick: () => (null == d ? void 0 : d(t)),
 				style: {
 					...c,
-					backgroundColor: I
+					backgroundColor: m
 				},
-				'aria-label': null != E ? E : I,
+				'aria-label': null != E ? E : m,
 				...h,
 				children: [
 					i
@@ -75,7 +66,7 @@ function N(e) {
 								colorClass: S.colorPickerDropperFg,
 								width: 14,
 								height: 14,
-								color: (0, p.Lq)(m ? T.Ilk.WHITE_500 : T.Ilk.BLACK_500)
+								color: (0, p.Lq)(I ? T.Ilk.WHITE_500 : T.Ilk.BLACK_500)
 							})
 						: null,
 					(function () {
@@ -86,7 +77,7 @@ function N(e) {
 								size: 'custom',
 								width: e,
 								height: t,
-								color: (0, p.Lq)(m ? T.Ilk.WHITE_500 : T.Ilk.BLACK_500)
+								color: (0, p.Lq)(I ? T.Ilk.WHITE_500 : T.Ilk.BLACK_500)
 							});
 					})()
 				]
@@ -119,18 +110,7 @@ class O extends i.PureComponent {
 	}
 }
 let R = i.memo(function (e) {
-	let {
-			value: t,
-			eagerUpdate: n = !1,
-			onChange: a,
-			onClose: o,
-			suggestedColors: l,
-			middle: _,
-			footer: p,
-			showEyeDropper: T,
-			wrapperComponentType: A,
-			className: N
-		} = e,
+	let { value: t, eagerUpdate: n = !1, onChange: a, onClose: o, suggestedColors: l, middle: _, footer: p, showEyeDropper: T, wrapperComponentType: A, className: N } = e,
 		v = (0, h.Z)(),
 		O = (function (e) {
 			if (null == e) return null;
@@ -206,7 +186,7 @@ let R = i.memo(function (e) {
 		},
 		w = (0, r.jsxs)(r.Fragment, {
 			children: [
-				(0, r.jsx)(m.Z, {
+				(0, r.jsx)(I.Z, {
 					onChange: P,
 					onChangeComplete: (e) => {
 						let { hex: t } = e;
@@ -220,7 +200,7 @@ let R = i.memo(function (e) {
 					children: [
 						T &&
 							null != v &&
-							(0, r.jsx)(I.JO, {
+							(0, r.jsx)(m.JO, {
 								onClick: M,
 								tooltip: g.Z.Messages.PICK_A_COLOR_FROM_THE_PAGE,
 								tooltipPosition: 'top',
@@ -263,18 +243,7 @@ let R = i.memo(function (e) {
 	});
 });
 function C(e) {
-	let {
-			className: t,
-			defaultColor: n,
-			customColor: i,
-			colors: a,
-			value: u,
-			disabled: c,
-			onChange: d,
-			renderDefaultButton: _,
-			renderCustomButton: E,
-			colorContainerClassName: f
-		} = e,
+	let { className: t, defaultColor: n, customColor: i, colors: a, value: u, disabled: c, onChange: d, renderDefaultButton: _, renderCustomButton: E, colorContainerClassName: f } = e,
 		h = (e) =>
 			(0, r.jsx)('div', {
 				className: S.colorPickerRow,
@@ -292,15 +261,15 @@ function C(e) {
 				)
 			}),
 		p = a.slice(0, a.length / 2),
-		I = a.slice(a.length / 2, a.length),
-		m = (0, l.ZP)({
+		m = a.slice(a.length / 2, a.length),
+		I = (0, l.ZP)({
 			id: 'color-picker',
 			isEnabled: !0,
 			scrollToStart: A,
 			scrollToEnd: A
 		});
 	return (0, r.jsx)(o.bG, {
-		navigator: m,
+		navigator: I,
 		children: (0, r.jsx)(o.SJ, {
 			children: (e) => {
 				let { ref: a, ...o } = e;
@@ -327,7 +296,7 @@ function C(e) {
 							})
 						}),
 						(0, r.jsxs)('div', {
-							children: [h(p), h(I)]
+							children: [h(p), h(m)]
 						})
 					]
 				});

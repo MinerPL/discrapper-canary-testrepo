@@ -75,9 +75,7 @@ u(h, 'displayName', 'GuildProgressStore'),
 				} = e,
 				i = o.Z.getGuild(t);
 			if (null == i) return !1;
-			i.ownerId === r.default.getId() &&
-				null != _[i.id] &&
-				(null != i.icon && _[i.id].add(d.Rg.AVATAR), n > 1 && _[i.id].add(d.Rg.INVITE));
+			i.ownerId === r.default.getId() && null != _[i.id] && (null != i.icon && _[i.id].add(d.Rg.AVATAR), n > 1 && _[i.id].add(d.Rg.INVITE));
 		},
 		CHANNEL_CREATE: function (e) {
 			let { channel: t } = e;
@@ -86,8 +84,7 @@ u(h, 'displayName', 'GuildProgressStore'),
 		CHANNEL_UPDATES: function (e) {
 			let { channels: t } = e,
 				n = !1;
-			for (let e of t)
-				null != e && null != e.guild_id && null != _[e.guild_id] && !1 !== E(e.guild_id, d.Rg.CHANNEL) && (n = !0);
+			for (let e of t) null != e && null != e.guild_id && null != _[e.guild_id] && !1 !== E(e.guild_id, d.Rg.CHANNEL) && (n = !0);
 			return n;
 		},
 		GUILD_SETTINGS_SUBMIT_SUCCESS: function (e) {
@@ -98,12 +95,7 @@ u(h, 'displayName', 'GuildProgressStore'),
 			var t;
 			let { channelId: n, message: i } = e,
 				a = l.Z.getChannel(n);
-			return (
-				(null === (t = i.author) || void 0 === t ? void 0 : t.id) === r.default.getId() &&
-				null != a &&
-				null != _[a.guild_id] &&
-				E(a.guild_id, d.Rg.MESSAGE)
-			);
+			return (null === (t = i.author) || void 0 === t ? void 0 : t.id) === r.default.getId() && null != a && null != _[a.guild_id] && E(a.guild_id, d.Rg.MESSAGE);
 		},
 		GUILD_MEMBER_LIST_UPDATE: function (e) {
 			let { guildId: t, memberCount: n } = e;

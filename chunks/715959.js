@@ -6,21 +6,7 @@ e.exports = function (e) {
 		case_insensitive: !0,
 		disableAutodetect: !1,
 		keywords: {
-			keyword: [
-				'query',
-				'mutation',
-				'subscription',
-				'type',
-				'input',
-				'schema',
-				'directive',
-				'interface',
-				'union',
-				'scalar',
-				'fragment',
-				'enum',
-				'on'
-			],
+			keyword: ['query', 'mutation', 'subscription', 'type', 'input', 'schema', 'directive', 'interface', 'union', 'scalar', 'fragment', 'enum', 'on'],
 			literal: ['true', 'false', 'null']
 		},
 		contains: [

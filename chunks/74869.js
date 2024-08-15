@@ -1,25 +1,25 @@
 t.d(n, {
 	Z: function () {
-		return T;
+		return m;
 	}
 }),
 	t(47120);
 var o = t(735250),
 	r = t(470079),
 	a = t(348327),
-	c = t.n(a),
-	i = t(658722),
-	l = t.n(i),
-	s = t(442837),
-	u = t(481060),
+	i = t.n(a),
+	c = t(658722),
+	l = t.n(c),
+	u = t(442837),
+	s = t(481060),
 	d = t(492435),
 	_ = t(353926),
 	S = t(499533),
-	E = t(689938);
-function m(e) {
+	g = t(689938);
+function E(e) {
 	let { id: n, experiment: t, currentBucket: r } = e;
 	return (0, o.jsxs)(
-		u.MenuItem,
+		s.MenuItem,
 		{
 			id: n,
 			label: t.title,
@@ -27,7 +27,7 @@ function m(e) {
 			children: [
 				t.buckets.map((e) =>
 					(0, o.jsx)(
-						u.MenuCheckboxItem,
+						s.MenuCheckboxItem,
 						{
 							id: ''.concat(e),
 							label: S.Z.getExperimentBucketName(e),
@@ -37,14 +37,14 @@ function m(e) {
 						''.concat(e)
 					)
 				),
-				(0, o.jsx)(u.MenuGroup, {
+				(0, o.jsx)(s.MenuGroup, {
 					children:
 						-1 !== r &&
-						(0, o.jsx)(u.MenuItem, {
+						(0, o.jsx)(s.MenuItem, {
 							id: 'clear-override',
 							label: 'Clear Override',
 							color: 'danger',
-							icon: u.TrashIcon,
+							icon: s.TrashIcon,
 							action: () => (0, d.rX)(n, null)
 						})
 				})
@@ -53,8 +53,8 @@ function m(e) {
 		n
 	);
 }
-function T() {
-	let e = (0, s.e7)(
+function m() {
+	let e = (0, u.e7)(
 			[_.Z, _.Z],
 			() => {
 				let e = _.Z.getRegisteredExperiments();
@@ -69,16 +69,16 @@ function T() {
 				});
 			},
 			[],
-			c()
+			i()
 		),
 		[n, t] = r.useState(''),
-		[a, i] = r.useState([]);
+		[a, c] = r.useState([]);
 	r.useEffect(() => {
 		if (0 === n.trim().length) {
-			i(e);
+			c(e);
 			return;
 		}
-		i(e.filter((e) => l()(n, e.experiment.title.toLowerCase())));
+		c(e.filter((e) => l()(n, e.experiment.title.toLowerCase())));
 	}, [e, n]);
 	let d = r.useMemo(
 			() =>
@@ -96,27 +96,27 @@ function T() {
 				}),
 			[a]
 		),
-		T = r.useMemo(() => d.map(m), [d]),
-		I = r.useMemo(() => S.map(m), [S]);
+		m = r.useMemo(() => d.map(E), [d]),
+		I = r.useMemo(() => S.map(E), [S]);
 	return [
 		(0, o.jsx)(
-			u.MenuControlItem,
+			s.MenuControlItem,
 			{
 				id: 'experiments-search',
 				control: (e, r) =>
-					(0, o.jsx)(u.MenuSearchControl, {
+					(0, o.jsx)(s.MenuSearchControl, {
 						...e,
 						query: n,
 						onChange: t,
 						ref: r,
-						placeholder: E.Z.Messages.SEARCH
+						placeholder: g.Z.Messages.SEARCH
 					})
 			},
 			'experiments-search'
 		),
-		(0, o.jsx)(u.MenuSeparator, {}, 'separator'),
-		...T,
-		T.length > 0 ? (0, o.jsx)(u.MenuSeparator, {}, 'separator-2') : null,
+		(0, o.jsx)(s.MenuSeparator, {}, 'separator'),
+		...m,
+		m.length > 0 ? (0, o.jsx)(s.MenuSeparator, {}, 'separator-2') : null,
 		...I
 	];
 }

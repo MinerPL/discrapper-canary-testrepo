@@ -52,15 +52,4 @@ function _() {
 		}
 	];
 }
-((r = s || (s = {})).TOOLBAR_BUTTON = 'toolbar button'),
-	(r.PILL = 'pill'),
-	((i = o || (o = {})).SIDEBAR = 'sidebar'),
-	(i.PILL_DROPDOWN = 'pill dropdown'),
-	(i.PILL_NEXT_ARROW = 'pill next arrow'),
-	(i.PILL_PREVIOUS_ARROW = 'pill previous arrow'),
-	((a = l || (l = {})).DUPLICATED = 'DUPLICATED'),
-	(a.TOO_GENERIC = 'TOO_GENERIC'),
-	(a.TOO_MANY = 'TOO_MANY'),
-	(a.INACCURATE = 'INACCURATE'),
-	(a.NOT_USEFUL = 'NOT_USEFUL'),
-	(a.OTHER = 'OTHER');
+((r = s || (s = {})).TOOLBAR_BUTTON = 'toolbar button'), (r.PILL = 'pill'), ((i = o || (o = {})).SIDEBAR = 'sidebar'), (i.PILL_DROPDOWN = 'pill dropdown'), (i.PILL_NEXT_ARROW = 'pill next arrow'), (i.PILL_PREVIOUS_ARROW = 'pill previous arrow'), ((a = l || (l = {})).DUPLICATED = 'DUPLICATED'), (a.TOO_GENERIC = 'TOO_GENERIC'), (a.TOO_MANY = 'TOO_MANY'), (a.INACCURATE = 'INACCURATE'), (a.NOT_USEFUL = 'NOT_USEFUL'), (a.OTHER = 'OTHER');

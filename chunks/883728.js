@@ -7,8 +7,7 @@ t.Z = (e) => {
 	return {
 		handleLeftClick: (e) => {
 			var n;
-			!((0, s.k)(e.target) && (null === (n = t.current) || void 0 === n ? void 0 : n.contains(e.target))) &&
-				a(l, e.shiftKey);
+			!((0, s.k)(e.target) && (null === (n = t.current) || void 0 === n ? void 0 : n.contains(e.target))) && a(l, e.shiftKey);
 		},
 		handleRightClick: (e) =>
 			(0, o.jW)(e, async () => {

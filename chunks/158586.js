@@ -14,11 +14,7 @@ o.default = (e) => {
 		[h, x] = a.useState(null !== (u = j.defaultReactionEmoji) && void 0 !== u ? u : null),
 		[v, E] = a.useState(!1),
 		[M, b] = a.useState(!1),
-		R =
-			(null === (o = j.defaultReactionEmoji) || void 0 === o ? void 0 : o.emojiId) !==
-				(null == h ? void 0 : h.emojiId) ||
-			(null === (t = j.defaultReactionEmoji) || void 0 === t ? void 0 : t.emojiName) !==
-				(null == h ? void 0 : h.emojiName),
+		R = (null === (o = j.defaultReactionEmoji) || void 0 === o ? void 0 : o.emojiId) !== (null == h ? void 0 : h.emojiId) || (null === (t = j.defaultReactionEmoji) || void 0 === t ? void 0 : t.emojiName) !== (null == h ? void 0 : h.emojiName),
 		L = (e) => {
 			x(
 				null == e

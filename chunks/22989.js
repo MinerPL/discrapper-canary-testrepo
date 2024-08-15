@@ -66,12 +66,8 @@ function C(e) {
 			},
 			[P]
 		);
-	let [F, D] = l.useState(
-			null === (j = null === (t = T.editMetadata) || void 0 === t ? void 0 : t.voiceAudio) || void 0 === j || j
-		),
-		[B, O] = l.useState(
-			null === (S = null === (a = T.editMetadata) || void 0 === a ? void 0 : a.applicationAudio) || void 0 === S || S
-		),
+	let [F, D] = l.useState(null === (j = null === (t = T.editMetadata) || void 0 === t ? void 0 : t.voiceAudio) || void 0 === j || j),
+		[B, O] = l.useState(null === (S = null === (a = T.editMetadata) || void 0 === a ? void 0 : a.applicationAudio) || void 0 === S || S),
 		[H, U] = l.useState({
 			start: null !== (I = null === (C = T.editMetadata) || void 0 === C ? void 0 : C.start) && void 0 !== I ? I : 0,
 			end: null !== (E = null === (_ = T.editMetadata) || void 0 === _ ? void 0 : _.end) && void 0 !== E ? E : 0

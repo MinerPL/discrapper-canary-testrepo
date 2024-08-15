@@ -18,8 +18,8 @@ var r = n(470079),
 	f = n(265446),
 	h = n(196483),
 	p = n(417662),
-	I = n(847302),
-	m = n(374157);
+	m = n(847302),
+	I = n(374157);
 n(209073);
 var T = n(814011),
 	g = n(50607),
@@ -40,19 +40,7 @@ function O(e) {
 				}),
 				(function (e) {
 					var t, n, r;
-					let {
-							editor: a,
-							chatInputType: s,
-							channel: o,
-							canUseCommands: l,
-							canOnlyUseTextCommands: u,
-							windowContext: c,
-							previewMarkdown: v,
-							forTests: O,
-							onChangeStart: R,
-							onChangeEnd: C,
-							updateState: y
-						} = e,
+					let { editor: a, chatInputType: s, channel: o, canUseCommands: l, canOnlyUseTextCommands: u, windowContext: c, previewMarkdown: v, forTests: O, onChangeStart: R, onChangeEnd: C, updateState: y } = e,
 						D = a,
 						{ onChange: L } = D;
 					(D.chatInputType = s),
@@ -66,10 +54,9 @@ function O(e) {
 						}),
 						(D = (0, g.B)(D, !0 === O)),
 						(D = (0, T.Z)(D)),
-						(D = (0, m.Z)(D)),
-						(null === (t = s.commands) || void 0 === t ? void 0 : t.enabled) &&
-							(D = (0, d.Z)(D, o, !0 === l, !0 === u)),
-						(D = (0, I.ZP)(D, o.guild_id, o.id)),
+						(D = (0, I.Z)(D)),
+						(null === (t = s.commands) || void 0 === t ? void 0 : t.enabled) && (D = (0, d.Z)(D, o, !0 === l, !0 === u)),
+						(D = (0, m.ZP)(D, o.guild_id, o.id)),
 						!(null === (n = s.markdown) || void 0 === n ? void 0 : n.disableBlockQuotes) && (D = (0, _.Z)(D)),
 						!(null === (r = s.markdown) || void 0 === r ? void 0 : r.disableCodeBlocks) && (D = (0, E.ZP)(D)),
 						O && (D = (0, A.Z)(D)),

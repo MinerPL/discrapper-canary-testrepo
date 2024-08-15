@@ -17,23 +17,7 @@ function c(e) {
 		u = (0, o.ZP)(),
 		_ = i.useMemo(() => {
 			var e, t;
-			return null !==
-				(t =
-					null == c
-						? void 0
-						: null === (e = c.recipients) || void 0 === e
-							? void 0
-							: e
-									.map((e) => r.default.getUser(e))
-									.filter((e) => null != e && e.id !== (null == d ? void 0 : d.userId))) && void 0 !== t
-				? t
-				: [];
+			return null !== (t = null == c ? void 0 : null === (e = c.recipients) || void 0 === e ? void 0 : e.map((e) => r.default.getUser(e)).filter((e) => null != e && e.id !== (null == d ? void 0 : d.userId))) && void 0 !== t ? t : [];
 		}, [null == d ? void 0 : d.userId, null == c ? void 0 : c.recipients]);
-	return null == n
-		? []
-		: u
-			? _
-			: null !== (t = _.length > 0 ? [n].concat(_) : null == d ? void 0 : d.viewers) && void 0 !== t
-				? t
-				: [];
+	return null == n ? [] : u ? _ : null !== (t = _.length > 0 ? [n].concat(_) : null == d ? void 0 : d.viewers) && void 0 !== t ? t : [];
 }

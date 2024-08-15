@@ -30,14 +30,7 @@ var n = a(735250),
 	T = a(413135).Buffer;
 function y(e) {
 	let { clip: t, channelId: i, clipName: y, onSetClipName: w, onClose: N } = e,
-		{
-			videoPlayerRef: L,
-			cropData: k,
-			voiceAudioEnabled: R,
-			setVoiceAudioEnabled: M,
-			applicationAudioEnabled: P,
-			setApplicationAudioEnabled: Z
-		} = (0, _.S)(),
+		{ videoPlayerRef: L, cropData: k, voiceAudioEnabled: R, setVoiceAudioEnabled: M, applicationAudioEnabled: P, setApplicationAudioEnabled: Z } = (0, _.S)(),
 		[A, F] = l.useState(null),
 		{ onShareClick: D } = (0, x.Z)({
 			channelId: i,

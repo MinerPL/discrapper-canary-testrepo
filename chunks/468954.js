@@ -11,38 +11,7 @@ var r = n(735250),
 	l = n(810462),
 	u = n(40261);
 function c(e) {
-	let {
-			categories: t,
-			collapsedCategories: n,
-			containerWidth: c,
-			store: d,
-			onSelectItem: _,
-			onSearchExpressions: E,
-			hasSearchResults: f,
-			defaultSearchPlaceholder: h,
-			emptySearchPlaceholder: p,
-			renderEmptyState: I,
-			renderRow: m,
-			renderSection: T,
-			renderSectionHeader: g,
-			renderSectionFooter: S,
-			renderInspector: A,
-			renderEmptySearchState: N,
-			renderCategoryList: v,
-			renderHeaderAccessories: O,
-			rowHeight: R,
-			sectionHeaderHeight: C,
-			sectionFooterHeight: y,
-			itemNodeWidth: D,
-			listPaddingRight: L,
-			itemNodeMargin: b,
-			listPadding: M,
-			gridNavigatorId: P,
-			gridNotice: U,
-			renderHeader: w,
-			renderUpsell: x,
-			setShowUpsell: G
-		} = e,
+	let { categories: t, collapsedCategories: n, containerWidth: c, store: d, onSelectItem: _, onSearchExpressions: E, hasSearchResults: f, defaultSearchPlaceholder: h, emptySearchPlaceholder: p, renderEmptyState: m, renderRow: I, renderSection: T, renderSectionHeader: g, renderSectionFooter: S, renderInspector: A, renderEmptySearchState: N, renderCategoryList: v, renderHeaderAccessories: O, rowHeight: R, sectionHeaderHeight: C, sectionFooterHeight: y, itemNodeWidth: D, listPaddingRight: L, itemNodeMargin: b, listPadding: M, gridNavigatorId: P, gridNotice: U, renderHeader: w, renderUpsell: x, setShowUpsell: G } = e,
 		k = i.useRef(null),
 		B = i.useRef(null),
 		F = i.useRef(null),
@@ -84,7 +53,7 @@ function c(e) {
 		}),
 		et = i.useCallback(
 			(e, t) =>
-				m(
+				I(
 					j[e],
 					X(e),
 					{
@@ -97,16 +66,14 @@ function c(e) {
 					(t) => Q(e, t),
 					(t) => d.setInspectedExpressionPosition(t, e)
 				),
-			[j, Q, X, q, ee, m, d, W]
+			[j, Q, X, q, ee, I, d, W]
 		),
 		en = i.useCallback((e) => (null == T ? void 0 : T(t[e])), [t, T]),
 		er = i.useCallback((e) => (null == g ? void 0 : g(t[e], e)), [t, g]),
 		ei = i.useCallback((e) => (null == S ? void 0 : S(t[e], e)), [t, S]),
 		ea = i.useCallback(() => {
 			var e;
-			return null == A
-				? void 0
-				: A(null == j ? void 0 : null === (e = j[Z.rowIndex]) || void 0 === e ? void 0 : e[Z.columnIndex]);
+			return null == A ? void 0 : A(null == j ? void 0 : null === (e = j[Z.rowIndex]) || void 0 === e ? void 0 : e[Z.columnIndex]);
 		}, [j, Z.columnIndex, Z.rowIndex, A]);
 	i.useEffect(() => {
 		E(H);
@@ -139,8 +106,8 @@ function c(e) {
 						className: u.header,
 						children: [' ', es, ' ']
 					}),
-			V && null != I
-				? I(u.emptyState)
+			V && null != m
+				? m(u.emptyState)
 				: (0, r.jsxs)(r.Fragment, {
 						children: [
 							v(B),

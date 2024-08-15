@@ -1,9 +1,7 @@
 e.exports = function (e) {
 	return {
 		name: 'Awk',
-		keywords: {
-			keyword: 'BEGIN END if else while do for in break continue delete next nextfile function func exit|10'
-		},
+		keywords: { keyword: 'BEGIN END if else while do for in break continue delete next nextfile function func exit|10' },
 		contains: [
 			{
 				className: 'variable',

@@ -66,9 +66,7 @@ function O() {
 							(0, s.jsx)(c.Heading, {
 								className: M.marginBottom8,
 								variant: 'heading-xl/medium',
-								children: (0, s.jsx)(c.HeadingLevel, {
-									children: S.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_PARENT
-								})
+								children: (0, s.jsx)(c.HeadingLevel, { children: S.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_PARENT })
 							}),
 							(0, s.jsx)(c.Text, {
 								variant: 'text-sm/medium',
@@ -118,17 +116,13 @@ function P() {
 					(0, s.jsx)(c.Heading, {
 						className: M.marginBottom8,
 						variant: 'heading-xl/medium',
-						children: (0, s.jsx)(c.HeadingLevel, {
-							children: S.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN
-						})
+						children: (0, s.jsx)(c.HeadingLevel, { children: S.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN })
 					}),
 					(0, s.jsx)(c.Text, {
 						variant: 'text-sm/medium',
 						color: 'text-muted',
 						className: M.marginBottom20,
-						children: S.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_DESCRIPTION_TEEN.format({
-							link: 'https://support.discord.com/hc/articles/14155060633623'
-						})
+						children: S.Z.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_DESCRIPTION_TEEN.format({ link: 'https://support.discord.com/hc/articles/14155060633623' })
 					}),
 					e ? null : (0, s.jsx)(g.Z, {})
 				]
@@ -197,8 +191,7 @@ function v(e) {
 							innerAriaLabel: n,
 							ref: (e) => {
 								var n;
-								(i.current = e),
-									(t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
+								(i.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
 							},
 							sectionHeight: m.zE,
 							rowHeight: m.ip,
@@ -224,10 +217,7 @@ let L = () => {
 				count: t.length,
 				max: n
 			},
-			r = (0, E.o)(
-				S.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_TEEN.format(a),
-				S.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_PARENT.format(a)
-			);
+			r = (0, E.o)(S.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_TEEN.format(a), S.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_PARENT.format(a));
 		return (0, s.jsx)(s.Fragment, {
 			children:
 				t.length > 0
@@ -256,10 +246,7 @@ let L = () => {
 	Z = () => {
 		let e = (0, R.VM)(),
 			t = (0, I.Z)() ? m.AG : m.i0,
-			n = (0, E.o)(
-				S.Z.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_TEEN.format({ maxConnections: t }),
-				S.Z.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_PARENT.format({ maxConnections: t })
-			);
+			n = (0, E.o)(S.Z.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_TEEN.format({ maxConnections: t }), S.Z.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_PARENT.format({ maxConnections: t }));
 		return e
 			? (0, s.jsx)('div', {
 					className: h.maxConnectionInfo,
@@ -278,11 +265,7 @@ let L = () => {
 				helpline: e,
 				throughline: t
 			})
-				.with({ helpline: !0 }, () =>
-					S.Z.Messages.FAMILY_CENTER_HELP_LINE_CONTENT.format({
-						helpLink: 'https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line'
-					})
-				)
+				.with({ helpline: !0 }, () => S.Z.Messages.FAMILY_CENTER_HELP_LINE_CONTENT.format({ helpLink: 'https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line' }))
 				.with({ throughline: !0 }, () => S.Z.Messages.FAMILY_CENTER_THROUGHLINE_CONTENT.format({ helpLink: f.$l }))
 				.otherwise(() => null);
 		return null == n
@@ -305,10 +288,7 @@ let L = () => {
 	},
 	B = () => {
 		let e = (0, R.mq)(m.ne.PENDING),
-			t = (0, E.o)(
-				S.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({ count: e.length }),
-				S.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({ count: e.length })
-			);
+			t = (0, E.o)(S.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({ count: e.length }), S.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({ count: e.length }));
 		return 0 === e.length
 			? null
 			: (0, s.jsx)(v, {
@@ -321,12 +301,6 @@ t.Z = () => {
 	let e = (0, I.Z)();
 	return (0, s.jsxs)('div', {
 		className: h.container,
-		children: [
-			e ? (0, s.jsx)(O, {}) : (0, s.jsx)(P, {}),
-			(0, s.jsx)(L, {}),
-			(0, s.jsx)(B, {}),
-			(0, s.jsx)(Z, {}),
-			(0, s.jsx)(D, {})
-		]
+		children: [e ? (0, s.jsx)(O, {}) : (0, s.jsx)(P, {}), (0, s.jsx)(L, {}), (0, s.jsx)(B, {}), (0, s.jsx)(Z, {}), (0, s.jsx)(D, {})]
 	});
 };

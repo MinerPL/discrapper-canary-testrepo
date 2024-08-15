@@ -26,41 +26,8 @@ var r = n(735250),
 	C = n(600962);
 function N(e) {
 	var t;
-	let {
-			backButtonEligible: n,
-			prevStep: i,
-			showGuildPicker: N,
-			handleStepChange: A,
-			trialFooterMessageOverride: O,
-			reviewWarningMessage: P,
-			planGroup: b,
-			openInvoiceId: g,
-			analyticsData: v,
-			analyticsLocation: L,
-			eligibleApplicationSubscriptionGuilds: x,
-			handleClose: R
-		} = e,
-		{
-			activeSubscription: M,
-			application: k,
-			setUpdatedSubscription: B,
-			contextMetadata: j,
-			currencies: U,
-			paymentSources: Z,
-			priceOptions: y,
-			purchaseError: D,
-			purchaseTokenAuthState: w,
-			selectedPlan: F,
-			selectedSku: H,
-			setCurrency: V,
-			setPaymentSourceId: G,
-			setPurchaseState: W,
-			setPurchaseError: K,
-			purchaseState: Y,
-			subscriptionMetadataRequest: X,
-			setSubscriptionMetadataRequest: z,
-			setHasAcceptedTerms: J
-		} = (0, d.usePaymentContext)();
+	let { backButtonEligible: n, prevStep: i, showGuildPicker: N, handleStepChange: A, trialFooterMessageOverride: O, reviewWarningMessage: P, planGroup: b, openInvoiceId: g, analyticsData: v, analyticsLocation: L, eligibleApplicationSubscriptionGuilds: x, handleClose: R } = e,
+		{ activeSubscription: M, application: k, setUpdatedSubscription: B, contextMetadata: j, currencies: U, paymentSources: Z, priceOptions: y, purchaseError: D, purchaseTokenAuthState: w, selectedPlan: F, selectedSku: H, setCurrency: V, setPaymentSourceId: G, setPurchaseState: W, setPurchaseError: K, purchaseState: Y, subscriptionMetadataRequest: X, setSubscriptionMetadataRequest: z, setHasAcceptedTerms: J } = (0, d.usePaymentContext)();
 	l()(null != F, 'Expected plan to be selected'), l()(null != k, 'Expected application');
 	let q = a.useRef(null),
 		[Q, $] = (0, o.Z)(!1, 500),
@@ -106,9 +73,7 @@ function N(e) {
 										(0, r.jsx)(s.Text, {
 											variant: 'text-xs/medium',
 											color: 'interactive-normal',
-											children: T.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_SUBTITLE.format({
-												applicationName: k.name
-											})
+											children: T.Z.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_SUBTITLE.format({ applicationName: k.name })
 										})
 									]
 								}),

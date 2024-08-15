@@ -29,10 +29,7 @@ function M(e) {
 	let a = r - s,
 		i = E.Z.Messages.REFERRAL_PROGRAM_FRIEND_SELECT_HEADER.format({ numReferrals: r });
 	return (
-		a < r &&
-			((i = E.Z.Messages.REFERRAL_PROGRAM_SELECT_MORE_FRIEND.format({ numFriends: a })),
-			1 === a && (i = E.Z.Messages.REFERRAL_PROGRAM_SELECT_ONE_MORE_FRIEND),
-			0 === a && (i = E.Z.Messages.REFERRAL_PROGRAM_FRIEND_SELECTION_HIT_LIMIT.format({ numReferrals: r }))),
+		a < r && ((i = E.Z.Messages.REFERRAL_PROGRAM_SELECT_MORE_FRIEND.format({ numFriends: a })), 1 === a && (i = E.Z.Messages.REFERRAL_PROGRAM_SELECT_ONE_MORE_FRIEND), 0 === a && (i = E.Z.Messages.REFERRAL_PROGRAM_FRIEND_SELECTION_HIT_LIMIT.format({ numReferrals: r }))),
 		(0, t.jsxs)(t.Fragment, {
 			children: [
 				(0, t.jsxs)('div', {

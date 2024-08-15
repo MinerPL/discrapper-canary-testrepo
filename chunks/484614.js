@@ -57,9 +57,7 @@ class I extends (s = r.PureComponent) {
 	handleCopy() {
 		let { onCopy: e, value: n, delay: t } = this.props,
 			s = (0, u.JG)(n);
-		this.setState({ mode: s ? c.CopyInput.Modes.SUCCESS : c.CopyInput.Modes.ERROR }),
-			this._timeout.start(t, () => this.setState({ mode: c.CopyInput.Modes.DEFAULT })),
-			null == e || e();
+		this.setState({ mode: s ? c.CopyInput.Modes.SUCCESS : c.CopyInput.Modes.ERROR }), this._timeout.start(t, () => this.setState({ mode: c.CopyInput.Modes.DEFAULT })), null == e || e();
 	}
 	getVerticalButtonColor(e) {
 		switch (e) {
@@ -72,11 +70,7 @@ class I extends (s = r.PureComponent) {
 		}
 	}
 	constructor(e) {
-		super(e),
-			_(this, '_timeout', void 0),
-			(this.state = { mode: c.CopyInput.Modes.DEFAULT }),
-			(this._timeout = new i.V7()),
-			(this.handleCopy = this.handleCopy.bind(this));
+		super(e), _(this, '_timeout', void 0), (this.state = { mode: c.CopyInput.Modes.DEFAULT }), (this._timeout = new i.V7()), (this.handleCopy = this.handleCopy.bind(this));
 	}
 }
 _(I, 'defaultProps', {

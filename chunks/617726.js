@@ -55,9 +55,7 @@ function c(e, t) {
 	return s(e, (e, r) => t.includes(r));
 }
 function I(e) {
-	return i.n.__SENTRY__ && i.n.__SENTRY__.encodePolyfill
-		? i.n.__SENTRY__.encodePolyfill(e)
-		: new TextEncoder().encode(e);
+	return i.n.__SENTRY__ && i.n.__SENTRY__.encodePolyfill ? i.n.__SENTRY__.encodePolyfill(e) : new TextEncoder().encode(e);
 }
 function u(e) {
 	let [t, r] = e,
@@ -102,15 +100,7 @@ function l(e) {
 	function n() {
 		var e;
 		let n = t.indexOf(10);
-		return (
-			n < 0 && (n = t.length),
-			JSON.parse(
-				((e = r(n)),
-				i.n.__SENTRY__ && i.n.__SENTRY__.decodePolyfill
-					? i.n.__SENTRY__.decodePolyfill(e)
-					: new TextDecoder().decode(e))
-			)
-		);
+		return n < 0 && (n = t.length), JSON.parse(((e = r(n)), i.n.__SENTRY__ && i.n.__SENTRY__.decodePolyfill ? i.n.__SENTRY__.decodePolyfill(e) : new TextDecoder().decode(e)));
 	}
 	let a = n(),
 		o = [];

@@ -16,11 +16,7 @@ var n = r(135839),
 	N = s(i),
 	p = s(_),
 	O = E;
-((n && O(new n(new ArrayBuffer(1))) != R) ||
-	(a && O(new a()) != c) ||
-	(o && O(o.resolve()) != I) ||
-	(i && O(new i()) != u) ||
-	(_ && O(new _()) != l)) &&
+((n && O(new n(new ArrayBuffer(1))) != R) || (a && O(new a()) != c) || (o && O(o.resolve()) != I) || (i && O(new i()) != u) || (_ && O(new _()) != l)) &&
 	(O = function (e) {
 		var t = E(e),
 			r = '[object Object]' == t ? e.constructor : void 0,

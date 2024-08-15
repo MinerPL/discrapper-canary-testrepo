@@ -207,9 +207,7 @@ function C(e) {
 	return (
 		C && (h >= 85 && !a ? (x = 'good') : h < 85 && (x = 'warning')),
 		(0, s.jsx)(N, {
-			title: g
-				? T.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER_ADVANCED
-				: T.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER,
+			title: g ? T.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER_ADVANCED : T.Z.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER,
 			description: T.Z.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE.format({
 				numChannels: E,
 				numTotalChannels: S,
@@ -248,9 +246,7 @@ function x(e) {
 		p = 'none';
 	x && (h && !o ? (p = 'good') : !h && (p = 'required'));
 	let R = T.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_DESCRIPTION;
-	h
-		? !x && (R = T.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_NOT_STARTED_DESCRIPTION)
-		: (R = T.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_INVALID_DESCRIPTION);
+	h ? !x && (R = T.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_NOT_STARTED_DESCRIPTION) : (R = T.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_INVALID_DESCRIPTION);
 	let f = null;
 	return (
 		x &&

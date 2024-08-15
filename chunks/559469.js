@@ -47,8 +47,7 @@ function l() {
 				bannerHash: '99a72cbacfb6de2baf362daa1a5292bb',
 				playstyle: s.zv.COMPETITIVE,
 				name: 'Retro Rebels',
-				description:
-					'Are you a console collector? Rare game curator? Be a rebel and join us in celebrating retro gaming classics \uD83D\uDE0E',
+				description: 'Are you a console collector? Rare game curator? Be a rebel and join us in celebrating retro gaming classics \uD83D\uDE0E',
 				tag: 'RR',
 				wildcardDescriptors: ['collector', 'nostalgia', 'classic'],
 				traits: ['30+', 'Inclusive', 'cooking', 'podcasts', 'hiking'],
@@ -63,8 +62,7 @@ function l() {
 				bannerHash: '3c8e6496a598b9a563dffbc87d65f6f8',
 				playstyle: s.zv.SOCIAL,
 				name: 'the lofi tavern',
-				description:
-					'~ hosting chill beats and study rooms every night ~ join the tavern to kick back and meet other cozy gamers ~',
+				description: '~ hosting chill beats and study rooms every night ~ join the tavern to kick back and meet other cozy gamers ~',
 				tag: 'MUSE',
 				wildcardDescriptors: ['creative', 'harmony', 'nightowl'],
 				traits: ['Streamers', 'study buddies', 'sleepy cats', 'lo-fi chilling'],
@@ -93,20 +91,10 @@ function l() {
 				banner: s.qC.SEA_FOAM,
 				bannerHash: 'c01388993ca324a6de870f805cc30bd3',
 				name: 'Eco ELO',
-				description:
-					'If you like growing plants or gardening, in game and IRL, then this is the place for you! Welcome home \uD83C\uDF31 \uD83D\uDC9A',
+				description: 'If you like growing plants or gardening, in game and IRL, then this is the place for you! Welcome home \uD83C\uDF31 \uD83D\uDC9A',
 				tag: 'eco',
 				wildcardDescriptors: ['ecofriendly', 'explorers', 'advocates'],
-				traits: [
-					'20+',
-					'Inclusive',
-					'PUGs',
-					'board games',
-					'going outside',
-					'PvP',
-					'the stalk market',
-					'growing stuff'
-				],
+				traits: ['20+', 'Inclusive', 'PUGs', 'board games', 'going outside', 'PvP', 'the stalk market', 'growing stuff'],
 				memberCount: 32
 			}),
 			r({
@@ -117,8 +105,7 @@ function l() {
 				banner: s.qC.NIGHT_SKY,
 				bannerHash: '37cd6a7f90faafeb8c54e5ea5163407b',
 				name: 'Meowtopia',
-				description:
-					'the purrfect place for a pawsitive and hissterical time :D are you kitten me...i feline like that\u2019s too many puns...',
+				description: 'the purrfect place for a pawsitive and hissterical time :D are you kitten me...i feline like that\u2019s too many puns...',
 				tag: 'meow',
 				wildcardDescriptors: ['Meow', 'Meow', 'Moew'],
 				traits: ['All Ages', 'Streamers', 'Parent Friendly', 'sleepy cats', 'DnD', 'travel', 'catnaps'],

@@ -14,16 +14,12 @@ t.Z = (e) => {
 		h = null != f ? f.avatarDecoration : null == E ? void 0 : E.avatarDecoration,
 		p = (0, a.Z)(n),
 		{
-			pendingAvatar: I,
-			pendingAvatarDecoration: m,
+			pendingAvatar: m,
+			pendingAvatarDecoration: I,
 			pendingErrors: T
 		} = (0, i.cj)([u.Z, s.Z], () => ({
 			pendingAvatar: t ? u.Z.getTryItOutAvatar() : null != _ ? s.Z.getPendingAvatar() : u.Z.getPendingAvatar(),
-			pendingAvatarDecoration: t
-				? u.Z.getTryItOutAvatarDecoration()
-				: null != _
-					? s.Z.getPendingAvatarDecoration()
-					: u.Z.getPendingAvatarDecoration(),
+			pendingAvatarDecoration: t ? u.Z.getTryItOutAvatarDecoration() : null != _ ? s.Z.getPendingAvatarDecoration() : u.Z.getPendingAvatarDecoration(),
 			pendingErrors: null != _ ? s.Z.getErrors().avatarDecoration : u.Z.getErrors().avatarDecoration
 		})),
 		g = (0, r.useCallback)((e) => (0, o.Jw)(e, null == E ? void 0 : E.avatar), [null == E ? void 0 : E.avatar]),
@@ -34,8 +30,8 @@ t.Z = (e) => {
 			[p, _]
 		);
 	return {
-		pendingAvatar: I,
-		pendingAvatarDecoration: m,
+		pendingAvatar: m,
+		pendingAvatarDecoration: I,
 		setPendingAvatar: t ? d.c_ : g,
 		setPendingAvatarDecoration: t ? d.Xz : S,
 		savedAvatarDecoration: h,

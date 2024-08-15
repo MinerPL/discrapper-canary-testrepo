@@ -25,6 +25,4 @@ function l() {
 		}
 	];
 }
-((a = s || (s = {})).COULD_NOT_FIND = "I couldn't find what I was looking for"),
-	(a.CONFUSING_LANGUAGE = 'I found the language confusing'),
-	(a.OTHER = 'Other');
+((a = s || (s = {})).COULD_NOT_FIND = "I couldn't find what I was looking for"), (a.CONFUSING_LANGUAGE = 'I found the language confusing'), (a.OTHER = 'Other');

@@ -35,13 +35,7 @@ t.ZP = () => {
 		let e = (0, l.uniqBy)([...(0, d.aj)(n), ...(0, d.XS)(r)], 'id').reduce(
 			(e, r) => {
 				let i = n.get(r.skuId);
-				return (0, d.qS)(i)
-					? (e.premium_purchase.push(r), e)
-					: null != i
-						? (e.purchase.push(r), e)
-						: !t && (0, d.G1)(s.get(r.skuId))
-							? (e.premium_purchase.push(r), e)
-							: (e.preview.push(r), e);
+				return (0, d.qS)(i) ? (e.premium_purchase.push(r), e) : null != i ? (e.purchase.push(r), e) : !t && (0, d.G1)(s.get(r.skuId)) ? (e.premium_purchase.push(r), e) : (e.preview.push(r), e);
 			},
 			{
 				purchase: [],

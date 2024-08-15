@@ -20,25 +20,14 @@ var r,
 	f = n(703656),
 	h = n(626135),
 	p = n(357355),
-	I = n(197115),
-	m = n(302945),
+	m = n(197115),
+	I = n(302945),
 	T = n(474936),
 	g = n(981631),
 	S = n(689938),
 	A = n(502374);
 function N(e) {
-	let {
-			containerContext: t,
-			image: n,
-			title: r,
-			description: i,
-			enableSocialProof: o,
-			analyticsLocationSection: N,
-			upsellViewedTrackingData: v,
-			onClose: O,
-			onDisplay: R,
-			onLearnMore: C
-		} = e,
+	let { containerContext: t, image: n, title: r, description: i, enableSocialProof: o, analyticsLocationSection: N, upsellViewedTrackingData: v, onClose: O, onDisplay: R, onLearnMore: C } = e,
 		y = (0, u.e7)([p.Z], () => p.Z.affinities),
 		D = (0, u.e7)([p.Z], () => p.Z.hasFetched);
 	s.useEffect(() => {
@@ -57,10 +46,7 @@ function N(e) {
 				isVisible: !0
 			}),
 			(0, a.jsxs)('div', {
-				className: l()(
-					A.container,
-					2 === t ? A.hasTabParentContainer : 1 === t ? A.hasParentContainer : A.noParentContainer
-				),
+				className: l()(A.container, 2 === t ? A.hasTabParentContainer : 1 === t ? A.hasParentContainer : A.noParentContainer),
 				children: [
 					(0, a.jsx)(c.ModalCloseButton, {
 						onClick: O,
@@ -81,7 +67,7 @@ function N(e) {
 								variant: 'heading-xl/bold',
 								children: r
 							}),
-							L && (0, a.jsx)(m.Z, { affinities: y }),
+							L && (0, a.jsx)(I.Z, { affinities: y }),
 							(0, a.jsx)(c.Text, {
 								variant: 'text-sm/medium',
 								className: A.body,
@@ -110,7 +96,7 @@ function N(e) {
 								},
 								children: S.Z.Messages.STREAM_PREMIUM_UPSELL_SECONDARY_CTA
 							}),
-							(0, a.jsx)(I.Z, {
+							(0, a.jsx)(m.Z, {
 								showGradient: !0,
 								premiumModalAnalyticsLocation: {
 									section: N,
@@ -131,6 +117,4 @@ function N(e) {
 		]
 	});
 }
-((r = i || (i = {}))[(r.NONE = 0)] = 'NONE'),
-	(r[(r.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'),
-	(r[(r.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER');
+((r = i || (i = {}))[(r.NONE = 0)] = 'NONE'), (r[(r.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'), (r[(r.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER');

@@ -55,9 +55,7 @@ t.Z = function (e) {
 	a.useEffect(() => {
 		c.Z.wait(async () => {
 			let e = Date.now();
-			await Promise.all([d.jg(), (0, _.X8)(), d.tZ(), (0, u.Y2)(K, null, Z.JjL.DISCOVERY)]),
-				(F.current = Date.now() - e),
-				w(!1);
+			await Promise.all([d.jg(), (0, _.X8)(), d.tZ(), (0, u.Y2)(K, null, Z.JjL.DISCOVERY)]), (F.current = Date.now() - e), w(!1);
 		});
 	}, [K]),
 	a.useEffect(() => {

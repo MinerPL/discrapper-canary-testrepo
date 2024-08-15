@@ -29,35 +29,16 @@ function o(e) {
 function l(e, t, n, r) {
 	var i, a, l;
 	let u;
-	return (u = r
-		? e
-			? s.Z.Messages.SUPER_REACT_REMOVE_WITH_COUNT_A11Y_LABEL
-			: s.Z.Messages.SUPER_REACT_WITH_COUNT_A11Y_LABEL
-		: e
-			? s.Z.Messages.REACT_REMOVE_WITH_COUNT_A11Y_LABEL
-			: s.Z.Messages.REACT_WITH_COUNT_A11Y_LABEL).format({
+	return (u = r ? (e ? s.Z.Messages.SUPER_REACT_REMOVE_WITH_COUNT_A11Y_LABEL : s.Z.Messages.SUPER_REACT_WITH_COUNT_A11Y_LABEL) : e ? s.Z.Messages.REACT_REMOVE_WITH_COUNT_A11Y_LABEL : s.Z.Messages.REACT_WITH_COUNT_A11Y_LABEL).format({
 		reactions: t,
-		emojiName:
-			null !==
-				(l =
-					null === (a = o(n)) || void 0 === a
-						? void 0
-						: null === (i = a.replace(/[:_]/g, ' ')) || void 0 === i
-							? void 0
-							: i.trim()) && void 0 !== l
-				? l
-				: ''
+		emojiName: null !== (l = null === (a = o(n)) || void 0 === a ? void 0 : null === (i = a.replace(/[:_]/g, ' ')) || void 0 === i ? void 0 : i.trim()) && void 0 !== l ? l : ''
 	});
 }
 function u(e) {
 	var t, n, r;
 	return {
 		id: null !== (t = e.id) && void 0 !== t ? t : null,
-		name:
-			null !== (r = null !== (n = null != e.id ? e.name : e.optionallyDiverseSequence) && void 0 !== n ? n : e.name) &&
-			void 0 !== r
-				? r
-				: '',
+		name: null !== (r = null !== (n = null != e.id ? e.name : e.optionallyDiverseSequence) && void 0 !== n ? n : e.name) && void 0 !== r ? r : '',
 		animated: !!e.animated
 	};
 }

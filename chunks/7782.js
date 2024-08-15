@@ -13,8 +13,8 @@ var i = n(735250),
 	_ = n(621853),
 	f = n(171368),
 	E = n(433355),
-	g = n(699516),
-	C = n(594174),
+	C = n(699516),
+	g = n(594174),
 	I = n(768581),
 	x = n(525541),
 	T = n(981631),
@@ -102,7 +102,7 @@ let A = (e) => {
 	M = (e) => {
 		var t;
 		let { relationshipType: n, userId: a, showingBanner: s } = e,
-			l = null === (t = C.default.getUser(a)) || void 0 === t ? void 0 : t.bot,
+			l = null === (t = g.default.getUser(a)) || void 0 === t ? void 0 : t.bot,
 			c = () => {
 				o.Z.addRelationship({
 					userId: a,
@@ -208,9 +208,7 @@ let A = (e) => {
 	b = (e) => {
 		let { channelId: t, otherUserId: n } = e,
 			s = a.useCallback(() => {
-				(0, r.showToast)(
-					(0, r.createToast)(S.Z.Messages.MESSAGE_REQUESTS_SPAM_REQUEST_ERROR_ALERT_TITLE, r.ToastType.FAILURE)
-				);
+				(0, r.showToast)((0, r.createToast)(S.Z.Messages.MESSAGE_REQUESTS_SPAM_REQUEST_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
 			}, []),
 			l = a.useCallback(() => {
 				p.Z.closeChannelSidebar(E.uZ);
@@ -226,19 +224,19 @@ let A = (e) => {
 				isOptimisticAccepted: _,
 				isOptimisticRejected: f
 			} = (0, d.m)({
-				user: C.default.getUser(n),
+				user: g.default.getUser(n),
 				onError: s,
 				onAcceptSuccess: o,
 				onRejectSuccess: l
 			}),
-			g = h || m || _ || f;
+			C = h || m || _ || f;
 		return (0, i.jsxs)(i.Fragment, {
 			children: [
 				(0, i.jsx)(r.Button, {
 					className: Z.action,
 					size: r.Button.Sizes.TINY,
 					onClick: () => c(t),
-					disabled: g,
+					disabled: C,
 					submitting: h,
 					children: S.Z.Messages.MESSAGE_REQUEST_ACCEPT
 				}),
@@ -247,7 +245,7 @@ let A = (e) => {
 					size: r.Button.Sizes.TINY,
 					onClick: () => u(t),
 					color: r.Button.Colors.PRIMARY,
-					disabled: g,
+					disabled: C,
 					submitting: m,
 					children: S.Z.Messages.MESSAGE_REQUEST_IGNORE
 				})
@@ -258,7 +256,7 @@ t.Z = (e) => {
 	let { userId: t, channel: n, showingBanner: a } = e,
 		{ channelId: r } = (0, h._)(),
 		o = (0, l.e7)([u.Z], () => null != r && u.Z.isSpam(r), [r]),
-		c = (0, l.e7)([g.Z], () => g.Z.getRelationshipType(t), [t]),
+		c = (0, l.e7)([C.Z], () => C.Z.getRelationshipType(t), [t]),
 		d = n.id === r;
 	return t === N.fL
 		? null

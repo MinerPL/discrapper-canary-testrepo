@@ -24,16 +24,7 @@ var a = s(735250),
 	I = s(816497);
 function L(e) {
 	var t;
-	let {
-			guildTemplate: s,
-			onClose: l,
-			onBack: L,
-			onHubGuildInfoSet: f,
-			onGuildCreated: T,
-			isSlideReady: h,
-			hasFooter: g = !0,
-			isCommunity: N = !1
-		} = e,
+	let { guildTemplate: s, onClose: l, onBack: L, onHubGuildInfoSet: f, onGuildCreated: T, isSlideReady: h, hasFooter: g = !0, isCommunity: N = !1 } = e,
 		[B, M] = n.useState(C.Z.getGuildNameSuggestion()),
 		[Z, p] = n.useState(null),
 		[b, j] = n.useState(!1),

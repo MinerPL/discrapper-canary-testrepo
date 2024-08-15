@@ -162,11 +162,7 @@ let c = s
 				return BigInt(e);
 			}
 		: function (e) {
-				return e instanceof E
-					? e
-					: ('number' == typeof e && (e = e.toString()), null != I[e])
-						? I[e]
-						: ((I[e] = E.fromString(e)), I[e]);
+				return e instanceof E ? e : ('number' == typeof e && (e = e.toString()), null != I[e]) ? I[e] : ((I[e] = E.fromString(e)), I[e]);
 			},
 	l = u(0),
 	R = s

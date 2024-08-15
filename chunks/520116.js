@@ -39,9 +39,7 @@ function O(e) {
 			(e) => {
 				if ('ArrowLeft' === e.key) {
 					var t;
-					null === (t = document.querySelector('[data-recents-channel="'.concat(n.id, '"]'))) ||
-						void 0 === t ||
-						t.focus();
+					null === (t = document.querySelector('[data-recents-channel="'.concat(n.id, '"]'))) || void 0 === t || t.focus();
 				}
 			},
 			[n.id]
@@ -85,11 +83,7 @@ function M(e) {
 		M = (0, E.P1)(s),
 		v = !1,
 		L = 0 === a.messages.length || r()(a.messages[0].timestamp).isSame(r()(), 'day'),
-		Z =
-			null !==
-				(n = null === (t = f.default.getUser(h.default.getId())) || void 0 === t ? void 0 : t.hasFlag(S.xW$.SPAMMER)) &&
-			void 0 !== n &&
-			n,
+		Z = null !== (n = null === (t = f.default.getUser(h.default.getId())) || void 0 === t ? void 0 : t.hasFlag(S.xW$.SPAMMER)) && void 0 !== n && n,
 		P = [];
 	if (!a.collapsed) {
 		let e = null,

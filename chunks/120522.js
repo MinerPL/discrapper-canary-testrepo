@@ -27,10 +27,7 @@ async function _() {
 						t = {};
 					for (let i in e) {
 						var n, r;
-						!0 ===
-							(null !== (r = null === (n = e[i]) || void 0 === n ? void 0 : n.available) && void 0 !== r
-								? r
-								: void 0) && (t[i] = !0);
+						!0 === (null !== (r = null === (n = e[i]) || void 0 === n ? void 0 : n.available) && void 0 !== r ? r : void 0) && (t[i] = !0);
 					}
 					return t;
 				})()
@@ -55,11 +52,7 @@ async function E(e) {
 				return (
 					f(e, {
 						start_time: i()().toISOString(),
-						end_time: (c.Z.getCurrentConfig({ location: 'activatePerkDemo' }, { autoTrackExposure: !1 })
-							.extendedDemoDuration
-							? i()().add(t.demoDuration, 'days')
-							: i()().add(1, 'hour')
-						).toISOString()
+						end_time: (c.Z.getCurrentConfig({ location: 'activatePerkDemo' }, { autoTrackExposure: !1 }).extendedDemoDuration ? i()().add(t.demoDuration, 'days') : i()().add(1, 'hour')).toISOString()
 					}),
 					!0
 				);

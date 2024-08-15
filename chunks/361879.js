@@ -3,11 +3,7 @@ var r = n(814033),
 	a = i.assert;
 function s(e, t) {
 	if (e instanceof s) return e;
-	!this._importDER(e, t) &&
-		(a(e.r && e.s, 'Signature without r or s'),
-		(this.r = new r(e.r, 16)),
-		(this.s = new r(e.s, 16)),
-		void 0 === e.recoveryParam ? (this.recoveryParam = null) : (this.recoveryParam = e.recoveryParam));
+	!this._importDER(e, t) && (a(e.r && e.s, 'Signature without r or s'), (this.r = new r(e.r, 16)), (this.s = new r(e.s, 16)), void 0 === e.recoveryParam ? (this.recoveryParam = null) : (this.recoveryParam = e.recoveryParam));
 }
 function o() {
 	this.place = 0;
@@ -60,12 +56,7 @@ function c(e, t) {
 	(s.prototype.toDER = function (e) {
 		var t = this.r.toArray(),
 			n = this.s.toArray();
-		for (
-			128 & t[0] && (t = [0].concat(t)), 128 & n[0] && (n = [0].concat(n)), t = u(t), n = u(n);
-			!n[0] && !(128 & n[1]);
-
-		)
-			n = n.slice(1);
+		for (128 & t[0] && (t = [0].concat(t)), 128 & n[0] && (n = [0].concat(n)), t = u(t), n = u(n); !n[0] && !(128 & n[1]); ) n = n.slice(1);
 		var r = [2];
 		c(r, t.length), (r = r.concat(t)).push(2), c(r, n.length);
 		var a = r.concat(n),

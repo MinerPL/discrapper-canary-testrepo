@@ -16,9 +16,7 @@ r(
 			var n,
 				r,
 				a = o(this);
-			return s(a, e)
-				? ((n = i(a, e)), 'update' in t && ((n = t.update(n, e, a)), c(a, e, n)), n)
-				: ((r = t.insert(e, a)), c(a, e, r), r);
+			return s(a, e) ? ((n = i(a, e)), 'update' in t && ((n = t.update(n, e, a)), c(a, e, n)), n) : ((r = t.insert(e, a)), c(a, e, r), r);
 		}
 	}
 );

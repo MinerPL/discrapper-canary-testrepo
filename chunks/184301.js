@@ -29,8 +29,7 @@ async function c() {
 	let l = i[0],
 		c = i[1];
 	if ('string' == typeof l && ('string' == typeof c || null == c)) (e = l), (t = c), (n = i[2]);
-	else if (l instanceof a.Z && ('object' == typeof c || null == c))
-		(e = l.id), (t = l.getAvatarURL(void 0, 80)), (n = c);
+	else if (l instanceof a.Z && ('object' == typeof c || null == c)) (e = l.id), (t = l.getAvatarURL(void 0, 80)), (n = c);
 	else throw Error('Invalid arguments');
 	if (null == e) return Promise.resolve();
 	let [d] = await Promise.all([

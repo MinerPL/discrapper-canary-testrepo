@@ -57,10 +57,7 @@ t.Z = (e) => {
 				l,
 				{
 					element: e,
-					initialOption:
-						null !== (a = null == i ? void 0 : null === (t = i[s]) || void 0 === t ? void 0 : t.value) && void 0 !== a
-							? a
-							: void 0,
+					initialOption: null !== (a = null == i ? void 0 : null === (t = i[s]) || void 0 === t ? void 0 : t.value) && void 0 !== a ? a : void 0,
 					onChange: (e) => n(s, e)
 				},
 				s

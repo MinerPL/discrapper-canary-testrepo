@@ -29,14 +29,7 @@ function M(t) {
 		C = E.Z.Messages.STAGE_FULL_TITLE,
 		f = O ? h < T.TU7 : (null == g ? void 0 : g.premiumTier) !== T.Eu4.TIER_3 && h <= T.eez,
 		m = d.Z.can(_.yP, M);
-	s =
-		O && (null == g ? void 0 : g.premiumTier) === T.Eu4.TIER_3
-			? h <= T.TU7
-				? E.Z.Messages.STAGE_FULL_BOOST_MORE_BODY
-				: E.Z.Messages.STAGE_FULL_MAX_BODY
-			: f
-				? E.Z.Messages.STAGE_FULL_BODY
-				: E.Z.Messages.STAGE_FULL_MAX_BODY;
+	s = O && (null == g ? void 0 : g.premiumTier) === T.Eu4.TIER_3 ? (h <= T.TU7 ? E.Z.Messages.STAGE_FULL_BOOST_MORE_BODY : E.Z.Messages.STAGE_FULL_MAX_BODY) : f ? E.Z.Messages.STAGE_FULL_BODY : E.Z.Messages.STAGE_FULL_MAX_BODY;
 	let x = () => {
 			B(),
 				r.default.track(T.rMx.BOOSTING_UPSELL_CLICKED, {

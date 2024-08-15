@@ -119,9 +119,7 @@ function W() {
 			let e = (0, C.e5)({
 				...(0, m.ZP)({
 					channelId: '1337',
-					content: B.Z.Messages.ACCESSIBILITY_SETTINGS_SATURATION_LINK_PREVIEW_MESSAGE.format({
-						previewLink: 'https://discord.com/accessibility'
-					})
+					content: B.Z.Messages.ACCESSIBILITY_SETTINGS_SATURATION_LINK_PREVIEW_MESSAGE.format({ previewLink: 'https://discord.com/accessibility' })
 				}),
 				state: Z.yb.SENT,
 				id: ''.concat(0)
@@ -311,12 +309,9 @@ function J() {
 	}, [e]);
 	let i = a.useRef(null);
 	a.useEffect(() => {
-		null != i.current && (clearTimeout(i.current), (i.current = null)),
-			s !== e && (i.current = setTimeout(() => (0, u.qz)(s), 150));
+		null != i.current && (clearTimeout(i.current), (i.current = null)), s !== e && (i.current = setTimeout(() => (0, u.qz)(s), 150));
 	}, [s, e]);
-	let r = B.Z.Messages.ACCESSIBILITY_SETTINGS_SYNC_FORCED_COLORS_DESCRIPTION.format({
-		learnMoreLink: M.Z.getArticleURL(Z.BhN.FORCED_COLORS)
-	});
+	let r = B.Z.Messages.ACCESSIBILITY_SETTINGS_SYNC_FORCED_COLORS_DESCRIPTION.format({ learnMoreLink: M.Z.getArticleURL(Z.BhN.FORCED_COLORS) });
 	return (0, n.jsx)(d.FormItem, {
 		title: B.Z.Messages.ACCESSIBILITY_SETTINGS_CONTRAST,
 		className: G.marginTop20,
@@ -363,9 +358,7 @@ function $() {
 			(0, n.jsx)(d.FormText, {
 				type: d.FormText.Types.DESCRIPTION,
 				className: G.marginBottom8,
-				children: B.Z.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_DESCRIPTION.format({
-					helpdeskArticle: M.Z.getArticleURL(Z.BhN.REDUCED_MOTION)
-				})
+				children: B.Z.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_DESCRIPTION.format({ helpdeskArticle: M.Z.getArticleURL(Z.BhN.REDUCED_MOTION) })
 			}),
 			(0, n.jsx)(d.Checkbox, {
 				className: G.marginTop20,

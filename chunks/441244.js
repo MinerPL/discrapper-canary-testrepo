@@ -50,14 +50,7 @@ t.Z = function (e, t, n) {
 									'listener',
 									new s.F(e, () => {
 										let e = this.memoizedGetStateFromStores.getCachedResult(this.props.childProps);
-										if (
-											!(
-												null != e &&
-												(this.memoizedGetStateFromStores.clear(),
-												(0, a.Z)(this.memoizedGetStateFromStores(this.props.childProps), e))
-											)
-										)
-											this.forceUpdate();
+										if (!(null != e && (this.memoizedGetStateFromStores.clear(), (0, a.Z)(this.memoizedGetStateFromStores(this.props.childProps), e)))) this.forceUpdate();
 									})
 								);
 						}
@@ -98,14 +91,7 @@ t.Z = function (e, t, n) {
 									'listener',
 									new s.F(e, () => {
 										let e = this.memoizedGetStateFromStores.getCachedResult(this.props);
-										if (
-											!(
-												null != e &&
-												(this.memoizedGetStateFromStores.clear(),
-												(0, a.Z)(this.memoizedGetStateFromStores(this.props), e))
-											)
-										)
-											this.forceUpdate();
+										if (!(null != e && (this.memoizedGetStateFromStores.clear(), (0, a.Z)(this.memoizedGetStateFromStores(this.props), e)))) this.forceUpdate();
 									})
 								);
 						}
@@ -117,8 +103,7 @@ t.Z = function (e, t, n) {
 function u(e) {
 	let t = null,
 		n = null,
-		r = (e) =>
-			null != t && null != n && (0, a.Z)(t, e) ? n : null != t && null != n && (0, a.Z)(t, e) ? ((t = e), n) : null,
+		r = (e) => (null != t && null != n && (0, a.Z)(t, e) ? n : null != t && null != n && (0, a.Z)(t, e) ? ((t = e), n) : null),
 		i = (i) => {
 			let a = r(i);
 			return null != a ? a : (n = e((t = i)));

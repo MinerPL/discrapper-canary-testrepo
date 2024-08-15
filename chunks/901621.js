@@ -24,12 +24,7 @@ function p(e) {
 					l = u.Z.getVoiceStates(e);
 				for (let r in l) {
 					let s = a.Z.getBasicChannel(l[r].channelId);
-					if (
-						null != s &&
-						s.type !== i.d.GUILD_STAGE_VOICE &&
-						n !== s.id &&
-						!!o.Z.canBasicChannel(h.S7T.VIEW_CHANNEL, s)
-					)
+					if (null != s && s.type !== i.d.GUILD_STAGE_VOICE && n !== s.id && !!o.Z.canBasicChannel(h.S7T.VIEW_CHANNEL, s))
 						c.Z.getActivities(r, e).forEach((e) => {
 							let n = e.application_id;
 							if (e.type !== h.IIU.PLAYING || null == n) return [];

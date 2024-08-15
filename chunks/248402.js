@@ -12,8 +12,8 @@ var a,
 	f = n(569545),
 	h = n(199902),
 	p = n(314897),
-	I = n(131951),
-	m = n(606304),
+	m = n(131951),
+	I = n(606304),
 	T = n(354459);
 function g() {
 	let e,
@@ -24,27 +24,16 @@ function g() {
 		e = E.Z.getSelectedParticipantId(r);
 		let t = h.Z.getLastActiveStream(),
 			u = null != e ? E.Z.getParticipant(r, e) : null;
-		if (
-			(((null == u ? void 0 : u.type) === T.fO.ACTIVITY ||
-				((null == u ? void 0 : u.type) === T.fO.USER &&
-					!(null === (n = u.voiceState) || void 0 === n ? void 0 : n.selfVideo))) &&
-				(e = null),
-			null != t &&
-				null == e &&
-				(e = null === (a = E.Z.getParticipant(r, (0, f.V9)(t))) || void 0 === a ? void 0 : a.id),
-			null == e)
-		) {
+		if ((((null == u ? void 0 : u.type) === T.fO.ACTIVITY || ((null == u ? void 0 : u.type) === T.fO.USER && !(null === (n = u.voiceState) || void 0 === n ? void 0 : n.selfVideo))) && (e = null), null != t && null == e && (e = null === (a = E.Z.getParticipant(r, (0, f.V9)(t))) || void 0 === a ? void 0 : a.id), null == e)) {
 			let t = p.default.getId(),
-				n = c()(E.Z.getVideoParticipants(r)).filter(
-					(e) => e.type === T.fO.USER && e.user.id !== t && !I.Z.isLocalVideoDisabled(e.user.id)
-				),
+				n = c()(E.Z.getVideoParticipants(r)).filter((e) => e.type === T.fO.USER && e.user.id !== t && !m.Z.isLocalVideoDisabled(e.user.id)),
 				a = n.map((e) => e.user.id),
 				u = Date.now();
 			null ==
 				(e =
 					null ===
 						(s = n
-							.map((e) => [e.user.id, m.Z.getSpeakingDuration(e.user.id, u)])
+							.map((e) => [e.user.id, I.Z.getSpeakingDuration(e.user.id, u)])
 							.filter((e) => {
 								let [t, n] = e;
 								return 0 !== n;
@@ -54,15 +43,7 @@ function g() {
 								return -n;
 							})) || void 0 === s
 						? void 0
-						: s[0]) &&
-				(e =
-					null != i && a.has(i)
-						? i
-						: null === (l = n.first()) || void 0 === l
-							? void 0
-							: null === (o = l.user) || void 0 === o
-								? void 0
-								: o.id);
+						: s[0]) && (e = null != i && a.has(i) ? i : null === (l = n.first()) || void 0 === l ? void 0 : null === (o = l.user) || void 0 === o ? void 0 : o.id);
 		}
 	}
 	i !== e && ((i = e), t && v.emitChange());
@@ -73,7 +54,7 @@ function A() {
 }
 class N extends (a = d.ZP.Store) {
 	initialize() {
-		this.waitFor(E.Z, p.default, m.Z, h.Z, I.Z), this.syncWith([E.Z, h.Z], A);
+		this.waitFor(E.Z, p.default, I.Z, h.Z, m.Z), this.syncWith([E.Z, h.Z], A);
 	}
 	getSpeaker(e) {
 		return r !== e && ((r = e), g(!1)), null != i ? i : p.default.getId();

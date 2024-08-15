@@ -4,7 +4,7 @@ n.r(t),
 			return A;
 		},
 		AnalyticsContext: function () {
-			return I;
+			return m;
 		},
 		AnalyticsSchema: function () {
 			return d;
@@ -47,8 +47,8 @@ var r = n(470079),
 	f = n(981631),
 	h = n(94752),
 	p = n(689938);
-let I = r.createContext({ location: {} }),
-	m = {},
+let m = r.createContext({ location: {} }),
+	I = {},
 	T = performance.now(),
 	g = [];
 function S(e) {
@@ -99,10 +99,7 @@ let A = {
 	},
 	[f.rMx.CHANNEL_OPENED]: {
 		throttlePeriod: 900000,
-		throttleKeys: (e) =>
-			null != e.channel_static_route
-				? [e.guild_id, e.channel_static_route, e.channel_view]
-				: [e.channel_id, e.channel_view]
+		throttleKeys: (e) => (null != e.channel_static_route ? [e.guild_id, e.channel_static_route, e.channel_view] : [e.channel_id, e.channel_view])
 	},
 	[f.rMx.TEXT_IN_VOICE_OPENED]: {
 		throttlePeriod: 86400000,
@@ -257,7 +254,7 @@ let v = () => h.E.NONE,
 		TRACK_ACTION_NAME: 'TRACK'
 	});
 function R(e) {
-	return (m = e);
+	return (I = e);
 }
 function C(e) {
 	var t, n, r, i, a;
@@ -284,28 +281,15 @@ function C(e) {
 					})
 		};
 	}
-	(s.client_performance_cpu = _.Z.getCurrentCPUUsagePercent()),
-		(s.client_performance_memory = _.Z.getCurrentMemoryUsageKB()),
-		(s.cpu_core_count = _.Z.getCPUCoreCount()),
-		(s.accessibility_features = v()),
-		(s.rendered_locale = p.Z.getLocale()),
-		(s.uptime_app = Math.floor((performance.now() - T) / 1000));
+	(s.client_performance_cpu = _.Z.getCurrentCPUUsagePercent()), (s.client_performance_memory = _.Z.getCurrentMemoryUsageKB()), (s.cpu_core_count = _.Z.getCPUCoreCount()), (s.accessibility_features = v()), (s.rendered_locale = p.Z.getLocale()), (s.uptime_app = Math.floor((performance.now() - T) / 1000));
 	let o = _.Z.getProcessUptime();
 	null != o && (s.uptime_process_renderer = Math.floor(o));
-	let { utmSource: l, utmMedium: u, utmCampaign: c, utmContent: d } = m;
-	return (
-		(s.utm_source = null !== (t = s.utm_source) && void 0 !== t ? t : l),
-		(s.utm_medium = null !== (n = s.utm_medium) && void 0 !== n ? n : u),
-		(s.utm_campaign = null !== (r = s.utm_campaign) && void 0 !== r ? r : c),
-		(s.utm_content = null !== (i = s.utm_content) && void 0 !== i ? i : d),
-		g.forEach((e) => e(s)),
-		s
-	);
+	let { utmSource: l, utmMedium: u, utmCampaign: c, utmContent: d } = I;
+	return (s.utm_source = null !== (t = s.utm_source) && void 0 !== t ? t : l), (s.utm_medium = null !== (n = s.utm_medium) && void 0 !== n ? n : u), (s.utm_campaign = null !== (r = s.utm_campaign) && void 0 !== r ? r : c), (s.utm_content = null !== (i = s.utm_content) && void 0 !== i ? i : d), g.forEach((e) => e(s)), s;
 }
 function y(e, t) {
 	let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-	c.default.isLoggingAnalyticsEvents && console.info('AnalyticsUtils.track(...):', e, t),
-		n ? l.Hj('Analytics', e, t) : l.Hj('Analytics', e);
+	c.default.isLoggingAnalyticsEvents && console.info('AnalyticsUtils.track(...):', e, t), n ? l.Hj('Analytics', e, t) : l.Hj('Analytics', e);
 }
 let D = (0, a.trackMaker)({
 	analyticEventConfigs: A,

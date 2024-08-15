@@ -40,8 +40,7 @@ function I(e) {
 						compact: !0
 					})
 				: null,
-		_ =
-			null !== (n = null === (t = l.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0,
+		_ = null !== (n = null === (t = l.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0,
 		m = _ > 0 ? f.Z.Messages.APP_DIRECTORY_SHORT_GUILD_COUNT.format({ guildCount: _ }) : void 0;
 	return (0, a.jsx)(g.Z, {
 		imageSrc: c.imageSrc,

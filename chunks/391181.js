@@ -20,22 +20,7 @@ var i = t(120356),
 	f = t(689938),
 	E = t(954888);
 function I(e) {
-	let {
-		showEditProduct: n,
-		showUnpublishProduct: t,
-		showCopyLink: i,
-		showTestDownload: o,
-		showDeleteProduct: u,
-		showReportProduct: a,
-		onEditProduct: s,
-		onUnpublishProduct: c,
-		onDeleteProduct: d,
-		onCopyLink: _,
-		onTestDownload: I,
-		onReportProduct: g,
-		closePopout: p,
-		onSelect: S
-	} = e;
+	let { showEditProduct: n, showUnpublishProduct: t, showCopyLink: i, showTestDownload: o, showDeleteProduct: u, showReportProduct: a, onEditProduct: s, onUnpublishProduct: c, onDeleteProduct: d, onCopyLink: _, onTestDownload: I, onReportProduct: g, closePopout: p, onSelect: S } = e;
 	return (0, r.jsx)('div', {
 		className: E.menuContainer,
 		children: (0, r.jsxs)(l.Menu, {
@@ -100,22 +85,7 @@ function I(e) {
 	});
 }
 function g(e) {
-	let {
-		product: n,
-		guildId: t,
-		showEditProduct: i,
-		showUnpublishProduct: o,
-		showTestDownload: u,
-		showCopyLink: a,
-		showDeleteProduct: s,
-		showReportProduct: c,
-		onEditProduct: d,
-		onUnpublishProduct: _,
-		onDeleteProduct: g,
-		onCopyProductLink: p,
-		onTestDownload: S,
-		onReportProduct: C
-	} = e;
+	let { product: n, guildId: t, showEditProduct: i, showUnpublishProduct: o, showTestDownload: u, showCopyLink: a, showDeleteProduct: s, showReportProduct: c, onEditProduct: d, onUnpublishProduct: _, onDeleteProduct: g, onCopyProductLink: p, onTestDownload: S, onReportProduct: C } = e;
 	return (0, r.jsx)('div', {
 		onClick: (e) => {
 			e.stopPropagation();
@@ -163,16 +133,7 @@ function g(e) {
 	});
 }
 function p(e) {
-	let {
-			product: n,
-			guildId: t,
-			onEditProduct: i,
-			onUnpublishProduct: p,
-			onDeleteProduct: S,
-			onCopyProductLink: C,
-			onTestDownload: T,
-			disabled: m = !1
-		} = e,
+	let { product: n, guildId: t, onEditProduct: i, onUnpublishProduct: p, onDeleteProduct: S, onCopyProductLink: C, onTestDownload: T, disabled: m = !1 } = e,
 		A = (0, a.U)(n, 600),
 		N = null !== n.price_tier ? (0, s.T4)(n.price_tier, _.pK.USD) : void 0,
 		h = (0, c.C)(n);

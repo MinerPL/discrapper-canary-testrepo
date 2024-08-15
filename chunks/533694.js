@@ -68,32 +68,10 @@ function T(e) {
 		N = E.Z.Messages.SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE.format({
 			username: T.nick,
 			usernameHook: h,
-			productName:
-				null !==
-					(s =
-						null === (a = d.purchaseNotification) || void 0 === a
-							? void 0
-							: null === (t = a.guild_product_purchase) || void 0 === t
-								? void 0
-								: t.product_name) && void 0 !== s
-					? s
-					: '',
+			productName: null !== (s = null === (a = d.purchaseNotification) || void 0 === a ? void 0 : null === (t = a.guild_product_purchase) || void 0 === t ? void 0 : t.product_name) && void 0 !== s ? s : '',
 			handleProductListingClick: () => {
 				var e, t, n;
-				(0, u.uL)(
-					_.Z5c.GUILD_PRODUCT(
-						r.guild_id,
-						null !==
-							(n =
-								null === (t = d.purchaseNotification) || void 0 === t
-									? void 0
-									: null === (e = t.guild_product_purchase) || void 0 === e
-										? void 0
-										: e.listing_id) && void 0 !== n
-							? n
-							: ''
-					)
-				);
+				(0, u.uL)(_.Z5c.GUILD_PRODUCT(r.guild_id, null !== (n = null === (t = d.purchaseNotification) || void 0 === t ? void 0 : null === (e = t.guild_product_purchase) || void 0 === e ? void 0 : e.listing_id) && void 0 !== n ? n : ''));
 			}
 		});
 	return (0, i.jsxs)(i.Fragment, {

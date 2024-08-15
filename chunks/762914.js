@@ -18,10 +18,7 @@ function s(e) {
 	return !!t && !!(null == n ? void 0 : n.isBroadcastChannel());
 }
 function o(e) {
-	let { canViewBroadcasts: t } = a.Z.getCurrentConfig(
-		{ location: 'get_is_broadcasting_gdm' },
-		{ autoTrackExposure: !1 }
-	);
+	let { canViewBroadcasts: t } = a.Z.getCurrentConfig({ location: 'get_is_broadcasting_gdm' }, { autoTrackExposure: !1 });
 	if (!t) return !1;
 	let n = i.Z.getChannel(e);
 	return !!(null == n ? void 0 : n.isBroadcastChannel());

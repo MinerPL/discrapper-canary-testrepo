@@ -22,10 +22,7 @@ function c(e, t) {
 	let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
 		c = arguments.length > 3 ? arguments[3] : void 0;
 	if (null != e && e.type === o.IIU.CUSTOM_STATUS) return null != e.state ? e.state.trim() : null;
-	if (null != t)
-		return null == e || e.type !== o.IIU.PLAYING
-			? l.Z.Messages.SHARING_SCREEN
-			: u(n)[o.IIU.STREAMING].format({ name: e.name });
+	if (null != t) return null == e || e.type !== o.IIU.PLAYING ? l.Z.Messages.SHARING_SCREEN : u(n)[o.IIU.STREAMING].format({ name: e.name });
 	if (c && null != e && e.type === o.IIU.HANG_STATUS) return (0, r.O8)(e);
 	if (null == e || null == e.name) return null;
 	if ((0, s.Z)(e)) {
@@ -46,9 +43,7 @@ function c(e, t) {
 						return null;
 					case o.IIU.PLAYING:
 					default:
-						return n
-							? l.Z.Messages.UNFORMATTED_PLAYING_GAME.format({ game: t })
-							: l.Z.Messages.PLAYING_GAME.format({ game: t });
+						return n ? l.Z.Messages.UNFORMATTED_PLAYING_GAME.format({ game: t }) : l.Z.Messages.PLAYING_GAME.format({ game: t });
 				}
 			})(e.type, e.name, n);
 }

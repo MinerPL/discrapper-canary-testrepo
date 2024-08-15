@@ -52,10 +52,7 @@ function u(e) {
 }
 function d(e) {
 	var t;
-	return ((t = e.filter((e) => e.featurableInDirectory && m(e))), l().orderBy(t, [(e) => e.createdAt], ['desc'])).slice(
-		0,
-		c
-	);
+	return ((t = e.filter((e) => e.featurableInDirectory && m(e))), l().orderBy(t, [(e) => e.createdAt], ['desc'])).slice(0, c);
 }
 function h(e) {
 	return u(e);

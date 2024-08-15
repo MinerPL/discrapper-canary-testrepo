@@ -15,10 +15,7 @@ var a = t(442837),
 	c = t(689938);
 function I(n) {
 	let e = (0, a.e7)([r.ZP], () => r.ZP.getRunningVerifiedApplicationIds().includes(n.id), [n.id]),
-		[t, I] = (0, a.Wu)([d.Z], () => [d.Z.isUpToDate(n.id, n.branchId), d.Z.shouldPatch(n.id, n.branchId)], [
-			n.branchId,
-			n.id
-		]);
+		[t, I] = (0, a.Wu)([d.Z], () => [d.Z.isUpToDate(n.id, n.branchId), d.Z.shouldPatch(n.id, n.branchId)], [n.branchId, n.id]);
 	return t && !e && I
 		? (0, i.jsx)(l.MenuItem, {
 				id: 'repair',

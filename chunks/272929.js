@@ -31,19 +31,9 @@ let c = (0, a.animated)((e) => {
 	});
 });
 function u(e) {
-	let {
-			totalCooldownSeconds: t,
-			remainingCooldownSeconds: n,
-			onClick: u,
-			onKeyDown: d,
-			onMouseEnter: h,
-			onMouseLeave: m,
-			isActive: p = !1,
-			isCenterButton: _ = !1,
-			...f
-		} = e,
+	let { totalCooldownSeconds: t, remainingCooldownSeconds: n, onClick: u, onKeyDown: d, onMouseEnter: h, onMouseLeave: m, isActive: p = !1, isCenterButton: _ = !1, ...f } = e,
 		E = n > 0,
-		g = (0, s.useSpring)(
+		C = (0, s.useSpring)(
 			{
 				percentComplete: 0 !== n ? (t - n) / t : 0,
 				config: {
@@ -53,16 +43,16 @@ function u(e) {
 			},
 			'animate-always'
 		),
-		C = E ? r.Z.Messages.VOICE_CHANNEL_EFFECTS_COOLDOWN.format({ seconds: n }) : void 0,
+		g = E ? r.Z.Messages.VOICE_CHANNEL_EFFECTS_COOLDOWN.format({ seconds: n }) : void 0,
 		I = _ ? l.d : l.Z;
 	return (0, i.jsxs)('div', {
 		className: o.container,
 		children: [
-			E ? (0, i.jsx)(c, { percentComplete: g.percentComplete }) : null,
+			E ? (0, i.jsx)(c, { percentComplete: C.percentComplete }) : null,
 			(0, i.jsx)(I, {
 				...f,
 				disabled: E,
-				label: C,
+				label: g,
 				iconComponent: s.ReactionIcon,
 				onClick: u,
 				onKeyDown: d,

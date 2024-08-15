@@ -22,8 +22,7 @@ let u = (0, l.Yn)([
 	(0, l.GW)({
 		key: 'PAYMENTS_COUNT',
 		cellClassName: d.paymentsCountColumn,
-		renderHeader: () =>
-			(0, i.jsx)(l.qN, { children: c.Z.Messages.GUILD_PRODUCT_EARNINGS_TABLE_PURCHASES_COLUMN_TITLE }),
+		renderHeader: () => (0, i.jsx)(l.qN, { children: c.Z.Messages.GUILD_PRODUCT_EARNINGS_TABLE_PURCHASES_COLUMN_TITLE }),
 		getCount: (e) => e.paymentsCount,
 		sort: (0, l.Qg)((e) => {
 			var t;

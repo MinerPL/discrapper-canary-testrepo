@@ -9,20 +9,7 @@ n.d(t, {
 	n(47120);
 let r = /input/i,
 	i = /textarea/i,
-	a = new Set([
-		'text',
-		'password',
-		'number',
-		'date',
-		'datetime-local',
-		'time',
-		'week',
-		'month',
-		'email',
-		'search',
-		'tel',
-		'url'
-	]);
+	a = new Set(['text', 'password', 'number', 'date', 'datetime-local', 'time', 'week', 'month', 'email', 'search', 'tel', 'url']);
 function s(e) {
 	if (null == e) return !1;
 	if ('true' === e.getAttribute('contenteditable') || i.test(e.tagName)) return !0;
@@ -35,11 +22,5 @@ function s(e) {
 }
 function o(e) {
 	let { target: t } = e;
-	return null == t
-		? null
-		: 'ownerDocument' in t
-			? t.ownerDocument
-			: 'document' in t
-				? t.document
-				: (console.warn('Unable to get owner document from event', e.type), null);
+	return null == t ? null : 'ownerDocument' in t ? t.ownerDocument : 'document' in t ? t.document : (console.warn('Unable to get owner document from event', e.type), null);
 }

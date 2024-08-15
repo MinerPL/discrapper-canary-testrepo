@@ -40,10 +40,7 @@ function Z(e, n) {
 				r.MenuItem,
 				{
 					color: 'default',
-					id:
-						null !== (d = null !== (s = a.id) && void 0 !== s ? s : a.optionallyDiverseSequence) && void 0 !== d
-							? d
-							: a.name,
+					id: null !== (d = null !== (s = a.id) && void 0 !== s ? s : a.optionallyDiverseSequence) && void 0 !== d ? d : a.name,
 					label: ':'.concat(a.name, ':'),
 					imageUrl: (e) => {
 						var n;

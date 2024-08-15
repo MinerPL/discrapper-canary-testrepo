@@ -39,16 +39,7 @@ function _() {
 }
 function f(e) {
 	let t,
-		{
-			audio: n,
-			video: i,
-			screenshare: l,
-			isCurrentUserConnected: r,
-			liveStage: s,
-			activeEvent: o,
-			activity: c,
-			gaming: d
-		} = e,
+		{ audio: n, video: i, screenshare: l, isCurrentUserConnected: r, liveStage: s, activeEvent: o, activity: c, gaming: d } = e,
 		h = (0, u.vg)('Guild Icon', !1);
 	if ((!o && !s && !c && !l && !i && d && u.ZP.trackExposure({ location: 'Guild Icon' }), o)) t = a.CalendarIcon;
 	else if (s) t = a.StageIcon;

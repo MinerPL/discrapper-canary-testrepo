@@ -1,10 +1,8 @@
 e.exports = function (e) {
 	let t = {
-			keyword:
-				'if then not for in while do return else elseif break continue switch and or unless when class extends super local import export from using',
+			keyword: 'if then not for in while do return else elseif break continue switch and or unless when class extends super local import export from using',
 			literal: 'true false nil',
-			built_in:
-				'_G _VERSION assert collectgarbage dofile error getfenv getmetatable ipairs load loadfile loadstring module next pairs pcall print rawequal rawget rawset require select setfenv setmetatable tonumber tostring type unpack xpcall coroutine debug io math os package string table'
+			built_in: '_G _VERSION assert collectgarbage dofile error getfenv getmetatable ipairs load loadfile loadstring module next pairs pcall print rawequal rawget rawset require select setfenv setmetatable tonumber tostring type unpack xpcall coroutine debug io math os package string table'
 		},
 		n = '[A-Za-z$_][0-9A-Za-z$_]*',
 		r = {

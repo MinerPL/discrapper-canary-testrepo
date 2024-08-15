@@ -3,21 +3,10 @@ var r = n(814033),
 	a = n(806981),
 	s = n(685053);
 function o(e) {
-	a.call(this, 'mont', e),
-		(this.a = new r(e.a, 16).toRed(this.red)),
-		(this.b = new r(e.b, 16).toRed(this.red)),
-		(this.i4 = new r(4).toRed(this.red).redInvm()),
-		(this.two = new r(2).toRed(this.red)),
-		(this.a24 = this.i4.redMul(this.a.redAdd(this.two)));
+	a.call(this, 'mont', e), (this.a = new r(e.a, 16).toRed(this.red)), (this.b = new r(e.b, 16).toRed(this.red)), (this.i4 = new r(4).toRed(this.red).redInvm()), (this.two = new r(2).toRed(this.red)), (this.a24 = this.i4.redMul(this.a.redAdd(this.two)));
 }
 function l(e, t, n) {
-	a.BasePoint.call(this, e, 'projective'),
-		null === t && null === n
-			? ((this.x = this.curve.one), (this.z = this.curve.zero))
-			: ((this.x = new r(t, 16)),
-				(this.z = new r(n, 16)),
-				!this.x.red && (this.x = this.x.toRed(this.curve.red)),
-				!this.z.red && (this.z = this.z.toRed(this.curve.red)));
+	a.BasePoint.call(this, e, 'projective'), null === t && null === n ? ((this.x = this.curve.one), (this.z = this.curve.zero)) : ((this.x = new r(t, 16)), (this.z = new r(n, 16)), !this.x.red && (this.x = this.x.toRed(this.curve.red)), !this.z.red && (this.z = this.z.toRed(this.curve.red)));
 }
 i(o, a),
 	(e.exports = o),
@@ -45,9 +34,7 @@ i(o, a),
 		return new l(e, t[0], t[1] || e.one);
 	}),
 	(l.prototype.inspect = function () {
-		return this.isInfinity()
-			? '<EC Point Infinity>'
-			: '<EC Point x: ' + this.x.fromRed().toString(16, 2) + ' z: ' + this.z.fromRed().toString(16, 2) + '>';
+		return this.isInfinity() ? '<EC Point Infinity>' : '<EC Point x: ' + this.x.fromRed().toString(16, 2) + ' z: ' + this.z.fromRed().toString(16, 2) + '>';
 	}),
 	(l.prototype.isInfinity = function () {
 		return 0 === this.z.cmpn(0);
@@ -74,10 +61,8 @@ i(o, a),
 		return this.curve.point(o, l);
 	}),
 	(l.prototype.mul = function (e) {
-		for (var t = e.clone(), n = this, r = this.curve.point(null, null), i = []; 0 !== t.cmpn(0); t.iushrn(1))
-			i.push(t.andln(1));
-		for (var a = i.length - 1; a >= 0; a--)
-			0 === i[a] ? ((n = n.diffAdd(r, this)), (r = r.dbl())) : ((r = n.diffAdd(r, this)), (n = n.dbl()));
+		for (var t = e.clone(), n = this, r = this.curve.point(null, null), i = []; 0 !== t.cmpn(0); t.iushrn(1)) i.push(t.andln(1));
+		for (var a = i.length - 1; a >= 0; a--) 0 === i[a] ? ((n = n.diffAdd(r, this)), (r = r.dbl())) : ((r = n.diffAdd(r, this)), (n = n.dbl()));
 		return r;
 	}),
 	(l.prototype.mulAdd = function () {

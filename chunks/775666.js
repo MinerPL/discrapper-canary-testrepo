@@ -53,10 +53,7 @@ function b(e) {
 						label: I,
 						checked: t.inherited,
 						group: 'channel_notification_settings',
-						subtext:
-							n.notification === g.bL.NO_MESSAGES
-								? N.Z.Messages.FORM_LABEL_NOTHING
-								: N.Z.Messages.FORM_LABEL_LIVE_STAGES_ONLY,
+						subtext: n.notification === g.bL.NO_MESSAGES ? N.Z.Messages.FORM_LABEL_NOTHING : N.Z.Messages.FORM_LABEL_LIVE_STAGES_ONLY,
 						action: () => (0, r.JK)(e.guild_id, e.id)
 					}),
 					(0, i.jsx)(o.MenuRadioItem, {
@@ -141,10 +138,7 @@ function L(e, n) {
 		},
 		_ = (n) => {
 			let t = { message_notifications: n };
-			n === g.bL.ALL_MESSAGES &&
-				a !== S.i.ALL_MESSAGES &&
-				(t.flags = (0, d.pq)(l.ZP.getChannelIdFlags(e.guild_id, e.id), h.ic.UNREADS_ALL_MESSAGES)),
-				s.Z.updateChannelOverrideSettings(e.guild_id, e.id, t, u.UE.notifications(n));
+			n === g.bL.ALL_MESSAGES && a !== S.i.ALL_MESSAGES && (t.flags = (0, d.pq)(l.ZP.getChannelIdFlags(e.guild_id, e.id), h.ic.UNREADS_ALL_MESSAGES)), s.Z.updateChannelOverrideSettings(e.guild_id, e.id, t, u.UE.notifications(n));
 		};
 	return (0, i.jsxs)(o.MenuGroup, {
 		children: [
@@ -167,10 +161,7 @@ function L(e, n) {
 							checked: a === S.i.ONLY_MENTIONS,
 							label: N.Z.Messages.NOTIFICATION_SETTINGS_PRESETS_MENTION_ONLY,
 							disabled: a !== S.i.ONLY_MENTIONS && t === g.bL.ALL_MESSAGES,
-							subtext:
-								a !== S.i.ONLY_MENTIONS && t === g.bL.ALL_MESSAGES
-									? N.Z.Messages.NOTIFICATION_SETTINGS_UNREAD_MENTION_ONLY_DISABLED
-									: void 0,
+							subtext: a !== S.i.ONLY_MENTIONS && t === g.bL.ALL_MESSAGES ? N.Z.Messages.NOTIFICATION_SETTINGS_UNREAD_MENTION_ONLY_DISABLED : void 0,
 							action: () => c(() => (0, r.IG)(e.guild_id, e.id, S.i.ONLY_MENTIONS))
 						})
 					]
@@ -188,10 +179,7 @@ function L(e, n) {
 							id: 'push_settings_everything',
 							label: N.Z.Messages.NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES,
 							checked: t === g.bL.ALL_MESSAGES,
-							subtext:
-								a !== S.i.ALL_MESSAGES && t !== g.bL.ALL_MESSAGES
-									? N.Z.Messages.NOTIFICATION_SETTINGS_UNREAD_UPDATE_WARNING
-									: void 0,
+							subtext: a !== S.i.ALL_MESSAGES && t !== g.bL.ALL_MESSAGES ? N.Z.Messages.NOTIFICATION_SETTINGS_UNREAD_UPDATE_WARNING : void 0,
 							action: () => c(() => _(g.bL.ALL_MESSAGES))
 						}),
 						(0, i.jsx)(o.MenuRadioItem, {

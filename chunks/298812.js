@@ -144,9 +144,7 @@ function b(e) {
 	if (null == s) return null;
 	let O = A.Z.Messages.NO_CATEGORY,
 		C = (0, E.KS)(s);
-	s.type === Z.d4z.GUILD_CATEGORY && null != s.guild_id && '' !== s.guild_id
-		? (O = A.Z.Messages.NUM_CHANNELS.format({ num: null != t[s.id] ? t[s.id].length : 0 }))
-		: null != u && (O = A.Z.Messages.IN_CATEGORY.format({ categoryName: (0, N.F6)(u, x.default, _.Z) }));
+	s.type === Z.d4z.GUILD_CATEGORY && null != s.guild_id && '' !== s.guild_id ? (O = A.Z.Messages.NUM_CHANNELS.format({ num: null != t[s.id] ? t[s.id].length : 0 })) : null != u && (O = A.Z.Messages.IN_CATEGORY.format({ categoryName: (0, N.F6)(u, x.default, _.Z) }));
 	let p = T ? v.s8.CUSTOM : m.preset;
 	return (0, n.jsx)('div', {
 		children: (0, n.jsxs)('div', {

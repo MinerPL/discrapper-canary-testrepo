@@ -13,8 +13,8 @@ var i,
 	f = n(210887),
 	h = n(314897),
 	p = n(592125),
-	I = n(703558),
-	m = n(984933),
+	m = n(703558),
+	I = n(984933),
 	T = n(271383),
 	g = n(430824),
 	S = n(496675),
@@ -126,23 +126,20 @@ function j(e, t) {
 										limit: 100,
 										fuzzy: !0,
 										filter: () => !0,
-										type: m.Zb
+										type: I.Zb
 									});
 							}
 							let i = [],
 								a = [];
 							for (let e = 1; e < V.length; e += 1) {
 								let t = Z(V[e]);
-								if (null != t)
-									((t.type !== c.h8.TEXT_CHANNEL && t.type !== c.h8.VOICE_CHANNEL) ||
-										S.Z.can(y.Plq.VIEW_CHANNEL, t.record)) &&
-										a.push(t);
+								if (null != t) ((t.type !== c.h8.TEXT_CHANNEL && t.type !== c.h8.VOICE_CHANNEL) || S.Z.can(y.Plq.VIEW_CHANNEL, t.record)) && a.push(t);
 							}
 							a.length > 0 && i.push((0, c.o6)(D.Z.Messages.QUICKSWITCHER_LAST_CHANNEL), ...a);
 							let o = (function (e) {
 								let t = [];
 								return (
-									I.Z.getRecentlyEditedDrafts(I.d.ChannelMessage).forEach((n) => {
+									m.Z.getRecentlyEditedDrafts(m.d.ChannelMessage).forEach((n) => {
 										let { channelId: r } = n;
 										if (e(r)) return;
 										let i = Z(r);
@@ -157,21 +154,11 @@ function j(e, t) {
 								.map((e) => Z(e))
 								.filter(C.lm)
 								.reverse();
-							if (
-								(l.length > 0 && (i.push((0, c.o6)(D.Z.Messages.QUICKSWITCHER_MENTIONS)), (i = i.concat(l))), null != n)
-							) {
-								let e = m.ZP.getSelectableChannelIds(n)
+							if ((l.length > 0 && (i.push((0, c.o6)(D.Z.Messages.QUICKSWITCHER_MENTIONS)), (i = i.concat(l))), null != n)) {
+								let e = I.ZP.getSelectableChannelIds(n)
 									.filter((e) => {
 										let t = p.Z.getChannel(e);
-										return (
-											!(
-												null == t ||
-												e === r ||
-												V.includes(e) ||
-												O.ZP.isChannelMuted(t.guild_id, e) ||
-												(null != t.parent_id && O.ZP.isChannelMuted(t.guild_id, t.parent_id))
-											) && (0, _.d)(t)
-										);
+										return !(null == t || e === r || V.includes(e) || O.ZP.isChannelMuted(t.guild_id, e) || (null != t.parent_id && O.ZP.isChannelMuted(t.guild_id, t.parent_id))) && (0, _.d)(t);
 									})
 									.map((e) => Z(e))
 									.filter((e) => e);
@@ -196,14 +183,7 @@ function j(e, t) {
 				switch (x) {
 					case c.h8.USER: {
 						let t = g.Z.getGuild(v.Z.getGuildId());
-						e.unshift(
-							(0, c.o6)(
-								null != t
-									? D.Z.Messages.QUICKSWITCHER_QUERYMODE_USERS_IN_GUILD.format({ name: t.name })
-									: D.Z.Messages.QUICKSWITCHER_QUERYMODE_USERS
-							)
-						),
-							(G = e);
+						e.unshift((0, c.o6)(null != t ? D.Z.Messages.QUICKSWITCHER_QUERYMODE_USERS_IN_GUILD.format({ name: t.name }) : D.Z.Messages.QUICKSWITCHER_QUERYMODE_USERS)), (G = e);
 						break;
 					}
 					case c.h8.TEXT_CHANNEL:
@@ -235,10 +215,7 @@ function W() {
 class K extends (i = o.ZP.PersistedStore) {
 	initialize(e) {
 		var t;
-		this.waitFor(T.ZP, g.Z, p.Z),
-			this.syncWith([f.Z], () => !0),
-			(U = l.K.get(b) || !1),
-			(V = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : []);
+		this.waitFor(T.ZP, g.Z, p.Z), this.syncWith([f.Z], () => !0), (U = l.K.get(b) || !1), (V = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : []);
 	}
 	getState() {
 		return { channelHistory: V };
@@ -247,11 +224,7 @@ class K extends (i = o.ZP.PersistedStore) {
 		return null != r;
 	}
 	getResultTotals(e) {
-		return null == r
-			? 0
-			: null == e
-				? r.results.reduce((e, t) => (t.type !== c.h8.HEADER ? e + 1 : e), 0)
-				: r.results.reduce((t, n) => (n.type === e ? t + 1 : t), 0);
+		return null == r ? 0 : null == e ? r.results.reduce((e, t) => (t.type !== c.h8.HEADER ? e + 1 : e), 0) : r.results.reduce((t, n) => (n.type === e ? t + 1 : t), 0);
 	}
 	channelNoticePredicate(e, t) {
 		let n = Date.now() - t >= y.Hqc;

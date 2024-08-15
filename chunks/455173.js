@@ -23,13 +23,7 @@ new u(o.Z, {
 		if (100 === a && null != i) {
 			let e = d.Z.getApplication(n),
 				t = null != e ? e.getIconURL(64) : null;
-			c.default.showNotification(
-				t,
-				i.name,
-				i.description,
-				{ notif_type: 'USER_ACHIEVEMENT_UPDATE' },
-				{ omitViewTracking: !0 }
-			);
+			c.default.showNotification(t, i.name, i.description, { notif_type: 'USER_ACHIEVEMENT_UPDATE' }, { omitViewTracking: !0 });
 		}
 	}
 });

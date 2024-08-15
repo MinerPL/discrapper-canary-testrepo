@@ -11,13 +11,7 @@ var a = i(120356),
 	l = i(422559),
 	s = i(812666);
 function c(e) {
-	let {
-		grantedPermissions: n,
-		disabledPermissions: i,
-		grantedPermissionsHeader: a,
-		disabledPermissionsHeader: c,
-		className: d
-	} = e;
+	let { grantedPermissions: n, disabledPermissions: i, grantedPermissionsHeader: a, disabledPermissionsHeader: c, className: d } = e;
 	return (0, t.jsxs)('div', {
 		className: r()(s.list, d),
 		children: [

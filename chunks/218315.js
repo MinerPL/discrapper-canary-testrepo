@@ -14,8 +14,8 @@ var i = n(481060),
 	f = n(734893),
 	h = n(846121),
 	p = n(931261),
-	I = n(460347),
-	m = n(372897);
+	m = n(460347),
+	I = n(372897);
 function T(e, t, n) {
 	return (
 		t in e
@@ -48,14 +48,10 @@ class g extends a.Z {
 			T(this, 'handleGuildMemberUpdate', (e) => {
 				let { flags: t, user: a, guildId: s } = e;
 				if (a.id === o.default.getId()) {
-					if (!this.onboardingCompleteGuilds.has(s) && (0, d.yE)(null != t ? t : 0, m.q.COMPLETED_HOME_ACTIONS)) {
+					if (!this.onboardingCompleteGuilds.has(s) && (0, d.yE)(null != t ? t : 0, I.q.COMPLETED_HOME_ACTIONS)) {
 						var l, u;
 						this.onboardingCompleteGuilds.add(s);
-						let e =
-							null !== (u = null === (l = E.Z.getNewMemberActions(s)) || void 0 === l ? void 0 : l.length) &&
-							void 0 !== u
-								? u
-								: 0;
+						let e = null !== (u = null === (l = E.Z.getNewMemberActions(s)) || void 0 === l ? void 0 : l.length) && void 0 !== u ? u : 0;
 						if (0 === e) return;
 						(0, i.openModalLazy)(async () => {
 							let { default: t } = await n.e('92339').then(n.bind(n, 184100));
@@ -83,23 +79,14 @@ class g extends a.Z {
 			T(this, 'handleMessageSend', (e) => {
 				var t;
 				let { guildId: n, channelId: r, message: i } = e;
-				if (null == n || null == r || (null === (t = i.author) || void 0 === t ? void 0 : t.id) !== o.default.getId())
-					return;
+				if (null == n || null == r || (null === (t = i.author) || void 0 === t ? void 0 : t.id) !== o.default.getId()) return;
 				let a = l.Z.getChannel(r);
-				(null == a ? void 0 : a.isForumPost()) &&
-					(null == a ? void 0 : a.parent_id) != null &&
-					this._completeChatAction(n, a.parent_id),
-					this._completeChatAction(n, r);
+				(null == a ? void 0 : a.isForumPost()) && (null == a ? void 0 : a.parent_id) != null && this._completeChatAction(n, a.parent_id), this._completeChatAction(n, r);
 			}),
 			T(this, 'handleThreadCreate', (e) => {
 				var t;
 				let { channel: n, isNewlyCreated: r } = e;
-				if (
-					!!r &&
-					null != n.parent_id &&
-					!!(null === (t = l.Z.getChannel(n.parent_id)) || void 0 === t ? void 0 : t.isForumLikeChannel())
-				)
-					n.ownerId === o.default.getId() && this._completeChatAction(n.guild_id, n.parent_id);
+				if (!!r && null != n.parent_id && !!(null === (t = l.Z.getChannel(n.parent_id)) || void 0 === t ? void 0 : t.isForumLikeChannel())) n.ownerId === o.default.getId() && this._completeChatAction(n.guild_id, n.parent_id);
 			}),
 			T(this, '_completeChatAction', async (e, t) => {
 				let { memberActions: n, completedActions: r } = await this._getOrLoadOnboardingMemberActions(e),
@@ -112,18 +99,8 @@ class g extends a.Z {
 					i = s.Z.isFullServerPreview(e);
 				if (!r && !i) return {};
 				let a = u.ZP.getSelfMember(e);
-				if (
-					null == a ||
-					!(0, I.m)(
-						null !== (t = a.joinedAt) && void 0 !== t ? t : void 0,
-						null !== (n = a.flags) && void 0 !== n ? n : void 0
-					)
-				)
-					return {};
-				let [o, l] = await Promise.all([
-					this._getOrLoadOnboardingHomeSettings(e, a),
-					this._getOrLoadMemberActions(e, a)
-				]);
+				if (null == a || !(0, m.m)(null !== (t = a.joinedAt) && void 0 !== t ? t : void 0, null !== (n = a.flags) && void 0 !== n ? n : void 0)) return {};
+				let [o, l] = await Promise.all([this._getOrLoadOnboardingHomeSettings(e, a), this._getOrLoadMemberActions(e, a)]);
 				return {
 					memberActions: o,
 					completedActions: l
@@ -133,17 +110,7 @@ class g extends a.Z {
 				var n, r;
 				let i = E.Z.getNewMemberActions(e),
 					a = E.Z.getIsLoading(e);
-				if (
-					!(
-						null == i &&
-						!a &&
-						(0, I.m)(
-							null !== (n = t.joinedAt) && void 0 !== n ? n : void 0,
-							null !== (r = t.flags) && void 0 !== r ? r : void 0
-						)
-					)
-				)
-					return i;
+				if (!(null == i && !a && (0, m.m)(null !== (n = t.joinedAt) && void 0 !== n ? n : void 0, null !== (r = t.flags) && void 0 !== r ? r : void 0))) return i;
 				{
 					let t = await (0, _.cP)(e);
 					return null == t ? void 0 : t.newMemberActions;
@@ -152,9 +119,7 @@ class g extends a.Z {
 			T(this, '_getOrLoadMemberActions', async (e, t) => {
 				var n;
 				let { completedActions: r, loading: i } = h.Z.getState(e);
-				return null == r && !i && (0, d.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, m.q.STARTED_HOME_ACTIONS)
-					? await (0, _.Fg)(e)
-					: r;
+				return null == r && !i && (0, d.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, I.q.STARTED_HOME_ACTIONS) ? await (0, _.Fg)(e) : r;
 			});
 	}
 }

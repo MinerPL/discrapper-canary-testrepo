@@ -21,9 +21,7 @@ function s(e, t, n, s, o, l) {
 	}),
 		(e.accept = function (e) {
 			var t = Number(e);
-			return isNaN(t)
-				? c.call(this, e)
-				: !!u[t] || (d(new Date(t - 1), new Date(t + 1)), !!u[t]) || ((u[t] = !0), c.call(this, e));
+			return isNaN(t) ? c.call(this, e) : !!u[t] || (d(new Date(t - 1), new Date(t + 1)), !!u[t]) || ((u[t] = !0), c.call(this, e));
 		}),
 		'between' === e.method &&
 			(d(e.args.after, e.args.before),

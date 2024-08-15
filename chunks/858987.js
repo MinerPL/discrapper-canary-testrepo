@@ -21,28 +21,13 @@ var r = t(512722),
 	T = t(357831),
 	d = t(74316);
 function N(e) {
-	let {
-		purchaseType: n,
-		plan: t,
-		premiumSubscription: s,
-		isGift: r,
-		planGroup: i,
-		isPrepaidPaymentSource: a,
-		inReverseTrial: c
-	} = e;
-	if (n === _.GZ.ONE_TIME)
-		return r ? E.Z.Messages.PAYMENT_MODAL_BUTTON_PREMIUM_GIFT : E.Z.Messages.GUILD_PRODUCT_PURCHASE_MODAL_CTA;
-	if ((l()(null != t, 'Subscription plan must be selected to render SubscriptionReviewButton'), r))
-		return E.Z.Messages.PAYMENT_MODAL_BUTTON_PREMIUM_GIFT;
+	let { purchaseType: n, plan: t, premiumSubscription: s, isGift: r, planGroup: i, isPrepaidPaymentSource: a, inReverseTrial: c } = e;
+	if (n === _.GZ.ONE_TIME) return r ? E.Z.Messages.PAYMENT_MODAL_BUTTON_PREMIUM_GIFT : E.Z.Messages.GUILD_PRODUCT_PURCHASE_MODAL_CTA;
+	if ((l()(null != t, 'Subscription plan must be selected to render SubscriptionReviewButton'), r)) return E.Z.Messages.PAYMENT_MODAL_BUTTON_PREMIUM_GIFT;
 	if (c) return E.Z.Messages.BILLING_SELECT_PLAN_PREMIUM_MONTH_TIER_2;
 	if ((0, o.PV)(t.id)) {
 		if (a) return E.Z.Messages.BILLING_SELECT_PLAN;
-		if (null != s)
-			return s.isPaused
-				? E.Z.Messages.RESUME
-				: (0, u.R4)(s, t.id, i)
-					? E.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE
-					: E.Z.Messages.BILLING_SWITCH_PLAN_CHANGE;
+		if (null != s) return s.isPaused ? E.Z.Messages.RESUME : (0, u.R4)(s, t.id, i) ? E.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE : E.Z.Messages.BILLING_SWITCH_PLAN_CHANGE;
 		return (0, o.W_)(null, t);
 	}
 	return E.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN;
@@ -51,30 +36,8 @@ function M(e, n) {
 	null != e.current && (e.current.scrollIntoView({ behavior: 'smooth' }), n());
 }
 function A(e) {
-	let {
-			legalTermsNodeRef: n,
-			invoiceError: t,
-			planError: r,
-			disablePurchase: l,
-			flashLegalTerms: o,
-			isSubmitting: u,
-			premiumSubscription: _,
-			isGift: A,
-			planGroup: L,
-			isPrepaid: P,
-			isTrial: R,
-			makePurchase: S,
-			needsPaymentSource: m,
-			inReverseTrial: U,
-			onNext: p
-		} = e,
-		{
-			selectedPlan: v,
-			hasAcceptedTerms: C,
-			purchaseType: O,
-			paymentSourceId: h,
-			activeSubscription: f
-		} = (0, c.usePaymentContext)(),
+	let { legalTermsNodeRef: n, invoiceError: t, planError: r, disablePurchase: l, flashLegalTerms: o, isSubmitting: u, premiumSubscription: _, isGift: A, planGroup: L, isPrepaid: P, isTrial: R, makePurchase: S, needsPaymentSource: m, inReverseTrial: U, onNext: p } = e,
+		{ selectedPlan: v, hasAcceptedTerms: C, purchaseType: O, paymentSourceId: h, activeSubscription: f } = (0, c.usePaymentContext)(),
 		g = N({
 			purchaseType: O,
 			plan: v,

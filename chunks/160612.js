@@ -35,9 +35,7 @@ var r;
 							return typeof e;
 						}
 					: function (e) {
-							return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype
-								? 'symbol'
-								: typeof e;
+							return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
 						})(e);
 		}
 		function a(e, t, n) {
@@ -84,15 +82,12 @@ var r;
 					if (e) {
 						if ('string' == typeof e) return o(e, t);
 						var n = Object.prototype.toString.call(e).slice(8, -1);
-						if (('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n))
-							return Array.from(e);
+						if (('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n)) return Array.from(e);
 						if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return o(e, t);
 					}
 				})(e, t) ||
 				(function () {
-					throw TypeError(
-						'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
-					);
+					throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
 				})()
 			);
 		}
@@ -118,9 +113,7 @@ var r;
 				(d = function () {
 					function r(t, n, r, i, a, s) {
 						if (s !== e) {
-							var o = Error(
-								'Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types'
-							);
+							var o = Error('Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types');
 							throw ((o.name = 'Invariant Violation'), o);
 						}
 					}
@@ -192,16 +185,16 @@ var r;
 					n.current
 				);
 			},
-			I = function (e) {
+			m = function (e) {
 				return null !== e && 'object' === i(e);
 			},
-			m = '[object Object]',
+			I = '[object Object]',
 			T = function e(t, n) {
-				if (!I(t) || !I(n)) return t === n;
+				if (!m(t) || !m(n)) return t === n;
 				var r = Array.isArray(t);
 				if (r !== Array.isArray(n)) return !1;
-				var i = Object.prototype.toString.call(t) === m;
-				if (i !== (Object.prototype.toString.call(n) === m)) return !1;
+				var i = Object.prototype.toString.call(t) === I;
+				if (i !== (Object.prototype.toString.call(n) === I)) return !1;
 				if (!i && !r) return t === n;
 				var a = Object.keys(t),
 					s = Object.keys(n);
@@ -217,37 +210,24 @@ var r;
 				);
 			},
 			g = function (e, t, n) {
-				return I(e)
+				return m(e)
 					? Object.keys(e).reduce(function (i, s) {
-							var o = !I(t) || !T(e[s], t[s]);
-							return n.includes(s)
-								? (o && console.warn('Unsupported prop change: options.'.concat(s, ' is not a mutable property.')), i)
-								: o
-									? r(r({}, i || {}), {}, a({}, s, e[s]))
-									: i;
+							var o = !m(t) || !T(e[s], t[s]);
+							return n.includes(s) ? (o && console.warn('Unsupported prop change: options.'.concat(s, ' is not a mutable property.')), i) : o ? r(r({}, i || {}), {}, a({}, s, e[s])) : i;
 						}, null)
 					: null;
 			},
-			S =
-				'Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
+			S = 'Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
 			A = function (e) {
 				var t,
 					n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
-				if (
-					null === e ||
-					(I((t = e)) &&
-						'function' == typeof t.elements &&
-						'function' == typeof t.createToken &&
-						'function' == typeof t.createPaymentMethod &&
-						'function' == typeof t.confirmCardPayment)
-				)
-					return e;
+				if (null === e || (m((t = e)) && 'function' == typeof t.elements && 'function' == typeof t.createToken && 'function' == typeof t.createPaymentMethod && 'function' == typeof t.confirmCardPayment)) return e;
 				throw Error(n);
 			},
 			N = function (e) {
 				var t,
 					n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
-				if (I((t = e)) && 'function' == typeof t.then)
+				if (m((t = e)) && 'function' == typeof t.then)
 					return {
 						tag: 'async',
 						stripePromise: Promise.resolve(e).then(function (e) {
@@ -277,13 +257,7 @@ var r;
 			O = t.createContext(null);
 		O.displayName = 'ElementsContext';
 		var R = function (e, t) {
-				if (!e)
-					throw Error(
-						'Could not find Elements context; You need to wrap the part of your app that '.concat(
-							t,
-							' in an <Elements> provider.'
-						)
-					);
+				if (!e) throw Error('Could not find Elements context; You need to wrap the part of your app that '.concat(t, ' in an <Elements> provider.'));
 				return e;
 			},
 			C = function (e) {
@@ -336,11 +310,7 @@ var r;
 				var c = p(n);
 				t.useEffect(
 					function () {
-						null !== c &&
-							c !== n &&
-							console.warn(
-								'Unsupported prop change on Elements: You cannot change the `stripe` prop after setting it.'
-							);
+						null !== c && c !== n && console.warn('Unsupported prop change on Elements: You cannot change the `stripe` prop after setting it.');
 					},
 					[c, n]
 				);
@@ -379,13 +349,7 @@ var r;
 			b = t.createContext(null);
 		b.displayName = 'CustomCheckoutSdkContext';
 		var M = function (e, t) {
-				if (!e)
-					throw Error(
-						'Could not find CustomCheckoutProvider context; You need to wrap the part of your app that '.concat(
-							t,
-							' in an <CustomCheckoutProvider> provider.'
-						)
-					);
+				if (!e) throw Error('Could not find CustomCheckoutProvider context; You need to wrap the part of your app that '.concat(t, ' in an <CustomCheckoutProvider> provider.'));
 				return e;
 			},
 			P = t.createContext(null);
@@ -422,10 +386,7 @@ var r;
 					i = e.children,
 					a = t.useMemo(
 						function () {
-							return N(
-								n,
-								'Invalid prop `stripe` supplied to `CustomCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.'
-							);
+							return N(n, 'Invalid prop `stripe` supplied to `CustomCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.');
 						},
 						[n]
 					),
@@ -485,30 +446,23 @@ var r;
 				var h = p(n);
 				t.useEffect(
 					function () {
-						null !== h &&
-							h !== n &&
-							console.warn(
-								'Unsupported prop change on CustomCheckoutProvider: You cannot change the `stripe` prop after setting it.'
-							);
+						null !== h && h !== n && console.warn('Unsupported prop change on CustomCheckoutProvider: You cannot change the `stripe` prop after setting it.');
 					},
 					[h, n]
 				);
-				var m = p(r);
+				var I = p(r);
 				t.useEffect(
 					function () {
 						if (!!d.customCheckoutSdk) {
-							r.clientSecret &&
-								!I(m) &&
-								!T(r.clientSecret, m.clientSecret) &&
-								console.warn('Unsupported prop change: options.client_secret is not a mutable property.');
+							r.clientSecret && !m(I) && !T(r.clientSecret, I.clientSecret) && console.warn('Unsupported prop change: options.client_secret is not a mutable property.');
 							var e,
 								t,
-								n = null == m ? void 0 : null === (e = m.elementsOptions) || void 0 === e ? void 0 : e.appearance,
+								n = null == I ? void 0 : null === (e = I.elementsOptions) || void 0 === e ? void 0 : e.appearance,
 								i = null == r ? void 0 : null === (t = r.elementsOptions) || void 0 === t ? void 0 : t.appearance;
 							i && !T(i, n) && d.customCheckoutSdk.changeAppearance(i);
 						}
 					},
-					[r, m, d.customCheckoutSdk]
+					[r, I, d.customCheckoutSdk]
 				),
 					t.useEffect(
 						function () {
@@ -522,9 +476,7 @@ var r;
 					},
 					[d.customCheckoutSdk, l]
 				);
-				return d.customCheckoutSdk
-					? t.createElement(b.Provider, { value: d }, t.createElement(P.Provider, { value: g }, i))
-					: null;
+				return d.customCheckoutSdk ? t.createElement(b.Provider, { value: d }, t.createElement(P.Provider, { value: g }, i)) : null;
 			};
 		w.propTypes = {
 			stripe: f.any,
@@ -536,13 +488,7 @@ var r;
 		var x = function (e) {
 				var n = t.useContext(b),
 					r = t.useContext(O);
-				if (n && r)
-					throw Error(
-						'You cannot wrap the part of your app that '.concat(
-							e,
-							' in both <CustomCheckoutProvider> and <Elements> providers.'
-						)
-					);
+				if (n && r) throw Error('You cannot wrap the part of your app that '.concat(e, ' in both <CustomCheckoutProvider> and <Elements> providers.'));
 				return n ? M(n, e) : R(r, e);
 			},
 			G = function (e, n) {
@@ -569,8 +515,8 @@ var r;
 									_ = n.onReady,
 									E = n.onChange,
 									f = n.onEscape,
-									I = n.onClick,
-									m = n.onLoadError,
+									m = n.onClick,
+									I = n.onLoadError,
 									T = n.onLoaderStart,
 									S = n.onNetworksChange,
 									A = n.onConfirm,
@@ -588,8 +534,8 @@ var r;
 								h(L, 'blur', c),
 									h(L, 'focus', d),
 									h(L, 'escape', f),
-									h(L, 'click', I),
-									h(L, 'loaderror', m),
+									h(L, 'click', m),
+									h(L, 'loaderror', I),
 									h(L, 'loaderstart', T),
 									h(L, 'networkschange', S),
 									h(L, 'confirm', A),
@@ -609,10 +555,7 @@ var r;
 										function () {
 											if (null === M.current && null !== P.current && (C || y)) {
 												var t = null;
-												y ? (t = y.createElement(e, u)) : C && (t = C.create(e, u)),
-													(M.current = t),
-													b(t),
-													t && t.mount(P.current);
+												y ? (t = y.createElement(e, u)) : C && (t = C.create(e, u)), (M.current = t), b(t), t && t.mount(P.current);
 											}
 										},
 										[C, y, u]
@@ -752,10 +695,7 @@ var r;
 					i = e.children,
 					a = t.useMemo(
 						function () {
-							return N(
-								n,
-								'Invalid prop `stripe` supplied to `EmbeddedCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.'
-							);
+							return N(n, 'Invalid prop `stripe` supplied to `EmbeddedCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.');
 						},
 						[n]
 					),
@@ -806,11 +746,7 @@ var r;
 				var _ = p(n);
 				t.useEffect(
 					function () {
-						null !== _ &&
-							_ !== n &&
-							console.warn(
-								'Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the `stripe` prop after setting it.'
-							);
+						null !== _ && _ !== n && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the `stripe` prop after setting it.');
 					},
 					[_, n]
 				);
@@ -820,31 +756,10 @@ var r;
 						function () {
 							if (null != E) {
 								if (null == r) {
-									console.warn(
-										'Unsupported prop change on EmbeddedCheckoutProvider: You cannot unset options after setting them.'
-									);
+									console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot unset options after setting them.');
 									return;
 								}
-								void 0 === r.clientSecret &&
-									void 0 === r.fetchClientSecret &&
-									console.warn(
-										'Invalid props passed to EmbeddedCheckoutProvider: You must provide one of either `options.fetchClientSecret` or `options.clientSecret`.'
-									),
-									null != E.clientSecret &&
-										r.clientSecret !== E.clientSecret &&
-										console.warn(
-											'Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the client secret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'
-										),
-									null != E.fetchClientSecret &&
-										r.fetchClientSecret !== E.fetchClientSecret &&
-										console.warn(
-											'Unsupported prop change on EmbeddedCheckoutProvider: You cannot change fetchClientSecret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'
-										),
-									null != E.onComplete &&
-										r.onComplete !== E.onComplete &&
-										console.warn(
-											'Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onComplete option after setting it.'
-										);
+								void 0 === r.clientSecret && void 0 === r.fetchClientSecret && console.warn('Invalid props passed to EmbeddedCheckoutProvider: You must provide one of either `options.fetchClientSecret` or `options.clientSecret`.'), null != E.clientSecret && r.clientSecret !== E.clientSecret && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the client secret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'), null != E.fetchClientSecret && r.fetchClientSecret !== E.fetchClientSecret && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change fetchClientSecret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'), null != E.onComplete && r.onComplete !== E.onComplete && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onComplete option after setting it.');
 							}
 						},
 						[E, r]
@@ -867,10 +782,7 @@ var r;
 				(e = 'calls useCustomCheckout()'), M(t.useContext(b), e);
 				var e,
 					n = t.useContext(P);
-				if (!n)
-					throw Error(
-						'Could not find CustomCheckout Context; You need to wrap the part of your app that calls useCustomCheckout() in an <CustomCheckoutProvider> provider.'
-					);
+				if (!n) throw Error('Could not find CustomCheckout Context; You need to wrap the part of your app that calls useCustomCheckout() in an <CustomCheckoutProvider> provider.');
 				return n;
 			}),
 			(e.useElements = function () {

@@ -63,28 +63,16 @@ E.defaultProps = {
 	wrap: !1
 };
 let f = (e) => {
-	let {
-		children: t,
-		className: n,
-		direction: i = u.HORIZONTAL,
-		justify: a = c.START,
-		align: l = d.STRETCH,
-		wrap: E = _.NO_WRAP,
-		shrink: f,
-		grow: h,
-		basis: p,
-		style: I,
-		...m
-	} = e;
+	let { children: t, className: n, direction: i = u.HORIZONTAL, justify: a = c.START, align: l = d.STRETCH, wrap: E = _.NO_WRAP, shrink: f, grow: h, basis: p, style: m, ...I } = e;
 	return (0, r.jsx)('div', {
 		style: {
 			flexShrink: f,
 			flexGrow: h,
 			flexBasis: p,
-			...I
+			...m
 		},
 		className: s()(o.flex, i, a, l, E, n),
-		...m,
+		...I,
 		children: t
 	});
 };

@@ -15,7 +15,7 @@ function p(e) {
 	let t = e.ctrlKey || e.altKey || e.metaKey;
 	e.key === h.mR.Tab && !t && !__OVERLAY__ && !(0, a.$s)() && c.Z.maybeShowKeyboardNavigationExplainerModal();
 }
-function I() {
+function m() {
 	(0, l.rf)();
 }
 t.Z = function (e, t) {
@@ -26,8 +26,7 @@ t.Z = function (e, t) {
 			!(function (e, t) {
 				var n, r;
 				let i = (0, _.VG)(null === (n = (0, _.uB)(e)) || void 0 === n ? void 0 : n.activeElement);
-				if ((i && e.key !== h.mR.Tab) || e.ctrlKey || e.altKey || e.metaKey || (e.key !== h.mR.Tab && e.shiftKey))
-					return;
+				if ((i && e.key !== h.mR.Tab) || e.ctrlKey || e.altKey || e.metaKey || (e.key !== h.mR.Tab && e.shiftKey)) return;
 				let a = (function (e) {
 					let t = E.C$('shift'),
 						n = E.C$('tab');
@@ -43,10 +42,7 @@ t.Z = function (e, t) {
 					}
 					return null;
 				})(e);
-				null != a &&
-					!d.Z.hasExactKeybind(a) &&
-					!o.Z.hasBind(null !== (r = E.H9(a[0])) && void 0 !== r ? r : '') &&
-					((0, l.Qj)(), i && !t && e.preventDefault());
+				null != a && !d.Z.hasExactKeybind(a) && !o.Z.hasBind(null !== (r = E.H9(a[0])) && void 0 !== r ? r : '') && ((0, l.Qj)(), i && !t && e.preventDefault());
 			})(e, t);
 		},
 		[t]
@@ -54,11 +50,9 @@ t.Z = function (e, t) {
 	return (
 		(0, r.useLayoutEffect)(
 			() => (
-				n ? (e.addEventListener('mousedown', I), e.addEventListener('keydown', p)) : e.addEventListener('keydown', a),
+				n ? (e.addEventListener('mousedown', m), e.addEventListener('keydown', p)) : e.addEventListener('keydown', a),
 				() => {
-					n
-						? (e.removeEventListener('mousedown', I), e.removeEventListener('keydown', p))
-						: e.removeEventListener('keydown', a);
+					n ? (e.removeEventListener('mousedown', m), e.removeEventListener('keydown', p)) : e.removeEventListener('keydown', a);
 				}
 			),
 			[e, a, n]

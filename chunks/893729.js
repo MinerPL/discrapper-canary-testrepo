@@ -20,13 +20,7 @@ var r = t(735250),
 	p = t(471292);
 function S(e) {
 	var n;
-	let {
-			guildId: t,
-			role: o,
-			theme: S,
-			content: C = g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_PREVIEW_MESSAGE_TEXT,
-			className: T
-		} = e,
+	let { guildId: t, role: o, theme: S, content: C = g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_PREVIEW_MESSAGE_TEXT, className: T } = e,
 		m = (0, u.e7)([_.default], () => _.default.getCurrentUser()),
 		A = f.ZP.useName(t, null, m),
 		N = (0, a.Kz)(o),

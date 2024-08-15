@@ -12,21 +12,7 @@ var l = a(120356),
 	o = a(689938),
 	c = a(760882);
 function d(e) {
-	let {
-		selectedTags: t,
-		title: a,
-		hintText: l,
-		placeholderText: d,
-		expanded: u,
-		setExpanded: m,
-		users: h,
-		guilds: S,
-		query: x,
-		maxCount: T,
-		onQueryChange: g,
-		onClickRow: f,
-		onRemoveTag: v
-	} = e;
+	let { selectedTags: t, title: a, hintText: l, placeholderText: d, expanded: u, setExpanded: m, users: h, guilds: S, query: x, maxCount: T, onQueryChange: g, onClickRow: f, onRemoveTag: v } = e;
 	return (0, n.jsx)(r.Collapsible, {
 		className: c.collapsible,
 		isExpanded: u,

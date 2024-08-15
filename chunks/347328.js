@@ -17,7 +17,7 @@ var i = n(442837),
 	E = n(981631),
 	f = n(689938);
 function h(e) {
-	let { user: t, activity: n, entry: h, display: p, onAction: I, onClose: m } = e,
+	let { user: t, activity: n, entry: h, display: p, onAction: m, onClose: I } = e,
 		T = (0, i.e7)([d.default], () => {
 			var e;
 			return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
@@ -29,9 +29,7 @@ function h(e) {
 			id: 'connect-crunchyroll',
 			label: f.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({ platform: o.Z.get(E.ABu.CRUNCHYROLL).name }),
 			action: () => {
-				null == I || I({ action: 'PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM' }),
-					s.Z.open(E.oAB.CONNECTIONS),
-					null == m || m();
+				null == m || m({ action: 'PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM' }), s.Z.open(E.oAB.CONNECTIONS), null == I || I();
 			}
 		});
 	if (T || 'live' === p || !(0, u.gr)(h)) return null;
@@ -42,7 +40,7 @@ function h(e) {
 				id: 'watch-on-crunchyroll',
 				label: f.Z.Messages.WATCH_ON_CRUNCHYROLL,
 				action: () => {
-					null == I || I({ action: 'PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM' });
+					null == m || m({ action: 'PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM' });
 					let e = null;
 					!(0, _.isDesktop)() && (e = window.open('', '_blank')), null != e ? (e.location.href = S) : window.open(S);
 				}

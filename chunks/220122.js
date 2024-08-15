@@ -25,11 +25,7 @@ class h extends u.Z {
 			n = c.Z.getSettings(),
 			r = (n.clipsEnabled || n.decoupledClipsEnabled) && t,
 			i = o.Z.getMediaEngine();
-		if (
-			(i.setClipBufferLength(r ? n.clipsLength / 1000 : 0),
-			(null == e ? void 0 : e.settings.decoupledClipsEnabled) === !0 && this.fireClipsInitEvent(),
-			null == e || (null == e ? void 0 : e.settings.clipsQuality) != null)
-		) {
+		if ((i.setClipBufferLength(r ? n.clipsLength / 1000 : 0), (null == e ? void 0 : e.settings.decoupledClipsEnabled) === !0 && this.fireClipsInitEvent(), null == e || (null == e ? void 0 : e.settings.clipsQuality) != null)) {
 			let { frameRate: t, resolution: r } = n.clipsQuality;
 			!i.setClipsQualitySettings(r <= 480 ? (r / 3) * 4 : (r / 9) * 16, r, t) && null != e && this.fireClipsInitEvent();
 		}
@@ -40,10 +36,7 @@ class h extends u.Z {
 	}
 	handleClipsInitOnGamesChange(e) {
 		let t = a.ZP.getVisibleGame();
-		if (null != t)
-			e.added.find((e) => e.pid === t.pid)
-				? setTimeout(() => this.fireClipsInitEvent(), E.jp)
-				: this.fireClipsInitEvent();
+		if (null != t) e.added.find((e) => e.pid === t.pid) ? setTimeout(() => this.fireClipsInitEvent(), E.jp) : this.fireClipsInitEvent();
 	}
 	fireClipsInitEvent() {
 		if (!(0, d.Z)(o.Z)) return;
@@ -51,12 +44,7 @@ class h extends u.Z {
 			t = c.Z.getSettings();
 		if (!(t.clipsEnabled && e) || null != s.Z.getCurrentUserActiveStream()) return;
 		let n = a.ZP.getVisibleGame();
-		if (
-			(null == n ? void 0 : n.pid) != null &&
-			(null == n ? void 0 : n.windowHandle) != null &&
-			null != n.name &&
-			'' !== n.name
-		)
+		if ((null == n ? void 0 : n.pid) != null && (null == n ? void 0 : n.windowHandle) != null && null != n.name && '' !== n.name)
 			i.Z.dispatch({
 				type: 'CLIPS_INIT',
 				sourceId: 'window:'.concat(null == n ? void 0 : n.windowHandle),

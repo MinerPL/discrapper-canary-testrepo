@@ -88,13 +88,8 @@ function x(n) {
 									'aria-label': S.Z.Messages.COPY_LINK,
 									className: I.linkButton,
 									onClick: () => {
-										let n = ''
-											.concat(location.protocol, '//')
-											.concat(location.host)
-											.concat(u.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(e, t));
-										(0, a.JG)(n),
-											(0, r.showToast)((0, r.createToast)(S.Z.Messages.COPIED_LINK, r.ToastType.SUCCESS)),
-											(0, d.X)(e, d.B.DETAILS_MODAL, t);
+										let n = ''.concat(location.protocol, '//').concat(location.host).concat(u.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(e, t));
+										(0, a.JG)(n), (0, r.showToast)((0, r.createToast)(S.Z.Messages.COPIED_LINK, r.ToastType.SUCCESS)), (0, d.X)(e, d.B.DETAILS_MODAL, t);
 									},
 									children: (0, i.jsx)(r.LinkIcon, {
 										size: 'xs',

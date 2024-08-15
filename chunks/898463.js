@@ -26,8 +26,8 @@ var r = n(735250),
 	f = n(95398),
 	h = n(70097),
 	p = n(592125),
-	I = n(956664),
-	m = n(709054),
+	m = n(956664),
+	I = n(709054),
 	T = n(273031),
 	g = n(859235),
 	S = n(689938),
@@ -92,7 +92,7 @@ function O(e) {
 		let n = new Image();
 		return (
 			(n.onload = () => {
-				let { width: e, height: t } = (0, I.zp)(n.width, n.height);
+				let { width: e, height: t } = (0, m.zp)(n.width, n.height);
 				E({
 					width: e,
 					height: t
@@ -232,17 +232,7 @@ function C(e) {
 				});
 }
 function y(e) {
-	let {
-			channelId: t,
-			draftType: n,
-			upload: a,
-			keyboardModeEnabled: d,
-			label: f,
-			size: h = g.q.MEDIUM,
-			canEdit: I = !0,
-			hideFileName: N = !1,
-			clip: v
-		} = e,
+	let { channelId: t, draftType: n, upload: a, keyboardModeEnabled: d, label: f, size: h = g.q.MEDIUM, canEdit: m = !0, hideFileName: N = !1, clip: v } = e,
 		O = null != v,
 		R = (h = O ? g.q.CLIP : h) === g.q.SMALL,
 		y = (0, o.e7)([p.Z], () => {
@@ -271,7 +261,7 @@ function y(e) {
 	return (0, r.jsxs)(g.Z, {
 		actions: (0, r.jsxs)(i.Fragment, {
 			children: [
-				I
+				m
 					? (0, r.jsx)(T.Z, {
 							className: s()({ [A.action]: R }),
 							tooltip: O ? S.Z.Messages.CLIPS_ATTACHMENT_UTILITIES_SPOILER : S.Z.Messages.ATTACHMENT_UTILITIES_SPOILER,
@@ -289,7 +279,7 @@ function y(e) {
 									})
 						})
 					: null,
-				I && !O
+				m && !O
 					? (0, r.jsx)(T.Z, {
 							className: s()({ [A.action]: R }),
 							tooltip: S.Z.Messages.ATTACHMENT_UTILITIES_MODIFY,
@@ -341,7 +331,7 @@ function y(e) {
 					children: [
 						(0, r.jsx)(_.Z, {
 							className: A.clipsFooter,
-							createdAt: m.default.extractTimestamp(v.id),
+							createdAt: I.default.extractTimestamp(v.id),
 							participantIds: v.users,
 							applicationId: v.applicationId,
 							title: v.name,

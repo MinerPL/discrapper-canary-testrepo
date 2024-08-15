@@ -23,9 +23,7 @@ var s = n(911969),
 	o = n(93725),
 	l = n(226951);
 function u(e) {
-	return null == e
-		? []
-		: e.filter((t, n) => 'text' !== t.type || (n > 0 && n < e.length - 1 ? '' !== t.text : '' !== t.text.trim()));
+	return null == e ? [] : e.filter((t, n) => 'text' !== t.type || (n > 0 && n < e.length - 1 ? '' !== t.text : '' !== t.text.trim()));
 }
 function c(e, t) {
 	let n = e[t],

@@ -90,34 +90,11 @@ function I(e, t) {
 function A(e, t) {
 	return e.filter((e) => {
 		var n, l;
-		return (
-			(0, d.lm)(e) &&
-			(e.type === s.h8.HEADER ||
-				((0, h.o)(e) &&
-					((n = e),
-					(l = t),
-					n.type === s.h8.USER
-						? l || null != o.Z.getDMChannelFromUserId(n.record.id)
-						: n.type === s.h8.GROUP_DM ||
-							(n.record.type !== _.d4z.GUILD_FORUM &&
-								n.record.type !== _.d4z.GUILD_MEDIA &&
-								c.Z.can(_.Plq.VIEW_CHANNEL, n.record) &&
-								c.Z.can(_.Plq.SEND_MESSAGES, n.record)))))
-		);
+		return (0, d.lm)(e) && (e.type === s.h8.HEADER || ((0, h.o)(e) && ((n = e), (l = t), n.type === s.h8.USER ? l || null != o.Z.getDMChannelFromUserId(n.record.id) : n.type === s.h8.GROUP_DM || (n.record.type !== _.d4z.GUILD_FORUM && n.record.type !== _.d4z.GUILD_MEDIA && c.Z.can(_.Plq.VIEW_CHANNEL, n.record) && c.Z.can(_.Plq.SEND_MESSAGES, n.record)))));
 	});
 }
 function p(e) {
-	let {
-		results: t,
-		hasQuery: n,
-		queryMode: a,
-		frequentChannels: s,
-		targetDestination: o,
-		selectedDestinations: c,
-		pinnedDestinations: u,
-		originDestination: d,
-		includeMissingDMs: h
-	} = e;
+	let { results: t, hasQuery: n, queryMode: a, frequentChannels: s, targetDestination: o, selectedDestinations: c, pinnedDestinations: u, originDestination: d, includeMissingDMs: h } = e;
 	if (n) return I(A(t, h));
 	let _ = null != u && u.length > 0 ? u.map((e) => S(e)) : [],
 		f = r.Z.getChannelHistory(),

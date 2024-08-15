@@ -15,13 +15,7 @@ var l = n(470079),
 	d = n(601565),
 	h = n(41837);
 function _(e) {
-	let {
-			searchText: t,
-			targetDestination: n,
-			selectedDestinations: _,
-			originDestination: f,
-			includeMissingDMs: E = !1
-		} = e,
+	let { searchText: t, targetDestination: n, selectedDestinations: _, originDestination: f, includeMissingDMs: E = !1 } = e,
 		g = (0, a.e7)([o.default], () => o.default.getId()),
 		m = l.useMemo(
 			() => ({

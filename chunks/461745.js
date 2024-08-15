@@ -1,6 +1,6 @@
 n.d(t, {
 	BK: function () {
-		return m;
+		return I;
 	},
 	Fj: function () {
 		return r;
@@ -34,18 +34,14 @@ function p(e, t, n) {
 		e
 	);
 }
-let I = Object.freeze({
+let m = Object.freeze({
 	SMALL: h.small,
 	MEDIUM: h.medium,
 	LARGE: h.large
 });
-((a = r || (r = {})).MEMBER = 'MEMBER'),
-	(a.ROLE = 'ROLE'),
-	(a.CHANNEL = 'CHANNEL'),
-	(a.GUILD = 'GUILD'),
-	(a.USER = 'USER');
-let m = (e) => {
-	let { hasContent: t, onClear: n, className: r, themeOverride: i, size: a = I.SMALL } = e;
+((a = r || (r = {})).MEMBER = 'MEMBER'), (a.ROLE = 'ROLE'), (a.CHANNEL = 'CHANNEL'), (a.GUILD = 'GUILD'), (a.USER = 'USER');
+let I = (e) => {
+	let { hasContent: t, onClear: n, className: r, themeOverride: i, size: a = m.SMALL } = e;
 	return (0, s.jsx)(c.Clickable, {
 		className: u()(r, h.iconLayout, a, (0, _.Q)(i), { [h.clear]: t }),
 		onClick: (e) => {
@@ -87,54 +83,26 @@ class T extends (i = o.Component) {
 		t && !e.isReady && n && this.focus();
 	}
 	handleKeyDownGrid(e) {
-		let {
-			selectedRow: t,
-			selectedColumn: n,
-			sections: r,
-			query: i,
-			tags: a,
-			onSelectionChange: s,
-			onSelect: o,
-			onRemoveTag: l,
-			preventEscapePropagation: u
-		} = this.props;
+		let { selectedRow: t, selectedColumn: n, sections: r, query: i, tags: a, onSelectionChange: s, onSelect: o, onRemoveTag: l, preventEscapePropagation: u } = this.props;
 		if (0 !== r.length) {
 			switch (e.keyCode) {
 				case E.yXg.BACKSPACE:
-					(null == i || 0 === i.length) &&
-						null != a &&
-						a.length > 0 &&
-						(e.preventDefault(), e.stopPropagation(), null == l || l(a.length - 1));
+					(null == i || 0 === i.length) && null != a && a.length > 0 && (e.preventDefault(), e.stopPropagation(), null == l || l(a.length - 1));
 					break;
 				case E.yXg.ARROW_DOWN:
-					e.preventDefault(),
-						e.stopPropagation(),
-						-1 === t ? ((t = 0), (n = 0)) : ((t += 1) >= r.length && (t = r.length - 1), n >= r[t] && (n = r[t] - 1));
+					e.preventDefault(), e.stopPropagation(), -1 === t ? ((t = 0), (n = 0)) : ((t += 1) >= r.length && (t = r.length - 1), n >= r[t] && (n = r[t] - 1));
 					break;
 				case E.yXg.ARROW_UP:
 					e.preventDefault(), e.stopPropagation(), (t -= 1) < 0 ? ((t = 0), (n = 0)) : n >= r[t] && (n = r[t] - 1);
 					break;
 				case E.yXg.ARROW_LEFT:
-					e.preventDefault(),
-						e.stopPropagation(),
-						-1 === t && (t = 0),
-						(n -= 1) < 0 && ((t -= 1) >= 0 ? (n = r[t] - 1) : t < 0 && ((t = 0), (n = 0)));
+					e.preventDefault(), e.stopPropagation(), -1 === t && (t = 0), (n -= 1) < 0 && ((t -= 1) >= 0 ? (n = r[t] - 1) : t < 0 && ((t = 0), (n = 0)));
 					break;
 				case E.yXg.ARROW_RIGHT:
-					e.preventDefault(),
-						e.stopPropagation(),
-						-1 === t && (t = 0),
-						(n += 1) >= r[t] && ((n = 0), (t += 1) >= r.length && ((t = r.length - 1), (n = r[t] - 1)));
+					e.preventDefault(), e.stopPropagation(), -1 === t && (t = 0), (n += 1) >= r[t] && ((n = 0), (t += 1) >= r.length && ((t = r.length - 1), (n = r[t] - 1)));
 					break;
 				case E.yXg.ENTER:
-					if (
-						(e.preventDefault(),
-						e.stopPropagation(),
-						-1 === t && (t = 0),
-						-1 === n && (n = 0),
-						t >= r.length || n >= r[t])
-					)
-						return;
+					if ((e.preventDefault(), e.stopPropagation(), -1 === t && (t = 0), -1 === n && (n = 0), t >= r.length || n >= r[t])) return;
 					null != o && o(t, n, e);
 					return;
 				case E.yXg.ESCAPE:
@@ -147,38 +115,21 @@ class T extends (i = o.Component) {
 		}
 	}
 	handleKeyDownList(e) {
-		let {
-				sections: t,
-				selectedSection: n,
-				selectedRow: r,
-				onSelect: i,
-				onSelectionChange: a,
-				query: s,
-				tags: o,
-				preventEscapePropagation: l
-			} = this.props,
+		let { sections: t, selectedSection: n, selectedRow: r, onSelect: i, onSelectionChange: a, query: s, tags: o, preventEscapePropagation: l } = this.props,
 			{ current: u } = this.ref;
 		if (null != u)
 			switch (e.keyCode) {
 				case E.yXg.BACKSPACE:
 					if ((null == s || 0 === s.length) && null != o && o.length > 0) {
 						var c, d;
-						e.preventDefault(),
-							e.stopPropagation(),
-							null === (c = (d = this.props).onRemoveTag) || void 0 === c || c.call(d, o.length - 1);
+						e.preventDefault(), e.stopPropagation(), null === (c = (d = this.props).onRemoveTag) || void 0 === c || c.call(d, o.length - 1);
 					}
 					break;
 				case E.yXg.ARROW_DOWN:
-					e.preventDefault(),
-						e.stopPropagation(),
-						t.length > n && ++r >= t[n] && (++n >= t.length && (n = 0), (r = 0)),
-						null == a || a(n, r);
+					e.preventDefault(), e.stopPropagation(), t.length > n && ++r >= t[n] && (++n >= t.length && (n = 0), (r = 0)), null == a || a(n, r);
 					break;
 				case E.yXg.ARROW_UP:
-					e.preventDefault(),
-						e.stopPropagation(),
-						--r < 0 && (--n < 0 && (n = t.length - 1), (r = t[n] - 1)),
-						null == a || a(n, r);
+					e.preventDefault(), e.stopPropagation(), --r < 0 && (--n < 0 && (n = t.length - 1), (r = t[n] - 1)), null == a || a(n, r);
 					break;
 				case E.yXg.ENTER:
 					e.preventDefault(), e.stopPropagation(), t.length > n && t[n] > r && (null == i || i(n, r, e));
@@ -188,21 +139,7 @@ class T extends (i = o.Component) {
 			}
 	}
 	render() {
-		let {
-				autoFocus: e,
-				query: t,
-				placeholder: n = f.Z.Messages.DM_SEARCH_PLACEHOLDER,
-				themeOverride: r,
-				disabled: i,
-				onClear: a,
-				size: o,
-				maxHeight: l,
-				tags: E,
-				onActivate: p,
-				className: I,
-				inputProps: T,
-				focusAfterReady: g
-			} = this.props,
+		let { autoFocus: e, query: t, placeholder: n = f.Z.Messages.DM_SEARCH_PLACEHOLDER, themeOverride: r, disabled: i, onClear: a, size: o, maxHeight: l, tags: E, onActivate: p, className: m, inputProps: T, focusAfterReady: g } = this.props,
 			S = null != t && t.length > 0,
 			A = !1,
 			N = [];
@@ -282,7 +219,7 @@ class T extends (i = o.Component) {
 				ringTarget: this.containerRef,
 				children: (0, s.jsx)('div', {
 					ref: this.containerRef,
-					className: u()(I, h.container, o, (0, _.Q)(r), { [h.disabled]: i }),
+					className: u()(m, h.container, o, (0, _.Q)(r), { [h.disabled]: i }),
 					children: (0, s.jsxs)(c.ScrollerThin, {
 						className: h.inner,
 						style: { maxHeight: l },
@@ -306,7 +243,7 @@ class T extends (i = o.Component) {
 								...T
 							}),
 							null != a
-								? (0, s.jsx)(m, {
+								? (0, s.jsx)(I, {
 										size: o,
 										themeOverride: r,
 										hasContent: S,
@@ -365,9 +302,9 @@ class T extends (i = o.Component) {
 			});
 	}
 }
-p(T, 'Sizes', I),
+p(T, 'Sizes', m),
 	p(T, 'defaultProps', {
-		size: I.SMALL,
+		size: m.SMALL,
 		query: '',
 		sections: [],
 		selectedSection: 0,

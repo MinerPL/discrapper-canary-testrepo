@@ -40,10 +40,7 @@ function l(e) {
 	var t;
 	let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
 	if (null == e) return !1;
-	return (
-		!!((null == (t = e.id) || (t !== i.ME && t !== i.I_8)) && e.hasFeature(i.oNc.SUMMARIES_ENABLED_GA)) &&
-		(!n || e.hasFeature(i.oNc.SUMMARIES_ENABLED_BY_USER))
-	);
+	return !!((null == (t = e.id) || (t !== i.ME && t !== i.I_8)) && e.hasFeature(i.oNc.SUMMARIES_ENABLED_GA)) && (!n || e.hasFeature(i.oNc.SUMMARIES_ENABLED_BY_USER));
 }
 function u(e) {
 	arguments.length > 1 && void 0 !== arguments[1] && arguments[1];

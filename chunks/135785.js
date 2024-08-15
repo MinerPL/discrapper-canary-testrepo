@@ -18,13 +18,7 @@ t.Z = (e) => {
 		g = (0, d.Nx)();
 	if (null == a) return null;
 	let p = null != a ? c.ZP.getPremiumPlanItem(a) : null;
-	if (
-		(c.ZP.isBoostOnlySubscription(a)
-			? (t = E.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION)
-			: null != p && (t = c.ZP.getDisplayPremiumType(p.planId)),
-		null == t)
-	)
-		return null;
+	if ((c.ZP.isBoostOnlySubscription(a) ? (t = E.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION) : null != p && (t = c.ZP.getDisplayPremiumType(p.planId)), null == t)) return null;
 	let N = () => l.Z.open(u.oAB.SUBSCRIPTIONS),
 		A = (null != p ? c.ZP.getSkuIdForPlan(p.planId) : null) === _.Si.TIER_1;
 	return (

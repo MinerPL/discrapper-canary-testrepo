@@ -22,23 +22,7 @@ function d(e, t, n) {
 }
 class _ extends (r = a.Component) {
 	render() {
-		let {
-				autoFocus: e,
-				label: t,
-				placeholder: n,
-				searchTerm: r,
-				inputClassName: a,
-				className: s,
-				onChange: d,
-				onFocus: _,
-				onBlur: E,
-				onKeyPress: f,
-				autoComplete: h,
-				forwardedRef: p,
-				closeIconClassName: I,
-				searchIconClassName: m,
-				cta: T
-			} = this.props,
+		let { autoFocus: e, label: t, placeholder: n, searchTerm: r, inputClassName: a, className: s, onChange: d, onFocus: _, onBlur: E, onKeyPress: f, autoComplete: h, forwardedRef: p, closeIconClassName: m, searchIconClassName: I, cta: T } = this.props,
 			g = null != r && r.length > 0,
 			S = null != p ? p : this._textInputRef;
 		return (0, i.jsx)(l.FocusRing, {
@@ -81,13 +65,13 @@ class _ extends (r = a.Component) {
 								children: (0, i.jsx)(l.CircleXIcon, {
 									size: 'md',
 									color: 'currentColor',
-									className: o()(c.clearIcon, I)
+									className: o()(c.clearIcon, m)
 								})
 							})
 						: (0, i.jsx)(l.MagnifyingGlassIcon, {
 								size: 'md',
 								color: 'currentColor',
-								className: o()(c.searchIcon, m),
+								className: o()(c.searchIcon, I),
 								'aria-label': u.Z.Messages.SEARCH
 							})
 				]

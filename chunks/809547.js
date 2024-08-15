@@ -15,47 +15,15 @@ var r,
 	_ = n(442837),
 	E = n(570140);
 function f(e) {
-	let {
-		query: t,
-		guildId: n,
-		page: r,
-		categoryId: i,
-		integrationType: a,
-		minUserInstallCommandCount: s,
-		excludeAppsWithCustomInstallUrl: o,
-		excludeNonEmbeddedApps: l,
-		excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u,
-		source: c = d.F.APP_DIRECTORY
-	} = e;
-	return "query:'"
-		.concat(t, "' guildId:")
-		.concat(n, ' page:')
-		.concat(r, ' categoryId:')
-		.concat(i, ' integrationType:')
-		.concat(a, ' minUserInstallCommandCount:')
-		.concat(s, ' excludeAppsWithCustomInstallUrl:')
-		.concat(o, ' excludeNonEmbeddedApps:')
-		.concat(l, ' excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand:')
-		.concat(u, ' source:')
-		.concat(c);
+	let { query: t, guildId: n, page: r, categoryId: i, integrationType: a, minUserInstallCommandCount: s, excludeAppsWithCustomInstallUrl: o, excludeNonEmbeddedApps: l, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u, source: c = d.F.APP_DIRECTORY } = e;
+	return "query:'".concat(t, "' guildId:").concat(n, ' page:').concat(r, ' categoryId:').concat(i, ' integrationType:').concat(a, ' minUserInstallCommandCount:').concat(s, ' excludeAppsWithCustomInstallUrl:').concat(o, ' excludeNonEmbeddedApps:').concat(l, ' excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand:').concat(u, ' source:').concat(c);
 }
 ((r = o || (o = {}))[(r.FETCHING = 0)] = 'FETCHING'), (r[(r.FETCHED = 1)] = 'FETCHED'), (r[(r.ERROR = 2)] = 'ERROR');
 let h = new (c())({ max: 20 }),
 	p = {};
-class I extends (l = _.ZP.Store) {
+class m extends (l = _.ZP.Store) {
 	getSearchResults(e) {
-		let {
-				query: t,
-				guildId: n,
-				page: r,
-				categoryId: i,
-				integrationType: a,
-				minUserInstallCommandCount: s,
-				excludeAppsWithCustomInstallUrl: o,
-				excludeNonEmbeddedApps: l,
-				excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u,
-				source: c
-			} = e,
+		let { query: t, guildId: n, page: r, categoryId: i, integrationType: a, minUserInstallCommandCount: s, excludeAppsWithCustomInstallUrl: o, excludeNonEmbeddedApps: l, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u, source: c } = e,
 			d = f({
 				query: t,
 				guildId: n,
@@ -71,18 +39,7 @@ class I extends (l = _.ZP.Store) {
 		return h.get(d);
 	}
 	getFetchState(e) {
-		let {
-			query: t,
-			guildId: n,
-			page: r,
-			categoryId: i,
-			integrationType: a,
-			minUserInstallCommandCount: s,
-			excludeAppsWithCustomInstallUrl: o,
-			excludeNonEmbeddedApps: l,
-			excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u,
-			source: c
-		} = e;
+		let { query: t, guildId: n, page: r, categoryId: i, integrationType: a, minUserInstallCommandCount: s, excludeAppsWithCustomInstallUrl: o, excludeNonEmbeddedApps: l, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u, source: c } = e;
 		return p[
 			f({
 				query: t,
@@ -100,7 +57,7 @@ class I extends (l = _.ZP.Store) {
 	}
 }
 (s = 'ApplicationDirectorySearchStore'),
-	(a = 'displayName') in (i = I)
+	(a = 'displayName') in (i = m)
 		? Object.defineProperty(i, a, {
 				value: s,
 				enumerable: !0,
@@ -108,20 +65,9 @@ class I extends (l = _.ZP.Store) {
 				writable: !0
 			})
 		: (i[a] = s),
-	(t.Z = new I(E.Z, {
+	(t.Z = new m(E.Z, {
 		APPLICATION_DIRECTORY_FETCH_SEARCH: function (e) {
-			let {
-					query: t,
-					guildId: n,
-					page: r,
-					categoryId: i,
-					integrationType: a,
-					minUserInstallCommandCount: s,
-					excludeAppsWithCustomInstallUrl: o,
-					excludeNonEmbeddedApps: l,
-					excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u,
-					source: c
-				} = e,
+			let { query: t, guildId: n, page: r, categoryId: i, integrationType: a, minUserInstallCommandCount: s, excludeAppsWithCustomInstallUrl: o, excludeNonEmbeddedApps: l, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u, source: c } = e,
 				d = f({
 					query: t,
 					guildId: n,
@@ -140,19 +86,7 @@ class I extends (l = _.ZP.Store) {
 			};
 		},
 		APPLICATION_DIRECTORY_FETCH_SEARCH_SUCCESS: function (e) {
-			let {
-					query: t,
-					guildId: n,
-					page: r,
-					categoryId: i,
-					result: a,
-					integrationType: s,
-					minUserInstallCommandCount: o,
-					excludeAppsWithCustomInstallUrl: l,
-					excludeNonEmbeddedApps: u,
-					excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: c,
-					source: d
-				} = e,
+			let { query: t, guildId: n, page: r, categoryId: i, result: a, integrationType: s, minUserInstallCommandCount: o, excludeAppsWithCustomInstallUrl: l, excludeNonEmbeddedApps: u, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: c, source: d } = e,
 				_ = f({
 					query: t,
 					guildId: n,
@@ -175,18 +109,7 @@ class I extends (l = _.ZP.Store) {
 				});
 		},
 		APPLICATION_DIRECTORY_FETCH_SEARCH_FAILURE: function (e) {
-			let {
-					query: t,
-					guildId: n,
-					page: r,
-					categoryId: i,
-					integrationType: a,
-					minUserInstallCommandCount: s,
-					excludeAppsWithCustomInstallUrl: o,
-					excludeNonEmbeddedApps: l,
-					excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u,
-					source: c
-				} = e,
+			let { query: t, guildId: n, page: r, categoryId: i, integrationType: a, minUserInstallCommandCount: s, excludeAppsWithCustomInstallUrl: o, excludeNonEmbeddedApps: l, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: u, source: c } = e,
 				d = f({
 					query: t,
 					guildId: n,

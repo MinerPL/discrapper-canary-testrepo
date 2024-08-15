@@ -69,15 +69,13 @@ let w = 'GameProfileModal',
 					children: (0, n.jsx)('img', {
 						src: t,
 						className: U.similarGames,
-						alt: B.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({
-							game: null !== (i = null == r ? void 0 : r.name) && void 0 !== i ? i : null == s ? void 0 : s.name
-						})
+						alt: B.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({ game: null !== (i = null == r ? void 0 : r.name) && void 0 !== i ? i : null == s ? void 0 : s.name })
 					})
 				});
 			}
 		});
 	},
-	Q = () =>
+	b = () =>
 		(0, n.jsxs)('div', {
 			className: U.gameBadge,
 			children: [
@@ -89,12 +87,12 @@ let w = 'GameProfileModal',
 				})
 			]
 		}),
-	b = [_.z.DESKTOP, _.z.XBOX, _.z.PLAYSTATION, _.z.NINTENDO],
+	Q = [_.z.DESKTOP, _.z.XBOX, _.z.PLAYSTATION, _.z.NINTENDO],
 	k = (e) => {
 		let { platforms: s } = e,
 			a = [...new Set(s)];
 		!a.includes(_.z.DESKTOP) && (a.includes(_.z.MACOS) || a.includes(_.z.LINUX)) && a.push(_.z.DESKTOP);
-		let l = (a = a.filter((e) => b.includes(e))).map((e) => {
+		let l = (a = a.filter((e) => Q.includes(e))).map((e) => {
 			switch (e) {
 				case _.z.DESKTOP:
 					return (0, n.jsx)(A.ScreenIcon, { size: 'xs' }, e);
@@ -123,9 +121,9 @@ let w = 'GameProfileModal',
 	H = (e) => e.filter(Z.z6).slice(0, 5),
 	Y = (e) => {
 		var s, r;
-		let { applicationId: i, source: E, sourceUserId: _, transitionState: b, onClose: Y } = e,
+		let { applicationId: i, source: E, sourceUserId: _, transitionState: Q, onClose: Y } = e,
 			{ clientThemesClassName: W } = (0, O.ZP)(),
-			{ width: V, height: z } = (0, M.b)(),
+			{ width: z, height: V } = (0, M.b)(),
 			[X, J] = l.useState(() => {
 				var e;
 				return null === (e = d.K.get(w)) || void 0 === e ? void 0 : e[i];
@@ -138,7 +136,7 @@ let w = 'GameProfileModal',
 		l.useEffect(() => {
 			let e = en.current;
 			null != e && ea(e.scrollHeight - e.clientHeight > 1);
-		}, [en, V, z]),
+		}, [en, z, V]),
 			l.useEffect(() => {
 				(0, T.Jn)();
 			}, []);
@@ -159,10 +157,7 @@ let w = 'GameProfileModal',
 		let { entries: eo } = (0, p.Z)(),
 			eE = l.useMemo(() => {
 				var e;
-				return null !== (e = null == eo ? void 0 : eo.filter((e) => (0, m.dX)(e) && e.extra.application_id === i)) &&
-					void 0 !== e
-					? e
-					: [];
+				return null !== (e = null == eo ? void 0 : eo.filter((e) => (0, m.dX)(e) && e.extra.application_id === i)) && void 0 !== e ? e : [];
 			}, [eo, i]),
 			ec = eE.length > 7,
 			[e_, eI] = l.useState(!1);
@@ -173,12 +168,7 @@ let w = 'GameProfileModal',
 					source: E,
 					viewId: el,
 					applicationId: i,
-					gameName:
-						null !==
-							(s = null !== (e = null == ed ? void 0 : ed.name) && void 0 !== e ? e : null == eu ? void 0 : eu.name) &&
-						void 0 !== s
-							? s
-							: '',
+					gameName: null !== (s = null !== (e = null == ed ? void 0 : ed.name) && void 0 !== e ? e : null == eu ? void 0 : eu.name) && void 0 !== s ? s : '',
 					authorId: _
 				}),
 				() => {
@@ -195,13 +185,7 @@ let w = 'GameProfileModal',
 					(0, C.wz)({
 						viewId: el,
 						applicationId: i,
-						gameName:
-							null !==
-								(s =
-									null !== (e = null == ed ? void 0 : ed.name) && void 0 !== e ? e : null == eu ? void 0 : eu.name) &&
-							void 0 !== s
-								? s
-								: '',
+						gameName: null !== (s = null !== (e = null == ed ? void 0 : ed.name) && void 0 !== e ? e : null == eu ? void 0 : eu.name) && void 0 !== s ? s : '',
 						playedFriendIds: eE.map((e) => e.author_id),
 						playedFriendsData: n,
 						similarGames: H(ei.current)
@@ -234,10 +218,7 @@ let w = 'GameProfileModal',
 			eN = l.useMemo(() => {
 				var e, s;
 				let a = (null !== (e = null == ed ? void 0 : ed.artwork) && void 0 !== e ? e : []).map((e) => ({ src: e }));
-				return [
-					...(null !== (s = null == ed ? void 0 : ed.screenshots) && void 0 !== s ? s : []).map((e) => ({ src: e })),
-					...a
-				];
+				return [...(null !== (s = null == ed ? void 0 : ed.screenshots) && void 0 !== s ? s : []).map((e) => ({ src: e })), ...a];
 			}, [null == ed ? void 0 : ed.artwork, null == ed ? void 0 : ed.screenshots]),
 			eO = (e, s) => {
 				(0, C.UE)({
@@ -254,14 +235,7 @@ let w = 'GameProfileModal',
 				applicationId: i,
 				trackEntryPointImpression: !1
 			});
-		if (
-			(o()(
-				em,
-				"Game Profile was opened when it thinks it shouldn't have been.  Make sure to use `useShouldOpenGameProfileModal` before calling `openGameProfileModal`"
-			),
-			null == ed)
-		)
-			return null;
+		if ((o()(em, "Game Profile was opened when it thinks it shouldn't have been.  Make sure to use `useShouldOpenGameProfileModal` before calling `openGameProfileModal`"), null == ed)) return null;
 		let eL = null !== (s = ed.name) && void 0 !== s ? s : null == eu ? void 0 : eu.name,
 			eg = null == eu ? void 0 : eu.getIconURL(160, S.$k ? 'webp' : 'png'),
 			eM = null !== (r = ed.coverImageUrl) && void 0 !== r ? r : eg,
@@ -270,7 +244,7 @@ let w = 'GameProfileModal',
 			ev = c()().diff(c()(eC), 'days') <= F.G,
 			eh = eE.some((e) => (0, L.ig)(e) === I.o.GLOBAL);
 		return (0, n.jsx)(A.ModalRoot, {
-			transitionState: b,
+			transitionState: Q,
 			size: A.ModalSize.DYNAMIC,
 			className: t()(W, U.gameProfileModal),
 			children: (0, n.jsxs)(A.ScrollerNone, {
@@ -329,7 +303,7 @@ let w = 'GameProfileModal',
 																	variant: 'text-sm/medium',
 																	children: ' \xB7 '
 																}),
-																(0, n.jsx)(Q, {})
+																(0, n.jsx)(b, {})
 															]
 														})
 												]
@@ -366,12 +340,7 @@ let w = 'GameProfileModal',
 																	}),
 																J(s[i]);
 														},
-														children: [
-															X
-																? (0, n.jsx)(A.BellSlashIcon, { color: 'white' })
-																: (0, n.jsx)(A.BellIcon, { color: 'white' }),
-															X ? B.Z.Messages.GAME_PROFILE_UNFOLLOW_GAME : B.Z.Messages.FOLLOW
-														]
+														children: [X ? (0, n.jsx)(A.BellSlashIcon, { color: 'white' }) : (0, n.jsx)(A.BellIcon, { color: 'white' }), X ? B.Z.Messages.GAME_PROFILE_UNFOLLOW_GAME : B.Z.Messages.FOLLOW]
 													})
 											})
 									})
@@ -531,9 +500,7 @@ let w = 'GameProfileModal',
 																	},
 																	children: (0, n.jsx)(A.Text, {
 																		variant: 'text-sm/semibold',
-																		children: $
-																			? B.Z.Messages.EXPANDABLE_TEXT_SHOW_MORE
-																			: B.Z.Messages.EXPANDABLE_TEXT_SHOW_LESS
+																		children: $ ? B.Z.Messages.EXPANDABLE_TEXT_SHOW_MORE : B.Z.Messages.EXPANDABLE_TEXT_SHOW_LESS
 																	})
 																})
 														]

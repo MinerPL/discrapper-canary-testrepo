@@ -22,10 +22,7 @@ function h(e) {
 	let { invite: t, expired: n } = e,
 		s = (0, l.e7)([E.default], () => {
 			var e, n;
-			return null !== (n = null === (e = E.default.getUser(t.inviter_id)) || void 0 === e ? void 0 : e.username) &&
-				void 0 !== n
-				? n
-				: '';
+			return null !== (n = null === (e = E.default.getUser(t.inviter_id)) || void 0 === e ? void 0 : e.username) && void 0 !== n ? n : '';
 		}),
 		u = (0, I.vc)(r()(t.created_at), 'LT'),
 		d = a.useRef(null),

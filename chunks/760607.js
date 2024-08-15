@@ -41,9 +41,7 @@ class i {
 		return new r(this.maxX, this.maxY);
 	}
 	intersects(e) {
-		return (
-			this.x <= e.x + e.width && e.x <= this.x + this.width && this.y <= e.y + e.height && e.y <= this.y + this.height
-		);
+		return this.x <= e.x + e.width && e.x <= this.x + this.width && this.y <= e.y + e.height && e.y <= this.y + this.height;
 	}
 	containsRect(e) {
 		return this.x <= e.x && this.y <= e.y && this.maxX >= e.maxX && this.maxY >= e.maxY;

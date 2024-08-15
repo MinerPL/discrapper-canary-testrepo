@@ -174,31 +174,9 @@ class S extends (a = s.Component) {
 	}
 	render() {
 		let e;
-		let {
-				className: t,
-				selectClassName: n,
-				error: r,
-				valueRenderer: a,
-				optionRenderer: i,
-				multiValueRenderer: s,
-				options: o,
-				value: I,
-				autofocus: h,
-				disabled: S,
-				clearable: m,
-				searchable: p,
-				styleOverrides: T,
-				isMulti: C,
-				placeholder: N,
-				filterOption: A,
-				closeMenuOnSelect: O = !0,
-				...P
-			} = this.props,
+		let { className: t, selectClassName: n, error: r, valueRenderer: a, optionRenderer: i, multiValueRenderer: s, options: o, value: I, autofocus: h, disabled: S, clearable: m, searchable: p, styleOverrides: T, isMulti: C, placeholder: N, filterOption: A, closeMenuOnSelect: O = !0, ...P } = this.props,
 			b = { ...P };
-		null != h && (b.autoFocus = h),
-			null != S && (b.isDisabled = S),
-			null != m && (b.isClearable = m),
-			null != p && (b.isSearchable = p);
+		null != h && (b.autoFocus = h), null != S && (b.isDisabled = S), null != m && (b.isClearable = m), null != p && (b.isSearchable = p);
 		let g = { IndicatorSeparator: () => null };
 		null != i &&
 			(g.Option = (e) =>

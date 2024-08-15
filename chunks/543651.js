@@ -14,7 +14,7 @@ var i = n(120356),
 	h = n(689938),
 	p = n(207190);
 t.Z = function (e) {
-	let { createdAt: t, participantIds: n, applicationId: i, title: s, guildId: I, className: m } = e,
+	let { createdAt: t, participantIds: n, applicationId: i, title: s, guildId: m, className: I } = e,
 		T = (0, c.q)(i),
 		g = (0, l.Wu)([E.default], () => {
 			var e;
@@ -25,7 +25,7 @@ t.Z = function (e) {
 	return null == t
 		? null
 		: (0, r.jsxs)('div', {
-				className: a()(m, p.container),
+				className: a()(I, p.container),
 				children: [
 					(0, r.jsx)(_.Z, { game: T }),
 					(0, r.jsxs)('div', {
@@ -61,7 +61,7 @@ t.Z = function (e) {
 							maxUsers: 4,
 							users: g,
 							className: p.__invalid_facePile,
-							guildId: I
+							guildId: m
 						})
 				]
 			});

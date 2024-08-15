@@ -40,26 +40,8 @@ var t = n(735250),
 	U = n(30214);
 function B(e) {
 	var s, n, i;
-	let {
-			handleStepChange: B,
-			initialPlanId: H,
-			subscriptionTier: k,
-			trialId: G,
-			referralTrialOfferId: F,
-			handleClose: w
-		} = e,
-		{
-			activeSubscription: D,
-			hasFetchedSubscriptions: W,
-			paymentSourceId: Y,
-			paymentSources: K,
-			selectedSkuId: V,
-			selectedPlan: X,
-			step: Q,
-			defaultPlanId: q,
-			priceOptions: J,
-			isPremium: z
-		} = (0, m.usePaymentContext)(),
+	let { handleStepChange: B, initialPlanId: H, subscriptionTier: k, trialId: G, referralTrialOfferId: F, handleClose: w } = e,
+		{ activeSubscription: D, hasFetchedSubscriptions: W, paymentSourceId: Y, paymentSources: K, selectedSkuId: V, selectedPlan: X, step: Q, defaultPlanId: q, priceOptions: J, isPremium: z } = (0, m.usePaymentContext)(),
 		{ isGift: $, giftRecipient: ee, giftMessage: es } = (0, g.wD)(),
 		en = null != Y ? K[Y] : null,
 		{ newPlans: et } = u.ZP.useExperiment({ location: 'd17fd6_3' }, { autoTrackExposure: !1 }),
@@ -68,12 +50,7 @@ function B(e) {
 		el = (0, L.N)(F),
 		ea = !$ && null != el && null != V && y.nG[el.trial_id].skus.includes(V),
 		eo = (0, x.Ng)(),
-		eC =
-			null == eo
-				? void 0
-				: null === (s = eo.discount) || void 0 === s
-					? void 0
-					: s.plan_ids.some((e) => y.GP[e].skuId === V),
+		eC = null == eo ? void 0 : null === (s = eo.discount) || void 0 === s ? void 0 : s.plan_ids.some((e) => y.GP[e].skuId === V),
 		ed = !$ && null != eo && null != V && eC,
 		eu = null !== (n = ea || ed) && void 0 !== n && n,
 		{ defaultToMonthlyPlan: ec } = p.k.useExperiment({ location: 'd17fd6_4' }, { autoTrackExposure: !1 }),
@@ -160,9 +137,7 @@ function B(e) {
 										(0, t.jsx)('hr', { className: U.planSelectSeparatorLower }),
 										(0, t.jsx)(o.Text, {
 											variant: 'text-xs/normal',
-											children: b.Z.Messages.BILLING_TRIAL_CANCEL_ANYTIME_LINK.format({
-												link: j.Z.getArticleURL(v.BhN.PREMIUM_DETAILS_CANCEL_SUB)
-											})
+											children: b.Z.Messages.BILLING_TRIAL_CANCEL_ANYTIME_LINK.format({ link: j.Z.getArticleURL(v.BhN.PREMIUM_DETAILS_CANCEL_SUB) })
 										})
 									]
 								})

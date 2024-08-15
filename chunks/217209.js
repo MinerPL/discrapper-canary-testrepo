@@ -2,10 +2,7 @@ var r = (function () {
 		function e(e, t) {
 			for (var n = 0; n < t.length; n++) {
 				var r = t[n];
-				(r.enumerable = r.enumerable || !1),
-					(r.configurable = !0),
-					'value' in r && (r.writable = !0),
-					Object.defineProperty(e, r.key, r);
+				(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 			}
 		}
 		return function (t, n, r) {
@@ -107,13 +104,7 @@ var r = (function () {
 				{
 					key: 'bounce',
 					value: function (e) {
-						return e < 1 / 2.75
-							? 7.5625 * e * e
-							: e < 2 / 2.75
-								? 7.5625 * (e -= 1.5 / 2.75) * e + 0.75
-								: e < 2.5 / 2.75
-									? 7.5625 * (e -= 2.25 / 2.75) * e + 0.9375
-									: 7.5625 * (e -= 2.625 / 2.75) * e + 0.984375;
+						return e < 1 / 2.75 ? 7.5625 * e * e : e < 2 / 2.75 ? 7.5625 * (e -= 1.5 / 2.75) * e + 0.75 : e < 2.5 / 2.75 ? 7.5625 * (e -= 2.25 / 2.75) * e + 0.9375 : 7.5625 * (e -= 2.625 / 2.75) * e + 0.984375;
 					}
 				},
 				{

@@ -27,8 +27,8 @@ let E = {
 	},
 	h = E.MP4,
 	p = null,
-	I = '',
 	m = '',
+	I = '',
 	T = [],
 	g = [],
 	S = [],
@@ -41,10 +41,10 @@ class v extends (r = o.ZP.Store) {
 		return p;
 	}
 	getQuery() {
-		return I;
+		return m;
 	}
 	getResultQuery() {
-		return m;
+		return I;
 	}
 	getResultItems() {
 		return T;
@@ -76,11 +76,11 @@ class v extends (r = o.ZP.Store) {
 			p = e.analyticsID;
 		},
 		GIF_PICKER_QUERY: function (e) {
-			'' === (I = e.query) && ((m = ''), (T = []), (S = []));
+			'' === (m = e.query) && ((I = ''), (T = []), (S = []));
 		},
 		GIF_PICKER_QUERY_SUCCESS: function (e) {
-			if (null != e.query && I === m) return !1;
-			null != e.query && (m = e.query),
+			if (null != e.query && m === I) return !1;
+			null != e.query && (I = e.query),
 				(T = e.items.map((e) => {
 					let { width: t, height: n, src: r, gif_src: i, url: a, id: s } = e;
 					return {
@@ -117,7 +117,7 @@ class v extends (r = o.ZP.Store) {
 		GIF_PICKER_QUERY_FAILURE: function (e) {
 			let { query: t } = e;
 			if (null == t) return !1;
-			(m = t), (T = []);
+			(I = t), (T = []);
 		},
 		GIF_PICKER_TRENDING_FETCH_SUCCESS: function (e) {
 			let t = e.trendingCategories;

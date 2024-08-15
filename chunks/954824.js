@@ -37,11 +37,7 @@ function u(e, t) {
 t.Z = {
 	launch: (function () {
 		var e, t;
-		if (
-			(null === (e = i().os) || void 0 === e ? void 0 : e.family) === 'Android' ||
-			(null === (t = i().os) || void 0 === t ? void 0 : t.family) === 'iOS'
-		)
-			return u;
+		if ((null === (e = i().os) || void 0 === e ? void 0 : e.family) === 'Android' || (null === (t = i().os) || void 0 === t ? void 0 : t.family) === 'iOS') return u;
 		if ('Gecko' === i().layout) return s;
 		if (null != i().ua && -1 !== i().ua.indexOf('Valve Steam GameOverlay')) return l;
 		return o;

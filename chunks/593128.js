@@ -69,19 +69,12 @@ let v = (e) => [
 		{
 			section: L.Wy.CUSTOMIZE_TAG_BADGE,
 			label: M.Z.Messages.CLAN_SETTINGS_CLAN_BADGE,
-			hasError:
-				(null == e ? void 0 : e.tag) != null ||
-				(null == e ? void 0 : e.badgeKind) != null ||
-				(null == e ? void 0 : e.badgePrimaryColor) != null ||
-				(null == e ? void 0 : e.badgeSecondaryColor) != null
+			hasError: (null == e ? void 0 : e.tag) != null || (null == e ? void 0 : e.badgeKind) != null || (null == e ? void 0 : e.badgePrimaryColor) != null || (null == e ? void 0 : e.badgeSecondaryColor) != null
 		},
 		{
 			section: L.Wy.CUSTOMIZE_BANNER,
 			label: M.Z.Messages.CLAN_SETTINGS_CLAN_PROFILE,
-			hasError:
-				(null == e ? void 0 : e.banner) != null ||
-				(null == e ? void 0 : e.brandPrimaryColor) != null ||
-				(null == e ? void 0 : e.brandSecondaryColor) != null
+			hasError: (null == e ? void 0 : e.banner) != null || (null == e ? void 0 : e.brandPrimaryColor) != null || (null == e ? void 0 : e.brandSecondaryColor) != null
 		},
 		{ section: _.ID.DIVIDER },
 		{

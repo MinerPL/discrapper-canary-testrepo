@@ -40,9 +40,7 @@ class f extends (o = l.ZP.Store) {
 	(t.Z = new f(u.Z, {
 		COLLECTIBLES_SHOP_OPEN: (e) => {
 			var t, n;
-			(d = null !== (t = e.analyticsLocations) && void 0 !== t ? t : c),
-				(_ = null !== (n = e.analyticsSource) && void 0 !== n ? n : null),
-				(r = e.initialProductSkuId);
+			(d = null !== (t = e.analyticsLocations) && void 0 !== t ? t : c), (_ = null !== (n = e.analyticsSource) && void 0 !== n ? n : null), (r = e.initialProductSkuId);
 		},
 		COLLECTIBLES_SHOP_CLOSE: E,
 		COLLECTIBLES_PRODUCT_DETAILS_OPEN: (e) => {

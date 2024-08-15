@@ -55,16 +55,12 @@ function _(e) {
 			(0, a.jsx)(r.Heading, {
 				className: h.header,
 				variant: 'heading-md/semibold',
-				children: I
-					? m.Z.Messages.FORUM_NO_POST_WITH_TAG_TITLE.format({ numTags: g.size })
-					: m.Z.Messages.FORUM_EMPTY_STATE_TITLE
+				children: I ? m.Z.Messages.FORUM_NO_POST_WITH_TAG_TITLE.format({ numTags: g.size }) : m.Z.Messages.FORUM_EMPTY_STATE_TITLE
 			}),
 			(0, a.jsx)(r.Text, {
 				color: 'header-secondary',
 				variant: 'text-sm/normal',
-				children: I
-					? m.Z.Messages.FORUM_NO_POST_WITH_TAG_DESCRIPTION.format({ numTags: g.size })
-					: m.Z.Messages.FORUM_EMPTY_STATE_DESCRIPTION.format({ channelName: t })
+				children: I ? m.Z.Messages.FORUM_NO_POST_WITH_TAG_DESCRIPTION.format({ numTags: g.size }) : m.Z.Messages.FORUM_EMPTY_STATE_DESCRIPTION.format({ channelName: t })
 			}),
 			E &&
 				(0, a.jsxs)(r.Button, {

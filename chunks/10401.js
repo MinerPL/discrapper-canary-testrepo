@@ -14,10 +14,10 @@ let m = {},
 	_ = !0,
 	f = {},
 	E = !1;
-function g() {
+function C() {
 	return d.Z;
 }
-function C() {
+function g() {
 	if (((f = {}), !_))
 		for (let [e, t] of Object.entries(d.Z)) {
 			let n = !1 !== m[e];
@@ -26,13 +26,11 @@ function C() {
 }
 class I extends (i = o.ZP.Store) {
 	initialize() {
-		C(), this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(u.Z);
+		g(), this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(u.Z);
 	}
 	shouldShow(e) {
 		var t;
-		return (
-			!(!E || _ || h.a || ((t = e), r.tq && ['writing-messages', 'organize-by-topic'].includes(t))) && (f[e] || !1)
-		);
+		return !(!E || _ || h.a || ((t = e), r.tq && ['writing-messages', 'organize-by-topic'].includes(t))) && (f[e] || !1);
 	}
 	shouldShowAnyIndicators() {
 		return !_;
@@ -60,11 +58,7 @@ class I extends (i = o.ZP.Store) {
 	(t.Z = new I(c.Z, {
 		CONNECTION_OPEN: function (e) {
 			let { tutorial: t } = e;
-			(E = !0),
-				(_ = !0),
-				(m = {}),
-				null != t && ((_ = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (m[e] = !1))),
-				C();
+			(E = !0), (_ = !0), (m = {}), null != t && ((_ = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (m[e] = !1))), g();
 		},
 		CONNECTION_CLOSED: function () {
 			E = !1;
@@ -76,7 +70,7 @@ class I extends (i = o.ZP.Store) {
 			}),
 				(p = { ...p }),
 				delete p[e.tutorialId],
-				C();
+				g();
 		},
 		TUTORIAL_INDICATOR_SHOW: function (e) {
 			p = {

@@ -81,11 +81,7 @@ class o {
 		return this.getAllowedTargets(e).sort((e, t) => {
 			if (e === t) return 0;
 			let n = e.compareDocumentPosition(t);
-			return (n & (Node.DOCUMENT_POSITION_FOLLOWING | (n & Node.DOCUMENT_POSITION_CONTAINED_BY))) != 0
-				? -1
-				: (n & (Node.DOCUMENT_POSITION_PRECEDING | (n & Node.DOCUMENT_POSITION_CONTAINS))) != 0
-					? 1
-					: 0;
+			return (n & (Node.DOCUMENT_POSITION_FOLLOWING | (n & Node.DOCUMENT_POSITION_CONTAINED_BY))) != 0 ? -1 : (n & (Node.DOCUMENT_POSITION_PRECEDING | (n & Node.DOCUMENT_POSITION_CONTAINS))) != 0 ? 1 : 0;
 		});
 	}
 	getAllowedTargets(e) {

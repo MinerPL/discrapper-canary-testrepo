@@ -6,14 +6,7 @@ var a = n(692547),
 	l = n(689938),
 	o = n(583669);
 t.Z = (e) => {
-	let {
-			title: t,
-			subtext: n = l.Z.Messages.NOT_AVAILABLE,
-			localizedNumber: c,
-			isTrendingUp: d,
-			isTrendingDown: u,
-			tooltipText: _
-		} = e,
+	let { title: t, subtext: n = l.Z.Messages.NOT_AVAILABLE, localizedNumber: c, isTrendingUp: d, isTrendingDown: u, tooltipText: _ } = e,
 		I = 'string' == typeof _ ? _ : t,
 		E =
 			null != _

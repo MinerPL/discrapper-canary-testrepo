@@ -20,18 +20,7 @@ var i = t(120356),
 	m = t(38981),
 	h = t(40916);
 function E(e) {
-	let {
-			guild: n,
-			stageInstance: t,
-			showGuildPopout: a,
-			setShowGuildPopout: l,
-			handleGuildNameClick: i,
-			source: E,
-			speakers: x,
-			speakerCount: I,
-			audienceCount: T,
-			channelName: N
-		} = e,
+	let { guild: n, stageInstance: t, showGuildPopout: a, setShowGuildPopout: l, handleGuildNameClick: i, source: E, speakers: x, speakerCount: I, audienceCount: T, channelName: N } = e,
 		g = n.id;
 	return (0, s.jsx)('div', {
 		className: h.contentContainer,
@@ -136,10 +125,4 @@ function E(e) {
 		})
 	});
 }
-((a = l || (l = {}))[(a.UNSPECIFIED = 0)] = 'UNSPECIFIED'),
-	(a[(a.TRENDING = 1)] = 'TRENDING'),
-	(a[(a.PERSONALIZED = 2)] = 'PERSONALIZED'),
-	(a[(a.USER_GUILDS = 3)] = 'USER_GUILDS'),
-	(a[(a.FRIENDS_GUILDS = 4)] = 'FRIENDS_GUILDS'),
-	(a[(a.INTRO_CARD = 5)] = 'INTRO_CARD'),
-	(a[(a.FEATURED = 6)] = 'FEATURED');
+((a = l || (l = {}))[(a.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (a[(a.TRENDING = 1)] = 'TRENDING'), (a[(a.PERSONALIZED = 2)] = 'PERSONALIZED'), (a[(a.USER_GUILDS = 3)] = 'USER_GUILDS'), (a[(a.FRIENDS_GUILDS = 4)] = 'FRIENDS_GUILDS'), (a[(a.INTRO_CARD = 5)] = 'INTRO_CARD'), (a[(a.FEATURED = 6)] = 'FEATURED');

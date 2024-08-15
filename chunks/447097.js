@@ -43,13 +43,7 @@ function d(e) {
 					})
 						.catch((e) => {
 							var t, s;
-							S(
-								null !== (s = e.message) && void 0 !== s
-									? s
-									: null === (t = e.body) || void 0 === t
-										? void 0
-										: t.message
-							);
+							S(null !== (s = e.message) && void 0 !== s ? s : null === (t = e.body) || void 0 === t ? void 0 : t.message);
 						})
 						.finally(() => {
 							f(!1);

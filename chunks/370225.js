@@ -26,8 +26,8 @@ var r = n(488745),
 	f = n(311899),
 	h = n(831280),
 	p = n(221022),
-	I = n(623226),
-	m = n(66099),
+	m = n(623226),
+	I = n(66099),
 	T = n(130196),
 	g = n(739050),
 	S = n(985265),
@@ -78,10 +78,7 @@ function Y(e, t, n) {
 				...('press' === s
 					? {
 							onPressStart(e) {
-								'touch' !== e.pointerType &&
-									'keyboard' !== e.pointerType &&
-									!a &&
-									t.toggle('virtual' === e.pointerType ? 'first' : null);
+								'touch' !== e.pointerType && 'keyboard' !== e.pointerType && !a && t.toggle('virtual' === e.pointerType ? 'first' : null);
 							},
 							onPress(e) {
 								'touch' === e.pointerType && !a && t.toggle();
@@ -132,8 +129,8 @@ Z = {
 	'he-IL': f.Z,
 	'hr-HR': h.Z,
 	'hu-HU': p.Z,
-	'it-IT': I.Z,
-	'ja-JP': m.Z,
+	'it-IT': m.Z,
+	'ja-JP': I.Z,
 	'ko-KR': T.Z,
 	'lt-LT': g.Z,
 	'lv-LV': S.Z,
@@ -156,9 +153,7 @@ Z = {
 let j = new WeakMap();
 function W(e, t, n) {
 	let { shouldFocusWrap: r = !0, onKeyDown: i, onKeyUp: a, ...s } = e;
-	!e['aria-label'] &&
-		!e['aria-labelledby'] &&
-		console.warn('An aria-label or aria-labelledby prop is required for accessibility.');
+	!e['aria-label'] && !e['aria-labelledby'] && console.warn('An aria-label or aria-labelledby prop is required for accessibility.');
 	let o = (0, G.zL)(e, { labelable: !0 }),
 		{ listProps: l } = (0, V._t)({
 			...s,
@@ -194,25 +189,7 @@ function W(e, t, n) {
 }
 function K(e, t, n) {
 	var r, i, a;
-	let {
-			key: s,
-			closeOnSelect: o,
-			isVirtualized: l,
-			'aria-haspopup': u,
-			onPressStart: c,
-			onPressUp: d,
-			onPress: _,
-			onPressChange: E,
-			onPressEnd: f,
-			onHoverStart: h,
-			onHoverChange: p,
-			onHoverEnd: I,
-			onKeyDown: m,
-			onKeyUp: T,
-			onFocus: g,
-			onFocusChange: S,
-			onBlur: A
-		} = e,
+	let { key: s, closeOnSelect: o, isVirtualized: l, 'aria-haspopup': u, onPressStart: c, onPressUp: d, onPress: _, onPressChange: E, onPressEnd: f, onHoverStart: h, onHoverChange: p, onHoverEnd: m, onKeyDown: I, onKeyUp: T, onFocus: g, onFocusChange: S, onBlur: A } = e,
 		N = !!u,
 		v = null !== (i = e.isDisabled) && void 0 !== i ? i : t.disabledKeys.has(s),
 		O = null !== (a = e.isSelected) && void 0 !== a ? a : t.selectionManager.isSelected(s),
@@ -224,10 +201,7 @@ function K(e, t, n) {
 			y && y(s), e.target instanceof HTMLAnchorElement && D.open(e.target, e);
 		},
 		b = 'menuitem';
-	!N &&
-		('single' === t.selectionManager.selectionMode
-			? (b = 'menuitemradio')
-			: 'multiple' === t.selectionManager.selectionMode && (b = 'menuitemcheckbox'));
+	!N && ('single' === t.selectionManager.selectionMode ? (b = 'menuitemradio') : 'multiple' === t.selectionManager.selectionMode && (b = 'menuitemcheckbox'));
 	let M = (0, G.mp)(),
 		P = (0, G.mp)(),
 		U = (0, G.mp)(),
@@ -258,13 +232,7 @@ function K(e, t, n) {
 			},
 			onPress: _,
 			onPressUp: (e) => {
-				'keyboard' !== e.pointerType &&
-					(L(e),
-					!N &&
-						C &&
-						(null != o ? o : 'multiple' !== t.selectionManager.selectionMode || t.selectionManager.isLink(s)) &&
-						C()),
-					null == d || d(e);
+				'keyboard' !== e.pointerType && (L(e), !N && C && (null != o ? o : 'multiple' !== t.selectionManager.selectionMode || t.selectionManager.isLink(s)) && C()), null == d || d(e);
 			},
 			onPressChange: E,
 			onPressEnd: f,
@@ -276,7 +244,7 @@ function K(e, t, n) {
 				!(0, B.E)() && (t.selectionManager.setFocused(!0), t.selectionManager.setFocusedKey(s)), null == h || h(e);
 			},
 			onHoverChange: p,
-			onHoverEnd: I
+			onHoverEnd: m
 		}),
 		{ keyboardProps: K } = (0, B.v5)({
 			onKeyDown: (e) => {
@@ -292,7 +260,7 @@ function K(e, t, n) {
 						!v && !1 !== o && !N && C && C();
 						break;
 					default:
-						!N && e.continuePropagation(), null == m || m(e);
+						!N && e.continuePropagation(), null == I || I(e);
 				}
 			},
 			onKeyUp: T
@@ -302,9 +270,7 @@ function K(e, t, n) {
 			onFocus: g,
 			onFocusChange: S
 		}),
-		q = (0, G.zL)(x.props, {
-			isLink: !!(null == x ? void 0 : null === (r = x.props) || void 0 === r ? void 0 : r.href)
-		});
+		q = (0, G.zL)(x.props, { isLink: !!(null == x ? void 0 : null === (r = x.props) || void 0 === r ? void 0 : r.href) });
 	return (
 		delete q.id,
 		{

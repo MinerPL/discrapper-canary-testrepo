@@ -15,16 +15,7 @@ var s = t(120356),
 	c = t(324655),
 	h = t(224499);
 let I = (e) => {
-	let {
-			handleDone: n,
-			headerId: t,
-			modalState: s,
-			shouldHideTemporaryInviteToggle: I,
-			onGenerateNewLink: g,
-			onToggleTemporary: E,
-			onSelectMaxAge: _,
-			onSelectMaxUses: m
-		} = e,
+	let { handleDone: n, headerId: t, modalState: s, shouldHideTemporaryInviteToggle: I, onGenerateNewLink: g, onToggleTemporary: E, onSelectMaxAge: _, onSelectMaxUses: m } = e,
 		T = (0, r.ZP)(),
 		{ maxAge: N, maxUses: v, temporary: S } = s;
 	return (0, l.jsxs)(l.Fragment, {

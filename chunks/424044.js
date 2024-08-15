@@ -61,9 +61,7 @@ t.Z = (e) => {
 				var t, n;
 				try {
 					let n = null != e ? await (0, _.hs)(e) : void 0;
-					null != n
-						? C(I.Z.Messages.REPORT_SECOND_LOOK_SUCCESS_TITLE)
-						: S(null === (t = n.body) || void 0 === t ? void 0 : t.code);
+					null != n ? C(I.Z.Messages.REPORT_SECOND_LOOK_SUCCESS_TITLE) : S(null === (t = n.body) || void 0 === t ? void 0 : t.code);
 				} catch (e) {
 					S(null === (n = e.body) || void 0 === n ? void 0 : n.code);
 				} finally {

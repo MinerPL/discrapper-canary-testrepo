@@ -63,11 +63,7 @@ function p(e, n, t) {
 			[T.Z],
 			() => {
 				var e;
-				return null == t
-					? T.Z.getEditedApplication()
-					: null === (e = T.Z.getEditedCommand()) || void 0 === e
-						? void 0
-						: e.permissions;
+				return null == t ? T.Z.getEditedApplication() : null === (e = T.Z.getEditedCommand()) || void 0 === e ? void 0 : e.permissions;
 			},
 			[t]
 		),
@@ -101,12 +97,7 @@ function p(e, n, t) {
 						let e = [],
 							t = [],
 							i = [];
-						for (let a of Object.values(n))
-							a.type === c.Kw.CHANNEL
-								? e.push(a.id)
-								: a.type === c.Kw.ROLE
-									? t.push(a.id)
-									: a.type === c.Kw.USER && i.push(a.id);
+						for (let a of Object.values(n)) a.type === c.Kw.CHANNEL ? e.push(a.id) : a.type === c.Kw.ROLE ? t.push(a.id) : a.type === c.Kw.USER && i.push(a.id);
 						return {
 							channelIds: e,
 							roleIds: t,

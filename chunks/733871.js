@@ -16,10 +16,7 @@ var r = n(67867),
 	g = function (e, t) {
 		var n,
 			r = o(b, this);
-		i ? (n = i(new y(), r ? a(this) : b)) : l((n = r ? this : c(b)), m, 'Error'),
-			void 0 !== t && l(n, 'message', f(t)),
-			p(n, g, n.stack, 1),
-			arguments.length > 2 && d(n, arguments[2]);
+		i ? (n = i(new y(), r ? a(this) : b)) : l((n = r ? this : c(b)), m, 'Error'), void 0 !== t && l(n, 'message', f(t)), p(n, g, n.stack, 1), arguments.length > 2 && d(n, arguments[2]);
 		var s = [];
 		return h(e, v, { that: s }), l(n, 'errors', s), n;
 	};

@@ -38,8 +38,7 @@ function M(e, t, n) {
 		a = t ? N.Z.roleFilter : null,
 		s = t ? N.Z.everyoneFilter : null,
 		r = null;
-	null != e && null != i && (r = i === A.NgX.ALL_SERVERS ? null : e.getGuildId()),
-		o.Z.fetchRecentMentions(n, A.DJj, r, a, s);
+	null != e && null != i && (r = i === A.NgX.ALL_SERVERS ? null : e.getGuildId()), o.Z.fetchRecentMentions(n, A.DJj, r, a, s);
 }
 function v(e) {
 	let { setTab: t, onJump: n, badgeState: l, closePopout: E } = e,
@@ -70,9 +69,7 @@ function v(e) {
 		((null != L && g !== L) || (null != P && O !== P) || (null != D && v !== D)) && M(I, !0);
 	}, [L, g, P, O, D, v, I, !0]);
 	a.useEffect(() => {
-		d.l.getCurrentConfig({ location: 'mentions' }).enabled &&
-			(null == T ? void 0 : T.some(_.k5)) &&
-			(o.Z.clearMentions(), M(I, !0));
+		d.l.getCurrentConfig({ location: 'mentions' }).enabled && (null == T ? void 0 : T.some(_.k5)) && (o.Z.clearMentions(), M(I, !0));
 	}, []),
 		a.useEffect(
 			() => () => {

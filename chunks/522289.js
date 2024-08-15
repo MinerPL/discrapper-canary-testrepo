@@ -13,16 +13,7 @@ var i = n(120356),
 	u = n(565138),
 	c = n(180160);
 function d(e) {
-	let {
-		className: t,
-		maxGuilds: n,
-		guilds: i,
-		onFocus: s,
-		onClick: d,
-		size: _ = u.Z.Sizes.SMALLER,
-		hideOverflowCount: E = !1,
-		disableGuildNameTooltip: f = !1
-	} = e;
+	let { className: t, maxGuilds: n, guilds: i, onFocus: s, onClick: d, size: _ = u.Z.Sizes.SMALLER, hideOverflowCount: E = !1, disableGuildNameTooltip: f = !1 } = e;
 	return i.length <= 0
 		? null
 		: (0, r.jsx)('div', {

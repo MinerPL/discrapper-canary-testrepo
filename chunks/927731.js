@@ -44,12 +44,7 @@ let p = 'guild-role-subscription-tier-template-selector',
 function f(e) {
 	let { guildId: t, priceTiers: i, groupListingId: m } = e,
 		R = (0, T._k)(m),
-		{
-			editStateIds: f,
-			addNewEditStateId: L,
-			addNewEditStateFromTemplate: O,
-			removeEditStateId: A
-		} = S.B7(m, t, { includeSoftDeleted: !0 }),
+		{ editStateIds: f, addNewEditStateId: L, addNewEditStateFromTemplate: O, removeEditStateId: A } = S.B7(m, t, { includeSoftDeleted: !0 }),
 		[M, D] = a.useState({}),
 		v = a.useMemo(() => {
 			let e = f.map((e) => {

@@ -47,8 +47,7 @@ e.exports =
 	})
 		? function (e, t) {
 				for (var n = c(e), i = arguments.length, s = 1, _ = l.f, E = u.f; i > s; ) {
-					for (var h, p = d(arguments[s++]), I = _ ? f(o(p), _(p)) : o(p), m = I.length, T = 0; m > T; )
-						(h = I[T++]), (!r || a(E, p, h)) && (n[h] = p[h]);
+					for (var h, p = d(arguments[s++]), m = _ ? f(o(p), _(p)) : o(p), I = m.length, T = 0; I > T; ) (h = m[T++]), (!r || a(E, p, h)) && (n[h] = p[h]);
 				}
 				return n;
 			}

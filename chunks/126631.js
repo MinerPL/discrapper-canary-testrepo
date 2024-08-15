@@ -23,15 +23,7 @@ let T = (0, c.hQ)(),
 	}),
 	N = (0, c.hQ)();
 function C(e) {
-	let {
-			sectionTitle: s,
-			errors: t,
-			onBioChange: c,
-			pendingBio: d,
-			placeholder: C,
-			currentBio: m,
-			disabled: A = !1
-		} = e,
+	let { sectionTitle: s, errors: t, onBioChange: c, pendingBio: d, placeholder: C, currentBio: m, disabled: A = !1 } = e,
 		[O, g] = a.useState(null != d ? d : m),
 		[h, p] = a.useState((0, o.JM)(O)),
 		R = a.useRef(!1);

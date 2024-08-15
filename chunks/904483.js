@@ -36,9 +36,7 @@ function o(e) {
 								label: r.Z.Messages.CREATE_CHANNEL,
 								action: () =>
 									(0, i.openModalLazy)(async () => {
-										let { default: n } = await Promise.all([a.e('7590'), a.e('45094'), a.e('1379')]).then(
-											a.bind(a, 218613)
-										);
+										let { default: n } = await Promise.all([a.e('7590'), a.e('45094'), a.e('1379')]).then(a.bind(a, 218613));
 										return (a) =>
 											(0, t.jsx)(n, {
 												...a,
@@ -56,9 +54,7 @@ function o(e) {
 								label: r.Z.Messages.CREATE_CATEGORY,
 								action: () =>
 									(0, i.openModalLazy)(async () => {
-										let { default: n } = await Promise.all([a.e('7590'), a.e('45094'), a.e('1379')]).then(
-											a.bind(a, 218613)
-										);
+										let { default: n } = await Promise.all([a.e('7590'), a.e('45094'), a.e('1379')]).then(a.bind(a, 218613));
 										return (a) =>
 											(0, t.jsx)(n, {
 												...a,

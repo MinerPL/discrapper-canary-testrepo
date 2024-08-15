@@ -12,14 +12,7 @@ var s = o(212598),
 	a = o(397995),
 	l = o(848499);
 function d(e) {
-	let {
-			isWaitingForConnection: n,
-			onWaitingForConnection: o,
-			expectedCallbackState: d,
-			onAuthToken: u,
-			onError: _,
-			onClose: C
-		} = e,
+	let { isWaitingForConnection: n, onWaitingForConnection: o, expectedCallbackState: d, onAuthToken: u, onError: _, onClose: C } = e,
 		x = n
 			? (0, t.jsx)('img', {
 					src: l,

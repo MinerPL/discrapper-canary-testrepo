@@ -12,9 +12,7 @@ var s = n(442837),
 function o(e) {
 	return (0, s.Wu)([i.Z, r.Z], () => {
 		var t;
-		let n = (null !== (t = i.Z.getTopChannelIds(e.id)) && void 0 !== t ? t : [])
-				.map((e) => r.Z.getChannel(e))
-				.filter((t) => null == t || t.id !== e.rulesChannelId),
+		let n = (null !== (t = i.Z.getTopChannelIds(e.id)) && void 0 !== t ? t : []).map((e) => r.Z.getChannel(e)).filter((t) => null == t || t.id !== e.rulesChannelId),
 			s = [],
 			o = 0;
 		return (

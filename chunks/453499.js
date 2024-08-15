@@ -46,15 +46,7 @@ class E extends (a = l.PureComponent) {
 		x.S.unsubscribe(I.CkL.CAROUSEL_PREV, this.handlePrevious), x.S.unsubscribe(I.CkL.CAROUSEL_NEXT, this.handleNext);
 	}
 	render() {
-		let {
-				current: e,
-				count: t,
-				includeHitboxPadding: i,
-				arrowClassName: n,
-				paginationDotClassName: a,
-				paginationDotSelectedClassName: r,
-				paginationArrowIconType: o = 'arrow'
-			} = this.props,
+		let { current: e, count: t, includeHitboxPadding: i, arrowClassName: n, paginationDotClassName: a, paginationDotSelectedClassName: r, paginationArrowIconType: o = 'arrow' } = this.props,
 			l = d()(N.arrowHitbox, { [N.arrowHitboxPadding]: i }, n);
 		return (0, s.jsxs)('div', {
 			className: d()(N.controls, this.props.className),
@@ -131,8 +123,7 @@ class E extends (a = l.PureComponent) {
 v(E, 'defaultProps', { includeHitboxPadding: !0 });
 class T extends (r = l.PureComponent) {
 	componentDidMount() {
-		m.Z.subscribe('WINDOW_FOCUS', this.handleWindowFocusChange),
-			!this.props.initialPaused && !this.state.paused && this.startTimer();
+		m.Z.subscribe('WINDOW_FOCUS', this.handleWindowFocusChange), !this.props.initialPaused && !this.state.paused && this.startTimer();
 	}
 	componentWillUnmount() {
 		this.stopTimer(), m.Z.unsubscribe('WINDOW_FOCUS', this.handleWindowFocusChange);
@@ -167,24 +158,7 @@ class T extends (r = l.PureComponent) {
 		);
 	}
 	render() {
-		let {
-				items: e,
-				renderItem: t,
-				className: i,
-				slideAnimatorClassName: n,
-				slideAnimatorSpringSettings: a,
-				slideAnimatorFadeInOut: r,
-				paginationClassName: o,
-				paginationArrowClassName: l,
-				paginationArrowIconType: c,
-				paginationDotClassName: u,
-				paginationDotSelectedClassName: h,
-				themedPagination: _,
-				includeHitboxPadding: p,
-				style: m,
-				aspectRatio: f,
-				children: C
-			} = this.props,
+		let { items: e, renderItem: t, className: i, slideAnimatorClassName: n, slideAnimatorSpringSettings: a, slideAnimatorFadeInOut: r, paginationClassName: o, paginationArrowClassName: l, paginationArrowIconType: c, paginationDotClassName: u, paginationDotSelectedClassName: h, themedPagination: _, includeHitboxPadding: p, style: m, aspectRatio: f, children: C } = this.props,
 			{ visibleIndex: x } = this.state;
 		return (0, s.jsxs)('div', {
 			className: N.root,

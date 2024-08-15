@@ -19,20 +19,14 @@ n(
 				n,
 				i,
 				p,
-				m = u(this),
-				d = a(m),
-				v = s(t, d),
+				d = u(this),
+				m = a(d),
+				v = s(t, m),
 				g = arguments.length,
 				y = 0;
-			for (
-				0 === g ? (r = n = 0) : 1 === g ? ((r = 0), (n = d - v)) : ((r = g - 2), (n = f(h(c(e), 0), d - v))),
-					p = l((i = o(d + r - n)));
-				y < v;
-				y++
-			)
-				p[y] = m[y];
+			for (0 === g ? (r = n = 0) : 1 === g ? ((r = 0), (n = m - v)) : ((r = g - 2), (n = f(h(c(e), 0), m - v))), p = l((i = o(m + r - n))); y < v; y++) p[y] = d[y];
 			for (; y < v + r; y++) p[y] = arguments[y - v + 2];
-			for (; y < i; y++) p[y] = m[y + n - r];
+			for (; y < i; y++) p[y] = d[y + n - r];
 			return p;
 		}
 	}

@@ -73,14 +73,7 @@ function D() {
 				var t, n;
 				let { query: a, categoryId: i, page: l } = e,
 					r = new URLSearchParams(s.search);
-				'' === a ? r.delete('q') : r.set('q', a),
-					i === T.MU
-						? r.delete('category_id')
-						: r.set('category_id', null !== (t = null == i ? void 0 : i.toString()) && void 0 !== t ? t : ''),
-					1 === l
-						? r.delete('page')
-						: r.set('page', null !== (n = null == l ? void 0 : l.toString()) && void 0 !== n ? n : ''),
-					(0, S.replaceAppDirectoryURLWith)(''.concat(y.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(r.toString()));
+				'' === a ? r.delete('q') : r.set('q', a), i === T.MU ? r.delete('category_id') : r.set('category_id', null !== (t = null == i ? void 0 : i.toString()) && void 0 !== t ? t : ''), 1 === l ? r.delete('page') : r.set('page', null !== (n = null == l ? void 0 : l.toString()) && void 0 !== n ? n : ''), (0, S.replaceAppDirectoryURLWith)(''.concat(y.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(r.toString()));
 			},
 			[s.search]
 		),
@@ -142,10 +135,7 @@ function D() {
 				}
 			);
 		}),
-		J = i.useMemo(
-			() => (null == z ? void 0 : z.filter((e) => !(q === _.c.SEARCH_RESULTS && e.type !== u.s.APPLICATION))),
-			[z, q]
-		),
+		J = i.useMemo(() => (null == z ? void 0 : z.filter((e) => !(q === _.c.SEARCH_RESULTS && e.type !== u.s.APPLICATION))), [z, q]),
 		Q = i.useRef(null),
 		X = (0, N.getCurrentView)(),
 		$ = i.useCallback(
@@ -312,10 +302,7 @@ function Z(e) {
 									let n;
 									let i = e.data;
 									return (
-										(null === (t = i.directory_entry) || void 0 === t ? void 0 : t.short_description) != null &&
-										i.directory_entry.short_description.length > 0
-											? (n = i.directory_entry.short_description)
-											: null != i.description && i.description.length > 0 && (n = i.description),
+										(null === (t = i.directory_entry) || void 0 === t ? void 0 : t.short_description) != null && i.directory_entry.short_description.length > 0 ? (n = i.directory_entry.short_description) : null != i.description && i.description.length > 0 && (n = i.description),
 										(0, a.jsx)(
 											h.Z,
 											{

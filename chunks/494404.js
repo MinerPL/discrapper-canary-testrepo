@@ -140,20 +140,7 @@ let D = u.ZP.connectStores([p.Z], (e) => {
 	return { canManageMessages: null != t && p.Z.can(x.Plq.MANAGE_MESSAGES, t) };
 })(b);
 function j(e) {
-	let {
-			analyticsName: t,
-			items: n,
-			hasMore: s,
-			loading: l,
-			loadMore: _,
-			renderHeader: E,
-			renderEmptyState: T,
-			renderItem: h,
-			getProTip: f,
-			scrollerClassName: C,
-			className: p,
-			listName: v
-		} = e,
+	let { analyticsName: t, items: n, hasMore: s, loading: l, loadMore: _, renderHeader: E, renderEmptyState: T, renderItem: h, getProTip: f, scrollerClassName: C, className: p, listName: v } = e,
 		Z = a.useRef(null),
 		P = (0, I.Z)(v, Z),
 		b = (0, u.e7)([g.Z], () => g.Z.hasNotice()),
@@ -285,25 +272,7 @@ function j(e) {
 	});
 }
 function U(e) {
-	let {
-			analyticsName: t,
-			onFetch: n,
-			channel: s,
-			messages: r,
-			hasMore: l,
-			loading: o,
-			loadMore: c,
-			onJump: d,
-			canCloseAllMessages: I = !1,
-			renderHeader: m,
-			renderEmptyState: N,
-			renderMessage: p,
-			getProTip: g,
-			scrollerClassName: S,
-			className: A,
-			onCloseMessage: R,
-			listName: v
-		} = e,
+	let { analyticsName: t, onFetch: n, channel: s, messages: r, hasMore: l, loading: o, loadMore: c, onJump: d, canCloseAllMessages: I = !1, renderHeader: m, renderEmptyState: N, renderMessage: p, getProTip: g, scrollerClassName: S, className: A, onCloseMessage: R, listName: v } = e,
 		L = (0, u.e7)([C.Z], () => {
 			let e = null != s ? C.Z.getMessages(s.id) : null;
 			return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);

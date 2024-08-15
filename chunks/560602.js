@@ -69,38 +69,15 @@ l.default = (e) => {
 								? d.push({
 										id: f,
 										type: u.BN.ROLE,
-										allow: p
-											? t.IH(
-													null !== (c = null === (o = i[f]) || void 0 === o ? void 0 : o.allow) && void 0 !== c
-														? c
-														: h.Hn,
-													s
-												)
-											: t.Od(
-													null !== (O = null === (r = i[f]) || void 0 === r ? void 0 : r.allow) && void 0 !== O
-														? O
-														: h.Hn,
-													s
-												),
-										deny: t.Od(
-											null !== (R = null === (a = i[f]) || void 0 === a ? void 0 : a.deny) && void 0 !== R ? R : h.Hn,
-											s
-										)
+										allow: p ? t.IH(null !== (c = null === (o = i[f]) || void 0 === o ? void 0 : o.allow) && void 0 !== c ? c : h.Hn, s) : t.Od(null !== (O = null === (r = i[f]) || void 0 === r ? void 0 : r.allow) && void 0 !== O ? O : h.Hn, s),
+										deny: t.Od(null !== (R = null === (a = i[f]) || void 0 === a ? void 0 : a.deny) && void 0 !== R ? R : h.Hn, s)
 									})
 								: (0, _.pM)(e.id, f)
 									? d.push({
 											id: f,
 											type: u.BN.ROLE,
-											allow: t.Od(
-												null !== (m = null === (M = i[f]) || void 0 === M ? void 0 : M.allow) && void 0 !== m
-													? m
-													: h.Hn,
-												s
-											),
-											deny: t.IH(
-												null !== (v = null === (S = i[f]) || void 0 === S ? void 0 : S.deny) && void 0 !== v ? v : h.Hn,
-												s
-											)
+											allow: t.Od(null !== (m = null === (M = i[f]) || void 0 === M ? void 0 : M.allow) && void 0 !== m ? m : h.Hn, s),
+											deny: t.IH(null !== (v = null === (S = i[f]) || void 0 === S ? void 0 : S.deny) && void 0 !== v ? v : h.Hn, s)
 										})
 									: f in i && N.push(f);
 						}, []),

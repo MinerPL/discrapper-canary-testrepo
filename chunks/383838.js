@@ -26,17 +26,7 @@ let d = s.Z.Types,
 function E(e) {
 	let t,
 		n,
-		{
-			type: i = s.Z.Types.DANGER,
-			imageData: d,
-			button: E,
-			className: f,
-			iconClassName: h,
-			title: p,
-			body: I,
-			style: m,
-			align: T = o.Z.Align.START
-		} = e,
+		{ type: i = s.Z.Types.DANGER, imageData: d, button: E, className: f, iconClassName: h, title: p, body: m, style: I, align: T = o.Z.Align.START } = e,
 		g = o.Z.Direction.HORIZONTAL;
 	if (null != d) {
 		let { position: e, ...n } = d;
@@ -57,7 +47,7 @@ function E(e) {
 		(0, r.jsx)(s.Z, {
 			className: a()(c.formNotice, f),
 			type: i,
-			style: m,
+			style: I,
 			children: (0, r.jsxs)(o.Z, {
 				direction: g,
 				align: T,
@@ -75,7 +65,7 @@ function E(e) {
 								: null,
 							(0, r.jsx)(l.R, {
 								className: a()(c.formNoticeBody, { [c.whiteText]: S }),
-								children: I
+								children: m
 							}),
 							n
 						]

@@ -13,9 +13,5 @@ function u(e) {
 	var t;
 	let n = o.Z.getChannelId(e),
 		u = null === (t = s.ZP.getDefaultChannel(e)) || void 0 === t ? void 0 : t.id;
-	return (n !== l.oC.GUILD_ONBOARDING || r.ZP.shouldShowOnboarding(e)) &&
-		(n !== l.oC.GUILD_HOME || (0, i.s)(e)) &&
-		null != a.Z.getChannel(n)
-		? n
-		: u;
+	return (n !== l.oC.GUILD_ONBOARDING || r.ZP.shouldShowOnboarding(e)) && (n !== l.oC.GUILD_HOME || (0, i.s)(e)) && null != a.Z.getChannel(n) ? n : u;
 }

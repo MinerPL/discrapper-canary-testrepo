@@ -14,35 +14,30 @@ var i = n(735250),
 	_ = n(50493),
 	f = n(981631),
 	E = n(689938),
-	g = n(38031);
-function C(e) {
+	C = n(38031);
+function g(e) {
 	var t, n;
 	let { permission: a, roleIds: s, guild: h, specMap: m } = e,
 		_ = f.Plq[a],
-		C =
-			null !== (n = null === (t = m[_.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n
-				? n
-				: (0, u.wt)(_),
+		g = null !== (n = null === (t = m[_.toString()]) || void 0 === t ? void 0 : t.title) && void 0 !== n ? n : (0, u.wt)(_),
 		I = p._o.has(_),
 		x = (0, r.e7)([d.Z], () => d.Z.getRoles(h.id));
 	return (0, i.jsx)(o.Tooltip, {
 		'aria-label': E.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL,
-		tooltipClassName: g.roleTooltipContainer,
-		tooltipContentClassName: g.roleTooltipContentContainer,
+		tooltipClassName: C.roleTooltipContainer,
+		tooltipContentClassName: C.roleTooltipContentContainer,
 		allowOverflow: !0,
 		text: (0, i.jsxs)(i.Fragment, {
 			children: [
 				(0, i.jsx)(o.Text, {
 					variant: 'text-sm/normal',
-					children: I
-						? E.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY
-						: E.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY
+					children: I ? E.Z.Messages.GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY : E.Z.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY
 				}),
 				s.map((e) =>
 					(0, i.jsx)(
 						'div',
 						{
-							className: g.roleTooltipItem,
+							className: C.roleTooltipItem,
 							children: (0, i.jsx)(c.Z, {
 								role: x[e],
 								guildId: h.id
@@ -56,7 +51,7 @@ function C(e) {
 		children: (e) => {
 			let { onMouseEnter: t, onMouseLeave: n } = e;
 			return (0, i.jsxs)(o.Clickable, {
-				className: l()(g.permissionChiplet, { [g.elevatedPermission]: I }),
+				className: l()(C.permissionChiplet, { [C.elevatedPermission]: I }),
 				onMouseEnter: t,
 				onMouseLeave: n,
 				children: [
@@ -70,7 +65,7 @@ function C(e) {
 					(0, i.jsx)(o.Text, {
 						variant: 'text-xs/medium',
 						color: 'interactive-normal',
-						children: C
+						children: g
 					})
 				]
 			});
@@ -90,7 +85,7 @@ t.Z = a.memo(function (e) {
 			if (null == s || null == T) return null;
 			if (0 === I)
 				return (0, i.jsx)('div', {
-					className: l()(g.permissionChiplet, g.noModPerms),
+					className: l()(C.permissionChiplet, C.noModPerms),
 					children: (0, i.jsx)(o.Text, {
 						variant: 'text-sm/normal',
 						color: 'text-positive',
@@ -109,7 +104,7 @@ t.Z = a.memo(function (e) {
 							if (null != l)
 								e.push(
 									(0, i.jsx)(
-										C,
+										g,
 										{
 											permission: a,
 											roleIds: l,
@@ -128,7 +123,7 @@ t.Z = a.memo(function (e) {
 		? null
 		: (0, i.jsx)(o.FormItem, {
 				title: (0, i.jsxs)('div', {
-					className: g.headerContainer,
+					className: C.headerContainer,
 					children: [
 						(0, i.jsx)(o.Text, {
 							variant: 'eyebrow',
@@ -136,7 +131,7 @@ t.Z = a.memo(function (e) {
 							children: E.Z.Messages.GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE
 						}),
 						(0, i.jsxs)(o.Clickable, {
-							className: g.viewAllPermissions,
+							className: C.viewAllPermissions,
 							onClick: () => n(_.k.PERMISSIONS),
 							children: [
 								(0, i.jsx)(o.Text, {
@@ -156,7 +151,7 @@ t.Z = a.memo(function (e) {
 				children: (0, i.jsx)(m.WM, {
 					children: (0, i.jsx)(m._2, {
 						description: (0, i.jsx)('div', {
-							className: g.permissionsContainer,
+							className: C.permissionsContainer,
 							children: v
 						})
 					})

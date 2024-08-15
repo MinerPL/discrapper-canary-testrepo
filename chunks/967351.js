@@ -70,12 +70,7 @@ function T(e, t) {
 	t = JSON.stringify(t);
 	let a = i.Buffer.byteLength(t),
 		s = i.Buffer.alloc(8 + a);
-	return (
-		s.writeInt32LE(e, 0),
-		s.writeInt32LE(a, 4),
-		s.write(t, 8, a),
-		(n = s).buffer.slice(n.byteOffset, n.byteOffset + n.byteLength)
-	);
+	return s.writeInt32LE(e, 0), s.writeInt32LE(a, 4), s.write(t, 8, a), (n = s).buffer.slice(n.byteOffset, n.byteOffset + n.byteLength);
 }
 function S(e) {
 	let t = e.read(8);
@@ -192,8 +187,7 @@ class C extends a.EventEmitter {
 		e.on('error', (e) => h.error('Error: '.concat(e.message))),
 			E.getAvailableSocket(p).then((t) => {
 				e.listen(t, () => {
-					('function' == typeof e.listening ? e.listening() : e.listening) &&
-						h.info('Starting on '.concat(e.address()));
+					('function' == typeof e.listening ? e.listening() : e.listening) && h.info('Starting on '.concat(e.address()));
 				});
 			});
 	}

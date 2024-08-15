@@ -87,26 +87,8 @@ class g extends (i = s.PureComponent) {
 		});
 	}
 	render() {
-		let {
-			className: e,
-			fullWidth: t,
-			size: n,
-			color: i,
-			isLaunchable: s,
-			isLaunching: r,
-			isRunning: o,
-			isShiny: u,
-			hideNotLaunchable: d
-		} = this.props;
-		if (!s)
-			return d
-				? null
-				: this.renderDisabledButton(
-						f.Z.Messages.GAME_ACTION_BUTTON_PLAY,
-						T.isPlatformEmbedded
-							? f.Z.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED
-							: f.Z.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP
-					);
+		let { className: e, fullWidth: t, size: n, color: i, isLaunchable: s, isLaunching: r, isRunning: o, isShiny: u, hideNotLaunchable: d } = this.props;
+		if (!s) return d ? null : this.renderDisabledButton(f.Z.Messages.GAME_ACTION_BUTTON_PLAY, T.isPlatformEmbedded ? f.Z.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : f.Z.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
 		if (o) return this.renderDisabledButton(f.Z.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
 		let _ = u ? c.ShinyButton : c.Button;
 		return (0, a.jsxs)(_, {
@@ -161,14 +143,7 @@ class g extends (i = s.PureComponent) {
 function S(e) {
 	let { applicationId: t, libraryApplication: n } = e,
 		i = (0, d.O)(),
-		[s, r] = (0, o.Wu)(
-			[I.Z, E.Z, m.Z],
-			() => [
-				I.Z.isConnected(t) || E.Z.isLaunchable(t) || (null != n && m.Z.isLaunchable(n.id, n.branchId)),
-				E.Z.launchingGames.has(t)
-			],
-			[t, n]
-		),
+		[s, r] = (0, o.Wu)([I.Z, E.Z, m.Z], () => [I.Z.isConnected(t) || E.Z.isLaunchable(t) || (null != n && m.Z.isLaunchable(n.id, n.branchId)), E.Z.launchingGames.has(t)], [t, n]),
 		l = (0, o.e7)([_.ZP], () => new Set(_.ZP.getRunningVerifiedApplicationIds()).has(t), [t]),
 		c = (0, o.e7)([m.Z], () => (null != n ? m.Z.getState(n.id, n.branchId) : null), [n]);
 	return (0, a.jsx)(g, {

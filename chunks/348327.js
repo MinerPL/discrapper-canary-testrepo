@@ -34,13 +34,5 @@ function o(e) {
 	return null == e;
 }
 function l(e) {
-	return (
-		!!e &&
-		'object' == typeof e &&
-		'number' == typeof e.length &&
-		'function' == typeof e.copy &&
-		'function' == typeof e.slice &&
-		(!(e.length > 0) || 'number' == typeof e[0]) &&
-		!0
-	);
+	return !!e && 'object' == typeof e && 'number' == typeof e.length && 'function' == typeof e.copy && 'function' == typeof e.slice && (!(e.length > 0) || 'number' == typeof e[0]) && !0;
 }

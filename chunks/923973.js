@@ -12,10 +12,7 @@ var r = n(392711),
 function l() {
 	let { enabled: e, cameraUnavailable: t } = (0, a.cj)([s.Z], () => {
 		var e, t;
-		let n =
-			null === (t = null === (e = i()(s.Z.getVideoDevices()).values().first()) || void 0 === e ? void 0 : e.disabled) ||
-			void 0 === t ||
-			t;
+		let n = null === (t = null === (e = i()(s.Z.getVideoDevices()).values().first()) || void 0 === e ? void 0 : e.disabled) || void 0 === t || t;
 		return {
 			enabled: s.Z.isVideoEnabled(),
 			cameraUnavailable: n || !s.Z.supports(o.AN.VIDEO)

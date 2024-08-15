@@ -27,14 +27,7 @@ function T(e) {
 	});
 }
 function h(e) {
-	let {
-		children: t,
-		onClick: n,
-		variant: a = 'text-sm/medium',
-		color: s = 'interactive-active',
-		className: l,
-		buttonRef: o
-	} = e;
+	let { children: t, onClick: n, variant: a = 'text-sm/medium', color: s = 'interactive-active', className: l, buttonRef: o } = e;
 	return (0, i.jsx)(c.Button, {
 		onClick: n,
 		className: r()(m.__invalid_textButton, l),
@@ -101,11 +94,7 @@ function f(e) {
 						disabled: !t.enabled,
 						color: 'secondaryButton' === t.presentation ? c.Button.Colors.CUSTOM : c.Button.Colors.BRAND,
 						size: c.Button.Sizes.SMALL,
-						className: r()(
-							o,
-							m.buttonPresentation,
-							'secondaryButton' === t.presentation && m.secondaryButtonPresentation
-						),
+						className: r()(o, m.buttonPresentation, 'secondaryButton' === t.presentation && m.secondaryButtonPresentation),
 						children: (0, i.jsx)(c.Text, {
 							variant: 'text-sm/medium',
 							color: 'none',

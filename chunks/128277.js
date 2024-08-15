@@ -17,8 +17,8 @@ var r = n(735250),
 	f = n(502762),
 	h = n(652853),
 	p = n(448980),
-	I = n(194811),
-	m = n(60241),
+	m = n(194811),
+	I = n(60241),
 	T = n(373826),
 	g = n(315324),
 	S = n(582123),
@@ -129,7 +129,7 @@ function b(e) {
 					className: s()(D.card, P),
 					ref: F,
 					children: [
-						(0, r.jsx)(I.Z, {
+						(0, r.jsx)(m.Z, {
 							text: y.Z.Messages.USER_ACTIVITY_LISTENING_TO,
 							platform: l.Z.get(C.ABu.SPOTIFY),
 							tags: (0, r.jsx)(v.Z, {
@@ -147,13 +147,9 @@ function b(e) {
 								(0, r.jsxs)('div', {
 									className: s()(D.content, x),
 									children: [
-										(0, r.jsx)(m.ZP, {
+										(0, r.jsx)(I.ZP, {
 											image: {
-												src: L(
-													a.application_id,
-													null === (n = a.assets) || void 0 === n ? void 0 : n.large_image,
-													m.WQ
-												),
+												src: L(a.application_id, null === (n = a.assets) || void 0 === n ? void 0 : n.large_image, I.WQ),
 												text: null === (i = a.assets) || void 0 === i ? void 0 : i.large_text
 											},
 											onClick: () => {

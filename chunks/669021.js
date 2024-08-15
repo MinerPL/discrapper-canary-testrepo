@@ -103,9 +103,7 @@ class h extends a.Component {
 			n = this._video.current;
 		if (null != n) {
 			if (t && !e.playing) {
-				this.videoTimeout.stop(),
-					isFinite(n.duration) && isFinite(n.currentTime) && (n.currentTime = 0),
-					(n.volume = 0.3);
+				this.videoTimeout.stop(), isFinite(n.duration) && isFinite(n.currentTime) && (n.currentTime = 0), (n.volume = 0.3);
 				let e = n.play();
 				null != e &&
 					e.then(() => {
@@ -172,16 +170,7 @@ class h extends a.Component {
 			}),
 			m(this, 'renderTypeVideo', () => {
 				let { videoLoaded: e } = this.state,
-					{
-						video: t,
-						image: n,
-						title: s,
-						playing: l,
-						muted: c,
-						splashClassName: _,
-						splashPlaceholderClassName: m,
-						renderMediaOverlay: h
-					} = this.props,
+					{ video: t, image: n, title: s, playing: l, muted: c, splashClassName: _, splashPlaceholderClassName: m, renderMediaOverlay: h } = this.props,
 					N = c ? d.VoiceXIcon : d.VoiceNormalIcon;
 				return (0, i.jsxs)(a.Fragment, {
 					children: [

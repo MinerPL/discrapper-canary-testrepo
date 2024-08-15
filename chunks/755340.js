@@ -14,16 +14,7 @@ var a = t(735250),
 	C = t(592286),
 	h = t(689938);
 n.Z = function (e) {
-	let {
-			guild: n,
-			submittedGuildJoinRequestsCount: t,
-			onFormFieldUpdate: x,
-			hideVerificationLevelField: p,
-			isClanContext: g,
-			formDescription: T,
-			onFieldsSave: E,
-			onDescriptionSave: I
-		} = e,
+	let { guild: n, submittedGuildJoinRequestsCount: t, onFormFieldUpdate: x, hideVerificationLevelField: p, isClanContext: g, formDescription: T, onFieldsSave: E, onDescriptionSave: I } = e,
 		b = r.useRef(!1),
 		[N, v] = r.useState(null),
 		[y, S] = r.useState(e.formFields);

@@ -2,10 +2,7 @@ var r = (function () {
 		function e(e, t) {
 			for (var n = 0; n < t.length; n++) {
 				var r = t[n];
-				(r.enumerable = r.enumerable || !1),
-					(r.configurable = !0),
-					'value' in r && (r.writable = !0),
-					Object.defineProperty(e, r.key, r);
+				(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 			}
 		}
 		return function (t, n, r) {
@@ -32,8 +29,7 @@ var l = n(771922),
 		}
 		return (
 			!(function (e, t) {
-				if ('function' != typeof t && null !== t)
-					throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+				if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
 				(e.prototype = Object.create(t && t.prototype, {
 					constructor: {
 						value: e,
@@ -97,10 +93,7 @@ var l = n(771922),
 				{
 					key: 'stopAnimation',
 					value: function (e) {
-						this.stopTracking(),
-							this._animation && this._animation.stop(),
-							(this._animation = null),
-							e && e(this.__getValue());
+						this.stopTracking(), this._animation && this._animation.stop(), (this._animation = null), e && e(this.__getValue());
 					}
 				},
 				{

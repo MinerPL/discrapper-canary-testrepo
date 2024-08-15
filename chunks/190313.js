@@ -288,8 +288,7 @@ class u {
 			a(this, 'transaction', void 0),
 			a(this, 'messages', {
 				trimOrphans: (e) => {
-					if (1 !== this.prefix.length || 1 !== e.length)
-						throw Error('trimOrphans: only one prefix component is supported at this time');
+					if (1 !== this.prefix.length || 1 !== e.length) throw Error('trimOrphans: only one prefix component is supported at this time');
 					this.transaction.add({
 						type: 'messages.trim_orphans',
 						table: this.tableId,
@@ -306,8 +305,7 @@ class u {
 					});
 				},
 				trimChannelsIn: (e, t) => {
-					if (1 !== this.prefix.length || 1 !== e.length)
-						throw Error('trimChannelsIn: only one prefix component is supported at this time');
+					if (1 !== this.prefix.length || 1 !== e.length) throw Error('trimChannelsIn: only one prefix component is supported at this time');
 					this.transaction.add({
 						type: 'messages.trim_channels_in',
 						table: this.tableId,
@@ -317,8 +315,7 @@ class u {
 					});
 				},
 				trimChannelsNotIn: (e, t) => {
-					if (1 !== this.prefix.length || 1 !== e.length)
-						throw Error('trimChannelsNotIn: only one prefix component is supported at this time');
+					if (1 !== this.prefix.length || 1 !== e.length) throw Error('trimChannelsNotIn: only one prefix component is supported at this time');
 					this.transaction.add({
 						type: 'messages.trim_channels_not_in',
 						table: this.tableId,

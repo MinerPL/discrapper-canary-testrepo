@@ -22,19 +22,15 @@ var r = n(735250),
 	f = n(626135),
 	h = n(981631),
 	p = n(596401);
-let I = l().defaultRules.link,
-	m = { section: h.jXE.SETTINGS_CHANGELOG },
+let m = l().defaultRules.link,
+	I = { section: h.jXE.SETTINGS_CHANGELOG },
 	T = (e) => {
 		var t, n;
 		let { level: r, children: a, className: o = null, styleSheet: l = {} } = e,
 			c = (0, u.usePrivateHeadingLevel)(),
 			d = parseInt(r, 10),
 			_ = isNaN(d) ? 1 : d;
-		return i.createElement(
-			'h'.concat(c + _ - 1),
-			{ className: s()(...((t = l), null == (n = o) ? [] : n.split(' ').map((e) => t[e]))) },
-			a
-		);
+		return i.createElement('h'.concat(c + _ - 1), { className: s()(...((t = l), null == (n = o) ? [] : n.split(' ').map((e) => t[e]))) }, a);
 	},
 	g = null != _.Z ? _.Z.defaultRules : null,
 	S = {
@@ -49,19 +45,11 @@ let I = l().defaultRules.link,
 					(r =
 						a || s
 							? (e) => {
-									f.default.track(h.rMx.PREMIUM_PROMOTION_OPENED, { location: m }),
-										a ? d.Z.open(h.oAB.PREMIUM) : s && d.Z.open(h.oAB.HYPESQUAD_ONLINE),
-										n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }),
-										(0, u.closeModal)(p.Xd),
-										e.preventDefault();
+									f.default.track(h.rMx.PREMIUM_PROMOTION_OPENED, { location: I }), a ? d.Z.open(h.oAB.PREMIUM) : s && d.Z.open(h.oAB.HYPESQUAD_ONLINE), n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }), (0, u.closeModal)(p.Xd), e.preventDefault();
 								}
 							: o
 								? (e) => {
-										(0, E.uL)(i),
-											n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, { ...f.default.getCampaignParams(i) }),
-											(0, c.Ou)(),
-											(0, u.closeModal)(p.Xd),
-											e.preventDefault();
+										(0, E.uL)(i), n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, { ...f.default.getCampaignParams(i) }), (0, c.Ou)(), (0, u.closeModal)(p.Xd), e.preventDefault();
 									}
 								: () => {
 										n && 'function' == typeof n.onLinkClick && n.onLinkClick(i),
@@ -72,7 +60,7 @@ let I = l().defaultRules.link,
 											});
 									}),
 					{
-						...I.parse(e, t, n),
+						...m.parse(e, t, n),
 						callToAction: r
 					}
 				);

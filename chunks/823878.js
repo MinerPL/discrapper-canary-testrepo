@@ -28,11 +28,7 @@ let o = {
 			return 5;
 		}
 		add(e) {
-			(this._last = e),
-				e < this._min && (this._min = e),
-				e > this._max && (this._max = e),
-				(this._sum += e),
-				this._count++;
+			(this._last = e), e < this._min && (this._min = e), e > this._max && (this._max = e), (this._sum += e), this._count++;
 		}
 		toString() {
 			return `${this._last}:${this._min}:${this._max}:${this._sum}:${this._count}`;

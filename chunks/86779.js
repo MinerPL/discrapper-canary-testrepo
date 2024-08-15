@@ -21,10 +21,7 @@ var s,
 let x = 'mweb_handoff_nonce',
 	A = 'mweb_handoff_nonce_expiration',
 	C = 1 * m.Z.Millis.MINUTE;
-((r = s || (s = {})).NONCE_MISSING = 'nonce_missing'),
-	(r.NONCE_EXPIRED = 'nonce_expired'),
-	(r.NULL_HANDOFF_TOKEN = 'deep_link_failed'),
-	(r.HANDOFF_EXCHANGE = 'handoff_exchange');
+((r = s || (s = {})).NONCE_MISSING = 'nonce_missing'), (r.NONCE_EXPIRED = 'nonce_expired'), (r.NULL_HANDOFF_TOKEN = 'deep_link_failed'), (r.HANDOFF_EXCHANGE = 'handoff_exchange');
 let v = new Set(['nonce_missing', 'nonce_expired', 'handoff_exchange']),
 	Z = new Set(['deep_link_failed']),
 	S = () => {
@@ -90,10 +87,7 @@ t.Z = () => {
 						});
 						let e = new URL(window.location.href),
 							t = new URLSearchParams(e.search);
-						t.delete('handoff_token'),
-							t.delete('fingerprint'),
-							(e.search = t.toString()),
-							window.history.pushState(null, '', e);
+						t.delete('handoff_token'), t.delete('fingerprint'), (e.search = t.toString()), window.history.pushState(null, '', e);
 					})
 					.catch(() => {
 						O('handoff_exchange');
@@ -108,11 +102,7 @@ t.Z = () => {
 	let D = (() => {
 		if (null == m)
 			return (0, i.jsxs)(i.Fragment, {
-				children: [
-					g.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_1,
-					(0, i.jsx)('br', {}),
-					g.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_2
-				]
+				children: [g.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_1, (0, i.jsx)('br', {}), g.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_2]
 			});
 		if (Z.has(m)) return g.MOBILE_WEB_HANDOFF_ERROR_NO_TRY_AGAIN;
 		if (v.has(m)) return g.MOBILE_WEB_HANDOFF_ERROR_TRY_AGAIN;

@@ -31,11 +31,7 @@ t.Z = {
 						case 429:
 							throw new s.Z({ errorCode: o.lTL.RATE_LIMITED }, 'You are being rate limited.');
 						case 403:
-							if (null != n && n.code === o.evJ.USER_NOT_AUTHORIZED_FOR_APPLICATION)
-								throw new s.Z(
-									{ errorCode: o.lTL.UNAUTHORIZED_FOR_ACHIEVEMENT },
-									'Not authorized to update this achievement.'
-								);
+							if (null != n && n.code === o.evJ.USER_NOT_AUTHORIZED_FOR_APPLICATION) throw new s.Z({ errorCode: o.lTL.UNAUTHORIZED_FOR_ACHIEVEMENT }, 'Not authorized to update this achievement.');
 							throw new s.Z({ errorCode: o.lTL.UNKNOWN_ERROR }, 'Unknown error from API. status='.concat(t, '.'));
 						default:
 							throw new s.Z({ errorCode: o.lTL.UNKNOWN_ERROR }, 'Unknown error from API. status='.concat(t, '.'));

@@ -42,8 +42,7 @@ class u extends r.y {
 		this.waitFor(s.Z);
 	}
 	handleCacheLoadedLazy(e) {
-		for (let [t, n] of ((this.guilds = new Map()), (this.channels = new Map()), e.basicGuildChannels))
-			for (let e of (this.guilds.set(t, Object.fromEntries(n.map((e) => [e.id, e]))), n)) this.channels.set(e.id, e);
+		for (let [t, n] of ((this.guilds = new Map()), (this.channels = new Map()), e.basicGuildChannels)) for (let e of (this.guilds.set(t, Object.fromEntries(n.map((e) => [e.id, e]))), n)) this.channels.set(e.id, e);
 	}
 	handleCacheLoadedLazyNoCache(e) {
 		this.guilds.clear(), this.channels.clear();

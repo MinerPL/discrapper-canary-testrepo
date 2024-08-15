@@ -27,11 +27,7 @@ class i {
 	}
 	getName(e, t) {
 		var n, r;
-		return null !==
-			(r = null !== (n = e.getAttribute('data-dnd-name')) && void 0 !== n ? n : e.getAttribute('aria-label')) &&
-			void 0 !== r
-			? r
-			: t;
+		return null !== (r = null !== (n = e.getAttribute('data-dnd-name')) && void 0 !== n ? n : e.getAttribute('aria-label')) && void 0 !== r ? r : t;
 	}
 	constructor(e) {
 		var t, r, i;

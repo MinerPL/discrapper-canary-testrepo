@@ -13,8 +13,8 @@ var r,
 let f = {},
 	h = {},
 	p = null,
-	I = null,
 	m = null,
+	I = null,
 	T = 'lastChangeLogDate',
 	g = null,
 	S = null,
@@ -45,13 +45,13 @@ class v extends (r = o.ZP.Store) {
 		return null !== (r = null === (n = h[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== r ? r : E.LU.NOT_LOADED;
 	}
 	hasLoadedConfig() {
-		return null != m;
+		return null != I;
 	}
 	getConfig() {
-		return m;
+		return I;
 	}
 	overrideId() {
-		return I;
+		return m;
 	}
 	lastSeenChangelogId() {
 		return g;
@@ -61,7 +61,7 @@ class v extends (r = o.ZP.Store) {
 	}
 	getStateForDebugging() {
 		return {
-			changelogConfig: m,
+			changelogConfig: I,
 			loadedChangelogs: h,
 			lastSeenChangelogId: g,
 			lastSeenChangelogDate: S
@@ -93,7 +93,7 @@ class v extends (r = o.ZP.Store) {
 		},
 		CHANGE_LOG_SET_CONFIG: function (e) {
 			let { config: t, latestChangelogId: n } = e;
-			(p = n), (m = t);
+			(p = n), (I = t);
 		},
 		CHANGE_LOG_FETCH_SUCCESS: function (e) {
 			let { id: t, changelog: n } = e;
@@ -116,7 +116,7 @@ class v extends (r = o.ZP.Store) {
 		},
 		CHANGE_LOG_SET_OVERRIDE: function (e) {
 			let { id: t } = e;
-			I = t;
+			m = t;
 		},
 		CHANGE_LOG_MARK_SEEN: function (e) {
 			let { changelogDate: t } = e;

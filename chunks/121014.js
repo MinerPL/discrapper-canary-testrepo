@@ -21,10 +21,7 @@ r.prototype = {
 		return Object.keys(this.nodes).length;
 	},
 	addNode: function (e, t) {
-		!this.hasNode(e) &&
-			(2 == arguments.length ? (this.nodes[e] = t) : (this.nodes[e] = e),
-			(this.outgoingEdges[e] = []),
-			(this.incomingEdges[e] = []));
+		!this.hasNode(e) && (2 == arguments.length ? (this.nodes[e] = t) : (this.nodes[e] = e), (this.outgoingEdges[e] = []), (this.incomingEdges[e] = []));
 	},
 	removeNode: function (e) {
 		this.hasNode(e) &&
@@ -52,25 +49,18 @@ r.prototype = {
 	addDependency: function (e, t) {
 		if (!this.hasNode(e)) throw Error('Node does not exist: ' + e);
 		if (!this.hasNode(t)) throw Error('Node does not exist: ' + t);
-		return (
-			-1 === this.outgoingEdges[e].indexOf(t) && this.outgoingEdges[e].push(t),
-			-1 === this.incomingEdges[t].indexOf(e) && this.incomingEdges[t].push(e),
-			!0
-		);
+		return -1 === this.outgoingEdges[e].indexOf(t) && this.outgoingEdges[e].push(t), -1 === this.incomingEdges[t].indexOf(e) && this.incomingEdges[t].push(e), !0;
 	},
 	removeDependency: function (e, t) {
 		var n;
-		this.hasNode(e) && (n = this.outgoingEdges[e].indexOf(t)) >= 0 && this.outgoingEdges[e].splice(n, 1),
-			this.hasNode(t) && (n = this.incomingEdges[t].indexOf(e)) >= 0 && this.incomingEdges[t].splice(n, 1);
+		this.hasNode(e) && (n = this.outgoingEdges[e].indexOf(t)) >= 0 && this.outgoingEdges[e].splice(n, 1), this.hasNode(t) && (n = this.incomingEdges[t].indexOf(e)) >= 0 && this.incomingEdges[t].splice(n, 1);
 	},
 	clone: function () {
 		var e = this,
 			t = new r();
 		return (
 			Object.keys(e.nodes).forEach(function (n) {
-				(t.nodes[n] = e.nodes[n]),
-					(t.outgoingEdges[n] = e.outgoingEdges[n].slice(0)),
-					(t.incomingEdges[n] = e.incomingEdges[n].slice(0));
+				(t.nodes[n] = e.nodes[n]), (t.outgoingEdges[n] = e.outgoingEdges[n].slice(0)), (t.incomingEdges[n] = e.incomingEdges[n].slice(0));
 			}),
 			t
 		);
@@ -117,12 +107,7 @@ r.prototype = {
 };
 var i = function (e) {
 	var t = Error('Dependency Cycle Found: ' + e.join(' -> '));
-	return (
-		(t.cyclePath = e),
-		Object.setPrototypeOf(t, Object.getPrototypeOf(this)),
-		Error.captureStackTrace && Error.captureStackTrace(t, i),
-		t
-	);
+	return (t.cyclePath = e), Object.setPrototypeOf(t, Object.getPrototypeOf(this)), Error.captureStackTrace && Error.captureStackTrace(t, i), t;
 };
 (i.prototype = Object.create(Error.prototype, {
 	constructor: {

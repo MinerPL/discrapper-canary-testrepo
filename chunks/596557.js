@@ -20,19 +20,11 @@ function m(e) {
 	let m = (0, l.SE)(e),
 		I = h.$X.some((t) => (null == e ? void 0 : e.id) !== E._ && c.oz(t, e)),
 		g = (null == e ? void 0 : e.defaultMessageNotifications) === u.bL.ALL_MESSAGES,
-		p = (0, d.FT)(
-			s.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE,
-			null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds
-		),
+		p = (0, d.FT)(s.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds),
 		T = m && (I || g) && !p,
 		S = a.useCallback(() => {
 			var t;
-			(0, d.Qd)(
-				s.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE,
-				null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds,
-				!0,
-				_.L.DISMISS
-			);
+			(0, d.Qd)(s.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : u.lds, !0, _.L.DISMISS);
 		}, [e]),
 		f = a.useRef(!1);
 	a.useEffect(() => {

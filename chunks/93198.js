@@ -24,12 +24,7 @@ let _ = (0, o._I)((e = {}) => {
 				(o = t),
 				(_ = e),
 				(E = r),
-				_.exception &&
-				_.exception.values &&
-				E &&
-				E.originalException &&
-				((s = E.originalException), (0, n.VZ)(s) && 'ZodError' === s.name && Array.isArray(s.errors)) &&
-				0 !== E.originalException.issues.length
+				_.exception && _.exception.values && E && E.originalException && ((s = E.originalException), (0, n.VZ)(s) && 'ZodError' === s.name && Array.isArray(s.errors)) && 0 !== E.originalException.issues.length
 					? {
 							..._,
 							exception: {

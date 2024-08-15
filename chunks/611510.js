@@ -12,8 +12,7 @@ var r = n(135891),
 		}
 		return (
 			(e.prototype._cacheAdd = function (e, t, n) {
-				t && (t = t instanceof Date ? (0, i.d9)(t) : (0, i.L1)(t)),
-					'all' === e ? (this.all = t) : ((n._value = t), this[e].push(n));
+				t && (t = t instanceof Date ? (0, i.d9)(t) : (0, i.L1)(t)), 'all' === e ? (this.all = t) : ((n._value = t), this[e].push(n));
 			}),
 			(e.prototype._cacheGet = function (e, t) {
 				var n = !1,

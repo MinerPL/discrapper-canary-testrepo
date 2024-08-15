@@ -11,8 +11,7 @@ function s(e, t) {
 		var r, l;
 		let t = e;
 		return (
-			(null === (r = e.messageReference) || void 0 === r ? void 0 : r.type) === a.Uvt.FORWARD &&
-				(t = null === (l = e.messageSnapshots[0]) || void 0 === l ? void 0 : l.message),
+			(null === (r = e.messageReference) || void 0 === r ? void 0 : r.type) === a.Uvt.FORWARD && (t = null === (l = e.messageSnapshots[0]) || void 0 === l ? void 0 : l.message),
 			{
 				onlyAttachmentIds:
 					null == t

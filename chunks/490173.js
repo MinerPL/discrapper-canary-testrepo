@@ -18,7 +18,7 @@ var r = n(735250),
 	f = n(574254),
 	h = n(585483),
 	p = n(981631);
-function I(e, t, n) {
+function m(e, t, n) {
 	return (
 		t in e
 			? Object.defineProperty(e, t, {
@@ -31,18 +31,8 @@ function I(e, t, n) {
 		e
 	);
 }
-let m = (e) => {
-	let {
-			children: t,
-			close: n,
-			onUnmount: o,
-			target: u,
-			rect: E,
-			position: f,
-			align: h,
-			impressionName: I,
-			impressionProperties: m
-		} = e,
+let I = (e) => {
+	let { children: t, close: n, onUnmount: o, target: u, rect: E, position: f, align: h, impressionName: m, impressionProperties: I } = e,
 		T = i.useRef(null),
 		g = i.useMemo(() => ({ current: u }), [u]);
 	i.useEffect(() => {
@@ -59,8 +49,7 @@ let m = (e) => {
 			null === (t = r.ownerDocument) || void 0 === t || t.addEventListener('contextmenu', i, !0),
 			() => {
 				var e, t;
-				null === (e = r.ownerDocument) || void 0 === e || e.removeEventListener('click', i, !0),
-					null === (t = r.ownerDocument) || void 0 === t || t.removeEventListener('contextmenu', i, !0);
+				null === (e = r.ownerDocument) || void 0 === e || e.removeEventListener('click', i, !0), null === (t = r.ownerDocument) || void 0 === t || t.removeEventListener('contextmenu', i, !0);
 			}
 		);
 	}, [n]);
@@ -79,8 +68,8 @@ let m = (e) => {
 		}),
 		(0, d.Z)({
 			type: s.ImpressionTypes.MENU,
-			name: I,
-			properties: m
+			name: m,
+			properties: I
 		});
 	let A = (0, c.Aq)(),
 		N = i.useCallback(() => {
@@ -105,11 +94,7 @@ let m = (e) => {
 class T extends i.PureComponent {
 	componentDidMount() {
 		let { renderLazy: e, renderWindow: t } = this.props;
-		if (
-			(t.addEventListener('resize', this.closeResize, !0),
-			h.S.subscribe(p.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu),
-			null != e)
-		) {
+		if ((t.addEventListener('resize', this.closeResize, !0), h.S.subscribe(p.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu), null != e)) {
 			let t = setTimeout(() => {
 				this.setState({ render: () => (0, r.jsx)(l.MenuSpinner, {}) });
 			}, 300);
@@ -127,15 +112,14 @@ class T extends i.PureComponent {
 	}
 	componentWillUnmount() {
 		let { renderWindow: e } = this.props;
-		e.removeEventListener('resize', this.closeResize, !0),
-			h.S.unsubscribe(p.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu);
+		e.removeEventListener('resize', this.closeResize, !0), h.S.unsubscribe(p.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu);
 	}
 	render() {
 		var e;
 		let { appContext: t, target: n, isOpen: i, theme: a, config: s, rect: o } = this.props,
 			l = null !== (e = this.state.render) && void 0 !== e ? e : this.props.render;
 		return i && null != o && null != s && null != n && null != l && s.context === t
-			? (0, r.jsx)(m, {
+			? (0, r.jsx)(I, {
 					target: n,
 					rect: o,
 					close: this.close,
@@ -160,12 +144,12 @@ class T extends i.PureComponent {
 	}
 	constructor(...e) {
 		super(...e),
-			I(this, 'state', { render: void 0 }),
-			I(this, 'closeResize', (e) => {
+			m(this, 'state', { render: void 0 }),
+			m(this, 'closeResize', (e) => {
 				let { renderWindow: t } = this.props;
 				if (e.target === t) this.close();
 			}),
-			I(this, 'close', () => {
+			m(this, 'close', () => {
 				let { isOpen: e, closeContextMenu: t } = this.props;
 				e && t();
 			});

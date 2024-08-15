@@ -31,11 +31,7 @@ function u(e) {
 		h = null != m[1] ? m[1].toLowerCase() : null,
 		c = null != m[3] ? m[3].toLowerCase() : null,
 		p = m[4];
-	if (
-		!['track', 'playlist', 'album', 'artist', 'user', 'show', 'episode'].includes(null != h ? h : '') ||
-		('user' === h && 'playlist' !== c)
-	)
-		return null;
+	if (!['track', 'playlist', 'album', 'artist', 'user', 'show', 'episode'].includes(null != h ? h : '') || ('user' === h && 'playlist' !== c)) return null;
 	'user' === h && 'playlist' === c && null != p && (u = '/playlist/'.concat(p));
 	let b = 352;
 	return (

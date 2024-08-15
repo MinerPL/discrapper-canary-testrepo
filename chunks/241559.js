@@ -1,6 +1,6 @@
 n.d(t, {
 	hB: function () {
-		return I;
+		return m;
 	},
 	lv: function () {
 		return _;
@@ -12,7 +12,7 @@ n.d(t, {
 		return p;
 	},
 	rX: function () {
-		return m;
+		return I;
 	},
 	xC: function () {
 		return h;
@@ -74,7 +74,7 @@ function p(e) {
 		[e]
 	);
 }
-function I(e, t, n) {
+function m(e, t, n) {
 	return (0, i.e7)(
 		[s.Z, a.Z],
 		() => {
@@ -84,7 +84,7 @@ function I(e, t, n) {
 		[t, e, n]
 	);
 }
-function m(e, t, n) {
+function I(e, t, n) {
 	let r = a.Z.getGuild(e);
 	return null != r && t && s.Z.canManageUser(c.Plq.BAN_MEMBERS, n, r);
 }

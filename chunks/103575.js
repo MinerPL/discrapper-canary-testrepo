@@ -19,35 +19,35 @@ var r = n(735250),
 function h(e) {
 	let { location: t, userId: n, user: a, ...h } = e,
 		p = (0, o.e7)([u.default], () => u.default.getUser(n), [n]),
-		I = null != a ? a : p;
-	s()(null != I, 'UserPopoutExperimentWrapper: user cannot be undefined');
-	let m = (0, o.e7)([u.default], () => u.default.getCurrentUser());
-	s()(null != m, 'UserPopoutExperimentWrapper: currentUser cannot be undefined');
-	let T = (0, o.e7)([l.Z], () => l.Z.isBlocked(I.id)),
+		m = null != a ? a : p;
+	s()(null != m, 'UserPopoutExperimentWrapper: user cannot be undefined');
+	let I = (0, o.e7)([u.default], () => u.default.getCurrentUser());
+	s()(null != I, 'UserPopoutExperimentWrapper: currentUser cannot be undefined');
+	let T = (0, o.e7)([l.Z], () => l.Z.isBlocked(m.id)),
 		[g, S] = i.useState(T),
 		A = (0, c.sS)({ location: t });
 	return g && A
 		? (0, r.jsx)(_.Z, {
 				...h,
-				user: I,
-				currentUser: m,
+				user: m,
+				currentUser: I,
 				onViewBlockedProfileClick: () => S(!1)
 			})
-		: I.isNonUserBot()
+		: m.isNonUserBot()
 			? (0, r.jsx)(d.Z, {
 					...h,
-					user: I,
-					currentUser: m
+					user: m,
+					currentUser: I
 				})
-			: I.bot
+			: m.bot
 				? (0, r.jsx)(f.Z, {
 						...h,
-						user: I,
-						currentUser: m
+						user: m,
+						currentUser: I
 					})
 				: (0, r.jsx)(E.Z, {
 						...h,
-						user: I,
-						currentUser: m
+						user: m,
+						currentUser: I
 					});
 }

@@ -4,7 +4,7 @@ n.r(t),
 			return T;
 		},
 		isNotSupported: function () {
-			return I;
+			return m;
 		},
 		trackToggleSelfMute: function () {
 			return g;
@@ -34,7 +34,7 @@ function p() {
 			});
 	});
 }
-function I() {
+function m() {
 	return (
 		!o.Z.isSupported() &&
 		((0, i.openModal)((e) =>
@@ -54,7 +54,7 @@ function I() {
 		!0)
 	);
 }
-function m(e) {
+function I(e) {
 	c.default.track(_.rMx.PERMISSIONS_ACKED, {
 		type: 'audio',
 		action: e
@@ -62,7 +62,7 @@ function m(e) {
 }
 function T() {
 	let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-	return I()
+	return m()
 		? Promise.resolve(!1)
 		: (c.default.track(_.rMx.PERMISSIONS_REQUESTED, { type: 'audio' }),
 			o.Z.getMediaEngine()
@@ -74,21 +74,21 @@ function T() {
 							enabled: !0,
 							unmute: e
 						}),
-							m(E.PQ.ACCEPTED);
+							I(E.PQ.ACCEPTED);
 					},
 					(e) => {
 						switch (e) {
 							case _.ETv.NO_DEVICES_FOUND:
-								m(E.PQ.NO_DEVICES);
+								I(E.PQ.NO_DEVICES);
 								break;
 							case _.ETv.PERMISSION_DENIED:
-								m(E.PQ.DENIED);
+								I(E.PQ.DENIED);
 								break;
 							case _.ETv.PERMISSION_DISMISSED:
-								m(E.PQ.DISMISSED);
+								I(E.PQ.DISMISSED);
 								break;
 							default:
-								m(E.PQ.ERROR), h.warn('unknown getUserMedia error: '.concat(e));
+								I(E.PQ.ERROR), h.warn('unknown getUserMedia error: '.concat(e));
 						}
 					}
 				)

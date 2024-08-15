@@ -71,37 +71,17 @@ let d = {
 function E() {
 	var e, t, n, c;
 	let d = (0, l.Es)((e) => e.currentToast),
-		E = i.useRef(
-			null !== (n = null == d ? void 0 : null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== n
-				? n
-				: u.si.position
-		),
-		f = i.useRef(
-			null !== (c = null == d ? void 0 : null === (t = d.options) || void 0 === t ? void 0 : t.duration) && void 0 !== c
-				? c
-				: u.si.duration
-		);
+		E = i.useRef(null !== (n = null == d ? void 0 : null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : u.si.position),
+		f = i.useRef(null !== (c = null == d ? void 0 : null === (t = d.options) || void 0 === t ? void 0 : t.duration) && void 0 !== c ? c : u.si.duration);
 	i.useEffect(() => {
 		if (null != d) {
 			var e, t, n, r;
-			(E.current =
-				null !== (n = null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== n
-					? n
-					: u.si.position),
-				(f.current =
-					null !== (r = null === (t = d.options) || void 0 === t ? void 0 : t.duration) && void 0 !== r
-						? r
-						: u.si.duration);
+			(E.current = null !== (n = null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : u.si.position), (f.current = null !== (r = null === (t = d.options) || void 0 === t ? void 0 : t.duration) && void 0 !== r ? r : u.si.duration);
 		}
 	}, [d]);
 	let h = i.useMemo(() => {
 			var e, t;
-			return _[
-				null !== (t = null == d ? void 0 : null === (e = d.options) || void 0 === e ? void 0 : e.position) &&
-				void 0 !== t
-					? t
-					: E.current
-			];
+			return _[null !== (t = null == d ? void 0 : null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== t ? t : E.current];
 		}, [d]),
 		p = (0, s.useTransition)(d, {
 			keys: (e) => {

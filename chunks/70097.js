@@ -24,8 +24,7 @@ let u = (e) => {
 					(function (e) {
 						e.removeAttribute('src'),
 							Array.from(e.children).forEach((e) => {
-								(0, a.k)(e, HTMLSourceElement) && (e.removeAttribute('src'), e.removeAttribute('type')),
-									(0, a.k)(e, HTMLImageElement) && e.removeAttribute('src');
+								(0, a.k)(e, HTMLSourceElement) && (e.removeAttribute('src'), e.removeAttribute('type')), (0, a.k)(e, HTMLImageElement) && e.removeAttribute('src');
 							});
 						try {
 							e.load();

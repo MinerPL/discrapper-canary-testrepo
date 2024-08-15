@@ -19,8 +19,7 @@ function c() {
 t.Z = {
 	getArticleURL: (e) => u('/hc/'.concat(c(), '/articles/').concat(e)),
 	getDevArticleURL: (e) => u('/hc/'.concat(c(), '/articles/').concat(e), l),
-	getCreatorSupportArticleURL: (e) =>
-		u('/hc/'.concat(c(), '/articles/').concat(e), 'https://creator-support.discord.com'),
+	getCreatorSupportArticleURL: (e) => u('/hc/'.concat(c(), '/articles/').concat(e), 'https://creator-support.discord.com'),
 	getTwitterURL: () => (0, r.Z)(s.RK.TWITTER),
 	getCommunityURL: () => u('/hc/'.concat(c())),
 	getSubmitRequestURL(e) {

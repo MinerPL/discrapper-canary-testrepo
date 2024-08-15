@@ -37,11 +37,7 @@ let C = () => 80,
 			}),
 			A = (0, m.Yq)(i.skuId),
 			Z = s.useRef(null),
-			{
-				accessibilityLabel: T,
-				thumbnailPreviewSrc: N,
-				title: S
-			} = null !== (t = null == C ? void 0 : C.config) && void 0 !== t ? t : {},
+			{ accessibilityLabel: T, thumbnailPreviewSrc: N, title: S } = null !== (t = null == C ? void 0 : C.config) && void 0 !== t ? t : {},
 			j = E.ZP.canUseCollectibles(n),
 			R = a === _.$0.PREMIUM_PURCHASE && !j;
 		return (0, r.jsxs)(x, {

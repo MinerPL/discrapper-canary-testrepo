@@ -107,26 +107,8 @@ d(g, 'displayName', 'GuildSettingsOnboardingHomeSettingsStore'),
 			else {
 				var n, s, a, i, r, l;
 				I.welcomeMessage = {
-					authorIds:
-						null !==
-							(i =
-								null !== (a = t.authorIds) && void 0 !== a
-									? a
-									: null === (n = I.welcomeMessage) || void 0 === n
-										? void 0
-										: n.authorIds) && void 0 !== i
-							? i
-							: [],
-					message:
-						null !==
-							(l =
-								null !== (r = t.message) && void 0 !== r
-									? r
-									: null === (s = I.welcomeMessage) || void 0 === s
-										? void 0
-										: s.message) && void 0 !== l
-							? l
-							: ''
+					authorIds: null !== (i = null !== (a = t.authorIds) && void 0 !== a ? a : null === (n = I.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) && void 0 !== i ? i : [],
+					message: null !== (l = null !== (r = t.message) && void 0 !== r ? r : null === (s = I.welcomeMessage) || void 0 === s ? void 0 : s.message) && void 0 !== l ? l : ''
 				};
 			}
 		},
@@ -137,8 +119,7 @@ d(g, 'displayName', 'GuildSettingsOnboardingHomeSettingsStore'),
 		GUILD_SETTINGS_ONBOARDING_ADD_NEW_MEMBER_ACTION: function (e) {
 			var t;
 			let { action: n } = e;
-			(I.newMemberActions = null !== (t = I.newMemberActions) && void 0 !== t ? t : []),
-				(I.newMemberActions = [...I.newMemberActions, n]);
+			(I.newMemberActions = null !== (t = I.newMemberActions) && void 0 !== t ? t : []), (I.newMemberActions = [...I.newMemberActions, n]);
 		},
 		GUILD_SETTINGS_ONBOARDING_DELETE_NEW_MEMBER_ACTION: function (e) {
 			let { channelId: t } = e;
@@ -156,10 +137,7 @@ d(g, 'displayName', 'GuildSettingsOnboardingHomeSettingsStore'),
 		GUILD_SETTINGS_ONBOARDING_ADD_RESOURCE_CHANNEL: function (e) {
 			var t;
 			let { resourceChannel: n } = e;
-			(I.resourceChannels = (null !== (t = I.resourceChannels) && void 0 !== t ? t : []).filter(
-				(e) => e.channelId !== n.channelId
-			)),
-				(I.resourceChannels = [...I.resourceChannels, n]);
+			(I.resourceChannels = (null !== (t = I.resourceChannels) && void 0 !== t ? t : []).filter((e) => e.channelId !== n.channelId)), (I.resourceChannels = [...I.resourceChannels, n]);
 		},
 		GUILD_SETTINGS_ONBOARDING_DELETE_RESOURCE_CHANNEL: function (e) {
 			let { resourceChannelId: t } = e;

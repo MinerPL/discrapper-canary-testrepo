@@ -30,17 +30,14 @@ let d = new s.Z('GatewaySocket'),
 	_ = new Set(['INITIAL_GUILD', 'READY']),
 	E = new Set(['READY', 'INITIAL_GUILD']),
 	f = new Set(['READY', 'READY_SUPPLEMENTAL', 'RESUMED']);
-((i = r || (r = {}))[(i.NotStarted = 0)] = 'NotStarted'),
-	(i[(i.Loading = 1)] = 'Loading'),
-	(i[(i.Loaded = 2)] = 'Loaded');
+((i = r || (r = {}))[(i.NotStarted = 0)] = 'NotStarted'), (i[(i.Loading = 1)] = 'Loading'), (i[(i.Loaded = 2)] = 'Loaded');
 class h {
 	hasStuffToDispatchNow() {
 		return this.queue.length > 0 && 2 === this.queue[0].status;
 	}
 	processFirstQueuedDispatch(e) {
 		let t = [];
-		for (; this.queue.length > 0 && e.has(this.queue[0].type) && 2 === this.queue[0].status; )
-			t.push(this.queue.shift());
+		for (; this.queue.length > 0 && e.has(this.queue[0].type) && 2 === this.queue[0].status; ) t.push(this.queue.shift());
 		this.dispatchMultiple(t);
 	}
 	unpauseDispatchQueue() {
@@ -82,10 +79,7 @@ class h {
 		return !1;
 	}
 	scheduleFlush(e) {
-		!this.paused &&
-			(E.has(e)
-				? (null != this.dispatchTimeout && clearTimeout(this.dispatchTimeout), this.flush())
-				: null == this.dispatchTimeout && (this.dispatchTimeout = setTimeout(this.flush, this.nextDispatchTimeout)));
+		!this.paused && (E.has(e) ? (null != this.dispatchTimeout && clearTimeout(this.dispatchTimeout), this.flush()) : null == this.dispatchTimeout && (this.dispatchTimeout = setTimeout(this.flush, this.nextDispatchTimeout)));
 	}
 	dispatchMultiple(e) {
 		if (0 === e.length) return;
@@ -113,24 +107,12 @@ class h {
 			d = performance.now();
 		if (this.socket.connectionState === l.Z.RESUMING) {
 			let e = d - this.resumeAnalytics.lastUpdateTime;
-			0 === this.resumeAnalytics.numEvents
-				? (this.resumeAnalytics.initialWaitTime = e)
-				: e > this.resumeAnalytics.largestWaitTime && (this.resumeAnalytics.largestWaitTime = e),
-				(this.resumeAnalytics.totalWaitTime += e),
-				(this.resumeAnalytics.lastUpdateTime = d),
-				(this.resumeAnalytics.numEvents += 1);
+			0 === this.resumeAnalytics.numEvents ? (this.resumeAnalytics.initialWaitTime = e) : e > this.resumeAnalytics.largestWaitTime && (this.resumeAnalytics.largestWaitTime = e), (this.resumeAnalytics.totalWaitTime += e), (this.resumeAnalytics.lastUpdateTime = d), (this.resumeAnalytics.numEvents += 1);
 		}
 		if ((o.Z.flush(a, i), 'READY' === a)) {
 			let e = (0, u.vW)(i);
-			null === (t = this.getDispatchHandler(a)) || void 0 === t || t.dispatch(i, a, c),
-				(0, u.dm)(this.socket, i, d, s, e);
-		} else
-			'RESUMED' === a
-				? (null === (n = this.getDispatchHandler(a)) || void 0 === n || n.dispatch(i, a, c),
-					(0, u.uB)(this.resumeAnalytics),
-					(this.resumeAnalytics = (0, u.zH)()),
-					this.socket.handleResumeDispatched())
-				: null === (r = this.getDispatchHandler(a)) || void 0 === r || r.dispatch(i, a, c);
+			null === (t = this.getDispatchHandler(a)) || void 0 === t || t.dispatch(i, a, c), (0, u.dm)(this.socket, i, d, s, e);
+		} else 'RESUMED' === a ? (null === (n = this.getDispatchHandler(a)) || void 0 === n || n.dispatch(i, a, c), (0, u.uB)(this.resumeAnalytics), (this.resumeAnalytics = (0, u.zH)()), this.socket.handleResumeDispatched()) : null === (r = this.getDispatchHandler(a)) || void 0 === r || r.dispatch(i, a, c);
 		this.socket.connectionState === l.Z.RESUMING && (this.resumeAnalytics.dispatchTime += performance.now() - d);
 	}
 	clear() {
@@ -162,9 +144,7 @@ class h {
 				let n = this.queue.splice(0, t);
 				this.dispatchMultiple(n);
 				let r = Date.now() - e;
-				r > 100
-					? (d.log('Dispatched '.concat(n.length, ' messages in ').concat(r, 'ms')), (this.nextDispatchTimeout = 250))
-					: (this.nextDispatchTimeout = 33);
+				r > 100 ? (d.log('Dispatched '.concat(n.length, ' messages in ').concat(r, 'ms')), (this.nextDispatchTimeout = 250)) : (this.nextDispatchTimeout = 33);
 			});
 	}
 }

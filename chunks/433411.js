@@ -18,23 +18,10 @@ var n = t(735250),
 	T = t(689938),
 	S = t(539523);
 function N(e) {
-	let {
-			user: s,
-			guild: t,
-			className: i,
-			sectionTitle: E,
-			forcedDivider: N = !1,
-			withTutorial: m = !1,
-			isTryItOutFlow: A = !1
-		} = e,
+	let { user: s, guild: t, className: i, sectionTitle: E, forcedDivider: N = !1, withTutorial: m = !1, isTryItOutFlow: A = !1 } = e,
 		{ analyticsLocations: O } = (0, l.ZP)(),
 		g = null != t,
-		{
-			userAvatarDecoration: h,
-			guildAvatarDecoration: p,
-			pendingAvatarDecoration: R,
-			pendingErrors: x
-		} = (0, u.$U)(s, t),
+		{ userAvatarDecoration: h, guildAvatarDecoration: p, pendingAvatarDecoration: R, pendingErrors: x } = (0, u.$U)(s, t),
 		M = (0, _.Z)('enable_avatar_decoration_uploads'),
 		f = a.useCallback(
 			() =>
@@ -72,9 +59,7 @@ function N(e) {
 							onClick: function () {
 								(0, u.PO)(null == t ? void 0 : t.id, null);
 							},
-							children: (0, c.ad)(s, t)
-								? T.Z.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION
-								: T.Z.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION
+							children: (0, c.ad)(s, t) ? T.Z.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : T.Z.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION
 						})
 				]
 			}),

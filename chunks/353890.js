@@ -61,11 +61,7 @@ function S() {
 }
 function h(e) {
 	let { channels: t } = e;
-	return (0, s.jsx)(s.Fragment, {
-		children: t.map((e) =>
-			e.isCategory() ? (0, s.jsx)(C, { label: e.name }, e.id) : (0, s.jsx)(x, { channel: e }, e.id)
-		)
-	});
+	return (0, s.jsx)(s.Fragment, { children: t.map((e) => (e.isCategory() ? (0, s.jsx)(C, { label: e.name }, e.id) : (0, s.jsx)(x, { channel: e }, e.id))) });
 }
 function g() {
 	return (0, s.jsx)('div', { className: m.divider });

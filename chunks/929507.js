@@ -32,12 +32,7 @@ n.Z = {
 									s.Z.dispatch({
 										type: 'COMMANDS_MIGRATION_UPDATE_SUCCESS',
 										guildId: e,
-										integrationIdsWithAppCommands:
-											null !==
-												(a = null === (t = n.body) || void 0 === t ? void 0 : t.integration_ids_with_app_commands) &&
-											void 0 !== a
-												? a
-												: []
+										integrationIdsWithAppCommands: null !== (a = null === (t = n.body) || void 0 === t ? void 0 : t.integration_ids_with_app_commands) && void 0 !== a ? a : []
 									});
 								},
 								() => {

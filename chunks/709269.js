@@ -2,8 +2,7 @@ e.exports = function (e) {
 	let t = "[a-z'][a-zA-Z0-9_']*",
 		n = '(' + t + ':' + t + '|' + t + ')',
 		r = {
-			keyword:
-				'after and andalso|10 band begin bnot bor bsl bzr bxor case catch cond div end fun if let not of orelse|10 query receive rem try when xor',
+			keyword: 'after and andalso|10 band begin bnot bor bsl bzr bxor case catch cond div end fun if let not of orelse|10 query receive rem try when xor',
 			literal: 'false true'
 		},
 		i = e.COMMENT('%', '$'),
@@ -103,31 +102,7 @@ e.exports = function (e) {
 				returnBegin: !0,
 				keywords: {
 					$pattern: '-' + e.IDENT_RE,
-					keyword: [
-						'-module',
-						'-record',
-						'-undef',
-						'-export',
-						'-ifdef',
-						'-ifndef',
-						'-author',
-						'-copyright',
-						'-doc',
-						'-vsn',
-						'-import',
-						'-include',
-						'-include_lib',
-						'-compile',
-						'-define',
-						'-else',
-						'-endif',
-						'-file',
-						'-behaviour',
-						'-behavior',
-						'-spec'
-					]
-						.map((e) => `${e}|1.5`)
-						.join(' ')
+					keyword: ['-module', '-record', '-undef', '-export', '-ifdef', '-ifndef', '-author', '-copyright', '-doc', '-vsn', '-import', '-include', '-include_lib', '-compile', '-define', '-else', '-endif', '-file', '-behaviour', '-behavior', '-spec'].map((e) => `${e}|1.5`).join(' ')
 				},
 				contains: [f]
 			},

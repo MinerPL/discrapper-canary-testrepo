@@ -1,12 +1,6 @@
 function t(e) {
 	var n = this;
-	if (
-		(!(n instanceof t) && (n = new t()),
-		(n.tail = null),
-		(n.head = null),
-		(n.length = 0),
-		e && 'function' == typeof e.forEach)
-	)
+	if ((!(n instanceof t) && (n = new t()), (n.tail = null), (n.head = null), (n.length = 0), e && 'function' == typeof e.forEach))
 		e.forEach(function (e) {
 			n.push(e);
 		});
@@ -20,14 +14,7 @@ function t(e) {
 		if (e.list !== this) throw Error('removing node which does not belong to this list');
 		var t = e.next,
 			n = e.prev;
-		t && (t.prev = n),
-			n && (n.next = t),
-			e === this.head && (this.head = t),
-			e === this.tail && (this.tail = n),
-			e.list.length--,
-			(e.next = null),
-			(e.prev = null),
-			(e.list = null);
+		t && (t.prev = n), n && (n.next = t), e === this.head && (this.head = t), e === this.tail && (this.tail = n), e.list.length--, (e.next = null), (e.prev = null), (e.list = null);
 	}),
 	(t.prototype.unshiftNode = function (e) {
 		if (e !== this.head) {
@@ -148,8 +135,5 @@ function t(e) {
 	});
 function n(e, t, r, i) {
 	if (!(this instanceof n)) return new n(e, t, r, i);
-	(this.list = i),
-		(this.value = e),
-		t ? ((t.next = this), (this.prev = t)) : (this.prev = null),
-		r ? ((r.prev = this), (this.next = r)) : (this.next = null);
+	(this.list = i), (this.value = e), t ? ((t.next = this), (this.prev = t)) : (this.prev = null), r ? ((r.prev = this), (this.next = r)) : (this.next = null);
 }

@@ -15,7 +15,7 @@ n.d(t, {
 		return A;
 	},
 	Mr: function () {
-		return I;
+		return m;
 	},
 	Vn: function () {
 		return E;
@@ -33,7 +33,7 @@ n.d(t, {
 		return O;
 	},
 	o: function () {
-		return m;
+		return I;
 	},
 	pT: function () {
 		return N;
@@ -86,7 +86,7 @@ async function h(e) {
 	return (
 		clearTimeout(o),
 		s
-			? O(a, n) && m(a, l, r.onCloseRequest, r.onCloseCallback, n)
+			? O(a, n) && I(a, l, r.onCloseRequest, r.onCloseCallback, n)
 			: p(
 					l,
 					{
@@ -121,7 +121,7 @@ function p(e) {
 									key: d,
 									Layer: o,
 									render: e,
-									onCloseRequest: null != l ? l : () => I(d, n),
+									onCloseRequest: null != l ? l : () => m(d, n),
 									onCloseCallback: u,
 									instant: a,
 									backdropStyle: c
@@ -133,7 +133,7 @@ function p(e) {
 		d
 	);
 }
-function I(e) {
+function m(e) {
 	let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _(),
 		n = f.getState()[t],
 		r =
@@ -158,7 +158,7 @@ function I(e) {
 	}),
 		null != r && null != r.onCloseCallback && r.onCloseCallback();
 }
-function m(e, t, n, r) {
+function I(e, t, n, r) {
 	let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : _();
 	(0, s.j)(() => {
 		f.setState((a) =>
@@ -171,7 +171,7 @@ function m(e, t, n, r) {
 								? {
 										...a,
 										render: t,
-										onCloseRequest: null == n ? () => I(e, i) : n,
+										onCloseRequest: null == n ? () => m(e, i) : n,
 										onCloseCallback: r
 									}
 								: a
@@ -196,13 +196,11 @@ function S() {
 function A(e) {
 	var t, n;
 	let { default: r, popout: i } = f();
-	return i.length > 0
-		? (null === (t = i.at(-1)) || void 0 === t ? void 0 : t.key) === e
-		: (null === (n = r.at(-1)) || void 0 === n ? void 0 : n.key) === e;
+	return i.length > 0 ? (null === (t = i.at(-1)) || void 0 === t ? void 0 : t.key) === e : (null === (n = r.at(-1)) || void 0 === n ? void 0 : n.key) === e;
 }
 function N() {
 	let e = f.getState();
-	for (let t in e) for (let n of e[t]) I(n.key, t);
+	for (let t in e) for (let n of e[t]) m(n.key, t);
 }
 function v(e, t) {
 	let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.z1,

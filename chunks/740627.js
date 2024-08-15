@@ -56,15 +56,7 @@ var r;
 				},
 				lastDay: '[juče u] LT',
 				lastWeek: function () {
-					return [
-						'[prošle] [nedjelje] [u] LT',
-						'[prošlog] [ponedjeljka] [u] LT',
-						'[prošlog] [utorka] [u] LT',
-						'[prošle] [srijede] [u] LT',
-						'[prošlog] [četvrtka] [u] LT',
-						'[prošlog] [petka] [u] LT',
-						'[prošle] [subote] [u] LT'
-					][this.day()];
+					return ['[prošle] [nedjelje] [u] LT', '[prošlog] [ponedjeljka] [u] LT', '[prošlog] [utorka] [u] LT', '[prošle] [srijede] [u] LT', '[prošlog] [četvrtka] [u] LT', '[prošlog] [petka] [u] LT', '[prošle] [subote] [u] LT'][this.day()];
 				},
 				sameElse: 'L'
 			},

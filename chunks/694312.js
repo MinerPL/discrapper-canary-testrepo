@@ -58,11 +58,7 @@ function p(e) {
 				})
 				.filter((e) => {
 					let { activity: n } = e;
-					return (
-						!n.requires_age_gate ||
-						(null == t ? void 0 : t.nsfwAllowed) === !0 ||
-						(null == t ? void 0 : t.nsfwAllowed) == null
-					);
+					return !n.requires_age_gate || (null == t ? void 0 : t.nsfwAllowed) === !0 || (null == t ? void 0 : t.nsfwAllowed) == null;
 				}),
 		[null == t ? void 0 : t.nsfwAllowed, _, m]
 	);

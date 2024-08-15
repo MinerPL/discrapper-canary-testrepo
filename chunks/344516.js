@@ -112,21 +112,7 @@ let I = l.ZP.connectStores([p.Z], (e) => {
 	};
 })((e) => {
 	let t,
-		{
-			mediaEngineContext: n,
-			inputMode: r,
-			shortcut: l,
-			delay: c,
-			vadThreshold: h,
-			vadAutoThreshold: m,
-			inputDevices: p,
-			inputDeviceId: b,
-			inputVolume: C,
-			outputDeviceId: f,
-			outputDevices: I,
-			outputVolume: D,
-			speaking: Z = !1
-		} = e,
+		{ mediaEngineContext: n, inputMode: r, shortcut: l, delay: c, vadThreshold: h, vadAutoThreshold: m, inputDevices: p, inputDeviceId: b, inputVolume: C, outputDeviceId: f, outputDevices: I, outputVolume: D, speaking: Z = !1 } = e,
 		v = o().first(p),
 		N = null != v && v.disabled,
 		j = o().first(I),
@@ -164,8 +150,7 @@ let I = l.ZP.connectStores([p.Z], (e) => {
 									(0, s.jsx)(a.Slider, {
 										initialValue: c,
 										onValueChange: (e) => d.Z.setMode(r, { delay: e }, n),
-										onValueRender: (e) =>
-											e >= 1000 ? ((e /= 1000), ''.concat(e.toFixed(2), 's')) : ''.concat(e.toFixed(0), 'ms'),
+										onValueRender: (e) => (e >= 1000 ? ((e /= 1000), ''.concat(e.toFixed(2), 's')) : ''.concat(e.toFixed(0), 'ms')),
 										maxValue: _.qhL,
 										'aria-labelledby': T
 									})
@@ -300,11 +285,7 @@ function D(e) {
 						})
 					]
 				}),
-				(0, s.jsx)(a.ModalContent, {
-					children: (0, s.jsx)(I, {
-						mediaEngineContext: null !== (t = e.mediaEngineContext) && void 0 !== t ? t : b.Yn.DEFAULT
-					})
-				})
+				(0, s.jsx)(a.ModalContent, { children: (0, s.jsx)(I, { mediaEngineContext: null !== (t = e.mediaEngineContext) && void 0 !== t ? t : b.Yn.DEFAULT }) })
 			]
 		})
 	);

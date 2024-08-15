@@ -41,9 +41,7 @@ let d = new (class e {
 				});
 	}
 	constructor() {
-		c(this, '_fetched', new Set()),
-			c(this, '_pending', new Set()),
-			c(this, '_flushHandler', new o.sW(0, () => this._flush()));
+		c(this, '_fetched', new Set()), c(this, '_pending', new Set()), c(this, '_flushHandler', new o.sW(0, () => this._flush()));
 	}
 })();
 function _(e, t) {

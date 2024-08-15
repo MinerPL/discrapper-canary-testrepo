@@ -34,36 +34,11 @@ function f(e) {
 	return E.set(e, i), i;
 }
 let h = ['http:', 'https:', 'discord:'],
-	p = [
-		d.b.TEXT,
-		d.b.UNDERLINE,
-		d.b.STRONG,
-		d.b.ITALICS,
-		d.b.STRIKETHROUGH,
-		d.b.INLINE_CODE,
-		d.b.SPOILER,
-		d.b.LINE_BREAK,
-		d.b.TIMESTAMP
-	],
-	I = [...p, d.b.EMOJI, d.b.CUSTOM_EMOJI],
-	m = [d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT],
+	p = [d.b.TEXT, d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP],
+	m = [...p, d.b.EMOJI, d.b.CUSTOM_EMOJI],
+	I = [d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT],
 	T = [d.b.TEXT],
-	g = [
-		d.b.UNDERLINE,
-		d.b.STRONG,
-		d.b.ITALICS,
-		d.b.STRIKETHROUGH,
-		d.b.INLINE_CODE,
-		d.b.SPOILER,
-		d.b.LINE_BREAK,
-		d.b.TIMESTAMP,
-		d.b.EMOJI,
-		d.b.CUSTOM_EMOJI,
-		d.b.LIST,
-		d.b.HEADING,
-		d.b.BLOCK_QUOTE,
-		d.b.SUBTEXT
-	];
+	g = [d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP, d.b.EMOJI, d.b.CUSTOM_EMOJI, d.b.LIST, d.b.HEADING, d.b.BLOCK_QUOTE, d.b.SUBTEXT];
 function S(e, t) {
 	let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
 	for (let r of (!Array.isArray(e) && (e = [e]), e)) {
@@ -82,8 +57,7 @@ function A(e) {
 		let n = new URL(e),
 			r = null !== (t = n.protocol) && void 0 !== t ? t : '';
 		if (!h.includes(r.toLowerCase())) throw Error('Provided protocol is not allowed: ' + r);
-		if (('http:' === r || 'https:' === r) && (null == n.hostname || 0 === n.hostname.length))
-			throw Error('no hostname');
+		if (('http:' === r || 'https:' === r) && (null == n.hostname || 0 === n.hostname.length)) throw Error('no hostname');
 		let i = (0, _.MO)(n);
 		(n.username = ''), (n.password = '');
 		let a = (0, _.MO)(n);
@@ -120,8 +94,8 @@ t.ZP = {
 				allowEscape: !1,
 				parseInlineCodeChildContent: !0
 			},
-			b = n.allowEmojiLinks ? I : p,
-			M = [...b, ...m],
+			b = n.allowEmojiLinks ? m : p,
+			M = [...b, ...I],
 			P = [...T, ...g],
 			U = S(t(O, L), M, [d.b.EMOJI]),
 			w = S(t(R, L), P);

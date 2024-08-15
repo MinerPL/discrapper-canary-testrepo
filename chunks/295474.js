@@ -55,16 +55,10 @@ function f(e) {
 			if (l.has(m.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME)) {
 				if (null == e) {
 					var d;
-					t.nick = [
-						h.Z.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_USERNAME_IN_GUILD.format({
-							guildName: null !== (d = a.name) && void 0 !== d ? d : ''
-						})
-					];
+					t.nick = [h.Z.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_USERNAME_IN_GUILD.format({ guildName: null !== (d = a.name) && void 0 !== d ? d : '' })];
 				} else t.nick = [h.Z.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_USERNAME];
 			}
-			return (
-				l.has(m.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [h.Z.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_BIO]), t
-			);
+			return l.has(m.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [h.Z.Messages.GUILD_AUTOMOD_PROFILE_ERROR_QUARANTINE_BIO]), t;
 		},
 		[e]
 	);

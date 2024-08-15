@@ -27,9 +27,7 @@ function C() {
 	let t = r.Z.getChannel(e);
 	if (null == t || null == t.guild_id) return;
 	let n = t.guild_id;
-	if (
-		(null == c[e] && (c[e] = 0), t.isThread() || (d.ZP.isOptInEnabled(n) && !d.ZP.isChannelOrParentOptedIn(n, t.id)))
-	) {
+	if ((null == c[e] && (c[e] = 0), t.isThread() || (d.ZP.isOptInEnabled(n) && !d.ZP.isChannelOrParentOptedIn(n, t.id)))) {
 		delete c[e], null != o[n] && o[n].delete(e);
 		return;
 	}

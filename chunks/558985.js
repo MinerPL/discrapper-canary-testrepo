@@ -35,9 +35,7 @@ class d extends (r = i.Component) {
 	componentDidUpdate(e) {
 		let t = this.getVisibilityObserver(),
 			n = t.isVisible(this);
-		this.props.active && n !== this.isVisible && this.props.onChange(n),
-			!e.active && this.props.active ? t.observe(this) : e.active && !this.props.active && t.unobserve(this),
-			(this.isVisible = n);
+		this.props.active && n !== this.isVisible && this.props.onChange(n), !e.active && this.props.active ? t.observe(this) : e.active && !this.props.active && t.unobserve(this), (this.isVisible = n);
 	}
 	componentWillUnmount() {
 		this.getVisibilityObserver().unobserve(this);

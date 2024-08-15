@@ -13,18 +13,7 @@ var a = t(120356),
 	d = t(689938),
 	c = t(479422);
 function u(e) {
-	let {
-		name: n,
-		description: t,
-		icon: a,
-		imageSrc: u,
-		iconBackgroundColor: I,
-		iconClassName: m,
-		details: _,
-		detailsClassName: N,
-		isHeader: E,
-		isPremium: T
-	} = e;
+	let { name: n, description: t, icon: a, imageSrc: u, iconBackgroundColor: I, iconClassName: m, details: _, detailsClassName: N, isHeader: E, isPremium: T } = e;
 	return (0, i.jsxs)(r.Z, {
 		justify: r.Z.Justify.CENTER,
 		className: c.wrapper,

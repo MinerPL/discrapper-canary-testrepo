@@ -18,8 +18,8 @@ var r = n(735250),
 	f = n(452634),
 	h = n(620662),
 	p = n(841784),
-	I = n(275920),
-	m = n(906732),
+	m = n(275920),
+	I = n(906732),
 	T = n(835473),
 	g = n(592745),
 	S = n(592125),
@@ -41,7 +41,7 @@ var r = n(735250),
 	G = n(689938);
 function k(e) {
 	let { user: t, currentUser: n, activity: k, onAction: B, onClose: F } = e,
-		{ analyticsLocations: V, newestAnalyticsLocation: H } = (0, m.ZP)(),
+		{ analyticsLocations: V, newestAnalyticsLocation: H } = (0, I.ZP)(),
 		[Z] = (0, T.Z)([null == k ? void 0 : k.application_id]),
 		Y = (0, p.Z)(k),
 		j = null == k ? void 0 : k.application_id,
@@ -118,7 +118,7 @@ function k(e) {
 					intent: x.Ws.PLAY,
 					embedded: Y
 				}),
-					(0, I.Z)({
+					(0, m.Z)({
 						type: w.q5t.JOIN,
 						userId: t.id,
 						partyId: null == k ? void 0 : null === (e = k.party) || void 0 === e ? void 0 : e.id,
@@ -143,12 +143,7 @@ function k(e) {
 				null != e && u.default.selectPrivateChannel(e.id);
 			}
 		},
-		en = () =>
-			t.id === n.id
-				? G.Z.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF
-				: M.isPlatformEmbedded && !z && null != k
-					? G.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({ name: k.name })
-					: null;
+		en = () => (t.id === n.id ? G.Z.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF : M.isPlatformEmbedded && !z && null != k ? G.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({ name: k.name }) : null);
 	return Y
 		? (0, r.jsx)(s.Tooltip, {
 				text: en(),

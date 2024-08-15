@@ -6,8 +6,7 @@ var r = n(690244),
 	l = r('%Math.floor%');
 e.exports = function (e, t) {
 	if ('function' != typeof e) throw new o('`fn` is not a function');
-	if ('number' != typeof t || t < 0 || t > 4294967295 || l(t) !== t)
-		throw new o('`length` must be a positive 32-bit integer');
+	if ('number' != typeof t || t < 0 || t > 4294967295 || l(t) !== t) throw new o('`length` must be a positive 32-bit integer');
 	var n = arguments.length > 2 && !!arguments[2],
 		r = !0,
 		u = !0;

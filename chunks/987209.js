@@ -31,9 +31,7 @@ function v(e) {
 		A = f;
 	T && (A = O && g ? u.Cj.SEASONAL_STANDARD_BOX : null != h ? h : m);
 	let [_, P] = i.useState(A),
-		[y, M] = i.useState(
-			n && (0, o.MY)(N) === o.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD ? d.Z.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE : s
-		),
+		[y, M] = i.useState(n && (0, o.MY)(N) === o.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD ? d.Z.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE : s),
 		[B, R] = i.useState(void 0),
 		[b, L] = i.useState(void 0),
 		U = (0, o.E5)(v, n),

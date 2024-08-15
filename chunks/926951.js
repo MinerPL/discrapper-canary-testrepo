@@ -26,8 +26,7 @@ let a = (0, r.B)({
 			label: 'Golive Simulcast 480p@500k',
 			config: {
 				enabled: !0,
-				fullname:
-					'bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-pacer,worker-pacer-probe',
+				fullname: 'bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-pacer,worker-pacer-probe',
 				simulcastEnabled: !0,
 				simulcastFlag: i.V8.GOLIVE_SIMULCAST_480P_500K
 			}
@@ -46,8 +45,7 @@ let a = (0, r.B)({
 			label: 'Golive with pacing and probing',
 			config: {
 				enabled: !0,
-				fullname:
-					'bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-pacer,worker-pacer-probe',
+				fullname: 'bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-pacer,worker-pacer-probe',
 				simulcastEnabled: !1
 			}
 		},
@@ -56,8 +54,7 @@ let a = (0, r.B)({
 			label: 'Golive Simulcast 480p@750k',
 			config: {
 				enabled: !0,
-				fullname:
-					'bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-pacer-probe,worker-lq-floor-750k',
+				fullname: 'bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-pacer-probe,worker-lq-floor-750k',
 				simulcastEnabled: !0,
 				simulcastFlag: i.V8.GOLIVE_SIMULCAST_480P_750K
 			}
@@ -67,8 +64,7 @@ let a = (0, r.B)({
 			label: 'Golive Simulcast 480p@1000k',
 			config: {
 				enabled: !0,
-				fullname:
-					'bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-pacer-probe,worker-lq-floor-1000k',
+				fullname: 'bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-pacer-probe,worker-lq-floor-1000k',
 				simulcastEnabled: !0,
 				simulcastFlag: i.V8.GOLIVE_SIMULCAST_480P_1000K
 			}

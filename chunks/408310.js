@@ -9,16 +9,7 @@ var a = n(481060),
 	u = n(176480);
 t.Z = (e) => {
 	let t,
-		{
-			searchQuery: n,
-			setSearchQuery: d,
-			mostRecentQuery: h,
-			handleClearSearch: m,
-			handleSearchKeyPress: p,
-			handleCreateOrAddGuild: _,
-			searchResults: f,
-			searchFetching: E
-		} = e;
+		{ searchQuery: n, setSearchQuery: d, mostRecentQuery: h, handleClearSearch: m, handleSearchKeyPress: p, handleCreateOrAddGuild: _, searchResults: f, searchFetching: E } = e;
 	if (E)
 		t = (0, i.jsx)('div', {
 			className: o.pageContainer,

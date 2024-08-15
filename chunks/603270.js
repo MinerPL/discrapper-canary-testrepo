@@ -44,15 +44,7 @@ let L = b(function (e) {
 					let n = c.Z.getApplication(t),
 						i = null != n ? (0, p.y)(n, 45) : void 0,
 						a = null === (e = I.Z.getBasicChannel(o.channel_id)) || void 0 === e ? void 0 : e.guild_id;
-					return [
-						n,
-						c.Z.isFetchingApplication(t),
-						c.Z.didFetchingApplicationFail(t),
-						T.Z.getStoreLayout(t),
-						T.Z.getFetchStatus(t),
-						a,
-						i
-					];
+					return [n, c.Z.isFetchingApplication(t), c.Z.didFetchingApplicationFail(t), T.Z.getStoreLayout(t), T.Z.getFetchStatus(t), a, i];
 				},
 				[t, o.channel_id]
 			);
@@ -92,10 +84,7 @@ let L = b(function (e) {
 			appName: _.name,
 			title: M.Z.Messages.STOREFRONT_TITLE.format({ appName: _.name }),
 			description: b,
-			link: ''
-				.concat(location.protocol, '//')
-				.concat(location.host)
-				.concat(x.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(t, O.ApplicationDirectoryProfileSections.STORE)),
+			link: ''.concat(location.protocol, '//').concat(location.host).concat(x.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(t, O.ApplicationDirectoryProfileSections.STORE)),
 			onLinkCopy: () => {
 				(0, g.X)(t, g.B.STORE_EMBED);
 			},
@@ -130,31 +119,11 @@ let L = b(function (e) {
 					var e, t, n, i;
 					let a = null === (e = I.Z.getBasicChannel(T.channel_id)) || void 0 === e ? void 0 : e.guild_id,
 						s = h.Z.get(d),
-						r =
-							null !== (n = null == s ? void 0 : null === (t = s.application) || void 0 === t ? void 0 : t.id) &&
-							void 0 !== n
-								? n
-								: null == s
-									? void 0
-									: s.applicationId,
-						l =
-							null !== (i = null != r ? c.Z.getApplication(r) : void 0) && void 0 !== i
-								? i
-								: null == s
-									? void 0
-									: s.application,
+						r = null !== (n = null == s ? void 0 : null === (t = s.application) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null == s ? void 0 : s.applicationId,
+						l = null !== (i = null != r ? c.Z.getApplication(r) : void 0) && void 0 !== i ? i : null == s ? void 0 : s.application,
 						o = null != l ? (0, p.y)(l, 45) : void 0,
 						u = m.Z.getForSKU(d);
-					return [
-						s,
-						l,
-						N.Z.getForSKU(d),
-						h.Z.isFetching(d),
-						h.Z.didFetchingSkuFail(d),
-						u.length > 0 ? u[0] : null,
-						a,
-						o
-					];
+					return [s, l, N.Z.getForSKU(d), h.Z.isFetching(d), h.Z.didFetchingSkuFail(d), u.length > 0 ? u[0] : null, a, o];
 				},
 				[T.channel_id, d]
 			),
@@ -163,8 +132,7 @@ let L = b(function (e) {
 			null == C && !Z && !b && (0, o.km)(d);
 		}, [b, Z, C, d]);
 		let { subscriptionGroupListing: B } = (0, u.F5)(null == S ? void 0 : S.id, j);
-		if (((0, u.FE)(null == S ? void 0 : S.id, null == S ? void 0 : S.primarySkuId), !y || null == S || null == C))
-			return null;
+		if (((0, u.FE)(null == S ? void 0 : S.id, null == S ? void 0 : S.primarySkuId), !y || null == S || null == C)) return null;
 		let k = C.type === x.epS.SUBSCRIPTION,
 			G = null != B && (0, _.KW)(B.sku_flags),
 			F = () => {
@@ -250,10 +218,7 @@ let L = b(function (e) {
 			appName: S.name,
 			title: C.name,
 			description: V,
-			link: ''
-				.concat(location.protocol, '//')
-				.concat(location.host)
-				.concat(x.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(S.id, O.ApplicationDirectoryProfileSections.STORE)),
+			link: ''.concat(location.protocol, '//').concat(location.host).concat(x.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(S.id, O.ApplicationDirectoryProfileSections.STORE)),
 			onLinkCopy: () => {
 				(0, g.X)(S.id, g.B.SKU_EMBED, d);
 			},

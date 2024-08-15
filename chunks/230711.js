@@ -73,8 +73,8 @@ t.Z = {
 	},
 	saveAccountChanges(e, t) {
 		a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_SUBMIT' });
-		let { username: n, email: s, emailToken: c, password: f, avatar: h, newPassword: p, discriminator: I } = e,
-			{ close: m } = t;
+		let { username: n, email: s, emailToken: c, password: f, avatar: h, newPassword: p, discriminator: m } = e,
+			{ close: I } = t;
 		return (0, u.Z)(
 			(e) => {
 				let t = {
@@ -85,7 +85,7 @@ t.Z = {
 						avatar: h,
 						new_password: p,
 						...e,
-						discriminator: null != I && '' !== I ? I : void 0
+						discriminator: null != m && '' !== m ? m : void 0
 					},
 					a = i.K.get(d.JkL),
 					o = (0, _.xJ)();
@@ -139,7 +139,7 @@ t.Z = {
 							type: 'PASSWORD_UPDATED',
 							userId: t.id
 						}),
-					m ? this.close() : this.submitComplete(),
+					I ? this.close() : this.submitComplete(),
 					e
 				);
 			},

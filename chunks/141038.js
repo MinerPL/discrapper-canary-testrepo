@@ -23,12 +23,8 @@ function l(e, t, n) {
 					});
 	let i = [];
 	return (
-		t.includes(c.vA.SCREEN) &&
-			e.supports(c.AN.SCREEN_PREVIEWS) &&
-			(i.push(e.getScreenPreviews(n.width, n.height)), (t = t.filter((e) => e !== c.vA.SCREEN))),
-		t.includes(c.vA.WINDOW) &&
-			e.supports(c.AN.WINDOW_PREVIEWS) &&
-			(i.push(e.getWindowPreviews(n.width, n.height)), (t = t.filter((e) => e !== c.vA.WINDOW))),
+		t.includes(c.vA.SCREEN) && e.supports(c.AN.SCREEN_PREVIEWS) && (i.push(e.getScreenPreviews(n.width, n.height)), (t = t.filter((e) => e !== c.vA.SCREEN))),
+		t.includes(c.vA.WINDOW) && e.supports(c.AN.WINDOW_PREVIEWS) && (i.push(e.getWindowPreviews(n.width, n.height)), (t = t.filter((e) => e !== c.vA.WINDOW))),
 		0 !== t.length &&
 			i.push(
 				r.desktopCapture.getDesktopCaptureSources({

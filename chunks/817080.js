@@ -39,9 +39,7 @@ var t =
 					}
 				},
 				h = function (e) {
-					return /^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(e.type)
-						? new Blob(['ï\xBB\xBF', e], { type: e.type })
-						: e;
+					return /^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(e.type) ? new Blob(['ï\xBB\xBF', e], { type: e.type }) : e;
 				},
 				p = function (t, d, p) {
 					!p && (t = h(t));
@@ -64,11 +62,7 @@ var t =
 									(I.readyState = I.INIT);
 								return;
 							}
-							(M || !f) && (f = n().createObjectURL(t)),
-								R ? (R.location.href = f) : void 0 === e.open(f, '_blank') && a && (e.location.href = f),
-								(I.readyState = I.DONE),
-								A(),
-								u(f);
+							(M || !f) && (f = n().createObjectURL(t)), R ? (R.location.href = f) : void 0 === e.open(f, '_blank') && a && (e.location.href = f), (I.readyState = I.DONE), A(), u(f);
 						},
 						O = function (e) {
 							return function () {
@@ -86,12 +80,7 @@ var t =
 							});
 						return;
 					}
-					if (
-						(e.chrome && N && N !== c && ((t = (t.slice || t.webkitSlice).call(t, 0, t.size, c)), (M = !0)),
-						i && 'download' !== d && (d += '.download'),
-						(N === c || i) && (R = e),
-						!l)
-					) {
+					if ((e.chrome && N && N !== c && ((t = (t.slice || t.webkitSlice).call(t, 0, t.size, c)), (M = !0)), i && 'download' !== d && (d += '.download'), (N === c || i) && (R = e), !l)) {
 						S();
 						return;
 					}

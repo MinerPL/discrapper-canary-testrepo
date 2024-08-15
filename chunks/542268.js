@@ -56,23 +56,15 @@ n.r(
 		assetsSmallImageProfile: 'assetsSmallImageProfile_c1d9fd assetsSmallImage_c1d9fd',
 		assetsSmallImageProfileV2: 'assetsSmallImageProfileV2_c1d9fd assetsSmallImage_c1d9fd',
 		assetsSmallImageSimplifiedProfile: 'assetsSmallImageSimplifiedProfile_c1d9fd assetsSmallImage_c1d9fd',
-		assetsSmallImageUserPopoutWithoutLargeImage:
-			'assetsSmallImageUserPopoutWithoutLargeImage_c1d9fd assetsLargeImage_c1d9fd',
-		assetsSmallImageUserPopoutV2WithoutLargeImage:
-			'assetsSmallImageUserPopoutV2WithoutLargeImage_c1d9fd assetsLargeImage_c1d9fd',
-		assetsSmallImageBiteSizePopoutWithoutLargeImage:
-			'assetsSmallImageBiteSizePopoutWithoutLargeImage_c1d9fd assetsLargeImage_c1d9fd',
-		assetsSmallImageStreamPreviewWithoutLargeImage:
-			'assetsSmallImageStreamPreviewWithoutLargeImage_c1d9fd assetsLargeImage_c1d9fd',
-		assetsSmallImageVoiceChannelWithoutLargeImage:
-			'assetsSmallImageVoiceChannelWithoutLargeImage_c1d9fd assetsLargeImage_c1d9fd',
-		assetsSmallImageActivityFeedWithoutLargeImage:
-			'assetsSmallImageActivityFeedWithoutLargeImage_c1d9fd assetsLargeImage_c1d9fd',
+		assetsSmallImageUserPopoutWithoutLargeImage: 'assetsSmallImageUserPopoutWithoutLargeImage_c1d9fd assetsLargeImage_c1d9fd',
+		assetsSmallImageUserPopoutV2WithoutLargeImage: 'assetsSmallImageUserPopoutV2WithoutLargeImage_c1d9fd assetsLargeImage_c1d9fd',
+		assetsSmallImageBiteSizePopoutWithoutLargeImage: 'assetsSmallImageBiteSizePopoutWithoutLargeImage_c1d9fd assetsLargeImage_c1d9fd',
+		assetsSmallImageStreamPreviewWithoutLargeImage: 'assetsSmallImageStreamPreviewWithoutLargeImage_c1d9fd assetsLargeImage_c1d9fd',
+		assetsSmallImageVoiceChannelWithoutLargeImage: 'assetsSmallImageVoiceChannelWithoutLargeImage_c1d9fd assetsLargeImage_c1d9fd',
+		assetsSmallImageActivityFeedWithoutLargeImage: 'assetsSmallImageActivityFeedWithoutLargeImage_c1d9fd assetsLargeImage_c1d9fd',
 		assetsSmallImageProfileWithoutLargeImage: 'assetsSmallImageProfileWithoutLargeImage_c1d9fd assetsLargeImage_c1d9fd',
-		assetsSmallImageProfileV2WithoutLargeImage:
-			'assetsSmallImageProfileV2WithoutLargeImage_c1d9fd assetsLargeImage_c1d9fd',
-		assetsSmallImageSimplifiedProfileWithoutLargeImage:
-			'assetsSmallImageSimplifiedProfileWithoutLargeImage_c1d9fd assetsLargeImage_c1d9fd',
+		assetsSmallImageProfileV2WithoutLargeImage: 'assetsSmallImageProfileV2WithoutLargeImage_c1d9fd assetsLargeImage_c1d9fd',
+		assetsSmallImageSimplifiedProfileWithoutLargeImage: 'assetsSmallImageSimplifiedProfileWithoutLargeImage_c1d9fd assetsLargeImage_c1d9fd',
 		gameIcon: 'gameIcon_c1d9fd',
 		screenshareIcon: 'screenshareIcon_c1d9fd',
 		content: 'content_c1d9fd',

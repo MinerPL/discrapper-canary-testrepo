@@ -14,9 +14,7 @@ var n = o(t(405774)),
 		t,
 		a = c.default.get(e);
 	a &&
-		(0, u.default)(
-			(r = (0, l.default)((t = [])).call(t, (0, s.default)(a.baseConcepts), (0, s.default)(a.relatedConcepts)))
-		).call(r, function (r) {
+		(0, u.default)((r = (0, l.default)((t = [])).call(t, (0, s.default)(a.baseConcepts), (0, s.default)(a.relatedConcepts)))).call(r, function (r) {
 			if ('HTML' === r.module) {
 				var t = r.concept;
 				if (t) {

@@ -17,16 +17,12 @@ function u(e, t) {
 			l,
 			b = a.get(e);
 		if (null === b) throw Error('Unable to parse color from string: ' + e);
-		(this.model = b.model),
-			(l = n[this.model].channels),
-			(this.color = b.value.slice(0, l)),
-			(this.valpha = 'number' == typeof b.value[l] ? b.value[l] : 1);
+		(this.model = b.model), (l = n[this.model].channels), (this.color = b.value.slice(0, l)), (this.valpha = 'number' == typeof b.value[l] ? b.value[l] : 1);
 	} else if (e.length) {
 		(this.model = t || 'rgb'), (l = n[this.model].channels);
 		var d = s.call(e, 0, l);
 		(this.color = f(d, l)), (this.valpha = 'number' == typeof e[l] ? e[l] : 1);
-	} else if ('number' == typeof e)
-		(e &= 16777215), (this.model = 'rgb'), (this.color = [(e >> 16) & 255, (e >> 8) & 255, 255 & e]), (this.valpha = 1);
+	} else if ('number' == typeof e) (e &= 16777215), (this.model = 'rgb'), (this.color = [(e >> 16) & 255, (e >> 8) & 255, 255 & e]), (this.valpha = 1);
 	else {
 		this.valpha = 1;
 		var h = Object.keys(e);
@@ -209,12 +205,7 @@ function u(e, t) {
 			o = r.alpha() - a.alpha(),
 			i = ((s * o == -1 ? s : (s + o) / (1 + s * o)) + 1) / 2,
 			c = 1 - i;
-		return u.rgb(
-			i * r.red() + c * a.red(),
-			i * r.green() + c * a.green(),
-			i * r.blue() + c * a.blue(),
-			r.alpha() * n + a.alpha() * (1 - n)
-		);
+		return u.rgb(i * r.red() + c * a.red(), i * r.green() + c * a.green(), i * r.blue() + c * a.blue(), r.alpha() * n + a.alpha() * (1 - n));
 	}
 }),
 	Object.keys(n).forEach(function (e) {
@@ -244,9 +235,7 @@ function l(e, t, r) {
 		(e = e[0]),
 		function (a) {
 			var n;
-			return arguments.length
-				? (r && (a = r(a)), ((n = this[e]()).color[t] = a), n)
-				: ((n = this[e]().color[t]), r && (n = r(n)), n);
+			return arguments.length ? (r && (a = r(a)), ((n = this[e]()).color[t] = a), n) : ((n = this[e]().color[t]), r && (n = r(n)), n);
 		}
 	);
 }

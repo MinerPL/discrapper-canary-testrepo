@@ -21,11 +21,7 @@ function _(e) {
 		handleSubmit: (e) => o.Z.enableMFAStart(e),
 		onError: (e) => {
 			var n;
-			if (
-				('object' == typeof (n = e) && null != n && (0, i.nr)(n, 'code') && 'number' == typeof n.code ? n.code : 0) ===
-				c.evJ.MFA_INVALID_SECRET
-			)
-				t(_), l.onClose();
+			if (('object' == typeof (n = e) && null != n && (0, i.nr)(n, 'code') && 'number' == typeof n.code ? n.code : 0) === c.evJ.MFA_INVALID_SECRET) t(_), l.onClose();
 			else s(e);
 		},
 		onPasswordChange: E,

@@ -47,10 +47,7 @@ async function d(e, t) {
 	return new Promise((e, n) => {
 		t({ 'X-Discord-MFA-Authorization': s }, (t) => {
 			var s, l;
-			return (null === (s = t.body) || void 0 === s ? void 0 : s.code) === 60008 ||
-				(null === (l = t.body) || void 0 === l ? void 0 : l.code) === 60003
-				? (n(Error(t.body.message)), !0)
-				: (e(), !1);
+			return (null === (s = t.body) || void 0 === s ? void 0 : s.code) === 60008 || (null === (l = t.body) || void 0 === l ? void 0 : l.code) === 60003 ? (n(Error(t.body.message)), !0) : (e(), !1);
 		});
 	});
 }

@@ -24,12 +24,7 @@ async function C(e, t) {
 			let t = await (0, u.rO)(e, v),
 				a = null !== (g = e.name) && void 0 !== g ? g : (0, m.yl)(r.default.extractTimestamp(e.id)),
 				l = (0, d.Z)(a);
-			(0, c.d)(
-				[new File([t], ''.concat('' !== l ? l : 'clip', '.mp4'), { type: 'video/mp4' })],
-				x,
-				i.d.ChannelMessage,
-				{ filesMetadata: [{ clip: e }] }
-			),
+			(0, c.d)([new File([t], ''.concat('' !== l ? l : 'clip', '.mp4'), { type: 'video/mp4' })], x, i.d.ChannelMessage, { filesMetadata: [{ clip: e }] }),
 				o.default.track(p.rMx.CLIP_SHARED, {
 					location_stack: h,
 					guild_id: x.guild_id,

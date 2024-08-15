@@ -30,15 +30,7 @@ var t = i(481060),
 n.default = (0, o.Z)(
 	(0, a.Z)(
 		function (e) {
-			let {
-					user: n,
-					guildId: i,
-					showModalItems: a = !0,
-					showMediaItems: o = !1,
-					showChatItems: d = !0,
-					context: U,
-					onSelect: L
-				} = e,
+			let { user: n, guildId: i, showModalItems: a = !0, showMediaItems: o = !1, showChatItems: d = !0, context: U, onSelect: L } = e,
 				h = {
 					page: O.ZY5.GUILD_CHANNEL,
 					section: O.jXE.CHAT_USERNAME,

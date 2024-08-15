@@ -24,11 +24,7 @@ function l(e) {
 			groupListingId: null == u ? void 0 : u.primarySkuId,
 			guildId: l
 		}),
-		{
-			activeSubscriptionListing: d,
-			activeEntitlement: _,
-			subscriptionGroupListing: E
-		} = (0, i.F5)(null == u ? void 0 : u.id, l),
+		{ activeSubscriptionListing: d, activeEntitlement: _, subscriptionGroupListing: E } = (0, i.F5)(null == u ? void 0 : u.id, l),
 		f = null !== (t = null == E ? void 0 : E.sku_flags) && void 0 !== t ? t : 0,
 		h = (0, a.KW)(f) || (null != l && l !== o.ME && (0, a.KK)(f)),
 		p = null != _;

@@ -132,21 +132,7 @@ class G extends s.PureComponent {
 	}
 	render() {
 		let e;
-		let {
-				guildId: t,
-				activity: n,
-				showInviteEducation: s,
-				isFocused: o,
-				typingUsers: l,
-				className: c,
-				slowmodeCooldownGuess: h,
-				isBypassSlowmode: m,
-				channel: p,
-				isThreadCreation: f,
-				renderDots: T,
-				poggermodeEnabled: _,
-				isComboing: v
-			} = this.props,
+		let { guildId: t, activity: n, showInviteEducation: s, isFocused: o, typingUsers: l, className: c, slowmodeCooldownGuess: h, isBypassSlowmode: m, channel: p, isThreadCreation: f, renderDots: T, poggermodeEnabled: _, isComboing: v } = this.props,
 			{ rateLimitPerUser: b } = p,
 			I = j.default.getCurrentUser(),
 			x = C.Z.getGuild(t),
@@ -208,9 +194,7 @@ class G extends s.PureComponent {
 					let t = ''.concat(e.seconds()).padStart(2, '0');
 					O = ''.concat(e.minutes(), ':').concat(t);
 				}
-			} else
-				0 === N.length &&
-					(O = m ? k.Z.Messages.CHANNEL_SLOWMODE_DESC_IMMUNE : k.Z.Messages.CHANNEL_SLOWMODE_DESC_SHORT);
+			} else 0 === N.length && (O = m ? k.Z.Messages.CHANNEL_SLOWMODE_DESC_IMMUNE : k.Z.Messages.CHANNEL_SLOWMODE_DESC_SHORT);
 		}
 		let [A, y, U] = N;
 		return (
@@ -302,9 +286,7 @@ function W(e) {
 		a = (0, m.e7)([b.ZP, x.default], () => b.ZP.getUserCombo(x.default.getId(), t.id)),
 		l = (0, m.e7)([I.Z, _.Z], () => (0, T.Z)(t, o, I.Z, _.Z)),
 		r = (0, m.e7)([O.Z], () => O.Z.getSlowmodeCooldownGuess(t.id, n ? O.S.CreateThread : O.S.SendMessage)),
-		c = (0, m.e7)([S.Z], () =>
-			n ? S.Z.can(U.Plq.MANAGE_THREADS, t) : S.Z.can(U.Plq.MANAGE_CHANNELS, t) || S.Z.can(U.Plq.MANAGE_MESSAGES, t)
-		),
+		c = (0, m.e7)([S.Z], () => (n ? S.Z.can(U.Plq.MANAGE_THREADS, t) : S.Z.can(U.Plq.MANAGE_CHANNELS, t) || S.Z.can(U.Plq.MANAGE_MESSAGES, t))),
 		u = {
 			...s,
 			baseTextColor: (0, g.useToken)(p.Z.colors.INTERACTIVE_NORMAL).hex(),

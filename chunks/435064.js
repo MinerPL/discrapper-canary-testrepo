@@ -25,8 +25,8 @@ function h(e, t, n) {
 	);
 }
 let p = 'default',
-	I = [],
 	m = [],
+	I = [],
 	T = [],
 	g = 0,
 	S = null,
@@ -72,7 +72,7 @@ class L extends (r = i.ZP.DeviceSettingsStore) {
 		null != e && (y = e), D(), this.waitFor(o.ZP);
 	}
 	getClips() {
-		return m;
+		return I;
 	}
 	getPendingClips() {
 		return T;
@@ -94,7 +94,7 @@ class L extends (r = i.ZP.DeviceSettingsStore) {
 	}
 	getStreamClipAnimations(e) {
 		var t;
-		return null !== (t = R[e]) && void 0 !== t ? t : I;
+		return null !== (t = R[e]) && void 0 !== t ? t : m;
 	}
 	hasAnyClipAnimations() {
 		return Object.values(R).some((e) => e.length > 0);
@@ -186,8 +186,7 @@ h(L, 'displayName', 'ClipsStore'),
 			var t;
 			return {
 				...e,
-				hardwareClassificationForDecoupled:
-					null !== (t = e.hardwareClassificationForDecoupled) && void 0 !== t ? t : null
+				hardwareClassificationForDecoupled: null !== (t = e.hardwareClassificationForDecoupled) && void 0 !== t ? t : null
 			};
 		},
 		(e) => {
@@ -214,10 +213,7 @@ h(L, 'displayName', 'ClipsStore'),
 			...e,
 			clipsSettings: {
 				...e.clipsSettings,
-				clipsQuality:
-					'number' == typeof e.clipsSettings.clipsQuality || null == e.clipsSettings.clipsQuality
-						? C.clipsQuality
-						: e.clipsSettings.clipsQuality
+				clipsQuality: 'number' == typeof e.clipsSettings.clipsQuality || null == e.clipsSettings.clipsQuality ? C.clipsQuality : e.clipsSettings.clipsQuality
 			}
 		}),
 		(e) => {
@@ -269,7 +265,7 @@ let b = new L(a.Z, {
 				let { id: t } = e;
 				return t !== r.id;
 			})),
-			(m = [r, ...m]),
+			(I = [r, ...I]),
 			(y.hasClips = !0);
 	},
 	CLIPS_SAVE_CLIP_PLACEHOLDER: function (e) {
@@ -285,9 +281,7 @@ let b = new L(a.Z, {
 	},
 	CLIPS_SAVE_CLIP_START: function (e) {
 		let { clipType: t, streamKey: n, thumbnail: r } = e;
-		if (
-			((g += 1), (y.hasTakenDecoupledClip = y.hasTakenDecoupledClip || t === _.X9.DECOUPLED), null != n && null != r)
-		) {
+		if (((g += 1), (y.hasTakenDecoupledClip = y.hasTakenDecoupledClip || t === _.X9.DECOUPLED), null != n && null != r)) {
 			var i;
 			let e = Date.now();
 			(O = null != O ? O : e),
@@ -342,20 +336,20 @@ let b = new L(a.Z, {
 		y.newClipIds = [];
 	},
 	CLIPS_LOAD_DIRECTORY_SUCCESS: function (e) {
-		(y.hasClips = e.clips.length > 0), (m = e.clips);
+		(y.hasClips = e.clips.length > 0), (I = e.clips);
 	},
 	CLIPS_DELETE_CLIP: function (e) {
 		0 ===
-			(m = m.filter((t) => {
+			(I = I.filter((t) => {
 				let { filepath: n } = t;
 				return n !== e.filepath;
 			})).length && (y.hasClips = !1);
 	},
 	CLIPS_UPDATE_METADATA: function (e) {
 		let { clip: t } = e;
-		for (let [e, n] of m.entries())
+		for (let [e, n] of I.entries())
 			if (n.id === t.id) {
-				(m[e] = t), (m = [...m]);
+				(I[e] = t), (I = [...I]);
 				return;
 			}
 	},
@@ -377,17 +371,9 @@ let b = new L(a.Z, {
 	CLIPS_CLASSIFY_HARDWARE: function (e) {
 		let { classification: t } = e,
 			n = y.hardwareClassification;
-		(y.hardwareClassificationVersion = _.WM),
-			(y.hardwareClassification = t),
-			y.hardwareClassification === d.x.MEETS_AUTO_ENABLE &&
-				n !== d.x.MEETS_AUTO_ENABLE &&
-				(y.clipsSettings.clipsEnabled = !0);
+		(y.hardwareClassificationVersion = _.WM), (y.hardwareClassification = t), y.hardwareClassification === d.x.MEETS_AUTO_ENABLE && n !== d.x.MEETS_AUTO_ENABLE && (y.clipsSettings.clipsEnabled = !0);
 		let r = y.hardwareClassificationForDecoupled;
-		(y.hardwareClassificationForDecoupled = t),
-			y.hardwareClassificationForDecoupled === d.x.MEETS_AUTO_ENABLE &&
-				r !== d.x.MEETS_AUTO_ENABLE &&
-				y.clipsSettings.clipsEnabled &&
-				(y.clipsSettings.decoupledClipsEnabled = !0);
+		(y.hardwareClassificationForDecoupled = t), y.hardwareClassificationForDecoupled === d.x.MEETS_AUTO_ENABLE && r !== d.x.MEETS_AUTO_ENABLE && y.clipsSettings.clipsEnabled && (y.clipsSettings.decoupledClipsEnabled = !0);
 	},
 	CLIPS_INIT: function (e) {
 		let { applicationName: t } = e;
@@ -410,9 +396,7 @@ let b = new L(a.Z, {
 				break;
 			case _.D5.Disabled:
 			case _.D5.Enabled:
-				(y.clipsEducationState.dismissedAt = Date.now()),
-					(y.clipsEducationState.numberOfGamesLaunchedSinceDismissal = 0),
-					(y.clipsEducationState.numberOfTimesDismissed += 1);
+				(y.clipsEducationState.dismissedAt = Date.now()), (y.clipsEducationState.numberOfGamesLaunchedSinceDismissal = 0), (y.clipsEducationState.numberOfTimesDismissed += 1);
 		}
 	},
 	RUNNING_GAMES_CHANGE: function (e) {

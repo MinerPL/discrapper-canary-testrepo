@@ -71,10 +71,7 @@ function R(e) {
 		),
 		P = a.useMemo(() => {
 			var e, t;
-			return G(
-				null !== (e = null == L ? void 0 : L.id) && void 0 !== e ? e : null,
-				null !== (t = null == L ? void 0 : L.triggerType) && void 0 !== t ? t : null
-			);
+			return G(null !== (e = null == L ? void 0 : L.id) && void 0 !== e ? e : null, null !== (t = null == L ? void 0 : L.triggerType) && void 0 !== t ? t : null);
 		}, [G, L]);
 	a.useEffect(() => {
 		f(v, (0, h.af)(P));
@@ -116,9 +113,7 @@ function R(e) {
 							(0, s.jsx)(l.Text, {
 								variant: 'text-sm/medium',
 								className: p.helpUrl,
-								children: x.Z.Messages.GUILD_AUTOMOD_LEARN_MORE_LINK.format({
-									helpUrl: u.Z.getArticleURL(C.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE)
-								})
+								children: x.Z.Messages.GUILD_AUTOMOD_LEARN_MORE_LINK.format({ helpUrl: u.Z.getArticleURL(C.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
 							})
 						]
 					}),

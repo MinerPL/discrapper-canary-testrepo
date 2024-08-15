@@ -72,8 +72,7 @@ function v(e, t) {
 				} = e;
 				if (null == g.default.getCurrentUser()) return;
 				let { guildTemplate: i } = await h.Z.resolveGuildTemplate(t);
-				if (null == i)
-					throw new C.Z({ errorCode: A.lTL.INVALID_GUILD_TEMPLATE }, 'Invalid guild template id: '.concat(t));
+				if (null == i) throw new C.Z({ errorCode: A.lTL.INVALID_GUILD_TEMPLATE }, 'Invalid guild template id: '.concat(t));
 				return (
 					f.ZP.focus(),
 					(0, l.openModalLazy)(async () => {
@@ -133,8 +132,7 @@ function v(e, t) {
 						null != n && ((0, m.dL)(A.Z5c.SETTINGS(n.section, n.subsection)), v(n.fingerprint, 'settings'));
 						break;
 					case N.jE.CHANGELOG:
-						null != n &&
-							((0, m.dL)(S.Z.formatPathWithQuery(A.Z5c.CHANGELOGS(n.date), n.query)), v(n.fingerprint, 'changelog'));
+						null != n && ((0, m.dL)(S.Z.formatPathWithQuery(A.Z5c.CHANGELOGS(n.date), n.query)), v(n.fingerprint, 'changelog'));
 						break;
 					case N.jE.LIBRARY:
 						(0, m.dL)(A.Z5c.APPLICATION_LIBRARY), null != n && v(n.fingerprint, 'library');

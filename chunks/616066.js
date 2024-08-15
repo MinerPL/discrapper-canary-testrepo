@@ -17,14 +17,7 @@ var r = n(120356),
 	g = n(777381);
 let p = d.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar,
 	C = (e) => {
-		let {
-				item: t,
-				user: n,
-				isHighlighted: r = !1,
-				isPurchased: d = !1,
-				avatarSize: C = l.AvatarSizes.SIZE_152,
-				avatarPlaceholderSrc: v
-			} = e,
+		let { item: t, user: n, isHighlighted: r = !1, isPurchased: d = !1, avatarSize: C = l.AvatarSizes.SIZE_152, avatarPlaceholderSrc: v } = e,
 			m = (0, i.y9)(C),
 			E = (0, u.c)('AvatarDecorationPreview'),
 			{

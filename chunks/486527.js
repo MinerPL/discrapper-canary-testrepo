@@ -30,26 +30,7 @@ var T,
 	n = e(700785),
 	G = e(981631),
 	O = e(689938);
-((T = a || (a = {}))[(T.GUILD = 0)] = 'GUILD'),
-	(T[(T.GUILD_SCHEDULED_EVENT = 1)] = 'GUILD_SCHEDULED_EVENT'),
-	((s = A || (A = {})).GUILD_TEMPLATES = 'guild-templates'),
-	(s.CUSTOMIZE_NEW_GUILD = 'customize-new-guild'),
-	(s.CHOOSE_GUILD = 'choose-guild'),
-	(s.CUSTOMIZE_EXISTING_GUILD = 'customize-existing-guild'),
-	(s.CONFIRMATION = 'confirmation'),
-	((L = I || (I = {})).CREATE = 'CREATE'),
-	(L.HUB_SCHOOL_CLUB = 'HUB_SCHOOL_CLUB'),
-	(L.HUB_STUDY = 'HUB_STUDY'),
-	(L.HUB_CLASS = 'HUB_CLASS'),
-	(L.HUB_SOCIAL = 'HUB_SOCIAL'),
-	(L.HUB_MAJOR = 'HUB_MAJOR'),
-	(L.HUB_DORM = 'HUB_DORM'),
-	((M = d || (d = {}))[(M.ALL = -1)] = 'ALL'),
-	(M[(M.UNCATEGORIZED = 0)] = 'UNCATEGORIZED'),
-	(M[(M.SCHOOL_CLUB = 1)] = 'SCHOOL_CLUB'),
-	(M[(M.CLASS = 2)] = 'CLASS'),
-	(M[(M.STUDY_SOCIAL = 3)] = 'STUDY_SOCIAL'),
-	(M[(M.MISC = 5)] = 'MISC');
+((T = a || (a = {}))[(T.GUILD = 0)] = 'GUILD'), (T[(T.GUILD_SCHEDULED_EVENT = 1)] = 'GUILD_SCHEDULED_EVENT'), ((s = A || (A = {})).GUILD_TEMPLATES = 'guild-templates'), (s.CUSTOMIZE_NEW_GUILD = 'customize-new-guild'), (s.CHOOSE_GUILD = 'choose-guild'), (s.CUSTOMIZE_EXISTING_GUILD = 'customize-existing-guild'), (s.CONFIRMATION = 'confirmation'), ((L = I || (I = {})).CREATE = 'CREATE'), (L.HUB_SCHOOL_CLUB = 'HUB_SCHOOL_CLUB'), (L.HUB_STUDY = 'HUB_STUDY'), (L.HUB_CLASS = 'HUB_CLASS'), (L.HUB_SOCIAL = 'HUB_SOCIAL'), (L.HUB_MAJOR = 'HUB_MAJOR'), (L.HUB_DORM = 'HUB_DORM'), ((M = d || (d = {}))[(M.ALL = -1)] = 'ALL'), (M[(M.UNCATEGORIZED = 0)] = 'UNCATEGORIZED'), (M[(M.SCHOOL_CLUB = 1)] = 'SCHOOL_CLUB'), (M[(M.CLASS = 2)] = 'CLASS'), (M[(M.STUDY_SOCIAL = 3)] = 'STUDY_SOCIAL'), (M[(M.MISC = 5)] = 'MISC');
 function D(_) {
 	return '883060064561299456' === _
 		? [
@@ -189,17 +170,7 @@ function i() {
 					name: 'officers (example)',
 					mentionable: !0,
 					hoist: !0,
-					permissions: U.$e(
-						n.TP,
-						G.Plq.MANAGE_ROLES,
-						G.Plq.MANAGE_CHANNELS,
-						G.Plq.KICK_MEMBERS,
-						G.Plq.BAN_MEMBERS,
-						G.Plq.MANAGE_NICKNAMES,
-						G.Plq.MANAGE_GUILD_EXPRESSIONS,
-						G.Plq.MANAGE_MESSAGES,
-						G.Plq.SEND_TTS_MESSAGES
-					),
+					permissions: U.$e(n.TP, G.Plq.MANAGE_ROLES, G.Plq.MANAGE_CHANNELS, G.Plq.KICK_MEMBERS, G.Plq.BAN_MEMBERS, G.Plq.MANAGE_NICKNAMES, G.Plq.MANAGE_GUILD_EXPRESSIONS, G.Plq.MANAGE_MESSAGES, G.Plq.SEND_TTS_MESSAGES),
 					color: 3066993
 				}
 			],

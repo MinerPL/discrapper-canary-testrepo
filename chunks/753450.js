@@ -179,8 +179,7 @@ function eP(e) {
 	}, [E, ew, ek, eM]);
 	let eG = a.useCallback(() => {
 			var e;
-			null != (null == eM ? void 0 : null === (e = eM.guild) || void 0 === e ? void 0 : e.id) &&
-				(E ? ew() : (0, Q.rf)({ [eE]: 'true' }));
+			null != (null == eM ? void 0 : null === (e = eM.guild) || void 0 === e ? void 0 : e.id) && (E ? ew() : (0, Q.rf)({ [eE]: 'true' }));
 		}, [eM, E, ew]),
 		eH = a.useCallback(() => {
 			(0, et.replaceAppDirectoryURLWith)(''.concat(ep.Z5c.APPLICATION_DIRECTORY_PROFILE(p)).concat(location.search));
@@ -250,18 +249,7 @@ function eP(e) {
 		),
 		eq = a.useMemo(() => {
 			var e, n, i;
-			return null !==
-				(i = (
-					null !==
-						(n = null == eM ? void 0 : null === (e = eM.directory_entry) || void 0 === e ? void 0 : e.carousel_items) &&
-					void 0 !== n
-						? n
-						: []
-				)
-					.map(eT)
-					.filter(U.lm)) && void 0 !== i
-				? i
-				: [];
+			return null !== (i = (null !== (n = null == eM ? void 0 : null === (e = eM.directory_entry) || void 0 === e ? void 0 : e.carousel_items) && void 0 !== n ? n : []).map(eT).filter(U.lm)) && void 0 !== i ? i : [];
 		}, [eM]),
 		eJ = a.useCallback(
 			(e, n) => {
@@ -414,8 +402,7 @@ function eP(e) {
 			switch (I) {
 				case e_.ApplicationDirectoryProfileSections.GENERAL: {
 					var i, a;
-					let r =
-						null == eM ? void 0 : null === (i = eM.directory_entry) || void 0 === i ? void 0 : i.detailed_description;
+					let r = null == eM ? void 0 : null === (i = eM.directory_entry) || void 0 === i ? void 0 : i.detailed_description;
 					null != r && r.length > 0
 						? (e.push(
 								(0, t.jsxs)(t.Fragment, {
@@ -450,11 +437,7 @@ function eP(e) {
 								})
 							),
 							(n = !1))
-						: (null == eM
-									? void 0
-									: null === (a = eM.directory_entry) || void 0 === a
-										? void 0
-										: a.short_description) !== void 0
+						: (null == eM ? void 0 : null === (a = eM.directory_entry) || void 0 === a ? void 0 : a.short_description) !== void 0
 							? e.push(
 									(0, t.jsxs)(t.Fragment, {
 										children: [
@@ -738,9 +721,7 @@ function eP(e) {
 																	(0, t.jsx)(g.Button, {
 																		onClick: e8,
 																		color: g.Button.Colors.PRIMARY,
-																		children: e1
-																			? eI.Z.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL
-																			: eI.Z.Messages.APP_DIRECTORY_PROFILE_SHARE_BUTTON
+																		children: e1 ? eI.Z.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL : eI.Z.Messages.APP_DIRECTORY_PROFILE_SHARE_BUTTON
 																	}),
 																	(0, t.jsx)(g.Button, {
 																		color: g.Button.Colors.BRAND,

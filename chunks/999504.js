@@ -20,27 +20,24 @@ var n = Symbol.for('react.element'),
 	},
 	h = Object.assign,
 	p = {};
-function I(e, t, n) {
+function m(e, t, n) {
 	(this.props = e), (this.context = t), (this.refs = p), (this.updater = n || f);
 }
-function m() {}
+function I() {}
 function T(e, t, n) {
 	(this.props = e), (this.context = t), (this.refs = p), (this.updater = n || f);
 }
-(I.prototype.isReactComponent = {}),
-	(I.prototype.setState = function (e, t) {
-		if ('object' != typeof e && 'function' != typeof e && null != e)
-			throw Error(
-				'setState(...): takes an object of state variables to update or a function which returns an object of state variables.'
-			);
+(m.prototype.isReactComponent = {}),
+	(m.prototype.setState = function (e, t) {
+		if ('object' != typeof e && 'function' != typeof e && null != e) throw Error('setState(...): takes an object of state variables to update or a function which returns an object of state variables.');
 		this.updater.enqueueSetState(this, e, t, 'setState');
 	}),
-	(I.prototype.forceUpdate = function (e) {
+	(m.prototype.forceUpdate = function (e) {
 		this.updater.enqueueForceUpdate(this, e, 'forceUpdate');
 	}),
-	(m.prototype = I.prototype);
-var g = (T.prototype = new m());
-(g.constructor = T), h(g, I.prototype), (g.isPureReactComponent = !0);
+	(I.prototype = m.prototype);
+var g = (T.prototype = new I());
+(g.constructor = T), h(g, m.prototype), (g.isPureReactComponent = !0);
 var S = Array.isArray,
 	A = Object.prototype.hasOwnProperty,
 	N = { current: null },
@@ -55,9 +52,7 @@ function O(e, t, r) {
 		a = {},
 		s = null,
 		o = null;
-	if (null != t)
-		for (i in (void 0 !== t.ref && (o = t.ref), void 0 !== t.key && (s = '' + t.key), t))
-			A.call(t, i) && !v.hasOwnProperty(i) && (a[i] = t[i]);
+	if (null != t) for (i in (void 0 !== t.ref && (o = t.ref), void 0 !== t.key && (s = '' + t.key), t)) A.call(t, i) && !v.hasOwnProperty(i) && (a[i] = t[i]);
 	var l = arguments.length - 2;
 	if (1 === l) a.children = r;
 	else if (1 < l) {
@@ -150,22 +145,8 @@ function D(e, t, i) {
 					_ += e(d, i, a, h, o);
 				}
 			else {
-				if (
-					'function' ==
-					typeof (h =
-						null === (c = t) || 'object' != typeof c
-							? null
-							: 'function' == typeof (c = (E && c[E]) || c['@@iterator'])
-								? c
-								: null)
-				)
-					for (t = h.call(t), f = 0; !(d = t.next()).done; ) (h = s + y((d = d.value), f++)), (_ += e(d, i, a, h, o));
-				else if ('object' === d)
-					throw Error(
-						'Objects are not valid as a React child (found: ' +
-							('[object Object]' === (i = String(t)) ? 'object with keys {' + Object.keys(t).join(', ') + '}' : i) +
-							'). If you meant to render a collection of children, use an array instead.'
-					);
+				if ('function' == typeof (h = null === (c = t) || 'object' != typeof c ? null : 'function' == typeof (c = (E && c[E]) || c['@@iterator']) ? c : null)) for (t = h.call(t), f = 0; !(d = t.next()).done; ) (h = s + y((d = d.value), f++)), (_ += e(d, i, a, h, o));
+				else if ('object' === d) throw Error('Objects are not valid as a React child (found: ' + ('[object Object]' === (i = String(t)) ? 'object with keys {' + Object.keys(t).join(', ') + '}' : i) + '). If you meant to render a collection of children, use an array instead.');
 			}
 			return _;
 		})(e, a, '', '', function (e) {
@@ -224,7 +205,7 @@ var b = { current: null },
 		return e;
 	}
 }),
-	(t.Component = I),
+	(t.Component = m),
 	(t.Fragment = i),
 	(t.Profiler = s),
 	(t.PureComponent = T),
@@ -236,19 +217,13 @@ var b = { current: null },
 		ReactCurrentOwner: N
 	}),
 	(t.cloneElement = function (e, t, r) {
-		if (null == e)
-			throw Error('React.cloneElement(...): The argument must be a React element, but you passed ' + e + '.');
+		if (null == e) throw Error('React.cloneElement(...): The argument must be a React element, but you passed ' + e + '.');
 		var i = h({}, e.props),
 			a = e.key,
 			s = e.ref,
 			o = e._owner;
 		if (null != t) {
-			if (
-				(void 0 !== t.ref && ((s = t.ref), (o = N.current)),
-				void 0 !== t.key && (a = '' + t.key),
-				e.type && e.type.defaultProps)
-			)
-				var l = e.type.defaultProps;
+			if ((void 0 !== t.ref && ((s = t.ref), (o = N.current)), void 0 !== t.key && (a = '' + t.key), e.type && e.type.defaultProps)) var l = e.type.defaultProps;
 			for (u in t) A.call(t, u) && !v.hasOwnProperty(u) && (i[u] = void 0 === t[u] && void 0 !== l ? l[u] : t[u]);
 		}
 		var u = arguments.length - 2;

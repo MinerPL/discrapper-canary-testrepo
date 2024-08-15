@@ -31,8 +31,7 @@ t.Z = {
 				h = null == _ ? void 0 : _.getGuildId();
 			if (null == _) throw new d.Z({ errorCode: m.lTL.INVALID_COMMAND }, 'Invalid channel');
 			let I = r.Z.getApplication(l);
-			if (!(0, c.yE)(null !== (t = null == I ? void 0 : I.flags) && void 0 !== t ? t : 0, m.udG.EMBEDDED_FIRST_PARTY))
-				throw new d.Z({ errorCode: m.lTL.INVALID_COMMAND }, 'This application cannot access this API');
+			if (!(0, c.yE)(null !== (t = null == I ? void 0 : I.flags) && void 0 !== t ? t : 0, m.udG.EMBEDDED_FIRST_PARTY)) throw new d.Z({ errorCode: m.lTL.INVALID_COMMAND }, 'This application cannot access this API');
 			let g = (0, s.U)(l),
 				p = {
 					activity_application_id: l,

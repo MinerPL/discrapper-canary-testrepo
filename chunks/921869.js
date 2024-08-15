@@ -12,17 +12,7 @@ var r = t(442837),
 	c = t(689938),
 	i = t(564510);
 function d(e) {
-	let {
-			platformType: a,
-			onContinue: t,
-			onClose: d,
-			img: u,
-			headerConnect: x,
-			headerReconnect: N,
-			body: h,
-			learnMoreLink: m,
-			valueProps: C
-		} = e,
+	let { platformType: a, onContinue: t, onClose: d, img: u, headerConnect: x, headerReconnect: N, body: h, learnMoreLink: m, valueProps: C } = e,
 		j = (0, r.e7)([l.Z], () => {
 			let e = l.Z.getAccount(null, a);
 			return (null == e ? void 0 : e.twoWayLink) === !1;

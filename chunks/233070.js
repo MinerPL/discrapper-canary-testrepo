@@ -10,15 +10,7 @@ var o = n(735250),
 	c = n(689938),
 	M = n(476399);
 t.default = function (e) {
-	let {
-			transitionState: t,
-			closeParentModal: n,
-			onClose: C,
-			dropsQuestId: h,
-			platform: x,
-			code: j,
-			singlePlatformClaim: m
-		} = e,
+	let { transitionState: t, closeParentModal: n, onClose: C, dropsQuestId: h, platform: x, code: j, singlePlatformClaim: m } = e,
 		[N, f] = s.useState(null),
 		[p, E] = s.useState(null != j ? j : null),
 		I = (0, r.EW)(h);

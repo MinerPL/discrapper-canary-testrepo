@@ -13,8 +13,7 @@ let o = 0,
 	_ = 0,
 	E = (e) => {
 		e.forEach((e) => {
-			e.interactionId &&
-				((i = Math.min(i, e.interactionId)), (o = (_ = Math.max(_, e.interactionId)) ? (_ - i) / 7 + 1 : 0));
+			e.interactionId && ((i = Math.min(i, e.interactionId)), (o = (_ = Math.max(_, e.interactionId)) ? (_ - i) / 7 + 1 : 0));
 		});
 	},
 	s = () => (n ? o : performance.interactionCount || 0),

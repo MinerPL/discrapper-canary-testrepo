@@ -46,9 +46,7 @@ let c = (e) => {
 							keywordCount: t.triggerMetadata.keywordFilter.length,
 							regexPatternCount: t.triggerMetadata.regexPatterns.length
 						})
-					: o.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_HEADER_WORD_COUNT.format({
-							keywordCount: t.triggerMetadata.keywordFilter.length
-						});
+					: o.Z.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_HEADER_WORD_COUNT.format({ keywordCount: t.triggerMetadata.keywordFilter.length });
 		}
 	},
 	I = (e) => {

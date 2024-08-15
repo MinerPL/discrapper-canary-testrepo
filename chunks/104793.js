@@ -1,6 +1,6 @@
 n.d(t, {
 	Ft: function () {
-		return m;
+		return I;
 	},
 	ML: function () {
 		return A;
@@ -27,33 +27,17 @@ var r,
 	f = n(581364),
 	h = n(807169),
 	p = n(689079),
-	I = n(981631);
-function m(e, t, n) {
+	m = n(981631);
+function I(e, t, n) {
 	var r;
-	let {
-			context: i,
-			commandTypes: a,
-			allowNsfw: c,
-			computedPermissions: m,
-			userId: T,
-			roleIds: g,
-			isImpersonating: N,
-			hasBaseAccessPermissions: v
-		} = t,
-		{
-			applicationAllowedForUser: O,
-			applicationAllowedForChannel: R,
-			isGuildInstalled: C,
-			isUserInstalled: y,
-			commandBotId: D
-		} = n;
+	let { context: i, commandTypes: a, allowNsfw: c, computedPermissions: I, userId: T, roleIds: g, isImpersonating: N, hasBaseAccessPermissions: v } = t,
+		{ applicationAllowedForUser: O, applicationAllowedForChannel: R, isGuildInstalled: C, isUserInstalled: y, commandBotId: D } = n;
 	if (!a.includes(e.type)) return 2;
 	if (e.nsfw && !c) return 1;
 	let L = (0, h.Vh)(i, D);
 	if (null != e.contexts) {
 		if (!e.contexts.includes(L)) return 4;
-	} else if (e.inputType === E.iw.BOT && ((!1 === e.dmPermission && L === u.D.BOT_DM) || L === u.D.PRIVATE_CHANNEL))
-		return 4;
+	} else if (e.inputType === E.iw.BOT && ((!1 === e.dmPermission && L === u.D.BOT_DM) || L === u.D.PRIVATE_CHANNEL)) return 4;
 	if (null != e.predicate && i instanceof d.Sf) {
 		let t = _.Z.getGuild(i.guild_id);
 		if (
@@ -66,12 +50,7 @@ function m(e, t, n) {
 	}
 	if (e.applicationId === p.bi.BUILT_IN) return 0;
 	let b = (0, h.ny)(i);
-	if (
-		null == b ||
-		l.e$(m, I.Plq.ADMINISTRATOR) ||
-		(y && (null === (r = e.integration_types) || void 0 === r ? void 0 : r.includes(o.Y.USER_INSTALL)))
-	)
-		return 0;
+	if (null == b || l.e$(I, m.Plq.ADMINISTRATOR) || (y && (null === (r = e.integration_types) || void 0 === r ? void 0 : r.includes(o.Y.USER_INSTALL)))) return 0;
 	if (!v && C && (null == e.integration_types || e.integration_types.includes(o.Y.GUILD_INSTALL))) return 5;
 	if (i instanceof d.Sf) {
 		s()(void 0 !== R, 'missing applicationAllowedForChannel');
@@ -101,8 +80,7 @@ function m(e, t, n) {
 			: (function (e) {
 						return !1 === e;
 				  })(O) ||
-				  (null != e.defaultMemberPermissions &&
-						!(!l.fS(e.defaultMemberPermissions, f.BO) && l.e$(m, e.defaultMemberPermissions)))
+				  (null != e.defaultMemberPermissions && !(!l.fS(e.defaultMemberPermissions, f.BO) && l.e$(I, e.defaultMemberPermissions)))
 				? 7
 				: 0;
 }
@@ -142,11 +120,4 @@ function A(e, t, n, r, i) {
 	let s = e[(0, c.rE)(t, E.Kw.ROLE)];
 	return null != s ? s.permission : null;
 }
-((i = r || (r = {}))[(i.ALLOWED = 0)] = 'ALLOWED'),
-	(i[(i.NSFW_NOT_ALLOWED = 1)] = 'NSFW_NOT_ALLOWED'),
-	(i[(i.WRONG_COMMAND_TYPE = 2)] = 'WRONG_COMMAND_TYPE'),
-	(i[(i.PREDICATE_FAILED = 3)] = 'PREDICATE_FAILED'),
-	(i[(i.CONTEXT_NOT_ALLOWED = 4)] = 'CONTEXT_NOT_ALLOWED'),
-	(i[(i.MISSING_BASE_PERMISSIONS = 5)] = 'MISSING_BASE_PERMISSIONS'),
-	(i[(i.CHANNEL_DENIED = 6)] = 'CHANNEL_DENIED'),
-	(i[(i.USER_DENIED = 7)] = 'USER_DENIED');
+((i = r || (r = {}))[(i.ALLOWED = 0)] = 'ALLOWED'), (i[(i.NSFW_NOT_ALLOWED = 1)] = 'NSFW_NOT_ALLOWED'), (i[(i.WRONG_COMMAND_TYPE = 2)] = 'WRONG_COMMAND_TYPE'), (i[(i.PREDICATE_FAILED = 3)] = 'PREDICATE_FAILED'), (i[(i.CONTEXT_NOT_ALLOWED = 4)] = 'CONTEXT_NOT_ALLOWED'), (i[(i.MISSING_BASE_PERMISSIONS = 5)] = 'MISSING_BASE_PERMISSIONS'), (i[(i.CHANNEL_DENIED = 6)] = 'CHANNEL_DENIED'), (i[(i.USER_DENIED = 7)] = 'USER_DENIED');

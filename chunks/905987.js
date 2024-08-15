@@ -267,17 +267,11 @@ function u(e) {
 										children: [
 											(0, t.jsxs)('div', {
 												className: T.control,
-												children: [
-													(0, t.jsx)('div', { className: T.controlPlaceholder }),
-													(0, t.jsx)('div', { className: T.switchOn })
-												]
+												children: [(0, t.jsx)('div', { className: T.controlPlaceholder }), (0, t.jsx)('div', { className: T.switchOn })]
 											}),
 											(0, t.jsxs)('div', {
 												className: T.control,
-												children: [
-													(0, t.jsx)('div', { className: T.controlPlaceholder }),
-													(0, t.jsx)('div', { className: T.switchOff })
-												]
+												children: [(0, t.jsx)('div', { className: T.controlPlaceholder }), (0, t.jsx)('div', { className: T.switchOff })]
 											})
 										]
 									})

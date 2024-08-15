@@ -84,9 +84,7 @@ function v(e, n) {
 		(0, M.JG)((0, m.wR)(e.guild_id, e.id, n.id));
 }
 function T(e, n, t) {
-	n.state === A.yb.SEND_FAILED || t.shiftKey
-		? s.Z.deleteMessage(e.id, n.id, n.state === A.yb.SEND_FAILED)
-		: l.Z.confirmDelete(e, n);
+	n.state === A.yb.SEND_FAILED || t.shiftKey ? s.Z.deleteMessage(e.id, n.id, n.state === A.yb.SEND_FAILED) : l.Z.confirmDelete(e, n);
 }
 function C(e, n) {
 	s.Z.startEditMessage(e.id, n.id, n.content);

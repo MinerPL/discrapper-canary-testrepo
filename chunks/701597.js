@@ -36,46 +36,20 @@ let s = Object.freeze({
 });
 class o {
 	constructor(e) {
-		if (
-			(a(this, 'capture', void 0),
-			a(this, 'encode', void 0),
-			a(this, 'bitrateMin', void 0),
-			a(this, 'bitrateMax', void 0),
-			a(this, 'bitrateTarget', void 0),
-			a(this, 'localWant', void 0),
-			null == e.capture && null == e.encode)
-		)
-			throw Error('Invalid arguments.');
-		(this.capture = null == e.capture ? void 0 : new l(e.capture)),
-			(this.encode = null == e.encode ? void 0 : new l(e.encode)),
-			(this.bitrateMin = e.bitrateMin),
-			(this.bitrateMax = e.bitrateMax),
-			(this.bitrateTarget = e.bitrateTarget),
-			(this.localWant = e.localWant);
+		if ((a(this, 'capture', void 0), a(this, 'encode', void 0), a(this, 'bitrateMin', void 0), a(this, 'bitrateMax', void 0), a(this, 'bitrateTarget', void 0), a(this, 'localWant', void 0), null == e.capture && null == e.encode)) throw Error('Invalid arguments.');
+		(this.capture = null == e.capture ? void 0 : new l(e.capture)), (this.encode = null == e.encode ? void 0 : new l(e.encode)), (this.bitrateMin = e.bitrateMin), (this.bitrateMax = e.bitrateMax), (this.bitrateTarget = e.bitrateTarget), (this.localWant = e.localWant);
 	}
 }
 class l {
 	static equals(e, t) {
-		return (
-			(null == e && null == t) ||
-			(null != e && null != t && e.width === t.width && e.height === t.height && e.framerate === t.framerate)
-		);
+		return (null == e && null == t) || (null != e && null != t && e.width === t.width && e.height === t.height && e.framerate === t.framerate);
 	}
 	static extend(e, t) {
 		var n, r, i, a, s;
 		if (null == e) return t;
 		if (null == t) return e;
-		let o =
-				null !== (r = null !== (n = null == t ? void 0 : t.width) && void 0 !== n ? n : null == e ? void 0 : e.width) &&
-				void 0 !== r
-					? r
-					: 0,
-			l =
-				null !==
-					(a = null !== (i = null == t ? void 0 : t.height) && void 0 !== i ? i : null == e ? void 0 : e.height) &&
-				void 0 !== a
-					? a
-					: 0;
+		let o = null !== (r = null !== (n = null == t ? void 0 : t.width) && void 0 !== n ? n : null == e ? void 0 : e.width) && void 0 !== r ? r : 0,
+			l = null !== (a = null !== (i = null == t ? void 0 : t.height) && void 0 !== i ? i : null == e ? void 0 : e.height) && void 0 !== a ? a : 0;
 		return {
 			width: o,
 			height: l,
@@ -84,14 +58,7 @@ class l {
 		};
 	}
 	constructor(e) {
-		a(this, 'width', void 0),
-			a(this, 'height', void 0),
-			a(this, 'framerate', void 0),
-			a(this, 'pixelCount', void 0),
-			(this.width = e.width),
-			(this.height = e.height),
-			(this.framerate = e.framerate),
-			(this.pixelCount = e.width * e.height);
+		a(this, 'width', void 0), a(this, 'height', void 0), a(this, 'framerate', void 0), a(this, 'pixelCount', void 0), (this.width = e.width), (this.height = e.height), (this.framerate = e.framerate), (this.pixelCount = e.width * e.height);
 	}
 }
 class u {
@@ -114,19 +81,12 @@ class u {
 	applyQualityConstraints(e, t) {
 		let n = this.getQuality(t);
 		return (
-			null != n.capture &&
-				((e.encodingVideoWidth = n.capture.width),
-				(e.encodingVideoHeight = n.capture.height),
-				(e.encodingVideoFrameRate = n.capture.framerate),
-				(e.captureVideoFrameRate = n.capture.framerate)),
-			null != n.encode &&
-				((e.remoteSinkWantsMaxFramerate = n.encode.framerate), (e.remoteSinkWantsPixelCount = n.encode.pixelCount)),
+			null != n.capture && ((e.encodingVideoWidth = n.capture.width), (e.encodingVideoHeight = n.capture.height), (e.encodingVideoFrameRate = n.capture.framerate), (e.captureVideoFrameRate = n.capture.framerate)),
+			null != n.encode && ((e.remoteSinkWantsMaxFramerate = n.encode.framerate), (e.remoteSinkWantsPixelCount = n.encode.pixelCount)),
 			null != n.bitrateTarget ? (e.encodingVideoBitRate = n.bitrateTarget) : (e.encodingVideoBitRate = n.bitrateMax),
 			(e.encodingVideoMinBitRate = n.bitrateMin),
 			(e.encodingVideoMaxBitRate = n.bitrateMax),
-			null != e.encodingVideoBitRate &&
-				null != e.encodingVideoMaxBitRate &&
-				(e.encodingVideoBitRate = Math.min(e.encodingVideoBitRate, e.encodingVideoMaxBitRate)),
+			null != e.encodingVideoBitRate && null != e.encodingVideoMaxBitRate && (e.encodingVideoBitRate = Math.min(e.encodingVideoBitRate, e.encodingVideoMaxBitRate)),
 			{
 				quality: n,
 				constraints: e
@@ -215,24 +175,12 @@ class u {
 		var e, t, n, r;
 		let a = this.goliveSimulcastLQRes.width,
 			s = this.goliveSimulcastLQRes.height,
-			l = Math.min(
-				i.Gs,
-				null !== (n = null === (e = this.goliveMaxQuality.encode) || void 0 === e ? void 0 : e.framerate) &&
-					void 0 !== n
-					? n
-					: i.Gs
-			);
+			l = Math.min(i.Gs, null !== (n = null === (e = this.goliveMaxQuality.encode) || void 0 === e ? void 0 : e.framerate) && void 0 !== n ? n : i.Gs);
 		return new o({
 			capture: {
 				width: a,
 				height: s,
-				framerate: Math.min(
-					i.Gs,
-					null !== (r = null === (t = this.goliveMaxQuality.capture) || void 0 === t ? void 0 : t.framerate) &&
-						void 0 !== r
-						? r
-						: i.Gs
-				)
+				framerate: Math.min(i.Gs, null !== (r = null === (t = this.goliveMaxQuality.capture) || void 0 === t ? void 0 : t.framerate) && void 0 !== r ? r : i.Gs)
 			},
 			encode: {
 				width: a,

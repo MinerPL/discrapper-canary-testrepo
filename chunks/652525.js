@@ -67,25 +67,7 @@ function l(e, r) {
 	return (
 		(t = e),
 		(a = r),
-		[
-			'aria-atomic',
-			'aria-busy',
-			'aria-controls',
-			'aria-current',
-			'aria-describedby',
-			'aria-details',
-			'aria-dropeffect',
-			'aria-flowto',
-			'aria-grabbed',
-			'aria-hidden',
-			'aria-keyshortcuts',
-			'aria-label',
-			'aria-labelledby',
-			'aria-live',
-			'aria-owns',
-			'aria-relevant',
-			'aria-roledescription'
-		].some(function (e) {
+		['aria-atomic', 'aria-busy', 'aria-controls', 'aria-current', 'aria-describedby', 'aria-details', 'aria-dropeffect', 'aria-flowto', 'aria-grabbed', 'aria-hidden', 'aria-keyshortcuts', 'aria-label', 'aria-labelledby', 'aria-live', 'aria-owns', 'aria-relevant', 'aria-roledescription'].some(function (e) {
 			var r;
 			return t.hasAttribute(e) && !(null !== (r = n[a]) && void 0 !== r && r.has(e));
 		})

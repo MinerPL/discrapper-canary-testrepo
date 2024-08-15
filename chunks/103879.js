@@ -42,10 +42,7 @@ async function u() {
 			var n, i;
 			a.Z.dispatch({
 				type: 'SAFETY_HUB_FETCH_FAILURE',
-				error:
-					null !== (i = null == t ? void 0 : null === (n = t.body) || void 0 === n ? void 0 : n.message) && void 0 !== i
-						? i
-						: 'Unknown error'
+				error: null !== (i = null == t ? void 0 : null === (n = t.body) || void 0 === n ? void 0 : n.message) && void 0 !== i ? i : 'Unknown error'
 			});
 		});
 }
@@ -86,10 +83,7 @@ async function r(t) {
 			var i, e;
 			a.Z.dispatch({
 				type: 'SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE',
-				error:
-					null !== (e = null == n ? void 0 : null === (i = n.body) || void 0 === i ? void 0 : i.message) && void 0 !== e
-						? e
-						: 'Unknown error',
+				error: null !== (e = null == n ? void 0 : null === (i = n.body) || void 0 === i ? void 0 : i.message) && void 0 !== e ? e : 'Unknown error',
 				classificationId: t
 			});
 		});
@@ -137,11 +131,7 @@ async function d(t, n, i) {
 				throw (
 					(a.Z.dispatch({
 						type: 'SAFETY_HUB_REQUEST_REVIEW_FAILURE',
-						error:
-							null !== (i = null == t ? void 0 : null === (n = t.body) || void 0 === n ? void 0 : n.message) &&
-							void 0 !== i
-								? i
-								: 'Unknown error'
+						error: null !== (i = null == t ? void 0 : null === (n = t.body) || void 0 === n ? void 0 : n.message) && void 0 !== i ? i : 'Unknown error'
 					}),
 					t)
 				);

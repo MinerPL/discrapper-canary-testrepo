@@ -8,23 +8,16 @@ var r = n(882932),
 	a = n(470079);
 function s(e) {
 	var t;
-	let {
-			isDisabled: n = !1,
-			minValue: s = 0,
-			maxValue: c = 100,
-			numberFormatter: d,
-			step: _ = 1,
-			orientation: E = 'horizontal'
-		} = e,
+	let { isDisabled: n = !1, minValue: s = 0, maxValue: c = 100, numberFormatter: d, step: _ = 1, orientation: E = 'horizontal' } = e,
 		f = (0, a.useMemo)(() => {
 			let e = (c - s) / 10;
 			return Math.max((e = (0, r.N4)(e, 0, e + _, _)), _);
 		}, [_, c, s]),
 		h = (0, a.useMemo)(() => l(e.value), [e.value]),
 		p = (0, a.useMemo)(() => (null !== (t = l(e.defaultValue)) && void 0 !== t ? t : [s]), [e.defaultValue, s]),
-		I = u(e.value, e.defaultValue, e.onChange),
-		m = u(e.value, e.defaultValue, e.onChangeEnd),
-		[T, g] = (0, i.zk)(h, p, I),
+		m = u(e.value, e.defaultValue, e.onChange),
+		I = u(e.value, e.defaultValue, e.onChangeEnd),
+		[T, g] = (0, i.zk)(h, p, m),
 		[S, A] = (0, a.useState)(Array(T.length).fill(!1)),
 		N = (0, a.useRef)(Array(T.length).fill(!0)),
 		[v, O] = (0, a.useState)(void 0),
@@ -72,7 +65,7 @@ function s(e) {
 		setThumbDragging: function (e, t) {
 			if (n || !P(e)) return;
 			let r = C.current[e];
-			(C.current = o(C.current, e, t)), D(C.current), m && r && !C.current.some(Boolean) && m(R.current);
+			(C.current = o(C.current, e, t)), D(C.current), I && r && !C.current.some(Boolean) && I(R.current);
 		},
 		focusedThumb: v,
 		setFocusedThumb: O,

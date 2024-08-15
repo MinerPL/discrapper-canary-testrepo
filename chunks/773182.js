@@ -38,17 +38,7 @@ var i = n(735250),
 	Z = n(689938),
 	T = n(174507);
 function L(e) {
-	let {
-			title: t,
-			message: n,
-			dismissibleContent: r,
-			defaultGameId: a,
-			onPopoutVisible: o,
-			onClick: c,
-			children: h,
-			isEligibleForUpsell: _ = !0,
-			withInviteIcon: f = !0
-		} = e,
+	let { title: t, message: n, dismissibleContent: r, defaultGameId: a, onPopoutVisible: o, onClick: c, children: h, isEligibleForUpsell: _ = !0, withInviteIcon: f = !0 } = e,
 		g = (0, s.TH)(),
 		[I, E] = (0, C.US)([r], v.R.SIDEBAR),
 		Z = I !== r,
@@ -98,12 +88,7 @@ function L(e) {
 							}),
 							(0, i.jsxs)('div', {
 								className: T.popoutContent,
-								children: [
-									f && (0, i.jsx)(m.YV, {}),
-									(0, i.jsx)(m.aF, { title: t }),
-									(0, i.jsx)(m.To, { message: n }),
-									(0, i.jsx)(m.Xu, { onClick: R })
-								]
+								children: [f && (0, i.jsx)(m.YV, {}), (0, i.jsx)(m.aF, { title: t }), (0, i.jsx)(m.To, { message: n }), (0, i.jsx)(m.Xu, { onClick: R })]
 							}),
 							(0, i.jsx)('div', { className: T.popoutCaret })
 						]
@@ -134,15 +119,9 @@ function A(e) {
 		[s, o] = l.useMemo(() => {
 			switch (t) {
 				case S.xn:
-					return [
-						Z.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_TITLE,
-						Z.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_MESSAGE
-					];
+					return [Z.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_TITLE, Z.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_MESSAGE];
 				case S.nJ:
-					return [
-						Z.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_VALORANT_TITLE,
-						Z.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_VALORANT_MESSAGE
-					];
+					return [Z.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_VALORANT_TITLE, Z.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_VALORANT_MESSAGE];
 				default:
 					return [void 0, void 0];
 			}
@@ -196,18 +175,7 @@ function M(e) {
 		l.useEffect(() => {
 			if (r && r !== s) {
 				var e, n, i, l, a;
-				t(),
-					null === (a = c.current) ||
-						void 0 === a ||
-						null === (l = a.ref) ||
-						void 0 === l ||
-						null === (i = l.current) ||
-						void 0 === i ||
-						null === (n = i.layerRef) ||
-						void 0 === n ||
-						null === (e = n.current) ||
-						void 0 === e ||
-						e.updatePosition();
+				t(), null === (a = c.current) || void 0 === a || null === (l = a.ref) || void 0 === l || null === (i = l.current) || void 0 === i || null === (n = i.layerRef) || void 0 === n || null === (e = n.current) || void 0 === e || e.updatePosition();
 			}
 		}, [c, r, s, t]),
 		(0, i.jsxs)('div', {

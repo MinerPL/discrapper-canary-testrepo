@@ -129,9 +129,6 @@ function y(e) {
 		renderOptionPrefix: b,
 		renderOptionSuffix: M,
 		renderOptionLabel: j,
-		placeholder:
-			0 === A.length
-				? O.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT_NONE_AVAILABLE
-				: O.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT_PLACEHOLDER
+		placeholder: 0 === A.length ? O.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT_NONE_AVAILABLE : O.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT_PLACEHOLDER
 	});
 }

@@ -16,9 +16,7 @@ function a(e) {
 class s {
 	createLog(e) {
 		let t = document.createElement('div');
-		return (
-			t.setAttribute('role', 'log'), t.setAttribute('aria-live', e), t.setAttribute('aria-relevant', 'additions'), t
-		);
+		return t.setAttribute('role', 'log'), t.setAttribute('aria-live', e), t.setAttribute('aria-relevant', 'additions'), t;
 	}
 	destroy() {
 		this.node && (document.body.removeChild(this.node), (this.node = null));
@@ -34,9 +32,7 @@ class s {
 				}, n);
 	}
 	clear(e) {
-		this.node &&
-			((!e || 'assertive' === e) && (this.assertiveLog.innerHTML = ''),
-			(!e || 'polite' === e) && (this.politeLog.innerHTML = ''));
+		this.node && ((!e || 'assertive' === e) && (this.assertiveLog.innerHTML = ''), (!e || 'polite' === e) && (this.politeLog.innerHTML = ''));
 	}
 	constructor() {
 		(this.node = document.createElement('div')),

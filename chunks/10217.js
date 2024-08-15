@@ -177,22 +177,11 @@ function R(e) {
 				});
 }
 function D(e) {
-	let {
-			clip: t,
-			exporting: a,
-			actionsDisabled: l,
-			onBeforeDelete: n,
-			onDelete: o,
-			onEdit: r,
-			onShare: c,
-			onBlur: d
-		} = e,
+	let { clip: t, exporting: a, actionsDisabled: l, onBeforeDelete: n, onDelete: o, onEdit: r, onShare: c, onBlur: d } = e,
 		u = (0, f.Z)(),
 		m = i.useCallback(
 			(e) => {
-				e.stopPropagation(),
-					e.shiftKey ? (n(), (0, _.sS)(t.filepath)) : o(t, n),
-					S.default.track(M.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'delete' });
+				e.stopPropagation(), e.shiftKey ? (n(), (0, _.sS)(t.filepath)) : o(t, n), S.default.track(M.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'delete' });
 			},
 			[o, n, t]
 		),
@@ -278,9 +267,7 @@ t.Z = function (e) {
 		{ analyticsLocations: _ } = (0, h.ZP)(v.Z.CLIPS_GALLERY_ITEM),
 		[j, k] = i.useState(!1),
 		R = i.useRef(null),
-		A = (0, g.Z)(
-			null !== (l = null === (t = n.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== l ? l : 0
-		),
+		A = (0, g.Z)(null !== (l = null === (t = n.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== l ? l : 0),
 		B = i.useRef(
 			new m.sW(500, () => {
 				var e;
@@ -300,20 +287,12 @@ t.Z = function (e) {
 			var e, t, a;
 			k(!1);
 			let l = R.current;
-			null === (e = B.current) || void 0 === e || e.cancel(),
-				null != l &&
-					(l.pause(),
-					(l.currentTime =
-						null !== (a = null === (t = n.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== a ? a : 0));
+			null === (e = B.current) || void 0 === e || e.cancel(), null != l && (l.pause(), (l.currentTime = null !== (a = null === (t = n.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== a ? a : 0));
 		}, [null === (a = n.editMetadata) || void 0 === a ? void 0 : a.start]),
 		O = i.useCallback(
 			(e) => {
 				var t, a;
-				(null === (a = e.relatedTarget) || void 0 === a
-					? void 0
-					: null === (t = a.parentElement) || void 0 === t
-						? void 0
-						: t.parentElement) !== e.currentTarget.parentElement && V();
+				(null === (a = e.relatedTarget) || void 0 === a ? void 0 : null === (t = a.parentElement) || void 0 === t ? void 0 : t.parentElement) !== e.currentTarget.parentElement && V();
 			},
 			[V]
 		),
@@ -374,20 +353,8 @@ t.Z = function (e) {
 									onFocus: (e) => {
 										var t, a, l, n;
 										let s = e.relatedTarget,
-											i =
-												null === (a = e.currentTarget.parentElement) || void 0 === a
-													? void 0
-													: null === (t = a.parentElement) || void 0 === t
-														? void 0
-														: t.parentElement;
-										if ((null == s ? void 0 : s.parentElement) !== i)
-											(null == s
-												? void 0
-												: null === (n = s.parentElement) || void 0 === n
-													? void 0
-													: null === (l = n.parentElement) || void 0 === l
-														? void 0
-														: l.parentElement) !== i && w();
+											i = null === (a = e.currentTarget.parentElement) || void 0 === a ? void 0 : null === (t = a.parentElement) || void 0 === t ? void 0 : t.parentElement;
+										if ((null == s ? void 0 : s.parentElement) !== i) (null == s ? void 0 : null === (n = s.parentElement) || void 0 === n ? void 0 : null === (l = n.parentElement) || void 0 === l ? void 0 : l.parentElement) !== i && w();
 									}
 								}),
 								j &&
@@ -401,8 +368,7 @@ t.Z = function (e) {
 										onShare: f,
 										onBlur: (e) => {
 											var t;
-											(null === (t = e.relatedTarget) || void 0 === t ? void 0 : t.parentElement) !==
-												e.currentTarget.parentElement && V();
+											(null === (t = e.relatedTarget) || void 0 === t ? void 0 : t.parentElement) !== e.currentTarget.parentElement && V();
 										}
 									})
 							]

@@ -12,10 +12,7 @@ var r =
 		function e(e, t) {
 			for (var n = 0; n < t.length; n++) {
 				var r = t[n];
-				(r.enumerable = r.enumerable || !1),
-					(r.configurable = !0),
-					'value' in r && (r.writable = !0),
-					Object.defineProperty(e, r.key, r);
+				(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 			}
 		}
 		return function (t, n, r) {
@@ -52,9 +49,7 @@ var _ = (t.Alpha = (function (e) {
 				t && 'function' == typeof r.props.onChange && r.props.onChange(t, e);
 			}),
 			(r.handleMouseDown = function (e) {
-				r.handleChange(e),
-					window.addEventListener('mousemove', r.handleChange),
-					window.addEventListener('mouseup', r.handleMouseUp);
+				r.handleChange(e), window.addEventListener('mousemove', r.handleChange), window.addEventListener('mouseup', r.handleMouseUp);
 			}),
 			(r.handleMouseUp = function () {
 				r.unbindEventListeners();
@@ -67,8 +62,7 @@ var _ = (t.Alpha = (function (e) {
 	}
 	return (
 		!(function (e, t) {
-			if ('function' != typeof t && null !== t)
-				throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+			if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
 			(e.prototype = Object.create(t && t.prototype, {
 				constructor: {
 					value: e,
@@ -105,20 +99,7 @@ var _ = (t.Alpha = (function (e) {
 									},
 									gradient: {
 										absolute: '0px 0px 0px 0px',
-										background:
-											'linear-gradient(to right, rgba(' +
-											t.r +
-											',' +
-											t.g +
-											',' +
-											t.b +
-											', 0) 0%,\n           rgba(' +
-											t.r +
-											',' +
-											t.g +
-											',' +
-											t.b +
-											', 1) 100%)',
+										background: 'linear-gradient(to right, rgba(' + t.r + ',' + t.g + ',' + t.b + ', 0) 0%,\n           rgba(' + t.r + ',' + t.g + ',' + t.b + ', 1) 100%)',
 										boxShadow: this.props.shadow,
 										borderRadius: this.props.radius
 									},
@@ -142,22 +123,7 @@ var _ = (t.Alpha = (function (e) {
 									}
 								},
 								vertical: {
-									gradient: {
-										background:
-											'linear-gradient(to bottom, rgba(' +
-											t.r +
-											',' +
-											t.g +
-											',' +
-											t.b +
-											', 0) 0%,\n           rgba(' +
-											t.r +
-											',' +
-											t.g +
-											',' +
-											t.b +
-											', 1) 100%)'
-									},
+									gradient: { background: 'linear-gradient(to bottom, rgba(' + t.r + ',' + t.g + ',' + t.b + ', 0) 0%,\n           rgba(' + t.r + ',' + t.g + ',' + t.b + ', 1) 100%)' },
 									pointer: {
 										left: 0,
 										top: 100 * t.a + '%'
@@ -173,11 +139,7 @@ var _ = (t.Alpha = (function (e) {
 					return s.default.createElement(
 						'div',
 						{ style: n.alpha },
-						s.default.createElement(
-							'div',
-							{ style: n.checkboard },
-							s.default.createElement(u.default, { renderers: this.props.renderers })
-						),
+						s.default.createElement('div', { style: n.checkboard }, s.default.createElement(u.default, { renderers: this.props.renderers })),
 						s.default.createElement('div', { style: n.gradient }),
 						s.default.createElement(
 							'div',
@@ -190,13 +152,7 @@ var _ = (t.Alpha = (function (e) {
 								onTouchMove: this.handleChange,
 								onTouchStart: this.handleChange
 							},
-							s.default.createElement(
-								'div',
-								{ style: n.pointer },
-								this.props.pointer
-									? s.default.createElement(this.props.pointer, this.props)
-									: s.default.createElement('div', { style: n.slider })
-							)
+							s.default.createElement('div', { style: n.pointer }, this.props.pointer ? s.default.createElement(this.props.pointer, this.props) : s.default.createElement('div', { style: n.slider }))
 						)
 					);
 				}

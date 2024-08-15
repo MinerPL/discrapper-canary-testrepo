@@ -31,13 +31,7 @@ let c = o.createContext({
 	d = o.forwardRef(function (e, t) {
 		var n;
 		let { children: i, id: d, inState: u, isTextTransition: p = !1 } = e,
-			{
-				recalculateAnimationPositions: x,
-				registerComponent: m,
-				unregisterComponent: g,
-				expansionSpring: _,
-				mountPoints: C
-			} = o.useContext(c),
+			{ recalculateAnimationPositions: x, registerComponent: m, unregisterComponent: g, expansionSpring: _, mountPoints: C } = o.useContext(c),
 			f = o.useRef(null),
 			h = o.useRef(null),
 			E = o.useRef();

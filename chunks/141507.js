@@ -17,8 +17,8 @@ var r = n(735250),
 	f = n(65029),
 	h = n(210887),
 	p = n(695346),
-	I = n(430824),
-	m = n(451478),
+	m = n(430824),
+	I = n(451478),
 	T = n(768581),
 	g = n(392552),
 	S = n(543241),
@@ -71,8 +71,8 @@ let P = (e) => {
 					allNamesString: null == H ? void 0 : H.name
 				};
 		}
-		let Z = (0, a.e7)([I.Z], () => (null !== t && t.type === c.B.GUILD ? I.Z.getGuild(t.guildId) : null), [t]),
-			Y = (0, a.e7)([m.Z], () => m.Z.isFocused()),
+		let Z = (0, a.e7)([m.Z], () => (null !== t && t.type === c.B.GUILD ? m.Z.getGuild(t.guildId) : null), [t]),
+			Y = (0, a.e7)([I.Z], () => I.Z.isFocused()),
 			j = (0, a.e7)([l.Z], () => l.Z.useReducedMotion, []),
 			W = p.Yk.useSetting(),
 			K = (0, S.C1)(G, M(t) ? t : null),
@@ -151,14 +151,7 @@ let P = (e) => {
 						shouldAnimate: !j && Y
 					})
 				: null;
-		U =
-			F && 'CREATE_EMOJI' === t.type
-				? R.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE_DESCRIPTION
-				: 'EXPAND_OR_COLLAPSE_EMOJI' === t.type
-					? z.has(t.guildId)
-						? R.Z.Messages.EMOJI_PICKER_COLLAPSE_EMOJI_SECTION
-						: R.Z.Messages.EMOJI_PICKER_EXPAND_EMOJI_SECTION
-					: t.allNamesString;
+		U = F && 'CREATE_EMOJI' === t.type ? R.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE_DESCRIPTION : 'EXPAND_OR_COLLAPSE_EMOJI' === t.type ? (z.has(t.guildId) ? R.Z.Messages.EMOJI_PICKER_COLLAPSE_EMOJI_SECTION : R.Z.Messages.EMOJI_PICKER_EXPAND_EMOJI_SECTION) : t.allNamesString;
 		let et =
 			F && 'CREATE_EMOJI' === t.type
 				? R.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE

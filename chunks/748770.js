@@ -21,9 +21,7 @@ async function f() {
 	if (!d.Z.isFetchingActiveOutboundPromotions)
 		try {
 			a.Z.dispatch({ type: 'ACTIVE_OUTBOUND_PROMOTIONS_FETCH' });
-			let t = u.t.getCurrentConfig({ location: '5731cc_1' }, { autoTrackExposure: !1 }).previewEnabled
-					? E.ANM.OUTBOUND_PROMOTIONS_PREVIEW
-					: E.ANM.OUTBOUND_PROMOTIONS,
+			let t = u.t.getCurrentConfig({ location: '5731cc_1' }, { autoTrackExposure: !1 }).previewEnabled ? E.ANM.OUTBOUND_PROMOTIONS_PREVIEW : E.ANM.OUTBOUND_PROMOTIONS,
 				n = (
 					await r.tn.get({
 						url: t,

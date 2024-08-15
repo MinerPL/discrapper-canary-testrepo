@@ -122,15 +122,15 @@ function h() {
 function p(e) {
 	return null == e || 'object' != typeof e || Object.isFrozen(e);
 }
-function I(e) {
+function m(e) {
 	var t = W[e];
 	return t || r(18, e), t;
 }
-function m() {
+function I() {
 	return w;
 }
 function T(e, t) {
-	t && (I('Patches'), (e.u = []), (e.s = []), (e.v = t));
+	t && (m('Patches'), (e.u = []), (e.s = []), (e.v = t));
 }
 function g(e) {
 	S(e), e.p.forEach(N), (e.p = null);
@@ -155,15 +155,7 @@ function v(e, t) {
 	t._ = t.p.length;
 	var n = t.p[0],
 		i = void 0 !== e && e !== n;
-	return (
-		t.h.O || I('ES5').S(t, e, i),
-		i
-			? (n[H].P && (g(t), r(4)), a(e) && ((e = O(t, e)), t.l || C(t, e)), t.u && I('Patches').M(n[H].t, e, t.u, t.s))
-			: (e = O(t, n, [])),
-		g(t),
-		t.u && t.v(t.u, t.s),
-		e !== F ? e : void 0
-	);
+	return t.h.O || m('ES5').S(t, e, i), i ? (n[H].P && (g(t), r(4)), a(e) && ((e = O(t, e)), t.l || C(t, e)), t.u && m('Patches').M(n[H].t, e, t.u, t.s)) : (e = O(t, n, [])), g(t), t.u && t.v(t.u, t.s), e !== F ? e : void 0;
 }
 function O(e, t, n) {
 	if (p(t)) return t;
@@ -191,7 +183,7 @@ function O(e, t, n) {
 				return R(e, r, i, t, a, n, o);
 			}),
 			C(e, i, !1),
-			n && e.u && I('Patches').N(r, n, e.u, e.s);
+			n && e.u && m('Patches').N(r, n, e.u, e.s);
 	}
 	return r.o;
 }
@@ -238,9 +230,9 @@ function M(e, t, n) {
 		_,
 		E,
 		f = c(t)
-			? I('MapSet').F(t, n)
+			? m('MapSet').F(t, n)
 			: d(t)
-				? I('MapSet').T(t, n)
+				? m('MapSet').T(t, n)
 				: e.O
 					? ((r = t),
 						(i = n),
@@ -265,7 +257,7 @@ function M(e, t, n) {
 						(s.k = E),
 						(s.j = _),
 						E)
-					: I('ES5').J(t, n);
+					: m('ES5').J(t, n);
 	return (n ? n.A : w).p.push(f), f;
 }
 function P(e, t) {
@@ -315,16 +307,7 @@ var U,
 				i,
 				s = _(e);
 			if (!l(s, t)) {
-				return (
-					(n = e),
-					(i = D(s, t))
-						? 'value' in i
-							? i.value
-							: null === (r = i.get) || void 0 === r
-								? void 0
-								: r.call(n.k)
-						: void 0
-				);
+				return (n = e), (i = D(s, t)) ? ('value' in i ? i.value : null === (r = i.get) || void 0 === r ? void 0 : r.call(n.k)) : void 0;
 			}
 			var o = s[t];
 			return e.I || !a(o) ? o : o === y(e.t, t) ? (b(e), (e.o[t] = M(e.A.h, o, e))) : o;
@@ -344,16 +327,10 @@ var U,
 					s = y(_(e), t),
 					o = null == s ? void 0 : s[H];
 				if (o && o.t === n) return (e.o[t] = n), (e.R[t] = !1), !0;
-				if (((i = n) === (a = s) ? 0 !== i || 1 / i == 1 / a : i != i && a != a) && (void 0 !== n || l(e.t, t)))
-					return !0;
+				if (((i = n) === (a = s) ? 0 !== i || 1 / i == 1 / a : i != i && a != a) && (void 0 !== n || l(e.t, t))) return !0;
 				b(e), L(e);
 			}
-			return (
-				(e.o[t] === n && (void 0 !== n || t in e.o)) ||
-					(Number.isNaN(n) && Number.isNaN(e.o[t])) ||
-					((e.o[t] = n), (e.R[t] = !0)),
-				!0
-			);
+			return (e.o[t] === n && (void 0 !== n || t in e.o)) || (Number.isNaN(n) && Number.isNaN(e.o[t])) || ((e.o[t] = n), (e.R[t] = !0)), !0;
 		},
 		deleteProperty: function (e, t) {
 			return void 0 !== y(e.t, t) || t in e.t ? ((e.R[t] = !1), b(e), L(e)) : delete e.R[t], e.o && delete e.o[t], !0;
@@ -438,7 +415,7 @@ var q = new ((function () {
 						if ((void 0 === (s = n(e)) && (s = e), s === F && (s = void 0), t.D && f(s, !0), i)) {
 							var d = [],
 								_ = [];
-							I('Patches').M(e, s, d, _), i(d, _);
+							m('Patches').M(e, s, d, _), i(d, _);
 						}
 						return s;
 					}
@@ -478,7 +455,7 @@ var q = new ((function () {
 								r = t[H],
 								i = o(t);
 							if (r) {
-								if (!r.P && (r.i < 4 || !I('ES5').K(r))) return r.t;
+								if (!r.P && (r.i < 4 || !m('ES5').K(r))) return r.t;
 								(r.I = !0), (n = P(t, i)), (r.I = !1);
 							} else n = P(t, i);
 							return (
@@ -514,7 +491,7 @@ var q = new ((function () {
 					}
 				}
 				n > -1 && (t = t.slice(n + 1));
-				var a = I('Patches').$;
+				var a = m('Patches').$;
 				return i(e)
 					? a(e, t)
 					: this.produce(e, function (e) {
@@ -525,10 +502,5 @@ var q = new ((function () {
 		);
 	})())(),
 	Q = q.produce,
-	X =
-		(q.produceWithPatches.bind(q),
-		q.setAutoFreeze.bind(q),
-		q.setUseProxies.bind(q),
-		q.applyPatches.bind(q),
-		q.createDraft.bind(q)),
+	X = (q.produceWithPatches.bind(q), q.setAutoFreeze.bind(q), q.setUseProxies.bind(q), q.applyPatches.bind(q), q.createDraft.bind(q)),
 	$ = q.finishDraft.bind(q);

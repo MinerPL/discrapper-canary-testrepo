@@ -35,9 +35,7 @@ function T(e) {
 			null != n
 				? (0, a.jsxs)(a.Fragment, {
 						children: [
-							(0, a.jsx)(l.HiddenVisually, {
-								children: u.Z.Messages.GUILD_PRODUCT_SETTINGS_ROLE_COLOR_ARIA.format({ color: (0, s.Rf)(n.color) })
-							}),
+							(0, a.jsx)(l.HiddenVisually, { children: u.Z.Messages.GUILD_PRODUCT_SETTINGS_ROLE_COLOR_ARIA.format({ color: (0, s.Rf)(n.color) }) }),
 							(0, a.jsx)('div', {
 								className: C.attachedRoleColor,
 								style: { backgroundColor: (0, s.Rf)(n.color) }

@@ -5,13 +5,7 @@ var n = t(470079),
 s.Z = function (e) {
 	let { subscriptionFilter: s } = e,
 		t = (0, a.e7)([i.ZP], () => i.ZP.getSubscriptions(!0)),
-		o = n.useMemo(
-			() =>
-				null == t
-					? []
-					: Object.values(t).filter((e) => !!(e.type === r.NY.PREMIUM && (null == s || s(e)) && (0, i.sE)(e)) || !1),
-			[t, s]
-		);
+		o = n.useMemo(() => (null == t ? [] : Object.values(t).filter((e) => !!(e.type === r.NY.PREMIUM && (null == s || s(e)) && (0, i.sE)(e)) || !1)), [t, s]);
 	return (
 		o.sort((e, s) => {
 			var t, n;

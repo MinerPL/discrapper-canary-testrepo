@@ -51,17 +51,11 @@ class f extends i.Z {
 						? d.start(
 								e,
 								() => {
-									(0, a.Z)(
-										u.Skl.ONLINE,
-										l.Z.getStatus(),
-										{ location: { object: u.qAy.CUSTOM_STATUS_MANAGER } },
-										void 0
-									);
+									(0, a.Z)(u.Skl.ONLINE, l.Z.getStatus(), { location: { object: u.qAy.CUSTOM_STATUS_MANAGER } }, void 0);
 								},
 								!0
 							)
-						: ((0, a.Z)(u.Skl.ONLINE, l.Z.getStatus(), { location: { object: u.qAy.CUSTOM_STATUS_MANAGER } }, void 0),
-							d.stop());
+						: ((0, a.Z)(u.Skl.ONLINE, l.Z.getStatus(), { location: { object: u.qAy.CUSTOM_STATUS_MANAGER } }, void 0), d.stop());
 				} else null != d && d.stop();
 				let n = o.fv.getSetting();
 				if (null != n && '0' !== n) {

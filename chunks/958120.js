@@ -17,8 +17,8 @@ var r = n(735250),
 	f = n(483424),
 	h = n(681837),
 	p = n(91433),
-	I = n(502762),
-	m = n(530),
+	m = n(502762),
+	I = n(530),
 	T = n(827313),
 	g = n(790711),
 	S = n(580512),
@@ -29,16 +29,7 @@ var r = n(735250),
 	R = n(981631),
 	C = n(122269);
 function y(e) {
-	let {
-			user: t,
-			currentUser: n,
-			displayProfile: y,
-			guild: D,
-			isHovering: L,
-			onOpenProfile: b,
-			channelId: M,
-			onClose: P
-		} = e,
+	let { user: t, currentUser: n, displayProfile: y, guild: D, isHovering: L, onOpenProfile: b, channelId: M, onClose: P } = e,
 		U = d.ZP.getName(null == D ? void 0 : D.id, M, t),
 		w = (0, a.e7)([u.Z], () => u.Z.getRelationshipType(t.id)),
 		x = (0, a.e7)([c.Z], () => c.Z.hidePersonalInformation),
@@ -55,7 +46,7 @@ function y(e) {
 		fade: !0,
 		className: C.body,
 		children: [
-			(0, r.jsx)(m.Z, {
+			(0, r.jsx)(I.Z, {
 				user: t,
 				profileType: O.y0.BITE_SIZE,
 				onOpenProfile: b,
@@ -85,7 +76,7 @@ function y(e) {
 				})
 			}),
 			w === R.OGo.PENDING_INCOMING &&
-				(0, r.jsx)(I.Z.Overlay, {
+				(0, r.jsx)(m.Z.Overlay, {
 					children: (0, r.jsx)(p.Z, {
 						user: t,
 						guildId: null == D ? void 0 : D.id,

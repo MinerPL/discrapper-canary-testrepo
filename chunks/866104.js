@@ -105,18 +105,11 @@ function M(e) {
 				[s]
 			)),
 		{ isTruncated: M, ExpandableTextContainer: v } = (0, C.s)(),
-		L =
-			(null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) &&
-			void 0 !== n
-				? n
-				: 0) > 0,
+		L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0,
 		[Z, P] = a.useState(1),
 		b = (0, c.Z)('(max-width: 1439px)'),
 		{ selectedTab: D, isPhantomPreview: j } = (0, p.m)(),
-		U =
-			D === g.y.GUILD_PRODUCTS_PREVIEW
-				? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION
-				: A.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION,
+		U = D === g.y.GUILD_PRODUCTS_PREVIEW ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : A.Z.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION,
 		y = L
 			? (0, i.jsxs)(i.Fragment, {
 					children: [
@@ -130,10 +123,7 @@ function M(e) {
 						}),
 						M &&
 							(0, i.jsxs)(i.Fragment, {
-								children: [
-									(0, i.jsx)(o.Spacer, { size: 4 }),
-									(0, i.jsx)(x, { onClick: () => (0, S.Z)({ guildId: I }) })
-								]
+								children: [(0, i.jsx)(o.Spacer, { size: 4 }), (0, i.jsx)(x, { onClick: () => (0, S.Z)({ guildId: I }) })]
 							})
 					]
 				})
@@ -169,9 +159,7 @@ function M(e) {
 									variant: 'heading-xl/semibold',
 									color: 'header-primary',
 									lineClamp: 2,
-									children: j
-										? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TITLE
-										: A.Z.Messages.GUILD_STORE_HERO_TITLE.format({ guildName: d.name })
+									children: j ? A.Z.Messages.GUILD_STORE_HERO_PREVIEW_TITLE : A.Z.Messages.GUILD_STORE_HERO_TITLE.format({ guildName: d.name })
 								})
 							}),
 							(0, i.jsxs)(i.Fragment, {

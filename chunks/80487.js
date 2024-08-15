@@ -38,10 +38,7 @@ s.Z = function (e) {
 						: null,
 					(0, a.jsx)(t.TabBar.Item, {
 						id: i.wB.SUBMITTED,
-						children:
-							0 === s
-								? o.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING
-								: o.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING_COUNT.format({ count: s })
+						children: 0 === s ? o.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING : o.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING_COUNT.format({ count: s })
 					}),
 					(0, a.jsx)(t.TabBar.Item, {
 						id: i.wB.APPROVED,

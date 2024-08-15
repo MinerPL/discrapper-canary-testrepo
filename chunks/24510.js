@@ -170,8 +170,7 @@ var o = {
 	'blik.invalid': 'Zadejte 6 čísel',
 	'blik.code': 'Šestimístný kód',
 	'blik.help': 'Získejte kód z bankovní aplikace.',
-	'swish.pendingMessage':
-		'Po naskenování QR kódu může trvat až 10 minut, než se stav změní. Pokud budete zkoušet během této doby platbu opakovat, může být částka zaplacena vícekrát.',
+	'swish.pendingMessage': 'Po naskenování QR kódu může trvat až 10 minut, než se stav změní. Pokud budete zkoušet během této doby platbu opakovat, může být částka zaplacena vícekrát.',
 	'field.valid': 'Platné pole',
 	'field.invalid': 'Pole není platné',
 	'error.va.gen.01': 'Neúplné pole',
@@ -207,8 +206,7 @@ var o = {
 	'bankTransfer.iban': 'IBAN',
 	'bankTransfer.bic': 'BIC',
 	'bankTransfer.reference': 'Odkaz',
-	'bankTransfer.introduction':
-		'Vytvořte novou platbu bankovním převodem. K dokončení této platby můžete použít údaje na následující obrazovce.',
+	'bankTransfer.introduction': 'Vytvořte novou platbu bankovním převodem. K dokončení této platby můžete použít údaje na následující obrazovce.',
 	'bankTransfer.instructions': 'Děkujeme za nákup. K dokončení platby použijte prosím následující informace.',
 	'bacs.accountHolderName': 'Jméno držitele bankovního účtu',
 	'bacs.accountHolderName.invalid': 'Neplatné jméno držitele bankovního účtu',
@@ -217,8 +215,7 @@ var o = {
 	'bacs.bankLocationId': 'Kód Sort',
 	'bacs.bankLocationId.invalid': 'Neplatný kód Sort',
 	'bacs.consent.amount': 'Souhlasím s\xA0tím, že mi bude následující částka odečtena z\xA0bankovního účtu.',
-	'bacs.consent.account':
-		'Potvrzuji, že účet je veden na moje jméno a\xA0jsem jediným disponentem, jehož podpis je nutný ke schválení přímého inkasa.',
+	'bacs.consent.account': 'Potvrzuji, že účet je veden na moje jméno a\xA0jsem jediným disponentem, jehož podpis je nutný ke schválení přímého inkasa.',
 	edit: 'Editovat',
 	'bacs.confirm': 'Potvrdit a\xA0zaplatit',
 	'bacs.result.introduction': 'Stáhněte si pokyny k\xA0přímému inkasu (DDI / podpisové právo)',
@@ -251,8 +248,7 @@ var o = {
 	'upi.vpaWaitingMessage': 'Otevřete platební aplikaci UPI a potvrďte platbu',
 	'upi.modeSelection': 'Vyberte si, jak chcete platební aplikaci UPI používat.',
 	'onlineBanking.termsAndConditions': 'Pokračováním souhlasíte se %#smluvními podmínkami%#',
-	'onlineBankingPL.termsAndConditions':
-		'Pokračováním souhlasíte s %#pravidly%# a %#informační povinností%# společnosti Przelewy24.',
+	'onlineBankingPL.termsAndConditions': 'Pokračováním souhlasíte s %#pravidly%# a %#informační povinností%# společnosti Przelewy24.',
 	'ctp.loading.poweredByCtp': 'Prováděno prostřednictvím Click to Pay',
 	'ctp.loading.intro': 'Zjišťujeme, zda máte uložené karty s funkcí Click to Pay...',
 	'ctp.login.title': 'Pokračujte na Click to Pay',
@@ -275,8 +271,7 @@ var o = {
 	'ctp.manualCardEntry': 'Ruční zadávání karty',
 	'ctp.aria.infoModalButton': 'Co je Click to Pay',
 	'ctp.infoPopup.title': 'Click to Pay přináší jednoduchost bezkontaktní platby, online',
-	'ctp.infoPopup.subtitle':
-		'Rychlý a bezpečný způsob platby podporovaný kartami Mastercard, Visa a dalšími platebními kartami.',
+	'ctp.infoPopup.subtitle': 'Rychlý a bezpečný způsob platby podporovaný kartami Mastercard, Visa a dalšími platebními kartami.',
 	'ctp.infoPopup.benefit1': 'Služba Click to Pay používá šifrování, aby vaše informace byly zabezpečené.',
 	'ctp.infoPopup.benefit2': 'Používejte ji u obchodníků po celém světě',
 	'ctp.infoPopup.benefit3': 'Nastavte jednou pro bezproblémové platby v budoucnu',

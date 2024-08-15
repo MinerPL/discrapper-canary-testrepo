@@ -2,24 +2,8 @@ var i = a(413135).Buffer;
 function r(t, e, a, i) {
 	if (((null == t ? void 0 : t.startsWith('/')) && (t = t.substr(1)), 'string' == typeof e || e instanceof Date)) {
 		let r = new Date(e),
-			n =
-				r.getUTCFullYear() + String(r.getUTCMonth() + 1).padStart(2, '0') + r.getUTCDate().toString().padStart(2, '0');
-		return (t &&
-			(n = r.getFullYear() + String(r.getMonth() + 1).padStart(2, '0') + r.getDate().toString().padStart(2, '0')),
-		a)
-			? n
-			: t
-				? (n +=
-						'T' +
-						r.getHours().toString().padStart(2, '0') +
-						r.getMinutes().toString().padStart(2, '0') +
-						r.getSeconds().toString().padStart(2, '0'))
-				: (n +=
-						'T' +
-						r.getUTCHours().toString().padStart(2, '0') +
-						r.getUTCMinutes().toString().padStart(2, '0') +
-						r.getUTCSeconds().toString().padStart(2, '0') +
-						(i ? '' : 'Z'));
+			n = r.getUTCFullYear() + String(r.getUTCMonth() + 1).padStart(2, '0') + r.getUTCDate().toString().padStart(2, '0');
+		return (t && (n = r.getFullYear() + String(r.getMonth() + 1).padStart(2, '0') + r.getDate().toString().padStart(2, '0')), a) ? n : t ? (n += 'T' + r.getHours().toString().padStart(2, '0') + r.getMinutes().toString().padStart(2, '0') + r.getSeconds().toString().padStart(2, '0')) : (n += 'T' + r.getUTCHours().toString().padStart(2, '0') + r.getUTCMinutes().toString().padStart(2, '0') + r.getUTCSeconds().toString().padStart(2, '0') + (i ? '' : 'Z'));
 	}
 	if (s(e)) {
 		let r = t ? (o(e) && !e.tz() ? e.clone().tz(t) : e) : i ? e : e.utc();
@@ -37,27 +21,7 @@ function r(t, e, a, i) {
 		return r.format('YYYYMMDD') + (a ? '' : 'T' + r.format('HHmmss') + (i || t ? '' : 'Z'));
 	}
 }
-Object.defineProperty(e, '__esModule', { value: !0 }),
-	(e.toDurationString =
-		e.toJSON =
-		e.isRRule =
-		e.isMomentDuration =
-		e.isLuxonDate =
-		e.isDayjs =
-		e.isMomentTZ =
-		e.isMoment =
-		e.toDate =
-		e.checkDate =
-		e.checkEnum =
-		e.checkNameAndMail =
-		e.generateCustomAttributes =
-		e.addOrGetCustomAttributes =
-		e.foldLines =
-		e.escape =
-		e.formatDateTZ =
-		e.formatDate =
-			void 0),
-	(e.formatDate = r);
+Object.defineProperty(e, '__esModule', { value: !0 }), (e.toDurationString = e.toJSON = e.isRRule = e.isMomentDuration = e.isLuxonDate = e.isDayjs = e.isMomentTZ = e.isMoment = e.toDate = e.checkDate = e.checkEnum = e.checkNameAndMail = e.generateCustomAttributes = e.addOrGetCustomAttributes = e.foldLines = e.escape = e.formatDateTZ = e.formatDate = void 0), (e.formatDate = r);
 function n(t) {
 	return String(t)
 		.replace(/[\\;,"]/g, function (t) {
@@ -137,18 +101,8 @@ e.checkNameAndMail = function (t, e) {
 				mailto: e.mailto
 			});
 	if (a || 'string' != typeof e) {
-		if (!a)
-			throw Error(
-				'`' +
-					t +
-					'` needs to be a valid formed string or an object. See https://sebbo2002.github.io/ical-generator/develop/reference/interfaces/icalorganizer.html'
-			);
-	} else
-		throw Error(
-			'`' +
-				t +
-				"` isn't formated correctly. See https://sebbo2002.github.io/ical-generator/develop/reference/interfaces/icalorganizer.html"
-		);
+		if (!a) throw Error('`' + t + '` needs to be a valid formed string or an object. See https://sebbo2002.github.io/ical-generator/develop/reference/interfaces/icalorganizer.html');
+	} else throw Error('`' + t + "` isn't formated correctly. See https://sebbo2002.github.io/ical-generator/develop/reference/interfaces/icalorganizer.html");
 	if (!a.name) throw Error('`' + t + '.name` is empty!');
 	return a;
 };
@@ -159,10 +113,8 @@ e.checkEnum = function (t, e) {
 	return i;
 };
 e.checkDate = function (t, e) {
-	if ((t instanceof Date && isNaN(t.getTime())) || ('string' == typeof t && isNaN(new Date(t).getTime())))
-		throw Error(`\`${e}\` has to be a valid date!`);
-	if (t instanceof Date || 'string' == typeof t || (l(t) && !0 === t.isValid) || ((s(t) || d(t)) && t.isValid()))
-		return t;
+	if ((t instanceof Date && isNaN(t.getTime())) || ('string' == typeof t && isNaN(new Date(t).getTime()))) throw Error(`\`${e}\` has to be a valid date!`);
+	if (t instanceof Date || 'string' == typeof t || (l(t) && !0 === t.isValid) || ((s(t) || d(t)) && t.isValid())) return t;
 	throw Error(`\`${e}\` has to be a valid date!`);
 };
 function s(t) {
@@ -195,14 +147,5 @@ e.toJSON = function (t) {
 };
 e.toDurationString = function (t) {
 	let e = '';
-	return (t < 0 && ((e = '-'), (t *= -1)),
-	(e += 'P'),
-	t >= 86400 && ((e += Math.floor(t / 86400) + 'D'), (t %= 86400)),
-	!t && e.length > 1)
-		? e
-		: ((e += 'T'),
-			t >= 3600 && ((e += Math.floor(t / 3600) + 'H'), (t %= 3600)),
-			t >= 60 && ((e += Math.floor(t / 60) + 'M'), (t %= 60)),
-			t > 0 ? (e += t + 'S') : e.length <= 2 && (e += '0S'),
-			e);
+	return (t < 0 && ((e = '-'), (t *= -1)), (e += 'P'), t >= 86400 && ((e += Math.floor(t / 86400) + 'D'), (t %= 86400)), !t && e.length > 1) ? e : ((e += 'T'), t >= 3600 && ((e += Math.floor(t / 3600) + 'H'), (t %= 3600)), t >= 60 && ((e += Math.floor(t / 60) + 'M'), (t %= 60)), t > 0 ? (e += t + 'S') : e.length <= 2 && (e += '0S'), e);
 };

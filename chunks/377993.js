@@ -20,8 +20,8 @@ var i = n(735250),
 	_ = n(556084),
 	f = n(184301),
 	E = n(103575),
-	g = n(158776),
-	C = n(699516),
+	C = n(158776),
+	g = n(699516),
 	I = n(111583),
 	x = n(594174),
 	T = n(626135),
@@ -41,8 +41,8 @@ function y(e) {
 	let { user: t, channel: a, status: u, activities: d } = e,
 		h = (0, l.e7)([I.Z], () => null != I.Z.getTypingUsers(a.id)[t.id]),
 		m = (0, l.e7)([x.default], () => x.default.getCurrentUser()),
-		p = (0, l.e7)([g.Z], () => g.Z.isMobileOnline(t.id)),
-		_ = (0, l.e7)([C.Z], () => C.Z.getNickname(t.id)),
+		p = (0, l.e7)([C.Z], () => C.Z.isMobileOnline(t.id)),
+		_ = (0, l.e7)([g.Z], () => g.Z.getNickname(t.id)),
 		T = (e) => {
 			(0, o.jW)(e, async () => {
 				let { default: e } = await Promise.all([n.e('79695'), n.e('70474'), n.e('17354')]).then(n.bind(n, 354589));
@@ -182,16 +182,16 @@ function U(e) {
 	let { listItems: I } =
 			((t = s),
 			(0, l.e7)(
-				[C.Z, x.default, g.Z],
+				[g.Z, x.default, C.Z],
 				() => {
 					let e = (0, S.T)(t.recipients, x.default),
 						n = {};
 					for (let t of e) {
 						var i, a, s;
-						C.Z.isFriend(t.id) || t.id === (null === (i = x.default.getCurrentUser()) || void 0 === i ? void 0 : i.id)
+						g.Z.isFriend(t.id) || t.id === (null === (i = x.default.getCurrentUser()) || void 0 === i ? void 0 : i.id)
 							? (n[t.id] = {
-									status: null !== (a = g.Z.getStatus(t.id)) && void 0 !== a ? a : b.Skl.OFFLINE,
-									activities: null !== (s = g.Z.getActivities(t.id)) && void 0 !== s ? s : P
+									status: null !== (a = C.Z.getStatus(t.id)) && void 0 !== a ? a : b.Skl.OFFLINE,
+									activities: null !== (s = C.Z.getActivities(t.id)) && void 0 !== s ? s : P
 								})
 							: (n[t.id] = {
 									status: b.Skl.OFFLINE,
@@ -212,13 +212,7 @@ function U(e) {
 				[t],
 				k
 			)),
-		{
-			installedIntegrations: N,
-			applicationsShelf: v,
-			fetched: Z,
-			appsInGDMEnabled: A,
-			availableApplications: M
-		} = (0, _.j)({ channelId: s.id });
+		{ installedIntegrations: N, applicationsShelf: v, fetched: Z, appsInGDMEnabled: A, availableApplications: M } = (0, _.j)({ channelId: s.id });
 	a.useEffect(() => {
 		if (c)
 			for (let e of I)

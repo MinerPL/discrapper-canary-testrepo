@@ -22,8 +22,8 @@ var a = n(120356),
 	_ = n(162267),
 	f = n(228168),
 	E = n(981631),
-	g = n(689938),
-	C = n(431776),
+	C = n(689938),
+	g = n(431776),
 	I = n(712215);
 let x = (0, r.getAvatarSize)(r.AvatarSizes.SIZE_16);
 function T(e) {
@@ -31,39 +31,11 @@ function T(e) {
 		_ = t.hasAvatarForGuild(a.id);
 	return (0, i.jsxs)(r.Clickable, {
 		focusProps: { offset: { right: 8 } },
-		className: C.listRow,
+		className: g.listRow,
 		onClick: m,
 		onContextMenu: (e) => {
 			(0, o.jW)(e, async () => {
-				let { default: e } = await Promise.all([
-					n.e('96427'),
-					n.e('23755'),
-					n.e('89350'),
-					n.e('11751'),
-					n.e('29549'),
-					n.e('33053'),
-					n.e('31605'),
-					n.e('37581'),
-					n.e('65840'),
-					n.e('7654'),
-					n.e('90508'),
-					n.e('18146'),
-					n.e('44156'),
-					n.e('59743'),
-					n.e('14203'),
-					n.e('85552'),
-					n.e('59217'),
-					n.e('58227'),
-					n.e('1187'),
-					n.e('75531'),
-					n.e('22036'),
-					n.e('92557'),
-					n.e('64679'),
-					n.e('23693'),
-					n.e('87713'),
-					n.e('33213'),
-					n.e('41127')
-				]).then(n.bind(n, 545135));
+				let { default: e } = await Promise.all([n.e('96427'), n.e('23755'), n.e('89350'), n.e('11751'), n.e('29549'), n.e('33053'), n.e('31605'), n.e('37581'), n.e('65840'), n.e('7654'), n.e('90508'), n.e('18146'), n.e('44156'), n.e('59743'), n.e('14203'), n.e('85552'), n.e('59217'), n.e('58227'), n.e('1187'), n.e('75531'), n.e('22036'), n.e('92557'), n.e('64679'), n.e('23693'), n.e('87713'), n.e('33213'), n.e('41127')]).then(n.bind(n, 545135));
 				return (t) =>
 					(0, i.jsx)(e, {
 						...t,
@@ -76,7 +48,7 @@ function T(e) {
 				tabIndex: -1,
 				guild: a,
 				showBadge: !0,
-				className: s()(C.listAvatar, null == a.icon ? I.guildAvatarWithoutIcon : null),
+				className: s()(g.listAvatar, null == a.icon ? I.guildAvatarWithoutIcon : null),
 				badgeStrokeColor: (0, d.Lq)((0, l.wj)(u) ? E.Ilk.PRIMARY_600 : E.Ilk.WHITE_500),
 				badgeTooltipColor: r.TooltipColors.PRIMARY,
 				badgeTooltipDelay: f.vB,
@@ -84,10 +56,10 @@ function T(e) {
 				active: !0
 			}),
 			(0, i.jsxs)('div', {
-				className: C.listRowContent,
+				className: g.listRowContent,
 				children: [
 					(0, i.jsx)('div', {
-						className: C.listName,
+						className: g.listName,
 						children: a.toString()
 					}),
 					_ || null != c
@@ -118,22 +90,22 @@ function N(e) {
 			(0, m.X)(e), n(), (0, c.xf)();
 		};
 	return (0, i.jsx)(r.ScrollerThin, {
-		className: C.listScroller,
+		className: g.listScroller,
 		fade: !0,
 		children:
 			null == a
 				? (0, i.jsx)('div', {
-						className: C.empty,
+						className: g.empty,
 						children: (0, i.jsx)(r.Spinner, {})
 					})
 				: 0 === a.length
 					? (0, i.jsxs)('div', {
-							className: C.empty,
+							className: g.empty,
 							children: [
-								(0, i.jsx)('div', { className: C.emptyIconGuilds }),
+								(0, i.jsx)('div', { className: g.emptyIconGuilds }),
 								(0, i.jsx)('div', {
-									className: C.emptyText,
-									children: g.Z.Messages.NO_MUTUAL_GUILDS
+									className: g.emptyText,
+									children: C.Z.Messages.NO_MUTUAL_GUILDS
 								})
 							]
 						})

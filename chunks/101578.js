@@ -22,11 +22,7 @@ t.Z = (e) => {
 				{
 					var e;
 					let t = I.author.id;
-					return (
-						(null === (e = I.activity) || void 0 === e ? void 0 : e.type) === d.mFx.JOIN_REQUEST &&
-							(t = t === h && n.isPrivate() ? n.getRecipientId() : h),
-						u.Z.getApplicationActivity(t, I.application.id)
-					);
+					return (null === (e = I.activity) || void 0 === e ? void 0 : e.type) === d.mFx.JOIN_REQUEST && (t = t === h && n.isPrivate() ? n.getRecipientId() : h), u.Z.getApplicationActivity(t, I.application.id);
 				}
 			},
 			[I, n, h]
@@ -37,12 +33,7 @@ t.Z = (e) => {
 		activityActionType: null != I.activity ? I.activity.type : null,
 		partyId: null != I.activity ? I.activity.party_id : null,
 		userId: I.author.id,
-		application:
-			null != (t = I).application
-				? l.Z.createFromServer(t.application)
-				: null != t.activity && null != t.activity.party_id && (0, _.Ps)(t.activity.party_id)
-					? o.r9
-					: void 0,
+		application: null != (t = I).application ? l.Z.createFromServer(t.application) : null != t.activity && null != t.activity.party_id && (0, _.Ps)(t.activity.party_id) ? o.r9 : void 0,
 		message: I,
 		channelId: n.id,
 		guildId: n.getGuildId(),

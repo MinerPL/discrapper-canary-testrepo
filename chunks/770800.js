@@ -82,11 +82,7 @@ class Z extends a.PureComponent {
 			tag: l.FormTitleTags.H2,
 			title: v.Z.Messages.RTC_DEBUG_TRANSPORT + (null != t ? ' - ' + t : ''),
 			className: b.allowSelection,
-			children: [
-				(0, y.a)(s),
-				0 === d.length ? null : (0, r.jsx)(l.FormDivider, { className: E.marginBottom20 }),
-				(0, y.a)(d)
-			]
+			children: [(0, y.a)(s), 0 === d.length ? null : (0, r.jsx)(l.FormDivider, { className: E.marginBottom20 }), (0, y.a)(d)]
 		});
 	}
 }

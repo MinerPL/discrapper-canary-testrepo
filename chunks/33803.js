@@ -250,20 +250,7 @@ function Q(e) {
 		{ isFocused: x, handleFocus: O, handleBlur: L } = (0, Z.bb)(S),
 		P = (0, d.e7)([E.Z], () => E.Z.keyboardModeEnabled),
 		j = (0, d.e7)([p.Z], () => p.Z.can(U.Plq.MANAGE_MESSAGES, l), [l]),
-		{
-			ruleName: w,
-			embedChannel: Y,
-			decisionId: W,
-			keywordMatchedContent: Q,
-			keyword: q,
-			content: X,
-			flaggedMessageId: J,
-			timeoutDuration: $,
-			decisionReason: ee,
-			alertActionsExecution: et,
-			quarantineType: en,
-			interactionUserId: ei
-		} = (0, T.ZP)(s),
+		{ ruleName: w, embedChannel: Y, decisionId: W, keywordMatchedContent: Q, keyword: q, content: X, flaggedMessageId: J, timeoutDuration: $, decisionReason: ee, alertActionsExecution: et, quarantineType: en, interactionUserId: ei } = (0, T.ZP)(s),
 		ea = a.useMemo(() => (0, R.k$)(X, Q, l.id), [X, Q, l]),
 		{ selected: es, ...er } = F(s, l),
 		el = a.useCallback(() => {
@@ -271,10 +258,7 @@ function Q(e) {
 		}, [s.id, X, W, l]),
 		eo = a.useCallback(
 			(e) => {
-				if (null != J && null != Y)
-					e.stopPropagation(),
-						e.preventDefault(),
-						(0, f.Z)(U.Z5c.CHANNEL(null == Y ? void 0 : Y.guild_id, null == Y ? void 0 : Y.id, J));
+				if (null != J && null != Y) e.stopPropagation(), e.preventDefault(), (0, f.Z)(U.Z5c.CHANNEL(null == Y ? void 0 : Y.guild_id, null == Y ? void 0 : Y.id, J));
 			},
 			[Y, J]
 		),
@@ -373,9 +357,7 @@ function Q(e) {
 															color: 'text-muted',
 															tag: 'span',
 															className: G.__invalid_footerText,
-															children: k.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_TIMEOUT_DURATION.format({
-																duration: eu
-															})
+															children: k.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_TIMEOUT_DURATION.format({ duration: eu })
 														})
 													]
 												}),
@@ -388,9 +370,7 @@ function Q(e) {
 															color: 'text-muted',
 															tag: 'span',
 															className: G.titleCase,
-															children: k.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_REASON.format({
-																reason: (0, T.hU)(en)
-															})
+															children: k.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_REASON.format({ reason: (0, T.hU)(en) })
 														})
 													]
 												})

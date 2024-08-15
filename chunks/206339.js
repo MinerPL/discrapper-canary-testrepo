@@ -162,13 +162,7 @@ s.Z = function () {
 	}, [g]);
 	let p = b.bh.useSetting(),
 		y = null != O || !g,
-		{
-			promotionsLoaded: V,
-			activeOutboundPromotions: Y,
-			claimedEndedOutboundPromotions: w,
-			claimedOutboundPromotionCodeMap: H,
-			addClaimedOutboundPromotionCode: k
-		} = (0, h.lG)(),
+		{ promotionsLoaded: V, activeOutboundPromotions: Y, claimedEndedOutboundPromotions: w, claimedOutboundPromotionCodeMap: H, addClaimedOutboundPromotionCode: k } = (0, h.lG)(),
 		W = Y.length + w.length > 0,
 		K =
 			A.g.useExperiment(

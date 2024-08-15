@@ -14,10 +14,10 @@ var i = n(442837),
 	f = n(594174),
 	h = n(981631),
 	p = n(354459),
-	I = n(689938),
-	m = n(582920);
+	m = n(689938),
+	I = n(582920);
 function T(e) {
-	let { closePopout: t, idle: n, pipWindows: a, voiceChannelId: f, onSelect: m } = e;
+	let { closePopout: t, idle: n, pipWindows: a, voiceChannelId: f, onSelect: I } = e;
 	n && t();
 	let T = (0, i.e7)([u.ZP], () => u.ZP.getSelfEmbeddedActivityForChannel(f)),
 		g = (0, i.e7)([E.Z], () => E.Z.pipWindow),
@@ -27,7 +27,7 @@ function T(e) {
 		navId: 'pip-menu',
 		'aria-label': 'switch PIP',
 		onClose: t,
-		onSelect: m,
+		onSelect: I,
 		children: (function () {
 			let e = a.find((e) => e.component === h.NYg.EMBED_IFRAME),
 				t = a.find((e) => e.component === h.NYg.VIDEO),
@@ -56,13 +56,9 @@ function T(e) {
 					if (e.pipWindow.component === h.NYg.EMBED_IFRAME && null != T) {
 						var t;
 						let e = null === (t = c.Z.getApplication(T.applicationId)) || void 0 === t ? void 0 : t.name;
-						return null == e
-							? I.Z.Messages.SWITCH_PIP_TO_ACTIVITY
-							: I.Z.Messages.SWITCH_PIP_TO_ACTIVITY_NAME.format({ activityName: e });
+						return null == e ? m.Z.Messages.SWITCH_PIP_TO_ACTIVITY : m.Z.Messages.SWITCH_PIP_TO_ACTIVITY_NAME.format({ activityName: e });
 					}
-					return null == e.participant || e.participant.type !== p.fO.STREAM
-						? I.Z.Messages.SWITCH_PIP_TO_GO_LIVE
-						: I.Z.Messages.SWITCH_PIP_TO_USER_STREAM.format({ username: e.participant.userNick });
+					return null == e.participant || e.participant.type !== p.fO.STREAM ? m.Z.Messages.SWITCH_PIP_TO_GO_LIVE : m.Z.Messages.SWITCH_PIP_TO_USER_STREAM.format({ username: e.participant.userNick });
 				})(e),
 				u = ''.concat(n).concat(null != i ? i : '');
 			return (0, r.jsx)(
@@ -87,9 +83,7 @@ t.Z = function (e) {
 		o = Array.from((0, i.e7)([E.Z], () => E.Z.pipWindows).values()),
 		l = (0, i.Wu)([_.Z], () => _.Z.getAllActiveStreamsForChannel(t)).filter((e) => {
 			var n;
-			return (
-				e.ownerId !== (null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && e.channelId === t
-			);
+			return e.ownerId !== (null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && e.channelId === t;
 		}),
 		u = (1 === o.length && o[0].component === h.NYg.EMBED_IFRAME) || 0 === l.length,
 		c = 1 === o.length && l.length <= 1;
@@ -106,7 +100,7 @@ t.Z = function (e) {
 					}),
 				children: (e) =>
 					(0, r.jsx)(s.Clickable, {
-						className: m.menuIcon,
+						className: I.menuIcon,
 						...e,
 						children: (0, r.jsx)(s.MoreVerticalIcon, {
 							size: 'md',

@@ -27,9 +27,7 @@ function E(e) {
 				(0, i.jsx)(a.Text, {
 					color: 'always-white',
 					variant: 'text-sm/normal',
-					children: u.Z.Messages.MEDIA_CHANNEL_LEARN_MORE.format({
-						hcArticleUrl: c.Z.getCreatorSupportArticleURL(d.BhN.MEDIA_CHANNEL)
-					})
+					children: u.Z.Messages.MEDIA_CHANNEL_LEARN_MORE.format({ hcArticleUrl: c.Z.getCreatorSupportArticleURL(d.BhN.MEDIA_CHANNEL) })
 				})
 			]
 		});

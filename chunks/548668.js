@@ -215,14 +215,7 @@ class C extends (i = l.PureComponent) {
 	}
 	renderAppButton(e) {
 		if ('STATIC_RENDERER' === this.props.platform) return null;
-		let {
-				downloadLink: t,
-				isMobile: a,
-				mobileDownloadText: i,
-				platform: l,
-				variant: o,
-				authRedirectTo: s
-			} = this.props,
+		let { downloadLink: t, isMobile: a, mobileDownloadText: i, platform: l, variant: o, authRedirectTo: s } = this.props,
 			{ isAppCompatible: c } = this.state;
 		if (a)
 			return (0, r.jsx)(n, {

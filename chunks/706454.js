@@ -11,12 +11,7 @@ var r,
 let _ = d.Z.getDefaultLocale();
 function E() {
 	var e, t;
-	let n =
-		null === (t = c.Z.settings.localization) || void 0 === t
-			? void 0
-			: null === (e = t.locale) || void 0 === e
-				? void 0
-				: e.value;
+	let n = null === (t = c.Z.settings.localization) || void 0 === t ? void 0 : null === (e = t.locale) || void 0 === e ? void 0 : e.value;
 	return null != n && '' !== n && n !== _ && ((_ = n), u.i(_), !0);
 }
 class f extends (s = o.ZP.Store) {

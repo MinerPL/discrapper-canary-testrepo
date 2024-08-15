@@ -11,13 +11,7 @@ let _ = {
 	sentinel: l.a4,
 	matches(e, t, n, r, a) {
 		var s, o;
-		return (
-			r &&
-			null !== (o = null === (s = a.chatInputType.autocomplete) || void 0 === s ? void 0 : s.addReactionShortcut) &&
-			void 0 !== o &&
-			o &&
-			(i.Z.can(u.Plq.ADD_REACTIONS, e) || e.isPrivate())
-		);
+		return r && null !== (o = null === (s = a.chatInputType.autocomplete) || void 0 === s ? void 0 : s.addReactionShortcut) && void 0 !== o && o && (i.Z.can(u.Plq.ADD_REACTIONS, e) || e.isPrivate());
 	},
 	queryResults(e, t, n, r, i) {
 		let { emojis: s } = a.ZP.queryEmojiResults({

@@ -13,15 +13,15 @@ var r,
 let f = 'MaskedLinkStore',
 	h = new Set(),
 	p = new Set(),
-	I = null === (r = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === r ? void 0 : r.replace('//', '');
-function m(e) {
+	m = null === (r = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === r ? void 0 : r.replace('//', '');
+function I(e) {
 	let t = (0, _.F)(e);
 	switch (t) {
 		case window.GLOBAL_ENV.CDN_HOST:
 		case window.GLOBAL_ENV.INVITE_HOST:
 		case window.GLOBAL_ENV.GIFT_CODE_HOST:
 		case window.GLOBAL_ENV.GUILD_TEMPLATE_HOST:
-		case I:
+		case m:
 		case location.hostname:
 			return !0;
 		default:
@@ -43,7 +43,7 @@ class g extends (i = l.ZP.Store) {
 		}
 	}
 	isTrustedDomain(e) {
-		return m(e);
+		return I(e);
 	}
 	isTrustedProtocol(e) {
 		return T(e);
@@ -61,7 +61,7 @@ class g extends (i = l.ZP.Store) {
 	(t.Z = new g(c.Z, {
 		MASKED_LINK_ADD_TRUSTED_DOMAIN: function (e) {
 			let { url: t } = e;
-			if (m(t)) return !1;
+			if (I(t)) return !1;
 			h.add((0, _.F)(t)),
 				u.K.set(f, {
 					trustedDomains: h,

@@ -8,24 +8,7 @@ e.exports = function (e) {
 	return {
 		name: 'Augmented Backus-Naur Form',
 		illegal: /[!@#$^&',?+~`|:]/,
-		keywords: [
-			'ALPHA',
-			'BIT',
-			'CHAR',
-			'CR',
-			'CRLF',
-			'CTL',
-			'DIGIT',
-			'DQUOTE',
-			'HEXDIG',
-			'HTAB',
-			'LF',
-			'LWSP',
-			'OCTET',
-			'SP',
-			'VCHAR',
-			'WSP'
-		],
+		keywords: ['ALPHA', 'BIT', 'CHAR', 'CR', 'CRLF', 'CTL', 'DIGIT', 'DQUOTE', 'HEXDIG', 'HTAB', 'LF', 'LWSP', 'OCTET', 'SP', 'VCHAR', 'WSP'],
 		contains: [
 			{
 				scope: 'operator',

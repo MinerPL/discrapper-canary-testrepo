@@ -10,14 +10,7 @@ let s = a(411496),
 	o = n(a(210646)),
 	d = a(613919),
 	l = a(613919);
-((i = r = e.ICalCalendarMethod || (e.ICalCalendarMethod = {})).PUBLISH = 'PUBLISH'),
-	(i.REQUEST = 'REQUEST'),
-	(i.REPLY = 'REPLY'),
-	(i.ADD = 'ADD'),
-	(i.CANCEL = 'CANCEL'),
-	(i.REFRESH = 'REFRESH'),
-	(i.COUNTER = 'COUNTER'),
-	(i.DECLINECOUNTER = 'DECLINECOUNTER');
+((i = r = e.ICalCalendarMethod || (e.ICalCalendarMethod = {})).PUBLISH = 'PUBLISH'), (i.REQUEST = 'REQUEST'), (i.REPLY = 'REPLY'), (i.ADD = 'ADD'), (i.CANCEL = 'CANCEL'), (i.REFRESH = 'REFRESH'), (i.COUNTER = 'COUNTER'), (i.DECLINECOUNTER = 'DECLINECOUNTER');
 e.default = class t {
 	constructor(t = {}) {
 		(this.data = {
@@ -48,10 +41,7 @@ e.default = class t {
 	prodId(t) {
 		if (!t) return this.data.prodId;
 		if ('string' == typeof t && /^\/\/(.+)\/\/(.+)\/\/([A-Z]{1,4})$/.test(t)) return (this.data.prodId = t), this;
-		if ('string' == typeof t)
-			throw Error(
-				"`prodId` isn't formated correctly. See https://sebbo2002.github.io/ical-generator/develop/reference/classes/icalcalendar.html#prodid"
-			);
+		if ('string' == typeof t) throw Error("`prodId` isn't formated correctly. See https://sebbo2002.github.io/ical-generator/develop/reference/classes/icalcalendar.html#prodid");
 		if ('object' != typeof t) throw Error('`prodid` needs to be a valid formed string or an object!');
 		if (!t.company) throw Error('`prodid.company` is a mandatory item!');
 		if (!t.product) throw Error('`prodid.product` is a mandatory item!');
@@ -59,11 +49,7 @@ e.default = class t {
 		return (this.data.prodId = '//' + t.company + '//' + t.product + '//' + e), this;
 	}
 	method(t) {
-		return void 0 === t
-			? this.data.method
-			: t
-				? ((this.data.method = (0, s.checkEnum)(r, t)), this)
-				: ((this.data.method = null), this);
+		return void 0 === t ? this.data.method : t ? ((this.data.method = (0, s.checkEnum)(r, t)), this) : ((this.data.method = null), this);
 	}
 	name(t) {
 		return void 0 === t ? this.data.name : ((this.data.name = t ? String(t) : null), this);
@@ -73,14 +59,7 @@ e.default = class t {
 	}
 	timezone(t) {
 		var e;
-		return void 0 === t
-			? (null === (e = this.data.timezone) || void 0 === e ? void 0 : e.name) || null
-			: ('string' == typeof t
-					? (this.data.timezone = { name: t })
-					: null === t
-						? (this.data.timezone = null)
-						: (this.data.timezone = t),
-				this);
+		return void 0 === t ? (null === (e = this.data.timezone) || void 0 === e ? void 0 : e.name) || null : ('string' == typeof t ? (this.data.timezone = { name: t }) : null === t ? (this.data.timezone = null) : (this.data.timezone = t), this);
 	}
 	source(t) {
 		return void 0 === t ? this.data.source : ((this.data.source = t || null), this);
@@ -89,19 +68,10 @@ e.default = class t {
 		return void 0 === t ? this.data.url : ((this.data.url = t || null), this);
 	}
 	scale(t) {
-		return void 0 === t
-			? this.data.scale
-			: (null === t ? (this.data.scale = null) : (this.data.scale = t.toUpperCase()), this);
+		return void 0 === t ? this.data.scale : (null === t ? (this.data.scale = null) : (this.data.scale = t.toUpperCase()), this);
 	}
 	ttl(t) {
-		return void 0 === t
-			? this.data.ttl
-			: ((0, s.isMomentDuration)(t)
-					? (this.data.ttl = t.asSeconds())
-					: t && t > 0
-						? (this.data.ttl = t)
-						: (this.data.ttl = null),
-				this);
+		return void 0 === t ? this.data.ttl : ((0, s.isMomentDuration)(t) ? (this.data.ttl = t.asSeconds()) : t && t > 0 ? (this.data.ttl = t) : (this.data.ttl = null), this);
 	}
 	createEvent(t) {
 		let e = t instanceof o.default ? t : new o.default(t, this);
@@ -172,15 +142,8 @@ e.default = class t {
 						let i = this.data.timezone.generator(t);
 						if (!!i) a += i.replace(/\r\n/g, '\n').replace(/\n/g, '\r\n').trim() + '\r\n';
 					}),
-			(null === (e = this.data.timezone) || void 0 === e ? void 0 : e.name) &&
-				(a +=
-					'TIMEZONE-ID:' + this.data.timezone.name + '\r\n' + ('X-WR-TIMEZONE:' + this.data.timezone.name + '\r\n')),
-			this.data.ttl &&
-				(a +=
-					'REFRESH-INTERVAL;VALUE=DURATION:' +
-					(0, s.toDurationString)(this.data.ttl) +
-					'\r\n' +
-					('X-PUBLISHED-TTL:' + (0, s.toDurationString)(this.data.ttl) + '\r\n')),
+			(null === (e = this.data.timezone) || void 0 === e ? void 0 : e.name) && (a += 'TIMEZONE-ID:' + this.data.timezone.name + '\r\n' + ('X-WR-TIMEZONE:' + this.data.timezone.name + '\r\n')),
+			this.data.ttl && (a += 'REFRESH-INTERVAL;VALUE=DURATION:' + (0, s.toDurationString)(this.data.ttl) + '\r\n' + ('X-PUBLISHED-TTL:' + (0, s.toDurationString)(this.data.ttl) + '\r\n')),
 			this.data.events.forEach((t) => (a += t.toString())),
 			(a += (0, s.generateCustomAttributes)(this.data) + 'END:VCALENDAR'),
 			(0, s.foldLines)(a)

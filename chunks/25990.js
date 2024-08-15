@@ -1,6 +1,6 @@
 let r, i, a, s, o, l, u, c, d, _, E, f, h, p;
-var I,
-	m,
+var m,
+	I,
 	T,
 	g,
 	S = n(979554),
@@ -35,17 +35,7 @@ class P extends (g = A.ZP.Store) {
 		return R;
 	}
 	showNotice() {
-		return (
-			void 0 !== r ||
-			void 0 !== o ||
-			void 0 !== l ||
-			void 0 !== u ||
-			void 0 !== c ||
-			void 0 !== d ||
-			void 0 !== a ||
-			void 0 !== s ||
-			void 0 !== i
-		);
+		return void 0 !== r || void 0 !== o || void 0 !== l || void 0 !== u || void 0 !== c || void 0 !== d || void 0 !== a || void 0 !== s || void 0 !== i;
 	}
 	getIsSubmitDisabled() {
 		return void 0 !== l && l.length > v.tPV;
@@ -116,14 +106,14 @@ class P extends (g = A.ZP.Store) {
 	}
 }
 (T = 'UserSettingsAccountStore'),
-	(m = 'displayName') in (I = P)
-		? Object.defineProperty(I, m, {
+	(I = 'displayName') in (m = P)
+		? Object.defineProperty(m, I, {
 				value: T,
 				enumerable: !0,
 				configurable: !0,
 				writable: !0
 			})
-		: (I[m] = T),
+		: (m[I] = T),
 	(t.Z = new P(N.Z, {
 		USER_SETTINGS_ACCOUNT_INIT: C,
 		USER_SETTINGS_MODAL_INIT: C,
@@ -158,9 +148,7 @@ class P extends (g = A.ZP.Store) {
 		},
 		USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM: function (e) {
 			let { item: t } = e;
-			(null == t ? void 0 : t.type) === S.Z.PROFILE_EFFECT
-				? ((f = null), (h = null == t ? void 0 : t.id))
-				: ((h = null), (f = t));
+			(null == t ? void 0 : t.type) === S.Z.PROFILE_EFFECT ? ((f = null), (h = null == t ? void 0 : t.id)) : ((h = null), (f = t));
 		},
 		USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID: function (e) {
 			let { profileEffectId: t } = e;

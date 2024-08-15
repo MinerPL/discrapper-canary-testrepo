@@ -15,10 +15,7 @@ var i,
 	u = n(570140),
 	d = n(973616),
 	_ = n(911955);
-((s = i || (i = {}))[(s.NOT_FETCHED = 0)] = 'NOT_FETCHED'),
-	(s[(s.FETCHING = 1)] = 'FETCHING'),
-	(s[(s.FETCHED = 2)] = 'FETCHED'),
-	(s[(s.FETCH_FAILED = 3)] = 'FETCH_FAILED');
+((s = i || (i = {}))[(s.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (s[(s.FETCHING = 1)] = 'FETCHING'), (s[(s.FETCHED = 2)] = 'FETCHED'), (s[(s.FETCH_FAILED = 3)] = 'FETCH_FAILED');
 let E = new Map(),
 	I = new Map(),
 	m = [],

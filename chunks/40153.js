@@ -42,11 +42,7 @@ function C(e, t) {
 		o()(t.type !== h.eD.ROOT, '[GuildDropTarget] Tried using a root node as a drop target.'),
 		{
 			accept: e,
-			canDrop: (e) =>
-				e.nodeId !== t.id &&
-				(!i || e.type !== h.eD.FOLDER || t.type !== h.eD.FOLDER) &&
-				(e.type !== h.eD.FOLDER || null == t.parentId) &&
-				!0,
+			canDrop: (e) => e.nodeId !== t.id && (!i || e.type !== h.eD.FOLDER || t.type !== h.eD.FOLDER) && (e.type !== h.eD.FOLDER || null == t.parentId) && !0,
 			drop(e) {
 				let { nodeId: l } = e;
 				i && t.type !== h.eD.FOLDER && d.default.track(_.rMx.GUILD_FOLDER_CREATED), u.Z.moveById(l, t.id, n, i);

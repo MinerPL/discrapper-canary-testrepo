@@ -18,8 +18,7 @@ var i = n(735250),
 	c = n(87359);
 function u(e) {
 	let { compact: t, messageGroups: n, groupRange: i, attachments: a, fontSize: s, groupSpacing: c } = e;
-	if (a > n)
-		throw Error('generateMessageSpecs: too many attachments relative to messageGroups: '.concat(n, ', ').concat(a));
+	if (a > n) throw Error('generateMessageSpecs: too many attachments relative to messageGroups: '.concat(n, ', ').concat(a));
 	let u = s / o.yqN.FONT_SIZE_DEFAULT,
 		d = t ? r.iv : r.pk,
 		h = t ? r.Pb : r.XX,

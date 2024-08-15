@@ -18,9 +18,5 @@ function s(e, t) {
 	return null != t && (!!r.e$(t.deny, i.Plq.VIEW_CHANNEL) || (e.isGuildVocal() && r.e$(t.deny, i.Plq.CONNECT)));
 }
 function o(e, t) {
-	return (
-		!(null == t || s(e, t)) &&
-		!!r.e$(t.allow, i.Plq.VIEW_CHANNEL) &&
-		(!e.isGuildVocal() || r.e$(t.allow, i.Plq.CONNECT))
-	);
+	return !(null == t || s(e, t)) && !!r.e$(t.allow, i.Plq.VIEW_CHANNEL) && (!e.isGuildVocal() || r.e$(t.allow, i.Plq.CONNECT));
 }

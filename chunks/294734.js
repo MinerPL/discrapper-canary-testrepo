@@ -49,12 +49,7 @@ function M() {
 function v(e) {
 	let { message: t, snapshot: n, index: d } = e,
 		_ = a.useMemo(() => new g.r(t, n, d), [t, n, d]),
-		E = (0, r.e7)(
-			[T.Z, p.default, C.Z, f.Z, N.Z, u.Z],
-			() => _.getForwardInfo(T.Z, p.default, C.Z, f.Z, N.Z, u.Z).footerInfo,
-			[_],
-			l.Z
-		),
+		E = (0, r.e7)([T.Z, p.default, C.Z, f.Z, N.Z, u.Z], () => _.getForwardInfo(T.Z, p.default, C.Z, f.Z, N.Z, u.Z).footerInfo, [_], l.Z),
 		I = a.useCallback(() => {
 			(0, S.Z)(t);
 		}, [t]);

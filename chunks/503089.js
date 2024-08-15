@@ -211,8 +211,7 @@ class I extends s.PureComponent {
 							l = null != s ? s.stores : null;
 						null != l &&
 							l.forEach((e) => {
-								!this._subscribedStores.includes(e) &&
-									(e.addChangeListener(this.handleNoticeStoreUpdate), this._subscribedStores.push(e));
+								!this._subscribedStores.includes(e) && (e.addChangeListener(this.handleNoticeStoreUpdate), this._subscribedStores.push(e));
 							}),
 							this.setState({
 								...j,
@@ -238,19 +237,7 @@ class I extends s.PureComponent {
 				if (!this._unmounted) (this._intensity = C), this.forceUpdate();
 			}),
 			N(this, 'renderSettingsSectionTabBarItem', (e, t, n) => {
-				let {
-						section: s,
-						label: l = null,
-						ariaLabel: a,
-						onClick: c,
-						color: u,
-						icon: m,
-						className: p,
-						newIndicator: f,
-						newIndicatorDismissibleContentTypes: b,
-						badgeCount: S,
-						searchFilterCount: N
-					} = e,
+				let { section: s, label: l = null, ariaLabel: a, onClick: c, color: u, icon: m, className: p, newIndicator: f, newIndicatorDismissibleContentTypes: b, badgeCount: S, searchFilterCount: N } = e,
 					j = null;
 				null != N && N > 0
 					? (j = (0, i.jsx)(o.NumberBadge, {

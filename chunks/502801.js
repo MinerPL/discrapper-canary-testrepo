@@ -13,22 +13,22 @@ var i = t(735250),
 	r = t(442837),
 	o = t(952265),
 	d = t(481060),
-	u = t(493683),
-	_ = t(700582),
+	_ = t(493683),
+	u = t(700582),
 	s = t(100527),
 	c = t(906732),
 	C = t(933557),
-	A = t(471445),
-	S = t(734307),
+	S = t(471445),
+	A = t(734307),
 	T = t(359110),
 	I = t(814443),
 	L = t(210887),
 	D = t(131704),
 	N = t(699516),
-	U = t(944486),
-	h = t(914010),
-	P = t(594174),
-	R = t(186523),
+	h = t(944486),
+	U = t(914010),
+	R = t(594174),
+	P = t(186523),
 	f = t(553826),
 	g = t(823379),
 	O = t(407316),
@@ -44,7 +44,7 @@ function p(e) {
 		className: H.channelRow,
 		onClick: () => a(n.id),
 		children: [
-			l ? (0, i.jsx)(f.Z, { className: H.radioIcon }) : (0, i.jsx)(R.Z, { className: H.radioIcon }),
+			l ? (0, i.jsx)(f.Z, { className: H.radioIcon }) : (0, i.jsx)(P.Z, { className: H.radioIcon }),
 			(0, i.jsx)(t, {
 				className: H.icon,
 				size: 'xs',
@@ -60,18 +60,18 @@ function p(e) {
 }
 function M(e) {
 	let { guildId: n, selectedChannelId: t, onSelectChannelId: a } = e,
-		o = (0, r.e7)([U.Z], () => U.Z.getChannelId()),
-		{ guildChannels: u } = (0, r.cj)([S.Z], () => S.Z.getGuildWithoutChangingGuildActionRows(n)),
-		_ = l.useMemo(() => {
+		o = (0, r.e7)([h.Z], () => h.Z.getChannelId()),
+		{ guildChannels: _ } = (0, r.cj)([A.Z], () => A.Z.getGuildWithoutChangingGuildActionRows(n)),
+		u = l.useMemo(() => {
 			let e = [];
 			return (
-				u.forEachChannel((n) => {
+				_.forEachChannel((n) => {
 					!1 !== (0, O.W)(n.id) && ((0, D.r8)(n.type) || (0, D.bw)(n.type)) && e.push(n);
 				}),
 				e.sort((e, n) => (e.id === o ? -1 : n.id === o ? 1 : 0))
 			);
-		}, [u, o]);
-	return 0 === _.length
+		}, [_, o]);
+	return 0 === u.length
 		? null
 		: (0, i.jsxs)(i.Fragment, {
 				children: [
@@ -83,13 +83,13 @@ function M(e) {
 						children: m.Z.Messages.CLIP_SHARE_SELECT_CHANNEL
 					}),
 					(0, i.jsx)(d.List, {
-						sections: [_.length],
+						sections: [u.length],
 						sectionHeight: 0,
 						renderRow: (e) => {
 							let { section: n, row: l } = e;
 							if (n > 0) return null;
-							let E = _[l],
-								r = (0, A.KS)(E);
+							let E = u[l],
+								r = (0, S.KS)(E);
 							return null == r
 								? null
 								: (0, i.jsx)(
@@ -103,7 +103,7 @@ function M(e) {
 										E.id
 									);
 						},
-						rowHeight: (e, n) => (e > 0 ? 0 : null != _[n] ? 56 : 0),
+						rowHeight: (e, n) => (e > 0 ? 0 : null != u[n] ? 56 : 0),
 						renderSection: () => null,
 						className: E()(H.channelList, H.contentPadding),
 						fade: !0
@@ -113,12 +113,9 @@ function M(e) {
 }
 function x(e) {
 	let { friends: n, searchQuery: t, disabled: a, onShareClip: o } = e,
-		u = l.useMemo(
-			() => (0 === t.length ? n : n.filter((e) => e.username.toLowerCase().includes(t.toLowerCase()))),
-			[n, t]
-		),
+		_ = l.useMemo(() => (0 === t.length ? n : n.filter((e) => e.username.toLowerCase().includes(t.toLowerCase()))), [n, t]),
 		s = (0, r.e7)([L.Z], () => L.Z.theme);
-	return 0 === u.length
+	return 0 === _.length
 		? (0, i.jsxs)(d.EmptyState, {
 				theme: s,
 				className: H.emptyStateContainer,
@@ -133,19 +130,19 @@ function x(e) {
 				]
 			})
 		: (0, i.jsx)(d.List, {
-				sections: [u.length],
+				sections: [_.length],
 				sectionHeight: 0,
 				renderRow: (e) => {
 					let { section: n, row: t } = e;
 					if (n > 0) return null;
-					let l = u[t],
-						E = u[t].username;
+					let l = _[t],
+						E = _[t].username;
 					return (0, i.jsxs)(
 						'div',
 						{
 							className: H.userRow,
 							children: [
-								(0, i.jsx)(_.Z, { user: l }),
+								(0, i.jsx)(u.Z, { user: l }),
 								(0, i.jsx)(d.Text, {
 									className: H.username,
 									variant: 'text-md/normal',
@@ -168,39 +165,30 @@ function x(e) {
 						l.id
 					);
 				},
-				rowHeight: (e, n) => (e > 0 ? 0 : null != u[n] ? 52 : 0),
+				rowHeight: (e, n) => (e > 0 ? 0 : null != _[n] ? 52 : 0),
 				renderSection: () => null,
 				className: E()(H.friendsList, H.contentPadding),
 				fade: !0
 			});
 }
 function b(e) {
-	let { clip: n, editMetadata: t, transitionState: a, onClose: _ } = e,
-		[C, A] = l.useState(''),
-		[S, L] = l.useState(!1),
-		[D, U] = l.useState(null),
-		R = (0, r.Wu)([N.Z], () => N.Z.getFriendIDs()),
+	let { clip: n, editMetadata: t, transitionState: a, onClose: u } = e,
+		[C, S] = l.useState(''),
+		[A, L] = l.useState(!1),
+		[D, h] = l.useState(null),
+		P = (0, r.Wu)([N.Z], () => N.Z.getFriendIDs()),
 		f = (0, r.Wu)(
-			[I.Z, P.default],
+			[I.Z, R.default],
 			() =>
-				R.map((e) => P.default.getUser(e))
+				P.map((e) => R.default.getUser(e))
 					.filter(g.lm)
 					.sort((e, n) => {
 						var t, i, l, a;
-						return (
-							(null !== (l = null === (t = I.Z.getUserAffinity(n.id)) || void 0 === t ? void 0 : t.affinity) &&
-							void 0 !== l
-								? l
-								: 0) -
-							(null !== (a = null === (i = I.Z.getUserAffinity(e.id)) || void 0 === i ? void 0 : i.affinity) &&
-							void 0 !== a
-								? a
-								: 0)
-						);
+						return (null !== (l = null === (t = I.Z.getUserAffinity(n.id)) || void 0 === t ? void 0 : t.affinity) && void 0 !== l ? l : 0) - (null !== (a = null === (i = I.Z.getUserAffinity(e.id)) || void 0 === i ? void 0 : i.affinity) && void 0 !== a ? a : 0);
 					}),
-			[R]
+			[P]
 		),
-		O = (0, r.e7)([h.Z], () => h.Z.getGuildId()),
+		O = (0, r.e7)([U.Z], () => U.Z.getGuildId()),
 		{ analyticsLocations: Z } = (0, c.ZP)(s.Z.CLIPS_SHARE_MODAL);
 	async function v(e) {
 		let i = null != e ? e : D;
@@ -221,7 +209,7 @@ function b(e) {
 		}
 	}
 	async function p(e) {
-		let n = await u.Z.openPrivateChannel(e);
+		let n = await _.Z.openPrivateChannel(e);
 		await v(n);
 	}
 	return (0, i.jsxs)(d.ModalRoot, {
@@ -243,10 +231,10 @@ function b(e) {
 			(0, i.jsx)(d.SearchBar, {
 				className: H.searchBar,
 				query: C,
-				onChange: A,
+				onChange: S,
 				size: d.SearchBar.Sizes.MEDIUM,
 				onClear: function () {
-					A('');
+					S('');
 				},
 				placeholder: m.Z.Messages.INVITE_SEARCH_FOR_FRIENDS
 			}),
@@ -255,27 +243,27 @@ function b(e) {
 				searchQuery: C,
 				friends: f,
 				onShareClip: p,
-				disabled: S
+				disabled: A
 			}),
 			null != O &&
 				(0, i.jsx)(M, {
 					guildId: O,
 					selectedChannelId: D,
-					onSelectChannelId: U
+					onSelectChannelId: h
 				}),
 			(0, i.jsxs)(d.ModalFooter, {
 				children: [
 					(0, i.jsx)(d.Button, {
 						disabled: null == D,
-						submitting: S,
+						submitting: A,
 						color: d.Button.Colors.BRAND,
 						onClick: () => v(),
 						children: m.Z.Messages.CLIPS_EDIT_SHARE_CLIP
 					}),
 					(0, i.jsx)(d.Button, {
-						submitting: S,
+						submitting: A,
 						look: d.ButtonLooks.LINK,
-						onClick: _,
+						onClick: u,
 						color: d.ButtonColors.PRIMARY,
 						children: m.Z.Messages.BACK
 					})

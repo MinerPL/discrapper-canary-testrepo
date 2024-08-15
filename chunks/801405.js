@@ -18,8 +18,8 @@ var i = n(735250),
 	_ = n(358085),
 	f = n(228488),
 	E = n(981631),
-	g = n(394738);
-let C = () => {
+	C = n(394738);
+let g = () => {
 	l.Z.wait(() => u.xv(E.KJ3.CHANNEL_CALL_POPOUT));
 };
 function I(e) {
@@ -61,8 +61,7 @@ function I(e) {
 		R = v === E.WtW.VIDEO && S && !b,
 		j = a.useCallback(
 			(e, i) => {
-				i !== e &&
-					(r.Z.updateLayout(t.id, i, n), i === E.AEg.FULL_SCREEN && t.isPrivate() && p.S.dispatch(E.CkL.TEXTAREA_BLUR));
+				i !== e && (r.Z.updateLayout(t.id, i, n), i === E.AEg.FULL_SCREEN && t.isPrivate() && p.S.dispatch(E.CkL.TEXTAREA_BLUR));
 			},
 			[n, t]
 		),
@@ -110,14 +109,14 @@ function I(e) {
 		null != M && T.current === E.WtW.VIDEO && v === E.WtW.VOICE && (0, f.Pr)(M, A);
 	}, [A, v, T, M]),
 	a.useEffect(() => {
-		!S && x && C();
+		!S && x && g();
 	}, [S, x]),
 	R)
 		? (0, i.jsx)(d.Z, {
 				themeable: !1,
 				node: M,
 				guestWindow: u,
-				className: g.rightTrayIcon,
+				className: C.rightTrayIcon,
 				onClick: P(N)
 			})
 		: null;

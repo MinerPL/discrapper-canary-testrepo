@@ -45,20 +45,12 @@ let d = (e, t) => {
 			.filter((e) => {
 				var t, n;
 				let [i] = e,
-					r =
-						null === (n = i.application.embeddedActivityConfig) || void 0 === n
-							? void 0
-							: null === (t = n.client_platform_config[(0, u.Z)((0, o.getOS)())]) || void 0 === t
-								? void 0
-								: t.label_type;
+					r = null === (n = i.application.embeddedActivityConfig) || void 0 === n ? void 0 : null === (t = n.client_platform_config[(0, u.Z)((0, o.getOS)())]) || void 0 === t ? void 0 : t.label_type;
 				return !!r && (r === l.ww.NEW || r === l.ww.UPDATED);
 			})
 			.forEach((e) => {
 				let [t, i] = e,
-					l =
-						null != t.application.embeddedActivityConfig && null != t.application.embeddedActivityConfig.shelf_rank
-							? t.application.embeddedActivityConfig.shelf_rank - 1
-							: i;
+					l = null != t.application.embeddedActivityConfig && null != t.application.embeddedActivityConfig.shelf_rank ? t.application.embeddedActivityConfig.shelf_rank - 1 : i;
 				if (l < i) {
 					let e = n[i];
 					n.splice(i, 1), (n = [...n.slice(0, l), e, ...n.slice(l)]);

@@ -107,10 +107,10 @@ function l(e, t, n) {
 										f = o,
 										h = _.minRanking,
 										p = _.maxRanking,
-										I = _.threshold;
+										m = _.threshold;
 									return (
 										E < h && E >= s.MATCHES ? (E = h) : E > p && (E = p),
-										E > a && ((a = E), (l = r), (c = I), (f = d)),
+										E > a && ((a = E), (l = r), (c = m), (f = d)),
 										{
 											rankedValue: f,
 											rank: a,

@@ -7,10 +7,7 @@ var r = n(573654);
 function i(e, t) {
 	for (var n = 0; n < t.length; n++) {
 		var r = t[n];
-		(r.enumerable = r.enumerable || !1),
-			(r.configurable = !0),
-			'value' in r && (r.writable = !0),
-			Object.defineProperty(e, r.key, r);
+		(r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
 	}
 }
 function o(e, t, n) {
@@ -62,10 +59,7 @@ var u = !1,
 					key: 'canDrop',
 					value: function () {
 						if (!this.targetId) return !1;
-						(0, r.k)(
-							!u,
-							'You may not call monitor.canDrop() inside your canDrop() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target-monitor'
-						);
+						(0, r.k)(!u, 'You may not call monitor.canDrop() inside your canDrop() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target-monitor');
 						try {
 							return (u = !0), this.internalMonitor.canDropOnTarget(this.targetId);
 						} finally {

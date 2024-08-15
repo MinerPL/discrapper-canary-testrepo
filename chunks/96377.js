@@ -19,8 +19,8 @@ t.Z = {
 			f = e.name,
 			h = n.mainAxis,
 			p = n.altAxis,
-			I = n.boundary,
-			m = n.rootBoundary,
+			m = n.boundary,
+			I = n.rootBoundary,
 			T = n.altBoundary,
 			g = n.padding,
 			S = n.tether,
@@ -28,8 +28,8 @@ t.Z = {
 			N = n.tetherOffset,
 			v = void 0 === N ? 0 : N,
 			O = (0, c.Z)(t, {
-				boundary: I,
-				rootBoundary: m,
+				boundary: m,
+				rootBoundary: I,
 				padding: g,
 				altBoundary: T
 			}),
@@ -104,8 +104,8 @@ t.Z = {
 					ef = null != (es = null == x ? void 0 : x[L]) ? es : 0,
 					eh = eE ? ed : eu - M[ec] - P[ec] - ef + w.altAxis,
 					ep = eE ? eu + M[ec] + P[ec] - ef - w.altAxis : e_,
-					eI = A && eE ? (0, o.q)(eh, eu, ep) : (0, o.u)(A ? eh : ed, eu, A ? ep : e_);
-				(b[L] = eI), (G[L] = eI - eu);
+					em = A && eE ? (0, o.q)(eh, eu, ep) : (0, o.u)(A ? eh : ed, eu, A ? ep : e_);
+				(b[L] = em), (G[L] = em - eu);
 			}
 			t.modifiersData[f] = G;
 		}

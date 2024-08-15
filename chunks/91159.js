@@ -1,6 +1,6 @@
 n.d(t, {
 	A_: function () {
-		return m;
+		return I;
 	},
 	Ok: function () {
 		return A;
@@ -33,19 +33,19 @@ var r = n(913527),
 	f = n(569471),
 	h = n(814391),
 	p = n(124368),
-	I = n(981631);
-function m() {
-	(0, s.yw)(I.rMx.THREAD_BROWSER_TAB_CHANGED);
+	m = n(981631);
+function I() {
+	(0, s.yw)(m.rMx.THREAD_BROWSER_TAB_CHANGED);
 }
 function T() {
 	let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'Modal';
-	(0, s.yw)(I.rMx.OPEN_MODAL, {
+	(0, s.yw)(m.rMx.OPEN_MODAL, {
 		type: 'Thread Browser',
 		location_section: e
 	});
 }
 function g() {
-	c.default.track(I.rMx.OPEN_POPOUT, { type: 'Active Threads Popout' });
+	c.default.track(m.rMx.OPEN_POPOUT, { type: 'Active Threads Popout' });
 }
 function S(e, t) {
 	var n, r;
@@ -55,13 +55,13 @@ function S(e, t) {
 		s = e.parent_id,
 		l = (0, _.I)(a, s),
 		E = (e) => {
-			if ((0, d.yE)(e, p.iN.ALL_MESSAGES)) return _.$R[I.bL.ALL_MESSAGES];
-			if ((0, d.yE)(e, p.iN.ONLY_MENTIONS)) return _.$R[I.bL.ONLY_MENTIONS];
-			if ((0, d.yE)(e, p.iN.NO_MESSAGES)) return _.$R[I.bL.NO_MESSAGES];
-			return _.$R[I.bL.NULL];
+			if ((0, d.yE)(e, p.iN.ALL_MESSAGES)) return _.$R[m.bL.ALL_MESSAGES];
+			if ((0, d.yE)(e, p.iN.ONLY_MENTIONS)) return _.$R[m.bL.ONLY_MENTIONS];
+			if ((0, d.yE)(e, p.iN.NO_MESSAGES)) return _.$R[m.bL.NO_MESSAGES];
+			return _.$R[m.bL.NULL];
 		},
 		h = null !== (n = f.Z.flags(e.id)) && void 0 !== n ? n : 0,
-		m = E(h),
+		I = E(h),
 		T = f.Z.isMuted(e.id),
 		g = (0, _.sK)(f.Z.getMuteConfig(e.id)),
 		{ can_send_message: S, ...A } = i,
@@ -73,15 +73,15 @@ function S(e, t) {
 			channel_type: e.type,
 			has_interacted_with_thread: (h & p.iN.HAS_INTERACTED) != 0,
 			parent_is_muted: u.ZP.isGuildOrCategoryOrChannelMuted(a, s),
-			old_thread_notification_setting: m,
-			new_thread_notification_setting: null != t.flags ? E(t.flags) : m,
+			old_thread_notification_setting: I,
+			new_thread_notification_setting: null != t.flags ? E(t.flags) : I,
 			parent_notification_setting: l.channel_message_notification_settings,
 			old_thread_is_muted: T,
 			new_thread_is_muted: null !== (r = t.muted) && void 0 !== r ? r : T,
 			old_thread_muted_until: g,
 			new_thread_muted_until: null != t.mute_config ? (0, _.sK)(t.mute_config) : g
 		};
-	c.default.track(I.rMx.THREAD_NOTIFICATION_SETTINGS_UPDATED, N);
+	c.default.track(m.rMx.THREAD_NOTIFICATION_SETTINGS_UPDATED, N);
 }
 n(689938);
 let A = (e) => {

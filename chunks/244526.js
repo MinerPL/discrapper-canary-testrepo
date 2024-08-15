@@ -112,14 +112,7 @@ class A extends (r = l.PureComponent) {
 		);
 	}
 	render() {
-		let {
-				isDefault: e,
-				paymentSource: s,
-				showSubtext: t,
-				isForSubscription: n,
-				showPaymentSourceIcon: a,
-				showLabels: i
-			} = this.props,
+		let { isDefault: e, paymentSource: s, showSubtext: t, isForSubscription: n, showPaymentSourceIcon: a, showLabels: i } = this.props,
 			r = this.renderSubText();
 		return (0, o.jsxs)(u.Z, {
 			children: [

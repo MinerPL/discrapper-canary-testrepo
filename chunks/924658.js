@@ -7,8 +7,7 @@ e.exports = Object.freeze({
 	GO_LIVE_MODAL_SELECT_GUILD_FORM_TITLE: 'Select a server for your stream',
 	GO_LIVE_MODAL_GUILD_FORM_TITLE: "Where you're streaming",
 	OVERLAY_NEWS_GO_LIVE_BODY_NO_VOICE_CHANNEL: 'Stream {game} to your friends!',
-	SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE:
-		'$[!!{username}!!](usernameHook) is live! Now streaming !!{activityName}!!. [Join Stream](onJoinStream)',
+	SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE: '$[!!{username}!!](usernameHook) is live! Now streaming !!{activityName}!!. [Join Stream](onJoinStream)',
 	SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE_MOBILE: '[!!{username}!!](usernameOnClick) is live. [Join Stream](onJoinStream)',
 	SYSTEM_MESSAGE_GUILD_STREAM_ENDED: '$[!!{username}!!](usernameHook) was live for {duration} in !!{channelName}!!',
 	SYSTEM_MESSAGE_GUILD_STREAM_ENDED_MOBILE: '[!!{username}!!](usernameOnClick) was live for {duration}.',
@@ -16,11 +15,9 @@ e.exports = Object.freeze({
 	PROGRESS_STEPS_FINISHED: 'Completed!',
 	MESSAGE_STEP_TITLE: 'Send your first message',
 	CHANNEL_PERMISSIONS_READ_ONLY_TITLE: 'Read Only',
-	CHANNEL_PERMISSIONS_READ_ONLY_DESCRIPTION:
-		'By making a channel read only, members will not be able to send messages.',
+	CHANNEL_PERMISSIONS_READ_ONLY_DESCRIPTION: 'By making a channel read only, members will not be able to send messages.',
 	ROLE_CREATE_ADD_MEMBERS_SUBTITLE: 'Assign this role to your members. Members can have more than one role.',
-	INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM_BY_USER:
-		'**!!{username}!!** has invited you to join a group DM',
+	INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM_BY_USER: '**!!{username}!!** has invited you to join a group DM',
 	INVITE_MODAL_NEVERMIND_BUTTON: 'Nevermind',
 	INVITE_APP_GMAIL: 'Gmail',
 	INVITE_APP_WHATSAPP: 'WhatsApp',
@@ -30,37 +27,27 @@ e.exports = Object.freeze({
 	INVITE_APP_TELEGRAM: 'Telegram',
 	INVITE_SEND_ERROR: 'Message Failed',
 	INVITE_MESSAGE_PLACEHOLDER: 'hey come check out Discord with me !!{link}!!',
-	INVITE_URGENT_DAYS_MESSAGE_PLACEHOLDER:
-		'hey join me on Discord! Invite expires in {numDays, plural, one {1 day} other {{numDays} days}}. !!{link}!!',
-	INVITE_URGENT_HOURS_MESSAGE_PLACEHOLDER:
-		'hey join me on Discord! Invite expires in {numHours, plural, one {1 hour} other {{numHours} hours}}. !!{link}!!',
-	INVITE_URGENT_MINUTES_PLACEHOLDER:
-		'hey join me on Discord! Invite expires in {numMinutes, plural, one {1 minute} other {{numMinutes} minutes}}. !!{link}!!',
+	INVITE_URGENT_DAYS_MESSAGE_PLACEHOLDER: 'hey join me on Discord! Invite expires in {numDays, plural, one {1 day} other {{numDays} days}}. !!{link}!!',
+	INVITE_URGENT_HOURS_MESSAGE_PLACEHOLDER: 'hey join me on Discord! Invite expires in {numHours, plural, one {1 hour} other {{numHours} hours}}. !!{link}!!',
+	INVITE_URGENT_MINUTES_PLACEHOLDER: 'hey join me on Discord! Invite expires in {numMinutes, plural, one {1 minute} other {{numMinutes} minutes}}. !!{link}!!',
 	INVITE_EXPIRATION_NOTICE: 'Invite expires in **!!{duration}!!.**',
 	SYSTEM_MESSAGE_INVITE_USERS_OWNER: 'Wondering who to invite?',
 	SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION_OWNER: 'Start by inviting anyone who can help you build the server!',
-	SYSTEM_MESSAGE_INVITE_NOTIFICATION:
-		'Wondering who to invite? Start by inviting anyone who can help you build the server!',
+	SYSTEM_MESSAGE_INVITE_NOTIFICATION: 'Wondering who to invite? Start by inviting anyone who can help you build the server!',
 	SYSTEM_MESSAGE_INVITE_USERS: 'Invite your friends',
 	SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION: 'The best way to setup a server is with your buddies!',
 	SYSTEM_MESSAGE_INVITE_USERS_BUTTON: 'Send an Invite',
-	SYSTEM_MESSAGE_INVITE_USERS_OWNER_COMPACT:
-		'**Wondering who to invite?** Start by inviting anyone who can help you build the server! $[Send an invite](inviteHook)',
-	SYSTEM_MESSAGE_INVITE_USERS_COMPACT:
-		'**Invite your friends!** The best way to setup a server is with your buddies! $[Send an invite](inviteHook)',
+	SYSTEM_MESSAGE_INVITE_USERS_OWNER_COMPACT: '**Wondering who to invite?** Start by inviting anyone who can help you build the server! $[Send an invite](inviteHook)',
+	SYSTEM_MESSAGE_INVITE_USERS_COMPACT: '**Invite your friends!** The best way to setup a server is with your buddies! $[Send an invite](inviteHook)',
 	SOUNDPACK_LABEL: 'Sound Pack',
 	SOUNDPACK_CLASSIC_LABEL: 'classic',
 	SOUNDPACK_DETUNE_LABEL: "discord but something's off",
 	STAGE_INSTANCE_TICKET_PURCHASE_CONFIRMATION_TITLE: "You're in.",
-	UPCOMING_GUILD_STAGE_INSTANCE_DISCOVERY_EMPTY_STATE_SUB_TITLE:
-		'Let people know what\u2019s happening by scheduling an upcoming Stage.\nIt will show up here for everyone in this server.',
-	DELETE_STAGE_EVENT_CONFIRMATION_DESCRIPTION:
-		'Are you sure you want to delete **!!{eventName}!!**? This action cannot be undone.',
+	UPCOMING_GUILD_STAGE_INSTANCE_DISCOVERY_EMPTY_STATE_SUB_TITLE: 'Let people know what\u2019s happening by scheduling an upcoming Stage.\nIt will show up here for everyone in this server.',
+	DELETE_STAGE_EVENT_CONFIRMATION_DESCRIPTION: 'Are you sure you want to delete **!!{eventName}!!**? This action cannot be undone.',
 	CREATE_STAGE_INSTANCE_SELECT_GUILD_HEADER: "Where's the party?",
-	GUILD_STAGES_LANDING_MOBILE_SUBTITLE:
-		"Visit this link on your desktop to buy a ticket. Once you have a ticket, you'll be able to attend the event on desktop or mobile.",
-	GET_MOBILE_APP_SUBTITLE:
-		"Discord isn't supported on mobile web browsers. Join over 100 million people who use Discord to talk with communities and friends.",
+	GUILD_STAGES_LANDING_MOBILE_SUBTITLE: "Visit this link on your desktop to buy a ticket. Once you have a ticket, you'll be able to attend the event on desktop or mobile.",
+	GET_MOBILE_APP_SUBTITLE: "Discord isn't supported on mobile web browsers. Join over 100 million people who use Discord to talk with communities and friends.",
 	MOBILE_APP_DOWNLOAD_CTA: 'Get our mobile app',
 	MOBILE_APP_DOWNLOAD_SUBHEADER: 'Keep the conversion going on our iOS or Android app.',
 	QR_CODE_DOWNLOAD_CTA: 'Scan this QR code for an easy download link for our iOS or Android apps.',
@@ -71,28 +58,17 @@ e.exports = Object.freeze({
 	DESKTOP_DOWNLOAD_TITLE: 'Discord for desktop',
 	GUILD_SETTINGS_AUDIT_LOG_V2_FILTER: 'Filters',
 	GUILD_SETTINGS_AUDIT_LOG_V2_SORT: 'Sort by Date',
-	GUILD_SETTINGS_AUDIT_LOG_V2_MEMBER_BAN_ADD:
-		'$[**!!{user}!!**](userHook) banned $[**!!{target}!!**](targetHook): "!!{reason}!!"',
-	GUILD_SETTINGS_AUDIT_LOG_V2_PRIVATE_THREAD_CREATE:
-		'$[**!!{user}!!**](userHook) created a private thread $["!!{target}!!"](targetHook)',
-	GUILD_SETTINGS_AUDIT_LOG_V2_ANNOUNCEMENT_THREAD_CREATE:
-		'$[**!!{user}!!**](userHook) created an announcement thread $["!!{target}!!"](targetHook)',
-	GUILD_SETTINGS_AUDIT_LOG_V2_THREAD_CREATE:
-		'$[**!!{user}!!**](userHook) created a thread $["!!{target}!!"](targetHook)',
-	GUILD_SETTINGS_AUDIT_LOG_V2_THREAD_UPDATE:
-		'$[**!!{user}!!**](userHook) made changes to the thread $["!!{target}!!"](targetHook)',
-	GUILD_SETTINGS_AUDIT_LOG_V2_THREAD_DELETE:
-		'$[**!!{user}!!**](userHook) deleted the thread $["!!{target}!!"](targetHook)',
-	GUILD_SETTINGS_AUDIT_LOG_V2_SCHEDULED_EVENT_CREATE:
-		'$[**!!{user}!!**](userHook) scheduled the event $["!!{target}!!"](targetHook)',
-	GUILD_SETTINGS_AUDIT_LOG_V2_SCHEDULED_EVENT_UPDATE:
-		'$[**!!{user}!!**](userHook) updated the scheduled event $["!!{target}!!"](targetHook)',
-	GUILD_SETTINGS_AUDIT_LOG_V2_SCHEDULED_EVENT_DELETE:
-		'$[**!!{user}!!**](userHook) canceled the scheduled event $["!!{target}!!"](targetHook)',
-	GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_QUARANTINE_USER:
-		'AutoMod quarantined $[**!!{user}!!**](userHook) for violating content in their user profile',
-	GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_FLAGGED_USER_PROFILE:
-		'AutoMod flagged $[**!!{user}!!**](userHook) for violating content in their user profile',
+	GUILD_SETTINGS_AUDIT_LOG_V2_MEMBER_BAN_ADD: '$[**!!{user}!!**](userHook) banned $[**!!{target}!!**](targetHook): "!!{reason}!!"',
+	GUILD_SETTINGS_AUDIT_LOG_V2_PRIVATE_THREAD_CREATE: '$[**!!{user}!!**](userHook) created a private thread $["!!{target}!!"](targetHook)',
+	GUILD_SETTINGS_AUDIT_LOG_V2_ANNOUNCEMENT_THREAD_CREATE: '$[**!!{user}!!**](userHook) created an announcement thread $["!!{target}!!"](targetHook)',
+	GUILD_SETTINGS_AUDIT_LOG_V2_THREAD_CREATE: '$[**!!{user}!!**](userHook) created a thread $["!!{target}!!"](targetHook)',
+	GUILD_SETTINGS_AUDIT_LOG_V2_THREAD_UPDATE: '$[**!!{user}!!**](userHook) made changes to the thread $["!!{target}!!"](targetHook)',
+	GUILD_SETTINGS_AUDIT_LOG_V2_THREAD_DELETE: '$[**!!{user}!!**](userHook) deleted the thread $["!!{target}!!"](targetHook)',
+	GUILD_SETTINGS_AUDIT_LOG_V2_SCHEDULED_EVENT_CREATE: '$[**!!{user}!!**](userHook) scheduled the event $["!!{target}!!"](targetHook)',
+	GUILD_SETTINGS_AUDIT_LOG_V2_SCHEDULED_EVENT_UPDATE: '$[**!!{user}!!**](userHook) updated the scheduled event $["!!{target}!!"](targetHook)',
+	GUILD_SETTINGS_AUDIT_LOG_V2_SCHEDULED_EVENT_DELETE: '$[**!!{user}!!**](userHook) canceled the scheduled event $["!!{target}!!"](targetHook)',
+	GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_QUARANTINE_USER: 'AutoMod quarantined $[**!!{user}!!**](userHook) for violating content in their user profile',
+	GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_FLAGGED_USER_PROFILE: 'AutoMod flagged $[**!!{user}!!**](userHook) for violating content in their user profile',
 	DEV_NOTICE_LOCAL: 'Local development mode',
 	DEV_NOTICE_STAGING: 'Staging {buildNumber}',
 	NOTIF_CENTER_V2_VIEW_SUMMARY: 'Join in!',
@@ -102,10 +78,8 @@ e.exports = Object.freeze({
 	NOTIFICATION_REPORT_IRRELEVANT_TOPIC: "Topic isn't relevant to me",
 	NOTIFICATION_REPORT_SENSITIVE_OR_OFFENSIVE_TOPIC: 'Topic is sensitive or offensive',
 	HIGHLIGHT_NOTIFICATION_SETTINGS_LABEL_SUPPRESS_HIGHLIGHTS: 'Suppress Highlights in this server',
-	HIGHLIGHT_NOTIFICATION_ACTIONSHEET_BODY:
-		'Stay informed, without the noise! Highlights provide occasional updates when your friends are chatting in busy servers. [Learn more]({helpUrl})',
-	GUILD_SETTINGS_PARTNER_CHECKLIST_LOADING_FAILED:
-		'We are having trouble loading the requirements. Please check back later.',
+	HIGHLIGHT_NOTIFICATION_ACTIONSHEET_BODY: 'Stay informed, without the noise! Highlights provide occasional updates when your friends are chatting in busy servers. [Learn more]({helpUrl})',
+	GUILD_SETTINGS_PARTNER_CHECKLIST_LOADING_FAILED: 'We are having trouble loading the requirements. Please check back later.',
 	GUILD_SETTINGS_PARTNER_CHECKLIST_LOADING_FAILED_TOOLTIP: 'Something went wrong. Please check back later',
 	PURCHASE_REVIEW_TAX_LABEL: 'Tax',
 	ONE_TIME_PURCHASE_FINE_PRINT: 'This purchase is non-refundable.',
@@ -124,10 +98,8 @@ e.exports = Object.freeze({
 	DIRECTORY_CATEGORY_INTERNAL_5: 'Archives',
 	GUILD_DISCOVERY_SEARCH_PLACEHOLDER_TAGS: 'Explore communities, or try popular tags below',
 	GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER_TAGS: 'Explore {categoryName} servers, or try popular tags below',
-	CHANNEL_CHAT_NOTIFICATION_SETTINGS_NOTICE_MUTED:
-		'You will not be notified of new messages because **!!{name}!!** is muted.',
-	CHANNEL_CHAT_NOTIFICATION_SETTINGS_NOTICE_ONLY_MENTIONS:
-		'You will only be notified when you are mentioned because **!!{name}!!** is set to **Only @mentions**.',
+	CHANNEL_CHAT_NOTIFICATION_SETTINGS_NOTICE_MUTED: 'You will not be notified of new messages because **!!{name}!!** is muted.',
+	CHANNEL_CHAT_NOTIFICATION_SETTINGS_NOTICE_ONLY_MENTIONS: 'You will only be notified when you are mentioned because **!!{name}!!** is set to **Only @mentions**.',
 	NOTIFICATION_SETTINGS_UNREAD_MENTION_ONLY_DISABLED: 'Disabled when notification is set to all messages',
 	NOTIFICATION_SETTINGS_UNREAD_UPDATE_WARNING: 'This will update unread badges to all messages',
 	GUILD_JOIN_FEEDBACK_HEADER: 'How is !!{guildName}!! going?',
@@ -137,32 +109,26 @@ e.exports = Object.freeze({
 	GUILD_JOIN_FEEDBACK_NO_ACCESS: 'I could not get full access to the server',
 	GUILD_JOIN_FEEDBACK_ACCESS_TOO_HARD: 'I got full access to the server, but gaining access was too hard',
 	GUILD_JOIN_FEEDBACK_WHAT_DO: "I don't know what to do here",
-	GUILD_JOIN_FEEDBACK_PERSONAL_EXPERIENCE:
-		'I had a negative personal experience upon joining due to another server member(s)',
+	GUILD_JOIN_FEEDBACK_PERSONAL_EXPERIENCE: 'I had a negative personal experience upon joining due to another server member(s)',
 	GUILD_JOIN_FEEDBACK_REPORT: 'Thanks for your feedback! Feedback like yours helps us improve Discord servers.',
 	GET_STARTED: 'Get Started',
 	FEATURED_CHANNELS: 'Featured Channels',
 	TOP_CHANNELS: 'Top Channels',
 	CHANNELS_YOU_SHOULD_CHECK_OUT: 'Channels you should check out',
 	MEMBER_INSIGHTS_SERVER_ACCESS: 'New Members',
-	MEMBER_INSIGHTS_ACCESS_RATE_TOOLTIP:
-		"7 day average percentage of non-bot new members who fail to access the community's channels (updated daily). You should aim for <10%.",
+	MEMBER_INSIGHTS_ACCESS_RATE_TOOLTIP: "7 day average percentage of non-bot new members who fail to access the community's channels (updated daily). You should aim for <10%.",
 	MEMBER_INSIGHTS_ACCESS_RATING_BAD: 'Your server is $[very hard to join](ratingHook)',
 	MEMBER_INSIGHTS_ACCESS_RATING_NEUTRAL: 'Your server is $[hard to join](ratingHook)',
 	MEMBER_INSIGHTS_ACCESS_RATING_GOOD: 'Your server is $[easy to join, but could be better](ratingHook)',
 	MEMBER_INSIGHTS_ACCESS_RATING_VERY_GOOD: 'Your server is $[easy to join](ratingHook)',
-	MEMBER_INSIGHTS_ACCESS_RATING_APPROX:
-		'Approximately {accessRate}% of new members fail to get access to your channels.',
+	MEMBER_INSIGHTS_ACCESS_RATING_APPROX: 'Approximately {accessRate}% of new members fail to get access to your channels.',
 	MEMBER_INSIGHTS_ACCESS_RATING_MORE: 'More than {accessRate}% of new members fail to get access to your channels.',
 	MEMBER_INSIGHTS_ACCESS_RATING_LESS: 'Fewer than {accessRate}% of new members fail to get access to your channels.',
 	MEMBER_INSIGHTS_TIPS: 'Improve **New Member Retention** with these tips',
-	ACCESS_RATE_ACTION_SUCCESS:
-		'Great job! Check out **$[more insights](insightsHook)** to continue to improve your server.',
-	ACCESS_RATE_ACTION_SIMPLIFY:
-		'If you have verification steps for new members,  make instructions clearer for people less\n  familiar with Discord.',
+	ACCESS_RATE_ACTION_SUCCESS: 'Great job! Check out **$[more insights](insightsHook)** to continue to improve your server.',
+	ACCESS_RATE_ACTION_SIMPLIFY: 'If you have verification steps for new members,  make instructions clearer for people less\n  familiar with Discord.',
 	ACCESS_RATE_ACTION_EXTRA_STEPS: 'Remove unnecessary verification steps, so members can check out your community.',
-	ACCESS_RATE_ACTION_BOTS:
-		'If your server is using $[third party integrations](integrationsHook) to restrict access, switch to integrations that are easier to understand.',
+	ACCESS_RATE_ACTION_BOTS: 'If your server is using $[third party integrations](integrationsHook) to restrict access, switch to integrations that are easier to understand.',
 	ACCESS_RATE_ACTION_AUDIT: "Audit your server's onboarding as a new member. Look for any broken or confusing steps.",
 	USER_SETTINGS_CHOOSE_GUILD_TITLE: 'Choose a server',
 	USER_SETTINGS_OTHER_QUICK_ACTIONS: 'Other Actions',
@@ -185,30 +151,18 @@ e.exports = Object.freeze({
 	CONSOLE_PLAYSTATION_STAGING_JOIN_VOICE: 'Join on PlayStation (sp-int)',
 	SEARCH_EVERYWHERE: 'Search Everywhere',
 	SEARCH_FAVORITES: 'Search Favorites',
-	ROLE_PERMISSIONS_CONNECT_DESCRIPTION_THREADS:
-		"Allows members to talk in voice and hear others in this channel's threads.",
-	ROLE_PERMISSIONS_CONNECT_DESCRIPTION_THREADS_EVERYONE:
-		"Allows members to talk in voice and hear others in this channel's threads.",
-	ROLE_PERMISSIONS_SPEAK_DESCRIPTION_THREADS:
-		"Allows members to talk in voice in this channel's threads. If this permission is disabled, members are default muted until somebody with the \u201CMute Members\u201D permission un-mutes them.",
-	ROLE_PERMISSIONS_STREAM_DESCRIPTION_THREADS:
-		"Allows members to share their video, screen share, or stream a game in this channel's threads.",
-	ROLE_PERMISSIONS_USE_VAD_DESCRIPTION_THREADS:
-		"Allows members to speak in this channel's threads by simply talking. If this permission is disabled, members are required to use Push-to-talk. Good for controlling background noise or noisy members.",
-	ROLE_PERMISSIONS_PRIORITY_SPEAKER_DESCRIPTION_THREADS:
-		"Allows members to be more easily heard in this channel's threads. When activated, the volume of others without this permission will be automatically lowered. Priority Speaker is activated by using the **[{keybind}](onClick)** keybind.",
-	ROLE_PERMISSIONS_PRIORITY_SPEAKER_DESCRIPTION_THREADS_MOBILE:
-		"Allows members to be more easily heard in this channel's threads. When activated, the volume of others without this permission will be automatically lowered. Priority Speaker is activated by using the **{keybind}** keybind.",
-	ROLE_PERMISSIONS_MUTE_MEMBERS_DESCRIPTION_THREADS:
-		"Allows members to mute other members in this channel's threads for everyone.",
-	ROLE_PERMISSIONS_DEAFEN_MEMBERS_DESCRIPTION_THREADS:
-		"Allows members to deafen other members in this channel's threads, which means they won\u2019t be able to speak or hear others.",
-	ROLE_PERMISSIONS_MOVE_MEMBERS_DESCRIPTION_THREADS:
-		"Allows members to disconnect other members from this channel's threads. They will also be able to move somebody into other channels that they have this permission in.",
-	ROLE_PERMISSIONS_USE_EMBEDDED_ACTIVITIES_DESCRIPTION_THREADS:
-		"Allows members to use Activities in this channel's threads.",
-	ROLE_PERMISSIONS_USE_EXTERNAL_APPS_DESCRIPTION_THREADS:
-		"Allows members to use External Apps in this channel's threads.",
+	ROLE_PERMISSIONS_CONNECT_DESCRIPTION_THREADS: "Allows members to talk in voice and hear others in this channel's threads.",
+	ROLE_PERMISSIONS_CONNECT_DESCRIPTION_THREADS_EVERYONE: "Allows members to talk in voice and hear others in this channel's threads.",
+	ROLE_PERMISSIONS_SPEAK_DESCRIPTION_THREADS: "Allows members to talk in voice in this channel's threads. If this permission is disabled, members are default muted until somebody with the \u201CMute Members\u201D permission un-mutes them.",
+	ROLE_PERMISSIONS_STREAM_DESCRIPTION_THREADS: "Allows members to share their video, screen share, or stream a game in this channel's threads.",
+	ROLE_PERMISSIONS_USE_VAD_DESCRIPTION_THREADS: "Allows members to speak in this channel's threads by simply talking. If this permission is disabled, members are required to use Push-to-talk. Good for controlling background noise or noisy members.",
+	ROLE_PERMISSIONS_PRIORITY_SPEAKER_DESCRIPTION_THREADS: "Allows members to be more easily heard in this channel's threads. When activated, the volume of others without this permission will be automatically lowered. Priority Speaker is activated by using the **[{keybind}](onClick)** keybind.",
+	ROLE_PERMISSIONS_PRIORITY_SPEAKER_DESCRIPTION_THREADS_MOBILE: "Allows members to be more easily heard in this channel's threads. When activated, the volume of others without this permission will be automatically lowered. Priority Speaker is activated by using the **{keybind}** keybind.",
+	ROLE_PERMISSIONS_MUTE_MEMBERS_DESCRIPTION_THREADS: "Allows members to mute other members in this channel's threads for everyone.",
+	ROLE_PERMISSIONS_DEAFEN_MEMBERS_DESCRIPTION_THREADS: "Allows members to deafen other members in this channel's threads, which means they won\u2019t be able to speak or hear others.",
+	ROLE_PERMISSIONS_MOVE_MEMBERS_DESCRIPTION_THREADS: "Allows members to disconnect other members from this channel's threads. They will also be able to move somebody into other channels that they have this permission in.",
+	ROLE_PERMISSIONS_USE_EMBEDDED_ACTIVITIES_DESCRIPTION_THREADS: "Allows members to use Activities in this channel's threads.",
+	ROLE_PERMISSIONS_USE_EXTERNAL_APPS_DESCRIPTION_THREADS: "Allows members to use External Apps in this channel's threads.",
 	FOR_LATER: 'For Later',
 	SAVE_FOR_LATER: 'Save for Later',
 	FOR_LATER_TAB_ALL: 'All',
@@ -224,6 +178,7 @@ e.exports = Object.freeze({
 	MESSAGE_REMINDERS_HEADER: 'Message Reminders',
 	MESSAGE_REMINDERS_HEADER_MOBILE: 'Reminders',
 	MESSAGE_REMINDERS_CREATE: 'Create Reminder',
+	MESSAGE_REMINDERS_SET_CUSTOM: 'Set Custom Reminder',
 	MESSAGE_REMINDERS_REMIND_ME: 'Remind Me',
 	MESSAGE_REMINDERS_EDIT: 'Edit Reminder',
 	MESSAGE_REMINDERS_MARK_AS_DONE: 'Remove Reminder',
@@ -298,8 +253,7 @@ e.exports = Object.freeze({
 	START_BROADCASTING: 'Start an Open Party',
 	START_BROADCASTING_CTA: 'Start Open Party',
 	BROADCASTING: 'In an Open Party',
-	BROADCASTING_DESCRIPTION:
-		'An Open Party is a temporary hangout space for you and your friends. Choose who can join, watch, and chat with you!',
+	BROADCASTING_DESCRIPTION: 'An Open Party is a temporary hangout space for you and your friends. Choose who can join, watch, and chat with you!',
 	BROADCAST_SETTINGS: 'Open Party Settings',
 	BROADCAST_SETTINGS_SAVE: 'Save Settings',
 	BROADCASTING_CHANNEL_NAME: "!!{name}!!'s Open Party",
@@ -307,21 +261,16 @@ e.exports = Object.freeze({
 	AUTO_BROADCAST_TOGGLE: 'Automatically create an Open Party when starting games',
 	BROADCASTING_CAPTURE_PAUSED: 'Your Party is Open',
 	BROADCASTING_CAPTURE_PAUSED_DETAILS: "Hang tight and we'll see who's around...",
-	MORE_OPEN_BROADCASTS:
-		'{count, plural, =1 {{count, number} more Open Party} other {{count, number} more Open Parties}}',
+	MORE_OPEN_BROADCASTS: '{count, plural, =1 {{count, number} more Open Party} other {{count, number} more Open Parties}}',
 	VIEW_OPEN_BROADCASTS: 'View all Open Parties',
 	JOIN_BROADCAST: 'Join Open Party',
 	VIEW_BROADCAST: 'View Open Party',
 	BROADCAST_FULL: 'Open Party Full',
 	BROADCASTING_BROADCASTER_TOOLTIP_HEADER: 'Start an Open Party!',
-	BROADCASTING_BROADCASTER_TOOLTIP_BODY:
-		'You can now create your own temporary space where friends can drop by to hang out.',
-	BROADCASTING_STOP_STREAM_CONFIRM_BODY:
-		'Stopping your stream will also close your party, preventing people from seeing and joining it. You can re-open your party at any time by restarting your stream. Are you sure you want to end your stream?',
-	BROADCASTING_START_STREAM_CONFIRM_BODY:
-		'Starting your stream will re-open your party, allowing people to see it and join. Are you sure you want to start your stream?',
-	BROADCASTING_BETA_TOOLTIP_TEXT:
-		'Open Parties is an experimental feature. A limited number of users have the ability to host or join.',
+	BROADCASTING_BROADCASTER_TOOLTIP_BODY: 'You can now create your own temporary space where friends can drop by to hang out.',
+	BROADCASTING_STOP_STREAM_CONFIRM_BODY: 'Stopping your stream will also close your party, preventing people from seeing and joining it. You can re-open your party at any time by restarting your stream. Are you sure you want to end your stream?',
+	BROADCASTING_START_STREAM_CONFIRM_BODY: 'Starting your stream will re-open your party, allowing people to see it and join. Are you sure you want to start your stream?',
+	BROADCASTING_BETA_TOOLTIP_TEXT: 'Open Parties is an experimental feature. A limited number of users have the ability to host or join.',
 	START_BROADCAST_NOTIFICATION_BODY: 'Start a party, so your friends can drop by!',
 	START_BROADCAST_NOTIFICATION_CTA: 'Open a Party',
 	XBOX: 'Xbox',
@@ -345,14 +294,11 @@ e.exports = Object.freeze({
 	REPORTS_USER_MENU_OPTION_MOBILE: 'Report User Profile',
 	FORM_LABEL_OVERLAY_SHOW_MUTE_DEAFEN_KEYBINDS: 'Show mute and deafen keybinds',
 	KEYBIND_NOTIFICATION_DESCRIPTION: 'Now you can see your keybind for toggling mute in the overlay.',
-	PROBLEMATIC_GPU_DRIVER_DETECTED:
-		'There is currently a known issue with your GPU driver version which may affect the Go Live quality. If you experience this issue, learn more about how to fix it [here]({helpCenterLink}).',
+	PROBLEMATIC_GPU_DRIVER_DETECTED: 'There is currently a known issue with your GPU driver version which may affect the Go Live quality. If you experience this issue, learn more about how to fix it [here]({helpCenterLink}).',
 	MFA_REQUIRED_FOR_STAFF: 'Multi-factor authentication is required for staff.',
 	INAPPROPRIATE_CONVERSATION_CONTACT_CRISIS_TEXT_LINE_HEADER: 'Contact Crisis Text Line',
-	INAPPROPRIATE_CONVERSATION_CONTACT_CRISIS_TEXT_LINE_DESCRIPTION:
-		'Get 24-hour, live support from a counselor. To start, text DISCORD to 741-741.',
-	INAPPROPRIATE_CONVERSATION_CONTACT_CRISIS_TEXT_LINE_ALT:
-		'Illustration of floating phone surrounded by various abstract health info bubbles',
+	INAPPROPRIATE_CONVERSATION_CONTACT_CRISIS_TEXT_LINE_DESCRIPTION: 'Get 24-hour, live support from a counselor. To start, text DISCORD to 741-741.',
+	INAPPROPRIATE_CONVERSATION_CONTACT_CRISIS_TEXT_LINE_ALT: 'Illustration of floating phone surrounded by various abstract health info bubbles',
 	INAPPROPRIATE_CONVERSATION_SEND_A_TEXT: 'Send a text',
 	INAPPROPRIATE_CONVERSATION_CHAT_ON_THE_WEB: 'Chat on the web',
 	INAPPROPRIATE_CONVERSATION_MARK_AS_TIER_1: 'Add Inappropriate Tier 1 Warning (Experimental)',
@@ -374,37 +320,30 @@ e.exports = Object.freeze({
 	CLAN_CHANNEL_LIST_ADMIN_UPSELL_TITLE: 'Your Guilds Invite is ready!',
 	CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE: 'Recruit more Valorant friends',
 	CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE: 'Recruit more Genshin friends',
-	CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE:
-		"Become one of the first Guilds and recruit players that match your server's playstyle and vibe.",
+	CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE: "Become one of the first Guilds and recruit players that match your server's playstyle and vibe.",
 	RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_TITLE: 'Recruit more gaming friends',
-	RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE:
-		"Become one of the first Guilds and recruit players that match your server's playstyle and vibe.",
+	RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE: "Become one of the first Guilds and recruit players that match your server's playstyle and vibe.",
 	CLAN_GUILD_LIST_USER_UPSELL_VALORANT_TITLE: 'Join an exclusive gaming Guild',
-	CLAN_GUILD_LIST_USER_UPSELL_VALORANT_MESSAGE:
-		'Check out small Guilds looking to recruit Valorant players and make new friends.',
+	CLAN_GUILD_LIST_USER_UPSELL_VALORANT_MESSAGE: 'Check out small Guilds looking to recruit Valorant players and make new friends.',
 	CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_TITLE: 'Join an exclusive gaming Guild',
-	CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_MESSAGE:
-		'Check out small Guilds looking to recruit Genshin players and make new friends.',
+	CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_MESSAGE: 'Check out small Guilds looking to recruit Genshin players and make new friends.',
 	CLAN_SETUP_MODAL_SAVE_AND_QUIT: 'Save & Exit',
 	CLAN_SETUP_APPLICATION_TITLE: 'Last Step! Set up the application.',
-	CLAN_SETUP_APPLICATION_SUBTITLE:
-		"Ask questions to get to know potential members better. You'll review their answers and decide if they are approved to join. You'll also be able to interview applicants to get to know them better.",
+	CLAN_SETUP_APPLICATION_SUBTITLE: "Ask questions to get to know potential members better. You'll review their answers and decide if they are approved to join. You'll also be able to interview applicants to get to know them better.",
 	CLAN_SETUP_GAMES_TITLE: 'What games does your Guild play?',
 	CLAN_SETUP_GAMES_SUBTITLE: 'You can always add more games later.',
-	CLAN_SETUP_GAMES_SUGGESTED: 'Suggested Games',
+	CLAN_SETUP_GAMES_SUGGESTED: 'Games Your Members Are Playing',
 	CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER: 'Search for a game...',
 	CLAN_SETUP_GAMES_ONE_GAME_REQUIRED: 'You must select at least one game',
 	CLAN_SETUP_SELECTED_GAMES: 'Selected Games',
 	CLAN_SETUP_PLAYSTYLE_TITLE: "What's your Guild's playstyle?",
-	CLAN_SETUP_PLAYSTYLE_SUBTITLE:
-		'Let potential members know the expectations and vibe in your server. How competitive or chill is your Guild?',
+	CLAN_SETUP_PLAYSTYLE_SUBTITLE: 'Let potential members know the expectations and vibe in your server. How competitive or chill is your Guild?',
 	CLAN_SETUP_PLAYSTYLE_SOCIAL_SUBTITLE: "Skill doesn't matter. We have a good time win or lose.",
 	CLAN_SETUP_PLAYSTYLE_CASUAL_SUBTITLE: 'We play to chill and have fun, but more fun if we win!',
 	CLAN_SETUP_PLAYSTYLE_COMPETITIVE_SUBTITLE: 'We play together to win, rank up, or beat challenges.',
 	CLAN_SETUP_PLAYSTYLE_VERY_HARDCORE_SUBTITLE: "We won't sleep until we win.",
 	CLAN_SETUP_UTILITY_TRAITS_TITLE: 'Who would be a good fit for your Guild?',
-	CLAN_SETUP_UTILITY_TRAITS_SUBTITLE:
-		'These traits will help the right people find and apply for your Guild. You can customize more traits in the next step.',
+	CLAN_SETUP_UTILITY_TRAITS_SUBTITLE: 'These traits will help the right people find and apply for your Guild. You can customize more traits in the next step.',
 	CLAN_SETUP_UTILITY_TRAITS_CATEGORY_VALORANT: 'Valorant',
 	CLAN_SETUP_UTILITY_TRAITS_CATEGORY_GENSHIN: 'Genshin',
 	CLAN_SETUP_UTILITY_TRAITS_CATEGORY_AGE: 'Age Demographic',
@@ -412,8 +351,7 @@ e.exports = Object.freeze({
 	CLAN_SETUP_UTILITY_TRAITS_CATEGORY_LANGUAGE: 'Language',
 	CLAN_SETUP_UTILITY_TRAITS_CATEGORY_LOCALE: 'Region',
 	CLAN_SETUP_INTERESTS_TITLE: 'What does your Guild like to talk about?',
-	CLAN_SETUP_INTERESTS_SUBTITLE:
-		"Add at least **3 topics** that your Guild discusses or traits that you share. The more niche, the better! Here's some ideas, but you can write in your own.",
+	CLAN_SETUP_INTERESTS_SUBTITLE: "Add at least **3 topics** that your Guild discusses or traits that you share. The more niche, the better! Here's some ideas, but you can write in your own.",
 	CLAN_SETUP_INTERESTS_LABEL: 'Add a topic',
 	CLAN_SETUP_INTERESTS_PLACEHOLDER: 'Anime, Roman History, Sad Hamsters, etc...',
 	CLAN_SETUP_SELECTED_INTERESTS: 'Selected Interests',
@@ -422,16 +360,12 @@ e.exports = Object.freeze({
 	CLAN_SETUP_INTERESTS_GENERATE_MORE: 'Generate More',
 	CLAN_SETUP_LANGUAGE_PLACEHOLDER: 'Add a language...',
 	CLAN_SETUP_DESCRIPTION_TITLE: 'Tell potential recruits what your Guild is all about.',
-	CLAN_SETUP_DESCRIPTION_SUBTITLE:
-		"They'll see this as a Guild bio before they apply. What brought you together? What makes your Guild unique? Why should they apply?",
-	CLAN_SETUP_DESCRIPTION_PLACEHOLDER:
-		"We're a cozy group of friends who've been playing co-op games for a couple years! Looking for like-minded people to join us at our weekly movie nights :D",
+	CLAN_SETUP_DESCRIPTION_SUBTITLE: "They'll see this as a Guild bio before they apply. What brought you together? What makes your Guild unique? Why should they apply?",
+	CLAN_SETUP_DESCRIPTION_PLACEHOLDER: "We're a cozy group of friends who've been playing co-op games for a couple years! Looking for like-minded people to join us at our weekly movie nights :D",
 	CLAN_SETUP_CUSTOMIZE_TITLE: 'Create a badge and tag for your Guild',
-	CLAN_SETUP_CUSTOMIZE_SUBTITLE:
-		'Guild members will rep these next to their name and on their profiles across Discord.',
+	CLAN_SETUP_CUSTOMIZE_SUBTITLE: 'Guild members will rep these next to their name and on their profiles across Discord.',
 	CLAN_SETUP_CUSTOMIZE_LOOK_TITLE: "Customize your Guild's look",
-	CLAN_SETUP_CUSTOMIZE_LOOK_SUBTITLE:
-		"This is how your Guild will appear to prospective members in the Guild finder and beyond. You're almost ready to recruit!",
+	CLAN_SETUP_CUSTOMIZE_LOOK_SUBTITLE: "This is how your Guild will appear to prospective members in the Guild finder and beyond. You're almost ready to recruit!",
 	CLAN_SETUP_CUSTOMIZE_HELP_TEXT: 'Maxmimum 4 characters, alphabet (A-Z) and numbers only',
 	CLAN_SETUP_TAG_PLACEHOLDER: 'GLHF',
 	CLAN_SETUP_SIGN_TITLE: "You're almost done!",
@@ -471,24 +405,17 @@ e.exports = Object.freeze({
 	CLAN_PRIMETIME_RECURRING_LATE_NIGHT: 'late nights',
 	CLAN_SETUP_OVERVIEW_TITLE: 'We the people of',
 	CLAN_SETUP_OVERVIEW_ESTABLISHED: 'Est. {date}',
-	CLAN_SETUP_OVERVIEW_TEXT_DEFAULT:
-		'...in order to create a space to play games, establish this charter for the Guild.',
-	CLAN_SETUP_OVERVIEW_TEXT_GAMES:
-		'...in order to create a space to play **!!{games}!!**, establish this charter for the Guild.',
-	CLAN_SETUP_OVERVIEW_TEXT_GAMES_AND_PLAYSTYLE:
-		'...in order to create a **{playstyle}** space to play **!!{games}!!**, establish this charter for the Guild.',
+	CLAN_SETUP_OVERVIEW_TEXT_DEFAULT: '...in order to create a space to play games, establish this charter for the Guild.',
+	CLAN_SETUP_OVERVIEW_TEXT_GAMES: '...in order to create a space to play **!!{games}!!**, establish this charter for the Guild.',
+	CLAN_SETUP_OVERVIEW_TEXT_GAMES_AND_PLAYSTYLE: '...in order to create a **{playstyle}** space to play **!!{games}!!**, establish this charter for the Guild.',
 	CLAN_SETUP_OVERVIEW_TEXT_TRAITS: "The Guild's traits shall be defined as **!!{traits}!!**.",
-	CLAN_SETUP_OVERVIEW_TEXT_GAMETIME:
-		'The members of the Guild are committed to make an effort to play games on **{selectedTimes}**.',
-	CLAN_SETUP_OVERVIEW_TEXT_WRAP:
-		'Everyone will work together to uphold and nurture the values of the Guild and keep it safe and welcoming to all members.',
+	CLAN_SETUP_OVERVIEW_TEXT_GAMETIME: 'The members of the Guild are committed to make an effort to play games on **{selectedTimes}**.',
+	CLAN_SETUP_OVERVIEW_TEXT_WRAP: 'Everyone will work together to uphold and nurture the values of the Guild and keep it safe and welcoming to all members.',
 	CLAN_SETUP_OVERVIEW_SIGNATURE: 'sign here',
 	CLAN_SETUP_OVERVIEW_SIGN_CTA: 'Click to Sign',
 	CLAN_SETUP_OVERVIEW_SIGN_HELP: 'By signing this charter, I agree to grow and uphold the values of the Guild.',
-	CLAN_SETUP_OVERVIEW_SIGN_AGREEMENT:
-		'By becoming a Guild, you agree that your server complies with the [Discovery Guidelines](onGuidelinesClick).',
-	CLAN_SETUP_OVERVIEW_SIGN_DISCLAIMER:
-		'Discord may use manual and/or automated means to review my server to ensure that it meets applicable policies such as our [Community Guidelines](https://discord.com/guidelines).',
+	CLAN_SETUP_OVERVIEW_SIGN_AGREEMENT: 'By becoming a Guild, you agree that your server complies with the [Discovery Guidelines](onGuidelinesClick).',
+	CLAN_SETUP_OVERVIEW_SIGN_DISCLAIMER: 'Discord may use manual and/or automated means to review my server to ensure that it meets applicable policies such as our [Community Guidelines](https://discord.com/guidelines).',
 	CLAN_OVERVIEW_LIST_TWO_ITEMS: '!!{item1}!! and !!{item2}!!',
 	CLAN_OVERVIEW_LIST_MULTIPLE_ITEMS: '!!{items}!!, and !!{last}!!',
 	CLAN_OVERVIEW_LIST_OTHERS_COUNT: '{n, plural, one {1 other} other {{n} others}}',
@@ -502,11 +429,9 @@ e.exports = Object.freeze({
 	CLAN_SUCCESS_CTA: "Let's Go",
 	CLAN_SUCCESS_POSTSCRIPT: 'It may take a few days for your Guild to appear in the Discovery page.',
 	CLAN_JOIN_SUCCESS_TITLE: "Congratulations, you're an official member of **{name}**!",
-	CLAN_JOIN_SUCCESS_SUBTITLE:
-		'Rep your Guild, make new friends, and play some games. Get in and say hi to your new guildmates.',
+	CLAN_JOIN_SUCCESS_SUBTITLE: 'Rep your Guild, make new friends, and play some games. Get in and say hi to your new guildmates.',
 	CLAN_JOIN_SUCCESS_MAIN_CTA: "Let's Go",
-	CLAN_JOIN_SUCCESS_SUBTITLE_MOBILE:
-		'Rep your Guild, make new friends, and play some games. Get in and say hi to your new guildmates.',
+	CLAN_JOIN_SUCCESS_SUBTITLE_MOBILE: 'Rep your Guild, make new friends, and play some games. Get in and say hi to your new guildmates.',
 	CLAN_USER_APPLICATION_COACHMARK_TITLE: 'Your application is pending!',
 	CLAN_USER_APPLICATION_COACHMARK_BODY: 'The Guild leader will get back to you soon.',
 	CLAN_USER_APPLICATION_COACHMARK_CTA: 'Got it',
@@ -524,21 +449,17 @@ e.exports = Object.freeze({
 	CLAN_SETTINGS_JOIN_APPLICATION: 'Join Application',
 	CLAN_SETTINGS_DISABLE_CLAN: 'Disable Guild',
 	CLAN_SETTINGS_DISABLE_CONFIRM_TITLE: 'Are you sure?',
-	CLAN_SETTINGS_DISABLE_CONFIRM_BODY:
-		'All open applications to your Guild will be rejected. Members will lose their Guild tags.',
+	CLAN_SETTINGS_DISABLE_CONFIRM_BODY: 'All open applications to your Guild will be rejected. Members will lose their Guild tags.',
 	CLAN_SETTINGS_APPLICATION_TITLE: 'Edit questions for prospective members to answer.',
 	CLAN_SETTINGS_APPLICATION_SUBTITLE: '',
 	CLAN_DM_APPLICANT: 'DM Applicant',
 	CLAN_APPLICATION_MAX_MEMBER_LIMIT_TOOLTIP: 'Guild is at maximum member limit',
-	CLAN_MAX_MEMBER_LIMIT_WARNING:
-		"Your Guild is at the {count} member maximum and cannot accept new applications.\n\nPrune inactive members or wait until there's space for more members.",
-	CLAN_APPLICATION_SETUP_HEADER:
-		'Set up the member screening application for **!!{guildName}!!** here. The application must have at least one Short Answer, Paragraph, or Multiple Choice section.',
+	CLAN_MAX_MEMBER_LIMIT_WARNING: "Your Guild is at the {count} member maximum and cannot accept new applications.\n\nPrune inactive members or wait until there's space for more members.",
+	CLAN_APPLICATION_SETUP_HEADER: 'Set up the member screening application for **!!{guildName}!!** here. The application must have at least one Short Answer, Paragraph, or Multiple Choice section.',
 	CLAN_APPLICATION_CANT_REMOVE_FIELD: 'Applications must have at least one question.',
 	MEMBER_VERIFICATION_ANSWER_PLACEHOLDER: 'Enter your answer',
 	MEMBER_VERIFICATION_USERS_APPLICATION: "!!{username}!!'s application",
-	CLAN_APPLICATION_GDM_CONSENT:
-		'By applying, you give the guild admins permission to message you regarding your application.',
+	CLAN_APPLICATION_GDM_CONSENT: 'By applying, you give the guild admins permission to message you regarding your application.',
 	CLAN_APPLICATION_RATE_LIMITED_HEADER: 'WOAH THERE. WAY TOO SPICY',
 	CLAN_APPLICATION_RATE_LIMITED_BODY: "You've been sending too many Guild applications.",
 	CLAN_APPLICATION_RATE_LIMITED_BUTTON: 'Enter the chill zone',
@@ -563,11 +484,9 @@ e.exports = Object.freeze({
 	CLAN_USER_ADOPT_TAG_NEW_IDENTITY_ARIA_LABEL: 'A new tag is available for {guildName}',
 	CLAN_USER_ADOPT_TAG_NEW_IDENTITY_DESCRIPTION: 'An update to your tag is available',
 	CLAN_USER_ADOPT_TAG_MODAL_HEADING: '**{guildName}**\n\nis now a guild',
-	CLAN_USER_ADOPT_TAG_MODAL_DESCRIPTION:
-		'{guildName} adopted a new guild tag, and you can now rep this server everywhere you chat.',
+	CLAN_USER_ADOPT_TAG_MODAL_DESCRIPTION: '{guildName} adopted a new guild tag, and you can now rep this server everywhere you chat.',
 	CLAN_USER_ADOPT_TAG_MODAL_NEW_IDENTITY_HEADING: '**{guildName}**\n\nhas changed their tag',
-	CLAN_USER_ADOPT_TAG_MODAL_NEW_IDENTITY_DESCRIPTION:
-		'A new tag is available for {guildName}. Would you like to adopt it?',
+	CLAN_USER_ADOPT_TAG_MODAL_NEW_IDENTITY_DESCRIPTION: 'A new tag is available for {guildName}. Would you like to adopt it?',
 	CLAN_USER_ADOPT_TAG_MODAL_FEATURE: 'Wear this tag everywhere',
 	CLAN_USER_ADOPT_TAG_MODAL_FEATURE_CALLOUT: 'You can always change your tag in User Profile',
 	CLAN_USER_ADOPT_TAG_MODAL_CTA: 'Adopt Tag',
@@ -619,8 +538,7 @@ e.exports = Object.freeze({
 	CLAN_DISCOVERY_PROFILE_TITLE: 'Fill out the application to join.',
 	CLAN_DISCOVERY_PROFILE_SUBTITLE: "You'll get notified when there's an update.",
 	CLAN_DISCOVERY_PLAYSTYLE_TITLE: "What's your playstyle?",
-	CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE:
-		'How serious or casual do you want your friends to be? Your selections will sort the Guilds you see. You can always change this later.',
+	CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE: 'How serious or casual do you want your friends to be? Your selections will sort the Guilds you see. You can always change this later.',
 	CLAN_DISCOVERY_TRAIT_TITLE: 'Would you prefer to sort by any of these?',
 	CLAN_DISCOVERY_TRAIT_SUBTITLE: 'You can always change this later.',
 	CLAN_DISCOVERY_GAME_TITLE: 'What games do you play?',
@@ -646,8 +564,7 @@ e.exports = Object.freeze({
 	CLAN_USER_PROFILE_PRIMARY_CLAN: 'Primary Guild',
 	CLAN_USER_PROFILE_PRIMARY_CLAN_SUBTITLE: 'Choose a Guild tag to rep next to your name across Discord.',
 	CLAN_DISCOVERY_ADMIN_UPSELL_COMPLETE_TITLE: "You're all set!",
-	CLAN_DISCOVERY_ADMIN_UPSELL_COMPLETE_SUBTITLE:
-		'Sit tight, this discovery page is only visible to you and your fellow Guild leaders for now. Your Guild will appear soon. We\u2019ll give you a heads up when this Guilds page launches. When it does, only a select number of people will be able to see it and apply.',
+	CLAN_DISCOVERY_ADMIN_UPSELL_COMPLETE_SUBTITLE: 'Sit tight, this discovery page is only visible to you and your fellow Guild leaders for now. Your Guild will appear soon. We\u2019ll give you a heads up when this Guilds page launches. When it does, only a select number of people will be able to see it and apply.',
 	CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_TITLE: 'No Saved Guilds',
 	CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_DESCRIPTION: 'Browse Guilds to find the right one for you.',
 	CLAN_DISCOVERY_SAVED_FILTER: '{count, number} Saved',
@@ -660,17 +577,13 @@ e.exports = Object.freeze({
 	CLAN_DISCOVERY_UPSELL_RESERVE: 'Reserve Your Spot',
 	CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP: 'Continue Setup',
 	CLAN_DISCOVERY_UPSELL_TITLE: 'Play games and make friends',
-	CLAN_DISCOVERY_UPSELL_SUBTITLE:
-		'Join a friendly group of players looking to make more friends. Add your games to find the right Guild for you.',
-	CLAN_DISCOVERY_UPSELL_VALORANT_SUBTITLE:
-		'Check out small Guilds looking to recruit Valorant players and make new friends.',
+	CLAN_DISCOVERY_UPSELL_SUBTITLE: 'Join a friendly group of players looking to make more friends. Add your games to find the right Guild for you.',
+	CLAN_DISCOVERY_UPSELL_VALORANT_SUBTITLE: 'Check out small Guilds looking to recruit Valorant players and make new friends.',
 	CLAN_DISCOVERY_UPSELL_GENSHIN_TITLE: 'Just a few clicks to find your Genshin clique.',
-	CLAN_DISCOVERY_UPSELL_GENSHIN_SUBTITLE:
-		'Check out small Guilds looking to recruit Genshin players and make new friends.',
+	CLAN_DISCOVERY_UPSELL_GENSHIN_SUBTITLE: 'Check out small Guilds looking to recruit Genshin players and make new friends.',
 	CLAN_DISCOVERY_UPSELL_GET_STARTED: 'Get Started',
 	CLAN_DISCOVERY_UPSELL_USER_CTA: 'Add my games',
-	CLAN_DISCOVERY_UPSELL_JOIN_WFS:
-		'Questions? Head over to the $[Wumpus Feedback Squad](wfsHook) server to ask Discord questions or give feedback!',
+	CLAN_DISCOVERY_UPSELL_JOIN_WFS: 'Questions? Head over to the $[Wumpus Feedback Squad](wfsHook) server to ask Discord questions or give feedback!',
 	CLAN_DISCOVERY_UPSELL_JOIN_WFS_ARIA_LABEL: 'Join Wumpus Feedback Squad server',
 	CLAN_DISCOVERY_APPLICATION_DISABLED_TOOLTIP: 'You cannot apply to Guilds right now',
 	CLAN_DISCOVERY_APPLICATION_MAX_MEMBERS: 'This Guild is at maximum capacity. You may want to apply for other Guilds.',
@@ -690,25 +603,21 @@ e.exports = Object.freeze({
 	CLAN_WELCOME_MESSAGE_2_HOOK: '$[!!{username}!!](usernameHook) just joined the Guild. We hope you brought pizza.',
 	CLAN_WELCOME_MESSAGE_3_HOOK: "Glad you're here, $[!!{username}!!](usernameHook), welcome to the Guild.",
 	CLAN_WELCOME_MESSAGE_4_HOOK: 'New recruit! $[!!{username}!!](usernameHook) joined the Guild.',
-	CLAN_WELCOME_MESSAGE_5_HOOK:
-		'Round of applause for the newest Guild member, $[!!{username}!!](usernameHook). Just for being here.',
+	CLAN_WELCOME_MESSAGE_5_HOOK: 'Round of applause for the newest Guild member, $[!!{username}!!](usernameHook). Just for being here.',
 	CLAN_WELCOME_MESSAGE_6_HOOK: 'Rolling out the red carpet for $[!!{username}!!](usernameHook). Say hi!',
 	CLAN_WELCOME_MESSAGE_7_HOOK: 'Yahaha! $[!!{username}!!](usernameHook) found us!',
 	CLAN_WELCOME_MESSAGE_8_HOOK: 'Get ready everyone -- a $[!!{username}!!](usernameHook) has appeared!',
-	CLAN_WELCOME_MESSAGE_9_HOOK:
-		'Roses are red, violets are blue, $[!!{username}!!](usernameHook) just joined the Guild with you.',
+	CLAN_WELCOME_MESSAGE_9_HOOK: 'Roses are red, violets are blue, $[!!{username}!!](usernameHook) just joined the Guild with you.',
 	CLAN_WELCOME_MESSAGE_0: 'Everyone welcome [!!{username}!!](usernameOnClick) to the Guild!',
 	CLAN_WELCOME_MESSAGE_1: 'A new member has spawned. Say hi to [!!{username}!!](usernameOnClick).',
 	CLAN_WELCOME_MESSAGE_2: '[!!{username}!!](usernameOnClick) just joined the Guild. We hope you brought pizza.',
 	CLAN_WELCOME_MESSAGE_3: "Glad you're here, [!!{username}!!](usernameOnClick), welcome to the Guild.",
 	CLAN_WELCOME_MESSAGE_4: 'New recruit! [!!{username}!!](usernameOnClick) joined the Guild.',
-	CLAN_WELCOME_MESSAGE_5:
-		'Round of applause for the newest Guild member, [!!{username}!!](usernameOnClick). Just for being here.',
+	CLAN_WELCOME_MESSAGE_5: 'Round of applause for the newest Guild member, [!!{username}!!](usernameOnClick). Just for being here.',
 	CLAN_WELCOME_MESSAGE_6: 'Rolling out the red carpet for [!!{username}!!](usernameOnClick). Say hi!',
 	CLAN_WELCOME_MESSAGE_7: 'Yahaha! [!!{username}!!](usernameOnClick) found us!',
 	CLAN_WELCOME_MESSAGE_8: 'Get ready everyone -- a [!!{username}!!](usernameOnClick) has appeared!',
-	CLAN_WELCOME_MESSAGE_9:
-		'Roses are red, violets are blue, [!!{username}!!](usernameOnClick) just joined the Guild with you.',
+	CLAN_WELCOME_MESSAGE_9: 'Roses are red, violets are blue, [!!{username}!!](usernameOnClick) just joined the Guild with you.',
 	ICYMI_TITLE: 'In Case You Missed It',
 	ICYMI_SHORT_TITLE: 'ICYMI',
 	ICYMI_DESCRIPTION: 'Breeze through the best across all your servers',
@@ -746,8 +655,7 @@ e.exports = Object.freeze({
 	ICYMI_VALUE_PROP_1: 'Sourced from all your servers',
 	ICYMI_VALUE_PROP_2: 'Only the freshest content',
 	ICYMI_VALUE_PROP_3: "Know when you've caught up",
-	ICYMI_EXPERIMENTAL_WARNING:
-		'In Case You Missed It (ICYMI) is a super-duper, early-access, experimental, & pre-alpha feature. $[Send Feedback](feedbackHook)',
+	ICYMI_EXPERIMENTAL_WARNING: 'In Case You Missed It (ICYMI) is a super-duper, early-access, experimental, & pre-alpha feature. $[Send Feedback](feedbackHook)',
 	ICYMI_SHOW_NSFW: 'Show NSFW content',
 	ICYMI_SHOW_NEGATIVE: 'Show negative scored content',
 	ICYMI_ADJUST_RANKING: 'Adjust Server/Channel Recommendations',

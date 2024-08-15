@@ -42,14 +42,7 @@ function u(e) {
 	);
 }
 function d(e) {
-	let {
-		benefit: n,
-		className: t,
-		emojiContainerClassName: i,
-		showsDescription: o = !0,
-		nameTextVariant: u = 'text-md/medium',
-		nameTextColor: d = 'header-primary'
-	} = e;
+	let { benefit: n, className: t, emojiContainerClassName: i, showsDescription: o = !0, nameTextVariant: u = 'text-md/medium', nameTextColor: d = 'header-primary' } = e;
 	return (0, r.jsxs)('div', {
 		className: l()(c.container, t),
 		children: [
@@ -83,15 +76,7 @@ function d(e) {
 	});
 }
 function m(e) {
-	let {
-		applicationId: n,
-		benefit: t,
-		className: i,
-		emojiContainerClassName: s,
-		showsDescription: u = !0,
-		nameTextVariant: d = 'text-md/medium',
-		nameTextColor: m = 'header-primary'
-	} = e;
+	let { applicationId: n, benefit: t, className: i, emojiContainerClassName: s, showsDescription: u = !0, nameTextVariant: d = 'text-md/medium', nameTextColor: m = 'header-primary' } = e;
 	return (0, r.jsxs)('div', {
 		className: l()(c.container, i),
 		children: [

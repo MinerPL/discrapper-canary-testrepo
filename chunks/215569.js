@@ -42,13 +42,7 @@ class o extends (r = i.Component) {
 		if (e !== this.props) {
 			let e = (0, a.n)(this.props.children),
 				n = t.children;
-			if (
-				(this.props.transitionEnter
-					? this._enqueueTransitions(e, n, this._keysToEnter)
-					: this._keysToEnter.length && (this._keysToEnter = []),
-				this.props.transitionLeave)
-			)
-				this._enqueueTransitions(n, e, this._keysToLeave);
+			if ((this.props.transitionEnter ? this._enqueueTransitions(e, n, this._keysToEnter) : this._keysToEnter.length && (this._keysToEnter = []), this.props.transitionLeave)) this._enqueueTransitions(n, e, this._keysToLeave);
 			else {
 				let t = [];
 				this._enqueueTransitions(n, e, t);

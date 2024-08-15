@@ -69,15 +69,7 @@ function S(e) {
 }
 function T(e) {
 	var n, t, a;
-	let {
-			user: u,
-			currentUser: I,
-			displayProfile: _,
-			items: f,
-			initialSection: m = v.oh.USER_INFO,
-			initialSubsection: p,
-			onClose: x
-		} = e,
+	let { user: u, currentUser: I, displayProfile: _, items: f, initialSection: m = v.oh.USER_INFO, initialSubsection: p, onClose: x } = e,
 		{ trackUserProfileAction: Z } = (0, d.KZ)(),
 		T = (0, o.e7)([c.Z], () => c.Z.hidePersonalInformation),
 		[{ section: A, subsection: g }, N] = i.useState({

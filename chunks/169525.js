@@ -37,19 +37,16 @@ var r,
 	f = n(496675),
 	h = n(630388),
 	p = n(255269),
-	I = n(981631),
-	m = n(689938);
-((i = r || (r = {})).SPOILER = 'spoiler'),
-	(i.EXPLICIT_CONTENT = 'explicit_content'),
-	(i.POTENTIAL_EXPLICIT_CONTENT = 'potential_explicit_content');
+	m = n(981631),
+	I = n(689938);
+((i = r || (r = {})).SPOILER = 'spoiler'), (i.EXPLICIT_CONTENT = 'explicit_content'), (i.POTENTIAL_EXPLICIT_CONTENT = 'potential_explicit_content');
 let T = (e, t) => {
 		let { spoiler: n, flags: r = 0, content_scan_version: i } = e;
 		if (t) {
 			if ((0, l.Sv)(i)) return 'potential_explicit_content';
-			if ((0, h.yE)(r, I.J0y.CONTAINS_EXPLICIT_MEDIA) || o.ZP.get('obscure_blur_effect_enabled'))
-				return 'explicit_content';
+			if ((0, h.yE)(r, m.J0y.CONTAINS_EXPLICIT_MEDIA) || o.ZP.get('obscure_blur_effect_enabled')) return 'explicit_content';
 		}
-		return n || (0, h.yE)(r, I.J0y.IS_SPOILER) ? 'spoiler' : null;
+		return n || (0, h.yE)(r, m.J0y.IS_SPOILER) ? 'spoiler' : null;
 	},
 	g = (e, t, n, r, i) => {
 		let { flags: a = 0, contentScanVersion: s } = e,
@@ -57,8 +54,7 @@ let T = (e, t) => {
 		if (null == u) return null;
 		if (i) {
 			if (!u.author.bot && (0, l.Sv)(s)) return 'potential_explicit_content';
-			if ((0, h.yE)(a, I.xPJ.CONTAINS_EXPLICIT_MEDIA) || o.ZP.get('obscure_blur_effect_enabled'))
-				return 'explicit_content';
+			if ((0, h.yE)(a, m.xPJ.CONTAINS_EXPLICIT_MEDIA) || o.ZP.get('obscure_blur_effect_enabled')) return 'explicit_content';
 		}
 		return r ? 'spoiler' : null;
 	},
@@ -100,13 +96,13 @@ function A(e, t, n) {
 }
 function N(e) {
 	let { channel: t, media: n } = e,
-		r = (0, s.e7)([f.Z], () => null != t && f.Z.can(I.Plq.MANAGE_MESSAGES, t)),
+		r = (0, s.e7)([f.Z], () => null != t && f.Z.can(m.Plq.MANAGE_MESSAGES, t)),
 		i = _.cC.useSetting(),
 		a = (0, u.m)();
 	return A(n, !(0, p.Z)(i, r), a);
 }
 let v = (e) =>
 	(0, a.EQ)(e)
-		.with('explicit_content', () => m.Z.Messages.EXPLICIT_CONTENT_ALT)
-		.with('spoiler', () => m.Z.Messages.SPOILER_HIDDEN_A11Y_LABEL)
+		.with('explicit_content', () => I.Z.Messages.EXPLICIT_CONTENT_ALT)
+		.with('spoiler', () => I.Z.Messages.SPOILER_HIDDEN_A11Y_LABEL)
 		.otherwise(() => void 0);

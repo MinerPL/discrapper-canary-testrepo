@@ -9,16 +9,7 @@ var r = n(470079),
 	s = n(125988),
 	o = n(252532);
 function l(e) {
-	let {
-			user: t,
-			guildId: n,
-			size: l,
-			showPending: u = !1,
-			showTryItOut: c = !1,
-			animateOnHover: d = !1,
-			avatarDecorationOverride: _,
-			avatarOverride: E
-		} = e,
+	let { user: t, guildId: n, size: l, showPending: u = !1, showTryItOut: c = !1, animateOnHover: d = !1, avatarDecorationOverride: _, avatarOverride: E } = e,
 		{
 			avatarSrc: f,
 			isAvatarAnimating: h,
@@ -32,8 +23,8 @@ function l(e) {
 			avatarOverride: E
 		}),
 		{
-			avatarPlaceholderSrc: I,
-			avatarDecorationSrc: m,
+			avatarPlaceholderSrc: m,
+			avatarDecorationSrc: I,
 			eventHandlers: T
 		} = (0, s.Z)({
 			user: t,
@@ -48,8 +39,8 @@ function l(e) {
 			p.onMouseEnter(), T.onMouseEnter();
 		}, [p, T]);
 	return {
-		avatarPlaceholderSrc: I,
-		avatarDecorationSrc: m,
+		avatarPlaceholderSrc: m,
+		avatarDecorationSrc: I,
 		avatarSrc: f,
 		isAnimating: h,
 		eventHandlers: {

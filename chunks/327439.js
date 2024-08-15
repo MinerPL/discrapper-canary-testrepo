@@ -54,8 +54,8 @@ var u = new WeakMap(),
 	f = new WeakMap(),
 	h = new WeakMap(),
 	p = new WeakMap(),
-	I = new WeakMap(),
 	m = new WeakMap(),
+	I = new WeakMap(),
 	T = new WeakMap();
 class g {
 	constructor(e, t, n) {
@@ -84,29 +84,13 @@ class g {
 				writable: !0,
 				value: (e, t, n) => {
 					var r, i;
-					if (!n.backend)
-						throw Error("You must specify a 'backend' property in your Backend entry: ".concat(JSON.stringify(n)));
+					if (!n.backend) throw Error("You must specify a 'backend' property in your Backend entry: ".concat(JSON.stringify(n)));
 					let a = n.backend(e, t, n.options),
 						o = n.id,
 						l = !n.id && a && a.constructor;
-					if ((l && (o = a.constructor.name), o))
-						l &&
-							console.warn(
-								"Deprecation notice: You are using a pipeline which doesn't include backends' 'id'.\n        This might be unsupported in the future, please specify 'id' explicitely for every backend."
-							);
-					else
-						throw Error(
-							"You must specify an 'id' property in your Backend entry: ".concat(
-								JSON.stringify(n),
-								'\n        see this guide: https://github.com/louisbrunner/dnd-multi-backend/tree/master/packages/react-dnd-multi-backend#migrating-from-5xx'
-							)
-						);
-					if (s(this, d)[o])
-						throw Error(
-							"You must specify a unique 'id' property in your Backend entry:\n        "
-								.concat(JSON.stringify(n), ' (conflicts with: ')
-								.concat(JSON.stringify(s(this, d)[o]), ')')
-						);
+					if ((l && (o = a.constructor.name), o)) l && console.warn("Deprecation notice: You are using a pipeline which doesn't include backends' 'id'.\n        This might be unsupported in the future, please specify 'id' explicitely for every backend.");
+					else throw Error("You must specify an 'id' property in your Backend entry: ".concat(JSON.stringify(n), '\n        see this guide: https://github.com/louisbrunner/dnd-multi-backend/tree/master/packages/react-dnd-multi-backend#migrating-from-5xx'));
+					if (s(this, d)[o]) throw Error("You must specify a unique 'id' property in your Backend entry:\n        ".concat(JSON.stringify(n), ' (conflicts with: ').concat(JSON.stringify(s(this, d)[o]), ')'));
 					return {
 						id: o,
 						instance: a,
@@ -123,8 +107,7 @@ class g {
 				}
 			}),
 			a(this, 'teardown', () => {
-				if ('undefined' != typeof window)
-					(g.isSetUp = !1), s(this, p).call(this, window), s(this, d)[s(this, u)].instance.teardown();
+				if ('undefined' != typeof window) (g.isSetUp = !1), s(this, p).call(this, window), s(this, d)[s(this, u)].instance.teardown();
 			}),
 			a(this, 'connectDragSource', (e, t, n) => s(this, T).call(this, 'connectDragSource', e, t, n)),
 			a(this, 'connectDragPreview', (e, t, n) => s(this, T).call(this, 'connectDragPreview', e, t, n)),
@@ -137,7 +120,7 @@ class g {
 				writable: !0,
 				value: (e) => {
 					s(this, _).forEach((t) => {
-						t.transition && e.addEventListener(t.transition.event, s(this, I));
+						t.transition && e.addEventListener(t.transition.event, s(this, m));
 					});
 				}
 			}),
@@ -145,25 +128,20 @@ class g {
 				writable: !0,
 				value: (e) => {
 					s(this, _).forEach((t) => {
-						t.transition && e.removeEventListener(t.transition.event, s(this, I));
+						t.transition && e.removeEventListener(t.transition.event, s(this, m));
 					});
 				}
 			}),
-			i(this, I, {
+			i(this, m, {
 				writable: !0,
 				value: (e) => {
 					let t = s(this, u);
-					if (
-						(s(this, _).some(
-							(t) => !!(t.id !== s(this, u) && t.transition && t.transition.check(e)) && (o(this, u, t.id), !0)
-						),
-						s(this, u) !== t)
-					) {
+					if ((s(this, _).some((t) => !!(t.id !== s(this, u) && t.transition && t.transition.check(e)) && (o(this, u, t.id), !0)), s(this, u) !== t)) {
 						var n;
 						s(this, d)[t].instance.teardown(),
 							Object.keys(s(this, E)).forEach((e) => {
 								let t = s(this, E)[e];
-								t.unsubscribe(), (t.unsubscribe = s(this, m).call(this, t.func, ...t.args));
+								t.unsubscribe(), (t.unsubscribe = s(this, I).call(this, t.func, ...t.args));
 							}),
 							s(this, c).backendChanged(this);
 						let r = s(this, d)[s(this, u)];
@@ -173,7 +151,7 @@ class g {
 					}
 				}
 			}),
-			i(this, m, {
+			i(this, I, {
 				writable: !0,
 				value: (e, t, n, r) => s(this, d)[s(this, u)].instance[e](t, n, r)
 			}),
@@ -181,7 +159,7 @@ class g {
 				writable: !0,
 				value: (e, t, n, r) => {
 					let i = ''.concat(e, '_').concat(t),
-						a = s(this, m).call(this, e, t, n, r);
+						a = s(this, I).call(this, e, t, n, r);
 					return (
 						(s(this, E)[i] = {
 							func: e,
@@ -196,9 +174,7 @@ class g {
 			}),
 			!n || !n.backends || n.backends.length < 1)
 		)
-			throw Error(
-				"You must specify at least one Backend, if you are coming from 2.x.x (or don't understand this error)\n        see this guide: https://github.com/louisbrunner/dnd-multi-backend/tree/master/packages/react-dnd-multi-backend#migrating-from-2xx"
-			);
+			throw Error("You must specify at least one Backend, if you are coming from 2.x.x (or don't understand this error)\n        see this guide: https://github.com/louisbrunner/dnd-multi-backend/tree/master/packages/react-dnd-multi-backend#migrating-from-2xx");
 		o(this, c, new r.J()),
 			o(this, d, {}),
 			o(this, _, []),

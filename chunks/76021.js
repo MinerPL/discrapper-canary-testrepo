@@ -1,6 +1,6 @@
 n.d(t, {
 	Z: function () {
-		return m;
+		return I;
 	}
 });
 var r = n(735250);
@@ -18,8 +18,8 @@ var i = n(481060),
 	f = n(594174),
 	h = n(358085),
 	p = n(981631),
-	I = n(37113);
-function m(e, t, m) {
+	m = n(37113);
+function I(e, t, I) {
 	let T = l.Z.getWindowOpen(p.KJ3.CHANNEL_CALL_POPOUT) ? p.KJ3.CHANNEL_CALL_POPOUT : null;
 	if (((0, o.Z)(T), h.isPlatformEmbedded))
 		(0, i.openModalLazy)(async () => {
@@ -28,19 +28,13 @@ function m(e, t, m) {
 				(0, r.jsx)(t, {
 					...n,
 					guildId: e,
-					analyticsLocation: m
+					analyticsLocation: I
 				});
 		}),
 			(0, c.F4)() && ((0, u.z)(), (0, d.O)());
 	else {
 		var g;
-		let n = (0, s.Z)(
-			I.tI.PRESET_CUSTOM,
-			I.LY.RESOLUTION_1080,
-			I.ws.FPS_30,
-			f.default.getCurrentUser(),
-			null === (g = _.Z.getGuild(e)) || void 0 === g ? void 0 : g.premiumTier
-		)
+		let n = (0, s.Z)(m.tI.PRESET_CUSTOM, m.LY.RESOLUTION_1080, m.ws.FPS_30, f.default.getCurrentUser(), null === (g = _.Z.getGuild(e)) || void 0 === g ? void 0 : g.premiumTier)
 			? {
 					width: 1920,
 					height: 1080

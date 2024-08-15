@@ -89,11 +89,7 @@ s.Z = function () {
 	let e = (0, o.e7)([D.ZP], () => D.ZP.getPremiumTypeSubscription()),
 		s = (0, S.Z)({ subscriptionFilter: (e) => j.eS.has(e.status) }),
 		t = s.length > 1,
-		i = (0, o.e7)(
-			[f.Z],
-			() => (null != e && null != e.paymentSourceId ? f.Z.getPaymentSource(e.paymentSourceId) : null),
-			[e]
-		),
+		i = (0, o.e7)([f.Z], () => (null != e && null != e.paymentSourceId ? f.Z.getPaymentSource(e.paymentSourceId) : null), [e]),
 		E = (0, o.e7)([D.ZP], () => D.ZP.hasFetchedSubscriptions()),
 		C = (0, o.e7)([M.Z], () => M.Z.isBusy),
 		m = (0, N.V)(),
@@ -134,8 +130,7 @@ s.Z = function () {
 									(0, n.jsx)(A.Z, { onClickManageSubscription: () => I.Z.setSection(U.oAB.SUBSCRIPTIONS, G.cP) }),
 									(0, n.jsx)(g.Z, {
 										onClickManageSubscription: () => {
-											I.Z.setSection(U.oAB.SUBSCRIPTIONS, G.XZ),
-												L.default.track(U.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED);
+											I.Z.setSection(U.oAB.SUBSCRIPTIONS, G.XZ), L.default.track(U.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED);
 										}
 									}),
 									(0, n.jsx)(p.F, {

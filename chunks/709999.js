@@ -72,10 +72,7 @@ let Y = (e) => {
 	};
 t.Z = function (e) {
 	let { product: t, user: n, category: a, onMount: o, isGiftEasterEggEnabled: K, isPopularPicksRow: X } = e,
-		{ analyticsLocations: q } = (0, x.ZP)([
-			...(X ? [b.Z.COLLECTIBLES_SHOP_POPULAR_PICKS_CAROUSEL] : []),
-			b.Z.COLLECTIBLES_SHOP_CARD
-		]),
+		{ analyticsLocations: q } = (0, x.ZP)([...(X ? [b.Z.COLLECTIBLES_SHOP_POPULAR_PICKS_CAROUSEL] : []), b.Z.COLLECTIBLES_SHOP_CARD]),
 		$ = r.useRef(null),
 		Q = (0, m.Z)($),
 		[J, ee] = r.useState(!1),
@@ -88,10 +85,7 @@ t.Z = function (e) {
 		eo = (0, P.G1)(t),
 		ec = (0, P.rN)(t),
 		{ isPurchased: el, isPartiallyPurchased: ed } = (0, A.L)(t),
-		[eu, ef] = (0, p.Wu)([j.Z], () => [
-			j.Z.isClaiming === t.skuId,
-			null != j.Z.isClaiming && j.Z.isClaiming !== t.skuId
-		]),
+		[eu, ef] = (0, p.Wu)([j.Z], () => [j.Z.isClaiming === t.skuId, null != j.Z.isClaiming && j.Z.isClaiming !== t.skuId]),
 		ep = (0, p.e7)([N.Z], () => (0, g.w)(N.Z.theme)),
 		eg = (0, B.m)('CollectiblesCollectedModal'),
 		eC = (0, P.x6)(t) || eg,
@@ -223,9 +217,7 @@ t.Z = function (e) {
 									disabled: ef,
 									className: V.purchaseButton,
 									...e,
-									children: eo
-										? W.Z.Messages.COLLECTIBLES_ADD_TO_YOUR_COLLECTION
-										: W.Z.Messages.COLLECTIBLES_PURCHASE.format({ price: ea })
+									children: eo ? W.Z.Messages.COLLECTIBLES_ADD_TO_YOUR_COLLECTION : W.Z.Messages.COLLECTIBLES_PURCHASE.format({ price: ea })
 								}),
 					eO()
 				]
@@ -316,13 +308,7 @@ t.Z = function (e) {
 						(0, s.jsxs)('div', {
 							className: i()(V.cardText, { [V.cardTextBlur]: (null == en ? void 0 : en.type) === f.Z.PROFILE_EFFECT }),
 							children: [
-								(0, s.jsx)('div', {
-									className: i()(
-										V.cardBackground,
-										ep ? V.darkCardBackground : V.lightCardBackground,
-										(null == en ? void 0 : en.type) === f.Z.PROFILE_EFFECT ? V.cardLowOpacity : null
-									)
-								}),
+								(0, s.jsx)('div', { className: i()(V.cardBackground, ep ? V.darkCardBackground : V.lightCardBackground, (null == en ? void 0 : en.type) === f.Z.PROFILE_EFFECT ? V.cardLowOpacity : null) }),
 								(0, s.jsx)(C.Text, {
 									variant: 'text-lg/bold',
 									className: V.productName,

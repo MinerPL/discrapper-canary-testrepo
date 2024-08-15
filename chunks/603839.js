@@ -42,10 +42,7 @@ function Z(e) {
 		} = (0, c.cj)([I.ZP], () => {
 			var e, n, i, a;
 			return {
-				progress:
-					null !== (a = null === (e = I.ZP.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== a
-						? a
-						: s,
+				progress: null !== (a = null === (e = I.ZP.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== a ? a : s,
 				errors: null === (n = I.ZP.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
 				submitting: null === (i = I.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
 			};

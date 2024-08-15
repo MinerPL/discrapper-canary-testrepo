@@ -23,11 +23,7 @@ var a = n(735250),
 	S = n(286359);
 let C = 'hTKzmak',
 	L = (0, I.hQ)();
-let A =
-		((o = window.GLOBAL_ENV.INVITE_HOST),
-		(l = ''),
-		null == o && ((o = location.host), (l = m.Z5c.INVITE(''))),
-		''.concat(location.protocol, '//').concat(o).concat(l, '/')),
+let A = ((o = window.GLOBAL_ENV.INVITE_HOST), (l = ''), null == o && ((o = location.host), (l = m.Z5c.INVITE(''))), ''.concat(location.protocol, '//').concat(o).concat(l, '/')),
 	D = [C, ''.concat(A).concat(C), ''.concat(A).concat('cool-people')],
 	M = (e) => {
 		let { onClick: t } = e;

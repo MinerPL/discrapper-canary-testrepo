@@ -40,13 +40,7 @@ function v(e, n, t) {
 let S = 44;
 class p extends s.Component {
 	shouldComponentUpdate(e, n) {
-		return (
-			this.state.sending !== n.sending ||
-			this.state.invited !== n.invited ||
-			this.state.hovered !== n.hovered ||
-			this.props.user !== e.user ||
-			this.props.channel !== e.channel
-		);
+		return this.state.sending !== n.sending || this.state.invited !== n.invited || this.state.hovered !== n.hovered || this.props.user !== e.user || this.props.channel !== e.channel;
 	}
 	renderUserOrChannel() {
 		let e, n, t;

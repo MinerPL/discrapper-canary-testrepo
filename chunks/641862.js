@@ -1,6 +1,6 @@
 n.d(t, {
 	Y: function () {
-		return I;
+		return m;
 	},
 	u: function () {
 		return p;
@@ -20,12 +20,7 @@ var r = n(175730),
 		return parseFloat(e || '0');
 	},
 	f = function (e, t, n) {
-		return (
-			void 0 === e && (e = 0),
-			void 0 === t && (t = 0),
-			void 0 === n && (n = !1),
-			new i.D((n ? t : e) || 0, (n ? e : t) || 0)
-		);
+		return void 0 === e && (e = 0), void 0 === t && (t = 0), void 0 === n && (n = !1), new i.D((n ? t : e) || 0, (n ? e : t) || 0);
 	},
 	h = (0, o.v)({
 		devicePixelContentBoxSize: f(),
@@ -41,8 +36,8 @@ var r = n(175730),
 			i = !_ && 'border-box' === n.boxSizing,
 			l = d.test(n.writingMode || ''),
 			p = !r && c.test(n.overflowY || ''),
-			I = !r && c.test(n.overflowX || ''),
-			m = r ? 0 : E(n.paddingTop),
+			m = !r && c.test(n.overflowX || ''),
+			I = r ? 0 : E(n.paddingTop),
 			T = r ? 0 : E(n.paddingRight),
 			g = r ? 0 : E(n.paddingBottom),
 			S = r ? 0 : E(n.paddingLeft),
@@ -51,10 +46,10 @@ var r = n(175730),
 			v = r ? 0 : E(n.borderBottomWidth),
 			O = r ? 0 : E(n.borderLeftWidth),
 			R = S + T,
-			C = m + g,
+			C = I + g,
 			y = O + N,
 			D = A + v,
-			L = I ? e.offsetHeight - D - e.clientHeight : 0,
+			L = m ? e.offsetHeight - D - e.clientHeight : 0,
 			b = p ? e.offsetWidth - y - e.clientWidth : 0,
 			M = r ? r.width : E(n.width) - (i ? R + y : 0) - b,
 			P = r ? r.height : E(n.height) - (i ? C + D : 0) - L,
@@ -64,11 +59,11 @@ var r = n(175730),
 				devicePixelContentBoxSize: f(Math.round(M * devicePixelRatio), Math.round(P * devicePixelRatio), l),
 				borderBoxSize: f(U, w, l),
 				contentBoxSize: f(M, P, l),
-				contentRect: new a.N(S, m, M, P)
+				contentRect: new a.N(S, I, M, P)
 			});
 		return u.set(e, x), x;
 	},
-	I = function (e, t, n) {
+	m = function (e, t, n) {
 		var i = p(e, n),
 			a = i.borderBoxSize,
 			s = i.contentBoxSize,

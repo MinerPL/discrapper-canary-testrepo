@@ -44,36 +44,6 @@ class o extends a.Z {
 		return this.code;
 	}
 	constructor(e) {
-		super(),
-			s(this, 'code', void 0),
-			s(this, 'temporary', void 0),
-			s(this, 'revoked', void 0),
-			s(this, 'uses', void 0),
-			s(this, 'maxUses', void 0),
-			s(this, 'maxAge', void 0),
-			s(this, 'createdAt', void 0),
-			s(this, 'channel', void 0),
-			s(this, 'guild', void 0),
-			s(this, 'inviter', void 0),
-			s(this, 'targetType', void 0),
-			s(this, 'targetUser', void 0),
-			s(this, 'targetApplication', void 0),
-			s(this, 'type', void 0),
-			s(this, 'flags', void 0),
-			(this.code = e.code || ''),
-			(this.temporary = e.temporary || !1),
-			(this.revoked = e.revoked || !1),
-			(this.uses = e.uses || 0),
-			(this.maxUses = e.maxUses || 0),
-			(this.maxAge = e.maxAge || 0),
-			(this.createdAt = e.createdAt || new Date()),
-			(this.channel = e.channel),
-			(this.guild = e.guild),
-			(this.inviter = e.inviter || null),
-			(this.targetType = e.targetType || null),
-			(this.targetUser = e.targetUser || null),
-			(this.targetApplication = e.targetApplication || null),
-			(this.type = e.type || null),
-			(this.flags = e.flags || 0);
+		super(), s(this, 'code', void 0), s(this, 'temporary', void 0), s(this, 'revoked', void 0), s(this, 'uses', void 0), s(this, 'maxUses', void 0), s(this, 'maxAge', void 0), s(this, 'createdAt', void 0), s(this, 'channel', void 0), s(this, 'guild', void 0), s(this, 'inviter', void 0), s(this, 'targetType', void 0), s(this, 'targetUser', void 0), s(this, 'targetApplication', void 0), s(this, 'type', void 0), s(this, 'flags', void 0), (this.code = e.code || ''), (this.temporary = e.temporary || !1), (this.revoked = e.revoked || !1), (this.uses = e.uses || 0), (this.maxUses = e.maxUses || 0), (this.maxAge = e.maxAge || 0), (this.createdAt = e.createdAt || new Date()), (this.channel = e.channel), (this.guild = e.guild), (this.inviter = e.inviter || null), (this.targetType = e.targetType || null), (this.targetUser = e.targetUser || null), (this.targetApplication = e.targetApplication || null), (this.type = e.type || null), (this.flags = e.flags || 0);
 	}
 }

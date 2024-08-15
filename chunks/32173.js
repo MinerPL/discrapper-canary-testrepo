@@ -64,35 +64,7 @@ var i = n(399606),
 	ei = n(209672),
 	el = n(698173),
 	eo = n(926262);
-((s = a || (a = {})).AVATAR_DECORATIONS = 'avatarDecorations'),
-	(s.CLIENT_THEMES = 'clientThemes'),
-	(s.CLIPS = 'clips'),
-	(s.EARLY_ACCESS = 'earlyAccess'),
-	(s.ENTRANCE_SOUNDS = 'entranceSounds'),
-	(s.PROFILE_EFFECTS = 'profileEffects'),
-	(s.PROFILES = 'profiles'),
-	(s.REMIXING = 'remixing'),
-	(s.SERVER_BOOSTS = 'serverBoosts'),
-	(s.SPECIAL_MEMBER_PRICING = 'specialMemberPricing'),
-	(s.SPECIAL_MEMBER_PRICING_SEE_ALL_VARIANT = 'specialMemberPricingSeeAllVariant'),
-	(s.SPECIAL_SHOP_PERKS = 'specialShopPerks'),
-	(s.UNLIMITED_SUPER_REACTIONS = 'unlimitedSuperReactions'),
-	(s.SUPER_REACTIONS = 'superReactions'),
-	(s.UPCOMING_DROP_UNTIMED = 'upcomingDropUntimed'),
-	(s.CUSTOM_APP_ICONS = 'customAppIcons'),
-	(s.MORE_EMOJI_POWER = 'moreEmojiPower'),
-	(s.CUSTOM_SOUNDS_EVERYWHERE = 'customSoundsEverywhere'),
-	(s.SPECIAL_STICKER_ACCESS = 'specialStickerAccess'),
-	(s.LARGE_UPLOADS = 'largeUploads'),
-	(s.HD_VIDEO = 'hdVideo'),
-	(s.BADGE = 'badge'),
-	(s.ENTRANCE_SOUNDS_SEE_ALL_VARIATION = 'entranceSoundsSeeAllVariation'),
-	(s.EARLY_ACCESS_SEE_ALL_VARIATION = 'earlyAccessSeeAllVariant'),
-	(s.FREE_BOOST = 'freeBoost'),
-	(s.REFERRAL_PROGRAM = 'referralProgram'),
-	(s.NEW_APP_STYLES_UPDATE_JUNE_2024 = 'newAppStylesUpdateJune2024'),
-	(s.SERVER_PROFILES = 'serverProfiles'),
-	(s.SHY_PROJECT = 'shyProject');
+((s = a || (a = {})).AVATAR_DECORATIONS = 'avatarDecorations'), (s.CLIENT_THEMES = 'clientThemes'), (s.CLIPS = 'clips'), (s.EARLY_ACCESS = 'earlyAccess'), (s.ENTRANCE_SOUNDS = 'entranceSounds'), (s.PROFILE_EFFECTS = 'profileEffects'), (s.PROFILES = 'profiles'), (s.REMIXING = 'remixing'), (s.SERVER_BOOSTS = 'serverBoosts'), (s.SPECIAL_MEMBER_PRICING = 'specialMemberPricing'), (s.SPECIAL_MEMBER_PRICING_SEE_ALL_VARIANT = 'specialMemberPricingSeeAllVariant'), (s.SPECIAL_SHOP_PERKS = 'specialShopPerks'), (s.UNLIMITED_SUPER_REACTIONS = 'unlimitedSuperReactions'), (s.SUPER_REACTIONS = 'superReactions'), (s.UPCOMING_DROP_UNTIMED = 'upcomingDropUntimed'), (s.CUSTOM_APP_ICONS = 'customAppIcons'), (s.MORE_EMOJI_POWER = 'moreEmojiPower'), (s.CUSTOM_SOUNDS_EVERYWHERE = 'customSoundsEverywhere'), (s.SPECIAL_STICKER_ACCESS = 'specialStickerAccess'), (s.LARGE_UPLOADS = 'largeUploads'), (s.HD_VIDEO = 'hdVideo'), (s.BADGE = 'badge'), (s.ENTRANCE_SOUNDS_SEE_ALL_VARIATION = 'entranceSoundsSeeAllVariation'), (s.EARLY_ACCESS_SEE_ALL_VARIATION = 'earlyAccessSeeAllVariant'), (s.FREE_BOOST = 'freeBoost'), (s.REFERRAL_PROGRAM = 'referralProgram'), (s.NEW_APP_STYLES_UPDATE_JUNE_2024 = 'newAppStylesUpdateJune2024'), (s.SERVER_PROFILES = 'serverProfiles'), (s.SHY_PROJECT = 'shyProject');
 t.Z = () => {
 	let { analyticsLocations: e } = (0, _.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD),
 		t = (0, c.ZP)(),
@@ -463,10 +435,7 @@ t.Z = () => {
 				title: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NEW_APP_STYLES_TITLE,
 				subtitle: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NEW_APP_STYLES_SUBTITLE,
 				description: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NEW_APP_STYLES_DESCRIPTION,
-				descriptionCta:
-					ed || e_
-						? Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NITRO_NEW_APP_STYLES
-						: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NON_NITRO_NEW_APP_STYLES,
+				descriptionCta: ed || e_ ? Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NITRO_NEW_APP_STYLES : Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NON_NITRO_NEW_APP_STYLES,
 				isPremiumGetCta: !(ed || e_),
 				onCtaClick: ed || e_ ? em : void 0,
 				perkImage: q
@@ -475,9 +444,7 @@ t.Z = () => {
 				name: 'referralProgram',
 				title: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_TITLE,
 				subtitle: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_SUBTITLE,
-				description: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_DESCRIPTION.format({
-					helpdeskArticle: p.Z.getArticleURL(P.BhN.REFERRAL_PROGRAM)
-				}),
+				description: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_DESCRIPTION.format({ helpdeskArticle: p.Z.getArticleURL(P.BhN.REFERRAL_PROGRAM) }),
 				descriptionCta: Z.Z.Messages.MARKETING_PAGE_CTA_GET_NITRO,
 				isPremiumGetCta: !ed || void 0,
 				perkImage: $
@@ -520,9 +487,7 @@ t.Z = () => {
 				name: 'shyProject',
 				title: Z.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
 				subtitle: Z.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
-				description: ed
-					? Z.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB
-					: Z.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
+				description: ed ? Z.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB : Z.Z.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
 				descriptionCta: Z.Z.Messages.VISIT_THE_SHOP_CTA,
 				pillText: Z.Z.Messages.NITRO_HOME_TAB_NEW.toLocaleUpperCase(),
 				onCtaClick: ed ? eA : void 0,

@@ -13,8 +13,8 @@ var r = n(544891),
 	f = n(592125),
 	h = n(306680),
 	p = n(626135),
-	I = n(73346),
-	m = n(26151),
+	m = n(73346),
+	I = n(26151),
 	T = n(287734),
 	g = n(981631),
 	S = n(689938);
@@ -26,7 +26,7 @@ t.Z = {
 			a = arguments.length > 4 ? arguments[4] : void 0,
 			s = this._getRecipients(e),
 			o = (e) => {
-				t && m.Z.call(e.id, n, !0, e.isDM() ? e.getRecipientId() : null);
+				t && I.Z.call(e.id, n, !0, e.isDM() ? e.getRecipientId() : null);
 			};
 		if (1 === s.length) {
 			let [e] = s,
@@ -45,35 +45,23 @@ t.Z = {
 			return o(t), e.body.id;
 		} catch (e) {
 			var l;
-			throw (
-				((null == e ? void 0 : null === (l = e.body) || void 0 === l ? void 0 : l.code) === g.evJ.QUARANTINED &&
-					(0, c.default)(),
-				e)
-			);
+			throw ((null == e ? void 0 : null === (l = e.body) || void 0 === l ? void 0 : l.code) === g.evJ.QUARANTINED && (0, c.default)(), e);
 		}
 	},
 	async createBroadcastPrivateChannel() {
 		try {
 			let e = await r.tn.post({ url: g.ANM.BROADCAST_PRIVATE_CHANNEL }),
 				t = (0, E.q_)(e.body);
-			return m.Z.call(t.id, !1, !1, null), e.body.id;
+			return I.Z.call(t.id, !1, !1, null), e.body.id;
 		} catch (t) {
 			var e;
-			throw (
-				((null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.code) === g.evJ.QUARANTINED &&
-					(0, c.default)(),
-				t)
-			);
+			throw ((null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.code) === g.evJ.QUARANTINED && (0, c.default)(), t);
 		}
 	},
 	_openCachedDMChannel(e, t) {
 		let n = f.Z.getDMFromUserId(e),
 			r = null != n ? f.Z.getChannel(n) : null;
-		return null == r
-			? null
-			: (null == t || t(),
-				null != (0, u.PP)() ? (0, _.Kh)(r.id, { navigationReplace: !0 }) : T.default.selectPrivateChannel(r.id),
-				r);
+		return null == r ? null : (null == t || t(), null != (0, u.PP)() ? (0, _.Kh)(r.id, { navigationReplace: !0 }) : T.default.selectPrivateChannel(r.id), r);
 	},
 	async ensurePrivateChannel(e) {
 		let t = this._getRecipients(e),
@@ -169,17 +157,11 @@ t.Z = {
 				context: { location: n },
 				oldFormErrors: !0
 			})
-			.then((t) =>
-				(i.uv.announce(S.Z.Messages.A11Y_ANNOUNCEMENT_USER_ADDED_TO_GROUP_DM), null == a || a(), 201 === t.status)
-					? this._openPrivateChannel(t.body).id
-					: e
-			)
+			.then((t) => ((i.uv.announce(S.Z.Messages.A11Y_ANNOUNCEMENT_USER_ADDED_TO_GROUP_DM), null == a || a(), 201 === t.status) ? this._openPrivateChannel(t.body).id : e))
 			.catch(() => (i.uv.announce(S.Z.Messages.A11Y_ANNOUNCEMENT_USER_ADDED_TO_GROUP_DM_FAILED), e));
 	},
 	addRecipients(e, t, n, r) {
-		return this.addRecipient(e, t[0], n, r).then((e) =>
-			Promise.all(t.slice(1).map((t) => this.addRecipient(e, t, n))).then(() => e)
-		);
+		return this.addRecipient(e, t[0], n, r).then((e) => Promise.all(t.slice(1).map((t) => this.addRecipient(e, t, n))).then(() => e));
 	},
 	removeRecipient: (e, t) =>
 		r.tn.del({
@@ -230,7 +212,7 @@ t.Z = {
 	},
 	fetchChannelStoreListing(e, t) {
 		let n = null != t ? g.ANM.CHANNEL_STORE_LISTING_SKU(e, t) : g.ANM.CHANNEL_STORE_LISTING(e);
-		return (0, I.Kb)(n).then((t) => {
+		return (0, m.Kb)(n).then((t) => {
 			a.Z.dispatch({
 				type: 'STORE_LISTING_FETCH_SUCCESS',
 				channelId: e,

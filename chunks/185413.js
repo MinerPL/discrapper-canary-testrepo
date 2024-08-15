@@ -40,15 +40,7 @@ function j(e, t) {
 }
 function p(e) {
 	let t,
-		{
-			guild: n,
-			channel: r,
-			permission: i,
-			pendingAdditions: c,
-			setPendingAdditions: d,
-			isStageChannel: u = null != r && r.isGuildStageVoice(),
-			description: m
-		} = e,
+		{ guild: n, channel: r, permission: i, pendingAdditions: c, setPendingAdditions: d, isStageChannel: u = null != r && r.isGuildStageVoice(), description: m } = e,
 		[E, S] = l.useState(!1),
 		[f, L] = l.useState(''),
 		y = (0, a.e7)([x.Z], () => x.Z.getRoles(n.id));
@@ -57,11 +49,7 @@ function p(e) {
 		return RegExp(''.concat(T.Z.escape(t)), 'i').test(e);
 	}
 	let v = (0, a.Wu)([h.ZP], () => h.ZP.getMemberIds(n.id));
-	E
-		? (t = [])
-		: u
-			? (t = M.Wx(n, y, r, i, p))
-			: 0 === (t = M.ik(n, y, r, i, p)).length && '' === f.trim() && !M.RD(n, y) && (t = M.aq());
+	E ? (t = []) : u ? (t = M.Wx(n, y, r, i, p)) : 0 === (t = M.ik(n, y, r, i, p)).length && '' === f.trim() && !M.RD(n, y) && (t = M.aq());
 	let C = M.iI(v, r, n, i, p),
 		{
 			placeholderText: w,
@@ -127,23 +115,7 @@ function p(e) {
 }
 function N(e) {
 	let t,
-		{
-			listClassName: n,
-			pendingAdditions: l,
-			query: a,
-			onQueryChange: i,
-			onClickRow: o,
-			onRemovePendingAddition: c,
-			roles: d,
-			members: u,
-			placeholderText: m,
-			hintText: h,
-			renderEmptyText: x,
-			isStageChannel: E,
-			focusSearchAfterReady: S,
-			isReady: R,
-			description: T
-		} = e;
+		{ listClassName: n, pendingAdditions: l, query: a, onQueryChange: i, onClickRow: o, onRemovePendingAddition: c, roles: d, members: u, placeholderText: m, hintText: h, renderEmptyText: x, isStageChannel: E, focusSearchAfterReady: S, isReady: R, description: T } = e;
 	return (0, s.jsxs)('div', {
 		className: L.content,
 		children: [
@@ -200,11 +172,7 @@ function v(e) {
 				return (
 					Object.values(t).forEach((t) => {
 						let { row: n } = t;
-						null != n.id &&
-							'' !== n.id &&
-							(n.rowType === b.aC.ROLE
-								? s.push((0, S.rX)(n.id, e.type))
-								: n.rowType === b.aC.MEMBER && s.push((0, S.jZ)(n.id, e.type)));
+						null != n.id && '' !== n.id && (n.rowType === b.aC.ROLE ? s.push((0, S.rX)(n.id, e.type)) : n.rowType === b.aC.MEMBER && s.push((0, S.jZ)(n.id, e.type)));
 					}),
 					(0, i.hw)(e.id, s, n)
 				);

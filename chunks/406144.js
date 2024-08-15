@@ -106,12 +106,10 @@ var a = {
 	'dragonpay.voucher.bank.selectField.placeholder': 'Välj din bank',
 	'voucher.paymentReferenceLabel': 'Betalreferens',
 	'voucher.surcharge': 'Inklusive %@ i avgift',
-	'voucher.introduction.doku':
-		'Tack för ditt köp, vänligen använd följande information för att slutföra din betalning.',
+	'voucher.introduction.doku': 'Tack för ditt köp, vänligen använd följande information för att slutföra din betalning.',
 	'voucher.shopperName': 'Konsumentens namn',
 	'voucher.merchantName': 'Handlare',
-	'voucher.introduction.econtext':
-		'Tack för ditt köp, vänligen använd följande information för att slutföra din betalning.',
+	'voucher.introduction.econtext': 'Tack för ditt köp, vänligen använd följande information för att slutföra din betalning.',
 	'voucher.telephoneNumber': 'Telefonnummer',
 	'voucher.shopperReference': 'Köparreferens',
 	'voucher.collectionInstitutionNumber': 'Nummer på upphämtningsplats',
@@ -137,8 +135,7 @@ var a = {
 	'creditCard.encryptedPassword.placeholder': '12',
 	'creditCard.encryptedPassword.invalid': 'Ogiltigt lösenord',
 	'creditCard.taxNumber': 'Kortinnehavarens födelsedatum eller företagets organisationsnummer',
-	'creditCard.taxNumber.label':
-		'Kortinnehavarens födelsedatum (ÅÅMMDD) eller företagets organisationsnummer (10 siffror)',
+	'creditCard.taxNumber.label': 'Kortinnehavarens födelsedatum (ÅÅMMDD) eller företagets organisationsnummer (10 siffror)',
 	'creditCard.taxNumber.labelAlt': 'Företagets organisationsnummer (10 siffror)',
 	'creditCard.taxNumber.invalid': 'Ogiltigt födelsedatum eller organisationsnummer',
 	'storedPaymentMethod.disable.button': 'Ta bort',
@@ -173,8 +170,7 @@ var a = {
 	'blik.invalid': 'Ange 6 siffror',
 	'blik.code': 'Sexsiffrig kod',
 	'blik.help': 'Hämta koden från din bankapp.',
-	'swish.pendingMessage':
-		'När du har skannat kan statusen vara väntande i upp till tio minuter. Att försöka betala igen inom denna tid kan leda till flera debiteringar.',
+	'swish.pendingMessage': 'När du har skannat kan statusen vara väntande i upp till tio minuter. Att försöka betala igen inom denna tid kan leda till flera debiteringar.',
 	'field.valid': 'Fältet är giltigt',
 	'field.invalid': 'Fältet ogiltigt',
 	'error.va.gen.01': 'Ofullständigt fält',
@@ -210,8 +206,7 @@ var a = {
 	'bankTransfer.iban': 'IBAN',
 	'bankTransfer.bic': 'BIC',
 	'bankTransfer.reference': 'referens',
-	'bankTransfer.introduction':
-		'Fortsätt för att skapa en ny banköverföring. Du kan använda informationen på följande skärm för att slutföra denna betalning.',
+	'bankTransfer.introduction': 'Fortsätt för att skapa en ny banköverföring. Du kan använda informationen på följande skärm för att slutföra denna betalning.',
 	'bankTransfer.instructions': 'Tack för ditt köp! Använd följande information för att slutföra din betalning.',
 	'bacs.accountHolderName': 'Bankkontoinnehavarens namn',
 	'bacs.accountHolderName.invalid': 'Ogiltigt namn på bankkontoinnehavare',
@@ -220,8 +215,7 @@ var a = {
 	'bacs.bankLocationId': 'Clearingnummer',
 	'bacs.bankLocationId.invalid': 'Ogiltigt clearingnummer',
 	'bacs.consent.amount': 'Jag godkänner att ovanstående belopp dras från mitt bankkonto.',
-	'bacs.consent.account':
-		'Jag bekräftar att jag är kontoinnehavare och att jag är den enda person vars godkännande krävs för att auktorisera autogiro från detta konto.',
+	'bacs.consent.account': 'Jag bekräftar att jag är kontoinnehavare och att jag är den enda person vars godkännande krävs för att auktorisera autogiro från detta konto.',
 	edit: 'Redigera',
 	'bacs.confirm': 'Bekräfta och betala',
 	'bacs.result.introduction': 'Ladda ner din instruktion för autogiro/direktdebitering (DDI / Mandate)',
@@ -254,8 +248,7 @@ var a = {
 	'upi.vpaWaitingMessage': 'Öppna din UPI-app för att bekräfta betalningen',
 	'upi.modeSelection': 'Välj hur du vill använda UPI.',
 	'onlineBanking.termsAndConditions': 'Genom att fortsätta godkänner du %#villkoren%#',
-	'onlineBankingPL.termsAndConditions':
-		'Genom att fortsätta godkänner du Przelewy24s %#regler%# och %#informationsplikt%#.',
+	'onlineBankingPL.termsAndConditions': 'Genom att fortsätta godkänner du Przelewy24s %#regler%# och %#informationsplikt%#.',
 	'ctp.loading.poweredByCtp': 'Drivs av Click to Pay',
 	'ctp.loading.intro': 'Vi kontrollerar om du har några sparade kort med Click to Pay...',
 	'ctp.login.title': 'Fortsätt till Click to Pay',

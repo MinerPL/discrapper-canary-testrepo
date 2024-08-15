@@ -55,10 +55,7 @@ function b(e) {
 						onConfirm: () => v(s),
 						children: (0, i.jsx)(c.Text, {
 							variant: 'text-md/normal',
-							children:
-								s.type === x.ABu.YOUTUBE
-									? S.Z.Messages.DISABLE_INTEGRATION_YOUTUBE_BODY
-									: S.Z.Messages.DISABLE_INTEGRATION_TWITCH_BODY
+							children: s.type === x.ABu.YOUTUBE ? S.Z.Messages.DISABLE_INTEGRATION_YOUTUBE_BODY : S.Z.Messages.DISABLE_INTEGRATION_TWITCH_BODY
 						})
 					});
 				});
@@ -77,25 +74,14 @@ function b(e) {
 			subscribersText: F
 		} = a.useMemo(() => {
 			var e, n, t, i, a;
-			let l =
-				null !==
-					(t =
-						null === (n = I.Z.get(s.type)) || void 0 === n
-							? void 0
-							: null === (e = n.getPlatformUserUrl) || void 0 === e
-								? void 0
-								: e.call(n, s.account)) && void 0 !== t
-					? t
-					: '';
+			let l = null !== (t = null === (n = I.Z.get(s.type)) || void 0 === n ? void 0 : null === (e = n.getPlatformUserUrl) || void 0 === e ? void 0 : e.call(n, s.account)) && void 0 !== t ? t : '';
 			switch (s.type) {
 				case x.ABu.YOUTUBE:
 					return {
 						serviceName: S.Z.Messages.INTEGRATIONS_YOUTUBE,
 						expireBehaviorLabel: S.Z.Messages.FORM_LABEL_MEMBERSHIP_EXPIRE_BEHAVIOR,
 						syncLabel: S.Z.Messages.FORM_LABEL_SYNCED_MEMBERS,
-						subscribersText: S.Z.Messages.NUM_MEMBERS.format({
-							subscribers: null !== (i = s.subscriber_count) && void 0 !== i ? i : 0
-						}),
+						subscribersText: S.Z.Messages.NUM_MEMBERS.format({ subscribers: null !== (i = s.subscriber_count) && void 0 !== i ? i : 0 }),
 						channelURL: l
 					};
 				case x.ABu.TWITCH:
@@ -104,9 +90,7 @@ function b(e) {
 						serviceName: S.Z.Messages.INTEGRATIONS_TWITCH,
 						expireBehaviorLabel: S.Z.Messages.FORM_LABEL_SUB_EXPIRE_BEHAVIOR,
 						syncLabel: S.Z.Messages.FORM_LABEL_SYNCED_SUBS,
-						subscribersText: S.Z.Messages.NUM_SUBSCRIBERS.format({
-							subscribers: null !== (a = s.subscriber_count) && void 0 !== a ? a : 0
-						}),
+						subscribersText: S.Z.Messages.NUM_SUBSCRIBERS.format({ subscribers: null !== (a = s.subscriber_count) && void 0 !== a ? a : 0 }),
 						channelURL: l
 					};
 			}
@@ -138,11 +122,7 @@ function b(e) {
 				n = Object.values(L)
 					.filter((e) => null != e.tags && e.tags.integration_id === s.id)
 					.map((e) => e.id);
-			return s.enable_emoticons
-				? e
-						.sort((e, n) => e.name.localeCompare(n.name))
-						.filter((e) => null != s.role_id && (null == e ? void 0 : e.roles.some((e) => n.includes(e))))
-				: [];
+			return s.enable_emoticons ? e.sort((e, n) => e.name.localeCompare(n.name)).filter((e) => null != s.role_id && (null == e ? void 0 : e.roles.some((e) => n.includes(e)))) : [];
 		}, [t.id, L, s.enable_emoticons, s.id, s.role_id]);
 	if (
 		(a.useEffect(() => {

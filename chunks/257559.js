@@ -99,9 +99,7 @@ n.Z = {
 			let s;
 			let l = (0, d.F6)(e, M.default, m.Z);
 			return (
-				(s = e.isPrivate()
-					? I.Z.Messages.PIN_MESSAGE_BODY_PRIVATE_CHANNEL
-					: I.Z.Messages.PIN_MESSAGE_BODY.format({ channelName: l })),
+				(s = e.isPrivate() ? I.Z.Messages.PIN_MESSAGE_BODY_PRIVATE_CHANNEL : I.Z.Messages.PIN_MESSAGE_BODY.format({ channelName: l })),
 				(0, i.jsx)(E.Z.Provider, {
 					value: e.guild_id,
 					children: (0, i.jsxs)(r.ConfirmModal, {

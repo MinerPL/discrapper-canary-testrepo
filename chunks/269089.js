@@ -24,14 +24,10 @@ let c = (0, r.Un)({
 	});
 class _ extends s.Z {
 	_initialize() {
-		a.Z.subscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout),
-			a.Z.subscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout),
-			this.initializeStyleSheetObserver();
+		a.Z.subscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout), a.Z.subscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout), this.initializeStyleSheetObserver();
 	}
 	_terminate() {
-		a.Z.unsubscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout),
-			a.Z.unsubscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout),
-			this.terminateStyleSheetObserver();
+		a.Z.unsubscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout), a.Z.unsubscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout), this.terminateStyleSheetObserver();
 	}
 	handleOpenChannelCallPopout(e) {
 		let { channel: t } = e;

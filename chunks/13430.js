@@ -92,11 +92,7 @@ let T = a.forwardRef(function (e, t) {
 				setYear: d
 			};
 		})(n),
-		M = a.useMemo(
-			() =>
-				null != A && null != b && null != I ? i()(''.concat(A, '/').concat(b, '/').concat(I), 'DD/MM/YYYY') : null,
-			[A, b, I]
-		);
+		M = a.useMemo(() => (null != A && null != b && null != I ? i()(''.concat(A, '/').concat(b, '/').concat(I), 'DD/MM/YYYY') : null), [A, b, I]);
 	a.useEffect(() => {
 		l((null == M ? void 0 : M.isValid()) ? M : null);
 	}, [M, l]);

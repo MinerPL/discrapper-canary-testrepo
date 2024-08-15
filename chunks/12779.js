@@ -7,16 +7,7 @@ var i = n(735250),
 	c = n(14338),
 	u = n(327799);
 t.Z = a.memo(function (e) {
-	let {
-		label: t,
-		participantCount: n,
-		onClick: a,
-		className: s,
-		collapsed: d,
-		speakers: h,
-		channel: m,
-		isStreamLive: p
-	} = e;
+	let { label: t, participantCount: n, onClick: a, className: s, collapsed: d, speakers: h, channel: m, isStreamLive: p } = e;
 	return (0, i.jsxs)(r.Clickable, {
 		onClick: a,
 		className: l()(u.container, s),

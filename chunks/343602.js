@@ -39,36 +39,9 @@ function m(e) {
 		y = (0, d.Z)(),
 		D = M.Xk.useSetting();
 	if (!T.isPlatformEmbedded) return null;
-	let U =
-			null !==
-				(I =
-					null === (n = x.chatInputType) || void 0 === n
-						? void 0
-						: null === (t = n.commands) || void 0 === t
-							? void 0
-							: t.enabled) &&
-			void 0 !== I &&
-			I,
-		P =
-			null !==
-				(g =
-					null === (h = x.chatInputType) || void 0 === h
-						? void 0
-						: null === (m = h.stickers) || void 0 === m
-							? void 0
-							: m.autoSuggest) &&
-			void 0 !== g &&
-			g,
-		H =
-			null !==
-				(A =
-					null === (_ = x.chatInputType) || void 0 === _
-						? void 0
-						: null === (Z = _.submit) || void 0 === Z
-							? void 0
-							: Z.button) &&
-			void 0 !== A &&
-			A,
+	let U = null !== (I = null === (n = x.chatInputType) || void 0 === n ? void 0 : null === (t = n.commands) || void 0 === t ? void 0 : t.enabled) && void 0 !== I && I,
+		P = null !== (g = null === (h = x.chatInputType) || void 0 === h ? void 0 : null === (m = h.stickers) || void 0 === m ? void 0 : m.autoSuggest) && void 0 !== g && g,
+		H = null !== (A = null === (_ = x.chatInputType) || void 0 === _ ? void 0 : null === (Z = _.submit) || void 0 === Z ? void 0 : Z.button) && void 0 !== A && A,
 		X = U || P,
 		K =
 			'' !== k

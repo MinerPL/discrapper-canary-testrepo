@@ -90,12 +90,7 @@ var e = n(67867),
 	tf = function (t, r, n) {
 		t === H && tf(te, r, n), l(t);
 		var e = h(r);
-		return (l(n), p(tn, e))
-			? (n.enumerable
-					? (p(t, G) && t[G][e] && (t[G][e] = !1), (n = g(n, { enumerable: d(0, !1) })))
-					: (!p(t, G) && Q(t, G, d(1, {})), (t[G][e] = !0)),
-				ts(t, e, n))
-			: Q(t, e, n);
+		return (l(n), p(tn, e)) ? (n.enumerable ? (p(t, G) && t[G][e] && (t[G][e] = !1), (n = g(n, { enumerable: d(0, !1) }))) : (!p(t, G) && Q(t, G, d(1, {})), (t[G][e] = !0)), ts(t, e, n)) : Q(t, e, n);
 	},
 	ta = function (t, r) {
 		l(t);
@@ -110,9 +105,7 @@ var e = n(67867),
 	tp = function (t) {
 		var r = h(t),
 			n = i(tt, this, r);
-		return (
-			(!(this === H && p(tn, r)) || !!p(te, r)) && (!(n || !p(this, r) || !p(tn, r) || (p(this, G) && this[G][r])) || n)
-		);
+		return (!(this === H && p(tn, r)) || !!p(te, r)) && (!(n || !p(this, r) || !p(tn, r) || (p(this, G) && this[G][r])) || n);
 	},
 	tv = function (t, r) {
 		var n = y(t),

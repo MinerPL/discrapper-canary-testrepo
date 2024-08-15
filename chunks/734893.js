@@ -6,7 +6,7 @@ n.d(t, {
 		return h;
 	},
 	Vu: function () {
-		return m;
+		return I;
 	},
 	W4: function () {
 		return _;
@@ -21,7 +21,7 @@ n.d(t, {
 		return d;
 	},
 	am: function () {
-		return I;
+		return m;
 	},
 	av: function () {
 		return R;
@@ -77,8 +77,8 @@ let d = 7,
 	f = 60,
 	h = 5,
 	p = 1,
-	I = 30,
-	m = 200,
+	m = 30,
+	I = 200,
 	T = 7;
 function g(e) {
 	var t;
@@ -150,8 +150,7 @@ function N(e, t) {
 					emoji: {
 						id: null !== (i = null === (t = e.emoji) || void 0 === t ? void 0 : t.id) && void 0 !== i ? i : void 0,
 						name: null !== (a = null === (n = e.emoji) || void 0 === n ? void 0 : n.name) && void 0 !== a ? a : void 0,
-						animated:
-							null !== (s = null === (r = e.emoji) || void 0 === r ? void 0 : r.animated) && void 0 !== s ? s : void 0
+						animated: null !== (s = null === (r = e.emoji) || void 0 === r ? void 0 : r.animated) && void 0 !== s ? s : void 0
 					},
 					icon: null !== (o = e.icon) && void 0 !== o ? o : void 0
 				};
@@ -171,8 +170,7 @@ function N(e, t) {
 					emoji: {
 						id: null !== (i = null === (t = e.emoji) || void 0 === t ? void 0 : t.id) && void 0 !== i ? i : void 0,
 						name: null !== (a = null === (n = e.emoji) || void 0 === n ? void 0 : n.name) && void 0 !== a ? a : void 0,
-						animated:
-							null !== (s = null === (r = e.emoji) || void 0 === r ? void 0 : r.animated) && void 0 !== s ? s : void 0
+						animated: null !== (s = null === (r = e.emoji) || void 0 === r ? void 0 : r.animated) && void 0 !== s ? s : void 0
 					},
 					icon: null !== (o = e.icon) && void 0 !== o ? o : void 0
 				};
@@ -188,33 +186,14 @@ let v = (e) => {
 	return t;
 };
 function O(e) {
-	return (
-		null == e ||
-		((null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)) && !0)
-	);
+	return null == e || ((null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)) && !0);
 }
 function R(e) {
-	return (
-		null == e ||
-		(!!O(e.welcomeMessage) &&
-			(null == e.newMemberActions || !(e.newMemberActions.length > 0)) &&
-			(null == e.resourceChannels || !(e.resourceChannels.length > 0)) &&
-			!0)
-	);
+	return null == e || (!!O(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)) && !0);
 }
 function C(e) {
 	var t, n;
-	return (
-		null != e &&
-		(!!R(e) ||
-			((null === (t = e.welcomeMessage) || void 0 === t ? void 0 : t.message) != null &&
-				!(e.welcomeMessage.message.length < d) &&
-				(null === (n = e.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) != null &&
-				0 !== e.welcomeMessage.authorIds.length &&
-				null != e.newMemberActions &&
-				!(e.newMemberActions.length < 3) &&
-				!0))
-	);
+	return null != e && (!!R(e) || ((null === (t = e.welcomeMessage) || void 0 === t ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < d) && (null === (n = e.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < 3) && !0));
 }
 function y(e) {
 	return e.type === c.d4z.GUILD_TEXT && !u.Uu(c.Plq.SEND_MESSAGES, e) && u.Uu(c.Plq.VIEW_CHANNEL, e);

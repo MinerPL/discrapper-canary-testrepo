@@ -35,14 +35,7 @@ let N = (e) => {
 		var t, n, a;
 		let { embed: s } = e;
 		if (!m.n2.has(s.type)) return null;
-		let r =
-			void 0 !== s.video && s.type !== l.h.GIFV
-				? s.video.url
-				: null !== (a = null === (t = s.thumbnail) || void 0 === t ? void 0 : t.url) && void 0 !== a
-					? a
-					: null === (n = s.image) || void 0 === n
-						? void 0
-						: n.url;
+		let r = void 0 !== s.video && s.type !== l.h.GIFV ? s.video.url : null !== (a = null === (t = s.thumbnail) || void 0 === t ? void 0 : t.url) && void 0 !== a ? a : null === (n = s.image) || void 0 === n ? void 0 : n.url;
 		return null == r ? null : (0, i.jsx)(C, { url: r });
 	},
 	C = (e) => {
@@ -72,17 +65,7 @@ function p(e) {
 		e();
 }
 function g(e) {
-	let {
-			channelId: t,
-			messageId: n,
-			isReportFalsePositiveLoading: s,
-			analyticsContext: r,
-			attachmentPreview: l,
-			embedPreview: c,
-			onConfirmPress: d,
-			transitionState: _,
-			onClose: E
-		} = e,
+	let { channelId: t, messageId: n, isReportFalsePositiveLoading: s, analyticsContext: r, attachmentPreview: l, embedPreview: c, onConfirmPress: d, transitionState: _, onClose: E } = e,
 		m = (0, u.Dt)(),
 		C = a.useCallback(() => {
 			(0, I.aP)({

@@ -1,5 +1,5 @@
 var r = n(706178);
-(e.exports = I), (I.simpleSieve = h), (I.fermatTest = p);
+(e.exports = m), (m.simpleSieve = h), (m.fermatTest = p);
 var i = n(814033),
 	a = new i(24),
 	s = new (n(687363))(),
@@ -40,7 +40,7 @@ function p(e) {
 	var t = i.mont(e);
 	return 0 === l.toRed(t).redPow(e.subn(1)).fromRed().cmpn(1);
 }
-function I(e, t) {
+function m(e, t) {
 	var n, f;
 	if (e < 16) return 2 === t || 5 === t ? new i([140, 123]) : new i([140, 39]);
 	for (t = new i(t); ; ) {

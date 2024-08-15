@@ -45,15 +45,7 @@ function r(e) {
 			});
 }
 function l(e, t) {
-	let {
-		message: n,
-		channel: a,
-		compact: r = !1,
-		renderThreadAccessory: l,
-		disableReactionCreates: o,
-		disableReactionUpdates: c,
-		isSearchResult: u
-	} = e;
+	let { message: n, channel: a, compact: r = !1, renderThreadAccessory: l, disableReactionCreates: o, disableReactionUpdates: c, isSearchResult: u } = e;
 	return (0, i.jsx)(s.$p, {
 		message: n,
 		channel: a,

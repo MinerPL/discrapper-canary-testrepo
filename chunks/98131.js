@@ -60,10 +60,7 @@ let R = (e) => {
 									variant: 'text-sm/normal',
 									color: 'always-white',
 									className: Z.warningText,
-									children:
-										x.Z.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({
-											url: _.Z.getArticleURL(I.BhN.CLIPS)
-										})
+									children: x.Z.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({ url: _.Z.getArticleURL(I.BhN.CLIPS) })
 								})
 							: null
 					]

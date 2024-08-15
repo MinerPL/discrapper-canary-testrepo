@@ -44,11 +44,7 @@ function S(e) {
 						case m.q.BENEFITS:
 							return l;
 						case m.q.OTHER_CREATORS:
-							return (0, s.jsx)(
-								a,
-								{ children: (0, s.jsx)(I.Z, { highlightedCreators: e.creators }) },
-								m.q.OTHER_CREATORS
-							);
+							return (0, s.jsx)(a, { children: (0, s.jsx)(I.Z, { highlightedCreators: e.creators }) }, m.q.OTHER_CREATORS);
 					}
 				})
 			});

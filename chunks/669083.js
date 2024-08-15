@@ -185,12 +185,7 @@ class O extends o.PureComponent {
 		);
 	}
 	renderGeneralSettings() {
-		let {
-				textChatNotificationMode: e,
-				notificationPositionMode: t,
-				shouldShowKeybindIndicators: n,
-				showKeybindIndicators: i
-			} = this.props,
+		let { textChatNotificationMode: e, notificationPositionMode: t, shouldShowKeybindIndicators: n, showKeybindIndicators: i } = this.props,
 			s = t !== E._vf.DISABLED;
 		return (0, a.jsxs)(o.Fragment, {
 			children: [

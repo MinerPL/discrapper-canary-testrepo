@@ -15,18 +15,7 @@ var n = a(735250),
 let h = null;
 class m extends i.PureComponent {
 	render() {
-		let {
-			token: e,
-			className: t,
-			onChangeLocale: a,
-			mainContentId: r,
-			mobileClassName: o,
-			avoidRouter: m,
-			authRedirectTo: p,
-			openNavAriaLabel: N,
-			hideNavAriaLabel: k,
-			skipToContentLabel: _
-		} = this.props;
+		let { token: e, className: t, onChangeLocale: a, mainContentId: r, mobileClassName: o, avoidRouter: m, authRedirectTo: p, openNavAriaLabel: N, hideNavAriaLabel: k, skipToContentLabel: _ } = this.props;
 		return null == h
 			? null
 			: (0, n.jsxs)(i.Fragment, {

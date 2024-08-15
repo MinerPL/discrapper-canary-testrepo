@@ -5,8 +5,7 @@ e.exports = function (e) {
 		case_insensitive: !0,
 		aliases: ['ahk'],
 		keywords: {
-			keyword:
-				'Break Continue Critical Exit ExitApp Gosub Goto New OnExit Pause return SetBatchLines SetTimer Suspend Thread Throw Until ahk_id ahk_class ahk_pid ahk_exe ahk_group',
+			keyword: 'Break Continue Critical Exit ExitApp Gosub Goto New OnExit Pause return SetBatchLines SetTimer Suspend Thread Throw Until ahk_id ahk_class ahk_pid ahk_exe ahk_group',
 			literal: 'true false NOT AND OR',
 			built_in: 'ComSpec Clipboard ClipboardAll ErrorLevel'
 		},

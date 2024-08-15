@@ -23,11 +23,7 @@ function u(e, t, n) {
 }
 function c(e, t, n) {
 	var r;
-	return null == n
-		? l.Z.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER
-		: null !== (r = u(e, t, n)) && void 0 !== r
-			? r
-			: o.ZP.getName(n);
+	return null == n ? l.Z.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER : null !== (r = u(e, t, n)) && void 0 !== r ? r : o.ZP.getName(n);
 }
 function d(e, t, n) {
 	return (0, r.e7)([a.ZP, i.Z, s.Z], () => c(e, t, n));

@@ -13,10 +13,7 @@ var r,
 	_ = n(570140),
 	S = n(128069),
 	s = n(38618);
-((r = o || (o = {}))[(r.UNKNOWN = 0)] = 'UNKNOWN'),
-	(r[(r.PENDING = 1)] = 'PENDING'),
-	(r[(r.SUCCESS = 2)] = 'SUCCESS'),
-	(r[(r.ERROR = 3)] = 'ERROR');
+((r = o || (o = {}))[(r.UNKNOWN = 0)] = 'UNKNOWN'), (r[(r.PENDING = 1)] = 'PENDING'), (r[(r.SUCCESS = 2)] = 'SUCCESS'), (r[(r.ERROR = 3)] = 'ERROR');
 let A = 0,
 	c = null,
 	T = null;

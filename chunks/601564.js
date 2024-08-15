@@ -62,17 +62,11 @@ class R extends a.PureComponent {
 			(0, T.e)('application_store');
 	}
 	componentWillUnmount() {
-		null != this.stopListeningToHistory && this.stopListeningToHistory(),
-			m.Z.disable(),
-			m.Z.setLayout(h.oT),
-			m.Z.enable();
+		null != this.stopListeningToHistory && this.stopListeningToHistory(), m.Z.disable(), m.Z.setLayout(h.oT), m.Z.enable();
 	}
 	renderCustomErrorMessage() {
 		return (0, i.jsxs)('div', {
-			children: [
-				(0, i.jsx)('p', { children: A.Z.Messages.ERRORS_STORE_CRASH }),
-				(0, i.jsx)('p', { children: A.Z.Messages.ERRORS_ACTION_TO_TAKE })
-			]
+			children: [(0, i.jsx)('p', { children: A.Z.Messages.ERRORS_STORE_CRASH }), (0, i.jsx)('p', { children: A.Z.Messages.ERRORS_ACTION_TO_TAKE })]
 		});
 	}
 	render() {

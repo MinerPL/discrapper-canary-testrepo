@@ -39,35 +39,11 @@ let N = {
 				enableEmojiClick: !1
 			})
 		]),
-		[
-			'commandMention',
-			'customEmoji',
-			'em',
-			'emoji',
-			'emoticon',
-			'highlight',
-			'inlineCode',
-			'looseEm',
-			's',
-			'strong',
-			'text',
-			'timestamp',
-			'u',
-			'spoiler'
-		]
+		['commandMention', 'customEmoji', 'em', 'emoji', 'emoticon', 'highlight', 'inlineCode', 'looseEm', 's', 'strong', 'text', 'timestamp', 'u', 'spoiler']
 	),
 	x = o.w4(v);
 function I(e) {
-	let {
-			channel: n,
-			application: t,
-			location: i,
-			sectionName: a,
-			commandName: l,
-			autoDismissOnClick: o = !0,
-			launchingComponentId: m,
-			submitting: p = !1
-		} = e,
+	let { channel: n, application: t, location: i, sectionName: a, commandName: l, autoDismissOnClick: o = !0, launchingComponentId: m, submitting: p = !1 } = e,
 		_ = (0, s.O)(),
 		N = (0, c.Qv)({
 			channelId: n.id,
@@ -95,9 +71,7 @@ function I(e) {
 		x = r.ButtonColors.BRAND,
 		I = null != l ? l : E.Z.Messages.LAUNCH;
 	return (
-		N === c.JS.JOIN
-			? ((x = r.ButtonColors.GREEN), (I = E.Z.Messages.JOIN_ACTIVITY))
-			: N === c.JS.LEAVE && !p && ((x = r.ButtonColors.RED), (I = E.Z.Messages.LEAVE)),
+		N === c.JS.JOIN ? ((x = r.ButtonColors.GREEN), (I = E.Z.Messages.JOIN_ACTIVITY)) : N === c.JS.LEAVE && !p && ((x = r.ButtonColors.RED), (I = E.Z.Messages.LEAVE)),
 		{
 			onActivityItemSelected: v,
 			activityAction: N,

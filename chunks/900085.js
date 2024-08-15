@@ -262,21 +262,7 @@ class V extends r.PureComponent {
 				switch (t.type) {
 					case _.h8.GUILD:
 						return (0, d.jW)(e, async () => {
-							let { default: e } = await Promise.all([
-								n.e('96427'),
-								n.e('33053'),
-								n.e('37581'),
-								n.e('7654'),
-								n.e('18146'),
-								n.e('44156'),
-								n.e('14203'),
-								n.e('85552'),
-								n.e('58227'),
-								n.e('75531'),
-								n.e('23693'),
-								n.e('33213'),
-								n.e('3116')
-							]).then(n.bind(n, 545135));
+							let { default: e } = await Promise.all([n.e('96427'), n.e('33053'), n.e('37581'), n.e('7654'), n.e('18146'), n.e('44156'), n.e('14203'), n.e('85552'), n.e('58227'), n.e('75531'), n.e('23693'), n.e('33213'), n.e('3116')]).then(n.bind(n, 545135));
 							return (n) =>
 								(0, l.jsx)(e, {
 									...n,
@@ -296,9 +282,7 @@ class V extends r.PureComponent {
 							case M.d4z.GUILD_FORUM:
 							case M.d4z.GUILD_MEDIA:
 								return (0, d.jW)(e, async () => {
-									let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('54310')]).then(
-										n.bind(n, 373651)
-									);
+									let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('54310')]).then(n.bind(n, 373651));
 									return (t) =>
 										(0, l.jsx)(e, {
 											...t,
@@ -310,9 +294,7 @@ class V extends r.PureComponent {
 							case M.d4z.GUILD_VOICE:
 							case M.d4z.GUILD_STAGE_VOICE:
 								return (0, d.jW)(e, async () => {
-									let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('83331')]).then(
-										n.bind(n, 213202)
-									);
+									let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('83331')]).then(n.bind(n, 213202));
 									return (t) =>
 										(0, l.jsx)(e, {
 											...t,

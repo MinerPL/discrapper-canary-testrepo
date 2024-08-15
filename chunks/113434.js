@@ -92,8 +92,8 @@ var r,
 	f = n(442837),
 	h = n(583434),
 	p = n(706454),
-	I = n(553795),
-	m = n(70956),
+	m = n(553795),
+	I = n(70956),
 	T = n(63063),
 	g = n(930153),
 	S = n(617136),
@@ -121,12 +121,7 @@ function w() {
 		s = (0, C.cB)({ location: M.dr.USE_QUESTS });
 	return (
 		u.useEffect(() => {
-			if ('cache-only' !== e.fetchPolicy)
-				('cache-and-network' === e.fetchPolicy || ('cache-or-network' === e.fetchPolicy && 0 === a)) &&
-					s &&
-					!t &&
-					!i &&
-					(n(!0), (0, A.xw)());
+			if ('cache-only' !== e.fetchPolicy) ('cache-and-network' === e.fetchPolicy || ('cache-or-network' === e.fetchPolicy && 0 === a)) && s && !t && !i && (n(!0), (0, A.xw)());
 		}, [e.fetchPolicy, s, t, i, a]),
 		{
 			quests: r,
@@ -165,33 +160,7 @@ function G(e) {
 							E = (0, O.Mi)(t, v.jn.GIFT_INVENTORY_FOR_YOU),
 							f = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
 							h = (null === (r = t.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null;
-						return l !== u
-							? l
-								? -1
-								: 1
-							: c !== d && l && u
-								? c
-									? -1
-									: 1
-								: _ !== E
-									? _
-										? -1
-										: 1
-									: f !== h
-										? f
-											? -1
-											: 1
-										: l && u
-											? x(
-													null === (s = e.config) || void 0 === s ? void 0 : s.expiresAt,
-													null === (o = t.config) || void 0 === o ? void 0 : o.expiresAt,
-													1
-												)
-											: x(
-													null === (i = e.config) || void 0 === i ? void 0 : i.expiresAt,
-													null === (a = t.config) || void 0 === a ? void 0 : a.expiresAt,
-													0
-												);
+						return l !== u ? (l ? -1 : 1) : c !== d && l && u ? (c ? -1 : 1) : _ !== E ? (_ ? -1 : 1) : f !== h ? (f ? -1 : 1) : l && u ? x(null === (s = e.config) || void 0 === s ? void 0 : s.expiresAt, null === (o = t.config) || void 0 === o ? void 0 : o.expiresAt, 1) : x(null === (i = e.config) || void 0 === i ? void 0 : i.expiresAt, null === (a = t.config) || void 0 === a ? void 0 : a.expiresAt, 0);
 					})
 					.map((e) => e.id);
 				return (n.current = e), e;
@@ -243,8 +212,7 @@ function k() {
 			if (t) return;
 			let n = [];
 			for (let t of e)
-				if (null == t || (0, O.zi)(t))
-					null != t && (0, O.zi)(t) && r((e) => (e.has(t.id) ? e : new Map(e).set(t.id, !0)));
+				if (null == t || (0, O.zi)(t)) null != t && (0, O.zi)(t) && r((e) => (e.has(t.id) ? e : new Map(e).set(t.id, !0)));
 				else {
 					let e = new E.V7(),
 						i = () => {
@@ -295,18 +263,13 @@ let Y = (e) => {
 	return (
 		u.useEffect(() => {
 			var t, n, r;
-			if (
-				(null === (t = e.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null ||
-				(null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null ||
-				(null === (r = e.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null ||
-				!a
-			) {
+			if ((null === (t = e.userStatus) || void 0 === t ? void 0 : t.enrolledAt) == null || (null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null || (null === (r = e.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null || !a) {
 				i();
 				return;
 			}
 			let s = window.setInterval(() => {
 				i();
-			}, 1 * m.Z.Millis.SECOND);
+			}, 1 * I.Z.Millis.SECOND);
 			return () => {
 				clearInterval(s), i();
 			};
@@ -378,8 +341,7 @@ function z() {
 		if (t || 0 === e.length) return r;
 		for (let t of e) {
 			var i;
-			if (!(0, O.vR)(t, v.jn.GIFT_INVENTORY_SETTINGS_BADGE) || (null !== (i = n.get(t.id)) && void 0 !== i && i))
-				continue;
+			if (!(0, O.vR)(t, v.jn.GIFT_INVENTORY_SETTINGS_BADGE) || (null !== (i = n.get(t.id)) && void 0 !== i && i)) continue;
 			if ((null == t ? void 0 : t.userStatus) == null) {
 				r.push(t);
 				continue;
@@ -425,9 +387,9 @@ function $(e) {
 	};
 }
 function J() {
-	let { fetching: e, accounts: t } = (0, f.cj)([I.Z], () => ({
-			fetching: I.Z.isFetching(),
-			accounts: I.Z.getAccounts()
+	let { fetching: e, accounts: t } = (0, f.cj)([m.Z], () => ({
+			fetching: m.Z.isFetching(),
+			accounts: m.Z.getAccounts()
 		})),
 		{
 			xboxAccounts: n,
@@ -455,7 +417,7 @@ let ee = (e) => {
 		let { questId: t, preview: n, beforeRequest: r, afterRequest: i } = e,
 			[a, s] = u.useState([]),
 			[o, l] = u.useState(!1),
-			c = (0, f.e7)([I.Z], () => I.Z.getAccounts());
+			c = (0, f.e7)([m.Z], () => m.Z.getAccounts());
 		return (
 			u.useEffect(() => {
 				s((e) => e.filter((e) => e.type !== _.K.EXPIRED_CREDENTIAL));
@@ -519,10 +481,7 @@ function ei(e) {
 		r = j(e),
 		i = null != r ? r.completedRatio : n,
 		a = 100 * i,
-		s =
-			null != r
-				? ''.concat(null == r ? void 0 : r.progress, '/').concat(null == r ? void 0 : r.target)
-				: (0, g.T3)(t, i, { roundingMode: 'floor' });
+		s = null != r ? ''.concat(null == r ? void 0 : r.progress, '/').concat(null == r ? void 0 : r.target) : (0, g.T3)(t, i, { roundingMode: 'floor' });
 	return {
 		completedRatio: i,
 		percentComplete: a,
@@ -547,11 +506,7 @@ function ea(e) {
 	if (null != a) return a;
 	return null;
 }
-((l = a || (a = {}))[(l.UNACCEPTED = 0)] = 'UNACCEPTED'),
-	(l[(l.ACCEPTED = 1)] = 'ACCEPTED'),
-	(l[(l.IN_PROGRESS = 2)] = 'IN_PROGRESS'),
-	(l[(l.COMPLETED = 3)] = 'COMPLETED'),
-	(l[(l.CLAIMED = 4)] = 'CLAIMED');
+((l = a || (a = {}))[(l.UNACCEPTED = 0)] = 'UNACCEPTED'), (l[(l.ACCEPTED = 1)] = 'ACCEPTED'), (l[(l.IN_PROGRESS = 2)] = 'IN_PROGRESS'), (l[(l.COMPLETED = 3)] = 'COMPLETED'), (l[(l.CLAIMED = 4)] = 'CLAIMED');
 function es(e, t) {
 	let [n, r] = (function (e) {
 			let t = (0, f.e7)([N.Z], () => N.Z.selectedTaskPlatform(e));

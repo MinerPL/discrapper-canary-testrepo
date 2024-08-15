@@ -38,20 +38,8 @@ let _ = (0, o._I)((e) => ({
 								: []
 						);
 			})(t);
-			if (
-				r &&
-				r[
-					'drop-error-if-contains-third-party-frames' === e.behaviour ||
-					'apply-tag-if-contains-third-party-frames' === e.behaviour
-						? 'some'
-						: 'every'
-				]((t) => !t.some((t) => e.filterKeys.includes(t)))
-			) {
-				if (
-					'drop-error-if-contains-third-party-frames' === e.behaviour ||
-					'drop-error-if-exclusively-contains-third-party-frames' === e.behaviour
-				)
-					return null;
+			if (r && r['drop-error-if-contains-third-party-frames' === e.behaviour || 'apply-tag-if-contains-third-party-frames' === e.behaviour ? 'some' : 'every']((t) => !t.some((t) => e.filterKeys.includes(t)))) {
+				if ('drop-error-if-contains-third-party-frames' === e.behaviour || 'drop-error-if-exclusively-contains-third-party-frames' === e.behaviour) return null;
 				t.tags = {
 					...t.tags,
 					third_party_code: !0

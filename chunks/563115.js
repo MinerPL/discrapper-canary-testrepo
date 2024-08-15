@@ -23,15 +23,7 @@ function i(e, t, l) {
 	);
 }
 function r(e) {
-	let {
-			guildId: t,
-			selectedRoleIds: l,
-			onChange: a,
-			placeholder: o,
-			disableEveryoneRole: r,
-			helperText: C,
-			className: c
-		} = e,
+	let { guildId: t, selectedRoleIds: l, onChange: a, placeholder: o, disableEveryoneRole: r, helperText: C, className: c } = e,
 		d = i(t, l, r);
 	return (0, n.jsx)(s.ZP, {
 		roleRows: d,

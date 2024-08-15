@@ -18,22 +18,14 @@ var i = n(735250),
 	_ = n(352736),
 	f = n(937889),
 	E = n(739566),
-	g = n(267128),
-	C = n(507418),
+	C = n(267128),
+	g = n(507418),
 	I = n(348238),
 	x = n(981631),
 	T = n(689938);
 let N = a.memo(function (e) {
 	var t;
-	let {
-			baseMessage: n,
-			referencedMessage: N,
-			channel: v,
-			compact: S = !1,
-			referencedUsernameProfile: Z,
-			referencedAvatarProfile: A,
-			setPopout: M
-		} = e,
+	let { baseMessage: n, referencedMessage: N, channel: v, compact: S = !1, referencedUsernameProfile: Z, referencedAvatarProfile: A, setPopout: M } = e,
 		b = N.state === m.Y.LOADED ? N.message : void 0,
 		R = (0, E.Uj)(b),
 		j = (0, c.p)(),
@@ -79,8 +71,7 @@ let N = a.memo(function (e) {
 						username: null == R ? void 0 : R.nick
 					})
 				);
-			else if (e.type === x.uaV.GUILD_DEADCHAT_REVIVE_PROMPT)
-				return '' !== e.content ? e.content : T.Z.Messages.DEADCHAT_PROMPT_1;
+			else if (e.type === x.uaV.GUILD_DEADCHAT_REVIVE_PROMPT) return '' !== e.content ? e.content : T.Z.Messages.DEADCHAT_PROMPT_1;
 			if (null != e.content && '' !== e.content) {
 				let t = {
 						formatInline: !0,
@@ -118,7 +109,7 @@ let N = a.memo(function (e) {
 			[M]
 		),
 		B = (0, E.Uj)(n);
-	return (0, i.jsx)(g.Z, {
+	return (0, i.jsx)(C.Z, {
 		repliedAuthor: R,
 		baseMessage: n,
 		channel: v,
@@ -129,7 +120,7 @@ let N = a.memo(function (e) {
 		isReplyAuthorBlocked: O,
 		showAvatarPopout: A,
 		showUsernamePopout: Z,
-		renderPopout: C.Z,
+		renderPopout: g.Z,
 		onClickAvatar: U,
 		onClickUsername: k,
 		onClickReply: D,

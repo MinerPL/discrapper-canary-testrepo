@@ -35,8 +35,8 @@ var r = n(230012),
 	f = n(823867),
 	h = n(753264),
 	p = n(148836),
-	I = n(795250),
-	m = n(975994),
+	m = n(795250),
+	I = n(975994),
 	T = n(608773),
 	g = n(358049),
 	S = n(912059),
@@ -80,39 +80,10 @@ class en {
 	}
 	clone() {
 		let e = new en(this.type, this.key);
-		return (
-			(e.value = this.value),
-			(e.level = this.level),
-			(e.hasChildNodes = this.hasChildNodes),
-			(e.rendered = this.rendered),
-			(e.textValue = this.textValue),
-			(e['aria-label'] = this['aria-label']),
-			(e.index = this.index),
-			(e.parentKey = this.parentKey),
-			(e.prevKey = this.prevKey),
-			(e.nextKey = this.nextKey),
-			(e.firstChildKey = this.firstChildKey),
-			(e.lastChildKey = this.lastChildKey),
-			(e.props = this.props),
-			e
-		);
+		return (e.value = this.value), (e.level = this.level), (e.hasChildNodes = this.hasChildNodes), (e.rendered = this.rendered), (e.textValue = this.textValue), (e['aria-label'] = this['aria-label']), (e.index = this.index), (e.parentKey = this.parentKey), (e.prevKey = this.prevKey), (e.nextKey = this.nextKey), (e.firstChildKey = this.firstChildKey), (e.lastChildKey = this.lastChildKey), (e.props = this.props), e;
 	}
 	constructor(e, t) {
-		(0, G._)(this, 'value', null),
-			(0, G._)(this, 'level', 0),
-			(0, G._)(this, 'hasChildNodes', !1),
-			(0, G._)(this, 'rendered', null),
-			(0, G._)(this, 'textValue', ''),
-			(0, G._)(this, 'aria-label', void 0),
-			(0, G._)(this, 'index', 0),
-			(0, G._)(this, 'parentKey', null),
-			(0, G._)(this, 'prevKey', null),
-			(0, G._)(this, 'nextKey', null),
-			(0, G._)(this, 'firstChildKey', null),
-			(0, G._)(this, 'lastChildKey', null),
-			(0, G._)(this, 'props', {}),
-			(this.type = e),
-			(this.key = t);
+		(0, G._)(this, 'value', null), (0, G._)(this, 'level', 0), (0, G._)(this, 'hasChildNodes', !1), (0, G._)(this, 'rendered', null), (0, G._)(this, 'textValue', ''), (0, G._)(this, 'aria-label', void 0), (0, G._)(this, 'index', 0), (0, G._)(this, 'parentKey', null), (0, G._)(this, 'prevKey', null), (0, G._)(this, 'nextKey', null), (0, G._)(this, 'firstChildKey', null), (0, G._)(this, 'lastChildKey', null), (0, G._)(this, 'props', {}), (this.type = e), (this.key = t);
 	}
 }
 let er = Symbol.iterator;
@@ -152,62 +123,26 @@ class ei {
 		(this._parentNode = e), this.ownerDocument.markDirty(this);
 	}
 	appendChild(e) {
-		this.ownerDocument.startTransaction(),
-			e.parentNode && e.parentNode.removeChild(e),
-			null == this.firstChild && (this.firstChild = e),
-			this.lastChild
-				? ((this.lastChild.nextSibling = e), (e.index = this.lastChild.index + 1), (e.previousSibling = this.lastChild))
-				: ((e.previousSibling = null), (e.index = 0)),
-			(e.parentNode = this),
-			(e.nextSibling = null),
-			(this.lastChild = e),
-			this.ownerDocument.markDirty(this),
-			e.hasSetProps && this.ownerDocument.addNode(e),
-			this.ownerDocument.endTransaction(),
-			this.ownerDocument.queueUpdate();
+		this.ownerDocument.startTransaction(), e.parentNode && e.parentNode.removeChild(e), null == this.firstChild && (this.firstChild = e), this.lastChild ? ((this.lastChild.nextSibling = e), (e.index = this.lastChild.index + 1), (e.previousSibling = this.lastChild)) : ((e.previousSibling = null), (e.index = 0)), (e.parentNode = this), (e.nextSibling = null), (this.lastChild = e), this.ownerDocument.markDirty(this), e.hasSetProps && this.ownerDocument.addNode(e), this.ownerDocument.endTransaction(), this.ownerDocument.queueUpdate();
 	}
 	insertBefore(e, t) {
 		if (null == t) return this.appendChild(e);
-		this.ownerDocument.startTransaction(),
-			e.parentNode && e.parentNode.removeChild(e),
-			(e.nextSibling = t),
-			(e.previousSibling = t.previousSibling),
-			(e.index = t.index),
-			this.firstChild === t ? (this.firstChild = e) : t.previousSibling && (t.previousSibling.nextSibling = e),
-			(t.previousSibling = e),
-			(e.parentNode = t.parentNode);
+		this.ownerDocument.startTransaction(), e.parentNode && e.parentNode.removeChild(e), (e.nextSibling = t), (e.previousSibling = t.previousSibling), (e.index = t.index), this.firstChild === t ? (this.firstChild = e) : t.previousSibling && (t.previousSibling.nextSibling = e), (t.previousSibling = e), (e.parentNode = t.parentNode);
 		let n = t;
 		for (; n; ) n.index++, (n = n.nextSibling);
-		e.hasSetProps && this.ownerDocument.addNode(e),
-			this.ownerDocument.endTransaction(),
-			this.ownerDocument.queueUpdate();
+		e.hasSetProps && this.ownerDocument.addNode(e), this.ownerDocument.endTransaction(), this.ownerDocument.queueUpdate();
 	}
 	removeChild(e) {
 		if (e.parentNode !== this) return;
 		this.ownerDocument.startTransaction();
 		let t = e.nextSibling;
 		for (; t; ) t.index--, (t = t.nextSibling);
-		e.nextSibling && (e.nextSibling.previousSibling = e.previousSibling),
-			e.previousSibling && (e.previousSibling.nextSibling = e.nextSibling),
-			this.firstChild === e && (this.firstChild = e.nextSibling),
-			this.lastChild === e && (this.lastChild = e.previousSibling),
-			(e.parentNode = null),
-			(e.nextSibling = null),
-			(e.previousSibling = null),
-			(e.index = 0),
-			this.ownerDocument.removeNode(e),
-			this.ownerDocument.endTransaction(),
-			this.ownerDocument.queueUpdate();
+		e.nextSibling && (e.nextSibling.previousSibling = e.previousSibling), e.previousSibling && (e.previousSibling.nextSibling = e.nextSibling), this.firstChild === e && (this.firstChild = e.nextSibling), this.lastChild === e && (this.lastChild = e.previousSibling), (e.parentNode = null), (e.nextSibling = null), (e.previousSibling = null), (e.index = 0), this.ownerDocument.removeNode(e), this.ownerDocument.endTransaction(), this.ownerDocument.queueUpdate();
 	}
 	addEventListener() {}
 	removeEventListener() {}
 	constructor(e) {
-		(0, G._)(this, '_firstChild', null),
-			(0, G._)(this, '_lastChild', null),
-			(0, G._)(this, '_previousSibling', null),
-			(0, G._)(this, '_nextSibling', null),
-			(0, G._)(this, '_parentNode', null),
-			(this.ownerDocument = e);
+		(0, G._)(this, '_firstChild', null), (0, G._)(this, '_lastChild', null), (0, G._)(this, '_previousSibling', null), (0, G._)(this, '_nextSibling', null), (0, G._)(this, '_parentNode', null), (this.ownerDocument = e);
 	}
 }
 let ea = 0;
@@ -224,40 +159,16 @@ class es extends ei {
 	updateNode() {
 		var e, t, n, r, i, a, s, o;
 		let l = this.ownerDocument.getMutableNode(this);
-		(l.index = this.index),
-			(l.level = this.level),
-			(l.parentKey = this.parentNode instanceof es ? this.parentNode.node.key : null),
-			(l.prevKey =
-				null !== (i = null === (e = this.previousSibling) || void 0 === e ? void 0 : e.node.key) && void 0 !== i
-					? i
-					: null),
-			(l.nextKey =
-				null !== (a = null === (t = this.nextSibling) || void 0 === t ? void 0 : t.node.key) && void 0 !== a
-					? a
-					: null),
-			(l.hasChildNodes = !!this.firstChild),
-			(l.firstChildKey =
-				null !== (s = null === (n = this.firstChild) || void 0 === n ? void 0 : n.node.key) && void 0 !== s ? s : null),
-			(l.lastChildKey =
-				null !== (o = null === (r = this.lastChild) || void 0 === r ? void 0 : r.node.key) && void 0 !== o ? o : null);
+		(l.index = this.index), (l.level = this.level), (l.parentKey = this.parentNode instanceof es ? this.parentNode.node.key : null), (l.prevKey = null !== (i = null === (e = this.previousSibling) || void 0 === e ? void 0 : e.node.key) && void 0 !== i ? i : null), (l.nextKey = null !== (a = null === (t = this.nextSibling) || void 0 === t ? void 0 : t.node.key) && void 0 !== a ? a : null), (l.hasChildNodes = !!this.firstChild), (l.firstChildKey = null !== (s = null === (n = this.firstChild) || void 0 === n ? void 0 : n.node.key) && void 0 !== s ? s : null), (l.lastChildKey = null !== (o = null === (r = this.lastChild) || void 0 === r ? void 0 : r.node.key) && void 0 !== o ? o : null);
 	}
 	setProps(e, t, n) {
 		let r = this.ownerDocument.getMutableNode(this),
 			{ value: i, textValue: a, id: s, ...o } = e;
-		if (
-			((o.ref = t),
-			(r.props = o),
-			(r.rendered = n),
-			(r.value = i),
-			(r.textValue = a || ('string' == typeof n ? n : '') || e['aria-label'] || ''),
-			null != s && s !== r.key)
-		) {
+		if (((o.ref = t), (r.props = o), (r.rendered = n), (r.value = i), (r.textValue = a || ('string' == typeof n ? n : '') || e['aria-label'] || ''), null != s && s !== r.key)) {
 			if (this.hasSetProps) throw Error('Cannot change the id of an item');
 			r.key = s;
 		}
-		!this.hasSetProps &&
-			(this.ownerDocument.addNode(this), this.ownerDocument.endTransaction(), (this.hasSetProps = !0)),
-			this.ownerDocument.queueUpdate();
+		!this.hasSetProps && (this.ownerDocument.addNode(this), this.ownerDocument.endTransaction(), (this.hasSetProps = !0)), this.ownerDocument.queueUpdate();
 	}
 	get style() {
 		return {};
@@ -267,12 +178,7 @@ class es extends ei {
 	setAttributeNS() {}
 	removeAttribute() {}
 	constructor(e, t) {
-		super(t),
-			(0, G._)(this, 'nodeType', 8),
-			(0, G._)(this, '_index', 0),
-			(0, G._)(this, 'hasSetProps', !1),
-			(this.node = new en(e, `react-aria-${++ea}`)),
-			this.ownerDocument.startTransaction();
+		super(t), (0, G._)(this, 'nodeType', 8), (0, G._)(this, '_index', 0), (0, G._)(this, 'hasSetProps', !1), (this.node = new en(e, `react-aria-${++ea}`)), this.ownerDocument.startTransaction();
 	}
 }
 let eo = Symbol.iterator;
@@ -302,8 +208,7 @@ class el {
 		if (!t) return null;
 		if (null != t.prevKey) {
 			var n;
-			for (t = this.keyMap.get(t.prevKey); t && 'item' !== t.type && null != t.lastChildKey; )
-				t = this.keyMap.get(t.lastChildKey);
+			for (t = this.keyMap.get(t.prevKey); t && 'item' !== t.type && null != t.lastChildKey; ) t = this.keyMap.get(t.lastChildKey);
 			return null !== (n = null == t ? void 0 : t.key) && void 0 !== n ? n : null;
 		}
 		return t.parentKey;
@@ -352,10 +257,7 @@ class el {
 		(this.firstKey = e), (this.lastKey = t), (this.frozen = !0);
 	}
 	constructor() {
-		(0, G._)(this, 'keyMap', new Map()),
-			(0, G._)(this, 'firstKey', null),
-			(0, G._)(this, 'lastKey', null),
-			(0, G._)(this, 'frozen', !1);
+		(0, G._)(this, 'keyMap', new Map()), (0, G._)(this, 'firstKey', null), (0, G._)(this, 'lastKey', null), (0, G._)(this, 'frozen', !1);
 	}
 }
 class eu extends ei {
@@ -364,15 +266,10 @@ class eu extends ei {
 	}
 	getMutableNode(e) {
 		let t = e.node;
-		return (
-			!this.mutatedNodes.has(e) && ((t = e.node.clone()), this.mutatedNodes.add(e), (e.node = t)), this.markDirty(e), t
-		);
+		return !this.mutatedNodes.has(e) && ((t = e.node.clone()), this.mutatedNodes.add(e), (e.node = t)), this.markDirty(e), t;
 	}
 	getMutableCollection() {
-		return (
-			!this.collectionMutated && ((this.collection = this.collection.clone()), (this.collectionMutated = !0)),
-			this.collection
-		);
+		return !this.collectionMutated && ((this.collection = this.collection.clone()), (this.collectionMutated = !0)), this.collection;
 	}
 	markDirty(e) {
 		this.dirtyNodes.add(e);
@@ -399,11 +296,7 @@ class eu extends ei {
 			var e, t, n, r;
 			let i = this.getMutableCollection();
 			for (let e of this.mutatedNodes) e.parentNode && i.addNode(e.node);
-			i.commit(
-				null !== (n = null === (e = this.firstChild) || void 0 === e ? void 0 : e.node.key) && void 0 !== n ? n : null,
-				null !== (r = null === (t = this.lastChild) || void 0 === t ? void 0 : t.node.key) && void 0 !== r ? r : null
-			),
-				this.mutatedNodes.clear();
+			i.commit(null !== (n = null === (e = this.firstChild) || void 0 === e ? void 0 : e.node.key) && void 0 !== n ? n : null, null !== (r = null === (t = this.lastChild) || void 0 === t ? void 0 : t.node.key) && void 0 !== r ? r : null), this.mutatedNodes.clear();
 		}
 		return (this.collectionMutated = !1), this.collection;
 	}
@@ -414,15 +307,7 @@ class eu extends ei {
 		return this.subscriptions.add(e), () => this.subscriptions.delete(e);
 	}
 	constructor(e) {
-		super(null),
-			(0, G._)(this, 'nodeType', 11),
-			(0, G._)(this, 'ownerDocument', this),
-			(0, G._)(this, 'dirtyNodes', new Set()),
-			(0, G._)(this, 'mutatedNodes', new Set()),
-			(0, G._)(this, 'subscriptions', new Set()),
-			(0, G._)(this, 'transactionCount', 0),
-			(this.collection = e),
-			(this.collectionMutated = !0);
+		super(null), (0, G._)(this, 'nodeType', 11), (0, G._)(this, 'ownerDocument', this), (0, G._)(this, 'dirtyNodes', new Set()), (0, G._)(this, 'mutatedNodes', new Set()), (0, G._)(this, 'subscriptions', new Set()), (0, G._)(this, 'transactionCount', 0), (this.collection = e), (this.collectionMutated = !0);
 	}
 }
 function ec(e) {
@@ -493,8 +378,8 @@ function eh(e, t, n) {
 let ep = (0, x.forwardRef)(function (e, t) {
 		return x.createElement('item', { ref: eh(e, t, e.children) });
 	}),
-	eI = (0, x.createContext)(null),
 	em = (0, x.createContext)(null),
+	eI = (0, x.createContext)(null),
 	eT = Symbol('callback'),
 	eg = Symbol('default');
 function eS({ values: e, children: t }) {
@@ -521,12 +406,7 @@ function eN(e, t, n) {
 	if ('slots' in r && r.slots) {
 		if (!e.slot && !r.slots[eg]) throw Error('A slot prop is required');
 		let t = e.slot || eg;
-		if (!r.slots[t])
-			throw Error(
-				`Invalid slot "${e.slot}". Valid slot names are ` +
-					new Intl.ListFormat().format(Object.keys(r.slots).map((e) => `"${e}"`)) +
-					'.'
-			);
+		if (!r.slots[t]) throw Error(`Invalid slot "${e.slot}". Valid slot names are ` + new Intl.ListFormat().format(Object.keys(r.slots).map((e) => `"${e}"`)) + '.');
 		r = r.slots[t];
 	}
 	let { ref: i, [eT]: a, ...s } = r,
@@ -721,9 +601,7 @@ let eP = new Set(['form', 'formAction', 'formEncType', 'formMethod', 'formNoVali
 				x.createElement(
 					'tr',
 					{ key: e },
-					a
-						.getDatesInWeek(e, s)
-						.map((e, t) => (e ? x.cloneElement(n(e), { key: t }) : x.createElement('td', { key: t })))
+					a.getDatesInWeek(e, s).map((e, t) => (e ? x.cloneElement(n(e), { key: t }) : x.createElement('td', { key: t })))
 				)
 			)
 		);
@@ -829,16 +707,9 @@ function e4({ state: e, props: t, listBoxRef: n }) {
 				}
 			}
 		}),
-		I = (0, x.useRef)(d),
-		m = (0, x.useRef)(_);
-	I.current !== d &&
-		console.warn(
-			'Drag hooks were provided during one render, but not another. This should be avoided as it may produce unexpected behavior.'
-		),
-		m.current !== _ &&
-			console.warn(
-				'Drop hooks were provided during one render, but not another. This should be avoided as it may produce unexpected behavior.'
-			);
+		m = (0, x.useRef)(d),
+		I = (0, x.useRef)(_);
+	m.current !== d && console.warn('Drag hooks were provided during one render, but not another. This should be avoided as it may produce unexpected behavior.'), I.current !== _ && console.warn('Drop hooks were provided during one render, but not another. This should be avoided as it may produce unexpected behavior.');
 	let T = !1,
 		g = null,
 		S = (0, x.useRef)(null);
@@ -986,10 +857,10 @@ function e6({ item: e }) {
 	r && ((E = {}), (f = _.isFocused));
 	let p = null;
 	s && i && (p = i.useDraggableItem({ key: e.key }, s));
-	let I = null;
+	let m = null;
 	l &&
 		i &&
-		(I = i.useDroppableItem(
+		(m = i.useDroppableItem(
 			{
 				target: {
 					type: 'item',
@@ -1000,10 +871,10 @@ function e6({ item: e }) {
 			l,
 			t
 		));
-	let m = e.props,
+	let I = e.props,
 		T = s && s.isDragging(e.key),
 		g = eA({
-			...m,
+			...I,
 			id: void 0,
 			children: e.rendered,
 			defaultClassName: 'react-aria-Item',
@@ -1014,16 +885,13 @@ function e6({ item: e }) {
 				selectionBehavior: n.selectionManager.selectionBehavior,
 				allowsDragging: !!s,
 				isDragging: T,
-				isDropTarget: null == I ? void 0 : I.isDropTarget
+				isDropTarget: null == m ? void 0 : m.isDropTarget
 			}
 		}),
 		S = (null == i ? void 0 : i.renderDropIndicator) || ((e) => x.createElement(eQ, { target: e }));
 	return (
 		(0, x.useEffect)(() => {
-			!e.textValue &&
-				console.warn(
-					'A `textValue` prop is required for <Item> elements with non-plain text children in order to support accessibility features such as type to select.'
-				);
+			!e.textValue && console.warn('A `textValue` prop is required for <Item> elements with non-plain text children in order to support accessibility features such as type to select.');
 		}, [e.textValue]),
 		x.createElement(
 			x.Fragment,
@@ -1037,7 +905,7 @@ function e6({ item: e }) {
 			x.createElement(
 				'div',
 				{
-					...(0, o.dG)((0, w.zL)(m), u, E, null == p ? void 0 : p.dragProps, null == I ? void 0 : I.dropProps),
+					...(0, o.dG)((0, w.zL)(I), u, E, null == p ? void 0 : p.dragProps, null == m ? void 0 : m.dropProps),
 					...g,
 					ref: t,
 					'data-hovered': f || void 0,
@@ -1045,7 +913,7 @@ function e6({ item: e }) {
 					'data-focus-visible': _.isFocusVisible || void 0,
 					'data-pressed': _.isPressed || void 0,
 					'data-dragging': T || void 0,
-					'data-drop-target': (null == I ? void 0 : I.isDropTarget) || void 0
+					'data-drop-target': (null == m ? void 0 : m.isDropTarget) || void 0
 				},
 				x.createElement(
 					eS,
@@ -1112,7 +980,7 @@ function tt({ state: e, isExiting: t, ...n }) {
 			underlayProps: a,
 			arrowProps: s,
 			placement: o
-		} = (0, I.Sv)(
+		} = (0, m.Sv)(
 			{
 				...n,
 				offset: null !== (r = n.offset) && void 0 !== r ? r : 8
@@ -1135,7 +1003,7 @@ function tt({ state: e, isExiting: t, ...n }) {
 			...i.style
 		};
 	return x.createElement(
-		I.aV,
+		m.aV,
 		null,
 		!n.isNonModal &&
 			x.createElement('div', {
@@ -1157,7 +1025,7 @@ function tt({ state: e, isExiting: t, ...n }) {
 				'data-entering': u || void 0,
 				'data-exiting': t || void 0
 			},
-			!n.isNonModal && x.createElement(I.U4, { onDismiss: e.close }),
+			!n.isNonModal && x.createElement(m.U4, { onDismiss: e.close }),
 			x.createElement(
 				e9.Provider,
 				{
@@ -1168,7 +1036,7 @@ function tt({ state: e, isExiting: t, ...n }) {
 				},
 				c.children
 			),
-			x.createElement(I.U4, { onDismiss: e.close })
+			x.createElement(m.U4, { onDismiss: e.close })
 		)
 	);
 }
@@ -1201,7 +1069,7 @@ let tn = (0, x.createContext)(null),
 function tc(e) {
 	let t = e.modalRef,
 		{ state: n } = e,
-		{ modalProps: r, underlayProps: i } = (0, I.NE)(e, n, t),
+		{ modalProps: r, underlayProps: i } = (0, m.NE)(e, n, t),
 		a = eO(e.overlayRef),
 		s = eA({
 			...e,
@@ -1217,7 +1085,7 @@ function tc(e) {
 			'--visual-viewport-height': o.height + 'px'
 		};
 	return x.createElement(
-		I.aV,
+		m.aV,
 		null,
 		x.createElement(
 			'div',
@@ -1267,7 +1135,7 @@ function td(e) {
 			'data-entering': l || void 0,
 			'data-exiting': r || void 0
 		},
-		i && x.createElement(I.U4, { onDismiss: a.close }),
+		i && x.createElement(m.U4, { onDismiss: a.close }),
 		u.children
 	);
 }
@@ -1276,9 +1144,9 @@ let t_ = (0, x.createContext)(null),
 	tf = (0, x.createContext)(null),
 	th = (0, x.createContext)(null),
 	tp = (0, x.createContext)(null),
-	tI = (0, x.createContext)(null);
-function tm({ item: e }) {
-	let { state: t, dragAndDropHooks: n, dragState: r, dropState: i } = (0, x.useContext)(tI),
+	tm = (0, x.createContext)(null);
+function tI({ item: e }) {
+	let { state: t, dragAndDropHooks: n, dragState: r, dropState: i } = (0, x.useContext)(tm),
 		l = (0, w.B3)(e.props.ref),
 		{
 			rowProps: u,
@@ -1294,8 +1162,8 @@ function tm({ item: e }) {
 			l
 		),
 		{ hoverProps: f, isHovered: h } = (0, a.XI)({ isDisabled: !E.allowsSelection && !E.hasAction }),
-		{ isFocusVisible: p, focusProps: I } = (0, s.Fx)(),
-		{ checkboxProps: m } = (0, S.fQ)({ key: e.key }, t),
+		{ isFocusVisible: p, focusProps: m } = (0, s.Fx)(),
+		{ checkboxProps: I } = (0, S.fQ)({ key: e.key }, t),
 		T = null;
 	r &&
 		n &&
@@ -1344,17 +1212,10 @@ function tm({ item: e }) {
 		y = (0, x.useRef)(null);
 	return (
 		(0, x.useEffect)(() => {
-			r &&
-				!y.current &&
-				console.warn(
-					'Draggable items in a GridList must contain a <Button slot="drag"> element so that keyboard and screen reader users can drag them.'
-				);
+			r && !y.current && console.warn('Draggable items in a GridList must contain a <Button slot="drag"> element so that keyboard and screen reader users can drag them.');
 		}, []),
 		(0, x.useEffect)(() => {
-			!e.textValue &&
-				console.warn(
-					'A `textValue` prop is required for <Item> elements with non-plain text children in order to support accessibility features such as type to select.'
-				);
+			!e.textValue && console.warn('A `textValue` prop is required for <Item> elements with non-plain text children in order to support accessibility features such as type to select.');
 		}, [e.textValue]),
 		x.createElement(
 			x.Fragment,
@@ -1387,7 +1248,7 @@ function tm({ item: e }) {
 			x.createElement(
 				'div',
 				{
-					...(0, o.dG)((0, w.zL)(v), u, I, f, null == T ? void 0 : T.dragProps),
+					...(0, o.dG)((0, w.zL)(v), u, m, f, null == T ? void 0 : T.dragProps),
 					...R,
 					ref: l,
 					'data-hovered': h || void 0,
@@ -1404,7 +1265,7 @@ function tm({ item: e }) {
 						eS,
 						{
 							values: [
-								[eK, m],
+								[eK, I],
 								[
 									eU,
 									{
@@ -1437,7 +1298,7 @@ function tm({ item: e }) {
 }
 function tT(e, t) {
 	t = (0, w.B3)(t);
-	let { dragAndDropHooks: n, dropState: r } = (0, x.useContext)(tI),
+	let { dragAndDropHooks: n, dropState: r } = (0, x.useContext)(tm),
 		i = (0, x.useRef)(null),
 		{ dropIndicatorProps: a, isHidden: s, isDropTarget: o } = n.useDropIndicator(e, r, i);
 	return s
@@ -1479,7 +1340,7 @@ let tg = (0, x.forwardRef)(function (e, t) {
 	);
 });
 function tS() {
-	let { dragAndDropHooks: e, dropState: t } = (0, x.useContext)(tI),
+	let { dragAndDropHooks: e, dropState: t } = (0, x.useContext)(tm),
 		n = (0, x.useRef)(null),
 		{ dropIndicatorProps: r } = e.useDropIndicator({ target: { type: 'root' } }, t, n),
 		i = t.isDropTarget({ type: 'root' }),
@@ -1599,13 +1460,7 @@ function tR({ section: e, className: t, style: n, ...r }) {
 function tC({ item: e }) {
 	let t = (0, x.useContext)(tv),
 		n = (0, w.B3)(e.props.ref),
-		{
-			menuItemProps: r,
-			labelProps: i,
-			descriptionProps: a,
-			keyboardShortcutProps: l,
-			...u
-		} = (0, A.iX)({ key: e.key }, t, n),
+		{ menuItemProps: r, labelProps: i, descriptionProps: a, keyboardShortcutProps: l, ...u } = (0, A.iX)({ key: e.key }, t, n),
 		c = e.props,
 		{ isFocusVisible: d, focusProps: _ } = (0, s.Fx)(),
 		E = eA({
@@ -1670,10 +1525,7 @@ let ty = (0, x.createContext)(null),
 	tB = Symbol.iterator;
 class tF extends el {
 	addNode(e) {
-		super.addNode(e),
-			this.columnsDirty || (this.columnsDirty = 'column' === e.type),
-			'tableheader' === e.type && (this.head = e),
-			'tablebody' === e.type && (this.body = e);
+		super.addNode(e), this.columnsDirty || (this.columnsDirty = 'column' === e.type), 'tableheader' === e.type && (this.head = e), 'tablebody' === e.type && (this.body = e);
 	}
 	commit(e, t) {
 		this.updateColumns(), super.commit(e, t);
@@ -1683,21 +1535,11 @@ class tF extends el {
 		(this.rowHeaderColumnKeys = new Set()), (this.columns = []);
 		let e = new Map(),
 			t = (n) => {
-				if ('column' === n.type)
-					e.set(n.key, n),
-						!n.hasChildNodes &&
-							((n.index = this.columns.length),
-							this.columns.push(n),
-							n.props.isRowHeader && this.rowHeaderColumnKeys.add(n.key));
+				if ('column' === n.type) e.set(n.key, n), !n.hasChildNodes && ((n.index = this.columns.length), this.columns.push(n), n.props.isRowHeader && this.rowHeaderColumnKeys.add(n.key));
 				for (let e of this.getChildren(n.key)) t(e);
 			};
 		for (let e of this.getChildren(this.head.key)) t(e);
-		if (
-			((this.headerRows = (0, ee.GL)(e, this.columns)),
-			(this.columnsDirty = !1),
-			0 === this.rowHeaderColumnKeys.size && this.columns.length > 0)
-		)
-			throw Error('A table must have at least one Column with the isRowHeader prop set to true');
+		if (((this.headerRows = (0, ee.GL)(e, this.columns)), (this.columnsDirty = !1), 0 === this.rowHeaderColumnKeys.size && this.columns.length > 0)) throw Error('A table must have at least one Column with the isRowHeader prop set to true');
 	}
 	get columnCount() {
 		return this.columns.length;
@@ -1723,11 +1565,7 @@ class tF extends el {
 	getKeyAfter(e) {
 		var t;
 		let n = this.getItem(e);
-		return (null == n ? void 0 : n.type) === 'column'
-			? null !== (t = n.nextKey) && void 0 !== t
-				? t
-				: null
-			: super.getKeyAfter(e);
+		return (null == n ? void 0 : n.type) === 'column' ? (null !== (t = n.nextKey) && void 0 !== t ? t : null) : super.getKeyAfter(e);
 	}
 	getKeyBefore(e) {
 		var t, n;
@@ -1744,14 +1582,7 @@ class tF extends el {
 	}
 	clone() {
 		let e = super.clone();
-		return (
-			(e.headerRows = this.headerRows),
-			(e.columns = this.columns),
-			(e.rowHeaderColumnKeys = this.rowHeaderColumnKeys),
-			(e.head = this.head),
-			(e.body = this.body),
-			e
-		);
+		return (e.headerRows = this.headerRows), (e.columns = this.columns), (e.rowHeaderColumnKeys = this.rowHeaderColumnKeys), (e.head = this.head), (e.body = this.body), e;
 	}
 	getTextValue(e) {
 		let t = this.getItem(e);
@@ -1766,13 +1597,7 @@ class tF extends el {
 		return r.join(' ');
 	}
 	constructor(...e) {
-		super(...e),
-			(0, G._)(this, 'headerRows', []),
-			(0, G._)(this, 'columns', []),
-			(0, G._)(this, 'rowHeaderColumnKeys', new Set()),
-			(0, G._)(this, 'head', new en('tableheader', -1)),
-			(0, G._)(this, 'body', new en('tablebody', -2)),
-			(0, G._)(this, 'columnsDirty', !0);
+		super(...e), (0, G._)(this, 'headerRows', []), (0, G._)(this, 'columns', []), (0, G._)(this, 'rowHeaderColumnKeys', new Set()), (0, G._)(this, 'head', new en('tableheader', -1)), (0, G._)(this, 'body', new en('tablebody', -2)), (0, G._)(this, 'columnsDirty', !0);
 	}
 }
 let tV = (0, x.createContext)(null),
@@ -1795,16 +1620,9 @@ let tV = (0, x.createContext)(null),
 			E = !!(null == d ? void 0 : d.useDraggableCollectionState),
 			f = !!(null == d ? void 0 : d.useDroppableCollectionState),
 			h = (0, x.useRef)(E),
-			I = (0, x.useRef)(f);
-		h.current !== E &&
-			console.warn(
-				'Drag hooks were provided during one render, but not another. This should be avoided as it may produce unexpected behavior.'
-			),
-			I.current !== f &&
-				console.warn(
-					'Drop hooks were provided during one render, but not another. This should be avoided as it may produce unexpected behavior.'
-				);
-		let m = !1,
+			m = (0, x.useRef)(f);
+		h.current !== E && console.warn('Drag hooks were provided during one render, but not another. This should be avoided as it may produce unexpected behavior.'), m.current !== f && console.warn('Drop hooks were provided during one render, but not another. This should be avoided as it may produce unexpected behavior.');
+		let I = !1,
 			T = null,
 			g = (0, x.useRef)(null);
 		if (E && d) {
@@ -1832,7 +1650,7 @@ let tV = (0, x.createContext)(null),
 				r,
 				t
 			)),
-				(m = r.isDropTarget({ type: 'root' }));
+				(I = r.isDropTarget({ type: 'root' }));
 		}
 		let { focusProps: S, isFocused: A, isFocusVisible: N } = (0, s.Fx)(),
 			v = eA({
@@ -1840,7 +1658,7 @@ let tV = (0, x.createContext)(null),
 				style: e.style,
 				defaultClassName: 'react-aria-Table',
 				values: {
-					isDropTarget: m,
+					isDropTarget: I,
 					isFocused: A,
 					isFocusVisible: N
 				}
@@ -1885,7 +1703,7 @@ let tV = (0, x.createContext)(null),
 							...(0, o.dG)(c, S, null == i ? void 0 : i.collectionProps),
 							ref: t,
 							slot: e.slot,
-							'data-drop-target': m || void 0,
+							'data-drop-target': I || void 0,
 							'data-focused': A || void 0,
 							'data-focus-visible': N || void 0
 						},
@@ -1908,11 +1726,11 @@ let tV = (0, x.createContext)(null),
 				items: e.columns
 			}),
 			r = 'function' == typeof e.children ? e.children : null;
-		return x.createElement(em.Provider, { value: r }, x.createElement('tableheader', { ref: eh(e, t) }, n));
+		return x.createElement(eI.Provider, { value: r }, x.createElement('tableheader', { ref: eh(e, t) }, n));
 	}),
 	tW = (0, x.forwardRef)(function (e, t) {
 		var n;
-		let r = (0, x.useContext)(em),
+		let r = (0, x.useContext)(eI),
 			i = 'function' == typeof r ? r : e.children,
 			a = ed({
 				children: e.title || e.childColumns ? i : null,
@@ -1931,7 +1749,7 @@ let tV = (0, x.createContext)(null),
 				idScope: e.id
 			}),
 			r = (0, x.useMemo)(() => ({ idScope: e.id }), [e.id]);
-		return x.createElement('item', { ref: eh(e, t) }, x.createElement(eI.Provider, { value: r }, n));
+		return x.createElement('item', { ref: eh(e, t) }, x.createElement(em.Provider, { value: r }, n));
 	}),
 	tq = (0, x.forwardRef)(function (e, t) {
 		return x.createElement('cell', { ref: eh(e, t, e.children) });
@@ -2046,10 +1864,7 @@ function tJ({ column: e }) {
 				isFocused: a,
 				isFocusVisible: l,
 				allowsSorting: e.props.allowsSorting,
-				sortDirection:
-					(null === (t = r.sortDescriptor) || void 0 === t ? void 0 : t.column) === e.key
-						? r.sortDescriptor.direction
-						: void 0
+				sortDirection: (null === (t = r.sortDescriptor) || void 0 === t ? void 0 : t.column) === e.key ? r.sortDescriptor.direction : void 0
 			}
 		});
 	return x.createElement(
@@ -2079,7 +1894,7 @@ function t0({ item: e }) {
 			r
 		),
 		{ isFocused: f, isFocusVisible: h, focusProps: p } = (0, s.Fx)(),
-		{ hoverProps: I, isHovered: m } = (0, a.XI)({ isDisabled: !E.allowsSelection && !E.hasAction }),
+		{ hoverProps: m, isHovered: I } = (0, a.XI)({ isDisabled: !E.allowsSelection && !E.hasAction }),
 		{ checkboxProps: T } = (0, b.M$)({ key: e.key }, i);
 	u &&
 		l &&
@@ -2108,11 +1923,7 @@ function t0({ item: e }) {
 	let A = (null == l ? void 0 : l.renderDropIndicator) || ((e) => x.createElement(eQ, { target: e })),
 		N = (0, x.useRef)(null);
 	(0, x.useEffect)(() => {
-		u &&
-			!N.current &&
-			console.warn(
-				'Draggable items in a Table must contain a <Button slot="drag"> element so that keyboard and screen reader users can drag them.'
-			);
+		u && !N.current && console.warn('Draggable items in a Table must contain a <Button slot="drag"> element so that keyboard and screen reader users can drag them.');
 	}, []);
 	let v = e.props,
 		O = u && u.isDragging(e.key),
@@ -2122,7 +1933,7 @@ function t0({ item: e }) {
 			defaultClassName: 'react-aria-Row',
 			values: {
 				...E,
-				isHovered: m,
+				isHovered: I,
 				isFocused: f,
 				isFocusVisible: h,
 				selectionMode: i.selectionManager.selectionMode,
@@ -2173,10 +1984,10 @@ function t0({ item: e }) {
 		x.createElement(
 			'tr',
 			{
-				...(0, o.dG)((0, w.zL)(v), d, p, I, null == t ? void 0 : t.dragProps),
+				...(0, o.dG)((0, w.zL)(v), d, p, m, null == t ? void 0 : t.dragProps),
 				...R,
 				ref: r,
-				'data-hovered': m || void 0,
+				'data-hovered': I || void 0,
 				'data-focused': E.isFocused || void 0,
 				'data-focus-visible': h || void 0,
 				'data-pressed': E.isPressed || void 0,
@@ -2353,11 +2164,11 @@ function t7({ item: e, state: t }) {
 				isHovered: h
 			}
 		}),
-		I = (0, w.zL)(e.props);
+		m = (0, w.zL)(e.props);
 	return (
-		delete I.id,
+		delete m.id,
 		x.createElement('div', {
-			...(0, o.dG)(I, i, d, f, p),
+			...(0, o.dG)(m, i, d, f, p),
 			ref: r,
 			'data-focus-visible': E || void 0,
 			'data-pressed': c || void 0,
@@ -2375,7 +2186,7 @@ function nt(e) {
 			overlayProps: a,
 			arrowProps: s,
 			placement: l
-		} = (0, I.tN)({
+		} = (0, m.tN)({
 			placement: e.placement || 'top',
 			targetRef: n,
 			overlayRef: i,

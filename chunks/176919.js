@@ -23,13 +23,7 @@ function A(e, t, n, r) {
 	let i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
 		l = arguments.length > 5 ? arguments[5] : void 0;
 	u.useEffect(() => {
-		if (null != e)
-			1 === t && e !== _.h8.AWAITING_AUTHENTICATION
-				? n(_.h8.AWAITING_AUTHENTICATION)
-				: e === _.h8.AWAITING_AUTHENTICATION &&
-					(2 === t
-						? n(_.h8.REVIEW)
-						: 3 === t && (i ? (null != l ? l() : n(_.h8.REVIEW)) : (r(S.A.COMPLETED), n(_.h8.CONFIRM))));
+		if (null != e) 1 === t && e !== _.h8.AWAITING_AUTHENTICATION ? n(_.h8.AWAITING_AUTHENTICATION) : e === _.h8.AWAITING_AUTHENTICATION && (2 === t ? n(_.h8.REVIEW) : 3 === t && (i ? (null != l ? l() : n(_.h8.REVIEW)) : (r(S.A.COMPLETED), n(_.h8.CONFIRM))));
 	}, [e, t, n, r, i, l]);
 }
 ((r = i || (i = {}))[(r.PENDING = 1)] = 'PENDING'), (r[(r.ERROR = 2)] = 'ERROR'), (r[(r.NONE = 3)] = 'NONE');

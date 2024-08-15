@@ -20,8 +20,8 @@ var r = n(735250),
 	f = n(594174),
 	h = n(5192),
 	p = n(358085),
-	I = n(981631),
-	m = n(65154),
+	m = n(981631),
+	I = n(65154),
 	T = n(689938);
 function g(e, t, n) {
 	let r = (0, a.e7)([l.Z], () => l.Z.getSelectedParticipantId(e.id)),
@@ -42,35 +42,17 @@ function g(e, t, n) {
 }
 function S(e) {
 	var t;
-	let {
-			channel: n,
-			currentUser: a,
-			activeStreams: l,
-			hideSelfOptions: _ = !1,
-			showReportOption: f = !1,
-			handleGoLive: h,
-			onClose: S,
-			onSelect: A,
-			appContext: N = I.IlC.APP
-		} = e,
-		v = E.Z.supports(m.AN.DESKTOP_CAPTURE_APPLICATIONS),
+	let { channel: n, currentUser: a, activeStreams: l, hideSelfOptions: _ = !1, showReportOption: f = !1, handleGoLive: h, onClose: S, onSelect: A, appContext: N = m.IlC.APP } = e,
+		v = E.Z.supports(I.AN.DESKTOP_CAPTURE_APPLICATIONS),
 		O = null !== (t = l.find((e) => e.ownerId === (null == a ? void 0 : a.id))) && void 0 !== t ? t : null,
 		R = g(n, a, l),
 		C = (0, c.Z)(O, N),
-		y = (0, u.Z)(O, N, I.VqG),
+		y = (0, u.Z)(O, N, m.VqG),
 		D = i.useCallback(() => {
 			var e, t, n;
-			(
-				null === (n = E.Z.getGoLiveSource()) || void 0 === n
-					? void 0
-					: null === (t = n.desktopSource) || void 0 === t
-						? void 0
-						: null === (e = t.id) || void 0 === e
-							? void 0
-							: e.startsWith('prepicked:')
-			)
+			(null === (n = E.Z.getGoLiveSource()) || void 0 === n ? void 0 : null === (t = n.desktopSource) || void 0 === t ? void 0 : null === (e = t.id) || void 0 === e ? void 0 : e.startsWith('prepicked:'))
 				? E.Z.getMediaEngine().eachConnection((e) => {
-						e.context === m.Yn.STREAM && e.presentDesktopSourcePicker();
+						e.context === I.Yn.STREAM && e.presentDesktopSourcePicker();
 					})
 				: h();
 		}, [h]),
@@ -109,7 +91,7 @@ function S(e) {
 						]
 					});
 	return (0, r.jsx)(o.Z, {
-		section: I.jXE.CONTEXT_MENU,
+		section: m.jXE.CONTEXT_MENU,
 		children: (0, r.jsxs)(s.Menu, {
 			onSelect: A,
 			navId: 'manage-streams',

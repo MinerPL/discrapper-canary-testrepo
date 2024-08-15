@@ -16,50 +16,14 @@ var n = r(146150),
 function p(t, e) {
 	var r = (0, i.ax)(e),
 		p = (0, n.pi)((0, n.pi)({}, i.Z0), t),
-		m = p.locale,
-		d = p.defaultLocale,
+		d = p.locale,
+		m = p.defaultLocale,
 		v = p.onError;
 	return (
-		m
-			? !Intl.NumberFormat.supportedLocalesOf(m).length && v
-				? v(
-						new o.gb(
-							'Missing locale data for locale: "'
-								.concat(m, '" in Intl.NumberFormat. Using default locale: "')
-								.concat(
-									d,
-									'" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details'
-								)
-						)
-					)
-				: !Intl.DateTimeFormat.supportedLocalesOf(m).length &&
-					v &&
-					v(
-						new o.gb(
-							'Missing locale data for locale: "'
-								.concat(m, '" in Intl.DateTimeFormat. Using default locale: "')
-								.concat(
-									d,
-									'" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details'
-								)
-						)
-					)
-			: (v &&
-					v(
-						new o.OV(
-							'"locale" was not configured, using "'.concat(
-								d,
-								'" as fallback. See https://formatjs.io/docs/react-intl/api#intlshape for more details'
-							)
-						)
-					),
-				(p.locale = p.defaultLocale || 'en')),
+		d ? (!Intl.NumberFormat.supportedLocalesOf(d).length && v ? v(new o.gb('Missing locale data for locale: "'.concat(d, '" in Intl.NumberFormat. Using default locale: "').concat(m, '" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details'))) : !Intl.DateTimeFormat.supportedLocalesOf(d).length && v && v(new o.gb('Missing locale data for locale: "'.concat(d, '" in Intl.DateTimeFormat. Using default locale: "').concat(m, '" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details')))) : (v && v(new o.OV('"locale" was not configured, using "'.concat(m, '" as fallback. See https://formatjs.io/docs/react-intl/api#intlshape for more details'))), (p.locale = p.defaultLocale || 'en')),
 		!(function (t) {
 			var e;
-			if (t.onWarn && t.defaultRichTextElements && 'string' == typeof ((e = t.messages || {}), e[Object.keys(e)[0]]))
-				t.onWarn(
-					'[@formatjs/intl] "defaultRichTextElements" was specified but "message" was not pre-compiled. \nPlease consider using "@formatjs/cli" to pre-compile your messages for performance.\nFor more details see https://formatjs.io/docs/getting-started/message-distribution'
-				);
+			if (t.onWarn && t.defaultRichTextElements && 'string' == typeof ((e = t.messages || {}), e[Object.keys(e)[0]])) t.onWarn('[@formatjs/intl] "defaultRichTextElements" was specified but "message" was not pre-compiled. \nPlease consider using "@formatjs/cli" to pre-compile your messages for performance.\nFor more details see https://formatjs.io/docs/getting-started/message-distribution');
 		})(p),
 		(0, n.pi)((0, n.pi)({}, p), {
 			formatters: r,

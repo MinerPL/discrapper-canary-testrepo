@@ -1,17 +1,7 @@
 var r = n(384111);
 t.certificate = n(201699);
 var i = r.define('RSAPrivateKey', function () {
-	this.seq().obj(
-		this.key('version').int(),
-		this.key('modulus').int(),
-		this.key('publicExponent').int(),
-		this.key('privateExponent').int(),
-		this.key('prime1').int(),
-		this.key('prime2').int(),
-		this.key('exponent1').int(),
-		this.key('exponent2').int(),
-		this.key('coefficient').int()
-	);
+	this.seq().obj(this.key('version').int(), this.key('modulus').int(), this.key('publicExponent').int(), this.key('privateExponent').int(), this.key('prime1').int(), this.key('prime2').int(), this.key('exponent1').int(), this.key('exponent2').int(), this.key('coefficient').int());
 });
 t.RSAPrivateKey = i;
 var a = r.define('RSAPublicKey', function () {
@@ -23,12 +13,7 @@ var s = r.define('SubjectPublicKeyInfo', function () {
 });
 t.PublicKey = s;
 var o = r.define('AlgorithmIdentifier', function () {
-		this.seq().obj(
-			this.key('algorithm').objid(),
-			this.key('none').null_().optional(),
-			this.key('curve').objid().optional(),
-			this.key('params').seq().obj(this.key('p').int(), this.key('q').int(), this.key('g').int()).optional()
-		);
+		this.seq().obj(this.key('algorithm').objid(), this.key('none').null_().optional(), this.key('curve').objid().optional(), this.key('params').seq().obj(this.key('p').int(), this.key('q').int(), this.key('g').int()).optional());
 	}),
 	l = r.define('PrivateKeyInfo', function () {
 		this.seq().obj(this.key('version').int(), this.key('algorithm').use(o), this.key('subjectPrivateKey').octstr());
@@ -45,10 +30,7 @@ var u = r.define('EncryptedPrivateKeyInfo', function () {
 					.obj(
 						this.key('kde')
 							.seq()
-							.obj(
-								this.key('id').objid(),
-								this.key('kdeparams').seq().obj(this.key('salt').octstr(), this.key('iters').int())
-							),
+							.obj(this.key('id').objid(), this.key('kdeparams').seq().obj(this.key('salt').octstr(), this.key('iters').int())),
 						this.key('cipher').seq().obj(this.key('algo').objid(), this.key('iv').octstr())
 					)
 			),
@@ -57,26 +39,14 @@ var u = r.define('EncryptedPrivateKeyInfo', function () {
 });
 t.EncryptedPrivateKey = u;
 var c = r.define('DSAPrivateKey', function () {
-	this.seq().obj(
-		this.key('version').int(),
-		this.key('p').int(),
-		this.key('q').int(),
-		this.key('g').int(),
-		this.key('pub_key').int(),
-		this.key('priv_key').int()
-	);
+	this.seq().obj(this.key('version').int(), this.key('p').int(), this.key('q').int(), this.key('g').int(), this.key('pub_key').int(), this.key('priv_key').int());
 });
 (t.DSAPrivateKey = c),
 	(t.DSAparam = r.define('DSAparam', function () {
 		this.int();
 	}));
 var d = r.define('ECPrivateKey', function () {
-	this.seq().obj(
-		this.key('version').int(),
-		this.key('privateKey').octstr(),
-		this.key('parameters').optional().explicit(0).use(_),
-		this.key('publicKey').optional().explicit(1).bitstr()
-	);
+	this.seq().obj(this.key('version').int(), this.key('privateKey').octstr(), this.key('parameters').optional().explicit(0).use(_), this.key('publicKey').optional().explicit(1).bitstr());
 });
 t.ECPrivateKey = d;
 var _ = r.define('ECParameters', function () {

@@ -27,24 +27,7 @@ e.exports = function (e) {
 				begin: /\w+/,
 				relevance: 0,
 				keywords: {
-					_: [
-						'order',
-						'deny',
-						'allow',
-						'setenv',
-						'rewriterule',
-						'rewriteengine',
-						'rewritecond',
-						'documentroot',
-						'sethandler',
-						'errordocument',
-						'loadmodule',
-						'options',
-						'header',
-						'listen',
-						'serverroot',
-						'servername'
-					]
+					_: ['order', 'deny', 'allow', 'setenv', 'rewriterule', 'rewriteengine', 'rewritecond', 'documentroot', 'sethandler', 'errordocument', 'loadmodule', 'options', 'header', 'listen', 'serverroot', 'servername']
 				},
 				starts: {
 					end: /$/,

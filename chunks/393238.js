@@ -42,28 +42,13 @@ function a(e, t) {
 			let i = new r.ResizeObserver((n) => {
 				var r, i, a, s, o, l;
 				let u = n[0],
-					c =
-						null == u
-							? void 0
-							: null === (i = u.borderBoxSize) || void 0 === i
-								? void 0
-								: null === (r = i[0]) || void 0 === r
-									? void 0
-									: r.inlineSize,
-					d =
-						null == u
-							? void 0
-							: null === (s = u.borderBoxSize) || void 0 === s
-								? void 0
-								: null === (a = s[0]) || void 0 === a
-									? void 0
-									: a.blockSize;
+					c = null == u ? void 0 : null === (i = u.borderBoxSize) || void 0 === i ? void 0 : null === (r = i[0]) || void 0 === r ? void 0 : r.inlineSize,
+					d = null == u ? void 0 : null === (s = u.borderBoxSize) || void 0 === s ? void 0 : null === (a = s[0]) || void 0 === a ? void 0 : a.blockSize;
 				if (null == c || null == d) {
 					let t = e.current;
 					if (null != t) {
 						let e = window.getComputedStyle(t);
-						null == c && (c = parseFloat(null !== (o = e.width) && void 0 !== o ? o : '0')),
-							null == d && (d = parseFloat(null !== (l = e.height) && void 0 !== l ? l : '0'));
+						null == c && (c = parseFloat(null !== (o = e.width) && void 0 !== o ? o : '0')), null == d && (d = parseFloat(null !== (l = e.height) && void 0 !== l ? l : '0'));
 					}
 				}
 				t({

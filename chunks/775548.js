@@ -23,9 +23,7 @@ e.exports = function (e) {
 		n = (e = e || {}).reporter,
 		a = r.getOption(e, 'async', !0),
 		s = r.getOption(e, 'auto', !0);
-	s &&
-		!a &&
-		(n && n.warn('Invalid options combination. auto=true and async=false is invalid. Setting async=true.'), (a = !0));
+	s && !a && (n && n.warn('Invalid options combination. auto=true and async=false is invalid. Setting async=true.'), (a = !0));
 	var o = i(),
 		l = !1;
 	function u() {

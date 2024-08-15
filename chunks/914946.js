@@ -91,18 +91,11 @@ let x = null !== (i = a.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && v
 			n = t[t.length - 1];
 		return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
 	})(),
-	P = new RegExp(
-		'^'.concat(v.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(v.Z.escape(b), '|discordapp.com|discord.com)$')
-	),
+	P = new RegExp('^'.concat(v.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(v.Z.escape(b), '|discordapp.com|discord.com)$')),
 	M = 1 * N.Z.Millis.MINUTE,
 	D = {};
 function y(e) {
-	return (
-		'customEmoji' === e.type && (e.type = 'emoji'),
-		'emoji' === e.type && e.src && (e.src = j(e.src)),
-		Array.isArray(e.content) && (e.content = e.content.map(y)),
-		e
-	);
+	return 'customEmoji' === e.type && (e.type = 'emoji'), 'emoji' === e.type && e.src && (e.src = j(e.src)), Array.isArray(e.content) && (e.content = e.content.map(y)), e;
 }
 function j(e) {
 	return /^http/.test(e)
@@ -133,12 +126,7 @@ function G(e, t) {
 			),
 		Promise.all(n).then(() => {
 			var n;
-			let a =
-					(!e.isNSFW() ||
-						(null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) &&
-					t
-						? T.Z.getMessages(e.id).toArray().map(k)
-						: [],
+			let a = (!e.isNSFW() || (null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(k) : [],
 				s = Object.values(C.Z.getVoiceStatesForChannel(e.id)).map((t) => w(i, e.id, t));
 			return {
 				id: e.id,
@@ -220,10 +208,7 @@ function H(e) {
 	} catch (e) {
 		return !1;
 	}
-	return (
-		(window.location.hostname === t && 'localhost' === t) ||
-		(null == e.match('staging') && (!!(P.test(e) && P.test(n)) || !1))
-	);
+	return (window.location.hostname === t && 'localhost' === t) || (null == e.match('staging') && (!!(P.test(e) && P.test(n)) || !1));
 }
 function V(e, t, n) {
 	let i = g.Z.getGuild(e.getGuildId());
@@ -243,12 +228,7 @@ function Y(e) {
 	let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
 		{ instance: n, secrets: i, party: a } = e,
 		s = 0;
-	return (n && (s |= R.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (s |= R.xjy.JOIN), t)
-		? ((s |= R.xjy.EMBEDDED), (s |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL))
-		: (((null == a ? void 0 : a.privacy) === R.RYY.PUBLIC || o.K.get('ACTIVITIES_FORCE_PUBLIC')) &&
-				(E.cP.getSetting() && (s |= R.xjy.PARTY_PRIVACY_FRIENDS),
-				E.Ou.getSetting() && (s |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL)),
-			s);
+	return (n && (s |= R.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (s |= R.xjy.JOIN), t) ? ((s |= R.xjy.EMBEDDED), (s |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) : (((null == a ? void 0 : a.privacy) === R.RYY.PUBLIC || o.K.get('ACTIVITIES_FORCE_PUBLIC')) && (E.cP.getSetting() && (s |= R.xjy.PARTY_PRIVACY_FRIENDS), E.Ou.getSetting() && (s |= R.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), s);
 }
 function W(e, t, n) {
 	if (e === R.mFx.JOIN) return null != t && null != t.id && null != n.join;
@@ -344,8 +324,7 @@ function X(e, t) {
 	};
 }
 function J(e) {
-	if (e !== O.He.POST_MESSAGE)
-		throw new Z.Z({ errorCode: R.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
+	if (e !== O.He.POST_MESSAGE) throw new Z.Z({ errorCode: R.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
 }
 function $(e) {
 	if (null == e.id) throw new Z.Z({ errorCode: R.lTL.INVALID_COMMAND }, 'Invalid application');

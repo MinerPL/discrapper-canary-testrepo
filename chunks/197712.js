@@ -123,11 +123,7 @@ function o(e, t, n) {
 		},
 		i = e - n.width,
 		a = t - n.height;
-	return (
-		0 !== i && ((r.left = -Math.abs(i / 2)), (r.right = i / 2)),
-		0 !== a && ((r.bottom = -Math.abs(a / 2)), (r.top = a / 2)),
-		r
-	);
+	return 0 !== i && ((r.left = -Math.abs(i / 2)), (r.right = i / 2)), 0 !== a && ((r.bottom = -Math.abs(a / 2)), (r.top = a / 2)), r;
 }
 function h(e, t, n, r) {
 	switch (e) {

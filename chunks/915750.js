@@ -3,7 +3,7 @@ n.d(t, {
 		return p;
 	},
 	u: function () {
-		return m;
+		return I;
 	}
 });
 var r = n(735250),
@@ -31,14 +31,7 @@ function E(e, t, n) {
 }
 let f = (0, d.T)();
 class h {
-	constructor({
-		questOrQuests: e,
-		questContent: t,
-		questContentPosition: n,
-		questContentRowIndex: r,
-		triggeredByStatusChange: i,
-		trackGuildAndChannelMetadata: o
-	}) {
+	constructor({ questOrQuests: e, questContent: t, questContentPosition: n, questContentRowIndex: r, triggeredByStatusChange: i, trackGuildAndChannelMetadata: o }) {
 		var d = this;
 		E(this, 'id', void 0),
 			E(this, 'quests', void 0),
@@ -95,10 +88,7 @@ class h {
 				this.stop(!1),
 					(this.lastBeatTime = Date.now()),
 					(this.beatTimeout = window.setInterval(() => this.heartbeat(), 60000)),
-					(this.minViewTimeReachedTimeout = window.setTimeout(
-						this.onMinViewTimeReached,
-						1000 * this.minViewTimeSecond
-					)),
+					(this.minViewTimeReachedTimeout = window.setTimeout(this.onMinViewTimeReached, 1000 * this.minViewTimeSecond)),
 					this.quests.forEach((e) => {
 						(0, u.dA)({
 							questId: e.id,
@@ -118,10 +108,7 @@ class h {
 			}),
 			E(this, 'stop', function () {
 				let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-				e && d.heartbeat(!0),
-					(d.lastBeatTime = void 0),
-					clearInterval(d.beatTimeout),
-					clearTimeout(d.minViewTimeReachedTimeout);
+				e && d.heartbeat(!0), (d.lastBeatTime = void 0), clearInterval(d.beatTimeout), clearTimeout(d.minViewTimeReachedTimeout);
 			}),
 			(this.id = (0, a.Z)()),
 			(this.questContent = t),
@@ -143,14 +130,14 @@ let p = (e, t) => {
 			: e.id;
 		return ''.concat(n, '_').concat(t);
 	},
-	I = (e) => {
+	m = (e) => {
 		let t = Array.isArray(e) ? null : (0, u.uk)(e),
 			n = (0, o.Z)(t);
 		return t !== n;
 	};
-function m(e) {
+function I(e) {
 	let { visible: t, visibleChanged: n, reference: a, focused: s, focusedChanged: o, impression: l } = e,
-		u = I(e.questOrQuests);
+		u = m(e.questOrQuests);
 	return (
 		i.useEffect(
 			() => () => {
@@ -173,19 +160,7 @@ function m(e) {
 						trackGuildAndChannelMetadata: e.trackGuildAndChannelMetadata
 					})),
 					l.current.start());
-		}, [
-			s,
-			t,
-			l,
-			o,
-			n,
-			e.questOrQuests,
-			e.questContent,
-			e.questContentPosition,
-			e.questContentRowIndex,
-			e.trackGuildAndChannelMetadata,
-			u
-		]),
+		}, [s, t, l, o, n, e.questOrQuests, e.questContent, e.questContentPosition, e.questContentRowIndex, e.trackGuildAndChannelMetadata, u]),
 		(0, r.jsx)(r.Fragment, { children: e.children(a) })
 	);
 }

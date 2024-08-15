@@ -57,8 +57,7 @@ function M() {
 }
 class b extends s.PureComponent {
 	componentDidMount() {
-		(this.notificationTimer = setTimeout(this.hideNotification, R)),
-			p.Z.track(N.rMx.NOTIFICATION_VIEWED, { notif_type: T.n0.OverlayCrashed });
+		(this.notificationTimer = setTimeout(this.hideNotification, R)), p.Z.track(N.rMx.NOTIFICATION_VIEWED, { notif_type: T.n0.OverlayCrashed });
 	}
 	componentWillUnmount() {
 		let { notificationTimer: e } = this;

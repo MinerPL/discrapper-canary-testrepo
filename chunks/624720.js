@@ -4,10 +4,7 @@ var n = a(799761),
 			var a,
 				n = Number(e),
 				t = null == i ? void 0 : i.unit;
-			return 0 === n
-				? '0'
-				: ((a = 1 === n ? (t && ['year', 'week', 'hour', 'minute', 'second'].includes(t) ? 'ère' : 'er') : 'ème'),
-					n + a);
+			return 0 === n ? '0' : ((a = 1 === n ? (t && ['year', 'week', 'hour', 'minute', 'second'].includes(t) ? 'ère' : 'er') : 'ème'), n + a);
 		},
 		era: (0, n.Z)({
 			values: {
@@ -31,34 +28,8 @@ var n = a(799761),
 		month: (0, n.Z)({
 			values: {
 				narrow: ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'],
-				abbreviated: [
-					'janv.',
-					'févr.',
-					'mars',
-					'avr.',
-					'mai',
-					'juin',
-					'juil.',
-					'août',
-					'sept.',
-					'oct.',
-					'nov.',
-					'déc.'
-				],
-				wide: [
-					'janvier',
-					'février',
-					'mars',
-					'avril',
-					'mai',
-					'juin',
-					'juillet',
-					'août',
-					'septembre',
-					'octobre',
-					'novembre',
-					'décembre'
-				]
+				abbreviated: ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'],
+				wide: ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre']
 			},
 			defaultWidth: 'wide'
 		}),

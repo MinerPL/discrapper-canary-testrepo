@@ -17,8 +17,8 @@ var r = n(735250),
 	f = n(380684),
 	h = n(74538),
 	p = n(104494),
-	I = n(639119),
-	m = n(631771),
+	m = n(639119),
+	I = n(631771),
 	T = n(790527),
 	g = n(474936),
 	S = n(981631),
@@ -30,10 +30,10 @@ function O(e) {
 		O = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
 		R = (0, a.e7)([c.Z], () => c.Z.theme),
 		C = null == O ? void 0 : O.premiumType,
-		y = (0, I.N)(),
+		y = (0, m.N)(),
 		D = (0, p.Ng)(),
 		L = null != y || null != D,
-		{ enabled: b } = m.MP.useExperiment(
+		{ enabled: b } = I.MP.useExperiment(
 			{ location: 'File Upload Roadblock' },
 			{
 				autoTrackExposure: !L,
@@ -66,9 +66,7 @@ function O(e) {
 		x = (0, f.XS)(),
 		G = (0, f.Xv)(),
 		k = (0, E.BU)((G ? g.wb : g.Uq) / 1024, { useKibibytes: !0 }),
-		B = b
-			? N.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_TIER_2
-			: N.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_3.format({ premiumMaxSize: k }),
+		B = b ? N.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_TIER_2 : N.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_3.format({ premiumMaxSize: k }),
 		F = b
 			? (0, r.jsx)('div', {
 					className: v.body,

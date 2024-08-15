@@ -27,8 +27,7 @@ class f extends i.Z {
 		this.stopHeartbeat();
 	}
 	maybeStartHeartbeat() {
-		!this.heartbeatInterval.isStarted() &&
-			(this.logRunningGameHeartbeats(), this.heartbeatInterval.start(E, this.logRunningGameHeartbeats));
+		!this.heartbeatInterval.isStarted() && (this.logRunningGameHeartbeats(), this.heartbeatInterval.start(E, this.logRunningGameHeartbeats));
 	}
 	stopHeartbeat() {
 		this.heartbeatInterval.stop(), this.runningGameKeys.clear();
@@ -65,12 +64,7 @@ class f extends i.Z {
 					var r, i;
 					let s = (0, c.rH)(e),
 						l = !this.runningGameKeys.has(s),
-						_ =
-							null !== (i = e.id) && void 0 !== i
-								? i
-								: null === (r = a.Z.getGameByName(e.name)) || void 0 === r
-									? void 0
-									: r.id;
+						_ = null !== (i = e.id) && void 0 !== i ? i : null === (r = a.Z.getGameByName(e.name)) || void 0 === r ? void 0 : r.id;
 					o.default.track(d.rMx.RUNNING_GAME_HEARTBEAT, {
 						game_id: _,
 						game_name: e.name,

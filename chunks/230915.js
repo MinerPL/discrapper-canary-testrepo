@@ -5,16 +5,13 @@ function n(e) {
 					return typeof e;
 				}
 			: function (e) {
-					return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype
-						? 'symbol'
-						: typeof e;
+					return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
 				})(e);
 }
 var r,
 	i = 'https://js.stripe.com/v3',
 	a = /^https:\/\/js\.stripe\.com\/v3\/?(\?.*)?$/,
-	s =
-		'loadStripe.setLoadParameters was called but an existing Stripe.js script already exists in the document; existing script parameters will be used',
+	s = 'loadStripe.setLoadParameters was called but an existing Stripe.js script already exists in the document; existing script parameters will be used',
 	o = function () {
 		for (var e = document.querySelectorAll('script[src^="'.concat(i, '"]')), t = 0; t < e.length; t++) {
 			var n = e[t];
@@ -47,11 +44,7 @@ var r,
 		return u(r, n), r;
 	},
 	f = function (e) {
-		var t =
-			'invalid load parameters; expected object of shape\n\n    {advancedFraudSignals: boolean}\n\nbut received\n\n    '.concat(
-				JSON.stringify(e),
-				'\n'
-			);
+		var t = 'invalid load parameters; expected object of shape\n\n    {advancedFraudSignals: boolean}\n\nbut received\n\n    '.concat(JSON.stringify(e), '\n');
 		if (null === e || 'object' !== n(e)) throw Error(t);
 		if (1 === Object.keys(e).length && 'boolean' == typeof e.advancedFraudSignals) return e;
 		throw Error(t);
@@ -79,17 +72,7 @@ var r,
 							a,
 							u,
 							c = o();
-						c && e
-							? console.warn(s)
-							: c
-								? c &&
-									null !== _ &&
-									null !== d &&
-									(c.removeEventListener('load', _),
-									c.removeEventListener('error', d),
-									null === (u = c.parentNode) || void 0 === u || u.removeChild(c),
-									(c = l(e)))
-								: (c = l(e)),
+						c && e ? console.warn(s) : c ? c && null !== _ && null !== d && (c.removeEventListener('load', _), c.removeEventListener('error', d), null === (u = c.parentNode) || void 0 === u || u.removeChild(c), (c = l(e))) : (c = l(e)),
 							(r = t),
 							(i = n),
 							(_ = function () {

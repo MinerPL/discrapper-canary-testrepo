@@ -53,9 +53,7 @@ class E extends o.Z {
 							linked_user_ids: e
 						}),
 							null === (t = this.onSwitchSuccess) || void 0 === t || t.call(this, s);
-					} else
-						u.default.track(d.rMx.MULTI_ACCOUNT_SWITCH_FAILURE),
-							null === (n = this.onSwitchError) || void 0 === n || n.call(this, s);
+					} else u.default.track(d.rMx.MULTI_ACCOUNT_SWITCH_FAILURE), null === (n = this.onSwitchError) || void 0 === n || n.call(this, s);
 					i = null;
 				}
 				r = s.id;

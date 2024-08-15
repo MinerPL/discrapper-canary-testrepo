@@ -26,13 +26,7 @@ t(709054), t(523361);
 var u = t(981631),
 	a = t(689938);
 function s(e) {
-	let {
-			username: n,
-			usernameOnClickHandler: t,
-			roleSubscriptionOnClickHandler: r,
-			guildId: i,
-			roleSubscriptionData: o
-		} = e,
+	let { username: n, usernameOnClickHandler: t, roleSubscriptionOnClickHandler: r, guildId: i, roleSubscriptionData: o } = e,
 		{ content: l, formatParams: u } = _({
 			username: n,
 			usernameOnClickHandler: t,
@@ -43,13 +37,7 @@ function s(e) {
 	return l.format(u);
 }
 function c(e) {
-	let {
-			username: n,
-			usernameOnClickHandler: t,
-			roleSubscriptionOnClickHandler: r,
-			guildId: i,
-			roleSubscriptionData: o
-		} = e,
+	let { username: n, usernameOnClickHandler: t, roleSubscriptionOnClickHandler: r, guildId: i, roleSubscriptionData: o } = e,
 		{ content: l, formatParams: u } = _({
 			username: n,
 			usernameOnClickHandler: t,
@@ -72,22 +60,10 @@ function d(e, n) {
 }
 function _(e) {
 	let n,
-		{
-			username: t,
-			usernameOnClickHandler: r,
-			roleSubscriptionOnClickHandler: i,
-			guildId: o,
-			roleSubscriptionData: l
-		} = e,
+		{ username: t, usernameOnClickHandler: r, roleSubscriptionOnClickHandler: i, guildId: o, roleSubscriptionData: l } = e,
 		{ guild: u, totalMonthsSubscribed: s, showWithDuration: c, isRenewal: _ } = d(o, l);
 	return (
-		(n = c
-			? _
-				? a.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_WITH_DURATION
-				: a.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN_WITH_DURATION
-			: _
-				? a.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW
-				: a.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN),
+		(n = c ? (_ ? a.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_WITH_DURATION : a.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN_WITH_DURATION) : _ ? a.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW : a.Z.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN),
 		{
 			content: n,
 			formatParams: {
@@ -103,13 +79,7 @@ function _(e) {
 }
 function f(e) {
 	let n,
-		{
-			username: t,
-			usernameOnClickHandler: r = u.dG4,
-			roleSubscriptionOnClickHandler: i = u.dG4,
-			guildId: o,
-			roleSubscriptionData: l
-		} = e,
+		{ username: t, usernameOnClickHandler: r = u.dG4, roleSubscriptionOnClickHandler: i = u.dG4, guildId: o, roleSubscriptionData: l } = e,
 		{ guild: s, totalMonthsSubscribed: c, showWithDuration: _, isRenewal: f } = d(o, l),
 		E = {
 			guildName: null == s ? void 0 : s.name,

@@ -58,22 +58,10 @@ function B(e) {
 t.Z = a.memo(function e(t) {
 	var n;
 	let a;
-	let {
-			channel: s,
-			message: o,
-			compact: b = !1,
-			className: U,
-			onContextMenu: k,
-			onClick: G,
-			disableInteraction: F = !1,
-			hasThread: w,
-			treatSpam: V
-		} = t,
+	let { channel: s, message: o, compact: b = !1, className: U, onContextMenu: k, onClick: G, disableInteraction: F = !1, hasThread: w, treatSpam: V } = t,
 		H = D.OBS.has(o.type) ? o.messageReference : void 0,
 		Y = (0, l.e7)([I.Z], () => I.Z.getMessageByReference(H)),
-		W = (0, l.e7)([T.Z], () =>
-			o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED ? T.Z.getChannel(Y.message.channel_id) : null
-		),
+		W = (0, l.e7)([T.Z], () => (o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED ? T.Z.getChannel(Y.message.channel_id) : null)),
 		K = m.x4.useSetting(),
 		z = m.RS.useSetting(),
 		Q = m.NA.useSetting(),
@@ -89,10 +77,7 @@ t.Z = a.memo(function e(t) {
 			previewLinkTarget: !0
 		}),
 		en = (0, g.ZP)(o),
-		ei = (0, l.e7)(
-			[T.Z],
-			() => o.hasFlag(D.iLy.HAS_THREAD) && T.Z.getChannel(f.default.castMessageIdAsChannelId(o.id))
-		),
+		ei = (0, l.e7)([T.Z], () => o.hasFlag(D.iLy.HAS_THREAD) && T.Z.getChannel(f.default.castMessageIdAsChannelId(o.id))),
 		ea = o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED && null != W,
 		es = !ea && void 0 === a,
 		er = (0, O.Z)({
@@ -110,10 +95,7 @@ t.Z = a.memo(function e(t) {
 				channel: W,
 				hasThread: !1
 			})
-		: (h.Z.isBlockedForMessage(o)
-					? (a = j.Z.Messages.BLOCKED_MESSAGE_COUNT)
-					: (0, C.DQ)(o) && V && (a = j.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT),
-			  void 0 !== a)
+		: (h.Z.isBlockedForMessage(o) ? (a = j.Z.Messages.BLOCKED_MESSAGE_COUNT) : (0, C.DQ)(o) && V && (a = j.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== a)
 			? (0, i.jsx)(B, {
 					className: U,
 					compact: b,

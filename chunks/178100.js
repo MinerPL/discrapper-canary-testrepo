@@ -9,16 +9,5 @@ var n = t(470079),
 	r = t(55935);
 let o = i().duration(30, 'days');
 function l(e, s) {
-	return n.useMemo(
-		() =>
-			(0, r.vc)(
-				s
-					? null != e.outboundRedemptionEndDate
-						? i()(e.outboundRedemptionEndDate)
-						: i()(e.endDate).add(o)
-					: i()(e.endDate),
-				'LL'
-			),
-		[e, s]
-	);
+	return n.useMemo(() => (0, r.vc)(s ? (null != e.outboundRedemptionEndDate ? i()(e.outboundRedemptionEndDate) : i()(e.endDate).add(o)) : i()(e.endDate), 'LL'), [e, s]);
 }

@@ -98,10 +98,7 @@ function _() {
 	if (!(0, l.Z)(s.Z)) return !1;
 	let { enableClips: e } = d.getCurrentConfig({ location: 'areClipsEnabled' }, { autoTrackExposure: !1 }),
 		{ enableClips: t } = c.getCurrentConfig({ location: 'areClipsEnabled' }, { autoTrackExposure: !1 }),
-		{ enableDecoupledGameClipping: n } = i.Z.getCurrentConfig(
-			{ location: 'areClipsEnabled' },
-			{ autoTrackExposure: !1 }
-		),
+		{ enableDecoupledGameClipping: n } = i.Z.getCurrentConfig({ location: 'areClipsEnabled' }, { autoTrackExposure: !1 }),
 		{ enableViewerClipping: r } = a.Z.getCurrentConfig({ location: 'areClipsEnabled' }, { autoTrackExposure: !1 });
 	return e || t || n || r;
 }
@@ -116,19 +113,13 @@ function E() {
 let f = (e) => {
 		let { autoTrackExposure: t } = e,
 			n = (0, l.Z)(s.Z),
-			{ enablePremiumEarlyAccessGoLiveRoadblock: r } = d.useExperiment(
-				{ location: 'useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock' },
-				{ autoTrackExposure: t && n }
-			);
+			{ enablePremiumEarlyAccessGoLiveRoadblock: r } = d.useExperiment({ location: 'useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock' }, { autoTrackExposure: t && n });
 		return !!n && r;
 	},
 	h = (e) => {
 		let { autoTrackExposure: t } = e,
 			n = (0, l.Z)(s.Z),
-			{ enablePremiumEarlyAccessAnnouncementCoachmark: r } = d.useExperiment(
-				{ location: 'useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock' },
-				{ autoTrackExposure: t && n }
-			);
+			{ enablePremiumEarlyAccessAnnouncementCoachmark: r } = d.useExperiment({ location: 'useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock' }, { autoTrackExposure: t && n });
 		return !!n && r;
 	};
 function p(e) {

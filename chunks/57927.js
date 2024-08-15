@@ -43,12 +43,7 @@ function j(e) {
 		o = n.useCallback(
 			(e) => {
 				var t;
-				return a(
-					e,
-					(null !== (t = s[e].overrideMode) && void 0 !== t ? t : s[e].mode) === h.AR.UseGreyDot
-						? h.AR.KeepAsIs
-						: h.AR.UseGreyDot
-				);
+				return a(e, (null !== (t = s[e].overrideMode) && void 0 !== t ? t : s[e].mode) === h.AR.UseGreyDot ? h.AR.KeepAsIs : h.AR.UseGreyDot);
 			},
 			[a, s]
 		);
@@ -143,9 +138,7 @@ function M(e) {
 						(0, t.jsx)(o.Text, {
 							variant: 'text-xs/medium',
 							color: 'text-muted',
-							children: a.messagePain
-								? O.Z.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_BUSY
-								: O.Z.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_QUIET
+							children: a.messagePain ? O.Z.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_BUSY : O.Z.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_QUIET
 						})
 					]
 				}),
@@ -159,9 +152,7 @@ function M(e) {
 						(0, t.jsx)(o.Text, {
 							variant: 'text-xs/medium',
 							color: 'text-muted',
-							children: a.visitsALot
-								? O.Z.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_ALOT
-								: O.Z.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_ALITTLE
+							children: a.visitsALot ? O.Z.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_ALOT : O.Z.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_ALITTLE
 						})
 					]
 				}),
@@ -175,9 +166,7 @@ function M(e) {
 						(0, t.jsx)(o.Text, {
 							variant: 'text-xs/medium',
 							color: 'text-muted',
-							children: a.muted
-								? O.Z.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_MUTED
-								: O.Z.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_NOT_MUTED
+							children: a.muted ? O.Z.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_MUTED : O.Z.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_NOT_MUTED
 						})
 					]
 				})

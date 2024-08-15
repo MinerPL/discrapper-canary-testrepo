@@ -16,13 +16,12 @@ var i = n(866442),
 function d(e) {
 	let t,
 		{ color: n, size: d, forcedIconColor: _, className: E, iconClassName: f, tooltipText: h } = e,
-		[p, I] = (0, a.Wu)([l.Z], () => [l.Z.desaturateUserColors, l.Z.saturation]),
-		m = (0, o.useToken)(s.Z.unsafe_rawColors.PRIMARY_300).hex(),
-		T = (0, i._i)(null != n ? n : m),
-		g = (0, i.ho)(T, !1, p ? I : null);
+		[p, m] = (0, a.Wu)([l.Z], () => [l.Z.desaturateUserColors, l.Z.saturation]),
+		I = (0, o.useToken)(s.Z.unsafe_rawColors.PRIMARY_300).hex(),
+		T = (0, i._i)(null != n ? n : I),
+		g = (0, i.ho)(T, !1, p ? m : null);
 	return (
-		(t =
-			null != _ ? _ : 0.3 > (0, i.Bd)(T) ? s.Z.unsafe_rawColors.PRIMARY_630.css : s.Z.unsafe_rawColors.WHITE_500.css),
+		(t = null != _ ? _ : 0.3 > (0, i.Bd)(T) ? s.Z.unsafe_rawColors.PRIMARY_630.css : s.Z.unsafe_rawColors.WHITE_500.css),
 		(0, r.jsx)(o.Tooltip, {
 			text: null != h ? h : c.Z.Messages.CONNECTIONS_ROLE_OFFICIAL_ICON_TOOLTIP,
 			children: (e) =>

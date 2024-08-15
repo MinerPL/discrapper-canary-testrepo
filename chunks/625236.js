@@ -40,17 +40,12 @@ class o {
 	messageId(e) {
 		var t, n;
 		let i = this.messages.get(e);
-		return null !== (n = null == i ? void 0 : null === (t = i.message) || void 0 === t ? void 0 : t.id) && void 0 !== n
-			? n
-			: null;
+		return null !== (n = null == i ? void 0 : null === (t = i.message) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null;
 	}
 	messageRecord(e) {
 		var t;
 		let n = this.messages.get(e);
-		return (
-			null != n && null != n.message && !(n.message instanceof a.ZP) && (n.message = (0, i.e5)(n.message)),
-			null !== (t = null == n ? void 0 : n.message) && void 0 !== t ? t : null
-		);
+		return null != n && null != n.message && !(n.message instanceof a.ZP) && (n.message = (0, i.e5)(n.message)), null !== (t = null == n ? void 0 : n.message) && void 0 !== t ? t : null;
 	}
 	has(e) {
 		return this.messages.has(e);

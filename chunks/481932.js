@@ -19,15 +19,15 @@ var i = n(442837),
 	h = n(689938);
 function p(e) {
 	let { user: t, friendToken: n, profileType: p } = e,
-		{ newestAnalyticsLocation: I } = (0, o.ZP)(),
-		{ trackUserProfileAction: m } = (0, d.KZ)(),
+		{ newestAnalyticsLocation: m } = (0, o.ZP)(),
+		{ trackUserProfileAction: I } = (0, d.KZ)(),
 		T = (0, i.e7)([u.default], () => u.default.getId() === (null == t ? void 0 : t.id)),
 		g = (0, i.e7)([c.Z], () => (null != t ? c.Z.getRelationshipType(t.id) : f.OGo.NONE)),
 		S = (0, l.Z)({
 			user: t,
 			color: 'danger',
-			location: I,
-			onAction: () => m({ action: 'REMOVE_FRIEND' })
+			location: m,
+			onAction: () => I({ action: 'REMOVE_FRIEND' })
 		});
 	return null == t || t.bot || T || g === f.OGo.BLOCKED
 		? null
@@ -68,7 +68,7 @@ function p(e) {
 								s.Z.addRelationship({
 									userId: t.id,
 									friendToken: n,
-									context: { location: I }
+									context: { location: m }
 								});
 							}
 						});

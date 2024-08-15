@@ -23,8 +23,8 @@ var r = n(735250),
 	f = n(204418),
 	h = n(583434),
 	p = n(530618),
-	I = n(70097),
-	m = n(454585),
+	m = n(70097),
+	I = n(454585),
 	T = n(164946),
 	g = n(166625),
 	S = n(25990),
@@ -47,8 +47,8 @@ function P() {
 function U(e) {
 	var t;
 	let { transitionState: n, onClose: a, quest: l, location: d, reward: E, decoration: f, onUseNow: h } = e,
-		I = i.useRef(null),
-		[m, T] = i.useState(null),
+		m = i.useRef(null),
+		[I, T] = i.useState(null),
 		g = i.useRef(new o.qA()),
 		S = (0, u.e7)([_.Z], () => _.Z.useReducedMotion),
 		R = (0, u.e7)([A.default], () => A.default.getCurrentUser()),
@@ -70,7 +70,7 @@ function U(e) {
 				environment: g.current
 			}),
 			(0, r.jsx)('div', {
-				ref: I,
+				ref: m,
 				children: (0, r.jsx)(c.ModalRoot, {
 					transitionState: n,
 					size: c.ModalSize.DYNAMIC,
@@ -100,8 +100,8 @@ function U(e) {
 				!L &&
 				'claimed' === M &&
 				(0, r.jsx)(p.Z, {
-					confettiTarget: I.current,
-					confettiCanvas: m,
+					confettiTarget: m.current,
+					confettiCanvas: I,
 					sprites: D.CA,
 					colors: D.Br
 				})
@@ -109,18 +109,7 @@ function U(e) {
 	});
 }
 function w(e) {
-	let {
-			quest: t,
-			user: n,
-			decoration: i,
-			decorationName: a,
-			primaryColor: s,
-			secondaryColor: o,
-			backgroundUrl: l,
-			isSaving: u,
-			onClose: d,
-			onConfirm: _
-		} = e,
+	let { quest: t, user: n, decoration: i, decorationName: a, primaryColor: s, secondaryColor: o, backgroundUrl: l, isSaving: u, onClose: d, onConfirm: _ } = e,
 		E = (0, O.zK)(t, y.S7.IN_HOUSE_CONSOLE_QUEST),
 		h = R.r.build(t.config).defaultRewardRedemptionInstructionsByPlatform[v.y$.CROSS_PLATFORM],
 		p = (0, O.Kr)(t.config),
@@ -137,7 +126,7 @@ function w(e) {
 			(0, r.jsxs)('div', {
 				className: b.headerContainer,
 				children: [
-					(0, r.jsx)(I.Z, {
+					(0, r.jsx)(m.Z, {
 						className: b.headerBackground,
 						autoPlay: !1,
 						loop: !1,
@@ -202,14 +191,12 @@ function w(e) {
 									(0, r.jsx)(c.Text, {
 										variant: 'text-xs/normal',
 										className: b.sponsoredBy,
-										children: L.Z.Messages.QUESTS_REWARD_SPONSORED_BY.format({
-											publisherName: t.config.messages.gamePublisher
-										})
+										children: L.Z.Messages.QUESTS_REWARD_SPONSORED_BY.format({ publisherName: t.config.messages.gamePublisher })
 									}),
 									(0, r.jsx)(c.Text, {
 										variant: 'text-sm/normal',
 										color: 'always-white',
-										children: m.Z.parse(h, !1, { allowLinks: !0 })
+										children: I.Z.parse(h, !1, { allowLinks: !0 })
 									})
 								]
 							})

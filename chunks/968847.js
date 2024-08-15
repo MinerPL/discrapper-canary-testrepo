@@ -27,10 +27,7 @@ var i,
 	S = n(823379),
 	v = n(734307),
 	Z = n(981631);
-((r = i || (i = {})).HIDDEN = 'hidden'),
-	(r.UNREAD = 'unread'),
-	(r.MENTIONS = 'mentions'),
-	(r.VOICE_CHANNELS = 'voice-channels');
+((r = i || (i = {})).HIDDEN = 'hidden'), (r.UNREAD = 'unread'), (r.MENTIONS = 'mentions'), (r.VOICE_CHANNELS = 'voice-channels');
 let T = {
 		mode: 'hidden',
 		mentionCount: 0,
@@ -44,11 +41,7 @@ let T = {
 	b = {};
 function M(e) {
 	let t = m.Z.getChannel(e);
-	return (
-		!(null == t || null == t.getGuildId() || t.isGuildVocal()) &&
-		!(t.isThread() ? g.Z.isMuted(t.id) : N.ZP.isChannelMuted(t.getGuildId(), t.id)) &&
-		(0, p.d)(t)
-	);
+	return !(null == t || null == t.getGuildId() || t.isGuildVocal()) && !(t.isThread() ? g.Z.isMuted(t.id) : N.ZP.isChannelMuted(t.getGuildId(), t.id)) && (0, p.d)(t);
 }
 function R(e) {
 	let t = m.Z.getChannel(e);
@@ -60,12 +53,7 @@ function R(e) {
 	return (!i || !l) && I.ZP.getMentionCount(e) > 0;
 }
 function O(e) {
-	return (
-		!N.ZP.isChannelMuted(e.guild_id, e.id) &&
-		(e.isGuildStageVoice()
-			? _.Z.getMutableParticipants(e.id, f.pV.SPEAKER).length > 0
-			: x.ZP.getVoiceStatesForChannel(e).length > 0)
-	);
+	return !N.ZP.isChannelMuted(e.guild_id, e.id) && (e.isGuildStageVoice() ? _.Z.getMutableParticipants(e.id, f.pV.SPEAKER).length > 0 : x.ZP.getVoiceStatesForChannel(e).length > 0);
 }
 function P(e) {
 	var t, n, i;
@@ -84,13 +72,7 @@ function P(e) {
 		[g, m, C] = l.getSlicedChannels(r);
 	for (let e = 0; e < m.length; e++) {
 		let t = m[e];
-		if (
-			((M(t.id) || u().some(t.threadIds, M)) && (h = !1),
-			(R(t.id) || u().some(t.threadIds, R)) && (d = !1),
-			f.includes(t.id) && (p = !0),
-			!h && !d && p)
-		)
-			break;
+		if (((M(t.id) || u().some(t.threadIds, M)) && (h = !1), (R(t.id) || u().some(t.threadIds, R)) && (d = !1), f.includes(t.id) && (p = !0), !h && !d && p)) break;
 	}
 	let E = 0,
 		N = !1,
@@ -99,17 +81,13 @@ function P(e) {
 	if (h || d)
 		for (let e = g.length - 1; e >= 0; e--) {
 			let t = g[e];
-			(M(t.id) || u().some(t.threadIds, M)) && (null == s && (s = t.id), (N = !0)),
-				(R(t.id) || u().some(t.threadIds, R)) &&
-					(null == a && (a = t.id), (E += I.ZP.getMentionCount(t.id) + u().sumBy(t.threadIds, I.ZP.getMentionCount)));
+			(M(t.id) || u().some(t.threadIds, M)) && (null == s && (s = t.id), (N = !0)), (R(t.id) || u().some(t.threadIds, R)) && (null == a && (a = t.id), (E += I.ZP.getMentionCount(t.id) + u().sumBy(t.threadIds, I.ZP.getMentionCount)));
 		}
 	if (h || d)
 		for (let e = 0; e < C.length; e++) {
 			let t = C[e];
 			if (!h && !d) break;
-			(M(t.id) || u().some(t.threadIds, M)) && (null == c && (c = t.id), (S = !0)),
-				(R(t.id) || u().some(t.threadIds, R)) &&
-					(null == o && (o = t.id), (x += I.ZP.getMentionCount(t.id) + u().sumBy(t.threadIds, I.ZP.getMentionCount)));
+			(M(t.id) || u().some(t.threadIds, M)) && (null == c && (c = t.id), (S = !0)), (R(t.id) || u().some(t.threadIds, R)) && (null == o && (o = t.id), (x += I.ZP.getMentionCount(t.id) + u().sumBy(t.threadIds, I.ZP.getMentionCount)));
 		}
 	let Z = null,
 		L = null,

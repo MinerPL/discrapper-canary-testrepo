@@ -21,7 +21,7 @@ n.d(t, {
 		return A;
 	},
 	fD: function () {
-		return m;
+		return I;
 	},
 	kD: function () {
 		return S;
@@ -101,18 +101,14 @@ function h(e, t, n) {
 	i.drawImage(e, 0, 0, a, s);
 	let o = (function (e, t, n) {
 			let r = [];
-			for (let i = 0, a, s, o, l, u; i < t; i += n)
-				(s = e[(a = 4 * i) + 0]),
-					(o = e[a + 1]),
-					(l = e[a + 2]),
-					(void 0 === (u = e[a + 3]) || u >= 125) && !(s > 250 && o > 250 && l > 250) && r.push([s, o, l]);
+			for (let i = 0, a, s, o, l, u; i < t; i += n) (s = e[(a = 4 * i) + 0]), (o = e[a + 1]), (l = e[a + 2]), (void 0 === (u = e[a + 3]) || u >= 125) && !(s > 250 && o > 250 && l > 250) && r.push([s, o, l]);
 			return r;
 		})(i.getImageData(0, 0, a, s).data, a * s, n),
 		u = l()(o, t);
 	return 'boolean' == typeof u ? f : u.palette();
 }
-let p = (e) => ('number' == typeof e ? null : I(e)),
-	I = s().memoize(
+let p = (e) => ('number' == typeof e ? null : m(e)),
+	m = s().memoize(
 		(e) =>
 			new Promise((t, n) => {
 				let r = new Image();
@@ -126,7 +122,7 @@ let p = (e) => ('number' == typeof e ? null : I(e)),
 					(r.src = e);
 			})
 	);
-function m(e) {
+function I(e) {
 	return new Promise((t, n) => {
 		let r = new FileReader();
 		r.readAsDataURL(e),
@@ -154,8 +150,7 @@ function S(e) {
 }
 async function A(e) {
 	var t;
-	if ('image/png' !== (null === (t = e.type) || void 0 === t ? void 0 : t.split(';')[0]))
-		throw Error('File is not a PNG');
+	if ('image/png' !== (null === (t = e.type) || void 0 === t ? void 0 : t.split(';')[0])) throw Error('File is not a PNG');
 	let n = await e.text(),
 		r = n.indexOf('IDAT');
 	return (!!(r > 0) && -1 !== n.substring(0, r).indexOf('acTL')) || !1;

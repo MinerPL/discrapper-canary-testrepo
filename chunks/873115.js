@@ -82,8 +82,7 @@ function E() {
 		a.paypal
 			.create({ client: e })
 			.then((e) => {
-				if (null == e._navigateFrameToAuth)
-					throw Error('braintree client missing _navigateFrameToAuth. did someone upgrade the braintree library?');
+				if (null == e._navigateFrameToAuth) throw Error('braintree client missing _navigateFrameToAuth. did someone upgrade the braintree library?');
 				(e._navigateFrameToAuth = function (e) {
 					let a = this._formatPaymentResourceData(e);
 					return s.tn
@@ -101,20 +100,12 @@ function E() {
 							} = e;
 							this._frameService.redirect(
 								(function (e) {
-									let a = c.Ai1.BRAINTREE.KEY.startsWith('production_')
-										? 'https://www.paypal.com'
-										: 'https://sandbox.paypal.com';
+									let a = c.Ai1.BRAINTREE.KEY.startsWith('production_') ? 'https://www.paypal.com' : 'https://sandbox.paypal.com';
 									return ''.concat(a, '/agreements/approve?nolegacy=1&ba_token=').concat(e);
 								})(a)
 							);
 						})
-						.catch(
-							(e) => (
-								this._frameService.close(),
-								(this._authorizationInProgress = !1),
-								Promise.reject(Error(e.body && e.body.message))
-							)
-						);
+						.catch((e) => (this._frameService.close(), (this._authorizationInProgress = !1), Promise.reject(Error(e.body && e.body.message))));
 				}),
 					n.Z.dispatch({
 						type: 'BRAINTREE_CREATE_PAYPAL_CLIENT_SUCCESS',

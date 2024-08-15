@@ -29,11 +29,7 @@ function d(e) {
 class _ extends (r = i.ZP.PersistedStore) {
 	initialize(e) {
 		if (null != e) {
-			(c.premiumTypeActual = null == e ? void 0 : e.premiumTypeActual),
-				(c.premiumTypeOverride = null == e ? void 0 : e.premiumTypeOverride),
-				null != e.createdAtOverride
-					? (c.createdAtOverride = new Date(e.createdAtOverride))
-					: (c.createdAtOverride = o.Zh);
+			(c.premiumTypeActual = null == e ? void 0 : e.premiumTypeActual), (c.premiumTypeOverride = null == e ? void 0 : e.premiumTypeOverride), null != e.createdAtOverride ? (c.createdAtOverride = new Date(e.createdAtOverride)) : (c.createdAtOverride = o.Zh);
 			return;
 		}
 		(c.premiumTypeOverride = o.F_), (c.createdAtOverride = o.Zh);

@@ -57,9 +57,7 @@ t.default = (e) => {
 						(0, a.jsx)(r.Text, {
 							variant: 'text-md/normal',
 							color: 'header-secondary',
-							children: A
-								? u.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_DESCRIPTION_ADULT
-								: u.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_DESCRIPTION_TEEN
+							children: A ? u.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_DESCRIPTION_ADULT : u.Z.Messages.OBSCURED_CONTENT_LEARN_MORE_DESCRIPTION_TEEN
 						}),
 						(0, a.jsxs)('div', {
 							className: I.buttonContainer,
@@ -68,9 +66,7 @@ t.default = (e) => {
 									? (0, a.jsx)(r.Button, {
 											color: r.Button.Colors.BRAND,
 											onClick: function () {
-												M(E.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS),
-													s.Z.open(_.oAB.PRIVACY_AND_SAFETY, null, { scrollPosition: c.to.EXPLICIT_MEDIA_REDACTION }),
-													N();
+												M(E.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), s.Z.open(_.oAB.PRIVACY_AND_SAFETY, null, { scrollPosition: c.to.EXPLICIT_MEDIA_REDACTION }), N();
 											},
 											fullWidth: !0,
 											children: u.Z.Messages.OBSCURED_CONTENT_UPDATE_SETTINGS_CTA

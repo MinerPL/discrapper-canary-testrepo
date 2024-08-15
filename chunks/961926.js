@@ -45,9 +45,7 @@ function E(e) {
 							onChange: N,
 							initialValue: null === (t = T.triggerMetadata) || void 0 === t ? void 0 : t.allowList,
 							maxWordCount: u.I3,
-							collapsed:
-								(null === (n = T.triggerMetadata) || void 0 === n ? void 0 : n.allowList) == null ||
-								(null === (E = T.triggerMetadata) || void 0 === E ? void 0 : E.allowList.length) === 0
+							collapsed: (null === (n = T.triggerMetadata) || void 0 === n ? void 0 : n.allowList) == null || (null === (E = T.triggerMetadata) || void 0 === E ? void 0 : E.allowList.length) === 0
 						})
 					]
 				}),

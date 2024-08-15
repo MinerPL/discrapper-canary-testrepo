@@ -25,8 +25,8 @@ var r = n(735250),
 	f = n(51144),
 	h = n(182294),
 	p = n(981631),
-	I = n(419061),
-	m = n(689938),
+	m = n(419061),
+	I = n(689938),
 	T = n(681539);
 let g = {
 	tension: 1200,
@@ -116,26 +116,7 @@ function v(e) {
 	};
 }
 function O(e) {
-	let {
-			children: t,
-			size: n,
-			onClick: i,
-			onMouseDown: a,
-			onKeyDown: o,
-			onContextMenu: u,
-			onMouseEnter: c,
-			onMouseLeave: d,
-			className: _,
-			tabIndex: p,
-			ariaLabel: g,
-			ariaHidden: S,
-			status: A,
-			isMobile: N = !1,
-			isTyping: v = !1,
-			avatarDecoration: O,
-			typingOffset: R,
-			specs: C
-		} = e,
+	let { children: t, size: n, onClick: i, onMouseDown: a, onKeyDown: o, onContextMenu: u, onMouseEnter: c, onMouseLeave: d, className: _, tabIndex: p, ariaLabel: g, ariaHidden: S, status: A, isMobile: N = !1, isTyping: v = !1, avatarDecoration: O, typingOffset: R, specs: C } = e,
 		y = {
 			width: (0, h.px)(n),
 			height: (0, h.px)(n)
@@ -146,13 +127,13 @@ function O(e) {
 				: (function (e, t) {
 						let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
 						return null != t
-							? m.Z.Messages.LABEL_WITH_ONLINE_STATUS.format({
+							? I.Z.Messages.LABEL_WITH_ONLINE_STATUS.format({
 									label: e,
 									status: (0, f.u5)(t, n)
 								})
 							: e;
 					})(g, A, N),
-		L = C.size * I.hs,
+		L = C.size * m.hs,
 		b = (function (e, t, n, r) {
 			if (null == e) return null;
 			if (r)
@@ -285,22 +266,7 @@ function R(e) {
 	);
 }
 function C(e) {
-	let {
-			src: t,
-			status: n,
-			size: i,
-			statusColor: a,
-			isMobile: o = !1,
-			isTyping: l = !1,
-			typingIndicatorRef: _,
-			isSpeaking: I = !1,
-			statusTooltip: m = !1,
-			statusTooltipDelay: g,
-			statusBackdropColor: S,
-			'aria-hidden': v = !1,
-			'aria-label': C,
-			imageClassName: y
-		} = e,
+	let { src: t, status: n, size: i, statusColor: a, isMobile: o = !1, isTyping: l = !1, typingIndicatorRef: _, isSpeaking: m = !1, statusTooltip: I = !1, statusTooltipDelay: g, statusBackdropColor: S, 'aria-hidden': v = !1, 'aria-label': C, imageClassName: y } = e,
 		D = n !== p.Skl.UNKNOWN ? n : null,
 		L = (0, h.UC)(i),
 		b = null != D ? Math.ceil((L.status * h.D6 - L.status) / 2) : 0,
@@ -401,14 +367,14 @@ function C(e) {
 					),
 					children: (0, r.jsx)(R, {
 						src: t,
-						isSpeaking: I,
+						isSpeaking: m,
 						className: y
 					})
 				}),
 				null != D && null != S ? N(S, o, L, D) : null,
 				null != D
 					? (0, r.jsx)(d.u, {
-							text: m ? (0, f.u5)(D) : null,
+							text: I ? (0, f.u5)(D) : null,
 							'aria-label': !1,
 							position: 'top',
 							spacing: 5 + 1.5 * L.stroke,
@@ -440,32 +406,14 @@ function C(e) {
 	});
 }
 function y(e) {
-	let {
-			fromIsMobile: t = !0,
-			fromStatus: n,
-			fromColor: a,
-			isMobile: l = !1,
-			isTyping: E = !1,
-			typingIndicatorRef: p,
-			isSpeaking: I = !1,
-			size: m,
-			src: A,
-			status: C,
-			statusColor: y,
-			statusTooltip: D = !1,
-			statusTooltipDelay: L,
-			statusBackdropColor: b,
-			'aria-hidden': M = !1,
-			'aria-label': P,
-			imageClassName: U
-		} = e,
+	let { fromIsMobile: t = !0, fromStatus: n, fromColor: a, isMobile: l = !1, isTyping: E = !1, typingIndicatorRef: p, isSpeaking: m = !1, size: I, src: A, status: C, statusColor: y, statusTooltip: D = !1, statusTooltipDelay: L, statusBackdropColor: b, 'aria-hidden': M = !1, 'aria-label': P, imageClassName: U } = e,
 		w = (0, c.vj)(C, y),
 		x = i.useId(),
 		G = i.useId(),
 		[k] = i.useState(() => ({
 			fill: a,
 			...v({
-				size: m,
+				size: I,
 				status: n,
 				isMobile: t,
 				isTyping: !1
@@ -475,13 +423,13 @@ function y(e) {
 			() => ({
 				fill: w,
 				...v({
-					size: m,
+					size: I,
 					status: C,
 					isMobile: l,
 					isTyping: E
 				})
 			}),
-			[w, m, C, l, E]
+			[w, I, C, l, E]
 		),
 		{
 			avatarCutoutX: F,
@@ -499,8 +447,8 @@ function y(e) {
 			},
 			document.hasFocus() ? 'animate-always' : 'animate-never'
 		),
-		K = (0, h.px)(m),
-		z = (0, h.UC)(m),
+		K = (0, h.px)(I),
+		z = (0, h.UC)(I),
 		q = z.status * h.D6,
 		Q = z.status * h.EW,
 		X = null != C ? (z.status * h.D6 - z.status) / 2 : 0,
@@ -551,7 +499,7 @@ function y(e) {
 					mask: 'url(#'.concat(x, ')'),
 					children: (0, r.jsx)(R, {
 						src: A,
-						isSpeaking: I,
+						isSpeaking: m,
 						className: U
 					})
 				}),
@@ -593,7 +541,7 @@ function y(e) {
 									]
 								}),
 								(0, r.jsx)(S, {
-									size: m,
+									size: I,
 									isMobile: l,
 									isTyping: E,
 									className: T.pointerEvents,
@@ -612,34 +560,27 @@ let D = i.memo(function (e) {
 		{ isMobile: _ = !1, isTyping: E = !1 } = d,
 		f = i.useRef(u),
 		h = i.useRef(_),
-		I = (0, c.vj)(u, l),
-		m = i.useRef(I),
+		m = (0, c.vj)(u, l),
+		I = i.useRef(m),
 		T = i.useRef(!1);
-	let g =
-		T.current ||
-		((t = E),
-		(n = u),
-		(a = f.current),
-		(s = _),
-		(o = h.current),
-		null != a && null != n && (!!t || n !== a || (n === p.Skl.ONLINE && s !== o) || !1));
+	let g = T.current || ((t = E), (n = u), (a = f.current), (s = _), (o = h.current), null != a && null != n && (!!t || n !== a || (n === p.Skl.ONLINE && s !== o) || !1));
 	return (
 		i.useLayoutEffect(() => {
-			(T.current = g), (f.current = u), (h.current = _), (m.current = I);
-		}, [u, _, I, g]),
+			(T.current = g), (f.current = u), (h.current = _), (I.current = m);
+		}, [u, _, m, g]),
 		null != u && null != f.current && g
 			? (0, r.jsx)(y, {
 					...d,
 					status: u,
-					statusColor: I,
+					statusColor: m,
 					fromStatus: f.current,
 					fromIsMobile: h.current,
-					fromColor: m.current
+					fromColor: I.current
 				})
 			: (0, r.jsx)(C, {
 					...d,
 					status: u,
-					statusColor: I
+					statusColor: m
 				})
 	);
 });

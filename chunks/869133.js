@@ -11,10 +11,7 @@ t.encrypt = function (e, t) {
 				return a(e._prev), t;
 			})(e),
 			u = s + 16 * o;
-		e._cache.writeUInt32BE(l[0], u + 0),
-			e._cache.writeUInt32BE(l[1], u + 4),
-			e._cache.writeUInt32BE(l[2], u + 8),
-			e._cache.writeUInt32BE(l[3], u + 12);
+		e._cache.writeUInt32BE(l[0], u + 0), e._cache.writeUInt32BE(l[1], u + 4), e._cache.writeUInt32BE(l[2], u + 8), e._cache.writeUInt32BE(l[3], u + 12);
 	}
 	var c = e._cache.slice(0, t.length);
 	return (e._cache = e._cache.slice(t.length)), r(t, c);

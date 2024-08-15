@@ -1,15 +1,5 @@
 function r(e) {
-	let {
-		id: t,
-		username: n,
-		discriminator: r,
-		globalName: i,
-		avatar: a,
-		avatarDecoration: s,
-		bot: o,
-		flags: l,
-		premiumType: u
-	} = e;
+	let { id: t, username: n, discriminator: r, globalName: i, avatar: a, avatarDecoration: s, bot: o, flags: l, premiumType: u } = e;
 	return {
 		id: t,
 		username: n,

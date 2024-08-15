@@ -75,9 +75,7 @@ function c() {
 }
 function I(e) {
 	let { isUserVerified: s } = e,
-		n = s
-			? o.Z.Messages.MEMBER_VERIFICATION_EMAIL_VERIFIED
-			: o.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_LABEL;
+		n = s ? o.Z.Messages.MEMBER_VERIFICATION_EMAIL_VERIFIED : o.Z.Messages.MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_LABEL;
 	return (0, t.jsx)(r.PU, {
 		icon: i.EnvelopeIcon,
 		text: n,

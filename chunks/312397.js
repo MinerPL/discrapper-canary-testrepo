@@ -467,8 +467,7 @@ class eh extends a.PureComponent {
 				{
 					name: es.Z.Messages.FORM_LABEL_ALL_MESSAGES,
 					value: $.bL.ALL_MESSAGES,
-					desc:
-						null != n && n >= $.qWG ? es.Z.Messages.GUILD_SETTINGS_DEFAULT_NOTIFICATIONS_LARGE_GUILD_NOTIFY_ALL : null
+					desc: null != n && n >= $.qWG ? es.Z.Messages.GUILD_SETTINGS_DEFAULT_NOTIFICATIONS_LARGE_GUILD_NOTIFY_ALL : null
 				},
 				{
 					name: es.Z.Messages.FORM_LABEL_ONLY_MENTIONS.format(),
@@ -535,9 +534,7 @@ class eh extends a.PureComponent {
 							onChange: this.handleConversationSummariesToggle,
 							value: e.hasFeature($.oNc.SUMMARIES_ENABLED_BY_USER),
 							hideBorder: !0,
-							note: es.Z.Messages.GUILD_SETTINGS_SUMMARIES_TOGGLE_DESCRIPTION.format({
-								helpdeskArticle: q.Z.getArticleURL($.BhN.CONVERSATION_SUMMARIES)
-							}),
+							note: es.Z.Messages.GUILD_SETTINGS_SUMMARIES_TOGGLE_DESCRIPTION.format({ helpdeskArticle: q.Z.getArticleURL($.BhN.CONVERSATION_SUMMARIES) }),
 							disabled: !t,
 							children: (0, s.jsxs)('div', {
 								className: ea.badgedItem,
@@ -607,9 +604,7 @@ class eh extends a.PureComponent {
 								}),
 								(0, s.jsx)(E.FormText, {
 									type: E.FormTextTypes.DESCRIPTION,
-									children: es.Z.Messages.GUILD_SETTINGS_SPLASH_RECOMMEND.format({
-										articleURL: q.Z.getArticleURL($.BhN.GUILD_INVITE_SPLASH)
-									})
+									children: es.Z.Messages.GUILD_SETTINGS_SPLASH_RECOMMEND.format({ articleURL: q.Z.getArticleURL($.BhN.GUILD_INVITE_SPLASH) })
 								}),
 								n
 									? (0, s.jsxs)(E.Button, {
@@ -729,9 +724,7 @@ class eh extends a.PureComponent {
 							}),
 							(0, s.jsx)(E.FormText, {
 								type: E.FormTextTypes.DESCRIPTION,
-								children: es.Z.Messages.GUILD_SETTINGS_BANNER_RECOMMEND.format({
-									articleURL: q.Z.getArticleURL($.BhN.GUILD_BANNER_SPLASH)
-								})
+								children: es.Z.Messages.GUILD_SETTINGS_BANNER_RECOMMEND.format({ articleURL: q.Z.getArticleURL($.BhN.GUILD_BANNER_SPLASH) })
 							}),
 							a ? o : this.uploadBGUpsellButton(this.handleBannerUpsellButton)
 						]
@@ -807,15 +800,7 @@ class eh extends a.PureComponent {
 		return (0, s.jsxs)(E.FormSection, {
 			title: es.Z.Messages.SERVER_OVERVIEW,
 			tag: E.FormTitleTags.H1,
-			children: [
-				this.renderBaseSettings(),
-				this.renderSummariesSection(),
-				this.renderAFKSection(),
-				this.renderJoinNotificationSection(),
-				this.renderActivityFeedSection(),
-				this.renderNotificationSection(),
-				this.renderDisplaySection()
-			]
+			children: [this.renderBaseSettings(), this.renderSummariesSection(), this.renderAFKSection(), this.renderJoinNotificationSection(), this.renderActivityFeedSection(), this.renderNotificationSection(), this.renderDisplaySection()]
 		});
 	}
 	constructor(...e) {
@@ -841,21 +826,14 @@ class eh extends a.PureComponent {
 			}),
 			el(this, 'handleUploadImage', (e) => {
 				var t;
-				e.target === e.currentTarget &&
-					(null === (t = this._imageInputRef.current) || void 0 === t || t.activateUploadDialogue());
+				e.target === e.currentTarget && (null === (t = this._imageInputRef.current) || void 0 === t || t.activateUploadDialogue());
 			}),
-			el(this, 'handleShowJoinsChange', (e) =>
-				this.handleSystemChannelFlagsChange($.xmn.SUPPRESS_JOIN_NOTIFICATIONS, !e)
-			),
-			el(this, 'handleShowSubscriptionsChange', (e) =>
-				this.handleSystemChannelFlagsChange($.xmn.SUPPRESS_PREMIUM_SUBSCRIPTIONS, !e)
-			),
+			el(this, 'handleShowJoinsChange', (e) => this.handleSystemChannelFlagsChange($.xmn.SUPPRESS_JOIN_NOTIFICATIONS, !e)),
+			el(this, 'handleShowSubscriptionsChange', (e) => this.handleSystemChannelFlagsChange($.xmn.SUPPRESS_PREMIUM_SUBSCRIPTIONS, !e)),
 			el(this, 'handleShowGuildRemindersChange', (e) => {
 				this.handleSystemChannelFlagsChange($.xmn.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS, !e);
 			}),
-			el(this, 'handleShowJoinRepliesChange', (e) =>
-				this.handleSystemChannelFlagsChange($.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES, !e)
-			),
+			el(this, 'handleShowJoinRepliesChange', (e) => this.handleSystemChannelFlagsChange($.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES, !e)),
 			el(this, 'handleShowGuildRoleSubscriptionPurchaseMessages', (e) => {
 				this.handleSystemChannelFlagsChange($.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS, !e);
 			}),
@@ -960,16 +938,12 @@ class eh extends a.PureComponent {
 			el(this, 'handleConversationSummariesToggle', (e) => {
 				let { guild: t } = this.props,
 					n = new Set(t.features);
-				e ? n.add($.oNc.SUMMARIES_ENABLED_BY_USER) : n.delete($.oNc.SUMMARIES_ENABLED_BY_USER),
-					X.Z.updateGuild({ features: n });
+				e ? n.add($.oNc.SUMMARIES_ENABLED_BY_USER) : n.delete($.oNc.SUMMARIES_ENABLED_BY_USER), X.Z.updateGuild({ features: n });
 			}),
 			el(this, 'handleShowActivityFeedToggle', (e) => {
 				let { guild: t } = this.props,
 					n = new Set(t.features);
-				e
-					? (n.add($.oNc.ACTIVITY_FEED_ENABLED_BY_USER), n.delete($.oNc.ACTIVITY_FEED_DISABLED_BY_USER))
-					: (n.add($.oNc.ACTIVITY_FEED_DISABLED_BY_USER), n.delete($.oNc.ACTIVITY_FEED_ENABLED_BY_USER)),
-					X.Z.updateGuild({ features: n });
+				e ? (n.add($.oNc.ACTIVITY_FEED_ENABLED_BY_USER), n.delete($.oNc.ACTIVITY_FEED_DISABLED_BY_USER)) : (n.add($.oNc.ACTIVITY_FEED_DISABLED_BY_USER), n.delete($.oNc.ACTIVITY_FEED_ENABLED_BY_USER)), X.Z.updateGuild({ features: n });
 			}),
 			el(this, 'uploadBGUpsellButton', (e) =>
 				(0, s.jsxs)(E.ShinyButton, {

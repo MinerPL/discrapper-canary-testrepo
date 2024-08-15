@@ -13,18 +13,7 @@ var r = t(858987),
 	E = t(191334);
 n.Z = function (e) {
 	let n, t, T;
-	let {
-		subscriptionPlan: d,
-		isGift: N,
-		isEmbeddedIAP: M,
-		renewalInvoice: A,
-		paymentSourceType: L,
-		hide: P,
-		purchaseType: R,
-		productLine: S,
-		basePrice: m,
-		currentSubscription: U
-	} = e;
+	let { subscriptionPlan: d, isGift: N, isEmbeddedIAP: M, renewalInvoice: A, paymentSourceType: L, hide: P, purchaseType: R, productLine: S, basePrice: m, currentSubscription: U } = e;
 	if (P) return null;
 	let p = null == e.planGroup ? [] : e.planGroup;
 	if (null != A) {
@@ -50,12 +39,7 @@ n.Z = function (e) {
 		else
 			switch (n) {
 				case I.rV.MONTH:
-					C =
-						1 === t
-							? _.Z.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_MONTHLY
-							: _.Z.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_MULTI_MONTH.format({
-									intervalCount: t
-								});
+					C = 1 === t ? _.Z.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_MONTHLY : _.Z.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_MULTI_MONTH.format({ intervalCount: t });
 					break;
 				case I.rV.YEAR:
 					C = _.Z.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_YEARLY;
@@ -75,12 +59,7 @@ n.Z = function (e) {
 			primaryText: v,
 			paidURL: u.EYA.PAID_TERMS
 		})),
-			(C =
-				S === u.POd.COLLECTIBLES
-					? N
-						? _.Z.Messages.COLLECTIBLES_PURCHASE_DISCLAIMER_GIFT_PAYMENT
-						: _.Z.Messages.COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT
-					: _.Z.Messages.ONE_TIME_PURCHASE_FINE_PRINT);
+			(C = S === u.POd.COLLECTIBLES ? (N ? _.Z.Messages.COLLECTIBLES_PURCHASE_DISCLAIMER_GIFT_PAYMENT : _.Z.Messages.COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT) : _.Z.Messages.ONE_TIME_PURCHASE_FINE_PRINT);
 	else if (null == d || N)
 		switch (
 			(N &&
@@ -91,14 +70,7 @@ n.Z = function (e) {
 			n)
 		) {
 			case I.rV.MONTH:
-				(C = N
-					? _.Z.Messages.PREMIUM_PAYMENT_GIFT_SUBTEXT_MONTHLY
-					: _.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MONTHLY),
-					(C = N
-						? _.Z.Messages.PREMIUM_PAYMENT_GIFT_SUBTEXT_MONTHLY
-						: 1 === t
-							? _.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MONTHLY
-							: _.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MULTI_MONTH.format({ intervalCount: t }));
+				(C = N ? _.Z.Messages.PREMIUM_PAYMENT_GIFT_SUBTEXT_MONTHLY : _.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MONTHLY), (C = N ? _.Z.Messages.PREMIUM_PAYMENT_GIFT_SUBTEXT_MONTHLY : 1 === t ? _.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MONTHLY : _.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MULTI_MONTH.format({ intervalCount: t }));
 				break;
 			case I.rV.YEAR:
 				C = N ? _.Z.Messages.PREMIUM_PAYMENT_GIFT_SUBTEXT_YEARLY : _.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY;

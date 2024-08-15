@@ -44,16 +44,7 @@ n.default = (e) => {
 		y = (0, i.e7)([j.ZP], () => ((null == H ? void 0 : H.id) != null ? j.ZP.getUsableCustomEmojiById(H.id) : null)),
 		z = (0, i.e7)([N.ZP], () => N.ZP.getChannels(B)[N.sH], [B]),
 		w = (0, i.e7)([L.Z], () => L.Z.get(B)),
-		J =
-			null !==
-				(l =
-					null == w
-						? void 0
-						: null === (n = w.welcome_channels) || void 0 === n
-							? void 0
-							: n.map((e) => e.channel_id)) && void 0 !== l
-				? l
-				: [],
+		J = null !== (l = null == w ? void 0 : null === (n = w.welcome_channels) || void 0 === n ? void 0 : n.map((e) => e.channel_id)) && void 0 !== l ? l : [],
 		[V, Y] = t.useState(!1);
 	t.useEffect(() => {
 		!s.K.get(T.S) && setTimeout(() => Y(!0), 300);

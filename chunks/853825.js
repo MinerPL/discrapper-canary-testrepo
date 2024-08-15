@@ -31,17 +31,7 @@ var s = t(735250),
 	j = t(408277),
 	L = t(455749);
 function R(e) {
-	let {
-			user: n,
-			guildId: t,
-			channelId: R,
-			messageId: b,
-			roleId: C,
-			sessionId: P,
-			transitionState: O,
-			onClose: M,
-			sourceAnalyticsLocations: y = []
-		} = e,
+	let { user: n, guildId: t, channelId: R, messageId: b, roleId: C, sessionId: P, transitionState: O, onClose: M, sourceAnalyticsLocations: y = [] } = e,
 		U = t === A.ME ? void 0 : t,
 		D = (0, I.ZP)(n.id, U),
 		{ analyticsLocations: F } = (0, a.ZP)([...y, r.Z.SIMPLIFIED_PROFILE_MODAL]),

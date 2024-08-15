@@ -51,19 +51,11 @@ t.Z = {
 				a = t.application.id;
 			if (null == a) throw new _.Z({ errorCode: g.lTL.INVALID_COMMAND }, 'No application.');
 			let s = d.Z.getApplicationActivity(a);
-			if (null == s || null == s.secrets || !(0, E.t9)(n, s.party, s.secrets))
-				throw new _.Z(
-					{ errorCode: g.lTL.NO_ELIGIBLE_ACTIVITY },
-					'No eligible activity for application. Ensure an activity includes a party and appropriate secret.'
-				);
+			if (null == s || null == s.secrets || !(0, E.t9)(n, s.party, s.secrets)) throw new _.Z({ errorCode: g.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
 			let { lock: l } = (0, m.s0)(i),
 				o = (0, c.Z)(s, u.Z);
 			return (0, r.h7)(s, o).then(() => {
-				if ((l(), o))
-					throw new _.Z(
-						{ errorCode: g.lTL.NO_ELIGIBLE_ACTIVITY },
-						'No eligible activity for application. Ensure user does have have privacy enabled.'
-					);
+				if ((l(), o)) throw new _.Z({ errorCode: g.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure user does have have privacy enabled.');
 			});
 		}
 	},

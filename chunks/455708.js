@@ -13,8 +13,8 @@ var r = n(735250),
 	f = n(985375),
 	h = n(653235),
 	p = n(215016),
-	I = n(981631),
-	m = n(149203),
+	m = n(981631),
+	I = n(149203),
 	T = n(689938),
 	g = n(114381);
 function S(e, t, n) {
@@ -33,30 +33,25 @@ function S(e, t, n) {
 let A = (e) => e.stopPropagation();
 class N extends i.PureComponent {
 	componentDidMount() {
-		c.gK(),
-			document.addEventListener('keydown', this.backToFrontPage),
-			'' !== this.props.query && this.search(this.props.query, I.wI2.SEARCH);
+		c.gK(), document.addEventListener('keydown', this.backToFrontPage), '' !== this.props.query && this.search(this.props.query, m.wI2.SEARCH);
 	}
 	componentWillUnmount() {
 		u.Z.wait(() => c.v2()), document.removeEventListener('keydown', this.backToFrontPage);
 	}
 	search(e, t, n) {
-		c.yC(e, t, n),
-			'' === e
-				? this.setState({ resultType: null })
-				: this.state.resultType !== I.wI2.SEARCH && this.setState({ resultType: I.wI2.SEARCH });
+		c.yC(e, t, n), '' === e ? this.setState({ resultType: null }) : this.state.resultType !== m.wI2.SEARCH && this.setState({ resultType: m.wI2.SEARCH });
 	}
 	renderHeaderContent() {
 		let { query: e } = this.props,
 			{ resultType: t } = this.state;
 		switch (t) {
-			case I.wI2.FAVORITES:
+			case m.wI2.FAVORITES:
 				return (0, r.jsx)(l.FormTitle, {
 					tag: 'h5',
 					className: g.searchHeader,
 					children: T.Z.Messages.CATEGORY_FAVORITE
 				});
-			case I.wI2.TRENDING_GIFS:
+			case m.wI2.TRENDING_GIFS:
 				return (0, r.jsx)(l.FormTitle, {
 					tag: 'h5',
 					className: g.searchHeader,
@@ -97,17 +92,7 @@ class N extends i.PureComponent {
 		);
 	}
 	renderContent() {
-		let {
-				resultItems: e,
-				resultQuery: t,
-				query: n,
-				favorites: i,
-				searchOffset: a,
-				searchLimit: s,
-				searchTotalResults: o,
-				suggestions: l,
-				hideFavorites: u
-			} = this.props,
+		let { resultItems: e, resultQuery: t, query: n, favorites: i, searchOffset: a, searchLimit: s, searchTotalResults: o, suggestions: l, hideFavorites: u } = this.props,
 			{ resultType: c } = this.state;
 		return null == c
 			? (0, r.jsx)(h.Z, {
@@ -115,7 +100,7 @@ class N extends i.PureComponent {
 					onSelectItem: this.handleSelectItem
 				})
 			: (0, r.jsx)(p.ZP, {
-					data: c === I.wI2.FAVORITES ? i : e,
+					data: c === m.wI2.FAVORITES ? i : e,
 					onSelectGIF: this.handleSelectGIF,
 					resultType: c,
 					resultQuery: t,
@@ -130,9 +115,9 @@ class N extends i.PureComponent {
 	render() {
 		let { className: e, forwardedRef: t } = this.props;
 		return (0, r.jsxs)('div', {
-			id: m.vO,
+			id: I.vO,
 			role: 'tabpanel',
-			'aria-labelledby': m._3,
+			'aria-labelledby': I._3,
 			className: s()(g.container, e),
 			onClick: A,
 			ref: t,
@@ -154,13 +139,13 @@ class N extends i.PureComponent {
 			S(this, 'searchBarRef', i.createRef()),
 			S(this, 'backToFrontPage', (e) => {
 				let { resultType: t } = this.state;
-				e.keyCode === I.yXg.ESCAPE && null != t && (e.stopPropagation(), e.preventDefault(), this.handleClearQuery());
+				e.keyCode === m.yXg.ESCAPE && null != t && (e.stopPropagation(), e.preventDefault(), this.handleClearQuery());
 			}),
 			S(this, 'handleChangeQuery', (e) => {
-				(0, _.ql)(e), this.search(e, I.wI2.SEARCH);
+				(0, _.ql)(e), this.search(e, m.wI2.SEARCH);
 			}),
 			S(this, 'handleSelectSuggestion', (e) => {
-				(0, _.ql)(''), c.v2(), this.search(e, I.wI2.SEARCH_SUGGESTION, !0);
+				(0, _.ql)(''), c.v2(), this.search(e, m.wI2.SEARCH_SUGGESTION, !0);
 			}),
 			S(this, 'handleClearQuery', () => {
 				let { current: e } = this.searchBarRef;
@@ -173,10 +158,10 @@ class N extends i.PureComponent {
 			S(this, 'handleSelectItem', (e, t) => {
 				let { current: n } = this.searchBarRef;
 				switch (e) {
-					case I.wI2.TRENDING_CATEGORY:
-						c.yC(t, I.wI2.TRENDING_CATEGORY, !0), null != n && n.focus();
+					case m.wI2.TRENDING_CATEGORY:
+						c.yC(t, m.wI2.TRENDING_CATEGORY, !0), null != n && n.focus();
 						break;
-					case I.wI2.TRENDING_GIFS:
+					case m.wI2.TRENDING_GIFS:
 						c.UU();
 				}
 				this.setState({ resultType: e });

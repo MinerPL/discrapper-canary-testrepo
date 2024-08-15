@@ -29,8 +29,7 @@ s.Z = function (e) {
 				})
 			}),
 			(0, n.jsx)(r.Z, {
-				filename:
-					null !== (t = null !== (s = null == u ? void 0 : u.name) && void 0 !== s ? s : d) && void 0 !== t ? t : '',
+				filename: null !== (t = null !== (s = null == u ? void 0 : u.name) && void 0 !== s ? s : d) && void 0 !== t ? t : '',
 				filters: [
 					{
 						name: E,

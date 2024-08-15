@@ -163,13 +163,7 @@ function h(e) {
 	let r = (0, a._j)('resource', ({ entries: n }) => {
 		n.forEach((n) => {
 			var a;
-			if (
-				'resource' === (a = n).entryType &&
-				'initiatorType' in a &&
-				'string' == typeof a.nextHopProtocol &&
-				('fetch' === a.initiatorType || 'xmlhttprequest' === a.initiatorType) &&
-				n.name.endsWith(t)
-			)
+			if ('resource' === (a = n).entryType && 'initiatorType' in a && 'string' == typeof a.nextHopProtocol && ('fetch' === a.initiatorType || 'xmlhttprequest' === a.initiatorType) && n.name.endsWith(t))
 				(function (e) {
 					let { name: t, version: r } = (function (e) {
 							let t = 'unknown',
@@ -195,21 +189,7 @@ function h(e) {
 							);
 						})(e.nextHopProtocol),
 						n = [];
-					return (n.push(['network.protocol.version', r], ['network.protocol.name', t]), T.Z1)
-						? [
-								...n,
-								['http.request.redirect_start', C(e.redirectStart)],
-								['http.request.fetch_start', C(e.fetchStart)],
-								['http.request.domain_lookup_start', C(e.domainLookupStart)],
-								['http.request.domain_lookup_end', C(e.domainLookupEnd)],
-								['http.request.connect_start', C(e.connectStart)],
-								['http.request.secure_connection_start', C(e.secureConnectionStart)],
-								['http.request.connection_end', C(e.connectEnd)],
-								['http.request.request_start', C(e.requestStart)],
-								['http.request.response_start', C(e.responseStart)],
-								['http.request.response_end', C(e.responseEnd)]
-							]
-						: n;
+					return (n.push(['network.protocol.version', r], ['network.protocol.name', t]), T.Z1) ? [...n, ['http.request.redirect_start', C(e.redirectStart)], ['http.request.fetch_start', C(e.fetchStart)], ['http.request.domain_lookup_start', C(e.domainLookupStart)], ['http.request.domain_lookup_end', C(e.domainLookupEnd)], ['http.request.connect_start', C(e.connectStart)], ['http.request.secure_connection_start', C(e.secureConnectionStart)], ['http.request.connection_end', C(e.connectEnd)], ['http.request.request_start', C(e.requestStart)], ['http.request.response_start', C(e.responseStart)], ['http.request.response_end', C(e.responseEnd)]] : n;
 				})(n).forEach((t) => e.setAttribute(...t)),
 					setTimeout(r);
 		});

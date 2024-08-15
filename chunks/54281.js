@@ -16,9 +16,7 @@ let a = i.forwardRef(function (e, t) {
 				focus: () => {
 					var e;
 					let t = s.current;
-					null != t &&
-						(null == o.current && (o.current = t.querySelector('[tabindex="0"]')),
-						null === (e = o.current) || void 0 === e || e.focus());
+					null != t && (null == o.current && (o.current = t.querySelector('[tabindex="0"]')), null === (e = o.current) || void 0 === e || e.focus());
 				},
 				blur: () => {
 					var e;

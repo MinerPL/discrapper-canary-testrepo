@@ -32,11 +32,7 @@ n.default = (e) => {
 		H = (0, l.ZP)(),
 		[W, D] = r.useState(!1),
 		{ analyticsLocations: Y } = (0, u.ZP)(c.Z.PREMIUM_UNCANCEL_MODAL),
-		y = (0, o.e7)(
-			[N.Z],
-			() => ((null == G ? void 0 : G.paymentSourceId) != null ? N.Z.getPaymentSource(G.paymentSourceId) : null),
-			[G]
-		),
+		y = (0, o.e7)([N.Z], () => ((null == G ? void 0 : G.paymentSourceId) != null ? N.Z.getPaymentSource(G.paymentSourceId) : null), [G]),
 		v = G.items[0].planId,
 		k = (0, E.Wz)(A.GP[v].skuId),
 		{ priceOptions: j } = (0, d.Z)({
@@ -61,18 +57,7 @@ n.default = (e) => {
 		}),
 		K = (0, o.e7)([T.Z], () => (0, O.oE)(v), [v]),
 		X = (0, o.e7)([T.Z], () => T.Z.isFetchingForSKU(k)),
-		z =
-			null == w
-				? void 0
-				: null === (U = w.invoiceItems) || void 0 === U
-					? void 0
-					: null === (h = U.find((e) => e.subscriptionPlanId === v)) || void 0 === h
-						? void 0
-						: null === (a = h.discounts) || void 0 === a
-							? void 0
-							: null === (n = a.find((e) => e.type === I.eW.SUBSCRIPTION_PLAN)) || void 0 === n
-								? void 0
-								: n.amount,
+		z = null == w ? void 0 : null === (U = w.invoiceItems) || void 0 === U ? void 0 : null === (h = U.find((e) => e.subscriptionPlanId === v)) || void 0 === h ? void 0 : null === (a = h.discounts) || void 0 === a ? void 0 : null === (n = a.find((e) => e.type === I.eW.SUBSCRIPTION_PLAN)) || void 0 === n ? void 0 : n.amount,
 		Q = null != K ? (0, E.aS)(K.id, !1, !1, j) : null,
 		V = null != Q && null != z ? (0, R.T4)(Q.amount - (null != z ? z : 0), Q.currency) : null,
 		{ intervalType: q, intervalCount: J } = E.ZP.getInterval(v),
@@ -104,12 +89,8 @@ n.default = (e) => {
 					})
 				: (0, t.jsx)(m.Z, {
 						premiumType: Z,
-						titleText: $
-							? P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_TITLE_TIER_1.format({ daysLeft: B })
-							: P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_TITLE.format({ daysLeft: B }),
-						subtitleText: $
-							? P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_SUBTITLE_TIER_1.format()
-							: P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_SUBTITLE.format(),
+						titleText: $ ? P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_TITLE_TIER_1.format({ daysLeft: B }) : P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_TITLE.format({ daysLeft: B }),
+						subtitleText: $ ? P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_SUBTITLE_TIER_1.format() : P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_SUBTITLE.format(),
 						footer: (0, t.jsxs)('div', {
 							children: [
 								null !== ee
@@ -118,29 +99,15 @@ n.default = (e) => {
 											children: (function (e) {
 												switch (q) {
 													case A.rV.YEAR:
-														return $
-															? P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1.format({
-																	price: e
-																})
-															: P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY.format({
-																	price: e
-																});
+														return $ ? P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1.format({ price: e }) : P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY.format({ price: e });
 													case A.rV.MONTH:
 														if (null != V)
-															return P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER.format(
-																{
-																	discountPrice: V,
-																	defaultPrice: e
-																}
-															);
-														if ($)
-															return P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_MONTHLY_TIER_1.format(
-																{ price: e }
-															);
-														if (1 === J)
-															return P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_MONTHLY.format({
-																price: e
+															return P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER.format({
+																discountPrice: V,
+																defaultPrice: e
 															});
+														if ($) return P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_MONTHLY_TIER_1.format({ price: e });
+														if (1 === J) return P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_MONTHLY.format({ price: e });
 														else
 															return P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_MULTI_MONTH.format({
 																price: e,

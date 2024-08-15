@@ -13,8 +13,8 @@ var r,
 	f = n(163268),
 	h = n(723352),
 	p = n(160404),
-	I = n(786761),
-	m = n(418476),
+	m = n(786761),
+	I = n(418476),
 	T = n(739566),
 	g = n(995774),
 	S = n(706454),
@@ -62,10 +62,7 @@ function H(e) {
 		o = d.Z.get(n);
 	if (null == o || !(0, g.sm)(e)) return !1;
 	let l = v.default.getId() === i;
-	(o = o.update(r, (n) =>
-		'MESSAGE_REACTION_ADD' === t ? n.addReaction(a, l, e.colors, s) : n.removeReaction(a, l, s)
-	)),
-		d.Z.commit(o);
+	(o = o.update(r, (n) => ('MESSAGE_REACTION_ADD' === t ? n.addReaction(a, l, e.colors, s) : n.removeReaction(a, l, s)))), d.Z.commit(o);
 }
 function Z(e) {
 	let { type: t, messageData: n } = e,
@@ -76,11 +73,7 @@ function Z(e) {
 	if (!s.has(i)) return !1;
 	(s = s.update(i, (e) => {
 		var n;
-		return (
-			(null === (n = e.embeds) || void 0 === n ? void 0 : n.filter(h.K).length) > 0 && (e = e.set('embeds', [])),
-			'MESSAGE_SEND_FAILED_AUTOMOD' === t && (e = e.set('flags', (0, A.pj)(e.flags, w.iLy.EPHEMERAL))),
-			e
-		);
+		return (null === (n = e.embeds) || void 0 === n ? void 0 : n.filter(h.K).length) > 0 && (e = e.set('embeds', [])), 'MESSAGE_SEND_FAILED_AUTOMOD' === t && (e = e.set('flags', (0, A.pj)(e.flags, w.iLy.EPHEMERAL))), e;
 	})),
 		d.Z.commit(s);
 }
@@ -103,7 +96,7 @@ class Y extends (r = u.ZP.Store) {
 		let t = U.default.getCurrentUser();
 		return l()(this.getMessages(e).toArray())
 			.reverse()
-			.find((e) => (0, m.Z)(e, null == t ? void 0 : t.id));
+			.find((e) => (0, I.Z)(e, null == t ? void 0 : t.id));
 	}
 	getLastCommandMessage(e) {
 		let t = U.default.getCurrentUser();
@@ -184,17 +177,7 @@ class Y extends (r = u.ZP.Store) {
 			return !0;
 		},
 		LOAD_MESSAGES_SUCCESS: function (e) {
-			let {
-					channelId: t,
-					isBefore: n,
-					isAfter: r,
-					jump: i,
-					hasMoreBefore: a,
-					hasMoreAfter: s,
-					messages: o,
-					isStale: l,
-					truncate: u
-				} = e,
+			let { channelId: t, isBefore: n, isAfter: r, jump: i, hasMoreBefore: a, hasMoreAfter: s, messages: o, isStale: l, truncate: u } = e,
 				c = d.Z.getOrCreate(t);
 			(c = c.loadComplete({
 				newMessages: o,
@@ -222,15 +205,7 @@ class Y extends (r = u.ZP.Store) {
 		LOAD_MESSAGES_SUCCESS_CACHED: function (e) {
 			let { channelId: t, jump: n, focus: r, before: i, after: a, limit: s, truncate: o } = e,
 				l = d.Z.getOrCreate(t);
-			(null == n ? void 0 : n.present)
-				? (l = l.jumpToPresent(s))
-				: (null == r ? void 0 : r.messageId) != null
-					? (l = l.focusOnMessage(r.messageId))
-					: (null == n ? void 0 : n.messageId) != null
-						? (l = l.jumpToMessage(n.messageId, n.flash, n.offset, n.returnMessageId, n.jumpType))
-						: (null != i || null != a) && (l = l.loadFromCache(null != i, s)),
-				null != o && (null != i || null != a) && (null == i || null == a) && (l = l.truncate(null != i, null != a)),
-				d.Z.commit(l);
+			(null == n ? void 0 : n.present) ? (l = l.jumpToPresent(s)) : (null == r ? void 0 : r.messageId) != null ? (l = l.focusOnMessage(r.messageId)) : (null == n ? void 0 : n.messageId) != null ? (l = l.jumpToMessage(n.messageId, n.flash, n.offset, n.returnMessageId, n.jumpType)) : (null != i || null != a) && (l = l.loadFromCache(null != i, s)), null != o && (null != i || null != a) && (null == i || null == a) && (l = l.truncate(null != i, null != a)), d.Z.commit(l);
 		},
 		LOCAL_MESSAGES_LOADED: function (e) {
 			let t = d.Z.getOrCreate(e.channelId);
@@ -257,36 +232,18 @@ class Y extends (r = u.ZP.Store) {
 			let { channelId: t, message: n, isPushNotification: r } = e,
 				i = d.Z.getOrCreate(t);
 			if (r) {
-				G.log('Inserting message tapped on from a push notification', n.id, n.channel_id),
-					d.Z.commit(i.receivePushNotification(n));
+				G.log('Inserting message tapped on from a push notification', n.id, n.channel_id), d.Z.commit(i.receivePushNotification(n));
 				return;
 			}
 			if (!i.ready) return !1;
-			null != n.nonce && n.state !== w.yb.SENDING && x.has(n.nonce) && ((i = i.remove(n.nonce)), x.delete(n.nonce)),
-				(i = i.receiveMessage(n, R.Z.isAtBottom(t))),
-				d.Z.commit(i);
+			null != n.nonce && n.state !== w.yb.SENDING && x.has(n.nonce) && ((i = i.remove(n.nonce)), x.delete(n.nonce)), (i = i.receiveMessage(n, R.Z.isAtBottom(t))), d.Z.commit(i);
 		},
 		MESSAGE_SEND_FAILED: function (e) {
 			let { channelId: t, messageId: n, reason: r } = e,
 				i = d.Z.getOrCreate(t);
 			if (null == i || !i.has(n)) return !1;
 			let a = i.get(n, !0);
-			(i =
-				(null == a ? void 0 : a.isPoll()) === !0
-					? i.remove(n)
-					: i.update(
-							n,
-							(e) => (
-								(e = e.set('state', w.yb.SEND_FAILED)).isCommandType()
-									? (e = (e = e.set('interactionError', null != r ? r : '')).set(
-											'flags',
-											(0, A.pj)(e.flags, w.iLy.EPHEMERAL)
-										))
-									: null != r && (e = e.set('interactionError', null != r ? r : '')),
-								e
-							)
-						)),
-				d.Z.commit(i);
+			(i = (null == a ? void 0 : a.isPoll()) === !0 ? i.remove(n) : i.update(n, (e) => ((e = e.set('state', w.yb.SEND_FAILED)).isCommandType() ? (e = (e = e.set('interactionError', null != r ? r : '')).set('flags', (0, A.pj)(e.flags, w.iLy.EPHEMERAL))) : null != r && (e = e.set('interactionError', null != r ? r : '')), e))), d.Z.commit(i);
 		},
 		MESSAGE_SEND_FAILED_AUTOMOD: Z,
 		MESSAGE_EDIT_FAILED_AUTOMOD: Z,
@@ -295,7 +252,7 @@ class Y extends (r = u.ZP.Store) {
 				n = e.message.channel_id,
 				r = d.Z.getOrCreate(n);
 			if (null == r || !r.has(t)) return !1;
-			(r = r.update(t, (t) => (0, I.wi)(t, e.message))), d.Z.commit(r);
+			(r = r.update(t, (t) => (0, m.wi)(t, e.message))), d.Z.commit(r);
 		},
 		MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function (e) {
 			let { messageId: t, channelId: n } = e,

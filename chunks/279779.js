@@ -13,8 +13,8 @@ var r,
 	f = n(823379),
 	h = n(960048),
 	p = n(709054),
-	I = n(51144);
-function m(e, t, n) {
+	m = n(51144);
+function I(e, t, n) {
 	return (
 		t in e
 			? Object.defineProperty(e, t, {
@@ -33,12 +33,7 @@ function T(e) {
 		id: e.id,
 		username: '0' !== e.discriminator ? ''.concat(e.username, '#').concat(e.discriminator) : e.username
 	};
-	return (
-		null != I.ZP.getGlobalName(e) && (t.globalName = e.globalName),
-		e.bot && (t.isBot = !0),
-		_.Z.isFriend(e.id) && ((t.isFriend = !0), (t.friendNickname = _.Z.getNickname(e.id))),
-		t
-	);
+	return null != m.ZP.getGlobalName(e) && (t.globalName = e.globalName), e.bot && (t.isBot = !0), _.Z.isFriend(e.id) && ((t.isFriend = !0), (t.friendNickname = _.Z.getNickname(e.id))), t;
 }
 function g(e, t, n) {
 	null != e && (e[t] = null != n && '' !== n ? n : null);
@@ -65,25 +60,16 @@ function A(e, t) {
 		n
 	);
 }
-((i = r || (r = {})).UPDATE_USERS = 'UPDATE_USERS'),
-	(i.USER_RESULTS = 'USER_RESULTS'),
-	(i.QUERY_SET = 'QUERY_SET'),
-	(i.QUERY_CLEAR = 'QUERY_CLEAR');
+((i = r || (r = {})).UPDATE_USERS = 'UPDATE_USERS'), (i.USER_RESULTS = 'USER_RESULTS'), (i.QUERY_SET = 'QUERY_SET'), (i.QUERY_CLEAR = 'QUERY_CLEAR');
 class N {
 	setLimit(e) {
 		(this._limit = e), null != this._nextQuery && (this._nextQuery.limit = e);
 	}
 	subscribe() {
-		null != this._worker &&
-			!this._subscribed &&
-			(this._worker.addEventListener('message', this.handleMessages, !1),
-			(this._subscribed = !0),
-			this._setNextQuery());
+		null != this._worker && !this._subscribed && (this._worker.addEventListener('message', this.handleMessages, !1), (this._subscribed = !0), this._setNextQuery());
 	}
 	unsubscribe() {
-		null != this._worker &&
-			this._subscribed &&
-			(this._worker.removeEventListener('message', this.handleMessages, !1), (this._subscribed = !1));
+		null != this._worker && this._subscribed && (this._worker.removeEventListener('message', this.handleMessages, !1), (this._subscribed = !1));
 	}
 	destroy() {
 		this.clearQuery(), this.unsubscribe();
@@ -122,19 +108,16 @@ class N {
 				: !this._subscribed && this.subscribe();
 	}
 	constructor(e, t, n = 10) {
-		m(this, '_worker', void 0),
-			m(this, '_uuid', void 0),
-			m(this, '_callback', void 0),
-			m(this, '_limit', void 0),
-			m(this, '_currentQuery', void 0),
-			m(this, '_nextQuery', void 0),
-			m(this, '_subscribed', void 0),
-			m(this, 'handleMessages', (e) => {
+		I(this, '_worker', void 0),
+			I(this, '_uuid', void 0),
+			I(this, '_callback', void 0),
+			I(this, '_limit', void 0),
+			I(this, '_currentQuery', void 0),
+			I(this, '_nextQuery', void 0),
+			I(this, '_subscribed', void 0),
+			I(this, 'handleMessages', (e) => {
 				let t = e.data;
-				if (null != t && 'USER_RESULTS' === t.type && t.uuid === this._uuid)
-					!1 !== this._currentQuery && this._callback(t.payload),
-						null != this._currentQuery && (this._currentQuery = null),
-						this._setNextQuery();
+				if (null != t && 'USER_RESULTS' === t.type && t.uuid === this._uuid) !1 !== this._currentQuery && this._callback(t.payload), null != this._currentQuery && (this._currentQuery = null), this._setNextQuery();
 			}),
 			(this._worker = e),
 			(this._uuid = (0, o.Z)()),
@@ -193,8 +176,8 @@ class v extends l.Z {
 	}
 	constructor(...e) {
 		super(...e),
-			m(this, '_worker', void 0),
-			m(this, 'actions', {
+			I(this, '_worker', void 0),
+			I(this, 'actions', {
 				LOGOUT: () => this._handleLogout(),
 				POST_CONNECTION_OPEN: () => this._handleConnectionOpen(),
 				CONNECTION_OPEN_SUPPLEMENTAL: (e) => this._handleConnectionOpenSupplemental(e),
@@ -212,10 +195,10 @@ class v extends l.Z {
 				CHANNEL_RECIPIENT_ADD: (e) => this._handleRecipientChanges(e),
 				PASSIVE_UPDATE_V2: (e) => this._handlePassiveUpdateV2(e)
 			}),
-			m(this, '_handleLogout', () => {
+			I(this, '_handleLogout', () => {
 				this.rebootWebworker();
 			}),
-			m(this, '_handleConnectionOpen', () => {
+			I(this, '_handleConnectionOpen', () => {
 				setTimeout(() => {
 					let e = E.default.getCurrentUser();
 					if (null == e) return;
@@ -229,16 +212,13 @@ class v extends l.Z {
 						for (let t in r[e]) {
 							var i, a;
 							let s = n[t],
-								o =
-									null !== (a = null === (i = r[e][t]) || void 0 === i ? void 0 : i.nick) && void 0 !== a
-										? a
-										: I.ZP.getGlobalName(s);
+								o = null !== (a = null === (i = r[e][t]) || void 0 === i ? void 0 : i.nick) && void 0 !== a ? a : m.ZP.getGlobalName(s);
 							null != s && (s[e] = null != o && '' !== o ? o : null);
 						}
 					this.updateUsers(Object.values(n), 'connection_open');
 				}, 3000);
 			}),
-			m(this, '_handleConnectionOpenSupplemental', (e) => {
+			I(this, '_handleConnectionOpenSupplemental', (e) => {
 				let { guilds: t } = e;
 				setTimeout(() => {
 					let e = s().flatMap(t, (e) => A(e.members, e.id)),
@@ -263,7 +243,7 @@ class v extends l.Z {
 					this.updateUsers([...e, ...n], 'connection_open_supplemental');
 				}, 3000);
 			}),
-			m(this, '_handleOverlayInitialize', (e) => {
+			I(this, '_handleOverlayInitialize', (e) => {
 				let { users: t, guildMembers: n } = e,
 					r = new Map();
 				for (let e of t) r.set(e.id, T(e));
@@ -278,43 +258,43 @@ class v extends l.Z {
 				}
 				this.updateUsers(Array.from(r.values()), 'overlay_initialize'), r.clear();
 			}),
-			m(this, '_handleCurrentUserUpdate', (e) => {
+			I(this, '_handleCurrentUserUpdate', (e) => {
 				let { user: t } = e,
 					n = T(t);
 				null != n && this.updateUsers([n], 'current_user_update');
 			}),
-			m(this, '_handleGuildCreate', (e) => {
+			I(this, '_handleGuildCreate', (e) => {
 				let { guild: t } = e,
 					{ members: n } = t;
 				this.updateUsers(A(n, t.id), 'guild_create');
 			}),
-			m(this, '_handleGuildMembersChunkBatch', (e) => {
+			I(this, '_handleGuildMembersChunkBatch', (e) => {
 				let { chunks: t } = e,
 					n = [];
 				for (let e of t) n.push(...A(e.members, e.guildId));
 				this.updateUsers(n, 'guild_members_chunk_batch');
 			}),
-			m(this, '_handleGuildMemberUpdate', (e) => {
+			I(this, '_handleGuildMemberUpdate', (e) => {
 				let { guildId: t, user: n, nick: r } = e,
 					i = T(n);
 				null != i && (g(i, t, r), this.updateUsers([i], 'guild_member_update'));
 			}),
-			m(this, '_handlePassiveUpdateV2', (e) => {
+			I(this, '_handlePassiveUpdateV2', (e) => {
 				this.updateUsers(A(e.members, e.guildId), 'passive_update_v2');
 			}),
-			m(this, '_handleRelationshipAdd', (e) => {
+			I(this, '_handleRelationshipAdd', (e) => {
 				let t = T(e.relationship.user);
 				this.updateUsers([t], 'relationship_add');
 			}),
-			m(this, '_handleRelationshipUpdate', (e) => {
+			I(this, '_handleRelationshipUpdate', (e) => {
 				let t = T(E.default.getUser(e.relationship.id));
 				this.updateUsers([t], 'relationship_update');
 			}),
-			m(this, '_handleRelationshipRemove', (e) => {
+			I(this, '_handleRelationshipRemove', (e) => {
 				let t = T(E.default.getUser(e.relationship.id));
 				this.updateUsers([t], 'relationship_remove');
 			}),
-			m(this, '_handleDMCreate', (e) => {
+			I(this, '_handleDMCreate', (e) => {
 				let {
 						channel: { id: t }
 					} = e,
@@ -323,7 +303,7 @@ class v extends l.Z {
 				let r = T(E.default.getCurrentUser());
 				g(r, t), n.push(r), this.updateUsers(n, 'dm_create');
 			}),
-			m(this, '_handleDMUpdates', (e) => {
+			I(this, '_handleDMUpdates', (e) => {
 				let { channels: t } = e;
 				for (let e of t) {
 					let t = S(c.Z.getChannel(e.id));
@@ -332,7 +312,7 @@ class v extends l.Z {
 					g(n, e.id), t.push(n), this.updateUsers(t, 'dm_updates');
 				}
 			}),
-			m(this, '_handleRecipientChanges', (e) => {
+			I(this, '_handleRecipientChanges', (e) => {
 				let { channelId: t, user: n, isMember: r } = e;
 				if (!r) return;
 				let i = T(n);

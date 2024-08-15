@@ -1,6 +1,6 @@
 n.d(t, {
 	C4: function () {
-		return g;
+		return C;
 	}
 }),
 	n(653041),
@@ -81,9 +81,7 @@ let _ = (e, t) => ({
 		if ((0, d.Jd)(e)) {
 			let t = (0, d.yA)(e);
 			if (null != t) {
-				let e = p.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK.format({
-					hours: Math.round(t / c.Z.Seconds.HOUR)
-				});
+				let e = p.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK.format({ hours: Math.round(t / c.Z.Seconds.HOUR) });
 				return [
 					{
 						iconPath: m.eF,
@@ -181,7 +179,7 @@ let _ = (e, t) => ({
 			maxWidth: m.kC
 		});
 	},
-	g = async (e) => {
+	C = async (e) => {
 		let { applicationImageSrc: t, entry: n, avatarSrcs: i, description: a, timestamp: s, colors: l, channelId: c } = e,
 			u = n.extra.activity_name,
 			d = _(i, t);

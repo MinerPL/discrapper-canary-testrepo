@@ -44,20 +44,7 @@ var t = n(475637),
 			defaultMatchWidth: 'wide',
 			parsePatterns: {
 				narrow: [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i],
-				any: [
-					/^jan/i,
-					/^feb/i,
-					/^m(r|a)/i,
-					/^apr/i,
-					/^mei/i,
-					/^jun/i,
-					/^jul/i,
-					/^aug/i,
-					/^sep/i,
-					/^okt/i,
-					/^nov/i,
-					/^dec/i
-				]
+				any: [/^jan/i, /^feb/i, /^m(r|a)/i, /^apr/i, /^mei/i, /^jun/i, /^jul/i, /^aug/i, /^sep/i, /^okt/i, /^nov/i, /^dec/i]
 			},
 			defaultParseWidth: 'any'
 		}),

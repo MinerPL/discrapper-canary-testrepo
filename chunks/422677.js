@@ -34,11 +34,7 @@ function g(a) {
 	}, []);
 	let P = (a) => {
 			var n;
-			(0, m.Z)(
-				null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : '',
-				null == a ? void 0 : a.getAvatarURL(void 0, 80),
-				{ dispatchWait: !0 }
-			);
+			(0, m.Z)(null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : '', null == a ? void 0 : a.getAvatarURL(void 0, 80), { dispatchWait: !0 });
 		},
 		w = (a, n) => {
 			E.has(a.key) && P(n);
@@ -48,11 +44,7 @@ function g(a) {
 				let { application: n, location: e } = a;
 				if (null == e) return !1;
 				let { host: i, path: o } = t.parse(e, !0);
-				return (
-					(!!A.Z.isDiscordHostname(i) || window.location.host === i) &&
-					o === h.Z5c.OAUTH2_AUTHORIZED &&
-					(null != n && g(), !0)
-				);
+				return (!!A.Z.isDiscordHostname(i) || window.location.host === i) && o === h.Z5c.OAUTH2_AUTHORIZED && (null != n && g(), !0);
 			},
 			[g]
 		);
@@ -81,9 +73,7 @@ function g(a) {
 								(0, i.jsx)(s.Text, {
 									variant: 'text-md/medium',
 									className: I.modalHeader,
-									children: x.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_MORE_APPS_INFO_LINKED.format({
-										helpCenterLink: _.Z.getArticleURL(h.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
-									})
+									children: x.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_MORE_APPS_INFO_LINKED.format({ helpCenterLink: _.Z.getArticleURL(h.BhN.PRIVATE_CHANNEL_INTEGRATIONS) })
 								})
 							]
 						}),
@@ -165,9 +155,7 @@ function g(a) {
 																analyticsLocation: { section: h.jXE.ADD_PRIVATE_CHANNEL_INTEGRATION_MODAL }
 															});
 														},
-														'aria-label': x.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADD_MODAL_ROW_INFO.format({
-															appName: a.name
-														}),
+														'aria-label': x.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADD_MODAL_ROW_INFO.format({ appName: a.name }),
 														children: t
 													},
 													a.id

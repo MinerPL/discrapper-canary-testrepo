@@ -14,12 +14,7 @@ var s,
 	m = t(689938),
 	_ = t(647140),
 	p = t(787223);
-((l = s || (s = {})).CardNumber = 'cardNumber'),
-	(l.CardExpiry = 'cardExpiry'),
-	(l.CardCvc = 'cardCvc'),
-	((r = n || (n = {})).Change = 'change'),
-	(r.Focus = 'focus'),
-	(r.Blur = 'blur');
+((l = s || (s = {})).CardNumber = 'cardNumber'), (l.CardExpiry = 'cardExpiry'), (l.CardCvc = 'cardCvc'), ((r = n || (n = {})).Change = 'change'), (r.Focus = 'focus'), (r.Blur = 'blur');
 a.Z = function (e) {
 	let a = i.useRef(null),
 		{ stripeType: t, flipped: s, updateCompleted: n, onFocus: l, onBlur: r } = e,
@@ -71,13 +66,7 @@ a.Z = function (e) {
 						let e = b.getElement(c.CardNumberElement);
 						if (null == e) return;
 						e.on('change', (e) => {
-							u !== e.brand && h(e.brand),
-								e.empty && S
-									? R(m.Z.Messages.CREDIT_CARD_ERROR_REQUIRED)
-									: null != e.error
-										? R(m.Z.Messages.CREDIT_CARD_ERROR_NUMBER)
-										: R(null),
-								y(e);
+							u !== e.brand && h(e.brand), e.empty && S ? R(m.Z.Messages.CREDIT_CARD_ERROR_REQUIRED) : null != e.error ? R(m.Z.Messages.CREDIT_CARD_ERROR_NUMBER) : R(null), y(e);
 						}),
 							e.on('focus', L),
 							e.on('blur', v);

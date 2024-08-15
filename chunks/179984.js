@@ -83,16 +83,7 @@ let D = () => {
 		});
 	},
 	G = (e) => {
-		let {
-			label: t,
-			column1: n,
-			column2: a,
-			withBottomBorder: r = !0,
-			withTopBorderRadius: l = !1,
-			withBottomBorderRadius: o = !1,
-			buttonsRow: c = !1,
-			shortRow: d = !1
-		} = e;
+		let { label: t, column1: n, column2: a, withBottomBorder: r = !0, withTopBorderRadius: l = !1, withBottomBorderRadius: o = !1, buttonsRow: c = !1, shortRow: d = !1 } = e;
 		return (0, s.jsxs)('tr', {
 			className: i()(O.row, {
 				[O.wideRow]: c,
@@ -125,14 +116,7 @@ let D = () => {
 t.Z = (e) => {
 	var t;
 	let n,
-		{
-			className: r,
-			hideCTAs: P = !1,
-			headingOverride: v,
-			hidePill: L = !1,
-			selectedPlanColumnClassName: Z,
-			selectedPlanTier: y = x.p9.TIER_2
-		} = e,
+		{ className: r, hideCTAs: P = !1, headingOverride: v, hidePill: L = !1, selectedPlanColumnClassName: Z, selectedPlanTier: y = x.p9.TIER_2 } = e,
 		{ analyticsLocations: k } = (0, E.ZP)(u.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
 		H = (0, l.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
 		w = (0, T.V)(),
@@ -239,21 +223,9 @@ t.Z = (e) => {
 			? null
 			: null != Q || null != q
 				? (0, s.jsx)(f.Cy, {
-						text:
-							null != Q
-								? b.Z.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT
-								: b.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
+						text: null != Q ? b.Z.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : b.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
 						className: O.freeTrialPillWithSparkles,
-						colorOptions:
-							Q === x.Si.TIER_0
-								? W
-									? f.VE.PREMIUM_TIER_0_GRADIENT_FILL
-									: f.VE.PREMIUM_TIER_0_WHITE_FILL
-								: W
-									? Y
-										? f.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
-										: f.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
-									: f.VE.PREMIUM_TIER_2_WHITE_FILL
+						colorOptions: Q === x.Si.TIER_0 ? (W ? f.VE.PREMIUM_TIER_0_GRADIENT_FILL : f.VE.PREMIUM_TIER_0_WHITE_FILL) : W ? (Y ? f.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : f.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL) : f.VE.PREMIUM_TIER_2_WHITE_FILL
 					})
 				: ea
 					? (0, s.jsx)(D, {})

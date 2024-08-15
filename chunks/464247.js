@@ -12,8 +12,7 @@ function p(t, e, r, o, a) {
 	return i.push(t, u, 'insert-characters', a);
 }
 t.exports = function (t, e) {
-	void 0 !== t._pendingStateFromBeforeInput &&
-		(t.update(t._pendingStateFromBeforeInput), (t._pendingStateFromBeforeInput = void 0));
+	void 0 !== t._pendingStateFromBeforeInput && (t.update(t._pendingStateFromBeforeInput), (t._pendingStateFromBeforeInput = void 0));
 	var r,
 		n = t._latestEditorState,
 		o = e.data;
@@ -46,13 +45,7 @@ t.exports = function (t, e) {
 						s = r.get('start'),
 						c = r.get('end'),
 						l = r.get('decoratorKey');
-					return (
-						e.get('decoratorKey') !== l ||
-						e.get('leaves').size !== r.get('leaves').size ||
-						i !== s ||
-						u !== c ||
-						(null != l && c - s != a - n)
-					);
+					return e.get('decoratorKey') !== l || e.get('leaves').size !== r.get('leaves').size || i !== s || u !== c || (null != l && c - s != a - n);
 				});
 		}
 		if (!v) {
@@ -65,8 +58,7 @@ t.exports = function (t, e) {
 		(y = i.set(y, { nativelyRenderedContent: y.getCurrentContent() })),
 			(t._pendingStateFromBeforeInput = y),
 			l(function () {
-				void 0 !== t._pendingStateFromBeforeInput &&
-					(t.update(t._pendingStateFromBeforeInput), (t._pendingStateFromBeforeInput = void 0));
+				void 0 !== t._pendingStateFromBeforeInput && (t.update(t._pendingStateFromBeforeInput), (t._pendingStateFromBeforeInput = void 0));
 			});
 	}
 };

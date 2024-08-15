@@ -43,15 +43,7 @@ function c(e) {
 	return e < 1000 ? ''.concat(e) : ''.concat(Math.min(Math.floor(e / 1000), 9), 'k+');
 }
 let d = (e) => {
-		let {
-			count: t,
-			color: n = s.Z.STATUS_DANGER,
-			disableColor: i = !1,
-			shape: d = l.ROUND,
-			className: _,
-			style: E,
-			...f
-		} = e;
+		let { count: t, color: n = s.Z.STATUS_DANGER, disableColor: i = !1, shape: d = l.ROUND, className: _, style: E, ...f } = e;
 		return (0, r.jsx)('div', {
 			className: a()(_, o.numberBadge, d),
 			style: {
@@ -74,15 +66,7 @@ let d = (e) => {
 		});
 	},
 	_ = (e) => {
-		let {
-			text: t,
-			className: n,
-			color: i = s.Z.STATUS_DANGER,
-			shape: u = l.ROUND,
-			disableColor: c = !1,
-			style: d,
-			..._
-		} = e;
+		let { text: t, className: n, color: i = s.Z.STATUS_DANGER, shape: u = l.ROUND, disableColor: c = !1, style: d, ..._ } = e;
 		return (0, r.jsx)('div', {
 			className: a()(n, o.textBadge, u),
 			style: {
@@ -116,14 +100,7 @@ let d = (e) => {
 		});
 	},
 	h = (e) => {
-		let {
-			className: t,
-			color: n = s.Z.INTERACTIVE_ACTIVE,
-			shape: i = l.ROUND,
-			disableColor: u = !1,
-			style: c,
-			...d
-		} = e;
+		let { className: t, color: n = s.Z.INTERACTIVE_ACTIVE, shape: i = l.ROUND, disableColor: u = !1, style: c, ...d } = e;
 		return (0, r.jsx)('div', {
 			className: a()(t, o.circleBadge, i),
 			style: {

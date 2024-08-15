@@ -16,14 +16,7 @@ var l = n(120356),
 	c = n(507675),
 	u = n(344333);
 function d(e) {
-	let {
-		disableGradients: t = !1,
-		renderHeader: n,
-		renderBottomLeft: i,
-		renderBottomCenter: a,
-		renderBottomRight: l,
-		renderCenter: r
-	} = e;
+	let { disableGradients: t = !1, renderHeader: n, renderBottomLeft: i, renderBottomCenter: a, renderBottomRight: l, renderCenter: r } = e;
 	return (0, s.jsxs)('div', {
 		className: u.videoControls,
 		children: [
@@ -62,19 +55,7 @@ function d(e) {
 	});
 }
 function h(e) {
-	let {
-		screenMessage: t,
-		onDoubleClick: n,
-		onActive: i,
-		onForceIdle: a,
-		idle: l,
-		children: o,
-		renderChatButton: h,
-		renderChatToasts: m,
-		renderVoiceChannelEffects: p,
-		style: _,
-		...f
-	} = e;
+	let { screenMessage: t, onDoubleClick: n, onActive: i, onForceIdle: a, idle: l, children: o, renderChatButton: h, renderChatToasts: m, renderVoiceChannelEffects: p, style: _, ...f } = e;
 	return (0, s.jsxs)('div', {
 		className: r()(u.root, { [u.idle]: l }),
 		style: _,

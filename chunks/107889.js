@@ -37,22 +37,7 @@ var s = t(735250),
 	O = t(689938),
 	M = t(392214);
 function y(e) {
-	let {
-			user: n,
-			currentUser: t,
-			guildId: y,
-			channelId: U,
-			messageId: D,
-			roleId: F,
-			sessionId: B,
-			friendToken: w,
-			initialSection: G,
-			initialSubsection: V,
-			transitionState: k,
-			onClose: Y,
-			showGuildProfile: W = !0,
-			sourceAnalyticsLocations: K = []
-		} = e,
+	let { user: n, currentUser: t, guildId: y, channelId: U, messageId: D, roleId: F, sessionId: B, friendToken: w, initialSection: G, initialSubsection: V, transitionState: k, onClose: Y, showGuildProfile: W = !0, sourceAnalyticsLocations: K = [] } = e,
 		z = y === P.ME ? void 0 : y,
 		{ analyticsLocations: H } = (0, d.ZP)([...K, c.Z.SIMPLIFIED_PROFILE_MODAL]),
 		q = (0, f.ZB)({
@@ -66,9 +51,7 @@ function y(e) {
 			showGuildProfile: W
 		}),
 		{ profileStatusEditEnabled: Q } = (0, m.K)({ location: 'SimplifiedUserProfileModalHeader' }),
-		{ persistentCallCtaEnabled: X, activeInviteToCallCtaEnabled: J } = (0, p.l)({
-			location: 'SimplifiedUserProfileModalHeader'
-		}),
+		{ persistentCallCtaEnabled: X, activeInviteToCallCtaEnabled: J } = (0, p.l)({ location: 'SimplifiedUserProfileModalHeader' }),
 		[$, ee] = i.useState(),
 		[en, et] = i.useState(),
 		es = (e) => {

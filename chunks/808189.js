@@ -17,17 +17,11 @@ let h = [
 		perks: [
 			{
 				icon: s.ReactionIcon,
-				getCopy: () =>
-					E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_CUSTOM_EMOJI.format({
-						numEmojiSlots: _.HO[d.Eu4.TIER_1].limits.emoji
-					})
+				getCopy: () => E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_CUSTOM_EMOJI.format({ numEmojiSlots: _.HO[d.Eu4.TIER_1].limits.emoji })
 			},
 			{
 				icon: s.SoundboardIcon,
-				getCopy: () =>
-					E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_CUSTOM_SOUNDS.format({
-						numSoundboardSlots: _.HO[d.Eu4.TIER_1].limits.soundboardSounds
-					}),
+				getCopy: () => E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_CUSTOM_SOUNDS.format({ numSoundboardSlots: _.HO[d.Eu4.TIER_1].limits.soundboardSounds }),
 				isNew: !0
 			},
 			{
@@ -49,10 +43,7 @@ let h = [
 			},
 			{
 				icon: s.UploadIcon,
-				getCopy: () =>
-					E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_LARGER_FILE_UPLOADS.format({
-						uploadSizeLimit: E.Z.Messages.FILE_UPLOAD_LIMIT_BOOSTED_GUILD_TIER_2
-					})
+				getCopy: () => E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_LARGER_FILE_UPLOADS.format({ uploadSizeLimit: E.Z.Messages.FILE_UPLOAD_LIMIT_BOOSTED_GUILD_TIER_2 })
 			},
 			{
 				icon: s.ReactionIcon,
@@ -73,10 +64,7 @@ let h = [
 			},
 			{
 				icon: s.UploadIcon,
-				getCopy: () =>
-					E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_LARGER_FILE_UPLOADS.format({
-						uploadSizeLimit: E.Z.Messages.FILE_UPLOAD_LIMIT_BOOSTED_GUILD_TIER_3
-					})
+				getCopy: () => E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_LARGER_FILE_UPLOADS.format({ uploadSizeLimit: E.Z.Messages.FILE_UPLOAD_LIMIT_BOOSTED_GUILD_TIER_3 })
 			},
 			{
 				icon: s.VoiceNormalIcon,
@@ -88,8 +76,7 @@ let h = [
 			},
 			{
 				icon: s.StageIcon,
-				getCopy: () =>
-					E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_STAGE_SEATS_AND_MORE.format({ numStageSeats: d.RcX })
+				getCopy: () => E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_STAGE_SEATS_AND_MORE.format({ numStageSeats: d.RcX })
 			}
 		]
 	}
@@ -111,11 +98,7 @@ t.Z = function (e) {
 									(0, r.jsx)('div', { className: a()(f.tierCardBorderHighlight, f.tierCardBorderHighlightBottomLeft) }),
 									(0, r.jsxs)('div', {
 										className: a()(f.tierCardSparkleHighlight, f.tierCardSparkleHighlightTopRight),
-										children: [
-											(0, r.jsx)(u.Z, { className: f.tierCardSparkle1 }),
-											(0, r.jsx)(u.Z, { className: f.tierCardSparkle2 }),
-											(0, r.jsx)(l.Z, { className: f.tierCardSparkle3 })
-										]
+										children: [(0, r.jsx)(u.Z, { className: f.tierCardSparkle1 }), (0, r.jsx)(u.Z, { className: f.tierCardSparkle2 }), (0, r.jsx)(l.Z, { className: f.tierCardSparkle3 })]
 									}),
 									(0, r.jsx)('div', {
 										className: a()(f.tierCardSparkleHighlight, f.tierCardSparkleHighlightBottomLeft),
@@ -144,9 +127,7 @@ t.Z = function (e) {
 									className: f.tierCardBoostRequirement,
 									variant: 'text-md/normal',
 									color: 'always-white',
-									children: E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTS_REQUIRED.format({
-										numBoostsRequired: d.oCV[e.tier]
-									})
+									children: E.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTS_REQUIRED.format({ numBoostsRequired: d.oCV[e.tier] })
 								})
 							]
 						}),

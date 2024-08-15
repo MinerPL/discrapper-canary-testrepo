@@ -42,17 +42,7 @@ var e, r;
 		function b(t) {
 			return !!(t && t[x]);
 		}
-		f(h, p),
-			f(d, p),
-			f(g, p),
-			(p.isIterable = y),
-			(p.isKeyed = v),
-			(p.isIndexed = m),
-			(p.isAssociative = _),
-			(p.isOrdered = b),
-			(p.Keyed = h),
-			(p.Indexed = d),
-			(p.Set = g);
+		f(h, p), f(d, p), f(g, p), (p.isIterable = y), (p.isKeyed = v), (p.isIndexed = m), (p.isAssociative = _), (p.isOrdered = b), (p.Keyed = h), (p.Indexed = d), (p.Set = g);
 		var S = '@@__IMMUTABLE_ITERABLE__@@',
 			w = '@@__IMMUTABLE_KEYED__@@',
 			k = '@@__IMMUTABLE_INDEXED__@@',
@@ -186,12 +176,7 @@ var e, r;
 				return this.__toString('Seq {', '}');
 			}),
 			(Q.prototype.cacheResult = function () {
-				return (
-					!this._cache &&
-						this.__iterateUncached &&
-						((this._cache = this.entrySeq().toArray()), (this.size = this._cache.length)),
-					this
-				);
+				return !this._cache && this.__iterateUncached && ((this._cache = this.entrySeq().toArray()), (this.size = this._cache.length)), this;
 			}),
 			(Q.prototype.__iterate = function (t, e) {
 				return th(this, t, e, !0);
@@ -251,15 +236,7 @@ var e, r;
 			return t || (t = new ti([]));
 		}
 		function tl(t) {
-			var e = Array.isArray(t)
-				? new ti(t).fromEntrySeq()
-				: X(t)
-					? new tu(t).fromEntrySeq()
-					: Z(t)
-						? new ta(t).fromEntrySeq()
-						: 'object' == typeof t
-							? new to(t)
-							: void 0;
+			var e = Array.isArray(t) ? new ti(t).fromEntrySeq() : X(t) ? new tu(t).fromEntrySeq() : Z(t) ? new ta(t).fromEntrySeq() : 'object' == typeof t ? new to(t) : void 0;
 			if (!e) throw TypeError('Expected Array or iterable object of [k, v] entries, or keyed object: ' + t);
 			return e;
 		}
@@ -274,8 +251,7 @@ var e, r;
 				return this.has(t) ? this._array[R(this, t)] : e;
 			}),
 			(ti.prototype.__iterate = function (t, e) {
-				for (var r = this._array, n = r.length - 1, i = 0; i <= n; i++)
-					if (!1 === t(r[e ? n - i : i], i, this)) return i + 1;
+				for (var r = this._array, n = r.length - 1, i = 0; i <= n; i++) if (!1 === t(r[e ? n - i : i], i, this)) return i + 1;
 				return i;
 			}),
 			(ti.prototype.__iterator = function (t, e) {
@@ -333,8 +309,7 @@ var e, r;
 			f(tu, te),
 			(tu.prototype.__iterateUncached = function (t, e) {
 				if (e) return this.cacheResult().__iterate(t, e);
-				for (var r, n = this._iterator, i = this._iteratorCache, o = 0; o < i.length; )
-					if (!1 === t(i[o], o++, this)) return o;
+				for (var r, n = this._iterator, i = this._iteratorCache, o = 0; o < i.length; ) if (!1 === t(i[o], o++, this)) return o;
 				for (; !(r = n.next()).done; ) {
 					var a = r.value;
 					if (((i[o] = a), !1 === t(a, o++, this))) break;
@@ -420,15 +395,7 @@ var e, r;
 		}
 		function tm(t, e) {
 			if (t === e) return !0;
-			if (
-				!y(e) ||
-				(void 0 !== t.size && void 0 !== e.size && t.size !== e.size) ||
-				(void 0 !== t.__hash && void 0 !== e.__hash && t.__hash !== e.__hash) ||
-				v(t) !== v(e) ||
-				m(t) !== m(e) ||
-				b(t) !== b(e)
-			)
-				return !1;
+			if (!y(e) || (void 0 !== t.size && void 0 !== e.size && t.size !== e.size) || (void 0 !== t.__hash && void 0 !== e.__hash && t.__hash !== e.__hash) || v(t) !== v(e) || m(t) !== m(e) || b(t) !== b(e)) return !1;
 			if (0 === t.size && 0 === e.size) return !0;
 			var r = !_(t);
 			if (b(t)) {
@@ -467,18 +434,7 @@ var e, r;
 		}
 		function tS(t, e, n) {
 			if (!(this instanceof tS)) return new tS(t, e, n);
-			if (
-				(tb(0 !== n, 'Cannot step a Range by 0'),
-				(t = t || 0),
-				void 0 === e && (e = 1 / 0),
-				(n = void 0 === n ? 1 : Math.abs(n)),
-				e < t && (n = -n),
-				(this._start = t),
-				(this._end = e),
-				(this._step = n),
-				(this.size = Math.max(0, Math.ceil((e - t) / n - 1) + 1)),
-				0 === this.size)
-			) {
+			if ((tb(0 !== n, 'Cannot step a Range by 0'), (t = t || 0), void 0 === e && (e = 1 / 0), (n = void 0 === n ? 1 : Math.abs(n)), e < t && (n = -n), (this._start = t), (this._end = e), (this._step = n), (this.size = Math.max(0, Math.ceil((e - t) / n - 1) + 1)), 0 === this.size)) {
 				if (r) return r;
 				r = this;
 			}
@@ -529,9 +485,7 @@ var e, r;
 			}),
 			f(tS, te),
 			(tS.prototype.toString = function () {
-				return 0 === this.size
-					? 'Range []'
-					: 'Range [ ' + this._start + '...' + this._end + (this._step > 1 ? ' by ' + this._step : '') + ' ]';
+				return 0 === this.size ? 'Range []' : 'Range [ ' + this._start + '...' + this._end + (this._step > 1 ? ' by ' + this._step : '') + ' ]';
 			}),
 			(tS.prototype.get = function (t, e) {
 				return this.has(t) ? this._start + R(this, t) * this._step : e;
@@ -543,9 +497,7 @@ var e, r;
 			(tS.prototype.slice = function (t, e) {
 				var r;
 				if (F(t, e, this.size)) return this;
-				return ((t = j(t, this.size, 0)), (e = j(e, (r = this.size), r)) <= t)
-					? new tS(0, 0)
-					: new tS(this.get(t, this._end), this.get(e, this._end), this._step);
+				return ((t = j(t, this.size, 0)), (e = j(e, (r = this.size), r)) <= t) ? new tS(0, 0) : new tS(this.get(t, this._end), this.get(e, this._end), this._step);
 			}),
 			(tS.prototype.indexOf = function (t) {
 				var e = t - this._start;
@@ -576,9 +528,7 @@ var e, r;
 				});
 			}),
 			(tS.prototype.equals = function (t) {
-				return t instanceof tS
-					? this._start === t._start && this._end === t._end && this._step === t._step
-					: tm(this, t);
+				return t instanceof tS ? this._start === t._start && this._end === t._end && this._step === t._step : tm(this, t);
 			}),
 			f(tw, p),
 			f(tk, tw),
@@ -599,8 +549,7 @@ var e, r;
 			return ((t >>> 1) & 1073741824) | (3221225471 & t);
 		}
 		function tO(t) {
-			if (!1 === t || null == t || ('function' == typeof t.valueOf && (!1 === (t = t.valueOf()) || null == t)))
-				return 0;
+			if (!1 === t || null == t || ('function' == typeof t.valueOf && (!1 === (t = t.valueOf()) || null == t))) return 0;
 			if (!0 === t) return 1;
 			var e = typeof t;
 			if ('number' === e) {
@@ -645,10 +594,7 @@ var e, r;
 							writable: !1,
 							value: e
 						});
-					else if (
-						void 0 !== t.propertyIsEnumerable &&
-						t.propertyIsEnumerable === t.constructor.prototype.propertyIsEnumerable
-					)
+					else if (void 0 !== t.propertyIsEnumerable && t.propertyIsEnumerable === t.constructor.prototype.propertyIsEnumerable)
 						(t.propertyIsEnumerable = function () {
 							return this.constructor.prototype.propertyIsEnumerable.apply(this, arguments);
 						}),
@@ -745,11 +691,7 @@ var e, r;
 				return n === O ? void 0 : n;
 			}),
 			(tP.prototype.clear = function () {
-				return 0 === this.size
-					? this
-					: this.__ownerID
-						? ((this.size = 0), (this._root = null), (this.__hash = void 0), (this.__altered = !0), this)
-						: tQ();
+				return 0 === this.size ? this : this.__ownerID ? ((this.size = 0), (this._root = null), (this.__hash = void 0), (this.__altered = !0), this) : tQ();
 			}),
 			(tP.prototype.merge = function () {
 				return t2(this, void 0, arguments);
@@ -811,11 +753,7 @@ var e, r;
 				);
 			}),
 			(tP.prototype.__ensureOwner = function (t) {
-				return t === this.__ownerID
-					? this
-					: t
-						? t$(this.size, this._root, t, this.__hash)
-						: ((this.__ownerID = t), (this.__altered = !1), this);
+				return t === this.__ownerID ? this : t ? t$(this.size, this._root, t, this.__hash) : ((this.__ownerID = t), (this.__altered = !1), this);
 			}),
 			(tP.isMap = tj);
 		var tU = '@@__IMMUTABLE_MAP__@@',
@@ -867,11 +805,7 @@ var e, r;
 				if (r === O) return t;
 				(i = 1), (n = new tH(t.__ownerID, [[e, r]]));
 			}
-			return t.__ownerID
-				? ((t.size = i), (t._root = n), (t.__hash = void 0), (t.__altered = !0), t)
-				: n
-					? t$(i, n)
-					: tQ();
+			return t.__ownerID ? ((t.size = i), (t._root = n), (t.__hash = void 0), (t.__altered = !0), t) : n ? t$(i, n) : tQ();
 		}
 		function t1(t, e, r, n, i, o, a, u) {
 			if (!t) return o === O ? t : (A(u), A(a), new tJ(e, n, [i, o]));
@@ -911,9 +845,7 @@ var e, r;
 						})(t, s, n, i);
 					var p = t && t === this.ownerID,
 						h = p ? s : B(s);
-					return (f ? (u ? (c === l - 1 ? h.pop() : (h[c] = h.pop())) : (h[c] = [n, i])) : h.push([n, i]), p)
-						? ((this.entries = h), this)
-						: new tH(t, h);
+					return (f ? (u ? (c === l - 1 ? h.pop() : (h[c] = h.pop())) : (h[c] = [n, i])) : h.push([n, i]), p) ? ((this.entries = h), this) : new tH(t, h);
 				}
 			}),
 			(tW.prototype.get = function (t, e, r, n) {
@@ -1004,9 +936,7 @@ var e, r;
 				if ((A(a), (u || !f) && A(o), u && 2 === l)) return new tJ(t, this.keyHash, s[1 ^ c]);
 				var p = t && t === this.ownerID,
 					h = p ? s : B(s);
-				return (f ? (u ? (c === l - 1 ? h.pop() : (h[c] = h.pop())) : (h[c] = [n, i])) : h.push([n, i]), p)
-					? ((this.entries = h), this)
-					: new tG(t, this.keyHash, h);
+				return (f ? (u ? (c === l - 1 ? h.pop() : (h[c] = h.pop())) : (h[c] = [n, i])) : h.push([n, i]), p) ? ((this.entries = h), this) : new tG(t, this.keyHash, h);
 			}),
 			(tJ.prototype.get = function (t, e, r, n) {
 				return tv(r, this.entry[0]) ? this.entry[1] : n;
@@ -1107,12 +1037,7 @@ var e, r;
 					: t.constructor(r[0]);
 		}
 		function t9(t) {
-			return (
-				(t -= (t >> 1) & 1431655765),
-				(t = ((t = (858993459 & t) + ((t >> 2) & 858993459)) + (t >> 4)) & 252645135),
-				(t += t >> 8),
-				127 & (t += t >> 16)
-			);
+			return (t -= (t >> 1) & 1431655765), (t = ((t = (858993459 & t) + ((t >> 2) & 858993459)) + (t >> 4)) & 252645135), (t += t >> 8), 127 & (t += t >> 16);
 		}
 		function t4(t, e, r, n) {
 			var i = n ? t : B(t);
@@ -1166,14 +1091,7 @@ var e, r;
 					var n = t._tail,
 						i = t._root,
 						o = M(T);
-					return (e >= ev(t._capacity)
-						? (n = ep(n, t.__ownerID, 0, e, r, o))
-						: (i = ep(i, t.__ownerID, t._level, e, r, o)),
-					o.value)
-						? t.__ownerID
-							? ((t._root = i), (t._tail = n), (t.__hash = void 0), (t.__altered = !0), t)
-							: el(t._origin, t._capacity, t._level, i, n)
-						: t;
+					return (e >= ev(t._capacity) ? (n = ep(n, t.__ownerID, 0, e, r, o)) : (i = ep(i, t.__ownerID, t._level, e, r, o)), o.value) ? (t.__ownerID ? ((t._root = i), (t._tail = n), (t.__hash = void 0), (t.__altered = !0), t) : el(t._origin, t._capacity, t._level, i, n)) : t;
 				})(this, t, e);
 			}),
 			(en.prototype.remove = function (t) {
@@ -1183,16 +1101,7 @@ var e, r;
 				return this.splice(t, 0, e);
 			}),
 			(en.prototype.clear = function () {
-				return 0 === this.size
-					? this
-					: this.__ownerID
-						? ((this.size = this._origin = this._capacity = 0),
-							(this._level = 5),
-							(this._root = this._tail = null),
-							(this.__hash = void 0),
-							(this.__altered = !0),
-							this)
-						: ef();
+				return 0 === this.size ? this : this.__ownerID ? ((this.size = this._origin = this._capacity = 0), (this._level = 5), (this._root = this._tail = null), (this.__hash = void 0), (this.__altered = !0), this) : ef();
 			}),
 			(en.prototype.push = function () {
 				var t = arguments,
@@ -1251,11 +1160,7 @@ var e, r;
 				return n;
 			}),
 			(en.prototype.__ensureOwner = function (t) {
-				return t === this.__ownerID
-					? this
-					: t
-						? el(this._origin, this._capacity, this._level, this._root, this._tail, t, this.__hash)
-						: ((this.__ownerID = t), this);
+				return t === this.__ownerID ? this : t ? el(this._origin, this._capacity, this._level, this._root, this._tail, t, this.__hash) : ((this.__ownerID = t), this);
 			}),
 			(en.isList = ei);
 		var eo = '@@__IMMUTABLE_LIST__@@',
@@ -1349,18 +1254,7 @@ var e, r;
 		}
 		function el(t, e, r, n, i, o, a) {
 			var u = Object.create(ea);
-			return (
-				(u.size = e - t),
-				(u._origin = t),
-				(u._capacity = e),
-				(u._level = r),
-				(u._root = n),
-				(u._tail = i),
-				(u.__ownerID = o),
-				(u.__hash = a),
-				(u.__altered = !1),
-				u
-			);
+			return (u.size = e - t), (u._origin = t), (u._capacity = e), (u._level = r), (u._root = n), (u._tail = i), (u.__ownerID = o), (u.__hash = a), (u.__altered = !1), u;
 		}
 		function ef() {
 			return o || (o = el(0, 0, 5));
@@ -1375,9 +1269,7 @@ var e, r;
 					l = ep(c, e, r - 5, n, i, o);
 				return l === c ? t : (((a = eh(t, e)).array[u] = l), a);
 			}
-			return s && t.array[u] === i
-				? t
-				: (A(o), (a = eh(t, e)), void 0 === i && u === a.array.length - 1 ? a.array.pop() : (a.array[u] = i), a);
+			return s && t.array[u] === i ? t : (A(o), (a = eh(t, e)), void 0 === i && u === a.array.length - 1 ? a.array.pop() : (a.array[u] = i), a);
 		}
 		function eh(t, e) {
 			return e && t && e === t.ownerID ? t : new eu(t ? t.array.slice() : [], e);
@@ -1398,8 +1290,7 @@ var e, r;
 				u = void 0 === r ? o : r < 0 ? o + r : i + r;
 			if (a === i && u === o) return t;
 			if (a >= u) return t.clear();
-			for (var s = t._level, c = t._root, l = 0; a + l < 0; )
-				(c = new eu(c && c.array.length ? [void 0, c] : [], n)), (s += 5), (l += 1 << s);
+			for (var s = t._level, c = t._root, l = 0; a + l < 0; ) (c = new eu(c && c.array.length ? [void 0, c] : [], n)), (s += 5), (l += 1 << s);
 			l && ((a += l), (i += l), (u += l), (o += l));
 			for (var f = ev(o), p = ev(u); p >= 1 << (s + 5); ) (c = new eu(c && c.array.length ? [c] : [], n)), (s += 5);
 			var h = t._tail,
@@ -1411,29 +1302,16 @@ var e, r;
 				}
 				g.array[(f >>> 5) & D] = h;
 			}
-			if ((u < o && (d = d && d.removeAfter(n, 0, u)), a >= p))
-				(a -= p), (u -= p), (s = 5), (c = null), (d = d && d.removeBefore(n, 0, a));
+			if ((u < o && (d = d && d.removeAfter(n, 0, u)), a >= p)) (a -= p), (u -= p), (s = 5), (c = null), (d = d && d.removeBefore(n, 0, a));
 			else if (a > i || p < f) {
 				for (l = 0; c; ) {
 					var m = (a >>> s) & D;
 					if ((m !== p >>> s) & D) break;
 					m && (l += (1 << s) * m), (s -= 5), (c = c.array[m]);
 				}
-				c && a > i && (c = c.removeBefore(n, s, a - l)),
-					c && p < f && (c = c.removeAfter(n, s, p - l)),
-					l && ((a -= l), (u -= l));
+				c && a > i && (c = c.removeBefore(n, s, a - l)), c && p < f && (c = c.removeAfter(n, s, p - l)), l && ((a -= l), (u -= l));
 			}
-			return t.__ownerID
-				? ((t.size = u - a),
-					(t._origin = a),
-					(t._capacity = u),
-					(t._level = s),
-					(t._root = c),
-					(t._tail = d),
-					(t.__hash = void 0),
-					(t.__altered = !0),
-					t)
-				: el(a, u, s, c, d);
+			return t.__ownerID ? ((t.size = u - a), (t._origin = a), (t._capacity = u), (t._level = s), (t._root = c), (t._tail = d), (t.__hash = void 0), (t.__altered = !0), t) : el(a, u, s, c, d);
 		}
 		function ey(t, e, r) {
 			for (var n = [], i = 0, o = 0; o < r.length; o++) {
@@ -1681,11 +1559,7 @@ var e, r;
 				return void 0 !== r ? this._list.get(r)[1] : e;
 			}),
 			(em.prototype.clear = function () {
-				return 0 === this.size
-					? this
-					: this.__ownerID
-						? ((this.size = 0), this._map.clear(), this._list.clear(), this)
-						: eS();
+				return 0 === this.size ? this : this.__ownerID ? ((this.size = 0), this._map.clear(), this._list.clear(), this) : eS();
 			}),
 			(em.prototype.set = function (t, e) {
 				return ew(this, t, e);
@@ -2065,9 +1939,7 @@ var e, r;
 			return Object.create((v(t) ? tt : m(t) ? te : tr).prototype);
 		}
 		function eq() {
-			return this._iter.cacheResult
-				? (this._iter.cacheResult(), (this.size = this._iter.size), this)
-				: Q.prototype.cacheResult.call(this);
+			return this._iter.cacheResult ? (this._iter.cacheResult(), (this.size = this._iter.size), this) : Q.prototype.cacheResult.call(this);
 		}
 		function eH(t, e) {
 			return t > e ? 1 : t < e ? -1 : 0;
@@ -2162,20 +2034,7 @@ var e, r;
 		function eX(t) {
 			return t._name || t.constructor.name || 'Record';
 		}
-		(eG[C] = eG.remove),
-			(eG.deleteIn = eG.removeIn = tq.removeIn),
-			(eG.merge = tq.merge),
-			(eG.mergeWith = tq.mergeWith),
-			(eG.mergeIn = tq.mergeIn),
-			(eG.mergeDeep = tq.mergeDeep),
-			(eG.mergeDeepWith = tq.mergeDeepWith),
-			(eG.mergeDeepIn = tq.mergeDeepIn),
-			(eG.setIn = tq.setIn),
-			(eG.update = tq.update),
-			(eG.updateIn = tq.updateIn),
-			(eG.withMutations = tq.withMutations),
-			(eG.asMutable = tq.asMutable),
-			(eG.asImmutable = tq.asImmutable);
+		(eG[C] = eG.remove), (eG.deleteIn = eG.removeIn = tq.removeIn), (eG.merge = tq.merge), (eG.mergeWith = tq.mergeWith), (eG.mergeIn = tq.mergeIn), (eG.mergeDeep = tq.mergeDeep), (eG.mergeDeepWith = tq.mergeDeepWith), (eG.mergeDeepIn = tq.mergeDeepIn), (eG.setIn = tq.setIn), (eG.update = tq.update), (eG.updateIn = tq.updateIn), (eG.withMutations = tq.withMutations), (eG.asMutable = tq.asMutable), (eG.asImmutable = tq.asImmutable);
 		function eY(t, e) {
 			Object.defineProperty(t, e, {
 				get: function () {
@@ -2308,13 +2167,7 @@ var e, r;
 		var eQ = '@@__IMMUTABLE_SET__@@',
 			e0 = eZ.prototype;
 		function e1(t, e) {
-			return t.__ownerID
-				? ((t.size = e.size), (t._map = e), t)
-				: e === t._map
-					? t
-					: 0 === e.size
-						? t.__empty()
-						: t.__make(e);
+			return t.__ownerID ? ((t.size = e.size), (t._map = e), t) : e === t._map ? t : 0 === e.size ? t.__empty() : t.__make(e);
 		}
 		function e6(t, e) {
 			var r = Object.create(e0);
@@ -2398,9 +2251,7 @@ var e, r;
 						value: arguments[r],
 						next: e
 					};
-				return this.__ownerID
-					? ((this.size = t), (this._head = e), (this.__hash = void 0), (this.__altered = !0), this)
-					: rn(t, e);
+				return this.__ownerID ? ((this.size = t), (this._head = e), (this.__hash = void 0), (this.__altered = !0), this) : rn(t, e);
 			}),
 			(e4.prototype.pushAll = function (t) {
 				if (0 === (t = d(t)).size) return this;
@@ -2431,11 +2282,7 @@ var e, r;
 				return this.pop.apply(this, arguments);
 			}),
 			(e4.prototype.clear = function () {
-				return 0 === this.size
-					? this
-					: this.__ownerID
-						? ((this.size = 0), (this._head = void 0), (this.__hash = void 0), (this.__altered = !0), this)
-						: ri();
+				return 0 === this.size ? this : this.__ownerID ? ((this.size = 0), (this._head = void 0), (this.__hash = void 0), (this.__altered = !0), this) : ri();
 			}),
 			(e4.prototype.slice = function (t, e) {
 				if (F(t, e, this.size)) return this;
@@ -2443,16 +2290,10 @@ var e, r;
 					n = j(t, this.size, 0);
 				if (j(e, (r = this.size), r) !== this.size) return tx.prototype.slice.call(this, t, e);
 				for (var i = this.size - n, o = this._head; n--; ) o = o.next;
-				return this.__ownerID
-					? ((this.size = i), (this._head = o), (this.__hash = void 0), (this.__altered = !0), this)
-					: rn(i, o);
+				return this.__ownerID ? ((this.size = i), (this._head = o), (this.__hash = void 0), (this.__altered = !0), this) : rn(i, o);
 			}),
 			(e4.prototype.__ensureOwner = function (t) {
-				return t === this.__ownerID
-					? this
-					: t
-						? rn(this.size, this._head, t, this.__hash)
-						: ((this.__ownerID = t), (this.__altered = !1), this);
+				return t === this.__ownerID ? this : t ? rn(this.size, this._head, t, this.__hash) : ((this.__ownerID = t), (this.__altered = !1), this);
 			}),
 			(e4.prototype.__iterate = function (t, e) {
 				if (e) return this.reverse().__iterate(t);
@@ -2900,13 +2741,7 @@ var e, r;
 								r = v(t),
 								n = e ? 1 : 0;
 							return (function (t, e) {
-								return (
-									(e = tE(e, 3432918353)),
-									(e = tE((e << 15) | (e >>> -15), 461845907)),
-									(e = (((e = tE((e << 13) | (e >>> -13), 5)) + 3864292196) | 0) ^ t),
-									(e = tE(e ^ (e >>> 16), 2246822507)),
-									(e = tD((e = tE(e ^ (e >>> 13), 3266489909)) ^ (e >>> 16)))
-								);
+								return (e = tE(e, 3432918353)), (e = tE((e << 15) | (e >>> -15), 461845907)), (e = (((e = tE((e << 13) | (e >>> -13), 5)) + 3864292196) | 0) ^ t), (e = tE(e ^ (e >>> 16), 2246822507)), (e = tD((e = tE(e ^ (e >>> 13), 3266489909)) ^ (e >>> 16)));
 							})(
 								t.__iterate(
 									r
@@ -2953,16 +2788,7 @@ var e, r;
 								} catch (e) {
 									t = e.stack;
 								}
-								if (-1 === t.indexOf('_wrapObject'))
-									return (
-										console &&
-											console.warn &&
-											console.warn(
-												'iterable.length has been deprecated, use iterable.size or iterable.count(). This warning will become a silent error in a future version. ' +
-													t
-											),
-										this.size
-									);
+								if (-1 === t.indexOf('_wrapObject')) return console && console.warn && console.warn('iterable.length has been deprecated, use iterable.size or iterable.count(). This warning will become a silent error in a future version. ' + t), this.size;
 							}
 						}
 					});
@@ -3100,10 +2926,7 @@ var e, r;
 							);
 				},
 				has: function (t) {
-					return (
-						(t = R(this, t)) >= 0 &&
-						(void 0 !== this.size ? this.size === 1 / 0 || t < this.size : -1 !== this.indexOf(t))
-					);
+					return (t = R(this, t)) >= 0 && (void 0 !== this.size ? this.size === 1 / 0 || t < this.size : -1 !== this.indexOf(t));
 				},
 				interpose: function (t) {
 					var e, r, n;

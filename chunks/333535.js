@@ -21,10 +21,8 @@ function E(e) {
 	let { threadId: t } = e,
 		n = (0, l.e7)([c.Z], () => c.Z.getChannel(t)),
 		E = (0, l.e7)([c.Z], () => c.Z.getChannel(null == n ? void 0 : n.parent_id)),
-		g = a.useCallback(() => {
-			null != n &&
-				null != E &&
-				((0, o.yw)(p.rMx.MEDIA_POST_SHARE_PROMPT_CLICKED, { media_post_id: n.id }), (0, s.J)((0, u.EO)(n, E)));
+		C = a.useCallback(() => {
+			null != n && null != E && ((0, o.yw)(p.rMx.MEDIA_POST_SHARE_PROMPT_CLICKED, { media_post_id: n.id }), (0, s.J)((0, u.EO)(n, E)));
 		}, [n, E]);
 	return (0, i.jsxs)('div', {
 		className: f.sharePromptContainer,
@@ -41,15 +39,13 @@ function E(e) {
 					(0, i.jsx)(r.Text, {
 						variant: 'text-sm/medium',
 						color: 'text-normal',
-						children: _.Z.Messages.MEDIA_POST_SHARE_PROMPT_SUBTITLE.format({
-							helpArticleUrl: d.Z.getCreatorSupportArticleURL(p.BhN.MEDIA_CHANNEL)
-						})
+						children: _.Z.Messages.MEDIA_POST_SHARE_PROMPT_SUBTITLE.format({ helpArticleUrl: d.Z.getCreatorSupportArticleURL(p.BhN.MEDIA_CHANNEL) })
 					}),
 					(0, i.jsx)(r.Spacer, { size: 4 }),
 					(0, i.jsxs)(r.Button, {
 						className: f.sharePromptCta,
 						innerClassName: f.ctaContent,
-						onClick: g,
+						onClick: C,
 						children: [
 							(0, i.jsx)(r.LinkIcon, {
 								color: 'currentColor',

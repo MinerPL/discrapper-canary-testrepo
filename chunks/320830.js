@@ -43,9 +43,7 @@ t.Z = function (e) {
 			this.state.shouldAnimate ? this.animateTo(g.END, e) : e();
 		}
 		componentWillEnter(e) {
-			this.state.shouldAnimate
-				? (clearTimeout(this.timeout), (this.timeout = setTimeout(() => this.animateTo(g.END, e), 40)))
-				: e();
+			this.state.shouldAnimate ? (clearTimeout(this.timeout), (this.timeout = setTimeout(() => this.animateTo(g.END, e), 40))) : e();
 		}
 		componentWillLeave(e) {
 			this.state.shouldAnimate ? this.animateTo(g.START, e) : e();

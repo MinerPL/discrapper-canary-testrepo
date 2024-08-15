@@ -6,19 +6,8 @@ var r = n(735250),
 	l = n(981631),
 	u = n(689938);
 t.Z = (e) => {
-	let {
-			href: t,
-			className: n,
-			iconClassName: c,
-			rel: d,
-			target: _,
-			mimeType: E,
-			fileName: f,
-			focusProps: h,
-			onClick: p,
-			...I
-		} = e,
-		m = i.useMemo(() => a.X.getDefaultLinkInterceptor(t), [t]),
+	let { href: t, className: n, iconClassName: c, rel: d, target: _, mimeType: E, fileName: f, focusProps: h, onClick: p, ...m } = e,
+		I = i.useMemo(() => a.X.getDefaultLinkInterceptor(t), [t]),
 		T = i.useCallback(
 			(e) => {
 				o.default.track(l.rMx.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
@@ -26,9 +15,9 @@ t.Z = (e) => {
 					attachment_subtype: null == E ? void 0 : E[1]
 				}),
 					null == p || p(),
-					null == m || m(e);
+					null == I || I(e);
 			},
-			[m, E, p]
+			[I, E, p]
 		);
 	return null != f
 		? (0, r.jsx)(s.Anchor, {
@@ -39,7 +28,7 @@ t.Z = (e) => {
 				className: n,
 				'aria-label': u.Z.Messages.DOWNLOAD,
 				focusProps: h,
-				...I,
+				...m,
 				children: f
 			})
 		: (0, r.jsx)(s.Anchor, {
@@ -50,7 +39,7 @@ t.Z = (e) => {
 				className: n,
 				'aria-label': u.Z.Messages.DOWNLOAD,
 				focusProps: h,
-				...I,
+				...m,
 				children: (0, r.jsx)(s.DownloadIcon, {
 					size: 'md',
 					color: 'currentColor',

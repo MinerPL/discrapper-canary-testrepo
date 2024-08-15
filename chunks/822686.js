@@ -13,18 +13,11 @@ t.Z = (e) => {
 	let { message: t, reportId: n } = e,
 		[E, f] = i.useState(!1),
 		h = i.useCallback(() => {
-			f(!0),
-				o.ZP.trackWithMetadata(c.rMx.IAR_DELETE_MESSAGE_BUTTON_CLICKED, { report_id: n }),
-				s.Z.deleteMessage(t.getChannelId(), t.id);
+			f(!0), o.ZP.trackWithMetadata(c.rMx.IAR_DELETE_MESSAGE_BUTTON_CLICKED, { report_id: n }), s.Z.deleteMessage(t.getChannelId(), t.id);
 		}, [t, n]),
 		p = i.useMemo(() => {
 			let e = l.Z.getChannel(t.getChannelId());
-			return (
-				null != e &&
-				e.type !== c.d4z.DM &&
-				e.type !== c.d4z.GROUP_DM &&
-				u.Z.canWithPartialContext(c.Plq.MANAGE_MESSAGES, { channelId: e.id })
-			);
+			return null != e && e.type !== c.d4z.DM && e.type !== c.d4z.GROUP_DM && u.Z.canWithPartialContext(c.Plq.MANAGE_MESSAGES, { channelId: e.id });
 		}, [t]);
 	return null != t && p
 		? (0, r.jsx)('div', {

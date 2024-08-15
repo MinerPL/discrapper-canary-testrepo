@@ -131,11 +131,7 @@ class X extends r.Component {
 								})
 							}),
 					(0, s.jsxs)('div', {
-						children: [
-							z(null != a && '' !== a ? a : V.Z.Messages.USER_ACTIVITY_HEADER_PLAYING),
-							null != r ? K(r) : null,
-							this.renderTimePlayed()
-						]
+						children: [z(null != a && '' !== a ? a : V.Z.Messages.USER_ACTIVITY_HEADER_PLAYING), null != r ? K(r) : null, this.renderTimePlayed()]
 					})
 				]
 			})
@@ -319,10 +315,7 @@ let ee = (e) => {
 							})
 						: null,
 					(0, s.jsxs)('div', {
-						children: [
-							z(n),
-							K(V.Z.Messages.ACTIVITY_FEED_SINGLE_MEMBER_LIST_HEADER.format({ memberCount: i.totalSize }))
-						]
+						children: [z(n), K(V.Z.Messages.ACTIVITY_FEED_SINGLE_MEMBER_LIST_HEADER.format({ memberCount: i.totalSize }))]
 					}),
 					(0, s.jsx)(B.Z, {
 						partySize: i,
@@ -471,10 +464,7 @@ let ee = (e) => {
 					})
 				]
 			}),
-			m =
-				null !== (n = null === (t = (0, f.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n
-					? n
-					: V.Z.Messages.SHARING_SCREEN;
+			m = null !== (n = null === (t = (0, f.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : V.Z.Messages.SHARING_SCREEN;
 		return (0, s.jsxs)(Q, {
 			children: [
 				(0, s.jsxs)('div', {

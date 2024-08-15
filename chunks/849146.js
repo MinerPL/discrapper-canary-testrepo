@@ -53,14 +53,7 @@ var r = (function () {
 		})();
 	})(),
 	i = 'undefined' != typeof window && 'undefined' != typeof document && window.document === document,
-	o =
-		void 0 !== n.g && n.g.Math === Math
-			? n.g
-			: 'undefined' != typeof self && self.Math === Math
-				? self
-				: 'undefined' != typeof window && window.Math === Math
-					? window
-					: Function('return this')(),
+	o = void 0 !== n.g && n.g.Math === Math ? n.g : 'undefined' != typeof self && self.Math === Math ? self : 'undefined' != typeof window && window.Math === Math ? window : Function('return this')(),
 	s =
 		'function' == typeof requestAnimationFrame
 			? requestAnimationFrame.bind(o)
@@ -138,14 +131,7 @@ var r = (function () {
 						(this.connected_ = !0);
 			}),
 			(t.prototype.disconnect_ = function () {
-				if (!!i && !!this.connected_)
-					document.removeEventListener('transitionend', this.onTransitionEnd_),
-						window.removeEventListener('resize', this.refresh),
-						this.mutationsObserver_ && this.mutationsObserver_.disconnect(),
-						this.mutationEventsAdded_ && document.removeEventListener('DOMSubtreeModified', this.refresh),
-						(this.mutationsObserver_ = null),
-						(this.mutationEventsAdded_ = !1),
-						(this.connected_ = !1);
+				if (!!i && !!this.connected_) document.removeEventListener('transitionend', this.onTransitionEnd_), window.removeEventListener('resize', this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener('DOMSubtreeModified', this.refresh), (this.mutationsObserver_ = null), (this.mutationEventsAdded_ = !1), (this.connected_ = !1);
 			}),
 			(t.prototype.onTransitionEnd_ = function (t) {
 				var e = t.propertyName,
@@ -232,9 +218,7 @@ var b = (function () {
 							c = p(r.width),
 							a = p(r.height);
 						if (
-							('border-box' === r.boxSizing &&
-								(Math.round(c + o) !== e && (c -= v(r, 'left', 'right') + o),
-								Math.round(a + s) !== n && (a -= v(r, 'top', 'bottom') + s)),
+							('border-box' === r.boxSizing && (Math.round(c + o) !== e && (c -= v(r, 'left', 'right') + o), Math.round(a + s) !== n && (a -= v(r, 'top', 'bottom') + s)),
 							!(function (t) {
 								return t === f(t).document.documentElement;
 							})(t))
@@ -285,8 +269,7 @@ var b = (function () {
 	},
 	y = (function () {
 		function t(t, e, n) {
-			if (((this.activeObservations_ = []), (this.observations_ = new r()), 'function' != typeof t))
-				throw TypeError('The callback provided as parameter 1 is not a function.');
+			if (((this.activeObservations_ = []), (this.observations_ = new r()), 'function' != typeof t)) throw TypeError('The callback provided as parameter 1 is not a function.');
 			(this.callback_ = t), (this.controller_ = e), (this.callbackCtx_ = n);
 		}
 		return (

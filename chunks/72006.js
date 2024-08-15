@@ -104,12 +104,7 @@ function v(e, n, t, i) {
 		: (o = n.getSelection());
 	let d = n.getCurrentInlineStyle(),
 		_ = u()(a, o);
-	return (
-		o.isCollapsed()
-			? ((a = r.Modifier.insertText(a, o, e, d, _)), (l = 'insert-characters'))
-			: ((a = r.Modifier.replaceText(a, o, e, d, _)), (l = 'replace-characters')),
-		r.EditorState.push(n, a, l)
-	);
+	return o.isCollapsed() ? ((a = r.Modifier.insertText(a, o, e, d, _)), (l = 'insert-characters')) : ((a = r.Modifier.replaceText(a, o, e, d, _)), (l = 'replace-characters')), r.EditorState.push(n, a, l);
 }
 function L(e, n) {
 	switch (e) {
@@ -169,11 +164,7 @@ function O(e, n) {
 				(l.forEach((t) => {
 					let { type: i, start: o, end: l } = e,
 						u = e.getFullMatch();
-					if (!t.processed)
-						t.type === i && t.start === o && t.text === u
-							? ((t.processed = !0), (r = !0))
-							: ((o >= t.start && o < t.end) || (l > t.start && l <= t.end)) &&
-								((t.processed = !0), (n = h(null, t.start, t.end, n)));
+					if (!t.processed) t.type === i && t.start === o && t.text === u ? ((t.processed = !0), (r = !0)) : ((o >= t.start && o < t.end) || (l > t.start && l <= t.end)) && ((t.processed = !0), (n = h(null, t.start, t.end, n)));
 				}),
 				r)
 			)
@@ -223,10 +214,7 @@ function j(e) {
 		t = M(e);
 	if (t.length > n) {
 		let i = e.getSelection();
-		(e = v('', e, n, t.length)),
-			i.getAnchorOffset() > n && (i = i.set('anchorOffset', n)),
-			i.getFocusOffset() > n && (i = i.set('focusOffset', n)),
-			(e = r.EditorState.forceSelection(e, i));
+		(e = v('', e, n, t.length)), i.getAnchorOffset() > n && (i = i.set('anchorOffset', n)), i.getFocusOffset() > n && (i = i.set('focusOffset', n)), (e = r.EditorState.forceSelection(e, i));
 	}
 	return e;
 }
@@ -248,9 +236,7 @@ function w(e) {
 		i = e.getClientRects()[0];
 	if (null == r || null == i) return;
 	let o = r.left - i.left + e.scrollLeft;
-	o < e.scrollLeft
-		? (e.scrollLeft = o - 10)
-		: o > e.scrollLeft + e.offsetWidth && (e.scrollLeft = o - e.offsetWidth + 3);
+	o < e.scrollLeft ? (e.scrollLeft = o - 10) : o > e.scrollLeft + e.offsetWidth && (e.scrollLeft = o - e.offsetWidth + 3);
 }
 function B(e) {
 	return 0 === M(e).length;

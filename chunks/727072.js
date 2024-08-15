@@ -122,9 +122,7 @@ let I = {},
 	})),
 	A = (e, t) => {
 		var n, r;
-		return (
-			null !== (r = null === (n = O.getState().rules[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== r ? r : []
-		).length;
+		return (null !== (r = null === (n = O.getState().rules[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== r ? r : []).length;
 	};
 function N(e) {
 	let [t, n] = r.useState(!1),

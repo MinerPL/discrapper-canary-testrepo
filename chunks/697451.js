@@ -83,16 +83,7 @@ function M(e) {
 	let D = () => {
 		let t = (function (e, t) {
 				let n,
-					{
-						message: a,
-						compact: s,
-						channel: l,
-						isInteractionUserBlocked: o,
-						showAvatarPopout: c,
-						onClickAvatar: u,
-						onUserContextMenu: _,
-						onPopoutRequestClose: E
-					} = e;
+					{ message: a, compact: s, channel: l, isInteractionUserBlocked: o, showAvatarPopout: c, onClickAvatar: u, onUserContextMenu: _, onPopoutRequestClose: E } = e;
 				if ((s && null == a.activityInstance) || o)
 					return (0, i.jsx)('div', {
 						className: x.replyBadge,
@@ -145,14 +136,7 @@ function M(e) {
 			})(e, (e) => M(e, b.user, [m.Z.AVATAR])),
 			n = (function (e, t, n) {
 				var a;
-				let {
-					message: s,
-					channel: r,
-					showUsernamePopout: l,
-					onClickUsername: o,
-					onUserContextMenu: c,
-					onPopoutRequestClose: u
-				} = e;
+				let { message: s, channel: r, showUsernamePopout: l, onClickUsername: o, onUserContextMenu: c, onPopoutRequestClose: u } = e;
 				return (0, i.jsx)(p.Z, {
 					compact: !0,
 					author: t,

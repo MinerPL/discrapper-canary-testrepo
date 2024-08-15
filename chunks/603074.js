@@ -17,27 +17,12 @@ var r = n(735250),
 	f = n(675478),
 	h = n(19780),
 	p = n(208049),
-	I = n(763296),
-	m = n(526617),
+	m = n(763296),
+	I = n(526617),
 	T = n(127549);
 function g(e) {
-	let {
-			guildId: t,
-			channel: n,
-			containerWidth: a,
-			onClose: g,
-			onSelect: S,
-			analyticsSource: A,
-			suppressPlaySound: N,
-			shouldShowUpsell: v = !0,
-			gridNotice: O,
-			autoWidth: R = !1,
-			soundButtonOverlay: C,
-			listPadding: y,
-			renderHeader: D,
-			defaultSoundsOnly: L
-		} = e,
-		b = (0, l.e7)([I.Z], () => I.Z.isFetchingSounds() || I.Z.isFetchingDefaultSounds()),
+	let { guildId: t, channel: n, containerWidth: a, onClose: g, onSelect: S, analyticsSource: A, suppressPlaySound: N, shouldShowUpsell: v = !0, gridNotice: O, autoWidth: R = !1, soundButtonOverlay: C, listPadding: y, renderHeader: D, defaultSoundsOnly: L } = e,
+		b = (0, l.e7)([m.Z], () => m.Z.isFetchingSounds() || m.Z.isFetchingDefaultSounds()),
 		M = (0, l.e7)([h.Z], () => h.Z.getMediaSessionId()),
 		{ analyticsLocations: P } = (0, d.ZP)(c.Z.SOUNDBOARD_POPOUT);
 	return (
@@ -62,7 +47,7 @@ function g(e) {
 				}),
 				children: b
 					? (0, r.jsx)(u.Spinner, {})
-					: (0, r.jsx)(m.Z, {
+					: (0, r.jsx)(I.Z, {
 							guildId: t,
 							channel: n,
 							onClose: g,

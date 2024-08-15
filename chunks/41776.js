@@ -13,7 +13,7 @@ let E = [],
 	f = {},
 	h = null,
 	p = null;
-function I(e) {
+function m(e) {
 	let t = E.indexOf(e);
 	if (t > -1) {
 		let n = [...E];
@@ -21,7 +21,7 @@ function I(e) {
 	}
 	return !1;
 }
-function m(e) {
+function I(e) {
 	return !(e === _.ME || E.includes(e)) && ((E = [...E, e]), !0);
 }
 class T extends (r = o.ZP.Store) {
@@ -70,7 +70,7 @@ class T extends (r = o.ZP.Store) {
 			let { guildId: t, lurker: n, source: r, directoryChannelId: i, loadId: a } = e;
 			if (n) {
 				var s, o;
-				switch ((m(t), (s = t), null != (o = a) && (f[s] = o), r)) {
+				switch ((I(t), (s = t), null != (o = a) && (f[s] = o), r)) {
 					case _.vtS.MOBILE_GUILD_DISCOVERY:
 						p = { type: _.vtS.MOBILE_GUILD_DISCOVERY };
 						break;
@@ -91,26 +91,26 @@ class T extends (r = o.ZP.Store) {
 			let { ignoredGuildIds: t } = e,
 				n = (function (e) {
 					let t = new Set([...(null != e ? e : [])]);
-					return [...E].reduce((e, n) => (t.has(n) ? e : I(n) || e), !1);
+					return [...E].reduce((e, n) => (t.has(n) ? e : m(n) || e), !1);
 				})(t);
 			return n && ((h = null), (p = null)), n;
 		},
 		GUILD_STOP_LURKING_FAILURE: function (e) {
 			let { lurkingGuildId: t, lurkingSource: n } = e;
-			return m(t), (p = n), !0;
+			return I(t), (p = n), !0;
 		},
 		GUILD_CREATE: function (e) {
 			let { guild: t } = e;
-			return !!(null != t.joined_at && E.includes(t.id)) && (I(t.id), (h = null), (p = null), !0);
+			return !!(null != t.joined_at && E.includes(t.id)) && (m(t.id), (h = null), (p = null), !0);
 		},
 		GUILD_DELETE: function (e) {
 			let { guild: t } = e;
-			return !!E.includes(t.id) && (I(t.id), (h = null), (p = null), !0);
+			return !!E.includes(t.id) && (m(t.id), (h = null), (p = null), !0);
 		},
 		GUILD_MEMBER_ADD: function (e) {
 			var t;
 			let { guildId: n, joinedAt: r, user: i } = e,
 				a = i.id === (null === (t = d.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
-			return !!(a && null != r && E.includes(n)) && (I(n), (h = null), (p = null), !0);
+			return !!(a && null != r && E.includes(n)) && (m(n), (h = null), (p = null), !0);
 		}
 	}));

@@ -51,9 +51,7 @@ function E(e) {
 				title: u.Z.Messages.GUILD_BANNER_UPSELL_MODAL_TITLE,
 				subtitle: (function (e, t) {
 					let n = (0, l.nW)(e);
-					return t
-						? u.Z.Messages.GUILD_BANNER_UPSELL_MODAL_SUBTITLE_ANIMATED.format({ targetLevelOrPlan: n })
-						: u.Z.Messages.GUILD_BANNER_UPSELL_MODAL_SUBTITLE_STATIC.format({ targetLevelOrPlan: n });
+					return t ? u.Z.Messages.GUILD_BANNER_UPSELL_MODAL_SUBTITLE_ANIMATED.format({ targetLevelOrPlan: n }) : u.Z.Messages.GUILD_BANNER_UPSELL_MODAL_SUBTITLE_STATIC.format({ targetLevelOrPlan: n });
 				})(_, i),
 				image: (0, s.jsx)(I, {
 					guild: a,

@@ -17,10 +17,7 @@ var r,
 	a = n(470079),
 	s = n(818083),
 	o = n(46140);
-((r = i || (i = {}))[(r.CONTROL = 0)] = 'CONTROL'),
-	(r[(r.REWARD_AVAILABLE = 1)] = 'REWARD_AVAILABLE'),
-	(r[(r.EARN_A_REWARD = 2)] = 'EARN_A_REWARD'),
-	(r[(r.EARN_A_REWARD_EXCLAMATION = 3)] = 'EARN_A_REWARD_EXCLAMATION');
+((r = i || (i = {}))[(r.CONTROL = 0)] = 'CONTROL'), (r[(r.REWARD_AVAILABLE = 1)] = 'REWARD_AVAILABLE'), (r[(r.EARN_A_REWARD = 2)] = 'EARN_A_REWARD'), (r[(r.EARN_A_REWARD_EXCLAMATION = 3)] = 'EARN_A_REWARD_EXCLAMATION');
 let l = 60,
 	u = (0, s.B)({
 		id: '2024-07_quest_bar_v2_reward_highlighting',

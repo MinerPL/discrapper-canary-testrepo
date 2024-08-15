@@ -18,8 +18,8 @@ var i = n(990547),
 	f = n(687476),
 	h = n(761966),
 	p = n(981631),
-	I = n(176505),
-	m = n(689938),
+	m = n(176505),
+	I = n(689938),
 	T = n(473146);
 let g = () => {
 	let e = (0, l.ZP)();
@@ -40,14 +40,8 @@ function S(e) {
 	});
 	let A = (0, a.e7)([E.Z], () => E.Z.getGuild(n)),
 		N = (0, a.e7)([f.Z], () => null != n && f.Z.getUserSubscriptionRoles(n).size > 0),
-		v = N
-			? m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPGRADE_UPSELL_DESCRIPTION
-			: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_PURCHASE_UPSELL_DESCRIPTION.format({
-					serverName: null == A ? void 0 : A.name
-				}),
-		O = N
-			? m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_UPGRADE_CTA
-			: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_PURCHASE_CTA;
+		v = N ? I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPGRADE_UPSELL_DESCRIPTION : I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_PURCHASE_UPSELL_DESCRIPTION.format({ serverName: null == A ? void 0 : A.name }),
+		O = N ? I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_UPGRADE_CTA : I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_PURCHASE_CTA;
 	return (0, r.jsxs)('div', {
 		className: T.container,
 		children: [
@@ -63,7 +57,7 @@ function S(e) {
 						children: (0, r.jsx)(o.XSmallIcon, {
 							size: 'xs',
 							color: 'currentColor',
-							'aria-label': m.Z.Messages.CLOSE,
+							'aria-label': I.Z.Messages.CLOSE,
 							className: T.closeButtonIcon
 						})
 					}),
@@ -77,7 +71,7 @@ function S(e) {
 						color: 'header-primary',
 						variant: 'heading-lg/extrabold',
 						className: T.header,
-						children: m.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_TITLE
+						children: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL_TITLE
 					}),
 					(0, r.jsx)(o.Spacer, { size: 4 }),
 					(0, r.jsx)(o.Text, {
@@ -89,7 +83,7 @@ function S(e) {
 					(0, r.jsx)(o.Spacer, { size: 24 }),
 					(0, r.jsx)(h.Z, {
 						onClick: () => {
-							(0, _.uL)(p.Z5c.CHANNEL(n, I.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: S });
+							(0, _.uL)(p.Z5c.CHANNEL(n, m.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: S });
 						},
 						children: O
 					})

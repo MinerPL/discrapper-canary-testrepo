@@ -3,7 +3,7 @@ n.d(t, {
 		return f;
 	},
 	Ew: function () {
-		return I;
+		return m;
 	},
 	Jz: function () {
 		return h;
@@ -40,10 +40,7 @@ let u = !1;
 	let e = s.F3.findDocumentOrShadowRoot;
 	(s.F3.findDocumentOrShadowRoot = (t) => {
 		var n, r;
-		return null !== (r = null === (n = t.windowContext) || void 0 === n ? void 0 : n.renderWindow.document) &&
-			void 0 !== r
-			? r
-			: e(t);
+		return null !== (r = null === (n = t.windowContext) || void 0 === n ? void 0 : n.renderWindow.document) && void 0 !== r ? r : e(t);
 	}),
 		(u = !0);
 }
@@ -184,12 +181,7 @@ let c = {
 			if (null == i || !E.isText(i)) return !1;
 			let a = e.chatInputType,
 				s = i.text;
-			return (
-				1 === n.length &&
-				1 === r.children.length &&
-				((!0 === a.sedReplace && s.startsWith('s/')) ||
-					((null === (t = a.autocomplete) || void 0 === t ? void 0 : t.reactions) === !0 && s.startsWith('+')))
-			);
+			return 1 === n.length && 1 === r.children.length && ((!0 === a.sedReplace && s.startsWith('s/')) || ((null === (t = a.autocomplete) || void 0 === t ? void 0 : t.reactions) === !0 && s.startsWith('+')));
 		},
 		focus(e) {
 			!s.F3.isFocused(e) && (s.F3.focus(e), s.F3.deselect(e));
@@ -216,16 +208,8 @@ let c = {
 				i = null,
 				a = null;
 			return (
-				h.equals(e.selection.anchor, n)
-					? (i = 'start')
-					: h.equals(e.selection.anchor, r)
-						? (i = 'end')
-						: p.includes(t, e.selection.anchor) && (i = 'inside'),
-				h.equals(e.selection.focus, n)
-					? (a = 'start')
-					: h.equals(e.selection.focus, r)
-						? (a = 'end')
-						: p.includes(t, e.selection.focus) && (a = 'inside'),
+				h.equals(e.selection.anchor, n) ? (i = 'start') : h.equals(e.selection.anchor, r) ? (i = 'end') : p.includes(t, e.selection.anchor) && (i = 'inside'),
+				h.equals(e.selection.focus, n) ? (a = 'start') : h.equals(e.selection.focus, r) ? (a = 'end') : p.includes(t, e.selection.focus) && (a = 'inside'),
 				{
 					anchor: i,
 					focus: a
@@ -242,13 +226,7 @@ let c = {
 		...a.W_,
 		updateElement(e, t) {
 			let n = c.node(e, t[1]);
-			return (
-				i()(!c.isEditor(t[0]), 'Element is the root node'),
-				i()(null != n, 'Failed to find element'),
-				i()(_.isElement(n[0]), 'Node at this path is no longer an element'),
-				i()(n[0].type === t[0].type, 'Node at this path is a different type'),
-				n
-			);
+			return i()(!c.isEditor(t[0]), 'Element is the root node'), i()(null != n, 'Failed to find element'), i()(_.isElement(n[0]), 'Node at this path is no longer an element'), i()(n[0].type === t[0].type, 'Node at this path is a different type'), n;
 		},
 		markdown(e, t, n) {
 			var r;
@@ -334,7 +312,7 @@ let c = {
 					};
 		}
 	},
-	I = {
+	m = {
 		equals: (e, t) => (null == e && null == t) || (null != e && null != t && p.equals(e, t)),
 		isValid(e, t) {
 			if (null == t) return !1;
@@ -345,14 +323,14 @@ let c = {
 			return E.isText(i) && E.isText(a) && n.offset <= i.text.length && r.offset <= a.text.length;
 		}
 	},
-	m = (e, t) => {
+	I = (e, t) => {
 		let n = (t.top + t.bottom) / 2;
 		return e.top <= n && e.bottom >= n;
 	},
 	T = (e, t, n) => {
 		let r = c.toDOMRange(e, t).getBoundingClientRect(),
 			i = c.toDOMRange(e, n).getBoundingClientRect();
-		return m(r, i) && m(i, r);
+		return I(r, i) && I(i, r);
 	},
 	g = (e, t, n, r) => {
 		let i = {

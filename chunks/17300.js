@@ -18,7 +18,7 @@ function p() {
 	}),
 		c.Z.getMode() === E.pM4.PUSH_TO_TALK && i.Z.requestPermission(f.Eu.INPUT_MONITORING);
 }
-class I extends r.Z {
+class m extends r.Z {
 	handleVoiceChannelSelect(e) {
 		let { channelId: t } = e;
 		null == t && (h = null);
@@ -29,12 +29,7 @@ class I extends r.Z {
 			var t, n, r, i;
 			let { userId: c, channelId: _ } = e;
 			if (null != _ && l.default.getId() === c && null != d.Z.getRTCConnectionId() && h !== _) {
-				if (
-					((t = c),
-					(n = _),
-					(null === (r = u.Z.getChannel(n)) || void 0 === r ? !void 0 : !r.isListenModeCapable()) ||
-						a.ZP.isSpeaker(t, n))
-				) {
+				if (((t = c), (n = _), (null === (r = u.Z.getChannel(n)) || void 0 === r ? !void 0 : !r.isListenModeCapable()) || a.ZP.isSpeaker(t, n))) {
 					(h = _), p();
 					return;
 				}
@@ -61,4 +56,4 @@ class I extends r.Z {
 				: (t[n] = r);
 	}
 }
-t.Z = new I();
+t.Z = new m();

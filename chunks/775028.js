@@ -103,15 +103,7 @@ let M = a.memo(function () {
 		);
 	}),
 	P = a.memo(function (e) {
-		let {
-				channel: n,
-				category: a,
-				guild: i,
-				isFirstChannel: o,
-				isLastChannel: m,
-				onChannelClick: Z,
-				tooltipDirection: T = 'right'
-			} = e,
+		let { channel: n, category: a, guild: i, isFirstChannel: o, isLastChannel: m, onChannelClick: Z, tooltipDirection: T = 'right' } = e,
 			{ isSubscriptionGated: L } = (0, _.Z)(n.id),
 			P = (0, v.Mf)(i.id, n.id, a.id),
 			y = (0, v.t4)(i.id, n.id, a.id),
@@ -124,9 +116,7 @@ let M = a.memo(function () {
 			W = (e) => {
 				n.isGuildVocal()
 					? (0, u.jW)(e, async () => {
-							let { default: e } = await Promise.all([t.e('79695'), t.e('18320'), t.e('83331')]).then(
-								t.bind(t, 213202)
-							);
+							let { default: e } = await Promise.all([t.e('79695'), t.e('18320'), t.e('83331')]).then(t.bind(t, 213202));
 							return (t) =>
 								(0, l.jsx)(e, {
 									...t,
@@ -135,9 +125,7 @@ let M = a.memo(function () {
 								});
 						})
 					: (0, u.jW)(e, async () => {
-							let { default: e } = await Promise.all([t.e('79695'), t.e('18320'), t.e('54310')]).then(
-								t.bind(t, 373651)
-							);
+							let { default: e } = await Promise.all([t.e('79695'), t.e('18320'), t.e('54310')]).then(t.bind(t, 373651));
 							return (t) =>
 								(0, l.jsx)(e, {
 									...t,
@@ -204,9 +192,7 @@ let M = a.memo(function () {
 							}),
 							!0),
 			z = R.Z.Messages.CHANNEL_BROWSER_VIEW;
-		n.isGuildStageVoice() || n.isGuildVoice()
-			? (z = R.Z.Messages.JOIN)
-			: n.isForumLikeChannel() && (z = R.Z.Messages.OPEN);
+		n.isGuildStageVoice() || n.isGuildVoice() ? (z = R.Z.Messages.JOIN) : n.isForumLikeChannel() && (z = R.Z.Messages.OPEN);
 		let V = y ? 'text-muted' : 'text-normal',
 			q = (0, d.useToken)(y ? c.Z.colors.TEXT_MUTED : c.Z.colors.TEXT_NORMAL).hex();
 		return (0, l.jsxs)(l.Fragment, {

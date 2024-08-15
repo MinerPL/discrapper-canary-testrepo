@@ -11,9 +11,7 @@ function r(e) {
 		if (null == n || !(n.length > 0)) return;
 		{
 			let e = n.map((e) => e.application.name);
-			return l.Z.Messages.GUILD_SIDEBAR_VOICE_CHANNEL_DESCRIBED_BY_LABEL_ACTIVITIES.format({
-				activeActivities: e.join(', ')
-			});
+			return l.Z.Messages.GUILD_SIDEBAR_VOICE_CHANNEL_DESCRIBED_BY_LABEL_ACTIVITIES.format({ activeActivities: e.join(', ') });
 		}
 	}
 }

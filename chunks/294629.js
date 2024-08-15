@@ -14,14 +14,7 @@ function u(e) {
 	return (0, i.cj)([s.default, o.Z, l.Z, r.Z, a.Z], () =>
 		(function (e) {
 			var t;
-			let {
-					channel: n,
-					authenticationStore: i = s.default,
-					voiceStateStore: u = o.Z,
-					mediaEngineStore: d = l.Z,
-					permissionStore: h = r.Z,
-					impersonateStore: m = a.Z
-				} = e,
+			let { channel: n, authenticationStore: i = s.default, voiceStateStore: u = o.Z, mediaEngineStore: d = l.Z, permissionStore: h = r.Z, impersonateStore: m = a.Z } = e,
 				p = null != n ? u.getVoiceState(n.getGuildId(), i.getId()) : null,
 				_ = d.isSelfMute() || d.isSelfMutedTemporarily(),
 				f = null == n ? void 0 : n.getGuildId(),

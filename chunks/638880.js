@@ -18,7 +18,7 @@ var r = n(812206),
 	h = n(701488);
 async function p(e) {
 	let t,
-		{ applicationId: n, activityChannelId: p, locationObject: I, analyticsLocations: m, componentId: T } = e,
+		{ applicationId: n, activityChannelId: p, locationObject: m, analyticsLocations: I, componentId: T } = e,
 		g = (0, d.Z)(),
 		S = i.Z.getChannel(p),
 		A = null == S ? void 0 : S.getGuildId(),
@@ -27,13 +27,7 @@ async function p(e) {
 		O = u.ZP.getCurrentEmbeddedActivity();
 	if (null == S || (N && !S.isPrivate()) || null == p || null == v) return Promise.resolve(!1);
 	let R = u.ZP.getCurrentEmbeddedActivity();
-	if (
-		((null == R ? void 0 : R.applicationId) != null && (t = r.Z.getApplication(null == R ? void 0 : R.applicationId)),
-		a.Z.getVoiceChannelId() === p &&
-			(null == O ? void 0 : O.applicationId) === n &&
-			(null == O ? void 0 : O.channelId) === a.Z.getVoiceChannelId())
-	)
-		return (0, f.Z)(A, p), Promise.resolve(!0);
+	if (((null == R ? void 0 : R.applicationId) != null && (t = r.Z.getApplication(null == R ? void 0 : R.applicationId)), a.Z.getVoiceChannelId() === p && (null == O ? void 0 : O.applicationId) === n && (null == O ? void 0 : O.channelId) === a.Z.getVoiceChannelId())) return (0, f.Z)(A, p), Promise.resolve(!0);
 	if (
 		!(await (0, c.p)({
 			applicationId: n,
@@ -63,8 +57,8 @@ async function p(e) {
 			applicationId: n,
 			isStart: !1,
 			embeddedActivitiesManager: g,
-			analyticsLocations: m,
-			locationObject: I,
+			analyticsLocations: I,
+			locationObject: m,
 			componentId: T
 		})
 	);

@@ -17,21 +17,7 @@ var a = n(735250),
 	m = n(946305);
 function f(e) {
 	var t, n, l, f;
-	let {
-			application: C,
-			className: p,
-			childrenClassName: h,
-			showAdd: x,
-			showMutualGuilds: I,
-			showPrimaryCategory: R,
-			children: T,
-			onView: b,
-			guildCountPosition: A = 'top',
-			subheaderTextVariant: v = 'text-sm/normal',
-			mutualGuildShownMax: E,
-			guildIconSize: P,
-			source: N
-		} = e,
+	let { application: C, className: p, childrenClassName: h, showAdd: x, showMutualGuilds: I, showPrimaryCategory: R, children: T, onView: b, guildCountPosition: A = 'top', subheaderTextVariant: v = 'text-sm/normal', mutualGuildShownMax: E, guildIconSize: P, source: N } = e,
 		S = (0, s.JA)(C.id),
 		j = o.ZP.getApplicationIconURL({
 			id: C.id,
@@ -50,10 +36,7 @@ function f(e) {
 			[O, N]
 		),
 		Z = null === (t = C.categories) || void 0 === t ? void 0 : t[0],
-		L =
-			(null !== (l = null === (n = C.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== l
-				? l
-				: 0) > 0 || M.length > 0,
+		L = (null !== (l = null === (n = C.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== l ? l : 0) > 0 || M.length > 0,
 		Y = (0, a.jsx)(u.Z, {
 			application: C,
 			textVariant: v,

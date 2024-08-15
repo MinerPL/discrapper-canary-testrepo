@@ -17,28 +17,17 @@ var a = n(120356),
 	m = n(51144),
 	p = n(808794);
 function _(e) {
-	let {
-			user: t,
-			row: n,
-			hideDiscriminator: a,
-			comparator: _,
-			selected: f,
-			checked: E,
-			onClick: g,
-			onMouseEnter: C,
-			'aria-setsize': I,
-			'aria-posinset': x
-		} = e,
+	let { user: t, row: n, hideDiscriminator: a, comparator: _, selected: f, checked: E, onClick: C, onMouseEnter: g, 'aria-setsize': I, 'aria-posinset': x } = e,
 		T = (0, r.e7)([h.Z], () => h.Z.getStatus(t.id)),
 		N = (0, l.JA)(String(t.id));
 	return (0, i.jsx)(o.Clickable, {
 		id: 'user-row-'.concat(n),
 		className: p.friendWrapper,
 		onClick: () => {
-			null != g && g(t.id);
+			null != C && C(t.id);
 		},
 		onMouseEnter: () => {
-			null != C && C(n);
+			null != g && g(n);
 		},
 		...N,
 		role: 'option',

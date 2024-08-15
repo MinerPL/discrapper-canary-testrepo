@@ -75,22 +75,10 @@ function S(e) {
 						: O.rawValue,
 		Y = null != H ? H.split(',') : [],
 		W = (0, r.Wu)([h.default], () => Y.map((e) => h.default.getUser(e)).filter(Boolean)),
-		K =
-			y && null != k
-				? p.Z.Messages.WAVED_AT_USER.format({ username: F })
-				: p.Z.Messages.WAVED_AT_YOU.format({ username: G.nick }),
+		K = y && null != k ? p.Z.Messages.WAVED_AT_USER.format({ username: F }) : p.Z.Messages.WAVED_AT_YOU.format({ username: G.nick }),
 		z = null != D && null != j,
 		Q = null;
-	(Q = z
-		? y || V
-			? p.Z.Messages.YOU_ARE_IN_CHANNEL.format({
-					channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t)
-				})
-			: p.Z.Messages.THEY_ARE_IN_CHANNEL.format({
-					channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t)
-				})
-		: p.Z.Messages.CANNOT_ACCESS_HANGOUT),
-		0 === w.length && (Q = y ? p.Z.Messages.HANGOUT_OVER_SENDER : p.Z.Messages.HANGOUT_OVER_RECEIVER);
+	(Q = z ? (y || V ? p.Z.Messages.YOU_ARE_IN_CHANNEL.format({ channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t) }) : p.Z.Messages.THEY_ARE_IN_CHANNEL.format({ channelHook: (e, t) => (0, i.jsx)(_.Z, { channel: null != j ? j : void 0 }, t) })) : p.Z.Messages.CANNOT_ACCESS_HANGOUT), 0 === w.length && (Q = y ? p.Z.Messages.HANGOUT_OVER_SENDER : p.Z.Messages.HANGOUT_OVER_RECEIVER);
 	let q = y ? p.Z.Messages.WAVE_AGAIN : p.Z.Messages.WAVE_BACK;
 	return (0, i.jsxs)('div', {
 		children: [

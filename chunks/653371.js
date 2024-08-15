@@ -58,15 +58,7 @@ class I extends i.PureComponent {
 		this.setState({ isAppCompatible: p.KO });
 	}
 	render() {
-		let {
-			className: e,
-			mainContentId: t,
-			skipToContentLabel: a,
-			NavigationMessages: i,
-			onChangeLocale: r,
-			TrackClick: o,
-			avoidRouter: s
-		} = this.props;
+		let { className: e, mainContentId: t, skipToContentLabel: a, NavigationMessages: i, onChangeLocale: r, TrackClick: o, avoidRouter: s } = this.props;
 		return (0, n.jsxs)('header', {
 			className: l()(k.header, e),
 			children: [

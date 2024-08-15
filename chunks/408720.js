@@ -48,8 +48,7 @@ let p = (0, i._I)((e = {}) => {
 							};
 							if ('assert' === t.level) {
 								if (!1 !== t.args[0]) return;
-								(r.message = `Assertion failed: ${(0, A.nK)(t.args.slice(1), ' ') || 'console.assert'}`),
-									(r.data.arguments = t.args.slice(1));
+								(r.message = `Assertion failed: ${(0, A.nK)(t.args.slice(1), ' ') || 'console.assert'}`), (r.data.arguments = t.args.slice(1));
 							}
 							(0, E.n)(r, {
 								input: t.args,
@@ -66,14 +65,7 @@ let p = (0, i._I)((e = {}) => {
 								if ((0, _.s3)() !== e) return;
 								let o = 'object' == typeof t ? t.serializeAttribute : void 0,
 									i = 'object' == typeof t && 'number' == typeof t.maxStringLength ? t.maxStringLength : void 0;
-								i &&
-									i > 1024 &&
-									(d.X &&
-										u.kg.warn(
-											`\`dom.maxStringLength\` cannot exceed 1024, but a value of ${i} was configured. Sentry will use 1024 instead.`
-										),
-									(i = 1024)),
-									'string' == typeof o && (o = [o]);
+								i && i > 1024 && (d.X && u.kg.warn(`\`dom.maxStringLength\` cannot exceed 1024, but a value of ${i} was configured. Sentry will use 1024 instead.`), (i = 1024)), 'string' == typeof o && (o = [o]);
 								try {
 									let e = r.event,
 										t = (function (e) {

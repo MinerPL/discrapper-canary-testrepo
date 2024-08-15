@@ -15,23 +15,14 @@ var s = n(120356),
 	c = n(692547),
 	d = n(911404);
 function _(e) {
-	let {
-			className: t,
-			percents: n,
-			size: r = 'small',
-			foregroundColors: i = [c.Z.unsafe_rawColors.BRAND_500.css],
-			backgroundColor: s = 'var(--background-modifier-active)',
-			animate: l = !0
-		} = e,
+	let { className: t, percents: n, size: r = 'small', foregroundColors: i = [c.Z.unsafe_rawColors.BRAND_500.css], backgroundColor: s = 'var(--background-modifier-active)', animate: l = !0 } = e,
 		_ = u()
 			.zip(n, i)
 			.map((e, t) => {
 				let n,
 					[i, s] = e;
 				return (
-					(n = Array.isArray(s)
-						? { background: 'linear-gradient(to right, '.concat(s[0], ', ').concat(s[1], ')') }
-						: { backgroundColor: s }),
+					(n = Array.isArray(s) ? { background: 'linear-gradient(to right, '.concat(s[0], ', ').concat(s[1], ')') } : { backgroundColor: s }),
 					(0, a.jsx)(
 						'div',
 						{

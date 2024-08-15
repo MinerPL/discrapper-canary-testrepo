@@ -196,13 +196,9 @@ function eI(e) {
 	return (0, t.jsx)(
 		e_,
 		{
-			description: l
-				? K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_PROFILE_TIER_1.format()
-				: K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_PROFILE.format(),
+			description: l ? K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_PROFILE_TIER_1.format() : K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_PROFILE.format(),
 			onLearnMore: () => {
-				a(),
-					T.Z.open(W.oAB.PROFILE_CUSTOMIZATION),
-					y.default.track(W.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'user_profile_customization' });
+				a(), T.Z.open(W.oAB.PROFILE_CUSTOMIZATION), y.default.track(W.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'user_profile_customization' });
 			},
 			renderVisual: () => o
 		},
@@ -221,12 +217,9 @@ function eE(e) {
 	return (0, t.jsx)(
 		e_,
 		{
-			description: l
-				? K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_EMOJI_STICKERS_TIER_1.format()
-				: K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_EMOJI_STICKERS.format(),
+			description: l ? K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_EMOJI_STICKERS_TIER_1.format() : K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_EMOJI_STICKERS.format(),
 			onLearnMore: () => {
-				window.open(D.Z.getArticleURL(W.BhN.PREMIUM_DETAILS)),
-					y.default.track(W.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'emojis_stickers' });
+				window.open(D.Z.getArticleURL(W.BhN.PREMIUM_DETAILS)), y.default.track(W.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'emojis_stickers' });
 			},
 			renderVisual: () =>
 				(null != a && a.length > 0) || (!l && null != i && i.length > 0)
@@ -296,23 +289,16 @@ function em(e) {
 				});
 			let n = null,
 				t = 0;
-			return (
-				s.size > 0 && ([n, t] = Array.from(s.entries()).reduce((e, s) => (s[1] > e[1] ? s : e))), [U.Z.getGuild(n), t]
-			);
+			return s.size > 0 && ([n, t] = Array.from(s.entries()).reduce((e, s) => (s[1] > e[1] ? s : e))), [U.Z.getGuild(n), t];
 		}),
 		c = null != l && o > 0,
 		_ = eu().boostItemVisual;
 	return (0, t.jsx)(
 		e_,
 		{
-			description:
-				s === w.p9.TIER_1
-					? K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BOOSTS_TIER_1.format()
-					: K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BOOSTS.format(),
+			description: s === w.p9.TIER_1 ? K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BOOSTS_TIER_1.format() : K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BOOSTS.format(),
 			onLearnMore: () => {
-				n(),
-					T.Z.open(W.oAB.GUILD_BOOSTING),
-					y.default.track(W.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'boosts' });
+				n(), T.Z.open(W.oAB.GUILD_BOOSTING), y.default.track(W.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'boosts' });
 			},
 			renderVisual: () =>
 				c
@@ -366,8 +352,7 @@ let eC = () => {
 		{
 			description: K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SCREENSHARE.format(),
 			onLearnMore: () => {
-				window.open(D.Z.getArticleURL(W.BhN.STREAM_QUALITY_SETTINGS)),
-					y.default.track(W.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'screen_share' });
+				window.open(D.Z.getArticleURL(W.BhN.STREAM_QUALITY_SETTINGS)), y.default.track(W.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'screen_share' });
 			},
 			renderVisual: () =>
 				(0, t.jsx)('img', {
@@ -384,13 +369,9 @@ function eT(e) {
 	return (0, t.jsx)(
 		e_,
 		{
-			description:
-				s === w.p9.TIER_2
-					? K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_UPLOADS_MESSAGES.format()
-					: K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_UPLOADS_MESSAGES_TIER_1.format(),
+			description: s === w.p9.TIER_2 ? K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_UPLOADS_MESSAGES.format() : K.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_UPLOADS_MESSAGES_TIER_1.format(),
 			onLearnMore: () => {
-				window.open(D.Z.getArticleURL(W.BhN.PREMIUM_DETAILS)),
-					y.default.track(W.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'msgs_uploads' });
+				window.open(D.Z.getArticleURL(W.BhN.PREMIUM_DETAILS)), y.default.track(W.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'msgs_uploads' });
 			},
 			renderVisual: () =>
 				(0, t.jsx)('img', {
@@ -408,13 +389,9 @@ let eN = (e) => {
 	return (0, t.jsx)(
 		e_,
 		{
-			description: ('PL' === s
-				? K.Z.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_WARNING_NO_HELP_CENTER_LINK
-				: K.Z.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_WARNING_NO_HELP_CENTER_LINK
-			).format(),
+			description: ('PL' === s ? K.Z.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_WARNING_NO_HELP_CENTER_LINK : K.Z.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_WARNING_NO_HELP_CENTER_LINK).format(),
 			onLearnMore: () => {
-				window.open(D.Z.getArticleURL(W.BhN.LOCALIZED_PRICING)),
-					y.default.track(W.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'grandfathered_prices' });
+				window.open(D.Z.getArticleURL(W.BhN.LOCALIZED_PRICING)), y.default.track(W.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: 'grandfathered_prices' });
 			},
 			renderVisual: () =>
 				(0, t.jsx)('img', {
@@ -431,11 +408,7 @@ function eS(e) {
 		c = (0, Y.U)(),
 		u = a.useMemo(() => {
 			let e = [];
-			switch (
-				(c &&
-					(o()(null != l, 'Subscription billing country should not be null'), e.push((0, t.jsx)(eN, { country: l }))),
-				n)
-			) {
+			switch ((c && (o()(null != l, 'Subscription billing country should not be null'), e.push((0, t.jsx)(eN, { country: l }))), n)) {
 				case w.p9.TIER_0:
 					e.push((0, t.jsx)(eE, { premiumType: n }), (0, t.jsx)(eT, { premiumType: n }));
 					break;
@@ -505,21 +478,7 @@ function eS(e) {
 	});
 }
 s.Z = function (e) {
-	let {
-			premiumType: s,
-			titleText: n,
-			subtitleText: i,
-			footer: r,
-			onClose: l,
-			onDiscountClaim: c,
-			onContinue: u,
-			analyticsLocations: _,
-			isLoading: I = !1,
-			churnUserDiscountOffer: m = null,
-			isDowngrade: C = !1,
-			subtitleIcon: T,
-			subtitleClassName: N
-		} = e,
+	let { premiumType: s, titleText: n, subtitleText: i, footer: r, onClose: l, onDiscountClaim: c, onContinue: u, analyticsLocations: _, isLoading: I = !1, churnUserDiscountOffer: m = null, isDowngrade: C = !1, subtitleIcon: T, subtitleClassName: N } = e,
 		S = (0, d.e7)([v.default], () => {
 			let e = v.default.getCurrentUser();
 			return o()(null != e, 'ProfileItem: currentUser cannot be undefined'), e;

@@ -28,10 +28,7 @@ let h = 0,
 function g(e) {
 	let { position: t, onChange: n } = e,
 		[a] = s.useState(() => p()),
-		h =
-			t === l._vf.DISABLED
-				? c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_DISABLED
-				: c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_POSITION.format({ position: f(t) });
+		h = t === l._vf.DISABLED ? c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_DISABLED : c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_POSITION.format({ position: f(t) });
 	return (0, i.jsxs)('div', {
 		children: [
 			(0, i.jsx)(r.FocusRing, {

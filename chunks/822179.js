@@ -37,10 +37,10 @@ let h = new l.Z({
 	p = () => {
 		d.Z.isLoaded && h.compute();
 	},
-	I = () => {
+	m = () => {
 		p();
 	};
-function m() {
+function I() {
 	var e;
 	let t = null === (e = u.Z.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
 	if (null == t) return !1;
@@ -54,7 +54,7 @@ function m() {
 }
 class T extends (r = s.ZP.PersistedStore) {
 	initialize(e) {
-		this.waitFor(d.Z), null != e && (f = e), this.syncWith([d.Z], I), this.syncWith([u.Z], m);
+		this.waitFor(d.Z), null != e && (f = e), this.syncWith([d.Z], m), this.syncWith([u.Z], I);
 	}
 	getState() {
 		return f;

@@ -53,9 +53,7 @@ s.Z = function (e) {
 									(0, n.jsx)(o.Text, {
 										variant: 'text-sm/bold',
 										color: 'text-muted',
-										children: T.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_SUBSCRIPTION_COUNT.format({
-											subscriptions: N.premiumSubscriberCount
-										})
+										children: T.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_SUBSCRIPTION_COUNT.format({ subscriptions: N.premiumSubscriberCount })
 									}),
 									(0, n.jsx)('div', { className: S.separator }),
 									(0, n.jsx)(o.Text, {

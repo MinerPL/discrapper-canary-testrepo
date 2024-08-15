@@ -24,9 +24,7 @@ let E = (e) => {
 		i = null != r && r.trial_id === N.a7,
 		l = R.Z.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT;
 	return (
-		void 0 !== t
-			? (l = R.Z.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({ percent: t }))
-			: i && (l = R.Z.Messages.REFERRAL_PROGRAM_TWO_WEEK_TRIAL),
+		void 0 !== t ? (l = R.Z.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({ percent: t })) : i && (l = R.Z.Messages.REFERRAL_PROGRAM_TWO_WEEK_TRIAL),
 		(0, s.jsx)('div', {
 			className: I.trialBadgeContainer,
 			children: (0, s.jsx)(c.Text, {
@@ -40,20 +38,7 @@ let E = (e) => {
 n.Z = function (e) {
 	var n;
 	let t;
-	let {
-			hideCloseButton: r = !1,
-			hideCloseOnFullScreen: p,
-			shouldShowPrice: m,
-			plan: M,
-			renderAnimation: _,
-			onClose: g,
-			isGift: x,
-			upgradeToPremiumType: v,
-			headerTheme: A = N.nL.DEFAULT,
-			className: Z,
-			showTrialBadge: j = !1,
-			showDiscountBadge: O = !1
-		} = e,
+	let { hideCloseButton: r = !1, hideCloseOnFullScreen: p, shouldShowPrice: m, plan: M, renderAnimation: _, onClose: g, isGift: x, upgradeToPremiumType: v, headerTheme: A = N.nL.DEFAULT, className: Z, showTrialBadge: j = !1, showDiscountBadge: O = !1 } = e,
 		F = v === N.p9.TIER_2;
 	t = v === N.p9.TIER_0 ? o.Z : v === N.p9.TIER_1 ? u.Z : C.Z;
 	let H = (0, i.e7)([l.Z], () => l.Z.useReducedMotion),

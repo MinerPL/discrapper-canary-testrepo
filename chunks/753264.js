@@ -62,36 +62,30 @@ function c(e, t, n) {
 	});
 	return {
 		labelProps: f,
-		listBoxProps: (0, r.dG)(
-			o,
-			_,
-			'multiple' === t.selectionManager.selectionMode ? { 'aria-multiselectable': 'true' } : {},
-			{
-				role: 'listbox',
-				...(0, r.dG)(h, d)
-			}
-		)
+		listBoxProps: (0, r.dG)(o, _, 'multiple' === t.selectionManager.selectionMode ? { 'aria-multiselectable': 'true' } : {}, {
+			role: 'listbox',
+			...(0, r.dG)(h, d)
+		})
 	};
 }
 function d(e, t, n) {
 	var a, c, d, _, E, f, h;
 	let { key: p } = e,
-		I = l.get(t),
-		m = null !== (c = e.isDisabled) && void 0 !== c ? c : t.disabledKeys.has(p),
+		m = l.get(t),
+		I = null !== (c = e.isDisabled) && void 0 !== c ? c : t.disabledKeys.has(p),
 		T = null !== (d = e.isSelected) && void 0 !== d ? d : t.selectionManager.isSelected(p),
-		g = null !== (_ = e.shouldSelectOnPressUp) && void 0 !== _ ? _ : null == I ? void 0 : I.shouldSelectOnPressUp,
-		S = null !== (E = e.shouldFocusOnHover) && void 0 !== E ? E : null == I ? void 0 : I.shouldFocusOnHover,
-		A = null !== (f = e.shouldUseVirtualFocus) && void 0 !== f ? f : null == I ? void 0 : I.shouldUseVirtualFocus,
-		N = null !== (h = e.isVirtualized) && void 0 !== h ? h : null == I ? void 0 : I.isVirtualized,
+		g = null !== (_ = e.shouldSelectOnPressUp) && void 0 !== _ ? _ : null == m ? void 0 : m.shouldSelectOnPressUp,
+		S = null !== (E = e.shouldFocusOnHover) && void 0 !== E ? E : null == m ? void 0 : m.shouldFocusOnHover,
+		A = null !== (f = e.shouldUseVirtualFocus) && void 0 !== f ? f : null == m ? void 0 : m.shouldUseVirtualFocus,
+		N = null !== (h = e.isVirtualized) && void 0 !== h ? h : null == m ? void 0 : m.isVirtualized,
 		v = (0, r.mp)(),
 		O = (0, r.mp)(),
 		R = {
 			role: 'option',
-			'aria-disabled': m || void 0,
+			'aria-disabled': I || void 0,
 			'aria-selected': 'none' !== t.selectionManager.selectionMode ? T : void 0
 		};
-	!((0, r.V5)() && (0, r.Pf)()) &&
-		((R['aria-label'] = e['aria-label']), (R['aria-labelledby'] = v), (R['aria-describedby'] = O));
+	!((0, r.V5)() && (0, r.Pf)()) && ((R['aria-label'] = e['aria-label']), (R['aria-labelledby'] = v), (R['aria-describedby'] = O));
 	let C = t.collection.getItem(p);
 	if (N) {
 		let e = Number(null == C ? void 0 : C.index);
@@ -111,24 +105,22 @@ function d(e, t, n) {
 			allowsDifferentPressOrigin: g && S,
 			isVirtualized: N,
 			shouldUseVirtualFocus: A,
-			isDisabled: m,
-			onAction: (null == I ? void 0 : I.onAction)
+			isDisabled: I,
+			onAction: (null == m ? void 0 : m.onAction)
 				? () => {
 						var e;
-						return null == I ? void 0 : null === (e = I.onAction) || void 0 === e ? void 0 : e.call(I, p);
+						return null == m ? void 0 : null === (e = m.onAction) || void 0 === e ? void 0 : e.call(m, p);
 					}
 				: void 0,
-			linkBehavior: null == I ? void 0 : I.linkBehavior
+			linkBehavior: null == m ? void 0 : m.linkBehavior
 		}),
 		{ hoverProps: P } = (0, i.XI)({
-			isDisabled: m || !S,
+			isDisabled: I || !S,
 			onHoverStart() {
 				!(0, i.E)() && (t.selectionManager.setFocused(!0), t.selectionManager.setFocusedKey(p));
 			}
 		}),
-		U = (0, r.zL)(null == C ? void 0 : C.props, {
-			isLink: !!(null == C ? void 0 : null === (a = C.props) || void 0 === a ? void 0 : a.href)
-		});
+		U = (0, r.zL)(null == C ? void 0 : C.props, { isLink: !!(null == C ? void 0 : null === (a = C.props) || void 0 === a ? void 0 : a.href) });
 	return (
 		delete U.id,
 		{
@@ -142,7 +134,7 @@ function d(e, t, n) {
 			isFocused: L,
 			isFocusVisible: L && (0, i.E)(),
 			isSelected: T,
-			isDisabled: m,
+			isDisabled: I,
 			isPressed: D,
 			allowsSelection: M,
 			hasAction: b

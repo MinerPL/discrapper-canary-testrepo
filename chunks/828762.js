@@ -38,11 +38,7 @@ let U = new u.Z('ProductAttachmentManager');
 class f {
 	addAttachment(e, A) {
 		let t = this.target.getMaxAttachmentsCount();
-		if (this.uploads.length >= t)
-			throw (
-				(r.uv.announce(m.Z.Messages.GUILD_PRODUCT_A11Y_TOO_MANY_ATTACHMENTS.format({ maxAttachmentsCount: t })),
-				Error('Too many attachments'))
-			);
+		if (this.uploads.length >= t) throw (r.uv.announce(m.Z.Messages.GUILD_PRODUCT_A11Y_TOO_MANY_ATTACHMENTS.format({ maxAttachmentsCount: t })), Error('Too many attachments'));
 		e.target = d.e.GUILD_PRODUCT_ATTACHMENT;
 		let a = new l.n(e, this.guildId);
 		a.upload(),
@@ -249,7 +245,6 @@ function v(e, A) {
 		saveError: I,
 		hasUnsavedAttachmentChanges: O,
 		canAttachFiles: D.length < c.target.getMaxAttachmentsCount(),
-		canAttachArchives:
-			null !== (t = null == l ? void 0 : l.hasFeature(h.oNc.GUILD_PRODUCTS_ALLOW_ARCHIVED_FILE)) && void 0 !== t && t
+		canAttachArchives: null !== (t = null == l ? void 0 : l.hasFeature(h.oNc.GUILD_PRODUCTS_ALLOW_ARCHIVED_FILE)) && void 0 !== t && t
 	};
 }

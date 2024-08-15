@@ -12,14 +12,7 @@ var t = n(120356),
 	s = n(112831),
 	c = n(590862);
 function d(e) {
-	let {
-		text: i,
-		textSize: n = s.Z.Sizes.SIZE_12,
-		textColor: t = s.Z.Colors.STANDARD,
-		className: d,
-		button: u,
-		reducedRightPadding: _ = !1
-	} = e;
+	let { text: i, textSize: n = s.Z.Sizes.SIZE_12, textColor: t = s.Z.Colors.STANDARD, className: d, button: u, reducedRightPadding: _ = !1 } = e;
 	return (0, o.jsxs)('div', {
 		className: r()(_ ? c.noticeWithoutRightPadding : c.noticeWithRightPadding, d),
 		children: [

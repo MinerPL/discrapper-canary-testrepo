@@ -13,8 +13,7 @@ function o(e) {
 	return {
 		$: t,
 		add: function (o) {
-			if (!(void 0 === e || t.length < e))
-				return (0, a.$2)(new n.b('Not adding Promise because buffer limit was reached.'));
+			if (!(void 0 === e || t.length < e)) return (0, a.$2)(new n.b('Not adding Promise because buffer limit was reached.'));
 			let i = o();
 			return -1 === t.indexOf(i) && t.push(i), i.then(() => r(i)).then(null, () => r(i).then(null, () => {})), i;
 		},

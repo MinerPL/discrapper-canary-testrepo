@@ -33,39 +33,18 @@ function _(e) {
 				stepProps: l
 			};
 		})(e),
-		{
-			step: h,
-			stepConfigs: E,
-			setBodyNode: x,
-			setFooterNode: I,
-			setModalOverlayNode: S,
-			setReadySlideId: C
-		} = (0, u.usePaymentContext)(),
+		{ step: h, stepConfigs: E, setBodyNode: x, setFooterNode: I, setModalOverlayNode: S, setReadySlideId: C } = (0, u.usePaymentContext)(),
 		T = E.find((e) => e.key === h);
 	o.useEffect(() => {
 		S(null);
 	}, [h, S]),
 		c()(null != T, 'Unknown step for current payment flow.');
-	let b =
-			null !== (i = null == T ? void 0 : null === (r = T.options) || void 0 === r ? void 0 : r.hideSlider) &&
-			void 0 !== i &&
-			i,
+	let b = null !== (i = null == T ? void 0 : null === (r = T.options) || void 0 === r ? void 0 : r.hideSlider) && void 0 !== i && i,
 		j = null == T ? void 0 : null === (n = T.options) || void 0 === n ? void 0 : n.bodyClassName,
-		v =
-			void 0 !== f && f
-				? p.sliderBodyLarge
-				: null == T
-					? void 0
-					: null === (s = T.options) || void 0 === s
-						? void 0
-						: s.sliderBodyClassName;
+		v = void 0 !== f && f ? p.sliderBodyLarge : null == T ? void 0 : null === (s = T.options) || void 0 === s ? void 0 : s.sliderBodyClassName;
 	return (0, l.jsxs)(l.Fragment, {
 		children: [
-			null === (_ = null == T ? void 0 : null === (a = T.options) || void 0 === a ? void 0 : a.renderHeader) ||
-			void 0 === _ ||
-			_
-				? m
-				: null,
+			null === (_ = null == T ? void 0 : null === (a = T.options) || void 0 === a ? void 0 : a.renderHeader) || void 0 === _ || _ ? m : null,
 			T.renderStep(N),
 			null == h || b
 				? null

@@ -22,11 +22,7 @@ t.default = (0, l.Z)(
 		function (e) {
 			let { soundGuild: t, sound: d, activeCallGuildId: l, onSelect: f } = e,
 				y = (function (e, t) {
-					let { canManageGuildExpressions: i } = (0, a.cj)(
-							[p.Z],
-							() => (null == t ? { canManageGuildExpressions: !1 } : p.Z.getGuildPermissionProps(t)),
-							[t]
-						),
+					let { canManageGuildExpressions: i } = (0, a.cj)([p.Z], () => (null == t ? { canManageGuildExpressions: !1 } : p.Z.getGuildPermissionProps(t)), [t]),
 						s = r.useCallback(() => {
 							if ((null == t ? void 0 : t.id) == null) return null;
 							(0, u.openModalLazy)(async () => {

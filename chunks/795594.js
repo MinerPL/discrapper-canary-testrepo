@@ -80,9 +80,7 @@ let B = (e) => {
 								e,
 								(0, n.jsx)(D.Z, {
 									className: b.infoBox,
-									children: L.Z.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT_DISCONNECT_WARNING.format({
-										applicationName: t.name
-									})
+									children: L.Z.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT_DISCONNECT_WARNING.format({ applicationName: t.name })
 								})
 							]
 						})),
@@ -211,8 +209,7 @@ let B = (e) => {
 					})(),
 					(() => {
 						let e = [];
-						for (let t of s)
-							e.push((0, g.jW)(t, s)), t === c.x.APPLICATIONS_COMMANDS && e.push(L.Z.Messages.SCOPE_DM_YOU);
+						for (let t of s) e.push((0, g.jW)(t, s)), t === c.x.APPLICATIONS_COMMANDS && e.push(L.Z.Messages.SCOPE_DM_YOU);
 						if (e.length > 0 || (null != i && i.length > 0))
 							return (0, n.jsx)(u.FormItem, {
 								faded: !0,
@@ -225,10 +222,7 @@ let B = (e) => {
 												'li',
 												{
 													className: r()(b.permission, Z.marginTop8),
-													children: [
-														(0, n.jsx)('i', { className: b.permissionCheckmark }),
-														(0, n.jsx)(u.FormText, { children: e })
-													]
+													children: [(0, n.jsx)('i', { className: b.permissionCheckmark }), (0, n.jsx)(u.FormText, { children: e })]
 												},
 												s
 											)
@@ -312,11 +306,7 @@ s.Z = () => {
 			}),
 		A = a.useMemo(() => {
 			let e = o.trim().toLowerCase();
-			return '' === e || null == s
-				? s
-				: s.length < 100
-					? s.filter((s) => l()(e, s.application.name.toLowerCase()))
-					: s.filter((s) => s.application.name.toLowerCase().includes(e));
+			return '' === e || null == s ? s : s.length < 100 ? s.filter((s) => l()(e, s.application.name.toLowerCase())) : s.filter((s) => s.application.name.toLowerCase().includes(e));
 		}, [s, o]);
 	return e
 		? (0, n.jsx)(S.Z, {})

@@ -17,10 +17,7 @@ var i = t(275726),
 	d = t(231338);
 function c(e, n, t) {
 	let s;
-	return (
-		(s = e.isPrivate() ? !e.isSystemDM() : t.can(d.Pl.SEND_MESSAGES, e) && t.can(d.Pl.READ_MESSAGE_HISTORY, e)) &&
-		i.V.REPLYABLE.has(n.type)
-	);
+	return (s = e.isPrivate() ? !e.isSystemDM() : t.can(d.Pl.SEND_MESSAGES, e) && t.can(d.Pl.READ_MESSAGE_HISTORY, e)) && i.V.REPLYABLE.has(n.type);
 }
 function E(e, n, t, i, s) {
 	let l = n.hasFlag(u.iLy.EPHEMERAL),

@@ -47,8 +47,7 @@ function B(e) {
 	if ((0, m.Z)(e) && !x.V$x.SELF_MENTIONABLE_SYSTEM.has(e.type)) return null;
 	null == t && (t = e.channel_id);
 	let n = f.Z.getChannel(t);
-	if (null == n || n.type === x.d4z.DM || (P.guildFilter === x.NgX.THIS_SERVER && n.getGuildId() !== S.Z.getGuildId()))
-		return null;
+	if (null == n || n.type === x.d4z.DM || (P.guildFilter === x.NgX.THIS_SERVER && n.getGuildId() !== S.Z.getGuildId())) return null;
 	let i = N.default.getId();
 	if (g.Z.isBlockedForMessage(e) || (0, T.Z)(e, i)) return null;
 	e = y(e);

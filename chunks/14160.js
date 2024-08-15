@@ -39,11 +39,7 @@ function o(e) {
 			return !1;
 		function i(e) {
 			let t = e.getBoundingClientRect();
-			return (
-				(!!(t.height > 0) && !!(t.width > 0)) ||
-				('hidden' != r.getComputedStyle(e).overflow &&
-					Array.from(e.childNodes).some((e) => 3 === e.nodeType || (a(e) && i(e))))
-			);
+			return (!!(t.height > 0) && !!(t.width > 0)) || ('hidden' != r.getComputedStyle(e).overflow && Array.from(e.childNodes).some((e) => 3 === e.nodeType || (a(e) && i(e))));
 		}
 		return (
 			!!(t || i(o)) &&
@@ -68,12 +64,7 @@ function o(e) {
 											;
 											a &&
 											!(function (e) {
-												return (
-													e == l ||
-													(!r.getComputedStyle(e).display.match(/^inline/) &&
-														('absolute' != t || 'static' != r.getComputedStyle(e).position) &&
-														!0)
-												);
+												return e == l || (!r.getComputedStyle(e).display.match(/^inline/) && ('absolute' != t || 'static' != r.getComputedStyle(e).position) && !0);
 											})(a);
 
 										)
@@ -108,9 +99,7 @@ function o(e) {
 											x: r.getComputedStyle(t).overflowX,
 											y: r.getComputedStyle(t).overflowY
 										};
-										return (
-											e == l && ((a.x = 'visible' == a.x ? 'auto' : a.x), (a.y = 'visible' == a.y ? 'auto' : a.y)), a
-										);
+										return e == l && ((a.x = 'visible' == a.x ? 'auto' : a.x), (a.y = 'visible' == a.y ? 'auto' : a.y)), a;
 									})(n);
 									if ('visible' == t.x && 'visible' == t.y) continue;
 									let u = n.getBoundingClientRect();

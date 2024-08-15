@@ -107,21 +107,7 @@ function B(e) {
 	);
 }
 function P(e) {
-	let {
-			guildId: n,
-			guildEvent: l,
-			guildEventId: a,
-			editBroadcastInfoData: c,
-			isEdit: E,
-			formErrors: x,
-			transitionState: m,
-			loading: N,
-			error: T,
-			onChange: h,
-			onSave: v,
-			onClose: S,
-			createdEvent: C
-		} = e,
+	let { guildId: n, guildEvent: l, guildEventId: a, editBroadcastInfoData: c, isEdit: E, formErrors: x, transitionState: m, loading: N, error: T, onChange: h, onSave: v, onClose: S, createdEvent: C } = e,
 		L = (0, I.Dt)(),
 		A = i.useRef(l),
 		Z = !(0, r.isEqual)(A.current, l),
@@ -333,8 +319,7 @@ function k(e) {
 				var l;
 				let s = (0, A.xC)(e.entityType),
 					[a] = (0, C.SU)(n, s);
-				(e.channelId = null !== (l = null == a ? void 0 : a.id) && void 0 !== l ? l : null),
-					e.entityType !== V.WX.EXTERNAL && T.entityType === V.WX.EXTERNAL && (e.entityMetadata = null);
+				(e.channelId = null !== (l = null == a ? void 0 : a.id) && void 0 !== l ? l : null), e.entityType !== V.WX.EXTERNAL && T.entityType === V.WX.EXTERNAL && (e.entityMetadata = null);
 			}
 			f((n) => ({
 				...n,
@@ -371,7 +356,4 @@ function k(e) {
 		createdEvent: M
 	});
 }
-((a = s || (s = {}))[(a.ENTITY = 0)] = 'ENTITY'),
-	(a[(a.SETTINGS = 1)] = 'SETTINGS'),
-	(a[(a.PREVIEW = 2)] = 'PREVIEW'),
-	(a[(a.SUCCESS = 3)] = 'SUCCESS');
+((a = s || (s = {}))[(a.ENTITY = 0)] = 'ENTITY'), (a[(a.SETTINGS = 1)] = 'SETTINGS'), (a[(a.PREVIEW = 2)] = 'PREVIEW'), (a[(a.SUCCESS = 3)] = 'SUCCESS');

@@ -33,9 +33,7 @@ function R(e) {
 		[P, b] = (function () {
 			let e = (0, r.e7)([m.Z], () => {
 				var e, t;
-				return null !== (t = null === (e = m.Z.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t
-					? t
-					: l.X.UNREADS;
+				return null !== (t = null === (e = m.Z.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : l.X.UNREADS;
 			});
 			return [
 				e,
@@ -54,11 +52,7 @@ function R(e) {
 		{ showTutorial: D, setSeenTutorial: j } = (function (e) {
 			let t = (0, r.e7)([m.Z], () => {
 					var e, t;
-					return (
-						null !== (t = null === (e = m.Z.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) &&
-						void 0 !== t &&
-						t
-					);
+					return null !== (t = null === (e = m.Z.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t;
 				}),
 				n = a.useCallback(() => {
 					I.hW.updateAsync(
@@ -83,12 +77,7 @@ function R(e) {
 		B = a.useCallback(() => {
 			y(), b(l.X.UNREADS);
 		}, [b, y]);
-	a.useEffect(
-		() => (
-			T.S.subscribe(S.CkL.TOGGLE_INBOX_UNREADS_TAB, B), () => void T.S.unsubscribe(S.CkL.TOGGLE_INBOX_UNREADS_TAB, B)
-		),
-		[B]
-	);
+	a.useEffect(() => (T.S.subscribe(S.CkL.TOGGLE_INBOX_UNREADS_TAB, B), () => void T.S.unsubscribe(S.CkL.TOGGLE_INBOX_UNREADS_TAB, B)), [B]);
 	let { showReminders: k } = E.Z.useExperiment({ location: 'RecentsPopout' }, { autoTrackExposure: !1 }),
 		{ enabled: G } = _.Z.useExperiment({ location: 'RecentsPopout' }, { autoTrackExposure: !1 }),
 		{ enabled: F } = d.Z.useExperiment({ location: 'RecentsPopout' });

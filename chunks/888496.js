@@ -282,11 +282,7 @@ function A(e) {
 	if (null == e.application_metadata || 0 === Object.keys(e.application_metadata).length || 0 === i.length) return a;
 	for (let r of o().sortBy(i, (s) => {
 		var t, n;
-		return null === (n = e.application_metadata) || void 0 === n
-			? void 0
-			: null === (t = n[s]) || void 0 === t
-				? void 0
-				: t.name;
+		return null === (n = e.application_metadata) || void 0 === n ? void 0 : null === (t = n[s]) || void 0 === t ? void 0 : t.name;
 	})) {
 		let i = e.application_metadata[r];
 		if (null == i) continue;

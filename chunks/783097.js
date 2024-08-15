@@ -52,11 +52,7 @@ function A(e) {
 	return C(t) && (0, d.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, u.udG.EMBEDDED);
 }
 function E(e) {
-	return C(e) && A({ application: e })
-		? e instanceof s.Z
-			? e.embeddedActivityConfig
-			: e.embedded_activity_config
-		: null;
+	return C(e) && A({ application: e }) ? (e instanceof s.Z ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
 function N(e) {
 	let { command: n, optionValues: t, context: s, commandTargetId: c, maxSizeCallback: d, sectionName: u } = e,

@@ -32,20 +32,7 @@ var i = t(481060),
 	j = t(612309),
 	L = t(392214);
 function R(e) {
-	let {
-			user: n,
-			currentUser: t,
-			guildId: R,
-			channelId: b,
-			messageId: C,
-			roleId: P,
-			sessionId: O,
-			initialSection: M,
-			initialSubsection: y,
-			transitionState: U,
-			onClose: D,
-			sourceAnalyticsLocations: F = []
-		} = e,
+	let { user: n, currentUser: t, guildId: R, channelId: b, messageId: C, roleId: P, sessionId: O, initialSection: M, initialSubsection: y, transitionState: U, onClose: D, sourceAnalyticsLocations: F = [] } = e,
 		B = R === g.ME ? void 0 : R,
 		w = (0, c.ZP)(n.id, B),
 		{ analyticsLocations: G } = (0, l.ZP)([...F, o.Z.SIMPLIFIED_PROFILE_MODAL]),

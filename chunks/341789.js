@@ -20,10 +20,7 @@ function I(e) {
 	let { onScroll: t, onGuildCardSeen: n, onGuildCardClick: o } = e,
 		c = (0, s.Wu)([l.ZP], () => {
 			var e, t;
-			return null !== (t = null === (e = l.ZP.getDiscoverableGuilds().featured) || void 0 === e ? void 0 : e.guilds) &&
-				void 0 !== t
-				? t
-				: m;
+			return null !== (t = null === (e = l.ZP.getDiscoverableGuilds().featured) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : m;
 		});
 	return (
 		a.useEffect(() => {
@@ -43,10 +40,7 @@ function g(e) {
 		_ = (0, d.lg)(t),
 		E = (0, s.Wu)([l.ZP], () => {
 			var e, t;
-			return null !== (t = null === (e = l.ZP.getDiscoverableGuilds()[_]) || void 0 === e ? void 0 : e.guilds) &&
-				void 0 !== t
-				? t
-				: m;
+			return null !== (t = null === (e = l.ZP.getDiscoverableGuilds()[_]) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : m;
 		});
 	return (
 		a.useEffect(() => {

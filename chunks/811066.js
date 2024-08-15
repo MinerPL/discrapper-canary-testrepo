@@ -23,17 +23,7 @@ function h(e, t, n) {
 		e
 	);
 }
-((o = i || (i = {})).THING = 'Thing'),
-	(o.PERSON = 'Person'),
-	(o.PRODUCT = 'Product'),
-	(o.OFFER = 'Offer'),
-	(o.AGGREGATE_OFFER = 'AggregateOffer'),
-	(o.RATING = 'Rating'),
-	(o.AGGREGATE_RATING = 'AggregateRating'),
-	(o.ORGANIZATION = 'Organization'),
-	(o.ITEM_PAGE = 'ItemPage'),
-	(o.UNIT_PRICE_SPECIFICATION = 'UnitPriceSpecification'),
-	(o.QUANTITATIVE_VALUE = 'QuantitativeValue');
+((o = i || (i = {})).THING = 'Thing'), (o.PERSON = 'Person'), (o.PRODUCT = 'Product'), (o.OFFER = 'Offer'), (o.AGGREGATE_OFFER = 'AggregateOffer'), (o.RATING = 'Rating'), (o.AGGREGATE_RATING = 'AggregateRating'), (o.ORGANIZATION = 'Organization'), (o.ITEM_PAGE = 'ItemPage'), (o.UNIT_PRICE_SPECIFICATION = 'UnitPriceSpecification'), (o.QUANTITATIVE_VALUE = 'QuantitativeValue');
 function m(e, t) {
 	return {
 		'@type': e,
@@ -74,24 +64,7 @@ function p(e) {
 function T(e) {
 	return m('QuantitativeValue', e);
 }
-((c = a || (a = {})).DAMAGED = 'http://schema.org/DamagedCondition'),
-	(c.NEW = 'http://schema.org/NewCondition'),
-	(c.REFURBISHED = 'http://schema.org/RefurbishedCondition'),
-	(c.USED = 'http://schema.org/UsedCondition'),
-	((d = s || (s = {})).DISCONTINUED = 'http://schema.org/Discontinued'),
-	(d.IN_STOCK = 'http://schema.org/InStock'),
-	(d.IN_STORE_ONLY = 'http://schema.org/InStoreOnly'),
-	(d.LIMITED_AVAILABILITY = 'http://schema.org/LimitedAvailability'),
-	(d.ONLINE_ONLY = 'http://schema.org/OnlineOnly'),
-	(d.OUT_OF_STOCK = 'http://schema.org/OutOfStock'),
-	(d.PREORDER = 'http://schema.org/PreOrder'),
-	(d.PRESALE = 'http://schema.org/PreSale'),
-	(d.SOLD_OUT = 'http://schema.org/SoldOut'),
-	(p.ItemConditions = a),
-	(p.ItemAvailability = s),
-	((u = r || (r = {})).YEARLY = 'ANN'),
-	(u.MONTHLY = 'MON'),
-	(T.UnitCodes = r);
+((c = a || (a = {})).DAMAGED = 'http://schema.org/DamagedCondition'), (c.NEW = 'http://schema.org/NewCondition'), (c.REFURBISHED = 'http://schema.org/RefurbishedCondition'), (c.USED = 'http://schema.org/UsedCondition'), ((d = s || (s = {})).DISCONTINUED = 'http://schema.org/Discontinued'), (d.IN_STOCK = 'http://schema.org/InStock'), (d.IN_STORE_ONLY = 'http://schema.org/InStoreOnly'), (d.LIMITED_AVAILABILITY = 'http://schema.org/LimitedAvailability'), (d.ONLINE_ONLY = 'http://schema.org/OnlineOnly'), (d.OUT_OF_STOCK = 'http://schema.org/OutOfStock'), (d.PREORDER = 'http://schema.org/PreOrder'), (d.PRESALE = 'http://schema.org/PreSale'), (d.SOLD_OUT = 'http://schema.org/SoldOut'), (p.ItemConditions = a), (p.ItemAvailability = s), ((u = r || (r = {})).YEARLY = 'ANN'), (u.MONTHLY = 'MON'), (T.UnitCodes = r);
 class S extends (l = E.Component) {
 	render() {
 		let { debug: e, data: t } = this.props,

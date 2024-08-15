@@ -12,9 +12,9 @@ var i,
 let f = 'GameLibraryViewStore',
 	h = E.sHY.ASCENDING,
 	p = E.iEv.LAST_PLAYED,
-	I = !1,
-	m = u().debounce(() => {
-		(I = !1), g.emitChange();
+	m = !1,
+	I = u().debounce(() => {
+		(m = !1), g.emitChange();
 	}, 200);
 class T extends (o = c.ZP.Store) {
 	initialize() {
@@ -32,7 +32,7 @@ class T extends (o = c.ZP.Store) {
 		return r;
 	}
 	get isNavigatingByKeyboard() {
-		return I;
+		return m;
 	}
 }
 (s = 'GameLibraryViewStore'),
@@ -56,7 +56,7 @@ let g = new T(_.Z, {
 	},
 	LIBRARY_TABLE_ACTIVE_ROW_ID_UPDATE: function (e) {
 		let { key: t, isKeyboardEvent: n } = e;
-		n && ((I = !0), m()), (r = t);
+		n && ((m = !0), I()), (r = t);
 	}
 });
 t.Z = g;

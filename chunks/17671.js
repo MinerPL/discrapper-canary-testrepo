@@ -95,8 +95,7 @@ function S(e) {
 						(0, l.jsx)(o.Heading, {
 							id: D,
 							variant: 'heading-md/semibold',
-							children:
-								A.length > 0 ? P.Z.Messages.GUILD_EVENTS_PLURAL.format({ number: A.length }) : P.Z.Messages.GUILD_EVENTS
+							children: A.length > 0 ? P.Z.Messages.GUILD_EVENTS_PLURAL.format({ number: A.length }) : P.Z.Messages.GUILD_EVENTS
 						}),
 						y &&
 							(0, l.jsxs)(l.Fragment, {

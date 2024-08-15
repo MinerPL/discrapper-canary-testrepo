@@ -63,8 +63,7 @@ let T = (e) => {
 			_ = (0, i.e7)([u.ZP], () => u.ZP.isModerator(n.id, a)),
 			T = null;
 		return (
-			t &&
-				(T = r ? E.Z.Messages.STAGE_SPEAKER : _ ? E.Z.Messages.STAGE_MODERATOR_TOOLTIP : E.Z.Messages.STAGE_AUDIENCE),
+			t && (T = r ? E.Z.Messages.STAGE_SPEAKER : _ ? E.Z.Messages.STAGE_MODERATOR_TOOLTIP : E.Z.Messages.STAGE_AUDIENCE),
 			(0, s.jsxs)('div', {
 				className: I.user,
 				children: [

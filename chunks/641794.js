@@ -104,16 +104,6 @@ e.Z = function (i, e, t) {
 		s = n ? i.replace(n[0], '') : i,
 		o = (null == t ? void 0 : t.comparison) !== void 0 && t.comparison > 0,
 		u = d[i];
-	if (
-		((r =
-			'string' == typeof u
-				? u
-				: 1 === e
-					? u.one(e, (null == t ? void 0 : t.addSuffix) === !0, s.toLowerCase() + '_one', o)
-					: u.other(e, (null == t ? void 0 : t.addSuffix) === !0, s.toLowerCase() + '_other', o)),
-		n && (r = a[n[0].toLowerCase()] + ' ' + r),
-		null != t && t.addSuffix)
-	)
-		return t.comparison && t.comparison > 0 ? 'po ' + r : 'prieš ' + r;
+	if (((r = 'string' == typeof u ? u : 1 === e ? u.one(e, (null == t ? void 0 : t.addSuffix) === !0, s.toLowerCase() + '_one', o) : u.other(e, (null == t ? void 0 : t.addSuffix) === !0, s.toLowerCase() + '_other', o)), n && (r = a[n[0].toLowerCase()] + ' ' + r), null != t && t.addSuffix)) return t.comparison && t.comparison > 0 ? 'po ' + r : 'prieš ' + r;
 	return r;
 };

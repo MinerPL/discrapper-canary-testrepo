@@ -77,9 +77,7 @@ function m(e, a, n) {
 				var t;
 				let r = f[a],
 					l = null === (t = r.image) || void 0 === t ? void 0 : t.mediaAttachmentState;
-				null != l &&
-					l.mediaURL !== n &&
-					i.P(e, r.localCreationAnswerId, (0, s.Yk)(r.localCreationAnswerId, l.mediaURL));
+				null != l && l.mediaURL !== n && i.P(e, r.localCreationAnswerId, (0, s.Yk)(r.localCreationAnswerId, l.mediaURL));
 			},
 			[f]
 		),
@@ -159,13 +157,9 @@ function m(e, a, n) {
 				a = {};
 			return (
 				0 === L.trim().length && ((e = !1), (a.question = _.Z.Messages.CREATE_POLL_QUESTION_REQUIRED)),
-				f.filter((e) => (0, u.cS)(e, R)).length < d.gY &&
-					((e = !1),
-					(a['answer-'.concat(f[0].localCreationAnswerId)] = _.Z.Messages.CREATE_POLL_MINIMUM_ANSWERS_REQUIRED)),
+				f.filter((e) => (0, u.cS)(e, R)).length < d.gY && ((e = !1), (a['answer-'.concat(f[0].localCreationAnswerId)] = _.Z.Messages.CREATE_POLL_MINIMUM_ANSWERS_REQUIRED)),
 				f.forEach((n) => {
-					(0, u.uY)(n, R) &&
-						((e = !1),
-						(a['answer-'.concat(n.localCreationAnswerId)] = _.Z.Messages.CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT));
+					(0, u.uY)(n, R) && ((e = !1), (a['answer-'.concat(n.localCreationAnswerId)] = _.Z.Messages.CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT));
 				}),
 				N(a),
 				v(!e),

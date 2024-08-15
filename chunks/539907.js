@@ -22,8 +22,8 @@ var r,
 	f = n(872801),
 	h = n(302901),
 	p = n(981631),
-	I = n(20593);
-function m(e, t, n) {
+	m = n(20593);
+function I(e, t, n) {
 	return (
 		t in e
 			? Object.defineProperty(e, t, {
@@ -39,12 +39,12 @@ function m(e, t, n) {
 let T = new WeakMap();
 function g(e, t) {
 	if (e.contains(t)) return !0;
-	let n = (0, f.Z)(t, I.layer);
+	let n = (0, f.Z)(t, m.layer);
 	for (; null != n; ) {
 		let t = T.get(n);
 		if (null == t) break;
 		if (e.contains(t)) return !0;
-		n = (0, f.Z)(t, I.layer);
+		n = (0, f.Z)(t, m.layer);
 	}
 	return !1;
 }
@@ -70,14 +70,7 @@ function A(e, t, n, r) {
 	}
 }
 function N(e, t, n) {
-	if (
-		null != e &&
-		e < 0 &&
-		('top' === n.position || 'bottom' === n.position) &&
-		null != t &&
-		Math.abs(e) < (null == t ? void 0 : t.offsetHeight) &&
-		null != n.style
-	) {
+	if (null != e && e < 0 && ('top' === n.position || 'bottom' === n.position) && null != t && Math.abs(e) < (null == t ? void 0 : t.offsetHeight) && null != n.style) {
 		let t = 'top' === n.position ? 'bottom' : 'top',
 			r = n.style[t];
 		return {
@@ -286,17 +279,7 @@ class O extends (r = a.Component) {
 			...this.calculateState()
 		});
 		let i = this.elementRef.current;
-		u()(null != i, 'Missing elementRef'),
-			null != n.current && T.set(i, n.current),
-			_.S.subscribe(p.CkL.LAYER_POP_START, this.handleLayerPopStart),
-			_.S.subscribe(p.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete),
-			null == i ||
-				null === (t = i.ownerDocument) ||
-				void 0 === t ||
-				null === (e = t.defaultView) ||
-				void 0 === e ||
-				e.addEventListener('resize', this.handleLayerPopComplete),
-			null == r || r();
+		u()(null != i, 'Missing elementRef'), null != n.current && T.set(i, n.current), _.S.subscribe(p.CkL.LAYER_POP_START, this.handleLayerPopStart), _.S.subscribe(p.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == i || null === (t = i.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.addEventListener('resize', this.handleLayerPopComplete), null == r || r();
 	}
 	componentDidUpdate(e, t) {
 		if (
@@ -316,17 +299,7 @@ class O extends (r = a.Component) {
 	componentWillUnmount() {
 		var e, t, n, r;
 		let i = this.elementRef.current;
-		u()(null != i, 'Missing elementRef'),
-			T.delete(i),
-			_.S.unsubscribe(p.CkL.LAYER_POP_START, this.handleLayerPopStart),
-			_.S.unsubscribe(p.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete),
-			null == i ||
-				null === (t = i.ownerDocument) ||
-				void 0 === t ||
-				null === (e = t.defaultView) ||
-				void 0 === e ||
-				e.removeEventListener('resize', this.handleLayerPopComplete),
-			null === (n = (r = this.props).onUnmount) || void 0 === n || n.call(r);
+		u()(null != i, 'Missing elementRef'), T.delete(i), _.S.unsubscribe(p.CkL.LAYER_POP_START, this.handleLayerPopStart), _.S.unsubscribe(p.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == i || null === (t = i.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.removeEventListener('resize', this.handleLayerPopComplete), null === (n = (r = this.props).onUnmount) || void 0 === n || n.call(r);
 	}
 	render() {
 		let { id: e, className: t, children: n, fixed: r, disablePointerEvents: a } = this.props,
@@ -336,10 +309,10 @@ class O extends (r = a.Component) {
 				let { theme: f } = d;
 				return (0, i.jsx)('div', {
 					id: e,
-					className: o()(t, (0, E.Q)(f), I.layer, {
-						[I.emptyError]: !1,
-						[I.layerHidden]: u,
-						[I.disabledPointerEvents]: a
+					className: o()(t, (0, E.Q)(f), m.layer, {
+						[m.emptyError]: !1,
+						[m.layerHidden]: u,
+						[m.disabledPointerEvents]: a
 					}),
 					style: {
 						position: r ? 'fixed' : 'absolute',
@@ -363,30 +336,30 @@ class O extends (r = a.Component) {
 	}
 	constructor(...e) {
 		super(...e),
-			m(this, 'elementRef', a.createRef()),
-			m(this, 'state', {
+			I(this, 'elementRef', a.createRef()),
+			I(this, 'state', {
 				style: Object.freeze({}),
 				position: this.props.autoInvert ? null : this.props.position,
 				nudge: 0,
 				isPositioned: !1,
 				isSettingsLayerTransitioning: !1
 			}),
-			m(this, 'handleLayerPopStart', () => {
+			I(this, 'handleLayerPopStart', () => {
 				this.setState({ isSettingsLayerTransitioning: !0 });
 			}),
-			m(this, 'handleLayerPopComplete', () => {
+			I(this, 'handleLayerPopComplete', () => {
 				let e = this.calculateState();
 				this.setState({
 					...e,
 					isSettingsLayerTransitioning: !1
 				});
 			}),
-			m(this, 'updatePosition', () => {
+			I(this, 'updatePosition', () => {
 				this.setState(this.calculateState());
 			});
 	}
 }
-m(O, 'defaultProps', {
+I(O, 'defaultProps', {
 	nudgeAlignIntoViewport: !1,
 	spacing: 0,
 	autoInvert: !1,

@@ -112,9 +112,7 @@ async function g(e, t, n, s) {
 		return (
 			l.Z.show({
 				title: E.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SAVE_FAILED,
-				body: E.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SAVE_FAILED_INVALID_WITH_DETAILS.format({
-					errorMessage: e.join(', ')
-				})
+				body: E.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SAVE_FAILED_INVALID_WITH_DETAILS.format({ errorMessage: e.join(', ') })
 			}),
 			Promise.reject()
 		);
@@ -166,9 +164,7 @@ async function f(e, t, n) {
 		let e = a().flatMap(null !== (s = t.body) && void 0 !== s ? s : {}, (e) => e);
 		l.Z.show({
 			title: E.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SAVE_FAILED,
-			body: E.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SAVE_FAILED_INVALID_WITH_DETAILS.format({
-				errorMessage: e.join(', ')
-			})
+			body: E.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SAVE_FAILED_INVALID_WITH_DETAILS.format({ errorMessage: e.join(', ') })
 		});
 	}
 }
@@ -223,34 +219,11 @@ async function A(e, t) {
 			}),
 			u.default.track(I.rMx.GUILD_SETTINGS_GUIDE_UPDATED, {
 				guild_id: e,
-				welcome_message_author_id: (null !==
-					(d = null == l ? void 0 : null === (n = l.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) &&
-				void 0 !== d
-					? d
-					: [])[0],
-				welcome_message_length:
-					null !==
-						(_ =
-							null == l
-								? void 0
-								: null === (o = l.welcomeMessage) || void 0 === o
-									? void 0
-									: null === (s = o.message) || void 0 === s
-										? void 0
-										: s.length) && void 0 !== _
-						? _
-						: 0,
-				member_action_channel_ids: (null !== (T = null == l ? void 0 : l.newMemberActions) && void 0 !== T
-					? T
-					: []
-				).map((e) => e.channelId),
-				member_action_channel_actions: (null !== (m = null == l ? void 0 : l.newMemberActions) && void 0 !== m
-					? m
-					: []
-				).map((e) => e.actionType),
-				resource_channel_ids: (null !== (N = null == l ? void 0 : l.resourceChannels) && void 0 !== N ? N : []).map(
-					(e) => e.channelId
-				),
+				welcome_message_author_id: (null !== (d = null == l ? void 0 : null === (n = l.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) && void 0 !== d ? d : [])[0],
+				welcome_message_length: null !== (_ = null == l ? void 0 : null === (o = l.welcomeMessage) || void 0 === o ? void 0 : null === (s = o.message) || void 0 === s ? void 0 : s.length) && void 0 !== _ ? _ : 0,
+				member_action_channel_ids: (null !== (T = null == l ? void 0 : l.newMemberActions) && void 0 !== T ? T : []).map((e) => e.channelId),
+				member_action_channel_actions: (null !== (m = null == l ? void 0 : l.newMemberActions) && void 0 !== m ? m : []).map((e) => e.actionType),
+				resource_channel_ids: (null !== (N = null == l ? void 0 : l.resourceChannels) && void 0 !== N ? N : []).map((e) => e.channelId),
 				enabled: null == l ? void 0 : l.enabled
 			}),
 			a.body
@@ -260,9 +233,7 @@ async function A(e, t) {
 		r.Z.dispatch({ type: 'GUILD_HOME_SETTINGS_UPDATE_FAIL' }),
 			l.Z.show({
 				title: E.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SAVE_FAILED,
-				body: E.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SAVE_FAILED_INVALID_WITH_DETAILS.format({
-					errorMessage: e.join(', ')
-				})
+				body: E.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SAVE_FAILED_INVALID_WITH_DETAILS.format({ errorMessage: e.join(', ') })
 			});
 	}
 }

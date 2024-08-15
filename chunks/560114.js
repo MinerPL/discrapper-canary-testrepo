@@ -74,23 +74,7 @@ function eo(e, n, t) {
 let { INVITE_OPTIONS_FOREVER: ed, INVITE_OPTIONS_7_DAYS: eu, INVITE_OPTIONS_UNLIMITED: ec } = K.ZP;
 class eh extends (l = a.PureComponent) {
 	componentDidMount() {
-		let {
-				inviteChannel: e,
-				code: n,
-				guild: t,
-				source: l,
-				canCreateInvites: s,
-				analyticsLocation: a,
-				streamUserId: i,
-				targetType: r,
-				targetUserId: o,
-				application: d,
-				initialCounts: u,
-				rows: c,
-				showFriends: h,
-				modalState: I,
-				setModalState: g
-			} = this.props,
+		let { inviteChannel: e, code: n, guild: t, source: l, canCreateInvites: s, analyticsLocation: a, streamUserId: i, targetType: r, targetUserId: o, application: d, initialCounts: u, rows: c, showFriends: h, modalState: I, setModalState: g } = this.props,
 			{ maxAge: E, maxUses: _, temporary: T } = I;
 		if (s) {
 			let t = null == e ? void 0 : e.id;
@@ -147,9 +131,7 @@ class eh extends (l = a.PureComponent) {
 	}
 	componentWillUnmount() {
 		let { inviteChannel: e, inviteFlags: n, setInviteFlags: t } = this.props;
-		(0, H.yE)(n, I.$.IS_GUEST_INVITE) &&
-			null != e &&
-			(t((0, H.Ge)(n, I.$.IS_GUEST_INVITE)), m.Z.clearInviteFromStore(e.id));
+		(0, H.yE)(n, I.$.IS_GUEST_INVITE) && null != e && (t((0, H.Ge)(n, I.$.IS_GUEST_INVITE)), m.Z.clearInviteFromStore(e.id));
 	}
 	getInviteKey() {
 		let { code: e, vanityURLCode: n, guildScheduledEvent: t, modalState: l } = this.props,
@@ -185,34 +167,11 @@ class eh extends (l = a.PureComponent) {
 	}
 	renderHeader() {
 		let e;
-		let {
-				guild: n,
-				showFriends: t,
-				guildScheduledEvent: l,
-				streamUserId: a,
-				application: i,
-				welcomeToServer: o,
-				inviteChannel: d,
-				modalState: u,
-				handleDone: c
-			} = this.props,
+		let { guild: n, showFriends: t, guildScheduledEvent: l, streamUserId: a, application: i, welcomeToServer: o, inviteChannel: d, modalState: u, handleDone: c } = this.props,
 			{ query: h } = u,
 			I = null,
 			g = null;
-		if (
-			((e = o
-				? null
-				: null != a
-					? el.Z.Messages.INVITE_STREAM_HEADER
-					: null != i
-						? el.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_FRIENDS_TO_ACTIVITY_NAME.format({ applicationName: i.name })
-						: null != l
-							? el.Z.Messages.GUILD_EVENT_INVITE_MODAL_TITLE
-							: (null == d ? void 0 : d.isGuildStageVoice())
-								? el.Z.Messages.STAGE_CHANNEL_INVITE_TO_STAGE_MODAL_HEADER
-								: el.Z.Messages.INVITE_TO_SERVER_NAME.format({ name: n.toString() })),
-			null != d)
-		) {
+		if (((e = o ? null : null != a ? el.Z.Messages.INVITE_STREAM_HEADER : null != i ? el.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_FRIENDS_TO_ACTIVITY_NAME.format({ applicationName: i.name }) : null != l ? el.Z.Messages.GUILD_EVENT_INVITE_MODAL_TITLE : (null == d ? void 0 : d.isGuildStageVoice()) ? el.Z.Messages.STAGE_CHANNEL_INVITE_TO_STAGE_MODAL_HEADER : el.Z.Messages.INVITE_TO_SERVER_NAME.format({ name: n.toString() })), null != d)) {
 			let e = (0, M.KS)(d, n);
 			null != e &&
 				(g = (0, s.jsxs)('div', {
@@ -370,9 +329,7 @@ class eh extends (l = a.PureComponent) {
 		d()(null != r, 'InstantInviteModal: user cannot be undefined');
 		let o = n.isOwner(r) ? el.Z.Messages.INVITE_SHARE_LINK_OWN_SERVER : el.Z.Messages.SHARE_INVITE_LINK_FOR_ACCESS;
 		return (
-			null != l
-				? (o = el.Z.Messages.INVITE_SHARE_LINK_TO_STREAM)
-				: null != a && (o = el.Z.Messages.EMBEDDED_ACTIVITIES_SHARE_LINK_TO_ACTIVITY),
+			null != l ? (o = el.Z.Messages.INVITE_SHARE_LINK_TO_STREAM) : null != a && (o = el.Z.Messages.EMBEDDED_ACTIVITIES_SHARE_LINK_TO_ACTIVITY),
 			(0, s.jsx)(_.ModalContent, {
 				className: es.noScroll,
 				children: (0, s.jsxs)(f.Z, {
@@ -395,28 +352,13 @@ class eh extends (l = a.PureComponent) {
 	}
 	renderFooter() {
 		var e;
-		let {
-				noInvitesAvailable: n,
-				showFriends: t,
-				guildScheduledEvent: l,
-				streamUserId: a,
-				application: i,
-				inviteChannel: o,
-				modalState: d
-			} = this.props,
+		let { noInvitesAvailable: n, showFriends: t, guildScheduledEvent: l, streamUserId: a, application: i, inviteChannel: o, modalState: d } = this.props,
 			{ maxAge: u } = d,
 			c = null,
 			h = (0, q.Z)(null !== (e = this.getInviteKey()) && void 0 !== e ? e : '');
 		if (t) {
 			let e = el.Z.Messages.INVITE_FOOTER_LINK_HEADER;
-			null != a
-				? (e = el.Z.Messages.INVITE_STREAM_FOOTER_LINK_HEADER)
-				: null != i
-					? (e = el.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_ACTIVITY_FOOTER_LINK_HEADER)
-					: null != l
-						? (e = el.Z.Messages.GUILD_EVENT_INVITE_MODAL_FOOTER)
-						: (null == o ? void 0 : o.isGuildStageVoice()) &&
-							(e = el.Z.Messages.STAGE_CHANNEL_INVITE_TO_STAGE_MODAL_FOOTER),
+			null != a ? (e = el.Z.Messages.INVITE_STREAM_FOOTER_LINK_HEADER) : null != i ? (e = el.Z.Messages.EMBEDDED_ACTIVITIES_INVITE_ACTIVITY_FOOTER_LINK_HEADER) : null != l ? (e = el.Z.Messages.GUILD_EVENT_INVITE_MODAL_FOOTER) : (null == o ? void 0 : o.isGuildStageVoice()) && (e = el.Z.Messages.STAGE_CHANNEL_INVITE_TO_STAGE_MODAL_FOOTER),
 				(c = (0, s.jsxs)(f.Z, {
 					direction: f.Z.Direction.VERTICAL,
 					className: es.content,
@@ -624,19 +566,7 @@ eo(eh, 'defaultProps', {
 }),
 	(n.default = a.forwardRef(function (e, n) {
 		var t, l, i, r;
-		let {
-				channel: o,
-				guild: d,
-				source: u,
-				guildScheduledEvent: c,
-				streamUserId: h,
-				applicationId: E,
-				transitionState: _,
-				onClose: M,
-				welcomeToServer: f,
-				page: Z,
-				analyticsLocation: A
-			} = e,
+		let { channel: o, guild: d, source: u, guildScheduledEvent: c, streamUserId: h, applicationId: E, transitionState: _, onClose: M, welcomeToServer: f, page: Z, analyticsLocation: A } = e,
 			[y, B] = a.useState(Z === ee.RV.GUEST ? I.$.IS_GUEST_INVITE : 0),
 			{ analyticsLocations: w } = (0, S.ZP)(v.Z.INSTANT_INVITE_MODAL),
 			k = (0, g.e7)([O.Z, P.Z], () => {
@@ -655,10 +585,7 @@ eo(eh, 'defaultProps', {
 					if (null != o) return o;
 					let e = P.Z.getChannelId(),
 						n = null == e || (0, et.AB)(e) ? void 0 : O.Z.getChannel(e);
-					return (
-						(null == n ? void 0 : n.isThread()) && (n = O.Z.getChannel(n.parent_id)),
-						null != n ? n : D.ZP.getDefaultChannel(d.id, !0, en.Plq.CREATE_INSTANT_INVITE)
-					);
+					return (null == n ? void 0 : n.isThread()) && (n = O.Z.getChannel(n.parent_id)), null != n ? n : D.ZP.getDefaultChannel(d.id, !0, en.Plq.CREATE_INSTANT_INVITE);
 				},
 				[K, y, Z, o, d.id, k, W]
 			),
@@ -685,13 +612,7 @@ eo(eh, 'defaultProps', {
 				[U.Z, F.ZP, L.ZP],
 				() => {
 					let e = null != $ ? $.id : null;
-					return [
-						U.Z.getInviteSuggestionRows(),
-						U.Z.getTotalSuggestionsCount() >= 1,
-						U.Z.getInitialCounts(),
-						null != o && null != $ ? F.ZP.getVoiceStatesForChannel($) : null,
-						null != J ? L.ZP.getProps(J, e) : null
-					];
+					return [U.Z.getInviteSuggestionRows(), U.Z.getTotalSuggestionsCount() >= 1, U.Z.getInitialCounts(), null != o && null != $ ? F.ZP.getVoiceStatesForChannel($) : null, null != J ? L.ZP.getProps(J, e) : null];
 				},
 				[$, o, J]
 			),
@@ -735,15 +656,7 @@ eo(eh, 'defaultProps', {
 			eC = null != eM && eM.length > 0,
 			{ enabled: ef } = Y.Z.useExperiment(
 				{
-					guildId:
-						null !==
-							(i =
-								null !== (l = null !== (t = d.id) && void 0 !== t ? t : null == el ? void 0 : el.guild.id) &&
-								void 0 !== l
-									? l
-									: J) && void 0 !== i
-							? i
-							: en.lds,
+					guildId: null !== (i = null !== (l = null !== (t = d.id) && void 0 !== t ? t : null == el ? void 0 : el.guild.id) && void 0 !== l ? l : J) && void 0 !== i ? i : en.lds,
 					location: 'acc417_2'
 				},
 				{ autoTrackExposure: eC }

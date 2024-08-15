@@ -20,10 +20,7 @@ class E extends (u = d.ZP.Store) {
 		return m[e];
 	}
 	getThreadIdsMissingCounts(e, n) {
-		return (
-			a()(s.Z.hasLoaded(e), 'must wait for THREAD_LIST_SYNC before calling this'),
-			n.filter((e) => !(e in m) && !Z.has(e))
-		);
+		return a()(s.Z.hasLoaded(e), 'must wait for THREAD_LIST_SYNC before calling this'), n.filter((e) => !(e in m) && !Z.has(e));
 	}
 }
 (i = 'ForumPostUnreadCountStore'),

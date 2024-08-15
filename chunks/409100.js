@@ -12,15 +12,7 @@ var a = n(780384),
 	E = n(689938),
 	T = n(380876);
 let I = (e) => {
-		let {
-			showTrialCTA: t,
-			subscriptionTier: n,
-			shouldShowUpsells: s,
-			trialDurationCopy: a,
-			isPersistentCTA: r,
-			shouldShowReferralTrialCopy: i,
-			subscriptionTrial: o
-		} = e;
+		let { showTrialCTA: t, subscriptionTier: n, shouldShowUpsells: s, trialDurationCopy: a, isPersistentCTA: r, shouldShowReferralTrialCopy: i, subscriptionTrial: o } = e;
 		if (t && i) return E.Z.Messages.REFERRAL_PROGRAM_START_TRIAL;
 		if (t && (n === u.Si.TIER_2 || r))
 			return (0, l.Rt)({
@@ -30,21 +22,9 @@ let I = (e) => {
 		if (t) return E.Z.Messages.GET_FREE_TRIAL.format({ freeTrialText: a });
 		else if (s && n === u.Si.TIER_2) return E.Z.Messages.BOGO_CHANGE_LOG_REDEEM;
 	},
-	R = (e, t, n, s) =>
-		t || n
-			? E.Z.Messages.PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT
-			: e === u.Si.TIER_2
-				? E.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: s })
-				: void 0;
+	R = (e, t, n, s) => (t || n ? E.Z.Messages.PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT : e === u.Si.TIER_2 ? E.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: s }) : void 0);
 t.Z = (e) => {
-	let {
-			forceInverted: t,
-			subscriptionTier: n,
-			isEligibleForBogoPromotion: C = !1,
-			isPersistentCTA: g = !1,
-			useShorterCTA: p = !1,
-			...N
-		} = e,
+	let { forceInverted: t, subscriptionTier: n, isEligibleForBogoPromotion: C = !1, isPersistentCTA: g = !1, useShorterCTA: p = !1, ...N } = e,
 		A = (0, i.ZP)(),
 		m = (0, a.wj)(A) || t,
 		f = (0, d.N)(),

@@ -24,17 +24,7 @@ var s = t(735250),
 	v = t(689938),
 	h = t(328156);
 function S(e) {
-	let {
-			user: n,
-			currentUser: t,
-			guild: a,
-			guildMember: c,
-			roles: d,
-			highestRole: u,
-			canManageRoles: I,
-			onAddRole: _,
-			onRemoveRole: E
-		} = e,
+	let { user: n, currentUser: t, guild: a, guildMember: c, roles: d, highestRole: u, canManageRoles: I, onAddRole: _, onRemoveRole: E } = e,
 		p = I && null != c,
 		S = i.useMemo(() => 'roles-'.concat((0, o.Z)()), []),
 		T = (0, l.ZP)({
@@ -55,9 +45,7 @@ function S(e) {
 					guildId: a.id,
 					disableBorderColor: !0,
 					onRemove: () => E(e),
-					canRemove: I
-						? f.r6(a, t.id, u, e)
-						: (null === (i = e.tags) || void 0 === i ? void 0 : i.guild_connections) === null && n.id === t.id
+					canRemove: I ? f.r6(a, t.id, u, e) : (null === (i = e.tags) || void 0 === i ? void 0 : i.guild_connections) === null && n.id === t.id
 				},
 				e.id
 			);
@@ -115,9 +103,7 @@ function T(e) {
 				var t, s;
 				r({ action: 'REMOVE_ROLE' });
 				let i = null !== (s = null == h ? void 0 : h.filter((n) => n !== e.id)) && void 0 !== s ? s : [];
-				(null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null
-					? c.Z.unassignGuildRoleConnection(o.id, e.id)
-					: d.Z.updateMemberRoles(o.id, n.id, i, [], [e.id]);
+				(null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null ? c.Z.unassignGuildRoleConnection(o.id, e.id) : d.Z.updateMemberRoles(o.id, n.id, i, [], [e.id]);
 			},
 			[h, o.id, n.id, r]
 		),

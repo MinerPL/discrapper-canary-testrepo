@@ -4,17 +4,7 @@ n.d(t, {
 	}
 });
 function i(e) {
-	let {
-			channel: t,
-			canChat: n,
-			renderReactions: i,
-			canAddNewReactions: s,
-			isLurking: o,
-			isGuest: a,
-			communicationDisabled: l,
-			isActiveChannelOrUnarchivableThread: r,
-			isAutomodQuarantined: c
-		} = e,
+	let { channel: t, canChat: n, renderReactions: i, canAddNewReactions: s, isLurking: o, isGuest: a, communicationDisabled: l, isActiveChannelOrUnarchivableThread: r, isAutomodQuarantined: c } = e,
 		u = t.isPrivate(),
 		d = t.isSystemDM(),
 		h = (n || u) && r;

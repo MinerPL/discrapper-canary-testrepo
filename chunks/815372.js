@@ -43,12 +43,6 @@ class l extends a.Z {
 		}
 	}
 	constructor(e) {
-		super(),
-			o(this, 'id', void 0),
-			o(this, 'path', void 0),
-			o(this, 'type', void 0),
-			(this.id = e.type),
-			(this.path = e.path),
-			(this.type = e.type);
+		super(), o(this, 'id', void 0), o(this, 'path', void 0), o(this, 'type', void 0), (this.id = e.type), (this.path = e.path), (this.type = e.type);
 	}
 }

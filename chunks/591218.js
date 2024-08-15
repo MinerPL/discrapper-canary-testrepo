@@ -27,9 +27,7 @@ function u(e, t, n) {
 let c = new a.Z();
 class d extends r.EventEmitter {
 	destroy() {
-		null != this.stream && (c.release(this.stream), (this.stream = null)),
-			null != this.streamId && (0, s.jC)(this.streamId),
-			(this.destroyed = !0);
+		null != this.stream && (c.release(this.stream), (this.stream = null)), null != this.streamId && (0, s.jC)(this.streamId), (this.destroyed = !0);
 	}
 	getStreamId() {
 		return this.streamId;
@@ -66,21 +64,9 @@ class d extends r.EventEmitter {
 		}
 	}
 	setStream(e) {
-		return (
-			null != this.streamId && ((0, s.jC)(this.streamId), (this.streamId = null)),
-			(this.stream = e),
-			(e.onaddtrack = (e) => this.emit('add-video-track', e)),
-			e.getVideoTracks().length > 0 && (this.streamId = (0, s.N7)(e)),
-			this.emit('stream', e),
-			this.emit('video', this.getStreamId()),
-			e
-		);
+		return null != this.streamId && ((0, s.jC)(this.streamId), (this.streamId = null)), (this.stream = e), (e.onaddtrack = (e) => this.emit('add-video-track', e)), e.getVideoTracks().length > 0 && (this.streamId = (0, s.N7)(e)), this.emit('stream', e), this.emit('video', this.getStreamId()), e;
 	}
 	constructor(...e) {
-		super(...e),
-			u(this, 'stream', new MediaStream()),
-			u(this, 'sourceId', o.Av),
-			u(this, 'streamId', null),
-			u(this, 'destroyed', !1);
+		super(...e), u(this, 'stream', new MediaStream()), u(this, 'sourceId', o.Av), u(this, 'streamId', null), u(this, 'destroyed', !1);
 	}
 }

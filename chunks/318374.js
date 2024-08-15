@@ -16,21 +16,7 @@ var r = n(735250),
 	_ = n(51144),
 	E = n(180160);
 function f(e) {
-	let {
-			users: t,
-			maxUsers: a,
-			guildId: o,
-			channelId: f,
-			className: h,
-			avatarClassName: p,
-			onFocus: I,
-			size: m = u.AvatarSizes.SIZE_24,
-			overflowCountVariant: T = 'text-xs/medium',
-			overflowCountColor: g = 'interactive-normal',
-			hideOverflowCount: S = !1,
-			disableUsernameTooltip: A = !1,
-			disableUserPopout: N = !1
-		} = e,
+	let { users: t, maxUsers: a, guildId: o, channelId: f, className: h, avatarClassName: p, onFocus: m, size: I = u.AvatarSizes.SIZE_24, overflowCountVariant: T = 'text-xs/medium', overflowCountColor: g = 'interactive-normal', hideOverflowCount: S = !1, disableUsernameTooltip: A = !1, disableUserPopout: N = !1 } = e,
 		[v, O] = i.useState(!1);
 	function R() {
 		return (0, r.jsx)(u.Dialog, {
@@ -52,9 +38,7 @@ function f(e) {
 								(0, c.jW)(
 									t,
 									async () => {
-										let { default: t } = await Promise.all([n.e('79695'), n.e('69220'), n.e('46611')]).then(
-											n.bind(n, 881351)
-										);
+										let { default: t } = await Promise.all([n.e('79695'), n.e('69220'), n.e('46611')]).then(n.bind(n, 881351));
 										return (n) =>
 											(0, r.jsx)(t, {
 												...n,
@@ -87,7 +71,7 @@ function f(e) {
 											children: (0, r.jsx)(u.Avatar, {
 												src: e.getAvatarURL(o, 24),
 												'aria-label': t,
-												size: m
+												size: I
 											})
 										})
 									: (0, r.jsx)(
@@ -98,7 +82,7 @@ function f(e) {
 												children: (0, r.jsx)(u.Avatar, {
 													src: e.getAvatarURL(o, 24),
 													'aria-label': t,
-													size: m
+													size: I
 												})
 											},
 											e.id
@@ -119,7 +103,7 @@ function f(e) {
 									children: () =>
 										(0, r.jsx)(u.Button, {
 											className: s()(E.avatar, E.overflow),
-											onFocus: I,
+											onFocus: m,
 											onClick: () => O(!0),
 											look: u.Button.Looks.BLANK,
 											size: u.Button.Sizes.NONE,

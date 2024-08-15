@@ -6,12 +6,7 @@ var r = n(737372),
 	l = n(458340),
 	u = n(245413);
 function c(e, t, n) {
-	o.call(this),
-		(this._cache = new _()),
-		(this._cipher = new l.AES(t)),
-		(this._prev = a.from(n)),
-		(this._mode = e),
-		(this._autopadding = !0);
+	o.call(this), (this._cache = new _()), (this._cipher = new l.AES(t)), (this._prev = a.from(n)), (this._mode = e), (this._autopadding = !0);
 }
 n(689118)(c, o),
 	(c.prototype._update = function (e) {
@@ -26,15 +21,9 @@ function _() {
 function E(e, t, n) {
 	var o = r[e.toLowerCase()];
 	if (!o) throw TypeError('invalid suite type');
-	if (('string' == typeof t && (t = a.from(t)), t.length !== o.key / 8))
-		throw TypeError('invalid key length ' + t.length);
-	if (('string' == typeof n && (n = a.from(n)), 'GCM' !== o.mode && n.length !== o.iv))
-		throw TypeError('invalid iv length ' + n.length);
-	return 'stream' === o.type
-		? new s(o.module, t, n)
-		: 'auth' === o.type
-			? new i(o.module, t, n)
-			: new c(o.module, t, n);
+	if (('string' == typeof t && (t = a.from(t)), t.length !== o.key / 8)) throw TypeError('invalid key length ' + t.length);
+	if (('string' == typeof n && (n = a.from(n)), 'GCM' !== o.mode && n.length !== o.iv)) throw TypeError('invalid iv length ' + n.length);
+	return 'stream' === o.type ? new s(o.module, t, n) : 'auth' === o.type ? new i(o.module, t, n) : new c(o.module, t, n);
 }
 (c.prototype._final = function () {
 	var e = this._cache.flush();

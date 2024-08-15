@@ -16,22 +16,8 @@ a.Z = s.memo(function (e) {
 	let { guildId: N, isTagAdopted: h, onChangeUseTag: S } = e,
 		T = (0, u.Cc)(N),
 		f = (0, i.e7)([r.Z], () => r.Z.getGuild(N)),
-		L =
-			null !== (C = null == T ? void 0 : null === (a = T.badge) || void 0 === a ? void 0 : a.imageHash) && void 0 !== C
-				? C
-				: null == f
-					? void 0
-					: null === (l = f.clan) || void 0 === l
-						? void 0
-						: l.badge,
-		M =
-			null !== (g = null == T ? void 0 : T.tag) && void 0 !== g
-				? g
-				: null == f
-					? void 0
-					: null === (s = f.clan) || void 0 === s
-						? void 0
-						: s.tag,
+		L = null !== (C = null == T ? void 0 : null === (a = T.badge) || void 0 === a ? void 0 : a.imageHash) && void 0 !== C ? C : null == f ? void 0 : null === (l = f.clan) || void 0 === l ? void 0 : l.badge,
+		M = null !== (g = null == T ? void 0 : T.tag) && void 0 !== g ? g : null == f ? void 0 : null === (s = f.clan) || void 0 === s ? void 0 : s.tag,
 		E = (0, i.e7)([d.default], () => d.default.getCurrentUser()),
 		j = (0, i.e7)([t.ZP], () => (null != E ? t.ZP.getMember(N, E.id) : null));
 	return null == f || null == E || null == j || null == L

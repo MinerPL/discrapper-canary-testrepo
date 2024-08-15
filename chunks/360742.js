@@ -27,16 +27,6 @@ class s extends r.Z {
 	}
 	constructor(e) {
 		var t;
-		super(),
-			a(this, 'id', void 0),
-			a(this, 'name', void 0),
-			a(this, 'type', void 0),
-			a(this, 'user', void 0),
-			a(this, 'displayName', void 0),
-			(this.id = e.id),
-			(this.name = e.name),
-			(this.type = e.type),
-			(this.user = e.user),
-			(this.displayName = null !== (t = e.name_localized) && void 0 !== t ? t : e.name);
+		super(), a(this, 'id', void 0), a(this, 'name', void 0), a(this, 'type', void 0), a(this, 'user', void 0), a(this, 'displayName', void 0), (this.id = e.id), (this.name = e.name), (this.type = e.type), (this.user = e.user), (this.displayName = null !== (t = e.name_localized) && void 0 !== t ? t : e.name);
 	}
 }

@@ -42,12 +42,7 @@ function x(e) {
 	});
 }
 let I = (e) => {
-		let {
-			onClose: r,
-			perks: n,
-			perkIntro: o = f.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_MODAL_HEADER,
-			headerProps: t
-		} = e;
+		let { onClose: r, perks: n, perkIntro: o = f.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_MODAL_HEADER, headerProps: t } = e;
 		return (0, l.jsxs)('div', {
 			className: N.wrapper,
 			children: [
@@ -131,16 +126,7 @@ let I = (e) => {
 		});
 	};
 function T(e) {
-	let {
-			analyticsSourceLocation: r,
-			guild: n,
-			targetBoostedGuildTier: o,
-			perks: u,
-			perkIntro: p,
-			headerProps: _,
-			onClose: m,
-			...f
-		} = e,
+	let { analyticsSourceLocation: r, guild: n, targetBoostedGuildTier: o, perks: u, perkIntro: p, headerProps: _, onClose: m, ...f } = e,
 		{ analyticsLocations: N } = (0, a.ZP)(t.Z.ACTIVITY_DIRECTORY);
 	return (0, l.jsx)(a.Gt, {
 		value: N,

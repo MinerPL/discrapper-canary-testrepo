@@ -32,19 +32,7 @@ var s = n(735250),
 	O = n(919812);
 let U = o.forwardRef(function (e, t) {
 	var n, a;
-	let {
-			children: T,
-			className: U,
-			collapsedHeight: q,
-			expansionSpring: w,
-			isExpanded: Z,
-			isExpansionAnimationComplete: P,
-			onCtxMenuOpen: Q,
-			onCtxMenuClose: W,
-			onCtxMenuSelect: D,
-			quest: H,
-			useReducedMotion: V
-		} = e,
+	let { children: T, className: U, collapsedHeight: q, expansionSpring: w, isExpanded: Z, isExpansionAnimationComplete: P, onCtxMenuOpen: Q, onCtxMenuClose: W, onCtxMenuSelect: D, quest: H, useReducedMotion: V } = e,
 		z = (0, i.e7)([f.Z], () => f.Z.isEnrolling(H.id), [H]),
 		G = (0, C.B6)(H.config.expiresAt),
 		F = v.r.build(H.config),
@@ -155,9 +143,7 @@ let U = o.forwardRef(function (e, t) {
 															className: O.questAcceptedContentCopySubheading,
 															color: 'always-white',
 															variant: 'text-xxs/normal',
-															children: ei
-																? M.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: Y })
-																: M.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: G })
+															children: ei ? M.Z.Messages.QUESTS_CLAIM_BY_DATE.format({ expirationDate: Y }) : M.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: G })
 														})
 													]
 												})

@@ -14,8 +14,7 @@ var r = n(447631),
 		}),
 	p = function (e) {
 		return function (t) {
-			for (var n, o = c(t), a = s(o), p = d && null === i(o), h = a.length, f = 0, m = []; h > f; )
-				(n = a[f++]), (!r || (p ? n in o : l(o, n))) && u(m, e ? [n, o[n]] : o[n]);
+			for (var n, o = c(t), a = s(o), p = d && null === i(o), h = a.length, f = 0, m = []; h > f; ) (n = a[f++]), (!r || (p ? n in o : l(o, n))) && u(m, e ? [n, o[n]] : o[n]);
 			return m;
 		};
 	};

@@ -21,13 +21,7 @@ var r;
 			},
 			meridiemParse: /凌晨|早上|上午|中午|下午|晚上/,
 			meridiemHour: function (e, t) {
-				return (12 === e && (e = 0), '凌晨' === t || '早上' === t || '上午' === t)
-					? e
-					: '下午' === t || '晚上' === t
-						? e + 12
-						: e >= 11
-							? e
-							: e + 12;
+				return (12 === e && (e = 0), '凌晨' === t || '早上' === t || '上午' === t) ? e : '下午' === t || '晚上' === t ? e + 12 : e >= 11 ? e : e + 12;
 			},
 			meridiem: function (e, t, n) {
 				var r = 100 * e + t;
