@@ -1,0 +1,23 @@
+e.exports = {
+  modal: 'modal_cc2278',
+  container: 'container_cc2278',
+  header: 'header_cc2278',
+  stepHeader: 'stepHeader_cc2278',
+  title: 'title_cc2278',
+  closeButton: 'closeButton_cc2278',
+  illustration: 'illustration_cc2278',
+  body: 'body_cc2278',
+  discordConsentBody: 'discordConsentBody_cc2278',
+  footer: 'footer_cc2278',
+  footerButton: 'footerButton_cc2278',
+  launchIcon: 'launchIcon_cc2278',
+  valueProps: 'valueProps_cc2278',
+  valuePropContainer: 'valuePropContainer_cc2278',
+  valueProp: 'valueProp_cc2278',
+  valuePropIconContainer: 'valuePropIconContainer_cc2278',
+  bulletedValueProp: 'bulletedValueProp_cc2278',
+  bulletPointsContainer: 'bulletPointsContainer_cc2278',
+  bulletPoints: 'bulletPoints_cc2278',
+  bulletPoint: 'bulletPoint_cc2278',
+  bulletPointText: 'bulletPointText_cc2278'
+};

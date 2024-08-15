@@ -1,0 +1,23 @@
+e.exports = {
+  modalRoot: 'modalRoot_d76ce1',
+  modalContent: 'modalContent_d76ce1',
+  sidebarContainer: 'sidebarContainer_d76ce1',
+  contentContainer: 'contentContainer_d76ce1',
+  contentIcon: 'contentIcon_d76ce1',
+  form: 'form_d76ce1',
+  formInput: 'formInput_d76ce1',
+  formPriorityImageContainer: 'formPriorityImageContainer_d76ce1',
+  formPriorityTitleContainer: 'formPriorityTitleContainer_d76ce1',
+  formPriorityTitle: 'formPriorityTitle_d76ce1',
+  formPriorityDescription: 'formPriorityDescription_d76ce1',
+  formPriorityImage: 'formPriorityImage_d76ce1',
+  container: 'container_d76ce1',
+  formButton: 'formButton_d76ce1',
+  imageOptionsContainer: 'imageOptionsContainer_d76ce1',
+  attachmentsGrid: 'attachmentsGrid_d76ce1',
+  attachmentsGridItem: 'attachmentsGridItem_d76ce1',
+  toolBar: 'toolBar_d76ce1',
+  attachmentContainer: 'attachmentContainer_d76ce1',
+  uploadButton: 'uploadButton_d76ce1',
+  submitContainer: 'submitContainer_d76ce1'
+};

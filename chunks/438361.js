@@ -1,0 +1,1 @@
+n(77623)('createBrowserHistory'), e.exports = n(792661).createBrowserHistory;

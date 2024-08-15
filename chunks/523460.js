@@ -1,0 +1,23 @@
+e.exports = {
+  maxWidthWrapper: 'maxWidthWrapper_e85cee',
+  homeContainer: 'homeContainer_e85cee',
+  homeContainerCollapsed: 'homeContainerCollapsed_e85cee',
+  emptyHeaderTitle: 'emptyHeaderTitle_e85cee',
+  homeContent: 'homeContent_e85cee',
+  mainContent: 'mainContent_e85cee',
+  sidebar: 'sidebar_e85cee',
+  sidebarCardWrapper: 'sidebarCardWrapper_e85cee',
+  sidebarCard: 'sidebarCard_e85cee',
+  sidebarCardHeader: 'sidebarCardHeader_e85cee',
+  guildDescription: 'guildDescription_e85cee',
+  guildInfo: 'guildInfo_e85cee',
+  guildInfoText: 'guildInfoText_e85cee',
+  dotOnline: 'dotOnline_e85cee',
+  resourceChannelsList: 'resourceChannelsList_e85cee',
+  resourceChannel: 'resourceChannel_e85cee',
+  resourceImage: 'resourceImage_e85cee resourceImageBase_e85cee',
+  placeholderImage: 'placeholderImage_e85cee resourceImageBase_e85cee',
+  title: 'title_e85cee',
+  background: 'background_e85cee',
+  headerBarInner: 'headerBarInner_e85cee'
+};

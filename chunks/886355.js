@@ -1,0 +1,3 @@
+t.Z = {
+  isScreenLandscape: () => null
+};

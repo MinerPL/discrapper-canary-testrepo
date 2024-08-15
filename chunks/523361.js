@@ -1,0 +1,52 @@
+t.d(n, {
+  HG: function() {
+return o;
+  },
+  Md: function() {
+return a;
+  },
+  Q8: function() {
+return u;
+  }
+});
+var i = t(373228),
+  r = t(689938);
+let u = () => [
+r.Z.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL1,
+r.Z.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL2
+  ],
+  a = () => [
+r.Z.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL1,
+r.Z.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL2
+  ],
+  o = [{
+  id: '781323471249604648',
+  format_type: i.u3.APNG,
+  description: 'Cheerful Choco jumps out of gift box',
+  name: 'Surprise'
+},
+{
+  id: '781324642736144424',
+  format_type: i.u3.APNG,
+  description: 'Cheerful Choco preens against window',
+  name: 'Affection'
+},
+{
+  id: '781323769960202280',
+  format_type: i.u3.APNG,
+  description: 'Cheerful Choco sparkles',
+  name: 'OMG'
+},
+{
+  id: '781324722394103808',
+  format_type: i.u3.APNG,
+  description: 'Cheerful Choco cheers',
+  name: 'Cheer'
+},
+{
+  id: '813951723822645278',
+  format_type: i.u3.APNG,
+  description: 'Cheerful Choco gives thumbs up',
+  name: 'Nice'
+}
+  ];

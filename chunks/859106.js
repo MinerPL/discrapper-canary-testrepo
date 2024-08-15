@@ -1,0 +1,23 @@
+e.exports = {
+  centeringWrapper: 'centeringWrapper_bb2184',
+  timelineContainer: 'timelineContainer_bb2184',
+  playPauseButtonWrapper: 'playPauseButtonWrapper_bb2184',
+  playPauseIcon: 'playPauseIcon_bb2184',
+  timeline: 'timeline_bb2184',
+  timelineDragging: 'timelineDragging_bb2184',
+  timelineVideo: 'timelineVideo_bb2184',
+  timelineBackground: 'timelineBackground_bb2184',
+  hiddenCanvas: 'hiddenCanvas_bb2184',
+  dragHandleLeft: 'dragHandleLeft_bb2184 dragHandle_bb2184',
+  dragHandleRight: 'dragHandleRight_bb2184 dragHandle_bb2184',
+  dragBox: 'dragBox_bb2184',
+  dragging: 'dragging_bb2184',
+  playhead: 'playhead_bb2184',
+  timePillBackground: 'timePillBackground_bb2184',
+  timePillText: 'timePillText_bb2184',
+  cropLeftArrow: 'cropLeftArrow_bb2184 cropArrow_bb2184',
+  cropRightArrow: 'cropRightArrow_bb2184 cropArrow_bb2184',
+  timePillContainer: 'timePillContainer_bb2184',
+  playPauseButton: 'playPauseButton_bb2184',
+  slashCharacter: 'slashCharacter_bb2184 char_bb2184'
+};
