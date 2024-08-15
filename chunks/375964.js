@@ -8892,6 +8892,7 @@ e.exports = Object.freeze({
 	PREMIUM_2024_APRIL_NITRO_OFFER_PAYMENT_FLOW_BANNER_HEADER: 'Join & Get Your Avatar Decoration',
 	PREMIUM_2024_APRIL_NITRO_OFFER_CLAIM_DECO_MODAL_BODY:
 		'Welcome to Nitro!\n\nWe wanted you to look good on your first day. Head to your profile to equip your new avatar decoration.',
+	PREMIUM_REVERSE_TRIAL_EMOJI_TOOLTIP: 'Send custom emojis from any joined servers with your **Nitro trial**.',
 	PROFILE_LOOKING_GOOD_TOOLTIP_TEXT: 'Lookin\u2019 good!',
 	PREMIUM_FEATURE_AVATAR_DECORATIONS_HEADER: 'Avatar Decorations',
 	EMOJI_PICKER_PREMIUM_UPSELL_TITLE: 'Unlock these emoji with Nitro',

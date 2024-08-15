@@ -105,7 +105,7 @@ class N {
 						})
 						.then(
 							(e) => {
-								if (null == e.body || 'f7b88364ebd92d2c8e4cf962791f279535bac462' === e.body.hash)
+								if (null == e.body || 'd1dcdc31379c3e2f78d0f9e04ec348a61ab80603' === e.body.hash)
 									return this._handleUpdateNotAvailable();
 								if (e.body.required || (0, r.fD)()) return this._handleUpdateDownloaded(!1);
 								let t = 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL ? I : m;

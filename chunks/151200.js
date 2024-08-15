@@ -1,6 +1,6 @@
 l.d(n, {
 	Z: function () {
-		return E;
+		return v;
 	}
 });
 var t = l(735250);
@@ -14,86 +14,87 @@ var r = l(120356),
 	c = l(206295),
 	d = l(297781),
 	m = l(43205),
-	f = l(231338),
-	p = l(917056);
-function E(e) {
+	f = l(792125),
+	p = l(231338),
+	E = l(917056);
+function v(e) {
 	let {
 			entry: n,
 			channel: l,
 			title: r,
-			subtitle: E,
-			thumbnailUrl: v,
-			onClickTitle: C,
-			onClickSubtitle: h,
-			onClickThumbnail: x,
-			providerIconProps: _,
-			style: N = {}
+			subtitle: v,
+			thumbnailUrl: C,
+			onClickTitle: h,
+			onClickSubtitle: x,
+			onClickThumbnail: _,
+			providerIconProps: N,
+			style: T = {}
 		} = e,
-		{ primaryColor: T, secondaryColor: I } = (0, c.Z)(v);
+		{ primaryColor: I, secondaryColor: g } = (0, c.Z)(C);
 	return (
-		null != v && (N.background = 'linear-gradient(45deg, '.concat(T, ', ').concat(I, ')')),
+		null != C && (T.background = 'linear-gradient(45deg, '.concat(I, ', ').concat(g, ')')),
 		(0, t.jsx)(a.ThemeContextProvider, {
-			theme: f.BR.DARK,
+			theme: p.BR.DARK,
 			children: (0, t.jsxs)('div', {
 				'data-disable-adaptive-theme': !0,
-				className: p.container,
-				style: N,
+				className: i()(E.container, (0, f.Q)(p.BR.DARK)),
+				style: T,
 				children: [
 					(0, t.jsx)(a.Clickable, {
-						onClick: x,
-						className: i()(p.thumbnailContainer, null != x && p.clickable),
+						onClick: _,
+						className: i()(E.thumbnailContainer, null != _ && E.clickable),
 						children: (0, t.jsx)(m.f, {
-							src: v,
+							src: C,
 							constrain: 'width',
 							size: 64
 						})
 					}),
 					(0, t.jsxs)('div', {
-						className: p.infoContainer,
+						className: E.infoContainer,
 						children: [
 							(0, t.jsx)(s.Z, {
 								channel: l,
 								entry: n,
-								className: p.users
+								className: E.users
 							}),
 							(0, t.jsx)(a.Spacer, { size: 2 }),
 							(0, t.jsx)(u.Z, {
-								onClick: C,
+								onClick: h,
 								children: (0, t.jsx)(a.Heading, {
 									variant: 'heading-md/medium',
 									lineClamp: 1,
-									className: i()(p.textPrimary, p.truncatedText),
+									className: i()(E.textPrimary, E.truncatedText),
 									scaleFontToUserSetting: !0,
 									children: r
 								})
 							}),
-							null != E
+							null != v
 								? (0, t.jsxs)(t.Fragment, {
 										children: [
 											(0, t.jsx)(a.Spacer, { size: 2 }),
 											(0, t.jsx)(u.Z, {
-												onClick: h,
+												onClick: x,
 												children: (0, t.jsx)(a.Text, {
 													variant: 'text-sm/normal',
-													className: i()(p.textSecondary, p.truncatedText),
+													className: i()(E.textSecondary, E.truncatedText),
 													lineClamp: 1,
 													scaleFontToUserSetting: !0,
-													children: E
+													children: v
 												})
 											})
 										]
 									})
 								: null,
 							(0, t.jsx)(d.PZ, {
-								className: p.badges,
+								className: E.badges,
 								entry: n,
 								location: d.Gt.EMBED
 							})
 						]
 					}),
 					(0, t.jsx)('div', {
-						className: p.headerIcons,
-						children: null != _ ? (0, t.jsx)(o.Z, { ..._ }) : null
+						className: E.headerIcons,
+						children: null != N ? (0, t.jsx)(o.Z, { ...N }) : null
 					})
 				]
 			})

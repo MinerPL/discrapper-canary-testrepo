@@ -28,8 +28,8 @@ let T = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new p.Z().log(
 	'[BUILD INFO] Release Channel: '
 		.concat(T, ', Build Number: ')
-		.concat('318825', ', Version Hash: ')
-		.concat('f7b88364ebd92d2c8e4cf962791f279535bac462')
+		.concat('318833', ', Version Hash: ')
+		.concat('d1dcdc31379c3e2f78d0f9e04ec348a61ab80603')
 ),
 	i.Z.setTags({ appContext: I.e3s }),
 	E.Z.initBasic(),
