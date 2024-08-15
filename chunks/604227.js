@@ -19,8 +19,8 @@ var a = t(525654),
 function E() {
 	var e, s, t, a, E, u;
 	let I = window.GLOBAL_ENV.RELEASE_CHANNEL,
-		T = '318814',
-		S = ((e = '9ee6a085b6a3e5adbb3d48c77736896e9856139d'), e.substring(0, 7)),
+		T = '318825',
+		S = ((e = 'f7b88364ebd92d2c8e4cf962791f279535bac462'), e.substring(0, 7)),
 		N = null === o.Z || void 0 === o.Z ? void 0 : o.Z.remoteApp.getVersion(),
 		C =
 			null === o.Z || void 0 === o.Z
