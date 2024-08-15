@@ -1,7 +1,0 @@
-e.exports = function(e) {
-  if (e.stopPropagation) {
-e.stopPropagation();
-return;
-  }
-  e.cancelBubble = !0;
-};
