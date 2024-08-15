@@ -20,8 +20,8 @@ var i,
 	f = n(57132),
 	h = n(703656),
 	p = n(365007),
-	m = n(314897),
-	I = n(480294),
+	I = n(314897),
+	m = n(480294),
 	T = n(573261),
 	g = n(572691),
 	S = n(981631),
@@ -311,22 +311,26 @@ function R() {
 				trackedActionData: { event: s.NetworkActionNames.USER_LOGOUT },
 				...(null != n && { headers: { authorization: null !== (e = o.getToken(n)) && void 0 !== e ? e : '' } })
 			}).finally(() => {
-				(null == n || n === m.default.getId()) && R(t);
+				(null == n || n === I.default.getId()) && R(t);
 			});
 		},
 		switchAccountToken(e) {
 			let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-				n = m.default.getToken();
-			N.log('Switching accounts', {
-				wasLoggedIn: null != n,
-				tokenHasChanged: e !== n
-			}),
-				O({ isSwitchingAccount: !0 });
-			let r = this.loginToken(e, !0).then(() => {
-				let t = m.default.getToken();
-				N.log('Switched accounts finished', { isCorrectToken: e === t });
-			});
-			return t && (0, h.uL)(S.Z5c.ME), r;
+				n = I.default.getToken();
+			return (
+				N.log('Switching accounts', {
+					wasLoggedIn: null != n,
+					tokenHasChanged: e !== n
+				}),
+				O({
+					isSwitchingAccount: !0,
+					goHomeAfterSwitching: t
+				}),
+				this.loginToken(e, !0).then(() => {
+					let t = I.default.getToken();
+					N.log('Switched accounts finished', { isCorrectToken: e === t });
+				})
+			);
 		},
 		verifySSOToken() {
 			let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.Z5c.DEFAULT_LOGGED_OUT;
@@ -529,7 +533,7 @@ function R() {
 						.then(
 							(e) => {
 								var t, n, i, a, s;
-								if ((clearTimeout(r), null == I.Z.getAuthenticationConsentRequired())) {
+								if ((clearTimeout(r), null == m.Z.getAuthenticationConsentRequired())) {
 									let t = null === (a = null == e ? void 0 : null === (i = e.body) || void 0 === i ? void 0 : i.consent_required) || void 0 === a || a;
 									c.Z.dispatch({
 										type: 'SET_CONSENT_REQUIRED',

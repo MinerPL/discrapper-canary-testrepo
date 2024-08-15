@@ -44,18 +44,25 @@ function h(e, t) {
 let p = (e) => {
 	let { entry: t, inline: n = !1, textColor: a, hovered: o = !1, bold: l = !1, scaleFontToUserSetting: c = !1 } = e,
 		d = h(t, o),
-		_ = i.useMemo(() => (0, E.T_)(t, d), [t, d]);
-	return (0, r.jsx)(u.Text, {
-		className: s()(f.timestamp, {
-			[f.inlineTimestamp]: n,
-			[f.bold]: l
-		}),
-		variant: 'text-xs/medium',
-		tabularNumbers: !0,
-		color: a,
-		scaleFontToUserSetting: c,
-		children: _
-	});
+		_ = i.useMemo(() => (0, E.T_)(t, d), [t, d]),
+		p = i.useRef(_);
+	return (
+		i.useEffect(() => {
+			p.current = _;
+		}, [t]),
+		(0, r.jsx)(u.Text, {
+			className: s()(f.timestamp, {
+				[f.inlineTimestamp]: n,
+				[f.bold]: l
+			}),
+			variant: 'text-xs/medium',
+			tabularNumbers: !0,
+			color: a,
+			scaleFontToUserSetting: c,
+			'aria-label': p.current,
+			children: _
+		})
+	);
 };
 t.ZP = (e) => {
 	let { entry: t, textColor: n, hovered: i = !1, bold: a = !1, scaleFontToUserSetting: s = !1 } = e,

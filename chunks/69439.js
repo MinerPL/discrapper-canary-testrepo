@@ -79,9 +79,10 @@ function f(e) {
 		B = (0, E.Xv)(C.config),
 		H = (0, d.Rf)(C),
 		[V, F, Y] = (0, d.me)(C, H),
-		W = G && V === _.LI.SELECT,
-		z = G && !W && F.length > 1,
-		{ text: K, onClick: q } = (0, h.Ks)({
+		W = G && k === d.OH.ACCEPTED,
+		z = W && V === _.LI.SELECT,
+		K = W && !z && F.length > 1,
+		{ text: q, onClick: Q } = (0, h.Ks)({
 			progressState: k,
 			quest: C,
 			isInHouseQuest: w,
@@ -91,7 +92,7 @@ function f(e) {
 			questContentRowIndex: Z,
 			inGiftInventory: !0
 		}),
-		{ startingConsoleQuest: Q, startConsoleQuest: X } = (0, d.GI)({
+		{ startingConsoleQuest: X, startConsoleQuest: J } = (0, d.GI)({
 			questId: C.id,
 			beforeRequest: () => {
 				O.startAnimation(),
@@ -107,34 +108,34 @@ function f(e) {
 				O.stopAnimation(), A(e);
 			}
 		}),
-		J = (null === (f = C.userStatus) || void 0 === f ? void 0 : f.claimedAt) != null,
-		$ = null;
+		$ = (null === (f = C.userStatus) || void 0 === f ? void 0 : f.claimedAt) != null,
+		ee = null;
 	return (U && j
-		? ($ = (0, i.jsx)(l.Button, {
+		? (ee = (0, i.jsx)(l.Button, {
 				color: l.ButtonColors.BRAND,
 				submitting: P,
-				onClick: null != q ? q : void 0,
+				onClick: null != Q ? Q : void 0,
 				className: p.button,
-				children: K
+				children: q
 			}))
 		: y
-			? ($ = (0, i.jsx)(l.Button, {
+			? (ee = (0, i.jsx)(l.Button, {
 					color: l.ButtonColors.BRAND,
 					className: p.button,
-					onClick: null != q ? q : void 0,
-					children: K
+					onClick: null != Q ? Q : void 0,
+					children: q
 				}))
 			: G
 				? G && j
-					? ($ = (0, i.jsx)(l.Button, {
+					? (ee = (0, i.jsx)(l.Button, {
 							color: l.ButtonColors.BRAND,
 							submitting: P,
-							onClick: null != q ? q : void 0,
+							onClick: null != Q ? Q : void 0,
 							className: p.button,
-							children: K
+							children: q
 						}))
-					: G && D && !J
-						? ($ = W
+					: G && D && !$
+						? (ee = z
 								? (0, i.jsx)(l.Select, {
 										className: p.platformSelectorPrimary,
 										isSelected: () => !1,
@@ -156,13 +157,13 @@ function f(e) {
 										? (0, i.jsx)(l.Button, {
 												color: l.ButtonColors.PRIMARY,
 												className: p.button,
-												onClick: null != q ? q : void 0,
-												children: K
+												onClick: null != Q ? Q : void 0,
+												children: q
 											})
 										: (0, i.jsx)(l.Button, {
 												color: l.ButtonColors.PRIMARY,
-												onClick: X,
-												disabled: Q,
+												onClick: J,
+												disabled: X,
 												className: p.button,
 												children: (0, i.jsxs)('div', {
 													className: p.ctaInner,
@@ -177,26 +178,26 @@ function f(e) {
 										}))
 						: G &&
 							!D &&
-							($ = (0, i.jsx)(l.Button, {
+							(ee = (0, i.jsx)(l.Button, {
 								submitting: M,
 								color: l.ButtonColors.BRAND,
-								onClick: null != q ? q : void 0,
+								onClick: null != Q ? Q : void 0,
 								className: p.button,
-								children: K
+								children: q
 							}))
-				: ($ = (0, i.jsx)(l.Button, {
+				: (ee = (0, i.jsx)(l.Button, {
 						color: l.ButtonColors.PRIMARY,
 						disabled: !0,
 						className: p.button,
 						children: g.Z.Messages.QUESTS_ENDED_ON_DATE.format({ expiryDate: b })
 					})),
-	null == $)
+	null == ee)
 		? null
 		: (0, i.jsxs)('div', {
 				className: p.container,
 				children: [
-					$,
-					z &&
+					ee,
+					K &&
 						(0, i.jsx)(m.U, {
 							onSelect: Y,
 							quest: C,

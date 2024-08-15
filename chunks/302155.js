@@ -1,7 +1,7 @@
 let r, i;
 n.d(t, {
 	Z: function () {
-		return E;
+		return f;
 	}
 });
 var a = n(213919),
@@ -24,7 +24,8 @@ function _(e, t, n) {
 		e
 	);
 }
-class E extends o.Z {
+let E = !1;
+class f extends o.Z {
 	_initialize() {
 		s.Z.subscribe('CONNECTION_OPEN', () => this.handleConnectionOpen()), this.handleConnectionOpen();
 	}
@@ -52,7 +53,7 @@ class E extends o.Z {
 							from_user_id: i,
 							linked_user_ids: e
 						}),
-							null === (t = this.onSwitchSuccess) || void 0 === t || t.call(this, s);
+							null === (t = this.onSwitchSuccess) || void 0 === t || t.call(this, s, E);
 					} else u.default.track(d.rMx.MULTI_ACCOUNT_SWITCH_FAILURE), null === (n = this.onSwitchError) || void 0 === n || n.call(this, s);
 					i = null;
 				}
@@ -63,8 +64,8 @@ class E extends o.Z {
 			_(this, 'handleLogout', (e) => {
 				if (e.isSwitchingAccount) {
 					var t;
-					(i = r), null === (t = this.onSwitchStart) || void 0 === t || t.call(this);
-				} else a.removeToken(r);
+					(i = r), null === (t = this.onSwitchStart) || void 0 === t || t.call(this), (E = !!e.goHomeAfterSwitching);
+				} else (E = !1), a.removeToken(r);
 				r = null;
 			}),
 			(this.onSwitchStart = e),

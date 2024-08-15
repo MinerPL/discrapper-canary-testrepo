@@ -15290,7 +15290,9 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 .imageContent_cf58b5 {
     display: flex;
     flex-flow: column nowrap;
-    flex: auto
+    flex: auto;
+    width: -moz-fit-content;
+    width: fit-content
 }
 
 .imageContainer_cf58b5 {

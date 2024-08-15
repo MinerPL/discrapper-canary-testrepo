@@ -1,8 +1,8 @@
 var s = n(735250);
 n(470079);
 var o = n(338545),
-	a = n(481060),
-	r = n(497505),
+	r = n(481060),
+	a = n(497505),
 	l = n(302245),
 	i = n(644646),
 	c = n(46140),
@@ -55,7 +55,7 @@ t.Z = (e) => {
 						children: (0, s.jsx)(i.Z, {
 							learnMoreStyle: 'text',
 							quest: t,
-							questContent: r.jn.QUEST_BAR_V2,
+							questContent: a.jn.QUEST_BAR_V2,
 							location: c.dr.QUESTS_BAR,
 							autoplay: !m
 						})
@@ -94,26 +94,13 @@ t.Z = (e) => {
 										output: [0.7, 0]
 									})
 								},
-								children: (0, s.jsx)(a.Text, {
+								children: (0, s.jsx)(r.Text, {
 									color: 'always-white',
 									variant: 'text-xs/medium',
 									children: C
 								})
 							})
 						]
-					}),
-					(0, s.jsx)(o.animated.div, {
-						className: u.giftBoxIcon,
-						style: {
-							opacity: n.to({
-								range: [0, 1],
-								output: [1, 0]
-							})
-						},
-						children: (0, s.jsx)(a.GiftIcon, {
-							size: 'md',
-							color: a.tokens.colors.WHITE
-						})
 					})
 				]
 			});
