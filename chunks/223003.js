@@ -1,14 +1,14 @@
-n.r(t), n.d(t, {
-  default: function() {
-return s;
-  }
-});
+n.r(t),
+	n.d(t, {
+		default: function () {
+			return s;
+		}
+	});
 var r = n(217224),
-  i = n(599582),
-  a = n(951516);
-
+	i = n(599582),
+	a = n(951516);
 function s(e, t) {
-  (0, a.Z)(2, arguments);
-  var n = (0, r.Z)(t);
-  return (0, i.default)(e, 7 * n);
+	(0, a.Z)(2, arguments);
+	var n = (0, r.Z)(t);
+	return (0, i.default)(e, 7 * n);
 }

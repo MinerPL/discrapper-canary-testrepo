@@ -1,12 +1,11 @@
-
 function r(e) {
-  return {
-scrollLeft: e.scrollLeft,
-scrollTop: e.scrollTop
-  };
+	return {
+		scrollLeft: e.scrollLeft,
+		scrollTop: e.scrollTop
+	};
 }
 n.d(t, {
-  Z: function() {
-return r;
-  }
+	Z: function () {
+		return r;
+	}
 });

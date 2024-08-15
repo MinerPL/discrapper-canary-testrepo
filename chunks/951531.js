@@ -1,3 +1,1 @@
-e.exports = {
-  slider: 'slider_cc7683'
-};
+e.exports = { slider: 'slider_cc7683' };

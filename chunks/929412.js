@@ -1,17 +1,16 @@
 n.d(t, {
-  _: function() {
-return i;
-  }
+	_: function () {
+		return i;
+	}
 });
 var r = n(36056);
-
 function i(e, t) {
-  switch (t) {
-case r.pz.BIGINT:
-  return e.toBigInt();
-case r.pz.NUMBER:
-  return e.toNumber();
-default:
-  return e.toString();
-  }
+	switch (t) {
+		case r.pz.BIGINT:
+			return e.toBigInt();
+		case r.pz.NUMBER:
+			return e.toNumber();
+		default:
+			return e.toString();
+	}
 }

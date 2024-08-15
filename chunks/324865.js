@@ -1,3 +1,1 @@
-e.exports = {
-  channelNameChange: 'channelNameChange_ce613b'
-};
+e.exports = { channelNameChange: 'channelNameChange_ce613b' };

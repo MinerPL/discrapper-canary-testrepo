@@ -1,3 +1,1 @@
-e.exports = {
-  overflow: 'overflow_a82120'
-};
+e.exports = { overflow: 'overflow_a82120' };

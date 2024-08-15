@@ -1,3 +1,1 @@
-e.exports = {
-  back: 'back_fd80e5'
-};
+e.exports = { back: 'back_fd80e5' };

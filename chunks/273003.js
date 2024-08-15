@@ -1,20 +1,18 @@
 n.d(t, {
-  q: function() {
-return i;
-  }
+	q: function () {
+		return i;
+	}
 });
 let i = (0, n(818083).B)({
-  kind: 'user',
-  id: '2023-04_birthday_activities_jamspace_tile',
-  label: 'Birthday Activities Whats New Jamspace Tile',
-  defaultConfig: {
-enabled: !1
-  },
-  treatments: [{
-id: 1,
-label: 'Enable Jamspace tile',
-config: {
-  enabled: !0
-}
-  }]
+	kind: 'user',
+	id: '2023-04_birthday_activities_jamspace_tile',
+	label: 'Birthday Activities Whats New Jamspace Tile',
+	defaultConfig: { enabled: !1 },
+	treatments: [
+		{
+			id: 1,
+			label: 'Enable Jamspace tile',
+			config: { enabled: !0 }
+		}
+	]
 });

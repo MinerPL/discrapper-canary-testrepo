@@ -1,6 +1,6 @@
 n.d(t, {
-  H: function() {
-return r.H;
-  }
+	H: function () {
+		return r.H;
+	}
 });
 var r = n(937531);

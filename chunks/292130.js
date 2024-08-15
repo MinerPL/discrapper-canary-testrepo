@@ -1,3 +1,1 @@
-e.exports = {
-  noAutocompleteResults: 'noAutocompleteResults_ee43bc'
-};
+e.exports = { noAutocompleteResults: 'noAutocompleteResults_ee43bc' };

@@ -1,14 +1,12 @@
-
 function r() {
-  return null;
+	return null;
 }
-
 function i(e) {}
 n.d(t, {
-  I: function() {
-return i;
-  },
-  n: function() {
-return r;
-  }
+	I: function () {
+		return i;
+	},
+	n: function () {
+		return r;
+	}
 });

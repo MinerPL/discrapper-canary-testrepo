@@ -1,9 +1,8 @@
-
 function r() {
-  return null;
+	return null;
 }
 n.d(t, {
-  Z: function() {
-return r;
-  }
+	Z: function () {
+		return r;
+	}
 });

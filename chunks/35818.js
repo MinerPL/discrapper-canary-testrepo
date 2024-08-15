@@ -1,10 +1,9 @@
 n.d(t, {
-  Q: function() {
-return a;
-  }
+	Q: function () {
+		return a;
+	}
 });
-let i = new(n(107965)).Z();
-
+let i = new (n(107965).Z)();
 function a() {
-  i.quitAndInstall();
+	i.quitAndInstall();
 }

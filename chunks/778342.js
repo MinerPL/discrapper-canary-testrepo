@@ -1,3 +1,1 @@
-e.exports = {
-  hoverCard: 'hoverCard_d991d3'
-};
+e.exports = { hoverCard: 'hoverCard_d991d3' };

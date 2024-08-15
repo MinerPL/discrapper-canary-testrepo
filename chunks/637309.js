@@ -1,3 +1,1 @@
-e.exports = {
-  bioTextArea: 'bioTextArea_ccf27d'
-};
+e.exports = { bioTextArea: 'bioTextArea_ccf27d' };

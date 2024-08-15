@@ -1,4 +1,4 @@
 e.exports = {
-  modalContent: 'modalContent_e85109',
-  header: 'header_e85109'
+	modalContent: 'modalContent_e85109',
+	header: 'header_e85109'
 };

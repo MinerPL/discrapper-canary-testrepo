@@ -1,3 +1,1 @@
-e.exports = {
-  focusTarget: 'focusTarget_dc8280'
-};
+e.exports = { focusTarget: 'focusTarget_dc8280' };

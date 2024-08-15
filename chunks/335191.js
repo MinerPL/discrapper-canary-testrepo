@@ -1,281 +1,302 @@
-n.d(t, {
-  E3: function() {
-return R;
-  },
-  OA: function() {
-return y;
-  },
-  tH: function() {
-return C;
-  }
-}), n(653041);
-var r = n(735250),
-  i = n(470079),
-  a = n(120356),
-  s = n.n(a),
-  o = n(692547),
-  l = n(780384),
-  u = n(481060),
-  c = n(99690),
-  d = n(726542),
-  _ = n(367907),
-  E = n(132871),
-  f = n(147890),
-  h = n(122021),
-  p = n(275759),
-  m = n(888496),
-  I = n(753194),
-  T = n(598077),
-  g = n(671533),
-  S = n(49012),
-  A = n(981631),
-  N = n(856651),
-  v = n(689938),
-  O = n(740458);
-
-function R(e) {
-  var t, n;
-  let i, a, c, {
-connectedAccount: E,
-theme: f,
-locale: T,
-userId: R,
-className: C,
-showMetadata: y,
-showInvisibleIcon: D
-  } = e;
-  null == y && (y = !0);
-  let L = null !== (n = E.metadata) && void 0 !== n ? n : {},
-b = y ? (0, p.FI)(L[N.PC.CREATED_AT], T) : null,
-M = (0, u.useToken)(o.Z.unsafe_rawColors.TWITTER).hex(),
-P = v.Z.Messages.CONNECTION_VERIFIED;
-  if (y)
-switch (E.type) {
-  case A.ABu.REDDIT:
-    i = (0, m.oP)(L);
-    break;
-  case A.ABu.STEAM:
-    i = (0, m.Dq)(L);
-    break;
-  case A.ABu.TWITTER:
-    i = (0, m.rJ)(L), '1' === L[N.PC.TWITTER_VERIFIED] && (a = M, P = v.Z.Messages.CONNECTION_VERIFIED_ON_TWITTER);
-    break;
-  case A.ABu.PAYPAL:
-    i = (0, m.li)(L);
-    break;
-  case A.ABu.EBAY:
-    i = (0, m.ul)(L);
-    break;
-  case A.ABu.TIKTOK:
-    i = (0, m.hf)(L);
+t.d(n, {
+	E3: function () {
+		return P;
+	},
+	OA: function () {
+		return L;
+	},
+	tH: function () {
+		return f;
+	}
+}),
+	t(653041);
+var c = t(735250),
+	a = t(470079),
+	o = t(120356),
+	l = t.n(o),
+	r = t(692547),
+	i = t(780384),
+	s = t(481060),
+	u = t(99690),
+	T = t(726542),
+	E = t(367907),
+	N = t(132871),
+	d = t(147890),
+	_ = t(122021),
+	I = t(275759),
+	O = t(888496),
+	A = t(753194),
+	C = t(598077),
+	m = t(671533),
+	p = t(49012),
+	h = t(981631),
+	R = t(856651),
+	x = t(689938),
+	v = t(740458);
+function P(e) {
+	var n, t;
+	let a,
+		o,
+		u,
+		{ connectedAccount: N, theme: d, locale: C, userId: P, className: f, showMetadata: L, showInvisibleIcon: S } = e;
+	null == L && (L = !0);
+	let D = null !== (t = N.metadata) && void 0 !== t ? t : {},
+		g = L ? (0, I.FI)(D[R.PC.CREATED_AT], C) : null,
+		M = (0, s.useToken)(r.Z.unsafe_rawColors.TWITTER).hex(),
+		j = x.Z.Messages.CONNECTION_VERIFIED;
+	if (L)
+		switch (N.type) {
+			case h.ABu.REDDIT:
+				a = (0, O.oP)(D);
+				break;
+			case h.ABu.STEAM:
+				a = (0, O.Dq)(D);
+				break;
+			case h.ABu.TWITTER:
+				(a = (0, O.rJ)(D)),
+					'1' === D[R.PC.TWITTER_VERIFIED] && ((o = M), (j = x.Z.Messages.CONNECTION_VERIFIED_ON_TWITTER));
+				break;
+			case h.ABu.PAYPAL:
+				a = (0, O.li)(D);
+				break;
+			case h.ABu.EBAY:
+				a = (0, O.ul)(D);
+				break;
+			case h.ABu.TIKTOK:
+				a = (0, O.hf)(D);
+		}
+	let b = T.Z.get((0, _.rR)(N.type)),
+		y = null == b ? void 0 : null === (n = b.getPlatformUserUrl) || void 0 === n ? void 0 : n.call(b, N);
+	null != S && S
+		? (u = (0, c.jsx)(s.EyeSlashIcon, {
+				size: 'md',
+				color: 'currentColor',
+				className: l()(v.__invalid_connectedAccountOpenIconContainer, v.connectedAccountHideIcon)
+			}))
+		: null != y &&
+			(u = (0, c.jsx)(s.Anchor, {
+				href: y,
+				onClick: (e) => {
+					var n, t;
+					(n = N.type),
+						(t = P),
+						(0, E.yw)(h.rMx.CONNECTED_ACCOUNT_VIEWED, {
+							platform_type: n,
+							other_user_id: t
+						}),
+						(0, p.q)(
+							{
+								href: y,
+								trusted: (null == b ? void 0 : b.type) !== h.ABu.DOMAIN
+							},
+							e
+						);
+				},
+				children: (0, c.jsx)(m.Z, {
+					className: v.connectedAccountOpenIcon,
+					direction: m.Z.Directions.RIGHT
+				})
+			}));
+	let F = (0, s.useToken)(r.Z.colors.INTERACTIVE_MUTED).hex(),
+		U = (0, s.useToken)(r.Z.colors.INTERACTIVE_ACTIVE).hex(),
+		w = N.verified
+			? (0, c.jsx)(A.Z, {
+					className: v.connectedAccountVerifiedIcon,
+					color: null != o ? o : F,
+					forcedIconColor: U,
+					size: 16,
+					tooltipText: j
+				})
+			: null;
+	return (0, c.jsxs)('div', {
+		className: l()(
+			v.connectedAccountContainer,
+			(null != a && a.length > 0) || null != g ? v.connectedAccountContainerWithMetadata : null,
+			f
+		),
+		children: [
+			(0, c.jsxs)('div', {
+				className: v.connectedAccount,
+				children: [
+					(0, c.jsx)(s.Tooltip, {
+						text: null == b ? void 0 : b.name,
+						children: (e) =>
+							(0, c.jsx)('img', {
+								...e,
+								alt: x.Z.Messages.IMG_ALT_LOGO.format({ name: null == b ? void 0 : b.name }),
+								className: v.connectedAccountIcon,
+								src: (0, i.wj)(d) ? (null == b ? void 0 : b.icon.darkSVG) : null == b ? void 0 : b.icon.lightSVG
+							})
+					}),
+					(0, c.jsxs)('div', {
+						className: v.connectedAccountNameContainer,
+						children: [
+							(0, c.jsxs)('div', {
+								className: v.connectedAccountName,
+								children: [
+									(0, c.jsxs)('div', {
+										className: v.connectedAccountNameTextContainer,
+										children: [
+											(0, c.jsx)(s.Tooltip, {
+												overflowOnly: !0,
+												text: N.name,
+												children: (e) =>
+													(0, c.jsx)(s.Text, {
+														...e,
+														variant: 'text-md/semibold',
+														color: 'interactive-active',
+														className: v.connectedAccountNameText,
+														children: N.name
+													})
+											}),
+											w
+										]
+									}),
+									u
+								]
+							}),
+							null != g
+								? (0, c.jsx)(s.Text, {
+										variant: 'text-xs/normal',
+										color: 'header-secondary',
+										children: x.Z.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({ date: g })
+									})
+								: null
+						]
+					})
+				]
+			}),
+			null != a && a.length > 0
+				? (0, c.jsx)('div', {
+						className: v.connectedAccountChildren,
+						children: a
+					})
+				: null
+		]
+	});
 }
-  let U = d.Z.get((0, h.rR)(E.type)),
-w = null == U ? void 0 : null === (t = U.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(U, E);
-  null != D && D ? c = (0, r.jsx)(u.EyeSlashIcon, {
-size: 'md',
-color: 'currentColor',
-className: s()(O.__invalid_connectedAccountOpenIconContainer, O.connectedAccountHideIcon)
-  }) : null != w && (c = (0, r.jsx)(u.Anchor, {
-href: w,
-onClick: e => {
-  var t, n;
-  t = E.type, n = R, (0, _.yw)(A.rMx.CONNECTED_ACCOUNT_VIEWED, {
-    platform_type: t,
-    other_user_id: n
-  }), (0, S.q)({
-    href: w,
-    trusted: (null == U ? void 0 : U.type) !== A.ABu.DOMAIN
-  }, e);
-},
-children: (0, r.jsx)(g.Z, {
-  className: O.connectedAccountOpenIcon,
-  direction: g.Z.Directions.RIGHT
-})
-  }));
-  let x = (0, u.useToken)(o.Z.colors.INTERACTIVE_MUTED).hex(),
-G = (0, u.useToken)(o.Z.colors.INTERACTIVE_ACTIVE).hex(),
-k = E.verified ? (0, r.jsx)(I.Z, {
-  className: O.connectedAccountVerifiedIcon,
-  color: null != a ? a : x,
-  forcedIconColor: G,
-  size: 16,
-  tooltipText: P
-}) : null;
-  return (0, r.jsxs)('div', {
-className: s()(O.connectedAccountContainer, null != i && i.length > 0 || null != b ? O.connectedAccountContainerWithMetadata : null, C),
-children: [
-  (0, r.jsxs)('div', {
-    className: O.connectedAccount,
-    children: [
-      (0, r.jsx)(u.Tooltip, {
-        text: null == U ? void 0 : U.name,
-        children: e => (0, r.jsx)('img', {
-          ...e,
-          alt: v.Z.Messages.IMG_ALT_LOGO.format({
-            name: null == U ? void 0 : U.name
-          }),
-          className: O.connectedAccountIcon,
-          src: (0, l.wj)(f) ? null == U ? void 0 : U.icon.darkSVG : null == U ? void 0 : U.icon.lightSVG
-        })
-      }),
-      (0, r.jsxs)('div', {
-        className: O.connectedAccountNameContainer,
-        children: [
-          (0, r.jsxs)('div', {
-            className: O.connectedAccountName,
-            children: [
-              (0, r.jsxs)('div', {
-                className: O.connectedAccountNameTextContainer,
-                children: [
-                  (0, r.jsx)(u.Tooltip, {
-                    overflowOnly: !0,
-                    text: E.name,
-                    children: e => (0, r.jsx)(u.Text, {
-                      ...e,
-                      variant: 'text-md/semibold',
-                      color: 'interactive-active',
-                      className: O.connectedAccountNameText,
-                      children: E.name
-                    })
-                  }),
-                  k
-                ]
-              }),
-              c
-            ]
-          }),
-          null != b ? (0, r.jsx)(u.Text, {
-            variant: 'text-xs/normal',
-            color: 'header-secondary',
-            children: v.Z.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({
-              date: b
-            })
-          }) : null
-        ]
-      })
-    ]
-  }),
-  null != i && i.length > 0 ? (0, r.jsx)('div', {
-    className: O.connectedAccountChildren,
-    children: i
-  }) : null
-]
-  });
+function f(e) {
+	let { applicationRoleConnection: n, className: t, locale: a, onApplicationClicked: o, selectedGuildId: r } = e,
+		i = (0, O.rm)(n, void 0, a),
+		T = () => {
+			null == o || o(),
+				(0, d.goToAppDirectory)({
+					view: N.ApplicationDirectoryViews.APPLICATION,
+					applicationId: n.application.id,
+					guildId: r,
+					entrypoint: { name: N.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_URL }
+				});
+		};
+	return (0, c.jsxs)('div', {
+		className: l()(
+			v.connectedAccountContainer,
+			null != i && i.length > 0 ? v.connectedAccountContainerWithMetadata : null,
+			t
+		),
+		children: [
+			(0, c.jsx)('div', {
+				className: v.connectedAccount,
+				children: (0, c.jsxs)(s.Clickable, {
+					className: l()(v.connectedAccountNameContainer, v.connectedAccountNameContainerClickable),
+					onClick: T,
+					children: [
+						null != n.platform_name
+							? (0, c.jsx)(s.Text, {
+									variant: 'eyebrow',
+									color: 'interactive-normal',
+									children: n.platform_name
+								})
+							: null,
+						null != n.platform_username
+							? (0, c.jsx)('div', {
+									className: v.connectedAccountName,
+									children: (0, c.jsx)('div', {
+										className: v.connectedAccountNameTextContainer,
+										children: (0, c.jsx)(s.Text, {
+											variant: 'text-md/semibold',
+											color: 'interactive-active',
+											className: v.connectedAccountNameText,
+											children: n.platform_username
+										})
+									})
+								})
+							: null
+					]
+				})
+			}),
+			null != i && i.length > 0
+				? (0, c.jsx)('div', {
+						className: l()(v.connectedAccountChildren, v.connectedAccountChildrenNoIcon),
+						children: i
+					})
+				: null,
+			(0, c.jsx)('div', {
+				children: (0, c.jsx)(s.Clickable, {
+					className: v.connectedAccountPoweredBy,
+					onClick: T,
+					children: (0, c.jsx)(s.Text, {
+						variant: 'text-xs/normal',
+						color: 'text-muted',
+						children: x.Z.Messages.CONNECTIONS_PROFILE_POWERED_BY.format({
+							applicationHook: () =>
+								(0, c.jsxs)('div', {
+									className: v.connectedAccountPoweredByText,
+									children: [
+										null != n.application.bot
+											? (0, c.jsx)(u.Z, {
+													user: new C.Z(n.application.bot),
+													size: s.AvatarSizes.SIZE_16
+												})
+											: null,
+										(0, c.jsx)(s.Text, {
+											variant: 'text-xs/normal',
+											color: 'text-normal',
+											children: n.application.name
+										})
+									]
+								})
+						})
+					})
+				})
+			})
+		]
+	});
 }
-
-function C(e) {
-  let {
-applicationRoleConnection: t,
-className: n,
-locale: i,
-onApplicationClicked: a,
-selectedGuildId: o
-  } = e, l = (0, m.rm)(t, void 0, i), d = () => {
-null == a || a(), (0, f.goToAppDirectory)({
-  view: E.ApplicationDirectoryViews.APPLICATION,
-  applicationId: t.application.id,
-  guildId: o,
-  entrypoint: {
-    name: E.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_URL
-  }
-});
-  };
-  return (0, r.jsxs)('div', {
-className: s()(O.connectedAccountContainer, null != l && l.length > 0 ? O.connectedAccountContainerWithMetadata : null, n),
-children: [
-  (0, r.jsx)('div', {
-    className: O.connectedAccount,
-    children: (0, r.jsxs)(u.Clickable, {
-      className: s()(O.connectedAccountNameContainer, O.connectedAccountNameContainerClickable),
-      onClick: d,
-      children: [
-        null != t.platform_name ? (0, r.jsx)(u.Text, {
-          variant: 'eyebrow',
-          color: 'interactive-normal',
-          children: t.platform_name
-        }) : null,
-        null != t.platform_username ? (0, r.jsx)('div', {
-          className: O.connectedAccountName,
-          children: (0, r.jsx)('div', {
-            className: O.connectedAccountNameTextContainer,
-            children: (0, r.jsx)(u.Text, {
-              variant: 'text-md/semibold',
-              color: 'interactive-active',
-              className: O.connectedAccountNameText,
-              children: t.platform_username
-            })
-          })
-        }) : null
-      ]
-    })
-  }),
-  null != l && l.length > 0 ? (0, r.jsx)('div', {
-    className: s()(O.connectedAccountChildren, O.connectedAccountChildrenNoIcon),
-    children: l
-  }) : null,
-  (0, r.jsx)('div', {
-    children: (0, r.jsx)(u.Clickable, {
-      className: O.connectedAccountPoweredBy,
-      onClick: d,
-      children: (0, r.jsx)(u.Text, {
-        variant: 'text-xs/normal',
-        color: 'text-muted',
-        children: v.Z.Messages.CONNECTIONS_PROFILE_POWERED_BY.format({
-          applicationHook: () => (0, r.jsxs)('div', {
-            className: O.connectedAccountPoweredByText,
-            children: [
-              null != t.application.bot ? (0, r.jsx)(c.Z, {
-                user: new T.Z(t.application.bot),
-                size: u.AvatarSizes.SIZE_16
-              }) : null,
-              (0, r.jsx)(u.Text, {
-                variant: 'text-xs/normal',
-                color: 'text-normal',
-                children: t.application.name
-              })
-            ]
-          })
-        })
-      })
-    })
-  })
-]
-  });
-}
-let y = i.forwardRef(function(e, t) {
-  let {
-connectedAccounts: n,
-theme: i,
-locale: a,
-className: o,
-userId: l
-  } = e;
-  if (null == n || 0 === n.length)
-return null;
-  let u = n.filter(e => d.Z.isSupported(e.type)).map(e => (0, r.jsx)(R, {
-  connectedAccount: e,
-  theme: i,
-  locale: a,
-  userId: l
-}, ''.concat(e.type, ':').concat(e.id))),
-c = [],
-_ = [];
-  for (let e = 0; e < u.length; e++) {
-let t = u[e];
-e % 2 == 0 ? c.push(t) : _.push(t);
-  }
-  return (0, r.jsxs)('div', {
-ref: t,
-className: s()(O.connectedAccounts, o),
-children: [
-  (0, r.jsx)('div', {
-    className: O.connectedAccountsColumn,
-    children: c
-  }),
-  (0, r.jsx)('div', {
-    className: O.connectedAccountsColumn,
-    children: _
-  })
-]
-  });
+let L = a.forwardRef(function (e, n) {
+	let { connectedAccounts: t, theme: a, locale: o, className: r, userId: i } = e;
+	if (null == t || 0 === t.length) return null;
+	let s = t
+			.filter((e) => T.Z.isSupported(e.type))
+			.map((e) =>
+				(0, c.jsx)(
+					P,
+					{
+						connectedAccount: e,
+						theme: a,
+						locale: o,
+						userId: i
+					},
+					''.concat(e.type, ':').concat(e.id)
+				)
+			),
+		u = [],
+		E = [];
+	for (let e = 0; e < s.length; e++) {
+		let n = s[e];
+		e % 2 == 0 ? u.push(n) : E.push(n);
+	}
+	return (0, c.jsxs)('div', {
+		ref: n,
+		className: l()(v.connectedAccounts, r),
+		children: [
+			(0, c.jsx)('div', {
+				className: v.connectedAccountsColumn,
+				children: u
+			}),
+			(0, c.jsx)('div', {
+				className: v.connectedAccountsColumn,
+				children: E
+			})
+		]
+	});
 });

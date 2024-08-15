@@ -1,13 +1,11 @@
-var r = n(544891),
-  i = n(981631);
-t.Z = {
-  updateNote(e, t) {
-r.tn.put({
-  url: i.ANM.NOTE(e),
-  body: {
-    note: t
-  },
-  oldFormErrors: !0
-});
-  }
+var s = t(544891),
+	i = t(981631);
+n.Z = {
+	updateNote(e, n) {
+		s.tn.put({
+			url: i.ANM.NOTE(e),
+			body: { note: n },
+			oldFormErrors: !0
+		});
+	}
 };

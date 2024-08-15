@@ -1,72 +1,60 @@
-n.r(s), n.d(s, {
-  default: function() {
-return v;
-  }
-}), n(47120);
-var i = n(735250),
-  t = n(470079),
-  l = n(512722),
-  o = n.n(l),
-  a = n(442837),
-  r = n(100527),
-  d = n(699516),
-  c = n(594174),
-  u = n(453956),
-  _ = n(380738),
-  I = n(787018),
-  f = n(910364),
-  E = n(853825),
-  m = n(41527),
-  S = n(107889);
-let x = [
-  r.Z.BITE_SIZE_PROFILE_POPOUT,
-  r.Z.PROFILE_POPOUT,
-  r.Z.PROFILE_PANEL
-];
-
-function v(e) {
-  let {
-location: s,
-user: n,
-...l
-  } = e, {
-botProfilesEnabled: r
-  } = (0, _.J)({
-location: s
-  }), v = (0, a.e7)([c.default], () => c.default.getCurrentUser());
-  o()(null != v, 'UserProfileModalExperimentWrapper: currentUser cannot be undefined');
-  let Z = (0, a.e7)([d.Z], () => d.Z.isBlocked(n.id)),
-[h, p] = t.useState(Z),
-T = (0, u.sS)({
-  location: s
-});
-  t.useEffect(() => {
-p(Z);
-  }, [Z]);
-  let g = !x.some(e => {
-var s;
-return (null !== (s = l.sourceAnalyticsLocations) && void 0 !== s ? s : []).includes(e);
-  });
-  return h && T && g ? (0, i.jsx)(I.Z, {
-user: n,
-currentUser: v,
-onViewBlockedProfileClick: () => p(!1),
-...l
-  }) : r && n.isNonUserBot() ? (0, i.jsx)(E.Z, {
-...l,
-user: n,
-currentUser: v
-  }) : r && n.bot ? (0, i.jsx)(m.Z, {
-...l,
-user: n,
-currentUser: v
-  }) : n.bot ? (0, i.jsx)(f.Z, {
-...l,
-user: n,
-currentUser: v
-  }) : (0, i.jsx)(S.Z, {
-...l,
-user: n,
-currentUser: v
-  });
+t.r(n),
+	t.d(n, {
+		default: function () {
+			return p;
+		}
+	}),
+	t(47120);
+var s = t(735250),
+	i = t(470079),
+	o = t(512722),
+	l = t.n(o),
+	r = t(442837),
+	a = t(100527),
+	c = t(699516),
+	d = t(594174),
+	u = t(453956),
+	I = t(787018),
+	_ = t(853825),
+	f = t(41527),
+	E = t(107889);
+let m = [a.Z.BITE_SIZE_PROFILE_POPOUT, a.Z.PROFILE_POPOUT, a.Z.PROFILE_PANEL];
+function p(e) {
+	let { location: n, user: t, ...o } = e,
+		a = (0, r.e7)([d.default], () => d.default.getCurrentUser());
+	l()(null != a, 'UserProfileModalExperimentWrapper: currentUser cannot be undefined');
+	let p = (0, r.e7)([c.Z], () => c.Z.isBlocked(t.id)),
+		[x, Z] = i.useState(p),
+		v = (0, u.sS)({ location: n });
+	i.useEffect(() => {
+		Z(p);
+	}, [p]);
+	let h = !m.some((e) => {
+		var n;
+		return (null !== (n = o.sourceAnalyticsLocations) && void 0 !== n ? n : []).includes(e);
+	});
+	return x && v && h
+		? (0, s.jsx)(I.Z, {
+				user: t,
+				currentUser: a,
+				onViewBlockedProfileClick: () => Z(!1),
+				...o
+			})
+		: t.isNonUserBot()
+			? (0, s.jsx)(_.Z, {
+					...o,
+					user: t,
+					currentUser: a
+				})
+			: t.bot
+				? (0, s.jsx)(f.Z, {
+						...o,
+						user: t,
+						currentUser: a
+					})
+				: (0, s.jsx)(E.Z, {
+						...o,
+						user: t,
+						currentUser: a
+					});
 }

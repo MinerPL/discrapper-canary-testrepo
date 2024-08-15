@@ -1,29 +1,31 @@
-n.d(s, {
-  Z: function() {
-return a;
-  }
-}), n(627341);
-var i = n(278074),
-  t = n(162267),
-  l = n(228168),
-  o = n(689938);
-
-function a(e) {
-  var s;
-  let n = null === (s = (0, t.Z)(e.id, !0).mutualGuilds) || void 0 === s ? void 0 : s.length;
-  return [{
-  section: l.oh.BOT_INFO,
-  text: o.Z.Messages.USER_PROFILE_ABOUT_ME
-},
-{
-  section: l.oh.MUTUAL_GUILDS,
-  text: (0, i.EQ)(n).with(void 0, () => o.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER).with(0, () => o.Z.Messages.USER_PROFILE_NO_MUTUAL_SERVERS).otherwise(e => o.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({
-    count: e
-  }))
-},
-{
-  section: l.oh.BOT_DATA_ACCESS,
-  text: o.Z.Messages.BOTS_DATA_ACCESS_TAB
-}
-  ];
+t.d(n, {
+	Z: function () {
+		return r;
+	}
+}),
+	t(627341);
+var s = t(278074),
+	i = t(162267),
+	o = t(228168),
+	l = t(689938);
+function r(e) {
+	var n;
+	let t = null === (n = (0, i.Z)(e.id, !0).mutualGuilds) || void 0 === n ? void 0 : n.length;
+	return [
+		{
+			section: o.oh.BOT_INFO,
+			text: l.Z.Messages.USER_PROFILE_ABOUT_ME
+		},
+		{
+			section: o.oh.MUTUAL_GUILDS,
+			text: (0, s.EQ)(t)
+				.with(void 0, () => l.Z.Messages.USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER)
+				.with(0, () => l.Z.Messages.USER_PROFILE_NO_MUTUAL_SERVERS)
+				.otherwise((e) => l.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({ count: e }))
+		},
+		{
+			section: o.oh.BOT_DATA_ACCESS,
+			text: l.Z.Messages.BOTS_DATA_ACCESS_TAB
+		}
+	];
 }

@@ -1,9 +1,8 @@
-
 function r(e) {
-  return e.split('-')[1];
+	return e.split('-')[1];
 }
 n.d(t, {
-  Z: function() {
-return r;
-  }
+	Z: function () {
+		return r;
+	}
 });

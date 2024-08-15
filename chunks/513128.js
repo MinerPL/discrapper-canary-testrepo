@@ -1,3 +1,1 @@
-e.exports = {
-  buttonSpacing: 'buttonSpacing_c686f1'
-};
+e.exports = { buttonSpacing: 'buttonSpacing_c686f1' };

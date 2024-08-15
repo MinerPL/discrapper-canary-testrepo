@@ -1,3 +1,1 @@
-e.exports = {
-  awaitingAuthenticationStep: 'awaitingAuthenticationStep_f10fc5'
-};
+e.exports = { awaitingAuthenticationStep: 'awaitingAuthenticationStep_f10fc5' };

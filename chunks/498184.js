@@ -1,9 +1,7 @@
 n.d(t, {
-  Z: function() {
-return r;
-  }
+	Z: function () {
+		return r;
+	}
 });
 var r = {};
-r = {
-  Empty: `\u{7A7A}`
-};
+r = { Empty: `\u{7A7A}` };

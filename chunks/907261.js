@@ -1,3 +1,1 @@
-e.exports = {
-  card: 'card_f30ffe'
-};
+e.exports = { card: 'card_f30ffe' };

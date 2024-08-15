@@ -1,3 +1,1 @@
-e.exports = {
-  nitroPreviewUpsell: 'nitroPreviewUpsell_f55465'
-};
+e.exports = { nitroPreviewUpsell: 'nitroPreviewUpsell_f55465' };

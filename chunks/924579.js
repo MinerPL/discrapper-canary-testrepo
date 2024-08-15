@@ -1,3 +1,1 @@
-e.exports = {
-  banner: 'banner_da16fe'
-};
+e.exports = { banner: 'banner_da16fe' };

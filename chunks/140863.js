@@ -1,20 +1,18 @@
 n.d(t, {
-  u: function() {
-return i;
-  }
+	u: function () {
+		return i;
+	}
 });
 let i = (0, n(818083).B)({
-  kind: 'user',
-  id: '2023-04_birthday_activities_putt_party_tile',
-  label: 'Birthday Activities Whats New Putt Party Tile',
-  defaultConfig: {
-enabled: !1
-  },
-  treatments: [{
-id: 1,
-label: 'Enable Putt Party tile',
-config: {
-  enabled: !0
-}
-  }]
+	kind: 'user',
+	id: '2023-04_birthday_activities_putt_party_tile',
+	label: 'Birthday Activities Whats New Putt Party Tile',
+	defaultConfig: { enabled: !1 },
+	treatments: [
+		{
+			id: 1,
+			label: 'Enable Putt Party tile',
+			config: { enabled: !0 }
+		}
+	]
 });

@@ -1,6 +1,49 @@
 var r, i;
 n.d(t, {
-  x: function() {
-return r;
-  }
-}), n(47120), (i = r || (r = {})).IDENTIFY = 'identify', i.EMAIL = 'email', i.CONNECTIONS = 'connections', i.GUILDS = 'guilds', i.GUILDS_JOIN = 'guilds.join', i.GUILDS_MEMBERS_READ = 'guilds.members.read', i.GDM_JOIN = 'gdm.join', i.BOT = 'bot', i.RPC = 'rpc', i.RPC_NOTIFICATIONS_READ = 'rpc.notifications.read', i.RPC_VOICE_READ = 'rpc.voice.read', i.RPC_VOICE_WRITE = 'rpc.voice.write', i.RPC_VIDEO_READ = 'rpc.video.read', i.RPC_VIDEO_WRITE = 'rpc.video.write', i.RPC_SCREENSHARE_READ = 'rpc.screenshare.read', i.RPC_SCREENSHARE_WRITE = 'rpc.screenshare.write', i.RPC_ACTIVITIES_WRITE = 'rpc.activities.write', i.WEBHOOK_INCOMING = 'webhook.incoming', i.MESSAGES_READ = 'messages.read', i.APPLICATIONS_BUILDS_UPLOAD = 'applications.builds.upload', i.APPLICATIONS_BUILDS_READ = 'applications.builds.read', i.APPLICATIONS_COMMANDS = 'applications.commands', i.APPLICATIONS_COMMANDS_PERMISSIONS_UPDATE = 'applications.commands.permissions.update', i.APPLICATIONS_COMMANDS_UPDATE = 'applications.commands.update', i.APPLICATIONS_STORE_UPDATE = 'applications.store.update', i.APPLICATIONS_ENTITLEMENTS = 'applications.entitlements', i.ACTIVITIES_READ = 'activities.read', i.ACTIVITIES_WRITE = 'activities.write', i.RELATIONSHIPS_READ = 'relationships.read', i.RELATIONSHIPS_WRITE = 'relationships.write', i.VOICE = 'voice', i.DM_CHANNELS_READ = 'dm_channels.read', i.ROLE_CONNECTIONS_WRITE = 'role_connections.write', i.PRESENCES_READ = 'presences.read', i.PRESENCES_WRITE = 'presences.write', i.OPENID = 'openid', i.DM_CHANNELS_MESSAGES_READ = 'dm_channels.messages.read', i.DM_CHANNELS_MESSAGES_WRITE = 'dm_channels.messages.write', i.GATEWAY_CONNECT = 'gateway.connect', i.ACCOUNT_GLOBAL_NAME_UPDATE = 'account.global_name.update', i.PAYMENT_SOURCES_COUNTRY_CODE = 'payment_sources.country_code', i.SDK_SOCIAL_LAYER = 'sdk.social_layer';
+	x: function () {
+		return r;
+	}
+}),
+	n(47120),
+	((i = r || (r = {})).IDENTIFY = 'identify'),
+	(i.EMAIL = 'email'),
+	(i.CONNECTIONS = 'connections'),
+	(i.GUILDS = 'guilds'),
+	(i.GUILDS_JOIN = 'guilds.join'),
+	(i.GUILDS_MEMBERS_READ = 'guilds.members.read'),
+	(i.GDM_JOIN = 'gdm.join'),
+	(i.BOT = 'bot'),
+	(i.RPC = 'rpc'),
+	(i.RPC_NOTIFICATIONS_READ = 'rpc.notifications.read'),
+	(i.RPC_VOICE_READ = 'rpc.voice.read'),
+	(i.RPC_VOICE_WRITE = 'rpc.voice.write'),
+	(i.RPC_VIDEO_READ = 'rpc.video.read'),
+	(i.RPC_VIDEO_WRITE = 'rpc.video.write'),
+	(i.RPC_SCREENSHARE_READ = 'rpc.screenshare.read'),
+	(i.RPC_SCREENSHARE_WRITE = 'rpc.screenshare.write'),
+	(i.RPC_ACTIVITIES_WRITE = 'rpc.activities.write'),
+	(i.WEBHOOK_INCOMING = 'webhook.incoming'),
+	(i.MESSAGES_READ = 'messages.read'),
+	(i.APPLICATIONS_BUILDS_UPLOAD = 'applications.builds.upload'),
+	(i.APPLICATIONS_BUILDS_READ = 'applications.builds.read'),
+	(i.APPLICATIONS_COMMANDS = 'applications.commands'),
+	(i.APPLICATIONS_COMMANDS_PERMISSIONS_UPDATE = 'applications.commands.permissions.update'),
+	(i.APPLICATIONS_COMMANDS_UPDATE = 'applications.commands.update'),
+	(i.APPLICATIONS_STORE_UPDATE = 'applications.store.update'),
+	(i.APPLICATIONS_ENTITLEMENTS = 'applications.entitlements'),
+	(i.ACTIVITIES_READ = 'activities.read'),
+	(i.ACTIVITIES_WRITE = 'activities.write'),
+	(i.RELATIONSHIPS_READ = 'relationships.read'),
+	(i.RELATIONSHIPS_WRITE = 'relationships.write'),
+	(i.VOICE = 'voice'),
+	(i.DM_CHANNELS_READ = 'dm_channels.read'),
+	(i.ROLE_CONNECTIONS_WRITE = 'role_connections.write'),
+	(i.PRESENCES_READ = 'presences.read'),
+	(i.PRESENCES_WRITE = 'presences.write'),
+	(i.OPENID = 'openid'),
+	(i.DM_CHANNELS_MESSAGES_READ = 'dm_channels.messages.read'),
+	(i.DM_CHANNELS_MESSAGES_WRITE = 'dm_channels.messages.write'),
+	(i.GATEWAY_CONNECT = 'gateway.connect'),
+	(i.ACCOUNT_GLOBAL_NAME_UPDATE = 'account.global_name.update'),
+	(i.PAYMENT_SOURCES_COUNTRY_CODE = 'payment_sources.country_code'),
+	(i.SDK_SOCIAL_LAYER = 'sdk.social_layer');

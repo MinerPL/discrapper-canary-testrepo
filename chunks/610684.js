@@ -1,3 +1,1 @@
-e.exports = {
-  roleDot: 'roleDot_eb5898'
-};
+e.exports = { roleDot: 'roleDot_eb5898' };

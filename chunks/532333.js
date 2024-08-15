@@ -1,3 +1,1 @@
-e.exports = {
-  coachmark: 'coachmark_c760eb'
-};
+e.exports = { coachmark: 'coachmark_c760eb' };

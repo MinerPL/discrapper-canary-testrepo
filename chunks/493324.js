@@ -1,28 +1,21 @@
 n.d(t, {
-  $: function() {
-return a;
-  }
+	$: function () {
+		return a;
+	}
 });
 let i = (0, n(818083).B)({
-  kind: 'user',
-  id: '2024-02_hide_member_list_activities',
-  label: 'Hide member list activities',
-  defaultConfig: {
-hideActivities: !1
-  },
-  treatments: [{
-id: 1,
-label: 'Enabled (hide activities)',
-config: {
-  hideActivities: !0
-}
-  }]
+	kind: 'user',
+	id: '2024-02_hide_member_list_activities',
+	label: 'Hide member list activities',
+	defaultConfig: { hideActivities: !1 },
+	treatments: [
+		{
+			id: 1,
+			label: 'Enabled (hide activities)',
+			config: { hideActivities: !0 }
+		}
+	]
 });
-
 function a(e) {
-  return i.getCurrentConfig({
-location: e
-  }, {
-autoTrackExposure: !0
-  }).hideActivities;
+	return i.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }).hideActivities;
 }

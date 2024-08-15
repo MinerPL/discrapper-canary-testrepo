@@ -1,245 +1,157 @@
-n.d(t, {
-  ZP: function() {
-return B;
-  },
-  tZ: function() {
-return k;
-  }
-}), n(627341);
-var r = n(735250),
-  i = n(470079),
-  a = n(120356),
-  s = n.n(a),
-  o = n(278074),
-  l = n(442837),
-  u = n(692547),
-  c = n(481060),
-  d = n(906732),
-  _ = n(1585),
-  E = n(797610),
-  f = n(686546),
-  h = n(233440),
-  p = n(680295),
-  m = n(430824),
-  I = n(626135),
-  T = n(74538),
-  g = n(998502),
-  S = n(785717),
-  A = n(621853),
-  N = n(204197),
-  v = n(735336),
-  O = n(793397),
-  R = n(184325),
-  C = n(652853),
-  y = n(171368),
-  D = n(228168),
-  L = n(981631),
-  b = n(474936),
-  M = n(689938),
-  P = n(753875);
-let U = c.AvatarSizes.SIZE_80,
-  w = (0, _.y9)(U);
-
-function x(e) {
-  let {
-user: t,
-guildId: n,
-isTryItOutFlow: i,
-forProfileEffectModal: a,
-onClick: s
-  } = e, o = (0, l.e7)([A.Z], () => A.Z.getUserProfile(t.id), [t]), d = (0, l.e7)([m.Z], () => m.Z.getGuild(n), [n]), _ = (0, E.OR)(d);
-  return (0, r.jsxs)(r.Fragment, {
-children: [
-  (null == o ? void 0 : o.profileFetchFailed) && (!t.isClyde() || _) && (0, r.jsx)(c.Tooltip, {
-    text: M.Z.Messages.USER_PROFILE_LOAD_ERROR,
-    spacing: 16,
-    children: e => (0, r.jsx)(c.CircleWarningIcon, {
-      size: 'custom',
-      width: 20,
-      height: 20,
-      ...e,
-      className: P.warningCircleIcon,
-      color: u.Z.unsafe_rawColors.YELLOW_300.css
-    })
-  }),
-  (0, r.jsx)(R.Z, {
-    className: a ? P.profileBadgesCompactNoTouch : P.profileBadges,
-    user: t,
-    guildId: n,
-    isTryItOutFlow: i,
-    size: R.V.SIZE_22,
-    onBadgeClick: s
-  })
-]
-  });
-}
-let G = g.ZP.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
-
-function k(e) {
-  let {
-user: t,
-displayProfile: n,
-avatarSrc: a,
-hasBanner: l,
-status: u,
-isMobile: _,
-guildId: E,
-channelId: p,
-onClose: m,
-disableUserProfileLink: g,
-profileType: A,
-animateOnHover: v,
-hasProfileEffect: R,
-statusTooltipDelay: x
-  } = e, {
-theme: k
-  } = (0, C.z)(), B = i.useContext(I.AnalyticsContext), F = t.isNonUserBot() && !t.isClyde(), V = T.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, b.p9.TIER_2), H = i.useMemo(() => (0, h.W)(t, p), [
-t,
-p
-  ]), {
-analyticsLocations: Z
-  } = (0, d.ZP)(), {
-context: Y,
-trackUserProfileAction: j
-  } = (0, S.KZ)(), W = g || t.isClyde(), {
-avatarDecorationSrc: K,
-avatarSrc: z,
-eventHandlers: q
-  } = (0, N.Z)({
-user: t,
-guildId: E,
-size: U,
-animateOnHover: v
-  }), Q = (0, r.jsx)('div', {
-className: P.avatarHoverTarget,
-...q,
-children: (0, r.jsx)(G, {
-  src: null != a ? a : z,
-  avatarDecoration: K,
-  size: U,
-  'aria-label': t.username,
-  status: H ? L.Skl.UNKNOWN : u,
-  statusBackdropColor: V && !H ? (0, c.getStatusBackdropColor)(k) : void 0,
-  isMobile: _,
-  statusTooltip: !0,
-  statusTooltipDelay: x
-})
-  }), X = (0, o.EQ)(A).with(D.y0.POPOUT, () => (0, O.zW)({
-premiumUserWithBanner: P.avatarPositionPremiumBanner,
-premiumUserWithoutBanner: P.avatarPositionPremiumNoBanner,
-default: P.avatarPositionNormal
-  })({
-isPremium: V,
-hasBanner: l,
-hasProfileEffect: R
-  })).with(D.y0.POMELO_POPOUT, () => P.avatarPositionPomelo).with(D.y0.PANEL, () => P.avatarPositionPanel).with(D.y0.BITE_SIZE, () => P.avatarPositionBiteSize).exhaustive();
-  return (0, r.jsx)(r.Fragment, {
-children: (0, r.jsxs)(c.Clickable, {
-  className: s()({
-    [P.clickable]: !W,
-    [P.avatarWrapperNonUserBot]: F,
-    [P.avatarWrapperNormal]: !F
-  }, X),
-  onClick: F || W ? void 0 : function() {
-    j({
-      action: 'PRESS_VIEW_PROFILE'
-    }), (0, y.openUserProfileModal)({
-      ...Y,
-      userId: t.id,
-      sourceAnalyticsLocations: Z,
-      analyticsLocation: B.location
-    }), null == m || m();
-  },
-  children: [
-    Q,
-    !W && function() {
-      let e = null != K,
-        t = e ? w : (0, c.getAvatarSize)(U);
-      return (0, r.jsx)(f.ZP, {
-        mask: null == u || u === L.Skl.UNKNOWN || H ? f.ZP.Masks.AVATAR_DEFAULT : (0, o.EQ)([
-          e,
-          _
-        ]).with([
-          !0,
-          !0
-        ], () => f.ZP.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([
-          !0,
-          !1
-        ], () => f.ZP.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([
-          !1,
-          !0
-        ], () => f.ZP.Masks.AVATAR_STATUS_MOBILE_80).with([
-          !1,
-          !1
-        ], () => f.ZP.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
-        className: e ? P.avatarDecorationHint : P.avatarHint,
-        style: e ? {
-          borderRadius: 0.4 * t
-        } : void 0,
-        width: t,
-        height: t,
-        children: (0, r.jsx)('div', {
-          className: P.avatarHintInner,
-          children: M.Z.Messages.VIEW_PROFILE
-        })
-      });
-    }()
-  ]
-})
-  });
-}
-
-function B(e) {
-  let {
-user: t,
-displayProfile: n,
-guildId: i,
-channelId: a,
-onClose: s,
-isMobile: o,
-isStreaming: l,
-status: u,
-disableUserProfileLink: c,
-isHovering: d,
-showPremiumBadgeUpsell: _ = !0,
-upsell: E
-  } = e;
-  return (0, r.jsxs)(r.Fragment, {
-children: [
-  E,
-  (0, r.jsx)(v.Z, {
-    user: t,
-    displayProfile: n,
-    onClose: s,
-    guildId: i,
-    profileType: D.y0.POPOUT,
-    showPremiumBadgeUpsell: _,
-    isHovering: d,
-    hasProfileEffect: (null == n ? void 0 : n.profileEffectId) != null
-  }),
-  (null == n ? void 0 : n.profileEffectId) != null && (0, r.jsx)(p.Z, {
-    profileEffectId: null == n ? void 0 : n.profileEffectId,
-    bannerAdjustment: 0,
-    isHovering: d
-  }),
-  (0, r.jsx)(k, {
-    user: t,
-    displayProfile: n,
-    status: l ? L.Skl.STREAMING : u,
-    isMobile: o,
-    guildId: i,
-    channelId: a,
-    onClose: s,
-    disableUserProfileLink: c,
-    hasBanner: (null == n ? void 0 : n.banner) != null,
-    hasProfileEffect: (null == n ? void 0 : n.profileEffectId) != null,
-    profileType: D.y0.POPOUT
-  }),
-  (0, r.jsx)(x, {
-    user: t,
-    guildId: i,
-    onClick: s
-  })
-]
-  });
+a.d(t, {
+	tZ: function () {
+		return A;
+	}
+}),
+	a(627341);
+var n = a(735250),
+	s = a(470079),
+	i = a(120356),
+	r = a.n(i),
+	o = a(278074);
+a(442837), a(692547);
+var l = a(481060),
+	u = a(906732),
+	d = a(1585);
+a(797610);
+var c = a(686546),
+	E = a(233440);
+a(680295), a(430824);
+var _ = a(626135),
+	m = a(74538),
+	g = a(998502),
+	f = a(785717);
+a(621853);
+var S = a(204197);
+a(735336);
+var I = a(793397);
+a(184325);
+var T = a(652853),
+	N = a(171368),
+	h = a(228168),
+	O = a(981631),
+	M = a(474936),
+	v = a(689938),
+	P = a(753875);
+let L = l.AvatarSizes.SIZE_80,
+	C = (0, d.y9)(L),
+	x = g.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+function A(e) {
+	let {
+			user: t,
+			displayProfile: a,
+			avatarSrc: i,
+			hasBanner: d,
+			status: g,
+			isMobile: A,
+			guildId: p,
+			channelId: R,
+			onClose: y,
+			disableUserProfileLink: Z,
+			profileType: U,
+			animateOnHover: b,
+			hasProfileEffect: G,
+			statusTooltipDelay: k
+		} = e,
+		{ theme: W } = (0, T.z)(),
+		D = s.useContext(_.AnalyticsContext),
+		j = t.isNonUserBot() && !t.isClyde(),
+		B = m.ZP.isPremiumAtLeast(null == a ? void 0 : a.premiumType, M.p9.TIER_2),
+		F = s.useMemo(() => (0, E.W)(t, R), [t, R]),
+		{ analyticsLocations: w } = (0, u.ZP)(),
+		{ context: H, trackUserProfileAction: q } = (0, f.KZ)(),
+		z = Z || t.isClyde(),
+		{
+			avatarDecorationSrc: V,
+			avatarSrc: X,
+			eventHandlers: Y
+		} = (0, S.Z)({
+			user: t,
+			guildId: p,
+			size: L,
+			animateOnHover: b
+		}),
+		K = (0, n.jsx)('div', {
+			className: P.avatarHoverTarget,
+			...Y,
+			children: (0, n.jsx)(x, {
+				src: null != i ? i : X,
+				avatarDecoration: V,
+				size: L,
+				'aria-label': t.username,
+				status: F ? O.Skl.UNKNOWN : g,
+				statusBackdropColor: B && !F ? (0, l.getStatusBackdropColor)(W) : void 0,
+				isMobile: A,
+				statusTooltip: !0,
+				statusTooltipDelay: k
+			})
+		}),
+		Q = (0, o.EQ)(U)
+			.with(h.y0.POPOUT, () =>
+				(0, I.zW)({
+					premiumUserWithBanner: P.avatarPositionPremiumBanner,
+					premiumUserWithoutBanner: P.avatarPositionPremiumNoBanner,
+					default: P.avatarPositionNormal
+				})({
+					isPremium: B,
+					hasBanner: d,
+					hasProfileEffect: G
+				})
+			)
+			.with(h.y0.POMELO_POPOUT, () => P.avatarPositionPomelo)
+			.with(h.y0.PANEL, () => P.avatarPositionPanel)
+			.with(h.y0.BITE_SIZE, () => P.avatarPositionBiteSize)
+			.exhaustive();
+	return (0, n.jsx)(n.Fragment, {
+		children: (0, n.jsxs)(l.Clickable, {
+			className: r()(
+				{
+					[P.clickable]: !z,
+					[P.avatarWrapperNonUserBot]: j,
+					[P.avatarWrapperNormal]: !j
+				},
+				Q
+			),
+			onClick:
+				j || z
+					? void 0
+					: function () {
+							q({ action: 'PRESS_VIEW_PROFILE' }),
+								(0, N.openUserProfileModal)({
+									...H,
+									userId: t.id,
+									sourceAnalyticsLocations: w,
+									analyticsLocation: D.location
+								}),
+								null == y || y();
+						},
+			children: [
+				K,
+				!z &&
+					(function () {
+						let e = null != V,
+							t = e ? C : (0, l.getAvatarSize)(L);
+						return (0, n.jsx)(c.ZP, {
+							mask:
+								null == g || g === O.Skl.UNKNOWN || F
+									? c.ZP.Masks.AVATAR_DEFAULT
+									: (0, o.EQ)([e, A])
+											.with([!0, !0], () => c.ZP.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80)
+											.with([!0, !1], () => c.ZP.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80)
+											.with([!1, !0], () => c.ZP.Masks.AVATAR_STATUS_MOBILE_80)
+											.with([!1, !1], () => c.ZP.Masks.AVATAR_STATUS_ROUND_80)
+											.exhaustive(),
+							className: e ? P.avatarDecorationHint : P.avatarHint,
+							style: e ? { borderRadius: 0.4 * t } : void 0,
+							width: t,
+							height: t,
+							children: (0, n.jsx)('div', {
+								className: P.avatarHintInner,
+								children: v.Z.Messages.VIEW_PROFILE
+							})
+						});
+					})()
+			]
+		})
+	});
 }

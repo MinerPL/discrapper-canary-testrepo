@@ -1,3 +1,1 @@
-e.exports = {
-  iconLive: 'iconLive_dce222'
-};
+e.exports = { iconLive: 'iconLive_dce222' };

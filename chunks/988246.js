@@ -1,24 +1,21 @@
-n.d(s, {
-  Z: function() {
-return o;
-  }
+t.d(n, {
+	Z: function () {
+		return l;
+	}
 });
-var i = n(735250);
-n(470079);
-var t = n(689938),
-  l = n(431776);
-
-function o() {
-  return (0, i.jsxs)('div', {
-className: l.empty,
-children: [
-  (0, i.jsx)('div', {
-    className: l.emptyIconStreamerMode
-  }),
-  (0, i.jsx)('div', {
-    className: l.emptyText,
-    children: t.Z.Messages.STREAMER_MODE_ENABLED
-  })
-]
-  });
+var s = t(735250);
+t(470079);
+var i = t(689938),
+	o = t(431776);
+function l() {
+	return (0, s.jsxs)('div', {
+		className: o.empty,
+		children: [
+			(0, s.jsx)('div', { className: o.emptyIconStreamerMode }),
+			(0, s.jsx)('div', {
+				className: o.emptyText,
+				children: i.Z.Messages.STREAMER_MODE_ENABLED
+			})
+		]
+	});
 }

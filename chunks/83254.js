@@ -1,3 +1,1 @@
-e.exports = {
-  wrapper: 'wrapper_f3335d'
-};
+e.exports = { wrapper: 'wrapper_f3335d' };

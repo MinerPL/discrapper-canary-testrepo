@@ -1,3 +1,1 @@
-t.Z = {
-  isScreenLandscape: () => null
-};
+t.Z = { isScreenLandscape: () => null };

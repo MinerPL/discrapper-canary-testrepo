@@ -1,3 +1,1 @@
-e.exports = {
-  questsCard: 'questsCard_c366aa'
-};
+e.exports = { questsCard: 'questsCard_c366aa' };

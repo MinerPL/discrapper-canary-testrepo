@@ -1,10 +1,10 @@
 n.d(t, {
-  u: function() {
-return i;
-  }
+	u: function () {
+		return i;
+	}
 });
 var r = n(408160);
 let i = {
-  announce: r.announce,
-  clearAnnouncements: r.clearAnnouncer
+	announce: r.announce,
+	clearAnnouncements: r.clearAnnouncer
 };

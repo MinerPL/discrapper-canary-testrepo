@@ -1,10 +1,9 @@
 n.d(t, {
-  N: function() {
-return i;
-  }
+	N: function () {
+		return i;
+	}
 });
 let r = null;
-
 function i() {
-  return null == r && (r = new AudioContext()), r;
+	return null == r && (r = new AudioContext()), r;
 }

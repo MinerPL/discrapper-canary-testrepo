@@ -1,3 +1,1 @@
-e.exports = {
-  guildSeparator: 'guildSeparator_d0c57e'
-};
+e.exports = { guildSeparator: 'guildSeparator_d0c57e' };

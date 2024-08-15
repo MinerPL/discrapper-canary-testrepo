@@ -1,252 +1,256 @@
-n.d(t, {
-  Z: function() {
-return F;
-  }
-}), n(47120);
-var r = n(735250),
-  i = n(470079),
-  a = n(120356),
-  s = n.n(a),
-  o = n(866442),
-  l = n(442837),
-  u = n(692547),
-  c = n(481060),
-  d = n(230711),
-  _ = n(100527),
-  E = n(906732),
-  f = n(220082),
-  h = n(583405),
-  p = n(279745),
-  m = n(300284),
-  I = n(695346),
-  T = n(314897),
-  g = n(430824),
-  S = n(594174),
-  A = n(451478),
-  N = n(626135),
-  v = n(768581),
-  O = n(74538),
-  R = n(785717),
-  C = n(888778),
-  y = n(943217),
-  D = n(793397),
-  L = n(841040),
-  b = n(228168),
-  M = n(981631),
-  P = n(474936),
-  U = n(689938),
-  w = n(439779);
-let x = {
-[b.y0.POPOUT]: 18,
-[b.y0.MODAL]: 24,
-[b.y0.SETTINGS]: 0,
-[b.y0.PANEL]: 18,
-[b.y0.POMELO_POPOUT]: 18,
-[b.y0.CANCEL_MODAL]: 0
-  },
-  G = {
-[b.y0.MODAL]: M.ZY5.USER_PROFILE,
-[b.y0.POPOUT]: M.ZY5.USER_POPOUT,
-[b.y0.SETTINGS]: M.ZY5.USER_POPOUT,
-[b.y0.PANEL]: M.ZY5.DM_CHANNEL,
-[b.y0.POMELO_POPOUT]: M.ZY5.POMELO_POPOUT,
-[b.y0.CANCEL_MODAL]: M.ZY5.USER_POPOUT
-  };
-
-function k(e) {
-  let {
-type: t,
-shown: a,
-onClick: o
-  } = e, u = (0, l.e7)([S.default], () => {
-let e = S.default.getCurrentUser();
-return O.ZP.canUsePremiumProfileCustomization(e);
-  }), f = i.useRef(!1), {
-analyticsLocations: h
-  } = (0, E.ZP)(_.Z.BADGE);
-  return i.useEffect(() => {
-a && !f.current && (f.current = !0, N.default.track(M.rMx.PREMIUM_UPSELL_VIEWED, {
-  type: P.cd.CUSTOM_PROFILES_PROFILE_BANNER_SOCIAL_UPSELL,
-  location: {
-    page: G[t],
-    section: M.jXE.NITRO_BANNER,
-    object: M.qAy.NITRO_BADGE
-  },
-  location_stack: h
-}));
-  }, [
-h,
-a,
-t
-  ]), (0, r.jsx)(c.Tooltip, {
-tooltipContentClassName: w.premiumIconTooltipContent,
-text: u ? U.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP : U.Z.Messages.USER_SETTINGS_PROFILE_THEMES_USER_PROFILE_ICON_TOOLTIP_UPSELL,
-children: e => (0, r.jsx)(c.Clickable, {
-  ...e,
-  onClick: u ? void 0 : () => {
-    var e;
-    e = h, (0, c.openModalLazy)(async () => {
-      let {
-        default: t
-      } = await n.e('30364').then(n.bind(n, 968031));
-      return n => {
-        let {
-          onClose: i,
-          ...a
-        } = n;
-        return (0, r.jsx)(t, {
-          analyticsLocations: e,
-          title: U.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_TITLE,
-          description: U.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_DESCRIPTION.format({
-            onAndMoreWithPremiumClick: () => {
-              i(), d.Z.open(M.oAB.PREMIUM, null, {
-                analyticsLocations: e
-              });
-            }
-          }),
-          onClose: i,
-          ...a
-        });
-      };
-    }), null == o || o();
-  },
-  className: s()(w.premiumIconWrapper, {
-    [w.visible]: a,
-    [w.clickable]: !u
-  }),
-  children: (0, r.jsx)(c.TextBadge, {
-    color: 'rgba(32, 34, 37, 0.8)',
-    text: (0, r.jsx)(c.NitroWheelIcon, {
-      size: 'xs',
-      color: 'currentColor',
-      className: w.premiumIcon
-    })
-  })
-})
-  });
+n.d(s, {
+	Z: function () {
+		return B;
+	}
+}),
+	n(47120);
+var t = n(735250),
+	a = n(470079),
+	i = n(120356),
+	r = n.n(i),
+	l = n(866442),
+	o = n(442837),
+	c = n(692547),
+	u = n(481060),
+	_ = n(230711),
+	d = n(100527),
+	I = n(906732),
+	E = n(220082),
+	m = n(583405),
+	C = n(279745),
+	T = n(300284),
+	N = n(695346),
+	S = n(314897),
+	p = n(430824),
+	L = n(594174),
+	A = n(451478),
+	O = n(626135),
+	P = n(768581),
+	R = n(74538),
+	M = n(785717),
+	x = n(888778),
+	f = n(943217),
+	g = n(793397),
+	h = n(841040),
+	Z = n(228168),
+	j = n(981631),
+	U = n(474936),
+	v = n(689938),
+	b = n(439779);
+let F = {
+		[Z.y0.POPOUT]: 18,
+		[Z.y0.MODAL]: 24,
+		[Z.y0.SETTINGS]: 0,
+		[Z.y0.PANEL]: 18,
+		[Z.y0.POMELO_POPOUT]: 18,
+		[Z.y0.CANCEL_MODAL]: 0
+	},
+	y = {
+		[Z.y0.MODAL]: j.ZY5.USER_PROFILE,
+		[Z.y0.POPOUT]: j.ZY5.USER_POPOUT,
+		[Z.y0.SETTINGS]: j.ZY5.USER_POPOUT,
+		[Z.y0.PANEL]: j.ZY5.DM_CHANNEL,
+		[Z.y0.POMELO_POPOUT]: j.ZY5.POMELO_POPOUT,
+		[Z.y0.CANCEL_MODAL]: j.ZY5.USER_POPOUT
+	};
+function G(e) {
+	let { type: s, shown: i, onClick: l } = e,
+		c = (0, o.e7)([L.default], () => {
+			let e = L.default.getCurrentUser();
+			return R.ZP.canUsePremiumProfileCustomization(e);
+		}),
+		E = a.useRef(!1),
+		{ analyticsLocations: m } = (0, I.ZP)(d.Z.BADGE);
+	return (
+		a.useEffect(() => {
+			i &&
+				!E.current &&
+				((E.current = !0),
+				O.default.track(j.rMx.PREMIUM_UPSELL_VIEWED, {
+					type: U.cd.CUSTOM_PROFILES_PROFILE_BANNER_SOCIAL_UPSELL,
+					location: {
+						page: y[s],
+						section: j.jXE.NITRO_BANNER,
+						object: j.qAy.NITRO_BADGE
+					},
+					location_stack: m
+				}));
+		}, [m, i, s]),
+		(0, t.jsx)(u.Tooltip, {
+			tooltipContentClassName: b.premiumIconTooltipContent,
+			text: c
+				? v.Z.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP
+				: v.Z.Messages.USER_SETTINGS_PROFILE_THEMES_USER_PROFILE_ICON_TOOLTIP_UPSELL,
+			children: (e) =>
+				(0, t.jsx)(u.Clickable, {
+					...e,
+					onClick: c
+						? void 0
+						: () => {
+								var e;
+								(e = m),
+									(0, u.openModalLazy)(async () => {
+										let { default: s } = await n.e('30364').then(n.bind(n, 968031));
+										return (n) => {
+											let { onClose: a, ...i } = n;
+											return (0, t.jsx)(s, {
+												analyticsLocations: e,
+												title: v.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_TITLE,
+												description:
+													v.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_DESCRIPTION.format({
+														onAndMoreWithPremiumClick: () => {
+															a(), _.Z.open(j.oAB.PREMIUM, null, { analyticsLocations: e });
+														}
+													}),
+												onClose: a,
+												...i
+											});
+										};
+									}),
+									null == l || l();
+							},
+					className: r()(b.premiumIconWrapper, {
+						[b.visible]: i,
+						[b.clickable]: !c
+					}),
+					children: (0, t.jsx)(u.TextBadge, {
+						color: 'rgba(32, 34, 37, 0.8)',
+						text: (0, t.jsx)(u.NitroWheelIcon, {
+							size: 'xs',
+							color: 'currentColor',
+							className: b.premiumIcon
+						})
+					})
+				})
+		})
+	);
 }
-
+function D(e) {
+	let { darkenOnHover: s, profileType: n, profileLabel: a, icon: i, ...r } = e,
+		l = F[n],
+		o = 'pencil' === i ? u.PencilIcon : u.SettingsIcon;
+	return (0, t.jsx)(u.Clickable, {
+		...r,
+		'aria-label': a,
+		className: s ? b.pencilContainerDark : b.pencilContainer,
+		children: (0, t.jsx)(u.Tooltip, {
+			text: a,
+			children: (e) =>
+				(0, t.jsx)(o, {
+					...e,
+					color: 'currentColor',
+					size: 'custom',
+					width: l,
+					height: l,
+					className: b.editIcon
+				})
+		})
+	});
+}
 function B(e) {
-  let {
-darkenOnHover: t,
-profileType: n,
-profileLabel: i,
-icon: a,
-...s
-  } = e, o = x[n], l = 'pencil' === a ? c.PencilIcon : c.SettingsIcon;
-  return (0, r.jsx)(c.Clickable, {
-...s,
-'aria-label': i,
-className: t ? w.pencilContainerDark : w.pencilContainer,
-children: (0, r.jsx)(c.Tooltip, {
-  text: i,
-  children: e => (0, r.jsx)(l, {
-    ...e,
-    color: 'currentColor',
-    size: 'custom',
-    width: o,
-    height: o,
-    className: w.editIcon
-  })
-})
-  });
-}
-
-function F(e) {
-  var t, n;
-  let {
-user: a,
-displayProfile: d,
-onClose: _,
-guildId: E,
-profileType: S,
-isHovering: N,
-animateOnHover: x,
-allowEdit: G = !0,
-showPremiumBadgeUpsell: F = !0,
-hasProfileEffect: V = !1
-  } = e, H = (0, l.e7)([g.Z], () => g.Z.getGuild(E)), Z = (0, l.e7)([T.default], () => T.default.getId()) === a.id && G, Y = O.ZP.isPremiumAtLeast(null == d ? void 0 : d.premiumType, P.p9.TIER_2), {
-trackUserProfileAction: j
-  } = (0, R.KZ)(), [W, K] = i.useState(!1), z = (0, l.e7)([A.Z], () => A.Z.isFocused()), q = I.QK.getSetting(), {
-bannerSrc: Q,
-status: X
-  } = (0, C.Z)({
-displayProfile: d,
-size: (0, D.e7)(S),
-canAnimate: x || !q ? W : z
-  }), $ = (0, c.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(), J = (0, c.getAvatarSize)(c.AvatarSizes.SIZE_80), ee = (0, o._i)((0, f.ZP)(a.getAvatarURL(E, J), $, !1)), et = (0, h.Z)(null !== (t = null == d ? void 0 : d.primaryColor) && void 0 !== t ? t : ee).hsl, en = (0, m.Z)({
-analyticsLocation: {
-  page: M.ZY5.USER_POPOUT,
-  section: M.jXE.PROFILE_POPOUT
-}
-  });
-  return (0, r.jsx)(y.Z, {
-isPremium: Y,
-hasThemeColors: null !== (n = null == d ? void 0 : d.canEditThemes) && void 0 !== n && n,
-profileType: S,
-hasBanner: null != Q,
-hasProfileEffect: V,
-children: (0, r.jsxs)('div', {
-  className: s()(w.banner, (0, D.Ae)({
-    profileType: S,
-    user: {
-      hasBanner: null != Q,
-      isPremium: Y,
-      hasProfileEffect: V
-    }
-  }), {
-    [w.reducedMotion]: !q
-  }),
-  onMouseMove: () => K(!0),
-  onMouseLeave: () => K(!1),
-  style: {
-    backgroundImage: null != Q ? 'url('.concat(Q, ')') : void 0,
-    backgroundColor: X !== C.s.COMPLETE ? u.Z.unsafe_rawColors.PRIMARY_800.css : et
-  },
-  children: [
-    Z ? null == H ? (0, r.jsx)(B, {
-      darkenOnHover: V && N,
-      profileType: S,
-      profileLabel: U.Z.Messages.EDIT_PROFILE,
-      icon: 'pencil',
-      onClick: () => {
-        j({
-          action: 'EDIT_PROFILE'
-        }), null == _ || _(), en();
-      }
-    }) : (0, r.jsx)(c.Popout, {
-      spacing: 6,
-      position: 'bottom',
-      renderPopout: e => {
-        let {
-          closePopout: t
-        } = e;
-        return (0, r.jsx)(L.Z, {
-          onClose: t,
-          onSelect: _,
-          guild: H
-        });
-      },
-      children: e => (0, r.jsx)(B, {
-        darkenOnHover: V && N,
-        profileLabel: U.Z.Messages.EDIT_PROFILE,
-        icon: 'pencil',
-        ...e,
-        profileType: S
-      })
-    }) : F && null != Q && S !== b.y0.SETTINGS ? (0, r.jsx)(k, {
-      type: S,
-      shown: void 0 === N ? W : N,
-      onClick: () => {
-        j({
-          action: 'PRESS_PREMIUM_UPSELL'
-        }), null == _ || _();
-      }
-    }) : null,
-    !q && (0, v.F8)(Q) && (0, r.jsx)(p.Z, {
-      className: w.gifTag
-    })
-  ]
-})
-  });
+	var s, n;
+	let {
+			user: i,
+			displayProfile: _,
+			onClose: d,
+			guildId: I,
+			profileType: L,
+			isHovering: O,
+			animateOnHover: F,
+			allowEdit: y = !0,
+			showPremiumBadgeUpsell: B = !0,
+			hasProfileEffect: k = !1
+		} = e,
+		H = (0, o.e7)([p.Z], () => p.Z.getGuild(I)),
+		Y = (0, o.e7)([S.default], () => S.default.getId()) === i.id && y,
+		z = R.ZP.isPremiumAtLeast(null == _ ? void 0 : _.premiumType, U.p9.TIER_2),
+		{ trackUserProfileAction: w } = (0, M.KZ)(),
+		[W, V] = a.useState(!1),
+		K = (0, o.e7)([A.Z], () => A.Z.isFocused()),
+		X = N.QK.getSetting(),
+		{ bannerSrc: q, status: J } = (0, x.Z)({
+			displayProfile: _,
+			size: (0, g.e7)(L),
+			canAnimate: F || !X ? W : K
+		}),
+		Q = (0, u.useToken)(c.Z.unsafe_rawColors.PRIMARY_800).hex(),
+		$ = (0, u.getAvatarSize)(u.AvatarSizes.SIZE_80),
+		ee = (0, l._i)((0, E.ZP)(i.getAvatarURL(I, $), Q, !1)),
+		es = (0, m.Z)(null !== (s = null == _ ? void 0 : _.primaryColor) && void 0 !== s ? s : ee).hsl,
+		en = (0, T.Z)({
+			analyticsLocation: {
+				page: j.ZY5.USER_POPOUT,
+				section: j.jXE.PROFILE_POPOUT
+			}
+		});
+	return (0, t.jsx)(f.Z, {
+		isPremium: z,
+		hasThemeColors: null !== (n = null == _ ? void 0 : _.canEditThemes) && void 0 !== n && n,
+		profileType: L,
+		hasBanner: null != q,
+		hasProfileEffect: k,
+		children: (0, t.jsxs)('div', {
+			className: r()(
+				b.banner,
+				(0, g.Ae)({
+					profileType: L,
+					user: {
+						hasBanner: null != q,
+						isPremium: z,
+						hasProfileEffect: k
+					}
+				}),
+				{ [b.reducedMotion]: !X }
+			),
+			onMouseMove: () => V(!0),
+			onMouseLeave: () => V(!1),
+			style: {
+				backgroundImage: null != q ? 'url('.concat(q, ')') : void 0,
+				backgroundColor: J !== x.s.COMPLETE ? c.Z.unsafe_rawColors.PRIMARY_800.css : es
+			},
+			children: [
+				Y
+					? null == H
+						? (0, t.jsx)(D, {
+								darkenOnHover: k && O,
+								profileType: L,
+								profileLabel: v.Z.Messages.EDIT_PROFILE,
+								icon: 'pencil',
+								onClick: () => {
+									w({ action: 'EDIT_PROFILE' }), null == d || d(), en();
+								}
+							})
+						: (0, t.jsx)(u.Popout, {
+								spacing: 6,
+								position: 'bottom',
+								renderPopout: (e) => {
+									let { closePopout: s } = e;
+									return (0, t.jsx)(h.Z, {
+										onClose: s,
+										onSelect: d,
+										guild: H
+									});
+								},
+								children: (e) =>
+									(0, t.jsx)(D, {
+										darkenOnHover: k && O,
+										profileLabel: v.Z.Messages.EDIT_PROFILE,
+										icon: 'pencil',
+										...e,
+										profileType: L
+									})
+							})
+					: B && null != q && L !== Z.y0.SETTINGS
+						? (0, t.jsx)(G, {
+								type: L,
+								shown: void 0 === O ? W : O,
+								onClick: () => {
+									w({ action: 'PRESS_PREMIUM_UPSELL' }), null == d || d();
+								}
+							})
+						: null,
+				!X && (0, P.F8)(q) && (0, t.jsx)(C.Z, { className: b.gifTag })
+			]
+		})
+	});
 }

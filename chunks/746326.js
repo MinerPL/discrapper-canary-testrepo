@@ -1,3 +1,1 @@
-e.exports = {
-  body: 'body_e16e99'
-};
+e.exports = { body: 'body_e16e99' };

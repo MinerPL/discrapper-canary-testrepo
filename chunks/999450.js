@@ -1,9 +1,7 @@
 n.d(t, {
-  Z: function() {
-return r;
-  }
+	Z: function () {
+		return r;
+	}
 });
 var r = {};
-r = {
-  'Clear search': `Suche zur\xfccksetzen`
-};
+r = { 'Clear search': `Suche zur\xfccksetzen` };

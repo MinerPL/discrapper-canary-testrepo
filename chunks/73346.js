@@ -1,200 +1,232 @@
 n.d(t, {
-  Gg: function() {
-return C;
-  },
-  Kb: function() {
-return v;
-  },
-  Ww: function() {
-return D;
-  },
-  ZI: function() {
-return A;
-  },
-  _W: function() {
-return N;
-  },
-  uF: function() {
-return O;
-  }
-}), n(653041), n(998459), n(47120), n(411104), n(789020);
+	Gg: function () {
+		return C;
+	},
+	Kb: function () {
+		return v;
+	},
+	Ww: function () {
+		return D;
+	},
+	ZI: function () {
+		return A;
+	},
+	_W: function () {
+		return N;
+	},
+	uF: function () {
+		return O;
+	}
+}),
+	n(653041),
+	n(998459),
+	n(47120),
+	n(411104),
+	n(789020);
 var r = n(392711),
-  i = n.n(r),
-  a = n(913527),
-  s = n.n(a),
-  o = n(991637),
-  l = n.n(o),
-  u = n(873546),
-  c = n(544891),
-  d = n(355467),
-  _ = n(134432),
-  E = n(351402),
-  f = n(853872),
-  h = n(78839),
-  p = n(526167),
-  m = n(630388),
-  I = n(823379);
+	i = n.n(r),
+	a = n(913527),
+	s = n.n(a),
+	o = n(991637),
+	l = n.n(o),
+	u = n(873546),
+	c = n(544891),
+	d = n(355467),
+	_ = n(134432),
+	E = n(351402),
+	f = n(853872),
+	h = n(78839),
+	p = n(526167),
+	I = n(630388),
+	m = n(823379);
 n(358085);
 var T = n(709054),
-  g = n(981631);
+	g = n(981631);
 n(689938), l().shim();
 let S = !u.tq && !u.Em && -1 !== (0, p.vu)();
-
 function A(e, t) {
-  let {
-analyticsSource: n,
-analyticsProperties: r,
-storeListingId: i,
-slug: a,
-channelId: s,
-guildId: o
-  } = t;
-  return {
-pathname: null != s && null != o ? g.Z5c.CHANNEL(o, s, e) : g.Z5c.APPLICATION_STORE_LISTING_SKU(e, a),
-state: {
-  analyticsSource: n,
-  analyticsProperties: r
-},
-search: null != i ? '?store_listing_id='.concat(i) : ''
-  };
+	let { analyticsSource: n, analyticsProperties: r, storeListingId: i, slug: a, channelId: s, guildId: o } = t;
+	return {
+		pathname: null != s && null != o ? g.Z5c.CHANNEL(o, s, e) : g.Z5c.APPLICATION_STORE_LISTING_SKU(e, a),
+		state: {
+			analyticsSource: n,
+			analyticsProperties: r
+		},
+		search: null != i ? '?store_listing_id='.concat(i) : ''
+	};
 }
-
 function N(e, t, n, r) {
-  var i;
-  let a;
-  let s = window.GLOBAL_ENV.CDN_HOST;
-  if (null == r)
-switch (t.mimeType || t.mime_type) {
-  case 'video/quicktime':
-  case 'video/mp4':
-    r = 'mp4';
-    break;
-  case 'image/gif':
-    r = 'gif';
-    break;
-  default:
-    r = 'webp';
-}
-  'webp' === r && !S && (r = 'png');
-  let o = 'string' == typeof t ? t : t.id,
-l = (i = 'https:', 'https:');
-  return a = null != s ? ''.concat(l, '//').concat(s, '/app-assets/').concat(e, '/store/').concat(o, '.').concat(r) : ''.concat(l).concat(window.GLOBAL_ENV.API_ENDPOINT).concat(g.ANM.STORE_ASSET(e, o, r)), null != n && (a += '?size='.concat((0, _.oO)(n * (0, _.x_)()))), a;
+	var i;
+	let a;
+	let s = window.GLOBAL_ENV.CDN_HOST;
+	if (null == r)
+		switch (t.mimeType || t.mime_type) {
+			case 'video/quicktime':
+			case 'video/mp4':
+				r = 'mp4';
+				break;
+			case 'image/gif':
+				r = 'gif';
+				break;
+			default:
+				r = 'webp';
+		}
+	'webp' === r && !S && (r = 'png');
+	let o = 'string' == typeof t ? t : t.id,
+		l = ((i = 'https:'), 'https:');
+	return (
+		(a =
+			null != s
+				? ''.concat(l, '//').concat(s, '/app-assets/').concat(e, '/store/').concat(o, '.').concat(r)
+				: ''
+						.concat(l)
+						.concat(window.GLOBAL_ENV.API_ENDPOINT)
+						.concat(g.ANM.STORE_ASSET(e, o, r))),
+		null != n && (a += '?size='.concat((0, _.oO)(n * (0, _.x_)()))),
+		a
+	);
 }
 async function v(e) {
-  var t, n, r, i;
-  let a = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  if (a) {
-let e = [];
-!f.Z.hasFetchedPaymentSources && e.push(null !== (n = E.Z.paymentSourcesFetchRequest) && void 0 !== n ? n : (0, d.tZ)()), !E.Z.ipCountryCodeLoaded && e.push((0, d.GE)()), e.push(new Promise(async e => {
-  if (h.ZP.hasFetchedSubscriptions())
-    e();
-  else if (E.Z.isSubscriptionFetching) {
-    let t = () => {
-      E.Z.isSubscriptionFetching ? setTimeout(t, 50) : e();
-    };
-    t();
-  } else
-    await (0, d.jg)(), e();
-})), await Promise.allSettled(e);
-  }
-  let s = f.Z.getDefaultBillingCountryCode(),
-o = null !== (r = null === (t = f.Z.defaultPaymentSource) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : null,
-l = h.ZP.getPremiumTypeSubscription();
-  null != l && null != l.paymentSourceId && (o = l.paymentSourceId), null === s && (s = null !== (i = E.Z.ipCountryCode) && void 0 !== i ? i : null);
-  let u = {};
-  if (null != s && (u.country_code = s), null != o && (u.payment_source_id = o), null != s || null != o) {
-if ('string' == typeof e && (e = {
-    url: e,
-    oldFormErrors: !0
-  }), 'string' == typeof e.query)
-  throw Error('string query not supported');
-e.query = {
-  ...u,
-  ...e.query
-};
-  }
-  return c.tn.get(e);
+	var t, n, r, i;
+	let a = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+	if (a) {
+		let e = [];
+		!f.Z.hasFetchedPaymentSources &&
+			e.push(null !== (n = E.Z.paymentSourcesFetchRequest) && void 0 !== n ? n : (0, d.tZ)()),
+			!E.Z.ipCountryCodeLoaded && e.push((0, d.GE)()),
+			e.push(
+				new Promise(async (e) => {
+					if (h.ZP.hasFetchedSubscriptions()) e();
+					else if (E.Z.isSubscriptionFetching) {
+						let t = () => {
+							E.Z.isSubscriptionFetching ? setTimeout(t, 50) : e();
+						};
+						t();
+					} else await (0, d.jg)(), e();
+				})
+			),
+			await Promise.allSettled(e);
+	}
+	let s = f.Z.getDefaultBillingCountryCode(),
+		o =
+			null !== (r = null === (t = f.Z.defaultPaymentSource) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : null,
+		l = h.ZP.getPremiumTypeSubscription();
+	null != l && null != l.paymentSourceId && (o = l.paymentSourceId),
+		null === s && (s = null !== (i = E.Z.ipCountryCode) && void 0 !== i ? i : null);
+	let u = {};
+	if ((null != s && (u.country_code = s), null != o && (u.payment_source_id = o), null != s || null != o)) {
+		if (
+			('string' == typeof e &&
+				(e = {
+					url: e,
+					oldFormErrors: !0
+				}),
+			'string' == typeof e.query)
+		)
+			throw Error('string query not supported');
+		e.query = {
+			...u,
+			...e.query
+		};
+	}
+	return c.tn.get(e);
 }
-
 function O(e, t, n) {
-  let r = t.getApplication(e);
-  return null == r || null == r.primarySkuId ? null : n.get(r.primarySkuId);
+	let r = t.getApplication(e);
+	return null == r || null == r.primarySkuId ? null : n.get(r.primarySkuId);
 }
 let R = [];
-
 function C(e, t, n, r, a) {
-  let s = t.get(e);
-  if (null == s)
-return R;
-  let o = s.applicationId,
-l = [],
-u = [],
-c = function(e, t, n) {
-  var r;
-  let i = null !== (r = n.getNowPlaying(e)) && void 0 !== r ? r : {},
-    a = T.default.keys(i).map(e => {
-      let n = t.getUser(e);
-      return null == n ? null : {
-        user: n,
-        startTime: i[n.id].startedPlaying
-      };
-    }).filter(I.lm).sort((e, t) => t.startTime - e.startTime);
-  return 0 === a.length ? null : {
-    type: g.AzA.NOW_PLAYING,
-    userInfo: a
-  };
-}(o, n, r);
-  null != c && (l.push(c), u = c.userInfo.map(e => {
-let {
-  user: t
-} = e;
-return t.id;
-  }));
-  let d = a.getStatisticsForApplication(o);
-  if (null != d) {
-let e = d.map(e => e.user_id);
-if (i().difference(e, u).length > 0) {
-  let e = function(e, t, n) {
-    let r = n.getStatisticsForApplication(e);
-    if (null == r)
-      return null;
-    let i = r.map(e => {
-      let n = t.getUser(e.user_id);
-      return null == n ? null : {
-        user: n,
-        endTime: Date.parse(e.last_played_at)
-      };
-    }).filter(I.lm).sort((e, t) => t.endTime - e.endTime);
-    return 0 === i.length ? null : {
-      type: g.AzA.EVER_PLAYED,
-      userInfo: i
-    };
-  }(o, n, a);
-  null != e && l.push(e);
-}
-  }
-  return l;
+	let s = t.get(e);
+	if (null == s) return R;
+	let o = s.applicationId,
+		l = [],
+		u = [],
+		c = (function (e, t, n) {
+			var r;
+			let i = null !== (r = n.getNowPlaying(e)) && void 0 !== r ? r : {},
+				a = T.default
+					.keys(i)
+					.map((e) => {
+						let n = t.getUser(e);
+						return null == n
+							? null
+							: {
+									user: n,
+									startTime: i[n.id].startedPlaying
+								};
+					})
+					.filter(m.lm)
+					.sort((e, t) => t.startTime - e.startTime);
+			return 0 === a.length
+				? null
+				: {
+						type: g.AzA.NOW_PLAYING,
+						userInfo: a
+					};
+		})(o, n, r);
+	null != c &&
+		(l.push(c),
+		(u = c.userInfo.map((e) => {
+			let { user: t } = e;
+			return t.id;
+		})));
+	let d = a.getStatisticsForApplication(o);
+	if (null != d) {
+		let e = d.map((e) => e.user_id);
+		if (i().difference(e, u).length > 0) {
+			let e = (function (e, t, n) {
+				let r = n.getStatisticsForApplication(e);
+				if (null == r) return null;
+				let i = r
+					.map((e) => {
+						let n = t.getUser(e.user_id);
+						return null == n
+							? null
+							: {
+									user: n,
+									endTime: Date.parse(e.last_played_at)
+								};
+					})
+					.filter(m.lm)
+					.sort((e, t) => t.endTime - e.endTime);
+				return 0 === i.length
+					? null
+					: {
+							type: g.AzA.EVER_PLAYED,
+							userInfo: i
+						};
+			})(o, n, a);
+			null != e && l.push(e);
+		}
+	}
+	return l;
 }
 let y = [];
-
 function D(e, t, n) {
-  let r = t.get(e),
-i = n.getForSKU(e);
-  if (null == r || null == i)
-return y;
-  let a = [];
-  (0, m.yE)(r.flags, g.l4R.HAS_FREE_PREMIUM_CONTENT) && a.push({
-type: g.AzA.HAS_FREE_PREMIUM_CONTENT
-  });
-  let o = r.releaseDate;
-  return null != o && 3 > s()().diff(o, 'months') && (r.accessType === g.kGb.EARLY_ACCESS ? a.push({
-type: g.AzA.EARLY_ACCESS,
-releaseDate: o
-  }) : a.push({
-type: g.AzA.RECENT_RELEASE_DATE,
-releaseDate: o
-  })), null != i.flavorText && a.push({
-type: g.AzA.FLAVOR_TEXT,
-flavorText: i.flavorText
-  }), a;
+	let r = t.get(e),
+		i = n.getForSKU(e);
+	if (null == r || null == i) return y;
+	let a = [];
+	(0, I.yE)(r.flags, g.l4R.HAS_FREE_PREMIUM_CONTENT) && a.push({ type: g.AzA.HAS_FREE_PREMIUM_CONTENT });
+	let o = r.releaseDate;
+	return (
+		null != o &&
+			3 > s()().diff(o, 'months') &&
+			(r.accessType === g.kGb.EARLY_ACCESS
+				? a.push({
+						type: g.AzA.EARLY_ACCESS,
+						releaseDate: o
+					})
+				: a.push({
+						type: g.AzA.RECENT_RELEASE_DATE,
+						releaseDate: o
+					})),
+		null != i.flavorText &&
+			a.push({
+				type: g.AzA.FLAVOR_TEXT,
+				flavorText: i.flavorText
+			}),
+		a
+	);
 }

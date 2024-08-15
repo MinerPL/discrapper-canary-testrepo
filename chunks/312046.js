@@ -1,36 +1,36 @@
 n.d(t, {
-  Q: function() {
-return a;
-  }
+	Q: function () {
+		return a;
+	}
 });
 var r = n(418793),
-  i = n(460597);
-let a = e => ({
-  id: e.id,
-  configVersion: 2,
-  startsAt: e.starts_at,
-  expiresAt: e.expires_at,
-  features: e.features,
-  application: {
-id: e.application.id,
-name: e.application.name,
-link: e.application.link
-  },
-  assets: {
-hero: e.assets.hero,
-questBarHero: e.assets.quest_bar_hero,
-gameTile: e.assets.game_tile,
-logotype: e.assets.logotype
-  },
-  colors: {
-primary: e.colors.primary,
-secondary: e.colors.secondary
-  },
-  messages: {
-questName: e.messages.quest_name,
-gameTitle: e.messages.game_title,
-gamePublisher: e.messages.game_publisher
-  },
-  taskConfig: (0, i.f)(e.task_config),
-  rewardsConfig: (0, r.v)(e.rewards_config)
+	i = n(460597);
+let a = (e) => ({
+	id: e.id,
+	configVersion: 2,
+	startsAt: e.starts_at,
+	expiresAt: e.expires_at,
+	features: e.features,
+	application: {
+		id: e.application.id,
+		name: e.application.name,
+		link: e.application.link
+	},
+	assets: {
+		hero: e.assets.hero,
+		questBarHero: e.assets.quest_bar_hero,
+		gameTile: e.assets.game_tile,
+		logotype: e.assets.logotype
+	},
+	colors: {
+		primary: e.colors.primary,
+		secondary: e.colors.secondary
+	},
+	messages: {
+		questName: e.messages.quest_name,
+		gameTitle: e.messages.game_title,
+		gamePublisher: e.messages.game_publisher
+	},
+	taskConfig: (0, i.f)(e.task_config),
+	rewardsConfig: (0, r.v)(e.rewards_config)
 });

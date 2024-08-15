@@ -1,9 +1,7 @@
 n.d(t, {
-  Z: function() {
-return r;
-  }
+	Z: function () {
+		return r;
+	}
 });
 var r = {};
-r = {
-  breadcrumbs: `Nar\u{161}ymo kelias`
-};
+r = { breadcrumbs: `Nar\u{161}ymo kelias` };

@@ -1,49 +1,48 @@
 n.d(t, {
-  Z: function() {
-return l;
-  }
+	Z: function () {
+		return o;
+	}
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(120356),
-  a = n.n(i),
-  s = n(788307),
-  o = n(935467);
-
-function l(e) {
-  let {
-activity: t,
-className: n,
-emojiClassName: i,
-textClassName: l,
-placeholderText: u,
-soloEmojiClassName: c,
-animate: d = !0,
-hideTooltip: _ = !1,
-hideEmoji: E = !1,
-children: f
-  } = e;
-  if (null == t)
-return null;
-  let {
-emoji: h
-  } = t, p = null != t.state && '' !== t.state ? t.state : u;
-  return (0, r.jsxs)('div', {
-className: a()(o.__invalid_container, n),
-children: [
-  E || null == h ? null : (0, r.jsx)(s.I, {
-    emoji: h,
-    className: a()(o.emoji, i, null != c ? {
-      [c]: null == p || '' === p
-    } : null),
-    animate: d,
-    hideTooltip: _
-  }),
-  null != p && p.length > 0 ? (0, r.jsx)('span', {
-    className: l,
-    children: p
-  }) : null,
-  f
-]
-  });
+var a = n(120356),
+	s = n.n(a),
+	r = n(788307),
+	l = n(935467);
+function o(e) {
+	let {
+		activity: t,
+		className: n,
+		emojiClassName: a,
+		textClassName: o,
+		placeholderText: c,
+		soloEmojiClassName: d,
+		animate: u = !0,
+		hideTooltip: _ = !1,
+		hideEmoji: E = !1,
+		children: h
+	} = e;
+	if (null == t) return null;
+	let { emoji: m } = t,
+		I = null != t.state && '' !== t.state ? t.state : c;
+	return (0, i.jsxs)('div', {
+		className: s()(l.__invalid_container, n),
+		children: [
+			E || null == m
+				? null
+				: (0, i.jsx)(r.I, {
+						emoji: m,
+						className: s()(l.emoji, a, null != d ? { [d]: null == I || '' === I } : null),
+						animate: u,
+						hideTooltip: _
+					}),
+			null != I && I.length > 0
+				? (0, i.jsx)('span', {
+						className: o,
+						children: I
+					})
+				: null,
+			h
+		]
+	});
 }

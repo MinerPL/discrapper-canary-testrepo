@@ -1,34 +1,23 @@
 n.d(t, {
-  Xi: function() {
-return a;
-  }
+	Xi: function () {
+		return a;
+	}
 });
 let s = (0, n(818083).B)({
-  kind: 'user',
-  id: '2024-02_family_center_vc_join',
-  label: 'Family Center VC Join',
-  defaultConfig: {
-enabled: !1
-  },
-  treatments: [{
-id: 1,
-label: 'Enable VC Join in Family Center',
-config: {
-  enabled: !0
-}
-  }]
+	kind: 'user',
+	id: '2024-02_family_center_vc_join',
+	label: 'Family Center VC Join',
+	defaultConfig: { enabled: !1 },
+	treatments: [
+		{
+			id: 1,
+			label: 'Enable VC Join in Family Center',
+			config: { enabled: !0 }
+		}
+	]
 });
-
 function a(e) {
-  let {
-location: t,
-autoTrackExposure: n = !1
-  } = e, {
-enabled: a
-  } = s.useExperiment({
-location: t
-  }, {
-autoTrackExposure: n
-  });
-  return a;
+	let { location: t, autoTrackExposure: n = !1 } = e,
+		{ enabled: a } = s.useExperiment({ location: t }, { autoTrackExposure: n });
+	return a;
 }

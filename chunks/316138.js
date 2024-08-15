@@ -1,9 +1,8 @@
-
 function r(e) {
-  return e ? (e.nodeName || '').toLowerCase() : null;
+	return e ? (e.nodeName || '').toLowerCase() : null;
 }
 n.d(t, {
-  Z: function() {
-return r;
-  }
+	Z: function () {
+		return r;
+	}
 });

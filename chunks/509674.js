@@ -1,3 +1,1 @@
-e.exports = {
-  actionButton: 'actionButton_f5dff0'
-};
+e.exports = { actionButton: 'actionButton_f5dff0' };

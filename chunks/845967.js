@@ -1,3 +1,1 @@
-e.exports = {
-  clickableChannelTextArea: 'clickableChannelTextArea_f487fa'
-};
+e.exports = { clickableChannelTextArea: 'clickableChannelTextArea_f487fa' };

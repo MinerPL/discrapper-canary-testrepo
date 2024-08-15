@@ -1,10 +1,9 @@
-n.d(t, {
-  n: function() {
-return r;
-  }
+t.d(n, {
+	n: function () {
+		return i;
+	}
 });
-var a = n(506071);
-
-function r() {
-  return (0, a.n)();
+var r = t(506071);
+function i() {
+	return (0, r.n)();
 }

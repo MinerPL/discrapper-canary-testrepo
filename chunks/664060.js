@@ -1,11 +1,9 @@
-
 function r(e) {
-  if (void 0 === e)
-throw ReferenceError('this hasn\'t been initialised - super() hasn\'t been called');
-  return e;
+	if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+	return e;
 }
 n.d(t, {
-  Z: function() {
-return r;
-  }
+	Z: function () {
+		return r;
+	}
 });

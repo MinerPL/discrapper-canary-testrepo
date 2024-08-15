@@ -1,3 +1,1 @@
-e.exports = {
-  ticketIcon: 'ticketIcon_e78d05'
-};
+e.exports = { ticketIcon: 'ticketIcon_e78d05' };

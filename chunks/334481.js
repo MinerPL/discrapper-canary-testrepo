@@ -1,3 +1,1 @@
-e.exports = {
-  tabBarItem: 'tabBarItem_c95252'
-};
+e.exports = { tabBarItem: 'tabBarItem_c95252' };

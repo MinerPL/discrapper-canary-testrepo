@@ -1,3 +1,1 @@
-e.exports = {
-  wrapper: 'wrapper_cdfd51'
-};
+e.exports = { wrapper: 'wrapper_cdfd51' };

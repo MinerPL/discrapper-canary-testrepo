@@ -1,3 +1,1 @@
-e.exports = {
-  spinner: 'spinner_e00d71'
-};
+e.exports = { spinner: 'spinner_e00d71' };

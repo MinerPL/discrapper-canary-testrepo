@@ -1,3 +1,1 @@
-e.exports = {
-  link: 'link_b84b34'
-};
+e.exports = { link: 'link_b84b34' };

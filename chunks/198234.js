@@ -1,4 +1,4 @@
 e.exports = {
-  collectionsContainer: 'collectionsContainer_ca364e',
-  categoryList: 'categoryList_ca364e'
+	collectionsContainer: 'collectionsContainer_ca364e',
+	categoryList: 'categoryList_ca364e'
 };

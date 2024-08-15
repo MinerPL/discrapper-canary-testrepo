@@ -1,6 +1,6 @@
 r.d(t, {
-  f: function() {
-return n;
-  }
+	f: function () {
+		return n;
+	}
 });
-let n = () => `v3-${ Date.now() }-${ Math.floor(Math.random() * (9000000000000 - 1)) + 1000000000000 }`;
+let n = () => `v3-${Date.now()}-${Math.floor(Math.random() * (9000000000000 - 1)) + 1000000000000}`;

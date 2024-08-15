@@ -1,26 +1,30 @@
-s.d(t, {
-  Z: function() {
-return u;
-  }
-}), s(627341);
-var n = s(735250);
-s(470079);
-var i = s(278074),
-  a = s(219496),
-  r = s(346585),
-  l = s(363577),
-  o = s(81259);
-
+a.d(t, {
+	Z: function () {
+		return u;
+	}
+}),
+	a(627341);
+var n = a(735250);
+a(470079);
+var s = a(278074),
+	i = a(219496),
+	r = a(346585),
+	o = a(363577),
+	l = a(81259);
 function u(e) {
-  let {
-username: t,
-oneClickFlow: s = !1
-  } = e, u = (0, l.M)((0, r.R_)(t), !0, !1, s);
-  if (null == u)
-return null;
-  let d = (0, i.EQ)(u.type).with(a.K.RATE_LIMIT, () => 'info').with(a.K.ERROR, () => 'error').with(a.K.AVAILABLE, () => 'success').with(a.K.INTERNAL_ERROR, () => null).exhaustive();
-  return null == d ? null : (0, n.jsx)(o.Z, {
-type: d,
-children: u.message
-  });
+	let { username: t, oneClickFlow: a = !1 } = e,
+		u = (0, o.M)((0, r.R_)(t), !0, !1, a);
+	if (null == u) return null;
+	let d = (0, s.EQ)(u.type)
+		.with(i.K.RATE_LIMIT, () => 'info')
+		.with(i.K.ERROR, () => 'error')
+		.with(i.K.AVAILABLE, () => 'success')
+		.with(i.K.INTERNAL_ERROR, () => null)
+		.exhaustive();
+	return null == d
+		? null
+		: (0, n.jsx)(l.Z, {
+				type: d,
+				children: u.message
+			});
 }

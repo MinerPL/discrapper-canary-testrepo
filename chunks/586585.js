@@ -1,86 +1,100 @@
 t.d(n, {
-  g: function() {
-return l;
-  }
+	g: function () {
+		return i;
+	}
 });
-var r, l, i = t(735250);
+var r,
+	i,
+	l = t(735250);
 t(470079);
-var s = t(481060),
-  a = t(600164),
-  o = t(612853),
-  u = t(689938),
-  c = t(527926);
-(r = l || (l = {}))[r.CONTINUE = 0] = 'CONTINUE', r[r.UPGRADE = 1] = 'UPGRADE', r[r.PURCHASE = 2] = 'PURCHASE';
-let d = e => {
-  let {
-onBack: n,
-backText: t,
-primaryIcon: r,
-primaryCTA: l,
-primaryType: d,
-primaryText: m,
-primaryTooltip: f,
-primaryDisabled: x,
-primarySubmitting: h,
-onPrimary: C,
-secondaryText: N,
-onSecondary: v
-  } = e;
-  return (0, i.jsxs)(s.ModalFooter, {
-justify: a.Z.Justify.BETWEEN,
-align: a.Z.Align.CENTER,
-children: [
-  (() => {
-    if (null == l || null == m)
-      return null;
-    let e = 2 === l ? s.ShinyButton : s.Button,
-      n = {
-        innerClassName: c.button,
-        type: d,
-        disabled: x,
-        submitting: h,
-        color: 0 === l ? s.Button.Colors.BRAND : s.Button.Colors.GREEN,
-        onClick: C
-      };
-    return null != f ? (0, i.jsx)(s.Tooltip, {
-      text: f,
-      children: t => (0, i.jsxs)(e, {
-        ...t,
-        ...n,
-        children: [
-          null == r ? null : (0, i.jsx)(r, {
-            color: 'currentColor',
-            className: c.primaryIcon
-          }),
-          m
-        ]
-      })
-    }) : (0, i.jsxs)(e, {
-      ...n,
-      children: [
-        null == r ? null : (0, i.jsx)(r, {
-          color: 'currentColor',
-          className: c.primaryIcon
-        }),
-        m
-      ]
-    });
-  })(),
-  null == N ? null : (0, i.jsx)(s.Button, {
-    color: s.Button.Colors.PRIMARY,
-    look: s.Button.Looks.LINK,
-    onClick: v,
-    children: N
-  }),
-  (0, i.jsx)(o.Z, {}),
-  null == n ? null : (0, i.jsx)(s.Button, {
-    className: c.back,
-    color: s.Button.Colors.PRIMARY,
-    look: s.Button.Looks.LINK,
-    onClick: n,
-    children: null != t ? t : u.Z.Messages.BACK
-  })
-]
-  });
+var a = t(481060),
+	s = t(600164),
+	o = t(612853),
+	c = t(689938),
+	u = t(527926);
+((r = i || (i = {}))[(r.CONTINUE = 0)] = 'CONTINUE'),
+	(r[(r.UPGRADE = 1)] = 'UPGRADE'),
+	(r[(r.PURCHASE = 2)] = 'PURCHASE');
+let d = (e) => {
+	let {
+		onBack: n,
+		backText: t,
+		primaryIcon: r,
+		primaryCTA: i,
+		primaryType: d,
+		primaryText: m,
+		primaryTooltip: f,
+		primaryDisabled: x,
+		primarySubmitting: h,
+		onPrimary: j,
+		secondaryText: v,
+		onSecondary: N
+	} = e;
+	return (0, l.jsxs)(a.ModalFooter, {
+		justify: s.Z.Justify.BETWEEN,
+		align: s.Z.Align.CENTER,
+		children: [
+			(() => {
+				if (null == i || null == m) return null;
+				let e = 2 === i ? a.ShinyButton : a.Button,
+					n = {
+						innerClassName: u.button,
+						type: d,
+						disabled: x,
+						submitting: h,
+						color: 0 === i ? a.Button.Colors.BRAND : a.Button.Colors.GREEN,
+						onClick: j
+					};
+				return null != f
+					? (0, l.jsx)(a.Tooltip, {
+							text: f,
+							children: (t) =>
+								(0, l.jsxs)(e, {
+									...t,
+									...n,
+									children: [
+										null == r
+											? null
+											: (0, l.jsx)(r, {
+													color: 'currentColor',
+													className: u.primaryIcon
+												}),
+										m
+									]
+								})
+						})
+					: (0, l.jsxs)(e, {
+							...n,
+							children: [
+								null == r
+									? null
+									: (0, l.jsx)(r, {
+											color: 'currentColor',
+											className: u.primaryIcon
+										}),
+								m
+							]
+						});
+			})(),
+			null == v
+				? null
+				: (0, l.jsx)(a.Button, {
+						color: a.Button.Colors.PRIMARY,
+						look: a.Button.Looks.LINK,
+						onClick: N,
+						children: v
+					}),
+			(0, l.jsx)(o.Z, {}),
+			null == n
+				? null
+				: (0, l.jsx)(a.Button, {
+						className: u.back,
+						color: a.Button.Colors.PRIMARY,
+						look: a.Button.Looks.LINK,
+						onClick: n,
+						children: null != t ? t : c.Z.Messages.BACK
+					})
+		]
+	});
 };
-d.CTAType = l, n.Z = d;
+(d.CTAType = i), (n.Z = d);

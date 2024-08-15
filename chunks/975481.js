@@ -1,3 +1,1 @@
-e.exports = {
-  resizeHandle: 'resizeHandle_c0a559'
-};
+e.exports = { resizeHandle: 'resizeHandle_c0a559' };

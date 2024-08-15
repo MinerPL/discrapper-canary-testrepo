@@ -1,79 +1,80 @@
 n.d(t, {
-  Z: function() {
-return f;
-  }
+	Z: function () {
+		return p;
+	}
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(399606),
-  a = n(481060),
-  s = n(275759),
-  o = n(565138),
-  l = n(706454),
-  u = n(271383),
-  c = n(430824),
-  d = n(709054),
-  _ = n(689938),
-  E = n(91941);
-
-function f(e) {
-  let {
-userId: t,
-guildId: n,
-textClassName: f,
-tooltipDelay: h
-  } = e, p = (0, i.e7)([l.default], () => l.default.locale), m = (0, i.e7)([c.Z], () => null != n ? c.Z.getGuild(n) : null), I = (0, i.e7)([u.ZP], () => null != n ? u.ZP.getMember(n, t) : null), T = (0, s.FI)(d.default.extractTimestamp(t), p), g = (0, s.FI)(null == I ? void 0 : I.joinedAt, p);
-  return null == m || null == I ? (0, r.jsx)(a.Text, {
-variant: 'text-sm/normal',
-className: f,
-children: T
-  }) : (0, r.jsxs)('div', {
-className: E.memberSinceWrapper,
-children: [
-  (0, r.jsxs)('div', {
-    className: E.memberSince,
-    children: [
-      (0, r.jsx)(a.Tooltip, {
-        text: _.Z.Messages.DISCORD_NAME,
-        delay: h,
-        children: e => (0, r.jsx)(a.ClydeIcon, {
-          size: 'custom',
-          width: 28,
-          height: 28,
-          color: 'currentColor',
-          ...e,
-          className: E.discordIcon
-        })
-      }),
-      (0, r.jsx)(a.Text, {
-        variant: 'text-sm/normal',
-        className: f,
-        children: T
-      })
-    ]
-  }),
-  (0, r.jsx)('div', {
-    className: E.divider
-  }),
-  (0, r.jsxs)('div', {
-    className: E.memberSince,
-    children: [
-      (0, r.jsx)(a.Tooltip, {
-        text: m.name,
-        delay: h,
-        children: e => (0, r.jsx)(o.Z, {
-          ...e,
-          guild: m,
-          size: o.Z.Sizes.SMOL
-        })
-      }),
-      (0, r.jsx)(a.Text, {
-        variant: 'text-sm/normal',
-        className: f,
-        children: g
-      })
-    ]
-  })
-]
-  });
+var a = n(399606),
+	s = n(481060),
+	l = n(275759),
+	r = n(565138),
+	o = n(706454),
+	c = n(271383),
+	u = n(430824),
+	d = n(709054),
+	h = n(689938),
+	m = n(91941);
+function p(e) {
+	let { userId: t, guildId: n, textClassName: p, tooltipDelay: _ } = e,
+		f = (0, a.e7)([o.default], () => o.default.locale),
+		E = (0, a.e7)([u.Z], () => (null != n ? u.Z.getGuild(n) : null)),
+		g = (0, a.e7)([c.ZP], () => (null != n ? c.ZP.getMember(n, t) : null)),
+		C = (0, l.FI)(d.default.extractTimestamp(t), f),
+		I = (0, l.FI)(null == g ? void 0 : g.joinedAt, f);
+	return null == E || null == g
+		? (0, i.jsx)(s.Text, {
+				variant: 'text-sm/normal',
+				className: p,
+				children: C
+			})
+		: (0, i.jsxs)('div', {
+				className: m.memberSinceWrapper,
+				children: [
+					(0, i.jsxs)('div', {
+						className: m.memberSince,
+						children: [
+							(0, i.jsx)(s.Tooltip, {
+								text: h.Z.Messages.DISCORD_NAME,
+								delay: _,
+								children: (e) =>
+									(0, i.jsx)(s.ClydeIcon, {
+										size: 'custom',
+										width: 28,
+										height: 28,
+										color: 'currentColor',
+										...e,
+										className: m.discordIcon
+									})
+							}),
+							(0, i.jsx)(s.Text, {
+								variant: 'text-sm/normal',
+								className: p,
+								children: C
+							})
+						]
+					}),
+					(0, i.jsx)('div', { className: m.divider }),
+					(0, i.jsxs)('div', {
+						className: m.memberSince,
+						children: [
+							(0, i.jsx)(s.Tooltip, {
+								text: E.name,
+								delay: _,
+								children: (e) =>
+									(0, i.jsx)(r.Z, {
+										...e,
+										guild: E,
+										size: r.Z.Sizes.SMOL
+									})
+							}),
+							(0, i.jsx)(s.Text, {
+								variant: 'text-sm/normal',
+								className: p,
+								children: I
+							})
+						]
+					})
+				]
+			});
 }

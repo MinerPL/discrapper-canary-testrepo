@@ -1,35 +1,33 @@
-t.d(r, {
-  Z: function() {
-return l;
-  }
-}), t(47120);
-var a = t(470079),
-  n = t(442837),
-  i = t(592125),
-  o = t(9156);
-
-function l(e) {
-  let r = (0, n.e7)([i.Z], () => i.Z.getPrivateChannelsVersion()),
-t = (0, n.e7)([i.Z], () => i.Z.getMutableDMsByUserIds(), [r]),
-l = (0, n.e7)([o.ZP], () => o.ZP.getMutedChannels(null)),
-c = a.useMemo(() => {
-  let e = new Set();
-  for (let r in t) {
-    let a = t[r];
-    null != a && l.has(a) && e.add(r);
-  }
-  return e;
-}, [
-  t,
-  l
-]);
-  return a.useMemo(() => null == e ? void 0 : e.filter(e => {
-for (let r of e.participants)
-  if (c.has(r))
-    return !1;
-return !0;
-  }), [
-e,
-c
-  ]);
+n.d(e, {
+	Z: function () {
+		return i;
+	}
+}),
+	n(47120);
+var a = n(470079),
+	r = n(442837),
+	l = n(592125),
+	u = n(9156);
+function i(t) {
+	let e = (0, r.e7)([l.Z], () => l.Z.getPrivateChannelsVersion()),
+		n = (0, r.e7)([l.Z], () => l.Z.getMutableDMsByUserIds(), [e]),
+		i = (0, r.e7)([u.ZP], () => u.ZP.getMutedChannels(null)),
+		o = a.useMemo(() => {
+			let t = new Set();
+			for (let e in n) {
+				let a = n[e];
+				null != a && i.has(a) && t.add(e);
+			}
+			return t;
+		}, [n, i]);
+	return a.useMemo(
+		() =>
+			null == t
+				? void 0
+				: t.filter((t) => {
+						for (let e of t.participants) if (o.has(e)) return !1;
+						return !0;
+					}),
+		[t, o]
+	);
 }

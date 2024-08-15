@@ -1,3 +1,1 @@
-t.exports = {
-  carouselModal: 'carouselModal_d2b9a1'
-};
+t.exports = { carouselModal: 'carouselModal_d2b9a1' };

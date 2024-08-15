@@ -1,3 +1,1 @@
-e.exports = {
-  markdownContainer: 'markdownContainer_b6273d'
-};
+e.exports = { markdownContainer: 'markdownContainer_b6273d' };

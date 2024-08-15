@@ -1,3 +1,1 @@
-t.exports = {
-  title: 'title_be9df7'
-};
+t.exports = { title: 'title_be9df7' };

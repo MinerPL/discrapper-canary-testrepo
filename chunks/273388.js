@@ -1,3 +1,1 @@
-e.exports = {
-  canvas: 'canvas_cb6056'
-};
+e.exports = { canvas: 'canvas_cb6056' };

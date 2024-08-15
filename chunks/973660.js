@@ -1,3 +1,1 @@
-e.exports = {
-  guildNotif: 'guildNotif_e3bac1'
-};
+e.exports = { guildNotif: 'guildNotif_e3bac1' };

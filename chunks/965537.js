@@ -1,3 +1,3 @@
-t.Z = function(e) {
-  return e;
+t.Z = function (e) {
+	return e;
 };

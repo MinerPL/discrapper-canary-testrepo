@@ -1,3 +1,1 @@
-e.exports = {
-  buttonsContainer: 'buttonsContainer_daabdd'
-};
+e.exports = { buttonsContainer: 'buttonsContainer_daabdd' };

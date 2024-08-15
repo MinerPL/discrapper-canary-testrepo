@@ -1,27 +1,26 @@
-n.d(s, {
-  Z: function() {
-return d;
-  }
+t.d(n, {
+	Z: function () {
+		return c;
+	}
 });
-var i = n(470079),
-  t = n(442837),
-  l = n(726542),
-  o = n(122021),
-  a = n(621853);
-let r = [];
-
-function d(e) {
-  let s = (0, o.Xj)({
-  forUserProfile: !0
-}),
-n = (0, t.e7)([a.Z], () => a.Z.getUserProfile(e));
-  return (0, i.useMemo)(() => (null == n ? void 0 : n.connectedAccounts) == null ? r : n.connectedAccounts.filter(e => {
-let {
-  type: n
-} = e, i = l.Z.get(n);
-return null != i && s(i);
-  }), [
-null == n ? void 0 : n.connectedAccounts,
-s
-  ]);
+var s = t(470079),
+	i = t(442837),
+	o = t(726542),
+	l = t(122021),
+	r = t(621853);
+let a = [];
+function c(e) {
+	let n = (0, l.Xj)({ forUserProfile: !0 }),
+		t = (0, i.e7)([r.Z], () => r.Z.getUserProfile(e));
+	return (0, s.useMemo)(
+		() =>
+			(null == t ? void 0 : t.connectedAccounts) == null
+				? a
+				: t.connectedAccounts.filter((e) => {
+						let { type: t } = e,
+							s = o.Z.get(t);
+						return null != s && n(s);
+					}),
+		[null == t ? void 0 : t.connectedAccounts, n]
+	);
 }

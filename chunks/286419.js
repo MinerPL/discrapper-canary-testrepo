@@ -1,3 +1,1 @@
-e.exports = {
-  leftDivider: 'leftDivider_d8c748'
-};
+e.exports = { leftDivider: 'leftDivider_d8c748' };

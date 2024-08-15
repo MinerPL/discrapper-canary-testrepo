@@ -1,3 +1,1 @@
-e.exports = {
-  breadcrumb: 'breadcrumb_dacdd0'
-};
+e.exports = { breadcrumb: 'breadcrumb_dacdd0' };

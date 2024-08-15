@@ -1,4 +1,4 @@
 n.r(t);
-t.default = function(e, t) {
-  var n, r;
+t.default = function (e, t) {
+	var n, r;
 };

@@ -1,4 +1,4 @@
 e.exports = {
-  avatarDecorationPreview: 'avatarDecorationPreview_cb69cc',
-  profileEffectPreview: 'profileEffectPreview_cb69cc'
+	avatarDecorationPreview: 'avatarDecorationPreview_cb69cc',
+	profileEffectPreview: 'profileEffectPreview_cb69cc'
 };

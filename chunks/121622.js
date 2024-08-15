@@ -1,3 +1,1 @@
-e.exports = {
-  renewalInvoiceDate: 'renewalInvoiceDate_ff918e'
-};
+e.exports = { renewalInvoiceDate: 'renewalInvoiceDate_ff918e' };
