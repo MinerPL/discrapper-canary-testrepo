@@ -32,8 +32,8 @@ var r,
 	f = n(47770),
 	h = n(710845),
 	p = n(857192),
-	m = n(70956),
-	I = n(358085),
+	I = n(70956),
+	m = n(358085),
 	T = n(65154);
 function g(e, t, n) {
 	return (
@@ -50,10 +50,10 @@ function g(e, t, n) {
 }
 function S() {}
 ((o = r || (r = {}))[(o.IDENTIFY = 0)] = 'IDENTIFY'), (o[(o.SELECT_PROTOCOL = 1)] = 'SELECT_PROTOCOL'), (o[(o.READY = 2)] = 'READY'), (o[(o.HEARTBEAT = 3)] = 'HEARTBEAT'), (o[(o.SELECT_PROTOCOL_ACK = 4)] = 'SELECT_PROTOCOL_ACK'), (o[(o.SPEAKING = 5)] = 'SPEAKING'), (o[(o.HEARTBEAT_ACK = 6)] = 'HEARTBEAT_ACK'), (o[(o.RESUME = 7)] = 'RESUME'), (o[(o.HELLO = 8)] = 'HELLO'), (o[(o.RESUMED = 9)] = 'RESUMED'), (o[(o.CLIENT_CONNECT = 11)] = 'CLIENT_CONNECT'), (o[(o.VIDEO = 12)] = 'VIDEO'), (o[(o.CLIENT_DISCONNECT = 13)] = 'CLIENT_DISCONNECT'), (o[(o.SESSION_UPDATE = 14)] = 'SESSION_UPDATE'), (o[(o.MEDIA_SINK_WANTS = 15)] = 'MEDIA_SINK_WANTS'), (o[(o.VOICE_BACKEND_VERSION = 16)] = 'VOICE_BACKEND_VERSION'), (o[(o.CHANNEL_OPTIONS_UPDATE = 17)] = 'CHANNEL_OPTIONS_UPDATE'), (o[(o.FLAGS = 18)] = 'FLAGS'), (o[(o.PLATFORM = 20)] = 'PLATFORM'), (o[(o.SECURE_FRAMES_PREPARE_PROTOCOL_TRANSITION = 21)] = 'SECURE_FRAMES_PREPARE_PROTOCOL_TRANSITION'), (o[(o.SECURE_FRAMES_EXECUTE_TRANSITION = 22)] = 'SECURE_FRAMES_EXECUTE_TRANSITION'), (o[(o.SECURE_FRAMES_READY_FOR_TRANSITION = 23)] = 'SECURE_FRAMES_READY_FOR_TRANSITION'), (o[(o.SECURE_FRAMES_PREPARE_EPOCH = 24)] = 'SECURE_FRAMES_PREPARE_EPOCH'), (o[(o.MLS_EXTERNAL_SENDER_PACKAGE = 25)] = 'MLS_EXTERNAL_SENDER_PACKAGE'), (o[(o.MLS_KEY_PACKAGE = 26)] = 'MLS_KEY_PACKAGE'), (o[(o.MLS_PROPOSALS = 27)] = 'MLS_PROPOSALS'), (o[(o.MLS_COMMIT_WELCOME = 28)] = 'MLS_COMMIT_WELCOME'), (o[(o.MLS_PREPARE_COMMIT_TRANSITION = 29)] = 'MLS_PREPARE_COMMIT_TRANSITION'), (o[(o.MLS_WELCOME = 30)] = 'MLS_WELCOME'), (o[(o.MLS_INVALID_COMMIT_WELCOME = 31)] = 'MLS_INVALID_COMMIT_WELCOME'), ((l = i || (i = {}))[(l.AUTHENTICATION_FAILED = 4004)] = 'AUTHENTICATION_FAILED'), (l[(l.INVALID_SESSION = 4006)] = 'INVALID_SESSION'), (l[(l.SERVER_NOT_FOUND = 4011)] = 'SERVER_NOT_FOUND'), (l[(l.SERVER_CRASH = 4015)] = 'SERVER_CRASH'), (l[(l.CANCELED = 4016)] = 'CANCELED'), (l[(l.HEARTBEAT_TIMEOUT = 4800)] = 'HEARTBEAT_TIMEOUT'), (l[(l.UNRESUMABLE = 4801)] = 'UNRESUMABLE'), (l[(l.RESET_BACKOFF = 4802)] = 'RESET_BACKOFF'), ((u = a || (a = {}))[(u.DISCONNECTED = 0)] = 'DISCONNECTED'), (u[(u.CONNECTING = 1)] = 'CONNECTING'), (u[(u.IDENTIFYING = 2)] = 'IDENTIFYING'), (u[(u.RESUMING = 3)] = 'RESUMING'), (u[(u.CONNECTED = 4)] = 'CONNECTED'), (u[(u.RECONNECTING = 5)] = 'RECONNECTING');
-let A = 20 * m.Z.Millis.SECOND,
-	N = 1 * m.Z.Millis.MINUTE,
-	v = 5 * m.Z.Millis.SECOND,
-	O = 5 * m.Z.Millis.SECOND;
+let A = 20 * I.Z.Millis.SECOND,
+	N = 1 * I.Z.Millis.MINUTE,
+	v = 5 * I.Z.Millis.SECOND,
+	O = 5 * I.Z.Millis.SECOND;
 function R(e) {
 	return e.map((e) => ({
 		name: e.name,
@@ -259,22 +259,28 @@ class D extends f.Z {
 	}
 	doResume() {
 		var e, t, n;
-		this.logger.info('[RESUME] resuming session. serverId='.concat(null !== (e = this.serverId) && void 0 !== e ? e : '', ' sessionId=').concat(null !== (t = this.sessionId) && void 0 !== t ? t : '')),
+		let r = null !== (e = this.lastRecvSeqNum) && void 0 !== e ? e : -1;
+		this.logger.info(
+			'[RESUME] resuming session. serverId='
+				.concat(null !== (t = this.serverId) && void 0 !== t ? t : '', ' sessionId=')
+				.concat(null !== (n = this.sessionId) && void 0 !== n ? n : '', ' seqAck=')
+				.concat(r)
+		),
 			this.emit('resuming'),
 			(this.connectionState = 3),
 			this.send(7, {
 				token: this.token,
 				session_id: this.sessionId,
 				server_id: this.serverId,
-				seq_ack: null !== (n = this.lastRecvSeqNum) && void 0 !== n ? n : -1
+				seq_ack: r
 			});
 	}
 	handleHello(e) {
 		var t, n, r;
 		if (((this.serverVersion = null !== (t = e.v) && void 0 !== t ? t : 3), this.serverVersion <= 3)) {
-			let t = I.isPlatformEmbedded ? 0.25 : 0.1;
+			let t = m.isPlatformEmbedded ? 0.25 : 0.1;
 			this.heartbeatInterval = e.heartbeat_interval * t;
-		} else (this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier), !I.isPlatformEmbedded && (this.heartbeatInterval = Math.min(O, null !== (n = this.heartbeatInterval) && void 0 !== n ? n : NaN));
+		} else (this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier), !m.isPlatformEmbedded && (this.heartbeatInterval = Math.min(O, null !== (n = this.heartbeatInterval) && void 0 !== n ? n : NaN));
 		let i = Date.now() - this.connectionStartTime;
 		this.logger.info(
 			'[HELLO] heartbeat interval: '
@@ -357,13 +363,15 @@ class D extends f.Z {
 			}, this.heartbeatInterval));
 	}
 	sendHeartbeat() {
-		if ((this.logger.info('Sending heartbeat'), this.serverVersion >= 8)) {
+		if (this.serverVersion >= 8) {
 			var e;
-			this.send(3, {
-				t: Date.now(),
-				seq_ack: null !== (e = this.lastRecvSeqNum) && void 0 !== e ? e : -1
-			});
-		} else this.send(3, Date.now());
+			let t = null !== (e = this.lastRecvSeqNum) && void 0 !== e ? e : -1;
+			this.logger.info('Sending heartbeat with last received sequence number: '.concat(t)),
+				this.send(3, {
+					t: Date.now(),
+					seq_ack: t
+				});
+		} else this.logger.info('Sending heartbeat'), this.send(3, Date.now());
 		this.lastHeartbeatTime = performance.now();
 	}
 	stopHeartbeater() {

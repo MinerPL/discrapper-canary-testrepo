@@ -6,28 +6,27 @@ var r = n(735250),
 	o = n(92114),
 	l = n(194359),
 	u = n(367907),
-	c = n(592125),
-	d = n(699516),
-	_ = n(9156),
-	E = n(594174),
-	f = n(621600),
-	h = n(82554),
+	c = n(138201),
+	d = n(592125),
+	_ = n(699516),
+	E = n(9156),
+	f = n(594174),
+	h = n(621600),
 	p = n(981631),
-	m = n(689938),
-	I = n(295135);
+	I = n(689938);
 t.Z = (e) => {
-	let { userId: t, reportId: n, reportName: T, showBlock: g, showMute: S } = e,
-		A = c.Z.getDMFromUserId(t),
-		N = (0, a.e7)([_.ZP], () => (null == A ? null : _.ZP.isChannelMuted(null, A))),
-		[v, O] = i.useState(null != N && N),
-		[R, C] = i.useState(!1),
-		y = (0, a.e7)([E.default], () => E.default.getUser(t), [t]),
-		D = (0, a.e7)([d.Z], () => d.Z.getRelationshipType(t), [t]) === p.OGo.BLOCKED;
+	let { userId: t, reportId: n, showBlock: m, showMute: T } = e,
+		g = d.Z.getDMFromUserId(t),
+		S = (0, a.e7)([E.ZP], () => (null == g ? null : E.ZP.isChannelMuted(null, g))),
+		[A, N] = i.useState(null != S && S),
+		[v, O] = i.useState(!1),
+		R = (0, a.e7)([f.default], () => f.default.getUser(t), [t]),
+		C = (0, a.e7)([_.Z], () => _.Z.getRelationshipType(t), [t]) === p.OGo.BLOCKED;
 	i.useEffect(() => {
-		C(D);
-	}, [D]);
-	let L = i.useCallback(() => {
-			C(!0),
+		O(C);
+	}, [C]);
+	let y = i.useCallback(() => {
+			O(!0),
 				u.ZP.trackWithMetadata(p.rMx.IAR_BLOCK_USER_BUTTON_CLICKED, {
 					other_user_id: t,
 					report_id: n
@@ -38,76 +37,36 @@ t.Z = (e) => {
 					type: p.OGo.BLOCKED
 				});
 		}, [t, n]),
-		b = i.useCallback(() => {
-			null != A &&
-				(O(!0),
+		D = i.useCallback(() => {
+			null != g &&
+				(N(!0),
 				u.ZP.trackWithMetadata(p.rMx.IAR_MUTE_USER_BUTTON_CLICKED, {
 					other_user_id: t,
 					report_id: n
 				}),
-				o.Z.updateChannelOverrideSettings(null, A, { muted: !0 }, f.ZB.Muted));
-		}, [A, t, n]),
-		M = T === h.b.USER,
-		P = M ? m.Z.Messages.REPORTS_MUTE_USER_ELEMENT_DESCRIPTION : m.Z.Messages.MOBILE_REPORTS_MUTE_ELEMENT_DESCRIPTION,
-		U = M ? m.Z.Messages.REPORTS_BLOCK_USER_ELEMENT_DESCRIPTION : m.Z.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_DESCRIPTION,
-		w = M ? m.Z.Messages.REPORTS_BLOCK_AND_MUTE_USER_ELEMENT_DESCRIPTION : m.Z.Messages.MOBILE_REPORTS_BLOCK_AND_MUTE_ELEMENT_DESCRIPTION,
-		x = S || g;
-	return null != y && x
-		? (0, r.jsxs)('div', {
-				className: I.container,
+				o.Z.updateChannelOverrideSettings(null, g, { muted: !0 }, h.ZB.Muted));
+		}, [g, t, n]),
+		L = T || m;
+	return null != R && L
+		? (0, r.jsxs)(r.Fragment, {
 				children: [
-					(0, r.jsx)(s.Text, {
-						className: I.description,
-						variant: 'text-sm/normal',
-						children: g && S ? w : g ? U : P
-					}),
-					(0, r.jsxs)('div', {
-						className: I.userContainer,
-						children: [
-							(0, r.jsxs)('div', {
-								className: I.userInfo,
-								children: [
-									(0, r.jsx)(s.Avatar, {
-										size: s.AvatarSizes.SIZE_32,
-										src: y.getAvatarURL(void 0, 32),
-										className: I.avatar,
-										'aria-label': y.username
-									}),
-									(0, r.jsx)(s.Text, {
-										className: I.userName,
-										variant: 'text-sm/semibold',
-										children: y.username
-									}),
-									!y.isPomelo() &&
-										(0, r.jsxs)(s.Text, {
-											variant: 'text-sm/normal',
-											children: ['#', y.discriminator]
-										})
-								]
-							}),
-							(0, r.jsxs)('div', {
-								className: I.actionButtonsContainer,
-								children: [
-									S &&
-										(0, r.jsx)(s.Button, {
-											onClick: b,
-											disabled: v,
-											size: s.Button.Sizes.SMALL,
-											color: s.Button.Colors.PRIMARY,
-											children: v ? m.Z.Messages.MUTED : m.Z.Messages.MUTE
-										}),
-									g &&
-										(0, r.jsx)(s.Button, {
-											onClick: L,
-											disabled: R,
-											size: s.Button.Sizes.SMALL,
-											color: s.Button.Colors.RED,
-											children: R ? m.Z.Messages.BLOCKED : m.Z.Messages.BLOCK
-										})
-								]
-							})
-						]
-					})
+					m &&
+						(0, r.jsx)(c.Z, {
+							title: I.Z.Messages.IAR_UPSELLS_BLOCK_TITLE.format({ username: R.username }),
+							description: I.Z.Messages.IAR_UPSELLS_BLOCK_DESCRIPTION,
+							buttonText: v ? I.Z.Messages.IAR_UPSELLS_BLOCKED_BUTTON : I.Z.Messages.IAR_UPSELLS_BLOCK_BUTTON,
+							buttonDisabled: v,
+							onButtonPress: y,
+							buttonColor: s.Button.Colors.RED
+						}),
+					T &&
+						(0, r.jsx)(c.Z, {
+							title: I.Z.Messages.IAR_UPSELLS_MUTE_TITLE.format({ username: R.username }),
+							description: I.Z.Messages.IAR_UPSELLS_MUTE_DESCRIPTION,
+							buttonText: A ? I.Z.Messages.IAR_UPSELLS_MUTED_BUTTON : I.Z.Messages.IAR_UPSELLS_MUTE_BUTTON,
+							buttonDisabled: A,
+							onButtonPress: D
+						})
 				]
 			})
 		: null;
