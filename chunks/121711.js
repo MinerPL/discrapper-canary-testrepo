@@ -48,7 +48,9 @@ t.Z = function (e) {
 	let j = a.useCallback(() => {
 		window.open(m.Z.getArticleURL(C.BhN.QUESTS_LEARN_MORE));
 	}, []);
-	return ((0, d.Tt)({ location: N.Z.Messages.QUESTS }), t)
+	(0, d.Tt)({ location: N.Z.Messages.QUESTS });
+	let U = a.useMemo(() => ({ backgroundImage: 'url('.concat(D, ')') }), [D]);
+	return t
 		? (0, i.jsxs)('div', {
 				className: A.container,
 				children: [
@@ -67,12 +69,13 @@ t.Z = function (e) {
 					(0, i.jsx)(_.Z, {
 						title: N.Z.Messages.QUESTS_HOME_HERO_TITLE,
 						description: N.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
-						backgroundImageUrl: D,
 						onScroll: O,
 						bannerContainerClassName: A.bannerContainer,
-						bannerImageClassName: A.bannerImage,
-						headerTextColor: 'header-primary',
-						descriptionTextColor: b ? 'text-muted' : 'currentColor',
+						bannerBackground: (0, i.jsx)('div', {
+							className: A.bannerImage,
+							style: U,
+							children: (0, i.jsx)('div', { className: A.bannerGradient })
+						}),
 						button: (0, i.jsxs)(l.Button, {
 							size: 'medium',
 							color: b ? l.ButtonColors.TRANSPARENT : l.ButtonColors.WHITE,

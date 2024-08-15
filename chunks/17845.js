@@ -3,48 +3,45 @@ n.d(t, {
 		return u;
 	}
 });
-var i = n(735250),
-	a = n(470079),
-	s = n(120356),
-	r = n.n(s),
-	l = n(780384),
-	o = n(481060),
-	c = n(410030),
+var i = n(735250);
+n(470079);
+var a = n(120356),
+	s = n.n(a),
+	r = n(780384),
+	l = n(481060),
+	o = n(410030),
+	c = n(831565),
 	d = n(577798);
 function u(e) {
-	let { title: t, description: n, button: s, backgroundImageUrl: u, className: _, bannerImageClassName: E, headerTextColor: h, descriptionTextColor: m } = e,
-		I = (0, l.wj)((0, c.ZP)()),
-		g = a.useMemo(() => (null != u ? u : I ? 'https://cdn.discordapp.com/assets/discovery/generic-banner-background-dark-mode.png' : 'https://cdn.discordapp.com/assets/discovery/generic-banner-background-light-mode.png'), [I, u]),
-		p = a.useMemo(() => ({ backgroundImage: 'url('.concat(g, ')') }), [g]),
-		T = null != h ? h : I ? 'always-white' : 'header-primary',
-		S = null != m ? m : I ? 'text-muted' : 'header-primary';
+	let { title: t, description: n, button: a, className: u, background: _ } = e,
+		E = (0, o.ZP)(),
+		h = (0, r.wj)(E),
+		m = (0, c.v)({ location: 'QuestHomePage' });
 	return (0, i.jsxs)('div', {
-		className: r()(d.imageContainer, _),
+		className: s()(d.container, u),
 		children: [
 			(0, i.jsx)('div', {
-				className: d.imageContent,
+				className: d.content,
 				children: (0, i.jsxs)('div', {
 					className: d.textContainer,
 					children: [
-						(0, i.jsx)(o.Heading, {
-							variant: 'heading-xl/bold',
-							color: T,
+						(0, i.jsx)(l.Text, {
+							className: s()(d.title, { [d.uppercase]: m }),
+							variant: m ? 'display-lg' : 'heading-lg/bold',
+							color: 'header-primary',
 							children: t
 						}),
-						(0, i.jsx)(o.Text, {
+						(0, i.jsx)(l.Text, {
+							className: d.description,
 							variant: 'text-md/medium',
-							color: S,
+							color: h ? 'text-muted' : 'header-primary',
 							children: n
 						}),
-						s
+						a
 					]
 				})
 			}),
-			(0, i.jsx)('div', {
-				className: r()(d.imageBackground, E),
-				style: p,
-				children: (0, i.jsx)('div', { className: d.gradientOverlay })
-			})
+			_
 		]
 	});
 }

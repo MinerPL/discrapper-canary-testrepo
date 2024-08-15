@@ -1,7 +1,7 @@
 n.r(t),
 	n.d(t, {
 		default: function () {
-			return T;
+			return v;
 		}
 	});
 var a = n(735250),
@@ -17,8 +17,8 @@ var a = n(735250),
 	m = n(353926),
 	x = n(703656),
 	_ = n(314897),
-	b = n(626135),
-	E = n(471985),
+	E = n(626135),
+	b = n(471985),
 	N = n(46140),
 	g = n(981631),
 	I = n(186901),
@@ -27,13 +27,13 @@ var a = n(735250),
 	j = n(821744);
 r.ZP.initialize();
 let A = i.tq || i.Em,
-	v = 'inventory';
-function T(e) {
+	T = 'inventory';
+function v(e) {
 	let { match: t } = e,
 		n = (0, r.e7)([p.Z], () => p.Z.getState('quests')),
 		i = (0, r.e7)([m.Z], () => m.Z.hasLoadedExperiments),
-		T = t.params.questId,
-		O = (0, E.Z)(N.dr.CODED_LINK),
+		v = t.params.questId,
+		O = (0, b.Z)(N.dr.CODED_LINK),
 		L = (0, r.e7)([_.default], () => _.default.isAuthenticated());
 	if (
 		(s.useEffect(() => {
@@ -42,18 +42,18 @@ function T(e) {
 		s.useEffect(() => {
 			if (!A)
 				null == n && i
-					? (b.default.track(g.rMx.QUEST_SHARE_LINK_DEEP_LINKED_INTO_DESKTOP_CLIENT, { quest_id: T }),
+					? (E.default.track(g.rMx.QUEST_SHARE_LINK_DEEP_LINKED_INTO_DESKTOP_CLIENT, { quest_id: v }),
 						O
 							? d.Z.openNativeAppModal('quests', g.Etm.DEEP_LINK, {
 									type: I.jE.QUEST_HOME,
-									params: { questId: T }
+									params: { questId: v }
 								})
 							: d.Z.openNativeAppModal('quests', g.Etm.DEEP_LINK, {
 									type: I.jE.USER_SETTINGS,
-									params: { section: v }
+									params: { section: T }
 								}))
-					: n === g.kEZ.OPEN_FAIL && (O ? (0, x.dL)(g.Z5c.QUEST_HOME) : (0, x.dL)(g.Z5c.SETTINGS(v)));
-		}, [n, i, O, T]),
+					: n === g.kEZ.OPEN_FAIL && (O ? (0, x.dL)(g.Z5c.QUEST_HOME) : (0, x.dL)(g.Z5c.SETTINGS(T)));
+		}, [n, i, O, v]),
 		A)
 	)
 		return (0, a.jsxs)('div', {
@@ -72,7 +72,7 @@ function T(e) {
 				(0, a.jsx)(l.Text, {
 					variant: 'text-md/normal',
 					className: h.mobileWebCopy,
-					children: f.Z.Messages.QUESTS_LANDING_PAGE_MOBILE_WEB_BODY_DESKTOP_AND_MOBILE
+					children: O ? f.Z.Messages.QUESTS_LANDING_PAGE_MOBILE_WEB_BODY_DESKTOP_AND_MOBILE_QUEST_HOME : f.Z.Messages.QUESTS_LANDING_PAGE_MOBILE_WEB_BODY_DESKTOP_AND_MOBILE
 				})
 			]
 		});

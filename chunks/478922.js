@@ -63,7 +63,7 @@ function c(e, t, n) {
 			X = (0, i.useCallback)(
 				function () {
 					let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
-					e > H.current.dirty && ((H.current.dirty = e), 2 === e ? q() : Y(1));
+					e > H.current.dirty && (H.current.dirty = e), 2 === e ? q() : Y(1);
 				},
 				[Y, H, q]
 			),

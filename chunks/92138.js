@@ -20,4 +20,4 @@ var m = n(981631),
 	I = n(689938);
 (n.p = (null !== (r = window.GLOBAL_ENV.STATIC_ENDPOINT) && void 0 !== r ? r : '') + window.GLOBAL_ENV.PUBLIC_PATH), (0, u.yR)(d.Z), (0, s.Y)(I.Z, a, _.Z), l.ZP.Emitter.injectBatchEmitChanges(o.j), (l.ZP.PersistedStore.disableWrites = __OVERLAY__), l.ZP.initialize();
 let T = window.GLOBAL_ENV.RELEASE_CHANNEL;
-new p.Z().log('[BUILD INFO] Release Channel: '.concat(T, ', Build Number: ').concat('318916', ', Version Hash: ').concat('3e7a1435dd444a83b7febd5d2bc4015d99cd3342')), i.Z.setTags({ appContext: m.e3s }), E.Z.initBasic(), f.Z.init(), c.d.init(), h.S1();
+new p.Z().log('[BUILD INFO] Release Channel: '.concat(T, ', Build Number: ').concat('318931', ', Version Hash: ').concat('581a03129d4f57367d289f61f9c01200a3830780')), i.Z.setTags({ appContext: m.e3s }), E.Z.initBasic(), f.Z.init(), c.d.init(), h.S1();

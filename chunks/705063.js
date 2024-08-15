@@ -1,6 +1,6 @@
 n.d(t, {
 	X: function () {
-		return p;
+		return T;
 	}
 });
 var i = n(735250),
@@ -14,41 +14,43 @@ var i = n(735250),
 	u = n(210887),
 	_ = n(900849),
 	E = n(374939),
-	h = n(731455),
-	m = n(689938),
-	I = n(239181),
-	g = n(849116);
-function p(e) {
+	h = n(901040),
+	m = n(731455),
+	I = n(689938),
+	g = n(239181),
+	p = n(849116);
+function T(e) {
 	let { loadId: t, onScroll: n } = e,
-		p = (0, d.Z)(),
-		T = (0, s.e7)([u.Z], () => u.Z.theme);
+		T = (0, d.Z)(),
+		S = (0, s.e7)([u.Z], () => u.Z.theme);
 	return (
 		a.useEffect(() => {
 			_.Zt({
 				loadId: t,
 				gamesYouPlayGuilds: [],
 				allGuilds: [],
-				categoryId: h.U
+				categoryId: m.U
 			});
 		}, [t]),
 		(0, i.jsxs)(E.Z, {
-			title: m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_TITLE,
-			description: m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_DESCRIPTION,
+			title: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_TITLE,
+			description: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_DESCRIPTION,
 			onScroll: n,
+			bannerBackground: (0, i.jsx)(h.Z, {}),
 			children: [
-				p.length > 0
+				T.length > 0
 					? (0, i.jsxs)(i.Fragment, {
 							children: [
 								(0, i.jsx)(r.Heading, {
-									className: I.sectionTitle,
+									className: g.sectionTitle,
 									variant: 'heading-lg/semibold',
 									color: 'header-primary',
-									children: m.Z.Messages.YOUR_HUB
+									children: I.Z.Messages.YOUR_HUB
 								}),
 								(0, i.jsxs)('div', {
-									className: I.content,
+									className: g.content,
 									children: [
-										p.map((e) =>
+										T.map((e) =>
 											(0, i.jsx)(
 												o.Z,
 												{
@@ -60,7 +62,7 @@ function p(e) {
 														premiumSubscriptionCount: void 0,
 														emojis: void 0
 													},
-													theme: T
+													theme: S
 												},
 												e.id
 											)
@@ -71,24 +73,24 @@ function p(e) {
 							]
 						})
 					: (0, i.jsx)('div', {
-							className: I.content,
+							className: g.content,
 							children: (0, i.jsx)(c.Z, { hasHub: !1 })
 						}),
-				(0, i.jsx)('div', { className: g.divider }),
+				(0, i.jsx)('div', { className: p.divider }),
 				(0, i.jsxs)('div', {
-					className: g.disclaimer,
+					className: p.disclaimer,
 					children: [
 						(0, i.jsxs)(r.Text, {
-							className: g.text,
+							className: p.text,
 							variant: 'text-sm/medium',
 							color: 'header-secondary',
-							children: [m.Z.Messages.MOBILE_HUB_EMAIL_CONNECTION_SIDEBAR_DESCRIPTION_2, ' ']
+							children: [I.Z.Messages.MOBILE_HUB_EMAIL_CONNECTION_SIDEBAR_DESCRIPTION_2, ' ']
 						}),
 						(0, i.jsx)(r.Text, {
-							className: g.text,
+							className: p.text,
 							variant: 'text-sm/medium',
 							color: 'header-secondary',
-							children: m.Z.Messages.MOBILE_HUB_EMAIL_CONNECTION_SIDEBAR_DESCRIPTION_4
+							children: I.Z.Messages.MOBILE_HUB_EMAIL_CONNECTION_SIDEBAR_DESCRIPTION_4
 						})
 					]
 				})

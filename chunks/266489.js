@@ -12,5 +12,7 @@ e.exports = {
 	topPicksSection: 'topPicksSection_a24e0c',
 	hero: 'hero_a24e0c',
 	glassBackground: 'glassBackground_a24e0c',
-	glassBackgroundTop: 'glassBackgroundTop_a24e0c'
+	glassBackgroundTop: 'glassBackgroundTop_a24e0c',
+	bannerImageBackground: 'bannerImageBackground_a24e0c',
+	bannerImageGradient: 'bannerImageGradient_a24e0c'
 };
