@@ -1,7 +1,7 @@
 n.d(t, {
-	hs: function () {
-		return i;
-	}
+    hs: function () {
+        return i;
+    }
 });
 var r = n(182294);
 let i = 1.2;

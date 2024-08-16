@@ -1,26 +1,25 @@
-function r(e) {
-	return e.valueOf ? e.valueOf() : Object.prototype.valueOf.call(e);
+function n(e) {
+    return e.valueOf ? e.valueOf() : Object.prototype.valueOf.call(e);
 }
-n.r(t);
-t.default = function e(t, n) {
-	if (t === n) return !0;
-	if (null == t || null == n) return !1;
-	if (Array.isArray(t))
-		return (
-			Array.isArray(n) &&
-			t.length === n.length &&
-			t.every(function (t, r) {
-				return e(t, n[r]);
-			})
-		);
-	if ('object' == typeof t || 'object' == typeof n) {
-		var i = r(t),
-			a = r(n);
-		return i !== t || a !== n
-			? e(i, a)
-			: Object.keys(Object.assign({}, t, n)).every(function (r) {
-					return e(t[r], n[r]);
-				});
-	}
-	return !1;
+t.Z = function e(t, r) {
+    if (t === r) return !0;
+    if (null == t || null == r) return !1;
+    if (Array.isArray(t))
+        return (
+            Array.isArray(r) &&
+            t.length === r.length &&
+            t.every(function (t, n) {
+                return e(t, r[n]);
+            })
+        );
+    if ('object' == typeof t || 'object' == typeof r) {
+        var i = n(t),
+            a = n(r);
+        return i !== t || a !== r
+            ? e(i, a)
+            : Object.keys(Object.assign({}, t, r)).every(function (n) {
+                  return e(t[n], r[n]);
+              });
+    }
+    return !1;
 };

@@ -1,3 +1,3 @@
 t.exports = function (t) {
-	return null == t;
+    return null == t;
 };

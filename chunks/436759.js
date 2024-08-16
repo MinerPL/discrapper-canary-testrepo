@@ -1,30 +1,30 @@
 n.d(t, {
-	N: function () {
-		return s;
-	}
+    N: function () {
+        return s;
+    }
 });
 var r = n(36056),
-	i = n(929412),
-	a = n(69122);
+    i = n(929412),
+    a = n(69122);
 function s(e, t = r.pz.STRING) {
-	switch (e) {
-		case r.wx.BOOL:
-			return !1;
-		case r.wx.UINT64:
-		case r.wx.FIXED64:
-			return (0, i._)(a.p.ZERO, t);
-		case r.wx.INT64:
-		case r.wx.SFIXED64:
-		case r.wx.SINT64:
-			return (0, i._)(a.M.ZERO, t);
-		case r.wx.DOUBLE:
-		case r.wx.FLOAT:
-			return 0;
-		case r.wx.BYTES:
-			return new Uint8Array(0);
-		case r.wx.STRING:
-			return '';
-		default:
-			return 0;
-	}
+    switch (e) {
+        case r.wx.BOOL:
+            return !1;
+        case r.wx.UINT64:
+        case r.wx.FIXED64:
+            return (0, i._)(a.p.ZERO, t);
+        case r.wx.INT64:
+        case r.wx.SFIXED64:
+        case r.wx.SINT64:
+            return (0, i._)(a.M.ZERO, t);
+        case r.wx.DOUBLE:
+        case r.wx.FLOAT:
+            return 0;
+        case r.wx.BYTES:
+            return new Uint8Array(0);
+        case r.wx.STRING:
+            return '';
+        default:
+            return 0;
+    }
 }

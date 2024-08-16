@@ -1,13 +1,13 @@
 function r() {
-	return {
-		logsUploaded: new Date().toISOString(),
-		releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-		buildNumber: '318931',
-		versionHash: '581a03129d4f57367d289f61f9c01200a3830780'
-	};
+    return {
+        logsUploaded: new Date().toISOString(),
+        releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
+        buildNumber: '319217',
+        versionHash: 'bc2b6876928fe1b9eab8fb3c6c361089d71a6fc8'
+    };
 }
 n.d(t, {
-	Z: function () {
-		return r;
-	}
+    Z: function () {
+        return r;
+    }
 });

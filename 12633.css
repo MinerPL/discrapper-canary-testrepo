@@ -9800,12 +9800,20 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .iconBadge_fc4f04 {
     position: absolute;
-    right: 2px;
-    bottom: 2px;
     width: 8px;
     height: 8px;
     border-radius: 8px;
     background-color: var(--status-danger)
+}
+
+.iconBadgeTop_fc4f04 {
+    right: 2px;
+    top: 2px
+}
+
+.iconBadgeBottom_fc4f04 {
+    right: 2px;
+    bottom: 2px
 }
 
 .divider_fc4f04 {
@@ -20538,7 +20546,7 @@ span.clanTag_a31c43 {
 
 .bannerColor_f9d37d {
     background: var(--redesign-button-overlay-alpha-background);
-    color: var(--redesign-button-overlay-alpha-text)
+    color: var(--white)
 }
 
 .bannerColor_f9d37d:hover,

@@ -1,4 +1,4 @@
 e.exports = {
-	groupHeader: 'groupHeader_fef602',
-	channelName: 'channelName_fef602'
+    groupHeader: 'groupHeader_fef602',
+    channelName: 'channelName_fef602'
 };

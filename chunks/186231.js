@@ -1,7 +1,7 @@
 var n;
 e.d(t, {
-	b: function () {
-		return n;
-	}
+    b: function () {
+        return n;
+    }
 }),
-	((n || (n = {})).OAUTH_REDIRECT = 'oauth_redirect');
+    ((n || (n = {})).OAUTH_REDIRECT = 'oauth_redirect');

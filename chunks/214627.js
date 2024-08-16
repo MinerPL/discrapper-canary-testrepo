@@ -1,7 +1,7 @@
 var r, i;
 n.d(t, {
-	T: function () {
-		return r;
-	}
+    T: function () {
+        return r;
+    }
 }),
-	((i = r || (r = {}))[(i.StreamNotificationsGuildMaxSize = 50)] = 'StreamNotificationsGuildMaxSize');
+    ((i = r || (r = {}))[(i.StreamNotificationsGuildMaxSize = 50)] = 'StreamNotificationsGuildMaxSize');

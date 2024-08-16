@@ -1,3 +1,3 @@
 t.Z = function () {
-	(this.__data__ = []), (this.size = 0);
+    (this.__data__ = []), (this.size = 0);
 };

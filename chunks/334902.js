@@ -1,4 +1,4 @@
 e.exports = {
-	group: 'group_aa2afb',
-	item: 'item_aa2afb'
+    group: 'group_aa2afb',
+    item: 'item_aa2afb'
 };

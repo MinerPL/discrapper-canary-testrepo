@@ -1,15 +1,15 @@
 var r = n(58406);
 class i extends r.g {
-	requestPermissionCore(e, t) {
-		return Promise.resolve(!0);
-	}
-	hasPermissionCore(e, t) {
-		return Promise.resolve(!0);
-	}
-	openSettings(e) {}
-	didHavePermission(e) {
-		return !0;
-	}
-	openAlertModal(e) {}
+    requestPermissionCore(e, t) {
+        return Promise.resolve(!0);
+    }
+    hasPermissionCore(e, t) {
+        return Promise.resolve(!0);
+    }
+    openSettings(e) {}
+    didHavePermission(e) {
+        return !0;
+    }
+    openAlertModal(e) {}
 }
 t.Z = new i();

@@ -1,8 +1,8 @@
 n.d(t, {
-	$: function () {
-		return i;
-	}
+    $: function () {
+        return i;
+    }
 }),
-	n(47120);
+    n(47120);
 var r = n(704215);
 let i = new Set([r.z.AUTH_SESSIONS_NEW, r.z.CHANNEL_NOTICE_CLYDE_NUX, r.z.CHANNEL_NOTICE_QUICKSWITCHER, r.z.NAGBAR_NOTICE_MFA_SMS_BACKUP, r.z.NAGBAR_NOTICE_POMELO, r.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP, r.z.SEEN_OLD_DESIGN, r.z.SEEN_LAUNCH_WELCOME]);

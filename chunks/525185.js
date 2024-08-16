@@ -1,8 +1,8 @@
 e.exports = function () {
-	var e = 1;
-	return {
-		generate: function () {
-			return e++;
-		}
-	};
+    var e = 1;
+    return {
+        generate: function () {
+            return e++;
+        }
+    };
 };

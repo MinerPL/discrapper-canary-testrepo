@@ -1,11 +1,11 @@
 n.d(t, {
-	Z: function () {
-		return a;
-	}
+    Z: function () {
+        return a;
+    }
 });
 var r = n(824523),
-	o = n(141371);
+    o = n(141371);
 function a(e) {
-	var t = (0, o.Z)(e, 'string');
-	return 'symbol' === (0, r.Z)(t) ? t : String(t);
+    var t = (0, o.Z)(e, 'string');
+    return 'symbol' === (0, r.Z)(t) ? t : String(t);
 }

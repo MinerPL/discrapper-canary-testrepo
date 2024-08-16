@@ -1,9 +1,9 @@
 n.d(t, {
-	z: function () {
-		return s;
-	}
+    z: function () {
+        return s;
+    }
 });
 let s = {
-	authorIds: [],
-	message: ''
+    authorIds: [],
+    message: ''
 };

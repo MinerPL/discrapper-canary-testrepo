@@ -1,9 +1,9 @@
 n.d(t, {
-	p: function () {
-		return i;
-	}
+    p: function () {
+        return i;
+    }
 });
 var r = n(570140);
 function i() {
-	r.Z.dispatch({ type: 'BILLING_PURCHASE_TOKEN_AUTH_CLEAR_STATE' });
+    r.Z.dispatch({ type: 'BILLING_PURCHASE_TOKEN_AUTH_CLEAR_STATE' });
 }

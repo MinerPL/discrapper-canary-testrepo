@@ -1,3 +1,3 @@
 t.Z = function (e, t) {
-	if (('constructor' !== t || 'function' != typeof e[t]) && '__proto__' != t) return e[t];
+    if (('constructor' !== t || 'function' != typeof e[t]) && '__proto__' != t) return e[t];
 };

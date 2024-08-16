@@ -1,19 +1,19 @@
 function r(e) {
-	let t = typeof e;
-	if ('object' == t) {
-		if (Array.isArray(e)) return 'array';
-		if (null === e) return 'null';
-	}
-	return t;
+    let t = typeof e;
+    if ('object' == t) {
+        if (Array.isArray(e)) return 'array';
+        if (null === e) return 'null';
+    }
+    return t;
 }
 function i(e) {
-	return null !== e && 'object' == typeof e && !Array.isArray(e);
+    return null !== e && 'object' == typeof e && !Array.isArray(e);
 }
 n.d(t, {
-	Z: function () {
-		return r;
-	},
-	b: function () {
-		return i;
-	}
+    Z: function () {
+        return r;
+    },
+    b: function () {
+        return i;
+    }
 });

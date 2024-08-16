@@ -1,4 +1,4 @@
 var n = Object.prototype.toString;
 t.Z = function (e) {
-	return n.call(e);
+    return n.call(e);
 };

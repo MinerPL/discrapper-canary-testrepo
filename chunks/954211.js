@@ -1,9 +1,9 @@
 r.d(t, {
-	V: function () {
-		return a;
-	}
+    V: function () {
+        return a;
+    }
 });
 let n = ['fatal', 'error', 'warning', 'log', 'info', 'debug'];
 function a(e) {
-	return 'warn' === e ? 'warning' : n.includes(e) ? e : 'log';
+    return 'warn' === e ? 'warning' : n.includes(e) ? e : 'log';
 }

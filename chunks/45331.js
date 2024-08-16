@@ -1,5 +1,5 @@
 e.exports =
-	Number.isNaN ||
-	function (e) {
-		return e != e;
-	};
+    Number.isNaN ||
+    function (e) {
+        return e != e;
+    };

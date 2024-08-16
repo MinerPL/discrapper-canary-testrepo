@@ -1,5 +1,5 @@
 t.Z = function (e) {
-	return function () {
-		return e;
-	};
+    return function () {
+        return e;
+    };
 };

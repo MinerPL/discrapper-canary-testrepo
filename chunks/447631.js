@@ -1,11 +1,11 @@
 var e = n(821819);
 t.exports = !e(function () {
-	return (
-		7 !==
-		Object.defineProperty({}, 1, {
-			get: function () {
-				return 7;
-			}
-		})[1]
-	);
+    return (
+        7 !==
+        Object.defineProperty({}, 1, {
+            get: function () {
+                return 7;
+            }
+        })[1]
+    );
 });
