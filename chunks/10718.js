@@ -1,27 +1,27 @@
 n.d(t, {
     Hf: function () {
-        return m;
+        return I;
     },
     JT: function () {
-        return T;
+        return g;
     },
     Nk: function () {
-        return h;
+        return p;
     },
     Qm: function () {
-        return S;
+        return A;
     },
     VB: function () {
-        return p;
+        return m;
     },
     Xq: function () {
         return f;
     },
     YZ: function () {
-        return g;
+        return S;
     },
     wi: function () {
-        return I;
+        return T;
     }
 }),
     n(47120),
@@ -38,29 +38,62 @@ var r = n(470079),
     d = n(581364),
     _ = n(689079),
     E = n(981631);
-function f(e, t) {
-    var n, r, i, a;
+function f(e, t, n) {
+    var r, i, a, s;
     if (null == t)
         return {
             application: void 0,
             command: void 0
         };
-    let s = l.ZP.getUserState(),
-        o = l.ZP.getContextState(e);
-    for (let e of Object.values(null !== (i = null === (n = s.result) || void 0 === n ? void 0 : n.sections) && void 0 !== i ? i : {}).concat(Object.values(null !== (a = null === (r = o.result) || void 0 === r ? void 0 : r.sections) && void 0 !== a ? a : {}))) {
-        let n = e.commands[t];
-        if (null != n)
+    let o = l.ZP.getUserState(),
+        u = l.ZP.getContextState(e),
+        c = Object.values(null !== (a = null === (r = o.result) || void 0 === r ? void 0 : r.sections) && void 0 !== a ? a : {}).concat(Object.values(null !== (s = null === (i = u.result) || void 0 === i ? void 0 : i.sections) && void 0 !== s ? s : {}));
+    if (null != n) {
+        let e = c.find((e) => {
+            var t;
+            return (null === (t = e.descriptor.application) || void 0 === t ? void 0 : t.id) === n;
+        });
+        if (null != e) {
+            let n = h(e, t);
             return {
                 application: e.descriptor.application,
                 command: n
             };
-    }
+        }
+    } else
+        for (let e of c) {
+            let n = h(e, t);
+            return {
+                application: e.descriptor.application,
+                command: n
+            };
+        }
     return {
         application: void 0,
         command: void 0
     };
 }
-function h(e, t, n) {
+function h(e, t) {
+    var n, r, i;
+    if (null == t) return;
+    if (null != e.commands[t]) return e.commands[t];
+    let a =
+        null ===
+            (n = Object.values(e.commands).find((e) => {
+                var n;
+                return (null === (n = e.rootCommand) || void 0 === n ? void 0 : n.id) === t;
+            })) || void 0 === n
+            ? void 0
+            : n.rootCommand;
+    return null != a
+        ? (0, d.Z8)({
+              rootCommand: a,
+              command: a,
+              applicationId: null !== (i = null === (r = e.descriptor.application) || void 0 === r ? void 0 : r.id) && void 0 !== i ? i : ''
+          })
+        : void 0;
+}
+function p(e, t, n) {
     var r, i, a, s, o, u, c, d;
     let _ = l.ZP.getUserState(),
         E = l.ZP.getContextState(e),
@@ -68,7 +101,7 @@ function h(e, t, n) {
         h = null !== (d = null !== (c = null === (i = _.result) || void 0 === i ? void 0 : null === (r = i.sections) || void 0 === r ? void 0 : r[n]) && void 0 !== c ? c : null === (s = E.result) || void 0 === s ? void 0 : null === (a = s.sections) || void 0 === a ? void 0 : a[n]) && void 0 !== d ? d : null === (u = f.result) || void 0 === u ? void 0 : null === (o = u.sections) || void 0 === o ? void 0 : o[n];
     return null == h ? void 0 : h.descriptor;
 }
-function p(e, t, n) {
+function m(e, t, n) {
     let r = l.ZP.query(
         e,
         {
@@ -85,12 +118,12 @@ function p(e, t, n) {
         sections: r.descriptors
     };
 }
-function m(e) {
+function I(e) {
     let t = l.ZP.getUserState(),
         n = l.ZP.getContextState(e);
     return [null == t ? void 0 : t.result, null == n ? void 0 : n.result];
 }
-function I(e, t, n) {
+function T(e, t, n) {
     let s = (0, i.e7)([a.Z], () => a.Z.getGuild(null == e ? void 0 : e.guild_id), [e.guild_id]),
         {
             descriptors: u,
@@ -106,7 +139,7 @@ function I(e, t, n) {
     m.current = f;
     let I = r.useMemo(() => {
         var e;
-        return N(null !== (e = n.placeholderCount) && void 0 !== e ? e : 0, t.commandTypes[0]);
+        return v(null !== (e = n.placeholderCount) && void 0 !== e ? e : 0, t.commandTypes[0]);
     }, [t.commandTypes, n.placeholderCount]);
     return r.useMemo(() => {
         let e = {
@@ -152,16 +185,16 @@ function I(e, t, n) {
         return e;
     }, [c, u, h, d, f, I]);
 }
-function T(e, t, n) {
+function g(e, t, n) {
     var r;
     let { descriptors: i, commands: a, loading: s } = l.ZP.query(e, t, n),
-        u = N(s && null !== (r = n.placeholderCount) && void 0 !== r ? r : 0, t.commandTypes[0]);
+        u = v(s && null !== (r = n.placeholderCount) && void 0 !== r ? r : 0, t.commandTypes[0]);
     return {
         commands: s ? [...a, ...u] : a,
         sections: s && 0 === i.length ? [o.Tm[_.bi.BUILT_IN]] : i
     };
 }
-function g(e, t) {
+function S(e, t) {
     let n = (0, l.PL)(!0, !0),
         i = (0, l.em)(e, !0, !0);
     return r.useMemo(() => {
@@ -182,7 +215,7 @@ function g(e, t) {
         };
     }, [i.result, n.result, t]);
 }
-function S(e, t, n) {
+function A(e, t, n) {
     let i = (0, l.PL)(!0, !0),
         a = (0, l.em)(e, !0, !0);
     return r.useMemo(() => {
@@ -205,12 +238,12 @@ function S(e, t, n) {
         };
     }, [null == i ? void 0 : i.result, null == a ? void 0 : a.result, t, n]);
 }
-let A = {
+let N = {
     id: 'placeholder-section',
     type: c.Qi.APPLICATION,
     name: ''
 };
-function N(e, t) {
+function v(e, t) {
     let n = [];
     for (let r = 0; r < e; r++)
         n.push(
@@ -224,7 +257,7 @@ function N(e, t) {
                     description: '',
                     displayDescription: '',
                     applicationId: '',
-                    section: A
+                    section: N
                 };
             })(r, t)
         );

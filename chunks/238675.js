@@ -1,19 +1,27 @@
-a.d(e, {
-    f: function () {
+n.d(t, {
+    fw: function () {
         return o;
     },
-    q: function () {
+    qy: function () {
         return c;
+    },
+    sJ: function () {
+        return r;
     }
 });
-var n,
+var a,
+    l,
     o,
-    r = a(544891),
-    s = a(981631);
-async function c(t) {
-    await r.tn.post({
-        url: s.ANM.CAPTCHA_TEST,
-        body: { decider: t }
+    r,
+    s = n(544891),
+    i = n(981631);
+async function c(e, t) {
+    await s.tn.post({
+        url: i.ANM.CAPTCHA_TEST,
+        body: {
+            decider: e,
+            options: t
+        }
     });
 }
-((n = o || (o = {})).HCAPTCHA_EASY = 'hCaptchaEasy'), (n.HCAPTCHA_RQDATA = 'hCaptchaRqdata'), (n.SMITE_RQDATA = 'SmiteRqdata');
+((a = o || (o = {})).HCAPTCHA_EASY = 'hCaptchaEasy'), (a.HCAPTCHA_RQDATA = 'hCaptchaRqdata'), (a.SMITE_RQDATA = 'SmiteRqdata'), ((l = r || (r = {}))[(l.EASY = 1)] = 'EASY'), (l[(l.MODERATE = 2)] = 'MODERATE'), (l[(l.DIFFICULT = 3)] = 'DIFFICULT'), (l[(l.VERY_DIFFICULT = 4)] = 'VERY_DIFFICULT');

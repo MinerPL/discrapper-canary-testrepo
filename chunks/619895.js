@@ -10,12 +10,12 @@ n.d(t, {
     }
 });
 var i = n(470079),
-    a = n(892814),
-    o = n(442837),
+    o = n(892814),
+    a = n(442837),
     l = n(581364),
-    d = n(768581),
-    c = n(823379),
-    r = n(399654),
+    r = n(768581),
+    d = n(823379),
+    c = n(399654),
     m = n(844439);
 let u = {
         '1181475143340539995': {
@@ -80,7 +80,7 @@ let u = {
                 {
                     motion_prompt: [
                         {
-                            text: '$man_in_finance',
+                            text: '$ishowspeed_jumps_over_the_car',
                             type: 'text'
                         }
                     ],
@@ -136,7 +136,7 @@ let u = {
                 {
                     motion_prompt: [
                         {
-                            text: '$rickroll_never_gonna_give_you_up',
+                            text: '$ronaldo_skill',
                             type: 'text'
                         }
                     ],
@@ -165,6 +165,76 @@ let u = {
                     motion_prompt: [
                         {
                             text: '$hugo_hilaire_goofy_dance',
+                            type: 'text'
+                        }
+                    ],
+                    background: [
+                        {
+                            text: 'From template',
+                            type: 'text'
+                        }
+                    ]
+                },
+                {
+                    motion_prompt: [
+                        {
+                            text: '$paqueta_dance',
+                            type: 'text'
+                        }
+                    ],
+                    background: [
+                        {
+                            text: 'From template',
+                            type: 'text'
+                        }
+                    ]
+                },
+                {
+                    motion_prompt: [
+                        {
+                            text: '$tauba_tauba',
+                            type: 'text'
+                        }
+                    ],
+                    background: [
+                        {
+                            text: 'From template',
+                            type: 'text'
+                        }
+                    ]
+                },
+                {
+                    motion_prompt: [
+                        {
+                            text: '$masbondit_suara_asli',
+                            type: 'text'
+                        }
+                    ],
+                    background: [
+                        {
+                            text: 'From template',
+                            type: 'text'
+                        }
+                    ]
+                },
+                {
+                    motion_prompt: [
+                        {
+                            text: '$rock_your_hips',
+                            type: 'text'
+                        }
+                    ],
+                    background: [
+                        {
+                            text: 'From template',
+                            type: 'text'
+                        }
+                    ]
+                },
+                {
+                    motion_prompt: [
+                        {
+                            text: '$jojo_siwa_guilty_pleasure',
                             type: 'text'
                         }
                     ],
@@ -205,7 +275,7 @@ function _(e) {
     let { channelId: t } = e,
         { fetchState: n, recommendationsSections: u } = (function (e) {
             let { channelId: t } = e,
-                n = a.I.CONTEXTUAL_IMAGE,
+                n = o.I.CONTEXTUAL_IMAGE,
                 l = i.useMemo(
                     () => ({
                         channelId: t,
@@ -215,15 +285,15 @@ function _(e) {
                     [t, n]
                 );
             i.useEffect(() => {
-                (0, r.a)(l);
+                (0, c.a)(l);
             }, [l]);
-            let { fetchState: d, recommendationsSections: c } = (0, o.cj)([m.ZP], () => ({
+            let { fetchState: r, recommendationsSections: d } = (0, a.cj)([m.ZP], () => ({
                 fetchState: m.ZP.getFetchState(l),
                 recommendationsSections: m.ZP.getRecommendations(l)
             }));
             return {
-                fetchState: d,
-                recommendationsSections: c
+                fetchState: r,
+                recommendationsSections: d
             };
         })({ channelId: t });
     return {
@@ -240,30 +310,30 @@ function _(e) {
                               return null != (n = null === (i = e.commands) || void 0 === i ? void 0 : i.find((e) => e.id === t));
                           });
                           if (null == i) return null;
-                          let { application: a } = i;
+                          let { application: o } = i;
                           if (null == n) return null;
-                          let o = (0, l.Z8)({
+                          let a = (0, l.Z8)({
                               rootCommand: n,
                               command: n,
-                              applicationId: a.id
+                              applicationId: o.id
                           });
                           return {
                               command: {
-                                  ...o,
-                                  name: o.name
+                                  ...a,
+                                  name: a.name
                                       .split(/[_ ]/)
                                       .map((e) => e.charAt(0).toUpperCase() + e.slice(1))
                                       .join(' ')
                               },
-                              applicationImageURL: d.ZP.getApplicationIconURL({
-                                  id: a.id,
-                                  icon: a.icon,
-                                  bot: a.bot
+                              applicationImageURL: r.ZP.getApplicationIconURL({
+                                  id: o.id,
+                                  icon: o.icon,
+                                  bot: o.bot
                               }),
-                              application: a
+                              application: o
                           };
                       })
-                      .filter(c.lm);
+                      .filter(d.lm);
         }, [u])
     };
 }

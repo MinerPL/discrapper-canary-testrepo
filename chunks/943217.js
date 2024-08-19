@@ -45,11 +45,6 @@ let u = (e) => {
             offsetX: 10,
             offsetY: 8
         },
-        [o.y0.POMELO_POPOUT]: {
-            radius: u(i.AvatarSizes.SIZE_80),
-            offsetX: 20,
-            offsetY: -20
-        },
         [o.y0.CANCEL_MODAL]: {
             radius: u(i.AvatarSizes.SIZE_56),
             offsetX: 8,

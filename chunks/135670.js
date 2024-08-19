@@ -155,6 +155,7 @@ class u extends r.Z {
         return Promise.reject(Error('NOT_IMPLEMENTED'));
     }
     setSidechainCompression(e) {}
+    setSidechainCompressionStrength(e) {}
     setNativeDesktopVideoSourcePickerActive(e) {}
     presentNativeScreenSharePicker(e) {}
     releaseNativeDesktopVideoSourcePickerStream() {}

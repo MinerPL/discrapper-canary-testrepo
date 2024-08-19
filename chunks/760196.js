@@ -26,7 +26,8 @@ t.Z = i.memo((e) => {
             (0, r.jsx)(c.Z, {
                 activeCommand: i,
                 activeOption: null != h ? h : null,
-                optionStates: p
+                optionStates: p,
+                channelId: t.id
             })
         )),
     null != a &&

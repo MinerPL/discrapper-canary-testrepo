@@ -229,4 +229,5 @@ n.d(t, {
     (s.USER_UNREGISTER_DEVICE_TOKEN = 'network_action_user_unregister_device_token'),
     (s.USER_VERIFY = 'network_action_user_verify'),
     (s.USER_VERIFY_PHONE = 'network_action_user_verify_phone'),
-    (s.USER_VERIFY_RESEND = 'network_action_user_verify_resend');
+    (s.USER_VERIFY_RESEND = 'network_action_user_verify_resend'),
+    (s.WEBAUTHN_REGISTER = 'network_action_webauthn_register');

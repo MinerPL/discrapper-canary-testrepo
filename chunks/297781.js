@@ -229,12 +229,14 @@ function k(e) {
     if (!(0, A.V5)(t)) return null;
     let r = (0, A.kr)(t),
         { text: i, tooltipText: s } = (0, A.zo)(t);
-    return (0, a.jsx)(M, {
-        Icon: h.TimerIcon,
-        text: i,
-        tooltipText: s,
-        showTooltip: 0 === n && !r
-    });
+    return null == i
+        ? null
+        : (0, a.jsx)(M, {
+              Icon: h.TimerIcon,
+              text: i,
+              tooltipText: s,
+              showTooltip: 0 === n && !r
+          });
 }
 function B(e) {
     let { entry: t } = e,

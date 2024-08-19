@@ -24,40 +24,38 @@ var t = n(735250),
     p = n(430824),
     L = n(594174),
     A = n(451478),
-    O = n(626135),
-    P = n(768581),
-    R = n(74538),
-    M = n(785717),
-    x = n(888778),
+    R = n(626135),
+    O = n(768581),
+    P = n(74538),
+    x = n(785717),
+    M = n(888778),
     f = n(943217),
     g = n(793397),
     h = n(841040),
-    Z = n(228168),
-    j = n(981631),
+    j = n(228168),
+    Z = n(981631),
     U = n(474936),
     v = n(689938),
     b = n(439779);
 let F = {
-        [Z.y0.POPOUT]: 18,
-        [Z.y0.MODAL]: 24,
-        [Z.y0.SETTINGS]: 0,
-        [Z.y0.PANEL]: 18,
-        [Z.y0.POMELO_POPOUT]: 18,
-        [Z.y0.CANCEL_MODAL]: 0
+        [j.y0.POPOUT]: 18,
+        [j.y0.MODAL]: 24,
+        [j.y0.SETTINGS]: 0,
+        [j.y0.PANEL]: 18,
+        [j.y0.CANCEL_MODAL]: 0
     },
     y = {
-        [Z.y0.MODAL]: j.ZY5.USER_PROFILE,
-        [Z.y0.POPOUT]: j.ZY5.USER_POPOUT,
-        [Z.y0.SETTINGS]: j.ZY5.USER_POPOUT,
-        [Z.y0.PANEL]: j.ZY5.DM_CHANNEL,
-        [Z.y0.POMELO_POPOUT]: j.ZY5.POMELO_POPOUT,
-        [Z.y0.CANCEL_MODAL]: j.ZY5.USER_POPOUT
+        [j.y0.MODAL]: Z.ZY5.USER_PROFILE,
+        [j.y0.POPOUT]: Z.ZY5.USER_POPOUT,
+        [j.y0.SETTINGS]: Z.ZY5.USER_POPOUT,
+        [j.y0.PANEL]: Z.ZY5.DM_CHANNEL,
+        [j.y0.CANCEL_MODAL]: Z.ZY5.USER_POPOUT
     };
 function G(e) {
     let { type: s, shown: i, onClick: l } = e,
         c = (0, o.e7)([L.default], () => {
             let e = L.default.getCurrentUser();
-            return R.ZP.canUsePremiumProfileCustomization(e);
+            return P.ZP.canUsePremiumProfileCustomization(e);
         }),
         E = a.useRef(!1),
         { analyticsLocations: m } = (0, I.ZP)(d.Z.BADGE);
@@ -66,12 +64,12 @@ function G(e) {
             i &&
                 !E.current &&
                 ((E.current = !0),
-                O.default.track(j.rMx.PREMIUM_UPSELL_VIEWED, {
+                R.default.track(Z.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: U.cd.CUSTOM_PROFILES_PROFILE_BANNER_SOCIAL_UPSELL,
                     location: {
                         page: y[s],
-                        section: j.jXE.NITRO_BANNER,
-                        object: j.qAy.NITRO_BADGE
+                        section: Z.jXE.NITRO_BANNER,
+                        object: Z.qAy.NITRO_BADGE
                     },
                     location_stack: m
                 }));
@@ -96,7 +94,7 @@ function G(e) {
                                               title: v.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_TITLE,
                                               description: v.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_DESCRIPTION.format({
                                                   onAndMoreWithPremiumClick: () => {
-                                                      a(), _.Z.open(j.oAB.PREMIUM, null, { analyticsLocations: e });
+                                                      a(), _.Z.open(Z.oAB.PREMIUM, null, { analyticsLocations: e });
                                                   }
                                               }),
                                               onClose: a,
@@ -146,15 +144,15 @@ function D(e) {
 }
 function B(e) {
     var s, n;
-    let { user: i, displayProfile: _, onClose: d, guildId: I, profileType: L, isHovering: O, animateOnHover: F, allowEdit: y = !0, showPremiumBadgeUpsell: B = !0, hasProfileEffect: k = !1 } = e,
+    let { user: i, displayProfile: _, onClose: d, guildId: I, profileType: L, isHovering: R, animateOnHover: F, allowEdit: y = !0, showPremiumBadgeUpsell: B = !0, hasProfileEffect: k = !1 } = e,
         H = (0, o.e7)([p.Z], () => p.Z.getGuild(I)),
-        Y = (0, o.e7)([S.default], () => S.default.getId()) === i.id && y,
-        z = R.ZP.isPremiumAtLeast(null == _ ? void 0 : _.premiumType, U.p9.TIER_2),
-        { trackUserProfileAction: w } = (0, M.KZ)(),
+        z = (0, o.e7)([S.default], () => S.default.getId()) === i.id && y,
+        Y = P.ZP.isPremiumAtLeast(null == _ ? void 0 : _.premiumType, U.p9.TIER_2),
+        { trackUserProfileAction: w } = (0, x.KZ)(),
         [W, V] = a.useState(!1),
         K = (0, o.e7)([A.Z], () => A.Z.isFocused()),
         X = N.QK.getSetting(),
-        { bannerSrc: q, status: J } = (0, x.Z)({
+        { bannerSrc: q, status: J } = (0, M.Z)({
             displayProfile: _,
             size: (0, g.e7)(L),
             canAnimate: F || !X ? W : K
@@ -165,12 +163,12 @@ function B(e) {
         es = (0, m.Z)(null !== (s = null == _ ? void 0 : _.primaryColor) && void 0 !== s ? s : ee).hsl,
         en = (0, T.Z)({
             analyticsLocation: {
-                page: j.ZY5.USER_POPOUT,
-                section: j.jXE.PROFILE_POPOUT
+                page: Z.ZY5.USER_POPOUT,
+                section: Z.jXE.USER_PROFILE
             }
         });
     return (0, t.jsx)(f.Z, {
-        isPremium: z,
+        isPremium: Y,
         hasThemeColors: null !== (n = null == _ ? void 0 : _.canEditThemes) && void 0 !== n && n,
         profileType: L,
         hasBanner: null != q,
@@ -182,7 +180,7 @@ function B(e) {
                     profileType: L,
                     user: {
                         hasBanner: null != q,
-                        isPremium: z,
+                        isPremium: Y,
                         hasProfileEffect: k
                     }
                 }),
@@ -192,13 +190,13 @@ function B(e) {
             onMouseLeave: () => V(!1),
             style: {
                 backgroundImage: null != q ? 'url('.concat(q, ')') : void 0,
-                backgroundColor: J !== x.s.COMPLETE ? c.Z.unsafe_rawColors.PRIMARY_800.css : es
+                backgroundColor: J !== M.s.COMPLETE ? c.Z.unsafe_rawColors.PRIMARY_800.css : es
             },
             children: [
-                Y
+                z
                     ? null == H
                         ? (0, t.jsx)(D, {
-                              darkenOnHover: k && O,
+                              darkenOnHover: k && R,
                               profileType: L,
                               profileLabel: v.Z.Messages.EDIT_PROFILE,
                               icon: 'pencil',
@@ -219,23 +217,23 @@ function B(e) {
                               },
                               children: (e) =>
                                   (0, t.jsx)(D, {
-                                      darkenOnHover: k && O,
+                                      darkenOnHover: k && R,
                                       profileLabel: v.Z.Messages.EDIT_PROFILE,
                                       icon: 'pencil',
                                       ...e,
                                       profileType: L
                                   })
                           })
-                    : B && null != q && L !== Z.y0.SETTINGS
+                    : B && null != q && L !== j.y0.SETTINGS
                       ? (0, t.jsx)(G, {
                             type: L,
-                            shown: void 0 === O ? W : O,
+                            shown: void 0 === R ? W : R,
                             onClick: () => {
                                 w({ action: 'PRESS_PREMIUM_UPSELL' }), null == d || d();
                             }
                         })
                       : null,
-                !X && (0, P.F8)(q) && (0, t.jsx)(C.Z, { className: b.gifTag })
+                !X && (0, O.F8)(q) && (0, t.jsx)(C.Z, { className: b.gifTag })
             ]
         })
     });

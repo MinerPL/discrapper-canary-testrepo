@@ -1,70 +1,72 @@
 n.d(t, {
     L$: function () {
-        return d;
+        return E;
     },
     Sr: function () {
-        return _;
+        return f;
     },
     WQ: function () {
-        return c;
+        return _;
     },
     cT: function () {
-        return u;
+        return d;
     },
     d$: function () {
-        return o;
+        return u;
     },
     hL: function () {
-        return l;
+        return c;
     },
     us: function () {
-        return s;
+        return l;
     }
 });
-var r = n(544891),
-    i = n(570140),
-    a = n(981631);
-async function s() {
-    return (await r.tn.post(a.ANM.WEBAUTHN_CONDITIONAL_UI_CHALLENGE)).body;
+var r = n(525769),
+    i = n(544891),
+    a = n(570140),
+    s = n(573261),
+    o = n(981631);
+async function l() {
+    return (await i.tn.post(o.ANM.WEBAUTHN_CONDITIONAL_UI_CHALLENGE)).body;
 }
-async function o() {
-    let { challenge: e, ticket: t } = (await r.tn.post(a.ANM.WEBAUTHN_PASSWORDLESS_CHALLENGE)).body;
+async function u() {
+    let { challenge: e, ticket: t } = (await i.tn.post(o.ANM.WEBAUTHN_PASSWORDLESS_CHALLENGE)).body;
     return {
         challenge: e,
         ticket: t
     };
 }
-function l() {
-    r.tn.get(a.ANM.MFA_WEBAUTHN_CREDENTIALS).then((e) => {
-        i.Z.dispatch({
+function c() {
+    i.tn.get(o.ANM.MFA_WEBAUTHN_CREDENTIALS).then((e) => {
+        a.Z.dispatch({
             type: 'MFA_WEBAUTHN_CREDENTIALS_LOADED',
             credentials: e.body
         });
     });
 }
-function u(e) {
-    r.tn.del(a.ANM.MFA_WEBAUTHN_CREDENTIAL(e.id)).then(() => {
-        i.Z.dispatch({
+function d(e) {
+    i.tn.del(o.ANM.MFA_WEBAUTHN_CREDENTIAL(e.id)).then(() => {
+        a.Z.dispatch({
             type: 'AUTHENTICATOR_DELETE',
             credential: e
         });
     });
 }
-async function c(e, t) {
-    let n = await r.tn.patch({
-        url: a.ANM.MFA_WEBAUTHN_CREDENTIAL(e),
+async function _(e, t) {
+    let n = await i.tn.patch({
+        url: o.ANM.MFA_WEBAUTHN_CREDENTIAL(e),
         body: { name: t }
     });
-    i.Z.dispatch({
+    a.Z.dispatch({
         type: 'AUTHENTICATOR_UPDATE',
         credential: n.body
     });
 }
-async function d() {
+async function E() {
     let {
         body: { ticket: e, challenge: t }
-    } = await r.tn.post({
-        url: a.ANM.MFA_WEBAUTHN_CREDENTIALS,
+    } = await i.tn.post({
+        url: o.ANM.MFA_WEBAUTHN_CREDENTIALS,
         body: {}
     });
     return {
@@ -72,21 +74,22 @@ async function d() {
         challenge: t
     };
 }
-async function _(e, t, n) {
-    let s = await r.tn.post({
-        url: a.ANM.MFA_WEBAUTHN_CREDENTIALS,
+async function f(e, t, n) {
+    let i = await s.Z.post({
+        url: o.ANM.MFA_WEBAUTHN_CREDENTIALS,
         body: {
             name: e,
             ticket: t,
             credential: n
-        }
+        },
+        trackedActionData: { event: r.a.WEBAUTHN_REGISTER }
     });
-    i.Z.dispatch({
+    a.Z.dispatch({
         type: 'AUTHENTICATOR_CREATE',
-        credential: s.body
+        credential: i.body
     }),
-        i.Z.dispatch({
+        a.Z.dispatch({
             type: 'MFA_ENABLE_SUCCESS',
-            codes: s.body.backup_codes
+            codes: i.body.backup_codes
         });
 }

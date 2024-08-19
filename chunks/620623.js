@@ -1,2 +1,2 @@
-var e = o(545576);
-r.exports = e('document', 'documentElement');
+var n = r(545576);
+e.exports = n('document', 'documentElement');

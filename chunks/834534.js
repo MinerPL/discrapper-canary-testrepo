@@ -32,7 +32,7 @@ function S(e) {
         R = (0, i.e7)([c.Z], () => c.Z.getGuildId()),
         b = (0, i.e7)([r.default], () => r.default.locale),
         C = (0, I.Z)(n.id),
-        P = (0, u.Z)(n.id);
+        M = (0, u.Z)(n.id);
     return (0, s.jsxs)(o.ScrollerThin, {
         fade: !0,
         className: h.scroller,
@@ -61,6 +61,7 @@ function S(e) {
             C.length > 0 &&
                 (0, s.jsx)(E.Z, {
                     heading: v.Z.Messages.CONNECTIONS,
+                    scrollIntoView: T === Z.Tb.CONNECTIONS,
                     children: (0, s.jsx)(p.OA, {
                         connectedAccounts: C,
                         className: h.connections,
@@ -69,10 +70,10 @@ function S(e) {
                         locale: b
                     })
                 }),
-            P.length > 0 &&
+            M.length > 0 &&
                 (0, s.jsx)(E.Z, {
                     heading: v.Z.Messages.APPS,
-                    children: P.map((e) =>
+                    children: M.map((e) =>
                         (0, s.jsx)(
                             p.tH,
                             {

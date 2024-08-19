@@ -14,8 +14,8 @@ var i = n(735250),
     d = n(481060),
     u = n(570140),
     _ = n(569984),
-    E = n(918701),
-    h = n(93127),
+    h = n(918701),
+    E = n(93127),
     m = n(814443),
     I = n(594174),
     g = n(801077),
@@ -43,16 +43,18 @@ let x = 15 * T.Z.Millis.MINUTE,
                 onChannelContextMenu: s,
                 quest: r
             }),
-            { partiedMembers: u, applicationStreams: _, currentActivities: E, voiceChannels: h } = t,
+            { partiedMembers: u, applicationStreams: _, currentActivities: h, voiceChannels: E } = t,
             m = u.length,
             I = _.length,
-            g = E.length,
-            T = h.length > 0,
+            g = h.length,
+            T = E.length > 0,
             S = a.useCallback(() => {
-                let e = E.filter((e) => {
-                    var t, n;
-                    return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === L.wW.GAME;
-                }).map((e) => e.game.name);
+                let e = h
+                    .filter((e) => {
+                        var t, n;
+                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === L.wW.GAME;
+                    })
+                    .map((e) => e.game.name);
                 p.default.track(Z.rMx.NOW_PLAYING_CARD_HOVERED, {
                     num_users: m,
                     num_streams: I,
@@ -60,7 +62,7 @@ let x = 15 * T.Z.Millis.MINUTE,
                     in_voice_channel: T,
                     games_detected: e
                 });
-            }, [m, I, g, T, E]),
+            }, [m, I, g, T, h]),
             v = o()(S, x);
         return null != l || null != c
             ? (0, i.jsx)(d.Popout, {
@@ -89,7 +91,7 @@ let x = 15 * T.Z.Millis.MINUTE,
               })
             : null;
     }),
-    P = r().throttle(() => h.W(!1), 300000);
+    P = r().throttle(() => E.W(!1), 300000);
 function M() {
     let {
             nowPlayingCards: e,
@@ -116,15 +118,15 @@ function M() {
                 i.party.currentActivities.forEach((e) => {
                     let { activity: a } = e;
                     if (null != a) {
-                        let e = (0, E.ZZ)(l, a);
+                        let e = (0, h.ZZ)(l, a);
                         null != e && !n.has(e.id) && (t.set(i.party.id, e), n.add(e.id));
                     }
                 });
             return t;
         }, [e, l]),
-        h = null;
+        E = null;
     return t
-        ? ((h =
+        ? ((E =
               e.length > 0
                   ? e.map((e) => {
                         let { party: t } = e;
@@ -153,7 +155,7 @@ function M() {
                             })
                         ]
                     })),
-          (0, i.jsx)(i.Fragment, { children: h }))
+          (0, i.jsx)(i.Fragment, { children: E }))
         : (0, i.jsx)('div', {
               className: R.emptyCard,
               children: (0, i.jsx)(d.Spinner, {})

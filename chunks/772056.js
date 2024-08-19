@@ -13,27 +13,26 @@ var i,
     c = n(481060),
     u = n(566898),
     d = n(259580),
-    h = n(722326),
-    m = n(261748);
+    h = n(722326);
 ((a = i || (i = {}))[(a.MutualFriendsList = 0)] = 'MutualFriendsList'), (a[(a.MutualGuildList = 1)] = 'MutualGuildList');
 t.Z = (e) => {
-    let { header: t, children: n, itemType: i = 1, isLoadingHeader: a, isLoadingContents: r, loadingContentsCount: p = 0, className: _, onExpand: f, onHover: E, onFocus: g } = e,
-        [C, I] = l.useState(!0),
-        x = (0, s.jsx)('div', {
+    let { header: t, children: n, itemType: i = 1, isLoadingHeader: a, isLoadingContents: r, loadingContentsCount: m = 0, className: p, onExpand: _, onHover: E, onFocus: f } = e,
+        [C, g] = l.useState(!0),
+        I = (0, s.jsx)('div', {
             className: h.iconWrapper,
             children: (0, s.jsx)(d.Z, { direction: C ? d.Z.Directions.RIGHT : d.Z.Directions.DOWN })
         });
     return (0, s.jsxs)('div', {
-        className: _,
+        className: p,
         children: [
             (0, s.jsx)(c.Button, {
                 className: h.collapseBtn,
                 innerClassName: h.collapseBtnContent,
                 color: c.ButtonColors.CUSTOM,
                 onMouseEnter: E,
-                onFocus: g,
+                onFocus: f,
                 onClick: () => {
-                    I(!C), C && (null == f || f());
+                    g(!C), C && (null == _ || _());
                 },
                 children: a
                     ? (0, s.jsxs)(s.Fragment, {
@@ -54,20 +53,20 @@ t.Z = (e) => {
                                   variant: 'text-sm/medium',
                                   children: t
                               }),
-                              x
+                              I
                           ]
                       })
             }),
             (0, s.jsx)('ul', {
                 className: o()(h.connectionList, { [h.isCollapsed]: C }),
                 children: r
-                    ? Array.from({ length: p }).map((e, t) =>
+                    ? Array.from({ length: m }).map((e, t) =>
                           (0, s.jsxs)(
                               'div',
                               {
                                   className: o()({
-                                      [m.mutualFriendItem]: 0 === i,
-                                      [m.mutualGuildItem]: 1 === i
+                                      [h.mutualFriendItem]: 0 === i,
+                                      [h.mutualGuildItem]: 1 === i
                                   }),
                                   children: [
                                       (0, s.jsx)(u.ZT, {

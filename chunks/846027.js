@@ -199,6 +199,13 @@ t.Z = {
                 enabled: e
             });
     },
+    setSidechainCompressionStrength(e) {
+        !m() &&
+            r.Z.dispatch({
+                type: 'AUDIO_SET_SIDECHAIN_COMPRESSION_STRENGTH',
+                strength: e
+            });
+    },
     setLoopback(e) {
         !m() &&
             r.Z.dispatch({
@@ -242,10 +249,10 @@ t.Z = {
                 enabled: e
             });
     },
-    setHardwareEncoding(e) {
+    setHardwareH264(e) {
         !m() &&
             r.Z.dispatch({
-                type: 'MEDIA_ENGINE_SET_HARDWARE_ENCODING',
+                type: 'MEDIA_ENGINE_SET_HARDWARE_H264',
                 enabled: e
             });
     },

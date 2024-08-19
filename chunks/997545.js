@@ -425,9 +425,6 @@ class C extends E.Z {
     setHardwareH264(e) {
         (this.hardwareH264 = e), this.conn.setTransportOptions({ hardwareH264: this.hardwareH264 });
     }
-    setSoftwareH264(e) {
-        (this.softwareH264 = e), this.conn.setTransportOptions({ softwareH264: this.softwareH264 });
-    }
     setQoS(e) {
         (this.qos = e), this.conn.setTransportOptions({ qos: this.qos });
     }
@@ -703,8 +700,7 @@ class C extends E.Z {
                     'level-asymmetry-allowed': '1',
                     'packetization-mode': '1',
                     'profile-level-id': 'android' === (0, T.zS)().platform ? '42e01f' : '4d0033',
-                    'hardware-h264': this.hardwareH264 && this.useElectronVideo && S.Z.useDirectVideo ? '1' : '0',
-                    'software-h264': this.softwareH264 ? '1' : '0'
+                    'hardware-h264': this.hardwareH264 && this.useElectronVideo && S.Z.useDirectVideo ? '1' : '0'
                 };
     }
     getCodecOptions(e, t, n) {
@@ -784,7 +780,6 @@ class C extends E.Z {
             encodingVideoDegradationPreference: this.videoDegradationPreference,
             experimentalEncoders: this.experimentalEncoders,
             hardwareH264: this.hardwareH264,
-            softwareH264: this.softwareH264,
             reconnectInterval: this.reconnectInterval
         };
         return (0, T.eJ)(N.eR.VIDEO_EFFECTS) && this.context === N.Yn.STREAM && (e.enableVideoEffects = !0), this.experimentFlags.has(A.V8.MUTE_BEFORE_PROCESSING) && (e.muteBeforeProcessing = !0), this.experimentFlags.has(A.V8.PTT_BEFORE_PROCESSING) && (e.pttBeforeProcessing = !0), this.experimentFlags.has(A.V8.SKIP_ENCODE) && (e.skipEncode = !0), e;
@@ -861,7 +856,6 @@ class C extends E.Z {
             v(this, 'noiseCancellation', !1),
             v(this, 'experimentalEncoders', !1),
             v(this, 'hardwareH264', !0),
-            v(this, 'softwareH264', !0),
             v(this, 'attenuationFactor', 0.5),
             v(this, 'attenuateWhileSpeakingSelf', !1),
             v(this, 'attenuateWhileSpeakingOthers', !0),

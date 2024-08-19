@@ -1,15 +1,15 @@
 a.r(s), a(47120), a(653041);
 var n = a(735250),
-    l = a(470079),
-    r = a(120356),
-    t = a.n(r),
+    r = a(470079),
+    l = a(120356),
+    t = a.n(l),
     i = a(512722),
     o = a.n(i),
     E = a(913527),
     c = a.n(E),
     _ = a(758713),
-    I = a(705512),
-    u = a(442837),
+    u = a(705512),
+    I = a(442837),
     d = a(433517),
     A = a(481060),
     R = a(224706),
@@ -17,16 +17,16 @@ var n = a(735250),
     O = a(168551),
     T = a(485267),
     m = a(26033),
-    L = a(561308),
-    g = a(669764),
+    g = a(561308),
+    L = a(669764),
     M = a(962250),
     P = a(706454),
     S = a(768581),
     G = a(814225),
     f = a(709054),
     C = a(810568),
-    v = a(998058),
-    h = a(839392),
+    h = a(998058),
+    v = a(839392),
     x = a(96856),
     p = a(567409),
     Z = a(774073),
@@ -35,11 +35,11 @@ var n = a(735250),
     j = a(183391),
     F = a(206583),
     B = a(689938),
-    U = a(707443);
-let w = 'GameProfileModal',
+    w = a(707443);
+let U = 'GameProfileModal',
     y = (e) => {
-        let { game: s, onClose: a, trackClick: l } = e,
-            r = (0, u.e7)([N.Z], () => {
+        let { game: s, onClose: a, trackClick: r } = e,
+            l = (0, I.e7)([N.Z], () => {
                 var e;
                 return N.Z.getApplication(null !== (e = null == s ? void 0 : s.applicationId) && void 0 !== e ? e : '');
             });
@@ -51,12 +51,12 @@ let w = 'GameProfileModal',
                 var i;
                 return (0, n.jsx)(A.Clickable, {
                     ...e,
-                    className: U.clickable,
+                    className: w.clickable,
                     onClick: async () => {
-                        l(C.as.ClickSimilarGame, s.applicationId),
+                        r(C.as.ClickSimilarGame, s.applicationId),
                             (0, A.openModalLazy)(() =>
                                 Promise.resolve((e) =>
-                                    (0, n.jsx)(Y, {
+                                    (0, n.jsx)(W, {
                                         applicationId: s.applicationId,
                                         source: C.m1.SimilarGames,
                                         ...e
@@ -68,16 +68,16 @@ let w = 'GameProfileModal',
                     },
                     children: (0, n.jsx)('img', {
                         src: t,
-                        className: U.similarGames,
-                        alt: B.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({ game: null !== (i = null == r ? void 0 : r.name) && void 0 !== i ? i : null == s ? void 0 : s.name })
+                        className: w.similarGames,
+                        alt: B.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({ game: null !== (i = null == l ? void 0 : l.name) && void 0 !== i ? i : null == s ? void 0 : s.name })
                     })
                 });
             }
         });
     },
-    b = () =>
+    k = () =>
         (0, n.jsxs)('div', {
-            className: U.gameBadge,
+            className: w.gameBadge,
             children: [
                 (0, n.jsx)(A.FireIcon, { size: 'xxs' }),
                 (0, n.jsx)(A.Text, {
@@ -88,11 +88,11 @@ let w = 'GameProfileModal',
             ]
         }),
     Q = [_.z.DESKTOP, _.z.XBOX, _.z.PLAYSTATION, _.z.NINTENDO],
-    k = (e) => {
+    b = (e) => {
         let { platforms: s } = e,
             a = [...new Set(s)];
         !a.includes(_.z.DESKTOP) && (a.includes(_.z.MACOS) || a.includes(_.z.LINUX)) && a.push(_.z.DESKTOP);
-        let l = (a = a.filter((e) => Q.includes(e))).map((e) => {
+        let r = (a = a.filter((e) => Q.includes(e))).map((e) => {
             switch (e) {
                 case _.z.DESKTOP:
                     return (0, n.jsx)(A.ScreenIcon, { size: 'xs' }, e);
@@ -107,75 +107,75 @@ let w = 'GameProfileModal',
             }
         });
         return (0, n.jsxs)('div', {
-            className: t()(U.row, U.gapSm),
+            className: t()(w.row, w.gapSm),
             style: { alignItems: 'center' },
             children: [
                 (0, n.jsx)(A.Text, {
                     variant: 'text-sm/normal',
                     children: ' \xB7 '
                 }),
-                l
+                r
             ]
         });
     },
     H = (e) => e.filter(Z.z6).slice(0, 5),
-    Y = (e) => {
-        var s, r;
-        let { applicationId: i, source: E, sourceUserId: _, transitionState: Q, onClose: Y } = e,
-            { clientThemesClassName: W } = (0, O.ZP)(),
+    W = (e) => {
+        var s, l;
+        let { applicationId: i, source: E, sourceUserId: _, transitionState: Q, onClose: W } = e,
+            { clientThemesClassName: Y } = (0, O.ZP)(),
             { width: z, height: V } = (0, M.b)(),
-            [X, J] = l.useState(() => {
+            [X, J] = r.useState(() => {
                 var e;
-                return null === (e = d.K.get(w)) || void 0 === e ? void 0 : e[i];
+                return null === (e = d.K.get(U)) || void 0 === e ? void 0 : e[i];
             }),
-            q = (0, u.e7)([P.default], () => P.default.locale),
-            [$, ee] = l.useState(!0),
-            [es, ea] = l.useState(!1),
-            en = l.useRef(null),
-            el = l.useMemo(() => (0, C.fP)(), []);
-        l.useEffect(() => {
+            q = (0, I.e7)([P.default], () => P.default.locale),
+            [$, ee] = r.useState(!0),
+            [es, ea] = r.useState(!1),
+            en = r.useRef(null),
+            er = r.useMemo(() => (0, C.fP)(), []);
+        r.useEffect(() => {
             let e = en.current;
             null != e && ea(e.scrollHeight - e.clientHeight > 1);
         }, [en, z, V]),
-            l.useEffect(() => {
+            r.useEffect(() => {
                 (0, T.Jn)();
             }, []);
-        let er = (0, u.Wu)([h.Z], () => {
+        let el = (0, I.Wu)([v.Z], () => {
                 var e;
-                return (null !== (e = h.Z.getSimilarGames(i)) && void 0 !== e ? e : []).slice(0, 25);
+                return (null !== (e = v.Z.getSimilarGames(i)) && void 0 !== e ? e : []).slice(0, 25);
             }),
-            et = (0, u.Wu)([g.Z], () =>
-                er
-                    .map((e) => g.Z.getGame(e))
+            et = (0, I.Wu)([L.Z], () =>
+                el
+                    .map((e) => L.Z.getGame(e))
                     .filter(Z.W1)
                     .slice(0, 5)
             ),
-            ei = l.useRef([]);
-        l.useEffect(() => {
-            ei.current = er;
-        }, [er]);
+            ei = r.useRef([]);
+        r.useEffect(() => {
+            ei.current = el;
+        }, [el]);
         let { entries: eo } = (0, p.Z)(),
-            eE = l.useMemo(() => {
+            eE = r.useMemo(() => {
                 var e;
                 return null !== (e = null == eo ? void 0 : eo.filter((e) => (0, m.dX)(e) && e.extra.application_id === i)) && void 0 !== e ? e : [];
             }, [eo, i]),
             ec = eE.length > 7,
-            [e_, eI] = l.useState(!1);
-        l.useEffect(() => {
+            [e_, eu] = r.useState(!1);
+        r.useEffect(() => {
             var e, s;
             return (
                 (0, C.IS)({
                     source: E,
-                    viewId: el,
+                    viewId: er,
                     applicationId: i,
-                    gameName: null !== (s = null !== (e = null == ed ? void 0 : ed.name) && void 0 !== e ? e : null == eu ? void 0 : eu.name) && void 0 !== s ? s : '',
+                    gameName: null !== (s = null !== (e = null == ed ? void 0 : ed.name) && void 0 !== e ? e : null == eI ? void 0 : eI.name) && void 0 !== s ? s : '',
                     authorId: _
                 }),
                 () => {
                     var e, s;
                     let a = Date.now(),
                         n = eE.map((e) => {
-                            let s = (0, L.kr)(e) ? (0, L.T_)(e, a) : (0, L.GL)(e, q);
+                            let s = (0, g.kr)(e) ? (0, g.T_)(e, a) : (0, g.GL)(e, q);
                             return JSON.stringify({
                                 item_id: e.id,
                                 trait: e.traits,
@@ -183,9 +183,9 @@ let w = 'GameProfileModal',
                             });
                         });
                     (0, C.wz)({
-                        viewId: el,
+                        viewId: er,
                         applicationId: i,
-                        gameName: null !== (s = null !== (e = null == ed ? void 0 : ed.name) && void 0 !== e ? e : null == eu ? void 0 : eu.name) && void 0 !== s ? s : '',
+                        gameName: null !== (s = null !== (e = null == ed ? void 0 : ed.name) && void 0 !== e ? e : null == eI ? void 0 : eI.name) && void 0 !== s ? s : '',
                         playedFriendIds: eE.map((e) => e.author_id),
                         playedFriendsData: n,
                         similarGames: H(ei.current)
@@ -193,16 +193,16 @@ let w = 'GameProfileModal',
                 }
             );
         }, []),
-            l.useEffect(() => {
-                0 === er.length && (0, v.i)(i);
-            }, [i, er]),
-            l.useEffect(() => {
-                R.Z.getDetectableGamesSupplemental([i, ...er]);
-            }, [i, er]);
-        let eu = N.Z.getApplication(i),
-            ed = (0, u.e7)([g.Z], () => g.Z.getGame(i)),
-            eA = l.useMemo(() => (null == ed ? void 0 : ed.genres.map(G.P3).join(', ')), [ed]),
-            eR = l.useMemo(() => {
+            r.useEffect(() => {
+                0 === el.length && (0, h.i)(i);
+            }, [i, el]),
+            r.useEffect(() => {
+                R.Z.getDetectableGamesSupplemental([i, ...el]);
+            }, [i, el]);
+        let eI = N.Z.getApplication(i),
+            ed = (0, I.e7)([L.Z], () => L.Z.getGame(i)),
+            eA = r.useMemo(() => (null == ed ? void 0 : ed.genres.map(G.P3).join(', ')), [ed]),
+            eR = r.useMemo(() => {
                 if (null == ed) return '';
                 let { artwork: e, screenshots: s } = ed;
                 if (e.length > 0) {
@@ -215,18 +215,18 @@ let w = 'GameProfileModal',
                 }
                 return '';
             }, [ed]),
-            eN = l.useMemo(() => {
+            eN = r.useMemo(() => {
                 var e, s;
                 let a = (null !== (e = null == ed ? void 0 : ed.artwork) && void 0 !== e ? e : []).map((e) => ({ src: e }));
                 return [...(null !== (s = null == ed ? void 0 : ed.screenshots) && void 0 !== s ? s : []).map((e) => ({ src: e })), ...a];
             }, [null == ed ? void 0 : ed.artwork, null == ed ? void 0 : ed.screenshots]),
             eO = (e, s) => {
                 (0, C.UE)({
-                    gameName: null != eL ? eL : '',
+                    gameName: null != eg ? eg : '',
                     applicationId: i,
                     action: e,
                     similarGameId: s,
-                    viewId: el
+                    viewId: er
                 });
             },
             eT = (0, x.p)('GameProfileModal'),
@@ -236,74 +236,74 @@ let w = 'GameProfileModal',
                 trackEntryPointImpression: !1
             });
         if ((o()(em, "Game Profile was opened when it thinks it shouldn't have been.  Make sure to use `useShouldOpenGameProfileModal` before calling `openGameProfileModal`"), null == ed)) return null;
-        let eL = null !== (s = ed.name) && void 0 !== s ? s : null == eu ? void 0 : eu.name,
-            eg = null == eu ? void 0 : eu.getIconURL(160, S.$k ? 'webp' : 'png'),
-            eM = null !== (r = ed.coverImageUrl) && void 0 !== r ? r : eg,
+        let eg = null !== (s = ed.name) && void 0 !== s ? s : null == eI ? void 0 : eI.name,
+            eL = null == eI ? void 0 : eI.getIconURL(160, S.$k ? 'webp' : 'png'),
+            eM = null !== (l = ed.coverImageUrl) && void 0 !== l ? l : eL,
             { summary: eP, websites: eS, publishers: eG, platforms: ef } = ed,
             eC = f.default.extractTimestamp(i),
-            ev = c()().diff(c()(eC), 'days') <= F.G,
-            eh = eE.some((e) => (0, L.ig)(e) === I.o.GLOBAL);
+            eh = c()().diff(c()(eC), 'days') <= F.G,
+            ev = eE.some((e) => (0, g.ig)(e) === u.o.GLOBAL);
         return (0, n.jsx)(A.ModalRoot, {
             transitionState: Q,
             size: A.ModalSize.DYNAMIC,
-            className: t()(W, U.gameProfileModal),
+            className: t()(Y, w.gameProfileModal),
             children: (0, n.jsxs)(A.ScrollerNone, {
-                className: U.scrollable,
+                className: w.scrollable,
                 children: [
                     (0, n.jsx)('div', {
-                        className: t()(U.gameArtHero),
+                        className: t()(w.gameArtHero),
                         style: { backgroundImage: 'url("'.concat(eR, '")') }
                     }),
                     (0, n.jsxs)('div', {
-                        className: t()(U.content, U.column, U.headerInfo),
+                        className: t()(w.content, w.column, w.headerInfo),
                         children: [
                             (0, n.jsx)('div', {
-                                className: U.logoWrapper,
+                                className: w.logoWrapper,
                                 children:
                                     null != eM &&
                                     (0, n.jsx)('img', {
-                                        className: U.logo,
+                                        className: w.logo,
                                         src: eM,
-                                        alt: B.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({ game: eL })
+                                        alt: B.Z.Messages.GAME_PROFILE_GAME_LOGO_ALT.format({ game: eg })
                                     })
                             }),
                             (0, n.jsxs)('div', {
-                                className: t()(U.row, U.gapSm, U.gameDetails),
+                                className: t()(w.row, w.gapSm, w.gameDetails),
                                 children: [
                                     (0, n.jsxs)('div', {
                                         children: [
                                             (0, n.jsx)(A.Heading, {
                                                 variant: 'heading-xl/bold',
-                                                children: eL
+                                                children: eg
                                             }),
                                             (0, n.jsxs)('div', {
-                                                className: t()(U.row, U.gapSm),
+                                                className: t()(w.row, w.gapSm),
                                                 children: [
-                                                    null != eg &&
+                                                    null != eL &&
                                                         (0, n.jsx)('img', {
-                                                            src: eg,
+                                                            src: eL,
                                                             height: 16,
-                                                            alt: B.Z.Messages.GAME_PROFILE_GAME_ICON_ALT.format({ game: eL })
+                                                            alt: B.Z.Messages.GAME_PROFILE_GAME_ICON_ALT.format({ game: eg })
                                                         }),
                                                     (0, n.jsx)(A.Text, {
                                                         variant: 'text-sm/semibold',
                                                         color: 'text-muted',
                                                         children: eA
                                                     }),
-                                                    ev &&
+                                                    eh &&
                                                         (0, n.jsx)(A.Text, {
                                                             variant: 'eyebrow',
-                                                            className: U.newBadge,
+                                                            className: w.newBadge,
                                                             children: B.Z.Messages.NEW
                                                         }),
-                                                    eh &&
+                                                    ev &&
                                                         (0, n.jsxs)(n.Fragment, {
                                                             children: [
                                                                 (0, n.jsx)(A.Text, {
                                                                     variant: 'text-sm/medium',
                                                                     children: ' \xB7 '
                                                                 }),
-                                                                (0, n.jsx)(b, {})
+                                                                (0, n.jsx)(k, {})
                                                             ]
                                                         })
                                                 ]
@@ -318,13 +318,13 @@ let w = 'GameProfileModal',
                                                 children: (e) =>
                                                     (0, n.jsxs)(A.Button, {
                                                         ...e,
-                                                        innerClassName: U.followButton,
+                                                        innerClassName: w.followButton,
                                                         color: X ? A.Button.Colors.PRIMARY : A.Button.Colors.BRAND,
                                                         onClick: () => {
                                                             var e;
-                                                            let s = null !== (e = d.K.get(w)) && void 0 !== e ? e : {};
+                                                            let s = null !== (e = d.K.get(U)) && void 0 !== e ? e : {};
                                                             (s[i] = !s[i]),
-                                                                d.K.set(w, s),
+                                                                d.K.set(U, s),
                                                                 eO(s[i] ? C.as.FollowGame : C.as.UnfollowGame),
                                                                 s[i] &&
                                                                     (0, K.L)() &&
@@ -335,7 +335,7 @@ let w = 'GameProfileModal',
                                                                                 ...s,
                                                                                 applicationId: i,
                                                                                 background: eR,
-                                                                                viewId: el
+                                                                                viewId: er
                                                                             });
                                                                     }),
                                                                 J(s[i]);
@@ -350,10 +350,10 @@ let w = 'GameProfileModal',
                     }),
                     (0, n.jsx)(A.HeadingLevel, {
                         children: (0, n.jsxs)('div', {
-                            className: t()(U.content, U.mainContent),
+                            className: t()(w.content, w.mainContent),
                             children: [
                                 (0, n.jsxs)('div', {
-                                    className: U.column,
+                                    className: w.column,
                                     children: [
                                         (0, n.jsx)(A.Heading, {
                                             variant: 'text-md/semibold',
@@ -361,17 +361,17 @@ let w = 'GameProfileModal',
                                             children: B.Z.Messages.GAME_PROFILE_FRIENDS_WHO_PLAY_TAB
                                         }),
                                         (0, n.jsxs)('div', {
-                                            className: t()(U.section, { [U.fadedEntries]: ec && !e_ }),
+                                            className: t()(w.section, { [w.fadedEntries]: ec && !e_ }),
                                             children: [
                                                 0 === eE.length &&
                                                     (0, n.jsx)(A.Text, {
                                                         variant: 'text-xs/semibold',
                                                         color: 'text-primary',
-                                                        className: U.emptyFriendsWhoPlay,
+                                                        className: w.emptyFriendsWhoPlay,
                                                         children: B.Z.Messages.GAME_PROFILE_EMPTY_FRIENDS_WHO_PLAY
                                                     }),
                                                 (0, n.jsx)('div', {
-                                                    className: t()(U.column, U.gapNone),
+                                                    className: t()(w.column, w.gapNone),
                                                     children:
                                                         null == eE
                                                             ? void 0
@@ -380,8 +380,8 @@ let w = 'GameProfileModal',
                                                                       D.Z,
                                                                       {
                                                                           entry: e,
-                                                                          viewId: el,
-                                                                          onClose: Y
+                                                                          viewId: er,
+                                                                          onClose: W
                                                                       },
                                                                       e.id
                                                                   )
@@ -392,8 +392,8 @@ let w = 'GameProfileModal',
                                         ec &&
                                             !e_ &&
                                             (0, n.jsxs)(A.Clickable, {
-                                                className: U.expandEntriesButton,
-                                                onClick: () => eI(!0),
+                                                className: w.expandEntriesButton,
+                                                onClick: () => eu(!0),
                                                 children: [
                                                     (0, n.jsx)(A.Text, {
                                                         variant: 'text-xs/semibold',
@@ -411,23 +411,26 @@ let w = 'GameProfileModal',
                                                         children: B.Z.Messages.GAME_PROFILE_SCREENSHOTS
                                                     }),
                                                     (0, n.jsx)(A.Scroller, {
-                                                        style: { overflowY: 'visible' },
-                                                        className: t()(U.row, U.imageScroller),
+                                                        className: t()(w.row, w.imageScroller),
                                                         orientation: 'horizontal',
                                                         children: eN.map((e, s) =>
                                                             (0, n.jsx)(
                                                                 A.Clickable,
                                                                 {
-                                                                    className: U.clickable,
+                                                                    className: w.clickable,
+                                                                    focusProps: {
+                                                                        offset: 4,
+                                                                        ringClassName: w.gameArtworkFocusRing
+                                                                    },
                                                                     onClick: () => {
                                                                         eO(C.as.ClickImage),
                                                                             (0, A.openModalLazy)(async () => {
                                                                                 let { default: e } = await a.e('99857').then(a.bind(a, 895023));
                                                                                 return (a) => {
-                                                                                    let { ...l } = a;
+                                                                                    let { ...r } = a;
                                                                                     return (0, n.jsx)(e, {
-                                                                                        className: U.mediaModal,
-                                                                                        ...l,
+                                                                                        className: w.mediaModal,
+                                                                                        ...r,
                                                                                         items: eN,
                                                                                         startingIndex: s
                                                                                     });
@@ -436,14 +439,15 @@ let w = 'GameProfileModal',
                                                                     },
                                                                     children: (0, n.jsx)('img', {
                                                                         src: e.src,
-                                                                        className: U.gameArtwork,
-                                                                        alt: B.Z.Messages.GAME_PROFILE_GAME_ARTWORK_ALT.format({ game: eL })
+                                                                        className: w.gameArtwork,
+                                                                        alt: B.Z.Messages.GAME_PROFILE_GAME_ARTWORK_ALT.format({ game: eg })
                                                                     })
                                                                 },
                                                                 e.src
                                                             )
                                                         )
-                                                    })
+                                                    }),
+                                                    (0, n.jsx)(A.Spacer, { size: 8 })
                                                 ]
                                             }),
                                         et.length > 0 &&
@@ -454,14 +458,14 @@ let w = 'GameProfileModal',
                                                         children: B.Z.Messages.GAME_PROFILE_ALSO_PLAYING
                                                     }),
                                                     (0, n.jsx)('div', {
-                                                        className: U.row,
+                                                        className: w.row,
                                                         style: {},
                                                         children: et.map((e) =>
                                                             (0, n.jsx)(
                                                                 y,
                                                                 {
                                                                     game: e,
-                                                                    onClose: Y,
+                                                                    onClose: W,
                                                                     trackClick: eO
                                                                 },
                                                                 null == e ? void 0 : e.applicationId
@@ -473,18 +477,18 @@ let w = 'GameProfileModal',
                                     ]
                                 }),
                                 (0, n.jsxs)('div', {
-                                    className: t()(U.sidebar, U.column),
+                                    className: t()(w.sidebar, w.column),
                                     children: [
                                         (0, n.jsx)(A.Heading, {
                                             variant: 'heading-md/bold',
                                             children: B.Z.Messages.ABOUT
                                         }),
                                         (0, n.jsxs)('div', {
-                                            className: U.sidebarSections,
+                                            className: w.sidebarSections,
                                             children: [
                                                 null != eP &&
                                                     (0, n.jsxs)('div', {
-                                                        className: t()(U.column, U.gapSm),
+                                                        className: t()(w.column, w.gapSm),
                                                         children: [
                                                             (0, n.jsx)(A.Text, {
                                                                 ref: en,
@@ -494,7 +498,7 @@ let w = 'GameProfileModal',
                                                             }),
                                                             (es || !$) &&
                                                                 (0, n.jsx)(A.Clickable, {
-                                                                    className: U.clickable,
+                                                                    className: w.clickable,
                                                                     onClick: () => {
                                                                         eO($ ? C.as.ShowMore : C.as.ShowLess), ee(!$);
                                                                     },
@@ -511,11 +515,11 @@ let w = 'GameProfileModal',
                                                 }),
                                                 (eG.length > 0 || ef.length > 0) &&
                                                     (0, n.jsx)('div', {
-                                                        className: t()(U.column),
+                                                        className: t()(w.column),
                                                         children:
                                                             eG.length > 0 &&
                                                             (0, n.jsxs)('div', {
-                                                                className: t()(U.column, U.gapSm),
+                                                                className: t()(w.column, w.gapSm),
                                                                 children: [
                                                                     (0, n.jsx)(A.Heading, {
                                                                         variant: 'text-xs/semibold',
@@ -523,13 +527,13 @@ let w = 'GameProfileModal',
                                                                         children: B.Z.Messages.GAME_PROFILE_PUBLISHER
                                                                     }),
                                                                     (0, n.jsxs)('div', {
-                                                                        className: t()(U.row, U.gapMd),
+                                                                        className: t()(w.row, w.gapMd),
                                                                         children: [
                                                                             (0, n.jsx)(A.Text, {
                                                                                 variant: 'text-sm/normal',
                                                                                 children: eG.join(', ')
                                                                             }),
-                                                                            ef.length > 0 && (0, n.jsx)(k, { platforms: ef })
+                                                                            ef.length > 0 && (0, n.jsx)(b, { platforms: ef })
                                                                         ]
                                                                     })
                                                                 ]
@@ -546,4 +550,4 @@ let w = 'GameProfileModal',
             })
         });
     };
-s.default = Y;
+s.default = W;

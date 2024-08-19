@@ -7,14 +7,12 @@ var n = t(735250),
     l = t(113434),
     c = t(497505),
     d = t(918701),
-    _ = t(471985),
-    E = t(625252),
-    u = t(37303),
-    I = t(46140),
-    T = t(981631),
-    S = t(689938),
-    N = t(299021);
-function C(e) {
+    _ = t(37303),
+    E = t(46140),
+    u = t(981631),
+    I = t(689938),
+    T = t(299021);
+function S(e) {
     if (null == e) return !1;
     let { userStatus: s } = e,
         t = (null == s ? void 0 : s.completedAt) != null && (null == s ? void 0 : s.claimedAt) == null,
@@ -25,17 +23,16 @@ s.Z = () => {
     (0, l.jU)();
     let { quests: e, isFetchingCurrentQuests: s } = (0, l.J2)({ fetchPolicy: 'cache-and-network' }),
         t = (0, l.EH)(),
-        m = (0, o.q)({ location: I.dr.USER_SETTINGS_GIFT_INVENTORY }),
-        A = (0, _.Z)(I.dr.USER_SETTINGS_GIFT_INVENTORY),
-        [O, g] = a.useState(!0),
-        [h, p] = a.useState([]),
-        [R, x] = a.useState([]),
-        M = a.useMemo(() => (O ? (s ? 'unsorted' : 'pending_sort') : 'sorted'), [O, s]);
+        N = (0, o.q)({ location: E.dr.USER_SETTINGS_GIFT_INVENTORY }),
+        [C, m] = a.useState(!0),
+        [A, O] = a.useState([]),
+        [g, h] = a.useState([]),
+        p = a.useMemo(() => (C ? (s ? 'unsorted' : 'pending_sort') : 'sorted'), [C, s]);
     a.useEffect(() => {
-        g(!0);
+        m(!0);
     }, [s, t]),
         a.useEffect(() => {
-            if ('pending_sort' === M) {
+            if ('pending_sort' === p) {
                 let { sortedQuestIds: s, sections: n } = (function (e) {
                     let s = new Map(e.map((e) => [e.id, e])),
                         t = e
@@ -75,13 +72,13 @@ s.Z = () => {
                         n = [
                             {
                                 location: c.jn.GIFT_INVENTORY_FOR_YOU,
-                                title: S.Z.Messages.QUESTS_FOR_YOU,
-                                questIds: t.filter((e) => C(s.get(e)))
+                                title: I.Z.Messages.QUESTS_FOR_YOU,
+                                questIds: t.filter((e) => S(s.get(e)))
                             },
                             {
                                 location: c.jn.GIFT_INVENTORY_OTHER,
-                                title: S.Z.Messages.QUESTS_OTHER,
-                                questIds: t.filter((e) => !C(s.get(e)))
+                                title: I.Z.Messages.QUESTS_OTHER,
+                                questIds: t.filter((e) => !S(s.get(e)))
                             }
                         ];
                     return {
@@ -95,92 +92,90 @@ s.Z = () => {
                         return !(null !== (n = t.get(e.id)) && void 0 !== n && n) || a;
                     })
                 );
-                p(s), x(n), g(!1);
+                O(s), h(n), m(!1);
             }
-        }, [e, t, M]);
-    let f = R.every((e) => {
+        }, [e, t, p]);
+    let R = g.every((e) => {
         let { questIds: s } = e;
         return s.length > 0;
     });
-    return s || 'sorted' !== M
-        ? (0, n.jsx)(i.Spinner, { className: N.spinner })
-        : 0 === h.length
+    return s || 'sorted' !== p
+        ? (0, n.jsx)(i.Spinner, { className: T.spinner })
+        : 0 === A.length
           ? null
-          : A
-            ? (0, n.jsx)(E.Z, {})
-            : (0, n.jsx)(i.FormSection, {
-                  className: N.questsContainer,
-                  children: (0, n.jsxs)(i.HeadingLevel, {
-                      component: (0, n.jsxs)('div', {
-                          className: N.questsHeading,
-                          children: [
-                              m && (0, n.jsx)(i.QuestsIcon, { className: N.questsIcon }),
-                              (0, n.jsx)(i.Heading, {
-                                  variant: 'heading-md/semibold',
-                                  className: N.questsHeading,
-                                  children: S.Z.Messages.QUESTS
-                              }),
-                              (0, n.jsx)(i.Text, {
-                                  variant: 'text-xs/normal',
-                                  className: N.questsHeadingLearnMore,
-                                  children: S.Z.Messages.QUESTS_LEARN_MORE_LINK.format({ questsLearnMoreLink: r.Z.getArticleURL(T.BhN.QUESTS_LEARN_MORE) })
+          : (0, n.jsx)(i.FormSection, {
+                className: T.questsContainer,
+                children: (0, n.jsxs)(i.HeadingLevel, {
+                    component: (0, n.jsxs)('div', {
+                        className: T.questsHeading,
+                        children: [
+                            N && (0, n.jsx)(i.QuestsIcon, { className: T.questsIcon }),
+                            (0, n.jsx)(i.Heading, {
+                                variant: 'heading-md/semibold',
+                                className: T.questsHeading,
+                                children: I.Z.Messages.QUESTS
+                            }),
+                            (0, n.jsx)(i.Text, {
+                                variant: 'text-xs/normal',
+                                className: T.questsHeadingLearnMore,
+                                children: I.Z.Messages.QUESTS_LEARN_MORE_LINK.format({ questsLearnMoreLink: r.Z.getArticleURL(u.BhN.QUESTS_LEARN_MORE) })
+                            })
+                        ]
+                    }),
+                    children: [
+                        (0, n.jsx)(i.FormDivider, { className: T.divider }),
+                        N
+                            ? g.map((e, s, t) => {
+                                  let { location: a, questIds: r, title: o } = e;
+                                  if (0 === r.length) return null;
+                                  let l =
+                                      0 === s
+                                          ? 0
+                                          : t.slice(0, s).reduce((e, s) => {
+                                                let { questIds: t } = s;
+                                                return e + t.length;
+                                            }, 0);
+                                  return (0, n.jsxs)(
+                                      'section',
+                                      {
+                                          className: T.questsListContainer,
+                                          children: [
+                                              R &&
+                                                  (0, n.jsx)(i.Text, {
+                                                      variant: 'text-xs/semibold',
+                                                      color: 'header-secondary',
+                                                      className: T.sectionHeader,
+                                                      children: o
+                                                  }),
+                                              r.map((e, s) =>
+                                                  (0, n.jsx)(
+                                                      _.D,
+                                                      {
+                                                          questId: e,
+                                                          location: a,
+                                                          contentPosition: s + l,
+                                                          initiallyExpanded: !R
+                                                      },
+                                                      e
+                                                  )
+                                              )
+                                          ]
+                                      },
+                                      a
+                                  );
                               })
-                          ]
-                      }),
-                      children: [
-                          (0, n.jsx)(i.FormDivider, { className: N.divider }),
-                          m
-                              ? R.map((e, s, t) => {
-                                    let { location: a, questIds: r, title: o } = e;
-                                    if (0 === r.length) return null;
-                                    let l =
-                                        0 === s
-                                            ? 0
-                                            : t.slice(0, s).reduce((e, s) => {
-                                                  let { questIds: t } = s;
-                                                  return e + t.length;
-                                              }, 0);
-                                    return (0, n.jsxs)(
-                                        'section',
-                                        {
-                                            className: N.questsListContainer,
-                                            children: [
-                                                f &&
-                                                    (0, n.jsx)(i.Text, {
-                                                        variant: 'text-xs/semibold',
-                                                        color: 'header-secondary',
-                                                        className: N.sectionHeader,
-                                                        children: o
-                                                    }),
-                                                r.map((e, s) =>
-                                                    (0, n.jsx)(
-                                                        u.D,
-                                                        {
-                                                            questId: e,
-                                                            location: a,
-                                                            contentPosition: s + l,
-                                                            initiallyExpanded: !f
-                                                        },
-                                                        e
-                                                    )
-                                                )
-                                            ]
-                                        },
-                                        a
-                                    );
-                                })
-                              : h.map((e, s) =>
-                                    (0, n.jsx)(
-                                        u.D,
-                                        {
-                                            questId: e,
-                                            location: c.jn.GIFT_INVENTORY_FOR_YOU,
-                                            contentPosition: s
-                                        },
-                                        e
-                                    )
-                                )
-                      ]
-                  })
-              });
+                            : A.map((e, s) =>
+                                  (0, n.jsx)(
+                                      _.D,
+                                      {
+                                          questId: e,
+                                          location: c.jn.GIFT_INVENTORY_FOR_YOU,
+                                          contentPosition: s
+                                      },
+                                      e
+                                  )
+                              )
+                    ]
+                })
+            });
 };

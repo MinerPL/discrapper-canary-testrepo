@@ -186,10 +186,6 @@ let A = {
         throttlePeriod: 60000,
         throttleKeys: (e) => [e.user_id]
     },
-    [f.rMx.DM_PROFILE_VIEWED]: {
-        throttlePeriod: 3600000,
-        throttleKeys: (e) => [e.viewed_profile_user_id]
-    },
     [f.rMx.MEDIA_VIEWER_SESSION_COMPLETED]: { throttlePercent: 0.01 },
     [f.rMx.SUMMARIES_UNREAD_BAR_VIEWED]: {
         throttlePeriod: 300000,

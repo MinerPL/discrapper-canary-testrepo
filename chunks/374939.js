@@ -1,33 +1,31 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return l;
     }
 });
 var i = n(735250);
 n(470079);
-var a = n(120356),
-    s = n.n(a),
-    r = n(481060),
-    l = n(17845),
-    o = n(89866);
-function c(e) {
-    let { title: t, description: n, onScroll: a, button: c, children: d, bannerContainerClassName: u, bannerBackground: _ } = e;
-    return (0, i.jsxs)(r.AdvancedScroller, {
-        onScroll: a,
-        className: s()(o.container, o.background),
+var a = n(481060),
+    s = n(17845),
+    r = n(89866);
+function l(e) {
+    let { title: t, description: n, onScroll: l, button: o, bannerClassName: c, bannerBackground: d, children: u } = e;
+    return (0, i.jsxs)(a.AdvancedScroller, {
+        onScroll: l,
+        className: r.container,
         children: [
-            (0, i.jsx)(l.Z, {
+            (0, i.jsx)(s.Z, {
                 title: t,
                 description: n,
-                button: c,
-                className: u,
-                background: _
+                button: o,
+                className: c,
+                background: d
             }),
             (0, i.jsx)('section', {
-                className: s()(o.contentContainer, o.gradient),
+                className: r.contentContainer,
                 children: (0, i.jsx)('div', {
-                    className: s()(o.content),
-                    children: d
+                    className: r.content,
+                    children: u
                 })
             })
         ]

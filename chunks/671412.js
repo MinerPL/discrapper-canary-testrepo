@@ -123,25 +123,30 @@ function y(e) {
                         onInteraction: M,
                         setInteractionToastShown: U,
                         setInteractionSent: w,
-                        setIsReplyInteraction: x
+                        setIsReplyInteraction: x,
+                        onClose: () => {
+                            Y(!1);
+                        }
                     });
                 },
                 animationPosition: 'top',
                 position: 'bottom',
-                align: 'center',
+                align: y === N.y0.FULL_SIZE ? 'center' : 'left',
                 shouldShow: P,
                 children: () => et()
             }),
-            (0, r.jsx)(T.Z, {
-                user: t,
-                sourceType: N.n_.AVATAR,
-                isVisible: Z,
-                isExpandable: !1,
-                onInteraction: M,
-                setInteractionToastShown: U,
-                setInteractionSent: w,
-                setIsReplyInteraction: x
-            })
+            !P &&
+                (0, r.jsx)(T.Z, {
+                    user: t,
+                    sourceType: N.n_.AVATAR,
+                    isVisible: Z,
+                    isExpandable: !1,
+                    onInteraction: M,
+                    setInteractionToastShown: U,
+                    setInteractionSent: w,
+                    setIsReplyInteraction: x,
+                    onClose: () => Y(!1)
+                })
         ]
     });
 }

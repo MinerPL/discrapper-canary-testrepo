@@ -27,7 +27,7 @@ let s = (e) => (t) => {
     o = (e) => {
         let { profileType: t, user: n } = e;
         return (0, r.EQ)(t)
-            .with(i.y0.POPOUT, i.y0.POMELO_POPOUT, () =>
+            .with(i.y0.POPOUT, () =>
                 s({
                     premiumUserWithBanner: a.popoutBannerPremium,
                     premiumUserWithoutBanner: a.popoutNoBannerPremium,
@@ -79,7 +79,6 @@ let s = (e) => (t) => {
             )
             .with(i.y0.BITE_SIZE, () => 105)
             .with(i.y0.FULL_SIZE, () => 210)
-            .with(i.y0.POMELO_POPOUT, () => 64)
             .with(i.y0.SETTINGS, () => 100)
             .with(i.y0.PANEL, () => 120)
             .with(i.y0.CANCEL_MODAL, () => 42)
@@ -90,7 +89,6 @@ let s = (e) => (t) => {
         [i.y0.PANEL]: 340,
         [i.y0.MODAL]: 600,
         [i.y0.SETTINGS]: 660,
-        [i.y0.POMELO_POPOUT]: 432,
         [i.y0.CANCEL_MODAL]: 172,
         [i.y0.BITE_SIZE]: 300,
         [i.y0.FULL_SIZE]: 600

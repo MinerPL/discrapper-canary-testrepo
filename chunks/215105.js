@@ -58,45 +58,53 @@ let v = (0, _.kt)({
         }
     };
 function C(e) {
-    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: _, sourceDetails: f, onInteraction: A, setPopoutRef: C, modalKey: y, setInteractionToastShown: D, setInteractionSent: L, setIsReplyInteraction: b } = e,
-        { trackUserProfileAction: M } = (0, m.KZ)(),
-        { sendReply: P } = (0, I.Q)(_),
-        [U, w] = i.useState(''),
-        [x, G] = i.useState((0, c.JM)(U)),
-        k = i.useRef(!1),
-        B = i.useRef(null);
+    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: _, sourceDetails: f, onInteraction: A, setPopoutRef: C, modalKey: y, setInteractionToastShown: D, setInteractionSent: L, setIsReplyInteraction: b, onClose: M } = e,
+        { trackUserProfileAction: P } = (0, m.KZ)(),
+        { sendReply: U } = (0, I.Q)(_),
+        [w, x] = i.useState(''),
+        [G, k] = i.useState((0, c.JM)(w)),
+        B = i.useRef(!1),
+        F = i.useRef(null);
     i.useEffect(() => {
-        null == C || C(null == B ? void 0 : B.current);
-    }, [B, C]);
-    let F = async (e) => {
-        var n;
-        if (null == e) return;
-        M({ action: P });
-        let r = O({
-            input: e,
-            username: null !== (n = E.Z.getNickname(t.id)) && void 0 !== n ? n : p.ZP.getName(t),
-            sourceType: _,
-            sourceDetails: f
-        });
-        b(!0),
-            L(!1),
-            D(!0),
-            await (0, T.Z)({
-                userId: t.id,
-                content: r,
-                location: 'UserProfileReplyPopout',
-                openChannel: !1,
-                whenReady: !1
-            }),
-            L(!0),
-            setTimeout(() => {
-                D(!1);
-            }, g._);
-    };
+        null == C || C(null == F ? void 0 : F.current);
+    }, [F, C]);
+    let V = async (e) => {
+            var n;
+            if (null == e) return;
+            P({ action: U });
+            let r = O({
+                input: e,
+                username: null !== (n = E.Z.getNickname(t.id)) && void 0 !== n ? n : p.ZP.getName(t),
+                sourceType: _,
+                sourceDetails: f
+            });
+            b(!0),
+                L(!1),
+                D(!0),
+                await (0, T.Z)({
+                    userId: t.id,
+                    content: r,
+                    location: 'UserProfileReplyPopout',
+                    openChannel: !1,
+                    whenReady: !1
+                }),
+                L(!0),
+                setTimeout(() => {
+                    D(!1);
+                }, g._);
+        },
+        H = {
+            [N.biteSize]: o === S.y0.BITE_SIZE,
+            [N.panel]: o === S.y0.PANEL
+        },
+        Z = {
+            [N.status]: _ === S.n_.STATUS,
+            [N.avatar]: _ === S.n_.AVATAR
+        };
     return (0, r.jsx)(l.V, {
-        ref: B,
+        ref: F,
         children: (0, r.jsx)('div', {
-            className: s()(N.container, { [N.panel]: o === S.y0.PANEL }),
+            className: s()(N.container, H, Z),
             children: (0, r.jsx)(d.Z, {
                 parentModalKey: y,
                 emojiPickerCloseOnModalOuterClick: !0,
@@ -105,41 +113,41 @@ function C(e) {
                 type: u.I.USER_PROFILE_REPLY,
                 placeholder: R(_).format({ username: h.ZP.getName(n, a, t) }),
                 channel: v,
-                textValue: U,
-                richValue: x,
+                textValue: w,
+                richValue: G,
                 onChange: (e, t, n) => {
-                    if (t !== U) w(t), G(n);
+                    if (t !== w) x(t), k(n);
                 },
-                focused: k.current,
+                focused: B.current,
                 onFocus: () => {
-                    k.current = !0;
+                    B.current = !0;
                 },
                 onBlur: (e) => {
                     var t;
-                    if (null === (t = B.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) {
-                        k.current = !1;
+                    if (null === (t = F.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) {
+                        B.current = !1;
                         return;
                     }
-                    null !== B.current &&
-                        ((k.current = !1),
+                    null !== F.current &&
+                        ((B.current = !1),
                         null == A ||
                             A({
                                 interactionType: null,
-                                interactionSourceType: null,
-                                interactionSourceDetails: null
-                            }));
+                                interactionSourceType: null
+                            }),
+                        null == M || M());
                 },
                 onSubmit: async (e) => {
                     let { value: t } = e;
                     try {
                         return (
-                            await F(t.trim()),
+                            await V(t.trim()),
                             null == A ||
                                 A({
                                     interactionType: null,
-                                    interactionSourceType: null,
-                                    interactionSourceDetails: null
+                                    interactionSourceType: null
                                 }),
+                            null == M || M(),
                             {
                                 shouldClear: !0,
                                 shouldRefocus: !1

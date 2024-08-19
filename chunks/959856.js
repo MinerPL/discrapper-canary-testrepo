@@ -267,6 +267,7 @@ class C extends l.Z {
         return Promise.reject(Error('getMLSSigningKey is not supported.'));
     }
     setSidechainCompression(e) {}
+    setSidechainCompressionStrength(e) {}
     setNativeDesktopVideoSourcePickerActive(e) {}
     presentNativeScreenSharePicker(e) {}
     releaseNativeDesktopVideoSourcePickerStream() {}

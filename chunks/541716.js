@@ -323,6 +323,7 @@ let o = {
                 alwaysUseLayer: !0,
                 small: !0
             },
-            disableAutoFocus: !0
+            disableAutoFocus: !0,
+            showCharacterCount: !0
         }
     };

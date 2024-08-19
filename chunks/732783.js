@@ -1,5 +1,5 @@
 t.d(s, {
-    Dh: function () {
+    Z: function () {
         return u;
     }
 }),
@@ -7,16 +7,13 @@ t.d(s, {
 var n = t(735250),
     a = t(470079),
     i = t(120356),
-    r = t.n(i);
-t(442837);
-var o = t(481060);
-t(100527), t(502762), t(659101), t(594174), t(931240), t(905362), t(353093), t(891728), t(438365);
-var l = t(114487),
+    r = t.n(i),
+    o = t(481060),
+    l = t(114487),
     c = t(219039),
     d = t(979264),
-    _ = t(308083);
-t(981631), t(689938);
-var E = t(989659);
+    _ = t(308083),
+    E = t(703422);
 function u(e) {
     let { className: s, clanTag: t, clanBadge: i, onTagClick: u, guildId: I, guildName: T, guildIcon: S, guildIconSize: N, memberCount: C } = e,
         m = a.useRef(null),

@@ -1,6 +1,6 @@
 l.d(n, {
     Z: function () {
-        return v;
+        return h;
     }
 });
 var t = l(735250);
@@ -14,76 +14,82 @@ var r = l(120356),
     c = l(206295),
     d = l(297781),
     m = l(43205),
-    f = l(792125),
-    p = l(231338),
-    E = l(917056);
-function v(e) {
-    let { entry: n, channel: l, title: r, subtitle: v, thumbnailUrl: C, onClickTitle: h, onClickSubtitle: x, onClickThumbnail: _, providerIconProps: N, style: T = {} } = e,
-        { primaryColor: I, secondaryColor: g } = (0, c.Z)(C);
+    f = l(313201),
+    p = l(792125),
+    E = l(231338),
+    v = l(689938),
+    C = l(917056);
+function h(e) {
+    let { entry: n, channel: l, title: r, subtitle: h, thumbnailUrl: N, onClickTitle: T, onClickSubtitle: _, onClickThumbnail: x, providerIconProps: I, style: S = {} } = e,
+        g = (0, f.Dt)(),
+        { primaryColor: O, secondaryColor: Z } = (0, c.Z)(N);
     return (
-        null != C && (T.background = 'linear-gradient(45deg, '.concat(I, ', ').concat(g, ')')),
+        null != N && (S.background = 'linear-gradient(45deg, '.concat(O, ', ').concat(Z, ')')),
         (0, t.jsx)(a.ThemeContextProvider, {
-            theme: p.BR.DARK,
-            children: (0, t.jsxs)('div', {
+            theme: E.BR.DARK,
+            children: (0, t.jsxs)('figure', {
+                'aria-roledescription': v.Z.Messages.CONTENT_INVENTORY_ACTIVITY_CARD_ARIA_ROLE_DESCRIPTION,
+                'aria-labelledby': g,
                 'data-disable-adaptive-theme': !0,
-                className: i()(E.container, (0, f.Q)(p.BR.DARK)),
-                style: T,
+                className: i()(C.container, (0, p.Q)(E.BR.DARK)),
+                style: S,
                 children: [
                     (0, t.jsx)(a.Clickable, {
-                        onClick: _,
-                        className: i()(E.thumbnailContainer, null != _ && E.clickable),
+                        onClick: x,
+                        className: i()(C.thumbnailContainer, null != x && C.clickable),
                         children: (0, t.jsx)(m.f, {
-                            src: C,
+                            src: N,
                             constrain: 'width',
                             size: 64
                         })
                     }),
                     (0, t.jsxs)('div', {
-                        className: E.infoContainer,
+                        className: C.infoContainer,
                         children: [
                             (0, t.jsx)(s.Z, {
                                 channel: l,
                                 entry: n,
-                                className: E.users
+                                className: C.users
                             }),
                             (0, t.jsx)(a.Spacer, { size: 2 }),
                             (0, t.jsx)(u.Z, {
-                                onClick: h,
+                                onClick: T,
                                 children: (0, t.jsx)(a.Heading, {
+                                    id: g,
                                     variant: 'heading-md/medium',
                                     lineClamp: 1,
-                                    className: i()(E.textPrimary, E.truncatedText),
+                                    className: i()(C.textPrimary, C.truncatedText),
                                     scaleFontToUserSetting: !0,
                                     children: r
                                 })
                             }),
-                            null != v
+                            null != h
                                 ? (0, t.jsxs)(t.Fragment, {
                                       children: [
                                           (0, t.jsx)(a.Spacer, { size: 2 }),
                                           (0, t.jsx)(u.Z, {
-                                              onClick: x,
+                                              onClick: _,
                                               children: (0, t.jsx)(a.Text, {
                                                   variant: 'text-sm/normal',
-                                                  className: i()(E.textSecondary, E.truncatedText),
+                                                  className: i()(C.textSecondary, C.truncatedText),
                                                   lineClamp: 1,
                                                   scaleFontToUserSetting: !0,
-                                                  children: v
+                                                  children: h
                                               })
                                           })
                                       ]
                                   })
                                 : null,
                             (0, t.jsx)(d.PZ, {
-                                className: E.badges,
+                                className: C.badges,
                                 entry: n,
                                 location: d.Gt.EMBED
                             })
                         ]
                     }),
                     (0, t.jsx)('div', {
-                        className: E.headerIcons,
-                        children: null != N ? (0, t.jsx)(o.Z, { ...N }) : null
+                        className: C.headerIcons,
+                        children: null != I ? (0, t.jsx)(o.Z, { ...I }) : null
                     })
                 ]
             })

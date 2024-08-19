@@ -45,8 +45,8 @@ var a = t(990547),
     V = t(392735),
     Y = t(604227),
     w = t(38915),
-    k = t(498639),
-    H = t(748717),
+    H = t(498639),
+    k = t(748717),
     W = t(419636),
     K = t(799071),
     z = t(601433),
@@ -90,7 +90,7 @@ var a = t(990547),
 let eb = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
     eZ = eO.Z,
     ev = (e) => {
-        let { unseenGiftCount: s, showPrepaidPaymentPastDueWarning: ev, impressionSource: ej, numOfPendingFamilyRequests: eB, isOverlaySupported: eU, isClipsBetaTagShowing: eG = !1, shouldMergeGameSettings: eF, isUserSettingsSearchEnabled: ey, isKeywordFilteringEnabled: eV, isStaff: eY, isInappropriateConversationWarningEnabled: ew, paymentsBlocked: ek, isEligibleForQuests: eH, showGiftNitro: eW, isStricterMessageRequestsEnabled: eK, hasLibraryApplication: ez, hasTOTPEnabled: eQ, canBroadcastActivity: eX, developerMode: eq } = e;
+        let { unseenGiftCount: s, showPrepaidPaymentPastDueWarning: ev, impressionSource: ej, numOfPendingFamilyRequests: eB, isOverlaySupported: eU, isClipsBetaTagShowing: eG = !1, shouldMergeGameSettings: eF, isUserSettingsSearchEnabled: ey, isKeywordFilteringEnabled: eV, isStaff: eY, isInappropriateConversationWarningEnabled: ew, paymentsBlocked: eH, isEligibleForQuests: ek, showGiftNitro: eW, isStricterMessageRequestsEnabled: eK, hasLibraryApplication: ez, hasTOTPEnabled: eQ, canBroadcastActivity: eX, developerMode: eq } = e;
         return Object.freeze({
             [ex.s6.SEARCH_NO_RESULTS]: {
                 section: E.ID.CUSTOM,
@@ -463,7 +463,7 @@ let eb = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 ariaLabel: eP.Z.Messages.PREMIUM,
                 searchableTitles: [eP.Z.Messages.PREMIUM],
                 label: eP.Z.Messages.PREMIUM,
-                element: H.Z,
+                element: k.Z,
                 className: eL.premiumTab
             },
             [ex.s6.GUILD_BOOSTING]: {
@@ -502,31 +502,31 @@ let eb = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eM.oAB.INVENTORY,
                 searchableTitles: [eP.Z.Messages.GIFT_NITRO],
                 parent: ex.s6.GIFT_INVENTORY,
-                predicate: () => !ek && eW
+                predicate: () => !eH && eW
             },
             [ex.s6.GIFT_CODE_REDEMPTION]: {
                 section: eM.oAB.INVENTORY,
                 searchableTitles: [eP.Z.Messages.GIFT_INVENTORY_REDEEM_CODES],
                 parent: ex.s6.GIFT_INVENTORY,
-                predicate: () => !ek
+                predicate: () => !eH
             },
             [ex.s6.GIFT_INVENTORY_QUESTS]: {
                 section: eM.oAB.INVENTORY,
                 searchableTitles: [eP.Z.Messages.QUESTS],
                 parent: ex.s6.GIFT_INVENTORY,
-                predicate: () => eH
+                predicate: () => ek
             },
             [ex.s6.GIFT_INVENTORY_LIST]: {
                 section: eM.oAB.INVENTORY,
                 searchableTitles: [eP.Z.Messages.GIFT_INVENTORY_GIFTS_YOU_PURCHASED],
                 parent: ex.s6.GIFT_INVENTORY,
-                predicate: () => !ek
+                predicate: () => !eH
             },
             [ex.s6.GIFT_BLOCKED_PAYMENTS]: {
                 section: eM.oAB.INVENTORY,
                 searchableTitles: [eP.Z.Messages.REGION_BLOCKED_PAYMENTS_HEADER],
                 parent: ex.s6.GIFT_INVENTORY,
-                predicate: () => ek
+                predicate: () => eH
             },
             [ex.s6.BILLING]: {
                 section: eM.oAB.BILLING,
@@ -718,8 +718,9 @@ let eb = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
             },
             [ex.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_HARDWARE_ACCELERATION]: {
                 section: eM.oAB.VOICE,
-                searchableTitles: [eP.Z.Messages.USER_SETTINGS_VOICE_HARDWARE_ENCODING],
-                parent: ex.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO
+                searchableTitles: [eP.Z.Messages.USER_SETTINGS_VOICE_HARDWARE_H264],
+                parent: ex.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO,
+                predicate: () => v.Z.supports(eD.AN.OPEN_H264)
             },
             [ex.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_EXPERIMENTAL_ENCODERS]: {
                 section: eM.oAB.VOICE,
@@ -1391,7 +1392,7 @@ let eb = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eM.oAB.PAYMENT_FLOW_MODAL_TEST_PAGE,
                 searchableTitles: ['Payment Flow Modals'],
                 label: 'Payment Flow Modals',
-                element: k.Z,
+                element: H.Z,
                 predicate: () => b.Z.isDeveloper
             },
             [ex.s6.TEXT_PLAYGROUND]: {

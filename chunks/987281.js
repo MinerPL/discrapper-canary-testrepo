@@ -1,123 +1,157 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return b;
+            return O;
         }
     });
 var l = t(735250);
 t(470079);
-var r = t(442837),
-    u = t(481060),
+var s = t(442837),
+    r = t(481060),
     a = t(846027),
-    s = t(239091),
-    o = t(287734),
-    i = t(872810),
-    d = t(410575),
-    c = t(441061),
+    o = t(239091),
+    i = t(287734),
+    u = t(872810),
+    c = t(410575),
+    d = t(441061),
     M = t(431368),
     Z = t(418469),
-    g = t(435064),
-    I = t(779618),
-    S = t(39604),
-    E = t(258609),
-    h = t(441167),
-    C = t(700994),
-    f = t(199902),
-    A = t(314897),
-    p = t(592125),
-    T = t(131951),
-    m = t(594174),
-    x = t(569545),
-    V = t(981631),
-    v = t(65154),
-    U = t(689938);
-function _(e) {
-    return (0, r.e7)([f.Z], () => {
-        let n = f.Z.getActiveStreamForApplicationStream(e);
-        return null != n && (0, x.V9)(n) === (0, x.V9)(e);
+    S = t(435064),
+    g = t(779618),
+    C = t(39604),
+    I = t(258609),
+    h = t(111672),
+    E = t(441167),
+    m = t(700994),
+    p = t(199902),
+    f = t(314897),
+    x = t(592125),
+    A = t(131951),
+    T = t(594174),
+    _ = t(569545),
+    b = t(981631),
+    R = t(65154),
+    V = t(689938);
+function v(e) {
+    return (0, s.e7)([p.Z], () => {
+        let n = p.Z.getActiveStreamForApplicationStream(e);
+        return null != n && (0, _.V9)(n) === (0, _.V9)(e);
     });
 }
-function b(e) {
-    let { stream: n, analyticsContext: t, appContext: f, exitFullscreen: b, onSelect: w } = e,
-        L = (function (e) {
-            let n = _(e),
-                t = (0, I.Z)(T.Z),
-                a = g.Z.getSettings().clipsEnabled,
-                s = e.ownerId === A.default.getId(),
-                { enableViewerClipping: o, ignoreSenderPreference: i } = h.Z.useExperiment({ location: 'StreamContextMenu' }, { autoTrackExposure: !1 }),
-                d = (0, r.e7)([g.Z], () => g.Z.getIsAtMaxSaveClipOperations()),
-                c = (0, r.e7)([g.Z], () => g.Z.isViewerClippingAllowedForUser(e.ownerId)) || i;
-            return t && o && n
-                ? (0, l.jsx)(u.MenuItem, {
+function O(e) {
+    let { stream: n, analyticsContext: t, appContext: p, exitFullscreen: O, onSelect: j } = e,
+        N = (function (e) {
+            let n = v(e),
+                t = (0, g.Z)(A.Z),
+                a = S.Z.getSettings().clipsEnabled,
+                o = e.ownerId === f.default.getId(),
+                { enableViewerClipping: i, ignoreSenderPreference: u } = E.Z.useExperiment({ location: 'StreamContextMenu' }, { autoTrackExposure: !1 }),
+                c = (0, s.e7)([S.Z], () => S.Z.getIsAtMaxSaveClipOperations()),
+                d = (0, s.e7)([S.Z], () => S.Z.isViewerClippingAllowedForUser(e.ownerId)) || u;
+            return t && i && n
+                ? (0, l.jsx)(r.MenuItem, {
                       id: 'clip-stream',
-                      disabled: !a || !(s || c) || d,
-                      label: U.Z.Messages.CLIPS_SAVE,
-                      action: () => (s ? (0, S.C1)() : (0, S.C1)((0, x.V9)(e)))
+                      disabled: !a || !(o || d) || c,
+                      label: V.Z.Messages.CLIPS_SAVE,
+                      action: () => (o ? (0, C.C1)() : (0, C.C1)((0, _.V9)(e)))
                   })
                 : null;
         })(n),
-        R = _(n),
-        j = (function (e) {
-            let n = _(e),
-                t = (0, C.Z)(e.ownerId, v.Yn.STREAM);
+        U = v(n),
+        w = (function (e) {
+            let n = v(e),
+                t = (0, m.Z)(e.ownerId, R.Yn.STREAM);
             return n ? t : null;
         })(n),
-        O = (function (e) {
+        L = (function (e) {
             let n;
-            let t = (0, r.e7)([E.Z], () => null != E.Z.getRemoteSessionId()),
-                a = (0, r.e7)([p.Z], () => p.Z.getChannel(e.channelId), [e.channelId]),
-                s = _(e),
-                d = m.default.getCurrentUser(),
-                c = null != d && e.ownerId === d.id;
-            return ((n = c ? U.Z.Messages.STOP_STREAMING : s ? U.Z.Messages.STOP_WATCHING : U.Z.Messages.WATCH_STREAM), t || (!c && s && (null == a ? void 0 : a.isGuildStageVoice())))
+            let t = (0, s.e7)([I.Z], () => null != I.Z.getRemoteSessionId()),
+                a = (0, s.e7)([x.Z], () => x.Z.getChannel(e.channelId), [e.channelId]),
+                o = v(e),
+                c = T.default.getCurrentUser(),
+                d = null != c && e.ownerId === c.id;
+            return ((n = d ? V.Z.Messages.STOP_STREAMING : o ? V.Z.Messages.STOP_WATCHING : V.Z.Messages.WATCH_STREAM), t || (!d && o && (null == a ? void 0 : a.isGuildStageVoice())))
                 ? null
-                : (0, l.jsx)(u.MenuItem, {
+                : (0, l.jsx)(r.MenuItem, {
                       id: 'watch',
                       label: n,
-                      action: s
+                      action: o
                           ? function () {
-                                (0, i.g)((0, x.V9)(e));
+                                (0, u.g)((0, _.V9)(e));
                             }
                           : function () {
-                                o.default.selectVoiceChannel(e.channelId), (0, i.rn)(e);
+                                i.default.selectVoiceChannel(e.channelId), (0, u.rn)(e);
                             }
                   });
         })(n),
-        k = (function (e) {
-            let n = _(e),
-                t = (0, r.e7)([T.Z], () => T.Z.isLocalMute(e.ownerId, v.Yn.STREAM)),
-                s = m.default.getCurrentUser(),
-                o = null != s && e.ownerId === s.id;
-            return !n || o
+        G = (function (e) {
+            let n = v(e),
+                t = (0, s.e7)([A.Z], () => A.Z.isLocalMute(e.ownerId, R.Yn.STREAM)),
+                o = T.default.getCurrentUser(),
+                i = null != o && e.ownerId === o.id;
+            return !n || i
                 ? null
-                : (0, l.jsx)(u.MenuCheckboxItem, {
+                : (0, l.jsx)(r.MenuCheckboxItem, {
                       id: 'mute',
-                      label: U.Z.Messages.SOUND_MUTE,
+                      label: V.Z.Messages.SOUND_MUTE,
                       action: function () {
-                          a.Z.toggleLocalMute(e.ownerId, v.Yn.STREAM);
+                          a.Z.toggleLocalMute(e.ownerId, R.Yn.STREAM);
                       },
                       checked: t
                   });
         })(n),
-        G = (0, Z.Z)(n, f, b),
-        N = (0, M.Z)(n.channelId, n.ownerId),
-        P = (0, c.Z)(n.channelId),
-        Y = (0, r.e7)([p.Z], () => p.Z.getChannel(n.channelId), [n.channelId]);
-    return (0, l.jsx)(d.Z, {
+        k = (function (e) {
+            let n = v(e),
+                t = e.ownerId === f.default.getId(),
+                { sidechainAvailable: o } = h.Z.getCurrentConfig({ location: 'StreamContextMenu' }),
+                i = (0, s.e7)([A.Z], () => A.Z.getSidechainCompression()),
+                u = (0, s.e7)([A.Z], () => A.Z.getSidechainCompressionStrength());
+            return !t && n && o
+                ? (0, l.jsxs)(r.MenuGroup, {
+                      children: [
+                          (0, l.jsx)(r.MenuCheckboxItem, {
+                              id: 'sidechain-compression',
+                              label: V.Z.Messages.SIDECHAIN_COMPRESSION,
+                              action: () => a.Z.setSidechainCompression(!i),
+                              checked: i
+                          }),
+                          (0, l.jsx)(r.MenuControlItem, {
+                              id: 'sidechain-parameters',
+                              label: V.Z.Messages.SIDECHAIN_COMPRESSION_STRENGTH,
+                              control: (e, n) =>
+                                  (0, l.jsx)(r.MenuSliderControl, {
+                                      ...e,
+                                      ref: n,
+                                      value: u,
+                                      maxValue: 100,
+                                      onChange: (e) => a.Z.setSidechainCompressionStrength(e),
+                                      'aria-label': V.Z.Messages.SIDECHAIN_COMPRESSION_STRENGTH
+                                  })
+                          })
+                      ]
+                  })
+                : null;
+        })(n),
+        P = (0, Z.Z)(n, p, O),
+        H = (0, M.Z)(n.channelId, n.ownerId),
+        D = (0, d.Z)(n.channelId),
+        Y = (0, s.e7)([x.Z], () => x.Z.getChannel(n.channelId), [n.channelId]);
+    return (0, l.jsx)(c.Z, {
         context: t,
-        object: V.qAy.CONTEXT_MENU,
-        children: (0, l.jsxs)(u.Menu, {
+        object: b.qAy.CONTEXT_MENU,
+        children: (0, l.jsxs)(r.Menu, {
             navId: 'stream-context',
-            onClose: s.Zy,
-            'aria-label': U.Z.Messages.STREAM_ACTIONS_MENU_LABEL,
-            onSelect: w,
+            onClose: o.Zy,
+            'aria-label': V.Z.Messages.STREAM_ACTIONS_MENU_LABEL,
+            onSelect: j,
             children: [
-                (0, l.jsxs)(u.MenuGroup, {
-                    children: [O, L, k]
+                (0, l.jsxs)(r.MenuGroup, {
+                    children: [L, N, G]
                 }),
-                (0, l.jsx)(u.MenuGroup, { children: j }),
-                (0, l.jsxs)(u.MenuGroup, {
-                    children: [(null == Y ? void 0 : Y.isGuildStageVoice()) ? null : P, N, R && G]
+                (0, l.jsx)(r.MenuGroup, { children: w }),
+                k,
+                (0, l.jsxs)(r.MenuGroup, {
+                    children: [(null == Y ? void 0 : Y.isGuildStageVoice()) ? null : D, H, U && P]
                 })
             ]
         })

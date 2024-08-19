@@ -10,7 +10,5 @@ e.exports = {
     mentionButton: 'mentionButton_b11c5e',
     mentionIcon: 'mentionIcon_b11c5e',
     separator: 'separator_b11c5e',
-    closeButton: 'closeButton_b11c5e',
-    closeIcon: 'closeIcon_b11c5e',
     createThreadButton: 'createThreadButton_b11c5e'
 };

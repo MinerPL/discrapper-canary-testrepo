@@ -1,6 +1,6 @@
 n.d(t, {
     V: function () {
-        return T;
+        return g;
     },
     e: function () {
         return I;
@@ -11,8 +11,8 @@ var r,
     i = n(735250);
 n(470079);
 var a = n(442837),
-    s = n(481060),
-    o = n(570140),
+    s = n(570140),
+    o = n(962293),
     l = n(592125),
     u = n(271383),
     c = n(944486),
@@ -45,7 +45,7 @@ class p extends (r = a.ZP.PersistedStore) {
     }
 }
 f(p, 'displayName', 'PTOStore'), f(p, 'persistKey', 'PTOStore');
-let m = new p(o.Z, {}),
+let m = new p(s.Z, {}),
     I = (e) =>
         (0, a.e7)([u.ZP, d.default, m], () => {
             let t = d.default.getCurrentUser();
@@ -55,24 +55,14 @@ let m = new p(o.Z, {}),
             let r = u.ZP.getNicknames(n.id).some((e) => e.endsWith('[PTO]') || e.endsWith('[OOO]'));
             return r ? !m.hasId(n.id) && r : (h.delete(n.id) && m.emitChange(), !1);
         }),
-    T = () =>
+    T = () => {
+        let e = c.Z.getChannelId();
+        if (null == e) return;
+        let t = l.Z.getChannel(e);
+        null != t && t.isPrivate() && !h.has(t.getRecipientId()) && (h.add(t.getRecipientId()), m.emitChange());
+    },
+    g = () =>
         (0, i.jsxs)('div', {
             className: E.bar,
-            children: [
-                _.Z.Messages.STAFF_PTO_NOTICE,
-                (0, i.jsx)(s.Clickable, {
-                    className: E.closeButton,
-                    onClick: () => {
-                        let e = c.Z.getChannelId();
-                        if (null == e) return;
-                        let t = l.Z.getChannel(e);
-                        null != t && t.isPrivate() && !h.has(t.getRecipientId()) && (h.add(t.getRecipientId()), m.emitChange());
-                    },
-                    children: (0, i.jsx)(s.CircleXIcon, {
-                        size: 'md',
-                        color: 'currentColor',
-                        className: E.closeIcon
-                    })
-                })
-            ]
+            children: [_.Z.Messages.STAFF_PTO_NOTICE, (0, i.jsx)(o.B, { onClick: T })]
         });

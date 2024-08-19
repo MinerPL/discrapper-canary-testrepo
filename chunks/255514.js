@@ -177,7 +177,11 @@ t.Z = (e) => {
                         eh &&
                         (0, r.jsx)(y.Z, {
                             settingsUpsells: ef,
-                            channelId: n.record.channel_id
+                            channelId: n.record.channel_id,
+                            onModalClose: H,
+                            reportId: j,
+                            reportType: n,
+                            reportSubType: B
                         }),
                     null != G(t, 'channel_preview') && 'stage_channel' === n.name && (0, r.jsx)(D.Z, { stageInstance: n.record }),
                     null != G(t, 'guild_scheduled_event_preview') && 'guild_scheduled_event' === n.name && (0, r.jsx)(S.Z, { event: n.record }),

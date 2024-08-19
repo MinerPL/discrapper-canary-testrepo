@@ -8,6 +8,7 @@ e.exports = {
     categorySectionNitroDivider: 'categorySectionNitroDivider_a3bc57',
     categorySectionNitroLocked: 'categorySectionNitroLocked_a3bc57',
     header: 'header_a3bc57',
+    categorySectionOpacityAnimation: 'categorySectionOpacityAnimation_a3bc57',
     inactiveNitroHeader: 'inactiveNitroHeader_a3bc57',
     activeNitroHeader: 'activeNitroHeader_a3bc57',
     nitroBottomDivider: 'nitroBottomDivider_a3bc57'

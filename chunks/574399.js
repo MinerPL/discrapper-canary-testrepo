@@ -1,6 +1,6 @@
 l.d(n, {
     I: function () {
-        return N;
+        return _;
     }
 });
 var t = l(735250),
@@ -19,35 +19,38 @@ var t = l(735250),
     v = l(937615),
     C = l(147496),
     h = l(519896),
-    x = l(981631),
-    _ = l(689938);
-function N(e) {
+    N = l(981631),
+    T = l(689938);
+function _(e) {
     r.useEffect(() => {
-        if (null != e) (0, u.jU)(e), (0, o.GZ)(e), (0, s.km)(e);
+        if (null != e) (0, u.$N)('', e), (0, s.km)(e);
     }, [e]);
-    let n = (0, i.e7)([p.Z], () => (null != e ? p.Z.get(e) : void 0), [e]),
-        l = (0, i.e7)([f.Z], () => (null != e ? f.Z.getForSKU(e) : void 0), [e]),
-        N = r.useMemo(() => (null != l ? l.map((e) => e.id)[0] : void 0), [l]),
-        T = (0, i.e7)([E.Z], () => (null != e ? E.Z.getForSKU(e) : void 0), [e]);
+    let n = (0, i.e7)([p.Z], () => (null != e ? p.Z.get(e) : void 0), [e]);
     r.useEffect(() => {
-        if (null != N) (0, c.vY)(N);
-    }, [N]);
+        (null == n ? void 0 : n.type) === N.epS.SUBSCRIPTION && (0, o.GZ)(n.id);
+    }, [n]);
+    let l = (0, i.Wu)([f.Z], () => (null != e ? f.Z.getForSKU(e) : []), [e]),
+        _ = r.useMemo(() => (null != l ? l.map((e) => e.id)[0] : void 0), [l]),
+        x = (0, i.e7)([E.Z], () => (null != e ? E.Z.getForSKU(e) : void 0), [e]);
+    r.useEffect(() => {
+        if (null != _) (0, c.vY)(_);
+    }, [_]);
     let I = null == n ? void 0 : n.applicationId,
-        g = (0, i.e7)([d.Z], () => (null != I ? d.Z.getSubscriptionGroupListingForApplication(I) : null), [I]),
-        S = r.useCallback(() => {
-            if ((null == n ? void 0 : n.applicationId) == null || (null == n ? void 0 : n.id) == null || (null == g ? void 0 : g.id) == null || (null == g ? void 0 : g.sku_flags) == null) return null;
+        S = (0, i.e7)([d.Z], () => (null != I ? d.Z.getSubscriptionGroupListingForApplication(I) : null), [I]),
+        g = r.useCallback(() => {
+            if ((null == n ? void 0 : n.applicationId) == null || (null == n ? void 0 : n.id) == null || (null == S ? void 0 : S.id) == null || (null == S ? void 0 : S.sku_flags) == null) return null;
             (0, a.openModal)((e) => {
                 let { onClose: l, transitionState: r } = e;
                 return (0, t.jsx)(h.SubscriptionDetailsModal, {
                     appId: n.applicationId,
-                    groupListingId: g.id,
-                    groupListingType: (0, m.KW)(g.sku_flags) ? 'user' : 'guild',
+                    groupListingId: S.id,
+                    groupListingType: (0, m.KW)(S.sku_flags) ? 'user' : 'guild',
                     onClose: l,
                     skuId: n.id,
                     transitionState: r
                 });
             });
-        }, [null == n ? void 0 : n.applicationId, null == n ? void 0 : n.id, null == g ? void 0 : g.id, null == g ? void 0 : g.sku_flags]),
+        }, [null == n ? void 0 : n.applicationId, null == n ? void 0 : n.id, null == S ? void 0 : S.id, null == S ? void 0 : S.sku_flags]),
         O = r.useCallback(() => {
             if (null == n) return null;
             (0, a.openModal)((e) => {
@@ -60,36 +63,36 @@ function N(e) {
                 });
             });
         }, [n]);
-    if (null != n && null != T && (null == n || n.type !== x.epS.SUBSCRIPTION || null != g)) {
+    if (null != n && null != x && (null == n || n.type !== N.epS.SUBSCRIPTION || null != S)) {
         if (null == e || (null != n && !n.available))
             return {
                 disabled: !0,
-                label: _.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
+                label: T.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
             };
-        if (n.type === x.epS.SUBSCRIPTION) {
+        if (n.type === N.epS.SUBSCRIPTION) {
             if (null == l || 0 === l.length)
                 return {
                     disabled: !0,
-                    label: _.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
+                    label: T.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
                 };
             let e = l[0];
             return {
                 disabled: !1,
-                label: _.Z.Messages.INTERACTION_PREMIUM_BUTTON_CTA.format({
+                label: T.Z.Messages.INTERACTION_PREMIUM_BUTTON_CTA.format({
                     skuName: n.name,
                     price: (0, v.T4)(e.price, e.currency)
                 }),
-                onClick: S
+                onClick: g
             };
         }
         return null == n.price
             ? {
                   disabled: !0,
-                  label: _.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
+                  label: T.Z.Messages.INTERACTION_PREMIUM_BUTTON_UNAVAILABLE
               }
             : {
                   disabled: !1,
-                  label: _.Z.Messages.INTERACTION_PREMIUM_BUTTON_CTA.format({
+                  label: T.Z.Messages.INTERACTION_PREMIUM_BUTTON_CTA.format({
                       skuName: n.name,
                       price: (0, v.T4)(n.price.amount, n.price.currency)
                   }),

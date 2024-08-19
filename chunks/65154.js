@@ -1,9 +1,9 @@
 n.d(t, {
     $A: function () {
-        return K;
+        return X;
     },
     $B: function () {
-        return Q;
+        return ee;
     },
     $j: function () {
         return v;
@@ -21,16 +21,22 @@ n.d(t, {
         return M;
     },
     Er: function () {
-        return ee;
+        return ei;
     },
     Gs: function () {
-        return $;
+        return en;
     },
     H3: function () {
         return k;
     },
+    JA: function () {
+        return Q;
+    },
     P8: function () {
-        return J;
+        return er;
+    },
+    QO: function () {
+        return q;
     },
     QP: function () {
         return O;
@@ -47,11 +53,14 @@ n.d(t, {
     V8: function () {
         return x;
     },
+    WA: function () {
+        return z;
+    },
     XR: function () {
-        return ei;
+        return el;
     },
     YE: function () {
-        return et;
+        return ea;
     },
     Yh: function () {
         return V;
@@ -61,6 +70,9 @@ n.d(t, {
     },
     Z: function () {
         return C;
+    },
+    Zq: function () {
+        return K;
     },
     ad: function () {
         return b;
@@ -84,28 +96,28 @@ n.d(t, {
         return W;
     },
     kS: function () {
-        return ea;
+        return eu;
     },
     mC: function () {
-        return q;
+        return J;
     },
     mN: function () {
-        return z;
+        return $;
     },
     pM: function () {
         return N;
     },
     pk: function () {
-        return er;
+        return eo;
     },
     u$: function () {
-        return X;
+        return et;
     },
     uA: function () {
         return w;
     },
     ux: function () {
-        return es;
+        return ec;
     },
     vA: function () {
         return B.vA;
@@ -114,7 +126,7 @@ n.d(t, {
         return Y;
     },
     yf: function () {
-        return en;
+        return es;
     }
 });
 var r,
@@ -162,23 +174,27 @@ let F = 100,
     Y = 'default',
     j = 'disabled',
     W = 0.1,
-    K = 600000,
-    z = 150000,
-    q = 10000000,
-    Q = 5000,
-    X = 15000,
-    $ = 30,
-    J = 20,
-    ee = 12,
-    et = 3500000,
-    en = 9000000,
-    er = 500000,
-    ei = ['remoteSinkWantsPixelCount', 'remoteSinkWantsMaxFramerate', 'encodingVideoMinBitRate', 'encodingVideoMaxBitRate', 'encodingVideoBitRate', 'streamParameters'],
-    ea = {
+    K = -40,
+    z = -25,
+    q = 1 / 15,
+    Q = 0.8,
+    X = 600000,
+    $ = 150000,
+    J = 10000000,
+    ee = 5000,
+    et = 15000,
+    en = 30,
+    er = 20,
+    ei = 12,
+    ea = 3500000,
+    es = 9000000,
+    eo = 500000,
+    el = ['remoteSinkWantsPixelCount', 'remoteSinkWantsMaxFramerate', 'encodingVideoMinBitRate', 'encodingVideoMaxBitRate', 'encodingVideoBitRate', 'streamParameters'],
+    eu = {
         videoBudget: {
             width: 1280,
             height: 720,
-            framerate: $
+            framerate: en
         },
         videoCapture: {
             width: 1280,
@@ -196,7 +212,7 @@ let F = 100,
         },
         videoBitrateFloor: 150000
     },
-    es = 60000;
+    ec = 60000;
 ((c = y || (y = {})).AUTO_ENABLE = 'AUTO_ENABLE'),
     (c.ATTENUATION = 'ATTENUATION'),
     (c.AUDIO_INPUT_DEVICE = 'AUDIO_INPUT_DEVICE'),

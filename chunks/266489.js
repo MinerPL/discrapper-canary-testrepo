@@ -2,6 +2,7 @@ e.exports = {
     masonryListContainer: 'masonryListContainer_a24e0c',
     masonryList: 'masonryList_a24e0c',
     emptySavedGuilds: 'emptySavedGuilds_a24e0c',
+    paginationInput: 'paginationInput_a24e0c',
     previewListContainer: 'previewListContainer_a24e0c',
     previewListSection: 'previewListSection_a24e0c',
     previewList: 'previewList_a24e0c',

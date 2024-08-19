@@ -24,39 +24,42 @@ let d = {
         hqStreamingOptInPopoutDismissedCount: 0,
         hqStreamingOptInPopoutDismissed: !1,
         hqStreamingIsEnabled: !1,
-        hqStreamingDidEnable: !1,
-        hqStreamingOptInPopoutShouldShow: !1
+        hqStreamingDidEnable: !1
     },
-    _ = d;
-function E(e) {
-    _ = {
-        ..._,
-        ...(null == e ? void 0 : e(_))
+    _ = !1,
+    E = d;
+function f(e) {
+    E = {
+        ...E,
+        ...(null == e ? void 0 : e(E))
     };
 }
-function f() {
+function h() {
     r = u.Z.getCurrentConfig({ location: 'handleExperimentFetch' }, { autoTrackExposure: !1 });
 }
-class h extends (i = a.ZP.PersistedStore) {
+class p extends (i = a.ZP.PersistedStore) {
     getState() {
+        return E;
+    }
+    shouldShowOptInPopout() {
         return _;
     }
     initialize(e) {
-        null != e && (_ = e);
+        null != e && (E = e);
     }
 }
-c(h, 'displayName', 'PerksDemosUIState'),
-    c(h, 'persistKey', 'PerksDemosUIState'),
-    (t.Z = new h(s.Z, {
+c(p, 'displayName', 'PerksDemosUIState'),
+    c(p, 'persistKey', 'PerksDemosUIState'),
+    (t.Z = new p(s.Z, {
         PERMIUM_PERKS_DEMO_FRAME_ANIMATION_PLAYED: function () {
-            E(() => ({ hqStreamingFrameAnimationPlayed: !0 }));
+            f(() => ({ hqStreamingFrameAnimationPlayed: !0 }));
         },
         PREMIUM_PERKS_DEMO_POPOUT_DISMISSED: function () {
-            E(() => ({ hqStreamingPopoutDismissed: !0 }));
+            f(() => ({ hqStreamingPopoutDismissed: !0 }));
         },
         PREMIUM_PERKS_DEMO_OPT_IN_POPOUT_DISMISSED: function () {
-            !_.hqStreamingOptInPopoutDismissed &&
-                E((e) => ({
+            !E.hqStreamingOptInPopoutDismissed &&
+                f((e) => ({
                     hqStreamingOptInPopoutDismissedCount: e.hqStreamingOptInPopoutDismissedCount + 1,
                     hqStreamingOptInPopoutDismissed: !0
                 }));
@@ -64,26 +67,26 @@ c(h, 'displayName', 'PerksDemosUIState'),
         PREMIUM_PERKS_DEMO_OPT_IN_POPOUT_SHOULD_SHOW: function (e) {
             let { shouldShow: t } = e,
                 n = null != r && r.extendedOptInDuration ? 5 : 1;
-            E((e) => ({ hqStreamingOptInPopoutShouldShow: t && e.hqStreamingOptInPopoutDismissedCount < n }));
+            _ = t && E.hqStreamingOptInPopoutDismissedCount < n;
         },
         PREMIUM_PERKS_DEMO_ENABLED: function (e) {
             let { enabled: t } = e;
-            E((e) => ({
+            f((e) => ({
                 hqStreamingIsEnabled: t,
                 hqStreamingDidEnable: t || e.hqStreamingDidEnable
             }));
         },
         PREMIUM_PERKS_DEMO_UI_RESET: function () {
-            E(() => d);
+            f(() => d);
         },
         VOICE_STATE_UPDATES: function () {
             if (null == l.Z.getVoiceStateForUser(o.default.getId()))
-                E(() => ({
+                f(() => ({
                     hqStreamingOptInPopoutDismissed: !1,
                     hqStreamingFrameAnimationPlayed: !1
                 }));
         },
-        CONNECTION_OPEN: f,
-        EXPERIMENTS_FETCH_SUCCESS: f,
-        EXPERIMENT_OVERRIDE_BUCKET: f
+        CONNECTION_OPEN: h,
+        EXPERIMENTS_FETCH_SUCCESS: h,
+        EXPERIMENT_OVERRIDE_BUCKET: h
     }));

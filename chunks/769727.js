@@ -3,14 +3,14 @@ var i,
     a,
     s = n(735250),
     r = n(470079),
-    l = n(338545),
+    l = n(567526),
     o = n(143927),
     c = n(704215),
     d = n(481060),
     u = n(393238),
     _ = n(963202),
-    E = n(353093),
-    h = n(605236),
+    h = n(353093),
+    E = n(605236),
     m = n(931515),
     I = n(807933),
     g = n(702646),
@@ -36,11 +36,11 @@ let N = new Set([p.v0.ADMIN_UPSELL, p.v0.DISCOVERY]),
                 delay: 500,
                 onRest: () => a(!1)
             }),
-            u = (0, h.wE)(c.z.NEW_GAMING_DISCOVERY_NOTIF);
+            u = (0, E.wE)(c.z.NEW_GAMING_DISCOVERY_NOTIF);
         switch (
             (r.useEffect(() => {
                 !u &&
-                    (0, h.EW)(c.z.NEW_GAMING_DISCOVERY_NOTIF, {
+                    (0, E.EW)(c.z.NEW_GAMING_DISCOVERY_NOTIF, {
                         dismissAction: f.L.TAKE_ACTION,
                         forceTrack: !0
                     });
@@ -113,29 +113,25 @@ function Z(e) {
     let { mode: t, children: n } = e,
         i = (0, p.GN)((e) => e.userUpsellScreen, o.Z),
         a = (0, p.GN)((e) => e.started, o.Z),
-        { guilds: l } = (0, _.C3)({
+        { guilds: l, enableClanCreation: c } = (0, _.C3)({
             location: 'ClanDiscoveryAdminContainer',
             includeConverted: !0
         }),
-        c = r.useMemo(() => l.filter((e) => !(0, E.EJ)(e)), [l]),
-        { enableApplication: d } = (0, _.Fg)('ClanDiscoveryAdminContainer');
+        d = r.useMemo(() => l.filter((e) => !(0, h.EJ)(e)), [l]),
+        u = (0, _.iN)('ClanDiscoveryAdminContainer');
     return (
         r.useEffect(() => {
-            let e = l.length > 0;
-            if (e && !d && i === p.o2.USER_UPSELL) {
-                (0, p.fH)(p.v0.ADMIN_UPSELL);
-                return;
-            }
-            let n = N.has(t);
-            if (!e && d && !a && n) {
+            let e = l.length > 0,
+                n = N.has(t);
+            if (!e && !a && n) {
                 (0, p.fH)(p.v0.GET_STARTED);
                 return;
             }
-            if (d && t === p.v0.ADMIN_UPSELL && 0 === c.length) {
-                (0, p.fH)(p.v0.GET_STARTED), p.GN.getState().setUserUpsellScreen(p.o2.USER_UPSELL);
+            if (c && !u && t !== p.v0.ADMIN_UPSELL) {
+                (0, p.fH)(p.v0.ADMIN_UPSELL);
                 return;
             }
-        }, [c.length, l.length, a, d, t, i]),
+        }, [d.length, l.length, a, t, i, c, u]),
         (0, s.jsx)(s.Fragment, { children: n })
     );
 }

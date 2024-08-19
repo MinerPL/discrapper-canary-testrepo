@@ -30,5 +30,6 @@ e.exports = {
     imageScroller: 'imageScroller_e881fc',
     mediaModal: 'mediaModal_e881fc',
     gameArtwork: 'gameArtwork_e881fc',
+    gameArtworkFocusRing: 'gameArtworkFocusRing_e881fc',
     similarGames: 'similarGames_e881fc'
 };

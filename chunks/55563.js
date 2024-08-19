@@ -65,14 +65,6 @@ class v extends (i = l.yh) {
           })
         : (a[s] = o),
     (t.Z = new v(u.Z, {
-        STORE_LISTINGS_FETCH_START: function (e) {
-            let { skuId: t } = e;
-            E.add(t);
-        },
-        STORE_LISTINGS_FETCH_FAIL: function (e) {
-            let { skuId: t } = e;
-            E.delete(t), f.add(t);
-        },
         STORE_LISTINGS_FETCH_SUCCESS: function (e) {
             let { storeListings: t } = e;
             for (let e of t) g(e);

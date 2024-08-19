@@ -18,7 +18,8 @@ function c(e) {
                       width: 20,
                       height: 20,
                       size: 'custom',
-                      color: null != h ? h : 'currentColor'
+                      colorClass: null != h ? h : '',
+                      color: 'currentColor'
                   })
                 : d;
     return (0, i.jsx)(a.Tooltip, {

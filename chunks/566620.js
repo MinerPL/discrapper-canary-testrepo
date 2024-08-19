@@ -76,7 +76,7 @@ var r = n(990547),
     U = n(363522),
     w = n(672181),
     x = n(882347),
-    G = n(307091),
+    G = n(224189),
     k = n(374065),
     B = n(917107),
     F = n(89425),
@@ -219,31 +219,30 @@ async function z(e) {
     return !0;
 }
 async function q(e) {
-    var t;
-    let n;
-    let { applicationId: i, channelId: a, embeddedActivitiesManager: o, guildId: l } = e,
-        u = A.default.getSessionId(),
-        c = R.default.getCurrentUser();
-    if (null == i) return !1;
-    let d = null !== (t = p.Z.getApplication(i)) && void 0 !== t ? t : await (0, G.Z)(i, a);
-    if (null == a) return y.S.dispatch(Z.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: i }), !1;
-    let _ = N.Z.getChannel(a);
-    if (null == _ || null == c || null == d) return !1;
-    let E =
-        null != a
+    let t,
+        { applicationId: n, channelId: i, embeddedActivitiesManager: a, guildId: o } = e,
+        l = A.default.getSessionId(),
+        u = R.default.getCurrentUser();
+    if (null == n) return !1;
+    let c = await (0, G.Z)(n, i);
+    if (null == i) return y.S.dispatch(Z.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: n }), !1;
+    let d = N.Z.getChannel(i);
+    if (null == d || null == u || null == c) return !1;
+    let _ =
+        null != i
             ? (0, k.e4)({
-                  channelId: a,
+                  channelId: i,
                   ChannelStore: N.Z,
                   GuildStore: v.Z,
                   PermissionStore: O.Z,
                   VoiceStateStore: C.Z
               })
             : k.jy.NO_CHANNEL;
-    if (E !== k.jy.CAN_LAUNCH)
+    if (_ !== k.jy.CAN_LAUNCH)
         return (
-            E === k.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
+            _ === k.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
                 ? (0, g.w)()
-                : E === k.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
+                : _ === k.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
                   s.Z.show({
                       title: W.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,
                       body: W.Z.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
@@ -251,44 +250,44 @@ async function q(e) {
                   }),
             !1
         );
-    let f = P.ZP.getCurrentEmbeddedActivity();
+    let E = P.ZP.getCurrentEmbeddedActivity();
     if (
-        ((null == f ? void 0 : f.applicationId) != null && (n = p.Z.getApplication(null == f ? void 0 : f.applicationId)),
+        ((null == E ? void 0 : E.applicationId) != null && (t = p.Z.getApplication(null == E ? void 0 : E.applicationId)),
         !(await (0, x.p)({
-            applicationId: i,
-            application: d,
-            channel: _,
-            currentEmbeddedApplication: n,
-            embeddedActivitiesManager: o,
-            user: c
+            applicationId: n,
+            application: c,
+            channel: d,
+            currentEmbeddedApplication: t,
+            embeddedActivitiesManager: a,
+            user: u
         })))
     )
         return !1;
-    let h = (0, B.Z)(a),
-        m = H.wP.includes(_.type);
-    if (h) {
+    let f = (0, B.Z)(i),
+        h = H.wP.includes(d.type);
+    if (f) {
         if (
             !(await (0, F.Z)({
-                channelId: a,
-                bypassChangeModal: null != n
+                channelId: i,
+                bypassChangeModal: null != t
             }))
         )
             return !1;
-    } else if (!(0, M.WS)(_, !0) || !m) return !1;
+    } else if (!(0, M.WS)(d, !0) || !h) return !1;
     return (
         await b.Z.post({
-            url: Z.ANM.ACTIVITY_CHANNEL_LAUNCH(a, i),
+            url: Z.ANM.ACTIVITY_CHANNEL_LAUNCH(i, n),
             body: {
-                session_id: u,
-                guild_id: null != l ? l : void 0
+                session_id: l,
+                guild_id: null != o ? o : void 0
             },
             trackedActionData: {
                 event: r.NetworkActionNames.EMBEDDED_ACTIVITIES_LAUNCH,
                 properties: {
-                    guild_id: l,
-                    channel_id: a,
-                    application_id: i,
-                    session_id: u
+                    guild_id: o,
+                    channel_id: i,
+                    application_id: n,
+                    session_id: l
                 }
             },
             retries: 3,

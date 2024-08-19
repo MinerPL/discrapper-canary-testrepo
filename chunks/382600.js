@@ -30,8 +30,9 @@ let r = {
     },
     l = (e) => {
         let t = a.useRef(null),
-            l = a.useRef(e),
-            o = a.useMemo(
+            l = a.useRef(e);
+        l.current = e;
+        let o = a.useMemo(
                 () => () => {
                     null != t.current && t.current.play(e);
                 },

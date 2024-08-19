@@ -219,6 +219,12 @@ _(y, 'displayName', 'RTCDebugStore'),
         },
         VOICE_CHANNEL_SELECT: function (e) {
             null != e.channelId && (R(), p.clear());
+        },
+        RTC_CONNECTION_VIDEO: function (e) {
+            if (null === e.streamId) {
+                let t = T(e.userId, e.context);
+                p.set(t, d.Z.NO_OVERRIDE);
+            }
         }
     })),
     l.Z.getMediaEngine().on(a.aB.ConnectionStats, function (e) {

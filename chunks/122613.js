@@ -1,43 +1,41 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 });
-var r = n(812206),
-    i = n(592125),
-    a = n(594174),
-    s = n(585483),
-    o = n(337682),
-    l = n(566620),
-    u = n(307091),
-    c = n(574952),
-    d = n(275920),
-    _ = n(981631);
-async function E(e) {
-    var t;
-    let { targetApplicationId: n, locationObject: E, channelId: f, analyticsLocations: h, componentId: p } = e,
-        m = (0, c.Z)(),
-        I = a.default.getCurrentUser();
-    if (null == n) return !1;
-    let T = null !== (t = r.Z.getApplication(n)) && void 0 !== t ? t : await (0, u.Z)(n, f);
-    return null == f
-        ? (s.S.dispatch(_.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: n }), !1)
-        : null != i.Z.getChannel(f) &&
-              null != I &&
-              null != T &&
-              ((0, d.Z)({
-                  type: _.q5t.LAUNCH,
-                  userId: I.id,
-                  applicationId: T.id,
-                  locationObject: E,
-                  analyticsLocations: h
+var r = n(592125),
+    i = n(594174),
+    a = n(585483),
+    s = n(337682),
+    o = n(566620),
+    l = n(224189),
+    u = n(574952),
+    c = n(275920),
+    d = n(981631);
+async function _(e) {
+    let { targetApplicationId: t, locationObject: n, channelId: _, analyticsLocations: E, componentId: f } = e,
+        h = (0, u.Z)(),
+        p = i.default.getCurrentUser();
+    if (null == t) return !1;
+    let m = await (0, l.Z)(t, _);
+    return null == _
+        ? (a.S.dispatch(d.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: t }), !1)
+        : null != r.Z.getChannel(_) &&
+              null != p &&
+              null != m &&
+              ((0, c.Z)({
+                  type: d.q5t.LAUNCH,
+                  userId: p.id,
+                  applicationId: m.id,
+                  locationObject: n,
+                  analyticsLocations: E
               }),
-              o.tZ(T.id),
-              await (0, l.af)({
-                  channelId: f,
-                  applicationId: T.id,
+              s.tZ(m.id),
+              await (0, o.af)({
+                  channelId: _,
+                  applicationId: m.id,
                   isStart: !0,
-                  embeddedActivitiesManager: m,
-                  componentId: p
+                  embeddedActivitiesManager: h,
+                  componentId: f
               }));
 }

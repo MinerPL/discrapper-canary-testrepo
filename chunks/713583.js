@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return E;
     }
 });
 var r = n(735250),
@@ -8,19 +8,21 @@ var r = n(735250),
     a = n(120356),
     s = n.n(a),
     o = n(239091),
-    l = n(665692),
-    u = n(689938),
-    c = n(286378);
-function d(e) {
+    l = n(962293),
+    u = n(555573),
+    c = n(665692),
+    d = n(689938),
+    _ = n(286378);
+function E(e) {
     var t;
     let a,
-        d,
-        _,
-        { className: E, activeCommand: f, activeOption: h, optionStates: p } = e,
-        m = i.useCallback(
+        E,
+        f,
+        { className: h, activeCommand: p, activeOption: m, optionStates: I, channelId: T } = e,
+        g = i.useCallback(
             (e) => {
                 var t;
-                let i = null == f ? void 0 : null === (t = f.rootCommand) || void 0 === t ? void 0 : t.id;
+                let i = null == p ? void 0 : null === (t = p.rootCommand) || void 0 === t ? void 0 : t.id;
                 if (null == i) {
                     e.preventDefault();
                     return;
@@ -31,34 +33,50 @@ function d(e) {
                         (0, r.jsx)(e, {
                             ...t,
                             id: i,
-                            label: u.Z.Messages.COPY_ID_COMMAND
+                            label: d.Z.Messages.COPY_ID_COMMAND
                         });
                 });
             },
-            [null == f ? void 0 : null === (t = f.rootCommand) || void 0 === t ? void 0 : t.id]
-        );
-    if (null == f) return null;
-    if (null != h) {
-        let e = p[h.name].lastValidationResult;
-        (a = h.displayName), (d = h.displayDescription), (_ = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error);
-    } else (a = ''.concat(l.GI).concat(f.displayName)), (d = f.displayDescription), (_ = null);
+            [null == p ? void 0 : null === (t = p.rootCommand) || void 0 === t ? void 0 : t.id]
+        ),
+        S = i.useCallback(() => {
+            u.Po({
+                channelId: T,
+                command: null,
+                section: null
+            });
+        }, [T]);
+    if (null == p) return null;
+    if (null != m) {
+        let e = I[m.name].lastValidationResult;
+        (a = m.displayName), (E = m.displayDescription), (f = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error);
+    } else (a = ''.concat(c.GI).concat(p.displayName)), (E = p.displayDescription), (f = null);
     return (0, r.jsxs)('div', {
-        className: s()(E, c.bar),
-        onContextMenu: m,
+        className: s()(h, _.bar),
+        onContextMenu: g,
         children: [
-            (0, r.jsx)('span', {
-                className: c.name,
-                children: a
+            (0, r.jsxs)('div', {
+                className: _.commandInfo,
+                children: [
+                    (0, r.jsx)('span', {
+                        className: _.name,
+                        children: a
+                    }),
+                    null != f
+                        ? (0, r.jsx)('span', {
+                              className: _.error,
+                              children: f
+                          })
+                        : (0, r.jsx)('span', {
+                              className: _.description,
+                              children: E
+                          })
+                ]
             }),
-            null != _
-                ? (0, r.jsx)('span', {
-                      className: c.error,
-                      children: _
-                  })
-                : (0, r.jsx)('span', {
-                      className: c.description,
-                      children: d
-                  })
+            (0, r.jsx)('div', {
+                className: _.actions,
+                children: (0, r.jsx)(l.B, { onClick: S })
+            })
         ]
     });
 }

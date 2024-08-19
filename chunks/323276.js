@@ -1,6 +1,7 @@
 e.exports = {
     row: 'row_a708c4',
     sticker: 'sticker_a708c4',
+    showPulse: 'showPulse_a708c4',
     createSticker: 'createSticker_a708c4',
     createInspected: 'createInspected_a708c4',
     iconWrapper: 'iconWrapper_a708c4',

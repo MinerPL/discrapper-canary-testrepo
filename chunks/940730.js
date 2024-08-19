@@ -53,7 +53,8 @@ function f(e) {
                             commandDescription: e.displayDescription,
                             onClick: g,
                             guildId: f,
-                            channelId: h.id
+                            channelId: h.id,
+                            applicationId: e.applicationId
                         })
                     },
                     e.id

@@ -31,7 +31,8 @@ let f = i.forwardRef(function (e, t) {
         R = !(0, _.Z)('lottie_hover_multiple_loop'),
         C = i.useContext(u.S).reducedMotion.enabled,
         { enabled: y } = d.Z.useExperiment({ location: 'LottieIcon web entry point' }),
-        D = C || !y;
+        D = C || !y,
+        L = i.useRef(I);
     return (
         i.useImperativeHandle(
             t,
@@ -65,7 +66,7 @@ let f = i.forwardRef(function (e, t) {
                         var t;
                         let n,
                             { default: r } = e,
-                            i = null !== (t = N.current) && void 0 !== t ? t : I;
+                            i = null !== (t = N.current) && void 0 !== t ? t : L.current;
                         if (null != i && null != T[i]) {
                             let e = T[i];
                             n = [e.start, e.start + e.duration];
@@ -85,7 +86,7 @@ let f = i.forwardRef(function (e, t) {
                     null === (e = v.current) || void 0 === e || e.destroy();
                 }
             ),
-            [g, I, T]
+            [g, T]
         ),
         (0, r.jsx)('div', {
             style: {
