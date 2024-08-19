@@ -27,6 +27,8 @@ n.d(t, {
     (i.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2 = 'explicit_media_pending_message_loaded_v2'),
     (i.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION = 'explicit_media_scan_client_timed_out_distribution'),
     (i.EXPLICIT_MEDIA_SCAN_CLIENT_TIMEOUT_CREATE = 'explicit_media_scan_client_timeout_create'),
+    (i.RTC_CONNECTION_DESYNC_STORE_UNKNOWN_USER = 'rtc_connection_desync_store_unknown_user'),
+    (i.RTC_CONNECTION_DUPLICATE_USER = 'rtc_connection_duplicate_user'),
     (i.QUEST_CONTENT_IMPRESSION = 'quest_content_impression'),
     (i.OTA_CHECK_ATTEMPT = 'OtaCheckAttempt'),
     (i.OTA_ASSET_DOWNLOAD_ATTEMPT = 'OtaAssetDownloadAttempt'),
