@@ -14,39 +14,37 @@ var i = n(442837),
     f = n(594174),
     h = n(981631),
     p = n(354459),
-    m = n(689938),
-    I = n(582920);
+    I = n(689938),
+    m = n(582920);
 function T(e) {
-    let { closePopout: t, idle: n, pipWindows: a, voiceChannelId: f, onSelect: I } = e;
+    let { closePopout: t, idle: n, pipWindows: a, voiceChannelId: f, onSelect: m } = e;
     n && t();
     let T = (0, i.e7)([u.ZP], () => u.ZP.getSelfEmbeddedActivityForChannel(f)),
-        g = (0, i.e7)([E.Z], () => E.Z.pipWindow),
-        S = (0, i.e7)([d.Z], () => d.Z.getSelectedParticipant(f)),
+        S = (0, i.e7)([E.Z], () => E.Z.pipWindow),
+        g = (0, i.e7)([d.Z], () => d.Z.getSelectedParticipant(f)),
         A = (0, i.e7)([d.Z], () => d.Z.getStreamParticipants(f));
     return (0, r.jsx)(s.Menu, {
         navId: 'pip-menu',
         'aria-label': 'switch PIP',
         onClose: t,
-        onSelect: I,
+        onSelect: m,
         children: (function () {
-            let e = a.find((e) => e.component === h.NYg.EMBED_IFRAME),
-                t = a.find((e) => e.component === h.NYg.VIDEO),
-                n = [];
+            let e = [],
+                t = a.find((e) => e.component === h.NYg.VIDEO);
             return (
-                null != e && (null == g ? void 0 : g.id) !== e.id && n.push({ pipWindow: e }),
                 null != t &&
-                    A.forEach((e) => {
-                        let r = _.Z.getActiveStreamForApplicationStream(e.stream),
-                            i = e.id === (null == S ? void 0 : S.id) && (null == g ? void 0 : g.id) === t.id;
+                    A.forEach((n) => {
+                        let r = _.Z.getActiveStreamForApplicationStream(n.stream),
+                            i = n.id === (null == g ? void 0 : g.id) && (null == S ? void 0 : S.id) === t.id;
                         null != r &&
                             !i &&
-                            n.push({
+                            e.push({
                                 pipWindow: t,
-                                participant: e,
+                                participant: n,
                                 stream: r
                             });
                     }),
-                n
+                e
             );
         })().map(function (e) {
             var t;
@@ -56,9 +54,9 @@ function T(e) {
                     if (e.pipWindow.component === h.NYg.EMBED_IFRAME && null != T) {
                         var t;
                         let e = null === (t = c.Z.getApplication(T.applicationId)) || void 0 === t ? void 0 : t.name;
-                        return null == e ? m.Z.Messages.SWITCH_PIP_TO_ACTIVITY : m.Z.Messages.SWITCH_PIP_TO_ACTIVITY_NAME.format({ activityName: e });
+                        return null == e ? I.Z.Messages.SWITCH_PIP_TO_ACTIVITY : I.Z.Messages.SWITCH_PIP_TO_ACTIVITY_NAME.format({ activityName: e });
                     }
-                    return null == e.participant || e.participant.type !== p.fO.STREAM ? m.Z.Messages.SWITCH_PIP_TO_GO_LIVE : m.Z.Messages.SWITCH_PIP_TO_USER_STREAM.format({ username: e.participant.userNick });
+                    return null == e.participant || e.participant.type !== p.fO.STREAM ? I.Z.Messages.SWITCH_PIP_TO_GO_LIVE : I.Z.Messages.SWITCH_PIP_TO_USER_STREAM.format({ username: e.participant.userNick });
                 })(e),
                 u = ''.concat(n).concat(null != i ? i : '');
             return (0, r.jsx)(
@@ -68,7 +66,7 @@ function T(e) {
                     label: a,
                     action: () =>
                         (function (e) {
-                            (null == g ? void 0 : g.id) !== e.pipWindow.id && (0, l.k3)(e.pipWindow.id);
+                            (null == S ? void 0 : S.id) !== e.pipWindow.id && (0, l.k3)(e.pipWindow.id);
                             let t = e.participant;
                             null != t && t.type !== p.fO.ACTIVITY && o.Z.selectParticipant(f, t.id);
                         })(e)
@@ -80,7 +78,7 @@ function T(e) {
 }
 t.Z = function (e) {
     let { voiceChannelId: t, idle: n } = e,
-        o = Array.from((0, i.e7)([E.Z], () => E.Z.pipWindows).values()),
+        o = Array.from((0, i.e7)([E.Z], () => E.Z.pipWindows).values()).filter((e) => e.component !== h.NYg.EMBED_IFRAME),
         l = (0, i.Wu)([_.Z], () => _.Z.getAllActiveStreamsForChannel(t)).filter((e) => {
             var n;
             return e.ownerId !== (null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && e.channelId === t;
@@ -100,7 +98,7 @@ t.Z = function (e) {
                   }),
               children: (e) =>
                   (0, r.jsx)(s.Clickable, {
-                      className: I.menuIcon,
+                      className: m.menuIcon,
                       ...e,
                       children: (0, r.jsx)(s.MoreVerticalIcon, {
                           size: 'md',
