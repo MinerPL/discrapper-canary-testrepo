@@ -1,134 +1,69 @@
 n.d(t, {
     Dy: function () {
-        return f;
+        return u;
     },
-    Rg: function () {
-        return _;
+    nP: function () {
+        return E;
     },
     sA: function () {
-        return o;
+        return s;
     },
     wh: function () {
-        return p;
+        return d;
     },
     wm: function () {
-        return l;
+        return o;
     }
 });
 var r = n(818083),
     i = n(109911);
 let a = (0, r.B)({
-        kind: 'user',
-        id: '2024-03_content_inventory_memberlist_and_ranker',
-        label: 'Enables the memberlist content feed',
-        defaultConfig: { enabled: !1 },
-        treatments: [
-            {
-                id: 1,
-                label: 'Recency',
-                config: { enabled: !0 }
-            },
-            {
-                id: 2,
-                label: 'Heuristic',
-                config: { enabled: !0 }
-            },
-            {
-                id: 3,
-                label: 'Noteworthy',
-                config: {
-                    enabled: !0,
-                    impressionCappingEnabled: !0
-                }
-            },
-            {
-                id: 4,
-                label: 'Another Heuristic treatment for comparison ranking',
-                config: { enabled: !0 }
-            }
-        ]
-    }),
-    s = (0, r.B)({
-        kind: 'user',
-        id: '2024-03_content_inventory_ranker_client_dummy',
-        label: 'Tracks exposure for which ranker bucket the user is in. This is here to test an exposure bug',
-        defaultConfig: {},
-        treatments: [
-            {
-                id: 1,
-                label: 'Heuristic',
-                config: {}
-            }
-        ]
-    });
-function o(e) {
-    c.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }), u.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
-    let { enabled: t } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
-    t && s.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
-    let { enabled: n } = i.C.getCurrentConfig(
-        { location: e },
+    kind: 'user',
+    id: '2024-03_content_inventory_memberlist_and_ranker',
+    label: 'Enables the memberlist content feed',
+    defaultConfig: { enabled: !1 },
+    treatments: [
         {
-            disable: !0,
-            autoTrackExposure: !1
+            id: 1,
+            label: 'Recency',
+            config: { enabled: !0 }
+        },
+        {
+            id: 2,
+            label: 'Heuristic',
+            config: { enabled: !0 }
+        },
+        {
+            id: 3,
+            label: 'Noteworthy',
+            config: {
+                enabled: !0,
+                impressionCappingEnabled: !0
+            }
+        },
+        {
+            id: 4,
+            label: 'Another Heuristic treatment for comparison ranking',
+            config: { enabled: !0 }
         }
-    );
+    ]
+});
+function s(e) {
+    let { enabled: t } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }),
+        { enabled: n } = i.C.getCurrentConfig(
+            { location: e },
+            {
+                disable: !0,
+                autoTrackExposure: !1
+            }
+        );
     return t || n;
 }
-function l(e) {
+function o(e) {
     let { impressionCappingEnabled: t } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
     return !0 === t;
 }
-(0, r.B)({
-    kind: 'user',
-    id: '2024-03_content_inventory_surface_holdout',
-    label: 'Content Inventory Surface Holdout',
-    defaultConfig: {},
-    treatments: []
-});
-let u = (0, r.B)({
-        kind: 'user',
-        id: '2024-03_holdout_bug_main_wrong_way',
-        label: 'Holdout Bug Experiment Wrong Way (pls ignore)',
-        defaultConfig: {},
-        treatments: [
-            {
-                id: 1,
-                label: 'Treament',
-                config: {}
-            }
-        ]
-    }),
-    c = (0, r.B)({
-        kind: 'user',
-        id: '2024-03_holdout_bug_main_right_way',
-        label: 'Holdout Bug Experiment Right Way (pls ignore)',
-        defaultConfig: {},
-        treatments: [
-            {
-                id: 1,
-                label: 'Treament',
-                config: {}
-            }
-        ]
-    }),
-    d = (0, r.B)({
-        kind: 'user',
-        id: '2024-05_content_inventory_top_artist_cards',
-        label: 'Content Inventory: TOP_ARTIST cards',
-        defaultConfig: { enabled: !1 },
-        treatments: [
-            {
-                id: 1,
-                label: 'Enabled',
-                config: { enabled: !0 }
-            }
-        ]
-    });
-function _(e) {
-    let { enabled: t } = d.useExperiment({ location: e }, { autoTrackExposure: !0 });
-    return t;
-}
-let E = (0, r.B)({
+let l = (0, r.B)({
     kind: 'user',
     id: '2024-04_content_inventory_listened_media',
     label: 'Content Inventory: LISTENED_MEDIA',
@@ -141,11 +76,11 @@ let E = (0, r.B)({
         }
     ]
 });
-function f(e) {
-    let { enabled: t } = E.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
+function u(e) {
+    let { enabled: t } = l.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
     return t;
 }
-let h = (0, r.B)({
+let c = (0, r.B)({
     kind: 'user',
     id: '2024-05_content_inventory_games_rich_presence',
     label: 'Content Inventory: Rich Presence for Games',
@@ -158,7 +93,23 @@ let h = (0, r.B)({
         }
     ]
 });
-function p(e) {
-    let { enabled: t } = h.useExperiment({ location: e }, { autoTrackExposure: !0 });
+function d(e) {
+    let { enabled: t } = c.useExperiment({ location: e }, { autoTrackExposure: !0 });
     return t;
+}
+let _ = (0, r.B)({
+    kind: 'user',
+    id: '2024-08_content_inventory_analytics_sampling',
+    label: 'Content Inventory Analytics Sampling',
+    defaultConfig: { trackingEnabled: !0 },
+    treatments: [
+        {
+            id: 1,
+            label: 'Tracking disabled',
+            config: { trackingEnabled: !1 }
+        }
+    ]
+});
+function E(e) {
+    return _.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
 }

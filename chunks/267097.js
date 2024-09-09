@@ -12,6 +12,7 @@ function a(e) {
     return (0, i.e)({
         noCache: n,
         includeUnpublished: a,
-        paymentGateway: t
+        paymentGateway: t,
+        includeBundles: !0
     });
 }

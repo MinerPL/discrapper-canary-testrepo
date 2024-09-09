@@ -81,7 +81,7 @@ r.d(t, {
         return M;
     },
     RK: function () {
-        return eV;
+        return ek;
     },
     S7: function () {
         return T;
@@ -99,7 +99,7 @@ r.d(t, {
         return eT;
     },
     Uk: function () {
-        return eD;
+        return eL;
     },
     V6: function () {
         return eb;
@@ -150,10 +150,10 @@ r.d(t, {
         return p;
     },
     ld: function () {
-        return eL;
+        return eD;
     },
     pK: function () {
-        return L;
+        return D;
     },
     rx: function () {
         return eA;
@@ -171,7 +171,7 @@ r.d(t, {
         return eK;
     },
     yX: function () {
-        return ek;
+        return eV;
     },
     yY: function () {
         return eG;
@@ -201,8 +201,8 @@ var n,
     O,
     f,
     S,
-    D,
     L,
+    D,
     h,
     C,
     g,
@@ -219,8 +219,8 @@ var n,
     H,
     Y,
     K,
-    k,
     V,
+    k,
     x,
     F,
     W,
@@ -345,8 +345,8 @@ let eO = new Map([
         [16, 'ideal']
     ]),
     eS = new Set([7, 8, 9, 12, 10, 13, 14, 15, 16, 4, 3, 5, 17]),
-    eD = new Set([7, 9, 3, 5, 4, 14, 15, 16]),
-    eL = new Set([1, 2, 6, 8, 10, 11, 13, 12, 17]),
+    eL = new Set([7, 9, 3, 5, 4, 14, 15, 16]),
+    eD = new Set([1, 2, 6, 8, 10, 11, 13, 12, 17]),
     eh = new Set([3, 4, 5, 14, 15, 16, 7, 9, 12]),
     eC = new Set([6]);
 ((Y = c || (c = {}))[(Y.NEW = 1)] = 'NEW'),
@@ -356,12 +356,12 @@ let eO = new Map([
     (K[(K.REVERSED = 3)] = 'REVERSED'),
     (K[(K.REFUNDED = 4)] = 'REFUNDED'),
     (K[(K.CANCELED = 5)] = 'CANCELED'),
-    ((k = u || (u = {}))[(k.PREMIUM = 1)] = 'PREMIUM'),
-    (k[(k.GUILD = 2)] = 'GUILD'),
-    (k[(k.APPLICATION = 3)] = 'APPLICATION'),
-    ((V = l || (l = {})).PAYPAL_POPUP_CLOSED = 'PAYPAL_POPUP_CLOSED'),
-    (V.VENMO_APP_CANCELED = 'VENMO_APP_CANCELED'),
-    (V.VENMO_CANCELED = 'VENMO_CANCELED'),
+    ((V = u || (u = {}))[(V.PREMIUM = 1)] = 'PREMIUM'),
+    (V[(V.GUILD = 2)] = 'GUILD'),
+    (V[(V.APPLICATION = 3)] = 'APPLICATION'),
+    ((k = l || (l = {})).PAYPAL_POPUP_CLOSED = 'PAYPAL_POPUP_CLOSED'),
+    (k.VENMO_APP_CANCELED = 'VENMO_APP_CANCELED'),
+    (k.VENMO_CANCELED = 'VENMO_CANCELED'),
     Object.freeze({
         CONSTANT: 1,
         APPLE_STICKER: 2
@@ -578,6 +578,8 @@ let eM = Object.freeze({
     ($[($.INVALID_GUILD_TEMPLATE = 4017)] = 'INVALID_GUILD_TEMPLATE'),
     ($[($.INVALID_SOUND = 4018)] = 'INVALID_SOUND'),
     ($[($.INVALID_PROVIDER = 4019)] = 'INVALID_PROVIDER'),
+    ($[($.INVALID_CONNECTION_CALLBACK_STATE = 4020)] = 'INVALID_CONNECTION_CALLBACK_STATE'),
+    ($[($.BAD_REQUEST_FOR_PROVIDER = 4021)] = 'BAD_REQUEST_FOR_PROVIDER'),
     ($[($.OAUTH2_ERROR = 5000)] = 'OAUTH2_ERROR'),
     ($[($.SELECT_CHANNEL_TIMED_OUT = 5001)] = 'SELECT_CHANNEL_TIMED_OUT'),
     ($[($.GET_GUILD_TIMED_OUT = 5002)] = 'GET_GUILD_TIMED_OUT'),
@@ -602,7 +604,7 @@ let eM = Object.freeze({
 let eH = 'token',
     eY = 'tokens',
     eK = 'https://'.concat('status.discord.com'),
-    ek = {
+    eV = {
         PRESSKIT: 'https://app.box.com/s/5puqm5ijahrrdao7yldi7fr3zah5i1am',
         REBRAND_PRESSKIT: 'https://www.dropbox.com/scl/fo/2vittfakjukwa3zl4gnxh/AOS0AZlx-zA4TjDyv-M-dgk?rlkey=kn0v1lcqfq1lurj3lk3x1ujhf&dl=0',
         STATUS: 'https://discordstatus.com',
@@ -631,7 +633,7 @@ let eH = 'token',
         TWITTER_SUPPORT: 'https://twitter.com/discord_support',
         QUESTS: '/quests'
     },
-    eV = Object.freeze({
+    ek = Object.freeze({
         TWITTER: Object.freeze({
             default: 'https://twitter.com/discord',
             ja: 'https://twitter.com/discord_jp'
@@ -694,8 +696,8 @@ let eF = Object.freeze({
     (J.LOCATION_STACK_METADATA = 'location_stack_metadata'),
     (J.CREATOR_STORE_PAGE_VIEWED = 'creator_store_page_viewed'),
     (J.CREATOR_STORE_PAGE_CTA_CLICKED = 'creator_store_page_cta_clicked'),
-    ((D || (D = {})).MKTG_ACKNOWLEDGEMENTS_MODAL_OPEN = 'mktg_ack_modal_open'),
-    ((Q = L || (L = {})).AED = 'aed'),
+    ((L || (L = {})).MKTG_ACKNOWLEDGEMENTS_MODAL_OPEN = 'mktg_ack_modal_open'),
+    ((Q = D || (D = {})).AED = 'aed'),
     (Q.AFN = 'afn'),
     (Q.ALL = 'all'),
     (Q.AMD = 'amd'),

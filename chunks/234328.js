@@ -5,5 +5,6 @@ e.exports = {
     panel: 'panel_f94206',
     hoisted: 'hoisted_f94206',
     clickable: 'clickable_f94206',
-    overlay: 'overlay_f94206'
+    overlay: 'overlay_f94206',
+    focusRing: 'focusRing_f94206'
 };

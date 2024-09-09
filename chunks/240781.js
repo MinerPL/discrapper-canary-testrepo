@@ -8,14 +8,15 @@ var i = n(120356),
     l = n(481060),
     u = n(884697),
     c = n(449217),
-    d = n(706454),
-    _ = n(158776),
-    E = n(55935),
-    f = n(74538),
-    h = n(204418),
-    p = n(689938),
+    d = n(81245),
+    _ = n(706454),
+    E = n(158776),
+    f = n(55935),
+    h = n(74538),
+    p = n(204418),
+    I = n(689938),
     m = n(828136);
-let I = [
+let T = [
         {
             avatarSize: l.AvatarSizes.SIZE_40,
             showStatus: !1
@@ -33,11 +34,11 @@ let I = [
             showStatus: !0
         }
     ],
-    T = (e) => {
+    S = (e) => {
         let { purchase: t } = e,
-            n = (0, o.e7)([d.default], () => d.default.locale),
+            n = (0, o.e7)([_.default], () => _.default.locale),
             i = (0, u.qS)(t),
-            a = null != t.expiresAt ? (0, E.TD)(Date.now(), t.expiresAt) : null;
+            a = null != t.expiresAt ? (0, f.TD)(Date.now(), t.expiresAt) : null;
         return (0, r.jsxs)('div', {
             className: m.purchaseInfo,
             children: [
@@ -54,13 +55,13 @@ let I = [
                     (0, r.jsx)(l.Text, {
                         variant: 'text-xxs/normal',
                         color: 'text-muted',
-                        children: p.Z.Messages.COLLECTIBLES_DAYS_LEFT.format({ days: a.days.toString() })
+                        children: I.Z.Messages.COLLECTIBLES_DAYS_LEFT.format({ days: a.days.toString() })
                     }),
                 (0, r.jsxs)(l.Text, {
                     variant: 'text-xxs/normal',
                     color: 'text-muted',
                     children: [
-                        p.Z.Messages.COLLECTIBLES_ACQUIRED_DATE.format({
+                        I.Z.Messages.COLLECTIBLES_ACQUIRED_DATE.format({
                             date: t.purchasedAt.toLocaleDateString(n, {
                                 month: 'long',
                                 year: 'numeric'
@@ -70,7 +71,7 @@ let I = [
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)('br', {}),
-                                    p.Z.Messages.COLLECTIBLES_EXPIRE_DATE.format({
+                                    I.Z.Messages.COLLECTIBLES_EXPIRE_DATE.format({
                                         date: t.expiresAt.toLocaleDateString(n, {
                                             minute: 'numeric',
                                             hour: 'numeric',
@@ -87,26 +88,27 @@ let I = [
                     (0, r.jsx)(l.Text, {
                         variant: 'text-xxs/normal',
                         color: 'text-muted',
-                        children: p.Z.Messages.CHANGE_DECORATION_MODAL_STARTER_DESC
+                        children: I.Z.Messages.CHANGE_DECORATION_MODAL_STARTER_DESC
                     })
             ]
         });
     };
 t.Z = (e) => {
-    let { user: t, guildId: n, avatarDecorationOverride: i, className: d } = e,
-        E = (0, o.e7)([_.Z], () => _.Z.getStatus(t.id)),
-        { product: g, purchase: S } = (0, c.Z)(null == i ? void 0 : i.skuId),
-        A = f.ZP.canUseCollectibles(t),
-        N = (0, u.qS)(S),
-        v = (0, u.G1)(g),
-        O = !A && N;
-    return null != g && (null == S || O)
+    let { user: t, guildId: n, avatarDecorationOverride: i, className: _ } = e,
+        f = (0, o.e7)([E.Z], () => E.Z.getStatus(t.id)),
+        { product: g, purchase: A } = (0, c.Z)(null == i ? void 0 : i.skuId),
+        N = h.ZP.canUseCollectibles(t),
+        O = (0, u.qS)(A),
+        R = (0, u.G1)(g),
+        v = !N && O,
+        C = (0, d.Mu)('ProfileEffectDescription', !R || N);
+    return null != g && (null == A || v)
         ? (0, r.jsxs)('div', {
-              className: a()(m.modalPreview, m.shopPreviewContainer, d),
+              className: a()(m.modalPreview, m.shopPreviewContainer, _),
               children: [
                   (0, r.jsx)('div', {
                       className: m.shopPreviewBanner,
-                      children: (0, r.jsx)(h.Z, {
+                      children: (0, r.jsx)(p.Z, {
                           user: t,
                           guildId: n,
                           avatarDecorationOverride: i
@@ -121,26 +123,27 @@ t.Z = (e) => {
                           }),
                           (0, r.jsx)(l.Text, {
                               variant: 'text-sm/normal',
-                              children: O
-                                  ? p.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED
-                                  : (0, s.EQ)([v, A])
-                                        .with([!0, !0], () => p.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM)
-                                        .with([!0, !1], () => p.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER)
-                                        .otherwise(() => p.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
+                              children: v
+                                  ? I.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED
+                                  : (0, s.EQ)([R, N, C])
+                                        .with([!0, !0, !1], () => I.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM)
+                                        .with([!0, !1, !0], () => I.Z.Messages.PREMIUM_UPSELL_PROFILE_AVATAR_DECO_INLINE_UPSELL_DESCRIPTION)
+                                        .with([!0, !1, !1], () => I.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER)
+                                        .otherwise(() => I.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
                           })
                       ]
                   })
               ]
           })
         : (0, r.jsxs)('div', {
-              className: a()(m.modalPreview, d),
+              className: a()(m.modalPreview, _),
               children: [
                   (0, r.jsxs)('div', {
                       className: m.previewSections,
                       children: [
                           (0, r.jsx)('div', {
                               className: m.decorationPreview,
-                              children: (0, r.jsx)(h.Z, {
+                              children: (0, r.jsx)(p.Z, {
                                   user: t,
                                   guildId: n,
                                   avatarDecorationOverride: i
@@ -148,18 +151,18 @@ t.Z = (e) => {
                           }),
                           (0, r.jsx)('div', {
                               className: m.smallDecorationPreviewsContainer,
-                              children: I.map((e) => {
+                              children: T.map((e) => {
                                   let { avatarSize: a, showStatus: s } = e;
                                   return (0, r.jsx)(
                                       'div',
                                       {
                                           className: m.smallDecorationPreview,
-                                          children: (0, r.jsx)(h.Z, {
+                                          children: (0, r.jsx)(p.Z, {
                                               user: t,
                                               guildId: n,
                                               avatarSize: a,
                                               avatarDecorationOverride: i,
-                                              status: s ? E : void 0,
+                                              status: s ? f : void 0,
                                               'aria-hidden': !0
                                           })
                                       },
@@ -169,7 +172,7 @@ t.Z = (e) => {
                           })
                       ]
                   }),
-                  null != S && (0, r.jsx)(T, { purchase: S })
+                  null != A && (0, r.jsx)(S, { purchase: A })
               ]
           });
 };

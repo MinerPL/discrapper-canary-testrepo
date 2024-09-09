@@ -1,0 +1,21 @@
+e.exports = {
+    modalRoot: 'modalRoot_aca48b',
+    header: 'header_aca48b',
+    headerTitle: 'headerTitle_aca48b',
+    modalContent: 'modalContent_aca48b',
+    searchBar: 'searchBar_aca48b',
+    rowDivider: 'rowDivider_aca48b',
+    rowContainer: 'rowContainer_aca48b',
+    disabled: 'disabled_aca48b',
+    rowLeft: 'rowLeft_aca48b',
+    rowAvatar: 'rowAvatar_aca48b',
+    rowNameContainer: 'rowNameContainer_aca48b',
+    rowName: 'rowName_aca48b',
+    rowSubName: 'rowSubName_aca48b',
+    rowRight: 'rowRight_aca48b',
+    footer: 'footer_aca48b',
+    copySendBar: 'copySendBar_aca48b',
+    copyButton: 'copyButton_aca48b',
+    acronym: 'acronym_aca48b',
+    img: 'img_aca48b'
+};

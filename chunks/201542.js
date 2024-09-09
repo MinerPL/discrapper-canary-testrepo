@@ -13,11 +13,11 @@ var r = n(735250),
     f = n(70956),
     h = n(36703),
     p = n(347312),
-    m = n(981631),
-    I = n(689938),
+    I = n(981631),
+    m = n(689938),
     T = n(718033);
-let g = i.lazy(() => Promise.all([n.e('26460'), n.e('89792')]).then(n.bind(n, 711635)));
-function S(e) {
+let S = i.lazy(() => Promise.all([n.e('26460'), n.e('89792')]).then(n.bind(n, 711635)));
+function g(e) {
     let { played: t, duration: n, currentTime: i } = e,
         a = null == n ? '--:--' : t ? (0, d.yv)(Math.ceil(n - i)) : (0, d.yv)(Math.ceil(n));
     return (0, r.jsx)(l.Text, {
@@ -29,17 +29,17 @@ function S(e) {
 }
 t.Z = i.memo(function (e) {
     var t, n, a, d, A, N;
-    let v,
-        { src: O, volume: R = 1, onVolumeChange: C, onMute: y, waveform: D, durationSecs: L, onVolumeShow: b, onVolumeHide: M, onPlay: P, onPause: U, onError: w } = e,
+    let O,
+        { src: R, volume: v = 1, onVolumeChange: C, onMute: y, waveform: L, durationSecs: D, onVolumeShow: b, onVolumeHide: M, onPlay: P, onPause: U, onError: w } = e,
         x = i.useRef(null),
         [G, k] = i.useState(0),
-        [B, F] = i.useState(L),
+        [B, F] = i.useState(D),
         [V, H] = i.useState(!1),
         [Z, Y] = i.useState(!1),
         [j, W] = i.useState(!1),
         [K, z] = i.useState(!1),
         [q, Q] = i.useState('none'),
-        [X, $] = i.useState(() => ('function' == typeof R ? R() : R)),
+        [X, $] = i.useState(() => ('function' == typeof v ? v() : v)),
         J = i.useRef(void 0),
         ee = i.useCallback(() => {
             Y((e) => !e);
@@ -123,16 +123,16 @@ t.Z = i.memo(function (e) {
                 }
             );
         }, [t, n, a]),
-        (d = O),
+        (d = R),
         (A = Z),
         (N = Y),
         i.useEffect(() => {
             if (!!A)
                 return (
-                    E.S.dispatch(m.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, { src: d }),
-                    E.S.subscribe(m.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, e),
+                    E.S.dispatch(I.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, { src: d }),
+                    E.S.subscribe(I.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, e),
                     () => {
-                        E.S.unsubscribe(m.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, e);
+                        E.S.unsubscribe(I.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, e);
                     }
                 );
             function e(e) {
@@ -141,13 +141,13 @@ t.Z = i.memo(function (e) {
             }
         }, [d, A, N]);
     let e_ = Z ? l.PauseIcon : l.PlayIcon,
-        eE = Z ? I.Z.Messages.PAUSE : I.Z.Messages.PLAY;
+        eE = Z ? m.Z.Messages.PAUSE : m.Z.Messages.PLAY;
     'Safari' === platform.name
-        ? (v = (0, r.jsx)(i.Suspense, {
-              children: (0, r.jsx)(g, {
+        ? (O = (0, r.jsx)(i.Suspense, {
+              children: (0, r.jsx)(S, {
                   ref: x,
                   className: T.audioElement,
-                  src: O,
+                  src: R,
                   preload: q,
                   playing: Z && !j,
                   onEnded: ei,
@@ -157,7 +157,7 @@ t.Z = i.memo(function (e) {
                   volume: X
               })
           }))
-        : (v = (0, r.jsx)(c.Z, {
+        : (O = (0, r.jsx)(c.Z, {
               ref: x,
               className: T.audioElement,
               controls: !1,
@@ -168,7 +168,7 @@ t.Z = i.memo(function (e) {
               muted: V,
               volume: X,
               playing: Z && !j,
-              children: (0, r.jsx)('source', { src: O })
+              children: (0, r.jsx)('source', { src: R })
           }));
     let ef = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         { enabled: eh } = (0, l.useRedesignIconContext)();
@@ -194,7 +194,7 @@ t.Z = i.memo(function (e) {
             }),
             (0, r.jsx)(p.Z, {
                 className: T.waveform,
-                waveform: D,
+                waveform: L,
                 currentTime: G,
                 duration: null != B ? B : 1,
                 playing: Z,
@@ -203,7 +203,7 @@ t.Z = i.memo(function (e) {
                 onDragStart: el,
                 onDragEnd: eu
             }),
-            (0, r.jsx)(S, {
+            (0, r.jsx)(g, {
                 played: K,
                 currentTime: G,
                 duration: B
@@ -211,6 +211,7 @@ t.Z = i.memo(function (e) {
             (0, r.jsx)(_.Z, {
                 className: T.volumeButton,
                 iconClassName: T.volumeButtonIcon,
+                iconColor: 'currentColor',
                 sliderWrapperClassName: T.volumeSlider,
                 muted: V,
                 value: (0, h.P)(X, 1),
@@ -222,7 +223,7 @@ t.Z = i.memo(function (e) {
                 onVolumeShow: b,
                 onVolumeHide: M
             }),
-            v
+            O
         ]
     });
 });

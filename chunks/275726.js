@@ -55,13 +55,14 @@ r.d(t, {
     (a[(a.VOICE_HANGOUT_INVITE = 45)] = 'VOICE_HANGOUT_INVITE'),
     (a[(a.POLL_RESULT = 46)] = 'POLL_RESULT'),
     (a[(a.CHANGELOG = 47)] = 'CHANGELOG'),
-    (a[(a.NITRO_NOTIFICATION = 48)] = 'NITRO_NOTIFICATION');
+    (a[(a.NITRO_NOTIFICATION = 48)] = 'NITRO_NOTIFICATION'),
+    (a[(a.CHANNEL_LINKED_TO_LOBBY = 49)] = 'CHANNEL_LINKED_TO_LOBBY');
 let o = {
     UNDELETABLE: new Set([1, 2, 3, 4, 5, 21]),
     GUILD_DISCOVERY_STATUS: new Set([14, 15, 16, 17]),
     USER_MESSAGE: new Set([0, 19, 20, 23, 26, 35, 41, 45, 47]),
     REPLYABLE: new Set([0, 7, 19, 20, 23, 24, 25, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 45, 46]),
-    FORWARDABLE: new Set([0, 19]),
+    FORWARDABLE: new Set([0, 19, 20, 23]),
     REFERENCED_MESSAGE_AVAILABLE: new Set([19, 21]),
     AVAILABLE_IN_GUILD_FEED: new Set([0, 19]),
     DEADCHAT_PROMPTS: new Set([40, 42]),

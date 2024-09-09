@@ -5,9 +5,8 @@ var r = n(735250),
     s = n(579806),
     o = n(403182),
     l = n(358085),
-    u = n(380684),
-    c = n(861990);
-function d(e) {
+    u = n(861990);
+function c(e) {
     let t = ['openFile'];
     e.multiple && t.push('multiSelections');
     let n = e.filters;
@@ -17,7 +16,7 @@ function d(e) {
                 properties: t,
                 filters: n
             },
-            (0, u.Xv)() ? c.Ld : c.zz
+            u.zz
         )
         .then((t) => {
             let n = t.map((e) => o.qF(e));
@@ -39,7 +38,7 @@ function d(e) {
             });
         });
 }
-class _ extends i.Component {
+class d extends i.Component {
     activateUploadDialogue() {
         if (null != this._ref) return this._ref.activateUploadDialogue();
     }
@@ -49,7 +48,7 @@ class _ extends i.Component {
     render() {
         return (0, r.jsx)(a.S, {
             ref: this.setRef,
-            handleNativeClick: d,
+            handleNativeClick: c,
             embedded: (0, l.isDesktop)(),
             ...this.props
         });
@@ -71,4 +70,4 @@ class _ extends i.Component {
             (this.setRef = this.setRef.bind(this));
     }
 }
-t.Z = _;
+t.Z = d;

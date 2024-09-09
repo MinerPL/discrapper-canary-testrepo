@@ -1,19 +1,19 @@
 n.r(t),
     n.d(t, {
         fetchAssetIds: function () {
-            return O;
+            return R;
         },
         getAssetFromImageURL: function () {
             return T;
         },
         getAssetIds: function () {
-            return R;
+            return v;
         },
         getAssetImage: function () {
-            return g;
+            return S;
         },
         getAssets: function () {
-            return S;
+            return g;
         }
     }),
     n(315314),
@@ -59,8 +59,8 @@ let d = 'https://i.scdn.co/image/',
             serialize: (e) => e
         }
     },
-    m = {};
-async function I(e) {
+    I = {};
+async function m(e) {
     let { body: t } = await a.tn.get({
         url: c.ANM.APPLICATION_ASSETS(e),
         oldFormErrors: !0
@@ -78,7 +78,7 @@ function T(e, t) {
     let n = p[e].serialize(t);
     return n ? ''.concat(e, ':').concat(n.toString()) : null;
 }
-function g(e, t, n) {
+function S(e, t, n) {
     if (null != t && t.includes(':')) {
         let [e, r] = t.split(':');
         if (e === c.ABu.TWITCH) {
@@ -101,23 +101,23 @@ function g(e, t, n) {
               .concat(t, '.png')
               .concat(i);
 }
-async function S(e) {
+async function g(e) {
     let t = await (function (e) {
         var t;
         let n = o.Z.getApplicationAssets(e);
-        return null == n || ((t = n.lastUpdated), Date.now() - t > 3600000) ? I(e) : Promise.resolve(n);
+        return null == n || ((t = n.lastUpdated), Date.now() - t > 3600000) ? m(e) : Promise.resolve(n);
     })(e);
     return null == t ? void 0 : t.assets;
 }
 async function A(e, t) {
-    let n = t.filter((e) => null != e && !Object.prototype.hasOwnProperty.call(m, e) && null == m[e]);
+    let n = t.filter((e) => null != e && !Object.prototype.hasOwnProperty.call(I, e) && null == I[e]);
     if (0 === n.length) return;
     let { body: r } = await a.tn.post({
         url: c.ANM.APPLICATION_EXTERNAL_ASSETS(e),
         body: { urls: n },
         oldFormErrors: !0
     });
-    for (let { url: e, external_asset_path: t } of r) m[e] = t;
+    for (let { url: e, external_asset_path: t } of r) I[e] = t;
 }
 function N(e, t) {
     let n = 0;
@@ -125,12 +125,12 @@ function N(e, t) {
         for (let r = 0; r < e.length; r++) {
             let i = e[r];
             if (null == i) continue;
-            let a = Object.prototype.hasOwnProperty.call(m, i) ? m[i] : void 0;
+            let a = Object.prototype.hasOwnProperty.call(I, i) ? I[i] : void 0;
             null != a && ((t[r] = T('mp', a)), n++);
         }
     return n === e.length;
 }
-function v(e, t, n, r) {
+function O(e, t, n, r) {
     let i = !1;
     for (let a = 0; a < e.length; a++) {
         let s = e[a];
@@ -147,7 +147,7 @@ function v(e, t, n, r) {
     }
     return i;
 }
-async function O(e, t) {
+async function R(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
     s.Z.dispatch({
         type: 'APPLICATION_ASSETS_FETCH',
@@ -155,23 +155,32 @@ async function O(e, t) {
     });
     let r = [],
         i = t.filter((e) => (null == e ? void 0 : e.startsWith('http:')) || (null == e ? void 0 : e.startsWith('https:')));
-    return (i.length > 0 && (await A(e, i)), N(t, r))
-        ? (s.Z.dispatch({
-              type: 'APPLICATION_ASSETS_FETCH_SUCCESS',
-              applicationId: e
-          }),
-          r)
-        : v(t, r, await S(e), n)
-          ? I(e).then(() => O(e, t, n - 1))
-          : (s.Z.dispatch({
+    if ((i.length > 0 && (await A(e, i)), N(t, r)))
+        return (
+            s.Z.dispatch({
                 type: 'APPLICATION_ASSETS_FETCH_SUCCESS',
                 applicationId: e
             }),
-            r);
+            r
+        );
+    let a = await g(e);
+    return (s.Z.dispatch({
+        type: 'APPLICATION_ASSETS_UPDATE',
+        applicationId: e,
+        assets: a
+    }),
+    O(t, r, a, n))
+        ? m(e).then(() => R(e, t, n - 1))
+        : (s.Z.dispatch({
+              type: 'APPLICATION_ASSETS_FETCH_SUCCESS',
+              applicationId: e
+          }),
+          r);
 }
-function R(e, t) {
-    let n = [];
-    if (N(t, n)) return n;
-    let r = o.Z.getApplicationAssets(e);
-    return null == r ? n : (v(t, n, r), n);
+function v(e, t) {
+    var n;
+    let r = [];
+    if (N(t, r)) return r;
+    let i = null === (n = o.Z.getApplicationAssets(e)) || void 0 === n ? void 0 : n.assets;
+    return null == i ? r : (O(t, r, i), r);
 }

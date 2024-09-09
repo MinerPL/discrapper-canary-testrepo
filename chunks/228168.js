@@ -1,12 +1,12 @@
 n.d(t, {
     P: function () {
-        return v;
+        return O;
     },
     Tb: function () {
         return h;
     },
     cm: function () {
-        return g;
+        return S;
     },
     jC: function () {
         return C;
@@ -18,7 +18,7 @@ n.d(t, {
         return f;
     },
     vB: function () {
-        return R;
+        return v;
     },
     y0: function () {
         return p;
@@ -38,19 +38,19 @@ var r,
     f,
     h,
     p,
-    m,
     I,
+    m,
     T,
-    g,
     S,
+    g,
     A,
     N,
-    v,
-    O = n(981631);
-let R = 300;
+    O,
+    R = n(981631);
+let v = 300;
 function C(e) {
     let { API_ENDPOINT: t, CDN_HOST: n } = window.GLOBAL_ENV;
-    return null != n ? ''.concat(location.protocol, '//').concat(n, '/badge-icons/').concat(e, '.png') : ''.concat(location.protocol).concat(t).concat(O.ANM.BADGE_ICON(e));
+    return null != n ? ''.concat(location.protocol, '//').concat(n, '/badge-icons/').concat(e, '.png') : ''.concat(location.protocol).concat(t).concat(R.ANM.BADGE_ICON(e));
 }
 ((r = f || (f = {})).USER_INFO = 'USER_INFO'),
     (r.BOT_INFO = 'BOT_INFO'),
@@ -61,30 +61,30 @@ function C(e) {
     ((i = h || (h = {})).ROLES = 'ROLES'),
     (i.CONNECTIONS = 'CONNECTIONS'),
     (i.NOTE = 'NOTE'),
-    ((a = p || (p = {})).POPOUT = 'POPOUT'),
-    (a.MODAL = 'MODAL'),
-    (a.SETTINGS = 'SETTINGS'),
+    ((a = p || (p = {})).BITE_SIZE = 'BITE_SIZE'),
+    (a.FULL_SIZE = 'FULL_SIZE'),
     (a.PANEL = 'PANEL'),
     (a.CARD = 'CARD'),
-    (a.CANCEL_MODAL = 'CANCEL_MODAL'),
-    (a.BITE_SIZE = 'BITE_SIZE'),
-    (a.FULL_SIZE = 'FULL_SIZE'),
-    ((s = m || (m = {})).LIVE = 'live'),
+    ((s = I || (I = {})).LIVE = 'live'),
     (s.RECENT = 'recent'),
-    ((o = I || (I = {})).BITE_SIZE_POPOUT = 'BITE_SIZE_POPOUT'),
+    ((o = m || (m = {})).BITE_SIZE_POPOUT = 'BITE_SIZE_POPOUT'),
     (o.SIMPLIFIED_MODAL = 'SIMPLIFIED_MODAL'),
     (o.SIMPLIFIED_DM_PANEL = 'SIMPLIFIED_DM_PANEL'),
     (o.ACCOUNT_POPOUT = 'ACCOUNT_POPOUT'),
     (o.ACTION_SHEET = 'ACTION_SHEET'),
     (o.SIMPLIFIED_ACTION_SHEET = 'SIMPLIFIED_ACTION_SHEET'),
+    (o.YOU_SCREEN = 'YOU_SCREEN'),
     (o.SIMPLIFIED_ACCOUNT_POPOUT = 'SIMPLIFIED_ACCOUNT_POPOUT'),
     (o.BLOCKED_PROFILE_POPOUT = 'BLOCKED_PROFILE_POPOUT'),
     (o.BLOCKED_ACTION_SHEET = 'BLOCKED_ACTION_SHEET'),
     (o.BLOCKED_PROFILE_PANEL = 'BLOCKED_PROFILE_PANEL'),
     (o.BLOCKED_PROFILE_MODAL = 'BLOCKED_PROFILE_MODAL'),
+    (o.SIMPLIFIED_DM_PANEL_RESTRICTED_BLOCKER_PROFILE = 'SIMPLIFIED_DM_PANEL_RESTRICTED_BLOCKER_PROFILE'),
+    (o.BITE_SIZE_POPOUT_RESTRICTED_BLOCKER_PROFILE = 'BITE_SIZE_POPOUT_RESTRICTED_BLOCKER_PROFILE'),
+    (o.SIMPLIFIED_MODAL_RESTRICTED_BLOCKER_PROFILE = 'SIMPLIFIED_MODAL_RESTRICTED_BLOCKER_PROFILE'),
     ((l = T || (T = {})).USER_SHEET = 'User Sheet'),
     (l.BLOCKED_USER_SHEET = 'Blocked User Sheet'),
-    ((u = g || (g = {}))[(u.NICKNAME = 0)] = 'NICKNAME'),
+    ((u = S || (S = {}))[(u.NICKNAME = 0)] = 'NICKNAME'),
     (u[(u.PRONOUNS = 1)] = 'PRONOUNS'),
     (u[(u.AVATAR = 2)] = 'AVATAR'),
     (u[(u.ANIMATED_AVATAR = 3)] = 'ANIMATED_AVATAR'),
@@ -94,7 +94,7 @@ function C(e) {
     (u[(u.THEME = 7)] = 'THEME'),
     (u[(u.AVATAR_DECORATION = 8)] = 'AVATAR_DECORATION'),
     (u[(u.PROFILE_EFFECT = 9)] = 'PROFILE_EFFECT'),
-    ((c = S || (S = {})).VIEW = 'VIEW'),
+    ((c = g || (g = {})).VIEW = 'VIEW'),
     (c.SEND_MESSAGE = 'SEND_MESSAGE'),
     (c.SEND_DIRECT_MESSAGE = 'SEND_DIRECT_MESSAGE'),
     (c.SEND_FRIEND_REQUEST = 'SEND_FRIEND_REQUEST'),
@@ -105,7 +105,6 @@ function C(e) {
     (c.BLOCK = 'BLOCK'),
     (c.UNBLOCK = 'UNBLOCK'),
     (c.REPORT = 'REPORT'),
-    (c.REPORT_APP = 'REPORT_APP'),
     (c.COPY_USERNAME = 'COPY_USERNAME'),
     (c.COPY_USER_ID = 'COPY_USER_ID'),
     (c.COPY_APP_ID = 'COPY_APP_ID'),
@@ -117,7 +116,6 @@ function C(e) {
     (c.PRESS_BADGE = 'PRESS_BADGE'),
     (c.PRESS_SECTION = 'PRESS_SECTION'),
     (c.PRESS_PRONOUNS = 'PRESS_PRONOUNS'),
-    (c.PRESS_PREMIUM_UPSELL = 'PRESS_PREMIUM_UPSELL'),
     (c.PRESS_ADD_NOTE = 'PRESS_ADD_NOTE'),
     (c.PRESS_SET_STATUS = 'PRESS_SET_STATUS'),
     (c.PRESS_SET_CUSTOM_STATUS = 'PRESS_SET_CUSTOM_STATUS'),
@@ -166,6 +164,16 @@ function C(e) {
     (c.EXPAND_ROLES = 'EXPAND_ROLES'),
     (c.COLLAPSE_ROLES = 'COLLAPSE_ROLES'),
     (c.VIEW_BLOCKED_PROFILE = 'VIEW_BLOCKED_PROFILE'),
+    (c.PRESS_MANAGE_USER = 'PRESS_MANAGE_USER'),
+    (c.PRESS_VERIFY_USER = 'PRESS_VERIFY_USER'),
+    (c.PRESS_UNVERIFY_USER = 'PRESS_UNVERIFY_USER'),
+    (c.PRESS_TIME_OUT_USER = 'PRESS_TIME_OUT_USER'),
+    (c.PRESS_REMOVE_TIME_OUT = 'PRESS_REMOVE_TIME_OUT'),
+    (c.PRESS_KICK_USER = 'PRESS_KICK_USER'),
+    (c.PRESS_BAN_USER = 'PRESS_BAN_USER'),
+    (c.COPY_CONNECTED_ACCOUNT = 'COPY_CONNECTED_ACCOUNT'),
+    (c.PRESS_VIEW_CONNECTED_ACCOUNT = 'PRESS_VIEW_CONNECTED_ACCOUNT'),
+    (c.PRESS_REACT_REPLY_TOAST = 'PRESS_REACT_REPLY_TOAST'),
     ((d = A || (A = {})).VIEW = 'VIEW'),
     (d.PRESS_GAME_IMAGE = 'PRESS_GAME_IMAGE'),
     (d.PRESS_STREAM_IMAGE = 'PRESS_STREAM_IMAGE'),
@@ -202,5 +210,5 @@ function C(e) {
     ((_ = N || (N = {})).ACTIVITY = 'ACTIVITY'),
     (_.AVATAR = 'AVATAR'),
     (_.STATUS = 'STATUS'),
-    ((E = v || (v = {})).REPLY = 'REPLY'),
+    ((E = O || (O = {})).REPLY = 'REPLY'),
     (E.REACT = 'REACT');

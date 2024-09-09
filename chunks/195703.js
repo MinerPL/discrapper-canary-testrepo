@@ -6,7 +6,6 @@ e.exports = {
     roleRemoveButton: 'roleRemoveButton_f9575e',
     roleIcon: 'roleIcon_f9575e',
     roleName: 'roleName_f9575e',
-    roleNameOverflow: 'roleNameOverflow_f9575e',
     roleRemoveIcon: 'roleRemoveIcon_f9575e',
     roleRemoveIconFocused: 'roleRemoveIconFocused_f9575e',
     roleVerifiedIcon: 'roleVerifiedIcon_f9575e',

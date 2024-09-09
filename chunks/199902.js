@@ -10,23 +10,23 @@ var o,
     f = n(594190),
     h = n(569545),
     p = n(382182),
-    m = n(139656),
-    I = n(855403),
+    I = n(139656),
+    m = n(855403),
     T = n(314897),
-    g = n(592125),
-    S = n(430824),
+    S = n(592125),
+    g = n(430824),
     A = n(131951),
     N = n(496675),
-    v = n(19780),
-    O = n(944486),
-    R = n(979651),
+    O = n(19780),
+    R = n(944486),
+    v = n(979651),
     C = n(981631),
     y = n(70722);
-let D = null,
-    L = {},
+let L = null,
+    D = {},
     b = null;
 function M() {
-    (r = new Map()), (i = {}), (a = {}), (s = {}), (L = {});
+    (r = new Map()), (i = {}), (a = {}), (s = {}), (D = {});
 }
 M();
 function P(e) {
@@ -53,13 +53,13 @@ function w(e) {
         });
 }
 function x(e, t) {
-    let n = g.Z.getBasicChannel(t);
+    let n = S.Z.getBasicChannel(t);
     return e === y.lo.CALL || (null != n && N.Z.canBasicChannel(C.S7T.VIEW_CHANNEL, n));
 }
 function G(e) {
     if (x(e.streamType, e.channelId)) return !0;
-    let t = g.Z.getBasicChannel(e.channelId);
-    return null != t && (0, p.p9)(t, R.Z, S.Z, N.Z, E.Z)[0];
+    let t = S.Z.getBasicChannel(e.channelId);
+    return null != t && (0, p.p9)(t, v.Z, g.Z, N.Z, E.Z)[0];
 }
 class k extends (o = d.ZP.Store) {
     initialize() {
@@ -67,31 +67,31 @@ class k extends (o = d.ZP.Store) {
     }
     isSelfStreamHidden(e) {
         var t;
-        return null !== (t = L[e]) && void 0 !== t && t;
+        return null !== (t = D[e]) && void 0 !== t && t;
     }
     getLastActiveStream() {
         var e;
-        return (0, m.Z)(A.Z) ? (null !== (e = Array.from(r.values()).pop()) && void 0 !== e ? e : null) : null;
+        return (0, I.Z)(A.Z) ? (null !== (e = Array.from(r.values()).pop()) && void 0 !== e ? e : null) : null;
     }
     getAllActiveStreams() {
-        return (0, m.Z)(A.Z) ? Array.from(r.values()) : [];
+        return (0, I.Z)(A.Z) ? Array.from(r.values()) : [];
     }
     getAllActiveStreamsForChannel(e) {
-        return (0, m.Z)(A.Z) ? Array.from(r.values()).filter((t) => t.channelId === e) : [];
+        return (0, I.Z)(A.Z) ? Array.from(r.values()).filter((t) => t.channelId === e) : [];
     }
     getActiveStreamForStreamKey(e) {
         var t;
-        return (0, m.Z)(A.Z) ? (null !== (t = r.get(e)) && void 0 !== t ? t : null) : null;
+        return (0, I.Z)(A.Z) ? (null !== (t = r.get(e)) && void 0 !== t ? t : null) : null;
     }
     getActiveStreamForApplicationStream(e) {
         var t;
-        if (!(0, m.Z)(A.Z) || null == e) return null;
+        if (!(0, I.Z)(A.Z) || null == e) return null;
         let n = (0, h.V9)(e);
         return null !== (t = this.getActiveStreamForStreamKey(n)) && void 0 !== t ? t : null;
     }
     getCurrentUserActiveStream() {
-        let e = O.Z.getVoiceChannelId(),
-            t = g.Z.getChannel(e);
+        let e = R.Z.getVoiceChannelId(),
+            t = S.Z.getChannel(e);
         return null == t ? null : this.getActiveStreamForUser(T.default.getId(), t.getGuildId());
     }
     getActiveStreamForUser(e, t) {
@@ -101,8 +101,8 @@ class k extends (o = d.ZP.Store) {
     }
     getStreamerActiveStreamMetadata() {
         var e;
-        let t = O.Z.getVoiceChannelId(),
-            n = g.Z.getChannel(t);
+        let t = R.Z.getVoiceChannelId(),
+            n = S.Z.getChannel(t);
         if (null == n) return null;
         let r = this.getActiveStreamForUser(T.default.getId(), n.getGuildId());
         return null == r ? null : null !== (e = s[(0, h.V9)(r)]) && void 0 !== e ? e : null;
@@ -111,30 +111,35 @@ class k extends (o = d.ZP.Store) {
         var t;
         return null !== (t = s[e]) && void 0 !== t ? t : null;
     }
+    getIsActiveStreamPreviewDisabled(e) {
+        var t;
+        let n = s[e];
+        return null !== (t = null == n ? void 0 : n.previewDisabled) && void 0 !== t && t;
+    }
     getAnyStreamForUser(e) {
         var t;
-        if (!(0, m.Z)(A.Z)) return null;
+        if (!(0, I.Z)(A.Z)) return null;
         let n = i[e];
         return null == n ? null : null !== (t = Object.values(n).find((e) => G(e))) && void 0 !== t ? t : null;
     }
     getStreamForUser(e, t) {
         var n;
-        if (!(0, m.Z)(A.Z)) return null;
+        if (!(0, I.Z)(A.Z)) return null;
         let r = null === (n = i[e]) || void 0 === n ? void 0 : n[null != t ? t : C.kod];
         return null != r && G(r) ? r : null;
     }
     getRTCStream(e) {
         var t;
-        return (0, m.Z)(A.Z) ? (null !== (t = a[e]) && void 0 !== t ? t : null) : null;
+        return (0, I.Z)(A.Z) ? (null !== (t = a[e]) && void 0 !== t ? t : null) : null;
     }
     getAllApplicationStreams() {
-        return (0, m.Z)(A.Z) ? U().filter((e) => null != e && x(e.streamType, e.channelId)) : [];
+        return (0, I.Z)(A.Z) ? U().filter((e) => null != e && x(e.streamType, e.channelId)) : [];
     }
     getAllApplicationStreamsForChannel(e) {
-        return (0, m.Z)(A.Z) ? U().filter((t) => null != t && t.channelId === e && x(t.streamType, t.channelId)) : [];
+        return (0, I.Z)(A.Z) ? U().filter((t) => null != t && t.channelId === e && x(t.streamType, t.channelId)) : [];
     }
     getViewerIds(e) {
-        if (!(0, m.Z)(A.Z)) return [];
+        if (!(0, I.Z)(A.Z)) return [];
         let t = null,
             n = null != (t = 'string' == typeof e ? e : (0, h.V9)(e)) ? a[t] : null;
         return null != n ? n.viewerIds : [];
@@ -143,7 +148,7 @@ class k extends (o = d.ZP.Store) {
         return b;
     }
     getState() {
-        return (0, m.Z)(A.Z)
+        return (0, I.Z)(A.Z)
             ? {
                   activeStreams: Array.from(r.entries()),
                   streamsByUserAndGuild: i,
@@ -194,7 +199,7 @@ class k extends (o = d.ZP.Store) {
                 }
                 {
                     let t = T.default.getSessionId();
-                    return n === T.default.getId() && s !== t && null != v.Z.getChannelId()
+                    return n === T.default.getId() && s !== t && null != O.Z.getChannelId()
                         ? e
                         : (function (e, t) {
                               var n;
@@ -212,25 +217,26 @@ class k extends (o = d.ZP.Store) {
                     ...n,
                     state: C.jm8.CONNECTING
                 }),
-                n.ownerId === T.default.getId() && (L[n.channelId] = !1);
+                n.ownerId === T.default.getId() && (D[n.channelId] = !1);
         },
         STREAM_START: function (e) {
             var t;
-            let { streamType: n, guildId: i, channelId: a, pid: o, sourceName: l, sourceId: u } = e,
-                c = (0, h.V9)({
+            let { streamType: n, guildId: i, channelId: a, pid: o, sourceName: l, sourceId: u, previewDisabled: c } = e,
+                d = (0, h.V9)({
                     streamType: n,
                     guildId: i,
                     channelId: a,
                     ownerId: T.default.getId()
                 }),
-                d = null !== (t = null != o ? f.ZP.getGameForPID(o) : null != u ? f.ZP.getRunningGames().find((e) => (0, I.Z)(u, e.windowHandle)) : null) && void 0 !== t ? t : null;
-            (s[c] = {
-                id: null == d ? void 0 : d.id,
+                _ = null !== (t = null != o ? f.ZP.getGameForPID(o) : null != u ? f.ZP.getRunningGames().find((e) => (0, m.Z)(u, e.windowHandle)) : null) && void 0 !== t ? t : null;
+            (s[d] = {
+                id: null == _ ? void 0 : _.id,
                 pid: o,
-                sourceName: l
+                sourceName: l,
+                previewDisabled: c
             }),
-                r.delete(c),
-                r.set(c, {
+                r.delete(d),
+                r.set(d, {
                     streamType: n,
                     guildId: i,
                     channelId: a,
@@ -276,7 +282,7 @@ class k extends (o = d.ZP.Store) {
                 ...o,
                 state: l
             }),
-                l === C.jm8.ENDED && D !== t && P(t);
+                l === C.jm8.ENDED && L !== t && P(t);
         },
         STREAM_CLOSE: function (e) {
             let { streamKey: t } = e;
@@ -284,7 +290,7 @@ class k extends (o = d.ZP.Store) {
         },
         STREAM_UPDATE_SELF_HIDDEN: function (e) {
             let { channelId: t, selfStreamHidden: n } = e;
-            (0, h.DB)(D) && (null == D ? void 0 : D.includes(T.default.getId())) && !1 === L[t] && !0 === n && (D = null), (L[t] = n);
+            (0, h.DB)(L) && (null == L ? void 0 : L.includes(T.default.getId())) && !1 === D[t] && !0 === n && (L = null), (D[t] = n);
         },
         SET_STREAM_APP_INTENT: function (e) {
             let { intent: t } = e;
@@ -312,13 +318,13 @@ class k extends (o = d.ZP.Store) {
         CHANNEL_RTC_SELECT_PARTICIPANT: function (e) {
             let { id: t, channelId: n } = e;
             if (
-                ((D = t),
+                ((L = t),
                 Array.from(r.values()).forEach((e) => {
-                    (0, h.V9)(e) !== D && e.state === C.jm8.ENDED && P((0, h.V9)(e));
+                    (0, h.V9)(e) !== L && e.state === C.jm8.ENDED && P((0, h.V9)(e));
                 }),
                 null != t)
             )
-                (0, h.DB)(t) && t.includes(T.default.getId()) && (L[n] = !1);
+                (0, h.DB)(t) && t.includes(T.default.getId()) && (D[n] = !1);
         },
         CONNECTION_OPEN: M,
         CONNECTION_CLOSED: M,

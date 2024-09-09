@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return I;
     }
 }),
     n(47120);
@@ -61,6 +61,12 @@ let _ = {
             chance: 0.5,
             hotspot: o.v6.IN_APP_REPORTS_FEEDBACK,
             storageKey: 'inAppReportsFeedback'
+        },
+        [c.nw.USER_DM_MUTE]: {
+            cooldown: 0,
+            chance: 0.5,
+            hotspot: o.v6.USER_DM_MUTE_FEEDBACK,
+            storageKey: 'userDmMute'
         }
     };
 function f(e) {
@@ -76,7 +82,7 @@ function p(e) {
     }
     return !0;
 }
-class m extends s.Z {
+class I extends s.Z {
     possiblyShowFeedbackModal(e, t) {
         if (
             !!(function (e) {

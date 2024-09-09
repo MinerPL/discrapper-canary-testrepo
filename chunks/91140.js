@@ -5,47 +5,51 @@ n.d(t, {
 });
 var r = n(735250),
     i = n(470079),
-    a = n(297781),
-    s = n(443487),
-    o = n(43205),
-    l = n(797342),
+    a = n(379357),
+    s = n(442550),
+    o = n(297781),
+    l = n(443487),
     u = n(182022);
-let c = [a.OV, a.EE, a.Af, a.U9, a.wO, a.f, a.n8, a.v1, a.pQ];
+let c = [o.OV, o.EE, o.Af, o.U9, o.wO, o.f, o.n8, o.v1, o.pQ];
 t.Z = i.memo((e) => {
-    let { entry: t, channel: n, selected: i, hovered: d } = e,
-        { iconUrl: _, iconTitle: E } = (0, l.n)(t);
-    return (0, r.jsxs)(s.Zb, {
-        selected: i,
+    var t;
+    let { entry: n, channel: i, selected: d, hovered: _ } = e,
+        { largeImage: E } = (0, a.rv)({
+            entry: n,
+            showCoverImage: !1
+        });
+    return (0, r.jsxs)(l.Zb, {
+        selected: d,
         children: [
-            (0, r.jsxs)(s.e$, {
+            (0, r.jsxs)(l.e$, {
                 children: [
-                    (0, r.jsx)(s.F9, {
-                        entry: t,
-                        channelId: n.id,
-                        guildId: n.guild_id
+                    (0, r.jsx)(l.F9, {
+                        entry: n,
+                        channelId: i.id,
+                        guildId: i.guild_id
                     }),
-                    (0, r.jsx)(s.ll, { children: t.extra.game_name }),
-                    (0, r.jsx)(a.Gk, {
-                        location: a.Gt.CARD,
-                        children: c.map((e, n) =>
+                    (0, r.jsx)(l.ll, { children: n.extra.game_name }),
+                    (0, r.jsx)(o.Gk, {
+                        location: o.Gt.CARD,
+                        children: c.map((e, t) =>
                             (0, r.jsx)(
                                 e,
                                 {
-                                    entry: t,
-                                    hovered: d
+                                    entry: n,
+                                    hovered: _
                                 },
-                                n
+                                t
                             )
                         )
                     })
                 ]
             }),
-            (0, r.jsx)(o.f, {
-                alt: E,
-                src: _,
+            (0, r.jsx)(s.f, {
+                alt: null !== (t = null == E ? void 0 : E.text) && void 0 !== t ? t : null == E ? void 0 : E.alt,
+                src: null == E ? void 0 : E.src,
                 size: 48,
                 className: u.thumbnail,
-                showTooltip: null != E
+                showTooltip: (null == E ? void 0 : E.text) != null
             })
         ]
     });

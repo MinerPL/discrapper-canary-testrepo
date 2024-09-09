@@ -1,0 +1,22 @@
+e.exports = {
+    rootContainer: 'rootContainer_c2d726',
+    rootContainerLoading: 'rootContainerLoading_c2d726',
+    claimedRootContainer: 'claimedRootContainer_c2d726',
+    headerContainer: 'headerContainer_c2d726',
+    beta: 'beta_c2d726',
+    headerBackground: 'headerBackground_c2d726',
+    headerForeground: 'headerForeground_c2d726',
+    previewContainer: 'previewContainer_c2d726',
+    close: 'close_c2d726',
+    footerContainer: 'footerContainer_c2d726',
+    gradient: 'gradient_c2d726',
+    heading: 'heading_c2d726',
+    text: 'text_c2d726',
+    confettiCanvas: 'confettiCanvas_c2d726',
+    rewardTile: 'rewardTile_c2d726',
+    errorHeader: 'errorHeader_c2d726',
+    errorTitle: 'errorTitle_c2d726',
+    errorModalCloseButton: 'errorModalCloseButton_c2d726',
+    errorContent: 'errorContent_c2d726',
+    errorModalFooter: 'errorModalFooter_c2d726'
+};

@@ -1,0 +1,21 @@
+e.exports = {
+    wrapper: 'wrapper_c258fa',
+    specialHeader: 'specialHeader_c258fa',
+    pill: 'pill_c258fa',
+    content: 'content_c258fa',
+    headerWithoutSpecialHeader: 'headerWithoutSpecialHeader_c258fa',
+    headerWithBoost: 'headerWithBoost_c258fa',
+    header: 'header_c258fa',
+    headerHeading: 'headerHeading_c258fa',
+    headerContentPrimary: 'headerContentPrimary_c258fa',
+    headerBoostGems: 'headerBoostGems_c258fa',
+    headerBoostGem: 'headerBoostGem_c258fa',
+    headerLearnMoreLink: 'headerLearnMoreLink_c258fa',
+    unappliedBoostSlots: 'unappliedBoostSlots_c258fa',
+    unappliedGuildBoostSlot: 'unappliedGuildBoostSlot_c258fa',
+    unappliedGuildBoostSlotContentPrimary: 'unappliedGuildBoostSlotContentPrimary_c258fa',
+    unappliedGuildBoostSlotContentSecondary: 'unappliedGuildBoostSlotContentSecondary_c258fa',
+    unappliedGuildBoostSlotIcon: 'unappliedGuildBoostSlotIcon_c258fa',
+    unappliedGuildBoostSlotCta: 'unappliedGuildBoostSlotCta_c258fa',
+    headerContentSecondary: 'headerContentSecondary_c258fa'
+};

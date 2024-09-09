@@ -2,7 +2,8 @@ n.d(t, {
     Z: function () {
         return p;
     }
-});
+}),
+    n(536091);
 var r = n(735250);
 n(470079);
 var i = n(120356),
@@ -21,25 +22,23 @@ function h(e) {
     return (0, r.jsxs)('div', {
         className: f.scope,
         children: [
-            (0, r.jsx)('div', {
-                className: a()(f.iconWrapper, i ? f.fakeScopeIcon : f.scopeIcon),
-                children: i
-                    ? (0, r.jsx)(d.XSmallIcon, {
-                          size: 'md',
-                          color: 'currentColor',
-                          className: f.icon
-                      })
-                    : (0, r.jsx)(d.CheckmarkLargeIcon, {
-                          size: 'md',
-                          color: 'currentColor',
-                          className: f.icon
-                      })
-            }),
+            i
+                ? (0, r.jsx)(d.CircleXIcon, {
+                      size: 'md',
+                      color: 'currentColor',
+                      className: a()(f.icon, f.fakeScopeIcon)
+                  })
+                : (0, r.jsx)(d.CircleCheckIcon, {
+                      size: 'md',
+                      color: 'currentColor',
+                      className: a()(f.icon, f.scopeIcon)
+                  }),
             (0, r.jsxs)('div', {
                 className: f.scopeInner,
                 children: [
                     (0, r.jsx)(c.x, {
-                        variant: 'text-md/medium',
+                        variant: 'text-md/normal',
+                        color: i ? 'text-muted' : void 0,
                         children: t
                     }),
                     null != n
@@ -57,33 +56,37 @@ function h(e) {
 function p(e) {
     var t;
     let { application: n, accountScopes: i, requestedScopes: a, integrationType: c, errors: d, isTrustedName: p = !1 } = e,
-        m = (0, s.Z)(() => _.ZW[Math.floor(Math.random() * _.ZW.length)]);
+        I = (0, s.Z)(() => _.ZW[Math.floor(Math.random() * _.ZW.length)]);
     if (0 === i.length) return null;
-    let I = m(),
+    let m = I(),
         T = p ? E.Z.Messages.OAUTH2_SCOPES_LABEL_TRUSTED_NAME : E.Z.Messages.OAUTH2_SCOPES_LABEL,
-        g = c === o.Y.USER_INSTALL && a.includes(l.x.APPLICATIONS_COMMANDS);
+        S = c === o.Y.USER_INSTALL && a.includes(l.x.APPLICATIONS_COMMANDS);
     return (0, r.jsxs)('div', {
         className: f.scopes,
         children: [
             (0, r.jsx)(u.X, {
-                variant: 'heading-deprecated-12/semibold',
+                variant: 'heading-sm/normal',
                 className: f.sectionLabel,
                 children: T.format({ application: null !== (t = null == n ? void 0 : n.name) && void 0 !== t ? t : '' })
             }),
-            i.map((e) => {
-                var t;
-                return (0, r.jsx)(
-                    h,
-                    {
-                        text: (0, _.jW)(e, i),
-                        error: null == d ? void 0 : null === (t = d[e]) || void 0 === t ? void 0 : t[0]
-                    },
-                    e
-                );
-            }),
-            g && (0, r.jsx)(h, { text: E.Z.Messages.SCOPE_DM_YOU }),
+            i
+                .map((e) =>
+                    (0, _.CI)(e, i).map((t, n) => {
+                        var i;
+                        return (0, r.jsx)(
+                            h,
+                            {
+                                text: t,
+                                error: 0 === n ? (null == d ? void 0 : null === (i = d[e]) || void 0 === i ? void 0 : i[0]) : void 0
+                            },
+                            ''.concat(e, '-').concat(n)
+                        );
+                    })
+                )
+                .flat(),
+            S && (0, r.jsx)(h, { text: E.Z.Messages.SCOPE_DM_YOU }),
             (0, r.jsx)(h, {
-                text: I,
+                text: m,
                 isFake: !0
             })
         ]

@@ -6,6 +6,9 @@ n.d(t, {
         return l;
     },
     I9: function () {
+        return _;
+    },
+    jR: function () {
         return d;
     },
     kr: function () {
@@ -15,10 +18,10 @@ n.d(t, {
         return s;
     },
     nz: function () {
-        return _;
+        return E;
     },
     tB: function () {
-        return E;
+        return f;
     },
     yG: function () {
         return c;
@@ -33,7 +36,8 @@ var r,
 let l = '>=19.0.0',
     u = '>=22.0.0',
     c = '>=22.0.0',
-    d = '>=10.0.17763',
-    _ = '>=10.0.22000';
+    d = '>=24.0.0',
+    _ = '>=10.0.17763',
+    E = '>=10.0.22000';
 ((i = s || (s = {})).GUILD = 'guild'), (i.CALL = 'call');
-let E = o.T.StreamNotificationsGuildMaxSize;
+let f = o.T.StreamNotificationsGuildMaxSize;

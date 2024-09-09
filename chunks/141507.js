@@ -1,6 +1,6 @@
 n.d(t, {
     k: function () {
-        return U;
+        return b;
     }
 });
 var r = n(735250),
@@ -17,158 +17,160 @@ var r = n(735250),
     f = n(65029),
     h = n(210887),
     p = n(695346),
-    m = n(430824),
-    I = n(451478),
+    I = n(430824),
+    m = n(451478),
     T = n(768581),
+    S = n(111846),
     g = n(392552),
-    S = n(543241),
-    A = n(199257),
-    N = n(880949),
-    v = n(784222),
-    O = n(149203),
-    R = n(689938),
-    C = n(611540);
-let y = n(137321),
-    D = n(233892),
-    L = n(942315),
-    b = n(636626);
-function M(e) {
+    A = n(543241),
+    N = n(199257),
+    O = n(880949),
+    R = n(784222),
+    v = n(149203),
+    C = n(689938),
+    y = n(611540);
+function L(e) {
     return 'animated' in e;
 }
-let P = (e) => {
+let D = (e) => {
         let { inspectedEmoji: t, guild: n } = e,
-            r = M(t);
-        return null != n && r ? R.Z.Messages.EMOJI_FROM_GUILD.format({ guildName: n.name }) : null;
+            r = L(t);
+        return null != n && r ? C.Z.Messages.EMOJI_FROM_GUILD.format({ guildName: n.name }) : null;
     },
-    U = i.memo(function (e) {
+    b = i.memo(function (e) {
         let t,
-            n,
-            U,
-            { className: w, emojiGrid: x, guildId: G, pickerIntention: k, channel: B } = e,
-            { enabled: F } = g.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
-            V = E.kJ.useStore((e) => e.inspectedExpressionPosition),
-            H = i.useMemo(() => {
+            b,
+            M,
+            { className: P, emojiGrid: U, guildId: w, pickerIntention: x, channel: G } = e,
+            { enabled: k } = g.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
+            B = E.kJ.useStore((e) => e.inspectedExpressionPosition),
+            F = i.useMemo(() => {
                 var e;
-                let { rowIndex: t, columnIndex: n } = V;
-                return null === (e = x[t]) || void 0 === e ? void 0 : e[n];
-            }, [x, V]);
-        switch (null == H ? void 0 : H.type) {
-            case v.ld.EMOJI:
-                t = null == H ? void 0 : H.emoji;
+                let { rowIndex: t, columnIndex: n } = B;
+                return null === (e = U[t]) || void 0 === e ? void 0 : e[n];
+            }, [U, B]);
+        switch (null == F ? void 0 : F.type) {
+            case R.ld.EMOJI:
+                t = null == F ? void 0 : F.emoji;
                 break;
-            case v.ld.EXPAND_OR_COLLAPSE_EMOJIS:
+            case R.ld.EXPAND_OR_COLLAPSE_EMOJIS:
                 t = {
                     type: 'EXPAND_OR_COLLAPSE_EMOJI',
-                    guildId: null == H ? void 0 : H.guildId,
-                    allNamesString: null == H ? void 0 : H.name
+                    guildId: null == F ? void 0 : F.guildId,
+                    allNamesString: null == F ? void 0 : F.name
                 };
                 break;
-            case v.ld.CREATE_EMOJI:
+            case R.ld.CREATE_EMOJI:
             default:
                 t = {
                     type: 'CREATE_EMOJI',
-                    guildId: null == H ? void 0 : H.guildId,
-                    allNamesString: null == H ? void 0 : H.name
+                    guildId: null == F ? void 0 : F.guildId,
+                    allNamesString: null == F ? void 0 : F.name
                 };
         }
-        let Z = (0, a.e7)([m.Z], () => (null !== t && t.type === c.B.GUILD ? m.Z.getGuild(t.guildId) : null), [t]),
-            Y = (0, a.e7)([I.Z], () => I.Z.isFocused()),
-            j = (0, a.e7)([l.Z], () => l.Z.useReducedMotion, []),
-            W = p.Yk.useSetting(),
-            K = (0, S.C1)(G, M(t) ? t : null),
-            z = (0, a.e7)([u.ZP], () => u.ZP.expandedSectionsByGuildIds),
-            { newlyAddedEmojis: q } = (0, A.Z)(G, k),
-            Q = t.id,
-            X = (null == H ? void 0 : H.type) === v.ld.EMOJI ? H.subCategory : O.t0.NONE;
+        let V = (0, a.e7)([I.Z], () => (null !== t && t.type === c.B.GUILD ? I.Z.getGuild(t.guildId) : null), [t]),
+            { useTransparentIcons: H } = S.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
+            Z = (0, a.e7)([m.Z], () => m.Z.isFocused()),
+            Y = (0, a.e7)([l.Z], () => l.Z.useReducedMotion, []),
+            j = p.Yk.useSetting(),
+            W = (0, A.C1)(w, L(t) ? t : null),
+            K = (0, a.e7)([u.ZP], () => u.ZP.expandedSectionsByGuildIds),
+            { newlyAddedEmojis: z } = (0, N.Z)(w, x),
+            q = t.id,
+            Q = (null == F ? void 0 : F.type) === R.ld.EMOJI ? F.subCategory : v.t0.NONE;
         if (
             (i.useEffect(() => {
                 let e = Date.now();
                 return () => {
                     Date.now() - e >= 250 &&
-                        M(t) &&
-                        X !== O.t0.NONE &&
-                        (X === O.t0.NEWLY_ADDED_EMOJI && null !== t && t.type === c.B.GUILD && (0, _.Zg)(t.guildId, q[0].id),
-                        null != V.source &&
-                            (0, S.Gn)({
+                        L(t) &&
+                        Q !== v.t0.NONE &&
+                        (Q === v.t0.NEWLY_ADDED_EMOJI && null !== t && t.type === c.B.GUILD && (0, _.Zg)(t.guildId, z[0].id),
+                        null != B.source &&
+                            (0, A.Gn)({
                                 emoji: t,
-                                subCategory: X,
-                                position: H.columnIndex + 1,
-                                newlyAddedHighlight: X === O.t0.NEWLY_ADDED_EMOJI && d.Z.isNewerThanLastSeen(G, Q)
+                                subCategory: Q,
+                                position: F.columnIndex + 1,
+                                newlyAddedHighlight: Q === v.t0.NEWLY_ADDED_EMOJI && d.Z.isNewerThanLastSeen(w, q)
                             }));
                 };
             }),
             null == t)
         )
             return null;
-        let $ = h.Z.theme;
-        if (M(t)) {
-            var J;
+        let X = h.Z.theme;
+        if (L(t)) {
+            var $;
             let e =
                 null != t.id
                     ? T.ZP.getEmojiURL({
                           id: t.id,
-                          animated: W && t.animated,
+                          animated: j && t.animated,
                           size: 28
                       })
                     : t.url;
-            n =
+            b =
                 '' === e
                     ? (0, r.jsx)(o.Text, {
                           variant: 'text-md/normal',
-                          className: C.glyphEmoji,
+                          className: y.glyphEmoji,
                           children: 'surrogates' in t ? t.surrogates : null
                       })
                     : (0, r.jsx)('img', {
-                          alt: null !== (J = t.allNamesString) && void 0 !== J ? J : '',
+                          alt: null !== ($ = t.allNamesString) && void 0 !== $ ? $ : '',
                           src: e,
-                          className: C.emoji
+                          className: y.emoji
                       });
-        } else
-            'CREATE_EMOJI' === t.type
-                ? (n = (0, r.jsx)(o.CirclePlusIcon, {
-                      size: 'md',
-                      color: 'currentColor',
-                      className: C.icon,
-                      colorClass: C.icon
-                  }))
-                : 'EXPAND_OR_COLLAPSE_EMOJI' === t.type &&
-                  (n = z.has(t.guildId)
-                      ? (0, r.jsx)('img', {
-                            className: C.icon,
-                            src: (0, s.wj)($) ? L : b,
-                            alt: ''
-                        })
-                      : (0, r.jsx)('img', {
-                            className: C.icon,
-                            src: (0, s.wj)($) ? y : D,
-                            alt: ''
-                        }));
-        let ee =
-            null != Z
-                ? (0, r.jsx)(N.Z, {
-                      className: C.__invalid_guildIcon,
-                      guild: Z,
-                      shouldAnimate: !j && Y
+        } else if ('CREATE_EMOJI' === t.type)
+            b = (0, r.jsx)(o.CirclePlusIcon, {
+                size: 'md',
+                color: 'currentColor',
+                className: y.icon,
+                colorClass: y.icon
+            });
+        else if ('EXPAND_OR_COLLAPSE_EMOJI' === t.type) {
+            let e = H ? n(187119) : n(137321),
+                i = H ? n(39874) : n(233892),
+                a = H ? n(853871) : n(942315),
+                o = H ? n(63149) : n(636626);
+            b = K.has(t.guildId)
+                ? (0, r.jsx)('img', {
+                      className: y.icon,
+                      src: (0, s.wj)(X) ? a : o,
+                      alt: ''
+                  })
+                : (0, r.jsx)('img', {
+                      className: y.icon,
+                      src: (0, s.wj)(X) ? e : i,
+                      alt: ''
+                  });
+        }
+        let J =
+            null != V
+                ? (0, r.jsx)(O.Z, {
+                      className: y.__invalid_guildIcon,
+                      guild: V,
+                      shouldAnimate: !Y && Z
                   })
                 : null;
-        U = F && 'CREATE_EMOJI' === t.type ? R.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE_DESCRIPTION : 'EXPAND_OR_COLLAPSE_EMOJI' === t.type ? (z.has(t.guildId) ? R.Z.Messages.EMOJI_PICKER_COLLAPSE_EMOJI_SECTION : R.Z.Messages.EMOJI_PICKER_EXPAND_EMOJI_SECTION) : t.allNamesString;
-        let et =
-            F && 'CREATE_EMOJI' === t.type
-                ? R.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE
-                : P({
+        M = k && 'CREATE_EMOJI' === t.type ? C.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE_DESCRIPTION : 'EXPAND_OR_COLLAPSE_EMOJI' === t.type ? (K.has(t.guildId) ? C.Z.Messages.EMOJI_PICKER_COLLAPSE_EMOJI_SECTION : C.Z.Messages.EMOJI_PICKER_EXPAND_EMOJI_SECTION) : t.allNamesString;
+        let ee =
+            k && 'CREATE_EMOJI' === t.type
+                ? C.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE
+                : D({
                       inspectedEmoji: t,
-                      channel: B,
-                      guildId: G,
-                      intention: k,
-                      guild: Z
+                      channel: G,
+                      guildId: w,
+                      intention: x,
+                      guild: V
                   });
         return (0, r.jsx)(f.Z, {
-            className: w,
-            graphicPrimary: n,
-            graphicSecondary: ee,
-            titlePrimary: U,
-            titleSecondary: et,
-            isFavorite: K,
-            emojiSubCategory: X
+            className: P,
+            graphicPrimary: b,
+            graphicSecondary: J,
+            titlePrimary: M,
+            titleSecondary: ee,
+            isFavorite: W,
+            emojiSubCategory: Q
         });
     });

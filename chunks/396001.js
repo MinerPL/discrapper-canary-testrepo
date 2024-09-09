@@ -1,0 +1,20 @@
+e.exports = {
+    container: 'container_ed2e7b',
+    whatsNew: 'whatsNew_ed2e7b',
+    whatsNewWithOriginalHeroHeading: 'whatsNewWithOriginalHeroHeading_ed2e7b',
+    perksDiscoverability: 'perksDiscoverability_ed2e7b',
+    giftNitro: 'giftNitro_ed2e7b',
+    seeAllPerksButton: 'seeAllPerksButton_ed2e7b',
+    seeAllPerksButtonContent: 'seeAllPerksButtonContent_ed2e7b',
+    footerSpacing: 'footerSpacing_ed2e7b',
+    bottomIllustration: 'bottomIllustration_ed2e7b',
+    heroHeading: 'heroHeading_ed2e7b',
+    heading: 'heading_ed2e7b',
+    column: 'column_ed2e7b',
+    bottomOfPageVisibilitySensor: 'bottomOfPageVisibilitySensor_ed2e7b',
+    mainPageScroller: 'mainPageScroller_ed2e7b',
+    allPerksScroller: 'allPerksScroller_ed2e7b',
+    open: 'open_ed2e7b',
+    openCloseReduceMotion: 'openCloseReduceMotion_ed2e7b',
+    cardCarousel: 'cardCarousel_ed2e7b'
+};

@@ -3,13 +3,13 @@ n.d(t, {
         return A;
     },
     AQ: function () {
-        return v;
+        return O;
     },
     G7: function () {
-        return g;
+        return S;
     },
     K5: function () {
-        return S;
+        return g;
     },
     Ue: function () {
         return T;
@@ -17,7 +17,7 @@ n.d(t, {
     bR: function () {
         return function e(t, n) {
             let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-                { categoryId: i = h.Hk, preferredLocale: a, offset: d, length: p, tag: m } = n,
+                { categoryId: i = h.Hk, preferredLocale: a, offset: d, length: p, tag: I } = n,
                 T = c.ZP.getSearchIndex();
             if (null == T) return;
             r &&
@@ -40,7 +40,7 @@ n.d(t, {
                     offset: d,
                     limit: p,
                     categoryId: i,
-                    tag: m
+                    tag: I
                 }),
                 l.Z.dispatch({
                     type: 'GUILD_DISCOVERY_SEARCH_FETCH_START',
@@ -48,10 +48,10 @@ n.d(t, {
                     query: t,
                     categoryId: i
                 });
-            let g = Object.assign({}, I, n.filters),
-                S = Object.keys(g).map((e) => ''.concat(e).concat(g[e]));
-            i !== h.Hk && S.push('(primary_category_id='.concat(i, ' OR categories.id=').concat(i, ')'));
-            let A = S.join(' AND ');
+            let S = Object.assign({}, m, n.filters),
+                g = Object.keys(S).map((e) => ''.concat(e).concat(S[e]));
+            i !== h.Hk && g.push('(primary_category_id='.concat(i, ' OR categories.id=').concat(i, ')'));
+            let A = g.join(' AND ');
             try {
                 let s = T.search(t, {
                         filters: A,
@@ -119,7 +119,7 @@ n.d(t, {
         return N;
     },
     uY: function () {
-        return O;
+        return R;
     }
 }),
     n(653041),
@@ -138,15 +138,15 @@ var r = n(807034),
     f = n(981631),
     h = n(731455);
 let p = window.GLOBAL_ENV.ALGOLIA_KEY,
-    m = 'production' === window.GLOBAL_ENV.PROJECT_ENV ? 'prod_discoverable_guilds' : 'staging' === window.GLOBAL_ENV.PROJECT_ENV ? 'stg_discoverable_guilds' : 'dev_discoverable_guilds',
-    I = {
+    I = 'production' === window.GLOBAL_ENV.PROJECT_ENV ? 'prod_discoverable_guilds' : 'staging' === window.GLOBAL_ENV.PROJECT_ENV ? 'stg_discoverable_guilds' : 'dev_discoverable_guilds',
+    m = {
         'auto_removed:': !1,
         approximate_presence_count: '> 0',
         approximate_member_count: '> 0'
     };
 function T() {
     if (null == p) return;
-    let e = a()('NKTZZ4AIZU', p, { responsesCache: (0, r.A)() }).initIndex(m);
+    let e = a()('NKTZZ4AIZU', p, { responsesCache: (0, r.A)() }).initIndex(I);
     l.Z.wait(() =>
         l.Z.dispatch({
             type: 'GUILD_DISCOVERY_SEARCH_INIT',
@@ -154,10 +154,10 @@ function T() {
         })
     );
 }
-function g(e, t) {
+function S(e, t) {
     let n = c.ZP.getSearchIndex();
     if (null == n) return;
-    let r = Object.assign({}, I, t),
+    let r = Object.assign({}, m, t),
         i = Object.keys(r).map((e) => ''.concat(e).concat(r[e]));
     try {
         let t = n.search(e, {
@@ -190,7 +190,7 @@ function g(e, t) {
         });
     }
 }
-async function S(e) {
+async function g(e) {
     l.Z.dispatch({
         type: 'GUILD_DISCOVERY_POPULAR_FETCH_START',
         categoryId: e
@@ -212,7 +212,8 @@ async function S(e) {
         l.Z.dispatch({
             type: 'GUILD_DISCOVERY_POPULAR_FETCH_FAILURE',
             categoryId: e
-        });
+        }),
+            E.rC({ categoryId: e });
     }
 }
 async function A(e, t) {
@@ -229,12 +230,13 @@ async function A(e, t) {
             }),
             oldFormErrors: !0
         });
-        R(n.body, f.Lcj.FEATURED);
+        v(n.body, f.Lcj.FEATURED);
     } catch (e) {
         l.Z.dispatch({
             type: 'GUILD_DISCOVERY_FETCH_FAILURE',
             section: f.Lcj.FEATURED
-        });
+        }),
+            E.rC({ categoryId: h.Hk });
     }
 }
 async function N() {
@@ -249,7 +251,7 @@ async function N() {
             query: s.stringify({ application_ids: e }),
             oldFormErrors: !0
         });
-        R(t.body, f.Lcj.GAMES_YOU_PLAY);
+        v(t.body, f.Lcj.GAMES_YOU_PLAY);
     } catch (e) {
         l.Z.dispatch({
             type: 'GUILD_DISCOVERY_FETCH_FAILURE',
@@ -257,11 +259,11 @@ async function N() {
         });
     }
 }
-function v() {
+function O() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     e && (0, u.uL)(f.Z5c.GUILD_DISCOVERY), l.Z.dispatch({ type: 'GUILD_DISCOVERY_CLEAR_SEARCH' });
 }
-function O(e) {
+function R(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     l.Z.dispatch({
         type: 'GUILD_DISCOVERY_SELECT_CATEGORY',
@@ -269,7 +271,7 @@ function O(e) {
         isHomepage: t
     });
 }
-function R(e, t) {
+function v(e, t) {
     let { offset: n, limit: r, guilds: i, total: a } = e;
     l.Z.dispatch({
         type: 'GUILD_DISCOVERY_FETCH_SUCCESS',

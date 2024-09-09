@@ -10,6 +10,7 @@ let u = i.memo(function (e) {
             if (null != f) return () => f(t);
         }, [f, t]);
     return (0, r.jsxs)(o.Clickable, {
+        tabIndex: null == f ? -1 : 0,
         className: s()(
             l.trait,
             {

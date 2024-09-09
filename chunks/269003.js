@@ -15,6 +15,7 @@ e.exports = {
     emojiListRowMediumSize: 'emojiListRowMediumSize_fbfedd',
     emojiItem: 'emojiItem_fbfedd',
     emojiItemSelected: 'emojiItemSelected_fbfedd',
+    expandCollapseButtonSelected: 'expandCollapseButtonSelected_fbfedd',
     showPulse: 'showPulse_fbfedd',
     emojiItemLarge: 'emojiItemLarge_fbfedd',
     emojiItemMedium: 'emojiItemMedium_fbfedd',

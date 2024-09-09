@@ -22,6 +22,7 @@ r.d(t, {
     (a[(a.GUILD_DIRECTORY = 14)] = 'GUILD_DIRECTORY'),
     (a[(a.GUILD_FORUM = 15)] = 'GUILD_FORUM'),
     (a[(a.GUILD_MEDIA = 16)] = 'GUILD_MEDIA'),
+    (a[(a.LOBBY = 17)] = 'LOBBY'),
     (a[(a.UNKNOWN = 10000)] = 'UNKNOWN');
 let o = {
     CALLABLE: new Set([1, 3]),

@@ -643,19 +643,19 @@ let { Themes: n } = r(15202).V,
         BADGE_BRAND_TEXT: {
             category: 'text',
             [n.DARK]: {
-                raw: 'BRAND_500',
+                raw: 'BRAND_560',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'BRAND_500',
+                raw: 'BRAND_560',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'BRAND_500',
+                raw: 'BRAND_560',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'BRAND_500',
+                raw: 'BRAND_560',
                 opacity: 1
             }
         },
@@ -3888,7 +3888,7 @@ let { Themes: n } = r(15202).V,
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'BRAND_500',
+                raw: 'BRAND_560',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
@@ -6793,13 +6793,6 @@ let { Themes: n } = r(15202).V,
             BRAND_900: '#04050c',
             BUNGIE: '#00a3e3',
             CRUNCHYROLL: '#f78b24',
-            DISCORD_8TH_BDAY_BLUE: '#5665f9',
-            DISCORD_8TH_BDAY_DARK_BLUE: '#3241e0',
-            DISCORD_8TH_BDAY_GREEN: '#a4ef00',
-            DISCORD_8TH_BDAY_LIGHT_BLUE: '#5e8fff',
-            DISCORD_8TH_BDAY_PINK: '#ff52d2',
-            DISCORD_8TH_BDAY_PURPLE: '#5665F9',
-            DISCORD_8TH_BDAY_YELLOW: '#ffff00',
             EBAY: '#0064d2',
             EPIC_GAMES: '#3c3935',
             FACEBOOK: '#355089',

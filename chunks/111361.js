@@ -19,3 +19,8 @@ function a(e, t) {
 function s(e, t) {
     return null != e && e.premiumType === t;
 }
+t.ZP = {
+    isPremiumAtLeast: i,
+    isPremium: a,
+    isPremiumExactly: s
+};

@@ -5,5 +5,6 @@ e.exports = {
     disabled: 'disabled_ed1d57',
     title: 'title_ed1d57',
     note: 'note_ed1d57',
+    disabledText: 'disabledText_ed1d57',
     dividerDefault: 'dividerDefault_ed1d57'
 };

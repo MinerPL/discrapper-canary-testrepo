@@ -11,6 +11,7 @@ n.d(t, {
     (i.GUILDS = 'guilds'),
     (i.GUILDS_JOIN = 'guilds.join'),
     (i.GUILDS_MEMBERS_READ = 'guilds.members.read'),
+    (i.GUILDS_CHANNELS_READ = 'guilds.channels.read'),
     (i.GDM_JOIN = 'gdm.join'),
     (i.BOT = 'bot'),
     (i.RPC = 'rpc'),

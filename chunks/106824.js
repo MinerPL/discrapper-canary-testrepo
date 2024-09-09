@@ -122,26 +122,26 @@ class d extends r.EventEmitter {
             f = r || (n && ((null === (e = this.state.query) || void 0 === e ? void 0 : e.queryText) !== E || (null === (t = this.state.query) || void 0 === t ? void 0 : t.typeInfo) !== _)),
             h = s.fq.getSetting();
         i.allowStickers = i.allowStickers ? h : i.allowStickers;
-        let { results: p, metadata: m } = _.queryResults(this.props.channel, this.props.guild, E, i, f),
-            I = 0;
-        for (let e of Object.values(p)) Array.isArray(e) && (I += e.length);
+        let { results: p, metadata: I } = _.queryResults(this.props.channel, this.props.guild, E, i, f),
+            m = 0;
+        for (let e of Object.values(p)) Array.isArray(e) && (m += e.length);
         let T = !0 === p.isLoading,
-            g = this.shouldShow(I, T, _),
-            S = this.state.selectedIndex;
-        !g || T ? (S = null) : null != S && S >= I && (S = I - 1),
-            g && !this.state.isVisible && (0, a.a7)(d, this.props.channel, m),
+            S = this.shouldShow(m, T, _),
+            g = this.state.selectedIndex;
+        !S || T ? (g = null) : null != g && g >= m && (g = m - 1),
+            S && !this.state.isVisible && (0, a.a7)(d, this.props.channel, I),
             this.setState({
                 query: {
                     type: d,
                     typeInfo: _,
                     queryText: E,
                     results: p,
-                    resultCount: I,
+                    resultCount: m,
                     options: i,
                     isLoading: T
                 },
-                isVisible: g,
-                selectedIndex: S
+                isVisible: S,
+                selectedIndex: g
             });
     }
     shouldShow(e, t, n) {
@@ -161,6 +161,7 @@ class d extends r.EventEmitter {
                       type: t ? o.QB.SEND : o.QB.INSERT,
                       options: _,
                       channel: this.props.channel,
+                      guild: this.props.guild,
                       tabOrEnter: n,
                       queryText: null === (r = this.state.query) || void 0 === r ? void 0 : r.queryText
                   });

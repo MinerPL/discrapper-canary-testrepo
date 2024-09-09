@@ -9,54 +9,69 @@ var i,
     c = n(706454),
     d = n(659181),
     _ = n(77498);
-let E = new Set(),
+let E = new Map(),
     f = new Set(),
-    h = new Map(),
+    h = new Set(),
     p = new Map(),
+    I = new Map(),
     m = new Map();
-function I(e) {
-    h.set(e.id, d.Z.createFromServer(e)), E.delete(e.id), f.delete(e.id), !p.has(e.application_id) && p.set(e.application_id, new Set()), p.get(e.application_id).add(e.id);
-}
 function T(e) {
-    I(e);
-}
-function g(e) {
-    I(e.sku), null != e.child_skus && e.child_skus.forEach((e) => I(e)), null != e.alternative_skus && e.alternative_skus.forEach((e) => I(e));
+    var t;
+    p.set(e.id, d.Z.createFromServer(e)),
+        f.delete(e.id),
+        h.delete(e.id),
+        null === (t = e.bundled_sku_ids) ||
+            void 0 === t ||
+            t.forEach((t) => {
+                E.set(t, e.id);
+            }),
+        !I.has(e.application_id) && I.set(e.application_id, new Set()),
+        I.get(e.application_id).add(e.id);
 }
 function S(e) {
-    let { entitlements: t } = e;
-    for (let e of t) null != e.sku && I(e.sku);
+    T(e);
 }
-function A() {
-    (E = new Set()), (f = new Set()), (h = new Map()), (p = new Map()), (m = new Map());
+function g(e) {
+    T(e.sku), null != e.child_skus && e.child_skus.forEach((e) => T(e)), null != e.alternative_skus && e.alternative_skus.forEach((e) => T(e));
+}
+function A(e) {
+    let { entitlements: t } = e;
+    for (let e of t) null != e.sku && T(e.sku);
 }
 function N() {
-    if (r === c.default.locale) return !1;
-    (r = c.default.locale), A();
+    (E = new Map()), (f = new Set()), (h = new Set()), (p = new Map()), (I = new Map()), (m = new Map());
 }
-class v extends (i = l.yh) {
+function O() {
+    if (r === c.default.locale) return !1;
+    (r = c.default.locale), N();
+}
+class R extends (i = l.yh) {
     initialize() {
-        this.waitFor(c.default, _.Z), this.syncWith([c.default], N), (r = c.default.locale);
+        this.waitFor(c.default, _.Z), this.syncWith([c.default], O), (r = c.default.locale);
     }
     get(e) {
-        return h.get(e);
+        return p.get(e);
     }
     getForApplication(e) {
-        let t = p.get(e);
-        return null == t ? [] : Array.from(t).map((e) => h.get(e));
+        let t = I.get(e);
+        return null == t ? [] : Array.from(t).map((e) => p.get(e));
     }
     isFetching(e) {
-        return E.has(e);
+        return f.has(e);
     }
     getSKUs() {
-        return Object.fromEntries(h);
+        return Object.fromEntries(p);
+    }
+    getParentSKU(e) {
+        let t = E.get(e);
+        if (null != t) return this.get(t);
     }
     didFetchingSkuFail(e) {
-        return f.has(e);
+        return h.has(e);
     }
 }
 (o = 'SKUStore'),
-    (s = 'displayName') in (a = v)
+    (s = 'displayName') in (a = R)
         ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
@@ -64,7 +79,15 @@ class v extends (i = l.yh) {
               writable: !0
           })
         : (a[s] = o),
-    (t.Z = new v(u.Z, {
+    (t.Z = new R(u.Z, {
+        STORE_LISTINGS_FETCH_START: function (e) {
+            let { skuId: t } = e;
+            f.add(t);
+        },
+        STORE_LISTINGS_FETCH_FAIL: function (e) {
+            let { skuId: t } = e;
+            f.delete(t), h.add(t);
+        },
         STORE_LISTINGS_FETCH_SUCCESS: function (e) {
             let { storeListings: t } = e;
             for (let e of t) g(e);
@@ -76,27 +99,27 @@ class v extends (i = l.yh) {
         GIFT_CODE_RESOLVE_SUCCESS: function (e) {
             let { giftCode: t } = e;
             if (null == t.store_listing) return !1;
-            I(t.store_listing.sku);
+            T(t.store_listing.sku);
         },
         SKU_FETCH_START: function (e) {
             let { skuId: t } = e;
-            E.add(t);
+            f.add(t);
         },
         SKU_FETCH_SUCCESS: function (e) {
             let { sku: t } = e;
-            I(t);
+            T(t);
         },
         SKU_FETCH_FAIL: function (e) {
             let { skuId: t } = e;
-            E.delete(t), f.add(t);
+            f.delete(t), h.add(t);
         },
         SKUS_FETCH_SUCCESS: function (e) {
             let { guildId: t, skus: n } = e;
-            for (let e of n) I(e);
+            for (let e of n) T(e);
             null != t && m.set(t, new Set(n.map((e) => e.id)));
         },
-        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: S,
-        APPLICATION_STORE_CLEAR_DATA: A,
-        APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: S,
-        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: S
+        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: A,
+        APPLICATION_STORE_CLEAR_DATA: N,
+        APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: A,
+        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: A
     }));

@@ -13,6 +13,17 @@ let i = (e) => {
 };
 t.Z = (e) => {
     r.useEffect(() => {
+        if ('loading' === document.readyState) {
+            let t = () => {
+                i(e);
+            };
+            return (
+                document.addEventListener('DOMContentLoaded', t),
+                () => {
+                    document.removeEventListener('DOMContentLoaded', t);
+                }
+            );
+        }
         i(e);
     }, [e]);
 };

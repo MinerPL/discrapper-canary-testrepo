@@ -87,9 +87,6 @@ class u extends r.Z {
     getDesktopSource() {
         return Promise.reject(Error('NO_STREAM'));
     }
-    getDesktopSources() {
-        return Promise.reject(Error('NO_STREAM'));
-    }
     getScreenPreviews(e, t) {
         return Promise.reject(Error('UNSUPPORTED'));
     }

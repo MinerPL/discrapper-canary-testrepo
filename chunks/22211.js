@@ -20,8 +20,9 @@ function f(e) {
             () => {
                 if (!(0, _.kr)(e) || e.author_type !== i.i.USER) return null;
                 let t = d.Z.getVoiceStateForUser(e.author_id),
-                    n = l.Z.getChannel(null == t ? void 0 : t.channelId);
-                return null == n || (0, a.Z)(n, u.Z) ? n : null;
+                    n = l.Z.getChannel(null == t ? void 0 : t.channelId),
+                    r = 'channel_id' in e ? e.channel_id : null;
+                return (null == r || r === (null == t ? void 0 : t.channelId)) && (null == n || (0, a.Z)(n, u.Z)) ? n : null;
             },
             [e]
         ),

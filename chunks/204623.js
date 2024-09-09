@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return A;
     }
 }),
     n(47120);
@@ -18,13 +18,12 @@ var r = n(735250),
     f = n(176354),
     h = n(63063),
     p = n(358085),
-    m = n(792125),
     I = n(998502),
-    T = n(151851),
-    g = n(981631),
+    m = n(151851),
+    T = n(981631),
     S = n(689938);
-let A = l.ZP.connectStores([E.Z], () => ({ focused: E.Z.isFocused() }))(T.Z);
-class N extends i.PureComponent {
+let g = l.ZP.connectStores([E.Z], () => ({ focused: E.Z.isFocused() }))(m.Z);
+class A extends i.PureComponent {
     getPlatform() {
         var e;
         let t = null === (e = s().os) || void 0 === e ? void 0 : e.family;
@@ -61,8 +60,8 @@ class N extends i.PureComponent {
             });
         return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(o.ql, { children: (0, r.jsx)('html', { className: (0, m.Q)(g.BRd.DARK) }) }),
-                (0, r.jsx)(A, { type: this.getPlatform() }),
+                (0, r.jsx)(o.ql, { children: (0, r.jsx)('html', { className: (0, c.getThemeClass)(T.BRd.DARK) }) }),
+                (0, r.jsx)(g, { type: this.getPlatform() }),
                 (0, r.jsx)(_.Z, {
                     title: S.Z.Messages.UNSUPPORTED_BROWSER_TITLE,
                     note: e,
@@ -77,7 +76,7 @@ class N extends i.PureComponent {
             (t = this),
             (n = 'handleDownload'),
             (r = () => {
-                window.open(this.getPlatform() === p.PlatformTypes.WINDOWS ? h.Z.getArticleURL(g.BhN.CORRUPT_INSTALLATION) : g.EYA.DOWNLOAD);
+                window.open(this.getPlatform() === p.PlatformTypes.WINDOWS ? h.Z.getArticleURL(T.BhN.CORRUPT_INSTALLATION) : T.EYA.DOWNLOAD);
             }),
             n in t
                 ? Object.defineProperty(t, n, {

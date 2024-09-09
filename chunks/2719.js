@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return Q;
+        return z;
     }
 }),
     t(47120);
@@ -13,23 +13,23 @@ var n = t(735250),
     c = t(442837),
     d = t(692547),
     _ = t(481060),
-    E = t(230711),
-    u = t(129861),
-    I = t(279837),
-    T = t(952306),
-    S = t(299206),
+    u = t(230711),
+    E = t(129861),
+    T = t(279837),
+    S = t(952306),
+    I = t(299206),
     N = t(295474),
-    C = t(144114),
-    m = t(918505),
+    m = t(144114),
+    C = t(918505),
     A = t(332473),
-    O = t(921801),
-    g = t(290421),
-    h = t(318661),
-    p = t(80132),
-    R = t(735336),
-    x = t(204197),
-    M = t(25990),
-    f = t(594174),
+    g = t(921801),
+    h = t(485341),
+    O = t(687158),
+    p = t(518950),
+    R = t(184325),
+    x = t(867176),
+    f = t(25990),
+    M = t(594174),
     D = t(572004),
     P = t(51144),
     L = t(998502),
@@ -39,39 +39,38 @@ var n = t(735250),
     j = t(981631),
     B = t(815660),
     U = t(801461),
-    G = t(228168),
-    F = t(689938),
-    y = t(523193);
-let V = L.ZP.getEnableHardwareAcceleration() ? _.AnimatedAvatar : _.Avatar;
-function Y(e) {
+    G = t(689938),
+    F = t(523193);
+let y = L.ZP.getEnableHardwareAcceleration() ? _.AnimatedAvatar : _.Avatar;
+function V(e) {
     var s, i;
     let { className: o, user: l } = e,
         c = a.useRef(null),
-        E = (0, m.o9)(),
-        u = (0, A.b)(),
-        I = (0, N.gS)(),
-        T = null !== (i = null == I ? void 0 : null === (s = I.nick) || void 0 === s ? void 0 : s[0]) && void 0 !== i ? i : null,
-        [S, C] = a.useState(!1);
+        u = (0, C.o9)(),
+        E = (0, A.b)(),
+        T = (0, N.gS)(),
+        S = null !== (i = null == T ? void 0 : null === (s = T.nick) || void 0 === s ? void 0 : s[0]) && void 0 !== i ? i : null,
+        [I, m] = a.useState(!1);
     a.useEffect(() => {
-        C(null != c.current && c.current.scrollWidth > c.current.clientWidth);
+        m(null != c.current && c.current.scrollWidth > c.current.clientWidth);
     }, [l.username]);
-    let O = !l.isClaimed(),
-        g = (E && !l.isPomelo() && !l.hasVerifiedEmailOrPhone()) || O,
-        h = g ? F.Z.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
+    let g = !l.isClaimed(),
+        h = (u && !l.isPomelo() && !l.hasVerifiedEmailOrPhone()) || g,
+        O = h ? G.Z.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
     return (0, n.jsxs)('div', {
-        className: r()(y.field, o),
+        className: r()(F.field, o),
         children: [
             (0, n.jsx)('div', {
-                className: y.constrainedRow,
+                className: F.constrainedRow,
                 children: (0, n.jsxs)('div', {
-                    className: y.usernameRow,
+                    className: F.usernameRow,
                     children: [
                         (0, n.jsx)(_.FormTitle, {
-                            className: y.fieldTitle,
-                            children: F.Z.Messages.USER_SETTINGS_LABEL_USERNAME
+                            className: F.fieldTitle,
+                            children: G.Z.Messages.USER_SETTINGS_LABEL_USERNAME
                         }),
                         (0, n.jsxs)('div', {
-                            className: y.usernameInnerRow,
+                            className: F.usernameInnerRow,
                             ref: c,
                             children: [
                                 (0, n.jsx)(_.Text, {
@@ -92,11 +91,11 @@ function Y(e) {
                     ]
                 })
             }),
-            u &&
+            E &&
                 (0, n.jsx)('div', {
-                    className: y.pomeloWarning,
+                    className: F.pomeloWarning,
                     children: (0, n.jsx)(_.Tooltip, {
-                        text: F.Z.Messages.ACTION_NEEDED,
+                        text: G.Z.Messages.ACTION_NEEDED,
                         children: (e) =>
                             (0, n.jsx)(_.CircleWarningIcon, {
                                 size: 'custom',
@@ -107,11 +106,11 @@ function Y(e) {
                             })
                     })
                 }),
-            null != T &&
+            null != S &&
                 (0, n.jsx)('div', {
-                    className: y.pomeloWarning,
+                    className: F.pomeloWarning,
                     children: (0, n.jsx)(_.Tooltip, {
-                        text: T,
+                        text: S,
                         'aria-label': !1,
                         children: (e) =>
                             (0, n.jsx)(_.CircleWarningIcon, {
@@ -124,19 +123,19 @@ function Y(e) {
                     })
                 }),
             (0, n.jsx)(_.Tooltip, {
-                text: h,
+                text: O,
                 children: (e) =>
                     (0, n.jsx)(_.Button, {
                         ...e,
-                        disabled: g,
+                        disabled: h,
                         size: _.Button.Sizes.SMALL,
-                        className: y.fieldButton,
+                        className: F.fieldButton,
                         color: _.Button.Colors.PRIMARY,
-                        'aria-label': F.Z.Messages.USER_SETTINGS_ACCOUNT_EDIT_USERNAME_A11Y_LABEL,
+                        'aria-label': G.Z.Messages.USER_SETTINGS_ACCOUNT_EDIT_USERNAME_A11Y_LABEL,
                         onClick: () =>
                             (0, _.openModalLazy)(async () => {
-                                if (u) {
-                                    let { default: e } = await t.e('85342').then(t.bind(t, 193049));
+                                if (E) {
+                                    let { default: e } = await Promise.all([t.e('85342'), t.e('2137')]).then(t.bind(t, 193049));
                                     return (s) =>
                                         (0, n.jsx)(e, {
                                             source: U.Kq.USER_SETTINGS_EDIT,
@@ -148,44 +147,44 @@ function Y(e) {
                                     return (s) => (0, n.jsx)(e, { ...s });
                                 }
                             }),
-                        children: S ? F.Z.Messages.DISAPPROVAL : F.Z.Messages.EDIT
+                        children: I ? G.Z.Messages.DISAPPROVAL : G.Z.Messages.EDIT
                     })
             })
         ]
     });
 }
-function w(e) {
+function Y(e) {
     var s, t;
     let { user: i, className: o } = e,
         l = (0, N.gS)(),
         c = null !== (t = null == l ? void 0 : null === (s = l.nick) || void 0 === s ? void 0 : s[0]) && void 0 !== t ? t : null,
-        E = P.ZP.getGlobalName(i),
-        u = a.useRef(null),
-        [I, T] = a.useState(!1);
+        u = P.ZP.getGlobalName(i),
+        E = a.useRef(null),
+        [T, S] = a.useState(!1);
     return (
         a.useEffect(() => {
-            T(null != u.current && u.current.scrollWidth > u.current.clientWidth);
-        }, [E]),
+            S(null != E.current && E.current.scrollWidth > E.current.clientWidth);
+        }, [u]),
         (0, n.jsxs)('div', {
-            className: r()(y.field, o),
+            className: r()(F.field, o),
             children: [
                 (0, n.jsx)('div', {
-                    className: y.constrainedRow,
+                    className: F.constrainedRow,
                     children: (0, n.jsxs)('div', {
-                        className: y.usernameRow,
+                        className: F.usernameRow,
                         children: [
                             (0, n.jsx)(_.FormTitle, {
-                                className: y.fieldTitle,
-                                children: F.Z.Messages.DISPLAY_NAME
+                                className: F.fieldTitle,
+                                children: G.Z.Messages.DISPLAY_NAME
                             }),
                             (0, n.jsx)('div', {
-                                className: y.usernameInnerRow,
-                                ref: u,
+                                className: F.usernameInnerRow,
+                                ref: E,
                                 children: (0, n.jsx)(_.Text, {
                                     tag: 'span',
                                     color: 'header-primary',
                                     variant: 'text-md/normal',
-                                    children: null == E ? F.Z.Messages.USER_SETTINGS_NO_DISPLAYNAME_PLACEHOLDER : E
+                                    children: null == u ? G.Z.Messages.USER_SETTINGS_NO_DISPLAYNAME_PLACEHOLDER : u
                                 })
                             })
                         ]
@@ -193,7 +192,7 @@ function w(e) {
                 }),
                 null != c &&
                     (0, n.jsx)('div', {
-                        className: y.pomeloWarning,
+                        className: F.pomeloWarning,
                         children: (0, n.jsx)(_.Tooltip, {
                             text: c,
                             'aria-label': !1,
@@ -208,18 +207,18 @@ function w(e) {
                         })
                     }),
                 (0, n.jsx)(_.Button, {
-                    className: y.fieldButton,
+                    className: F.fieldButton,
                     size: _.Button.Sizes.SMALL,
                     color: _.Button.Colors.PRIMARY,
-                    'aria-label': F.Z.Messages.USER_SETTINGS_ACCOUNT_EDIT_DISPLAYNAME_A11Y_LABEL,
-                    onClick: z,
-                    children: I ? F.Z.Messages.DISAPPROVAL : F.Z.Messages.EDIT
+                    'aria-label': G.Z.Messages.USER_SETTINGS_ACCOUNT_EDIT_DISPLAYNAME_A11Y_LABEL,
+                    onClick: K,
+                    children: T ? G.Z.Messages.DISAPPROVAL : G.Z.Messages.EDIT
                 })
             ]
         })
     );
 }
-function k(e) {
+function w(e) {
     let { text: s, censor: t, revealLabel: i, hideLabel: r } = e,
         [o, l] = a.useState(!1),
         c = o ? s : t(s);
@@ -232,21 +231,21 @@ function k(e) {
                 color: _.Button.Colors.LINK,
                 'aria-label': o ? r : i,
                 onClick: () => l(!o),
-                children: o ? F.Z.Messages.HIDE : F.Z.Messages.REVEAL
+                children: o ? G.Z.Messages.HIDE : G.Z.Messages.REVEAL
             })
         ]
     });
 }
-function H(e) {
+function k(e) {
     let s,
         { className: a, user: i } = e;
     if (i.isClaimed()) {
         if (null == i.email)
             s = {
-                buttonText: F.Z.Messages.ADD,
-                buttonAriaLabel: F.Z.Messages.USER_SETTINGS_ACCOUNT_ADD_EMAIL_A11Y_LABEL,
+                buttonText: G.Z.Messages.ADD,
+                buttonAriaLabel: G.Z.Messages.USER_SETTINGS_ACCOUNT_ADD_EMAIL_A11Y_LABEL,
                 buttonColor: _.Button.Colors.PRIMARY,
-                valueMessage: F.Z.Messages.USER_SETTINGS_NO_EMAIL_PLACEHOLDER,
+                valueMessage: G.Z.Messages.USER_SETTINGS_NO_EMAIL_PLACEHOLDER,
                 handleClick: () =>
                     (0, _.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([t.e('9343'), t.e('12409')]).then(t.bind(t, 642298));
@@ -256,14 +255,14 @@ function H(e) {
         else {
             let { email: e } = i;
             s = {
-                buttonText: F.Z.Messages.EDIT,
-                buttonAriaLabel: F.Z.Messages.USER_SETTINGS_ACCOUNT_EDIT_EMAIL_A11Y_LABEL,
+                buttonText: G.Z.Messages.EDIT,
+                buttonAriaLabel: G.Z.Messages.USER_SETTINGS_ACCOUNT_EDIT_EMAIL_A11Y_LABEL,
                 buttonColor: _.Button.Colors.PRIMARY,
-                valueMessage: (0, n.jsx)(k, {
+                valueMessage: (0, n.jsx)(w, {
                     text: e,
                     censor: Z.E,
-                    revealLabel: F.Z.Messages.USER_SETTINGS_ACCOUNT_REVEAL_EMAIL_A11Y_LABEL,
-                    hideLabel: F.Z.Messages.USER_SETTINGS_ACCOUNT_HIDE_EMAIL_A11Y_LABEL
+                    revealLabel: G.Z.Messages.USER_SETTINGS_ACCOUNT_REVEAL_EMAIL_A11Y_LABEL,
+                    hideLabel: G.Z.Messages.USER_SETTINGS_ACCOUNT_HIDE_EMAIL_A11Y_LABEL
                 }),
                 handleClick: () =>
                     (0, _.openModalLazy)(async () => {
@@ -274,22 +273,22 @@ function H(e) {
         }
     } else
         s = {
-            buttonText: F.Z.Messages.CLAIM_ACCOUNT_SHORT,
-            buttonAriaLabel: F.Z.Messages.CLAIM_ACCOUNT_SHORT,
+            buttonText: G.Z.Messages.CLAIM_ACCOUNT_SHORT,
+            buttonAriaLabel: G.Z.Messages.CLAIM_ACCOUNT_SHORT,
             buttonColor: _.Button.Colors.BRAND,
-            valueMessage: F.Z.Messages.USER_SETTINGS_ADD_EMAIL_CLAIM,
-            handleClick: () => T.Z.openClaimAccountModal()
+            valueMessage: G.Z.Messages.USER_SETTINGS_ADD_EMAIL_CLAIM,
+            handleClick: () => S.Z.openClaimAccountModal()
         };
     return (0, n.jsxs)('div', {
-        className: r()(y.field, a),
+        className: r()(F.field, a),
         children: [
             (0, n.jsx)('div', {
-                className: y.constrainedRow,
+                className: F.constrainedRow,
                 children: (0, n.jsxs)('div', {
                     children: [
                         (0, n.jsx)(_.FormTitle, {
-                            className: y.fieldTitle,
-                            children: F.Z.Messages.USER_SETTINGS_LABEL_EMAIL
+                            className: F.fieldTitle,
+                            children: G.Z.Messages.USER_SETTINGS_LABEL_EMAIL
                         }),
                         (0, n.jsx)('div', {
                             children: (0, n.jsx)(_.Text, {
@@ -303,7 +302,7 @@ function H(e) {
                 })
             }),
             (0, n.jsx)(_.Button, {
-                className: y.fieldButton,
+                className: F.fieldButton,
                 size: _.Button.Sizes.SMALL,
                 color: _.Button.Colors.PRIMARY,
                 'aria-label': s.buttonAriaLabel,
@@ -313,7 +312,7 @@ function H(e) {
         ]
     });
 }
-function W(e) {
+function H(e) {
     let s,
         { className: a, user: i } = e;
     if (!i.isClaimed()) return null;
@@ -321,23 +320,23 @@ function W(e) {
         c = null != o;
     return (
         (s = c
-            ? (0, n.jsx)(k, {
+            ? (0, n.jsx)(w, {
                   text: o,
                   censor: Z.n,
-                  revealLabel: F.Z.Messages.USER_SETTINGS_ACCOUNT_REVEAL_PHONE_A11Y_LABEL,
-                  hideLabel: F.Z.Messages.USER_SETTINGS_ACCOUNT_HIDE_PHONE_A11Y_LABEL
+                  revealLabel: G.Z.Messages.USER_SETTINGS_ACCOUNT_REVEAL_PHONE_A11Y_LABEL,
+                  hideLabel: G.Z.Messages.USER_SETTINGS_ACCOUNT_HIDE_PHONE_A11Y_LABEL
               })
-            : F.Z.Messages.USER_SETTINGS_NO_PHONE_PLACEHOLDER),
+            : G.Z.Messages.USER_SETTINGS_NO_PHONE_PLACEHOLDER),
         (0, n.jsxs)('div', {
-            className: r()(y.field, a),
+            className: r()(F.field, a),
             children: [
                 (0, n.jsx)('div', {
-                    className: y.constrainedRow,
+                    className: F.constrainedRow,
                     children: (0, n.jsxs)('div', {
                         children: [
                             (0, n.jsx)(_.FormTitle, {
-                                className: y.fieldTitle,
-                                children: F.Z.Messages.USER_SETTINGS_LABEL_PHONE_NUMBER
+                                className: F.fieldTitle,
+                                children: G.Z.Messages.USER_SETTINGS_LABEL_PHONE_NUMBER
                             }),
                             (0, n.jsx)('div', {
                                 children: (0, n.jsx)(_.Text, {
@@ -351,48 +350,48 @@ function W(e) {
                     })
                 }),
                 (0, n.jsxs)('div', {
-                    className: y.fieldButtonList,
+                    className: F.fieldButtonList,
                     children: [
                         c && null != l
                             ? (0, n.jsx)(_.Button, {
-                                  className: r()(y.fieldButton, y.removeButton),
+                                  className: r()(F.fieldButton, F.removeButton),
                                   size: _.Button.Sizes.SMALL,
                                   look: _.Button.Looks.LINK,
                                   color: _.Button.Colors.PRIMARY,
-                                  'aria-label': F.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_A11Y_LABEL,
+                                  'aria-label': G.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_A11Y_LABEL,
                                   onClick: function () {
                                       (0, _.openModal)((e) =>
-                                          (0, n.jsx)(I.default, {
+                                          (0, n.jsx)(T.default, {
                                               ...e,
-                                              title: F.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_NUMBER_TITLE,
-                                              children: i.hasFlag(j.xW$.MFA_SMS) ? F.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_SMS_BACKUP_WARNING : void 0,
-                                              actionText: F.Z.Messages.REMOVE,
-                                              handleSubmit: (e) => C.Z.removePhone(e, C.L.USER_SETTINGS_UPDATE)
+                                              title: G.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_NUMBER_TITLE,
+                                              children: i.hasFlag(j.xW$.MFA_SMS) ? G.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_SMS_BACKUP_WARNING : void 0,
+                                              actionText: G.Z.Messages.REMOVE,
+                                              handleSubmit: (e) => m.Z.removePhone(e, m.L.USER_SETTINGS_UPDATE)
                                           })
                                       );
                                   },
-                                  children: F.Z.Messages.REMOVE
+                                  children: G.Z.Messages.REMOVE
                               })
                             : null,
                         (0, n.jsx)(_.Button, {
-                            className: y.fieldButton,
+                            className: F.fieldButton,
                             size: _.Button.Sizes.SMALL,
                             color: _.Button.Colors.PRIMARY,
-                            'aria-label': c ? F.Z.Messages.USER_SETTINGS_ACCOUNT_EDIT_PHONE_A11Y_LABEL : F.Z.Messages.USER_SETTINGS_ACCOUNT_ADD_PHONE_A11Y_LABEL,
+                            'aria-label': c ? G.Z.Messages.USER_SETTINGS_ACCOUNT_EDIT_PHONE_A11Y_LABEL : G.Z.Messages.USER_SETTINGS_ACCOUNT_ADD_PHONE_A11Y_LABEL,
                             onClick: function () {
                                 (0, _.openModalLazy)(
                                     async () => {
                                         let { default: e } = await Promise.resolve().then(t.bind(t, 607018));
                                         return (s) =>
                                             (0, n.jsx)(e, {
-                                                reason: C.L.USER_SETTINGS_UPDATE,
+                                                reason: m.L.USER_SETTINGS_UPDATE,
                                                 ...s
                                             });
                                     },
                                     { modalKey: B.M }
                                 );
                             },
-                            children: c ? F.Z.Messages.EDIT : F.Z.Messages.ADD
+                            children: c ? G.Z.Messages.EDIT : G.Z.Messages.ADD
                         })
                     ]
                 })
@@ -400,11 +399,11 @@ function W(e) {
         })
     );
 }
-function K(e) {
+function W(e) {
     let { user: s } = e,
-        t = (0, S.Z)({
+        t = (0, I.Z)({
             id: s.id,
-            label: F.Z.Messages.COPY_ID_USER
+            label: G.Z.Messages.COPY_ID_USER
         });
     return b.Sb.useSetting() && D.wS
         ? (0, n.jsx)(_.Popout, {
@@ -414,59 +413,62 @@ function K(e) {
                       onClose: s,
                       onSelect: void 0,
                       navId: 'copy-id',
-                      'aria-label': F.Z.Messages.USER_MORE_ACTIONS_MENU_LABEL,
+                      'aria-label': G.Z.Messages.USER_MORE_ACTIONS_MENU_LABEL,
                       children: t
                   });
               },
               children: (e) =>
                   (0, n.jsx)(_.Clickable, {
                       ...e,
-                      className: y.overflowMenuButton,
-                      'aria-label': F.Z.Messages.ACTIONS,
+                      className: F.overflowMenuButton,
+                      'aria-label': G.Z.Messages.ACTIONS,
                       children: (0, n.jsx)(_.MoreHorizontalIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: y.overflowMenuIcon
+                          className: F.overflowMenuIcon
                       })
                   })
           })
         : null;
 }
-function z() {
-    E.Z.setSection(j.oAB.PROFILE_CUSTOMIZATION);
+function K() {
+    u.Z.setSection(j.oAB.PROFILE_CUSTOMIZATION);
 }
-function Q() {
+function z() {
     var e;
-    let s = (0, c.e7)([f.default], () => {
-            let e = f.default.getCurrentUser();
+    let s = (0, c.e7)([M.default], () => {
+            let e = M.default.getCurrentUser();
             return l()(null != e, 'UserSettingsAccountProfileCard: currentUser cannot be undefined'), e;
         }),
-        t = (0, h.ZP)(s.id),
-        a = (0, g.Z)(t),
+        t = (0, O.ZP)(s.id),
+        a = (0, h.Z)(t),
         i = b.co.useSetting(),
-        r = (0, c.e7)([M.Z], () => M.Z.getErrors()),
+        r = (0, c.e7)([f.Z], () => f.Z.getErrors()),
         o = null == r ? void 0 : null === (e = r.avatar) || void 0 === e ? void 0 : e[0],
-        { avatarSrc: d, avatarDecorationSrc: E } = (0, x.Z)({
+        { avatarSrc: d, avatarDecorationSrc: u } = (0, p.Z)({
             user: s,
             size: _.AvatarSizes.SIZE_80
         });
     return (0, n.jsxs)('div', {
-        className: y.accountProfileCard,
+        className: F.accountProfileCard,
         children: [
-            (0, n.jsx)(R.Z, {
-                displayProfile: t,
+            (0, n.jsx)(x.b, {
                 user: s,
-                allowEdit: !1,
-                guildId: void 0,
-                profileType: G.y0.SETTINGS
+                displayProfile: t,
+                avatarSize: _.AvatarSizes.SIZE_80,
+                avatarOffsetX: 16,
+                avatarOffsetY: -22,
+                bannerWidth: 660,
+                bannerHeight: 100,
+                themePadding: 0
             }),
             (0, n.jsxs)('div', {
-                className: y.userInfo,
+                className: F.userInfo,
                 children: [
-                    (0, n.jsx)(V, {
-                        className: y.avatar,
+                    (0, n.jsx)(y, {
+                        className: F.avatar,
                         src: d,
-                        avatarDecoration: E,
+                        avatarDecoration: u,
                         status: i,
                         size: _.AvatarSizes.SIZE_80,
                         'aria-label': s.username
@@ -474,66 +476,66 @@ function Q() {
                     (0, n.jsxs)('div', {
                         children: [
                             (0, n.jsxs)('div', {
-                                className: y.profileCardUsernameRow,
+                                className: F.profileCardUsernameRow,
                                 children: [
-                                    (0, n.jsx)(u.Z, {
+                                    (0, n.jsx)(E.Z, {
                                         user: s,
-                                        className: y.userTag,
-                                        discriminatorClass: y.discriminator
+                                        className: F.userTag,
+                                        discriminatorClass: F.discriminator
                                     }),
-                                    (0, n.jsx)(K, { user: s })
+                                    (0, n.jsx)(W, { user: s })
                                 ]
                             }),
-                            (0, n.jsx)(p.Z, {
+                            (0, n.jsx)(R.Z, {
                                 badges: a,
-                                className: y.badgeList,
-                                badgeClassName: y.badge
+                                className: F.badgeList,
+                                badgeClassName: F.badge
                             })
                         ]
                     }),
                     (0, n.jsx)(_.Button, {
-                        onClick: z,
+                        onClick: K,
                         size: _.Button.Sizes.SMALL,
-                        children: F.Z.Messages.USER_SETTINGS_EDIT_USER_PROFILE
+                        children: G.Z.Messages.USER_SETTINGS_EDIT_USER_PROFILE
                     })
                 ]
             }),
             (0, n.jsxs)('div', {
-                className: y.background,
+                className: F.background,
                 children: [
                     null != o
                         ? (0, n.jsx)(_.Text, {
-                              className: y.avatarError,
+                              className: F.avatarError,
                               variant: 'text-xs/normal',
                               color: 'text-danger',
                               children: o
                           })
                         : null,
                     (0, n.jsxs)('div', {
-                        className: y.fieldList,
+                        className: F.fieldList,
                         children: [
-                            (0, n.jsx)(O.F, {
+                            (0, n.jsx)(g.F, {
                                 setting: v.s6.ACCOUNT_DISPLAY_NAME,
-                                children: (0, n.jsx)(w, {
-                                    className: y.fieldSpacerBottom,
+                                children: (0, n.jsx)(Y, {
+                                    className: F.fieldSpacerBottom,
                                     user: s
                                 })
                             }),
-                            (0, n.jsx)(O.F, {
+                            (0, n.jsx)(g.F, {
                                 setting: v.s6.ACCOUNT_USERNAME,
-                                children: (0, n.jsx)(Y, { user: s })
+                                children: (0, n.jsx)(V, { user: s })
                             }),
-                            (0, n.jsx)(O.F, {
+                            (0, n.jsx)(g.F, {
                                 setting: v.s6.ACCOUNT_EMAIL,
-                                children: (0, n.jsx)(H, {
-                                    className: y.fieldSpacer,
+                                children: (0, n.jsx)(k, {
+                                    className: F.fieldSpacer,
                                     user: s
                                 })
                             }),
-                            (0, n.jsx)(O.F, {
+                            (0, n.jsx)(g.F, {
                                 setting: v.s6.ACCOUNT_PHONE_NUMBER,
-                                children: (0, n.jsx)(W, {
-                                    className: y.fieldSpacer,
+                                children: (0, n.jsx)(H, {
+                                    className: F.fieldSpacer,
                                     user: s
                                 })
                             })

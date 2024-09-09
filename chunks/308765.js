@@ -13,7 +13,7 @@ let i = {
         loadAfterConnectionOpen: !0
     },
     CallIdleManager: {
-        actions: ['VOICE_STATE_UPDATES', 'EMBEDDED_ACTIVITY_DISCONNECT', 'CONNECTION_CLOSED'],
+        actions: ['VOICE_STATE_UPDATES', 'EMBEDDED_ACTIVITY_CLOSE', 'CONNECTION_CLOSED'],
         inlineRequire: () => n(288444).Z
     },
     ChangelogManager: {
@@ -31,7 +31,7 @@ let i = {
         neverLoadBeforeConnectionOpen: !0
     },
     CommonTriggerPointManager: {
-        actions: ['POST_CONNECTION_OPEN', 'VOICE_CHANNEL_SELECT', 'CALL_CREATE', 'USER_SETTINGS_MODAL_OPEN'],
+        actions: ['VOICE_CHANNEL_SELECT', 'CALL_CREATE', 'USER_SETTINGS_MODAL_OPEN'],
         inlineRequire: () => n(957899).Z
     },
     CommunicationDisabledManager: {
@@ -72,7 +72,7 @@ let i = {
         neverLoadBeforeConnectionOpen: !0
     },
     FeedbackManager: {
-        actions: ['VOICE_CHANNEL_SHOW_FEEDBACK', 'STREAM_CLOSE', 'EMBEDDED_ACTIVITY_CLOSE', 'VIDEO_BACKGROUND_SHOW_FEEDBACK', 'IN_APP_REPORTS_SHOW_FEEDBACK'],
+        actions: ['VOICE_CHANNEL_SHOW_FEEDBACK', 'STREAM_CLOSE', 'EMBEDDED_ACTIVITY_CLOSE', 'VIDEO_BACKGROUND_SHOW_FEEDBACK', 'IN_APP_REPORTS_SHOW_FEEDBACK', 'USER_DM_MUTE_SHOW_FEEDBACK'],
         inlineRequire: () => n(169223).Z
     },
     ForumGuidelinesManager: {
@@ -204,8 +204,8 @@ let i = {
         neverLoadBeforeConnectionOpen: !0
     },
     MessageRemindersNotificationManager: {
-        actions: ['POST_CONNECTION_OPEN', 'SAVED_MESSAGES_UPDATE', 'SAVED_MESSAGE_CREATE', 'SAVED_MESSAGE_DELETE'],
-        inlineRequire: () => n(937603).Z,
+        actions: ['SAVED_MESSAGES_UPDATE', 'SAVED_MESSAGE_CREATE', 'SAVED_MESSAGE_DELETE'],
+        inlineRequire: () => n(457572).Z,
         neverLoadBeforeConnectionOpen: !0
     },
     SearchManager: {
@@ -375,6 +375,11 @@ let i = {
     SharedSpacesWarningManager: {
         actions: ['CHANNEL_SELECT'],
         inlineRequire: () => n(414509).Z,
+        neverLoadBeforeConnectionOpen: !0
+    },
+    DispatcherSchedulerManager: {
+        actions: ['POST_CONNECTION_OPEN', 'EXPERIMENTS_FETCH_SUCCESS', 'CACHE_LOADED', 'LOGIN_SUCCESS', 'EXPERIMENT_OVERRIDE_BUCKET'],
+        inlineRequire: () => n(902629).Z,
         neverLoadBeforeConnectionOpen: !0
     }
 };

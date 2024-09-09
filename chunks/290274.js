@@ -2,66 +2,69 @@ n.d(t, {
     Z: function () {
         return f;
     }
-});
-var r = n(735250);
-n(470079);
-var i = n(120356),
-    a = n.n(i),
-    s = n(481060),
-    o = n(100527),
-    l = n(906732),
-    u = n(27144),
-    c = n(318134),
+}),
+    n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(120356),
+    s = n.n(a),
+    o = n(481060),
+    l = n(100527),
+    u = n(906732),
+    c = n(960870),
     d = n(848966),
     _ = n(689938),
     E = n(139665);
 function f(e) {
-    let { user: t, activity: n, entry: i, display: f, className: h, onSelect: p, onClose: m, onRequestOpen: I } = e,
-        { newActivityCardsEnabled: T } = (0, u.z)({ location: 'UserProfileActivityContextMenu' }),
-        { analyticsLocations: g } = (0, l.ZP)(o.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
-        { onAction: S } = (0, c.Z)({
+    let { user: t, activity: n, entry: a, display: f, className: h, onSelect: p, onClose: I, onRequestOpen: m } = e,
+        [T, S] = i.useState(!1),
+        { analyticsLocations: g } = (0, u.ZP)(l.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
+        A = (0, c.Z)({
             display: f,
             user: t,
             activity: n,
-            entry: i,
+            entry: a,
             analyticsLocations: g
         }),
-        A = (0, d.Z)({
-            entry: i,
+        N = (0, d.Z)({
+            entry: a,
             activity: n,
             user: t,
             display: f,
-            onClose: m,
-            onAction: S
+            onClose: I,
+            onAction: A,
+            isMenuOpen: T
         });
-    return !T || 0 === A.length || t.bot
+    return 0 === N.length || t.bot
         ? null
-        : (0, r.jsx)(s.Popout, {
+        : (0, r.jsx)(o.Popout, {
               align: 'top',
               position: 'right',
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  S({ action: 'OPEN_MENU' }), null == I || I();
+                  A({ action: 'OPEN_MENU' }), S(!0), null == m || m();
               },
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, r.jsx)(s.Menu, {
+                  return (0, r.jsx)(o.Menu, {
                       navId: 'content-inventory-context',
-                      onClose: t,
+                      onClose: () => {
+                          t(), S(!1);
+                      },
                       'aria-label': _.Z.Messages.USER_PROFILE_ACTIVITY_ACTION_MENU_A11Y_LABEL,
                       onSelect: p,
-                      children: (0, r.jsx)(s.MenuGroup, { children: A })
+                      children: (0, r.jsx)(o.MenuGroup, { children: N })
                   });
               },
               children: (e) =>
-                  (0, r.jsx)(s.Clickable, {
+                  (0, r.jsx)(o.Clickable, {
                       ...e,
                       onContextMenu: (t) => {
                           t.preventDefault(), e.onClick(t);
                       },
-                      className: a()(E.contextMenu, h),
-                      children: (0, r.jsx)(s.MoreHorizontalIcon, {
-                          color: s.tokens.colors.INTERACTIVE_NORMAL,
+                      className: s()(E.contextMenu, h),
+                      children: (0, r.jsx)(o.MoreHorizontalIcon, {
+                          color: o.tokens.colors.INTERACTIVE_NORMAL,
                           size: 'xs'
                       })
                   })

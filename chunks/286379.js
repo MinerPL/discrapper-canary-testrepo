@@ -36,4 +36,5 @@ n.d(t, {
     (i.OTA_ASSET_DOWNLOAD = 'ota_asset_download'),
     (i.DEBUG_OTA_200_TIMEOUT = 'debug_ota_200_timeout'),
     (i.IMAGE_LOAD_ERROR = 'image_load_error'),
-    (i.DM_SETTINGS_UPSELL_VIEW = 'dm_settings_upsell_view');
+    (i.DM_SETTINGS_UPSELL_VIEW = 'dm_settings_upsell_view'),
+    (i.CAPTCHA_SERVE_VOLUME_DISTRIBUTION = 'captcha_serve_volume_distribution');

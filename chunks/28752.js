@@ -1,109 +1,107 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return E;
     }
 });
 var r = n(735250),
     i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(373793),
-    l = n(974674),
-    u = n(481060),
-    c = n(688465),
-    d = n(768581),
-    _ = n(182294),
-    E = n(689938),
-    f = n(875304);
-function h(e) {
-    let { inApp: t, application: n, onSelect: a } = e,
-        h = i.useMemo(
+    a = n(373793),
+    s = n(974674),
+    o = n(481060),
+    l = n(688465),
+    u = n(768581),
+    c = n(182294),
+    d = n(689938),
+    _ = n(875304);
+function E(e) {
+    let { application: t, onSelect: n } = e,
+        E = i.useMemo(
             () =>
-                d.ZP.getApplicationIconURL({
-                    id: n.id,
-                    icon: n.icon
+                u.ZP.getApplicationIconURL({
+                    id: t.id,
+                    icon: t.icon
                 }),
-            [n.icon, n.id]
+            [t.icon, t.id]
         ),
-        p = i.useMemo(
+        f = i.useMemo(
             () =>
                 [
                     {
-                        type: o.Y.USER_INSTALL,
-                        icon: u.UserPlusIcon,
-                        title: E.Z.Messages.OAUTH2_INTEGRATION_SELECT_USER,
-                        subtitle: E.Z.Messages.OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE,
+                        type: a.Y.USER_INSTALL,
+                        icon: o.UserPlusIcon,
+                        title: d.Z.Messages.OAUTH2_INTEGRATION_SELECT_USER,
+                        subtitle: d.Z.Messages.OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE,
                         beta: !1
                     },
                     {
-                        type: o.Y.GUILD_INSTALL,
-                        icon: u.ServerIcon,
-                        title: E.Z.Messages.OAUTH2_INTEGRATION_SELECT_GUILD,
-                        subtitle: E.Z.Messages.OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE,
+                        type: a.Y.GUILD_INSTALL,
+                        icon: o.ServerIcon,
+                        title: d.Z.Messages.OAUTH2_INTEGRATION_SELECT_GUILD,
+                        subtitle: d.Z.Messages.OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE,
                         beta: !1
                     }
                 ].filter((e) => {
-                    var t, r;
-                    return (null === (r = n.integrationTypesConfig) || void 0 === r ? void 0 : null === (t = r[e.type]) || void 0 === t ? void 0 : t.oauth2InstallParams) != null;
+                    var n, r;
+                    return (null === (r = t.integrationTypesConfig) || void 0 === r ? void 0 : null === (n = r[e.type]) || void 0 === n ? void 0 : n.oauth2InstallParams) != null;
                 }),
-            [n.integrationTypesConfig]
+            [t.integrationTypesConfig]
         );
     return (0, r.jsxs)('div', {
-        className: f.container,
+        className: _.container,
         children: [
             (0, r.jsxs)('div', {
-                className: f.header,
+                className: _.header,
                 children: [
-                    (0, r.jsx)(l.qE, {
-                        src: h,
-                        size: _.EF.SIZE_80,
-                        'aria-label': n.name
+                    (0, r.jsx)(s.qE, {
+                        src: E,
+                        size: c.EF.SIZE_80,
+                        'aria-label': t.name
                     }),
-                    (0, r.jsx)(u.Heading, {
+                    (0, r.jsx)(o.Heading, {
                         variant: 'heading-xl/bold',
                         color: 'header-primary',
-                        children: n.name
+                        children: t.name
                     })
                 ]
             }),
             (0, r.jsx)('ul', {
-                className: f.rows,
-                children: p.map((e) =>
+                className: _.rows,
+                children: f.map((e) =>
                     (0, r.jsxs)(
-                        u.Clickable,
+                        o.Clickable,
                         {
                             tag: 'li',
-                            className: s()(f.row, { [f.inApp]: t }),
-                            onClick: () => a(e.type),
+                            className: _.row,
+                            onClick: () => n(e.type),
                             children: [
                                 (0, r.jsx)(e.icon, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: f.leftIcon
+                                    className: _.leftIcon
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: f.rowInner,
+                                    className: _.rowInner,
                                     children: [
                                         (0, r.jsxs)('div', {
-                                            className: f.rowDetails,
+                                            className: _.rowDetails,
                                             children: [
-                                                (0, r.jsx)(u.Text, {
+                                                (0, r.jsx)(o.Text, {
                                                     variant: 'text-md/medium',
                                                     color: 'interactive-active',
                                                     children: e.title
                                                 }),
-                                                (0, r.jsx)(u.Text, {
+                                                (0, r.jsx)(o.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-muted',
                                                     children: e.subtitle
                                                 })
                                             ]
                                         }),
-                                        e.beta && (0, r.jsx)(c.Z, {}),
-                                        (0, r.jsx)(u.ChevronSmallRightIcon, {
+                                        e.beta && (0, r.jsx)(l.Z, {}),
+                                        (0, r.jsx)(o.ChevronSmallRightIcon, {
                                             size: 'md',
                                             color: 'currentColor',
-                                            className: f.rightIcon
+                                            className: _.rightIcon
                                         })
                                     ]
                                 })

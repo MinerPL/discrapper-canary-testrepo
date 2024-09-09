@@ -1,6 +1,6 @@
 n.d(t, {
     AH: function () {
-        return g;
+        return S;
     },
     CS: function () {
         return p;
@@ -9,37 +9,37 @@ n.d(t, {
         return y;
     },
     OR: function () {
-        return D;
+        return L;
     },
     QB: function () {
-        return S;
+        return g;
     },
     T0: function () {
         return C;
     },
     Wf: function () {
-        return O;
+        return R;
     },
     eT: function () {
-        return R;
+        return v;
     },
     gl: function () {
         return N;
     },
     is: function () {
-        return m;
+        return I;
     },
     m0: function () {
         return T;
     },
     nE: function () {
-        return v;
+        return O;
     },
     pf: function () {
         return A;
     },
     xw: function () {
-        return I;
+        return m;
     }
 }),
     n(411104);
@@ -100,10 +100,10 @@ async function p(e) {
     }
     return { errorHints: [] };
 }
-async function m(e) {
+async function I(e) {
     await i.tn.post({ url: f.ANM.QUEST_ON_CONSOLE_STOP(e) });
 }
-async function I() {
+async function m() {
     if (!c.Z.isFetchingCurrentQuests) {
         a.Z.dispatch({ type: 'QUESTS_FETCH_CURRENT_QUESTS_BEGIN' }), u.Z.recordQuestRequestAttempt(f.ANM.QUESTS_CURRENT_QUESTS);
         try {
@@ -164,7 +164,7 @@ async function T(e) {
         });
     }
 }
-async function g(e, t) {
+async function S(e, t) {
     if (
         (null != t.questContentCTA &&
             (0, l._3)({
@@ -197,7 +197,7 @@ async function g(e, t) {
         }
     }
 }
-async function S(e, t, n) {
+async function g(e, t, n) {
     if (!c.Z.isClaimingReward(e)) {
         a.Z.dispatch({
             type: 'QUESTS_CLAIM_REWARD_BEGIN',
@@ -212,17 +212,20 @@ async function S(e, t, n) {
                     }
                 }),
                 s = (0, _.Xh)(r.body);
-            0 === s.errors.length
-                ? a.Z.dispatch({
-                      type: 'QUESTS_CLAIM_REWARD_SUCCESS',
-                      questId: e,
-                      entitlements: s
-                  })
-                : a.Z.dispatch({
-                      type: 'QUESTS_CLAIM_REWARD_FAILURE',
-                      error: s.errors,
-                      questId: e
-                  });
+            return (
+                0 === s.errors.length
+                    ? a.Z.dispatch({
+                          type: 'QUESTS_CLAIM_REWARD_SUCCESS',
+                          questId: e,
+                          entitlements: s
+                      })
+                    : a.Z.dispatch({
+                          type: 'QUESTS_CLAIM_REWARD_FAILURE',
+                          error: s.errors,
+                          questId: e
+                      }),
+                s
+            );
         } catch (t) {
             throw (
                 (a.Z.dispatch({
@@ -287,21 +290,22 @@ async function N(e, t) {
         }
     }
 }
-function v(e) {
+function O(e) {
     a.Z.dispatch({
         type: 'QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE',
         streamKey: e
     });
 }
-async function O(e) {
+async function R(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
     try {
-        let t = await i.tn.post({
+        let n = await i.tn.post({
             url: f.ANM.QUESTS_PREVIEW_COMPLETE(e),
-            body: {}
+            body: { percent: t }
         });
         a.Z.dispatch({
             type: 'QUESTS_PREVIEW_UPDATE_SUCCESS',
-            previewQuestUserStatus: (0, _.U3)(t.body)
+            previewQuestUserStatus: (0, _.U3)(n.body)
         });
     } catch (t) {
         a.Z.dispatch({
@@ -311,7 +315,7 @@ async function O(e) {
         });
     }
 }
-async function R(e) {
+async function v(e) {
     try {
         let t = await i.tn.del({
             url: f.ANM.QUESTS_PREVIEW_STATUS(e),
@@ -353,7 +357,7 @@ function y(e) {
         questId: e
     });
 }
-function D(e, t) {
+function L(e, t) {
     a.Z.dispatch({
         type: 'QUESTS_SELECT_TASK_PLATFORM',
         questId: e,
