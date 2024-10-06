@@ -13,6 +13,7 @@ n.d(t, {
     }
 }),
     n(724458),
+    n(47120),
     n(945124);
 var r,
     i,
@@ -24,12 +25,13 @@ function u(e, t) {
     return void 0 === e || '' === e ? t : e;
 }
 function c(e) {
-    let t = (0, o.yf)(),
-        n = (0, l.dt)(),
-        r = {};
+    var t;
+    let n = (0, o.yf)(),
+        r = (0, l.dt)(),
+        i = {};
     return (
         null != e.game_activity &&
-            (r = Object.keys(e.game_activity).reduce((t, n) => {
+            (i = Object.keys(e.game_activity).reduce((t, n) => {
                 var r;
                 let i = null === (r = e.game_activity) || void 0 === r ? void 0 : r[n];
                 return null == i
@@ -54,20 +56,21 @@ function c(e) {
             bannerHash: e.banner_hash,
             badge: {
                 badgeKind: e.badge,
-                primaryColor: u(e.badge_color_primary, t.primary),
-                secondaryColor: u(e.badge_color_secondary, t.secondary),
+                primaryColor: u(e.badge_color_primary, n.primary),
+                secondaryColor: u(e.badge_color_secondary, n.secondary),
                 imageHash: e.badge_hash
             },
             branding: {
-                primaryColor: u(e.brand_color_primary, n.primary),
-                secondaryColor: u(e.brand_color_secondary, n.secondary)
+                primaryColor: u(e.brand_color_primary, r.primary),
+                secondaryColor: u(e.brand_color_secondary, r.secondary)
             },
             wildcardDescriptors: e.wildcard_descriptors,
-            gameActivity: r
+            gameActivity: i,
+            discoveryProfileFeatures: new Set(null !== (t = e.discovery_profile_features) && void 0 !== t ? t : [])
         }
     );
 }
 function d(e) {
     return 'loaded' === e.status;
 }
-((a = r || (r = {})).TOP_PICKS = 'TOP_PICKS'), (a.GLOBAL_DISCOVERY_TOP_PICKS = 'GLOBAL_DISCOVERY_TOP_PICKS'), ((s = i || (i = {})).SHOWN = 'SHOWN'), (s.HIT = 'HIT');
+((a = r || (r = {})).TOP_PICKS = 'TOP_PICKS'), (a.GLOBAL_DISCOVERY_TOP_PICKS = 'GLOBAL_DISCOVERY_TOP_PICKS'), ((s = i || (i = {})).SHOWN = 'SHOWN'), (s.HIT = 'HIT'), (s.UNKNOWN = 'UNKNOWN');

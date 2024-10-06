@@ -63,26 +63,29 @@ class C extends S.ZP {
         );
     }
     retryOpts() {
-        if (this.item.platform === S.ow.REACT_NATIVE)
-            return _.l.getCurrentConfig({ location: 'CloudUpload' }).enabled
-                ? {
-                      timeout: {
-                          response: 10 * I.Z.Millis.SECOND,
-                          deadline: 30 * I.Z.Millis.MINUTE
-                      },
-                      backoff: new o.Z(0.5 * I.Z.Millis.SECOND, 60 * I.Z.Millis.SECOND),
-                      retries: 8
-                  }
-                : {
-                      timeout: 1 * I.Z.Millis.HOUR,
-                      backoff: new o.Z(0.5 * I.Z.Millis.SECOND, 30 * I.Z.Millis.MINUTE),
-                      retries: 12
-                  };
-        return {
-            timeout: 1 * I.Z.Millis.HOUR,
-            retries: 12,
-            backoff: new o.Z()
-        };
+        return this.item.platform === S.ow.REACT_NATIVE
+            ? {
+                  timeout: 1 * I.Z.Millis.HOUR,
+                  backoff: new o.Z(0.5 * I.Z.Millis.SECOND, 30 * I.Z.Millis.MINUTE),
+                  retries: 12
+              }
+            : {
+                  timeout: 1 * I.Z.Millis.HOUR,
+                  retries: 12,
+                  backoff: new o.Z()
+              };
+    }
+    createAttachmentUrlRetryOpts() {
+        return this.item.platform === S.ow.REACT_NATIVE && _.l.getCurrentConfig({ location: 'CloudUpload' }).enabled
+            ? {
+                  timeout: {
+                      response: 30 * I.Z.Millis.SECOND,
+                      deadline: 30 * I.Z.Millis.MINUTE
+                  },
+                  backoff: new o.Z(0.5 * I.Z.Millis.SECOND, 60 * I.Z.Millis.SECOND),
+                  retries: 8
+              }
+            : this.retryOpts();
     }
     async uploadFileToCloudAsChunks(e) {
         if (null == this.responseUrl || '' === this.responseUrl) throw Error('_uploadFileToCloudAsChunks - responseUrl is not set');
@@ -268,7 +271,7 @@ class C extends S.ZP {
                     await l.tn.post({
                         url: i.getCreateAttachmentURL(this.channelId),
                         body: { files: [r] },
-                        ...this.retryOpts()
+                        ...this.createAttachmentUrlRetryOpts()
                     })
             );
             this.setResponseUrl(e.body.attachments[0].upload_url), this.setUploadedFilename(e.body.attachments[0].upload_filename);

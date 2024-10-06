@@ -1,94 +1,92 @@
-n.d(t, {
+r.d(t, {
     G: function () {
-        return h;
+        return g;
     }
 });
-var s = n(735250);
-n(470079);
-var r = n(120356),
-    a = n.n(r),
-    i = n(442837),
-    o = n(481060),
-    c = n(607070),
-    l = n(372047),
-    d = n(731782),
-    u = n(196798),
-    f = n(660348),
-    p = n(872044),
-    g = n(671581),
-    C = n(830487),
-    _ = n(602476);
-function m() {
-    return (0, s.jsxs)('div', {
-        className: d.attributionLogos,
+var a = r(735250);
+r(470079);
+var n = r(120356),
+    s = r.n(n),
+    i = r(442837),
+    o = r(481060),
+    l = r(607070),
+    c = r(564032),
+    d = r(196798),
+    u = r(660348),
+    f = r(872044),
+    p = r(671581),
+    m = r(830487),
+    C = r(602476);
+function _() {
+    return (0, a.jsxs)('div', {
+        className: c.attributionLogos,
         'aria-label': 'Discord x Pocketpair',
         children: [
-            (0, s.jsx)(o.ClydeIcon, {
+            (0, a.jsx)(o.ClydeIcon, {
                 size: 'custom',
                 color: 'currentColor',
                 height: 22,
                 'aria-hidden': !0
             }),
-            (0, s.jsx)(o.Text, {
+            (0, a.jsx)(o.Text, {
                 variant: 'heading-sm/extrabold',
                 tag: 'div',
                 children: '|'
             }),
-            (0, s.jsx)('img', {
-                src: f,
+            (0, a.jsx)('img', {
+                src: u,
                 alt: '',
                 'aria-hidden': !0
             })
         ]
     });
 }
-function h(e) {
+function g(e) {
     let { category: t } = e,
-        n = (0, i.e7)([c.Z], () => c.Z.useReducedMotion),
-        { enabled: r } = (0, l.Z)({ location: 'CollectiblesShop' });
-    return (0, s.jsxs)('div', {
-        className: a()(d.banner, { [d.noTopMargin]: r }),
+        r = (0, i.e7)([l.Z], () => l.Z.useReducedMotion);
+    return (0, a.jsxs)('div', {
+        className: c.banner,
         'aria-label': t.name,
         children: [
-            (0, s.jsxs)('div', {
-                className: d.mainContent,
+            (0, a.jsxs)('div', {
+                className: c.mainContent,
                 children: [
-                    (0, s.jsx)('img', {
+                    (0, a.jsx)('img', {
+                        src: f,
+                        className: c.bannerImage,
+                        alt: t.name,
+                        'aria-hidden': !0
+                    }),
+                    (0, a.jsx)(_, {}),
+                    (0, a.jsx)('img', {
                         src: p,
-                        className: d.bannerImage,
+                        className: c.categoryLogo,
                         alt: t.name,
                         'aria-hidden': !0
                     }),
-                    (0, s.jsx)(m, {}),
-                    (0, s.jsx)('img', {
-                        src: g,
-                        className: d.categoryLogo,
-                        alt: t.name,
-                        'aria-hidden': !0
-                    }),
-                    !n &&
-                        (0, s.jsx)('img', {
-                            src: u,
-                            className: d.animatedLayer,
+                    !r &&
+                        (0, a.jsx)('img', {
+                            src: d,
+                            className: c.animatedLayer,
                             alt: '',
                             'aria-hidden': !0
                         }),
-                    (0, s.jsx)(o.Text, {
-                        className: d.summary,
+                    (0, a.jsx)(o.Text, {
+                        className: c.summary,
                         variant: 'text-md/normal',
                         children: t.summary
                     })
                 ]
             }),
-            (0, s.jsx)('img', {
-                src: _,
-                className: a()(d.overflowImage, d.overflowRight),
+            (0, a.jsx)('img', {
+                src: C,
+                className: s()(c.overflowImage, c.overflowRight),
                 alt: '',
                 'aria-hidden': !0
             }),
-            (0, s.jsx)('img', {
-                src: C,
-                className: a()(d.overflowImage, d.overflowLeft),
+            (0, a.jsx)('img', {
+                src: m,
+                className: s()(c.overflowImage, c.overflowLeft),
                 alt: '',
                 'aria-hidden': !0
             })

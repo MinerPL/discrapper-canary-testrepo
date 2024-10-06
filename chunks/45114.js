@@ -2,23 +2,17 @@ n.d(t, {
     CZ: function () {
         return h;
     },
-    ES: function () {
-        return T;
-    },
     FT: function () {
-        return I;
+        return m;
     },
     In: function () {
         return d;
     },
     Ju: function () {
-        return m;
+        return I;
     },
     U6: function () {
         return _;
-    },
-    YJ: function () {
-        return g;
     },
     iV: function () {
         return f;
@@ -67,7 +61,7 @@ function _(e) {
               let u = l[e]
                       .filter((e) => {
                           let { channel: t } = e;
-                          return (0, a.vc)(t.type);
+                          return (0, a.Em)(t.type);
                       })
                       .map((e) => {
                           let { channel: t } = e;
@@ -113,7 +107,7 @@ function p(e, t) {
         windowId: t
     });
 }
-function m(e, t, n) {
+function I(e, t, n) {
     r.Z.dispatch({
         type: 'GUILD_FEATURE_ACK',
         id: e,
@@ -122,7 +116,7 @@ function m(e, t, n) {
         local: !1
     });
 }
-function I(e, t) {
+function m(e, t) {
     var n;
     if (null != (null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.id))
         r.Z.dispatch({
@@ -131,13 +125,4 @@ function I(e, t) {
             ackedId: t,
             local: !1
         });
-}
-function T(e) {
-    r.Z.dispatch({
-        type: 'MESSAGE_REQUEST_ACK',
-        ackedId: e
-    });
-}
-function g() {
-    r.Z.dispatch({ type: 'MESSAGE_REQUEST_CLEAR_ACK' });
 }

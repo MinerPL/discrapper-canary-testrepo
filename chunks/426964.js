@@ -23,9 +23,9 @@ var r = n(735250),
     R = n(169559),
     v = n(284019),
     C = n(308083),
-    y = n(981631),
-    L = n(689938),
-    D = n(931797);
+    L = n(981631),
+    y = n(689938),
+    D = n(469761);
 function b(e) {
     e.stopPropagation();
 }
@@ -68,7 +68,7 @@ t.Z = i.memo(function (e) {
                     tagUserId: null == U ? void 0 : U.tagUserId,
                     location: l.Z.CLAN_GUILD_PROFILE
                 }),
-                    (0, s.showToast)((0, s.createToast)(L.Z.Messages.CLAN_USER_WAITLIST_TOAST_SUCCESS, s.ToastType.SUCCESS));
+                    (0, s.showToast)((0, s.createToast)(y.Z.Messages.CLAN_USER_WAITLIST_TOAST_SUCCESS, s.ToastType.SUCCESS));
         }, [w, Y, U]),
         X = i.useCallback(
             (e) => {
@@ -90,10 +90,10 @@ t.Z = i.memo(function (e) {
             [x, w, z, P, U]
         ),
         J = i.useCallback(() => {
-            open(m.Z.getArticleURL(y.BhN.CLANS_FAQ));
+            open(m.Z.getArticleURL(L.BhN.CLANS_FAQ));
         }, []),
         ee = i.useCallback(() => {
-            if (null != w) (0, f.uL)(y.Z5c.GUILD_MEMBER_VERIFICATION(w));
+            if (null != w) (0, f.uL)(L.Z5c.GUILD_MEMBER_VERIFICATION(w));
         }, [w]),
         et = i.useCallback(() => {
             if (null != w) (0, f.XU)(w);
@@ -109,6 +109,7 @@ t.Z = i.memo(function (e) {
             };
         }, [null == x ? void 0 : null === (t = x.branding) || void 0 === t ? void 0 : t.primaryColor]),
         er = i.useMemo(() => {
+            var e;
             switch (!0) {
                 case !B:
                     return null;
@@ -118,7 +119,7 @@ t.Z = i.memo(function (e) {
                         color: s.Button.Colors.PRIMARY,
                         size: s.Button.Sizes.SMALL,
                         fullWidth: !0,
-                        children: L.Z.Messages.CLAN_USER_WAITLIST_CTA
+                        children: y.Z.Messages.CLAN_USER_WAITLIST_CTA
                     });
                 case !W && !k && Y:
                     return (0, r.jsxs)(s.Button, {
@@ -128,7 +129,7 @@ t.Z = i.memo(function (e) {
                         size: s.Button.Sizes.SMALL,
                         fullWidth: !0,
                         children: [
-                            L.Z.Messages.CLAN_USER_WAITLISTED,
+                            y.Z.Messages.CLAN_USER_WAITLISTED,
                             (0, r.jsx)(s.CircleInformationIcon, {
                                 size: 'xs',
                                 color: 'currentColor'
@@ -139,30 +140,32 @@ t.Z = i.memo(function (e) {
                     return (0, r.jsx)(v.Z, {
                         onClick: ee,
                         ...en,
-                        children: L.Z.Messages.CLAN_USER_APPLICATION_EXISTS_TAG_GUILD_PROFILE_CTA
+                        children: y.Z.Messages.CLAN_USER_APPLICATION_EXISTS_TAG_GUILD_PROFILE_CTA
                     });
+                case !W && (null == x ? void 0 : null === (e = x.discoveryProfileFeatures) || void 0 === e ? void 0 : e.has(L.oNc.CLAN_DISCOVERY_DISABLED)):
+                    return null;
                 case !W && q:
                     return (0, r.jsx)(v.Z, {
                         onClick: $,
                         ...en,
-                        children: L.Z.Messages.CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA
+                        children: y.Z.Messages.CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA
                     });
                 case W && !K:
                     return (0, r.jsx)(v.Z, {
                         onClick: X,
                         ...en,
-                        children: L.Z.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA
+                        children: y.Z.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA
                     });
                 case W && K:
                     return (0, r.jsx)(v.Z, {
                         onClick: et,
                         ...en,
-                        children: L.Z.Messages.CLAN_USER_GO_TO_CLAN_CTA
+                        children: y.Z.Messages.CLAN_USER_GO_TO_CLAN_CTA
                     });
                 default:
                     return null;
             }
-        }, [B, W, k, Y, z, q, K, Q, J, ee, en, $, X, et]),
+        }, [B, W, k, Y, z, null == x ? void 0 : x.discoveryProfileFeatures, q, K, Q, J, ee, en, $, X, et]),
         ei = i.useMemo(
             () => ({
                 className: D.container,

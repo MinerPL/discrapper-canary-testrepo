@@ -7,50 +7,52 @@ n.d(t, {
 var i = n(735250),
     a = n(470079),
     s = n(481060),
-    r = n(626135),
-    l = n(288552),
+    l = n(626135),
+    r = n(288552),
     o = n(981631),
-    c = n(689938);
+    c = n(689938),
+    d = n(811304);
 function u(e) {
     let { type: t, onClick: n } = e,
-        [u, _] = a.useState(!1),
-        E = () => {
+        [u, E] = a.useState(!1),
+        I = () => {
             n(),
-                r.default.track(o.rMx.INBOX_CHANNEL_ACKED, {
+                l.default.track(o.rMx.INBOX_CHANNEL_ACKED, {
                     marked_all_channels_as_read: !0,
                     num_unread_channels_remaining: 0
                 });
         },
-        I = (e) => {
-            e.shiftKey ? E() : _(!0);
+        m = (e) => {
+            e.shiftKey ? I() : E(!0);
         };
     return (0, i.jsxs)(i.Fragment, {
         children: [
             u
-                ? (0, i.jsx)(d, {
-                      confirm: E,
-                      cancel: () => _(!1)
+                ? (0, i.jsx)(_, {
+                      confirm: I,
+                      cancel: () => E(!1)
                   })
                 : null,
             'bottom-floating' === t
-                ? (0, i.jsx)(l.a, {
+                ? (0, i.jsx)(r.a, {
                       text: c.Z.Messages.MARK_ALL_AS_READ,
                       icon: s.DoubleCheckmarkIcon,
-                      onClick: I
+                      onClick: m
                   })
                 : (0, i.jsx)(s.CircleIconButton, {
                       tooltip: c.Z.Messages.MARK_ALL_AS_READ,
-                      color: s.CircleIconButtonColors.SECONDARY,
+                      color: s.CircleIconButtonColors.TERTIARY,
                       icon: (0, i.jsx)(s.DoubleCheckmarkIcon, {
                           size: 'xs',
                           color: 'currentColor'
                       }),
-                      onClick: I
+                      className: d.controlButton,
+                      onClick: m
                   })
         ]
     });
 }
-function d(e) {
+function _(e) {
     let { cancel: t, confirm: n } = e;
     return (0, i.jsx)(s.DeclarativeConfirmModal, {
         dismissable: !0,

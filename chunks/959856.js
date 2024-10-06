@@ -84,6 +84,7 @@ class C extends l.Z {
             case N.AN.AUTOMATIC_VAD:
             case N.AN.LEGACY_AUDIO_SUBSYSTEM:
             case N.AN.EXPERIMENTAL_AUDIO_SUBSYSTEM:
+            case N.AN.AUTOMATIC_AUDIO_SUBSYSTEM:
             case N.AN.DEBUG_LOGGING:
             case N.AN.VOICE_PANNING:
             case N.AN.AUTO_ENABLE:

@@ -5,7 +5,7 @@ l.d(t, {
     _j: function () {
         return a;
     },
-    n8: function () {
+    nm: function () {
         return o;
     },
     xS: function () {
@@ -19,7 +19,7 @@ var n = l(239091);
 function s(e, t, s) {
     s.isGroupDM()
         ? (0, n.jW)(e, async () => {
-              let { default: e } = await Promise.all([l.e('79695'), l.e('90286'), l.e('15324')]).then(l.bind(l, 354589));
+              let { default: e } = await Promise.all([l.e('50506'), l.e('79695'), l.e('79107'), l.e('92453'), l.e('60222')]).then(l.bind(l, 354589));
               return (l) =>
                   (0, i.jsx)(e, {
                       ...l,
@@ -29,7 +29,7 @@ function s(e, t, s) {
           })
         : s.isDM()
           ? (0, n.jW)(e, async () => {
-                let { default: e } = await Promise.all([l.e('79695'), l.e('59743'), l.e('90286'), l.e('22036'), l.e('56826'), l.e('46679')]).then(l.bind(l, 131404));
+                let { default: e } = await Promise.all([l.e('50506'), l.e('79695'), l.e('79107'), l.e('59743'), l.e('92453'), l.e('22036'), l.e('56826'), l.e('95470')]).then(l.bind(l, 131404));
                 return (l) =>
                     (0, i.jsx)(e, {
                         ...l,
@@ -41,7 +41,7 @@ function s(e, t, s) {
             })
           : null != s.guild_id
             ? (0, n.jW)(e, async () => {
-                  let { default: e } = await Promise.all([l.e('79695'), l.e('90286'), l.e('12435'), l.e('62348')]).then(l.bind(l, 757387));
+                  let { default: e } = await Promise.all([l.e('50506'), l.e('79695'), l.e('79107'), l.e('92453'), l.e('13125'), l.e('34879')]).then(l.bind(l, 757387));
                   return (l) =>
                       (0, i.jsx)(e, {
                           ...l,
@@ -51,7 +51,7 @@ function s(e, t, s) {
                       });
               })
             : (0, n.jW)(e, async () => {
-                  let { default: e } = await Promise.all([l.e('79695'), l.e('69220'), l.e('46611')]).then(l.bind(l, 881351));
+                  let { default: e } = await Promise.all([l.e('79695'), l.e('69220'), l.e('50261')]).then(l.bind(l, 881351));
                   return (l) =>
                       (0, i.jsx)(e, {
                           ...l,
@@ -65,7 +65,7 @@ function a(e, t) {
     let u = null != r ? r : null == a ? void 0 : a.getGuildId();
     null != u &&
         (0, n.jW)(e, async () => {
-            let { default: e } = await Promise.all([l.e('12435'), l.e('6632')]).then(l.bind(l, 833737));
+            let { default: e } = await Promise.all([l.e('13125'), l.e('33685')]).then(l.bind(l, 833737));
             return (t) =>
                 (0, i.jsx)(e, {
                     ...t,
@@ -78,7 +78,7 @@ function a(e, t) {
         });
 }
 function o(e, t) {
-    let { user: s, guildId: a, analyticsLocations: o, onCloseContextMenu: r } = t;
+    let { user: s, guildId: a, analyticsLocations: o, onCloseContextMenu: r, isViewOnly: d } = t;
     (0, n.jW)(e, async () => {
         let { default: e } = await l.e('45130').then(l.bind(l, 246389));
         return (t) =>
@@ -87,7 +87,8 @@ function o(e, t) {
                 user: s,
                 guildId: a,
                 analyticsLocations: o,
-                onCloseContextMenu: r
+                onCloseContextMenu: r,
+                isViewOnly: d
             });
     });
 }

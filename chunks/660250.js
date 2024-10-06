@@ -1,68 +1,69 @@
-n.r(t);
-var i = n(735250),
-    o = n(470079),
-    s = n(442837),
-    c = n(481060),
-    r = n(959457),
-    a = n(571826),
-    d = n(301107),
-    l = n(785792),
-    f = n(190054),
-    _ = n(245581),
-    u = n(760373),
-    h = n(689938),
-    E = n(756843);
-t.default = function (e) {
-    let { transitionState: t, streamKey: n, channelId: p } = e,
-        I = (0, s.e7)([r.Z], () => {
+t.r(n);
+var o = t(735250),
+    s = t(470079),
+    c = t(442837),
+    r = t(481060),
+    i = t(959457),
+    l = t(571826),
+    a = t(630759),
+    d = t(301107),
+    u = t(785792),
+    h = t(190054),
+    f = t(245581),
+    x = t(760373),
+    _ = t(689938),
+    m = t(722041);
+n.default = function (e) {
+    let { transitionState: n, streamKey: t, channelId: E } = e,
+        v = (0, c.e7)([i.Z], () => {
             var e;
-            return null === (e = r.Z.getSecureFramesState(n)) || void 0 === e ? void 0 : e.epochAuthenticator;
+            return null === (e = i.Z.getSecureFramesState(t)) || void 0 === e ? void 0 : e.epochAuthenticator;
         }),
-        x = (0, d.W)({
-            fingerprintBase64: I,
-            chunkSize: u.y6,
-            desiredLength: u.YP
+        p = (0, d.W)({
+            fingerprintBase64: v,
+            chunkSize: x.y6,
+            desiredLength: x.YP
         }),
-        v = o.useCallback(() => {
-            (0, a.ih)({ channelId: p });
-        }, [p]);
-    return (0, i.jsxs)(_.Z, {
-        transitionState: t,
-        title: h.Z.Messages.E2EE_STREAM_PRIVACY_CODE,
-        subtitle: h.Z.Messages.E2EE_STREAM_VERIFICATION_SUBTITLE,
+        I = s.useCallback(() => {
+            (0, l.ih)({ channelId: E });
+        }, [E]);
+    return (0, o.jsxs)(f.Z, {
+        transitionState: n,
+        title: _.Z.Messages.E2EE_STREAM_PRIVACY_CODE,
+        subtitle: _.Z.Messages.E2EE_STREAM_VERIFICATION_SUBTITLE,
         children: [
-            (0, i.jsxs)('div', {
-                className: E.verification,
+            (0, o.jsxs)('div', {
+                className: m.verification,
                 children: [
-                    (0, i.jsxs)('div', {
-                        className: E.header,
+                    (0, o.jsxs)('div', {
+                        className: m.header,
                         children: [
-                            (0, i.jsx)(c.Heading, {
+                            (0, o.jsx)(r.Heading, {
                                 variant: 'text-sm/bold',
                                 color: 'header-primary',
-                                children: h.Z.Messages.E2EE_PRIVACY_CODE
+                                children: _.Z.Messages.E2EE_PRIVACY_CODE
                             }),
-                            null != x &&
-                                (0, i.jsx)(f.H, {
-                                    className: E.copyIcon,
-                                    chunks: x,
-                                    color: c.tokens.colors.INTERACTIVE_NORMAL,
-                                    onCopy: v
+                            null != p &&
+                                (0, o.jsx)(h.H, {
+                                    className: m.copyIcon,
+                                    chunks: p,
+                                    color: r.tokens.colors.INTERACTIVE_NORMAL,
+                                    onCopy: I
                                 })
                         ]
                     }),
-                    (0, i.jsx)(l.b, {
-                        className: E.code,
-                        chunks: x,
-                        columns: u.WK
+                    (0, o.jsx)(u.b, {
+                        className: m.code,
+                        chunks: p,
+                        columns: x.WK
                     })
                 ]
             }),
-            (0, i.jsx)(c.Text, {
-                className: E.footer,
+            (0, o.jsx)(r.Text, {
+                className: m.footer,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
-                children: h.Z.Messages.E2EE_STREAM_VERIFICATION_FOOTER_TEXT.format({ helpArticle: u.l4 })
+                children: _.Z.Messages.E2EE_STREAM_VERIFICATION_FOOTER_TEXT.format({ helpArticle: (0, a.uV)() })
             })
         ]
     });

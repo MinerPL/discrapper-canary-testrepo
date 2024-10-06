@@ -4,43 +4,44 @@ t.r(s),
             return O;
         }
     });
-var n = t(735250);
+var a = t(735250);
 t(470079);
-var a = t(442837),
-    o = t(654904),
-    r = t(594174),
-    _ = t(74538),
-    c = t(98278),
-    E = t(790527),
-    i = t(474936),
-    U = t(981631),
-    u = t(486324),
-    I = t(689938);
+var n = t(442837),
+    c = t(654904),
+    o = t(594174),
+    r = t(74538),
+    _ = t(98278),
+    i = t(790527),
+    E = t(474936),
+    d = t(981631),
+    U = t(486324),
+    u = t(689938),
+    I = t(89671);
 function O(e) {
-    let { onClose: s, source: O, ...T } = e,
-        M = (0, a.e7)([r.default], () => r.default.getCurrentUser()),
-        R = _.ZP.isPremium(M) ? I.Z.Messages.PREMIUM_PROFILE_CUSTOMIZATION_UPGRADE_BODY : I.Z.Messages.PREMIUM_PROFILE_CUSTOMIZATION_UPSELL_BODY,
-        L = R.format({
+    let { onClose: s, source: t, ...O } = e,
+        T = (0, n.e7)([o.default], () => o.default.getCurrentUser()),
+        f = r.ZP.isPremium(T) ? u.Z.Messages.PREMIUM_PROFILE_CUSTOMIZATION_UPGRADE_BODY : u.Z.Messages.PREMIUM_PROFILE_CUSTOMIZATION_UPSELL_BODY,
+        M = f.format({
             onLearnMore: function () {
-                s(), (0, c.z)(!0);
+                s(), (0, _.z)(!0);
             }
         });
-    return (0, n.jsx)(E.Z, {
-        artURL: t(440142),
-        type: i.cd.CUSTOM_PROFILE_UPSELL,
-        title: I.Z.Messages.PREMIUM_PROFILE_CUSTOMIZATION_UPSELL_HEADER,
-        body: L,
-        glowUp: L,
+    return (0, a.jsx)(i.Z, {
+        artURL: I.Z,
+        type: E.cd.CUSTOM_PROFILE_UPSELL,
+        title: u.Z.Messages.PREMIUM_PROFILE_CUSTOMIZATION_UPSELL_HEADER,
+        body: M,
+        glowUp: M,
         onSecondaryClick: () => {
-            s(), (0, o.$r)(u.pC.BANNER);
+            s(), (0, c.$r)(U.pC.BANNER);
         },
-        secondaryCTA: I.Z.Messages.USER_SETTINGS_TRY_IT_OUT,
-        analyticsSource: O,
+        secondaryCTA: u.Z.Messages.USER_SETTINGS_TRY_IT_OUT,
+        analyticsSource: t,
         analyticsLocation: {
-            section: U.jXE.USER_PROFILE,
-            object: U.qAy.BUTTON_CTA
+            section: d.jXE.USER_PROFILE,
+            object: d.qAy.BUTTON_CTA
         },
         onClose: s,
-        ...T
+        ...O
     });
 }

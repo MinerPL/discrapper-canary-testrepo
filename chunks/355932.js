@@ -2,6 +2,9 @@ n.d(t, {
     AJ: function () {
         return E;
     },
+    te: function () {
+        return _;
+    },
     zP: function () {
         return d;
     }
@@ -14,7 +17,7 @@ var r = n(735250),
     o = n(481060),
     l = n(393903),
     u = n(689938),
-    c = n(381145);
+    c = n(516617);
 function d(e) {
     let { itemGapPx: t, items: n, maxLines: r, containerWidth: a } = e,
         [s, o] = i.useState(0),
@@ -70,8 +73,9 @@ function d(e) {
     );
 }
 function _(e) {
-    let { items: t, renderItem: n } = e;
+    let { items: t, renderItem: n, ...i } = e;
     return (0, r.jsx)(o.Tooltip, {
+        ...i,
         text: (0, r.jsx)('div', {
             className: c.tooltip,
             children: t.map(n)
@@ -99,7 +103,7 @@ function E(e) {
 }
 t.ZP = function (e) {
     let { className: t, items: n, renderItem: a, itemGapPx: o = 0, maxLines: f, renderOverflow: h } = e,
-        { ref: p, width: m } = (function () {
+        { ref: p, width: I } = (function () {
             let [e, t] = i.useState(0);
             return {
                 ref: (0, l.y)((e) => {
@@ -110,16 +114,16 @@ t.ZP = function (e) {
             };
         })(),
         {
-            lastVisibleIndex: I,
+            lastVisibleIndex: m,
             onItemLayout: T,
-            overflowItemsRef: g
+            overflowItemsRef: S
         } = d({
             items: n,
             itemGapPx: o,
             maxLines: f,
-            containerWidth: m
+            containerWidth: I
         }),
-        S = i.useCallback(
+        g = i.useCallback(
             (e) =>
                 (0, r.jsx)(_, {
                     items: e,
@@ -127,8 +131,8 @@ t.ZP = function (e) {
                 }),
             [a]
         ),
-        A = i.useMemo(() => n.slice(0, I + 1), [n, I]),
-        N = i.useMemo(() => n.slice(I + 1), [n, I]);
+        A = i.useMemo(() => n.slice(0, m + 1), [n, m]),
+        N = i.useMemo(() => n.slice(m + 1), [n, m]);
     return (0, r.jsxs)('div', {
         className: s()(t, c.items),
         ref: p,
@@ -153,13 +157,13 @@ t.ZP = function (e) {
                     }),
                     (0, r.jsx)('div', {
                         className: c.overflowMeasurement,
-                        ref: g,
+                        ref: S,
                         children: a(u.Z.Messages.CLAN_DISCOVERY_TRAIT_OVERFLOW.format({ count: Number('1'.concat(n.length)) }))
                     })
                 ]
             }),
             A.map(a),
-            N.length > 0 && (null != h ? h : S)(N)
+            N.length > 0 && (null != h ? h : g)(N)
         ]
     });
 };

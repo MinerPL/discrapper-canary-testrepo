@@ -1,98 +1,87 @@
-t.d(n, {
+t.d(e, {
     u: function () {
-        return a;
+        return u;
     }
 });
-var i = t(735250);
+var l = t(735250);
 t(470079);
-var l = t(777207),
-    r = t(541822),
-    s = t(330711),
-    o = t(689498);
-function a(e) {
-    let { benefits: n, description: t, imgSrc: a, title: c, tag: d, FallbackIcon: u } = e,
-        m = null != a ? { '--custom-background-url': 'url('.concat(a.toString(), ')') } : void 0,
-        S = null != t && '' !== t,
-        _ = S || null != n;
-    return (0, i.jsxs)('div', {
-        className: o.container,
-        children: [
-            (0, i.jsxs)('div', {
-                className: o.header,
+var i = t(409794),
+    r = t(777207),
+    a = t(541822),
+    o = t(330711),
+    s = t(770561);
+function u(n) {
+    let { benefits: e, description: t, imgSrc: u, title: c, tag: d, FallbackIcon: f } = n,
+        p = null != u ? { '--custom-background-url': 'url('.concat(u.toString(), ')') } : void 0;
+    return (0, l.jsx)('div', {
+        className: s.container,
+        children: (0, l.jsx)(a.Z, {
+            className: s.scroller,
+            children: (0, l.jsxs)('div', {
+                className: s.scrollContent,
                 children: [
-                    (0, i.jsx)('div', {
-                        className: o.headerBackground,
-                        style: m
-                    }),
-                    (0, i.jsx)('div', {
-                        className: o.headerTop,
-                        children: (0, i.jsx)('div', { children: d })
-                    }),
-                    (0, i.jsx)('div', {
-                        className: o.headerImage,
-                        children:
-                            null != a
-                                ? (0, i.jsx)('img', {
-                                      src: a.toString(),
-                                      alt: ''
-                                  })
-                                : (0, i.jsx)(u, {
-                                      size: 'custom',
-                                      color: 'var(--text-muted)',
-                                      height: 96,
-                                      width: 96
-                                  })
-                    })
-                ]
-            }),
-            (0, i.jsxs)(r.Z, {
-                className: o.scroll,
-                children: [
-                    (0, i.jsx)('br', {}),
-                    (0, i.jsxs)('div', {
-                        className: o.scrollContent,
+                    (0, l.jsxs)('div', {
+                        className: s.header,
                         children: [
-                            (0, i.jsx)(l.x, {
-                                color: 'header-primary',
-                                tag: 'div',
-                                variant: 'heading-xl/semibold',
-                                children: c
+                            (0, l.jsx)('div', {
+                                className: s.headerBackground,
+                                style: p
                             }),
-                            _ &&
-                                (0, i.jsxs)('div', {
-                                    className: o.details,
+                            (0, l.jsx)('div', {
+                                className: s.headerImage,
+                                children:
+                                    null != u
+                                        ? (0, l.jsx)('img', {
+                                              src: u.toString(),
+                                              alt: ''
+                                          })
+                                        : (0, l.jsx)(f, {
+                                              size: 'custom',
+                                              color: 'var(--text-muted)',
+                                              height: 96,
+                                              width: 96
+                                          })
+                            })
+                        ]
+                    }),
+                    (0, l.jsxs)('div', {
+                        className: s.content,
+                        children: [
+                            (0, l.jsxs)('div', {
+                                className: s.details,
+                                children: [
+                                    null != d && (0, l.jsx)('div', { children: d }),
+                                    (0, l.jsx)(i.X, {
+                                        color: 'header-primary',
+                                        variant: 'heading-xl/semibold',
+                                        children: c
+                                    }),
+                                    null != t &&
+                                        '' !== t &&
+                                        (0, l.jsx)(r.x, {
+                                            color: 'text-normal',
+                                            variant: 'text-md/normal',
+                                            className: s.description,
+                                            children: t
+                                        })
+                                ]
+                            }),
+                            null != e &&
+                                (0, l.jsxs)('div', {
+                                    className: s.benefits,
                                     children: [
-                                        (0, i.jsx)(l.x, {
-                                            color: 'header-primary',
-                                            tag: 'div',
-                                            variant: 'heading-lg/semibold',
-                                            children: s.Z.Messages.Storefront.PRODUCT_DETAILS
+                                        (0, l.jsx)(r.x, {
+                                            color: 'header-secondary',
+                                            variant: 'eyebrow',
+                                            children: o.Z.Messages.Storefront.BENEFITS_TITLE
                                         }),
-                                        S &&
-                                            (0, i.jsx)(l.x, {
-                                                color: 'text-muted',
-                                                variant: 'text-md/normal',
-                                                className: o.description,
-                                                children: t
-                                            }),
-                                        null != n &&
-                                            (0, i.jsxs)('div', {
-                                                className: o.benefits,
-                                                children: [
-                                                    (0, i.jsx)(l.x, {
-                                                        color: 'header-secondary',
-                                                        variant: 'eyebrow',
-                                                        children: s.Z.Messages.Storefront.BENEFITS_TITLE
-                                                    }),
-                                                    n
-                                                ]
-                                            })
+                                        e
                                     ]
                                 })
                         ]
                     })
                 ]
             })
-        ]
+        })
     });
 }

@@ -3,7 +3,7 @@ n.d(t, {
         return f;
     },
     Jw: function () {
-        return I;
+        return m;
     },
     Kg: function () {
         return h;
@@ -12,25 +12,28 @@ n.d(t, {
         return T;
     },
     Wx: function () {
-        return S;
+        return g;
+    },
+    ZT: function () {
+        return A;
     },
     bd: function () {
         return p;
     },
     f$: function () {
-        return N;
+        return O;
     },
     gc: function () {
         return E;
     },
     gd: function () {
-        return A;
+        return N;
     },
     s6: function () {
-        return g;
+        return S;
     },
     xQ: function () {
-        return m;
+        return I;
     }
 }),
     n(653041);
@@ -100,23 +103,23 @@ function p(e) {
         [e]
     );
 }
-function m(e, t) {
+function I(e, t) {
     (0, u.Cf)(e === t ? void 0 : e);
 }
-function I(e, t) {
+function m(e, t) {
     (0, a.I5)(e === t ? void 0 : e);
 }
 function T(e, t) {
     (null != e ? o.cV : a.cV)(t);
 }
-function g(e, t, n) {
+function S(e, t, n) {
     if (e === t) {
         null == n ? (0, a.xn)(void 0) : (0, o.xn)(void 0);
         return;
     }
     null == n ? (0, a.xn)(e) : (0, o.xn)(e);
 }
-function S(e, t, n) {
+function g(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     if (null != e)
         return '' === e
@@ -138,9 +141,17 @@ function S(e, t, n) {
               isUsingGuildValue: !1
           };
 }
-function A(e, t) {
-    return void 0 === e ? null != t : null != e;
+function A(e) {
+    var t, n;
+    let { pendingProfileEffectId: r, displayProfile: i } = e,
+        a = null == i ? void 0 : null === (t = i._userProfile) || void 0 === t ? void 0 : t.profileEffectId,
+        s = null == i ? void 0 : null === (n = i._guildMemberProfile) || void 0 === n ? void 0 : n.profileEffectId,
+        o = null === r;
+    return o && null != s ? a : o ? null : null != r ? r : null == i ? void 0 : i.profileEffectId;
 }
 function N(e, t) {
+    return void 0 === e ? null != t : null != e;
+}
+function O(e, t) {
     return void 0 === e ? null != t : null != e;
 }

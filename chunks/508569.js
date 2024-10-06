@@ -34,7 +34,7 @@ let f = new s.Z('GatewaySocket'),
     h = new Set(['INITIAL_GUILD', 'READY']),
     p = new Set(['READY', 'INITIAL_GUILD']),
     I = new Set(['READY', 'READY_SUPPLEMENTAL', 'RESUMED']),
-    m = new Set(['READY', 'INITIAL_GUILD', 'READY_SUPPLEMENTAL', 'RESUMED', 'VOICE_SERVER_UPDATE', 'RTC_CONNECTION_STATE']);
+    m = new Set(['READY', 'INITIAL_GUILD', 'READY_SUPPLEMENTAL', 'RESUMED', 'VOICE_CHANNEL_SELECT', 'VOICE_STATE_UPDATE', 'VOICE_SERVER_UPDATE', 'RTC_CONNECTION_STATE', 'RTC_CONNECTION_VIDEO', 'RTC_CONNECTION_CLIENT_CONNECT', 'RTC_CONNECTION_PING', 'MEDIA_SESSION_JOINED', 'MEDIA_ENGINE_PERMISSION', 'SESSIONS_REPLACE']);
 ((i = r || (r = {}))[(i.NotStarted = 0)] = 'NotStarted'), (i[(i.Loading = 1)] = 'Loading'), (i[(i.Loaded = 2)] = 'Loaded');
 let T = {};
 class S {
@@ -85,7 +85,7 @@ class S {
         return !1;
     }
     scheduleFlush(e) {
-        !this.paused && (p.has(e) ? (this.scheduler.clearWorkTimeout(), this.flush()) : !this.scheduler.hasWorkScheduled && this.scheduler.requestWorkTimeout(this.flush));
+        !this.paused && (p.has(e) ? (this.scheduler.clearWorkTimeout(), this.flush()) : !this.scheduler.hasWorkScheduled && this.scheduler.requestWorkTimeout(this.flush), m.has(e) && this.scheduler.markCriticalWorkScheduled());
     }
     getDispatchTimings() {
         return T;
@@ -113,37 +113,32 @@ class S {
             let s = 0;
             if (
                 (a.ZP.Emitter.batched(() => {
-                    let a = e.some((e) => m.has(e.type));
-                    for (let o = 0; o < e.length; o++) {
-                        let l = e[o];
-                        (n = l.type), (r = r || I.has(l.type));
-                        let u = performance.now();
+                    for (let a = 0; a < e.length; a++) {
+                        let o = e[a];
+                        (n = o.type), (r = r || I.has(o.type));
+                        let l = performance.now();
                         if (
-                            (this.dispatchOne(l),
-                            (s = performance.now() - u),
+                            (this.dispatchOne(o),
+                            (s = performance.now() - l),
                             !(function (e, t) {
                                 var n;
                                 let [r, i] = null !== (n = T[e]) && void 0 !== n ? n : [0, 0];
                                 T[e] = [(r * i + t) / (i + 1), i + 1];
-                            })(l.type, s),
-                            !a)
+                            })(o.type, s),
+                            (function (e, t, n) {
+                                var r;
+                                if (null == n) return !1;
+                                let i = e[t],
+                                    a = e.length - 1,
+                                    s = t < a ? e[t + 1] : null,
+                                    o = null !== (r = null == n ? void 0 : n.timeRemaining()) && void 0 !== r ? r : 0,
+                                    l = null != n && o <= 0,
+                                    u = i.type === (null == s ? void 0 : s.type);
+                                return (!!l && !u && t !== a) || !1;
+                            })(e, a, t))
                         ) {
-                            if (
-                                (function (e, t, n) {
-                                    var r;
-                                    if (null == n) return !1;
-                                    let i = e[t],
-                                        a = e.length - 1,
-                                        s = t < a ? e[t + 1] : null,
-                                        o = null !== (r = null == n ? void 0 : n.timeRemaining()) && void 0 !== r ? r : 0,
-                                        l = null != n && o <= 0,
-                                        u = i.type === (null == s ? void 0 : s.type);
-                                    return (!!l && !u && t !== a) || !1;
-                                })(e, o, t)
-                            ) {
-                                (i = e.slice(o + 1)), null != t && 0 >= t.timeRemaining() && this.scheduler.telemetry.timeTrack(d.JV.TIME_OVER_DEADLINE, t.timeSinceExpiration);
-                                break;
-                            }
+                            (i = e.slice(a + 1)), null != t && 0 >= t.timeRemaining() && this.scheduler.telemetry.timeTrack(d.JV.TIME_OVER_DEADLINE, t.timeSinceExpiration);
+                            break;
                         }
                     }
                     o.Z.flush();

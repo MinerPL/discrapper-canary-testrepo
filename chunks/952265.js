@@ -3,19 +3,22 @@ n.d(t, {
         return g;
     },
     DE: function () {
-        return v;
+        return R;
+    },
+    Fv: function () {
+        return m;
     },
     Gw: function () {
         return _;
     },
     JQ: function () {
-        return T;
+        return S;
     },
     Jw: function () {
-        return A;
+        return N;
     },
     Mr: function () {
-        return m;
+        return I;
     },
     Vn: function () {
         return E;
@@ -24,19 +27,19 @@ n.d(t, {
         return h;
     },
     f9: function () {
-        return S;
+        return A;
     },
     h7: function () {
         return p;
     },
     nf: function () {
-        return O;
+        return v;
     },
     o: function () {
-        return I;
+        return T;
     },
     pT: function () {
-        return N;
+        return O;
     },
     s9: function () {
         return f;
@@ -86,7 +89,7 @@ async function h(e) {
     return (
         clearTimeout(o),
         s
-            ? O(a, n) && I(a, l, r.onCloseRequest, r.onCloseCallback, n)
+            ? v(a, n) && T(a, l, r.onCloseRequest, r.onCloseCallback, n)
             : p(
                   l,
                   {
@@ -121,7 +124,7 @@ function p(e) {
                                   key: d,
                                   Layer: o,
                                   render: e,
-                                  onCloseRequest: null != l ? l : () => m(d, n),
+                                  onCloseRequest: null != l ? l : () => I(d, n),
                                   onCloseCallback: u,
                                   instant: a,
                                   backdropStyle: c
@@ -133,7 +136,7 @@ function p(e) {
         d
     );
 }
-function m(e) {
+function I(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _(),
         n = f.getState()[t],
         r =
@@ -158,7 +161,48 @@ function m(e) {
     }),
         null != r && null != r.onCloseCallback && r.onCloseCallback();
 }
-function I(e, t, n, r) {
+function m(e) {
+    let t = f.getState(),
+        n = d
+            .map((e) => {
+                var n;
+                return null !== (n = t[e]) && void 0 !== n ? n : [];
+            })
+            .map((t) => {
+                var n;
+                return null !==
+                    (n = t.find((t) => {
+                        let { key: n } = t;
+                        return n === e;
+                    })) && void 0 !== n
+                    ? n
+                    : null;
+            });
+    if (!!n.some((e) => null != e))
+        (0, s.j)(() => {
+            f.setState((t) => {
+                let n = { ...t };
+                return (
+                    d.forEach((t) => {
+                        var r;
+                        n[t] =
+                            null === (r = n[t]) || void 0 === r
+                                ? void 0
+                                : r.filter((t) => {
+                                      let { key: n } = t;
+                                      return n !== e;
+                                  });
+                    }),
+                    n
+                );
+            });
+        }),
+            n.forEach((e) => {
+                var t;
+                null == e || null === (t = e.onCloseCallback) || void 0 === t || t.call(e);
+            });
+}
+function T(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : _();
     (0, s.j)(() => {
         f.setState((a) =>
@@ -171,7 +215,7 @@ function I(e, t, n, r) {
                               ? {
                                     ...a,
                                     render: t,
-                                    onCloseRequest: null == n ? () => m(e, i) : n,
+                                    onCloseRequest: null == n ? () => I(e, i) : n,
                                     onCloseCallback: r
                                 }
                               : a
@@ -180,7 +224,7 @@ function I(e, t, n, r) {
         );
     });
 }
-function T(e) {
+function S(e) {
     for (let t of d) {
         let n = e[t];
         if (null != n && n.length > 0) return !0;
@@ -188,25 +232,25 @@ function T(e) {
     return !1;
 }
 function g() {
-    return T(f.getState());
+    return S(f.getState());
 }
-function S() {
-    return T(f());
+function A() {
+    return S(f());
 }
-function A(e) {
+function N(e) {
     var t, n;
     let { default: r, popout: i } = f();
     return i.length > 0 ? (null === (t = i.at(-1)) || void 0 === t ? void 0 : t.key) === e : (null === (n = r.at(-1)) || void 0 === n ? void 0 : n.key) === e;
 }
-function N() {
+function O() {
     let e = f.getState();
-    for (let t in e) for (let n of e[t]) m(n.key, t);
+    for (let t in e) for (let n of e[t]) I(n.key, t);
 }
-function v(e, t) {
+function R(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.z1,
         r = e[n];
     return null != r && r.some((e) => e.key === t);
 }
-function O(e, t) {
-    return v(f.getState(), e, t);
+function v(e, t) {
+    return R(f.getState(), e, t);
 }

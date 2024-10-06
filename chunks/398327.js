@@ -6,30 +6,31 @@ var r,
     o = n(442837),
     l = n(433517),
     u = n(570140),
-    c = n(601993);
-let d = 'SpellcheckStore',
-    _ = !0,
-    E = new Set();
-function f() {
-    l.K.set(d, {
-        enabled: _,
-        learnedWords: E
+    c = n(241601),
+    d = n(601993);
+let _ = 'SpellcheckStore',
+    E = !0,
+    f = new Set();
+function h() {
+    l.K.set(_, {
+        enabled: E,
+        learnedWords: f
     });
 }
-class h extends (r = o.ZP.Store) {
+class p extends (r = o.ZP.Store) {
     initialize() {
-        let e = l.K.get(d);
-        null != e && ((_ = e.enabled), (E = new Set(e.learnedWords)), (0, c.gL)(_), (0, c.fG)(E));
+        let e = l.K.get(_);
+        null != e && ((E = e.enabled), (f = new Set(e.learnedWords)), (0, d.gL)(E), (0, d.fG)(f)), (0, c.Ql)(d._2);
     }
     isEnabled() {
-        return _;
+        return E;
     }
     hasLearnedWord(e) {
-        return E.has(e.toLocaleLowerCase());
+        return f.has(e.toLocaleLowerCase());
     }
 }
 (s = 'SpellcheckStore'),
-    (a = 'displayName') in (i = h)
+    (a = 'displayName') in (i = p)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -37,20 +38,16 @@ class h extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new h(u.Z, {
+    (t.Z = new p(u.Z, {
         SPELLCHECK_TOGGLE() {
-            (_ = !_), (0, c.gL)(_), f();
+            (E = !E), (0, d.gL)(E), h();
         },
         SPELLCHECK_LEARN_WORD(e) {
             let { word: t } = e;
-            E.add(t.toLocaleLowerCase()), (0, c.fG)(E), f();
+            f.add(t.toLocaleLowerCase()), (0, d.fG)(f), h();
         },
         SPELLCHECK_UNLEARN_WORD(e) {
             let { word: t } = e;
-            E.delete(t.toLocaleLowerCase()), (0, c.fG)(E), f();
-        },
-        I18N_LOAD_SUCCESS(e) {
-            let { locale: t } = e;
-            (0, c._2)(t);
+            f.delete(t.toLocaleLowerCase()), (0, d.fG)(f), h();
         }
     }));

@@ -21,8 +21,7 @@ t.Z = () => {
     }
     let [o, f] = (0, a.Wu)([c.Z], () => [c.Z.shouldShowWarning(), c.Z.isAFKChannel()], []),
         h = i.useCallback(() => {
-            let t = '',
-                n = '';
+            let t, n;
             f ? ((t = d.Z.Messages.SUPPRESSED_AFK_TITLE), (n = d.Z.Messages.SUPPRESSED_AFK_BODY)) : ((t = d.Z.Messages.SUPPRESSED), (n = d.Z.Messages.SUPPRESSED_PERMISSION_BODY)),
                 (e.current = (0, s.openModal)((e) =>
                     (0, r.jsx)(l.default, {

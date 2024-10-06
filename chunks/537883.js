@@ -4,18 +4,22 @@ var i,
     r,
     l = n(442837),
     o = n(570140),
-    c = n(331114);
-let d = [];
-class u extends (r = l.ZP.Store) {
+    c = n(331114),
+    d = n(356164);
+let u = [];
+function _() {
+    u = [];
+}
+class E extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(c.Z);
+        this.waitFor(c.Z, d.Z);
     }
     getVisibleTabs() {
-        return d;
+        return u;
     }
 }
 (s = 'GlobalDiscoveryServersSearchLayoutStore'),
-    (a = 'displayName') in (i = u)
+    (a = 'displayName') in (i = E)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -23,17 +27,14 @@ class u extends (r = l.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    new u(o.Z, {
-        CONNECTION_OPEN: function () {
-            d = [];
-        },
-        GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET: function () {
-            d = [];
-        },
+    (t.Z = new E(o.Z, {
+        CONNECTION_OPEN: _,
+        GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET: _,
+        GLOBAL_DISCOVERY_SERVERS_SEARCH_BLOCKED: _,
         GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS: function (e) {
-            let { id: t } = e,
+            let { query: t } = e,
                 n = c.Z.getCounts(t);
             if (null == n) return !1;
-            d = n;
+            u = n;
         }
-    });
+    }));

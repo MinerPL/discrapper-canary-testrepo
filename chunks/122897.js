@@ -15,7 +15,7 @@ var a = t(524437),
     _ = t(726985),
     u = t(981631),
     E = t(689938),
-    T = t(900965);
+    T = t(477060);
 function S() {
     var e, s, t;
     let S = l.Xr.useSetting(),
@@ -29,6 +29,7 @@ function S() {
                 description: E.Z.Messages.USER_DM_SPAM_FILTER_HELP.format({ appealLink: r.Z.getArticleURL(u.BhN.SAFE_DIRECT_MESSAGING) })
             }),
             (0, n.jsx)(i.RadioGroup, {
+                className: T.radioGroup,
                 radioItemClassName: T.radioGroupItem,
                 value: N,
                 options: (0, o.c7)(),

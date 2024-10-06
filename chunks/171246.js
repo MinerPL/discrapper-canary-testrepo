@@ -1,9 +1,6 @@
-t.d(n, {
-    AQ: function () {
-        return d;
-    },
+t.d(e, {
     Jf: function () {
-        return p;
+        return m;
     },
     KK: function () {
         return u;
@@ -12,42 +9,60 @@ t.d(n, {
         return c;
     },
     OL: function () {
-        return f;
+        return p;
     },
-    Pw: function () {
-        return a;
+    PB: function () {
+        return d;
     },
     bZ: function () {
-        return o;
+        return s;
+    },
+    z0: function () {
+        return f;
     }
-});
-var i = t(512722),
-    l = t.n(i),
-    r = t(630388),
-    s = t(981631);
-function o(e) {
-    let n = e.items;
-    return l()(1 === n.length, 'more than 1 subscription item for application subscription'), n[0].planId;
+}),
+    t(789020);
+var l = t(512722),
+    i = t.n(l),
+    r = t(55563),
+    a = t(630388),
+    o = t(981631);
+function s(n) {
+    let e = n.items;
+    return i()(1 === e.length, 'more than 1 subscription item for application subscription'), e[0].planId;
 }
-function a(e) {
-    var n;
-    return null === (n = e.subscription_listings) || void 0 === n ? void 0 : n.find((e) => e.published && (u(e.sku_flags) || c(e.sku_flags)) && e.subscription_plans[0].price > 0);
+function u(n) {
+    return (0, a.yE)(n, o.l4R.APPLICATION_GUILD_SUBSCRIPTION);
 }
-function u(e) {
-    return (0, r.yE)(e, s.l4R.APPLICATION_GUILD_SUBSCRIPTION);
+function c(n) {
+    return (0, a.yE)(n, o.l4R.APPLICATION_USER_SUBSCRIPTION);
 }
-function c(e) {
-    return (0, r.yE)(e, s.l4R.APPLICATION_USER_SUBSCRIPTION);
+function d(n, e, t, l, i) {
+    var a;
+    if (t.type === o.NYc.APPLICATION && t.status === o.O0b.ACTIVE && !!l.isValid(null, r.Z) && (null === (a = t.metadata) || void 0 === a ? void 0 : a.application_subscription_guild_id) === i)
+        return t.items
+            .map((e) => n.get(e.planId))
+            .filter((n) => null != n)
+            .find((n) => {
+                let t = e.get(n.skuId);
+                return null != t && (!u(t.flags) || l.guildId === i);
+            });
 }
-function d(e, n, t) {
-    return e.subscription_plans[0].sku_id === n.skuId && (u(e.sku_flags) ? null != t && n.guildId === t && t !== s.ME : !!c(e.sku_flags) && null == n.guildId);
+function f(n, e, t) {
+    var l;
+    return null === (l = t.renewalMutations) || void 0 === l
+        ? void 0
+        : l.items
+              .map((e) => n.get(e.planId))
+              .filter((n) => null != n)
+              .find((n) => e.includes(n.skuId));
 }
-function f(e) {
-    return !1 === e.available;
+function p(n) {
+    return !1 === n.available;
 }
-function p(e, n) {
+function m(n, e) {
     var t;
-    let i = null !== (t = null == n ? void 0 : n.deleted) && void 0 !== t && t,
-        l = null != n && f(n);
-    return e.status === s.O0b.CANCELED || i || l;
+    let l = null !== (t = null == e ? void 0 : e.deleted) && void 0 !== t && t,
+        i = null != e && p(e);
+    return n.status === o.O0b.CANCELED || l || i;
 }

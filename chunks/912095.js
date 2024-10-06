@@ -226,6 +226,7 @@ class m extends u.Z {
     processMLSProposals(e, t) {}
     prepareMLSCommitTransition(e, t, n) {}
     processMLSWelcome(e, t, n) {}
+    getMLSPairwiseFingerprint(e, t, n) {}
     constructor(e, t, n, r) {
         var i;
         super(e, t),

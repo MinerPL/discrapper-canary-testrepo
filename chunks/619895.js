@@ -1,251 +1,29 @@
-n.d(t, {
-    Id: function () {
-        return m;
-    },
+t.d(n, {
     Qm: function () {
-        return p;
+        return E;
     },
     hR: function () {
         return _;
+    },
+    yJ: function () {
+        return s;
     }
 });
-var o = n(470079),
-    i = n(892814),
-    a = n(442837),
-    l = n(895924),
-    r = n(581364),
-    c = n(823379),
-    d = n(399654),
-    u = n(844439);
-let m = {
+var i = t(470079),
+    a = t(892814),
+    l = t(442837),
+    o = t(895924),
+    c = t(581364),
+    d = t(823379),
+    r = t(399654),
+    u = t(844439);
+let s = {
         '1181475143340539995': {
             imageOption: 'image',
-            additionalOptions: [
-                {
-                    motion_prompt: [
-                        {
-                            text: '$dimi_deadpool_bye_bye_bye',
-                            type: 'text'
-                        }
-                    ],
-                    background: [
-                        {
-                            text: 'From template',
-                            type: 'text'
-                        }
-                    ]
-                },
-                {
-                    motion_prompt: [
-                        {
-                            text: '$simone_biles_floor_routine',
-                            type: 'text'
-                        }
-                    ],
-                    background: [
-                        {
-                            text: 'From template',
-                            type: 'text'
-                        }
-                    ]
-                },
-                {
-                    motion_prompt: [
-                        {
-                            text: '$fortnite_starlit_emote',
-                            type: 'text'
-                        }
-                    ],
-                    background: [
-                        {
-                            text: 'From template',
-                            type: 'text'
-                        }
-                    ]
-                },
-                {
-                    motion_prompt: [
-                        {
-                            text: '$apple_guy_running',
-                            type: 'text'
-                        }
-                    ],
-                    background: [
-                        {
-                            text: 'From template',
-                            type: 'text'
-                        }
-                    ]
-                },
-                {
-                    motion_prompt: [
-                        {
-                            text: '$ishowspeed_jumps_over_the_car',
-                            type: 'text'
-                        }
-                    ],
-                    background: [
-                        {
-                            text: 'From template',
-                            type: 'text'
-                        }
-                    ]
-                },
-                {
-                    motion_prompt: [
-                        {
-                            text: '$lil_yachty_stage_entrance',
-                            type: 'text'
-                        }
-                    ],
-                    background: [
-                        {
-                            text: 'From template',
-                            type: 'text'
-                        }
-                    ]
-                },
-                {
-                    motion_prompt: [
-                        {
-                            text: '$anthony_edwards_score',
-                            type: 'text'
-                        }
-                    ],
-                    background: [
-                        {
-                            text: 'From template',
-                            type: 'text'
-                        }
-                    ]
-                },
-                {
-                    motion_prompt: [
-                        {
-                            text: '$beyonce_single_ladies',
-                            type: 'text'
-                        }
-                    ],
-                    background: [
-                        {
-                            text: 'From template',
-                            type: 'text'
-                        }
-                    ]
-                },
-                {
-                    motion_prompt: [
-                        {
-                            text: '$ronaldo_skill',
-                            type: 'text'
-                        }
-                    ],
-                    background: [
-                        {
-                            text: 'From template',
-                            type: 'text'
-                        }
-                    ]
-                },
-                {
-                    motion_prompt: [
-                        {
-                            text: '$gimme_head_top',
-                            type: 'text'
-                        }
-                    ],
-                    background: [
-                        {
-                            text: 'From template',
-                            type: 'text'
-                        }
-                    ]
-                },
-                {
-                    motion_prompt: [
-                        {
-                            text: '$hugo_hilaire_goofy_dance',
-                            type: 'text'
-                        }
-                    ],
-                    background: [
-                        {
-                            text: 'From template',
-                            type: 'text'
-                        }
-                    ]
-                },
-                {
-                    motion_prompt: [
-                        {
-                            text: '$paqueta_dance',
-                            type: 'text'
-                        }
-                    ],
-                    background: [
-                        {
-                            text: 'From template',
-                            type: 'text'
-                        }
-                    ]
-                },
-                {
-                    motion_prompt: [
-                        {
-                            text: '$tauba_tauba',
-                            type: 'text'
-                        }
-                    ],
-                    background: [
-                        {
-                            text: 'From template',
-                            type: 'text'
-                        }
-                    ]
-                },
-                {
-                    motion_prompt: [
-                        {
-                            text: '$masbondit_suara_asli',
-                            type: 'text'
-                        }
-                    ],
-                    background: [
-                        {
-                            text: 'From template',
-                            type: 'text'
-                        }
-                    ]
-                },
-                {
-                    motion_prompt: [
-                        {
-                            text: '$rock_your_hips',
-                            type: 'text'
-                        }
-                    ],
-                    background: [
-                        {
-                            text: 'From template',
-                            type: 'text'
-                        }
-                    ]
-                },
-                {
-                    motion_prompt: [
-                        {
-                            text: '$jojo_siwa_guilty_pleasure',
-                            type: 'text'
-                        }
-                    ],
-                    background: [
-                        {
-                            text: 'From template',
-                            type: 'text'
-                        }
-                    ]
-                }
-            ]
+            overrideSendCommandInfo: {
+                commandId: '1272485059353640963',
+                imageOption: 'image'
+            }
         },
         '991195178360635431': {
             imageOption: 'image',
@@ -255,10 +33,10 @@ let m = {
         '1029794689932611625': { imageOption: 'image' },
         '1238332854602043454': { imageOption: 'image' }
     },
-    s = Object.keys(m);
-function p(e) {
-    let { contentType: t } = e;
-    switch (t) {
+    m = Object.keys(s);
+function E(e) {
+    let { contentType: n } = e;
+    switch (n) {
         case 'image/jpeg':
         case 'image/jpg':
             return '.jpg';
@@ -272,70 +50,81 @@ function p(e) {
     }
 }
 function _(e) {
-    let { channelId: t } = e,
-        { fetchState: n, recommendationsSections: m } = (function (e) {
-            let { channelId: t } = e,
-                n = i.I.CONTEXTUAL_IMAGE,
-                l = o.useMemo(
+    let { channelId: n } = e,
+        { fetchState: t, recommendationsSections: E } = (function (e) {
+            let { channelId: n } = e,
+                t = a.I.CONTEXTUAL_IMAGE,
+                o = i.useMemo(
                     () => ({
-                        channelId: t,
-                        location: n,
+                        channelId: n,
+                        location: t,
                         withCommands: !0
                     }),
-                    [t, n]
+                    [n, t]
                 );
-            o.useEffect(() => {
-                (0, d.a)(l);
-            }, [l]);
-            let { fetchState: r, recommendationsSections: c } = (0, a.cj)([u.ZP], () => ({
-                fetchState: u.ZP.getFetchState(l),
-                recommendationsSections: u.ZP.getRecommendations(l)
+            i.useEffect(() => {
+                (0, r.a)(o);
+            }, [o]);
+            let { fetchState: c, recommendationsSections: d } = (0, l.cj)([u.ZP], () => ({
+                fetchState: u.ZP.getFetchState(o),
+                recommendationsSections: u.ZP.getRecommendations(o)
             }));
             return {
-                fetchState: r,
-                recommendationsSections: c
+                fetchState: c,
+                recommendationsSections: d
             };
-        })({ channelId: t });
+        })({ channelId: n });
     return {
-        fetchState: n,
-        imageRecCommandContexts: o.useMemo(() => {
-            let e = m.length > 0 ? m[0].items : void 0;
+        fetchState: t,
+        imageRecCommandContexts: i.useMemo(() => {
+            let e = E.length > 0 ? E[0].items : void 0;
             return void 0 === e
                 ? []
-                : s
-                      .map((t) => {
-                          var n, o;
-                          let i;
-                          let a = e.find((e) => {
-                              var n;
-                              return null != (i = null === (n = e.commands) || void 0 === n ? void 0 : n.find((e) => e.id === t));
+                : m
+                      .map((n) => {
+                          var t, i, a, l;
+                          let d, r;
+                          let u = e.find((e) => {
+                              var t;
+                              return null != (d = null === (t = e.commands) || void 0 === t ? void 0 : t.find((e) => e.id === n));
                           });
-                          if (null == a) return null;
-                          let { application: c } = a;
-                          if (null == i) return null;
-                          let d = (0, r.Z8)({
-                              rootCommand: i,
-                              command: i,
-                              applicationId: c.id
-                          });
+                          if (null == u) return null;
+                          let { application: m } = u;
+                          if (null == d) return null;
+                          let E = (0, c.Z8)({
+                                  rootCommand: d,
+                                  command: d,
+                                  applicationId: m.id
+                              }),
+                              _ = null === (t = s[n].overrideSendCommandInfo) || void 0 === t ? void 0 : t.commandId;
+                          if (null != _) {
+                              let e = null != _ ? (null === (a = u.commands) || void 0 === a ? void 0 : a.find((e) => e.id === _)) : void 0;
+                              null != e &&
+                                  (r = (0, c.Z8)({
+                                      rootCommand: e,
+                                      command: e,
+                                      applicationId: m.id
+                                  }));
+                          }
                           return {
                               command: {
-                                  ...d,
-                                  displayName: d.displayName
+                                  ...E,
+                                  displayName: E.displayName
                                       .split(/[_ ]/)
                                       .map((e) => e.charAt(0).toUpperCase() + e.slice(1))
                                       .join(' ')
                               },
+                              overrideSendCommand: r,
                               section: {
-                                  type: l.Qi.APPLICATION,
-                                  id: c.id,
-                                  icon: c.icon,
-                                  name: null !== (o = null == c ? void 0 : null === (n = c.bot) || void 0 === n ? void 0 : n.username) && void 0 !== o ? o : c.name,
-                                  application: c
+                                  type: o.Qi.APPLICATION,
+                                  id: m.id,
+                                  icon: m.icon,
+                                  name: null !== (l = null == m ? void 0 : null === (i = m.bot) || void 0 === i ? void 0 : i.username) && void 0 !== l ? l : m.name,
+                                  application: m
                               }
                           };
                       })
-                      .filter(c.lm);
-        }, [m])
+                      .filter(d.lm);
+        }, [E])
     };
 }

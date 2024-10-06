@@ -1,138 +1,74 @@
-n.r(s),
-    n.d(s, {
+t.r(a),
+    t.d(a, {
         default: function () {
-            return M;
+            return m;
         }
     });
-var a = n(735250),
-    t = n(470079),
-    _ = n(481060),
-    r = n(493683),
-    i = n(594174),
-    o = n(626135),
-    c = n(799352),
-    d = n(110223),
-    l = n(981631),
-    E = n(689938),
-    u = n(650733),
-    N = n(444812);
-function M(e) {
-    var s;
-    let { channelId: n, blockedUserIds: M, transitionState: R, onClose: m } = e,
-        G = M.map((e) => i.default.getUser(e));
-    t.useEffect(() => {
-        o.default.track(l.rMx.GDM_BLOCKED_USER_WARNING_VIEWED, {
-            channel_id: n,
-            warning_medium: d.X.MODAL,
-            blocked_user_ids: M
+var s = t(735250),
+    n = t(470079),
+    o = t(481060),
+    d = t(493683),
+    r = t(594174),
+    i = t(626135),
+    _ = t(799352),
+    l = t(343544),
+    c = t(110223),
+    u = t(981631),
+    E = t(689938);
+function m(e) {
+    var a;
+    let { channelId: t, blockedUserIds: m, transitionState: M, onClose: N } = e,
+        g = m.map((e) => r.default.getUser(e));
+    n.useEffect(() => {
+        i.default.track(u.rMx.GDM_BLOCKED_USER_WARNING_VIEWED, {
+            channel_id: t,
+            warning_medium: c.X.MODAL,
+            blocked_user_ids: m
         });
-    }, [n, M]);
-    let D = G.length > 1;
-    return (0, a.jsxs)(_.ModalRoot, {
-        transitionState: R,
-        children: [
-            (0, a.jsx)('img', {
-                alt: '',
-                className: u.headerImage,
-                src: N
-            }),
-            (0, a.jsx)(_.ModalHeader, {
-                separator: !1,
-                className: u.header,
-                children: (0, a.jsxs)(_.Heading, {
-                    variant: 'heading-lg/bold',
-                    className: u.title,
-                    children: [D ? E.Z.Messages.GDM_MULTIPLE_BLOCKED_USERS_WARNING_HEADER_MODAL : E.Z.Messages.GDM_SINGLE_BLOCKED_USER_WARNING_HEADER_MODAL, (0, a.jsx)('br', {}), E.Z.Messages.GDM_BLOCKED_USER_WARNING_LEAVE_GROUP_MODAL]
-                })
-            }),
-            (0, a.jsxs)(_.ModalContent, {
-                className: u.content,
-                children: [
-                    (0, a.jsxs)('div', {
-                        className: u.infoGroup,
-                        children: [
-                            (0, a.jsx)('div', {
-                                className: u.infoRow,
-                                children: D
-                                    ? (0, a.jsxs)(a.Fragment, {
-                                          children: [
-                                              (0, a.jsx)(_.GroupIcon, {}),
-                                              (0, a.jsx)(_.Text, {
-                                                  variant: 'text-md/medium',
-                                                  children: E.Z.Messages.GDM_MULTIPLE_BLOCKED_USERS_WARNING_PRESENCE.format({ blockedUserCount: G.length })
-                                              })
-                                          ]
-                                      })
-                                    : (0, a.jsxs)(a.Fragment, {
-                                          children: [
-                                              (0, a.jsx)(_.UserIcon, {}),
-                                              (0, a.jsx)(_.Text, {
-                                                  variant: 'text-md/medium',
-                                                  children: E.Z.Messages.GDM_SINGLE_BLOCKED_USER_WARNING_PRESENCE.format({ userName: null === (s = G[0]) || void 0 === s ? void 0 : s.username })
-                                              })
-                                          ]
-                                      })
-                            }),
-                            (0, a.jsxs)('div', {
-                                className: u.infoRow,
-                                children: [
-                                    (0, a.jsx)(_.BellSlashIcon, {}),
-                                    (0, a.jsx)(_.Text, {
-                                        variant: 'text-md/medium',
-                                        children: E.Z.Messages.GDM_BLOCKED_USER_WARNING_NO_NOTIFY
-                                    })
-                                ]
-                            }),
-                            (0, a.jsxs)('div', {
-                                className: u.infoRow,
-                                children: [
-                                    (0, a.jsx)(_.EnvelopeIcon, {}),
-                                    (0, a.jsx)(_.Text, {
-                                        variant: 'text-md/medium',
-                                        children: E.Z.Messages.GDM_BLOCKED_USER_WARNING_INVITE_NEEDED
-                                    })
-                                ]
-                            })
-                        ]
-                    }),
-                    (0, a.jsxs)('div', {
-                        className: u.buttonGroup,
-                        children: [
-                            (0, a.jsx)(_.Button, {
-                                type: 'submit',
-                                color: _.Button.Colors.BRAND,
-                                size: _.Button.Sizes.MEDIUM,
-                                onClick: () => {
-                                    m(),
-                                        (0, c.O)(n),
-                                        r.Z.closePrivateChannel(n, !0, !0),
-                                        o.default.track(l.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                                            action: d.q.CLICK_TO_LEAVE,
-                                            channel_id: n,
-                                            warning_medium: d.X.MODAL,
-                                            blocked_user_ids: M
-                                        });
-                                },
-                                children: E.Z.Messages.GDM_BLOCKED_USER_WARNING_LEAVE
-                            }),
-                            (0, a.jsx)(_.Button, {
-                                color: _.Button.Colors.PRIMARY,
-                                onClick: () => {
-                                    m(),
-                                        (0, c.O)(n),
-                                        o.default.track(l.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                                            action: d.q.CLICK_TO_STAY,
-                                            channel_id: n,
-                                            warning_medium: d.X.MODAL,
-                                            blocked_user_ids: M
-                                        });
-                                },
-                                children: E.Z.Messages.GDM_BLOCKED_USER_WARNING_STAY
-                            })
-                        ]
-                    })
-                ]
-            })
-        ]
+    }, [t, m]);
+    let h = g.length > 1,
+        x = [
+            {
+                icon: h ? (0, s.jsx)(o.GroupIcon, {}) : (0, s.jsx)(o.UserIcon, {}),
+                text: h ? E.Z.Messages.GDM_MULTIPLE_BLOCKED_USERS_WARNING_PRESENCE.format({ blockedUserCount: g.length }) : E.Z.Messages.GDM_SINGLE_BLOCKED_USER_WARNING_PRESENCE.format({ userName: null === (a = g[0]) || void 0 === a ? void 0 : a.username })
+            },
+            {
+                icon: (0, s.jsx)(o.BellSlashIcon, {}),
+                text: E.Z.Messages.GDM_BLOCKED_USER_WARNING_NO_NOTIFY
+            },
+            {
+                icon: (0, s.jsx)(o.EnvelopeIcon, {}),
+                text: E.Z.Messages.GDM_BLOCKED_USER_WARNING_INVITE_NEEDED
+            }
+        ];
+    return (0, s.jsx)(l.Z, {
+        headerText: h ? E.Z.Messages.GDM_MULTIPLE_BLOCKED_USERS_WARNING_HEADER_MODAL : E.Z.Messages.GDM_SINGLE_BLOCKED_USER_WARNING_HEADER_MODAL,
+        secondaryHeaderText: E.Z.Messages.GDM_BLOCKED_USER_WARNING_LEAVE_GROUP_MODAL,
+        infoRows: x,
+        onDismissAndStay: () => {
+            N(),
+                (0, _.O)(t),
+                i.default.track(u.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    action: c.q.CLICK_TO_STAY,
+                    channel_id: t,
+                    warning_medium: c.X.MODAL,
+                    blocked_user_ids: m
+                });
+        },
+        onDismissAndLeave: () => {
+            N(),
+                (0, _.O)(t),
+                d.Z.closePrivateChannel(t, !0, !0),
+                i.default.track(u.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    action: c.q.CLICK_TO_LEAVE,
+                    channel_id: t,
+                    warning_medium: c.X.MODAL,
+                    blocked_user_ids: m
+                });
+        },
+        leaveButtonText: E.Z.Messages.GDM_BLOCKED_USER_WARNING_LEAVE,
+        stayButtonText: E.Z.Messages.GDM_BLOCKED_USER_WARNING_STAY,
+        transitionState: M,
+        onClose: N
     });
 }

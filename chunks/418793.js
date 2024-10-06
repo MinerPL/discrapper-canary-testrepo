@@ -17,7 +17,8 @@ function a(e) {
 let s = (e) => {
         let t = {
             skuId: e.sku_id,
-            asset: e.asset
+            asset: e.asset,
+            assetVideo: e.asset_video
         };
         switch (e.type) {
             case r.w.REWARD_CODE:

@@ -1,40 +1,37 @@
 n.d(t, {
     V: function () {
-        return d;
+        return c;
     }
 });
 var i = n(317381),
     a = n(573979),
-    s = n(42352),
-    r = n(886355),
-    l = n(238679),
-    o = n(981631),
-    c = n(701488);
-async function d(e, t, n) {
-    var d, u;
+    s = n(42352);
+n(817938);
+var r = n(238679),
+    l = n(981631),
+    o = n(701488);
+async function c(e, t, n) {
+    var c, d;
     switch (t) {
-        case o.zMe.ACTIVITY_PIP_MODE_UPDATE: {
-            let t = null === (d = e.application) || void 0 === d ? void 0 : d.id,
+        case l.zMe.ACTIVITY_PIP_MODE_UPDATE: {
+            let t = null === (c = e.application) || void 0 === c ? void 0 : c.id,
                 n = null != t ? i.ZP.getLayoutModeForApp(t) : null;
-            return null != n ? { is_pip_mode: n !== c.cE.FOCUSED } : null;
+            return null != n ? { is_pip_mode: n !== o.cE.FOCUSED } : null;
         }
-        case o.zMe.ACTIVITY_LAYOUT_MODE_UPDATE: {
-            let t = null === (u = e.application) || void 0 === u ? void 0 : u.id,
+        case l.zMe.ACTIVITY_LAYOUT_MODE_UPDATE: {
+            let t = null === (d = e.application) || void 0 === d ? void 0 : d.id,
                 n = null != t ? i.ZP.getLayoutModeForApp(t) : null;
             return null != n ? { layout_mode: n } : null;
         }
-        case o.zMe.THERMAL_STATE_UPDATE: {
+        case l.zMe.THERMAL_STATE_UPDATE: {
             let e = await (0, s.Z)();
             if (null == e) return null;
             return { thermal_state: (0, a.Z)(e) };
         }
-        case o.zMe.ORIENTATION_UPDATE: {
-            let e = r.Z.isScreenLandscape();
-            if (null != e) return { screen_orientation: e ? c.W0.LANDSCAPE : c.W0.PORTRAIT };
+        case l.zMe.ORIENTATION_UPDATE:
             return null;
-        }
-        case o.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE:
-            return (0, l.dO)();
+        case l.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE:
+            return (0, r.dO)();
         default:
             return null;
     }

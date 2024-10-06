@@ -1,96 +1,104 @@
-i(789020);
-var t = i(735250),
-    a = i(470079),
-    r = i(512722),
-    o = i.n(r),
-    l = i(442837),
-    s = i(570140),
-    c = i(821849),
-    d = i(906732),
-    u = i(887706),
-    _ = i(728345),
-    p = i(724870),
-    m = i(594174),
-    I = i(509545),
-    f = i(55563),
-    g = i(551428),
-    h = i(630388),
-    C = i(270144),
-    v = i(171246),
-    E = i(689011),
-    x = i(714441),
-    b = i(981631),
-    A = i(689938);
-n.Z = (e) => {
-    var n;
-    let i,
-        { guildId: r, groupListingId: P, analyticsLocation: T, showBenefitsFirst: R, skuId: N, onComplete: S, forcesTransitionToGuild: L } = e,
-        O = (0, l.e7)([f.Z], () => (null != N ? f.Z.get(N) : void 0), [N]),
-        j = (0, l.e7)([g.Z], () => (null != N ? g.Z.getForSKU(N) : void 0), [N]),
-        y = (0, l.Wu)([I.Z], () => (null != N ? I.Z.getForSKU(N) : []), [N]),
-        D = null != y ? y[0] : void 0,
-        Z = null == O ? void 0 : O.applicationId,
-        M = (null == j ? void 0 : j.published) === !0 && null != O && (0, h.yE)(O.flags, b.l4R.AVAILABLE),
-        B = null == D ? void 0 : D.skuId,
-        { data: k } = (0, _.I)(Z),
-        w = (0, C._k)(P, { includeSoftDeleted: !0 }).map((e) => e.subscription_plans[0].id),
-        { analyticsLocations: G } = (0, d.ZP)(),
-        { activeSubscription: H, activeEntitlement: F } = (0, C.F5)(Z, r),
-        U = (0, C.CR)(Z, r),
-        Y = (0, u.Z)(),
-        W = null != O && (0, v.KW)(O.flags),
-        V = null != F && F.userId === (null === (n = m.default.getCurrentUser()) || void 0 === n ? void 0 : n.id),
-        z = null == F || V,
-        K = null == F || w.length > 1,
-        q = null != r || U.length > 0,
-        J = W && V,
-        Q = null != D && null != k && z && K && (q || W) && !J;
+t(390547), t(789020);
+var l = t(735250),
+    i = t(470079),
+    r = t(512722),
+    a = t.n(r),
+    o = t(442837),
+    s = t(570140),
+    u = t(821849),
+    c = t(906732),
+    d = t(887706),
+    f = t(728345),
+    p = t(724870),
+    m = t(594174),
+    v = t(509545),
+    I = t(55563),
+    S = t(551428),
+    h = t(270144),
+    x = t(171246),
+    N = t(689011),
+    g = t(714441),
+    T = t(981631),
+    Z = t(689938);
+e.Z = (n) => {
+    var e, t, r;
+    let E,
+        { guildId: C, analyticsLocation: _, showBenefitsFirst: A, skuId: O, onComplete: R, forcesTransitionToGuild: b } = n,
+        j = (0, o.e7)([I.Z], () => (null != O ? I.Z.get(O) : void 0), [O]),
+        P = (0, o.e7)([S.Z], () => (null != O ? S.Z.getForSKU(O) : void 0), [O]),
+        L = null === (e = (0, o.Wu)([v.Z], () => (null != O ? v.Z.getForSKU(O) : []), [O])[0]) || void 0 === e ? void 0 : e.id,
+        k = (0, o.e7)([I.Z], () => (null != O ? I.Z.getParentSKU(O) : void 0), [O]),
+        M = null == k ? void 0 : k.bundledSkuIds,
+        D = (0, o.Wu)(
+            [v.Z],
+            () => {
+                var n;
+                return null !== (n = null == M ? void 0 : M.flatMap(v.Z.getForSKU)) && void 0 !== n ? n : [];
+            },
+            [M]
+        ),
+        y = i.useMemo(() => D.map((n) => n.id), [D]),
+        U = null == j ? void 0 : j.applicationId,
+        B = (0, h.CR)(U, O),
+        F = B.some((n) => n.id === C) ? C : null === (t = B[0]) || void 0 === t ? void 0 : t.id,
+        w = (null == P ? void 0 : P.published) === !0 && (null == j ? void 0 : j.isAvailable()) === !0,
+        { data: K } = (0, f.IX)(U),
+        { analyticsLocations: G } = (0, c.ZP)(),
+        { activeSubscription: Y, activeEntitlement: H } = (0, h.C9)(k, F),
+        z = (0, d.Z)(),
+        W = null != j && (0, x.KW)(j.flags),
+        V = (null == H ? void 0 : H.skuId) === O,
+        q = null != H && H.userId === (null === (r = m.default.getCurrentUser()) || void 0 === r ? void 0 : r.id),
+        X = null == H || D.length > 1,
+        J = B.length > 0,
+        Q = W && q && V,
+        $ = null != j && null != K && X && (J || W) && !Q;
     return (
-        z ? (q ? J && null != D && (i = A.Z.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({ tierName: D.name })) : (i = A.Z.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE)) : (i = A.Z.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION),
-        a.useEffect(() => {
-            M &&
-                null != B &&
-                Y &&
-                !(I.Z.isFetchingForSKU(B) || I.Z.isLoadedForSKU(B)) &&
+        J ? Q && (E = Z.Z.Messages.APPLICATION_SUBSCRIPTION_CURRENT_TIER) : (E = Z.Z.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE),
+        i.useEffect(() => {
+            w &&
+                null != O &&
+                z &&
+                !(v.Z.isFetchingForSKU(O) || v.Z.isLoadedForSKU(O)) &&
                 s.Z.wait(() => {
-                    (0, c.GZ)(B);
+                    (0, u.GZ)(O);
                 });
-        }, [M, B, Y]),
+        }, [w, O, z]),
         {
-            openModal: a.useCallback(() => {
-                o()(null != k, 'No application'), o()(null != D, 'No subscription plan'), o()(M, 'Cannot purchase this unpublished plan');
-                let e = () => {
+            openModal: i.useCallback(() => {
+                a()(null != K, 'No application'), a()(null != O, 'No SKU ID'), a()(w, 'Cannot purchase this unpublished plan');
+                let n = () => {
                     (0, p.h)({
-                        activeSubscription: H,
-                        analyticsSubscriptionType: b.NYc.APPLICATION,
+                        activeSubscription: null != Y ? Y : null,
+                        analyticsSubscriptionType: T.NYc.APPLICATION,
                         analyticsLocations: G,
-                        analyticsLocation: T,
-                        renderHeader: (e, n, i) =>
-                            (0, t.jsx)(E.t, {
-                                step: i,
-                                onClose: () => n(!1)
+                        analyticsLocation: _,
+                        renderHeader: (n, e, t) =>
+                            (0, l.jsx)(N.t, {
+                                step: t,
+                                onClose: () => e(!1)
                             }),
-                        initialPlanId: D.id,
-                        skuId: D.skuId,
-                        guildId: r,
-                        eligibleApplicationSubscriptionGuilds: U,
-                        planGroup: w,
-                        applicationId: k.id,
-                        showBenefitsFirst: R,
-                        onComplete: S,
-                        forcesTransitionToGuild: L
+                        initialPlanId: L,
+                        skuId: O,
+                        guildId: F,
+                        eligibleApplicationSubscriptionGuilds: B,
+                        planGroup: y,
+                        applicationId: K.id,
+                        showBenefitsFirst: A,
+                        onComplete: R,
+                        forcesTransitionToGuild: b
                     });
                 };
-                !q && W
-                    ? (0, x.i)({
-                          applicationName: k.name,
-                          onConfirm: e,
+                !J && W
+                    ? (0, g.i)({
+                          applicationName: K.name,
+                          onConfirm: n,
                           onCancel: () => {}
                       })
-                    : e();
-            }, [M, D, w, k, r, q, W, G, T, H, R, U, S, L]),
-            canOpenModal: Q,
-            cannotOpenReason: i
+                    : n();
+            }, [O, L, y, w, K, F, J, W, G, _, Y, A, B, R, b]),
+            canOpenModal: $,
+            cannotOpenReason: E
         }
     );
 };

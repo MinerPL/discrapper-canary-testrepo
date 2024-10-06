@@ -1,33 +1,34 @@
-a.r(e),
-    a.d(e, {
+n.r(s),
+    n.d(s, {
         default: function () {
-            return E;
+            return d;
         }
     });
-var _ = a(735250);
-a(470079);
-var n = a(98278),
-    t = a(790527),
-    o = a(474936),
-    c = a(689938);
-function E(s) {
-    let { onClose: e, analyticsSource: E, analyticsLocation: P, ...r } = s;
-    return (0, _.jsx)(t.Z, {
-        artURL: a(76096),
-        type: o.cd.APP_ICONS_UPSELL,
-        title: c.Z.Messages.PREMIUM_UPSEL_FEATURE_IN_APP_ICONS_TITLE,
-        body: c.Z.Messages.PREMIUM_UPSELL_FEATURE_IN_APP_ICONS_DESCRIPTION,
-        glowUp: c.Z.Messages.PREMIUM_UPSELL_FEATURE_IN_APP_ICONS_DESCRIPTION,
+var t = n(735250);
+n(470079);
+var a = n(98278),
+    _ = n(790527),
+    c = n(474936),
+    o = n(689938),
+    E = n(116909);
+function d(e) {
+    let { onClose: s, analyticsSource: n, analyticsLocation: d, ...P } = e;
+    return (0, t.jsx)(_.Z, {
+        artURL: E.Z,
+        type: c.cd.APP_ICON_UPSELL,
+        title: o.Z.Messages.PREMIUM_UPSEL_FEATURE_IN_APP_ICONS_TITLE,
+        body: o.Z.Messages.PREMIUM_UPSELL_FEATURE_IN_APP_ICONS_DESCRIPTION,
+        glowUp: o.Z.Messages.PREMIUM_UPSELL_FEATURE_IN_APP_ICONS_DESCRIPTION,
         onSecondaryClick: () => {
-            (0, n.$)(e);
+            (0, a.$)(s);
         },
-        secondaryCTA: c.Z.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA,
-        analyticsSource: E,
-        analyticsLocation: P,
-        onClose: e,
+        secondaryCTA: o.Z.Messages.PREMIUM_ROADBLOCK_UPSELL_SECONDARY_CTA,
+        analyticsSource: n,
+        analyticsLocation: d,
+        onClose: s,
         enableArtBoxShadow: !1,
         hideBackButton: !0,
         showEnhancedUpsell: !0,
-        ...r
+        ...P
     });
 }

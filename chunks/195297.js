@@ -22,16 +22,16 @@ var o = n(735250),
     T = n(981631),
     I = n(486324),
     p = n(689938),
-    h = n(321393);
+    h = n(76899);
 function R(e) {
-    let { transitionState: i, onClose: r, onComplete: R, uploadType: m, showUpsellHeader: x, analyticsPage: C } = e,
-        [B, A] = t.useState(!1),
+    let { transitionState: i, onClose: r, onComplete: R, uploadType: m, showUpsellHeader: x, analyticsPage: B } = e,
+        [C, A] = t.useState(!1),
         b = (0, l.useModalContext)(),
         M = (0, d.Dt)(),
         { analyticsLocations: P } = (0, c.ZP)(s.Z.GIF_PICKER);
     async function j(e) {
         let { gifSrc: i } = e;
-        if (null == i || B) return;
+        if (null == i || C) return;
         A(!0);
         let t = (0, N.Q)(i),
             a = await fetch(t),
@@ -39,7 +39,7 @@ function R(e) {
         r(),
             (0, l.openModalLazy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e('48017'), n.e('40629')]).then(n.bind(n, 850085));
+                    let { default: e } = await Promise.all([n.e('48017'), n.e('53243')]).then(n.bind(n, 850085));
                     return (i) =>
                         (0, o.jsx)(e, {
                             imgURI: t,
@@ -56,9 +56,9 @@ function R(e) {
     t.useEffect(() => {
         E.default.track(T.rMx.OPEN_MODAL, {
             type: T.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
-            location: { page: C }
+            location: { page: B }
         });
-    }, [C]);
+    }, [B]);
     let L = m === I.pC.AVATAR || m === I.pC.BANNER,
         Z = (0, _.Mu)('GIFPickerCroppingModal', !L);
     return (0, o.jsx)(c.Gt, {
@@ -72,7 +72,7 @@ function R(e) {
                     !Z &&
                     (0, o.jsx)(f.Z, {
                         type: m,
-                        analyticsPage: C,
+                        analyticsPage: B,
                         analyticsSection: T.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
                         isGIF: !0
                     }),
@@ -95,11 +95,11 @@ function R(e) {
                     children: [
                         (0, o.jsx)(u.Z, {
                             contentClassName: a()({ [h.gifPickerContent]: x && Z }),
-                            className: a()(h.gifPicker, { [h.loadingOverlay]: B }),
+                            className: a()(h.gifPicker, { [h.loadingOverlay]: C }),
                             onSelectGIF: j,
                             hideFavorites: !0
                         }),
-                        B && (0, o.jsx)(l.Spinner, { className: h.spinner })
+                        C && (0, o.jsx)(l.Spinner, { className: h.spinner })
                     ]
                 }),
                 x &&
@@ -107,8 +107,7 @@ function R(e) {
                     (0, o.jsx)(g.Z, {
                         uploadType: m,
                         showUpsell: !0,
-                        className: h.nitroUpsell,
-                        onSecondaryClick: r
+                        className: h.nitroUpsell
                     })
             ]
         })

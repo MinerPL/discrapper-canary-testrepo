@@ -1,17 +1,18 @@
 n.d(t, {
     CI: function () {
-        return i.CI;
+        return a.CI;
     },
     J6: function () {
-        return i.J6;
+        return a.J6;
     }
 });
-var r = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(144830);
-t.ZP = (0, i.ZP)(function (e) {
+var s = n(144830),
+    a = n(379649);
+t.ZP = (0, s.Z)(function (e) {
     let { children: t, className: n } = e;
-    return (0, r.jsx)('span', {
+    return (0, i.jsx)('span', {
         className: n,
         children: t
     });

@@ -9,6 +9,7 @@ n.d(t, {
 }),
     ((a = r || (r = {})).BANNER = 'BANNER'),
     (a.MODAL = 'MODAL'),
+    (a.ACTION_SHEET = 'ACTION_SHEET'),
     ((s = i || (i = {})).CLICK_TO_STAY = 'click_to_stay'),
     (s.CLICK_TO_LEAVE = 'click_to_leave'),
     (s.DISMISS = 'dismiss');

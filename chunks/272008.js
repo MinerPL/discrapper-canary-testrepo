@@ -2,14 +2,17 @@ n.d(t, {
     AH: function () {
         return S;
     },
+    Ag: function () {
+        return D;
+    },
     CS: function () {
         return p;
     },
     EW: function () {
-        return y;
+        return L;
     },
     OR: function () {
-        return L;
+        return y;
     },
     QB: function () {
         return g;
@@ -37,6 +40,9 @@ n.d(t, {
     },
     pf: function () {
         return A;
+    },
+    w: function () {
+        return b;
     },
     xw: function () {
         return m;
@@ -351,16 +357,53 @@ async function C(e) {
         });
     }
 }
-function y(e) {
+function L(e) {
     a.Z.dispatch({
         type: 'QUESTS_DELIVERY_OVERRIDE',
         questId: e
     });
 }
-function L(e, t) {
+function y(e, t) {
     a.Z.dispatch({
         type: 'QUESTS_SELECT_TASK_PLATFORM',
         questId: e,
         platform: t
     });
+}
+async function D() {
+    if (!c.Z.isFetchingClaimedQuests) {
+        a.Z.dispatch({ type: 'QUESTS_FETCH_CLAIMED_QUESTS_BEGIN' });
+        try {
+            let e = (await i.tn.get({ url: f.ANM.QUESTS_CLAIMED_QUESTS })).body.quests.map((e) => (0, _.hQ)(e));
+            a.Z.dispatch({
+                type: 'QUESTS_FETCH_CLAIMED_QUESTS_SUCCESS',
+                quests: e
+            });
+        } catch (e) {
+            a.Z.dispatch({
+                type: 'QUESTS_FETCH_CLAIMED_QUESTS_FAILURE',
+                error: new s.Z(e)
+            });
+        }
+    }
+}
+async function b(e) {
+    a.Z.dispatch({
+        type: 'QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN',
+        placement: e
+    });
+    try {
+        let t = await i.tn.get({ url: f.ANM.QUEST_FETCH_QUEST_TO_DELIVER(e) });
+        a.Z.dispatch({
+            type: 'QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS',
+            quest: (0, _.q6)(t.body.quest),
+            placement: e
+        });
+    } catch (t) {
+        a.Z.dispatch({
+            type: 'QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE',
+            error: new s.Z(t),
+            placement: e
+        });
+    }
 }

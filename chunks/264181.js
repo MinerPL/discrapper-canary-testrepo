@@ -5,4 +5,5 @@ n.d(t, {
     }
 }),
     ((i = r || (r = {}))[(i.COACHTIP = 0)] = 'COACHTIP'),
-    (i[(i.BADGE = 1)] = 'BADGE');
+    (i[(i.BADGE = 1)] = 'BADGE'),
+    (i[(i.BANNER = 2)] = 'BANNER');

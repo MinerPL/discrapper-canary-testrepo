@@ -24,7 +24,8 @@ let l = {
         [i.z.WHATS_NEW_SERVER_PROFILE_FLIP]: 0,
         [i.z.WHATS_NEW_SERVER_PROFILE_BADGE]: 0,
         [i.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR]: 0,
-        [i.z.REFERRAL_INCENTIVE_AWARDED_INFO]: 0
+        [i.z.REFERRAL_INCENTIVE_AWARDED_INFO]: 0,
+        [i.z.WHATS_NEW_TENURE_BADGE_REWARD]: 0
     },
     u = s.Z.Millis.DAY;
 function c(e) {

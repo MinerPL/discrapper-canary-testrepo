@@ -1,6 +1,6 @@
 n.d(t, {
     P: function () {
-        return m;
+        return I;
     }
 }),
     n(47120);
@@ -14,7 +14,7 @@ var r = n(735250),
     c = n(686546),
     d = n(852786),
     _ = n(689938),
-    E = n(1287);
+    E = n(845024);
 function f(e) {
     let { games: t, gameActivity: n } = e;
     return (0, r.jsx)('div', {
@@ -121,7 +121,7 @@ let p = (e) => (t, n) => {
         l = null !== (s = null == e ? void 0 : null === (i = e[n.id]) || void 0 === i ? void 0 : i.score) && void 0 !== s ? s : 0;
     return o !== l ? l - o : 0;
 };
-function m(e) {
+function I(e) {
     let { delayMs: t = 0 } = e;
     return (0, r.jsx)('div', {
         className: E.gameImageContainer,
@@ -134,27 +134,28 @@ function m(e) {
     });
 }
 t.Z = i.memo(function (e) {
-    let { games: t, prioritizedGameIds: n = new Set(), gameActivity: a = {} } = e,
-        s = i.useMemo(() => {
+    let { games: t, prioritizedGameIds: n = new Set(), gameActivity: a = {}, onInteraction: s } = e,
+        o = i.useMemo(() => {
             let e = t.filter((e) => null != e && null != e.icon),
                 r = e.filter((e) => !n.has(e.id)).sort(p(a));
             return [...e.filter((e) => n.has(e.id)).sort(p(a)), ...r];
         }, [a, t, n]),
-        o = s.slice(0, 3),
-        c = i.useMemo(() => {
+        c = o.slice(0, 3),
+        d = i.useMemo(() => {
             var e;
-            let t = s[3];
+            let t = o[3];
             if (null == t) return null;
             let n = t.getIconURL(24);
             if (null == n) return null;
-            if (s.length <= 4)
+            if (o.length <= 4)
                 return (0, r.jsx)(h, {
                     game: t,
                     gameActivity: a
                 });
-            let i = s.slice(3);
+            let i = o.slice(3);
             return (0, r.jsx)(l.Tooltip, {
                 'aria-label': null !== (e = (0, u.f6)(i.map((e) => e.name))) && void 0 !== e ? e : '',
+                onTooltipShow: () => (null == s ? void 0 : s()),
                 text: (0, r.jsx)(f, {
                     games: i,
                     gameActivity: a
@@ -181,10 +182,10 @@ t.Z = i.memo(function (e) {
                         ]
                     })
             });
-        }, [a, s]);
+        }, [a, o, s]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            o.map((e) =>
+            c.map((e) =>
                 (0, r.jsx)(
                     h,
                     {
@@ -195,7 +196,7 @@ t.Z = i.memo(function (e) {
                     e.id
                 )
             ),
-            c
+            d
         ]
     });
 });

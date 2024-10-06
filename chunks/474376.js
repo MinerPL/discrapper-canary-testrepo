@@ -15,80 +15,80 @@ var a = n(442837),
     d = n(626135),
     u = n(51144),
     _ = n(480387),
-    h = n(726745),
-    E = n(251423),
+    E = n(726745),
+    h = n(251423),
     m = n(383832),
     I = n(981631),
-    g = n(689938),
-    p = n(196364);
-function T() {
-    let e = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
-        t = (0, a.e7)([o.Z], () => o.Z.hidePersonalInformation),
-        { multiAccountUsers: n } = (0, E.L)(),
-        T = (t) => {
-            if (t !== (null == e ? void 0 : e.id)) d.default.track(I.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: I.jXE.USER_PROFILE } }), _.yD(t);
+    p = n(689938),
+    g = n(703864);
+function T(e) {
+    let t = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
+        n = (0, a.e7)([o.Z], () => o.Z.hidePersonalInformation),
+        { multiAccountUsers: T } = (0, h.L)(),
+        f = (e) => {
+            if (e !== (null == t ? void 0 : t.id)) d.default.track(I.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: I.jXE.USER_PROFILE } }), _.yD(e);
         },
-        S = n.map((n) => {
-            let a = new l.Z(n),
-                o = a.id === (null == e ? void 0 : e.id),
-                c = n.tokenStatus === h.q.INVALID,
-                d = t ? null : '#'.concat(a.discriminator);
+        S = T.map((a) => {
+            let o = new l.Z(a),
+                c = o.id === (null == t ? void 0 : t.id),
+                d = a.tokenStatus === E.q.INVALID,
+                _ = n ? null : '#'.concat(o.discriminator);
             return (0, i.jsx)(
                 s.MenuItem,
                 {
-                    id: a.id,
-                    focusedClassName: p.focused,
+                    id: o.id,
+                    focusedClassName: g.focused,
                     label: (e) => {
-                        let { isFocused: l } = e;
+                        let { isFocused: t } = e;
                         return (0, i.jsxs)('div', {
-                            className: p.userMenuItem,
+                            className: g.userMenuItem,
                             children: [
                                 (0, i.jsx)(s.Avatar, {
-                                    src: a.getAvatarURL(void 0, 40),
+                                    src: o.getAvatarURL(void 0, 40),
                                     size: s.AvatarSizes.SIZE_24,
-                                    'aria-label': n.username
+                                    'aria-label': a.username
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: p.userMenuUsername,
+                                    className: g.userMenuUsername,
                                     children: [
                                         (0, i.jsx)(s.Text, {
-                                            className: p.userMenuText,
+                                            className: g.userMenuText,
                                             variant: 'text-sm/normal',
-                                            children: u.ZP.getUserTag(a, {
+                                            children: u.ZP.getUserTag(o, {
                                                 mode: 'username',
-                                                identifiable: t ? 'never' : 'always'
+                                                identifiable: n ? 'never' : 'always'
                                             })
                                         }),
-                                        !a.isPomelo() &&
+                                        !o.isPomelo() &&
                                             (0, i.jsx)(s.Text, {
-                                                className: p.userMenuDiscriminator,
+                                                className: g.userMenuDiscriminator,
                                                 variant: 'text-sm/normal',
-                                                children: d
+                                                children: _
                                             })
                                     ]
                                 }),
-                                o &&
+                                c &&
                                     (0, i.jsx)(s.CircleCheckIcon, {
                                         size: 'sm',
-                                        color: (0, r.Lq)(l ? I.Ilk.WHITE_500 : I.Ilk.BRAND_500),
-                                        secondaryColor: (0, r.Lq)(l ? I.Ilk.BRAND_500 : I.Ilk.WHITE_500),
-                                        className: p.activeIcon
+                                        color: (0, r.Lq)(t ? I.Ilk.WHITE_500 : I.Ilk.BRAND_500),
+                                        secondaryColor: (0, r.Lq)(t ? I.Ilk.BRAND_500 : I.Ilk.WHITE_500),
+                                        className: g.activeIcon
                                     }),
-                                c &&
+                                d &&
                                     (0, i.jsx)(s.CircleWarningIcon, {
                                         color: (0, r.Lq)(I.Ilk.RED_400),
                                         secondaryColor: (0, r.Lq)(I.Ilk.WHITE_500),
                                         size: 'xs',
-                                        className: p.activeIcon
+                                        className: g.activeIcon
                                     })
                             ]
                         });
                     },
                     action: () => {
-                        c ? (0, m.Z)() : T(a.id);
+                        null == e || e(), d ? (0, m.Z)() : f(o.id);
                     }
                 },
-                a.id
+                o.id
             );
         });
     return (
@@ -98,8 +98,10 @@ function T() {
                     (0, i.jsx)(s.MenuSeparator, {}),
                     (0, i.jsx)(s.MenuItem, {
                         id: 'manage-accounts',
-                        label: g.Z.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
-                        action: m.Z
+                        label: p.Z.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
+                        action: () => {
+                            null == e || e(), (0, m.Z)();
+                        }
                     })
                 ]
             })

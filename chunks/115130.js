@@ -1,11 +1,18 @@
-n(789020);
+n.d(t, {
+    O: function () {
+        return r;
+    }
+}),
+    n(789020);
 var r,
-    i = n(442837),
-    a = n(570140),
-    s = n(695346),
-    o = n(630388),
-    l = n(981631);
-function u(e, t, n) {
+    i,
+    a,
+    s = n(442837),
+    o = n(570140),
+    l = n(695346),
+    u = n(630388),
+    c = n(981631);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +25,7 @@ function u(e, t, n) {
         e
     );
 }
-function c() {
+function _() {
     return {
         lastUsedObject: {},
         useActivityUrlOverride: !1,
@@ -26,77 +33,78 @@ function c() {
         filter: ''
     };
 }
-let d = c(),
-    _ = null,
-    E = [];
-class f extends (r = i.ZP.PersistedStore) {
+let E = _();
+((a = r || (r = {})).INITIALIZED = 'INITIALIZED'), (a.LOADING = 'LOADING'), (a.LOADED = 'LOADED'), (a.ERROR = 'ERROR');
+let f = 'INITIALIZED',
+    h = [];
+class p extends (i = s.ZP.PersistedStore) {
     initialize(e) {
-        d = {
-            ...c(),
+        E = {
+            ..._(),
             ...(null != e ? e : {})
         };
     }
     getState() {
-        return d;
+        return E;
     }
     getIsEnabled() {
-        return s.Sb.getSetting() && E.length > 0;
+        return l.Sb.getSetting() && h.length > 0;
     }
     getLastUsedObject() {
-        return d.lastUsedObject;
+        return E.lastUsedObject;
     }
     getUseActivityUrlOverride() {
-        return this.getIsEnabled() && d.useActivityUrlOverride;
+        return this.getIsEnabled() && E.useActivityUrlOverride;
     }
     getActivityUrlOverride() {
-        return this.getIsEnabled() ? d.activityUrlOverride : null;
+        return this.getIsEnabled() ? E.activityUrlOverride : null;
     }
     getFetchState() {
-        return _;
+        return f;
     }
     getFilter() {
-        return this.getIsEnabled() ? d.filter : '';
+        return this.getIsEnabled() ? E.filter : '';
     }
     getDeveloperShelfItems() {
-        return this.getIsEnabled() ? E : [];
+        return this.getIsEnabled() ? h : [];
     }
     inDevModeForApplication(e) {
-        return this.getIsEnabled() && null != E.find((t) => t.id === e);
+        return this.getIsEnabled() && null != h.find((t) => t.id === e);
     }
 }
-u(f, 'displayName', 'DeveloperActivityShelfStore'),
-    u(f, 'persistKey', 'DeveloperActivityShelfStore'),
-    u(f, 'migrations', [(e) => (delete e.isEnabled, { ...e })]),
-    (t.Z = new f(a.Z, {
+d(p, 'displayName', 'DeveloperActivityShelfStore'),
+    d(p, 'persistKey', 'DeveloperActivityShelfStore'),
+    d(p, 'migrations', [(e) => (delete e.isEnabled, { ...e })]),
+    (t.Z = new p(o.Z, {
         LOGOUT: function () {
-            (d = c()), (_ = null), (E = []);
+            (E = _()), (f = 'INITIALIZED'), (h = []);
         },
         DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE: function () {
-            d.useActivityUrlOverride = !d.useActivityUrlOverride;
+            E.useActivityUrlOverride = !E.useActivityUrlOverride;
         },
         DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE: function (e) {
             let { activityUrlOverride: t } = e;
-            d.activityUrlOverride = t;
+            E.activityUrlOverride = t;
         },
         DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED: function (e) {
             let { applicationId: t, timestamp: n } = e;
-            if (null == E.find((e) => e.id === t)) return !1;
-            d.lastUsedObject[t] = n;
+            if (null == h.find((e) => e.id === t)) return !1;
+            E.lastUsedObject[t] = n;
         },
         DEVELOPER_ACTIVITY_SHELF_FETCH_START() {
-            _ = 'loading';
+            f = 'LOADING';
         },
         DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: function (e) {
             let { applications: t } = e;
-            (_ = 'loaded'), (E = t.filter((e) => null != e.flags && (0, o.yE)(e.flags, l.udG.EMBEDDED)));
+            (f = 'LOADED'), (h = t.filter((e) => null != e.flags && (0, u.yE)(e.flags, c.udG.EMBEDDED)));
         },
         DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL: function (e) {
             let { type: t } = e;
-            _ = 'errored';
+            f = 'ERROR';
         },
         DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER: function (e) {
             let { filter: t } = e;
-            d.filter = t;
+            E.filter = t;
         },
         USER_SETTINGS_PROTO_UPDATE() {}
     }));

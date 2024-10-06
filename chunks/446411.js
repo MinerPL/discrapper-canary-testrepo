@@ -40,10 +40,10 @@ var l,
     F = n(981631),
     k = n(217702),
     L = n(689938),
-    H = n(592733),
-    V = n(458857),
-    R = n(910212),
-    B = n(736514);
+    H = n(269625),
+    V = n(275703),
+    R = n(554034),
+    B = n(287847);
 function P(e, t, n) {
     return (
         t in e
@@ -478,7 +478,7 @@ class G extends (l = i.PureComponent) {
         if (null == i) return null;
         let v = (0, _.q)(i),
             I = null == d ? {} : (0, x.Cx)(d.map((e) => (0, x.nP)(e, p))),
-            y = g.Z.isAnimated({
+            y = g.ZP.isAnimated({
                 src: (0, _.q)(i),
                 original: i.url,
                 animated: !1
@@ -505,12 +505,13 @@ class G extends (l = i.PureComponent) {
                 hiddenSpoilers: n,
                 placeholder: i.placeholder,
                 placeholderVersion: i.placeholderVersion,
+                srcIsAnimated: i.srcIsAnimated,
                 renderForwardComponent: p
             };
         v in I && (w.onClick = I[v]);
         let C = null !== (t = null === (e = i.url.split('.').pop()) || void 0 === e ? void 0 : e.split('?')[0]) && void 0 !== t ? t : '';
         'jpg' === C && (C = 'jpeg');
-        let E = null != i && !g.u.test(null == i ? void 0 : i.url),
+        let E = null != i && !g.uo.test(null == i ? void 0 : i.url) && !(i.srcIsAnimated && g.YG.test(null == i ? void 0 : i.url)),
             S =
                 !0 !== this.props.isSearchResult &&
                 l &&

@@ -1,58 +1,59 @@
-t.d(a, {
+n.d(t, {
     L: function () {
-        return c;
+        return i;
     }
 });
-var n = t(735250);
-t(470079);
-var r = t(481060),
-    s = t(600164),
-    o = t(689938),
-    l = t(564510);
-function c(e) {
-    let { onClose: a, img: t, title: c, body: i, content: d } = e;
-    return (0, n.jsxs)(n.Fragment, {
+var a = n(735250);
+n(470079);
+var r = n(481060),
+    s = n(600164),
+    o = n(424071),
+    l = n(689938),
+    c = n(879137);
+function i(e) {
+    let { onClose: t, img: n, title: i, body: d, content: u } = e;
+    return (0, a.jsxs)(o.Z, {
         children: [
-            (0, n.jsxs)(r.ModalHeader, {
+            (0, a.jsxs)(r.ModalHeader, {
                 direction: s.Z.Direction.VERTICAL,
-                className: l.header,
+                className: c.header,
                 separator: !1,
                 children: [
-                    (0, n.jsx)('div', {
-                        className: l.illustration,
-                        children: t
+                    (0, a.jsx)('div', {
+                        className: c.illustration,
+                        children: n
                     }),
-                    (0, n.jsx)(r.Heading, {
-                        className: l.title,
+                    (0, a.jsx)(r.Heading, {
+                        className: c.title,
                         variant: 'heading-xl/extrabold',
-                        children: c
+                        children: i
                     }),
-                    (0, n.jsx)(r.ModalCloseButton, {
-                        className: l.closeButton,
-                        onClick: a
+                    (0, a.jsx)(r.ModalCloseButton, {
+                        className: c.closeButton,
+                        onClick: t
                     })
                 ]
             }),
-            (0, n.jsxs)(r.ModalContent, {
-                className: l.body,
+            (0, a.jsxs)(r.ModalContent, {
+                className: c.body,
                 paddingFix: !1,
                 children: [
-                    (0, n.jsx)(r.Text, {
+                    (0, a.jsx)(r.Text, {
                         tag: 'p',
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: i
+                        children: d
                     }),
-                    d
+                    u
                 ]
             }),
-            (0, n.jsx)(r.ModalFooter, {
-                className: l.footer,
-                children: (0, n.jsx)(r.Button, {
-                    className: l.footerButton,
+            (0, a.jsx)(r.ModalFooter, {
+                className: c.footer,
+                children: (0, a.jsx)(r.Button, {
+                    className: c.footerButton,
                     color: r.Button.Colors.BRAND,
-                    onClick: a,
-                    children: o.Z.Messages.DONE
+                    onClick: t,
+                    children: l.Z.Messages.DONE
                 })
             })
         ]

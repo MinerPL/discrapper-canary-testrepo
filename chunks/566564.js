@@ -1,36 +1,48 @@
-n(47120);
-var a = n(735250),
-    r = n(470079),
-    s = n(120356),
-    o = n.n(s),
-    i = n(180650),
-    l = n(442837),
-    c = n(481060),
-    d = n(594174),
-    u = n(597688),
-    f = n(1870),
-    p = n(884697),
-    g = n(223143),
-    C = n(823941),
-    m = n(38900),
-    _ = n(709999),
-    h = n(215023),
-    b = n(689938),
-    x = n(728097),
-    I = n(367815),
-    E = n(933285),
-    v = n(83498);
+r(47120);
+var a = r(735250),
+    n = r(470079),
+    s = r(120356),
+    i = r.n(s),
+    o = r(180650),
+    l = r(442837),
+    c = r(481060),
+    d = r(594174),
+    u = r(597688),
+    f = r(1870),
+    p = r(884697),
+    m = r(251068),
+    C = r(43610),
+    _ = r(223143),
+    g = r(823941),
+    h = r(752053),
+    b = r(38900),
+    E = r(709999),
+    I = r(215023),
+    x = r(689938),
+    T = r(632007),
+    v = r(454410),
+    S = r(783433),
+    L = r(170873),
+    N = r(562292),
+    O = r(196315);
 t.Z = (e) => {
-    var t, n, s, L, S, T;
-    let { handleTransition: N, numVisibleItems: O } = e,
-        { isFetching: k } = (0, g.Z)(),
-        B = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
-        j = r.createRef(),
-        Z = (0, l.cj)([u.Z], () => ({ feature: u.Z.getCategory(i.T.THE_VAULT) })),
-        P = r.useMemo(
+    var t;
+    let { handleTransition: r, numVisibleItems: s } = e,
+        { categories: B, isFetchingCategories: k, error: j, refreshCategories: R } = (0, _.Z)(),
+        P = Array.from(B.values()),
+        A = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
+        Z = n.createRef(),
+        M = (0, C.t)('CollectiblesFeedShop'),
+        y = (0, m.m)('CollectiblesFeedShop'),
+        w = y ? P[0] : u.Z.getCategory(M ? o.T.SPOOKY_NIGHT : o.T.BAND),
+        H = y ? P[1] : u.Z.getCategory(M ? o.T.BAND : o.T.AUTUMN_EQUINOX),
+        F = n.useCallback(() => {
+            R();
+        }, [R]),
+        D = M ? I.Ku : I.WC,
+        U = n.useMemo(
             () =>
-                h.$O
-                    .map((e) => u.Z.getProduct(e))
+                D.map((e) => u.Z.getProduct(e))
                     .filter((e) => null != e)
                     .map((e) => ({
                         ...e,
@@ -38,16 +50,16 @@ t.Z = (e) => {
                     }))
                     .filter((e) => null != e.category)
                     .sort((e, t) => {
-                        let n = !!f.Z.getPurchase(e.skuId),
+                        let r = !!f.Z.getPurchase(e.skuId),
                             a = !!f.Z.getPurchase(t.skuId);
-                        return Number(n) - Number(a);
+                        return Number(r) - Number(a);
                     })
                     .slice(0, 4),
-            [k]
+            [k, M]
         ),
-        A = r.useMemo(
+        W = n.useMemo(
             () =>
-                h.yo
+                I.yo
                     .map((e) => u.Z.getProduct(e))
                     .filter((e) => null != e)
                     .map((e) => ({
@@ -56,80 +68,87 @@ t.Z = (e) => {
                     }))
                     .filter((e) => null != e.category)
                     .sort((e, t) => {
-                        let n = !!f.Z.getPurchase(e.skuId),
+                        let r = !!f.Z.getPurchase(e.skuId),
                             a = !!f.Z.getPurchase(t.skuId);
-                        return Number(n) - Number(a);
+                        return Number(r) - Number(a);
                     }),
             [k]
         );
-    if (null == B) return null;
+    if (null == A) return null;
+    let G = x.Z.Messages.COLLECTIBLES_SHOP_CATEGORY_COLLECTION.format({ category_name: null == w ? void 0 : w.name });
+    if (j) return (0, a.jsx)(h.Z, { onRetry: F });
     return (0, a.jsx)(a.Fragment, {
         children: (0, a.jsxs)('div', {
-            className: x.shop,
+            className: T.shop,
             children: [
-                (0, a.jsx)('div', {
-                    className: x.banner,
-                    children: (0, a.jsx)('div', {
-                        className: x.bannerImage,
-                        style: { backgroundImage: 'url('.concat(v, ')') }
-                    })
+                (0, a.jsxs)('div', {
+                    className: T.banner,
+                    children: [
+                        (0, a.jsx)('div', {
+                            className: T.bannerImage,
+                            style: { backgroundImage: 'url('.concat(M ? O : L, ')') }
+                        }),
+                        (0, a.jsx)('div', { className: i()(T.bannerShadow, T.left) }),
+                        (0, a.jsx)('div', { className: i()(T.bannerShadow, T.right) })
+                    ]
                 }),
                 (0, a.jsxs)('div', {
-                    className: o()(x.content, x.mainContent),
+                    className: i()(T.content, T.mainContent),
                     children: [
                         (0, a.jsxs)('div', {
-                            className: o()(x.heroHeaderContainer),
+                            className: i()(T.heroHeaderContainer),
                             children: [
                                 k
-                                    ? (0, a.jsx)('div', { className: o()(x.heroHeaderBadgeLogoSummaryContainer) })
+                                    ? (0, a.jsx)('div', { className: i()(T.heroHeaderBadgeLogoSummaryContainer) })
                                     : (0, a.jsxs)('div', {
-                                          className: o()(x.heroHeaderBadgeLogoSummaryContainer),
+                                          className: i()(T.heroHeaderBadgeLogoSummaryContainer),
                                           children: [
-                                              (null === (n = Z.feature) || void 0 === n ? void 0 : n.unpublishedAt) != null &&
+                                              (null == w ? void 0 : w.unpublishedAt) != null &&
                                                   (0, a.jsx)(c.TextBadge, {
                                                       disableColor: !0,
-                                                      text: b.Z.Messages.LIMITED_TIME,
-                                                      className: x.limitedTimeBadge
+                                                      text: x.Z.Messages.LIMITED_TIME,
+                                                      className: T.limitedTimeBadge
                                                   }),
                                               (0, a.jsx)('img', {
-                                                  className: x.heroHeaderLogo,
-                                                  src: (0, p.uV)(null !== (T = null === (s = Z.feature) || void 0 === s ? void 0 : s.logo) && void 0 !== T ? T : '', { size: C.n }),
-                                                  alt: null === (L = Z.feature) || void 0 === L ? void 0 : L.name
+                                                  className: T.heroHeaderLogo,
+                                                  src: (0, p.uV)(null !== (t = null == w ? void 0 : w.logo) && void 0 !== t ? t : '', { size: g.n }),
+                                                  alt: null == w ? void 0 : w.name
                                               }),
                                               (0, a.jsx)(c.Text, {
                                                   color: 'always-white',
                                                   variant: 'text-md/normal',
-                                                  children: null === (S = Z.feature) || void 0 === S ? void 0 : S.summary
+                                                  className: T.subHeaderText,
+                                                  children: null == w ? void 0 : w.summary
                                               })
                                           ]
                                       }),
                                 (0, a.jsx)('div', {
-                                    className: x.heroHeaderButtonContainer,
+                                    className: T.heroHeaderButtonContainer,
                                     children: (0, a.jsx)(c.Button, {
-                                        className: x.heroHeaderButton,
+                                        className: T.heroHeaderButton,
                                         color: c.ButtonColors.WHITE,
-                                        onClick: () => N('shop latest category hero'),
-                                        children: b.Z.Messages.COLLECTIBLES_SHOP_THE_VAULT_COLLECTION
+                                        onClick: () => r('shop latest category hero', null == w ? void 0 : w.skuId),
+                                        children: G
                                     })
                                 })
                             ]
                         }),
                         (0, a.jsx)('div', {
-                            className: o()(x.row, x.feed, x.feedSingleRow),
+                            className: i()(T.row, T.feed, T.feedSingleRow),
                             children: k
                                 ? (0, a.jsx)(a.Fragment, {
-                                      children: [void 0, void 0, void 0, void 0].map((e, t) => (0, a.jsx)(m.K, {}, t))
+                                      children: [void 0, void 0, void 0, void 0].map((e, t) => (0, a.jsx)(b.K, {}, t))
                                   })
                                 : (0, a.jsx)(a.Fragment, {
-                                      children: P.map((e) => {
+                                      children: U.map((e) => {
                                           if (null == e || null == e.category) return null;
-                                          let { category: t, ...n } = e;
+                                          let { category: t, ...r } = e;
                                           return (0, a.jsx)(
-                                              _.Z,
+                                              E.Z,
                                               {
-                                                  product: n,
+                                                  product: r,
                                                   category: t,
-                                                  user: B,
+                                                  user: A,
                                                   isInFeedView: !0
                                               },
                                               null == e ? void 0 : e.skuId
@@ -138,82 +157,82 @@ t.Z = (e) => {
                                   })
                         }),
                         (0, a.jsxs)('div', {
-                            className: o()(x.section, x.col2, x.featuredBlocksContainer),
+                            className: i()(T.section, T.col2, T.featuredBlocksContainer),
                             children: [
                                 (0, a.jsxs)(c.Clickable, {
-                                    className: o()(x.featuredBlock),
-                                    style: { backgroundImage: 'url('.concat(E, ')') },
-                                    onClick: () => N('shop marketing tile', i.T.DOJO),
+                                    className: i()(T.featuredBlock),
+                                    style: { backgroundImage: 'url('.concat(M ? S : N, ')') },
+                                    onClick: () => r('shop marketing tile', null == H ? void 0 : H.skuId),
                                     children: [
-                                        (null === (t = u.Z.getCategory(i.T.DOJO)) || void 0 === t ? void 0 : t.unpublishedAt) != null &&
+                                        (null == H ? void 0 : H.unpublishedAt) != null &&
                                             (0, a.jsx)(c.TextBadge, {
                                                 disableColor: !0,
-                                                text: b.Z.Messages.LIMITED_TIME,
-                                                className: x.featuredBlockBadge
+                                                text: x.Z.Messages.LIMITED_TIME,
+                                                className: T.featuredBlockBadge
                                             }),
                                         (0, a.jsx)(c.Button, {
-                                            className: x.featuredBlockButton,
+                                            className: T.featuredBlockButton,
                                             color: c.ButtonColors.WHITE,
                                             onClick: () => {},
-                                            children: b.Z.Messages.TAKE_ME_THERE
+                                            children: x.Z.Messages.TAKE_ME_THERE
                                         })
                                     ]
                                 }),
                                 (0, a.jsxs)(c.Clickable, {
-                                    className: o()(x.featuredBlock),
-                                    style: { backgroundImage: 'url('.concat(I, ')') },
-                                    onClick: () => N('shop marketing tile', i.T.ANIME_V2),
+                                    className: i()(T.featuredBlock),
+                                    style: { backgroundImage: 'url('.concat(v, ')') },
+                                    onClick: () => r('shop marketing tile', o.T.ANIME_V2),
                                     children: [
                                         (0, a.jsx)(c.TextBadge, {
                                             disableColor: !0,
-                                            text: b.Z.Messages.MOST_POPULAR,
-                                            className: x.featuredBlockBadge
+                                            text: x.Z.Messages.MOST_POPULAR,
+                                            className: T.featuredBlockBadge
                                         }),
                                         (0, a.jsx)(c.Button, {
-                                            className: x.featuredBlockButton,
+                                            className: T.featuredBlockButton,
                                             color: c.ButtonColors.WHITE,
                                             onClick: () => {},
-                                            children: b.Z.Messages.TAKE_ME_THERE
+                                            children: x.Z.Messages.TAKE_ME_THERE
                                         })
                                     ]
                                 })
                             ]
                         }),
                         (0, a.jsxs)('div', {
-                            className: o()(x.row, x.between, x.section),
+                            className: i()(T.row, T.between, T.section),
                             children: [
                                 (0, a.jsx)(c.Heading, {
                                     variant: 'heading-lg/semibold',
-                                    children: b.Z.Messages.COLLECTIBLES_POPULAR_PICKS
+                                    children: x.Z.Messages.COLLECTIBLES_POPULAR_PICKS
                                 }),
                                 (0, a.jsxs)(c.Clickable, {
-                                    className: x.shopAll,
-                                    onClick: () => N('shop all top'),
+                                    className: T.shopAll,
+                                    onClick: () => r('shop all top'),
                                     children: [
                                         (0, a.jsx)(c.ServerGridIcon, {}),
                                         (0, a.jsx)(c.Text, {
                                             variant: 'text-sm/medium',
-                                            children: b.Z.Messages.COLLECTIBLES_SHOP_ALL
+                                            children: x.Z.Messages.COLLECTIBLES_SHOP_ALL
                                         })
                                     ]
                                 })
                             ]
                         }),
                         (0, a.jsx)('div', {
-                            className: x.feed,
-                            ref: j,
+                            className: T.feed,
+                            ref: Z,
                             children: k
-                                ? (0, a.jsx)(a.Fragment, { children: [...Array(12)].map((e, t) => (0, a.jsx)(m.K, {}, t + 1)) })
+                                ? (0, a.jsx)(a.Fragment, { children: [...Array(12)].map((e, t) => (0, a.jsx)(b.K, {}, t + 1)) })
                                 : (0, a.jsx)(a.Fragment, {
-                                      children: A.slice(0, O).map((e) => {
+                                      children: W.slice(0, s).map((e) => {
                                           if (null == e || null == e.category) return null;
-                                          let { category: t, ...n } = e;
+                                          let { category: t, ...r } = e;
                                           return (0, a.jsx)(
-                                              _.Z,
+                                              E.Z,
                                               {
-                                                  product: n,
+                                                  product: r,
                                                   category: t,
-                                                  user: B,
+                                                  user: A,
                                                   isInFeedView: !0
                                               },
                                               null == e ? void 0 : e.skuId
@@ -221,23 +240,23 @@ t.Z = (e) => {
                                       })
                                   })
                         }),
-                        O >= h.iA &&
+                        s >= I.iA &&
                             (0, a.jsxs)('div', {
-                                className: x.endOfFeed,
+                                className: T.endOfFeed,
                                 children: [
                                     (0, a.jsx)(c.Heading, {
                                         variant: 'heading-md/semibold',
-                                        children: b.Z.Messages.COLLECTIBLES_SHOP_FEED_END_OF_SCROLL_TEXT
+                                        children: x.Z.Messages.COLLECTIBLES_SHOP_FEED_END_OF_SCROLL_TEXT
                                     }),
                                     (0, a.jsx)(c.Button, {
-                                        className: x.endOfFeedButton,
+                                        className: T.endOfFeedButton,
                                         onClick: () => {
-                                            N('shop all bottom', void 0, !0);
+                                            r('shop all bottom', void 0, !0);
                                         },
                                         children: (0, a.jsx)(c.Text, {
                                             variant: 'text-md/medium',
                                             color: 'always-white',
-                                            children: b.Z.Messages.COLLECTIBLES_SHOP_FEED_END_OF_SCROLL_BUTTON
+                                            children: x.Z.Messages.COLLECTIBLES_SHOP_FEED_END_OF_SCROLL_BUTTON
                                         })
                                     })
                                 ]

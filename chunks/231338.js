@@ -81,7 +81,7 @@ r.d(t, {
         return M;
     },
     RK: function () {
-        return ek;
+        return eV;
     },
     S7: function () {
         return T;
@@ -171,7 +171,7 @@ r.d(t, {
         return eK;
     },
     yX: function () {
-        return eV;
+        return ek;
     },
     yY: function () {
         return eG;
@@ -219,17 +219,17 @@ var n,
     H,
     Y,
     K,
-    V,
     k,
+    V,
     x,
     F,
     W,
     X,
     j,
     $,
+    J,
     q,
     z,
-    J,
     Q,
     Z,
     ee,
@@ -356,12 +356,12 @@ let eO = new Map([
     (K[(K.REVERSED = 3)] = 'REVERSED'),
     (K[(K.REFUNDED = 4)] = 'REFUNDED'),
     (K[(K.CANCELED = 5)] = 'CANCELED'),
-    ((V = u || (u = {}))[(V.PREMIUM = 1)] = 'PREMIUM'),
-    (V[(V.GUILD = 2)] = 'GUILD'),
-    (V[(V.APPLICATION = 3)] = 'APPLICATION'),
-    ((k = l || (l = {})).PAYPAL_POPUP_CLOSED = 'PAYPAL_POPUP_CLOSED'),
-    (k.VENMO_APP_CANCELED = 'VENMO_APP_CANCELED'),
-    (k.VENMO_CANCELED = 'VENMO_CANCELED'),
+    ((k = u || (u = {}))[(k.PREMIUM = 1)] = 'PREMIUM'),
+    (k[(k.GUILD = 2)] = 'GUILD'),
+    (k[(k.APPLICATION = 3)] = 'APPLICATION'),
+    ((V = l || (l = {})).PAYPAL_POPUP_CLOSED = 'PAYPAL_POPUP_CLOSED'),
+    (V.VENMO_APP_CANCELED = 'VENMO_APP_CANCELED'),
+    (V.VENMO_CANCELED = 'VENMO_CANCELED'),
     Object.freeze({
         CONSTANT: 1,
         APPLE_STICKER: 2
@@ -477,6 +477,7 @@ let eM = Object.freeze({
     (X.BRAINTREE_POPUP_BRIDGE_CALLBACK = 'BRAINTREE_POPUP_BRIDGE_CALLBACK'),
     (X.GIFT_CODE_BROWSER = 'GIFT_CODE_BROWSER'),
     (X.GUILD_TEMPLATE_BROWSER = 'GUILD_TEMPLATE_BROWSER'),
+    (X.OPEN_MESSAGE = 'OPEN_MESSAGE'),
     (X.OVERLAY = 'OVERLAY'),
     (X.BROWSER_HANDOFF = 'BROWSER_HANDOFF'),
     (X.SET_CERTIFIED_DEVICES = 'SET_CERTIFIED_DEVICES'),
@@ -592,19 +593,19 @@ let eM = Object.freeze({
     ($[($.RATE_LIMITED = 5011)] = 'RATE_LIMITED'),
     ($[($.UNAUTHORIZED_FOR_APPLICATION = 5012)] = 'UNAUTHORIZED_FOR_APPLICATION'),
     ($[($.NO_CONNECTION_FOUND = 5013)] = 'NO_CONNECTION_FOUND'),
-    ((q = O || (O = {}))[(q.CLOSE_NORMAL = 1000)] = 'CLOSE_NORMAL'),
-    (q[(q.CLOSE_UNSUPPORTED = 1003)] = 'CLOSE_UNSUPPORTED'),
-    (q[(q.CLOSE_ABNORMAL = 1006)] = 'CLOSE_ABNORMAL'),
-    (q[(q.INVALID_CLIENTID = 4000)] = 'INVALID_CLIENTID'),
-    (q[(q.INVALID_ORIGIN = 4001)] = 'INVALID_ORIGIN'),
-    (q[(q.RATELIMITED = 4002)] = 'RATELIMITED'),
-    (q[(q.TOKEN_REVOKED = 4003)] = 'TOKEN_REVOKED'),
-    (q[(q.INVALID_VERSION = 4004)] = 'INVALID_VERSION'),
-    (q[(q.INVALID_ENCODING = 4005)] = 'INVALID_ENCODING');
+    ((J = O || (O = {}))[(J.CLOSE_NORMAL = 1000)] = 'CLOSE_NORMAL'),
+    (J[(J.CLOSE_UNSUPPORTED = 1003)] = 'CLOSE_UNSUPPORTED'),
+    (J[(J.CLOSE_ABNORMAL = 1006)] = 'CLOSE_ABNORMAL'),
+    (J[(J.INVALID_CLIENTID = 4000)] = 'INVALID_CLIENTID'),
+    (J[(J.INVALID_ORIGIN = 4001)] = 'INVALID_ORIGIN'),
+    (J[(J.RATELIMITED = 4002)] = 'RATELIMITED'),
+    (J[(J.TOKEN_REVOKED = 4003)] = 'TOKEN_REVOKED'),
+    (J[(J.INVALID_VERSION = 4004)] = 'INVALID_VERSION'),
+    (J[(J.INVALID_ENCODING = 4005)] = 'INVALID_ENCODING');
 let eH = 'token',
     eY = 'tokens',
     eK = 'https://'.concat('status.discord.com'),
-    eV = {
+    ek = {
         PRESSKIT: 'https://app.box.com/s/5puqm5ijahrrdao7yldi7fr3zah5i1am',
         REBRAND_PRESSKIT: 'https://www.dropbox.com/scl/fo/2vittfakjukwa3zl4gnxh/AOS0AZlx-zA4TjDyv-M-dgk?rlkey=kn0v1lcqfq1lurj3lk3x1ujhf&dl=0',
         STATUS: 'https://discordstatus.com',
@@ -633,7 +634,7 @@ let eH = 'token',
         TWITTER_SUPPORT: 'https://twitter.com/discord_support',
         QUESTS: '/quests'
     },
-    ek = Object.freeze({
+    eV = Object.freeze({
         TWITTER: Object.freeze({
             default: 'https://twitter.com/discord',
             ja: 'https://twitter.com/discord_jp'
@@ -666,36 +667,36 @@ let eH = 'token',
         CHANNEL: (e, t) => '/channels/'.concat(e, '/').concat(t),
         REPORT: ''.concat(eI, '/report')
     });
-((z = f || (f = {})).INDEX = '/'), (z.INDEX_WORD = '/index'), (z.INDEX_BUCKET = '/index/:bucketId'), (z.CHANGELOGS = '/changelogs/:date'), (z.COMMUNITY = '/community'), (z.COMPANY = '/company'), (z.COMPANY_INFORMATION = '/company-information'), (z.CREATORS = '/creators'), (z.DOWNLOADS = '/downloads'), (z.DOWNLOAD = '/download'), (z.GAMING = '/gaming'), (z.PRIVACY = '/privacy'), (z.TOS = '/tos'), (z.TERMS = '/terms'), (z.STORE_TERMS = '/store-terms'), (z.ACKNOWLEDGEMENTS = '/acknowledgements'), (z.LICENSES = '/licenses'), (z.PARTNERS = '/partners'), (z.HYPESQUAD = '/hypesquad'), (z.HYPESQUAD_RIOT = '/hypesquad-riot'), (z.BRANDING = '/branding'), (z.ERROR_404 = '/404'), (z.JOBS = '/jobs'), (z.JOB = '/jobs/:jobId'), (z.STREAMKIT = '/streamkit'), (z.SECURITY = '/security'), (z.NITRO = '/nitro'), (z.DISCOVER = '/servers'), (z.GUIDELINES = '/guidelines'), (z.RICH_PRESENCE = '/rich-presence'), (z.VERIFICATION = '/verification'), (z.OPEN_SOURCE = '/open-source'), (z.WARFRAME = '/warframe'), (z.REMOTE_AUTH = '/ra/:remoteAuthFingerprint'), (z.SAFETY_LANDING = '/safetycenter'), (z.SAFETY_ARTICLE_ROOT = '/safety'), (z.SAFETY_ARTICLE = '/safety/:article'), (z.NEWSROOM = '/newsroom'), (z.INSPIRATION = '/inspiration'), (z.MOD_ACADEMY_LANDING = '/moderation'), (z.MOD_ACADEMY_EXAM = '/moderation/exam'), (z.MOD_ACADEMY_ARTICLE = '/moderation/:article'), (z.BLOG = '/blog'), (z.APP_DIRECTORY = '/application-directory'), (z.REFRESH_INDEX = '/new'), (z.REFRESH_INDEX_WORD = '/new/index'), (z.REFRESH_COMPANY = '/new/company'), (z.REFRESH_DOWNLOAD = '/new/download'), (z.REFRESH_PRIVACY = '/new/privacy'), (z.REFRESH_TERMS = '/new/terms'), (z.REFRESH_ACKNOWLEDGEMENTS = '/new/acknowledgements'), (z.REFRESH_LICENSES = '/new/licenses'), (z.REFRESH_BRANDING = '/new/branding'), (z.REFRESH_JOBS = '/new/jobs'), (z.REFRESH_JOB = '/new/jobs/:jobId'), (z.REFRESH_STREAMKIT = '/new/streamkit'), (z.REFRESH_NITRO = '/new/nitro'), (z.REFRESH_GUIDELINES = '/new/guidelines'), (z.REFRESH_SAFETY_LANDING = '/new/safety'), (z.REFRESH_SAFETY_ARTICLE = '/new/safety/:article'), (z.COLLEGE = '/college'), (z.LEAGUE_CLUBS = '/league-communities'), (z.DISCORD_RECRUITING_SCAMS = '/discord-recruitment-scams'), (z.DEV_NEWSLETTER_SIGNUP = '/dev-newsletter'), (z.LEGACY_DEV_NEWSLETTER = '/newsletter'), (z.LEGAL_ARCHIVE = '/archive/'), (z.TERMS_MAY_2020 = '/archive/terms/may-2020'), (z.PRIVACY_JUNE_2020 = '/archive/privacy/june-2020'), (z.GUIDELINES_MAY_2020 = '/archive/guidelines/may-2020'), (z.FALL_RELEASE_2023 = '/fallrelease'), (z.MOBILE_REDESIGN_2023 = '/mobile'), (z.REFRESH_XBOX_OFFER = '/new/discord-xbox-offer-2019'), (z.REFRESH_WHY_DISCORD = '/why-discord-is-different'), (z.WHY_DISCORD = '/why-discord'), (z.XBOX_OFFER = '/discord-xbox-offer-2020'), (z.COLLEGE_BRUINS = '/bruins'), (z.COLLEGE_ANTEATERS = '/anteaters'), (z.COLLEGE_GAUCHOS = '/gauchos'), (z.COLLEGE_BEARS = '/bears'), (z.COLLEGE_SLUGS = '/slugs'), (z.BACK_TO_SCHOOL_GIVEAWAY_INSTAGRAM = '/terms/back-to-school-2020/instagram'), (z.BACK_TO_SCHOOL_GIVEAWAY_TWITTER = '/terms/back-to-school-2020/twitter'), (z.SNOWSGIVING_GIVEAWAY_INSTAGRAM = '/terms/snowsgiving-2020/instagram'), (z.SNOWSGIVING_GIVEAWAY_TWITTER = '/terms/snowsgiving-2020/twitter'), (0, eE.F)(ex), (0, eE.F)(f);
+((q = f || (f = {})).INDEX = '/'), (q.INDEX_WORD = '/index'), (q.INDEX_BUCKET = '/index/:bucketId'), (q.CHANGELOGS = '/changelogs/:date'), (q.COMMUNITY = '/community'), (q.COMPANY = '/company'), (q.COMPANY_INFORMATION = '/company-information'), (q.CREATORS = '/creators'), (q.DOWNLOADS = '/downloads'), (q.DOWNLOAD = '/download'), (q.GAMING = '/gaming'), (q.PRIVACY = '/privacy'), (q.TOS = '/tos'), (q.TERMS = '/terms'), (q.STORE_TERMS = '/store-terms'), (q.ACKNOWLEDGEMENTS = '/acknowledgements'), (q.LICENSES = '/licenses'), (q.PARTNERS = '/partners'), (q.HYPESQUAD = '/hypesquad'), (q.HYPESQUAD_RIOT = '/hypesquad-riot'), (q.BRANDING = '/branding'), (q.ERROR_404 = '/404'), (q.JOBS = '/jobs'), (q.JOB = '/jobs/:jobId'), (q.STREAMKIT = '/streamkit'), (q.SECURITY = '/security'), (q.NITRO = '/nitro'), (q.DISCOVER = '/servers'), (q.GUIDELINES = '/guidelines'), (q.RICH_PRESENCE = '/rich-presence'), (q.VERIFICATION = '/verification'), (q.OPEN_SOURCE = '/open-source'), (q.WARFRAME = '/warframe'), (q.REMOTE_AUTH = '/ra/:remoteAuthFingerprint'), (q.SAFETY_LANDING = '/safetycenter'), (q.SAFETY_ARTICLE_ROOT = '/safety'), (q.SAFETY_ARTICLE = '/safety/:article'), (q.NEWSROOM = '/newsroom'), (q.INSPIRATION = '/inspiration'), (q.MOD_ACADEMY_LANDING = '/moderation'), (q.MOD_ACADEMY_EXAM = '/moderation/exam'), (q.MOD_ACADEMY_ARTICLE = '/moderation/:article'), (q.BLOG = '/blog'), (q.APP_DIRECTORY = '/application-directory'), (q.REFRESH_INDEX = '/new'), (q.REFRESH_INDEX_WORD = '/new/index'), (q.REFRESH_COMPANY = '/new/company'), (q.REFRESH_DOWNLOAD = '/new/download'), (q.REFRESH_PRIVACY = '/new/privacy'), (q.REFRESH_TERMS = '/new/terms'), (q.REFRESH_ACKNOWLEDGEMENTS = '/new/acknowledgements'), (q.REFRESH_LICENSES = '/new/licenses'), (q.REFRESH_BRANDING = '/new/branding'), (q.REFRESH_JOBS = '/new/jobs'), (q.REFRESH_JOB = '/new/jobs/:jobId'), (q.REFRESH_STREAMKIT = '/new/streamkit'), (q.REFRESH_NITRO = '/new/nitro'), (q.REFRESH_GUIDELINES = '/new/guidelines'), (q.REFRESH_SAFETY_LANDING = '/new/safety'), (q.REFRESH_SAFETY_ARTICLE = '/new/safety/:article'), (q.COLLEGE = '/college'), (q.LEAGUE_CLUBS = '/league-communities'), (q.DISCORD_RECRUITING_SCAMS = '/discord-recruitment-scams'), (q.DEV_NEWSLETTER_SIGNUP = '/dev-newsletter'), (q.LEGACY_DEV_NEWSLETTER = '/newsletter'), (q.LEGAL_ARCHIVE = '/archive/'), (q.TERMS_MAY_2020 = '/archive/terms/may-2020'), (q.PRIVACY_JUNE_2020 = '/archive/privacy/june-2020'), (q.GUIDELINES_MAY_2020 = '/archive/guidelines/may-2020'), (q.FALL_RELEASE_2023 = '/fallrelease'), (q.MOBILE_REDESIGN_2023 = '/mobile'), (q.REFRESH_XBOX_OFFER = '/new/discord-xbox-offer-2019'), (q.REFRESH_WHY_DISCORD = '/why-discord-is-different'), (q.WHY_DISCORD = '/why-discord'), (q.XBOX_OFFER = '/discord-xbox-offer-2020'), (q.COLLEGE_BRUINS = '/bruins'), (q.COLLEGE_ANTEATERS = '/anteaters'), (q.COLLEGE_GAUCHOS = '/gauchos'), (q.COLLEGE_BEARS = '/bears'), (q.COLLEGE_SLUGS = '/slugs'), (q.BACK_TO_SCHOOL_GIVEAWAY_INSTAGRAM = '/terms/back-to-school-2020/instagram'), (q.BACK_TO_SCHOOL_GIVEAWAY_TWITTER = '/terms/back-to-school-2020/twitter'), (q.SNOWSGIVING_GIVEAWAY_INSTAGRAM = '/terms/snowsgiving-2020/instagram'), (q.SNOWSGIVING_GIVEAWAY_TWITTER = '/terms/snowsgiving-2020/twitter'), (0, eE.Ft)(ex), (0, eE.Ft)(f);
 let eF = Object.freeze({
     FACEBOOK_URL: 'https://www.facebook.com/discord/',
     INSTAGRAM_URL: 'https://www.instagram.com/discord/',
     YOUTUBE_URL: 'https://www.youtube.com/discord/',
     TIKTOK_URL: 'https://www.tiktok.com/@discord'
 });
-((J = S || (S = {})).EXPERIMENT_USER_TRIGGERED = 'experiment_user_triggered'),
-    (J.EXPERIMENT_GUILD_TRIGGERED = 'experiment_guild_triggered'),
-    (J.EXPERIMENT_SAVE_EXPOSURE_FAILED = 'experiment_save_exposure_failed'),
-    (J.MKTG_PAGE_VIEWED = 'mktg_page_viewed'),
-    (J.CLICK_LANDING_CTA = 'click_landing_cta'),
-    (J.DOWNLOAD_APP = 'download_app'),
-    (J.MKTG_HYPESQUAD_FORM_SUBMITTED = 'mktg_hypesquad_form_submitted'),
-    (J.MKTG_HYPESQUAD_FORM_OPENED = 'mktg_hypesquad_form_opened'),
-    (J.CHANGE_MARKETING_LOCALE = 'change_marketing_locale'),
-    (J.GAME_CLICKED_LANDING = 'game_clicked_landing'),
-    (J.MAIN_NAVIGATION_MENU = 'main_navigation_menu'),
-    (J.MKTG_APPLICATION_STEP = 'mktg_application_step'),
-    (J.MKTG_WARFRAME_CTA_CLICKED = 'mktg_warframe_cta_clicked'),
-    (J.MKTG_PAGE_CTA_CLICKED = 'mktg_page_cta_clicked'),
-    (J.MKTG_VIDEO_PLAYED = 'mktg_video_played'),
-    (J.DEEP_LINK_CLICKED = 'deep_link_clicked'),
-    (J.SEO_PAGE_VIEWED = 'seo_server_landing_page_viewed'),
-    (J.SEO_PAGE_CTA_CLICKED = 'seo_server_landing_page_cta_clicked'),
-    (J.SEO_AGGREGATOR_PAGE_VIEWED = 'seo_aggregator_page_viewed'),
-    (J.SEO_AGGREGATOR_CTA_CLICKED = 'seo_aggregator_page_cta_clicked'),
-    (J.LOCATION_STACK_METADATA = 'location_stack_metadata'),
-    (J.CREATOR_STORE_PAGE_VIEWED = 'creator_store_page_viewed'),
-    (J.CREATOR_STORE_PAGE_CTA_CLICKED = 'creator_store_page_cta_clicked'),
+((z = S || (S = {})).EXPERIMENT_USER_TRIGGERED = 'experiment_user_triggered'),
+    (z.EXPERIMENT_GUILD_TRIGGERED = 'experiment_guild_triggered'),
+    (z.EXPERIMENT_SAVE_EXPOSURE_FAILED = 'experiment_save_exposure_failed'),
+    (z.MKTG_PAGE_VIEWED = 'mktg_page_viewed'),
+    (z.CLICK_LANDING_CTA = 'click_landing_cta'),
+    (z.DOWNLOAD_APP = 'download_app'),
+    (z.MKTG_HYPESQUAD_FORM_SUBMITTED = 'mktg_hypesquad_form_submitted'),
+    (z.MKTG_HYPESQUAD_FORM_OPENED = 'mktg_hypesquad_form_opened'),
+    (z.CHANGE_MARKETING_LOCALE = 'change_marketing_locale'),
+    (z.GAME_CLICKED_LANDING = 'game_clicked_landing'),
+    (z.MAIN_NAVIGATION_MENU = 'main_navigation_menu'),
+    (z.MKTG_APPLICATION_STEP = 'mktg_application_step'),
+    (z.MKTG_WARFRAME_CTA_CLICKED = 'mktg_warframe_cta_clicked'),
+    (z.MKTG_PAGE_CTA_CLICKED = 'mktg_page_cta_clicked'),
+    (z.MKTG_VIDEO_PLAYED = 'mktg_video_played'),
+    (z.DEEP_LINK_CLICKED = 'deep_link_clicked'),
+    (z.SEO_PAGE_VIEWED = 'seo_server_landing_page_viewed'),
+    (z.SEO_PAGE_CTA_CLICKED = 'seo_server_landing_page_cta_clicked'),
+    (z.SEO_AGGREGATOR_PAGE_VIEWED = 'seo_aggregator_page_viewed'),
+    (z.SEO_AGGREGATOR_CTA_CLICKED = 'seo_aggregator_page_cta_clicked'),
+    (z.LOCATION_STACK_METADATA = 'location_stack_metadata'),
+    (z.CREATOR_STORE_PAGE_VIEWED = 'creator_store_page_viewed'),
+    (z.CREATOR_STORE_PAGE_CTA_CLICKED = 'creator_store_page_cta_clicked'),
     ((L || (L = {})).MKTG_ACKNOWLEDGEMENTS_MODAL_OPEN = 'mktg_ack_modal_open'),
     ((Q = D || (D = {})).AED = 'aed'),
     (Q.AFN = 'afn'),

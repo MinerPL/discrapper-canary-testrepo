@@ -3,16 +3,13 @@ n.d(t, {
         return _;
     },
     DP: function () {
-        return p;
+        return h;
     },
     Ly: function () {
         return f;
     },
     SG: function () {
         return E;
-    },
-    ZT: function () {
-        return h;
     }
 });
 var r = n(735250);
@@ -29,12 +26,12 @@ var o = n(51144),
     d = n(689938);
 function _(e, t, i, s) {
     (0, a.openModalLazy)(async () => {
-        let { default: a } = await n.e('82634').then(n.bind(n, 28130));
+        let { default: a } = await Promise.all([n.e('70687'), n.e('32880')]).then(n.bind(n, 28130));
         return (n) =>
             (0, r.jsx)(a, {
                 filters: s,
                 maxFileSizeBytes: u.B,
-                imageSpecifications: e === c.pC.BANNER && d.Z.Messages.USER_SETTINGS_PROFILE_THEMES_BANNER_MODAL_SPECS,
+                imageSpecifications: e === c.pC.BANNER ? d.Z.Messages.USER_SETTINGS_PROFILE_THEMES_BANNER_MODAL_SPECS : void 0,
                 onComplete: (n, r) =>
                     (0, l.j)({
                         imageSrc: n,
@@ -64,13 +61,5 @@ function f(e) {
     return null !== (t = null != s ? s : l) && void 0 !== t ? t : o.ZP.getName(i);
 }
 function h(e) {
-    var t, n;
-    let { pendingProfileEffectId: r, displayProfile: i } = e,
-        a = null == i ? void 0 : null === (t = i._userProfile) || void 0 === t ? void 0 : t.profileEffectId,
-        s = null == i ? void 0 : null === (n = i._guildMemberProfile) || void 0 === n ? void 0 : n.profileEffectId,
-        o = null === r;
-    return o && null != s ? a : o ? null : null != r ? r : null == i ? void 0 : i.profileEffectId;
-}
-function p(e) {
     return (null != e ? (0, i.Bd)(e) : 1) > 0.25;
 }

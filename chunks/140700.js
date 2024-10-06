@@ -1,34 +1,33 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return m;
     }
 }),
     n(47120);
 var i = n(735250),
     a = n(470079),
-    s = n(143927),
-    r = n(481060),
-    l = n(89182),
-    o = n(706454),
+    s = n(481060),
+    r = n(89182),
+    l = n(706454),
+    o = n(164991),
     c = n(783393),
-    d = n(859921),
-    u = n(112471),
-    _ = n(746728),
-    E = n(689938),
-    h = n(380293);
-function m(e) {
+    d = n(112471),
+    u = n(746728),
+    _ = n(689938),
+    E = n(868095);
+function h(e) {
     let { count: t, categoryId: n } = e,
-        a = t.toLocaleString(o.default.locale),
-        s = (0, c.E)({ categoryId: n });
+        a = t.toLocaleString(l.default.locale),
+        r = (0, c.E)({ categoryId: n });
     return (0, i.jsxs)('div', {
-        className: h.label,
+        className: E.label,
         children: [
-            (0, i.jsx)(r.Text, {
+            (0, i.jsx)(s.Text, {
                 variant: 'text-sm/medium',
                 color: 'header-primary',
-                children: s
+                children: r
             }),
-            (0, i.jsx)(r.Text, {
+            (0, i.jsx)(s.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 children: a
@@ -36,17 +35,14 @@ function m(e) {
         ]
     });
 }
-function I(e) {
+function m(e) {
     let { loadId: t } = e,
-        n = (0, d.B)((e) => {
-            let { searchCategoryId: t } = e;
-            return t;
-        }, s.Z),
-        o = (0, u.q)(),
-        I = (0, c.E)({ categoryId: n }),
-        g = a.useCallback(
+        n = (0, o.lZ)(),
+        l = (0, d.q)(),
+        m = (0, c.E)({ categoryId: n }),
+        I = a.useCallback(
             (e) => {
-                (0, _.I)({
+                (0, u.I)({
                     loadId: t,
                     categoryId: Number(e)
                 });
@@ -55,37 +51,37 @@ function I(e) {
         ),
         p = a.useMemo(
             () =>
-                null == o
+                null == l
                     ? []
-                    : o.map((e) => {
+                    : l.map((e) => {
                           let [t, n] = e;
                           return {
                               id: ''.concat(t),
-                              label: (0, i.jsx)(m, {
+                              label: (0, i.jsx)(h, {
                                   categoryId: t,
                                   count: n
                               })
                           };
                       }),
-            [o]
+            [l]
         );
-    return null == o
+    return null == l
         ? null
         : (0, i.jsxs)('div', {
-              className: h.container,
+              className: E.container,
               children: [
-                  (0, i.jsx)(r.Text, {
+                  (0, i.jsx)(s.Text, {
                       variant: 'text-sm/medium',
                       color: 'text-secondary',
-                      children: E.Z.Messages.GLOBAL_DISCOVERY_SHOW
+                      children: _.Z.Messages.GLOBAL_DISCOVERY_SHOW
                   }),
-                  (0, i.jsx)(l.Z, {
-                      className: h.filter,
+                  (0, i.jsx)(r.Z, {
+                      className: E.filter,
                       items: p,
-                      title: I,
-                      onSelect: g,
+                      title: m,
+                      onSelect: I,
                       selected: ''.concat(n),
-                      'aria-label': E.Z.Messages.GLOBAL_DISCOVERY_SERVERS_LANGUAGE_FILTER
+                      'aria-label': _.Z.Messages.GLOBAL_DISCOVERY_SERVERS_LANGUAGE_FILTER
                   })
               ]
           });

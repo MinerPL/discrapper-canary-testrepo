@@ -18,7 +18,9 @@ let a = (e) => ({
     },
     assets: {
         hero: e.assets.hero,
+        heroVideo: e.assets.hero_video,
         questBarHero: e.assets.quest_bar_hero,
+        questBarHeroVideo: e.assets.quest_bar_hero_video,
         gameTile: e.assets.game_tile,
         logotype: e.assets.logotype
     },

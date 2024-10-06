@@ -1,10 +1,9 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return j;
     }
 }),
-    n(47120),
-    n(411104);
+    n(47120);
 var r = n(735250),
     a = n(470079),
     l = n(120356),
@@ -12,14 +11,14 @@ var r = n(735250),
     o = n(399606),
     s = n(544891),
     c = n(481060),
-    u = n(355467),
-    d = n(78839),
+    d = n(355467),
+    u = n(78839),
     h = n(709054),
     m = n(246992),
     x = n(981631),
-    f = n(535271),
-    g = n(384712);
-let p = [
+    f = n(219299),
+    p = n(423705);
+let g = [
         {
             label: 'Nitro Monthly',
             value: '511651880837840896'
@@ -110,23 +109,23 @@ let p = [
         '978380692553465866': 'Basic Monthly',
         '1024422698568122368': 'Basic Yearly'
     };
-function C() {
+function j() {
     let [e, t] = a.useState('511651880837840896'),
-        n = (0, o.e7)([d.ZP], () => d.ZP.getPremiumSubscription()),
+        n = (0, o.e7)([u.ZP], () => u.ZP.getPremiumSubscription()),
         l = async () => {
             await s.tn.post({
                 url: '/debug/subscription',
                 body: { plan_id: e }
             }),
-                await (0, u.jg)();
+                await (0, d.jg)();
         },
         h = async () => {
-            await s.tn.del('/debug/subscription'), await (0, u.jg)();
+            await s.tn.del('/debug/subscription'), await (0, d.jg)();
         };
     return (0, r.jsx)(c.ScrollerThin, {
         className: i()(f.panel),
         children: (0, r.jsxs)('div', {
-            className: g.panelInner,
+            className: p.panelInner,
             children: [
                 (0, r.jsx)(c.Text, {
                     style: { marginBottom: '16px' },
@@ -134,7 +133,7 @@ function C() {
                     children: 'Manage Subscription'
                 }),
                 (0, r.jsxs)('section', {
-                    className: g.buttons,
+                    className: p.buttons,
                     children: [
                         null == n &&
                             (0, r.jsxs)(r.Fragment, {
@@ -146,7 +145,7 @@ function C() {
                                     (0, r.jsx)(c.Select, {
                                         serialize: (e) => e,
                                         isSelected: (t) => t === e,
-                                        options: p,
+                                        options: g,
                                         select: t,
                                         popoutLayerContext: m.O$
                                     }),
@@ -164,24 +163,21 @@ function C() {
                         })
                     ]
                 }),
-                null != n && (0, r.jsx)(j, { subscription: n })
+                null != n && (0, r.jsx)(C, { subscription: n })
             ]
         })
     });
 }
-function j(e) {
+function C(e) {
     var t;
     let { subscription: n } = e,
-        a = (e) => {
-            if ((null == e && (e = n.status), e in b)) return b[e];
-            throw Error('Unknown status');
-        },
+        a = (e) => ((null == e && (e = n.status), e in b) ? b[e] : 'Unknown status '.concat(e)),
         l = async (e) => {
             await s.tn.patch({
                 url: '/debug/subscription',
                 body: { subscription_status: e }
             }),
-                await (0, u.jg)();
+                await (0, d.jg)();
         },
         o = async (e) => {
             let t = new Date(e),
@@ -193,9 +189,9 @@ function j(e) {
                     premium_streak_started_at: r
                 }
             }),
-                await (0, u.jg)();
+                await (0, d.jg)();
         },
-        d =
+        u =
             n.planIdFromItems in
             {
                 '978380692553465866': !0,
@@ -209,7 +205,7 @@ function j(e) {
                 children: 'Existing Subscription'
             }),
             (0, r.jsxs)('div', {
-                className: i()(g.card, d ? g.gradientWrapperTier0 : g.gradientWrapperTier2),
+                className: i()(p.card, u ? p.gradientWrapperTier0 : p.gradientWrapperTier2),
                 children: [
                     (0, r.jsxs)(c.Text, {
                         variant: 'text-md/normal',
@@ -217,9 +213,7 @@ function j(e) {
                             ' Subscription Type: ',
                             (() => {
                                 let e = n.planIdFromItems;
-                                if (null == e) throw Error('No plan id');
-                                if (e in _) return _[e];
-                                throw Error('Unknown plan id');
+                                return null == e ? 'No plan id' : e in _ ? _[e] : 'Unknown plan id '.concat(e);
                             })(),
                             ' '
                         ]

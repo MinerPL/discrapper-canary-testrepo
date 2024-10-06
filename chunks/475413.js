@@ -22,7 +22,7 @@ var i = n(120356),
     s = n(693789),
     o = n(481060),
     l = n(785717),
-    u = n(678855);
+    u = n(563331);
 let c = {
     primary: a()(u.themeColor, u.primary),
     secondary: a()(u.themeColor, u.secondary),
@@ -59,11 +59,12 @@ function _(e) {
     });
 }
 function E(e) {
-    let { icon: t, tooltipText: n, tooltipDelay: i, tooltipClassName: l, tooltipContainerClassName: c, className: _, innerClassName: E, ...f } = e;
+    let { icon: t, tooltipText: n, tooltipDelay: i, tooltipClassName: l, tooltipContainerClassName: c, className: _, innerClassName: E, shouldShowTooltip: f = !0, ...h } = e;
     return (0, r.jsx)(o.TooltipContainer, {
         text: n,
         'aria-label': !1,
         delay: i,
+        shouldShow: f,
         className: c,
         tooltipClassName: l,
         children: (0, r.jsx)(d, {
@@ -73,7 +74,7 @@ function E(e) {
             size: s.zx.Sizes.NONE,
             grow: !1,
             'aria-label': n,
-            ...f,
+            ...h,
             children: (0, r.jsx)(t, {
                 size: 'xs',
                 color: 'currentColor'

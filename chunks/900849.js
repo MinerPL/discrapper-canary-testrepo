@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     },
     Eg: function () {
-        return y;
+        return C;
     },
     IZ: function () {
         return g;
@@ -24,19 +24,16 @@ n.d(t, {
         return T;
     },
     c6: function () {
-        return v;
-    },
-    j$: function () {
-        return N;
+        return R;
     },
     m9: function () {
-        return O;
+        return N;
     },
     mT: function () {
-        return C;
+        return v;
     },
     rC: function () {
-        return R;
+        return O;
     },
     sq: function () {
         return h;
@@ -175,27 +172,21 @@ function A(e, t) {
         category_id: t
     });
 }
-function N(e, t, n, r) {
-    E.default.track(f.rMx.SEARCH_STARTED, {
-        search_type: f.aib.GUILD_DISCOVERY_TAG,
-        load_id: e,
-        location: {
-            page: f.ZY5.GUILD_DISCOVERY,
-            section: n
-        },
+function N(e) {
+    let { categoryId: t, error: n, willRequestRetry: r, isRequestRetry: i } = e;
+    E.default.track(f.rMx.GUILD_DISCOVERY_SEARCH_FAILED, {
         category_id: t,
-        guild_id: r
+        request_status: n.status,
+        request_error_code: n.code,
+        will_request_retry: r,
+        is_request_retry: i
     });
 }
 function O(e) {
     let { categoryId: t } = e;
-    E.default.track(f.rMx.GUILD_DISCOVERY_SEARCH_FAILED, { category_id: t });
-}
-function R(e) {
-    let { categoryId: t } = e;
     E.default.track(f.rMx.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: t });
 }
-function v(e) {
+function R(e) {
     let { loadId: t, searchId: n, query: r, guildResults: i, analyticsContext: a, categoryId: s, isTagSearch: o } = e;
     E.default.track(f.rMx.SEARCH_RESULT_VIEWED, {
         search_type: o ? f.aib.GUILD_DISCOVERY_TAG : f.aib.GUILD_DISCOVERY,
@@ -208,7 +199,7 @@ function v(e) {
         category_id: s
     });
 }
-function C(e) {
+function v(e) {
     let t = l.Z.getLoadId(e);
     E.default.track(f.rMx.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
         guild_id: e,
@@ -216,7 +207,7 @@ function C(e) {
         guild_size: d.Z.getMemberCount(e)
     });
 }
-async function y(e) {
+async function C(e) {
     try {
         var t, n;
         let r = await s.tn.get({

@@ -25,7 +25,8 @@ function s(e) {
                     }
                 });
             },
-            threshold: 1
+            threshold: 0.5,
+            minTimeVisibleMs: 1000
         })
     };
 }

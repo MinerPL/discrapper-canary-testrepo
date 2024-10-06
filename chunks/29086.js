@@ -1,51 +1,44 @@
 n.d(t, {
     Y: function () {
-        return u;
+        return c;
     }
 }),
     n(733860);
 var i = n(470079),
-    a = n(143927),
-    s = n(731965),
-    r = n(963202),
-    l = n(169559),
-    o = n(726115),
-    c = n(859921),
-    d = n(128449);
-function u() {
-    let e = (0, l.Z)('global_discovery'),
-        { enableClanCreation: t } = (0, r.C3)({
+    a = n(963202),
+    s = n(169559),
+    r = n(726115),
+    l = n(859921),
+    o = n(128449);
+function c() {
+    let e = (0, s.Z)('global_discovery'),
+        { enableClanCreation: t } = (0, a.C3)({
             location: 'global_discovery',
             includeConverted: !0,
             autoTrackExposure: !0
         }),
-        n = (0, c.B)((e) => e.selectedTab, a.Z),
-        u = i.useMemo(() => {
-            let n = [d.vf.GAMING, d.vf.MUSIC, d.vf.ENTERTAINMENT, d.vf.TECH, d.vf.EDUCATION, d.vf.HUBS];
+        n = (0, l.jg)(),
+        c = i.useMemo(() => {
+            let n = [o.vf.GAMING, o.vf.MUSIC, o.vf.ENTERTAINMENT, o.vf.TECH, o.vf.EDUCATION, o.vf.HUBS];
             return (
-                e || t ? n.unshift(d.vf.GUILDS) : n.unshift(d.vf.FEATURED),
+                e || t ? n.unshift(o.vf.GUILDS) : n.unshift(o.vf.FEATURED),
                 n.map((e) => ({
                     id: e,
-                    label: (0, o.vb)(e)
+                    label: (0, r.vb)(e)
                 }))
             );
         }, [t, e]),
-        _ = i.useCallback((e) => {
-            (0, s.j)(() =>
-                c.B.setState({
-                    selectedTab: e,
-                    searchCategoryId: (0, o.lg)(e)
-                })
-            );
+        d = i.useCallback((e) => {
+            (0, l.jY)({ selectedTab: e });
         }, []);
     return (
         i.useEffect(() => {
-            (null == n || !u.some((e) => e.id === n)) && _(u[0].id);
-        }, [n, u, _]),
+            (null == n || !c.some((e) => e.id === n)) && d(c[0].id);
+        }, [n, c, d]),
         {
-            tabs: u,
-            selectedTab: null != n ? n : u[0].id,
-            setSelectedTab: _
+            tabs: c,
+            selectedTab: null != n ? n : c[0].id,
+            setSelectedTab: d
         }
     );
 }

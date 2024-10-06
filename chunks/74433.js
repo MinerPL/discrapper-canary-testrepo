@@ -49,23 +49,24 @@ function c(e, t) {
 }
 function d(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        r = arguments.length > 3 ? arguments[3] : void 0;
+        r = arguments.length > 3 ? arguments[3] : void 0,
+        i = arguments.length > 4 ? arguments[4] : void 0;
     if (Array.isArray(e)) {
-        let i = e;
-        null != t && (i = [...i, null]);
-        let a = null;
-        for (let e of i) {
+        let a = e;
+        null != t && (!i || !1 !== t.discoverable) && (a = [...a, null]);
+        let s = null;
+        for (let e of a) {
             let i = c(e, t, n, r);
             if (null != i)
                 return {
                     activity: e,
                     activityText: i
                 };
-            (null == e ? void 0 : e.type) === o.IIU.CUSTOM_STATUS && null != e.emoji && (a = e);
+            (null == e ? void 0 : e.type) === o.IIU.CUSTOM_STATUS && null != e.emoji && (s = e);
         }
-        return (null == a ? void 0 : a.emoji) != null
+        return (null == s ? void 0 : s.emoji) != null
             ? {
-                  activity: a,
+                  activity: s,
                   activityText: null
               }
             : null;

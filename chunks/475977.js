@@ -2,50 +2,51 @@ var n = t(735250),
     a = t(470079),
     i = t(120356),
     r = t.n(i),
-    o = t(481060),
-    l = t(100527),
-    c = t(906732),
-    d = t(626135),
-    _ = t(335131),
-    E = t(410154),
-    u = t(302800),
-    I = t(981631),
-    T = t(474936),
-    S = t(689938),
-    N = t(853601),
-    C = t(786792),
-    m = t(161594);
-let A = (e) => {
-    var s, t, a, i, l;
-    let { displayOptions: c, marketingVariant: d } = e;
+    o = t(115434),
+    l = t(264181),
+    c = t(399606),
+    d = t(481060),
+    _ = t(100527),
+    u = t(906732),
+    E = t(626135),
+    T = t(335131),
+    S = t(874703),
+    I = t(410154),
+    N = t(302800),
+    A = t(981631),
+    C = t(474936),
+    m = t(689938),
+    g = t(200895),
+    h = t(786792),
+    O = t(161594);
+let p = (e) => {
+    var s, t, a, i, o;
+    let { displayOptions: l, marketingVariant: c } = e;
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)('div', {
-                className: N.artContainer,
+                className: g.artContainer,
                 'aria-hidden': !0,
                 role: 'presentation',
                 children: (0, n.jsx)('img', {
-                    src: null !== (a = null == c ? void 0 : c.artSrc) && void 0 !== a ? a : m,
-                    className: r()(N.art, {
-                        [N.tideArt]: null != d && d === E.C5.TIDE,
-                        [N.defaultArt]: (null == c ? void 0 : c.artSrc) == null
-                    }),
+                    src: null !== (a = null == l ? void 0 : l.artSrc) && void 0 !== a ? a : O,
+                    className: r()(g.art, { [g.tideArt]: null != c && c === I.C5.TIDE }),
                     alt: ''
                 })
             }),
             (0, n.jsxs)('div', {
-                className: N.mainColumn,
+                className: g.mainColumn,
                 children: [
-                    (0, n.jsx)(o.Heading, {
+                    (0, n.jsx)(d.Heading, {
                         variant: 'heading-lg/extrabold',
                         color: 'currentColor',
-                        className: N.title,
-                        children: null !== (i = null == c ? void 0 : null === (s = c.title) || void 0 === s ? void 0 : s.call(c)) && void 0 !== i ? i : S.Z.Messages.COLLECTIBLES_BANNER_TITLE_2024
+                        className: g.title,
+                        children: null !== (i = null == l ? void 0 : null === (s = l.title) || void 0 === s ? void 0 : s.call(l)) && void 0 !== i ? i : m.Z.Messages.COLLECTIBLES_BANNER_TITLE_2024
                     }),
-                    (0, n.jsx)(o.Text, {
+                    (0, n.jsx)(d.Text, {
                         variant: 'text-sm/normal',
                         color: 'currentColor',
-                        children: null !== (l = null == c ? void 0 : null === (t = c.description) || void 0 === t ? void 0 : t.call(c)) && void 0 !== l ? l : S.Z.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
+                        children: null !== (o = null == l ? void 0 : null === (t = l.description) || void 0 === t ? void 0 : t.call(l)) && void 0 !== o ? o : m.Z.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
                     })
                 ]
             })
@@ -54,39 +55,46 @@ let A = (e) => {
 };
 s.Z = () => {
     var e;
-    let { analyticsLocations: s } = (0, c.ZP)(l.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL),
-        t = a.useRef(null),
-        i = (0, E.ZP)('CollectiblesUpsellBanner'),
-        m = u.GX[i];
+    let s;
+    let { analyticsLocations: t } = (0, u.ZP)(_.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL),
+        i = a.useRef(null),
+        O = (0, I.ZP)('CollectiblesUpsellBanner'),
+        R = (0, c.e7)([S.Z], () => S.Z.getMarketingBySurface(o.K.EDIT_PROFILE_SETTINGS));
     return (
+        (s =
+            (null == R ? void 0 : R.type) === l.Z.BANNER
+                ? {
+                      artSrc: R.popoutAsset,
+                      backgroundSrc: R.asset,
+                      title: () => R.title,
+                      description: () => R.body
+                  }
+                : N.GX[O]),
         a.useEffect(() => {
-            d.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: T.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
-                location_stack: s
+            E.default.track(A.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: C.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
+                location_stack: t
             });
-        }, [s]),
+        }, [t]),
         (0, n.jsxs)('div', {
-            ref: t,
-            className: r()(N.container, {
-                [N.robertContainer]: i === E.C5.ROBERT,
-                [N.stormContainer]: i === E.C5.STORM
-            }),
-            style: { backgroundImage: 'url('.concat(null !== (e = null == m ? void 0 : m.backgroundSrc) && void 0 !== e ? e : C, ')') },
+            ref: i,
+            className: r()(g.container, { [g.robertContainer]: O === I.C5.ROBERT }),
+            style: { backgroundImage: 'url('.concat(null !== (e = null == s ? void 0 : s.backgroundSrc) && void 0 !== e ? e : h, ')') },
             children: [
-                (0, n.jsx)(A, {
-                    displayOptions: m,
-                    marketingVariant: i
+                (0, n.jsx)(p, {
+                    displayOptions: s,
+                    marketingVariant: O
                 }),
-                (0, n.jsx)(o.Button, {
+                (0, n.jsx)(d.Button, {
                     onClick: () => {
-                        (0, _.mK)({
-                            analyticsLocations: s,
-                            analyticsSource: l.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL
+                        (0, T.mK)({
+                            analyticsLocations: t,
+                            analyticsSource: _.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL
                         });
                     },
-                    className: N.ctaButton,
-                    color: o.Button.Colors.BRAND_INVERTED,
-                    children: S.Z.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
+                    className: g.ctaButton,
+                    color: d.Button.Colors.BRAND_INVERTED,
+                    children: m.Z.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
                 })
             ]
         })

@@ -8,9 +8,6 @@ n.d(t, {
     O5: function () {
         return l;
     },
-    QI: function () {
-        return c;
-    },
     YC: function () {
         return r;
     }
@@ -21,7 +18,7 @@ var r,
     i,
     a = n(433517),
     s = n(689938);
-((i = r || (r = {})).CLASSIC = 'classic'), (i.DETUNE = 'detune'), (i.RETRO = 'retro'), (i.BUBBLE = 'bop'), (i.DUCKY = 'ducky'), (i.LOFI = 'lofi'), (i.ASMR = 'asmr'), (i.DISCODO = 'discodo');
+((i = r || (r = {})).CLASSIC = 'classic'), (i.RETRO = 'retro'), (i.BUBBLE = 'bop'), (i.DUCKY = 'ducky'), (i.LOFI = 'lofi'), (i.ASMR = 'asmr'), (i.DISCODO = 'discodo');
 let o = 'custom_notification_sounds_asmr',
     l = 'custom_notification_sounds_discodo';
 function u() {
@@ -79,17 +76,5 @@ function u() {
             requirePremium: !0
         },
         ...t
-    ];
-}
-function c() {
-    return [
-        {
-            value: 'classic',
-            label: s.Z.Messages.SOUNDPACK_CLASSIC_LABEL
-        },
-        {
-            value: 'detune',
-            label: s.Z.Messages.SOUNDPACK_DETUNE_LABEL
-        }
     ];
 }

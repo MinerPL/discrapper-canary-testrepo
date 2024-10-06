@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return k;
+        return D;
     }
 }),
     n(47120),
     n(653041);
 var i = n(735250),
-    a = n(470079),
-    s = n(442837),
+    s = n(470079),
+    a = n(442837),
     l = n(704215),
     r = n(481060),
     o = n(26151),
@@ -15,29 +15,28 @@ var i = n(735250),
     u = n(40851),
     d = n(607070),
     h = n(451576),
-    m = n(358221),
-    p = n(70097),
-    _ = n(605236),
-    E = n(243778),
+    p = n(358221),
+    m = n(605236),
+    _ = n(243778),
     f = n(590293),
-    C = n(970731),
+    E = n(970731),
     g = n(560688),
-    I = n(173507),
-    x = n(523746),
+    C = n(173507),
+    I = n(523746),
     T = n(819640),
-    N = n(131951),
-    v = n(699516),
-    S = n(594174),
-    Z = n(979651),
+    x = n(131951),
+    S = n(699516),
+    v = n(594174),
+    N = n(979651),
     A = n(585483),
-    M = n(63063),
-    b = n(665149),
-    R = n(981631),
-    j = n(921944),
+    Z = n(63063),
+    M = n(665149),
+    b = n(981631),
+    R = n(921944),
     L = n(65154),
-    P = n(689938),
-    O = n(517759);
-function y(e, t, n) {
+    j = n(689938),
+    P = n(648298);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,95 +49,81 @@ function y(e, t, n) {
         e
     );
 }
-class D extends a.PureComponent {
+class y extends s.PureComponent {
     componentDidMount() {
-        A.S.subscribe(R.CkL.CALL_START, this.handleVoiceClick);
+        A.S.subscribe(b.CkL.CALL_START, this.handleVoiceClick);
     }
     componentWillUnmount() {
-        A.S.unsubscribe(R.CkL.CALL_START, this.handleVoiceClick);
+        A.S.unsubscribe(b.CkL.CALL_START, this.handleVoiceClick);
     }
     renderVideoCallButton() {
         let e, t;
-        let { inCall: n, callActive: a, callUnavailable: s, isBlocked: l, channel: o, mode: c } = this.props;
-        if (n || (a && c === R.WtW.VOICE)) return null;
-        let u = o.isManaged(),
-            d = null,
-            h = !1;
+        let { inCall: n, callActive: s, callUnavailable: a, isBlocked: l, channel: o, mode: c, isProvisional: u } = this.props;
+        if (n || (s && c === b.WtW.VOICE)) return null;
+        let d = o.isManaged(),
+            h = null,
+            p = !1;
         return (
-            N.Z.supports(L.AN.VIDEO) ? (l ? ((d = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (e = r.Tooltip.Colors.RED), (h = !0)) : a && c === R.WtW.VIDEO ? ((t = this.handleJoinVideoCall), (d = u ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VIDEO_CALL)) : ((t = this.handleStartVideoCall), (d = u ? P.Z.Messages.CONNECT : P.Z.Messages.START_VIDEO_CALL))) : ((h = !0), (t = this.handleBrowserNotSupported), (d = P.Z.Messages.BROWSER_NOT_SUPPORTED)),
-            (0, i.jsx)(b.ZP.Icon, {
+            u ? ((p = !0), (h = j.Z.Messages.CALL_UNAVAILABLE_PROVISIONAL_USER), (e = r.Tooltip.Colors.RED)) : x.Z.supports(L.AN.VIDEO) ? (l ? ((h = j.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (e = r.Tooltip.Colors.RED), (p = !0)) : s && c === b.WtW.VIDEO ? ((t = this.handleJoinVideoCall), (h = d ? j.Z.Messages.CONNECT : j.Z.Messages.JOIN_VIDEO_CALL)) : ((t = this.handleStartVideoCall), (h = d ? j.Z.Messages.CONNECT : j.Z.Messages.START_VIDEO_CALL))) : ((p = !0), (t = this.handleBrowserNotSupported), (h = j.Z.Messages.BROWSER_NOT_SUPPORTED)),
+            (0, i.jsx)(M.ZP.Icon, {
                 icon: r.VideoIcon,
                 onClick: t,
-                disabled: h || s,
-                tooltip: d,
+                disabled: p || a,
+                tooltip: h,
                 tooltipColor: e
             })
         );
     }
     renderVoiceCallButton() {
-        let e;
-        let { inCall: t, canShowTooltip: n, callActive: a, callUnavailable: s, isBlocked: o, channel: c, canShowActivityGdmTooltip: u, dismissibleContentTypes: d, useReducedMotion: h } = this.props;
-        if (t) return null;
-        let m = c.isManaged(),
-            _ = '',
+        let e, t;
+        let { inCall: n, canShowTooltip: s, callActive: a, callUnavailable: o, isBlocked: c, channel: u, canShowActivityGdmTooltip: d, dismissibleContentTypes: h, isProvisional: p } = this.props;
+        if (n) return null;
+        let m = u.isManaged(),
             f = !1;
-        s ? ((_ = m ? P.Z.Messages.VOICE_UNAVAILABLE : P.Z.Messages.CALL_UNAVAILABLE), (e = r.Tooltip.Colors.RED), (f = !0)) : o ? ((_ = P.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (e = r.Tooltip.Colors.RED), (f = !0)) : (_ = a ? (m ? P.Z.Messages.CONNECT : P.Z.Messages.JOIN_VOICE_CALL) : m ? P.Z.Messages.CONNECT : P.Z.Messages.START_VOICE_CALL);
-        let g = (0, i.jsx)(b.ZP.Icon, {
+        p ? ((f = !0), (e = j.Z.Messages.CALL_UNAVAILABLE_PROVISIONAL_USER), (t = r.Tooltip.Colors.RED)) : o ? ((e = m ? j.Z.Messages.VOICE_UNAVAILABLE : j.Z.Messages.CALL_UNAVAILABLE), (t = r.Tooltip.Colors.RED), (f = !0)) : c ? ((e = j.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (t = r.Tooltip.Colors.RED), (f = !0)) : (e = a ? (m ? j.Z.Messages.CONNECT : j.Z.Messages.JOIN_VOICE_CALL) : m ? j.Z.Messages.CONNECT : j.Z.Messages.START_VOICE_CALL);
+        let g = (0, i.jsx)(M.ZP.Icon, {
             icon: r.PhoneCallIcon,
             onClick: this.handleVoiceClick,
             disabled: f,
-            tooltip: _,
-            tooltipColor: e
+            tooltip: e,
+            tooltipColor: t
         });
-        return (0, i.jsx)(E.ZP, {
-            contentTypes: d,
+        return (0, i.jsx)(_.ZP, {
+            contentTypes: h,
             children: (e) => {
-                let { visibleContent: a, markAsDismissed: s } = e;
-                if (a === l.z.ACTIVITY_GDM_CALL_TOOLTIP)
+                let { visibleContent: t, markAsDismissed: a } = e;
+                if (t === l.z.ACTIVITY_GDM_CALL_TOOLTIP)
                     return (0, i.jsx)(r.Popout, {
                         position: 'bottom',
                         align: 'center',
                         animation: r.Popout.Animation.TRANSLATE,
-                        shouldShow: n && u && !t,
+                        shouldShow: s && d && !n,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
-                            return (0, i.jsx)(C.ZP, {
-                                header: (0, i.jsxs)('div', {
-                                    children: [
-                                        (0, i.jsx)(p.Z, {
-                                            className: O.tooltipImage,
-                                            autoPlay: !h,
-                                            src: 'https://cdn.discordapp.com/attachments/860252504826445825/1078051428028924006/mobile_coachmark.mp4',
-                                            width: 248,
-                                            height: 139.5,
-                                            loop: !0,
-                                            muted: !0
-                                        }),
-                                        (0, i.jsx)(r.Heading, {
-                                            variant: 'heading-md/bold',
-                                            color: 'always-white',
-                                            children: P.Z.Messages.EMBEDDED_ACTIVITIES_DM_TOOLTIP_HEADER
-                                        })
-                                    ]
+                            return (0, i.jsx)(E.ZP, {
+                                header: (0, i.jsx)(r.Heading, {
+                                    variant: 'heading-md/bold',
+                                    color: 'always-white',
+                                    children: j.Z.Messages.EMBEDDED_ACTIVITIES_DM_TOOLTIP_HEADER
                                 }),
                                 content: (0, i.jsxs)('div', {
                                     children: [
                                         (0, i.jsx)(r.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'always-white',
-                                            children: P.Z.Messages.EMBEDDED_ACTIVITIES_DM_TOOLTIP_BODY
+                                            children: j.Z.Messages.EMBEDDED_ACTIVITIES_DM_TOOLTIP_BODY
                                         }),
                                         (0, i.jsx)(r.Anchor, {
-                                            href: M.Z.getArticleURL(R.BhN.ACTIVITIES),
-                                            children: P.Z.Messages.LEARN_MORE
+                                            href: Z.Z.getArticleURL(b.BhN.ACTIVITIES),
+                                            children: j.Z.Messages.LEARN_MORE
                                         })
                                     ]
                                 }),
-                                buttonCTA: P.Z.Messages.GOT_IT,
+                                buttonCTA: j.Z.Messages.GOT_IT,
                                 onClick: () => {
-                                    t(), s(j.L.UNKNOWN);
+                                    t(), a(R.L.UNKNOWN);
                                 },
-                                className: O.tooltip
+                                className: P.tooltip
                             });
                         },
                         children: () => g
@@ -148,81 +133,83 @@ class D extends a.PureComponent {
         });
     }
     render() {
-        return (0, i.jsxs)(a.Fragment, {
+        return (0, i.jsxs)(s.Fragment, {
             children: [this.renderVoiceCallButton(), this.renderVideoCallButton()]
         });
     }
     constructor(...e) {
         super(...e),
-            y(this, 'handleStartCall', (e, t) => {
-                let { channel: n, notFriend: i, appContext: a } = this.props,
-                    s = i ? n.getRecipientId() : null,
-                    l = () => o.Z.call(n.id, t, !i && !n.isManaged() && !(null == e ? void 0 : e.shiftKey), s);
-                t ? (0, I.Z)(l, a) : l();
+            O(this, 'handleStartCall', (e, t) => {
+                let { channel: n, notFriend: i, appContext: s } = this.props,
+                    a = i ? n.getRecipientId() : null,
+                    l = () => o.Z.call(n.id, t, !i && !n.isManaged() && !(null == e ? void 0 : e.shiftKey), a);
+                t ? (0, C.Z)(l, s) : l();
             }),
-            y(this, 'handleJoinCall', (e) => {
+            O(this, 'handleJoinCall', (e) => {
                 c.default.selectVoiceChannel(this.props.channel.id, e);
             }),
-            y(this, 'handleVoiceClick', (e) => {
+            O(this, 'handleVoiceClick', (e) => {
                 let { callUnavailable: t, callActive: n, canShowActivityGdmTooltip: i } = this.props;
-                if ((i && (0, _.EW)(l.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: j.L.AUTO }), t));
+                if ((i && (0, m.EW)(l.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: R.L.AUTO }), t));
                 else if (n) return this.handleJoinCall(!1);
                 else return this.handleStartCall(e, !1);
             }),
-            y(this, 'handleStartVideoCall', (e) => {
+            O(this, 'handleStartVideoCall', (e) => {
                 this.handleStartCall(e, !0);
             }),
-            y(this, 'handleJoinVideoCall', () => {
+            O(this, 'handleJoinVideoCall', () => {
                 let { appContext: e } = this.props;
-                (0, I.Z)(() => this.handleJoinCall(!0), e);
+                (0, C.Z)(() => this.handleJoinCall(!0), e);
             }),
-            y(this, 'handleBrowserNotSupported', () => {
+            O(this, 'handleBrowserNotSupported', () => {
                 (0, g.Z)();
             });
     }
 }
-function k(e) {
-    let { channel: t } = e,
-        n = (0, f.Z)(),
-        r = (0, s.e7)([m.Z], () => m.Z.getMode(t.id)),
-        o = (0, s.e7)([Z.Z], () => Z.Z.isInChannel(t.id)),
-        c = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
-        { callActive: p, callUnavailable: _ } = (0, s.cj)([x.Z], () => ({
-            callActive: x.Z.isCallActive(t.id),
-            callUnavailable: x.Z.isCallUnavailable(t.id)
+function D(e) {
+    var t;
+    let { channel: n } = e,
+        r = (0, f.Z)(),
+        o = (0, a.e7)([p.Z], () => p.Z.getMode(n.id)),
+        c = (0, a.e7)([N.Z], () => N.Z.isInChannel(n.id)),
+        m = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
+        { callActive: _, callUnavailable: E } = (0, a.cj)([I.Z], () => ({
+            callActive: I.Z.isCallActive(n.id),
+            callUnavailable: I.Z.isCallUnavailable(n.id)
         })),
-        E = t.getRecipientId(),
-        { notFriend: C, isBlocked: g } = (0, s.cj)([v.Z], () => ({
-            notFriend: t.type === R.d4z.DM && null != E && !v.Z.isFriend(E),
-            isBlocked: t.type === R.d4z.DM && null != E && v.Z.isBlocked(E)
+        g = n.getRecipientId(),
+        { notFriend: C, isBlocked: x } = (0, a.cj)([S.Z], () => ({
+            notFriend: n.type === b.d4z.DM && null != g && !S.Z.isFriend(g),
+            isBlocked: n.type === b.d4z.DM && null != g && S.Z.isBlocked(g)
         })),
-        I = (0, s.e7)([S.default], () => S.default.getUser(E)),
-        N = (0, u.bp)(),
-        A = [],
-        M = (0, h.Z)(t.id),
-        b = (0, s.e7)([T.Z], () => T.Z.hasLayers());
-    M && !b && A.push(l.z.ACTIVITY_GDM_CALL_TOOLTIP);
-    let [j, L] = a.useState(!1);
-    return (a.useEffect(() => {
+        A = (0, a.e7)([v.default], () => v.default.getUser(g)),
+        Z = (0, u.bp)(),
+        M = [],
+        R = (0, h.Z)(n.id),
+        L = (0, a.e7)([T.Z], () => T.Z.hasLayers());
+    R && !L && M.push(l.z.ACTIVITY_GDM_CALL_TOOLTIP);
+    let [j, P] = s.useState(!1);
+    return (s.useEffect(() => {
         let e = setTimeout(() => {
-            L(!0);
+            P(!0);
         }, 250);
         return () => clearTimeout(e);
     }, []),
-    n || (null == I ? void 0 : I.bot))
+    r || (null == A ? void 0 : A.bot))
         ? null
-        : (0, i.jsx)(D, {
-              channel: t,
-              mode: r,
-              inCall: o,
-              callActive: p,
-              callUnavailable: _,
+        : (0, i.jsx)(y, {
+              channel: n,
+              mode: o,
+              inCall: c,
+              callActive: _,
+              isProvisional: null !== (t = null == A ? void 0 : A.isProvisional) && void 0 !== t && t,
+              callUnavailable: E,
               notFriend: C,
-              isBlocked: g,
-              appContext: N,
+              isBlocked: x,
+              appContext: Z,
               canShowTooltip: j,
-              canShowActivityGdmTooltip: M,
-              dismissibleContentTypes: A,
-              useReducedMotion: c
+              canShowActivityGdmTooltip: R,
+              dismissibleContentTypes: M,
+              useReducedMotion: m
           });
 }

@@ -1,116 +1,62 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return I;
     }
 }),
     n(47120);
 var r = n(735250),
     i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    l = n(906732),
-    u = n(541716),
-    c = n(752305),
-    d = n(893718),
-    _ = n(131704),
-    E = n(5192),
-    f = n(785717),
-    h = n(910128),
-    p = n(698305),
-    I = n(261253),
-    m = n(7242),
-    T = n(934861),
-    S = n(981631),
-    g = n(689938),
-    A = n(757983);
-let N = (0, _.kt)({
+    a = n(906732),
+    s = n(541716),
+    o = n(752305),
+    l = n(893718),
+    u = n(131704),
+    c = n(5192),
+    d = n(785717),
+    _ = n(698305),
+    E = n(981631),
+    f = n(689938),
+    h = n(687610);
+let p = (0, u.kt)({
     id: '1',
-    type: S.d4z.DM
+    type: E.d4z.DM
 });
-function O(e) {
-    let { user: t, guildId: n, channelId: a, onClose: _ } = e,
-        { newestAnalyticsLocation: S } = (0, l.ZP)(),
-        { trackUserProfileAction: O } = (0, f.KZ)(),
-        { messageCtaEnabled: R, activeInviteToCallCtaEnabled: v, persistentCallCtaEnabled: C } = (0, h.l)({ location: 'UserProfilePopoutDirectMessageSection' }),
-        [y, L] = i.useState(''),
-        [D, b] = i.useState((0, c.JM)(y)),
-        M = i.useRef(!1);
-    if (R) {
-        let e = (0, r.jsx)(m.Z, {
-            user: t,
-            className: A.biteSizeButton
-        });
-        return v && null != e
-            ? (0, r.jsxs)('div', {
-                  className: A.ctaRow,
-                  children: [
-                      (0, r.jsx)(T.c, {
-                          userId: t.id,
-                          fullWidth: !0,
-                          color: A.engagementExpButton,
-                          themeColor: 'none',
-                          className: A.biteSizeButton,
-                          onClose: _
-                      }),
-                      e
-                  ]
-              })
-            : C
-              ? (0, r.jsxs)('div', {
-                    className: A.ctaRow,
-                    children: [
-                        (0, r.jsx)(T.c, {
-                            userId: t.id,
-                            fullWidth: !0,
-                            color: o.Button.Colors.BRAND,
-                            className: A.biteSizeButton,
-                            onClose: _
-                        }),
-                        (0, r.jsx)(I.Z, {
-                            user: t,
-                            onClose: _,
-                            className: s()(A.engagementExpButton, A.biteSizeIconButton)
-                        })
-                    ]
-                })
-              : (0, r.jsx)(T.c, {
-                    userId: t.id,
-                    fullWidth: !0,
-                    className: A.biteSizeButton,
-                    color: o.Button.Colors.BRAND,
-                    onClose: _
-                });
-    }
-    return (0, r.jsx)(d.Z, {
-        innerClassName: A.inner,
-        editorClassName: A.editor,
-        type: u.I.USER_PROFILE,
-        placeholder: g.Z.Messages.QUICK_DM_USER.format({ name: E.ZP.getName(n, a, t) }),
-        channel: N,
-        textValue: y,
-        richValue: D,
+function I(e) {
+    let { user: t, guildId: n, channelId: u, onClose: E } = e,
+        { newestAnalyticsLocation: I } = (0, a.ZP)(),
+        { trackUserProfileAction: m } = (0, d.KZ)(),
+        [T, S] = i.useState(''),
+        [g, A] = i.useState((0, o.JM)(T)),
+        N = i.useRef(!1);
+    return (0, r.jsx)(l.Z, {
+        innerClassName: h.inner,
+        editorClassName: h.editor,
+        type: s.I.USER_PROFILE,
+        placeholder: f.Z.Messages.QUICK_DM_USER.format({ name: c.ZP.getName(n, u, t) }),
+        channel: p,
+        textValue: T,
+        richValue: g,
         onChange: (e, t, n) => {
-            if (t !== y) L(t), b(n);
+            if (t !== T) S(t), A(n);
         },
-        focused: M.current,
+        focused: N.current,
         onFocus: () => {
-            M.current = !0;
+            N.current = !0;
         },
         onBlur: () => {
-            M.current = !1;
+            N.current = !1;
         },
         onSubmit: async (e) => {
             let { value: n } = e;
             try {
                 return (
-                    O({ action: 'SEND_DIRECT_MESSAGE' }),
-                    await (0, p.Z)({
+                    m({ action: 'SEND_DIRECT_MESSAGE' }),
+                    await (0, _.Z)({
                         userId: t.id,
                         content: n.trim(),
-                        location: S
+                        location: I
                     }),
-                    null == _ || _(),
+                    null == E || E(),
                     {
                         shouldClear: !0,
                         shouldRefocus: !1

@@ -10,29 +10,18 @@ var r = n(818083);
 let i = (0, r.B)({
         kind: 'user',
         id: '2023-08_secure_frames_encryption',
-        label: 'Allowing testing secure frames for voice/video',
+        label: 'Allowing testing DAVE protocol for voice/video',
         defaultConfig: {
             protocolVersionFloor: 0,
-            canSupportSecureFrames: !1,
-            canSupportMls: !1
+            canSupportDaveProtocol: !1
         },
         treatments: [
             {
-                id: 10,
-                label: 'Can support secure frames above protocol version 112 (MLS)',
-                config: {
-                    protocolVersionFloor: 12,
-                    canSupportSecureFrames: !0,
-                    canSupportMls: !0
-                }
-            },
-            {
                 id: 11,
-                label: 'Can support secure frames above protocol version 114 (MLS)',
+                label: 'Can support DAVE protocol version 1 and above',
                 config: {
-                    protocolVersionFloor: 14,
-                    canSupportSecureFrames: !0,
-                    canSupportMls: !0
+                    protocolVersionFloor: 1,
+                    canSupportDaveProtocol: !0
                 }
             }
         ]
@@ -40,29 +29,18 @@ let i = (0, r.B)({
     a = (0, r.B)({
         kind: 'guild',
         id: '2024-08_secure_frames_encryption_guilds_v2',
-        label: 'Allowing testing secure frames for voice/video (Guilds)',
+        label: 'Allowing testing DAVE protocol for voice/video (Guilds)',
         defaultConfig: {
             protocolVersionFloor: 0,
-            canSupportSecureFrames: !1,
-            canSupportMls: !1
+            canSupportDaveProtocol: !1
         },
         treatments: [
             {
-                id: 10,
-                label: 'Can support secure frames above protocol version 112 (MLS)',
-                config: {
-                    protocolVersionFloor: 12,
-                    canSupportSecureFrames: !0,
-                    canSupportMls: !0
-                }
-            },
-            {
                 id: 11,
-                label: 'Can support secure frames above protocol version 114 (MLS)',
+                label: 'Can support DAVE protocol version 1 and above',
                 config: {
-                    protocolVersionFloor: 14,
-                    canSupportSecureFrames: !0,
-                    canSupportMls: !0
+                    protocolVersionFloor: 1,
+                    canSupportDaveProtocol: !0
                 }
             }
         ]

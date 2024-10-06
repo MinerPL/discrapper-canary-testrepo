@@ -42,7 +42,7 @@ class _ extends (r = o.ZP.Store) {
           })
         : (i[a] = s),
     (t.Z = new _(l.Z, {
-        CONNECTION_OPEN: function () {
+        LOGOUT: function () {
             (u = new Map()), (c = new Set()), (d = new Set());
         },
         DETECTABLE_GAME_SUPPLEMENTAL_FETCH: function (e) {
@@ -57,11 +57,12 @@ class _ extends (r = o.ZP.Store) {
                 c.delete(e), d.delete(e);
             }),
                 n.forEach((e) => {
-                    let { application_id: t, name: n, summary: r, websites: i, themes: a, genres: s, platforms: o, artwork_urls: l, screenshot_urls: c, cover_image_url: d, first_release_date: _, publisher_names: E, developer_names: f } = e;
+                    let { application_id: t, name: n, summary: r, websites: i, themes: a, genres: s, platforms: o, artwork_urls: l, screenshot_urls: c, cover_image_url: d, first_release_date: _, summary_localized: E, publisher_names: f, developer_names: h } = e;
                     u.set(t, {
                         applicationId: t,
                         name: n,
                         summary: r,
+                        summaryLocalized: E,
                         websites: i,
                         themes: a,
                         genres: s,
@@ -70,8 +71,8 @@ class _ extends (r = o.ZP.Store) {
                         screenshots: c,
                         coverImageUrl: d,
                         firstReleaseDate: _,
-                        publishers: null != E ? E : [],
-                        developers: null != f ? f : []
+                        publishers: null != f ? f : [],
+                        developers: null != h ? h : []
                     });
                 });
         },

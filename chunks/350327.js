@@ -1,36 +1,42 @@
 n.d(t, {
     CM: function () {
-        return I;
-    },
-    Cf: function () {
-        return p;
-    },
-    ID: function () {
-        return m;
-    },
-    Xz: function () {
         return S;
     },
-    Z: function () {
-        return E;
+    Cf: function () {
+        return m;
     },
-    c_: function () {
-        return g;
+    ID: function () {
+        return T;
     },
-    f4: function () {
-        return A;
-    },
-    g_: function () {
-        return h;
-    },
-    pG: function () {
-        return f;
-    },
-    rf: function () {
+    Xz: function () {
         return N;
     },
+    Z: function () {
+        return f;
+    },
+    c_: function () {
+        return A;
+    },
+    f4: function () {
+        return O;
+    },
+    g_: function () {
+        return I;
+    },
+    ho: function () {
+        return p;
+    },
+    pG: function () {
+        return h;
+    },
+    rf: function () {
+        return R;
+    },
+    x3: function () {
+        return v;
+    },
     z5: function () {
-        return T;
+        return g;
     }
 });
 var r = n(544891),
@@ -40,16 +46,17 @@ var r = n(544891),
     o = n(695346),
     l = n(594174),
     u = n(626135),
-    c = n(981631),
-    d = n(474936);
-function _(e) {
-    u.default.track(c.rMx.PREMIUM_FEATURE_TRY_OUT, {
+    c = n(956664),
+    d = n(981631),
+    _ = n(474936);
+function E(e) {
+    u.default.track(d.rMx.PREMIUM_FEATURE_TRY_OUT, {
         feature_name: e,
-        feature_tier: d.h1.PREMIUM_STANDARD
+        feature_tier: _.h1.PREMIUM_STANDARD
     });
 }
-async function E(e, t) {
-    var n, u, d;
+async function f(e, t) {
+    var n, u, c;
     let _ = null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
     if (null == _) return;
     let E = o.dN.getSetting();
@@ -60,12 +67,12 @@ async function E(e, t) {
             userId: _
         });
         let n = await r.tn.patch({
-            url: null != t ? c.ANM.GUILD_PROFILE(t, c.ME) : c.ANM.USER_PROFILE(c.ME),
+            url: null != t ? d.ANM.GUILD_PROFILE(t, d.ME) : d.ANM.USER_PROFILE(d.ME),
             body: e
         });
         if (n.ok) {
             let e = null === (u = n.body.profile_effect) || void 0 === u ? void 0 : u.id,
-                t = null === (d = n.body.profile_effect) || void 0 === d ? void 0 : d.expires_at;
+                t = null === (c = n.body.profile_effect) || void 0 === c ? void 0 : c.expires_at;
             i.Z.dispatch({
                 type: 'USER_PROFILE_UPDATE_SUCCESS',
                 userId: _,
@@ -94,64 +101,79 @@ async function E(e, t) {
         );
     }
 }
-function f() {
+function h() {
     i.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES' });
 }
-function h(e) {
+function p(e) {
+    (null == e ? void 0 : e.startsWith('https:')) === !0
+        ? fetch(e)
+              .then((e) => e.blob())
+              .then((e) => (0, c.fD)(e))
+              .then((e) => I(e))
+        : null != e && I(e);
+}
+function I(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER',
         banner: e
     });
 }
-function p(e) {
+function m(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_BIO',
         bio: e
     });
 }
-function m(e) {
+function T(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS',
         pronouns: e
     });
 }
-function I(e) {
+function S(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR',
         color: e
     });
 }
-function T(e) {
+function g(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS',
         themeColors: e
     });
 }
-function g(e) {
+function A(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR',
         avatar: e
     }),
-        _(d.QP.ANIMATED_AVATAR);
+        E(_.QP.ANIMATED_AVATAR);
 }
-function S(e) {
+function N(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION',
         avatarDecoration: e
     }),
-        _(d.QP.AVATAR_DECORATION);
+        E(_.QP.AVATAR_DECORATION);
 }
-function A(e) {
+function O(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER',
         banner: e
     }),
-        _(d.QP.PROFILE_BANNER);
+        E(_.QP.PROFILE_BANNER);
 }
-function N(e) {
+function R(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS',
         themeColors: e
     }),
-        _(d.QP.PROFILE_THEME_COLOR);
+        E(_.QP.PROFILE_THEME_COLOR);
+}
+function v(e) {
+    i.Z.dispatch({
+        type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET',
+        preset: e
+    }),
+        E(_.QP.PRESET);
 }

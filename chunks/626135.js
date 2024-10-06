@@ -13,7 +13,7 @@ n.r(t),
             return g;
         },
         debugLogEvent: function () {
-            return y;
+            return L;
         },
         expandEventProperties: function () {
             return C;
@@ -161,6 +161,10 @@ let A = {
         throttleKeys: (e) => [e.application_id, e.event],
         throttlePercent: 0.001
     },
+    [f.rMx.ACTIVITY_HANDSHAKE]: {
+        throttlePeriod: 86400000,
+        throttleKeys: (e) => [e.application_id]
+    },
     [f.rMx.CHANNEL_BANNER_VIEWED]: {
         throttlePeriod: 86400000,
         throttleKeys: (e) => [e.banner_type, e.channel_id]
@@ -202,14 +206,6 @@ let A = {
         throttlePeriod: 900000,
         throttleKeys: (e) => [e.tab]
     },
-    [f.rMx.BROADCAST_START_BUTTON_HOVERED]: {
-        throttlePeriod: 60000,
-        throttleKeys: () => []
-    },
-    [f.rMx.BROADCAST_LIST_VISITED]: {
-        throttlePeriod: 300000,
-        throttleKeys: () => []
-    },
     [f.rMx.CHANNEL_LIST_END_REACHED]: {
         throttlePeriod: 900000,
         throttleKeys: (e) => [e.guild_id]
@@ -225,6 +221,14 @@ let A = {
     [f.rMx.KEYWORD_FILTER_MATCH]: {
         throttlePeriod: 900000,
         throttleKeys: (e) => [e.message_id]
+    },
+    [f.rMx.MEDIA_INPUT_VOLUME_CHANGED]: {
+        throttlePeriod: 300000,
+        throttleKeys: (e) => [e.location_stack]
+    },
+    [f.rMx.MEDIA_OUTPUT_VOLUME_CHANGED]: {
+        throttlePeriod: 300000,
+        throttleKeys: (e) => [e.location_stack]
     }
 };
 function N(e) {
@@ -278,11 +282,11 @@ function C(e) {
     let { utmSource: l, utmMedium: u, utmCampaign: c, utmContent: d } = m;
     return (s.utm_source = null !== (t = s.utm_source) && void 0 !== t ? t : l), (s.utm_medium = null !== (n = s.utm_medium) && void 0 !== n ? n : u), (s.utm_campaign = null !== (r = s.utm_campaign) && void 0 !== r ? r : c), (s.utm_content = null !== (i = s.utm_content) && void 0 !== i ? i : d), S.forEach((e) => e(s)), s;
 }
-function y(e, t) {
+function L(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     c.default.isLoggingAnalyticsEvents && console.info('AnalyticsUtils.track(...):', e, t), n ? l.Hj('Analytics', e, t) : l.Hj('Analytics', e);
 }
-let L = (0, a.trackMaker)({
+let y = (0, a.trackMaker)({
     analyticEventConfigs: A,
     dispatcher: s.Z,
     TRACK_ACTION_NAME: 'TRACK'
@@ -296,8 +300,8 @@ function D(e, t) {
         type: 'action',
         ...t
     }),
-        y(e, n),
-        L(e, n);
+        L(e, n),
+        y(e, n);
 }
 function b() {
     return (0, i.Z)();
@@ -322,7 +326,7 @@ t.default = {
             return Promise.resolve();
         let r = C(t);
         return (
-            y(e, r, n.logEventProperties),
+            L(e, r, n.logEventProperties),
             R(e, r, {
                 flush: n.flush,
                 fingerprint: n.fingerprint

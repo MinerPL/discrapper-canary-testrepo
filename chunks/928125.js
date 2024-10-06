@@ -1,105 +1,86 @@
-var n, i, o, a;
-function s(t) {
-    return t.type === n.literal;
+var r, i, a, s;
+function o(e) {
+    return e.type === r.literal;
 }
-function u(t) {
-    return t.type === n.argument;
+function l(e) {
+    return e.type === r.argument;
 }
-function c(t) {
-    return t.type === n.number;
+function u(e) {
+    return e.type === r.number;
 }
-function l(t) {
-    return t.type === n.date;
+function c(e) {
+    return e.type === r.date;
 }
-function h(t) {
-    return t.type === n.time;
+function d(e) {
+    return e.type === r.time;
 }
-function f(t) {
-    return t.type === n.select;
+function _(e) {
+    return e.type === r.select;
 }
-function p(t) {
-    return t.type === n.plural;
+function E(e) {
+    return e.type === r.plural;
 }
-function d(t) {
-    return t.type === n.pound;
+function f(e) {
+    return e.type === r.pound;
 }
-function m(t) {
-    return t.type === n.tag;
+function h(e) {
+    return e.type === r.tag;
 }
-function v(t) {
-    return !!(t && 'object' == typeof t && t.type === i.number);
+function p(e) {
+    return !!(e && 'object' == typeof e && e.type === i.number);
 }
-function g(t) {
-    return !!(t && 'object' == typeof t && t.type === i.dateTime);
+function I(e) {
+    return !!(e && 'object' == typeof e && e.type === i.dateTime);
 }
-function y(t) {
-    return {
-        type: n.literal,
-        value: t
-    };
-}
-function b(t, e) {
-    return {
-        type: n.number,
-        value: t,
-        style: e
-    };
-}
-r.d(e, {
+n.d(t, {
     HI: function () {
-        return m;
+        return h;
     },
     Ii: function () {
-        return g;
+        return I;
     },
     Jo: function () {
-        return p;
+        return E;
     },
     O4: function () {
-        return s;
+        return o;
     },
     VG: function () {
-        return u;
+        return l;
     },
     Wh: function () {
-        return v;
+        return p;
     },
     Wi: function () {
-        return f;
+        return _;
     },
     aV: function () {
         return i;
     },
-    mD: function () {
-        return y;
-    },
     pe: function () {
-        return h;
-    },
-    qx: function () {
-        return b;
+        return d;
     },
     rp: function () {
-        return l;
-    },
-    uf: function () {
         return c;
     },
+    uf: function () {
+        return u;
+    },
     wD: function () {
-        return n;
+        return r;
     },
     yx: function () {
-        return d;
+        return f;
     }
 }),
-    ((o = n || (n = {}))[(o.literal = 0)] = 'literal'),
-    (o[(o.argument = 1)] = 'argument'),
-    (o[(o.number = 2)] = 'number'),
-    (o[(o.date = 3)] = 'date'),
-    (o[(o.time = 4)] = 'time'),
-    (o[(o.select = 5)] = 'select'),
-    (o[(o.plural = 6)] = 'plural'),
-    (o[(o.pound = 7)] = 'pound'),
-    (o[(o.tag = 8)] = 'tag'),
-    ((a = i || (i = {}))[(a.number = 0)] = 'number'),
-    (a[(a.dateTime = 1)] = 'dateTime');
+    ((a = r || (r = {}))[(a.literal = 0)] = 'literal'),
+    (a[(a.argument = 1)] = 'argument'),
+    (a[(a.number = 2)] = 'number'),
+    (a[(a.date = 3)] = 'date'),
+    (a[(a.time = 4)] = 'time'),
+    (a[(a.select = 5)] = 'select'),
+    (a[(a.plural = 6)] = 'plural'),
+    (a[(a.pound = 7)] = 'pound'),
+    (a[(a.tag = 8)] = 'tag'),
+    ((s = i || (i = {}))[(s.number = 0)] = 'number'),
+    (s[(s.dateTime = 1)] = 'dateTime');

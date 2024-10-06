@@ -18,18 +18,18 @@ var i = n(442837),
     f = n(981631),
     h = n(689938);
 function p(e) {
-    let { user: t, friendToken: n, profileType: p } = e,
+    let { user: t, friendToken: n, profileType: p, shouldShowTooltip: I } = e,
         { newestAnalyticsLocation: m } = (0, o.ZP)(),
-        { trackUserProfileAction: I } = (0, d.KZ)(),
-        T = (0, i.e7)([u.default], () => u.default.getId() === (null == t ? void 0 : t.id)),
+        { trackUserProfileAction: T } = (0, d.KZ)(),
+        S = (0, i.e7)([u.default], () => u.default.getId() === (null == t ? void 0 : t.id)),
         g = (0, i.e7)([c.Z], () => (null != t ? c.Z.getRelationshipType(t.id) : f.OGo.NONE)),
-        S = (0, l.Z)({
+        A = (0, l.Z)({
             user: t,
             color: 'danger',
             location: m,
-            onAction: () => I({ action: 'REMOVE_FRIEND' })
+            onAction: () => T({ action: 'REMOVE_FRIEND' })
         });
-    return null == t || t.bot || T || g === f.OGo.BLOCKED
+    return null == t || t.bot || S || g === f.OGo.BLOCKED
         ? null
         : g === f.OGo.FRIEND
           ? (0, r.jsx)(a.Popout, {
@@ -40,11 +40,12 @@ function p(e) {
                         onSelect: void 0,
                         onClose: t,
                         'aria-label': h.Z.Messages.FRIEND_ACTIONS_MENU_LABEL,
-                        children: S
+                        children: A
                     });
                 },
                 children: (e) =>
                     (0, r.jsx)(_.oY, {
+                        shouldShowTooltip: I,
                         icon: a.UserCheckIcon,
                         tooltipText: h.Z.Messages.FRIENDS,
                         ...e
@@ -54,6 +55,7 @@ function p(e) {
             ? p === E.y0.FULL_SIZE
                 ? null
                 : (0, r.jsx)(_.oY, {
+                      shouldShowTooltip: I,
                       icon: a.UserClockIcon,
                       tooltipText: h.Z.Messages.FRIENDS_SECTION_PENDING,
                       disabled: !0
@@ -64,6 +66,7 @@ function p(e) {
                     action: 'SEND_FRIEND_REQUEST',
                     icon: a.UserPlusIcon,
                     tooltipText: h.Z.Messages.ADD_FRIEND,
+                    shouldShowTooltip: I,
                     onClick: () => {
                         s.Z.addRelationship({
                             userId: t.id,

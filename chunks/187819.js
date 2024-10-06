@@ -1,9 +1,12 @@
-t.d(s, {
+n.d(t, {
     _p: function () {
         return a;
+    },
+    sp: function () {
+        return i;
     }
 });
-let n = (0, t(818083).B)({
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-08_safety_settings_update',
     label: 'Safety Settings Update',
@@ -16,8 +19,13 @@ let n = (0, t(818083).B)({
         }
     ]
 });
+function i(e) {
+    let { location: t, autoTrackExposure: n } = e,
+        { enabled: i } = r.getCurrentConfig({ location: t }, { autoTrackExposure: null == n || n });
+    return i;
+}
 function a(e) {
-    let { location: s } = e,
-        { enabled: t } = n.useExperiment({ location: s }, { autoTrackExposure: !0 });
-    return t;
+    let { location: t, autoTrackExposure: n } = e,
+        { enabled: i } = r.useExperiment({ location: t }, { autoTrackExposure: null == n || n });
+    return i;
 }

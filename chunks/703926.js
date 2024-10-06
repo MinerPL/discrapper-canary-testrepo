@@ -1,13 +1,13 @@
 t.d(n, {
     m: function () {
-        return E;
+        return x;
     }
 });
 var i = t(735250),
     a = t(470079),
     r = t(481060),
     s = t(474936),
-    l = t(154250),
+    l = t(910485),
     o = t(426831),
     c = t(257510),
     u = t(74838),
@@ -15,8 +15,9 @@ var i = t(735250),
     _ = t(385925),
     p = t(588921),
     m = t(718720),
-    I = t(721513);
-let f = {
+    I = t(721513),
+    f = t(959191);
+let E = {
         [s.Cj.STANDARD_BOX]: _,
         [s.Cj.CAKE]: p,
         [s.Cj.CHEST]: m,
@@ -27,11 +28,13 @@ let f = {
         [s.Cj.SEASONAL_CAKE]: c,
         [s.Cj.SEASONAL_CHEST]: u,
         [s.Cj.SEASONAL_COFFEE]: d,
-        [s.Cj.SEASONAL_STANDARD_BOX]: o
+        [s.Cj.SEASONAL_STANDARD_BOX]: o,
+        [s.Cj.NITROWEEN_STANDARD]: f.Z
     },
-    E = a.forwardRef(function (e, n) {
+    x = a.forwardRef(function (e, n) {
         let { isSelected: t, giftStyle: a, setSelectedGiftStyle: s, onFocus: o, onBlur: c } = e;
         return (0, i.jsx)(r.Clickable, {
+            className: l.button,
             innerRef: n,
             onClick: () => s(a),
             onFocus: o,
@@ -42,7 +45,7 @@ let f = {
                     height: '100%'
                 },
                 alt: '',
-                src: f[a],
+                src: E[a],
                 className: t ? l.customGiftBoxHighlighted : l.customGiftBox
             })
         });

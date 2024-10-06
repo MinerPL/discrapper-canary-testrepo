@@ -28,26 +28,25 @@ function h(e) {
         ));
     return s.useCallback(
         (e) => (t, n) => {
-            let a = (n, i) =>
-                    (0, s.createElement)(o.NameWithRoleAnchor, {
+            let s = (n) =>
+                    (0, i.jsx)(o.NameWithRoleAnchor, {
                         ...(null != n ? n : {}),
-                        key: i,
                         onContextMenu: v,
                         name: t,
                         color: null == e ? void 0 : e.colorString,
                         roleName: null == e ? void 0 : e.colorRoleName,
                         'aria-label': _
                     }),
-                d = (e) => (t) => {
+                a = (e) => (t) => {
                     g && t.stopPropagation(), e(t);
                 };
-            return (0, i.jsx)(l.Gt, {
-                value: T,
-                children:
-                    null != h
-                        ? (0, i.jsx)(
-                              o.Popout,
-                              {
+            return (0, i.jsx)(
+                l.Gt,
+                {
+                    value: T,
+                    children:
+                        null != h
+                            ? (0, i.jsx)(o.Popout, {
                                   position: 'right',
                                   preload: () =>
                                       (0, r.Z)(h.id, h.getAvatarURL(p, 80), {
@@ -65,16 +64,16 @@ function h(e) {
                                       }),
                                   children: (e) => {
                                       let { onClick: t, ...n } = e;
-                                      return a({
-                                          onClick: d(t),
+                                      return s({
+                                          onClick: a(t),
                                           ...n
                                       });
                                   }
-                              },
-                              n
-                          )
-                        : a(void 0, n)
-            });
+                              })
+                            : s(void 0)
+                },
+                n
+            );
         },
         [T, h, m, p, f, v, g, _]
     );

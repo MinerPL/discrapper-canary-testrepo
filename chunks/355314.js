@@ -26,12 +26,12 @@ var r = n(735250),
     N = n(981631),
     O = n(731994),
     R = n(689938),
-    v = n(984348);
+    v = n(128893);
 function C(e) {
     let { onClose: t, ...n } = e,
         C = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        y = (0, a.e7)([c.Z], () => c.Z.theme),
-        L = null == C ? void 0 : C.premiumType,
+        L = (0, a.e7)([c.Z], () => c.Z.theme),
+        y = null == C ? void 0 : C.premiumType,
         D = (0, T.N)(),
         b = (0, m.Ng)(),
         M = null != D || null != b,
@@ -44,7 +44,7 @@ function C(e) {
         ),
         U = (0, h.XS)(),
         w = P || U,
-        x = y === N.BRd.LIGHT ? 'light' : 'dark',
+        x = L === N.BRd.LIGHT ? 'light' : 'dark',
         G = w
             ? (0, r.jsx)('img', {
                   className: v.updatedArt,
@@ -58,7 +58,7 @@ function C(e) {
         }, [C]),
         B = i.useMemo(() => {
             let e = R.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({ maxSize: k });
-            switch (L) {
+            switch (y) {
                 case A.p9.TIER_0:
                     e = R.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_0.format({ maxSize: k });
                     break;
@@ -66,12 +66,13 @@ function C(e) {
                     e = R.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_1.format({ maxSize: k });
             }
             return e;
-        }, [L, k]),
+        }, [y, k]),
         F = (0, E.BU)(A.Uq / 1024, { useKibibytes: !0 }),
         V = U ? R.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE_V2 : R.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
         H = w
             ? U
                 ? (0, I.T)({
+                      user: C,
                       onClick: () => {
                           window.open(f.Z.getArticleURL(N.BhN.NITRO_FAQ), '_blank');
                       }

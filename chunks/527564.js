@@ -1,6 +1,6 @@
 t.d(n, {
     M: function () {
-        return x;
+        return E;
     }
 }),
     t(789020);
@@ -14,38 +14,36 @@ var i = t(735250),
     d = t(283836),
     u = t(507608),
     _ = t(147496),
-    p = t(519896),
-    m = t(171246),
-    I = t(55563),
-    f = t(147890),
-    g = t(272242),
-    h = t(981631),
+    p = t(955335),
+    m = t(519896),
+    I = t(171246),
+    f = t(55563),
+    g = t(147890),
+    h = t(272242),
+    C = t(981631),
     v = t(689938),
-    C = t(696672);
-function x(e) {
+    b = t(778452);
+function E(e) {
     let { appId: n } = e,
         { subscriptions: t, otps: a } = (0, d.q)(n);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             t.length > 0 &&
                 (0, i.jsxs)('div', {
-                    className: C.productSection,
+                    className: b.productSection,
                     children: [
-                        (0, i.jsx)(s.Heading, {
-                            variant: 'heading-lg/semibold',
-                            children: v.Z.Messages.STOREFRONT_APP_SUBSCRIPTIONS
-                        }),
+                        (0, i.jsx)(p.r, { subscriptions: t }),
                         (0, i.jsx)('div', {
-                            className: o()(C.productList, C.subList),
+                            className: o()(b.productList, b.subList),
                             children: t.map((e) =>
                                 (0, i.jsx)(
                                     u.zz,
                                     {
                                         appId: n,
                                         listing: e,
-                                        subscriptionType: (0, m.KW)(e.skuFlags) ? 'user' : 'guild',
+                                        subscriptionType: (0, I.KW)(e.skuFlags) ? 'user' : 'guild',
                                         onDetails: () => {
-                                            (0, f.goToApplicationStoreSku)({
+                                            (0, g.goToApplicationStoreSku)({
                                                 applicationId: n,
                                                 skuId: e.skuId
                                             });
@@ -59,14 +57,14 @@ function x(e) {
                 }),
             a.length > 0 &&
                 (0, i.jsxs)('div', {
-                    className: C.productSection,
+                    className: b.productSection,
                     children: [
                         (0, i.jsx)(s.Heading, {
                             variant: 'heading-lg/semibold',
                             children: v.Z.Messages.STOREFRONT_APP_PRODUCTS
                         }),
                         (0, i.jsx)('div', {
-                            className: o()(C.productList, C.itemList),
+                            className: o()(b.productList, b.itemList),
                             children: a.map((e) =>
                                 (0, i.jsx)(
                                     u.hd,
@@ -74,7 +72,7 @@ function x(e) {
                                         skuId: e.skuId,
                                         appId: n,
                                         onDetails: () => {
-                                            (0, f.goToApplicationStoreSku)({
+                                            (0, g.goToApplicationStoreSku)({
                                                 applicationId: n,
                                                 skuId: e.skuId
                                             });
@@ -87,27 +85,27 @@ function x(e) {
                     ]
                 }),
             (0, i.jsx)(c.Z, {
-                path: h.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(':applicationId', ':skuId'),
+                path: C.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(':applicationId', ':skuId'),
                 exact: !0,
-                render: (e) => (0, i.jsx)(b, { ...e })
+                render: (e) => (0, i.jsx)(x, { ...e })
             })
         ]
     });
 }
-function b(e) {
+function x(e) {
     let {
             match: {
                 params: { applicationId: n, skuId: t }
             }
         } = e,
-        r = (0, l.e7)([I.Z], () => I.Z.get(t), [t]),
-        o = (0, l.e7)([I.Z], () => (null != t ? I.Z.getParentSKU(t) : void 0), [t]),
+        r = (0, l.e7)([f.Z], () => f.Z.get(t), [t]),
+        o = (0, l.e7)([f.Z], () => (null != t ? f.Z.getParentSKU(t) : void 0), [t]),
         c = a.useId();
     return (
         a.useLayoutEffect(() => {
             switch (null == r ? void 0 : r.type) {
-                case h.epS.CONSUMABLE:
-                case h.epS.DURABLE:
+                case C.epS.CONSUMABLE:
+                case C.epS.DURABLE:
                     return (function (e, n, t) {
                         (0, s.openModal)(
                             (e) => {
@@ -122,44 +120,44 @@ function b(e) {
                             {
                                 modalKey: e,
                                 onCloseCallback() {
-                                    !E() &&
-                                        (0, f.goToApplicationSection)({
+                                    !P() &&
+                                        (0, g.goToApplicationSection)({
                                             applicationId: n,
-                                            section: g.ApplicationDirectoryProfileSections.STORE
+                                            section: h.ApplicationDirectoryProfileSections.STORE
                                         });
                                 }
                             }
                         );
                     })(c, n, t);
-                case h.epS.SUBSCRIPTION:
-                    if ((null == o ? void 0 : o.id) == null || (null == o ? void 0 : o.flags) == null) return;
-                    return (function (e, n, t, a, r) {
+                case C.epS.SUBSCRIPTION:
+                    if ((null == o ? void 0 : o.flags) == null) return;
+                    return (function (e, n, t, a) {
                         (0, s.openModal)(
                             (e) => {
-                                let { onClose: o, transitionState: l } = e;
-                                return (0, i.jsx)(p.SubscriptionDetailsModal, {
+                                let { onClose: r, transitionState: o } = e;
+                                return (0, i.jsx)(m.SubscriptionDetailsModal, {
                                     appId: n,
-                                    groupListingId: t,
-                                    subscriptionType: (0, m.KW)(r) ? 'user' : 'guild',
-                                    skuId: a,
-                                    onClose: o,
-                                    transitionState: l
+                                    subscriptionType: (0, I.KW)(a) ? 'user' : 'guild',
+                                    skuId: t,
+                                    guildId: null,
+                                    onClose: r,
+                                    transitionState: o
                                 });
                             },
                             {
                                 modalKey: e,
                                 onCloseCallback() {
-                                    !E() &&
-                                        (0, f.goToApplicationSection)({
+                                    !P() &&
+                                        (0, g.goToApplicationSection)({
                                             applicationId: n,
-                                            section: g.ApplicationDirectoryProfileSections.STORE
+                                            section: h.ApplicationDirectoryProfileSections.STORE
                                         });
                                 }
                             }
                         );
-                    })(c, n, o.id, t, o.flags);
+                    })(c, n, t, o.flags);
             }
-        }, [n, c, null == o ? void 0 : o.id, null == o ? void 0 : o.flags, null == r ? void 0 : r.type, t]),
+        }, [n, c, null == o ? void 0 : o.flags, null == r ? void 0 : r.type, t]),
         a.useLayoutEffect(
             () => () => {
                 (0, s.closeModal)(c);
@@ -169,6 +167,6 @@ function b(e) {
         null
     );
 }
-function E() {
+function P() {
     return window.location.pathname.startsWith('/login');
 }

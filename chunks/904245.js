@@ -24,8 +24,8 @@ var r = n(278074),
     R = n(264229),
     v = n(366980),
     C = n(779832),
-    y = n(786761),
-    L = n(459618),
+    L = n(786761),
+    y = n(459618),
     D = n(541288),
     b = n(3148),
     M = n(48854),
@@ -216,6 +216,30 @@ let eI = {
                 !0
             );
         },
+        sendGiftingPromptSystemMessage(e, t) {
+            let n = (0, b.ZP)({
+                channelId: e,
+                type: el.uaV.GIFTING_PROMPT,
+                content: '',
+                flags: el.iLy.EPHEMERAL,
+                author: {
+                    id: el.LAt,
+                    username: 'Gifting Prompt',
+                    discriminator: el.fo$,
+                    avatar: 'gifting_prompt',
+                    bot: !0
+                },
+                giftingPrompt: t
+            });
+            em.receiveMessage(
+                e,
+                {
+                    ...n,
+                    state: el.yb.SENT
+                },
+                !0
+            );
+        },
         sendClydeError(e) {
             let t,
                 n,
@@ -343,14 +367,7 @@ let eI = {
                     oldFormErrors: !0
                 })
                 .then((e) => {
-                    if (e.body.length > 0)
-                        return (
-                            s.Z.dispatch({
-                                type: 'REACTION_MESSAGE_FETCHED',
-                                message: e.body[0]
-                            }),
-                            (0, y.e5)(e.body[0])
-                        );
+                    if (e.body.length > 0) return (0, L.e5)(e.body[0]);
                 });
         },
         fetchMessages(e) {
@@ -584,7 +601,7 @@ let eI = {
                 ...i,
                 nonce: o
             }),
-            L.Z.recordMessageSendAttempt(e, o),
+            y.Z.recordMessageSendAttempt(e, o),
             q.Z.isReady(e))
                 ? s()
                 : r && e !== eu.V
@@ -725,12 +742,12 @@ let eI = {
                 );
             let c = t.content,
                 { invalidEmojis: d, validNonShortcutEmojis: _, tts: m = !1 } = t,
-                { activityAction: T, location: S, suggestedInvite: g, stickerIds: R, messageReference: v, allowedMentions: C, poll: y, contentInventoryEntry: U } = n,
+                { activityAction: T, location: S, suggestedInvite: g, stickerIds: R, messageReference: v, allowedMentions: C, poll: L, contentInventoryEntry: U } = n,
                 F = null !== (i = n.flags) && void 0 !== i ? i : 0,
                 [Z, Y] = (0, H.Z)(c);
             Z && ((c = Y), (F = (0, en.pj)(F, el.iLy.SUPPRESS_NOTIFICATIONS)));
             let j = (null === (r = n.messageReference) || void 0 === r ? void 0 : r.type) === el.Uvt.FORWARD;
-            if ('' === c && null == T && null == R && null == y && !j) return Promise.resolve();
+            if ('' === c && null == T && null == R && null == L && !j) return Promise.resolve();
             let z = null != v ? el.uaV.REPLY : el.uaV.DEFAULT,
                 q = null !== (a = n.nonce) && void 0 !== a ? a : (0, M.r)();
             if (!1 !== n.eagerDispatch) {
@@ -743,7 +760,7 @@ let eI = {
                     allowedMentions: C,
                     flags: 0 !== F ? F : void 0,
                     nonce: q,
-                    poll: (0, G.x9)(y)
+                    poll: (0, G.x9)(L)
                 });
                 (0, w.EL)(e, t.id), null != R && (t.sticker_items = R.map((e) => V.Z.getStickerById(e)).filter((e) => null != e)), em.receiveMessage(e, t, !0, n);
             }
@@ -778,7 +795,7 @@ let eI = {
                 }
             }
             return (
-                null != y && (X.message.poll = y),
+                null != L && (X.message.poll = L),
                 null != R && (X.message.sticker_ids = R),
                 x.Z.isEnabled() && (X.message.has_poggermode_enabled = !0),
                 null != U && (X.message.content_inventory_entry = U),
@@ -798,7 +815,7 @@ let eI = {
                                                 duration: d,
                                                 queueSize: a
                                             },
-                                            poll: y
+                                            poll: L
                                         });
                                     let r = es.default.cast(e),
                                         i = N.Z.getRequest(r);
@@ -812,7 +829,7 @@ let eI = {
                                             joinRequestUserId: n
                                         });
                                     }
-                                    L.Z.recordMessageSendApiResponse(q);
+                                    y.Z.recordMessageSendApiResponse(q);
                                     s.Z.dispatch({
                                         type: 'SLOWMODE_RESET_COOLDOWN',
                                         slowmodeType: J.S.SendMessage,
@@ -874,6 +891,8 @@ let eI = {
                                                         event: el.rMx.QUEST_LINK_SHARED,
                                                         trackGuildAndChannelMetadata: !0
                                                     });
+                                                else if (t === p.g.DISCOVERY_GAME);
+                                                else if (t === p.g.APP_OAUTH2_LINK) u.ZP.trackWithMetadata(el.rMx.APP_OAUTH2_LINK_EMBED_URL_SENT, { application_id: o });
                                                 else throw Error('Unknown coded link type: '.concat(t));
                                             });
                                         })({
@@ -932,7 +951,7 @@ let eI = {
                                                   })
                                                 : o.body.code === el.evJ.POGGERMODE_TEMPORARILY_DISABLED
                                                   ? s.Z.dispatch({ type: 'POGGERMODE_TEMPORARILY_DISABLED' })
-                                                  : null != y || j || em.sendClydeError(e, o.body.code);
+                                                  : null != L || j || em.sendClydeError(e, o.body.code);
                                     }
                                     t
                                         ? em.deleteMessage(e, q, !0)

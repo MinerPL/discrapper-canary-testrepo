@@ -1,11 +1,20 @@
 n.d(t, {
-    E: function () {
+    Eb: function () {
         return u;
     },
-    L: function () {
+    Er: function () {
+        return d;
+    },
+    LO: function () {
         return c;
     }
-});
+}),
+    n(315314),
+    n(610138),
+    n(216116),
+    n(78328),
+    n(815648),
+    n(47120);
 var r = n(873546),
     i = n(149765),
     a = n(69580),
@@ -14,10 +23,10 @@ var r = n(873546),
     l = n(981631);
 function u(e) {
     let { customInstallUrl: t, installParams: n, integrationTypesConfig: r } = e;
-    return null != t || null != n || (null != r && Object.values(r).some((e) => null != e && null != e.oauth2_install_params));
+    return null != t || null != n || (null != r && Object.values(r).some((e) => (null == e ? void 0 : e.oauth2_install_params) != null || (null == e ? void 0 : e.oauth2InstallParams) != null));
 }
 function c(e) {
-    let { applicationId: t, customInstallUrl: n, installParams: u, integrationTypesConfig: c, guildId: d, channelId: _, disableGuildSelect: E, source: f } = e;
+    let { applicationId: t, customInstallUrl: n, installParams: u, integrationTypesConfig: c, guildId: d, channelId: _, disableGuildSelect: E, source: f, oauth2Callback: h } = e;
     if (null != n) {
         s.default.track(l.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
             application_id: t,
@@ -29,7 +38,7 @@ function c(e) {
             (0, o.q)({ href: n });
         return;
     }
-    if (null != c && Object.values(c).some((e) => null != e && null != e.oauth2_install_params)) {
+    if (null != c && Object.values(c).some((e) => (null == e ? void 0 : e.oauth2_install_params) != null || (null == e ? void 0 : e.oauth2InstallParams) != null)) {
         s.default.track(l.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
             application_id: t,
             guild_id: d,
@@ -41,7 +50,8 @@ function c(e) {
                 clientId: t,
                 guildId: d,
                 channelId: _,
-                disableGuildSelect: E
+                disableGuildSelect: E,
+                callback: h
             });
         return;
     }
@@ -59,6 +69,19 @@ function c(e) {
             channelId: _,
             disableGuildSelect: E,
             scopes: u.scopes,
-            permissions: null != u.permissions ? i.vB(u.permissions) : void 0
+            permissions: null != u.permissions ? i.vB(u.permissions) : void 0,
+            callback: h
         }));
+}
+function d(e) {
+    let { applicationId: t, customInstallUrl: n, installParams: r, integrationTypesConfig: i } = e;
+    if (null != n) return null;
+    if (null != i && Object.values(i).some((e) => (null == e ? void 0 : e.oauth2_install_params) != null || (null == e ? void 0 : e.oauth2InstallParams) != null)) {
+        let e = new URL(l.Z5c.OAUTH2_AUTHORIZE, window.location.origin);
+        return e.searchParams.set('client_id', t), e.toString();
+    }
+    if (null != r) {
+        let e = new URL(l.Z5c.OAUTH2_AUTHORIZE, window.location.origin);
+        return e.searchParams.set('client_id', t), e.searchParams.set('scope', r.scopes.join(' ')), null != r.permissions && e.searchParams.set('permissions', r.permissions), e.toString();
+    }
 }

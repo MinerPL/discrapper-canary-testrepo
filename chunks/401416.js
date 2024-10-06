@@ -1,18 +1,14 @@
 n.d(t, {
     Y: function () {
-        return u;
+        return l;
     }
 }),
     n(47120);
 var r = n(544891),
     i = n(147913),
     a = n(25733),
-    s = n(704587),
-    o = n(981631);
-class l extends i.Z {
-    intialize() {
-        s.s.getCurrentConfig({ location: 'initializer' }, { autoTrackExposure: !1 });
-    }
+    s = n(981631);
+class o extends i.Z {
     handleDmSettingsUpsellShow(e) {
         a.Z.openDmSettingsUpsellModal(e.guildId);
     }
@@ -32,7 +28,7 @@ class l extends i.Z {
                 : (t[n] = r);
     }
 }
-function u(e) {
-    return r.tn.post({ url: o.ANM.DM_SETTINGS_UPSELL_ACK(e) });
+function l(e) {
+    return r.tn.post({ url: s.ANM.DM_SETTINGS_UPSELL_ACK(e) });
 }
-t.Z = new l();
+t.Z = new o();

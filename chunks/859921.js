@@ -1,23 +1,35 @@
 n.d(t, {
-    B: function () {
-        return l;
+    OI: function () {
+        return E;
     },
-    t: function () {
-        return i;
+    QQ: function () {
+        return d;
+    },
+    jY: function () {
+        return _;
+    },
+    jg: function () {
+        return u;
     }
 });
-var r = n(652874);
-let a = Object.freeze({
+var i = n(470079),
+    a = n(652874),
+    s = n(143927),
+    r = n(731965);
+let l = Object.freeze({
         selectedTab: null,
-        isSearchVisible: !1,
-        searchLanguageCode: null,
-        searchQuery: '',
-        searchResultsQuery: '',
-        searchCategoryId: n(731455).Hk,
-        initialSearchCategoryId: null,
-        searchScrollPosition: null
+        isSearchVisible: !1
     }),
-    l = (0, r.Z)(() => a);
-function i() {
-    l.setState(a);
+    o = (0, a.Z)(() => l);
+function c(e) {
+    var t;
+    return o(i.useRef(((t = e), (e) => e[t])).current, s.Z);
+}
+let d = () => c('isSearchVisible'),
+    u = () => c('selectedTab'),
+    _ = (e) => {
+        (0, r.j)(() => o.setState(e));
+    };
+function E() {
+    _(l);
 }

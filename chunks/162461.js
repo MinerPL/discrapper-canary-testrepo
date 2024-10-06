@@ -50,13 +50,7 @@ let a = (0, r.B)({
 });
 function s(e) {
     let { enabled: t } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }),
-        { enabled: n } = i.C.getCurrentConfig(
-            { location: e },
-            {
-                disable: !0,
-                autoTrackExposure: !1
-            }
-        );
+        n = (0, i.Ji)(e, !1);
     return t || n;
 }
 function o(e) {

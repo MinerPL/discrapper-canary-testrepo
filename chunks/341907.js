@@ -27,15 +27,16 @@ var i = n(481060),
     c = n(981631),
     d = n(731455);
 function _(e) {
-    let { questId: t, location: a, questContentPosition: s } = e;
+    let { questId: t, location: a, questContentPosition: s, preview: o = !1 } = e;
     (0, i.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([n.e('26138'), n.e('54535'), n.e('76996')]).then(n.bind(n, 985866));
+        let { default: e } = await Promise.all([n.e('37447'), n.e('48923'), n.e('64838'), n.e('28044'), n.e('71740')]).then(n.bind(n, 985866));
         return (n) =>
             (0, r.jsx)(e, {
                 ...n,
                 questId: t,
                 questContentPosition: s,
-                location: a
+                location: a,
+                preview: o
             });
     });
 }

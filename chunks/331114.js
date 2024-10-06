@@ -57,19 +57,22 @@ l(_, 'displayName', 'GlobalDiscoveryServersSearchCountStore'),
             o.clear();
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_START: function (e) {
-            let { id: t } = e;
+            let { query: t } = e;
             d(t).handleSearchCountStart();
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS: function (e) {
-            let { id: t, categoryCounts: n } = e;
+            let { query: t, categoryCounts: n } = e;
             d(t).handleSearchCountSuccess(n);
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_FAILURE: function (e) {
-            let { id: t, error: n } = e;
+            let { query: t, error: n } = e;
             d(t).handleSearchCountFailure(n);
         },
-        GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_CLEAR: function (e) {
-            let { id: t } = e;
-            return o.delete(t);
+        GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: function (e) {
+            let { ignoreQueries: t } = e,
+                n = new Set(t);
+            o.forEach((e, t) => {
+                !n.has(t) && o.delete(t);
+            });
         }
     }));

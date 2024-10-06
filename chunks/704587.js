@@ -1,9 +1,6 @@
 n.d(t, {
     G: function () {
         return i;
-    },
-    s: function () {
-        return r;
     }
 });
 let r = (0, n(818083).B)({

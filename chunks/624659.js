@@ -21,8 +21,8 @@ var a = n(735250),
     I = n(957115),
     f = n(531578),
     h = n(689938),
-    x = n(940256),
-    A = n(138483);
+    x = n(214859),
+    A = n(112003);
 function N() {
     return (0, a.jsx)(c.Text, {
         className: x.helpdeskLink,
@@ -33,36 +33,39 @@ function N() {
 }
 function D(e) {
     var t, n;
-    let { header: s, body: r, problems: m, transitionState: D, feedbackProblems: T = {}, otherKey: L, hasCloseButton: B, onSubmit: p, onClose: R, canDismissForever: M = !0, showHelpdeskLink: O = !0 } = e,
-        S = (0, u.Z)(m),
-        [Z, g] = o.useState(!1),
+    let { header: s, body: r, problems: m, transitionState: D, feedbackProblems: T = {}, otherKey: L, hasCloseButton: B, onSubmit: p, onClose: R, canDismissForever: S = !0, showHelpdeskLink: Z = !0 } = e,
+        M = (0, u.Z)(m),
+        [O, g] = o.useState(!1),
         [j, v] = o.useState(null),
         [F, U] = o.useState(i().shuffle(m)),
         [V, k] = o.useState(''),
-        G = (0, d.Dt)(),
-        y = (0, _.Z)(Z),
-        K = (0, _.Z)(j),
-        H = (0, _.Z)(p),
-        P = (0, _.Z)(V),
-        z = null != j ? T[j] : null,
-        w = null != z;
+        [G, y] = o.useState(!1),
+        K = (0, d.Dt)(),
+        H = (0, _.Z)(O),
+        P = (0, _.Z)(j),
+        z = (0, _.Z)(p),
+        w = (0, _.Z)(V),
+        W = (0, _.Z)(G),
+        Y = null != j ? T[j] : null,
+        q = null != Y;
     return (
         o.useEffect(() => {
-            !i().isEqual(S, m) && U((0, I.B)(m, L));
-        }, [m, S, L]),
+            !i().isEqual(M, m) && U((0, I.B)(m, L));
+        }, [m, M, L]),
         o.useEffect(
             () => () => {
-                H.current({
-                    problem: K.current,
-                    dontShowAgain: y.current,
-                    feedback: P.current
+                z.current({
+                    problem: P.current,
+                    dontShowAgain: H.current,
+                    feedback: w.current,
+                    closeClicked: W.current
                 });
             },
             []
         ),
         (0, a.jsxs)(c.ModalRoot, {
             transitionState: D,
-            'aria-labelledby': G,
+            'aria-labelledby': K,
             children: [
                 (0, a.jsx)(C.Z, {}),
                 (0, a.jsxs)(c.ModalHeader, {
@@ -70,7 +73,7 @@ function D(e) {
                     className: l()(x.headerContainer, A.headerContainer),
                     children: [
                         (0, a.jsx)(c.Heading, {
-                            id: G,
+                            id: K,
                             variant: 'heading-xl/bold',
                             color: 'header-primary',
                             className: x.header,
@@ -80,12 +83,14 @@ function D(e) {
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
                             className: l()(x.ratingBody, A.headerBody),
-                            children: null !== (t = null == z ? void 0 : z.subheader) && void 0 !== t ? t : r
+                            children: null !== (t = null == Y ? void 0 : Y.subheader) && void 0 !== t ? t : r
                         }),
                         B
                             ? (0, a.jsx)(c.ModalCloseButton, {
                                   className: x.modalCloseButton,
-                                  onClick: R
+                                  onClick: function () {
+                                      y(!0), R();
+                                  }
                               })
                             : null
                     ]
@@ -93,7 +98,7 @@ function D(e) {
                 (0, a.jsxs)(c.ModalContent, {
                     className: A.modalContent,
                     children: [
-                        w
+                        q
                             ? null
                             : (0, a.jsx)(c.FormItem, {
                                   className: x.problemInfo,
@@ -105,7 +110,7 @@ function D(e) {
                                       }
                                   })
                               }),
-                        w
+                        q
                             ? (0, a.jsxs)(c.FormItem, {
                                   className: x.problemInfo,
                                   children: [
@@ -114,19 +119,19 @@ function D(e) {
                                           maxLength: f.iF,
                                           onChange: k,
                                           className: A.textArea,
-                                          placeholder: null !== (n = z.hint) && void 0 !== n ? n : h.Z.Messages.FEEDBACK_DESCRIBE_ISSUE
+                                          placeholder: null !== (n = Y.hint) && void 0 !== n ? n : h.Z.Messages.FEEDBACK_DESCRIBE_ISSUE
                                       }),
-                                      O ? (0, a.jsx)(N, {}) : null
+                                      Z ? (0, a.jsx)(N, {}) : null
                                   ]
                               })
                             : null
                     ]
                 }),
-                M || w
+                S || q
                     ? (0, a.jsx)(c.ModalFooter, {
-                          className: l()(x.footer, w ? A.submitFooter : A.modalFooter),
+                          className: l()(x.footer, q ? A.submitFooter : A.modalFooter),
                           direction: E.Z.Direction.HORIZONTAL,
-                          children: w
+                          children: q
                               ? (0, a.jsxs)(a.Fragment, {
                                     children: [
                                         (0, a.jsx)(c.Button, {
@@ -146,12 +151,12 @@ function D(e) {
                                         })
                                     ]
                                 })
-                              : M
+                              : S
                                 ? (0, a.jsx)(c.Checkbox, {
                                       size: 24,
                                       type: c.Checkbox.Types.INVERTED,
-                                      value: Z,
-                                      onChange: () => g(!Z),
+                                      value: O,
+                                      onChange: () => g(!O),
                                       children: (0, a.jsx)(c.Text, {
                                           variant: 'text-md/normal',
                                           children: h.Z.Messages.FEEDBACK_DONT_SHOW_AGAIN

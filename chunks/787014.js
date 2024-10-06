@@ -46,7 +46,7 @@ function _(e) {
     });
 }
 function N(e) {
-    let { name: t, type: n, topic: l, bitrate: r, userLimit: a, nsfw: u, flags: o, rateLimitPerUser: s, defaultThreadRateLimitPerUser: d, defaultAutoArchiveDuration: c, template: _, defaultReactionEmoji: N, rtcRegion: E, videoQualityMode: T, autoArchiveDuration: S, locked: C, invitable: h, availableTags: f, defaultSortOrder: I, defaultForumLayout: A, iconEmoji: m, themeColor: p } = e;
+    let { name: t, type: n, topic: l, bitrate: r, userLimit: a, nsfw: u, flags: o, rateLimitPerUser: s, defaultThreadRateLimitPerUser: d, defaultAutoArchiveDuration: c, template: _, defaultReactionEmoji: N, rtcRegion: E, videoQualityMode: T, autoArchiveDuration: S, locked: C, invitable: f, availableTags: h, defaultSortOrder: A, defaultForumLayout: I, iconEmoji: m, themeColor: p } = e;
     i.Z.dispatch({
         type: 'CHANNEL_SETTINGS_UPDATE',
         name: t,
@@ -65,16 +65,16 @@ function N(e) {
         videoQualityMode: T,
         autoArchiveDuration: S,
         locked: C,
-        invitable: h,
-        availableTags: f,
-        defaultSortOrder: I,
-        defaultForumLayout: A,
+        invitable: f,
+        availableTags: h,
+        defaultSortOrder: A,
+        defaultForumLayout: I,
         iconEmoji: m,
         themeColor: p
     });
 }
 async function E(e, t) {
-    let { name: n, type: o, position: d, topic: c, bitrate: _, userLimit: N, nsfw: E, flags: T, permissionOverwrites: S, rateLimitPerUser: C, defaultThreadRateLimitPerUser: h, defaultAutoArchiveDuration: f, template: I, defaultReactionEmoji: A, rtcRegion: m, videoQualityMode: p, autoArchiveDuration: L, locked: v, invitable: Z, availableTags: g, defaultSortOrder: M, defaultForumLayout: y, iconEmoji: O, themeColor: G } = t,
+    let { name: n, type: o, position: d, topic: c, bitrate: _, userLimit: N, nsfw: E, flags: T, permissionOverwrites: S, rateLimitPerUser: C, defaultThreadRateLimitPerUser: f, defaultAutoArchiveDuration: h, template: A, defaultReactionEmoji: I, rtcRegion: m, videoQualityMode: p, autoArchiveDuration: L, locked: v, invitable: Z, availableTags: g, defaultSortOrder: M, defaultForumLayout: y, iconEmoji: O, themeColor: G } = t,
         H = u.Z.getChannel(e);
     return (
         i.Z.dispatch({ type: 'CHANNEL_SETTINGS_SUBMIT' }),
@@ -93,21 +93,21 @@ async function E(e, t) {
                     flags: T,
                     permission_overwrites: S,
                     rate_limit_per_user: C,
-                    default_thread_rate_limit_per_user: h,
-                    default_auto_archive_duration: f,
-                    template: I,
+                    default_thread_rate_limit_per_user: f,
+                    default_auto_archive_duration: h,
+                    template: A,
                     rtc_region: m,
                     video_quality_mode: p,
                     auto_archive_duration: L,
                     locked: v,
                     invitable: Z,
                     default_reaction_emoji:
-                        null != A
+                        null != I
                             ? {
-                                  emoji_id: null == A ? void 0 : A.emojiId,
-                                  emoji_name: null == A ? void 0 : A.emojiName
+                                  emoji_id: null == I ? void 0 : I.emojiId,
+                                  emoji_name: null == I ? void 0 : I.emojiName
                               }
-                            : null === A
+                            : null === I
                               ? null
                               : void 0,
                     available_tags:
@@ -187,5 +187,8 @@ t.ZP = {
             url: s.ANM.UPDATE_VOICE_CHANNEL_STATUS(e),
             body: { status: t }
         });
+    },
+    removeLinkedLobby: function (e) {
+        return l.tn.del({ url: s.ANM.CHANNEL_LINKED_LOBBY(e) });
     }
 };

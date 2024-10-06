@@ -1,64 +1,65 @@
-t.d(a, {
+n.d(t, {
     C: function () {
-        return i;
+        return d;
     }
 });
-var n = t(735250);
-t(470079);
-var r = t(481060),
-    s = t(600164),
-    o = t(689938),
-    l = t(564510),
-    c = t(387852);
-function i(e) {
-    let { onContinue: a, onClose: t, title: i, body: d } = e;
-    return (0, n.jsxs)(n.Fragment, {
+var a = n(735250);
+n(470079);
+var r = n(481060),
+    s = n(600164),
+    o = n(424071),
+    l = n(689938),
+    c = n(879137),
+    i = n(387852);
+function d(e) {
+    let { onContinue: t, onClose: n, title: d, body: u } = e;
+    return (0, a.jsxs)(o.Z, {
         children: [
-            (0, n.jsxs)(r.ModalHeader, {
+            (0, a.jsxs)(r.ModalHeader, {
                 direction: s.Z.Direction.VERTICAL,
-                className: l.header,
+                className: c.header,
                 separator: !1,
                 children: [
-                    (0, n.jsx)('img', {
-                        src: c,
-                        className: l.illustration,
+                    (0, a.jsx)('img', {
+                        src: i,
+                        className: c.illustration,
                         width: '254',
                         height: '127',
                         alt: ''
                     }),
-                    (0, n.jsx)(r.Heading, {
-                        className: l.title,
+                    (0, a.jsx)(r.Heading, {
+                        className: c.title,
                         variant: 'heading-xl/extrabold',
-                        children: i
+                        children: d
                     }),
-                    null != t &&
-                        (0, n.jsx)(r.ModalCloseButton, {
-                            className: l.closeButton,
-                            onClick: t
+                    null != n &&
+                        (0, a.jsx)(r.ModalCloseButton, {
+                            className: c.closeButton,
+                            onClick: n
                         })
                 ]
             }),
-            (0, n.jsx)(r.ModalContent, {
-                className: l.body,
+            (0, a.jsx)(r.ModalContent, {
+                className: c.body,
                 paddingFix: !1,
-                children: (0, n.jsx)(r.Text, {
+                children: (0, a.jsx)(r.Text, {
                     tag: 'p',
                     variant: 'text-md/normal',
                     color: 'header-secondary',
-                    children: d
+                    children: u
                 })
             }),
-            (0, n.jsx)(r.ModalFooter, {
-                className: l.footer,
-                children: (0, n.jsxs)(r.Button, {
-                    className: l.footerButton,
+            (0, a.jsx)(r.ModalFooter, {
+                className: c.footer,
+                children: (0, a.jsxs)(r.Button, {
+                    className: c.footerButton,
                     color: r.Button.Colors.BRAND,
-                    onClick: a,
+                    onClick: t,
                     children: [
-                        o.Z.Messages.TRY_AGAIN,
-                        (0, n.jsx)(r.WindowLaunchIcon, {
+                        l.Z.Messages.TRY_AGAIN,
+                        (0, a.jsx)(r.WindowLaunchIcon, {
                             color: 'currentColor',
-                            className: l.launchIcon,
+                            className: c.launchIcon,
                             size: 'xs'
                         })
                     ]

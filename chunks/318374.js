@@ -14,11 +14,11 @@ var r = n(735250),
     c = n(239091),
     d = n(751688),
     _ = n(51144),
-    E = n(180160);
+    E = n(711258);
 function f(e) {
-    let { users: t, maxUsers: a, guildId: o, channelId: f, className: h, avatarClassName: p, onFocus: I, size: m = u.AvatarSizes.SIZE_24, overflowCountVariant: T = 'text-xs/medium', overflowCountColor: S = 'interactive-normal', hideOverflowCount: g = !1, disableUsernameTooltip: A = !1, disableUserPopout: N = !1, onUserPopoutClosed: O } = e,
-        [R, v] = i.useState(!1);
-    function C() {
+    let { users: t, maxUsers: a, guildId: o, channelId: f, className: h, avatarClassName: p, onClick: I, onFocus: m, size: T = u.AvatarSizes.SIZE_24, overflowCountVariant: S = 'text-xs/medium', overflowCountColor: g = 'interactive-normal', hideOverflowCount: A = !1, disableUsernameTooltip: N = !1, disableUserPopout: O = !1, onUserPopoutClosed: R } = e,
+        [v, C] = i.useState(!1);
+    function L() {
         return (0, r.jsx)(u.Dialog, {
             className: E.popoutWrapper,
             children: (0, r.jsx)(u.Scroller, {
@@ -31,16 +31,16 @@ function f(e) {
                             guildId: o,
                             channelId: f,
                             nick: _.ZP.getName(e),
-                            disablePopout: 'function' == typeof N ? N(e.id) : N,
+                            disablePopout: 'function' == typeof O ? O(e.id) : O,
                             ignoreModalClicks: !0,
                             onPopoutClose: () => {
-                                v(!1), null == O || O();
+                                C(!1), null == R || R();
                             },
                             onContextMenu: (t) =>
                                 (0, c.jW)(
                                     t,
                                     async () => {
-                                        let { default: t } = await Promise.all([n.e('79695'), n.e('69220'), n.e('46611')]).then(n.bind(n, 881351));
+                                        let { default: t } = await Promise.all([n.e('79695'), n.e('69220'), n.e('50261')]).then(n.bind(n, 881351));
                                         return (n) =>
                                             (0, r.jsx)(t, {
                                                 ...n,
@@ -49,7 +49,7 @@ function f(e) {
                                                 channelId: f
                                             });
                                     },
-                                    { onClose: () => v(!1) }
+                                    { onClose: () => C(!1) }
                                 )
                         },
                         e.id
@@ -67,7 +67,7 @@ function f(e) {
                           .take(a)
                           .map((e) => {
                               let t = _.ZP.getName(e);
-                              return A
+                              return N
                                   ? (0, r.jsx)(
                                         'div',
                                         {
@@ -75,7 +75,7 @@ function f(e) {
                                             children: (0, r.jsx)(u.Avatar, {
                                                 src: e.getAvatarURL(o, 24),
                                                 'aria-label': t,
-                                                size: m
+                                                size: T
                                             })
                                         },
                                         e.id
@@ -88,7 +88,7 @@ function f(e) {
                                             children: (0, r.jsx)(u.Avatar, {
                                                 src: e.getAvatarURL(o, 24),
                                                 'aria-label': t,
-                                                size: m
+                                                size: T
                                             })
                                         },
                                         e.id
@@ -98,24 +98,26 @@ function f(e) {
                       n = t.length - a;
                   return (
                       n > 0 &&
-                          !g &&
+                          !A &&
                           (e[e.length - 1] = (0, r.jsx)(
                               u.Popout,
                               {
-                                  renderPopout: C,
-                                  shouldShow: R,
+                                  renderPopout: L,
+                                  shouldShow: v,
                                   position: 'bottom',
-                                  onRequestClose: () => v(!1),
+                                  onRequestClose: () => C(!1),
                                   children: () =>
                                       (0, r.jsx)(u.Button, {
                                           className: s()(E.avatar, E.overflow),
-                                          onFocus: I,
-                                          onClick: () => v(!0),
+                                          onFocus: m,
+                                          onClick: (e) => {
+                                              null == I || I(e), C(!0);
+                                          },
                                           look: u.Button.Looks.BLANK,
                                           size: u.Button.Sizes.NONE,
                                           children: (0, r.jsxs)(u.Text, {
-                                              variant: T,
-                                              color: S,
+                                              variant: S,
+                                              color: g,
                                               children: ['+', n + 1]
                                           })
                                       })

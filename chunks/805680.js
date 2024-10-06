@@ -13,27 +13,27 @@ var r = n(735250),
     f = n(153867),
     h = n(410575),
     p = n(347469),
-    m = n(40851),
-    I = n(367907),
+    I = n(40851),
+    m = n(367907),
     T = n(907040),
-    g = n(455708),
-    S = n(314910),
+    S = n(455708),
+    g = n(314910),
     A = n(315744),
     N = n(603074),
-    v = n(453070),
-    O = n(926491),
-    R = n(457040),
+    O = n(453070),
+    R = n(926491),
+    v = n(457040),
     C = n(740492),
-    y = n(585483),
-    D = n(5967),
-    L = n(28546),
+    L = n(585483),
+    y = n(5967),
+    D = n(28546),
     b = n(957825),
     M = n(981631),
     P = n(149203),
     U = n(185923),
     w = n(611480),
     x = n(689938),
-    G = n(118282);
+    G = n(226090);
 let k = b.Om + P.Su.MEDIUM,
     B = i.memo(function (e) {
         let { isActive: t, className: n, viewType: i, autoFocus: a = !1, 'aria-controls': o, ...l } = e;
@@ -43,11 +43,11 @@ let k = b.Om + P.Su.MEDIUM,
             'aria-controls': t ? o : void 0,
             ...l,
             onClick: () => {
-                I.ZP.trackWithMetadata(M.rMx.EXPRESSION_PICKER_TAB_CLICKED, {
+                m.ZP.trackWithMetadata(M.rMx.EXPRESSION_PICKER_TAB_CLICKED, {
                     tab: i,
                     badged: !1
                 }),
-                    (0, L.hr)(i);
+                    (0, D.hr)(i);
             },
             'aria-current': t ? 'page' : void 0,
             className: s()(n, G.navButton, G.navItem, { [G.navButtonActive]: t }),
@@ -123,10 +123,10 @@ t.Z = i.memo(function (e) {
             drawerRef: ee,
             orientation: 'left' === K ? p.y.HORIZONTAL_RIGHT : p.y.HORIZONTAL_LEFT
         }),
-        er = (0, L.Iu)((e) => e.activeView),
-        ei = (0, v.fQ)(Y),
-        { renderWindow: ea, windowDispatch: es } = i.useContext(m.ZP),
-        eo = (0, d.e7)([O.Z], () => !O.Z.hasLoadedStickerPacks),
+        er = (0, D.Iu)((e) => e.activeView),
+        ei = (0, O.fQ)(Y),
+        { renderWindow: ea, windowDispatch: es } = i.useContext(I.ZP),
+        eo = (0, d.e7)([R.Z], () => !R.Z.hasLoadedStickerPacks),
         el = (0, A.P)('expression_picker'),
         eu = null != Q,
         ec = (0, _.Jw)(null != Q ? Q : ''),
@@ -140,35 +140,35 @@ t.Z = i.memo(function (e) {
                     if (n === ee.current || 'true' === n.getAttribute('data-menu-item') || 'true' === n.getAttribute('data-premium-tutorial-expression-picker-tooltip') || 'true' === n.getAttribute('data-premium-tutorial-persistent-coachmark-emoji-step')) return;
                     n = n.parentNode;
                 }
-                (0, L._Q)();
-                let r = null === (t = (0, D.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
-                (null == r || 'BODY' === r.tagName) && y.S.dispatchToLastSubscribed(M.CkL.TEXTAREA_FOCUS);
+                (0, D._Q)();
+                let r = null === (t = (0, y.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
+                (null == r || 'BODY' === r.tagName) && L.S.dispatchToLastSubscribed(M.CkL.TEXTAREA_FOCUS);
             },
             [q, ec, eu]
         ),
         e_ = i.useCallback(() => {
-            (0, L._Q)();
+            (0, D._Q)();
         }, []);
     i.useLayoutEffect(() => {
         let e = () => {
-            er === b.X1.GIF && (0, L._Q)();
+            er === b.X1.GIF && (0, D._Q)();
         };
         return (
             ea.addEventListener('mousedown', ed),
             ea.addEventListener('contextmenu', ed),
             es.subscribe(M.CkL.POPOUT_CLOSE, e_),
-            y.S.subscribe(M.CkL.CLOSE_GIF_PICKER, e),
+            L.S.subscribe(M.CkL.CLOSE_GIF_PICKER, e),
             () => {
-                ea.removeEventListener('mousedown', ed), ea.removeEventListener('contextmenu', ed), es.unsubscribe(M.CkL.POPOUT_CLOSE, e_), y.S.unsubscribe(M.CkL.CLOSE_GIF_PICKER, e);
+                ea.removeEventListener('mousedown', ed), ea.removeEventListener('contextmenu', ed), es.unsubscribe(M.CkL.POPOUT_CLOSE, e_), L.S.unsubscribe(M.CkL.CLOSE_GIF_PICKER, e);
             }
         );
     }, [er, e_, ed, ea, es]),
         (0, E.useFocusLock)(X),
         i.useEffect(() => {
-            (0, L.ql)('');
+            (0, D.ql)('');
         }, []),
         i.useEffect(() => {
-            ((!eu && (0, _.$s)()) || (eu && !ec)) && (0, L._Q)();
+            ((!eu && (0, _.$s)()) || (eu && !ec)) && (0, D._Q)();
         }, [ec, eu]),
         i.useEffect(() => {
             if (null != ee.current && !$.current) {
@@ -177,7 +177,7 @@ t.Z = i.memo(function (e) {
                     ? (null == J ? void 0 : null === (e = J.current) || void 0 === e ? void 0 : e.onPickerOpen) != null && (null == J || null === (t = J.current) || void 0 === t || t.onPickerOpen(), ($.current = !0))
                     : er === b.X1.STICKER
                       ? (null == J ? void 0 : null === (n = J.current) || void 0 === n ? void 0 : n.onPickerOpen) != null && !eo && (null == J || null === (r = J.current) || void 0 === r || r.onPickerOpen(), ($.current = !0))
-                      : (I.ZP.trackWithMetadata(M.rMx.EXPRESSION_PICKER_OPENED, {
+                      : (m.ZP.trackWithMetadata(M.rMx.EXPRESSION_PICKER_OPENED, {
                             width: ee.current.offsetWidth,
                             tab: er,
                             badged: !1
@@ -189,11 +189,11 @@ t.Z = i.memo(function (e) {
         ef = (null === (n = j.stickers) || void 0 === n ? void 0 : n.allowSending) && null != H,
         eh = !(null === (a = j.expressionPicker) || void 0 === a ? void 0 : a.onlyEmojis) && (eE || ef),
         ep = 'left' === K ? 'right' : 'left',
-        em = null != z ? z : 'left' === K ? G.positionLayerDefaultAlignLeft : G.positionLayerDefaultAlignRight;
+        eI = null != z ? z : 'left' === K ? G.positionLayerDefaultAlignLeft : G.positionLayerDefaultAlignRight;
     return (0, r.jsx)(h.Z, {
         section: M.jXE.EXPRESSION_PICKER,
-        children: (0, r.jsx)(S.W5, {
-            className: s()(G.positionLayer, em),
+        children: (0, r.jsx)(g.W5, {
+            className: s()(G.positionLayer, eI),
             targetRef: o,
             position: W,
             align: K,
@@ -278,7 +278,7 @@ t.Z = i.memo(function (e) {
                                                 })
                                               : null,
                                           er === b.X1.STICKER && ef
-                                              ? (0, r.jsx)(R.Z, {
+                                              ? (0, r.jsx)(v.Z, {
                                                     isLoading: eo,
                                                     channel: Y,
                                                     containerWidth: et,
@@ -290,7 +290,7 @@ t.Z = i.memo(function (e) {
                                                 })
                                               : null,
                                           er === b.X1.GIF && eE
-                                              ? (0, r.jsx)(g.Z, {
+                                              ? (0, r.jsx)(S.Z, {
                                                     onSelectGIF: C,
                                                     hideFavorites: l,
                                                     persistSearch: !0
@@ -323,7 +323,12 @@ t.Z = i.memo(function (e) {
                                                         onClose: e_,
                                                         onSelect: Z,
                                                         analyticsSource: 'expression-picker',
-                                                        autoWidth: !0
+                                                        renderHeader: (e) =>
+                                                            (0, r.jsx)('div', {
+                                                                className: G.soundboardHeader,
+                                                                children: e
+                                                            }),
+                                                        inExpressionPicker: !0
                                                     })
                                                 })
                                               : null

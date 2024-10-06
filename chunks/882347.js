@@ -19,6 +19,7 @@ async function _(e, t, n) {
     } catch (a) {
         r.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_FAIL',
+            nonce: '',
             applicationId: e,
             channelId: t,
             guildId: n,
@@ -75,7 +76,7 @@ async function h(e) {
         i = null != t ? t : await _(n, r.id, r.getGuildId());
     return (
         null != i &&
-        (!!((0, a.yE)(i.flags, d.udG.EMBEDDED_RELEASED) || s.ZP.hasActivityEverBeenLaunched(n)) ||
+        (!!((0, a.yE)(i.flags, d.udG.EMBEDDED_RELEASED) || i.isVerified || s.ZP.hasActivityEverBeenLaunched(n)) ||
             new Promise((e) => {
                 (0, u.j)({
                     application: i,

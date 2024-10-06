@@ -12,10 +12,13 @@ n.d(t, {
         return T;
     },
     YH: function () {
-        return L;
+        return y;
     },
     iN: function () {
         return _;
+    },
+    io: function () {
+        return b;
     },
     nk: function () {
         return N;
@@ -321,7 +324,7 @@ function C(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return v.useExperiment({ location: e }, { autoTrackExposure: t }).enabled;
 }
-let y = (0, a.B)({
+let L = (0, a.B)({
     kind: 'user',
     id: '2024-07_rapidash_m3_admins_browse',
     label: 'Rapidash M3 Admins Browse',
@@ -334,6 +337,22 @@ let y = (0, a.B)({
         }
     ]
 });
-function L(e) {
-    return y.useExperiment({ location: e }).canAdminsBrowse;
+function y(e) {
+    return L.useExperiment({ location: e }).canAdminsBrowse;
+}
+let D = (0, a.B)({
+    kind: 'user',
+    id: '2024-10_rapidash_discovery_entrypoint',
+    label: 'Rapidash Discovery Entrypoint',
+    defaultConfig: { showDiscovery: !1 },
+    treatments: [
+        {
+            id: 1,
+            label: 'Enable',
+            config: { showDiscovery: !0 }
+        }
+    ]
+});
+function b(e) {
+    return D.useExperiment({ location: e }).showDiscovery;
 }

@@ -3,16 +3,15 @@ var r = n(846519),
     i = n(147913),
     a = n(603113),
     s = n(594190),
-    o = n(592125),
-    l = n(131951),
-    u = n(19780),
-    c = n(885110),
-    d = n(606304),
-    _ = n(938475),
-    E = n(70956),
-    f = n(367907),
-    h = n(981631);
-function p(e, t, n) {
+    o = n(131951),
+    l = n(19780),
+    u = n(885110),
+    c = n(606304),
+    d = n(938475),
+    _ = n(70956),
+    E = n(367907),
+    f = n(981631);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,61 +24,55 @@ function p(e, t, n) {
         e
     );
 }
-let m = 1 * E.Z.Millis.MINUTE;
+let p = 1 * _.Z.Millis.MINUTE;
 class I extends i.Z {
     _initialize() {
-        __OVERLAY__ ? (this.stores = new Map()) : ((this.stores = new Map().set(d.Z, () => this._handleSpeakingStoreChanged()).set(u.Z, () => this._handleRTCConnectionStoreChanged())), this._reset());
+        __OVERLAY__ ? (this.stores = new Map()) : ((this.stores = new Map().set(c.Z, () => this._handleSpeakingStoreChanged()).set(l.Z, () => this._handleRTCConnectionStoreChanged())), this._reset());
     }
     _reset() {
         (this._currentUserSpeaking = !1), (this._anyoneElseSpeaking = !1), null != this._reportInterval && (this._reportInterval.stop(), (this._reportInterval = null));
     }
     _trackStartSpeaking() {
         if (this._currentUserSpeaking) {
-            let e = u.Z.getChannelId(),
-                t = u.Z.getGuildId(),
-                n = o.Z.getChannel(e),
-                r = null == n ? void 0 : n.isBroadcastChannel();
-            (0, f.yw)(h.rMx.START_SPEAKING, {
-                mode: l.Z.getMode(),
-                priority: d.Z.isCurrentUserPrioritySpeaking(),
+            let e = l.Z.getChannelId(),
+                t = l.Z.getGuildId();
+            (0, E.yw)(f.rMx.START_SPEAKING, {
+                mode: o.Z.getMode(),
+                priority: c.Z.isCurrentUserPrioritySpeaking(),
                 channel: e,
                 server: t,
                 channel_id: e,
                 guild_id: t,
-                is_broadcast: r,
-                rtc_connection_id: u.Z.getRTCConnectionId(),
-                media_session_id: u.Z.getMediaSessionId(),
-                voice_state_count: _.ZP.countVoiceStatesForChannel(this._voiceChannelId),
+                rtc_connection_id: l.Z.getRTCConnectionId(),
+                media_session_id: l.Z.getMediaSessionId(),
+                voice_state_count: d.ZP.countVoiceStatesForChannel(this._voiceChannelId),
                 ...this.getGameMetadata(),
-                ...u.Z.getPacketStats()
+                ...l.Z.getPacketStats()
             });
         }
     }
     _trackStartListening() {
-        if (l.Z.isDeaf() || !this._anyoneElseSpeaking) return;
-        let e = u.Z.getChannelId(),
-            t = u.Z.getGuildId(),
-            n = o.Z.getChannel(e),
-            r = null == n ? void 0 : n.isBroadcastChannel();
-        (0, f.yw)(h.rMx.START_LISTENING, {
-            mute: l.Z.isMute(),
-            anyone_priority: d.Z.isAnyonePrioritySpeaking(),
+        if (o.Z.isDeaf() || !this._anyoneElseSpeaking) return;
+        let e = l.Z.getChannelId(),
+            t = l.Z.getGuildId();
+        (0, E.yw)(f.rMx.START_LISTENING, {
+            mute: o.Z.isMute(),
+            anyone_priority: c.Z.isAnyonePrioritySpeaking(),
             channel: e,
             server: t,
             channel_id: e,
             guild_id: t,
-            is_broadcast: r,
-            rtc_connection_id: u.Z.getRTCConnectionId(),
-            media_session_id: u.Z.getMediaSessionId(),
-            voice_state_count: _.ZP.countVoiceStatesForChannel(this._voiceChannelId),
+            rtc_connection_id: l.Z.getRTCConnectionId(),
+            media_session_id: l.Z.getMediaSessionId(),
+            voice_state_count: d.ZP.countVoiceStatesForChannel(this._voiceChannelId),
             ...this.getGameMetadata()
         });
     }
     _terminate() {
-        this._reset(), d.Z.removeChangeListener(this._handleSpeakingStoreChanged), u.Z.removeChangeListener(this._handleRTCConnectionStoreChanged);
+        this._reset(), c.Z.removeChangeListener(this._handleSpeakingStoreChanged), l.Z.removeChangeListener(this._handleRTCConnectionStoreChanged);
     }
     getGameMetadata() {
-        let e = c.Z.findActivity((e) => e.type === h.IIU.PLAYING),
+        let e = u.Z.findActivity((e) => e.type === f.IIU.PLAYING),
             t = s.ZP.getCurrentGameForAnalytics();
         return {
             game_platform: (0, a.Z)(e),
@@ -90,12 +83,12 @@ class I extends i.Z {
     }
     constructor(...e) {
         super(...e),
-            p(this, '_currentUserSpeaking', !1),
-            p(this, '_anyoneElseSpeaking', !1),
-            p(this, '_voiceChannelId', void 0),
-            p(this, '_reportInterval', void 0),
-            p(this, '_handleRTCConnectionStoreChanged', () => {
-                let e = u.Z.getChannelId();
+            h(this, '_currentUserSpeaking', !1),
+            h(this, '_anyoneElseSpeaking', !1),
+            h(this, '_voiceChannelId', void 0),
+            h(this, '_reportInterval', void 0),
+            h(this, '_handleRTCConnectionStoreChanged', () => {
+                let e = l.Z.getChannelId();
                 if (this._voiceChannelId !== e) {
                     if (((this._voiceChannelId = e), null == e)) {
                         this._reset();
@@ -103,15 +96,15 @@ class I extends i.Z {
                     }
                     null == this._reportInterval &&
                         ((this._reportInterval = new r.Xp()),
-                        this._reportInterval.start(m, () => {
+                        this._reportInterval.start(p, () => {
                             this._trackStartSpeaking(), this._trackStartListening();
                         }));
                 }
             }),
-            p(this, '_handleSpeakingStoreChanged', () => {
-                let e = d.Z.isCurrentUserSpeaking();
+            h(this, '_handleSpeakingStoreChanged', () => {
+                let e = c.Z.isCurrentUserSpeaking();
                 this._currentUserSpeaking !== e && ((this._currentUserSpeaking = e), this._trackStartSpeaking());
-                let t = d.Z.isAnyoneElseSpeaking();
+                let t = c.Z.isAnyoneElseSpeaking();
                 this._anyoneElseSpeaking !== t && ((this._anyoneElseSpeaking = t), this._trackStartListening());
             });
     }

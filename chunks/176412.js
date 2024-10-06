@@ -3,10 +3,10 @@ t.d(n, {
         return S;
     },
     P7: function () {
-        return P;
+        return L;
     },
     ae: function () {
-        return g;
+        return P;
     }
 });
 var i = t(470079),
@@ -22,20 +22,21 @@ var i = t(470079),
     p = t(895924),
     _ = t(691424),
     C = t(428595),
-    f = t(364458),
-    h = t(499254),
+    h = t(364458),
+    f = t(499254),
     A = t(541099),
     E = t(827498),
-    N = t(981631),
-    x = t(689938);
-let v = {
+    N = t(346683),
+    x = t(981631),
+    v = t(689938);
+let I = {
         ...C.Z.RULES.commandMention,
         parse: (e, n, t) => ({ content: C.Z.RULES.commandMention.parse(e, n, t).content })
     },
-    I = l().pick(
-        (0, f.Z)([
+    g = l().pick(
+        (0, h.Z)([
             C.Z.RULES,
-            { commandMention: v },
+            { commandMention: I },
             (0, _.Z)({
                 enableBuildOverrides: !1,
                 enableEmojiClick: !1
@@ -43,45 +44,46 @@ let v = {
         ]),
         ['commandMention', 'customEmoji', 'em', 'emoji', 'emoticon', 'highlight', 'inlineCode', 'looseEm', 's', 'strong', 'text', 'timestamp', 'u', 'spoiler']
     ),
-    g = r.w4(I);
-function P(e) {
+    P = r.w4(g);
+function L(e) {
     let { channel: n, application: t, location: i, sectionName: a, commandName: l, autoDismissOnClick: r = !0, launchingComponentId: _, submitting: C = !1 } = e,
-        f = (0, c.O)(),
-        v = (0, d.Qv)({
+        h = (0, c.O)(),
+        I = (0, d.Qv)({
             channelId: n.id,
             applicationId: t.id
         }),
-        I = (0, o.e7)([A.Z], () => A.Z.entrypoint()),
-        g = (0, d.w1)({
+        g = (0, N.Q)(I),
+        P = (0, o.e7)([A.Z], () => A.Z.entrypoint()),
+        L = (0, d.w1)({
             applicationId: t.id,
             embeddedActivitiesManager: u.Z,
             channelId: n.id,
-            locationObject: f.location,
+            locationObject: h.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: n } = e;
-                r && h.y(E.ti.ACTIVITY),
-                    (0, m.yw)(N.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+                r && f.yT(E.ti.ACTIVITY),
+                    (0, m.yw)(x.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: n,
                         section_name: a,
-                        action: v,
-                        source: I
+                        action: g,
+                        source: P
                     });
             },
             launchingComponentId: _,
             commandOrigin: p.bB.APPLICATION_LAUNCHER,
             sectionName: a,
-            source: I
+            source: P
         }),
-        P = s.ButtonColors.BRAND,
-        S = null != l ? l : x.Z.Messages.LAUNCH;
+        S = s.ButtonColors.BRAND,
+        T = null != l ? l : v.Z.Messages.LAUNCH;
     return (
-        v === d.JS.JOIN ? ((P = s.ButtonColors.GREEN), (S = x.Z.Messages.JOIN_ACTIVITY)) : v === d.JS.LEAVE && !C && ((P = s.ButtonColors.RED), (S = x.Z.Messages.LEAVE)),
+        g === d.JS.JOIN ? ((S = s.ButtonColors.GREEN), (T = v.Z.Messages.JOIN_ACTIVITY)) : g === d.JS.LEAVE && !C && ((S = s.ButtonColors.RED), (T = v.Z.Messages.LEAVE)),
         {
-            onActivityItemSelected: g,
-            activityAction: v,
-            buttonColor: P,
-            buttonText: S
+            onActivityItemSelected: L,
+            activityAction: g,
+            buttonColor: S,
+            buttonText: T
         }
     );
 }
@@ -91,7 +93,7 @@ function S(e, n) {
             () =>
                 (0, a.debounce)(
                     (e, n) => {
-                        (0, m.yw)(N.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
+                        (0, m.yw)(x.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
                             type: e,
                             source: n
                         });

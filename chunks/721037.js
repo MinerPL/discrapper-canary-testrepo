@@ -35,26 +35,30 @@ function R(e, t, n) {
     );
 }
 let v = {
-    [A.NYg.VIDEO]: p.Z,
-    [A.NYg.EMBED_IFRAME]: c.Z
-};
-class C extends i.PureComponent {
+        [A.NYg.VIDEO]: p.Z,
+        [A.NYg.EMBED_IFRAME]: c.Z
+    },
+    C = {
+        minWidth: O.Rv[O.cL.VIDEO],
+        maxWidth: O.$i[O.cL.VIDEO]
+    };
+class L extends i.PureComponent {
     render() {
-        let { selectedPIPWindow: e, pipWindows: t, pipType: n, pipWidth: i, maxX: a, maxY: s, theme: o, dockedRect: l, appContext: u, roundCorners: c } = this.props;
+        let { selectedPIPWindow: e, pipWindows: t, pipWidth: n, maxX: i, maxY: a, theme: s, dockedRect: o, appContext: l, roundCorners: u } = this.props;
         return (0, r.jsx)(_.Z, {
             pictureInPictureComponents: v,
             selectedPIPWindow: e,
             pipWindows: t,
-            pipType: n,
-            pipWidth: i,
-            maxX: a,
-            maxY: s,
-            dockedRect: l,
-            theme: o,
+            pipWidth: n,
+            maxX: i,
+            maxY: a,
+            dockedRect: o,
+            theme: s,
             onWindowMove: this.handleWindowMove,
             onWindowResize: this.handleWindowResize,
-            appContext: u,
-            roundCorners: c
+            appContext: l,
+            roundCorners: u,
+            resizeConfig: C
         });
     }
     constructor(...e) {
@@ -63,7 +67,7 @@ class C extends i.PureComponent {
                 s.Ao(e, t);
             }),
             R(this, 'handleWindowResize', (e) => {
-                s.d7(e, this.props.pipType);
+                s.d7(e, O.cL.VIDEO);
             });
     }
 }
@@ -77,39 +81,39 @@ t.Z = a.ZP.connectStores([E.Z, o.ZP, S.Z, f.Z, I.Z, T.Z, m.Z, d.Z, h.ZP], (e) =>
         R = o.ZP.getActivityPanelMode(),
         v = p && R === N.Ez.PANEL,
         C = null != _ && (null === (t = d.Z.getSelectedParticipant(_.channelId)) || void 0 === t ? void 0 : t.type) === O.fO.ACTIVITY,
-        y = S.Z.windowSize();
+        L = S.Z.windowSize();
     if (s) {
         let e = E.Z.getWindow(A.KJ3.CHANNEL_CALL_POPOUT);
-        y =
+        L =
             null == e
-                ? y
+                ? L
                 : {
                       width: e.innerWidth,
                       height: e.innerHeight
                   };
     }
-    let L = s ? A.IlC.POPOUT : A.IlC.APP;
+    let y = s ? A.IlC.POPOUT : A.IlC.APP;
     a = s && p ? null : s || !c || p ? (null != _ && v ? (null !== (n = m.Z.pipActivityWindow) && void 0 !== n ? n : m.Z.pipVideoWindow) : null !== (r = m.Z.pipVideoWindow) && void 0 !== r ? r : m.Z.pipActivityWindow) : null;
-    let D = O.cL.VIDEO,
-        b = Array.from(m.Z.pipWindows.values()),
-        M = m.Z.pipWidth(D),
-        P = b.find((e) => e.component === A.NYg.VIDEO),
-        U = [P, b.find((e) => e.component === A.NYg.EMBED_IFRAME)].filter(g.lm),
-        w = h.ZP.callChatSidebarWidth,
-        x = T.Z.getVoiceChannelId(),
-        G = T.Z.getChannelId() === x,
-        k = null != x && d.Z.getChatOpen(x),
-        B = (v || C) && null != _ && (0, l.q)(_.applicationId);
+    let D = Array.from(m.Z.pipWindows.values()),
+        b = m.Z.pipWidth(O.cL.VIDEO),
+        M = D.find((e) => e.component === A.NYg.VIDEO),
+        P = [M, D.find((e) => e.component === A.NYg.EMBED_IFRAME)].filter(g.lm),
+        U = h.ZP.callChatSidebarWidth,
+        w = T.Z.getVoiceChannelId(),
+        x = T.Z.getChannelId() === w,
+        G = null != w && d.Z.getChatOpen(w),
+        k = v || C,
+        B = k && null != _ && (0, l.q)(_.applicationId),
+        F = !k && null != a && x;
     return {
         selectedPIPWindow: a,
-        pipWindows: U,
-        pipWidth: M,
-        pipType: D,
-        maxX: y.width - (G && k ? w : 0),
-        maxY: y.height,
+        pipWindows: P,
+        pipWidth: b,
+        maxX: L.width - (F && G ? U : 0),
+        maxY: L.height,
         theme: f.Z.theme,
         dockedRect: m.Z.getDockedRect(null !== (i = null == a ? void 0 : a.id) && void 0 !== i ? i : ''),
-        appContext: L,
+        appContext: y,
         roundCorners: !B
     };
-})(C);
+})(L);

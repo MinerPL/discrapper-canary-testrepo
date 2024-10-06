@@ -5,75 +5,75 @@ n.d(t, {
 });
 var i = n(735250),
     a = n(470079),
-    s = n(120356),
-    r = n.n(s),
-    l = n(722770),
-    o = n(873546),
-    c = n(442837),
-    d = n(481060),
+    s = n(722770),
+    r = n(873546),
+    l = n(852229),
+    o = n(442837),
+    c = n(481060),
+    d = n(788307),
     u = n(2052),
     _ = n(393238),
     E = n(727637),
     h = n(100527),
     m = n(906732),
     I = n(676035),
-    g = n(521868),
-    p = n(299206),
-    T = n(440051),
-    S = n(734934),
-    C = n(158238),
+    p = n(440051),
+    g = n(734934),
+    T = n(158238),
     f = n(300284),
-    N = n(680295),
-    A = n(785717),
-    v = n(221292),
-    L = n(481046),
-    Z = n(687158),
-    R = n(899007),
-    O = n(648052),
-    x = n(867176),
-    b = n(438163),
-    P = n(483424),
-    M = n(681837),
-    D = n(502762),
-    y = n(530),
-    j = n(544989),
-    U = n(309494),
-    G = n(969205),
-    w = n(171368),
-    k = n(420654),
-    B = n(695346),
-    H = n(158776),
-    V = n(246946),
-    F = n(70956),
-    Y = n(5192),
-    W = n(51144),
+    S = n(680295),
+    C = n(785717),
+    N = n(221292),
+    A = n(481046),
+    v = n(687158),
+    Z = n(899007),
+    L = n(648052),
+    R = n(867176),
+    O = n(438163),
+    x = n(483424),
+    b = n(681837),
+    M = n(502762),
+    P = n(530),
+    D = n(544989),
+    y = n(309494),
+    j = n(969205),
+    U = n(171368),
+    G = n(420654),
+    w = n(695346),
+    k = n(158776),
+    B = n(246946),
+    V = n(572004),
+    H = n(70956),
+    F = n(5192),
+    Y = n(51144),
     z = n(246133),
-    K = n(474376),
+    W = n(474376),
+    K = n(435478),
     q = n(383832),
     Q = n(981631),
     X = n(228168),
     J = n(689938),
-    $ = n(554331),
-    ee = n(115879);
+    $ = n(217593),
+    ee = n(451563);
 let et = [
     {
-        duration: 30 * F.Z.Millis.MINUTE,
+        duration: 30 * H.Z.Millis.MINUTE,
         label: () => J.Z.Messages.MUTE_DURATION_30_MINUTES
     },
     {
-        duration: F.Z.Millis.HOUR,
+        duration: H.Z.Millis.HOUR,
         label: () => J.Z.Messages.MUTE_DURATION_1_HOUR
     },
     {
-        duration: 3 * F.Z.Millis.HOUR,
+        duration: 3 * H.Z.Millis.HOUR,
         label: () => J.Z.Messages.MUTE_DURATION_3_HOURS
     },
     {
-        duration: 8 * F.Z.Millis.HOUR,
+        duration: 8 * H.Z.Millis.HOUR,
         label: () => J.Z.Messages.MUTE_DURATION_8_HOURS
     },
     {
-        duration: F.Z.Millis.DAY,
+        duration: H.Z.Millis.DAY,
         label: () => J.Z.Messages.MUTE_DURATION_24_HOURS
     },
     {
@@ -81,110 +81,119 @@ let et = [
         label: () => J.Z.Messages.DURATION_FOREVER
     }
 ];
-function en(e, t, n, a) {
-    let s = (0, i.jsx)(i.Fragment, {
-        children: et.map((a) => {
-            let { duration: s, label: r } = a;
+function en(e, t, n) {
+    let a = (0, i.jsx)(i.Fragment, {
+        children: et.map((n) => {
+            let { duration: a, label: s } = n;
             return (0, i.jsx)(
-                d.MenuItem,
+                c.MenuItem,
                 {
-                    id: ''.concat(e, '-').concat(s),
-                    label: r(),
-                    action: () => (0, z.Z)(e, t, n, s),
+                    id: ''.concat(e, '-').concat(a),
+                    label: s(),
+                    action: () => (0, z.Z)(e, t, void 0, a),
                     dontCloseOnAction: !0
                 },
-                s
+                a
             );
         })
     });
-    return (0, i.jsx)(d.MenuItem, {
+    return (0, i.jsx)(c.MenuItem, {
         id: e,
         className: $.expiringStatusMenuItem,
         keepItemStyles: !0,
         hasSubmenu: !0,
         label: (t) => {
-            let { isFocused: n } = t;
+            let { isFocused: a } = t;
             return (0, i.jsxs)('div', {
                 className: $.statusItem,
                 children: [
-                    (0, i.jsx)(d.Status, {
+                    (0, i.jsx)(c.Status, {
                         status: e,
                         className: $.icon,
                         size: 10,
-                        color: n ? 'currentColor' : void 0
+                        color: a ? 'currentColor' : void 0
                     }),
                     (0, i.jsx)('div', {
                         className: $.status,
-                        children: (0, W.u5)(e)
+                        children: (0, Y.u5)(e)
                     }),
-                    null != a &&
+                    null != n &&
                         (0, i.jsx)('div', {
                             className: $.description,
-                            children: a
+                            children: n
                         })
                 ]
             });
         },
-        action: () => (0, z.Z)(e, t, n),
+        action: () => (0, z.Z)(e, t),
         dontCloseOnAction: !0,
-        children: e !== Q.Skl.ONLINE ? s : void 0
+        children: e !== Q.Skl.ONLINE ? a : void 0
     });
 }
-function ei(e, t, n, a) {
-    return (0, i.jsx)(d.MenuItem, {
+function ei(e, t, n) {
+    return (0, i.jsx)(c.MenuItem, {
         id: e,
         keepItemStyles: !0,
         render: (t) => {
-            let { isFocused: n } = t;
+            let { isFocused: a } = t;
             return (0, i.jsxs)('div', {
                 className: $.statusItem,
                 children: [
-                    (0, i.jsx)(d.Status, {
+                    (0, i.jsx)(c.Status, {
                         status: e,
                         className: $.icon,
                         size: 10,
-                        color: n ? 'currentColor' : void 0
+                        color: a ? 'currentColor' : void 0
                     }),
                     (0, i.jsx)('div', {
                         className: $.status,
-                        children: (0, W.u5)(e)
+                        children: (0, Y.u5)(e)
                     }),
-                    null != a &&
+                    null != n &&
                         (0, i.jsx)('div', {
                             className: $.description,
-                            children: a
+                            children: n
                         })
                 ]
             });
         },
-        action: () => (0, z.Z)(e, t, n),
+        action: () => (0, z.Z)(e, t),
         dontCloseOnAction: !0
     });
 }
 function ea(e) {
-    let { currentUser: t, onClose: n, setPopoutRef: s } = e,
-        F = __OVERLAY__,
-        z = (0, Z.ZP)(t.id),
-        ea = (0, u.O)(),
-        { analyticsLocations: es } = (0, m.ZP)(h.Z.ACCOUNT_PROFILE_POPOUT),
-        er = (0, A.ZB)({
+    var t;
+    let { currentUser: H, onClose: z, setPopoutRef: ea } = e,
+        es = __OVERLAY__,
+        er = (0, v.ZP)(H.id),
+        el = (0, u.O)(),
+        { analyticsLocations: eo } = (0, m.ZP)(h.Z.ACCOUNT_PROFILE_POPOUT),
+        ec = (0, C.ZB)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
-            userId: t.id
+            userId: H.id
         }),
-        el = (0, I.a)(),
-        eo = (0, c.e7)([H.Z], () => H.Z.getStatus(t.id)),
-        ec = (function (e, t) {
-            let n = T.Y.useExperiment({ location: 'account popout' }).expiringStatus,
-                a = B.Cr.useSetting(),
-                s = (0, S.p)(),
-                r = C.e.useExperiment({ location: 'account popout' }).allowQuietMode || s,
-                o = B.fv.useSetting(),
-                c = e === Q.Skl.DND,
-                u = (t) => {
-                    let n =
-                        null != a && '0' !== a
+        { ref: ed } = (0, _.Z)(),
+        eu = (0, E.Z)(ed);
+    a.useEffect(() => {
+        null == ea || ea(ed.current);
+    }, [ed, ea]);
+    let e_ = (0, o.e7)([k.Z], () => k.Z.getStatus(H.id)),
+        eE = (0, o.e7)([B.Z], () => B.Z.hidePersonalInformation),
+        eh = (0, g.p)(),
+        em = w.Sb.useSetting(),
+        eI = (0, I.a)(),
+        ep = (function (e) {
+            let t = p.Y.useExperiment({ location: 'AccountProfilePopout' }).expiringStatus,
+                n = w.Cr.useSetting(),
+                a = (0, g.p)(),
+                r = T.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || a,
+                l = w.fv.useSetting(),
+                o = e === Q.Skl.DND,
+                d = (t) => {
+                    let i =
+                        null != n && '0' !== n
                             ? J.Z.Messages.STATUS_UNTIL.format({
-                                  endTime: new Date(Number(a)).toLocaleString(J.Z.getLocale(), {
+                                  endTime: new Date(Number(n)).toLocaleString(J.Z.getLocale(), {
                                       month: 'numeric',
                                       day: 'numeric',
                                       hour: 'numeric',
@@ -192,7 +201,7 @@ function ea(e) {
                                   })
                               })
                             : void 0;
-                    if (e === t && null != n) return n;
+                    if (e === t && null != i) return i;
                     switch (t) {
                         case Q.Skl.DND:
                             return r ? J.Z.Messages.STATUS_DND_HELP_FOCUS_MODE : J.Z.Messages.STATUS_DND_HELP;
@@ -202,16 +211,16 @@ function ea(e) {
                             return;
                     }
                 },
-                _ = (0, i.jsx)(i.Fragment, {
+                u = (0, i.jsx)(i.Fragment, {
                     children: et.map((t) => {
                         let { duration: n, label: a } = t;
                         return (0, i.jsx)(
-                            d.MenuItem,
+                            c.MenuItem,
                             {
                                 id: ''.concat(e, '-').concat(n),
                                 label: a(),
                                 action: () => {
-                                    (0, S.oW)(!0, n);
+                                    (0, g.oW)(!0, n);
                                 },
                                 dontCloseOnAction: !0
                             },
@@ -221,17 +230,17 @@ function ea(e) {
                 });
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    ei(Q.Skl.ONLINE, e, t),
-                    (0, i.jsx)(d.MenuSeparator, {}, 'menu-separator-statuses'),
-                    n ? en(Q.Skl.IDLE, e, t, u(Q.Skl.IDLE)) : ei(Q.Skl.IDLE, e, t, u(Q.Skl.IDLE)),
-                    n ? en(Q.Skl.DND, e, t, u(Q.Skl.DND)) : ei(Q.Skl.DND, e, t, u(Q.Skl.DND)),
-                    n ? en(Q.Skl.INVISIBLE, e, t, u(Q.Skl.INVISIBLE)) : ei(Q.Skl.INVISIBLE, e, t, u(Q.Skl.INVISIBLE)),
-                    r || s
+                    ei(Q.Skl.ONLINE, e),
+                    (0, i.jsx)(c.MenuSeparator, {}, 'menu-separator-statuses'),
+                    t ? en(Q.Skl.IDLE, e, d(Q.Skl.IDLE)) : ei(Q.Skl.IDLE, e, d(Q.Skl.IDLE)),
+                    t ? en(Q.Skl.DND, e, d(Q.Skl.DND)) : ei(Q.Skl.DND, e, d(Q.Skl.DND)),
+                    t ? en(Q.Skl.INVISIBLE, e, d(Q.Skl.INVISIBLE)) : ei(Q.Skl.INVISIBLE, e, d(Q.Skl.INVISIBLE)),
+                    r || a
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(d.MenuSeparator, {}, 'menu-separator-statuses'),
+                                  (0, i.jsx)(c.MenuSeparator, {}, 'menu-separator-statuses'),
                                   (0, i.jsx)(
-                                      d.MenuItem,
+                                      c.MenuItem,
                                       {
                                           id: 'quiet-mode',
                                           'aria-label': 'focus mode',
@@ -242,7 +251,7 @@ function ea(e) {
                                               (0, i.jsxs)('div', {
                                                   className: $.statusItem,
                                                   children: [
-                                                      (0, i.jsx)(d.BellSlashIcon, {
+                                                      (0, i.jsx)(c.BellSlashIcon, {
                                                           size: 'xxs',
                                                           className: $.icon
                                                       }),
@@ -250,18 +259,18 @@ function ea(e) {
                                                           className: $.focusModeTitle,
                                                           children: [
                                                               J.Z.Messages.FOCUS_MODE_TITLE,
-                                                              (0, i.jsx)(d.TextBadge, {
-                                                                  text: s ? J.Z.Messages.FOCUS_MODE_BADGE_ON : c ? J.Z.Messages.FOCUS_MODE_BADGE_ON_VIA_DND : J.Z.Messages.FOCUS_MODE_BADGE_OFF,
-                                                                  color: s ? l.Z.BRAND_500 : c ? l.Z.RED_400 : l.Z.PRIMARY_500
+                                                              (0, i.jsx)(c.TextBadge, {
+                                                                  text: a ? J.Z.Messages.FOCUS_MODE_BADGE_ON : o ? J.Z.Messages.FOCUS_MODE_BADGE_ON_VIA_DND : J.Z.Messages.FOCUS_MODE_BADGE_OFF,
+                                                                  color: a ? s.Z.BRAND_500 : o ? s.Z.RED_400 : s.Z.PRIMARY_500
                                                               })
                                                           ]
                                                       }),
                                                       (0, i.jsx)('div', {
                                                           className: $.description,
                                                           children:
-                                                              s && null != o && '0' !== o
+                                                              a && null != l && '0' !== l
                                                                   ? J.Z.Messages.STATUS_UNTIL.format({
-                                                                        endTime: new Date(Number(o)).toLocaleString(J.Z.getLocale(), {
+                                                                        endTime: new Date(Number(l)).toLocaleString(J.Z.getLocale(), {
                                                                             month: 'numeric',
                                                                             day: 'numeric',
                                                                             hour: 'numeric',
@@ -273,10 +282,10 @@ function ea(e) {
                                                   ]
                                               }),
                                           action: () => {
-                                              (0, S.oW)(!s);
+                                              (0, g.oW)(!a);
                                           },
                                           dontCloseOnAction: !0,
-                                          children: _
+                                          children: u
                                       },
                                       'quiet-mode'
                                   )
@@ -285,248 +294,278 @@ function ea(e) {
                         : null
                 ]
             });
-        })(eo, ea),
-        { ref: ed } = (0, _.Z)(),
-        eu = (0, E.Z)(ed);
-    a.useEffect(() => {
-        null == s || s(ed.current);
-    }, [ed, s]);
-    let e_ = (e) => {
-            null == n || n(),
-                (0, w.openUserProfileModal)({
-                    sourceAnalyticsLocations: es,
-                    ...er,
+        })(e_),
+        eg = (0, W.g)(z),
+        eT = (0, f.Z)({ analyticsLocations: eo }),
+        { customStatusBubbleEditEnabled: ef } = (0, A.K)({ location: 'AccountProfilePopout' }),
+        eS = (e) => {
+            null == z || z(),
+                (0, U.openUserProfileModal)({
+                    sourceAnalyticsLocations: eo,
+                    ...ec,
                     ...e
                 });
         },
-        { customStatusBubbleEditEnabled: eE } = (0, L.K)({ location: 'AccountProfilePopout' }),
-        eh = (0, f.Z)({ analyticsLocations: es }),
-        em = (0, S.p)(),
-        eI = eo === Q.Skl.DND,
-        eg = (0, K.g)(),
-        ep = (0, g.o)({
-            focusedClassName: $.menuItemFocused,
-            customStatus: el,
-            analyticsLocations: es,
-            trackUserProfileAction: v.pQ
-        }),
-        eT = (0, p.Z)({
-            id: t.id,
-            label: J.Z.Messages.COPY_ID_USER,
-            showIconFirst: !0,
-            focusedClassName: $.menuItemFocused
-        }),
-        eS = (0, c.e7)([V.Z], () => V.Z.hidePersonalInformation);
+        eC = () => {
+            (0, c.openModalLazy)(async () => {
+                let { default: e } = await n.e('51714').then(n.bind(n, 211065));
+                return (t) =>
+                    (0, i.jsx)(e, {
+                        ...t,
+                        sourceAnalyticsContext: el,
+                        sourceAnalyticsLocations: eo
+                    });
+            });
+        };
     return (0, i.jsx)(m.Gt, {
-        value: es,
-        children: (0, i.jsx)(A.Mt, {
-            value: er,
-            children: (0, i.jsx)(d.Dialog, {
+        value: eo,
+        children: (0, i.jsx)(C.Mt, {
+            value: ec,
+            children: (0, i.jsx)(c.Dialog, {
                 ref: ed,
-                'aria-label': t.username,
-                children: (0, i.jsxs)(D.Z, {
+                'aria-label': H.username,
+                children: (0, i.jsxs)(M.Z, {
                     className: $.themeContainer,
-                    user: t,
-                    displayProfile: z,
+                    user: H,
+                    displayProfile: er,
                     profileType: X.y0.BITE_SIZE,
                     children: [
-                        !eE &&
-                            (0, i.jsx)(j.Z, {
+                        !ef &&
+                            (0, i.jsx)(D.Z, {
                                 profileType: X.y0.BITE_SIZE,
-                                children: (0, i.jsx)(G.Z, {
-                                    userId: t.id,
-                                    onClose: n
+                                children: (0, i.jsx)(j.Z, {
+                                    userId: H.id,
+                                    onClose: z
                                 })
                             }),
                         (0, i.jsxs)('header', {
                             className: ee.header,
                             children: [
-                                (0, i.jsx)(x.Z, {
-                                    user: t,
-                                    displayProfile: z,
+                                (0, i.jsx)(R.Z, {
+                                    user: H,
+                                    displayProfile: er,
                                     profileType: X.y0.BITE_SIZE
                                 }),
-                                (0, i.jsx)(R.Z, {
-                                    user: t,
-                                    displayProfile: z,
+                                (0, i.jsx)(Z.Z, {
+                                    user: H,
+                                    displayProfile: er,
                                     profileType: X.y0.BITE_SIZE,
-                                    onOpenProfile: F ? void 0 : e_
+                                    onOpenProfile: es ? void 0 : eS
                                 }),
-                                (0, i.jsx)(b.Z, {
-                                    user: t,
+                                (0, i.jsx)(O.Z, {
+                                    user: H,
                                     profileType: X.y0.BITE_SIZE,
-                                    onClose: n
+                                    onCloseProfile: z
                                 })
                             ]
                         }),
-                        (null == z ? void 0 : z.profileEffectId) != null &&
-                            (0, i.jsx)(N.Z, {
-                                profileEffectId: null == z ? void 0 : z.profileEffectId,
+                        (null == er ? void 0 : er.profileEffectId) != null &&
+                            (0, i.jsx)(S.Z, {
+                                profileEffectId: null == er ? void 0 : er.profileEffectId,
                                 isHovering: eu
                             }),
-                        (0, i.jsxs)(d.Scroller, {
+                        (0, i.jsxs)(c.Scroller, {
                             className: $.body,
                             children: [
-                                (0, i.jsx)(y.Z, {
-                                    user: t,
+                                (0, i.jsx)(P.Z, {
+                                    user: H,
                                     className: $.username,
                                     profileType: X.y0.BITE_SIZE,
-                                    nickname: Y.ZP.getName(null, null, t),
-                                    onOpenProfile: e_,
-                                    pronouns: null == z ? void 0 : z.pronouns,
-                                    tags: (0, i.jsx)(O.Z, {
-                                        displayProfile: z,
+                                    nickname: F.ZP.getName(null, null, H),
+                                    onOpenProfile: es ? void 0 : eS,
+                                    pronouns: null == er ? void 0 : er.pronouns,
+                                    tags: (0, i.jsx)(L.Z, {
+                                        displayProfile: er,
                                         profileType: X.y0.BITE_SIZE,
-                                        onClose: n
+                                        onClose: z
                                     }),
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                         children: [
-                                            (0, i.jsx)(M.Z, { userId: t.id }),
-                                            (0, i.jsx)(U.Z, {
-                                                user: t,
+                                            (0, i.jsx)(b.Z, { userId: H.id }),
+                                            (0, i.jsx)(y.Z, {
+                                                user: H,
                                                 isHovering: eu
                                             })
                                         ]
                                     })
                                 }),
-                                (0, i.jsx)(k.Z, {
-                                    user: t,
-                                    bio: null == z ? void 0 : z.bio,
-                                    hidePersonalInformation: eS,
-                                    onClose: n
+                                (0, i.jsx)(G.Z, {
+                                    user: H,
+                                    bio: null == er ? void 0 : er.bio,
+                                    hidePersonalInformation: eE,
+                                    onClose: z
                                 }),
-                                (0, i.jsx)(P.Z, {
-                                    user: t,
-                                    currentUser: t,
-                                    onClose: n
+                                (0, i.jsx)(x.Z, {
+                                    user: H,
+                                    currentUser: H,
+                                    onClose: z
                                 }),
                                 (0, i.jsxs)('div', {
                                     className: $.menus,
                                     children: [
-                                        (0, i.jsx)(D.Z.Overlay, {
+                                        (0, i.jsx)(M.Z.Overlay, {
                                             className: $.menuOverlay,
-                                            children: (0, i.jsxs)(d.Menu, {
-                                                navId: 'status',
-                                                'aria-label': J.Z.Messages.STATUS_MENU_LABEL,
-                                                hideScroller: !0,
-                                                className: $.menu,
-                                                onClose: n,
-                                                onSelect: void 0,
+                                            children: (0, i.jsxs)(K.PB, {
+                                                id: 'profile-'.concat(H.id),
                                                 children: [
-                                                    eE &&
-                                                        (0, i.jsx)(d.MenuGroup, {
-                                                            children: (0, i.jsx)(
-                                                                d.MenuItem,
-                                                                {
+                                                    ef &&
+                                                        (0, i.jsxs)(i.Fragment, {
+                                                            children: [
+                                                                (0, i.jsx)(K.Mv, {
                                                                     id: 'edit-profile',
-                                                                    iconLeft: d.PencilIcon,
+                                                                    action: 'EDIT_PROFILE',
                                                                     label: J.Z.Messages.EDIT_PROFILE,
-                                                                    action: () => {
-                                                                        (0, v.pQ)({
-                                                                            action: 'EDIT_PROFILE',
-                                                                            analyticsLocations: es
-                                                                        }),
-                                                                            eh();
-                                                                    },
-                                                                    focusedClassName: $.menuItemFocused,
-                                                                    subMenuIconClassName: $.subMenuIcon
-                                                                },
-                                                                'edit-profile'
-                                                            )
-                                                        }),
-                                                    (0, i.jsx)(d.MenuGroup, {
-                                                        children: (0, i.jsx)(
-                                                            d.MenuItem,
-                                                            {
-                                                                id: 'status-picker',
-                                                                label: (0, i.jsxs)('div', {
-                                                                    style: {
-                                                                        display: 'flex',
-                                                                        alignItems: 'center',
-                                                                        justifyContent: 'space-between'
-                                                                    },
-                                                                    children: [(0, W.u5)(eo), em || eI ? (0, i.jsx)(d.BellSlashIcon, { size: 'xxs' }) : null]
+                                                                    icon: c.PencilIcon,
+                                                                    onClick: () => {
+                                                                        eT(), z();
+                                                                    }
                                                                 }),
-                                                                focusedClassName: $.menuItemFocused,
-                                                                subMenuIconClassName: $.subMenuIcon,
-                                                                action: o.tq
-                                                                    ? function () {
-                                                                          (0, v.pQ)({
-                                                                              action: 'PRESS_SET_STATUS',
-                                                                              analyticsLocations: es,
-                                                                              ...er
-                                                                          }),
-                                                                              (0, d.openModalLazy)(
-                                                                                  () =>
-                                                                                      new Promise((e) => {
-                                                                                          e((e) =>
-                                                                                              (0, i.jsx)(d.ModalRoot, {
-                                                                                                  ...e,
-                                                                                                  size: d.ModalSize.SMALL,
-                                                                                                  className: $.modal,
-                                                                                                  'aria-label': J.Z.Messages.SET_STATUS,
-                                                                                                  children: (0, i.jsx)(d.Menu, {
-                                                                                                      navId: 'status-mobile-web',
-                                                                                                      variant: 'fixed',
-                                                                                                      'aria-label': J.Z.Messages.STATUS_MENU_LABEL,
-                                                                                                      hideScroller: !0,
-                                                                                                      className: $.statusPickerModalMenu,
-                                                                                                      onClose: e.onClose,
-                                                                                                      onSelect: e.onClose,
-                                                                                                      children: ec
-                                                                                                  })
-                                                                                              })
-                                                                                          );
-                                                                                      })
-                                                                              );
-                                                                      }
-                                                                    : void 0,
-                                                                iconLeft: (e) => {
-                                                                    let { className: t, isFocused: n } = e;
-                                                                    return (0, i.jsx)(d.Status, {
-                                                                        status: eo,
-                                                                        size: 12,
-                                                                        className: r()(t, $.mainStatusIcon),
-                                                                        color: n ? 'currentColor' : void 0
-                                                                    });
-                                                                },
-                                                                children: o.tq ? void 0 : ec
-                                                            },
-                                                            'status-picker'
-                                                        )
+                                                                (0, i.jsx)('div', { className: $.menuDivider })
+                                                            ]
+                                                        }),
+                                                    (0, i.jsx)(K.Mv, {
+                                                        id: 'set-status',
+                                                        action: 'PRESS_SET_STATUS',
+                                                        label: null !== (t = (0, Y.u5)(e_)) && void 0 !== t ? t : '',
+                                                        icon: () =>
+                                                            (0, i.jsx)(c.Status, {
+                                                                status: e_,
+                                                                size: 12
+                                                            }),
+                                                        hint: (eh || e_ === Q.Skl.DND) && (0, i.jsx)(c.BellSlashIcon, { size: 'xxs' }),
+                                                        renderSubmenu: r.tq
+                                                            ? void 0
+                                                            : (e) => {
+                                                                  let { closePopout: t } = e;
+                                                                  return (0, i.jsx)(K.eq, {
+                                                                      navId: 'set-status-submenu',
+                                                                      className: $.statusPickerModalMenu,
+                                                                      'aria-label': J.Z.Messages.STATUS_MENU_LABEL,
+                                                                      onClose: t,
+                                                                      children: ep
+                                                                  });
+                                                              },
+                                                        onClick: r.tq
+                                                            ? () => {
+                                                                  z(),
+                                                                      (0, c.openModalLazy)(
+                                                                          () =>
+                                                                              new Promise((e) =>
+                                                                                  e((e) => {
+                                                                                      let { onClose: t, ...n } = e;
+                                                                                      return (0, i.jsx)(c.ModalRoot, {
+                                                                                          ...n,
+                                                                                          size: c.ModalSize.SMALL,
+                                                                                          'aria-label': J.Z.Messages.SET_STATUS,
+                                                                                          className: $.statusPickerModal,
+                                                                                          children: (0, i.jsx)(c.Menu, {
+                                                                                              navId: 'set-status-submenu-mobile-web',
+                                                                                              variant: 'fixed',
+                                                                                              'aria-label': J.Z.Messages.STATUS_MENU_LABEL,
+                                                                                              className: $.statusPickerModalMenu,
+                                                                                              hideScroller: !0,
+                                                                                              onClose: t,
+                                                                                              onSelect: void 0,
+                                                                                              children: ep
+                                                                                          })
+                                                                                      });
+                                                                                  })
+                                                                              )
+                                                                      );
+                                                              }
+                                                            : void 0
                                                     }),
-                                                    !eE && (0, i.jsx)(d.MenuGroup, { children: ep })
+                                                    !ef &&
+                                                        (0, i.jsxs)(i.Fragment, {
+                                                            children: [
+                                                                (0, i.jsx)('div', { className: $.menuDivider }),
+                                                                null == eI
+                                                                    ? (0, i.jsx)(K.Mv, {
+                                                                          id: 'add-custom-status',
+                                                                          action: 'PRESS_ADD_CUSTOM_STATUS',
+                                                                          label: J.Z.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS_CTA,
+                                                                          icon: () => (0, i.jsx)('div', { className: $.customEmojiPlaceholder }),
+                                                                          onClick: () => {
+                                                                              z(), eC();
+                                                                          }
+                                                                      })
+                                                                    : (0, i.jsx)(K.Mv, {
+                                                                          id: 'edit-custom-status',
+                                                                          action: 'PRESS_EDIT_CUSTOM_STATUS',
+                                                                          label: J.Z.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
+                                                                          icon: () =>
+                                                                              null != eI.emoji
+                                                                                  ? (0, i.jsx)(d.I, {
+                                                                                        emoji: eI.emoji,
+                                                                                        animate: !0,
+                                                                                        hideTooltip: !0
+                                                                                    })
+                                                                                  : null,
+                                                                          hint: (0, i.jsx)(c.Clickable, {
+                                                                              tabIndex: -1,
+                                                                              className: $.clearCustomStatusHint,
+                                                                              onClick: (e) => {
+                                                                                  e.stopPropagation(),
+                                                                                      (0, N.pQ)({
+                                                                                          action: 'PRESS_CLEAR_CUSTOM_STATUS',
+                                                                                          analyticsLocations: eo
+                                                                                      }),
+                                                                                      w.Ok.updateSetting(void 0);
+                                                                              },
+                                                                              children: (0, i.jsx)(c.CircleXIcon, {
+                                                                                  size: 'sm',
+                                                                                  color: 'currentColor'
+                                                                              })
+                                                                          }),
+                                                                          onClick: () => {
+                                                                              z(), eC();
+                                                                          }
+                                                                      })
+                                                            ]
+                                                        })
                                                 ]
                                             })
                                         }),
-                                        (0, i.jsx)(D.Z.Overlay, {
+                                        (0, i.jsx)(M.Z.Overlay, {
                                             className: $.menuOverlay,
-                                            children: (0, i.jsxs)(d.Menu, {
-                                                navId: 'account',
-                                                'aria-label': J.Z.Messages.MULTI_ACCOUNT_MENU_LABEL,
-                                                hideScroller: !0,
-                                                className: $.menu,
-                                                onClose: n,
-                                                onSelect: void 0,
+                                            children: (0, i.jsxs)(K.PB, {
+                                                id: 'account-'.concat(H.id),
                                                 children: [
-                                                    (0, i.jsx)(d.MenuGroup, {
-                                                        children: (0, i.jsx)(d.MenuItem, {
-                                                            id: 'switch-account',
-                                                            focusedClassName: $.menuItemFocused,
-                                                            subMenuIconClassName: $.subMenuIcon,
-                                                            label: J.Z.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
-                                                            iconLeft: d.UserCircleIcon,
-                                                            action: () => {
-                                                                (0, v.pQ)({
-                                                                    action: 'PRESS_SWITCH_ACCOUNTS',
-                                                                    analyticsLocations: es
-                                                                }),
-                                                                    (0, q.Z)();
-                                                            },
-                                                            children: eg
-                                                        })
+                                                    (0, i.jsx)(K.Mv, {
+                                                        id: 'switch-accounts',
+                                                        action: 'PRESS_SWITCH_ACCOUNTS',
+                                                        icon: c.UserCircleIcon,
+                                                        label: J.Z.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
+                                                        onClick: () => {
+                                                            z(), (0, q.Z)();
+                                                        },
+                                                        renderSubmenu: (e) => {
+                                                            let { closePopout: t } = e;
+                                                            return (0, i.jsx)(K.eq, {
+                                                                navId: 'switch-accounts-submenu',
+                                                                'aria-label': J.Z.Messages.MULTI_ACCOUNT_MENU_LABEL,
+                                                                onClose: t,
+                                                                children: eg
+                                                            });
+                                                        }
                                                     }),
-                                                    (0, i.jsx)(d.MenuGroup, { children: eT })
+                                                    !__OVERLAY__ &&
+                                                        V.wS &&
+                                                        em &&
+                                                        (0, i.jsxs)(i.Fragment, {
+                                                            children: [
+                                                                (0, i.jsx)('div', { className: $.menuDivider }),
+                                                                (0, i.jsx)(K.Mv, {
+                                                                    id: 'copy-user-id',
+                                                                    action: 'COPY_USER_ID',
+                                                                    icon: c.IdIcon,
+                                                                    label: J.Z.Messages.COPY_ID_USER,
+                                                                    onClick: () => {
+                                                                        (0, l.J)(H.id), z();
+                                                                    }
+                                                                })
+                                                            ]
+                                                        })
                                                 ]
                                             })
                                         })

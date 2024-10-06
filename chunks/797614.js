@@ -5,10 +5,9 @@ var r,
     s = n(544891),
     o = n(358085),
     l = n(747268),
-    u = n(250471),
-    c = n(20186),
-    d = n(981631);
-function _(e, t, n) {
+    u = n(20186),
+    c = n(981631);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +20,7 @@ function _(e, t, n) {
         e
     );
 }
-let E = new Set(['darwin', 'linux', 'win32', 'ios', 'android']);
+let _ = new Set(['darwin', 'linux', 'win32', 'ios', 'android']);
 ((i = r || (r = {})).COUNT = 'count'), (i.DISTRIBUTION = 'distribution');
 t.Z = new (class e {
     _getMetricWithDefaults(e, t) {
@@ -29,7 +28,7 @@ t.Z = new (class e {
             i = {
                 name: n,
                 type: t,
-                tags: (0, c.d)()
+                tags: (0, u.d)()
             };
         null != r &&
             r.forEach((e) => {
@@ -39,15 +38,15 @@ t.Z = new (class e {
             if ((0, o.isWeb)()) return 'web';
             {
                 let e = (0, o.getPlatformName)();
-                return E.has(e) ? e : null;
+                return _.has(e) ? e : null;
             }
         })();
         null != s && i.tags.push('platform:'.concat(s));
-        let u = (function () {
+        let c = (function () {
             let e = l.Z;
             return null != e && a.e.ALL.has(e) ? e : null;
         })();
-        return null != u && i.tags.push('release_channel:'.concat(u)), i;
+        return null != c && i.tags.push('release_channel:'.concat(c)), i;
     }
     increment(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -55,12 +54,11 @@ t.Z = new (class e {
         this._metrics.push(n), (t || this._metrics.length >= 100) && this._flush();
     }
     distribution(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (!(0, u.V)('distribution-metric')) return;
-        let r = {
-            ...this._getMetricWithDefaults(e, 'distribution'),
-            value: t
-        };
+        let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+            r = {
+                ...this._getMetricWithDefaults(e, 'distribution'),
+                value: t
+            };
         this._metrics.push(r), (n || this._metrics.length >= 100) && this._flush();
     }
     _flush() {
@@ -68,12 +66,12 @@ t.Z = new (class e {
             let e = [...this._metrics];
             s.tn
                 .post({
-                    url: (0, u.V)('monitoring-agent') ? d.ANM.METRICS_V2 : d.ANM.METRICS,
+                    url: c.ANM.METRICS_V2,
                     body: {
                         metrics: e,
                         client_info: {
-                            built_at: '1724092428737',
-                            build_number: '319816'
+                            built_at: '1728188185766',
+                            build_number: '333464'
                         }
                     },
                     retries: 1
@@ -85,8 +83,8 @@ t.Z = new (class e {
         this._metrics = [];
     }
     constructor() {
-        _(this, '_metrics', void 0),
-            _(this, '_intervalId', void 0),
+        d(this, '_metrics', void 0),
+            d(this, '_intervalId', void 0),
             (this._metrics = []),
             (this._intervalId = setInterval(() => {
                 this._flush();

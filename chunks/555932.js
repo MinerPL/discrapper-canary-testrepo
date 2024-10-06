@@ -6,7 +6,7 @@ n.d(t, {
     n(47120);
 var r = n(735250),
     i = n(470079),
-    a = n(567526),
+    a = n(212433),
     s = n(442837),
     o = n(481060),
     l = n(607070),
@@ -15,25 +15,25 @@ var r = n(735250),
     d = n(436444),
     _ = n(981631),
     E = n(689938),
-    f = n(625135);
+    f = n(527855);
 let h = [_.Eu4.NONE, _.Eu4.TIER_1, _.Eu4.TIER_2, _.Eu4.TIER_3];
 function p(e) {
     let { guild: t } = e,
         n = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
-        [p, m] = i.useState(!1),
-        [I, T] = i.useState(0),
-        g = i.useRef(null),
-        S = Math.min(_.Eu4.TIER_3, t.premiumTier + 1),
+        [p, I] = i.useState(!1),
+        [m, T] = i.useState(0),
+        S = i.useRef(null),
+        g = Math.min(_.Eu4.TIER_3, t.premiumTier + 1),
         A = _.oCV[t.premiumTier],
-        N = _.oCV[S],
-        v = (t.premiumSubscriberCount - A) / (N - A),
-        O = d.P[t.premiumTier],
-        R = d.P[S],
+        N = _.oCV[g],
+        O = (t.premiumSubscriberCount - A) / (N - A),
+        R = d.P[t.premiumTier],
+        v = d.P[g],
         C = t.premiumTier === _.Eu4.TIER_3,
         {
-            progressBarFillWidthFactor: y,
-            isProgressBarAnimationComplete: D,
-            setShouldFireConfetti: L,
+            progressBarFillWidthFactor: L,
+            isProgressBarAnimationComplete: y,
+            setShouldFireConfetti: D,
             shouldFireConfetti: b,
             tierMarkerAnimationPosition: M
         } = (function (e) {
@@ -42,7 +42,7 @@ function p(e) {
                 [c, E] = i.useState(0 === n),
                 [f, h] = i.useState(!1),
                 p = i.useRef(!0),
-                { widthFactor: m } = (0, o.useSpring)({
+                { widthFactor: I } = (0, o.useSpring)({
                     from: { widthFactor: 0 },
                     to: { widthFactor: a ? t : 0 },
                     config: {
@@ -79,14 +79,14 @@ function p(e) {
                 ),
                 {
                     isProgressBarAnimationComplete: c,
-                    progressBarFillWidthFactor: m,
+                    progressBarFillWidthFactor: I,
                     setShouldFireConfetti: h,
                     shouldFireConfetti: f,
                     tierMarkerAnimationPosition: l
                 }
             );
         })({
-            fillFactor: C ? 1 : v * (R - O) + O,
+            fillFactor: C ? 1 : O * (v - R) + R,
             isRevealed: p || n,
             useReducedMotion: n,
             premiumTier: t.premiumTier,
@@ -95,7 +95,7 @@ function p(e) {
     return (
         i.useEffect(() => {
             let e = window.setTimeout(() => {
-                m(!0);
+                I(!0);
             }, 250);
             return () => {
                 window.clearTimeout(e);
@@ -119,12 +119,10 @@ function p(e) {
                         (0, r.jsx)(a.animated.div, {
                             className: f.progressBarFill,
                             style: {
-                                width: y
-                                    .to({
-                                        range: [0, 1],
-                                        output: [0, 100]
-                                    })
-                                    .to((e) => ''.concat(e, '%'))
+                                width: L.to({
+                                    range: [0, 1],
+                                    output: [0, 100]
+                                }).to((e) => ''.concat(e, '%'))
                             }
                         }),
                         (0, r.jsx)('div', { className: f.progressBarTrack })
@@ -134,11 +132,11 @@ function p(e) {
                     (0, r.jsx)(
                         d.Z,
                         {
-                            confettiTriggerRef: g,
+                            confettiTriggerRef: S,
                             guild: t,
-                            isProgressBarAnimationComplete: D,
+                            isProgressBarAnimationComplete: y,
                             setConfettiCount: T,
-                            setShouldFireConfetti: L,
+                            setShouldFireConfetti: D,
                             tier: e,
                             tierMarkerAnimationPosition: M,
                             children: (0, u.nW)(e)
@@ -147,8 +145,8 @@ function p(e) {
                     )
                 ),
                 (0, r.jsx)(c.Z, {
-                    confettiCount: I,
-                    confettiTriggerRef: g,
+                    confettiCount: m,
+                    confettiTriggerRef: S,
                     isFiring: b
                 })
             ]

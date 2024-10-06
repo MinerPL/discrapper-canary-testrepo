@@ -21,8 +21,8 @@ var r,
     f = n(237997),
     h = n(768581),
     p = n(176354),
-    m = n(506071),
-    I = n(149203);
+    I = n(506071),
+    m = n(149203);
 function T(e, t, n) {
     return (
         t in e
@@ -36,7 +36,8 @@ function T(e, t, n) {
         e
     );
 }
-class g extends (r = a.PureComponent) {
+n(13585);
+class S extends (r = a.PureComponent) {
     componentWillUnmount() {
         var e;
         null === (e = this.cancelLoadImage) || void 0 === e || e.call(this);
@@ -47,7 +48,7 @@ class g extends (r = a.PureComponent) {
             { hover: u } = this.state;
         if (null != t) return t;
         if (null != n) {
-            let e = I.kV[l];
+            let e = m.kV[l];
             return h.ZP.getEmojiURL({
                 id: n,
                 animated: s && !0 === i && (!0 === a || u || !0 === o),
@@ -57,32 +58,47 @@ class g extends (r = a.PureComponent) {
         if (null != r) return p.ZP.getURL(r);
     }
     render() {
-        var e;
-        let t;
-        let { emojiName: n, animated: r, className: s, size: l = 'default', alt: u, shouldAnimate: c, isFocused: d, emojiId: _, autoplay: E, isInteracting: f, ...h } = this.props,
-            p = this.getSrc();
-        return null == p || '' === p
-            ? (0, i.jsx)('span', {
-                  className: o()('emoji', 'emoji-text'),
-                  children: n
+        var e, t;
+        let n, r;
+        let { emojiName: a, animated: s, className: l, size: u = 'default', alt: c, canSelect: d = !0, shouldAnimate: _, isFocused: E, emojiId: f, autoplay: h, isInteracting: p, ...I } = this.props,
+            m = this.getSrc();
+        if (null == m || '' === m)
+            return (0, i.jsx)('span', {
+                className: o()('emoji', 'emoji-text'),
+                children: a
+            });
+        s &&
+            (n = {
+                onMouseEnter: this.onMouseEnter,
+                onMouseLeave: this.onMouseLeave
+            }),
+            (r = null != f && '' !== f ? { 'data-id': f } : { 'data-name': a });
+        let T = {
+            ...I,
+            key: this.key,
+            className: o()('emoji', l, { jumboable: 'jumbo' === u }),
+            onError: this.onError,
+            ...n,
+            'data-type': 'emoji',
+            ...r
+        };
+        return d
+            ? (0, i.jsx)('img', {
+                  ...T,
+                  src: m,
+                  alt: null !== (e = null != c ? c : a) && void 0 !== e ? e : void 0,
+                  draggable: !1
               })
-            : (r &&
-                  (t = {
-                      onMouseEnter: this.onMouseEnter,
-                      onMouseLeave: this.onMouseLeave
-                  }),
-              (0, a.createElement)('img', {
-                  ...h,
-                  key: this.key,
-                  src: p,
-                  alt: null !== (e = null != u ? u : n) && void 0 !== e ? e : void 0,
-                  draggable: !1,
-                  ...t,
-                  className: o()('emoji', s, { jumboable: 'jumbo' === l }),
-                  onError: this.onError,
-                  'data-type': 'emoji',
-                  ...(null != _ && '' !== _ ? { 'data-id': _ } : { 'data-name': n })
-              }));
+            : (0, i.jsx)('div', {
+                  ...T,
+                  role: 'img',
+                  'aria-label': null !== (t = null != c ? c : a) && void 0 !== t ? t : void 0,
+                  style: {
+                      backgroundImage: 'url('.concat(m, ')'),
+                      backgroundSize: 'contain',
+                      backgroundRepeat: 'no-repeat'
+                  }
+              });
     }
     constructor(...e) {
         super(...e),
@@ -108,8 +124,8 @@ class g extends (r = a.PureComponent) {
             });
     }
 }
-T(g, 'defaultProps', { isInteracting: !1 });
-let S = (function (e) {
+T(S, 'defaultProps', { isInteracting: !1 });
+let g = (function (e) {
     if (null == window.IntersectionObserver)
         return function (t) {
             return (0, i.jsx)(e, {
@@ -182,15 +198,15 @@ let S = (function (e) {
             });
         }
     };
-})(g);
+})(S);
 function A(e) {
     let t = E.Yk.useSetting(),
         n = {
             autoplay: null == e.autoplay ? t : e.autoplay,
             allowAnimatedEmoji: t
         },
-        r = __OVERLAY__ ? (0, c.e7)([f.Z], () => f.Z.isInstanceFocused()) : (0, m.n)();
-    return (0, i.jsx)(S, {
+        r = __OVERLAY__ ? (0, c.e7)([f.Z], () => f.Z.isInstanceFocused()) : (0, I.n)();
+    return (0, i.jsx)(g, {
         ...e,
         ...n,
         isFocused: r

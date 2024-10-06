@@ -1,9 +1,9 @@
 n.d(t, {
     o: function () {
-        return I;
+        return m;
     },
     p: function () {
-        return m;
+        return I;
     }
 });
 var r,
@@ -11,13 +11,13 @@ var r,
     a = n(470079),
     s = n(120356),
     o = n.n(s),
-    l = n(567526),
+    l = n(212433),
     u = n(84735),
     c = n(15127),
     d = n(481060),
     _ = n(699682),
     E = n(689938),
-    f = n(787223);
+    f = n(803636);
 function h(e, t, n) {
     return (
         t in e
@@ -35,7 +35,7 @@ let p = {
     DEFAULT: f.inputDefault,
     MINI: f.inputMini
 };
-function m(e) {
+function I(e) {
     let { error: t } = e,
         n = (0, d.useTransition)(t, {
             config: {
@@ -89,7 +89,17 @@ function m(e) {
         })
     });
 }
-class I extends (r = a.Component) {
+class m extends (r = a.Component) {
+    componentDidMount() {
+        var e, t, n, r;
+        null === (e = (t = this.context).setHasValue) || void 0 === e || e.call(t, (null != this.props.defaultValue && '' !== this.props.defaultValue) || (null != this.props.value && '' !== this.props.value)), null === (n = (r = this.context).setIsFocused) || void 0 === n || n.call(r, !1);
+    }
+    componentDidUpdate() {
+        if (null != this.props.value && '' !== this.props.value) {
+            var e, t;
+            null === (e = (t = this.context).setHasValue) || void 0 === e || e.call(t, !0);
+        }
+    }
     render() {
         var e, t;
         let { className: n, inputClassName: r, inputPrefix: a, disabled: s, size: l, editable: c, inputRef: d, prefixElement: _, focusProps: E, ...h } = this.props,
@@ -122,7 +132,7 @@ class I extends (r = a.Component) {
                         ref: d
                     })
                 }),
-                (0, i.jsx)(m, { error: this.getError() })
+                (0, i.jsx)(I, { error: this.getError() })
             ]
         });
     }
@@ -147,23 +157,23 @@ class I extends (r = a.Component) {
                 return null != n && (null !== (e = null == t ? void 0 : t.length) && void 0 !== e ? e : 0) > n;
             }),
             h(this, 'onChange', (e) => {
-                var t, n;
-                null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, e.currentTarget.value, this.props.name), this.setState({ dirty: !0 });
+                var t, n, r, i;
+                null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, e.currentTarget.value, this.props.name), this.setState({ dirty: !0 }), null === (r = (i = this.context).setHasValue) || void 0 === r || r.call(i, '' !== e.currentTarget.value);
             }),
             h(this, 'onFocus', (e) => {
-                var t, n;
-                null === (t = (n = this.props).onFocus) || void 0 === t || t.call(n, e, this.props.name);
+                var t, n, r, i;
+                null === (t = (n = this.props).onFocus) || void 0 === t || t.call(n, e, this.props.name), null === (r = (i = this.context).setIsFocused) || void 0 === r || r.call(i, !0);
             }),
             h(this, 'onBlur', (e) => {
-                var t, n;
-                null === (t = (n = this.props).onBlur) || void 0 === t || t.call(n, e, this.props.name);
+                var t, n, r, i;
+                null === (t = (n = this.props).onBlur) || void 0 === t || t.call(n, e, this.props.name), null === (r = (i = this.context).setIsFocused) || void 0 === r || r.call(i, !1);
             }),
             (this.state = { dirty: null !== (t = e.defaultDirty) && void 0 !== t && t });
     }
 }
-h(I, 'Sizes', p),
-    h(I, 'contextType', c.q3),
-    h(I, 'defaultProps', {
+h(m, 'Sizes', p),
+    h(m, 'contextType', c.q3),
+    h(m, 'defaultProps', {
         name: '',
         size: p.DEFAULT,
         disabled: !1,

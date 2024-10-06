@@ -14,46 +14,49 @@ var n = t(735250),
     S = t(230711),
     I = t(497321),
     N = t(468026),
-    m = t(317381),
+    A = t(317381),
     C = t(513202),
-    A = t(979200),
+    m = t(979200),
     g = t(600164),
     h = t(713938),
     O = t(881998),
     p = t(246946),
     R = t(768581),
-    x = t(49012),
-    f = t(210887),
-    M = t(436267),
-    D = t(149418),
-    P = t(494620),
-    L = t(981631),
-    b = t(689938),
-    Z = t(102507),
-    v = t(224499);
-let j = d.ZP.connectStores([f.Z], () => ({ theme: f.Z.theme }))(E.EmptyState);
-function B(e) {
+    x = t(585483),
+    M = t(49012),
+    f = t(709054),
+    D = t(706454),
+    L = t(210887),
+    P = t(436267),
+    b = t(149418),
+    Z = t(494620),
+    v = t(981631),
+    j = t(689938),
+    B = t(822352),
+    U = t(113207);
+let G = d.ZP.connectStores([L.Z], () => ({ theme: L.Z.theme }))(E.EmptyState);
+function F(e) {
     let { application: s } = e;
     return (0, n.jsxs)('div', {
-        className: Z.twoWayWarning,
+        className: B.twoWayWarning,
         children: [
             (0, n.jsx)(E.CircleInformationIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: Z.twoWayWarningIcon
+                className: B.twoWayWarningIcon
             }),
             (0, n.jsx)(E.Text, {
                 color: 'text-normal',
                 variant: 'text-sm/medium',
-                children: b.Z.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT.format({
+                children: j.Z.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT.format({
                     applicationName: s.name,
-                    onConnectionPress: () => S.Z.setSection(L.jXE.SETTINGS_CONNECTIONS)
+                    onConnectionPress: () => S.Z.setSection(v.jXE.SETTINGS_CONNECTIONS)
                 })
             })
         ]
     });
 }
-let U = (e) => {
+let y = (e) => {
         let { disclosure: s } = e;
         return a.useMemo(() => {
             switch (s) {
@@ -61,70 +64,70 @@ let U = (e) => {
                     return (0, n.jsx)(E.GlobeEarthIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: Z.disclosureIcon
+                        className: B.disclosureIcon
                     });
                 case _.u$.DISPLAYS_ADVERTISEMENTS:
-                    return (0, n.jsx)(E.EmbedIcon, { className: Z.disclosureIcon });
+                    return (0, n.jsx)(E.EmbedIcon, { className: B.disclosureIcon });
                 default:
-                    return (0, n.jsx)(E.CircleInformationIcon, { className: Z.disclosureIcon });
+                    return (0, n.jsx)(E.CircleInformationIcon, { className: B.disclosureIcon });
             }
         }, [s]);
     },
-    G = (e) => {
-        let { scopes: s, application: t, onDelete: a, disclosures: i } = e,
-            o = () => {
-                let e = b.Z.Messages.DELETE_APP_CONFIRM_MSG_V2.format({ applicationName: t.name });
+    V = (e) => {
+        let { scopes: s, application: t, onDelete: a, disclosures: i, locale: o, id: l } = e,
+            d = () => {
+                let e = j.Z.Messages.DELETE_APP_CONFIRM_MSG_V2.format({ applicationName: t.name });
                 return (
-                    (0, D.Z)(t) &&
+                    (0, b.Z)(t) &&
                         (e = (0, n.jsxs)(n.Fragment, {
                             children: [
                                 e,
-                                (0, n.jsx)(P.Z, {
-                                    look: P.z.WARNING,
-                                    className: Z.infoBox,
-                                    children: b.Z.Messages.SOCIAL_LAYER_APPLICATION_UNLINK_WARNING
+                                (0, n.jsx)(Z.Z, {
+                                    look: Z.z.WARNING,
+                                    className: B.infoBox,
+                                    children: j.Z.Messages.SOCIAL_LAYER_APPLICATION_UNLINK_WARNING
                                 })
                             ]
                         })),
-                    (0, M.Z)(t.id) &&
+                    (0, P.Z)(t.id) &&
                         (e = (0, n.jsxs)(n.Fragment, {
                             children: [
                                 e,
-                                (0, n.jsx)(P.Z, {
-                                    className: Z.infoBox,
-                                    children: b.Z.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT_DISCONNECT_WARNING.format({ applicationName: t.name })
+                                (0, n.jsx)(Z.Z, {
+                                    className: B.infoBox,
+                                    children: j.Z.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT_DISCONNECT_WARNING.format({ applicationName: t.name })
                                 })
                             ]
                         })),
                     (0, E.openModal)((s) =>
                         (0, n.jsx)(N.default, {
-                            title: b.Z.Messages.DEAUTHORIZE_APP,
+                            title: j.Z.Messages.DEAUTHORIZE_APP,
                             body: e,
-                            confirmText: b.Z.Messages.DEAUTHORIZE,
-                            cancelText: b.Z.Messages.CANCEL,
+                            confirmText: j.Z.Messages.DEAUTHORIZE,
+                            cancelText: j.Z.Messages.CANCEL,
                             onConfirm: a,
                             ...s
                         })
                     )
                 );
             },
-            l = () => {
+            _ = () => {
                 null != t.terms_of_service_url &&
-                    (0, x.q)({
+                    (0, M.q)({
                         href: t.terms_of_service_url,
                         shouldConfirm: !0
                     });
             },
-            d = () => {
+            T = () => {
                 null != t.privacy_policy_url &&
-                    (0, x.q)({
+                    (0, M.q)({
                         href: t.privacy_policy_url,
                         shouldConfirm: !0
                     });
             },
-            _ = (0, M.O)(t.id);
+            S = (0, P.O)(t.id);
         return (0, n.jsx)(E.Card, {
-            className: r()(Z.authedApp, v.marginBottom8),
+            className: r()(B.authedApp, U.marginBottom8),
             outline: !0,
             children: (0, n.jsxs)(E.HeadingLevel, {
                 component: (() => {
@@ -135,29 +138,40 @@ let U = (e) => {
                         s =
                             null != e
                                 ? (0, n.jsx)(g.Z.Child, {
-                                      className: Z.appAvatar,
+                                      className: B.appAvatar,
                                       grow: 0,
                                       children: (0, n.jsx)('img', {
                                           src: e,
                                           alt: ''
                                       })
                                   })
-                                : null;
+                                : null,
+                        a = new Date(f.default.extractTimestamp(l)).toLocaleDateString(o);
                     return (0, n.jsxs)('div', {
-                        className: r()(Z.header, v.marginBottom20),
+                        className: r()(B.header, U.marginBottom20),
                         children: [
                             s,
-                            (0, n.jsx)(E.Heading, {
-                                variant: 'text-sm/semibold',
-                                className: Z.headerText,
-                                children: t.name
+                            (0, n.jsxs)('div', {
+                                className: B.headerTextContainer,
+                                children: [
+                                    (0, n.jsx)(E.Heading, {
+                                        variant: 'text-sm/semibold',
+                                        className: B.headerText,
+                                        children: t.name
+                                    }),
+                                    (0, n.jsx)(E.Text, {
+                                        variant: 'text-xs/normal',
+                                        color: 'text-normal',
+                                        children: j.Z.Messages.AUTHORIZED_APPS_AUTHORIZED_ON.format({ date: a })
+                                    })
+                                ]
                             }),
                             (0, n.jsx)(E.Button, {
                                 color: E.ButtonColors.RED,
                                 look: E.ButtonLooks.OUTLINED,
                                 size: E.ButtonSizes.SMALL,
-                                onClick: o,
-                                children: b.Z.Messages.DEAUTHORIZE
+                                onClick: d,
+                                children: j.Z.Messages.DEAUTHORIZE
                             })
                         ]
                     });
@@ -167,27 +181,27 @@ let U = (e) => {
                         if (null != t.description && '' !== t.description)
                             return (0, n.jsx)(E.FormItem, {
                                 faded: !0,
-                                title: b.Z.Messages.ABOUT_THIS_APP,
+                                title: j.Z.Messages.ABOUT_THIS_APP,
                                 children: (0, n.jsx)(E.FormText, { children: t.description })
                             });
                     })(),
                     (() => {
                         if (null != t.terms_of_service_url || null != t.privacy_policy_url)
                             return (0, n.jsxs)('div', {
-                                className: Z.tosPrivacy,
+                                className: B.tosPrivacy,
                                 children: [
                                     null != t.terms_of_service_url
                                         ? (0, n.jsxs)(u.P, {
                                               tag: 'a',
-                                              onClick: l,
-                                              className: Z.tos,
+                                              onClick: _,
+                                              className: B.tos,
                                               children: [
                                                   (0, n.jsx)(E.FormText, {
-                                                      className: Z.link,
-                                                      children: b.Z.Messages.AUTHORIZED_APPS_TERMS_OF_SERVICE
+                                                      className: B.link,
+                                                      children: j.Z.Messages.AUTHORIZED_APPS_TERMS_OF_SERVICE
                                                   }),
                                                   (0, n.jsx)(E.LinkExternalSmallIcon, {
-                                                      className: Z.externalLinkIcon,
+                                                      className: B.externalLinkIcon,
                                                       color: 'var(--text-link)'
                                                   })
                                               ]
@@ -195,20 +209,20 @@ let U = (e) => {
                                         : null,
                                     null != t.privacy_policy_url
                                         ? (0, n.jsxs)('div', {
-                                              className: Z.privacy,
+                                              className: B.privacy,
                                               children: [
-                                                  null != t.terms_of_service_url ? (0, n.jsx)('div', { className: Z.divider }) : null,
+                                                  null != t.terms_of_service_url ? (0, n.jsx)('div', { className: B.divider }) : null,
                                                   (0, n.jsxs)(u.P, {
                                                       tag: 'a',
-                                                      onClick: d,
-                                                      className: Z.privacy,
+                                                      onClick: T,
+                                                      className: B.privacy,
                                                       children: [
                                                           (0, n.jsx)(E.FormText, {
-                                                              className: Z.link,
-                                                              children: b.Z.Messages.AUTHORIZED_APPS_PRIVACY_POLICY
+                                                              className: B.link,
+                                                              children: j.Z.Messages.AUTHORIZED_APPS_PRIVACY_POLICY
                                                           }),
                                                           (0, n.jsx)(E.LinkExternalSmallIcon, {
-                                                              className: Z.externalLinkIcon,
+                                                              className: B.externalLinkIcon,
                                                               color: 'var(--text-link)'
                                                           })
                                                       ]
@@ -221,20 +235,20 @@ let U = (e) => {
                     })(),
                     (() => {
                         let e = [];
-                        for (let t of s) e.push(...(0, h.CI)(t, s)), t === c.x.APPLICATIONS_COMMANDS && e.push(b.Z.Messages.SCOPE_DM_YOU);
+                        for (let t of s) e.push(...(0, h.CI)(t, s)), t === c.x.APPLICATIONS_COMMANDS && e.push(j.Z.Messages.SCOPE_DM_YOU);
                         if (e.length > 0 || (null != i && i.length > 0))
                             return (0, n.jsx)(E.FormItem, {
                                 faded: !0,
-                                title: b.Z.Messages.PERMISSIONS,
-                                className: v.marginTop20,
+                                title: j.Z.Messages.PERMISSIONS,
+                                className: U.marginTop20,
                                 children: (0, n.jsxs)('ul', {
                                     children: [
                                         e.map((e, s) =>
                                             (0, n.jsxs)(
                                                 'li',
                                                 {
-                                                    className: r()(Z.permission, v.marginTop8),
-                                                    children: [(0, n.jsx)('i', { className: Z.permissionCheckmark }), (0, n.jsx)(E.FormText, { children: e })]
+                                                    className: r()(B.permission, U.marginTop8),
+                                                    children: [(0, n.jsx)('i', { className: B.permissionCheckmark }), (0, n.jsx)(E.FormText, { children: e })]
                                                 },
                                                 s
                                             )
@@ -242,13 +256,13 @@ let U = (e) => {
                                         null == i
                                             ? void 0
                                             : i.map((s, t) => {
-                                                  let a = (0, A.PM)(s);
+                                                  let a = (0, m.PM)(s);
                                                   return null != a
                                                       ? (0, n.jsxs)(
                                                             'li',
                                                             {
-                                                                className: r()(Z.permission, v.marginTop8),
-                                                                children: [(0, n.jsx)(U, { disclosure: s }), (0, n.jsx)(E.FormText, { children: a })]
+                                                                className: r()(B.permission, U.marginTop8),
+                                                                children: [(0, n.jsx)(y, { disclosure: s }), (0, n.jsx)(E.FormText, { children: a })]
                                                             },
                                                             t + e.length
                                                         )
@@ -258,7 +272,7 @@ let U = (e) => {
                                 })
                             });
                     })(),
-                    _ && (0, n.jsx)(B, { application: t })
+                    S && (0, n.jsx)(F, { application: t })
                 ]
             })
         });
@@ -266,14 +280,15 @@ let U = (e) => {
 s.Z = () => {
     let e = (0, d.e7)([p.Z], () => p.Z.hidePersonalInformation),
         s = (0, d.e7)([O.Z], () => O.Z.getApps()),
-        i = (0, d.e7)([m.ZP], () => m.ZP.getSelfEmbeddedActivities());
+        i = (0, d.e7)([D.default], () => D.default.locale),
+        r = (0, d.e7)([A.ZP], () => A.ZP.getSelfEmbeddedActivities());
     a.useEffect(() => {
         T.Z.fetch();
     }, []);
-    let r = (e) => {
+    let o = (e) => {
             let { id: s, application: t } = e;
-            T.Z.delete(s);
-            let n = i.get(t.id);
+            T.Z.delete(s), x.S.safeDispatch(v.CkL.HIDE_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, { applicationId: t.id });
+            let n = r.get(t.id);
             null != n &&
                 C.Z.leaveActivity({
                     channelId: n.channelId,
@@ -281,28 +296,28 @@ s.Z = () => {
                     showFeedback: !1
                 });
         },
-        [o, c] = a.useState(''),
-        _ = (e) => {
-            c(e);
+        [c, _] = a.useState(''),
+        u = (e) => {
+            _(e);
         },
-        u = () => {
-            c('');
+        S = () => {
+            _('');
         },
-        S = () =>
+        N = () =>
             (0, n.jsx)('div', {
-                className: Z.searchContainer,
+                className: B.searchContainer,
                 children: (0, n.jsx)(E.SearchBar, {
                     size: E.SearchBar.Sizes.MEDIUM,
-                    query: o,
-                    onChange: _,
-                    onClear: u,
-                    placeholder: b.Z.Messages.INTEGRATIONS_SEARCH,
-                    'aria-label': b.Z.Messages.INTEGRATIONS_SEARCH
+                    query: c,
+                    onChange: u,
+                    onClear: S,
+                    placeholder: j.Z.Messages.INTEGRATIONS_SEARCH,
+                    'aria-label': j.Z.Messages.INTEGRATIONS_SEARCH
                 })
             }),
-        N = (e, s) =>
-            (0, n.jsxs)(j, {
-                className: Z.__invalid_marginTop20,
+        m = (e, s) =>
+            (0, n.jsxs)(G, {
+                className: B.__invalid_marginTop20,
                 children: [
                     (0, n.jsx)(E.EmptyStateImage, {
                         darkSrc: t(701972),
@@ -316,47 +331,50 @@ s.Z = () => {
                     })
                 ]
             }),
-        A = a.useMemo(() => {
-            let e = o.trim().toLowerCase();
+        g = a.useMemo(() => {
+            let e = c.trim().toLowerCase();
             return '' === e || null == s ? s : s.length < 100 ? s.filter((s) => l()(e, s.application.name.toLowerCase())) : s.filter((s) => s.application.name.toLowerCase().includes(e));
-        }, [s, o]);
+        }, [s, c]);
     return e
         ? (0, n.jsx)(I.Z, {})
         : (0, n.jsx)(E.FormSection, {
               tag: E.FormTitleTags.H1,
-              title: b.Z.Messages.AUTHORIZED_APPS,
+              title: j.Z.Messages.AUTHORIZED_APPS,
               children: (0, n.jsx)(E.HeadingLevel, {
                   component: (0, n.jsx)(E.FormNotice, {
-                      className: v.marginBottom40,
+                      className: U.marginBottom40,
                       type: E.CardTypes.PRIMARY,
-                      title: b.Z.Messages.APPLICATIONS_AND_CONNECTIONS,
-                      body: b.Z.Messages.APPLICATIONS_AND_CONNECTIONS_BODY
+                      title: j.Z.Messages.APPLICATIONS_AND_CONNECTIONS,
+                      body: j.Z.Messages.APPLICATIONS_AND_CONNECTIONS_BODY
                   }),
                   children:
-                      null == s || null == A
+                      null == s || null == g
                           ? (0, n.jsx)(E.Spinner, {
-                                className: v.marginTop20,
+                                className: U.marginTop20,
                                 type: E.Spinner.Type.SPINNING_CIRCLE
                             })
                           : 0 === s.length
-                            ? N(b.Z.Messages.NO_AUTHORIZED_APPS_NOTE, b.Z.Messages.NO_AUTHORIZED_APPS)
-                            : 0 === A.length
+                            ? m(j.Z.Messages.NO_AUTHORIZED_APPS_NOTE, j.Z.Messages.NO_AUTHORIZED_APPS)
+                            : 0 === g.length
                               ? (0, n.jsxs)(n.Fragment, {
-                                    children: [S(), N(null, b.Z.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
+                                    children: [N(), m(null, j.Z.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
                                 })
                               : (0, n.jsxs)(n.Fragment, {
                                     children: [
-                                        S(),
-                                        A.sort((e, s) => e.application.name.localeCompare(s.application.name)).map((e) =>
-                                            (0, n.jsx)(
-                                                G,
-                                                {
-                                                    onDelete: () => r(e),
-                                                    ...e
-                                                },
-                                                e.id
+                                        N(),
+                                        g
+                                            .sort((e, s) => e.application.name.localeCompare(s.application.name))
+                                            .map((e) =>
+                                                (0, n.jsx)(
+                                                    V,
+                                                    {
+                                                        locale: i,
+                                                        onDelete: () => o(e),
+                                                        ...e
+                                                    },
+                                                    e.id
+                                                )
                                             )
-                                        )
                                     ]
                                 })
               })

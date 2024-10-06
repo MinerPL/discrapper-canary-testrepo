@@ -18,7 +18,6 @@ n.d(t, {
         return l;
     }
 }),
-    n(653041),
     n(47120),
     n(774863);
 function r(e) {
@@ -43,16 +42,11 @@ function o(e, t) {
 }
 function l(e) {
     var t, n, r, i;
-    let a = null !== (t = e.attachments) && void 0 !== t ? t : [],
-        l = null !== (n = e.embeds) && void 0 !== n ? n : [],
-        u = 'messageSnapshots' in e ? e.messageSnapshots : e.message_snapshots;
-    if (null != u && u.length > 0)
-        for (let e of u) {
-            let t = null !== (r = e.message.attachments) && void 0 !== r ? r : [],
-                n = null !== (i = e.message.embeds) && void 0 !== i ? i : [];
-            a.push(...t), l.push(...n);
-        }
-    return a.some(s) || l.some(o);
+    if ((null === (t = e.attachments) || void 0 === t ? void 0 : t.some(s)) || (null === (n = e.embeds) || void 0 === n ? void 0 : n.some(o))) return !0;
+    let a = 'messageSnapshots' in e ? e.messageSnapshots : e.message_snapshots;
+    if (null == a || 0 === a.length) return !1;
+    for (let e of a) if ((null === (r = e.message.attachments) || void 0 === r ? void 0 : r.some(s)) || (null === (i = e.message.embeds) || void 0 === i ? void 0 : i.some(o))) return !0;
+    return !1;
 }
 function u(e) {
     return null == e.content_scan_version;

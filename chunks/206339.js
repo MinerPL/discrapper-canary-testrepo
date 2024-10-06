@@ -8,84 +8,79 @@ var n = t(735250),
     c = t(442837),
     d = t(481060),
     _ = t(570140),
-    E = t(496929),
-    u = t(37234),
-    I = t(230711),
-    T = t(410030),
-    S = t(960359),
-    N = t(730417),
-    C = t(524347),
-    m = t(454585),
-    A = t(163684),
-    O = t(178100),
-    g = t(518638),
-    h = t(725727),
-    p = t(454982),
-    R = t(197115),
-    x = t(504983),
-    M = t(703656),
-    f = t(594174),
-    D = t(580130),
-    P = t(669079),
-    L = t(74538),
-    b = t(695346),
-    Z = t(317941),
-    v = t(622474),
-    j = t(981631),
-    B = t(474936),
-    U = t(689938),
-    G = t(161368);
-function F(e) {
+    u = t(496929),
+    E = t(37234),
+    T = t(230711),
+    S = t(410030),
+    I = t(454585),
+    N = t(163684),
+    A = t(178100),
+    C = t(518638),
+    m = t(725727),
+    g = t(454982),
+    h = t(197115),
+    O = t(504983),
+    p = t(703656),
+    R = t(594174),
+    x = t(580130),
+    M = t(669079),
+    f = t(74538),
+    D = t(317941),
+    L = t(981631),
+    P = t(474936),
+    b = t(689938),
+    Z = t(360360);
+function v(e) {
     let s,
         { outboundPromotion: t, code: i, addClaimedOutboundPromotionCode: o, disabled: l } = e,
         [c, _] = a.useState(!1),
-        [E, u] = a.useState(!1),
-        I = () => _((e) => !e),
-        S = (0, T.ZP)(),
-        N = (0, g.Pz)(t.id, S),
-        C = null != i,
-        A = (0, O.Z)(t, C);
-    C && c
-        ? (s = U.Z.Messages.OUTBOUND_PROMOTION_CARD_CLAIMED_EXPANDED_BODY.format({
-              endDate: A,
-              onClickDetails: I
+        [u, E] = a.useState(!1),
+        T = () => _((e) => !e),
+        N = (0, S.ZP)(),
+        m = (0, C.Pz)(t.id, N),
+        h = null != i,
+        O = (0, A.Z)(t, h);
+    h && c
+        ? (s = b.Z.Messages.OUTBOUND_PROMOTION_CARD_CLAIMED_EXPANDED_BODY.format({
+              endDate: O,
+              onClickDetails: T
           }))
-        : C && !c
-          ? (s = U.Z.Messages.OUTBOUND_PROMOTION_CARD_CLAIMED_UNEXPANDED_BODY.format({
-                endDate: A,
-                onClickDetails: I
+        : h && !c
+          ? (s = b.Z.Messages.OUTBOUND_PROMOTION_CARD_CLAIMED_UNEXPANDED_BODY.format({
+                endDate: O,
+                onClickDetails: T
             }))
-          : !C && c
-            ? (s = U.Z.Messages.OUTBOUND_PROMOTION_CARD_UNCLAIMED_EXPANDED_BODY.format({
-                  endDate: A,
-                  onClickDetails: I
+          : !h && c
+            ? (s = b.Z.Messages.OUTBOUND_PROMOTION_CARD_UNCLAIMED_EXPANDED_BODY.format({
+                  endDate: O,
+                  onClickDetails: T
               }))
-            : !C &&
+            : !h &&
               !c &&
-              (s = U.Z.Messages.OUTBOUND_PROMOTION_CARD_UNCLAIMED_UNEXPANDED_BODY.format({
-                  endDate: A,
-                  onClickDetails: I
+              (s = b.Z.Messages.OUTBOUND_PROMOTION_CARD_UNCLAIMED_UNEXPANDED_BODY.format({
+                  endDate: O,
+                  onClickDetails: T
               }));
-    let h = C ? U.Z.Messages.OUTBOUND_PROMOTION_SEE_CODE : U.Z.Messages.PROMOTION_CARD_ACTION_CLAIM,
-        R = a.useCallback(() => u(!1), []),
+    let p = h ? b.Z.Messages.OUTBOUND_PROMOTION_SEE_CODE : b.Z.Messages.PROMOTION_CARD_ACTION_CLAIM,
+        R = a.useCallback(() => E(!1), []),
         { outboundTitle: x, outboundTermsAndConditions: M } = t;
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)('div', {
-                className: r()(G.skuCard, G.promotionCard),
+                className: r()(Z.skuCard, Z.promotionCard),
                 children: [
                     (0, n.jsxs)('div', {
-                        className: G.mainPromotionCardContainer,
+                        className: Z.mainPromotionCardContainer,
                         children: [
                             (0, n.jsxs)('div', {
-                                className: G.promotionCardLeftContainer,
+                                className: Z.promotionCardLeftContainer,
                                 children: [
                                     (0, n.jsx)('div', {
-                                        className: G.promotionIcon,
+                                        className: Z.promotionIcon,
                                         children: (0, n.jsx)('img', {
                                             alt: '',
-                                            src: N,
-                                            className: G.promotionIconImage
+                                            src: m,
+                                            className: Z.promotionIconImage
                                         })
                                     }),
                                     (0, n.jsxs)('div', {
@@ -97,7 +92,7 @@ function F(e) {
                                             (0, n.jsx)(d.Text, {
                                                 variant: 'text-sm/normal',
                                                 color: 'text-normal',
-                                                className: G.__invalid_promotionText,
+                                                className: Z.__invalid_promotionText,
                                                 children: s
                                             })
                                         ]
@@ -105,28 +100,28 @@ function F(e) {
                                 ]
                             }),
                             (0, n.jsx)(d.Button, {
-                                className: G.promotionCardButton,
+                                className: Z.promotionCardButton,
                                 color: d.Button.Colors.BRAND,
                                 size: d.Button.Sizes.SMALL,
-                                onClick: () => u(!0),
+                                onClick: () => E(!0),
                                 disabled: !0 === l,
-                                children: h
+                                children: p
                             })
                         ]
                     }),
                     c &&
                         (0, n.jsx)(d.Text, {
-                            className: G.promotionLegalese,
+                            className: Z.promotionLegalese,
                             variant: 'text-xs/normal',
                             color: 'header-secondary',
-                            children: m.Z.parse(M, !1, { allowLinks: !0 })
+                            children: I.Z.parse(M, !1, { allowLinks: !0 })
                         })
                 ]
             }),
-            E &&
+            u &&
                 (0, n.jsx)(d.Modal, {
                     renderModal: (e) =>
-                        (0, n.jsx)(p.Z, {
+                        (0, n.jsx)(g.Z, {
                             ...e,
                             onClose: R,
                             onClaim: o,
@@ -139,122 +134,106 @@ function F(e) {
     });
 }
 s.Z = function () {
-    let e = (0, c.Wu)([D.Z], () => D.Z.getGiftable()),
+    let e = (0, c.Wu)([x.Z], () => x.Z.getGiftable()),
         [s, t] = l().partition(e, (e) => {
             let { giftCodeBatchId: s } = e;
             return null == s;
         }),
-        i = (0, c.e7)([f.default], () => L.ZP.isPremium(f.default.getCurrentUser())),
-        o = l().groupBy(s, (e) => (0, P.Bg)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
-        [T, m] = a.useState(!1),
-        O = (0, c.e7)([C.Z], () => C.Z.userStatus);
+        i = (0, c.e7)([R.default], () => f.ZP.isPremiumExactly(R.default.getCurrentUser(), P.p9.TIER_2)),
+        o = l().groupBy(s, (e) => (0, M.Bg)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
+        [S, I] = a.useState(!1);
     a.useEffect(() => {
         _.Z.wait(() => {
-            (0, E.Qv)().then(() => m(!0));
+            (0, u.Qv)().then(() => I(!0));
         });
     }, []);
-    let g = (0, N.dy)();
-    a.useEffect(() => {
-        g &&
-            _.Z.wait(async () => {
-                await (0, S.R5)();
-            });
-    }, [g]);
-    let p = b.bh.useSetting(),
-        y = null != O || !g,
-        { promotionsLoaded: V, activeOutboundPromotions: Y, claimedEndedOutboundPromotions: w, claimedOutboundPromotionCodeMap: H, addClaimedOutboundPromotionCode: k } = (0, h.lG)(),
-        W = Y.length + w.length > 0,
-        K =
-            A.g.useExperiment(
+    let { promotionsLoaded: A, activeOutboundPromotions: C, claimedEndedOutboundPromotions: g, claimedOutboundPromotionCodeMap: j, addClaimedOutboundPromotionCode: B } = (0, m.lG)(),
+        U = C.length + g.length > 0,
+        G =
+            N.g.useExperiment(
                 { location: 'EntitlementGifts' },
                 {
-                    autoTrackExposure: !i,
+                    autoTrackExposure: !1,
                     disable: i
                 }
-            ).enabled && W;
-    function z() {
-        I.Z.open(j.oAB.PREMIUM);
+            ).enabled && U;
+    function F() {
+        T.Z.open(L.oAB.PREMIUM);
     }
-    return T && V && y
+    return S && A
         ? (0, n.jsxs)(n.Fragment, {
               children: [
-                  g
-                      ? (0, n.jsx)(v.Z, {
-                            dropsOptedOut: p,
-                            dropsStatuses: O
-                        })
-                      : null,
                   (function () {
                       var e;
-                      let s = t.find((e) => e.giftCodeBatchId === B.m8 && !e.consumed),
-                          a = null !== (e = t.filter((e) => e.giftCodeBatchId === B.rX && !e.consumed)) && void 0 !== e ? e : [],
+                      let s = t.find((e) => e.giftCodeBatchId === P.m8 && !e.consumed),
+                          a = null !== (e = t.filter((e) => e.giftCodeBatchId === P.rX && !e.consumed)) && void 0 !== e ? e : [],
                           [o, c] = l().partition(a, (e) => {
                               let { subscriptionPlanId: s } = e;
-                              return s === B.Xh.PREMIUM_YEAR_TIER_2;
+                              return s === P.Xh.PREMIUM_YEAR_TIER_2;
                           }),
-                          _ = K
+                          _ = G
                               ? (0, n.jsxs)('div', {
-                                    className: G.promoHeaderContainer,
+                                    className: Z.promoHeaderContainer,
                                     children: [
                                         (0, n.jsxs)('div', {
                                             children: [
                                                 (0, n.jsx)(d.Heading, {
                                                     variant: 'heading-md/semibold',
-                                                    children: W ? U.Z.Messages.GIFT_INVENTORY_YOUR_GIFTS : void 0
+                                                    children: U ? b.Z.Messages.GIFT_INVENTORY_YOUR_GIFTS : void 0
                                                 }),
                                                 (0, n.jsx)(d.Heading, {
                                                     variant: 'text-sm/normal',
-                                                    className: G.promoDescription,
-                                                    children: U.Z.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_GIFTS_DESCRIPTION.format({
+                                                    className: Z.promoDescription,
+                                                    children: b.Z.Messages.OUTBOUND_PROMO_UPSELL_EXPERIMENT_GIFTS_DESCRIPTION.format({
                                                         onClick: () => {
-                                                            (0, u.xf)(), (0, M.uL)(j.Z5c.APPLICATION_STORE);
+                                                            (0, E.xf)(), (0, p.uL)(L.Z5c.APPLICATION_STORE);
                                                         }
                                                     })
                                                 })
                                             ]
                                         }),
-                                        (0, n.jsx)(R.Z, {
+                                        (0, n.jsx)(h.Z, {
                                             showGradient: !0,
-                                            className: G.promoNitroButton,
-                                            subscriptionTier: B.Si.TIER_2,
-                                            buttonText: U.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
+                                            className: Z.promoNitroButton,
+                                            subscriptionTier: P.Si.TIER_2,
+                                            buttonText: b.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
                                         })
                                     ]
                                 })
                               : (0, n.jsx)(d.Heading, {
                                     variant: 'heading-md/semibold',
-                                    children: W ? U.Z.Messages.GIFT_INVENTORY_YOUR_GIFTS : void 0
+                                    children: U ? b.Z.Messages.GIFT_INVENTORY_YOUR_GIFTS : void 0
                                 });
-                      return (0, n.jsx)(x.Z, {
-                          className: G.containerWithMargin,
-                          isShown: K,
-                          type: x.Y.PREMIUM,
+                      return (0, n.jsx)(O.Z, {
+                          className: Z.containerWithMargin,
+                          isShown: G,
+                          type: O.Y.PREMIUM,
                           hasBackground: !0,
                           children: (0, n.jsxs)(d.FormSection, {
-                              className: r()({ [G.containerWithMargin]: !K }),
+                              className: r()({ [Z.containerWithMargin]: !G }),
                               children: [
                                   _,
-                                  W ? (0, n.jsx)(d.FormDivider, { className: G.divider }) : null,
-                                  w.map((e) => {
+                                  U ? (0, n.jsx)(d.FormDivider, { className: Z.divider }) : null,
+                                  g.map((e) => {
                                       let { code: s, promotion: t } = e;
                                       return (0, n.jsx)(
-                                          F,
+                                          v,
                                           {
                                               outboundPromotion: t,
                                               code: s,
-                                              addClaimedOutboundPromotionCode: k,
+                                              addClaimedOutboundPromotionCode: B,
                                               disabled: !i
                                           },
                                           t.id
                                       );
                                   }),
-                                  Y.map((e) =>
+                                  C.map((e) =>
                                       (0, n.jsx)(
-                                          F,
+                                          v,
                                           {
                                               outboundPromotion: e,
-                                              code: H[e.id],
-                                              addClaimedOutboundPromotionCode: k,
+                                              code: j[e.id],
+                                              addClaimedOutboundPromotionCode: B,
                                               disabled: !i
                                           },
                                           e.id
@@ -262,41 +241,41 @@ s.Z = function () {
                                   ),
                                   null != s
                                       ? (0, n.jsx)(
-                                            Z.Z,
+                                            D.Z,
                                             {
-                                                className: G.skuCard,
+                                                className: Z.skuCard,
                                                 skuId: s.skuId,
                                                 subscriptionPlanId: s.subscriptionPlanId,
                                                 entitlements: [s],
-                                                giftCodeBatchId: B.m8
+                                                giftCodeBatchId: P.m8
                                             },
-                                            (0, P.Bg)(s.skuId, s.subscriptionPlanId)
+                                            (0, M.Bg)(s.skuId, s.subscriptionPlanId)
                                         )
                                       : null,
                                   o.length > 0
                                       ? (0, n.jsx)(
-                                            Z.Z,
+                                            D.Z,
                                             {
-                                                className: G.skuCard,
+                                                className: Z.skuCard,
                                                 skuId: o[0].skuId,
                                                 subscriptionPlanId: o[0].subscriptionPlanId,
                                                 entitlements: o,
-                                                giftCodeBatchId: B.rX
+                                                giftCodeBatchId: P.rX
                                             },
-                                            (0, P.Bg)(o[0].skuId, o[0].subscriptionPlanId)
+                                            (0, M.Bg)(o[0].skuId, o[0].subscriptionPlanId)
                                         )
                                       : null,
                                   c.length > 0
                                       ? (0, n.jsx)(
-                                            Z.Z,
+                                            D.Z,
                                             {
-                                                className: G.skuCard,
+                                                className: Z.skuCard,
                                                 skuId: c[0].skuId,
                                                 subscriptionPlanId: c[0].subscriptionPlanId,
                                                 entitlements: c,
-                                                giftCodeBatchId: B.rX
+                                                giftCodeBatchId: P.rX
                                             },
-                                            (0, P.Bg)(c[0].skuId, c[0].subscriptionPlanId)
+                                            (0, M.Bg)(c[0].skuId, c[0].subscriptionPlanId)
                                         )
                                       : null
                               ]
@@ -304,37 +283,37 @@ s.Z = function () {
                       });
                   })(),
                   (0, n.jsx)(d.FormSection, {
-                      className: G.containerWithMargin,
+                      className: Z.containerWithMargin,
                       children: (0, n.jsxs)(d.HeadingLevel, {
                           component: (0, n.jsx)(d.Heading, {
                               variant: 'heading-md/semibold',
-                              children: U.Z.Messages.GIFT_INVENTORY_GIFTS_YOU_PURCHASED
+                              children: b.Z.Messages.GIFT_INVENTORY_GIFTS_YOU_PURCHASED
                           }),
                           children: [
-                              (0, n.jsx)(d.FormDivider, { className: G.divider }),
+                              (0, n.jsx)(d.FormDivider, { className: Z.divider }),
                               0 === Object.keys(o).length
                                   ? (0, n.jsxs)('div', {
-                                        className: G.emptyState,
+                                        className: Z.emptyState,
                                         children: [
-                                            (0, n.jsx)('div', { className: G.emptyStateImage }),
+                                            (0, n.jsx)('div', { className: Z.emptyStateImage }),
                                             (0, n.jsx)(d.H, {
-                                                className: G.emptyStateHeader,
-                                                children: U.Z.Messages.GIFT_INVENTORY_NO_GIFTS
+                                                className: Z.emptyStateHeader,
+                                                children: b.Z.Messages.GIFT_INVENTORY_NO_GIFTS
                                             }),
                                             (0, n.jsx)('p', {
-                                                className: G.emptyStateSubtext,
-                                                children: U.Z.Messages.GIFT_INVENTORY_NO_GIFTS_SUBTEXT.format({ onClick: z })
+                                                className: Z.emptyStateSubtext,
+                                                children: b.Z.Messages.GIFT_INVENTORY_NO_GIFTS_SUBTEXT.format({ onClick: F })
                                             })
                                         ]
                                     })
                                   : l()
                                         .keys(o)
                                         .map((e) => {
-                                            let { skuId: s, subscriptionPlanId: t, giftStyle: a } = (0, P.Z0)(e);
+                                            let { skuId: s, subscriptionPlanId: t, giftStyle: a } = (0, M.Z0)(e);
                                             return (0, n.jsx)(
-                                                Z.Z,
+                                                D.Z,
                                                 {
-                                                    className: G.skuCard,
+                                                    className: Z.skuCard,
                                                     skuId: s,
                                                     subscriptionPlanId: t,
                                                     entitlements: o[e],
@@ -348,5 +327,5 @@ s.Z = function () {
                   })
               ]
           })
-        : (0, n.jsx)(d.Spinner, { className: G.loading });
+        : (0, n.jsx)(d.Spinner, { className: Z.loading });
 };

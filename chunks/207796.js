@@ -1,12 +1,12 @@
 n.d(t, {
     Ce: function () {
-        return T;
+        return m;
     },
     GN: function () {
         return f;
     },
     PJ: function () {
-        return I;
+        return p;
     },
     fH: function () {
         return h;
@@ -14,11 +14,8 @@ n.d(t, {
     hz: function () {
         return i;
     },
-    qQ: function () {
-        return p;
-    },
     t1: function () {
-        return m;
+        return I;
     },
     v0: function () {
         return r;
@@ -45,20 +42,23 @@ let f = (0, u.Z)(
             game: 'none',
             completedNux: !1,
             userUpsellScreen: 'user_upsell',
+            loadingGameApplication: !1,
             savedGuildIds: [],
             selectedGames: [],
             selectedPlaystyle: null,
             selectedTraits: [],
             dismissedPilotAdminNux: !1,
+            entrypointGameId: null,
             setSavedGuildIds: (t) => (0, d.j)(() => e({ savedGuildIds: t })),
             setGame: (t) => (0, d.j)(() => e({ game: t })),
-            setSelectedGames: (t) =>
+            setSelectedGames: (t) => {
                 (0, d.j)(() =>
                     e({
                         selectedGames: t,
                         completedNux: !0
                     })
-                ),
+                );
+            },
             setSelectedPlaystyle: (t) =>
                 (0, d.j)(() =>
                     e({
@@ -114,12 +114,7 @@ function h(e, t) {
         });
     });
 }
-function p(e, t) {
-    let n = f.getState().savedGuildIds,
-        r = t ? [...n, e] : n.filter((t) => t !== e);
-    (0, d.j)(() => f.setState({ savedGuildIds: r }));
-}
-function I() {
+function p() {
     (0, d.j)(() => {
         f.setState({
             completedNux: !1,
@@ -131,11 +126,12 @@ function I() {
             savedGuildIds: [],
             selectedGames: [],
             selectedPlaystyle: null,
-            selectedTraits: []
+            selectedTraits: [],
+            entrypointGameId: null
         });
     });
 }
-function m(e) {
+function I(e) {
     var t;
     let n = e.selectedGames,
         r = null !== (t = e.selectedPlaystyle) && void 0 !== t ? t : void 0;
@@ -145,7 +141,7 @@ function m(e) {
         traits: e.selectedTraits
     };
 }
-function T() {
+function m() {
     (0, d.j)(() => {
         f.setState({ dismissedPilotAdminNux: !0 }), h('discovery');
     });

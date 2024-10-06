@@ -1,6 +1,6 @@
 n.d(t, {
     K: function () {
-        return v;
+        return O;
     },
     y: function () {
         return N;
@@ -21,10 +21,10 @@ var r = n(735250),
     f = n(589530),
     h = n(124347),
     p = n(80966),
-    m = n(981631),
-    I = n(689938),
-    T = n(227611);
-function g(e) {
+    I = n(981631),
+    m = n(689938),
+    T = n(565986);
+function S(e) {
     let { onClose: t } = e,
         n = i.useRef(null);
     return (0, r.jsx)('div', {
@@ -41,7 +41,7 @@ function g(e) {
         })
     });
 }
-let S = (e) => {
+let g = (e) => {
     let { children: t, hasMediaControls: n, isObscured: a, src: o } = e,
         [l, u] = i.useState(!1),
         _ = i.useRef(o);
@@ -83,7 +83,7 @@ function A(e) {
             target: '_blank',
             rel: 'noreferrer noopener',
             className: T.downloadLink,
-            children: I.Z.Messages.OPEN_IN_BROWSER
+            children: m.Z.Messages.OPEN_IN_BROWSER
         }),
         s = i({ className: T.forward });
     return null == a && null == s
@@ -94,19 +94,19 @@ function A(e) {
           });
 }
 function N(e) {
-    let { src: t, original: n, placeholder: a, width: s, height: l, animated: u, children: c, responsive: d, renderLinkComponent: f, renderForwardComponent: p, maxWidth: I, maxHeight: N, shouldAnimate: v, onClose: O, shouldHideMediaOptions: R = !1, obscure: C = !1, ...y } = e,
-        { width: D, height: L } = (0, E.zp)(s, l),
-        b = o.tq && null != O;
+    let { src: t, original: n, placeholder: a, width: s, height: l, animated: u, children: c, responsive: d, renderLinkComponent: f, renderForwardComponent: p, maxWidth: m, maxHeight: N, shouldAnimate: O, srcIsAnimated: R, onClose: v, shouldHideMediaOptions: C = !1, obscure: L = !1, ...y } = e,
+        { width: D, height: b } = (0, E.zp)(s, l),
+        M = o.tq && null != v;
     i.useEffect(() => {
-        if (null != O)
+        if (null != v)
             return (
-                _.S.subscribe(m.CkL.MEDIA_MODAL_CLOSE, O),
+                _.S.subscribe(I.CkL.MEDIA_MODAL_CLOSE, v),
                 () => {
-                    _.S.unsubscribe(m.CkL.MEDIA_MODAL_CLOSE, O);
+                    _.S.unsubscribe(I.CkL.MEDIA_MODAL_CLOSE, v);
                 }
             );
-    }, [O]);
-    let M = R
+    }, [v]);
+    let P = C
         ? (e) => {
               e.stopPropagation(), e.preventDefault();
           }
@@ -114,13 +114,13 @@ function N(e) {
     return (0, r.jsxs)('div', {
         className: T.wrapper,
         children: [
-            b ? (0, r.jsx)(g, { onClose: O }) : null,
-            (0, r.jsx)(S, {
-                isObscured: C,
+            M ? (0, r.jsx)(S, { onClose: v }) : null,
+            (0, r.jsx)(g, {
+                isObscured: L,
                 src: t,
                 children: (e) =>
                     (0, r.jsx)(
-                        h.Z,
+                        h.ZP,
                         {
                             src: t,
                             placeholder: a,
@@ -128,18 +128,19 @@ function N(e) {
                             width: s,
                             height: l,
                             maxWidth: D,
-                            maxHeight: L,
+                            maxHeight: b,
                             children: c,
                             animated: !e && u,
                             autoPlay: !e,
                             responsive: d,
-                            onContextMenu: M,
+                            srcIsAnimated: R,
+                            onContextMenu: P,
                             ...y
                         },
                         t
                     )
             }),
-            null == n || R
+            null == n || C
                 ? null
                 : (0, r.jsx)(A, {
                       src: n,
@@ -149,10 +150,10 @@ function N(e) {
         ]
     });
 }
-function v(e) {
+function O(e) {
     let { src: t, width: n, height: i, onClose: a, renderLinkComponent: l, renderForwardComponent: u, shouldHideMediaOptions: c = !1, obscure: d = !1, ..._ } = e,
-        { width: h, height: m } = (0, E.zp)(n, i),
-        I = o.tq && null != a,
+        { width: h, height: I } = (0, E.zp)(n, i),
+        m = o.tq && null != a,
         N = c
             ? (e) => {
                   e.stopPropagation(), e.preventDefault();
@@ -161,8 +162,8 @@ function v(e) {
     return (0, r.jsxs)('div', {
         className: s()(T.wrapper, T.videoWrapper),
         children: [
-            I ? (0, r.jsx)(g, { onClose: a }) : null,
-            (0, r.jsx)(S, {
+            m ? (0, r.jsx)(S, { onClose: a }) : null,
+            (0, r.jsx)(g, {
                 hasMediaControls: !0,
                 isObscured: d,
                 src: t,
@@ -174,7 +175,7 @@ function v(e) {
                             width: n,
                             height: i,
                             maxWidth: h,
-                            maxHeight: m,
+                            maxHeight: I,
                             renderLinkComponent: l,
                             volume: f.FC,
                             autoMute: f.rs,

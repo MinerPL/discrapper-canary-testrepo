@@ -1,152 +1,151 @@
 n.d(t, {
     k: function () {
-        return R;
+        return x;
     }
 }),
     n(47120);
 var i = n(735250),
     a = n(470079),
     s = n(349445),
-    r = n(442837),
-    l = n(524437),
+    l = n(442837),
+    r = n(524437),
     o = n(481060),
     c = n(100527),
-    u = n(906732),
-    d = n(602478),
-    _ = n(121254),
-    E = n(742989),
-    I = n(675478),
-    m = n(581883),
-    T = n(585483),
-    h = n(153209),
-    N = n(180173),
-    f = n(956961),
-    C = n(903672),
-    p = n(946443),
-    g = n(264233),
+    d = n(906732),
+    u = n(602478),
+    _ = n(2818),
+    E = n(768943),
+    I = n(742989),
+    m = n(675478),
+    T = n(581883),
+    N = n(585483),
+    h = n(400445),
+    C = n(153209),
+    p = n(956961),
+    f = n(903672),
+    g = n(946443),
+    A = n(264233),
     S = n(981631),
-    A = n(689938);
-function R(e) {
-    let { onOpen: t, onClose: n, children: R, badgeState: x, popoutPosition: O, popoutAlign: M } = e,
-        { analyticsLocations: v } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER),
-        [L, Z] = a.useState(!1),
-        [P, b] = (function () {
-            let e = (0, r.e7)([m.Z], () => {
+    M = n(689938);
+function x(e) {
+    let { onOpen: t, onClose: n, children: x, badgeState: O, popoutPosition: R, popoutAlign: v } = e,
+        { analyticsLocations: L } = (0, d.ZP)(c.Z.NOTIFICATION_CENTER),
+        [Z, P] = a.useState(!1),
+        [D, b] = (function () {
+            let e = (0, l.e7)([T.Z], () => {
                 var e, t;
-                return null !== (t = null === (e = m.Z.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : l.X.UNREADS;
+                return null !== (t = null === (e = T.Z.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : r.X.UNREADS;
             });
             return [
                 e,
                 a.useCallback((e) => {
-                    I.hW.updateAsync(
+                    m.hW.updateAsync(
                         'inbox',
                         (t) => {
                             if (t.currentTab === e) return !1;
                             t.currentTab = e;
                         },
-                        I.fy.FREQUENT_USER_ACTION
+                        m.fy.FREQUENT_USER_ACTION
                     );
                 }, [])
             ];
         })(),
-        { showTutorial: D, setSeenTutorial: j } = (function (e) {
-            let t = (0, r.e7)([m.Z], () => {
+        { showTutorial: j, setSeenTutorial: U } = (function (e) {
+            let t = (0, l.e7)([T.Z], () => {
                     var e, t;
-                    return null !== (t = null === (e = m.Z.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t;
+                    return null !== (t = null === (e = T.Z.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t;
                 }),
                 n = a.useCallback(() => {
-                    I.hW.updateAsync(
+                    m.hW.updateAsync(
                         'inbox',
                         (e) => {
                             e.viewedTutorial = !0;
                         },
-                        I.fy.INFREQUENT_USER_ACTION
+                        m.fy.INFREQUENT_USER_ACTION
                     );
                 }, []);
             return {
-                showTutorial: !t && e === l.X.UNREADS,
+                showTutorial: !t && e === r.X.UNREADS,
                 setSeenTutorial: n
             };
-        })(P),
-        U = a.useCallback(() => {
-            Z(!1), L && (null == n || n());
-        }, [n, L]),
+        })(D),
         y = a.useCallback(() => {
-            Z(!L), L ? null == n || n() : null == t || t();
-        }, [n, t, L]),
+            P(!1), Z && (null == n || n());
+        }, [n, Z]),
         B = a.useCallback(() => {
-            y(), b(l.X.UNREADS);
-        }, [b, y]);
-    a.useEffect(() => (T.S.subscribe(S.CkL.TOGGLE_INBOX_UNREADS_TAB, B), () => void T.S.unsubscribe(S.CkL.TOGGLE_INBOX_UNREADS_TAB, B)), [B]);
-    let { showReminders: k } = E.Z.useExperiment({ location: 'RecentsPopout' }, { autoTrackExposure: !1 }),
-        { enabled: G } = _.Z.useExperiment({ location: 'RecentsPopout' }, { autoTrackExposure: !1 }),
-        { enabled: F } = d.Z.useExperiment({ location: 'RecentsPopout' });
+            P(!Z), Z ? null == n || n() : null == t || t();
+        }, [n, t, Z]);
+    a.useEffect(() => (N.S.subscribe(S.CkL.TOGGLE_INBOX, B), () => void N.S.unsubscribe(S.CkL.TOGGLE_INBOX, B)), [B]);
+    let { showReminders: k } = I.Z.useExperiment({ location: 'RecentsPopout' }),
+        { enabled: G, inInbox: F } = _.Z.useExperiment({ location: 'RecentsPopout' }),
+        w = (0, l.e7)([E.Z], () => E.Z.hasOverdueReminder(), []) && G && F,
+        { enabled: V } = u.Z.useExperiment({ location: 'RecentsPopout' });
     a.useEffect(() => {
-        ((!k && P === l.X.TODOS) || (!G && P === l.X.BOOKMARKS)) && b(l.X.MENTIONS);
+        (((!k || (G && F)) && D === r.X.TODOS) || (D === r.X.BOOKMARKS && !(G || F))) && b(r.X.MENTIONS);
     });
-    let w = a.useCallback(
+    let H = a.useCallback(
         (e) => {
-            !e.shiftKey && U();
+            !e.shiftKey && y();
         },
-        [U]
+        [y]
     );
-    return (0, i.jsx)(u.Gt, {
-        value: v,
+    return (0, i.jsx)(d.Gt, {
+        value: L,
         children: (0, i.jsx)(o.Popout, {
             animation: o.Popout.Animation.NONE,
-            position: O,
-            align: M,
+            position: R,
+            align: v,
             autoInvert: !1,
-            shouldShow: L,
-            onRequestClose: U,
+            shouldShow: Z,
+            onRequestClose: y,
             renderPopout: function () {
                 return (0, i.jsx)(o.Dialog, {
-                    'aria-label': A.Z.Messages.INBOX,
+                    'aria-label': M.Z.Messages.INBOX,
                     children:
-                        P === l.X.FOR_YOU
-                            ? (0, i.jsx)(h.Z, {
+                        D === r.X.FOR_YOU
+                            ? (0, i.jsx)(C.Z, {
                                   setTab: b,
-                                  badgeState: x,
-                                  closePopout: U
+                                  badgeState: O,
+                                  closePopout: y
                               })
-                            : P === l.X.MENTIONS
-                              ? (0, i.jsx)(C.Z, {
+                            : D === r.X.MENTIONS
+                              ? (0, i.jsx)(f.Z, {
                                     setTab: b,
-                                    onJump: w,
-                                    badgeState: x,
-                                    closePopout: U
+                                    onJump: H,
+                                    badgeState: O,
+                                    closePopout: y
                                 })
-                              : F && P === l.X.GAME_INVITES
-                                ? (0, i.jsx)(g.Z, {
+                              : V && D === r.X.GAME_INVITES
+                                ? (0, i.jsx)(A.Z, {
                                       setTab: b,
-                                      badgeState: x,
-                                      closePopout: U
+                                      badgeState: O,
+                                      closePopout: y
                                   })
-                                : G && P === l.X.BOOKMARKS
-                                  ? (0, i.jsx)(N.Z, {
+                                : k && D === r.X.TODOS
+                                  ? (0, i.jsx)(p.Z, {
                                         setTab: b,
-                                        onJump: w,
-                                        closePopout: U
+                                        onJump: H,
+                                        closePopout: y
                                     })
-                                  : k && P === l.X.TODOS
-                                    ? (0, i.jsx)(f.Z, {
+                                  : G && F && D === r.X.BOOKMARKS
+                                    ? (0, i.jsx)(h.Z, {
                                           setTab: b,
-                                          onJump: w,
-                                          closePopout: U
+                                          badgeState: O,
+                                          closePopout: y
                                       })
                                     : (0, i.jsx)(s.SV, {
-                                          fallback: (0, i.jsx)(p.h, {
+                                          fallback: (0, i.jsx)(g.h, {
                                               setTab: b,
-                                              closePopout: U,
-                                              badgeState: x
+                                              closePopout: y,
+                                              badgeState: O
                                           }),
-                                          children: (0, i.jsx)(p.Z, {
+                                          children: (0, i.jsx)(g.Z, {
                                               setTab: b,
-                                              onJump: w,
-                                              showTutorial: D,
-                                              setSeenTutorial: j,
-                                              closePopout: U,
-                                              badgeState: x
+                                              onJump: H,
+                                              showTutorial: j,
+                                              setSeenTutorial: U,
+                                              closePopout: y,
+                                              badgeState: O
                                           })
                                       })
                 });
@@ -154,7 +153,7 @@ function R(e) {
             ignoreModalClicks: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return R(y, n, e);
+                return x(B, n, e, w);
             }
         })
     });

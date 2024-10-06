@@ -1,46 +1,51 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return d;
     }
 });
-var i = n(735250);
-n(470079);
-var s = n(442837),
-    a = n(481060),
+var i = n(735250),
+    a = n(470079),
+    s = n(481060),
+    l = n(283836),
     r = n(728345),
-    l = n(270144),
-    o = n(488915),
-    c = n(171246),
-    u = n(696906),
-    d = n(981631),
-    _ = n(689938),
-    E = n(259028);
-function I(e) {
+    o = n(689938),
+    c = n(364060);
+function d(e) {
     let { applicationId: t, guildId: n } = e,
-        { data: I } = (0, r.I)(t),
-        { listingsLoaded: m } = (0, l.FE)(t, null == I ? void 0 : I.primarySkuId),
-        T = (0, s.e7)([o.Z], () => o.Z.getSubscriptionGroupListingForApplication(t), [t]),
-        h = null != T ? (0, c.Pw)(T) : null,
-        { openModal: N, canOpenModal: C } = (0, u.Z)({
-            guildId: n,
-            groupListingId: null == T ? void 0 : T.id,
-            showBenefitsFirst: !0,
-            analyticsLocation: d.Sbl.INTERACTION_RESPONSE,
-            skuId: null == h ? void 0 : h.id
+        { data: a } = (0, r.IX)(t);
+    return null == a
+        ? null
+        : (0, i.jsx)(u, {
+              app: a,
+              guildId: n
+          });
+}
+function u(e) {
+    let { app: t, guildId: r } = e;
+    (0, l.q)(t.id);
+    let d = a.useCallback(() => {
+        (0, s.openModalLazy)(async () => {
+            let { default: e } = await Promise.all([n.e('77803'), n.e('47988')]).then(n.bind(n, 7225));
+            return (n) =>
+                (0, i.jsx)(e, {
+                    appId: t.id,
+                    guildId: r,
+                    ...n
+                });
         });
-    return (0, i.jsx)(a.Button, {
-        color: a.Button.Colors.BRAND,
-        size: a.Button.Sizes.SMALL,
-        onClick: () => N(),
-        disabled: !C || !m,
+    }, [t, r]);
+    return (0, i.jsx)(s.Button, {
+        color: s.Button.Colors.BRAND,
+        size: s.Button.Sizes.SMALL,
+        onClick: d,
         children: (0, i.jsxs)('div', {
-            className: E.button,
+            className: c.button,
             children: [
-                (0, i.jsx)(a.ShopIcon, {
+                (0, i.jsx)(s.ShopSparkleIcon, {
                     size: 'xs',
                     color: 'white'
                 }),
-                _.Z.Messages.INTERACTION_PREMIUM_UPSELL_CTA
+                o.Z.Messages.STOREFRONT_TITLE.format({ appName: t.name })
             ]
         })
     });

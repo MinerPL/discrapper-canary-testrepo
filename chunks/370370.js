@@ -1,29 +1,32 @@
-var i = n(735250),
+var l = n(735250),
     a = n(470079),
+    i = n(379357),
+    r = n(442550),
     s = n(297781),
-    l = n(443487),
-    r = n(43205),
-    o = n(797342),
-    c = n(182022);
-let u = [s.OV, s.Af, s.pQ];
+    o = n(443487),
+    u = n(494399);
+let c = [s.OV, s.EE, s.Af, s.U9, s.n8, s.pQ];
 t.Z = a.memo((e) => {
     let { entry: t, channel: n, selected: a, hovered: d } = e,
-        { iconUrl: h, iconTitle: m } = (0, o.n)(t);
-    return (0, i.jsxs)(l.Zb, {
+        { largeImage: h } = (0, i.rv)({
+            entry: t,
+            showCoverImage: !1
+        });
+    return (0, l.jsxs)(o.Zb, {
         selected: a,
         children: [
-            (0, i.jsxs)(l.e$, {
+            (0, l.jsxs)(o.e$, {
                 children: [
-                    (0, i.jsx)(l.F9, {
+                    (0, l.jsx)(o.F9, {
                         entry: t,
                         channelId: n.id,
                         guildId: n.guild_id
                     }),
-                    (0, i.jsx)(l.ll, { children: t.extra.activity_name }),
-                    (0, i.jsx)(s.Gk, {
+                    (0, l.jsx)(o.ll, { children: t.extra.activity_name }),
+                    (0, l.jsx)(s.Gk, {
                         location: s.Gt.CARD,
-                        children: u.map((e, n) =>
-                            (0, i.jsx)(
+                        children: c.map((e, n) =>
+                            (0, l.jsx)(
                                 e,
                                 {
                                     entry: t,
@@ -35,11 +38,11 @@ t.Z = a.memo((e) => {
                     })
                 ]
             }),
-            (0, i.jsx)(r.f, {
-                alt: m,
-                src: h,
+            (0, l.jsx)(r.f, {
+                alt: null == h ? void 0 : h.alt,
+                src: null == h ? void 0 : h.src,
                 size: 48,
-                className: c.thumbnail
+                className: u.thumbnail
             })
         ]
     });

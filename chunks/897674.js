@@ -1,29 +1,30 @@
-n.d(e, {
+n.d(t, {
     Z: function () {
         return c;
     },
     g: function () {
-        return o;
+        return u;
     }
 }),
     n(47120);
-var a = n(470079),
-    r = n(442837),
-    l = n(146282),
-    u = n(327220),
-    i = n(959580);
-function o(t, e) {
-    let { types: n } = t;
-    return !!(null == n || n.has(e.content_type)) || !1;
+var l = n(470079),
+    a = n(442837),
+    i = n(146282),
+    r = n(327220),
+    s = n(959580),
+    o = n(371177);
+function u(e, t) {
+    let { types: n } = e;
+    return !!(null == n || n.has(t.content_type)) || !1;
 }
-function c(t) {
-    let { feed: e, filters: n } = (0, r.cj)([l.Z], () => ({
-            feed: l.Z.getFeed(t),
-            filters: l.Z.getFilters()
+function c(e) {
+    let { feed: t, filters: n } = (0, a.cj)([i.Z], () => ({
+            feed: i.Z.getFeed(e),
+            filters: i.Z.getFilters()
         })),
-        c = a.useMemo(() => {
-            let t = null == e ? void 0 : e.entries.map((t) => t.content);
-            return null != n ? (null == t ? void 0 : t.filter((t) => o(n, t))) : t;
-        }, [e, n]);
-    return (c = (0, u.Z)(c)), (c = (0, i.Z)(c));
+        c = l.useMemo(() => {
+            let e = null == t ? void 0 : t.entries.map((e) => e.content);
+            return null != n ? (null == e ? void 0 : e.filter((e) => u(n, e))) : e;
+        }, [t, n]);
+    return (c = (0, r.Z)(c)), (c = (0, s.Z)(c)), (c = (0, o.Z)(c));
 }

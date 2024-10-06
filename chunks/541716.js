@@ -62,7 +62,10 @@ let o = {
             autoSave: !0
         },
         emojis: { button: !0 },
-        gifs: { button: !0 },
+        gifs: {
+            button: !0,
+            allowSending: !0
+        },
         gifts: { button: !0 },
         permissions: { requireSendMessages: !0 },
         showThreadPromptOnReply: !0,
@@ -218,7 +221,7 @@ let o = {
         },
         toolbarType: 2
     },
-    m = {
+    I = {
         analyticsName: 'user_profile_reply',
         drafts: { type: s.d.ChannelMessage },
         emojis: { button: !0 },
@@ -234,7 +237,7 @@ let o = {
         },
         toolbarType: 2
     },
-    I = {
+    m = {
         analyticsName: 'profile_bio_input',
         drafts: { type: s.d.ChannelMessage },
         emojis: { button: !0 },
@@ -258,7 +261,7 @@ let o = {
         disableAutoFocus: !0,
         showCharacterCount: !0
     },
-    g = {
+    S = {
         analyticsName: 'rules_input',
         drafts: { type: s.d.ChannelMessage },
         permissions: { requireSendMessages: !0 },
@@ -268,7 +271,7 @@ let o = {
         },
         showCharacterCount: !0
     },
-    S = {
+    g = {
         analyticsName: 'forum_channel_guidelines',
         drafts: { type: s.d.ChannelMessage },
         permissions: { requireSendMessages: !1 },
@@ -304,13 +307,13 @@ let o = {
         VOICE_CHANNEL_STATUS: _,
         THREAD_CREATION: E,
         USER_PROFILE: p,
-        USER_PROFILE_REPLY: m,
-        PROFILE_BIO_INPUT: I,
+        USER_PROFILE_REPLY: I,
+        PROFILE_BIO_INPUT: m,
         CUSTOM_GIFT: T,
-        RULES_INPUT: g,
+        RULES_INPUT: S,
         CREATE_FORUM_POST: f,
         CREATE_POLL: h,
-        FORUM_CHANNEL_GUIDELINES: S,
+        FORUM_CHANNEL_GUIDELINES: g,
         ATOMIC_REACTOR_REPLY_INPUT: A,
         FORWARD_MESSAGE_INPUT: {
             analyticsName: 'forward_message_input',

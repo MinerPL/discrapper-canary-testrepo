@@ -32,8 +32,8 @@ var i,
     R = n(355298),
     v = n(869404),
     C = n(333984),
-    y = n(572804),
-    L = n(140155),
+    L = n(572804),
+    y = n(140155),
     D = n(398758),
     b = n(725319),
     M = n(344185),
@@ -115,7 +115,7 @@ function ev(e, t) {
     return (
         !(null == n || $.Z.isBlockedForMessage(e)) &&
         (!!(
-            (0, y.ZP)({
+            (0, L.ZP)({
                 message: e,
                 userId: t.id,
                 suppressEveryone: ee.ZP.isSuppressEveryoneEnabled(n.guild_id),
@@ -128,14 +128,14 @@ function ev(e, t) {
 function eC(e) {
     return null != e && e.isPrivate() && !ee.ZP.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id);
 }
-async function ey(e) {
+async function eL(e) {
     if (0 === eh.length) {
         (ep = !1), null == e || e();
         return;
     }
     ep = !0;
     let t = eh.splice(0, 100);
-    await eL(() =>
+    await ey(() =>
         E.tn.post({
             url: er.ANM.BULK_ACK,
             body: { read_states: t },
@@ -143,9 +143,9 @@ async function ey(e) {
         })
     ),
         await (0, f.GR)(1000),
-        ey(e);
+        eL(e);
 }
-async function eL(e) {
+async function ey(e) {
     let t = Z.default.getId();
     for (let n = 0; n < 3; n++)
         try {
@@ -166,12 +166,13 @@ function eD(e) {
         if (!n && !i) return !1;
     }
     if (n && !e._persisted) return !0;
-    if (!e.hasUnreadOrMentions() || (null == t ? void 0 : t.isForumLikeChannel()) === !0 || (!(n && !e._isJoinedThread) && !W.Z.isAtBottom(e.channelId))) return !1;
+    if (!e.hasUnreadOrMentions() || (null == t ? void 0 : t.isForumLikeChannel()) === !0) return !1;
+    if (!(n && !e._isJoinedThread) && !W.Z.isAtBottom(e.channelId)) return !1;
     let i = m.Z.getLayout(e.channelId),
         a = m.Z.getChatOpen(e.channelId);
     if ((!a && (i === er.AEg.NO_CHAT || i === er.AEg.FULL_SCREEN)) || null == em[e.channelId]) return !1;
     let s = Q.Z.getMessages(e.channelId);
-    return !!(null != s && s.ready && !s.loadingMore && ((0, b.Z)() || a)) || !1;
+    return null != s && !!s.ready && !s.loadingMore && (!!(0, b._)() || !!a || !1);
 }
 ((s = i || (i = {}))[(s.IS_GUILD_CHANNEL = 1)] = 'IS_GUILD_CHANNEL'), (s[(s.IS_THREAD = 2)] = 'IS_THREAD');
 class eb {
@@ -436,7 +437,7 @@ class eb {
         if (null == e) {
             if (this.lastPinTimestamp === this.ackPinTimestamp) return !1;
             (this._persisted = !0),
-                eL(() =>
+                ey(() =>
                     E.tn.post({
                         url: er.ANM.PINS_ACK(this.channelId),
                         oldFormErrors: !0
@@ -509,7 +510,7 @@ class eb {
         this._persisted = !0;
         let s = this.recalculateFlags(),
             o = s === this.flags ? void 0 : s;
-        eL(() =>
+        ey(() =>
             E.tn.post({
                 url: er.ANM.MESSAGE_ACK(this.channelId, r),
                 body: {
@@ -556,7 +557,7 @@ class eb {
                     return;
             }
             (this._persisted = !0),
-                eL(() =>
+                ey(() =>
                     E.tn.post({
                         url: e,
                         body: {},
@@ -821,7 +822,7 @@ function eQ(e) {
     let { channelId: t, messageId: n, manual: r, newMentionCount: i } = e,
         a = eb.get(t);
     return r
-        ? (a.rebuildChannelState(n, !0, i), !0)
+        ? (a.rebuildChannelState(n, !0, i), a.clearOutgoingAck(), !0)
         : n !== a._ackMessageId &&
               a.ack({
                   messageId: n,
@@ -848,7 +849,7 @@ function e$(e, t, n, r) {
 }
 class eJ extends (a = _.ZP.Store) {
     initialize() {
-        let e = [W.Z, et.default, z.Z, K.Z, j.Z, J.Z, Q.Z, X.Z, m.Z, M.Z, P.Z, Y.ZP, N.ZP, A.Z, S.Z, ee.ZP, en.Z, L.Z, R.Z, w.Z, C.Z];
+        let e = [W.Z, et.default, z.Z, K.Z, j.Z, J.Z, Q.Z, X.Z, m.Z, M.Z, P.Z, Y.ZP, N.ZP, A.Z, S.Z, ee.ZP, en.Z, y.Z, R.Z, w.Z, C.Z];
         this.waitFor(...e), this.syncWith([Y.ZP], eK);
     }
     getReadStatesByChannel() {
@@ -1129,7 +1130,7 @@ let e0 = new eJ(p.Z, {
                 (function (e, t, n) {
                     if (
                         null != t &&
-                        (0, y.Hl)({
+                        (0, L.Hl)({
                             rawMessage: e,
                             userId: t.id,
                             suppressEveryone: ee.ZP.isSuppressEveryoneEnabled(n.guildId),
@@ -1304,7 +1305,7 @@ let e0 = new eJ(p.Z, {
                         read_state_type: e.readStateType
                     }))
                 ),
-                ep || ey(r));
+                ep || eL(r));
     },
     ENABLE_AUTOMATIC_ACK: function (e) {
         let { channelId: t, windowId: n } = e;
@@ -1369,7 +1370,7 @@ let e0 = new eJ(p.Z, {
         if (null == r) return !1;
         let i = eb.get(r, eo.W.NOTIFICATION_CENTER);
         i.lastMessageId = n.id;
-        if ((0, L.Z.active)) {
+        if ((0, y.Z.active)) {
             e$(r, eo.W.NOTIFICATION_CENTER, n.id, !1);
             return;
         }
@@ -1382,7 +1383,7 @@ let e0 = new eJ(p.Z, {
             r = e.relationship.type === er.OGo.FRIEND,
             i = r ? new Date(Date.now()).getTime() : new Date(e.relationship.since).getTime(),
             a = null != n.ackMessageId ? H.default.extractTimestamp(n.ackMessageId) : 0;
-        a < i && ((n.lastMessageId = H.default.fromTimestamp(i)), (0, L.Z.active) ? e$(t.id, eo.W.NOTIFICATION_CENTER, void 0, !1) : r ? n.mentionCount-- : n.mentionCount++);
+        a < i && ((n.lastMessageId = H.default.fromTimestamp(i)), (0, y.Z.active) ? e$(t.id, eo.W.NOTIFICATION_CENTER, void 0, !1) : r ? n.mentionCount-- : n.mentionCount++);
     },
     RELATIONSHIP_REMOVE: function (e) {
         let t = et.default.getCurrentUser();
@@ -1394,7 +1395,7 @@ let e0 = new eJ(p.Z, {
     NOTIFICATION_CENTER_ITEMS_ACK: function (e) {
         var t;
         let { ids: n, optimistic: r } = e;
-        if (r || L.Z.active) return !1;
+        if (r || y.Z.active) return !1;
         let i = null === (t = et.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
         if (null == i) return !1;
         let a = eb.get(i, eo.W.NOTIFICATION_CENTER);

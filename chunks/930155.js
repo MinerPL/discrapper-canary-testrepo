@@ -1,24 +1,14 @@
-t.d(n, {
+t.d(e, {
     H: function () {
         return a;
     }
 });
-var i = t(470079),
-    l = t(442837),
-    r = t(821849),
-    s = t(509545);
-let o = (0, l.Kb)(s.Z, {
-    get: (e) => (null != e ? s.Z.getForSKU(e) : []),
-    load: (e, n) => (null != n ? (0, r.GZ)(n) : Promise.resolve()),
-    getIsLoading: (e) => null != e && s.Z.isFetchingForSKU(e),
+var l = t(442837),
+    i = t(821849),
+    r = t(509545);
+let a = (0, l.Kb)(r.Z, {
+    queryId: (n) => (null != n ? ['subscription-plans', n] : null),
+    get: (n) => (null != n ? r.Z.getForSKU(n) : []),
+    load: (n, e) => (null != e ? (0, i.GZ)(e) : Promise.resolve()),
     useStateHook: l.Wu
 });
-function a(e) {
-    let n = o(e);
-    return (
-        i.useEffect(() => {
-            if (null != e) (0, r.GZ)(e);
-        }, [e]),
-        n
-    );
-}

@@ -3,13 +3,13 @@ n.d(t, {
         return T;
     },
     Fc: function () {
-        return I;
+        return m;
     },
     Ft: function () {
         return A;
     },
     W5: function () {
-        return S;
+        return g;
     },
     _T: function () {
         return f;
@@ -85,25 +85,25 @@ function p(e) {
             return null;
     }
 }
-function m(e, t) {
+function I(e, t) {
     let { maxDaysOld: n, minDaysOld: r = 0 } = t;
     if (null == e) return !1;
     let i = Date.now() - e.createdAt.getTime();
     return ((null == n || !!(i <= 86400000 * n)) && !!(i >= 86400000 * r)) || !1;
 }
-function I(e) {
-    return !m(e, {
+function m(e) {
+    return !I(e, {
         minDaysOld: 0,
         maxDaysOld: 30
     });
 }
 function T(e) {
-    return m(e, {
+    return I(e, {
         minDaysOld: 0,
         maxDaysOld: 7
     });
 }
-function g(e, t, n) {
+function S(e, t, n) {
     if (null == e) return o.Z.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER;
     if (!d(e.username)) return '???';
     let r = n;
@@ -111,13 +111,13 @@ function g(e, t, n) {
     let i = r ? l(e.username) : e.username;
     return 'never' !== t.decoration ? u(i) : i;
 }
-function S(e, t) {
+function g(e, t) {
     let n = {
             ...c,
             ...t
         },
         r = 'auto' !== n.identifiable || i.Z.hidePersonalInformation;
-    return g(e, n, r);
+    return S(e, n, r);
 }
 function A(e) {
     return (0, r.e7)([a.default], () => {
@@ -127,13 +127,14 @@ function A(e) {
 t.ZP = {
     getName: E,
     useName: f,
-    getUserTag: S,
+    isNameConcealed: (e) => 4 === e.length && e.endsWith('...'),
+    getUserTag: g,
     useUserTag: function (e, t) {
         let n = {
             ...c,
             ...t
         };
-        return g(
+        return S(
             e,
             n,
             (0, r.e7)([i.Z], () => i.Z.hidePersonalInformation)
@@ -144,7 +145,7 @@ t.ZP = {
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (null == e) return '???';
         let r = h(e),
-            i = n ? S(e) : null !== (t = e.username) && void 0 !== t ? t : '???';
+            i = n ? g(e) : null !== (t = e.username) && void 0 !== t ? t : '???';
         return r === i ? r : null != r ? ''.concat(r, ' (').concat(i, ')') : i;
     },
     getGlobalName: h,

@@ -1,15 +1,12 @@
 n.d(t, {
-    I: function () {
-        return l;
-    },
     N: function () {
-        return r;
+        return a;
     }
-});
-var i = n(470079),
-    a = n(818083),
-    s = n(695346);
-let r = (0, a.B)({
+}),
+    n(470079);
+var i = n(818083);
+n(695346);
+let a = (0, i.B)({
     kind: 'user',
     id: '2022-01_discovery_iar',
     label: 'Ability to report servers in Server Discovery',
@@ -22,13 +19,3 @@ let r = (0, a.B)({
         }
     ]
 });
-function l() {
-    let { canSeeInAppReportingButtons: e } = r.useExperiment({ location: '7a11e2_1' }, { autoTrackExposure: !1 }),
-        t = s.Sb.useSetting();
-    return (
-        i.useEffect(() => {
-            r.trackExposure({ location: '7a11e2_2' });
-        }, []),
-        e || t
-    );
-}

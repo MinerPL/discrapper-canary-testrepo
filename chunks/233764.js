@@ -17,8 +17,9 @@ n.d(t, {
         return s;
     }
 }),
-    ((i = r || (r = {})).PRIMARY_APP_COMMAND_NOT_FOUND = 'PRIMARY_APP_COMMAND_NOT_FOUND'),
-    (i.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED = 'LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED');
+    ((i = r || (r = {}))[(i.PRIMARY_APP_COMMAND_NOT_FOUND = 0)] = 'PRIMARY_APP_COMMAND_NOT_FOUND'),
+    (i[(i.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED = 1)] = 'LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED'),
+    (i[(i.INVALID_CHANNEL = 2)] = 'INVALID_CHANNEL');
 class s {
     constructor(e) {
         a(this, 'reason', void 0), (this.reason = e);

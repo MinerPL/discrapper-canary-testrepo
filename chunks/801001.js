@@ -12,8 +12,8 @@ var s = t(735250),
     a = t(442837),
     r = t(481060),
     d = t(706371),
-    u = t(563115),
-    c = t(313201),
+    c = t(563115),
+    u = t(313201),
     m = t(661824),
     N = t(984933),
     _ = t(430824),
@@ -23,11 +23,11 @@ var s = t(735250),
     v = t(208665),
     E = t(460117),
     x = t(290511),
-    j = t(689938),
-    R = t(995581);
+    R = t(689938),
+    j = t(996747);
 function M(e) {
-    let { transitionState: n, onClose: t, onSave: i, onDelete: _, option: O, guild: h, prompt: M, index: g } = e,
-        P = (0, c.Dt)(),
+    let { transitionState: n, onClose: t, onSave: i, onDelete: _, option: O, guild: h, prompt: M, index: T } = e,
+        P = (0, u.Dt)(),
         p = (0, a.e7)([N.ZP], () => N.ZP.getDefaultChannel(h.id)),
         [B, A] = o.useState(() => {
             var e;
@@ -61,32 +61,32 @@ function M(e) {
             'aria-labelledby': P,
             children: [
                 (0, s.jsxs)('div', {
-                    className: R.container,
+                    className: j.container,
                     children: [
                         (0, s.jsx)(r.ModalCloseButton, {
-                            className: R.closeButton,
+                            className: j.closeButton,
                             onClick: t
                         }),
                         (0, s.jsx)(r.Text, {
-                            className: R.questionNumber,
+                            className: j.questionNumber,
                             variant: 'text-xs/semibold',
                             color: 'text-muted',
-                            children: j.Z.Messages.ONBOARDING_PROMPT_OPTION_QUESTION_NUMBER.format({ index: g + 1 })
+                            children: R.Z.Messages.ONBOARDING_PROMPT_OPTION_QUESTION_NUMBER.format({ index: T + 1 })
                         }),
                         (0, s.jsx)(r.Heading, {
                             id: P,
-                            className: R.header,
+                            className: j.header,
                             variant: 'heading-lg/semibold',
-                            children: null != M.title && M.title.length > 0 ? M.title : j.Z.Messages.ONBOARDING_PROMPT_DEFAULT_TITLE
+                            children: null != M.title && M.title.length > 0 ? M.title : R.Z.Messages.ONBOARDING_PROMPT_DEFAULT_TITLE
                         }),
                         (0, s.jsx)(r.Heading, {
-                            className: R.nameHeader,
+                            className: j.nameHeader,
                             variant: 'heading-md/semibold',
-                            children: j.Z.Messages.ONBOARDING_PROMPT_OPTION_NAME_HEADER
+                            children: R.Z.Messages.ONBOARDING_PROMPT_OPTION_NAME_HEADER
                         }),
                         (0, s.jsx)(r.TextInput, {
                             inputRef: U,
-                            placeholder: j.Z.Messages.ONBOARDING_PROMPT_OPTION_TITLE_PLACEHOLDER,
+                            placeholder: R.Z.Messages.ONBOARDING_PROMPT_OPTION_TITLE_PLACEHOLDER,
                             value: C,
                             onChange: (e) => L(e),
                             maxLength: x.NE,
@@ -94,55 +94,56 @@ function M(e) {
                         }),
                         (0, s.jsx)(r.InputError, { error: k.title }),
                         (0, s.jsx)(r.TextInput, {
-                            className: R.descriptionInput,
-                            placeholder: j.Z.Messages.ONBOARDING_PROMPT_OPTION_DESCRIPTION_PLACEHOLDER,
+                            className: j.descriptionInput,
+                            placeholder: R.Z.Messages.ONBOARDING_PROMPT_OPTION_DESCRIPTION_PLACEHOLDER,
                             value: Z,
                             onChange: (e) => f(e),
                             maxLength: x.NO
                         }),
-                        (0, s.jsx)(m.Z, { className: R.divider }),
+                        (0, s.jsx)(m.Z, { className: j.divider }),
                         (0, s.jsx)(r.Heading, {
-                            className: R.rolesHeader,
+                            className: j.rolesHeader,
                             variant: 'heading-md/semibold',
-                            children: j.Z.Messages.ONBOARDING_PROMPT_OPTION_ROLES_CHANNELS_HEADER
+                            children: R.Z.Messages.ONBOARDING_PROMPT_OPTION_ROLES_CHANNELS_HEADER
                         }),
                         (0, s.jsx)(d.Z, {
                             guildId: h.id,
                             selectedChannelIds: D,
-                            placeholder: j.Z.Messages.GUILD_AUTOMOD_EXEMPTION_SEARCH_CHANNEL_PLACEHOLDER,
+                            placeholder: R.Z.Messages.GUILD_AUTOMOD_EXEMPTION_SEARCH_CHANNEL_PLACEHOLDER,
                             onChange: S,
-                            helperText: j.Z.Messages.ONBOARDING_PROMPT_NO_PRIVATE_CHANNELS,
-                            className: R.searchInput
+                            helperText: R.Z.Messages.ONBOARDING_PROMPT_NO_PRIVATE_CHANNELS,
+                            className: j.searchInput
                         }),
-                        (0, s.jsx)(u.Z, {
+                        (0, s.jsx)(c.Z, {
                             guildId: h.id,
                             selectedRoleIds: H,
                             disableEveryoneRole: !0,
-                            placeholder: j.Z.Messages.GUILD_AUTOMOD_EXEMPTION_SEARCH_ROLE_PLACEHOLDER,
+                            placeholder: R.Z.Messages.GUILD_AUTOMOD_EXEMPTION_SEARCH_ROLE_PLACEHOLDER,
                             onChange: b,
-                            helperText: j.Z.Messages.ONBOARDING_PROMPT_NO_PRIVATE_CHANNELS_SUBTEXT,
-                            className: R.searchInput
+                            helperText: R.Z.Messages.ONBOARDING_PROMPT_NO_PRIVATE_CHANNELS_SUBTEXT,
+                            className: j.searchInput,
+                            selectableRoleFilter: (e) => !e.managed
                         }),
                         null == k.roles ? null : (0, s.jsx)(r.InputError, { error: k.roles }),
-                        (0, s.jsx)(T, {
+                        (0, s.jsx)(g, {
                             guild: h,
                             roleIds: H
                         }),
-                        (0, s.jsx)(m.Z, { className: R.divider }),
+                        (0, s.jsx)(m.Z, { className: j.divider }),
                         (0, s.jsxs)('div', {
-                            className: R.emojiQuestionContainer,
+                            className: j.emojiQuestionContainer,
                             children: [
                                 (0, s.jsxs)('div', {
-                                    className: R.emojiQuestionText,
+                                    className: j.emojiQuestionText,
                                     children: [
                                         (0, s.jsx)(r.Heading, {
                                             variant: 'heading-md/semibold',
-                                            children: j.Z.Messages.ONBOARDING_PROMPT_OPTION_EMOJI_HEADER
+                                            children: R.Z.Messages.ONBOARDING_PROMPT_OPTION_EMOJI_HEADER
                                         }),
                                         (0, s.jsx)(r.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-muted',
-                                            children: j.Z.Messages.ONBOARDING_PROMPT_OPTION_EMOJI_SUBHEADER
+                                            children: R.Z.Messages.ONBOARDING_PROMPT_OPTION_EMOJI_SUBHEADER
                                         })
                                     ]
                                 }),
@@ -157,10 +158,10 @@ function M(e) {
                 }),
                 (0, s.jsx)(r.ModalFooter, {
                     children: (0, s.jsxs)('div', {
-                        className: R.footerButtons,
+                        className: j.footerButtons,
                         children: [
                             (0, s.jsx)('div', {
-                                className: R.removeButton,
+                                className: j.removeButton,
                                 children: (0, s.jsx)(r.Button, {
                                     size: r.Button.Sizes.SMALL,
                                     look: r.Button.Looks.LINK,
@@ -168,18 +169,18 @@ function M(e) {
                                     onClick: () => {
                                         _(), t();
                                     },
-                                    children: j.Z.Messages.REMOVE
+                                    children: R.Z.Messages.REMOVE
                                 })
                             }),
                             (0, s.jsxs)('div', {
-                                className: R.rightButtons,
+                                className: j.rightButtons,
                                 children: [
                                     (0, s.jsx)(r.Button, {
                                         onClick: t,
                                         size: r.Button.Sizes.SMALL,
                                         look: r.Button.Looks.LINK,
                                         color: r.Button.Colors.PRIMARY,
-                                        children: j.Z.Messages.CANCEL
+                                        children: R.Z.Messages.CANCEL
                                     }),
                                     (0, s.jsx)(r.Button, {
                                         onClick: () => {
@@ -194,13 +195,13 @@ function M(e) {
                                                 },
                                                 s = (function (e, n, t, s) {
                                                     let o = {};
-                                                    s.title.length <= 0 && (o.title = j.Z.Messages.ONBOARDING_PROMPT_OPTION_TITLE_REQUIRED);
+                                                    s.title.length <= 0 && (o.title = R.Z.Messages.ONBOARDING_PROMPT_OPTION_TITLE_REQUIRED);
                                                     let i = (0, I.en)(e, n, t, s);
                                                     return null != i && (o.roles = i), o;
                                                 })(h, v.Z.editedOnboardingPrompts, M, n);
                                             G(s), l().isEmpty(s) && (i(n), t());
                                         },
-                                        children: j.Z.Messages.SAVE
+                                        children: R.Z.Messages.SAVE
                                     })
                                 ]
                             })
@@ -211,7 +212,7 @@ function M(e) {
         })
     );
 }
-function T(e) {
+function g(e) {
     let { guild: n, roleIds: t } = e,
         o = (0, a.e7)([_.Z], () => _.Z.getRoles(n.id)),
         i = Array.from(t)
@@ -221,20 +222,20 @@ function T(e) {
     return null == i
         ? null
         : (0, s.jsx)('div', {
-              className: R.notice,
+              className: j.notice,
               children: (0, s.jsxs)('div', {
-                  className: R.noticeMessage,
+                  className: j.noticeMessage,
                   children: [
                       (0, s.jsx)(r.CircleWarningIcon, {
                           size: 'custom',
                           width: 20,
                           height: 20,
                           color: 'currentColor',
-                          className: R.noticeIcon
+                          className: j.noticeIcon
                       }),
                       (0, s.jsx)(r.Text, {
                           variant: 'text-sm/normal',
-                          children: j.Z.Messages.ROLE_PROMPT_ROLE_IS_POWERFUL.format({ permissions: (0, h.i)(n, i).join(', ') })
+                          children: R.Z.Messages.ROLE_PROMPT_ROLE_IS_POWERFUL.format({ permissions: (0, h.i)(n, i).join(', ') })
                       })
                   ]
               })

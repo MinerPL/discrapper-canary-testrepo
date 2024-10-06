@@ -1,6 +1,6 @@
 n.d(t, {
     s: function () {
-        return o;
+        return l;
     }
 }),
     n(47120),
@@ -8,20 +8,22 @@ n.d(t, {
 var r = n(278074),
     i = n(264181),
     a = n(178185),
-    s = n(806185);
-class o {
+    s = n(272280),
+    o = n(806185);
+class l {
     static fromServer(e) {
         var t;
-        return new o(
+        return new l(
             Object.fromEntries(
                 Object.entries(null !== (t = e.marketings) && void 0 !== t ? t : {}).map((e) => {
                     let [t, n] = e;
                     return [
                         t,
                         (0, r.EQ)(n)
-                            .with({ type: i.Z.COACHTIP }, (e) => s.Z.fromServer(e))
+                            .with({ type: i.Z.COACHTIP }, (e) => o.Z.fromServer(e))
                             .with({ type: i.Z.BADGE }, (e) => a.E.fromServer(e))
-                            .otherwise(() => n)
+                            .with({ type: i.Z.BANNER }, (e) => s.I.fromServer(e))
+                            .otherwise(() => void 0)
                     ];
                 })
             )

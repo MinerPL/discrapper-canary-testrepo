@@ -5,11 +5,10 @@ var r = n(846519),
     s = n(147913),
     o = n(317381),
     l = n(592125),
-    u = n(885110),
-    c = n(979651),
-    d = n(938475),
-    _ = n(689938);
-function E(e, t, n) {
+    u = n(979651),
+    c = n(938475),
+    d = n(689938);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,40 +21,40 @@ function E(e, t, n) {
         e
     );
 }
-let f = 180000;
-function h() {
-    let e = c.Z.getCurrentClientVoiceChannelId(null);
+let E = 180000;
+function f() {
+    let e = u.Z.getCurrentClientVoiceChannelId(null);
     if (null == e) return !1;
     let t = l.Z.getChannel(e);
-    return !(null == t || !t.isPrivate() || t.recipients.length > 1 || d.ZP.countVoiceStatesForChannel(e) > 1) && null == o.ZP.getSelfEmbeddedActivityForChannel(e) && null == u.Z.getBroadcast() && !0;
+    return !(null == t || !t.isPrivate() || t.recipients.length > 1 || c.ZP.countVoiceStatesForChannel(e) > 1) && null == o.ZP.getSelfEmbeddedActivityForChannel(e) && !0;
 }
-function p() {
-    if (!h()) return;
-    let e = c.Z.getCurrentClientVoiceChannelId(null);
-    if (null != e) i.Z.sendBotMessage(e, _.Z.Messages.BOT_CALL_IDLE_DISCONNECT_2.format({ number: 3 })), a.default.selectVoiceChannel(null);
+function h() {
+    if (!f()) return;
+    let e = u.Z.getCurrentClientVoiceChannelId(null);
+    if (null != e) i.Z.sendBotMessage(e, d.Z.Messages.BOT_CALL_IDLE_DISCONNECT_2.format({ number: 3 })), a.default.selectVoiceChannel(null);
 }
-class m extends s.Z {
+class p extends s.Z {
     constructor(...e) {
         super(...e),
-            E(this, 'idleTimeout', new r.V7()),
-            E(this, 'handleConnectionClosed', () => {
+            _(this, 'idleTimeout', new r.V7()),
+            _(this, 'handleConnectionClosed', () => {
                 this.idleTimeout.stop();
             }),
-            E(this, 'handleEmbeddedActivityDisconnect', () => {
-                if (!!h()) this.idleTimeout.start(f, p, !0);
+            _(this, 'handleEmbeddedActivityDisconnect', () => {
+                if (!!f()) this.idleTimeout.start(E, h, !0);
             }),
-            E(this, 'handleVoiceStateUpdates', () => {
-                if (!h()) {
+            _(this, 'handleVoiceStateUpdates', () => {
+                if (!f()) {
                     this.idleTimeout.stop();
                     return;
                 }
-                this.idleTimeout.start(f, p, !1);
+                this.idleTimeout.start(E, h, !1);
             }),
-            E(this, 'actions', {
+            _(this, 'actions', {
                 VOICE_STATE_UPDATES: this.handleVoiceStateUpdates,
                 CONNECTION_CLOSED: this.handleConnectionClosed,
-                EMBEDDED_ACTIVITY_DISCONNECT: this.handleEmbeddedActivityDisconnect
+                EMBEDDED_ACTIVITY_CLOSE: this.handleEmbeddedActivityDisconnect
             });
     }
 }
-t.Z = new m();
+t.Z = new p();

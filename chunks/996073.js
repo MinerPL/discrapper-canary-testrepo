@@ -13,8 +13,11 @@ let c = Object.freeze({
     [l.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION]: u.oAB.VOICE,
     [l.KQ.AppearanceScrollPositions.CUSTOM_APP_ICONS]: u.oAB.APPEARANCE,
     [l.KQ.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS]: u.oAB.PRIVACY_AND_SAFETY,
+    [l.KQ.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS_V2]: u.oAB.PRIVACY_AND_SAFETY_V2,
     [l.KQ.PrivacyAndSafetyScrollPositions.MESSAGE_REQUESTS]: u.oAB.PRIVACY_AND_SAFETY,
-    [l.KQ.PrivacyAndSafetyScrollPositions.EXPLICIT_MEDIA_REDACTION]: u.oAB.PRIVACY_AND_SAFETY
+    [l.KQ.PrivacyAndSafetyScrollPositions.MESSAGE_REQUESTS_V2]: u.oAB.PRIVACY_AND_SAFETY_V2,
+    [l.KQ.PrivacyAndSafetyScrollPositions.EXPLICIT_MEDIA_REDACTION]: u.oAB.PRIVACY_AND_SAFETY,
+    [l.KQ.PrivacyAndSafetyScrollPositions.EXPLICIT_MEDIA_REDACTION_V2]: u.oAB.PRIVACY_AND_SAFETY_V2
 });
 t.Z = function (e, t, n) {
     let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,

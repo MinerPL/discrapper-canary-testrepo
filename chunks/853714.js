@@ -15,22 +15,22 @@ var s = n(735250),
     m = n(210887),
     N = n(387667),
     S = n(598077),
-    h = n(592125),
-    g = n(430824),
+    g = n(592125),
+    h = n(430824),
     C = n(246946),
     x = n(594174),
-    p = n(274730),
-    R = n(823379),
-    f = n(51144),
+    p = n(823379),
+    R = n(51144),
     L = n(987707),
-    O = n(999382),
+    f = n(999382),
+    O = n(909746),
     A = n(501801),
     M = n(603784),
     D = n(981631),
     v = n(689938),
-    j = n(911025),
-    Z = n(326617),
-    b = n(256507);
+    j = n(315185),
+    Z = n(156725),
+    b = n(852401);
 function U(e, t, n) {
     return (
         t in e
@@ -82,17 +82,19 @@ class G extends a.PureComponent {
             }),
             U(this, 'handleChannelContextMenu', (e) => {
                 let { log: t, guildId: a } = this.props,
-                    i = g.Z.getGuild(a);
+                    i = h.Z.getGuild(a);
                 null != t.options.channel &&
                     'string' != typeof t.options.channel &&
                     null != i &&
                     (0, I.jW)(e, async () => {
                         let { default: e } = await n.e('51529').then(n.bind(n, 228620));
                         return (n) =>
-                            (0, s.jsx)(e, {
-                                ...n,
-                                channel: t.options.channel
-                            });
+                            null != t.options.channel
+                                ? (0, s.jsx)(e, {
+                                      ...n,
+                                      channel: t.options.channel
+                                  })
+                                : null;
                     });
             }),
             U(this, 'handleTargetContextMenu', (e) => {
@@ -100,8 +102,8 @@ class G extends a.PureComponent {
                 switch (t.targetType) {
                     case D.KFR.CHANNEL:
                     case D.KFR.CHANNEL_OVERWRITE:
-                        let i = h.Z.getChannel(t.targetId),
-                            r = g.Z.getGuild(a);
+                        let i = g.Z.getChannel(t.targetId),
+                            r = h.Z.getGuild(a);
                         if (null != i && null != r)
                             return (0, I.jW)(e, async () => {
                                 let { default: e } = await n.e('51529').then(n.bind(n, 228620));
@@ -366,7 +368,7 @@ class B extends a.PureComponent {
                                     children: [
                                         (0, s.jsx)(u.Text, {
                                             variant: 'text-sm/normal',
-                                            children: f.ZP.getUserTag(t, { mode: 'username' })
+                                            children: R.ZP.getUserTag(t, { mode: 'username' })
                                         }),
                                         !t.isPomelo() &&
                                             (0, s.jsxs)(u.Text, {
@@ -407,7 +409,7 @@ class B extends a.PureComponent {
                 var e, t;
                 let { actionFilter: n, hide: a, userIdFilter: i, moderators: l } = this.props;
                 if (a) return null;
-                let o = p.Iv(),
+                let o = O.Iv(),
                     c =
                         null !==
                             (e = o.find((e) => {
@@ -542,21 +544,21 @@ class B extends a.PureComponent {
             });
     }
 }
-t.Z = d.ZP.connectStores([L.Z, O.Z, g.Z, m.Z, C.Z, x.default], () => {
-    let e = O.Z.getGuildId(),
-        t = g.Z.getGuild(e),
+t.Z = d.ZP.connectStores([L.Z, f.Z, h.Z, m.Z, C.Z, x.default], () => {
+    let e = f.Z.getGuildId(),
+        t = h.Z.getGuild(e),
         n = L.Z.logs;
     return {
         guildId: e,
         guild: t,
-        moderators: L.Z.userIds.map((e) => x.default.getUser(e)).filter(R.lm),
+        moderators: L.Z.userIds.map((e) => x.default.getUser(e)).filter(p.lm),
         isInitialLoading: L.Z.isInitialLoading,
         isLoading: L.Z.isLoading,
         isLoadingNextPage: L.Z.isLoadingNextPage,
         showLoadMore: L.Z.groupedFetchCount > 2,
         hasError: L.Z.hasError,
         hasOlderLogs: L.Z.hasOlderLogs,
-        logs: null != n && null != t ? p._$(n, t) : [],
+        logs: null != n && null != t ? O._$(n, t) : [],
         actionFilter: L.Z.actionFilter,
         userIdFilter: L.Z.userIdFilter,
         theme: m.Z.theme,

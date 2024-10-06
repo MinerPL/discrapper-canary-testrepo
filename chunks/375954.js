@@ -24,8 +24,8 @@ var r,
     R = n(592125),
     v = n(796974),
     C = n(984933),
-    y = n(271383),
-    L = n(430824),
+    L = n(271383),
+    y = n(430824),
     D = n(496675),
     b = n(699516),
     M = n(944486),
@@ -79,7 +79,7 @@ function Z(e) {
 }
 class Y extends (r = u.ZP.Store) {
     initialize() {
-        this.waitFor(U.default, R.Z, v.Z, y.ZP, g.default, M.Z, P.Z, L.Z, b.Z, C.ZP), this.syncWith([p.Z], () => {});
+        this.waitFor(U.default, R.Z, v.Z, L.ZP, g.default, M.Z, P.Z, y.Z, b.Z, C.ZP), this.syncWith([p.Z], () => {});
     }
     getMessages(e) {
         if (p.Z.hasViewingRoles()) {
@@ -355,10 +355,5 @@ class Y extends (r = u.ZP.Store) {
             let { message: t } = e,
                 n = U.default.getCurrentUser();
             null != t && null != t.author && null != n && t.author.id === n.id && (k = !0);
-        },
-        REACTION_MESSAGE_FETCHED: function (e) {
-            let { message: t } = e,
-                n = d.Z.getOrCreate(t.channel_id);
-            G.log('Inserting message from a reaction in-app notification', t.id, t.channel_id), d.Z.commit(n.receiveReactionInAppNotification(t));
         }
     }));

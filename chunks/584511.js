@@ -7,7 +7,7 @@ var r,
     u = n.n(l),
     c = n(481060),
     d = n(686546),
-    _ = n(721311);
+    _ = n(890648);
 function E(e, t, n) {
     return (
         t in e
@@ -26,7 +26,16 @@ class f extends (a = o.PureComponent) {
     renderStatus() {
         let { muted: e, deafen: t } = this.props,
             n = t ? c.HeadphonesSlashIcon : c.MicrophoneSlashIcon;
-        return e || t ? (0, s.jsx)(n, { className: _.status }, 'status') : null;
+        return e || t
+            ? (0, s.jsx)(
+                  n,
+                  {
+                      className: _.status,
+                      color: c.tokens.colors.WHITE.css
+                  },
+                  'status'
+              )
+            : null;
     }
     renderBorder() {
         let { speaking: e } = this.props;

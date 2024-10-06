@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return R;
     }
 }),
     n(47120);
@@ -23,15 +23,15 @@ var i = n(735250),
     Z = n(430824),
     I = n(131951),
     S = n(699516),
-    C = n(594174),
-    v = n(979651),
+    v = n(594174),
+    C = n(979651),
     x = n(362446),
     T = n(518084),
     N = n(981631),
     O = n(689938),
-    A = n(713199),
-    y = n(532140);
-function R(e, t, n) {
+    A = n(945768),
+    y = n(663031);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,7 +50,7 @@ class M extends s.PureComponent {
     }
     renderChannelLink(e) {
         let { guild: t } = this.props,
-            n = (0, p.F6)(e, C.default, S.Z),
+            n = (0, p.F6)(e, v.default, S.Z),
             s = null != t ? ''.concat(n, ' / ').concat(t.name) : n,
             a = null != t ? t.id : N.ME;
         return (0, i.jsx)(r.rU, {
@@ -122,15 +122,18 @@ class M extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            R(this, 'handleToggleSelfMute', () => {
+            b(this, 'handleToggleSelfMute', () => {
                 let { context: e } = this.props;
-                d.Z.toggleSelfMute({ context: e });
+                d.Z.toggleSelfMute({
+                    context: e,
+                    location: 'Overlay Controls'
+                });
             }),
-            R(this, 'handleToggleSelfDeaf', () => {
+            b(this, 'handleToggleSelfDeaf', () => {
                 let { context: e } = this.props;
                 d.Z.toggleSelfDeaf({ context: e });
             }),
-            R(this, 'renderPopout', (e) => {
+            b(this, 'renderPopout', (e) => {
                 let { lobbyId: t } = this.props;
                 return (0, i.jsx)(m.Z, {
                     channelId: e,
@@ -140,10 +143,10 @@ class M extends s.PureComponent {
             });
     }
 }
-function b(e) {
+function R(e) {
     let { context: t, lobbyId: n, channel: s, ...a } = e,
         o = (0, l.e7)([Z.Z], () => Z.Z.getGuild(null == s ? void 0 : s.getGuildId())),
-        r = (0, l.e7)([v.Z], () => null != s && v.Z.hasVideo(s.id)),
+        r = (0, l.e7)([C.Z], () => null != s && C.Z.hasVideo(s.id)),
         [c, d] = (0, l.Wu)([I.Z], () => [I.Z.isSelfMute(t) || I.Z.isSelfMutedTemporarily(t), I.Z.isSelfDeaf(t)]),
         [u, h, p] = (0, l.Wu)([x.Z], () => [x.Z.getConnectionState(n), x.Z.getLastPing(n), x.Z.getQuality(n)]);
     return (0, i.jsx)(M, {

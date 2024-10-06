@@ -17,8 +17,8 @@ n.d(t, {
     Me: function () {
         return eu;
     },
-    Pr: function () {
-        return f;
+    Ns: function () {
+        return l;
     },
     Q2: function () {
         return c;
@@ -110,8 +110,8 @@ var r,
     R,
     v,
     C = n(230367),
-    y = n(320215),
-    L = n(240773),
+    L = n(320215),
+    y = n(240773),
     D = n(495852),
     b = n(381499),
     M = n(835913),
@@ -121,11 +121,11 @@ class U extends D.C {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -360,11 +360,11 @@ class x extends D.C {
             viewedTutorial: !1
         };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -414,13 +414,16 @@ class x extends D.C {
 let G = new x();
 class k extends D.C {
     create(e) {
-        let t = { guilds: {} };
+        let t = {
+            guilds: {},
+            leaderboardsDisabled: !1
+        };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -429,12 +432,18 @@ class k extends D.C {
             a = e.pos + t;
         for (; e.pos < a; ) {
             let [t, r] = e.tag();
-            if (1 === t) this.binaryReadMap1(i.guilds, e, n);
-            else {
-                let a = n.readUnknownField;
-                if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-                let s = e.skip(r);
-                !1 !== a && (!0 === a ? C.z.onRead : a)(this.typeName, i, t, r, s);
+            switch (t) {
+                case 1:
+                    this.binaryReadMap1(i.guilds, e, n);
+                    break;
+                case 2:
+                    i.leaderboardsDisabled = e.bool();
+                    break;
+                default:
+                    let a = n.readUnknownField;
+                    if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
+                    let s = e.skip(r);
+                    !1 !== a && (!0 === a ? C.z.onRead : a)(this.typeName, i, t, r, s);
             }
         }
         return i;
@@ -461,6 +470,7 @@ class k extends D.C {
     }
     internalBinaryWrite(e, t, n) {
         for (let r of Object.keys(e.guilds)) t.tag(1, C.TD.LengthDelimited).fork().tag(1, C.TD.Bit64).fixed64(r), t.tag(2, C.TD.LengthDelimited).fork(), V.internalBinaryWrite(e.guilds[r], t, n), t.join().join();
+        !1 !== e.leaderboardsDisabled && t.tag(2, C.TD.Varint).bool(e.leaderboardsDisabled);
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? C.z.onWrite : r)(this.typeName, e, t), t;
     }
@@ -475,6 +485,12 @@ class k extends D.C {
                     kind: 'message',
                     T: () => V
                 }
+            },
+            {
+                no: 2,
+                name: 'leaderboards_disabled',
+                kind: 'scalar',
+                T: 8
             }
         ]);
     }
@@ -488,14 +504,15 @@ class F extends D.C {
             guildOnboardingProgress: 0,
             dismissedGuildContent: new Uint8Array(0),
             disableRaidAlertPush: !1,
-            disableRaidAlertNag: !1
+            disableRaidAlertNag: !1,
+            leaderboardsDisabled: !1
         };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -535,6 +552,9 @@ class F extends D.C {
                 case 10:
                     i.customNotificationSoundConfig = K.internalBinaryRead(e, e.uint32(), n, i.customNotificationSoundConfig);
                     break;
+                case 11:
+                    i.leaderboardsDisabled = e.bool();
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
@@ -566,7 +586,7 @@ class F extends D.C {
     }
     internalBinaryWrite(e, t, n) {
         for (let r of Object.keys(e.channels)) t.tag(1, C.TD.LengthDelimited).fork().tag(1, C.TD.Bit64).fixed64(r), t.tag(2, C.TD.LengthDelimited).fork(), j.internalBinaryWrite(e.channels[r], t, n), t.join().join();
-        0 !== e.hubProgress && t.tag(2, C.TD.Varint).uint32(e.hubProgress), 0 !== e.guildOnboardingProgress && t.tag(3, C.TD.Varint).uint32(e.guildOnboardingProgress), e.guildRecentsDismissedAt && M.E.internalBinaryWrite(e.guildRecentsDismissedAt, t.tag(4, C.TD.LengthDelimited).fork(), n).join(), e.dismissedGuildContent.length && t.tag(5, C.TD.LengthDelimited).bytes(e.dismissedGuildContent), e.joinSound && eK.internalBinaryWrite(e.joinSound, t.tag(6, C.TD.LengthDelimited).fork(), n).join(), e.mobileRedesignChannelListSettings && eR.internalBinaryWrite(e.mobileRedesignChannelListSettings, t.tag(7, C.TD.LengthDelimited).fork(), n).join(), !1 !== e.disableRaidAlertPush && t.tag(8, C.TD.Varint).bool(e.disableRaidAlertPush), !1 !== e.disableRaidAlertNag && t.tag(9, C.TD.Varint).bool(e.disableRaidAlertNag), e.customNotificationSoundConfig && K.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(10, C.TD.LengthDelimited).fork(), n).join();
+        0 !== e.hubProgress && t.tag(2, C.TD.Varint).uint32(e.hubProgress), 0 !== e.guildOnboardingProgress && t.tag(3, C.TD.Varint).uint32(e.guildOnboardingProgress), e.guildRecentsDismissedAt && M.E.internalBinaryWrite(e.guildRecentsDismissedAt, t.tag(4, C.TD.LengthDelimited).fork(), n).join(), e.dismissedGuildContent.length && t.tag(5, C.TD.LengthDelimited).bytes(e.dismissedGuildContent), e.joinSound && eK.internalBinaryWrite(e.joinSound, t.tag(6, C.TD.LengthDelimited).fork(), n).join(), e.mobileRedesignChannelListSettings && eR.internalBinaryWrite(e.mobileRedesignChannelListSettings, t.tag(7, C.TD.LengthDelimited).fork(), n).join(), !1 !== e.disableRaidAlertPush && t.tag(8, C.TD.Varint).bool(e.disableRaidAlertPush), !1 !== e.disableRaidAlertNag && t.tag(9, C.TD.Varint).bool(e.disableRaidAlertNag), e.customNotificationSoundConfig && K.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(10, C.TD.LengthDelimited).fork(), n).join(), !1 !== e.leaderboardsDisabled && t.tag(11, C.TD.Varint).bool(e.leaderboardsDisabled);
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? C.z.onWrite : r)(this.typeName, e, t), t;
     }
@@ -635,6 +655,12 @@ class F extends D.C {
                 name: 'custom_notification_sound_config',
                 kind: 'message',
                 T: () => K
+            },
+            {
+                no: 11,
+                name: 'leaderboards_disabled',
+                kind: 'scalar',
+                T: 8
             }
         ]);
     }
@@ -644,11 +670,11 @@ class H extends D.C {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -709,11 +735,11 @@ class Y extends D.C {
     create(e) {
         let t = { collapsedInInbox: !1 };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -774,11 +800,11 @@ class W extends D.C {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -818,11 +844,11 @@ class z extends D.C {
     create(e) {
         let t = { lastDismissedVersion: 0 };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -866,11 +892,11 @@ class Q extends D.C {
             recurringDismissibleContentStates: {}
         };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -994,11 +1020,11 @@ class $ extends D.C {
             assetHash: ''
         };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -1050,11 +1076,11 @@ class ee extends D.C {
     create(e) {
         let t = { useBlur: !1 };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -1094,11 +1120,11 @@ class en extends D.C {
     create(e) {
         let t = { videoBackgroundFilterDesktop: { oneofKind: void 0 } };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -1229,11 +1255,11 @@ class ei extends D.C {
             explicitContentNonFriendDm: 0
         };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -1294,11 +1320,11 @@ class es extends D.C {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -1364,11 +1390,11 @@ class el extends D.C {
             dmSpamFilterV2: 0
         };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -1675,11 +1701,11 @@ class ec extends D.C {
             reactionNotifications: 0
         };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -1784,11 +1810,11 @@ class e_ extends D.C {
             messageRequestRestrictedGuildIds: []
         };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -2048,11 +2074,11 @@ class ef extends D.C {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -2092,11 +2118,11 @@ class ep extends D.C {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -2157,11 +2183,11 @@ class em extends D.C {
     create(e) {
         let t = { statusExpiresAtMs: '0' };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -2237,11 +2263,11 @@ class eS extends D.C {
             createdAtMs: '0'
         };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -2320,11 +2346,11 @@ class eA extends D.C {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -2376,11 +2402,11 @@ class eO extends D.C {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -2436,11 +2462,11 @@ class ev extends D.C {
             mobileRedesignDisabled: !1
         };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -2457,7 +2483,7 @@ class ev extends D.C {
                     i.developerMode = e.bool();
                     break;
                 case 3:
-                    i.clientThemeSettings = eL.internalBinaryRead(e, e.uint32(), n, i.clientThemeSettings);
+                    i.clientThemeSettings = ey.internalBinaryRead(e, e.uint32(), n, i.clientThemeSettings);
                     break;
                 case 4:
                     i.mobileRedesignDisabled = e.bool();
@@ -2481,7 +2507,7 @@ class ev extends D.C {
         return i;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.theme && t.tag(1, C.TD.Varint).int32(e.theme), !1 !== e.developerMode && t.tag(2, C.TD.Varint).bool(e.developerMode), e.clientThemeSettings && eL.internalBinaryWrite(e.clientThemeSettings, t.tag(3, C.TD.LengthDelimited).fork(), n).join(), !1 !== e.mobileRedesignDisabled && t.tag(4, C.TD.Varint).bool(e.mobileRedesignDisabled), e.channelListLayout && b.Gm.internalBinaryWrite(e.channelListLayout, t.tag(6, C.TD.LengthDelimited).fork(), n).join(), e.messagePreviews && b.Gm.internalBinaryWrite(e.messagePreviews, t.tag(7, C.TD.LengthDelimited).fork(), n).join(), e.searchResultExactCountEnabled && b.D5.internalBinaryWrite(e.searchResultExactCountEnabled, t.tag(8, C.TD.LengthDelimited).fork(), n).join();
+        0 !== e.theme && t.tag(1, C.TD.Varint).int32(e.theme), !1 !== e.developerMode && t.tag(2, C.TD.Varint).bool(e.developerMode), e.clientThemeSettings && ey.internalBinaryWrite(e.clientThemeSettings, t.tag(3, C.TD.LengthDelimited).fork(), n).join(), !1 !== e.mobileRedesignDisabled && t.tag(4, C.TD.Varint).bool(e.mobileRedesignDisabled), e.channelListLayout && b.Gm.internalBinaryWrite(e.channelListLayout, t.tag(6, C.TD.LengthDelimited).fork(), n).join(), e.messagePreviews && b.Gm.internalBinaryWrite(e.messagePreviews, t.tag(7, C.TD.LengthDelimited).fork(), n).join(), e.searchResultExactCountEnabled && b.D5.internalBinaryWrite(e.searchResultExactCountEnabled, t.tag(8, C.TD.LengthDelimited).fork(), n).join();
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? C.z.onWrite : r)(this.typeName, e, t), t;
     }
@@ -2503,7 +2529,7 @@ class ev extends D.C {
                 no: 3,
                 name: 'client_theme_settings',
                 kind: 'message',
-                T: () => eL
+                T: () => ey
             },
             {
                 no: 4,
@@ -2533,15 +2559,15 @@ class ev extends D.C {
     }
 }
 let eC = new ev();
-class ey extends D.C {
+class eL extends D.C {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -2576,7 +2602,7 @@ class ey extends D.C {
         ]);
     }
 }
-let eL = new ey();
+let ey = new eL();
 class eD extends D.C {
     create(e) {
         let t = {
@@ -2584,11 +2610,11 @@ class eD extends D.C {
             guildPositions: []
         };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -2648,11 +2674,11 @@ class eM extends D.C {
     create(e) {
         let t = { guildIds: [] };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -2732,11 +2758,11 @@ class eU extends D.C {
             muted: !1
         };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -2818,11 +2844,11 @@ class ex extends D.C {
             parentId: '0'
         };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -2897,11 +2923,11 @@ class ek extends D.C {
             soundboardMuted: !1
         };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -2974,11 +3000,11 @@ class eF extends D.C {
             stream: {}
         };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -3079,11 +3105,11 @@ class eH extends D.C {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -3123,11 +3149,11 @@ class eY extends D.C {
     create(e) {
         let t = { volume: 0 };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -3170,11 +3196,11 @@ class eW extends D.C {
             guildId: '0'
         };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -3229,11 +3255,11 @@ class ez extends D.C {
             allowedUserIds: []
         };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -3317,11 +3343,11 @@ class eQ extends D.C {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -3361,11 +3387,11 @@ class e$ extends D.C {
     create(e) {
         let t = { safetySettingsPreset: 0 };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -3405,11 +3431,11 @@ class e0 extends D.C {
     create(e) {
         let t = { currentTab: 0 };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }
@@ -3449,11 +3475,11 @@ class e2 extends D.C {
     create(e) {
         let t = { feedGeneratedAt: '0' };
         return (
-            globalThis.Object.defineProperty(t, L.C, {
+            globalThis.Object.defineProperty(t, y.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, y.l)(this, t, e),
+            void 0 !== e && (0, L.l)(this, t, e),
             t
         );
     }

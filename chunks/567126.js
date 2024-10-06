@@ -3,7 +3,7 @@ n.d(t, {
         return Y;
     },
     oA: function () {
-        return H;
+        return V;
     },
     se: function () {
         return z;
@@ -42,9 +42,9 @@ var l = n(735250),
     p = n(152708),
     C = n(594190),
     S = n(569984),
-    j = n(918701),
-    v = n(977156),
-    E = n(28798),
+    E = n(918701),
+    j = n(977156),
+    v = n(28798),
     I = n(131951),
     Z = n(449224),
     T = n(358085),
@@ -60,7 +60,7 @@ var l = n(735250),
     P = n(46140),
     y = n(65154),
     G = n(689938),
-    B = n(624743);
+    B = n(24548);
 async function k() {
     let e = I.Z.getVideoDevices(),
         t = (0, f.Z)(I.Z.getMediaEngine(), [d.vA.WINDOW, d.vA.SCREEN], {
@@ -134,12 +134,12 @@ async function U() {
         )
     ).filter((e) => null !== e);
 }
-function V(e) {
+function H(e) {
     let t = (0, T.isWindows)() ? (0, O.Z)(C.ZP, Z.Z) : null,
         n = C.ZP.getRunningGames();
     return null != t && (0, M.Z)(e.id, t.windowHandle) ? 2 : null != n.find((t) => (0, M.Z)(e.id, t.windowHandle)) ? 1 : 0;
 }
-function H(e) {
+function V(e) {
     let { selectedSource: t, onChangeSelectedSource: n } = e,
         { enableGoLiveCaptureCard: i } = N.Z.useExperiment({ location: 'GoLive_Source_Select' }),
         a = I.Z.supports(y.AN.GO_LIVE_HARDWARE),
@@ -151,16 +151,16 @@ function H(e) {
         [O, w] = s.useState(!1),
         D = s.useRef(null),
         U = s.useRef(new h.Xp()),
-        H = (0, u.e7)([C.ZP], () => C.ZP.getRunningGames()),
-        W = (function (e, t, n) {
-            let l = (0, v.Zy)({ location: P.dr.STREAM_SOURCE_SELECT });
+        V = (0, u.e7)([C.ZP], () => C.ZP.getRunningGames()),
+        F = (function (e, t, n) {
+            let l = (0, j.Zy)({ location: P.dr.STREAM_SOURCE_SELECT });
             return s.useMemo(() => {
                 if (null == n || !l) return null;
                 for (let l of n) {
                     var s, i;
                     let n = t.find((e) => (0, M.Z)(l.id, e.windowHandle));
                     if ((null == n ? void 0 : n.id) == null) continue;
-                    let r = (0, j.lQ)(e, n.id);
+                    let r = (0, E.lQ)(e, n.id);
                     if (null != r && (null === (s = r.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null && (null === (i = r.userStatus) || void 0 === i ? void 0 : i.completedAt) == null)
                         return {
                             source: l,
@@ -171,10 +171,10 @@ function H(e) {
             }, [l, e, t, n]);
         })(
             (0, u.e7)([S.Z], () => S.Z.quests),
-            H,
+            V,
             f
         ),
-        F = s.useMemo(() => (null == f ? null : [...f].sort((e, t) => ((null == W ? void 0 : W.source.id) === e.id ? -1 : (null == W ? void 0 : W.source.id) === t.id ? 1 : V(t) - V(e)))), [W, f]);
+        W = s.useMemo(() => (null == f ? null : [...f].sort((e, t) => ((null == F ? void 0 : F.source.id) === e.id ? -1 : (null == F ? void 0 : F.source.id) === t.id ? 1 : H(t) - H(e)))), [F, f]);
     s.useEffect(() => {
         let e = U.current;
         return (
@@ -197,7 +197,7 @@ function H(e) {
         Y = (function (e) {
             switch (e) {
                 case d.vA.WINDOW:
-                    return F;
+                    return W;
                 case d.vA.SCREEN:
                     return o;
                 case d.vA.CAMERA:
@@ -294,7 +294,7 @@ function H(e) {
                       className: B.sourceScroller,
                       onScroll: Q,
                       children: [
-                          R === d.vA.WINDOW && null != W && (0, l.jsx)(E.Z, { quest: W.quest }),
+                          R === d.vA.WINDOW && null != F && (0, l.jsx)(v.Z, { quest: F.quest }),
                           (0, l.jsx)(p.Z, {
                               layout: p.Z.Layout.WRAP,
                               columns: 2,
@@ -306,7 +306,7 @@ function H(e) {
         ]
     });
 }
-function W(e) {
+function F(e) {
     let { onSelect: t } = e,
         n = s.useCallback(() => {
             t({
@@ -334,7 +334,7 @@ function W(e) {
         })
     });
 }
-function F(e) {
+function W(e) {
     let { id: t, name: n, text: i, icon: a, onSelect: o } = e,
         c = s.useCallback(() => {
             o({
@@ -412,18 +412,18 @@ function z(e) {
             p(!g);
         }, [g]),
         S = f
-            ? (0, l.jsx)(W, { onSelect: t })
+            ? (0, l.jsx)(F, { onSelect: t })
             : (0, l.jsxs)('div', {
                   className: B.nativePickerTypes,
                   children: [
-                      (0, l.jsx)(F, {
+                      (0, l.jsx)(W, {
                           onSelect: t,
                           id: 'screen',
                           name: G.Z.Messages.GO_LIVE_MODAL_SCREEN,
                           text: G.Z.Messages.GO_LIVE_MODAL_SCREEN_CTA,
                           icon: m.ScreenIcon
                       }),
-                      (0, l.jsx)(F, {
+                      (0, l.jsx)(W, {
                           onSelect: t,
                           id: 'window',
                           name: G.Z.Messages.GO_LIVE_MODAL_WINDOW,
@@ -431,7 +431,7 @@ function z(e) {
                           icon: m.BrowserIcon
                       }),
                       x
-                          ? (0, l.jsx)(F, {
+                          ? (0, l.jsx)(W, {
                                 onSelect: t,
                                 id: 'app',
                                 name: G.Z.Messages.GO_LIVE_MODAL_APP,
@@ -494,15 +494,16 @@ function z(e) {
 }
 function Y(e) {
     let { onSourceSelect: t, onCancel: n } = e,
-        { lastPickerAction: i, lastPickerError: r } = (0, u.e7)([A.ZP], () => A.ZP.getPickerState());
+        { lastPickerAction: i, lastPickerError: r } = (0, u.e7)([A.ZP], () => A.ZP.getPickerState()),
+        [a, o] = s.useState(!1);
     return (
         s.useEffect(() => {
             (0, R.t)();
         }, []),
         (0, A.kE)(),
         s.useEffect(() => {
-            i === A.Uc.Update ? t() : i === A.Uc.Cancel && ((0, R.t)(), n());
-        }, [i, t, n]),
+            a ? (i === A.Uc.Update ? t() : i === A.Uc.Cancel && ((0, R.t)(), n())) : null == i && o(!0);
+        }, [a, i, t, n]),
         i === A.Uc.Error
             ? (0, l.jsx)(m.Text, {
                   className: B.errorMessage,

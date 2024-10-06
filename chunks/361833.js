@@ -1,120 +1,118 @@
-n.d(s, {
+t.d(s, {
     Z: function () {
-        return A;
+        return c;
     }
 }),
-    n(47120);
-var t = n(735250),
-    o = n(470079),
-    a = n(442837),
-    l = n(481060),
-    r = n(809206),
-    i = n(25990),
-    E = n(626135),
-    _ = n(155433),
-    N = n(981631),
-    d = n(689938),
-    c = n(120455);
-function A(e) {
-    var s, n;
-    let { emailToken: A, isSlideReady: u, onClose: C, onBack: M, onNext: S, reason: m } = e,
-        [I, x] = o.useState(''),
-        [T, R] = o.useState(''),
-        [O, h] = o.useState(!1),
-        L = (0, a.e7)([i.Z], () => i.Z.getErrors()),
-        f = o.useRef(null);
-    async function g(e) {
-        e.preventDefault(), h(!0);
+    t(47120);
+var n = t(735250),
+    o = t(470079),
+    a = t(442837),
+    l = t(481060),
+    r = t(809206),
+    i = t(25990),
+    E = t(155433),
+    _ = t(689938),
+    N = t(859565);
+function c(e) {
+    var s, t;
+    let { emailToken: c, isSlideReady: d, onClose: u, onBack: A, onNext: C } = e,
+        [M, S] = o.useState(''),
+        [m, I] = o.useState(''),
+        [x, T] = o.useState(!1),
+        R = (0, a.e7)([i.Z], () => i.Z.getErrors()),
+        O = o.useRef(null);
+    async function h(e) {
+        e.preventDefault(), T(!0);
         let s = await (0, r.Mn)({
-            email: I,
-            emailToken: A,
-            password: T
+            email: M,
+            emailToken: c,
+            password: m
         });
-        if ((h(!1), null == s ? void 0 : s.ok)) E.default.track(N.rMx.USER_ACCOUNT_EMAIL_CHANGE_SAVE_NEW_EMAIL, { change_email_reason_enum: m }), S(I);
+        if ((T(!1), null == s ? void 0 : s.ok)) C(M);
         else {
-            var n, t;
-            (null == s ? void 0 : null === (n = s.body) || void 0 === n ? void 0 : n.username) != null ? (0, _.P)() : (null == s ? void 0 : null === (t = s.body) || void 0 === t ? void 0 : t.email_token) != null && (null == M || M());
+            var t, n;
+            (null == s ? void 0 : null === (t = s.body) || void 0 === t ? void 0 : t.username) != null ? (0, E.P)() : (null == s ? void 0 : null === (n = s.body) || void 0 === n ? void 0 : n.email_token) != null && (null == A || A());
         }
     }
     return (
         o.useEffect(() => {
-            if (u) {
+            if (d) {
                 var e;
-                null === (e = f.current) || void 0 === e || e.focus();
+                null === (e = O.current) || void 0 === e || e.focus();
             }
-        }, [u]),
-        (0, t.jsxs)('form', {
-            onSubmit: g,
+        }, [d]),
+        (0, n.jsxs)('form', {
+            onSubmit: h,
             children: [
-                (0, t.jsxs)(l.ModalHeader, {
+                (0, n.jsxs)(l.ModalHeader, {
                     separator: !1,
-                    className: c.header,
+                    className: N.header,
                     children: [
-                        (0, t.jsx)(l.Heading, {
-                            className: c.title,
+                        (0, n.jsx)(l.Heading, {
+                            className: N.title,
                             variant: 'heading-xl/extrabold',
-                            children: d.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_TITLE_DESKTOP
+                            children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_TITLE_DESKTOP
                         }),
-                        (0, t.jsx)(l.Text, {
+                        (0, n.jsx)(l.Text, {
                             color: 'header-secondary',
                             variant: 'text-md/normal',
-                            className: c.subtitle,
-                            children: d.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_PROMPT_DESKTOP
+                            className: N.subtitle,
+                            children: _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_PROMPT_DESKTOP
                         }),
-                        (0, t.jsx)(l.ModalCloseButton, {
-                            onClick: C,
-                            className: c.modalCloseButton
+                        (0, n.jsx)(l.ModalCloseButton, {
+                            onClick: u,
+                            className: N.modalCloseButton
                         })
                     ]
                 }),
-                (0, t.jsxs)(l.ModalContent, {
-                    className: c.content,
+                (0, n.jsxs)(l.ModalContent, {
+                    className: N.content,
                     children: [
-                        (0, t.jsx)(l.FormItem, {
-                            title: d.Z.Messages.EMAIL,
-                            error: null == L ? void 0 : null === (s = L.email) || void 0 === s ? void 0 : s[0],
-                            children: (0, t.jsx)(l.TextInput, {
+                        (0, n.jsx)(l.FormItem, {
+                            title: _.Z.Messages.EMAIL,
+                            error: null == R ? void 0 : null === (s = R.email) || void 0 === s ? void 0 : s[0],
+                            children: (0, n.jsx)(l.TextInput, {
                                 type: 'email',
-                                value: I,
-                                onChange: x,
-                                inputRef: f
+                                value: M,
+                                onChange: S,
+                                inputRef: O
                             })
                         }),
-                        (0, t.jsx)(l.FormItem, {
-                            className: c.password,
-                            title: d.Z.Messages.USER_SETTINGS_LABEL_CURRENT_PASSWORD,
-                            error: null == L ? void 0 : null === (n = L.password) || void 0 === n ? void 0 : n[0],
-                            children: (0, t.jsx)(l.TextInput, {
+                        (0, n.jsx)(l.FormItem, {
+                            className: N.password,
+                            title: _.Z.Messages.USER_SETTINGS_LABEL_CURRENT_PASSWORD,
+                            error: null == R ? void 0 : null === (t = R.password) || void 0 === t ? void 0 : t[0],
+                            children: (0, n.jsx)(l.TextInput, {
                                 type: 'password',
-                                value: T,
-                                onChange: R
+                                value: m,
+                                onChange: I
                             })
                         })
                     ]
                 }),
-                (0, t.jsxs)(l.ModalFooter, {
+                (0, n.jsxs)(l.ModalFooter, {
                     children: [
-                        (0, t.jsx)(l.Button, {
+                        (0, n.jsx)(l.Button, {
                             type: 'submit',
                             color: l.Button.Colors.BRAND,
                             size: l.Button.Sizes.MEDIUM,
-                            submitting: O,
-                            children: d.Z.Messages.DONE
+                            submitting: x,
+                            children: _.Z.Messages.DONE
                         }),
-                        null != M
-                            ? (0, t.jsx)(l.Button, {
-                                  className: c.__invalid_cancel,
+                        null != A
+                            ? (0, n.jsx)(l.Button, {
+                                  className: N.__invalid_cancel,
                                   look: l.Button.Looks.LINK,
                                   color: l.Button.Colors.PRIMARY,
-                                  onClick: M,
-                                  children: d.Z.Messages.BACK
+                                  onClick: A,
+                                  children: _.Z.Messages.BACK
                               })
-                            : (0, t.jsx)(l.Button, {
-                                  className: c.__invalid_cancel,
+                            : (0, n.jsx)(l.Button, {
+                                  className: N.__invalid_cancel,
                                   look: l.Button.Looks.LINK,
                                   color: l.Button.Colors.PRIMARY,
-                                  onClick: C,
-                                  children: d.Z.Messages.CANCEL
+                                  onClick: u,
+                                  children: _.Z.Messages.CANCEL
                               })
                     ]
                 })

@@ -127,10 +127,10 @@ class N {
               u);
     }
     static parseOutboundStats(e, t) {
-        var n, r, i, a, s, o, l, u, c, d, _, E, f, h, p, I, m, T, S, O;
-        let R = new N();
+        var n, r, i, a, s, o, l, u, c, d, _, E, f, h, p, I, m, T, S, O, R;
+        let v = new N();
         return null == e
-            ? R
+            ? v
             : {
                   bytes: e.bytesSent,
                   framesCodec: e.framesEncoded,
@@ -166,16 +166,17 @@ class N {
                   framesDroppedRateLimiter: null !== (E = e.framesDroppedRateLimiter) && void 0 !== E ? E : null,
                   framesDroppedEncoderQueue: null !== (f = e.framesDroppedEncoderQueue) && void 0 !== f ? f : null,
                   framesDroppedCongestionWindow: null !== (h = e.framesDroppedCongestionWindow) && void 0 !== h ? h : null,
-                  passthroughCount: null !== (p = e.passthroughCount) && void 0 !== p ? p : 0,
-                  cryptorSuccessCount: null !== (I = e.encryptSuccessCount) && void 0 !== I ? I : 0,
-                  cryptorFailureCount: null !== (m = e.encryptFailureCount) && void 0 !== m ? m : 0,
-                  cryptorDuration: null !== (T = e.encryptDuration) && void 0 !== T ? T : 0,
-                  cryptorAttempts: null !== (S = e.encryptAttempts) && void 0 !== S ? S : 0,
-                  cryptorMaxAttempts: null !== (O = e.encryptMaxAttempts) && void 0 !== O ? O : 0
+                  framesDroppedEncoder: null !== (p = e.framesDroppedEncoder) && void 0 !== p ? p : null,
+                  passthroughCount: null !== (I = e.passthroughCount) && void 0 !== I ? I : 0,
+                  cryptorSuccessCount: null !== (m = e.encryptSuccessCount) && void 0 !== m ? m : 0,
+                  cryptorFailureCount: null !== (T = e.encryptFailureCount) && void 0 !== T ? T : 0,
+                  cryptorDuration: null !== (S = e.encryptDuration) && void 0 !== S ? S : 0,
+                  cryptorAttempts: null !== (O = e.encryptAttempts) && void 0 !== O ? O : 0,
+                  cryptorMaxAttempts: null !== (R = e.encryptMaxAttempts) && void 0 !== R ? R : 0
               };
     }
     constructor() {
-        f(this, 'bytes', 0), f(this, 'framesCodec', 0), f(this, 'framesCodecError', null), f(this, 'framesNetwork', 0), f(this, 'resolution', 0), f(this, 'minorResolution', 0), f(this, 'majorResolution', 0), f(this, 'timestamp', 0), f(this, 'packets', 0), f(this, 'packetsLost', 0), f(this, 'framesDropped', 0), f(this, 'nackCount', 0), f(this, 'pliCount', 0), f(this, 'encoder', null), f(this, 'decoder', null), f(this, 'codecType', null), f(this, 'qpSum', 0), f(this, 'freezeCount', 0), f(this, 'pauseCount', 0), f(this, 'totalFreezesDuration', 0), f(this, 'totalPausesDuration', 0), f(this, 'totalFramesDuration', 0), f(this, 'vmafScore', null), f(this, 'psnrDb', null), f(this, 'outboundSinkWant', null), f(this, 'keyframes', null), f(this, 'framesDroppedRateLimiter', null), f(this, 'framesDroppedEncoderQueue', null), f(this, 'framesDroppedCongestionWindow', null), f(this, 'passthroughCount', 0), f(this, 'cryptorSuccessCount', 0), f(this, 'cryptorFailureCount', 0), f(this, 'cryptorDuration', 0), f(this, 'cryptorAttempts', 0), f(this, 'cryptorMaxAttempts', 0), f(this, 'qualityDecodeErrors', 0), f(this, 'qualityDecoderReboots', 0), f(this, 'qualityScoreErrors', 0), f(this, 'qualityFrameDrops', 0), f(this, 'qualitySizeMismatches', 0);
+        f(this, 'bytes', 0), f(this, 'framesCodec', 0), f(this, 'framesCodecError', null), f(this, 'framesNetwork', 0), f(this, 'resolution', 0), f(this, 'minorResolution', 0), f(this, 'majorResolution', 0), f(this, 'timestamp', 0), f(this, 'packets', 0), f(this, 'packetsLost', 0), f(this, 'framesDropped', 0), f(this, 'nackCount', 0), f(this, 'pliCount', 0), f(this, 'encoder', null), f(this, 'decoder', null), f(this, 'codecType', null), f(this, 'qpSum', 0), f(this, 'freezeCount', 0), f(this, 'pauseCount', 0), f(this, 'totalFreezesDuration', 0), f(this, 'totalPausesDuration', 0), f(this, 'totalFramesDuration', 0), f(this, 'vmafScore', null), f(this, 'psnrDb', null), f(this, 'outboundSinkWant', null), f(this, 'keyframes', null), f(this, 'framesDroppedRateLimiter', null), f(this, 'framesDroppedEncoderQueue', null), f(this, 'framesDroppedCongestionWindow', null), f(this, 'framesDroppedEncoder', null), f(this, 'passthroughCount', 0), f(this, 'cryptorSuccessCount', 0), f(this, 'cryptorFailureCount', 0), f(this, 'cryptorDuration', 0), f(this, 'cryptorAttempts', 0), f(this, 'cryptorMaxAttempts', 0), f(this, 'qualityDecodeErrors', 0), f(this, 'qualityDecoderReboots', 0), f(this, 'qualityScoreErrors', 0), f(this, 'qualityFrameDrops', 0), f(this, 'qualitySizeMismatches', 0);
     }
 }
 class O {
@@ -364,6 +365,7 @@ class R extends O {
             f(this, 'outboundSinkWantNum', 0),
             f(this, 'framesDroppedRateLimiter', null),
             f(this, 'framesDroppedEncoderQueue', null),
-            f(this, 'framesDroppedCongestionWindow', null);
+            f(this, 'framesDroppedCongestionWindow', null),
+            f(this, 'framesDroppedEncoder', null);
     }
 }

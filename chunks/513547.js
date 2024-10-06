@@ -1,6 +1,6 @@
 n.d(t, {
     al: function () {
-        return S;
+        return D;
     },
     ck: function () {
         return b;
@@ -67,6 +67,7 @@ let d = {
     framesDroppedCongestionWindow: 'Frames Dropped by Congestion Window',
     framesDroppedEncoderQueue: 'Frames Dropped by Encoder Queue',
     framesDroppedRateLimiter: 'Frames Dropped by Bitrate Limiter',
+    framesDroppedEncoder: 'Frames Dropped by Encoder',
     framesEncoded: 'Frames Encoded',
     framesReceived: 'Frames Received',
     framesSent: 'Frames Sent',
@@ -123,7 +124,7 @@ let d = {
     screenCaptureKitFrames: 'ScreenCaptureKit frames',
     screenshareFrames: 'WebRTC Frames',
     secondaryDecodedRate: 'Secondary Decode Rate',
-    secureFramesProtocolVersion: 'SF Protocol',
+    secureFramesProtocolVersion: 'DAVE Protocol',
     sinkWant: 'Sink Quality Level (Remote)',
     sinkWantLocal: 'Sink Quality Level (Local)',
     speechExpandRate: 'Speech Expand Rate',
@@ -160,7 +161,7 @@ function y(e) {
     let { last: t } = e;
     return ''.concat(t, ' ms');
 }
-let S = {
+let D = {
         audioJitterBuffer: !0,
         audioJitterDelay: !0,
         audioJitterTarget: !0,
@@ -183,9 +184,10 @@ let S = {
         encryptAttempts: !0,
         encryptDuration: !0,
         encryptMaxAttempts: !0,
-        lqSimulcastStreamEncoded: !0
+        lqSimulcastStreamEncoded: !0,
+        hqSimulcastStreamEncoded: !0
     },
-    R = {
+    S = {
         accelerateRate: g,
         audioDetected: f,
         audioLevel: C,
@@ -232,7 +234,7 @@ let S = {
         },
         secondaryDecodedRate: g,
         secureFramesProtocolVersion: function (e) {
-            return e >= 100 ? 'MLS Test ('.concat(e, ')') : e > 0 ? 'Static Key Test ('.concat(e, ')') : 'Disabled';
+            return e > 0 ? 'Version '.concat(e) : 'Disabled';
         },
         speechExpandRate: g,
         targetDelay: h,
@@ -241,7 +243,7 @@ let S = {
             return e < t.length ? t[e] : 'Unknown';
         }
     },
-    D = (e) => e,
+    R = (e) => e,
     v = (e) => {
         let [t] = a.useState([]);
         return (
@@ -260,7 +262,7 @@ let S = {
 function b(e) {
     var t, n, a, i;
     let { label: o, value: u, section: m } = e,
-        p = null !== (n = R[o]) && void 0 !== n ? n : D;
+        p = null !== (n = S[o]) && void 0 !== n ? n : R;
     let h =
             s.Pz[o] &&
             (Array.isArray((i = u)) && i.length > 0 && 'number' == typeof i[0].value

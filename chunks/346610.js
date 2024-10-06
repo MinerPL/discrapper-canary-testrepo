@@ -1,9 +1,9 @@
 n.d(t, {
     WT: function () {
-        return o;
+        return l;
     },
     yk: function () {
-        return l;
+        return u;
     }
 });
 var r = n(818083);
@@ -102,24 +102,48 @@ let i = (0, r.B)({
                 }
             }
         ]
+    }),
+    o = (0, r.B)({
+        kind: 'user',
+        id: '2024-09_message_forwarding_gtm',
+        label: 'Message forwarding GTM',
+        defaultConfig: {},
+        treatments: [
+            {
+                id: 1,
+                label: 'GTM',
+                config: {
+                    canForwardMessages: !0,
+                    hasInlineForwardButton: !1,
+                    hasOneTapSendButton: !1,
+                    hasMessageInput: !0,
+                    hasPreview: !0,
+                    useOldIcon: !0
+                }
+            }
+        ]
     });
-function o(e, t) {
+function l(e, t) {
     let n = i.getCurrentConfig(e, t),
         r = a.getCurrentConfig(e, t),
-        o = s.getCurrentConfig(e, t);
+        l = s.getCurrentConfig(e, t),
+        u = o.getCurrentConfig(e, t);
     return {
         ...n,
         ...r,
-        ...o
+        ...l,
+        ...u
     };
 }
-function l(e, t) {
+function u(e, t) {
     let n = i.useExperiment(e, t),
         r = a.useExperiment(e, t),
-        o = s.useExperiment(e, t);
+        l = s.useExperiment(e, t),
+        u = o.useExperiment(e, t);
     return {
         ...n,
         ...r,
-        ...o
+        ...l,
+        ...u
     };
 }

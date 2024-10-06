@@ -11,151 +11,161 @@ var r = n(735250),
     _ = n(28546),
     E = n(357355),
     f = n(98278),
-    h = n(104494),
-    p = n(639119),
+    h = n(48125),
+    p = n(104494),
+    I = n(639119),
     m = n(165583),
-    I = n(197115),
-    T = n(631771),
+    T = n(197115),
+    S = n(631771),
     g = n(609218),
-    S = n(210887),
-    A = n(626135),
-    N = n(176354),
-    v = n(74538),
-    O = n(543241),
-    R = n(149203),
-    C = n(981631),
+    A = n(210887),
+    N = n(626135),
+    O = n(176354),
+    R = n(74538),
+    v = n(543241),
+    C = n(149203),
+    L = n(981631),
     y = n(185923),
     D = n(474936),
-    L = n(689938),
-    b = n(900566);
+    b = n(689938),
+    M = n(145834);
 t.Z = (e) => {
     var t, a;
-    let M,
-        { onLearnMore: P, onClose: U, channel: w, emojiDescriptor: x, pickerIntention: G, analyticsLocation: k, containerContext: B } = e,
-        F = (0, o.e7)([S.Z], () => S.Z.theme) === C.BRd.LIGHT ? 'light' : 'dark',
-        [V, H] = i.useState(!1),
-        Z = () => {
-            (0, O.A3)(w), (0, f.z)(), P();
+    let P,
+        { onLearnMore: U, onClose: w, channel: x, emojiDescriptor: G, pickerIntention: k, analyticsLocation: B, containerContext: F } = e,
+        V = (0, o.e7)([A.Z], () => A.Z.theme) === L.BRd.LIGHT ? 'light' : 'dark',
+        [H, Z] = i.useState(!1),
+        Y = () => {
+            (0, v.A3)(x), (0, f.z)(), U();
         },
-        Y = n(577391)('./img_premium_emoji_'.concat(F, '.svg')),
-        j = 'https://cdn.discordapp.com/assets/premium/roadblocks/emoji_'.concat(F, '.png'),
-        W = (0, p.N)(),
-        K = (0, h.Ng)(),
-        z = null != W || null != K,
-        q = (0, _.Iu)((e) => e.searchQuery),
-        { analyticsLocations: Q } = (0, d.ZP)(c.Z.EMOJI_PICKER),
-        { enabled: X, addSocialProof: $ } = T.Gi.useExperiment(
+        j = n(577391)('./img_premium_emoji_'.concat(V, '.svg')),
+        W = 'https://cdn.discordapp.com/assets/premium/roadblocks/emoji_'.concat(V, '.png'),
+        K = (0, I.N)(),
+        z = (0, p.Ng)(),
+        q = null != K || null != z,
+        Q = (0, _.Iu)((e) => e.searchQuery),
+        { analyticsLocations: X } = (0, d.ZP)(c.Z.EMOJI_PICKER),
+        $ = S.Gi.useExperiment(
             { location: 'Premium Emoji Roadblock' },
             {
-                autoTrackExposure: !z,
-                disable: z
+                autoTrackExposure: !q,
+                disable: q
             }
-        );
-    M = G === y.Hz.REACTION ? D.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == x ? D.cd.EMOJI_PICKER_FLOATING_UPSELL : x.subCategory === R.t0.TOP_GUILD_EMOJI ? D.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : x.subCategory === R.t0.NEWLY_ADDED_EMOJI ? D.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : D.cd.EMOJI_PICKER_EMOJI_CLICKED;
-    let J = null != x ? x.emoji : void 0,
-        ee = null != J && J.animated,
-        et = null != J && !N.ZP.isInternalEmojiForGuildId(J, null == w ? void 0 : w.getGuildId()),
-        en = null != J ? C.qAy.EMOJI : C.qAy.EMOJI_PICKER_FLOATING_UPSELL;
+        ),
+        J = h.Z.useExperiment(
+            { location: 'EmojiPickerPremiumUpsell' },
+            {
+                autoTrackExposure: null != K,
+                disable: null == K
+            }
+        ),
+        ee = $.enabled || J.enabled,
+        et = $.addSocialProof;
+    P = k === y.Hz.REACTION ? D.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == G ? D.cd.EMOJI_PICKER_FLOATING_UPSELL : G.subCategory === C.t0.TOP_GUILD_EMOJI ? D.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : G.subCategory === C.t0.NEWLY_ADDED_EMOJI ? D.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : D.cd.EMOJI_PICKER_EMOJI_CLICKED;
+    let en = null != G ? G.emoji : void 0,
+        er = null != en && en.animated,
+        ei = null != en && !O.ZP.isInternalEmojiForGuildId(en, null == x ? void 0 : x.getGuildId()),
+        ea = null != en ? L.qAy.EMOJI : L.qAy.EMOJI_PICKER_FLOATING_UPSELL;
     i.useEffect(() => {
-        !X &&
-            A.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: M,
-                is_animated: ee,
-                is_external: et,
-                has_search_query: null != q && '' !== q,
+        !ee &&
+            N.default.track(L.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: P,
+                is_animated: er,
+                is_external: ei,
+                has_search_query: null != Q && '' !== Q,
                 location: {
-                    ...k,
-                    object: en
+                    ...B,
+                    object: ea
                 },
-                location_stack: Q,
-                sku_id: (0, v.Wz)(v.ZP.getSkuIdForPremiumType(D.p9.TIER_2))
+                location_stack: X,
+                sku_id: (0, R.Wz)(R.ZP.getSkuIdForPremiumType(D.p9.TIER_2))
             });
-    }, [k, Q, q, ee, et, M, en, X]);
-    let er = (0, o.e7)([E.Z], () => E.Z.affinities),
-        ei = (0, o.e7)([E.Z], () => E.Z.hasFetched);
+    }, [B, X, Q, er, ei, P, ea, ee]);
+    let es = (0, o.e7)([E.Z], () => E.Z.affinities),
+        eo = (0, o.e7)([E.Z], () => E.Z.hasFetched);
     i.useEffect(() => {
-        !ei && u.MH();
-    }, [ei]);
-    let ea = er.length > 1 && $;
-    return X
+        !eo && u.MH();
+    }, [eo]);
+    let el = es.length > 1 && et;
+    return ee
         ? (0, r.jsx)(g.Z, {
-              containerContext: B,
+              containerContext: F,
               image: {
-                  url: j,
+                  url: W,
                   width: 220,
                   height: 132
               },
-              title: L.Z.Messages.EMOJI_PICKER_PREMIUM_UPSELL_TITLE_V2,
-              description: L.Z.Messages.EMOJI_PICKER_PREMIUM_UPSELL_DESCRIPTION_V2,
-              enableSocialProof: ea,
-              analyticsLocationSection: C.jXE.EMOJI_UPSELL_POPOUT,
-              onClose: U,
+              title: b.Z.Messages.EMOJI_PICKER_PREMIUM_UPSELL_TITLE_V2,
+              description: b.Z.Messages.EMOJI_PICKER_PREMIUM_UPSELL_DESCRIPTION_V2,
+              enableSocialProof: el,
+              analyticsLocationSection: L.jXE.EMOJI_UPSELL_POPOUT,
+              onClose: w,
               upsellViewedTrackingData: {
-                  type: M,
-                  is_external: et,
+                  type: P,
+                  is_external: ei,
                   location: {
-                      ...k,
-                      object: en
+                      ...B,
+                      object: ea
                   },
-                  location_stack: Q,
-                  sku_id: (0, v.Wz)(v.ZP.getSkuIdForPremiumType(D.p9.TIER_2)),
-                  has_search_query: null != q && '' !== q,
-                  is_animated: ee
+                  location_stack: X,
+                  sku_id: (0, R.Wz)(R.ZP.getSkuIdForPremiumType(D.p9.TIER_2)),
+                  has_search_query: null != Q && '' !== Q,
+                  is_animated: er
               }
           })
         : (0, r.jsxs)('div', {
-              className: s()(b.premiumPromo, { [b.unifyTrialUpsell]: z }),
+              className: s()(M.premiumPromo, { [M.unifyTrialUpsell]: q }),
               children: [
                   (0, r.jsx)(l.Clickable, {
-                      className: b.premiumPromoClose,
-                      onClick: U,
-                      children: L.Z.Messages.CLOSE
+                      className: M.premiumPromoClose,
+                      onClick: w,
+                      children: b.Z.Messages.CLOSE
                   }),
                   (0, r.jsxs)(r.Fragment, {
                       children: [
-                          z
+                          q
                               ? (0, r.jsx)(m.ZP, {
                                     type: D.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
-                                    subscriptionTier: null !== (a = null == W ? void 0 : null === (t = W.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== a ? a : D.Si.TIER_2,
-                                    onClose: U,
-                                    trialOffer: W,
-                                    discountOffer: K,
-                                    children: L.Z.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({ onClick: Z })
+                                    subscriptionTier: null !== (a = null == K ? void 0 : null === (t = K.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== a ? a : D.Si.TIER_2,
+                                    onClose: w,
+                                    trialOffer: K,
+                                    discountOffer: z,
+                                    children: b.Z.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({ onClick: Y })
                                 })
                               : (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)('img', {
                                             alt: '',
-                                            className: b.premiumPromoImage,
-                                            src: Y
+                                            className: M.premiumPromoImage,
+                                            src: j
                                         }),
                                         (0, r.jsx)('div', {
-                                            className: b.premiumPromoTitle,
-                                            children: L.Z.Messages.PREMIUM_PROMO_TITLE_SEARCH_UPSELL
+                                            className: M.premiumPromoTitle,
+                                            children: b.Z.Messages.PREMIUM_PROMO_TITLE_SEARCH_UPSELL
                                         }),
                                         (0, r.jsx)('div', {
-                                            className: b.premiumPromoDescription,
-                                            children: L.Z.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({ onClick: Z })
+                                            className: M.premiumPromoDescription,
+                                            children: b.Z.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({ onClick: Y })
                                         })
                                     ]
                                 }),
-                          !z &&
-                              (0, r.jsx)(I.Z, {
+                          !q &&
+                              (0, r.jsx)(T.Z, {
                                   subscriptionTier: D.Si.TIER_2,
-                                  submitting: V,
+                                  submitting: H,
                                   premiumModalAnalyticsLocation: {
-                                      section: C.jXE.EMOJI_PICKER_POPOUT,
-                                      object: C.qAy.BUTTON_CTA
+                                      section: L.jXE.EMOJI_PICKER_POPOUT,
+                                      object: L.qAy.BUTTON_CTA
                                   },
                                   size: l.Button.Sizes.SMALL,
                                   color: l.Button.Colors.GREEN,
                                   onClick: () => {
-                                      H(!0);
+                                      Z(!0);
                                   },
                                   onSubscribeModalClose: (e) => {
-                                      H(!1), e && U();
+                                      Z(!1), e && w();
                                   },
-                                  buttonText: z ? L.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : L.Z.Messages.PREMIUM_REQUIRED_GET_NITRO
+                                  buttonText: q ? b.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : b.Z.Messages.PREMIUM_REQUIRED_GET_NITRO
                               })
                       ]
                   })

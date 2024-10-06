@@ -20,10 +20,11 @@ function o(e) {
                 }
                 let r = (0, a.fO)(e);
                 n(r);
-                let l = 1000 * e.expiresAt + s.Cm - Date.now();
-                if (!r && l > 0) {
+                let l = (null == e ? void 0 : e.skuId) === '1251324401459265537' || (null == e ? void 0 : e.skuId) === '1252353273256480818' ? 950400000 : s.Cm,
+                    u = 1000 * e.expiresAt + l - Date.now();
+                if (!r && u > 0) {
                     let e = new i.V7();
-                    e.start(Math.min(2147483647, l), () => t()), (o.current = e);
+                    e.start(Math.min(2147483647, u), () => t()), (o.current = e);
                 }
             };
             return (

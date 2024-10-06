@@ -7,41 +7,33 @@ var a = t(735250);
 t(470079);
 var r = t(481060),
     s = t(239091),
-    o = t(299206),
-    i = t(326103),
+    i = t(299206),
+    o = t(326103),
     l = t(689938);
 function c(e) {
-    let { applicationId: n, className: t } = e,
-        c = (0, i.v)('GameProfileOverflowMenu'),
-        d = (0, o.Z)({
+    let { applicationId: n, className: c, viewId: d } = e,
+        u = (0, o.v)('GameProfileOverflowMenu'),
+        _ = (0, i.Z)({
             id: n,
             label: l.Z.Messages.COPY_ID_APPLICATION
         }),
-        u = () => {},
-        _ = c
-            ? (0, a.jsxs)(r.MenuItem, {
+        E = u
+            ? (0, a.jsx)(r.MenuItem, {
                   id: 'game-profile-something-wrong',
                   label: l.Z.Messages.GAME_PROFILE_SOMETHING_WENT_WRONG,
-                  children: [
-                      (0, a.jsx)(r.MenuItem, {
-                          id: 'game-profile-wrong-name',
-                          label: l.Z.Messages.GAME_PROFILE_WRONG_GAME,
-                          action: u
-                      }),
-                      (0, a.jsx)(r.MenuItem, {
-                          id: 'game-profile-outdated-data',
-                          label: l.Z.Messages.GAME_PROFILE_OUTDATED_DATA,
-                          action: u
-                      }),
-                      (0, a.jsx)(r.MenuItem, {
-                          id: 'game-profile-other-problem',
-                          label: l.Z.Messages.GAME_PROFILE_OTHER_PROBLEM,
-                          action: u
+                  action: () =>
+                      (0, r.openModalLazy)(async () => {
+                          let e = (await t.e('46923').then(t.bind(t, 55396))).default;
+                          return (t) =>
+                              (0, a.jsx)(e, {
+                                  applicationId: n,
+                                  viewId: d,
+                                  ...t
+                              });
                       })
-                  ]
               })
             : null;
-    return null == d && null == _
+    return null == _ && null == E
         ? null
         : (0, a.jsx)(r.Popout, {
               align: 'top',
@@ -57,7 +49,7 @@ function c(e) {
                       'aria-label': l.Z.Messages.GAME_PROFILE_VIEW_MORE,
                       onSelect: () => {},
                       children: (0, a.jsxs)(a.Fragment, {
-                          children: [(0, a.jsx)(r.MenuGroup, { children: d }), (0, a.jsx)(r.MenuGroup, { children: _ })]
+                          children: [(0, a.jsx)(r.MenuGroup, { children: _ }), (0, a.jsx)(r.MenuGroup, { children: E })]
                       })
                   });
               },
@@ -66,10 +58,13 @@ function c(e) {
                       text: l.Z.Messages.MORE,
                       children: (n) =>
                           (0, a.jsx)(r.Clickable, {
-                              className: t,
+                              className: c,
                               ...n,
                               ...e,
-                              children: (0, a.jsx)(r.MoreHorizontalIcon, { size: 'xs' })
+                              children: (0, a.jsx)(r.MoreHorizontalIcon, {
+                                  size: 'xs',
+                                  color: r.tokens.colors.WHITE
+                              })
                           })
                   })
           });

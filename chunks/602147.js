@@ -1,59 +1,67 @@
 n.d(t, {
     o: function () {
-        return E;
+        return N;
     }
-});
+}),
+    n(47120);
 var i = n(735250),
     l = n(470079),
     r = n(636977),
-    a = n(481060),
-    s = n(212093),
-    o = n(831565),
-    c = n(571457),
-    u = n(836768),
-    d = n(341907),
-    h = n(703656),
-    p = n(683301),
-    _ = n(603592),
-    f = n(981631),
-    g = n(731455),
-    m = n(49898),
+    a = n(704215),
+    s = n(481060),
+    o = n(169559),
+    c = n(706140),
+    u = n(571457),
+    d = n(836768),
+    h = n(341907),
+    p = n(703656),
+    f = n(603592),
+    _ = n(981631),
+    m = n(921944),
+    g = n(49898),
     C = n(46140),
-    I = n(689938);
-function E(e) {
-    let t = (0, o.a)({ location: 'discovery_button' }),
-        n = window.location.pathname.startsWith(f.Z5c.GUILD_DISCOVERY),
-        i = p.ZP.getCurrentCategoryId() === g.Gj.Clans;
-    if (t) {
-        if (e === m.F$.QUESTS) {
-            (0, d.navigateToQuestHome)(C.dr.DISCOVERY_COMPASS, r.j.DISCOVERY_COMPASS);
-            return;
-        }
-        if (e === m.F$.SERVERS) {
-            (0, h.uL)(f.Z5c.GLOBAL_DISCOVERY_SERVERS);
-            return;
-        }
-        (0, h.uL)(f.Z5c.GLOBAL_DISCOVERY);
-        return;
+    I = n(689938),
+    E = n(55869);
+function N(e) {
+    switch (e) {
+        case g.F$.QUESTS:
+            return (0, h.navigateToQuestHome)(C.dr.DISCOVERY_COMPASS, r.j.DISCOVERY_COMPASS);
+        case g.F$.APPS:
+            return (0, p.uL)(_.Z5c.GLOBAL_DISCOVERY_APPS);
+        case g.F$.SERVERS:
+            return (0, p.uL)(_.Z5c.GLOBAL_DISCOVERY_SERVERS);
+        default:
+            return (0, p.uL)(_.Z5c.GLOBAL_DISCOVERY);
     }
-    n && !i && ((0, s.AQ)(), (0, s.uY)(g.Hk, !0));
-    let l = (0, h.s1)().location.search;
-    (0, h.uL)(f.Z5c.GUILD_DISCOVERY, { search: l });
 }
-let N = l.forwardRef(function (e, t) {
-    let { selected: n, className: l, onClick: r } = e,
-        s = (0, o.v)({ location: 'guild_discovery_button' }) ? I.Z.Messages.DISCOVER : I.Z.Messages.GUILD_DISCOVERY_TOOLTIP,
-        d = u.d.getState().selectedTab;
-    return (0, i.jsx)(_.Z, {
+let S = l.forwardRef(function (e, t) {
+    let { selected: n, className: r, onClick: h } = e,
+        p = d.d.getState().selectedTab,
+        _ = (0, o.Z)('discovery_button'),
+        [C, S] = (0, c.cv)([a.z.GLOBAL_DISCOVERY_RAPIDASH_NOTIF]),
+        x = l.useCallback(() => {
+            null == h || h(), (0, u.k5)({ source: g.JU.GUILDS_BAR_ICON }), N(p), S(m.L.DISMISS);
+        }, [h, p, S]),
+        v = null != C && _,
+        T = l.useMemo(
+            () => ({
+                lowerBadgeSize: {
+                    width: 12,
+                    height: 12
+                },
+                lowerBadge: v ? (0, i.jsx)('div', { className: E.guildNotif }) : void 0
+            }),
+            [v]
+        );
+    return (0, i.jsx)(f.Z, {
         id: 'guild-discover-button',
         ref: t,
-        className: l,
-        onClick: () => {
-            null == r || r(), (0, c.k5)({ source: m.JU.GUILDS_BAR_ICON }), E(d);
-        },
+        className: r,
+        onClick: x,
         selected: n,
-        tooltip: s,
-        icon: a.CompassIcon
+        tooltip: I.Z.Messages.DISCOVER,
+        icon: s.CompassIcon,
+        ...T
     });
 });
-t.Z = N;
+t.Z = S;

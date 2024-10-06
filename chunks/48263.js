@@ -1,29 +1,30 @@
-n(47120), n(653041), n(312677), n(411104);
-var e = n(658722),
-    r = n.n(e),
-    t = n(954955),
-    i = n.n(t),
-    u = n(226951),
-    c = n(624138),
-    a = n(620490);
-let f = {
+r(47120), r(653041), r(312677), r(411104);
+var t = r(658722),
+    o = r.n(t),
+    l = r(954955),
+    i = r.n(l),
+    a = r(226951),
+    u = r(624138),
+    c = r(620490);
+let s = {
         UPDATE_USERS: 'UPDATE_USERS',
         USER_RESULTS: 'USER_RESULTS',
         QUERY_SET: 'QUERY_SET',
         QUERY_CLEAR: 'QUERY_CLEAR'
     },
-    s = new Map(),
-    O = new Map(),
+    f = new Map(),
+    d = new Map(),
     p = new Set(),
-    d = 'username',
-    v = 'friendNickname',
-    E = 'globalName',
-    b = i()(
+    v = 'username',
+    E = 'friendNickname',
+    h = 'globalName',
+    b = new Set(['isFriend', 'isBot', 'isProvisional', v, E, h]),
+    g = i()(
         () => {
             if (0 !== p.size)
-                p.forEach((l) => {
-                    let o = O.get(l);
-                    null != o && h(l, o);
+                p.forEach((e) => {
+                    let n = d.get(e);
+                    null != n && m(e, n);
                 }),
                     p.clear();
         },
@@ -33,131 +34,131 @@ let f = {
             trailing: !0
         }
     );
-function g(l, o) {
-    return l * (null != o ? o : 1);
+function S(e, n) {
+    return e * (null != n ? n : 1);
 }
-function h(l, o) {
-    var n, e;
-    let { query: t, limit: i, filters: f, blacklist: O, whitelist: p } = o,
-        b = null != f && f.strict && null !== (n = f.guild) && void 0 !== n ? n : null,
-        h = null !== (e = o.boosters) && void 0 !== e ? e : {},
-        T = RegExp('^'.concat(u.Z.escape(t)), 'i'),
-        F = RegExp(u.Z.escape(t), 'i'),
-        S = [];
-    if ('' === t) return y(t, S, l);
-    let U = t.toLocaleLowerCase(),
-        C = (0, c.Fv)(U);
-    s.forEach((l, o) => {
-        let n;
+function m(e, n) {
+    var r, t;
+    let { query: l, limit: i, filters: s, blacklist: d, whitelist: p } = n,
+        b = null != s && s.strict && null !== (r = s.guild) && void 0 !== r ? r : null,
+        g = null !== (t = n.boosters) && void 0 !== t ? t : {},
+        m = RegExp('^'.concat(a.Z.escape(l)), 'i'),
+        w = RegExp(a.Z.escape(l), 'i'),
+        U = [];
+    if ('' === l) return R(l, U, e);
+    let y = l.toLocaleLowerCase(),
+        _ = (0, u.Fv)(y);
+    f.forEach((e, n) => {
+        let r;
         if (
-            !(function (l, o, n, e, r) {
-                if (null != e && e.indexOf(l) >= 0) return !1;
-                if (null != r && r.indexOf(l) >= 0) return !0;
-                if (null != n) {
-                    let { friends: l, guild: e } = n;
-                    return (!0 === l && !0 === o.isFriend) || (null != e && (null != o[e] || null === o[e])) || !1;
+            !(function (e, n, r, t, o) {
+                if (null != t && t.indexOf(e) >= 0) return !1;
+                if (null != o && o.indexOf(e) >= 0) return !0;
+                if (null != r) {
+                    let { friends: e, guild: t, provisional: o } = r;
+                    return (null == o || n.isProvisional === o) && ((!0 === e && !0 === n.isFriend) || (null != t && (null != n[t] || null === n[t])) || !1);
                 }
                 return !0;
-            })(o, l, f, O, p)
+            })(n, e, s, d, p)
         )
             return;
-        let { username: e } = l;
-        o === t
-            ? (n = {
-                  id: o,
-                  username: e,
-                  comparator: o,
-                  score: g(10, h[o])
+        let { username: t } = e;
+        n === l
+            ? (r = {
+                  id: n,
+                  username: t,
+                  comparator: n,
+                  score: S(10, g[n])
               })
-            : Object.keys(l).forEach((t) => {
+            : Object.keys(e).forEach((l) => {
                   let i;
-                  let u = l[t];
-                  if ('boolean' == typeof u || null == u || (null != b && t !== d && t !== v && t !== E && b !== t)) return;
-                  let a = (0, c._I)(u.toLocaleLowerCase());
-                  T.test(u)
+                  let a = e[l];
+                  if ('boolean' == typeof a || null == a || (null != b && l !== v && l !== E && l !== h && b !== l)) return;
+                  let c = (0, u._I)(a.toLocaleLowerCase());
+                  m.test(a)
                       ? (i = {
-                            comparator: u,
-                            score: g(10, h[o])
+                            comparator: a,
+                            score: S(10, g[n])
                         })
-                      : F.test(u)
+                      : w.test(a)
                         ? (i = {
-                              comparator: u,
-                              score: g(5, h[o])
+                              comparator: a,
+                              score: S(5, g[n])
                           })
-                        : r()(U, a)
+                        : o()(y, c)
                           ? (i = {
-                                comparator: u,
-                                score: g(1, h[o])
+                                comparator: a,
+                                score: S(1, g[n])
                             })
-                          : r()(C, (0, c.Fv)(a)) &&
+                          : o()(_, (0, u.Fv)(c)) &&
                             (i = {
-                                comparator: u,
-                                score: g(1, h[o])
+                                comparator: a,
+                                score: S(1, g[n])
                             }),
                       null != i &&
-                          (null == n || n.score < i.score) &&
-                          (n = {
+                          (null == r || r.score < i.score) &&
+                          (r = {
                               ...i,
-                              id: o,
-                              username: e
+                              id: n,
+                              username: t
                           });
               }),
-            null != n && S.push(n);
+            null != r && U.push(r);
     }),
-        S.sort(a.Z),
-        S.length > i && (S.length = i),
-        y(t, S, l);
+        U.sort(c.Z),
+        U.length > i && (U.length = i),
+        R(l, U, e);
 }
-function y(l, o, n) {
-    let e = {
-        type: f.USER_RESULTS,
-        uuid: n,
+function R(e, n, r) {
+    let t = {
+        type: s.USER_RESULTS,
+        uuid: r,
         payload: {
-            query: l,
-            results: o
+            query: e,
+            results: n
         }
     };
-    self.postMessage(e);
+    self.postMessage(t);
 }
-self.addEventListener('message', (l) => {
-    let { data: o } = l;
-    if (null == o || null == o.type) throw Error('Invalid data');
-    switch (o.type) {
-        case f.UPDATE_USERS:
-            return (function (l) {
-                let { payload: o } = l,
-                    n = !1,
-                    e = new Set();
-                o.forEach((l) => {
-                    var o;
-                    let { id: r, ...t } = l,
-                        i = null !== (o = s.get(r)) && void 0 !== o ? o : null,
-                        u = {
+self.addEventListener('message', (e) => {
+    let { data: n } = e;
+    if (null == n || null == n.type) throw Error('Invalid data');
+    switch (n.type) {
+        case s.UPDATE_USERS:
+            return (function (e) {
+                let { payload: n } = e,
+                    r = !1,
+                    t = new Set();
+                n.forEach((e) => {
+                    var n;
+                    let { id: o, ...l } = e,
+                        i = null !== (n = f.get(o)) && void 0 !== n ? n : null,
+                        a = {
                             ...i,
-                            ...t
+                            ...l
                         };
-                    s.set(r, u),
-                        O.size > 0 &&
-                            ((u.isFriend !== (null == i ? void 0 : i.isFriend) || u.friendNickname !== (null == i ? void 0 : i.friendNickname)) && (n = !0),
-                            Object.keys(u).forEach((l) => {
-                                if ('isBot' !== l && 'isFriend' !== l && l !== d && l !== v && l !== E) e.add(l);
+                    f.set(o, a),
+                        d.size > 0 &&
+                            ((a.isFriend !== (null == i ? void 0 : i.isFriend) || a.friendNickname !== (null == i ? void 0 : i.friendNickname)) && (r = !0),
+                            Object.keys(a).forEach((e) => {
+                                if (!b.has(e)) t.add(e);
                             }));
                 }),
-                    O.forEach((l, o) => {
-                        let { filters: r } = l;
-                        (null == r || r.friends === n || e.has(r.guild)) && p.add(o);
+                    d.forEach((e, n) => {
+                        let { filters: o } = e;
+                        (null == o || o.friends === r || t.has(o.guild)) && p.add(n);
                     }),
-                    b();
-            })(o);
-        case f.QUERY_SET:
-            return (function (l) {
-                let { uuid: o, payload: n } = l;
-                O.set(o, n), h(o, n);
-            })(o);
-        case f.QUERY_CLEAR:
-            return (function (l) {
-                let { uuid: o } = l;
-                O.delete(o), p.delete(o), 0 === p.size && b.cancel();
-            })(o);
+                    g();
+            })(n);
+        case s.QUERY_SET:
+            return (function (e) {
+                let { uuid: n, payload: r } = e;
+                d.set(n, r), m(n, r);
+            })(n);
+        case s.QUERY_CLEAR:
+            return (function (e) {
+                let { uuid: n } = e;
+                d.delete(n), p.delete(n), 0 === p.size && g.cancel();
+            })(n);
     }
 });

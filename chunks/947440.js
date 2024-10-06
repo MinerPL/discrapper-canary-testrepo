@@ -1,6 +1,6 @@
 n.d(e, {
     Z: function () {
-        return W;
+        return F;
     }
 }),
     n(47120),
@@ -13,50 +13,49 @@ var l = n(442837),
     o = n(224706),
     s = n(2052),
     I = n(906732),
-    u = n(895924),
-    c = n(835473),
-    p = n(768419),
-    r = n(300020),
-    _ = n(456190),
-    Z = n(239470),
-    N = n(894344),
-    T = n(203777),
-    E = n(314897),
+    u = n(835473),
+    c = n(768419),
+    p = n(300020),
+    r = n(456190),
+    _ = n(239470),
+    Z = n(894344),
+    N = n(203777),
+    T = n(314897),
     S = n(592125),
-    v = n(650774),
-    C = n(430824),
-    m = n(496675),
-    y = n(158776),
-    A = n(699516),
-    b = n(944486),
-    h = n(885110),
-    O = n(594174),
+    E = n(650774),
+    v = n(430824),
+    C = n(496675),
+    h = n(158776),
+    y = n(699516),
+    m = n(944486),
+    A = n(885110),
+    b = n(594174),
     f = n(979651),
-    x = n(181106),
-    j = n(5192),
+    O = n(181106),
+    x = n(5192),
     g = n(566620),
-    U = n(317381),
+    j = n(317381),
     L = n(638880),
-    M = n(782769),
-    G = n(255621),
-    Y = n(527805),
-    P = n(620662),
-    V = n(841784),
-    J = n(275920),
-    R = n(701488),
-    D = n(981631),
-    k = n(616922),
-    F = n(689938);
-function W(i, e) {
-    let { analyticsLocations: W } = (0, I.ZP)(),
-        w = (0, l.e7)([O.default], () => O.default.getCurrentUser()),
-        X = (0, l.e7)([U.ZP], () => U.ZP.getSelfEmbeddedActivities()),
-        q = (0, l.Wu)([h.Z], () => h.Z.getActivities().filter((i) => null != i.application_id && !(null == X ? void 0 : X.has(i.application_id)))),
-        z = (0, l.Wu)([y.Z], () => (null != e ? y.Z.getActivities(e.id, null == i ? void 0 : i.getGuildId()) : []), [e, i]),
-        B = (0, l.Wu)(
-            [U.ZP],
+    U = n(782769),
+    M = n(255621),
+    G = n(527805),
+    Y = n(620662),
+    P = n(841784),
+    V = n(275920),
+    J = n(701488),
+    R = n(981631),
+    D = n(616922),
+    k = n(689938);
+function F(i, e) {
+    let { analyticsLocations: F } = (0, I.ZP)(),
+        W = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
+        w = (0, l.e7)([j.ZP], () => j.ZP.getSelfEmbeddedActivities()),
+        X = (0, l.Wu)([A.Z], () => A.Z.getActivities().filter((i) => null != i.application_id && !(null == w ? void 0 : w.has(i.application_id)))),
+        q = (0, l.Wu)([h.Z], () => (null != e ? h.Z.getActivities(e.id, null == i ? void 0 : i.getGuildId()) : []), [e, i]),
+        z = (0, l.Wu)(
+            [j.ZP],
             () => {
-                let n = (null == i ? void 0 : i.id) != null ? U.ZP.getEmbeddedActivitiesForChannel(i.id) : U.i6;
+                let n = (null == i ? void 0 : i.id) != null ? j.ZP.getEmbeddedActivitiesForChannel(i.id) : j.i6;
                 return null != e
                     ? n.filter((i) => {
                           let { userIds: n } = i;
@@ -66,72 +65,72 @@ function W(i, e) {
             },
             [e, i]
         ),
-        H = (0, l.e7)([m.Z], () => null == i || i.isPrivate() || m.Z.can(D.Plq.SEND_MESSAGES, i), [i]),
-        K = (0, l.Wu)([x.Z], () => [...z.map((i) => null != i.application_id && x.Z.getState(i.application_id, D.mFx.JOIN) === D.OcF.LOADING), ...B.map((i) => x.Z.getState(i.applicationId, D.mFx.JOIN) === D.OcF.LOADING)], [z, B]),
-        Q = (0, c.Z)([...z.filter((i) => (null == i ? void 0 : i.application_id) != null).map((i) => i.application_id), ...B.map((i) => i.applicationId)]),
-        $ = null == i ? void 0 : i.id,
-        ii = (0, l.Wu)(
-            [S.Z, C.Z, v.Z, A.Z, b.Z, f.Z, m.Z],
+        B = (0, l.e7)([C.Z], () => null == i || i.isPrivate() || C.Z.can(R.Plq.SEND_MESSAGES, i), [i]),
+        H = (0, l.Wu)([O.Z], () => [...q.map((i) => null != i.application_id && O.Z.getState(i.application_id, R.mFx.JOIN) === R.OcF.LOADING), ...z.map((i) => O.Z.getState(i.applicationId, R.mFx.JOIN) === R.OcF.LOADING)], [q, z]),
+        K = (0, u.Z)([...q.filter((i) => (null == i ? void 0 : i.application_id) != null).map((i) => i.application_id), ...z.map((i) => i.applicationId)]),
+        Q = null == i ? void 0 : i.id,
+        $ = (0, l.Wu)(
+            [S.Z, v.Z, E.Z, y.Z, m.Z, f.Z, C.Z],
             () => [
-                ...z.map((i) =>
-                    (0, G.Z)({
-                        user: null != e ? e : w,
+                ...q.map((i) =>
+                    (0, M.Z)({
+                        user: null != e ? e : W,
                         activity: i,
-                        application: Q.find((e) => (null == e ? void 0 : e.id) === i.application_id),
-                        channelId: $,
-                        currentUser: w,
-                        isEmbedded: (0, V.Z)(i),
+                        application: K.find((e) => (null == e ? void 0 : e.id) === i.application_id),
+                        channelId: Q,
+                        currentUser: W,
+                        isEmbedded: (0, P.Z)(i),
                         ChannelStore: S.Z,
-                        GuildStore: C.Z,
-                        GuildMemberCountStore: v.Z,
-                        RelationshipStore: A.Z,
-                        SelectedChannelStore: b.Z,
+                        GuildStore: v.Z,
+                        GuildMemberCountStore: E.Z,
+                        RelationshipStore: y.Z,
+                        SelectedChannelStore: m.Z,
                         VoiceStateStore: f.Z,
-                        PermissionStore: m.Z
+                        PermissionStore: C.Z
                     })
                 ),
-                ...B.map((i) => {
-                    let n = null != e ? e : w;
+                ...z.map((i) => {
+                    let n = null != e ? e : W;
                     return (
                         null != n &&
-                        (0, Y.ZP)({
+                        (0, G.ZP)({
                             userId: n.id,
-                            application: Q.find((e) => (null == e ? void 0 : e.id) === i.applicationId),
-                            channelId: $,
-                            currentUser: w,
-                            isActivitiesEnabledForCurrentPlatform: (0, M.a)(),
+                            application: K.find((e) => (null == e ? void 0 : e.id) === i.applicationId),
+                            channelId: Q,
+                            currentUser: W,
+                            isActivitiesEnabledForCurrentPlatform: (0, U.a)(),
                             ChannelStore: S.Z,
-                            GuildStore: C.Z,
+                            GuildStore: v.Z,
                             VoiceStateStore: f.Z,
-                            PermissionStore: m.Z
-                        }) === Y.Fw.CAN_JOIN
+                            PermissionStore: C.Z
+                        }) === G.Fw.CAN_JOIN
                     );
                 })
             ],
-            [z, Q, $, w, B, e]
+            [q, K, Q, W, z, e]
         ),
-        ie = (0, l.Wu)([p.Z, E.default], () => z.map((i) => (i.type === D.IIU.LISTENING && null != e ? (0, Z.Z)(p.Z, E.default, e, i) : void 0)), [e, z]),
-        it = (0, s.O)();
-    if (!H) return null;
-    let il = (n, t) => {
+        ii = (0, l.Wu)([c.Z, T.default], () => q.map((i) => (i.type === R.IIU.LISTENING && null != e ? (0, _.Z)(c.Z, T.default, e, i) : void 0)), [e, q]),
+        ie = (0, s.O)();
+    if (!B) return null;
+    let it = (n, t) => {
             null != i
                 ? d.Z.sendActivityInvite({
                       type: n,
                       channelId: i.id,
                       activity: t,
-                      location: D.Sbl.CONTEXT_MENU
+                      location: R.Sbl.CONTEXT_MENU
                   })
                 : null != e &&
                   d.Z.sendActivityInviteUser({
                       type: n,
                       userId: e.id,
                       activity: t,
-                      location: D.Sbl.CONTEXT_MENU
+                      location: R.Sbl.CONTEXT_MENU
                   });
         },
-        ia = (l, d) => {
+        il = (l, d) => {
             let o = S.Z.getChannel(l),
-                s = null == o ? void 0 : C.Z.getGuild(o.guild_id);
+                s = null == o ? void 0 : v.Z.getGuild(o.guild_id);
             return null == o || null == s
                 ? void 0
                 : null != e
@@ -139,20 +138,20 @@ function W(i, e) {
                         channelId: o.id,
                         applicationId: d,
                         userId: e.id,
-                        location: D.t4x.CONTEXT_MENU
+                        location: R.t4x.CONTEXT_MENU
                     })
-                  : null != i && i.type === D.d4z.GUILD_VOICE
+                  : null != i && i.type === R.d4z.GUILD_VOICE
                     ? (0, a.openModalLazy)(
                           async () => {
-                              let { default: e } = await Promise.all([n.e('7654'), n.e('1187'), n.e('66288')]).then(n.bind(n, 560114));
+                              let { default: e } = await Promise.all([n.e('7654'), n.e('1187'), n.e('79254')]).then(n.bind(n, 560114));
                               return (n) =>
                                   (0, t.jsx)(e, {
                                       ...n,
                                       guild: s,
                                       channel: o,
                                       applicationId: d,
-                                      analyticsLocation: i.type === D.d4z.GUILD_VOICE ? D.ZY5.GUILD_CHANNEL : D.ZY5.DM_CHANNEL,
-                                      source: D.t4x.ACTIVITY_INVITE
+                                      analyticsLocation: i.type === R.d4z.GUILD_VOICE ? R.ZY5.GUILD_CHANNEL : R.ZY5.DM_CHANNEL,
+                                      source: R.t4x.ACTIVITY_INVITE
                                   });
                           },
                           { modalKey: 'use-activity-items-embedded-invite-modal' }
@@ -162,139 +161,143 @@ function W(i, e) {
                             activityChannelId: o.id,
                             invitedChannelId: i.id,
                             applicationId: d,
-                            location: D.t4x.CONTEXT_MENU
+                            location: R.t4x.CONTEXT_MENU
                         })
                       : void 0;
         },
-        id = async (i) => {
+        ia = async (i) => {
             var n, t;
-            let l = (0, P.Z)(i, D.xjy.EMBEDDED);
+            let l = (0, Y.Z)(i, R.xjy.EMBEDDED),
+                a = m.Z.getVoiceChannelId(),
+                d = S.Z.getChannel(a);
             await o.Z.join({
                 userId: e.id,
                 sessionId: i.session_id,
                 applicationId: i.application_id,
-                channelId: b.Z.getVoiceChannelId(),
+                channelId: a,
                 messageId: null,
-                intent: R.Ws.PLAY,
+                intent: J.Ws.PLAY,
                 embedded: l,
                 partyId: null === (n = i.party) || void 0 === n ? void 0 : n.id,
-                locationObject: it.location,
-                analyticsLocations: W
+                locationObject: ie.location,
+                analyticsLocations: F
             }),
                 !l &&
-                    (0, J.Z)({
-                        type: D.q5t.JOIN,
+                    (0, V.Z)({
+                        type: R.q5t.JOIN,
                         userId: e.id,
+                        guildId: null == d ? void 0 : d.guild_id,
+                        channelId: a,
+                        channelType: null == d ? void 0 : d.type,
                         applicationId: i.application_id,
                         partyId: null === (t = i.party) || void 0 === t ? void 0 : t.id,
-                        locationObject: it.location,
-                        analyticsLocations: W
+                        locationObject: ie.location,
+                        analyticsLocations: F
                     });
         },
-        io = async (e) => {
+        id = async (e) => {
             await (0, L.Z)({
                 applicationId: e.applicationId,
                 activityChannelId: null == i ? void 0 : i.id,
-                locationObject: it.location,
-                analyticsLocations: W,
-                commandOrigin: u.bB.CONTEXT_MENU
+                locationObject: ie.location,
+                analyticsLocations: F
             });
         },
-        is = [];
+        io = [];
     return (
-        null == X ||
-            X.forEach((n) => {
+        null == w ||
+            w.forEach((n) => {
                 let l = (null == e ? void 0 : e.id) != null && n.userIds.has(null == e ? void 0 : e.id),
-                    d = m.Z.can(D.Plq.CREATE_INSTANT_INVITE, i),
-                    o = Q.find((i) => (null == i ? void 0 : i.id) === n.applicationId);
+                    d = C.Z.can(R.Plq.CREATE_INSTANT_INVITE, i),
+                    o = K.find((i) => (null == i ? void 0 : i.id) === n.applicationId);
                 if (null != n.launchId && !l && !!d && null != o)
-                    is.push(
+                    io.push(
                         (0, t.jsx)(
                             a.MenuItem,
                             {
                                 id: 'invite-to-join-embedded',
-                                label: F.Z.Messages.USER_ACTIVITY_ACTION_INVITE_TO_JOIN,
+                                label: k.Z.Messages.USER_ACTIVITY_ACTION_INVITE_TO_JOIN,
                                 subtext: o.name,
                                 action: () => {
-                                    ia(n.channelId, n.applicationId);
+                                    il(n.channelId, n.applicationId);
                                 }
                             },
                             'self-embedded-'.concat(n.applicationId)
                         )
                     );
             }),
-        q.forEach((i, e) => {
-            i.type === D.IIU.PLAYING && (0, P.Z)(i, D.xjy.JOIN)
-                ? is.push(
+        X.forEach((i, e) => {
+            i.type === R.IIU.PLAYING && (0, Y.Z)(i, R.xjy.JOIN)
+                ? io.push(
                       (0, t.jsx)(
                           a.MenuItem,
                           {
                               id: 'invite-to-join',
-                              label: F.Z.Messages.USER_ACTIVITY_ACTION_INVITE_TO_JOIN,
+                              label: k.Z.Messages.USER_ACTIVITY_ACTION_INVITE_TO_JOIN,
                               subtext: i.name,
-                              action: () => il(D.mFx.JOIN, i)
+                              action: () => it(R.mFx.JOIN, i)
                           },
                           'self'.concat(e)
                       )
                   )
-                : i.type === D.IIU.LISTENING &&
-                  (0, P.Z)(i, D.xjy.SYNC) &&
-                  is.push(
+                : i.type === R.IIU.LISTENING &&
+                  (0, Y.Z)(i, R.xjy.SYNC) &&
+                  io.push(
                       (0, t.jsx)(
                           a.MenuItem,
                           {
                               id: 'invite-to-listen',
-                              label: F.Z.Messages.USER_ACTIVITY_ACTION_INVITE_TO_LISTEN_ALONG,
+                              label: k.Z.Messages.USER_ACTIVITY_ACTION_INVITE_TO_LISTEN_ALONG,
                               subtext: i.name,
-                              action: () => il(D.mFx.LISTEN, i)
+                              action: () => it(R.mFx.LISTEN, i)
                           },
                           'self'.concat(e)
                       )
                   );
         }),
-        is.length > 0 && is.push((0, t.jsx)(a.MenuSeparator, {})),
-        z.forEach((n, l) => {
-            if (n.type === D.IIU.PLAYING && (0, P.Z)(n, D.xjy.JOIN) && null != n.session_id && null != n.application_id) {
-                if (ii[l]) {
-                    let i = K[l];
-                    is.push(
+        io.length > 0 && io.push((0, t.jsx)(a.MenuSeparator, {})),
+        q.forEach((n, l) => {
+            if (n.type === R.IIU.PLAYING && (0, Y.Z)(n, R.xjy.JOIN) && null != n.session_id && null != n.application_id) {
+                if ($[l]) {
+                    let i = H[l];
+                    io.push(
                         (0, t.jsx)(
                             a.MenuItem,
                             {
                                 id: 'join',
-                                label: i ? F.Z.Messages.USER_ACTIVITY_JOINING : F.Z.Messages.JOIN,
+                                label: i ? k.Z.Messages.USER_ACTIVITY_JOINING : k.Z.Messages.JOIN,
                                 disabled: i,
                                 hint: i ? (0, t.jsx)(a.Spinner, { type: a.Spinner.Type.PULSING_ELLIPSIS }) : null,
                                 subtext: n.name,
-                                action: () => id(n)
+                                action: () => ia(n)
                             },
                             l
                         )
                     );
                 } else
-                    is.push(
+                    io.push(
                         (0, t.jsx)(
                             a.MenuItem,
                             {
                                 id: 'ask-to-join',
-                                label: F.Z.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN,
+                                label: k.Z.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN,
                                 subtext: n.name,
-                                action: () => il(D.mFx.JOIN_REQUEST, n)
+                                action: () => it(R.mFx.JOIN_REQUEST, n)
                             },
                             l
                         )
                     );
-            } else if (n.type === D.IIU.LISTENING && (0, P.Z)(n, D.xjy.SYNC) && null != ie[l]) {
-                let d = ie[l],
+            } else if (n.type === R.IIU.LISTENING && (0, Y.Z)(n, R.xjy.SYNC) && null != ii[l]) {
+                let d = ii[l],
                     { playDisabled: o, syncDisabled: s } = d;
-                is.push(
+                io.push(
                     (0, t.jsx)(
                         a.MenuItem,
                         {
                             id: 'spotify-play-'.concat(n.session_id),
-                            action: () => (0, T.Z)(d, k.kG.USER_ACTIVITY_PLAY),
-                            label: (0, r.Z)(d, k.kG.USER_ACTIVITY_PLAY),
-                            subtext: o ? (0, _.Z)(d, k.kG.USER_ACTIVITY_PLAY, null != i ? j.ZP.getNickname(i.guild_id, i.id, e) : void 0) : void 0,
+                            action: () => (0, N.Z)(d, D.kG.USER_ACTIVITY_PLAY),
+                            label: (0, p.Z)(d, D.kG.USER_ACTIVITY_PLAY),
+                            subtext: o ? (0, r.Z)(d, D.kG.USER_ACTIVITY_PLAY, null != i ? x.ZP.getNickname(i.guild_id, i.id, e) : void 0) : void 0,
                             disabled: o
                         },
                         'spotify-play-'.concat(n.session_id)
@@ -303,9 +306,9 @@ function W(i, e) {
                         a.MenuItem,
                         {
                             id: 'spotify-sync-'.concat(n.session_id),
-                            action: () => (0, N.Z)(d, k.kG.USER_ACTIVITY_SYNC),
-                            label: F.Z.Messages.USER_ACTIVITY_LISTEN_ALONG,
-                            subtext: s ? (0, _.Z)(d, k.kG.USER_ACTIVITY_SYNC, null != i ? j.ZP.getNickname(i.guild_id, i.id, e) : void 0) : void 0,
+                            action: () => (0, Z.Z)(d, D.kG.USER_ACTIVITY_SYNC),
+                            label: k.Z.Messages.USER_ACTIVITY_LISTEN_ALONG,
+                            subtext: s ? (0, r.Z)(d, D.kG.USER_ACTIVITY_SYNC, null != i ? x.ZP.getNickname(i.guild_id, i.id, e) : void 0) : void 0,
                             disabled: s
                         },
                         'spotify-sync-'.concat(n.session_id)
@@ -313,31 +316,31 @@ function W(i, e) {
                 );
             }
         }),
-        B.forEach((i, e) => {
+        z.forEach((i, e) => {
             var n;
-            let l = i.userIds.has(null !== (n = null == w ? void 0 : w.id) && void 0 !== n ? n : D.lds),
-                d = e + z.length,
-                o = K[d] || l,
-                s = F.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY;
-            l ? (s = F.Z.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF) : K[d] && (s = F.Z.Messages.USER_ACTIVITY_JOINING);
-            let I = Q.find((e) => (null == e ? void 0 : e.id) === i.applicationId);
-            ii[d] &&
+            let l = i.userIds.has(null !== (n = null == W ? void 0 : W.id) && void 0 !== n ? n : R.lds),
+                d = e + q.length,
+                o = H[d] || l,
+                s = k.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY;
+            l ? (s = k.Z.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF) : H[d] && (s = k.Z.Messages.USER_ACTIVITY_JOINING);
+            let I = K.find((e) => (null == e ? void 0 : e.id) === i.applicationId);
+            $[d] &&
                 null != I &&
-                is.push(
+                io.push(
                     (0, t.jsx)(
                         a.MenuItem,
                         {
                             id: 'embedded-activity-join-'.concat(i.applicationId),
                             label: s,
                             disabled: o,
-                            hint: K[d] ? (0, t.jsx)(a.Spinner, { type: a.Spinner.Type.PULSING_ELLIPSIS }) : null,
+                            hint: H[d] ? (0, t.jsx)(a.Spinner, { type: a.Spinner.Type.PULSING_ELLIPSIS }) : null,
                             subtext: I.name,
-                            action: () => io(i)
+                            action: () => id(i)
                         },
                         'embedded-activity-'.concat(i.applicationId)
                     )
                 );
         }),
-        is
+        io
     );
 }

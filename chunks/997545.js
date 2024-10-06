@@ -214,7 +214,7 @@ class C extends E.Z {
                 })).setSecureFramesStateUpdateCallback) ||
             void 0 === i ||
             i.call(t, (e) => {
-                this.logger.info('Secure frames state update: '.concat(JSON.stringify(e))), this.emit(p.Sh.SecureFramesUpdate, e);
+                this.logger.info('DAVE protocol state update: '.concat(JSON.stringify(e))), this.emit(p.Sh.SecureFramesUpdate, e);
             }),
             null === (a = t.setDesktopSourceStatusCallback) ||
                 void 0 === a ||
@@ -824,6 +824,10 @@ class C extends E.Z {
     processMLSWelcome(e, t, n) {
         var r, i;
         null === (r = (i = this.conn).processMLSWelcome) || void 0 === r || r.call(i, e, t, n);
+    }
+    getMLSPairwiseFingerprint(e, t, n) {
+        var r, i;
+        null === (r = (i = this.conn).getMLSPairwiseFingerprint) || void 0 === r || r.call(i, e, t, n);
     }
     presentDesktopSourcePicker(e) {
         var t, n;

@@ -4,15 +4,17 @@ var l = n(991637),
     s = n(388123),
     i = n(904245),
     r = n(957730),
-    o = n(592125);
-let c = {
+    o = n(592125),
+    c = n(496675),
+    u = n(784384);
+let d = {
     async sendForward(e, t, n) {
         let l = o.Z.getChannel(t),
             a = o.Z.getChannel(e.channel_id);
         if (null == a) throw Error('Unable to find original channel for message');
         if (null == l) throw Error('Unable to find destination channel for message');
-        let c = r.ZP.parse(l, ''),
-            u = {
+        let d = r.ZP.parse(l, ''),
+            h = {
                 guild_id: a.guild_id,
                 channel_id: e.channel_id,
                 message_id: e.id,
@@ -25,12 +27,12 @@ let c = {
                           }
                         : void 0
             };
-        await i.Z.sendMessage(l.id, c, !1, {
-            messageReference: u,
+        await i.Z.sendMessage(l.id, d, !1, {
+            messageReference: h,
             eagerDispatch: !1
         }),
-            (null == n ? void 0 : n.withMessage) != null && (await i.Z.sendMessage(l.id, r.ZP.parse(l, n.withMessage), !1));
+            (null == n ? void 0 : n.withMessage) != null && !(0, u.pU)(l, c.Z) && (await i.Z.sendMessage(l.id, r.ZP.parse(l, n.withMessage), !1));
     },
-    sendForwards: (e, t, n) => a()(t.map((t) => c.sendForward(e, t, n)))
+    sendForwards: (e, t, n) => a()(t.map((t) => d.sendForward(e, t, n)))
 };
-t.Z = c;
+t.Z = d;

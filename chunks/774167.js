@@ -1,1 +1,1 @@
-e.exports = { qrCodeButtonContent: 'qrCodeButtonContent_c5abf9' };
+e.exports = { icon: 'icon_efcc0c' };

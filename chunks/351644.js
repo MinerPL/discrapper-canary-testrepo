@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return B;
+        return H;
     }
 }),
     t(653041),
@@ -11,35 +11,39 @@ var i = t(735250),
     l = t.n(s),
     r = t(658722),
     o = t.n(r),
-    d = t(442837),
-    c = t(780384),
+    c = t(442837),
+    d = t(780384),
     u = t(481060),
     I = t(37234),
     m = t(410030),
     _ = t(726542),
     N = t(132871),
     E = t(147890),
-    T = t(231757),
-    h = t(600164),
-    g = t(553795),
-    p = t(496675),
-    f = t(626135),
-    C = t(768581),
-    O = t(63063),
-    x = t(709054),
-    S = t(51144),
-    A = t(585835),
-    R = t(997787),
-    b = t(981631),
-    Z = t(689938),
-    v = t(112286),
-    M = t(509399),
-    L = t(790904),
-    j = t(609182);
-function D(e, n) {
+    T = t(835473),
+    h = t(231757),
+    g = t(600164),
+    p = t(685929),
+    f = t(163400),
+    x = t(553795),
+    C = t(496675),
+    O = t(626135),
+    S = t(768581),
+    A = t(63063),
+    R = t(709054),
+    b = t(51144),
+    Z = t(327934),
+    v = t(585835),
+    M = t(997787),
+    L = t(981631),
+    j = t(689938),
+    D = t(560551),
+    P = t(509399),
+    B = t(790904),
+    y = t(609182);
+function G(e, n) {
     return n.includes(e);
 }
-function P(e) {
+function k(e) {
     let { query: n, setQuery: t } = e,
         s = a.useCallback(
             (e) => {
@@ -48,129 +52,133 @@ function P(e) {
             [t]
         );
     return (0, i.jsx)('div', {
-        className: v.searchContainer,
+        className: D.searchContainer,
         children: (0, i.jsx)(u.SearchBar, {
             size: u.SearchBar.Sizes.MEDIUM,
             query: n,
             onChange: s,
             onClear: () => t(''),
-            placeholder: Z.Z.Messages.INTEGRATIONS_SEARCH,
-            'aria-label': Z.Z.Messages.INTEGRATIONS_SEARCH
+            placeholder: j.Z.Messages.INTEGRATIONS_SEARCH,
+            'aria-label': j.Z.Messages.INTEGRATIONS_SEARCH
         })
     });
 }
-function B(e) {
-    let { guild: n, channel: t, applicationIntegrations: s, builtInIntegrations: r, customWebhooks: B, followedChannelWebhooks: y, isLoading: G, canCreateWebhook: k, onManageBuiltIn: U, onManageCustomWebhooks: H, onManageFollowedChannels: w, onManageApplication: W } = e,
-        F = (0, m.ZP)(),
-        [V, K] = a.useState(''),
-        { isFetchingConnections: Y, accounts: z } = (0, d.cj)(
-            [g.Z],
+function H(e) {
+    var n, t, s, r, H, w, U, W;
+    let { guild: F, channel: V, applicationIntegrations: K, builtInIntegrations: Y, customWebhooks: z, followedChannelWebhooks: q, isLoading: X, canCreateWebhook: J, onManageBuiltIn: Q, onManageCustomWebhooks: $, onManageFollowedChannels: ee, onManageApplication: en, onManageChannelsSyncing: et } = e,
+        ei = (0, m.ZP)(),
+        [ea, es] = a.useState(''),
+        { isFetchingConnections: el, accounts: er } = (0, c.cj)(
+            [x.Z],
             () => ({
-                isFetchingConnections: g.Z.isFetching(),
-                accounts: g.Z.getAccounts()
+                isFetchingConnections: x.Z.isFetching(),
+                accounts: x.Z.getAccounts()
             }),
             []
         ),
-        { canManageWebhooks: q, canManageGuild: X } = (0, d.cj)(
-            [p.Z],
+        { canManageWebhooks: eo, canManageGuild: ec } = (0, c.cj)(
+            [C.Z],
             () => ({
-                canManageWebhooks: (null != n && p.Z.can(b.Plq.MANAGE_WEBHOOKS, n)) || (null != t && p.Z.can(b.Plq.MANAGE_WEBHOOKS, t)),
-                canManageGuild: null != n && null == t && p.Z.can(b.Plq.MANAGE_GUILD, n)
+                canManageWebhooks: (null != F && C.Z.can(L.Plq.MANAGE_WEBHOOKS, F)) || (null != V && C.Z.can(L.Plq.MANAGE_WEBHOOKS, V)),
+                canManageGuild: null != F && null == V && C.Z.can(L.Plq.MANAGE_GUILD, F)
             }),
-            [n, t]
+            [F, V]
         ),
+        ed = (0, p.Y)(V),
+        eu = (0, T.q)(null == V ? void 0 : null === (n = V.linkedLobby) || void 0 === n ? void 0 : n.application_id),
+        eI = (0, f.F)(null == F ? void 0 : F.id),
         {
-            availableTwitchIntegrations: J,
-            availableYoutubeIntegrations: Q,
-            guildTwitchIntegrations: $,
-            guildYoutubeIntegrations: ee
+            availableTwitchIntegrations: em,
+            availableYoutubeIntegrations: e_,
+            guildTwitchIntegrations: eN,
+            guildYoutubeIntegrations: eE
         } = a.useMemo(() => {
-            var e, n, t, i, a, s, l, o;
+            var e, n, t, i, a, s, l, r;
             return {
-                availableTwitchIntegrations: null !== (a = null === (e = r.twitch) || void 0 === e ? void 0 : e.length) && void 0 !== a ? a : 0,
-                availableYoutubeIntegrations: null !== (s = null === (n = r.youtube) || void 0 === n ? void 0 : n.length) && void 0 !== s ? s : 0,
-                guildTwitchIntegrations: null !== (l = null === (t = r.twitch) || void 0 === t ? void 0 : t.filter((e) => e.enabled).length) && void 0 !== l ? l : 0,
-                guildYoutubeIntegrations: null !== (o = null === (i = r.youtube) || void 0 === i ? void 0 : i.filter((e) => e.enabled).length) && void 0 !== o ? o : 0
+                availableTwitchIntegrations: null !== (a = null === (e = Y.twitch) || void 0 === e ? void 0 : e.length) && void 0 !== a ? a : 0,
+                availableYoutubeIntegrations: null !== (s = null === (n = Y.youtube) || void 0 === n ? void 0 : n.length) && void 0 !== s ? s : 0,
+                guildTwitchIntegrations: null !== (l = null === (t = Y.twitch) || void 0 === t ? void 0 : t.filter((e) => e.enabled).length) && void 0 !== l ? l : 0,
+                guildYoutubeIntegrations: null !== (r = null === (i = Y.youtube) || void 0 === i ? void 0 : i.filter((e) => e.enabled).length) && void 0 !== r ? r : 0
             };
-        }, [r.twitch, r.youtube]),
-        { showTwitchCard: en, showYoutubeCard: et } = a.useMemo(() => {
-            if (Y || !X)
+        }, [Y.twitch, Y.youtube]),
+        { showTwitchCard: eT, showYoutubeCard: eh } = a.useMemo(() => {
+            if (el || !ec)
                 return {
                     showTwitchCard: !1,
                     showYoutubeCard: !1
                 };
-            let e = null == n ? void 0 : n.hasFeature(b.oNc.COMMUNITY),
-                t = z.filter((e) => e.type === b.ABu.TWITCH).length > 0,
-                i = z.filter((e) => e.type === b.ABu.YOUTUBE).length > 0;
+            let e = null == F ? void 0 : F.hasFeature(L.oNc.COMMUNITY),
+                n = er.filter((e) => e.type === L.ABu.TWITCH).length > 0,
+                t = er.filter((e) => e.type === L.ABu.YOUTUBE).length > 0;
             return {
-                showTwitchCard: J > 0 || (!t && e),
-                showYoutubeCard: Q > 0 || (!i && e)
+                showTwitchCard: em > 0 || (!n && e),
+                showYoutubeCard: e_ > 0 || (!t && e)
             };
-        }, [Y, X, n, z, J, Q]),
-        ei = Object.values(s).length,
-        ea = a.useMemo(() => {
-            let e = ei > 100 ? D : o();
-            return Object.values(s).filter((n) => {
+        }, [el, ec, F, er, em, e_]),
+        eg = Object.values(K).length,
+        ep = a.useMemo(() => {
+            let e = eg > 100 ? G : o();
+            return Object.values(K).filter((n) => {
                 var t, i, a;
                 let { application: s } = n;
-                return (t = s), (i = V), (a = e), !!('' === (i = i.trim().toLowerCase()) || t.id === i || a(i, t.name.toLowerCase()) || (null != t.bot && a(i, t.bot.username.toLowerCase()))) || !1;
+                return (t = s), (i = ea), (a = e), !!('' === (i = i.trim().toLowerCase()) || t.id === i || a(i, t.name.toLowerCase()) || (null != t.bot && a(i, t.bot.username.toLowerCase()))) || !1;
             });
-        }, [s, ei, V]),
-        es = (0, d.e7)(
-            [R.Z],
+        }, [K, eg, ea]),
+        ef = (0, c.e7)(
+            [M.Z],
             () => {
-                if (null != n) return ea.find((e) => R.Z.canShowOverviewTooltip(n.id, e.integration.id));
+                if (null != F) return ep.find((e) => M.Z.canShowOverviewTooltip(F.id, e.integration.id));
             },
-            [ea, n]
+            [ep, F]
         ),
-        el = a.useMemo(() => (void 0 !== es ? [es, ...ea.filter((e) => e.integration.id !== es.integration.id)] : ea), [ea, es]),
-        er = (0, u.useModalsStore)(u.hasAnyModalOpenSelector),
-        [eo, ed] = a.useState(!1),
-        ec = a.useRef(0),
-        eu = () => {
-            ed(!0),
-                clearTimeout(ec.current),
-                (ec.current = setTimeout(() => {
-                    ed(!1);
+        ex = a.useMemo(() => (void 0 !== ef ? [ef, ...ep.filter((e) => e.integration.id !== ef.integration.id)] : ep), [ep, ef]),
+        eC = (0, u.useModalsStore)(u.hasAnyModalOpenSelector),
+        [eO, eS] = a.useState(!1),
+        eA = a.useRef(0),
+        eR = () => {
+            eS(!0),
+                clearTimeout(eA.current),
+                (eA.current = setTimeout(() => {
+                    eS(!1);
                 }, 200));
         };
-    a.useEffect(() => (window.addEventListener('scroll', eu, !0), () => window.removeEventListener('scroll', eu)));
-    let eI = el.map((e) => {
-            let t = !er && e.integration.id === (null == es ? void 0 : es.integration.id);
+    a.useEffect(() => (window.addEventListener('scroll', eR, !0), () => window.removeEventListener('scroll', eR)));
+    let eb = ex.map((e) => {
+            let n = !eC && e.integration.id === (null == ef ? void 0 : ef.integration.id);
             return (function (e, n, t, a, s) {
                 var l;
                 let { application: r, integration: o } = n,
-                    d = [];
+                    c = [];
                 return (
                     null != o.user
-                        ? d.push({
+                        ? c.push({
                               icon: u.ClockIcon,
-                              text: Z.Z.Messages.INTEGRATION_ADDED_USER_DATE.format({
-                                  timestamp: x.default.extractTimestamp(o.id),
-                                  user: S.ZP.getUserTag(o.user)
+                              text: j.Z.Messages.INTEGRATION_ADDED_USER_DATE.format({
+                                  timestamp: R.default.extractTimestamp(o.id),
+                                  user: b.ZP.getUserTag(o.user)
                               })
                           })
-                        : d.push({
+                        : c.push({
                               icon: u.ClockIcon,
-                              text: Z.Z.Messages.INTEGRATION_ADDED_DATE.format({ timestamp: x.default.extractTimestamp(o.id) })
+                              text: j.Z.Messages.INTEGRATION_ADDED_DATE.format({ timestamp: R.default.extractTimestamp(o.id) })
                           }),
                     (0, i.jsx)(
-                        A.Z,
+                        v.Z,
                         {
                             name: r.name,
-                            imageSrc: null !== (l = r.getIconURL(48)) && void 0 !== l ? l : C.pK['0'],
+                            imageSrc: null !== (l = r.getIconURL(48)) && void 0 !== l ? l : S.pK['0'],
                             integration: n,
-                            buttonText: Z.Z.Messages.INTEGRATIONS_APPLICATION_BUTTON,
+                            buttonText: j.Z.Messages.INTEGRATIONS_APPLICATION_BUTTON,
                             hasNextSection: !0,
                             onButtonClick: () => {
                                 t(r.id),
-                                    f.default.track(b.rMx.APP_MANAGE_CTA_CLICKED, {
+                                    O.default.track(L.rMx.APP_MANAGE_CTA_CLICKED, {
                                         application_id: r.id,
                                         guild_id: null == e ? void 0 : e.id,
-                                        is_admin: null != e ? p.Z.can(b.Plq.ADMINISTRATOR, e) : void 0
+                                        is_admin: null != e ? C.Z.can(L.Plq.ADMINISTRATOR, e) : void 0
                                     });
                             },
-                            details: d,
+                            details: c,
                             guildId: null == e ? void 0 : e.id,
                             isScrolling: a,
                             canShowMigrationTooltip: s
@@ -178,54 +186,54 @@ function B(e) {
                         'integration-'.concat(o.id)
                     )
                 );
-            })(n, e, W, eo, t);
+            })(F, e, en, eO, n);
         }),
-        em = (0, i.jsx)('div', { className: v.footerImage });
-    0 === eI.length &&
-        X &&
-        ((eI = (function (e, n, t) {
-            let a = (0, c.wj)(e) ? L : j,
-                s = (0, i.jsxs)(h.Z, {
-                    direction: h.Z.Direction.VERTICAL,
-                    align: h.Z.Align.CENTER,
-                    className: v.emptyStateWrapper,
+        eZ = (0, i.jsx)('div', { className: D.footerImage });
+    0 === eb.length &&
+        ec &&
+        ((eb = (function (e, n, t) {
+            let a = (0, d.wj)(e) ? B : y,
+                s = (0, i.jsxs)(g.Z, {
+                    direction: g.Z.Direction.VERTICAL,
+                    align: g.Z.Align.CENTER,
+                    className: D.emptyStateWrapper,
                     children: [
                         (0, i.jsx)('img', {
                             alt: '',
                             src: a,
-                            className: v.emptyStateSearchImage
+                            className: D.emptyStateSearchImage
                         }),
                         (0, i.jsx)(u.Card, {
                             editable: !0,
-                            className: v.emptyStateCard,
+                            className: D.emptyStateCard,
                             children: (0, i.jsx)(u.Text, {
                                 color: 'text-muted',
                                 variant: 'text-sm/normal',
-                                children: Z.Z.Messages.INTEGRATIONS_SEARCH_NO_MATCH
+                                children: j.Z.Messages.INTEGRATIONS_SEARCH_NO_MATCH
                             })
                         })
                     ]
                 }),
                 l = (0, i.jsx)(u.Card, {
                     editable: !0,
-                    className: v.emptyStateCard,
+                    className: D.emptyStateCard,
                     children: (0, i.jsxs)('div', {
-                        className: v.emptyStateText,
+                        className: D.emptyStateText,
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: M,
-                                className: v.emptyStateImage
+                                src: P,
+                                className: D.emptyStateImage
                             }),
                             (0, i.jsx)(u.Heading, {
                                 color: 'header-secondary',
                                 variant: 'heading-xl/bold',
-                                children: Z.Z.Messages.INTEGRATIONS_OVERVIEW_NO_APPLICATIONS
+                                children: j.Z.Messages.INTEGRATIONS_OVERVIEW_NO_APPLICATIONS
                             }),
                             (0, i.jsx)(u.Text, {
                                 color: 'header-secondary',
                                 variant: 'text-sm/normal',
-                                children: Z.Z.Messages.INTEGRATIONS_OVERVIEW_NO_APPLICATIONS_APP_DIRECTORY_CTA.format({
+                                children: j.Z.Messages.INTEGRATIONS_OVERVIEW_NO_APPLICATIONS_APP_DIRECTORY_CTA.format({
                                     handleGoToAppDirectory: () => {
                                         (0, E.goToAppDirectory)({
                                             guildId: t,
@@ -239,160 +247,200 @@ function B(e) {
                     })
                 });
             return n > 0 ? s : l;
-        })(F, ei, null == n ? void 0 : n.id)),
-        (em = null));
-    let e_ = O.Z.getArticleURL(b.BhN.INTEGRATIONS),
-        eN = null != t ? Z.Z.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_CHANNEL : Z.Z.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_GUILD,
-        eE = [];
-    if (q) {
-        var eT, eh, eg, ep, ef;
-        let e;
+        })(ei, eg, null == F ? void 0 : F.id)),
+        (eZ = null));
+    let ev = A.Z.getArticleURL(L.BhN.INTEGRATIONS),
+        eM = null != V ? j.Z.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_CHANNEL : j.Z.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_GUILD,
+        eL = [];
+    if (eo) {
+        let e, n;
         if (
-            (eE.push(
-                ((eT = B.length),
-                (eh = k),
-                (eg = H),
-                (e = eT > 0 ? Z.Z.Messages.INTEGRATIONS_WEBHOOKS_BUTTON : Z.Z.Messages.INTEGRATIONS_WEBHOOKS_EMPTY_BUTTON),
+            (eL.push(
+                ((t = z.length),
+                (s = J),
+                (r = $),
+                t > 0 ? (n = (0, i.jsx)(u.ChevronLargeRightIcon, { size: 'xs' })) : (e = j.Z.Messages.INTEGRATIONS_WEBHOOKS_EMPTY_BUTTON),
                 (0, i.jsx)(
-                    A.Z,
+                    v.Z,
                     {
-                        name: Z.Z.Messages.INTEGRATIONS_WEBHOOKS,
+                        name: j.Z.Messages.INTEGRATIONS_WEBHOOKS,
                         icon: u.WebhookIcon,
                         buttonText: e,
-                        buttonDisabled: !eh,
-                        onButtonClick: eg,
-                        hasNextSection: eT > 0,
-                        details: [{ text: Z.Z.Messages.INTEGRATIONS_WEBHOOKS_SUMMARY.format({ count: eT }) }]
+                        buttonDisabled: !s,
+                        trailing: n,
+                        onButtonClick: r,
+                        hasNextSection: t > 0,
+                        details: [{ text: j.Z.Messages.INTEGRATIONS_WEBHOOKS_SUMMARY.format({ count: t }) }]
                     },
                     'webhooks'
                 ))
             ),
-            (null == t ? void 0 : t.type) !== b.d4z.GUILD_VOICE && ((null == t ? void 0 : t.type) == null || !b.TPd.GUILD_THREADS_ONLY.has(t.type)))
+            (null == V ? void 0 : V.type) !== L.d4z.GUILD_VOICE && ((null == V ? void 0 : V.type) == null || !L.TPd.GUILD_THREADS_ONLY.has(V.type)))
         ) {
-            let e, n;
-            eE.push(
-                ((ep = y.length),
-                (ef = w),
-                ep > 0 ? ((e = Z.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_BUTTON), (n = ef)) : ((e = Z.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_EMPTY_BUTTON), (n = () => open(O.Z.getArticleURL(b.BhN.CHANNEL_FOLLOWING)))),
+            let e, n, t;
+            eL.push(
+                ((H = q.length),
+                (w = ee),
+                H > 0 ? ((t = (0, i.jsx)(u.ChevronLargeRightIcon, { size: 'xs' })), (n = w)) : ((e = j.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_EMPTY_BUTTON), (n = () => open(A.Z.getArticleURL(L.BhN.CHANNEL_FOLLOWING)))),
                 (0, i.jsx)(
-                    A.Z,
+                    v.Z,
                     {
-                        name: Z.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING,
+                        name: j.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING,
                         icon: u.ChannelsFollowedIcon,
                         buttonText: e,
                         onButtonClick: n,
-                        hasNextSection: ep > 0,
-                        details: [{ text: Z.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_SUMMARY.format({ count: ep }) }]
+                        trailing: t,
+                        hasNextSection: H > 0,
+                        details: [{ text: j.Z.Messages.INTEGRATIONS_CHANNEL_FOLLOWING_SUMMARY.format({ count: H }) }]
                     },
                     'channels-followed'
                 ))
             );
         }
     }
-    return (
-        en &&
-            eE.push(
+    if (null == V && eI.length > 0) {
+        eL.push(
+            ((U = eI.length),
+            (W = et),
+            (0, i.jsx)(
+                v.Z,
+                {
+                    name: j.Z.Messages.INTEGRATIONS_LINKED_LOBBY_CHANNELS_SYNCING,
+                    icon: u.RefreshIcon,
+                    trailing: (0, i.jsx)(u.ChevronLargeRightIcon, { size: 'xs' }),
+                    onButtonClick: W,
+                    hasNextSection: !0,
+                    details: [{ text: j.Z.Messages.INTEGRATIONS_LINKED_NUM_CHANNELS_SYNCING.format({ count: U }) }]
+                },
+                'channels-syncing'
+            ))
+        );
+    }
+    eT &&
+        eL.push(
+            (function (e, n, t) {
+                let a, s, l, r;
+                let o = _.Z.get(L.ABu.TWITCH);
+                return (
+                    e > 0
+                        ? ((r = (0, i.jsx)(u.ChevronLargeRightIcon, { size: 'xs' })), (s = j.Z.Messages.INTEGRATIONS_TWITCH_SUMMARY.format({ count: n })), (l = () => t(L.ABu.TWITCH)))
+                        : ((a = j.Z.Messages.INTEGRATIONS_TWITCH_EMPTY_BUTTON),
+                          (s = j.Z.Messages.INTEGRATIONS_TWITCH_EMPTY_SUMMARY),
+                          (l = () =>
+                              (0, h.Z)({
+                                  platformType: L.ABu.TWITCH,
+                                  location: 'Integration Settings'
+                              }))),
+                    (0, i.jsx)(
+                        v.Z,
+                        {
+                            name: j.Z.Messages.INTEGRATIONS_TWITCH,
+                            icon: o.icon.whiteSVG,
+                            iconBackgroundColor: o.color,
+                            iconClassName: D.platformIcon,
+                            buttonText: a,
+                            onButtonClick: l,
+                            trailing: r,
+                            hasNextSection: e > 0,
+                            details: [{ text: s }]
+                        },
+                        'integrations-twitch'
+                    )
+                );
+            })(em, eN, Q)
+        ),
+        eh &&
+            eL.push(
                 (function (e, n, t) {
-                    let a, s, l;
-                    let r = _.Z.get(b.ABu.TWITCH);
+                    let a, s, l, r;
+                    let o = _.Z.get(L.ABu.YOUTUBE);
                     return (
                         e > 0
-                            ? ((a = Z.Z.Messages.INTEGRATIONS_TWITCH_BUTTON), (s = Z.Z.Messages.INTEGRATIONS_TWITCH_SUMMARY.format({ count: n })), (l = () => t(b.ABu.TWITCH)))
-                            : ((a = Z.Z.Messages.INTEGRATIONS_TWITCH_EMPTY_BUTTON),
-                              (s = Z.Z.Messages.INTEGRATIONS_TWITCH_EMPTY_SUMMARY),
+                            ? ((r = (0, i.jsx)(u.ChevronLargeRightIcon, { size: 'xs' })), (s = j.Z.Messages.INTEGRATIONS_YOUTUBE_SUMMARY.format({ count: n })), (l = () => t(L.ABu.YOUTUBE)))
+                            : ((a = j.Z.Messages.INTEGRATIONS_YOUTUBE_EMPTY_BUTTON),
+                              (s = j.Z.Messages.INTEGRATIONS_YOUTUBE_EMPTY_SUMMARY),
                               (l = () =>
-                                  (0, T.Z)({
-                                      platformType: b.ABu.TWITCH,
+                                  (0, h.Z)({
+                                      platformType: L.ABu.YOUTUBE,
                                       location: 'Integration Settings'
                                   }))),
                         (0, i.jsx)(
-                            A.Z,
+                            v.Z,
                             {
-                                name: Z.Z.Messages.INTEGRATIONS_TWITCH,
-                                icon: r.icon.whiteSVG,
-                                iconBackgroundColor: r.color,
-                                iconClassName: v.platformIcon,
+                                name: j.Z.Messages.INTEGRATIONS_YOUTUBE,
+                                icon: o.icon.whiteSVG,
+                                iconBackgroundColor: o.color,
+                                iconClassName: D.platformIcon,
                                 buttonText: a,
                                 onButtonClick: l,
-                                hasNextSection: e > 0,
-                                details: [{ text: s }]
-                            },
-                            'integrations-twitch'
-                        )
-                    );
-                })(J, $, U)
-            ),
-        et &&
-            eE.push(
-                (function (e, n, t) {
-                    let a, s, l;
-                    let r = _.Z.get(b.ABu.YOUTUBE);
-                    return (
-                        e > 0
-                            ? ((a = Z.Z.Messages.INTEGRATIONS_YOUTUBE_BUTTON), (s = Z.Z.Messages.INTEGRATIONS_YOUTUBE_SUMMARY.format({ count: n })), (l = () => t(b.ABu.YOUTUBE)))
-                            : ((a = Z.Z.Messages.INTEGRATIONS_YOUTUBE_EMPTY_BUTTON),
-                              (s = Z.Z.Messages.INTEGRATIONS_YOUTUBE_EMPTY_SUMMARY),
-                              (l = () =>
-                                  (0, T.Z)({
-                                      platformType: b.ABu.YOUTUBE,
-                                      location: 'Integration Settings'
-                                  }))),
-                        (0, i.jsx)(
-                            A.Z,
-                            {
-                                name: Z.Z.Messages.INTEGRATIONS_YOUTUBE,
-                                icon: r.icon.whiteSVG,
-                                iconBackgroundColor: r.color,
-                                iconClassName: v.platformIcon,
-                                buttonText: a,
-                                onButtonClick: l,
+                                trailing: r,
                                 hasNextSection: e > 0,
                                 details: [{ text: s }]
                             },
                             'integrations-youtube'
                         )
                     );
-                })(Q, ee, U)
-            ),
-        (0, i.jsxs)(u.FormSection, {
-            className: l()(null != em ? v.footerPlaceholder : null),
-            children: [
-                (0, i.jsx)(u.FormText, {
-                    type: u.FormTextTypes.DESCRIPTION,
-                    children: eN.format({ helpdeskArticle: e_ })
-                }),
-                (0, i.jsx)(u.FormDivider, { className: v.divider }),
-                G || Y || null == n
-                    ? (0, i.jsx)(u.Spinner, {
-                          className: v.__invalid_spinner,
-                          type: u.Spinner.Type.SPINNING_CIRCLE
-                      })
-                    : (0, i.jsxs)(i.Fragment, {
-                          children: [
-                              eE,
-                              X
-                                  ? (0, i.jsxs)(i.Fragment, {
-                                        children: [
-                                            eE.length > 0 ? (0, i.jsx)(u.FormDivider, { className: v.divider }) : null,
-                                            (0, i.jsx)(u.Heading, {
-                                                variant: 'heading-md/semibold',
-                                                className: v.sectionHeader,
-                                                children: Z.Z.Messages.INTEGRATIONS_APPLICATION_SECTION
-                                            }),
-                                            ei > 4
-                                                ? (0, i.jsx)(P, {
-                                                      query: V,
-                                                      setQuery: K
-                                                  })
-                                                : null,
-                                            eI
-                                        ]
-                                    })
-                                  : null,
-                              em
-                          ]
-                      })
-            ]
-        })
-    );
+                })(e_, eE, Q)
+            );
+    let ej = null != V && ed && null != eu;
+    return (0, i.jsxs)(u.FormSection, {
+        className: l()(null != eZ ? D.footerPlaceholder : null),
+        children: [
+            (0, i.jsx)(u.FormText, {
+                type: u.FormTextTypes.DESCRIPTION,
+                children: eM.format({ helpdeskArticle: ev })
+            }),
+            (0, i.jsx)(u.FormDivider, { className: D.divider }),
+            X || el || null == F
+                ? (0, i.jsx)(u.Spinner, {
+                      className: D.__invalid_spinner,
+                      type: u.Spinner.Type.SPINNING_CIRCLE
+                  })
+                : (0, i.jsxs)(i.Fragment, {
+                      children: [
+                          eL,
+                          ej &&
+                              (0, i.jsxs)(i.Fragment, {
+                                  children: [
+                                      eL.length > 0 ? (0, i.jsx)(u.FormDivider, { className: D.divider }) : null,
+                                      (0, i.jsx)(u.Heading, {
+                                          variant: 'heading-md/semibold',
+                                          className: D.sectionHeader,
+                                          children: j.Z.Messages.INTEGRATIONS_LINKED_LOBBY_SECTION_TITLE
+                                      }),
+                                      (0, i.jsx)(Z.I, {
+                                          channel: V,
+                                          application: eu,
+                                          showApplicationImage: !0,
+                                          name: eu.name,
+                                          hasNextSection: !0,
+                                          iconClassName: D.linkedLobbyIcon,
+                                          trailing: (0, i.jsx)(u.PencilIcon, { size: 'xs' })
+                                      })
+                                  ]
+                              }),
+                          ec
+                              ? (0, i.jsxs)(i.Fragment, {
+                                    children: [
+                                        eL.length > 0 || ej ? (0, i.jsx)(u.FormDivider, { className: D.divider }) : null,
+                                        (0, i.jsx)(u.Heading, {
+                                            variant: 'heading-md/semibold',
+                                            className: D.sectionHeader,
+                                            children: j.Z.Messages.INTEGRATIONS_APPLICATION_SECTION
+                                        }),
+                                        eg > 4
+                                            ? (0, i.jsx)(k, {
+                                                  query: ea,
+                                                  setQuery: es
+                                              })
+                                            : null,
+                                        eb
+                                    ]
+                                })
+                              : null,
+                          eZ
+                      ]
+                  })
+        ]
+    });
 }

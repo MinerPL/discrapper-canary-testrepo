@@ -47,7 +47,10 @@ class c {
             n = this._workCallbackFn(e),
             r = performance.now();
         this.clearWorkTimeout();
-        r - t > o.TC ? (this._nextDispatchTimeout = o.II) : (this._nextDispatchTimeout = o.Lu), n ? (this._consecutiveFlushesBeforeQueueEmpty > 0 && this.telemetry.measure(s.aA.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, parseInt(''.concat(this._consecutiveFlushesBeforeQueueEmpty))), (this._consecutiveFlushesBeforeQueueEmpty = 0)) : (this._consecutiveFlushesBeforeQueueEmpty += 1);
+        r - t > o.TC ? (this._nextDispatchTimeout = o.II) : (this._nextDispatchTimeout = o.Lu), n ? (this._consecutiveFlushesBeforeQueueEmpty > 0 && this.telemetry.measure(s.aA.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, parseInt(''.concat(this._consecutiveFlushesBeforeQueueEmpty))), (this._consecutiveFlushesBeforeQueueEmpty = 0), (this._criticalWorkScheduled = !1)) : (this._consecutiveFlushesBeforeQueueEmpty += 1);
+    }
+    markCriticalWorkScheduled() {
+        (this._criticalWorkScheduled = !0), null != this._flushIdleHandler && (this._clearIdleCallback(), this._processWorkCallback());
     }
     toggleRequestIdleCallback(e) {
         (this._enableRequestIdleCallback = e), !e && this.hasWorkScheduled && (this._clearIdleCallback(), this._processWorkCallback());
@@ -78,6 +81,6 @@ class c {
         }
     }
     constructor() {
-        l(this, '_flushTimeoutHandler', null), l(this, '_flushIdleHandler', null), l(this, '_nextDispatchTimeout', o.Lu), l(this, '_workCallbackFn', null), l(this, '_consecutiveFlushesBeforeQueueEmpty', 0), l(this, '_isBackgrounded', !1), l(this, '_enableRequestIdleCallback', !1), l(this, 'telemetry', new s.mA()), l(this, '_logger', u);
+        l(this, '_flushTimeoutHandler', null), l(this, '_flushIdleHandler', null), l(this, '_nextDispatchTimeout', o.Lu), l(this, '_workCallbackFn', null), l(this, '_consecutiveFlushesBeforeQueueEmpty', 0), l(this, '_isBackgrounded', !1), l(this, '_enableRequestIdleCallback', !1), l(this, '_criticalWorkScheduled', !1), l(this, 'telemetry', new s.mA()), l(this, '_logger', u);
     }
 }

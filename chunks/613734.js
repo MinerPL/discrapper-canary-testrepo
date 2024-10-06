@@ -1,62 +1,64 @@
-i.d(n, {
+i.d(t, {
     KM: function () {
-        return S;
-    },
-    U0: function () {
         return A;
     },
+    U0: function () {
+        return p;
+    },
     YG: function () {
-        return f;
+        return E;
     },
     y9: function () {
-        return E;
+        return S;
     }
 });
 var e = i(470079),
     a = i(442837),
     o = i(709054),
     l = i(103879),
-    c = i(364226),
-    s = i(531441),
-    u = i(236289),
-    r = i(788080),
-    _ = i(800530);
-function d() {
-    return (0, a.Wu)([u.Z], () => u.Z.getClassifications()).sort((t, n) => o.default.extractTimestamp(n.id) - o.default.extractTimestamp(t.id));
+    s = i(364226),
+    c = i(48484),
+    u = i(531441),
+    r = i(236289),
+    _ = i(788080),
+    d = i(800530);
+function f() {
+    return (0, a.Wu)([r.Z], () => r.Z.getClassifications()).sort((n, t) => o.default.extractTimestamp(t.id) - o.default.extractTimestamp(n.id));
 }
-function f(t) {
-    let n;
-    let i = (0, a.e7)([u.Z], () => u.Z.getClassification(t)),
-        o = (0, a.e7)([u.Z], () => u.Z.getClassificationRequestState(t)),
-        d = (0, a.e7)([u.Z], () => u.Z.getIsDsaEligible()),
-        f = (0, c.A)('classification_detail');
-    if ((0, r.FB)(i)) {
-        var E;
-        n = (null === (E = i.guild_metadata) || void 0 === E ? void 0 : E.member_type) === s.wO.OWNER ? _.qS.GUILD_OWNER : _.qS.GUILD_MEMBER;
-    } else n = _.qS.USER;
+function E(n) {
+    let t;
+    let i = (0, a.e7)([r.Z], () => r.Z.getClassification(n)),
+        o = (0, a.e7)([r.Z], () => r.Z.getClassificationRequestState(n)),
+        f = (0, a.e7)([r.Z], () => r.Z.getIsDsaEligible()),
+        E = (0, s.A)('classification_detail'),
+        S = (0, c.V)('classification_detail');
+    if ((0, _.FB)(i)) {
+        var A;
+        t = (null === (A = i.guild_metadata) || void 0 === A ? void 0 : A.member_type) === u.wO.OWNER ? d.qS.GUILD_OWNER : d.qS.GUILD_MEMBER;
+    } else t = d.qS.USER;
     return (
         e.useEffect(() => {
-            void 0 === i && null == o && l.NA(t);
-        }, [t, i, o]),
+            void 0 === i && null == o && l.NA(n);
+        }, [n, i, o]),
         {
             classification: i,
             classificationRequestState: o,
-            isDsaEligible: d,
-            isAppealEligible: d && null != i && null == i.appeal_status && (!(0, r.FB)(i) || f),
-            violationType: n
+            isDsaEligible: f,
+            isAppealEligible: S && null != i && null == i.appeal_status && (!(0, _.FB)(i) || E),
+            violationType: t
         }
     );
 }
-function E() {
-    let t = d(),
-        n = new Date();
-    return t.filter((t) => new Date(t.max_expiration_time) > n);
-}
 function S() {
-    let t = d(),
-        n = new Date();
-    return t.filter((t) => new Date(t.max_expiration_time) <= n);
+    let n = f(),
+        t = new Date();
+    return n.filter((n) => new Date(n.max_expiration_time) > t);
 }
 function A() {
-    return (0, a.e7)([u.Z], () => u.Z.getAppealSignal());
+    let n = f(),
+        t = new Date();
+    return n.filter((n) => new Date(n.max_expiration_time) <= t);
+}
+function p() {
+    return (0, a.e7)([r.Z], () => r.Z.getAppealSignal());
 }

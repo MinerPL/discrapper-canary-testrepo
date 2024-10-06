@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return I;
+        return T;
     }
 }),
     t(789020);
@@ -13,8 +13,8 @@ var n,
     c = t(659181),
     d = t(255078),
     _ = t(981631),
-    E = t(474936);
-function u(e, s, t) {
+    u = t(474936);
+function E(e, s, t) {
     return (
         s in e
             ? Object.defineProperty(e, s, {
@@ -28,12 +28,12 @@ function u(e, s, t) {
     );
 }
 ((a = n || (n = {}))[(a.GIFT = 1)] = 'GIFT'), (a[(a.PREORDER = 8)] = 'PREORDER');
-class I extends r.Z {
+class T extends r.Z {
     static createFromServer(e) {
         let s = null != e.payment_source ? l.ZP.createFromServer(e.payment_source) : null,
             t = null != e.sku ? c.Z.createFromServer(e.sku) : null,
             n = null != e.subscription ? d.Z.createFromServer(e.subscription) : null;
-        return new I({
+        return new T({
             id: e.id,
             createdAt: new Date(e.created_at),
             currency: e.currency,
@@ -54,6 +54,8 @@ class I extends r.Z {
             sku: t,
             downloadableInvoice: e.downloadable_invoice,
             downloadableRefundInvoices: e.downloadable_refund_invoices,
+            hasInvoiceURL: e.has_invoice_url,
+            hasRefundInvoiceURLs: e.has_refund_invoice_urls,
             premiumRefundDisqualificationReasons: e.premium_refund_disqualification_reasons
         });
     }
@@ -70,7 +72,7 @@ class I extends r.Z {
         return null != this.subscription;
     }
     get isPremiumSubscription() {
-        return null != this.subscription && E.dJ.has(this.subscription.planId);
+        return null != this.subscription && u.dJ.has(this.subscription.planId);
     }
     get isPremiumGuildSubscription() {
         return (
@@ -78,7 +80,7 @@ class I extends r.Z {
             null !=
                 this.subscription.additionalPlans.find((e) => {
                     let { planId: s } = e;
-                    return E.Z1.has(s);
+                    return u.Z1.has(s);
                 })
         );
     }
@@ -86,7 +88,7 @@ class I extends r.Z {
         return o.yE(this.flags, 1);
     }
     get isPremiumGift() {
-        return this.isGift && Object.values(E.Si).includes(this.skuId);
+        return this.isGift && Object.values(u.Si).includes(this.skuId);
     }
     get isGuildProductPurchase() {
         return null != this.sku && (this.sku.productLine === _.POd.GUILD_PRODUCT || o.yE(this.sku.flags, i.l.GUILD_PRODUCT));
@@ -99,6 +101,6 @@ class I extends r.Z {
         return null != this.sku && this.sku.productLine === _.POd.COLLECTIBLES;
     }
     constructor(e) {
-        super(), u(this, 'id', void 0), u(this, 'createdAt', void 0), u(this, 'currency', void 0), u(this, 'tax', void 0), u(this, 'taxInclusive', void 0), u(this, 'amount', void 0), u(this, 'amountRefunded', void 0), u(this, 'status', void 0), u(this, 'description', void 0), u(this, 'downloadableInvoice', void 0), u(this, 'downloadableRefundInvoices', void 0), u(this, 'flags', void 0), u(this, 'paymentSource', void 0), u(this, 'paymentGateway', void 0), u(this, 'paymentGatewayPaymentId', void 0), u(this, 'subscription', void 0), u(this, 'skuId', void 0), u(this, 'skuPrice', void 0), u(this, 'sku', void 0), u(this, 'premiumRefundDisqualificationReasons', void 0), (this.id = e.id), (this.amount = e.amount), (this.amountRefunded = e.amountRefunded), (this.createdAt = e.createdAt), (this.currency = e.currency), (this.description = e.description), (this.paymentSource = e.paymentSource), (this.paymentGateway = e.paymentGateway), (this.paymentGatewayPaymentId = e.paymentGatewayPaymentId), (this.status = e.status), (this.tax = e.tax), (this.taxInclusive = e.taxInclusive), (this.subscription = e.subscription), (this.skuId = e.skuId), (this.skuPrice = e.skuPrice), (this.sku = e.sku), (this.flags = e.flags), (this.downloadableInvoice = e.downloadableInvoice), (this.downloadableRefundInvoices = e.downloadableRefundInvoices), (this.premiumRefundDisqualificationReasons = e.premiumRefundDisqualificationReasons);
+        super(), E(this, 'id', void 0), E(this, 'createdAt', void 0), E(this, 'currency', void 0), E(this, 'tax', void 0), E(this, 'taxInclusive', void 0), E(this, 'amount', void 0), E(this, 'amountRefunded', void 0), E(this, 'status', void 0), E(this, 'description', void 0), E(this, 'hasInvoiceURL', void 0), E(this, 'hasRefundInvoiceURLs', void 0), E(this, 'downloadableInvoice', void 0), E(this, 'downloadableRefundInvoices', void 0), E(this, 'flags', void 0), E(this, 'paymentSource', void 0), E(this, 'paymentGateway', void 0), E(this, 'paymentGatewayPaymentId', void 0), E(this, 'subscription', void 0), E(this, 'skuId', void 0), E(this, 'skuPrice', void 0), E(this, 'sku', void 0), E(this, 'premiumRefundDisqualificationReasons', void 0), (this.id = e.id), (this.amount = e.amount), (this.amountRefunded = e.amountRefunded), (this.createdAt = e.createdAt), (this.currency = e.currency), (this.description = e.description), (this.paymentSource = e.paymentSource), (this.paymentGateway = e.paymentGateway), (this.paymentGatewayPaymentId = e.paymentGatewayPaymentId), (this.status = e.status), (this.tax = e.tax), (this.taxInclusive = e.taxInclusive), (this.subscription = e.subscription), (this.skuId = e.skuId), (this.skuPrice = e.skuPrice), (this.sku = e.sku), (this.flags = e.flags), (this.downloadableInvoice = e.downloadableInvoice), (this.downloadableRefundInvoices = e.downloadableRefundInvoices), (this.hasInvoiceURL = e.hasInvoiceURL), (this.hasRefundInvoiceURLs = e.hasRefundInvoiceURLs), (this.premiumRefundDisqualificationReasons = e.premiumRefundDisqualificationReasons);
     }
 }

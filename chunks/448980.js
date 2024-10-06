@@ -34,6 +34,7 @@ function E(e) {
         }),
         h = (0, i.EQ)(n)
             .with({ type: u.IIU.PLAYING }, () => [l.ho, l.Xh])
+            .with({ type: u.IIU.LISTENING }, () => [l.ho])
             .with({ type: u.IIU.WATCHING }, () => [l.ho, l.Rg])
             .otherwise(() => []);
     return 0 === h.length

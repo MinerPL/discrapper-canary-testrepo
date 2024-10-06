@@ -16,21 +16,21 @@ var r = n(735250),
     C = n(981631),
     m = n(678916),
     w = n(689938),
-    R = n(323125);
+    R = n(57739);
 t.default = (e) => {
     let { file: t, imgURI: n, transitionState: f, allowSkip: M = !1, onCrop: _, onClose: N, uploadType: L = g.pC.AVATAR, showUpsellHeader: v = !1, analyticsPage: I } = e,
         [x, D] = i.useState({
             width: 0,
             height: 0
         }),
-        [y, O] = i.useState({
+        [O, y] = i.useState({
             top: 0,
             bottom: 0,
             left: 0,
             right: 0
         }),
         [T, B] = i.useState(!1),
-        [S, b] = i.useState(1),
+        [b, S] = i.useState(1),
         [V, j] = i.useState({
             x: 0,
             y: 0
@@ -95,7 +95,7 @@ t.default = (e) => {
             [z]
         ),
         X = i.useCallback(() => {
-            if (null == z.current || S > 1) return;
+            if (null == z.current || b > 1) return;
             let { width: e, height: t } = z.current.getBoundingClientRect(),
                 { width: n, height: r } = (0, p.Es)(L, e, t),
                 i = (0, p.AK)(L, n, r, t);
@@ -104,16 +104,16 @@ t.default = (e) => {
                 height: r
             }),
                 D(i),
-                O((0, p.kH)(n, r, i));
-        }, [L, S]),
+                y((0, p.kH)(n, r, i));
+        }, [L, b]),
         W = i.useCallback(
             (e) => {
                 let { x: t, y: n } = H.current;
                 if (!T || (e.clientX === t && e.clientY === n)) return;
                 let r = e.clientX - V.x;
-                K(r, e.clientY - V.y, y);
+                K(r, e.clientY - V.y, O);
             },
-            [y, T, V, K]
+            [O, T, V, K]
         ),
         $ = () => {
             B(!1);
@@ -199,9 +199,9 @@ t.default = (e) => {
                                             let e = P.width / P.height,
                                                 t = q() && e > g.MY ? x.height / P.height : 1;
                                             return {
-                                                width: P.width * S * t,
-                                                minWidth: P.width * S * t,
-                                                height: P.height * S * t
+                                                width: P.width * b * t,
+                                                minWidth: P.width * b * t,
+                                                height: P.height * b * t
                                             };
                                         })()
                                     },
@@ -247,7 +247,7 @@ t.default = (e) => {
                                         let { width: t, height: n } = P,
                                             r = (0, p.kH)(t * e, n * e, x),
                                             { x: i, y: s } = H.current;
-                                        (!(0, a.inRange)(i, r.right, r.left) || !(0, a.inRange)(s, r.top, r.bottom)) && K(i, s, r), b(e), O(r);
+                                        (!(0, a.inRange)(i, r.right, r.left) || !(0, a.inRange)(s, r.top, r.bottom)) && K(i, s, r), S(e), y(r);
                                     },
                                     disabled: U,
                                     equidistant: !0,
@@ -271,8 +271,7 @@ t.default = (e) => {
                                     showUpsell: !0,
                                     position: 'inline',
                                     className: R.nitroUpsell,
-                                    showShadow: !1,
-                                    onSecondaryClick: N
+                                    showShadow: !1
                                 })
                             })
                     ]

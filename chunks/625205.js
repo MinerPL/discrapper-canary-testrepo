@@ -12,116 +12,97 @@ var a = t(392711),
     o = t(780384),
     l = t(481060),
     c = t(846027),
-    d = t(600164),
-    _ = t(463395),
+    d = t(906732),
+    _ = t(600164),
+    u = t(463395),
     E = t(131951),
-    u = t(210887),
-    I = t(962100),
-    T = t(65154),
-    S = t(689938),
-    N = t(107246),
-    C = t(224499);
+    T = t(210887),
+    S = t(962100),
+    I = t(65154),
+    N = t(689938),
+    A = t(416805),
+    C = t(113207);
 function m() {
     let e, s;
-    let a = (0, r.e7)([u.Z], () => u.Z.theme),
+    let { analyticsLocations: a } = (0, d.ZP)(),
+        m = (0, r.e7)([T.Z], () => T.Z.theme),
         {
-            canSetInputDevice: m,
-            canSetOutputDevice: A,
+            canSetInputDevice: g,
+            canSetOutputDevice: h,
             inputDeviceId: O,
-            outputDeviceId: g
+            outputDeviceId: p
         } = (0, r.cj)([E.Z], () => ({
-            canSetInputDevice: E.Z.supports(T.AN.AUDIO_INPUT_DEVICE),
-            canSetOutputDevice: E.Z.supports(T.AN.AUDIO_OUTPUT_DEVICE),
+            canSetInputDevice: E.Z.supports(I.AN.AUDIO_INPUT_DEVICE),
+            canSetOutputDevice: E.Z.supports(I.AN.AUDIO_OUTPUT_DEVICE),
             inputDeviceId: E.Z.getInputDeviceId(),
             outputDeviceId: E.Z.getOutputDeviceId()
         })),
-        h = (0, r.e7)([E.Z], () => E.Z.getInputDevices()),
-        p = (0, r.e7)([E.Z], () => E.Z.getOutputDevices());
-    !m &&
+        R = (0, r.e7)([E.Z], () => E.Z.getInputDevices()),
+        x = (0, r.e7)([E.Z], () => E.Z.getOutputDevices());
+    !g &&
         (e = (0, n.jsx)(l.FormText, {
             type: l.FormText.Types.DESCRIPTION,
             className: C.marginTop8,
-            children: S.Z.Messages.BROWSER_INPUT_DEVICE_WARNING.format({ onDownloadClick: () => (0, I.y)('Help Text Input Devices') })
+            children: N.Z.Messages.BROWSER_INPUT_DEVICE_WARNING.format({ onDownloadClick: () => (0, S.y)('Help Text Input Devices') })
         })),
-        !A &&
+        !h &&
             (s = (0, n.jsx)(l.FormText, {
                 type: l.FormText.Types.DESCRIPTION,
                 className: C.marginTop8,
-                children: S.Z.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({ onDownloadClick: () => (0, I.y)('Help Text Output Devices') })
+                children: N.Z.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({ onDownloadClick: () => (0, S.y)('Help Text Output Devices') })
             }));
-    let R = i()(h).values().first(),
-        x = null != R ? R.disabled : null != e,
-        M = i()(p).values().first(),
-        f = null != M ? M.disabled : null != s;
-    function D(e) {
+    let M = i()(R).values().first(),
+        f = null != M ? M.disabled : null != e,
+        D = i()(x).values().first(),
+        L = null != D ? D.disabled : null != s;
+    function P(e) {
         let s,
-            { label: i, value: r } = e;
-        if (_.Z.isCertified(r)) {
-            let e = (0, o.ap)(a) ? t(561259) : t(887695);
+            { label: a, value: i } = e;
+        if (u.Z.isCertified(i)) {
+            let e = (0, o.ap)(m) ? t(561259) : t(887695);
             s = (0, n.jsx)('img', {
                 src: e,
                 alt: 'Certified',
-                className: N.deviceOptionCertified
+                className: A.deviceOptionCertified
             });
         }
         return (0, n.jsxs)(
             'span',
             {
-                className: N.deviceOption,
+                className: A.deviceOption,
                 children: [
                     (0, n.jsx)('span', {
-                        className: N.deviceOptionLabel,
-                        children: _.Z.getCertifiedDeviceName(r, i)
+                        className: A.deviceOptionLabel,
+                        children: u.Z.getCertifiedDeviceName(i, a)
                     }),
                     s
                 ]
             },
-            r
+            i
         );
     }
-    function P(e) {
-        return D(e[0]);
+    function b(e) {
+        return P(e[0]);
     }
-    return (0, n.jsxs)(d.Z, {
+    return (0, n.jsxs)(_.Z, {
         className: C.marginBottom20,
         children: [
-            (0, n.jsxs)(d.Z.Child, {
+            (0, n.jsxs)(_.Z.Child, {
                 basis: '50%',
                 children: [
                     (0, n.jsx)(l.FormTitle, {
                         tag: l.FormTitleTags.H5,
                         className: C.marginBottom8,
-                        children: S.Z.Messages.FORM_LABEL_INPUT_DEVICE
+                        children: N.Z.Messages.FORM_LABEL_INPUT_DEVICE
                     }),
                     (0, n.jsx)(l.SingleSelect, {
                         value: O,
-                        onChange: (e) => c.Z.setInputDevice(e, 'Settings'),
-                        options: i().map(h, (e) => {
-                            let { id: s, name: t } = e;
-                            return {
-                                value: s,
-                                label: t
-                            };
-                        }),
-                        isDisabled: x,
-                        renderOptionValue: P,
-                        renderOptionLabel: D
-                    }),
-                    e
-                ]
-            }),
-            (0, n.jsxs)(d.Z.Child, {
-                basis: '50%',
-                children: [
-                    (0, n.jsx)(l.FormTitle, {
-                        tag: l.FormTitleTags.H5,
-                        className: C.marginBottom8,
-                        children: S.Z.Messages.FORM_LABEL_OUTPUT_DEVICE
-                    }),
-                    (0, n.jsx)(l.SingleSelect, {
-                        value: g,
-                        onChange: (e) => c.Z.setOutputDevice(e, 'Settings'),
-                        options: i().map(p, (e) => {
+                        onChange: (e) =>
+                            c.Z.setInputDevice(e, {
+                                location: 'Settings',
+                                analyticsLocations: a
+                            }),
+                        options: i().map(R, (e) => {
                             let { id: s, name: t } = e;
                             return {
                                 value: s,
@@ -129,8 +110,37 @@ function m() {
                             };
                         }),
                         isDisabled: f,
-                        renderOptionValue: P,
-                        renderOptionLabel: D
+                        renderOptionValue: b,
+                        renderOptionLabel: P
+                    }),
+                    e
+                ]
+            }),
+            (0, n.jsxs)(_.Z.Child, {
+                basis: '50%',
+                children: [
+                    (0, n.jsx)(l.FormTitle, {
+                        tag: l.FormTitleTags.H5,
+                        className: C.marginBottom8,
+                        children: N.Z.Messages.FORM_LABEL_OUTPUT_DEVICE
+                    }),
+                    (0, n.jsx)(l.SingleSelect, {
+                        value: p,
+                        onChange: (e) =>
+                            c.Z.setOutputDevice(e, {
+                                location: 'Settings',
+                                analyticsLocations: a
+                            }),
+                        options: i().map(x, (e) => {
+                            let { id: s, name: t } = e;
+                            return {
+                                value: s,
+                                label: t
+                            };
+                        }),
+                        isDisabled: L,
+                        renderOptionValue: b,
+                        renderOptionLabel: P
                     }),
                     s
                 ]

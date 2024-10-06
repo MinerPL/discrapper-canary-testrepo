@@ -1,19 +1,21 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return c;
     }
 });
 var i = n(735250);
 n(470079);
-var a = n(481060),
-    s = n(230711),
-    l = n(981631),
-    r = n(689938);
-function o() {
-    return (0, i.jsx)(a.MenuItem, {
+var s = n(481060),
+    a = n(230711),
+    l = n(906732),
+    r = n(981631),
+    o = n(689938);
+function c() {
+    let { analyticsLocations: e } = (0, l.ZP)();
+    return (0, i.jsx)(s.MenuItem, {
         id: 'voice-settings',
-        label: r.Z.Messages.VOICE_SETTINGS,
-        action: () => s.Z.open(l.oAB.VOICE),
-        icon: a.SettingsIcon
+        label: o.Z.Messages.VOICE_SETTINGS,
+        action: () => a.Z.open(r.oAB.VOICE, null, { analyticsLocations: e }),
+        icon: s.SettingsIcon
     });
 }

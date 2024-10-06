@@ -1,3 +1,15 @@
+r.d(t, {
+    Ft: function () {
+        return o;
+    },
+    Ui: function () {
+        return n;
+    },
+    Zn: function () {
+        return a;
+    }
+}),
+    r(47120);
 function n(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : '',
@@ -11,36 +23,48 @@ function n(e) {
             .concat(r)
     );
 }
-r.d(t, {
-    F: function () {
-        return a;
-    },
-    U: function () {
-        return n;
+class a {
+    toString() {
+        return this.value;
     }
-}),
-    r(47120);
-function a(e, t) {
+    constructor(e) {
+        var t, r, n;
+        (t = this),
+            (n = void 0),
+            (r = 'value') in t
+                ? Object.defineProperty(t, r, {
+                      value: n,
+                      enumerable: !0,
+                      configurable: !0,
+                      writable: !0
+                  })
+                : (t[r] = n),
+            (this.value = e);
+    }
+}
+function o(e, t) {
     let r = {};
     for (let n of Object.keys(e)) {
-        let a = e[n];
-        if ('function' != typeof a) {
-            r[n] = a;
+        let o = e[n];
+        if ('function' != typeof o) {
+            r[n] = o;
             continue;
         }
         r[n] = function () {
             for (var e = arguments.length, r = Array(e), n = 0; n < e; n++) r[n] = arguments[n];
-            return a(
+            return o(
                 ...(function (e, t) {
                     return e.map((e) =>
                         null == e
                             ? e
-                            : null == t
-                              ? encodeURIComponent(e)
-                              : String(e)
-                                    .split('')
-                                    .map((e) => (null != t && t.includes(e) ? e : encodeURIComponent(e)))
-                                    .join('')
+                            : e instanceof a
+                              ? e.toString()
+                              : null == t
+                                ? encodeURIComponent(e)
+                                : String(e)
+                                      .split('')
+                                      .map((e) => (null != t && t.includes(e) ? e : encodeURIComponent(e)))
+                                      .join('')
                     );
                 })(r, t)
             );

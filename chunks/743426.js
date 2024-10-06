@@ -55,6 +55,8 @@ class T extends s.Z {
                 return (0, d.eJ)(h.eR.VOICE_LEGACY_SUBSYSTEM);
             case h.AN.EXPERIMENTAL_AUDIO_SUBSYSTEM:
                 return (0, d.eJ)(h.eR.VOICE_EXPERIMENTAL_SUBSYSTEM);
+            case h.AN.AUTOMATIC_AUDIO_SUBSYSTEM:
+                return (0, d.eJ)(h.eR.VOICE_AUTOMATIC_SUBSYSTEM);
             case h.AN.DEBUG_LOGGING:
                 return (0, d.eJ)(h.eR.DEBUG_LOGGING);
             case h.AN.SOUNDSHARE:
@@ -118,6 +120,8 @@ class T extends s.Z {
                 return (0, d.eJ)(h.eR.CAPTURE_TIMEOUT_EXPERIMENTS);
             case h.AN.NATIVE_SCREENSHARE_PICKER:
                 return (0, d.eJ)(h.eR.NATIVE_SCREENSHARE_PICKER);
+            case h.AN.MLS_PAIRWISE_FINGERPRINTS:
+                return (0, d.eJ)(h.eR.MLS_PAIRWISE_FINGERPRINTS);
             case h.AN.DIAGNOSTICS:
             case h.AN.NATIVE_PING:
             case h.AN.AUTOMATIC_VAD:
@@ -532,7 +536,7 @@ class T extends s.Z {
     }
     presentNativeScreenSharePicker(e) {
         var t, n;
-        null === (t = (n = (0, d.zS)()).presentNativeScreenSharePicker) || void 0 === t || t.call(n, e);
+        null === (t = (n = (0, d.zS)()).presentNativeScreenSharePicker) || void 0 === t || t.call(n, null != e ? e : '');
     }
     releaseNativeDesktopVideoSourcePickerStream() {
         var e, t;

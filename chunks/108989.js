@@ -8,8 +8,8 @@ var r = n(735250),
     a = n(470079),
     i = n(887024);
 let o = [n(123353)],
-    s = ['#FFFFFF'],
-    l = 1000 / 60,
+    l = ['#FFFFFF'],
+    s = 1000 / 60,
     c = {
         velocity: {
             type: 'static-random',
@@ -63,17 +63,18 @@ let o = [n(123353)],
         }
     };
 function d(e) {
-    let { className: t, firing: n = !0, wind: d = 2 } = e,
-        [u, f] = a.useState(null),
-        [h, p] = a.useState(null),
-        b = (0, i.uR)(h, u),
-        m = a.useMemo(() => new i.qA({ wind: d }), [d]),
-        g = a.useCallback(() => {
-            let e = null == h ? void 0 : h.getCanvas();
+    let { className: t, firing: n = !0, wind: d = 2, sprites: u = o, spriteColors: f = l, confettiConfig: h } = e,
+        [p, b] = a.useState(null),
+        [m, g] = a.useState(null),
+        _ = (0, i.uR)(m, p),
+        x = a.useMemo(() => new i.qA({ wind: d }), [d]),
+        v = a.useCallback(() => {
+            let e = null == m ? void 0 : m.getCanvas();
             if (null == e) return;
             let t = e.getBoundingClientRect();
-            b.createConfetti({
+            _.createConfetti({
                 ...c,
+                ...h,
                 position: {
                     type: 'static-random',
                     minValue: {
@@ -86,23 +87,23 @@ function d(e) {
                     }
                 }
             });
-        }, [b, h]);
+        }, [_, m, h]);
     return (
         a.useEffect(() => {
-            let e = n ? setInterval(g, l) : null;
+            let e = n ? setInterval(v, s) : null;
             return () => clearInterval(e);
-        }, [n, g]),
+        }, [n, v]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(i.O_, {
-                    ref: p,
+                    ref: g,
                     className: t,
-                    environment: m
+                    environment: x
                 }),
                 (0, r.jsx)(i.Ji, {
-                    ref: f,
-                    colors: s,
-                    sprites: o,
+                    ref: b,
+                    colors: f,
+                    sprites: u,
                     spriteWidth: 6,
                     spriteHeight: 6
                 })

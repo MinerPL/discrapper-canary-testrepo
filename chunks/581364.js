@@ -9,7 +9,7 @@ n.d(t, {
         return R;
     },
     D7: function () {
-        return y;
+        return L;
     },
     Dd: function () {
         return A;
@@ -35,8 +35,11 @@ n.d(t, {
     qJ: function () {
         return P;
     },
+    t0: function () {
+        return U;
+    },
     tI: function () {
-        return L;
+        return y;
     },
     vC: function () {
         return M;
@@ -287,24 +290,28 @@ function C(e, t, n) {
     let a = n[(0, _.rE)(t, f.Kw.ROLE)];
     return null != a ? a.permission : null;
 }
-function y(e) {
+function L(e) {
     switch (e) {
         case f.bB.CHAT:
         case f.bB.APPLICATION_LAUNCHER:
+        case f.bB.APP_LAUNCHER_APPLICATION_VIEW:
         case f.bB.CONTEXT_MENU:
         case f.bB.VOICE_UI:
+        case f.bB.VOICE_TILE_ACTIVITY_SUGGESTIONS:
+        case f.bB.MINI_SHELF:
         case f.bB.USER_PROFILE:
         case f.bB.NOW_PLAYING:
         case f.bB.ACTIVITY_DETAILS:
         case f.bB.ACTIVITIES_HOME:
         case f.bB.ACTIVITY_INSTANCE_EMBED:
         case f.bB.ACTIVITY_BOOKMARK_EMBED:
+        case f.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON:
         case f.bB.IMAGE_RECS_MENU:
         case f.bB.IMAGE_RECS_SUBMENU:
             return E.d.SlashCommand;
     }
 }
-function L(e) {
+function y(e) {
     return null == e ? void 0 : e.id === p.bi.BUILT_IN ? f.ub.BUILT_IN : e.id === p.bi.FRECENCY ? f.ub.FRECENCY : f.ub.APP;
 }
 function D(e, t) {
@@ -359,4 +366,8 @@ function P(e) {
         search_results_position: u,
         source: c
     });
+}
+function U(e) {
+    let t = e.interactionMetadata;
+    return null == t ? null : 'triggering_interaction_metadata' in t ? t.triggering_interaction_metadata : t;
 }

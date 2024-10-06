@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     },
     v: function () {
-        return c;
+        return d;
     }
 });
 var r,
@@ -12,11 +12,13 @@ var r,
 n(470079);
 var s = n(120356),
     o = n.n(s),
-    l = n(337033),
-    u = n(367242);
-function c(e) {
+    l = n(481060),
+    u = n(15127),
+    c = n(326460);
+function d(e) {
     let t,
-        { tag: n = 'h5', children: r, className: i, faded: s, disabled: c, required: d = !1, error: _, errorId: E, ...f } = e;
+        { tag: n = 'h5', children: r, className: i, faded: s, disabled: d, required: _ = !1, error: E, errorId: f, ...h } = e,
+        { isFocused: p, hasValue: I } = (0, u.Gc)();
     switch (n) {
         case 'legend':
         case 'label':
@@ -26,33 +28,35 @@ function c(e) {
             t = l.H;
     }
     return (0, a.jsxs)(t, {
-        className: o()(u[n], 'h5' !== n ? u.defaultColor : null, i, {
-            [u['defaultMargin'.concat(n)]]: null == i,
-            [u.faded]: s,
-            [u.disabled]: c,
-            [u.error]: null != _
+        className: o()(c[n], 'h5' !== n ? c.defaultColor : null, i, {
+            [c['defaultMargin'.concat(n)]]: null == i,
+            [c.faded]: s,
+            [c.disabled]: d,
+            [c.error]: null != E,
+            [c.floatingAbove]: p || I,
+            [c.floatingOn]: !1 === p && !1 === I
         }),
-        ...f,
+        ...h,
         children: [
             r,
-            d && null == _
+            _ && null == E
                 ? (0, a.jsx)('span', {
-                      className: u.required,
+                      className: c.required,
                       children: '*'
                   })
                 : null,
-            null != _
+            null != E
                 ? (0, a.jsxs)('span', {
-                      id: E,
-                      className: u.errorMessage,
+                      id: f,
+                      className: c.errorMessage,
                       children: [
                           null != r
                               ? (0, a.jsx)('span', {
-                                    className: u.errorSeparator,
+                                    className: c.errorSeparator,
                                     children: '-'
                                 })
                               : null,
-                          _
+                          E
                       ]
                   })
                 : null

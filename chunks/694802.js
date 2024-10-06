@@ -7,7 +7,7 @@ var o = n(481060),
     l = n(26650),
     i = n(46140),
     c = n(689938),
-    d = n(476153);
+    d = n(587311);
 function u(e) {
     let { header: t, children: n } = e;
     return (0, s.jsxs)('div', {
@@ -24,7 +24,7 @@ function u(e) {
                         height: 16
                     }),
                     (0, s.jsx)(o.Heading, {
-                        color: 'always-white',
+                        color: 'text-normal',
                         variant: 'heading-sm/medium',
                         children: t
                     })
@@ -33,6 +33,7 @@ function u(e) {
             (0, s.jsx)(o.Text, {
                 color: 'text-muted',
                 variant: 'text-xs/normal',
+                className: d.warningBody,
                 children: n
             })
         ]
@@ -40,7 +41,7 @@ function u(e) {
 }
 t.Z = function (e) {
     let { quest: t } = e,
-        n = (0, a.p)({ location: i.dr.QUESTS_BAR }),
+        n = (0, a.pF)({ location: i.dr.QUESTS_BAR }),
         o = (0, r.qb)(t);
     if (0 === o.length) return null;
     let d = o.at(0);
@@ -52,8 +53,8 @@ t.Z = function (e) {
               })
             : d === c.Z.Messages.QUESTS_PROGRESS_MAC_STREAMING_TIP
               ? (0, s.jsx)(u, {
-                    header: c.Z.Messages.QUEST_BAR_MAC_WARNING_HEADER,
-                    children: c.Z.Messages.QUEST_BAR_MAC_WARNING_BODY
+                    header: c.Z.Messages.QUEST_BAR_MAC_WARNING_HEADER_WINDOWS,
+                    children: c.Z.Messages.QUESTS_PROGRESS_MAC_STREAMING_TIP
                 })
               : null
         : (0, s.jsx)(l.Z, { children: d });

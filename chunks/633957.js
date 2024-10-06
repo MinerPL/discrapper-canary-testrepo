@@ -1,67 +1,67 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return x;
     }
 }),
     n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(442837),
-    r = n(481060),
-    l = n(2052),
+    a = n(470079),
+    s = n(442837),
+    l = n(481060),
+    r = n(2052),
     o = n(317381),
     c = n(638880),
-    u = n(122613),
-    d = n(527805),
+    d = n(122613),
+    u = n(527805),
     _ = n(884338),
     E = n(100527),
     I = n(906732),
     m = n(895924),
     T = n(973616),
-    h = n(314897),
-    N = n(592125),
+    N = n(314897),
+    h = n(592125),
     C = n(158776),
-    f = n(594174),
-    p = n(823379),
+    p = n(594174),
+    f = n(823379),
     g = n(226378),
-    S = n(701488),
-    A = n(689938),
-    R = n(810250);
-function O(e) {
+    A = n(701488),
+    S = n(689938),
+    M = n(211655);
+function x(e) {
     var t;
-    let { application: n, channelId: O, guildId: x } = e,
-        { analyticsLocations: M } = (0, I.ZP)(E.Z.ACTIVITY_INSTANCE_EMBED),
-        v = (0, l.O)(),
-        L = (0, a.e7)([N.Z], () => N.Z.getChannel(O)),
-        Z = (null == L ? void 0 : null === (t = L.isThread) || void 0 === t ? void 0 : t.call(L)) ? (null == L ? void 0 : L.parent_id) : O,
-        P = (0, a.e7)([h.default], () => h.default.getId()),
+    let { application: n, channelId: x, guildId: O } = e,
+        { analyticsLocations: R } = (0, I.ZP)(E.Z.ACTIVITY_INSTANCE_EMBED),
+        v = (0, r.O)(),
+        L = (0, s.e7)([h.Z], () => h.Z.getChannel(x)),
+        Z = (null == L ? void 0 : null === (t = L.isThread) || void 0 === t ? void 0 : t.call(L)) ? (null == L ? void 0 : L.parent_id) : x,
+        P = (0, s.e7)([N.default], () => N.default.getId()),
         {
             embeddedActivity: D,
             currentEmbeddedActivity: b,
             activityLaunchState: j
-        } = (0, a.cj)([o.ZP], () => ({
+        } = (0, s.cj)([o.ZP], () => ({
             embeddedActivity: o.ZP.getEmbeddedActivitiesForChannel(null != Z ? Z : '').find((e) => e.applicationId === n.id),
             currentEmbeddedActivity: o.ZP.getCurrentEmbeddedActivity(),
             activityLaunchState: o.ZP.getLaunchState(n.id, null != Z ? Z : void 0)
         })),
-        U = (0, a.Wu)([f.default], () => {
+        U = (0, s.Wu)([p.default], () => {
             var e;
             return Array.from(null !== (e = null == D ? void 0 : D.userIds) && void 0 !== e ? e : [])
-                .map((e) => f.default.getUser(e))
-                .filter(p.lm);
+                .map((e) => p.default.getUser(e))
+                .filter(f.lm);
         }),
-        y = (0, a.e7)([C.Z], () => {
+        y = (0, s.e7)([C.Z], () => {
             var e;
             let t = null == D ? void 0 : D.userIds.values().next().value;
             return null == t ? null : null === (e = C.Z.findActivity(t, (e) => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
         }),
-        B = s.useMemo(() => {
+        B = a.useMemo(() => {
             let e = new T.Z(n);
-            return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = S.wT), e;
+            return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = A.wT), e;
         }, [n]),
-        k = (0, d.s5)({
+        k = (0, u.s5)({
             userId: P,
-            channelId: O,
+            channelId: x,
             application: B
         }),
         G = null == D,
@@ -71,67 +71,66 @@ function O(e) {
             currentEmbeddedActivity: b,
             channel: L
         }),
-        w = s.useId(),
+        w = a.useId(),
         V = null != j && j.isLaunching && j.componentId === w,
         H = async () => {
             G
-                ? await (0, u.Z)({
+                ? await (0, d.Z)({
                       targetApplicationId: n.id,
-                      channelId: O,
+                      channelId: x,
                       locationObject: v.location,
-                      analyticsLocations: M,
+                      analyticsLocations: R,
                       componentId: w,
                       commandOrigin: m.bB.ACTIVITY_INSTANCE_EMBED
                   })
                 : await (0, c.Z)({
                       applicationId: D.applicationId,
-                      activityChannelId: O,
+                      activityChannelId: x,
                       locationObject: v.location,
-                      analyticsLocations: M,
-                      componentId: w,
-                      commandOrigin: m.bB.ACTIVITY_INSTANCE_EMBED
+                      analyticsLocations: R,
+                      componentId: w
                   });
         },
-        Y = F.disabled ? A.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED : A.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED;
+        Y = F.disabled ? S.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED : S.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED;
     return (0, i.jsx)('div', {
-        className: R.container,
+        className: M.container,
         children: (0, i.jsxs)('div', {
-            className: R.contentContainer,
+            className: M.contentContainer,
             children: [
                 (0, i.jsx)('div', {
-                    className: R.headerContainer,
+                    className: M.headerContainer,
                     children: G
                         ? (0, i.jsx)('div', {
-                              className: R.__invalid_endedNote,
-                              children: (0, i.jsx)(r.Text, {
+                              className: M.__invalid_endedNote,
+                              children: (0, i.jsx)(l.Text, {
                                   variant: 'text-md/medium',
                                   children: Y
                               })
                           })
-                        : (0, i.jsx)(r.Text, {
+                        : (0, i.jsx)(l.Text, {
                               variant: 'text-md/medium',
                               lineClamp: 1,
                               color: 'text-normal',
-                              children: null != y ? y : A.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
+                              children: null != y ? y : S.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
                           })
                 }),
                 (0, i.jsxs)('div', {
-                    className: R.footerContainer,
+                    className: M.footerContainer,
                     children: [
-                        (0, i.jsx)(r.Tooltip, {
+                        (0, i.jsx)(l.Tooltip, {
                             text: F.tooltip,
-                            tooltipContentClassName: R.tooltipContent,
+                            tooltipContentClassName: M.tooltipContent,
                             children: (e) => {
                                 let { onClick: t, ...n } = e;
-                                return (0, s.createElement)(
-                                    r.Button,
+                                return (0, a.createElement)(
+                                    l.Button,
                                     {
                                         ...n,
                                         key: ''.concat(F.isJoinAction),
                                         onClick: () => {
                                             H(), null == t || t();
                                         },
-                                        color: F.isJoinAction ? r.ButtonColors.GREEN : r.ButtonColors.PRIMARY,
+                                        color: F.isJoinAction ? l.ButtonColors.GREEN : l.ButtonColors.PRIMARY,
                                         submitting: V,
                                         disabled: F.disabled
                                     },
@@ -141,7 +140,7 @@ function O(e) {
                         }),
                         !G &&
                             (0, i.jsx)(_.Z, {
-                                guildId: x,
+                                guildId: O,
                                 users: U,
                                 max: 4,
                                 size: _.u.SIZE_32

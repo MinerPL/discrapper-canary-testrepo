@@ -1,6 +1,6 @@
 n.d(t, {
     I: function () {
-        return C;
+        return L;
     }
 }),
     n(47120);
@@ -13,27 +13,28 @@ var r = n(735250),
     u = n(596454),
     c = n(122810),
     d = n(74433),
-    _ = n(44315),
-    E = n(633302),
-    f = n(574176),
-    h = n(106301),
-    p = n(223135),
+    _ = n(750881),
+    E = n(44315),
+    f = n(633302),
+    h = n(574176),
+    p = n(106301),
+    I = n(223135),
     m = n(695346),
-    I = n(314897),
-    T = n(592125),
+    T = n(314897),
+    S = n(592125),
     g = n(496675),
-    S = n(158776),
-    A = n(979651),
-    N = n(6074),
-    v = n(981631),
-    O = n(955859);
-let R = '14px';
-function C(e) {
+    A = n(158776),
+    N = n(979651),
+    O = n(6074),
+    R = n(981631),
+    v = n(23952);
+let C = '14px';
+function L(e) {
     let { emoji: t, className: n, animate: i = !0, hideTooltip: a, tooltipDelay: o } = e,
         c = m.Yk.useSetting(),
-        d = null != t.id ? ':'.concat(t.name, ':') : E.ZP.translateSurrogatesToInlineEmoji(t.name),
+        d = null != t.id ? ':'.concat(t.name, ':') : f.ZP.translateSurrogatesToInlineEmoji(t.name),
         _ = {
-            className: s()(O.emoji, n),
+            className: s()(v.emoji, n),
             emojiId: t.id,
             emojiName: t.name,
             autoplay: !0,
@@ -76,7 +77,7 @@ let y = (e) => {
                             children: n
                         }),
                         (0, r.jsx)('div', {
-                            className: s()(O.textRuler, t),
+                            className: s()(v.textRuler, t),
                             ref: o,
                             'aria-hidden': !0,
                             children: n
@@ -87,66 +88,67 @@ let y = (e) => {
     );
 };
 t.Z = (e) => {
-    var t;
-    let { activities: n, applicationStream: i, className: a, textClassName: s, emojiClassName: u, animate: E = !0, hideTooltip: m = !1, hideEmoji: D = !1, user: L, hasQuest: b } = e,
-        M = null != n ? n.find((e) => e.type === v.IIU.CUSTOM_STATUS) : null,
-        P = (0, o.e7)([I.default], () => I.default.getId() === (null == L ? void 0 : L.id)),
-        U = (0, o.e7)([h.Z], () => (P ? h.Z.getHangStatusActivity() : null != n ? n.find((e) => e.type === v.IIU.HANG_STATUS) : null)),
-        w = (0, o.e7)([A.Z, T.Z], () => {
+    let { activities: t, applicationStream: n, className: i, textClassName: a, emojiClassName: s, animate: u = !0, hideTooltip: f = !1, hideEmoji: m = !1, user: D, hasQuest: b } = e,
+        M = null != t ? t.find((e) => e.type === R.IIU.CUSTOM_STATUS) : null,
+        P = (0, o.e7)([T.default], () => T.default.getId() === (null == D ? void 0 : D.id)),
+        U = (0, o.e7)([p.Z], () => (P ? p.Z.getHangStatusActivity() : null != t ? t.find((e) => e.type === R.IIU.HANG_STATUS) : null)),
+        w = (0, o.e7)([N.Z, S.Z], () => {
             var e;
-            return null != U && null != L ? T.Z.getChannel(null === (e = A.Z.getVoiceStateForUser(L.id)) || void 0 === e ? void 0 : e.channelId) : null;
+            return null != U && null != D ? S.Z.getChannel(null === (e = N.Z.getVoiceStateForUser(D.id)) || void 0 === e ? void 0 : e.channelId) : null;
         }),
-        { enableHangStatus: x } = f.n.useExperiment(
+        { enableHangStatus: x } = h.n.useExperiment(
             {
                 guildId: null == w ? void 0 : w.guild_id,
                 location: 'ActivityStatus'
             },
             { autoTrackExposure: !1 }
         ),
-        G = (0, _.Sl)(v.Ilk.BRAND_345),
+        G = (0, E.Sl)(R.Ilk.BRAND_345),
         k = null,
-        B = x && null != U && g.Z.can(v.Plq.CONNECT, w);
+        B = x && null != U && g.Z.can(R.Plq.CONNECT, w);
     B
-        ? (k = (0, r.jsx)(p.Z, {
-              className: u,
+        ? (k = (0, r.jsx)(I.Z, {
+              className: s,
               hangStatusActivity: U
           }))
         : null != M &&
           null != M.emoji &&
-          !D &&
-          (k = (0, r.jsx)(C, {
+          !m &&
+          (k = (0, r.jsx)(L, {
               emoji: M.emoji,
-              animate: E,
-              hideTooltip: m,
-              className: u
+              animate: u,
+              hideTooltip: f,
+              className: s
           }));
-    let F = (0, o.e7)([S.Z], () => (null != L ? S.Z.getStatus(L.id) : null)),
-        V = null !== F && [v.Skl.OFFLINE, v.Skl.INVISIBLE].includes(F),
-        H = null === (t = (0, d.Z)(n, i, void 0, B)) || void 0 === t ? void 0 : t.activityText,
-        Z = null != H && H.length > 0;
-    return V || (null == k && !Z)
+    let F = (0, _.aK)('activity-status-web'),
+        V = (0, o.e7)([A.Z], () => (null != D ? A.Z.getStatus(D.id) : null)),
+        H = null !== V && [R.Skl.OFFLINE, R.Skl.INVISIBLE].includes(V),
+        Z = (0, d.Z)(t, n, void 0, B, F),
+        Y = null == Z ? void 0 : Z.activityText,
+        j = null != Y && '' !== Y;
+    return H || (null == k && !j)
         ? null
         : (0, r.jsxs)('div', {
-              className: a,
+              className: i,
               children: [
                   k,
                   (0, r.jsx)(y, {
-                      text: H,
-                      className: s
+                      text: Y,
+                      className: a
                   }),
                   b &&
                       (0, r.jsx)(l.QuestsIcon, {
                           size: 'custom',
-                          className: O.questsIcon,
-                          height: R,
-                          width: R,
+                          className: v.questsIcon,
+                          height: C,
+                          width: C,
                           color: G.hex
                       }),
-                  null != n && n.some((e) => (0, c.Z)(e, B))
-                      ? (0, r.jsx)(N.Z, {
+                  null != t && t.some((e) => (0, c.Z)(e, B))
+                      ? (0, r.jsx)(O.Z, {
                             width: 16,
                             height: 16,
-                            className: O.icon
+                            className: v.icon
                         })
                       : null
               ]

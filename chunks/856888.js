@@ -1,26 +1,27 @@
 t.d(s, {
     Z: function () {
-        return E;
+        return T;
     }
-});
-var n = t(735250);
-t(470079);
-var a = t(442837),
-    i = t(481060),
-    r = t(325997),
-    o = t(78839),
-    l = t(270144),
-    c = t(130991),
-    d = t(238847),
-    _ = t(689938),
-    u = t(784528);
-function E(e) {
+}),
+    t(47120);
+var n = t(735250),
+    a = t(470079),
+    i = t(442837),
+    r = t(481060),
+    o = t(325997),
+    l = t(78839),
+    c = t(270144),
+    d = t(851718),
+    _ = t(238847),
+    u = t(689938),
+    E = t(917205);
+function T(e) {
     let { onGoBack: s } = e,
-        t = (0, a.Wu)([o.ZP], () => {
+        t = (0, i.Wu)([l.ZP], () => {
             var e, s;
             return null !==
                 (s =
-                    null === (e = o.ZP.getActiveApplicationSubscriptions()) || void 0 === e
+                    null === (e = l.ZP.getActiveApplicationSubscriptions()) || void 0 === e
                         ? void 0
                         : e.slice().sort((e, s) => {
                               var t, n, a, i;
@@ -29,33 +30,59 @@ function E(e) {
                 ? s
                 : [];
         }),
-        { loading: E } = (0, l.sp)(t),
-        { loadState: T } = (0, l.qz)(),
-        S = E || T !== l.jd.LOADED,
-        { enabled: I } = r.m.useExperiment({ location: 'UserSettingsApplicationSubscriptions' });
+        { loading: T } = (0, c.sp)(t),
+        { loadState: I } = (0, c.qz)(),
+        N = T || I !== c.jd.LOADED,
+        { enabled: A } = o.m.useExperiment({ location: 'UserSettingsApplicationSubscriptions' }),
+        [C, m] = a.useState();
+    return (
+        null == C &&
+            (C = (0, n.jsx)(S, {
+                onBack: s,
+                title: u.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PAGE_TITLE
+            })),
+        (0, n.jsxs)('div', {
+            children: [
+                C,
+                N
+                    ? (0, n.jsx)(r.Spinner, {})
+                    : (0, n.jsx)('div', {
+                          className: E.subscriptionsContainer,
+                          children: A
+                              ? (0, n.jsx)(d.Z, {
+                                    subscriptions: t,
+                                    updateHeader: (e, s) => {
+                                        m(
+                                            (0, n.jsx)(S, {
+                                                title: e,
+                                                onBack: () => {
+                                                    s(), m(void 0);
+                                                }
+                                            })
+                                        );
+                                    }
+                                })
+                              : t.map((e) => (0, n.jsx)(_.Z, { subscription: e }, e.id))
+                      })
+            ]
+        })
+    );
+}
+function S(e) {
+    let { onBack: s, title: t } = e;
     return (0, n.jsxs)('div', {
+        className: E.title,
         children: [
-            (0, n.jsxs)('div', {
-                className: u.title,
-                children: [
-                    (0, n.jsx)(i.Button, {
-                        look: i.Button.Looks.BLANK,
-                        onClick: s,
-                        size: i.Button.Sizes.ICON,
-                        children: (0, n.jsx)(i.ArrowLargeLeftIcon, { size: 'sm' })
-                    }),
-                    (0, n.jsx)(i.Heading, {
-                        variant: 'heading-lg/semibold',
-                        children: _.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PAGE_TITLE
-                    })
-                ]
+            (0, n.jsx)(r.Button, {
+                look: r.Button.Looks.BLANK,
+                onClick: s,
+                size: r.Button.Sizes.ICON,
+                children: (0, n.jsx)(r.ArrowLargeLeftIcon, { size: 'sm' })
             }),
-            S
-                ? (0, n.jsx)(i.Spinner, {})
-                : (0, n.jsx)('div', {
-                      className: u.subscriptionsContainer,
-                      children: I ? t.map((e) => (0, n.jsx)(c.Z, { subscription: e }, e.id)) : t.map((e) => (0, n.jsx)(d.Z, { subscription: e }, e.id))
-                  })
+            (0, n.jsx)(r.Heading, {
+                variant: 'heading-lg/semibold',
+                children: t
+            })
         ]
     });
 }

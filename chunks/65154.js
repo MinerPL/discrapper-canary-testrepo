@@ -6,13 +6,13 @@ n.d(t, {
         return ee;
     },
     $j: function () {
-        return v;
+        return O;
     },
     AN: function () {
-        return y;
+        return L;
     },
     AS: function () {
-        return D;
+        return y;
     },
     Av: function () {
         return j;
@@ -39,7 +39,7 @@ n.d(t, {
         return q;
     },
     QP: function () {
-        return O;
+        return R;
     },
     Qx: function () {
         return F;
@@ -66,7 +66,7 @@ n.d(t, {
         return V;
     },
     Yn: function () {
-        return S;
+        return g;
     },
     Z: function () {
         return C;
@@ -84,13 +84,13 @@ n.d(t, {
         return Z;
     },
     fC: function () {
-        return R;
+        return v;
     },
     h7: function () {
         return A;
     },
     iA: function () {
-        return L;
+        return D;
     },
     jg: function () {
         return W;
@@ -143,20 +143,20 @@ var r,
     f,
     h,
     p,
-    m,
     I,
+    m,
     T,
-    g,
     S,
+    g,
     A,
     N,
-    v,
     O,
     R,
+    v,
     C,
+    L,
     y,
     D,
-    L,
     b,
     M,
     P,
@@ -166,7 +166,7 @@ var r,
     G,
     k,
     B = n(268146);
-((r = S || (S = {})).DEFAULT = 'default'), (r.STREAM = 'stream'), ((i = A || (A = {})).AUDIO_INPUT = 'audioinput'), (i.AUDIO_OUTPUT = 'audiooutput'), (i.VIDEO_INPUT = 'videoinput'), ((a = N || (N = {})).PUSH_TO_TALK = 'PUSH_TO_TALK'), (a.VOICE_ACTIVITY = 'VOICE_ACTIVITY'), ((s = v || (v = {})).DISCONNECTED = 'DISCONNECTED'), (s.CONNECTING = 'CONNECTING'), (s.CONNECTED = 'CONNECTED'), (s.NO_ROUTE = 'NO_ROUTE'), (s.ICE_CHECKING = 'ICE_CHECKING'), (s.DTLS_CONNECTING = 'DTLS_CONNECTING'), ((o = O || (O = {}))[(o.TRANSPORT = 1)] = 'TRANSPORT'), (o[(o.OUTBOUND = 2)] = 'OUTBOUND'), (o[(o.INBOUND = 4)] = 'INBOUND'), (o[(o.ALL = 7)] = 'ALL'), ((l = R || (R = {})).MANUAL_DISABLE = 'video_manual_disable'), (l.MANUAL_ENABLE = 'video_manual_enable'), (l.MANUAL_REENABLE = 'video_manual_reenable'), (l.AUTO_DISABLE = 'video_auto_disable'), (l.AUTO_ENABLE = 'video_auto_enable'), (l.AUTO_DOWNGRADE = 'video_auto_downgrade'), (l.AUTO_UPGRADE = 'video_auto_upgrade,'), ((u = C || (C = {})).NO_OVERRIDE = 'no_override'), (u.HIGH = 'high'), (u.LOW = 'low');
+((r = g || (g = {})).DEFAULT = 'default'), (r.STREAM = 'stream'), ((i = A || (A = {})).AUDIO_INPUT = 'audioinput'), (i.AUDIO_OUTPUT = 'audiooutput'), (i.VIDEO_INPUT = 'videoinput'), ((a = N || (N = {})).PUSH_TO_TALK = 'PUSH_TO_TALK'), (a.VOICE_ACTIVITY = 'VOICE_ACTIVITY'), ((s = O || (O = {})).DISCONNECTED = 'DISCONNECTED'), (s.CONNECTING = 'CONNECTING'), (s.CONNECTED = 'CONNECTED'), (s.NO_ROUTE = 'NO_ROUTE'), (s.ICE_CHECKING = 'ICE_CHECKING'), (s.DTLS_CONNECTING = 'DTLS_CONNECTING'), ((o = R || (R = {}))[(o.TRANSPORT = 1)] = 'TRANSPORT'), (o[(o.OUTBOUND = 2)] = 'OUTBOUND'), (o[(o.INBOUND = 4)] = 'INBOUND'), (o[(o.ALL = 7)] = 'ALL'), ((l = v || (v = {})).MANUAL_DISABLE = 'video_manual_disable'), (l.MANUAL_ENABLE = 'video_manual_enable'), (l.MANUAL_REENABLE = 'video_manual_reenable'), (l.AUTO_DISABLE = 'video_auto_disable'), (l.AUTO_ENABLE = 'video_auto_enable'), (l.AUTO_DOWNGRADE = 'video_auto_downgrade'), (l.AUTO_UPGRADE = 'video_auto_upgrade,'), ((u = C || (C = {})).NO_OVERRIDE = 'no_override'), (u.HIGH = 'high'), (u.LOW = 'low');
 let F = 100,
     V = 18,
     H = 64000,
@@ -213,7 +213,7 @@ let F = 100,
         videoBitrateFloor: 150000
     },
     ec = 60000;
-((c = y || (y = {})).AUTO_ENABLE = 'AUTO_ENABLE'),
+((c = L || (L = {})).AUTO_ENABLE = 'AUTO_ENABLE'),
     (c.ATTENUATION = 'ATTENUATION'),
     (c.AUDIO_INPUT_DEVICE = 'AUDIO_INPUT_DEVICE'),
     (c.AUDIO_OUTPUT_DEVICE = 'AUDIO_OUTPUT_DEVICE'),
@@ -222,6 +222,7 @@ let F = 100,
     (c.NATIVE_PING = 'NATIVE_PING'),
     (c.LEGACY_AUDIO_SUBSYSTEM = 'LEGACY_AUDIO_SUBSYSTEM'),
     (c.EXPERIMENTAL_AUDIO_SUBSYSTEM = 'EXPERIMENTAL_AUDIO_SUBSYSTEM'),
+    (c.AUTOMATIC_AUDIO_SUBSYSTEM = 'AUTOMATIC_AUDIO_SUBSYSTEM'),
     (c.DEBUG_LOGGING = 'DEBUG_LOGGING'),
     (c.AUTOMATIC_VAD = 'AUTOMATIC_VAD'),
     (c.VOICE_PANNING = 'VOICE_PANNING'),
@@ -267,12 +268,14 @@ let F = 100,
     (c.CAPTURE_TIMEOUT_EXPERIMENTS = 'CAPTURE_TIMEOUT_EXPERIMENTS'),
     (c.SCREEN_SOUNDSHARE = 'SCREEN_SOUNDSHARE'),
     (c.NATIVE_SCREENSHARE_PICKER = 'NATIVE_SCREENSHARE_PICKER'),
-    ((d = D || (D = {})).NATIVE = 'NATIVE'),
+    (c.MLS_PAIRWISE_FINGERPRINTS = 'MLS_PAIRWISE_FINGERPRINTS'),
+    ((d = y || (y = {})).NATIVE = 'NATIVE'),
     (d.WEBRTC = 'WEBRTC'),
     (d.DUMMY = 'DUMMY'),
-    ((_ = L || (L = {})).LEGACY = 'legacy'),
+    ((_ = D || (D = {})).LEGACY = 'legacy'),
     (_.STANDARD = 'standard'),
     (_.EXPERIMENTAL = 'experimental'),
+    (_.AUTOMATIC = 'automatic'),
     ((E = b || (b = {})).OPUS = 'opus'),
     (E.VP8 = 'VP8'),
     (E.VP9 = 'VP9'),
@@ -289,26 +292,26 @@ let F = 100,
     (h.TEST = 'test'),
     ((p = U || (U = {})).PLAYING = 'playing'),
     (p.PAUSED = 'paused'),
-    ((m = w || (w = {})).FIXED = 'fixed'),
-    (m.SOURCE = 'source'),
-    ((I = x || (x = {})).VIDEOTOOLBOX_RATE_CONTROL = 'videotoolbox_rate_control'),
-    (I.SIGNAL_AV1 = 'signal_av1'),
-    (I.SIGNAL_AV1_DECODE = 'signal_av1_decode'),
-    (I.SIGNAL_AV1_HARDWARE_DECODE = 'signal_av1_hardware_decode'),
-    (I.STREAMER_CLIP = 'streamer_clip'),
-    (I.VIEWER_CLIP = 'viewer_clip'),
-    (I.MUTE_BEFORE_PROCESSING = 'mute_before_processing'),
-    (I.PTT_BEFORE_PROCESSING = 'ptt_before_processing'),
-    (I.SKIP_ENCODE = 'skip_encode'),
-    (I.RESET_DECODER_ON_ERRORS = 'reset_decoder_on_errors'),
-    (I.SOFTWARE_FALLBACK_ON_ERRORS = 'software_fallback_on_errors'),
-    (I.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS = 'software_fallback_on_consecutive_errors'),
-    (I.GOLIVE_SIMULCAST_480P_500K = 'golive_simulcast_480p@500kbps'),
-    (I.GOLIVE_SIMULCAST_480P_750K = 'golive_simulcast_480p@750kbps'),
-    (I.GOLIVE_SIMULCAST_480P_1000K = 'golive_simulcast_480p@1000kbps'),
+    ((I = w || (w = {})).FIXED = 'fixed'),
+    (I.SOURCE = 'source'),
+    ((m = x || (x = {})).VIDEOTOOLBOX_RATE_CONTROL = 'videotoolbox_rate_control'),
+    (m.SIGNAL_AV1 = 'signal_av1'),
+    (m.SIGNAL_AV1_DECODE = 'signal_av1_decode'),
+    (m.SIGNAL_AV1_HARDWARE_DECODE = 'signal_av1_hardware_decode'),
+    (m.STREAMER_CLIP = 'streamer_clip'),
+    (m.VIEWER_CLIP = 'viewer_clip'),
+    (m.MUTE_BEFORE_PROCESSING = 'mute_before_processing'),
+    (m.PTT_BEFORE_PROCESSING = 'ptt_before_processing'),
+    (m.SKIP_ENCODE = 'skip_encode'),
+    (m.RESET_DECODER_ON_ERRORS = 'reset_decoder_on_errors'),
+    (m.SOFTWARE_FALLBACK_ON_ERRORS = 'software_fallback_on_errors'),
+    (m.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS = 'software_fallback_on_consecutive_errors'),
+    (m.GOLIVE_SIMULCAST_480P_500K = 'golive_simulcast_480p@500kbps'),
+    (m.GOLIVE_SIMULCAST_480P_750K = 'golive_simulcast_480p@750kbps'),
+    (m.GOLIVE_SIMULCAST_480P_1000K = 'golive_simulcast_480p@1000kbps'),
     ((T = G || (G = {}))[(T.AUTO = 1)] = 'AUTO'),
     (T[(T.FULL = 2)] = 'FULL'),
-    ((g = k || (k = {}))[(g.CPU_OVERUSE = 1)] = 'CPU_OVERUSE'),
-    (g[(g.FAILED = 2)] = 'FAILED'),
-    (g[(g.VAD_CPU_OVERUSE = 3)] = 'VAD_CPU_OVERUSE'),
-    (g[(g.INITIALIZED = 4)] = 'INITIALIZED');
+    ((S = k || (k = {}))[(S.CPU_OVERUSE = 1)] = 'CPU_OVERUSE'),
+    (S[(S.FAILED = 2)] = 'FAILED'),
+    (S[(S.VAD_CPU_OVERUSE = 3)] = 'VAD_CPU_OVERUSE'),
+    (S[(S.INITIALIZED = 4)] = 'INITIALIZED');

@@ -1,83 +1,99 @@
 n.d(t, {
     LE: function () {
-        return T;
+        return L;
     },
     ML: function () {
-        return f;
+        return x;
     },
     Qc: function () {
-        return C;
+        return O;
+    },
+    c2: function () {
+        return b;
     }
 }),
-    n(47120);
+    n(47120),
+    n(773603);
 var i = n(470079),
     a = n(348327),
     s = n.n(a),
-    r = n(143927),
-    l = n(442837),
-    o = n(224706),
-    c = n(110924),
-    d = n(963202),
-    u = n(823379),
-    _ = n(229893),
-    E = n(229765),
-    h = n(286083),
-    m = n(207796),
-    I = n(976757),
-    g = n(308083);
-function p() {
-    return (0, m.GN)(m.t1, s());
+    r = n(664751),
+    l = n(266067),
+    o = n(143927),
+    c = n(731965),
+    d = n(442837),
+    u = n(224706),
+    _ = n(110924),
+    E = n(728345),
+    h = n(812206),
+    m = n(963202),
+    I = n(571457),
+    p = n(859921),
+    g = n(823379),
+    T = n(229893),
+    f = n(229765),
+    S = n(286083),
+    C = n(207796),
+    N = n(976757),
+    A = n(308083),
+    v = n(128449);
+function Z() {
+    var e;
+    let { search: t } = (0, l.TH)(),
+        { game: n } = r.parse(t.slice(1)),
+        i = (0, C.GN)(C.t1, s());
+    return null != n && (null === (e = i.games) || void 0 === e ? void 0 : e.length) === 0 && (i.games = [n]), i;
 }
-function T() {
-    let e = (0, m.GN)((e) => e.setGame, r.Z),
-        t = (0, m.GN)((e) => e.setSelectedGames, r.Z),
-        n = (0, m.GN)((e) => e.selectedGames, r.Z),
-        a = p(),
-        s = (0, d.An)({ location: 'clan_discovery' }),
-        c = (0, d.iN)('clan_discovery'),
-        { defaultGameId: u } = (0, d.nk)('clan_discovery'),
-        h = null != s ? s : u,
-        I = (function () {
+function L() {
+    let e = (0, C.GN)((e) => e.setGame, o.Z),
+        t = (0, C.GN)((e) => e.setSelectedGames, o.Z),
+        n = (0, C.GN)((e) => e.selectedGames, o.Z),
+        a = Z(),
+        s = (0, m.An)({ location: 'clan_discovery' }),
+        r = (0, m.iN)('clan_discovery'),
+        { defaultGameId: l } = (0, m.nk)('clan_discovery'),
+        c = null != s ? s : l,
+        _ = (function () {
             let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-                t = (0, l.e7)([_.Z], () => _.Z.hasLoadedStaticClanDiscovery());
+                t = (0, d.e7)([T.Z], () => T.Z.hasLoadedStaticClanDiscovery());
             return (
                 i.useEffect(() => {
-                    e && !t && (0, E.XB)();
+                    e && !t && (0, f.XB)();
                 }, [t, e]),
                 t
             );
-        })(!c),
-        T = (0, l.e7)([_.Z], () => _.Z.isLoading());
+        })(!r),
+        E = (0, d.e7)([T.Z], () => T.Z.isLoading());
     return (
         i.useEffect(() => {
-            !(n.length > 0) && !c && (h === g.nJ ? (e(m.hz.VALORANT), t([h])) : h === g.xn ? (e(m.hz.GENSHIN), t([h])) : null == h && (e(m.hz.NONE), t([])));
-        }, [e, t, h, n, c]),
+            !(n.length > 0) && !r && (c === A.nJ ? (e(C.hz.VALORANT), t([c])) : c === A.xn ? (e(C.hz.GENSHIN), t([c])) : null == c && (e(C.hz.NONE), t([])));
+        }, [e, t, c, n, r]),
         i.useEffect(() => {
-            if (c) (0, E.Cg)(a);
+            if (r) (0, f.Cg)(a);
             else {
-                if (!I) return;
-                (0, E.jc)(a);
+                if (!_) return;
+                (0, f.jc)(a);
             }
-        }, [a, I, c]),
+        }, [a, _, r]),
         i.useEffect(() => {
-            o.Z.getDetectableGames();
+            u.Z.getDetectableGames();
         }, []),
-        { loading: T }
+        { loading: E }
     );
 }
-function S(e) {
+function R(e) {
     let [t, n] = i.useState(!1),
         a = i.useRef(),
-        r = (0, l.Wu)([_.Z], () => e.filter((e) => _.Z.shouldFetchGuild(e)), [e]),
-        o = (0, c.Z)(r),
-        d = i.useRef(new AbortController()),
-        u = i.useCallback(async (e) => {
-            n(!0), null != a.current && (d.current.abort(), (d.current = new AbortController())), (a.current = (0, E.$s)(e, d.current.signal)), await a.current, null !== a.current && (n(!1), (a.current = null));
+        r = (0, d.Wu)([T.Z], () => e.filter((e) => T.Z.shouldFetchGuild(e)), [e]),
+        l = (0, _.Z)(r),
+        o = i.useRef(new AbortController()),
+        c = i.useCallback(async (e) => {
+            n(!0), null != a.current && (o.current.abort(), (o.current = new AbortController())), (a.current = (0, f.$s)(e, o.current.signal)), await a.current, null !== a.current && (n(!1), (a.current = null));
         }, []);
     return (
         i.useEffect(() => {
-            if (!(0 === r.length || s()(r, o))) u(r);
-        }, [u, r, o, e]),
+            if (!(0 === r.length || s()(r, l))) c(r);
+        }, [c, r, l, e]),
         i.useEffect(
             () => () => {
                 a.current = null;
@@ -87,72 +103,120 @@ function S(e) {
         t && r.length > 0
     );
 }
-function C() {
+function O() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
         t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = (0, m.GN)((e) => e.savedGuildIds, r.Z),
-        a = p(),
-        s = (0, l.e7)([_.Z], () => _.Z.hasLoadedStaticClanDiscovery()),
-        o = (0, d.iN)('clan_discovery'),
-        c = (0, l.e7)([_.Z], () => _.Z.getSearchResult(a), [a]),
-        E = (0, l.Wu)([_.Z], () => (t && null != n ? n.map((e) => _.Z.getGuildProfile(e)).filter(u.lm) : []), [t, n]),
-        h = i.useMemo(() => {
-            if ((0, I.Pw)(c)) {
-                let t = c.items;
+        n = Z(),
+        { savedGuildIds: a, loaded: s } = (0, d.cj)([T.Z], () => ({
+            savedGuildIds: T.Z.getSavedGuildIds(),
+            loaded: T.Z.hasLoadedStaticClanDiscovery()
+        })),
+        r = (0, m.iN)('clan_discovery'),
+        l = (0, d.e7)([T.Z], () => T.Z.getSearchResult(n), [n]),
+        o = (0, d.Wu)([T.Z], () => (t && null != a ? a.map((e) => T.Z.getGuildProfile(e)).filter(g.lm) : []), [t, a]),
+        c = i.useMemo(() => {
+            if ((0, N.Pw)(l)) {
+                let t = l.items;
                 return null != e ? t.slice(0, e) : t;
             }
             return [];
-        }, [e, c]);
+        }, [e, l]);
     return t
         ? {
-              loaded: s || o,
-              clans: E,
-              searchCriteria: a,
+              loaded: s || r,
+              clans: o,
+              searchCriteria: n,
               searchResult: {
-                  items: E,
+                  items: o,
                   loadedAt: Date.now(),
                   status: 'loaded',
-                  guildIds: n
+                  guildIds: a
               }
           }
         : {
-              loaded: s || o,
-              clans: h,
-              searchCriteria: a,
-              searchResult: c
+              loaded: s || r,
+              clans: c,
+              searchCriteria: n,
+              searchResult: l
           };
 }
-function f(e) {
+function x(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { updatePaginationSettings: n, pageSize: a, chunkedPages: s, currentPage: o, fetchableGuildIds: c } = (0, h.$)(),
-        d = o - 1,
-        E = (0, m.GN)((e) => e.savedGuildIds, r.Z),
-        g = p(),
-        { searchResult: T, hasError: C } = (0, l.cj)(
-            [_.Z],
+        { updatePaginationSettings: n, currentColumnCount: a, pageSize: s, chunkedPages: r, currentPage: l, fetchableGuildIds: c } = (0, S.a)(),
+        u = l - 1,
+        _ = (0, C.GN)((e) => e.loadingGameApplication, o.Z),
+        E = (0, d.e7)([T.Z], () => T.Z.getSavedGuildIds()),
+        h = (0, C.GN)((e) => e.savedGuildIds, o.Z),
+        m = Z(),
+        { searchResult: I, hasError: p } = (0, d.cj)(
+            [T.Z],
             () => ({
-                searchResult: _.Z.getSearchResult(g),
-                hasError: _.Z.hasError()
+                searchResult: T.Z.getSearchResult(m),
+                hasError: T.Z.hasError()
             }),
-            [g]
+            [m]
         );
     i.useEffect(() => {
-        n(e);
-    }, [e, n]),
-        S(c),
-        S(E);
-    let f = i.useMemo(() => {
+        n(e, S.$, { pageMemoryEnabled: !0 });
+    }, [e, n, I]),
+        R(c),
+        i.useEffect(() => {
+            (0, f.IS)();
+        }, []),
+        R(h),
+        !(function () {
+            let e = (0, d.e7)([T.Z], () => !T.Z.hasLoadedSavedGuilds());
+            i.useEffect(() => {
+                e && (0, f.bO)();
+            }, [e]);
+        })();
+    let A = i.useMemo(() => {
             var e;
-            return null !== (e = t ? E : s[d]) && void 0 !== e ? e : [];
-        }, [E, s, d, t]),
-        N = (0, l.Wu)([_.Z], () => f.map((e) => _.Z.getGuildProfile(e)).filter(u.lm), [f]),
-        A = f.length === N.length || t,
-        v = N.length === a || A;
+            return null !== (e = t ? E : r[u]) && void 0 !== e ? e : [];
+        }, [E, r, u, t]),
+        v = (0, d.Wu)([T.Z], () => A.map((e) => T.Z.getGuildProfile(e)).filter(g.lm), [A]),
+        L = A.length === v.length || t,
+        O = v.length === s || L,
+        x = (0, N.Pw)(I);
     return {
-        loaded: (0, I.Pw)(T) && v,
-        clans: N,
-        searchCriteria: g,
-        searchResult: T,
-        hasError: C
+        loaded: e === a && x && O && !_,
+        clans: v,
+        searchCriteria: m,
+        searchResult: I,
+        hasError: p
     };
+}
+function b() {
+    let { search: e } = (0, l.TH)(),
+        t = (0, m.iN)('GlobalDiscovery'),
+        { game: n } = t ? r.parse(e.slice(1)) : {},
+        a = (0, d.e7)([h.Z], () => (null != n ? h.Z.getApplication(n) : null));
+    i.useEffect(() => {
+        null != n && (0, I.$X)({ gameId: n });
+    }, [n]),
+        i.useEffect(() => {
+            if (null == n || !t) {
+                C.GN.setState({ entrypointGameId: null });
+                return;
+            }
+            (0, c.j)(() => {
+                C.GN.setState({ mode: C.v0.DISCOVERY }), (0, p.jY)({ selectedTab: v.vf.GUILDS });
+            }),
+                null == a
+                    ? ((0, c.j)(() => {
+                          C.GN.setState({ loadingGameApplication: !0 });
+                      }),
+                      E.ZP.fetchApplication(n)
+                          .then(() => {
+                              (0, c.j)(() => {
+                                  C.GN.setState({ entrypointGameId: n });
+                              });
+                          })
+                          .finally(() => {
+                              (0, c.j)(() => {
+                                  C.GN.setState({ loadingGameApplication: !1 });
+                              });
+                          }))
+                    : (C.GN.getState().setSelectedGames([n]), C.GN.setState({ entrypointGameId: n }));
+        }, [a, n, t]);
 }

@@ -48,8 +48,8 @@ let g = {
     R = new Map(),
     v = new Map(),
     C = new Map(),
-    y = new Map(),
     L = new Map(),
+    y = new Map(),
     D = new Map(),
     b = new Map(),
     M = new Map(),
@@ -65,9 +65,9 @@ function k(e) {
     let { guildId: s, channelId: o, location: E, applicationId: p, launchId: S, compositeInstanceId: g, participants: N } = e,
         C = (0, f.Z)(p);
     if (null == C) return;
-    let y = null !== (n = v.get(o)) && void 0 !== n ? n : A,
-        L = 0 === y.length,
-        D = y.find((e) => e.applicationId === p),
+    let L = null !== (n = v.get(o)) && void 0 !== n ? n : A,
+        y = 0 === L.length,
+        D = L.find((e) => e.applicationId === p),
         b = N.map((e) => e.userId),
         M = l.default.getId(),
         P = b.some((e) => e === M),
@@ -137,7 +137,7 @@ function k(e) {
               compositeInstanceId: g,
               location: E,
               participants: N,
-              isFirstActivityInChannel: L,
+              isFirstActivityInChannel: y,
               isStart: null == D
           });
     let V = (null !== (i = v.get(o)) && void 0 !== i ? i : []).filter((e) => e.applicationId !== p),
@@ -159,7 +159,8 @@ function B(e) {
                 compositeInstanceId: a,
                 participants: s.map((e) => ({
                     userId: e.user_id,
-                    sessionId: e.session_id
+                    sessionId: e.session_id,
+                    nonce: e.nonce
                 }))
             });
         });
@@ -221,16 +222,16 @@ class Z extends (i = a.ZP.PersistedStore) {
     getShelfActivities(e) {
         var t;
         let n = G(e);
-        return null !== (t = y.get(n)) && void 0 !== t ? t : N;
+        return null !== (t = L.get(n)) && void 0 !== t ? t : N;
     }
     getShelfFetchStatus(e) {
         let t = G(e);
-        return L.get(t);
+        return y.get(t);
     }
     shouldFetchShelf(e) {
         var t, n;
         let r = G(e),
-            i = null !== (t = L.get(r)) && void 0 !== t ? t : { isFetching: !1 },
+            i = null !== (t = y.get(r)) && void 0 !== t ? t : { isFetching: !1 },
             a = Date.now() - (null !== (n = null == i ? void 0 : i.lastFetchTimestampMs) && void 0 !== n ? n : 0) > 21600000;
         return !(null == i ? void 0 : i.isFetching) && a;
     }
@@ -374,7 +375,8 @@ let Y = new Z(s.Z, {
                 compositeInstanceId: r,
                 participants: a.map((e) => ({
                     userId: e.user_id,
-                    sessionId: e.session_id
+                    sessionId: e.session_id,
+                    nonce: e.nonce
                 }))
             });
     },
@@ -398,8 +400,8 @@ let Y = new Z(s.Z, {
     EMBEDDED_ACTIVITY_FETCH_SHELF: function (e) {
         let { guildId: t } = e,
             n = G(t),
-            r = L.get(n);
-        L.set(n, {
+            r = y.get(n);
+        y.set(n, {
             isFetching: !0,
             lastFetchTimestampMs: null == r ? void 0 : r.lastFetchTimestampMs
         });
@@ -407,7 +409,7 @@ let Y = new Z(s.Z, {
     EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: function (e) {
         let { guildId: t, activities: n } = e,
             r = G(t);
-        y.set(r, n);
+        L.set(r, n);
         let i = Date.now();
         !(function (e) {
             let { activities: t, now: n } = e;
@@ -430,7 +432,7 @@ let Y = new Z(s.Z, {
             activities: n,
             now: i
         }),
-            L.set(r, {
+            y.set(r, {
                 isFetching: !1,
                 lastFetchTimestampMs: i
             });
@@ -438,8 +440,8 @@ let Y = new Z(s.Z, {
     EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL: function (e) {
         let { guildId: t } = e,
             n = G(t),
-            r = L.get(n);
-        L.set(n, {
+            r = y.get(n);
+        y.set(n, {
             isFetching: !1,
             lastFetchTimestampMs: null == r ? void 0 : r.lastFetchTimestampMs
         });

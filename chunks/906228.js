@@ -19,15 +19,13 @@ t.Z = {
                         (0, r.Z)(e).keys({
                             type: e.string().required().valid([c.h7.AUDIO_INPUT, c.h7.AUDIO_OUTPUT, c.h7.VIDEO_INPUT]),
                             id: e.string().required().min(1),
-                            vendor: e
-                                .object()
+                            vendor: (0, r.Z)(e)
                                 .required()
                                 .keys({
                                     name: e.string().min(1),
                                     url: e.string().min(1)
                                 }),
-                            model: e
-                                .object()
+                            model: (0, r.Z)(e)
                                 .required()
                                 .keys({
                                     name: e.string().min(1),

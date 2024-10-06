@@ -829,7 +829,7 @@ let { Themes: n } = r(15202).V,
             },
             [n.MIDNIGHT]: {
                 raw: 'PLUM_11',
-                opacity: 0.08
+                opacity: 0.16
             },
             [n.DARKER]: {
                 raw: 'PLUM_11',
@@ -1060,7 +1060,7 @@ let { Themes: n } = r(15202).V,
             },
             [n.MIDNIGHT]: {
                 raw: 'PLUM_11',
-                opacity: 0.06
+                opacity: 0.08
             },
             [n.DARKER]: {
                 raw: 'PLUM_11',
@@ -1098,7 +1098,7 @@ let { Themes: n } = r(15202).V,
             },
             [n.MIDNIGHT]: {
                 raw: 'PLUM_11',
-                opacity: 0.12
+                opacity: 0.14
             },
             [n.DARKER]: {
                 raw: 'PLUM_11',
@@ -2691,6 +2691,25 @@ let { Themes: n } = r(15202).V,
                 opacity: 1
             }
         },
+        CUSTOM_STATUS_BUBBLE_BG: {
+            category: 'background',
+            [n.DARK]: {
+                raw: 'PRIMARY_800',
+                opacity: 1
+            },
+            [n.LIGHT]: {
+                raw: 'WHITE',
+                opacity: 1
+            },
+            [n.MIDNIGHT]: {
+                raw: 'PLUM_19',
+                opacity: 1
+            },
+            [n.DARKER]: {
+                raw: 'PLUM_17',
+                opacity: 1
+            }
+        },
         DEPRECATED_CARD_BG: {
             category: 'background',
             [n.DARK]: {
@@ -3619,9 +3638,85 @@ let { Themes: n } = r(15202).V,
                     opacity: 0.1
                 },
                 dark: {
-                    color: 'WHITE_500',
-                    opacity: 0.1
+                    color: 'BLACK_500',
+                    opacity: 0.3
                 }
+            }
+        },
+        INPUT_BORDER: {
+            category: 'background',
+            [n.DARK]: {
+                raw: 'PLUM_11',
+                opacity: 0.32
+            },
+            [n.LIGHT]: {
+                raw: 'PLUM_11',
+                opacity: 0.32
+            },
+            [n.MIDNIGHT]: {
+                raw: 'PLUM_11',
+                opacity: 0.32
+            },
+            [n.DARKER]: {
+                raw: 'PLUM_11',
+                opacity: 0.32
+            }
+        },
+        INPUT_ERROR_BACKGROUND: {
+            category: 'background',
+            [n.DARK]: {
+                raw: 'RED_500',
+                opacity: 0.12
+            },
+            [n.LIGHT]: {
+                raw: 'RED_500',
+                opacity: 0.12
+            },
+            [n.MIDNIGHT]: {
+                raw: 'RED_500',
+                opacity: 0.12
+            },
+            [n.DARKER]: {
+                raw: 'RED_500',
+                opacity: 0.12
+            }
+        },
+        INPUT_ERROR_BORDER: {
+            category: 'background',
+            [n.DARK]: {
+                raw: 'RED_360',
+                opacity: 1
+            },
+            [n.LIGHT]: {
+                raw: 'RED_360',
+                opacity: 1
+            },
+            [n.MIDNIGHT]: {
+                raw: 'RED_360',
+                opacity: 1
+            },
+            [n.DARKER]: {
+                raw: 'RED_360',
+                opacity: 1
+            }
+        },
+        INPUT_ERROR_TEXT: {
+            category: 'background',
+            [n.DARK]: {
+                raw: 'RED_260',
+                opacity: 1
+            },
+            [n.LIGHT]: {
+                raw: 'RED_700',
+                opacity: 1
+            },
+            [n.MIDNIGHT]: {
+                raw: 'RED_260',
+                opacity: 1
+            },
+            [n.DARKER]: {
+                raw: 'RED_260',
+                opacity: 1
             }
         },
         INPUT_FOCUSED_BORDER: {
@@ -3660,6 +3755,16 @@ let { Themes: n } = r(15202).V,
             [n.DARKER]: {
                 raw: 'PLUM_10',
                 opacity: 1
+            },
+            gradient: {
+                light: {
+                    color: 'BLACK_500',
+                    opacity: 0.6
+                },
+                dark: {
+                    color: 'WHITE_500',
+                    opacity: 0.55
+                }
             }
         },
         INTERACTIVE_ACTIVE: {
@@ -5168,7 +5273,7 @@ let { Themes: n } = r(15202).V,
             },
             [n.MIDNIGHT]: {
                 raw: 'PLUM_11',
-                opacity: 0.12
+                opacity: 0.14
             },
             [n.DARKER]: {
                 raw: 'PLUM_11',
@@ -5283,7 +5388,7 @@ let { Themes: n } = r(15202).V,
             },
             [n.MIDNIGHT]: {
                 raw: 'PLUM_11',
-                opacity: 0.06
+                opacity: 0.08
             },
             [n.DARKER]: {
                 raw: 'PLUM_11',

@@ -10,30 +10,29 @@ var i,
     d = n(924826),
     h = n(442837),
     p = n(902704),
-    _ = n(481060),
-    f = n(925549),
-    g = n(607070),
-    m = n(367907),
+    f = n(481060),
+    _ = n(925549),
+    m = n(607070),
+    g = n(367907),
     C = n(453542),
-    I = n(762914),
-    E = n(702321),
-    N = n(82295),
-    x = n(313201),
+    I = n(702321),
+    E = n(82295),
+    N = n(313201),
     S = n(860144),
-    v = n(214852),
-    Z = n(518311),
+    x = n(214852),
+    v = n(518311),
     T = n(355298),
-    L = n(869404),
+    Z = n(869404),
     A = n(333984),
     b = n(210887),
-    M = n(592125),
-    R = n(158776),
-    P = n(55589),
-    O = n(515753),
-    y = n(981631),
-    j = n(689938),
-    D = n(680136);
-function w(e, t, n) {
+    R = n(592125),
+    M = n(158776),
+    L = n(55589),
+    P = n(515753),
+    O = n(981631),
+    y = n(689938),
+    D = n(156762);
+function j(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,7 +46,7 @@ function w(e, t, n) {
     );
 }
 ((r = i || (i = {}))[(r.PAGES = 0)] = 'PAGES'), (r[(r.DMS = 1)] = 'DMS');
-let U = s.memo(function () {
+let w = s.memo(function () {
     return (0, a.jsxs)('svg', {
         width: '184',
         height: '428',
@@ -195,7 +194,7 @@ let U = s.memo(function () {
         ]
     });
 });
-class G extends (l = s.Component) {
+class U extends (l = s.Component) {
     static getDerivedStateFromProps(e) {
         let { children: t, privateChannelIds: n } = e;
         if (null == t)
@@ -245,12 +244,12 @@ class G extends (l = s.Component) {
         return (0, a.jsx)(u.SJ, {
             children: (i) => {
                 let { ref: l, role: r, ...s } = i;
-                return (0, a.jsx)(_.FocusJumpSection, {
+                return (0, a.jsx)(f.FocusJumpSection, {
                     children: (i) =>
-                        (0, a.jsx)(_.List, {
+                        (0, a.jsx)(f.List, {
                             fade: !0,
                             innerRole: r,
-                            innerAriaLabel: j.Z.Messages.DIRECT_MESSAGES,
+                            innerAriaLabel: y.Z.Messages.DIRECT_MESSAGES,
                             innerTag: 'ul',
                             ref: (e) => {
                                 var t;
@@ -274,15 +273,15 @@ class G extends (l = s.Component) {
     }
     constructor(...e) {
         super(...e),
-            w(this, 'state', {
+            j(this, 'state', {
                 initialized: !1,
                 preRenderedChildren: 0,
                 totalRowCount: 0,
                 nonNullChildren: []
             }),
-            w(this, '_list', null),
-            w(this, 'hasReportedAnalytics', !1),
-            w(this, 'reportAnalytics', () => {
+            j(this, '_list', null),
+            j(this, 'hasReportedAnalytics', !1),
+            j(this, 'reportAnalytics', () => {
                 var e;
                 if (this.hasReportedAnalytics) return;
                 let t = null === (e = this._list) || void 0 === e ? void 0 : e.getScrollerState();
@@ -294,40 +293,40 @@ class G extends (l = s.Component) {
                 let r = Math.round((t.offsetHeight - 44 * l) / 44),
                     a = r > n.length ? n.slice(0, r + 1) : n,
                     o = a.map((e) => (null != i[e] ? i[e].getRecipientId() : null)),
-                    c = n.some((e) => (0, E.Z)(e)),
+                    c = n.some((e) => (0, I.Z)(e)),
                     u = {
                         num_users_visible: a.length,
-                        num_users_visible_with_mobile_indicator: o.filter((e) => null != e && R.Z.isMobileOnline(e)).length
+                        num_users_visible_with_mobile_indicator: o.filter((e) => null != e && M.Z.isMobileOnline(e)).length
                     };
                 (this.hasReportedAnalytics = !0),
-                    m.ZP.trackWithMetadata(y.rMx.DM_LIST_VIEWED, {
+                    g.ZP.trackWithMetadata(O.rMx.DM_LIST_VIEWED, {
                         ...u,
                         ...(0, C.X)(),
                         changelog_dm_visible: c
                     });
             }),
-            w(this, 'getSectionHeight', (e) => {
+            j(this, 'getSectionHeight', (e) => {
                 let { showDMHeader: t } = this.props;
                 return 0 === e ? 0 : t ? 40 : 0;
             }),
-            w(
+            j(
                 this,
                 'handleScroll',
                 c()(() => {
                     if (null != this._list) {
                         let e = this._list.getScrollerNode();
-                        null != e && f.Z.updateChannelListScroll(y.ME, e.scrollTop);
+                        null != e && _.Z.updateChannelListScroll(O.ME, e.scrollTop);
                     }
                 }, 100)
             ),
-            w(this, 'renderDM', (e, t) => {
+            j(this, 'renderDM', (e, t) => {
                 let { privateChannelIds: n, channels: i, selectedChannelId: l } = this.props,
                     { totalRowCount: r, preRenderedChildren: s } = this.state,
                     o = i[n[t]];
                 return null == o
                     ? null
                     : (0, a.jsx)(
-                          O.ZP,
+                          P.ZP,
                           {
                               channel: o,
                               selected: o.id === l,
@@ -337,7 +336,7 @@ class G extends (l = s.Component) {
                           o.id
                       );
             }),
-            w(this, 'renderChild', (e) => {
+            j(this, 'renderChild', (e) => {
                 let { nonNullChildren: t, totalRowCount: n } = this.state,
                     i = t[e];
                 return s.isValidElement(i)
@@ -347,30 +346,30 @@ class G extends (l = s.Component) {
                       })
                     : i;
             }),
-            w(this, 'renderRow', (e) => {
+            j(this, 'renderRow', (e) => {
                 let { section: t, row: n } = e,
                     { privateChannelIds: i } = this.props;
-                return 0 === t ? this.renderChild(n) : 0 === n && 0 === i.length ? (0, a.jsx)(U, {}, 'no-private-channels') : this.renderDM(t, n);
+                return 0 === t ? this.renderChild(n) : 0 === n && 0 === i.length ? (0, a.jsx)(w, {}, 'no-private-channels') : this.renderDM(t, n);
             }),
-            w(this, 'renderSection', (e) => {
+            j(this, 'renderSection', (e) => {
                 let { section: t } = e,
                     { showDMHeader: n } = this.props;
                 return 0 !== t && n
                     ? (0, a.jsxs)(
-                          N.Z,
+                          E.Z,
                           {
                               className: D.privateChannelsHeaderContainer,
                               children: [
                                   (0, a.jsx)('span', {
                                       className: D.headerText,
-                                      children: j.Z.Messages.DIRECT_MESSAGES
+                                      children: y.Z.Messages.DIRECT_MESSAGES
                                   }),
-                                  (0, a.jsx)(Z.Z, {
-                                      tooltip: j.Z.Messages.CREATE_DM,
+                                  (0, a.jsx)(v.Z, {
+                                      tooltip: y.Z.Messages.CREATE_DM,
                                       tooltipPosition: 'top',
                                       popoutAlign: 'left',
                                       iconClassName: D.privateChannelRecipientsInviteButtonIcon,
-                                      icon: _.PlusSmallIcon,
+                                      icon: f.PlusSmallIcon,
                                       subscribeToGlobalHotkey: !0
                                   })
                               ]
@@ -379,36 +378,35 @@ class G extends (l = s.Component) {
                       )
                     : null;
             }),
-            w(this, 'getRowHeight', (e, t) => {
+            j(this, 'getRowHeight', (e, t) => {
                 let { privateChannelIds: n } = this.props;
                 return 1 === e && 0 === t && 0 === n.length ? 428 : 44;
             });
     }
 }
-w(G, 'defaultProps', { padding: 8 });
+j(U, 'defaultProps', { padding: 8 });
 t.Z = (e) => {
     let { version: t, theme: n, children: i, showDMHeader: l } = e,
         r = s.Children.count(i),
-        o = M.Z.getMutablePrivateChannels(),
-        c = (0, L.k1)(o),
+        o = R.Z.getMutablePrivateChannels(),
+        c = (0, Z.k1)(o),
         p = (0, h.Wu)(
-            [P.Z, T.Z, A.Z],
+            [L.Z, T.Z, A.Z],
             () => {
-                let e = P.Z.getPrivateChannelIds(),
-                    t = (0, L.tU)(e, [T.Z, A.Z]);
-                return (0, I.Ce)(t);
+                let e = L.Z.getPrivateChannelIds();
+                return (0, Z.tU)(e, [T.Z, A.Z]);
             },
             []
         );
-    (0, v.z)(S.R);
-    let _ = (0, h.cj)([g.Z, b.Z, M.Z], () => ({
-            theme: b.Z.darkSidebar ? y.BRd.DARK : n,
-            keyboardModeEnabled: g.Z.keyboardModeEnabled,
-            version: null != t ? ''.concat(t, ':').concat(M.Z.getPrivateChannelsVersion()) : M.Z.getPrivateChannelsVersion()
+    (0, x.z)(S.R);
+    let f = (0, h.cj)([m.Z, b.Z, R.Z], () => ({
+            theme: b.Z.darkSidebar ? O.BRd.DARK : n,
+            keyboardModeEnabled: m.Z.keyboardModeEnabled,
+            version: null != t ? ''.concat(t, ':').concat(R.Z.getPrivateChannelsVersion()) : R.Z.getPrivateChannelsVersion()
         })),
-        f = s.useRef(null),
-        m = s.useCallback((e) => {
-            let t = f.current,
+        _ = s.useRef(null),
+        g = s.useCallback((e) => {
+            let t = _.current,
                 n = document.querySelector(e);
             null != t &&
                 null != n &&
@@ -425,16 +423,16 @@ t.Z = (e) => {
         C = s.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = f.current;
+                    let t = _.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
             []
         ),
-        E = s.useCallback(
+        I = s.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = f.current;
+                    let t = _.current;
                     if (null == t) return e();
                     t.scrollToBottom({
                         callback() {
@@ -444,26 +442,26 @@ t.Z = (e) => {
                 }),
             []
         ),
-        N = (0, x.Dt)(),
-        Z = (0, d.ZP)({
-            id: 'private-channels-'.concat(N),
-            isEnabled: _.keyboardModeEnabled,
+        E = (0, N.Dt)(),
+        v = (0, d.ZP)({
+            id: 'private-channels-'.concat(E),
+            isEnabled: f.keyboardModeEnabled,
             scrollToStart: C,
-            scrollToEnd: E,
+            scrollToEnd: I,
             defaultFocused: (r + (l ? 1 : 0)).toString(),
-            setFocus: m
+            setFocus: g
         });
     return (0, a.jsx)(u.bG, {
-        navigator: Z,
-        children: (0, a.jsx)(G, {
+        navigator: v,
+        children: (0, a.jsx)(U, {
             channels: c,
             privateChannelIds: p,
-            listRef: f,
+            listRef: _,
             theme: n,
             version: t,
             ...e,
             children: i,
-            ..._
+            ...f
         })
     });
 };

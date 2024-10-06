@@ -36,11 +36,11 @@ function C(e) {
     }),
         (m[f.ME] = r);
 }
-function y(e) {
+function L(e) {
     var t;
     return null !== (t = S.get(e)) && void 0 !== t ? t : new Set();
 }
-function L(e, t, n) {
+function y(e, t, n) {
     let r = v(m, null != e ? e : f.ME),
         i = r[t],
         a = n(i);
@@ -51,7 +51,7 @@ function L(e, t, n) {
               null != i.channelId && (delete v(g, i.channelId)[t], delete v(A, i.channelId)[t]),
               null != i.sessionId && delete v(N, t)[i.sessionId],
               !(function (e, t) {
-                  let n = y(e);
+                  let n = L(e);
                   if (!!n.has(t)) (n = new Set(n)).delete(t), 0 === n.size ? S.delete(e) : S.set(e, n);
               })(null != e ? e : f.ME, t)),
           null != a &&
@@ -61,14 +61,14 @@ function L(e, t, n) {
                   a.selfVideo &&
                       ((v(A, a.channelId)[t] = a),
                       !(function (e, t) {
-                          let n = y(e);
+                          let n = L(e);
                           if (!n.has(t)) (n = new Set(n)).add(t), S.set(e, n);
                       })(null != e ? e : f.ME, t))),
               null != a.sessionId && (v(N, t)[a.sessionId] = a)),
           [!0, a, i]);
 }
 function D(e, t) {
-    return L(e, t.userId, (e) => {
+    return y(e, t.userId, (e) => {
         if (null == t.channelId) return null;
         {
             let n = {
@@ -92,7 +92,7 @@ function D(e, t) {
 function b(e) {
     let { guild: t } = e;
     c().forEach(m[t.id], (e) => {
-        L(t.id, e.userId, () => null);
+        y(t.id, e.userId, () => null);
     }),
         delete m[t.id];
 }
@@ -115,6 +115,10 @@ class M extends (a = d.ZP.Store) {
     getVoiceState(e, t) {
         return this.getVoiceStates(e)[t];
     }
+    getDiscoverableVoiceState(e, t) {
+        let n = this.getVoiceState(e, t);
+        return null == n || !1 === n.discoverable ? null : n;
+    }
     getVoiceStateForChannel(e) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r;
@@ -122,6 +126,9 @@ class M extends (a = d.ZP.Store) {
     }
     getVoiceStateForUser(e) {
         return Object.values(v(N, e))[0];
+    }
+    getDiscoverableVoiceStateForUser(e) {
+        return Object.values(v(N, e)).find((e) => !1 !== e.discoverable);
     }
     getVoiceStateForSession(e, t) {
         var n;
@@ -181,12 +188,12 @@ class M extends (a = d.ZP.Store) {
         },
         OVERLAY_INITIALIZE: function (e) {
             let { voiceStates: t, user: n, sessionId: a } = e;
-            for (let [e, n] of ((m = {}), (g = {}), (N = {}), (A = {}), Object.entries(t))) for (let [t, r] of Object.entries(n)) L(e, t, () => new E.Z(r));
+            for (let [e, n] of ((m = {}), (g = {}), (N = {}), (A = {}), Object.entries(t))) for (let [t, r] of Object.entries(n)) y(e, t, () => new E.Z(r));
             (r = n.id), (i = a);
         },
         VOICE_CHANNEL_SELECT: function (e) {
             let { guildId: t, channelId: n } = e,
-                [i] = L(t, r, (e) => (null == e ? void 0 : e.set('channelId', n)));
+                [i] = y(t, r, (e) => (null == e ? void 0 : e.set('channelId', n)));
             return i;
         },
         VOICE_STATE_UPDATES: function (e) {
@@ -212,7 +219,7 @@ class M extends (a = d.ZP.Store) {
                 let [r] = D(e.guildId, n);
                 t = t || r;
             }
-            for (let n of e.removedVoiceStateUsers) L(e.guildId, n, () => null), (t = !0);
+            for (let n of e.removedVoiceStateUsers) y(e.guildId, n, () => null), (t = !0);
             return t && I++, t;
         },
         RTC_CONNECTION_PLATFORM: function (e) {

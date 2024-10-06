@@ -36,8 +36,8 @@ var r = n(512722),
     R = n(594174),
     v = n(403182),
     C = n(823379),
-    y = n(861990),
-    L = n(555573),
+    L = n(861990),
+    y = n(555573),
     D = n(174212),
     b = n(456007),
     M = n(10718),
@@ -67,7 +67,7 @@ let F = (e, t) => {
     };
 async function Z(e) {
     var t, n, r, s, l, c, d, f, h, p, I, m, T, S, N, R, v;
-    let { command: C, optionValues: y, context: D, commandTargetId: M, maxSizeCallback: x, commandOrigin: k = U.bB.CHAT, sectionName: B, interactionLifecycleOptionsFactory: Z = z, source: j } = e,
+    let { command: C, optionValues: L, context: D, commandTargetId: M, maxSizeCallback: x, commandOrigin: k = U.bB.CHAT, sectionName: B, interactionLifecycleOptionsFactory: Z = z, source: j } = e,
         K = null !== (r = P.Z.getSource(D.channel.id)) && void 0 !== r ? r : j,
         Q = null !== (s = P.Z.getCommandOrigin(D.channel.id)) && void 0 !== s ? s : k;
     null == D.autocomplete &&
@@ -83,11 +83,11 @@ async function Z(e) {
         J = (0, w.D7)(Q);
     if (null != C.options)
         for (let e of C.options) {
-            if (e.type === u.jw.SUB_COMMAND || e.type === u.jw.SUB_COMMAND_GROUP || !(e.name in y)) continue;
+            if (e.type === u.jw.SUB_COMMAND || e.type === u.jw.SUB_COMMAND_GROUP || !(e.name in L)) continue;
             let t = (null === (l = D.autocomplete) || void 0 === l ? void 0 : l.name) === e.name || void 0,
                 n = null;
             if (e.type === u.jw.STRING) {
-                let r = null !== (d = null === (c = b.li(y, e.name)) || void 0 === c ? void 0 : c.trim()) && void 0 !== d ? d : '';
+                let r = null !== (d = null === (c = b.li(L, e.name)) || void 0 === c ? void 0 : c.trim()) && void 0 !== d ? d : '';
                 (n = null != e.choices ? F(e.choices, r) : e.autocomplete ? V(e, r, D) : r),
                     i()(null != D.autocomplete || null != n, 'Option "'.concat(e.name, '" expects a value')),
                     null != n &&
@@ -113,7 +113,7 @@ async function Z(e) {
                     });
                 continue;
             }
-            let r = b.OU(y[e.name]);
+            let r = b.OU(L[e.name]);
             if ((i()(null != D.autocomplete || 1 === r.length, 'Option "'.concat(e.name, '" expects a single option type')), null == r[0] && !t)) continue;
             let a =
                 null !== (f = r[0]) && void 0 !== f
@@ -227,7 +227,7 @@ async function Z(e) {
     };
     null != M && (ee.target_id = M),
         null != D.autocomplete
-            ? (0, L.GV)(C, D, ee)
+            ? (0, y.GV)(C, D, ee)
             : (o.Z.clearAll(D.channel.id, J),
               W({
                   applicationId: C.applicationId,
@@ -236,7 +236,7 @@ async function Z(e) {
                   attachments: $,
                   maxSizeCallback: x,
                   onMessageSuccess: () => {
-                      Y(y);
+                      Y(L);
                   },
                   analytics_location: q(Q),
                   sectionName: B,
@@ -291,7 +291,7 @@ let Y = (e) => {
                 channelId: h,
                 guildId: p,
                 data: r,
-                nonce: null !== (t = _.messageId) && void 0 !== t ? t : (0, S.r)(),
+                nonce: null !== (t = _.nonce) && void 0 !== t ? t : (0, S.r)(),
                 attachments: a,
                 maxSizeCallback: s,
                 analytics_location: l,
@@ -370,6 +370,9 @@ async function z(e, t, n) {
             get messageId() {
                 return c.id;
             },
+            get nonce() {
+                return c.id;
+            },
             onCreate: (e) => {
                 null != c.interaction && (c.interaction.id = e);
             },
@@ -392,6 +395,8 @@ function q(e) {
     switch (e) {
         case U.bB.APPLICATION_LAUNCHER:
             return U.Vh.APP_LAUNCHER;
+        case U.bB.APP_LAUNCHER_APPLICATION_VIEW:
+            return U.Vh.APP_LAUNCHER_APPLICATION_VIEW;
         case U.bB.IMAGE_RECS_MENU:
             return U.Vh.IMAGE_RECS_MENU;
         case U.bB.IMAGE_RECS_SUBMENU:
@@ -400,6 +405,12 @@ function q(e) {
             return U.Vh.ACTIVITY_INSTANCE_EMBED;
         case U.bB.ACTIVITY_BOOKMARK_EMBED:
             return U.Vh.ACTIVITY_BOOKMARK_EMBED;
+        case U.bB.MINI_SHELF:
+            return U.Vh.ACTIVITIES_MINI_SHELF;
+        case U.bB.VOICE_TILE_ACTIVITY_SUGGESTIONS:
+            return U.Vh.VC_TILE_ACTIVITY_SUGGESTION;
+        case U.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON:
+            return U.Vh.APP_DMS_ENTRY_POINT_COMMAND_BUTTON;
         default:
             return U.Vh.SLASH_UI;
     }
@@ -423,11 +434,11 @@ async function X(e, t, n, r) {
             null == r || r(i, e), I.yr(t, G.evJ.ENTITY_TOO_LARGE, B.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({ maxSize: (0, v.Ng)(i) }));
         },
         { totalSize: s, largestUploadedFileSize: o } = await Q(e, !1);
-    if (o > Math.max(i, k.Y1) || s > y.zz) return a(o), !1;
+    if (o > Math.max(i, k.Y1) || s > L.zz) return a(o), !1;
     try {
         await (0, d.$)(e);
     } catch {
         I.yr(t, void 0, B.Z.Messages.UPLOADING_FILES_FAILED.format({ count: e.length }));
     }
-    return ({ totalSize: s, largestUploadedFileSize: o } = await Q(e, !0)), (!e.some((e) => e.error === G.evJ.ENTITY_TOO_LARGE) && !(s > y.zz)) || (a(o), !1);
+    return ({ totalSize: s, largestUploadedFileSize: o } = await Q(e, !0)), (!e.some((e) => e.error === G.evJ.ENTITY_TOO_LARGE) && !(s > L.zz)) || (a(o), !1);
 }

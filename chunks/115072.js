@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return C;
+            return O;
         }
     }),
     n(47120);
@@ -12,39 +12,40 @@ var a = n(735250),
     s = n(780384),
     l = n(481060),
     c = n(53281),
-    m = n(476326),
-    u = n(273031),
+    u = n(476326),
+    m = n(273031),
     d = n(898463),
     _ = n(112831),
     h = n(951394),
     p = n(210887),
+    f = n(594174),
     v = n(768581),
     I = n(358085),
     R = n(223356),
     x = n(225452),
-    f = n(689938),
-    T = n(338520),
-    g = n(289575),
-    E = n(371411);
-let j = ['Android', 'iOS', 'Windows Mobile', 'Windows', 'Linux', 'Mac OS X'].map((e) => ({
+    T = n(689938),
+    g = n(549667),
+    E = n(289575),
+    j = n(371411);
+let C = ['Android', 'iOS', 'Windows Mobile', 'Windows', 'Linux', 'Mac OS X'].map((e) => ({
     label: e,
     value: e
 }));
-function C(e) {
-    var t, C, O, P, N;
-    let { transitionState: S, onClose: B } = e,
-        M = r.useRef(null),
+function O(e) {
+    var t, O, P, N, S;
+    let { transitionState: B, onClose: M } = e,
         b = r.useRef(null),
-        [Z, y] = r.useState(''),
-        [G, U] = r.useState(''),
-        [L, A] = r.useState(),
-        [D, w] = r.useState(''),
-        [F, k] = r.useState([]),
-        [V, Y] = r.useState(),
-        [W, H] = r.useState(),
-        [z, X] = r.useState(!1),
-        [Q, q] = r.useState(''),
-        [K, J] = r.useState(
+        Z = r.useRef(null),
+        [y, G] = r.useState(''),
+        [U, L] = r.useState(''),
+        [A, D] = r.useState(),
+        [w, F] = r.useState(''),
+        [k, V] = r.useState([]),
+        [Y, W] = r.useState(),
+        [H, z] = r.useState(),
+        [X, Q] = r.useState(!1),
+        [q, K] = r.useState(''),
+        [J, $] = r.useState(
             (function (e) {
                 switch (e) {
                     case 'windows':
@@ -57,60 +58,65 @@ function C(e) {
                 return '';
             })((0, I.getOS)())
         ),
-        [$, ee] = r.useState(''),
-        [et, en] = r.useState(''),
-        [ea, er] = r.useState(''),
-        [ei, eo] = r.useState(''),
-        [es, el] = r.useState(!1),
-        [ec, em] = r.useState(!1),
-        [eu, ed] = r.useState(!1),
-        e_ = () => {
-            null == B || B();
+        [ee, et] = r.useState(''),
+        [en, ea] = r.useState(''),
+        [er, ei] = r.useState(''),
+        [eo, es] = r.useState(''),
+        [el, ec] = r.useState(!1),
+        [eu, em] = r.useState(!1),
+        [ed, e_] = r.useState(!1),
+        eh = (0, o.e7)([p.Z], () => p.Z.theme),
+        ep = (0, o.e7)([f.default], () => {
+            let e = f.default.getCurrentUser();
+            return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
+        }),
+        ef = () => {
+            null == M || M();
         },
-        eh = (e) => {
-            k(F.filter((t) => t.id !== e));
+        ev = (e) => {
+            V(k.filter((t) => t.id !== e));
         };
-    async function ep() {
+    async function eI() {
         var e;
-        if ((ed(!1), '' === Z || null == L)) {
-            el(!0);
+        if ((e_(!1), '' === y || null == A)) {
+            ec(!0);
             return;
         }
-        let t = null == V ? void 0 : null === (e = V.features) || void 0 === e ? void 0 : e.find((e) => (0, R.pD)(e) === W);
-        em(!0), el(!1);
+        let t = null == Y ? void 0 : null === (e = Y.features) || void 0 === e ? void 0 : e.find((e) => (0, R.pD)(e) === H);
+        em(!0), ec(!1);
         let r = (0, x.D)(
-                F.map((e) => {
+                k.map((e) => {
                     let { item: t } = e;
                     return t;
                 })
             ),
             i =
-                !0 === z
+                !0 === X
                     ? {
-                          overridePlatformInformation: z,
-                          device: Q,
-                          operatingSystem: K,
-                          operatingSystemVersion: $,
-                          clientVersion: et,
-                          clientBuildNumber: ea,
-                          locale: ei
+                          overridePlatformInformation: X,
+                          device: q,
+                          operatingSystem: J,
+                          operatingSystemVersion: ee,
+                          clientVersion: en,
+                          clientBuildNumber: er,
+                          locale: eo
                       }
-                    : { overridePlatformInformation: z },
+                    : { overridePlatformInformation: X },
             o = await (0, R.ZD)(
                 {
-                    name: Z,
-                    description: G,
-                    priority: L,
+                    name: y,
+                    description: U,
+                    priority: A,
                     feature: t,
-                    url: D
+                    url: w
                 },
                 i,
                 r
-            ).catch(() => ed(!0));
+            ).catch(() => e_(!0));
         em(!1),
             null != o && o.ok
-                ? (window.open(o.body.permalink_url, '_blank'),
-                  e_(),
+                ? (ep && window.open(o.body.permalink_url, '_blank'),
+                  ef(),
                   (0, l.openModalLazy)(async () => {
                       let { default: e } = await n.e('64648').then(n.bind(n, 81155));
                       return (t) =>
@@ -119,78 +125,78 @@ function C(e) {
                               asanaTask: o.body
                           });
                   }))
-                : ed(!0);
+                : e_(!0);
     }
     r.useEffect(() => {
-        (async function e() {
-            Y(await (0, R.WG)());
-        })();
-    }, []),
+        async function e() {
+            W(await (0, R.WG)());
+        }
+        ep && e();
+    }, [ep]),
         r.useEffect(() => {
-            if (F.length > 0) {
+            if (k.length > 0) {
                 var e;
-                null === (e = b.current) ||
+                null === (e = Z.current) ||
                     void 0 === e ||
                     e.scrollIntoView({
                         behavior: 'smooth',
                         block: 'end'
                     });
             }
-        }, [F]);
-    let ev = (0, o.e7)([p.Z], () => p.Z.theme),
-        eI = (0, s.wj)(ev) ? g : E;
+        }, [k]);
+    let eR = (0, s.wj)(eh) ? E : j;
     return (0, a.jsx)(l.ModalRoot, {
-        className: T.modalRoot,
-        transitionState: S,
-        'aria-label': f.Z.Messages.SUBMIT_BUG,
+        className: g.modalRoot,
+        transitionState: B,
+        'aria-label': T.Z.Messages.SUBMIT_BUG,
         children: (0, a.jsx)(l.ModalContent, {
-            className: T.modalContent,
+            className: g.modalContent,
             paddingFix: !1,
             children: (0, a.jsx)('div', {
-                className: T.container,
+                className: g.container,
                 children: (0, a.jsx)(l.HeadingLevel, {
                     forceLevel: 1,
                     component: (0, a.jsx)('div', {
-                        className: T.sidebarContainer,
+                        className: g.sidebarContainer,
                         children: (0, a.jsx)(_.Z, {
                             strong: !0,
                             color: _.Z.Colors.HEADER_PRIMARY,
                             size: _.Z.Sizes.SIZE_24,
-                            children: (0, a.jsx)(l.H, { children: f.Z.Messages.BUG_REPORT_TITLE })
+                            children: (0, a.jsx)(l.H, { children: T.Z.Messages.BUG_REPORT_TITLE })
                         })
                     }),
                     children: (0, a.jsxs)('div', {
-                        className: T.contentContainer,
+                        className: g.contentContainer,
                         children: [
                             (0, a.jsx)('img', {
-                                className: T.contentIcon,
+                                className: g.contentIcon,
                                 alt: '',
-                                src: eI
+                                src: eR
                             }),
                             (0, a.jsxs)('form', {
-                                className: T.form,
-                                onSubmit: ep,
+                                className: g.form,
+                                onSubmit: eI,
                                 children: [
                                     (0, a.jsx)(l.FormItem, {
-                                        error: es && '' === Z ? f.Z.Messages.REQUIRED : null,
-                                        title: f.Z.Messages.BUG_REPORT_NAME,
-                                        className: T.formInput,
+                                        error: el && '' === y ? T.Z.Messages.REQUIRED : null,
+                                        title: T.Z.Messages.BUG_REPORT_NAME,
+                                        className: g.formInput,
                                         children: (0, a.jsx)(l.TextInput, {
                                             placeholder: 'Something is broken on this screen.',
                                             type: 'text',
-                                            value: Z,
+                                            value: y,
                                             maxLength: 100,
-                                            onChange: y
+                                            onChange: G
                                         })
                                     }),
                                     (0, a.jsxs)(l.FormItem, {
-                                        title: f.Z.Messages.BUG_REPORT_DESCRIPTION,
-                                        className: T.formInput,
+                                        title: T.Z.Messages.BUG_REPORT_DESCRIPTION,
+                                        className: g.formInput,
                                         children: [
                                             (0, a.jsx)(l.TextArea, {
                                                 placeholder: 'What did you expect to see?',
-                                                value: G,
-                                                onChange: U
+                                                value: U,
+                                                onChange: L
                                             }),
                                             (0, a.jsx)(l.Text, {
                                                 variant: 'text-sm/normal',
@@ -200,22 +206,22 @@ function C(e) {
                                         ]
                                     }),
                                     (0, a.jsx)(l.FormItem, {
-                                        error: es && void 0 === L ? f.Z.Messages.REQUIRED : null,
-                                        title: f.Z.Messages.BUG_REPORT_PRIORITY,
-                                        className: T.formInput,
+                                        error: el && void 0 === A ? T.Z.Messages.REQUIRED : null,
+                                        title: T.Z.Messages.BUG_REPORT_PRIORITY,
+                                        className: g.formInput,
                                         children: (0, a.jsx)(l.SingleSelect, {
                                             renderOptionLabel: (e) =>
                                                 (function (e) {
                                                     let t = e.priority;
                                                     return (0, a.jsxs)('div', {
-                                                        className: T.formPriorityImageContainer,
+                                                        className: g.formPriorityImageContainer,
                                                         children: [
                                                             (0, a.jsxs)('div', {
-                                                                className: T.formPriorityTitleContainer,
+                                                                className: g.formPriorityTitleContainer,
                                                                 children: [
                                                                     (0, a.jsx)('img', {
                                                                         alt: '',
-                                                                        className: T.formPriorityImage,
+                                                                        className: g.formPriorityImage,
                                                                         src: (0, v.gT)({
                                                                             id: t.emoji,
                                                                             animated: !0,
@@ -225,7 +231,7 @@ function C(e) {
                                                                     (0, a.jsx)(l.Text, {
                                                                         color: 'header-primary',
                                                                         variant: 'text-sm/semibold',
-                                                                        className: T.formPriorityTitle,
+                                                                        className: g.formPriorityTitle,
                                                                         children: t.title
                                                                     })
                                                                 ]
@@ -233,153 +239,154 @@ function C(e) {
                                                             (0, a.jsx)(l.Text, {
                                                                 color: 'header-secondary',
                                                                 variant: 'text-xs/normal',
-                                                                className: T.formPriorityDescription,
+                                                                className: g.formPriorityDescription,
                                                                 children: t.description
                                                             })
                                                         ]
                                                     });
                                                 })(e),
-                                            onChange: A,
+                                            onChange: D,
                                             options: (0, R.Tj)().map((e) => ({
                                                 priority: e,
                                                 value: e.value,
                                                 label: e.title
                                             })),
-                                            value: L,
+                                            value: A,
                                             maxVisibleItems: 3,
                                             closeOnSelect: !0
                                         })
                                     }),
-                                    (0, a.jsx)(l.FormItem, {
-                                        title: f.Z.Messages.BUG_REPORT_FEATURE_AREA,
-                                        className: T.formInput,
-                                        children: (0, a.jsx)(l.SearchableSelect, {
-                                            value: W,
-                                            options:
-                                                null !==
-                                                    (N =
-                                                        null == (t = V)
-                                                            ? void 0
-                                                            : null === (P = t.features) || void 0 === P
-                                                              ? void 0
-                                                              : null === (O = P.filter((e) => '' !== (0, R.pD)(e))) || void 0 === O
+                                    ep &&
+                                        (0, a.jsx)(l.FormItem, {
+                                            title: T.Z.Messages.BUG_REPORT_FEATURE_AREA,
+                                            className: g.formInput,
+                                            children: (0, a.jsx)(l.SearchableSelect, {
+                                                value: H,
+                                                options:
+                                                    null !==
+                                                        (S =
+                                                            null == (t = Y)
                                                                 ? void 0
-                                                                : null ===
-                                                                        (C = O.map((e) => {
-                                                                            var t;
-                                                                            return {
-                                                                                label: null !== (t = e.name) && void 0 !== t ? t : '',
-                                                                                value: (0, R.pD)(e)
-                                                                            };
-                                                                        })) || void 0 === C
+                                                                : null === (N = t.features) || void 0 === N
                                                                   ? void 0
-                                                                  : C.sort((e, t) => e.label.localeCompare(t.label))) && void 0 !== N
-                                                    ? N
-                                                    : [],
-                                            isDisabled: null == V,
-                                            onChange: (e) => H(e)
-                                        })
-                                    }),
+                                                                  : null === (P = N.filter((e) => '' !== (0, R.pD)(e))) || void 0 === P
+                                                                    ? void 0
+                                                                    : null ===
+                                                                            (O = P.map((e) => {
+                                                                                var t;
+                                                                                return {
+                                                                                    label: null !== (t = e.name) && void 0 !== t ? t : '',
+                                                                                    value: (0, R.pD)(e)
+                                                                                };
+                                                                            })) || void 0 === O
+                                                                      ? void 0
+                                                                      : O.sort((e, t) => e.label.localeCompare(t.label))) && void 0 !== S
+                                                        ? S
+                                                        : [],
+                                                isDisabled: null == Y,
+                                                onChange: (e) => z(e)
+                                            })
+                                        }),
                                     (0, a.jsx)(l.FormItem, {
-                                        title: f.Z.Messages.BUG_REPORT_URL,
-                                        className: T.formInput,
+                                        title: T.Z.Messages.BUG_REPORT_URL,
+                                        className: g.formInput,
                                         children: (0, a.jsx)(l.TextInput, {
-                                            placeholder: f.Z.Messages.BUG_REPORT_EXTERNAL_SOURCE,
+                                            placeholder: T.Z.Messages.BUG_REPORT_EXTERNAL_SOURCE,
                                             type: 'text',
-                                            value: D,
+                                            value: w,
                                             maxLength: 5000,
-                                            onChange: w
+                                            onChange: F
                                         })
                                     }),
                                     (0, a.jsx)(l.FormItem, {
-                                        className: T.formInput,
+                                        className: g.formInput,
                                         children: (0, a.jsx)(l.Checkbox, {
-                                            value: z,
-                                            onChange: (e, t) => X(t),
+                                            value: X,
+                                            onChange: (e, t) => Q(t),
                                             children: (0, a.jsx)(l.Text, {
                                                 variant: 'text-sm/normal',
                                                 color: 'info-help-text',
-                                                children: f.Z.Messages.BUG_REPORT_OVERRIDE_PLATFORM_INFORMATION
+                                                children: T.Z.Messages.BUG_REPORT_OVERRIDE_PLATFORM_INFORMATION
                                             })
                                         })
                                     }),
-                                    z
+                                    X
                                         ? (0, a.jsxs)(a.Fragment, {
                                               children: [
                                                   (0, a.jsx)(l.FormItem, {
-                                                      title: f.Z.Messages.BUG_REPORT_DEVICE,
-                                                      className: T.formInput,
+                                                      title: T.Z.Messages.BUG_REPORT_DEVICE,
+                                                      className: g.formInput,
                                                       children: (0, a.jsx)(l.TextInput, {
                                                           placeholder: 'Device',
-                                                          value: Q,
-                                                          onChange: (e) => q(e)
+                                                          value: q,
+                                                          onChange: (e) => K(e)
                                                       })
                                                   }),
                                                   (0, a.jsx)(l.FormItem, {
-                                                      title: f.Z.Messages.BUG_REPORT_OS,
-                                                      className: T.formInput,
+                                                      title: T.Z.Messages.BUG_REPORT_OS,
+                                                      className: g.formInput,
                                                       children: (0, a.jsx)(l.SingleSelect, {
-                                                          value: K,
-                                                          options: j,
-                                                          onChange: (e) => J(e)
+                                                          value: J,
+                                                          options: C,
+                                                          onChange: (e) => $(e)
                                                       })
                                                   }),
                                                   (0, a.jsx)(l.FormItem, {
-                                                      title: f.Z.Messages.BUG_REPORT_OS_VERSION,
-                                                      className: T.formInput,
+                                                      title: T.Z.Messages.BUG_REPORT_OS_VERSION,
+                                                      className: g.formInput,
                                                       children: (0, a.jsx)(l.TextInput, {
                                                           placeholder: 'Operating System Version',
-                                                          value: $,
-                                                          onChange: (e) => ee(e)
+                                                          value: ee,
+                                                          onChange: (e) => et(e)
                                                       })
                                                   }),
                                                   (0, a.jsx)(l.FormItem, {
-                                                      title: f.Z.Messages.BUG_REPORT_CLIENT_VERSION,
-                                                      className: T.formInput,
+                                                      title: T.Z.Messages.BUG_REPORT_CLIENT_VERSION,
+                                                      className: g.formInput,
                                                       children: (0, a.jsx)(l.TextInput, {
                                                           placeholder: 'Client Version',
-                                                          value: et,
-                                                          onChange: (e) => en(e)
+                                                          value: en,
+                                                          onChange: (e) => ea(e)
                                                       })
                                                   }),
                                                   (0, a.jsx)(l.FormItem, {
-                                                      title: f.Z.Messages.BUG_REPORT_CLIENT_BUILD_NUMBER,
-                                                      className: T.formInput,
+                                                      title: T.Z.Messages.BUG_REPORT_CLIENT_BUILD_NUMBER,
+                                                      className: g.formInput,
                                                       children: (0, a.jsx)(l.TextInput, {
                                                           placeholder: 'Client Build Number',
-                                                          value: ea,
-                                                          onChange: (e) => er(e)
+                                                          value: er,
+                                                          onChange: (e) => ei(e)
                                                       })
                                                   }),
                                                   (0, a.jsx)(l.FormItem, {
-                                                      title: f.Z.Messages.BUG_REPORT_LOCALE,
-                                                      className: T.formInput,
+                                                      title: T.Z.Messages.BUG_REPORT_LOCALE,
+                                                      className: g.formInput,
                                                       children: (0, a.jsx)(l.TextInput, {
                                                           placeholder: 'Locale',
-                                                          value: ei,
-                                                          onChange: (e) => eo(e)
+                                                          value: eo,
+                                                          onChange: (e) => es(e)
                                                       })
                                                   })
                                               ]
                                           })
                                         : null,
                                     (0, a.jsxs)(l.Button, {
-                                        className: T.uploadButton,
+                                        className: g.uploadButton,
                                         children: [
-                                            f.Z.Messages.BUG_REPORT_ADD_ATTACHMENTS,
+                                            T.Z.Messages.BUG_REPORT_ADD_ATTACHMENTS,
                                             (0, a.jsx)(c.Z, {
-                                                ref: M,
+                                                ref: b,
                                                 onChange: (e) => {
                                                     var t, n;
                                                     (null === (n = e.currentTarget) || void 0 === n ? void 0 : null === (t = n.files) || void 0 === t ? void 0 : t[0]) != null &&
-                                                        k([
-                                                            ...F,
+                                                        V([
+                                                            ...k,
                                                             ...Array.from(e.currentTarget.files).map(
                                                                 (e) =>
-                                                                    new m.ZP({
+                                                                    new u.ZP({
                                                                         id: (0, i.Z)(),
                                                                         file: e,
-                                                                        platform: m.ow.WEB
+                                                                        platform: u.ow.WEB
                                                                     })
                                                             )
                                                         ]);
@@ -388,38 +395,38 @@ function C(e) {
                                             })
                                         ]
                                     }),
-                                    F.length > 0
+                                    k.length > 0
                                         ? (0, a.jsxs)(a.Fragment, {
                                               children: [
                                                   (0, a.jsx)('div', {
-                                                      className: T.imageOptionsContainer,
+                                                      className: g.imageOptionsContainer,
                                                       children: (0, a.jsx)(l.FormTitle, { children: 'Preview' })
                                                   }),
                                                   (0, a.jsx)('div', {
-                                                      ref: b,
-                                                      className: T.attachmentsGrid,
+                                                      ref: Z,
+                                                      className: g.attachmentsGrid,
                                                       children:
-                                                          F.length > 0 &&
-                                                          F.map((e) =>
+                                                          k.length > 0 &&
+                                                          k.map((e) =>
                                                               (0, a.jsxs)(
                                                                   'div',
                                                                   {
-                                                                      className: T.attachmentsGridItem,
+                                                                      className: g.attachmentsGridItem,
                                                                       children: [
                                                                           (0, a.jsx)(l.Text, {
                                                                               variant: 'text-sm/normal',
                                                                               children: e.filename
                                                                           }),
                                                                           (0, a.jsxs)('div', {
-                                                                              className: T.attachmentContainer,
+                                                                              className: g.attachmentContainer,
                                                                               children: [
                                                                                   (0, a.jsx)(d.r, { upload: e }),
                                                                                   (0, a.jsx)('div', {
-                                                                                      className: T.toolBar,
+                                                                                      className: g.toolBar,
                                                                                       children: (0, a.jsx)(h.ZP, {
-                                                                                          children: (0, a.jsx)(u.Z, {
-                                                                                              tooltip: f.Z.Messages.ATTACHMENT_UTILITIES_REMOVE,
-                                                                                              onClick: () => eh(e.id),
+                                                                                          children: (0, a.jsx)(m.Z, {
+                                                                                              tooltip: T.Z.Messages.ATTACHMENT_UTILITIES_REMOVE,
+                                                                                              onClick: () => ev(e.id),
                                                                                               dangerous: !0,
                                                                                               children: (0, a.jsx)(l.TrashIcon, {
                                                                                                   size: 'md',
@@ -439,7 +446,7 @@ function C(e) {
                                               ]
                                           })
                                         : null,
-                                    eu
+                                    ed
                                         ? (0, a.jsx)(l.Text, {
                                               color: 'text-danger',
                                               variant: 'text-sm/normal',
@@ -449,21 +456,21 @@ function C(e) {
                                 ]
                             }),
                             (0, a.jsxs)(l.ModalFooter, {
-                                className: T.submitContainer,
+                                className: g.submitContainer,
                                 children: [
                                     (0, a.jsx)(l.Button, {
-                                        className: T.formButton,
+                                        className: g.formButton,
                                         look: l.ButtonLooks.BLANK,
-                                        onClick: e_,
+                                        onClick: ef,
                                         children: (0, a.jsx)(l.Text, {
                                             variant: 'text-sm/normal',
-                                            children: f.Z.Messages.CANCEL
+                                            children: T.Z.Messages.CANCEL
                                         })
                                     }),
                                     (0, a.jsx)(l.Button, {
-                                        submitting: ec,
-                                        className: T.formButton,
-                                        onClick: ep,
+                                        submitting: eu,
+                                        className: g.formButton,
+                                        onClick: eI,
                                         children: 'Submit and Open Report'
                                     })
                                 ]

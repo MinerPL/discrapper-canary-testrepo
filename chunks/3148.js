@@ -30,11 +30,11 @@ function c(e) {
     };
 }
 function d(e) {
-    let { channelId: t, content: n, tts: r = !1, type: d = u.uaV.DEFAULT, messageReference: _, allowedMentions: E, author: f, flags: h, nonce: p, poll: m, changelogId: I } = e,
-        T = [];
+    let { channelId: t, content: n, tts: r = !1, type: d = u.uaV.DEFAULT, messageReference: _, allowedMentions: E, author: f, flags: h, nonce: p, poll: I, changelogId: m, giftingPrompt: T, state: S } = e,
+        g = [];
     if (d === u.uaV.REPLY && (i()(null != _, 'Replies must have a message reference'), null == E || E.replied_user)) {
         let e = a.Z.getMessageByReference(_);
-        (null == e ? void 0 : e.state) === a.Y.LOADED && T.push(c(e.message.author));
+        (null == e ? void 0 : e.state) === a.Y.LOADED && g.push(c(e.message.author));
     }
     return (
         null == f && (f = o.default.getCurrentUser()),
@@ -49,19 +49,20 @@ function d(e) {
             attachments: [],
             embeds: [],
             pinned: !1,
-            mentions: T,
+            mentions: g,
             mention_channels: [],
             mention_roles: [],
             mention_everyone: !1,
             timestamp: new Date().toISOString(),
-            state: u.yb.SENDING,
+            state: S || u.yb.SENDING,
             tts: r,
             message_reference: _,
             message_snapshots: [],
             flags: h,
             nonce: p,
-            poll: m,
-            changelog_id: I
+            poll: I,
+            changelog_id: m,
+            gifting_prompt: T
         }
     );
 }

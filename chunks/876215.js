@@ -12,4 +12,5 @@ n.d(t, {
     (i[(i.LISTENED_SESSION = 5)] = 'LISTENED_SESSION'),
     (i[(i.TOP_ARTIST = 6)] = 'TOP_ARTIST'),
     (i[(i.CUSTOM_STATUS = 7)] = 'CUSTOM_STATUS'),
-    (i[(i.LAUNCHED_ACTIVITY = 8)] = 'LAUNCHED_ACTIVITY');
+    (i[(i.LAUNCHED_ACTIVITY = 8)] = 'LAUNCHED_ACTIVITY'),
+    (i[(i.LEADERBOARD = 9)] = 'LEADERBOARD');

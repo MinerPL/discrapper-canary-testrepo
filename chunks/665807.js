@@ -3,32 +3,27 @@ var i = n(735250),
     s = n(442837),
     r = n(481060),
     l = n(150192),
-    o = n(859921),
-    c = n(416771),
+    o = n(164991),
+    c = n(726115),
     d = n(731455),
     u = n(689938),
-    _ = n(848331),
+    _ = n(501612),
     E = n(882008);
 t.Z = function (e) {
     let { loadId: t } = e,
-        n = (0, o.B)((e) => {
-            let { searchCategoryId: t } = e;
-            return t;
-        }),
+        n = (0, o.lZ)(),
         h = (0, s.e7)([l.Z], () => l.Z.getCategoryName(n)),
         m = a.useCallback(() => {
-            var e;
-            let n = o.B.getState();
-            (0, c.y)({
-                loadId: t,
-                categoryId: d.Hk,
-                offset: 0,
-                searchQuery: n.searchQuery,
-                languageCode: null !== (e = n.searchLanguageCode) && void 0 !== e ? e : (0, c.X)()
-            });
+            (0, o.LD)({ categoryId: d.Hk }),
+                (0, c.oT)({
+                    loadId: t,
+                    categoryId: d.Hk,
+                    query: (0, o.Zq)(),
+                    languageCode: (0, o.a7)()
+                });
         }, [t]),
         I = n === d.Hk ? u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({ categoryName: h }),
-        g = n === d.Hk ? u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY : u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({ onClick: m });
+        p = n === d.Hk ? u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY : u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({ onClick: m });
     return (0, i.jsxs)('div', {
         className: _.container,
         children: [
@@ -45,7 +40,7 @@ t.Z = function (e) {
             (0, i.jsx)(r.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                children: g
+                children: p
             })
         ]
     });

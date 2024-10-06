@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return C;
+        return x;
     }
 }),
     t(653041),
@@ -11,8 +11,8 @@ var i = t(735250),
     l = t.n(s),
     r = t(243814),
     o = t(442837),
-    d = t(481060),
-    c = t(367907),
+    c = t(481060),
+    d = t(367907),
     u = t(213459),
     I = t(600164),
     m = t(488915),
@@ -23,29 +23,29 @@ var i = t(735250),
     h = t(929507),
     g = t(981631),
     p = t(689938),
-    f = t(503899);
-function C(e) {
-    var n, t, s, C, O, x, S;
-    let { name: A, icon: R, imageSrc: b, iconBackgroundColor: Z, iconClassName: v, details: M, integration: L, buttonText: j, buttonDisabled: D, hasNextSection: P, onButtonClick: B, guildId: y, isScrolling: G, canShowMigrationTooltip: k } = e,
-        [U, H] = a.useState(!1),
-        [w, W] = a.useState(!1);
-    let F =
-            ((C = j),
-            (O = D),
-            (x = P),
-            (S = B),
-            null == C || null == S
+    f = t(556208);
+function x(e) {
+    var n, t, s, x, C, O, S;
+    let { name: A, icon: R, imageSrc: b, iconBackgroundColor: Z, iconClassName: v, iconWrapperClassName: M, details: L, integration: j, buttonText: D, buttonDisabled: P, hasNextSection: B, onButtonClick: y, guildId: G, isScrolling: k, canShowMigrationTooltip: H, trailing: w } = e,
+        [U, W] = a.useState(!1),
+        [F, V] = a.useState(!1);
+    let K =
+            ((x = D),
+            (C = P),
+            (O = B),
+            (S = y),
+            null == x || null == S
                 ? null
-                : x
+                : O
                   ? (0, i.jsxs)(I.Z, {
                         align: I.Z.Align.CENTER,
                         children: [
-                            (0, i.jsx)(d.Text, {
+                            (0, i.jsx)(c.Text, {
                                 variant: 'text-sm/normal',
-                                children: C
+                                children: x
                             }),
-                            x
-                                ? (0, i.jsx)(d.ChevronSmallRightIcon, {
+                            O
+                                ? (0, i.jsx)(c.ChevronSmallRightIcon, {
                                       size: 'custom',
                                       color: 'currentColor',
                                       width: 10,
@@ -55,29 +55,29 @@ function C(e) {
                                 : null
                         ]
                     })
-                  : (0, i.jsx)(d.Button, {
-                        size: d.Button.Sizes.SMALL,
-                        look: x ? d.Button.Looks.LINK : d.Button.Looks.FILLED,
-                        color: x ? d.Button.Colors.PRIMARY : d.Button.Colors.BRAND,
-                        disabled: O,
+                  : (0, i.jsx)(c.Button, {
+                        size: c.Button.Sizes.SMALL,
+                        look: O ? c.Button.Looks.LINK : c.Button.Looks.FILLED,
+                        color: O ? c.Button.Colors.PRIMARY : c.Button.Colors.BRAND,
+                        disabled: C,
                         onClick: S,
-                        children: C
+                        children: x
                     })),
-        V = k && !G && !w && void 0 !== y && null != L;
+        Y = H && !k && !F && void 0 !== G && null != j;
     a.useEffect(() => {
-        V &&
+        Y &&
             E.default.track(g.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
-                ...(0, c.hH)(y),
-                application_id: null == L ? void 0 : L.application.id,
+                ...(0, d.hH)(G),
+                application_id: null == j ? void 0 : j.application.id,
                 location: 'overview'
             });
-    }, [y, null == L ? void 0 : L.application.id, V]);
-    let K = V
-            ? (0, i.jsx)(d.Popout, {
+    }, [G, null == j ? void 0 : j.application.id, Y]);
+    let z = Y
+            ? (0, i.jsx)(c.Popout, {
                   renderPopout: () =>
-                      (0, i.jsx)(d.Clickable, {
+                      (0, i.jsx)(c.Clickable, {
                           onClick: (e) => {
-                              e.stopPropagation(), W(!0), h.Z.dismissOverviewTooltip(y, L.integration);
+                              e.stopPropagation(), V(!0), h.Z.dismissOverviewTooltip(G, j.integration);
                           },
                           children: (0, i.jsx)(_.ZP, {
                               content: p.Z.Messages.COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP,
@@ -86,18 +86,18 @@ function C(e) {
                       }),
                   position: 'bottom',
                   align: 'center',
-                  animation: d.Popout.Animation.TRANSLATE,
+                  animation: c.Popout.Animation.TRANSLATE,
                   shouldShow: !0,
-                  children: () => F
+                  children: () => K
               })
-            : F,
-        Y = (0, o.Wu)([m.Z], () => {
+            : K,
+        q = (0, o.Wu)([m.Z], () => {
             var e;
-            return null != L && null != y && null !== (e = m.Z.getApplicationEntitlementsForGuild(L.application.id, y)) && void 0 !== e ? e : [];
+            return null != j && null != G && null !== (e = m.Z.getApplicationEntitlementsForGuild(j.application.id, G)) && void 0 !== e ? e : [];
         }),
-        z = (0, u.LD)(y, !0),
-        q = (null == L ? void 0 : L.application) != null && Object.keys(null !== (s = null === (t = z.result) || void 0 === t ? void 0 : null === (n = t.sections[L.application.id]) || void 0 === n ? void 0 : n.commands) && void 0 !== s ? s : {}).length > 0,
-        X = (0, i.jsxs)(I.Z, {
+        X = (0, u.LD)(G, !0),
+        J = (null == j ? void 0 : j.application) != null && Object.keys(null !== (s = null === (t = X.result) || void 0 === t ? void 0 : null === (n = t.sections[j.application.id]) || void 0 === n ? void 0 : n.commands) && void 0 !== s ? s : {}).length > 0,
+        Q = (0, i.jsxs)(I.Z, {
             children: [
                 (0, i.jsx)(T.Z, {
                     name: A,
@@ -105,8 +105,9 @@ function C(e) {
                     imageSrc: b,
                     iconBackgroundColor: Z,
                     iconClassName: v,
-                    details: M,
-                    isPremium: Y.length > 0
+                    iconWrapperClassName: M,
+                    details: L,
+                    isPremium: q.length > 0
                 }),
                 (0, i.jsx)(I.Z.Child, {
                     shrink: 0,
@@ -119,17 +120,17 @@ function C(e) {
                                 var a;
                                 if (null == e) return null;
                                 let s = [],
-                                    { application: l, integration: o, webhooks: c } = e;
+                                    { application: l, integration: o, webhooks: d } = e;
                                 return (
                                     null != l.bot &&
                                         s.push(
                                             (0, i.jsx)(
-                                                d.TooltipContainer,
+                                                c.TooltipContainer,
                                                 {
                                                     forceOpen: n,
                                                     text: new N.Z(l.bot).isVerifiedBot() ? p.Z.Messages.INTEGRATIONS_APPLICATION_VERIFIED_BOT : p.Z.Messages.INTEGRATIONS_APPLICATION_BOT,
                                                     className: f.feature,
-                                                    children: (0, i.jsx)(d.RobotIcon, {
+                                                    children: (0, i.jsx)(c.RobotIcon, {
                                                         size: 'md',
                                                         color: 'currentColor',
                                                         className: f.featureIcon
@@ -138,15 +139,15 @@ function C(e) {
                                                 'bot'
                                             )
                                         ),
-                                    c.length > 0 &&
+                                    d.length > 0 &&
                                         s.push(
                                             (0, i.jsx)(
-                                                d.TooltipContainer,
+                                                c.TooltipContainer,
                                                 {
                                                     forceOpen: n,
-                                                    text: p.Z.Messages.INTEGRATIONS_WEBHOOKS_SUMMARY.format({ count: c.length }),
+                                                    text: p.Z.Messages.INTEGRATIONS_WEBHOOKS_SUMMARY.format({ count: d.length }),
                                                     className: f.feature,
-                                                    children: (0, i.jsx)(d.WebhookIcon, {
+                                                    children: (0, i.jsx)(c.WebhookIcon, {
                                                         size: 'md',
                                                         color: 'currentColor',
                                                         className: f.featureIcon
@@ -162,7 +163,7 @@ function C(e) {
                                                 'div',
                                                 {
                                                     className: f.feature,
-                                                    children: (0, i.jsx)(d.SlashBoxIcon, {
+                                                    children: (0, i.jsx)(c.SlashBoxIcon, {
                                                         size: 'md',
                                                         color: 'currentColor',
                                                         className: f.featureIcon
@@ -173,29 +174,30 @@ function C(e) {
                                         ),
                                     s
                                 );
-                            })(L, U, q),
-                            K
+                            })(j, U, J),
+                            z,
+                            w
                         ]
                     })
                 })
             ]
         });
-    return P
-        ? (0, i.jsx)(d.Clickable, {
+    return B
+        ? (0, i.jsx)(c.Clickable, {
               onClick: () => {
-                  k && null != y && null != L && h.Z.dismissOverviewTooltip(y, L.integration), null == B || B();
+                  H && null != G && null != j && h.Z.dismissOverviewTooltip(G, j.integration), null == y || y();
               },
-              onFocus: () => H(!0),
-              onBlur: () => H(!1),
-              children: (0, i.jsx)(d.Card, {
+              onFocus: () => W(!0),
+              onBlur: () => W(!1),
+              children: (0, i.jsx)(c.Card, {
                   editable: !0,
                   className: l()(f.card, f.clickable),
-                  children: X
+                  children: Q
               })
           })
-        : (0, i.jsx)(d.Card, {
+        : (0, i.jsx)(c.Card, {
               editable: !0,
               className: f.card,
-              children: X
+              children: Q
           });
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return M;
     }
 }),
     n(47120);
@@ -8,7 +8,7 @@ var r = n(735250),
     i = n(470079),
     a = n(120356),
     s = n.n(a),
-    o = n(180081),
+    o = n(212433),
     l = n(442837),
     u = n(846519),
     c = n(481060),
@@ -21,128 +21,126 @@ var r = n(735250),
     I = n(314897),
     m = n(785717),
     T = n(481046),
-    S = n(277085),
-    g = n(825801),
-    A = n(215105),
-    N = n(429974),
-    O = n(228168),
-    R = n(689938),
-    v = n(209071);
-let C = 'text-sm/medium',
+    S = n(510659),
+    g = n(277085),
+    A = n(287954),
+    N = n(825801),
+    O = n(64621),
+    R = n(228168),
+    v = n(689938),
+    C = n(249818);
+let L = 'text-sm/medium',
     y = 36,
-    L = 144;
-function D(e) {
-    let { statusActivity: t, user: a, displayProfile: h, guildId: I, channelId: T, profileType: D, hasEntered: b = !0, animate: M = !0, editEnabled: P, onInteraction: U, isInteractionSource: w, showReplyPopout: x = !1, onClose: G, setInteractionToastShown: k, setInteractionSent: B, setIsReplyInteraction: F } = e,
-        { analyticsLocations: V } = (0, f.ZP)(E.Z.PROFILE_CUSTOM_STATUS),
-        { trackUserProfileAction: H } = (0, m.KZ)(),
-        Z = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
-        [Y] = i.useState(() => new u.V7()),
-        [j, W] = i.useState(!0),
-        K = i.useRef(null),
-        z = i.useRef(null),
-        q = i.useRef(null),
-        Q = i.useRef(null),
-        { emoji: X, state: $ } = null != t ? t : {},
-        J = null != $ && '' !== $ ? $ : null,
-        ee = null != J && J.length > 0,
-        et = null != X,
-        en = et && !ee,
-        er = et ? 1.25 : 0,
-        ei = 18 + er,
-        ea = L + er,
-        es = y + er,
-        eo = et || ee,
-        el = P && !eo,
-        eu = P && eo,
-        [ec, ed] = i.useState(en),
-        [e_, eE] = i.useState(!en),
+    D = 144;
+function b(e) {
+    let { statusActivity: t, user: a, guildId: h, channelId: I, profileType: T, hasEntered: b = !0, animate: M = !0, editEnabled: P, onCloseProfile: U } = e,
+        { analyticsLocations: w } = (0, f.ZP)(E.Z.PROFILE_CUSTOM_STATUS),
+        { trackUserProfileAction: x } = (0, m.KZ)(),
+        G = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
+        [k] = i.useState(() => new u.V7()),
+        [B, F] = i.useState(!0),
+        V = i.useRef(null),
+        H = i.useRef(null),
+        Z = i.useRef(null),
+        Y = i.useRef(null),
+        { emoji: j, state: W } = null != t ? t : {},
+        K = null != W && '' !== W ? W : null,
+        z = null != K && K.length > 0,
+        q = null != j,
+        Q = q && !z,
+        X = q ? 1.25 : 0,
+        $ = 18 + X,
+        J = D + X,
+        ee = y + X,
+        et = q || z,
+        { interactionType: en, interactionSource: er, resetInteraction: ei } = (0, S.Xo)(),
+        ea = er === R.n_.STATUS && en === R.P.REACT,
+        es = er === R.n_.STATUS && en === R.P.REPLY,
+        eo = ea || es,
+        el = P && !et,
+        eu = P && et,
+        [ec, ed] = i.useState(Q),
+        [e_, eE] = i.useState(!Q),
         [ef, eh] = i.useState(!1),
-        ep = D === O.y0.FULL_SIZE ? (0, N.z)(a.id, null == h ? void 0 : h.guildId) : void 0;
+        ep = i.useRef(null);
     i.useLayoutEffect(() => {
-        if (null == K.current || en) return;
-        let e = K.current.getBoundingClientRect().height;
-        if ((ed(en || e <= ei), b)) {
+        if (null == V.current || Q) return;
+        let e = V.current.getBoundingClientRect().height;
+        if ((ed(Q || e <= $), b)) {
             var t, n, r, i;
-            let e = null !== (r = null === (t = K.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== r ? r : ea,
-                a = null !== (i = null === (n = q.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== i ? i : es;
-            eE(!en && e > a), (z.current = e), (Q.current = a);
+            let e = null !== (r = null === (t = V.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== r ? r : J,
+                a = null !== (i = null === (n = Z.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== i ? i : ee;
+            eE(!Q && e > a), (H.current = e), (Y.current = a);
         }
-    }, [b, en, ei, ea, es]);
+    }, [b, Q, $, J, ee]);
     let [eI, em] = (0, c.useSpring)(() => ({
-        maxHeight: ''.concat(es, 'px'),
+        maxHeight: ''.concat(ee, 'px'),
         config: {
             clamp: !0,
             duration: 150
         }
     }));
-    i.useEffect(() => () => Y.stop(), [Y]);
+    i.useEffect(() => () => k.stop(), [k]);
     let eT = i.useRef(t);
     if (
         (i.useEffect(() => {
-            w &&
-                (null == t || eT.current !== t) &&
-                (null == U ||
-                    U({
-                        interactionType: null,
-                        interactionSourceType: null
-                    })),
-                (eT.current = t);
-        }, [t, U, w]),
-        !eo && !el)
+            er === R.n_.STATUS && (null == t || eT.current !== t) && ei(), (eT.current = t);
+        }, [t, er, ei]),
+        !et && !el)
     )
         return null;
     let eS = (e) => {
             var t, n;
             if (!!e_) {
                 if (e) {
-                    let e = Math.min(null !== (t = z.current) && void 0 !== t ? t : ea, ea);
+                    let e = Math.min(null !== (t = H.current) && void 0 !== t ? t : J, J);
                     em({
                         maxHeight: ''.concat(e, 'px'),
-                        delay: Z ? 0 : 300,
+                        delay: G ? 0 : 300,
                         config: {
                             clamp: !0,
-                            duration: Z ? 0 : 150
+                            duration: G ? 0 : 150
                         }
                     });
                 } else {
-                    let e = Math.min(null !== (n = Q.current) && void 0 !== n ? n : es, es);
+                    let e = Math.min(null !== (n = Y.current) && void 0 !== n ? n : ee, ee);
                     em({
                         maxHeight: ''.concat(e, 'px'),
                         delay: 0
                     });
                 }
-                if (Z) {
-                    W(!e);
+                if (G) {
+                    F(!e);
                     return;
                 }
-                Y.start(e ? 300 : 150, () => {
-                    W(!e);
+                k.start(e ? 300 : 150, () => {
+                    F(!e);
                 });
             }
         },
         eg = () =>
-            et
+            q
                 ? (0, r.jsx)(d.I, {
-                      className: ee ? v.statusEmojiInline : v.statusEmojiOnly,
-                      emoji: X,
+                      className: z ? C.statusEmojiInline : C.statusEmojiOnly,
+                      emoji: j,
                       animate: M,
                       hideTooltip: !1,
-                      tooltipDelay: O.vB
+                      tooltipDelay: R.vB
                   })
                 : null,
         eA = () =>
-            ee
+            z
                 ? (0, r.jsx)(c.Text, {
-                      variant: C,
-                      className: v.statusText,
-                      children: J
+                      variant: L,
+                      className: C.statusText,
+                      children: K
                   })
                 : null,
         eN = () => {
-            let e = s()(v.content, {
-                [v.clamp]: j,
-                [v.unclamp]: !j,
-                [v.singleLineAlign]: ec
+            let e = s()(C.content, {
+                [C.clamp]: B,
+                [C.unclamp]: !B,
+                [C.singleLineAlign]: ec
             });
             return (0, r.jsxs)(o.animated.div, {
                 style: eI,
@@ -152,171 +150,169 @@ function D(e) {
         },
         eO = () =>
             (0, r.jsxs)('div', {
-                className: s()(v.content, v.clamp, v.placeholderWidth, { [v.panel]: D === O.y0.PANEL }),
-                ref: q,
+                className: s()(C.content, C.clamp, C.placeholderWidth, { [C.panel]: T === R.y0.PANEL }),
+                ref: Z,
                 children: [eg(), eA()]
             }),
         eR = () =>
             (0, r.jsxs)('div', {
-                className: s()(v.content, v.unclamp, v.placeholderWidth, v.incorporeal, { [v.panel]: D === O.y0.PANEL }),
-                ref: K,
+                className: s()(C.content, C.unclamp, C.placeholderWidth, C.incorporeal, { [C.panel]: T === R.y0.PANEL }),
+                ref: V,
                 children: [eg(), eA()]
             }),
-        ev = () =>
-            (0, r.jsxs)('div', {
-                className: v.content,
-                children: [
-                    (0, r.jsx)(c.CirclePlusIcon, {
-                        className: v.addStatusIcon,
-                        colorClass: v.addStatusIconColor
-                    }),
-                    (0, r.jsx)(c.Text, {
-                        variant: C,
-                        className: v.addStatusPrompt,
-                        children: R.Z.Messages.USER_SETTINGS_ADD_STATUS
-                    })
-                ]
-            }),
-        eC = () => {
-            var e;
-            return el
-                ? R.Z.Messages.CUSTOM_STATUS_ADD_CUSTOM_STATUS_A11Y_LABEL
-                : R.Z.Messages.CUSTOM_STATUS_CUSTOM_STATUS_A11Y_LABEL.format({
-                      emoji: null !== (e = null == X ? void 0 : X.name) && void 0 !== e ? e : '',
-                      status: $
-                  });
-        },
-        ey = () => {
-            H({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
-                null == G || G(),
+        ev = () => {
+            x({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
+                null == U || U(),
                 (0, c.openModalLazy)(async () => {
                     let { default: e } = await n.e('51714').then(n.bind(n, 211065));
                     return (t) =>
                         (0, r.jsx)(e, {
                             ...t,
-                            sourceAnalyticsLocations: V
+                            sourceAnalyticsLocations: w
                         });
                 });
         },
-        eL = {
-            [v.biteSize]: D === O.y0.BITE_SIZE,
-            [v.fullSize]: D === O.y0.FULL_SIZE,
-            [v.panel]: D === O.y0.PANEL
+        eC = {
+            [C.biteSize]: T === R.y0.BITE_SIZE,
+            [C.fullSize]: T === R.y0.FULL_SIZE,
+            [C.panel]: T === R.y0.PANEL
         },
-        eD = s()(v.background, { [v.editable]: eu }),
-        eb = { [v.hoisted]: w },
-        eM = s()({
-            [v.statusBubbleShape]: (!ee && et) || !ec,
-            [v.statusBubbleSingleLineWithTextShape]: (ec && ee) || el
+        eL = s()(C.background, { [C.editable]: eu }),
+        ey = { [C.hoisted]: eo },
+        eD = s()({
+            [C.statusBubbleShape]: (!z && q) || !ec,
+            [C.statusBubbleSingleLineWithTextShape]: (ec && z) || el
         }),
-        eP = s()(v.statusBubbleOuter, eL, eM, { [v.statusBubbleOuterAddStatusCursor]: el }),
-        eU = s()(v.statusBubble, eM, {
-            [v.statusBubbleEmojiOnlyPadding]: en,
-            [v.statusBubbleWithTextPadding]: ee || el,
-            [v.statusBubbleWithTextMinWidth]: ee,
-            [v.statusBubbleCopyStatusCursor]: eo
+        eb = s()(C.statusBubbleOuter, eC, eD, { [C.statusBubbleOuterAddStatusCursor]: el }),
+        eM = s()(C.statusBubble, eD, {
+            [C.statusBubbleEmojiOnlyPadding]: Q,
+            [C.statusBubbleWithTextPadding]: z || el,
+            [C.statusBubbleWithTextMinWidth]: z,
+            [C.statusBubbleCopyStatusCursor]: et
         }),
-        ew = () => {
-            if (et) {
-                let e = null != X.id ? '`' + ':'.concat(X.name, ':') + '`' : p.ZP.translateSurrogatesToInlineEmoji(X.name);
-                return en ? ''.concat(e) : ''.concat(e, ' ').concat($);
-            }
-            if (!en) return ''.concat($);
-        },
-        ex = () =>
-            (0, r.jsxs)(c.ClickableContainer, {
-                className: s()(v.visibleContainer, eL, eD, eb),
-                'aria-label': eC(),
-                focusProps: { ringClassName: eM },
-                onClick: el ? ey : void 0,
-                onFocus: () => {
-                    eh(!0), eS(!0);
-                },
-                onBlur: (e) => {
-                    !e.currentTarget.contains(e.relatedTarget) && (eh(!1), eS(!1));
-                },
-                onMouseOver: () => {
-                    H({ action: 'HOVER_CUSTOM_STATUS' }), eh(!0), eS(!0);
-                },
-                onMouseLeave: () => {
-                    !x && (eh(!1), eS(!1));
-                },
-                children: [
-                    (0, r.jsx)('div', {
-                        className: eP,
-                        children: (0, r.jsxs)('span', {
-                            className: eU,
-                            children: [eo && eN(), el && ev()]
-                        })
+        eP = () => {
+            var e;
+            return (0, r.jsx)(c.FocusRing, {
+                ringClassName: eD,
+                children: (0, r.jsxs)('div', {
+                    ref: ep,
+                    className: s()(C.visibleContainer, eC, eL, ey),
+                    role: 'tooltip',
+                    'aria-label': v.Z.Messages.CUSTOM_STATUS_CUSTOM_STATUS_A11Y_LABEL.format({
+                        emoji: null !== (e = null == j ? void 0 : j.name) && void 0 !== e ? e : '',
+                        status: W
                     }),
-                    eo &&
-                        !x &&
-                        (0, r.jsx)(g.Z, {
-                            user: a,
-                            sourceDetails: ew(),
-                            sourceType: O.n_.STATUS,
-                            isVisible: ef,
-                            isExpandable: e_,
-                            onInteraction: U,
-                            setInteractionToastShown: k,
-                            setInteractionSent: B,
-                            setIsReplyInteraction: F,
-                            onClose: () => {
-                                eh(!1), eS(!1);
-                            }
+                    tabIndex: 0,
+                    onFocus: () => {
+                        eh(!0), eS(!0);
+                    },
+                    onBlur: (e) => {
+                        var t;
+                        !(null === (t = ep.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) && !eo && (eh(!1), eS(!1));
+                    },
+                    onMouseOver: () => {
+                        x({ action: 'HOVER_CUSTOM_STATUS' }), eh(!0), eS(!0);
+                    },
+                    onMouseLeave: () => {
+                        !eo && (eh(!1), eS(!1));
+                    },
+                    children: [
+                        (0, r.jsx)('div', {
+                            className: eb,
+                            children: (0, r.jsx)('span', {
+                                className: eM,
+                                children: et && eN()
+                            })
                         }),
-                    eu &&
-                        (0, r.jsx)(S.Z, {
-                            isVisible: ef,
-                            isExpandable: e_,
-                            onClose: G
-                        })
-                ]
-            });
-    return (0, r.jsxs)('div', {
-        children: [
-            (0, r.jsx)('div', {
-                className: s()(v.invisibleContainer, eL),
-                children: (0, r.jsx)('div', {
-                    className: eP,
-                    children: (0, r.jsxs)('span', {
-                        className: eU,
-                        children: [el && ev(), eo && eO(), eo && eR()]
-                    })
+                        eu
+                            ? (0, r.jsx)(g.Z, {
+                                  isVisible: ef,
+                                  isExpandable: e_,
+                                  onCloseProfile: U
+                              })
+                            : (0, r.jsx)(N.ZP, {
+                                  user: a,
+                                  sourceType: R.n_.STATUS,
+                                  isVisible: ef && !eo,
+                                  isExpandable: e_
+                              })
+                    ]
                 })
-            }),
-            (0, r.jsx)(c.Popout, {
-                renderPopout: (e) => {
-                    let { setPopoutRef: t } = e;
-                    return (0, r.jsx)(A.Z, {
-                        user: a,
-                        guildId: I,
-                        channelId: T,
-                        profileType: D,
-                        sourceDetails: ew(),
-                        sourceType: O.n_.STATUS,
-                        setPopoutRef: t,
-                        modalKey: ep,
-                        onInteraction: U,
-                        setInteractionToastShown: k,
-                        setInteractionSent: B,
-                        setIsReplyInteraction: F,
-                        onClose: () => {
-                            eh(!1), eS(!1);
-                        }
-                    });
-                },
-                animationPosition: 'top',
-                position: 'bottom',
-                align: D === O.y0.FULL_SIZE ? 'center' : 'left',
-                spacing: 6,
-                shouldShow: x,
-                children: () => ex()
-            })
-        ]
+            });
+        };
+    return (0, r.jsx)('div', {
+        children: el
+            ? (0, r.jsx)(c.Clickable, {
+                  'aria-label': v.Z.Messages.CUSTOM_STATUS_ADD_CUSTOM_STATUS_A11Y_LABEL,
+                  onClick: ev,
+                  className: s()(C.visibleContainer, eC, eL),
+                  focusProps: { ringClassName: eD },
+                  children: (0, r.jsx)('div', {
+                      className: eb,
+                      children: (0, r.jsx)('span', {
+                          className: eM,
+                          children: (0, r.jsxs)('div', {
+                              className: C.content,
+                              children: [
+                                  (0, r.jsx)(c.CirclePlusIcon, {
+                                      className: C.addStatusIcon,
+                                      colorClass: C.addStatusIconColor
+                                  }),
+                                  (0, r.jsx)(c.Text, {
+                                      variant: L,
+                                      className: C.addStatusPrompt,
+                                      children: v.Z.Messages.USER_SETTINGS_ADD_STATUS
+                                  })
+                              ]
+                          })
+                      })
+                  })
+              })
+            : (0, r.jsxs)(r.Fragment, {
+                  children: [
+                      (() => {
+                          let e = (0, r.jsxs)('span', {
+                              className: eM,
+                              children: [et && eO(), et && eR()]
+                          });
+                          return (0, r.jsxs)('div', {
+                              className: s()(C.invisibleContainer, eC, eb),
+                              children: [
+                                  (0, r.jsx)(O.Z, {
+                                      sourceType: R.n_.STATUS,
+                                      user: a,
+                                      children: (0, r.jsx)('div', {
+                                          className: C.coachmarkAnchor,
+                                          children: e
+                                      })
+                                  }),
+                                  e
+                              ]
+                          });
+                      })(),
+                      (0, r.jsx)(A.Z, {
+                          user: a,
+                          guildId: h,
+                          channelId: I,
+                          profileType: T,
+                          sourceDetails: (() => {
+                              if (q) {
+                                  let e = null != j.id ? '`' + ':'.concat(j.name, ':') + '`' : p.ZP.translateSurrogatesToInlineEmoji(j.name);
+                                  return Q ? ''.concat(e) : ''.concat(e, ' ').concat(W);
+                              }
+                              if (!Q) return ''.concat(W);
+                          })(),
+                          sourceType: R.n_.STATUS,
+                          onClose: () => {
+                              eh(!1), eS(!1);
+                          },
+                          children: () => eP()
+                      })
+                  ]
+              })
     });
 }
-function b(e) {
+function M(e) {
     let { user: t, ...n } = e,
         i = (0, l.e7)([I.default], () => I.default.getId() === t.id),
         a = (0, h.Z)(t.id),
@@ -324,7 +320,7 @@ function b(e) {
         { customStatusBubbleEditEnabled: o } = (0, T.K)({ location: 'UserProfileCustomStatusBubbleWithReactReplyBar' });
     return (0, r.jsx)(f.Gt, {
         value: s,
-        children: (0, r.jsx)(D, {
+        children: (0, r.jsx)(b, {
             user: t,
             editEnabled: o && i,
             statusActivity: a,

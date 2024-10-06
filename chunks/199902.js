@@ -21,8 +21,8 @@ var o,
     R = n(944486),
     v = n(979651),
     C = n(981631),
-    y = n(70722);
-let L = null,
+    L = n(70722);
+let y = null,
     D = {},
     b = null;
 function M() {
@@ -54,7 +54,7 @@ function w(e) {
 }
 function x(e, t) {
     let n = S.Z.getBasicChannel(t);
-    return e === y.lo.CALL || (null != n && N.Z.canBasicChannel(C.S7T.VIEW_CHANNEL, n));
+    return e === L.lo.CALL || (null != n && N.Z.canBasicChannel(C.S7T.VIEW_CHANNEL, n));
 }
 function G(e) {
     if (x(e.streamType, e.channelId)) return !0;
@@ -122,6 +122,12 @@ class k extends (o = d.ZP.Store) {
         let n = i[e];
         return null == n ? null : null !== (t = Object.values(n).find((e) => G(e))) && void 0 !== t ? t : null;
     }
+    getAnyDiscoverableStreamForUser(e) {
+        var t;
+        if (!(0, I.Z)(A.Z)) return null;
+        let n = i[e];
+        return null == n ? null : null !== (t = Object.values(n).find((e) => G(e) && !1 !== e.discoverable)) && void 0 !== t ? t : null;
+    }
     getStreamForUser(e, t) {
         var n;
         if (!(0, I.Z)(A.Z)) return null;
@@ -180,20 +186,21 @@ class k extends (o = d.ZP.Store) {
         VOICE_STATE_UPDATES: function (e) {
             let { voiceStates: t } = e;
             return t.reduce((e, t) => {
-                let { userId: n, guildId: r, channelId: a, sessionId: s, selfStream: o } = t;
+                let { userId: n, guildId: r, channelId: a, sessionId: s, selfStream: o, discoverable: l } = t;
                 if (o && null != a) {
-                    var l, u;
+                    var u, c;
                     return (
                         null ==
                             i[
-                                (l = {
-                                    streamType: null != r ? y.lo.GUILD : y.lo.CALL,
+                                (u = {
+                                    streamType: null != r ? L.lo.GUILD : L.lo.CALL,
                                     ownerId: n,
                                     guildId: r,
-                                    channelId: a
+                                    channelId: a,
+                                    discoverable: l
                                 }).ownerId
-                            ] && (i[l.ownerId] = {}),
-                        (i[l.ownerId][null !== (u = l.guildId) && void 0 !== u ? u : C.kod] = l),
+                            ] && (i[u.ownerId] = {}),
+                        (i[u.ownerId][null !== (c = u.guildId) && void 0 !== c ? c : C.kod] = u),
                         !0
                     );
                 }
@@ -282,7 +289,7 @@ class k extends (o = d.ZP.Store) {
                 ...o,
                 state: l
             }),
-                l === C.jm8.ENDED && L !== t && P(t);
+                l === C.jm8.ENDED && y !== t && P(t);
         },
         STREAM_CLOSE: function (e) {
             let { streamKey: t } = e;
@@ -290,7 +297,7 @@ class k extends (o = d.ZP.Store) {
         },
         STREAM_UPDATE_SELF_HIDDEN: function (e) {
             let { channelId: t, selfStreamHidden: n } = e;
-            (0, h.DB)(L) && (null == L ? void 0 : L.includes(T.default.getId())) && !1 === D[t] && !0 === n && (L = null), (D[t] = n);
+            (0, h.DB)(y) && (null == y ? void 0 : y.includes(T.default.getId())) && !1 === D[t] && !0 === n && (y = null), (D[t] = n);
         },
         SET_STREAM_APP_INTENT: function (e) {
             let { intent: t } = e;
@@ -318,9 +325,9 @@ class k extends (o = d.ZP.Store) {
         CHANNEL_RTC_SELECT_PARTICIPANT: function (e) {
             let { id: t, channelId: n } = e;
             if (
-                ((L = t),
+                ((y = t),
                 Array.from(r.values()).forEach((e) => {
-                    (0, h.V9)(e) !== L && e.state === C.jm8.ENDED && P((0, h.V9)(e));
+                    (0, h.V9)(e) !== y && e.state === C.jm8.ENDED && P((0, h.V9)(e));
                 }),
                 null != t)
             )

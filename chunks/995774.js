@@ -1,40 +1,46 @@
 n.d(t, {
     Lh: function () {
-        return o;
-    },
-    g1: function () {
-        return u;
-    },
-    iD: function () {
-        return l;
-    },
-    ir: function () {
         return c;
     },
-    s4: function () {
+    MR: function () {
+        return p;
+    },
+    g1: function () {
+        return _;
+    },
+    iD: function () {
         return d;
     },
+    ir: function () {
+        return E;
+    },
+    s4: function () {
+        return f;
+    },
     sm: function () {
-        return _;
+        return h;
     }
 }),
     n(757143);
 var r = n(633302),
-    i = n(314897),
-    a = n(981631),
-    s = n(689938);
-function o(e) {
+    i = n(695346),
+    a = n(314897),
+    s = n(626135),
+    o = n(981631),
+    l = n(468788),
+    u = n(689938);
+function c(e) {
     return null == e.id ? r.ZP.convertSurrogateToName(e.name) : ':'.concat(e.name, ':');
 }
-function l(e, t, n, r) {
-    var i, a, l;
-    let u;
-    return (u = r ? (e ? s.Z.Messages.SUPER_REACT_REMOVE_WITH_COUNT_A11Y_LABEL : s.Z.Messages.SUPER_REACT_WITH_COUNT_A11Y_LABEL) : e ? s.Z.Messages.REACT_REMOVE_WITH_COUNT_A11Y_LABEL : s.Z.Messages.REACT_WITH_COUNT_A11Y_LABEL).format({
+function d(e, t, n, r) {
+    var i, a, s;
+    let o;
+    return (o = r ? (e ? u.Z.Messages.SUPER_REACT_REMOVE_WITH_COUNT_A11Y_LABEL : u.Z.Messages.SUPER_REACT_WITH_COUNT_A11Y_LABEL) : e ? u.Z.Messages.REACT_REMOVE_WITH_COUNT_A11Y_LABEL : u.Z.Messages.REACT_WITH_COUNT_A11Y_LABEL).format({
         reactions: t,
-        emojiName: null !== (l = null === (a = o(n)) || void 0 === a ? void 0 : null === (i = a.replace(/[:_]/g, ' ')) || void 0 === i ? void 0 : i.trim()) && void 0 !== l ? l : ''
+        emojiName: null !== (s = null === (a = c(n)) || void 0 === a ? void 0 : null === (i = a.replace(/[:_]/g, ' ')) || void 0 === i ? void 0 : i.trim()) && void 0 !== s ? s : ''
     });
 }
-function u(e) {
+function _(e) {
     var t, n, r;
     return {
         id: null !== (t = e.id) && void 0 !== t ? t : null,
@@ -42,21 +48,29 @@ function u(e) {
         animated: !!e.animated
     };
 }
-function c(e, t) {
+function E(e, t) {
     if (null != t.id) {
         let n = null != e.id ? ''.concat(e.id) : e.id;
         return ''.concat(t.id) === n;
     }
     return null == e.id && t.name === e.name;
 }
-function d(e) {
-    if (e.isThread()) return a.jXE.THREAD_TEXT_AREA;
-    if (e.isForumPost()) return a.jXE.FORUM_CHANNEL_TEXT_AREA;
-    if (e.isGuildVocal()) return a.jXE.TEXT_IN_VOICE;
-    return a.jXE.CHANNEL_TEXT_AREA;
+function f(e) {
+    if (e.isThread()) return o.jXE.THREAD_TEXT_AREA;
+    if (e.isForumPost()) return o.jXE.FORUM_CHANNEL_TEXT_AREA;
+    if (e.isGuildVocal()) return o.jXE.TEXT_IN_VOICE;
+    return o.jXE.CHANNEL_TEXT_AREA;
 }
-function _(e) {
+function h(e) {
     let { userId: t, optimistic: n } = e,
-        r = i.default.getId() === t;
+        r = a.default.getId() === t;
     return (!n || !!r) && !0;
+}
+function p(e, t) {
+    i.fz.updateSetting(e),
+        s.default.track(o.rMx.NOTIFICATION_SETTINGS_UPDATED, {
+            update_type: l.I.ACCOUNT,
+            reaction_notifications: e,
+            reaction_notifications_old: t
+        });
 }

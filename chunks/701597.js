@@ -107,27 +107,30 @@ class u {
             localWant: this.goliveMaxQuality.localWant
         });
     }
+    setLqSimulcastStreamActive(e) {
+        this.lqSimulcastStreamActive = e;
+    }
     configGoliveSimulcast(e) {
         e.has(i.V8.GOLIVE_SIMULCAST_480P_500K)
             ? ((this.goliveSimulcastEnabled = !0),
               (this.goliveSimulcastLQBitrate = i.pk),
               (this.goliveSimulcastLQRes = {
-                  width: 854,
-                  height: 480
+                  width: 1280,
+                  height: 720
               }))
             : e.has(i.V8.GOLIVE_SIMULCAST_480P_750K)
               ? ((this.goliveSimulcastEnabled = !0),
                 (this.goliveSimulcastLQBitrate = 750000),
                 (this.goliveSimulcastLQRes = {
-                    width: 854,
+                    width: 1280,
                     height: 480
                 }))
               : e.has(i.V8.GOLIVE_SIMULCAST_480P_1000K) &&
                 ((this.goliveSimulcastEnabled = !0),
                 (this.goliveSimulcastLQBitrate = 1000000),
                 (this.goliveSimulcastLQRes = {
-                    width: 854,
-                    height: 480
+                    width: 1280,
+                    height: 720
                 }));
     }
     getVideoQuality(e) {
@@ -151,7 +154,19 @@ class u {
         });
     }
     getGoliveQuality(e) {
-        return this.goliveSimulcastEnabled && e < 100 ? this.getGoliveLQQuality() : this.goliveMaxQuality;
+        if (this.goliveSimulcastEnabled && e < 100) return this.getGoliveLQQuality();
+        if (this.goliveSimulcastEnabled) {
+            let e = this.lqSimulcastStreamActive ? this.goliveSimulcastLQBitrate : 0;
+            return new o({
+                capture: this.goliveMaxQuality.capture,
+                encode: this.goliveMaxQuality.encode,
+                bitrateMin: this.goliveMaxQuality.bitrateMin,
+                bitrateMax: this.goliveMaxQuality.bitrateMax - e,
+                bitrateTarget: this.goliveMaxQuality.bitrateTarget,
+                localWant: this.goliveMaxQuality.localWant
+            });
+        }
+        return this.goliveMaxQuality;
     }
     getDefaultGoliveQuality() {
         return new o({
@@ -188,7 +203,7 @@ class u {
                 framerate: l,
                 pixelCount: a * s
             },
-            bitrateMin: 15000,
+            bitrateMin: 150000,
             bitrateMax: this.goliveSimulcastLQBitrate,
             bitrateTarget: this.goliveSimulcastLQBitrate
         });
@@ -205,18 +220,20 @@ class u {
             a(this, 'goliveSimulcastLQRes', void 0),
             a(this, 'isStreamContext', void 0),
             a(this, 'ladder', void 0),
+            a(this, 'lqSimulcastStreamActive', void 0),
             (this.contextType = e),
             (this.connection = t),
             (this.options = n),
             (this.isMuted = !1),
+            (this.lqSimulcastStreamActive = !1),
             (this.isStreamContext = this.contextType === i.Yn.STREAM),
             (this.ladder = new r.x(n)),
             (this.goliveMaxQuality = this.getDefaultGoliveQuality()),
             (this.goliveSimulcastEnabled = !1),
             (this.goliveSimulcastLQBitrate = i.pk),
             (this.goliveSimulcastLQRes = {
-                width: 854,
-                height: 480
+                width: 1280,
+                height: 720
             });
     }
 }

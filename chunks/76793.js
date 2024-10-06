@@ -1,9 +1,9 @@
 t.d(s, {
     Z: function () {
-        return R;
+        return p;
     },
     q: function () {
-        return O;
+        return h;
     }
 });
 var n = t(735250),
@@ -20,11 +20,10 @@ var n = t(735250),
     T = t(171368),
     S = t(594174),
     I = t(51144),
-    N = t(760373),
-    m = t(689938),
-    C = t(288338),
-    A = t(224499);
-function g(e) {
+    N = t(689938),
+    A = t(8007),
+    C = t(113207);
+function m(e) {
     let { userId: s, count: t } = e,
         c = (0, i.e7)([S.default], () => S.default.getUser(s)),
         d = I.ZP.getFormattedName(c),
@@ -37,19 +36,19 @@ function g(e) {
             (0, o.PR)(s);
         }, [s]),
         (0, n.jsxs)('div', {
-            className: C.section,
+            className: A.section,
             children: [
                 null != c &&
                     (0, n.jsx)(l.Z, {
-                        className: C.avatar,
+                        className: A.avatar,
                         user: c,
                         size: r.AvatarSizes.SIZE_40
                     }),
                 (0, n.jsxs)('div', {
-                    className: C.text,
+                    className: A.text,
                     children: [
                         (0, n.jsx)(r.Clickable, {
-                            className: C.username,
+                            className: A.username,
                             onClick: E,
                             children: (0, n.jsx)(r.Text, {
                                 variant: 'text-md/semibold',
@@ -60,20 +59,20 @@ function g(e) {
                         (0, n.jsx)(r.Text, {
                             variant: 'text-md/medium',
                             color: 'header-secondary',
-                            children: m.Z.Messages.E2EE_DEVICES_COUNT.format({ count: t })
+                            children: N.Z.Messages.E2EE_DEVICES_COUNT.format({ count: t })
                         })
                     ]
                 }),
                 (0, n.jsx)(r.Clickable, {
                     onClick: u,
-                    className: C.sectionIconContainer,
+                    className: A.sectionIconContainer,
                     children: (0, n.jsx)(r.TrashIcon, { size: 'xs' })
                 })
             ]
         })
     );
 }
-function h(e) {
+function g(e) {
     let { className: s, userId: t, verification: i, index: o } = e,
         l = (0, _.bo)(i.timestamp),
         c = a.useCallback(() => {
@@ -83,12 +82,12 @@ function h(e) {
         className: s,
         children: [
             (0, n.jsxs)('div', {
-                className: C.text,
+                className: A.text,
                 children: [
                     (0, n.jsx)(r.Text, {
                         variant: 'text-sm/semibold',
                         color: 'interactive-active',
-                        children: m.Z.Messages.E2EE_ANONYMOUS_DEVICE_TAG.format({ index: o + 1 })
+                        children: N.Z.Messages.E2EE_ANONYMOUS_DEVICE_TAG.format({ index: o + 1 })
                     }),
                     (0, n.jsx)(r.Text, {
                         variant: 'text-sm/medium',
@@ -98,7 +97,7 @@ function h(e) {
                 ]
             }),
             (0, n.jsx)(r.Clickable, {
-                className: C.icon,
+                className: A.icon,
                 onClick: c,
                 children: (0, n.jsx)(r.XSmallIcon, {
                     size: 'md',
@@ -108,12 +107,12 @@ function h(e) {
         ]
     });
 }
-function O(e) {
+function h(e) {
     let { userId: s } = e,
         t = (0, u._)(s);
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(g, {
+            (0, n.jsx)(m, {
                 userId: s,
                 count: t.length
             }),
@@ -122,13 +121,13 @@ function O(e) {
                     a.Fragment,
                     {
                         children: [
-                            (0, n.jsx)(h, {
-                                className: C.row,
+                            (0, n.jsx)(g, {
+                                className: A.row,
                                 userId: s,
                                 index: i,
                                 verification: e
                             }),
-                            i !== t.length - 1 && (0, n.jsx)('div', { className: C.divider })
+                            i !== t.length - 1 && (0, n.jsx)('div', { className: A.divider })
                         ]
                     },
                     ''.concat(i, '-').concat(e.timestamp)
@@ -137,23 +136,23 @@ function O(e) {
         ]
     });
 }
-function p(e) {
+function O(e) {
     let { userIds: s } = e;
     return 0 === s.length
         ? null
         : (0, n.jsxs)(n.Fragment, {
               children: [
                   (0, n.jsxs)(r.FormItem, {
-                      className: A.marginBottom20,
+                      className: C.marginBottom20,
                       children: [
                           (0, n.jsx)(r.FormTitle, {
                               tag: r.FormTitleTags.H5,
-                              className: A.marginBottom8,
-                              children: m.Z.Messages.E2EE_VERIFIED_DEVICES
+                              className: C.marginBottom8,
+                              children: N.Z.Messages.E2EE_VERIFIED_DEVICES
                           }),
                           (0, n.jsx)(r.FormText, {
                               type: r.FormTextTypes.DESCRIPTION,
-                              children: m.Z.Messages.E2EE_VERIFIED_DEVICES_DESCRIPTION.format({ helpArticle: N.s9 })
+                              children: N.Z.Messages.E2EE_VERIFIED_DEVICES_DESCRIPTION.format({ helpArticle: (0, _.pL)() })
                           })
                       ]
                   }),
@@ -161,8 +160,8 @@ function p(e) {
                       (0, n.jsx)(
                           'div',
                           {
-                              className: C.item,
-                              children: (0, n.jsx)(O, { userId: e })
+                              className: A.item,
+                              children: (0, n.jsx)(h, { userId: e })
                           },
                           e
                       )
@@ -170,39 +169,39 @@ function p(e) {
               ]
           });
 }
-function R() {
+function p() {
     let e = (0, i.e7)([d.Z], () => d.Z.getPersistentCodesEnabled()),
         s = (0, E.s)();
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(r.FormSection, {
                 tag: r.FormTitleTags.H1,
-                title: m.Z.Messages.E2EE_END_TO_END_ENCRYPTION,
+                title: N.Z.Messages.E2EE_END_TO_END_ENCRYPTION,
                 children: [
                     (0, n.jsx)(r.FormText, {
                         type: r.FormTextTypes.DESCRIPTION,
-                        className: A.marginBottom20,
-                        children: m.Z.Messages.E2EE_SETTINGS_SUBTITLE.format({ helpArticle: N.l4 })
+                        className: C.marginBottom20,
+                        children: N.Z.Messages.E2EE_SETTINGS_SUBTITLE.format({ helpArticle: (0, _.uV)() })
                     }),
                     (0, n.jsxs)(r.FormItem, {
                         children: [
                             (0, n.jsx)(r.FormTitle, {
                                 tag: r.FormTitleTags.H5,
-                                className: A.marginBottom8,
-                                children: m.Z.Messages.E2EE_VERIFICATION_CODES
+                                className: C.marginBottom8,
+                                children: N.Z.Messages.E2EE_VERIFICATION_CODES
                             }),
                             (0, n.jsx)(r.FormSwitch, {
                                 hideBorder: 0 === s.length,
                                 value: e,
-                                note: m.Z.Messages.E2EE_PERSISTENT_CODES_DESCRIPTION.format({ helpArticle: N.$J }),
+                                note: N.Z.Messages.E2EE_PERSISTENT_CODES_DESCRIPTION.format({ helpArticle: (0, _.aZ)() }),
                                 onChange: c.Z.updatePersistentCodesEnabled,
-                                children: m.Z.Messages.E2EE_ENABLE_PERSISTENT_CODES
+                                children: N.Z.Messages.E2EE_ENABLE_PERSISTENT_CODES
                             })
                         ]
                     })
                 ]
             }),
-            (0, n.jsx)(p, { userIds: s })
+            (0, n.jsx)(O, { userIds: s })
         ]
     });
 }

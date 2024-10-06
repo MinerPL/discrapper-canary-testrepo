@@ -1,25 +1,25 @@
-let r, i, a, s, o, l, u, c, d, _, E, f, h, p, I;
+let r, i, a, s, o, l, u, c, d, _, E, f, h, p, I, m;
 n(47120);
-var m,
-    T,
+var T,
     S,
     g,
-    A = n(392711),
-    N = n(754700),
-    O = n(887003),
-    R = n(442837),
-    v = n(481060),
-    C = n(570140),
+    A,
+    N = n(392711),
+    O = n(754700),
+    R = n(887003),
+    v = n(442837),
+    C = n(481060),
+    L = n(570140),
     y = n(497505),
-    L = n(918701),
-    D = n(5881),
-    b = n(46140),
-    M = n(689938);
-function P() {
-    (r = !1), (i = !1), (a = new Map()), (s = new Map()), (o = 0), (l = new Set()), (u = new Set()), (c = new Set()), (d = new Set()), (E = new Map()), (f = new Map()), (h = new Map()), (p = null), (I = new Map()), (_ = new Set());
+    D = n(918701),
+    b = n(5881),
+    M = n(46140),
+    P = n(689938);
+function U() {
+    (r = !1), (i = !1), (a = new Map()), (s = new Map()), (o = 0), (l = new Set()), (u = new Set()), (c = new Set()), (d = new Set()), (E = new Map()), (f = new Map()), (h = new Map()), (p = null), (I = new Map()), (_ = new Set()), (m = new Map());
 }
-P();
-function U(e, t) {
+U();
+function w(e, t) {
     let n = (a = new Map(a)).get(e);
     if (null != n) {
         let r = {
@@ -30,28 +30,28 @@ function U(e, t) {
             var n, r, i, a;
             if (null != t.userStatus)
                 for (let s of Object.values(null !== (r = null === (n = t.userStatus) || void 0 === n ? void 0 : n.progress) && void 0 !== r ? r : {})) {
-                    if (!(0, A.isNil)(s)) N.T.DESKTOP.has(s.eventName) && ((null === (i = s.heartbeat) || void 0 === i ? void 0 : i.lastBeatAt) != null ? _.add(e) : (null === (a = s.heartbeat) || void 0 === a ? void 0 : a.lastBeatAt) == null && _.delete(e));
+                    if (!(0, N.isNil)(s)) O.T.DESKTOP.has(s.eventName) && ((null === (i = s.heartbeat) || void 0 === i ? void 0 : i.lastBeatAt) != null ? _.add(e) : (null === (a = s.heartbeat) || void 0 === a ? void 0 : a.lastBeatAt) == null && _.delete(e));
                 }
         })(e, t),
             a.set(e, r);
     }
 }
-function w(e, t) {
+function x(e, t) {
     let n = new Map(E);
     n.set(e, t), (E = n);
 }
-function x(e) {
+function G(e) {
     null != h.get(e) && (h = new Map(h)).delete(e);
 }
-function G(e) {
+function k(e) {
     let t = new Set(l);
     t.delete(e), (l = t);
 }
-function k(e) {
+function B(e) {
     let t = new Set(d);
     t.delete(e), (d = t);
 }
-class B extends (m = R.ZP.Store) {
+class F extends (T = v.ZP.Store) {
     get quests() {
         return a;
     }
@@ -69,6 +69,9 @@ class B extends (m = R.ZP.Store) {
     }
     get questDeliveryOverride() {
         return a.get(null != p ? p : '');
+    }
+    get questToDeliverForPlacement() {
+        return m;
     }
     isEnrolling(e) {
         return l.has(e);
@@ -102,25 +105,25 @@ class B extends (m = R.ZP.Store) {
         return null !== (t = I.get(e)) && void 0 !== t ? t : null;
     }
 }
-(g = 'QuestsStore'),
-    (S = 'displayName') in (T = B)
-        ? Object.defineProperty(T, S, {
-              value: g,
+(A = 'QuestsStore'),
+    (g = 'displayName') in (S = F)
+        ? Object.defineProperty(S, g, {
+              value: A,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (T[S] = g),
-    (t.Z = new B(C.Z, {
+        : (S[g] = A),
+    (t.Z = new F(L.Z, {
         LOGOUT: function () {
-            P();
+            U();
         },
         QUESTS_FETCH_CURRENT_QUESTS_BEGIN: function () {
             (o = Date.now()), (r = !0);
         },
         QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: function (e) {
             let { quests: t } = e;
-            for (let e of ((r = !1), (a = new Map()), t)) a.set(e.id, e), e.targetedContent.includes(y.jn.QUEST_BAR) && (0, D.T)({ location: b.dr.QUESTS_STORE }).log('Delivered '.concat(e.config.messages.questName, ' (').concat(e.id, ')'));
+            for (let e of ((r = !1), (a = new Map()), t)) a.set(e.id, e), e.targetedContent.includes(y.jn.QUEST_BAR) && (0, b.T)({ location: M.dr.QUESTS_STORE }).log('Delivered '.concat(e.config.messages.questName, ' (').concat(e.id, ')'));
         },
         QUESTS_FETCH_CURRENT_QUESTS_FAILURE: function () {
             (o = 0), (r = !1);
@@ -135,9 +138,17 @@ class B extends (m = R.ZP.Store) {
         QUESTS_FETCH_CLAIMED_QUESTS_FAILURE: function () {
             i = !1;
         },
+        QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: function (e) {
+            let { quest: t, placement: n } = e;
+            null == t ? m.delete(n) : m.set(n, t);
+        },
+        QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE: function (e) {
+            let { placement: t } = e;
+            m.delete(t);
+        },
         QUESTS_SEND_HEARTBEAT_SUCCESS: function (e) {
             let { questId: t, streamKey: n, userStatus: r } = e;
-            _.add(t), U(t, { userStatus: r }), x(n);
+            _.add(t), w(t, { userStatus: r }), G(n);
         },
         QUESTS_SEND_HEARTBEAT_FAILURE: function (e) {
             let { questId: t, streamKey: n } = e;
@@ -155,13 +166,13 @@ class B extends (m = R.ZP.Store) {
         },
         QUESTS_ENROLL_SUCCESS: function (e) {
             let { enrolledQuestUserStatus: t } = e;
-            U(t.questId, { userStatus: t }), G(t.questId);
+            w(t.questId, { userStatus: t }), k(t.questId);
         },
         QUESTS_ENROLL_FAILURE: function (e) {
             let { questId: t } = e;
-            G(t);
+            k(t);
             let n = a.get(t);
-            null != n && (0, L.zK)(n, b.S7.FRACTIONS_QUEST) && (0, v.showToast)((0, v.createToast)(M.Z.Messages.QUESTS_NITRO_ENROLL_FAILURE_TOAST, v.ToastType.FAILURE));
+            null != n && (0, D.zK)(n, M.S7.FRACTIONS_QUEST) && (0, C.showToast)((0, C.createToast)(P.Z.Messages.QUESTS_NITRO_ENROLL_FAILURE_TOAST, C.ToastType.FAILURE));
         },
         QUESTS_FETCH_REWARD_CODE_BEGIN: function (e) {
             let { questId: t } = e,
@@ -174,12 +185,12 @@ class B extends (m = R.ZP.Store) {
             r.delete(t),
                 (c = r),
                 !(function (e, t) {
-                    w(e, t);
+                    x(e, t);
                     let n = a.get(e),
                         r = null == n ? void 0 : n.userStatus;
                     null != r &&
                         null == r.claimedAt &&
-                        U(e, {
+                        w(e, {
                             userStatus: {
                                 ...r,
                                 claimedAt: t.claimedAt
@@ -213,10 +224,10 @@ class B extends (m = R.ZP.Store) {
                             var t;
                             let { entitlements: n } = e,
                                 r = null === (t = n.items[0].tenantMetadata) || void 0 === t ? void 0 : t.questRewards.reward;
-                            return (null == r ? void 0 : r.tag) !== O.w.REWARD_CODE ? null : r.rewardCode;
+                            return (null == r ? void 0 : r.tag) !== R.w.REWARD_CODE ? null : r.rewardCode;
                         })({ entitlements: t });
-                        null != n && w(e, n),
-                            U(e, {
+                        null != n && x(e, n),
+                            w(e, {
                                 userStatus: {
                                     ...i,
                                     claimedAt: t.claimedAt,
@@ -238,27 +249,27 @@ class B extends (m = R.ZP.Store) {
         },
         QUESTS_DISMISS_CONTENT_SUCCESS: function (e) {
             let { dismissedQuestUserStatus: t } = e;
-            U(t.questId, { userStatus: t }), k(t.questId);
+            w(t.questId, { userStatus: t }), B(t.questId);
         },
         QUESTS_DISMISS_CONTENT_FAILURE: function (e) {
             let { questId: t } = e;
-            k(t);
+            B(t);
         },
         QUESTS_USER_STATUS_UPDATE: function (e) {
             let { user_status: t } = e;
-            (0, D.T)({ location: b.dr.QUESTS_STORE }).log('Received user status update for '.concat(t.quest_id), t), U(t.quest_id, { userStatus: (0, L.U3)(t) });
+            (0, b.T)({ location: M.dr.QUESTS_STORE }).log('Received user status update for '.concat(t.quest_id), t), w(t.quest_id, { userStatus: (0, D.U3)(t) });
         },
         STREAM_CLOSE: function (e) {
             let { streamKey: t } = e;
-            x(t);
+            G(t);
         },
         QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE: function (e) {
             let { streamKey: t } = e;
-            x(t);
+            G(t);
         },
         QUESTS_PREVIEW_UPDATE_SUCCESS: function (e) {
             let { previewQuestUserStatus: t } = e;
-            U(t.questId, { userStatus: t }), null == t.claimedAt && (E = new Map(E)).delete(t.questId), null == t.enrolledAt && (I = new Map(I)).delete(t.questId);
+            w(t.questId, { userStatus: t }), null == t.claimedAt && (E = new Map(E)).delete(t.questId), null == t.enrolledAt && (I = new Map(I)).delete(t.questId);
         },
         QUESTS_DELIVERY_OVERRIDE: function (e) {
             let { questId: t } = e;

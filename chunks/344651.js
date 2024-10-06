@@ -33,8 +33,8 @@ var a = n(442837),
     R = n(979651),
     v = n(509545),
     C = n(78839),
-    y = n(936101),
-    L = n(868158),
+    L = n(936101),
+    y = n(868158),
     D = n(483012),
     b = n(955132);
 let M = new d.Z('ConnectionStore'),
@@ -182,19 +182,17 @@ function Y(e) {
         status: e.status,
         activities: e.activities,
         active: !!e.active,
-        clientInfo: e.client_info,
-        broadcast: e.broadcast
+        clientInfo: e.client_info
     }));
 }
 function j(e) {
-    let { guildId: t, user: n, status: r, activities: i, clientStatus: a, broadcast: s } = e;
+    let { guildId: t, user: n, status: r, activities: i, clientStatus: a } = e;
     x.add({
         guildId: t,
         user: n,
         status: r,
         clientStatus: a,
-        activities: i,
-        broadcast: s
+        activities: i
     });
 }
 B(
@@ -203,7 +201,7 @@ B(
     (e) => {
         p.Z.initialGuild.measure(() => {
             a.ZP.Emitter.batched(() => {
-                let t = L.Fx(e, b.Wb.identifyStartTime);
+                let t = y.Fx(e, b.Wb.identifyStartTime);
                 null != O.default.getCurrentUser() &&
                     (V({
                         type: 'GUILD_CREATE',
@@ -239,14 +237,13 @@ B(
         p.Z.readySupplemental.measure(() => {
             a.ZP.Emitter.batched(() => {
                 var t, n;
-                e = p.Z.hydrateReadySupplemental.measure(() => L.r$(e, b.Wb.identifyStartTime));
+                e = p.Z.hydrateReadySupplemental.measure(() => y.r$(e, b.Wb.identifyStartTime));
                 let r = (e) =>
                         e.map((e) => ({
                             user: e.user,
                             status: e.status,
                             clientStatus: e.client_status,
-                            activities: e.activities,
-                            broadcast: e.broadcast
+                            activities: e.activities
                         })),
                     i = e.guilds.filter((e) => !0 !== e.unavailable);
                 i.forEach((e) => {
@@ -299,7 +296,7 @@ B(
         ['READY'],
         (e) => {
             var t;
-            let n = L.Eb(),
+            let n = y.Eb(),
                 r = e.guilds
                     .filter((e) => {
                         var t, n;
@@ -318,7 +315,7 @@ B(
             }
             p.Z.ready.measure(() => {
                 a.ZP.Emitter.batched(() => {
-                    let t = (e = p.Z.hydrateReady.measure(() => L.IM(e, b.Wb.identifyStartTime, n))).private_channels.map((e) => (0, m.q_)(e)),
+                    let t = (e = p.Z.hydrateReady.measure(() => y.IM(e, b.Wb.identifyStartTime, n))).private_channels.map((e) => (0, m.q_)(e)),
                         r = e.guilds.filter((e) => !0 === e.unavailable && !0 !== e.geo_restricted).map((e) => e.id),
                         i = e.guilds.filter((e) => !0 !== e.unavailable),
                         a = e.guilds.filter((e) => !0 === e.geo_restricted);
@@ -635,7 +632,7 @@ B(
                     guildId: e.id
                 });
             else {
-                let t = L.J2(e);
+                let t = y.J2(e);
                 o.Z.createGuild(t),
                     V({
                         type: 'VOICE_STATE_UPDATES',
@@ -699,14 +696,13 @@ B(
             }),
                 null != e.presences &&
                     e.presences.forEach((t) => {
-                        let { user: n, status: r, client_status: i, activities: a, broadcast: s } = t;
+                        let { user: n, status: r, client_status: i, activities: a } = t;
                         return j({
                             guildId: e.guild_id,
                             user: n,
                             status: r,
                             activities: a,
-                            clientStatus: i,
-                            broadcast: s
+                            clientStatus: i
                         });
                     }),
                 D.Z.flush('GUILD_MEMBERS_CHUNK');
@@ -722,14 +718,13 @@ B(
             }),
                 null != e.presences &&
                     e.presences.forEach((t) => {
-                        let { user: n, status: r, client_status: i, activities: a, broadcast: s } = t;
+                        let { user: n, status: r, client_status: i, activities: a } = t;
                         return j({
                             guildId: e.guild_id,
                             user: n,
                             status: r,
                             activities: a,
-                            clientStatus: i,
-                            broadcast: s
+                            clientStatus: i
                         });
                     }),
                 D.Z.flush();
@@ -898,8 +893,7 @@ B(
             user: e.user,
             status: e.status,
             activities: e.activities,
-            clientStatus: e.client_status,
-            broadcast: e.broadcast
+            clientStatus: e.client_status
         });
     }),
     k(['PRESENCES_REPLACE'], (e) => {
@@ -1133,7 +1127,7 @@ B(
         });
     }),
     k(['USER_PAYMENT_CLIENT_ADD'], (e) => {
-        (0, y.L)().then((t) => {
+        (0, L.L)().then((t) => {
             let n = e.purchase_token_hash;
             n === t &&
                 V({
@@ -1155,8 +1149,7 @@ B(
                     user: r.user,
                     status: r.status,
                     activities: r.activities,
-                    clientStatus: r.client_status,
-                    broadcast: r.broadcast
+                    clientStatus: r.client_status
                 });
             };
             e.ops.forEach((e) => {
@@ -1251,6 +1244,15 @@ B(
             icon: e.icon,
             route: e.route,
             tag: e.tag
+        });
+    }),
+    k(['REACTION_NOTIFICATION_SENT'], (e) => {
+        V({
+            type: 'REACTION_NOTIFICATION_SENT',
+            route: e.route,
+            message: e.message,
+            emoji: e.emoji,
+            reactorUserId: e.reactor_user_id
         });
     }),
     k(['NOTIFICATION_CENTER_ITEM_CREATE'], (e) => {
@@ -1582,6 +1584,15 @@ B(
             callbackState: e.callback_state
         });
     }),
+    k(['USER_CONNECTIONS_CALLBACK'], (e) => {
+        V({
+            type: 'USER_CONNECTIONS_CALLBACK',
+            provider: e.provider,
+            code: e.code,
+            state: e.state,
+            openid_params: e.openid_params
+        });
+    }),
     k(['DELETED_ENTITY_IDS'], (e) => {
         V({
             type: 'DELETED_ENTITY_IDS',
@@ -1610,7 +1621,7 @@ B(
                     lastPinTimestamp: e.last_pin_timestamp
                 })),
                 voiceStates: e.updated_voice_states.map((e) => {
-                    var t;
+                    var t, n;
                     return {
                         channelId: e.channel_id,
                         deaf: e.deaf || !1,
@@ -1622,7 +1633,8 @@ B(
                         selfVideo: e.self_video || !1,
                         sessionId: e.session_id,
                         suppress: e.suppress,
-                        userId: e.user_id
+                        userId: e.user_id,
+                        discoverable: null === (n = e.discoverable) || void 0 === n || n
                     };
                 }),
                 removedVoiceStateUsers: e.removed_voice_states

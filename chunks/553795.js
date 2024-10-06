@@ -96,5 +96,15 @@ class N extends (r = o.ZP.Store) {
         },
         USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: function (e) {
             g[e.integrationId] = void 0 !== e.error ? e.error : '';
+        },
+        USER_CONNECTIONS_CALLBACK: function (e) {
+            let { state: t, code: n, provider: r, openid_params: i } = e;
+            T.has(t) &&
+                (T.delete(t),
+                u.Z.callback(r, {
+                    code: n,
+                    state: t,
+                    openid_params: i
+                }));
         }
     }));

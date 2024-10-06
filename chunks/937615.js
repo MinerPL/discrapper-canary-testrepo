@@ -1,37 +1,46 @@
 n.d(t, {
     T3: function () {
-        return u;
+        return c;
     },
     T4: function () {
-        return o;
+        return l;
     },
     og: function () {
-        return l;
+        return u;
+    },
+    xg: function () {
+        return d;
     }
 }),
     n(411104);
 var r = n(221513),
     i = n(706454),
-    a = n(474936),
-    s = n(689938);
-function o(e, t, n) {
+    a = n(74538),
+    s = n(474936),
+    o = n(689938);
+function l(e, t, n) {
     var a;
     let s = null !== (a = null == n ? void 0 : n.localeOverride) && void 0 !== a ? a : i.default.locale;
     return (0, r.T4)(e, t, s, n);
 }
-function l(e, t, n) {
-    if (t === a.rV.YEAR) return s.Z.Messages.BILLING_PRICE_PER_YEAR.format({ price: e });
-    if (t === a.rV.MONTH && 1 === n) return s.Z.Messages.BILLING_PRICE_PER_MONTH.format({ price: e });
-    if (t === a.rV.MONTH && n > 1)
-        return s.Z.Messages.BILLING_PRICE_PER_MULTI_MONTHS.format({
+function u(e, t, n) {
+    if (t === s.rV.YEAR) return o.Z.Messages.BILLING_PRICE_PER_YEAR.format({ price: e });
+    if (t === s.rV.MONTH && 1 === n) return o.Z.Messages.BILLING_PRICE_PER_MONTH.format({ price: e });
+    if (t === s.rV.MONTH && n > 1)
+        return o.Z.Messages.BILLING_PRICE_PER_MULTI_MONTHS.format({
             price: e,
             intervalCount: n
         });
     throw Error('Unsupported interval type: '.concat(t, ', and interval count: ').concat(n));
 }
-function u(e, t) {
+function c(e, t) {
     return Intl.NumberFormat(e, {
         style: 'percent',
         minimumFractionDigits: 0
     }).format(t);
+}
+function d(e) {
+    let t = 'interval_count' in e ? e.interval_count : e.intervalCount,
+        n = (0, a.aS)(e.id);
+    return u(l(n.amount, n.currency), e.interval, t);
 }

@@ -65,11 +65,14 @@ function c(e, t) {
             )
     );
 }
-async function d(e) {
+async function d(e, t) {
     return (
         await r.tn.get({
             url: s.ANM.ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS,
-            query: { application_id: e }
+            query: {
+                application_id: e,
+                sku_id: t
+            }
         })
     ).body;
 }

@@ -3,8 +3,9 @@ n.d(t, {
         return _;
     }
 });
-var r = n(735250),
-    i = n(442837),
+var r = n(735250);
+n(470079);
+var i = n(442837),
     a = n(481060),
     s = n(970321),
     o = n(283836),
@@ -40,11 +41,11 @@ function _(e) {
               guildId: u,
               onClick: () => {
                   (0, a.openModalLazy)(async () => {
-                      let { default: e } = await Promise.all([n.e('29549'), n.e('31605'), n.e('81272'), n.e('98538'), n.e('2732')]).then(n.bind(n, 7225));
+                      let { default: e } = await Promise.all([n.e('29549'), n.e('31605'), n.e('81272'), n.e('77803'), n.e('5710')]).then(n.bind(n, 7225));
                       return (t) =>
                           (0, r.jsx)(e, {
                               appId: _.id,
-                              onlySubscribeServerSubForGuildId: u,
+                              guildId: u,
                               ...t
                           });
                   });

@@ -2,9 +2,6 @@ n.d(t, {
     Fs: function () {
         return _;
     },
-    SY: function () {
-        return E;
-    },
     Xu: function () {
         return d;
     },
@@ -16,9 +13,11 @@ n.d(t, {
     }
 }),
     n(411104);
-var r = n(470079),
-    i = n(911969),
-    a = n(592125),
+var r = n(470079);
+n(373793);
+var i = n(911969);
+n(404295);
+var a = n(592125),
     s = n(963456),
     o = n(213459),
     l = n(367790);
@@ -53,31 +52,30 @@ function d(e, t) {
     ).commands[0];
 }
 function _(e, t) {
-    let { commands: n, loading: i } = E(e, t),
-        a = n[0],
-        o = null != a;
+    let { commands: n, loading: a } = (function (e, t) {
+            return (0, o.v1)(
+                e,
+                { commandTypes: [i.yU.PRIMARY_ENTRY_POINT] },
+                {
+                    placeholderCount: 1,
+                    scoreMethod: l.p.COMMAND_ONLY,
+                    applicationId: t,
+                    allowFetch: !1,
+                    allowApplicationState: !0
+                }
+            );
+        })(e, t),
+        u = n[0],
+        c = null != u;
     return (
         r.useEffect(() => {
-            !o &&
-                !i &&
+            !c &&
+                !a &&
                 (0, s.j)({
                     type: 'application',
                     applicationId: t
                 });
-        }, [t, o, i]),
-        a
-    );
-}
-function E(e, t) {
-    return (0, o.v1)(
-        e,
-        { commandTypes: [i.yU.PRIMARY_ENTRY_POINT] },
-        {
-            placeholderCount: 1,
-            scoreMethod: l.p.COMMAND_ONLY,
-            applicationId: t,
-            allowFetch: !1,
-            allowApplicationState: !0
-        }
+        }, [t, c, a]),
+        u
     );
 }

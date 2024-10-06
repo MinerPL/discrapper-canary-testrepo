@@ -1,111 +1,122 @@
 n.d(t, {
     H: function () {
-        return I;
+        return m;
     },
     f: function () {
-        return m;
+        return h;
     }
 });
 var i = n(470079),
-    a = n(143927),
-    s = n(731965),
-    r = n(442837),
-    l = n(212093),
-    o = n(296386),
-    c = n(36867),
-    d = n(900849),
-    u = n(726115),
-    _ = n(859921),
-    E = n(416771),
-    h = n(128449);
-function m(e) {
+    a = n(442837),
+    s = n(296386),
+    r = n(900849),
+    l = n(762692),
+    o = n(356164),
+    c = n(164991),
+    d = n(726115),
+    u = n(859921),
+    _ = n(128449),
+    E = n(731455);
+function h(e) {
     let { loadId: t } = e,
-        n = (0, _.B)((e) => {
-            let { searchResultsQuery: t } = e;
-            return t;
-        }, a.Z),
-        s = (0, _.B)((e) => {
-            let { searchCategoryId: t } = e;
-            return t;
-        }, a.Z),
-        { guilds: l, loading: o } = (0, r.e7)([c.Z], () =>
-            null == n
-                ? {
-                      guilds: h.ry,
-                      loading: !0
-                  }
-                : c.Z.getResults(n, s)
+        n = (0, c.NL)(),
+        s = (0, c.lZ)(),
+        r = (0, c.Dm)(),
+        l = i.useMemo(
+            () => ({
+                categoryId: s,
+                query: n,
+                languageCode: r
+            }),
+            [s, r, n]
         ),
-        d = i.useCallback(() => {
+        u = (0, a.e7)([o.Z], () => {
             var e;
-            let n = _.B.getState(),
-                { guilds: i, total: a, loading: s, initialized: r } = c.Z.getResults(n.searchResultsQuery, n.searchCategoryId);
-            !s &&
-                (!r || !(i.length >= a)) &&
-                (0, E.y)({
-                    loadId: t,
-                    categoryId: n.searchCategoryId,
-                    offset: i.length,
-                    searchQuery: n.searchQuery,
-                    languageCode: null !== (e = n.searchLanguageCode) && void 0 !== e ? e : (0, E.X)()
-                });
-        }, [t]);
+            return null !== (e = o.Z.getGuildIds(l)) && void 0 !== e ? e : _.q5;
+        }),
+        E = (0, a.e7)([o.Z], () => {
+            var e;
+            return null !== (e = o.Z.getIsFetching(l)) && void 0 !== e && e;
+        }),
+        h = (0, a.e7)([o.Z], () => {
+            var e;
+            return null === (e = o.Z.getIsBlocked(n)) || void 0 === e || e;
+        }),
+        m = (0, c.$G)(),
+        I = m !== n,
+        p = i.useCallback(() => {
+            let e = (0, c.Zq)(),
+                n = (0, c.lx)(),
+                i = o.Z.getGuildIds(l),
+                a = o.Z.getTotal(l);
+            if (null == i || null == a) return;
+            let s = o.Z.getIsFetching(l),
+                r = o.Z.getIsInitialFetchComplete(l);
+            if (s || !r || i.length >= a) return;
+            let u = (0, c.a7)();
+            (0, d.CD)({
+                loadId: t,
+                categoryId: n,
+                offset: i.length,
+                query: e,
+                languageCode: u
+            });
+        }, [t, l]);
     return i.useMemo(
         () => ({
-            guilds: l,
-            loading: o,
-            searchResultsQuery: n,
-            loadMore: d,
-            searchCategoryId: s
+            guildIds: u,
+            loading: !h && (I || E),
+            searchResultsQuery: m,
+            loadMore: p,
+            searchCategoryId: s,
+            isBlockedSearchQuery: h
         }),
-        [l, d, n, o, s]
+        [u, h, I, E, m, p, s]
     );
 }
-function I(e) {
+function m(e) {
     let { loadId: t } = e,
-        n = (0, _.B)((e) => {
-            let { isSearchVisible: t } = e;
-            return t;
-        }, a.Z),
-        r = (0, _.B)((e) => {
-            let { searchQuery: t } = e;
-            return t;
-        }, a.Z);
+        n = (0, u.QQ)(),
+        a = (0, c.A3)();
     i.useEffect(() => {
-        l.Ue(), (0, o.le)();
+        l.Z.createAlgoliaIndex(), (0, s.le)();
     }, []);
-    let c = i.useCallback((e) => {
-            (0, s.j)(() => _.B.setState({ searchQuery: e }));
+    let o = i.useCallback((e) => {
+            (0, c.LD)({ query: e });
         }, []),
-        h = i.useCallback(() => {
-            d.IZ(t),
-                (0, s.j)(() =>
-                    _.B.setState({
-                        searchResultsQuery: '',
-                        searchQuery: '',
-                        isSearchVisible: !1,
-                        searchCategoryId: (0, u.lg)(_.B.getState().selectedTab),
-                        initialSearchCategoryId: null,
-                        searchScrollPosition: null
-                    })
-                );
+        _ = i.useCallback(() => {
+            r.IZ(t),
+                l.Z.clearAlgoliaSearchResults(),
+                l.Z.resetSearchLayout(),
+                (0, c.LD)({
+                    query: '',
+                    fetchedQuery: '',
+                    resultsQuery: '',
+                    categoryId: E.Hk,
+                    resultsInitialCategoryId: null,
+                    scrollPosition: null
+                }),
+                (0, u.jY)({ isSearchVisible: !1 });
         }, [t]);
     return {
-        searchQuery: r,
-        onSearchTextChange: c,
-        onClearSearch: h,
+        searchQuery: a,
+        onSearchTextChange: o,
+        onClearSearch: _,
         onSearchSubmit: i.useCallback(() => {
-            var e;
-            let n = _.B.getState();
-            n.searchQuery !== n.searchResultsQuery &&
-                ((0, s.j)(() => _.B.setState({ initialSearchCategoryId: n.searchCategoryId })),
-                (0, E.y)({
+            let e = (0, c.uP)(),
+                n = (0, c.Zq)();
+            if ('' === e.trim() || e === n) return;
+            l.Z.clearAlgoliaSearchResults();
+            let i = (0, c.a7)(),
+                a = (0, c.lx)();
+            (0, c.LD)({ resultsInitialCategoryId: a }),
+                (0, u.jY)({ isSearchVisible: !0 }),
+                (0, d.NL)({
                     loadId: t,
-                    categoryId: n.searchCategoryId,
-                    offset: 0,
-                    searchQuery: n.searchQuery,
-                    languageCode: null !== (e = n.searchLanguageCode) && void 0 !== e ? e : (0, E.X)()
-                }));
+                    categoryId: a,
+                    query: e,
+                    languageCode: i
+                });
         }, [t]),
         isSearchVisible: n
     };

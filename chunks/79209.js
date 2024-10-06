@@ -56,7 +56,6 @@ e.exports = {
     Storefront: {
         BENEFITS_SUMMARY: '{count, plural, one {# exclusive benefit} other {# exclusive benefits}}',
         BENEFITS_TITLE: 'Exclusive to this tier',
-        PRODUCT_DETAILS: 'Product Details',
         SERVER_SUBSCRIPTION: 'Server subscription',
         USER_SUBSCRIPTION: 'Personal subscription',
         MORE_BENEFITS: '+ {count, plural, one {# more benefit} other {# more benefits}}'

@@ -1,6 +1,6 @@
 n.d(t, {
     D: function () {
-        return T;
+        return S;
     },
     Z: function () {
         return v;
@@ -17,25 +17,26 @@ var s = n(120356),
     u = n(410030),
     d = n(44315),
     h = n(565138),
-    m = n(769654),
-    p = n(51144),
-    _ = n(200634),
-    f = n(228168),
-    E = n(981631),
-    g = n(689938),
-    C = n(542926),
-    I = n(632207);
+    p = n(769654),
+    m = n(51144),
+    _ = n(785717),
+    f = n(200634),
+    E = n(228168),
+    g = n(981631),
+    C = n(689938),
+    I = n(519294),
+    T = n(581958);
 let x = (0, r.getAvatarSize)(r.AvatarSizes.SIZE_16);
-function T(e) {
-    let { user: t, guild: s, nick: c, theme: u, onSelect: m } = e,
+function S(e) {
+    let { user: t, guild: s, nick: c, theme: u, onSelect: p } = e,
         _ = t.hasAvatarForGuild(s.id);
     return (0, i.jsxs)(r.Clickable, {
         focusProps: { offset: { right: 8 } },
-        className: C.listRow,
-        onClick: m,
+        className: I.listRow,
+        onClick: p,
         onContextMenu: (e) => {
             (0, o.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('96427'), n.e('23755'), n.e('89350'), n.e('11751'), n.e('33053'), n.e('37581'), n.e('65840'), n.e('7654'), n.e('90508'), n.e('18146'), n.e('44156'), n.e('59743'), n.e('14203'), n.e('85552'), n.e('98926'), n.e('58227'), n.e('1187'), n.e('75531'), n.e('22036'), n.e('92557'), n.e('64679'), n.e('23693'), n.e('87713'), n.e('33213'), n.e('30045')]).then(n.bind(n, 545135));
+                let { default: e } = await Promise.all([n.e('96427'), n.e('23755'), n.e('11751'), n.e('33053'), n.e('37581'), n.e('65840'), n.e('7654'), n.e('90508'), n.e('59743'), n.e('18146'), n.e('44156'), n.e('39371'), n.e('44294'), n.e('85552'), n.e('58227'), n.e('67564'), n.e('1187'), n.e('36897'), n.e('22036'), n.e('92557'), n.e('64679'), n.e('36362'), n.e('3175'), n.e('33213'), n.e('88578')]).then(n.bind(n, 545135));
                 return (t) =>
                     (0, i.jsx)(e, {
                         ...t,
@@ -48,32 +49,32 @@ function T(e) {
                 tabIndex: -1,
                 guild: s,
                 showBadge: !0,
-                className: a()(C.listAvatar, null == s.icon ? I.guildAvatarWithoutIcon : null),
-                badgeStrokeColor: (0, d.Lq)((0, l.wj)(u) ? E.Ilk.PRIMARY_600 : E.Ilk.WHITE_500),
+                className: a()(I.listAvatar, null == s.icon ? T.guildAvatarWithoutIcon : null),
+                badgeStrokeColor: (0, d.Lq)((0, l.wj)(u) ? g.Ilk.PRIMARY_600 : g.Ilk.WHITE_500),
                 badgeTooltipColor: r.TooltipColors.PRIMARY,
-                badgeTooltipDelay: f.vB,
+                badgeTooltipDelay: E.vB,
                 size: h.Z.Sizes.MEDIUM,
                 active: !0
             }),
             (0, i.jsxs)('div', {
-                className: C.listRowContent,
+                className: I.listRowContent,
                 children: [
                     (0, i.jsx)('div', {
-                        className: C.listName,
+                        className: I.listName,
                         children: s.toString()
                     }),
                     _ || null != c
                         ? (0, i.jsxs)('div', {
-                              className: I.guildNick,
+                              className: T.guildNick,
                               children: [
                                   _ &&
                                       (0, i.jsx)(r.Avatar, {
                                           src: t.getAvatarURL(s.id, x),
                                           size: r.AvatarSizes.SIZE_16,
-                                          className: I.guildAvatar,
+                                          className: T.guildAvatar,
                                           'aria-hidden': !0
                                       }),
-                                  null != c ? c : p.ZP.getName(t)
+                                  null != c ? c : m.ZP.getName(t)
                               ]
                           })
                         : null
@@ -84,41 +85,44 @@ function T(e) {
 }
 function v(e) {
     let { user: t, onClose: n } = e,
-        { mutualGuilds: s } = (0, _.Z)(t.id),
-        a = (0, u.ZP)(),
-        l = (e) => {
-            (0, m.X)(e), n(), (0, c.xf)();
+        { trackUserProfileAction: s } = (0, _.KZ)(),
+        { mutualGuilds: a } = (0, f.Z)(t.id),
+        l = (0, u.ZP)(),
+        o = (e) => {
+            (0, p.X)(e), n(), (0, c.xf)();
         };
     return (0, i.jsx)(r.ScrollerThin, {
-        className: C.listScroller,
+        className: I.listScroller,
         fade: !0,
         children:
-            null == s
+            null == a
                 ? (0, i.jsx)('div', {
-                      className: C.empty,
+                      className: I.empty,
                       children: (0, i.jsx)(r.Spinner, {})
                   })
-                : 0 === s.length
+                : 0 === a.length
                   ? (0, i.jsxs)('div', {
-                        className: C.empty,
+                        className: I.empty,
                         children: [
-                            (0, i.jsx)('div', { className: C.emptyIconGuilds }),
+                            (0, i.jsx)('div', { className: I.emptyIconGuilds }),
                             (0, i.jsx)('div', {
-                                className: C.emptyText,
-                                children: g.Z.Messages.NO_MUTUAL_GUILDS
+                                className: I.emptyText,
+                                children: C.Z.Messages.NO_MUTUAL_GUILDS
                             })
                         ]
                     })
-                  : s.map((e) => {
-                        let { guild: n, nick: s } = e;
+                  : a.map((e) => {
+                        let { guild: n, nick: a } = e;
                         return (0, i.jsx)(
-                            T,
+                            S,
                             {
                                 user: t,
                                 guild: n,
-                                nick: s,
-                                theme: a,
-                                onSelect: () => l(n.id)
+                                nick: a,
+                                theme: l,
+                                onSelect: () => {
+                                    s({ action: 'PRESS_MUTUAL_GUILD' }), o(n.id);
+                                }
                             },
                             n.id
                         );

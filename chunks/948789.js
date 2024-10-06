@@ -1,23 +1,17 @@
-let i;
-n.d(t, {
+let n;
+a.d(t, {
     fQ: function () {
         return o;
-    },
-    uL: function () {
-        return l;
     }
 }),
-    n(653041),
-    n(757143);
-var a = n(539528),
-    s = n(33382),
-    r = n.n(s);
-function l(e) {
-    i.push(e);
-}
+    a(653041),
+    a(757143);
+var i = a(539528),
+    r = a(33382),
+    l = a.n(r);
 function o(e) {
     return (t) => {
-        if (null != e) return null != r()(t, { end: !1 }).exec(e.history.location.pathname);
+        if (null != e) return null != l()(t, { end: !1 }).exec(e.history.location.pathname);
     };
 }
-i = (0, a.lX)();
+(0, i.lX)();

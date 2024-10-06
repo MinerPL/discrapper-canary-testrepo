@@ -81,18 +81,18 @@ var r,
     O = n(371991),
     R = n(206583),
     v = n(689938),
-    C = n(119369);
-let y = {
+    C = n(793440);
+let L = {
     [d.s.TOP_ARTIST]: [H],
     [d.s.PLAYED_GAME]: [U, w, P, Y, G, F, Z, B, k],
     [d.s.TOP_GAME]: [V],
     [d.s.WATCHED_MEDIA]: [j, W],
     [d.s.LAUNCHED_ACTIVITY]: [U, w, P, Y, Z, k]
 };
-((r = i || (i = {}))[(r.CARD = 0)] = 'CARD'), (r[(r.POPOUT = 1)] = 'POPOUT'), (r[(r.STREAMING_POPOUT = 2)] = 'STREAMING_POPOUT'), (r[(r.GAME_PROFILE = 3)] = 'GAME_PROFILE'), (r[(r.USER_PROFILE = 4)] = 'USER_PROFILE'), (r[(r.EMBED = 5)] = 'EMBED');
-let L = s.createContext({});
+((r = i || (i = {}))[(r.CARD = 0)] = 'CARD'), (r[(r.POPOUT = 1)] = 'POPOUT'), (r[(r.STREAMING_POPOUT = 2)] = 'STREAMING_POPOUT'), (r[(r.GAME_PROFILE = 3)] = 'GAME_PROFILE'), (r[(r.USER_PROFILE = 4)] = 'USER_PROFILE'), (r[(r.EMBED = 5)] = 'EMBED'), (r[(r.LEADERBOARD_POPOUT = 6)] = 'LEADERBOARD_POPOUT');
+let y = s.createContext({});
 function D() {
-    return s.useContext(L);
+    return s.useContext(y);
 }
 function b(e) {
     let { children: t, ...n } = e;
@@ -147,12 +147,10 @@ function U(e) {
         c = null != u ? h.ScreenArrowIcon : (0, S.Mq)(t) ? h.AppsIcon : h.GameControllerIcon;
     return (0, a.jsxs)(b, {
         children: [
-            3 === s
-                ? null
-                : (0, a.jsx)(c, {
-                      size: 'xxs',
-                      color: l
-                  }),
+            (0, a.jsx)(c, {
+                size: 'xxs',
+                color: l
+            }),
             (0, a.jsx)(O.ZP, {
                 entry: t,
                 textColor: o ? 'text-positive' : r,
@@ -350,7 +348,7 @@ function K(e) {
     let t,
         { location: n, children: r, className: i } = e;
     return (
-        (t = (0, I.Hi)(n, [1, 5])
+        (t = (0, I.Hi)(n, [1, 5, 6])
             ? {
                   defaultTextColor: 'content-inventory-overlay-text-secondary',
                   defaultIconColor: h.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY
@@ -360,7 +358,7 @@ function K(e) {
               : 3 === n
                 ? { defaultTextColor: 'text-muted' }
                 : { defaultTextColor: 'text-secondary' }),
-        (0, a.jsx)(L.Provider, {
+        (0, a.jsx)(y.Provider, {
             value: {
                 location: n,
                 ...t
@@ -385,15 +383,15 @@ function z(e) {
         i = (function (e) {
             switch (e.content_type) {
                 case d.s.TOP_ARTIST:
-                    return y[e.content_type].map((t, n) => (0, a.jsx)(t, { entry: e }, n));
+                    return L[e.content_type].map((t, n) => (0, a.jsx)(t, { entry: e }, n));
                 case d.s.PLAYED_GAME:
-                    return y[e.content_type].map((t, n) => (0, a.jsx)(t, { entry: e }, n));
+                    return L[e.content_type].map((t, n) => (0, a.jsx)(t, { entry: e }, n));
                 case d.s.TOP_GAME:
-                    return y[e.content_type].map((t, n) => (0, a.jsx)(t, { entry: e }, n));
+                    return L[e.content_type].map((t, n) => (0, a.jsx)(t, { entry: e }, n));
                 case d.s.WATCHED_MEDIA:
-                    return y[e.content_type].map((t, n) => (0, a.jsx)(t, { entry: e }, n));
+                    return L[e.content_type].map((t, n) => (0, a.jsx)(t, { entry: e }, n));
                 case d.s.LAUNCHED_ACTIVITY:
-                    return y[e.content_type].map((t, n) => (0, a.jsx)(t, { entry: e }, n));
+                    return L[e.content_type].map((t, n) => (0, a.jsx)(t, { entry: e }, n));
                 default:
                     return null;
             }

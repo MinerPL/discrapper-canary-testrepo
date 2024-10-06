@@ -22,6 +22,17 @@ t.Z = {
             s.Z.captureException(e);
         }
     },
+    async gravityJoinGuild(e) {
+        if (!!(0, l.rK)('gravityJoinGuild') && 0 !== e.length)
+            try {
+                await i.tn.post({
+                    url: o.ANM.GRAVITY_JOIN_GUILD,
+                    body: { guild_ids: e }
+                });
+            } catch (e) {
+                s.Z.captureException(e);
+            }
+    },
     setGravitySelectedChannel(e) {
         a.Z.dispatch({
             type: 'SET_GRAVITY_SELECTED_CHANNEL',
@@ -76,6 +87,18 @@ t.Z = {
                 a.Z.dispatch({
                     type: 'LOAD_GRAVITY_CUSTOM_SCORES',
                     scores: e.body
+                });
+            } catch (e) {
+                s.Z.captureException(e);
+            }
+    },
+    async getRecommendedGuilds() {
+        if (!!(0, l.rK)('recommendedGuilds'))
+            try {
+                let e = await i.tn.get({ url: o.ANM.GRAVITY_RECOMMENDED_GUILDS });
+                a.Z.dispatch({
+                    type: 'LOAD_GRAVITY_RECOMMENDED_GUILDS',
+                    guilds: e.body.guilds
                 });
             } catch (e) {
                 s.Z.captureException(e);

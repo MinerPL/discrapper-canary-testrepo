@@ -17,9 +17,9 @@ var s = n(442837),
     u = n(785717),
     d = n(697927),
     h = n(171368),
-    m = n(981631),
-    p = n(689938),
-    _ = n(542926);
+    p = n(981631),
+    m = n(689938),
+    _ = n(519294);
 let f = (0, a.getAvatarSize)(a.AvatarSizes.SIZE_40);
 function E(e) {
     let { user: t, status: o, onSelect: u } = e,
@@ -30,7 +30,7 @@ function E(e) {
         onClick: u,
         onContextMenu: (e) => {
             (0, l.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('46611')]).then(n.bind(n, 881351));
+                let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('50261')]).then(n.bind(n, 881351));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,
@@ -59,14 +59,14 @@ function g(e) {
     let { user: t, onClose: n } = e,
         { mutualFriends: s } = (0, d.Z)(t.id),
         { analyticsLocations: l } = (0, o.ZP)(),
-        { context: r } = (0, u.KZ)(),
-        c = (e) => {
+        { context: r, trackUserProfileAction: c } = (0, u.KZ)(),
+        f = (e) => {
             n(),
                 (0, h.openUserProfileModal)({
                     ...r,
                     userId: e,
                     sourceAnalyticsLocations: l,
-                    analyticsLocation: { section: m.jXE.USER_PROFILE_MUTUAL_FRIENDS }
+                    analyticsLocation: { section: p.jXE.USER_PROFILE_MUTUAL_FRIENDS }
                 });
         };
     return (0, i.jsx)(a.ScrollerThin, {
@@ -85,7 +85,7 @@ function g(e) {
                             (0, i.jsx)('div', { className: _.emptyIconFriends }),
                             (0, i.jsx)('div', {
                                 className: _.emptyText,
-                                children: p.Z.Messages.NO_MUTUAL_FRIENDS
+                                children: m.Z.Messages.NO_MUTUAL_FRIENDS
                             })
                         ]
                     })
@@ -96,7 +96,9 @@ function g(e) {
                             {
                                 user: n,
                                 status: s,
-                                onSelect: () => c(n.id)
+                                onSelect: () => {
+                                    c({ action: 'PRESS_MUTUAL_FRIEND' }), f(n.id);
+                                }
                             },
                             t
                         );

@@ -18,26 +18,25 @@ var r = n(668781),
     h = n(527805),
     p = n(689938);
 async function I(e) {
-    let { channelId: t, applicationId: n, launchId: I, inputApplication: m, analyticsLocations: T, launchingComponentId: S, commandOrigin: g, sectionName: A } = e,
-        N = _.ZP.getEmbeddedActivitiesForChannel(t).find((e) => e.applicationId === n && (null == I || e.launchId === I)),
-        O = m;
-    if (null == O) {
-        let e = await i.Z.fetchApplication(n);
-        O = s.Z.createFromServer(e);
+    let { channelId: t, applicationId: n, launchId: I, inputApplication: m, analyticsLocations: T, launchingComponentId: S, sectionName: g } = e,
+        A = _.ZP.getEmbeddedActivitiesForChannel(t).find((e) => e.applicationId === n && (null == I || e.launchId === I)),
+        N = m;
+    if (null == N) {
+        let e = await i.ZP.fetchApplication(n);
+        N = s.Z.createFromServer(e);
     }
-    if (null == N || null == O) return;
-    let R = c.default.getCurrentUser(),
-        v = o.Z.getChannel(t);
-    async function C() {
-        if (null != N)
+    if (null == A || null == N) return;
+    let O = c.default.getCurrentUser(),
+        R = o.Z.getChannel(t);
+    async function v() {
+        if (null != A)
             await (0, E.Z)({
-                applicationId: N.applicationId,
+                applicationId: A.applicationId,
                 activityChannelId: t,
                 locationObject: {},
                 analyticsLocations: T,
                 componentId: S,
-                commandOrigin: g,
-                sectionName: A
+                sectionName: g
             });
     }
     !(function (e) {
@@ -82,16 +81,16 @@ async function I(e) {
         }
     })({
         embeddedActivityJoinability: (0, h.ZP)({
-            userId: null == R ? void 0 : R.id,
-            application: O,
+            userId: null == O ? void 0 : O.id,
+            application: N,
             channelId: t,
-            currentUser: R,
-            isActivitiesEnabledForCurrentPlatform: (0, f.a)(v),
+            currentUser: O,
+            isActivitiesEnabledForCurrentPlatform: (0, f.a)(R),
             ChannelStore: o.Z,
             VoiceStateStore: d.Z,
             PermissionStore: u.Z,
             GuildStore: l.Z
         }),
-        handleCanJoin: C
+        handleCanJoin: v
     });
 }

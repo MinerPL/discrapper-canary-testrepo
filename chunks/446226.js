@@ -8,10 +8,14 @@ var l = t(442837),
     u = t(979651),
     r = t(258609);
 function a() {
-    let e = (0, l.e7)([i.default], () => i.default.getId()),
-        n = (0, l.e7)([r.Z], () => r.Z.getRemoteSessionId());
-    return (0, l.e7)([u.Z], () => {
-        var t;
-        return null !== (t = u.Z.getVoiceStateForSession(e, n)) && void 0 !== t ? t : void 0;
-    });
+    return (0, l.e7)(
+        [i.default, u.Z, r.Z],
+        () => {
+            var e;
+            let n = i.default.getId(),
+                t = r.Z.getRemoteSessionId();
+            return null !== (e = u.Z.getVoiceStateForSession(n, t)) && void 0 !== e ? e : void 0;
+        },
+        []
+    );
 }

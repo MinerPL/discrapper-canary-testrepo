@@ -6,97 +6,99 @@ var s = n(735250),
     l = n(481060),
     o = n(700582),
     c = n(330726),
-    d = n(268350),
-    u = n(419922),
-    _ = n(689938),
-    I = n(405385);
+    d = n(51144),
+    u = n(268350),
+    _ = n(419922),
+    I = n(689938),
+    E = n(102017);
 t.Z = (e) => {
-    let { className: t, isDisabled: i, sticker: E, canManageSticker: T } = e,
-        [m, N] = a.useState(!1),
-        [S, h] = (0, c.Z)(null, 4000),
-        g = () => {
+    let { className: t, isDisabled: i, sticker: T, canManageSticker: m } = e,
+        [N, S] = a.useState(!1),
+        [g, h] = (0, c.Z)(null, 4000),
+        C = () => {
             (0, l.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e('93626'), n.e('33625')]).then(n.bind(n, 136735));
+                let { default: e } = await Promise.all([n.e('93626'), n.e('2901')]).then(n.bind(n, 136735));
                 return (t) =>
                     (0, s.jsx)(e, {
-                        sticker: E,
-                        guildId: E.guild_id,
+                        sticker: T,
+                        guildId: T.guild_id,
                         ...t
                     });
             });
         },
-        C = async () => {
-            h(null), N(!0);
+        x = async () => {
+            h(null), S(!0);
             try {
-                await (0, d.Um)(E);
+                await (0, u.Um)(T);
             } catch (e) {
-                h(e.body.message), N(!1);
+                h(e.body.message), S(!1);
             }
-        };
+        },
+        p = d.ZP.useUserTag(T.user);
     return (0, s.jsx)(l.Tooltip, {
         color: l.Tooltip.Colors.RED,
-        forceOpen: null != S,
-        text: S,
+        forceOpen: null != g,
+        text: g,
         children: () =>
             (0, s.jsxs)('div', {
-                className: r()(I.wrapper, t, { [I.wrapperDisabled]: i }),
+                className: r()(E.wrapper, t, { [E.wrapperDisabled]: i }),
                 children: [
                     (0, s.jsxs)('div', {
-                        className: r()(I.content, { [I.contentRemoving]: m }),
+                        className: r()(E.content, { [E.contentRemoving]: N }),
                         children: [
-                            (0, s.jsx)(u.ZP, {
-                                className: I.sticker,
+                            (0, s.jsx)(_.ZP, {
+                                className: E.sticker,
                                 size: 72,
-                                sticker: E
+                                sticker: T
                             }),
                             (0, s.jsxs)('div', {
                                 children: [
                                     (0, s.jsx)(l.Text, {
                                         color: 'header-primary',
                                         variant: 'text-xs/semibold',
-                                        className: I.stickerName,
-                                        children: E.name
+                                        className: E.stickerName,
+                                        children: T.name
                                     }),
-                                    null != E.user &&
+                                    null != T.user &&
                                         (0, s.jsxs)('div', {
-                                            className: I.user,
+                                            className: E.user,
                                             children: [
                                                 (0, s.jsx)(o.Z, {
-                                                    className: I.userAvatar,
+                                                    className: E.userAvatar,
                                                     size: l.AvatarSizes.SIZE_16,
-                                                    user: E.user
+                                                    user: T.user
                                                 }),
                                                 (0, s.jsx)(l.Text, {
                                                     color: 'header-secondary',
                                                     variant: 'text-xs/normal',
-                                                    children: E.user.username
+                                                    children: p
                                                 })
                                             ]
                                         })
                                 ]
                             }),
-                            T
+                            m
                                 ? (0, s.jsxs)('div', {
-                                      className: I.actions,
+                                      className: E.actions,
                                       children: [
                                           (0, s.jsx)(l.Clickable, {
-                                              className: r()(I.action, I.__invalid_actionEdit),
-                                              onClick: g,
-                                              'aria-label': _.Z.Messages.EDIT,
+                                              className: E.action,
+                                              onClick: C,
+                                              'aria-label': I.Z.Messages.EDIT,
                                               children: (0, s.jsx)(l.PencilIcon, {
                                                   size: 'xs',
                                                   color: 'currentColor',
-                                                  className: I.icon
+                                                  className: E.icon
                                               })
                                           }),
                                           (0, s.jsx)(l.Clickable, {
-                                              className: r()(I.action, I.actionRemove),
-                                              onClick: C,
-                                              'aria-label': _.Z.Messages.REMOVE,
+                                              className: r()(E.action, E.actionRemove),
+                                              onClick: x,
+                                              'aria-label': I.Z.Messages.REMOVE,
                                               children: (0, s.jsx)(l.XSmallIcon, {
                                                   size: 'md',
                                                   color: 'currentColor',
-                                                  className: I.icon
+                                                  className: E.icon
                                               })
                                           })
                                       ]
@@ -104,7 +106,7 @@ t.Z = (e) => {
                                 : null
                         ]
                     }),
-                    m && (0, s.jsx)(l.Spinner, { className: I.spinner })
+                    N && (0, s.jsx)(l.Spinner, { className: E.spinner })
                 ]
             })
     });

@@ -1,18 +1,19 @@
 var r,
     i,
     a,
-    s = n(445346),
-    o = n(570140),
-    l = n(703558);
-let u = {},
-    c = {};
-class d extends s.y {
+    s,
+    o = n(442837),
+    l = n(570140),
+    u = n(703558);
+let c = {},
+    d = {};
+class _ extends (s = o.ZP.Store) {
     getStickerPreview(e, t) {
-        return (t === l.d.FirstThreadMessage ? c : u)[e];
+        return (t === u.d.FirstThreadMessage ? d : c)[e];
     }
 }
 (a = 'StickerMessagePreviewStore'),
-    (i = 'displayName') in (r = d)
+    (i = 'displayName') in (r = _)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -20,18 +21,18 @@ class d extends s.y {
               writable: !0
           })
         : (r[i] = a);
-let _ = new d(o.Z, {
+let E = new _(l.Z, {
     ADD_STICKER_PREVIEW: function (e) {
         let { channelId: t, sticker: n, draftType: r } = e;
-        (r === l.d.FirstThreadMessage ? c : u)[t] = [n];
+        (r === u.d.FirstThreadMessage ? d : c)[t] = [n];
     },
     CLEAR_STICKER_PREVIEW: function (e) {
         let { channelId: t, draftType: n } = e,
-            r = n === l.d.FirstThreadMessage ? c : u;
+            r = n === u.d.FirstThreadMessage ? d : c;
         null != r[t] && delete r[t];
     },
     LOGOUT: function () {
-        (u = {}), (c = {});
+        (c = {}), (d = {});
     }
 });
-t.Z = _;
+t.Z = E;

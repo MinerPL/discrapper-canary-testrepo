@@ -1,6 +1,6 @@
 t.d(n, {
     I: function () {
-        return a;
+        return o;
     }
 }),
     t(518263),
@@ -24,9 +24,13 @@ let E = Uint8Array.of(36, 202, 177, 122, 122, 248, 236, 43, 130, 180, 18, 185, 4
         p: 2,
         dkLen: 64
     };
-async function a(e, n, t, a, o) {
-    let s = await Promise.all([(0, r.x)(e, n, t), (0, r.x)(e, a, o)]);
-    s.sort();
-    let c = new Uint8Array(s[0].byteLength + s[1].byteLength);
-    return c.set(s[0], 0), c.set(s[1], s[0].byteLength), new Uint8Array(await (0, i.E)(c, E, u));
+function a(e, n) {
+    for (let t = 0; t < e.length && t < n.length; t++) if (e[t] != n[t]) return e[t] - n[t];
+    return e.length - n.length;
+}
+async function o(e, n, t, o, s) {
+    let c = await Promise.all([(0, r.x)(e, n, t), (0, r.x)(e, o, s)]);
+    c.sort(a);
+    let _ = new Uint8Array(c[0].byteLength + c[1].byteLength);
+    return _.set(c[0], 0), _.set(c[1], c[0].byteLength), new Uint8Array(await (0, i.E)(_, E, u));
 }

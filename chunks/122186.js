@@ -1,142 +1,161 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return T;
     },
     c: function () {
-        return j;
+        return Z;
     }
 });
-var l = n(735250);
-n(470079);
-var s = n(120356),
-    i = n.n(s),
-    r = n(848246),
-    a = n(442837),
-    o = n(481060),
-    c = n(607070),
-    d = n(436774),
-    u = n(933843),
-    f = n(1163),
-    h = n(846401),
-    m = n(197115),
-    x = n(981631),
-    _ = n(474936),
-    g = n(689938),
-    p = n(304095);
-function C(e) {
-    let { location: t, ...n } = e;
-    return (0, l.jsx)(m.Z, {
-        className: i()(p.enhancedCTA, p.ctaGradientBackground),
-        iconClassName: p.premiumIcon,
-        subscriptionTier: _.Si.TIER_2,
-        buttonText: g.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA,
-        size: o.Button.Sizes.TINY,
+var l = n(735250),
+    s = n(470079),
+    i = n(120356),
+    r = n.n(i),
+    a = n(848246),
+    o = n(442837),
+    c = n(481060),
+    d = n(607070),
+    u = n(436774),
+    f = n(933843),
+    h = n(1163),
+    m = n(846401),
+    x = n(48125),
+    _ = n(639119),
+    g = n(197115),
+    p = n(74538),
+    C = n(981631),
+    S = n(474936),
+    E = n(689938),
+    j = n(742769);
+function v(e) {
+    let { location: t, ...n } = e,
+        i = (0, _.N)(),
+        a = null != i,
+        o = x.Z.useExperiment(
+            { location: 'StreamSettingsUpsellBanner.NitroButton' },
+            {
+                autoTrackExposure: a,
+                disable: !a
+            }
+        ).enabled,
+        d = s.useCallback(() => {
+            if (o) {
+                var e;
+                return null !== (e = (0, p.fr)(i)) && void 0 !== e ? e : E.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA;
+            }
+            return E.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA;
+        }, [o, i]);
+    return (0, l.jsx)(g.Z, {
+        className: r()(j.enhancedCTA, j.ctaGradientBackground),
+        iconClassName: j.premiumIcon,
+        subscriptionTier: S.Si.TIER_2,
+        buttonText: d(),
+        size: c.Button.Sizes.TINY,
         premiumModalAnalyticsLocation: t,
         ...n
     });
 }
-function S() {
-    let e = (0, h.Z)();
+function I() {
+    let e = (0, m.Z)();
     return (0, l.jsxs)('div', {
-        className: p.extendedDemoContainer,
+        className: j.extendedDemoContainer,
         children: [
             (0, l.jsxs)('div', {
                 children: [
                     (0, l.jsxs)('div', {
-                        className: p.extendedDemoContainer,
+                        className: j.extendedDemoContainer,
                         children: [
-                            (0, l.jsx)(o.Text, {
+                            (0, l.jsx)(c.Text, {
                                 variant: 'text-xs/bold',
                                 color: 'status-warning',
-                                className: p.extendedDemoDurationText,
+                                className: j.extendedDemoDurationText,
                                 children: e.toUpperCase()
                             }),
-                            (0, l.jsx)(o.Text, {
+                            (0, l.jsx)(c.Text, {
                                 variant: 'text-xs/bold',
-                                children: g.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_UPSELL_TITLE.toUpperCase()
+                                children: E.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_UPSELL_TITLE.toUpperCase()
                             })
                         ]
                     }),
-                    (0, l.jsx)(o.Text, {
+                    (0, l.jsx)(c.Text, {
                         variant: 'text-sm/medium',
-                        children: g.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_UPSELL_BODY
+                        children: E.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_UPSELL_BODY
                     })
                 ]
             }),
             (0, l.jsx)('div', {
-                className: p.extendedDemoButton,
-                children: (0, l.jsx)(C, { size: o.Button.Sizes.SMALL })
+                className: j.extendedDemoButton,
+                children: (0, l.jsx)(v, { size: c.Button.Sizes.SMALL })
             })
         ]
     });
 }
-function j() {
-    let e = (0, a.e7)([c.Z], () => c.Z.useReducedMotion);
+function Z() {
+    let e = (0, o.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, l.jsxs)('div', {
-        className: i()(p.reverseTrialEducationBannerContainer, { [p.reducedMotion]: e }),
+        className: r()(j.reverseTrialEducationBannerContainer, { [j.reducedMotion]: e }),
         children: [
-            (0, l.jsx)(o.LottieAnimation, {
-                className: i()(p.unlockAnimation, { [p.reducedMotion]: e }),
+            (0, l.jsx)(c.LottieAnimation, {
+                className: r()(j.unlockAnimation, { [j.reducedMotion]: e }),
                 loop: !1,
                 shouldAnimate: !e,
                 pauseAtFrame: e ? 149 : void 0,
                 importData: () => n.e('21812').then(n.t.bind(n, 741855, 19))
             }),
-            (0, l.jsx)(o.Text, {
+            (0, l.jsx)(c.Text, {
                 variant: 'text-xs/medium',
-                className: p.reverseTrialEducationText,
-                children: g.Z.Messages.PREMIUM_REVERSE_TRIAL_SCREEN_SHARE_QUALITY_EDUCATION.format()
+                className: j.reverseTrialEducationText,
+                children: E.Z.Messages.PREMIUM_REVERSE_TRIAL_SCREEN_SHARE_QUALITY_EDUCATION.format()
             })
         ]
     });
 }
-function v(e) {
-    let { message: t, onClose: n, openStreamUpsellModal: s, glow: a = !1 } = e,
-        c = {
-            section: x.jXE.STREAM_SETTINGS,
-            object: x.qAy.PREMIUM_UPSELL_BANNER,
-            objectType: x.Qqv.BUY
+function T(e) {
+    let { message: t, onClose: n, openStreamUpsellModal: s, glow: i = !1 } = e,
+        o = {
+            section: C.jXE.STREAM_SETTINGS,
+            object: C.qAy.PREMIUM_UPSELL_BANNER,
+            objectType: C.Qqv.BUY
         },
-        h = (0, u.So)(r.q.STREAM_HIGH_QUALITY),
-        m = f.Z.useExperiment({ location: 'StreamSettingsUpsellBanner' }, { autoTrackExposure: !1 }).extendedDemoDuration;
+        d = (0, f.So)(a.q.STREAM_HIGH_QUALITY),
+        m = h.Z.useExperiment({ location: 'StreamSettingsUpsellBanner' }, { autoTrackExposure: !1 }).extendedDemoDuration;
     return (0, l.jsx)('div', {
-        className: i()(p.upsellBanner, p.enhancedBanner, { [p.gradientGlow]: a }),
+        className: r()(j.upsellBanner, j.enhancedBanner, { [j.gradientGlow]: i }),
         children:
-            h && m
-                ? (0, l.jsx)(S, {})
+            d && m
+                ? (0, l.jsx)(I, {})
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsxs)('div', {
-                              className: p.iconTextContainer,
+                              className: j.iconTextContainer,
                               children: [
-                                  (0, l.jsx)(o.NitroWheelIcon, {
+                                  (0, l.jsx)(c.NitroWheelIcon, {
                                       size: 'md',
-                                      color: d.JX.PREMIUM_TIER_2
+                                      color: u.JX.PREMIUM_TIER_2
                                   }),
-                                  (0, l.jsx)(o.Text, {
+                                  (0, l.jsx)(c.Text, {
                                       variant: 'text-sm/medium',
-                                      className: i()(p.upsellText, p.enhancedUpsellText),
+                                      className: r()(j.upsellText, j.enhancedUpsellText),
                                       children:
                                           null != t
                                               ? t
-                                              : h
+                                              : d
                                                 ? (0, l.jsxs)(l.Fragment, {
                                                       children: [
-                                                          g.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_UPSELL_BODY,
+                                                          E.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_UPSELL_BODY,
                                                           ' ',
-                                                          g.Z.Messages.LEARN_MORE_CLICK.format({
+                                                          E.Z.Messages.LEARN_MORE_CLICK.format({
                                                               onClick: () =>
                                                                   s({
-                                                                      analyticsLocation: c,
+                                                                      analyticsLocation: o,
                                                                       onClose: n
                                                                   })
                                                           })
                                                       ]
                                                   })
-                                                : g.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_LEARN_MORE_V3.format({
+                                                : E.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_LEARN_MORE_V3.format({
                                                       onClick: () =>
                                                           s({
-                                                              analyticsLocation: c,
+                                                              analyticsLocation: o,
                                                               onClose: n
                                                           })
                                                   })
@@ -144,8 +163,8 @@ function v(e) {
                               ]
                           }),
                           (0, l.jsx)('div', {
-                              className: p.enhancedCTAs,
-                              children: (0, l.jsx)(C, {})
+                              className: j.enhancedCTAs,
+                              children: (0, l.jsx)(v, { location: o })
                           })
                       ]
                   })

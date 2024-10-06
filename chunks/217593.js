@@ -1,0 +1,22 @@
+e.exports = {
+    body: 'body_ad5fac',
+    menus: 'menus_ad5fac',
+    menuOverlay: 'menuOverlay_ad5fac',
+    menuDivider: 'menuDivider_ad5fac',
+    menuItemInner: 'menuItemInner_ad5fac',
+    menuItemLabel: 'menuItemLabel_ad5fac',
+    menuItemColor: 'menuItemColor_ad5fac',
+    submenuPaddingContainer: 'submenuPaddingContainer_ad5fac',
+    statusPickerModal: 'statusPickerModal_ad5fac',
+    statusPickerModalMenu: 'statusPickerModalMenu_ad5fac',
+    statusItem: 'statusItem_ad5fac',
+    expiringStatusMenuItem: 'expiringStatusMenuItem_ad5fac',
+    status: 'status_ad5fac',
+    icon: 'icon_ad5fac',
+    description: 'description_ad5fac',
+    themeContainer: 'themeContainer_ad5fac',
+    username: 'username_ad5fac',
+    focusModeTitle: 'focusModeTitle_ad5fac',
+    customEmojiPlaceholder: 'customEmojiPlaceholder_ad5fac',
+    clearCustomStatusHint: 'clearCustomStatusHint_ad5fac'
+};
