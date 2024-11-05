@@ -188,6 +188,8 @@ class en {
     }
     getCategoryFromSection(e) {
         switch (e) {
+            case q:
+                throw Error('Invalid section. Use getChannelNoticeSection instead');
             case J:
                 throw Error('Invalid section. Use getGuildActionSection instead');
             case K:
@@ -238,57 +240,59 @@ class en {
         return this.firstVoiceChannel;
     }
     getSectionRowsFromChannel(e) {
-        if (
-            (function (e) {
-                return null != e && em.has(e);
-            })(e)
-        )
+        let t = (function (e) {
+            if (null == e) return null;
+            if (em.has(e)) return e;
+            let t = R.Z.getChannel(e);
+            return (null == t ? void 0 : t.isDirectory()) ? B.z.GUILD_DIRECTORY : null;
+        })(e);
+        if (null != t)
             return [
                 {
-                    row: this.getGuildActionSection().getRows().indexOf(e),
+                    row: this.getGuildActionSection().getRows().indexOf(t),
                     section: J
                 }
             ];
-        let t = [],
-            n = R.Z.getChannel(e);
-        if (null == n || null == e) return t;
-        let i = n.isThread();
-        if ((i && (n = R.Z.getChannel(n.parent_id)), null == n)) return t;
-        let s = this.favoritesCategory.getShownChannelIds().indexOf(n.id);
-        s >= 0 &&
-            t.push({
+        let n = [],
+            i = R.Z.getChannel(e);
+        if (null == i || null == e) return n;
+        let s = i.isThread();
+        if ((s && (i = R.Z.getChannel(i.parent_id)), null == i)) return n;
+        let l = this.favoritesCategory.getShownChannelIds().indexOf(i.id);
+        l >= 0 &&
+            n.push({
                 section: K,
-                row: s
+                row: l
             });
-        let l = this.recentsCategory.getShownChannelIds().indexOf(n.id);
+        let r = this.recentsCategory.getShownChannelIds().indexOf(i.id);
         if (
-            (l >= 0 &&
-                t.push({
+            (r >= 0 &&
+                n.push({
                     section: this.recentsSectionNumber,
-                    row: l
+                    row: r
                 }),
-            n.type === z.d4z.GUILD_CATEGORY)
+            i.type === z.d4z.GUILD_CATEGORY)
         )
-            return [{ section: h().findIndex(this.getSortedNamedCategories(), (e) => e.id === (null == n ? void 0 : n.id)) + $ }];
-        let r = this.getCategory(n),
-            a = r instanceof es ? Q : this.getSortedNamedCategories().indexOf(r) + $,
-            d = r.getShownChannelIds().indexOf(n.id);
-        if (a >= 0 && d >= 0) {
-            let s = i ? r.channels[n.id].threadIds.indexOf(e) : 0;
-            t.push({
-                section: a,
-                row: d,
-                threadOffset: s
+            return [{ section: h().findIndex(this.getSortedNamedCategories(), (e) => e.id === (null == i ? void 0 : i.id)) + $ }];
+        let a = this.getCategory(i),
+            d = a instanceof es ? Q : this.getSortedNamedCategories().indexOf(a) + $,
+            o = a.getShownChannelIds().indexOf(i.id);
+        if (d >= 0 && o >= 0) {
+            let t = s ? a.channels[i.id].threadIds.indexOf(e) : 0;
+            n.push({
+                section: d,
+                row: o,
+                threadOffset: t
             });
         }
-        let o = this.voiceChannelsCategory.getShownChannelIds().indexOf(n.id);
+        let u = this.voiceChannelsCategory.getShownChannelIds().indexOf(i.id);
         return (
-            o >= 0 &&
-                t.push({
+            u >= 0 &&
+                n.push({
                     section: this.voiceChannelsSectionNumber,
-                    row: o
+                    row: u
                 }),
-            t
+            n
         );
     }
     getCategory(e) {

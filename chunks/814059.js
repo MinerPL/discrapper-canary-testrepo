@@ -6,15 +6,19 @@ n.d(t, {
 var r = n(913527),
     i = n.n(r),
     a = n(70956),
-    s = n(689938);
+    s = n(388032);
 let o = (e) => {
     let t = Math.max(0, i()(e).diff(i()(), 's'));
+    if (t < 2 * a.Z.Seconds.HOUR) {
+        let e = Math.round(t / a.Z.Seconds.MINUTE);
+        return s.intl.formatToPlainString(s.t['2JbxRE'], { count: e });
+    }
     if (t < a.Z.Seconds.DAY) {
         let e = Math.round(t / a.Z.Seconds.HOUR);
-        return s.Z.Messages.LEADERBOARD_INTERVAL_END_HOURS_LEFT.format({ count: e });
+        return s.intl.formatToPlainString(s.t.V9Ebys, { count: e });
     }
     {
         let e = Math.round(t / a.Z.Seconds.DAY);
-        return s.Z.Messages.LEADERBOARD_INTERVAL_END_DAYS_LEFT.format({ count: e });
+        return s.intl.formatToPlainString(s.t.OQFxHh, { count: e });
     }
 };

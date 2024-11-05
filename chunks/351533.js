@@ -3,6 +3,7 @@ n.r(
         progress: 'progress_c6473a',
         progressBar: 'progressBar_c6473a',
         animating: 'animating_c6473a',
+        xxsmall: 'xxsmall_c6473a',
         xsmall: 'xsmall_c6473a',
         small: 'small_c6473a',
         large: 'large_c6473a',

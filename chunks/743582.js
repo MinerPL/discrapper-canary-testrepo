@@ -1,120 +1,122 @@
-s.r(a),
-    s.d(a, {
+e.r(t),
+    e.d(t, {
         default: function () {
-            return S;
+            return p;
         }
     }),
-    s(47120);
-var n = s(735250),
-    _ = s(470079),
-    l = s(512722),
-    i = s.n(l),
-    t = s(481060),
-    E = s(935369),
-    o = s(728345),
-    T = s(313201),
-    r = s(577275),
-    c = s(829857),
-    I = s(689938),
-    d = s(836136);
-function S(e) {
-    var a, s;
-    let { transitionState: l, application: S, onClose: N } = e,
-        M = (0, T.Dt)(),
-        [A, L] = _.useState(null == S ? void 0 : null === (a = S.team) || void 0 === a ? void 0 : a.id),
-        { teams: C } = (0, r.Z)(),
-        O = _.useMemo(
+    e(47120);
+var i = e(200651),
+    l = e(192379),
+    a = e(512722),
+    s = e.n(a),
+    o = e(481060),
+    r = e(935369),
+    c = e(728345),
+    d = e(313201),
+    u = e(577275),
+    g = e(829857),
+    m = e(388032),
+    x = e(591836);
+function p(n) {
+    var t, e;
+    let { transitionState: a, application: p, onClose: h } = n,
+        j = (0, d.Dt)(),
+        [v, _] = l.useState(null == p ? void 0 : null === (t = p.team) || void 0 === t ? void 0 : t.id),
+        { teams: b } = (0, u.Z)(),
+        f = l.useMemo(
             () =>
-                C.filter((e) => e.payout_account_status === c.C.ACTIVE).map((e) => ({
-                    label: e.name,
-                    value: e.id
-                })),
-            [C]
+                b
+                    .filter((n) => n.payout_account_status === g.C.ACTIVE)
+                    .map((n) => ({
+                        label: n.name,
+                        value: n.id
+                    })),
+            [b]
         ),
-        u = (null == S ? void 0 : null === (s = S.team) || void 0 === s ? void 0 : s.id) !== A,
-        [g, { loading: m, error: R }] = (0, E.Z)(o.Z.transferApplication),
-        x = async () => {
-            i()(null != S, 'no application'),
-                i()(null != A, 'no team selected'),
+        C = (null == p ? void 0 : null === (e = p.team) || void 0 === e ? void 0 : e.id) !== v,
+        [B, { loading: H, error: N }] = (0, r.Z)(c.ZP.transferApplication),
+        w = async () => {
+            s()(null != p, 'no application'),
+                s()(null != v, 'no team selected'),
                 null !=
-                    (await g({
-                        applicationId: S.id,
-                        teamId: A
-                    })) && N();
+                    (await B({
+                        applicationId: p.id,
+                        teamId: v
+                    })) && h();
         },
-        D = (null == S ? void 0 : S.team) != null;
-    return (0, n.jsxs)(t.ModalRoot, {
-        transitionState: l,
-        'aria-labelledby': M,
+        S = (null == p ? void 0 : p.team) != null;
+    return (0, i.jsxs)(o.ModalRoot, {
+        transitionState: a,
+        'aria-labelledby': j,
         children: [
-            (0, n.jsxs)(t.ModalHeader, {
+            (0, i.jsxs)(o.ModalHeader, {
                 children: [
-                    (0, n.jsx)(t.Heading, {
-                        id: M,
+                    (0, i.jsx)(o.Heading, {
+                        id: j,
                         variant: 'heading-md/semibold',
-                        children: D ? I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_TITLE : I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE
+                        children: S ? m.intl.string(m.t['4TveVl']) : m.intl.string(m.t.feBUAQ)
                     }),
-                    (0, n.jsx)(t.ModalCloseButton, {
-                        className: d.closeButton,
-                        onClick: N
+                    (0, i.jsx)(o.ModalCloseButton, {
+                        className: x.closeButton,
+                        onClick: h
                     })
                 ]
             }),
-            (0, n.jsxs)(t.ModalContent, {
-                className: d.content,
+            (0, i.jsxs)(o.ModalContent, {
+                className: x.content,
                 children: [
-                    D
-                        ? (0, n.jsxs)(n.Fragment, {
+                    S
+                        ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, n.jsx)(t.FormText, { children: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION }),
-                                  (0, n.jsx)(t.Spacer, { size: 8 }),
-                                  (0, n.jsxs)(t.Heading, {
-                                      className: d.warningHeading,
+                                  (0, i.jsx)(o.FormText, { children: m.intl.string(m.t.c7HS0t) }),
+                                  (0, i.jsx)(o.Spacer, { size: 8 }),
+                                  (0, i.jsxs)(o.Heading, {
+                                      className: x.warningHeading,
                                       variant: 'text-sm/semibold',
                                       color: 'text-danger',
                                       children: [
-                                          (0, n.jsx)(t.CircleWarningIcon, {
+                                          (0, i.jsx)(o.CircleWarningIcon, {
                                               size: 'xs',
                                               color: 'currentColor',
-                                              className: d.warningIcon
+                                              className: x.warningIcon
                                           }),
-                                          I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING
+                                          m.intl.string(m.t.Caz8nJ)
                                       ]
                                   }),
-                                  (0, n.jsx)(t.Spacer, { size: 4 }),
-                                  (0, n.jsx)(t.FormText, {
-                                      type: t.FormText.Types.ERROR,
-                                      children: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING
+                                  (0, i.jsx)(o.Spacer, { size: 4 }),
+                                  (0, i.jsx)(o.FormText, {
+                                      type: o.FormText.Types.ERROR,
+                                      children: m.intl.string(m.t.u4ddHR)
                                   })
                               ]
                           })
-                        : (0, n.jsx)(t.FormText, { children: I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_DESCRIPTION }),
-                    null != R ? (0, n.jsx)(t.FormErrorBlock, { children: R.message }) : null,
-                    (0, n.jsx)(t.Spacer, { size: 16 }),
-                    (0, n.jsx)(t.FormItem, {
-                        title: D ? I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TO_TRANSFER_LABEL : I.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_LABEL,
+                        : (0, i.jsx)(o.FormText, { children: m.intl.string(m.t.atZ50N) }),
+                    null != N ? (0, i.jsx)(o.FormErrorBlock, { children: N.message }) : null,
+                    (0, i.jsx)(o.Spacer, { size: 16 }),
+                    (0, i.jsx)(o.FormItem, {
+                        title: S ? m.intl.string(m.t.xZ6ZLy) : m.intl.string(m.t.bfmKdH),
                         required: !0,
-                        children: (0, n.jsx)(t.SingleSelect, {
-                            className: d.__invalid_teamSelect,
-                            options: O,
-                            placeholder: I.Z.Messages.GUILD_MONETIZATION_ENABLE_SELECT_PLACEHOLDER,
-                            value: A,
-                            isDisabled: 0 === O.length,
-                            onChange: (e) => L(e),
-                            'aria-label': I.Z.Messages.GUILD_MONETIZATION_ENABLE_SELECT_PLACEHOLDER
+                        children: (0, i.jsx)(o.SingleSelect, {
+                            className: x.__invalid_teamSelect,
+                            options: f,
+                            placeholder: m.intl.string(m.t.QXf93N),
+                            value: v,
+                            isDisabled: 0 === f.length,
+                            onChange: (n) => _(n),
+                            'aria-label': m.intl.string(m.t.QXf93N)
                         })
                     })
                 ]
             }),
-            (0, n.jsx)(t.ModalFooter, {
-                className: d.__invalid_footer,
-                children: (0, n.jsx)(t.Button, {
-                    color: t.Button.Colors.RED,
-                    className: d.__invalid_goBackButton,
-                    submitting: m,
-                    disabled: !u,
-                    onClick: x,
-                    children: I.Z.Messages.SAVE
+            (0, i.jsx)(o.ModalFooter, {
+                className: x.__invalid_footer,
+                children: (0, i.jsx)(o.Button, {
+                    color: o.Button.Colors.RED,
+                    className: x.__invalid_goBackButton,
+                    submitting: H,
+                    disabled: !C,
+                    onClick: w,
+                    children: m.intl.string(m.t.R3BPHx)
                 })
             })
         ]

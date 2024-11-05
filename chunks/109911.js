@@ -1,9 +1,11 @@
 n.d(t, {
     Ji: function () {
         return s;
+    },
+    QX: function () {
+        return o;
     }
-}),
-    n(873546);
+});
 var r = n(818083);
 let i = (0, r.B)({
         kind: 'user',
@@ -20,13 +22,13 @@ let i = (0, r.B)({
     }),
     a = (0, r.B)({
         kind: 'user',
-        id: '2024-10_icymi_random',
-        label: 'random sort on ICYMI',
+        id: '2024-10_icymi_sorting_fe',
+        label: 'FE experiment for sorting on ICYMI',
         defaultConfig: { enabled: !1 },
         treatments: [
             {
                 id: 1,
-                label: 'randomly sorts icymi content',
+                label: 'Enables ICYMI - sorting will be controlled by backend exp',
                 config: { enabled: !0 }
             }
         ]
@@ -58,6 +60,19 @@ function s(e) {
         {
             id: 1,
             label: 'allow negative items only',
+            config: { enabled: !0 }
+        }
+    ]
+});
+let o = (0, r.B)({
+    kind: 'user',
+    id: '2024-10_icymi_legacy',
+    label: 'Legacy ICYMI experiment',
+    defaultConfig: { enabled: !1 },
+    treatments: [
+        {
+            id: 1,
+            label: 'enable legacy ICYMI',
             config: { enabled: !0 }
         }
     ]

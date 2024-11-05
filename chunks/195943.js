@@ -9,5 +9,6 @@ e.exports = {
     contentBackground: 'contentBackground_c5a065',
     intObserver: 'intObserver_c5a065',
     emoji: 'emoji_c5a065',
-    buttonWithEmoji: 'buttonWithEmoji_c5a065'
+    buttonWithEmoji: 'buttonWithEmoji_c5a065',
+    deepLinkContainer: 'deepLinkContainer_c5a065'
 };

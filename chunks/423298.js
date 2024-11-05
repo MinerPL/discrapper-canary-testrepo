@@ -8,6 +8,7 @@ n.r(
         buttonOverlayActionsRefresh: 'buttonOverlayActionsRefresh_f40049 absoluteFill_f40049',
         soundNameRefresh: 'soundNameRefresh_f40049',
         secondaryButtonRefresh: 'secondaryButtonRefresh_f40049',
+        animated: 'animated_f40049',
         addButton: 'addButton_f40049',
         plusSign: 'plusSign_f40049',
         hoverActiveBackground: 'hoverActiveBackground_f40049',

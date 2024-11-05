@@ -1,22 +1,23 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return f;
     }
 }),
     n(47120);
-var r = n(735250);
-n(470079);
+var r = n(200651);
+n(192379);
 var i = n(120356),
     a = n.n(i),
-    s = n(845537),
-    o = n(653309),
-    l = n(237002),
-    u = n(968195),
-    c = n(910212);
-function d(e, t, n) {
-    var i, u;
-    let { attributes: d, children: E, element: f, decorations: h } = e,
-        p = (function (e) {
+    s = n(628692),
+    o = n(845537),
+    l = n(653309),
+    u = n(631853),
+    c = n(896061),
+    d = n(554034);
+function f(e, t, n) {
+    var i, c;
+    let { attributes: f, children: h, element: p, decorations: m } = e,
+        g = (function (e) {
             return Object.entries(e)
                 .filter((e) => {
                     let [t] = e;
@@ -24,130 +25,130 @@ function d(e, t, n) {
                 })
                 .map((e) => {
                     let [t, n] = e;
-                    return !0 === n && t in o.U ? o.U[t] : null;
+                    return !0 === n && t in l.U ? l.U[t] : null;
                 })
                 .filter((e) => null != e)
                 .join(' ');
-        })(null !== (i = null == h ? void 0 : h[0]) && void 0 !== i ? i : {});
-    switch (f.type) {
+        })(null !== (i = null == m ? void 0 : m[0]) && void 0 !== i ? i : {});
+    switch (p.type) {
         case 'line':
-            if (null === (u = f.codeBlockState) || void 0 === u ? void 0 : u.isInCodeBlock)
+            if (null === (c = p.codeBlockState) || void 0 === c ? void 0 : c.isInCodeBlock)
                 return (0, r.jsx)('div', {
-                    className: l.codeLine,
-                    spellCheck: null == f.codeBlockState || null == f.codeBlockState.lang,
-                    ...d,
-                    children: E
+                    className: u.codeLine,
+                    spellCheck: null == p.codeBlockState || null == p.codeBlockState.lang,
+                    ...f,
+                    children: h
                 });
             return (0, r.jsx)('div', {
-                ...d,
-                children: E
+                ...f,
+                children: h
             });
         case 'blockQuote': {
-            let e = a()(c.blockquoteContainer, c.slateBlockquoteContainer);
+            let e = a()(d.blockquoteContainer, d.slateBlockquoteContainer);
             return (0, r.jsxs)('div', {
-                ...d,
+                ...f,
                 className: e,
                 children: [
                     (0, r.jsx)('span', {
                         contentEditable: !1,
-                        className: c.blockquoteDivider
+                        className: d.blockquoteDivider
                     }),
-                    (0, r.jsx)('blockquote', { children: E })
+                    (0, r.jsx)('blockquote', { children: h })
                 ]
             });
         }
         case 'emoji':
             return (0, r.jsxs)(_, {
-                attributes: d,
-                className: p,
-                children: [(0, r.jsx)(s.dy, { emoji: f.emoji }), E]
+                attributes: f,
+                className: g,
+                children: [(0, r.jsx)(o.dy, { emoji: p.emoji }), h]
             });
         case 'customEmoji':
             return (0, r.jsxs)(_, {
-                attributes: d,
-                className: p,
-                children: [(0, r.jsx)(s.wP, { emoji: f.emoji }), E]
+                attributes: f,
+                className: g,
+                children: [(0, r.jsx)(o.wP, { emoji: p.emoji }), h]
             });
         case 'textMention':
             return (0, r.jsxs)(_, {
-                attributes: d,
-                className: p,
+                attributes: f,
+                className: g,
                 children: [
-                    (0, r.jsx)(s.Ox, {
-                        text: f.name,
+                    (0, r.jsx)(o.Ox, {
+                        text: p.name,
                         channelId: n,
                         guildId: t
                     }),
-                    E
+                    h
                 ]
             });
         case 'userMention':
             return (0, r.jsxs)(_, {
-                attributes: d,
-                className: p,
+                attributes: f,
+                className: g,
                 children: [
-                    (0, r.jsx)(s.cB, {
-                        id: f.userId,
+                    (0, r.jsx)(o.cB, {
+                        id: p.userId,
                         channelId: n,
                         guildId: t
                     }),
-                    E
+                    h
                 ]
             });
         case 'roleMention':
             return (0, r.jsxs)(_, {
-                attributes: d,
-                className: p,
+                attributes: f,
+                className: g,
                 children: [
-                    (0, r.jsx)(s.Vq, {
-                        id: f.roleId,
+                    (0, r.jsx)(o.Vq, {
+                        id: p.roleId,
                         guildId: t
                     }),
-                    E
+                    h
                 ]
             });
         case 'channelMention':
             return (0, r.jsxs)(_, {
-                attributes: d,
-                className: p,
-                children: [(0, r.jsx)(s.Io, { id: f.channelId }), E]
+                attributes: f,
+                className: g,
+                children: [(0, r.jsx)(o.Io, { id: p.channelId }), h]
             });
         case 'staticRouteLink':
             return (0, r.jsxs)(_, {
-                attributes: d,
-                className: p,
+                attributes: f,
+                className: g,
                 children: [
-                    (0, r.jsx)(s.NY, {
-                        id: f.id,
-                        itemId: f.itemId,
+                    (0, r.jsx)(o.NY, {
+                        id: p.id,
+                        itemId: p.itemId,
                         guildId: t
                     }),
-                    E
+                    h
                 ]
             });
         case 'soundboard':
             return (0, r.jsxs)(_, {
-                attributes: d,
-                className: p,
-                children: [(0, r.jsx)(s.mb, { id: f.soundId }), E]
+                attributes: f,
+                className: g,
+                children: [(0, r.jsx)(s.mv, { soundId: p.soundId }), h]
             });
         case 'commandMention':
             return (0, r.jsxs)(_, {
-                attributes: d,
-                className: p,
+                attributes: f,
+                className: g,
                 children: [
-                    (0, r.jsx)(s.Wf, {
-                        text: f.commandName,
-                        id: f.commandId
+                    (0, r.jsx)(o.Wf, {
+                        text: p.commandName,
+                        id: p.commandId
                     }),
-                    E
+                    h
                 ]
             });
         case 'timestamp':
             return (0, r.jsxs)(_, {
-                attributes: d,
-                className: p,
-                children: [(0, r.jsx)(s.EK, { timestamp: f.parsed }), E]
+                attributes: f,
+                className: g,
+                children: [(0, r.jsx)(o.EK, { timestamp: p.parsed }), h]
             });
         default:
             return null;
@@ -155,7 +156,7 @@ function d(e, t, n) {
 }
 let _ = (e) => {
     let { className: t, attributes: n, children: i } = e,
-        s = a()(u.inlineElement, u.inlineVoid, t);
+        s = a()(c.inlineElement, c.inlineVoid, t);
     return (0, r.jsx)('span', {
         ...n,
         className: s,

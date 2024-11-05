@@ -1,31 +1,42 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return o;
+        return a;
     }
 });
-var n = t(735250);
-t(470079);
-var a = t(481060),
-    i = t(921801),
-    r = t(56309);
-function o(e) {
-    let { children: s, title: t, webSetting: o } = e;
-    return (0, n.jsx)(i.F, {
+var i = n(200651);
+n(192379);
+var s = n(481060),
+    r = n(921801),
+    l = n(607922);
+function a(e) {
+    let { children: t, title: n, description: a, webSetting: o } = e;
+    return (0, i.jsx)(r.F, {
         setting: o,
-        children: (0, n.jsxs)('div', {
-            className: r.category,
+        children: (0, i.jsxs)('div', {
+            className: l.category,
             children: [
-                (0, n.jsx)(a.Heading, {
-                    variant: 'heading-lg/normal',
-                    color: 'text-normal',
-                    className: r.categoryHeader,
+                (0, i.jsxs)('div', {
+                    className: l.categoryHeader,
+                    children: [
+                        (0, i.jsx)(s.Heading, {
+                            variant: 'heading-lg/semibold',
+                            color: 'header-primary',
+                            children: n
+                        }),
+                        null != a
+                            ? (0, i.jsx)(s.Text, {
+                                  variant: 'text-sm/normal',
+                                  color: 'header-secondary',
+                                  children: a
+                              })
+                            : null
+                    ]
+                }),
+                (0, i.jsx)('div', {
+                    className: l.categoryContent,
                     children: t
                 }),
-                (0, n.jsx)('div', {
-                    className: r.categoryContent,
-                    children: s
-                }),
-                (0, n.jsx)(a.FormDivider, { className: r.categoryDivider })
+                (0, i.jsx)(s.FormDivider, { className: l.categoryDivider })
             ]
         })
     });

@@ -1,35 +1,33 @@
-var i = n(735250),
-    s = n(470079),
-    a = n(120356),
-    o = n.n(a),
-    r = n(442837),
-    l = n(215569),
-    c = n(261435),
-    d = n(237997),
-    u = n(438015),
-    h = n(981631),
-    p = n(459742);
-class f extends s.Component {
+var i = n(200651),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(442837),
+    o = n(261435),
+    c = n(237997),
+    d = n(438015),
+    u = n(981631),
+    h = n(455178);
+class p extends r.Component {
     render() {
-        let { keybind: e, notifications: t, position: n, locked: s } = this.props;
-        if (n === h._vf.DISABLED) return null;
-        let a = -1;
-        return (0, i.jsx)(l.W, {
-            component: 'div',
-            className: o()(p.container, p[n]),
+        let { keybind: e, notifications: t, position: n, locked: r } = this.props;
+        if (n === u._vf.DISABLED) return null;
+        let s = -1;
+        return (0, i.jsx)('div', {
+            className: a()(h.container, h[n]),
             children: t.map((t) =>
-                s && t.status === h._1z.TIMED_OUT
+                r && t.status === u._1z.TIMED_OUT
                     ? null
-                    : ((a += 1),
+                    : ((s += 1),
                       (0, i.jsx)(
-                          u.Z,
+                          d.Z,
                           {
-                              index: a,
-                              zIndex: 100 - a,
+                              index: s,
+                              zIndex: 100 - s,
                               position: n,
                               notification: t,
                               keybind: e,
-                              locked: s
+                              locked: r
                           },
                           t.id
                       ))
@@ -37,7 +35,7 @@ class f extends s.Component {
         });
     }
 }
-t.Z = r.ZP.connectStores([c.Z, d.Z], () => ({
-    notifications: c.Z.getNotifications(),
-    position: d.Z.getNotificationPositionMode()
-}))(f);
+t.Z = l.ZP.connectStores([o.Z, c.Z], () => ({
+    notifications: o.Z.getNotifications(),
+    position: c.Z.getNotificationPositionMode()
+}))(p);

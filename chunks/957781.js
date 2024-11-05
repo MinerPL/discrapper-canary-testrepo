@@ -20,7 +20,9 @@ e.exports = {
     halloweenColor: 'halloweenColor_cf74b3',
     bottomOfPageVisibilitySensor: 'bottomOfPageVisibilitySensor_cf74b3',
     tier2PlanComparisonTableBackground: 'tier2PlanComparisonTableBackground_cf74b3',
-    topRimPill: 'topRimPill_cf74b3',
+    topRimPillWithSparkles: 'topRimPillWithSparkles_cf74b3',
     rimGlowTier2: 'rimGlowTier2_cf74b3',
-    trialHeader: 'trialHeader_cf74b3'
+    trialHeader: 'trialHeader_cf74b3',
+    fractionalPremiumTopRimPill: 'fractionalPremiumTopRimPill_cf74b3',
+    fractionalPremiumSubheader: 'fractionalPremiumSubheader_cf74b3'
 };

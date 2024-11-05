@@ -1,1542 +1,1516 @@
-E.d(_, {
+n.d(t, {
     Bq: function () {
-        return X;
-    },
-    C0: function () {
-        return en;
-    },
-    C2: function () {
-        return Q;
-    },
-    EN: function () {
-        return K;
-    },
-    F1: function () {
-        return et;
-    },
-    HE: function () {
-        return k;
-    },
-    HN: function () {
-        return W;
-    },
-    Iv: function () {
-        return ea;
-    },
-    J5: function () {
-        return ei;
-    },
-    K: function () {
-        return J;
-    },
-    ML: function () {
-        return j;
-    },
-    N$: function () {
         return q;
     },
-    N5: function () {
-        return eN;
-    },
-    QM: function () {
-        return eA;
-    },
-    V$: function () {
-        return eT;
-    },
-    _$: function () {
-        return eu;
-    },
-    cT: function () {
-        return eL;
-    },
-    em: function () {
-        return eD;
-    },
-    hQ: function () {
-        return eS;
-    },
-    hx: function () {
-        return w;
-    },
-    lR: function () {
-        return Y;
-    },
-    lU: function () {
-        return y;
-    },
-    nm: function () {
-        return el;
-    },
-    oD: function () {
-        return z;
-    },
-    pA: function () {
-        return e_;
-    },
-    pY: function () {
-        return V;
-    },
-    pi: function () {
-        return ee;
-    },
-    rK: function () {
-        return es;
-    },
-    uB: function () {
-        return $;
-    },
-    vc: function () {
+    C0: function () {
         return er;
     },
-    vm: function () {
+    C2: function () {
+        return J;
+    },
+    EN: function () {
+        return w;
+    },
+    F1: function () {
+        return el;
+    },
+    HE: function () {
+        return H;
+    },
+    HN: function () {
+        return Z;
+    },
+    Iv: function () {
+        return es;
+    },
+    J5: function () {
+        return ed;
+    },
+    K: function () {
+        return X;
+    },
+    ML: function () {
+        return k;
+    },
+    N$: function () {
+        return Y;
+    },
+    N5: function () {
+        return e_;
+    },
+    QM: function () {
+        return ec;
+    },
+    V$: function () {
+        return ea;
+    },
+    _$: function () {
+        return eg;
+    },
+    cT: function () {
+        return eT;
+    },
+    em: function () {
+        return eA;
+    },
+    hQ: function () {
+        return eI;
+    },
+    hx: function () {
+        return K;
+    },
+    lR: function () {
+        return W;
+    },
+    lU: function () {
+        return z;
+    },
+    nm: function () {
         return eE;
+    },
+    oD: function () {
+        return V;
+    },
+    pA: function () {
+        return ee;
+    },
+    pY: function () {
+        return B;
+    },
+    pi: function () {
+        return $;
+    },
+    rK: function () {
+        return en;
+    },
+    uB: function () {
+        return Q;
+    },
+    vc: function () {
+        return ei;
+    },
+    vm: function () {
+        return et;
     }
 }),
-    E(411104),
-    E(653041);
-var s = E(654861),
-    n = E.n(s),
-    t = E(913527),
-    r = E.n(t),
-    a = E(536402),
-    T = E(533800),
-    I = E(149765),
-    l = E(866442),
-    o = E(379649),
-    A = E(911969),
-    i = E(933557),
-    N = E(710845),
-    D = E(339085),
-    L = E(236413),
-    S = E(45966),
-    u = E(563534),
-    c = E(427679),
-    O = E(926491),
-    U = E(387667),
-    d = E(592125),
-    G = E(430824),
-    M = E(699516),
-    R = E(594174),
-    g = E(55935),
-    C = E(630388),
-    f = E(823379),
-    p = E(971130),
-    h = E(709054),
-    m = E(987707),
-    P = E(981631),
-    Z = E(176505),
-    v = E(273504),
-    b = E(765305),
-    H = E(689938);
-let F = new N.Z('AuditLogUtils'),
-    B = [o.J6.DAYS, o.J6.HOURS, o.J6.MINUTES, o.J6.SECONDS],
-    x = () => ({ [P.zUn.REASON]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON }),
-    V = () => ({
-        [P.zUn.NAME]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_NAME_CHANGE,
-        [P.zUn.DESCRIPTION]: eR(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CLEAR, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CHANGE),
-        [P.zUn.ICON_HASH]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_ICON_HASH_CHANGE,
-        [P.zUn.SPLASH_HASH]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SPLASH_HASH_CHANGE,
-        [P.zUn.DISCOVERY_SPLASH_HASH]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DISCOVERY_SPLASH_HASH_CHANGE,
-        [P.zUn.BANNER_HASH]: eR(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_BANNER_HASH_REMOVE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_BANNER_HASH_CHANGE),
-        [P.zUn.OWNER_ID]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_OWNER_ID_CHANGE,
-        [P.zUn.REGION]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_REGION_CHANGE,
-        [P.zUn.PREFERRED_LOCALE]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_PREFERRED_LOCALE_CHANGE,
-        [P.zUn.AFK_CHANNEL_ID]: eR(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_CHANNEL_ID_CLEAR, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_CHANNEL_ID_CHANGE),
-        [P.zUn.AFK_TIMEOUT]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_TIMEOUT_CHANGE,
-        [P.zUn.SYSTEM_CHANNEL_ID]: eR(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_ID_DISABLE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_ID_CHANGE),
-        [P.zUn.RULES_CHANNEL_ID]: eR(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_RULES_CHANNEL_ID_CLEAR, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_RULES_CHANNEL_ID_CHANGE),
-        [P.zUn.PUBLIC_UPDATES_CHANNEL_ID]: eR(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATES_CHANNEL_ID_CLEAR, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATES_CHANNEL_ID_CHANGE),
-        [P.zUn.MFA_LEVEL]: ef({
-            [P.BpS.NONE]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_MFA_LEVEL_DISABLED,
-            [P.BpS.ELEVATED]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_MFA_LEVEL_ENABLED
+    n(411104),
+    n(653041);
+var r = n(654861),
+    l = n.n(r),
+    i = n(913527),
+    s = n.n(i),
+    a = n(536402),
+    o = n(533800),
+    E = n(149765),
+    u = n(866442),
+    c = n(379649),
+    d = n(911969),
+    _ = n(933557),
+    A = n(710845),
+    T = n(339085),
+    I = n(236413),
+    g = n(45966),
+    N = n(563534),
+    f = n(427679),
+    R = n(926491),
+    O = n(387667),
+    S = n(592125),
+    p = n(430824),
+    D = n(699516),
+    U = n(594174),
+    h = n(55935),
+    L = n(630388),
+    C = n(971130),
+    M = n(709054),
+    m = n(987707),
+    v = n(981631),
+    b = n(176505),
+    x = n(273504),
+    P = n(765305),
+    G = n(388032);
+let F = new A.Z('AuditLogUtils'),
+    j = [c.J6.DAYS, c.J6.HOURS, c.J6.MINUTES, c.J6.SECONDS],
+    y = () => ({ [v.zUn.REASON]: () => G.t['2IW3Cw'] }),
+    B = () => ({
+        [v.zUn.NAME]: () => G.t.CkDiND,
+        [v.zUn.DESCRIPTION]: eD(G.t.RP3Ey8, G.t.QAVj1d),
+        [v.zUn.ICON_HASH]: () => G.t.iLZ8Q0,
+        [v.zUn.SPLASH_HASH]: () => G.t['4VV6dn'],
+        [v.zUn.DISCOVERY_SPLASH_HASH]: () => G.t['2pds6u'],
+        [v.zUn.BANNER_HASH]: eD(G.t.Cxq4zM, G.t['H7eE//']),
+        [v.zUn.OWNER_ID]: () => G.t['8ltsLS'],
+        [v.zUn.REGION]: () => G.t.X9r5KS,
+        [v.zUn.PREFERRED_LOCALE]: () => G.t.UnXuDQ,
+        [v.zUn.AFK_CHANNEL_ID]: eD(G.t.ClBuAw, G.t['ms+xtL']),
+        [v.zUn.AFK_TIMEOUT]: () => G.t.q21fHR,
+        [v.zUn.SYSTEM_CHANNEL_ID]: eD(G.t.H1VXaW, G.t.XhtmxM),
+        [v.zUn.RULES_CHANNEL_ID]: eD(G.t.OI6MGx, G.t.lik3tL),
+        [v.zUn.PUBLIC_UPDATES_CHANNEL_ID]: eD(G.t.YxBKra, G.t.Ehsnio),
+        [v.zUn.MFA_LEVEL]: eL({
+            [v.BpS.NONE]: G.t.voaCCQ,
+            [v.BpS.ELEVATED]: G.t.pRNVw8
         }),
-        [P.zUn.WIDGET_ENABLED]: eC(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_ENABLED, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_DISABLED),
-        [P.zUn.WIDGET_CHANNEL_ID]: eR(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_CHANNEL_ID_DELETE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_CHANNEL_ID_CHANGE),
-        [P.zUn.VERIFICATION_LEVEL]: ef({
-            [P.sFg.NONE]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_NONE,
-            [P.sFg.LOW]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_LOW,
-            [P.sFg.MEDIUM]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_MEDIUM,
-            [P.sFg.HIGH]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_HIGH,
-            [P.sFg.VERY_HIGH]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_VERY_HIGH
+        [v.zUn.WIDGET_ENABLED]: eh(G.t.ADIty8, G.t.nf58VV),
+        [v.zUn.WIDGET_CHANNEL_ID]: eD(G.t['6SBsDQ'], G.t.deQ5wM),
+        [v.zUn.VERIFICATION_LEVEL]: eL({
+            [v.sFg.NONE]: G.t.W27rsb,
+            [v.sFg.LOW]: G.t['V8P+Pz'],
+            [v.sFg.MEDIUM]: G.t.ERQFam,
+            [v.sFg.HIGH]: G.t['83fN0t'],
+            [v.sFg.VERY_HIGH]: G.t.PnkQJC
         }),
-        [P.zUn.DEFAULT_MESSAGE_NOTIFICATIONS]: ef({
-            [P.bL.ALL_MESSAGES]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DEFAULT_MESSAGE_NOTIFICATIONS_CHANGE_ALL_MESSAGES,
-            [P.bL.ONLY_MENTIONS]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DEFAULT_MESSAGE_NOTIFICATIONS_CHANGE_ONLY_MENTIONS
+        [v.zUn.DEFAULT_MESSAGE_NOTIFICATIONS]: eL({
+            [v.bL.ALL_MESSAGES]: G.t.LDi76O,
+            [v.bL.ONLY_MENTIONS]: G.t['6K83bW']
         }),
-        [P.zUn.VANITY_URL_CODE]: eR(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VANITY_URL_CODE_DELETE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VANITY_URL_CODE_CHANGE),
-        [P.zUn.EXPLICIT_CONTENT_FILTER]: ef({
-            [P.lxg.DISABLED]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_DISABLE,
-            [P.lxg.MEMBERS_WITHOUT_ROLES]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_MEMBERS_WITHOUT_ROLES,
-            [P.lxg.ALL_MEMBERS]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_ALL_MEMBERS
+        [v.zUn.VANITY_URL_CODE]: eD(G.t.Zplsoq, G.t.u6cArq),
+        [v.zUn.EXPLICIT_CONTENT_FILTER]: eL({
+            [v.lxg.DISABLED]: G.t.fmOeLy,
+            [v.lxg.MEMBERS_WITHOUT_ROLES]: G.t['4FghY2'],
+            [v.lxg.ALL_MEMBERS]: G.t.olyrSk
         }),
-        [P.zUn.PREMIUM_PROGRESS_BAR_ENABLED]: eC(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_PREMIUM_PROGRESS_BAR_ENABLED_ENABLED, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_PREMIUM_PROGRESS_BAR_ENABLED_DISABLED),
-        [P.zUn.AUTO_MODERATION_TRIGGERED_RULE_NAME]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_TRIGGERED_RULE_NAME_CHANGE,
-        [P.zUn.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_JOIN_NOTIFICATIONS,
-        [P.zUn.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_PREMIUM_SUBSCRIPTIONS,
-        [P.zUn.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_REMINDER_NOTIFICATIONS,
-        [P.zUn.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_JOIN_NOTIFICATION_REPLIES,
-        ...x()
-    }),
-    j = () => ({
-        [P.zUn.NAME]: eM(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CHANGE),
-        [P.zUn.POSITION]: eM(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CHANGE),
-        [P.zUn.TOPIC]: eg(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CLEAR),
-        [P.zUn.BITRATE]: eM(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_BITRATE_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_BITRATE_CHANGE),
-        [P.zUn.RTC_REGION_OVERRIDE]: eg(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_CHANGE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_DELETE),
-        [P.zUn.USER_LIMIT]: eM(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_USER_LIMIT_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_USER_LIMIT_CHANGE),
-        [P.zUn.RATE_LIMIT_PER_USER]: eM(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE),
-        [P.zUn.PERMISSIONS_RESET]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_RESET,
-        [P.zUn.PERMISSIONS_GRANTED]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_GRANTED,
-        [P.zUn.PERMISSIONS_DENIED]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_DENIED,
-        [P.zUn.REASON]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON,
-        [P.zUn.NSFW]: eC(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NSFW_DISABLED, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NSFW_ENABLED),
-        [P.zUn.TYPE]: eM(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TYPE_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TYPE_CHANGE),
-        [P.zUn.VIDEO_QUALITY_MODE]: eM(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CHANGE),
-        [P.zUn.DEFAULT_AUTO_ARCHIVE_DURATION]: eM(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CHANGE),
-        [P.zUn.FLAGS]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_FLAGS_CHANGE,
-        [P.zUn.AVAILABLE_TAG_ADD]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_ADD,
-        [P.zUn.AVAILABLE_TAG_EDIT]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_UPDATE,
-        [P.zUn.AVAILABLE_TAG_DELETE]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_DELETE,
-        [P.zUn.LINKED_LOBBY]: eR(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_LOBBY_LINK_DELETE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_LOBBY_LINK_CREATE)
-    }),
-    y = () => ({
-        [P.zUn.NICK]: eg(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CHANGE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_DELETE),
-        [P.zUn.DEAF]: eC(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DEAF_ON, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DEAF_OFF),
-        [P.zUn.MUTE]: eC(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MUTE_ON, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MUTE_OFF),
-        [P.zUn.ROLES_REMOVE]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLES_REMOVE,
-        [P.zUn.ROLES_ADD]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLES_ADD,
-        [P.zUn.PRUNE_DELETE_DAYS]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_PRUNE_DELETE_DAYS,
-        [P.zUn.COMMUNICATION_DISABLED_UNTIL]: eg(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL_REMOVED),
-        [P.zUn.BYPASSES_VERIFICATION]: eC(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_BYPASSES_VERIFICATION_ON, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_BYPASSES_VERIFICATION_OFF),
-        [P.zUn.AUTO_MODERATION_TRIGGERED_RULE_NAME]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_TRIGGERED_RULE_NAME_CHANGE,
-        ...x()
+        [v.zUn.PREMIUM_PROGRESS_BAR_ENABLED]: eh(G.t.rBT0sr, G.t['gc+te3']),
+        [v.zUn.AUTO_MODERATION_TRIGGERED_RULE_NAME]: () => G.t.YbouFB,
+        [v.zUn.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS]: () => G.t.g3DMjI,
+        [v.zUn.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS]: () => G.t['+fQAen'],
+        [v.zUn.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS]: () => G.t.E1fc4u,
+        [v.zUn.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES]: () => G.t.XbwtSE,
+        ...y()
     }),
     k = () => ({
-        [P.zUn.NAME]: eM(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CHANGE),
-        [P.zUn.DESCRIPTION]: eM(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE),
-        [P.zUn.PERMISSIONS_GRANTED]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_GRANTED,
-        [P.zUn.PERMISSIONS_DENIED]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_DENIED,
-        [P.zUn.COLOR]: ep({ '#000000': H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_COLOR_NONE }, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_COLOR_IOS),
-        [P.zUn.HOIST]: eC(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_HOIST_ON, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_HOIST_OFF),
-        [P.zUn.MENTIONABLE]: eC(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_MENTIONABLE_ON, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_MENTIONABLE_OFF),
-        [P.zUn.ICON_HASH]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_ICON_HASH_CHANGE,
-        [P.zUn.UNICODE_EMOJI]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_UNICODE_EMOJI_CHANGE,
-        ...x()
+        [v.zUn.NAME]: ep(G.t.f8Rh0d, G.t.ebD4Qk),
+        [v.zUn.POSITION]: ep(G.t.isS8tb, G.t.t5uBio),
+        [v.zUn.TOPIC]: eU(G.t.esQcxs, G.t['m+veAg'], G.t['ws/1FB']),
+        [v.zUn.BITRATE]: ep(G.t.fw81am, G.t.MFNlgY),
+        [v.zUn.RTC_REGION_OVERRIDE]: eU(G.t['6kajx8'], G.t.eGOlmZ, G.t['0JMZd3']),
+        [v.zUn.USER_LIMIT]: ep(G.t.wk5t7u, G.t.XgjCEh),
+        [v.zUn.RATE_LIMIT_PER_USER]: ep(G.t['7lirhI'], G.t.j4CCJS),
+        [v.zUn.PERMISSIONS_RESET]: () => G.t['+vSBFR'],
+        [v.zUn.PERMISSIONS_GRANTED]: () => G.t.EKLJv7,
+        [v.zUn.PERMISSIONS_DENIED]: () => G.t.U3rO5e,
+        [v.zUn.REASON]: () => G.t['2IW3Cw'],
+        [v.zUn.NSFW]: eh(G.t.WW6cJy, G.t.H8Ri2d),
+        [v.zUn.TYPE]: ep(G.t.Vn5zn5, G.t.aq4uWF),
+        [v.zUn.VIDEO_QUALITY_MODE]: ep(G.t.e68fAQ, G.t.djbES0),
+        [v.zUn.DEFAULT_AUTO_ARCHIVE_DURATION]: ep(G.t.nYz2mp, G.t.oczvRE),
+        [v.zUn.FLAGS]: () => G.t.ImCQkp,
+        [v.zUn.AVAILABLE_TAG_ADD]: () => G.t.H86QQU,
+        [v.zUn.AVAILABLE_TAG_EDIT]: () => G.t.YtUzlp,
+        [v.zUn.AVAILABLE_TAG_DELETE]: () => G.t['8QOsen'],
+        [v.zUn.LINKED_LOBBY]: eD(G.t['+/3TkJ'], G.t['5kDYS0'])
     }),
     z = () => ({
-        ...x(),
-        [P.zUn.TITLE]: (e) => {
-            let { oldValue: _, newValue: E } = e;
-            return null != _
-                ? (0 === _.length && (_ = H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_EMPTY_VALUE),
-                  H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_TITLE_CHANGE.format({
-                      oldValue: _,
-                      newValue: E
-                  }))
-                : H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_TITLE_CREATE;
-        },
-        [P.zUn.DESCRIPTION]: (e) => {
-            let { oldValue: _, newValue: E } = e;
-            return null != _
-                ? (0 === _.length && (_ = H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_EMPTY_VALUE),
-                  H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_DESCRIPTION_CHANGE.format({
-                      oldValue: _,
-                      newValue: E
-                  }))
-                : H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_DESCRIPTION_CREATE.format({ newValue: E });
-        },
-        [P.zUn.OPTIONS]: () => H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_CHANGED_OPTIONS,
-        [P.zUn.SINGLE_SELECT]: eC(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_SINGLE_SELECT, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_MULTI_SELECT),
-        [P.zUn.REQUIRED]: eC(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_REQUIRED, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_OPTIONAL)
+        [v.zUn.NICK]: eU(G.t.qXDsHh, G.t['m+qur6'], G.t.DvLvjI),
+        [v.zUn.DEAF]: eh(G.t.mArLlZ, G.t.ddvVYG),
+        [v.zUn.MUTE]: eh(G.t['bxs/lZ'], G.t.FjecQE),
+        [v.zUn.ROLES_REMOVE]: () => G.t['+2SDWV'],
+        [v.zUn.ROLES_ADD]: () => G.t['B3/3IC'],
+        [v.zUn.PRUNE_DELETE_DAYS]: () => G.t['+Cvc+P'],
+        [v.zUn.COMMUNICATION_DISABLED_UNTIL]: eU(G.t.LXTQr6, G.t.LXTQr6, G.t.ULSdnJ),
+        [v.zUn.BYPASSES_VERIFICATION]: eh(G.t.NBPBur, G.t.zATosr),
+        [v.zUn.AUTO_MODERATION_TRIGGERED_RULE_NAME]: () => G.t.YbouFB,
+        ...y()
     }),
-    K = () => ({
-        ...x(),
-        [P.zUn.DEFAULT_CHANNEL_IDS]: (e) => {
-            let { newValue: _ } = e;
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_DEFAULT_CHANNEL_IDS.format({ count: _.length });
-        },
-        [P.zUn.ENABLE_DEFAULT_CHANNELS]: eC(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_ENABLE_DEFAULT_CHANNELS, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_DISABLE_DEFAULT_CHANNELS),
-        [P.zUn.ENABLE_ONBOARDING_PROMPTS]: eC(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_ENABLE_PROMPTS, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_DISABLE_PROMPTS),
-        [P.zUn.ENABLED]: eC(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_ENABLE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_DISABLE)
+    H = () => ({
+        [v.zUn.NAME]: ep(G.t.QBmlaG, G.t.Lfs4r6),
+        [v.zUn.DESCRIPTION]: ep(G.t.XeYKWF, G.t.PSfeIi),
+        [v.zUn.PERMISSIONS_GRANTED]: () => G.t['9i/DvL'],
+        [v.zUn.PERMISSIONS_DENIED]: () => G.t.pa1ZVl,
+        [v.zUn.COLOR]: eC({ '#000000': G.t.TK6E1N }, G.t['2FQFi4']),
+        [v.zUn.HOIST]: eh(G.t.gWfe29, G.t['+tb8kJ']),
+        [v.zUn.MENTIONABLE]: eh(G.t.LL8VFB, G.t.Z7xzmJ),
+        [v.zUn.ICON_HASH]: () => G.t['iEE79/'],
+        [v.zUn.UNICODE_EMOJI]: () => G.t.KiLMMz,
+        ...y()
+    }),
+    V = () => ({
+        ...y(),
+        [v.zUn.TITLE]: ep(G.t.sNpuy8, G.t['3Ukc/v']),
+        [v.zUn.DESCRIPTION]: ep(G.t.PP1q09, G.t.z7pYLi),
+        [v.zUn.OPTIONS]: () => G.t['3G5C9/'],
+        [v.zUn.SINGLE_SELECT]: eh(G.t.v4WnR0, G.t['6Qg3uL']),
+        [v.zUn.REQUIRED]: eh(G.t['0MPAMz'], G.t.pwsXio)
     }),
     w = () => ({
-        ...x(),
-        [P.zUn.WELCOME_MESSAGE]: () => H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_CHANGED_WELCOME_MESSAGE,
-        [P.zUn.NEW_MEMBER_ACTIONS]: () => H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_CHANGED_NEW_MEMBER_ACTIONS,
-        [P.zUn.RESOURCE_CHANNELS]: () => H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_CHANGED_RESOURCE_CHANNELS
+        ...y(),
+        [v.zUn.DEFAULT_CHANNEL_IDS]: () => G.t['8M+D2t'],
+        [v.zUn.ENABLE_DEFAULT_CHANNELS]: eh(G.t['EYd/lp'], G.t['36OZeX']),
+        [v.zUn.ENABLE_ONBOARDING_PROMPTS]: eh(G.t.V3u8PT, G.t.r66lc3),
+        [v.zUn.ENABLED]: eh(G.t.SODVIi, G.t.u8HY5e)
+    }),
+    K = () => ({
+        ...y(),
+        [v.zUn.WELCOME_MESSAGE]: () => G.t.dKQ1xc,
+        [v.zUn.NEW_MEMBER_ACTIONS]: () => G.t.jDUInp,
+        [v.zUn.RESOURCE_CHANNELS]: () => G.t.SIX0mp
+    }),
+    Z = () => ({
+        [v.zUn.CODE]: () => G.t.rrRHgY,
+        [v.zUn.CHANNEL_ID]: () => G.t.Q1vd5u,
+        [v.zUn.MAX_USES]: eC({ 0: G.t.Yx8LNj }, G.t['3ygnwc']),
+        [v.zUn.MAX_AGE]: eC({ [G.intl.string(G.t.PqEzn5)]: G.t.uWrLv7 }, G.t['Q+5kcH']),
+        [v.zUn.TEMPORARY]: eh(G.t.MWp6Hx, G.t.omiqTE),
+        [v.zUn.FLAGS]: eL({ [o.$.IS_GUEST_INVITE]: G.t.XYZMbG }),
+        ...y()
     }),
     W = () => ({
-        [P.zUn.CODE]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CODE_CREATE,
-        [P.zUn.CHANNEL_ID]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CHANNEL_CREATE,
-        [P.zUn.MAX_USES]: ep({ 0: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_USES_CREATE_INFINITE }, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_USES_CREATE),
-        [P.zUn.MAX_AGE]: ep({ [H.Z.Messages.MAX_AGE_NEVER]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_AGE_CREATE_INFINITE }, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_AGE_CREATE),
-        [P.zUn.TEMPORARY]: eC(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_TEMPORARY_ON, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_TEMPORARY_OFF),
-        [P.zUn.FLAGS]: (e) => {
-            let { newValue: _ } = e;
-            return (function (e) {
-                let { newValue: _ } = e;
-                return _.map((e) =>
-                    (function (e) {
-                        if (e === T.$.IS_GUEST_INVITE) return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_INVITE_GUEST_INVITE;
-                        return null;
-                    })(e)
-                ).filter(f.lm);
-            })({ newValue: _ });
-        },
-        ...x()
+        [v.zUn.CHANNEL_ID]: ep(G.t.jhPpra, G.t.ar4qYG),
+        [v.zUn.NAME]: ep(G.t.ZVGrzc, G.t.tywdZW),
+        [v.zUn.AVATAR_HASH]: () => G.t.KB52Ul,
+        [v.zUn.REASON]: () => G.t['2IW3Cw']
     }),
     Y = () => ({
-        [P.zUn.CHANNEL_ID]: eM(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CHANGE),
-        [P.zUn.NAME]: eM(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CHANGE),
-        [P.zUn.AVATAR_HASH]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_AVATAR,
-        [P.zUn.REASON]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON
+        [v.zUn.NAME]: ep(G.t.ahU1o6, G.t['wxs+vb']),
+        ...y()
     }),
     q = () => ({
-        [P.zUn.NAME]: eM(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CHANGE),
-        ...x()
+        [v.zUn.NAME]: ep(G.t.cdl0Ym, G.t.o3W2l5),
+        [v.zUn.TAGS]: ep(G.t['zwL+S0'], G.t.VYfKAw),
+        [v.zUn.DESCRIPTION]: ep(G.t.XeYKWF, G.t.PSfeIi),
+        ...y()
     }),
     X = () => ({
-        [P.zUn.NAME]: eM(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CHANGE),
-        [P.zUn.TAGS]: eM(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CHANGE),
-        [P.zUn.DESCRIPTION]: eM(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE),
-        ...x()
+        [v.zUn.ENABLE_EMOTICONS]: eh(G.t['FI0m5+'], G.t.olpKCw),
+        [v.zUn.EXPIRE_BEHAVIOR]: eL({
+            0: G.t['1Bb1+v'],
+            1: G.t.vjlW6u
+        }),
+        [v.zUn.EXPIRE_GRACE_PERIOD]: () => G.t.iovXMT,
+        ...y()
     }),
     J = () => ({
-        [P.zUn.ENABLE_EMOTICONS]: eC(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_ENABLE_EMOTICONS_ON, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_ENABLE_EMOTICONS_OFF),
-        [P.zUn.EXPIRE_BEHAVIOR]: ef({
-            0: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_BEHAVIOR_REMOVE_SYNCED_ROLE,
-            1: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_BEHAVIOR_KICK_FROM_SERVER
+        [v.zUn.TOPIC]: ep(G.t['m+veAg'], G.t.esQcxs),
+        [v.zUn.PRIVACY_LEVEL]: eL({
+            [P.j8.GUILD_ONLY]: G.t['EC+CDg'],
+            [P.j8.PUBLIC]: G.t['pK/WGx']
         }),
-        [P.zUn.EXPIRE_GRACE_PERIOD]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_GRACE_PERIOD,
-        ...x()
+        ...y()
     }),
     Q = () => ({
-        [P.zUn.TOPIC]: eM(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE),
-        [P.zUn.PRIVACY_LEVEL]: ef({
-            [b.j8.GUILD_ONLY]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_GUILD_ONLY,
-            [b.j8.PUBLIC]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_PUBLIC
+        [v.zUn.NAME]: () => G.t['21EXHR'],
+        [v.zUn.DESCRIPTION]: () => G.t.Vm1of3,
+        [v.zUn.PRIVACY_LEVEL]: eL({
+            [P.j8.GUILD_ONLY]: G.t['EC+CDg'],
+            [P.j8.PUBLIC]: G.t['pK/WGx']
         }),
-        ...x()
+        [v.zUn.STATUS]: eL({
+            [P.p1.SCHEDULED]: G.t.hXKDgo,
+            [P.p1.ACTIVE]: G.t.lRX1n5,
+            [P.p1.COMPLETED]: G.t['/eFIho'],
+            [P.p1.CANCELED]: G.t.NWIYho
+        }),
+        [v.zUn.ENTITY_TYPE]: eL({
+            [P.WX.NONE]: G.t['6sO3Sk'],
+            [P.WX.STAGE_INSTANCE]: G.t['Wo+s19'],
+            [P.WX.VOICE]: G.t.XCVaIC,
+            [P.WX.EXTERNAL]: G.t.IvhAj4
+        }),
+        [v.zUn.CHANNEL_ID]: eD(G.t.yJBIcX, G.t['+PqSsr']),
+        [v.zUn.LOCATION]: eD(G.t.GaMBHx, G.t.PsICk5),
+        [v.zUn.IMAGE_HASH]: eD(G.t.S3vcRE, G.t.KQu47O),
+        ...y()
     }),
     $ = () => ({
-        [P.zUn.NAME]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_NAME_CREATE,
-        [P.zUn.DESCRIPTION]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_DESCRIPTION_CREATE,
-        [P.zUn.PRIVACY_LEVEL]: ef({
-            [b.j8.GUILD_ONLY]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_GUILD_ONLY,
-            [b.j8.PUBLIC]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_PUBLIC
-        }),
-        [P.zUn.STATUS]: ef({
-            [b.p1.SCHEDULED]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_SCHEDULED,
-            [b.p1.ACTIVE]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_ACTIVE,
-            [b.p1.COMPLETED]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_COMPLETED,
-            [b.p1.CANCELED]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_CANCELED
-        }),
-        [P.zUn.ENTITY_TYPE]: ef({
-            [b.WX.NONE]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_NONE,
-            [b.WX.STAGE_INSTANCE]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_STAGE_INSTANCE,
-            [b.WX.VOICE]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_VOICE,
-            [b.WX.EXTERNAL]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_EXTERNAL
-        }),
-        [P.zUn.CHANNEL_ID]: eR(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CHANNEL_CLEAR, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CHANNEL),
-        [P.zUn.LOCATION]: eR(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_LOCATION_CLEAR, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_LOCATION),
-        [P.zUn.IMAGE_HASH]: eR(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_IMAGE_HASH_REMOVE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_IMAGE_HASH_CHANGE),
-        ...x()
+        [v.zUn.SCHEDULED_START_TIME]: eD(G.t.zMIYVl, G.t.fzF8GR),
+        [v.zUn.SCHEDULED_END_TIME]: eD(G.t.vONSQE, G.t.IlIti4),
+        [v.zUn.IS_CANCELED]: (e) => {
+            if (null != e.oldValue || !0 === e.newValue) {
+                if (!e.oldValue && e.newValue) return G.t['7RkicX'];
+                if (e.oldValue && !e.newValue) return G.t.dRNTWV;
+            }
+        },
+        ...y()
     }),
     ee = () => ({
-        [P.zUn.SCHEDULED_START_TIME]: eR(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_EXCEPTION_SCHEDULED_START_TIME_REMOVED, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_EXCEPTION_SCHEDULED_START_TIME_CHANGE),
-        [P.zUn.SCHEDULED_END_TIME]: eR(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_EXCEPTION_SCHEDULED_END_TIME_REMOVED, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_EXCEPTION_SCHEDULED_END_TIME_CHANGE),
-        [P.zUn.IS_CANCELED]: (e) => {
-            if (null != e.oldValue || !0 === e.newValue) {
-                if (!e.oldValue && e.newValue) return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_EXCEPTION_IS_CANCELED_CANCELED;
-                if (e.oldValue && !e.newValue) return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_EXCEPTION_IS_CANCELED_RESTORED;
-            }
-            return '';
-        },
-        ...x()
+        [v.zUn.NAME]: ep(G.t.tUKRzc, G.t.kPCHOD),
+        [v.zUn.ARCHIVED]: eh(G.t.jDi9FB, G.t.F6dvbW),
+        [v.zUn.LOCKED]: eh(G.t.JSy1QU, G.t.C7Jgo6),
+        [v.zUn.INVITABLE]: eh(G.t.dxNUs7, G.t.biJvYG),
+        [v.zUn.AUTO_ARCHIVE_DURATION]: ep(G.t.LuaG39, G.t['18d9qq']),
+        [v.zUn.RATE_LIMIT_PER_USER]: ep(G.t['7lirhI'], G.t.j4CCJS),
+        [v.zUn.FLAGS]: () => G.t.sSAQtr,
+        ...y()
     }),
-    e_ = () => ({
-        [P.zUn.NAME]: eM(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CHANGE),
-        [P.zUn.ARCHIVED]: eC(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_ARCHIVED, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_UNARCHIVED),
-        [P.zUn.LOCKED]: eC(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_LOCKED, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_UNLOCKED),
-        [P.zUn.INVITABLE]: eC(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_INVITABLE_ENABLED, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_INVITABLE_DISABLED),
-        [P.zUn.AUTO_ARCHIVE_DURATION]: eM(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_AUTO_ARCHIVE_DURATION_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_AUTO_ARCHIVE_DURATION_CHANGE),
-        [P.zUn.RATE_LIMIT_PER_USER]: eM(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE),
-        [P.zUn.FLAGS]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_FLAGS_CHANGE,
-        ...x()
-    }),
-    eE = (e) => {
-        let _ = { ...x() };
+    et = (e) => {
+        let t = { ...y() };
         return (
             null == e ||
                 e.forEach((e) => {
-                    e.newValue ? (e.newValue.permission ? (_[e.key] = H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_GRANTED) : (_[e.key] = H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_DENIED)) : (_[e.key] = H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_REMOVED);
+                    e.newValue ? (e.newValue.permission ? (t[e.key] = () => G.t['JH+89P']) : (t[e.key] = () => G.t.HUrFDg)) : (t[e.key] = () => G.t.vynxnZ);
                 }),
-            _
+            t
         );
     },
-    es = () => ({
-        [P.zUn.NAME]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_NAME_UPDATE,
-        [P.zUn.AUTO_MODERATION_TRIGGER_TYPE]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_TRIGGER_TYPE_UPDATE,
-        [P.zUn.AUTO_MODERATION_EVENT_TYPE]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_EVENT_TYPE_UPDATE,
-        [P.zUn.AUTO_MODERATION_ACTIONS]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_ACTIONS_UPDATE,
-        [P.zUn.AUTO_MODERATION_ENABLED]: (e) => {
-            var _;
-            return !0 === (null !== (_ = e.newValue) && void 0 !== _ ? _ : e.oldValue) ? H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_ENABLED_UPDATE : H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_DISABLED_UPDATE;
-        },
-        [P.zUn.AUTO_MODERATION_EXEMPT_ROLES]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_EXEMPT_ROLES_UPDATE,
-        [P.zUn.AUTO_MODERATION_EXEMPT_CHANNELS]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_EXEMPT_CHANNELS_UPDATE,
-        [P.zUn.AUTO_MODERATION_TRIGGER_METADATA]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_TRIGGER_METADATA_UPDATE,
-        [P.zUn.AUTO_MODERATION_ADD_KEYWORDS]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_ADD_KEYWORDS,
-        [P.zUn.AUTO_MODERATION_REMOVE_KEYWORDS]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_REMOVE_KEYWORDS,
-        [P.zUn.AUTO_MODERATION_ADD_REGEX_PATTERNS]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_ADD_REGEX_PATTERNS,
-        [P.zUn.AUTO_MODERATION_REMOVE_REGEX_PATTERNS]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_REMOVE_REGEX_PATTERNS,
-        [P.zUn.AUTO_MODERATION_ADD_ALLOW_LIST]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_ADD_ALLOW_LIST,
-        [P.zUn.AUTO_MODERATION_REMOVE_ALLOW_LIST]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_REMOVE_ALLOW_LIST,
-        ...x()
-    }),
     en = () => ({
-        [P.zUn.NAME]: eM(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_NAME_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_NAME_CHANGE),
-        [P.zUn.VOLUME]: eM(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_VOLUME_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_VOLUME_CHANGE),
-        [P.zUn.EMOJI_NAME]: eg(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_NAME_REPLACE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_NAME_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_NAME_REMOVE),
-        [P.zUn.EMOJI_ID]: eg(H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_ID_REPLACE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_ID_CREATE, H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_ID_REMOVE),
-        ...x()
+        [v.zUn.NAME]: () => G.t.XwxAJS,
+        [v.zUn.AUTO_MODERATION_TRIGGER_TYPE]: () => G.t.fx0pys,
+        [v.zUn.AUTO_MODERATION_EVENT_TYPE]: () => G.t['46Y+Ly'],
+        [v.zUn.AUTO_MODERATION_ACTIONS]: () => G.t['8efxfn'],
+        [v.zUn.AUTO_MODERATION_ENABLED]: (e) => {
+            var t;
+            return !0 === (null !== (t = e.newValue) && void 0 !== t ? t : e.oldValue) ? G.t.fCmxCw : G.t.Wrg9Ji;
+        },
+        [v.zUn.AUTO_MODERATION_EXEMPT_ROLES]: () => G.t.TRb7Nz,
+        [v.zUn.AUTO_MODERATION_EXEMPT_CHANNELS]: () => G.t.mzitLC,
+        [v.zUn.AUTO_MODERATION_TRIGGER_METADATA]: () => G.t['h/lM6+'],
+        [v.zUn.AUTO_MODERATION_ADD_KEYWORDS]: () => G.t['9V2yaG'],
+        [v.zUn.AUTO_MODERATION_REMOVE_KEYWORDS]: () => G.t['4Qe9n5'],
+        [v.zUn.AUTO_MODERATION_ADD_REGEX_PATTERNS]: () => G.t.GyZtxs,
+        [v.zUn.AUTO_MODERATION_REMOVE_REGEX_PATTERNS]: () => G.t.OQDadX,
+        [v.zUn.AUTO_MODERATION_ADD_ALLOW_LIST]: () => G.t['FvvR+P'],
+        [v.zUn.AUTO_MODERATION_REMOVE_ALLOW_LIST]: () => G.t.p5nSv7,
+        ...y()
     }),
-    et = () => ({
-        [P.zUn.STATUS]: H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_VOICE_CHANNEL_STATUS_STATUS_CREATE,
-        ...x()
+    er = () => ({
+        [v.zUn.NAME]: ep(G.t.VOtRSE, G.t.OK7B8P),
+        [v.zUn.VOLUME]: ep(G.t.igrDBw, G.t.L5lDFB),
+        [v.zUn.EMOJI_NAME]: eU(G.t.IIanaW, G.t.z4w4U1, G.t.V8Tfyc),
+        [v.zUn.EMOJI_ID]: eU(G.t.ainxMD, G.t['2NPsYm'], G.t['8crtnp']),
+        ...y()
     }),
-    er = {
-        [P.KFR.CHANNEL]: {
-            [P.zUn.ID]: !0,
-            [P.zUn.PERMISSION_OVERWRITES]: !0
+    el = () => ({
+        [v.zUn.STATUS]: () => G.t.HyCSnJ,
+        ...y()
+    }),
+    ei = {
+        [v.KFR.CHANNEL]: {
+            [v.zUn.ID]: !0,
+            [v.zUn.PERMISSION_OVERWRITES]: !0
         },
-        [P.KFR.CHANNEL_OVERWRITE]: {
-            [P.zUn.TYPE]: !0,
-            [P.zUn.ID]: !0,
-            [P.zUn.PERMISSION_OVERWRITES]: !0
+        [v.KFR.CHANNEL_OVERWRITE]: {
+            [v.zUn.TYPE]: !0,
+            [v.zUn.ID]: !0,
+            [v.zUn.PERMISSION_OVERWRITES]: !0
         },
-        [P.KFR.INVITE]: {
-            [P.zUn.INVITER_ID]: !0,
-            [P.zUn.USES]: !0
+        [v.KFR.INVITE]: {
+            [v.zUn.INVITER_ID]: !0,
+            [v.zUn.USES]: !0
         },
-        [P.KFR.WEBHOOK]: {
-            [P.zUn.TYPE]: !0,
-            [P.zUn.APPLICATION_ID]: !0
+        [v.KFR.WEBHOOK]: {
+            [v.zUn.TYPE]: !0,
+            [v.zUn.APPLICATION_ID]: !0
         },
-        [P.KFR.INTEGRATION]: { [P.zUn.TYPE]: !0 },
-        [P.KFR.THREAD]: {
-            [P.zUn.ID]: !0,
-            [P.zUn.TYPE]: !0
+        [v.KFR.INTEGRATION]: { [v.zUn.TYPE]: !0 },
+        [v.KFR.THREAD]: {
+            [v.zUn.ID]: !0,
+            [v.zUn.TYPE]: !0
         },
-        [P.KFR.STICKER]: {
-            [P.zUn.ID]: !0,
-            [P.zUn.TYPE]: !0,
-            [P.zUn.ASSET]: !0,
-            [P.zUn.FORMAT_TYPE]: !0,
-            [P.zUn.AVAILABLE]: !0,
-            [P.zUn.GUILD_ID]: !0
+        [v.KFR.STICKER]: {
+            [v.zUn.ID]: !0,
+            [v.zUn.TYPE]: !0,
+            [v.zUn.ASSET]: !0,
+            [v.zUn.FORMAT_TYPE]: !0,
+            [v.zUn.AVAILABLE]: !0,
+            [v.zUn.GUILD_ID]: !0
         },
-        [P.KFR.GUILD_HOME]: { [P.zUn.ENTITY_TYPE]: !0 },
-        [P.KFR.GUILD_ONBOARDING]: { [P.zUn.PROMPTS]: !0 },
-        [P.KFR.GUILD_SOUNDBOARD]: {
-            [P.zUn.ID]: !0,
-            [P.zUn.SOUND_ID]: !0
+        [v.KFR.GUILD_HOME]: { [v.zUn.ENTITY_TYPE]: !0 },
+        [v.KFR.GUILD_ONBOARDING]: { [v.zUn.PROMPTS]: !0 },
+        [v.KFR.GUILD_SOUNDBOARD]: {
+            [v.zUn.ID]: !0,
+            [v.zUn.SOUND_ID]: !0
         }
     },
-    ea = () => [
+    es = () => [
         {
-            value: P.rsA.ALL,
-            label: H.Z.Messages.GUILD_SETTINGS_FILTER_ALL_ACTIONS,
-            valueLabel: H.Z.Messages.GUILD_SETTINGS_FILTER_ALL
+            value: v.rsA.ALL,
+            label: G.intl.string(G.t.QxEVcn),
+            valueLabel: G.intl.string(G.t.an9Ry8)
         },
         {
-            value: P.rsA.GUILD_UPDATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_GUILD_UPDATE
+            value: v.rsA.GUILD_UPDATE,
+            label: G.intl.string(G.t['5INZa2'])
         },
         {
-            value: P.rsA.CHANNEL_CREATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_CREATE
+            value: v.rsA.CHANNEL_CREATE,
+            label: G.intl.string(G.t['2uh4vL'])
         },
         {
-            value: P.rsA.CHANNEL_UPDATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_UPDATE
+            value: v.rsA.CHANNEL_UPDATE,
+            label: G.intl.string(G.t.mGsBLS)
         },
         {
-            value: P.rsA.CHANNEL_DELETE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_DELETE
+            value: v.rsA.CHANNEL_DELETE,
+            label: G.intl.string(G.t.hCHzAg)
         },
         {
-            value: P.rsA.CHANNEL_OVERWRITE_CREATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_OVERWRITE_CREATE
+            value: v.rsA.CHANNEL_OVERWRITE_CREATE,
+            label: G.intl.string(G.t['8TnAMD'])
         },
         {
-            value: P.rsA.CHANNEL_OVERWRITE_UPDATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_OVERWRITE_UPDATE
+            value: v.rsA.CHANNEL_OVERWRITE_UPDATE,
+            label: G.intl.string(G.t.Jqx0Bg)
         },
         {
-            value: P.rsA.CHANNEL_OVERWRITE_DELETE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_OVERWRITE_DELETE
+            value: v.rsA.CHANNEL_OVERWRITE_DELETE,
+            label: G.intl.string(G.t.gBXOr6)
         },
         {
-            value: P.rsA.MEMBER_KICK,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_KICK
+            value: v.rsA.MEMBER_KICK,
+            label: G.intl.string(G.t['Q1/hNz'])
         },
         {
-            value: P.rsA.MEMBER_PRUNE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_PRUNE
+            value: v.rsA.MEMBER_PRUNE,
+            label: G.intl.string(G.t.tOTTjY)
         },
         {
-            value: P.rsA.MEMBER_BAN_ADD,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_BAN_ADD
+            value: v.rsA.MEMBER_BAN_ADD,
+            label: G.intl.string(G.t['NfPn+f'])
         },
         {
-            value: P.rsA.MEMBER_BAN_REMOVE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_BAN_REMOVE
+            value: v.rsA.MEMBER_BAN_REMOVE,
+            label: G.intl.string(G.t.XCsGfH)
         },
         {
-            value: P.rsA.MEMBER_UPDATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_UPDATE
+            value: v.rsA.MEMBER_UPDATE,
+            label: G.intl.string(G.t['F/jmND'])
         },
         {
-            value: P.rsA.MEMBER_ROLE_UPDATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_ROLE_UPDATE
+            value: v.rsA.MEMBER_ROLE_UPDATE,
+            label: G.intl.string(G.t.zAveSE)
         },
         {
-            value: P.rsA.MEMBER_MOVE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_MOVE
+            value: v.rsA.MEMBER_MOVE,
+            label: G.intl.string(G.t.QshteX)
         },
         {
-            value: P.rsA.MEMBER_DISCONNECT,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_DISCONNECT
+            value: v.rsA.MEMBER_DISCONNECT,
+            label: G.intl.string(G.t.Z45os7)
         },
         {
-            value: P.rsA.BOT_ADD,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_BOT_ADD
+            value: v.rsA.BOT_ADD,
+            label: G.intl.string(G.t.vuH24e)
         },
         {
-            value: P.rsA.THREAD_CREATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_THREAD_CREATE
+            value: v.rsA.THREAD_CREATE,
+            label: G.intl.string(G.t['+zl0DA'])
         },
         {
-            value: P.rsA.THREAD_UPDATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_THREAD_UPDATE
+            value: v.rsA.THREAD_UPDATE,
+            label: G.intl.string(G.t.rbIry8)
         },
         {
-            value: P.rsA.THREAD_DELETE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_THREAD_DELETE
+            value: v.rsA.THREAD_DELETE,
+            label: G.intl.string(G.t.hFjNEB)
         },
         {
-            value: P.rsA.ROLE_CREATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_CREATE
+            value: v.rsA.ROLE_CREATE,
+            label: G.intl.string(G.t.AbxKtr)
         },
         {
-            value: P.rsA.ROLE_UPDATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_UPDATE
+            value: v.rsA.ROLE_UPDATE,
+            label: G.intl.string(G.t.t3Z6sb)
         },
         {
-            value: P.rsA.ROLE_DELETE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_DELETE
+            value: v.rsA.ROLE_DELETE,
+            label: G.intl.string(G.t.YsFpa2)
         },
         {
-            value: P.rsA.ONBOARDING_PROMPT_CREATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_PROMPT_CREATE
+            value: v.rsA.ONBOARDING_PROMPT_CREATE,
+            label: G.intl.string(G.t.ZV9tqa)
         },
         {
-            value: P.rsA.ONBOARDING_PROMPT_UPDATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_PROMPT_UPDATE
+            value: v.rsA.ONBOARDING_PROMPT_UPDATE,
+            label: G.intl.string(G.t.PcOdvb)
         },
         {
-            value: P.rsA.ONBOARDING_PROMPT_DELETE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_PROMPT_DELETE
+            value: v.rsA.ONBOARDING_PROMPT_DELETE,
+            label: G.intl.string(G.t['+r33NT'])
         },
         {
-            value: P.rsA.ONBOARDING_CREATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_ONBOARDING_CREATE
+            value: v.rsA.ONBOARDING_CREATE,
+            label: G.intl.string(G.t.uDADdX)
         },
         {
-            value: P.rsA.ONBOARDING_UPDATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_ONBOARDING_UPDATE
+            value: v.rsA.ONBOARDING_UPDATE,
+            label: G.intl.string(G.t.J1H1ws)
         },
         {
-            value: P.rsA.HOME_SETTINGS_CREATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_HOME_SETTINGS_CREATE
+            value: v.rsA.HOME_SETTINGS_CREATE,
+            label: G.intl.string(G.t.Di4cvL)
         },
         {
-            value: P.rsA.HOME_SETTINGS_UPDATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_HOME_SETTINGS_UPDATE
+            value: v.rsA.HOME_SETTINGS_UPDATE,
+            label: G.intl.string(G.t.tzyrJC)
         },
         {
-            value: P.rsA.INVITE_CREATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_INVITE_CREATE
+            value: v.rsA.INVITE_CREATE,
+            label: G.intl.string(G.t['0BNJdX'])
         },
         {
-            value: P.rsA.INVITE_UPDATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_INVITE_UPDATE
+            value: v.rsA.INVITE_UPDATE,
+            label: G.intl.string(G.t['o++obW'])
         },
         {
-            value: P.rsA.INVITE_DELETE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_INVITE_DELETE
+            value: v.rsA.INVITE_DELETE,
+            label: G.intl.string(G.t.iP40Aw)
         },
         {
-            value: P.rsA.WEBHOOK_CREATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_WEBHOOK_CREATE
+            value: v.rsA.WEBHOOK_CREATE,
+            label: G.intl.string(G.t['tBF4+f'])
         },
         {
-            value: P.rsA.WEBHOOK_UPDATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_WEBHOOK_UPDATE
+            value: v.rsA.WEBHOOK_UPDATE,
+            label: G.intl.string(G.t.eV3McH)
         },
         {
-            value: P.rsA.WEBHOOK_DELETE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_WEBHOOK_DELETE
+            value: v.rsA.WEBHOOK_DELETE,
+            label: G.intl.string(G.t.AAL3Ky)
         },
         {
-            value: P.rsA.EMOJI_CREATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_EMOJI_CREATE
+            value: v.rsA.EMOJI_CREATE,
+            label: G.intl.string(G.t.RuWm0d)
         },
         {
-            value: P.rsA.EMOJI_UPDATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_EMOJI_UPDATE
+            value: v.rsA.EMOJI_UPDATE,
+            label: G.intl.string(G.t.WzdUY2)
         },
         {
-            value: P.rsA.EMOJI_DELETE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_EMOJI_DELETE
+            value: v.rsA.EMOJI_DELETE,
+            label: G.intl.string(G.t.c3dK2N)
         },
         {
-            value: P.rsA.MESSAGE_DELETE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_DELETE
+            value: v.rsA.MESSAGE_DELETE,
+            label: G.intl.string(G.t.daTfXl)
         },
         {
-            value: P.rsA.MESSAGE_BULK_DELETE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_BULK_DELETE
+            value: v.rsA.MESSAGE_BULK_DELETE,
+            label: G.intl.string(G.t.nrBxen)
         },
         {
-            value: P.rsA.MESSAGE_PIN,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_PIN
+            value: v.rsA.MESSAGE_PIN,
+            label: G.intl.string(G.t.MUldyM)
         },
         {
-            value: P.rsA.MESSAGE_UNPIN,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_UNPIN
+            value: v.rsA.MESSAGE_UNPIN,
+            label: G.intl.string(G.t.n4zKhI)
         },
         {
-            value: P.rsA.INTEGRATION_CREATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_INTEGRATION_CREATE
+            value: v.rsA.INTEGRATION_CREATE,
+            label: G.intl.string(G.t['deNm8/'])
         },
         {
-            value: P.rsA.INTEGRATION_UPDATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_INTEGRATION_UPDATE
+            value: v.rsA.INTEGRATION_UPDATE,
+            label: G.intl.string(G.t.HT7Sfn)
         },
         {
-            value: P.rsA.INTEGRATION_DELETE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_INTEGRATION_DELETE
+            value: v.rsA.INTEGRATION_DELETE,
+            label: G.intl.string(G.t['+kJ09v'])
         },
         {
-            value: P.rsA.STICKER_CREATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_STICKER_CREATE
+            value: v.rsA.STICKER_CREATE,
+            label: G.intl.string(G.t['3DzNjY'])
         },
         {
-            value: P.rsA.STICKER_UPDATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_STICKER_UPDATE
+            value: v.rsA.STICKER_UPDATE,
+            label: G.intl.string(G.t.tdhW5e)
         },
         {
-            value: P.rsA.STICKER_DELETE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_STICKER_DELETE
+            value: v.rsA.STICKER_DELETE,
+            label: G.intl.string(G.t['+ZhGOj'])
         },
         {
-            value: P.rsA.STAGE_INSTANCE_CREATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_STAGE_INSTANCE_CREATE
+            value: v.rsA.STAGE_INSTANCE_CREATE,
+            label: G.intl.string(G.t.sPbjAw)
         },
         {
-            value: P.rsA.STAGE_INSTANCE_UPDATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_STAGE_INSTANCE_UPDATE
+            value: v.rsA.STAGE_INSTANCE_UPDATE,
+            label: G.intl.string(G.t.cW9LfH)
         },
         {
-            value: P.rsA.STAGE_INSTANCE_DELETE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_STAGE_INSTANCE_DELETE
+            value: v.rsA.STAGE_INSTANCE_DELETE,
+            label: G.intl.string(G.t['U1r+yM'])
         },
         {
-            value: P.rsA.GUILD_SCHEDULED_EVENT_CREATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE
+            value: v.rsA.GUILD_SCHEDULED_EVENT_CREATE,
+            label: G.intl.string(G.t.H81Zy8)
         },
         {
-            value: P.rsA.GUILD_SCHEDULED_EVENT_UPDATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE
+            value: v.rsA.GUILD_SCHEDULED_EVENT_UPDATE,
+            label: G.intl.string(G.t.FM69l5)
         },
         {
-            value: P.rsA.GUILD_SCHEDULED_EVENT_DELETE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_DELETE
+            value: v.rsA.GUILD_SCHEDULED_EVENT_DELETE,
+            label: G.intl.string(G.t.Rq28Bg)
         },
         {
-            value: P.rsA.APPLICATION_COMMAND_PERMISSION_UPDATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_APPLICATION_COMMAND_PERMISSION_UPDATE
+            value: v.rsA.APPLICATION_COMMAND_PERMISSION_UPDATE,
+            label: G.intl.string(G.t.iPdFOj)
         },
         {
-            value: P.rsA.AUTO_MODERATION_BLOCK_MESSAGE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTO_MODERATION_BLOCK_MESSAGE
+            value: v.rsA.AUTO_MODERATION_BLOCK_MESSAGE,
+            label: G.intl.string(G.t.gNq5z8)
         },
         {
-            value: P.rsA.AUTO_MODERATION_RULE_CREATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_CREATE
+            value: v.rsA.AUTO_MODERATION_RULE_CREATE,
+            label: G.intl.string(G.t.f72Zqa)
         },
         {
-            value: P.rsA.AUTO_MODERATION_RULE_UPDATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_UPDATE
+            value: v.rsA.AUTO_MODERATION_RULE_UPDATE,
+            label: G.intl.string(G.t.XeqIio)
         },
         {
-            value: P.rsA.AUTO_MODERATION_RULE_DELETE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_DELETE
+            value: v.rsA.AUTO_MODERATION_RULE_DELETE,
+            label: G.intl.string(G.t.syAApa)
         },
         {
-            value: P.rsA.GUILD_HOME_FEATURE_ITEM,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_GUILD_HOME_FEATURE_ITEM
+            value: v.rsA.GUILD_HOME_FEATURE_ITEM,
+            label: G.intl.string(G.t.lhG5KC)
         },
         {
-            value: P.rsA.GUILD_HOME_REMOVE_ITEM,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_GUILD_HOME_REMOVE_ITEM
+            value: v.rsA.GUILD_HOME_REMOVE_ITEM,
+            label: G.intl.string(G.t.lRPRwc)
         },
         {
-            value: P.rsA.SOUNDBOARD_SOUND_CREATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_SOUNDBOARD_SOUND_CREATE
+            value: v.rsA.SOUNDBOARD_SOUND_CREATE,
+            label: G.intl.string(G.t.yoRi5u)
         },
         {
-            value: P.rsA.SOUNDBOARD_SOUND_UPDATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_SOUNDBOARD_SOUND_UPDATE
+            value: v.rsA.SOUNDBOARD_SOUND_UPDATE,
+            label: G.intl.string(G.t.uKlG0d)
         },
         {
-            value: P.rsA.SOUNDBOARD_SOUND_DELETE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_SOUNDBOARD_SOUND_DELETE
+            value: v.rsA.SOUNDBOARD_SOUND_DELETE,
+            label: G.intl.string(G.t.gq0iCQ)
         },
         {
-            value: P.rsA.VOICE_CHANNEL_STATUS_CREATE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_VOICE_CHANNEL_STATUS_CREATE
+            value: v.rsA.VOICE_CHANNEL_STATUS_CREATE,
+            label: G.intl.string(G.t.rGr0YG)
         },
         {
-            value: P.rsA.VOICE_CHANNEL_STATUS_DELETE,
-            label: H.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_VOICE_CHANNEL_STATUS_DELETE
+            value: v.rsA.VOICE_CHANNEL_STATUS_DELETE,
+            label: G.intl.string(G.t.V9PEQ0)
         }
     ];
-function eT(e, _) {
-    return null != _.changes ? _.changes.find((_) => _.key === e) : null;
+function ea(e, t) {
+    return null != t.changes ? t.changes.find((t) => t.key === e) : null;
 }
-function eI(e, _) {
-    return null != _.changes ? _.changes.filter((_) => _.key === e) : [];
+function eo(e, t) {
+    return null != t.changes ? t.changes.filter((t) => t.key === e) : [];
 }
-function el(e) {
-    var _;
-    let E = ea().find((_) => _.value === e.action);
-    return null != eT(P.zUn.COMMUNICATION_DISABLED_UNTIL, e) ? H.Z.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED : null !== (_ = null == E ? void 0 : E.label) && void 0 !== _ ? _ : null;
+function eE(e) {
+    var t;
+    let n = es().find((t) => t.value === e.action);
+    return null != ea(v.zUn.COMMUNICATION_DISABLED_UNTIL, e) ? G.intl.string(G.t.z3wbj4) : null !== (t = null == n ? void 0 : n.label) && void 0 !== t ? t : null;
 }
-let eo = {
-    [o.J6.SECONDS]: (e) => H.Z.Messages.DURATION_SECONDS.format({ seconds: e }),
-    [o.J6.MINUTES]: (e) => H.Z.Messages.DURATION_MINUTES.format({ minutes: e }),
-    [o.J6.HOURS]: (e) => H.Z.Messages.DURATION_HOURS.format({ hours: e }),
-    [o.J6.DAYS]: (e) => H.Z.Messages.DURATION_DAYS.format({ days: e })
+let eu = {
+    [c.J6.SECONDS]: (e) => G.intl.formatToPlainString(G.t.geSp4O, { seconds: e }),
+    [c.J6.MINUTES]: (e) => G.intl.formatToPlainString(G.t.iXLF9f, { minutes: e }),
+    [c.J6.HOURS]: (e) => G.intl.formatToPlainString(G.t.xCjYxM, { hours: e }),
+    [c.J6.DAYS]: (e) => G.intl.formatToPlainString(G.t.k2UNz8, { days: e })
 };
-function eA(e) {
-    let _ = eT(P.zUn.COMMUNICATION_DISABLED_UNTIL, e),
-        E = eI(P.zUn.ROLES_ADD, e).length > 0,
-        s = eI(P.zUn.ROLES_REMOVE, e).length > 0;
-    if (null != _) {
-        if ((null == _ ? void 0 : _.newValue) != null) {
-            let E = new Date(null == _ ? void 0 : _.newValue).getTime(),
-                s = E - h.default.extractTimestamp(e.id),
-                n = Math.round(s / 1000 / 60),
-                t = (0, o.CI)(n, B);
-            if (null == t.unit || null == t.time) return null;
-            if (t.unit in eo) {
-                let e = t.unit,
-                    _ = t.unit === o.J6.SECONDS ? Math.round(s / 1000) : t.time;
-                return eo[e](_);
+function ec(e) {
+    let t = ea(v.zUn.COMMUNICATION_DISABLED_UNTIL, e),
+        n = eo(v.zUn.ROLES_ADD, e).length > 0,
+        r = eo(v.zUn.ROLES_REMOVE, e).length > 0;
+    if (null != t) {
+        if ((null == t ? void 0 : t.newValue) != null) {
+            let n = new Date(null == t ? void 0 : t.newValue).getTime(),
+                r = n - M.default.extractTimestamp(e.id),
+                l = Math.round(r / 1000 / 60),
+                i = (0, c.CI)(l, j);
+            if (null == i.unit || null == i.time) return null;
+            if (i.unit in eu) {
+                let e = i.unit,
+                    t = i.unit === c.J6.SECONDS ? Math.round(r / 1000) : i.time;
+                return eu[e](t);
             }
-        } else if ((null == _ ? void 0 : _.oldValue) != null) return H.Z.Messages.GUILD_COMMUNICATION_DISABLED_REMOVED;
-    } else if (E && s) return H.Z.Messages.GUILD_MEMBER_MOD_VIEW_ROLES_ADDED_AND_REMOVED_CONTEXT;
-    else if (E) return H.Z.Messages.GUILD_MEMBER_MOD_VIEW_ROLES_ADDED_CONTEXT;
-    else if (s) return H.Z.Messages.GUILD_MEMBER_MOD_VIEW_ROLES_REMOVED_CONTEXT;
+        } else if ((null == t ? void 0 : t.oldValue) != null) return G.intl.string(G.t.MA1ltr);
+    } else if (n && r) return G.intl.string(G.t.RdMMe3);
+    else if (n) return G.intl.string(G.t['4GQqs7']);
+    else if (r) return G.intl.string(G.t['8mQ6x8']);
     return null;
 }
-function ei(e) {
-    let _ = eI(P.zUn.ROLES_ADD, e),
-        E = eI(P.zUn.ROLES_REMOVE, e),
-        s =
-            null == _
+function ed(e) {
+    let t = eo(v.zUn.ROLES_ADD, e),
+        n = eo(v.zUn.ROLES_REMOVE, e),
+        r =
+            null == t
                 ? void 0
-                : _.map((e) => {
-                      let { newValue: _ } = e;
-                      return null == _
-                          ? void 0
-                          : _.map((e) => {
-                                let { name: _ } = e;
-                                return _;
-                            }).join(', ');
-                  }).join(', '),
-        n =
-            null == E
+                : t
+                      .map((e) => {
+                          let { newValue: t } = e;
+                          return null == t
+                              ? void 0
+                              : t
+                                    .map((e) => {
+                                        let { name: t } = e;
+                                        return t;
+                                    })
+                                    .join(', ');
+                      })
+                      .join(', '),
+        l =
+            null == n
                 ? void 0
-                : E.map((e) => {
-                      let { newValue: _ } = e;
-                      return null == _
-                          ? void 0
-                          : _.map((e) => {
-                                let { name: _ } = e;
-                                return _;
-                            }).join(', ');
-                  }).join(', ');
-    if (_.length > 0 && E.length > 0)
-        return H.Z.Messages.GUILD_MEMBER_MOD_VIEW_ROLES_ADDED_AND_REMOVED.format({
-            roleNamesAdded: s,
-            roleNamesRemoved: n
+                : n
+                      .map((e) => {
+                          let { newValue: t } = e;
+                          return null == t
+                              ? void 0
+                              : t
+                                    .map((e) => {
+                                        let { name: t } = e;
+                                        return t;
+                                    })
+                                    .join(', ');
+                      })
+                      .join(', ');
+    if (t.length > 0 && n.length > 0)
+        return G.intl.formatToPlainString(G.t.tZw1ER, {
+            roleNamesAdded: r,
+            roleNamesRemoved: l
         });
-    if (_.length > 0) return H.Z.Messages.GUILD_MEMBER_MOD_VIEW_ROLES_ADDED.format({ roleNames: s });
-    if (E.length > 0) return H.Z.Messages.GUILD_MEMBER_MOD_VIEW_ROLES_REMOVED.format({ roleNames: n });
+    if (t.length > 0) return G.intl.formatToPlainString(G.t['/mTqt7'], { roleNames: r });
+    if (n.length > 0) return G.intl.formatToPlainString(G.t.Wk4pAA, { roleNames: l });
     return null;
 }
-function eN(e) {
+function e_(e) {
     switch (e.action) {
-        case P.rsA.GUILD_UPDATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATE;
-        case P.rsA.CHANNEL_CREATE:
-            let _ = null != e.changes ? e.changes.find((e) => e.key === P.zUn.TYPE) : null;
-            if (null == _) throw Error('[AuditLog] Could not find type change for channel create');
-            switch (_.newValue) {
-                case P.d4z.GUILD_STAGE_VOICE:
-                    return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_STAGE_CREATE;
-                case P.d4z.GUILD_VOICE:
-                    return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VOICE_CREATE;
-                case P.d4z.GUILD_CATEGORY:
-                    return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_CATEGORY_CREATE;
+        case v.rsA.GUILD_UPDATE:
+            return G.t.LjZO39;
+        case v.rsA.CHANNEL_CREATE:
+            let t = null != e.changes ? e.changes.find((e) => e.key === v.zUn.TYPE) : null;
+            if (null == t) throw Error('[AuditLog] Could not find type change for channel create');
+            switch (t.newValue) {
+                case v.d4z.GUILD_STAGE_VOICE:
+                    return G.t['OKp4+v'];
+                case v.d4z.GUILD_VOICE:
+                    return G.t.NPOy4O;
+                case v.d4z.GUILD_CATEGORY:
+                    return G.t.T3KIj4;
                 default:
-                    return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TEXT_CREATE;
+                    return G.t.wrYNGx;
             }
-        case P.rsA.CHANNEL_UPDATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_UPDATE;
-        case P.rsA.CHANNEL_DELETE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DELETE;
-        case P.rsA.CHANNEL_OVERWRITE_CREATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_OVERWRITE_CREATE;
-        case P.rsA.CHANNEL_OVERWRITE_UPDATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_OVERWRITE_UPDATE;
-        case P.rsA.CHANNEL_OVERWRITE_DELETE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_OVERWRITE_DELETE;
-        case P.rsA.MEMBER_KICK:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_KICK;
-        case P.rsA.MEMBER_PRUNE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_PRUNE;
-        case P.rsA.MEMBER_BAN_ADD:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_BAN_ADD;
-        case P.rsA.MEMBER_BAN_REMOVE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_BAN_REMOVE;
-        case P.rsA.MEMBER_UPDATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_UPDATE;
-        case P.rsA.MEMBER_ROLE_UPDATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLE_UPDATE;
-        case P.rsA.MEMBER_MOVE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MOVE;
-        case P.rsA.MEMBER_DISCONNECT:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DISCONNECT;
-        case P.rsA.BOT_ADD:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_BOT_ADD;
-        case P.rsA.ROLE_CREATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_CREATE;
-        case P.rsA.ROLE_UPDATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_UPDATE;
-        case P.rsA.ROLE_DELETE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_DELETE;
-        case P.rsA.INVITE_CREATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CREATE;
-        case P.rsA.INVITE_UPDATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_UPDATE;
-        case P.rsA.INVITE_DELETE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_DELETE;
-        case P.rsA.WEBHOOK_CREATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CREATE;
-        case P.rsA.WEBHOOK_UPDATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_UPDATE;
-        case P.rsA.WEBHOOK_DELETE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_DELETE;
-        case P.rsA.EMOJI_CREATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_CREATE;
-        case P.rsA.EMOJI_UPDATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_UPDATE;
-        case P.rsA.EMOJI_DELETE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_DELETE;
-        case P.rsA.STICKER_CREATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_CREATE;
-        case P.rsA.STICKER_UPDATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_UPDATE;
-        case P.rsA.STICKER_DELETE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_DELETE;
-        case P.rsA.MESSAGE_DELETE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_DELETE;
-        case P.rsA.MESSAGE_BULK_DELETE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_BULK_DELETE;
-        case P.rsA.MESSAGE_PIN:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_PIN;
-        case P.rsA.MESSAGE_UNPIN:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_UNPIN;
-        case P.rsA.INTEGRATION_CREATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_CREATE;
-        case P.rsA.INTEGRATION_UPDATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_UPDATE;
-        case P.rsA.INTEGRATION_DELETE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_DELETE;
-        case P.rsA.STAGE_INSTANCE_CREATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_CREATE;
-        case P.rsA.STAGE_INSTANCE_UPDATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_UPDATE;
-        case P.rsA.STAGE_INSTANCE_DELETE:
-            if (null != e.userId) return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_DELETE;
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_DELETE_NO_USER;
-        case P.rsA.GUILD_SCHEDULED_EVENT_CREATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CREATE;
-        case P.rsA.GUILD_SCHEDULED_EVENT_UPDATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_UPDATE;
-        case P.rsA.GUILD_SCHEDULED_EVENT_DELETE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_DELETE;
-        case P.rsA.GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE:
-        case P.rsA.GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_RECURRENCE_UPDATE;
-        case P.rsA.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_RECURRENCE_DELETE;
-        case P.rsA.THREAD_CREATE:
-            let E = null != e.changes ? e.changes.find((e) => e.key === P.zUn.TYPE) : null;
-            if (null == E) throw Error('[AuditLog] Could not find type change for thread create');
-            switch (E.newValue) {
-                case P.d4z.PRIVATE_THREAD:
-                    return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_PRIVATE_THREAD_CREATE;
-                case P.d4z.ANNOUNCEMENT_THREAD:
-                    return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ANNOUNCEMENT_THREAD_CREATE;
-                default:
-                    return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_CREATE;
-            }
-        case P.rsA.THREAD_UPDATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_UPDATE;
-        case P.rsA.THREAD_DELETE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_DELETE;
-        case P.rsA.APPLICATION_COMMAND_PERMISSION_UPDATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_UPDATE;
-        case P.rsA.AUTO_MODERATION_BLOCK_MESSAGE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_BLOCK_MESSAGE;
-        case P.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL:
-            var s;
-            if ((null === (s = e.options) || void 0 === s ? void 0 : s.auto_moderation_rule_trigger_type) === v.fX.USER_PROFILE.toString()) return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_FLAGGED_USER_PROFILE;
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_FLAG_TO_CHANNEL_MESSAGE;
-        case P.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_USER_COMMUNICATION_DISABLED_MESSAGE;
-        case P.rsA.AUTO_MODERATION_QUARANTINE_USER:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_QUARANTINE_USER;
-        case P.rsA.CREATOR_MONETIZATION_REQUEST_CREATED:
-            return H.Z.Messages.CREATOR_MONETIZATION_APPLIED_AUDIT_LOG_TITLE;
-        case P.rsA.CREATOR_MONETIZATION_TERMS_ACCEPTED:
-            return H.Z.Messages.CREATOR_MONETIZATION_TERMS_ACCEPTED_AUDIT_LOG_TITLE;
-        case P.rsA.AUTO_MODERATION_RULE_CREATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_CREATE;
-        case P.rsA.AUTO_MODERATION_RULE_UPDATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_UPDATE;
-        case P.rsA.AUTO_MODERATION_RULE_DELETE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_DELETE;
-        case P.rsA.ONBOARDING_PROMPT_CREATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_CREATE;
-        case P.rsA.ONBOARDING_PROMPT_UPDATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_UPDATE;
-        case P.rsA.ONBOARDING_PROMPT_DELETE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_DELETE;
-        case P.rsA.ONBOARDING_CREATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_CREATE;
-        case P.rsA.ONBOARDING_UPDATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_UPDATE;
-        case P.rsA.HOME_SETTINGS_CREATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_CREATE;
-        case P.rsA.HOME_SETTINGS_UPDATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_UPDATE;
-        case P.rsA.GUILD_HOME_FEATURE_ITEM:
-            let n = null != e.changes ? e.changes.find((e) => e.key === P.zUn.ENTITY_TYPE) : null;
-            if (null == n) return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_FEATURE_ITEM;
+        case v.rsA.CHANNEL_UPDATE:
+            return G.t.nTYk6O;
+        case v.rsA.CHANNEL_DELETE:
+            return G.t.ynfvkp;
+        case v.rsA.CHANNEL_OVERWRITE_CREATE:
+            return G.t.l5Cu1d;
+        case v.rsA.CHANNEL_OVERWRITE_UPDATE:
+            return G.t.uhtbNT;
+        case v.rsA.CHANNEL_OVERWRITE_DELETE:
+            return G.t['HASt//'];
+        case v.rsA.MEMBER_KICK:
+            return G.t.B5hDZW;
+        case v.rsA.MEMBER_PRUNE:
+            return G.t.qKOZTE;
+        case v.rsA.MEMBER_BAN_ADD:
+            return G.t.XklUm5;
+        case v.rsA.MEMBER_BAN_REMOVE:
+            return G.t.o3Y6HB;
+        case v.rsA.MEMBER_UPDATE:
+            return G.t.pznhLC;
+        case v.rsA.MEMBER_ROLE_UPDATE:
+            return G.t.VngfiY;
+        case v.rsA.MEMBER_MOVE:
+            return G.t.Yt6NkZ;
+        case v.rsA.MEMBER_DISCONNECT:
+            return G.t.K4eCZ2;
+        case v.rsA.BOT_ADD:
+            return G.t.fWvX0N;
+        case v.rsA.ROLE_CREATE:
+            return G.t.UTLTx8;
+        case v.rsA.ROLE_UPDATE:
+            return G.t.NRbN19;
+        case v.rsA.ROLE_DELETE:
+            return G.t['4s63tb'];
+        case v.rsA.INVITE_CREATE:
+            return G.t.YHOXW1;
+        case v.rsA.INVITE_UPDATE:
+            return G.t.ja3kGR;
+        case v.rsA.INVITE_DELETE:
+            return G.t['3n/iWl'];
+        case v.rsA.WEBHOOK_CREATE:
+            return G.t.MhYhio;
+        case v.rsA.WEBHOOK_UPDATE:
+            return G.t['6GTlWF'];
+        case v.rsA.WEBHOOK_DELETE:
+            return G.t.in0VjY;
+        case v.rsA.EMOJI_CREATE:
+            return G.t['7vekRE'];
+        case v.rsA.EMOJI_UPDATE:
+            return G.t.IsCKfn;
+        case v.rsA.EMOJI_DELETE:
+            return G.t.JnUaVF;
+        case v.rsA.STICKER_CREATE:
+            return G.t.DRZifn;
+        case v.rsA.STICKER_UPDATE:
+            return G.t.bhujGR;
+        case v.rsA.STICKER_DELETE:
+            return G.t.rGEP9f;
+        case v.rsA.MESSAGE_DELETE:
+            return G.t['HPkD+P'];
+        case v.rsA.MESSAGE_BULK_DELETE:
+            return G.t['3RIvLC'];
+        case v.rsA.MESSAGE_PIN:
+            return G.t.Yna7Ex;
+        case v.rsA.MESSAGE_UNPIN:
+            return G.t.NCxXUV;
+        case v.rsA.INTEGRATION_CREATE:
+            return G.t.HYvCb2;
+        case v.rsA.INTEGRATION_UPDATE:
+            return G.t.ibCCOT;
+        case v.rsA.INTEGRATION_DELETE:
+            return G.t['8zScWV'];
+        case v.rsA.STAGE_INSTANCE_CREATE:
+            return G.t['n7x/DA'];
+        case v.rsA.STAGE_INSTANCE_UPDATE:
+            return G.t['0hQYU1'];
+        case v.rsA.STAGE_INSTANCE_DELETE:
+            if (null != e.userId) return G.t['Oi/in5'];
+            return G.t['7ZIFm5'];
+        case v.rsA.GUILD_SCHEDULED_EVENT_CREATE:
+            return G.t.S7k52t;
+        case v.rsA.GUILD_SCHEDULED_EVENT_UPDATE:
+            return G.t.ebTK19;
+        case v.rsA.GUILD_SCHEDULED_EVENT_DELETE:
+            return G.t['/ARPKS'];
+        case v.rsA.GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE:
+        case v.rsA.GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE:
+            return G.t['8qCI39'];
+        case v.rsA.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE:
+            return G.t.zYb2dX;
+        case v.rsA.THREAD_CREATE:
+            let n = null != e.changes ? e.changes.find((e) => e.key === v.zUn.TYPE) : null;
+            if (null == n) throw Error('[AuditLog] Could not find type change for thread create');
             switch (n.newValue) {
-                case a.w.MESSAGE:
-                    return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_FEATURE_MESSAGE;
-                case a.w.FORUM_POST:
-                    return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_FEATURE_FORUM_POST;
+                case v.d4z.PRIVATE_THREAD:
+                    return G.t['Br0y5+'];
+                case v.d4z.ANNOUNCEMENT_THREAD:
+                    return G.t['6uaMmJ'];
                 default:
-                    return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_FEATURE_ITEM;
+                    return G.t['2cxQ7O'];
             }
-        case P.rsA.GUILD_HOME_REMOVE_ITEM:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_REMOVE_ITEM;
-        case P.rsA.SOUNDBOARD_SOUND_CREATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_CREATED;
-        case P.rsA.SOUNDBOARD_SOUND_UPDATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_UPDATED;
-        case P.rsA.SOUNDBOARD_SOUND_DELETE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_DELETED;
-        case P.rsA.VOICE_CHANNEL_STATUS_CREATE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_VOICE_CHANNEL_STATUS_CREATED;
-        case P.rsA.VOICE_CHANNEL_STATUS_DELETE:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_VOICE_CHANNEL_STATUS_DELETED;
+        case v.rsA.THREAD_UPDATE:
+            return G.t.PSsy4u;
+        case v.rsA.THREAD_DELETE:
+            return G.t.s3Khn5;
+        case v.rsA.APPLICATION_COMMAND_PERMISSION_UPDATE:
+            return G.t.uzCqBg;
+        case v.rsA.AUTO_MODERATION_BLOCK_MESSAGE:
+            return G.t.NqWv2N;
+        case v.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL:
+            var r;
+            if ((null === (r = e.options) || void 0 === r ? void 0 : r.auto_moderation_rule_trigger_type) === x.fX.USER_PROFILE.toString()) return G.t.YQsjen;
+            return G.t.SD0PwM;
+        case v.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED:
+            return G.t.Vk4Twc;
+        case v.rsA.AUTO_MODERATION_QUARANTINE_USER:
+            return G.t['/W5u5u'];
+        case v.rsA.CREATOR_MONETIZATION_REQUEST_CREATED:
+            return G.t.ONvWys;
+        case v.rsA.CREATOR_MONETIZATION_TERMS_ACCEPTED:
+            return G.t.ryGLk5;
+        case v.rsA.AUTO_MODERATION_RULE_CREATE:
+            return G.t.NKljj4;
+        case v.rsA.AUTO_MODERATION_RULE_UPDATE:
+            return G.t['3wEA9v'];
+        case v.rsA.AUTO_MODERATION_RULE_DELETE:
+            return G.t.umua3t;
+        case v.rsA.ONBOARDING_PROMPT_CREATE:
+            return G.t['/8A1g4'];
+        case v.rsA.ONBOARDING_PROMPT_UPDATE:
+            return G.t.ArIrWF;
+        case v.rsA.ONBOARDING_PROMPT_DELETE:
+            return G.t.IuBTam;
+        case v.rsA.ONBOARDING_CREATE:
+            return G.t.wDaq39;
+        case v.rsA.ONBOARDING_UPDATE:
+            return G.t['yONu/v'];
+        case v.rsA.HOME_SETTINGS_CREATE:
+            return G.t.dSdCjI;
+        case v.rsA.HOME_SETTINGS_UPDATE:
+            return G.t.XHE8qq;
+        case v.rsA.GUILD_HOME_FEATURE_ITEM:
+            let l = null != e.changes ? e.changes.find((e) => e.key === v.zUn.ENTITY_TYPE) : null;
+            if (null == l) return G.t['UZ+U3N'];
+            switch (l.newValue) {
+                case a.w.MESSAGE:
+                    return G.t['PyEa+P'];
+                case a.w.FORUM_POST:
+                    return G.t.hCuAb2;
+                default:
+                    return G.t['UZ+U3N'];
+            }
+        case v.rsA.GUILD_HOME_REMOVE_ITEM:
+            return G.t.kPReur;
+        case v.rsA.SOUNDBOARD_SOUND_CREATE:
+            return G.t['0PD83d'];
+        case v.rsA.SOUNDBOARD_SOUND_UPDATE:
+            return G.t.CM8n19;
+        case v.rsA.SOUNDBOARD_SOUND_DELETE:
+            return G.t['kVz4//'];
+        case v.rsA.VOICE_CHANNEL_STATUS_CREATE:
+            return G.t.MWjnU1;
+        case v.rsA.VOICE_CHANNEL_STATUS_DELETE:
+            return G.t.aS8Krq;
         default:
             return null;
     }
 }
-function eD(e) {
+function eA(e) {
     switch (e) {
-        case Z.zZ.GUILD_FEED_REMOVED:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_REMOVE_CHANNEL;
-        case Z.zZ.ACTIVE_CHANNELS_REMOVED:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ACTIVE_CHANNELS_REMOVE_CHANNEL;
-        case Z.zZ.PINNED:
-            return H.Z.Messages.PINNED_POST;
+        case b.zZ.GUILD_FEED_REMOVED:
+            return G.intl.string(G.t['5G8ZDw']);
+        case b.zZ.ACTIVE_CHANNELS_REMOVED:
+            return G.intl.string(G.t['4YLtzM']);
+        case b.zZ.PINNED:
+            return G.intl.string(G.t['1QLRYW']);
     }
     return null;
 }
-function eL(e) {
+function eT(e) {
     switch (e) {
-        case Z.zZ.GUILD_FEED_REMOVED:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_UNREMOVE_CHANNEL;
-        case Z.zZ.ACTIVE_CHANNELS_REMOVED:
-            return H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ACTIVE_CHANNELS_UNREMOVE_CHANNEL;
-        case Z.zZ.PINNED:
-            return H.Z.Messages.UNPINNED_POST;
+        case b.zZ.GUILD_FEED_REMOVED:
+            return G.intl.string(G.t.S5kuWV);
+        case b.zZ.ACTIVE_CHANNELS_REMOVED:
+            return G.intl.string(G.t['8qpgc3']);
+        case b.zZ.PINNED:
+            return G.intl.string(G.t.CMweGB);
     }
     return null;
 }
-function eS(e, _) {
+function eI(e, t) {
     switch (e) {
-        case P.Plq.CREATE_INSTANT_INVITE:
-            return H.Z.Messages.CREATE_INSTANT_INVITE;
-        case P.Plq.KICK_MEMBERS:
-            return H.Z.Messages.KICK_MEMBERS;
-        case P.Plq.BAN_MEMBERS:
-            return H.Z.Messages.BAN_MEMBERS;
-        case P.Plq.ADMINISTRATOR:
-            return H.Z.Messages.ADMINISTRATOR;
-        case P.Plq.MANAGE_CHANNELS:
-            if (_.targetType === P.KFR.CHANNEL || _.targetType === P.KFR.CHANNEL_OVERWRITE) return H.Z.Messages.MANAGE_CHANNEL;
-            return H.Z.Messages.MANAGE_CHANNELS;
-        case P.Plq.MANAGE_GUILD:
-            return H.Z.Messages.MANAGE_SERVER;
-        case P.Plq.VIEW_GUILD_ANALYTICS:
-            return H.Z.Messages.VIEW_GUILD_ANALYTICS;
-        case P.Plq.VIEW_CREATOR_MONETIZATION_ANALYTICS:
-            return H.Z.Messages.VIEW_CREATOR_MONETIZATION_ANALYTICS;
-        case P.Plq.CHANGE_NICKNAME:
-            return H.Z.Messages.CHANGE_NICKNAME;
-        case P.Plq.MANAGE_NICKNAMES:
-            return H.Z.Messages.MANAGE_NICKNAMES;
-        case P.Plq.MANAGE_ROLES:
-            return H.Z.Messages.MANAGE_ROLES;
-        case P.Plq.MANAGE_WEBHOOKS:
-            return H.Z.Messages.MANAGE_WEBHOOKS;
-        case P.Plq.CREATE_GUILD_EXPRESSIONS:
-            return H.Z.Messages.CREATE_EXPRESSIONS;
-        case P.Plq.MANAGE_GUILD_EXPRESSIONS:
-            return H.Z.Messages.MANAGE_EXPRESSIONS;
-        case P.Plq.VIEW_AUDIT_LOG:
-            return H.Z.Messages.VIEW_AUDIT_LOG;
-        case P.Plq.VIEW_CHANNEL:
-            if (_.targetType === P.KFR.CHANNEL || _.targetType === P.KFR.CHANNEL_OVERWRITE) return H.Z.Messages.VIEW_CHANNEL;
-            return H.Z.Messages.ROLE_PERMISSIONS_VIEW_CHANNEL;
-        case P.Plq.SEND_MESSAGES:
-            return H.Z.Messages.SEND_MESSAGES;
-        case P.Plq.SEND_TTS_MESSAGES:
-            return H.Z.Messages.SEND_TTS_MESSAGES;
-        case P.Plq.USE_APPLICATION_COMMANDS:
-            return H.Z.Messages.USE_APPLICATION_COMMANDS;
-        case P.Plq.MANAGE_MESSAGES:
-            return H.Z.Messages.MANAGE_MESSAGES;
-        case P.Plq.EMBED_LINKS:
-            return H.Z.Messages.EMBED_LINKS;
-        case P.Plq.ATTACH_FILES:
-            return H.Z.Messages.ATTACH_FILES;
-        case P.Plq.READ_MESSAGE_HISTORY:
-            return H.Z.Messages.READ_MESSAGE_HISTORY;
-        case P.Plq.MENTION_EVERYONE:
-            return H.Z.Messages.MENTION_EVERYONE;
-        case P.Plq.USE_EXTERNAL_EMOJIS:
-            return H.Z.Messages.USE_EXTERNAL_EMOJIS;
-        case P.Plq.USE_EXTERNAL_STICKERS:
-            return H.Z.Messages.USE_EXTERNAL_STICKERS;
-        case P.Plq.ADD_REACTIONS:
-            return H.Z.Messages.ADD_REACTIONS;
-        case P.Plq.CONNECT:
-            return H.Z.Messages.CONNECT;
-        case P.Plq.SPEAK:
-            return H.Z.Messages.SPEAK;
-        case P.Plq.MUTE_MEMBERS:
-            return H.Z.Messages.MUTE_MEMBERS;
-        case P.Plq.DEAFEN_MEMBERS:
-            return H.Z.Messages.DEAFEN_MEMBERS;
-        case P.Plq.MOVE_MEMBERS:
-            return H.Z.Messages.MOVE_MEMBERS;
-        case P.Plq.USE_VAD:
-            return H.Z.Messages.USE_VAD;
-        case P.Plq.PRIORITY_SPEAKER:
-            return H.Z.Messages.PRIORITY_SPEAKER;
-        case P.Plq.STREAM:
-            return H.Z.Messages.VIDEO;
-        case P.Plq.REQUEST_TO_SPEAK:
-            return H.Z.Messages.REQUEST_TO_SPEAK;
-        case P.Plq.CREATE_EVENTS:
-            return H.Z.Messages.CREATE_EVENTS;
-        case P.Plq.MANAGE_EVENTS:
-            return H.Z.Messages.MANAGE_EVENTS;
-        case P.Plq.CREATE_PUBLIC_THREADS:
-            return H.Z.Messages.CREATE_PUBLIC_THREADS;
-        case P.Plq.CREATE_PRIVATE_THREADS:
-            return H.Z.Messages.CREATE_PRIVATE_THREADS;
-        case P.Plq.SEND_MESSAGES_IN_THREADS:
-            return H.Z.Messages.SEND_MESSAGES_IN_THREADS;
-        case P.Plq.MANAGE_THREADS:
-            return H.Z.Messages.MANAGE_THREADS;
-        case P.Plq.MODERATE_MEMBERS:
-            return H.Z.Messages.MODERATE_MEMBER;
-        case P.Plq.USE_CLYDE_AI:
-            return H.Z.Messages.ROLE_PERMISSIONS_USE_CLYDE_AI;
-        case P.Plq.SET_VOICE_CHANNEL_STATUS:
-            return H.Z.Messages.VOICE_CHANNEL_STATUS_PERMISSION_TITLE;
-        case P.Plq.SEND_POLLS:
-            return H.Z.Messages.ROLE_PERMISSIONS_SEND_POLLS;
-        case P.Plq.USE_EXTERNAL_APPS:
-            return H.Z.Messages.ROLE_PERMISSIONS_USE_EXTERNAL_APPS;
+        case v.Plq.CREATE_INSTANT_INVITE:
+            return G.intl.string(G.t.zJrgTE);
+        case v.Plq.KICK_MEMBERS:
+            return G.intl.string(G.t.pBNv6u);
+        case v.Plq.BAN_MEMBERS:
+            return G.intl.string(G.t.oTBA7O);
+        case v.Plq.ADMINISTRATOR:
+            return G.intl.string(G.t.PGvZqa);
+        case v.Plq.MANAGE_CHANNELS:
+            if (t.targetType === v.KFR.CHANNEL || t.targetType === v.KFR.CHANNEL_OVERWRITE) return G.intl.string(G.t.nAw15O);
+            return G.intl.string(G.t['9qLtWl']);
+        case v.Plq.MANAGE_GUILD:
+            return G.intl.string(G.t.QZRcfH);
+        case v.Plq.VIEW_GUILD_ANALYTICS:
+            return G.intl.string(G.t.rQJBEx);
+        case v.Plq.VIEW_CREATOR_MONETIZATION_ANALYTICS:
+            return G.intl.string(G.t['0lTLTk']);
+        case v.Plq.CHANGE_NICKNAME:
+            return G.intl.string(G.t.dilOFx);
+        case v.Plq.MANAGE_NICKNAMES:
+            return G.intl.string(G.t['t+Ct5+']);
+        case v.Plq.MANAGE_ROLES:
+            return G.intl.string(G.t['C8d+oK']);
+        case v.Plq.MANAGE_WEBHOOKS:
+            return G.intl.string(G.t['/ADKmJ']);
+        case v.Plq.CREATE_GUILD_EXPRESSIONS:
+            return G.intl.string(G.t.HarVuL);
+        case v.Plq.MANAGE_GUILD_EXPRESSIONS:
+            return G.intl.string(G.t.bbuXIi);
+        case v.Plq.VIEW_AUDIT_LOG:
+            return G.intl.string(G.t.fZgLpK);
+        case v.Plq.VIEW_CHANNEL:
+            if (t.targetType === v.KFR.CHANNEL || t.targetType === v.KFR.CHANNEL_OVERWRITE) return G.intl.string(G.t['W/A4Qk']);
+            return G.intl.string(G.t.uV83ys);
+        case v.Plq.SEND_MESSAGES:
+            return G.intl.string(G.t.T32rkJ);
+        case v.Plq.SEND_TTS_MESSAGES:
+            return G.intl.string(G.t.Mg7bkp);
+        case v.Plq.USE_APPLICATION_COMMANDS:
+            return G.intl.string(G.t.shbR1d);
+        case v.Plq.MANAGE_MESSAGES:
+            return G.intl.string(G.t['6lU9xM']);
+        case v.Plq.EMBED_LINKS:
+            return G.intl.string(G.t['969dEB']);
+        case v.Plq.ATTACH_FILES:
+            return G.intl.string(G.t['3AS4UF']);
+        case v.Plq.READ_MESSAGE_HISTORY:
+            return G.intl.string(G.t.l9ufaW);
+        case v.Plq.MENTION_EVERYONE:
+            return G.intl.string(G.t.Y78KGB);
+        case v.Plq.USE_EXTERNAL_EMOJIS:
+            return G.intl.string(G.t.BpBGZW);
+        case v.Plq.USE_EXTERNAL_STICKERS:
+            return G.intl.string(G.t['UeRs+f']);
+        case v.Plq.ADD_REACTIONS:
+            return G.intl.string(G.t.yEoJAg);
+        case v.Plq.CONNECT:
+            return G.intl.string(G.t.S0W8Z2);
+        case v.Plq.SPEAK:
+            return G.intl.string(G.t['8w1tIS']);
+        case v.Plq.MUTE_MEMBERS:
+            return G.intl.string(G.t['8EI309']);
+        case v.Plq.DEAFEN_MEMBERS:
+            return G.intl.string(G.t['9L47Fh']);
+        case v.Plq.MOVE_MEMBERS:
+            return G.intl.string(G.t.YtjJPT);
+        case v.Plq.USE_VAD:
+            return G.intl.string(G.t['08zAV1']);
+        case v.Plq.PRIORITY_SPEAKER:
+            return G.intl.string(G.t.BVK71t);
+        case v.Plq.STREAM:
+            return G.intl.string(G.t.FlNoSU);
+        case v.Plq.REQUEST_TO_SPEAK:
+            return G.intl.string(G.t['5kicT0']);
+        case v.Plq.CREATE_EVENTS:
+            return G.intl.string(G.t.qyjZub);
+        case v.Plq.MANAGE_EVENTS:
+            return G.intl.string(G.t.HIgA5e);
+        case v.Plq.CREATE_PUBLIC_THREADS:
+            return G.intl.string(G.t['25rKnZ']);
+        case v.Plq.CREATE_PRIVATE_THREADS:
+            return G.intl.string(G.t.QwbTSU);
+        case v.Plq.SEND_MESSAGES_IN_THREADS:
+            return G.intl.string(G.t.fTE74u);
+        case v.Plq.MANAGE_THREADS:
+            return G.intl.string(G.t.kEqgr6);
+        case v.Plq.MODERATE_MEMBERS:
+            return G.intl.string(G.t['+RL6p6']);
+        case v.Plq.USE_CLYDE_AI:
+            return G.intl.string(G.t['8eeEZm']);
+        case v.Plq.SET_VOICE_CHANNEL_STATUS:
+            return G.intl.string(G.t.VBwkUV);
+        case v.Plq.SEND_POLLS:
+            return G.intl.string(G.t.UMQ7W1);
+        case v.Plq.USE_EXTERNAL_APPS:
+            return G.intl.string(G.t.TtA5rK);
     }
     return null;
 }
-function eu(e, _) {
-    let E = [];
+function eg(e, t) {
+    let n = [];
     return (
         e.forEach((e) => {
-            let s = (function (e, _) {
+            let r = (function (e, t) {
                     switch (e.targetType) {
-                        case P.KFR.GUILD:
-                        case P.KFR.GUILD_HOME:
-                            return _;
-                        case P.KFR.CHANNEL:
-                        case P.KFR.CHANNEL_OVERWRITE:
-                            return ed(
+                        case v.KFR.GUILD:
+                        case v.KFR.GUILD_HOME:
+                            return t;
+                        case v.KFR.CHANNEL:
+                        case v.KFR.CHANNEL_OVERWRITE:
+                            return eO(
                                 e,
-                                P.zUn.NAME,
-                                (e) => d.Z.getChannel(e),
-                                (e) => (0, i.F6)(e, R.default, M.Z, !0)
+                                v.zUn.NAME,
+                                (e) => S.Z.getChannel(e),
+                                (e) => (0, _.F6)(e, U.default, D.Z, !0)
                             );
-                        case P.KFR.USER:
-                            return ed(
+                        case v.KFR.USER:
+                            return eO(
                                 e,
-                                P.zUn.NICK,
-                                (e) => R.default.getUser(e),
+                                v.zUn.NICK,
+                                (e) => U.default.getUser(e),
                                 (e) => e
                             );
-                        case P.KFR.ROLE:
-                            return ed(
+                        case v.KFR.ROLE:
+                            return eO(
                                 e,
-                                P.zUn.NAME,
-                                (e) => G.Z.getRole(_.id, e),
+                                v.zUn.NAME,
+                                (e) => p.Z.getRole(t.id, e),
                                 (e) => e.name
                             );
-                        case P.KFR.ONBOARDING_PROMPT:
-                            let E = ed(
+                        case v.KFR.ONBOARDING_PROMPT:
+                            let n = eO(
                                 e,
-                                P.zUn.ID,
-                                (e) => S.Z.getOnboardingPrompt(e),
+                                v.zUn.ID,
+                                (e) => g.Z.getOnboardingPrompt(e),
                                 (e) => e.title
                             );
-                            return null != E ? E : H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_EMPTY_VALUE;
-                        case P.KFR.GUILD_ONBOARDING:
-                            return _;
-                        case P.KFR.INVITE:
-                            return ed(e, P.zUn.CODE, P.VqG);
-                        case P.KFR.INTEGRATION:
-                            return ed(
+                            return null == n || '' === n ? G.intl.string(G.t.ZNQyiY) : n;
+                        case v.KFR.GUILD_ONBOARDING:
+                            return t;
+                        case v.KFR.INVITE:
+                            return eO(e, v.zUn.CODE, v.VqG);
+                        case v.KFR.INTEGRATION:
+                            return eO(
                                 e,
-                                P.zUn.TYPE,
-                                (e) => m.Z.integrations.find((_) => _.id === e),
+                                v.zUn.TYPE,
+                                (e) => m.Z.integrations.find((t) => t.id === e),
                                 (e) => e.name
                             );
-                        case P.KFR.WEBHOOK:
-                            return ed(
+                        case v.KFR.WEBHOOK:
+                            return eO(
                                 e,
-                                P.zUn.NAME,
-                                (e) => m.Z.webhooks.find((_) => _.id === e),
+                                v.zUn.NAME,
+                                (e) => m.Z.webhooks.find((t) => t.id === e),
                                 (e) => e.name
                             );
-                        case P.KFR.EMOJI:
-                            return ed(
+                        case v.KFR.EMOJI:
+                            return eO(
                                 e,
-                                P.zUn.NAME,
-                                (e) => D.ZP.getGuildEmoji(_.id).find((_) => _.id === e),
+                                v.zUn.NAME,
+                                (e) => T.ZP.getGuildEmoji(t.id).find((t) => t.id === e),
                                 (e) => e.name
                             );
-                        case P.KFR.STICKER:
-                            return ed(
+                        case v.KFR.STICKER:
+                            return eO(
                                 e,
-                                P.zUn.NAME,
-                                (e) => O.Z.getStickerById(e),
+                                v.zUn.NAME,
+                                (e) => R.Z.getStickerById(e),
                                 (e) => e.name
                             );
-                        case P.KFR.STAGE_INSTANCE:
-                            return ed(
+                        case v.KFR.STAGE_INSTANCE:
+                            return eO(
                                 e,
-                                P.zUn.TOPIC,
+                                v.zUn.TOPIC,
                                 (e) => {
-                                    var E;
-                                    return null === (E = Object.values(c.Z.getStageInstancesByGuild(_.id))) || void 0 === E ? void 0 : E.find((_) => _.id === e);
+                                    var n;
+                                    return null === (n = Object.values(f.Z.getStageInstancesByGuild(t.id))) || void 0 === n ? void 0 : n.find((t) => t.id === e);
                                 },
                                 (e) => e.topic
                             );
-                        case P.KFR.GUILD_SCHEDULED_EVENT:
-                        case P.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION:
-                            return ed(
+                        case v.KFR.GUILD_SCHEDULED_EVENT:
+                        case v.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION:
+                            return eO(
                                 e,
-                                P.zUn.NAME,
-                                (e) => m.Z.guildScheduledEvents.find((_) => _.id === e),
+                                v.zUn.NAME,
+                                (e) => m.Z.guildScheduledEvents.find((t) => t.id === e),
                                 (e) => e.name
                             );
-                        case P.KFR.THREAD:
-                            return ed(
+                        case v.KFR.THREAD:
+                            return eO(
                                 e,
-                                P.zUn.NAME,
-                                (e) => m.Z.threads.find((_) => _.id === e),
+                                v.zUn.NAME,
+                                (e) => m.Z.threads.find((t) => t.id === e),
                                 (e) => e.name
                             );
-                        case P.KFR.APPLICATION_COMMAND:
+                        case v.KFR.APPLICATION_COMMAND:
                             if (e.targetId === e.options.application_id) {
-                                let _ = m.Z.integrations.find((_) => _.application_id === e.targetId);
-                                if (null != _) return _.name;
+                                let t = m.Z.integrations.find((t) => t.application_id === e.targetId);
+                                if (null != t) return t.name;
                                 return e.targetId;
                             }
-                            return ed(
+                            return eO(
                                 e,
-                                P.zUn.NAME,
-                                (e) => m.Z.applicationCommands.find((_) => _.id === e),
+                                v.zUn.NAME,
+                                (e) => m.Z.applicationCommands.find((t) => t.id === e),
                                 (e) => {
-                                    let _ = null != e.name_localized && '' !== e.name_localized ? e.name_localized : e.name;
-                                    return e.type === A.yU.CHAT ? '/\u2060'.concat(_) : _;
+                                    let t = null != e.name_localized && '' !== e.name_localized ? e.name_localized : e.name;
+                                    return e.type === d.yU.CHAT ? '/\u2060'.concat(t) : t;
                                 }
                             );
-                        case P.KFR.AUTO_MODERATION_RULE:
-                            return ed(
+                        case v.KFR.AUTO_MODERATION_RULE:
+                            return eO(
                                 e,
-                                P.zUn.NAME,
-                                (e) => m.Z.automodRules.find((_) => _.id === e),
+                                v.zUn.NAME,
+                                (e) => m.Z.automodRules.find((t) => t.id === e),
                                 (e) => e.name
                             );
-                        case P.KFR.GUILD_SOUNDBOARD:
-                            return ed(e, P.zUn.NAME, P.VqG);
-                        case P.KFR.HOME_SETTINGS:
-                            return ed(
+                        case v.KFR.GUILD_SOUNDBOARD:
+                            return eO(e, v.zUn.NAME, v.VqG);
+                        case v.KFR.HOME_SETTINGS:
+                            return eO(
                                 e,
-                                P.zUn.GUILD_ID,
-                                (e) => u.Z.getSettings(e),
-                                () => H.Z.Messages.SERVER_GUIDE,
-                                _.id
+                                v.zUn.GUILD_ID,
+                                (e) => N.Z.getSettings(e),
+                                () => G.intl.string(G.t.VbpLyc),
+                                t.id
                             );
-                        case P.KFR.VOICE_CHANNEL_STATUS:
-                            return ed(
+                        case v.KFR.VOICE_CHANNEL_STATUS:
+                            return eO(
                                 e,
-                                P.zUn.STATUS,
-                                (e) => d.Z.getChannel(e),
-                                (e) => (0, i.F6)(e, R.default, M.Z, !0)
+                                v.zUn.STATUS,
+                                (e) => S.Z.getChannel(e),
+                                (e) => (0, _.F6)(e, U.default, D.Z, !0)
                             );
                         default:
                             return F.warn('Unknown targetType for log', e), null;
                     }
-                })(e, _),
-                t = R.default.getUser(e.userId);
-            if (null != s || !![P.rsA.MEMBER_PRUNE, P.rsA.MEMBER_DISCONNECT, P.rsA.MEMBER_MOVE, P.rsA.CREATOR_MONETIZATION_REQUEST_CREATED, P.rsA.CREATOR_MONETIZATION_TERMS_ACCEPTED].includes(e.action)) {
+                })(e, t),
+                i = U.default.getUser(e.userId);
+            if (null != r || !![v.rsA.MEMBER_PRUNE, v.rsA.MEMBER_DISCONNECT, v.rsA.MEMBER_MOVE, v.rsA.CREATOR_MONETIZATION_REQUEST_CREATED, v.rsA.CREATOR_MONETIZATION_TERMS_ACCEPTED].includes(e.action)) {
                 if (
                     null !=
-                    (e = (e = (e = e.set('user', t)).set('target', s)).set(
+                    (e = (e = (e = e.set('user', i)).set('target', r)).set(
                         'options',
                         (function (e) {
                             if (null != e.options) {
-                                let E = { ...e.options };
+                                let n = { ...e.options };
                                 switch (e.options.type) {
-                                    case P.jwA.USER:
-                                        E.subtarget = eG(
+                                    case v.jwA.USER:
+                                        n.subtarget = eS(
                                             e.options.id,
-                                            (e) => R.default.getUser(e),
+                                            (e) => U.default.getUser(e),
                                             (e) => e.tag
                                         );
                                         break;
-                                    case P.jwA.ROLE:
-                                        E.subtarget = eG(e.options.role_name, P.VqG);
+                                    case v.jwA.ROLE:
+                                        n.subtarget = eS(e.options.role_name, v.VqG);
                                 }
                                 if (
                                     (null != e.options.channel_id &&
-                                        (E.channel = ed(
+                                        (n.channel = eO(
                                             e,
                                             '',
-                                            (e) => d.Z.getChannel(e),
+                                            (e) => S.Z.getChannel(e),
                                             (e) => e,
                                             e.options.channel_id
                                         )),
-                                    null != e.options.members_removed && 0 !== e.options.members_removed && (E.count = e.options.members_removed),
+                                    null != e.options.members_removed && 0 !== e.options.members_removed && (n.count = e.options.members_removed),
                                     null != e.options.event_exception_id)
                                 ) {
-                                    var _;
-                                    let s = m.Z.guildScheduledEvents.find((_) => _.id === e.targetId),
-                                        n = null == s ? void 0 : s.guild_scheduled_event_exceptions.find((_) => _.event_exception_id === e.options.event_exception_id);
-                                    E.subtarget = (0, g.vc)(r()(h.default.extractTimestamp(null !== (_ = null == n ? void 0 : n.event_exception_id) && void 0 !== _ ? _ : '0')), 'LL');
+                                    var t;
+                                    let r = m.Z.guildScheduledEvents.find((t) => t.id === e.targetId),
+                                        l = null == r ? void 0 : r.guild_scheduled_event_exceptions.find((t) => t.event_exception_id === e.options.event_exception_id);
+                                    n.subtarget = (0, h.vc)(s()(M.default.extractTimestamp(null !== (t = null == l ? void 0 : l.event_exception_id) && void 0 !== t ? t : '0')), 'LL');
                                 }
-                                return E;
+                                return n;
                             }
                             return e.options;
                         })(e)
                     )).changes
                 ) {
-                    let E = [];
-                    e.changes.forEach((s) => {
-                        let t = (function (e, _, E) {
-                            if (_.action === P.rsA.APPLICATION_COMMAND_PERMISSION_UPDATE) {
-                                let _ = e.newValue || e.oldValue;
-                                switch (_.type) {
-                                    case P.ecB.ROLE:
-                                        e.subtarget = eG(
-                                            _.id,
-                                            (e) => G.Z.getRole(E.id, e),
+                    let n = [];
+                    e.changes.forEach((r) => {
+                        let i = (function (e, t, n) {
+                            if (t.action === v.rsA.APPLICATION_COMMAND_PERMISSION_UPDATE) {
+                                let t = e.newValue || e.oldValue;
+                                switch (t.type) {
+                                    case v.ecB.ROLE:
+                                        e.subtarget = eS(
+                                            t.id,
+                                            (e) => p.Z.getRole(n.id, e),
                                             (e) => e.name
                                         );
                                         break;
-                                    case P.ecB.USER:
-                                        e.subtarget = eG(
-                                            _.id,
-                                            (e) => R.default.getUser(e),
+                                    case v.ecB.USER:
+                                        e.subtarget = eS(
+                                            t.id,
+                                            (e) => U.default.getUser(e),
                                             (e) => e.tag
                                         );
                                         break;
-                                    case P.ecB.CHANNEL:
-                                        _.id === n()(E.id).subtract(1).toString()
-                                            ? (e.subtarget = H.Z.Messages.ALL_CHANNELS)
-                                            : (e.subtarget = eG(
-                                                  _.id,
-                                                  (e) => d.Z.getChannel(e),
-                                                  (e) => (0, i.F6)(e, R.default, M.Z, !0)
+                                    case v.ecB.CHANNEL:
+                                        t.id === l()(n.id).subtract(1).toString()
+                                            ? (e.subtarget = G.intl.string(G.t.MSYhgo))
+                                            : (e.subtarget = eS(
+                                                  t.id,
+                                                  (e) => S.Z.getChannel(e),
+                                                  (e) => (0, _.F6)(e, U.default, D.Z, !0)
                                               ));
                                 }
                                 return e;
                             }
                             switch (e.key) {
-                                case P.zUn.OWNER_ID:
-                                    return eU(e, (e) => R.default.getUser(e));
-                                case P.zUn.CHANNEL_ID:
-                                case P.zUn.AFK_CHANNEL_ID:
-                                case P.zUn.SYSTEM_CHANNEL_ID:
-                                case P.zUn.RULES_CHANNEL_ID:
-                                case P.zUn.PUBLIC_UPDATES_CHANNEL_ID:
-                                    return eU(
+                                case v.zUn.OWNER_ID:
+                                    return eR(e, (e) => U.default.getUser(e));
+                                case v.zUn.CHANNEL_ID:
+                                case v.zUn.AFK_CHANNEL_ID:
+                                case v.zUn.SYSTEM_CHANNEL_ID:
+                                case v.zUn.RULES_CHANNEL_ID:
+                                case v.zUn.PUBLIC_UPDATES_CHANNEL_ID:
+                                    return eR(
                                         e,
-                                        (e) => d.Z.getChannel(e),
-                                        (e) => (0, i.F6)(e, R.default, M.Z, !0)
+                                        (e) => S.Z.getChannel(e),
+                                        (e) => (0, _.F6)(e, U.default, D.Z, !0)
                                     );
-                                case P.zUn.AFK_TIMEOUT:
-                                    return eU(e, (e) => e / 60);
-                                case P.zUn.BITRATE:
-                                    return eU(e, (e) => e / 1000);
-                                case P.zUn.COLOR:
-                                    return eU(e, (e) => (0, l.Rf)(e).toUpperCase());
-                                case P.zUn.THEME_COLORS:
-                                    return eU(e, (e) => ''.concat((0, l.Rf)(e[0]).toUpperCase(), ', ').concat((0, l.Rf)(e[1]).toUpperCase()));
-                                case P.zUn.MAX_AGE:
-                                    return eU(e, (e) => {
-                                        let _ = p.ZP.getMaxAgeOptions.find((_) => {
-                                            let { value: E } = _;
-                                            return e === E;
+                                case v.zUn.AFK_TIMEOUT:
+                                    return eR(e, (e) => e / 60);
+                                case v.zUn.BITRATE:
+                                    return eR(e, (e) => e / 1000);
+                                case v.zUn.COLOR:
+                                    return eR(e, (e) => (0, u.Rf)(e).toUpperCase());
+                                case v.zUn.THEME_COLORS:
+                                    return eR(e, (e) => ''.concat((0, u.Rf)(e[0]).toUpperCase(), ', ').concat((0, u.Rf)(e[1]).toUpperCase()));
+                                case v.zUn.MAX_AGE:
+                                    return eR(e, (e) => {
+                                        let t = C.ZP.getMaxAgeOptions.find((t) => {
+                                            let { value: n } = t;
+                                            return e === n;
                                         });
-                                        return _ ? _.label : e;
+                                        return t ? t.label : e;
                                     });
-                                case P.zUn.PERMISSIONS: {
-                                    let _ = [],
-                                        { added: E, removed: s } = ec(e.oldValue, e.newValue);
-                                    if (E.length > 0) {
-                                        let e = new U.ms(P.zUn.PERMISSIONS_GRANTED, null, E);
-                                        _.push(e);
+                                case v.zUn.PERMISSIONS: {
+                                    let t = [],
+                                        { added: n, removed: r } = eN(e.oldValue, e.newValue);
+                                    if (n.length > 0) {
+                                        let e = new O.ms(v.zUn.PERMISSIONS_GRANTED, null, n);
+                                        t.push(e);
                                     }
-                                    if (s.length > 0) {
-                                        let e = new U.ms(P.zUn.PERMISSIONS_DENIED, null, s);
-                                        _.push(e);
+                                    if (r.length > 0) {
+                                        let e = new O.ms(v.zUn.PERMISSIONS_DENIED, null, r);
+                                        t.push(e);
                                     }
-                                    return _;
+                                    return t;
                                 }
-                                case P.zUn.PERMISSIONS_GRANTED:
-                                case P.zUn.PERMISSIONS_DENIED: {
-                                    let _ = [],
-                                        { added: E, removed: s } = ec(e.oldValue, e.newValue);
-                                    if (E.length > 0) {
-                                        let s = new U.ms(e.key, null, E);
-                                        _.push(s);
+                                case v.zUn.PERMISSIONS_GRANTED:
+                                case v.zUn.PERMISSIONS_DENIED: {
+                                    let t = [],
+                                        { added: n, removed: r } = eN(e.oldValue, e.newValue);
+                                    if (n.length > 0) {
+                                        let r = new O.ms(e.key, null, n);
+                                        t.push(r);
                                     }
-                                    if (s.length > 0) {
-                                        let e = new U.ms(P.zUn.PERMISSIONS_RESET, s, s);
-                                        _.push(e);
+                                    if (r.length > 0) {
+                                        let e = new O.ms(v.zUn.PERMISSIONS_RESET, r, r);
+                                        t.push(e);
                                     }
-                                    return _;
+                                    return t;
                                 }
-                                case P.zUn.FLAGS: {
-                                    let _ = [],
-                                        { added: E, removed: s } = (function (e, _) {
-                                            let E = 'number' == typeof e ? e : 0,
-                                                s = 'number' == typeof _ ? _ : 0,
-                                                n = C.Ge(s, E),
-                                                t = C.Ge(E, s),
-                                                r = [],
+                                case v.zUn.FLAGS: {
+                                    let t = [],
+                                        { added: n, removed: r } = (function (e, t) {
+                                            let n = 'number' == typeof e ? e : 0,
+                                                r = 'number' == typeof t ? t : 0,
+                                                l = L.Ge(r, n),
+                                                i = L.Ge(n, r),
+                                                s = [],
                                                 a = [];
-                                            for (let e in Z.zZ) {
-                                                let _ = Z.zZ[e];
-                                                C.yE(n, _) && r.push(_), C.yE(t, _) && a.push(_);
+                                            for (let e in b.zZ) {
+                                                let t = b.zZ[e];
+                                                L.yE(l, t) && s.push(t), L.yE(i, t) && a.push(t);
                                             }
                                             return {
-                                                added: r,
+                                                added: s,
                                                 removed: a
                                             };
                                         })(e.oldValue, e.newValue);
-                                    if (E.length > 0) {
-                                        let s = new U.ms(e.key, null, E);
-                                        _.push(s);
+                                    if (n.length > 0) {
+                                        let r = new O.ms(e.key, null, n);
+                                        t.push(r);
                                     }
-                                    if (s.length > 0) {
-                                        let E = new U.ms(e.key, s, null);
-                                        _.push(E);
+                                    if (r.length > 0) {
+                                        let n = new O.ms(e.key, r, null);
+                                        t.push(n);
                                     }
-                                    return _;
+                                    return t;
                                 }
-                                case P.zUn.PREFERRED_LOCALE:
-                                    return eU(e, (e) => {
-                                        let _ = H.Z.getAvailableLocales().find((_) => _.value === e);
-                                        return null != _ ? _.name : null;
+                                case v.zUn.PREFERRED_LOCALE:
+                                    return eR(e, (e) => {
+                                        let t = (0, G.getAvailableLocales)().find((t) => t.value === e);
+                                        return null != t ? t.name : null;
                                     });
-                                case P.zUn.VIDEO_QUALITY_MODE:
-                                    return eU(e, (e) => (e === P.Ucd.FULL ? H.Z.Messages.VIDEO_QUALITY_MODE_FULL : H.Z.Messages.VIDEO_QUALITY_MODE_AUTO));
-                                case P.zUn.SYSTEM_CHANNEL_FLAGS:
+                                case v.zUn.VIDEO_QUALITY_MODE:
+                                    return eR(e, (e) => (e === v.Ucd.FULL ? G.intl.string(G.t['7jOoJC']) : G.intl.string(G.t.jjKYpq)));
+                                case v.zUn.SYSTEM_CHANNEL_FLAGS:
                                     return (function (e) {
-                                        let _ = {
-                                                [P.xmn.SUPPRESS_JOIN_NOTIFICATIONS]: P.zUn.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS,
-                                                [P.xmn.SUPPRESS_PREMIUM_SUBSCRIPTIONS]: P.zUn.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS,
-                                                [P.xmn.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS]: P.zUn.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS,
-                                                [P.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES]: P.zUn.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES
+                                        let t = {
+                                                [v.xmn.SUPPRESS_JOIN_NOTIFICATIONS]: v.zUn.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS,
+                                                [v.xmn.SUPPRESS_PREMIUM_SUBSCRIPTIONS]: v.zUn.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS,
+                                                [v.xmn.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS]: v.zUn.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS,
+                                                [v.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES]: v.zUn.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES
                                             },
-                                            E = [];
+                                            n = [];
                                         return (
-                                            Object.values(P.xmn).forEach((s) => {
-                                                let n = (e.oldValue & s) === s,
-                                                    t = (e.newValue & s) === s;
-                                                if (n === t) return;
-                                                let r = new U.ms(_[s], !n, !t);
-                                                E.push(r);
+                                            Object.values(v.xmn).forEach((r) => {
+                                                let l = (e.oldValue & r) === r,
+                                                    i = (e.newValue & r) === r;
+                                                if (l === i) return;
+                                                let s = new O.ms(t[r], !l, !i);
+                                                n.push(s);
                                             }),
-                                            E
+                                            n
                                         );
                                     })(e);
-                                case P.zUn.AUTO_MODERATION_ACTIONS:
-                                    if (_.targetType === P.KFR.AUTO_MODERATION_RULE)
-                                        return eU(
+                                case v.zUn.AUTO_MODERATION_ACTIONS:
+                                    if (t.targetType === v.KFR.AUTO_MODERATION_RULE)
+                                        return eR(
                                             e,
                                             (e) => e.map((e) => e.type),
-                                            (e) => e.map(L.ZF).join(', ')
+                                            (e) => e.map(I.ZF).join(', ')
                                         );
                                     break;
-                                case P.zUn.AUTO_MODERATION_EVENT_TYPE:
-                                    if (_.targetType === P.KFR.AUTO_MODERATION_RULE) return eU(e, L.YN);
+                                case v.zUn.AUTO_MODERATION_EVENT_TYPE:
+                                    if (t.targetType === v.KFR.AUTO_MODERATION_RULE) return eR(e, I.YN);
                                     break;
-                                case P.zUn.AUTO_MODERATION_TRIGGER_TYPE:
-                                    if (_.targetType === P.KFR.AUTO_MODERATION_RULE) return eU(e, L.Ar);
+                                case v.zUn.AUTO_MODERATION_TRIGGER_TYPE:
+                                    if (t.targetType === v.KFR.AUTO_MODERATION_RULE) return eR(e, I.Ar);
                                     break;
-                                case P.zUn.AUTO_MODERATION_TRIGGER_METADATA:
-                                    if (_.targetType === P.KFR.AUTO_MODERATION_RULE)
-                                        return eU(e, (e) => {
-                                            if (null != e && 'object' == typeof e) return null != e.keyword_filter && Array.isArray(e.keyword_filter) ? H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_TRIGGER_METADATA_KEYWORDS_UPDATE.plainFormat({ newValue: e.keyword_filter.map((e) => "'".concat(e, "'")).join(', ') }) : JSON.stringify(e);
+                                case v.zUn.AUTO_MODERATION_TRIGGER_METADATA:
+                                    if (t.targetType === v.KFR.AUTO_MODERATION_RULE)
+                                        return eR(e, (e) => {
+                                            if (null != e && 'object' == typeof e) return null != e.keyword_filter && Array.isArray(e.keyword_filter) ? G.intl.formatToMarkdownString(G.t.y91UXV, { newValue: e.keyword_filter.map((e) => "'".concat(e, "'")).join(', ') }) : JSON.stringify(e);
                                             return e;
                                         });
                                     break;
-                                case P.zUn.AUTO_MODERATION_ADD_KEYWORDS:
-                                case P.zUn.AUTO_MODERATION_REMOVE_KEYWORDS:
-                                case P.zUn.AUTO_MODERATION_ADD_REGEX_PATTERNS:
-                                case P.zUn.AUTO_MODERATION_REMOVE_REGEX_PATTERNS:
-                                case P.zUn.AUTO_MODERATION_ADD_ALLOW_LIST:
-                                case P.zUn.AUTO_MODERATION_REMOVE_ALLOW_LIST:
-                                    if (_.targetType === P.KFR.AUTO_MODERATION_RULE) return eU(e, (e) => (null != e && Array.isArray(e) ? e.map((e) => "'".concat(e, "'")).join(', ') : JSON.stringify(e)));
+                                case v.zUn.AUTO_MODERATION_ADD_KEYWORDS:
+                                case v.zUn.AUTO_MODERATION_REMOVE_KEYWORDS:
+                                case v.zUn.AUTO_MODERATION_ADD_REGEX_PATTERNS:
+                                case v.zUn.AUTO_MODERATION_REMOVE_REGEX_PATTERNS:
+                                case v.zUn.AUTO_MODERATION_ADD_ALLOW_LIST:
+                                case v.zUn.AUTO_MODERATION_REMOVE_ALLOW_LIST:
+                                    if (t.targetType === v.KFR.AUTO_MODERATION_RULE) return eR(e, (e) => (null != e && Array.isArray(e) ? e.map((e) => "'".concat(e, "'")).join(', ') : JSON.stringify(e)));
                                     break;
-                                case P.zUn.AUTO_MODERATION_EXEMPT_CHANNELS:
-                                    if (_.targetType === P.KFR.AUTO_MODERATION_RULE)
-                                        return eU(
+                                case v.zUn.AUTO_MODERATION_EXEMPT_CHANNELS:
+                                    if (t.targetType === v.KFR.AUTO_MODERATION_RULE)
+                                        return eR(
                                             e,
                                             (e) =>
                                                 e
-                                                    .map(d.Z.getChannel)
+                                                    .map(S.Z.getChannel)
                                                     .filter((e) => null != e)
-                                                    .map((e) => (0, i.F6)(e, R.default, M.Z, !0)),
-                                            (e) => (null != e && e.length > 0 ? e.join(', ') : H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_NONE)
+                                                    .map((e) => (0, _.F6)(e, U.default, D.Z, !0)),
+                                            (e) => (null != e && e.length > 0 ? e.join(', ') : G.intl.string(G.t['K/EdV1']))
                                         );
                                     break;
-                                case P.zUn.AUTO_MODERATION_EXEMPT_ROLES:
-                                    if (_.targetType === P.KFR.AUTO_MODERATION_RULE)
-                                        return eU(
+                                case v.zUn.AUTO_MODERATION_EXEMPT_ROLES:
+                                    if (t.targetType === v.KFR.AUTO_MODERATION_RULE)
+                                        return eR(
                                             e,
                                             (e) =>
                                                 e
-                                                    .map((e) => G.Z.getRole(E.id, e))
+                                                    .map((e) => p.Z.getRole(n.id, e))
                                                     .filter((e) => null != e)
                                                     .map((e) => e.name),
-                                            (e) => (null != e && e.length > 0 ? e.join(', ') : H.Z.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_NONE)
+                                            (e) => (null != e && e.length > 0 ? e.join(', ') : G.intl.string(G.t['K/EdV1']))
                                         );
                                     break;
-                                case P.zUn.AVAILABLE_TAGS:
+                                case v.zUn.AVAILABLE_TAGS:
                                     return (function (e) {
-                                        let { oldValue: _, newValue: E } = e,
-                                            s = Array.isArray(_) ? _ : [],
-                                            n = Array.isArray(E) ? E : [];
-                                        if (0 === s.length && 0 === n.length) return e;
-                                        let t = {},
-                                            r = {};
+                                        let { oldValue: t, newValue: n } = e,
+                                            r = Array.isArray(t) ? t : [],
+                                            l = Array.isArray(n) ? n : [];
+                                        if (0 === r.length && 0 === l.length) return e;
+                                        let i = {},
+                                            s = {};
                                         if (
-                                            (s.forEach((e) => {
-                                                t[e.id] = e;
+                                            (r.forEach((e) => {
+                                                i[e.id] = e;
                                             }),
-                                            n.forEach((e) => {
-                                                r[e.id] = e;
+                                            l.forEach((e) => {
+                                                s[e.id] = e;
                                             }),
-                                            s.length < n.length)
+                                            r.length < l.length)
                                         ) {
-                                            for (let e in r) if (null == t[e]) return new U.ms(P.zUn.AVAILABLE_TAG_ADD, null, eO(r[e]));
+                                            for (let e in s) if (null == i[e]) return new O.ms(v.zUn.AVAILABLE_TAG_ADD, null, ef(s[e]));
                                         }
-                                        if (s.length > n.length) {
-                                            for (let e in t) if (null == r[e]) return new U.ms(P.zUn.AVAILABLE_TAG_DELETE, null, eO(t[e]));
+                                        if (r.length > l.length) {
+                                            for (let e in i) if (null == s[e]) return new O.ms(v.zUn.AVAILABLE_TAG_DELETE, null, ef(i[e]));
                                         }
-                                        for (let e in t) {
-                                            let _ = t[e],
-                                                E = r[e];
-                                            if ((null == E ? void 0 : E.name) !== _.name || (null == E ? void 0 : E.emoji_id) !== _.emoji_id || (null == E ? void 0 : E.emoji_name) !== _.emoji_name) return new U.ms(P.zUn.AVAILABLE_TAG_EDIT, eO(_), eO(E));
+                                        for (let e in i) {
+                                            let t = i[e],
+                                                n = s[e];
+                                            if ((null == n ? void 0 : n.name) !== t.name || (null == n ? void 0 : n.emoji_id) !== t.emoji_id || (null == n ? void 0 : n.emoji_name) !== t.emoji_name) return new O.ms(v.zUn.AVAILABLE_TAG_EDIT, ef(t), ef(n));
                                         }
                                         return e;
                                     })(e);
-                                case P.zUn.SCHEDULED_START_TIME:
-                                case P.zUn.SCHEDULED_END_TIME:
-                                    return eU(e, (e) => (0, g.vc)(r()(new Date(e)), 'LLLL'));
+                                case v.zUn.SCHEDULED_START_TIME:
+                                case v.zUn.SCHEDULED_END_TIME:
+                                    return eR(e, (e) => (0, h.vc)(s()(new Date(e)), 'LLLL'));
                             }
                             return e;
-                        })(s, e, _);
-                        Array.isArray(t) ? t.forEach((e) => E.push(e)) : E.push(t);
+                        })(r, e, t);
+                        Array.isArray(i) ? i.forEach((e) => n.push(e)) : n.push(i);
                     }),
-                        (e = e.set('changes', E));
+                        (e = e.set('changes', n));
                 }
-                E.push(e);
+                n.push(e);
             }
         }),
-        E
+        n
     );
 }
-function ec(e, _) {
-    let E = I.vB('string' == typeof e ? e : 0),
-        s = I.vB('string' == typeof _ ? _ : 0),
-        n = I.Od(s, E),
-        t = I.Od(E, s),
-        r = [],
+function eN(e, t) {
+    let n = E.vB('string' == typeof e ? e : 0),
+        r = E.vB('string' == typeof t ? t : 0),
+        l = E.Od(r, n),
+        i = E.Od(n, r),
+        s = [],
         a = [];
-    for (let e in P.Plq) {
-        let _ = P.Plq[e];
-        I.e$(n, _) && r.push(_), I.e$(t, _) && a.push(_);
+    for (let e in v.Plq) {
+        let t = v.Plq[e];
+        E.e$(l, t) && s.push(t), E.e$(i, t) && a.push(t);
     }
     return {
-        added: r,
+        added: s,
         removed: a
     };
 }
-function eO(e) {
+function ef(e) {
     return null == e
         ? null
         : {
@@ -1547,52 +1521,52 @@ function eO(e) {
               moderated: e.moderated
           };
 }
-function eU(e, _, E) {
-    let s = e.newValue,
-        n = e.oldValue;
-    return null != e.newValue && ((s = _(e.newValue)), null != E && null != s && (s = E(s))), null != e.oldValue && ((n = _(e.oldValue)), null != E && null != n && (n = E(n))), new U.ms(e.key, n || e.oldValue, s || e.newValue);
+function eR(e, t, n) {
+    let r = e.newValue,
+        l = e.oldValue;
+    return null != e.newValue && ((r = t(e.newValue)), null != n && null != r && (r = n(r))), null != e.oldValue && ((l = t(e.oldValue)), null != n && null != l && (l = n(l))), new O.ms(e.key, l || e.oldValue, r || e.newValue);
 }
-function ed(e, _, E, s, n) {
-    let t = null,
-        r = E((n = null != n ? n : e.targetId));
-    if ((null != r && null != s && (t = s(r)), null == t)) {
-        let _ = m.Z.deletedTargets[e.targetType];
-        null != _ && null != _[n] && (t = _[n]);
+function eO(e, t, n, r, l) {
+    let i = null,
+        s = n((l = null != l ? l : e.targetId));
+    if ((null != s && null != r && (i = r(s)), null == i)) {
+        let t = m.Z.deletedTargets[e.targetType];
+        null != t && null != t[l] && (i = t[l]);
     }
-    if (null == t && null != e.changes) {
-        let E = e.changes.find((e) => e.key === _);
-        null != E && (t = E.newValue || E.oldValue);
+    if (null == i && null != e.changes) {
+        let n = e.changes.find((e) => e.key === t);
+        null != n && (i = n.newValue || n.oldValue);
     }
-    return null != t ? t : n;
+    return null != i ? i : l;
 }
-function eG(e, _, E) {
-    let s = e,
-        n = _(e);
-    return null != n && null != E && (s = E(n)), s;
+function eS(e, t, n) {
+    let r = e,
+        l = t(e);
+    return null != l && null != n && (r = n(l)), r;
 }
-function eM(e, _) {
-    return (E) => (null == E.oldValue ? e : _);
+function ep(e, t) {
+    return (n) => (null == n.oldValue ? e : t);
 }
-function eR(e, _) {
-    return (E) => (null == E.newValue ? e : _);
+function eD(e, t) {
+    return (n) => (null == n.newValue ? e : t);
 }
-function eg(e, _, E, s) {
-    return (n) => {
-        if (null != n.newValue && null != n.oldValue) return e;
-        if (null != n.newValue) return _;
-        if (null != n.oldValue) return E;
-        return s;
+function eU(e, t, n, r) {
+    return (l) => {
+        if (null != l.newValue && null != l.oldValue) return e;
+        if (null != l.newValue) return t;
+        if (null != l.oldValue) return n;
+        return r;
     };
 }
-function eC(e, _) {
-    return (E) => (E.newValue ? e : _);
+function eh(e, t) {
+    return (n) => (n.newValue ? e : t);
 }
-function ef(e) {
-    return (_) => e[_.newValue];
+function eL(e) {
+    return (t) => e[t.newValue];
 }
-function ep(e, _) {
-    return (E) => {
-        var s;
-        return null !== (s = e[E.newValue]) && void 0 !== s ? s : _;
+function eC(e, t) {
+    return (n) => {
+        var r;
+        return null !== (r = e[n.newValue]) && void 0 !== r ? r : t;
     };
 }

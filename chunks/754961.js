@@ -1,132 +1,133 @@
 n.d(t, {
     T: function () {
-        return E;
+        return p;
     },
     i: function () {
-        return m;
+        return g;
     }
 });
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
-    l = n(567526),
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    l = n.n(a),
+    s = n(100621),
     o = n(481060),
     c = n(603368),
     d = n(284019),
-    u = n(689938),
-    _ = n(426088);
-function h(e) {
-    let { index: t, onClick: n, name: s, isActive: d, animate: h, fillBackgroundColor: E, hasError: m } = e,
-        I = (0, o.useToken)(o.tokens.colors.BG_SURFACE_OVERLAY),
-        g = a.useMemo(() => (0, c.j1)(E, I.hex()), [E, I]),
-        p = null != g,
-        T = (0, o.useSpring)(
+    u = n(388032),
+    h = n(117931);
+function m(e) {
+    let { index: t, onClick: n, name: a, isActive: d, animate: m, fillBackgroundColor: p, hasError: g } = e,
+        f = (0, o.useToken)(o.tokens.colors.BG_SURFACE_OVERLAY),
+        _ = r.useMemo(() => (0, c.j1)(p, f.hex()), [p, f]),
+        E = null != _,
+        I = (0, o.useSpring)(
             {
                 transform: d ? 'translateX(0%)' : 'translateX(-100%)',
                 config: {
-                    ...l.config.stiff,
+                    ...s.config.stiff,
                     clamp: !0
                 }
             },
-            h ? 'respect-motion-settings' : 'animate-never'
+            m ? 'respect-motion-settings' : 'animate-never'
         ),
-        S = (0, i.jsxs)(i.Fragment, {
+        C = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o.Text, {
                     variant: 'text-sm/medium',
                     color: 'header-primary',
-                    children: u.Z.Messages.CLAN_SUBMIT_ERROR_TITLE
+                    children: u.intl.string(u.t.M6w76e)
                 }),
                 (0, i.jsx)(o.Text, {
                     variant: 'text-xs/normal',
                     color: 'text-muted',
-                    children: u.Z.Messages.CLAN_SUBMIT_ERROR_SUBTITLE
+                    children: u.intl.string(u.t.pNtCgo)
                 })
             ]
         });
     return (0, i.jsx)(o.Tooltip, {
-        color: m ? o.Tooltip.Colors.GREY : o.Tooltip.Colors.BRAND,
-        text: m ? S : s,
-        'aria-label': m ? u.Z.Messages.CLAN_SUBMIT_ERROR_TITLE : s,
+        color: g ? o.Tooltip.Colors.GREY : o.Tooltip.Colors.BRAND,
+        text: g ? C : a,
+        'aria-label': g ? u.intl.string(u.t.M6w76e) : a,
         shouldShow: null != n,
-        tooltipStyle: g,
-        tooltipClassName: r()(_.progressStepTooltip, { [_.progressStepTooltipCustomColors]: !m && null != g }),
+        tooltipStyle: _,
+        tooltipClassName: l()(h.progressStepTooltip, { [h.progressStepTooltipCustomColors]: !g && null != _ }),
         children: (e) =>
             (0, i.jsxs)(o.Clickable, {
                 ...e,
-                'aria-label': u.Z.Messages.STEP_NUMBER.format({ number: t }),
+                'aria-label': u.intl.formatToPlainString(u.t.tCQ3Hx, { number: t }),
                 tabIndex: null == n ? -1 : void 0,
                 onClick: n,
-                className: _.progressStepWrapper,
+                className: h.progressStepWrapper,
                 children: [
-                    m &&
+                    g &&
                         (0, i.jsx)(o.WarningIcon, {
                             size: 'xs',
                             color: 'currentColor',
-                            className: _.errorIcon
+                            className: h.errorIcon
                         }),
                     (0, i.jsx)('div', {
-                        className: _.progressStep,
-                        children: (0, i.jsx)(l.animated.div, {
+                        className: h.progressStep,
+                        children: (0, i.jsx)(s.animated.div, {
                             style: {
-                                ...T,
-                                ...g
+                                ...I,
+                                ..._
                             },
-                            className: r()(_.progressStepFill, { [_.customProgressStepFill]: p })
+                            className: l()(h.progressStepFill, { [h.customProgressStepFill]: E })
                         })
                     })
                 ]
             })
     });
 }
-function E(e) {
-    let { steps: t, currentStepIndex: n, furthestStepIndex: a, onStepClick: s, stepFillColor: o, animationStyle: c, className: d } = e;
-    return (0, i.jsx)(l.animated.div, {
+function p(e) {
+    let { steps: t, currentStepIndex: n, furthestStepIndex: r, onStepClick: a, stepFillColor: o, animationStyle: c, className: d } = e;
+    return (0, i.jsx)(s.animated.div, {
         style: c,
-        className: r()(_.progressContainer, d),
+        className: l()(h.progressContainer, d),
         children: t.map((e) => {
-            let { index: t, name: r, hasError: l } = e;
+            let { index: t, name: l, hasError: s } = e;
             return (0, i.jsx)(
-                h,
+                m,
                 {
-                    name: r,
-                    onClick: t <= a ? () => s(t) : void 0,
+                    name: l,
+                    onClick: t <= r ? () => a(t) : void 0,
                     isActive: t <= n,
-                    hasError: l,
+                    hasError: s,
                     index: t,
                     fillBackgroundColor: o,
                     animate: n === t || n + 1 === t
                 },
-                r
+                l
             );
         })
     });
 }
-function m(e) {
-    let { className: t, isBackDisabled: n, isNextDisabled: a, onNextClick: s, onBackClick: c, nextButtonBackgroundColor: h, nextButtonClassName: E, nextButtonAnimationStyle: m } = e;
+function g(e) {
+    let { className: t, isBackDisabled: n, isNextDisabled: r, onNextClick: a, onBackClick: c, backButtonClassName: m, nextButtonBackgroundColor: p, nextButtonClassName: g, nextButtonAnimationStyle: f } = e;
     return (0, i.jsxs)('div', {
-        className: r()(_.buttonsContainer, t),
+        className: l()(h.buttonsContainer, t),
         children: [
             (0, i.jsx)(o.Button, {
                 look: o.Button.Looks.OUTLINED,
                 size: o.Button.Sizes.MEDIUM,
                 color: o.Button.Colors.PRIMARY,
+                className: m,
                 onClick: c,
                 disabled: n,
-                children: u.Z.Messages.BACK
+                children: u.intl.string(u.t['13/7kZ'])
             }),
-            (0, i.jsx)(l.animated.div, {
-                style: m,
+            (0, i.jsx)(s.animated.div, {
+                style: f,
                 children: (0, i.jsx)(d.Z, {
-                    className: E,
-                    themeColor: h,
+                    className: g,
+                    themeColor: p,
                     color: o.Button.Colors.BRAND,
                     look: o.Button.Looks.FILLED,
                     size: o.Button.Sizes.MEDIUM,
-                    onClick: s,
-                    disabled: a,
-                    children: u.Z.Messages.NEXT
+                    onClick: a,
+                    disabled: r,
+                    children: u.intl.string(u.t.PDTjLC)
                 })
             })
         ]

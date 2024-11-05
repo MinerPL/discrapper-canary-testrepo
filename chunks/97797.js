@@ -1,14 +1,15 @@
-_.d(E, {
+e.d(n, {
     i: function () {
-        return t;
+        return i;
     }
 });
-var s = _(689938);
-function t(e) {
-    let { username: E, usernameOnClickHandler: _, productName: t } = e;
-    return s.Z.Messages.SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE_MOBILE.astFormat({
-        username: E,
-        usernameHook: _,
-        productName: t
+var r = e(981631),
+    u = e(388032);
+function i(t) {
+    let { username: n, usernameOnClickHandler: e = r.dG4, productName: i } = t;
+    return u.intl.formatToParts(u.t.w4iXs7, {
+        username: n,
+        usernameHook: e,
+        productName: i
     });
 }

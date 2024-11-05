@@ -1,16 +1,13 @@
 n.d(t, {
     I: function () {
-        return a;
+        return r;
     }
 });
-var r = n(818083),
-    i = n(987338);
-let a = (0, r.B)({
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-09_rustadm',
     label: 'Rust Audio Device Manager',
     defaultConfig: { enabled: !1 },
-    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,

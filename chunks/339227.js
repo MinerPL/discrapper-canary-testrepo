@@ -1,6 +1,6 @@
 n.d(t, {
     Q: function () {
-        return b;
+        return L;
     }
 }),
     n(47120),
@@ -16,12 +16,12 @@ var r = n(512722),
     u = n(710845),
     c = n(772096),
     d = n(428595),
-    _ = n(594199),
-    E = n(364458),
-    f = n(70956),
-    h = n(40786),
-    p = n(362092);
-let I = {
+    f = n(594199),
+    _ = n(364458),
+    h = n(70956),
+    p = n(40786),
+    m = n(362092);
+let g = {
         link: { type: 'skip' },
         highlight: { type: 'skip' },
         blockQuote: { type: 'skip' },
@@ -40,6 +40,11 @@ let I = {
         roleMention: { type: 'inlineObject' },
         commandMention: { type: 'inlineObject' },
         channelMention: { type: 'inlineObject' },
+        silentPrefix: {
+            type: 'inlineStyle',
+            before: '@silent',
+            after: ' '
+        },
         emoji: { type: 'inlineObject' },
         customEmoji: { type: 'inlineObject' },
         looseEm: {
@@ -124,15 +129,15 @@ let I = {
             after: ''
         }
     },
-    m = new Set(['*', '_', '\\']),
-    T = {},
-    S = {};
+    E = new Set(['*', '_', '\\']),
+    v = {},
+    I = {};
 for (let e in d.Z.RULES) {
-    if (!(e in I)) throw Error('Slate: Unknown markdown rule: '.concat(e, '.  If you have just added a new markdown rule ') + 'then you probably need to add it to this file so that the rich chat box understands it.');
-    let t = I[e];
-    'skip' !== t.type && (T[e] = g(d.Z.RULES[e])), 'skip' !== t.type && 'inlineObject' !== t.type && (S[e] = g('text' === e ? _.ZP : d.Z.RULES[e]));
+    if (!(e in g)) throw Error('Slate: Unknown markdown rule: '.concat(e, '.  If you have just added a new markdown rule ') + 'then you probably need to add it to this file so that the rich chat box understands it.');
+    let t = g[e];
+    'skip' !== t.type && (v[e] = S(d.Z.RULES[e])), 'skip' !== t.type && 'inlineObject' !== t.type && (I[e] = S('text' === e ? f.ZP : d.Z.RULES[e]));
 }
-function g(e) {
+function S(e) {
     i()(null != e.parse, 'Slate: rule must have a parse function');
     let t = e.parse;
     return {
@@ -143,7 +148,7 @@ function g(e) {
         }
     };
 }
-let A = {
+let T = {
         url: {
             parse: (e) =>
                 null == (0, c.yw)(e[1])
@@ -176,7 +181,7 @@ let A = {
             order: o.defaultRules.inlineCode.order - 0.1,
             match: (e) => /^(```)([a-z0-9_+\-.#]+$)?/.exec(e),
             parse: (e) =>
-                null != e[2] && '' !== e[2] && p.i6(e[2])
+                null != e[2] && '' !== e[2] && m.i6(e[2])
                     ? [
                           {
                               type: 'codeBlockSyntax',
@@ -196,22 +201,22 @@ let A = {
                       }
         }
     },
-    N = /(-# +)/,
-    O = (0, E.Z)([T, A]),
-    R = (0, E.Z)([S, A]),
-    v = l._p(O),
-    C = l._p(R),
-    y = {
+    b = /(-# +)/,
+    y = (0, _.Z)([v, T]),
+    A = (0, _.Z)([I, T]),
+    N = l._p(y),
+    C = l._p(A),
+    R = {
         max: 1 / 0,
-        maxAge: 1 * f.Z.Millis.MINUTE,
+        maxAge: 1 * h.Z.Millis.MINUTE,
         updateAgeOnGet: !0
     },
-    L = new (s())(y),
-    D = new (s())(y);
-function b(e, t) {
+    O = new (s())(R),
+    D = new (s())(R);
+function L(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        i = p.rN(e);
+        i = m.rN(e);
     if ((i.push(e.length), 1 === i.length && n)) return [];
     let a = 0,
         s = n,
@@ -226,12 +231,12 @@ function b(e, t) {
             });
         else {
             let s = n === i[i.length - 2] ? e.substring(n + 3) : '';
-            n += 3 + (null != s.match(p.Q2) ? s : '').length;
+            n += 3 + (null != s.match(m.Q2) ? s : '').length;
             let l = e.substring(a, n);
             '' !== l &&
                 (function (e, t, n) {
                     let r = [],
-                        i = n ? D : L,
+                        i = n ? D : O,
                         a = i.get(e);
                     if (null != a) return a;
                     let s =
@@ -245,13 +250,13 @@ function b(e, t) {
                                 0: ''
                             },
                             type: 'paragraph',
-                            content: (n ? C : v)(s, !0, {
+                            content: (n ? C : N)(s, !0, {
                                 returnMentionIds: !0,
                                 disableAutoBlockNewlines: !0,
                                 guildId: t
                             })
                         };
-                    M(r, s, o, 0, []);
+                    x(r, s, o, 0, []);
                     let l = (function (e) {
                         if (0 === (e = e.filter((e) => e.text.length > 0)).length) return e;
                         let t = [e[0]];
@@ -275,7 +280,7 @@ function b(e, t) {
     }
     return o;
 }
-function M(e, t, n, r, a) {
+function x(e, t, n, r, a) {
     let { content: s, type: o, originalMatch: l } = n;
     switch ((i()(null != l, 'Slate: originalMatch must be set ' + JSON.stringify(n, void 0, 2)), o)) {
         case 'newline':
@@ -283,12 +288,12 @@ function M(e, t, n, r, a) {
         case 'paragraph':
         case 'text':
         case 'emoticon':
-            return P(e, t, s || '', r, a);
+            return w(e, t, s || '', r, a);
         case 'emoji':
         case 'customEmoji': {
             let i = t.substring(r);
-            if ((!i.startsWith(l[0]) && ((r = G(e, t, r, t.length)), (i = t.substring(r))), i.startsWith(l[0])))
-                return w({
+            if ((!i.startsWith(l[0]) && ((r = U(e, t, r, t.length)), (i = t.substring(r))), i.startsWith(l[0])))
+                return P({
                     result: e,
                     sourceText: t,
                     text: l[0],
@@ -302,13 +307,14 @@ function M(e, t, n, r, a) {
         case 'roleMention':
         case 'channelMention':
         case 'commandMention':
+        case 'silentPrefix':
         case 'soundboard':
         case 'channel': {
             let { text: a, id: s } = n;
             if (null != a)
                 return (
                     i()(a === l[0], 'Slate: text mentions must exactly match the regex match'),
-                    w({
+                    P({
                         result: e,
                         sourceText: t,
                         text: a,
@@ -317,7 +323,7 @@ function M(e, t, n, r, a) {
                         data: { text: a }
                     })
                 );
-            return w({
+            return P({
                 result: e,
                 sourceText: t,
                 text: l[0],
@@ -328,7 +334,7 @@ function M(e, t, n, r, a) {
         }
         case 'staticRouteLink':
             let { id: u, itemId: c } = n;
-            return w({
+            return P({
                 result: e,
                 sourceText: t,
                 text: l[0],
@@ -340,8 +346,8 @@ function M(e, t, n, r, a) {
                 }
             });
         case 'timestamp':
-            if (h.Z.getCurrentConfig({ location: 'c70cbb_1' }, { autoTrackExposure: !1 }).enabled)
-                return w({
+            if (p.Z.getCurrentConfig({ location: 'c70cbb_1' }, { autoTrackExposure: !1 }).enabled)
+                return P({
                     result: e,
                     sourceText: t,
                     text: l[0],
@@ -349,7 +355,7 @@ function M(e, t, n, r, a) {
                     attributes: [o],
                     data: n
                 });
-            return P(e, t, l[0], r, a);
+            return w(e, t, l[0], r, a);
         case 'em':
         case 'autolink':
         case 'strong':
@@ -363,7 +369,7 @@ function M(e, t, n, r, a) {
         case 'url':
         case 'link':
         case 'subtext': {
-            r = x(t, r);
+            r = k(t, r);
             let { before: n, after: i } = (function (e, t, n, r) {
                 if ('inlineCode' === t)
                     return {
@@ -377,23 +383,23 @@ function M(e, t, n, r, a) {
                     };
                 if ('subtext' === t)
                     return {
-                        before: N.exec(r.input)[1],
+                        before: b.exec(r.input)[1],
                         after: ''
                     };
-                let i = I['link' === t ? 'url' : t];
+                let i = g['link' === t ? 'url' : t];
                 if ('inlineStyle' === i.type) return i;
                 throw Error('Slate: rule must be an inlineStyle');
             })(t, o, r, l);
-            return (r = U(e, t, n, r, 'syntaxBefore')), a.push(o), (r = P(e, t, null != s ? s : '', r, a)), a.pop(), (r = U(e, t, i, r, 'syntaxAfter')), x(t, r);
+            return (r = M(e, t, n, r, 'syntaxBefore')), a.push(o), (r = w(e, t, null != s ? s : '', r, a)), a.pop(), (r = M(e, t, i, r, 'syntaxAfter')), k(t, r);
         }
         default:
             throw Error('Slate: Unknown rule type: '.concat(o));
     }
 }
-function P(e, t, n, r, i) {
+function w(e, t, n, r, i) {
     return (
         'string' == typeof n
-            ? (r = w({
+            ? (r = P({
                   result: e,
                   sourceText: t,
                   text: n,
@@ -403,12 +409,12 @@ function P(e, t, n, r, i) {
               }))
             : (!(n instanceof Array) && (n = [n]),
               n.forEach((n) => {
-                  r = M(e, t, n, r, i);
+                  r = x(e, t, n, r, i);
               })),
-        x(t, r)
+        k(t, r)
     );
 }
-function U(e, t, n, r, a) {
+function M(e, t, n, r, a) {
     if (n.length > 0) {
         let s = t.indexOf(n, r),
             o = t.substring(r, s + n.length);
@@ -423,12 +429,12 @@ function U(e, t, n, r, a) {
     }
     return r;
 }
-function w(e) {
+function P(e) {
     let { result: t, sourceText: n, text: r, originalStart: i, attributes: a, data: s } = e,
-        o = x(n, i);
+        o = k(n, i);
     for (; '\n' === r.charAt(0) || ' ' === r.charAt(0); ) r = r.substring(1);
     let l = n.indexOf(r, o);
-    if ((l !== o ? (o = i = G(t, n, o, l)) : '\\' === r && '\\' === n.charAt(l + 1) && (l++, (i = ++o)), l !== o))
+    if ((l !== o ? (o = i = U(t, n, o, l)) : '\\' === r && '\\' === n.charAt(l + 1) && (l++, (i = ++o)), l !== o))
         throw (
             (new u.Z('MarkdownToSlate').error(
                 JSON.stringify({
@@ -452,13 +458,13 @@ function w(e) {
         c
     );
 }
-function x(e, t) {
+function k(e, t) {
     for (; '\n' === e.charAt(t) || ' ' === e.charAt(t); ) t++;
     return t;
 }
-function G(e, t, n, r) {
+function U(e, t, n, r) {
     for (; n < r; )
-        if (m.has(t[n])) (n = U(e, t, t[n], n, 'syntaxBefore')), (n = x(t, n));
+        if (E.has(t[n])) (n = M(e, t, t[n], n, 'syntaxBefore')), (n = k(t, n));
         else break;
     return n;
 }

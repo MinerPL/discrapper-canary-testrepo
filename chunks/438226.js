@@ -1,9 +1,9 @@
-n.d(e, {
+n.d(t, {
     HV: function () {
-        return o;
+        return s;
     },
     IS: function () {
-        return u;
+        return r;
     },
     VY: function () {
         return c;
@@ -12,37 +12,38 @@ n.d(e, {
     n(627494),
     n(757143),
     n(201133);
-var a = n(5192),
-    r = n(561308),
-    l = n(689938);
-let u = (t, e) =>
-        l.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
-            username: e.username,
-            activity: t.extra.game_name
+var l = n(5192),
+    a = n(561308),
+    i = n(388032);
+let r = (e, t) =>
+        i.intl.formatToPlainString(i.t.tAwI1t, {
+            username: t.username,
+            activity: e.extra.game_name
         }),
-    i = (t) => {
-        let e = (0, r.kr)(t);
-        return (0, r.Ol)(t) ? (e ? l.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME : l.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME) : e ? l.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME : l.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME;
+    o = (e) => {
+        let t = (0, a.kr)(e);
+        return (0, a.Ol)(e) ? (t ? i.t.MHO1AQ : i.t.i7AOz8) : t ? i.t.lLPKY2 : i.t['bES+y8'];
     },
-    o = (t, e, n) => {
-        let r = i(t),
-            l = a.ZP.getName(null == e ? void 0 : e.guild_id, null == e ? void 0 : e.id, n),
-            u = t.extra.game_name;
-        return r
-            .plainFormat({
-                gameName: u,
-                userName: l
+    s = (e, t, n) => {
+        let a = o(e),
+            r = l.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
+            s = e.extra.game_name;
+        return i.intl
+            .formatToMarkdownString(a, {
+                gameName: s,
+                userName: r
             })
             .replaceAll('*', '');
     },
-    c = (t) => {
-        let { entry: e, channel: n, users: u, countOthers: i } = t;
-        return ((0, r.kr)(e) ? l.Z.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYING : l.Z.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYED)
-            .plainFormat({
-                gameName: e.extra.game_name,
-                user1: a.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, u[0]),
-                user2: a.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, u[1]),
-                countOthers: i
+    c = (e) => {
+        let { entry: t, channel: n, users: r, countOthers: o } = e,
+            s = (0, a.kr)(t) ? i.t.QaUWPT : i.t['7j/5mp'];
+        return i.intl
+            .formatToMarkdownString(s, {
+                gameName: t.extra.game_name,
+                user1: l.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, r[0]),
+                user2: l.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, r[1]),
+                countOthers: o
             })
             .replaceAll('*', '');
     };

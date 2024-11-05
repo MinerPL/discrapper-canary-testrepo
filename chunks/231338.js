@@ -1,33 +1,30 @@
 r.d(t, {
-    $D: function () {
-        return _;
-    },
     $R: function () {
-        return el;
+        return eI;
     },
     $V: function () {
-        return O;
+        return L;
     },
     Ai: function () {
-        return ep;
+        return ef;
     },
     Al: function () {
-        return ei.A;
+        return eo.A;
     },
     B1: function () {
-        return eH;
+        return eW;
     },
     BR: function () {
-        return ei.Z;
+        return eo.Z;
     },
     BZ: function () {
-        return ew;
+        return eB;
     },
     Cw: function () {
-        return c;
+        return s;
     },
     Cy: function () {
-        return eU;
+        return eG;
     },
     EK: function () {
         return g;
@@ -36,55 +33,55 @@ r.d(t, {
         return P;
     },
     Et: function () {
-        return d;
+        return T;
     },
     GZ: function () {
         return A;
     },
     H0: function () {
-        return eS;
+        return ep;
     },
     He: function () {
-        return s;
+        return c;
     },
     Il: function () {
-        return es.I;
+        return ec.I;
     },
     Jj: function () {
         return R;
     },
     MA: function () {
-        return m;
+        return M;
     },
     NY: function () {
         return u;
     },
     OL: function () {
-        return ed;
+        return eT;
     },
     OM: function () {
-        return eW;
+        return eF;
     },
     Pl: function () {
-        return eM;
+        return eU;
     },
     Py: function () {
-        return I;
+        return l;
     },
     Q: function () {
         return C;
     },
     QL: function () {
-        return eO;
+        return eL;
     },
     RG: function () {
-        return M;
+        return U;
     },
     RK: function () {
-        return eV;
+        return eK;
     },
     S7: function () {
-        return T;
+        return N;
     },
     Sk: function () {
         return a;
@@ -93,142 +90,142 @@ r.d(t, {
         return ey;
     },
     U6: function () {
-        return l;
+        return I;
     },
     U9: function () {
-        return eT;
-    },
-    Uk: function () {
-        return eL;
-    },
-    V6: function () {
-        return eb;
-    },
-    Vq: function () {
-        return em;
-    },
-    Vz: function () {
         return eN;
     },
+    Uk: function () {
+        return eh;
+    },
+    V6: function () {
+        return ev;
+    },
+    Vq: function () {
+        return eM;
+    },
+    Vz: function () {
+        return ed;
+    },
     X5: function () {
-        return i;
+        return o;
     },
     X6: function () {
-        return ev;
+        return eb;
     },
     X7: function () {
         return eC;
     },
     XM: function () {
-        return eY;
+        return eH;
     },
     Zu: function () {
         return eg;
     },
     aO: function () {
-        return U;
+        return G;
     },
     dG: function () {
         return eP;
     },
     fK: function () {
-        return eF;
+        return ek;
     },
     fr: function () {
-        return eB;
+        return ew;
     },
     gg: function () {
         return E;
     },
     i$: function () {
-        return ef;
+        return eO;
     },
     j8: function () {
-        return eh;
-    },
-    lT: function () {
-        return p;
-    },
-    ld: function () {
         return eD;
     },
+    lT: function () {
+        return f;
+    },
+    ld: function () {
+        return eS;
+    },
     pK: function () {
-        return D;
+        return S;
     },
     rx: function () {
         return eA;
     },
     tN: function () {
-        return o;
+        return _;
     },
     tP: function () {
-        return ec.t;
+        return es.t;
     },
     xr: function () {
         return eR;
     },
     yA: function () {
-        return eK;
+        return eY;
     },
     yX: function () {
-        return ek;
+        return ex;
     },
     yY: function () {
-        return eG;
+        return em;
     },
     zM: function () {
-        return N;
+        return d;
     }
 }),
     r(47120);
 var n,
     a,
+    _,
     o,
     i,
-    _,
     E,
-    s,
     c,
-    I,
-    u,
+    s,
     l,
+    u,
+    I,
     R,
     A,
+    N,
     T,
     d,
-    N,
-    p,
-    O,
     f,
-    S,
     L,
-    D,
+    O,
+    p,
     h,
+    S,
+    D,
     C,
     g,
-    M,
-    P,
-    m,
     U,
+    P,
+    M,
     G,
+    m,
     y,
-    v,
     b,
-    B,
+    v,
     w,
+    B,
+    W,
     H,
     Y,
-    K,
-    k,
-    V,
     x,
+    K,
+    V,
+    k,
     F,
-    W,
     X,
     j,
     $,
-    J,
     q,
+    J,
     z,
     Q,
     Z,
@@ -237,20 +234,20 @@ var n,
     er,
     en,
     ea,
-    eo,
-    ei = r(290926),
-    e_ = r(149765),
+    e_,
+    eo = r(290926),
+    ei = r(149765),
     eE = r(860911);
 r(674746);
-var es = r(691324),
-    ec = r(481677);
+var ec = r(691324),
+    es = r(481677);
 r(722770);
-let eI = location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT,
+let el = location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT,
     eu = location.protocol + '//discord.gg',
-    el = 'discord.com',
+    eI = 'discord.com',
     eR = 'support.discord.com',
     eA = 'support-dev.discord.com',
-    eT = 'discord.com';
+    eN = 'discord.com';
 Object.freeze({
     HINT_PURPLE: '#c9d2f0',
     DARK_PURPLE: '#697ec4',
@@ -275,17 +272,17 @@ Object.freeze({
     GREY7: '#1c242b',
     GREY9: '#202226'
 }),
-    ((G = n || (n = {})).PRIMARY_NORMAL = 'ggsans-Normal, NotoSans-Normal'),
-    (G.PRIMARY_MEDIUM = 'ggsans-Medium, NotoSans-Medium'),
-    (G.PRIMARY_SEMIBOLD = 'ggsans-Semibold, NotoSans-Semibold'),
-    (G.PRIMARY_BOLD = 'ggsans-Bold, NotoSans-Bold'),
-    (G.DISPLAY_NORMAL = 'ggsans-Normal, NotoSans-Normal'),
-    (G.DISPLAY_MEDIUM = 'ggsans-Medium, NotoSans-Medium'),
-    (G.DISPLAY_SEMIBOLD = 'ggsans-Semibold, NotoSans-Semibold'),
-    (G.DISPLAY_BOLD = 'ggsans-Bold, NotoSans-Bold'),
-    (G.DISPLAY_EXTRABOLD = 'ggsans-ExtraBold, NotoSans-ExtraBold'),
-    (G.CODE_NORMAL = 'ggmono-Normal, SourceCodePro-Normal'),
-    (G.CODE_BOLD = 'ggmono-Bold, SourceCodePro-Bold'),
+    ((m = n || (n = {})).PRIMARY_NORMAL = 'ggsans-Normal, NotoSans-Normal'),
+    (m.PRIMARY_MEDIUM = 'ggsans-Medium, NotoSans-Medium'),
+    (m.PRIMARY_SEMIBOLD = 'ggsans-Semibold, NotoSans-Semibold'),
+    (m.PRIMARY_BOLD = 'ggsans-Bold, NotoSans-Bold'),
+    (m.DISPLAY_NORMAL = 'ggsans-Normal, NotoSans-Normal'),
+    (m.DISPLAY_MEDIUM = 'ggsans-Medium, NotoSans-Medium'),
+    (m.DISPLAY_SEMIBOLD = 'ggsans-Semibold, NotoSans-Semibold'),
+    (m.DISPLAY_BOLD = 'ggsans-Bold, NotoSans-Bold'),
+    (m.DISPLAY_EXTRABOLD = 'ggsans-ExtraBold, NotoSans-ExtraBold'),
+    (m.CODE_NORMAL = 'ggmono-Normal, SourceCodePro-Normal'),
+    (m.CODE_BOLD = 'ggmono-Bold, SourceCodePro-Bold'),
     ((y = a || (a = {})).ONLINE = 'online'),
     (y.OFFLINE = 'offline'),
     (y.IDLE = 'idle'),
@@ -293,21 +290,21 @@ Object.freeze({
     (y.INVISIBLE = 'invisible'),
     (y.STREAMING = 'streaming'),
     (y.UNKNOWN = 'unknown'),
-    ((v = o || (o = {})).CHILLING = 'chilling'),
-    (v.GAMING = 'gaming'),
-    (v.FOCUSING = 'focusing'),
-    (v.BRB = 'brb'),
-    (v.EATING = 'eating'),
-    (v.IN_TRANSIT = 'in-transit'),
-    (v.WATCHING = 'watching'),
-    (v.CUSTOM = 'custom'),
-    ((b = i || (i = {})).DESKTOP = 'desktop'),
-    (b.WEB = 'web'),
-    (b.MOBILE = 'mobile'),
-    (b.UNKNOWN = 'unknown');
-let ed = '6Lef5iQTAAAAAKeIvIY-DeexoO3gj7ryl9rLMEnn';
-((B = _ || (_ = {}))[(B.CHECKOUT_RECOVERY = 1)] = 'CHECKOUT_RECOVERY'), (B[(B.CASH_APP_PAY_AWARENESS = 2)] = 'CASH_APP_PAY_AWARENESS'), ((w = E || (E = {}))[(w.STRIPE = 1)] = 'STRIPE'), (w[(w.BRAINTREE = 2)] = 'BRAINTREE'), (w[(w.APPLE = 3)] = 'APPLE'), (w[(w.GOOGLE = 4)] = 'GOOGLE'), (w[(w.ADYEN = 5)] = 'ADYEN'), (w[(w.APPLE_PARTNER = 6)] = 'APPLE_PARTNER');
-let eN = Object.freeze({
+    ((b = _ || (_ = {})).CHILLING = 'chilling'),
+    (b.GAMING = 'gaming'),
+    (b.FOCUSING = 'focusing'),
+    (b.BRB = 'brb'),
+    (b.EATING = 'eating'),
+    (b.IN_TRANSIT = 'in-transit'),
+    (b.WATCHING = 'watching'),
+    (b.CUSTOM = 'custom'),
+    ((v = o || (o = {})).DESKTOP = 'desktop'),
+    (v.WEB = 'web'),
+    (v.MOBILE = 'mobile'),
+    (v.UNKNOWN = 'unknown');
+let eT = '6Lef5iQTAAAAAKeIvIY-DeexoO3gj7ryl9rLMEnn';
+((w = i || (i = {}))[(w.CHECKOUT_RECOVERY = 1)] = 'CHECKOUT_RECOVERY'), (w[(w.CASH_APP_PAY_AWARENESS = 2)] = 'CASH_APP_PAY_AWARENESS'), ((B = E || (E = {}))[(B.STRIPE = 1)] = 'STRIPE'), (B[(B.BRAINTREE = 2)] = 'BRAINTREE'), (B[(B.APPLE = 3)] = 'APPLE'), (B[(B.GOOGLE = 4)] = 'GOOGLE'), (B[(B.ADYEN = 5)] = 'ADYEN'), (B[(B.APPLE_PARTNER = 6)] = 'APPLE_PARTNER');
+let ed = Object.freeze({
         1: 'Stripe',
         2: 'Braintree',
         3: 'Apple',
@@ -315,7 +312,7 @@ let eN = Object.freeze({
         5: 'Adyen',
         6: 'Apple Partner'
     }),
-    ep = Object.freeze({
+    ef = Object.freeze({
         BRAINTREE: {
             KEY: window.GLOBAL_ENV.BRAINTREE_KEY,
             PAYMENT_GATEWAY: 'braintree'
@@ -329,8 +326,8 @@ let eN = Object.freeze({
             PAYMENT_GATEWAY: 'adyen'
         }
     });
-((H = s || (s = {}))[(H.UNKNOWN = 0)] = 'UNKNOWN'), (H[(H.CARD = 1)] = 'CARD'), (H[(H.PAYPAL = 2)] = 'PAYPAL'), (H[(H.GIROPAY = 3)] = 'GIROPAY'), (H[(H.SOFORT = 4)] = 'SOFORT'), (H[(H.PRZELEWY24 = 5)] = 'PRZELEWY24'), (H[(H.SEPA_DEBIT = 6)] = 'SEPA_DEBIT'), (H[(H.PAYSAFE_CARD = 7)] = 'PAYSAFE_CARD'), (H[(H.GCASH = 8)] = 'GCASH'), (H[(H.GRABPAY_MY = 9)] = 'GRABPAY_MY'), (H[(H.MOMO_WALLET = 10)] = 'MOMO_WALLET'), (H[(H.VENMO = 11)] = 'VENMO'), (H[(H.GOPAY_WALLET = 12)] = 'GOPAY_WALLET'), (H[(H.KAKAOPAY = 13)] = 'KAKAOPAY'), (H[(H.BANCONTACT = 14)] = 'BANCONTACT'), (H[(H.EPS = 15)] = 'EPS'), (H[(H.IDEAL = 16)] = 'IDEAL'), (H[(H.CASH_APP = 17)] = 'CASH_APP'), (H[(H.APPLE = 18)] = 'APPLE'), (H[(H.PAYMENT_REQUEST = 99)] = 'PAYMENT_REQUEST');
-let eO = new Map([
+((W = c || (c = {}))[(W.UNKNOWN = 0)] = 'UNKNOWN'), (W[(W.CARD = 1)] = 'CARD'), (W[(W.PAYPAL = 2)] = 'PAYPAL'), (W[(W.GIROPAY = 3)] = 'GIROPAY'), (W[(W.SOFORT = 4)] = 'SOFORT'), (W[(W.PRZELEWY24 = 5)] = 'PRZELEWY24'), (W[(W.SEPA_DEBIT = 6)] = 'SEPA_DEBIT'), (W[(W.PAYSAFE_CARD = 7)] = 'PAYSAFE_CARD'), (W[(W.GCASH = 8)] = 'GCASH'), (W[(W.GRABPAY_MY = 9)] = 'GRABPAY_MY'), (W[(W.MOMO_WALLET = 10)] = 'MOMO_WALLET'), (W[(W.VENMO = 11)] = 'VENMO'), (W[(W.GOPAY_WALLET = 12)] = 'GOPAY_WALLET'), (W[(W.KAKAOPAY = 13)] = 'KAKAOPAY'), (W[(W.BANCONTACT = 14)] = 'BANCONTACT'), (W[(W.EPS = 15)] = 'EPS'), (W[(W.IDEAL = 16)] = 'IDEAL'), (W[(W.CASH_APP = 17)] = 'CASH_APP'), (W[(W.APPLE = 18)] = 'APPLE'), (W[(W.PAYMENT_REQUEST = 99)] = 'PAYMENT_REQUEST');
+let eL = new Map([
         [7, 'paysafecard'],
         [8, 'gcash'],
         [9, 'grabpay_MY'],
@@ -339,107 +336,107 @@ let eO = new Map([
         [12, 'gopay_wallet'],
         [17, 'cashapp']
     ]),
-    ef = new Map([
+    eO = new Map([
         [14, 'bancontact'],
         [3, 'giropay'],
         [16, 'ideal']
     ]),
-    eS = new Set([7, 8, 9, 12, 10, 13, 14, 15, 16, 4, 3, 5, 17]),
-    eL = new Set([7, 9, 3, 5, 4, 14, 15, 16]),
-    eD = new Set([1, 2, 6, 8, 10, 11, 13, 12, 17]),
-    eh = new Set([3, 4, 5, 14, 15, 16, 7, 9, 12]),
+    ep = new Set([7, 8, 9, 12, 10, 13, 14, 15, 16, 4, 3, 5, 17]),
+    eh = new Set([7, 9, 3, 5, 4, 14, 15, 16]),
+    eS = new Set([1, 2, 6, 8, 10, 11, 13, 12, 17]),
+    eD = new Set([3, 4, 5, 14, 15, 16, 7, 9, 12]),
     eC = new Set([6]);
-((Y = c || (c = {}))[(Y.NEW = 1)] = 'NEW'),
-    ((K = I || (I = {}))[(K.PENDING = 0)] = 'PENDING'),
-    (K[(K.COMPLETED = 1)] = 'COMPLETED'),
-    (K[(K.FAILED = 2)] = 'FAILED'),
-    (K[(K.REVERSED = 3)] = 'REVERSED'),
-    (K[(K.REFUNDED = 4)] = 'REFUNDED'),
-    (K[(K.CANCELED = 5)] = 'CANCELED'),
-    ((k = u || (u = {}))[(k.PREMIUM = 1)] = 'PREMIUM'),
-    (k[(k.GUILD = 2)] = 'GUILD'),
-    (k[(k.APPLICATION = 3)] = 'APPLICATION'),
-    ((V = l || (l = {})).PAYPAL_POPUP_CLOSED = 'PAYPAL_POPUP_CLOSED'),
-    (V.VENMO_APP_CANCELED = 'VENMO_APP_CANCELED'),
-    (V.VENMO_CANCELED = 'VENMO_CANCELED'),
+((H = s || (s = {}))[(H.NEW = 1)] = 'NEW'),
+    ((Y = l || (l = {}))[(Y.PENDING = 0)] = 'PENDING'),
+    (Y[(Y.COMPLETED = 1)] = 'COMPLETED'),
+    (Y[(Y.FAILED = 2)] = 'FAILED'),
+    (Y[(Y.REVERSED = 3)] = 'REVERSED'),
+    (Y[(Y.REFUNDED = 4)] = 'REFUNDED'),
+    (Y[(Y.CANCELED = 5)] = 'CANCELED'),
+    ((x = u || (u = {}))[(x.PREMIUM = 1)] = 'PREMIUM'),
+    (x[(x.GUILD = 2)] = 'GUILD'),
+    (x[(x.APPLICATION = 3)] = 'APPLICATION'),
+    ((K = I || (I = {})).PAYPAL_POPUP_CLOSED = 'PAYPAL_POPUP_CLOSED'),
+    (K.VENMO_APP_CANCELED = 'VENMO_APP_CANCELED'),
+    (K.VENMO_CANCELED = 'VENMO_CANCELED'),
     Object.freeze({
         CONSTANT: 1,
         APPLE_STICKER: 2
     }),
-    ((x = R || (R = {}))[(x.DISCOVERY = 0)] = 'DISCOVERY'),
-    (x[(x.CHECKOUT = 1)] = 'CHECKOUT'),
-    ((F = A || (A = {}))[(F.SUBSCRIPTION = 0)] = 'SUBSCRIPTION'),
-    (F[(F.ONE_TIME = 1)] = 'ONE_TIME');
+    ((V = R || (R = {}))[(V.DISCOVERY = 0)] = 'DISCOVERY'),
+    (V[(V.CHECKOUT = 1)] = 'CHECKOUT'),
+    ((k = A || (A = {}))[(k.SUBSCRIPTION = 0)] = 'SUBSCRIPTION'),
+    (k[(k.ONE_TIME = 1)] = 'ONE_TIME');
 let eg = Object.freeze({
     0: 'subscription',
     1: 'sku'
 });
-((W = T || (T = {}))[(W.VIEW_CHANNEL = 1024)] = 'VIEW_CHANNEL'), (W[(W.READ_MESSAGE_HISTORY = 65536)] = 'READ_MESSAGE_HISTORY'), (W[(W.CONNECT = 1048576)] = 'CONNECT');
-let eM = Object.freeze({
-        CREATE_INSTANT_INVITE: e_.r0(0),
-        KICK_MEMBERS: e_.r0(1),
-        BAN_MEMBERS: e_.r0(2),
-        ADMINISTRATOR: e_.r0(3),
-        MANAGE_CHANNELS: e_.r0(4),
-        MANAGE_GUILD: e_.r0(5),
-        CHANGE_NICKNAME: e_.r0(26),
-        MANAGE_NICKNAMES: e_.r0(27),
-        MANAGE_ROLES: e_.r0(28),
-        MANAGE_WEBHOOKS: e_.r0(29),
-        MANAGE_GUILD_EXPRESSIONS: e_.r0(30),
-        CREATE_GUILD_EXPRESSIONS: e_.r0(43),
-        VIEW_AUDIT_LOG: e_.r0(7),
-        VIEW_CHANNEL: e_.r0(10),
-        VIEW_GUILD_ANALYTICS: e_.r0(19),
-        VIEW_CREATOR_MONETIZATION_ANALYTICS: e_.r0(41),
-        MODERATE_MEMBERS: e_.r0(40),
-        USE_EMBEDDED_ACTIVITIES: e_.r0(39),
-        USE_EXTERNAL_APPS: e_.r0(50),
-        SEND_MESSAGES: e_.r0(11),
-        SEND_TTS_MESSAGES: e_.r0(12),
-        MANAGE_MESSAGES: e_.r0(13),
-        EMBED_LINKS: e_.r0(14),
-        ATTACH_FILES: e_.r0(15),
-        READ_MESSAGE_HISTORY: e_.r0(16),
-        MENTION_EVERYONE: e_.r0(17),
-        USE_EXTERNAL_EMOJIS: e_.r0(18),
-        ADD_REACTIONS: e_.r0(6),
-        USE_APPLICATION_COMMANDS: e_.r0(31),
-        MANAGE_THREADS: e_.r0(34),
-        CREATE_PUBLIC_THREADS: e_.r0(35),
-        CREATE_PRIVATE_THREADS: e_.r0(36),
-        USE_EXTERNAL_STICKERS: e_.r0(37),
-        SEND_MESSAGES_IN_THREADS: e_.r0(38),
-        SEND_VOICE_MESSAGES: e_.r0(46),
-        USE_CLYDE_AI: e_.r0(47),
-        SEND_POLLS: e_.r0(49),
-        CONNECT: e_.r0(20),
-        SPEAK: e_.r0(21),
-        MUTE_MEMBERS: e_.r0(22),
-        DEAFEN_MEMBERS: e_.r0(23),
-        MOVE_MEMBERS: e_.r0(24),
-        USE_VAD: e_.r0(25),
-        PRIORITY_SPEAKER: e_.r0(8),
-        STREAM: e_.r0(9),
-        USE_SOUNDBOARD: e_.r0(42),
-        USE_EXTERNAL_SOUNDS: e_.r0(45),
-        SET_VOICE_CHANNEL_STATUS: e_.r0(48),
-        REQUEST_TO_SPEAK: e_.r0(32),
-        MANAGE_EVENTS: e_.r0(33),
-        CREATE_EVENTS: e_.r0(44)
+((F = N || (N = {}))[(F.VIEW_CHANNEL = 1024)] = 'VIEW_CHANNEL'), (F[(F.READ_MESSAGE_HISTORY = 65536)] = 'READ_MESSAGE_HISTORY'), (F[(F.CONNECT = 1048576)] = 'CONNECT');
+let eU = Object.freeze({
+        CREATE_INSTANT_INVITE: ei.r0(0),
+        KICK_MEMBERS: ei.r0(1),
+        BAN_MEMBERS: ei.r0(2),
+        ADMINISTRATOR: ei.r0(3),
+        MANAGE_CHANNELS: ei.r0(4),
+        MANAGE_GUILD: ei.r0(5),
+        CHANGE_NICKNAME: ei.r0(26),
+        MANAGE_NICKNAMES: ei.r0(27),
+        MANAGE_ROLES: ei.r0(28),
+        MANAGE_WEBHOOKS: ei.r0(29),
+        MANAGE_GUILD_EXPRESSIONS: ei.r0(30),
+        CREATE_GUILD_EXPRESSIONS: ei.r0(43),
+        VIEW_AUDIT_LOG: ei.r0(7),
+        VIEW_CHANNEL: ei.r0(10),
+        VIEW_GUILD_ANALYTICS: ei.r0(19),
+        VIEW_CREATOR_MONETIZATION_ANALYTICS: ei.r0(41),
+        MODERATE_MEMBERS: ei.r0(40),
+        USE_EMBEDDED_ACTIVITIES: ei.r0(39),
+        USE_EXTERNAL_APPS: ei.r0(50),
+        SEND_MESSAGES: ei.r0(11),
+        SEND_TTS_MESSAGES: ei.r0(12),
+        MANAGE_MESSAGES: ei.r0(13),
+        EMBED_LINKS: ei.r0(14),
+        ATTACH_FILES: ei.r0(15),
+        READ_MESSAGE_HISTORY: ei.r0(16),
+        MENTION_EVERYONE: ei.r0(17),
+        USE_EXTERNAL_EMOJIS: ei.r0(18),
+        ADD_REACTIONS: ei.r0(6),
+        USE_APPLICATION_COMMANDS: ei.r0(31),
+        MANAGE_THREADS: ei.r0(34),
+        CREATE_PUBLIC_THREADS: ei.r0(35),
+        CREATE_PRIVATE_THREADS: ei.r0(36),
+        USE_EXTERNAL_STICKERS: ei.r0(37),
+        SEND_MESSAGES_IN_THREADS: ei.r0(38),
+        SEND_VOICE_MESSAGES: ei.r0(46),
+        USE_CLYDE_AI: ei.r0(47),
+        SEND_POLLS: ei.r0(49),
+        CONNECT: ei.r0(20),
+        SPEAK: ei.r0(21),
+        MUTE_MEMBERS: ei.r0(22),
+        DEAFEN_MEMBERS: ei.r0(23),
+        MOVE_MEMBERS: ei.r0(24),
+        USE_VAD: ei.r0(25),
+        PRIORITY_SPEAKER: ei.r0(8),
+        STREAM: ei.r0(9),
+        USE_SOUNDBOARD: ei.r0(42),
+        USE_EXTERNAL_SOUNDS: ei.r0(45),
+        SET_VOICE_CHANNEL_STATUS: ei.r0(48),
+        REQUEST_TO_SPEAK: ei.r0(32),
+        MANAGE_EVENTS: ei.r0(33),
+        CREATE_EVENTS: ei.r0(44)
     }),
     eP = function () {
         for (var e = arguments.length, t = Array(e), r = 0; r < e; r++) t[r] = arguments[r];
     },
-    em = () => null,
-    eU = () => Promise.resolve(),
-    eG = [eM.KICK_MEMBERS, eM.BAN_MEMBERS, eM.ADMINISTRATOR, eM.MANAGE_CHANNELS, eM.MANAGE_GUILD, eM.MANAGE_ROLES, eM.MANAGE_MESSAGES, eM.MANAGE_THREADS, eM.MODERATE_MEMBERS],
-    ey = e_.$e(...eG),
-    ev = 1,
-    eb = 6463,
-    eB = 10,
-    ew = 'RpcApplicationLogger';
-((X = d || (d = {})).DISPATCH = 'DISPATCH'),
+    eM = () => null,
+    eG = () => Promise.resolve(),
+    em = [eU.KICK_MEMBERS, eU.BAN_MEMBERS, eU.ADMINISTRATOR, eU.MANAGE_CHANNELS, eU.MANAGE_GUILD, eU.MANAGE_ROLES, eU.MANAGE_MESSAGES, eU.MANAGE_THREADS, eU.MODERATE_MEMBERS],
+    ey = ei.$e(...em),
+    eb = 1,
+    ev = 6463,
+    ew = 10,
+    eB = 'RpcApplicationLogger';
+((X = T || (T = {})).DISPATCH = 'DISPATCH'),
     (X.SET_CONFIG = 'SET_CONFIG'),
     (X.AUTHORIZE = 'AUTHORIZE'),
     (X.AUTHENTICATE = 'AUTHENTICATE'),
@@ -517,7 +514,7 @@ let eM = Object.freeze({
     (X.GET_PROVIDER_ACCESS_TOKEN = 'GET_PROVIDER_ACCESS_TOKEN'),
     (X.MAYBE_GET_PROVIDER_ACCESS_TOKEN = 'MAYBE_GET_PROVIDER_ACCESS_TOKEN'),
     (X.NAVIGATE_TO_CONNECTIONS = 'NAVIGATE_TO_CONNECTIONS'),
-    ((j = N || (N = {})).CURRENT_USER_UPDATE = 'CURRENT_USER_UPDATE'),
+    ((j = d || (d = {})).CURRENT_USER_UPDATE = 'CURRENT_USER_UPDATE'),
     (j.CURRENT_GUILD_MEMBER_UPDATE = 'CURRENT_GUILD_MEMBER_UPDATE'),
     (j.GUILD_STATUS = 'GUILD_STATUS'),
     (j.GUILD_CREATE = 'GUILD_CREATE'),
@@ -559,7 +556,7 @@ let eM = Object.freeze({
     (j.VIDEO_STATE_UPDATE = 'VIDEO_STATE_UPDATE'),
     (j.READY = 'READY'),
     (j.ERROR = 'ERROR'),
-    (($ = p || (p = {}))[($.UNKNOWN_ERROR = 1000)] = 'UNKNOWN_ERROR'),
+    (($ = f || (f = {}))[($.UNKNOWN_ERROR = 1000)] = 'UNKNOWN_ERROR'),
     ($[($.SERVICE_UNAVAILABLE = 1001)] = 'SERVICE_UNAVAILABLE'),
     ($[($.TRANSACTION_ABORTED = 1002)] = 'TRANSACTION_ABORTED'),
     ($[($.INVALID_PAYLOAD = 4000)] = 'INVALID_PAYLOAD'),
@@ -593,32 +590,32 @@ let eM = Object.freeze({
     ($[($.RATE_LIMITED = 5011)] = 'RATE_LIMITED'),
     ($[($.UNAUTHORIZED_FOR_APPLICATION = 5012)] = 'UNAUTHORIZED_FOR_APPLICATION'),
     ($[($.NO_CONNECTION_FOUND = 5013)] = 'NO_CONNECTION_FOUND'),
-    ((J = O || (O = {}))[(J.CLOSE_NORMAL = 1000)] = 'CLOSE_NORMAL'),
-    (J[(J.CLOSE_UNSUPPORTED = 1003)] = 'CLOSE_UNSUPPORTED'),
-    (J[(J.CLOSE_ABNORMAL = 1006)] = 'CLOSE_ABNORMAL'),
-    (J[(J.INVALID_CLIENTID = 4000)] = 'INVALID_CLIENTID'),
-    (J[(J.INVALID_ORIGIN = 4001)] = 'INVALID_ORIGIN'),
-    (J[(J.RATELIMITED = 4002)] = 'RATELIMITED'),
-    (J[(J.TOKEN_REVOKED = 4003)] = 'TOKEN_REVOKED'),
-    (J[(J.INVALID_VERSION = 4004)] = 'INVALID_VERSION'),
-    (J[(J.INVALID_ENCODING = 4005)] = 'INVALID_ENCODING');
-let eH = 'token',
-    eY = 'tokens',
-    eK = 'https://'.concat('status.discord.com'),
-    ek = {
+    ((q = L || (L = {}))[(q.CLOSE_NORMAL = 1000)] = 'CLOSE_NORMAL'),
+    (q[(q.CLOSE_UNSUPPORTED = 1003)] = 'CLOSE_UNSUPPORTED'),
+    (q[(q.CLOSE_ABNORMAL = 1006)] = 'CLOSE_ABNORMAL'),
+    (q[(q.INVALID_CLIENTID = 4000)] = 'INVALID_CLIENTID'),
+    (q[(q.INVALID_ORIGIN = 4001)] = 'INVALID_ORIGIN'),
+    (q[(q.RATELIMITED = 4002)] = 'RATELIMITED'),
+    (q[(q.TOKEN_REVOKED = 4003)] = 'TOKEN_REVOKED'),
+    (q[(q.INVALID_VERSION = 4004)] = 'INVALID_VERSION'),
+    (q[(q.INVALID_ENCODING = 4005)] = 'INVALID_ENCODING');
+let eW = 'token',
+    eH = 'tokens',
+    eY = 'https://'.concat('status.discord.com'),
+    ex = {
         PRESSKIT: 'https://app.box.com/s/5puqm5ijahrrdao7yldi7fr3zah5i1am',
         REBRAND_PRESSKIT: 'https://www.dropbox.com/scl/fo/2vittfakjukwa3zl4gnxh/AOS0AZlx-zA4TjDyv-M-dgk?rlkey=kn0v1lcqfq1lurj3lk3x1ujhf&dl=0',
         STATUS: 'https://discordstatus.com',
         HELP_AND_SUPPORT: '//'.concat(eR, '/hc/en-us'),
         FEEDBACK: '//'.concat('feedback.discord.com'),
-        EMAIL_SUPPORT: 'mailto:support@'.concat(eT),
-        EMAIL_LAW_ENFORCEMENT: 'mailto:lawenforcement@'.concat(eT),
-        EMAIL_HYPESQUAD: 'mailto:hypesquad@'.concat(eT),
-        EMAIL_JOBS: 'mailto:jobs@'.concat(eT),
+        EMAIL_SUPPORT: 'mailto:support@'.concat(eN),
+        EMAIL_LAW_ENFORCEMENT: 'mailto:lawenforcement@'.concat(eN),
+        EMAIL_HYPESQUAD: 'mailto:hypesquad@'.concat(eN),
+        EMAIL_JOBS: 'mailto:jobs@'.concat(eN),
         DEV_PERKS_FORM: 'https://goo.gl/forms/oZfKBStV3sR8GHdU2',
         VERIFICATION_REQUIREMENTS: 'https://dis.gd/vfqual',
-        BASE_URL: 'https://'.concat(el),
-        PRESS_INQUIRIES: 'mailto:press@'.concat(eT),
+        BASE_URL: 'https://'.concat(eI),
+        PRESS_INQUIRIES: 'mailto:press@'.concat(eN),
         CONTACT_US: 'https://dis.gd/contact',
         DEV_LANDING: '/build',
         DEV_PORTAL: '/developers',
@@ -634,47 +631,47 @@ let eH = 'token',
         TWITTER_SUPPORT: 'https://twitter.com/discord_support',
         QUESTS: '/quests'
     },
-    eV = Object.freeze({
+    eK = Object.freeze({
         TWITTER: Object.freeze({
             default: 'https://twitter.com/discord',
             ja: 'https://twitter.com/discord_jp'
         })
     }),
-    ex = Object.freeze({
-        WELCOME: ''.concat(eI, '/welcome/'),
-        ME: ''.concat(eI, '/channels/@me'),
+    eV = Object.freeze({
+        WELCOME: ''.concat(el, '/welcome/'),
+        ME: ''.concat(el, '/channels/@me'),
         SETTINGS: (e, t) =>
             ''
-                .concat(eI, '/settings/')
+                .concat(el, '/settings/')
                 .concat(e)
                 .concat(t ? '/'.concat(t) : ''),
-        CONNECTION: (e) => ''.concat(eI, '/connections/').concat(e),
-        CHANGELOGS: ''.concat(eI, '/settings/changelogs'),
-        LOGIN: ''.concat(eI, '/login'),
-        LOGIN_WITH_REDIRECT: (e) => ''.concat(eI, '/login?redirect_to=').concat(e),
-        REGISTER: ''.concat(eI, '/register'),
-        REGISTER_WITH_REDIRECT: (e) => ''.concat(eI, '/register?redirect_to=').concat(e),
-        CREATE_GUILD: ''.concat(eI, '/guilds/create'),
+        CONNECTION: (e) => ''.concat(el, '/connections/').concat(e),
+        CHANGELOGS: ''.concat(el, '/settings/changelogs'),
+        LOGIN: ''.concat(el, '/login'),
+        LOGIN_WITH_REDIRECT: (e) => ''.concat(el, '/login?redirect_to=').concat(e),
+        REGISTER: ''.concat(el, '/register'),
+        REGISTER_WITH_REDIRECT: (e) => ''.concat(el, '/register?redirect_to=').concat(e),
+        CREATE_GUILD: ''.concat(el, '/guilds/create'),
         VANITY_INVITE: (e) => ''.concat(eu, '/').concat(e),
-        HYPESQUAD_ONLINE: ''.concat(eI, '/settings/hypesquad-online'),
-        BROWSE_NITRO_TITLES: ''.concat(eI, '/store/browse?type=nitro'),
+        HYPESQUAD_ONLINE: ''.concat(el, '/settings/hypesquad-online'),
+        BROWSE_NITRO_TITLES: ''.concat(el, '/store/browse?type=nitro'),
         SKU_DETAILS: (e, t) =>
             ''
-                .concat(eI, '/store/skus/')
+                .concat(el, '/store/skus/')
                 .concat(e)
                 .concat(null != t ? '?store_listing_id='.concat(t) : ''),
         MESSAGE: (e, t, r) => '/channels/'.concat(e, '/').concat(t, '/').concat(r),
         CHANNEL: (e, t) => '/channels/'.concat(e, '/').concat(t),
-        REPORT: ''.concat(eI, '/report')
+        REPORT: ''.concat(el, '/report')
     });
-((q = f || (f = {})).INDEX = '/'), (q.INDEX_WORD = '/index'), (q.INDEX_BUCKET = '/index/:bucketId'), (q.CHANGELOGS = '/changelogs/:date'), (q.COMMUNITY = '/community'), (q.COMPANY = '/company'), (q.COMPANY_INFORMATION = '/company-information'), (q.CREATORS = '/creators'), (q.DOWNLOADS = '/downloads'), (q.DOWNLOAD = '/download'), (q.GAMING = '/gaming'), (q.PRIVACY = '/privacy'), (q.TOS = '/tos'), (q.TERMS = '/terms'), (q.STORE_TERMS = '/store-terms'), (q.ACKNOWLEDGEMENTS = '/acknowledgements'), (q.LICENSES = '/licenses'), (q.PARTNERS = '/partners'), (q.HYPESQUAD = '/hypesquad'), (q.HYPESQUAD_RIOT = '/hypesquad-riot'), (q.BRANDING = '/branding'), (q.ERROR_404 = '/404'), (q.JOBS = '/jobs'), (q.JOB = '/jobs/:jobId'), (q.STREAMKIT = '/streamkit'), (q.SECURITY = '/security'), (q.NITRO = '/nitro'), (q.DISCOVER = '/servers'), (q.GUIDELINES = '/guidelines'), (q.RICH_PRESENCE = '/rich-presence'), (q.VERIFICATION = '/verification'), (q.OPEN_SOURCE = '/open-source'), (q.WARFRAME = '/warframe'), (q.REMOTE_AUTH = '/ra/:remoteAuthFingerprint'), (q.SAFETY_LANDING = '/safetycenter'), (q.SAFETY_ARTICLE_ROOT = '/safety'), (q.SAFETY_ARTICLE = '/safety/:article'), (q.NEWSROOM = '/newsroom'), (q.INSPIRATION = '/inspiration'), (q.MOD_ACADEMY_LANDING = '/moderation'), (q.MOD_ACADEMY_EXAM = '/moderation/exam'), (q.MOD_ACADEMY_ARTICLE = '/moderation/:article'), (q.BLOG = '/blog'), (q.APP_DIRECTORY = '/application-directory'), (q.REFRESH_INDEX = '/new'), (q.REFRESH_INDEX_WORD = '/new/index'), (q.REFRESH_COMPANY = '/new/company'), (q.REFRESH_DOWNLOAD = '/new/download'), (q.REFRESH_PRIVACY = '/new/privacy'), (q.REFRESH_TERMS = '/new/terms'), (q.REFRESH_ACKNOWLEDGEMENTS = '/new/acknowledgements'), (q.REFRESH_LICENSES = '/new/licenses'), (q.REFRESH_BRANDING = '/new/branding'), (q.REFRESH_JOBS = '/new/jobs'), (q.REFRESH_JOB = '/new/jobs/:jobId'), (q.REFRESH_STREAMKIT = '/new/streamkit'), (q.REFRESH_NITRO = '/new/nitro'), (q.REFRESH_GUIDELINES = '/new/guidelines'), (q.REFRESH_SAFETY_LANDING = '/new/safety'), (q.REFRESH_SAFETY_ARTICLE = '/new/safety/:article'), (q.COLLEGE = '/college'), (q.LEAGUE_CLUBS = '/league-communities'), (q.DISCORD_RECRUITING_SCAMS = '/discord-recruitment-scams'), (q.DEV_NEWSLETTER_SIGNUP = '/dev-newsletter'), (q.LEGACY_DEV_NEWSLETTER = '/newsletter'), (q.LEGAL_ARCHIVE = '/archive/'), (q.TERMS_MAY_2020 = '/archive/terms/may-2020'), (q.PRIVACY_JUNE_2020 = '/archive/privacy/june-2020'), (q.GUIDELINES_MAY_2020 = '/archive/guidelines/may-2020'), (q.FALL_RELEASE_2023 = '/fallrelease'), (q.MOBILE_REDESIGN_2023 = '/mobile'), (q.REFRESH_XBOX_OFFER = '/new/discord-xbox-offer-2019'), (q.REFRESH_WHY_DISCORD = '/why-discord-is-different'), (q.WHY_DISCORD = '/why-discord'), (q.XBOX_OFFER = '/discord-xbox-offer-2020'), (q.COLLEGE_BRUINS = '/bruins'), (q.COLLEGE_ANTEATERS = '/anteaters'), (q.COLLEGE_GAUCHOS = '/gauchos'), (q.COLLEGE_BEARS = '/bears'), (q.COLLEGE_SLUGS = '/slugs'), (q.BACK_TO_SCHOOL_GIVEAWAY_INSTAGRAM = '/terms/back-to-school-2020/instagram'), (q.BACK_TO_SCHOOL_GIVEAWAY_TWITTER = '/terms/back-to-school-2020/twitter'), (q.SNOWSGIVING_GIVEAWAY_INSTAGRAM = '/terms/snowsgiving-2020/instagram'), (q.SNOWSGIVING_GIVEAWAY_TWITTER = '/terms/snowsgiving-2020/twitter'), (0, eE.Ft)(ex), (0, eE.Ft)(f);
-let eF = Object.freeze({
+((J = O || (O = {})).INDEX = '/'), (J.INDEX_WORD = '/index'), (J.INDEX_BUCKET = '/index/:bucketId'), (J.CHANGELOGS = '/changelogs/:date'), (J.COMMUNITY = '/community'), (J.COMPANY = '/company'), (J.COMPANY_INFORMATION = '/company-information'), (J.CREATORS = '/creators'), (J.DOWNLOADS = '/downloads'), (J.DOWNLOAD = '/download'), (J.GAMING = '/gaming'), (J.PRIVACY = '/privacy'), (J.TOS = '/tos'), (J.TERMS = '/terms'), (J.STORE_TERMS = '/store-terms'), (J.ACKNOWLEDGEMENTS = '/acknowledgements'), (J.LICENSES = '/licenses'), (J.PARTNERS = '/partners'), (J.HYPESQUAD = '/hypesquad'), (J.HYPESQUAD_RIOT = '/hypesquad-riot'), (J.BRANDING = '/branding'), (J.ERROR_404 = '/404'), (J.JOBS = '/jobs'), (J.JOB = '/jobs/:jobId'), (J.STREAMKIT = '/streamkit'), (J.SECURITY = '/security'), (J.NITRO = '/nitro'), (J.DISCOVER = '/servers'), (J.QUESTS = '/ads/quests'), (J.GUIDELINES = '/guidelines'), (J.RICH_PRESENCE = '/rich-presence'), (J.VERIFICATION = '/verification'), (J.OPEN_SOURCE = '/open-source'), (J.WARFRAME = '/warframe'), (J.REMOTE_AUTH = '/ra/:remoteAuthFingerprint'), (J.SAFETY_LANDING = '/safetycenter'), (J.SAFETY_ARTICLE_ROOT = '/safety'), (J.SAFETY_ARTICLE = '/safety/:article'), (J.NEWSROOM = '/newsroom'), (J.INSPIRATION = '/inspiration'), (J.MOD_ACADEMY_LANDING = '/moderation'), (J.MOD_ACADEMY_EXAM = '/moderation/exam'), (J.MOD_ACADEMY_ARTICLE = '/moderation/:article'), (J.BLOG = '/blog'), (J.APP_DIRECTORY = '/application-directory'), (J.REFRESH_INDEX = '/new'), (J.REFRESH_INDEX_WORD = '/new/index'), (J.REFRESH_COMPANY = '/new/company'), (J.REFRESH_DOWNLOAD = '/new/download'), (J.REFRESH_PRIVACY = '/new/privacy'), (J.REFRESH_TERMS = '/new/terms'), (J.REFRESH_ACKNOWLEDGEMENTS = '/new/acknowledgements'), (J.REFRESH_LICENSES = '/new/licenses'), (J.REFRESH_BRANDING = '/new/branding'), (J.REFRESH_JOBS = '/new/jobs'), (J.REFRESH_JOB = '/new/jobs/:jobId'), (J.REFRESH_STREAMKIT = '/new/streamkit'), (J.REFRESH_NITRO = '/new/nitro'), (J.REFRESH_GUIDELINES = '/new/guidelines'), (J.REFRESH_SAFETY_LANDING = '/new/safety'), (J.REFRESH_SAFETY_ARTICLE = '/new/safety/:article'), (J.COLLEGE = '/college'), (J.LEAGUE_CLUBS = '/league-communities'), (J.DISCORD_RECRUITING_SCAMS = '/discord-recruitment-scams'), (J.DEV_NEWSLETTER_SIGNUP = '/dev-newsletter'), (J.LEGACY_DEV_NEWSLETTER = '/newsletter'), (J.LEGAL_ARCHIVE = '/archive/'), (J.TERMS_MAY_2020 = '/archive/terms/may-2020'), (J.PRIVACY_JUNE_2020 = '/archive/privacy/june-2020'), (J.GUIDELINES_MAY_2020 = '/archive/guidelines/may-2020'), (J.FALL_RELEASE_2023 = '/fallrelease'), (J.MOBILE_REDESIGN_2023 = '/mobile'), (J.REFRESH_XBOX_OFFER = '/new/discord-xbox-offer-2019'), (J.REFRESH_WHY_DISCORD = '/why-discord-is-different'), (J.WHY_DISCORD = '/why-discord'), (J.XBOX_OFFER = '/discord-xbox-offer-2020'), (J.COLLEGE_BRUINS = '/bruins'), (J.COLLEGE_ANTEATERS = '/anteaters'), (J.COLLEGE_GAUCHOS = '/gauchos'), (J.COLLEGE_BEARS = '/bears'), (J.COLLEGE_SLUGS = '/slugs'), (J.BACK_TO_SCHOOL_GIVEAWAY_INSTAGRAM = '/terms/back-to-school-2020/instagram'), (J.BACK_TO_SCHOOL_GIVEAWAY_TWITTER = '/terms/back-to-school-2020/twitter'), (J.SNOWSGIVING_GIVEAWAY_INSTAGRAM = '/terms/snowsgiving-2020/instagram'), (J.SNOWSGIVING_GIVEAWAY_TWITTER = '/terms/snowsgiving-2020/twitter'), (0, eE.Ft)(eV), (0, eE.Ft)(O);
+let ek = Object.freeze({
     FACEBOOK_URL: 'https://www.facebook.com/discord/',
     INSTAGRAM_URL: 'https://www.instagram.com/discord/',
     YOUTUBE_URL: 'https://www.youtube.com/discord/',
     TIKTOK_URL: 'https://www.tiktok.com/@discord'
 });
-((z = S || (S = {})).EXPERIMENT_USER_TRIGGERED = 'experiment_user_triggered'),
+((z = p || (p = {})).EXPERIMENT_USER_TRIGGERED = 'experiment_user_triggered'),
     (z.EXPERIMENT_GUILD_TRIGGERED = 'experiment_guild_triggered'),
     (z.EXPERIMENT_SAVE_EXPOSURE_FAILED = 'experiment_save_exposure_failed'),
     (z.MKTG_PAGE_VIEWED = 'mktg_page_viewed'),
@@ -697,8 +694,8 @@ let eF = Object.freeze({
     (z.LOCATION_STACK_METADATA = 'location_stack_metadata'),
     (z.CREATOR_STORE_PAGE_VIEWED = 'creator_store_page_viewed'),
     (z.CREATOR_STORE_PAGE_CTA_CLICKED = 'creator_store_page_cta_clicked'),
-    ((L || (L = {})).MKTG_ACKNOWLEDGEMENTS_MODAL_OPEN = 'mktg_ack_modal_open'),
-    ((Q = D || (D = {})).AED = 'aed'),
+    ((h || (h = {})).MKTG_ACKNOWLEDGEMENTS_MODAL_OPEN = 'mktg_ack_modal_open'),
+    ((Q = S || (S = {})).AED = 'aed'),
     (Q.AFN = 'afn'),
     (Q.ALL = 'all'),
     (Q.AMD = 'amd'),
@@ -880,8 +877,8 @@ let eF = Object.freeze({
     (Q.ZAR = 'zar'),
     (Q.ZMW = 'zmw'),
     (Q.ZWL = 'zwl');
-let eW = 'US';
-((Z = h || (h = {})).COUNTRY = 'US'),
+let eF = 'US';
+((Z = D || (D = {})).COUNTRY = 'US'),
     (Z.CURRENCY = 'usd'),
     ((ee = C || (C = {}))[(ee.SINGLE_PLAYER = 1)] = 'SINGLE_PLAYER'),
     (ee[(ee.ONLINE_MULTIPLAYER = 2)] = 'ONLINE_MULTIPLAYER'),
@@ -965,12 +962,12 @@ let eW = 'US';
     (et[(et.INDIE = 67)] = 'INDIE'),
     (et[(et.ARCADE = 68)] = 'ARCADE'),
     (et[(et.POINT_AND_CLICK = 69)] = 'POINT_AND_CLICK'),
-    ((er = M || (M = {}))[(er.GUILD_ROLE_SUBSCRIPTIONS = 1)] = 'GUILD_ROLE_SUBSCRIPTIONS'),
+    ((er = U || (U = {}))[(er.GUILD_ROLE_SUBSCRIPTIONS = 1)] = 'GUILD_ROLE_SUBSCRIPTIONS'),
     (er[(er.GUILD_PRODUCTS = 2)] = 'GUILD_PRODUCTS'),
     ((en = P || (P = {})).PERMISSION_DENIED = 'PERMISSION_DENIED'),
     (en.PERMISSION_DISMISSED = 'PERMISSION_DISMISSED'),
     (en.NO_DEVICES_FOUND = 'NO_DEVICES_FOUND'),
-    ((ea = m || (m = {})).SWIPE = 'SWIPE'),
+    ((ea = M || (M = {})).SWIPE = 'SWIPE'),
     (ea.BROWSER = 'BROWSER'),
     (ea.KEYBIND = 'KEYBIND'),
-    ((eo = U || (U = {}))[(eo.IN_PROMPT = 1)] = 'IN_PROMPT');
+    ((e_ = G || (G = {}))[(e_.IN_PROMPT = 1)] = 'IN_PROMPT');

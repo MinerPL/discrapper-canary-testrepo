@@ -1,49 +1,42 @@
-var r = n(735250),
-    i = n(470079),
+var r = n(200651),
+    i = n(192379),
     a = n(392711),
     s = n.n(a),
-    o = n(792986),
+    o = n(252759),
     l = n(442837),
     u = n(481060),
     c = n(317381),
     d = n(966302),
-    _ = n(378364),
-    E = n(197344),
     f = n(474873),
-    h = n(292959),
-    p = n(944486),
-    I = n(246946),
+    _ = n(292959),
+    h = n(944486),
+    p = n(246946),
     m = n(340895),
-    T = n(557177),
-    S = n(918559),
-    g = n(871465);
-let A = {
+    g = n(557177),
+    E = n(918559),
+    v = n(871465);
+let I = {
         transform: 'scale(0.7)',
         opacity: 0
     },
-    N = {
+    S = {
         transform: 'scale(1)',
         opacity: 1
     };
 t.Z = i.memo(function () {
-    let e = (0, l.Wu)([m.Z, p.Z, c.ZP], () =>
+    let e = (0, l.Wu)([m.Z, h.Z, c.ZP], () =>
             m.Z.getIncomingCalls().filter((e) => {
                 let { channel: t } = e,
-                    n = c.ZP.getConnectedActivityChannelId() === t.id && p.Z.getVoiceChannelId() !== t.id && c.ZP.getActivityPanelMode() === S.Ez.PANEL;
-                return p.Z.getChannelId() !== t.id || n;
+                    n = c.ZP.getConnectedActivityChannelId() === t.id && h.Z.getVoiceChannelId() !== t.id && c.ZP.getActivityPanelMode() === E.Ez.PANEL;
+                return h.Z.getChannelId() !== t.id || n;
             })
         ),
         t = (0, l.e7)([m.Z], () => m.Z.hasIncomingCalls()),
-        n = (0, l.e7)([h.Z], () => h.Z.isSoundDisabled('call_ringing')),
-        a = E.Z.useIsRingtoneEligible(),
-        O = E.Z.useIsRingtoneDisabled(),
-        R = (0, l.e7)([I.Z], () => I.Z.disableSounds),
-        v = (0, l.e7)([f.Z], () => f.Z.getSoundpack()),
-        C = i.useRef(!1),
-        y = (0, o.Z)(() => {
-            let e = 'call_ringing';
-            return a && !O ? (0, T.tu)(_.Z.ringtone, e) : v === g.YC.CLASSIC ? (0, T.tu)(500 !== s().random(1, 1000) ? 'call_ringing' : s().sample(['call_ringing_beat', 'call_ringing_snow_halation']), e) : (0, T.uk)('call_ringing', v);
-        }, [v, O, a]);
+        n = (0, l.e7)([_.Z], () => _.Z.isSoundDisabled('call_ringing')),
+        a = (0, l.e7)([p.Z], () => p.Z.disableSounds),
+        T = (0, l.e7)([f.Z], () => f.Z.getSoundpack()),
+        b = i.useRef(!1),
+        y = (0, o.Z)(() => (T === v.YC.CLASSIC ? (0, g.tu)(500 !== s().random(1, 1000) ? 'call_ringing' : s().sample(['call_ringing_beat', 'call_ringing_snow_halation']), 'call_ringing') : (0, g.uk)('call_ringing', T)), [T]);
     return (
         i.useEffect(
             () => () => {
@@ -52,22 +45,22 @@ t.Z = i.memo(function () {
             [y]
         ),
         i.useEffect(() => {
-            if (R || n) {
-                C.current && (y.stop(), (C.current = !1));
+            if (a || n) {
+                b.current && (y.stop(), (b.current = !1));
                 return;
             }
-            t && !C.current ? (y.loop(), (C.current = !0)) : !t && C.current && (y.stop(), (C.current = !1));
-        }, [n, R, t, y]),
+            t && !b.current ? (y.loop(), (b.current = !0)) : !t && b.current && (y.stop(), (b.current = !1));
+        }, [n, a, t, y]),
         (0, u.useTransition)(e, {
             keys: (e) => {
                 var t;
                 return null === (t = e.channel) || void 0 === t ? void 0 : t.id;
             },
             enter: {
-                from: A,
-                to: N
+                from: I,
+                to: S
             },
-            leave: A,
+            leave: I,
             config: {
                 mass: 1,
                 tension: 500,

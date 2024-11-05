@@ -1,27 +1,28 @@
 n(47120), n(653041);
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
-    l = n(215569),
-    o = n(481060),
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    o = n(215569),
+    s = n(481060),
     c = n(140710),
+    d = n(833803),
     u = n(566006),
-    d = n(60174),
-    _ = n(453687),
-    E = n(434624),
-    I = n(287151),
-    m = n(689938),
-    T = n(952527),
-    h = n(219021);
-let N = (e, t) => (null == e && null == t) || e === t,
-    f = (e, t) => e.findIndex((e) => N(e.emoji.id, null == t ? void 0 : t.id) && N(e.emoji.name, null == t ? void 0 : t.name)),
-    C = (e, t) => {
+    m = n(60174),
+    h = n(453687),
+    f = n(434624),
+    p = n(287151),
+    g = n(388032),
+    _ = n(96042),
+    C = n(688236);
+let E = (e, t) => (null == e && null == t) || e === t,
+    I = (e, t) => e.findIndex((e) => E(e.emoji.id, null == t ? void 0 : t.id) && E(e.emoji.name, null == t ? void 0 : t.name)),
+    x = (e, t) => {
         if (null == t) return e;
-        let n = f(e, t);
+        let n = I(e, t);
         return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)];
     };
-class p extends a.PureComponent {
+class v extends r.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let n = e.message.reactions.length;
         return 0 === t.reactionsCount && n > 0
@@ -34,60 +35,63 @@ class p extends a.PureComponent {
               : null;
     }
     render() {
-        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: a, isGuest: s, isPendingMember: N, isForumToolbar: f, channel: C, className: p, forceAddReactions: g, reactionClassName: S, useChatFontScaling: A, forceHideReactionCreates: R, remainingReactions: x, combinedReactions: O, visibleReactionsCount: M } = this.props,
-            { disableTransitionAppear: v } = this.state,
-            L = A ? h : T,
-            Z = M > 0;
-        if (!Z && !g) return null;
-        let { enabled: P } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
-            b = P && Z,
-            D = (g && !Z) || b;
-        return (0, i.jsxs)(l.W, {
+        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: r, isGuest: l, isPendingMember: E, isForumToolbar: I, channel: x, className: v, forceAddReactions: N, reactionClassName: T, useChatFontScaling: S, forceHideReactionCreates: b, remainingReactions: A, combinedReactions: j, visibleReactionsCount: Z } = this.props,
+            { disableTransitionAppear: R } = this.state,
+            P = S ? C : _,
+            y = Z > 0;
+        if (!y && !N) return null;
+        let { enabled: L } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
+            { canShowImprovedReactionButton: O } = d.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
+            M = L && y,
+            k = (N && !y) || M,
+            D = O && !I;
+        return (0, i.jsxs)(o.W, {
             component: 'div',
-            className: r()(L.reactions, p),
-            transitionAppear: !v,
+            className: a()(P.reactions, v, { [P.largeReactions]: D }),
+            transitionAppear: !R,
             role: 'group',
             transitionLeave: !1,
-            id: (0, _.bY)(e),
+            id: (0, h.bY)(e),
             onMouseEnter: () => this.setState({ isHovered: !0 }),
             onMouseLeave: () => this.setState({ isHovered: !1 }),
             children: [
-                (0, i.jsx)(E.l, {
-                    reactions: O,
+                (0, i.jsx)(f.l, {
+                    reactions: j,
                     message: e,
                     readOnly: n,
-                    isLurking: a,
-                    isGuest: s,
-                    isPendingMember: N,
-                    isForumToolbar: f,
-                    useChatFontScaling: A,
-                    className: S
+                    isLurking: r,
+                    isGuest: l,
+                    isPendingMember: E,
+                    isForumToolbar: I,
+                    useChatFontScaling: S,
+                    className: T,
+                    emojiSize: D ? 'reactionLarge' : 'reaction'
                 }),
-                x > 0 &&
-                    (0, i.jsx)(o.Clickable, {
+                A > 0 &&
+                    (0, i.jsx)(s.Clickable, {
                         onClick: (t) => {
-                            t.stopPropagation(), (0, I.op)(C, e);
+                            t.stopPropagation(), (0, p.op)(x, e);
                         },
-                        className: r()(L.reaction, S, L.remainingReactions),
-                        'aria-label': m.Z.Messages.ADD_REACTION,
-                        children: (0, i.jsxs)(o.Text, {
-                            className: L.reactionInner,
+                        className: a()(P.reaction, T, P.remainingReactions),
+                        'aria-label': g.intl.string(g.t.lfIHs7),
+                        children: (0, i.jsxs)(s.Text, {
+                            className: P.reactionInner,
                             variant: 'text-sm/normal',
-                            children: ['+', x]
+                            children: ['+', A]
                         })
                     }),
                 !t &&
-                    !R &&
-                    (0, i.jsx)(d.X, {
-                        tabIndex: D || this.state.isHovered ? 0 : -1,
+                    !b &&
+                    (0, i.jsx)(m.X, {
+                        tabIndex: k || this.state.isHovered ? 0 : -1,
                         type: u.O.NORMAL,
                         message: e,
-                        channel: C,
-                        useChatFontScaling: A,
+                        channel: x,
+                        useChatFontScaling: S,
                         isHovered: this.state.isHovered,
-                        className: r()({
-                            [L.forceShow]: D,
-                            [L.forceShowLook]: g || b
+                        className: a()({
+                            [P.forceShow]: k,
+                            [P.forceShowLook]: N || M
                         })
                     })
             ]
@@ -114,19 +118,19 @@ class p extends a.PureComponent {
     }
 }
 t.Z = (e) => {
-    let { message: t, maxReactions: n, hoistReaction: s } = e,
+    let { message: t, maxReactions: n, hoistReaction: l } = e,
         {
-            combinedReactions: r,
-            remainingReactions: l,
-            visibleReactionsCount: o
-        } = a.useMemo(() => {
+            combinedReactions: a,
+            remainingReactions: o,
+            visibleReactionsCount: s
+        } = r.useMemo(() => {
             let e = [],
-                i = C(t.reactions, s),
-                a = null != n && n < i.length ? i.slice(0, n) : i,
-                r = i.length - a.length,
-                l = i.length;
+                i = x(t.reactions, l),
+                r = null != n && n < i.length ? i.slice(0, n) : i,
+                a = i.length - r.length,
+                o = i.length;
             return (
-                a.forEach((t) => {
+                r.forEach((t) => {
                     t.burst_count > 0 &&
                         e.push({
                             ...t,
@@ -137,19 +141,19 @@ t.Z = (e) => {
                                 ...t,
                                 type: u.O.NORMAL
                             }),
-                        null != t.me_vote && --l;
+                        null != t.me_vote && --o;
                 }),
                 {
                     combinedReactions: e,
-                    visibleReactionsCount: l,
-                    remainingReactions: r
+                    visibleReactionsCount: o,
+                    remainingReactions: a
                 }
             );
-        }, [s, n, t.reactions]);
-    return (0, i.jsx)(p, {
+        }, [l, n, t.reactions]);
+    return (0, i.jsx)(v, {
         ...e,
-        visibleReactionsCount: o,
-        combinedReactions: r,
-        remainingReactions: l
+        visibleReactionsCount: s,
+        combinedReactions: a,
+        remainingReactions: o
     });
 };

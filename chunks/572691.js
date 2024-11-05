@@ -78,7 +78,6 @@ t.Z = {
             a.Z.dispatch({ type: 'QUICKSWITCHER_HIDE' }),
             a.Z.dispatch({ type: 'MENTION_MODAL_CLOSE' }),
             a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_CLOSE' }),
-            a.Z.dispatch({ type: 'SEARCH_MODAL_CLOSE' }),
             a.Z.dispatch({ type: 'CONNECTIONS_GRID_MODAL_HIDE' }),
             a.Z.dispatch({ type: 'USER_PROFILE_MODAL_CLOSE' });
     }

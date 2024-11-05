@@ -1,51 +1,57 @@
 n.d(t, {
     ZP: function () {
-        return u;
+        return h;
     },
     aV: function () {
-        return d;
+        return u;
     },
     z6: function () {
-        return c;
+        return d;
     }
-});
-var i = n(735250);
-n(470079);
-var a = n(120356),
-    s = n.n(a),
-    r = n(567526),
-    l = n(481060),
-    o = n(9886);
-function c(e) {
-    let { scrollPosition: t } = e;
-    return (0, i.jsx)(r.animated.div, {
-        className: o.backdrop,
+}),
+    n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    l = n.n(a),
+    s = n(100621),
+    o = n(481060),
+    c = n(25912);
+function d(e) {
+    let { scrollPosition: t, minOpacity: n = 0 } = e;
+    return (0, i.jsx)(s.animated.div, {
+        className: c.backdrop,
         style: {
-            opacity: null == t ? void 0 : t.to([0, 100], [0, 1])
+            opacity: null == t ? void 0 : t.to([0, 100], [n, 1])
         }
     });
 }
-function d(e) {
-    let { onClick: t, icon: n } = e;
+function u(e) {
+    let { onClick: t, icon: n } = e,
+        [a, s] = r.useState(!1),
+        d = r.useCallback(() => s(!0), []),
+        u = r.useCallback(() => s(!1), []);
     return null != t
-        ? (0, i.jsx)(l.Clickable, {
-              className: s()(o.clickable, o.icon),
+        ? (0, i.jsx)(o.Clickable, {
+              className: l()(c.clickable, c.icon),
               onClick: t,
+              onMouseEnter: d,
+              onMouseLeave: u,
               children: (0, i.jsx)(n, {
-                  color: l.tokens.colors.HEADER_PRIMARY,
+                  color: a ? o.tokens.colors.INTERACTIVE_HOVER : o.tokens.colors.INTERACTIVE_NORMAL,
                   size: 'md'
               })
           })
         : (0, i.jsx)(n, {
-              className: o.icon,
-              color: l.tokens.colors.HEADER_PRIMARY,
+              className: c.icon,
+              color: o.tokens.colors.HEADER_PRIMARY,
               size: 'md'
           });
 }
-function u(e) {
+function h(e) {
     let { className: t, children: n } = e;
     return (0, i.jsx)('div', {
-        className: s()(o.headerBar, t),
+        className: l()(c.headerBar, t),
         children: n
     });
 }

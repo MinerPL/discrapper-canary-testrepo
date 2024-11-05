@@ -1,22 +1,25 @@
 n.d(t, {
+    Ht: function () {
+        return _;
+    },
     ef: function () {
-        return E;
+        return h;
     },
     kF: function () {
         return d;
     },
     oY: function () {
-        return f;
+        return p;
     },
     tG: function () {
-        return _;
+        return f;
     },
     y: function () {
-        return h;
+        return m;
     }
 });
-var r = n(735250);
-n(470079);
+var r = n(200651);
+n(192379);
 var i = n(120356),
     a = n.n(i),
     s = n(693789),
@@ -29,8 +32,8 @@ let c = {
     none: ''
 };
 function d(e) {
-    let { action: t, color: n = s.zx.Colors.PRIMARY, themeColor: i = 'primary', className: o, innerClassName: d, onClick: _, ...E } = e,
-        { trackUserProfileAction: f } = (0, l.KZ)();
+    let { action: t, color: n = s.zx.Colors.PRIMARY, themeColor: i = 'primary', className: o, innerClassName: d, onClick: f, ..._ } = e,
+        { trackUserProfileAction: h } = (0, l.KZ)();
     return (0, r.jsx)(s.zx, {
         className: a()(u.button, o),
         innerClassName: a()(u.buttonInner, d),
@@ -38,12 +41,12 @@ function d(e) {
         look: s.zx.Looks.FILLED,
         size: s.zx.Sizes.SMALL,
         onClick: (e) => {
-            null != t && f({ action: t }), null == _ || _(e);
+            null != t && h({ action: t }), null == f || f(e);
         },
-        ...E
+        ..._
     });
 }
-function _(e) {
+function f(e) {
     let { text: t, icon: n, ...i } = e;
     return (0, r.jsxs)(d, {
         'aria-label': t,
@@ -58,23 +61,42 @@ function _(e) {
         ]
     });
 }
-function E(e) {
-    let { icon: t, tooltipText: n, tooltipDelay: i, tooltipClassName: l, tooltipContainerClassName: c, className: _, innerClassName: E, shouldShowTooltip: f = !0, ...h } = e;
+function _(e) {
+    let { text: t, icon: n, ...i } = e;
+    return (0, r.jsxs)(d, {
+        'aria-label': t,
+        className: u.textBanner,
+        innerClassName: u.textBanner,
+        color: u.bannerColor,
+        themeColor: 'none',
+        ...i,
+        children: [
+            null != n &&
+                (0, r.jsx)(n, {
+                    size: 'xs',
+                    color: 'currentColor'
+                }),
+            t
+        ]
+    });
+}
+function h(e) {
+    let { icon: t, tooltipText: n, tooltipDelay: i, tooltipClassName: l, tooltipContainerClassName: c, className: f, innerClassName: _, shouldShowTooltip: h = !0, ...p } = e;
     return (0, r.jsx)(o.TooltipContainer, {
         text: n,
         'aria-label': !1,
         delay: i,
-        shouldShow: f,
+        shouldShow: h,
         className: c,
         tooltipClassName: l,
         children: (0, r.jsx)(d, {
-            className: a()(u.icon, _),
-            innerClassName: a()(u.icon, E),
+            className: a()(u.icon, f),
+            innerClassName: a()(u.icon, _),
             look: s.zx.Looks.FILLED,
             size: s.zx.Sizes.NONE,
             grow: !1,
             'aria-label': n,
-            ...h,
+            ...p,
             children: (0, r.jsx)(t, {
                 size: 'xs',
                 color: 'currentColor'
@@ -82,9 +104,9 @@ function E(e) {
         })
     });
 }
-function f(e) {
+function p(e) {
     let { className: t, innerClassName: n, ...i } = e;
-    return (0, r.jsx)(E, {
+    return (0, r.jsx)(h, {
         className: a()(u.banner, t),
         innerClassName: a()(u.banner, n),
         color: u.bannerColor,
@@ -92,9 +114,9 @@ function f(e) {
         ...i
     });
 }
-function h(e) {
+function m(e) {
     let { isHovering: t, className: n, innerClassName: i, ...o } = e;
-    return (0, r.jsx)(E, {
+    return (0, r.jsx)(h, {
         className: a()(u.hover, { [u.visible]: t }, n),
         innerClassName: a()(u.hover, i),
         color: u.hoverColor,

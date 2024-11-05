@@ -1,4 +1,1 @@
-e.exports = {
-    spinner: 'spinner_abbc33',
-    markdown: 'markdown_abbc33'
-};
+e.exports = '/assets/c176665f79a2f6091a15.svg';

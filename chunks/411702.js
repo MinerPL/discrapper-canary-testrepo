@@ -10,10 +10,12 @@ e.exports = {
     topRow: 'topRow_f2bc91',
     pill: 'pill_f2bc91',
     eyebrowText: 'eyebrowText_f2bc91',
-    submenuWrapper: 'submenuWrapper_f2bc91',
-    submenuIcon: 'submenuIcon_f2bc91',
+    utilButtonWrapper: 'utilButtonWrapper_f2bc91',
+    utilButtonIcon: 'utilButtonIcon_f2bc91',
     partnerBranding: 'partnerBranding_f2bc91',
     bottomRow: 'bottomRow_f2bc91',
     hints: 'hints_f2bc91',
-    hintsContainer: 'hintsContainer_f2bc91'
+    hintsContainer: 'hintsContainer_f2bc91',
+    videoOverlay: 'videoOverlay_f2bc91',
+    videoOverlayVisible: 'videoOverlayVisible_f2bc91'
 };

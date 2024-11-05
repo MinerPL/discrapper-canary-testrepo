@@ -1,80 +1,85 @@
 n.r(t),
     n.d(t, {
         ConfirmModal: function () {
-            return d;
+            return f;
         },
         DeclarativeConfirmModal: function () {
             return _;
         }
     });
-var r = n(735250),
-    i = n(470079),
+var r = n(200651),
+    i = n(192379),
     a = n(120356),
     s = n.n(a),
     o = n(693789),
-    l = n(260034),
-    u = n(709692),
-    c = n(575191);
-function d(e) {
+    l = n(481060),
+    u = n(540059),
+    c = n(709692),
+    d = n(642649);
+function f(e) {
     let t,
         n,
-        { header: a, children: d, confirmText: _, cancelText: E, className: f, onConfirm: h, onCancel: p, onClose: m, onCloseCallback: I, bodyClassName: T, transitionState: g, loading: S = !1, confirmButtonColor: A = o.zx.Colors.RED, focusCancel: N = !1 } = e,
-        v = i.useRef(null);
+        { header: a, children: f, confirmText: _, cancelText: h, className: p, onConfirm: m, onCancel: g, onClose: E, onCloseCallback: v, bodyClassName: I, transitionState: S, loading: T = !1, confirmButtonColor: b = o.zx.Colors.RED, focusCancel: y = !1 } = e,
+        A = i.useRef(null),
+        N = (0, u.Q)('ConfirmModal');
     return (
         i.useEffect(() => {
-            !N &&
+            !y &&
                 setTimeout(() => {
                     var e;
-                    return null === (e = v.current) || void 0 === e ? void 0 : e.focus();
+                    return null === (e = A.current) || void 0 === e ? void 0 : e.focus();
                 }, 0);
-        }, [N]),
-        i.useLayoutEffect(() => () => (null == I ? void 0 : I())),
-        null != E &&
+        }, [y]),
+        i.useLayoutEffect(() => () => (null == v ? void 0 : v())),
+        null != h &&
             (t = (0, r.jsx)(o.zx, {
                 type: 'button',
-                look: o.zx.Looks.LINK,
+                look: N ? o.zx.Looks.FILLED : o.zx.Looks.LINK,
                 color: o.zx.Colors.PRIMARY,
-                disabled: S,
+                className: d.cancelButton,
+                size: o.zx.Sizes.MEDIUM,
+                disabled: T,
                 onClick: () => {
-                    null == p || p(), m();
+                    null == g || g(), E();
                 },
-                autoFocus: N,
-                children: E
+                autoFocus: y,
+                children: h
             })),
         null != _ &&
             (n = (0, r.jsx)(o.zx, {
-                buttonRef: v,
+                buttonRef: A,
                 type: 'submit',
-                color: A,
-                submitting: S,
+                size: o.zx.Sizes.MEDIUM,
+                color: b,
+                submitting: T,
                 onClick: async () => {
                     try {
-                        await (null == h ? void 0 : h()), m();
+                        await (null == m ? void 0 : m()), E();
                     } catch (e) {
                         throw e;
                     }
                 },
-                autoFocus: !N,
+                autoFocus: !y,
                 children: _
             })),
-        (0, r.jsxs)(u.Y0, {
-            className: f,
-            transitionState: g,
+        (0, r.jsxs)(c.Y0, {
+            className: p,
+            transitionState: S,
             children: [
                 null != a
-                    ? (0, r.jsx)(u.xB, {
+                    ? (0, r.jsx)(c.xB, {
                           separator: !1,
-                          children: (0, r.jsx)(l.X, {
+                          children: (0, r.jsx)(l.Heading, {
                               variant: 'heading-lg/semibold',
                               children: a
                           })
                       })
                     : null,
-                (0, r.jsx)(u.hz, {
-                    className: s()(c.content, T),
-                    children: d
+                (0, r.jsx)(c.hz, {
+                    className: s()(d.content, I),
+                    children: f
                 }),
-                (0, r.jsxs)(u.mz, {
+                (0, r.jsxs)(c.mz, {
                     children: [n, t]
                 })
             ]
@@ -82,10 +87,10 @@ function d(e) {
     );
 }
 function _(e) {
-    return (0, r.jsx)(u.u_, {
+    return (0, r.jsx)(c.u_, {
         onCloseRequest: e.dismissable ? e.onCancel : null,
         renderModal: (t) =>
-            (0, r.jsx)(d, {
+            (0, r.jsx)(f, {
                 ...t,
                 ...e
             })

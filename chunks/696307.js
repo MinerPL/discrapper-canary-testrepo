@@ -4,6 +4,8 @@ e.exports = {
     profileEffect: 'profileEffect_b74403',
     profileEffectBackground: 'profileEffectBackground_b74403',
     previewContainer: 'previewContainer_b74403',
+    giftInfoContainer: 'giftInfoContainer_b74403',
+    previewContainerSelected: 'previewContainerSelected_b74403',
     previewContainerError: 'previewContainerError_b74403',
     previewTextContainer: 'previewTextContainer_b74403',
     previewTitleContainer: 'previewTitleContainer_b74403',

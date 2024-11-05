@@ -1,16 +1,20 @@
+n.d(t, {
+    Z: function () {
+        return f;
+    }
+});
 var r,
     i,
-    a = n(735250);
-n(470079);
+    a = n(200651);
+n(192379);
 var s = n(120356),
     o = n.n(s),
     l = n(873546),
     u = n(481060),
-    c = n(689938),
-    d = n(26270);
-((r = i || (i = {})).DEFAULT = ''), (r.BOLD = 'Bold'), (r.SOLID = 'Solid');
-let _ = (e) => {
-    let { closeAction: t, variant: n, keybind: r, className: i } = e;
+    c = n(388032),
+    d = n(619558);
+function f(e) {
+    let { closeAction: t, variant: n = '', keybind: r, className: i } = e;
     return (0, a.jsxs)('div', {
         className: o()(d.container, i),
         children: [
@@ -20,7 +24,7 @@ let _ = (e) => {
                     [d.closeButtonSolid]: 'Solid' === n
                 }),
                 onClick: t,
-                'aria-label': c.Z.Messages.CLOSE,
+                'aria-label': c.intl.string(c.t.cpT0Cg),
                 children:
                     'Solid' === n
                         ? (0, a.jsx)(u.CircleXIcon, {
@@ -43,5 +47,5 @@ let _ = (e) => {
                   })
         ]
     });
-};
-(_.defaultProps = { variant: '' }), (_.Variants = i), (t.Z = _);
+}
+((r = i || (i = {})).DEFAULT = ''), (r.BOLD = 'Bold'), (r.SOLID = 'Solid'), (f.Variants = i);

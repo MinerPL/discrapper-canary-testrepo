@@ -1,82 +1,83 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return S;
+        return x;
     }
 }),
-    t(789020);
-var n = t(735250);
-t(470079);
-var a = t(442837),
-    i = t(481060),
-    r = t(601911),
-    o = t(824856),
-    l = t(565138),
-    c = t(430824),
-    d = t(171246),
-    _ = t(696906),
-    u = t(981631),
-    E = t(689938),
-    T = t(438578);
-function S(e) {
-    var s;
-    let { app: t, currentSubscription: _, currentListing: u, alternativeListings: S, bundleSku: N } = e,
-        A = (0, r.y)(t, 100),
-        C = (0, d.KK)(N.flags),
-        m = C ? i.ServerIcon : i.UserIcon,
-        g = C ? E.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_SERVER_SUBSCRIPTIONS : E.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PERSONAL_SUBSCRIPTIONS,
-        h = null === (s = _.metadata) || void 0 === s ? void 0 : s.application_subscription_guild_id,
-        O = (0, a.e7)([c.Z], () => (C && null != h ? c.Z.getGuild(h) : void 0), [h, C]);
-    return (0, n.jsxs)('div', {
+    n(789020);
+var i = n(200651);
+n(192379);
+var s = n(442837),
+    r = n(481060),
+    l = n(601911),
+    a = n(887818),
+    o = n(824856),
+    c = n(565138),
+    d = n(430824),
+    u = n(171246),
+    m = n(696906),
+    h = n(981631),
+    g = n(388032),
+    p = n(438578);
+function x(e) {
+    var t;
+    let { app: n, currentSubscription: m, currentListing: h, alternativeListings: x, bundleSku: T } = e,
+        C = (0, l.y)(n, 100),
+        _ = (0, u.KK)(T.flags),
+        E = _ ? r.ServerIcon : r.UserIcon,
+        f = _ ? g.intl.string(g.t['46YF2N']) : g.intl.string(g.t.fFyGiI),
+        I = null === (t = m.metadata) || void 0 === t ? void 0 : t.application_subscription_guild_id,
+        N = (0, s.e7)([d.Z], () => (_ && null != I ? d.Z.getGuild(I) : void 0), [I, _]);
+    return (0, i.jsxs)('div', {
         children: [
-            (0, n.jsxs)('div', {
-                className: T.header,
+            (0, i.jsxs)('div', {
+                className: p.header,
                 children: [
-                    null != A &&
-                        (0, n.jsx)(i.Image, {
-                            src: A.href,
-                            imageClassName: T.appIcon,
+                    null != C &&
+                        (0, i.jsx)(r.Image, {
+                            src: C.href,
+                            imageClassName: p.appIcon,
                             width: 48,
                             height: 48
                         }),
-                    (0, n.jsxs)('div', {
+                    (0, i.jsxs)('div', {
                         children: [
-                            (0, n.jsx)(i.Heading, {
+                            (0, i.jsx)(r.Heading, {
                                 variant: 'heading-xl/semibold',
-                                children: t.name
+                                children: n.name
                             }),
-                            (0, n.jsxs)('div', {
-                                className: T.subInfo,
+                            (0, i.jsxs)('div', {
+                                className: p.subInfo,
                                 children: [
-                                    (0, n.jsxs)(i.Heading, {
+                                    (0, i.jsxs)(r.Heading, {
                                         variant: 'heading-md/normal',
-                                        className: T.subInfoType,
+                                        className: p.subInfoType,
                                         children: [
-                                            (0, n.jsx)(m, {
+                                            (0, i.jsx)(E, {
                                                 size: 'xs',
                                                 color: 'currentColor'
                                             }),
                                             ' ',
-                                            g
+                                            f
                                         ]
                                     }),
-                                    null != O &&
-                                        (0, n.jsxs)(n.Fragment, {
+                                    null != N &&
+                                        (0, i.jsxs)(i.Fragment, {
                                             children: [
-                                                (0, n.jsx)(i.Text, {
+                                                (0, i.jsx)(r.Text, {
                                                     variant: 'text-md/normal',
                                                     children: '\u2022'
                                                 }),
-                                                (0, n.jsxs)('span', {
-                                                    className: T.guildSubscription,
+                                                (0, i.jsxs)('span', {
+                                                    className: p.guildSubscription,
                                                     children: [
-                                                        (0, n.jsx)(l.Z, {
-                                                            guild: O,
-                                                            size: l.Z.Sizes.SMOL
+                                                        (0, i.jsx)(c.Z, {
+                                                            guild: N,
+                                                            size: c.Z.Sizes.SMOL
                                                         }),
-                                                        (0, n.jsx)(i.Heading, {
+                                                        (0, i.jsx)(r.Heading, {
                                                             variant: 'heading-md/semibold',
                                                             color: 'text-muted',
-                                                            children: E.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_SUBSCRIPTION_USED_IN.format({ guildName: O.name })
+                                                            children: g.intl.format(g.t['7ZD8p6'], { guildName: N.name })
                                                         })
                                                     ]
                                                 })
@@ -88,28 +89,50 @@ function S(e) {
                     })
                 ]
             }),
-            (0, n.jsx)(i.Text, {
-                variant: 'text-md/normal',
-                children: E.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_PLAN_SWITCH_NOTICE
+            (0, i.jsx)(a.Z, {
+                children: (e) =>
+                    (0, i.jsxs)('div', {
+                        className: p.planNotice,
+                        children: [
+                            (0, i.jsx)(r.Text, {
+                                variant: 'text-md/normal',
+                                children: g.intl.string(g.t['goe+ho'])
+                            }),
+                            e &&
+                                (0, i.jsxs)(i.Fragment, {
+                                    children: [
+                                        (0, i.jsx)(r.Text, {
+                                            variant: 'text-md/normal',
+                                            children: g.intl.format(g.t['Q8qJ+/'], {})
+                                        }),
+                                        (0, i.jsx)(r.Text, {
+                                            variant: 'text-md/normal',
+                                            children: g.intl.format(g.t.sqowY2, {})
+                                        })
+                                    ]
+                                }),
+                            (0, i.jsx)(a.Z.Toggle, { text: e ? g.intl.string(g.t['1Rkq/P']) : g.intl.string(g.t.WsTHkZ) })
+                        ]
+                    })
             }),
-            (0, n.jsxs)('div', {
-                className: T.subscriptions,
+            (0, i.jsxs)('div', {
+                className: p.subscriptions,
                 children: [
-                    (0, n.jsx)(o.Z, {
-                        storeListing: u,
-                        className: T.activeSubscriptionCard,
-                        cta: (0, n.jsx)(i.Text, {
+                    (0, i.jsx)(o.Z, {
+                        storeListing: h,
+                        className: p.activeSubscriptionCard,
+                        cta: (0, i.jsx)(r.Text, {
                             variant: 'eyebrow',
                             color: 'text-brand',
-                            children: E.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CURRENT_PLAN
+                            children: g.intl.string(g.t.fHIpOT)
                         })
                     }),
-                    S.map((e) =>
-                        (0, n.jsx)(
-                            I,
+                    x.map((e) =>
+                        (0, i.jsx)(
+                            S,
                             {
                                 storeListing: e,
-                                bundleSkuId: N.id
+                                guildId: I
                             },
                             e.id
                         )
@@ -119,24 +142,23 @@ function S(e) {
         ]
     });
 }
-function I(e) {
-    let { storeListing: s } = e,
-        { openModal: t } = (0, _.Z)({
-            showBenefitsFirst: !1,
-            analyticsLocation: u.Sbl.APP_SUBSCRIPTIONS_MANAGEMENT,
-            skuId: s.skuId,
-            guildId: null
+function S(e) {
+    let { storeListing: t, guildId: n } = e,
+        { openModal: s } = (0, m.ZP)({
+            analyticsLocation: h.Sbl.APP_SUBSCRIPTIONS_MANAGEMENT,
+            skuId: t.skuId,
+            subscribeForGuild: n
         });
-    return (0, n.jsx)(
+    return (0, i.jsx)(
         o.Z,
         {
-            storeListing: s,
-            cta: (0, n.jsx)(i.Button, {
-                size: i.Button.Sizes.SMALL,
-                onClick: t,
-                children: E.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CHOOSE_PLAN
+            storeListing: t,
+            cta: (0, i.jsx)(r.Button, {
+                size: r.Button.Sizes.SMALL,
+                onClick: s,
+                children: g.intl.string(g.t['+KwmBg'])
             })
         },
-        s.id
+        t.id
     );
 }

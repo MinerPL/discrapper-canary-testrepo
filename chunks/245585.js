@@ -2,7 +2,9 @@ n.d(t, {
     u: function () {
         return s;
     }
-});
+}),
+    n(627494),
+    n(757143);
 var r = n(503461),
     i = n(190313);
 function a(e, t, n) {
@@ -86,6 +88,10 @@ class o {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.Sn.Replace,
             a = n.map((n) => l(e, t, n));
         this.transaction.putAll(a, i);
+    }
+    replaceAll(e, t, n) {
+        let r = n.map((n) => l(e, t, n));
+        this.transaction.replaceAll(r);
     }
     deleteAll() {
         this.transaction.delete();

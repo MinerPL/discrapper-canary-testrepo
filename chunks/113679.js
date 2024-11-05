@@ -1,60 +1,62 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return h;
     }
 }),
     n(47120);
-var s = n(735250),
-    a = n(470079),
-    i = n(399606),
-    r = n(481060),
-    l = n(279542),
+var i = n(200651),
+    r = n(192379),
+    l = n(399606),
+    s = n(481060),
+    a = n(279542),
     o = n(496675),
     c = n(140031),
     d = n(981631),
-    u = n(689938),
-    _ = n(416486);
-function I(e) {
+    u = n(388032),
+    m = n(837236);
+function h(e) {
     let { guild: t } = e,
-        n = a.useId(),
-        I = (0, i.e7)([o.Z], () => null != t && o.Z.can(d.Plq.MANAGE_GUILD, t), [t]),
-        E = t.hasFeature(d.oNc.COMMUNITY),
-        [T, m] = a.useState(t.hasFeature(d.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
-        N = a.useCallback(
+        n = r.useId(),
+        h = (0, l.e7)([o.Z], () => null != t && o.Z.can(d.Plq.MANAGE_GUILD, t), [t]),
+        g = t.hasFeature(d.oNc.COMMUNITY),
+        [x, p] = r.useState(t.hasFeature(d.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
+        f = r.useCallback(
             async (e) => {
-                m(e), await (0, l.fp)(t, e);
+                p(e), await (0, a.fp)(t, e);
             },
             [t]
         );
-    return E
+    return g
         ? null
-        : (0, s.jsxs)('div', {
-              className: _.bannerContainer,
+        : (0, i.jsxs)('div', {
+              className: m.bannerContainer,
               children: [
-                  (0, s.jsx)(c.Z, {
+                  (0, i.jsx)(c.Z, {
                       width: 64,
                       height: 64
                   }),
-                  (0, s.jsxs)('div', {
-                      className: _.headingContainer,
+                  (0, i.jsxs)('div', {
+                      className: m.headingContainer,
                       children: [
-                          (0, s.jsx)(r.Heading, {
+                          (0, i.jsx)(s.Heading, {
                               variant: 'heading-lg/semibold',
-                              children: u.Z.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE
+                              color: 'always-white',
+                              children: u.intl.string(u.t.jDarm5)
                           }),
-                          (0, s.jsx)(r.Text, {
+                          (0, i.jsx)(s.Text, {
                               variant: 'text-sm/medium',
-                              children: u.Z.Messages.GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE_DESCRIPTION
+                              color: 'always-white',
+                              children: u.intl.string(u.t['/ee7yM'])
                           })
                       ]
                   }),
-                  (0, s.jsx)('div', {
-                      className: _.buttonContainer,
-                      children: (0, s.jsx)(r.Switch, {
+                  (0, i.jsx)('div', {
+                      className: m.buttonContainer,
+                      children: (0, i.jsx)(s.Switch, {
                           id: n,
-                          checked: T,
-                          onChange: N,
-                          disabled: !I
+                          checked: x,
+                          onChange: f,
+                          disabled: !h
                       })
                   })
               ]

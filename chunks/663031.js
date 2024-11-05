@@ -25,5 +25,6 @@ e.exports = {
     viewAsRolesWarning: 'viewAsRolesWarning_adcaac',
     viewAsRolesWarningText: 'viewAsRolesWarningText_adcaac',
     viewAsRolesWarningButton: 'viewAsRolesWarningButton_adcaac',
-    disabled: 'disabled_adcaac'
+    disabled: 'disabled_adcaac',
+    voiceButtonsContainer: 'voiceButtonsContainer_adcaac'
 };

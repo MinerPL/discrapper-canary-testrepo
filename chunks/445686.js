@@ -43,4 +43,5 @@ n.d(t, {
     (i.VideoEncoderFallback = 'video-encoder-fallback'),
     (i.RemoteStreamsReady = 'remote-streams-ready'),
     (i.MLSFailure = 'mls-failure'),
-    (i.SecureFramesUpdate = 'secure-frames-update');
+    (i.SecureFramesUpdate = 'secure-frames-update'),
+    (i.SdpError = 'sdp-error');

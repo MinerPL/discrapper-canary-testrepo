@@ -8,7 +8,7 @@ var r,
 let u = new Map(),
     c = new Set(),
     d = new Set();
-class _ extends (r = o.ZP.Store) {
+class f extends (r = o.ZP.Store) {
     canFetch(e) {
         return !c.has(e) && !d.has(e) && !u.has(e);
     }
@@ -17,6 +17,9 @@ class _ extends (r = o.ZP.Store) {
     }
     getGame(e) {
         return u.get(e);
+    }
+    getGames(e) {
+        return e.map((e) => u.get(e));
     }
     getLocalizedName(e) {
         var t;
@@ -33,7 +36,7 @@ class _ extends (r = o.ZP.Store) {
     }
 }
 (s = 'DetectableGameSupplementalStore'),
-    (a = 'displayName') in (i = _)
+    (a = 'displayName') in (i = f)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -41,7 +44,7 @@ class _ extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new _(l.Z, {
+    (t.Z = new f(l.Z, {
         LOGOUT: function () {
             (u = new Map()), (c = new Set()), (d = new Set());
         },
@@ -57,12 +60,12 @@ class _ extends (r = o.ZP.Store) {
                 c.delete(e), d.delete(e);
             }),
                 n.forEach((e) => {
-                    let { application_id: t, name: n, summary: r, websites: i, themes: a, genres: s, platforms: o, artwork_urls: l, screenshot_urls: c, cover_image_url: d, first_release_date: _, summary_localized: E, publisher_names: f, developer_names: h } = e;
+                    let { application_id: t, name: n, summary: r, websites: i, themes: a, genres: s, platforms: o, artwork_urls: l, screenshot_urls: c, cover_image_url: d, first_release_date: f, summary_localized: _, publisher_names: h, developer_names: p } = e;
                     u.set(t, {
                         applicationId: t,
                         name: n,
                         summary: r,
-                        summaryLocalized: E,
+                        summaryLocalized: _,
                         websites: i,
                         themes: a,
                         genres: s,
@@ -70,9 +73,9 @@ class _ extends (r = o.ZP.Store) {
                         artwork: l,
                         screenshots: c,
                         coverImageUrl: d,
-                        firstReleaseDate: _,
-                        publishers: null != f ? f : [],
-                        developers: null != h ? h : []
+                        firstReleaseDate: f,
+                        publishers: null != h ? h : [],
+                        developers: null != p ? p : []
                     });
                 });
         },

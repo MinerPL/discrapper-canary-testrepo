@@ -1,6 +1,6 @@
 n(47120), n(724458);
-var r = n(735250),
-    i = n(470079),
+var r = n(200651),
+    i = n(192379),
     a = n(120356),
     s = n.n(a),
     o = n(392711),
@@ -8,115 +8,116 @@ var r = n(735250),
     u = n(788911),
     c = n(911969),
     d = n(367907),
-    _ = n(588468),
-    E = n(30465),
-    f = n(218867),
-    h = n(313201),
-    p = n(806966),
-    m = n(98528),
-    I = n(551058),
-    T = n(555573),
-    g = n(10718),
+    f = n(588468),
+    _ = n(30465),
+    h = n(218867),
+    p = n(313201),
+    m = n(806966),
+    g = n(98528),
+    E = n(551058),
+    v = n(555573),
+    I = n(10718),
     S = n(367790),
-    A = n(895924),
-    N = n(581364),
-    v = n(56801),
-    O = n(342687),
-    R = n(826298),
+    T = n(895924),
+    b = n(581364),
+    y = n(56801),
+    A = n(342687),
+    N = n(826298),
     C = n(689079),
-    y = n(981631),
-    D = n(689938),
-    L = n(11872),
-    b = n(239840);
-let M = [8, 8, 0, 8],
-    P = l().debounce(() => {
-        (0, d.yw)(y.rMx.APPLICATION_COMMAND_BROWSER_SCROLLED);
+    R = n(981631),
+    O = n(388032),
+    D = n(590515),
+    L = n(239840);
+let x = [8, 8, 0, 8],
+    w = l().debounce(() => {
+        (0, d.yw)(R.rMx.APPLICATION_COMMAND_BROWSER_SCROLLED);
     }, 300);
-function U(e) {
+function M(e) {
     e.preventDefault();
 }
 t.Z = i.forwardRef(function (e, t) {
     let { channel: n, canOnlyUseTextCommands: a } = e,
         o = i.useRef(!1),
         l = i.useRef(0),
-        [w, x] = i.useState(0),
-        G = i.useRef(null),
-        [k, B] = i.useState(!1),
-        F = p.Xn.useStore((e) => e.activeCategoryIndex);
+        [P, k] = i.useState(0),
+        U = i.useRef(null),
+        [G, B] = i.useState(!1),
+        Z = m.Xn.useStore((e) => e.activeCategoryIndex);
     i.useEffect(() => {
-        (0, d.yw)(y.rMx.APPLICATION_COMMAND_BROWSER_OPENED);
+        (0, d.yw)(R.rMx.APPLICATION_COMMAND_BROWSER_OPENED);
     }, []);
     let {
-            sectionDescriptors: V,
-            activeSections: H,
-            commandsByActiveSection: Z,
-            hasMoreAfter: Y,
-            commands: j,
+            sectionDescriptors: F,
+            activeSections: V,
+            commandsByActiveSection: j,
+            hasMoreAfter: H,
+            commands: Y,
             filteredSectionId: W,
             scrollDown: K,
             filterSection: z
-        } = g.wi(
-            n,
-            {
+        } = I.wi({
+            channel: n,
+            filters: {
                 commandTypes: [c.yU.CHAT],
                 builtIns: a ? S.D.ONLY_TEXT : S.D.ALLOW,
                 applicationCommands: !a
             },
-            {
+            options: {
                 placeholderCount: 7,
                 limit: C.tn,
                 includeFrecency: !0
-            }
-        ),
-        q = (0, m.Qs)({
-            activeCategoryIndex: F,
+            },
+            allowFetch: !0
+        }),
+        q = (0, g.Qs)({
+            activeCategoryIndex: Z,
             isScrolling: o,
-            listRef: G,
+            listRef: U,
             onActiveCategoryIndexChange: (e) => {
-                let t = H[e];
+                let t = V[e];
                 if (null != t) {
-                    let e = V.findIndex((e) => e.id === t.id);
-                    p.Xn.setActiveCategoryIndex(e);
+                    let e = F.findIndex((e) => e.id === t.id);
+                    m.Xn.setActiveCategoryIndex(e);
                 }
             },
             scrollOffset: 20,
             searchQuery: ''
         }),
         Q = (e) => {
-            let t = H.length,
-                n = Z.reduce((e, t) => e + t.data.length, 0) - (Y ? 7 : 0);
-            Y && e + 420 > 48 * t + 56 * n - 512 && K(), q(e), P(), (l.current = e);
+            let t = V.length,
+                n = j.reduce((e, t) => e + t.data.length, 0) - (H ? 7 : 0);
+            H && e + 420 > 48 * t + 56 * n - 512 && K(), q(e), w(), (l.current = e);
         };
     i.useEffect(() => {
         Q(l.current);
-    }, [j]);
-    let X = i.useCallback((e) => (e !== H.length - 1 || Y ? 16 : 0), [H.length, Y]),
-        $ = Z.map((e) => e.data.length);
+    }, [Y]);
+    let X = i.useCallback((e) => (e !== V.length - 1 || H ? 16 : 0), [V.length, H]),
+        J = j.map((e) => e.data.length);
     i.useEffect(() => {
-        null != G.current && k && null != w && G.current.scrollRowIntoView(w);
-    }, [k, w]),
+        null != U.current && G && null != P && U.current.scrollRowIntoView(P);
+    }, [G, P]),
         i.useLayoutEffect(() => {
             if (null != W) {
                 var e;
-                null === (e = G.current) || void 0 === e || e.scrollToSectionTop(0);
+                null === (e = U.current) || void 0 === e || e.scrollToSectionTop(0);
             }
-        }, [j, W]);
-    let J = i.useCallback(
+        }, [Y, W]);
+    let $ = i.useCallback(
             (e) => {
                 if (e.id === W || e.id === C.bi.FRECENCY) {
                     var t;
-                    z(null), null === (t = G.current) || void 0 === t || t.scrollToSectionTop(0);
+                    z(null), null === (t = U.current) || void 0 === t || t.scrollToSectionTop(0);
                 } else z(e.id);
             },
             [z, W]
         ),
         ee = i.useCallback(
             (e, t, r) => {
-                T.Po({
+                v.Po({
                     channelId: n.id,
                     command: e,
                     section: t,
-                    location: A.Vh.DISCOVERY,
+                    location: T.Vh.DISCOVERY,
                     triggerSection: r
                 });
             },
@@ -126,34 +127,34 @@ t.Z = i.forwardRef(function (e, t) {
         t,
         () => ({
             onTabOrEnter: (e) => {
-                if (null == w) return !e && (x(0), !0);
-                if (null == w) return !1;
+                if (null == P) return !e && (k(0), !0);
+                if (null == P) return !1;
                 let t = 0,
                     n = 0;
-                for (let e of Z)
-                    if (((t = n), w < (n += e.data.length))) {
-                        let n = e.data[w - t],
-                            r = V.find((e) => e.id === n.applicationId);
-                        ee(n, r, (0, N.tI)(e.section));
+                for (let e of j)
+                    if (((t = n), P < (n += e.data.length))) {
+                        let n = e.data[P - t],
+                            r = F.find((e) => e.id === n.applicationId);
+                        ee(n, r, (0, b.tI)(e.section));
                         break;
                     }
                 return !0;
             },
             onMoveSelection: (e) => {
-                if (0 === j.length) return !0;
-                let t = Y ? 7 : 0,
-                    n = j.length + t,
-                    r = null == w ? 0 : w + e;
-                return r >= n ? (r = n - 1) : r < 0 && (r = 0), x(r), B(!0), !0;
+                if (0 === Y.length) return !0;
+                let t = H ? 7 : 0,
+                    n = Y.length + t,
+                    r = null == P ? 0 : P + e;
+                return r >= n ? (r = n - 1) : r < 0 && (r = 0), k(r), B(!0), !0;
             }
         }),
-        [j.length, Z, Y, V, ee, w]
+        [Y.length, j, H, F, ee, P]
     );
     let et = i.useCallback(
             (e) => {
-                let t = H[e];
+                let t = V[e];
                 if (null == t) return null;
-                let i = (0, R.ky)(t),
+                let i = (0, N.ky)(t),
                     a = (0, r.jsx)(i, {
                         channel: n,
                         section: t,
@@ -162,109 +163,109 @@ t.Z = i.forwardRef(function (e, t) {
                         padding: 0
                     });
                 return (0, r.jsx)(
-                    I.Z,
+                    E.Z,
                     {
-                        className: L.categoryHeader,
+                        className: D.categoryHeader,
                         icon: a,
                         children: t.name
                     },
                     e
                 );
             },
-            [n, H]
+            [n, V]
         ),
         en = i.useCallback(
             (e, t) => {
-                let n = e === H.length - 1,
-                    i = H[e],
-                    { data: a } = Z[e];
+                let n = e === V.length - 1,
+                    i = V[e],
+                    { data: a } = j[e];
                 return (0, r.jsxs)(
                     'ul',
                     {
                         role: 'group',
                         'aria-label': i.name,
-                        className: s()(L.categorySection, { [L.categorySectionLast]: n }),
+                        className: s()(D.categorySection, { [D.categorySectionLast]: n }),
                         children: [
                             t,
                             0 === a.length &&
                                 (0, r.jsx)(u.Z, {
-                                    message: D.Z.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({ applicationName: i.name }),
-                                    noResultsImageURL: b,
-                                    className: L.noSearchResults
+                                    message: O.intl.format(O.t.WoQXT0, { applicationName: i.name }),
+                                    noResultsImageURL: L,
+                                    className: D.noSearchResults
                                 })
                         ]
                     },
                     e
                 );
             },
-            [H, Z]
+            [V, j]
         ),
         er = i.useCallback(
             (e, t) => {
                 var i;
-                let a = Z[t.sectionIndex],
+                let a = j[t.sectionIndex],
                     s = a.data[t.sectionRowIndex],
                     o = ''.concat(a.section.id, ':').concat(null !== (i = null == s ? void 0 : s.id) && void 0 !== i ? i : e);
-                if (null == s || (a.section.id !== s.applicationId && a.section.id !== C.bi.FRECENCY) || s.inputType === A.iw.PLACEHOLDER) return (0, r.jsx)(O.Z, {}, o);
-                let l = V.find((e) => e.id === s.applicationId);
+                if (null == s || (a.section.id !== s.applicationId && a.section.id !== C.bi.FRECENCY) || s.inputType === T.iw.PLACEHOLDER) return (0, r.jsx)(A.Z, {}, o);
+                let l = F.find((e) => e.id === s.applicationId);
                 return (0, r.jsx)(
-                    _.ZP.NewCommand,
+                    f.ZP.NewCommand,
                     {
                         index: e,
                         command: s,
                         channel: n,
-                        className: L.itemWrapper,
-                        selected: w === e,
+                        className: D.itemWrapper,
+                        selected: P === e,
                         showImage: a.section.id !== s.applicationId,
                         section: l,
-                        onClick: () => ee(s, l, (0, N.tI)(a.section)),
+                        onClick: () => ee(s, l, (0, b.tI)(a.section)),
                         onHover: () => {
-                            x(null), B(!1);
+                            k(null), B(!1);
                         }
                     },
                     o
                 );
             },
-            [n, Z, ee, V, w]
+            [n, j, ee, F, P]
         ),
-        ei = (0, h.Dt)();
+        ei = (0, p.Dt)();
     return (
-        (0, E.KR)(ei, !0, (0, _.DJ)(w)),
+        (0, _.KR)(ei, !0, (0, f.DJ)(P)),
         i.useEffect(
             () => () => {
-                (0, E.sJ)();
+                (0, _.sJ)();
             },
             []
         ),
-        (0, r.jsxs)(_.ZP, {
+        (0, r.jsxs)(f.ZP, {
             id: ei,
-            className: L.outerWrapper,
-            innerClassName: L.wrapper,
-            onMouseDown: U,
+            className: D.outerWrapper,
+            innerClassName: D.wrapper,
+            onMouseDown: M,
             children: [
-                (0, r.jsx)(v.Z, {
-                    className: L.rail,
+                (0, r.jsx)(y.Z, {
+                    className: D.rail,
                     channel: n,
-                    sections: V,
+                    sections: F,
                     filteredSectionId: W,
-                    activeCategoryIndex: F,
-                    onSectionClick: J,
-                    applicationCommandListRef: G
+                    activeCategoryIndex: Z,
+                    onSectionClick: $,
+                    applicationCommandListRef: U
                 }),
-                (0, r.jsx)(f.Z, {
+                (0, r.jsx)(h.Z, {
                     role: 'listbox',
-                    className: L.list,
-                    listPadding: M,
+                    className: D.list,
+                    listPadding: x,
                     onScroll: Q,
                     renderRow: er,
                     renderSection: en,
                     renderSectionHeader: et,
-                    rowCount: H.length,
-                    rowCountBySection: $,
+                    rowCount: V.length,
+                    rowCountBySection: J,
                     rowHeight: 56,
                     sectionHeaderHeight: 32,
                     sectionMarginBottom: X,
-                    ref: G,
+                    ref: U,
                     stickyHeaders: !0
                 })
             ]

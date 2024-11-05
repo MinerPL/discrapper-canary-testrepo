@@ -1,39 +1,45 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return T;
+        return p;
     }
-});
-var n = t(735250);
-t(470079);
-var a = t(442837),
-    i = t(409700),
-    r = t(480294),
-    o = t(63063),
-    l = t(838436),
-    c = t(51331),
-    d = t(922628),
-    _ = t(726985),
-    u = t(981631),
-    E = t(689938);
-function T() {
-    let e = (0, a.cj)([r.Z], () => r.Z.hasConsented(u.pjP.PERSONALIZATION));
-    return (0, n.jsx)(l.U, {
-        setting: _.s6.PRIVACY_DATA_PERSONALIZE_V2,
-        children: (0, n.jsx)(c.Z, {
-            title: E.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE,
-            note: E.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE.format({ helpdeskArticle: o.Z.getArticleURL(u.BhN.DATA_USED_FOR_RECOMMENDED) }),
-            value: e,
+}),
+    n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(442837),
+    l = n(924628),
+    a = n(480294),
+    o = n(63063),
+    c = n(838436),
+    d = n(51331),
+    u = n(922628),
+    m = n(726985),
+    h = n(981631),
+    g = n(388032);
+function p() {
+    let e = (0, r.cj)([a.Z], () => a.Z.hasConsented(h.pjP.PERSONALIZATION)),
+        [t, n] = s.useState(e);
+    return (0, i.jsx)(c.U, {
+        setting: m.s6.PRIVACY_DATA_PERSONALIZE_V2,
+        children: (0, i.jsx)(d.Z, {
+            title: g.intl.string(g.t.MNKzys),
+            note: g.intl.format(g.t['eQL/Mj'], { helpdeskArticle: o.Z.getArticleURL(h.BhN.DATA_USED_FOR_RECOMMENDED) }),
+            value: t,
             onChange: (e) => {
                 e
-                    ? (0, i.g)([u.pjP.PERSONALIZATION], []).catch(d.S)
-                    : (0, d.V)({
-                          header: E.Z.Messages.PERSONALIZATION_DISABLE_MODAL_TITLE,
-                          confirmText: E.Z.Messages.PERSONALIZATION_DISABLE_MODAL_CONFIRM,
-                          cancelText: E.Z.Messages.PERSONALIZATION_DISABLE_MODAL_CANCEL,
+                    ? (0, l.g)([h.pjP.PERSONALIZATION], [])
+                          .catch(u.S)
+                          .then(() => n(!0))
+                    : (0, u.V)({
+                          header: g.intl.string(g.t['9SNpzs']),
+                          confirmText: g.intl.string(g.t['9g5UGx']),
+                          cancelText: g.intl.string(g.t['+ZLPw8']),
                           onConfirm: () => {
-                              (0, i.g)([], [u.pjP.PERSONALIZATION]).catch(d.S);
+                              (0, l.g)([], [h.pjP.PERSONALIZATION])
+                                  .catch(u.S)
+                                  .then(() => n(!1));
                           },
-                          body: E.Z.Messages.PERSONALIZATION_DISABLE_MODAL_BODY
+                          body: g.intl.string(g.t.gJvDDg)
                       });
             }
         })

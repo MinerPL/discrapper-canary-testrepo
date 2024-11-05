@@ -4,6 +4,7 @@ e.exports = {
     threadSidebarOpen: 'threadSidebarOpen_a7d72e',
     threadSidebarFloating: 'threadSidebarFloating_a7d72e',
     form: 'form_a7d72e',
+    formWithLoadedChatInput: 'formWithLoadedChatInput_a7d72e',
     chatContent: 'chatContent_a7d72e',
     cursorPointer: 'cursorPointer_a7d72e',
     content: 'content_a7d72e',
@@ -27,5 +28,6 @@ e.exports = {
     linkedLobbyEducationTooltipWrapper: 'linkedLobbyEducationTooltipWrapper_a7d72e',
     linkedLobbyEducationTooltip: 'linkedLobbyEducationTooltip_a7d72e',
     linkedLobbyEducationTooltipCloseClickContainer: 'linkedLobbyEducationTooltipCloseClickContainer_a7d72e',
-    linkedLobbyEducationTooltipCloseIcon: 'linkedLobbyEducationTooltipCloseIcon_a7d72e'
+    linkedLobbyEducationTooltipCloseIcon: 'linkedLobbyEducationTooltipCloseIcon_a7d72e',
+    entryPointButtonContainer: 'entryPointButtonContainer_a7d72e'
 };

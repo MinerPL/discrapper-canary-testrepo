@@ -1,39 +1,41 @@
 n.d(t, {
     HI: function () {
-        return o;
+        return l;
     },
     gm: function () {
-        return s;
+        return o;
     }
 });
-var r = n(735250),
-    i = n(470079),
+var r = n(200651),
+    i = n(192379),
     a = n(588468);
-function s(e) {
-    let { titleWithQuery: t, titleWithoutQuery: n, query: i, getQuery: s, headerClassName: o, headerTrailingContent: l } = e,
-        u = i.length > 0 ? t.format({ prefix: s(i) }) : n;
+n(419922);
+var s = n(388032);
+function o(e) {
+    let { titleWithQuery: t, titleWithoutQuery: n, query: i, getQuery: o, headerClassName: l, headerTrailingContent: u } = e,
+        c = i.length > 0 ? s.intl.formatToPlainString(t, { prefix: o(i) }) : n;
     return (0, r.jsx)(
         a.ZP.Title,
         {
-            className: o,
-            title: u,
-            children: l
+            className: l,
+            title: c,
+            children: u
         },
-        'autocomplete-title-'.concat(u)
+        'autocomplete-title-'.concat(c)
     );
 }
-function o(e) {
-    let { query: t, selectedIndex: n, autocompletes: a, onHover: o, onClick: l, titleWithQuery: u, titleWithoutQuery: c, Component: d, getProps: _, getQuery: E, key: f, indexOffset: h = 0, headerClassName: p, headerTrailingContent: m, footer: I } = e;
-    if (null == I && (null == a || 0 === a.length)) return null;
-    let T =
+function l(e) {
+    let { query: t, selectedIndex: n, autocompletes: a, onHover: s, onClick: l, titleWithQuery: u, titleWithoutQuery: c, Component: d, getProps: f, getQuery: _, key: h, indexOffset: p = 0, headerClassName: m, headerTrailingContent: g, footer: E } = e;
+    if (null == E && (null == a || 0 === a.length)) return null;
+    let v =
         null == a
             ? void 0
             : a.map((e, t) => {
-                  let r = t + h,
-                      a = _(e, r);
+                  let r = t + p,
+                      a = f(e, r);
                   return (0, i.createElement)(d, {
                       onClick: l,
-                      onHover: o,
+                      onHover: s,
                       selected: n === r,
                       index: r,
                       ...a,
@@ -45,20 +47,19 @@ function o(e) {
         {
             children: [
                 null != u && null != c
-                    ? s({
+                    ? o({
                           titleWithQuery: u,
                           titleWithoutQuery: c,
                           query: t,
-                          getQuery: E,
-                          headerClassName: p,
-                          headerTrailingContent: m
+                          getQuery: _,
+                          headerClassName: m,
+                          headerTrailingContent: g
                       })
                     : null,
-                T,
-                I
+                v,
+                E
             ]
         },
-        f
+        h
     );
 }
-n(419922);

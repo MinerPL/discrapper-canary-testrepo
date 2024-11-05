@@ -1,67 +1,69 @@
-n.d(t, {
-    o: function () {
-        return N;
-    }
-}),
-    n(47120);
-var i = n(735250),
-    l = n(470079),
+n(47120);
+var i = n(200651),
+    l = n(192379),
     r = n(636977),
     a = n(704215),
-    s = n(481060),
-    o = n(169559),
-    c = n(706140),
+    o = n(481060),
+    s = n(169559),
+    c = n(243778),
     u = n(571457),
     d = n(836768),
-    h = n(341907),
-    p = n(703656),
+    h = n(749681),
+    p = n(667105),
     f = n(603592),
-    _ = n(981631),
     m = n(921944),
     g = n(49898),
-    C = n(46140),
-    I = n(689938),
-    E = n(55869);
-function N(e) {
-    switch (e) {
-        case g.F$.QUESTS:
-            return (0, h.navigateToQuestHome)(C.dr.DISCOVERY_COMPASS, r.j.DISCOVERY_COMPASS);
-        case g.F$.APPS:
-            return (0, p.uL)(_.Z5c.GLOBAL_DISCOVERY_APPS);
-        case g.F$.SERVERS:
-            return (0, p.uL)(_.Z5c.GLOBAL_DISCOVERY_SERVERS);
-        default:
-            return (0, p.uL)(_.Z5c.GLOBAL_DISCOVERY);
-    }
-}
-let S = l.forwardRef(function (e, t) {
-    let { selected: n, className: r, onClick: h } = e,
-        p = d.d.getState().selectedTab,
-        _ = (0, o.Z)('discovery_button'),
-        [C, S] = (0, c.cv)([a.z.GLOBAL_DISCOVERY_RAPIDASH_NOTIF]),
-        x = l.useCallback(() => {
-            null == h || h(), (0, u.k5)({ source: g.JU.GUILDS_BAR_ICON }), N(p), S(m.L.DISMISS);
-        }, [h, p, S]),
-        v = null != C && _,
+    C = n(128449),
+    _ = n(46140),
+    x = n(388032),
+    v = n(55869);
+let I = l.forwardRef(function (e, t) {
+    let { selected: n, className: I, onClick: b } = e,
+        S = (0, s.Z)('discovery_button'),
+        Z = (0, p.Ws)({ location: _.dr.CONFLICT_CHECKS }),
+        [N, E] = (0, c.US)(S && Z ? [a.z.RAPIDASH_MORE_GUILDS_UPSELL] : [], m.R.SIDEBAR, !0),
+        y = N === a.z.RAPIDASH_MORE_GUILDS_UPSELL,
+        j = l.useCallback(() => {
+            null == b || b(),
+                (0, u.k5)({ source: g.JU.GUILDS_BAR_ICON }),
+                !(function (e) {
+                    switch (e) {
+                        case g.F$.QUESTS:
+                            return (0, h.transitionToGlobalDiscovery)({
+                                tab: g.F$.QUESTS,
+                                location: _.dr.DISCOVERY_COMPASS,
+                                questContent: r.j.DISCOVERY_COMPASS
+                            });
+                        case g.F$.SERVERS:
+                            return (0, h.transitionToGlobalDiscovery)({
+                                tab: g.F$.SERVERS,
+                                entrypoint: C.Qq.GUILDS_BAR
+                            });
+                        default:
+                            return (0, h.transitionToGlobalDiscovery)({ tab: e });
+                    }
+                })(d.Z.getField('selectedTab')),
+                y && E(m.L.DISMISS);
+        }, [b, E, y]),
         T = l.useMemo(
             () => ({
                 lowerBadgeSize: {
                     width: 12,
                     height: 12
                 },
-                lowerBadge: v ? (0, i.jsx)('div', { className: E.guildNotif }) : void 0
+                lowerBadge: y ? (0, i.jsx)('div', { className: v.guildNotif }) : void 0
             }),
-            [v]
+            [y]
         );
     return (0, i.jsx)(f.Z, {
         id: 'guild-discover-button',
         ref: t,
-        className: r,
-        onClick: x,
+        className: I,
+        onClick: j,
         selected: n,
-        tooltip: I.Z.Messages.DISCOVER,
-        icon: s.CompassIcon,
+        tooltip: x.intl.string(x.t['4nEZLi']),
+        icon: o.CompassIcon,
         ...T
     });
 });
-t.Z = S;
+t.Z = I;

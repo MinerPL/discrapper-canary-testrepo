@@ -1,79 +1,80 @@
-s.r(a),
-    s.d(a, {
+a.r(t),
+    a.d(t, {
         default: function () {
-            return E;
+            return k;
         }
     });
-var t = s(735250),
-    o = s(470079),
-    n = s(481060),
-    l = s(442837),
-    i = s(194359),
-    c = s(906732),
-    d = s(321488),
-    r = s(417183),
-    u = s(170245),
-    m = s(735778),
-    p = s(171368),
-    h = s(974042),
-    _ = s(626135),
-    C = s(981631),
-    N = s(689938),
-    g = s(570828);
-function x(e) {
-    let { user: a, status: s } = e,
-        l = o.useContext(_.AnalyticsContext),
-        { analyticsLocations: m } = (0, c.ZP)(),
-        h = (e) => {
-            e.stopPropagation(), i.Z.cancelFriendRequest(a.id, { location: 'Spam requests modal' });
+var s = a(200651),
+    o = a(192379),
+    n = a(990547),
+    i = a(481060),
+    l = a(442837),
+    c = a(194359),
+    r = a(906732),
+    d = a(321488),
+    u = a(417183),
+    m = a(170245),
+    p = a(735778),
+    h = a(171368),
+    N = a(974042),
+    x = a(626135),
+    C = a(981631),
+    g = a(388032),
+    _ = a(61845);
+function I(e) {
+    let { user: t, status: a } = e,
+        n = o.useContext(x.AnalyticsContext),
+        { analyticsLocations: l } = (0, r.ZP)(),
+        p = (e) => {
+            e.stopPropagation(), c.Z.cancelFriendRequest(t.id, { location: 'Spam requests modal' });
         },
-        x = (e) => {
+        N = (e) => {
             e.stopPropagation(),
-                i.Z.addRelationship({
-                    userId: a.id,
+                c.Z.addRelationship({
+                    userId: t.id,
                     context: { location: 'Spam requests modal' }
                 });
         },
-        E = s === C.Skl.OFFLINE ? C.Skl.UNKNOWN : s;
-    return (0, t.jsx)('div', {
-        className: g.spamRequest,
-        children: (0, t.jsx)(r.Z, {
+        I = a === C.Skl.OFFLINE ? C.Skl.UNKNOWN : a;
+    return (0, s.jsx)('div', {
+        className: _.spamRequest,
+        children: (0, s.jsx)(u.Z, {
             isFocused: !1,
-            user: a,
-            className: g.listItem,
-            activeClassName: g.active,
+            user: t,
+            className: _.listItem,
+            activeClassName: _.active,
             onClick: () =>
-                (0, p.openUserProfileModal)({
-                    userId: a.id,
-                    sourceAnalyticsLocations: m,
-                    analyticsLocation: l.location
+                (0, h.openUserProfileModal)({
+                    userId: t.id,
+                    sourceAnalyticsLocations: l,
+                    analyticsLocation: n.location
                 }),
             children: (e) =>
-                (0, t.jsxs)('div', {
-                    className: g.listItemContents,
+                (0, s.jsxs)('div', {
+                    className: _.listItemContents,
                     children: [
-                        (0, t.jsx)(u.Z, {
-                            user: a,
+                        (0, s.jsx)(m.Z, {
+                            user: t,
                             hovered: e,
-                            status: E,
-                            subText: a.username,
-                            className: g.userInfo
+                            status: I,
+                            subText: t.username,
+                            className: _.userInfo
                         }),
-                        (0, t.jsxs)('div', {
-                            className: g.actions,
+                        (0, s.jsxs)('div', {
+                            className: _.actions,
                             children: [
-                                (0, t.jsx)(d.Z, {
-                                    icon: n.CheckmarkLargeIcon,
+                                (0, s.jsx)(d.Z, {
+                                    icon: i.CheckmarkLargeIcon,
                                     actionType: d.Z.ActionTypes.ACCEPT,
-                                    tooltip: N.Z.Messages.FRIEND_REQUEST_ACCEPT,
-                                    onClick: x,
+                                    tooltip: g.intl.string(g.t.ZcibdX),
+                                    onClick: N,
                                     shouldHighlight: e
                                 }),
-                                (0, t.jsx)(d.Z, {
-                                    icon: n.XSmallIcon,
+                                (0, s.jsx)(d.Z, {
+                                    icon: i.XSmallIcon,
                                     actionType: d.Z.ActionTypes.DENY,
-                                    tooltip: N.Z.Messages.FRIEND_REQUEST_IGNORE,
-                                    onClick: h,
+                                    tooltip: g.intl.string(g.t.xuio0N),
+                                    onClick: p,
                                     shouldHighlight: e
                                 })
                             ]
@@ -83,52 +84,53 @@ function x(e) {
         })
     });
 }
-function E(e) {
-    let { transitionState: a, onClose: s } = e,
-        { rows: c } = (0, l.cj)([h.ZP], () => h.ZP.getState()),
-        d = c.filter(C.pJs.SPAM),
-        r = d.length;
+function k(e) {
+    let { transitionState: t, onClose: a } = e,
+        { rows: r } = (0, l.cj)([N.ZP], () => N.ZP.getState()),
+        d = r.filter(C.pJs.SPAM),
+        u = d.length;
     return (o.useEffect(() => {
-        0 === r && s();
-    }, [r, s]),
-    (0, m.A)({ location: 'friend_request_spam_inbox' }))
-        ? (0, t.jsxs)(n.ModalRoot, {
-              transitionState: a,
-              className: g.modal,
+        0 === u && a();
+    }, [u, a]),
+    (0, p.A)({ location: 'friend_request_spam_inbox' }))
+        ? (0, s.jsxs)(i.ModalRoot, {
+              transitionState: t,
+              className: _.modal,
+              impression: { impressionName: n.ImpressionNames.FRIEND_REQUESTS_SPAM_INBOX },
               children: [
-                  (0, t.jsxs)(n.ModalHeader, {
+                  (0, s.jsxs)(i.ModalHeader, {
                       separator: !1,
                       children: [
-                          (0, t.jsx)(n.Heading, {
+                          (0, s.jsx)(i.Heading, {
                               variant: 'heading-lg/bold',
-                              className: g.heading,
-                              children: N.Z.Messages.FRIEND_REQUESTS_SPAM_REQUESTS
+                              className: _.heading,
+                              children: g.intl.string(g.t['rIMT+v'])
                           }),
-                          (0, t.jsx)(n.ModalCloseButton, {
-                              onClick: s,
-                              className: g.closeButton
+                          (0, s.jsx)(i.ModalCloseButton, {
+                              onClick: a,
+                              className: _.closeButton
                           })
                       ]
                   }),
-                  (0, t.jsx)(n.ModalContent, {
-                      className: g.modalContent,
+                  (0, s.jsx)(i.ModalContent, {
+                      className: _.modalContent,
                       children: d.map((e) =>
-                          (0, o.createElement)(x, {
+                          (0, o.createElement)(I, {
                               ...e,
                               isFocused: !1,
                               key: e.key
                           })
                       )
                   }),
-                  r > 1 &&
-                      (0, t.jsx)('div', {
-                          className: g.modalFooter,
-                          children: (0, t.jsx)(n.Button, {
-                              className: g.clearAllButton,
+                  u > 1 &&
+                      (0, s.jsx)('div', {
+                          className: _.modalFooter,
+                          children: (0, s.jsx)(i.Button, {
+                              className: _.clearAllButton,
                               onClick: () => {
-                                  i.Z.clearPendingSpam(), s();
+                                  c.Z.clearPendingSpam(), a();
                               },
-                              children: N.Z.Messages.CLEAR_ALL
+                              children: g.intl.string(g.t.O8k7Oz)
                           })
                       })
               ]

@@ -1,16 +1,17 @@
 n.d(t, {
     O: function () {
-        return l;
+        return u;
     }
 });
-var r = n(735250);
-n(470079);
+var r = n(200651);
+n(192379);
 var i = n(481060),
     a = n(626135),
-    s = n(110223),
-    o = n(981631);
-function l(e) {
-    let { channelId: t, blockedUserIds: l } = e;
+    s = n(799352),
+    o = n(110223),
+    l = n(981631);
+function u(e) {
+    let { channelId: t, blockedUserIds: u } = e;
     (0, i.openModalLazy)(
         async () => {
             let { default: e } = await n.e('87337').then(n.bind(n, 164375));
@@ -18,7 +19,7 @@ function l(e) {
                 let { transitionState: i, onClose: a } = n;
                 return (0, r.jsx)(e, {
                     channelId: t,
-                    blockedUserIds: l,
+                    blockedUserIds: u,
                     transitionState: i,
                     onClose: a
                 });
@@ -26,18 +27,19 @@ function l(e) {
         },
         {
             onCloseCallback: () => {
-                a.default.track(o.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                    action: s.q.DISMISS,
-                    channel_id: t,
-                    warning_medium: s.X.MODAL,
-                    blocked_user_ids: l
-                });
+                (0, s.O)(t),
+                    a.default.track(l.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                        action: o.q.DISMISS,
+                        channel_id: t,
+                        warning_medium: o.WR.MODAL,
+                        blocked_user_ids: u
+                    });
             }
         }
     ),
-        a.default.track(o.rMx.GDM_BLOCKED_USER_WARNING_VIEWED, {
+        a.default.track(l.rMx.GDM_BLOCKED_USER_WARNING_VIEWED, {
             channel_id: t,
-            warning_medium: s.X.MODAL,
-            blocked_user_ids: l
+            warning_medium: o.WR.MODAL,
+            blocked_user_ids: u
         });
 }

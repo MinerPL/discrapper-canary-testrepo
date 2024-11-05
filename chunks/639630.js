@@ -1,1 +1,1 @@
-e.exports = { image: 'image_f307a0' };
+t.exports = { image: 'image_f307a0' };

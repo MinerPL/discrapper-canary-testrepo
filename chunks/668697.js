@@ -1,1 +1,1 @@
-e.exports = { animationContainer: 'animationContainer_bcc984' };
+e.exports = { notificationContainer: 'notificationContainer_bcc984' };

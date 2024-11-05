@@ -1,1 +1,2 @@
-e.exports = '/assets/4aa76ae5d476be9ada18.svg';
+n.r(t);
+t.default = 'https://cdn.discordapp.com/assets/content/2c4310880f404da8da7a9199759ea5dc0609ed44aed47153f7c2bfc2b9ce2f62.jpg';

@@ -1,80 +1,88 @@
 t.d(n, {
     Z: function () {
-        return h;
+        return x;
     }
 }),
     t(47120);
-var i = t(735250),
-    a = t(470079),
-    l = t(481060),
+var i = t(200651),
+    l = t(192379),
+    a = t(481060),
     o = t(542094),
     r = t(895924),
-    s = t(499254),
-    c = t(827498),
-    d = t(160973),
-    u = t(783097),
-    m = t(890280),
-    p = t(176412),
-    _ = t(689938),
-    C = t(94958);
-function h(e) {
-    let { channel: n, application: t, sectionName: h, primaryEntryPointCommand: f, buttonSize: A = l.ButtonSizes.MEDIUM } = e,
-        E = a.useId(),
-        N = a.useCallback(() => {
-            s.yT(c.ti.ACTIVITY);
+    s = t(626135),
+    c = t(499254),
+    d = t(827498),
+    u = t(160973),
+    m = t(783097),
+    p = t(890280),
+    h = t(176412),
+    f = t(981631),
+    C = t(388032),
+    v = t(94958);
+function x(e) {
+    let { channel: n, application: t, sectionName: x, primaryEntryPointCommand: _, buttonSize: N = a.ButtonSizes.MEDIUM } = e,
+        g = l.useId(),
+        A = l.useCallback(() => {
+            c.yT(d.ti.ACTIVITY);
         }, []),
-        { submitting: x, wasSubmitting: v } = (0, m.Z)({
+        { submitting: b, wasSubmitting: E } = (0, p.Z)({
             applicationId: t.id,
             channelId: n.id,
-            launchingComponentId: E,
-            onSubmissionComplete: N
+            launchingComponentId: g,
+            onSubmissionComplete: A
         }),
-        [I, g] = a.useState(!1),
-        P = (0, o.Qv)({
+        [I, j] = l.useState(!1),
+        S = (0, o.Qv)({
             applicationId: t.id,
             channelId: n.id
         }),
-        L = a.useMemo(() => (0, u.XZ)(f.displayName), [f.displayName]),
+        y = l.useMemo(() => (0, m.XZ)(_.displayName), [_.displayName]),
         {
-            onActivityItemSelected: S,
+            onActivityItemSelected: P,
             buttonColor: T,
-            buttonText: b
-        } = (0, p.P7)({
+            buttonText: L
+        } = (0, h.P7)({
             channel: n,
             application: t,
             location: r.Vh.APP_LAUNCHER_APPLICATION_VIEW,
-            sectionName: h,
-            commandName: L,
-            autoDismissOnClick: P === o.JS.LEAVE,
-            launchingComponentId: E,
-            submitting: null != v ? v : x
+            sectionName: x,
+            commandName: y,
+            autoDismissOnClick: S === o.JS.LEAVE,
+            launchingComponentId: g,
+            submitting: null != E ? E : b
         }),
-        { disabled: R, reason: M } = (0, d.Z)({
+        { disabled: R, reason: M } = (0, u.Z)({
             channelId: n.id,
             application: t,
-            activityAction: P
+            activityAction: S
         });
-    return (0, i.jsx)(l.Tooltip, {
+    return (0, i.jsx)(a.Tooltip, {
         shouldShow: null != M,
-        tooltipContentClassName: C.tooltipContent,
+        tooltipContentClassName: v.tooltipContent,
         text: M,
         children: (e) => {
-            let { onClick: n, ...a } = e;
-            return (0, i.jsx)(l.Button, {
-                ...a,
+            let { onClick: n, ...l } = e;
+            return (0, i.jsx)(a.Button, {
+                ...l,
                 type: 'submit',
-                size: A,
+                size: N,
                 color: T,
                 disabled: R,
                 submitting: I,
                 onClick: () => {
-                    g(!0), S(), null == n || n();
+                    j(!0),
+                        P(),
+                        null == n || n(),
+                        s.default.track(f.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
+                            application_id: t.id,
+                            button_action: d._y.USE_APP_COMMAND
+                        });
                 },
-                'aria-label': _.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
-                    buttonText: b,
+                'aria-label': C.intl.formatToPlainString(C.t['XjP/R0'], {
+                    buttonText: L,
                     applicationName: t.name
                 }),
-                children: b
+                children: L
             });
         }
     });

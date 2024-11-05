@@ -3,6 +3,8 @@ e.exports = {
     header: 'header_b0286e',
     searchLearnMore: 'searchLearnMore_b0286e',
     searchClearHistory: 'searchClearHistory_b0286e',
+    searchHistoryRow: 'searchHistoryRow_b0286e',
+    content: 'content_b0286e',
     option: 'option_b0286e',
     plusIcon: 'plusIcon_b0286e',
     nonText: 'nonText_b0286e',

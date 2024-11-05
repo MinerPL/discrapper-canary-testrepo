@@ -3,6 +3,7 @@ e.exports = {
     row: 'row_f6cde8',
     checked: 'checked_f6cde8',
     checkboxWrapperDisabled: 'checkboxWrapperDisabled_f6cde8 checkboxWrapper_f6cde8',
+    checkbox: 'checkbox_f6cde8',
     alignTop: 'alignTop_f6cde8',
     alignCenter: 'alignCenter_f6cde8',
     inputDefault: 'inputDefault_f6cde8 input_f6cde8',
@@ -11,10 +12,10 @@ e.exports = {
     box: 'box_f6cde8',
     smallBox: 'smallBox_f6cde8',
     round: 'round_f6cde8',
-    checkbox: 'checkbox_f6cde8',
     label: 'label_f6cde8',
     labelClickable: 'labelClickable_f6cde8',
     labelDisabled: 'labelDisabled_f6cde8',
     labelForward: 'labelForward_f6cde8',
-    labelReversed: 'labelReversed_f6cde8'
+    labelReversed: 'labelReversed_f6cde8',
+    checkboxDisabled: 'checkboxDisabled_f6cde8'
 };

@@ -8,61 +8,63 @@ var r = n(152057),
     u = n(451478),
     c = n(425128),
     d = n(994752),
-    _ = n(276344);
-let E = r.v.LEAGUE_OF_LEGENDS_WEEKLY,
-    f = new Map(),
-    h = new Set(),
-    p = new Map();
-function I(e, t) {
+    f = n(276344);
+let _ = r.v.LEAGUE_OF_LEGENDS_WEEKLY,
+    h = new Map(),
+    p = new Set(),
+    m = new Map();
+function g(e, t) {
     return ''.concat(e, ':').concat(t);
 }
-function m(e, t) {
+function E(e, t) {
     var n;
-    let r = I(e, t);
-    if (h.has(r) || (null !== (n = p.get(r)) && void 0 !== n ? n : 0) > 3) return !1;
+    let r = g(e, t);
+    if (p.has(r) || (null !== (n = m.get(r)) && void 0 !== n ? n : 0) > 3) return !1;
     if (l.Z.getGuildId() !== e) return;
-    if (!(0, _.NM)(e, 'GuildLeaderboardManager') || !u.Z.isFocused() || !s.Z.isConnected()) return !1;
+    if (!(0, f.NM)(e, 'GuildLeaderboardManager') || !u.Z.isFocused() || !s.Z.isConnected()) return !1;
     let i = o.Z.getIdleSince();
     return !(null != i && Date.now() - i > 900000) && !0;
 }
-function T() {
-    for (let e in f) clearTimeout(f.get(e)), f.delete(e);
+function v() {
+    for (let e in h) clearTimeout(h.get(e)), h.delete(e);
 }
-function S() {
+function I() {
     var e;
-    T();
+    v();
     let t = l.Z.getGuildId();
-    if (null == t || !m(t, E)) return;
-    let n = d.Z.getLeaderboardResponse(t, E),
+    if (null == t || !E(t, _)) return;
+    let n = d.Z.getLeaderboardResponse(t, _),
         r = setTimeout(
             () =>
-                g({
+                S({
                     guildId: t,
-                    leaderboardId: E
+                    leaderboardId: _
                 }),
             Math.max(0, (null !== (e = null == n ? void 0 : n.expires_at) && void 0 !== e ? e : Date.now()) - Date.now())
         ),
-        i = I(t, E);
-    f.set(i, r);
+        i = g(t, _);
+    h.set(i, r);
 }
-async function g(e) {
+async function S(e) {
     let { guildId: t, leaderboardId: n, force: r = !1 } = e;
-    if (!(m(t, n) || r)) return;
-    let a = I(t, n);
-    if (!h.has(a))
+    if (!(E(t, n) || r)) return;
+    let a = g(t, n);
+    if (!p.has(a))
         try {
-            h.add(a);
-            let e = await (0, c.p)({
+            p.add(a);
+            let e = await (0, c.pV)({
                     guildId: t,
                     leaderboardId: n,
-                    intervalOffset: 0
+                    intervalOffset: 0,
+                    force: r
                 }),
-                r = d.Z.get(t, n);
-            if ((null == r ? void 0 : r.interval_start) !== e.leaderboard.interval_start) {
-                let e = await (0, c.p)({
+                s = d.Z.get(t, n);
+            if ((null == s ? void 0 : s.interval_start) !== e.leaderboard.interval_start) {
+                let e = await (0, c.pV)({
                     guildId: t,
                     leaderboardId: n,
-                    intervalOffset: -1
+                    intervalOffset: -1,
+                    force: r
                 });
                 i.Z.dispatch({
                     type: 'SET_GUILD_LEADERBOARD',
@@ -75,19 +77,19 @@ async function g(e) {
                 leaderboardResponse: e,
                 intervalOffset: 0
             }),
+                m.delete(a),
                 p.delete(a),
-                h.delete(a),
-                S();
+                I();
         } catch (i) {
             var s;
-            let e = (null !== (s = p.get(a)) && void 0 !== s ? s : 0) + 1;
-            if ((p.set(a, e), !m(t, n))) return;
+            let e = (null !== (s = m.get(a)) && void 0 !== s ? s : 0) + 1;
+            if ((m.set(a, e), !E(t, n))) return;
             let r = 1000 * Math.pow(5, e);
-            f.set(
+            h.set(
                 a,
                 setTimeout(
                     () =>
-                        g({
+                        S({
                             guildId: t,
                             leaderboardId: n,
                             force: !0
@@ -97,24 +99,27 @@ async function g(e) {
             );
         }
 }
-function A() {
-    S();
+function T() {
+    I();
 }
-function N() {
-    T(), (f = new Map()), (h = new Set()), (p = new Map()), A();
+function b() {
+    v(), (h = new Map()), (p = new Set()), (m = new Map()), T();
 }
-class O extends a.Z {
+class y extends a.Z {
+    fetchLeaderboard(e) {
+        return S(e);
+    }
     constructor(...e) {
         var t, n, r;
         super(...e),
             (t = this),
             (n = 'actions'),
             (r = {
-                POST_CONNECTION_OPEN: N,
-                CONNECTION_CLOSED: A,
-                WINDOW_FOCUS: A,
-                IDLE: A,
-                CHANNEL_SELECT: A
+                POST_CONNECTION_OPEN: b,
+                CONNECTION_CLOSED: T,
+                WINDOW_FOCUS: T,
+                IDLE: T,
+                CHANNEL_SELECT: T
             }),
             n in t
                 ? Object.defineProperty(t, n, {
@@ -126,4 +131,4 @@ class O extends a.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new O();
+t.Z = new y();

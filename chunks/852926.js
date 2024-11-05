@@ -1,56 +1,58 @@
 n.d(t, {
     GC: function () {
-        return m;
+        return f;
     },
     _X: function () {
-        return h;
+        return g;
     },
     em: function () {
-        return E;
+        return p;
     },
     jU: function () {
-        return _;
+        return m;
     }
 });
 var i = n(13245),
+    r = n(568963),
     a = n(808506),
-    s = n(998502),
-    r = n(13140),
-    l = n(996106),
-    o = n(914946),
-    c = n(186901),
-    d = n(981631);
-let u = ['207646673902501888'];
-function _(e) {
-    return null == e
-        ? {
-              lock: d.VqG,
-              context: d.IlC.APP
-          }
-        : a.Z.isReady(e)
-          ? (i.Z.setLocked(!1, e),
-            {
-                lock() {
-                    i.Z.setLocked(!0, e);
-                },
-                context: d.IlC.OVERLAY
-            })
-          : (s.ZP.focus(null, !0),
-            {
-                lock() {
-                    s.ZP.setForegroundProcess(e);
-                },
-                context: d.IlC.APP
-            });
+    l = n(998502),
+    s = n(13140),
+    o = n(996106),
+    c = n(914946),
+    d = n(186901),
+    u = n(981631);
+let h = ['207646673902501888'];
+function m(e) {
+    if (null == e)
+        return {
+            lock: u.VqG,
+            context: u.IlC.APP
+        };
+    let t = (0, r.R)();
+    return a.Z.isReady(e)
+        ? (i.Z.setInputLocked(!1, e),
+          {
+              lock() {
+                  i.Z.setInputLocked(!0, e);
+              },
+              context: t ? u.IlC.POPOUT : u.IlC.OVERLAY
+          })
+        : (l.ZP.focus(null, !0),
+          {
+              lock() {
+                  l.ZP.setForegroundProcess(e);
+              },
+              context: u.IlC.APP
+          });
 }
-let E = async (e, t, n) => {
-        if (((0, o.YK)(e, t), (null == n || '' === n) && (0, o.s9)(t))) return (e.authorization.scopes = [c.cE, c.CN]), Promise.resolve();
-        if (null == n || '' === n) return Promise.reject(new l.Z({ closeCode: d.$VG.INVALID_CLIENTID }, 'No Client ID Specified'));
-        let i = s.ZP.releaseChannel !== d.R5N.CANARY && !u.includes(n) && e.transport !== c.He.POST_MESSAGE;
-        return await (0, o.vv)(n, i), (0, o.fy)(e, n, t);
+let p = async (e, t, n) => {
+        if (((0, c.YK)(e, t), (null == n || '' === n) && (0, c.s9)(t))) return (e.authorization.scopes = [d.cE, d.CN]), Promise.resolve();
+        if (null == n || '' === n) return Promise.reject(new o.Z({ closeCode: u.$VG.INVALID_CLIENTID }, 'No Client ID Specified'));
+        let i = l.ZP.releaseChannel !== u.R5N.CANARY && !h.includes(n) && e.transport !== d.He.POST_MESSAGE;
+        return await (0, c.vv)(n, i), (0, c.fy)(e, n, t);
     },
-    h = () =>
-        (0, o.tr)((e) => {
+    g = () =>
+        (0, c.tr)((e) => {
             let t = [];
             if (null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut))
                 t = e.modeOptions.shortcut.map((e) => {
@@ -58,13 +60,13 @@ let E = async (e, t, n) => {
                     return {
                         type: e[0],
                         code: e[1],
-                        name: null !== (t = (0, r.H9)(e)) && void 0 !== t ? t : 'unknown'
+                        name: null !== (t = (0, s.H9)(e)) && void 0 !== t ? t : 'unknown'
                     };
                 });
             return t;
         }),
-    m = (e) =>
-        (0, o.FJ)(e, (e) => {
+    f = (e) =>
+        (0, c.FJ)(e, (e) => {
             let t = '';
-            return null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut) && (t = (0, r.BB)(e.modeOptions.shortcut)), t;
+            return null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut) && (t = (0, s.BB)(e.modeOptions.shortcut)), t;
         });

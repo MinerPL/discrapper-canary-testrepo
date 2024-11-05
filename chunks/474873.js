@@ -15,23 +15,32 @@ function o(e, t, n) {
         e
     );
 }
-let l = { soundpack: s.YC.CLASSIC };
+let l = {
+    soundpack: s.YC.CLASSIC,
+    lastSoundpackExperimentId: null
+};
 class u extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (l = e);
+        null != e && ((l = e), !Object.values(s.YC).includes(l.soundpack) && (l.soundpack = s.YC.CLASSIC));
     }
     getState() {
         return l;
     }
     getSoundpack() {
-        return s.YC.CLASSIC;
+        return l.soundpack;
+    }
+    getLastSoundpackExperimentId() {
+        return l.lastSoundpackExperimentId;
     }
 }
 o(u, 'displayName', 'SoundpackStore'),
     o(u, 'persistKey', 'SoundpackStore'),
     (t.Z = new u(a.Z, {
         SET_SOUNDPACK: function (e) {
-            let { soundpack: t } = e;
-            l = { soundpack: t };
+            let { soundpack: t, forExperimentId: n } = e;
+            l = {
+                soundpack: t,
+                lastSoundpackExperimentId: void 0 !== n ? n : l.lastSoundpackExperimentId
+            };
         }
     }));

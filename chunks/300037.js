@@ -1,94 +1,100 @@
-var n = t(735250);
-t(470079);
-var a = t(120356),
-    i = t.n(a),
-    r = t(399606),
-    o = t(481060),
-    l = t(565138),
-    c = t(623624),
-    d = t(678558),
-    _ = t(430824),
-    E = t(709586),
-    u = t(267642),
-    I = t(981631),
-    T = t(689938),
-    S = t(660847);
-s.Z = function (e) {
-    let { className: s, guildId: t, boostingVariant: a } = e,
-        N = (0, r.e7)([_.Z], () => _.Z.getGuild(t), [t]);
-    return null == N
-        ? (0, n.jsx)('div', {
-              className: i()(s, S.guildContainer),
-              children: (0, n.jsx)('div', {
-                  className: S.guildInfoContainer,
-                  children: (0, n.jsx)(o.Text, {
+var i = n(200651);
+n(192379);
+var s = n(120356),
+    r = n.n(s),
+    l = n(399606),
+    a = n(481060),
+    o = n(975298),
+    c = n(565138),
+    d = n(623624),
+    u = n(678558),
+    m = n(430824),
+    h = n(709586),
+    g = n(267642),
+    p = n(981631),
+    x = n(474936),
+    S = n(388032),
+    T = n(74175);
+t.Z = function (e) {
+    let { className: t, guildId: n, boostingVariant: s } = e,
+        C = (0, l.e7)([m.Z], () => m.Z.getGuild(n), [n]),
+        { fractionalState: _ } = (0, o.Z)(),
+        E = _ === x.a$.FP_ONLY;
+    return null == C
+        ? (0, i.jsx)('div', {
+              className: r()(t, T.guildContainer),
+              children: (0, i.jsx)('div', {
+                  className: T.guildInfoContainer,
+                  children: (0, i.jsx)(a.Text, {
                       variant: 'text-lg/bold',
-                      children: T.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_APPLIED_GUILD_BOOST_UNKNOWN_GUILD
+                      children: S.intl.string(S.t['6Kwwur'])
                   })
               })
           })
-        : (0, n.jsxs)('div', {
-              className: i()(s, S.guildContainer),
+        : (0, i.jsxs)('div', {
+              className: r()(t, T.guildContainer),
               children: [
-                  (0, n.jsx)(l.Z, {
-                      className: S.__invalid_guildIcon,
-                      guild: N,
-                      size: l.Z.Sizes.LARGER
+                  (0, i.jsx)(c.Z, {
+                      className: T.__invalid_guildIcon,
+                      guild: C,
+                      size: c.Z.Sizes.LARGER
                   }),
-                  (0, n.jsxs)('div', {
-                      className: S.guildInfoContainer,
+                  (0, i.jsxs)('div', {
+                      className: T.guildInfoContainer,
                       children: [
-                          (0, n.jsx)(o.Text, {
+                          (0, i.jsx)(a.Text, {
                               variant: 'text-lg/bold',
-                              children: N.name
+                              children: C.name
                           }),
-                          (0, n.jsxs)('div', {
-                              className: S.guildBoostStatsContainer,
+                          (0, i.jsxs)('div', {
+                              className: T.guildBoostStatsContainer,
                               children: [
-                                  (0, n.jsx)(E.Z, {
-                                      className: S.guildBoostBadge,
+                                  (0, i.jsx)(h.Z, {
+                                      className: T.guildBoostBadge,
                                       width: 16,
                                       height: 16
                                   }),
-                                  (0, n.jsx)(o.Text, {
+                                  (0, i.jsx)(a.Text, {
                                       variant: 'text-sm/bold',
                                       color: 'text-muted',
-                                      children: T.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_SUBSCRIPTION_COUNT.format({ subscriptions: N.premiumSubscriberCount })
+                                      children: S.intl.format(S.t['pob/cH'], { subscriptions: C.premiumSubscriberCount })
                                   }),
-                                  (0, n.jsx)('div', { className: S.separator }),
-                                  (0, n.jsx)(o.Text, {
+                                  (0, i.jsx)('div', { className: T.separator }),
+                                  (0, i.jsx)(a.Text, {
                                       variant: 'text-sm/bold',
                                       color: 'text-muted',
-                                      children: (0, u.nW)(N.premiumTier, { useLevels: !1 })
+                                      children: (0, g.nW)(C.premiumTier, { useLevels: !1 })
                                   })
                               ]
                           })
                       ]
                   }),
-                  a
-                      ? (0, n.jsx)(d.Z, {
-                            guild: N,
+                  s
+                      ? (0, i.jsx)(u.Z, {
+                            guild: C,
                             analyticsLocation: {
-                                page: I.ZY5.GUILD_BOOSTING_USER_SETTINGS,
-                                section: I.jXE.GUILD_BOOSTING_RECOMMENDED_SERVER_BOOST_THIS_SERVER_CTA,
-                                object: I.qAy.BUTTON_CTA,
-                                objectType: I.Qqv.BUY
+                                page: p.ZY5.GUILD_BOOSTING_USER_SETTINGS,
+                                section: p.jXE.GUILD_BOOSTING_RECOMMENDED_SERVER_BOOST_THIS_SERVER_CTA,
+                                object: p.qAy.BUTTON_CTA,
+                                objectType: p.Qqv.BUY
                             },
                             pauseAnimation: !0,
-                            size: o.Button.Sizes.MEDIUM,
-                            color: o.Button.Colors.PRIMARY,
-                            buttonText: T.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_BOOST_THIS_SERVER
+                            size: a.Button.Sizes.MEDIUM,
+                            color: a.Button.Colors.PRIMARY,
+                            buttonText: S.intl.string(S.t.aBHecH),
+                            disabled: E
                         })
-                      : (0, n.jsx)(o.Button, {
-                            color: o.Button.Colors.PRIMARY,
+                      : (0, i.jsx)(a.Button, {
+                            color: a.Button.Colors.PRIMARY,
                             onClick: () => {
-                                (0, c.f)({
-                                    guildId: N.id,
-                                    location: { section: I.jXE.GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA }
+                                (0, d.f)({
+                                    guildId: C.id,
+                                    location: { section: p.jXE.GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA }
                                 });
                             },
-                            size: o.Button.Sizes.MEDIUM,
-                            children: T.Z.Messages.NAVIGATE_TO_GUILD
+                            size: a.Button.Sizes.MEDIUM,
+                            disabled: E,
+                            children: S.intl.string(S.t.KLOhbG)
                         })
               ]
           });

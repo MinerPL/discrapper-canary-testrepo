@@ -4,13 +4,27 @@ t.Z = (0, r.B)({
     kind: 'user',
     id: '2024-09_app_dms',
     label: 'App DMs Experiment',
-    defaultConfig: { enabled: !1 },
+    defaultConfig: {
+        enabled: !1,
+        quickLaunchEnabled: !1
+    },
     commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
             label: 'Enable special UI for DMs with Apps',
-            config: { enabled: !0 }
+            config: {
+                enabled: !0,
+                quickLaunchEnabled: !1
+            }
+        },
+        {
+            id: 2,
+            label: 'Enable special UI for DMs with Apps including quick launch',
+            config: {
+                enabled: !0,
+                quickLaunchEnabled: !0
+            }
         }
     ]
 });

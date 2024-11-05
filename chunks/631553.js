@@ -1,68 +1,71 @@
 let i;
 n.d(t, {
     Z: function () {
-        return ep;
+        return em;
     }
 }),
     n(653041);
-var s = n(735250),
-    a = n(470079),
-    o = n(120356),
-    r = n.n(o),
-    l = n(921738),
-    c = n.n(l),
+var r = n(200651),
+    s = n(192379),
+    a = n(120356),
+    l = n.n(a),
+    o = n(921738),
+    c = n.n(o),
     d = n(954955),
     u = n.n(d),
     h = n(498607),
     p = n.n(h),
     f = n(442837),
-    _ = n(481060),
-    g = n(668781),
-    m = n(239091),
-    E = n(13245),
-    Z = n(425493),
-    I = n(951483),
-    S = n(714338),
-    v = n(185666),
-    C = n(100527),
-    x = n(906732),
-    T = n(600164);
+    g = n(481060),
+    m = n(668781),
+    v = n(239091),
+    _ = n(13245),
+    E = n(425493),
+    x = n(951483),
+    Z = n(714338),
+    I = n(185666),
+    S = n(100527),
+    C = n(906732),
+    y = n(146282),
+    N = n(600164);
 n(70097);
-var N = n(594190),
+var T = n(594190),
+    b = n(567409),
     O = n(74299),
-    A = n(989941),
-    y = n(377400),
-    b = n(329557),
-    M = n(199902),
-    R = n(314897),
-    L = n(592125),
-    P = n(430824),
+    j = n(989941),
+    A = n(377400),
+    P = n(329557),
+    R = n(199902),
+    L = n(314897),
+    w = n(592125),
+    M = n(430824),
     D = n(131951),
-    w = n(944486),
-    j = n(618541),
-    k = n(449224),
-    V = n(574254),
-    U = n(556296),
-    z = n(237997),
-    B = n(451478),
-    G = n(70956),
-    W = n(358085),
+    k = n(944486),
+    z = n(618541),
+    V = n(449224),
+    U = n(574254),
+    B = n(556296),
+    W = n(237997),
+    G = n(451478),
+    F = n(70956),
+    H = n(358085),
     Y = n(998502),
-    H = n(13140),
-    F = n(145597),
-    K = n(658785),
-    X = n(681603),
-    Q = n(358446),
-    J = n(348733),
-    q = n(312178),
-    $ = n(708383),
-    ee = n(923532),
-    et = n(107200),
-    en = n(987650),
-    ei = n(981631),
-    es = n(689938),
-    ea = n(310906);
-function eo(e, t, n) {
+    K = n(13140),
+    X = n(145597),
+    Q = n(658785),
+    q = n(681603),
+    J = n(358446),
+    $ = n(348733),
+    ee = n(312178),
+    et = n(708383),
+    en = n(923532),
+    ei = n(107200),
+    er = n(987650),
+    es = n(981631),
+    ea = n(206583),
+    el = n(388032),
+    eo = n(310906);
+function ec(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -76,62 +79,62 @@ function eo(e, t, n) {
     );
 }
 (f.ZP.PersistedStore.disableWrites = __OVERLAY__), f.ZP.initialize();
-let er = null;
-function el(e) {
+let ed = null;
+function eu(e) {
     e.preventDefault();
 }
-function ec(e) {
-    (0, m.jW)(e, async () => {
+function eh(e) {
+    (0, v.jW)(e, async () => {
         let { default: e } = await n.e('92780').then(n.bind(n, 930381));
-        return (t) => (0, s.jsx)(e, { ...t });
+        return (t) => (0, r.jsx)(e, { ...t });
     });
 }
-W.isPlatformEmbedded;
-let ed = (e) => {
-        let { keybind: t, onClick: n, isPreviewingInGame: i, locked: a } = e,
-            o = a ? _.Clickable : 'div';
-        return (0, s.jsx)(o, {
-            className: r()(ea.overlayBackground, {
-                [ea.overlayActive]: !a,
-                [ea.overlayLocked]: a,
-                [ea.previewMode]: !a && i
+H.isPlatformEmbedded;
+let ep = (e) => {
+        let { keybind: t, onClick: n, isPreviewingInGame: i, locked: s } = e,
+            a = s ? g.Clickable : 'div';
+        return (0, r.jsx)(a, {
+            className: l()(eo.overlayBackground, {
+                [eo.overlayActive]: !s,
+                [eo.overlayLocked]: s,
+                [eo.previewMode]: !s && i
             }),
             onMouseDown: (e) => {
-                let { currentTarget: t, target: i, button: s } = e;
-                s === ei.AeJ.PRIMARY && t === i && n();
+                let { currentTarget: t, target: i, button: r } = e;
+                r === es.AeJ.PRIMARY && t === i && n();
             },
-            onContextMenu: ec,
-            children: a
+            onContextMenu: eh,
+            children: s
                 ? null
-                : (0, s.jsx)('div', {
-                      className: ea.closeContainer,
-                      children: (0, s.jsx)(Z.Z, {
-                          variant: Z.Z.Variants.BOLD,
+                : (0, r.jsx)('div', {
+                      className: eo.closeContainer,
+                      children: (0, r.jsx)(E.Z, {
+                          variant: E.Z.Variants.BOLD,
                           keybind: t,
                           closeAction: n
                       })
                   })
         });
     },
-    eu = (e) => {
-        let { keyCode: t, shiftKey: n, metaKey: i, altKey: s, ctrlKey: a } = e;
+    ef = (e) => {
+        let { keyCode: t, shiftKey: n, metaKey: i, altKey: r, ctrlKey: s } = e;
         return {
             keyCode: t,
             shiftKey: n,
             metaKey: i,
-            altKey: s,
-            ctrlKey: a
+            altKey: r,
+            ctrlKey: s
         };
     };
-class eh extends a.Component {
+class eg extends s.Component {
     handleLock() {
-        !(0, _.hasAnyModalOpen)() && !V.Z.isOpen() && E.Z.setLocked(!0, (0, F.QF)());
+        !(0, g.hasAnyModalOpen)() && !U.Z.isOpen() && _.Z.setInputLocked(!0, (0, X.QF)());
     }
     handleDeactivate() {
-        E.Z.deactivateAllRegions();
+        _.Z.deactivateAllRegions();
     }
     componentDidMount() {
-        E.Z.startSession(), y.Z.initialize(), v.Z.initialize(), b.Z.initialize();
+        _.Z.startSession(), A.Z.initialize(), I.Z.initialize(), P.Z.initialize();
     }
     componentDidUpdate(e) {
         let { initialized: t } = this.props;
@@ -141,68 +144,68 @@ class eh extends a.Component {
                 return;
             }
             if (!e.locked && this.props.locked) {
-                if ((window.addEventListener('contextmenu', el, !1), null != er)) {
-                    let e = Date.now() - er;
-                    E.Z.track(ei.rMx.OVERLAY_LOCKED, { unlocked_duration: e }), (er = null);
+                if ((window.addEventListener('contextmenu', eu, !1), null != ed)) {
+                    let e = Date.now() - ed;
+                    _.Z.track(es.rMx.OVERLAY_LOCKED, { unlocked_duration: e }), (ed = null);
                 }
-                S.Z.disable(), (this.activeKeyEventShapes = []), z.Z.isPinned(ei.Odu.TEXT) && (S.Z.setLayout(I.Xq), S.Z.enable());
-            } else e.locked && !this.props.locked && (window.removeEventListener('contextmenu', el, !1), null == er && ((er = Date.now()), E.Z.track(ei.rMx.OVERLAY_UNLOCKED)), S.Z.disable(), (this.activeKeyEventShapes = []), S.Z.setLayout(I.Sr), S.Z.enable());
-            e.keybindKeyCodes !== this.props.keybindKeyCodes && (this.lockEventShape = (0, H.d2)(this.props.keybindKeyCodes));
+                Z.Z.disable(), (this.activeKeyEventShapes = []), W.Z.isPinned(es.Odu.TEXT) && (Z.Z.setLayout(x.Xq), Z.Z.enable());
+            } else e.locked && !this.props.locked && (window.removeEventListener('contextmenu', eu, !1), null == ed && ((ed = Date.now()), _.Z.track(es.rMx.OVERLAY_UNLOCKED)), Z.Z.disable(), (this.activeKeyEventShapes = []), Z.Z.setLayout(x.Sr), Z.Z.enable());
+            e.keybindKeyCodes !== this.props.keybindKeyCodes && (this.lockEventShape = (0, K.d2)(this.props.keybindKeyCodes)), !e.hasFetchedContentInventory && this.props.hasFetchedContentInventory && _.Z.notifyContentInventoryReady(this.props.contentInventoryEntries);
         }
     }
     initialSetup() {
-        let { connectedToVoice: e, locked: t, canGoLive: n, isStreaming: i, voiceGuild: s, voiceChannelId: a, game: o, showKeybindNotification: r, dismissKeybindNotification: l } = this.props;
-        E.Z.track(ei.rMx.OVERLAY_INITIALIZED, {
+        let { connectedToVoice: e, locked: t, canGoLive: n, isStreaming: i, voiceGuild: r, voiceChannelId: s, game: a, showKeybindNotification: l, dismissKeybindNotification: o } = this.props;
+        _.Z.track(es.rMx.OVERLAY_INITIALIZED, {
             voice_widget_connected: e,
-            text_widget_connected: z.Z.isPinned(ei.Odu.TEXT)
+            text_widget_connected: W.Z.isPinned(es.Odu.TEXT)
         }),
-            K.Z.trackExposure({ location: 'Overlay' });
-        let c = n && !i && null != o,
-            d = e && null != s && null != a,
-            u = { type: en.nc.WELCOME };
+            Q.Z.trackExposure({ location: 'Overlay' });
+        let c = n && !i && null != a,
+            d = e && null != r && null != s,
+            u = { type: er.nc.WELCOME };
         if (
-            (r
+            (l
                 ? (u = {
-                      type: en.nc.KEYBIND_INDICATORS,
-                      markAsDismissed: l
+                      type: er.nc.KEYBIND_INDICATORS,
+                      markAsDismissed: o
                   })
                 : c && d
                   ? (u = {
-                        type: en.nc.GO_LIVE_VOICE,
-                        game: o,
-                        voiceChannelId: a,
-                        voiceGuild: s
+                        type: er.nc.GO_LIVE_VOICE,
+                        game: a,
+                        voiceChannelId: s,
+                        voiceGuild: r
                     })
                   : c &&
                     (u = {
-                        type: en.nc.GO_LIVE_NON_VOICE,
-                        game: o
+                        type: er.nc.GO_LIVE_NON_VOICE,
+                        game: a
                     }),
-            E.Z.overlayMounted(u),
+            _.Z.overlayMounted(u),
             window.addEventListener('resize', this.handleWindowResize),
-            t && window.addEventListener('contextmenu', el, !1),
-            W.isPlatformEmbedded)
+            t && window.addEventListener('contextmenu', eu, !1),
+            H.isPlatformEmbedded)
         ) {
             let e = Y.ZP.requireModule('discord_overlay2');
             void 0 !== e.setPerfInfoCallback &&
                 (e.setPerfInfoCallback((e) => {
-                    E.Z.track(ei.rMx.OVERLAY_PERF_INFO, e);
+                    _.Z.track(es.rMx.OVERLAY_PERF_INFO, e);
                 }),
                 e.broadcastCommand({
                     message: 'set_perf_report_interval',
-                    interval: 15 * G.Z.Millis.MINUTE
+                    interval: 15 * F.Z.Millis.MINUTE
                 })),
                 Y.ZP.on('REQUEST_OPEN_EXTERNAL_URL', (e, t) => {
-                    z.Z.getDisableExternalLinkAlert() || t === j.Z.getLastURL()
+                    W.Z.getDisableExternalLinkAlert() || t === z.Z.getLastURL()
                         ? Y.ZP.send('OPEN_EXTERNAL_URL', t)
-                        : g.Z.show({
-                              title: es.Z.Messages.OVERLAY_LINK_ALERT_TITLE,
-                              body: es.Z.Messages.OVERLAY_LINK_ALERT_BODY,
-                              secondaryConfirmText: es.Z.Messages.OVERLAY_LINK_ALERT_SECONDARY,
-                              confirmText: es.Z.Messages.CONTINUE,
-                              cancelText: es.Z.Messages.CANCEL,
+                        : m.Z.show({
+                              title: el.intl.string(el.t.WLx4Fx),
+                              body: el.intl.string(el.t.H8O1TE),
+                              secondaryConfirmText: el.intl.string(el.t.IwqGhY),
+                              confirmText: el.intl.string(el.t['3PatS0']),
+                              cancelText: el.intl.string(el.t['ETE/oK']),
                               onConfirmSecondary: () => {
-                                  E.Z.disableExternalLinkAlert(), Y.ZP.send('OPEN_EXTERNAL_URL', t);
+                                  _.Z.disableExternalLinkAlert(), Y.ZP.send('OPEN_EXTERNAL_URL', t);
                               },
                               onConfirm: () => Y.ZP.send('OPEN_EXTERNAL_URL', t)
                           });
@@ -211,141 +214,145 @@ class eh extends a.Component {
         window.addEventListener('keydown', this.onKeyDownGlobal, !0), window.addEventListener('keyup', this.onKeyUpGlobal, !0);
     }
     componentWillUnmount() {
-        window.removeEventListener('resize', this.handleWindowResize), window.removeEventListener('keydown', this.onKeyDownGlobal, !0), window.removeEventListener('keyup', this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener('contextmenu', el, !1), y.Z.terminate(), v.Z.terminate(), b.Z.terminate();
+        window.removeEventListener('resize', this.handleWindowResize), window.removeEventListener('keydown', this.onKeyDownGlobal, !0), window.removeEventListener('keyup', this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener('contextmenu', eu, !1), A.Z.terminate(), I.Z.terminate(), P.Z.terminate();
     }
     renderInvalidSizeMessage() {
-        return (0, s.jsx)(T.Z, {
-            justify: T.Z.Justify.CENTER,
-            align: T.Z.Align.CENTER,
-            className: ea.invalidContainer,
-            children: (0, s.jsx)('div', {
-                className: ea.inactiveContainer,
-                children: es.Z.Messages.OVERLAY_TOO_SMALL.format(F.FW)
+        return (0, r.jsx)(N.Z, {
+            justify: N.Z.Justify.CENTER,
+            align: N.Z.Align.CENTER,
+            className: eo.invalidContainer,
+            children: (0, r.jsx)('div', {
+                className: eo.inactiveContainer,
+                children: el.intl.format(el.t.ketnW1, X.FW)
             })
         });
     }
     render() {
-        let { locked: e, keybind: t, incompatibleApp: n, initialized: a, isPreviewingInGame: o, activeRegions: l, windowSize: c, voiceGuild: d, voiceChannelId: u } = this.props,
+        let { locked: e, keybind: t, incompatibleApp: n, initialized: s, isPreviewingInGame: a, activeRegions: o, windowSize: c, voiceGuild: d, voiceChannelId: u } = this.props,
             { width: h, height: p } = c;
-        if (0 === h || 0 === p || n || !a) return null;
-        let f = e || o,
-            _ = R.default.getId();
-        return (0, s.jsxs)('div', {
-            className: ea.overlay,
+        if (0 === h || 0 === p || n || !s) return null;
+        let f = e || a,
+            g = L.default.getId();
+        return (0, r.jsxs)('div', {
+            className: eo.overlay,
             children: [
-                (0, s.jsx)($.Z, {}),
-                o &&
-                    (0, s.jsx)('header', {
-                        className: ea.previewingInGameHeader,
-                        children: es.Z.Messages.OVERLAY_IN_GAME_PREVIEW_HEADER
+                (0, r.jsx)(et.Z, {}),
+                a &&
+                    (0, r.jsx)('header', {
+                        className: eo.previewingInGameHeader,
+                        children: el.intl.string(el.t.iOq96u)
                     }),
                 i,
-                (!e || l.has(ei.O0n.TEXT_WIDGET)) &&
-                    (0, s.jsx)(ed, {
+                (!e || o.has(es.O0n.TEXT_WIDGET)) &&
+                    (0, r.jsx)(ep, {
                         locked: e,
                         keybind: t,
                         onClick: e ? this.handleDeactivate : this.handleLock,
-                        isPreviewingInGame: o
+                        isPreviewingInGame: a
                     }),
-                (0, F.Te)(c)
-                    ? (0, s.jsx)(q.Z, {
-                          className: r()({
-                              [ea.layoutLocked]: e,
-                              [ea.layoutUnlocked]: !e
+                (0, X.Te)(c)
+                    ? (0, r.jsx)(ee.Z, {
+                          className: l()({
+                              [eo.layoutLocked]: e,
+                              [eo.layoutUnlocked]: !e
                           })
                       })
                     : e
                       ? null
                       : this.renderInvalidSizeMessage(),
-                (0, s.jsx)(et.Z, {}),
+                (0, r.jsx)(ei.Z, {}),
                 null != d &&
                     null != u &&
-                    (0, s.jsx)(ee.Z, {
-                        streamerId: _,
+                    (0, r.jsx)(en.Z, {
+                        streamerId: g,
                         guildId: d.id,
                         channelId: u
                     }),
-                (0, s.jsx)(J.Z, {
+                (0, r.jsx)($.Z, {
                     locked: f,
                     keybind: t
                 }),
-                (0, s.jsx)(X.Z, {})
+                (0, r.jsx)(q.Z, {})
             ]
         });
     }
     constructor(e) {
         super(e),
-            eo(this, 'handleWindowResize', () => {
-                (0, F.W2)()
+            ec(this, 'handleWindowResize', () => {
+                (0, X.W2)()
                     ? this.forceUpdate()
                     : u()(() => {
                           this.forceUpdate();
                       }, 500);
             }),
-            eo(this, 'activeKeyEventShapes', []),
-            eo(this, 'lockEventShape', (0, H.d2)(this.props.keybindKeyCodes)),
-            eo(this, 'getActiveKeyEventIndex', (e) => this.activeKeyEventShapes.findIndex((t) => p()(t, e))),
-            eo(this, 'onKeyDownGlobal', (e) => {
-                let t = eu(e),
+            ec(this, 'activeKeyEventShapes', []),
+            ec(this, 'lockEventShape', (0, K.d2)(this.props.keybindKeyCodes)),
+            ec(this, 'getActiveKeyEventIndex', (e) => this.activeKeyEventShapes.findIndex((t) => p()(t, e))),
+            ec(this, 'onKeyDownGlobal', (e) => {
+                let t = ef(e),
                     n = this.getActiveKeyEventIndex(t) > -1,
                     i = [16, 17, 18, 91].includes(e.keyCode);
                 !n && !i && this.activeKeyEventShapes.push(t), this.activeKeyEventShapes.length === this.lockEventShape.length && this.lockEventShape.every((e) => this.activeKeyEventShapes.some((t) => p()(e, t))) && (e.preventDefault(), e.stopPropagation());
-                let { locked: s, activeRegions: a } = this.props;
-                t.keyCode === c().codes.esc && s && a.has(ei.O0n.TEXT_WIDGET) && E.Z.deactivateAllRegions();
+                let { locked: r, activeRegions: s } = this.props;
+                t.keyCode === c().codes.esc && r && s.has(es.O0n.TEXT_WIDGET) && _.Z.deactivateAllRegions();
             }),
-            eo(this, 'onKeyUpGlobal', (e) => {
-                let t = eu(e),
+            ec(this, 'onKeyUpGlobal', (e) => {
+                let t = ef(e),
                     n = this.getActiveKeyEventIndex(t);
                 n > -1 && this.activeKeyEventShapes.splice(n, 1);
             });
-        let t = e.locked && z.Z.isPinned(ei.Odu.TEXT);
-        S.Z.setLayout(t ? I.Xq : I.Sr), t && S.Z.enable();
+        let t = e.locked && W.Z.isPinned(es.Odu.TEXT);
+        Z.Z.setLayout(t ? x.Xq : x.Sr), t && Z.Z.enable();
     }
 }
-function ep() {
+function em() {
     let {
             locked: e,
             initialized: t,
             incompatibleApp: n,
             activeRegions: i,
-            isPreviewingInGame: a
-        } = (0, f.cj)([z.Z], () => ({
-            locked: z.Z.isUILocked((0, F.QF)()),
-            initialized: z.Z.initialized,
-            incompatibleApp: z.Z.incompatibleApp,
-            activeRegions: z.Z.getActiveRegions(),
-            isPreviewingInGame: z.Z.isPreviewingInGame()
+            isPreviewingInGame: s
+        } = (0, f.cj)([W.Z], () => ({
+            locked: W.Z.isLocked((0, X.QF)()),
+            initialized: W.Z.initialized,
+            incompatibleApp: W.Z.incompatibleApp,
+            activeRegions: W.Z.getActiveRegions(),
+            isPreviewingInGame: W.Z.isPreviewingInGame()
         })),
-        o = (0, f.e7)([B.Z], () => B.Z.windowSize()),
-        r = (0, f.e7)([U.Z], () => U.Z.getOverlayKeybind()),
-        l = (0, f.e7)([w.Z], () => w.Z.getVoiceChannelId()),
-        c = (0, f.e7)([L.Z], () => L.Z.getChannel(l)),
-        d = (0, f.e7)([P.Z], () => (null != c ? P.Z.getGuild(c.guild_id) : null)),
-        u = (0, f.e7)([N.ZP, k.Z], () => (0, A.Z)(N.ZP, k.Z)),
-        h = (0, f.e7)([D.Z], () => (0, O.Z)(D.Z)),
-        p = (0, f.e7)([M.Z], () => null != M.Z.getCurrentUserActiveStream()),
-        { analyticsLocations: g } = (0, x.ZP)(C.Z.OVERLAY),
-        { showKeybindIndicators: m, dismissKeybindNotification: E } = (0, Q.K)();
-    return (0, s.jsx)(x.Gt, {
-        value: g,
-        children: (0, s.jsx)(_.RedesignIconContextProvider, {
-            children: (0, s.jsx)(eh, {
+        a = (0, f.e7)([G.Z], () => G.Z.windowSize()),
+        l = (0, f.e7)([B.Z], () => B.Z.getOverlayKeybind()),
+        o = (0, f.e7)([k.Z], () => k.Z.getVoiceChannelId()),
+        c = (0, f.e7)([w.Z], () => w.Z.getChannel(o)),
+        d = (0, f.e7)([M.Z], () => (null != c ? M.Z.getGuild(c.guild_id) : null)),
+        u = (0, f.e7)([T.ZP, V.Z], () => (0, j.Z)(T.ZP, V.Z)),
+        h = (0, b.Ns)(null == u ? void 0 : u.id),
+        p = (0, f.e7)([y.Z], () => null != y.Z.getLastFeedFetchDate(ea.YN.GAME_PROFILE_FEED)),
+        m = (0, f.e7)([D.Z], () => (0, O.Z)(D.Z)),
+        v = (0, f.e7)([R.Z], () => null != R.Z.getCurrentUserActiveStream()),
+        { analyticsLocations: _ } = (0, C.ZP)(S.Z.OVERLAY),
+        { showKeybindIndicators: E, dismissKeybindNotification: x } = (0, J.K)();
+    return (0, r.jsx)(C.Gt, {
+        value: _,
+        children: (0, r.jsx)(g.RedesignIconContextProvider, {
+            children: (0, r.jsx)(eg, {
                 locked: e,
                 initialized: t,
                 incompatibleApp: n,
                 activeRegions: i,
-                isPreviewingInGame: a,
-                windowSize: o,
-                keybind: null != r ? (0, H.BB)(r.shortcut, !0) : '???',
-                keybindKeyCodes: null != r ? r.shortcut : [],
-                connectedToVoice: null != l,
+                isPreviewingInGame: s,
+                windowSize: a,
+                keybind: null != l ? (0, K.BB)(l.shortcut, !0) : '???',
+                keybindKeyCodes: null != l ? l.shortcut : [],
+                connectedToVoice: null != o,
                 voiceChannelId: null != c ? c.id : null,
                 voiceGuild: d,
                 game: u,
-                canGoLive: h,
-                isStreaming: p,
-                showKeybindNotification: m,
-                dismissKeybindNotification: E
+                canGoLive: m,
+                isStreaming: v,
+                showKeybindNotification: E,
+                dismissKeybindNotification: x,
+                contentInventoryEntries: h,
+                hasFetchedContentInventory: p
             })
         })
     });

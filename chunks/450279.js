@@ -16,8 +16,8 @@ function a(e, t, n, a, s) {
     var o, l, u;
     let c = {},
         d = {},
-        _ = [],
-        E = [];
+        f = [],
+        _ = [];
     for (let t of e.values())
         switch (t.type) {
             case 'candidate-pair':
@@ -27,15 +27,15 @@ function a(e, t, n, a, s) {
                 d[t.id] = t;
                 break;
             case 'inbound-rtp':
-                _.push(t);
+                f.push(t);
                 break;
             case 'outbound-rtp':
-                E.push(t);
+                _.push(t);
         }
-    let f = Object.values(c).find((e) => 'succeeded' === e.state);
-    if (void 0 === f) return null;
-    let h = [];
-    for (let e of E) {
+    let h = Object.values(c).find((e) => 'succeeded' === e.state);
+    if (void 0 === h) return null;
+    let p = [];
+    for (let e of _) {
         let t = d[e.codecId];
         if (null == t) continue;
         let a = {
@@ -49,7 +49,7 @@ function a(e, t, n, a, s) {
             packetsSent: e.packetsSent
         };
         if ('audio' === e.kind)
-            h.push({
+            p.push({
                 ...a,
                 type: 'audio'
             });
@@ -61,7 +61,7 @@ function a(e, t, n, a, s) {
                           height: e.frameHeight
                       }
                     : void 0;
-            h.push({
+            p.push({
                 ...a,
                 framesEncoded: e.framesEncoded,
                 keyFramesEncoded: e.keyFramesEncoded,
@@ -78,8 +78,8 @@ function a(e, t, n, a, s) {
             });
         }
     }
-    let p = {};
-    for (let e of _) {
+    let m = {};
+    for (let e of f) {
         let s = d[e.codecId];
         if (null == s) continue;
         let o = t(e.ssrc);
@@ -91,6 +91,7 @@ function a(e, t, n, a, s) {
             sinkWant: (0, r.f)(n, e.ssrc, 'video' === e.kind),
             sinkWantAsInt: (0, r.F)(n, e.ssrc),
             sinkWantLocal: (0, r.f)(a, e.ssrc, 'video' === e.kind),
+            sinkWantLocalAsInt: (0, r.F)(a, e.ssrc),
             codec: i(s),
             bytesReceived: e.bytesReceived,
             packetsReceived: e.packetsReceived,
@@ -98,15 +99,15 @@ function a(e, t, n, a, s) {
         };
         if ('audio' === e.kind) {
             let t = void 0 !== e.jitterBufferDelay && void 0 !== e.jitterBufferEmittedCount ? Math.round((1000 * e.jitterBufferDelay) / e.jitterBufferEmittedCount) : 0;
-            null == p[o] && (p[o] = []),
-                p[o].push({
+            null == m[o] && (m[o] = []),
+                m[o].push({
                     ...l,
                     audioLevel: e.audioLevel,
                     jitter: 1000 * e.jitter,
                     jitterBuffer: t
                 });
         } else if ('video' === e.kind) {
-            null == p[o] && (p[o] = []);
+            null == m[o] && (m[o] = []);
             let t =
                 null !== e.frameWidth
                     ? {
@@ -114,7 +115,7 @@ function a(e, t, n, a, s) {
                           height: e.frameHeight
                       }
                     : void 0;
-            p[o].push({
+            m[o].push({
                 ...l,
                 resolution: t,
                 framesDecoded: e.framesDecoded,
@@ -135,17 +136,17 @@ function a(e, t, n, a, s) {
             });
         }
     }
-    let m = (null !== (o = f.currentRoundTripTime) && void 0 !== o ? o : 0) * 1000;
+    let g = (null !== (o = h.currentRoundTripTime) && void 0 !== o ? o : 0) * 1000;
     return {
         transport: {
-            availableOutgoingBitrate: null !== (l = f.availableOutgoingBitrate) && void 0 !== l ? l : 0,
-            bytesReceived: f.bytesReceived,
-            bytesSent: f.bytesSent,
-            ping: m
+            availableOutgoingBitrate: null !== (l = h.availableOutgoingBitrate) && void 0 !== l ? l : 0,
+            bytesReceived: h.bytesReceived,
+            bytesSent: h.bytesSent,
+            ping: g
         },
         rtp: {
-            inbound: p,
-            outbound: h
+            inbound: m,
+            outbound: p
         }
     };
 }

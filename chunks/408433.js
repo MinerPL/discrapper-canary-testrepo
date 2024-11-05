@@ -1,18 +1,24 @@
 n.d(t, {
+    En: function () {
+        return y;
+    },
     dY: function () {
-        return g;
+        return I;
+    },
+    eC: function () {
+        return b;
     },
     kC: function () {
-        return I;
+        return E;
     },
     l3: function () {
         return S;
     },
     o3: function () {
-        return T;
+        return v;
     },
     vP: function () {
-        return A;
+        return T;
     }
 }),
     n(789020),
@@ -32,15 +38,15 @@ var r = n(392711),
     u = n(981631),
     c = n(817384);
 let d = /sketchfab/i,
-    _ = /^https:\/\/sketchfab\.com/i,
-    E = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
-    f = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
-    h = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/;
-function p(e) {
+    f = /^https:\/\/sketchfab\.com/i,
+    _ = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
+    h = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
+    p = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/;
+function m(e) {
     let { width: t, height: n } = e;
     return t > 0 && n > 0;
 }
-function m(e) {
+function g(e) {
     let { url: t, proxy_url: n, width: r, height: i, placeholder: a, placeholder_version: s } = e;
     return {
         url: t,
@@ -51,7 +57,7 @@ function m(e) {
         placeholderVersion: s
     };
 }
-function I(e, t, n) {
+function E(e, t, n) {
     let r = {
         id: i().uniqueId('embed_'),
         url: n.url,
@@ -85,22 +91,22 @@ function I(e, t, n) {
             }),
         null != n.timestamp && (r.timestamp = s()(new Date(n.timestamp))),
         null != n.color && (r.color = (0, o.ho)(n.color, !0)),
-        null != n.thumbnail && p(n.thumbnail))
+        null != n.thumbnail && m(n.thumbnail))
     )
         switch (r.type) {
             case u.hBH.ARTICLE:
             case u.hBH.IMAGE:
-                r.image = m(n.thumbnail);
+                r.image = g(n.thumbnail);
                 break;
             default:
-                r.thumbnail = m(n.thumbnail);
+                r.thumbnail = g(n.thumbnail);
         }
     if (
-        (null != n.image && p(n.image) && (r.image = m(n.image)),
+        (null != n.image && m(n.image) && (r.image = g(n.image)),
         null != n.video &&
             (null == r.thumbnail &&
                 null != n.video.proxy_url &&
-                p(n.video) &&
+                m(n.video) &&
                 (r.thumbnail = {
                     width: n.video.width,
                     height: n.video.height,
@@ -115,13 +121,13 @@ function I(e, t, n) {
                     })(n.video.proxy_url, { format: 'webp' })
                 }),
             null != r.thumbnail &&
-                p(n.video) &&
+                m(n.video) &&
                 (function (e, t, n) {
-                    if ((null != t && d.test(t.name)) || _.test(n.url)) return !1;
+                    if ((null != t && d.test(t.name)) || f.test(n.url)) return !1;
                     let r = null != n.proxy_url || /^https:/i.test(n.url);
-                    return null != e && 1492472454139 > l.default.extractTimestamp(e) && (r = r && null != t && E.test(t.name)), r;
+                    return null != e && 1492472454139 > l.default.extractTimestamp(e) && (r = r && null != t && _.test(t.name)), r;
                 })(t, n.provider, n.video) &&
-                (r.video = m(n.video))),
+                (r.video = g(n.video))),
         c.k.has(r.type))
     ) {
         var a;
@@ -137,7 +143,7 @@ function I(e, t, n) {
     } else r.fields = [];
     return r;
 }
-function T(e) {
+function v(e) {
     let t = new Map(),
         n = [];
     return (
@@ -156,14 +162,14 @@ function T(e) {
         n
     );
 }
-function g(e) {
+function I(e) {
     let { image: t, video: n, type: r, author: i, rawTitle: a } = e;
     return (null != t || null != n) && (r === u.hBH.GIFV || (r !== u.hBH.RICH && null == i && null == a));
 }
 function S(e) {
-    return e.type === u.hBH.ARTICLE && null != e.url && (h.test(e.url) || f.test(e.url));
+    return e.type === u.hBH.ARTICLE && null != e.url && (p.test(e.url) || h.test(e.url));
 }
-function A(e, t, n) {
+function T(e, t, n) {
     var r;
     return null != t && null != n
         ? {
@@ -179,4 +185,10 @@ function A(e, t, n) {
                 maxMediaWidth: 400,
                 maxMediaHeight: 300
             };
+}
+function b(e, t) {
+    return e.isPrivate() ? !e.isManaged() : t.can(u.Plq.EMBED_LINKS, e);
+}
+function y(e) {
+    return '' !== e.content || e.messageSnapshots.some((e) => '' !== e.message.content || e.message.attachments.length > 0);
 }

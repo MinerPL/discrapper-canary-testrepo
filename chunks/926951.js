@@ -1,7 +1,6 @@
 n(47120);
-var r = n(818083),
-    i = n(65154);
-let a = (0, r.B)({
+var r = n(818083);
+let i = (0, r.B)({
     kind: 'user',
     id: '2024-06_rtc_pacer__simulcast',
     label: 'RTC Pacer & Golive Simulcast',
@@ -13,22 +12,20 @@ let a = (0, r.B)({
     treatments: [
         {
             id: 1,
-            label: 'Golive Simulcast without prober 480p@500k',
+            label: 'Golive Simulcast without prober 720p@500k',
             config: {
                 enabled: !0,
                 fullname: 'bandwidth_estimation/trendline-window-duration-3750,robust-estimator/',
-                simulcastEnabled: !0,
-                simulcastFlag: i.V8.GOLIVE_SIMULCAST_480P_500K
+                simulcastEnabled: !0
             }
         },
         {
             id: 2,
-            label: 'Golive Simulcast 480p@500k',
+            label: 'Golive Simulcast 720p@500k',
             config: {
                 enabled: !0,
                 fullname: 'bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-pacer,worker-pacer-probe',
-                simulcastEnabled: !0,
-                simulcastFlag: i.V8.GOLIVE_SIMULCAST_480P_500K
+                simulcastEnabled: !0
             }
         },
         {
@@ -51,29 +48,27 @@ let a = (0, r.B)({
         },
         {
             id: 5,
-            label: 'Golive Simulcast 480p@750k',
+            label: 'Golive Simulcast 720p@750k',
             config: {
                 enabled: !0,
                 fullname: 'bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-pacer-probe,worker-lq-floor-750k',
-                simulcastEnabled: !0,
-                simulcastFlag: i.V8.GOLIVE_SIMULCAST_480P_750K
+                simulcastEnabled: !0
             }
         },
         {
             id: 6,
-            label: 'Golive Simulcast 480p@1000k',
+            label: 'Golive Simulcast 720p@1000k',
             config: {
                 enabled: !0,
                 fullname: 'bandwidth_estimation/trendline-window-duration-3750,robust-estimator/worker-pacer-probe,worker-lq-floor-1000k',
-                simulcastEnabled: !0,
-                simulcastFlag: i.V8.GOLIVE_SIMULCAST_480P_1000K
+                simulcastEnabled: !0
             }
         }
     ]
 });
 t.Z = {
     getConfig(e, t) {
-        let n = a.getCurrentConfig({ location: 'e1c55b_1' }, { autoTrackExposure: e });
+        let n = i.getCurrentConfig({ location: 'e1c55b_1' }, { autoTrackExposure: e });
         return !this.supportsBandwidthEstimationExperimentFullname(n.fullname, t) && (n.enabled = !1), n;
     },
     supportsBandwidthEstimationExperimentFullname(e, t) {
@@ -85,7 +80,5 @@ t.Z = {
     getMediaEngineExperiments(e) {
         let t = e.split('/');
         return 3 !== t.length || 'bandwidth_estimation' !== t[0] ? null : t[1].split(',').filter((e) => 0 !== e.length);
-    },
-    supportsSimulcast: () => a.getCurrentConfig({ location: 'e1c55b_2' }, { autoTrackExposure: !1 }).simulcastEnabled,
-    goliveSimulcastFlag: () => a.getCurrentConfig({ location: 'e1c55b_2' }, { autoTrackExposure: !1 }).simulcastFlag
+    }
 };

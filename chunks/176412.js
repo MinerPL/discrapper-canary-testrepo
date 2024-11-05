@@ -3,15 +3,15 @@ t.d(n, {
         return S;
     },
     P7: function () {
-        return L;
+        return j;
     },
     ae: function () {
-        return P;
+        return I;
     }
 });
-var i = t(470079),
-    a = t(392711),
-    l = t.n(a),
+var i = t(192379),
+    l = t(392711),
+    a = t.n(l),
     o = t(442837),
     r = t(25209),
     s = t(481060),
@@ -20,80 +20,82 @@ var i = t(470079),
     u = t(513202),
     m = t(367907),
     p = t(895924),
-    _ = t(691424),
-    C = t(428595),
-    h = t(364458),
-    f = t(499254),
-    A = t(541099),
-    E = t(827498),
+    h = t(691424),
+    f = t(428595),
+    C = t(364458),
+    v = t(499254),
+    x = t(541099),
+    _ = t(827498),
     N = t(346683),
-    x = t(981631),
-    v = t(689938);
-let I = {
-        ...C.Z.RULES.commandMention,
-        parse: (e, n, t) => ({ content: C.Z.RULES.commandMention.parse(e, n, t).content })
+    g = t(981631),
+    A = t(388032);
+let b = {
+        ...f.Z.RULES.commandMention,
+        parse: (e, n, t) => ({ content: f.Z.RULES.commandMention.parse(e, n, t).content })
     },
-    g = l().pick(
-        (0, h.Z)([
-            C.Z.RULES,
-            { commandMention: I },
-            (0, _.Z)({
+    E = a().pick(
+        (0, C.Z)([
+            f.Z.RULES,
+            { commandMention: b },
+            (0, h.Z)({
                 enableBuildOverrides: !1,
                 enableEmojiClick: !1
             })
         ]),
         ['commandMention', 'customEmoji', 'em', 'emoji', 'emoticon', 'highlight', 'inlineCode', 'looseEm', 's', 'strong', 'text', 'timestamp', 'u', 'spoiler']
     ),
-    P = r.w4(g);
-function L(e) {
-    let { channel: n, application: t, location: i, sectionName: a, commandName: l, autoDismissOnClick: r = !0, launchingComponentId: _, submitting: C = !1 } = e,
-        h = (0, c.O)(),
-        I = (0, d.Qv)({
+    I = r.w4(E);
+function j(e) {
+    let { channel: n, application: t, location: i, sectionName: l, commandName: a, autoDismissOnClick: r = !0, launchingComponentId: h, submitting: f = !1, fetchesApplication: C = !0 } = e,
+        b = (0, c.O)(),
+        E = (0, d.Qv)({
             channelId: n.id,
-            applicationId: t.id
+            applicationId: t.id,
+            fetchesApplication: C
         }),
-        g = (0, N.Q)(I),
-        P = (0, o.e7)([A.Z], () => A.Z.entrypoint()),
-        L = (0, d.w1)({
+        I = (0, N.Q)(E),
+        j = (0, o.e7)([x.Z], () => x.Z.entrypoint()),
+        S = (0, d.w1)({
             applicationId: t.id,
             embeddedActivitiesManager: u.Z,
             channelId: n.id,
-            locationObject: h.location,
+            locationObject: b.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: n } = e;
-                r && f.yT(E.ti.ACTIVITY),
-                    (0, m.yw)(x.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+                r && v.yT(_.ti.ACTIVITY),
+                    (0, m.yw)(g.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: n,
-                        section_name: a,
-                        action: g,
-                        source: P
+                        section_name: l,
+                        action: I,
+                        source: j
                     });
             },
-            launchingComponentId: _,
+            launchingComponentId: h,
             commandOrigin: p.bB.APPLICATION_LAUNCHER,
-            sectionName: a,
-            source: P
+            sectionName: l,
+            source: j,
+            fetchesApplication: C
         }),
-        S = s.ButtonColors.BRAND,
-        T = null != l ? l : v.Z.Messages.LAUNCH;
+        y = s.ButtonColors.BRAND,
+        P = null != a ? a : A.intl.string(A.t.zKX8Nj);
     return (
-        g === d.JS.JOIN ? ((S = s.ButtonColors.GREEN), (T = v.Z.Messages.JOIN_ACTIVITY)) : g === d.JS.LEAVE && !C && ((S = s.ButtonColors.RED), (T = v.Z.Messages.LEAVE)),
+        I === d.JS.JOIN ? ((y = s.ButtonColors.GREEN), (P = A.intl.string(A.t.d9PsMj))) : I === d.JS.LEAVE && !f && ((y = s.ButtonColors.RED), (P = A.intl.string(A.t['Hi1/aW']))),
         {
-            onActivityItemSelected: L,
-            activityAction: g,
-            buttonColor: S,
-            buttonText: T
+            onActivityItemSelected: S,
+            activityAction: I,
+            buttonColor: y,
+            buttonText: P
         }
     );
 }
 function S(e, n) {
-    let t = A.Z.entrypoint(),
-        l = i.useMemo(
+    let t = x.Z.entrypoint(),
+        a = i.useMemo(
             () =>
-                (0, a.debounce)(
+                (0, l.debounce)(
                     (e, n) => {
-                        (0, m.yw)(x.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
+                        (0, m.yw)(g.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
                             type: e,
                             source: n
                         });
@@ -107,6 +109,6 @@ function S(e, n) {
             []
         );
     i.useEffect(() => {
-        null != e && l(e, t);
-    }, [e, n, t, l]);
+        null != e && a(e, t);
+    }, [e, n, t, a]);
 }

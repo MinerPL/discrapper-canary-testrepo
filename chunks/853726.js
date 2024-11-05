@@ -1,71 +1,63 @@
-a.d(n, {
+t.d(n, {
     Z: function () {
-        return P;
+        return A;
     }
 });
-var i = a(735250);
-a(470079);
-var s = a(442837),
-    r = a(954138),
-    o = a(979264),
-    l = a(648052),
-    t = a(530),
-    c = a(420654),
-    u = a(116854),
-    d = a(271383),
-    A = a(246946),
-    E = a(654904),
-    _ = a(228168),
-    I = a(451563);
-function P(e) {
+var a = t(200651);
+t(192379);
+var i = t(442837),
+    c = t(648052),
+    o = t(530),
+    s = t(420654),
+    r = t(116854),
+    d = t(271383),
+    l = t(246946),
+    u = t(654904),
+    f = t(228168),
+    p = t(451563);
+function A(e) {
     var n;
-    let { user: a, displayProfile: P, guild: p, pendingAvatar: v, pendingNickname: m, pendingGlobalName: N, pendingBio: C, pendingPronouns: f, isTryItOutFlow: T, hideBioSection: L } = e,
-        R = (0, s.e7)([d.ZP], () => (null == p ? null : d.ZP.getMember(p.id, a.id))),
-        M = (0, s.e7)([A.Z], () => A.Z.hidePersonalInformation),
-        Z = (0, r.Z)('ProfileCustomizationPreviewBody'),
-        S = null == P ? void 0 : null === (n = P.getPreviewBio(C)) || void 0 === n ? void 0 : n.value,
-        g = null != f ? f : null == P ? void 0 : P.pronouns,
-        h = (0, E.Ly)({
-            pendingNickname: m,
-            pendingGlobalName: N,
-            user: a,
-            guildMember: R
+    let { user: t, displayProfile: A, guild: b, pendingAvatar: m, pendingNickname: v, pendingGlobalName: Z, pendingBio: h, pendingPronouns: g, isTryItOutFlow: C, hideBioSection: E } = e,
+        P = (0, i.e7)([d.ZP], () => (null == b ? null : d.ZP.getMember(b.id, t.id))),
+        N = (0, i.e7)([l.Z], () => l.Z.hidePersonalInformation),
+        T = null == A ? void 0 : null === (n = A.getPreviewBio(h)) || void 0 === n ? void 0 : n.value,
+        R = null != g ? g : null == A ? void 0 : A.pronouns,
+        I = (0, u.Ly)({
+            pendingNickname: v,
+            pendingGlobalName: Z,
+            user: t,
+            guildMember: P
         });
-    return (0, i.jsxs)('div', {
+    return (0, a.jsxs)('div', {
         inert: '',
-        className: I.body,
+        className: p.body,
         children: [
-            (0, i.jsx)(t.Z, {
-                user: a,
-                profileType: _.y0.BITE_SIZE,
+            (0, a.jsx)(o.Z, {
+                user: t,
+                profileType: f.y0.BITE_SIZE,
                 usernameIcon: (() => {
-                    if (!(null != R)) return;
-                    if (null !== v && !!(null != R.avatar || null != v))
-                        return (0, i.jsx)(u.Z, {
-                            user: a,
-                            nickname: h
+                    if (!(null != P)) return;
+                    if (null !== m && !!(null != P.avatar || null != m))
+                        return (0, a.jsx)(r.Z, {
+                            user: t,
+                            nickname: I
                         });
                 })(),
-                nickname: h,
-                pronouns: g,
-                isTryItOut: T,
-                tags: (0, i.jsx)(l.Z, {
-                    displayProfile: P,
-                    profileType: _.y0.BITE_SIZE
+                nickname: I,
+                pronouns: R,
+                isTryItOut: C,
+                tags: (0, a.jsx)(c.Z, {
+                    displayProfile: A,
+                    profileType: f.y0.BITE_SIZE
                 })
             }),
-            Z &&
-                (0, i.jsx)(o.ZP, {
-                    userId: a.id,
-                    inline: !1
-                }),
-            !L &&
-                null != S &&
-                '' !== S &&
-                (0, i.jsx)(c.Z, {
-                    user: a,
-                    bio: S,
-                    hidePersonalInformation: M,
+            !E &&
+                null != T &&
+                '' !== T &&
+                (0, a.jsx)(s.Z, {
+                    user: t,
+                    bio: T,
+                    hidePersonalInformation: N,
                     viewFullBioDisabled: !0
                 })
         ]

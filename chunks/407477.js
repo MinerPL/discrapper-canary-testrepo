@@ -1,12 +1,16 @@
 n.d(t, {
     E2: function () {
+        return o;
+    },
+    Xb: function () {
         return a;
     },
     p3: function () {
-        return i;
+        return s;
     }
 });
-let r = (0, n(818083).B)({
+var r = n(818083);
+let i = (0, r.B)({
     kind: 'user',
     id: '2024-08_reaction_frecency_algorithms',
     label: 'Reaction Frecency Algorithms',
@@ -49,14 +53,21 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e) {
+t.ZP = i;
+let a = (0, r.B)({
+    kind: 'user',
+    id: '2024-10_retrigger_reaction_frecency_algorithms',
+    label: '(Retrigger) Reaction Frecency Algorithms',
+    defaultConfig: null,
+    treatments: []
+});
+function s(e) {
     let { location: t, autoTrackExposure: n } = e,
-        { frecencyAlgorithm: i } = r.useExperiment({ location: t }, { autoTrackExposure: n });
-    return 'original' !== i;
+        { frecencyAlgorithm: r } = i.useExperiment({ location: t }, { autoTrackExposure: n });
+    return 'original' !== r;
 }
-function a(e) {
+function o(e) {
     let { location: t, autoTrackExposure: n } = e,
-        { frecencyAlgorithm: i } = r.getCurrentConfig({ location: t }, { autoTrackExposure: n });
-    return 'original' !== i;
+        { frecencyAlgorithm: r } = i.getCurrentConfig({ location: t }, { autoTrackExposure: n });
+    return 'original' !== r;
 }
-t.ZP = r;

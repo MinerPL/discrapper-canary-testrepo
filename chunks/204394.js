@@ -7,6 +7,5 @@ e.exports = {
     hiddenMembers: 'hiddenMembers_cbd271',
     memberGroupsPlaceholder: 'memberGroupsPlaceholder_cbd271',
     roleIcon: 'roleIcon_cbd271',
-    fullWidth: 'fullWidth_cbd271',
-    appIconWrapper: 'appIconWrapper_cbd271'
+    fullWidth: 'fullWidth_cbd271'
 };

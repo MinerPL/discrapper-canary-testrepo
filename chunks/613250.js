@@ -35,6 +35,5 @@ e.exports = {
     buttons: 'buttons_a1eac2',
     headerBanner: 'headerBanner_a1eac2',
     partnerBadge: 'partnerBadge_a1eac2',
-    errorImage: 'errorImage_a1eac2',
-    appSlide: 'appSlide_a1eac2'
+    errorImage: 'errorImage_a1eac2'
 };

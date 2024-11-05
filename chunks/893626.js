@@ -1,225 +1,199 @@
-n.r(l),
-    n.d(l, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return M;
+            return p;
         }
     }),
     n(47120);
-var s = n(735250),
-    a = n(470079),
-    t = n(658722),
-    r = n.n(t),
-    o = n(399606),
-    u = n(481060),
-    i = n(313201),
+var l = n(200651),
+    r = n(192379),
+    a = n(658722),
+    o = n.n(a),
+    s = n(399606),
+    i = n(481060),
+    u = n(313201),
     d = n(734893),
     c = n(271383),
-    _ = n(430824),
-    m = n(594174),
-    E = n(700785),
-    I = n(580357),
-    g = n(981631),
-    h = n(689938),
-    f = n(873410);
-function M(e) {
-    var l, n, t;
-    let { transitionState: M, onClose: x, guildId: S, welcomeMessage: p, onSave: T } = e,
-        v = (0, i.Dt)(),
-        [N, O] = a.useState({ ...p }),
-        A = (0, o.e7)([_.Z], () => _.Z.getGuild(S)),
-        b = a.useCallback(
+    m = n(430824),
+    g = n(594174),
+    h = n(903518),
+    f = n(580357),
+    v = n(388032),
+    x = n(224474);
+function p(e) {
+    var t, n, a;
+    let { transitionState: p, onClose: b, guildId: I, welcomeMessage: j, onSave: k } = e,
+        _ = (0, u.Dt)(),
+        [B, C] = r.useState({ ...j }),
+        L = (0, s.e7)([m.Z], () => m.Z.getGuild(I)),
+        M = r.useCallback(
             (e) => {
-                let l = {};
+                let t = {};
                 return Promise.resolve(
-                    c.ZP.getMembers(S)
+                    c.ZP.getMembers(I)
                         .filter((n) => {
-                            var s, a, t;
-                            let o = m.default.getUser(n.userId);
-                            if (
-                                (null != o && (l[n.userId] = o),
-                                null == A ||
-                                    null == o ||
-                                    ((a = A),
-                                    (t = o),
-                                    !(
-                                        a.isOwner(t) ||
-                                        E.BT({
-                                            permission: g.Plq.ADMINISTRATOR,
-                                            context: a,
-                                            user: t
-                                        }) ||
-                                        (E.BT({
-                                            permission: g.Plq.MANAGE_GUILD,
-                                            context: a,
-                                            user: t
-                                        }) &&
-                                            E.BT({
-                                                permission: g.Plq.MANAGE_ROLES,
-                                                context: a,
-                                                user: t
-                                            }))
-                                    )))
-                            )
-                                return !1;
-                            let u = ''.concat(null !== (s = n.nick) && void 0 !== s ? s : '', ' ').concat(null == o ? void 0 : o.username);
-                            return r()(e.toLowerCase(), u.toLowerCase());
+                            var l;
+                            let r = g.default.getUser(n.userId);
+                            if ((null != r && (t[n.userId] = r), null == L || null == r || !(0, h.Y)(L, r))) return !1;
+                            let a = ''.concat(null !== (l = n.nick) && void 0 !== l ? l : '', ' ').concat(null == r ? void 0 : r.username);
+                            return o()(e.toLowerCase(), a.toLowerCase());
                         })
                         .map((e) => {
-                            var n, s, a;
+                            var n, l, r;
                             return {
                                 value: e.userId,
-                                label: null !== (a = null !== (s = e.nick) && void 0 !== s ? s : null === (n = l[e.userId]) || void 0 === n ? void 0 : n.username) && void 0 !== a ? a : ''
+                                label: null !== (r = null !== (l = e.nick) && void 0 !== l ? l : null === (n = t[e.userId]) || void 0 === n ? void 0 : n.username) && void 0 !== r ? r : ''
                             };
                         })
                 );
             },
-            [S, A]
+            [I, L]
         ),
-        L = a.useCallback(
+        N = r.useCallback(
             (e) => {
-                if (null == S || null == e) return null;
-                let l = c.ZP.getMember(S, e.value);
-                if (null == l) return null;
-                let n = m.default.getUser(l.userId);
+                if (null == I || null == e) return null;
+                let t = c.ZP.getMember(I, e.value);
+                if (null == t) return null;
+                let n = g.default.getUser(t.userId);
                 if (null == n) return null;
-                let a = n.getAvatarURL(S, 20);
-                return (0, s.jsx)(u.AnimatedAvatar, {
-                    size: u.AvatarSizes.SIZE_20,
-                    src: a,
+                let r = n.getAvatarURL(I, 20);
+                return (0, l.jsx)(i.AnimatedAvatar, {
+                    size: i.AvatarSizes.SIZE_20,
+                    src: r,
                     'aria-hidden': !0
                 });
             },
-            [S]
+            [I]
         ),
-        R = a.useCallback(
+        S = r.useCallback(
             (e) => {
-                let { value: l } = e;
-                O((e) => ({
+                let { value: t } = e;
+                C((e) => ({
                     ...e,
-                    authorIds: null != l ? [l] : []
+                    authorIds: null != t ? [t] : []
                 }));
             },
-            [O]
+            [C]
         ),
-        G = a.useCallback(
+        Z = r.useCallback(
             (e) => {
-                O((l) => ({
-                    ...l,
+                C((t) => ({
+                    ...t,
                     message: null != e ? e : ''
                 }));
             },
-            [O]
+            [C]
         ),
-        C = a.useCallback(() => {
-            T(null), x();
-        }, [T, x]),
-        B = null !== (l = N.authorIds[0]) && void 0 !== l ? l : '',
-        j = (0, o.e7)([c.ZP], () => (null != S ? c.ZP.getMember(S, B) : null)),
-        Z = (0, o.e7)([m.default], () => (null != j ? m.default.getUser(j.userId) : null)),
-        k = null !== (t = null !== (n = null == j ? void 0 : j.nick) && void 0 !== n ? n : null == Z ? void 0 : Z.username) && void 0 !== t ? t : '',
-        D = (function (e) {
+        T = r.useCallback(() => {
+            k(null), b();
+        }, [k, b]),
+        H = null !== (t = B.authorIds[0]) && void 0 !== t ? t : '',
+        P = (0, s.e7)([c.ZP], () => (null != I ? c.ZP.getMember(I, H) : null)),
+        R = (0, s.e7)([g.default], () => (null != P ? g.default.getUser(P.userId) : null)),
+        y = null !== (a = null !== (n = null == P ? void 0 : P.nick) && void 0 !== n ? n : null == R ? void 0 : R.username) && void 0 !== a ? a : '',
+        w = (function (e) {
             if (null == e.message || 0 === e.message.length) return null;
-            if (null == e.authorIds || 0 === e.authorIds.length) return e.message.length < d.ZR ? h.Z.Messages.WELCOME_MESSAGE_VALIDATION_ERROR_AUTHOR_AND_MESSAGE.format({ minLength: d.ZR }) : h.Z.Messages.WELCOME_MESSAGE_VALIDATION_ERROR_AUTHOR;
-            return e.message.length < d.ZR ? h.Z.Messages.WELCOME_MESSAGE_VALIDATION_ERROR_MESSAGE.format({ minLength: d.ZR }) : null;
-        })(N);
-    return (0, s.jsxs)(u.ModalRoot, {
-        transitionState: M,
-        'aria-labelledby': v,
+            if (null == e.authorIds || 0 === e.authorIds.length) return e.message.length < d.ZR ? v.intl.formatToPlainString(v.t.Lj831N, { minLength: d.ZR }) : v.intl.string(v.t['4m7gtr']);
+            return e.message.length < d.ZR ? v.intl.formatToPlainString(v.t.TJGHXl, { minLength: d.ZR }) : null;
+        })(B);
+    return (0, l.jsxs)(i.ModalRoot, {
+        transitionState: p,
+        'aria-labelledby': _,
         children: [
-            (0, s.jsxs)('div', {
-                className: f.container,
+            (0, l.jsxs)('div', {
+                className: x.container,
                 children: [
-                    (0, s.jsx)(u.ModalCloseButton, {
-                        className: f.closeButton,
-                        onClick: x
+                    (0, l.jsx)(i.ModalCloseButton, {
+                        className: x.closeButton,
+                        onClick: b
                     }),
-                    (0, s.jsxs)('div', {
-                        className: f.formGroup,
+                    (0, l.jsxs)('div', {
+                        className: x.formGroup,
                         children: [
-                            (0, s.jsxs)(u.Heading, {
+                            (0, l.jsxs)(i.Heading, {
                                 variant: 'heading-md/semibold',
                                 color: 'header-primary',
-                                children: [h.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_WELCOME_AUTHOR_TITLE, (0, s.jsx)(I.Z, {})]
+                                children: [v.intl.string(v.t.zNQfQ0), (0, l.jsx)(f.Z, {})]
                             }),
-                            (0, s.jsx)(u.Text, {
+                            (0, l.jsx)(i.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: h.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_WELCOME_AUTHOR_EXPLAINER
+                                children: v.intl.string(v.t.mQHK2d)
                             }),
-                            (0, s.jsx)(u.SearchableSelect, {
+                            (0, l.jsx)(i.SearchableSelect, {
                                 value: {
-                                    value: B,
-                                    label: k
+                                    value: H,
+                                    label: y
                                 },
-                                renderOptionPrefix: L,
-                                options: b,
-                                onChange: R,
+                                renderOptionPrefix: N,
+                                options: M,
+                                onChange: S,
                                 filter: !1
                             })
                         ]
                     }),
-                    (0, s.jsx)('div', { className: f.separator }),
-                    (0, s.jsxs)('div', {
-                        className: f.formGroup,
+                    (0, l.jsx)('div', { className: x.separator }),
+                    (0, l.jsxs)('div', {
+                        className: x.formGroup,
                         children: [
-                            (0, s.jsx)(u.Heading, {
+                            (0, l.jsx)(i.Heading, {
                                 variant: 'heading-md/semibold',
                                 color: 'header-primary',
-                                children: h.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_WELCOME_MESSAGE_INPUT_HEADER
+                                children: v.intl.string(v.t.SHQcv7)
                             }),
-                            (0, s.jsx)(u.Text, {
+                            (0, l.jsx)(i.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: h.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_WELCOME_DESCRIPTION_TIP.format()
+                                children: v.intl.format(v.t['6biC4e'], {})
                             }),
-                            (0, s.jsx)(u.TextArea, {
-                                className: f.welcomeMessageTextInput,
-                                placeholder: h.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_WELCOME_PLACEHOLDER,
-                                value: N.message,
-                                onChange: G,
+                            (0, l.jsx)(i.TextArea, {
+                                className: x.welcomeMessageTextInput,
+                                placeholder: v.intl.string(v.t['kX/Sb2']),
+                                value: B.message,
+                                onChange: Z,
                                 maxLength: d.W4
                             }),
-                            null != D
-                                ? (0, s.jsx)(u.Text, {
+                            null != w
+                                ? (0, l.jsx)(i.Text, {
                                       variant: 'text-xs/normal',
                                       color: 'text-danger',
-                                      children: D
+                                      children: w
                                   })
                                 : null
                         ]
                     })
                 ]
             }),
-            (0, s.jsx)(u.ModalFooter, {
-                children: (0, s.jsxs)('div', {
-                    className: f.footerButtons,
+            (0, l.jsx)(i.ModalFooter, {
+                children: (0, l.jsxs)('div', {
+                    className: x.footerButtons,
                     children: [
-                        (0, s.jsx)('div', {
-                            className: f.__invalid_leftButtons,
-                            children: (0, s.jsx)(u.Button, {
-                                size: u.Button.Sizes.SMALL,
-                                look: u.Button.Looks.LINK,
-                                color: u.Button.Colors.RED,
-                                onClick: C,
-                                children: h.Z.Messages.REMOVE
+                        (0, l.jsx)('div', {
+                            className: x.__invalid_leftButtons,
+                            children: (0, l.jsx)(i.Button, {
+                                size: i.Button.Sizes.SMALL,
+                                look: i.Button.Looks.LINK,
+                                color: i.Button.Colors.RED,
+                                onClick: T,
+                                children: v.intl.string(v.t.N86XcH)
                             })
                         }),
-                        (0, s.jsxs)('div', {
-                            className: f.rightButtons,
+                        (0, l.jsxs)('div', {
+                            className: x.rightButtons,
                             children: [
-                                (0, s.jsx)(u.Button, {
-                                    onClick: x,
-                                    size: u.Button.Sizes.SMALL,
-                                    look: u.Button.Looks.LINK,
-                                    color: u.Button.Colors.PRIMARY,
-                                    children: h.Z.Messages.CANCEL
+                                (0, l.jsx)(i.Button, {
+                                    onClick: b,
+                                    size: i.Button.Sizes.SMALL,
+                                    look: i.Button.Looks.LINK,
+                                    color: i.Button.Colors.PRIMARY,
+                                    children: v.intl.string(v.t['ETE/oK'])
                                 }),
-                                (0, s.jsx)(u.Button, {
-                                    disabled: 0 === N.message.length || null != D,
+                                (0, l.jsx)(i.Button, {
+                                    disabled: 0 === B.message.length || null != w,
                                     onClick: () => {
-                                        T(N), x();
+                                        k(B), b();
                                     },
-                                    children: h.Z.Messages.SAVE
+                                    children: v.intl.string(v.t.R3BPHx)
                                 })
                             ]
                         })

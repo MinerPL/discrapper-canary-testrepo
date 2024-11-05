@@ -130,6 +130,7 @@ class u extends r.Z {
         throw Error('Connection replay is not supported.');
     }
     setUseDirectVideo(e) {}
+    setOnVideoContainerResized(e) {}
     setMaxSyncDelayOverride(e) {}
     rankRtcRegions(e) {
         return Promise.reject(Error('RTC region latency test is not supported.'));

@@ -1,7 +1,7 @@
 var n, a;
 r.d(t, {
     V: function () {
-        return o;
+        return _;
     },
     u: function () {
         return n;
@@ -61,8 +61,9 @@ r.d(t, {
     (a[(a.IN_GAME_MESSAGE_NUX = 51)] = 'IN_GAME_MESSAGE_NUX'),
     (a[(a.GUILD_JOIN_REQUEST_ACCEPT_NOTIFICATION = 52)] = 'GUILD_JOIN_REQUEST_ACCEPT_NOTIFICATION'),
     (a[(a.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION = 53)] = 'GUILD_JOIN_REQUEST_REJECT_NOTIFICATION'),
-    (a[(a.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION = 54)] = 'GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION');
-let o = {
+    (a[(a.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION = 54)] = 'GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION'),
+    (a[(a.HD_STREAMING_UPGRADED = 55)] = 'HD_STREAMING_UPGRADED');
+let _ = {
     UNDELETABLE: new Set([1, 2, 3, 4, 5, 21]),
     GUILD_DISCOVERY_STATUS: new Set([14, 15, 16, 17]),
     USER_MESSAGE: new Set([0, 19, 20, 23, 26, 35, 41, 45, 47]),

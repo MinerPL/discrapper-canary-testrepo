@@ -22,13 +22,18 @@ function i(e, t, n) {
 }
 class a {
     getMaxSinkValue(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
         if (e < 0) throw Error('getMaxSinkValue: Requested ' + e);
-        let t = this.orderedLadder[0].wantValue;
-        for (let { pixelCount: n, wantValue: r } of this.orderedLadder) {
-            if (n * e > this.pixelBudget) break;
-            t = r;
+        let n = this.orderedLadder[0].wantValue;
+        for (let { pixelCount: r, wantValue: i } of this.orderedLadder) {
+            if (t > 0 && t < r) {
+                n = i;
+                break;
+            }
+            if (r * e > this.pixelBudget) break;
+            n = i;
         }
-        return t;
+        return n;
     }
     getResolution(e) {
         let t = null;

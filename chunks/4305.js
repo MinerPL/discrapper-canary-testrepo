@@ -1,26 +1,28 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return s;
     }
 });
-var i = n(735250);
-n(470079);
-var a = n(352736),
-    s = n(739566),
-    r = n(834129);
-function l(e) {
-    let { message: t, usernameHook: l, compact: o, guildId: c } = e,
-        u = (0, s.ZP)(t),
-        d = l(u),
-        _ = a.Z.getWelcomeMessageKind(c),
-        E = a.Z.getSystemMessageUserJoin(t.id, _).format({
+var i = n(200651);
+n(192379);
+var r = n(352736),
+    l = n(739566),
+    a = n(834129),
+    o = n(388032);
+function s(e) {
+    let { message: t, usernameHook: s, compact: c, guildId: d } = e,
+        u = (0, l.ZP)(t),
+        m = s(u),
+        h = r.Z.getWelcomeMessageKind(d),
+        f = r.Z.getSystemMessageUserJoin(t.id, h),
+        p = o.intl.format(f, {
             username: u.nick,
-            usernameHook: d
+            usernameHook: m
         });
-    return (0, i.jsx)(r.Z, {
+    return (0, i.jsx)(a.Z, {
         icon: n(570111),
         timestamp: t.timestamp,
-        compact: o,
-        children: E
+        compact: c,
+        children: p
     });
 }

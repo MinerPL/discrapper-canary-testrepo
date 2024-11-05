@@ -1,88 +1,90 @@
-var n = t(735250),
-    a = t(470079),
-    i = t(481060),
-    r = t(906732),
-    o = t(879892),
-    l = t(709586),
-    c = t(267642),
-    d = t(981631),
-    _ = t(689938),
-    E = t(123600);
-s.Z = function () {
-    let e = a.useRef(null),
-        { analyticsLocations: s } = (0, r.ZP)();
-    function u(t) {
-        null != e.current && (0, i.closeModal)(e.current),
+var i = n(200651),
+    s = n(192379),
+    r = n(481060),
+    l = n(906732),
+    a = n(975298),
+    o = n(879892),
+    c = n(709586),
+    d = n(267642),
+    u = n(981631),
+    m = n(388032),
+    h = n(305564);
+t.Z = function () {
+    let e = s.useRef(null),
+        { analyticsLocations: t } = (0, l.ZP)(),
+        { fractionalState: g } = (0, a.Z)();
+    function p(n) {
+        null != e.current && (0, r.closeModal)(e.current),
             (0, o.u)({
                 analyticsLocation: {
-                    page: d.ZY5.GUILD_BOOSTING_USER_SETTINGS,
-                    section: d.jXE.GUILD_BOOSTING_BOOST_ANY_GUILD_CTA,
-                    object: d.qAy.BUTTON_CTA,
-                    objectType: d.Qqv.BUY
+                    page: u.ZY5.GUILD_BOOSTING_USER_SETTINGS,
+                    section: u.jXE.GUILD_BOOSTING_BOOST_ANY_GUILD_CTA,
+                    object: u.qAy.BUTTON_CTA,
+                    objectType: u.Qqv.BUY
                 },
-                analyticsLocations: s,
-                guild: t
+                analyticsLocations: t,
+                guild: n
             });
     }
-    async function I() {
-        e.current = await (0, i.openModalLazy)(
+    async function x() {
+        e.current = await (0, r.openModalLazy)(
             async () => {
-                let { default: e } = await Promise.resolve().then(t.bind(t, 719228));
-                return (s) =>
-                    (0, n.jsx)(e, {
-                        ...s,
-                        onSelectGuild: u
+                let { default: e } = await Promise.resolve().then(n.bind(n, 719228));
+                return (t) =>
+                    (0, i.jsx)(e, {
+                        ...t,
+                        onSelectGuild: p
                     });
             },
             {
                 onCloseRequest: () => {
-                    null != e.current && (0, i.closeModal)(e.current);
+                    null != e.current && (0, r.closeModal)(e.current);
                 }
             }
         );
     }
-    let T = (0, c.aq)();
-    return (0, n.jsxs)('div', {
-        className: E.wrapper,
+    let S = (0, d.aq)({ fractionalState: g });
+    return (0, i.jsxs)('div', {
+        className: h.wrapper,
         children: [
-            (0, n.jsx)(l.Z, {
-                className: E.boostIcon,
+            (0, i.jsx)(c.Z, {
+                className: h.boostIcon,
                 width: 16,
                 height: 16
             }),
-            (0, n.jsx)(i.Text, {
-                className: E.copy,
+            (0, i.jsx)(r.Text, {
+                className: h.copy,
                 color: 'header-secondary',
                 variant: 'text-sm/medium',
-                children: _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_GUILD_CTA.format({
-                    boostAnyGuildHook: (e, s) => {
-                        let t = null != T,
-                            a = (0, n.jsx)(
-                                i.Button,
+                children: m.intl.format(m.t.kqC5vr, {
+                    boostAnyGuildHook: (e, t) => {
+                        let n = null != S,
+                            s = (0, i.jsx)(
+                                r.Button,
                                 {
-                                    className: E.cta,
-                                    disabled: t,
-                                    color: i.Button.Colors.LINK,
-                                    look: i.Button.Looks.LINK,
-                                    onClick: t ? void 0 : I,
+                                    className: h.cta,
+                                    disabled: n,
+                                    color: r.Button.Colors.LINK,
+                                    look: r.Button.Looks.LINK,
+                                    onClick: n ? void 0 : x,
                                     children: e
                                 },
-                                s
+                                t
                             );
-                        return t
-                            ? (0, n.jsx)(
-                                  i.Tooltip,
+                        return n
+                            ? (0, i.jsx)(
+                                  r.Tooltip,
                                   {
-                                      text: T,
+                                      text: S,
                                       children: (e) =>
-                                          (0, n.jsx)('span', {
+                                          (0, i.jsx)('span', {
                                               ...e,
-                                              children: a
+                                              children: s
                                           })
                                   },
-                                  s
+                                  t
                               )
-                            : a;
+                            : s;
                     }
                 })
             })

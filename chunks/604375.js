@@ -1,9 +1,10 @@
 n.d(t, {
     X: function () {
-        return s;
+        return o;
     }
 });
-var r = n(91641),
-    i = n(89805),
-    a = n(987338);
-let s = new r.E([i.NR, i.ZI, i.Ob, i.uc, i.m1], a.$P.OPEN_USER_SETTINGS, { location: 'open user settings' });
+var r = n(187819),
+    i = n(91641),
+    a = n(89805),
+    s = n(987338);
+let o = new i.E([a.NR, a.ZI, a.Ob, a.uc, a.m1, r.hP], s.$P.OPEN_USER_SETTINGS, { location: 'open user settings' });

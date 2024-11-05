@@ -1,57 +1,55 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return g;
     }
 });
-var i = n(735250);
-n(470079);
-var a = n(685072),
-    s = n(287734),
-    r = n(15274),
-    l = n(389303),
+var i = n(200651);
+n(192379);
+var r = n(685072),
+    a = n(287734),
+    l = n(15274),
+    s = n(389303),
     o = n(881824),
     c = n(719100),
     d = n(870569),
-    u = n(689938),
-    _ = n(209263);
-function E(e) {
+    u = n(388032);
+function h(e) {
     let { tooltipText: t, onClick: n } = e,
-        s = (0, a.K)();
+        a = (0, r.K)();
     return (0, i.jsx)(d.Z, {
-        innerClassName: _.button,
         tooltipText: t,
         onClick: n,
-        ...s.events,
-        icon: s.Component
+        ...a.events,
+        icon: a.Component
     });
 }
-function h(e) {
+function m(e) {
     let { channel: t } = e;
-    return (0, i.jsx)(E, {
-        tooltipText: u.Z.Messages.AUDIENCE_DISCONNECT,
+    return (0, i.jsx)(h, {
+        tooltipText: u.intl.string(u.t.SMKyio),
         onClick: () => {
             if ((0, c.Z)(t)) {
                 (0, o.Us)(t);
                 return;
             }
-            s.default.disconnect();
+            a.default.disconnect();
         }
     });
 }
-function m(e) {
+function p(e) {
     let { channel: t } = e;
-    return (0, i.jsx)(E, {
-        tooltipText: u.Z.Messages.DISCONNECT_SELF,
+    return (0, i.jsx)(h, {
+        tooltipText: u.intl.string(u.t['6vrfgo']),
         onClick: () => {
-            if ((0, l.Z)(t)) {
-                (0, r.lC)(t);
+            if ((0, s.Z)(t)) {
+                (0, l.lC)(t);
                 return;
             }
-            s.default.disconnect();
+            a.default.disconnect();
         }
     });
 }
-function I(e) {
+function g(e) {
     let { channel: t } = e;
-    return t.isGuildStageVoice() ? (0, i.jsx)(h, { channel: t }) : (0, i.jsx)(m, { channel: t });
+    return t.isGuildStageVoice() ? (0, i.jsx)(m, { channel: t }) : (0, i.jsx)(p, { channel: t });
 }

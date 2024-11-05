@@ -9,6 +9,7 @@ n.r(
         editable: 'editable_f8bc55',
         inputDefault: 'inputDefault_f8bc55 input_f8bc55',
         inputMini: 'inputMini_f8bc55 input_f8bc55',
-        inputPrefix: 'inputPrefix_f8bc55'
+        inputPrefix: 'inputPrefix_f8bc55',
+        inputError: 'inputError_f8bc55'
     })
 );

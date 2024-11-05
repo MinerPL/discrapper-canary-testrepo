@@ -1,5 +1,6 @@
 t.exports = {
-    bodyContent: 'bodyContent_af0f97',
-    title: 'title_af0f97',
-    footerButton: 'footerButton_af0f97'
+    content: 'content_af0f97',
+    innerContent: 'innerContent_af0f97',
+    footerButton: 'footerButton_af0f97',
+    artwork: 'artwork_af0f97'
 };

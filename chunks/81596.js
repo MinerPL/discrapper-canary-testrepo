@@ -1,65 +1,65 @@
 e.r(n),
     e.d(n, {
         default: function () {
-            return C;
+            return T;
         }
     }),
     e(47120);
-var o = e(735250),
-    r = e(470079),
-    s = e(442837),
-    i = e(481060),
-    a = e(230711),
+var i = e(200651),
+    o = e(192379),
+    r = e(442837),
+    a = e(481060),
+    c = e(230711),
     l = e(485267),
-    c = e(564990),
+    s = e(564990),
     d = e(353647),
-    E = e(527790),
-    u = e(540440),
-    _ = e(365583),
-    R = e(689938),
-    T = e(19854);
-function C(t) {
-    let { user: n, entry: e, transitionState: C, onAction: h, onClose: S, onOpenGameSettings: f } = t,
-        [I, L] = (0, s.Wu)([d.Z], () => [d.Z.isDeletingEntryHistory, d.Z.deleteOutboxEntryError]);
+    u = e(527790),
+    _ = e(540440),
+    E = e(365583),
+    f = e(388032),
+    h = e(121269);
+function T(t) {
+    let { user: n, entry: e, transitionState: T, onAction: S, onClose: p, onOpenGameSettings: x } = t,
+        [N, R] = (0, r.Wu)([d.Z], () => [d.Z.isDeletingEntryHistory, d.Z.deleteOutboxEntryError]);
     return (
-        r.useEffect(() => l.Bt, []),
-        (0, o.jsxs)(i.ModalRoot, {
-            size: i.ModalSize.SMALL,
-            transitionState: C,
+        o.useEffect(() => l.Bt, []),
+        (0, i.jsxs)(a.ModalRoot, {
+            size: a.ModalSize.SMALL,
+            transitionState: T,
             children: [
-                (0, o.jsxs)(i.ModalContent, {
-                    className: T.content,
+                (0, i.jsxs)(a.ModalContent, {
+                    className: h.content,
                     children: [
-                        null != L
-                            ? (0, o.jsxs)('div', {
-                                  className: T.error,
+                        null != R
+                            ? (0, i.jsxs)('div', {
+                                  className: h.error,
                                   children: [
-                                      (0, o.jsx)(i.CircleXIcon, { color: i.tokens.colors.STATUS_DANGER }),
-                                      (0, o.jsx)(i.Text, {
+                                      (0, i.jsx)(a.CircleXIcon, { color: a.tokens.colors.STATUS_DANGER }),
+                                      (0, i.jsx)(a.Text, {
                                           variant: 'text-sm/medium',
-                                          children: R.Z.Messages.USER_ACTIVITY_DELETE_HISTORY_ERROR
+                                          children: f.intl.string(f.t.FMbL3t)
                                       })
                                   ]
                               })
                             : null,
-                        (0, o.jsx)(i.Heading, {
+                        (0, i.jsx)(a.Heading, {
                             variant: 'heading-lg/semibold',
-                            children: (0, u.y)(e)
+                            children: (0, _.y)(e)
                         }),
-                        (0, o.jsx)(i.Text, {
+                        (0, i.jsx)(a.Text, {
                             variant: 'text-sm/normal',
                             tag: 'span',
-                            children: R.Z.Messages.USER_ACTIVITY_CLEAR_HISTORY_DISCLAIMER.format({
+                            children: f.intl.format(f.t.KV72oa, {
                                 settingsHook: (t, n) => {
-                                    let r = (0, _.C)({
+                                    let o = (0, E.C)({
                                         entry: e,
-                                        onOpenGameSettings: f
+                                        onOpenGameSettings: x
                                     });
-                                    return (0, o.jsx)(
-                                        i.Anchor,
+                                    return (0, i.jsx)(
+                                        a.Anchor,
                                         {
                                             onClick: () => {
-                                                null == h || h({ action: 'PRESS_CLEAR_HISTORY_DISCLAIMER' }), null != r ? r() : a.Z.open(), S();
+                                                null == S || S({ action: 'PRESS_CLEAR_HISTORY_DISCLAIMER' }), null != o ? o() : c.Z.open(), p();
                                             },
                                             children: t
                                         },
@@ -68,32 +68,33 @@ function C(t) {
                                 }
                             })
                         }),
-                        (0, o.jsx)(E.Z, {
+                        (0, i.jsx)(u.Z, {
                             user: n,
                             entry: e,
-                            className: T.card,
+                            className: h.card,
+                            hideHeader: !0,
                             hideContextMenu: !0
                         })
                     ]
                 }),
-                (0, o.jsxs)(i.ModalFooter, {
-                    className: T.footer,
+                (0, i.jsxs)(a.ModalFooter, {
+                    className: h.footer,
                     children: [
-                        (0, o.jsx)(i.Button, {
-                            disabled: I,
-                            color: i.ButtonColors.RED,
-                            size: i.ButtonSizes.SMALL,
+                        (0, i.jsx)(a.Button, {
+                            disabled: N,
+                            color: a.ButtonColors.RED,
+                            size: a.ButtonSizes.SMALL,
                             onClick: () => {
-                                null == h || h({ action: 'PRESS_CLEAR_HISTORY_BUTTON' }), (0, c.CV)(e, n.id, S);
+                                null == S || S({ action: 'PRESS_CLEAR_HISTORY_BUTTON' }), (0, s.CV)(e, n.id, p);
                             },
-                            children: null != L ? R.Z.Messages.RETRY : R.Z.Messages.CLEAR
+                            children: null != R ? f.intl.string(f.t['5911LS']) : f.intl.string(f.t.VkKicX)
                         }),
-                        (0, o.jsx)(i.Button, {
-                            onClick: S,
-                            size: i.ButtonSizes.SMALL,
-                            look: i.ButtonLooks.FILLED,
-                            color: i.ButtonColors.TRANSPARENT,
-                            children: R.Z.Messages.CANCEL
+                        (0, i.jsx)(a.Button, {
+                            onClick: p,
+                            size: a.ButtonSizes.SMALL,
+                            look: a.ButtonLooks.FILLED,
+                            color: a.ButtonColors.TRANSPARENT,
+                            children: f.intl.string(f.t['ETE/oK'])
                         })
                     ]
                 })

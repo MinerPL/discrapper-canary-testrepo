@@ -2,6 +2,8 @@ e.exports = {
     clickableCard: 'clickableCard_e0fe28',
     card: 'card_e0fe28',
     favoriteButton: 'favoriteButton_e0fe28',
+    applyToJoinButton: 'applyToJoinButton_e0fe28',
+    applyToJoinContainer: 'applyToJoinContainer_e0fe28',
     skeletonCard: 'skeletonCard_e0fe28',
     shownFavoriteButton: 'shownFavoriteButton_e0fe28',
     cardStaticHeight: 'cardStaticHeight_e0fe28',

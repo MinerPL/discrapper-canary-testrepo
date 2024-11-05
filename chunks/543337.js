@@ -15,5 +15,7 @@ e.exports = {
     pronounsTooltip: 'pronounsTooltip_c32acf',
     pronounsText: 'pronounsText_c32acf userTag_c32acf',
     userTagDiscriminator: 'userTagDiscriminator_c32acf',
-    dotSpacer: 'dotSpacer_c32acf'
+    dotSpacer: 'dotSpacer_c32acf',
+    clanTagContainer: 'clanTagContainer_c32acf',
+    clanTag: 'clanTag_c32acf'
 };

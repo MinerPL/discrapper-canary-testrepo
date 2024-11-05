@@ -1,18 +1,29 @@
-var r = n(318217),
-    i = n(689938),
-    a = n(586393),
-    s = n(464912);
-let o = {
-    experiment: r.Z,
-    startTimeMs: 1702576800000,
-    endTimeMs: 1704218400000,
+n.d(t, {
+    O: function () {
+        return i;
+    }
+});
+var r,
+    i,
+    a = n(774258),
+    s = n(871465),
+    o = n(388032),
+    l = n(770676),
+    u = n(483465);
+(r = i || (i = {}))[(r.THROW_EMOJI = 0)] = 'THROW_EMOJI';
+let c = {
+    experiment: a.Z,
+    startTimeMs: 1729789200000,
+    endTimeMs: 1730682000000,
     isDesktopOnly: !0,
-    ringtone: 'call_ringing_snowsgiving',
-    getRingtoneSettingsLabel: () => i.Z.Messages.SOUND_INCOMING_RING_EOY_2023 + ' \u2744️',
+    soundpack: s.YC.HALLOWEEN,
     appSpinnerSources: {
-        webmDark: a,
-        webmLight: s
+        webmDark: l,
+        webmLight: u
     },
-    getLoadingTips: () => []
+    getLoadingTips: () => [o.intl.string(o.t.ydMZ2t), o.intl.string(o.t['AL/Soa']), o.intl.string(o.t.w2pMur), o.intl.string(o.t.WB9eZm), o.intl.string(o.t['rE+3z8']), o.intl.string(o.t.qvtjMz), o.intl.string(o.t.irDT8f), o.intl.string(o.t.TlJKIS), o.intl.string(o.t['m+xpaG'])],
+    emojiAnimationType: 0,
+    emojiAnimationTriggers: ['jack_o_lantern', 'nose'],
+    triggerEmojiAnimationFromSentMessage: !1
 };
-t.Z = o;
+t.Z = c;

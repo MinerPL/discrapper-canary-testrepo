@@ -1,15 +1,15 @@
 n.d(t, {
     ZP: function () {
-        return f;
-    },
-    k$: function () {
         return h;
     },
+    k$: function () {
+        return p;
+    },
     n0: function () {
-        return E;
+        return _;
     },
     p6: function () {
-        return _;
+        return f;
     },
     rs: function () {
         return d;
@@ -28,7 +28,7 @@ var s = n(55406),
 let u = new Set([l.hBH.IMAGE, l.hBH.GIFV]),
     c = new Set(['strong', 'em', 'u', 'text', 'inlineCode', 's', 'spoiler']);
 function d(e, t) {
-    let n = _({
+    let n = f({
             channelId: e.channel_id,
             messageId: e.id,
             renderOptions: t
@@ -41,7 +41,7 @@ function d(e, t) {
         mentionChannels: e.mentionChannels
     };
 }
-function _(e) {
+function f(e) {
     let { channelId: t, messageId: n, renderOptions: r } = e;
     return {
         channelId: t,
@@ -64,28 +64,28 @@ function _(e) {
         forceWhite: !!r.forceWhite
     };
 }
-function E(e, t, n) {
+function _(e, t, n) {
     return {
         hasSpoilerEmbeds: !1,
         content: a.Z.reactParserFor(s.Z.getDefaultRules(t))(e.content, !1, null != n ? { changeLog: n } : {})
     };
 }
-function f(e) {
+function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     return (function (e, t, n) {
         var a;
-        let { toAST: s = !1, hideSimpleEmbedContent: l = !0, formatInline: _ = !1, postProcessor: E, shouldFilterKeywords: f, contentMessage: h } = n,
-            m = !1,
-            T = (null != h ? h : t).content,
-            S = e(
-                f
-                    ? (0, i.N)(T, {
+        let { toAST: s = !1, hideSimpleEmbedContent: l = !0, formatInline: f = !1, postProcessor: _, shouldFilterKeywords: h, contentMessage: p } = n,
+            g = !1,
+            v = (null != p ? p : t).content,
+            I = e(
+                h
+                    ? (0, i.N)(v, {
                           escapeReplacement: !0,
                           messageId: t.id,
                           channelId: t.channel_id,
                           authorId: null === (a = t.author) || void 0 === a ? void 0 : a.id
                       })
-                    : T,
+                    : v,
                 !0,
                 d(t, n),
                 (e, n) => (
@@ -96,25 +96,24 @@ function f(e) {
                             let n = e[0],
                                 r = t[0];
                             return ('link' === n.type || 'attachmentLink' === n.type) && u.has(r.type) && (0, o.dY)(r) ? [] : e;
-                        })(e, (null != h ? h : t).embeds)),
-                    !_ &&
+                        })(e, (null != p ? p : t).embeds)),
+                    !f &&
                         (e = (function (e, t) {
-                            return t ? p(e) : ('paragraph' === e[0].type && e[0].content instanceof Array && (e[0].content = p(e[0].content)), e);
+                            return t ? m(e) : ('paragraph' === e[0].type && e[0].content instanceof Array && (e[0].content = m(e[0].content)), e);
                         })(e, n)),
-                    (m = (function (e, t) {
-                        return t ? I(e) : 'paragraph' === e[0].type && e[0].content instanceof Array && I(e[0].content);
-                    })(
-                        (e = (function (e) {
-                            let t = e.some((e) => 'link' !== e.type || !1);
-                            return e.filter((e) => {
-                                let n = 'link' === e.type,
-                                    i = (0, r.el)(e.target);
-                                return !(n && null != i && !t);
-                            });
-                        })(e)),
-                        n
-                    )),
-                    _ &&
+                    (e = (function (e) {
+                        let t = e.some((e) => 'link' !== e.type || !1);
+                        return e.filter((e) => {
+                            let n = 'link' === e.type,
+                                i = (0, r.el)(e.target);
+                            return !(n && null != i && !t);
+                        });
+                    })(e)),
+                    t.embeds.length > 0 &&
+                        (g = (function (e, t) {
+                            return t ? E(e) : 'paragraph' === e[0].type && e[0].content instanceof Array && E(e[0].content);
+                        })(e, n)),
+                    f &&
                         (e = (function e(t) {
                             return (
                                 t.forEach((t) => {
@@ -123,17 +122,17 @@ function f(e) {
                                 t
                             );
                         })(e)),
-                    null != E && (e = E(e, n)),
+                    null != _ && (e = _(e, n)),
                     e
                 )
             );
         return {
-            hasSpoilerEmbeds: m,
-            content: S
+            hasSpoilerEmbeds: g,
+            content: I
         };
     })(t.formatInline ? a.Z.parseInlineReply : a.Z.parse, e, t);
 }
-function h(e, t, n) {
+function p(e, t, n) {
     var r;
     return (
         (r = a.Z.parseAutoModerationSystemMessage),
@@ -160,7 +159,7 @@ function h(e, t, n) {
         )
     );
 }
-function p(e) {
+function m(e) {
     if (e.some((e) => 'emoji' !== e.type && 'customEmoji' !== e.type && 'soundboard' !== e.type && ('string' != typeof e.content || '' !== e.content.trim()) && !0)) return e;
     let t = 0;
     return (e.forEach((e) => {
@@ -173,6 +172,14 @@ function p(e) {
           }),
           e);
 }
-function I(e) {
-    return e.some((e) => 'spoiler' === e.type && Array.isArray(e.content) && e.content.some((e) => 'link' === e.type || 'attachmentLink' === e.type));
+function g(e, t) {
+    if (e instanceof Array) return e.some((e) => g(e, t));
+    let n = t(e);
+    if (null != n) return n;
+    if (e.content instanceof Array) return g(e.content, t);
+    if (e.items instanceof Array) return e.items.some((e) => g(e, t));
+    else return !1;
+}
+function E(e) {
+    return g(e, (e) => ('spoiler' === e.type ? g(e, (e) => 'link' === e.type || 'attachmentLink' === e.type || null) : null));
 }

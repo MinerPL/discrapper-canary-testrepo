@@ -1,1 +1,1 @@
-e.exports = { checkbox: 'checkbox_c8160f' };
+t.exports = { checkbox: 'checkbox_c8160f' };

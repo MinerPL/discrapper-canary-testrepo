@@ -1,250 +1,253 @@
 n.d(t, {
     Hr: function () {
-        return S;
+        return I;
     },
     Hz: function () {
-        return p;
+        return j;
     },
     To: function () {
-        return O;
-    },
-    XG: function () {
-        return x;
-    },
-    _N: function () {
-        return T;
-    },
-    ad: function () {
-        return g;
-    },
-    bj: function () {
-        return D;
-    },
-    el: function () {
-        return N;
-    },
-    hS: function () {
-        return h;
-    },
-    lq: function () {
         return R;
     },
-    mM: function () {
-        return f;
+    XG: function () {
+        return T;
     },
-    oo: function () {
+    _N: function () {
+        return p;
+    },
+    ad: function () {
+        return N;
+    },
+    bj: function () {
         return L;
     },
-    q6: function () {
-        return M;
-    },
-    r2: function () {
+    el: function () {
         return C;
     },
+    hS: function () {
+        return _;
+    },
+    lq: function () {
+        return E;
+    },
+    mM: function () {
+        return S;
+    },
+    oo: function () {
+        return b;
+    },
+    q6: function () {
+        return A;
+    },
+    r2: function () {
+        return v;
+    },
     vR: function () {
-        return m;
+        return f;
     }
 }),
     n(390547);
-var s = n(392711),
-    a = n.n(s),
-    i = n(544891),
-    r = n(570140),
-    l = n(668781),
+var i = n(392711),
+    r = n.n(i),
+    l = n(544891),
+    s = n(570140),
+    a = n(668781),
     o = n(563534),
     c = n(734893),
     d = n(621923),
     u = n(626135),
-    _ = n(969632),
-    I = n(981631),
-    E = n(689938);
-function T(e) {
-    r.Z.dispatch({
+    m = n(960048),
+    h = n(969632),
+    g = n(981631),
+    x = n(388032);
+function p(e) {
+    s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_UPDATE_WELCOME_MESSAGE',
         welcomeMessage: e
     });
 }
-function m(e) {
-    r.Z.dispatch({
+function f(e) {
+    s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_ADD_NEW_MEMBER_ACTION',
         action: e
     });
 }
-function N(e, t) {
-    r.Z.dispatch({
+function C(e, t) {
+    s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_UPDATE_NEW_MEMBER_ACTION',
         channelId: e,
         action: t
     });
 }
-function S(e) {
-    r.Z.dispatch({
+function I(e) {
+    s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_DELETE_NEW_MEMBER_ACTION',
         channelId: e
     });
 }
-function h(e) {
-    r.Z.dispatch({
+function _(e) {
+    s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_REORDER_NEW_MEMBER_ACTION',
         actions: e
     });
 }
-async function g(e, t, n, s) {
-    if (!s) return Promise.resolve();
+async function N(e, t, n, i) {
+    if (!i) return Promise.resolve();
     try {
-        let s = await i.tn.patch({
-                url: I.ANM.NEW_MEMBER_ACTION(e, t),
+        let i = await l.tn.patch({
+                url: g.ANM.NEW_MEMBER_ACTION(e, t),
                 body: { icon: n },
                 oldFormErrors: !0
             }),
-            a = (0, c.cq)(s.body);
+            r = (0, c.cq)(i.body);
         return (
-            r.Z.dispatch({
+            s.Z.dispatch({
                 type: 'GUILD_NEW_MEMBER_ACTION_UPDATE_SUCCESS',
                 guildId: e,
-                action: a
+                action: r
             }),
-            Promise.resolve(s.body)
+            Promise.resolve(i.body)
         );
     } catch (t) {
         var o;
-        let e = a().flatMap(null !== (o = t.body) && void 0 !== o ? o : {}, (e) => e);
+        let e = r().flatMap(null !== (o = t.body) && void 0 !== o ? o : {}, (e) => e);
         return (
-            l.Z.show({
-                title: E.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SAVE_FAILED,
-                body: E.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SAVE_FAILED_INVALID_WITH_DETAILS.format({ errorMessage: e.join(', ') })
+            a.Z.show({
+                title: x.intl.string(x.t['6nCZyM']),
+                body: x.intl.format(x.t.dYCPDw, { errorMessage: e.join(', ') })
             }),
+            m.Z.addBreadcrumb({ message: 'Error updating new member action icon' }),
             Promise.reject()
         );
     }
 }
-function C(e) {
-    r.Z.dispatch({
+function v(e) {
+    s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_ADD_RESOURCE_CHANNEL',
         resourceChannel: e
     });
 }
-function x(e, t) {
-    r.Z.dispatch({
+function T(e, t) {
+    s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_UPDATE_RESOURCE_CHANNEL',
         channelId: e,
         resourceChannel: t
     });
 }
-function p(e) {
-    r.Z.dispatch({
+function j(e) {
+    s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_DELETE_RESOURCE_CHANNEL',
         resourceChannelId: e
     });
 }
-function R(e) {
-    r.Z.dispatch({
+function E(e) {
+    s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_REORDER_RESOURCE_CHANNEL',
         resourceChannels: e
     });
 }
-async function f(e, t, n) {
+async function S(e, t, n) {
     try {
-        let s = await i.tn.put({
-                url: I.ANM.RESOURCE_CHANNEL(e, t),
+        let i = await l.tn.put({
+                url: g.ANM.RESOURCE_CHANNEL(e, t),
                 body: { icon: n },
                 oldFormErrors: !0
             }),
-            a = (0, c.vD)(s.body);
+            r = (0, c.vD)(i.body);
         return (
-            r.Z.dispatch({
+            s.Z.dispatch({
                 type: 'GUILD_RESOURCE_CHANNEL_UPDATE_SUCCESS',
                 guildId: e,
-                resourceChannel: a
+                resourceChannel: r
             }),
-            s.body
+            i.body
         );
     } catch (t) {
-        var s;
-        let e = a().flatMap(null !== (s = t.body) && void 0 !== s ? s : {}, (e) => e);
-        l.Z.show({
-            title: E.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SAVE_FAILED,
-            body: E.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SAVE_FAILED_INVALID_WITH_DETAILS.format({ errorMessage: e.join(', ') })
+        var i;
+        let e = r().flatMap(null !== (i = t.body) && void 0 !== i ? i : {}, (e) => e);
+        a.Z.show({
+            title: x.intl.string(x.t['6nCZyM']),
+            body: x.intl.format(x.t.dYCPDw, { errorMessage: e.join(', ') })
         });
     }
 }
-function L(e, t) {
+function b(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    if (!n && !_.Z.hasChanges()) return Promise.resolve();
-    let { serverGuideOptional: s } = (0, d.FJ)(e);
-    return (!s || o.Z.getEnabled(e)) && !(0, c.uo)(t)
-        ? (l.Z.show({
-              title: E.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SAVE_FAILED,
-              body: E.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SAVE_FAILED_REASON
+    if (!n && !h.Z.hasChanges()) return Promise.resolve();
+    let { serverGuideOptional: i } = (0, d.FJ)(e);
+    return (!i || o.Z.getEnabled(e)) && !(0, c.uo)(t)
+        ? (a.Z.show({
+              title: x.intl.string(x.t['6nCZyM']),
+              body: x.intl.string(x.t.JuhUTU)
           }),
+          m.Z.addBreadcrumb({ message: 'Error saving home settings' }),
           Promise.reject())
-        : (!s && null != t && (t.enabled = !0), A(e, t));
+        : (!i && null != t && (t.enabled = !0), Z(e, t));
 }
-function O(e, t) {
+function R(e, t) {
     let n = o.Z.getSettings(e);
     if (t && !(0, c.uo)(n)) {
-        l.Z.show({
-            title: E.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SAVE_FAILED,
-            body: E.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SAVE_FAILED_REASON
+        a.Z.show({
+            title: x.intl.string(x.t['6nCZyM']),
+            body: x.intl.string(x.t.JuhUTU)
         });
         return;
     }
     return (
-        r.Z.dispatch({
+        s.Z.dispatch({
             type: 'GUILD_HOME_SETTINGS_TOGGLE_ENABLED',
             guildId: e,
             enabled: t
         }),
-        A(e, {
+        Z(e, {
             ...n,
             enabled: t
         })
     );
 }
-async function A(e, t) {
-    var n, s, o, d, _, T, m, N, S;
-    r.Z.dispatch({ type: 'GUILD_HOME_SETTINGS_UPDATE_START' });
+async function Z(e, t) {
+    var n, i, o, d, m, h, p, f, C;
+    s.Z.dispatch({ type: 'GUILD_HOME_SETTINGS_UPDATE_START' });
     try {
-        let a = await i.tn.put({
-                url: I.ANM.GUILD_HOME_SETTINGS(e),
+        let r = await l.tn.put({
+                url: g.ANM.GUILD_HOME_SETTINGS(e),
                 body: (0, c.HH)(e, t),
                 oldFormErrors: !0
             }),
-            l = (0, c.tB)(a.body);
+            a = (0, c.tB)(r.body);
         return (
-            r.Z.dispatch({
+            s.Z.dispatch({
                 type: 'GUILD_HOME_SETTINGS_UPDATE_SUCCESS',
                 guildId: e,
-                homeSettings: l
+                homeSettings: a
             }),
-            u.default.track(I.rMx.GUILD_SETTINGS_GUIDE_UPDATED, {
+            u.default.track(g.rMx.GUILD_SETTINGS_GUIDE_UPDATED, {
                 guild_id: e,
-                welcome_message_author_id: (null !== (d = null == l ? void 0 : null === (n = l.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) && void 0 !== d ? d : [])[0],
-                welcome_message_length: null !== (_ = null == l ? void 0 : null === (o = l.welcomeMessage) || void 0 === o ? void 0 : null === (s = o.message) || void 0 === s ? void 0 : s.length) && void 0 !== _ ? _ : 0,
-                member_action_channel_ids: (null !== (T = null == l ? void 0 : l.newMemberActions) && void 0 !== T ? T : []).map((e) => e.channelId),
-                member_action_channel_actions: (null !== (m = null == l ? void 0 : l.newMemberActions) && void 0 !== m ? m : []).map((e) => e.actionType),
-                resource_channel_ids: (null !== (N = null == l ? void 0 : l.resourceChannels) && void 0 !== N ? N : []).map((e) => e.channelId),
-                enabled: null == l ? void 0 : l.enabled
+                welcome_message_author_id: (null !== (d = null == a ? void 0 : null === (n = a.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) && void 0 !== d ? d : [])[0],
+                welcome_message_length: null !== (m = null == a ? void 0 : null === (o = a.welcomeMessage) || void 0 === o ? void 0 : null === (i = o.message) || void 0 === i ? void 0 : i.length) && void 0 !== m ? m : 0,
+                member_action_channel_ids: (null !== (h = null == a ? void 0 : a.newMemberActions) && void 0 !== h ? h : []).map((e) => e.channelId),
+                member_action_channel_actions: (null !== (p = null == a ? void 0 : a.newMemberActions) && void 0 !== p ? p : []).map((e) => e.actionType),
+                resource_channel_ids: (null !== (f = null == a ? void 0 : a.resourceChannels) && void 0 !== f ? f : []).map((e) => e.channelId),
+                enabled: null == a ? void 0 : a.enabled
             }),
-            a.body
+            r.body
         );
     } catch (t) {
-        let e = a().flatMap(null !== (S = t.body) && void 0 !== S ? S : {}, (e) => e);
-        r.Z.dispatch({ type: 'GUILD_HOME_SETTINGS_UPDATE_FAIL' }),
-            l.Z.show({
-                title: E.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SAVE_FAILED,
-                body: E.Z.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SAVE_FAILED_INVALID_WITH_DETAILS.format({ errorMessage: e.join(', ') })
+        let e = r().flatMap(null !== (C = t.body) && void 0 !== C ? C : {}, (e) => e);
+        s.Z.dispatch({ type: 'GUILD_HOME_SETTINGS_UPDATE_FAIL' }),
+            a.Z.show({
+                title: x.intl.string(x.t['6nCZyM']),
+                body: x.intl.format(x.t.dYCPDw, { errorMessage: e.join(', ') })
             });
     }
 }
-function M(e, t) {
+function A(e, t) {
     null != e &&
-        r.Z.dispatch({
+        s.Z.dispatch({
             type: 'GUILD_SETTINGS_ONBOARDING_DISMISS_RESOURCE_CHANNEL_SUGGESTION',
             guildId: e,
             channelIds: t
         });
 }
-function D() {
-    r.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESET' });
+function L() {
+    s.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESET' });
 }

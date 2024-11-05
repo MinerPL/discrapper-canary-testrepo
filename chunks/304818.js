@@ -5,6 +5,8 @@ e.exports = {
     leaderboardTitle: 'leaderboardTitle_b245a4',
     header: 'header_b245a4',
     previousChampion: 'previousChampion_b245a4',
+    divider: 'divider_b245a4',
+    joinLeaderboardButton: 'joinLeaderboardButton_b245a4',
     exitPreviewModeText: 'exitPreviewModeText_b245a4',
     exitPreviewModeButton: 'exitPreviewModeButton_b245a4'
 };

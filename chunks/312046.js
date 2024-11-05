@@ -1,11 +1,12 @@
 n.d(t, {
     Q: function () {
-        return a;
+        return s;
     }
 });
 var r = n(418793),
-    i = n(460597);
-let a = (e) => ({
+    i = n(460597),
+    a = n(608591);
+let s = (e) => ({
     id: e.id,
     configVersion: 2,
     startsAt: e.starts_at,
@@ -34,5 +35,6 @@ let a = (e) => ({
         gamePublisher: e.messages.game_publisher
     },
     taskConfig: (0, i.f)(e.task_config),
-    rewardsConfig: (0, r.v)(e.rewards_config)
+    rewardsConfig: (0, r.v)(e.rewards_config),
+    videoMetadata: (0, a.F)(e.video_metadata)
 });

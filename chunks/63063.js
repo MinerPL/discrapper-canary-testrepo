@@ -30,5 +30,6 @@ t.Z = {
         let t = encodeURIComponent(e);
         return u('/hc/'.concat(c(), '/search?utf8=%E2%9C%93&query=').concat(t, '&commit=Search'));
     },
-    getFeaturedArticlesJsonURL: () => u('/api/v2/help_center/en-us/articles.json?label_names=featured')
+    getFeaturedArticlesJsonURL: () => u('/api/v2/help_center/en-us/articles.json?label_names=featured'),
+    getAppsSupportURL: (e) => u('/hc/'.concat(c(), '/articles/').concat(e), 'https://support-apps.discord.com')
 };

@@ -1,93 +1,62 @@
 t.d(n, {
     Z: function () {
-        return R;
+        return v;
     }
-}),
-    t(47120);
-var i = t(735250);
-t(470079);
-var a = t(481060),
-    l = t(668781),
-    r = t(829883),
-    s = t(976853),
-    o = t(626135),
+});
+var i = t(200651);
+t(192379);
+var l = t(481060),
+    r = t(668781),
+    a = t(378409),
+    o = t(976853),
+    s = t(626135),
     u = t(358085),
     d = t(960048),
-    c = t(591759),
-    E = t(998502),
-    M = t(36998),
-    I = t(981631),
-    m = t(689938);
-let _ = 'https://media.discordapp.net',
-    g = /^.*\.discordapp\.net$/,
-    f = 'cdn.discordapp.com',
-    Z = ''.concat(_, '/stickers'),
-    S = new Set(['jpg', 'jpeg', 'png', 'webp', 'gif', 'tiff', 'bmp']),
-    T = new Set(['jpg', 'jpeg', 'png']),
-    v = (e) => {
-        var n, t, i, a;
-        return null === (a = c.Z.toURLSafe(e)) || void 0 === a ? void 0 : null === (i = a.pathname) || void 0 === i ? void 0 : null === (t = i.split('.')) || void 0 === t ? void 0 : null === (n = t.pop()) || void 0 === n ? void 0 : n.toLowerCase();
-    };
-function A(e, n) {
-    l.Z.show({
-        title: m.Z.Messages.ERROR,
+    c = t(998502),
+    g = t(36998),
+    f = t(981631),
+    m = t(388032);
+function h(e, n) {
+    r.Z.show({
+        title: m.intl.string(m.t.j2d6Ki),
         body: e
     }),
         d.Z.captureException(n);
 }
-function R(e, n, t) {
-    if (
-        (0, s.Z)(null == n ? void 0 : n.getChannelId()) ||
-        (null == t ? void 0 : t.shouldHideMediaOptions) === !0 ||
-        !u.isPlatformEmbedded ||
-        null == e ||
-        !(function (e) {
-            let n = c.Z.toURLSafe(e);
-            if (null == n) return !1;
-            let t = v(e);
-            return (g.test(n.hostname) || n.host === f) && !e.startsWith(Z) && !(0, r.zt)(e) && null != t && S.has(t);
-        })(e)
-    )
-        return null;
-    let l = (function (e) {
-            let n = c.Z.toURLSafe(e);
-            return null == n || n.host === f ? e : n.origin === _ ? ((n.host = f), n.searchParams.delete('size'), n.searchParams.delete('width'), n.searchParams.delete('height'), n.searchParams.delete('quality'), n.searchParams.delete('format'), n.toString()) : (n.searchParams.delete('width'), n.searchParams.delete('height'), n.searchParams.set('quality', 'lossless'), n.toString());
-        })(e),
+function v(e, n, t) {
+    if ((0, o.Z)(null == n ? void 0 : n.getChannelId()) || (null == t ? void 0 : t.shouldHideMediaOptions) === !0 || !u.isPlatformEmbedded || null == e || !(0, a.gS)(e)) return null;
+    let r = (0, a.s$)(e),
         d = async () => {
             try {
-                await E.ZP.saveImage(l), o.default.track(I.rMx.CONTEXT_MENU_IMAGE_SAVED, { ...(0, M.v)() });
+                await c.ZP.saveImage(r), s.default.track(f.rMx.CONTEXT_MENU_IMAGE_SAVED, { ...(0, g.v)() });
             } catch (e) {
-                o.default.track(I.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, { ...(0, M.v)() }), A(m.Z.Messages.ERROR_SAVING_IMAGE, e);
+                s.default.track(f.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, { ...(0, g.v)() }), h(m.intl.string(m.t['8Ve/S0']), e);
             }
         },
-        R = async () => {
+        v = async () => {
             try {
-                await E.ZP.copyImage(l), o.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPIED, { ...(0, M.v)() });
+                await c.ZP.copyImage(r), s.default.track(f.rMx.CONTEXT_MENU_IMAGE_COPIED, { ...(0, g.v)() });
             } catch (e) {
-                A(m.Z.Messages.ERROR_COPYING_IMAGE, e), o.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, { ...(0, M.v)() });
+                h(m.intl.string(m.t.PTPbj4), e), s.default.track(f.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, { ...(0, g.v)() });
             }
         };
     return [
-        E.ZP.canCopyImage() &&
-        (function (e) {
-            let n = v(e);
-            return null != n && T.has(n);
-        })(e)
+        c.ZP.canCopyImage() && (0, a.Lz)(e)
             ? (0, i.jsx)(
-                  a.MenuItem,
+                  l.MenuItem,
                   {
                       id: 'copy-image',
-                      label: m.Z.Messages.COPY_IMAGE_MENU_ITEM,
-                      action: R
+                      label: m.intl.string(m.t.tvUqWl),
+                      action: v
                   },
                   'copy-image'
               )
             : null,
         (0, i.jsx)(
-            a.MenuItem,
+            l.MenuItem,
             {
                 id: 'save-image',
-                label: m.Z.Messages.SAVE_IMAGE_MENU_ITEM,
+                label: m.intl.string(m.t.PeXhgI),
                 action: d
             },
             'save-image'

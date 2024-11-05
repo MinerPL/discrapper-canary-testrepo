@@ -1,1 +1,5 @@
-e.exports = '/assets/2108c0aff5ca1371ea89.svg';
+e.exports = {
+    container: 'container_cf0ac0',
+    iconContainer: 'iconContainer_cf0ac0',
+    textContainer: 'textContainer_cf0ac0'
+};

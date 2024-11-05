@@ -1,93 +1,71 @@
-t.d(s, {
+n.d(t, {
     J2: function () {
-        return m;
+        return x;
     },
     _h: function () {
-        return g;
-    },
-    eQ: function () {
-        return a;
-    },
-    m4: function () {
-        return h;
+        return S;
     }
 });
-var n,
-    a,
-    i = t(470079),
-    r = t(442837),
-    o = t(597688),
-    l = t(350327),
-    c = t(689938),
-    d = t(201016),
-    _ = t(673497),
-    u = t(421450),
-    E = t(977787),
-    T = t(187812),
-    S = t(947557),
-    I = t(808236),
-    N = t(265665),
-    A = t(181793),
-    C = t(338430);
-((n = a || (a = {}))[(n.ABOVE_THE_CLOUDS = 0)] = 'ABOVE_THE_CLOUDS'), (n[(n.CYBERPUNK = 1)] = 'CYBERPUNK'), (n[(n.STARLIT_DREAM = 2)] = 'STARLIT_DREAM'), (n[(n.SHADOW_REALM = 3)] = 'SHADOW_REALM'), (n[(n.NEON_SPACE = 4)] = 'NEON_SPACE');
-let m = {
-    0: {
-        presetName: 0,
-        presetBackgroundUrl: S.Z,
+var i,
+    s,
+    r = n(388032),
+    l = n(201016),
+    a = n(673497),
+    o = n(421450),
+    c = n(977787),
+    d = n(187812),
+    u = n(947557),
+    m = n(808236),
+    h = n(265665),
+    g = n(181793),
+    p = n(338430);
+((i = s || (s = {})).ABOVE_THE_CLOUDS = 'above_the_clouds'), (i.CYBERPUNK = 'cyberpunk'), (i.STARLIT_DREAM = 'starlit_dream'), (i.SHADOW_REALM = 'shadow_realm'), (i.NEON_SPACE = 'neon_space');
+let x = [
+    {
+        presetName: 'above_the_clouds',
+        presetBackgroundUrl: u.Z,
         themeColors: [752280, 9215590],
-        bannerImageUrl: d.Z,
+        bannerImageUrl: l.Z,
         avatarDecorationSkuId: '1144059132517826601'
     },
-    1: {
-        presetName: 1,
-        presetBackgroundUrl: I.Z,
+    {
+        presetName: 'cyberpunk',
+        presetBackgroundUrl: m.Z,
         themeColors: [1967991, 742532],
-        bannerImageUrl: _.Z
+        bannerImageUrl: a.Z
     },
-    3: {
-        presetName: 3,
-        presetBackgroundUrl: N.Z,
+    {
+        presetName: 'shadow_realm',
+        presetBackgroundUrl: h.Z,
         themeColors: [0, 4458504],
-        bannerImageUrl: u.Z,
+        bannerImageUrl: o.Z,
         avatarDecorationSkuId: '1144058522808614923'
     },
-    2: {
-        presetName: 2,
-        presetBackgroundUrl: A.Z,
+    {
+        presetName: 'starlit_dream',
+        presetBackgroundUrl: g.Z,
         themeColors: [5123751, 590625],
-        bannerImageUrl: E.Z,
+        bannerImageUrl: c.Z,
         avatarDecorationSkuId: '1144058844004233369'
     },
-    4: {
-        presetName: 4,
-        presetBackgroundUrl: C.Z,
+    {
+        presetName: 'neon_space',
+        presetBackgroundUrl: p.Z,
         themeColors: [6094952, 1007678],
-        bannerImageUrl: T.Z
+        bannerImageUrl: d.Z
     }
-};
-function g(e) {
+];
+function S(e) {
     switch (e) {
-        case 0:
-            return c.Z.Messages.PREMIUM_UPSELL_TRY_IT_OUT_PRESET_ABOVE_THE_CLOUDS;
-        case 1:
-            return c.Z.Messages.PREMIUM_UPSELL_TRY_IT_OUT_PRESET_CYBERPUNK;
-        case 2:
-            return c.Z.Messages.PREMIUM_UPSELL_TRY_IT_OUT_PRESET_STARLIT_DREAM;
-        case 3:
-            return c.Z.Messages.PREMIUM_UPSELL_TRY_IT_OUT_PRESET_SHADOW_REALM;
-        case 4:
-            return c.Z.Messages.PREMIUM_UPSELL_TRY_IT_OUT_PRESET_NEON_SPACE;
+        case 'above_the_clouds':
+            return r.intl.string(r.t['TFc+iI']);
+        case 'cyberpunk':
+            return r.intl.string(r.t['4g+5bm']);
+        case 'starlit_dream':
+            return r.intl.string(r.t['9WLHvr']);
+        case 'shadow_realm':
+            return r.intl.string(r.t.ycg1xs);
+        case 'neon_space':
+            return r.intl.string(r.t.UdNuqq);
     }
-}
-function h(e) {
-    let s = (0, r.e7)([o.Z], () => o.Z.lastSuccessfulFetch);
-    i.useEffect(() => {
-        var s;
-        let t = m[e];
-        (0, l.x3)({
-            bannerImage: t.bannerImageUrl,
-            themeColors: t.themeColors,
-            avatarDecoration: null != t.avatarDecorationSkuId ? (null === (s = o.Z.getProduct(t.avatarDecorationSkuId)) || void 0 === s ? void 0 : s.items[0]) : void 0
-        });
-    }, [s, e]);
 }

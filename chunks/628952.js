@@ -1,140 +1,156 @@
-t(47120);
-var a = t(735250);
-t(470079);
-var s = t(120356),
-    i = t.n(s),
-    l = t(979554),
-    r = t(442837),
-    o = t(481060),
-    d = t(1585),
-    u = t(125988),
-    c = t(987209),
-    E = t(921813),
-    f = t(731896),
-    h = t(484459),
-    m = t(594174),
-    v = t(937615),
-    C = t(583434),
-    p = t(689938),
-    x = t(653844),
-    I = t(223223);
-let T = (e) => {
-        let { avatarDecoration: n } = e,
-            t = (0, r.e7)([m.default], () => m.default.getCurrentUser()),
-            { avatarDecorationSrc: s } = (0, u.Z)({
-                user: t,
-                avatarDecorationOverride: n,
-                size: (0, d.y9)(o.AvatarSizes.SIZE_40)
+n(47120);
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    l = n.n(r),
+    a = n(979554),
+    o = n(442837),
+    s = n(481060),
+    c = n(1585),
+    d = n(125988),
+    u = n(987209),
+    m = n(921813),
+    h = n(731896),
+    f = n(484459),
+    p = n(594174),
+    g = n(937615),
+    _ = n(583434),
+    C = n(388032),
+    E = n(696307),
+    I = n(223223);
+let x = (e) => {
+        let { avatarDecoration: t } = e,
+            n = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
+            { avatarDecorationSrc: r } = (0, d.Z)({
+                user: n,
+                avatarDecorationOverride: t,
+                size: (0, c.y9)(s.AvatarSizes.SIZE_40)
             });
-        return (0, a.jsx)('img', {
-            src: s,
-            alt: n.label,
-            className: x.avatarDecoration
+        return (0, i.jsx)('img', {
+            src: r,
+            alt: t.label,
+            className: E.avatarDecoration
         });
     },
-    g = (e) => {
-        var n;
-        let { profileEffect: t } = e,
-            s = (0, f.V)(t.id),
-            { accessibilityLabel: i, thumbnailPreviewSrc: l, title: r } = null !== (n = null == s ? void 0 : s.config) && void 0 !== n ? n : {};
-        return (0, a.jsxs)('div', {
-            className: x.profileEffectContainer,
+    v = (e) => {
+        var t;
+        let { profileEffect: n } = e,
+            r = (0, h.V)(n.id),
+            { accessibilityLabel: l, thumbnailPreviewSrc: a, title: o } = null !== (t = null == r ? void 0 : r.config) && void 0 !== t ? t : {};
+        return (0, i.jsxs)('div', {
+            className: E.profileEffectContainer,
             children: [
-                (0, a.jsx)('img', {
+                (0, i.jsx)('img', {
                     src: I,
-                    alt: i,
-                    className: x.profileEffectBackground
+                    alt: l,
+                    className: E.profileEffectBackground
                 }),
-                (0, a.jsx)('img', {
-                    className: x.profileEffect,
-                    src: l,
-                    alt: r
+                (0, i.jsx)('img', {
+                    className: E.profileEffect,
+                    src: a,
+                    alt: o
                 })
             ]
         });
     };
-n.Z = (e) => {
-    let { selectedSkuId: n, selectedSkuPricePreview: t, className: s } = e,
-        { product: d } = (0, C.T)(n),
-        { giftRecipient: u, giftRecipientError: f } = (0, c.wD)(),
-        I = (0, r.e7)([m.default], () => m.default.getCurrentUser());
-    if (null == d || null == t) return null;
-    let [N] = d.items,
-        S = null != u && u.id !== (null == I ? void 0 : I.id);
-    return (0, a.jsxs)('div', {
-        className: s,
+t.Z = (e) => {
+    let { skuId: t, skuPricePreview: n, isSelected: r, onSelect: c, shouldDisplayHeader: d = !1, className: h } = e,
+        { product: I } = (0, _.T)(t),
+        { giftRecipient: N, giftRecipientError: T } = (0, u.wD)(),
+        S = (0, o.e7)([p.default], () => p.default.getCurrentUser());
+    if (null == I || null == n) return null;
+    let [b] = I.items,
+        A = null != N && N.id !== (null == S ? void 0 : S.id);
+    return (0, i.jsxs)('div', {
+        className: h,
         children: [
-            (0, a.jsxs)('div', {
-                className: x.previewTitleContainer,
-                children: [
-                    (0, a.jsx)(o.FormTitle, {
-                        className: x.previewTitle,
-                        children: p.Z.Messages.COLLECTIBLES_GIFT_LABEL
-                    }),
-                    S &&
-                        (0, a.jsx)(
-                            o.Popout,
-                            {
-                                preload: () => (0, h.Z)(u.id, u.getAvatarURL(null, 80)),
-                                renderPopout: (e) =>
-                                    (0, a.jsx)(E.Z, {
-                                        ...e,
-                                        user: u,
-                                        pendingAvatar: u.getAvatarURL(null, (0, o.getAvatarSize)(o.AvatarSizes.SIZE_80)),
-                                        pendingAvatarDecoration: N.type === l.Z.AVATAR_DECORATION ? N : null,
-                                        pendingProfileEffectId: N.type === l.Z.PROFILE_EFFECT ? N.id : null,
-                                        canUsePremiumCustomization: !0,
-                                        disabledInputs: !0
-                                    }),
-                                align: 'center',
-                                position: 'right',
-                                children: (e) =>
-                                    (0, a.jsx)(o.Clickable, {
-                                        ...e,
-                                        className: x.previewLink,
-                                        children: (0, a.jsx)(o.Text, {
-                                            variant: 'text-xs/medium',
-                                            color: 'text-link',
-                                            children: p.Z.Messages.COLLECTIBLES_PREVIEW_GIFT_PROFILE
+            d &&
+                (0, i.jsxs)('div', {
+                    className: E.previewTitleContainer,
+                    children: [
+                        (0, i.jsx)(s.FormTitle, {
+                            className: E.previewTitle,
+                            children: C.intl.string(C.t.PpoJzs)
+                        }),
+                        A &&
+                            (0, i.jsx)(
+                                s.Popout,
+                                {
+                                    preload: () => (0, f.Z)(N.id, N.getAvatarURL(null, 80)),
+                                    renderPopout: (e) =>
+                                        (0, i.jsx)(m.Z, {
+                                            ...e,
+                                            user: N,
+                                            pendingAvatar: N.getAvatarURL(null, (0, s.getAvatarSize)(s.AvatarSizes.SIZE_80)),
+                                            pendingAvatarDecoration: b.type === a.Z.AVATAR_DECORATION ? b : null,
+                                            pendingProfileEffectId: b.type === a.Z.PROFILE_EFFECT ? b.id : null,
+                                            canUsePremiumCustomization: !0,
+                                            disabledInputs: !0
+                                        }),
+                                    align: 'center',
+                                    position: 'right',
+                                    children: (e) =>
+                                        (0, i.jsx)(s.Clickable, {
+                                            ...e,
+                                            className: E.previewLink,
+                                            children: (0, i.jsx)(s.Text, {
+                                                variant: 'text-xs/medium',
+                                                color: 'text-link',
+                                                children: C.intl.string(C.t['2GnJQE'])
+                                            })
                                         })
-                                    })
-                            },
-                            u.id
-                        )
-                ]
-            }),
-            (0, a.jsxs)('div', {
-                className: i()(x.previewContainer, { [x.previewContainerError]: null != f }),
+                                },
+                                N.id
+                            )
+                    ]
+                }),
+            (0, i.jsxs)(s.Clickable, {
+                tag: 'div',
+                onClick: () => {
+                    null != t && null != c && c(t);
+                },
+                className: l()(E.previewContainer, {
+                    [E.previewContainerSelected]: r && null == T,
+                    [E.previewContainerError]: null != T
+                }),
                 children: [
-                    N.type === l.Z.AVATAR_DECORATION && (0, a.jsx)(T, { avatarDecoration: N }),
-                    N.type === l.Z.PROFILE_EFFECT && (0, a.jsx)(g, { profileEffect: N }),
-                    (0, a.jsxs)('div', {
-                        className: x.previewTextContainer,
+                    (0, i.jsxs)('div', {
+                        className: E.giftInfoContainer,
                         children: [
-                            (0, a.jsx)(o.Text, {
-                                variant: 'text-md/semibold',
-                                children: d.name
+                            b.type === a.Z.AVATAR_DECORATION && (0, i.jsx)(x, { avatarDecoration: b }),
+                            b.type === a.Z.PROFILE_EFFECT && (0, i.jsx)(v, { profileEffect: b }),
+                            (0, i.jsxs)('div', {
+                                className: E.previewTextContainer,
+                                children: [
+                                    (0, i.jsx)(s.Text, {
+                                        variant: 'text-md/semibold',
+                                        children: I.name
+                                    }),
+                                    (0, i.jsx)(s.Heading, {
+                                        variant: 'heading-sm/medium',
+                                        color: 'header-secondary',
+                                        children: b.type === a.Z.AVATAR_DECORATION ? C.intl.string(C.t['7v0T9P']) : b.type === a.Z.PROFILE_EFFECT ? C.intl.string(C.t.wR5wOj) : null
+                                    })
+                                ]
                             }),
-                            (0, a.jsx)(o.Heading, {
-                                variant: 'heading-sm/medium',
-                                color: 'header-secondary',
-                                children: N.type === l.Z.AVATAR_DECORATION ? p.Z.Messages.USER_SETTINGS_AVATAR_DECORATION : N.type === l.Z.PROFILE_EFFECT ? p.Z.Messages.USER_SETTINGS_PROFILE_EFFECT : null
+                            (0, i.jsx)(s.Text, {
+                                variant: 'text-md/semibold',
+                                children: (0, g.T4)(n.amount, n.currency)
                             })
                         ]
                     }),
-                    (0, a.jsx)(o.Text, {
-                        variant: 'text-md/semibold',
-                        children: (0, v.T4)(t.amount, t.currency)
-                    })
+                    r &&
+                        null != T &&
+                        (0, i.jsx)('div', {
+                            className: E.recipientError,
+                            children: (0, i.jsx)(s.Text, {
+                                variant: 'text-sm/normal',
+                                color: 'status-danger-background',
+                                children: T
+                            })
+                        })
                 ]
-            }),
-            null != f &&
-                (0, a.jsx)(o.Text, {
-                    className: x.recipientError,
-                    variant: 'text-sm/normal',
-                    color: 'status-danger-background',
-                    children: f
-                })
+            })
         ]
     });
 };

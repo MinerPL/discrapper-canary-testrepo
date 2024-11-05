@@ -1,9 +1,9 @@
 n(47120), n(653041);
 var i,
-    a = n(442837),
-    s = n(570140),
-    r = n(881052),
-    l = n(726115),
+    r = n(442837),
+    a = n(570140),
+    l = n(881052),
+    s = n(726115),
     o = n(128449);
 function c(e, t, n) {
     return (
@@ -20,17 +20,17 @@ function c(e, t, n) {
 }
 let d = new Map(),
     u = new Map(),
-    _ = new Set(),
-    E = null;
-function h(e) {
+    h = new Set(),
+    m = null;
+function p(e) {
     return [o.BP, e.query, o.t0, e.categoryId, o.KL, e.languageCode].join('-');
 }
-class m {
+class g {
     handleSearchStart() {
         (this.error = null), (this.isFetching = !0);
     }
     handleSearchFailure(e) {
-        (this.isFetching = !1), (this.error = new r.Hx(e));
+        (this.isFetching = !1), (this.isInitialFetchComplete = !0), (this.error = new l.Hx(e));
     }
     handleSearchSuccess(e) {
         let { total: t, guilds: n } = e;
@@ -42,93 +42,102 @@ class m {
         c(this, 'guildIds', []), c(this, 'error', null), c(this, 'offset', null), c(this, 'total', null), c(this, 'isFetching', !1), c(this, 'isInitialFetchComplete', !1), c(this, 'lastFetchTimestamp', null), c(this, 'query', void 0), (this.query = e);
     }
 }
-function I(e) {
+function f(e) {
     var t;
-    let n = h(e),
-        i = null !== (t = d.get(n)) && void 0 !== t ? t : new m({ query: e.query });
+    let n = p(e),
+        i = null !== (t = d.get(n)) && void 0 !== t ? t : new g({ query: e.query });
     return d.set(n, i), i;
 }
-function p(e, t) {
-    let n = h(e),
+function _(e, t) {
+    let n = p(e),
         i = d.get(n);
     return null != i ? t(i) : null;
 }
-class g extends (i = a.ZP.Store) {
+class E extends (i = r.ZP.Store) {
     getGuild(e) {
         return u.get(e);
     }
     getGuildIds(e) {
-        return p(e, (e) => e.guildIds);
+        return _(e, (e) => e.guildIds);
     }
     getIsFetching(e) {
-        return p(e, (e) => e.isFetching);
+        return _(e, (e) => e.isFetching);
     }
     getIsInitialFetchComplete(e) {
-        return p(e, (e) => e.isInitialFetchComplete);
+        return _(e, (e) => e.isInitialFetchComplete);
     }
     getOffset(e) {
-        return p(e, (e) => e.offset);
+        return _(e, (e) => e.offset);
     }
     getTotal(e) {
-        return p(e, (e) => e.total);
+        return _(e, (e) => e.total);
     }
     getLastFetchTimestamp(e) {
-        return p(e, (e) => e.lastFetchTimestamp);
+        return _(e, (e) => e.lastFetchTimestamp);
+    }
+    getError(e) {
+        return _(e, (e) => e.error);
+    }
+    getErrorMessage(e) {
+        return _(e, (e) => {
+            var t;
+            return null === (t = e.error) || void 0 === t ? void 0 : t.getAnyErrorMessage();
+        });
     }
     getAlgoliaSearchIndex() {
-        return E;
+        return m;
     }
     getIsAlgoliaInitialized() {
-        return null != E;
+        return null != m;
     }
     getIsBlocked(e) {
-        return _.has(e);
+        return h.has(e);
     }
 }
-c(g, 'displayName', 'GlobalDiscoveryServersSearchResultsStore'),
-    (t.Z = new g(s.Z, {
+c(E, 'displayName', 'GlobalDiscoveryServersSearchResultsStore'),
+    (t.Z = new E(a.Z, {
         CONNECTION_OPEN: function () {
-            d.clear(), u.clear(), _.clear(), (E = null);
+            d.clear(), u.clear(), h.clear(), (m = null);
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_INITIALIZED: function (e) {
             let { algoliaSearchIndex: t } = e;
-            E = t;
+            m = t;
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_START: function (e) {
-            let { query: t, categoryId: n, languageCode: i, reset: a } = e,
-                s = h({
+            let { query: t, categoryId: n, languageCode: i, reset: r } = e,
+                a = p({
                     query: t,
                     categoryId: n,
                     languageCode: i
                 });
-            a && d.delete(s),
-                I({
+            r && d.delete(a),
+                f({
                     query: t,
                     categoryId: n,
                     languageCode: i
                 }).handleSearchStart();
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS: function (e) {
-            let { query: t, categoryId: n, languageCode: i, total: a, guilds: s } = e;
-            I({
+            let { query: t, categoryId: n, languageCode: i, total: r, guilds: a } = e;
+            f({
                 query: t,
                 categoryId: n,
                 languageCode: i
             }).handleSearchSuccess({
-                total: a,
-                guilds: s
+                total: r,
+                guilds: a
             }),
-                s.forEach((e) => {
-                    u.set(e.id, (0, l.U0)(e));
+                a.forEach((e) => {
+                    u.set(e.id, (0, s.U0)(e));
                 });
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE: function (e) {
-            let { query: t, categoryId: n, languageCode: i, error: a } = e;
-            I({
+            let { query: t, categoryId: n, languageCode: i, error: r } = e;
+            f({
                 query: t,
                 categoryId: n,
                 languageCode: i
-            }).handleSearchFailure(a);
+            }).handleSearchFailure(r);
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: function (e) {
             let { ignoreQueries: t } = e,
@@ -139,6 +148,6 @@ c(g, 'displayName', 'GlobalDiscoveryServersSearchResultsStore'),
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_BLOCKED: function (e) {
             let { query: t } = e;
-            _.add(t);
+            h.add(t);
         }
     }));

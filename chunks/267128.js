@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return U;
+        return M;
     },
     f: function () {
-        return P;
+        return w;
     }
 }),
     n(47120);
-var r = n(735250),
-    i = n(470079),
+var r = n(200651),
+    i = n(192379),
     a = n(120356),
     s = n.n(a),
     o = n(913527),
@@ -16,26 +16,26 @@ var r = n(735250),
     u = n(481060),
     c = n(100527),
     d = n(906732),
-    _ = n(407477),
-    E = n(978003),
-    f = n(39154),
-    h = n(245216),
-    p = n(79390),
-    I = n(869765),
-    m = n(403132),
-    T = n(378233),
-    S = n(768581),
-    g = n(55935),
-    A = n(823379),
-    N = n(453687),
-    O = n(930282),
-    R = n(123145),
-    v = n(223021),
+    f = n(407477),
+    _ = n(978003),
+    h = n(39154),
+    p = n(245216),
+    m = n(79390),
+    g = n(869765),
+    E = n(403132),
+    v = n(378233),
+    I = n(768581),
+    S = n(55935),
+    T = n(823379),
+    b = n(453687),
+    y = n(930282),
+    A = n(123145),
+    N = n(223021),
     C = n(217702),
-    L = n(981631),
-    y = n(689938),
+    R = n(981631),
+    O = n(388032),
     D = n(825193);
-function b(e) {
+function L(e) {
     let { width: t = 12, height: n = 8, color: i = 'currentColor', className: a, foreground: s } = e;
     return (0, r.jsx)('svg', {
         className: a,
@@ -49,7 +49,7 @@ function b(e) {
         })
     });
 }
-function M(e) {
+function x(e) {
     let { width: t = 18, height: n = 18, className: i, foreground: a } = e;
     return (0, r.jsx)('svg', {
         className: i,
@@ -63,88 +63,88 @@ function M(e) {
         })
     });
 }
-function P(e, t, n, i, a) {
+function w(e, t, n, i, a) {
     let s, o, l, c;
-    let d = (0, f.Z)(e),
-        { trailingIconClass: _, leadingIconClass: I, iconSize: m } = a,
-        S = null == t || '' === t || (Array.isArray(t) && 0 === t.length),
-        g = (0, T.cv)(d).length > 0,
-        A = null != d.interaction,
-        N = d.hasFlag(L.iLy.IS_VOICE_MESSAGE),
-        R = d.isPoll(),
-        v = d.type === L.uaV.POLL_RESULT;
+    let d = (0, h.Z)(e),
+        { trailingIconClass: f, leadingIconClass: g, iconSize: E } = a,
+        I = null == t || '' === t || (Array.isArray(t) && 0 === t.length),
+        S = (0, v.cv)(d).length > 0,
+        T = null != d.interaction,
+        b = d.hasFlag(R.iLy.IS_VOICE_MESSAGE),
+        A = d.isPoll(),
+        N = d.type === R.uaV.POLL_RESULT;
     if (
-        ((0, E.Z)(e) &&
-            (c = (0, r.jsx)(h.Z, {
+        ((0, _.Z)(e) &&
+            (c = (0, r.jsx)(p.Z, {
                 size: 'custom',
-                className: I,
-                width: m,
-                height: m
+                className: g,
+                width: E,
+                height: E
             })),
         n)
     )
-        s = y.Z.Messages.REPLY_QUOTE_MESSAGE_BLOCKED;
-    else if (d.type === L.uaV.CHANNEL_PINNED_MESSAGE) s = y.Z.Messages.MESSAGE_PINNED;
-    else if (S) {
-        if (R) {
+        s = O.intl.string(O.t.XAkOo6);
+    else if (d.type === R.uaV.CHANNEL_PINNED_MESSAGE) s = O.intl.string(O.t.sCfDDg);
+    else if (I) {
+        if (A) {
             var C, D;
             o = null == d ? void 0 : null === (D = d.poll) || void 0 === D ? void 0 : null === (C = D.question) || void 0 === C ? void 0 : C.text;
         } else
-            v
-                ? (s = (0, p.N4)(d))
-                : g
-                  ? (s = y.Z.Messages.REPLY_QUOTE_STICKER)
-                  : A
-                    ? (s = y.Z.Messages.REPLY_QUOTE_COMMAND)
-                    : N
-                      ? (s = y.Z.Messages.REPLY_QUOTE_VOICE_MESSAGE)
-                      : ((s = y.Z.Messages.REPLY_QUOTE_NO_TEXT_CONTENT),
+            N
+                ? (s = (0, m.N4)(d))
+                : S
+                  ? (s = O.intl.string(O.t.kHdYCQ))
+                  : T
+                    ? (s = O.intl.string(O.t['E+6SSU']))
+                    : b
+                      ? (s = O.intl.string(O.t['XC3A5+']))
+                      : ((s = O.intl.string(O.t['6hGo0d'])),
                         (l = (0, r.jsx)(u.ImageIcon, {
                             size: 'custom',
                             color: 'currentColor',
-                            className: _,
-                            width: m,
-                            height: m
+                            className: f,
+                            width: E,
+                            height: E
                         })));
     } else
-        o = (0, r.jsx)(O.ZP, {
+        o = (0, r.jsx)(y.ZP, {
             message: d,
             content: t,
             className: i
         });
     return (
-        g
+        S
             ? (l = (0, r.jsx)(u.StickerSmallIcon, {
                   size: 'custom',
                   color: 'currentColor',
-                  className: _,
-                  width: m,
-                  height: m
+                  className: f,
+                  width: E,
+                  height: E
               }))
-            : A
+            : T
               ? (l = (0, r.jsx)(u.SlashBoxIcon, {
                     size: 'custom',
                     color: 'currentColor',
-                    className: _,
-                    width: m,
-                    height: m
+                    className: f,
+                    width: E,
+                    height: E
                 }))
-              : N
+              : b
                 ? (l = (0, r.jsx)(u.MicrophoneIcon, {
                       size: 'custom',
                       color: 'currentColor',
-                      className: _,
-                      width: (19 / 24) * m,
-                      height: m
+                      className: f,
+                      width: (19 / 24) * E,
+                      height: E
                   }))
                 : (d.attachments.length > 0 || d.embeds.length > 0) &&
-                  !v &&
+                  !N &&
                   (l = (0, r.jsx)(u.ImageIcon, {
                       size: 'custom',
                       color: 'currentColor',
-                      className: _,
-                      width: m,
-                      height: m
+                      className: f,
+                      width: E,
+                      height: E
                   })),
         {
             contentPlaceholder: s,
@@ -154,53 +154,53 @@ function P(e, t, n, i, a) {
         }
     );
 }
-function U(e) {
+function M(e) {
     let t;
-    let { repliedAuthor: n, baseAuthor: a, baseMessage: o, referencedMessage: E, renderPopout: f, isReplySpineClickable: h, showReplySpine: p } = e,
-        { canShowReactionsOnMessageHover: T } = _.ZP.useExperiment({ location: 'RepliedMessage' }, { autoTrackExposure: !1 }),
-        [O, U] = i.useState(!1),
-        w = i.useMemo(() => (null != f && E.state === I.Y.LOADED ? (e) => f(e, E.message) : void 0), [E, f]),
-        x = i.useCallback(() => U((e) => !e), []),
-        G = (function (e, t, n) {
-            let { referencedMessage: i, channel: a, compact: o, isReplyAuthorBlocked: l, repliedAuthor: _, showAvatarPopout: E, onClickAvatar: f, onContextMenu: h, onPopoutRequestClose: p } = e,
-                { analyticsLocations: m } = (0, d.ZP)(c.Z.AVATAR);
-            if (o || i.state !== I.Y.LOADED || l)
-                return n === L.uaV.CONTEXT_MENU_COMMAND
+    let { repliedAuthor: n, baseAuthor: a, baseMessage: o, referencedMessage: _, renderPopout: h, isReplySpineClickable: p, showReplySpine: m } = e,
+        { canShowReactionsOnMessageHover: v } = f.ZP.useExperiment({ location: 'RepliedMessage' }, { autoTrackExposure: !1 }),
+        [y, M] = i.useState(!1),
+        P = i.useMemo(() => (null != h && _.state === g.Y.LOADED ? (e) => h(e, _.message) : void 0), [_, h]),
+        k = i.useCallback(() => M((e) => !e), []),
+        U = (function (e, t, n) {
+            let { referencedMessage: i, channel: a, compact: o, isReplyAuthorBlocked: l, repliedAuthor: f, showAvatarPopout: _, onClickAvatar: h, onContextMenu: p, onPopoutRequestClose: m } = e,
+                { analyticsLocations: E } = (0, d.ZP)(c.Z.AVATAR);
+            if (o || i.state !== g.Y.LOADED || l)
+                return n === R.uaV.CONTEXT_MENU_COMMAND
                     ? (0, r.jsx)('div', {
                           className: D.replyChatIconContainer,
                           children: (0, r.jsx)(u.ChatIcon, { size: 'xs' })
                       })
                     : (0, r.jsx)('div', {
                           className: D.replyBadge,
-                          children: (0, r.jsx)(b, { className: D.replyIcon })
+                          children: (0, r.jsx)(L, { className: D.replyIcon })
                       });
-            if (i.message.type === L.uaV.USER_JOIN || i.message.type === L.uaV.ROLE_SUBSCRIPTION_PURCHASE || i.message.type === L.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || i.message.type === L.uaV.GUILD_GAMING_STATS_PROMPT) return (0, r.jsx)(M, { className: D.userJoinSystemMessageIcon });
-            if (i.message.type === L.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
+            if (i.message.type === R.uaV.USER_JOIN || i.message.type === R.uaV.ROLE_SUBSCRIPTION_PURCHASE || i.message.type === R.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || i.message.type === R.uaV.GUILD_GAMING_STATS_PROMPT) return (0, r.jsx)(x, { className: D.userJoinSystemMessageIcon });
+            if (i.message.type === R.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
                 return (0, r.jsx)(u.TicketIcon, {
                     size: 'md',
                     color: 'currentColor',
                     className: D.ticketIcon
                 });
-            if (i.message.type === L.uaV.POLL_RESULT)
+            if (i.message.type === R.uaV.POLL_RESULT)
                 return (0, r.jsx)(u.PollsIcon, {
                     className: D.repliedTextContentLeadingIcon,
                     width: C.WW,
                     height: C.WW,
                     size: 'custom'
                 });
-            let T = () => {
+            let v = () => {
                 var e, t, n, o, l;
                 return (
                     (e = i.message.author),
-                    (t = _),
+                    (t = f),
                     (n = a.guild_id),
-                    (o = f),
-                    (l = h),
+                    (o = h),
+                    (l = p),
                     (0, r.jsx)('img', {
                         alt: '',
                         src:
                             (null == t ? void 0 : t.guildMemberAvatar) != null && null != n
-                                ? (0, S.JM)({
+                                ? (0, I.JM)({
                                       guildId: n,
                                       userId: e.id,
                                       avatar: t.guildMemberAvatar
@@ -215,32 +215,32 @@ function U(e) {
                     })
                 );
             };
-            return null != t && null != E
+            return null != t && null != _
                 ? (0, r.jsx)(d.Gt, {
-                      value: m,
+                      value: E,
                       children: (0, r.jsx)(u.Popout, {
                           renderPopout: t,
-                          shouldShow: E,
+                          shouldShow: _,
                           position: 'right',
-                          onRequestClose: p,
-                          children: T
+                          onRequestClose: m,
+                          children: v
                       })
                   })
                 : (0, r.jsx)(d.Gt, {
-                      value: m,
-                      children: T()
+                      value: E,
+                      children: v()
                   });
-        })(e, w, o.type),
-        k = (function (e, t) {
+        })(e, P, o.type),
+        G = (function (e, t) {
             let { baseMessage: n, channel: i, referencedMessage: a, showUsernamePopout: s, onClickUsername: o, onContextMenu: l, onPopoutRequestClose: u } = e,
-                c = (null == a ? void 0 : a.state) === I.Y.LOADED ? a.message : void 0;
-            return null == c || c.type === L.uaV.USER_JOIN || c.type === L.uaV.ROLE_SUBSCRIPTION_PURCHASE || c.type === L.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION || c.type === L.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || c.type === L.uaV.GUILD_GAMING_STATS_PROMPT || c.type === L.uaV.POLL_RESULT
+                c = (null == a ? void 0 : a.state) === g.Y.LOADED ? a.message : void 0;
+            return null == c || c.type === R.uaV.USER_JOIN || c.type === R.uaV.ROLE_SUBSCRIPTION_PURCHASE || c.type === R.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION || c.type === R.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || c.type === R.uaV.GUILD_GAMING_STATS_PROMPT || c.type === R.uaV.POLL_RESULT
                 ? null
-                : (0, r.jsx)(R.Z, {
+                : (0, r.jsx)(A.Z, {
                       message: c,
                       channel: i,
                       compact: !0,
-                      withMentionPrefix: (0, m.Z)(n, c),
+                      withMentionPrefix: (0, E.Z)(n, c),
                       showPopout: s,
                       renderPopout: t,
                       onClick: o,
@@ -248,25 +248,25 @@ function U(e) {
                       onPopoutRequestClose: u,
                       isRepliedMessage: !0
                   });
-        })(e, w),
+        })(e, P),
         B = (function (e, t, n) {
             let { content: i, referencedMessage: a, isReplyAuthorBlocked: o, onClickReply: l } = e,
-                c = a.state !== I.Y.DELETED ? l : void 0;
+                c = a.state !== g.Y.DELETED ? l : void 0;
             switch (a.state) {
-                case I.Y.LOADED: {
+                case g.Y.LOADED: {
                     let {
                         contentPlaceholder: e,
                         renderedContent: l,
                         trailingIcon: d,
-                        leadingIcon: _
-                    } = P(a.message, i, o, D.repliedTextContent, {
+                        leadingIcon: f
+                    } = w(a.message, i, o, D.repliedTextContent, {
                         trailingIconClass: D.repliedTextContentTrailingIcon,
                         leadingIconClass: D.repliedTextContentLeadingIcon,
                         iconSize: C.WW
                     });
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
-                            _,
+                            f,
                             (0, r.jsx)(u.Clickable, {
                                 className: s()(D.repliedTextPreview, D.clickable, { [D.repliedMessageClickableSpineHovered]: t }),
                                 onClick: c,
@@ -286,55 +286,57 @@ function U(e) {
                         ]
                     });
                 }
-                case I.Y.NOT_LOADED:
+                case g.Y.NOT_LOADED:
                     return (0, r.jsx)(u.Clickable, {
                         className: s()(D.repliedTextPreview, D.clickable),
                         onClick: c,
                         children: (0, r.jsx)('span', {
                             className: D.repliedTextPlaceholder,
-                            children: y.Z.Messages.REPLY_QUOTE_MESSAGE_NOT_LOADED
+                            children: O.intl.string(O.t['1i+hMj'])
                         })
                     });
-                case I.Y.DELETED:
+                case g.Y.DELETED:
                     return (0, r.jsx)('div', {
                         className: D.repliedTextPreview,
                         children: (0, r.jsx)('span', {
                             className: D.repliedTextPlaceholder,
-                            children: y.Z.Messages.REPLY_QUOTE_MESSAGE_DELETED
+                            children: O.intl.string(O.t.mE3KJC)
                         })
                     });
                 default:
-                    (0, A.vE)(a);
+                    (0, T.vE)(a);
             }
-        })(e, O, x),
-        F = i.useMemo(() => (e.compact ? (0, v.Z)((0, g.vc)(l()(), 'LT')) : null), [e.compact]);
-    return (
-        null != n &&
-            null != a &&
-            (t = y.Z.Messages.CHANNEL_MESSAGE_REPLY_A11Y_LABEL.format({
-                author: null == a ? void 0 : a.nick,
-                repliedAuthor: null == n ? void 0 : n.nick
-            })),
-        (0, r.jsxs)('div', {
-            id: (0, N.Gq)(o),
-            className: s()(D.repliedMessage, F, { [D.messageSpine]: !T || (!h && p) }),
-            'aria-label': t,
-            children: [
-                T &&
-                    h &&
-                    p &&
-                    (0, r.jsx)(u.Clickable, {
-                        tag: 'div',
-                        'aria-label': y.Z.Messages.JUMP_TO_REPLY,
-                        className: s()(D.repliedMessageClickableSpine, { [D.repliedMessageContentHovered]: O }),
-                        onClick: e.onClickReply,
-                        onMouseEnter: x,
-                        onMouseLeave: x
-                    }),
-                G,
-                k,
-                B
-            ]
-        })
-    );
+        })(e, y, k),
+        Z = i.useMemo(() => (e.compact ? (0, N.Z)((0, S.vc)(l()(), 'LT')) : null), [e.compact]);
+    null != n &&
+        null != a &&
+        (t = O.intl.formatToPlainString(O.t.RhbQ2N, {
+            author: null == a ? void 0 : a.nick,
+            repliedAuthor: null == n ? void 0 : n.nick
+        }));
+    let F = o.type === R.uaV.CONTEXT_MENU_COMMAND;
+    return (0, r.jsxs)('div', {
+        id: (0, b.Gq)(o),
+        className: s()(D.repliedMessage, Z, {
+            [D.messageSpine]: !v || (!p && m),
+            [D.contextCommandMessage]: F
+        }),
+        'aria-label': t,
+        children: [
+            v &&
+                p &&
+                m &&
+                (0, r.jsx)(u.Clickable, {
+                    tag: 'div',
+                    'aria-label': O.intl.string(O.t.dpjpOj),
+                    className: s()(D.repliedMessageClickableSpine, { [D.repliedMessageContentHovered]: y }),
+                    onClick: e.onClickReply,
+                    onMouseEnter: k,
+                    onMouseLeave: k
+                }),
+            U,
+            G,
+            B
+        ]
+    });
 }

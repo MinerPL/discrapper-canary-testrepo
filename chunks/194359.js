@@ -8,34 +8,34 @@ var r,
     u = n(877215),
     c = n(895886),
     d = n(397550),
-    _ = n(594174),
-    E = n(657682),
-    f = n(51144),
-    h = n(668781),
-    p = n(239091),
-    I = n(981631),
-    m = n(689938);
-function T(e) {
-    (0, p.Zy)(), h.Z.show(e);
+    f = n(594174),
+    _ = n(657682),
+    h = n(51144),
+    p = n(668781),
+    m = n(239091),
+    g = n(981631),
+    E = n(388032);
+function v(e) {
+    (0, m.Zy)(), p.Z.show(e);
 }
-function S(e, t, n) {
+function I(e, t, n) {
     let { status: r, body: i } = e,
         a = i && i.code;
     switch (r) {
         case 429:
             0 === t &&
-                T({
-                    title: m.Z.Messages.FRIEND_REQUEST_RATE_LIMITED_HEADER,
-                    body: m.Z.Messages.FRIEND_REQUEST_RATE_LIMITED_BODY,
-                    confirmText: m.Z.Messages.FRIEND_REQUEST_RATE_LIMITED_BUTTON
+                v({
+                    title: E.intl.string(E.t['3D5eo6']),
+                    body: E.intl.string(E.t.TuJriI),
+                    confirmText: E.intl.string(E.t.DppXIy)
                 });
             break;
         case 403:
-            if (a === I.evJ.EMAIL_VERIFICATION_REQUIRED) {
-                T({
-                    title: m.Z.Messages.FRIEND_REQUEST_REQUIRES_EMAIL_VALIDATION_HEADER,
-                    body: m.Z.Messages.FRIEND_REQUEST_REQUIRES_EMAIL_VALIDATION_BODY,
-                    confirmText: m.Z.Messages.FRIEND_REQUEST_REQUIRES_EMAIL_VALIDATION_BUTTON,
+            if (a === g.evJ.EMAIL_VERIFICATION_REQUIRED) {
+                v({
+                    title: E.intl.string(E.t.Gqf33N),
+                    body: E.intl.string(E.t.GHOBd3),
+                    confirmText: E.intl.string(E.t.HbTSEx),
                     onConfirm: () => {
                         l.j();
                     }
@@ -43,27 +43,27 @@ function S(e, t, n) {
                 break;
             }
         default:
-            if (a === I.evJ.USER_QUARANTINED) (0, p.Zy)(), (0, c.default)();
+            if (a === g.evJ.USER_QUARANTINED) (0, m.Zy)(), (0, c.default)();
             else if ((0, d.b)(r, a)) break;
             else if (0 === t) {
-                let e = null != n ? (0, E.NF)(a || 0, n) : m.Z.Messages.POMELO_ADD_FRIEND_ERROR;
-                T({
-                    title: m.Z.Messages.FRIEND_REQUEST_FAILED_HEADER,
+                let e = null != n ? (0, _.NF)(a || 0, n) : E.intl.string(E.t.paDJBA);
+                v({
+                    title: E.intl.string(E.t['6moJ8v']),
                     body: e,
-                    confirmText: m.Z.Messages.OKAY
+                    confirmText: E.intl.string(E.t.BddRzc)
                 });
             }
     }
     throw e;
 }
 ((i = r || (r = {}))[(i.SHOW_ALWAYS = 0)] = 'SHOW_ALWAYS'), (i[(i.SHOW_ONLY_IF_ACTION_NEEDED = 1)] = 'SHOW_ONLY_IF_ACTION_NEEDED');
-let g = {
+let S = {
     sendRequest(e) {
         let { discordTag: t, context: n, captchaPayload: r, errorUxConfig: i = 0 } = e,
             [s, o] = t.split('#');
         return a.tn
             .post({
-                url: I.ANM.USER_RELATIONSHIPS(),
+                url: g.ANM.USER_RELATIONSHIPS(),
                 body: {
                     username: s,
                     discriminator: parseInt(o),
@@ -73,16 +73,16 @@ let g = {
                 oldFormErrors: !0
             })
             .catch((e) => {
-                S(e, i, t);
+                I(e, i, t);
             });
     },
     addRelationship(e, t) {
         let { userId: n, context: r, type: i, friendToken: s, fromFriendSuggestion: o, captchaPayload: l } = e,
             u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-            c = _.default.getUser(n);
+            c = f.default.getUser(n);
         return a.tn
             .put({
-                url: I.ANM.USER_RELATIONSHIP(n),
+                url: g.ANM.USER_RELATIONSHIP(n),
                 body: {
                     type: i,
                     friend_token: s,
@@ -96,31 +96,31 @@ let g = {
                 null == t || t();
             })
             .catch((e) => {
-                S(e, u, f.ZP.getUserTag(c));
+                I(e, u, h.ZP.getUserTag(c));
             });
     },
     acceptFriendRequest: (e) =>
-        g.addRelationship(e, function () {
-            s.uv.announce(m.Z.Messages.A11Y_ANNOUNCEMENT_FRIEND_ACCEPT_REQUEST);
+        S.addRelationship(e, function () {
+            s.uv.announce(E.intl.string(E.t['3goNa2']));
         }),
     cancelFriendRequest: (e, t) =>
-        g.removeRelationship(e, t, function () {
-            s.uv.announce(m.Z.Messages.A11Y_ANNOUNCEMENT_FRIEND_CANCEL_REQUEST);
+        S.removeRelationship(e, t, function () {
+            s.uv.announce(E.intl.string(E.t.pLUaxc));
         }),
     removeFriend(e, t) {
-        g.removeRelationship(e, t, function () {
-            s.uv.announce(m.Z.Messages.A11Y_ANNOUNCEMENT_FRIEND_REMOVED);
+        S.removeRelationship(e, t, function () {
+            s.uv.announce(E.intl.string(E.t.vGSLa2));
         });
     },
     unblockUser(e, t) {
-        g.removeRelationship(e, t, function () {
-            s.uv.announce(m.Z.Messages.A11Y_ANNOUNCEMENT_USER_UNBLOCKED);
+        S.removeRelationship(e, t, function () {
+            s.uv.announce(E.intl.string(E.t['9t1au7']));
         });
     },
     removeRelationship: (e, t, n) =>
         a.tn
             .del({
-                url: I.ANM.USER_RELATIONSHIP(e),
+                url: g.ANM.USER_RELATIONSHIP(e),
                 context: t,
                 oldFormErrors: !0
             })
@@ -128,17 +128,17 @@ let g = {
                 null == n || n();
             })
             .catch(() => {
-                s.uv.announce(m.Z.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL);
+                s.uv.announce(E.intl.string(E.t.n6Jo3N));
             }),
     updateRelationship: (e, t) =>
         a.tn.patch({
-            url: I.ANM.USER_RELATIONSHIP(e),
+            url: g.ANM.USER_RELATIONSHIP(e),
             body: { nickname: t }
         }),
     fetchRelationships() {
         a.tn
             .get({
-                url: I.ANM.USER_RELATIONSHIPS(),
+                url: g.ANM.USER_RELATIONSHIPS(),
                 oldFormErrors: !0
             })
             .then(
@@ -156,21 +156,21 @@ let g = {
     clearPendingRelationships: () =>
         a.tn
             .del({
-                url: I.ANM.USER_RELATIONSHIPS(),
-                query: { relationship_type: I.OGo.PENDING_INCOMING }
+                url: g.ANM.USER_RELATIONSHIPS(),
+                query: { relationship_type: g.OGo.PENDING_INCOMING }
             })
             .then(() => {
                 o.Z.dispatch({ type: 'RELATIONSHIP_PENDING_INCOMING_REMOVED' });
             })
             .catch(() => {
-                s.uv.announce(m.Z.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL);
+                s.uv.announce(E.intl.string(E.t.n6Jo3N));
             }),
     clearPendingSpam: () =>
         a.tn
             .del({
-                url: I.ANM.USER_RELATIONSHIPS(),
+                url: g.ANM.USER_RELATIONSHIPS(),
                 query: {
-                    relationship_type: I.OGo.PENDING_INCOMING,
+                    relationship_type: g.OGo.PENDING_INCOMING,
                     only_spam: !0
                 }
             })
@@ -178,7 +178,17 @@ let g = {
                 o.Z.dispatch({ type: 'RELATIONSHIP_PENDING_INCOMING_REMOVED' });
             })
             .catch(() => {
-                s.uv.announce(m.Z.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL);
-            })
+                s.uv.announce(E.intl.string(E.t.n6Jo3N));
+            }),
+    ignoreUser: (e, t) =>
+        a.tn.put({
+            url: g.ANM.IGNORE_USER(e),
+            context: { location: t }
+        }),
+    unignoreUser: (e, t) =>
+        a.tn.del({
+            url: g.ANM.IGNORE_USER(e),
+            context: { location: t }
+        })
 };
-t.Z = g;
+t.Z = S;

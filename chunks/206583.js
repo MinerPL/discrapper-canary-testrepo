@@ -1,7 +1,7 @@
 var r, i, a, s, o, l, u, c;
 n.d(t, {
     G: function () {
-        return _;
+        return f;
     },
     Kd: function () {
         return i;
@@ -27,7 +27,8 @@ n.d(t, {
     (u[(u.DM_REACTION_MESSAGE_SENT = 4)] = 'DM_REACTION_MESSAGE_SENT'),
     (u[(u.CHANNEL_REACTION_MESSAGE_SENT = 5)] = 'CHANNEL_REACTION_MESSAGE_SENT'),
     (u[(u.VOICE_CHANNEL_JOINED = 6)] = 'VOICE_CHANNEL_JOINED'),
-    (u[(u.VOICE_CHANNEL_PREVIEWED = 7)] = 'VOICE_CHANNEL_PREVIEWED');
+    (u[(u.VOICE_CHANNEL_PREVIEWED = 7)] = 'VOICE_CHANNEL_PREVIEWED'),
+    (u[(u.OPENED_GAME_PROFILE = 8)] = 'OPENED_GAME_PROFILE');
 let d = 10000,
-    _ = 7;
+    f = 7;
 ((c = s || (s = {}))[(c.SPOTIFY = 1)] = 'SPOTIFY'), (c[(c.CRUNCHYROLL = 2)] = 'CRUNCHYROLL'), (c[(c.XBOX = 3)] = 'XBOX'), (c[(c.PLAYSTATION = 4)] = 'PLAYSTATION');

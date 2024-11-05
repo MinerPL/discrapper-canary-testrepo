@@ -1,45 +1,46 @@
-n.d(t, {
+e.d(n, {
     GG: function () {
-        return a;
+        return o;
     },
     R2: function () {
-        return s;
+        return l;
     },
     h7: function () {
-        return l;
+        return s;
     },
     rh: function () {
         return r;
     }
 });
-var i = n(570140);
-function l(e, t) {
-    return new Promise((n) => {
+var i = e(570140);
+function s(t, n, e) {
+    return new Promise((s) => {
         setTimeout(() => {
             i.Z.dispatch({
                 type: 'ACTIVITY_INVITE_MODAL_OPEN',
-                activity: e,
-                isPrivate: t,
-                resolve: n
+                activity: t,
+                isPrivate: n,
+                context: e,
+                resolve: s
             });
         }, 0);
     });
 }
-function r(e) {
+function r(t) {
     i.Z.dispatch({
         type: 'ACTIVITY_INVITE_MODAL_QUERY',
-        query: e
+        query: t
     });
 }
-function a(e) {
+function o(t) {
     i.Z.dispatch({
         type: 'ACTIVITY_INVITE_MODAL_SEND',
-        channelId: e
+        channelId: t
     });
 }
-function s(e) {
+function l(t) {
     i.Z.dispatch({
         type: 'ACTIVITY_INVITE_MODAL_SEND',
-        userId: e
+        userId: t
     });
 }

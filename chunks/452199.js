@@ -4,6 +4,5 @@ e.exports = {
     tag: 'tag_f925ba',
     divider: 'divider_f925ba',
     permissionHeader: 'permissionHeader_f925ba',
-    permissionList: 'permissionList_f925ba',
     rolePills: 'rolePills_f925ba'
 };

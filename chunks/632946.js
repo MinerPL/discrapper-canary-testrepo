@@ -6,5 +6,6 @@ e.exports = {
     platformSelectorPrimary: 'platformSelectorPrimary_ebf06d',
     platformSelectorSecondary: 'platformSelectorSecondary_ebf06d',
     platformSelectorSecondaryContent: 'platformSelectorSecondaryContent_ebf06d',
-    platformSelectorSecondaryChevron: 'platformSelectorSecondaryChevron_ebf06d'
+    platformSelectorSecondaryChevron: 'platformSelectorSecondaryChevron_ebf06d',
+    videoQuestPlayIcon: 'videoQuestPlayIcon_ebf06d'
 };

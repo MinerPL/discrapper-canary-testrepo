@@ -174,17 +174,15 @@ async function y(e, t, o) {
                     skuId: t,
                     isGift: f
                 }),
+            r.Z.dispatch({
+                type: 'SKU_PURCHASE_FAIL',
+                applicationId: e,
+                skuId: t,
+                error: o
+            }),
             o.code !== a.SM.CONFIRMATION_REQUIRED)
         )
-            throw (
-                (r.Z.dispatch({
-                    type: 'SKU_PURCHASE_FAIL',
-                    applicationId: e,
-                    skuId: t,
-                    error: o
-                }),
-                o)
-            );
+            throw o;
         if (!n.body.payment_id) throw (0, S.SQ)('payment id cannot be null on redirected confirmations.');
         return (0, S.sk)(n.body, d);
     }

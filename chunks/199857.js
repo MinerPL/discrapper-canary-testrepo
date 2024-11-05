@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 }),
     n(653041),
@@ -15,8 +15,8 @@ var r,
     u = n(886848),
     c = n(649318),
     d = n(65154),
-    _ = n(436620);
-function E(e, t, n) {
+    f = n(436620);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,11 +29,11 @@ function E(e, t, n) {
         e
     );
 }
-let f = null === (r = a().name) || void 0 === r ? void 0 : r.toLowerCase().includes('firefox');
-function h(e, t) {
+let h = null === (r = a().name) || void 0 === r ? void 0 : r.toLowerCase().includes('firefox');
+function p(e, t) {
     e.sender.replaceTrack(t), (e.direction = null != t ? 'sendrecv' : 'recvonly');
 }
-class p extends l.Z {
+class m extends l.Z {
     destroy() {
         super.destroy(), 'closed' !== this.signalingState && this.pc.close();
     }
@@ -44,7 +44,7 @@ class p extends l.Z {
     }
     setStream(e) {
         let t = 'closed' === this.iceConnectionState;
-        null != e && !t && (h(this.audioTransceiver, e.getAudioTracks()[0]), this.videoSupported && h(this.videoTransceiver, e.getVideoTracks()[0])), this.logger.info('Renegotiating: Streams changed'), this.handleNegotiationNeeded();
+        null != e && !t && (p(this.audioTransceiver, e.getAudioTracks()[0]), this.videoSupported && p(this.videoTransceiver, e.getVideoTracks()[0])), this.logger.info('Renegotiating: Streams changed'), this.handleNegotiationNeeded();
     }
     createUser(e, t, n) {
         var r;
@@ -71,7 +71,7 @@ class p extends l.Z {
                 r = this.unassignedStreams.audio.length;
             this.addTransceivers('audio', 'recvonly', 10 + r - n);
         }
-        if (this.videoSupported && void 0 !== n && (!f || void 0 === a.videoSSRC)) {
+        if (this.videoSupported && void 0 !== n && (!h || void 0 === a.videoSSRC)) {
             let t = null != n && n.length > 0 ? n[0] : 0;
             if (t > 0) {
                 if (a.videoSSRC !== t) {
@@ -276,7 +276,12 @@ class p extends l.Z {
     async setRemoteAnswer() {
         let e = this.pc,
             t = this.generateSDPAnswer();
-        await e.setRemoteDescription(t), (this.unassignedStreams.audio.length > 0 || this.unassignedStreams.video.length > 0) && ((this.negotiationNeeded = !0), this.logger.info('Renegotiating: Streams left unassigned after negotiation - renegotiate')), (this.negotiating = !1), this.negotiationNeeded && this.handleNegotiationNeeded();
+        try {
+            await e.setRemoteDescription(t);
+        } catch (e) {
+            this.logger.warn('Failed to set remote answer: '.concat(e, ', type: ').concat(t.type, ', sdp: ').concat(t.sdp)), this.emit(o.Sh.SdpError, 'setRemoteDescription', e.message, t.type, t.sdp);
+        }
+        (this.unassignedStreams.audio.length > 0 || this.unassignedStreams.video.length > 0) && ((this.negotiationNeeded = !0), this.logger.info('Renegotiating: Streams left unassigned after negotiation - renegotiate')), (this.negotiating = !1), this.negotiationNeeded && this.handleNegotiationNeeded();
     }
     setConnected() {
         this.input.reset(), this.setConnectionState(d.$j.CONNECTED), this.on(o.Sh.Stats, this.handleStats), this.input.on(u.G.VoiceActivity, this.handleVoiceActivity);
@@ -290,41 +295,45 @@ class p extends l.Z {
         (this.negotiating = !0), (this.negotiationNeeded = !1);
         let t = this.pc,
             n = await t.createOffer(this.makeOfferAnswerOptions());
-        await t.setLocalDescription(n);
+        try {
+            await t.setLocalDescription(n);
+        } catch (e) {
+            this.logger.warn('Failed to set local offer: '.concat(e, ', type: ').concat(n.type, ', sdp: ').concat(n.sdp)), this.emit(o.Sh.SdpError, 'setLocalDescription', e.message, n.type, n.sdp);
+        }
         let r = this.parseLocalDescription();
         null == this.sdp ? this.emit(o.Sh.Connected, 'webrtc', (0, c.sc)(r)) : this.setRemoteAnswer();
     }
     constructor(e, t, n, r) {
         super(e, t, n, r),
-            E(this, 'pc', void 0),
-            E(this, 'sdp', null),
-            E(this, 'negotiating', !1),
-            E(this, 'negotiationNeeded', !1),
-            E(this, 'audioTransceiver', void 0),
-            E(this, 'videoTransceiver', void 0),
-            E(this, 'users', new Map()),
-            E(this, 'userIdsBySsrc', new Map()),
-            E(this, 'assignedStreams', new Map()),
-            E(this, 'unassignedStreams', {
+            _(this, 'pc', void 0),
+            _(this, 'sdp', null),
+            _(this, 'negotiating', !1),
+            _(this, 'negotiationNeeded', !1),
+            _(this, 'audioTransceiver', void 0),
+            _(this, 'videoTransceiver', void 0),
+            _(this, 'users', new Map()),
+            _(this, 'userIdsBySsrc', new Map()),
+            _(this, 'assignedStreams', new Map()),
+            _(this, 'unassignedStreams', {
                 audio: [],
                 video: []
             }),
-            E(this, 'inactiveTransceivers', {
+            _(this, 'inactiveTransceivers', {
                 audio: [],
                 video: []
             }),
-            E(this, 'outboundStreams', []),
-            E(this, 'trackUserIds', {}),
-            E(this, 'audioCodec', null),
-            E(this, 'audioPayloadType', null),
-            E(this, 'videoCodec', null),
-            E(this, 'videoPayloadType', null),
-            E(this, 'rtxPayloadType', null),
-            E(this, 'extensions', []),
-            E(this, 'codecs', []),
-            E(this, 'logger', void 0),
-            E(this, 'getUserIdBySsrc', (e) => this.userIdsBySsrc.get(e)),
-            E(this, 'handlePeerConnectionStateChange', () => {
+            _(this, 'outboundStreams', []),
+            _(this, 'trackUserIds', {}),
+            _(this, 'audioCodec', null),
+            _(this, 'audioPayloadType', null),
+            _(this, 'videoCodec', null),
+            _(this, 'videoPayloadType', null),
+            _(this, 'rtxPayloadType', null),
+            _(this, 'extensions', []),
+            _(this, 'codecs', []),
+            _(this, 'logger', void 0),
+            _(this, 'getUserIdBySsrc', (e) => this.userIdsBySsrc.get(e)),
+            _(this, 'handlePeerConnectionStateChange', () => {
                 let e = this.peerConnectionState;
                 switch ((this.logger.info('peerConnectionState =>', e), e)) {
                     case 'connected':
@@ -341,7 +350,7 @@ class p extends l.Z {
                         this.setConnectionState(d.$j.DISCONNECTED);
                 }
             }),
-            E(this, 'handleIceConnectionStateChange', () => {
+            _(this, 'handleIceConnectionStateChange', () => {
                 let e = this.iceConnectionState;
                 switch ((this.logger.info('iceConnectionState =>', e), e)) {
                     case 'connected':
@@ -358,14 +367,14 @@ class p extends l.Z {
                         this.setConnectionState(d.$j.DISCONNECTED);
                 }
             }),
-            E(this, 'handleSignalingStateChange', () => {
+            _(this, 'handleSignalingStateChange', () => {
                 let e = this.signalingState;
                 this.logger.info('signalingState => '.concat(e));
             }),
-            E(this, 'handleIceGatheringStateChange', () => {
+            _(this, 'handleIceGatheringStateChange', () => {
                 this.logger.info('iceGatheringState =>', this.iceGatheringState);
             }),
-            E(this, 'handleTrack', (e) => {
+            _(this, 'handleTrack', (e) => {
                 let t = e.streams[0].id,
                     n = e.track;
                 if (!/^default/.test(n.id)) {
@@ -386,12 +395,12 @@ class p extends l.Z {
                 }
             }),
             (this.logger = new s.Y('UnifiedConnection('.concat(e, ')'))),
-            (this.videoSupported = _.U8);
+            (this.videoSupported = f.U8);
         let i = (this.pc = new RTCPeerConnection({
             bundlePolicy: 'max-bundle',
             sdpSemantics: 'unified-plan'
         }));
-        _.X6 ? ((i.onconnectionstatechange = this.handlePeerConnectionStateChange), (i.oniceconnectionstatechange = this.handlePeerConnectionStateChange)) : (i.oniceconnectionstatechange = this.handleIceConnectionStateChange),
+        f.X6 ? ((i.onconnectionstatechange = this.handlePeerConnectionStateChange), (i.oniceconnectionstatechange = this.handlePeerConnectionStateChange)) : (i.oniceconnectionstatechange = this.handleIceConnectionStateChange),
             (i.onsignalingstatechange = this.handleSignalingStateChange),
             (i.onicegatheringstatechange = this.handleIceGatheringStateChange),
             (i.ontrack = this.handleTrack),

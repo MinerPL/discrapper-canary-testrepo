@@ -1,51 +1,58 @@
 n.d(e, {
     u: function () {
-        return i;
+        return f;
     }
 });
-var a = n(735250),
-    r = n(470079),
+var a = n(200651),
+    r = n(192379),
     o = n(159277),
-    s = n(481060),
-    c = n(689938),
-    u = n(189073),
-    l = n(290661);
-let i = (t) => {
+    i = n(243814),
+    l = n(481060),
+    s = n(388032),
+    c = n(715802),
+    u = n(942605),
+    d = n(534345);
+let f = (t) => {
     let { onComplete: e, data: n } = t,
-        i = null,
-        d = (0, r.useId)();
+        f = (0, r.useId)(),
+        p = null,
+        h = null;
     return (
-        (n.clientId === o.t.PLAYSTATION_APPLICATION_ID || n.clientId === o.t.PLAYSTATION_STAGING_APPLICATION_ID) &&
-            (i = (0, a.jsx)('img', {
-                src: l,
-                width: '241',
-                height: '118',
-                alt: '',
-                'aria-labelledby': d
-            })),
+        n.clientId === o.t.PLAYSTATION_APPLICATION_ID || n.clientId === o.t.PLAYSTATION_STAGING_APPLICATION_ID ? (p = u.Z) : n.scopes.includes(i.x.SDK_SOCIAL_LAYER) && (p = d.Z),
+        null != n.twoWayLinkCode ? (h = s.intl.string(s.t.QhATl5)) : n.scopes.includes(i.x.SDK_SOCIAL_LAYER) && (h = s.intl.string(s.t.vBPvKy)),
         (0, a.jsxs)('div', {
-            className: u.bodyContent,
+            className: c.content,
             children: [
-                i,
-                (0, a.jsx)(s.Heading, {
-                    className: u.title,
-                    variant: 'heading-xl/extrabold',
-                    id: d,
-                    children: c.Z.Messages.ACTIVATE_DEVICE_SUCCESS_TITLE
-                }),
-                null != n.twoWayLinkCode
-                    ? (0, a.jsx)(s.Text, {
-                          tag: 'p',
-                          variant: 'text-md/normal',
-                          color: 'header-secondary',
-                          children: c.Z.Messages.ACTIVATE_DEVICE_SUCCESS_TWO_WAY_BODY
+                null != p
+                    ? (0, a.jsx)('img', {
+                          src: p,
+                          className: c.artwork,
+                          alt: '',
+                          'aria-labelledby': f
                       })
                     : null,
-                (0, a.jsx)(s.Button, {
-                    className: u.footerButton,
-                    color: s.Button.Colors.BRAND,
+                (0, a.jsxs)('div', {
+                    className: c.innerContent,
+                    children: [
+                        (0, a.jsx)(l.Heading, {
+                            variant: 'heading-xl/extrabold',
+                            id: f,
+                            children: s.intl.string(s.t.qDtJmJ)
+                        }),
+                        null != h
+                            ? (0, a.jsx)(l.Text, {
+                                  variant: 'text-md/normal',
+                                  color: 'header-secondary',
+                                  children: h
+                              })
+                            : null
+                    ]
+                }),
+                (0, a.jsx)(l.Button, {
+                    className: c.footerButton,
+                    color: l.Button.Colors.BRAND,
                     onClick: e,
-                    children: c.Z.Messages.DONE
+                    children: s.intl.string(s.t.i4jeWV)
                 })
             ]
         })

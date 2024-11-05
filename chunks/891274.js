@@ -7,15 +7,19 @@ n(652898);
 var s = n(728675);
 n(701190);
 var o = n(960904),
-    l = n(830121);
-function u(e) {
-    let t = (0, l.ZP)(e.content);
+    l = n(213753),
+    u = n(830121);
+function c(e) {
+    let t = (0, u.ZP)(e.content);
     null != t &&
         0 !== t.length &&
         t.forEach((e) => {
             let { type: t, code: n } = e;
             if (t === o.g.INVITE);
-            else if (t === o.g.TEMPLATE) null == a.Z.getGuildTemplate(n) && i.Z.resolveGuildTemplate(n);
+            else if (t === o.g.TEMPLATE)
+                (0, l.V)(async () => {
+                    null == a.Z.getGuildTemplate(n) && (await i.Z.resolveGuildTemplate(n));
+                });
             else if (t === o.g.BUILD_OVERRIDE || t === o.g.MANUAL_BUILD_OVERRIDE);
             else if (t === o.g.EVENT);
             else if (t === o.g.CHANNEL_LINK);
@@ -32,9 +36,9 @@ function u(e) {
             else throw Error('Unknown coded link type: '.concat(t));
         });
 }
-class c extends r.Z {
+class d extends r.Z {
     constructor() {
-        super(), (0, s.Z)(this, u);
+        super(), (0, s.Z)(this, c);
     }
 }
-t.Z = new c();
+t.Z = new d();

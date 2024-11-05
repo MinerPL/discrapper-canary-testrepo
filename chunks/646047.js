@@ -16,5 +16,8 @@ let n = new (class e {
     isSupported() {
         return !1;
     }
+    isInPipMode() {
+        return !1;
+    }
 })();
 t.Z = n;

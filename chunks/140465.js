@@ -1,46 +1,50 @@
 n.d(t, {
     Nx: function () {
-        return f;
-    },
-    UV: function () {
-        return T;
-    },
-    WR: function () {
-        return m;
-    },
-    lr: function () {
         return p;
     },
+    UV: function () {
+        return I;
+    },
+    WR: function () {
+        return v;
+    },
+    lr: function () {
+        return g;
+    },
     t7: function () {
-        return h;
+        return m;
+    },
+    x8: function () {
+        return S;
     }
 }),
     n(47120);
-var r = n(470079),
+var r = n(192379),
     i = n(913527),
     a = n.n(i),
     s = n(442837),
     o = n(544891),
     l = n(78839),
     u = n(775412),
-    c = n(104494),
-    d = n(639119),
+    c = n(769415),
+    d = n(104494),
+    f = n(639119),
     _ = n(474936),
-    E = n(981631);
-function f() {
-    let e = (0, d.N)(),
+    h = n(981631);
+function p() {
+    let e = (0, f.N)(),
         t = (0, u._O)(),
-        n = (0, c.Ng)(),
-        r = h();
+        n = (0, d.Ng)(),
+        r = m();
     return null != e || t || null != n || r;
 }
-let h = () => {
+let m = () => {
         var e;
         let t = (0, s.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
             n = null == t ? void 0 : null === (e = t.metadata) || void 0 === e ? void 0 : e.active_discount_expires_at;
         return null != n && a()(Date.now()) <= a()(n);
     },
-    p = () => {
+    g = () => {
         var e;
         let t = (0, s.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription());
         switch (null == t ? void 0 : null === (e = t.metadata) || void 0 === e ? void 0 : e.active_discount_id) {
@@ -81,16 +85,16 @@ let h = () => {
                 return;
         }
     },
-    I = async () => {
+    E = async () => {
         let e = null;
         try {
             var t;
-            let n = await o.tn.post({ url: E.ANM.CHURN_USER_OFFER });
+            let n = await o.tn.post({ url: h.ANM.CHURN_USER_OFFER });
             e = null !== (t = n.body.offer) && void 0 !== t ? t : null;
         } catch (e) {}
         return e;
     },
-    m = (e) => {
+    v = (e) => {
         let [t, n] = r.useState(!1),
             [i, a] = r.useState(!1),
             [s, o] = r.useState(null);
@@ -106,7 +110,7 @@ let h = () => {
             !i &&
                 !t &&
                 (a(!0),
-                I()
+                E()
                     .then((e) => {
                         o(e), l();
                     })
@@ -119,10 +123,25 @@ let h = () => {
             }
         );
     },
-    T = () => {
+    I = () => {
         let e = (0, s.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),
-            t = h(),
+            t = m(),
             n = null !== e && e.hasPremiumNitroMonthly,
             r = null != e && null != e.trialId;
         return n && !r && !t;
+    },
+    S = (e) => {
+        let t = (0, s.e7)([l.ZP], () => l.ZP.inReverseTrial()),
+            n = (0, s.e7)([l.ZP], () => {
+                var e;
+                return (null === (e = l.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialId) === _.jz;
+            }),
+            r = c.Z.useExperiment(
+                { location: e },
+                {
+                    disable: !n,
+                    autoTrackExposure: n
+                }
+            ).enabled;
+        return t || r;
     };

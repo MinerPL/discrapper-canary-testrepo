@@ -1,35 +1,38 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return d;
     }
 }),
     n(653041),
     n(47120);
-var i = n(470079),
+var i = n(192379),
     l = n(911969),
     r = n(822245),
-    a = n(675478),
-    o = n(358085),
-    u = n(761122);
-function c(e) {
-    return (
-        a.DZ.loadIfNecessary(),
-        i.useMemo(() => {
-            let t = [];
-            e.forEach((e) => t.push(e.application.id));
-            let n = [...t];
-            return (
-                n.sort((e, n) => {
-                    let i = r.Z.getScoreWithoutLoadingLatest(e),
-                        l = r.Z.getScoreWithoutLoadingLatest(n);
-                    return i !== l ? l - i : t.findIndex((t) => t === e) < t.findIndex((e) => e === n) ? -1 : 1;
-                }),
-                d(e, n)
-            );
-        }, [e])
-    );
+    o = n(675478),
+    u = n(358085),
+    a = n(194188),
+    c = n(761122);
+function d(e) {
+    o.DZ.loadIfNecessary();
+    let { enabled: t } = a.x.getCurrentConfig({ location: 'useActivityShelfItemsSorting' }, { autoTrackExposure: !1 });
+    return i.useMemo(() => {
+        let n = [];
+        e.forEach((e) => n.push(e.application.id));
+        let i = [...n];
+        return (
+            i.sort((e, i) => {
+                if (!t) {
+                    let t = r.Z.getScoreWithoutLoadingLatest(e),
+                        n = r.Z.getScoreWithoutLoadingLatest(i);
+                    if (t !== n) return n - t;
+                }
+                return n.findIndex((t) => t === e) < n.findIndex((e) => e === i) ? -1 : 1;
+            }),
+            s(e, i)
+        );
+    }, [e, t]);
 }
-let d = (e, t) => {
+let s = (e, t) => {
     let n = [...e],
         i = 0;
     return (
@@ -45,7 +48,7 @@ let d = (e, t) => {
             .filter((e) => {
                 var t, n;
                 let [i] = e,
-                    r = null === (n = i.application.embeddedActivityConfig) || void 0 === n ? void 0 : null === (t = n.client_platform_config[(0, u.Z)((0, o.getOS)())]) || void 0 === t ? void 0 : t.label_type;
+                    r = null === (n = i.application.embeddedActivityConfig) || void 0 === n ? void 0 : null === (t = n.client_platform_config[(0, c.Z)((0, u.getOS)())]) || void 0 === t ? void 0 : t.label_type;
                 return !!r && (r === l.ww.NEW || r === l.ww.UPDATED);
             })
             .forEach((e) => {

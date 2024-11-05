@@ -9,7 +9,7 @@ n.d(t, {
         return o;
     },
     jx: function () {
-        return _;
+        return f;
     },
     nv: function () {
         return s;
@@ -22,25 +22,31 @@ n.d(t, {
     },
     xh: function () {
         return l;
+    },
+    zG: function () {
+        return _;
     }
 });
 var r = n(570140),
     i = n(145597);
-function a(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.Gr;
+function a(e, t, n) {
+    let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.Gr;
     r.Z.dispatch({
         type: 'LAYOUT_CREATE',
         layoutId: e,
         widgets: t,
-        defaultResolution: n
+        version: n,
+        defaultResolution: a
     });
 }
-function s(e, t, n) {
+function s(e) {
+    let { widgetId: t, anchor: n, size: i, opacity: a } = e;
     r.Z.dispatch({
         type: 'LAYOUT_UPDATE_WIDGET',
-        widgetId: e,
-        anchor: t,
-        size: n
+        widgetId: t,
+        anchor: n,
+        size: i,
+        opacity: a
     });
 }
 function o(e) {
@@ -68,11 +74,18 @@ function c(e) {
     });
 }
 function d(e) {
-    _([e]);
+    f([e]);
 }
-function _(e) {
+function f(e) {
     r.Z.dispatch({
         type: 'LAYOUT_CREATE_WIDGETS',
         widgetConfigs: e
+    });
+}
+function _(e, t) {
+    r.Z.dispatch({
+        type: 'LAYOUT_SET_WIDGET_META',
+        widgetId: e,
+        meta: t
     });
 }

@@ -36,4 +36,5 @@ n.d(t, {
     (i.TIMESTAMP = 'timestamp'),
     (i.LIST = 'list'),
     (i.HEADING = 'heading'),
-    (i.SUBTEXT = 'subtext');
+    (i.SUBTEXT = 'subtext'),
+    (i.SILENT_PREFIX = 'silentPrefix');

@@ -1,1 +1,1 @@
-e.exports = { B: !1 };
+e.exports = { B: !0 };

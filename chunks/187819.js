@@ -1,12 +1,17 @@
 n.d(t, {
     _p: function () {
+        return o;
+    },
+    hP: function () {
         return a;
     },
     sp: function () {
-        return i;
+        return s;
     }
 });
-let r = (0, n(818083).B)({
+var r = n(818083),
+    i = n(987338);
+let a = (0, r.B)({
     kind: 'user',
     id: '2024-08_safety_settings_update',
     label: 'Safety Settings Update',
@@ -17,15 +22,16 @@ let r = (0, n(818083).B)({
             label: 'Enable Safety Settings Update',
             config: { enabled: !0 }
         }
-    ]
+    ],
+    commonTriggerPoint: i.$P.OPEN_USER_SETTINGS
 });
-function i(e) {
-    let { location: t, autoTrackExposure: n } = e,
-        { enabled: i } = r.getCurrentConfig({ location: t }, { autoTrackExposure: null == n || n });
-    return i;
+function s(e) {
+    let { location: t } = e,
+        { enabled: n } = a.getCurrentConfig({ location: t });
+    return n;
 }
-function a(e) {
-    let { location: t, autoTrackExposure: n } = e,
-        { enabled: i } = r.useExperiment({ location: t }, { autoTrackExposure: null == n || n });
-    return i;
+function o(e) {
+    let { location: t } = e,
+        { enabled: n } = a.useExperiment({ location: t });
+    return n;
 }

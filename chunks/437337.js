@@ -1,25 +1,26 @@
 n.d(t, {
     r: function () {
-        return p;
+        return g;
     }
 }),
     n(47120);
-var r = n(735250),
-    i = n(470079),
+var r = n(200651),
+    i = n(192379),
     a = n(120356),
     s = n.n(a),
-    o = n(567526),
+    o = n(100621),
     l = n(692547),
     u = n(186325),
     c = n(84735),
     d = n(180035),
-    _ = n(481060),
-    E = n(77003);
-let f = {
+    f = n(481060),
+    _ = n(540059),
+    h = n(980492);
+let p = {
         mass: 1,
         tension: 250
     },
-    h = {
+    m = {
         X: {
             TOP: 'M5.13231 6.72963L6.7233 5.13864L14.855 13.2704L13.264 14.8614L5.13231 6.72963Z',
             BOTTOM: 'M13.2704 5.13864L14.8614 6.72963L6.72963 14.8614L5.13864 13.2704L13.2704 5.13864Z'
@@ -33,48 +34,49 @@ let f = {
             BOTTOM: 'M4.08643 11.0903L5.67742 9.49929L9.4485 13.2704L7.85751 14.8614L4.08643 11.0903Z'
         }
     },
-    p = function (e) {
-        let { id: t, onChange: n, checked: a, disabled: p, className: m, focusProps: I, innerRef: T } = e,
-            { reducedMotion: g } = i.useContext(u.S),
-            S = i.useRef(null),
-            [A, N] = i.useState(!1),
-            v = (0, d.d)(l.Z.unsafe_rawColors.PRIMARY_400).spring(),
-            O = (0, d.d)(l.Z.unsafe_rawColors.GREEN_360).spring(),
-            { state: R, opacity: C } = (0, _.useSpring)(
+    g = function (e) {
+        let { id: t, onChange: n, checked: a, disabled: g, className: E, focusProps: v, innerRef: I } = e,
+            { reducedMotion: S } = i.useContext(u.S),
+            T = i.useRef(null),
+            [b, y] = i.useState(!1),
+            A = (0, _.Q)('Switch'),
+            N = (0, d.d)(A ? l.Z.colors.INTERACTIVE_MUTED : l.Z.unsafe_rawColors.PRIMARY_400).spring(),
+            C = (0, d.d)(A ? l.Z.colors.REDESIGN_INPUT_CONTROL_SELECTED : l.Z.unsafe_rawColors.GREEN_360).spring(),
+            { state: R, opacity: O } = (0, f.useSpring)(
                 {
-                    config: f,
-                    opacity: p ? 0.3 : 1,
-                    state: A ? (a ? 0.7 : 0.3) : a ? 1 : 0
+                    config: p,
+                    opacity: g ? (A ? 0.5 : 0.3) : 1,
+                    state: b ? (a ? 0.7 : 0.3) : a ? 1 : 0
                 },
                 'animate-always'
             );
         return (0, r.jsx)(c.t, {
-            ...I,
+            ...v,
             within: !0,
             offset: -2,
             children: (0, r.jsxs)(o.animated.div, {
-                className: s()(E.container, m, {
-                    [E.checked]: a,
-                    [E.disabled]: p
+                className: s()(h.container, E, {
+                    [h.checked]: a,
+                    [h.disabled]: g
                 }),
-                onMouseDown: () => !p && N(!0),
-                onMouseUp: () => N(!1),
-                onMouseLeave: () => N(!1),
+                onMouseDown: () => !g && y(!0),
+                onMouseUp: () => y(!1),
+                onMouseLeave: () => y(!1),
                 style: {
-                    opacity: C,
+                    opacity: O,
                     backgroundColor: R.to({
-                        output: [v, O]
+                        output: [N, C]
                     })
                 },
                 children: [
                     (0, r.jsxs)(o.animated.svg, {
-                        className: E.slider,
+                        className: h.slider,
                         viewBox: '0 0 28 20',
                         preserveAspectRatio: 'xMinYMid meet',
                         style: {
                             left: R.to({
                                 range: [0, 0.3, 0.7, 1],
-                                output: [-3, 1, 8, 12]
+                                output: [A ? 0 : -3, 1, 8, 12]
                             })
                         },
                         'aria-hidden': !0,
@@ -103,8 +105,8 @@ let f = {
                                 let a = e.to({
                                         output: [t, n]
                                     }),
-                                    s = i ? [h.X.TOP, h.X.TOP, h.CHECK.TOP, h.CHECK.TOP] : [h.X.TOP, h.BAR.TOP, h.BAR.TOP, h.CHECK.TOP],
-                                    l = i ? [h.X.BOTTOM, h.X.BOTTOM, h.CHECK.BOTTOM, h.CHECK.BOTTOM] : [h.X.BOTTOM, h.BAR.BOTTOM, h.BAR.BOTTOM, h.CHECK.BOTTOM];
+                                    s = i ? [m.X.TOP, m.X.TOP, m.CHECK.TOP, m.CHECK.TOP] : [m.X.TOP, m.BAR.TOP, m.BAR.TOP, m.CHECK.TOP],
+                                    l = i ? [m.X.BOTTOM, m.X.BOTTOM, m.CHECK.BOTTOM, m.CHECK.BOTTOM] : [m.X.BOTTOM, m.BAR.BOTTOM, m.BAR.BOTTOM, m.CHECK.BOTTOM];
                                 return (0, r.jsxs)('svg', {
                                     viewBox: '0 0 20 20',
                                     fill: 'none',
@@ -125,29 +127,29 @@ let f = {
                                         })
                                     ]
                                 });
-                            })(R, v, O, g.enabled)
+                            })(R, N, C, S.enabled)
                         ]
                     }),
                     (0, r.jsx)('input', {
                         id: t,
                         type: 'checkbox',
                         ref: (e) => {
-                            (S.current = e), null != T && (T.current = e);
+                            (T.current = e), null != I && (I.current = e);
                         },
-                        className: E.input,
-                        tabIndex: p ? -1 : 0,
+                        className: h.input,
+                        tabIndex: g ? -1 : 0,
                         onKeyDown: function (e) {
-                            if (!p && !e.repeat) (' ' === e.key || 'Enter' === e.key) && N(!0);
+                            if (!g && !e.repeat) (' ' === e.key || 'Enter' === e.key) && y(!0);
                         },
                         onKeyUp: function (e) {
                             var t;
-                            if (!p && !!A && !e.repeat) N(!1), 'Enter' === e.key && (null === (t = S.current) || void 0 === t || t.click());
+                            if (!g && !!b && !e.repeat) y(!1), 'Enter' === e.key && (null === (t = T.current) || void 0 === t || t.click());
                         },
                         onChange: function (e) {
-                            N(!1), null == n || n(e.currentTarget.checked, e);
+                            y(!1), null == n || n(e.currentTarget.checked, e);
                         },
                         checked: a,
-                        disabled: p
+                        disabled: g
                     })
                 ]
             })

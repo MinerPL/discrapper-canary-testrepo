@@ -1,132 +1,141 @@
 n.d(t, {
     $A: function () {
-        return X;
+        return J;
     },
     $B: function () {
-        return ee;
+        return et;
     },
     $j: function () {
-        return O;
-    },
-    AN: function () {
-        return L;
-    },
-    AS: function () {
         return y;
     },
+    AN: function () {
+        return R;
+    },
+    AS: function () {
+        return O;
+    },
     Av: function () {
-        return j;
+        return W;
     },
     Dg: function () {
-        return M;
+        return x;
     },
     Er: function () {
-        return ei;
+        return ea;
     },
     Gs: function () {
-        return en;
-    },
-    H3: function () {
-        return k;
-    },
-    JA: function () {
-        return Q;
-    },
-    P8: function () {
         return er;
     },
+    H3: function () {
+        return B;
+    },
+    JA: function () {
+        return X;
+    },
+    P8: function () {
+        return ei;
+    },
     QO: function () {
-        return q;
+        return Q;
     },
     QP: function () {
-        return R;
+        return A;
     },
     Qx: function () {
         return F;
     },
     Tr: function () {
-        return P;
+        return w;
+    },
+    UC: function () {
+        return eu;
     },
     Uc: function () {
         return G;
     },
     V8: function () {
-        return x;
+        return U;
     },
     WA: function () {
-        return z;
+        return q;
     },
     XR: function () {
-        return el;
+        return ec;
     },
     YE: function () {
-        return ea;
+        return es;
     },
     Yh: function () {
         return V;
     },
     Yn: function () {
-        return g;
+        return S;
     },
     Z: function () {
         return C;
     },
     Zq: function () {
-        return K;
+        return z;
     },
     ad: function () {
-        return b;
+        return L;
     },
     dX: function () {
-        return H;
+        return j;
     },
     ed: function () {
-        return Z;
+        return H;
     },
     fC: function () {
-        return v;
+        return N;
     },
     h7: function () {
-        return A;
+        return T;
     },
     iA: function () {
         return D;
     },
     jg: function () {
-        return W;
+        return K;
     },
     kS: function () {
-        return eu;
+        return ed;
     },
     mC: function () {
-        return J;
+        return ee;
     },
     mN: function () {
         return $;
     },
+    n4: function () {
+        return e_;
+    },
     pM: function () {
-        return N;
+        return b;
     },
     pk: function () {
-        return eo;
+        return el;
     },
     u$: function () {
-        return et;
+        return en;
     },
     uA: function () {
-        return w;
+        return P;
     },
     ux: function () {
-        return ec;
+        return ef;
     },
     vA: function () {
-        return B.vA;
+        return Z.vA;
     },
     w5: function () {
         return Y;
     },
     yf: function () {
-        return es;
+        return eo;
+    },
+    ym: function () {
+        return k;
     }
 });
 var r,
@@ -138,63 +147,65 @@ var r,
     u,
     c,
     d,
-    _,
-    E,
     f,
+    _,
     h,
     p,
-    I,
     m,
-    T,
-    S,
     g,
+    E,
+    v,
+    I,
+    S,
+    T,
+    b,
+    y,
     A,
     N,
-    O,
-    R,
-    v,
     C,
-    L,
-    y,
+    R,
+    O,
     D,
-    b,
+    L,
+    x,
+    w,
     M,
     P,
-    U,
-    w,
-    x,
-    G,
     k,
-    B = n(268146);
-((r = g || (g = {})).DEFAULT = 'default'), (r.STREAM = 'stream'), ((i = A || (A = {})).AUDIO_INPUT = 'audioinput'), (i.AUDIO_OUTPUT = 'audiooutput'), (i.VIDEO_INPUT = 'videoinput'), ((a = N || (N = {})).PUSH_TO_TALK = 'PUSH_TO_TALK'), (a.VOICE_ACTIVITY = 'VOICE_ACTIVITY'), ((s = O || (O = {})).DISCONNECTED = 'DISCONNECTED'), (s.CONNECTING = 'CONNECTING'), (s.CONNECTED = 'CONNECTED'), (s.NO_ROUTE = 'NO_ROUTE'), (s.ICE_CHECKING = 'ICE_CHECKING'), (s.DTLS_CONNECTING = 'DTLS_CONNECTING'), ((o = R || (R = {}))[(o.TRANSPORT = 1)] = 'TRANSPORT'), (o[(o.OUTBOUND = 2)] = 'OUTBOUND'), (o[(o.INBOUND = 4)] = 'INBOUND'), (o[(o.ALL = 7)] = 'ALL'), ((l = v || (v = {})).MANUAL_DISABLE = 'video_manual_disable'), (l.MANUAL_ENABLE = 'video_manual_enable'), (l.MANUAL_REENABLE = 'video_manual_reenable'), (l.AUTO_DISABLE = 'video_auto_disable'), (l.AUTO_ENABLE = 'video_auto_enable'), (l.AUTO_DOWNGRADE = 'video_auto_downgrade'), (l.AUTO_UPGRADE = 'video_auto_upgrade,'), ((u = C || (C = {})).NO_OVERRIDE = 'no_override'), (u.HIGH = 'high'), (u.LOW = 'low');
+    U,
+    G,
+    B,
+    Z = n(268146);
+((r = S || (S = {})).DEFAULT = 'default'), (r.STREAM = 'stream'), ((i = T || (T = {})).AUDIO_INPUT = 'audioinput'), (i.AUDIO_OUTPUT = 'audiooutput'), (i.VIDEO_INPUT = 'videoinput'), ((a = b || (b = {})).PUSH_TO_TALK = 'PUSH_TO_TALK'), (a.VOICE_ACTIVITY = 'VOICE_ACTIVITY'), ((s = y || (y = {})).DISCONNECTED = 'DISCONNECTED'), (s.CONNECTING = 'CONNECTING'), (s.CONNECTED = 'CONNECTED'), (s.NO_ROUTE = 'NO_ROUTE'), (s.ICE_CHECKING = 'ICE_CHECKING'), (s.DTLS_CONNECTING = 'DTLS_CONNECTING'), ((o = A || (A = {}))[(o.TRANSPORT = 1)] = 'TRANSPORT'), (o[(o.OUTBOUND = 2)] = 'OUTBOUND'), (o[(o.INBOUND = 4)] = 'INBOUND'), (o[(o.ALL = 7)] = 'ALL'), ((l = N || (N = {})).MANUAL_DISABLE = 'video_manual_disable'), (l.MANUAL_ENABLE = 'video_manual_enable'), (l.MANUAL_REENABLE = 'video_manual_reenable'), (l.AUTO_DISABLE = 'video_auto_disable'), (l.AUTO_ENABLE = 'video_auto_enable'), (l.AUTO_DOWNGRADE = 'video_auto_downgrade'), (l.AUTO_UPGRADE = 'video_auto_upgrade,'), ((u = C || (C = {})).NO_OVERRIDE = 'no_override'), (u.HIGH = 'high'), (u.LOW = 'low');
 let F = 100,
     V = 18,
-    H = 64000,
-    Z = 128000,
+    j = 64000,
+    H = 128000,
     Y = 'default',
-    j = 'disabled',
-    W = 0.1,
-    K = -40,
-    z = -25,
-    q = 1 / 15,
-    Q = 0.8,
-    X = 600000,
+    W = 'disabled',
+    K = 0.1,
+    z = -40,
+    q = -25,
+    Q = 1 / 15,
+    X = 0.8,
+    J = 600000,
     $ = 150000,
-    J = 10000000,
-    ee = 5000,
-    et = 15000,
-    en = 30,
-    er = 20,
-    ei = 12,
-    ea = 3500000,
-    es = 9000000,
-    eo = 500000,
-    el = ['remoteSinkWantsPixelCount', 'remoteSinkWantsMaxFramerate', 'encodingVideoMinBitRate', 'encodingVideoMaxBitRate', 'encodingVideoBitRate', 'streamParameters'],
-    eu = {
+    ee = 10000000,
+    et = 5000,
+    en = 15000,
+    er = 30,
+    ei = 20,
+    ea = 12,
+    es = 3500000,
+    eo = 9000000,
+    el = 1500000,
+    eu = 150000,
+    ec = ['remoteSinkWantsPixelCount', 'remoteSinkWantsMaxFramerate', 'encodingVideoMinBitRate', 'encodingVideoMaxBitRate', 'encodingVideoBitRate', 'streamParameters'],
+    ed = {
         videoBudget: {
             width: 1280,
             height: 720,
-            framerate: en
+            framerate: er
         },
         videoCapture: {
             width: 1280,
@@ -212,8 +223,9 @@ let F = 100,
         },
         videoBitrateFloor: 150000
     },
-    ec = 60000;
-((c = L || (L = {})).AUTO_ENABLE = 'AUTO_ENABLE'),
+    ef = 60000,
+    e_ = '>=22.0.0';
+((c = R || (R = {})).AUTO_ENABLE = 'AUTO_ENABLE'),
     (c.ATTENUATION = 'ATTENUATION'),
     (c.AUDIO_INPUT_DEVICE = 'AUDIO_INPUT_DEVICE'),
     (c.AUDIO_OUTPUT_DEVICE = 'AUDIO_OUTPUT_DEVICE'),
@@ -269,49 +281,47 @@ let F = 100,
     (c.SCREEN_SOUNDSHARE = 'SCREEN_SOUNDSHARE'),
     (c.NATIVE_SCREENSHARE_PICKER = 'NATIVE_SCREENSHARE_PICKER'),
     (c.MLS_PAIRWISE_FINGERPRINTS = 'MLS_PAIRWISE_FINGERPRINTS'),
-    ((d = y || (y = {})).NATIVE = 'NATIVE'),
+    ((d = O || (O = {})).NATIVE = 'NATIVE'),
     (d.WEBRTC = 'WEBRTC'),
     (d.DUMMY = 'DUMMY'),
-    ((_ = D || (D = {})).LEGACY = 'legacy'),
-    (_.STANDARD = 'standard'),
-    (_.EXPERIMENTAL = 'experimental'),
-    (_.AUTOMATIC = 'automatic'),
-    ((E = b || (b = {})).OPUS = 'opus'),
-    (E.VP8 = 'VP8'),
-    (E.VP9 = 'VP9'),
-    (E.H264 = 'H264'),
-    (E.RTX = 'rtx'),
-    (E.TEST = 'TEST'),
-    ((f = M || (M = {}))[(f.NONE = 0)] = 'NONE'),
-    (f[(f.VOICE = 1)] = 'VOICE'),
-    (f[(f.SOUNDSHARE = 2)] = 'SOUNDSHARE'),
-    (f[(f.PRIORITY = 4)] = 'PRIORITY'),
-    ((h = P || (P = {})).AUDIO = 'audio'),
-    (h.VIDEO = 'video'),
-    (h.SCREEN = 'screen'),
-    (h.TEST = 'test'),
-    ((p = U || (U = {})).PLAYING = 'playing'),
-    (p.PAUSED = 'paused'),
-    ((I = w || (w = {})).FIXED = 'fixed'),
-    (I.SOURCE = 'source'),
-    ((m = x || (x = {})).VIDEOTOOLBOX_RATE_CONTROL = 'videotoolbox_rate_control'),
-    (m.SIGNAL_AV1 = 'signal_av1'),
-    (m.SIGNAL_AV1_DECODE = 'signal_av1_decode'),
-    (m.SIGNAL_AV1_HARDWARE_DECODE = 'signal_av1_hardware_decode'),
-    (m.STREAMER_CLIP = 'streamer_clip'),
-    (m.VIEWER_CLIP = 'viewer_clip'),
-    (m.MUTE_BEFORE_PROCESSING = 'mute_before_processing'),
-    (m.PTT_BEFORE_PROCESSING = 'ptt_before_processing'),
-    (m.SKIP_ENCODE = 'skip_encode'),
-    (m.RESET_DECODER_ON_ERRORS = 'reset_decoder_on_errors'),
-    (m.SOFTWARE_FALLBACK_ON_ERRORS = 'software_fallback_on_errors'),
-    (m.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS = 'software_fallback_on_consecutive_errors'),
-    (m.GOLIVE_SIMULCAST_480P_500K = 'golive_simulcast_480p@500kbps'),
-    (m.GOLIVE_SIMULCAST_480P_750K = 'golive_simulcast_480p@750kbps'),
-    (m.GOLIVE_SIMULCAST_480P_1000K = 'golive_simulcast_480p@1000kbps'),
-    ((T = G || (G = {}))[(T.AUTO = 1)] = 'AUTO'),
-    (T[(T.FULL = 2)] = 'FULL'),
-    ((S = k || (k = {}))[(S.CPU_OVERUSE = 1)] = 'CPU_OVERUSE'),
-    (S[(S.FAILED = 2)] = 'FAILED'),
-    (S[(S.VAD_CPU_OVERUSE = 3)] = 'VAD_CPU_OVERUSE'),
-    (S[(S.INITIALIZED = 4)] = 'INITIALIZED');
+    ((f = D || (D = {})).LEGACY = 'legacy'),
+    (f.STANDARD = 'standard'),
+    (f.EXPERIMENTAL = 'experimental'),
+    (f.AUTOMATIC = 'automatic'),
+    ((_ = L || (L = {})).OPUS = 'opus'),
+    (_.VP8 = 'VP8'),
+    (_.VP9 = 'VP9'),
+    (_.H264 = 'H264'),
+    (_.RTX = 'rtx'),
+    (_.TEST = 'TEST'),
+    ((h = x || (x = {}))[(h.NONE = 0)] = 'NONE'),
+    (h[(h.VOICE = 1)] = 'VOICE'),
+    (h[(h.SOUNDSHARE = 2)] = 'SOUNDSHARE'),
+    (h[(h.PRIORITY = 4)] = 'PRIORITY'),
+    ((p = w || (w = {})).AUDIO = 'audio'),
+    (p.VIDEO = 'video'),
+    (p.SCREEN = 'screen'),
+    (p.TEST = 'test'),
+    ((m = M || (M = {})).PLAYING = 'playing'),
+    (m.PAUSED = 'paused'),
+    ((g = P || (P = {})).FIXED = 'fixed'),
+    (g.SOURCE = 'source'),
+    ((k || (k = {})).REMB = 'remb'),
+    ((E = U || (U = {})).VIDEOTOOLBOX_RATE_CONTROL = 'videotoolbox_rate_control'),
+    (E.SIGNAL_AV1 = 'signal_av1'),
+    (E.SIGNAL_AV1_DECODE = 'signal_av1_decode'),
+    (E.SIGNAL_AV1_HARDWARE_DECODE = 'signal_av1_hardware_decode'),
+    (E.STREAMER_CLIP = 'streamer_clip'),
+    (E.VIEWER_CLIP = 'viewer_clip'),
+    (E.MUTE_BEFORE_PROCESSING = 'mute_before_processing'),
+    (E.PTT_BEFORE_PROCESSING = 'ptt_before_processing'),
+    (E.SKIP_ENCODE = 'skip_encode'),
+    (E.RESET_DECODER_ON_ERRORS = 'reset_decoder_on_errors'),
+    (E.SOFTWARE_FALLBACK_ON_ERRORS = 'software_fallback_on_errors'),
+    (E.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS = 'software_fallback_on_consecutive_errors'),
+    ((v = G || (G = {}))[(v.AUTO = 1)] = 'AUTO'),
+    (v[(v.FULL = 2)] = 'FULL'),
+    ((I = B || (B = {}))[(I.CPU_OVERUSE = 1)] = 'CPU_OVERUSE'),
+    (I[(I.FAILED = 2)] = 'FAILED'),
+    (I[(I.VAD_CPU_OVERUSE = 3)] = 'VAD_CPU_OVERUSE'),
+    (I[(I.INITIALIZED = 4)] = 'INITIALIZED');

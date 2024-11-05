@@ -1,121 +1,130 @@
-var i = n(735250),
-    a = n(470079),
-    s = n(481060),
-    r = n(783097),
-    l = n(924489),
-    o = n(491576),
-    c = n(686546),
-    d = n(66637),
-    u = n(768581),
-    _ = n(420372),
-    E = n(689938),
-    h = n(923592);
+var i = n(200651),
+    r = n(192379),
+    a = n(481060),
+    l = n(783097),
+    s = n(924489),
+    o = n(824606),
+    c = n(66637),
+    d = n(768581),
+    u = n(956965),
+    h = n(388032),
+    m = n(923592);
+let p = 28;
 t.Z = function (e) {
-    var t, n, m, I, p;
-    let { application: g, showCategory: T = !1 } = e,
-        f = (0, o.Z)({ application: g }),
-        S = null === (t = g.categories) || void 0 === t ? void 0 : t[0],
-        C = (0, r.lf)(g),
-        N = (0, r.vJ)(g),
-        A = a.useMemo(
+    var t, n, g, f, _;
+    let { application: E, onSelectApplication: I, showCategory: C = !1 } = e,
+        v = (0, o.Z)({ application: E }),
+        S = null === (t = E.categories) || void 0 === t ? void 0 : t[0],
+        N = (0, l.lf)(E),
+        T = r.useCallback(() => {
+            I(E.id);
+        }, [I, E.id]),
+        x = r.useMemo(
             () =>
-                u.ZP.getApplicationIconURL({
-                    id: g.id,
-                    icon: g.icon,
+                d.ZP.getApplicationIconURL({
+                    id: E.id,
+                    icon: E.icon,
                     size: 48
                 }),
-            [g]
+            [E]
         ),
-        v = (null !== (I = null === (n = g.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== I ? I : 0) > 0 || f.length > 0,
-        Z = (0, i.jsx)(l.Z, {
-            application: g,
-            textVariant: 'text-xs/normal',
-            mutualGuilds: f,
+        b = (null !== (f = null === (n = E.directory_entry) || void 0 === n ? void 0 : n.guild_count) && void 0 !== f ? f : 0) > 0 || v.length > 0,
+        A = (0, i.jsx)(s.Z, {
+            application: E,
+            textVariant: 'text-xs/medium',
+            mutualGuilds: v,
             mutualGuildShownMax: 3,
-            guildIconSize: l.x.SMALL,
+            guildIconSize: s.x.SMALL,
             compact: !0
-        });
+        }),
+        Z = C && null != S;
     return (0, i.jsx)('div', {
-        className: h.container,
-        children: (0, i.jsxs)(d.Z, {
-            className: h.card,
-            onClick: () => {},
+        className: m.container,
+        children: (0, i.jsxs)(c.Z, {
+            className: m.card,
+            onClick: T,
             onContextMenu: () => {},
             children: [
                 (0, i.jsxs)('div', {
-                    className: h.header,
+                    className: m.header,
                     children: [
-                        (0, i.jsx)(_.Z, {
-                            application: g,
-                            iconURL: A
+                        (0, i.jsx)(u.Z, {
+                            application: E,
+                            bannerType: 'card',
+                            iconURL: x
                         }),
                         (0, i.jsx)('div', {
-                            className: h.icon,
-                            children: (0, i.jsx)(c.ZP, {
-                                mask: c.ZP.Masks.SQUIRCLE,
-                                width: 56,
-                                height: 56,
-                                children: (0, i.jsx)('div', {
-                                    className: h.iconMask,
-                                    children: (0, i.jsx)(c.ZP, {
-                                        mask: c.ZP.Masks.SQUIRCLE,
-                                        width: 48,
-                                        height: 48,
-                                        children: (0, i.jsx)('img', {
-                                            src: A,
-                                            alt: '',
-                                            className: h.avatar
-                                        })
-                                    })
-                                })
+                            className: m.avatarContainer,
+                            style: { height: p },
+                            children: (0, i.jsx)('img', {
+                                src: x,
+                                alt: '',
+                                className: m.avatar,
+                                height: 48,
+                                width: 48,
+                                style: {
+                                    borderWidth: 4,
+                                    marginLeft: 12
+                                }
                             })
                         })
                     ]
                 }),
                 (0, i.jsxs)('div', {
-                    className: h.appDetails,
+                    className: m.appDetails,
                     children: [
-                        (0, i.jsxs)('div', {
-                            className: h.titleContainer,
-                            children: [
-                                (0, i.jsx)('div', {
-                                    className: h.title,
-                                    children: (0, i.jsx)(s.Heading, {
-                                        variant: 'heading-md/semibold',
-                                        className: h.appName,
-                                        children: g.name
-                                    })
-                                }),
-                                C || N
-                                    ? (0, i.jsx)('div', {
-                                          className: h.tagContainer,
-                                          children: (0, i.jsx)(s.Text, {
-                                              variant: 'text-sm/bold',
-                                              children: C ? E.Z.Messages.APP_LAUNCHER_PROMOTED : E.Z.Messages.APP_DIRECTORY_PARTNER
-                                          })
-                                      })
-                                    : null
-                            ]
+                        (0, i.jsx)('div', {
+                            className: m.titleContainer,
+                            children: (0, i.jsx)('div', {
+                                className: m.title,
+                                children: (0, i.jsx)(a.Heading, {
+                                    variant: 'heading-md/semibold',
+                                    color: 'header-primary',
+                                    className: m.appName,
+                                    children: E.name
+                                })
+                            })
                         }),
-                        T
-                            ? (0, i.jsx)(s.Text, {
-                                  className: h.appCategory,
-                                  variant: 'text-xs/normal',
-                                  color: 'text-muted',
-                                  children: null != S ? S.name : ' '
+                        Z || N
+                            ? (0, i.jsxs)('div', {
+                                  className: m.infoContainer,
+                                  children: [
+                                      Z
+                                          ? (0, i.jsx)(a.Text, {
+                                                className: m.appCategory,
+                                                variant: 'text-xs/medium',
+                                                color: 'text-normal',
+                                                children: S.name
+                                            })
+                                          : null,
+                                      Z && N
+                                          ? (0, i.jsx)(a.Text, {
+                                                variant: 'text-xs/medium',
+                                                color: 'text-secondary',
+                                                children: '\u2022'
+                                            })
+                                          : null,
+                                      N
+                                          ? (0, i.jsx)(a.Text, {
+                                                variant: 'text-xs/medium',
+                                                color: 'text-secondary',
+                                                children: h.intl.string(h.t['/eVltr'])
+                                            })
+                                          : null
+                                  ]
                               })
                             : null,
-                        (0, i.jsx)(s.Text, {
-                            className: h.description,
-                            variant: 'text-sm/normal',
+                        (0, i.jsx)(a.Text, {
+                            className: m.description,
+                            variant: 'text-sm/medium',
                             color: 'header-secondary',
-                            lineClamp: T ? 2 : 3,
-                            children: null !== (p = null === (m = g.directory_entry) || void 0 === m ? void 0 : m.short_description) && void 0 !== p ? p : g.description
+                            lineClamp: Z || N ? 2 : 3,
+                            children: null !== (_ = null === (g = E.directory_entry) || void 0 === g ? void 0 : g.short_description) && void 0 !== _ ? _ : E.description
                         }),
-                        v
+                        b
                             ? (0, i.jsx)('div', {
-                                  className: h.memberDetails,
-                                  children: Z
+                                  className: m.memberDetails,
+                                  children: A
                               })
                             : null
                     ]

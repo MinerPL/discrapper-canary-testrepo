@@ -1,78 +1,94 @@
-var s = n(735250);
-n(470079);
-var a = n(120356),
-    r = n.n(a),
-    i = n(481060),
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
     l = n(314684),
-    o = n(176782),
+    o = n(404615),
     c = n(743612),
     d = n(735825),
-    _ = n(817199),
-    u = n(721239),
-    E = n(557634),
-    T = n(992429);
+    u = n(977341),
+    g = n(721239),
+    m = n(557634),
+    f = n(992429);
 t.Z = (e) => {
     var t;
     let n,
-        a,
-        { title: I, titleClassName: R, buttonClassName: g, perkImage: C, isCarousel: N, onCtaClick: m, perkComponent: p, subtitle: A = '', descriptionCta: f = '', cardVariant: S, subtitleClassName: h } = e,
-        M = (0, o._)(S),
-        x = (0, l.yQ)(),
-        O = (null == x ? void 0 : x.nitroTenureStatus) === d.EB.REDEEMABLE;
-    switch (null == x ? void 0 : x.nitroTenureStatus) {
+        r,
+        { title: p, titleClassName: _, buttonClassName: h, perkImage: x, isCarousel: E, onCtaClick: b, perkComponent: C, subtitle: v = '', descriptionCta: T = '', cardVariant: N, subtitleClassName: I, imageOverlayText: S } = e,
+        R = (0, o._)(N),
+        A = (0, l.yQ)(),
+        j = (null == A ? void 0 : A.nitroTenureStatus) === d.EB.REDEEMABLE;
+    switch (null == A ? void 0 : A.nitroTenureStatus) {
         case d.EB.REDEEMABLE:
-            (n = T), (a = 'unlocked icon');
+            (n = f), (r = 'unlocked icon');
             break;
         case d.EB.PENDING:
-            (n = u), (a = 'locked icon');
+            (n = g), (r = 'locked icon');
             break;
         case d.EB.REDEEMED:
-            (n = E), (a = 'thumbs up icon');
+            (n = m), (r = 'thumbs up icon');
             break;
         default:
-            (n = void 0), (a = '');
+            (n = void 0), (r = '');
     }
-    return (0, s.jsxs)(s.Fragment, {
+    let P = null != S;
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, s.jsx)('div', { className: r()(_.cover, _.below) }),
-            (0, s.jsx)(c.Z, {
-                title: I,
+            (0, i.jsx)('div', { className: a()(u.cover, u.below) }),
+            (0, i.jsx)(c.Z, {
+                title: p,
                 shouldShowElement: (e) => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
-                cardVariantStyleInfo: M,
-                titleClassName: R,
-                subtitle: A,
-                subtitleClassName: h
+                cardVariantStyleInfo: R,
+                titleClassName: _,
+                subtitle: v,
+                subtitleClassName: I
             }),
-            null != C &&
-                (0, s.jsx)('img', {
-                    src: C,
-                    alt: '',
-                    className: r()({
-                        [_.cardImage]: !N,
-                        [_.carouselCardImage]: N
-                    })
+            null != x &&
+                (0, i.jsxs)('div', {
+                    className: a()(u.relative, { [u.cardImage]: !E }),
+                    children: [
+                        (0, i.jsx)('img', {
+                            src: x,
+                            alt: '',
+                            className: a()({
+                                [u.carouselCardImage]: E,
+                                [u.greyScaleFilter]: P
+                            })
+                        }),
+                        P
+                            ? (0, i.jsx)('div', {
+                                  className: u.imageOverlayTextContainer,
+                                  children: (0, i.jsx)(s.Text, {
+                                      className: u.imageOverlayText,
+                                      variant: 'text-md/normal',
+                                      children: S
+                                  })
+                              })
+                            : null
+                    ]
                 }),
-            null != p &&
-                (0, s.jsx)(s.Fragment, {
-                    children: (0, s.jsxs)('div', {
-                        className: _.cardIllustrationNoHover,
+            null != C &&
+                (0, i.jsx)(i.Fragment, {
+                    children: (0, i.jsxs)('div', {
+                        className: u.cardIllustrationNoHover,
                         children: [
-                            p,
-                            0 !== f.length &&
-                                null != m &&
-                                (0, s.jsx)(i.Button, {
-                                    className: g,
-                                    disabled: !O,
+                            C,
+                            0 !== T.length &&
+                                null != b &&
+                                (0, i.jsx)(s.Button, {
+                                    className: h,
+                                    disabled: !j,
                                     fullWidth: !0,
-                                    onClick: m,
-                                    children: (0, s.jsxs)('div', {
-                                        className: null == M ? void 0 : null === (t = M.descriptionCta) || void 0 === t ? void 0 : t.className,
+                                    onClick: b,
+                                    children: (0, i.jsxs)('div', {
+                                        className: null == R ? void 0 : null === (t = R.descriptionCta) || void 0 === t ? void 0 : t.className,
                                         children: [
-                                            (0, s.jsx)('img', {
-                                                alt: a,
+                                            (0, i.jsx)('img', {
+                                                alt: r,
                                                 src: n
                                             }),
-                                            f
+                                            T
                                         ]
                                     })
                                 })

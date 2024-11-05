@@ -1,6 +1,6 @@
 n.d(t, {
     I: function () {
-        return N;
+        return y;
     },
     O: function () {
         return i;
@@ -139,7 +139,7 @@ let o = {
         },
         showCharacterCount: !0
     },
-    _ = {
+    f = {
         analyticsName: 'voice_channel_status',
         drafts: { type: s.d.ChannelMessage },
         emojis: { button: !0 },
@@ -159,7 +159,7 @@ let o = {
         },
         showCharacterCount: !0
     },
-    E = {
+    _ = {
         analyticsName: 'thread_creation',
         attachments: !0,
         drafts: { type: s.d.FirstThreadMessage },
@@ -177,7 +177,7 @@ let o = {
         hideAttachmentArea: !0,
         upsellLongMessages: { iconOnly: !0 }
     },
-    f = {
+    h = {
         analyticsName: 'create_forum_post',
         attachments: !0,
         drafts: { type: s.d.FirstThreadMessage },
@@ -193,7 +193,7 @@ let o = {
         hideAttachmentArea: !0,
         uploadLongMessages: !0
     },
-    h = {
+    p = {
         analyticsName: 'create_poll',
         attachments: !0,
         drafts: { type: s.d.ChannelMessage },
@@ -205,7 +205,7 @@ let o = {
             disableEnterToSubmit: !0
         }
     },
-    p = {
+    m = {
         analyticsName: 'user_profile',
         drafts: { type: s.d.ChannelMessage },
         emojis: { button: !0 },
@@ -221,7 +221,22 @@ let o = {
         },
         toolbarType: 2
     },
-    I = {
+    g = {
+        analyticsName: 'overlay_inline_reply',
+        drafts: { type: s.d.ChannelMessage },
+        permissions: { requireSendMessages: !0 },
+        users: { allowMentioning: !0 },
+        autocomplete: {
+            alwaysUseLayer: !0,
+            small: !0
+        },
+        submit: {
+            useDisabledStylesOnSubmit: !1,
+            clearOnSubmit: !0
+        },
+        toolbarType: 2
+    },
+    E = {
         analyticsName: 'user_profile_reply',
         drafts: { type: s.d.ChannelMessage },
         emojis: { button: !0 },
@@ -237,7 +252,7 @@ let o = {
         },
         toolbarType: 2
     },
-    m = {
+    v = {
         analyticsName: 'profile_bio_input',
         drafts: { type: s.d.ChannelMessage },
         emojis: { button: !0 },
@@ -249,7 +264,7 @@ let o = {
         disableAutoFocus: !0,
         showCharacterCount: !0
     },
-    T = {
+    I = {
         analyticsName: 'custom_gift_type',
         drafts: { type: s.d.ChannelMessage },
         emojis: {},
@@ -271,7 +286,7 @@ let o = {
         },
         showCharacterCount: !0
     },
-    g = {
+    T = {
         analyticsName: 'forum_channel_guidelines',
         drafts: { type: s.d.ChannelMessage },
         permissions: { requireSendMessages: !1 },
@@ -286,7 +301,7 @@ let o = {
         showCharacterCount: !0,
         toolbarType: 1
     },
-    A = {
+    b = {
         analyticsName: 'atomic_reator_reply_input',
         drafts: { type: s.d.ChannelMessage },
         permissions: { requireSendMessages: !0 },
@@ -298,23 +313,24 @@ let o = {
         disableAutoFocus: !0,
         showCharacterCount: !0
     },
-    N = {
+    y = {
         NORMAL: o,
         OVERLAY: l,
+        OVERLAY_INLINE_REPLY: g,
         SIDEBAR: u,
         EDIT: c,
         FORM: d,
-        VOICE_CHANNEL_STATUS: _,
-        THREAD_CREATION: E,
-        USER_PROFILE: p,
-        USER_PROFILE_REPLY: I,
-        PROFILE_BIO_INPUT: m,
-        CUSTOM_GIFT: T,
+        VOICE_CHANNEL_STATUS: f,
+        THREAD_CREATION: _,
+        USER_PROFILE: m,
+        USER_PROFILE_REPLY: E,
+        PROFILE_BIO_INPUT: v,
+        CUSTOM_GIFT: I,
         RULES_INPUT: S,
-        CREATE_FORUM_POST: f,
-        CREATE_POLL: h,
-        FORUM_CHANNEL_GUIDELINES: g,
-        ATOMIC_REACTOR_REPLY_INPUT: A,
+        CREATE_FORUM_POST: h,
+        CREATE_POLL: p,
+        FORUM_CHANNEL_GUIDELINES: T,
+        ATOMIC_REACTOR_REPLY_INPUT: b,
         FORWARD_MESSAGE_INPUT: {
             analyticsName: 'forward_message_input',
             drafts: { type: s.d.ChannelMessage },

@@ -1,54 +1,57 @@
-i.d(n, {
+e.d(n, {
     JE: function () {
-        return l;
+        return u;
     },
     ab: function () {
         return o;
     },
     iG: function () {
-        return s;
+        return a;
     },
     lL: function () {
-        return d;
+        return c;
     },
     rC: function () {
-        return c;
+        return s;
     }
 });
-var t = i(293810),
-    a = i(474936),
-    r = i(689938);
-function o(e) {
-    return 'roles' in e ? 'emoji-'.concat(e.id) : ''.concat(e.ref_type, '-').concat(e.emoji_id, '-').concat(e.name, '-').concat(e.ref_id);
+var i = e(293810),
+    r = e(474936),
+    l = e(388032);
+function o(t) {
+    return 'roles' in t ? 'emoji-'.concat(t.id) : ''.concat(t.ref_type, '-').concat(t.emoji_id, '-').concat(t.name, '-').concat(t.ref_id);
 }
-function l(e) {
-    let { interval: n, interval_count: i } = e;
-    return (function (e) {
-        switch (e) {
-            case a.rV.DAY:
-                return r.Z.Messages.DAY;
-            case a.rV.MONTH:
-                return r.Z.Messages.MONTH;
-            case a.rV.YEAR:
-                return r.Z.Messages.YEAR;
-        }
-    })(n).format({ count: i });
+function u(t) {
+    let { interval: n, interval_count: e } = t;
+    return l.intl.format(
+        (function (t) {
+            switch (t) {
+                case r.rV.DAY:
+                    return l.t['3rUmPT'];
+                case r.rV.MONTH:
+                    return l.t['zuN54+'];
+                case r.rV.YEAR:
+                    return l.t.cuSp8f;
+            }
+        })(n),
+        { count: e }
+    );
 }
-function s(e) {
-    let { interval: n, interval_count: i } = e;
+function a(t) {
+    let { interval: n, interval_count: e } = t;
     switch (n) {
-        case a.rV.DAY:
-            if (i > 0 && i % 7 == 0) return r.Z.Messages.DURATION_WEEKS_CAPITALIZE.format({ weeks: i / 7 });
-            return r.Z.Messages.DURATION_DAYS_CAPITALIZE.format({ days: i });
-        case a.rV.MONTH:
-            return r.Z.Messages.DURATION_MONTHS_CAPITALIZE.format({ months: i });
-        case a.rV.YEAR:
-            return r.Z.Messages.DURATION_YEARS_CAPITALIZE.format({ years: i });
+        case r.rV.DAY:
+            if (e > 0 && e % 7 == 0) return l.intl.formatToPlainString(l.t.iVZYys, { weeks: e / 7 });
+            return l.intl.formatToPlainString(l.t.jzH70d, { days: e });
+        case r.rV.MONTH:
+            return l.intl.formatToPlainString(l.t.erUSmJ, { months: e });
+        case r.rV.YEAR:
+            return l.intl.formatToPlainString(l.t.IfYQVF, { years: e });
     }
 }
-function c(e) {
-    return e.ref_type === t.Qs.CHANNEL;
+function s(t) {
+    return t.ref_type === i.Qs.CHANNEL;
 }
-function d(e) {
-    return e.ref_type === t.Qs.INTANGIBLE;
+function c(t) {
+    return t.ref_type === i.Qs.INTANGIBLE;
 }

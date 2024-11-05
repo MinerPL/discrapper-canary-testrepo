@@ -3,37 +3,38 @@ n.d(t, {
         return o;
     }
 });
-var r = n(735250),
-    i = n(470079),
+var r = n(200651),
+    i = n(192379),
     a = n(1561),
-    s = n(251475);
+    s = n(30215);
 function o(e) {
-    let { tag: t = 'div', children: n, className: o, focusProps: l, onClick: u, onDoubleClick: c, onContextMenu: d, onKeyDown: _, onFocus: E, onBlur: f, onMouseOver: h, onMouseDown: p, onMouseLeave: m, buttonProps: I, 'aria-label': T } = e,
-        g = i.useRef(null);
+    let { tag: t = 'div', children: n, className: o, style: l, focusProps: u, onClick: c, onDoubleClick: d, onContextMenu: f, onKeyDown: _, onFocus: h, onBlur: p, onMouseOver: m, onMouseDown: g, onMouseLeave: E, buttonProps: v, 'aria-label': I } = e,
+        S = i.useRef(null);
     return (0, r.jsxs)(t, {
-        ref: g,
+        ref: S,
         className: o,
-        onClick: u,
-        onMouseOver: h,
-        onMouseLeave: m,
-        onDoubleClick: c,
-        onContextMenu: d,
+        style: l,
+        onClick: c,
+        onMouseOver: m,
+        onMouseLeave: E,
+        onDoubleClick: d,
+        onContextMenu: f,
         children: [
             (0, r.jsx)(a.P, {
-                ...I,
+                ...v,
                 focusProps: {
-                    ringTarget: g,
-                    ...l
+                    ringTarget: S,
+                    ...u
                 },
                 className: s.focusTarget,
-                'aria-label': T,
+                'aria-label': I,
                 onClick: (e) => {
-                    e.stopPropagation(), null == u || u(e);
+                    e.stopPropagation(), null == c || c(e);
                 },
                 onKeyDown: _,
-                onFocus: E,
-                onBlur: f,
-                onMouseDown: p
+                onFocus: h,
+                onBlur: p,
+                onMouseDown: g
             }),
             n
         ]

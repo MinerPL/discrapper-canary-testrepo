@@ -13,9 +13,7 @@ e.exports = {
     joinLeaderboardCTA: 'joinLeaderboardCTA_cf8a7d',
     leagueIcon: 'leagueIcon_cf8a7d',
     rankChangeBadge: 'rankChangeBadge_cf8a7d',
-    emptyContainer: 'emptyContainer_cf8a7d',
     emptyTitleContainer: 'emptyTitleContainer_cf8a7d',
     emptyTitle: 'emptyTitle_cf8a7d',
-    emptySplash: 'emptySplash_cf8a7d',
     emptyCrownIcon: 'emptyCrownIcon_cf8a7d'
 };

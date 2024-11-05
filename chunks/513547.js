@@ -1,21 +1,21 @@
 n.d(t, {
     al: function () {
-        return D;
+        return S;
     },
     ck: function () {
-        return b;
+        return F;
     }
 }),
     n(47120),
     n(653041),
     n(571269),
     n(298267);
-var r = n(735250),
-    a = n(470079),
+var r = n(200651),
+    a = n(192379),
     i = n(112456),
     o = n.n(i),
-    s = n(226961),
-    l = n(706619),
+    l = n(226961),
+    s = n(706619),
     c = n(206314);
 let d = {
     accelerateRate: 'Accelerate Rate',
@@ -24,6 +24,7 @@ let d = {
     availableOutgoingBitrate: 'Available Outgoing Bitrate',
     averageDecodeTime: 'Average Decode Time',
     averageEncodeTime: 'Average Encode Time',
+    bandwidthLimitedFrameRate: 'Bandwidth Limited Frame Rate',
     bandwidthLimitedResolution: 'Bandwidth Limited Resolution',
     bitrate: 'Bitrate',
     bitrateTarget: 'Bitrate (Target)',
@@ -42,8 +43,8 @@ let d = {
     decodingNormal: 'Decoding Normal',
     decodingPLC: 'Decoding PLC',
     decodingPLCCNG: 'Decoding PLC CNG',
-    decryptionFailures: 'Decryption Failures',
     decryptFailureCount: 'Decrypt Failures',
+    decryptionFailures: 'Decryption Failures',
     decryptSuccessCount: 'Decrypt Successes',
     delayEstimate: 'Delay Estimate',
     encoderImplementationName: 'Encoder',
@@ -65,9 +66,9 @@ let d = {
     framesDecodeErrors: 'Decoder Error Count',
     framesDropped: 'Frames Dropped',
     framesDroppedCongestionWindow: 'Frames Dropped by Congestion Window',
+    framesDroppedEncoder: 'Frames Dropped by Encoder',
     framesDroppedEncoderQueue: 'Frames Dropped by Encoder Queue',
     framesDroppedRateLimiter: 'Frames Dropped by Bitrate Limiter',
-    framesDroppedEncoder: 'Frames Dropped by Encoder',
     framesEncoded: 'Frames Encoded',
     framesReceived: 'Frames Received',
     framesSent: 'Frames Sent',
@@ -111,8 +112,8 @@ let d = {
     qpSum: 'QP Sum',
     qualityDecodeErrors: 'Encoder Quality Decode Errors',
     qualityDecoderReboots: 'Encoder Quality Decoder Reboots',
-    qualityScoreErrors: 'Encoder Quality Score Errors',
     qualityFrameDrops: 'Encoder Quality Frame Drops',
+    qualityScoreErrors: 'Encoder Quality Score Errors',
     qualitySizeMismatches: 'Encoder Quality Size Mismatches',
     quartzFrames: 'Quartz Frames',
     receiverBitrateEstimate: 'Receiver Bitrate Estimate (REMB)',
@@ -154,21 +155,28 @@ function g(e) {
 function f(e) {
     return e ? 'Yes' : 'No';
 }
-function C(e) {
+function y(e) {
     return ''.concat(Math.max(e, 0).toFixed(2), ' dB');
 }
-function y(e) {
+function b(e) {
     let { last: t } = e;
     return ''.concat(t, ' ms');
 }
-let D = {
+let S = {
         audioJitterBuffer: !0,
         audioJitterDelay: !0,
         audioJitterTarget: !0,
         audioPlayoutUnderruns: !0,
+        decryptAttempts: !0,
+        decryptDuration: !0,
+        encryptAttempts: !0,
+        encryptDuration: !0,
+        encryptMaxAttempts: !0,
         fractionLost: !0,
         framesCaptured: !0,
         framesRendered: !0,
+        hqSimulcastStreamEncoded: !0,
+        lqSimulcastStreamEncoded: !0,
         noiseCancellerFrames: !0,
         noiseCancellerProcessTime: !0,
         sinkWantAsInt: !0,
@@ -178,22 +186,16 @@ let D = {
         videoJitterBuffer: !0,
         videoJitterDelay: !0,
         videoJitterTarget: !0,
-        voiceActivityDetectorProcessTime: !0,
-        decryptAttempts: !0,
-        decryptDuration: !0,
-        encryptAttempts: !0,
-        encryptDuration: !0,
-        encryptMaxAttempts: !0,
-        lqSimulcastStreamEncoded: !0,
-        hqSimulcastStreamEncoded: !0
+        voiceActivityDetectorProcessTime: !0
     },
-    S = {
+    v = {
         accelerateRate: g,
         audioDetected: f,
-        audioLevel: C,
+        audioLevel: y,
         availableOutgoingBitrate: u,
         averageDecodeTime: h,
         averageEncodeTime: h,
+        bandwidthLimitedFrameRate: f,
         bandwidthLimitedResolution: f,
         bitrate: u,
         bitrateTarget: u,
@@ -208,7 +210,7 @@ let D = {
         decoderImplementationName: p,
         delayEstimate: h,
         encoderImplementationName: p,
-        encoderQualityPsnr: C,
+        encoderQualityPsnr: y,
         encoderQualityVmaf: (e) => ''.concat(e.toFixed(2)),
         encodeUsage: g,
         expandRate: g,
@@ -225,8 +227,8 @@ let D = {
         ping: h,
         preemptiveExpandRate: g,
         receiverBitrateEstimate: u,
-        relativePlayoutDelay: y,
-        relativeReceptionDelay: y,
+        relativePlayoutDelay: b,
+        relativeReceptionDelay: b,
         renderDelay: h,
         resolution: (e) => {
             let { width: t, height: n } = e;
@@ -243,8 +245,8 @@ let D = {
             return e < t.length ? t[e] : 'Unknown';
         }
     },
-    R = (e) => e,
-    v = (e) => {
+    C = (e) => e,
+    D = (e) => {
         let [t] = a.useState([]);
         return (
             t.push({
@@ -252,27 +254,27 @@ let D = {
                 time: Date.now()
             }),
             t.length > 600 && t.shift(),
-            (0, r.jsx)(l.Z, {
+            (0, r.jsx)(s.Z, {
                 dataPoints: t,
                 width: e.width,
                 height: e.height
             })
         );
     };
-function b(e) {
+function F(e) {
     var t, n, a, i;
     let { label: o, value: u, section: m } = e,
-        p = null !== (n = S[o]) && void 0 !== n ? n : R;
+        p = null !== (n = v[o]) && void 0 !== n ? n : C;
     let h =
-            s.Pz[o] &&
+            l.Pz[o] &&
             (Array.isArray((i = u)) && i.length > 0 && 'number' == typeof i[0].value
-                ? (0, r.jsx)(l.Z, {
+                ? (0, r.jsx)(s.Z, {
                       dataPoints: i,
                       width: 300,
                       height: 100
                   })
                 : 'number' == typeof i
-                  ? (0, r.jsx)(v, {
+                  ? (0, r.jsx)(D, {
                         value: i,
                         width: 300,
                         height: 100

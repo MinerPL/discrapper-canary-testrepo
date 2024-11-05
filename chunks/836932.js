@@ -4,20 +4,20 @@ n.d(t, {
     }
 });
 var i = n(224706),
-    s = n(13245),
-    a = n(593481),
-    o = n(150097),
-    r = n(312839),
-    l = n(987650),
-    c = n(689938);
+    r = n(13245),
+    s = n(593481),
+    a = n(150097),
+    l = n(312839),
+    o = n(987650),
+    c = n(388032);
 function d(e, t, n, d, u) {
     if (null == t.activity) return null;
     let h = t.activity.type,
         p = u.session_id;
     if (null == p) return null;
-    let { icon: f, title: _, body: g } = (0, o.Xi)(e, t, n),
-        { trackView: m, trackClick: E } = (0, r.R)(l.n0.ActivityInvite, {
-            notif_type: l.n0.ActivityInvite,
+    let { icon: f, title: g, body: m } = (0, a.Xi)(e, t, n),
+        { trackView: v, trackClick: _ } = (0, l.R)(o.n0.ActivityInvite, {
+            notif_type: o.n0.ActivityInvite,
             notif_user_id: n.id,
             message_id: t.id,
             message_type: t.type,
@@ -28,16 +28,15 @@ function d(e, t, n, d, u) {
             activity_name: u.name
         });
     return {
-        colorScheme: a.ZP.ColorSchemes.PRIMARY,
         icon: f,
-        title: _,
-        body: g,
-        hint: (e) => (0, a.QR)(e, (0, r.P)(), c.Z.Messages.OVERLAY_UNLOCK_TO_JOIN),
+        title: g,
+        body: m,
+        hint: (e) => (0, s.QR)(e, (0, l.P)(), c.t.aB5xLy),
         onNotificationShow: () => {
-            m();
+            v();
         },
-        confirmText: c.Z.Messages.JOIN,
-        onConfirmClick: (a, o) => {
+        confirmText: c.intl.string(c.t.VJlc0d),
+        onConfirmClick: (s, a) => {
             i.Z.join({
                 userId: n.id,
                 sessionId: p,
@@ -45,11 +44,11 @@ function d(e, t, n, d, u) {
                 channelId: e.id,
                 messageId: t.id
             }),
-                s.Z.updateNotificationStatus(o),
-                E('join');
+                r.Z.updateNotificationStatus(a),
+                _('join');
         },
         onDismissClick: () => {
-            E('dismiss');
+            _('dismiss');
         }
     };
 }

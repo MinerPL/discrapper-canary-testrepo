@@ -1,56 +1,72 @@
 n.d(t, {
     $m: function () {
-        return u;
+        return d;
     },
     NJ: function () {
-        return l;
+        return c;
     },
     Xo: function () {
-        return c;
+        return f;
     }
 }),
     n(47120);
-var r = n(735250),
-    i = n(470079),
+var r = n(200651),
+    i = n(192379),
     a = n(512722),
-    s = n.n(a);
-let o = i.createContext(void 0);
-function l(e) {
+    s = n.n(a),
+    o = n(846519),
+    l = n(810097);
+let u = i.createContext(void 0);
+function c(e) {
     let { value: t, children: n } = e;
-    return (0, r.jsx)(o.Provider, {
+    return (0, r.jsx)(u.Provider, {
         value: t,
         children: n
     });
 }
-function u() {
+function d() {
     let [e, t] = i.useState(null),
         [n, r] = i.useState(null),
-        a = i.useCallback((e) => {
-            t(e.interactionType), r(e.interactionSource);
+        [a, s] = i.useState(null),
+        u = i.useCallback((e) => {
+            t(e.interactionType), r(e.interactionSource), s(e.interactionSourceId);
         }, []),
-        s = i.useCallback(() => {
-            a({
+        c = i.useCallback(() => {
+            u({
                 interactionType: null,
-                interactionSource: null
+                interactionSource: null,
+                interactionSourceId: null
             });
-        }, [a]),
-        [o, l] = i.useState(!1),
-        [u, c] = i.useState(null);
-    return i.useMemo(
-        () => ({
-            interactionType: e,
-            interactionSource: n,
-            onInteraction: a,
-            resetInteraction: s,
-            interactionToastShown: o,
-            setInteractionToastShown: l,
-            interactionTypeSent: u,
-            setInteractionTypeSent: c
-        }),
-        [a, n, o, e, u, s]
+        }, [u]),
+        [d, f] = i.useState(!1),
+        [_, h] = i.useState(null),
+        [p] = i.useState(new o.V7()),
+        m = i.useCallback(
+            (e) => {
+                h(e), f(!0), null === e ? p.stop() : p.start(l._1, () => f(!1));
+            },
+            [p]
+        );
+    return (
+        i.useEffect(() => {
+            p.stop();
+        }, [p]),
+        i.useMemo(
+            () => ({
+                interactionType: e,
+                interactionSource: n,
+                interactionSourceId: a,
+                onInteraction: u,
+                setInteractionToast: m,
+                resetInteraction: c,
+                showInteractionToast: d,
+                interactionTypeSent: _
+            }),
+            [u, m, n, a, d, e, _, c]
+        )
     );
 }
-function c() {
-    let e = i.useContext(o);
+function f() {
+    let e = i.useContext(u);
     return s()(null != e, 'must use useUserProfileInteractionContext within a UserProfileInteractionContextProvider'), e;
 }

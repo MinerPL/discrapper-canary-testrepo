@@ -1,37 +1,36 @@
-t.d(s, {
+n.d(t, {
     a: function () {
-        return l;
+        return o;
     }
 });
-var n = t(442837),
-    a = t(663389),
-    i = t(996733),
-    r = t(394644),
-    o = t(295545);
-function l(e, s) {
-    var t;
-    let l = (0, o.eA)({ location: 'settingsTabs' }),
-        c = (0, r.Gj)(s),
-        d = (0, i.Z7)(),
-        _ = (0, n.e7)([a.Z], () => a.Z.getSubsection()),
-        E = e.filter((e) => null == e.predicate || e.predicate());
-    if (l) {
-        if (null != c && c.size > 0) {
-            let e = E.filter((e) => c.has(e.setting));
-            E = e.length > 0 ? e : E;
+var i = n(442837),
+    s = n(663389),
+    r = n(996733),
+    l = n(991346),
+    a = n(295545);
+function o(e, t) {
+    let n = (0, a.eA)({ location: 'settingsTabs' }),
+        o = (0, l.Gj)(t),
+        c = (0, r.Z7)(),
+        d = (0, i.e7)([s.Z], () => s.Z.getSubsection()),
+        u = e.filter((e) => null == e.predicate || e.predicate());
+    if (n) {
+        if (null != o && o.size > 0) {
+            let e = u.filter((e) => o.has(e.setting));
+            u = e.length > 0 ? e : u;
         }
-        if (null != d && d.length > 0 && null == _) {
-            let e = E.find((e) => e.title.toLowerCase() === d.toLowerCase());
+        if (null != c && c.length > 0 && null == d) {
+            let e = u.find((e) => e.title.toLowerCase() === c.toLowerCase());
             if (null != e)
                 return {
-                    viewableTabs: E,
-                    selectedTab: e
+                    viewableTabs: u,
+                    filteredTab: e
                 };
         }
     }
-    let u = null !== (t = E.find((e) => null != e && e.setting === _)) && void 0 !== t ? t : E[0];
+    let m = u.find((e) => null != e && e.setting === d);
     return {
-        viewableTabs: E,
-        selectedTab: u
+        viewableTabs: u,
+        filteredTab: m
     };
 }

@@ -17,5 +17,6 @@ e.exports = {
     tooltipRed: 'tooltipRed_b6c360',
     tooltipGreen: 'tooltipGreen_b6c360',
     tooltipYellow: 'tooltipYellow_b6c360',
-    tooltipPremium: 'tooltipPremium_b6c360'
+    tooltipPremium: 'tooltipPremium_b6c360',
+    tooltipPointerBg: 'tooltipPointerBg_b6c360'
 };

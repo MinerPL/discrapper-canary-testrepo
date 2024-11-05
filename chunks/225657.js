@@ -1,43 +1,42 @@
-var a = t(735250);
-t(470079);
-var s = t(442837),
-    i = t(481060),
-    l = t(700582),
-    r = t(987209),
-    o = t(699516),
-    d = t(594174),
-    u = t(51144),
-    c = t(335131),
-    E = t(689938);
-n.Z = (e) => {
-    let { selectedSkuId: n, className: t } = e,
-        f = (0, s.Wu)([o.Z], () => o.Z.getFriendIDs()),
-        h = (0, s.Wu)([d.default], () => d.default.filter((e) => f.includes(e.id) && !e.bot), [f]),
-        { giftRecipient: m, setGiftRecipient: v, giftRecipientError: C, setGiftRecipientError: p, setValidatingGiftRecipient: x } = (0, r.wD)();
-    if (null == n) return null;
-    let I = async (e) => {
-        x(!0), null != C && p(), v(e), !(await (0, c.B1)(e.id, n)) && p(E.Z.Messages.COLLECTIBLES_GIFT_SEND_ERROR_OWNED), x(!1);
-    };
-    return (0, a.jsxs)('div', {
-        className: t,
-        children: [
-            (0, a.jsx)(i.FormTitle, { children: E.Z.Messages.FORM_LABEL_SEND_TO }),
-            (0, a.jsx)(i.SearchableSelect, {
-                placeholder: E.Z.Messages.COLLECTIBLES_GIFT_RECIPIENT_PLACEHOLDER,
-                renderOptionPrefix: (e) =>
-                    (null == e ? void 0 : e.value) == null
-                        ? null
-                        : (0, a.jsx)(l.Z, {
-                              user: e.value,
-                              size: i.AvatarSizes.SIZE_20
-                          }),
-                value: m,
-                onChange: I,
-                options: h.map((e) => ({
-                    value: e,
-                    label: ''.concat(u.ZP.getUserTag(e))
-                }))
-            })
-        ]
-    });
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    l = n(481060),
+    a = n(700582),
+    o = n(987209),
+    s = n(699516),
+    c = n(594174),
+    d = n(51144),
+    u = n(388032);
+t.Z = (e) => {
+    let { selectedSkuId: t, validateSelectedGift: n, className: m } = e,
+        h = (0, r.Wu)([s.Z], () => s.Z.getFriendIDs()),
+        f = (0, r.Wu)([c.default], () => c.default.filter((e) => h.includes(e.id) && !e.bot), [h]),
+        { giftRecipient: p, setGiftRecipient: g } = (0, o.wD)();
+    return null == t
+        ? null
+        : (0, i.jsxs)('div', {
+              className: m,
+              children: [
+                  (0, i.jsx)(l.FormTitle, { children: u.intl.string(u.t.xFn72t) }),
+                  (0, i.jsx)(l.SearchableSelect, {
+                      placeholder: u.intl.string(u.t.R0vK0N),
+                      renderOptionPrefix: (e) =>
+                          (null == e ? void 0 : e.value) == null
+                              ? null
+                              : (0, i.jsx)(a.Z, {
+                                    user: e.value,
+                                    size: l.AvatarSizes.SIZE_20
+                                }),
+                      value: p,
+                      onChange: (e) => {
+                          n(e, t), g(e);
+                      },
+                      options: f.map((e) => ({
+                          value: e,
+                          label: ''.concat(d.ZP.getUserTag(e))
+                      }))
+                  })
+              ]
+          });
 };

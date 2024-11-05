@@ -1,85 +1,86 @@
-var i = n(735250),
-    a = n(470079),
-    s = n(990547),
-    r = n(481060),
-    l = n(213609),
+var i = n(200651),
+    r = n(192379),
+    a = n(990547),
+    l = n(481060),
+    s = n(213609),
     o = n(252618),
     c = n(979233),
     d = n(175307),
     u = n(17845),
-    _ = n(374939),
-    E = n(233374),
-    h = n(611928),
-    m = n(283293),
-    I = n(63063),
-    p = n(113434),
-    g = n(833435),
-    T = n(150560),
-    f = n(558652),
-    S = n(736683),
-    C = n(452081),
+    h = n(374939),
+    m = n(233374),
+    p = n(611928),
+    g = n(283293),
+    f = n(63063),
+    _ = n(113434),
+    E = n(833435),
+    I = n(150560),
+    C = n(558652),
+    v = n(736683),
+    S = n(452081),
     N = n(46140),
-    A = n(981631),
-    v = n(689938),
-    Z = n(431418);
+    T = n(981631),
+    x = n(388032),
+    b = n(431418);
 t.Z = function () {
-    let { tabs: e, selectedTab: t, onSelectTab: n } = (0, C.z)(),
-        { onScroll: L, scrollPosition: R } = (0, c.M)(),
-        O = T.Z.getState().getUtmCurrentContext(),
-        x = (0, g._)({ location: N.dr.QUEST_HOME_DESKTOP }) ? S.Z : S.j;
-    a.useEffect(() => {
-        (0, l.h)({
-            name: s.ImpressionNames.QUEST_HOME,
-            type: s.ImpressionTypes.VIEW,
+    let { tabs: e, selectedTab: t, onSelectTab: n } = (0, S.z)(),
+        { onScroll: A, scrollPosition: Z } = (0, c.M)(),
+        y = I.Z.getState().getUtmCurrentContext(),
+        L = (0, E._)({ location: N.dr.QUEST_HOME_DESKTOP }) ? v.Z : v.j;
+    r.useEffect(() => {
+        (0, s.h)({
+            name: a.ImpressionNames.QUEST_HOME,
+            type: a.ImpressionTypes.VIEW,
             properties: {
-                utm_source_current: O.utmSourceCurrent,
-                utm_medium_current: O.utmMediumCurrent,
-                utm_campaign_current: O.utmCampaignCurrent,
-                utm_content_current: O.utmContentCurrent,
+                utm_source_current: y.utmSourceCurrent,
+                utm_medium_current: y.utmMediumCurrent,
+                utm_campaign_current: y.utmCampaignCurrent,
+                utm_content_current: y.utmContentCurrent,
                 tab: t
             }
         });
     }, [t]);
-    let b = a.useCallback(() => {
-        window.open(I.Z.getArticleURL(A.BhN.QUESTS_LEARN_MORE));
+    let R = r.useCallback(() => {
+        window.open(f.Z.getArticleURL(T.BhN.QUESTS_LEARN_MORE));
     }, []);
-    (0, o.Tt)({ location: v.Z.Messages.QUESTS });
-    let M = a.useMemo(() => [v.Z.Messages.QUESTS_HOME_PART_ONE, v.Z.Messages.QUESTS_HOME_PART_TWO], []);
-    return (0, i.jsxs)('div', {
-        className: Z.container,
-        children: [
-            (0, i.jsxs)(h.ZP, {
-                children: [(0, i.jsx)('div', { className: Z.dragRegion }), (0, i.jsx)(h.z6, { scrollPosition: R }), (0, i.jsx)(h.aV, { icon: r.QuestsIcon })]
-            }),
-            (0, i.jsxs)(m.Z, {
-                onScroll: L,
-                children: [
-                    (0, i.jsx)(u.Z, {
-                        title: M,
-                        description: v.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
-                        button: (0, i.jsx)(d.u, {
-                            text: v.Z.Messages.LEARN_MORE,
-                            onClick: b
-                        }),
-                        className: Z.bannerContainer,
-                        children: (0, i.jsx)('div', {
-                            className: Z.bannerImage,
-                            children: (0, i.jsx)('div', { className: Z.bannerGradient })
-                        })
-                    }),
-                    (0, i.jsxs)(_.Z, {
-                        children: [
-                            (0, i.jsx)(E.Z, {
-                                tabs: e,
-                                selectedTab: t,
-                                onTabSelect: n,
-                                className: Z.tabs
+    return (
+        (0, o.Tt)({ location: x.intl.string(x.t.JALI2N) }),
+        (0, i.jsxs)('div', {
+            className: b.container,
+            children: [
+                (0, i.jsxs)(p.ZP, {
+                    children: [(0, i.jsx)('div', { className: b.dragRegion }), (0, i.jsx)(p.z6, { scrollPosition: Z }), (0, i.jsx)(p.aV, { icon: l.QuestsIcon })]
+                }),
+                (0, i.jsxs)(g.Z, {
+                    onScroll: A,
+                    children: [
+                        (0, i.jsx)(u.Z, {
+                            title: x.intl.formatToPlainString(x.t.lmMBf3, {}),
+                            description: x.intl.string(x.t.oWCrBg),
+                            button: (0, i.jsx)(d.u, {
+                                text: x.intl.string(x.t.hvVgAQ),
+                                onClick: R
                             }),
-                            t === p.e5.CLAIMED ? (0, i.jsx)(x, { onSelectTab: n }) : (0, i.jsx)(f.Z, {})
-                        ]
-                    })
-                ]
-            })
-        ]
-    });
+                            className: b.bannerContainer,
+                            children: (0, i.jsx)('div', {
+                                className: b.bannerImage,
+                                children: (0, i.jsx)('div', { className: b.bannerGradient })
+                            })
+                        }),
+                        (0, i.jsxs)(h.Z, {
+                            children: [
+                                (0, i.jsx)(m.Z, {
+                                    tabs: e,
+                                    selectedTab: t,
+                                    onTabSelect: n,
+                                    className: b.tabs
+                                }),
+                                t === _.e5.CLAIMED ? (0, i.jsx)(L, { onSelectTab: n }) : (0, i.jsx)(C.Z, {})
+                            ]
+                        })
+                    ]
+                })
+            ]
+        })
+    );
 };

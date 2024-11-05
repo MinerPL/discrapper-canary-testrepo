@@ -1,1 +1,6 @@
-e.exports = '/assets/2d63725a34a655eed282.svg';
+n.d(e, {
+    X: function () {
+        return r;
+    }
+});
+let r = 'undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__;

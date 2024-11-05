@@ -1,372 +1,372 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return eg;
+        return eE;
     }
 }),
-    t(47120),
-    t(733860),
-    t(773603);
-var n,
-    a,
-    i = t(735250),
-    r = t(470079),
-    o = t(120356),
-    l = t.n(o),
-    c = t(512722),
-    d = t.n(c),
-    _ = t(913527),
-    u = t.n(_),
-    E = t(442837),
-    T = t(524437),
-    S = t(481060),
-    I = t(570140),
-    N = t(668781),
-    m = t(409700),
-    C = t(809206),
-    A = t(230711),
-    g = t(241420),
-    h = t(600164),
-    O = t(651530),
-    p = t(163268),
-    R = t(294602),
-    x = t(778825),
-    f = t(856768),
-    M = t(592204),
-    D = t(712950),
-    P = t(880257),
-    L = t(16703),
-    b = t(977059),
-    Z = t(236289),
-    v = t(518560),
-    j = t(237292),
-    B = t(604849),
-    U = t(278828),
-    G = t(921801),
-    F = t(480294),
-    y = t(430824),
-    V = t(663389),
-    Y = t(594174),
-    w = t(626135),
-    k = t(63063),
-    H = t(78451),
-    W = t(358085),
-    K = t(709054),
-    z = t(88658),
-    Q = t(695346),
-    X = t(3957),
-    q = t(279743),
-    J = t(526156),
-    $ = t(76793),
-    ee = t(839469),
-    es = t(973005),
-    et = t(703115),
-    en = t(526761),
-    ea = t(726985),
-    ei = t(981631),
-    er = t(800530),
-    eo = t(689938),
-    el = t(81138),
-    ec = t(630785),
-    ed = t(224499);
-function e_(e, s, t) {
+    n(47120),
+    n(733860),
+    n(773603);
+var i,
+    s,
+    r = n(200651),
+    l = n(192379),
+    a = n(120356),
+    o = n.n(a),
+    c = n(512722),
+    d = n.n(c),
+    u = n(913527),
+    m = n.n(u),
+    h = n(442837),
+    g = n(524437),
+    p = n(481060),
+    x = n(570140),
+    S = n(668781),
+    T = n(924628),
+    C = n(809206),
+    _ = n(230711),
+    E = n(241420),
+    f = n(600164),
+    I = n(651530),
+    N = n(247206),
+    A = n(294602),
+    b = n(778825),
+    v = n(856768),
+    j = n(592204),
+    O = n(712950),
+    R = n(880257),
+    P = n(16703),
+    D = n(977059),
+    y = n(236289),
+    B = n(518560),
+    L = n(237292),
+    Z = n(604849),
+    F = n(278828),
+    M = n(921801),
+    k = n(480294),
+    w = n(430824),
+    U = n(663389),
+    V = n(594174),
+    G = n(626135),
+    Y = n(63063),
+    H = n(78451),
+    z = n(358085),
+    W = n(709054),
+    K = n(88658),
+    q = n(695346),
+    Q = n(3957),
+    X = n(279743),
+    J = n(526156),
+    $ = n(76793),
+    ee = n(839469),
+    et = n(973005),
+    en = n(703115),
+    ei = n(526761),
+    es = n(726985),
+    er = n(981631),
+    el = n(800530),
+    ea = n(388032),
+    eo = n(36968),
+    ec = n(933919),
+    ed = n(113207);
+function eu(e, t, n) {
     return (
-        s in e
-            ? Object.defineProperty(e, s, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[s] = t),
+            : (e[t] = n),
         e
     );
 }
-function eu() {
-    let e = (0, E.e7)([x.Z], () => x.Z.getGuild()),
-        s = (0, L.Z)(),
-        t = null != e ? e : s;
-    r.useEffect(() => {
-        w.default.track(ei.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, { action: et.Y.VIEW_SETTINGS_PAGE });
+function em() {
+    let e = (0, h.e7)([b.Z], () => b.Z.getGuild()),
+        t = (0, P.Z)(),
+        n = null != e ? e : t;
+    l.useEffect(() => {
+        G.default.track(er.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, { action: en.Y.VIEW_SETTINGS_PAGE });
     }, []);
-    let n = r.useCallback((e) => {
+    let i = l.useCallback((e) => {
         null != e &&
-            I.Z.dispatch({
+            x.Z.dispatch({
                 type: 'GUILD_IDENTITY_SETTINGS_SET_GUILD',
                 guild: e
             }),
-            w.default.track(ei.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                action: et.Y.SELECT_GUILD,
+            G.default.track(er.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                action: en.Y.SELECT_GUILD,
                 guild_id: null == e ? void 0 : e.id
             });
     }, []);
-    return null == t
+    return null == n
         ? null
-        : (0, i.jsxs)(S.FormSection, {
-              tag: S.FormTitleTags.H1,
-              title: eo.Z.Messages.PRIVACY_AND_SAFETY,
+        : (0, r.jsxs)(p.FormSection, {
+              tag: p.FormTitleTags.H1,
+              title: ea.intl.string(ea.t.sKMrpq),
               children: [
-                  (0, i.jsx)(f.Z, {
+                  (0, r.jsx)(v.Z, {
                       className: ec.guildSelector,
-                      guildId: t.id,
-                      onChange: n
+                      guildId: n.id,
+                      onChange: i
                   }),
-                  (0, i.jsx)(g.ConnectedPrivacySettings, {
-                      guild: t,
-                      ingress: g.PrivacySettingSurfaces.USER_SETTINGS_PRIVACY_SAFETY
+                  (0, r.jsx)(E.ConnectedPrivacySettings, {
+                      guild: n,
+                      ingress: E.PrivacySettingSurfaces.USER_SETTINGS_PRIVACY_SAFETY
                   })
               ]
           });
 }
-function eE() {
+function eh() {
     var e;
-    let s = null === (e = (0, P.Z)()) || void 0 === e || e,
-        t = (0, j.y0)({ location: 'user_settings_web' }),
-        n = (0, B.c)(),
-        a = (0, X.a)(en.to.DM_SAFETY_ALERTS);
-    return s || !t
+    let t = null === (e = (0, R.Z)()) || void 0 === e || e,
+        n = (0, L.y0)({ location: 'user_settings_web' }),
+        i = (0, Z.c)(),
+        s = (0, Q.a)(ei.to.DM_SAFETY_ALERTS);
+    return t || !n
         ? null
-        : (0, i.jsxs)(G.F, {
-              setting: ea.s6.PRIVACY_SAFETY_ALERTS,
+        : (0, r.jsxs)(M.F, {
+              setting: es.s6.PRIVACY_SAFETY_ALERTS,
               children: [
-                  (0, i.jsx)(S.FormSection, {
-                      ref: a,
-                      children: (0, i.jsxs)(S.FormItem, {
-                          className: el.settingsBackgroundFlashElement,
+                  (0, r.jsx)(p.FormSection, {
+                      ref: s,
+                      children: (0, r.jsxs)(p.FormItem, {
+                          className: eo.settingsBackgroundFlashElement,
                           children: [
-                              (0, i.jsx)(S.FormTitle, {
-                                  tag: S.FormTitleTags.H5,
+                              (0, r.jsx)(p.FormTitle, {
+                                  tag: p.FormTitleTags.H5,
                                   faded: !0,
                                   className: ed.marginBottom8,
-                                  children: eo.Z.Messages.SAFETY_ALERTS_SETTINGS_HEADER
+                                  children: ea.intl.string(ea.t['J/X8w8'])
                               }),
-                              (0, i.jsx)(S.FormSwitch, {
-                                  value: n,
-                                  note: eo.Z.Messages.SAFETY_ALERTS_SETTING_DESCRIPTION.format({ learnMoreLink: k.Z.getArticleURL(ei.BhN.SAFETY_ALERTS) }),
-                                  onChange: U.Q,
+                              (0, r.jsx)(p.FormSwitch, {
+                                  value: i,
+                                  note: ea.intl.format(ea.t.lunaRk, { learnMoreLink: Y.Z.getArticleURL(er.BhN.SAFETY_ALERTS) }),
+                                  onChange: F.Q,
                                   hideBorder: !0,
-                                  children: eo.Z.Messages.SAFETY_ALERTS_SETTING_TITLE
+                                  children: ea.intl.string(ea.t.qFsx5u)
                               }),
-                              (0, i.jsx)(q.Z, {
+                              (0, r.jsx)(X.Z, {
                                   animationDelay: 1000,
-                                  scrollPosition: en.to.DM_SAFETY_ALERTS
+                                  scrollPosition: ei.to.DM_SAFETY_ALERTS
                               })
                           ]
                       })
                   }),
-                  (0, i.jsx)(S.FormDivider, { className: ed.marginBottom20 })
+                  (0, r.jsx)(p.FormDivider, { className: ed.marginBottom20 })
               ]
           });
 }
-function eT(e, s) {
-    w.default.track(ei.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
+function eg(e, t) {
+    G.default.track(er.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
         default_guilds_restricted: e,
-        applied_to_existing_guilds: s
+        applied_to_existing_guilds: t
     });
 }
-function eS() {
-    let e = Q.iG.useSetting(),
-        s = Q.mX.useSetting(),
-        t = (0, X.a)(en.to.DM_SAFETY_ALERTS);
-    return (0, i.jsxs)(i.Fragment, {
+function ep() {
+    let e = q.iG.useSetting(),
+        t = q.mX.useSetting(),
+        n = (0, Q.a)(ei.to.MESSAGE_REQUESTS);
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsxs)('div', {
-                className: el.settingsBackgroundFlashElement,
+            (0, r.jsxs)('div', {
+                className: eo.settingsBackgroundFlashElement,
                 children: [
-                    (0, i.jsx)(S.FormItem, {
-                        ref: t,
-                        children: (0, i.jsx)(S.FormSwitch, {
-                            value: !s,
-                            note: eo.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_CAPTION.format({ helpdeskArticle: k.Z.getArticleURL(ei.BhN.MESSAGE_REQUESTS) }),
+                    (0, r.jsx)(p.FormItem, {
+                        ref: n,
+                        children: (0, r.jsx)(p.FormSwitch, {
+                            value: !t,
+                            note: ea.intl.format(ea.t.BSdJ7O, { helpdeskArticle: Y.Z.getArticleURL(er.BhN.MESSAGE_REQUESTS) }),
                             disabled: e,
                             onChange: () => {
                                 var e;
                                 return (
-                                    (e = !s),
-                                    void em({
-                                        header: eo.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_MODAL_HEADER,
-                                        body: eo.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_MODAL_DESCRIPTION,
-                                        confirmText: eo.Z.Messages.NO_TEXT,
-                                        cancelText: eo.Z.Messages.YES_TEXT,
-                                        confirmButtonColor: S.Button.Colors.BRAND,
+                                    (e = !t),
+                                    void eT({
+                                        header: ea.intl.string(ea.t.yAfu1t),
+                                        body: ea.intl.string(ea.t['Ry2z7+']),
+                                        confirmText: ea.intl.string(ea.t.gm1Ven),
+                                        cancelText: ea.intl.string(ea.t.p89ACg),
+                                        confirmButtonColor: p.Button.Colors.BRAND,
                                         onConfirm: () => {
-                                            Q.mX.updateSetting(e), eT(e, !1);
+                                            q.mX.updateSetting(e), eg(e, !1);
                                         },
                                         onCancel: () => {
-                                            Q.mX.updateSetting(e), Q.zA.updateSetting(e ? K.default.keys(y.Z.getGuilds()) : []), eT(e, !0);
+                                            q.mX.updateSetting(e), q.zA.updateSetting(e ? W.default.keys(w.Z.getGuilds()) : []), eg(e, !0);
                                         }
                                     })
                                 );
                             },
                             hideBorder: !0,
-                            children: eo.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_HEADER
+                            children: ea.intl.string(ea.t.kOa6yM)
                         })
                     }),
-                    (0, i.jsx)(q.Z, {
+                    (0, r.jsx)(X.Z, {
                         animationDelay: 700,
-                        scrollPosition: en.to.MESSAGE_REQUESTS
+                        scrollPosition: ei.to.MESSAGE_REQUESTS
                     })
                 ]
             }),
-            (0, i.jsx)(S.FormDivider, { className: ed.marginBottom20 })
+            (0, r.jsx)(p.FormDivider, { className: ed.marginBottom20 })
         ]
     });
 }
-function eI() {
+function ex() {
     var e;
-    let s = null === (e = (0, P.Z)()) || void 0 === e || e,
-        { explicitContentGuilds: t, explicitContentFriendDm: n, explicitContentNonFriendDm: a } = (0, R.B)(),
-        r = (0, X.a)(en.to.DM_SAFETY_ALERTS),
-        o = [
+    let t = null === (e = (0, R.Z)()) || void 0 === e || e,
+        { explicitContentGuilds: n, explicitContentFriendDm: i, explicitContentNonFriendDm: s } = (0, A.B)(),
+        l = (0, Q.a)(ei.to.EXPLICIT_MEDIA_REDACTION),
+        a = [
             {
-                value: T.Q4.BLUR,
-                label: eo.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLUR
+                value: g.Q4.BLUR,
+                label: ea.intl.string(ea.t.S49UaW)
             },
             {
-                value: T.Q4.BLOCK,
-                label: eo.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLOCK
+                value: g.Q4.BLOCK,
+                label: ea.intl.string(ea.t['D/157e'])
             }
         ],
-        l = [
+        o = [
             {
-                value: T.Q4.BLUR,
-                label: eo.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLUR
+                value: g.Q4.BLUR,
+                label: ea.intl.string(ea.t.S49UaW)
             }
         ],
         c = {
-            value: T.Q4.SHOW,
-            label: eo.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_SHOW
+            value: g.Q4.SHOW,
+            label: ea.intl.string(ea.t['5k5OFh'])
         };
     return (
-        s && (o.unshift(c), l.unshift(c)),
-        (0, i.jsxs)(i.Fragment, {
+        t && (a.unshift(c), o.unshift(c)),
+        (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsxs)('div', {
-                    className: el.settingsBackgroundFlashElement,
+                (0, r.jsxs)('div', {
+                    className: eo.settingsBackgroundFlashElement,
                     children: [
-                        (0, i.jsx)(S.FormTitle, {
-                            tag: S.FormTitleTags.H5,
+                        (0, r.jsx)(p.FormTitle, {
+                            tag: p.FormTitleTags.H5,
                             faded: !0,
                             className: ed.marginBottom8,
-                            children: eo.Z.Messages.OBSCURED_CONTENT_SETTINGS_HEADER
+                            children: ea.intl.string(ea.t.uEz8JC)
                         }),
-                        (0, i.jsx)(S.FormText, {
-                            type: S.FormTextTypes.DESCRIPTION,
+                        (0, r.jsx)(p.FormText, {
+                            type: p.FormTextTypes.DESCRIPTION,
                             className: ed.marginBottom8,
-                            children: eo.Z.Messages.OBSCURED_CONTENT_SETTINGS_DESC.format({ learnMoreLink: k.Z.getArticleURL(ei.BhN.EXPLICIT_MEDIA_REDACTION) })
+                            children: ea.intl.format(ea.t['89CimZ'], { learnMoreLink: Y.Z.getArticleURL(er.BhN.EXPLICIT_MEDIA_REDACTION) })
                         }),
-                        (0, i.jsx)(S.FormItem, {
-                            ref: r,
-                            tag: S.FormTitleTags.H3,
+                        (0, r.jsx)(p.FormItem, {
+                            ref: l,
+                            tag: p.FormTitleTags.H3,
                             className: ed.marginBottom20,
-                            title: eo.Z.Messages.OBSCURED_CONTENT_SETTING_FRIENDS,
-                            children: (0, i.jsx)(S.SingleSelect, {
-                                options: o,
-                                value: n,
-                                onChange: (e) => (0, p.zj)({ explicitContentFriendDm: e })
+                            title: ea.intl.string(ea.t.TyjVLC),
+                            children: (0, r.jsx)(p.SingleSelect, {
+                                options: a,
+                                value: i,
+                                onChange: (e) => (0, N.zj)({ explicitContentFriendDm: e })
                             })
                         }),
-                        (0, i.jsx)(S.FormItem, {
-                            tag: S.FormTitleTags.H3,
+                        (0, r.jsx)(p.FormItem, {
+                            tag: p.FormTitleTags.H3,
                             className: ed.marginBottom20,
-                            title: eo.Z.Messages.OBSCURED_CONTENT_SETTING_NON_FRIENDS,
-                            children: (0, i.jsx)(S.SingleSelect, {
-                                options: o,
-                                value: a,
-                                onChange: (e) => (0, p.zj)({ explicitContentNonFriendDm: e })
+                            title: ea.intl.string(ea.t.T7eD1d),
+                            children: (0, r.jsx)(p.SingleSelect, {
+                                options: a,
+                                value: s,
+                                onChange: (e) => (0, N.zj)({ explicitContentNonFriendDm: e })
                             })
                         }),
-                        s &&
-                            (0, i.jsx)(S.FormItem, {
-                                tag: S.FormTitleTags.H3,
+                        t &&
+                            (0, r.jsx)(p.FormItem, {
+                                tag: p.FormTitleTags.H3,
                                 className: ed.marginBottom20,
-                                title: eo.Z.Messages.OBSCURED_CONTENT_SETTING_GUILDS,
-                                children: (0, i.jsx)(S.SingleSelect, {
-                                    options: l,
-                                    value: t,
-                                    onChange: (e) => (0, p.zj)({ explicitContentGuilds: e })
+                                title: ea.intl.string(ea.t.zqUDl5),
+                                children: (0, r.jsx)(p.SingleSelect, {
+                                    options: o,
+                                    value: n,
+                                    onChange: (e) => (0, N.zj)({ explicitContentGuilds: e })
                                 })
                             }),
-                        (0, i.jsx)(q.Z, { scrollPosition: en.to.EXPLICIT_MEDIA_REDACTION })
+                        (0, r.jsx)(X.Z, { scrollPosition: ei.to.EXPLICIT_MEDIA_REDACTION })
                     ]
                 }),
-                (0, i.jsx)(S.FormDivider, { className: ed.marginBottom20 })
+                (0, r.jsx)(p.FormDivider, { className: ed.marginBottom20 })
             ]
         })
     );
 }
-function eN(e) {
+function eS(e) {
     let {
-            modalProps: s,
-            settings: { onConfirm: t, ...n }
+            modalProps: t,
+            settings: { onConfirm: n, ...i }
         } = e,
-        [a, o] = r.useState({
+        [s, a] = l.useState({
             Account: {
                 value: 'Account',
-                label: eo.Z.Messages.HARVEST_BACKEND_USERS,
+                label: ea.intl.string(ea.t['rfe/x8']),
                 checked: !1
             },
             Analytics: {
                 value: 'Analytics',
-                label: eo.Z.Messages.HARVEST_BACKEND_ANALYTICS,
+                label: ea.intl.string(ea.t['j+d6RE']),
                 checked: !1
             },
             Activities: {
                 value: 'Activities',
-                label: eo.Z.Messages.HARVEST_BACKEND_ACTIVITIES,
+                label: ea.intl.string(ea.t.KO88BQ),
                 checked: !1
             },
             Messages: {
                 value: 'Messages',
-                label: eo.Z.Messages.HARVEST_BACKEND_MESSAGES,
+                label: ea.intl.string(ea.t['0dO1t7']),
                 checked: !1
             },
             Programs: {
                 value: 'Programs',
-                label: eo.Z.Messages.HARVEST_BACKEND_HUBSPOT,
+                label: ea.intl.string(ea.t.M4ddeX),
                 checked: !1
             },
             Servers: {
                 value: 'Servers',
-                label: eo.Z.Messages.HARVEST_BACKEND_GUILDS,
+                label: ea.intl.string(ea.t.JN9c39),
                 checked: !1
             }
         }),
-        l = (e) => (s, t) => {
-            o((s) => ({
-                ...s,
+        o = (e) => (t, n) => {
+            a((t) => ({
+                ...t,
                 [e]: {
-                    ...s[e],
-                    checked: t
+                    ...t[e],
+                    checked: n
                 }
             }));
         };
-    return (0, i.jsxs)(S.ConfirmModal, {
-        ...s,
-        ...n,
+    return (0, r.jsxs)(p.ConfirmModal, {
+        ...t,
+        ...i,
         onConfirm: () => {
-            let e = Object.keys(a)
-                .filter((e) => a[e].checked)
-                .map((e) => a[e].value);
-            null == t || t(e);
+            let e = Object.keys(s)
+                .filter((e) => s[e].checked)
+                .map((e) => s[e].value);
+            null == n || n(e);
         },
         children: [
-            (0, i.jsx)(S.Text, {
+            (0, r.jsx)(p.Text, {
                 variant: 'text-md/normal',
                 style: { marginBottom: '5px' },
-                children: n.body
+                children: i.body
             }),
-            Object.keys(a).map((e) => {
-                let { label: s, checked: t } = a[e];
-                return (0, i.jsx)(
-                    S.Checkbox,
+            Object.keys(s).map((e) => {
+                let { label: t, checked: n } = s[e];
+                return (0, r.jsx)(
+                    p.Checkbox,
                     {
-                        type: S.Checkbox.Types.INVERTED,
-                        value: t,
+                        type: p.Checkbox.Types.INVERTED,
+                        value: n,
                         style: { marginBottom: '2px' },
-                        onChange: l(e),
-                        children: (0, i.jsx)(S.Text, {
+                        onChange: o(e),
+                        children: (0, r.jsx)(p.Text, {
                             variant: 'text-md/normal',
-                            children: s
+                            children: t
                         })
                     },
                     e
@@ -375,38 +375,38 @@ function eN(e) {
         ]
     });
 }
-((a = n || (n = {})).USERS = 'Account'), (a.MESSAGES = 'Messages'), (a.GUILDS = 'Servers'), (a.ANALYTICS = 'Analytics'), (a.ACTIVITIES = 'Activities'), (a.HUBSPOT = 'Programs');
-function em(e) {
-    let { body: s, ...t } = e;
-    (0, S.openModal)((e) =>
-        (0, i.jsx)(S.ConfirmModal, {
+((s = i || (i = {})).USERS = 'Account'), (s.MESSAGES = 'Messages'), (s.GUILDS = 'Servers'), (s.ANALYTICS = 'Analytics'), (s.ACTIVITIES = 'Activities'), (s.HUBSPOT = 'Programs');
+function eT(e) {
+    let { body: t, ...n } = e;
+    (0, p.openModal)((e) =>
+        (0, r.jsx)(p.ConfirmModal, {
             ...e,
-            ...t,
-            children: (0, i.jsx)(S.Text, {
+            ...n,
+            children: (0, r.jsx)(p.Text, {
                 variant: 'text-md/normal',
-                children: s
+                children: t
             })
         })
     );
 }
 function eC(e) {
-    let { message: s } = e;
-    em({
-        header: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
-        confirmText: eo.Z.Messages.OKAY,
-        body: s
+    let { message: t } = e;
+    eT({
+        header: ea.intl.string(ea.t.OjbtDg),
+        confirmText: ea.intl.string(ea.t.BddRzc),
+        body: t
     });
 }
-class eA extends r.PureComponent {
+class e_ extends l.PureComponent {
     componentDidMount() {
-        (0, m.I)(),
+        (0, T.I)(),
             (0, C.ol)().then(
                 (e) => {
-                    let s = {
+                    let t = {
                         requestingHarvest: !1,
                         currentHarvestRequest: e.body
                     };
-                    this.setState(s);
+                    this.setState(t);
                 },
                 () => {
                     this.setState({ requestingHarvest: !1 });
@@ -417,69 +417,69 @@ class eA extends r.PureComponent {
         e.defaultGuildsRestricted !== this.props.defaultGuildsRestricted && this.setState({ defaultGuildsRestricted: this.props.defaultGuildsRestricted }), null != this.props.subsection && e.subsection !== this.props.subsection && this.setState({ selectedTab: this.props.subsection });
     }
     showGuildRestrictionModal(e) {
-        em({
-            header: eo.Z.Messages.USER_DM_SETTINGS_TITLE,
-            body: eo.Z.Messages.USER_DM_SETTINGS_DESCRIPTION,
-            confirmText: eo.Z.Messages.NO_TEXT,
-            cancelText: eo.Z.Messages.YES_TEXT,
-            confirmButtonColor: S.Button.Colors.BRAND,
+        eT({
+            header: ea.intl.string(ea.t['uUr+GR']),
+            body: ea.intl.string(ea.t.hjGJBg),
+            confirmText: ea.intl.string(ea.t.gm1Ven),
+            cancelText: ea.intl.string(ea.t.p89ACg),
+            confirmButtonColor: p.Button.Colors.BRAND,
             onConfirm: () => {
-                Q.iG.updateSetting(e), this.trackDefaultDmsUpdated(e, !1);
+                q.iG.updateSetting(e), this.trackDefaultDmsUpdated(e, !1);
             },
             onCancel: () => {
-                Q.iG.updateSetting(e), Q.h2.updateSetting(e ? K.default.keys(y.Z.getGuilds()) : []), this.trackDefaultDmsUpdated(e, !0);
+                q.iG.updateSetting(e), q.h2.updateSetting(e ? W.default.keys(w.Z.getGuilds()) : []), this.trackDefaultDmsUpdated(e, !0);
             }
         });
     }
-    trackDefaultDmsUpdated(e, s) {
-        w.default.track(ei.rMx.GUILD_DEFAULT_DMS_UPDATED, {
+    trackDefaultDmsUpdated(e, t) {
+        G.default.track(er.rMx.GUILD_DEFAULT_DMS_UPDATED, {
             default_guilds_restricted: e,
-            applied_to_existing_guilds: s
+            applied_to_existing_guilds: t
         });
     }
     showMessageRequestRestrictionModal(e) {
-        em({
-            header: eo.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_MODAL_HEADER,
-            body: eo.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_MODAL_DESCRIPTION,
-            confirmText: eo.Z.Messages.NO_TEXT,
-            cancelText: eo.Z.Messages.YES_TEXT,
-            confirmButtonColor: S.Button.Colors.BRAND,
+        eT({
+            header: ea.intl.string(ea.t.yAfu1t),
+            body: ea.intl.string(ea.t['Ry2z7+']),
+            confirmText: ea.intl.string(ea.t.gm1Ven),
+            cancelText: ea.intl.string(ea.t.p89ACg),
+            confirmButtonColor: p.Button.Colors.BRAND,
             onConfirm: () => {
-                Q.mX.updateSetting(e), this.trackDefaultMessageRequestUpdated(e, !1);
+                q.mX.updateSetting(e), this.trackDefaultMessageRequestUpdated(e, !1);
             },
             onCancel: () => {
-                Q.mX.updateSetting(e), Q.zA.updateSetting(e ? K.default.keys(y.Z.getGuilds()) : []), this.trackDefaultMessageRequestUpdated(e, !0);
+                q.mX.updateSetting(e), q.zA.updateSetting(e ? W.default.keys(w.Z.getGuilds()) : []), this.trackDefaultMessageRequestUpdated(e, !0);
             }
         });
     }
-    trackDefaultMessageRequestUpdated(e, s) {
-        w.default.track(ei.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
+    trackDefaultMessageRequestUpdated(e, t) {
+        G.default.track(er.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
             default_guilds_restricted: e,
-            applied_to_existing_guilds: s
+            applied_to_existing_guilds: t
         });
     }
     renderLegacyExplicitContentFilter(e) {
-        return (0, i.jsx)(i.Fragment, {
-            children: (0, i.jsxs)(S.FormItem, {
-                tag: S.FormTitleTags.H3,
+        return (0, r.jsx)(r.Fragment, {
+            children: (0, r.jsxs)(p.FormItem, {
+                tag: p.FormTitleTags.H3,
                 className: ed.marginBottom20,
-                title: eo.Z.Messages.USER_EXPLICIT_CONTENT_FILTER_V2,
+                title: ea.intl.string(ea.t.rQCZQE),
                 children: [
-                    (0, i.jsx)(S.FormText, {
-                        type: S.FormTextTypes.DESCRIPTION,
+                    (0, r.jsx)(p.FormText, {
+                        type: p.FormTextTypes.DESCRIPTION,
                         className: ed.marginBottom8,
-                        children: eo.Z.Messages.USER_EXPLICIT_CONTENT_FILTER_HELP_V3.format({ appealLink: k.Z.getArticleURL(ei.BhN.SAFE_DIRECT_MESSAGING) })
+                        children: ea.intl.format(ea.t.Qsnai4, { appealLink: Y.Z.getArticleURL(er.BhN.SAFE_DIRECT_MESSAGING) })
                     }),
-                    (0, i.jsx)(S.RadioGroup, {
+                    (0, r.jsx)(p.RadioGroup, {
                         value: this.props.explicitContentFilter,
                         options: (0, H.X7)(),
-                        onChange: (s) => {
-                            let { value: t } = s;
-                            this.props.dmSpamFilter === T.Xr.DEFAULT_UNSET
-                                ? Q.Xr.updateSetting(e).then(() => {
-                                      Q.UP.updateSetting(t);
+                        onChange: (t) => {
+                            let { value: n } = t;
+                            this.props.dmSpamFilter === g.Xr.DEFAULT_UNSET
+                                ? q.Xr.updateSetting(e).then(() => {
+                                      q.UP.updateSetting(n);
                                   })
-                                : Q.UP.updateSetting(t);
+                                : q.UP.updateSetting(n);
                         }
                     })
                 ]
@@ -488,218 +488,218 @@ class eA extends r.PureComponent {
     }
     renderDMSafety() {
         var e;
-        let s = this.props.dmSpamFilter !== T.Xr.DEFAULT_UNSET ? this.props.dmSpamFilter : null !== (e = es.O7.get(this.props.explicitContentFilter)) && void 0 !== e ? e : T.Xr.NON_FRIENDS;
+        let t = this.props.dmSpamFilter !== g.Xr.DEFAULT_UNSET ? this.props.dmSpamFilter : null !== (e = et.O7.get(this.props.explicitContentFilter)) && void 0 !== e ? e : g.Xr.NON_FRIENDS;
         return this.props.mediaRedactionIsEnabled
-            ? (0, i.jsxs)(i.Fragment, {
+            ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, i.jsxs)(S.FormSection, {
-                          tag: S.FormTitleTags.H3,
+                      (0, r.jsxs)(p.FormSection, {
+                          tag: p.FormTitleTags.H3,
                           className: ed.marginBottom20,
                           children: [
-                              (0, i.jsx)(G.F, {
-                                  setting: ea.s6.PRIVACY_SENSITIVE_MEDIA,
-                                  children: (0, i.jsx)(eI, {})
+                              (0, r.jsx)(M.F, {
+                                  setting: es.s6.PRIVACY_SENSITIVE_MEDIA,
+                                  children: (0, r.jsx)(ex, {})
                               }),
-                              (0, i.jsxs)(G.F, {
-                                  setting: ea.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER,
+                              (0, r.jsxs)(M.F, {
+                                  setting: es.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER,
                                   children: [
-                                      (0, i.jsxs)(S.FormItem, {
-                                          tag: S.FormTitleTags.H5,
+                                      (0, r.jsxs)(p.FormItem, {
+                                          tag: p.FormTitleTags.H5,
                                           className: ed.marginBottom4,
-                                          title: eo.Z.Messages.USER_DM_SPAM_FILTER,
+                                          title: ea.intl.string(ea.t.uloYw8),
                                           children: [
-                                              (0, i.jsx)(S.FormText, {
-                                                  type: S.FormTextTypes.DESCRIPTION,
+                                              (0, r.jsx)(p.FormText, {
+                                                  type: p.FormTextTypes.DESCRIPTION,
                                                   className: ed.marginBottom8,
-                                                  children: eo.Z.Messages.USER_DM_SPAM_FILTER_HELP.format({ appealLink: k.Z.getArticleURL(ei.BhN.SAFE_DIRECT_MESSAGING) })
+                                                  children: ea.intl.format(ea.t.ls4omZ, { appealLink: Y.Z.getArticleURL(er.BhN.SAFE_DIRECT_MESSAGING) })
                                               }),
-                                              (0, i.jsx)(S.RadioGroup, {
-                                                  value: s,
+                                              (0, r.jsx)(p.RadioGroup, {
+                                                  value: t,
                                                   options: (0, H.c7)(),
                                                   onChange: (e) => {
-                                                      let { value: s } = e;
-                                                      return Q.Xr.updateSetting(s);
+                                                      let { value: t } = e;
+                                                      return q.Xr.updateSetting(t);
                                                   }
                                               })
                                           ]
                                       }),
-                                      (0, i.jsx)(S.FormDivider, { className: l()(ed.marginTop20, ed.marginBottom8) })
+                                      (0, r.jsx)(p.FormDivider, { className: o()(ed.marginTop20, ed.marginBottom8) })
                                   ]
                               })
                           ]
                       }),
-                      (0, i.jsx)(eE, {})
+                      (0, r.jsx)(eh, {})
                   ]
               })
-            : (0, i.jsxs)(i.Fragment, {
+            : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, i.jsxs)(S.FormSection, {
-                          tag: S.FormTitleTags.H5,
+                      (0, r.jsxs)(p.FormSection, {
+                          tag: p.FormTitleTags.H5,
                           className: ed.marginBottom40,
-                          title: eo.Z.Messages.USER_DIRECT_MESSAGE_FILTERS,
+                          title: ea.intl.string(ea.t.u3sdlJ),
                           children: [
-                              this.renderLegacyExplicitContentFilter(s),
-                              (0, i.jsxs)(S.FormItem, {
-                                  tag: S.FormTitleTags.H3,
+                              this.renderLegacyExplicitContentFilter(t),
+                              (0, r.jsxs)(p.FormItem, {
+                                  tag: p.FormTitleTags.H3,
                                   className: ed.marginBottom4,
-                                  title: eo.Z.Messages.USER_DM_SPAM_FILTER,
+                                  title: ea.intl.string(ea.t.uloYw8),
                                   children: [
-                                      (0, i.jsx)(S.FormText, {
-                                          type: S.FormTextTypes.DESCRIPTION,
+                                      (0, r.jsx)(p.FormText, {
+                                          type: p.FormTextTypes.DESCRIPTION,
                                           className: ed.marginBottom8,
-                                          children: eo.Z.Messages.USER_DM_SPAM_FILTER_HELP.format({ appealLink: k.Z.getArticleURL(ei.BhN.SAFE_DIRECT_MESSAGING) })
+                                          children: ea.intl.format(ea.t.ls4omZ, { appealLink: Y.Z.getArticleURL(er.BhN.SAFE_DIRECT_MESSAGING) })
                                       }),
-                                      (0, i.jsx)(S.RadioGroup, {
-                                          value: s,
+                                      (0, r.jsx)(p.RadioGroup, {
+                                          value: t,
                                           options: (0, H.c7)(),
                                           onChange: (e) => {
-                                              let { value: s } = e;
-                                              return Q.Xr.updateSetting(s);
+                                              let { value: t } = e;
+                                              return q.Xr.updateSetting(t);
                                           }
                                       })
                                   ]
                               })
                           ]
                       }),
-                      (0, i.jsx)(S.FormDivider, { className: ed.marginBottom20 }),
-                      (0, i.jsx)(eE, {})
+                      (0, r.jsx)(p.FormDivider, { className: ed.marginBottom20 }),
+                      (0, r.jsx)(eh, {})
                   ]
               });
     }
     renderKeywordFiltering() {
-        return (0, i.jsxs)(S.FormSection, {
-            tag: S.FormTitleTags.H3,
+        return (0, r.jsxs)(p.FormSection, {
+            tag: p.FormTitleTags.H3,
             className: ed.marginBottom20,
             children: [
-                (0, i.jsx)(S.FormTitle, {
-                    tag: S.FormTitleTags.H5,
+                (0, r.jsx)(p.FormTitle, {
+                    tag: p.FormTitleTags.H5,
                     className: ed.marginBottom8,
-                    children: eo.Z.Messages.USER_KEYWORD_FILTERS_TITLE
+                    children: ea.intl.string(ea.t.lq5Pio)
                 }),
-                (0, i.jsx)(G.F, {
-                    setting: ea.s6.PRIVACY_KEYWORD_FILTER,
-                    children: (0, i.jsx)(S.FormSwitch, {
+                (0, r.jsx)(M.F, {
+                    setting: es.s6.PRIVACY_KEYWORD_FILTER,
+                    children: (0, r.jsx)(p.FormSwitch, {
                         value: this.props.keywordFilter,
-                        note: eo.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_V2.format({ learnMoreLink: k.Z.getArticleURL(ei.BhN.KEYWORD_FILTERS) }),
+                        note: ea.intl.format(ea.t.wIAqR0, { learnMoreLink: Y.Z.getArticleURL(er.BhN.KEYWORD_FILTERS) }),
                         onChange: (e) =>
-                            Q.gw.updateSetting({
+                            q.gw.updateSetting({
                                 profanity: e,
                                 slurs: e,
                                 sexualContent: e
                             }),
-                        children: eo.Z.Messages.USER_KEYWORD_FILTERS_TOGGLE_TITLE
+                        children: ea.intl.string(ea.t['8QJcoa'])
                     })
                 })
             ]
         });
     }
     renderServerPrivacy() {
-        let { viewNsfwGuilds: e, currentUser: s, viewNsfwCommands: t } = this.props,
-            { defaultGuildsRestricted: n } = this.state,
-            a = !0 === s.nsfwAllowed;
-        return (0, i.jsxs)(S.FormSection, {
+        let { viewNsfwGuilds: e, currentUser: t, viewNsfwCommands: n } = this.props,
+            { defaultGuildsRestricted: i } = this.state,
+            s = !0 === t.nsfwAllowed;
+        return (0, r.jsxs)(p.FormSection, {
             className: ed.marginBottom40,
             children: [
-                (0, i.jsx)(S.FormTitle, {
-                    tag: S.FormTitleTags.H5,
+                (0, r.jsx)(p.FormTitle, {
+                    tag: p.FormTitleTags.H5,
                     className: ed.marginBottom8,
-                    children: eo.Z.Messages.USER_DM_SETTINGS
+                    children: ea.intl.string(ea.t.Hq4ApK)
                 }),
-                (0, i.jsx)(G.F, {
-                    setting: ea.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_DMS,
-                    children: (0, i.jsx)(S.FormSwitch, {
-                        value: !n,
-                        note: eo.Z.Messages.USER_DM_SETTINGS_HELP,
+                (0, r.jsx)(M.F, {
+                    setting: es.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_DMS,
+                    children: (0, r.jsx)(p.FormSwitch, {
+                        value: !i,
+                        note: ea.intl.string(ea.t['5+2s+f']),
                         onChange: this.handleChangeDefaultGuildsRestricted,
-                        children: eo.Z.Messages.NEW_GUILDS_DM_ALLOWED
+                        children: ea.intl.string(ea.t.eCO6Nz)
                     })
                 }),
-                (0, i.jsx)(G.F, {
-                    setting: ea.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_IOS,
-                    children: (0, i.jsx)(S.FormSwitch, {
-                        value: !!a && e,
-                        note: eo.Z.Messages.NSFW_GUILDS_TOGGLE_CAPTION,
-                        disabled: !a,
-                        onChange: Q.DC.updateSetting,
-                        children: eo.Z.Messages.NSFW_GUILDS_TOGGLE_HEADER
+                (0, r.jsx)(M.F, {
+                    setting: es.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_IOS,
+                    children: (0, r.jsx)(p.FormSwitch, {
+                        value: !!s && e,
+                        note: ea.intl.string(ea.t['QZ9+Dw']),
+                        disabled: !s,
+                        onChange: q.DC.updateSetting,
+                        children: ea.intl.string(ea.t['L+yTsb'])
                     })
                 }),
-                (0, i.jsx)(G.F, {
-                    setting: ea.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_MESSAGE_REQUESTS,
-                    children: (0, i.jsx)(eS, {})
+                (0, r.jsx)(M.F, {
+                    setting: es.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_MESSAGE_REQUESTS,
+                    children: (0, r.jsx)(ep, {})
                 }),
-                (0, i.jsx)(G.F, {
-                    setting: ea.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_APPS,
-                    children: (0, i.jsx)(S.FormSwitch, {
-                        value: !!a && t,
-                        note: eo.Z.Messages.NSFW_DM_COMMANDS_CAPTION,
-                        disabled: !a,
-                        onChange: Q.xM.updateSetting,
-                        children: eo.Z.Messages.NSFW_DM_COMMANDS_HEADER
+                (0, r.jsx)(M.F, {
+                    setting: es.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_APPS,
+                    children: (0, r.jsx)(p.FormSwitch, {
+                        value: !!s && n,
+                        note: ea.intl.string(ea.t.fbBowc),
+                        disabled: !s,
+                        onChange: q.xM.updateSetting,
+                        children: ea.intl.string(ea.t.XahVjo)
                     })
                 })
             ]
         });
     }
     renderDataPrivacy() {
-        let { usageStatistics: e, personalization: s, dropsOptedOut: t } = this.props;
-        return (0, i.jsxs)(S.FormSection, {
+        let { usageStatistics: e, personalization: t, dropsOptedOut: n } = this.props;
+        return (0, r.jsxs)(p.FormSection, {
             className: ed.marginBottom40,
             children: [
-                (0, i.jsx)(S.FormTitle, {
-                    tag: S.FormTitleTags.H5,
+                (0, r.jsx)(p.FormTitle, {
+                    tag: p.FormTitleTags.H5,
                     className: ed.marginBottom8,
-                    children: eo.Z.Messages.DATA_PRIVACY_CONTROLS
+                    children: ea.intl.string(ea.t.e0rLYW)
                 }),
-                (0, i.jsx)(G.F, {
-                    setting: ea.s6.PRIVACY_DATA_IMPROVE_DISCORD,
-                    children: (0, i.jsx)(S.FormSwitch, {
+                (0, r.jsx)(M.F, {
+                    setting: es.s6.PRIVACY_DATA_IMPROVE_DISCORD,
+                    children: (0, r.jsx)(p.FormSwitch, {
                         value: e,
-                        note: eo.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE.format({ helpdeskArticle: k.Z.getArticleURL(ei.BhN.DATA_USED_TO_IMPROVE_DISCORD) }),
+                        note: ea.intl.format(ea.t['5R5aSk'], { helpdeskArticle: Y.Z.getArticleURL(er.BhN.DATA_USED_TO_IMPROVE_DISCORD) }),
                         onChange: this.handleUsageStatisticsChange,
-                        children: eo.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE
+                        children: ea.intl.string(ea.t.XuADY2)
                     })
                 }),
-                (0, i.jsx)(G.F, {
-                    setting: ea.s6.PRIVACY_DATA_PERSONALIZE,
-                    children: (0, i.jsx)(S.FormSwitch, {
-                        value: s,
-                        note: eo.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE.format({ helpdeskArticle: k.Z.getArticleURL(ei.BhN.DATA_USED_FOR_RECOMMENDED) }),
+                (0, r.jsx)(M.F, {
+                    setting: es.s6.PRIVACY_DATA_PERSONALIZE,
+                    children: (0, r.jsx)(p.FormSwitch, {
+                        value: t,
+                        note: ea.intl.format(ea.t.MWpAhI, { helpdeskArticle: Y.Z.getArticleURL(er.BhN.DATA_USED_FOR_RECOMMENDED) }),
                         onChange: this.handlePersonalizationChange,
-                        children: eo.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE
+                        children: ea.intl.string(ea.t.MNKzys)
                     })
                 }),
-                (0, i.jsx)(G.F, {
-                    setting: ea.s6.PRIVACY_DATA_QUESTS,
-                    children: (0, i.jsx)(S.FormSwitch, {
-                        value: !t,
-                        note: eo.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED.format({ helpdeskArticle: k.Z.getArticleURL(ei.BhN.DATA_PRIVACY_CONTROLS) }),
+                (0, r.jsx)(M.F, {
+                    setting: es.s6.PRIVACY_DATA_QUESTS,
+                    children: (0, r.jsx)(p.FormSwitch, {
+                        value: !n,
+                        note: ea.intl.format(ea.t['7Q2yX1'], { helpdeskArticle: Y.Z.getArticleURL(er.BhN.QUESTS_PRIVACY_CONTROLS) }),
                         onChange: this.handleChangeDropsOptedOut,
-                        children: (0, i.jsx)('div', { children: eo.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT })
+                        children: (0, r.jsx)('div', { children: ea.intl.string(ea.t.VkS7YW) })
                     })
                 }),
-                (0, i.jsxs)(G.F, {
-                    setting: ea.s6.PRIVACY_DATA_BASIC_SERVICE,
+                (0, r.jsxs)(M.F, {
+                    setting: es.s6.PRIVACY_DATA_BASIC_SERVICE,
                     children: [
-                        (0, i.jsx)(S.FormTitle, {
-                            tag: S.FormTitleTags.H3,
-                            className: l()(ed.marginTop20, ed.marginBottom8),
-                            children: eo.Z.Messages.DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE
+                        (0, r.jsx)(p.FormTitle, {
+                            tag: p.FormTitleTags.H3,
+                            className: o()(ed.marginTop20, ed.marginBottom8),
+                            children: ea.intl.string(ea.t.D60Gfn)
                         }),
-                        (0, i.jsx)(S.FormText, {
-                            type: S.FormTextTypes.DESCRIPTION,
+                        (0, r.jsx)(p.FormText, {
+                            type: p.FormTextTypes.DESCRIPTION,
                             className: ed.marginBottom20,
-                            children: eo.Z.Messages.DATA_PRIVACY_CONTROLS_BASIC_SERVICE_NOTE.format({
+                            children: ea.intl.format(ea.t.R5N31N, {
                                 onClick: () => {
-                                    A.Z.setSection(ei.oAB.ACCOUNT);
+                                    _.Z.setSection(er.oAB.ACCOUNT);
                                 }
                             })
                         }),
-                        (0, i.jsx)(S.FormDivider, { className: ed.marginBottom20 })
+                        (0, r.jsx)(p.FormDivider, { className: ed.marginBottom20 })
                     ]
                 }),
-                (0, i.jsx)(G.F, {
-                    setting: ea.s6.PRIVACY_DATA_REQUEST,
+                (0, r.jsx)(M.F, {
+                    setting: es.s6.PRIVACY_DATA_REQUEST,
                     children: this.renderHarvestRequest()
                 })
             ]
@@ -707,94 +707,94 @@ class eA extends r.PureComponent {
     }
     renderHarvestRequest() {
         let e;
-        let { currentUser: s } = this.props,
-            { requestingHarvest: t, currentHarvestRequest: n } = this.state,
-            a = (0, z.$6)(n, s),
-            o = (0, i.jsx)(S.Tooltip, {
-                text: s.verified ? null : eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_TOOLTIP,
+        let { currentUser: t } = this.props,
+            { requestingHarvest: n, currentHarvestRequest: i } = this.state,
+            s = (0, K.$6)(i, t),
+            a = (0, r.jsx)(p.Tooltip, {
+                text: t.verified ? null : ea.intl.string(ea.t['c1f88/']),
                 children: (e) => {
-                    let { onMouseEnter: s, onMouseLeave: n } = e;
-                    return (0, i.jsx)(S.Button, {
-                        disabled: a,
+                    let { onMouseEnter: t, onMouseLeave: i } = e;
+                    return (0, r.jsx)(p.Button, {
+                        disabled: s,
                         onClick: this.handleDataDownloadRequest,
-                        onMouseEnter: s,
-                        onMouseLeave: n,
-                        look: S.Button.Looks.FILLED,
-                        color: S.Button.Colors.BRAND,
-                        submitting: t,
-                        children: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_DOWNLOAD
+                        onMouseEnter: t,
+                        onMouseLeave: i,
+                        look: p.Button.Looks.FILLED,
+                        color: p.Button.Colors.BRAND,
+                        submitting: n,
+                        children: ea.intl.string(ea.t.dmBSKi)
                     });
                 }
             });
         return (
-            a &&
-                null != n &&
-                ((e = (0, i.jsx)(S.Card, {
+            s &&
+                null != i &&
+                ((e = (0, r.jsx)(p.Card, {
                     className: ec.card,
-                    children: (0, i.jsx)(S.Text, {
+                    children: (0, r.jsx)(p.Text, {
                         variant: 'text-md/normal',
-                        children: eo.Z.Messages.DATA_DOWNLOAD_REQUESTED_STATUS_NOTE.format({ date: u()(n.created_at).add(ei.eBq, 'days').format('MMMM Do YYYY') })
+                        children: ea.intl.format(ea.t.RNDlV1, { date: m()(i.created_at).add(er.eBq, 'days').format('MMMM Do YYYY') })
                     })
                 })),
-                (o = null)),
-            null != o && (o = (0, i.jsx)(h.Z, { children: o })),
-            (0, i.jsxs)(r.Fragment, {
+                (a = null)),
+            null != a && (a = (0, r.jsx)(f.Z, { children: a })),
+            (0, r.jsxs)(l.Fragment, {
                 children: [
-                    (0, i.jsx)(S.FormTitle, {
-                        tag: S.FormTitleTags.H3,
-                        children: eo.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE
+                    (0, r.jsx)(p.FormTitle, {
+                        tag: p.FormTitleTags.H3,
+                        children: ea.intl.string(ea.t.XAHCgI)
                     }),
-                    (0, i.jsx)(S.FormText, {
-                        type: S.FormTextTypes.DESCRIPTION,
+                    (0, r.jsx)(p.FormText, {
+                        type: p.FormTextTypes.DESCRIPTION,
                         className: ed.marginBottom20,
-                        children: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_NOTE.format({ helpdeskArticle: k.Z.getArticleURL(ei.BhN.GDPR_REQUEST_DATA) })
+                        children: ea.intl.format(ea.t['3en439'], { helpdeskArticle: Y.Z.getArticleURL(er.BhN.GDPR_REQUEST_DATA) })
                     }),
                     e,
-                    o
+                    a
                 ]
             })
         );
     }
     renderPrivacyAndTermsNote() {
-        return (0, i.jsx)(S.FormSection, {
+        return (0, r.jsx)(p.FormSection, {
             className: ed.marginBottom40,
-            children: (0, i.jsx)(S.FormNotice, {
-                type: S.FormNotice.Types.PRIMARY,
-                body: eo.Z.Messages.USER_SETTINGS_PRIVACY_TERMS.format({
-                    termsLink: ei.EYA.TERMS,
-                    privacyLink: ei.EYA.PRIVACY
+            children: (0, r.jsx)(p.FormNotice, {
+                type: p.FormNotice.Types.PRIMARY,
+                body: ea.intl.format(ea.t.xvCsx8, {
+                    termsLink: er.EYA.TERMS,
+                    privacyLink: er.EYA.PRIVACY
                 })
             })
         });
     }
     renderStaffOnlySettings() {
         let { nonSpamRetrainingOptIn: e } = this.props;
-        return (0, i.jsxs)(i.Fragment, {
+        return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsx)(S.FormDivider, { className: ed.marginBottom20 }),
-                (0, i.jsxs)(S.FormSection, {
+                (0, r.jsx)(p.FormDivider, { className: ed.marginBottom20 }),
+                (0, r.jsxs)(p.FormSection, {
                     className: ed.marginBottom40,
                     children: [
-                        (0, i.jsx)(S.FormTitle, {
-                            tag: S.FormTitleTags.H5,
+                        (0, r.jsx)(p.FormTitle, {
+                            tag: p.FormTitleTags.H5,
                             className: ed.marginBottom8,
-                            children: eo.Z.Messages.PRIVACY_SETTINGS_STAFF_ONLY_HEADER
+                            children: ea.intl.string(ea.t.Fwp9SU)
                         }),
-                        (0, i.jsxs)(S.FormItem, {
-                            tag: S.FormTitleTags.H5,
+                        (0, r.jsxs)(p.FormItem, {
+                            tag: p.FormTitleTags.H5,
                             className: ed.marginBottom4,
                             children: [
-                                (0, i.jsx)(S.FormText, {
-                                    type: S.FormTextTypes.DESCRIPTION,
+                                (0, r.jsx)(p.FormText, {
+                                    type: p.FormTextTypes.DESCRIPTION,
                                     className: ed.marginBottom8,
-                                    children: eo.Z.Messages.PRIVACY_SETTINGS_STAFF_ONLY_DESC
+                                    children: ea.intl.string(ea.t.toqSSE)
                                 }),
-                                (0, i.jsx)(S.RadioGroup, {
-                                    options: (0, z.xH)(),
-                                    value: null == e ? z.g0.UNDECIDED : e ? z.g0.OPTIN : z.g0.OPTOUT,
+                                (0, r.jsx)(p.RadioGroup, {
+                                    options: (0, K.xH)(),
+                                    value: null == e ? K.g0.UNDECIDED : e ? K.g0.OPTIN : K.g0.OPTOUT,
                                     onChange: (e) => {
-                                        let { value: s } = e;
-                                        return Q.kJ.updateSetting(z.ac[s]);
+                                        let { value: t } = e;
+                                        return q.kJ.updateSetting(K.ac[t]);
                                     }
                                 })
                             ]
@@ -806,178 +806,179 @@ class eA extends r.PureComponent {
     }
     renderSettingsBody() {
         let { fetchedConsents: e } = this.props;
-        return (0, i.jsxs)(S.FormSection, {
-            tag: S.FormTitleTags.H1,
-            title: eo.Z.Messages.PRIVACY_AND_SAFETY,
+        return (0, r.jsxs)(p.FormSection, {
+            tag: p.FormTitleTags.H1,
+            title: ea.intl.string(ea.t.sKMrpq),
             children: [
                 this.renderDMSafety(),
-                (0, i.jsx)(G.F, {
-                    setting: ea.s6.PRIVACY_KEYWORD_FILTER,
+                (0, r.jsx)(M.F, {
+                    setting: es.s6.PRIVACY_KEYWORD_FILTER,
                     children: this.renderKeywordFiltering()
                 }),
-                (0, i.jsx)(G.F, {
-                    setting: ea.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS,
+                (0, r.jsx)(M.F, {
+                    setting: es.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS,
                     children: this.renderServerPrivacy()
                 }),
-                (0, i.jsx)(G.F, {
-                    setting: ea.s6.PRIVACY_DATA_PRIVACY,
+                (0, r.jsx)(M.F, {
+                    setting: es.s6.PRIVACY_DATA_PRIVACY,
                     children: e ? this.renderDataPrivacy() : null
                 }),
-                (0, i.jsx)(G.F, {
-                    setting: ea.s6.PRIVACY_TERMS_POLICY,
+                (0, r.jsx)(M.F, {
+                    setting: es.s6.PRIVACY_TERMS_POLICY,
                     children: this.renderPrivacyAndTermsNote()
                 }),
-                (0, i.jsx)(G.F, {
-                    setting: ea.s6.PRIVACY_STAFF_ONLY,
+                (0, r.jsx)(M.F, {
+                    setting: es.s6.PRIVACY_STAFF_ONLY,
                     children: this.renderStaffOnlySettings()
                 })
             ]
         });
     }
     render() {
-        let { isSecureFramesEnabled: e } = this.props;
-        return (0, i.jsx)(J.Z, {
-            parentSetting: ea.s6.PRIVACY_AND_SAFETY,
-            settingsSection: ei.oAB.PRIVACY_AND_SAFETY,
+        let { isSecureFramesEnabled: e, subsection: t } = this.props;
+        return (0, r.jsx)(J.Z, {
+            parentSetting: es.s6.PRIVACY_AND_SAFETY,
+            settingsSection: er.oAB.PRIVACY_AND_SAFETY,
+            defaultTabIndex: 'ACCOUNT_STANDING' === t ? 2 : void 0,
             tabs: [
                 {
-                    title: eo.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SETTINGS,
+                    title: ea.intl.string(ea.t.YpEWSk),
                     component: this.renderSettingsBody(),
-                    setting: ea.s6.PRIVACY_USER_SETTINGS
+                    setting: es.s6.PRIVACY_USER_SETTINGS
                 },
                 {
-                    title: eo.Z.Messages.PRIVACY_AND_SAFETY_GUILD_TAB_TITLE,
-                    component: (0, i.jsx)(eu, {}),
-                    setting: ea.s6.PRIVACY_SERVER_SPECIFIC_SETTINGS
+                    title: ea.intl.string(ea.t['tp/UVF']),
+                    component: (0, r.jsx)(em, {}),
+                    setting: es.s6.PRIVACY_SERVER_SPECIFIC_SETTINGS
                 },
                 {
-                    title: eo.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT_V2,
-                    component: (0, i.jsx)(v.Z, {}),
-                    setting: ea.s6.PRIVACY_ACCOUNT_STANDING
+                    title: ea.intl.string(ea.t['00Sfl5']),
+                    component: (0, r.jsx)(B.Z, {}),
+                    setting: es.s6.PRIVACY_ACCOUNT_STANDING
                 },
                 {
-                    title: eo.Z.Messages.E2EE_ENCRYPTION,
-                    component: (0, i.jsx)($.Z, {}),
-                    setting: ea.s6.PRIVACY_ENCRYPTION,
-                    predicate: () => e && (0, W.isDesktop)()
+                    title: ea.intl.string(ea.t.hWMIiY),
+                    component: (0, r.jsx)($.Z, {}),
+                    setting: es.s6.PRIVACY_ENCRYPTION,
+                    predicate: () => e && (0, z.isDesktop)()
                 }
             ]
         });
     }
     constructor(e) {
         super(e),
-            e_(this, 'handleChangeDefaultGuildsRestricted', (e) => {
+            eu(this, 'handleChangeDefaultGuildsRestricted', (e) => {
                 this.setState({ defaultGuildsRestricted: !e }, () => this.showGuildRestrictionModal(!e));
             }),
-            e_(this, 'handleChangeDropsOptedOut', () => {
-                Q.bh.updateSetting(!this.props.dropsOptedOut);
+            eu(this, 'handleChangeDropsOptedOut', () => {
+                q.bh.updateSetting(!this.props.dropsOptedOut);
             }),
-            e_(this, 'handleUsageStatisticsChange', () => {
+            eu(this, 'handleUsageStatisticsChange', () => {
                 this.props.usageStatistics
-                    ? em({
-                          header: eo.Z.Messages.USAGE_STATISTICS_DISABLE_MODAL_TITLE,
-                          body: eo.Z.Messages.USAGE_STATISTICS_DISABLE_MODAL_BODY,
-                          confirmText: eo.Z.Messages.USAGE_STATISTICS_DISABLE_MODAL_CONFIRM,
-                          cancelText: eo.Z.Messages.USAGE_STATISTICS_DISABLE_MODAL_CANCEL,
-                          onConfirm: () => (0, m.g)([], [ei.pjP.USAGE_STATISTICS]).catch(eC)
+                    ? eT({
+                          header: ea.intl.string(ea.t.OdPCbG),
+                          body: ea.intl.string(ea.t.MGWabG),
+                          confirmText: ea.intl.string(ea.t['D3+rU1']),
+                          cancelText: ea.intl.string(ea.t.kYpG0t),
+                          onConfirm: () => (0, T.g)([], [er.pjP.USAGE_STATISTICS]).catch(eC)
                       })
-                    : (0, m.g)([ei.pjP.USAGE_STATISTICS], []).catch(eC);
+                    : (0, T.g)([er.pjP.USAGE_STATISTICS], []).catch(eC);
             }),
-            e_(this, 'handlePersonalizationChange', () => {
+            eu(this, 'handlePersonalizationChange', () => {
                 this.props.personalization
-                    ? em({
-                          header: eo.Z.Messages.PERSONALIZATION_DISABLE_MODAL_TITLE,
-                          confirmText: eo.Z.Messages.PERSONALIZATION_DISABLE_MODAL_CONFIRM,
-                          cancelText: eo.Z.Messages.PERSONALIZATION_DISABLE_MODAL_CANCEL,
+                    ? eT({
+                          header: ea.intl.string(ea.t['9SNpzs']),
+                          confirmText: ea.intl.string(ea.t['9g5UGx']),
+                          cancelText: ea.intl.string(ea.t['+ZLPw8']),
                           onConfirm: () => {
-                              (0, m.g)([], [ei.pjP.PERSONALIZATION]).catch(eC);
+                              (0, T.g)([], [er.pjP.PERSONALIZATION]).catch(eC);
                           },
-                          body: eo.Z.Messages.PERSONALIZATION_DISABLE_MODAL_BODY
+                          body: ea.intl.string(ea.t.gJvDDg)
                       })
-                    : (0, m.g)([ei.pjP.PERSONALIZATION], []).catch(eC);
+                    : (0, T.g)([er.pjP.PERSONALIZATION], []).catch(eC);
             }),
-            e_(this, 'handleDataDownloadRequest', () => {
+            eu(this, 'handleDataDownloadRequest', () => {
                 var e;
                 (e = {
-                    header: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_TITLE,
-                    body: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_WEB_NOTE.format({ helpdeskArticle: k.Z.getArticleURL(ei.BhN.GDPR_PACKAGE_CONTENTS) }),
-                    confirmText: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_CONFIRM,
-                    cancelText: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_CANCEL,
-                    confirmButtonColor: S.Button.Colors.BRAND,
+                    header: ea.intl.string(ea.t.jxXMEx),
+                    body: ea.intl.format(ea.t.fSv59f, { helpdeskArticle: Y.Z.getArticleURL(er.BhN.GDPR_PACKAGE_CONTENTS) }),
+                    confirmText: ea.intl.string(ea.t.NYgNg4),
+                    cancelText: ea.intl.string(ea.t.jpVjsr),
+                    confirmButtonColor: p.Button.Colors.BRAND,
                     onConfirm: (e) => {
                         this.setState({ requestingHarvest: !0 }, () => {
                             (0, C.V3)(e)
                                 .then(
                                     (e) => {
                                         null != e && null != e.body
-                                            ? (this.setState({ currentHarvestRequest: e.body }), N.Z.show({ body: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_SUCCESS }))
-                                            : N.Z.show({
-                                                  title: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
-                                                  body: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_BODY
+                                            ? (this.setState({ currentHarvestRequest: e.body }), S.Z.show({ body: ea.intl.string(ea.t['6Nmv4u']) }))
+                                            : S.Z.show({
+                                                  title: ea.intl.string(ea.t.OjbtDg),
+                                                  body: ea.intl.string(ea.t['0F5Jys'])
                                               });
                                     },
                                     () =>
-                                        N.Z.show({
-                                            title: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
-                                            body: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_BODY
+                                        S.Z.show({
+                                            title: ea.intl.string(ea.t.OjbtDg),
+                                            body: ea.intl.string(ea.t['0F5Jys'])
                                         })
                                 )
                                 .finally(() => this.setState({ requestingHarvest: !1 }));
                         });
                     }
                 }),
-                    (0, S.openModal)((s) =>
-                        (0, i.jsx)(eN, {
-                            modalProps: s,
+                    (0, p.openModal)((t) =>
+                        (0, r.jsx)(eS, {
+                            modalProps: t,
                             settings: e
                         })
                     );
             });
-        let { defaultGuildsRestricted: s, subsection: t } = e;
+        let { defaultGuildsRestricted: t, subsection: n } = e;
         this.state = {
-            defaultGuildsRestricted: s,
+            defaultGuildsRestricted: t,
             currentHarvestRequest: null,
             requestingHarvest: !0,
-            selectedTab: null != t ? t : er.SU.SETTINGS
+            selectedTab: null != n ? n : el.SU.SETTINGS
         };
     }
 }
-function eg() {
-    let e = (0, E.e7)([Y.default], () => {
-            let e = Y.default.getCurrentUser();
+function eE() {
+    let e = (0, h.e7)([V.default], () => {
+            let e = V.default.getCurrentUser();
             return d()(null != e, 'ConnectedUserSettingsPrivacySafety: currentUser cannot be undefined'), e;
         }),
-        s = (0, E.cj)([F.Z], () => ({
-            fetchedConsents: F.Z.fetchedConsents,
-            usageStatistics: F.Z.hasConsented(ei.pjP.USAGE_STATISTICS),
-            personalization: F.Z.hasConsented(ei.pjP.PERSONALIZATION)
+        t = (0, h.cj)([k.Z], () => ({
+            fetchedConsents: k.Z.fetchedConsents,
+            usageStatistics: k.Z.hasConsented(er.pjP.USAGE_STATISTICS),
+            personalization: k.Z.hasConsented(er.pjP.PERSONALIZATION)
         })),
-        t = (0, E.e7)([Z.Z], () => Z.Z.getFetchError()),
-        n = (0, E.e7)([V.Z], () => V.Z.getSubsection()),
-        a = (0, O.yh)(),
-        r = (0, M.Xo)({ location: 'web_user_privacy_and_safety_settings' }),
-        { hasSearchResults: o, searchResults: l } = (0, ee.E)(),
-        c = (0, D.p)(),
-        _ = (0, P.Z)(),
-        { enabled: u } = (0, b.S)({ location: 'PrivacySafetySettings' });
-    return (0, i.jsx)(eA, {
+        n = (0, h.e7)([y.Z], () => y.Z.getFetchError()),
+        i = (0, h.e7)([U.Z], () => U.Z.getSubsection()),
+        s = (0, I.yh)(),
+        l = (0, j.Xo)({ location: 'web_user_privacy_and_safety_settings' }),
+        { hasSearchResults: a, searchResults: o } = (0, ee.E)(),
+        c = (0, O.p)(),
+        u = (0, R.Z)(),
+        { enabled: m } = (0, D.S)({ location: 'PrivacySafetySettings' });
+    return (0, r.jsx)(e_, {
         currentUser: e,
-        defaultGuildsRestricted: Q.iG.useSetting(),
-        nonSpamRetrainingOptIn: Q.kJ.useSetting(),
-        viewNsfwGuilds: Q.DC.useSetting(),
-        viewNsfwCommands: Q.xM.useSetting(),
-        explicitContentFilter: Q.UP.useSetting(),
+        defaultGuildsRestricted: q.iG.useSetting(),
+        nonSpamRetrainingOptIn: q.kJ.useSetting(),
+        viewNsfwGuilds: q.DC.useSetting(),
+        viewNsfwCommands: q.xM.useSetting(),
+        explicitContentFilter: q.UP.useSetting(),
         keywordFilter: c,
-        dmSpamFilter: Q.Xr.useSetting(),
-        showCurrentGame: Q.G6.useSetting(),
-        dropsOptedOut: Q.bh.useSetting(),
-        safetyHubFetchError: t,
-        mediaRedactionIsEnabled: a,
-        keywordFilteringExperimentEnabled: r,
-        userIsConsideredAdult: null == _ || _,
-        subsection: n,
-        searchFilter: o ? l : void 0,
-        isSecureFramesEnabled: u,
-        ...s
+        dmSpamFilter: q.Xr.useSetting(),
+        showCurrentGame: q.G6.useSetting(),
+        dropsOptedOut: q.bh.useSetting(),
+        safetyHubFetchError: n,
+        mediaRedactionIsEnabled: s,
+        keywordFilteringExperimentEnabled: l,
+        userIsConsideredAdult: null == u || u,
+        subsection: i,
+        searchFilter: a ? o : void 0,
+        isSecureFramesEnabled: m,
+        ...t
     });
 }

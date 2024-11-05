@@ -3,22 +3,22 @@ n.d(t, {
         return c;
     },
     MR: function () {
-        return p;
+        return m;
     },
     g1: function () {
-        return _;
+        return f;
     },
     iD: function () {
         return d;
     },
     ir: function () {
-        return E;
+        return _;
     },
     s4: function () {
-        return f;
+        return h;
     },
     sm: function () {
-        return h;
+        return p;
     }
 }),
     n(757143);
@@ -28,19 +28,22 @@ var r = n(633302),
     s = n(626135),
     o = n(981631),
     l = n(468788),
-    u = n(689938);
+    u = n(388032);
 function c(e) {
     return null == e.id ? r.ZP.convertSurrogateToName(e.name) : ':'.concat(e.name, ':');
 }
 function d(e, t, n, r) {
     var i, a, s;
     let o;
-    return (o = r ? (e ? u.Z.Messages.SUPER_REACT_REMOVE_WITH_COUNT_A11Y_LABEL : u.Z.Messages.SUPER_REACT_WITH_COUNT_A11Y_LABEL) : e ? u.Z.Messages.REACT_REMOVE_WITH_COUNT_A11Y_LABEL : u.Z.Messages.REACT_WITH_COUNT_A11Y_LABEL).format({
-        reactions: t,
-        emojiName: null !== (s = null === (a = c(n)) || void 0 === a ? void 0 : null === (i = a.replace(/[:_]/g, ' ')) || void 0 === i ? void 0 : i.trim()) && void 0 !== s ? s : ''
-    });
+    return (
+        (o = r ? (e ? u.t.i9DXqK : u.t['Z/l+qq']) : e ? u.t.CLuzw8 : u.t.PirBBA),
+        u.intl.formatToPlainString(o, {
+            reactions: t,
+            emojiName: null !== (s = null === (a = c(n)) || void 0 === a ? void 0 : null === (i = a.replace(/[:_]/g, ' ')) || void 0 === i ? void 0 : i.trim()) && void 0 !== s ? s : ''
+        })
+    );
 }
-function _(e) {
+function f(e) {
     var t, n, r;
     return {
         id: null !== (t = e.id) && void 0 !== t ? t : null,
@@ -48,25 +51,25 @@ function _(e) {
         animated: !!e.animated
     };
 }
-function E(e, t) {
+function _(e, t) {
     if (null != t.id) {
         let n = null != e.id ? ''.concat(e.id) : e.id;
         return ''.concat(t.id) === n;
     }
     return null == e.id && t.name === e.name;
 }
-function f(e) {
+function h(e) {
     if (e.isThread()) return o.jXE.THREAD_TEXT_AREA;
     if (e.isForumPost()) return o.jXE.FORUM_CHANNEL_TEXT_AREA;
     if (e.isGuildVocal()) return o.jXE.TEXT_IN_VOICE;
     return o.jXE.CHANNEL_TEXT_AREA;
 }
-function h(e) {
+function p(e) {
     let { userId: t, optimistic: n } = e,
         r = a.default.getId() === t;
     return (!n || !!r) && !0;
 }
-function p(e, t) {
+function m(e, t) {
     i.fz.updateSetting(e),
         s.default.track(o.rMx.NOTIFICATION_SETTINGS_UPDATED, {
             update_type: l.I.ACCOUNT,

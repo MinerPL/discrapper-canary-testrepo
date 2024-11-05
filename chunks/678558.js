@@ -1,76 +1,84 @@
 n(47120);
-var r = n(735250),
-    i = n(470079),
+var r = n(200651),
+    i = n(192379),
     a = n(120356),
     s = n.n(a),
     o = n(481060),
-    l = n(40851),
-    u = n(906732),
-    c = n(78839),
-    d = n(267642),
-    _ = n(879892),
-    E = n(981631),
-    f = n(689938),
-    h = n(330708);
+    l = n(179360),
+    u = n(40851),
+    c = n(906732),
+    d = n(975298),
+    f = n(314884),
+    _ = n(78839),
+    h = n(267642),
+    p = n(879892),
+    m = n(981631),
+    g = n(474936),
+    E = n(388032),
+    v = n(459671);
 t.Z = (e) => {
-    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: p, targetBoostedGuildTier: m, onClose: I = () => {}, closeLayer: T = () => {}, pauseAnimation: g = !1, applicationId: S, handleSubscribeModalClose: A, withHighlight: N = !1, ...v } = e,
-        { analyticsLocations: O } = (0, u.ZP)(),
-        R = (0, l.bp)() === E.IlC.POPOUT,
-        [C, y] = i.useState(!1),
-        D = null != m ? Math.max((0, d.KK)(a, m), 1) : 1,
-        L = (0, d.aq)(),
-        b = async () => {
-            y(!0),
-                await (0, _.u)({
+    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: I, targetBoostedGuildTier: S, onClose: T = () => {}, closeLayer: b = () => {}, pauseAnimation: y = !1, applicationId: A, handleSubscribeModalClose: N, withHighlight: C = !1, ...R } = e,
+        { analyticsLocations: O } = (0, c.ZP)(),
+        D = (0, u.bp)() === m.IlC.POPOUT,
+        [L, x] = i.useState(!1),
+        { fractionalState: w } = (0, d.Z)();
+    !f.Z.hasFetched && (0, l.X8)();
+    let M = (0, h.vx)(f.Z.boostSlots),
+        P = null != S ? Math.max((0, h.KK)(a, S), 1) : 1,
+        k = (0, h.aq)({ fractionalState: w }),
+        U = async () => {
+            x(!0),
+                await (0, p.u)({
                     analyticsLocations: O,
                     analyticsLocation: t,
                     analyticsSourceLocation: n,
                     guild: a,
-                    numberOfBoostsToAdd: D,
-                    onClose: I,
-                    closeLayer: T,
-                    inPopout: R,
-                    applicationId: S,
-                    handleSubscribeModalClose: A
+                    numberOfBoostsToAdd: P,
+                    onClose: T,
+                    closeLayer: b,
+                    inPopout: D,
+                    applicationId: A,
+                    handleSubscribeModalClose: N
                 }),
-                y(!1);
+                x(!1);
         },
-        M = c.ZP.getPremiumTypeSubscription(),
-        P = (0, r.jsx)('span', { children: null != p ? p : f.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_SUBSCRIBE_THIS_SERVER });
-    return ((null == M ? void 0 : M.isPausedOrPausePending) &&
-        ((P = (0, r.jsxs)('div', {
-            className: h.pausedButton,
+        G = _.ZP.getPremiumTypeSubscription(),
+        B = (0, r.jsx)('span', { children: null != I ? I : E.intl.string(E.t.gKmQ1N) });
+    return ((null == G ? void 0 : G.isPausedOrPausePending) &&
+        (w === g.a$.NONE || 0 === M.length) &&
+        ((B = (0, r.jsxs)('div', {
+            className: v.pausedButton,
             children: [
                 (0, r.jsx)(o.LockIcon, {
                     size: 'xs',
-                    className: h.lockIcon
+                    className: v.lockIcon
                 }),
                 ' ',
-                P
+                B
             ]
         })),
-        (v.disabled = !0)),
-    null != L)
+        (R.disabled = !0)),
+    null != k)
         ? (0, r.jsx)(o.Tooltip, {
-              text: L,
+              text: k,
               'aria-label': !1,
               children: (e) =>
                   (0, r.jsx)(o.ShinyButton, {
                       ...e,
                       disabled: !0,
                       size: o.Button.Sizes.SMALL,
-                      pauseAnimation: g,
-                      ...v,
-                      children: P
+                      pauseAnimation: y,
+                      ...R,
+                      children: B
                   })
           })
         : (0, r.jsx)(o.ShinyButton, {
               size: o.Button.Sizes.SMALL,
-              ...v,
-              className: s()(v.className, { [h.buttonHighlighted]: N }),
-              submitting: C,
-              onClick: b,
-              pauseAnimation: g,
-              children: P
+              ...R,
+              className: s()(R.className, { [v.buttonHighlighted]: C }),
+              submitting: L,
+              onClick: U,
+              pauseAnimation: y,
+              children: B
           });
 };

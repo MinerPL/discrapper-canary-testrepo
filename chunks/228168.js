@@ -1,27 +1,30 @@
 n.d(t, {
     P: function () {
-        return O;
+        return y;
     },
     Tb: function () {
-        return h;
+        return p;
     },
     cm: function () {
-        return S;
+        return I;
     },
     jC: function () {
         return C;
     },
     n_: function () {
-        return N;
+        return b;
     },
     oh: function () {
-        return f;
+        return h;
     },
     vB: function () {
-        return v;
+        return N;
     },
     y0: function () {
-        return p;
+        return m;
+    },
+    yM: function () {
+        return S;
     }
 });
 var r,
@@ -33,41 +36,40 @@ var r,
     u,
     c,
     d,
-    _,
-    E,
     f,
+    _,
     h,
     p,
-    I,
     m,
-    T,
-    S,
     g,
-    A,
-    N,
-    O,
-    R = n(981631);
-let v = 300;
+    E,
+    v,
+    I,
+    S,
+    T,
+    b,
+    y,
+    A = n(981631);
+let N = 300;
 function C(e) {
     let { API_ENDPOINT: t, CDN_HOST: n } = window.GLOBAL_ENV;
-    return null != n ? ''.concat(location.protocol, '//').concat(n, '/badge-icons/').concat(e, '.png') : ''.concat(location.protocol).concat(t).concat(R.ANM.BADGE_ICON(e));
+    return null != n ? ''.concat(location.protocol, '//').concat(n, '/badge-icons/').concat(e, '.png') : ''.concat(location.protocol).concat(t).concat(A.ANM.BADGE_ICON(e));
 }
-((r = f || (f = {})).USER_INFO = 'USER_INFO'),
+((r = h || (h = {})).USER_INFO = 'USER_INFO'),
     (r.BOT_INFO = 'BOT_INFO'),
     (r.ACTIVITY = 'ACTIVITY'),
     (r.MUTUAL_GUILDS = 'MUTUAL_GUILDS'),
     (r.MUTUAL_FRIENDS = 'MUTUAL_FRIENDS'),
     (r.BOT_DATA_ACCESS = 'BOT_DATA_ACCESS'),
-    ((i = h || (h = {})).ROLES = 'ROLES'),
+    ((i = p || (p = {})).ROLES = 'ROLES'),
     (i.CONNECTIONS = 'CONNECTIONS'),
     (i.NOTE = 'NOTE'),
-    ((a = p || (p = {})).BITE_SIZE = 'BITE_SIZE'),
+    ((a = m || (m = {})).BITE_SIZE = 'BITE_SIZE'),
     (a.FULL_SIZE = 'FULL_SIZE'),
     (a.PANEL = 'PANEL'),
-    (a.CARD = 'CARD'),
-    ((s = I || (I = {})).LIVE = 'live'),
+    ((s = g || (g = {})).LIVE = 'live'),
     (s.RECENT = 'recent'),
-    ((o = m || (m = {})).BITE_SIZE_POPOUT = 'BITE_SIZE_POPOUT'),
+    ((o = E || (E = {})).BITE_SIZE_POPOUT = 'BITE_SIZE_POPOUT'),
     (o.SIMPLIFIED_MODAL = 'SIMPLIFIED_MODAL'),
     (o.SIMPLIFIED_DM_PANEL = 'SIMPLIFIED_DM_PANEL'),
     (o.ACCOUNT_POPOUT = 'ACCOUNT_POPOUT'),
@@ -82,9 +84,9 @@ function C(e) {
     (o.SIMPLIFIED_DM_PANEL_RESTRICTED_BLOCKER_PROFILE = 'SIMPLIFIED_DM_PANEL_RESTRICTED_BLOCKER_PROFILE'),
     (o.BITE_SIZE_POPOUT_RESTRICTED_BLOCKER_PROFILE = 'BITE_SIZE_POPOUT_RESTRICTED_BLOCKER_PROFILE'),
     (o.SIMPLIFIED_MODAL_RESTRICTED_BLOCKER_PROFILE = 'SIMPLIFIED_MODAL_RESTRICTED_BLOCKER_PROFILE'),
-    ((l = T || (T = {})).USER_SHEET = 'User Sheet'),
+    ((l = v || (v = {})).USER_SHEET = 'User Sheet'),
     (l.BLOCKED_USER_SHEET = 'Blocked User Sheet'),
-    ((u = S || (S = {}))[(u.NICKNAME = 0)] = 'NICKNAME'),
+    ((u = I || (I = {}))[(u.NICKNAME = 0)] = 'NICKNAME'),
     (u[(u.PRONOUNS = 1)] = 'PRONOUNS'),
     (u[(u.AVATAR = 2)] = 'AVATAR'),
     (u[(u.ANIMATED_AVATAR = 3)] = 'ANIMATED_AVATAR'),
@@ -94,7 +96,7 @@ function C(e) {
     (u[(u.THEME = 7)] = 'THEME'),
     (u[(u.AVATAR_DECORATION = 8)] = 'AVATAR_DECORATION'),
     (u[(u.PROFILE_EFFECT = 9)] = 'PROFILE_EFFECT'),
-    ((c = g || (g = {})).VIEW = 'VIEW'),
+    ((c = S || (S = {})).VIEW = 'VIEW'),
     (c.SEND_MESSAGE = 'SEND_MESSAGE'),
     (c.SEND_DIRECT_MESSAGE = 'SEND_DIRECT_MESSAGE'),
     (c.SEND_FRIEND_REQUEST = 'SEND_FRIEND_REQUEST'),
@@ -178,9 +180,12 @@ function C(e) {
     (c.COPY_CONNECTED_ACCOUNT = 'COPY_CONNECTED_ACCOUNT'),
     (c.PRESS_VIEW_CONNECTED_ACCOUNT = 'PRESS_VIEW_CONNECTED_ACCOUNT'),
     (c.PRESS_REACT_REPLY_TOAST = 'PRESS_REACT_REPLY_TOAST'),
-    ((d = A || (A = {})).VIEW = 'VIEW'),
-    (d.PRESS_GAME_IMAGE = 'PRESS_GAME_IMAGE'),
-    (d.PRESS_STREAM_IMAGE = 'PRESS_STREAM_IMAGE'),
+    (c.VISIT_SHOP = 'VISIT_SHOP'),
+    (c.GET_PREMIUM = 'GET_NITRO'),
+    (c.VIEW_PREMIUM_PERKS = 'VIEW_NITRO_PERKS'),
+    ((d = T || (T = {})).VIEW = 'VIEW'),
+    (d.PRESS_TEXT = 'PRESS_TEXT'),
+    (d.PRESS_IMAGE = 'PRESS_IMAGE'),
     (d.PRESS_JOIN_BUTTON = 'PRESS_JOIN_BUTTON'),
     (d.PRESS_ASK_TO_JOIN_BUTTON = 'PRESS_ASK_TO_JOIN_BUTTON'),
     (d.PRESS_WATCH_BUTTON = 'PRESS_WATCH_BUTTON'),
@@ -188,8 +193,6 @@ function C(e) {
     (d.PRESS_CONNECT_XBOX_BUTTON = 'PRESS_CONNECT_XBOX_BUTTON'),
     (d.PRESS_CONNECT_PLAYSTATION_BUTTON = 'PRESS_CONNECT_PLAYSTATION_BUTTON'),
     (d.PRESS_HANG_STATUS_BUTTON = 'PRESS_HANG_STATUS_BUTTON'),
-    (d.PRESS_WATCH_STREAM_BUTTON = 'PRESS_WATCH_STREAM_BUTTON'),
-    (d.PRESS_WATCH_MULTIPLE_STREAMS_BUTTON = 'PRESS_WATCH_MULTIPLE_STREAMS_BUTTON'),
     (d.PRESS_CUSTOM_BUTTON = 'PRESS_CUSTOM_BUTTON'),
     (d.PRESS_NOTIFY_BUTTON = 'PRESS_NOTIFY_BUTTON'),
     (d.PRESS_PLAY_ON_SPOTIFY_BUTTON = 'PRESS_PLAY_ON_SPOTIFY_BUTTON'),
@@ -199,7 +202,6 @@ function C(e) {
     (d.PRESS_CLEAR_HISTORY_DISCLAIMER = 'PRESS_CLEAR_HISTORY_DISCLAIMER'),
     (d.PRESS_VOICE_CHANNEL_ICON = 'PRESS_VOICE_CHANNEL_ICON'),
     (d.PRESS_VOICE_CHANNEL_AVATARS = 'PRESS_VOICE_CHANNEL_AVATARS'),
-    (d.OPEN_GAME_PROFILE = 'OPEN_GAME_PROFILE'),
     (d.OPEN_VOICE_CHANNEL = 'OPEN_VOICE_CHANNEL'),
     (d.OPEN_VOICE_GUILD = 'OPEN_VOICE_GUILD'),
     (d.OPEN_SPOTIFY_ARTIST = 'OPEN_SPOTIFY_ARTIST'),
@@ -214,8 +216,9 @@ function C(e) {
     (d.PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM = 'PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM'),
     (d.PRESS_CONNECT_SPOTIFY_MENU_ITEM = 'PRESS_CONNECT_SPOTIFY_MENU_ITEM'),
     (d.PRESS_VIEW_GAME_PROFILE_MENU_ITEM = 'PRESS_VIEW_GAME_PROFILE_MENU_ITEM'),
-    ((_ = N || (N = {})).ACTIVITY = 'ACTIVITY'),
-    (_.AVATAR = 'AVATAR'),
-    (_.STATUS = 'STATUS'),
-    ((E = O || (O = {})).REPLY = 'REPLY'),
-    (E.REACT = 'REACT');
+    (d.PRESS_VIEW_ACTIVITY_MENU_ITEM = 'PRESS_VIEW_ACTIVITY_MENU_ITEM'),
+    ((f = b || (b = {})).ACTIVITY = 'ACTIVITY'),
+    (f.AVATAR = 'AVATAR'),
+    (f.STATUS = 'STATUS'),
+    ((_ = y || (y = {})).REPLY = 'REPLY'),
+    (_.REACT = 'REACT');

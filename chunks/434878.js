@@ -1,122 +1,123 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return ed;
+            return eu;
         }
     }),
     n(47120);
-var a = n(735250),
-    s = n(470079),
+var a = n(200651),
+    i = n(192379),
     r = n(120356),
     l = n.n(r),
-    i = n(196434),
-    o = n.n(i),
-    c = n(143927),
+    s = n(196434),
+    o = n.n(s),
+    c = n(782690),
     d = n(91192),
     u = n(924826),
     m = n(536895),
     h = n(313361),
-    _ = n(442837),
-    g = n(704215),
-    x = n(481060),
-    f = n(561472),
+    g = n(442837),
+    x = n(704215),
+    f = n(481060),
+    p = n(561472),
     C = n(393238),
-    p = n(607070),
-    T = n(933557),
-    I = n(243778),
-    E = n(71619),
-    N = n(898188),
-    b = n(256413),
-    v = n(292853),
-    S = n(359110),
-    M = n(344185),
-    A = n(235449),
-    j = n(665906),
-    R = n(488131),
-    O = n(433355),
-    Z = n(592125),
-    L = n(703558),
-    P = n(607744),
-    w = n(117530),
-    y = n(451478),
-    D = n(459273),
-    F = n(961675),
-    U = n(883429),
-    k = n(238349),
-    H = n(109434),
-    B = n(456269),
-    G = n(90372),
-    z = n(985518),
-    V = n(228392),
-    W = n(355589),
-    q = n(542581),
-    K = n(639184),
-    Y = n(404616),
-    X = n(470623),
-    J = n(749913),
-    Q = n(219664),
-    $ = n(895932),
-    ee = n(479099),
-    et = n(510060),
-    en = n(276357),
-    ea = n(81490),
-    es = n(482062),
-    er = n(260503),
-    el = n(981631),
-    ei = n(124368),
-    eo = n(689938),
-    ec = n(50439);
-function ed(e) {
-    let { channel: t, guild: n, sidebarState: s } = e;
+    v = n(607070),
+    b = n(933557),
+    j = n(243778),
+    _ = n(71619),
+    I = n(898188),
+    T = n(41776),
+    N = n(256413),
+    S = n(292853),
+    w = n(359110),
+    y = n(344185),
+    E = n(235449),
+    R = n(665906),
+    P = n(488131),
+    M = n(433355),
+    k = n(592125),
+    Z = n(703558),
+    A = n(607744),
+    L = n(117530),
+    F = n(451478),
+    O = n(459273),
+    B = n(961675),
+    z = n(883429),
+    H = n(238349),
+    D = n(109434),
+    U = n(456269),
+    V = n(90372),
+    G = n(985518),
+    W = n(228392),
+    q = n(355589),
+    K = n(542581),
+    X = n(639184),
+    J = n(404616),
+    Y = n(470623),
+    Q = n(749913),
+    $ = n(219664),
+    ee = n(895932),
+    et = n(479099),
+    en = n(510060),
+    ea = n(276357),
+    ei = n(81490),
+    er = n(482062),
+    el = n(260503),
+    es = n(981631),
+    eo = n(124368),
+    ec = n(388032),
+    ed = n(738941);
+function eu(e) {
+    let { channel: t, guild: n, sidebarState: i } = e;
     return (0, a.jsx)(
-        X.oL,
+        Y.oL,
         {
-            createStore: () => (0, X.NU)(t),
-            children: (0, a.jsx)(eC, {
+            createStore: () => (0, Y.NU)(t),
+            children: (0, a.jsx)(ev, {
                 channel: t,
                 guild: n,
-                sidebarState: s
+                sidebarState: i
             })
         },
         t.id
     );
 }
-let eu = new et.Me({
+let em = new en.Me({
     minWidth: 320,
     maxWidth: 450,
     gap: 16
 });
-function em(e) {
+function eh(e) {
     return 'forum-grid-header-section-'.concat(e);
 }
-let eh = (e, t, n) => (0 === e ? 0 : (0, et.KW)(n));
-function e_(e) {
-    let { itemRole: t, coords: n, section: s } = e;
+let eg = (e, t, n) => (0 === e ? 0 : (0, en.KW)(n));
+function ex(e) {
+    let { itemRole: t, coords: n, section: i } = e;
     return (0, a.jsx)(
         'div',
         {
-            className: l()(ec.card, ec.archivedDividerRow, ec.columnsSpan),
+            className: l()(ed.card, ed.archivedDividerRow, ed.columnsSpan),
             style: n,
             'data-item-role': t,
             children: (0, a.jsx)('div', {
-                className: ec.emptyMainCard,
-                children: (0, a.jsx)(x.Heading, {
+                className: ed.emptyMainCard,
+                children: (0, a.jsx)(f.Heading, {
                     variant: 'eyebrow',
-                    className: ec.archivedDivider,
-                    id: em(s),
-                    children: eo.Z.Messages.FORUM_SECTION_ARCHIVED
+                    className: ed.archivedDivider,
+                    id: eh(i),
+                    children: ec.intl.string(ec.t['3+LO19'])
                 })
             })
         },
         'section-divider'
     );
 }
-function eg(e) {
-    let { section: t, coords: n, key: s, isShowingSearchResult: r, hasActiveThreads: l } = e;
+function ef(e) {
+    let { section: t, coords: n, key: i, isShowingSearchResult: r, hasActiveThreads: l } = e;
     return () =>
         2 === t && !r && l
             ? (0, a.jsx)(
-                  e_,
+                  ex,
                   {
                       section: t,
                       coords:
@@ -128,66 +129,70 @@ function eg(e) {
                                 },
                       itemRole: 'section'
                   },
-                  s
+                  i
               )
             : null;
 }
-function ex(e, t) {
+function ep(e, t) {
     return 'card-'.concat(e, '-').concat(t);
 }
-function ef(e) {
+function eC(e) {
     if ('string' == typeof e) {
         let t = e.match(/card-{\d+}-({\d+})$/);
         return null == t ? null : t[1];
     }
     return null;
 }
-function eC(e) {
+function ev(e) {
     let { channel: t, sidebarState: n } = e,
         {
             editorHeight: r,
-            editorAdditionRowHeight: i,
+            editorAdditionRowHeight: s,
             listViewCardHeights: o,
             formOpen: u
-        } = (0, X.xH)((e) => {
-            let { editorHeight: t, editorAdditionRowHeight: n, listViewCardHeights: a, formOpen: s, cardHeightVersion: r } = e;
+        } = (0, Y.xH)((e) => {
+            let { editorHeight: t, editorAdditionRowHeight: n, listViewCardHeights: a, formOpen: i, cardHeightVersion: r } = e;
             return {
                 editorHeight: t,
                 editorAdditionRowHeight: n,
                 listViewCardHeights: a,
-                formOpen: s,
+                formOpen: i,
                 cardHeightVersion: r
             };
         }, c.Z),
         {
             activeThreadIds: m,
-            archivedThreadIds: g,
+            archivedThreadIds: x,
             searchResults: C,
-            canLoadMore: T,
-            loadMore: I,
-            activeThreadsLoading: E,
-            archivedThreadsLoading: N,
-            loading: j,
-            isSearchLoading: P,
-            layoutType: w
+            canLoadMore: b,
+            loadMore: j,
+            activeThreadsLoading: _,
+            archivedThreadsLoading: I,
+            loading: R,
+            isSearchLoading: A,
+            layoutType: L
         } = (function (e) {
-            let { sortOrder: t, tagFilter: n, layoutType: a } = (0, H.H)(e.id),
-                s = (0, B.vP)({
+            let { sortOrder: t, tagFilter: n, layoutType: a } = (0, D.H)(e.id),
+                i = (0, U.vP)({
                     channel: e,
                     sortOrder: t,
                     tagFilter: n,
                     shouldAutomaticallyAck: !0
                 }),
-                r = (0, _.e7)([M.Z], () => !M.Z.hasLoaded(e.guild_id)),
-                { threadIds: l, canLoadMore: i, loadMore: o, loading: c } = (0, A.qQ)(e, t, n),
-                { searchResults: d, isSearchLoading: u } = (0, B.XZ)({ channelId: e.id });
+                r = (0, g.e7)([y.Z, T.Z], () => {
+                    let t = y.Z.hasLoaded(e.guild_id),
+                        n = T.Z.isLurking(e.guild_id);
+                    return !t && !n;
+                }),
+                { threadIds: l, canLoadMore: s, loadMore: o, loading: c } = (0, E.qQ)(e, t, n),
+                { searchResults: d, isSearchLoading: u } = (0, U.XZ)({ channelId: e.id });
             return (
-                (0, B.ES)(e, t, n),
+                (0, U.ES)(e, t, n),
                 {
-                    activeThreadIds: s,
+                    activeThreadIds: i,
                     archivedThreadIds: l,
                     searchResults: d,
-                    canLoadMore: i,
+                    canLoadMore: s,
                     loadMore: o,
                     loading: r || c || u,
                     archivedThreadsLoading: c,
@@ -197,31 +202,31 @@ function eC(e) {
                 }
             );
         })(t),
-        y = m.length > 0,
-        D = y || g.length > 0,
-        k = (0, b.Z)(t),
-        { tagFilter: q } = (0, H.H)(t.id);
-    (0, B.ku)(t, q, u);
-    let K = (0, B.jR)(t),
-        J = (0, B.eZ)(t),
-        $ = s.useRef(null),
-        { observePostVisibilityAnalytics: ee } = (function (e) {
+        F = m.length > 0,
+        O = F || x.length > 0,
+        H = (0, N.Z)(t),
+        { tagFilter: K } = (0, D.H)(t.id);
+    (0, U.ku)(t, K, u);
+    let X = (0, U.jR)(t),
+        Q = (0, U.eZ)(t),
+        ee = i.useRef(null),
+        { observePostVisibilityAnalytics: et } = (function (e) {
             let { guildId: t, channelId: n, scrollerRef: a } = e;
-            G.Z.useForumChannelSeenManager({
+            V.Z.useForumChannelSeenManager({
                 guildId: t,
                 channelId: n
             });
-            let r = s.useRef(null),
-                l = s.useCallback((e, t) => {
+            let r = i.useRef(null),
+                l = i.useCallback((e, t) => {
                     for (let n of t) {
                         let t = n.target.dataset.itemId;
                         if (null == t) return;
                         let a = Date.now();
-                        n.intersectionRatio >= 0.5 ? (0, z.rj)(e, t, a) : (0, z.Ct)(e, t, a);
+                        n.intersectionRatio >= 0.5 ? (0, G.rj)(e, t, a) : (0, G.Ct)(e, t, a);
                     }
                 }, []);
             return (
-                s.useEffect(() => {
+                i.useEffect(() => {
                     var e;
                     let t = null === (e = a.current) || void 0 === e ? void 0 : e.getScrollerNode();
                     if (null != t)
@@ -238,11 +243,11 @@ function eC(e) {
                         );
                 }, [n, l, a]),
                 {
-                    observePostVisibilityAnalytics: s.useCallback(
+                    observePostVisibilityAnalytics: i.useCallback(
                         (e, t) => {
                             var a;
                             if (null == e) {
-                                (0, z.Ct)(n, t, Date.now());
+                                (0, G.Ct)(n, t, Date.now());
                                 return;
                             }
                             null === (a = r.current) || void 0 === a || a.observe(e);
@@ -252,146 +257,146 @@ function eC(e) {
                 }
             );
         })({
-            scrollerRef: $,
+            scrollerRef: ee,
             channelId: t.id,
             guildId: t.guild_id
         }),
-        en = w === h.X.GRID,
-        ed = null != C,
-        e_ = s.useRef(null),
-        { containerRef: eC, containerWidth: eE } = (0, ea.Z)();
-    s.useEffect(
+        ea = L === h.X.GRID,
+        eu = null != C,
+        ex = i.useRef(null),
+        { containerRef: ev, containerWidth: eI } = (0, ei.Z)();
+    i.useEffect(
         () => () => {
-            null != t.id && U.Z.clearForumSearch(t.id);
+            null != t.id && z.Z.clearForumSearch(t.id);
         },
         [t.id]
     );
-    let { columns: eb } = s.useMemo(() => (en ? eu.getRenderOptions(eE) : et.eU), [en, eE]),
-        ev = s.useMemo(() => (j ? Math.round((window.innerHeight - 200) / 118) : 0), [j]),
-        eS = s.useMemo(() => {
-            let e = Math.ceil(window.innerHeight / (0, et.KW)(eu.getWidth(eE))) * eb;
-            return E ? e : 0;
-        }, [eE, eb, E]),
-        eM = s.useMemo(() => {
-            let e = Math.ceil(window.innerHeight / (0, et.KW)(eu.getWidth(eE))) * eb;
-            return N ? e : 0;
-        }, [eE, eb, N]),
-        eA = s.useMemo(() => {
-            let e = Math.ceil(window.innerHeight / (0, et.KW)(eu.getWidth(eE))) * eb;
-            return P && ed ? e : 0;
-        }, [eE, eb, P, ed]),
-        ej = s.useMemo(() => {
-            if (en) {
-                if (!K && ed) return [1, 0];
-                if (!J) return [1, m.length + eS, 0];
-                else if (ed) return [1, C.length + eA, 0];
-                else return [1, m.length + eS, g.length + eM];
+    let { columns: eN } = i.useMemo(() => (ea ? em.getRenderOptions(eI) : en.eU), [ea, eI]),
+        eS = i.useMemo(() => (R ? Math.round((window.innerHeight - 200) / 118) : 0), [R]),
+        ew = i.useMemo(() => {
+            let e = Math.ceil(window.innerHeight / (0, en.KW)(em.getWidth(eI))) * eN;
+            return _ ? e : 0;
+        }, [eI, eN, _]),
+        ey = i.useMemo(() => {
+            let e = Math.ceil(window.innerHeight / (0, en.KW)(em.getWidth(eI))) * eN;
+            return I ? e : 0;
+        }, [eI, eN, I]),
+        eE = i.useMemo(() => {
+            let e = Math.ceil(window.innerHeight / (0, en.KW)(em.getWidth(eI))) * eN;
+            return A && eu ? e : 0;
+        }, [eI, eN, A, eu]),
+        eR = i.useMemo(() => {
+            if (ea) {
+                if (!X && eu) return [1, 0];
+                if (!Q) return [1, m.length + ew, 0];
+                else if (eu) return [1, C.length + eE, 0];
+                else return [1, m.length + ew, x.length + ey];
             }
-            if (!K && ed) return [1, 1];
-            if (!J) return [1, m.length, 1];
-            else if (ed) return [1, C.length, 0, ev];
-            else return [1, m.length, g.length, ev];
-        }, [en, ed, m.length, g.length, K, J, ev, C, eS, eM, eA]),
-        eR = s.useMemo(() => {
-            if (!K && ed) return [[], []];
-            if (!J) return [[], m, []];
-            if (ed) return [[], C, [], []];
-            else return [[], m, g, []];
-        }, [ed, K, J, C, m, g]),
-        eO = s.useCallback(
+            if (!X && eu) return [1, 1];
+            if (!Q) return [1, m.length, 1];
+            else if (eu) return [1, C.length, 0, eS];
+            else return [1, m.length, x.length, eS];
+        }, [ea, eu, m.length, x.length, X, Q, eS, C, ew, ey, eE]),
+        eP = i.useMemo(() => {
+            if (!X && eu) return [[], []];
+            if (!Q) return [[], m, []];
+            if (eu) return [[], C, [], []];
+            else return [[], m, x, []];
+        }, [eu, X, Q, C, m, x]),
+        eM = i.useCallback(
             (e, n) => {
-                (0, V.B5)({
+                (0, W.B5)({
                     guildId: t.guild_id,
                     channelId: t.id,
                     postId: e.id,
                     location: {
-                        page: el.ZY5.GUILD_CHANNEL,
-                        section: el.jXE.FORUM_CHANNEL_POST
+                        page: es.ZY5.GUILD_CHANNEL,
+                        section: es.jXE.FORUM_CHANNEL_POST
                     }
                 }),
-                    n ? (0, S.ad)(e, { source: ei.on.BROWSER }) : ((e_.current = e.id), (0, R.ok)(e));
+                    n ? (0, w.ad)(e, { source: eo.on.BROWSER }) : ((ex.current = e.id), (0, P.ok)(e));
             },
-            [t.guild_id, t.id, e_]
+            [t.guild_id, t.id, ex]
         ),
-        [eZ, eL] = s.useState(r + i - 24),
-        eP = s.useCallback(
-            (e, n, s) =>
+        [ek, eZ] = i.useState(r + s - 24),
+        eA = i.useCallback(
+            (e, n, i) =>
                 0 === e
                     ? (0, a.jsx)(
-                          eN,
+                          eT,
                           {
                               channel: t,
-                              isEmpty: !y,
-                              isSearchLoading: P,
+                              isEmpty: !F,
+                              isSearchLoading: A,
                               numResults: null == C ? void 0 : C.length,
                               coords: n,
-                              onHeightChange: eL,
+                              onHeightChange: eZ,
                               children:
-                                  !j &&
+                                  !R &&
                                   (0, a.jsx)(
-                                      W.Z,
+                                      q.Z,
                                       {
                                           channel: t,
-                                          hasAnyThread: D
+                                          hasAnyThread: O
                                       },
                                       t.id
                                   )
                           },
                           'forum-channel-header'
                       )
-                    : 2 !== e || J
-                      ? 1 === e && ed && !K
+                    : 2 !== e || Q
+                      ? 1 === e && eu && !X
                           ? (0, a.jsx)(
-                                eT,
+                                ej,
                                 {
                                     channel: t,
                                     coords: n
                                 },
                                 'archive-or-search-result'
                             )
-                          : s()
+                          : i()
                       : (0, a.jsx)(
-                            ep,
+                            eb,
                             {
                                 channel: t,
                                 coords: n
                             },
                             'archived-missing-reading-history-perm'
                         ),
-            [ed, J, C, K, t, y, P, j, D]
+            [eu, Q, C, X, t, F, A, R, O]
         ),
-        ew = (0, _.e7)([F.Z], () => F.Z.hasHidden(t.id));
-    s.useEffect(() => {
+        eL = (0, g.e7)([B.Z], () => B.Z.hasHidden(t.id));
+    i.useEffect(() => {
         var e, t;
-        let n = en ? eH : $,
+        let n = ea ? eD : ee,
             a = null === (e = n.current) || void 0 === e ? void 0 : e.getScrollerState();
-        null != a && !ew && a.scrollTop > r && (null === (t = n.current) || void 0 === t || t.scrollTo({ to: 0 }));
-    }, [ew]);
+        null != a && !eL && a.scrollTop > r && (null === (t = n.current) || void 0 === t || t.scrollTo({ to: 0 }));
+    }, [eL]);
     let {
-            updateListScrollerRef: ey,
-            renderListSection: eD,
-            renderListItem: eF,
-            getListSectionHeight: eU,
-            getListItemHeight: ek
+            updateListScrollerRef: eF,
+            renderListSection: eO,
+            renderListItem: eB,
+            getListSectionHeight: ez,
+            getListItemHeight: eH
         } = (function (e) {
-            let { listRef: t, hasActiveThreads: n, threadIdsBySection: r, listViewCardHeights: i, editorHeight: o, editorAdditionRowHeight: c, renderSectionOrItem: d, goToThread: u, observePostVisibilityAnalytics: m, isShowingSearchResult: h } = e,
-                _ = s.useCallback(
+            let { listRef: t, hasActiveThreads: n, threadIdsBySection: r, listViewCardHeights: s, editorHeight: o, editorAdditionRowHeight: c, renderSectionOrItem: d, goToThread: u, observePostVisibilityAnalytics: m, isShowingSearchResult: h } = e,
+                g = i.useCallback(
                     (e) => (n) => {
                         var a;
                         (t.current = n), (e.current = null !== (a = null == n ? void 0 : n.getScrollerNode()) && void 0 !== a ? a : null);
                     },
                     [t]
                 ),
-                g = s.useCallback(
+                x = i.useCallback(
                     (e) =>
-                        eg({
+                        ef({
                             section: e.section,
                             isShowingSearchResult: h,
                             hasActiveThreads: n
                         })(),
                     [n, h]
                 ),
-                f = s.useCallback(
+                p = i.useCallback(
                     (e) =>
                         d(e.section, void 0, () => {
                             if (3 === e.section)
@@ -401,7 +406,7 @@ function eC(e) {
                                           'div',
                                           {
                                               'data-item-role': 'item',
-                                              className: l()(ec.loadingCard, ec['loadingCard-'.concat(e.row % 3)])
+                                              className: l()(ed.loadingCard, ed['loadingCard-'.concat(e.row % 3)])
                                           },
                                           'loading-'.concat(e.row)
                                       );
@@ -409,11 +414,11 @@ function eC(e) {
                             return (0, a.jsx)(
                                 'li',
                                 {
-                                    className: ec.card,
+                                    className: ed.card,
                                     'data-item-role': 'item',
-                                    children: (0, a.jsx)(x.HeadingLevel, {
-                                        children: (0, a.jsx)(Y.ZP, {
-                                            className: ec.mainCard,
+                                    children: (0, a.jsx)(f.HeadingLevel, {
+                                        children: (0, a.jsx)(J.ZP, {
+                                            className: ed.mainCard,
                                             threadId: t,
                                             goToThread: u,
                                             observePostVisibilityAnalytics: m
@@ -425,61 +430,61 @@ function eC(e) {
                         }),
                     [d, r, u, m]
                 ),
-                C = s.useCallback(
+                C = i.useCallback(
                     (e, t) => {
                         if (0 === e) return o + c;
-                        let n = i[r[e][t]];
+                        let n = s[r[e][t]];
                         return null == n ? 104 : n + 8;
                     },
-                    [r, i, o, c]
+                    [r, s, o, c]
                 );
             return {
-                updateListScrollerRef: _,
-                renderListSection: g,
-                renderListItem: f,
-                getListSectionHeight: s.useCallback((e) => (2 === e && n ? 40 : 0), [n]),
+                updateListScrollerRef: g,
+                renderListSection: x,
+                renderListItem: p,
+                getListSectionHeight: i.useCallback((e) => (2 === e && n ? 40 : 0), [n]),
                 getListItemHeight: C
             };
         })({
-            listRef: $,
-            hasActiveThreads: y,
-            threadIdsBySection: eR,
+            listRef: ee,
+            hasActiveThreads: F,
+            threadIdsBySection: eP,
             listViewCardHeights: o,
             editorHeight: r,
-            editorAdditionRowHeight: i,
-            renderSectionOrItem: eP,
-            goToThread: eO,
-            observePostVisibilityAnalytics: ee,
-            isShowingSearchResult: ed
+            editorAdditionRowHeight: s,
+            renderSectionOrItem: eA,
+            goToThread: eM,
+            observePostVisibilityAnalytics: et,
+            isShowingSearchResult: eu
         }),
-        eH = s.useRef(null),
+        eD = i.useRef(null),
         {
-            updateMasonryListScrollerRef: eB,
-            getItemKey: eG,
-            renderGridSection: ez,
-            renderGridItem: eV,
-            getGridSectionHeight: eW,
-            getSectionProps: eq,
-            handleGridFocus: eK
+            updateMasonryListScrollerRef: eU,
+            getItemKey: eV,
+            renderGridSection: eG,
+            renderGridItem: eW,
+            getGridSectionHeight: eq,
+            getSectionProps: eK,
+            handleGridFocus: eX
         } = (function (e) {
-            let { masonryListScrollerRef: t, threadIdsBySection: n, goToThread: r, renderSectionOrItem: i, hasActiveThreads: o, isShowingSearchResult: c, canSearchForumPosts: d, canViewArchivedPosts: u, observePostVisibilityAnalytics: m, focusedThreadId: h, headerHeight: _ } = e,
-                g = s.useRef(null),
-                x = s.useCallback(
+            let { masonryListScrollerRef: t, threadIdsBySection: n, goToThread: r, renderSectionOrItem: s, hasActiveThreads: o, isShowingSearchResult: c, canSearchForumPosts: d, canViewArchivedPosts: u, observePostVisibilityAnalytics: m, focusedThreadId: h, headerHeight: g } = e,
+                x = i.useRef(null),
+                f = i.useCallback(
                     (e) => {
-                        (t.current = e), (g.current = null == e ? void 0 : e.getScrollerNode());
+                        (t.current = e), (x.current = null == e ? void 0 : e.getScrollerNode());
                     },
                     [t]
                 ),
-                f = s.useCallback(
+                p = i.useCallback(
                     (e, n) => {
                         let { current: a } = t;
                         if (null == a) return;
-                        let s = document.querySelector(e);
-                        if (null == s) return;
+                        let i = document.querySelector(e);
+                        if (null == i) return;
                         let r = a.getCoordsMap()[n],
                             l = null != r ? r.height + 20 : 200;
                         a.scrollIntoViewNode({
-                            node: s,
+                            node: i,
                             padding: l,
                             callback() {
                                 requestAnimationFrame(() => {
@@ -488,36 +493,36 @@ function eC(e) {
                                 });
                             }
                         }),
-                            (h.current = ef(n));
+                            (h.current = eC(n));
                     },
                     [t, h]
                 ),
-                C = s.useCallback(
+                C = i.useCallback(
                     (e) => {
-                        let t = ef(e);
+                        let t = eC(e);
                         if (null == t) return;
-                        let n = Z.Z.getChannel(t);
+                        let n = k.Z.getChannel(t);
                         null != n && r(n, !0);
                     },
                     [r]
                 ),
-                p = s.useCallback(
+                v = i.useCallback(
                     function (e) {
                         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
                         if (0 === n[e].length) return 'section-'.concat(e, '-').concat(t);
                         {
                             let a = n[e][t];
-                            return null == a ? ex(e, t) : ex(e, a);
+                            return null == a ? ep(e, t) : ep(e, a);
                         }
                     },
                     [n]
                 ),
-                T = s.useCallback(
+                b = i.useCallback(
                     (e, t, n) =>
-                        i(
+                        s(
                             e,
                             t,
-                            eg({
+                            ef({
                                 section: e,
                                 coords: t,
                                 key: n,
@@ -525,212 +530,212 @@ function eC(e) {
                                 hasActiveThreads: o
                             })
                         ),
-                    [i, o, c]
+                    [s, o, c]
                 ),
-                I = s.useCallback(
+                j = i.useCallback(
                     (e) =>
                         0 === e
                             ? {}
                             : {
                                   role: 'grid',
-                                  'aria-labelledby': '#'.concat(em(e))
+                                  'aria-labelledby': '#'.concat(eh(e))
                               },
                     []
                 ),
-                E = s.useCallback(
-                    (e, t, s, i, o) => {
+                _ = i.useCallback(
+                    (e, t, i, s, o) => {
                         if (0 === e) return null;
                         let c = n[e][t];
                         return null != c
                             ? (0, a.jsx)(
-                                  Q.Z,
+                                  $.Z,
                                   {
-                                      id: ''.concat(i),
+                                      id: ''.concat(s),
                                       threadId: c,
-                                      className: l()(ec.card, ec.mainCard),
+                                      className: l()(ed.card, ed.mainCard),
                                       goToThread: r,
                                       observePostVisibilityAnalytics: m,
-                                      coords: s,
-                                      gridCoords: o.coordinates[i],
+                                      coords: i,
+                                      gridCoords: o.coordinates[s],
                                       gridSectionBoundaries: o.boundaries
                                   },
-                                  i
+                                  s
                               )
                             : __OVERLAY__
                               ? null
                               : (0, a.jsx)(
                                     'div',
                                     {
-                                        style: { ...s },
+                                        style: { ...i },
                                         'data-item-role': 'item',
-                                        className: l()(ec.loadingCard, ec['loadingCard-'.concat(t % 3)])
+                                        className: l()(ed.loadingCard, ed['loadingCard-'.concat(t % 3)])
                                     },
-                                    i
+                                    s
                                 );
                     },
                     [n, r, m]
                 );
             return {
-                updateMasonryListScrollerRef: x,
-                masonryListContainerRef: g,
+                updateMasonryListScrollerRef: f,
+                masonryListContainerRef: x,
                 focusedThreadId: h,
-                handleGridFocus: f,
+                handleGridFocus: p,
                 handleGridSelect: C,
-                getItemKey: p,
-                renderGridSection: T,
-                renderGridItem: E,
-                getSectionProps: I,
-                getGridSectionHeight: s.useCallback((e) => (0 === e ? _ - 8 - 24 : 2 === e ? (o || !u ? 40 : 0) : 1 === e && c && !d ? 40 : 0), [_, c, d, o, u])
+                getItemKey: v,
+                renderGridSection: b,
+                renderGridItem: _,
+                getSectionProps: j,
+                getGridSectionHeight: i.useCallback((e) => (0 === e ? g - 8 - 24 : 2 === e ? (o || !u ? 40 : 0) : 1 === e && c && !d ? 40 : 0), [g, c, d, o, u])
             };
         })({
-            masonryListScrollerRef: eH,
-            threadIdsBySection: eR,
-            goToThread: eO,
-            renderSectionOrItem: eP,
-            hasActiveThreads: y,
-            isShowingSearchResult: ed,
-            canSearchForumPosts: K,
-            canViewArchivedPosts: J,
-            observePostVisibilityAnalytics: ee,
-            focusedThreadId: e_,
-            headerHeight: eZ
+            masonryListScrollerRef: eD,
+            threadIdsBySection: eP,
+            goToThread: eM,
+            renderSectionOrItem: eA,
+            hasActiveThreads: F,
+            isShowingSearchResult: eu,
+            canSearchForumPosts: X,
+            canViewArchivedPosts: Q,
+            observePostVisibilityAnalytics: et,
+            focusedThreadId: ex,
+            headerHeight: ek
         });
     !(function (e) {
-        let { masonryListScrollerRef: t, containerWidth: n, isGridLayout: a, threadIdsBySection: r, focusedThreadId: l, parentId: i } = e;
-        s.useEffect(() => {
+        let { masonryListScrollerRef: t, containerWidth: n, isGridLayout: a, threadIdsBySection: r, focusedThreadId: l, parentId: s } = e;
+        i.useEffect(() => {
             if (a) {
                 let e = setTimeout(() => {
                     if (null == t.current || null == l.current) return;
                     let e = l.current;
                     if ('string' != typeof e) return;
-                    if (null == O.ZP.getSidebarState(i)) {
+                    if (null == M.ZP.getSidebarState(s)) {
                         l.current = null;
                         return;
                     }
                     let n = r.findIndex((t) => t.find((t) => t === e)),
                         a = t.current.getCoordsMap(),
-                        s = a['__section__'.concat(n)],
-                        o = a[ex(n, e)];
-                    null != s &&
+                        i = a['__section__'.concat(n)],
+                        o = a[ep(n, e)];
+                    null != i &&
                         null != o &&
                         t.current.scrollIntoViewRect({
-                            start: s.top + o.top - 100,
-                            end: s.top + o.top + o.height + 50
+                            start: i.top + o.top - 100,
+                            end: i.top + o.top + o.height + 50
                         });
                 }, 500);
                 return () => clearTimeout(e);
             }
-        }, [i, n, a, r, l, t]);
+        }, [s, n, a, r, l, t]);
     })({
-        masonryListScrollerRef: eH,
-        containerWidth: eE,
-        isGridLayout: en,
-        threadIdsBySection: eR,
+        masonryListScrollerRef: eD,
+        containerWidth: eI,
+        isGridLayout: ea,
+        threadIdsBySection: eP,
         parentId: t.id,
-        focusedThreadId: e_
+        focusedThreadId: ex
     });
-    let eY = s.useCallback(() => {
+    let eJ = i.useCallback(() => {
             var e, n;
-            if (ed) return;
-            let a = en ? (null === (e = eH.current) || void 0 === e ? void 0 : e.getScrollerState()) : null === (n = $.current) || void 0 === n ? void 0 : n.getScrollerState();
+            if (eu) return;
+            let a = ea ? (null === (e = eD.current) || void 0 === e ? void 0 : e.getScrollerState()) : null === (n = ee.current) || void 0 === n ? void 0 : n.getScrollerState();
             if (null == a) return;
-            (0, V.ab)({
+            (0, W.ab)({
                 guildId: t.guild_id,
                 channelId: t.id
             });
-            let s = a.scrollTop + a.offsetHeight,
-                r = a.scrollHeight - s;
-            r < (en ? Math.max(200, (0, et.KW)(eE)) : 200) && I();
-        }, [ed, en, t.guild_id, t.id, eE, I]),
-        eX = (0, _.e7)([p.Z], () => p.Z.keyboardModeEnabled),
-        eJ = (0, es.ZP)({
+            let i = a.scrollTop + a.offsetHeight,
+                r = a.scrollHeight - i;
+            r < (ea ? Math.max(200, (0, en.KW)(eI)) : 200) && j();
+        }, [eu, ea, t.guild_id, t.id, eI, j]),
+        eY = (0, g.e7)([v.Z], () => v.Z.keyboardModeEnabled),
+        eQ = (0, er.ZP)({
             id: 'forum-grid-view',
-            isEnabled: en && eX,
-            setFocus: eK
+            isEnabled: ea && eY,
+            setFocus: eX
         }),
-        eQ = (0, er.Z)({
-            listRef: $,
+        e$ = (0, el.Z)({
+            listRef: ee,
             padding: 96,
-            isEnabled: !en && eX,
+            isEnabled: !ea && eY,
             channel: t
         }),
-        { ref: e$, ...e0 } = eJ.containerProps,
-        e1 = O.ZP.getSidebarState(t.id),
-        e6 = null != e1 && (0, O.D5)(e1);
+        { ref: e0, ...e1 } = eQ.containerProps,
+        e6 = M.ZP.getSidebarState(t.id),
+        e9 = null != e6 && (0, M.D5)(e6);
     return (0, a.jsx)('div', {
-        className: ec.container,
-        ref: eC,
-        children: (0, a.jsx)(x.FocusJumpSection, {
+        className: ed.container,
+        ref: ev,
+        children: (0, a.jsx)(f.FocusJumpSection, {
             children: (e) =>
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         u &&
-                            (0, a.jsx)(f.Z, {
+                            (0, a.jsx)(p.Z, {
                                 channel: t,
-                                draftType: L.d.FirstThreadMessage,
-                                className: ec.uploadArea,
-                                style: { right: e6 && (null == n ? void 0 : n.isThreadSidebarFloating) ? n.threadSidebarWidth : 0 }
+                                draftType: Z.d.FirstThreadMessage,
+                                className: ed.uploadArea,
+                                style: { right: e9 && (null == n ? void 0 : n.isThreadSidebarFloating) ? n.threadSidebarWidth : 0 }
                             }),
-                        (0, a.jsx)(eI, { channel: t }),
-                        (0, a.jsx)(x.HiddenVisually, { children: (0, a.jsx)(x.H, { children: eo.Z.Messages.THREADS }) }),
-                        k
+                        (0, a.jsx)(e_, { channel: t }),
+                        (0, a.jsx)(f.HiddenVisually, { children: (0, a.jsx)(f.H, { children: ec.intl.string(ec.t.B2panJ) }) }),
+                        H
                             ? (0, a.jsx)('div', {
-                                  className: ec.optInNotice,
-                                  children: (0, a.jsx)(v.Z, { channel: t })
+                                  className: ed.optInNotice,
+                                  children: (0, a.jsx)(S.Z, { channel: t })
                               })
                             : null,
-                        en
-                            ? (0, a.jsx)(es.KT, {
-                                  navigator: eJ,
+                        ea
+                            ? (0, a.jsx)(er.KT, {
+                                  navigator: eQ,
                                   children: (0, a.jsx)(
-                                      x.MasonryList,
+                                      f.MasonryList,
                                       {
                                           ref: (e) => {
                                               var t;
-                                              (e$.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null), eB(e);
+                                              (e0.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null), eU(e);
                                           },
                                           itemGutter: 16,
                                           padding: 24,
-                                          className: ec.grid,
-                                          columns: eb,
-                                          sections: ej,
-                                          getItemKey: eG,
-                                          getSectionHeight: eW,
-                                          getItemHeight: eh,
-                                          renderSection: ez,
-                                          renderItem: eV,
-                                          getSectionProps: eq,
-                                          onScroll: T ? eY : void 0,
+                                          className: ed.grid,
+                                          columns: eN,
+                                          sections: eR,
+                                          getItemKey: eV,
+                                          getSectionHeight: eq,
+                                          getItemHeight: eg,
+                                          renderSection: eG,
+                                          renderItem: eW,
+                                          getSectionProps: eK,
+                                          onScroll: b ? eJ : void 0,
                                           chunkSize: 350,
-                                          ...e0,
+                                          ...e1,
                                           ...e
                                       },
-                                      w
+                                      L
                                   )
                               })
                             : (0, a.jsx)(d.bG, {
-                                  navigator: eQ,
+                                  navigator: e$,
                                   children: (0, a.jsx)(d.SJ, {
                                       children: (t) => {
-                                          let { ref: n, ...s } = t;
+                                          let { ref: n, ...i } = t;
                                           return (0, a.jsx)(
-                                              x.ListAuto,
+                                              f.ListAuto,
                                               {
-                                                  ref: ey(n),
-                                                  className: ec.list,
-                                                  sections: ej,
-                                                  sectionHeight: eU,
-                                                  rowHeight: ek,
-                                                  renderRow: eF,
-                                                  renderSection: eD,
+                                                  ref: eF(n),
+                                                  className: ed.list,
+                                                  sections: eR,
+                                                  sectionHeight: ez,
+                                                  rowHeight: eH,
+                                                  renderRow: eB,
+                                                  renderSection: eO,
                                                   chunkSize: 150,
-                                                  onScroll: T ? eY : void 0,
+                                                  onScroll: b ? eJ : void 0,
                                                   paddingBottom: 24,
-                                                  ...s,
+                                                  ...i,
                                                   ...e,
                                                   innerRole: 'list'
                                               },
-                                              w
+                                              L
                                           );
                                       }
                                   })
@@ -740,328 +745,328 @@ function eC(e) {
         })
     });
 }
-function ep(e) {
+function eb(e) {
     let { channel: t, coords: n } = e,
-        s = (0, T.ZP)(t);
+        i = (0, b.ZP)(t);
     return (0, a.jsx)('div', {
-        className: l()(ec.missingReadHistoryPermission, ec.columnsSpan),
+        className: l()(ed.missingReadHistoryPermission, ed.columnsSpan),
         style: n,
-        children: (0, a.jsx)(x.Text, {
+        children: (0, a.jsx)(f.Text, {
             color: 'text-muted',
             variant: 'text-md/normal',
-            children: eo.Z.Messages.FORUM_CHANNEL_NO_POST_HISTORY.format({ channelName: s })
+            children: ec.intl.format(ec.t.TycmzM, { channelName: i })
         })
     });
 }
-function eT(e) {
+function ej(e) {
     let { channel: t, coords: n } = e,
-        s = (0, T.ZP)(t);
+        i = (0, b.ZP)(t);
     return (0, a.jsx)('div', {
-        className: l()(ec.missingReadHistoryPermission, ec.columnsSpan),
+        className: l()(ed.missingReadHistoryPermission, ed.columnsSpan),
         style: n,
-        children: (0, a.jsx)(x.Text, {
+        children: (0, a.jsx)(f.Text, {
             color: 'text-muted',
             variant: 'text-md/normal',
-            children: eo.Z.Messages.FORUM_CHANNEL_NO_SEARCH_POST_HISTORY.format({ channelName: s })
+            children: ec.intl.format(ec.t.OWZJdX, { channelName: i })
         })
     });
 }
-function eI(e) {
+function e_(e) {
     let { channel: t } = e,
-        n = s.useCallback(() => {
-            U.Z.resort(t.id);
+        n = i.useCallback(() => {
+            z.Z.resort(t.id);
         }, [t]),
-        r = (0, _.e7)([k.Z], () => k.Z.getNewThreadCount());
+        r = (0, g.e7)([H.Z], () => H.Z.getNewThreadCount());
     return 0 === r
         ? null
-        : (0, a.jsx)(x.Clickable, {
-              className: ec.newPostsButton,
+        : (0, a.jsx)(f.Clickable, {
+              className: ed.newPostsButton,
               onClick: n,
-              children: (0, a.jsx)(x.Text, {
+              children: (0, a.jsx)(f.Text, {
                   color: 'text-brand',
                   variant: 'text-md/medium',
-                  children: eo.Z.Messages.NEW_FORUM_POST_COUNT.format({ count: r })
+                  children: ec.intl.format(ec.t.ue1qfH, { count: r })
               })
           });
 }
-function eE() {
+function eI() {
     return Promise.resolve();
 }
-function eN(e) {
+function eT(e) {
     var t, n, r;
-    let { channel: i, isEmpty: f, isSearchLoading: T, numResults: b, children: v, coords: S, onHeightChange: M } = e,
+    let { channel: s, isEmpty: p, isSearchLoading: b, numResults: T, children: N, coords: S, onHeightChange: w } = e,
         {
-            name: A,
-            formOpen: R,
-            titleFocused: O,
-            hasClickedForm: Z,
-            textAreaState: F,
-            onboardingExpanded: k,
-            setEditorAdditionRowHeight: G
-        } = (0, X.xH)((e) => {
-            let { name: t, formOpen: n, titleFocused: a, hasClickedForm: s, textAreaState: r, onboardingExpanded: l, setEditorAdditionRowHeight: i } = e;
+            name: y,
+            formOpen: E,
+            titleFocused: P,
+            hasClickedForm: M,
+            textAreaState: k,
+            onboardingExpanded: B,
+            setEditorAdditionRowHeight: H
+        } = (0, Y.xH)((e) => {
+            let { name: t, formOpen: n, titleFocused: a, hasClickedForm: i, textAreaState: r, onboardingExpanded: l, setEditorAdditionRowHeight: s } = e;
             return {
                 name: t,
                 formOpen: n,
                 titleFocused: a,
-                hasClickedForm: s,
+                hasClickedForm: i,
                 textAreaState: r,
                 onboardingExpanded: l,
-                setEditorAdditionRowHeight: i
+                setEditorAdditionRowHeight: s
             };
         }, c.Z),
-        { tagFilter: z, layoutType: W } = (0, H.H)(i.id),
-        Y = (0, X.AF)(),
-        Q = (0, H.v)(),
-        $ = (0, _.e7)([P.Z], () => P.Z.canChatInGuild(i.guild_id)),
-        et = (0, B.r_)(i),
-        ea = (0, j.cD)(i),
-        [es, er] = s.useState(ea),
-        [, ei] = (0, E.AB)(null !== (r = i.getGuildId()) && void 0 !== r ? r : void 0),
-        ed = $ && (ea || (es && ei)),
-        eu = i.isMediaChannel();
-    s.useEffect(() => {
-        ea && er(!0);
-    }, [ea]);
+        { tagFilter: V, layoutType: G } = (0, D.H)(s.id),
+        q = (0, Y.AF)(),
+        J = (0, D.v)(),
+        $ = (0, g.e7)([A.Z], () => A.Z.canChatInGuild(s.guild_id)),
+        ee = (0, U.r_)(s),
+        en = (0, R.cD)(s),
+        [ei, er] = i.useState(en),
+        [, el] = (0, _.AB)(null !== (r = s.getGuildId()) && void 0 !== r ? r : void 0),
+        eo = $ && (en || (ei && el)),
+        eu = s.isMediaChannel();
+    i.useEffect(() => {
+        en && er(!0);
+    }, [en]);
     let { ref: em, height: eh } = (0, C.Z)();
-    s.useEffect(() => {
-        null != eh && M(eh);
-    }, [M, eh]);
-    let e_ = s.useCallback(() => {
+    i.useEffect(() => {
+        null != eh && w(eh);
+    }, [w, eh]);
+    let eg = i.useCallback(() => {
         o()(() => {
-            null != em.current && Y.getState().setEditorHeight(em.current.offsetHeight);
+            null != em.current && q.getState().setEditorHeight(em.current.offsetHeight);
         });
-    }, [em, Y]);
-    s.useLayoutEffect(e_, [e_, f, ed, k]),
-        (0, D.yp)({
-            event: el.CkL.REMEASURE_TARGET,
-            handler: e_
+    }, [em, q]);
+    i.useLayoutEffect(eg, [eg, p, eo, B]),
+        (0, O.yp)({
+            event: es.CkL.REMEASURE_TARGET,
+            handler: eg
         });
-    let eg = (0, _.e7)([w.Z], () => w.Z.getUploads(i.id, L.d.FirstThreadMessage)),
-        ex = (0, B.ql)(i),
-        ef = s.useRef(null),
-        eC = s.useRef(null),
-        [ep, eT] = s.useState(0),
-        { width: eI } = (0, _.e7)([y.Z], () => y.Z.windowSize()),
-        eN = null === (n = ef.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.width,
-        ev = s.useRef(null);
-    s.useLayoutEffect(() => {
+    let ex = (0, g.e7)([L.Z], () => L.Z.getUploads(s.id, Z.d.FirstThreadMessage)),
+        ef = (0, U.ql)(s),
+        ep = i.useRef(null),
+        eC = i.useRef(null),
+        [ev, eb] = i.useState(0),
+        { width: ej } = (0, g.e7)([F.Z], () => F.Z.windowSize()),
+        e_ = null === (n = ep.current) || void 0 === n ? void 0 : null === (t = n.getBoundingClientRect()) || void 0 === t ? void 0 : t.width,
+        eT = i.useRef(null);
+    i.useLayoutEffect(() => {
         var e;
         let t = eC.current,
             n = null == t ? void 0 : null === (e = t.children) || void 0 === e ? void 0 : e[0];
-        if (null != ef.current && null != n && null != n.children) {
-            let { left: e, top: t } = ef.current.getBoundingClientRect(),
+        if (null != ep.current && null != n && null != n.children) {
+            let { left: e, top: t } = ep.current.getBoundingClientRect(),
                 a = 0;
-            for (let s of n.children) {
-                let { right: n, top: r, height: l } = s.getBoundingClientRect();
+            for (let i of n.children) {
+                let { right: n, top: r, height: l } = i.getBoundingClientRect();
                 if (r - t > l) break;
                 n - e > a && (a = n - e);
             }
-            eT(a);
+            eb(a);
         }
-    }, [i.availableTags, eI, eN, z]);
-    let eS = A.length > 0 && !R && (T || null != b),
-        eM = !__OVERLAY__ && !Z && !R && O && (0 === F.textValue.trim().length || F.textValue.trim() === ex) && 0 === eg.length;
-    s.useLayoutEffect(() => {
-        let e = eS || eM;
-        if (!e) return G(0);
-        null != ev.current && G(e ? ev.current.clientHeight : 0);
-    }, [G, eS, eM, ev]);
-    let eA = (e) => {
-            (0, V.e7)({
-                guildId: i.guild_id,
-                channelId: i.id,
+    }, [s.availableTags, ej, e_, V]);
+    let eS = y.length > 0 && !E && (b || null != T),
+        ew = !__OVERLAY__ && !M && !E && P && (0 === k.textValue.trim().length || k.textValue.trim() === ef) && 0 === ex.length;
+    i.useLayoutEffect(() => {
+        let e = eS || ew;
+        if (!e) return H(0);
+        null != eT.current && H(e ? eT.current.clientHeight : 0);
+    }, [H, eS, ew, eT]);
+    let ey = (e) => {
+            (0, W.e7)({
+                guildId: s.guild_id,
+                channelId: s.id,
                 tagId: e,
-                filterTagIds: Array.from(z),
-                added: !z.has(e),
+                filterTagIds: Array.from(V),
+                added: !V.has(e),
                 location: {
-                    page: el.ZY5.GUILD_CHANNEL,
-                    section: el.jXE.FORUM_CHANNEL_HEADER,
-                    object: el.qAy.CHANNEL_TAG
+                    page: es.ZY5.GUILD_CHANNEL,
+                    section: es.jXE.FORUM_CHANNEL_HEADER,
+                    object: es.qAy.CHANNEL_TAG
                 }
             }),
-                Q.getState().toggleTagFilter(i.id, e);
+                J.getState().toggleTagFilter(s.id, e);
         },
-        ej = (0, u.ZP)({
-            id: ''.concat(i.id, '-tags-navigator'),
+        eE = (0, u.ZP)({
+            id: ''.concat(s.id, '-tags-navigator'),
             isEnabled: !0,
             wrap: !0,
-            scrollToStart: eE,
-            scrollToEnd: eE,
+            scrollToStart: eI,
+            scrollToEnd: eI,
             orientation: m.hy.HORIZONTAL
         }),
-        { role: eR, onFocus: eO, ...eZ } = (0, d.JA)('forum-channel-header'),
-        eL = s.useRef(null),
-        eP = (function () {
-            let e = s.useRef(!1),
-                t = (0, _.e7)([p.Z], () => p.Z.keyboardModeEnabled),
-                n = s.useCallback(
+        { role: eR, onFocus: eP, ...eM } = (0, d.JA)('forum-channel-header'),
+        ek = i.useRef(null),
+        eZ = (function () {
+            let e = i.useRef(!1),
+                t = (0, g.e7)([v.Z], () => v.Z.keyboardModeEnabled),
+                n = i.useCallback(
                     (t) => {
                         e.current = t.shiftKey;
                     },
                     [e]
                 );
-            return s.useLayoutEffect(() => (t ? window.addEventListener('keydown', n) : window.removeEventListener('keydown', n), () => window.removeEventListener('keydown', n)), [t, n]), e;
+            return i.useLayoutEffect(() => (t ? window.addEventListener('keydown', n) : window.removeEventListener('keydown', n), () => window.removeEventListener('keydown', n)), [t, n]), e;
         })(),
-        ew = s.useCallback(
+        eA = i.useCallback(
             (e) => {
-                if ((eO(e), e.target === em.current && !eP.current)) {
+                if ((eP(), e.target === em.current && !eZ.current)) {
                     var t;
-                    null === (t = eL.current) || void 0 === t || t.focus();
+                    null === (t = ek.current) || void 0 === t || t.focus();
                 }
             },
-            [eO, em, eP]
+            [eP, em, eZ]
         );
     return (0, a.jsx)(
         'div',
         {
-            className: l()(ec.card, ec.headerRow, ec.columnsSpan),
+            className: l()(ed.card, ed.headerRow, ed.columnsSpan),
             ref: em,
-            onFocus: ew,
-            ...eZ,
+            onFocus: eA,
+            ...eM,
             style: {
                 ...S,
-                position: W === h.X.GRID ? 'absolute' : 'static',
+                position: G === h.X.GRID ? 'absolute' : 'static',
                 height: 'auto'
             },
-            children: (0, a.jsxs)(D.I3, {
+            children: (0, a.jsxs)(O.I3, {
                 children: [
-                    null != i.guild_id
-                        ? (0, a.jsx)(N.Z, {
-                              className: l()(ec.newMemberBanner, { [ec.gridViewBanner]: W === h.X.GRID }),
-                              guildId: i.guild_id,
-                              channel: i
+                    null != s.guild_id
+                        ? (0, a.jsx)(I.Z, {
+                              className: l()(ed.newMemberBanner, { [ed.gridViewBanner]: G === h.X.GRID }),
+                              guildId: s.guild_id,
+                              channel: s
                           })
                         : null,
                     (0, a.jsx)('div', {
-                        className: l()(ec.mainCard, ec.header, { [ec.headerWithMatchingPosts]: eS || eM }),
-                        children: (0, a.jsx)(J.Z, {
-                            parentChannel: i,
-                            onChange: e_,
-                            isSearchLoading: T,
-                            canCreatePost: ed,
-                            inputRef: eL
+                        className: l()(ed.mainCard, ed.header, { [ed.headerWithMatchingPosts]: eS || ew }),
+                        children: (0, a.jsx)(Q.Z, {
+                            parentChannel: s,
+                            onChange: eg,
+                            isSearchLoading: b,
+                            canCreatePost: eo,
+                            inputRef: ek
                         })
                     }),
-                    (eS || eM) &&
+                    (eS || ew) &&
                         (0, a.jsxs)('div', {
-                            className: ec.matchingPostsRow,
-                            ref: ev,
+                            className: ed.matchingPostsRow,
+                            ref: eT,
                             children: [
                                 eS &&
                                     (0, a.jsxs)('div', {
-                                        className: ec.matchingPosts,
+                                        className: ed.matchingPosts,
                                         children: [
-                                            (0, a.jsx)(x.Heading, {
+                                            (0, a.jsx)(f.Heading, {
                                                 variant: 'text-xs/normal',
                                                 color: 'text-normal',
-                                                children: T
-                                                    ? eo.Z.Messages.FORUM_SEARCHING
-                                                    : 0 === b
-                                                      ? eo.Z.Messages.FORUM_SEARCH_NO_MATCHING_POSTS
-                                                      : eo.Z.Messages.FORUM_SEARCH_MATCHING_POSTS_ALT.format({
-                                                            numPosts: b,
-                                                            query: A
+                                                children: b
+                                                    ? ec.intl.string(ec.t['/9i3qq'])
+                                                    : 0 === T
+                                                      ? ec.intl.string(ec.t.DbgHxs)
+                                                      : ec.intl.formatToPlainString(ec.t['tBz/8f'], {
+                                                            numPosts: T,
+                                                            query: y
                                                         })
                                             }),
-                                            !T &&
-                                                (0, a.jsx)(x.Clickable, {
+                                            !b &&
+                                                (0, a.jsx)(f.Clickable, {
                                                     onClick: () => {
-                                                        (0, V.zI)({
-                                                            guildId: i.guild_id,
-                                                            channelId: i.id
+                                                        (0, W.zI)({
+                                                            guildId: s.guild_id,
+                                                            channelId: s.id
                                                         }),
-                                                            U.Z.clearForumSearch(i.id),
-                                                            Y.getState().setName('');
+                                                            z.Z.clearForumSearch(s.id),
+                                                            q.getState().setName('');
                                                     },
-                                                    children: (0, a.jsx)(x.Text, {
+                                                    children: (0, a.jsx)(f.Text, {
                                                         variant: 'text-xs/semibold',
                                                         color: 'text-brand',
-                                                        className: ec.clear,
-                                                        children: eo.Z.Messages.CLEAR
+                                                        className: ed.clear,
+                                                        children: ec.intl.string(ec.t.VkKicX)
                                                     })
                                                 })
                                         ]
                                     }),
-                                (0, a.jsx)('div', { className: ec.tagsSpacer }),
-                                eM
-                                    ? ed
+                                (0, a.jsx)('div', { className: ed.tagsSpacer }),
+                                ew
+                                    ? eo
                                         ? (0, a.jsxs)('div', {
-                                              className: ec.startPostHelp,
+                                              className: ed.startPostHelp,
                                               children: [
-                                                  (0, a.jsx)(x.KeyCombo, {
+                                                  (0, a.jsx)(f.KeyCombo, {
                                                       shortcut: 'SHIFT',
-                                                      className: ec.keyboardShortcut
+                                                      className: ed.keyboardShortcut
                                                   }),
-                                                  (0, a.jsx)(x.Text, {
+                                                  (0, a.jsx)(f.Text, {
                                                       variant: 'text-xs/normal',
                                                       color: 'text-normal',
                                                       children: '+'
                                                   }),
-                                                  (0, a.jsx)(x.KeyCombo, {
+                                                  (0, a.jsx)(f.KeyCombo, {
                                                       shortcut: 'ENTER',
-                                                      className: ec.keyboardShortcut
+                                                      className: ed.keyboardShortcut
                                                   }),
-                                                  (0, a.jsx)(x.Text, {
+                                                  (0, a.jsx)(f.Text, {
                                                       variant: 'text-xs/normal',
                                                       color: 'text-normal',
-                                                      children: eo.Z.Messages.FORUM_ENTER_TO_START_POST
+                                                      children: ec.intl.string(ec.t.ZvJ0ys)
                                                   })
                                               ]
                                           })
                                         : (0, a.jsxs)('div', {
-                                              className: ec.startPostHelp,
+                                              className: ed.startPostHelp,
                                               children: [
-                                                  (0, a.jsx)(x.CircleWarningIcon, {
+                                                  (0, a.jsx)(f.CircleWarningIcon, {
                                                       size: 'custom',
                                                       color: 'currentColor',
                                                       height: 14,
                                                       width: 14,
-                                                      className: ec.warnIcon
+                                                      className: ed.warnIcon
                                                   }),
-                                                  (0, a.jsx)(x.Text, {
+                                                  (0, a.jsx)(f.Text, {
                                                       variant: 'text-xs/normal',
                                                       color: 'text-normal',
-                                                      children: eo.Z.Messages.FORUM_NO_POST_PERMISSION_HELP
+                                                      children: ec.intl.string(ec.t.iyzwnJ)
                                                   })
                                               ]
                                           })
                                     : null
                             ]
                         }),
-                    (0, a.jsx)(q.Z, {
-                        channel: i,
-                        onChange: e_
+                    (0, a.jsx)(K.Z, {
+                        channel: s,
+                        onChange: eg
                     }),
                     (0, a.jsxs)('div', {
-                        className: ec.tagsContainer,
-                        ref: ef,
+                        className: ed.tagsContainer,
+                        ref: ep,
                         children: [
-                            (0, a.jsx)(eb, { channel: i }),
-                            i.availableTags.length > 0
+                            (0, a.jsx)(eN, { channel: s }),
+                            s.availableTags.length > 0
                                 ? (0, a.jsxs)(a.Fragment, {
                                       children: [
-                                          (0, a.jsx)('div', { className: ec.divider }),
+                                          (0, a.jsx)('div', { className: ed.divider }),
                                           (0, a.jsx)('div', {
-                                              className: ec.tagList,
+                                              className: ed.tagList,
                                               ref: eC,
                                               children: (0, a.jsx)(d.bG, {
-                                                  navigator: ej,
+                                                  navigator: eE,
                                                   children: (0, a.jsx)(d.SJ, {
                                                       children: (e) => {
                                                           let { ref: t, ...n } = e;
                                                           return (0, a.jsx)('div', {
-                                                              className: ec.tagListInner,
+                                                              className: ed.tagListInner,
                                                               ref: t,
                                                               ...n,
-                                                              children: i.availableTags.map((e) =>
+                                                              children: s.availableTags.map((e) =>
                                                                   (0, a.jsx)(
-                                                                      ee.Z,
+                                                                      et.Z,
                                                                       {
-                                                                          className: ec.tag,
+                                                                          className: ed.tag,
                                                                           tag: e,
-                                                                          onClick: () => eA(e.id),
-                                                                          selected: z.has(e.id)
+                                                                          onClick: () => ey(e.id),
+                                                                          selected: V.has(e.id)
                                                                       },
                                                                       e.id
                                                                   )
@@ -1071,11 +1076,11 @@ function eN(e) {
                                                   })
                                               })
                                           }),
-                                          (0, a.jsx)(x.Popout, {
+                                          (0, a.jsx)(f.Popout, {
                                               renderPopout: (e) => {
                                                   let { closePopout: t, setPopoutRef: n } = e;
-                                                  return (0, a.jsx)(en.Z, {
-                                                      channel: i,
+                                                  return (0, a.jsx)(ea.Z, {
+                                                      channel: s,
                                                       closePopout: t,
                                                       setPopoutRef: n
                                                   });
@@ -1084,33 +1089,33 @@ function eN(e) {
                                               align: 'right',
                                               children: (e, t) => {
                                                   let { isShown: n } = t;
-                                                  return (0, a.jsxs)(x.Button, {
+                                                  return (0, a.jsxs)(f.Button, {
                                                       ...e,
-                                                      size: x.Button.Sizes.MIN,
-                                                      color: x.Button.Colors.CUSTOM,
-                                                      className: l()(ec.tagsButton, { [ec.tagsButtonWithCount]: z.size > 0 }),
-                                                      style: { left: ep },
-                                                      innerClassName: ec.tagsButtonInner,
-                                                      'aria-label': z.size > 0 ? eo.Z.Messages.FORUM_TAG_SEE_MORE_A11Y_LABEL : eo.Z.Messages.FORUM_TAG_ALL_A11Y_LABEL,
+                                                      size: f.Button.Sizes.MIN,
+                                                      color: f.Button.Colors.CUSTOM,
+                                                      className: l()(ed.tagsButton, { [ed.tagsButtonWithCount]: V.size > 0 }),
+                                                      style: { left: ev },
+                                                      innerClassName: ed.tagsButtonInner,
+                                                      'aria-label': V.size > 0 ? ec.intl.string(ec.t.IkpM1d) : ec.intl.string(ec.t['9vKK/P']),
                                                       children: [
-                                                          z.size > 0
+                                                          V.size > 0
                                                               ? (0, a.jsx)('div', {
-                                                                    className: ec.countContainer,
-                                                                    children: (0, a.jsx)(x.Text, {
-                                                                        className: ec.countText,
+                                                                    className: ed.countContainer,
+                                                                    children: (0, a.jsx)(f.Text, {
+                                                                        className: ed.countText,
                                                                         color: 'none',
                                                                         variant: 'text-xs/medium',
-                                                                        children: z.size
+                                                                        children: V.size
                                                                     })
                                                                 })
-                                                              : eo.Z.Messages.FORUM_TAG_ALL,
+                                                              : ec.intl.string(ec.t.fZ8hzs),
                                                           n
-                                                              ? (0, a.jsx)(x.ChevronSmallUpIcon, {
+                                                              ? (0, a.jsx)(f.ChevronSmallUpIcon, {
                                                                     size: 'custom',
                                                                     color: 'currentColor',
                                                                     width: 20
                                                                 })
-                                                              : (0, a.jsx)(x.ChevronSmallDownIcon, {
+                                                              : (0, a.jsx)(f.ChevronSmallDownIcon, {
                                                                     size: 'custom',
                                                                     color: 'currentColor',
                                                                     width: 20
@@ -1119,25 +1124,25 @@ function eN(e) {
                                                   });
                                               }
                                           }),
-                                          (0, a.jsxs)(x.Button, {
-                                              size: x.Button.Sizes.MIN,
-                                              color: x.Button.Colors.CUSTOM,
-                                              className: l()(ec.tagsButton, ec.tagsButtonPlaceholder),
-                                              innerClassName: ec.tagsButtonInner,
-                                              'aria-label': eo.Z.Messages.FORUM_TAG_SEE_MORE_A11Y_LABEL,
+                                          (0, a.jsxs)(f.Button, {
+                                              size: f.Button.Sizes.MIN,
+                                              color: f.Button.Colors.CUSTOM,
+                                              className: l()(ed.tagsButton, ed.tagsButtonPlaceholder),
+                                              innerClassName: ed.tagsButtonInner,
+                                              'aria-label': ec.intl.string(ec.t.IkpM1d),
                                               children: [
-                                                  z.size > 0
+                                                  V.size > 0
                                                       ? (0, a.jsx)('div', {
-                                                            className: ec.countContainer,
-                                                            children: (0, a.jsx)(x.Text, {
-                                                                className: ec.countText,
+                                                            className: ed.countContainer,
+                                                            children: (0, a.jsx)(f.Text, {
+                                                                className: ed.countText,
                                                                 color: 'none',
                                                                 variant: 'text-xs/medium',
-                                                                children: z.size
+                                                                children: V.size
                                                             })
                                                         })
                                                       : null,
-                                                  (0, a.jsx)(x.ChevronSmallUpIcon, {
+                                                  (0, a.jsx)(f.ChevronSmallUpIcon, {
                                                       size: 'custom',
                                                       color: 'currentColor',
                                                       width: 24
@@ -1149,14 +1154,14 @@ function eN(e) {
                                 : null
                         ]
                     }),
-                    v,
-                    et &&
+                    N,
+                    ee &&
                         !eu &&
-                        (0, a.jsx)(I.ZP, {
-                            contentTypes: [g.z.FORUM_CHANNEL_HELPER_CARD],
+                        (0, a.jsx)(j.ZP, {
+                            contentTypes: [x.z.FORUM_CHANNEL_HELPER_CARD],
                             children: (e) => {
                                 let { visibleContent: t, markAsDismissed: n } = e;
-                                return t === g.z.FORUM_CHANNEL_HELPER_CARD ? (0, a.jsx)(K.Z, { onDismiss: n }) : null;
+                                return t === x.z.FORUM_CHANNEL_HELPER_CARD ? (0, a.jsx)(X.Z, { onDismiss: n }) : null;
                             }
                         })
                 ]
@@ -1165,13 +1170,13 @@ function eN(e) {
         'create-form'
     );
 }
-function eb(e) {
+function eN(e) {
     let { channel: t } = e,
         n = t.isMediaChannel();
-    return (0, a.jsx)(x.Popout, {
+    return (0, a.jsx)(f.Popout, {
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return (0, a.jsx)($.Z, {
+            return (0, a.jsx)(ee.Z, {
                 channel: t,
                 closePopout: n
             });
@@ -1179,32 +1184,32 @@ function eb(e) {
         position: 'bottom',
         align: 'left',
         children: (e, t) => {
-            let { isShown: s } = t;
-            return (0, a.jsxs)(x.Button, {
+            let { isShown: i } = t;
+            return (0, a.jsxs)(f.Button, {
                 ...e,
-                size: x.Button.Sizes.MIN,
-                color: x.Button.Colors.CUSTOM,
-                className: ec.sortDropdown,
-                innerClassName: ec.sortDropdownInner,
-                'aria-label': n ? eo.Z.Messages.MEDIA_CHANNEL_SORT : eo.Z.Messages.FORUM_CHANNEL_SORT_AND_VIEW,
+                size: f.Button.Sizes.MIN,
+                color: f.Button.Colors.CUSTOM,
+                className: ed.sortDropdown,
+                innerClassName: ed.sortDropdownInner,
+                'aria-label': n ? ec.intl.string(ec.t.JxU0ws) : ec.intl.string(ec.t.xyYt8P),
                 children: [
-                    (0, a.jsx)(x.ArrowsUpDownIcon, {
+                    (0, a.jsx)(f.ArrowsUpDownIcon, {
                         size: 'xs',
                         color: 'currentColor'
                     }),
-                    (0, a.jsx)(x.Text, {
-                        className: ec.sortDropdownText,
+                    (0, a.jsx)(f.Text, {
+                        className: ed.sortDropdownText,
                         variant: 'text-sm/medium',
                         color: 'interactive-normal',
-                        children: n ? eo.Z.Messages.MEDIA_CHANNEL_SORT : eo.Z.Messages.FORUM_CHANNEL_SORT_AND_VIEW
+                        children: n ? ec.intl.string(ec.t.JxU0ws) : ec.intl.string(ec.t.xyYt8P)
                     }),
-                    s
-                        ? (0, a.jsx)(x.ChevronSmallUpIcon, {
+                    i
+                        ? (0, a.jsx)(f.ChevronSmallUpIcon, {
                               size: 'custom',
                               color: 'currentColor',
                               width: 20
                           })
-                        : (0, a.jsx)(x.ChevronSmallDownIcon, {
+                        : (0, a.jsx)(f.ChevronSmallDownIcon, {
                               size: 'custom',
                               color: 'currentColor',
                               width: 20

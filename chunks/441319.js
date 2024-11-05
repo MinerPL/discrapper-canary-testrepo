@@ -1,16 +1,17 @@
 n.d(t, {
     M9: function () {
-        return L;
+        return R;
     },
-    QA: function () {
-        return M;
+    aW: function () {
+        return D;
     },
-    UZ: function () {
-        return b;
+    wu: function () {
+        return O;
     }
-});
-var r = n(392711),
-    i = n.n(r),
+}),
+    n(47120);
+var r = n(997945),
+    i = n(388032),
     a = n(105797),
     s = n(63725),
     o = n(924997),
@@ -18,164 +19,165 @@ var r = n(392711),
     u = n(749834),
     c = n(760260),
     d = n(448578),
-    _ = n(946185),
-    E = n(480423),
-    f = n(273593),
-    h = n(665801),
-    p = n(818143),
-    m = n(666475),
-    I = n(591304),
-    T = n(73375),
-    g = n(328664),
+    f = n(946185),
+    _ = n(480423),
+    h = n(273593),
+    p = n(665801),
+    m = n(818143),
+    g = n(666475),
+    E = n(591304),
+    v = n(73375),
+    I = n(328664),
     S = n(328259),
-    A = n(19009),
-    N = n(234912),
-    v = n(405571),
-    O = n(730886),
-    R = n(473974),
-    C = n(563856),
-    y = n(997945),
-    D = n(689938);
-let L = 60,
-    b = [
+    T = n(19009),
+    b = n(234912),
+    y = n(405571),
+    A = n(730886),
+    N = n(473974),
+    C = n(563856);
+let R = 60;
+function O() {
+    return [
         {
-            id: y.aH.DEFAULT,
+            id: r.aH.DEFAULT,
             iconSource: s,
-            name: D.Z.Messages.APP_ICON_DEFAULT,
+            name: i.intl.string(i.t.ANxkLy),
             isPremium: !1
-        }
-    ].concat([
+        },
         {
-            id: y.Ru.BRAND_DARK,
+            id: r.Ru.BRAND_DARK,
             iconSource: c,
-            name: D.Z.Messages.APP_ICON_BRAND_DARK,
+            name: i.intl.string(i.t.gZEUBg),
             isPremium: !0
         },
         {
-            id: y.Ru.MANGA,
-            iconSource: g,
-            isPremium: !0,
-            name: D.Z.Messages.APP_ICON_MANGA
-        },
-        {
-            id: y.Ru.MATTE_DARK,
-            iconSource: S,
-            isPremium: !0,
-            name: D.Z.Messages.APP_ICON_MATTE_DARK
-        },
-        {
-            id: y.Ru.MATTE_LIGHT,
-            iconSource: A,
-            name: D.Z.Messages.APP_ICON_MATTE_LIGHT,
-            isPremium: !0
-        },
-        {
-            id: y.Ru.PASTEL,
-            iconSource: v,
-            isPremium: !0,
-            name: D.Z.Messages.APP_ICON_PASTEL
-        },
-        {
-            id: y.Ru.PIRATE,
-            iconSource: O,
-            isPremium: !0,
-            name: D.Z.Messages.APP_ICON_PIRATE
-        },
-        {
-            id: y.Ru.CAMO,
-            iconSource: d,
-            isPremium: !0,
-            name: D.Z.Messages.APP_ICON_CAMO
-        },
-        {
-            id: y.Ru.SUNSET,
-            iconSource: R,
-            isPremium: !0,
-            name: D.Z.Messages.APP_ICON_SUNSET
-        },
-        {
-            id: y.Ru.GALAXY,
-            iconSource: p,
-            isPremium: !0,
-            name: D.Z.Messages.APP_ICON_GALAXY
-        },
-        {
-            id: y.Ru.Y2K,
-            iconSource: C,
-            isPremium: !0,
-            name: D.Z.Messages.APP_ICON_Y2K
-        },
-        {
-            id: y.Ru.CHERRY_BLOSSOM,
-            iconSource: _,
-            isPremium: !0,
-            name: D.Z.Messages.APP_ICON_CHERRY_BLOSSOM
-        },
-        {
-            id: y.Ru.BEANIE,
-            iconSource: o,
-            isPremium: !0,
-            name: D.Z.Messages.APP_ICON_BEANIE
-        },
-        {
-            id: y.Ru.GAMING,
-            iconSource: m,
-            isPremium: !0,
-            name: D.Z.Messages.APP_ICON_GAMING
-        },
-        {
-            id: y.Ru.CIRCUIT,
-            iconSource: E,
-            isPremium: !0,
-            name: D.Z.Messages.APP_ICON_CIRCUIT
-        },
-        {
-            id: y.Ru.HOLO_WAVES,
+            id: r.Ru.MANGA,
             iconSource: I,
             isPremium: !0,
-            name: D.Z.Messages.APP_ICON_HOLO_WAVES
+            name: i.intl.string(i.t.hGBbFx)
         },
         {
-            id: y.Ru.BLUSH,
-            iconSource: u,
+            id: r.Ru.MATTE_DARK,
+            iconSource: S,
             isPremium: !0,
-            name: D.Z.Messages.APP_ICON_BLUSH
+            name: i.intl.string(i.t.NkshQk)
         },
         {
-            id: y.Ru.ANGRY,
-            iconSource: a,
-            isPremium: !0,
-            name: D.Z.Messages.APP_ICON_ANGRY
-        },
-        {
-            id: y.Ru.CONTROLLER,
-            iconSource: h,
-            isPremium: !0,
-            name: D.Z.Messages.APP_ICON_CONTROLLER
-        },
-        {
-            id: y.Ru.BLURPLE_TWILIGHT,
-            iconSource: l,
-            isPremium: !0,
-            name: D.Z.Messages.CLIENT_THEMES_GRADIENT_BLURPLE_TWILIGHT
-        },
-        {
-            id: y.Ru.IN_RAINBOWS,
+            id: r.Ru.MATTE_LIGHT,
             iconSource: T,
-            isPremium: !0,
-            name: D.Z.Messages.APP_ICON_IN_RAINBOWS
+            name: i.intl.string(i.t.G2W309),
+            isPremium: !0
         },
         {
-            id: y.Ru.MIDNIGHT_PRISM,
+            id: r.Ru.PASTEL,
+            iconSource: y,
+            isPremium: !0,
+            name: i.intl.string(i.t.mTSkLS)
+        },
+        {
+            id: r.Ru.PIRATE,
+            iconSource: A,
+            isPremium: !0,
+            name: i.intl.string(i.t.EgWTY2)
+        },
+        {
+            id: r.Ru.CAMO,
+            iconSource: d,
+            isPremium: !0,
+            name: i.intl.string(i.t.RSKXOD)
+        },
+        {
+            id: r.Ru.SUNSET,
             iconSource: N,
             isPremium: !0,
-            name: D.Z.Messages.APP_ICON_MIDNIGHT_PRISM
+            name: i.intl.string(i.t.ixdjPD)
         },
         {
-            id: y.Ru.COLOR_WAVE,
+            id: r.Ru.GALAXY,
+            iconSource: m,
+            isPremium: !0,
+            name: i.intl.string(i.t.cb78Li)
+        },
+        {
+            id: r.Ru.Y2K,
+            iconSource: C,
+            isPremium: !0,
+            name: i.intl.string(i.t['s+KoXF'])
+        },
+        {
+            id: r.Ru.CHERRY_BLOSSOM,
             iconSource: f,
             isPremium: !0,
-            name: D.Z.Messages.APP_ICON_COLOR_WAVE
+            name: i.intl.string(i.t['ta/5RE'])
+        },
+        {
+            id: r.Ru.BEANIE,
+            iconSource: o,
+            isPremium: !0,
+            name: i.intl.string(i.t.IoLVi4)
+        },
+        {
+            id: r.Ru.GAMING,
+            iconSource: g,
+            isPremium: !0,
+            name: i.intl.string(i.t['2Tf+c3'])
+        },
+        {
+            id: r.Ru.CIRCUIT,
+            iconSource: _,
+            isPremium: !0,
+            name: i.intl.string(i.t.dUpxKS)
+        },
+        {
+            id: r.Ru.HOLO_WAVES,
+            iconSource: E,
+            isPremium: !0,
+            name: i.intl.string(i.t['9mg7g4'])
+        },
+        {
+            id: r.Ru.BLUSH,
+            iconSource: u,
+            isPremium: !0,
+            name: i.intl.string(i.t.nmd90t)
+        },
+        {
+            id: r.Ru.ANGRY,
+            iconSource: a,
+            isPremium: !0,
+            name: i.intl.string(i.t['9PUXpK'])
+        },
+        {
+            id: r.Ru.CONTROLLER,
+            iconSource: p,
+            isPremium: !0,
+            name: i.intl.string(i.t['4QM2U1'])
+        },
+        {
+            id: r.Ru.BLURPLE_TWILIGHT,
+            iconSource: l,
+            isPremium: !0,
+            name: i.intl.string(i.t.Mfoe3t)
+        },
+        {
+            id: r.Ru.IN_RAINBOWS,
+            iconSource: v,
+            isPremium: !0,
+            name: i.intl.string(i.t.yxJB9P)
+        },
+        {
+            id: r.Ru.MIDNIGHT_PRISM,
+            iconSource: b,
+            isPremium: !0,
+            name: i.intl.string(i.t.nshUZW)
+        },
+        {
+            id: r.Ru.COLOR_WAVE,
+            iconSource: h,
+            isPremium: !0,
+            name: i.intl.string(i.t.MWRYqq)
         }
-    ]),
-    M = i().keyBy(b, 'id');
+    ];
+}
+function D(e) {
+    return O().find((t) => t.id === e);
+}

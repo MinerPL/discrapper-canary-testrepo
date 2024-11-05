@@ -3,6 +3,7 @@ e.exports = {
     icon: 'icon_f9d37d',
     hover: 'hover_f9d37d',
     banner: 'banner_f9d37d',
+    textBanner: 'textBanner_f9d37d',
     visible: 'visible_f9d37d',
     buttonInner: 'buttonInner_f9d37d',
     themeColor: 'themeColor_f9d37d',

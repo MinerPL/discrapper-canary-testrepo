@@ -1,35 +1,39 @@
 n.d(t, {
     K: function () {
-        return o;
+        return c;
     }
-});
-var r = n(735250);
-n(470079);
-var i = n(803997),
-    a = n.n(i),
-    s = n(534493);
-function o(e) {
-    let { gap: t = 8, direction: n = 'vertical', align: i = 'stretch', justify: o = 'start', padding: l = 0, style: u, className: c, children: d, ..._ } = e;
-    return (0, r.jsx)('div', {
-        'data-align': i,
-        'data-justify': o,
-        'data-direction': n,
-        className: a()(s.stack, c),
-        style: {
-            ...u,
-            ...(function (e) {
-                return 'number' == typeof e
-                    ? { padding: e }
-                    : {
-                          paddingLeft: e.left,
-                          paddingRight: e.right,
-                          paddingTop: e.top,
-                          paddingBottom: e.bottom
-                      };
-            })(l),
-            gap: t
-        },
-        ..._,
-        children: d
-    });
-}
+}),
+    n(724458),
+    n(47120);
+var r = n(200651),
+    i = n(192379),
+    a = n(803997),
+    s = n.n(a),
+    o = n(530892),
+    l = n.n(o),
+    u = n(534493);
+let c = i.forwardRef(function (e, t) {
+        let { as: n = 'div', gap: i = 8, direction: a = 'vertical', align: o = 'stretch', justify: l = 'start', padding: c = 0, style: _, className: h, children: p, ...m } = e;
+        return (0, r.jsx)(n, {
+            ref: t,
+            'data-align': o,
+            'data-justify': l,
+            'data-direction': a,
+            className: s()(u.stack, h),
+            style: {
+                ..._,
+                gap: d(i),
+                ...f(c)
+            },
+            ...m,
+            children: p
+        });
+    }),
+    d = (e) => 'var(--space-'.concat(e, ')'),
+    f = (e) =>
+        'number' == typeof e || 'string' == typeof e
+            ? { padding: d(e) }
+            : Object.entries(e).reduce((e, t) => {
+                  let [n, r] = t;
+                  return (e['padding'.concat(l()(n))] = d(r)), e;
+              }, {});

@@ -17,7 +17,5 @@ e.exports = {
     keybind: 'keybind_f6b647',
     hintSubtleText: 'hintSubtleText_f6b647',
     themePrimary: 'themePrimary_f6b647',
-    themeBrand: 'themeBrand_f6b647',
-    innerText: 'innerText_f6b647',
-    themeDanger: 'themeDanger_f6b647'
+    innerText: 'innerText_f6b647'
 };

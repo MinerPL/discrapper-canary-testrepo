@@ -1,45 +1,72 @@
-a.r(t),
-    a.d(t, {
+t.r(n),
+    t.d(n, {
         default: function () {
-            return u;
+            return x;
         }
-    });
-var s = a(735250);
-a(470079);
-var n = a(481060),
-    o = a(287734),
-    d = a(594174),
-    r = a(33194),
-    i = a(807031),
-    l = a(343544),
-    c = a(689938);
-function u(e) {
-    let { channelId: t, blockedUserId: a, transitionState: u, onClose: _ } = e;
-    if (!(0, i.w)({ location: 'warning_modal' })) return null;
-    let m = d.default.getUser(a),
+    }),
+    t(47120);
+var r = t(200651);
+t(192379);
+var i = t(990547),
+    s = t(481060),
+    a = t(594174),
+    o = t(626135),
+    l = t(33194),
+    c = t(807031),
+    d = t(343544),
+    u = t(110223),
+    _ = t(981631),
+    m = t(388032);
+function x(e) {
+    let { channelId: n, blockedUserIds: t, transitionState: x, onClose: N, onJoin: f } = e;
+    if (!(0, c.KR)({ location: 'warning_modal' })) return null;
+    let h = t.size > 1,
         g = [
             {
-                icon: (0, s.jsx)(n.UserIcon, {}),
-                text: c.Z.Messages.VOICE_CHANNEL_BLOCKED_USER_WARNING_PRESENCE.format({ userName: null == m ? void 0 : m.username })
+                icon: h ? (0, r.jsx)(s.GroupIcon, {}) : (0, r.jsx)(s.UserIcon, {}),
+                text: h ? m.intl.formatToPlainString(m.t.Zqlt5e, { blockedUserCount: t.size }) : m.intl.formatToPlainString(m.t.V0aCFx, { userName: a.default.getUser([...t][0]) })
             },
             {
-                icon: (0, s.jsx)(n.MicrophoneIcon, {}),
-                text: c.Z.Messages.VOICE_CHANNEL_BLOCKED_USER_AUDIBLE
+                icon: (0, r.jsx)(s.MicrophoneIcon, {}),
+                text: m.intl.string(m.t['7jN3FB'])
             }
         ];
-    return (0, s.jsx)(l.Z, {
-        headerText: c.Z.Messages.VOICE_CHANNEL_BLOCKED_USER_WARNING_ALERT,
-        descriptionText: c.Z.Messages.VOICE_CHANNEL_BLOCKED_USER_WARNING_DESCRIPTION,
+    return (0, r.jsx)(d.Z, {
+        headerText: h ? m.intl.string(m.t.aJRlSU) : m.intl.string(m.t.rlBMub),
+        secondaryHeaderText: m.intl.string(m.t.zPUmzc),
+        descriptionText: m.intl.string(m.t.K8YIgY),
         infoRows: g,
         onDismissAndStay: () => {
-            _(), (0, r.g6)(t);
+            f(),
+                N(),
+                (0, l.g6)(n),
+                o.default.track(_.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    action: u.q.CLICK_TO_JOIN,
+                    channel_id: n,
+                    blocked_user_ids: Array.from(t),
+                    warning_surface: u.fz.PRE_JOIN_MODAL
+                });
         },
         onDismissAndLeave: () => {
-            _(), o.default.disconnect();
+            N(),
+                o.default.track(_.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                    action: u.q.CLICK_TO_LEAVE,
+                    channel_id: n,
+                    blocked_user_ids: Array.from(t),
+                    warning_surface: u.fz.PRE_JOIN_MODAL
+                });
         },
-        leaveButtonText: c.Z.Messages.VOICE_CHANNEL_BLOCKED_USER_WARNING_LEAVE,
-        stayButtonText: c.Z.Messages.VOICE_CHANNEL_BLOCKED_USER_WARNING_STAY,
-        transitionState: u,
-        onClose: _
+        leaveButtonText: m.intl.string(m.t.Trz9Ji),
+        stayButtonText: m.intl.string(m.t.kiODyM),
+        transitionState: x,
+        onClose: N,
+        impression: {
+            impressionName: i.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING,
+            impressionProperties: {
+                channel_id: n,
+                blocked_user_ids: Array.from(t),
+                warning_surface: u.fz.PRE_JOIN_MODAL
+            }
+        }
     });
 }

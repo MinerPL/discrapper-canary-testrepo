@@ -1,1 +1,22 @@
-e.exports = '/assets/bf4ee351256f5df71303.svg';
+e.exports = {
+    userProfileOuter: 'userProfileOuter_c69a7b',
+    userPanelOuter: 'userPanelOuter_c69a7b',
+    biteSizeOuter: 'biteSizeOuter_c69a7b userPopoutOuter_c69a7b userProfileOuter_c69a7b',
+    fullSizeOuter: 'fullSizeOuter_c69a7b userProfileOuter_c69a7b',
+    userProfileOuterThemed: 'userProfileOuterThemed_c69a7b',
+    userProfileOuterUnthemed: 'userProfileOuterUnthemed_c69a7b',
+    userProfileInner: 'userProfileInner_c69a7b',
+    biteSizeInner: 'biteSizeInner_c69a7b userProfileInner_c69a7b',
+    userProfileModalInner: 'userProfileModalInner_c69a7b userProfileInner_c69a7b',
+    userPanelInner: 'userPanelInner_c69a7b userProfileInner_c69a7b',
+    userPanelInnerThemed: 'userPanelInnerThemed_c69a7b',
+    userProfileInnerThemedWithBanner: 'userProfileInnerThemedWithBanner_c69a7b',
+    userProfileInnerThemedPremiumWithoutBanner: 'userProfileInnerThemedPremiumWithoutBanner_c69a7b',
+    userProfileInnerThemedNonPremium: 'userProfileInnerThemedNonPremium_c69a7b',
+    biteSizeInnerThemed: 'biteSizeInnerThemed_c69a7b',
+    fullSizeInnerThemed: 'fullSizeInnerThemed_c69a7b',
+    overlayBackground: 'overlayBackground_c69a7b',
+    biteSizeOverlayBackground: 'biteSizeOverlayBackground_c69a7b overlayBackground_c69a7b',
+    fullSizeOverlayBackground: 'fullSizeOverlayBackground_c69a7b overlayBackground_c69a7b',
+    showOutOfBoundaryComponents: 'showOutOfBoundaryComponents_c69a7b'
+};

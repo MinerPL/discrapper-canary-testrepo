@@ -1,1 +1,4 @@
-e.exports = '/assets/a213fd8e05e371347a55.svg';
+e.exports = {
+    wrapper: 'wrapper_ce502a',
+    badge: 'badge_ce502a'
+};

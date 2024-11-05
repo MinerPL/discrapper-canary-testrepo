@@ -1,66 +1,71 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return g;
     }
 }),
     n(47120);
-var i = n(735250),
-    a = n(470079),
+var o = n(200651),
+    r = n(192379),
     s = n(120356),
-    r = n.n(s),
-    l = n(617136),
-    o = n(113434),
+    a = n.n(s),
+    i = n(617136),
+    l = n(113434),
     c = n(497505),
     d = n(602667),
     u = n(439826),
-    _ = n(43779),
-    h = n(981631),
-    E = n(882442);
-function m(e) {
-    let { quest: t, className: n, questContent: s, contentPosition: m, rowIndex: I } = e,
-        [g, p] = a.useState(!1),
-        [T, S] = a.useState([]),
-        f = (0, o.qb)(t),
-        C = a.useCallback(() => {
-            p(!0),
-                (0, l.dA)({
+    p = n(43779),
+    m = n(981631),
+    x = n(968470);
+function g(e) {
+    let { quest: t, className: n, questContent: s, contentPosition: g, rowIndex: f } = e,
+        [h, C] = r.useState(!1),
+        [v, j] = r.useState([]),
+        _ = (0, l.qb)(t),
+        E = r.useCallback(() => {
+            C(!0),
+                (0, i.dA)({
                     questId: t.id,
-                    event: h.rMx.QUEST_HOVER,
-                    properties: (0, l.mH)(s)
+                    event: m.rMx.QUEST_HOVER,
+                    properties: (0, i.mH)(s)
                 });
-        }, [p, s, t.id]),
-        N = a.useCallback(() => {
-            p(!1);
-        }, [p]);
-    return (0, i.jsx)(d.A, {
+        }, [C, s, t.id]),
+        b = r.useCallback(() => {
+            C(!1),
+                (0, i.dA)({
+                    questId: t.id,
+                    event: m.rMx.QUEST_HOVER_OFF,
+                    properties: (0, i.mH)(s)
+                });
+        }, [C, s, t.id]);
+    return (0, o.jsx)(d.A, {
         questOrQuests: t,
         questContent: s,
-        questContentPosition: m,
-        questContentRowIndex: I,
+        questContentPosition: g,
+        questContentRowIndex: f,
         trackGuildAndChannelMetadata: s === c.jn.QUESTS_EMBED,
         children: (e) =>
-            (0, i.jsxs)('div', {
+            (0, o.jsxs)('div', {
                 id: 'quest-tile-'.concat(t.id),
                 ref: (t) => {
                     e.current = t;
                 },
-                className: r()(E.container, n),
-                onMouseEnter: C,
-                onMouseLeave: N,
+                className: a()(x.container, n),
+                onMouseEnter: E,
+                onMouseLeave: b,
                 children: [
-                    (0, i.jsx)(u.Z, {
+                    (0, o.jsx)(u.Z, {
                         quest: t,
-                        isHovering: g,
-                        errorHints: T,
-                        warningHints: f
+                        isHovering: h,
+                        errorHints: v,
+                        warningHints: _
                     }),
-                    (0, i.jsx)(_.Z, {
+                    (0, o.jsx)(p.Z, {
                         quest: t,
                         questContent: s,
-                        isHovering: g,
-                        contentPosition: m,
-                        rowIndex: I,
-                        onReceiveErrorHints: S
+                        isHovering: h,
+                        contentPosition: g,
+                        rowIndex: f,
+                        onReceiveErrorHints: j
                     })
                 ]
             })

@@ -24,8 +24,12 @@ e.exports = {
     pill: 'pill_c21997',
     cardHeading: 'cardHeading_c21997',
     cardSubtitle: 'cardSubtitle_c21997',
+    imageOverlayTextContainer: 'imageOverlayTextContainer_c21997',
+    imageOverlayText: 'imageOverlayText_c21997',
     cardIllustrationNoHover: 'cardIllustrationNoHover_c21997',
+    greyScaleFilter: 'greyScaleFilter_c21997',
     above: 'above_c21997',
     below: 'below_c21997',
-    topCover: 'topCover_c21997'
+    topCover: 'topCover_c21997',
+    relative: 'relative_c21997'
 };

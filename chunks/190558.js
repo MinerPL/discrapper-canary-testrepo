@@ -1,6 +1,6 @@
 r.d(t, {
     V: function () {
-        return o;
+        return _;
     }
 });
 let { Themes: n } = r(15202).V,
@@ -199,6 +199,63 @@ let { Themes: n } = r(15202).V,
                     lightness: 0.75,
                     saturation: '*1.2'
                 }
+            }
+        },
+        BACKGROUND_BASE_LOW: {
+            category: 'background',
+            [n.DARK]: {
+                raw: 'NEUTRAL_68',
+                opacity: 1
+            },
+            [n.LIGHT]: {
+                raw: 'NEUTRAL_92',
+                opacity: 1
+            },
+            [n.MIDNIGHT]: {
+                raw: 'NEUTRAL_1',
+                opacity: 1
+            },
+            [n.DARKER]: {
+                raw: 'NEUTRAL_80',
+                opacity: 1
+            }
+        },
+        BACKGROUND_BASE_LOWER: {
+            category: 'background',
+            [n.DARK]: {
+                raw: 'NEUTRAL_68',
+                opacity: 1
+            },
+            [n.LIGHT]: {
+                raw: 'NEUTRAL_84',
+                opacity: 1
+            },
+            [n.MIDNIGHT]: {
+                raw: 'NEUTRAL_1',
+                opacity: 1
+            },
+            [n.DARKER]: {
+                raw: 'NEUTRAL_76',
+                opacity: 1
+            }
+        },
+        BACKGROUND_BASE_LOWEST: {
+            category: 'background',
+            [n.DARK]: {
+                raw: 'NEUTRAL_68',
+                opacity: 1
+            },
+            [n.LIGHT]: {
+                raw: 'NEUTRAL_92',
+                opacity: 1
+            },
+            [n.MIDNIGHT]: {
+                raw: 'NEUTRAL_1',
+                opacity: 1
+            },
+            [n.DARKER]: {
+                raw: 'NEUTRAL_84',
+                opacity: 1
             }
         },
         BACKGROUND_FLOATING: {
@@ -602,6 +659,63 @@ let { Themes: n } = r(15202).V,
                 }
             }
         },
+        BACKGROUND_SURFACE_HIGH: {
+            category: 'background',
+            [n.DARK]: {
+                raw: 'NEUTRAL_64',
+                opacity: 1
+            },
+            [n.LIGHT]: {
+                raw: 'NEUTRAL_4',
+                opacity: 1
+            },
+            [n.MIDNIGHT]: {
+                raw: 'NEUTRAL_88',
+                opacity: 1
+            },
+            [n.DARKER]: {
+                raw: 'NEUTRAL_72',
+                opacity: 1
+            }
+        },
+        BACKGROUND_SURFACE_HIGHER: {
+            category: 'background',
+            [n.DARK]: {
+                raw: 'NEUTRAL_60',
+                opacity: 1
+            },
+            [n.LIGHT]: {
+                raw: 'NEUTRAL_1',
+                opacity: 1
+            },
+            [n.MIDNIGHT]: {
+                raw: 'NEUTRAL_84',
+                opacity: 1
+            },
+            [n.DARKER]: {
+                raw: 'NEUTRAL_68',
+                opacity: 1
+            }
+        },
+        BACKGROUND_SURFACE_HIGHEST: {
+            category: 'background',
+            [n.DARK]: {
+                raw: 'NEUTRAL_56',
+                opacity: 1
+            },
+            [n.LIGHT]: {
+                raw: 'NEUTRAL_1',
+                opacity: 1
+            },
+            [n.MIDNIGHT]: {
+                raw: 'NEUTRAL_80',
+                opacity: 1
+            },
+            [n.DARKER]: {
+                raw: 'NEUTRAL_64',
+                opacity: 1
+            }
+        },
         BACKGROUND_TERTIARY: {
             category: 'background',
             [n.DARK]: {
@@ -965,7 +1079,7 @@ let { Themes: n } = r(15202).V,
         BG_SURFACE_RAISED: {
             category: 'background',
             [n.DARK]: {
-                raw: 'PRIMARY_600',
+                raw: 'PRIMARY_560',
                 opacity: 1
             },
             [n.LIGHT]: {
@@ -6747,7 +6861,7 @@ let { Themes: n } = r(15202).V,
             }
         }
     },
-    o = {
+    _ = {
         SemanticColors: a,
         RawColors: {
             APPLICATION_SUBSCRIPTION_END: '#0177a4',
@@ -6758,8 +6872,8 @@ let { Themes: n } = r(15202).V,
             BG_GRADIENT_AURORA_3: '#13929a',
             BG_GRADIENT_AURORA_4: '#218573',
             BG_GRADIENT_AURORA_5: '#051a81',
-            BG_GRADIENT_BLURPLE_TWILIGHT_1: '#2C3FE7',
-            BG_GRADIENT_BLURPLE_TWILIGHT_2: '#261D83',
+            BG_GRADIENT_BLURPLE_TWILIGHT_1: '#2c3fe7',
+            BG_GRADIENT_BLURPLE_TWILIGHT_2: '#261d83',
             BG_GRADIENT_CHROMA_GLOW_1: '#0eb5bf',
             BG_GRADIENT_CHROMA_GLOW_2: '#4c0ce0',
             BG_GRADIENT_CHROMA_GLOW_3: '#a308a7',
@@ -6770,7 +6884,7 @@ let { Themes: n } = r(15202).V,
             BG_GRADIENT_COTTON_CANDY_1: '#f4abb8',
             BG_GRADIENT_COTTON_CANDY_2: '#b1c2fc',
             BG_GRADIENT_CRIMSON_MOON_1: '#950909',
-            BG_GRADIENT_CRIMSON_MOON_2: '#000000',
+            BG_GRADIENT_CRIMSON_MOON_2: '#000',
             BG_GRADIENT_DESERT_KHAKI_1: '#e7dbd0',
             BG_GRADIENT_DESERT_KHAKI_2: '#dfd0b2',
             BG_GRADIENT_DESERT_KHAKI_3: '#e0d6a3',
@@ -6817,33 +6931,33 @@ let { Themes: n } = r(15202).V,
             BG_GRADIENT_UNDER_THE_SEA_1: '#647962',
             BG_GRADIENT_UNDER_THE_SEA_2: '#588575',
             BG_GRADIENT_UNDER_THE_SEA_3: '#6a8482',
-            BLACK: '#000000',
+            BLACK: '#000',
             BLACK_100: '#f2f2f2',
             BLACK_130: '#e8e8e8',
             BLACK_160: '#dadada',
-            BLACK_200: '#cccccc',
+            BLACK_200: '#ccc',
             BLACK_230: '#bdbdbd',
             BLACK_260: '#acacac',
-            BLACK_300: '#999999',
+            BLACK_300: '#999',
             BLACK_330: '#7a7a7a',
-            BLACK_345: '#666666',
+            BLACK_345: '#666',
             BLACK_360: '#5c5c5c',
-            BLACK_400: '#333333',
+            BLACK_400: '#333',
             BLACK_430: '#252525',
             BLACK_460: '#141414',
-            BLACK_500: '#000000',
-            BLACK_530: '#000000',
-            BLACK_560: '#000000',
-            BLACK_600: '#000000',
-            BLACK_630: '#000000',
-            BLACK_660: '#000000',
-            BLACK_700: '#000000',
-            BLACK_730: '#000000',
-            BLACK_760: '#000000',
-            BLACK_800: '#000000',
-            BLACK_830: '#000000',
-            BLACK_860: '#000000',
-            BLACK_900: '#000000',
+            BLACK_500: '#000',
+            BLACK_530: '#000',
+            BLACK_560: '#000',
+            BLACK_600: '#000',
+            BLACK_630: '#000',
+            BLACK_660: '#000',
+            BLACK_700: '#000',
+            BLACK_730: '#000',
+            BLACK_760: '#000',
+            BLACK_800: '#000',
+            BLACK_830: '#000',
+            BLACK_860: '#000',
+            BLACK_900: '#000',
             BLUE_100: '#f6fafe',
             BLUE_130: '#f0f7fe',
             BLUE_160: '#e2f0fd',
@@ -6870,6 +6984,10 @@ let { Themes: n } = r(15202).V,
             BLUE_830: '#001630',
             BLUE_860: '#00132b',
             BLUE_900: '#001024',
+            BLUE_NEW_37: '#5398ed',
+            BLUE_NEW_44: '#2e83e7',
+            BLUE_NEW_45: '#2880e6',
+            BLUE_NEW_55: '#0a68c8',
             BRAND_100: '#f7f7fe',
             BRAND_130: '#f0f1fe',
             BRAND_160: '#e7e9fd',
@@ -6929,6 +7047,10 @@ let { Themes: n } = r(15202).V,
             GREEN_830: '#031b0a',
             GREEN_860: '#041708',
             GREEN_900: '#051307',
+            GREEN_NEW_35: '#60aa6c',
+            GREEN_NEW_42: '#3c9852',
+            GREEN_NEW_43: '#37964f',
+            GREEN_NEW_56: '#0d7534',
             GUILD_BOOSTING_BLUE: '#3e70dd',
             GUILD_BOOSTING_BLUE_FOR_GRADIENTS: '#3442d9',
             GUILD_BOOSTING_PINK: '#ff73fa',
@@ -6939,6 +7061,66 @@ let { Themes: n } = r(15202).V,
             HYPESQUAD_HOUSE_3: '#45ddc0',
             INPUT_PLACEHOLDER_TEXT_DARK: '#87898c',
             LOL: '#021f25',
+            NEUTRAL_1: '#fff',
+            NEUTRAL_100: '#000',
+            NEUTRAL_22: '#aeaeb4',
+            NEUTRAL_24: '#a7a7ad',
+            NEUTRAL_26: '#9f9fa6',
+            NEUTRAL_27: '#9c9ca3',
+            NEUTRAL_3: '#f7f7f8',
+            NEUTRAL_30: '#919199',
+            NEUTRAL_33: '#86868e',
+            NEUTRAL_35: '#7f7f88',
+            NEUTRAL_36: '#7c7c84',
+            NEUTRAL_4: '#f3f3f4',
+            NEUTRAL_41: '#6a6a74',
+            NEUTRAL_5: '#efeff0',
+            NEUTRAL_55: '#484851',
+            NEUTRAL_56: '#46474f',
+            NEUTRAL_60: '#404048',
+            NEUTRAL_64: '#3a3a41',
+            NEUTRAL_68: '#34343a',
+            NEUTRAL_7: '#e7e7e9',
+            NEUTRAL_72: '#2e2e34',
+            NEUTRAL_73: '#2d2d32',
+            NEUTRAL_75: '#2a2a2f',
+            NEUTRAL_76: '#28282d',
+            NEUTRAL_8: '#e3e3e6',
+            NEUTRAL_80: '#232327',
+            NEUTRAL_84: '#1d1d21',
+            NEUTRAL_88: '#18181b',
+            NEUTRAL_89: '#161619',
+            NEUTRAL_90: '#151518',
+            NEUTRAL_91: '#131416',
+            NEUTRAL_92: '#121214',
+            NEUTRAL_93: '#101012',
+            NEUTRAL_94: '#0e0e10',
+            NEUTRAL_95: '#0c0c0e',
+            OPACITY_1: '#97979f03',
+            OPACITY_10: '#97979f5c',
+            OPACITY_11: '#97979f66',
+            OPACITY_12: '#97979f70',
+            OPACITY_13: '#97979f7a',
+            OPACITY_14: '#97979f85',
+            OPACITY_15: '#97979f8f',
+            OPACITY_16: '#97979f99',
+            OPACITY_17: '#97979fa3',
+            OPACITY_18: '#97979fad',
+            OPACITY_19: '#97979fb8',
+            OPACITY_2: '#97979f0a',
+            OPACITY_20: '#97979fc2',
+            OPACITY_21: '#97979fcc',
+            OPACITY_22: '#97979fd6',
+            OPACITY_23: '#97979fe0',
+            OPACITY_24: '#97979feb',
+            OPACITY_25: '#97979ff5',
+            OPACITY_3: '#97979f14',
+            OPACITY_4: '#97979f1f',
+            OPACITY_5: '#97979f29',
+            OPACITY_6: '#97979f33',
+            OPACITY_7: '#97979f3d',
+            OPACITY_8: '#97979f47',
+            OPACITY_9: '#97979f52',
             ORANGE_100: '#fff8f5',
             ORANGE_130: '#fff4ed',
             ORANGE_160: '#feeadf',
@@ -6968,7 +7150,7 @@ let { Themes: n } = r(15202).V,
             PARTNER: '#4087ed',
             PAYPAL: '#13216b',
             PLAYSTATION: '#032f87',
-            PLUM_23_ALPHA: '#BCBCF0',
+            PLUM_23_ALPHA: '#bcbcf01a',
             PLUM_0: '#f9f9fa',
             PLUM_1: '#f3f3f4',
             PLUM_10: '#818491',
@@ -7135,30 +7317,30 @@ let { Themes: n } = r(15202).V,
             TEAL_830: '#02191d',
             TEAL_860: '#021619',
             TEAL_900: '#011215',
-            TRANSPARENT: '#00000000',
+            TRANSPARENT: '#0000',
             TWITCH: '#593695',
             TWITTER: '#1da1f2',
-            WHITE: '#ffffff',
-            WHITE_100: '#ffffff',
-            WHITE_130: '#ffffff',
-            WHITE_160: '#ffffff',
-            WHITE_200: '#ffffff',
-            WHITE_230: '#ffffff',
-            WHITE_260: '#ffffff',
-            WHITE_300: '#ffffff',
-            WHITE_330: '#ffffff',
-            WHITE_345: '#ffffff',
-            WHITE_360: '#ffffff',
-            WHITE_400: '#ffffff',
-            WHITE_430: '#ffffff',
-            WHITE_460: '#ffffff',
-            WHITE_500: '#ffffff',
+            WHITE: '#fff',
+            WHITE_100: '#fff',
+            WHITE_130: '#fff',
+            WHITE_160: '#fff',
+            WHITE_200: '#fff',
+            WHITE_230: '#fff',
+            WHITE_260: '#fff',
+            WHITE_300: '#fff',
+            WHITE_330: '#fff',
+            WHITE_345: '#fff',
+            WHITE_360: '#fff',
+            WHITE_400: '#fff',
+            WHITE_430: '#fff',
+            WHITE_460: '#fff',
+            WHITE_500: '#fff',
             WHITE_530: '#e8e8e8',
             WHITE_560: '#cfcfcf',
             WHITE_600: '#adadad',
             WHITE_630: '#969696',
             WHITE_660: '#838383',
-            WHITE_700: '#666666',
+            WHITE_700: '#666',
             WHITE_730: '#5f5f5f',
             WHITE_760: '#585858',
             WHITE_800: '#4d4d4d',
@@ -7192,6 +7374,10 @@ let { Themes: n } = r(15202).V,
             YELLOW_830: '#221302',
             YELLOW_860: '#1c1002',
             YELLOW_900: '#160e02',
+            YELLOW_NEW_37: '#bd8842',
+            YELLOW_NEW_44: '#ad7222',
+            YELLOW_NEW_45: '#aa6f1c',
+            YELLOW_NEW_52: '#9a5f02',
             YOUTUBE: '#cb2120'
         }
     };

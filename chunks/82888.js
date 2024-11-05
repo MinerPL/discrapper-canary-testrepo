@@ -1,50 +1,40 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return d;
     }
 });
-var i = n(735250),
-    a = n(470079),
-    s = n(399606),
-    l = n(110924),
-    r = n(595519),
-    o = n(566620),
-    c = n(317381),
-    u = n(917107),
-    d = n(9145),
-    h = n(918559);
-function m(e) {
+var i = n(200651);
+n(192379);
+var l = n(399606),
+    a = n(595519),
+    r = n(317381),
+    s = n(917107),
+    o = n(9145),
+    c = n(918559);
+function d(e) {
     let { maxHeight: t, renderExternalHeader: n } = e,
         {
-            connectedChannelId: m,
-            connectedActivity: p,
-            activityPanelMode: _
-        } = (0, s.cj)([c.ZP], () => {
+            connectedChannelId: d,
+            connectedActivity: u,
+            activityPanelMode: h
+        } = (0, l.cj)([r.ZP], () => {
             var e;
-            let t = c.ZP.getConnectedActivityChannelId();
+            let t = r.ZP.getConnectedActivityChannelId();
             return {
                 connectedChannelId: t,
-                connectedActivity: null != t && null !== (e = c.ZP.getSelfEmbeddedActivityForChannel(t)) && void 0 !== e ? e : void 0,
-                activityPanelMode: c.ZP.getActivityPanelMode()
+                connectedActivity: null != t && null !== (e = r.ZP.getSelfEmbeddedActivityForChannel(t)) && void 0 !== e ? e : void 0,
+                activityPanelMode: r.ZP.getActivityPanelMode()
             };
-        }),
-        E = (0, r.NX)(m, !1),
-        f = (0, l.Z)(m);
-    if (
-        (a.useEffect(() => {
-            null != m && null == f && (0, o.gC)(h.MI.RESIZABLE);
-        }, [m, f]),
-        !E)
-    )
-        return null;
-    let C = null == p ? void 0 : p.applicationId;
-    return _ !== h.Ez.PANEL || null == C
+        });
+    if (!(0, a.NX)(d)) return null;
+    let p = null == u ? void 0 : u.applicationId;
+    return h !== c.Ez.PANEL || null == p
         ? null
-        : null == m || null == p || (0, u.Z)(m) || null == C
+        : null == d || null == u || (0, s.Z)(d) || null == p
           ? null
-          : (0, i.jsx)(d.Z, {
+          : (0, i.jsx)(o.Z, {
                 maxHeight: t,
-                connectedChannelId: m,
+                connectedChannelId: d,
                 renderExternalHeader: n
             });
 }

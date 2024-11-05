@@ -1,42 +1,42 @@
 n.d(t, {
     A3: function () {
-        return T;
-    },
-    FZ: function () {
         return I;
     },
+    FZ: function () {
+        return v;
+    },
     Je: function () {
-        return A;
+        return b;
     },
     KK: function () {
         return F;
     },
     Qi: function () {
-        return k;
+        return B;
     },
     Ro: function () {
         return r;
     },
     U2: function () {
-        return S;
+        return T;
     },
     Vx: function () {
-        return P;
-    },
-    _k: function () {
-        return U;
-    },
-    _p: function () {
-        return R;
-    },
-    aq: function () {
         return M;
     },
+    _k: function () {
+        return P;
+    },
+    _p: function () {
+        return C;
+    },
+    aq: function () {
+        return w;
+    },
     cP: function () {
-        return N;
+        return y;
     },
     e9: function () {
-        return O;
+        return N;
     },
     f2: function () {
         return L;
@@ -45,16 +45,16 @@ n.d(t, {
         return G;
     },
     ge: function () {
-        return C;
+        return R;
     },
     ig: function () {
-        return g;
+        return S;
     },
     nW: function () {
-        return v;
+        return A;
     },
     rF: function () {
-        return y;
+        return O;
     },
     tb: function () {
         return D;
@@ -63,13 +63,13 @@ n.d(t, {
         return V;
     },
     vn: function () {
-        return w;
+        return k;
     },
     vx: function () {
-        return b;
+        return x;
     },
     yw: function () {
-        return B;
+        return Z;
     }
 }),
     n(411104),
@@ -81,15 +81,16 @@ var r,
     s = n.n(a);
 n(913527);
 var o = n(274136),
-    l = n(314884),
-    u = n(78839),
-    c = n(424218),
-    d = n(823379),
+    l = n(179360),
+    u = n(314884),
+    c = n(78839),
+    d = n(424218),
+    f = n(823379),
     _ = n(63063),
-    E = n(74538),
-    f = n(981631),
-    h = n(474936),
-    p = n(689938);
+    h = n(74538),
+    p = n(981631),
+    m = n(474936),
+    g = n(388032);
 Object.freeze({
     1: 1,
     2: 2,
@@ -102,231 +103,231 @@ Object.freeze({
     9: 24
 });
 ((i = r || (r = {}))[(i.EMOJI = 1)] = 'EMOJI'), (i[(i.AUDIO = 2)] = 'AUDIO'), (i[(i.ANIMATED = 3)] = 'ANIMATED'), (i[(i.CUSTOMIZATION = 4)] = 'CUSTOMIZATION'), (i[(i.UPLOAD = 5)] = 'UPLOAD'), (i[(i.VANITY = 6)] = 'VANITY'), (i[(i.STREAM = 7)] = 'STREAM'), (i[(i.STICKER = 8)] = 'STICKER'), (i[(i.CUSTOM_ROLE_ICON = 11)] = 'CUSTOM_ROLE_ICON'), (i[(i.STAGE_VIDEO = 12)] = 'STAGE_VIDEO'), (i[(i.SOUNDBOARD = 13)] = 'SOUNDBOARD');
-let m = [f.Eu4.NONE, f.Eu4.TIER_1, f.Eu4.TIER_2, f.Eu4.TIER_3],
-    I = (e, t) => {
+let E = [p.Eu4.NONE, p.Eu4.TIER_1, p.Eu4.TIER_2, p.Eu4.TIER_3],
+    v = (e, t) => {
         var n;
-        return e === f.Eu4.NONE ? f.Eu4.TIER_1 : null === (n = x(t).find((t) => t.tier === e)) || void 0 === n ? void 0 : n.nextTier;
+        return e === p.Eu4.NONE ? p.Eu4.TIER_1 : null === (n = U(t).find((t) => t.tier === e)) || void 0 === n ? void 0 : n.nextTier;
     },
-    T = (e, t) => (null != t && t.hasFeature(f.oNc.MORE_STICKERS) && e === f.Eu4.TIER_3 ? o.D.MAX_STICKER_SLOTS : h.$8[e]),
-    g = (e) => h.pH[e],
-    S = (e, t) => (null != t && t.hasFeature(f.oNc.MORE_SOUNDBOARD) ? 96 : h._k[e]),
-    A = (e) => {
-        if (e === f.Eu4.NONE) return h._k[e];
-        let t = m[m.indexOf(e) - 1];
-        return h._k[e] - h._k[t];
+    I = (e, t) => (null != t && t.hasFeature(p.oNc.MORE_STICKERS) && e === p.Eu4.TIER_3 ? o.D.MAX_STICKER_SLOTS : m.$8[e]),
+    S = (e) => m.pH[e],
+    T = (e, t) => (null != t && t.hasFeature(p.oNc.MORE_SOUNDBOARD) ? 96 : m._k[e]),
+    b = (e) => {
+        if (e === p.Eu4.NONE) return m._k[e];
+        let t = E[E.indexOf(e) - 1];
+        return m._k[e] - m._k[t];
     },
-    N = (e) => [
+    y = (e) => [
         {
-            tier: f.Eu4.TIER_1,
-            title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_TITLE_TIER_1,
+            tier: p.Eu4.TIER_1,
+            title: g.intl.string(g.t['lK+WOT']),
             perks: [
                 {
-                    title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_EMOJI.format({
-                        adding: h.HO[f.Eu4.TIER_1].limits.emoji - h.HO[f.Eu4.NONE].limits.emoji,
-                        total: h.HO[f.Eu4.TIER_1].limits.emoji
+                    title: g.intl.formatToPlainString(g.t.dnLAws, {
+                        adding: m.HO[p.Eu4.TIER_1].limits.emoji - m.HO[p.Eu4.NONE].limits.emoji,
+                        total: m.HO[p.Eu4.TIER_1].limits.emoji
                     }),
-                    description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_EMOJI,
+                    description: g.intl.string(g.t['/Guvxs']),
                     icon: 1
                 },
                 {
-                    title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
-                        adding: g(f.Eu4.TIER_1),
-                        total: T(f.Eu4.TIER_1)
+                    title: g.intl.formatToPlainString(g.t['/9p2/v'], {
+                        adding: S(p.Eu4.TIER_1),
+                        total: I(p.Eu4.TIER_1)
                     }),
-                    description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_STICKER,
+                    description: g.intl.string(g.t.JfsnDQ),
                     icon: 8
                 },
                 {
-                    title: p.Z.Messages.SOUNDBOARD_MARKETING_BOOSTING_PERKS.format({
-                        soundCount: A(f.Eu4.TIER_1),
-                        totalSoundCount: S(f.Eu4.TIER_1)
+                    title: g.intl.formatToPlainString(g.t.NRuk5u, {
+                        soundCount: b(p.Eu4.TIER_1),
+                        totalSoundCount: T(p.Eu4.TIER_1)
                     }),
-                    description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_SOUNDBOARD,
+                    description: g.intl.string(g.t.Oq7OVl),
                     icon: 13
                 },
                 {
-                    title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_AUDIO_QUALITY.format({ bitrate: h.HO[f.Eu4.TIER_1].limits.bitrate / 1000 }),
-                    description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_AUDIO_QUALITY,
+                    title: g.intl.formatToPlainString(g.t.zoT1ZG, { bitrate: m.HO[p.Eu4.TIER_1].limits.bitrate / 1000 }),
+                    description: g.intl.string(g.t['8a03jo']),
                     icon: 2
                 },
                 {
-                    title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_1_ANIMATED_GUILD_ICON,
-                    description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_ANIMATED_GUILD_ICON.format(),
+                    title: g.intl.string(g.t.h0s84e),
+                    description: g.intl.format(g.t['t+0cbm'], {}),
                     icon: 3
                 },
                 {
-                    title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_1_SPLASH,
-                    description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_SPLASH,
+                    title: g.intl.string(g.t.vjPGPj),
+                    description: g.intl.string(g.t.tG4MMT),
                     icon: 4
                 },
                 {
-                    title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_1_STREAMING,
-                    description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_STREAMING,
+                    title: g.intl.string(g.t.cObMZG),
+                    description: g.intl.string(g.t['puH/9f']),
                     icon: 7
                 }
-            ].filter(d.lm)
+            ].filter(f.lm)
         },
         {
-            tier: f.Eu4.TIER_2,
-            title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_TITLE_TIER_2,
+            tier: p.Eu4.TIER_2,
+            title: g.intl.string(g.t['34GpBQ']),
             perks: [
                 {
-                    title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_EMOJI.format({
-                        adding: h.HO[f.Eu4.TIER_2].limits.emoji - h.HO[f.Eu4.TIER_1].limits.emoji,
-                        total: h.HO[f.Eu4.TIER_2].limits.emoji
+                    title: g.intl.formatToPlainString(g.t.dnLAws, {
+                        adding: m.HO[p.Eu4.TIER_2].limits.emoji - m.HO[p.Eu4.TIER_1].limits.emoji,
+                        total: m.HO[p.Eu4.TIER_2].limits.emoji
                     }),
-                    description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_EMOJI,
+                    description: g.intl.string(g.t.fRiNh4),
                     icon: 1
                 },
                 {
-                    title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
-                        adding: g(f.Eu4.TIER_2),
-                        total: T(f.Eu4.TIER_2)
+                    title: g.intl.formatToPlainString(g.t['/9p2/v'], {
+                        adding: S(p.Eu4.TIER_2),
+                        total: I(p.Eu4.TIER_2)
                     }),
-                    description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_STICKER,
+                    description: g.intl.string(g.t.t4TM29),
                     icon: 8
                 },
                 {
-                    title: p.Z.Messages.SOUNDBOARD_MARKETING_BOOSTING_PERKS.format({
-                        soundCount: A(f.Eu4.TIER_2),
-                        totalSoundCount: S(f.Eu4.TIER_2)
+                    title: g.intl.formatToPlainString(g.t.NRuk5u, {
+                        soundCount: b(p.Eu4.TIER_2),
+                        totalSoundCount: T(p.Eu4.TIER_2)
                     }),
-                    description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_SOUNDBOARD,
+                    description: g.intl.string(g.t.pEYlPT),
                     icon: 13
                 },
                 {
-                    title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_AUDIO_QUALITY.format({ bitrate: h.HO[f.Eu4.TIER_2].limits.bitrate / 1000 }),
-                    description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_AUDIO_QUALITY,
+                    title: g.intl.formatToPlainString(g.t.zoT1ZG, { bitrate: m.HO[p.Eu4.TIER_2].limits.bitrate / 1000 }),
+                    description: g.intl.string(g.t['nzRo/P']),
                     icon: 2
                 },
                 {
-                    title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_2_BANNER,
-                    description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_BANNER,
+                    title: g.intl.string(g.t['+KhQKC']),
+                    description: g.intl.string(g.t.ZWf10N),
                     icon: 4
                 },
                 {
-                    title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_UPLOAD_LIMIT.format({ fileSize: (0, c.BU)(h.HO[f.Eu4.TIER_2].limits.fileSize / 1024, { useKibibytes: !0 }) }),
-                    description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_UPLOAD_LIMIT.format(),
+                    title: g.intl.formatToPlainString(g.t.t95LnJ, { fileSize: (0, d.BU)(m.HO[p.Eu4.TIER_2].limits.fileSize / 1024, { useKibibytes: !0 }) }),
+                    description: g.intl.format(g.t['yvht6+'], {}),
                     icon: 5
                 },
                 {
-                    title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_2_STREAMING,
-                    description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_STREAMING,
+                    title: g.intl.string(g.t.bmaoND),
+                    description: g.intl.string(g.t.WZW2Bg),
                     icon: 7
                 },
                 {
-                    title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_2_CUSTOM_ROLE_ICONS,
-                    description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_CUSTOM_ROLE_ICONS,
+                    title: g.intl.string(g.t.BHtqcX),
+                    description: g.intl.string(g.t.ukVcER),
                     icon: 11
                 },
                 e
                     ? {
-                          title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_VIDEO_STAGE.format({ limit: f.eez }),
-                          description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_VIDEO_STAGE.format({ limit: f.eez }),
+                          title: g.intl.formatToPlainString(g.t.T8P3TE, { limit: p.eez }),
+                          description: g.intl.formatToPlainString(g.t.T8P3TE, { limit: p.eez }),
                           icon: 12
                       }
                     : null
-            ].filter(d.lm)
+            ].filter(f.lm)
         },
         {
-            tier: f.Eu4.TIER_3,
-            title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_TITLE_TIER_3,
+            tier: p.Eu4.TIER_3,
+            title: g.intl.string(g.t.P7LdcX),
             perks: [
                 {
-                    title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_EMOJI.format({
-                        adding: h.HO[f.Eu4.TIER_3].limits.emoji - h.HO[f.Eu4.TIER_2].limits.emoji,
-                        total: h.HO[f.Eu4.TIER_3].limits.emoji
+                    title: g.intl.formatToPlainString(g.t.dnLAws, {
+                        adding: m.HO[p.Eu4.TIER_3].limits.emoji - m.HO[p.Eu4.TIER_2].limits.emoji,
+                        total: m.HO[p.Eu4.TIER_3].limits.emoji
                     }),
-                    description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_EMOJI,
+                    description: g.intl.string(g.t.AfJxnZ),
                     icon: 1
                 },
                 {
-                    title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
-                        adding: g(f.Eu4.TIER_3),
-                        total: T(f.Eu4.TIER_3)
+                    title: g.intl.formatToPlainString(g.t['/9p2/v'], {
+                        adding: S(p.Eu4.TIER_3),
+                        total: I(p.Eu4.TIER_3)
                     }),
-                    description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_STICKER,
+                    description: g.intl.string(g.t['+ZI4QU']),
                     icon: 8
                 },
                 {
-                    title: p.Z.Messages.SOUNDBOARD_MARKETING_BOOSTING_PERKS.format({
-                        soundCount: A(f.Eu4.TIER_3),
-                        totalSoundCount: S(f.Eu4.TIER_3)
+                    title: g.intl.formatToPlainString(g.t.NRuk5u, {
+                        soundCount: b(p.Eu4.TIER_3),
+                        totalSoundCount: T(p.Eu4.TIER_3)
                     }),
-                    description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_SOUNDBOARD,
+                    description: g.intl.string(g.t['8omJSU']),
                     icon: 13
                 },
                 {
-                    title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_AUDIO_QUALITY.format({ bitrate: h.HO[f.Eu4.TIER_3].limits.bitrate / 1000 }),
-                    description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_AUDIO_QUALITY,
+                    title: g.intl.formatToPlainString(g.t.zoT1ZG, { bitrate: m.HO[p.Eu4.TIER_3].limits.bitrate / 1000 }),
+                    description: g.intl.string(g.t.cOkbp6),
                     icon: 2
                 },
                 {
-                    title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_3_VANITY_URL,
-                    description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_VANITY_URL.format({ helpdeskArticle: _.Z.getArticleURL(f.BhN.GUILD_VANITY_URL) }),
+                    title: g.intl.string(g.t.C2w2cH),
+                    description: g.intl.format(g.t['3Reos7'], { helpdeskArticle: _.Z.getArticleURL(p.BhN.GUILD_VANITY_URL) }),
                     icon: 6
                 },
                 {
-                    title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_UPLOAD_LIMIT.format({ fileSize: (0, c.BU)(h.HO[f.Eu4.TIER_3].limits.fileSize / 1024, { useKibibytes: !0 }) }),
-                    description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_UPLOAD_LIMIT.format(),
+                    title: g.intl.formatToPlainString(g.t.t95LnJ, { fileSize: (0, d.BU)(m.HO[p.Eu4.TIER_3].limits.fileSize / 1024, { useKibibytes: !0 }) }),
+                    description: g.intl.format(g.t.IwDqSE, {}),
                     icon: 5
                 },
                 {
-                    title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_3_ANIMATED_BANNER,
-                    description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_ANIMATED_BANNER,
+                    title: g.intl.string(g.t.z0GtBA),
+                    description: g.intl.string(g.t.v92GNT),
                     icon: 3
                 },
                 e
                     ? {
-                          title: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_VIDEO_STAGE.format({ limit: f.RcX }),
-                          description: p.Z.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_VIDEO_STAGE.format({ limit: f.RcX }),
+                          title: g.intl.formatToPlainString(g.t.T8P3TE, { limit: p.RcX }),
+                          description: g.intl.formatToPlainString(g.t.T8P3TE, { limit: p.RcX }),
                           icon: 12
                       }
                     : null
-            ].filter(d.lm)
+            ].filter(f.lm)
         }
     ];
-function v(e) {
+function A(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { useLevels: n = !0 } = t;
     switch (e) {
-        case f.Eu4.NONE:
-            return n ? p.Z.Messages.PREMIUM_GUILD_TIER_0 : p.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_NONE_NAME;
-        case f.Eu4.TIER_1:
-            return p.Z.Messages.PREMIUM_GUILD_TIER_1;
-        case f.Eu4.TIER_2:
-            return p.Z.Messages.PREMIUM_GUILD_TIER_2;
-        case f.Eu4.TIER_3:
-            return p.Z.Messages.PREMIUM_GUILD_TIER_3;
+        case p.Eu4.NONE:
+            return n ? g.intl.string(g.t.LcKgJS) : g.intl.string(g.t.mx8j2t);
+        case p.Eu4.TIER_1:
+            return g.intl.string(g.t.nzXtaW);
+        case p.Eu4.TIER_2:
+            return g.intl.string(g.t['h33/ub']);
+        case p.Eu4.TIER_3:
+            return g.intl.string(g.t.BfF6EB);
         default:
             throw Error('Not a valid tier type');
     }
 }
-function O(e) {
+function N(e) {
     switch (e) {
-        case f.Eu4.NONE:
-            return p.Z.Messages.PREMIUM_GUILD_TIER_0;
-        case f.Eu4.TIER_1:
-            return p.Z.Messages.PREMIUM_GUILD_TIER_1_SHORT;
-        case f.Eu4.TIER_2:
-            return p.Z.Messages.PREMIUM_GUILD_TIER_2_SHORT;
-        case f.Eu4.TIER_3:
-            return p.Z.Messages.PREMIUM_GUILD_TIER_3_SHORT;
+        case p.Eu4.NONE:
+            return g.intl.string(g.t.LcKgJS);
+        case p.Eu4.TIER_1:
+            return g.intl.string(g.t.xRjU1d);
+        case p.Eu4.TIER_2:
+            return g.intl.string(g.t.C7e2Bg);
+        case p.Eu4.TIER_3:
+            return g.intl.string(g.t.avGxmp);
         default:
             throw Error('Not a valid tier type');
     }
 }
-let R = s().memoize((e) => (h.HO[f.Eu4.TIER_1].features.includes(e) ? f.Eu4.TIER_1 : h.HO[f.Eu4.TIER_2].features.includes(e) ? f.Eu4.TIER_2 : h.HO[f.Eu4.TIER_3].features.includes(e) ? f.Eu4.TIER_3 : null)),
-    C = (e) => {
-        if (e === f.Eu4.NONE) return f.Qqv.NONE;
-        if (e === f.Eu4.TIER_1) return f.Qqv.TIER_1;
-        if (e === f.Eu4.TIER_2) return f.Qqv.TIER_2;
-        else if (e === f.Eu4.TIER_3) return f.Qqv.TIER_3;
+let C = s().memoize((e) => (m.HO[p.Eu4.TIER_1].features.includes(e) ? p.Eu4.TIER_1 : m.HO[p.Eu4.TIER_2].features.includes(e) ? p.Eu4.TIER_2 : m.HO[p.Eu4.TIER_3].features.includes(e) ? p.Eu4.TIER_3 : null)),
+    R = (e) => {
+        if (e === p.Eu4.NONE) return p.Qqv.NONE;
+        if (e === p.Eu4.TIER_1) return p.Qqv.TIER_1;
+        if (e === p.Eu4.TIER_2) return p.Qqv.TIER_2;
+        else if (e === p.Eu4.TIER_3) return p.Qqv.TIER_3;
         return null;
     };
-function y(e, t) {
-    for (let n of x(t)) if (e >= n.amount) return n.tier;
-    return f.Eu4.NONE;
+function O(e, t) {
+    for (let n of U(t)) if (e >= n.amount) return n.tier;
+    return p.Eu4.NONE;
 }
 function D(e, t) {
     return null == t || (null != e && e >= t);
@@ -334,83 +335,87 @@ function D(e, t) {
 function L(e, t) {
     return D(e.premiumTier, t);
 }
-function b(e) {
+function x(e) {
     return s()
         .values(e)
         .filter((e) => e.isAvailable());
 }
-function M() {
-    let e = u.ZP.getPremiumTypeSubscription();
-    if (null == e ? void 0 : e.isPausedOrPausePending) return p.Z.Messages.GUILD_BOOSTING_DISABLED_FOR_PAUSED_SUBSCRIPTION;
-    let { numAvailableGuildBoostSlots: t, numCanceledGuildBoostSlots: n } = Object.values(l.Z.boostSlots).reduce((e, t) => (V(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
+function w(e) {
+    let { fractionalState: t } = e,
+        n = c.ZP.getPremiumTypeSubscription();
+    !u.Z.hasFetched && (0, l.X8)();
+    let r = x(u.Z.boostSlots);
+    if ((null == n ? void 0 : n.isPausedOrPausePending) && (t === m.a$.NONE || 0 === r.length)) return g.intl.string(g.t.mOWsFx);
+    if (t === m.a$.FP_ONLY) return g.intl.string(g.t['4RgA6O']);
+    let { numAvailableGuildBoostSlots: i, numCanceledGuildBoostSlots: a } = Object.values(u.Z.boostSlots).reduce((e, t) => (V(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
         numAvailableGuildBoostSlots: 0,
         numCanceledGuildBoostSlots: 0
     });
-    if (null == e || t > 0) return null;
-    if (e.status === f.O0b.PAST_DUE) return p.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_SUBSCRIPTION_PAST_DUE;
-    if (e.status === f.O0b.ACCOUNT_HOLD) return p.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_SUBSCRIPTION_ACCOUNT_HOLD;
-    if (n > 0) return p.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION;
-    if (null == e.renewalMutations) return null;
-    let r = E.uV(e.renewalMutations.additionalPlans);
-    return E.uV(e.additionalPlans) > r ? p.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION : p.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_PENDING_MUTATION_PLAN;
+    if (null == n || i > 0) return null;
+    if (n.status === p.O0b.PAST_DUE) return g.intl.string(g.t.De4Vm5);
+    if (n.status === p.O0b.ACCOUNT_HOLD) return g.intl.string(g.t.JakNQ0);
+    if (a > 0) return g.intl.string(g.t.x25mZW);
+    if (null == n.renewalMutations) return null;
+    let s = h.uV(n.renewalMutations.additionalPlans);
+    return h.uV(n.additionalPlans) > s ? g.intl.string(g.t.x25mZW) : g.intl.string(g.t['W/bb8f']);
+}
+function M(e, t) {
+    return P(e, t) > 0;
 }
 function P(e, t) {
-    return U(e, t) > 0;
-}
-function U(e, t) {
-    let n = y(e.length, t),
-        r = w(t)[n],
+    let n = O(e.length, t),
+        r = k(t)[n],
         i = e.filter((e) => null != e.endsAt);
     return r - (e.length - i.length);
 }
-function w(e) {
-    return f.oCV;
+function k(e) {
+    return p.oCV;
 }
-function x(e) {
-    let t = w(e);
+function U(e) {
+    let t = k(e);
     return [
         {
-            tier: f.Eu4.TIER_3,
-            amount: t[f.Eu4.TIER_3],
+            tier: p.Eu4.TIER_3,
+            amount: t[p.Eu4.TIER_3],
             nextTier: null
         },
         {
-            tier: f.Eu4.TIER_2,
-            amount: t[f.Eu4.TIER_2],
-            nextTier: f.Eu4.TIER_3
+            tier: p.Eu4.TIER_2,
+            amount: t[p.Eu4.TIER_2],
+            nextTier: p.Eu4.TIER_3
         },
         {
-            tier: f.Eu4.TIER_1,
-            amount: t[f.Eu4.TIER_1],
-            nextTier: f.Eu4.TIER_2
+            tier: p.Eu4.TIER_1,
+            amount: t[p.Eu4.TIER_1],
+            nextTier: p.Eu4.TIER_2
         }
     ];
 }
 function G(e, t) {
-    let n = U(e, t);
+    let n = P(e, t);
     if (n > 0) {
         let t = e.sort((e, t) => (null != e.endsAt && null != t.endsAt ? e.endsAt.getTime() - t.endsAt.getTime() : -1)).filter((e) => null != e.endsAt);
         return t[t.length - n].endsAt;
     }
     return null;
 }
-function k(e, t) {
-    let n = g(t),
-        r = m.indexOf(t);
+function B(e, t) {
+    let n = S(t),
+        r = E.indexOf(t);
     if (-1 === r) return 0;
-    let i = m[r - 1],
-        a = null != i ? T(i) : 0,
-        s = T(t);
+    let i = E[r - 1],
+        a = null != i ? I(i) : 0,
+        s = I(t);
     return Math.max(0, n - e.slice(a, s).length);
 }
-function B(e, t, n) {
-    return -1 === m.indexOf(n) ? 0 : Math.max(0, S(n, e) - t.length);
+function Z(e, t, n) {
+    return -1 === E.indexOf(n) ? 0 : Math.max(0, T(n, e) - t.length);
 }
 function F(e, t) {
     let n = e.premiumSubscriberCount;
-    return Math.max(0, w(e.id)[t] - n);
+    return Math.max(0, k(e.id)[t] - n);
 }
 function V(e) {
     var t;
-    return (null === (t = e.subscription) || void 0 === t ? void 0 : t.status) === f.O0b.CANCELED || e.canceled;
+    return (null === (t = e.subscription) || void 0 === t ? void 0 : t.status) === p.O0b.CANCELED || e.canceled;
 }

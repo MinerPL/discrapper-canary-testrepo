@@ -1,11 +1,1 @@
-r.d(t, {
-    R: function () {
-        return n;
-    }
-});
-let n = (e) => {
-    let t = !1;
-    return (r) => {
-        !t && (e(r), (t = !0));
-    };
-};
+e.exports = '/assets/2b6ef344c3e07949d6db.svg';

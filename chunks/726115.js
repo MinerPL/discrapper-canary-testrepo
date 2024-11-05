@@ -1,156 +1,161 @@
 n.d(t, {
     CD: function () {
-        return v;
+        return b;
     },
     Ew: function () {
         return S;
     },
     Mf: function () {
-        return p;
+        return E;
     },
     NL: function () {
-        return R;
+        return y;
     },
     QW: function () {
-        return T;
-    },
-    U0: function () {
         return C;
     },
-    Xp: function () {
+    U0: function () {
         return N;
     },
+    Xp: function () {
+        return T;
+    },
     a$: function () {
-        return g;
+        return I;
     },
     lg: function () {
-        return f;
+        return v;
     },
     oT: function () {
-        return Z;
+        return A;
+    },
+    vL: function () {
+        return L;
     },
     vb: function () {
-        return I;
+        return _;
     }
 }),
     n(411104),
     n(47120);
 var i = n(544891),
-    a = n(878727),
-    s = n(706454),
-    r = n(823379),
-    l = n(900849),
-    o = n(762692),
-    c = n(331114),
-    d = n(356164),
-    u = n(164991),
-    _ = n(128449),
-    E = n(981631),
-    h = n(731455),
-    m = n(689938);
+    r = n(401919),
+    a = n(706454),
+    l = n(626135),
+    s = n(823379),
+    o = n(900849),
+    c = n(762692),
+    d = n(331114),
+    u = n(356164),
+    h = n(164991),
+    m = n(128449),
+    p = n(981631),
+    g = n(731455),
+    f = n(388032);
+function _(e) {
+    switch (e) {
+        case m.vf.FEATURED:
+            return f.intl.string(f.t['RU+DCQ']);
+        case m.vf.GUILDS:
+            return f.intl.string(f.t['B5tf+v']);
+        case m.vf.GAMING:
+            return f.intl.string(f.t['CD/USE']);
+        case m.vf.MUSIC:
+            return f.intl.string(f.t.nt9PLy);
+        case m.vf.ENTERTAINMENT:
+            return f.intl.string(f.t.gSbmdn);
+        case m.vf.TECH:
+            return f.intl.string(f.t['0A0By8']);
+        case m.vf.EDUCATION:
+            return f.intl.string(f.t.Gy9woq);
+        case m.vf.HUBS:
+            return f.intl.string(f.t['q469/f']);
+    }
+}
+function E(e) {
+    switch (e) {
+        case m.vf.FEATURED:
+            return f.intl.string(f.t.OlDfzM);
+        case m.vf.GAMING:
+            return f.intl.string(f.t['CD/USE']);
+        case m.vf.MUSIC:
+            return f.intl.string(f.t.nt9PLy);
+        case m.vf.ENTERTAINMENT:
+            return f.intl.string(f.t.gSbmdn);
+        case m.vf.TECH:
+            return f.intl.string(f.t['0A0By8']);
+        case m.vf.EDUCATION:
+            return f.intl.string(f.t.Gy9woq);
+        case m.vf.HUBS:
+            return f.intl.string(f.t.X5xPlZ);
+        default:
+            throw Error('[getGlobalDiscoveryServerTabTitle] Unsupported tab: '.concat(e));
+    }
+}
 function I(e) {
     switch (e) {
-        case _.vf.FEATURED:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_FEATURED_CATEGORY;
-        case _.vf.GUILDS:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_CATEGORY;
-        case _.vf.GAMING:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GAMING_CATEGORY;
-        case _.vf.MUSIC:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_MUSIC_CATEGORY;
-        case _.vf.ENTERTAINMENT:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_ENTERTAINMENT_CATEGORY;
-        case _.vf.TECH:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TECH_CATEGORY;
-        case _.vf.EDUCATION:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_EDUCATION_CATEGORY;
-        case _.vf.HUBS:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUBS_CATEGORY;
-    }
-}
-function p(e) {
-    switch (e) {
-        case _.vf.FEATURED:
-            return m.Z.Messages.GUILD_DISCOVERY_HOME_TITLE;
-        case _.vf.GAMING:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GAMING_CATEGORY;
-        case _.vf.MUSIC:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_MUSIC_CATEGORY;
-        case _.vf.ENTERTAINMENT:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_ENTERTAINMENT_CATEGORY;
-        case _.vf.TECH:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TECH_CATEGORY;
-        case _.vf.EDUCATION:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_EDUCATION_CATEGORY;
-        case _.vf.HUBS:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_TITLE;
+        case m.vf.FEATURED:
+            return f.intl.string(f.t.SdMhrq);
+        case m.vf.GAMING:
+            return f.intl.string(f.t.AAJ5oq);
+        case m.vf.MUSIC:
+            return f.intl.string(f.t['SOio+P']);
+        case m.vf.ENTERTAINMENT:
+            return f.intl.string(f.t.R09vf3);
+        case m.vf.TECH:
+            return f.intl.string(f.t['Ew4d5+']);
+        case m.vf.EDUCATION:
+            return f.intl.string(f.t.sasIWV);
+        case m.vf.HUBS:
+            return f.intl.string(f.t['F/IQCA']);
         default:
             throw Error('[getGlobalDiscoveryServerTabTitle] Unsupported tab: '.concat(e));
     }
 }
-function g(e) {
+function C(e) {
     switch (e) {
-        case _.vf.FEATURED:
-            return m.Z.Messages.GUILD_DISCOVERY_HOME_SUBTITLE;
-        case _.vf.GAMING:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GAMING_DESCRIPTION;
-        case _.vf.MUSIC:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_MUSIC_DESCRIPTION;
-        case _.vf.ENTERTAINMENT:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_ENTERTAINMENT_DESCRIPTION;
-        case _.vf.TECH:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_TECH_DESCRIPTION;
-        case _.vf.EDUCATION:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_EDUCATION_DESCRIPTION;
-        case _.vf.HUBS:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_DESCRIPTION;
-        default:
-            throw Error('[getGlobalDiscoveryServerTabTitle] Unsupported tab: '.concat(e));
-    }
-}
-function T(e) {
-    switch (e) {
-        case _.vf.FEATURED:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_POPULAR_FEATURED;
-        case _.vf.GAMING:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_POPULAR_GAMING;
-        case _.vf.MUSIC:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_POPULAR_MUSIC;
-        case _.vf.ENTERTAINMENT:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_POPULAR_ENTERTAINMENT;
-        case _.vf.TECH:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_POPULAR_TECH;
-        case _.vf.EDUCATION:
-            return m.Z.Messages.GLOBAL_DISCOVERY_SERVERS_POPULAR_EDUCATION;
+        case m.vf.FEATURED:
+            return f.intl.string(f.t.crt84e);
+        case m.vf.GAMING:
+            return f.intl.string(f.t.fWbIpa);
+        case m.vf.MUSIC:
+            return f.intl.string(f.t.nfgDz8);
+        case m.vf.ENTERTAINMENT:
+            return f.intl.string(f.t.k1CYxs);
+        case m.vf.TECH:
+            return f.intl.string(f.t['4dawpq']);
+        case m.vf.EDUCATION:
+            return f.intl.string(f.t.uexPgY);
         default:
             return null;
     }
 }
-function f(e) {
-    if (null == e) return h.Hk;
+function v(e) {
     switch (e) {
-        case _.vf.FEATURED:
-        case _.vf.GUILDS:
-        case _.vf.HUBS:
-            return h.Hk;
-        case _.vf.GAMING:
-            return h.Gj.Activity;
-        case _.vf.MUSIC:
-            return h.Gj.Music;
-        case _.vf.ENTERTAINMENT:
-            return h.Gj.Television;
-        case _.vf.TECH:
-            return h.Gj.Science;
-        case _.vf.EDUCATION:
-            return h.Gj.Education;
+        case m.vf.FEATURED:
+            return g.Hk;
+        case m.vf.GUILDS:
+            return g.mE;
+        case m.vf.GAMING:
+            return g.Gj.Activity;
+        case m.vf.MUSIC:
+            return g.Gj.Music;
+        case m.vf.ENTERTAINMENT:
+            return g.Gj.Television;
+        case m.vf.TECH:
+            return g.Gj.Science;
+        case m.vf.EDUCATION:
+            return g.Gj.Education;
+        case m.vf.HUBS:
+            return g.gU;
         default:
-            (0, r.vE)(e);
+            (0, s.vE)(e);
     }
 }
 function S(e) {
-    return null == e || Date.now() - e > _.AF;
+    return null == e || Date.now() - e > m.AF;
 }
-function C(e) {
+function N(e) {
     return {
         id: e.id,
         name: e.name,
@@ -168,109 +173,124 @@ function C(e) {
         emojiCount: e.emoji_count
     };
 }
-function N() {
+function T() {
     var e;
-    let [t] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [s.default],
-        n = h.dU,
+    let [t] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [a.default],
+        n = (0, g.Cf)(),
         i = t.locale;
     return (null !== (e = n.find((e) => e.code === i)) && void 0 !== e ? e : n[0]).code;
 }
-function A(e) {
-    let { loadId: t, categoryId: n, offset: i, query: a, languageCode: s } = e;
-    '' !== a.trim() &&
-        (l.tI(t, n),
-        o.Z.fetchAlgoliaSearchResults(a, {
+function x(e) {
+    let { loadId: t, categoryId: n, offset: i, query: r, languageCode: a } = e;
+    '' !== r.trim() &&
+        (o.tI(t, n),
+        c.Z.fetchAlgoliaSearchResults(r, {
             categoryId: n,
-            languageCode: s,
+            languageCode: a,
             offset: i,
             length: 12,
-            filters: { approximate_member_count: l.sq }
+            filters: { approximate_member_count: o.sq }
         }));
 }
-function v(e) {
-    let { loadId: t, categoryId: n, query: i, languageCode: a, offset: s } = e;
+function b(e) {
+    let { loadId: t, categoryId: n, query: i, languageCode: r, offset: a } = e;
     if (
-        !d.Z.getIsFetching({
+        !u.Z.getIsFetching({
             query: i,
             categoryId: n,
-            languageCode: a
+            languageCode: r
         })
     )
-        d.Z.getIsInitialFetchComplete({
+        u.Z.getIsInitialFetchComplete({
             query: i,
             categoryId: n,
-            languageCode: a
+            languageCode: r
         }) &&
-            A({
+            x({
                 loadId: t,
                 categoryId: n,
                 query: i,
-                languageCode: a,
-                offset: s
+                languageCode: r,
+                offset: a
             });
 }
-function Z(e) {
-    let { loadId: t, categoryId: n, query: i, languageCode: a } = e,
-        s = d.Z.getIsFetching({
+function A(e) {
+    let { loadId: t, categoryId: n, query: i, languageCode: r } = e,
+        a = u.Z.getIsFetching({
             query: i,
             categoryId: n,
-            languageCode: a
+            languageCode: r
         }),
-        r = d.Z.getIsInitialFetchComplete({
+        l = u.Z.getIsInitialFetchComplete({
             query: i,
             categoryId: n,
-            languageCode: a
+            languageCode: r
         });
-    !s &&
-        !r &&
-        A({
+    !a &&
+        !l &&
+        x({
             loadId: t,
             categoryId: n,
             query: i,
-            languageCode: a,
+            languageCode: r,
             offset: 0
         });
 }
-async function L(e) {
+async function Z(e) {
     return (
-        !(0, a.x)(e) &&
+        !(0, r.x)(e) &&
         (
             await i.tn.get({
-                url: E.ANM.GUILD_DISCOVERY_VALID_TERM,
+                url: p.ANM.GUILD_DISCOVERY_VALID_TERM,
                 query: { term: e },
                 oldFormErrors: !0
             })
         ).body.valid
     );
 }
-async function R(e) {
-    let { loadId: t, categoryId: n, query: i, languageCode: a } = e;
+async function y(e) {
+    let { loadId: t, categoryId: n, query: i, languageCode: r } = e;
     if ('' === i.trim()) return;
-    let s = c.Z.getIsFetchingCounts(i),
-        r = c.Z.getIsFetchingCounts(i);
-    if (!s && !r) {
+    let a = d.Z.getIsFetchingCounts(i),
+        l = d.Z.getIsFetchingCounts(i);
+    if (!a && !l) {
         if (
-            ((0, u.LD)({
+            ((0, h.LD)({
                 fetchedQuery: i,
                 resultsQuery: ''
             }),
-            d.Z.getIsBlocked(i) || !(await L(i)))
+            u.Z.getIsBlocked(i) || !(await Z(i)))
         ) {
-            o.Z.handleBlockedSearchQuery(i);
+            c.Z.handleBlockedSearchQuery(i);
             return;
         }
-        o.Z.fetchAlgoliaSearchResultCounts({
+        c.Z.fetchAlgoliaSearchResultCounts({
             query: i,
-            algoliaFilters: { approximate_member_count: l.sq },
+            algoliaFilters: { approximate_member_count: o.sq },
             onComplete: () => {
-                (0, u.LD)({ resultsQuery: i });
+                (0, h.LD)({ resultsQuery: i });
             }
         }),
-            Z({
+            A({
                 loadId: t,
                 categoryId: n,
                 query: i,
-                languageCode: a
+                languageCode: r
             });
     }
+}
+async function L(e) {
+    let { loadId: t, guildId: n, index: i, categoryId: r, analyticsLocation: a, options: s } = e,
+        c = {
+            ...s,
+            loadId: t
+        };
+    await o.Ub(n, a, c),
+        l.default.track(p.rMx.GUILD_DISCOVERY_GUILD_SELECTED, {
+            guild_id: n,
+            load_id: t,
+            card_index: i,
+            category_id: r,
+            location: a
+        });
 }

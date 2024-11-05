@@ -1,9 +1,9 @@
 n.d(t, {
     BH: function () {
-        return m;
+        return E;
     },
     Cs: function () {
-        return T;
+        return I;
     },
     G1: function () {
         return d;
@@ -12,50 +12,60 @@ n.d(t, {
         return L;
     },
     OT: function () {
-        return b;
+        return x;
+    },
+    Vw: function () {
+        return _;
     },
     XM: function () {
-        return E;
+        return h;
     },
     XS: function () {
-        return C;
-    },
-    Yq: function () {
-        return M;
-    },
-    aj: function () {
         return R;
     },
+    Yq: function () {
+        return w;
+    },
+    aj: function () {
+        return C;
+    },
     bl: function () {
-        return y;
+        return O;
+    },
+    eu: function () {
+        return P;
     },
     f_: function () {
-        return p;
+        return g;
     },
     iC: function () {
-        return v;
+        return A;
     },
     mO: function () {
         return D;
     },
     qS: function () {
-        return _;
+        return f;
     },
     ql: function () {
-        return h;
+        return m;
     },
     rN: function () {
-        return I;
+        return v;
     },
     uV: function () {
-        return O;
+        return N;
+    },
+    x0: function () {
+        return k;
     },
     x6: function () {
-        return P;
+        return M;
     }
 }),
     n(724458),
-    n(47120);
+    n(47120),
+    n(653041);
 var r = n(392711),
     i = n(979554),
     a = n(134432),
@@ -65,51 +75,54 @@ var r = n(392711),
     u = n(215023),
     c = n(981631);
 let d = (e) => (null == e ? void 0 : e.premiumType) != null,
-    _ = (e) => (null == e ? void 0 : e.purchaseType) === c.qc2.PREMIUM_PURCHASE,
-    E = (e, t, n) => {
+    f = (e) => (null == e ? void 0 : e.purchaseType) === c.qc2.PREMIUM_PURCHASE,
+    _ = (e, t, n) => {
         let r;
-        let i = h(e, (r = n ? (t ? c.tuJ.MOBILE_PREMIUM_TIER_2 : c.tuJ.MOBILE) : t ? c.tuJ.PREMIUM_TIER_2 : c.tuJ.DEFAULT));
-        return null == i ? '' : (0, s.T4)(null == i ? void 0 : i.amount, null == i ? void 0 : i.currency);
+        return m(e, (r = n ? (t ? c.tuJ.MOBILE_PREMIUM_TIER_2 : c.tuJ.MOBILE) : t ? c.tuJ.PREMIUM_TIER_2 : c.tuJ.DEFAULT));
     },
-    f = (e) => {
+    h = (e, t, n) => {
+        let r = _(e, t, n);
+        return null == r ? '' : (0, s.T4)(null == r ? void 0 : r.amount, null == r ? void 0 : r.currency);
+    },
+    p = (e) => {
         let t = e.bundledProducts;
         return null == t
             ? 0
             : t.reduce((e, t) => {
                   var n;
-                  let r = h(t, c.tuJ.DEFAULT);
+                  let r = m(t, c.tuJ.DEFAULT);
                   return e + (null !== (n = null == r ? void 0 : r.amount) && void 0 !== n ? n : 0);
               }, 0);
     },
-    h = (e, t) => {
+    m = (e, t) => {
         var n, r, i;
         let a = null !== (i = e.prices[t]) && void 0 !== i ? i : null;
         return null == a ? null : null === (r = a.countryPrices) || void 0 === r ? void 0 : null === (n = r.prices) || void 0 === n ? void 0 : n[0];
     },
-    p = {
+    g = {
         original: -1,
         discountPercentage: -1
     },
-    m = (e, t) => {
-        let n = f(e);
-        if (n <= 0) return p;
-        let r = h(e, t ? c.tuJ.PREMIUM_TIER_2 : c.tuJ.DEFAULT);
+    E = (e, t) => {
+        let n = p(e);
+        if (n <= 0) return g;
+        let r = m(e, t ? c.tuJ.PREMIUM_TIER_2 : c.tuJ.DEFAULT);
         return null == r
-            ? p
+            ? g
             : {
                   original: n,
                   discountPercentage: Math.floor(((n - r.amount) / n) * 100)
               };
     },
-    I = (e) => {
+    v = (e) => {
         var t;
-        return (null === (t = h(e, c.tuJ.DEFAULT)) || void 0 === t ? void 0 : t.amount) === 0;
+        return (null === (t = m(e, c.tuJ.DEFAULT)) || void 0 === t ? void 0 : t.amount) === 0;
     },
-    T = (e) => {
+    I = (e) => {
         let t = (0, r.flatMap)([...e.values()], 'products');
         return (0, r.uniqBy)(t, 'storeListingId');
     },
-    g = (e, t) => {
+    S = (e, t) => {
         if (t === i.Z.AVATAR_DECORATION) {
             let t = (0, r.flatMap)([...e.values()], 'items').filter(o.M);
             return (0, r.uniqBy)(t, 'id');
@@ -119,8 +132,8 @@ let d = (e) => (null == e ? void 0 : e.premiumType) != null,
             return (0, r.uniqBy)(t, 'id');
         }
     },
-    S = (e, t) => {
-        let n = T(e);
+    T = (e, t) => {
+        let n = I(e);
         if (t === i.Z.AVATAR_DECORATION) {
             let e = (0, r.flatMap)(n, 'items').filter(o.M);
             return (0, r.uniqBy)(e, 'id');
@@ -130,10 +143,10 @@ let d = (e) => (null == e ? void 0 : e.premiumType) != null,
             return (0, r.uniqBy)(e, 'id');
         }
     },
-    A = (e) => g(e, i.Z.AVATAR_DECORATION),
-    N = (e) => S(e, i.Z.AVATAR_DECORATION),
-    v = (e, t) => (0, r.uniqBy)([...A(e), ...N(t)], 'id'),
-    O = (e, t) => {
+    b = (e) => S(e, i.Z.AVATAR_DECORATION),
+    y = (e) => T(e, i.Z.AVATAR_DECORATION),
+    A = (e, t) => (0, r.uniqBy)([...b(e), ...y(t)], 'id'),
+    N = (e, t) => {
         var n;
         let { CDN_HOST: r, API_ENDPOINT: i } = window.GLOBAL_ENV,
             s = (0, a.oO)(t.size * (0, a.x_)()),
@@ -142,11 +155,11 @@ let d = (e) => (null == e ? void 0 : e.premiumType) != null,
         let l = c.ANM.APPLICATION_ASSET(c.XAJ, e, o);
         return ''.concat(location.protocol).concat(i).concat(l, '?size=').concat(s);
     },
-    R = (e) => g(e, i.Z.PROFILE_EFFECT),
     C = (e) => S(e, i.Z.PROFILE_EFFECT),
-    y = (e, t) => {
-        let n = R(t),
-            r = C(e).filter((e) => {
+    R = (e) => T(e, i.Z.PROFILE_EFFECT),
+    O = (e, t) => {
+        let n = C(t),
+            r = R(e).filter((e) => {
                 let { id: t } = e;
                 return !n.some((e) => e.id === t);
             });
@@ -157,13 +170,37 @@ let d = (e) => (null == e ? void 0 : e.premiumType) != null,
     },
     D = (e) => e.applicationId === c.XAJ,
     L = (e) => 3.8 * e,
-    b = (e) => {
+    x = (e) => {
         let t = new Date(),
             n = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate());
         return Math.floor((Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()) - n) / 86400000);
     },
-    M = (e) => {
+    w = (e) => {
         let t = u.yf[e];
         return null != t && new Date().getTime() < t;
     },
-    P = (e) => (null == e ? void 0 : e.type) === i.Z.BUNDLE;
+    M = (e) => (null == e ? void 0 : e.type) === i.Z.BUNDLE,
+    P = (e, t, n) => {
+        if (M(e)) return p(e);
+        let r = m(e, t ? (n ? c.tuJ.MOBILE : c.tuJ.DEFAULT) : n ? c.tuJ.MOBILE_PREMIUM_TIER_2 : c.tuJ.PREMIUM_TIER_2);
+        return null == r ? void 0 : r.amount;
+    },
+    k = (e, t) => {
+        let n = [];
+        for (let r of e) {
+            let e = r.heroRanking;
+            if (null != e)
+                for (let r of e) {
+                    let e = t.get(r);
+                    if (null != e && !M(e) && (n.push(r), n.length >= u.K8)) return n;
+                }
+        }
+        return U(n);
+    },
+    U = (e) => {
+        if (e.length < u.K8) {
+            let t = u.HU.slice(0, u.K8 - e.length);
+            return e.concat(t);
+        }
+        return e;
+    };

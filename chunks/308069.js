@@ -1,133 +1,129 @@
-var s = n(735250),
-    o = n(470079),
-    r = n(120356),
-    a = n.n(r),
-    l = n(212433),
-    i = n(481060),
+var o = n(200651),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    i = n(100621),
+    l = n(481060),
     c = n(617136),
     d = n(497505),
     u = n(918701),
     p = n(302245),
     m = n(685613),
     x = n(670638),
-    _ = n(341907),
-    C = n(303385),
-    g = n(788284),
-    f = n(46140),
-    E = n(689938),
-    h = n(404846);
+    g = n(341907),
+    f = n(303385),
+    h = n(788284),
+    C = n(46140),
+    v = n(388032),
+    j = n(404846);
 t.Z = (e) => {
-    let { quest: t, expansionSpring: r, onCtxMenuSelect: S, onCtxMenuOpen: T, onCtxMenuClose: v, useReducedMotion: N, isExpanded: j, isExpansionAnimationComplete: A } = e,
-        R = o.useCallback(() => {
-            (0, _.openDisclosureModal)(t, {
+    let { quest: t, expansionSpring: s, onCtxMenuSelect: _, onCtxMenuOpen: E, onCtxMenuClose: b, useReducedMotion: N, isExpanded: S, isExpansionAnimationComplete: T } = e,
+        B = r.useCallback(() => {
+            (0, g.openDisclosureModal)(t, {
                 content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_DISCLOSURE
             });
         }, [t]),
-        b = o.useCallback(() => {
+        A = r.useCallback(() => {
             (0, u.FE)(t, {
                 content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_GAME_LINK
             });
         }, [t]),
-        B = j && A,
-        I = (0, p.vI)(t, f.dr.QUESTS_BAR, !0),
-        M = !1 === (0, u.KM)(t),
-        O = (0, s.jsx)(i.Clickable, {
-            onClick: M ? b : () => {},
-            className: a()({
-                [h.logo]: B,
-                [h.clickable]: M
-            }),
-            children: (0, s.jsx)(m.Z, {
+        y = S && T,
+        R = (0, p.vI)(t, C.dr.QUESTS_BAR, !0),
+        w = (0, o.jsx)(l.Clickable, {
+            onClick: A,
+            className: a()({ [j.logo]: y }),
+            children: (0, o.jsx)(m.Z, {
                 quest: t,
                 withGameTile: !1
             })
         });
-    return (0, s.jsxs)(l.animated.div, {
-        className: a()(h.wrapper, {
-            [h.interactable]: B,
-            [h.rewardHighlightWrapper]: I
+    return (0, o.jsxs)(i.animated.div, {
+        className: a()(j.wrapper, {
+            [j.interactable]: y,
+            [j.rewardHighlightWrapper]: R
         }),
         style: {
-            transform: (0, l.to)(
+            transform: (0, i.to)(
                 [
-                    r.to({
+                    s.to({
                         range: [0, 1],
-                        output: [I ? 8 : 4, 0]
+                        output: [R ? 8 : 4, 0]
                     })
                 ],
                 (e) => 'translateY('.concat(e, 'px')
             )
         },
         children: [
-            (0, s.jsx)(l.animated.div, {
-                className: h.opaqueExpandedBackground,
+            (0, o.jsx)(i.animated.div, {
+                className: j.opaqueExpandedBackground,
                 style: {
-                    opacity: r.to({
+                    opacity: s.to({
                         range: [0, 1],
                         output: [0, 1]
                     }),
-                    backdropFilter: r.to([0, 1], [0, 1]).to((e) => 'blur('.concat(10 * e, 'px) brightness(').concat(1 - e / 5, ')'))
+                    backdropFilter: s.to([0, 1], [0, 1]).to((e) => 'blur('.concat(10 * e, 'px) brightness(').concat(1 - e / 5, ')'))
                 }
             }),
-            (0, s.jsx)(l.animated.div, {
-                className: h.backgroundWrapper,
+            (0, o.jsx)(i.animated.div, {
+                className: j.backgroundWrapper,
                 style: {
-                    opacity: r.to({
+                    opacity: s.to({
                         range: [0, 1],
                         output: [0.5, 0]
                     }),
-                    borderBottomLeftRadius: r.to({
+                    borderBottomLeftRadius: s.to({
                         range: [0, 1],
                         output: [0, 8]
                     }),
-                    borderBottomRightRadius: r.to({
+                    borderBottomRightRadius: s.to({
                         range: [0, 1],
                         output: [0, 8]
                     })
                 },
-                children: (0, s.jsx)(g.Z, {
-                    className: h.background,
-                    animationClassName: h.backgroundAnimation,
+                children: (0, o.jsx)(h.Z, {
+                    className: j.background,
+                    animationClassName: j.backgroundAnimation,
                     quest: t,
                     useReducedMotion: N
                 })
             }),
-            I
-                ? (0, s.jsx)(C.Z, {
+            R
+                ? (0, o.jsx)(f.Z, {
                       quest: t,
-                      expansionSpring: r,
-                      isFullyExpanded: B,
-                      partnerBranding: O,
+                      expansionSpring: s,
+                      isFullyExpanded: y,
+                      partnerBranding: w,
                       useReducedMotion: N
                   })
-                : (0, s.jsxs)(s.Fragment, {
+                : (0, o.jsxs)(o.Fragment, {
                       children: [
-                          (0, s.jsx)(l.animated.img, {
+                          (0, o.jsx)(i.animated.img, {
                               alt: '',
-                              className: h.wreathIcon,
+                              className: j.wreathIcon,
                               style: {
-                                  opacity: r.to({
+                                  opacity: s.to({
                                       range: [0, 1],
                                       output: [1, 0]
                                   })
                               },
                               src: n(858595)
                           }),
-                          (0, s.jsx)(l.animated.div, {
+                          (0, o.jsx)(i.animated.div, {
                               style: {
-                                  opacity: r.to({
+                                  opacity: s.to({
                                       range: [0, 1],
-                                      output: [1, B ? 1 : 0.8]
+                                      output: [1, y ? 1 : 0.8]
                                   }),
-                                  transform: (0, l.to)(
+                                  transform: (0, i.to)(
                                       [
-                                          r.to({
+                                          s.to({
                                               range: [0, 1],
                                               output: [0, -16]
                                           }),
-                                          r.to({
+                                          s.to({
                                               range: [0, 1],
                                               output: [0, 8]
                                           })
@@ -135,18 +131,18 @@ t.Z = (e) => {
                                       (e, t) => 'translate('.concat(e, 'px, ').concat(t, 'px)')
                                   )
                               },
-                              children: O
+                              children: w
                           }),
-                          (0, s.jsx)(l.animated.div, {
-                              className: h.questAvailable,
+                          (0, o.jsx)(i.animated.div, {
+                              className: j.questAvailable,
                               style: {
-                                  opacity: r.to({
+                                  opacity: s.to({
                                       range: [0, 1],
                                       output: [0.7, 0]
                                   }),
-                                  transform: (0, l.to)(
+                                  transform: (0, i.to)(
                                       [
-                                          r.to({
+                                          s.to({
                                               range: [0, 1],
                                               output: [0, -20]
                                           })
@@ -154,56 +150,56 @@ t.Z = (e) => {
                                       (e) => 'translate('.concat(e, 'px')
                                   )
                               },
-                              children: (0, s.jsx)(i.Text, {
+                              children: (0, o.jsx)(l.Text, {
                                   color: 'always-white',
                                   variant: 'text-xs/medium',
-                                  className: h.questAvailableText,
-                                  children: E.Z.Messages.QUEST_AVAILABLE
+                                  className: j.questAvailableText,
+                                  children: v.intl.string(v.t.g8zcER)
                               })
                           })
                       ]
                   }),
-            (0, s.jsxs)(l.animated.div, {
-                className: h.promotedBadgeWrapper,
+            (0, o.jsxs)(i.animated.div, {
+                className: j.promotedBadgeWrapper,
                 style: {
-                    opacity: r.to({
+                    opacity: s.to({
                         range: [0, 1],
                         output: [0, 1]
                     })
                 },
                 children: [
-                    (0, s.jsxs)(i.Clickable, {
-                        className: h.promotedBadge,
-                        onClick: R,
+                    (0, o.jsxs)(l.Clickable, {
+                        className: j.promotedBadge,
+                        onClick: B,
                         children: [
-                            (0, s.jsx)(i.Text, {
+                            (0, o.jsx)(l.Text, {
                                 color: 'always-white',
                                 variant: 'text-xs/normal',
-                                children: E.Z.Messages.QUESTS_PROMOTED
+                                children: v.intl.string(v.t.o6FLcH)
                             }),
-                            (0, s.jsx)(i.CircleQuestionIcon, {
-                                color: i.tokens.colors.WHITE,
-                                className: h.promotedBadgeIcon
+                            (0, o.jsx)(l.CircleQuestionIcon, {
+                                color: l.tokens.colors.WHITE,
+                                className: j.promotedBadgeIcon
                             })
                         ]
                     }),
-                    (0, s.jsx)(x.r, {
-                        onOpen: T,
-                        onClose: v,
-                        onSelect: S,
+                    (0, o.jsx)(x.r, {
+                        onOpen: E,
+                        onClose: b,
+                        onSelect: _,
                         questContent: d.jn.QUEST_BAR_V2,
                         quest: t,
                         shouldShowDisclosure: !0,
                         showShareLink: !0,
                         children: (e) =>
-                            (0, s.jsx)(i.Clickable, {
+                            (0, o.jsx)(l.Clickable, {
                                 ...e,
-                                className: h.submenuWrapper,
-                                'aria-label': E.Z.Messages.ACTIONS,
-                                children: (0, s.jsx)(i.MoreHorizontalIcon, {
+                                className: j.submenuWrapper,
+                                'aria-label': v.intl.string(v.t.DEoVWV),
+                                children: (0, o.jsx)(l.MoreHorizontalIcon, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: a()(h.submenuIcon, h.white)
+                                    className: a()(j.submenuIcon, j.white)
                                 })
                             })
                     })

@@ -1,55 +1,46 @@
 n.d(t, {
     r: function () {
-        return i;
+        return a;
     }
 }),
-    n(627341),
+    n(411104),
     n(47120);
-var r = n(278074);
-class i {
+var r = n(319245),
+    i = n(918701);
+class a {
     static build(e) {
-        return new i(e);
+        if (2 !== e.configVersion) throw Error('Cannot build SharedQuestFields when [configVersion !== 2]');
+        return new a(e);
     }
     get features() {
-        return (0, r.EQ)(this.quest)
-            .with({ configVersion: 2 }, (e) => new Set(e.features))
-            .exhaustive();
+        return new Set(this.quest.features);
     }
     _defaultRewardV2(e) {
         return e.rewardsConfig.rewards[0];
     }
     get defaultReward() {
-        return (0, r.EQ)(this.quest)
-            .with({ configVersion: 2 }, (e) => this._defaultRewardV2(e))
-            .exhaustive();
+        return this._defaultRewardV2(this.quest);
     }
     get defaultRewardAsset() {
-        return (0, r.EQ)(this.quest)
-            .with({ configVersion: 2 }, (e) => this._defaultRewardV2(e).asset)
-            .exhaustive();
+        return this._defaultRewardV2(this.quest).asset;
     }
     get defaultRewardRedemptionInstructionsByPlatform() {
-        return (0, r.EQ)(this.quest)
-            .with({ configVersion: 2 }, (e) => this._defaultRewardV2(e).messages.redemptionInstructionsByPlatform)
-            .exhaustive();
+        return this._defaultRewardV2(this.quest).messages.redemptionInstructionsByPlatform;
     }
     get rewardsExpireAt() {
-        return (0, r.EQ)(this.quest)
-            .with({ configVersion: 2 }, (e) => e.rewardsConfig.rewardsExpireAt)
-            .exhaustive();
+        return this.quest.rewardsConfig.rewardsExpireAt;
     }
     get application() {
-        return (0, r.EQ)(this.quest)
-            .with({ configVersion: 2 }, (e) => ({
-                ...e.application,
-                ids: [e.application.id]
-            }))
-            .exhaustive();
+        return {
+            ...this.quest.application,
+            ids: [this.quest.application.id]
+        };
     }
     get rewardPlatforms() {
-        return (0, r.EQ)(this.quest)
-            .with({ configVersion: 2 }, (e) => e.rewardsConfig.platforms)
-            .exhaustive();
+        return this.quest.rewardsConfig.platforms;
+    }
+    get questType() {
+        return (0, i.cr)({ config: this.quest }) ? r.W.VIDEO : r.W.GAMEPLAY;
     }
     constructor(e) {
         var t, n, r;

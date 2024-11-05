@@ -1,49 +1,51 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return d;
     }
 });
-var r = n(735250);
-n(470079);
+var r = n(200651);
+n(192379);
 var i = n(120356),
     a = n.n(i),
     s = n(481060),
-    o = n(652853),
-    l = n(228168),
-    u = n(676411);
-function c(e) {
-    let { text: t, icon: n, contextMenu: i } = e,
-        { profileType: c } = (0, o.z)();
-    return (null == t || '' === t) && null == i
+    o = n(111028),
+    l = n(652853),
+    u = n(228168),
+    c = n(676411);
+function d(e) {
+    let { text: t, tags: n, platformIcon: i, contextMenu: d } = e,
+        { profileType: f } = (0, l.z)();
+    return (null == t || '' === t) && null == d
         ? null
         : null == t || '' === t
           ? (0, r.jsx)('div', {
-                className: a()(u.headerContextMenu, u.absolute, { [u.panel]: c === l.y0.PANEL }),
-                children: i
+                className: a()(c.headerContextMenu, c.absolute),
+                children: d
             })
           : (0, r.jsxs)('header', {
-                className: u.header,
+                className: c.header,
                 children: [
                     (0, r.jsxs)(s.Heading, {
-                        className: u.headerText,
-                        variant: c === l.y0.PANEL ? 'text-xs/semibold' : 'text-xs/medium',
+                        className: c.headerText,
+                        variant: f === u.y0.PANEL ? 'text-xs/semibold' : 'text-xs/medium',
                         color: 'header-primary',
                         children: [
-                            t,
-                            null != n &&
+                            (0, r.jsx)(o.Z, { children: t }),
+                            null != i &&
                                 (0, r.jsx)('div', {
-                                    className: u.platformIcon,
+                                    className: c.platformIcon,
                                     style: {
-                                        maskImage: 'url('.concat(n.whiteSVG, ')'),
-                                        WebkitMaskImage: 'url('.concat(n.whiteSVG, ')')
+                                        maskImage: 'url('.concat(i.whiteSVG, ')'),
+                                        WebkitMaskImage: 'url('.concat(i.whiteSVG, ')')
                                     }
-                                })
+                                }),
+                            n
                         ]
                     }),
-                    null != i &&
+                    null != d &&
                         (0, r.jsx)('div', {
-                            className: u.headerContextMenu,
-                            children: i
+                            className: c.headerContextMenu,
+                            children: d
                         })
                 ]
             });

@@ -16,6 +16,5 @@ e.exports = {
     propertyName: 'propertyName_a6b188',
     toolbar: 'toolbar_a6b188',
     toolbarGroup: 'toolbarGroup_a6b188',
-    toolbarButton: 'toolbarButton_a6b188',
-    premiumStreakOverride: 'premiumStreakOverride_a6b188'
+    toolbarButton: 'toolbarButton_a6b188'
 };

@@ -1,6 +1,6 @@
 n.d(t, {
     I: function () {
-        return d;
+        return _;
     }
 }),
     n(653041),
@@ -17,9 +17,10 @@ n.d(t, {
     n(873817),
     n(47120);
 var r = n(710845),
-    i = n(374023),
-    a = n(988348);
-function s(e, t, n) {
+    i = n(358085),
+    a = n(374023),
+    s = n(988348);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,9 +33,10 @@ function s(e, t, n) {
         e
     );
 }
-let { NativeModules: o } = {},
-    l = [];
-class u {
+let { NativeModules: l } = {},
+    u = {},
+    c = [];
+class d {
     static canUse() {
         return !1;
     }
@@ -44,13 +46,13 @@ class u {
         this._onDataReady = e;
     }
     constructor(e) {
-        s(this, '_onDataReady', void 0), s(this, '_gatewayEncoding', void 0), (this._onDataReady = null), (this._gatewayEncoding = e);
+        o(this, '_onDataReady', void 0), o(this, '_gatewayEncoding', void 0), (this._onDataReady = null), (this._gatewayEncoding = e);
     }
 }
-l.push(
-    class extends u {
+c.push(
+    class extends d {
         static canUse() {
-            return (0, a.N)();
+            return (0, s.N)();
         }
         getAlgorithm() {
             return 'zstd-stream';
@@ -66,12 +68,12 @@ l.push(
         }
         close() {}
         constructor(e) {
-            super(e), s(this, '_decoder', null), s(this, '_stream', void 0), this._gatewayEncoding.wantsString() ? (this._decoder = new TextDecoder('utf-8')) : (this._decoder = null), (this._stream = (0, a.G)());
+            super(e), o(this, '_decoder', null), o(this, '_stream', void 0), this._gatewayEncoding.wantsString() ? (this._decoder = new TextDecoder('utf-8')) : (this._decoder = null), (this._stream = (0, s.G)());
         }
     }
 ),
-    l.push(
-        class extends u {
+    c.push(
+        class extends d {
             static canUse() {
                 return void 0 !== window.Uint8Array;
             }
@@ -119,11 +121,11 @@ l.push(
             }
             constructor(e) {
                 super(e),
-                    s(this, '_inflate', void 0),
-                    s(this, '_pako', n(457854)),
-                    s(this, '_usesZstd', !1),
-                    s(this, '_zstdDecoder', null),
-                    s(this, '_zstdStream', null),
+                    o(this, '_inflate', void 0),
+                    o(this, '_pako', n(457854)),
+                    o(this, '_usesZstd', !1),
+                    o(this, '_zstdDecoder', null),
+                    o(this, '_zstdStream', null),
                     (this._inflate = new this._pako.Inflate({
                         chunkSize: 65536,
                         to: this._gatewayEncoding.wantsString() ? 'string' : ''
@@ -132,8 +134,8 @@ l.push(
             }
         }
     ),
-    l.push(
-        class extends u {
+    c.push(
+        class extends d {
             static canUse() {
                 return !0;
             }
@@ -150,20 +152,20 @@ l.push(
             }
             close() {}
             constructor(...e) {
-                super(...e), s(this, '_pako', n(457854));
+                super(...e), o(this, '_pako', n(457854));
             }
         }
     ),
-    l.push(
-        class extends u {
+    c.push(
+        class extends d {
             static canUse() {
                 return !1;
             }
             bindWebSocket(e) {
-                this.close(), (this._socketId = e._socketId), (0, a.N)() ? o.DCDCompressionManager.enableZstdStreamSupport(this._socketId, 0) : o.DCDCompressionManager.enableZlibStreamSupport(this._socketId);
+                this.close(), (this._socketId = e._socketId), (0, s.N)() ? ((0, i.isAndroid)() ? null == u || u.enableZstdStreamSupport(this._socketId) : l.DCDCompressionManager.enableZstdStreamSupport(this._socketId, 0)) : (0, i.isAndroid)() ? null == u || u.enableZlibStreamSupport(this._socketId) : l.DCDCompressionManager.enableZlibStreamSupport(this._socketId);
             }
             getAlgorithm() {
-                return (0, a.N)() ? 'zstd-stream' : 'zlib-stream';
+                return (0, s.N)() ? 'zstd-stream' : 'zlib-stream';
             }
             usesLegacyCompression() {
                 return !1;
@@ -174,14 +176,14 @@ l.push(
             }
             close() {
                 let e = this._socketId;
-                (this._socketId = null), null !== e && o.DCDCompressionManager.disableZlibStreamSupport(e);
+                (this._socketId = null), null !== e && ((0, i.isAndroid)() ? null == u || u.disableZlibStreamSupport(e) : l.DCDCompressionManager.disableZlibStreamSupport(e));
             }
             constructor(e) {
-                super(e), s(this, '_socketId', void 0), (this._socketId = null);
+                super(e), o(this, '_socketId', void 0), (this._socketId = null);
             }
         }
     );
-class c extends u {
+class f extends d {
     static canUse() {
         return !0;
     }
@@ -197,9 +199,9 @@ class c extends u {
     }
     close() {}
 }
-function d(e) {
-    if (i.s.isDiscordGatewayPlaintextSet()) return new c(e);
-    for (var t of l) if (t.canUse()) return new t(e);
-    return new c(e);
+function _(e) {
+    if (a.s.isDiscordGatewayPlaintextSet()) return new f(e);
+    for (var t of c) if (t.canUse()) return new t(e);
+    return new f(e);
 }
-l.push(c);
+c.push(f);

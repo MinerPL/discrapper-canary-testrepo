@@ -1,26 +1,25 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return f;
     }
 });
-var i = n(735250);
-n(470079);
-var s = n(13245),
-    a = n(593481),
-    o = n(703656),
-    r = n(974180),
+var i = n(200651);
+n(192379);
+var r = n(13245),
+    s = n(703656),
+    a = n(974180),
     l = n(237997),
-    c = n(150097),
-    d = n(557177),
-    u = n(312839),
-    h = n(981631),
-    p = n(987650),
-    f = n(689938);
-function _(e, t, n, _) {
+    o = n(150097),
+    c = n(557177),
+    d = n(312839),
+    u = n(981631),
+    h = n(987650),
+    p = n(388032);
+function f(e, t, n, f) {
     var g;
-    let { icon: m, title: E, body: Z } = (0, c.Xi)(e, t, n),
-        { trackView: I, trackClick: S } = (0, u.R)(p.n0.TextChat, {
-            notif_type: p.n0.TextChat,
+    let { icon: m, title: v, body: _ } = (0, o.Xi)(e, t, n),
+        { trackView: E, trackClick: x } = (0, d.R)(h.n0.TextChat, {
+            notif_type: h.n0.TextChat,
             notif_user_id: null === (g = t.author) || void 0 === g ? void 0 : g.id,
             message_id: t.id,
             message_type: t.type,
@@ -29,26 +28,25 @@ function _(e, t, n, _) {
             channel_type: e.type
         });
     return {
-        colorScheme: a.IC.PRIMARY,
         icon: m,
-        title: E,
-        body: Z,
+        title: v,
+        body: _,
         renderFooter: (e) =>
             e
                 ? (0, i.jsx)('div', {
                       style: { textAlign: 'center' },
-                      children: f.Z.Messages.OVERLAY_CLICK_TO_JUMP_TO_CHANNEL
+                      children: p.intl.string(p.t['+MJm39'])
                   })
                 : null,
         maxBodyLines: 2,
         onNotificationShow: () => {
-            _ && (0, d.GN)(r.Ay, r.yk), I();
+            f && (0, c.GN)(a.Ay, a.yk), E();
         },
         onNotificationClick: () => {
-            (0, o.uL)(h.Z5c.CHANNEL(e.guild_id, e.id)), S('jump'), l.Z.isInstanceUILocked() && s.Z.setInstanceLocked(!1);
+            (0, s.uL)(u.Z5c.CHANNEL(e.guild_id, e.id)), x('jump'), l.Z.isInstanceLocked() && r.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
-            S('dismiss');
+            x('dismiss');
         }
     };
 }

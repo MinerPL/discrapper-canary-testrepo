@@ -1,19 +1,18 @@
 var i = n(664081),
-    a = n(570140),
-    s = n(317770),
-    r = n(863750),
-    l = n(335131),
-    o = n(105622);
-class c extends s.Z {
+    r = n(570140),
+    a = n(317770),
+    l = n(863750),
+    s = n(335131);
+class o extends a.Z {
     _initialize() {
-        a.Z.subscribe('POST_CONNECTION_OPEN', this.handlePostConnectionOpen);
+        r.Z.subscribe('POST_CONNECTION_OPEN', this.handlePostConnectionOpen);
     }
     _terminate() {
-        a.Z.unsubscribe('POST_CONNECTION_OPEN', this.handlePostConnectionOpen);
+        r.Z.unsubscribe('POST_CONNECTION_OPEN', this.handlePostConnectionOpen);
     }
     handlePostConnectionOpen() {
-        let e = r.Z.get('shop_include_unpublished');
-        (0, o.d)('CollectiblesMarketingManager') && (0, l.R2)({ release: e ? i.P.BETA : i.P.PROD });
+        let e = l.Z.get('shop_include_unpublished');
+        (0, s.R2)({ release: e ? i.P.BETA : i.P.PROD });
     }
 }
-t.Z = new c();
+t.Z = new o();

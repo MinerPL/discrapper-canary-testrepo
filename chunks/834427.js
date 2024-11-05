@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var r,
-    i = n(735250),
-    a = n(470079);
+    i = n(200651),
+    a = n(192379);
 function s(e, t, n) {
     return (
         t in e
@@ -33,7 +33,7 @@ let o = 'file-input',
     });
 class u extends (r = a.Component) {
     render() {
-        let { disabled: e, tabIndex: t, className: n, name: r, 'aria-label': a, 'aria-hidden': s } = this.props;
+        let { disabled: e, tabIndex: t, className: n, name: r, 'aria-label': a, 'aria-hidden': s, id: u } = this.props;
         if (this.props.embedded)
             return (0, i.jsx)('div', {
                 role: 'button',
@@ -47,10 +47,11 @@ class u extends (r = a.Component) {
                 'aria-hidden': s || void 0
             });
         {
-            let u = '';
+            let c = '';
             return (
-                this.props.filters && (u = this.props.filters.map((e) => e.extensions.map((e) => '.'.concat(e)).join(',')).join(',')),
+                this.props.filters && (c = this.props.filters.map((e) => e.extensions.map((e) => '.'.concat(e)).join(',')).join(',')),
                 (0, i.jsx)('input', {
+                    id: u,
                     style: l(e),
                     className: n || o,
                     disabled: e,
@@ -59,7 +60,7 @@ class u extends (r = a.Component) {
                     onMouseDown: this.handleBrowserInputMouseDown,
                     onChange: this.props.onChange,
                     multiple: this.props.multiple,
-                    accept: u,
+                    accept: c,
                     name: r,
                     'aria-label': a,
                     'aria-hidden': s || void 0,

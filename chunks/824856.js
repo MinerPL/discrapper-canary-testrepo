@@ -1,87 +1,88 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return I;
+        return S;
     }
 });
-var n = t(735250),
-    a = t(470079),
-    i = t(120356),
-    r = t.n(i),
-    o = t(561537),
-    l = t(269210),
-    c = t(481060),
-    d = t(58385),
-    _ = t(889989),
-    u = t(937615),
-    E = t(624138),
-    T = t(150414),
-    S = t(319978);
-function I(e) {
-    let { cta: s, storeListing: t, className: i } = e,
-        { applicationId: I, benefits: N, description: A } = t,
-        C = a.useMemo(() => (null == t.thumbnail ? null : (0, T.q)(I, t.thumbnail, 256)), [I, t.thumbnail]),
-        { data: m } = (0, d.X)(t.skuId),
-        g = a.useMemo(() => {
-            if (null == m || 0 === m.length) return null;
-            let e = m[0];
-            return (0, u.xg)(e);
-        }, [m]);
-    return null == g
+var i = n(200651),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(561537),
+    o = n(269210),
+    c = n(481060),
+    d = n(58385),
+    u = n(889989),
+    m = n(937615),
+    h = n(624138),
+    g = n(150414),
+    p = n(993553),
+    x = n(319978);
+function S(e) {
+    let { cta: t, storeListing: n, className: r } = e,
+        { applicationId: S, benefits: T, description: C } = n,
+        _ = s.useMemo(() => (null == n.thumbnail ? null : (0, g.q)(S, n.thumbnail, 256)), [S, n.thumbnail]),
+        { data: E } = (0, d.X)(n.skuId),
+        f = s.useMemo(() => {
+            if (null == E || 0 === E.length) return null;
+            let e = E[0];
+            return (0, m.xg)(e);
+        }, [E]);
+    return null == f
         ? null
-        : (0, n.jsxs)(o.l, {
-              className: r()(S.wrapper, i),
-              header: (0, n.jsxs)(n.Fragment, {
+        : (0, i.jsxs)(a.l, {
+              className: l()(x.wrapper, r),
+              header: (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, n.jsxs)('div', {
-                          className: S.headerTitle,
+                      (0, i.jsxs)('div', {
+                          className: x.headerTitle,
                           children: [
-                              null != C &&
-                                  (0, n.jsx)(c.Image, {
-                                      src: C.href,
-                                      imageClassName: S.subscriptionImg,
+                              null != _ &&
+                                  (0, i.jsx)(c.Image, {
+                                      src: _.href,
+                                      imageClassName: x.subscriptionImg,
                                       width: 48,
                                       height: 48
                                   }),
-                              (0, n.jsxs)('div', {
+                              (0, i.jsxs)('div', {
                                   children: [
-                                      (0, n.jsx)(c.Heading, {
+                                      (0, i.jsx)(c.Heading, {
                                           variant: 'heading-md/bold',
-                                          children: t.summary
+                                          children: n.summary
                                       }),
-                                      (0, n.jsx)(c.Text, {
+                                      (0, i.jsx)(c.Text, {
                                           variant: 'text-md/medium',
-                                          children: g
+                                          children: f
                                       })
                                   ]
                               })
                           ]
                       }),
-                      s
+                      t
                   ]
               }),
               children: [
-                  !(0, E.Ew)(A) &&
-                      (0, n.jsx)('div', {
-                          className: S.description,
-                          children: (0, n.jsx)(c.Text, {
+                  !(0, h.Ew)(C) &&
+                      (0, i.jsx)('div', {
+                          className: x.description,
+                          children: (0, i.jsx)(p.Z, {
                               variant: 'text-sm/medium',
-                              children: A
+                              children: C
                           })
                       }),
-                  null != N &&
-                      N.length > 0 &&
-                      (0, n.jsx)('div', {
-                          className: S.benefits,
-                          children: N.map((e) => {
-                              let { id: s, name: t, description: a, icon: i } = e;
-                              return (0, n.jsx)(
-                                  l.G,
+                  null != T &&
+                      T.length > 0 &&
+                      (0, i.jsx)('div', {
+                          className: x.benefits,
+                          children: T.map((e) => {
+                              let { id: t, name: n, description: s, icon: r } = e;
+                              return (0, i.jsx)(
+                                  o.G,
                                   {
-                                      name: t,
-                                      icon: (0, _.n)(I, i),
-                                      description: a
+                                      name: n,
+                                      icon: (0, u.n)(S, r),
+                                      description: s
                                   },
-                                  s
+                                  t
                               );
                           })
                       })

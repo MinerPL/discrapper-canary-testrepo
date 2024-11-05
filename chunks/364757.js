@@ -1,1 +1,1 @@
-e.exports = { spacing: 'spacing_fa7ae4' };
+t.exports = { spacing: 'spacing_fa7ae4' };

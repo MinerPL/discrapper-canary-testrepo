@@ -1,27 +1,25 @@
 n.d(t, {
-    IC: function () {
-        return s;
-    },
     QR: function () {
-        return Z;
+        return v;
     },
     Yj: function () {
-        return I;
+        return _;
+    },
+    iz: function () {
+        return m;
     }
 });
 var i,
-    s,
-    a,
-    o = n(735250),
-    r = n(470079),
-    l = n(120356),
-    c = n.n(l),
-    d = n(481060),
-    u = n(294033),
-    h = n(689938),
-    p = n(548605),
-    f = n(224499);
-function _(e, t, n) {
+    r = n(200651),
+    s = n(192379),
+    a = n(120356),
+    l = n.n(a),
+    o = n(481060),
+    c = n(294033),
+    d = n(388032),
+    u = n(157004),
+    h = n(113207);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,38 +32,37 @@ function _(e, t, n) {
         e
     );
 }
-let g = (e) => e.stopPropagation(),
-    m = () =>
-        (0, o.jsx)('div', {
-            className: p.clickBlocker,
-            onClick: g,
-            onMouseEnter: g,
-            onMouseOver: g
+let f = (e) => e.stopPropagation(),
+    g = () =>
+        (0, r.jsx)('div', {
+            className: u.clickBlocker,
+            onClick: f,
+            onMouseEnter: f,
+            onMouseOver: f
         }),
-    E = () => (0, o.jsx)('div', { className: p.divider }),
-    Z = (e, t, n) =>
-        (0, o.jsx)('div', {
-            className: p.keybindMessage,
-            children: n.format({
+    m = () => (0, r.jsx)('div', { className: u.divider }),
+    v = (e, t, n) =>
+        (0, r.jsx)('div', {
+            className: u.keybindMessage,
+            children: d.intl.format(n, {
                 keybind: t,
                 keybindHook: (e, n) =>
-                    (0, o.jsx)(
-                        u.Z,
+                    (0, r.jsx)(
+                        c.Z,
                         {
                             keybind: t,
-                            className: p.keybind
+                            className: u.keybind
                         },
                         n
                     )
             })
         }),
-    I = (e, t) =>
-        (0, o.jsx)('div', {
-            className: p.hintSubtleText,
+    _ = (e, t) =>
+        (0, r.jsx)('div', {
+            className: u.hintSubtleText,
             children: t
         });
-((i = s || (s = {})).PRIMARY = 'PRIMARY'), (i.BRAND = 'BRAND'), (i.DANGER = 'DANGER');
-class S extends (a = r.PureComponent) {
+class E extends (i = s.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         let { expand: n } = e,
             { expanded: i } = t;
@@ -80,46 +77,46 @@ class S extends (a = r.PureComponent) {
         null != t && null == e.onNotificationShow && t();
     }
     renderCloseButton() {
-        return (0, o.jsx)(d.Button, {
-            look: d.Button.Looks.BLANK,
-            size: d.Button.Sizes.NONE,
+        return (0, r.jsx)(o.Button, {
+            look: o.Button.Looks.BLANK,
+            size: o.Button.Sizes.NONE,
             onClick: this.handleDismiss,
-            className: p.dismissButton,
-            'aria-label': h.Z.Messages.NOTIFICATION_DISMISS,
-            children: (0, o.jsx)(d.XSmallIcon, {
+            className: u.dismissButton,
+            'aria-label': d.intl.string(d.t.LnEgqa),
+            children: (0, r.jsx)(o.XSmallIcon, {
                 size: 'xs',
                 color: 'currentColor',
-                className: p.dismissIcon
+                className: u.dismissIcon
             })
         });
     }
     renderHint() {
         let {
-            props: { hint: e, colorScheme: t },
-            state: { expanded: n }
+            props: { hint: e },
+            state: { expanded: t }
         } = this;
         if (null == e) return null;
         if ('function' == typeof e) {
-            let i = e(n, t);
-            return null != i
-                ? (0, o.jsxs)(
-                      r.Fragment,
+            let n = e(t);
+            return null != n
+                ? (0, r.jsxs)(
+                      s.Fragment,
                       {
-                          children: [(0, o.jsx)(E, {}), i]
+                          children: [(0, r.jsx)(m, {}), n]
                       },
                       'hint-custom'
                   )
                 : null;
         }
-        return (0, o.jsxs)(
-            r.Fragment,
+        return (0, r.jsxs)(
+            s.Fragment,
             {
                 children: [
-                    (0, o.jsx)(E, {}),
-                    (0, o.jsx)(
+                    (0, r.jsx)(m, {}),
+                    (0, r.jsx)(
                         'div',
                         {
-                            className: 'string' == typeof e ? p.hintText : void 0,
+                            className: 'string' == typeof e ? u.hintText : void 0,
                             children: e
                         },
                         'hint-text'
@@ -131,59 +128,54 @@ class S extends (a = r.PureComponent) {
     }
     renderFooter() {
         let {
-            props: { renderFooter: e, cancelText: t, confirmText: n, onConfirmClick: i, onCancelClick: s, hint: a, colorScheme: l },
-            state: { expanded: c }
+            props: { cancelText: e, confirmText: t, onConfirmClick: n, onCancelClick: i, hint: a },
+            state: { expanded: l }
         } = this;
-        if (!c) return null != a ? this.renderHint() : null;
-        if (null != e) {
-            let t = e(c, l);
-            return null != t
-                ? (0, o.jsxs)(
-                      r.Fragment,
+        if (!l) return null != a ? this.renderHint() : null;
+        if (null != this.props.renderFooter) {
+            let e = this.props.renderFooter(l);
+            return null != e
+                ? (0, r.jsxs)(
+                      s.Fragment,
                       {
-                          children: [(0, o.jsx)(E, {}), t]
+                          children: [(0, r.jsx)(m, {}), e]
                       },
                       'footer-custom-content'
                   )
                 : null;
         }
-        if (null != i || null != s) {
-            let e = d.Button.Colors.GREEN,
-                a = d.Button.Colors.PRIMARY,
-                c = d.Button.Looks.FILLED;
-            switch (l) {
-                case 'DANGER':
-                case 'BRAND':
-                    (e = a = d.Button.Colors.WHITE), (c = d.Button.Looks.OUTLINED);
-            }
-            return (0, o.jsxs)(
-                r.Fragment,
+        if (null != n || null != i) {
+            let a = o.Button.Colors.GREEN,
+                l = o.Button.Colors.PRIMARY,
+                c = o.Button.Looks.FILLED;
+            return (0, r.jsxs)(
+                s.Fragment,
                 {
                     children: [
-                        (0, o.jsx)(E, {}),
-                        (0, o.jsxs)('div', {
-                            className: p.buttonContainer,
+                        (0, r.jsx)(m, {}),
+                        (0, r.jsxs)('div', {
+                            className: u.buttonContainer,
                             children: [
-                                null != i
-                                    ? (0, o.jsx)(d.Button, {
+                                null != n
+                                    ? (0, r.jsx)(o.Button, {
                                           fullWidth: !0,
-                                          size: d.Button.Sizes.SMALL,
-                                          color: e,
+                                          size: o.Button.Sizes.SMALL,
+                                          color: a,
                                           onClick: this.handleConfirmClick,
-                                          className: p.button,
-                                          innerClassName: p.innerText,
-                                          children: null != n ? n : h.Z.Messages.OKAY
+                                          className: u.button,
+                                          innerClassName: u.innerText,
+                                          children: null != t ? t : d.intl.string(d.t.BddRzc)
                                       })
                                     : null,
-                                null != s
-                                    ? (0, o.jsx)(d.Button, {
+                                null != i
+                                    ? (0, r.jsx)(o.Button, {
                                           fullWidth: !0,
-                                          size: d.Button.Sizes.SMALL,
+                                          size: o.Button.Sizes.SMALL,
                                           look: c,
-                                          color: a,
+                                          color: l,
                                           onClick: this.handleCancelClick,
-                                          className: p.button,
-                                          children: null != t ? t : h.Z.Messages.CANCEL
+                                          className: u.button,
+                                          children: null != e ? e : d.intl.string(d.t['ETE/oK'])
                                       })
                                     : null
                             ]
@@ -200,33 +192,33 @@ class S extends (a = r.PureComponent) {
         return null == e
             ? null
             : 'string' == typeof e
-              ? (0, o.jsx)(d.Avatar, {
+              ? (0, r.jsx)(o.Avatar, {
                     src: e,
-                    size: d.AvatarSizes.SIZE_40,
-                    className: p.avatar,
+                    size: o.AvatarSizes.SIZE_40,
+                    className: u.avatar,
                     'aria-hidden': !0
                 })
-              : (0, o.jsx)('div', {
-                    className: p.avatar,
+              : (0, r.jsx)('div', {
+                    className: u.avatar,
                     children: e
                 });
     }
     renderContent() {
         let { body: e, title: t, maxBodyLines: n } = this.props;
-        return (0, o.jsxs)('div', {
-            className: p.content,
+        return (0, r.jsxs)('div', {
+            className: u.content,
             children: [
                 this.renderIcon(),
-                (0, o.jsxs)('div', {
-                    className: p.details,
+                (0, r.jsxs)('div', {
+                    className: u.details,
                     children: [
-                        (0, o.jsx)('div', {
-                            className: p.title,
+                        (0, r.jsx)('div', {
+                            className: u.title,
                             children: t
                         }),
                         null != e
-                            ? (0, o.jsx)('div', {
-                                  className: c()(p.body, f.marginTop4),
+                            ? (0, r.jsx)('div', {
+                                  className: l()(u.body, h.marginTop4),
                                   style: {
                                       WebkitLineClamp: n,
                                       lineClamp: n
@@ -241,52 +233,48 @@ class S extends (a = r.PureComponent) {
     }
     render() {
         let {
-                props: { onNotificationClick: e, colorScheme: t, disabled: n },
-                state: { expanded: i }
+                props: { onNotificationClick: e, disabled: t },
+                state: { expanded: n }
             } = this,
-            s = null != e ? d.Clickable : 'div';
-        return (0, o.jsxs)(s, {
-            onMouseOver: i ? null : this.handleMouseEnter,
-            onFocus: i ? null : this.handleMouseEnter,
+            i = null != e ? o.Clickable : 'div';
+        return (0, r.jsxs)(i, {
+            onMouseOver: n ? null : this.handleMouseEnter,
+            onFocus: n ? null : this.handleMouseEnter,
             onClick: e,
-            className: c()(p.container, {
-                [p.themePrimary]: 'PRIMARY' === t,
-                [p.themeBrand]: 'BRAND' === t,
-                [p.themeDanger]: 'DANGER' === t,
-                [p.clickable]: null != e && !n
+            className: l()(u.container, {
+                [u.themePrimary]: !0,
+                [u.clickable]: null != e && !t
             }),
-            children: [this.renderCloseButton(), this.renderContent(), this.renderFooter(), n ? (0, o.jsx)(m, {}) : null]
+            children: [this.renderCloseButton(), this.renderContent(), this.renderFooter(), t ? (0, r.jsx)(g, {}) : null]
         });
     }
     constructor(e) {
         super(e),
-            _(this, 'handleDismiss', (e) => {
+            p(this, 'handleDismiss', (e) => {
                 e.stopPropagation();
                 let { onDismissClick: t } = this.props;
                 null == t || t(e);
             }),
-            _(this, 'handleConfirmClick', (e) => {
+            p(this, 'handleConfirmClick', (e) => {
                 e.stopPropagation();
                 let { onConfirmClick: t } = this.props;
                 null == t || t(e);
             }),
-            _(this, 'handleCancelClick', (e) => {
+            p(this, 'handleCancelClick', (e) => {
                 e.stopPropagation();
                 let { onCancelClick: t } = this.props;
                 null == t || t(e);
             }),
-            _(this, 'handleMouseEnter', () => {
+            p(this, 'handleMouseEnter', () => {
                 !this.props.disabled && this.setState({ expanded: !0 });
             });
         let { expand: t } = e;
         this.state = { expanded: t };
     }
 }
-_(S, 'ColorSchemes', s),
-    _(S, 'defaultProps', {
-        maxBodyLines: void 0,
-        colorScheme: 'PRIMARY',
-        expand: !1,
-        disabled: !1
-    }),
-    (t.ZP = S);
+p(E, 'defaultProps', {
+    maxBodyLines: void 0,
+    expand: !1,
+    disabled: !1
+}),
+    (t.ZP = E);

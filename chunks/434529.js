@@ -4,26 +4,31 @@ function r(e) {
 function i(e, t) {
     let { top: n, bottom: i, left: a, right: s } = e;
     return {
-        top: null != n ? Math.floor(r(n) * t.height) : null,
-        left: null != a ? Math.floor(r(a) * t.width) : null,
-        bottom: null != i ? Math.floor(r(i) * t.height) : null,
-        right: null != s ? Math.floor(r(s) * t.width) : null
+        top: null != n ? Math.floor(r(n) * t.height) : void 0,
+        left: null != a ? Math.floor(r(a) * t.width) : void 0,
+        bottom: null != i ? Math.floor(r(i) * t.height) : void 0,
+        right: null != s ? Math.floor(r(s) * t.width) : void 0
     };
 }
 function a(e, t) {
-    let { width: n, height: i } = e;
-    return {
-        width: 'auto' === n ? n : Math.floor(r(n) * t.width),
-        height: 'auto' === i ? i : Math.floor(r(i) * t.height)
-    };
+    let { width: n, height: i, fixed: a = !1 } = e;
+    return a
+        ? {
+              width: n,
+              height: i
+          }
+        : {
+              width: 'auto' === n ? n : Math.floor(r(n) * t.width),
+              height: 'auto' === i ? i : Math.floor(r(i) * t.height)
+          };
 }
 function s(e, t) {
     let { top: n, bottom: i, left: a, right: s } = e;
     return {
-        top: null != n ? r(n / t.height) : null,
-        left: null != a ? r(a / t.width) : null,
-        bottom: null != i ? r(i / t.height) : null,
-        right: null != s ? r(s / t.width) : null
+        top: null != n ? r(n / t.height) : void 0,
+        left: null != a ? r(a / t.width) : void 0,
+        bottom: null != i ? r(i / t.height) : void 0,
+        right: null != s ? r(s / t.width) : void 0
     };
 }
 function o(e, t) {
@@ -76,7 +81,7 @@ function d(e, t, n) {
     let { width: r, height: s } = a(t, n);
     return (r = 'string' == typeof r ? 0 : r), (s = 'string' == typeof s ? 0 : s), l(e, n.width, n.height, r, s);
 }
-function _(e, t, n) {
+function f(e, t, n) {
     let { top: r, left: i } = e,
         { x: a, y: d } =
             arguments.length > 3 && void 0 !== arguments[3]
@@ -85,7 +90,7 @@ function _(e, t, n) {
                       x: 0,
                       y: 0
                   },
-        { width: _, height: E } = t;
+        { width: f, height: _ } = t;
     return [
         s(
             u(
@@ -94,13 +99,13 @@ function _(e, t, n) {
                         {
                             top: r + d,
                             left: i + a,
-                            bottom: null,
-                            right: null
+                            bottom: void 0,
+                            right: void 0
                         },
                         n.width,
                         n.height,
-                        'number' == typeof _ ? _ : 0,
-                        'number' == typeof E ? E : 0
+                        'number' == typeof f ? f : 0,
+                        'number' == typeof _ ? _ : 0
                     )
                 )
             ),
@@ -109,7 +114,7 @@ function _(e, t, n) {
         o(t, n)
     ];
 }
-function E(e, t, n) {
+function _(e, t, n) {
     let { top: r, right: i } = e,
         { x: a, y: d } =
             arguments.length > 3 && void 0 !== arguments[3]
@@ -118,7 +123,7 @@ function E(e, t, n) {
                       x: 0,
                       y: 0
                   },
-        { width: _, height: E } = t;
+        { width: f, height: _ } = t;
     return [
         s(
             u(
@@ -126,14 +131,14 @@ function E(e, t, n) {
                     l(
                         {
                             top: r + d,
-                            left: null,
-                            bottom: null,
+                            left: void 0,
+                            bottom: void 0,
                             right: i - a
                         },
                         n.width,
                         n.height,
-                        'number' == typeof _ ? _ : 0,
-                        'number' == typeof E ? E : 0
+                        'number' == typeof f ? f : 0,
+                        'number' == typeof _ ? _ : 0
                     )
                 )
             ),
@@ -142,7 +147,19 @@ function E(e, t, n) {
         o(t, n)
     ];
 }
+function h(e, t) {
+    let n = {
+        top: void 0,
+        bottom: void 0,
+        left: void 0,
+        right: void 0
+    };
+    return null != t.top && (n.top = e.top), null != t.bottom && (n.bottom = e.bottom), null != t.left && (n.left = e.left), null != t.right && (n.right = e.right), n;
+}
 n.d(t, {
+    BL: function () {
+        return h;
+    },
     KR: function () {
         return i;
     },
@@ -159,13 +176,13 @@ n.d(t, {
         return s;
     },
     o4: function () {
-        return _;
+        return f;
     },
     ou: function () {
         return c;
     },
     uq: function () {
-        return E;
+        return _;
     },
     vS: function () {
         return d;

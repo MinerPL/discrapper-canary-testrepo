@@ -1,5 +1,8 @@
 n.d(t, {
     Gk: function () {
+        return o;
+    },
+    Ni: function () {
         return s;
     },
     PV: function () {
@@ -19,6 +22,12 @@ function a(e) {
         recipientUserId: e
     });
 }
-function s() {
+function s(e) {
+    r.Z.dispatch({
+        type: 'GIFT_INTENT_FLOW_PURCHASED_GIFT',
+        recipientUserId: e
+    });
+}
+function o() {
     r.Z.dispatch({ type: 'FRIENDS_TAB_BADGE_DISMISS' });
 }

@@ -9,5 +9,6 @@ e.exports = {
     collapsibleItem: 'collapsibleItem_eb92a8',
     tooltipWrapper: 'tooltipWrapper_eb92a8',
     info: 'info_eb92a8',
-    icon: 'icon_eb92a8'
+    icon: 'icon_eb92a8',
+    radioIndicator: 'radioIndicator_eb92a8'
 };

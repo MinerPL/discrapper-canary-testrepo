@@ -1,66 +1,46 @@
 n.d(t, {
     To: function () {
-        return m;
+        return g;
     },
     Xu: function () {
         return C;
     },
-    YV: function () {
-        return f;
-    },
     ZP: function () {
-        return I;
+        return _;
     },
     aF: function () {
-        return g;
+        return m;
     }
 });
-var i = n(735250),
-    l = n(470079),
+var i = n(200651),
+    l = n(192379),
     r = n(481060),
     a = n(100527),
-    s = n(428695),
-    o = n(703656),
+    o = n(428695),
+    s = n(703656),
     c = n(970606),
     u = n(308083),
     d = n(981631),
     h = n(921944),
-    p = n(689938),
-    _ = n(65688);
-function f() {
-    return (0, i.jsxs)('div', {
-        className: _.inviteContainer,
-        children: [
-            (0, i.jsx)(r.EnvelopeIcon, {
-                size: 'xxs',
-                color: 'currentColor',
-                className: _.envelope
-            }),
-            (0, i.jsx)(r.Text, {
-                variant: 'text-xs/bold',
-                className: _.invite,
-                children: p.Z.Messages.CLAN_UPSELL_INVITE
-            })
-        ]
-    });
-}
-function g(e) {
+    p = n(388032),
+    f = n(737116);
+function m(e) {
     let { title: t } = e;
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(r.Heading, {
             variant: 'heading-md/semibold',
             color: 'header-primary',
-            className: _.title,
+            className: f.title,
             children: t
         })
     });
 }
-function m(e) {
+function g(e) {
     let { message: t } = e;
     return (0, i.jsx)(r.Text, {
         variant: 'text-xs/normal',
         color: 'text-muted',
-        className: _.message,
+        className: f.message,
         children: t
     });
 }
@@ -71,16 +51,16 @@ function C(e) {
         look: r.ButtonLooks.FILLED,
         size: r.ButtonSizes.SMALL,
         color: r.ButtonColors.BRAND,
-        className: _.button,
+        className: f.button,
         onClick: t,
         children: (0, i.jsx)(r.Text, {
             variant: 'text-sm/semibold',
             color: 'always-white',
-            children: p.Z.Messages.CHECK_IT_OUT
+            children: p.intl.string(p.t.RzWDqa)
         })
     });
 }
-function I(e) {
+function _(e) {
     let { guild: t, markAsDismissed: n, defaultGameId: r } = e;
     l.useEffect(() => {
         (0, c.TE)({
@@ -88,24 +68,24 @@ function I(e) {
             location: a.Z.GUILD_CHANNEL_LIST
         });
     }, [t.id]);
-    let f = r === u.xn ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_GENSHIN_TITLE : r === u.nJ ? p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_VALORANT_TITLE : p.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
-        I = l.useCallback(() => (0, i.jsx)(m, { message: p.Z.Messages.CLAN_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE }), []),
-        E = l.useCallback(() => (0, i.jsx)(g, { title: f }), [f]),
-        N = l.useCallback(() => {
-            (0, c._9)({
+    let _ = r === u.xn ? p.intl.string(p.t.Y95lq6) : r === u.nJ ? p.intl.string(p.t['1UjqaG']) : p.intl.string(p.t.MA2x2N),
+        x = l.useCallback(() => (0, i.jsx)(g, { message: p.intl.string(p.t.VuqJFR) }), []),
+        v = l.useCallback(() => (0, i.jsx)(m, { title: _ }), [_]),
+        I = l.useCallback(() => {
+            (0, c.aN)({
                 guildId: t.id,
                 location: a.Z.GUILD_CHANNEL_LIST
             }),
-                (0, o.uL)(d.Z5c.GUILD_DISCOVERY);
+                (0, s.uL)(d.Z5c.GUILD_DISCOVERY);
         }, [t.id]),
-        x = l.useCallback(() => (0, i.jsx)(C, { onClick: N }), [N]);
-    return (0, i.jsx)(s.Z, {
-        className: _.notice,
+        b = l.useCallback(() => (0, i.jsx)(C, { onClick: I }), [I]);
+    return (0, i.jsx)(o.Z, {
+        className: f.notice,
         guild: t,
         onDismissed: () => n(h.L.DISMISS),
-        title: E,
-        message: I,
-        cta: x,
+        title: v,
+        message: x,
+        cta: b,
         trackingSource: d.PsQ.CLAN_ADMIN_UPSELL,
         type: d.vID.CLAN_ADMIN_UPSELL
     });

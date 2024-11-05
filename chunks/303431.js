@@ -4,5 +4,7 @@ e.exports = {
     buttons: 'buttons_ad57ee',
     customPillContainer: 'customPillContainer_ad57ee',
     shinyButtonExamples: 'shinyButtonExamples_ad57ee',
-    searchableSelectExamples: 'searchableSelectExamples_ad57ee'
+    searchableSelectExamples: 'searchableSelectExamples_ad57ee',
+    slider: 'slider_ad57ee',
+    tabBar: 'tabBar_ad57ee'
 };

@@ -1,11 +1,11 @@
 n.d(t, {
     Z: function () {
-        return y;
+        return O;
     }
 }),
     n(47120);
-var r = n(735250),
-    i = n(470079),
+var r = n(200651),
+    i = n(192379),
     a = n(120356),
     s = n.n(a),
     o = n(106351),
@@ -13,124 +13,123 @@ var r = n(735250),
     u = n(541716),
     c = n(752305),
     d = n(893718),
-    _ = n(131704),
-    E = n(823379),
-    f = n(5192),
-    h = n(51144),
-    p = n(785717),
-    I = n(448197),
-    m = n(698305),
-    T = n(510659),
-    S = n(825801),
-    g = n(652853),
-    A = n(228168),
-    N = n(420212),
-    O = n(689938),
-    R = n(639899);
-let v = (0, _.kt)({
+    f = n(131704),
+    _ = n(823379),
+    h = n(5192),
+    p = n(51144),
+    m = n(785717),
+    g = n(448197),
+    E = n(698305),
+    v = n(510659),
+    I = n(810097),
+    S = n(652853),
+    T = n(228168),
+    b = n(420212),
+    y = n(388032),
+    A = n(639899);
+let N = (0, f.kt)({
         id: '1',
         type: o.d.DM
     }),
     C = (e) => {
         let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
         switch (r) {
-            case A.n_.ACTIVITY:
-                let a = O.Z.Messages.USER_PROFILE_REPLIED_TO_ACTIVITY.format({ username: n });
-                return ''.concat(S.jd).concat(a, '*\n').concat(t);
-            case A.n_.AVATAR:
-                let s = O.Z.Messages.USER_PROFILE_REPLIED_TO_AVATAR.format({ username: n });
-                return ''.concat(S.jd).concat(s, '*\n').concat(t);
-            case A.n_.STATUS:
-                let o = O.Z.Messages.USER_PROFILE_REPLIED_TO_STATUS.format({ username: n });
-                return null != i ? ''.concat(S.jd).concat(o, '*').concat('\n> '.concat(i), '\n').concat(t) : ''.concat(S.jd).concat(o, '*\n').concat(t);
+            case T.n_.ACTIVITY:
+                let a = y.intl.formatToPlainString(y.t.WmvMCg, { username: n });
+                return ''.concat(I.jd).concat(a, '*\n').concat(t);
+            case T.n_.AVATAR:
+                let s = y.intl.formatToPlainString(y.t.lpaBsL, { username: n });
+                return ''.concat(I.jd).concat(s, '*\n').concat(t);
+            case T.n_.STATUS:
+                let o = y.intl.formatToPlainString(y.t.lFXgFR, { username: n });
+                return null != i ? ''.concat(I.jd).concat(o, '*').concat('\n> '.concat(i), '\n').concat(t) : ''.concat(I.jd).concat(o, '*\n').concat(t);
             default:
-                (0, E.vE)(r);
+                (0, _.vE)(r);
         }
     },
-    L = (e) => {
+    R = (e) => {
         switch (e) {
-            case A.n_.ACTIVITY:
-                return O.Z.Messages.USER_PROFILE_REPLY_TO_ACTIVITY_PLACEHOLDER;
-            case A.n_.AVATAR:
-                return O.Z.Messages.USER_PROFILE_REPLY_TO_AVATAR_PLACEHOLDER;
-            case A.n_.STATUS:
-                return O.Z.Messages.USER_PROFILE_REPLY_TO_STATUS_PLACEHOLDER;
+            case T.n_.ACTIVITY:
+                return y.t.Qn081N;
+            case T.n_.AVATAR:
+                return y.t.xGNPFB;
+            case T.n_.STATUS:
+                return y.t.g9BTCA;
             default:
-                (0, E.vE)(e);
+                (0, _.vE)(e);
         }
     };
-function y(e) {
-    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: _, sourceDetails: E, setPopoutRef: O, modalKey: y, onClose: D } = e,
-        { trackUserProfileAction: b } = (0, p.KZ)(),
-        { sendReply: M } = (0, I.Q)(_),
-        { resetInteraction: P, setInteractionToastShown: U, setInteractionTypeSent: w } = (0, T.Xo)(),
-        { primaryColor: x } = (0, g.z)(),
-        [G, k] = i.useState(''),
-        [B, F] = i.useState((0, c.JM)(G)),
-        V = i.useRef(!1),
-        H = i.useRef(null),
-        Z = i.useCallback(
+function O(e) {
+    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: f, sourceDetails: _, setPopoutRef: I, modalKey: O, onClose: D } = e,
+        { trackUserProfileAction: L } = (0, m.KZ)(),
+        { sendReply: x } = (0, g.Q)(f),
+        { resetInteraction: w, setInteractionToast: M } = (0, v.Xo)(),
+        { primaryColor: P } = (0, S.z)(),
+        [k, U] = i.useState(''),
+        [G, B] = i.useState((0, c.JM)(k)),
+        Z = i.useRef(!1),
+        F = i.useRef(null),
+        V = i.useCallback(
             (e) => {
-                e.key === N.vn.ESCAPE && (e.stopPropagation(), P());
+                e.key === b.vn.ESCAPE && (e.stopPropagation(), w());
             },
-            [P]
+            [w]
         );
     i.useEffect(() => {
-        null == O || O(null == H ? void 0 : H.current);
-    }, [H, O]);
-    let Y = async (e) => {
+        null == I || I(null == F ? void 0 : F.current);
+    }, [F, I]);
+    let j = async (e) => {
             if (null == e) return;
-            b({ action: M });
+            L({ action: x });
             let n = C({
                 input: e,
-                username: h.ZP.getName(t),
-                sourceType: _,
-                sourceDetails: E
+                username: p.ZP.getName(t),
+                sourceType: f,
+                sourceDetails: _
             });
-            w(null), U(!0);
+            M(null);
             try {
-                await (0, m.Z)({
+                await (0, E.Z)({
                     userId: t.id,
                     content: n,
-                    location: 'UserProfileReactReplyBar',
+                    location: 'UserProfileReplyPopout',
                     openChannel: !1,
                     whenReady: !1
                 });
             } catch (e) {}
-            w(A.P.REPLY),
-                setTimeout(() => {
-                    U(!1);
-                }, S._1);
+            M(T.P.REPLY);
         },
-        j = {
-            [R.biteSize]: o === A.y0.BITE_SIZE,
-            [R.panel]: o === A.y0.PANEL
+        H = {
+            [A.biteSize]: o === T.y0.BITE_SIZE,
+            [A.panel]: o === T.y0.PANEL,
+            [A.fullSize]: o === T.y0.FULL_SIZE
         },
-        W = {
-            [R.status]: _ === A.n_.STATUS,
-            [R.avatar]: _ === A.n_.AVATAR
+        Y = {
+            [A.status]: f === T.n_.STATUS,
+            [A.avatar]: f === T.n_.AVATAR,
+            [A.activity]: f === T.n_.ACTIVITY
         };
     return (0, r.jsx)(l.V, {
-        ref: H,
-        onKeyDown: Z,
+        ref: F,
+        onKeyDown: V,
         children: (0, r.jsx)('div', {
-            className: s()(R.container, j, W, { [R.customProfileTheme]: null != x }),
+            className: s()(A.container, H, Y, { [A.customProfileTheme]: null != P }),
             children: (0, r.jsx)(d.Z, {
-                parentModalKey: y,
+                parentModalKey: O,
                 emojiPickerCloseOnModalOuterClick: !0,
-                innerClassName: R.inner,
-                editorClassName: R.editor,
+                innerClassName: A.inner,
+                editorClassName: A.editor,
                 type: u.I.USER_PROFILE_REPLY,
-                placeholder: L(_).format({ username: f.ZP.getName(n, a, t) }),
-                channel: v,
-                textValue: G,
-                richValue: B,
+                placeholder: y.intl.formatToPlainString(R(f), { username: h.ZP.getName(n, a, t) }),
+                channel: N,
+                textValue: k,
+                richValue: G,
                 onChange: (e, t, n) => {
-                    if (t !== G) k(t), F(n);
+                    if (t !== k) U(t), B(n);
                 },
-                focused: V.current,
+                focused: Z.current,
                 onFocus: () => {
-                    V.current = !0;
+                    Z.current = !0;
                 },
                 onSubmit: async (e) => {
                     let { value: t } = e,
@@ -142,8 +141,8 @@ function y(e) {
                         };
                     try {
                         return (
-                            await Y(n),
-                            P(),
+                            await j(n),
+                            w(),
                             null == D || D(),
                             {
                                 shouldClear: !0,

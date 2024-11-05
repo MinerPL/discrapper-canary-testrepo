@@ -1,64 +1,65 @@
-n.d(t, {
+t.d(n, {
     s: function () {
-        return T;
+        return m;
     }
 });
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
-    l = n(481060),
-    o = n(346610),
-    c = n(868643),
-    u = n(912332),
-    d = n(503349),
-    _ = n(689938),
-    E = n(903783);
-function I() {
-    (0, l.closeModal)(d.c);
+var a = t(200651),
+    r = t(192379),
+    i = t(120356),
+    l = t.n(i),
+    o = t(481060),
+    s = t(346610),
+    u = t(868643),
+    c = t(912332),
+    d = t(701865),
+    f = t(388032),
+    h = t(760997);
+function _() {
+    (0, o.closeModal)(d.U);
 }
-function m(e) {
-    let { className: t, channelId: n, messageId: s, target: o } = e,
-        c = a.useCallback(() => {
-            if ('embed' === o.type) {
-                (0, u.l8)({
-                    messageId: s,
-                    channelId: n,
+function p(e) {
+    let { className: n, message: t, target: i } = e,
+        s = r.useCallback(() => {
+            if ('embed' === i.type) {
+                (0, c.l8)({
+                    messageId: t.id,
+                    channelId: t.channel_id,
+                    message: t,
                     source: 'media-viewer',
-                    forwardOptions: { onlyEmbedIndices: [o.embedIndex] },
-                    onRequestSent: I
+                    forwardOptions: { onlyEmbedIndices: [i.embedIndex] },
+                    onRequestSent: _
                 });
                 return;
             }
-            (0, u.l8)({
-                messageId: s,
-                channelId: n,
+            (0, c.l8)({
+                messageId: t.id,
+                channelId: t.channel_id,
+                message: t,
                 source: 'media-viewer',
-                forwardOptions: { onlyAttachmentIds: [o.attachmentId] },
-                onRequestSent: I
+                forwardOptions: { onlyAttachmentIds: [i.attachmentId] },
+                onRequestSent: _
             });
-        }, [n, s, o]);
-    return (0, i.jsx)(l.Clickable, {
-        className: r()(E.container, t),
-        onClick: c,
-        children: (0, i.jsx)(l.Text, {
-            className: E.text,
+        }, [t, i]);
+    return (0, a.jsx)(o.Clickable, {
+        className: l()(h.container, n),
+        onClick: s,
+        children: (0, a.jsx)(o.Text, {
+            className: h.text,
             variant: 'text-sm/medium',
             color: 'always-white',
-            children: _.Z.Messages.MESSAGE_ACTION_FORWARD
+            children: f.intl.string(f.t.I3ltXF)
         })
     });
 }
-function T(e, t) {
-    let { canForwardMessages: n } = (0, o.WT)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
-    return n && (0, c.h)(e)
-        ? (n) => {
-              let { className: a } = n;
-              return (0, i.jsx)(m, {
-                  className: a,
-                  channelId: e.channel_id,
-                  messageId: e.id,
-                  target: t
+function m(e, n) {
+    let { canForwardMessages: t } = (0, s.WT)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
+    return t && (0, u.h)(e)
+        ? (t) => {
+              let { className: r } = t;
+              return (0, a.jsx)(p, {
+                  className: r,
+                  message: e,
+                  target: n
               });
           }
         : () => null;

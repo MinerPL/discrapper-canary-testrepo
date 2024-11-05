@@ -1,1 +1,5 @@
-e.exports = '/assets/7cbd5481d1f05cd38b3f.svg';
+e.exports = {
+    upsell: 'upsell_b6ac1a',
+    icon: 'icon_b6ac1a',
+    body: 'body_b6ac1a'
+};

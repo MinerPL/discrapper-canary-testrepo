@@ -1,30 +1,30 @@
 n.d(t, {
     Vk: function () {
-        return d;
+        return u;
     },
     YK: function () {
-        return I;
+        return p;
     },
     ap: function () {
         return m;
     },
     bv: function () {
-        return E;
+        return d;
     },
     gl: function () {
         return f;
     },
     iP: function () {
-        return p;
+        return h;
     },
     n0: function () {
-        return _;
+        return c;
     },
     nc: function () {
-        return u;
+        return l;
     },
     wF: function () {
-        return T;
+        return g;
     }
 });
 var r,
@@ -36,12 +36,10 @@ var r,
     u,
     c,
     d,
-    _,
-    E,
     f,
-    h = n(358085);
-let p = h.isPlatformEmbedded && ((0, h.isWindows)() || !1);
-function I(e) {
+    _ = n(358085);
+let h = _.isPlatformEmbedded && ((0, _.isWindows)() || !1);
+function p(e) {
     switch (e) {
         case 'News Nudge':
         case 'Welcome Nudge':
@@ -62,7 +60,7 @@ function I(e) {
             return 5;
     }
 }
-((r = u || (u = {}))[(r.WELCOME = 0)] = 'WELCOME'), (r[(r.NEWS = 1)] = 'NEWS'), (r[(r.GO_LIVE_VOICE = 2)] = 'GO_LIVE_VOICE'), (r[(r.GO_LIVE_NON_VOICE = 3)] = 'GO_LIVE_NON_VOICE'), (r[(r.KEYBIND_INDICATORS = 4)] = 'KEYBIND_INDICATORS'), ((i = c || (c = {})).PRIMARY = 'PRIMARY'), (i.BRAND = 'BRAND'), (i.DANGER = 'DANGER'), ((a = d || (d = {}))[(a.Nudge = 0)] = 'Nudge'), (a[(a.TextChat = 1)] = 'TextChat'), (a[(a.VoiceCall = 2)] = 'VoiceCall'), (a[(a.Activity = 3)] = 'Activity'), (a[(a.Clips = 4)] = 'Clips'), (a[(a.Other = 5)] = 'Other'), ((s = _ || (_ = {})).NewsNudge = 'News Nudge'), (s.WelcomeNudge = 'Welcome Nudge'), (s.TextChat = 'Text Chat'), (s.ActivityUserJoin = 'Activity User Join'), (s.ActivityInvite = 'Activity Invite'), (s.IncomingCall = 'Incoming Call'), (s.GoLiveNudge = 'Go Live Nudge'), (s.GoLiveNonVoiceNudge = 'Go Live Non Voice Nudge'), (s.OverlayCrashed = 'Overlay Crashed'), (s.ClipsReminderNotification = 'Clips Reminder Notification'), (s.ClipsNotification = 'Clips Notification'), (s.KeybindIndicatorsNotification = 'Keybind Indicators Notification'), ((o = E || (E = {}))[(o.Viewed = 0)] = 'Viewed'), (o[(o.Clicked = 1)] = 'Clicked');
+((r = l || (l = {}))[(r.WELCOME = 0)] = 'WELCOME'), (r[(r.NEWS = 1)] = 'NEWS'), (r[(r.GO_LIVE_VOICE = 2)] = 'GO_LIVE_VOICE'), (r[(r.GO_LIVE_NON_VOICE = 3)] = 'GO_LIVE_NON_VOICE'), (r[(r.KEYBIND_INDICATORS = 4)] = 'KEYBIND_INDICATORS'), ((i = u || (u = {}))[(i.Nudge = 0)] = 'Nudge'), (i[(i.TextChat = 1)] = 'TextChat'), (i[(i.VoiceCall = 2)] = 'VoiceCall'), (i[(i.Activity = 3)] = 'Activity'), (i[(i.Clips = 4)] = 'Clips'), (i[(i.Other = 5)] = 'Other'), ((a = c || (c = {})).NewsNudge = 'News Nudge'), (a.WelcomeNudge = 'Welcome Nudge'), (a.TextChat = 'Text Chat'), (a.ActivityUserJoin = 'Activity User Join'), (a.ActivityInvite = 'Activity Invite'), (a.IncomingCall = 'Incoming Call'), (a.GoLiveNudge = 'Go Live Nudge'), (a.GoLiveNonVoiceNudge = 'Go Live Non Voice Nudge'), (a.OverlayCrashed = 'Overlay Crashed'), (a.ClipsReminderNotification = 'Clips Reminder Notification'), (a.ClipsNotification = 'Clips Notification'), (a.KeybindIndicatorsNotification = 'Keybind Indicators Notification'), (a.SendGameInvitesNotification = 'Send Game Invites Notification'), ((s = d || (d = {}))[(s.Viewed = 0)] = 'Viewed'), (s[(s.Clicked = 1)] = 'Clicked');
 let m = Object.freeze({
     LOW: 'background-opacity-low',
     MEDIUM: 'background-opacity-medium',
@@ -70,8 +68,8 @@ let m = Object.freeze({
     FULL: 'background-opacity-full',
     DISABLED: null
 });
-((l = f || (f = {}))[(l.Disabled = 0)] = 'Disabled'), (l[(l.Hook = 1)] = 'Hook'), (l[(l.OutOfProcess = 2)] = 'OutOfProcess');
-let T = Object.freeze({
+((o = f || (f = {}))[(o.Disabled = 0)] = 'Disabled'), (o[(o.Hook = 1)] = 'Hook'), (o[(o.OutOfProcess = 2)] = 'OutOfProcess');
+let g = Object.freeze({
     BOTTOM: 0,
     LOWER: 0.25,
     UPPER: 0.75,

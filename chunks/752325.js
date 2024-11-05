@@ -13,6 +13,7 @@ n.r(
         markValue: 'markValue_c7a159',
         markDash: 'markDash_c7a159',
         markDashSimple: 'markDashSimple_c7a159 markDash_c7a159',
-        defaultValue: 'defaultValue_c7a159'
+        defaultValue: 'defaultValue_c7a159',
+        hasMarks: 'hasMarks_c7a159'
     })
 );

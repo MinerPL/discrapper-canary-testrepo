@@ -1,62 +1,61 @@
-l.d(e, {
+e.d(t, {
     Z: function () {
-        return p;
+        return v;
     }
 });
-var t = l(735250);
-l(470079);
-var u = l(481060),
-    i = l(829883),
-    r = l(976853),
-    a = l(378233),
-    o = l(902676),
-    d = l(626135),
-    c = l(49012),
-    s = l(358085),
-    v = l(998502),
-    _ = l(36998),
-    f = l(981631),
-    h = l(689938);
-function p(n, e, l, p) {
-    let E = (0, r.Z)(null == l ? void 0 : l.getChannelId());
-    if (!s.isPlatformEmbedded || null == n || '' === n || E || (null == p ? void 0 : p.shouldHideMediaOptions) === !0 || (null != n && null != (0, a.B0)(n)) || (null != n && (0, i.zt)(n))) return null;
-    let I = (0, o.F)(n),
-        M = (l) => {
-            d.default.track(f.rMx.CONTEXT_MENU_LINK_OPENED, {
-                hostname: I,
-                ...(0, _.v)()
+var r = e(200651);
+e(192379);
+var l = e(481060),
+    i = e(378409),
+    a = e(976853),
+    u = e(902676),
+    o = e(626135),
+    d = e(49012),
+    s = e(358085),
+    c = e(998502),
+    h = e(36998),
+    f = e(981631),
+    p = e(388032);
+function v(n, t, e, v) {
+    let m = (0, a.Z)(null == e ? void 0 : e.getChannelId());
+    if (!s.isPlatformEmbedded || null == n || '' === n || m || (null == v ? void 0 : v.shouldHideMediaOptions) === !0 || !(0, i.Jj)(n)) return null;
+    let g = (0, u.F)(n),
+        Z = (e) => {
+            o.default.track(f.rMx.CONTEXT_MENU_LINK_OPENED, {
+                hostname: g,
+                ...(0, h.v)()
             }),
-                (0, c.q)(
+                (0, d.q)(
                     {
                         href: n,
-                        trusted: (0, c.r)(n, e),
+                        trusted: (0, d.r)(n, t),
                         shouldConfirm: !0
                     },
-                    l
+                    e
                 );
         };
     return [
-        (0, t.jsx)(
-            u.MenuItem,
+        (0, r.jsx)(
+            l.MenuItem,
             {
                 id: 'copy-native-link',
-                label: h.Z.Messages.COPY_LINK,
+                label: p.intl.string(p.t.WqhZsr),
                 action: () => {
-                    d.default.track(f.rMx.CONTEXT_MENU_LINK_COPIED, {
-                        hostname: I,
-                        ...(0, _.v)()
+                    o.default.track(f.rMx.CONTEXT_MENU_LINK_COPIED, {
+                        hostname: g,
+                        ...(0, h.v)()
                     }),
-                        v.ZP.copy(n);
+                        c.ZP.copy(n);
                 }
             },
             'copy-native-link'
         ),
-        (0, t.jsx)(
-            u.MenuItem,
+        (0, r.jsx)(
+            l.MenuItem,
             {
                 id: 'open-native-link',
-                label: h.Z.Messages.OPEN_LINK,
-                action: (n) => M(n)
+                label: p.intl.string(p.t.wuRE8P),
+                action: (n) => Z(n)
             },
             'open-native-link'
         )

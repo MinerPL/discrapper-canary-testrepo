@@ -4,27 +4,26 @@ n.d(t, {
     }
 });
 var i = n(593481),
-    s = n(768581),
-    a = n(312839),
-    o = n(981631),
-    r = n(987650),
-    l = n(689938);
+    r = n(768581),
+    s = n(312839),
+    a = n(981631),
+    l = n(987650),
+    o = n(388032);
 function c(e, t) {
     let n = e.username,
-        c = l.Z.Messages.USER_ACTIVITY_USER_JOIN.format({ username: '' }),
-        d = (0, s.ov)(e),
-        { trackView: u, trackClick: h } = (0, a.R)(r.n0.ActivityUserJoin, {
-            notif_type: r.n0.ActivityUserJoin,
+        c = o.intl.format(o.t['Yk+uYG'], { username: '' }),
+        d = (0, r.ov)(e),
+        { trackView: u, trackClick: h } = (0, s.R)(l.n0.ActivityUserJoin, {
+            notif_type: l.n0.ActivityUserJoin,
             notif_user_id: e.id,
-            activity_type: o.mFx.JOIN,
+            activity_type: a.mFx.JOIN,
             activity_name: t.name
         });
     return {
-        colorScheme: i.ZP.ColorSchemes.PRIMARY,
         icon: d,
         title: n,
         body: c,
-        hint: (e) => (0, i.Yj)(e, l.Z.Messages.USER_ACTIVITY_USER_JOIN_HINT),
+        hint: (e) => (0, i.Yj)(e, o.intl.string(o.t.WRj1Wl)),
         onNotificationShow: () => {
             u();
         },

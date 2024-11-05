@@ -1,45 +1,46 @@
 n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
-    l = n(180081),
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    l = n.n(a),
+    s = n(100621),
     o = n(442837),
     c = n(481060),
     d = n(749210),
     u = n(607070),
-    _ = n(100527),
-    E = n(931240),
-    h = n(970606),
-    m = n(963202),
-    I = n(650461),
-    g = n(353093),
-    p = n(603839),
-    T = n(84615),
-    S = n(430824),
-    C = n(231467),
-    f = n(207796),
-    N = n(273254),
-    A = n(559469),
-    v = n(308083),
-    L = n(689938),
-    Z = n(647756),
-    R = n(345480),
-    O = n(236613);
-let x = {
+    h = n(100527),
+    m = n(931240),
+    p = n(970606),
+    g = n(963202),
+    f = n(650461),
+    _ = n(353093),
+    E = n(641721),
+    I = n(603839),
+    C = n(84615),
+    v = n(430824),
+    S = n(231467),
+    N = n(207796),
+    T = n(273254),
+    x = n(559469),
+    b = n(308083),
+    A = n(388032),
+    Z = n(431476),
+    y = n(345480),
+    L = n(236613);
+let R = {
     mass: 1,
     tension: 600,
     friction: 60
 };
-function b(e) {
+function P(e) {
     let { children: t } = e;
-    return (0, i.jsxs)(l.animated.div, {
+    return (0, i.jsxs)(s.animated.div, {
         className: Z.clanEnvelope,
         children: [
             (0, i.jsx)('div', {
                 className: Z.clanEnvelopeTop,
                 children: (0, i.jsx)('img', {
-                    src: O,
+                    src: L,
                     alt: ''
                 })
             }),
@@ -47,14 +48,14 @@ function b(e) {
             (0, i.jsx)('div', {
                 className: Z.clanEnvelopeBottom,
                 children: (0, i.jsx)('img', {
-                    src: R,
+                    src: y,
                     alt: ''
                 })
             })
         ]
     });
 }
-function P(e) {
+function O(e) {
     let { text: t, icon: n } = e;
     return (0, i.jsxs)('div', {
         className: Z.upsellDetail,
@@ -72,37 +73,37 @@ function P(e) {
         ]
     });
 }
-function M(e) {
-    let { selectedGuildId: t, setSelectedGuildId: n, eligibleGuilds: s, onButtonClick: l, buttonText: o, hasCompletedUpsell: d } = e,
-        u = (0, m.iN)('clan_discovery_admin_upsell'),
-        _ = (0, m.YH)('clan_discovery_admin_upsell'),
-        E = a.useMemo(
+function j(e) {
+    let { selectedGuildId: t, setSelectedGuildId: n, eligibleGuilds: a, onButtonClick: s, onDismiss: o, buttonText: d, hasCompletedUpsell: u } = e,
+        h = (0, g.iN)('clan_discovery_admin_upsell'),
+        m = (0, g.YH)('clan_discovery_admin_upsell'),
+        p = r.useMemo(
             () =>
-                s.map((e) => ({
+                a.map((e) => ({
                     value: e.id,
                     label: e.name
                 })),
-            [s]
+            [a]
         );
-    a.useEffect(() => {
-        0 === s.length && _ && (0, f.Ce)();
-    }, [s, _]);
-    let h = s.length > 1;
+    r.useEffect(() => {
+        0 === a.length && m && (0, N.Ce)();
+    }, [a, m]);
+    let f = a.length > 1;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            d
+            u
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(c.Heading, {
                               className: Z.upsellTitle,
                               variant: 'heading-xxl/semibold',
-                              children: L.Z.Messages.CLAN_DISCOVERY_ADMIN_UPSELL_COMPLETE_TITLE
+                              children: A.intl.string(A.t['6RMihY'])
                           }),
                           (0, i.jsx)(c.Heading, {
                               className: Z.upsellSubtitle,
                               variant: 'heading-md/medium',
                               color: 'header-secondary',
-                              children: L.Z.Messages.CLAN_DISCOVERY_ADMIN_UPSELL_COMPLETE_SUBTITLE
+                              children: A.intl.string(A.t.xlIWLS)
                           })
                       ]
                   })
@@ -111,22 +112,22 @@ function M(e) {
                           (0, i.jsxs)(c.Heading, {
                               className: Z.upsellTitle,
                               variant: 'heading-xxl/semibold',
-                              children: [L.Z.Messages.CLAN_DISCOVERY_UPSELL_CTA_GUILD_INVITE, (0, i.jsx)('br', {}), L.Z.Messages.CLAN_DISCOVERY_UPSELL_CTA_RECRUIT]
+                              children: [A.intl.string(A.t.Uw5KKC), (0, i.jsx)('br', {}), A.intl.string(A.t['jZvR+f'])]
                           }),
                           (0, i.jsxs)('div', {
                               className: Z.upsellDetails,
                               children: [
-                                  (0, i.jsx)(P, {
+                                  (0, i.jsx)(O, {
                                       icon: c.CompassIcon,
-                                      text: L.Z.Messages.CLAN_DISCOVERY_UPSELL_VIBES_OR_SKILL
+                                      text: A.intl.string(A.t.v0ZdNj)
                                   }),
-                                  (0, i.jsx)(P, {
+                                  (0, i.jsx)(O, {
                                       icon: c.CircleCheckIcon,
-                                      text: L.Z.Messages.CLAN_DISCOVERY_UPSELL_APPLICATIONS
+                                      text: A.intl.string(A.t.L1fEc3)
                                   }),
-                                  (0, i.jsx)(P, {
+                                  (0, i.jsx)(O, {
                                       icon: c.GroupIcon,
-                                      text: L.Z.Messages.CLAN_DISCOVERY_UPSELL_MAX_SIZE
+                                      text: A.intl.string(A.t.ChMjnp)
                                   })
                               ]
                           })
@@ -135,29 +136,29 @@ function M(e) {
             (0, i.jsxs)('div', {
                 className: Z.upsellButton,
                 children: [
-                    h &&
+                    f &&
                         (0, i.jsx)(c.SearchableSelect, {
                             className: Z.upsellSelect,
                             value: t,
-                            options: E,
+                            options: p,
                             onChange: n
                         }),
-                    !d &&
+                    !u &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(c.Button, {
                                     look: c.ButtonLooks.FILLED,
                                     size: c.ButtonSizes.LARGE,
                                     color: c.ButtonColors.BRAND,
-                                    className: r()(Z.reserveButton, { [Z.buttonWithSelect]: h }),
-                                    onClick: l,
+                                    className: l()(Z.reserveButton, { [Z.buttonWithSelect]: f }),
+                                    onClick: s,
                                     children: (0, i.jsx)(c.Text, {
                                         variant: 'text-sm/medium',
                                         color: 'always-white',
-                                        children: o
+                                        children: d
                                     })
                                 }),
-                                u &&
+                                h &&
                                     (0, i.jsxs)(i.Fragment, {
                                         children: [
                                             (0, i.jsx)('div', { className: Z.separatorDot }),
@@ -166,11 +167,11 @@ function M(e) {
                                                 size: c.ButtonSizes.LARGE,
                                                 color: c.ButtonColors.TRANSPARENT,
                                                 className: Z.reserveButton,
-                                                onClick: f.Ce,
+                                                onClick: o,
                                                 children: (0, i.jsx)(c.Text, {
                                                     variant: 'text-sm/medium',
                                                     color: 'header-primary',
-                                                    children: L.Z.Messages.CLAN_DISCOVERY_UPSELL_ADMIN_DISMISS_NOTICE
+                                                    children: A.intl.string(A.t['0ZJsur'])
                                                 })
                                             })
                                         ]
@@ -182,47 +183,65 @@ function M(e) {
         ]
     });
 }
-t.Z = a.memo(function (e) {
+t.Z = r.memo(function (e) {
     let { eligibleGuilds: t, eligibleGuildsIncludingConverted: n } = e,
-        s = (0, m.iN)('clan_discovery_admin_upsell'),
-        r = 0 === t.length,
-        [f, R] = a.useState(() => {
+        a = (0, g.iN)('clan_discovery_admin_upsell'),
+        l = 0 === t.length,
+        [y, L] = r.useState(() => {
             var e, i;
-            let a = new Set(I.ZP.getGuildIds());
-            for (let e of t) if (a.has(e.id)) return e.id;
-            return r ? (null === (e = n[0]) || void 0 === e ? void 0 : e.id) : null === (i = t[0]) || void 0 === i ? void 0 : i.id;
+            let r = new Set(f.ZP.getGuildIds());
+            for (let e of t) if (r.has(e.id)) return e.id;
+            return l ? (null === (e = n[0]) || void 0 === e ? void 0 : e.id) : null === (i = t[0]) || void 0 === i ? void 0 : i.id;
         });
-    a.useEffect(() => {
-        !r &&
-            (0, h.TE)({
-                guildId: f,
-                location: _.Z.CLAN_DISCOVERY
+    r.useEffect(() => {
+        !l &&
+            (0, p.TE)({
+                guildId: y,
+                location: h.Z.CLAN_DISCOVERY
             });
-    }, [r, f]);
-    let O = (0, o.e7)([S.Z], () => S.Z.getGuild(f)),
-        P = (0, o.e7)([I.ZP], () => (null != f ? I.ZP.getStateForGuild(f).progress : null)),
-        D = a.useCallback(() => {
-            !r &&
-                ((0, h._9)({
-                    guildId: f,
-                    location: _.Z.CLAN_DISCOVERY
+    }, [l, y]);
+    let O = (0, o.e7)([v.Z], () => v.Z.getGuild(y)),
+        D = (0, o.e7)([f.ZP], () => (null != y ? f.ZP.getStateForGuild(y).progress : null)),
+        M = (0, g.c7)({
+            guildId: y,
+            location: h.Z.CLAN_DISCOVERY
+        }),
+        w = r.useCallback(() => {
+            !l &&
+                ((0, p.aN)({
+                    guildId: y,
+                    location: h.Z.CLAN_DISCOVERY
                 }),
-                (0, T.q4)(
-                    (e) => {
-                        let { closeLayer: t } = e;
-                        return (0, i.jsx)(p.Z, {
-                            onClose: t,
-                            guildId: f
-                        });
-                    },
-                    { layerKey: v.Pv }
-                ));
-        }, [r, f]),
-        y = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        j = (0, N.L)({ guild: O }),
-        U = (0, A.n)(),
-        [G, w] = a.useState(!0),
-        k = (0, c.useSpring)(
+                M
+                    ? (0, C.q4)(
+                          (e) => {
+                              let { closeLayer: t } = e;
+                              return (0, i.jsx)(E.Z, {
+                                  onClose: t,
+                                  guildId: y
+                              });
+                          },
+                          { layerKey: b.Pv }
+                      )
+                    : (0, C.q4)(
+                          (e) => {
+                              let { closeLayer: t } = e;
+                              return (0, i.jsx)(I.Z, {
+                                  onClose: t,
+                                  guildId: y
+                              });
+                          },
+                          { layerKey: b.Pv }
+                      ));
+        }, [M, l, y]),
+        k = r.useCallback(() => {
+            M ? (0, N.kw)() : (0, N.Ce)();
+        }, [M]),
+        U = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+        G = (0, T.L)({ guild: O }),
+        B = (0, x.n)(),
+        [H, V] = r.useState(!0),
+        F = (0, c.useSpring)(
             {
                 from: { opacity: 0 },
                 to: { opacity: 1 },
@@ -231,45 +250,45 @@ t.Z = a.memo(function (e) {
             },
             'animate-always'
         ),
-        B = (0, c.useSpring)(
+        z = (0, c.useSpring)(
             {
-                from: y ? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' } : { transform: 'translate(324px, -56px) rotate(8deg) scale(1.25)' },
+                from: U ? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' } : { transform: 'translate(324px, -56px) rotate(8deg) scale(1.25)' },
                 to: { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' },
-                config: x,
-                delay: 400
-            },
-            'animate-always'
-        ),
-        H = (0, c.useSpring)(
-            {
-                from: y ? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' } : { transform: 'translate(176px, -24px) rotate(4deg) scale(1.1111)' },
-                to: { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' },
-                config: x,
-                delay: 350
-            },
-            'animate-always'
-        ),
-        V = (0, c.useSpring)(
-            {
-                from: y ? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' } : { transform: 'translate(-176px, -24px) rotate(-4deg) scale(1.1111)' },
-                to: { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' },
-                config: x,
-                delay: 350
-            },
-            'animate-always'
-        ),
-        F = (0, c.useSpring)(
-            {
-                from: y ? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' } : { transform: 'translate(-324px, -56px) rotate(-8deg) scale(1.25)' },
-                to: { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' },
-                config: x,
+                config: R,
                 delay: 400
             },
             'animate-always'
         ),
         Y = (0, c.useSpring)(
             {
-                from: y
+                from: U ? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' } : { transform: 'translate(176px, -24px) rotate(4deg) scale(1.1111)' },
+                to: { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' },
+                config: R,
+                delay: 350
+            },
+            'animate-always'
+        ),
+        W = (0, c.useSpring)(
+            {
+                from: U ? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' } : { transform: 'translate(-176px, -24px) rotate(-4deg) scale(1.1111)' },
+                to: { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' },
+                config: R,
+                delay: 350
+            },
+            'animate-always'
+        ),
+        K = (0, c.useSpring)(
+            {
+                from: U ? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' } : { transform: 'translate(-324px, -56px) rotate(-8deg) scale(1.25)' },
+                to: { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' },
+                config: R,
+                delay: 400
+            },
+            'animate-always'
+        ),
+        q = (0, c.useSpring)(
+            {
+                from: U
                     ? {
                           transform: 'scale(1)',
                           opacity: 0
@@ -282,32 +301,32 @@ t.Z = a.memo(function (e) {
                     transform: 'scale(1)',
                     opacity: 1
                 },
-                config: x,
+                config: R,
                 delay: 200
             },
             'animate-always'
         ),
-        W = (0, c.useSpring)(
+        X = (0, c.useSpring)(
             {
-                from: y ? { transform: 'translateY(0px)' } : { transform: 'translateY(240px)' },
+                from: U ? { transform: 'translateY(0px)' } : { transform: 'translateY(240px)' },
                 to: { transform: 'translateY(0px)' },
-                config: x,
+                config: R,
                 delay: 250,
-                onRest: () => w(!1)
+                onRest: () => V(!1)
             },
             'animate-always'
         ),
-        z = a.useMemo(() => (s ? L.Z.Messages.CLAN_DISCOVERY_UPSELL_ADMIN_LIST_SERVER : null == P ? L.Z.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : L.Z.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP), [P, s]),
-        K = a.useCallback(async () => {
-            await (0, E.Zx)(f), d.Z.transitionToGuildSync('936317138904440892');
-        }, [f]),
-        q = a.useCallback(
+        Q = r.useMemo(() => (a ? A.intl.string(A.t.ZA9f19) : null == D ? A.intl.string(A.t.fLiOgI) : A.intl.string(A.t.GnIKBA)), [D, a]),
+        J = r.useCallback(async () => {
+            await (0, m.Zx)(y), d.Z.transitionToGuildSync('936317138904440892');
+        }, [y]),
+        $ = r.useCallback(
             (e) =>
                 (0, i.jsx)(c.Clickable, {
                     tag: 'span',
                     className: Z.joinWFSLink,
-                    onClick: K,
-                    'aria-label': L.Z.Messages.CLAN_DISCOVERY_UPSELL_JOIN_WFS_ARIA_LABEL,
+                    onClick: J,
+                    'aria-label': A.intl.string(A.t['6PJMUF']),
                     children: (0, i.jsx)(c.Text, {
                         tag: 'span',
                         variant: 'text-xs/medium',
@@ -315,73 +334,73 @@ t.Z = a.memo(function (e) {
                         children: e
                     })
                 }),
-            [K]
+            [J]
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
                 className: Z.cardsContainer,
                 children: [
-                    (0, i.jsx)(l.animated.div, {
+                    (0, i.jsx)(s.animated.div, {
                         className: Z.clanCardOuterContainer,
                         style: {
-                            ...B,
-                            ...k
+                            ...z,
+                            ...F
                         },
-                        children: (0, i.jsx)(C.xV, {
-                            clan: U[0],
+                        children: (0, i.jsx)(S.xV, {
+                            clan: B[0],
                             className: Z.clanCardOuterLeft
                         })
                     }),
-                    (0, i.jsx)(l.animated.div, {
+                    (0, i.jsx)(s.animated.div, {
                         className: Z.clanCardInnerContainer,
                         style: {
-                            ...H,
-                            ...k
+                            ...Y,
+                            ...F
                         },
-                        children: (0, i.jsx)(C.xV, {
-                            clan: U[1],
+                        children: (0, i.jsx)(S.xV, {
+                            clan: B[1],
                             className: Z.clanCardInnerLeft
                         })
                     }),
-                    null != j &&
-                        (0, i.jsx)(l.animated.div, {
+                    null != G &&
+                        (0, i.jsx)(s.animated.div, {
                             className: Z.clanEnvelope,
-                            style: Y,
-                            children: (0, i.jsx)(b, {
+                            style: q,
+                            children: (0, i.jsx)(P, {
                                 children: (0, i.jsx)('div', {
                                     className: Z.clanCardCenterContainer,
-                                    style: { overflow: G ? 'hidden' : 'visible' },
-                                    children: (0, i.jsx)(l.animated.div, {
-                                        style: W,
-                                        children: (0, i.jsx)(C.xV, {
-                                            clan: j,
+                                    style: { overflow: H ? 'hidden' : 'visible' },
+                                    children: (0, i.jsx)(s.animated.div, {
+                                        style: X,
+                                        children: (0, i.jsx)(S.xV, {
+                                            clan: G,
                                             className: Z.clanCardCenter,
-                                            bannerUrl: (0, g.pY)(U[4].id, U[4].bannerHash)
+                                            bannerUrl: (0, _.pY)(B[4].id, B[4].bannerHash)
                                         })
                                     })
                                 })
                             })
                         }),
-                    (0, i.jsx)(l.animated.div, {
+                    (0, i.jsx)(s.animated.div, {
                         className: Z.clanCardInnerContainer,
                         style: {
-                            ...V,
-                            ...k
+                            ...W,
+                            ...F
                         },
-                        children: (0, i.jsx)(C.xV, {
-                            clan: U[2],
+                        children: (0, i.jsx)(S.xV, {
+                            clan: B[2],
                             className: Z.clanCardInnerRight
                         })
                     }),
-                    (0, i.jsx)(l.animated.div, {
+                    (0, i.jsx)(s.animated.div, {
                         className: Z.clanCardOuterContainer,
                         style: {
-                            ...F,
-                            ...k
+                            ...K,
+                            ...F
                         },
-                        children: (0, i.jsx)(C.xV, {
-                            clan: U[3],
+                        children: (0, i.jsx)(S.xV, {
+                            clan: B[3],
                             className: Z.clanCardOuterRight
                         })
                     })
@@ -389,16 +408,17 @@ t.Z = a.memo(function (e) {
             }),
             (0, i.jsx)('div', {
                 className: Z.upsellCtaContainer,
-                children: (0, i.jsx)(M, {
-                    selectedGuildId: f,
-                    setSelectedGuildId: R,
+                children: (0, i.jsx)(j, {
+                    selectedGuildId: y,
+                    setSelectedGuildId: L,
                     eligibleGuilds: t,
-                    onButtonClick: D,
-                    buttonText: z,
-                    hasCompletedUpsell: r
+                    onButtonClick: w,
+                    onDismiss: k,
+                    buttonText: Q,
+                    hasCompletedUpsell: l
                 })
             }),
-            r
+            l
                 ? (0, i.jsx)('div', {
                       className: Z.joinWFSContainer,
                       children: (0, i.jsx)('div', {
@@ -406,7 +426,7 @@ t.Z = a.memo(function (e) {
                           children: (0, i.jsx)(c.Text, {
                               variant: 'text-xs/normal',
                               color: 'text-muted',
-                              children: L.Z.Messages.CLAN_DISCOVERY_UPSELL_JOIN_WFS.format({ wfsHook: q })
+                              children: A.intl.format(A.t['5lqT9P'], { wfsHook: $ })
                           })
                       })
                   })

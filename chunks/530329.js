@@ -1,35 +1,39 @@
-a.d(n, {
+t.d(n, {
     Z: function () {
-        return c;
+        return p;
     }
 });
-var i = a(735250),
-    r = a(470079),
-    s = a(53691),
-    o = a(378879),
-    l = a(981631),
-    t = a(486324),
-    u = a(689938);
-function c(e) {
-    let { uploadType: n, onSecondaryClick: a, ...c } = e,
-        d = r.useCallback(() => {
-            (0, o.openProfileUpsellModal)(n, void 0, a);
-        }, [n, a]),
-        A = r.useMemo(() => {
+var a = t(200651),
+    i = t(192379),
+    c = t(120356),
+    o = t.n(c),
+    s = t(53691),
+    r = t(378879),
+    d = t(981631),
+    l = t(486324),
+    u = t(388032),
+    f = t(366201);
+function p(e) {
+    let { uploadType: n, className: t, ...c } = e,
+        p = i.useCallback(() => {
+            (0, r.openProfileUpsellModal)(n, void 0);
+        }, [n]),
+        A = i.useMemo(() => {
             switch (n) {
-                case t.pC.AVATAR:
-                    return u.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_AVATAR_INLINE_UPSELL.format({ onClick: d });
-                case t.pC.BANNER:
-                    return u.Z.Messages.PREMIUM_UPSELL_PROFILE_ANIMATED_BANNER_INLINE_UPSELL.format({ onClick: d });
+                case l.pC.AVATAR:
+                    return u.intl.format(u.t['pvw/HB'], { onClick: p });
+                case l.pC.BANNER:
+                    return u.intl.format(u.t.aCrz1d, { onClick: p });
                 default:
                     return '';
             }
-        }, [n, d]);
-    return n === t.pC.AVATAR || n === t.pC.BANNER
-        ? (0, i.jsx)(s.p, {
+        }, [n, p]);
+    return n === l.pC.AVATAR || n === l.pC.BANNER
+        ? (0, a.jsx)(s.p, {
               text: A,
-              button: u.Z.Messages.EMOJI_PICKER_PREMIUM_UPSELL_CTA,
-              buttonAnalyticsObject: { section: l.jXE.USER_PROFILE },
+              button: u.intl.string(u.t.BmJkbW),
+              buttonAnalyticsObject: { section: d.jXE.USER_PROFILE },
+              className: o()(f.container, t),
               ...c
           })
         : null;

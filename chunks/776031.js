@@ -1,10 +1,10 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return y;
     }
 });
-var r = n(735250),
-    i = n(470079),
+var r = n(200651),
+    i = n(192379),
     a = n(848246),
     s = n(442837),
     o = n(481060),
@@ -12,57 +12,60 @@ var r = n(735250),
     u = n(2052),
     c = n(451467),
     d = n(386542),
-    _ = n(933843),
-    E = n(746599),
-    f = n(361291),
-    h = n(430824),
-    p = n(131951),
-    I = n(594174),
-    m = n(981631),
-    T = n(37113),
-    S = n(65154),
-    g = n(689938);
-function A(e, t) {
-    let { preset: A, resolution: N, fps: O } = (0, s.cj)([f.Z], () => f.Z.getState()),
-        R = (0, s.e7)([p.Z], () => p.Z.getGoLiveSource()),
-        v = (0, s.e7)([I.default], () => I.default.getCurrentUser()),
-        C = (0, s.e7)([h.Z], () => {
+    f = n(933843),
+    _ = n(746599),
+    h = n(361291),
+    p = n(592125),
+    m = n(430824),
+    g = n(131951),
+    E = n(944486),
+    v = n(594174),
+    I = n(981631),
+    S = n(37113),
+    T = n(65154),
+    b = n(388032);
+function y(e, t) {
+    let { preset: y, resolution: A, fps: N } = (0, s.cj)([h.Z], () => h.Z.getState()),
+        C = (0, s.e7)([g.Z], () => g.Z.getGoLiveSource()),
+        R = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
+        O = (0, s.e7)([m.Z], () => {
             var t;
-            return null === (t = h.Z.getGuild(null == e ? void 0 : e.guildId)) || void 0 === t ? void 0 : t.premiumTier;
+            return null === (t = m.Z.getGuild(null == e ? void 0 : e.guildId)) || void 0 === t ? void 0 : t.premiumTier;
         }),
-        { location: y } = (0, u.O)(),
-        { available: L, activated: D } = (0, d.k)(a.q.STREAM_HIGH_QUALITY),
-        b = i.useCallback(
+        { location: D } = (0, u.O)(),
+        { available: L, activated: x } = (0, d.k)(a.q.STREAM_HIGH_QUALITY),
+        w = (0, s.e7)([E.Z, p.Z], () => p.Z.getChannel(E.Z.getVoiceChannelId())),
+        M = i.useCallback(
             (e, i, a, s) => {
                 if (e) {
-                    if (null != R) {
+                    if (null != C) {
                         let e = {
                             qualityOptions: {
-                                preset: T.tI.PRESET_CUSTOM,
+                                preset: S.tI.PRESET_CUSTOM,
                                 resolution: i,
                                 frameRate: a
                             },
-                            context: S.Yn.STREAM
+                            context: T.Yn.STREAM
                         };
-                        null != R.desktopSource
+                        null != C.desktopSource
                             ? (e.desktopSettings = {
-                                  sourceId: R.desktopSource.id,
+                                  sourceId: C.desktopSource.id,
                                   sound: !0
                               })
-                            : null != R.cameraSource &&
+                            : null != C.cameraSource &&
                               (e.cameraSettings = {
-                                  videoDeviceGuid: R.cameraSource.videoDeviceGuid,
-                                  audioDeviceGuid: R.cameraSource.audioDeviceGuid
+                                  videoDeviceGuid: C.cameraSource.videoDeviceGuid,
+                                  audioDeviceGuid: C.cameraSource.audioDeviceGuid
                               }),
-                            L && (0, E.J1)(!(0, _.mc)(i, a)),
+                            L && (0, _.J1)(!(0, f.mc)(i, a)),
                             l.Z.setGoLiveSource(e);
                     }
                 } else {
                     var u, c;
                     (u = t),
                         (c = {
-                            ...y,
-                            object: m.qAy.RADIO_ITEM,
+                            ...D,
+                            object: I.qAy.RADIO_ITEM,
                             objectType: s
                         }),
                         (0, o.openModalLazy)(
@@ -74,42 +77,42 @@ function A(e, t) {
                                         analyticsSource: c
                                     });
                             },
-                            { contextKey: u === m.IlC.POPOUT ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT }
+                            { contextKey: u === I.IlC.POPOUT ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT }
                         );
                 }
             },
-            [t, y, R, L]
+            [t, D, C, L]
         );
     if (null == e) return null;
-    let M = A === T.tI.PRESET_DOCUMENTS ? T.ws.FPS_30 : O,
-        P = T.af.map((e) => {
+    let P = y === S.tI.PRESET_DOCUMENTS ? S.ws.FPS_30 : N,
+        k = S.af.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(T.tI.PRESET_CUSTOM, N, t, v, C);
+                i = (0, c.Z)(S.tI.PRESET_CUSTOM, A, t, R, O, w);
             return (0, r.jsx)(
                 o.MenuRadioItem,
                 {
                     group: 'stream-settings-fps',
                     id: 'stream-settings-fps-'.concat(t),
                     label: n,
-                    checked: t === O,
-                    action: () => b(i, N, t, m.Qqv.RESOLUTION)
+                    checked: t === N,
+                    action: () => M(i, A, t, I.Qqv.RESOLUTION)
                 },
                 'stream-settings-fps-'.concat(t)
             );
         }),
-        U = T.km.map((e) => {
+        U = S.km.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(T.tI.PRESET_CUSTOM, t, M, v, C);
+                i = (0, c.Z)(S.tI.PRESET_CUSTOM, t, P, R, O, w);
             return (
-                L && !D && (i = !1),
+                L && !x && (i = !1),
                 (0, r.jsx)(
                     o.MenuRadioItem,
                     {
                         group: 'stream-settings-resolution',
                         id: 'stream-settings-resolution-'.concat(t),
                         label: n,
-                        checked: t === N,
-                        action: () => b(i, t, M, m.Qqv.RESOLUTION)
+                        checked: t === A,
+                        action: () => M(i, t, P, I.Qqv.RESOLUTION)
                     },
                     'stream-settings-resolution-'.concat(t)
                 )
@@ -118,11 +121,11 @@ function A(e, t) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(o.MenuGroup, {
-                label: g.Z.Messages.SCREENSHARE_FRAME_RATE,
-                children: P
+                label: b.intl.string(b.t.SkkeIi),
+                children: k
             }),
             (0, r.jsx)(o.MenuGroup, {
-                label: g.Z.Messages.STREAM_RESOLUTION,
+                label: b.intl.string(b.t.rHyPXl),
                 children: U
             })
         ]

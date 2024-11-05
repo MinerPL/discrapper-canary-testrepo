@@ -7,7 +7,8 @@ n.d(t, {
 var i = n(835473),
     l = n(716600);
 function r() {
-    let e = (0, l.Z)(),
-        [t] = (0, i.Z)(null == e ? [] : [e.applicationId]);
-    return null != t ? t : void 0;
+    let { fetchesApplication: e = !0 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+        t = (0, l.Z)(),
+        [n] = (0, i.Z)(null == t ? [] : [t.applicationId], e);
+    return null != n ? n : void 0;
 }

@@ -1,13 +1,13 @@
 var r, i, a, s;
 n.d(t, {
     $x: function () {
-        return _;
+        return f;
     },
     AB: function () {
         return l;
     },
     EC: function () {
-        return f;
+        return h;
     },
     HY: function () {
         return i;
@@ -19,13 +19,13 @@ n.d(t, {
         return u;
     },
     V: function () {
-        return h;
+        return p;
     },
     Vg: function () {
         return o;
     },
     Z7: function () {
-        return E;
+        return _;
     },
     oC: function () {
         return r;
@@ -67,10 +67,11 @@ let d = Object.freeze({
         IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL: 8192,
         IS_BROADCASTING: 16384,
         HIDE_MEDIA_DOWNLOAD_OPTIONS: 32768,
-        IS_JOIN_REQUEST_INTERVIEW_CHANNEL: 65536
+        IS_JOIN_REQUEST_INTERVIEW_CHANNEL: 65536,
+        OBFUSCATED: 131072
     }),
-    _ = 1024,
-    E = 4096;
-((s = i || (i = {})).GUILD_HOME = 'home'), (s.SERVER_GUIDE = 'guide'), (s.CHANNEL_BROWSER = 'browse'), (s.CUSTOMIZE_COMMUNITY = 'customize');
-let f = new Set(Object.values(i)),
-    h = '131';
+    f = 1024,
+    _ = 4096;
+((s = i || (i = {})).GUILD_HOME = 'home'), (s.SERVER_GUIDE = 'guide'), (s.CHANNEL_BROWSER = 'browse'), (s.CUSTOMIZE_COMMUNITY = 'customize'), (s.LINKED_ROLES = 'linked-roles');
+let h = new Set(Object.values(i)),
+    p = '131';

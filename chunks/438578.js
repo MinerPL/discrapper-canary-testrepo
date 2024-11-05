@@ -5,5 +5,6 @@ e.exports = {
     guildSubscription: 'guildSubscription_abda19',
     subInfoType: 'subInfoType_abda19',
     subscriptions: 'subscriptions_abda19',
-    activeSubscriptionCard: 'activeSubscriptionCard_abda19'
+    activeSubscriptionCard: 'activeSubscriptionCard_abda19',
+    planNotice: 'planNotice_abda19'
 };

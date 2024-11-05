@@ -1,9 +1,9 @@
 n.d(t, {
-    r: function () {
-        return r;
-    },
-    w: function () {
+    KR: function () {
         return i;
+    },
+    wC: function () {
+        return a;
     }
 });
 let r = (0, n(818083).B)({
@@ -21,5 +21,9 @@ let r = (0, n(818083).B)({
 });
 function i(e) {
     let { location: t } = e;
-    return r.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
+    return r.useExperiment({ location: t }, { autoTrackExposure: !0 }).enabled;
+}
+function a(e) {
+    let { location: t } = e;
+    return r.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }).enabled;
 }

@@ -21,6 +21,7 @@ n.d(t, {
     (a.ACTIVITY_SHELF_FLOW = 'activity_shelf_flow'),
     (a.POMELO_FLOW = 'pomelo_flow'),
     (a.APPEAL_INGESTION = 'appeal_ingestion'),
+    (a.ACCOUNT_REVERT_FLOW = 'account_revert_flow'),
     ((s = i || (i = {})).PAGE = 'page'),
     (s.MODAL = 'modal'),
     (s.POPOUT = 'popout'),

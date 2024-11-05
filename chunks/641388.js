@@ -19,10 +19,8 @@ e.exports = {
     card: 'card_a24e0c',
     topPicksSection: 'topPicksSection_a24e0c',
     contentCtaContainer: 'contentCtaContainer_a24e0c',
-    contentCtaContainerSpacing: 'contentCtaContainerSpacing_a24e0c',
     upsellSelect: 'upsellSelect_a24e0c',
     heroButton: 'heroButton_a24e0c',
     heroButtonInner: 'heroButtonInner_a24e0c',
-    globalDiscoveryTitle: 'globalDiscoveryTitle_a24e0c',
-    customDiscoveryTitle: 'customDiscoveryTitle_a24e0c'
+    contentTabs: 'contentTabs_a24e0c'
 };

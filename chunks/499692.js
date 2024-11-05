@@ -1,65 +1,67 @@
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
-    l = n(873199),
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    l = n.n(a),
+    s = n(873199),
     o = n(442837),
     c = n(481060),
     d = n(674588),
     u = n(368862),
-    _ = n(125909),
-    E = n(857192),
-    h = n(797908),
-    m = n(292191),
-    I = n(253509);
-t.Z = function () {
-    let e = (0, o.e7)([E.default], () => E.default.appDirectoryIncludesInactiveCollections),
-        t = (0, o.e7)([u.Z], () => u.Z.getFetchState({ includesInactive: e })),
-        n = (0, o.e7)([u.Z], () => u.Z.getCollections({ includesInactive: e }));
-    a.useEffect(() => {
-        d.bG({ includesInactive: e });
-    }, [e]);
-    let s = a.useMemo(() => (null == n ? void 0 : n.filter((e) => e.type !== l.o.GALLERY)), [n]);
-    return t === u.M.ERROR
+    h = n(125909),
+    m = n(857192),
+    p = n(797908),
+    g = n(292191),
+    f = n(253509);
+t.Z = function (e) {
+    let { onSelectApplication: t } = e,
+        n = (0, o.e7)([m.default], () => m.default.appDirectoryIncludesInactiveCollections),
+        a = (0, o.e7)([u.Z], () => u.Z.getFetchState({ includesInactive: n })),
+        _ = (0, o.e7)([u.Z], () => u.Z.getCollections({ includesInactive: n }));
+    r.useEffect(() => {
+        d.bG({ includesInactive: n });
+    }, [n]);
+    let E = r.useMemo(() => (null == _ ? void 0 : _.filter((e) => e.type !== s.o.GALLERY)), [_]);
+    return a === u.M.ERROR
         ? (0, i.jsx)('div', {
-              className: I.errorContainer,
-              children: (0, i.jsx)(m.Z, { className: I.error })
+              className: f.errorContainer,
+              children: (0, i.jsx)(g.Z, { className: f.error })
           })
-        : (0, i.jsx)(_.Z, {
-              loading: t === u.M.FETCHING,
+        : (0, i.jsx)(h.Z, {
+              loading: a === u.M.FETCHING,
               children:
-                  null == s
+                  null == E
                       ? void 0
-                      : s.map((e, t) =>
+                      : E.map((e, n) =>
                             (0, i.jsxs)(
                                 'div',
                                 {
                                     children: [
                                         (0, i.jsx)(c.Heading, {
-                                            className: r()(I.sectionTitle, { [I.titleExtraPadding]: 0 === t }),
+                                            className: l()(f.sectionTitle, { [f.titleExtraPadding]: 0 === n }),
                                             variant: 'heading-lg/semibold',
                                             color: 'header-primary',
                                             children: e.title
                                         }),
                                         (0, i.jsx)('div', {
-                                            className: I.content,
+                                            className: f.content,
                                             children: e.application_directory_collection_items.map((e) => {
-                                                let { id: t, application: n } = e;
-                                                return null == n
+                                                let { id: n, application: r } = e;
+                                                return null == r
                                                     ? null
                                                     : (0, i.jsx)(
-                                                          h.Z,
+                                                          p.Z,
                                                           {
-                                                              application: n,
+                                                              application: r,
+                                                              onSelectApplication: t,
                                                               showCategory: !0
                                                           },
-                                                          t
+                                                          n
                                                       );
                                             })
                                         })
                                     ]
                                 },
-                                t
+                                n
                             )
                         )
           });

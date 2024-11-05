@@ -15,6 +15,7 @@ e.exports = {
     iconContainer: 'iconContainer_d8bfb3',
     iconContainerWithGuildIcon: 'iconContainerWithGuildIcon_d8bfb3',
     favoritesSuggestion: 'favoritesSuggestion_d8bfb3',
+    hdStreamed: 'hdStreamed_d8bfb3',
     link: 'link_d8bfb3',
     basicChannelRowLink: 'basicChannelRowLink_d8bfb3',
     linkTop: 'linkTop_d8bfb3',

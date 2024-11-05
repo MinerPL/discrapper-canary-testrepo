@@ -1,16 +1,16 @@
 n.d(t, {
     VK: function () {
-        return a;
+        return s;
     },
     qu: function () {
-        return s;
+        return o;
     }
 }),
     n(47120);
-var r = n(44315);
-n(469115);
-var i = n(231338);
-function a(e) {
+var r = n(44315),
+    i = n(469115),
+    a = n(231338);
+function s(e) {
     let { angle: t, colors: n } = e;
     return 'linear-gradient('.concat(t, 'deg, ').concat(
         n
@@ -22,6 +22,7 @@ function a(e) {
         ')'
     );
 }
-function s(e, t) {
-    return e === t || (e === i.BR.DARK && t === i.BR.DARKER) || (e === i.BR.DARKER && t === i.BR.DARK) || !1;
+function o(e, t) {
+    return e === t || (e === a.BR.DARK && t === a.BR.DARKER) || (e === a.BR.DARKER && t === a.BR.DARK) || !1;
 }
+[...i.bV, ...i.Qf];

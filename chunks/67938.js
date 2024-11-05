@@ -1,95 +1,37 @@
-r.d(t, {
-    G: function () {
-        return g;
+n.d(t, {
+    O: function () {
+        return o;
     }
 });
-var a = r(735250);
-r(470079);
-var n = r(120356),
-    s = r.n(n),
-    i = r(442837),
-    o = r(481060),
-    l = r(607070),
-    c = r(564032),
-    d = r(196798),
-    u = r(660348),
-    f = r(872044),
-    p = r(671581),
-    m = r(830487),
-    C = r(602476);
-function _() {
-    return (0, a.jsxs)('div', {
-        className: c.attributionLogos,
-        'aria-label': 'Discord x Pocketpair',
-        children: [
-            (0, a.jsx)(o.ClydeIcon, {
-                size: 'custom',
-                color: 'currentColor',
-                height: 22,
-                'aria-hidden': !0
-            }),
-            (0, a.jsx)(o.Text, {
-                variant: 'heading-sm/extrabold',
-                tag: 'div',
-                children: '|'
-            }),
-            (0, a.jsx)('img', {
-                src: u,
-                alt: '',
-                'aria-hidden': !0
-            })
-        ]
-    });
-}
-function g(e) {
+var r = n(200651);
+n(192379);
+var a = n(442837),
+    s = n(481060),
+    i = n(607070),
+    l = n(564032);
+function o(e) {
     let { category: t } = e,
-        r = (0, i.e7)([l.Z], () => l.Z.useReducedMotion);
-    return (0, a.jsxs)('div', {
-        className: c.banner,
+        n = (0, a.e7)([i.Z], () => i.Z.useReducedMotion);
+    return (0, r.jsx)('div', {
+        className: l.banner,
         'aria-label': t.name,
-        children: [
-            (0, a.jsxs)('div', {
-                className: c.mainContent,
-                children: [
-                    (0, a.jsx)('img', {
-                        src: f,
-                        className: c.bannerImage,
-                        alt: t.name,
+        children: (0, r.jsxs)('div', {
+            className: l.mainContent,
+            style: { backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/content/f7fcebe03d45107413f90019d20fbece106970e96ff5a01bfe73353e6d91fe1e.png', ')') },
+            children: [
+                !n &&
+                    (0, r.jsx)('img', {
+                        src: 'https://cdn.discordapp.com/assets/content/b7658932823f6b897cde41e166798d487c836da43f32d59ff392ecb1c5aee4e8.png',
+                        className: l.animatedLayer,
+                        alt: '',
                         'aria-hidden': !0
                     }),
-                    (0, a.jsx)(_, {}),
-                    (0, a.jsx)('img', {
-                        src: p,
-                        className: c.categoryLogo,
-                        alt: t.name,
-                        'aria-hidden': !0
-                    }),
-                    !r &&
-                        (0, a.jsx)('img', {
-                            src: d,
-                            className: c.animatedLayer,
-                            alt: '',
-                            'aria-hidden': !0
-                        }),
-                    (0, a.jsx)(o.Text, {
-                        className: c.summary,
-                        variant: 'text-md/normal',
-                        children: t.summary
-                    })
-                ]
-            }),
-            (0, a.jsx)('img', {
-                src: C,
-                className: s()(c.overflowImage, c.overflowRight),
-                alt: '',
-                'aria-hidden': !0
-            }),
-            (0, a.jsx)('img', {
-                src: m,
-                className: s()(c.overflowImage, c.overflowLeft),
-                alt: '',
-                'aria-hidden': !0
-            })
-        ]
+                (0, r.jsx)(s.Text, {
+                    className: l.summary,
+                    variant: 'text-md/normal',
+                    children: t.summary
+                })
+            ]
+        })
     });
 }

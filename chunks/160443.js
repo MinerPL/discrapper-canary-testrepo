@@ -9,6 +9,9 @@ e.exports = {
     questAcceptedContent: 'questAcceptedContent_e23249',
     submenuIcon: 'submenuIcon_e23249',
     interactiveNormal: 'interactiveNormal_e23249',
+    assetBodyVideoPreviewMedia: 'assetBodyVideoPreviewMedia_e23249',
+    assetBodyVideoPreviewVideo: 'assetBodyVideoPreviewVideo_e23249',
+    assetBodyVideoPreviewVisible: 'assetBodyVideoPreviewVisible_e23249',
     heroAssetWrapper: 'heroAssetWrapper_e23249',
     legibilityGradient: 'legibilityGradient_e23249',
     heroAsset: 'heroAsset_e23249',
@@ -24,5 +27,10 @@ e.exports = {
     flex: 'flex_e23249',
     postEnrollmentBackground: 'postEnrollmentBackground_e23249',
     postEnrollmentBackgroundCollapsed: 'postEnrollmentBackgroundCollapsed_e23249',
-    postEnrollmentBackgroundExpanded: 'postEnrollmentBackgroundExpanded_e23249'
+    postEnrollmentBackgroundExpanded: 'postEnrollmentBackgroundExpanded_e23249',
+    previewPlayButtonCont: 'previewPlayButtonCont_e23249',
+    previewPlayButton: 'previewPlayButton_e23249',
+    videoQuestPreviewCont: 'videoQuestPreviewCont_e23249',
+    enrolledVideoPreview: 'enrolledVideoPreview_e23249',
+    enrolledVideoPreviewImg: 'enrolledVideoPreviewImg_e23249'
 };

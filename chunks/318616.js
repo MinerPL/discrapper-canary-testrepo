@@ -1,26 +1,29 @@
 n.d(t, {
     c: function () {
-        return l;
+        return r;
     }
 });
-function l(e) {
-    var t, n, l;
-    let { message: a, forwardOptions: s } = e,
-        i = null == s ? void 0 : s.onlyAttachmentIds,
-        r = null == s ? void 0 : s.onlyEmbedIndices,
-        o = null !== (l = null === (t = a.messageSnapshots[0]) || void 0 === t ? void 0 : t.message) && void 0 !== l ? l : a,
-        c = o.attachments;
-    null != i ? (c = o.attachments.filter((e) => i.includes(e.id))) : null != r && (c = []);
-    let u = o.embeds;
+var l = n(442837),
+    i = n(496675),
+    a = n(408433);
+function r(e) {
+    var t, n, r;
+    let { message: s, channel: o, forwardOptions: c } = e,
+        u = null == c ? void 0 : c.onlyAttachmentIds,
+        d = null == c ? void 0 : c.onlyEmbedIndices,
+        h = null !== (r = null === (t = s.messageSnapshots[0]) || void 0 === t ? void 0 : t.message) && void 0 !== r ? r : s,
+        f = h.attachments;
+    null != u ? (f = h.attachments.filter((e) => u.includes(e.id))) : null != d && (f = []);
+    let _ = [];
     return (
-        null != r ? (u = o.embeds.filter((e, t) => r.includes(t))) : null != i && (u = []),
-        (null != r || ('' === o.content && u.length > 0)) && (o = o.set('content', u.map((e) => e.url).join('\n'))),
-        '' === o.content && (null === (n = o.embeds[0]) || void 0 === n ? void 0 : n.rawDescription) != null && (o = o.set('content', o.embeds[0].rawDescription)),
+        !(0, l.e7)([i.Z], () => null != o && !(0, a.eC)(o, i.Z) && (0, a.En)(s)) && ((_ = h.embeds), null != d ? (_ = h.embeds.filter((e, t) => d.includes(t))) : null != u && (_ = [])),
+        (null != d || ('' === h.content && _.length > 0)) && (h = h.set('content', _.map((e) => e.url).join('\n'))),
+        '' === h.content && (null === (n = h.embeds[0]) || void 0 === n ? void 0 : n.rawDescription) != null && (h = h.set('content', h.embeds[0].rawDescription)),
         {
-            attachments: c,
-            embeds: u,
-            hasContent: '' !== o.content && null == i,
-            contentMessage: o
+            attachments: f,
+            embeds: _,
+            hasContent: '' !== h.content && null == u,
+            contentMessage: h
         }
     );
 }

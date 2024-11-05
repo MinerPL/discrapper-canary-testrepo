@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return g;
     },
     b: function () {
-        return p;
+        return m;
     }
 }),
     n(724458);
-var r = n(470079),
+var r = n(192379),
     i = n(367907),
     a = n(339085),
     s = n(689789),
@@ -16,60 +16,61 @@ var r = n(470079),
     u = n(944486),
     c = n(176354),
     d = n(304852),
-    _ = n(199257),
-    E = n(981631),
-    f = n(185923),
-    h = n(957825);
-function p(e) {
+    f = n(199257),
+    _ = n(981631),
+    h = n(185923),
+    p = n(957825);
+function m(e) {
     let t = r.useRef(e);
     r.useEffect(() => {
-        if (t.current.intention === f.Hz.REACTION) I(t.current);
+        if (t.current.intention === h.Hz.REACTION) g(t.current);
     }, []);
 }
-function I(e) {
+function g(e) {
     var t;
-    let { intention: n, containerWidth: r, rowSize: p, isBurstReaction: I, analyticsObject: m } = e,
-        T = l.Z.getChannel(u.Z.getChannelId()),
-        S = null == T ? void 0 : T.getGuildId(),
-        { canSplitFrecencyList: g } = s.Z.getCurrentConfig({ location: 'trackOnEmojiPickerOpened' }, { autoTrackExposure: !0 }),
-        A = (0, o.E2)({
+    let { intention: n, containerWidth: r, rowSize: m, isBurstReaction: g, analyticsObject: E } = e,
+        v = l.Z.getChannel(u.Z.getChannelId()),
+        I = null == v ? void 0 : v.getGuildId(),
+        { canSplitFrecencyList: S } = s.Z.getCurrentConfig({ location: 'trackOnEmojiPickerOpened' }, { autoTrackExposure: !0 }),
+        T = (0, o.E2)({
             location: 'trackOnEmojiPickerOpened',
             autoTrackExposure: !0
-        }),
-        N = (g || A) && n === f.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.frequently.slice() : a.ZP.emojiFrecencyWithoutFetchingLatest.frequently.slice(),
-        O = null != T ? a.ZP.getDisambiguatedEmojiContext(T.getGuildId()).favoriteEmojisWithoutFetchingLatest : [],
-        R = (g || A) && n === f.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.numFrequentlyItems : a.ZP.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems,
-        v = N.slice(0, R),
-        C = null != S ? a.ZP.getGuildEmoji(S) : [],
-        y = Object.values(null !== (t = a.ZP.getDisambiguatedEmojiContext(null == T ? void 0 : T.getGuildId()).groupedCustomEmojis) && void 0 !== t ? t : {}).reduce((e, t) => (e += t.length), 0),
-        { topEmojis: L, newlyAddedEmojis: D } = (0, _._)({
-            guildId: null == T ? void 0 : T.getGuildId(),
+        });
+    o.Xb.trackExposure({ location: 'trackOnEmojiPickerOpened' });
+    let b = (S || T) && n === h.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.frequently.slice() : a.ZP.emojiFrecencyWithoutFetchingLatest.frequently.slice(),
+        y = null != v ? a.ZP.getDisambiguatedEmojiContext(v.getGuildId()).favoriteEmojisWithoutFetchingLatest : [],
+        A = (S || T) && n === h.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.numFrequentlyItems : a.ZP.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems,
+        N = b.slice(0, A),
+        C = null != I ? a.ZP.getGuildEmoji(I) : [],
+        R = Object.values(null !== (t = a.ZP.getDisambiguatedEmojiContext(null == v ? void 0 : v.getGuildId()).groupedCustomEmojis) && void 0 !== t ? t : {}).reduce((e, t) => (e += t.length), 0),
+        { topEmojis: O, newlyAddedEmojis: D } = (0, f._)({
+            guildId: null == v ? void 0 : v.getGuildId(),
             pickerIntention: n
         }),
-        { visibleTopEmojis: b, visibleNewlyAddedEmojis: M } = (0, d.J)({
-            topEmojis: L,
+        { visibleTopEmojis: L, visibleNewlyAddedEmojis: x } = (0, d.J)({
+            topEmojis: O,
             newlyAddedEmojis: D,
-            rowSize: p
+            rowSize: m
         });
-    i.ZP.trackWithMetadata(n === f.Hz.REACTION ? E.rMx.REACTION_PICKER_OPENED : E.rMx.EXPRESSION_PICKER_OPENED, {
+    i.ZP.trackWithMetadata(n === h.Hz.REACTION ? _.rMx.REACTION_PICKER_OPENED : _.rMx.EXPRESSION_PICKER_OPENED, {
         width: r,
-        tab: h.X1.EMOJI,
+        tab: p.X1.EMOJI,
         badged: !1,
-        num_expressions_favorites: O.length,
-        num_animated_expressions_favorites: O.filter((e) => (null == e ? void 0 : e.animated)).length,
-        num_custom_expressions_favorites: O.filter(c.ZP.isCustomEmoji).length,
-        num_standard_expressions_favorites: O.filter((e) => null == e.id).length,
-        num_expressions_frecent: v.length,
-        num_animated_expressions_frecent: v.filter((e) => (null == e ? void 0 : e.animated)).length,
-        num_custom_expressions_frecent: v.filter(c.ZP.isCustomEmoji).length,
-        num_standard_expressions_frecent: v.filter((e) => null == e.id).length,
+        num_expressions_favorites: y.length,
+        num_animated_expressions_favorites: y.filter((e) => (null == e ? void 0 : e.animated)).length,
+        num_custom_expressions_favorites: y.filter(c.ZP.isCustomEmoji).length,
+        num_standard_expressions_favorites: y.filter((e) => null == e.id).length,
+        num_expressions_frecent: N.length,
+        num_animated_expressions_frecent: N.filter((e) => (null == e ? void 0 : e.animated)).length,
+        num_custom_expressions_frecent: N.filter(c.ZP.isCustomEmoji).length,
+        num_standard_expressions_frecent: N.filter((e) => null == e.id).length,
         num_current_guild_expressions: C.length,
-        num_custom_expressions_total: y,
-        num_expressions_top_server: b.length,
-        num_animated_expressions_top_server: b.filter((e) => e.animated).length,
-        num_expressions_newly_added: M.length,
-        num_animated_expressions_newly_added: M.filter((e) => e.animated).length,
-        ...(n === f.Hz.REACTION && { is_burst: I }),
-        ...(null != m && { location_object: m })
+        num_custom_expressions_total: R,
+        num_expressions_top_server: L.length,
+        num_animated_expressions_top_server: L.filter((e) => e.animated).length,
+        num_expressions_newly_added: x.length,
+        num_animated_expressions_newly_added: x.filter((e) => e.animated).length,
+        ...(n === h.Hz.REACTION && { is_burst: g }),
+        ...(null != E && { location_object: E })
     });
 }

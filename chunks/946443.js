@@ -1,131 +1,145 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return A;
     },
     h: function () {
-        return M;
+        return Z;
     }
 }),
     n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    r = n.n(s),
-    l = n(525654),
-    o = n.n(l),
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    o = n(525654),
+    s = n.n(o),
     c = n(91192),
-    u = n(442837),
-    d = n(524437),
-    _ = n(481060),
-    E = n(570140),
-    I = n(607070),
-    m = n(724757),
-    T = n(626135),
-    h = n(585483),
-    N = n(143316),
-    f = n(240126),
-    C = n(791914),
-    p = n(147522),
-    g = n(809780),
-    S = n(981631),
-    A = n(689938),
-    R = n(758046);
-function x(e) {
-    let { setTab: t, onJump: n, showTutorial: s, setSeenTutorial: l, closePopout: x, badgeState: M } = e,
-        v = a.useRef(null),
-        [L, Z] = (0, g.ZP)(v),
-        { loadState: P, channels: b } = L,
-        { maybeLoadMore: D, markAllRead: j } = Z;
+    d = n(442837),
+    u = n(524437),
+    m = n(481060),
+    h = n(570140),
+    f = n(607070),
+    p = n(724757),
+    g = n(626135),
+    _ = n(585483),
+    C = n(358085),
+    E = n(143316),
+    I = n(240126),
+    x = n(791914),
+    v = n(147522),
+    N = n(809780),
+    T = n(981631),
+    S = n(388032),
+    b = n(129640);
+function A(e) {
+    let { setTab: t, onJump: n, showTutorial: l, setSeenTutorial: o, closePopout: A, badgeState: Z } = e,
+        R = r.useRef(null),
+        [P, y] = (0, N.ZP)(R),
+        { loadState: L, channels: O } = P,
+        { maybeLoadMore: M, markAllRead: k } = y;
     (function (e, t, n) {
-        a.useLayoutEffect(() => {
+        r.useLayoutEffect(() => {
             var i;
-            let { scrollToChannelIndex: a } = t;
+            let { scrollToChannelIndex: r } = t;
             n.clearScrollToChannelIndex();
-            let { current: s } = e;
-            if (null == s || null == a) return;
-            let r = null === (i = s.getScrollerNode()) || void 0 === i ? void 0 : i.children;
-            if (null == r) return;
-            let l = r[a];
-            if (null == l) return;
-            let { scrollTop: o, scrollHeight: c } = s.getScrollerState();
-            (l.offsetTop < o || l.offsetTop > o + c) && s.scrollTo({ to: l.offsetTop });
+            let { current: l } = e;
+            if (null == l || null == r) return;
+            let a = null === (i = l.getScrollerNode()) || void 0 === i ? void 0 : i.children;
+            if (null == a) return;
+            let o = a[r];
+            if (null == o) return;
+            let { scrollTop: s, offsetHeight: c } = l.getScrollerState();
+            (o.offsetTop < s || o.offsetTop > s + c) && l.scrollTo({ to: o.offsetTop });
         });
-    })(v, L, Z),
+    })(R, P, y),
         (function (e, t) {
-            a.useEffect(() => {
+            r.useEffect(() => {
                 let n = () => {
                     let n = e.channels.find((e) => !e.collapsed);
                     null != n && t.markChannelRead(n);
                 };
                 return (
-                    h.S.subscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, n),
+                    _.S.subscribe(T.CkL.MARK_TOP_INBOX_CHANNEL_READ, n),
                     () => {
-                        h.S.unsubscribe(S.CkL.MARK_TOP_INBOX_CHANNEL_READ, n);
+                        _.S.unsubscribe(T.CkL.MARK_TOP_INBOX_CHANNEL_READ, n);
                     }
                 );
             }, [t, e.channels]);
-        })(L, Z),
-        a.useEffect(() => {
-            T.default.track(S.rMx.OPEN_POPOUT, { type: 'Inbox' });
+        })(P, y),
+        (function (e) {
+            r.useEffect(() => {
+                let t = (t) => {
+                    ((0, C.isMac)() || (0, C.isMacWeb)() ? t.metaKey : t.ctrlKey) && !t.shiftKey && !t.altKey && 'z' === t.key && e.undoMarkChannelRead();
+                };
+                return (
+                    document.addEventListener('keydown', t),
+                    () => {
+                        document.removeEventListener('keydown', t);
+                    }
+                );
+            }, [e]);
+        })(y),
+        r.useEffect(() => {
+            g.default.track(T.rMx.OPEN_POPOUT, { type: 'Inbox' });
         }, []),
-        a.useEffect(
+        r.useEffect(
             () => (
-                E.Z.subscribe('CONNECTION_OPEN', x),
+                h.Z.subscribe('CONNECTION_OPEN', A),
                 () => {
-                    E.Z.unsubscribe('CONNECTION_OPEN', x);
+                    h.Z.unsubscribe('CONNECTION_OPEN', A);
                 }
             ),
-            [x]
+            [A]
         );
-    let U = (0, u.e7)([I.Z], () => I.Z.messageGroupSpacing),
-        y = (0, m.Z)('unreads', v);
-    if (0 === b.length) {
-        var B;
+    let D = (0, d.e7)([f.Z], () => f.Z.messageGroupSpacing),
+        B = (0, p.Z)('unreads', R);
+    if (0 === O.length) {
+        var w;
         return (0, i.jsxs)('div', {
-            className: R.container,
+            className: b.container,
             children: [
-                (0, i.jsx)(C.Z, {
-                    tab: d.X.UNREADS,
+                (0, i.jsx)(x.Z, {
+                    tab: u.X.UNREADS,
                     setTab: t,
-                    badgeState: M,
-                    closePopout: x
+                    badgeState: Z,
+                    closePopout: A
                 }),
-                (0, i.jsx)(f.Z, {
-                    Icon: _.InboxIcon,
-                    header: A.Z.Messages.UNREADS_EMPTY_STATE_HEADER,
-                    tip: (null === (B = o().os) || void 0 === B ? void 0 : B.family) === 'OS X' ? A.Z.Messages.UNREADS_EMPTY_STATE_TIP_MAC : A.Z.Messages.UNREADS_EMPTY_STATE_TIP
+                (0, i.jsx)(I.Z, {
+                    Icon: m.InboxIcon,
+                    header: S.intl.string(S.t['6XMM+P']),
+                    tip: (null === (w = s().os) || void 0 === w ? void 0 : w.family) === 'OS X' ? S.intl.string(S.t.w9uDOT) : S.intl.string(S.t.BiUJCw)
                 })
             ]
         });
     }
     return (0, i.jsxs)('div', {
-        className: r()(R.container, 'group-spacing-'.concat(U)),
-        'aria-label': A.Z.Messages.UNREADS_TAB_LABEL,
+        className: a()(b.container, 'group-spacing-'.concat(D)),
+        'aria-label': S.intl.string(S.t.sRUdBw),
         children: [
-            (0, i.jsx)(C.Z, {
-                tab: d.X.UNREADS,
+            (0, i.jsx)(x.Z, {
+                tab: u.X.UNREADS,
                 setTab: t,
-                badgeState: M,
-                closePopout: x,
-                children: (0, i.jsx)(N.Z, {
+                badgeState: Z,
+                closePopout: A,
+                children: (0, i.jsx)(E.Z, {
                     type: 'top-header',
-                    onClick: j
+                    onClick: k
                 })
             }),
             (0, i.jsx)(c.bG, {
-                navigator: y,
+                navigator: B,
                 children: (0, i.jsx)(c.SJ, {
                     children: (e) => {
-                        let { ref: t, ...a } = e;
-                        return (0, i.jsxs)(_.AdvancedScrollerThin, {
+                        let { ref: t, ...r } = e;
+                        return (0, i.jsxs)(m.AdvancedScrollerThin, {
                             ref: (e) => {
                                 var n;
-                                (v.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
+                                (R.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
                             },
-                            ...a,
-                            onScroll: P === g.jd.Done ? void 0 : D,
-                            className: R.scroller,
-                            children: [s ? (0, i.jsx)(O, { setSeenTutorial: l }) : null, (0, p.Z)(b, Z, n), P === g.jd.Done ? null : (0, i.jsx)(_.Spinner, { className: R.spinner })]
+                            ...r,
+                            onScroll: L === N.jd.Done ? void 0 : M,
+                            className: b.scroller,
+                            children: [l ? (0, i.jsx)(j, { setSeenTutorial: o }) : null, (0, v.Z)(O, y, n), L === N.jd.Done ? null : (0, i.jsx)(m.Spinner, { className: b.spinner })]
                         });
                     }
                 })
@@ -133,57 +147,57 @@ function x(e) {
         ]
     });
 }
-function O(e) {
+function j(e) {
     let { setSeenTutorial: t } = e;
     return (0, i.jsxs)('div', {
-        className: R.tutorial,
+        className: b.tutorial,
         children: [
             (0, i.jsx)('div', {
-                className: R.tutorialIcon,
-                children: (0, i.jsx)(_.InboxIcon, {
+                className: b.tutorialIcon,
+                children: (0, i.jsx)(m.InboxIcon, {
                     size: 'md',
                     color: 'currentColor'
                 })
             }),
             (0, i.jsxs)('div', {
                 children: [
-                    (0, i.jsx)(_.Heading, {
-                        className: R.__invalid_tutorialHeader,
+                    (0, i.jsx)(m.Heading, {
+                        className: b.__invalid_tutorialHeader,
                         variant: 'heading-md/semibold',
-                        children: A.Z.Messages.UNREADS_TUTORIAL_HEADER
+                        children: S.intl.string(S.t.vZPktL)
                     }),
-                    (0, i.jsx)(_.Text, {
+                    (0, i.jsx)(m.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: A.Z.Messages.UNREADS_TUTORIAL_BODY
+                        children: S.intl.string(S.t.vWkIIC)
                     }),
-                    (0, i.jsx)(_.Button, {
-                        className: R.tutorialButton,
+                    (0, i.jsx)(m.Button, {
+                        className: b.tutorialButton,
                         onClick: t,
-                        size: _.Button.Sizes.SMALL,
-                        children: A.Z.Messages.TUTORIAL_CLOSE
+                        size: m.Button.Sizes.SMALL,
+                        children: S.intl.string(S.t['+IrDzM'])
                     })
                 ]
             })
         ]
     });
 }
-function M(e) {
-    let { setTab: t, badgeState: n, closePopout: a } = e;
+function Z(e) {
+    let { setTab: t, badgeState: n, closePopout: r } = e;
     return (0, i.jsxs)('div', {
-        className: R.container,
+        className: b.container,
         children: [
-            (0, i.jsx)(C.Z, {
-                tab: d.X.UNREADS,
+            (0, i.jsx)(x.Z, {
+                tab: u.X.UNREADS,
                 setTab: t,
                 badgeState: n,
-                closePopout: a
+                closePopout: r
             }),
-            (0, i.jsx)(f.Z, {
-                Icon: _.InboxIcon,
+            (0, i.jsx)(I.Z, {
+                Icon: m.InboxIcon,
                 disableStars: !0,
-                header: A.Z.Messages.UNREADS_EMPTY_STATE_ERROR_HEADER,
-                tip: A.Z.Messages.UNREADS_EMPTY_STATE_ERROR_SUBTITLE
+                header: S.intl.string(S.t['KG/ynZ']),
+                tip: S.intl.string(S.t.cvcKzc)
             })
         ]
     });

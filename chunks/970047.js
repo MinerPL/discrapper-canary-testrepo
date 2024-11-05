@@ -5,7 +5,6 @@ e.exports = {
     logoWithText: 'logoWithText_d1eeed',
     headerButton: 'headerButton_d1eeed',
     banner: 'banner_d1eeed',
-    title: 'title_d1eeed',
     cta: 'cta_d1eeed',
     content: 'content_d1eeed',
     sampleGuildsSection: 'sampleGuildsSection_d1eeed',

@@ -1,28 +1,49 @@
-n(47120);
-var r = n(485589),
-    i = n(424706),
-    a = n(14160),
-    o = n(247123),
-    l = n(207662);
-let u = {
-    id: 'aria-allowed-attributes',
-    selector: l.J8,
-    tags: ['wcag2a', 'wcag412'],
-    metadata: {
-        description: 'Only use supported ARIA attributes',
-        help: 'Using ARIA attributes in roles where they are not allowed can interfere with the accessibility of the web page.'
-    },
-    check: function (e) {
-        let t = (0, i.cY)(e),
-            n = r.roles.get(t);
-        if (null == n) return o.w;
-        for (let r of l.cg)
-            if (e.hasAttribute(r) && !n.props.hasOwnProperty(r)) {
-                if ('aria-expanded' === r && e.hasAttribute('aria-controls')) continue;
-                if (!(0, a.p)(e)) return o.w;
-                return "'".concat(t, "' does not support the ").concat(r, ' attribute');
-            }
-        return o.w;
+n.d(t, {
+    H: function () {
+        return l;
     }
-};
-t.Z = u;
+});
+var r = n(192379),
+    i = n(903797),
+    a = n(60071),
+    s = n(731965);
+function o(e, t) {
+    return e === t;
+}
+function l(e) {
+    let t = (0, i.Z)((0, a.XR)((t, n) => e((e) => (0, s.j)(() => t(e)), n)));
+    function n(e, n) {
+        return t(e, n);
+    }
+    function l(e) {
+        let n = t.getState();
+        return null != e ? e(n) : n;
+    }
+    function u(e) {
+        return (t) => t[e];
+    }
+    return {
+        useState: n,
+        getState: l,
+        useField: function (e) {
+            let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o;
+            return t(
+                r.useMemo(() => {
+                    var t;
+                    return (t = e), (e) => e[t];
+                }, [e]),
+                n
+            );
+        },
+        getField: function (e) {
+            var t;
+            return l(((t = e), (e) => e[t]));
+        },
+        subscribe: function (e, n, r) {
+            return t.subscribe(e, n, r);
+        },
+        setState: (e) => {
+            (0, s.j)(() => t.setState(e));
+        }
+    };
+}

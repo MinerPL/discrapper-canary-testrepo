@@ -7,7 +7,11 @@ e.exports = {
     footer: 'footer_aa1bff',
     gradient: 'gradient_aa1bff',
     gradientHidden: 'gradientHidden_aa1bff',
-    genericBackgroundImage: 'genericBackgroundImage_aa1bff backgroundImage_aa1bff',
+    gameBoxArt: 'gameBoxArt_aa1bff',
+    animatedBgContainer: 'animatedBgContainer_aa1bff',
+    animatedHeroContainer: 'animatedHeroContainer_aa1bff',
+    radialGradient: 'radialGradient_aa1bff',
+    doubleIcon: 'doubleIcon_aa1bff',
     popoutContent: 'popoutContent_aa1bff',
     close: 'close_aa1bff',
     coachmarkTextContainer: 'coachmarkTextContainer_aa1bff'

@@ -1,38 +1,50 @@
-var s = n(735250);
-n(470079);
-var r = n(780384),
-    a = n(481060),
-    i = n(410030),
-    o = n(689938),
-    c = n(243709),
-    l = n(982240),
-    d = n(533854);
+var r = n(200651);
+n(192379);
+var a = n(442837),
+    s = n(780384),
+    i = n(481060),
+    l = n(410030),
+    o = n(594174),
+    c = n(388032),
+    d = n(417552),
+    u = n(982240),
+    m = n(533854);
 t.Z = (e) => {
-    let { onRetry: t } = e,
-        n = (0, i.ZP)();
-    return (0, s.jsxs)('div', {
-        className: c.wrapper,
+    let { onRetry: t, errorMessage: n } = e,
+        f = (0, l.ZP)(),
+        p = (0, a.e7)([o.default], () => {
+            let e = o.default.getCurrentUser();
+            return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
+        });
+    return (0, r.jsxs)('div', {
+        className: d.wrapper,
         children: [
-            (0, s.jsx)('img', {
-                className: c.__invalid_loadIssueImg,
-                src: (0, r.wj)(n) ? l : d,
+            (0, r.jsx)('img', {
+                className: d.__invalid_loadIssueImg,
+                src: (0, s.wj)(f) ? u : m,
                 alt: ''
             }),
-            (0, s.jsx)(a.Heading, {
-                className: c.heading1,
+            (0, r.jsx)(i.Heading, {
+                className: d.heading1,
                 variant: 'heading-xl/semibold',
-                children: o.Z.Messages.COLLECTIBLES_SHOP_ERROR_HEADING
+                children: c.intl.string(c.t['i5SQ7+'])
             }),
-            (0, s.jsx)(a.Text, {
+            (0, r.jsx)(i.Text, {
                 variant: 'text-md/normal',
-                children: o.Z.Messages.COLLECTIBLES_SHOP_ERROR_SHOP_LOAD
+                children: c.intl.string(c.t.LuhKs7)
             }),
-            (0, s.jsx)(a.Button, {
-                className: c.reload,
-                size: a.Button.Sizes.MEDIUM,
-                color: a.Button.Colors.BRAND,
+            p &&
+                null != n &&
+                (0, r.jsx)(i.Text, {
+                    variant: 'text-md/normal',
+                    children: 'staff-only debug: ' + n
+                }),
+            (0, r.jsx)(i.Button, {
+                className: d.reload,
+                size: i.Button.Sizes.MEDIUM,
+                color: i.Button.Colors.BRAND,
                 onClick: t,
-                children: o.Z.Messages.ERRORS_RELOAD
+                children: c.intl.string(c.t['+hivLS'])
             })
         ]
     });
